@@ -10,8 +10,8 @@ const HomeTestimonial = async ({ title, desc }: HomeKRMTestimonialProps) => {
   const testimonialsData = await getTestimonialsData();
   return (
     <>
-      <section className="pt-12 pb-44 lg:py-40 px-5 lg:px-8 bg-[#051630] lg:-mt-[70px]">
-        <div className="lg:mx-9 2xl:pl-52 ">
+      <section className="py-12 px-4 bg-[#051630]">
+        <div className=" max-w-[1664px] mx-auto w-full mb-12">
           <div className="xl:flex items-center text-white">
             <div className="xl:w-[40%] xl:pr-10 text-center lg:text-left">
               <h4 className="text-4xl lg:text-5xl xl:text-[64px] leading-[1.2] font-semibold mb-5">

@@ -17,10 +17,10 @@ const EventsAndNews = async ({
   const newsandeventsdata = await getNewsEventsWP(1, 3);
 
   return (
-    <section className="bg-[url(/homenewsevent.webp)] bg-cover bg-no-repeat px-5 pb-12 lg:px-8 lg:pb-20">
-      <div className="w-full">
+    <section className="bg-[url(/homenewsevent.webp)] bg-cover bg-no-repeat pb-12 px-4 lg:pb-20">
+      <div className="w-full max-w-[1664px] mx-auto">
         <div>
-          <h4 className="text-4xl lg:text-5xl leading-[1.17] font-light text-center text-white lg:pt-2.5 lg:pb-16 lg:text-left">
+          <h4 className="text-4xl leading-[1.17] font-semibold text-center text-white lg:pt-2.5 lg:pb-16 lg:text-left">
             {title}
           </h4>
           <div className="grid gap-5 lg:gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 lg:px-0 mt-5 lg:mt-0">

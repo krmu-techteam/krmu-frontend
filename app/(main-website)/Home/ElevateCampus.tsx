@@ -23,16 +23,16 @@ const ElevateCampus = ({
 }: ElevateCampusProp) => {
   return (
     <>
-      <section className="xl:-mt-[70px]">
-        <div className="flex flex-col xl:flex-row">
-          <div className="xl:mt-[120px] xl:mb-5 w-full xl:w-1/3 2xl:w-1/2">
-            <div className="p-5 2xl:mb-5 xl:py-[30px] xl:pr-20 2xl:pl-[200px] bg-[#e5e6f3] xl:min-h-[503px] h-full">
+      <section>
+        <div className="flex flex-col xl:flex-row items-center bg-[#e5e6f3]">
+          <div className="w-full lg:w-1/2 flex flex-col justify-center items-center">
+            <div className="max-w-sm">
               <h4 className="text-lg font-semibold mb-3">
                 {elevateCampus?.subtitle}
               </h4>
               <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-[1.5] mb-8">
                 {elevateCampus?.beforehighlighttext}{" "}
-                <span className="text-[#000e8b]">
+                <span className="text-[#034272]">
                   {elevateCampus?.highlighttext}
                 </span>{" "}
                 <br />
@@ -40,13 +40,16 @@ const ElevateCampus = ({
               </h3>
               <p className="mb-5">{elevateCampus?.content}</p>
               {(elevateCampus.link || elevateCampus.linkclass) && (
-                <Link href={elevateCampus.link} className="text-[#000e8b] pb-2 underline underline-offset-8">
+                <Link
+                  href={elevateCampus.link}
+                  className="text-[#034272] pb-2 underline underline-offset-8"
+                >
                   {elevateCampus?.linktext}
                 </Link>
               )}
             </div>
           </div>
-          <div className="w-full xl:w-2/3 2xl:w-2/3">
+          <div className="w-full lg:w-1/2">
             <Image
               src={`${STRAPI_URL}${elevateImage1.url}`}
               alt="Elevate"
@@ -56,15 +59,16 @@ const ElevateCampus = ({
             />
           </div>
         </div>
-        <div className="flex flex-col xl:flex-row">
-          <div className="xl:mt-8 xl:mb-5 w-full  xl:w-1/2">
-            <div className="p-5 2xl:mb-5 xl:py-[30px] xl:pr-20 2xl:pl-[200px] bg-[#fce8e9] xl:min-h-[503px] h-full">
+        <div className="flex flex-col xl:flex-row items-center bg-[#fce8e9]">
+          <div className="w-full  xl:w-1/2 flex flex-col justify-center items-center">
+            <div className="max-w-lg">
               <h4 className="text-lg font-semibold mb-3">
                 {elevateCampus2?.subtitle}
-              </h4> 
+              </h4>
               <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-[1.5] mb-8">
-                {elevateCampus2?.beforehighlighttext} {" "}<br className="hidden lg:block" />
-                <span className="text-[#e31e24]">
+                {elevateCampus2?.beforehighlighttext}{" "}
+                <br className="hidden lg:block" />
+                <span className="text-[#034272]">
                   {elevateCampus2?.highlighttext}
                 </span>{" "}
                 {elevateCampus2?.afterhighlighttext}
@@ -73,14 +77,14 @@ const ElevateCampus = ({
               {(elevateCampus2?.link || elevateCampus2?.linkclass) && (
                 <Link
                   href={elevateCampus2?.link}
-                  className={`text-[#e31e24] pb-2 ${elevateCampus2?.linkclass} underline underline-offset-8`}
+                  className={`text-[#034272] pb-2 ${elevateCampus2?.linkclass} underline underline-offset-8`}
                 >
                   {elevateCampus2?.linktext}
                 </Link>
               )}
             </div>
           </div>
-          <div className="w-full 2xl:w-2/3 xl:min-h-[575px]">
+          <div className="w-full lg:w-1/2">
             <Image
               src={`${STRAPI_URL}${elevateImage2?.url}`}
               alt="Elevate"
@@ -90,15 +94,15 @@ const ElevateCampus = ({
             />
           </div>
         </div>
-        <div className="flex flex-col xl:flex-row">
-          <div className="2xl:mt-8 w-full xl:w-1/3 2xl:w-1/2">
-            <div className="p-5 2xl:mb-5 xl:py-[30px] xl:pr-20 2xl:pl-[200px] bg-[#e5eff6] xl:min-h-[503px] h-full">
+        <div className="flex flex-col xl:flex-row items-center bg-[#e5eff6]">
+          <div className="w-full lg:w-1/2 flex justify-center items-center">
+            <div className="max-w-lg">
               <h4 className="text-lg font-semibold mb-3">
                 {elevateCampus3?.subtitle}
               </h4>
               <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-[1.5] mb-8">
                 {elevateCampus3?.beforehighlighttext}
-                <span className="text-[#0060aa]">
+                <span className="text-[#034272]">
                   <br /> {elevateCampus3?.highlighttext}
                 </span>
                 {elevateCampus3?.afterhighlighttext}
@@ -107,20 +111,20 @@ const ElevateCampus = ({
               {(elevateCampus3?.link || elevateCampus3?.linkclass) && (
                 <Link
                   href={elevateCampus3?.link}
-                  className={`text-[#0060aa] pb-2 ${elevateCampus3?.linkclass} underline underline-offset-8`}
+                  className={`text-[#034272] pb-2 ${elevateCampus3?.linkclass} underline underline-offset-8`}
                 >
                   {elevateCampus3?.linktext}
                 </Link>
               )}
             </div>
           </div>
-          <div className="w-full xl:w-2/3 2xl:w-2/3 2xl:min-h-[575px] h-full">
+          <div className="w-full lg:w-1/2">
             <Image
               src={`${STRAPI_URL}${elevateImage3.url}`}
               alt="Elevate"
               width={993}
               height={596}
-              className="h-[600px] w-full object-cover"
+              className="w-full object-cover"
             />
           </div>
         </div>

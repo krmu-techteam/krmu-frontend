@@ -7,7 +7,7 @@ interface ADecadeProps {
   rightContent: ADecadeRightCol;
 }
 type Counter = {
-  counterText: string;
+  counterText: string; 
   counterContent: string;
 };
 const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
@@ -33,55 +33,55 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
 
   return (
     <>
-      <section className="px-4 py-8 lg:mb-20">
-        <div className="flex flex-col text-center lg:flex-row lg:gap-5    max-w-[1664px] mx-auto md:text-left">
-          <div className="w-full lg:w-1/2 lg:px-4">                     
-            <h2 className="leading-[1] text-2xl xl:text-[64px] font-medium lg:leading-[1.13] mb-2 md:mb-5 grad-text-color">
+      <section className="px-4 py-5 sm:py-12">
+        <div className="flex flex-col text-center lg:flex-row gap-5  max-w-[1664px] mx-auto md:text-left">
+          <div className="w-full xl:w-1/2">                     
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-2 md:mb-5 text-[#034272]">
               {leftContent.adecadetitle}
             </h2>
-            <h3 className="mb-4 text-4xl leading-[1.2]  xl:leading-[2] font-light grad-text-color">
+            <h3 className="mb-4 text-2xl md:text-4xl font-light text-[#034272]">
               {leftContent.adecadesubtitle}
             </h3>
-            <p className="font-normal mb-5">{leftContent.adecadedescription}</p>
-            <div className="flex flex-col items-center md:items-start gap-5">
+            <p className="text-lg mb-5">{leftContent.adecadedescription}</p>
+            <div className="flex flex-col sm:flex-row  md:items-start gap-2.5 sm:gap-5">
               {leftContent.button1link && (
                 <Link
                   href={leftContent.button1link}
-                  className="bg-primary text-white flex px-5 py-1.5 rounded-3xl gap-4"
+                  className="bg-primary text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
                 >
-                  <span className="text-xs sm:text-xl">
+                  <span className="text-sm sm:text-xl">
                     {leftContent.button1text}
                   </span>
-                  <Image
+                  {/* <Image
                     src="/arrow-2.svg"
                     alt="arrow 2"
                     width={39}
                     height={8}
-                  />
+                  /> */}
                 </Link>
               )}
               {leftContent.button2link && (
                 <Link
                   href={leftContent.button2link}
-                  className="bg-primary text-white flex px-5 py-1.5 rounded-3xl gap-4"
+                  className="bg-primary text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
                 >
                   <span className="text-xs sm:text-xl">
                     {leftContent.button2text}
                   </span>
-                  <Image
+                  {/* <Image
                     src="/arrow-2.svg"
                     alt="arrow 2"
                     width={39}
                     height={8}
-                  />
+                  /> */}
                 </Link>
               )}
             </div>
           </div>
-          <div className="w-full grid grid-cols-2 lg:w-1/2 2xl:px-6 text-center gap-2.5 lg:text-left mt-10 md:mt-0">
+          <div className="w-full grid grid-cols-2 xl:w-1/2 text-center gap-2.5 lg:text-left">
             {counters.map(({ counterText, counterContent }, idx) => (
-              <div key={idx} className="flex flex-col text-[#0060aa] mb-5">
-                <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.4] font-medium">
+              <div key={idx} className="flex flex-col justify-center text-[#0060aa] text-center">
+                <span className="text-4xl sm:text-6xl md:text-6xl font-medium">
                   {counterText}
                 </span>
                 <span className="text-sm md:text-xl font-normal leading-[1.3]">
