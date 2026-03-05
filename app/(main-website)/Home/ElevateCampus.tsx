@@ -4,6 +4,7 @@ import { ElevateCampusContent } from "@/lib/types/home";
 import { StrapiMedia } from "@/lib/types/common";
 import { STRAPI_URL } from "../../constant";
 import ElevateSlider from "./homeComp/ElevateSlider";
+import ClubSlider from "./homeComp/ClubSlider";
 
 interface ElevateCampusProp {
   elevateCampus: ElevateCampusContent;
@@ -25,14 +26,14 @@ const ElevateCampus = ({
   return (
     <>
       <section>
-        <div className="max-w-[1664px] mx-auto">
-          <div className="flex flex-col xl:flex-row items-center py-20">
+        <div className="max-w-[1664px] mx-auto px-4 md:px-0">
+          <div className="flex sm:gap-10 flex-col xl:flex-row items-center py-5 md:py-20">
             <div className="w-full lg:w-1/3 flex flex-col">
               <div className="max-w-lg">
                 <h4 className="text-lg font-semibold mb-3">
                   {elevateCampus?.subtitle}
                 </h4>
-                <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-[1.5] mb-8">
+                <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-tight mb-8">
                   {elevateCampus?.beforehighlighttext}{" "}
                   <span className="text-[#034272]">
                     {elevateCampus?.highlighttext}
@@ -62,8 +63,8 @@ const ElevateCampus = ({
               <ElevateSlider />
             </div>
           </div>
-          <div className="flex flex-col xl:flex-row items-center">
-            <div className="w-full lg:w-1/2">
+          <div className="flex sm:gap-10 flex-col xl:flex-row items-center py-5 md:pb-20">
+            <div className="w-full lg:w-2/3">
               <Image
                 src={`${STRAPI_URL}${elevateImage2?.url}`}
                 alt="Elevate"
@@ -72,12 +73,12 @@ const ElevateCampus = ({
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="w-full  xl:w-1/2 flex flex-col justify-center items-center">
+            <div className="w-full  xl:w-1/3 flex flex-col justify-center items-center">
               <div className="max-w-lg">
                 <h4 className="text-lg font-semibold mb-3">
                   {elevateCampus2?.subtitle}
                 </h4>
-                <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-[1.5] mb-8">
+                <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-tight mb-8">
                   {elevateCampus2?.beforehighlighttext}{" "}
                   <br className="hidden lg:block" />
                   <span className="text-[#034272]">
@@ -97,13 +98,13 @@ const ElevateCampus = ({
               </div>
             </div>
           </div>
-          <div className="flex flex-col xl:flex-row items-center">
-            <div className="w-full lg:w-1/2 flex justify-center items-center">
+          <div className="flex sm:gap-10 flex-col xl:flex-row items-center py-5 md:pb-20">
+            <div className="w-full lg:w-1/3 flex justify-center items-center">
               <div className="max-w-lg">
                 <h4 className="text-lg font-semibold mb-3">
                   {elevateCampus3?.subtitle}
                 </h4>
-                <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-[1.5] mb-8">
+                <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-tight mb-8">
                   {elevateCampus3?.beforehighlighttext}
                   <span className="text-[#034272]">
                     <br /> {elevateCampus3?.highlighttext}
@@ -121,14 +122,15 @@ const ElevateCampus = ({
                 )}
               </div>
             </div>
-            <div className="w-full lg:w-1/2">
-              <Image
+            <div className="w-full lg:w-2/3">
+              {/* <Image
                 src={`${STRAPI_URL}${elevateImage3.url}`}
                 alt="Elevate"
                 width={993}
                 height={596}
                 className="w-full object-cover"
-              />
+              /> */}
+              <ClubSlider />
             </div>
           </div>
         </div>

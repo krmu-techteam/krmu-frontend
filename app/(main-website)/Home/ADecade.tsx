@@ -36,7 +36,7 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
       <section className="px-4 py-5 sm:py-20">
         <div className="flex flex-col text-center lg:flex-row gap-5  max-w-[1664px] mx-auto md:text-left">
           <div className="w-full xl:w-1/2">                     
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold mb-2 md:mb-5 text-[#034272]">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold mb-2 md:mb-5 text-black">
               {leftContent.adecadetitle}
             </h2>
             <h3 className="mb-4 text-2xl md:text-4xl font-light text-[#034272]">
@@ -80,11 +80,11 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
           </div>
           <div className="w-full grid grid-cols-2 xl:w-1/2 text-center gap-2.5 lg:text-left">
             {counters.map(({ counterText, counterContent }, idx) => (
-              <div key={idx} className="flex flex-col justify-center text-[#0060aa] text-center">
-                <span className="text-4xl sm:text-6xl md:text-6xl font-medium">
+              <div key={idx} className="flex flex-col justify-center text-center">
+                <span className="text-4xl sm:text-6xl md:text-6xl font-medium text-[#0060aa]">
                   {counterText}
                 </span>
-                <span className="text-sm md:text-xl font-normal leading-[1.3]">
+                <span className="text-sm md:text-xl font-normal leading-[1.3] text-black">
                   {counterContent}
                 </span>
               </div>

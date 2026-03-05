@@ -32,8 +32,8 @@ const ShapingFuture = ({
 }: ShapingFutureProp) => {
   return (
     <>
-      <section className="px-4">
-        <div className="py-8 max-w-[1664px] mx-auto w-full">
+      <section>
+        <div className="max-w-[1664px] mx-auto w-full">
           <div className="lg:flex lg:bg-white gap-10">
             <div className="lg:w-3/5">
               <div className="pt-12 mx-1">
@@ -98,7 +98,7 @@ const ShapingFuture = ({
             <div className="lg:w-2/5">
               <div className="mt-8">
                 <Image
-                  src={`${STRAPI_URL}${shapingimage.url}`}
+                  src="/wp-content/home2/shaping/shaping.webp"
                   width={292}
                   height={292}
                   style={{

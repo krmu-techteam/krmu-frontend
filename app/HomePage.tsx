@@ -19,57 +19,58 @@ export default async function HomePage() {
   const homepageContent = await getHomePageData();
 
   const hero = homepageContent.find(
-    (component) => component.__component === "homepage-components.hero-section"
+    (component) => component.__component === "homepage-components.hero-section",
   );
   const aDecadeData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.a-decade-section"
+      component.__component === "homepage-components.a-decade-section",
   );
 
   const yourJourneyData = homepageContent.find(
-    (component) => component.__component === "homepage-components.yourjourney"
+    (component) => component.__component === "homepage-components.yourjourney",
   );
   const AFSData = homepageContent.find(
-    (component) => component.__component === "homepage-components.afs-section"
+    (component) => component.__component === "homepage-components.afs-section",
   );
 
   const ourTopRecruitersData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.our-top-recruiters"
+      component.__component === "homepage-components.our-top-recruiters",
   );
 
   const feeStructureScholarData = homepageContent.find(
-    (component) => component.__component === "homepage-components.fee-scholar"
+    (component) => component.__component === "homepage-components.fee-scholar",
   );
 
   const whyKRMUData = homepageContent.find(
-    (component) => component.__component === "homepage-components.whykrmu"
+    (component) => component.__component === "homepage-components.whykrmu",
   );
 
   const elevateCampusData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.elevate-campus"
+      component.__component === "homepage-components.elevate-campus",
   );
   const homeKRMTestimonialData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.home-testimonials"
+      component.__component === "homepage-components.home-testimonials",
   );
   const shapingFutureData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.shaping-future"
+      component.__component === "homepage-components.shaping-future",
   );
   const globalPartenerData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.global-partener"
+      component.__component === "homepage-components.global-partener",
   );
 
   const visitExploreData = homepageContent.find(
-    (component) => component.__component === "homepage-components.visit-explore"
+    (component) =>
+      component.__component === "homepage-components.visit-explore",
   );
 
   const eventsNewsData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.home-events-and-news"
+      component.__component === "homepage-components.home-events-and-news",
   );
 
   return (
@@ -97,7 +98,7 @@ export default async function HomePage() {
             buttons={yourJourneyData?.button}
           />
         )} */}
-        {AFSData && (
+        {/* {AFSData && (
           <AFS
             content1={AFSData?.afs1content}
             content2={AFSData?.afs2content}
@@ -109,16 +110,20 @@ export default async function HomePage() {
             link2={AFSData?.link2}
             link3={AFSData?.link3}
           />
-        )}
+        )} */}
         {ourTopRecruitersData && (
           <OurTopRecruiters
             title={ourTopRecruitersData?.title}
             counters={ourTopRecruitersData?.counter}
             logos={ourTopRecruitersData?.logos}
+            title1={feeStructureScholarData?.text1 || ""}
+            title2={feeStructureScholarData?.text2 || ""}
+            link1={feeStructureScholarData?.link1 || ""}
+            link2={feeStructureScholarData?.link2 || ""}
           />
         )}
 
-        {feeStructureScholarData && (
+        {/* {feeStructureScholarData && (
           <PlacementsRecruiters
             title1={feeStructureScholarData?.text1}
             title2={feeStructureScholarData?.text2}
@@ -127,7 +132,7 @@ export default async function HomePage() {
             link1={feeStructureScholarData?.link1}
             link2={feeStructureScholarData?.link2}
           />
-        )}
+        )} */}
         {whyKRMUData && (
           <WhyKRMU
             title={whyKRMUData?.title}
@@ -135,30 +140,17 @@ export default async function HomePage() {
             description={whyKRMUData?.Descriptions}
           />
         )}
-        <div className="hidden lg:block">
-          {elevateCampusData && (
-            <ElevateCampus
-              elevateCampus={elevateCampusData?.elevatecampus1}
-              elevateImage1={elevateCampusData?.elevatecampusimage1}
-              elevateCampus2={elevateCampusData?.ElevateCampus2}
-              elevateImage2={elevateCampusData?.elevatecampusimage2}
-              elevateCampus3={elevateCampusData?.elevatecampus3}
-              elevateImage3={elevateCampusData?.elevatecampusimage3}
-            />
-          )}
-        </div>
-        <div className="lg:hidden">
-          {elevateCampusData && (
-            <MobElevateCampus
-              elevateCampus={elevateCampusData?.elevatecampus1}
-              elevateImage1={elevateCampusData?.elevatecampusimage1}
-              elevateCampus2={elevateCampusData?.ElevateCampus2}
-              elevateImage2={elevateCampusData?.elevatecampusimage2}
-              elevateCampus3={elevateCampusData?.elevatecampus3}
-              elevateImage3={elevateCampusData?.elevatecampusimage3}
-            />
-          )}
-        </div>
+
+        {elevateCampusData && (
+          <ElevateCampus
+            elevateCampus={elevateCampusData?.elevatecampus1}
+            elevateImage1={elevateCampusData?.elevatecampusimage1}
+            elevateCampus2={elevateCampusData?.ElevateCampus2}
+            elevateImage2={elevateCampusData?.elevatecampusimage2}
+            elevateCampus3={elevateCampusData?.elevatecampus3}
+            elevateImage3={elevateCampusData?.elevatecampusimage3}
+          />
+        )}
 
         {homeKRMTestimonialData && (
           <HomeTestimonial

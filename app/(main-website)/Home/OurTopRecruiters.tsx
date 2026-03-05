@@ -1,42 +1,75 @@
 import { CounterItem, StrapiMedia } from "@/lib/types/common";
 import Image from "next/image";
 import { STRAPI_URL } from "../../constant";
+import Link from "next/link";
 
 interface OurTopRecruitProps {
   title: string;
   counters: CounterItem[];
   logos: StrapiMedia[];
+  title1: string;
+  title2: string;
+  link1: string;
+  link2: string;
 }
 
 const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
   title,
   counters,
   logos,
+  title1,
+  title2,
+  link1,
+  link2,
 }) => {
   return (
-    <section className="bg-[#051630] overflow-hidden">
+    <section className="bg-[#051630] overflow-hidden mb-20">
       <div className="flex flex-col lg:flex-row w-full max-w-[1664px] mx-auto items-center">
         {/* Left Section */}
-        <div className="w-full lg:w-1/2  text-center md:text-left">
-          <h4 className="max-w-2xl w-full text-3xl sm:text-4xl md:text-5xl font-semibold leading-[1.13] text-white">
+        <div className="w-full lg:w-1/3  text-center md:text-left py-20">
+          <h4 className="max-w-2xl w-full text-2xl mt-5 font-semibold lg:text-6xl lg:leading-none text-white">
             {title}
           </h4>
           <div className="grid grid-cols-2 text-white mt-10">
             {counters.map((counter) => (
               <div key={counter.id} className="flex flex-col mb-5">
-                <span className="text-2xl md:text-3xl font-semibold">
+                <span className="text-white font-bold mb-[10px] text-3xl xl:text-4xl">
                   {counter.countertext}
                 </span>
-                <span className="text-sm md:text-xl xl:text-2xl font-semibold">
+                <span className="text-sm font-semibold">
                   {counter.countercontent}
                 </span>
               </div>
             ))}
           </div>
+          <div className="flex items-center gap-5">
+            {link1 || title1 ? (
+              <Link
+                href={link1}
+                className="bg-white text-black font-semibold flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                target="_blank"
+              >
+                <span className="text-sm sm:text-xl">{title1}</span>
+              </Link>
+            ) : (
+              ""
+            )}
+            {link2 || title2 ? (
+              <Link
+                href={link2}
+                className="bg-white text-black font-semibold flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                target="_blank"
+              >
+                <span className="text-sm sm:text-xl">{title2}</span>
+              </Link>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
 
         {/* Right Section */}
-        <div className="grid grid-cols-2 md:grid-cols-3 pb-12 px-5 w-full lg:w-1/2 lg:px-5 lg:pt-8 lg:pb-2.5 lg:mx-8 bg-[linear-gradient(0deg,_#0060aa_0%,_#051630_100%)]">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 pb-12 px-5 w-full lg:w-2/3 lg:px-5 lg:pt-8 lg:pb-2.5 lg:mx-8 bg-[linear-gradient(0deg,_#0060aa_0%,_#051630_100%)]">
           {logos.map((logo, index) => (
             <div
               key={logo.id || index}

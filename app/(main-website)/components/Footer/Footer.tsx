@@ -41,7 +41,7 @@ const Footer = async () => {
           <div className="w-full  xl:w-1/4 xl:mx-7">
             {footerComp1 && (
               <div>
-                <h6 className="text-2xl font-bold pb-5 border-b border-white w-1/2 text-white mt-2.5 mb-[15px]">
+                <h6 className="text-2xl font-bold pb-5  w-1/2 text-white mt-2.5 mb-[15px]">
                   {footerComp1?.heading?.heading}
                 </h6>
                 <Image
@@ -70,7 +70,7 @@ const Footer = async () => {
             <div className="xl:mx-7 break-all">
               {footerComp2 && (
                 <>
-                  <h6 className="text-2xl font-bold pb-5 border-b border-white w-1/2 text-white mt-5 md:mt-2.5 mb-[15px]">
+                  <h6 className="text-2xl font-bold pb-5  w-1/2 text-white mt-5 md:mt-2.5 mb-[15px]">
                     {footerComp2?.heading?.heading}
                   </h6>
                   <ul className="text-white mb-5">
@@ -85,12 +85,12 @@ const Footer = async () => {
                             className="leading-[27.2px] text-base flex items-baseline justify-between"
                           >
                             {comp2?.title}
-                            <Image
+                            {/* <Image
                               src="/white-arrow.svg"
                               width={19}
                               height={27}
                               alt="White arrow"
-                            />
+                            /> */}
                           </Link>
                         </li>
                       );
@@ -104,7 +104,7 @@ const Footer = async () => {
             <div className="xl:mx-7">
               {footerComp3 && (
                 <>
-                  <h6 className="text-2xl font-bold pb-5 border-b border-white w-1/2 text-white mt-2.5 mb-[15px]">
+                  <h6 className="text-2xl font-bold pb-5  w-1/2 text-white mt-2.5 mb-[15px]">
                     {footerComp3?.heading?.heading}
                   </h6>
                   <ul className="text-white mb-5">
@@ -120,12 +120,12 @@ const Footer = async () => {
                             target="_blank" rel="noopener noreferrer"
                           >
                             {comp3?.title}
-                            <Image
+                            {/* <Image
                               src="/white-arrow.svg"
                               width={19}
                               height={27}
                               alt="White arrow"
-                            />
+                            /> */}
                           </Link>
                         </li>
                       );
@@ -139,7 +139,7 @@ const Footer = async () => {
             <div className="xl:mx-7 break-all">
               {footerComp4 && (
                 <>
-                  <h6 className="text-2xl font-bold pb-5 w-1/2 border-b border-white  text-white mt-2.5 mb-[15px]">
+                  <h6 className="text-2xl font-bold pb-5 w-1/2   text-white mt-2.5 mb-[15px]">
                     {footerComp4?.heading?.heading}
                   </h6>
                   <ul className="text-white">
@@ -163,7 +163,7 @@ const Footer = async () => {
                       );
                     })}
                   </ul>
-                  <h6 className="text-2xl font-bold pb-5 border-b border-white w-1/2 text-white mt-2.5 mb-[15px]">
+                  <h6 className="text-2xl font-bold pb-5  w-1/2 text-white mt-2.5 mb-[15px]">
                     {footerComp4?.heading_2?.heading}
                   </h6>
                   <div className="flex">
