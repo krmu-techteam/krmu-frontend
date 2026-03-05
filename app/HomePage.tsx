@@ -13,6 +13,7 @@ import VisitExplore from "./(main-website)/Home/VisitExplore";
 import WhyKRMU from "./(main-website)/Home/WhyKRMU";
 import YourJourney from "./(main-website)/Home/YourJourney";
 import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
+import YourJourney2 from "./(main-website)/Home/homeComp/YourJourney2";
 
 export default async function HomePage() {
   const homepageContent = await getHomePageData();
@@ -88,13 +89,14 @@ export default async function HomePage() {
             rightContent={aDecadeData?.adecaderightcol}
           />
         )}
-        {yourJourneyData && (
+        <YourJourney2 />
+        {/* {yourJourneyData && (
           <YourJourney
             title={yourJourneyData?.title}
             content={yourJourneyData?.description}
             buttons={yourJourneyData?.button}
           />
-        )}
+        )} */}
         {AFSData && (
           <AFS
             content1={AFSData?.afs1content}

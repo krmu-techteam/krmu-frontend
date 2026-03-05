@@ -24,7 +24,7 @@ const YourJourney = ({ title, content, buttons }: YourJourneyProps) => {
       >
         <div className="flex flex-col max-w-[1664px] mx-auto w-full text-white xl:flex-row">
           <div className="w-full xl:w-1/2">
-            <h4 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-2 md:mb-5 sm:max-w-sm leading-tight">
+            <h4 className="text-3xl sm:text-4xl md:text-6xl font-semibold mb-2 md:mb-5 sm:max-w-md leading-tight">
               {title}
             </h4>
             <p className="xl:max-w-lg w-full text-center xl:text-left mb-5">
@@ -56,7 +56,7 @@ const YourJourney = ({ title, content, buttons }: YourJourneyProps) => {
                   ) : (
                     <Link
                       key={i}
-                      className={`bg-[#cb000d] text-white font-bold px-5 py-1.5 rounded-md  ${
+                      className={`bg-[#cb000d] text-white px-5 py-1.5 rounded-md  ${
                         button.buttonclass || ""
                       }`}
                       href={button.buttonlink || "#"}

@@ -52,7 +52,7 @@ const HomeYourJourneyForm = () => {
           placeholder="Search Your Programmes"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="text-center w-full bg-white text-black p-2.5 mb-2.5 rounded-md h-14 text-xl outline-none"
+          className="text-center max-w-xs w-full bg-white font-semibold p-2.5 mb-2.5 rounded-md h-14 text-xl outline-none text-[#0160af] border-2 border-[#0160af]"
         />
 
         {/* Submit Button */}

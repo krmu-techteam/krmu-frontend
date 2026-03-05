@@ -36,7 +36,7 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
       <section className="px-4 py-5 sm:py-20">
         <div className="flex flex-col text-center lg:flex-row gap-5  max-w-[1664px] mx-auto md:text-left">
           <div className="w-full xl:w-1/2">                     
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-2 md:mb-5 text-[#034272]">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold mb-2 md:mb-5 text-[#034272]">
               {leftContent.adecadetitle}
             </h2>
             <h3 className="mb-4 text-2xl md:text-4xl font-light text-[#034272]">

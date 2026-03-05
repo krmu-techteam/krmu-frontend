@@ -18,13 +18,13 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
       <div className="flex flex-col lg:flex-row w-full max-w-[1664px] mx-auto items-center">
         {/* Left Section */}
         <div className="w-full lg:w-1/2  text-center md:text-left">
-          <h4 className="max-w-2xl w-full text-4xl md:text-5xl xl:text-[80px] font-medium leading-[1.13] text-white">
+          <h4 className="max-w-2xl w-full text-3xl sm:text-4xl md:text-5xl font-semibold leading-[1.13] text-white">
             {title}
           </h4>
           <div className="grid grid-cols-2 text-white mt-10">
             {counters.map((counter) => (
               <div key={counter.id} className="flex flex-col mb-5">
-                <span className="text-2xl md:text-5xl xl:text-[55px] font-semibold">
+                <span className="text-2xl md:text-3xl font-semibold">
                   {counter.countertext}
                 </span>
                 <span className="text-sm md:text-xl xl:text-2xl font-semibold">

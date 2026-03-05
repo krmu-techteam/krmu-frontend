@@ -34,38 +34,68 @@ const ShapingFuture = ({
     <>
       <section className="px-4">
         <div className="py-8 max-w-[1664px] mx-auto w-full">
-          <div className="lg:flex lg:bg-white lg:rounded-t-[50px] lg:pb-8 shadow-xl/20">
-            <div className="px-5 lg:w-3/5 lg:mx-8 xl:pl-8">
+          <div className="lg:flex lg:bg-white gap-10">
+            <div className="lg:w-3/5">
               <div className="pt-12 mx-1">
                 <div className="my-2">
-                  <h3 className="text-2xl ">{subtitle}</h3>
-                  <h3 className="text-2xl mt-5 font-semibold lg:text-[64px] lg:leading-none">
+                  <h3 className="text-2xl">{subtitle}</h3>
+                  <h3 className="text-2xl mt-5 font-semibold lg:text-6xl lg:leading-none">
                     <span className="text-[#034272]">{highlight}</span>
                     {afterHighLight}
                   </h3>
+
+                  {/* <Link
+                  href={leftContent.button1link}
+                  className="bg-primary text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                >
+                  <span className="text-sm sm:text-xl">
+                    Research
+                  </span>
+                  <Image
+                    src="/arrow-2.svg"
+                    alt="arrow 2"
+                    width={39}
+                    height={8}
+                  />
+                </Link> */}
                 </div>
                 <p className="mb-2 mt-5">{desc}</p>
               </div>
-              <div className="lg:flex ">
+              <div className="grid md:grid-cols-2 my-10">
                 {shapingCounters &&
                   shapingCounters.map((counter) => {
                     return (
                       <div
                         key={counter?.id}
-                        className="flex flex-col text-center items-center justify-center mb-5 lg:items-start lg:mx-4 lg:justify-start lg:text-left lg:w-1/4"
+                        className="flex flex-col text-center items-center justify-center mb-5 lg:items-start lg:mx-4 lg:justify-start lg:text-left"
                       >
-                        <span className="text-[#034272] font-bold mb-[10px] text-4xl xl:text-5xl">
+                        <span className="text-[#034272] font-bold mb-[10px] text-3xl xl:text-4xl">
                           {counter?.countertext}
                         </span>
-                        <span className="text-base font-semibold">
+                        <span className="text-sm font-semibold">
                           {counter?.countercontent}
                         </span>
                       </div>
                     );
                   })}
               </div>
+
+              <div className="flex items-center gap-5">
+                <Link
+                  href={link1}
+                  className="bg-primary text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                >
+                  <span className="text-sm sm:text-xl">{link1text}</span>
+                </Link>
+                <Link
+                  href={link2}
+                  className="bg-primary text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                >
+                  <span className="text-sm sm:text-xl">{link2text}</span>
+                </Link>
+              </div>
             </div>
-            <div className="lg:w-2/5 lg:mx-8">
+            <div className="lg:w-2/5">
               <div className="mt-8">
                 <Image
                   src={`${STRAPI_URL}${shapingimage.url}`}
@@ -122,7 +152,7 @@ const ShapingFuture = ({
               </div>
             </div>
           </div>
-          <div className="text-center  py-2.5 pl-32 bg-[#034272] justify-start items-center text-white rounded-b-[41px] hidden lg:flex">
+          {/* <div className="text-center  py-2.5 pl-32 bg-[#034272] justify-start items-center text-white rounded-b-[41px] hidden lg:flex">
             <Link
               href={link1}
               className={`text-[18px]  font-semibold  flex gap-2.5 my-2.5 items-center w-1/4`}
@@ -149,7 +179,7 @@ const ShapingFuture = ({
                 height={32}
               />
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
