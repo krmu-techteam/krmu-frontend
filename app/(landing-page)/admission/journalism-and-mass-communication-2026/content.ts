@@ -32,7 +32,7 @@ export const Hero: HeroContent = {
       PROGRAMMES <br /> 2026-27
       </span>
     `,
-  desc: `The JMC course focuses on developing critical <br /> thinking, communication skills, creativity, <br /> and social awareness, preparing students <br /> for the fast-changing world of media, <br /> communication and storytelling`,
+  desc: `The Emerging Media & Creator Economy courses <br />focuses on developing critical <br /> thinking, communication skills, creativity, <br /> and social awareness, preparing students <br /> for the fast-changing world of media, <br /> communication and storytelling`,
   heroBg: "/wp-content/landingpage/sjmc-2026/sjmc.webp",
   // middleImg: "/landingpage/law-2026/law.webp",
   middleImg: "",
