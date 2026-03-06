@@ -98,7 +98,7 @@ const ShapingFuture = ({
             <div className="lg:w-2/5">
               <div className="relative min-h-[596px] h-full">
                 <Image
-                  src="/wp-content/home2/shaping/engage.webp"
+                  src="/wp-content/home2/shaping/shapingengage.webp"
                   fill
                   className="z-10"
                   alt="Shaping Future"

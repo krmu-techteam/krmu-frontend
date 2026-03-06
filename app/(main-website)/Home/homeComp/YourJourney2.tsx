@@ -20,13 +20,13 @@ const YourJourney2 = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 p-10">
           <div className="w-full h-full bg-gray-500 min-h-[300px] relative overflow-hidden rounded-xl">
-            <Image src="/wp-content/home2/journey/1.webp" fill alt="Journey 1" className="z-10 object-cover" />
+            <Image src="/wp-content/home2/journey/1.jpg" fill alt="Journey 1" className="z-10 object-cover" />
           </div>
           <div className="w-full h-full bg-gray-500 min-h-[300px] relative overflow-hidden rounded-xl">
-             <Image src="/wp-content/home2/journey/2.webp" fill alt="Journey 2" className="z-10 object-cover" />
+             <Image src="/wp-content/home2/journey/2.jpg" fill alt="Journey 2" className="z-10 object-cover" />
           </div>
           <div className="w-full h-full bg-gray-500 min-h-[300px] relative overflow-hidden rounded-xl">
-             <Image src="/wp-content/home2/journey/3.webp" fill alt="Journey 3" className="z-10 object-cover" />
+             <Image src="/wp-content/home2/journey/3.jpg" fill alt="Journey 3" className="z-10 object-cover" />
           </div>
         </div>
         <div className="flex justify-center gap-5 flex-wrap">

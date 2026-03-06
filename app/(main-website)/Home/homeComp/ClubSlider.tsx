@@ -16,7 +16,7 @@ const homeClubSocietiesSlider = [
   },
   {
     id: 2,
-    imgUrl: "/wp-content/home2/clubsocieties/2.webp",
+    imgUrl: "/wp-content/home2/clubsocieties/club2.webp",
     alt: "Event",
   },
   {
@@ -26,7 +26,7 @@ const homeClubSocietiesSlider = [
   },
   {
     id: 4,
-    imgUrl: "/wp-content/home2/clubsocieties/4.webp",
+    imgUrl: "/wp-content/home2/clubsocieties/club4.webp",
     alt: "Event",
   },
 ];
