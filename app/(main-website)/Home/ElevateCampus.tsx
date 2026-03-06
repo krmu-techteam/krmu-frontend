@@ -41,7 +41,7 @@ const ElevateCampus = ({
                   <br />
                   {elevateCampus?.afterhighlighttext}
                 </h3>
-                <p className="mb-5">{elevateCampus?.content}</p>
+                <p className="mb-5 text-lg">{elevateCampus?.content}</p>
                 {(elevateCampus.link || elevateCampus.linkclass) && (
                   <Link
                     href={elevateCampus.link}
@@ -70,7 +70,7 @@ const ElevateCampus = ({
                 alt="Elevate"
                 width={993}
                 height={575}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover rounded-2xl"
               />
             </div>
             <div className="w-full  xl:w-1/3 flex flex-col justify-center items-center">
@@ -86,7 +86,7 @@ const ElevateCampus = ({
                   </span>{" "}
                   {elevateCampus2?.afterhighlighttext}
                 </h3>
-                <p className="mb-5">{elevateCampus2?.content}</p>
+                <p className="mb-5 text-lg">{elevateCampus2?.content}</p>
                 {(elevateCampus2?.link || elevateCampus2?.linkclass) && (
                   <Link
                     href={elevateCampus2?.link}
@@ -111,7 +111,7 @@ const ElevateCampus = ({
                   </span>
                   {elevateCampus3?.afterhighlighttext}
                 </h3>
-                <p className="mb-5">{elevateCampus3?.content}</p>
+                <p className="mb-5 text-lg">{elevateCampus3?.content}</p>
                 {(elevateCampus3?.link || elevateCampus3?.linkclass) && (
                   <Link
                     href={elevateCampus3?.link}

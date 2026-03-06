@@ -41,7 +41,7 @@ const Footer = async () => {
           <div className="w-full  xl:w-1/4 xl:mx-7">
             {footerComp1 && (
               <div>
-                <h6 className="text-2xl font-bold pb-5  w-1/2 text-white mt-2.5 mb-[15px]">
+                <h6 className="text-2xl font-bold pb-2.5  w-1/2 text-white mt-2.5">
                   {footerComp1?.heading?.heading}
                 </h6>
                 <Image
@@ -56,7 +56,7 @@ const Footer = async () => {
                 {footerComp1?.footer_btn?.btn_link && (
                   <Link
                     href={footerComp1?.footer_btn?.btn_link || "#"}
-                    className={`text-white bg-[#cb000d] py-[5px] px-5 hover:bg-[#034272] rounded font-semibold ${
+                    className={`text-white bg-[#034272] py-[5px] px-5 rounded font-semibold ${
                       footerComp1?.footer_btn?.btn_class || ""
                     }`}
                   >
@@ -70,7 +70,7 @@ const Footer = async () => {
             <div className="xl:mx-7 break-all">
               {footerComp2 && (
                 <>
-                  <h6 className="text-2xl font-bold pb-5  w-1/2 text-white mt-5 md:mt-2.5 mb-[15px]">
+                  <h6 className="text-2xl font-bold pb-2.5  w-1/2 text-white mt-5 md:mt-2.5">
                     {footerComp2?.heading?.heading}
                   </h6>
                   <ul className="text-white mb-5">
@@ -78,7 +78,7 @@ const Footer = async () => {
                       return (
                         <li
                           key={comp2?.id}
-                          className="border-b border-[rgba(254,254,254,.27)] pb-1.5"
+                          className="pb-1.5"
                         >
                           <Link
                             href={comp2?.url || "#"}
@@ -104,7 +104,7 @@ const Footer = async () => {
             <div className="xl:mx-7">
               {footerComp3 && (
                 <>
-                  <h6 className="text-2xl font-bold pb-5  w-1/2 text-white mt-2.5 mb-[15px]">
+                  <h6 className="text-2xl font-bold pb-2.5  w-1/2 text-white mt-2.5">
                     {footerComp3?.heading?.heading}
                   </h6>
                   <ul className="text-white mb-5">
@@ -112,7 +112,7 @@ const Footer = async () => {
                       return (
                         <li
                           key={comp3?.id}
-                          className="border-b border-[rgba(254,254,254,.27)] pb-1.5"
+                          className="pb-1.5"
                         >
                           <Link
                             href={comp3?.url || "#"}
@@ -139,10 +139,10 @@ const Footer = async () => {
             <div className="xl:mx-7 break-all">
               {footerComp4 && (
                 <>
-                  <h6 className="text-2xl font-bold pb-5 w-1/2   text-white mt-2.5 mb-[15px]">
+                  <h6 className="text-2xl font-bold pb-2.5 w-1/2   text-white mt-2.5">
                     {footerComp4?.heading?.heading}
                   </h6>
-                  <ul className="text-white">
+                  <ul className="text-white mb-5">
                     {footerComp4?.footer_list_icon?.map((comp4) => {
                       return (
                         <li key={comp4?.id} className="flex gap-3 mb-2.5">
@@ -163,7 +163,7 @@ const Footer = async () => {
                       );
                     })}
                   </ul>
-                  <h6 className="text-2xl font-bold pb-5  w-1/2 text-white mt-2.5 mb-[15px]">
+                  <h6 className="text-2xl font-bold  w-1/2 text-white">
                     {footerComp4?.heading_2?.heading}
                   </h6>
                   <div className="flex">

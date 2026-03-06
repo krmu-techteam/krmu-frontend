@@ -28,6 +28,7 @@ const HomeGlobalCarousel = ({ logos }: GlobalLogosProps) => {
             delay: 2000,
           }),
         ]}
+        className="px-10"
       >
         <CarouselContent>
           {logos &&
@@ -48,8 +49,8 @@ const HomeGlobalCarousel = ({ logos }: GlobalLogosProps) => {
               );
             })}
         </CarouselContent>
-        <CarouselPrevious className="bg-[#707070] text-white rounded-none left-[2%]" />
-        <CarouselNext className="bg-[#707070] text-white rounded-none right-[-2%]" />
+        <CarouselPrevious className="bg-[#707070] text-white rounded-none left-0" />
+        <CarouselNext className="bg-[#707070] text-white rounded-none right-0" />
       </Carousel>
     </>
   );

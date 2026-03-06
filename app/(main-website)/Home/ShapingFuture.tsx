@@ -39,8 +39,8 @@ const ShapingFuture = ({
               <div className="pt-12 mx-1">
                 <div className="my-2">
                   <h3 className="text-2xl">{subtitle}</h3>
-                  <h3 className="text-2xl mt-5 font-semibold lg:text-6xl lg:leading-none">
-                    <span className="text-[#034272]">{highlight}</span>
+                  <h3 className="text-2xl mt-5 font-semibold lg:text-5xl lg:leading-none">
+                    <span className="text-[#034272]">{highlight}</span> <br />
                     {afterHighLight}
                   </h3>
 
@@ -59,7 +59,7 @@ const ShapingFuture = ({
                   />
                 </Link> */}
                 </div>
-                <p className="mb-2 mt-5">{desc}</p>
+                <p className="mb-2 mt-5 text-lg">{desc}</p>
               </div>
               <div className="grid md:grid-cols-2 my-10">
                 {shapingCounters &&
@@ -83,33 +83,28 @@ const ShapingFuture = ({
               <div className="flex items-center gap-5">
                 <Link
                   href={link1}
-                  className="bg-primary text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                  className="bg-[#034272] border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
                 >
                   <span className="text-sm sm:text-xl">{link1text}</span>
                 </Link>
                 <Link
                   href={link2}
-                  className="bg-primary text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                  className="border-2 text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
                 >
                   <span className="text-sm sm:text-xl">{link2text}</span>
                 </Link>
               </div>
             </div>
             <div className="lg:w-2/5">
-              <div className="mt-8">
+              <div className="relative min-h-[596px] h-full">
                 <Image
-                  src="/wp-content/home2/shaping/shaping.webp"
-                  width={292}
-                  height={292}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                  }}
-                  className="hidden lg:block"
+                  src="/wp-content/home2/shaping/engage.webp"
+                  fill
+                  className="z-10"
                   alt="Shaping Future"
                 />
 
-                <div className="lg:hidden">
+                {/* <div className="lg:hidden">
                   <Image
                     src={`${STRAPI_URL}${mobShapimage?.url}`}
                     width={292}
@@ -120,7 +115,7 @@ const ShapingFuture = ({
                     }}
                     alt="Shaping Future"
                   />
-                </div>
+                </div> */}
               </div>
               <div className="text-center pt-2.5 pb-5 px-2.5 bg-[#034272] flex justify-center flex-col items-center text-white rounded-b-[41px] lg:hidden">
                 <Link

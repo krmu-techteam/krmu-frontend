@@ -23,11 +23,11 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
   link2,
 }) => {
   return (
-    <section className="bg-[#051630] overflow-hidden mb-20">
-      <div className="flex flex-col lg:flex-row w-full max-w-[1664px] mx-auto items-center">
+    <section className="bg-[#051630] overflow-hidden">
+      <div className="flex gap-5 flex-col lg:flex-row w-full max-w-[1664px] mx-auto items-center">
         {/* Left Section */}
         <div className="w-full lg:w-1/3  text-center md:text-left py-20">
-          <h4 className="max-w-2xl w-full text-2xl mt-5 font-semibold lg:text-6xl lg:leading-none text-white">
+          <h4 className="max-w-2xl w-full text-2xl mt-5 font-semibold lg:text-5xl lg:leading-none text-white">
             {title}
           </h4>
           <div className="grid grid-cols-2 text-white mt-10">
@@ -42,7 +42,7 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
               </div>
             ))}
           </div>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 mt-5">
             {link1 || title1 ? (
               <Link
                 href={link1}
@@ -57,7 +57,7 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
             {link2 || title2 ? (
               <Link
                 href={link2}
-                className="bg-white text-black font-semibold flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                className="border border-white text-white font-semibold flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
                 target="_blank"
               >
                 <span className="text-sm sm:text-xl">{title2}</span>
@@ -69,7 +69,7 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
         </div>
 
         {/* Right Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 pb-12 px-5 w-full lg:w-2/3 lg:px-5 lg:pt-8 lg:pb-2.5 lg:mx-8 bg-[linear-gradient(0deg,_#0060aa_0%,_#051630_100%)]">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 pb-12 px-5 w-full lg:w-2/3 lg:px-5 lg:pt-8 lg:pb-2.5 bg-[#0060aa]">
           {logos.map((logo, index) => (
             <div
               key={logo.id || index}

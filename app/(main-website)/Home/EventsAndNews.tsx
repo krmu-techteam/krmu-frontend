@@ -17,10 +17,10 @@ const EventsAndNews = async ({
   const newsandeventsdata = await getNewsEventsWP(1, 3);
 
   return (
-    <section className="bg-[url(/homenewsevent.webp)] bg-cover bg-no-repeat pb-12 px-4 lg:pb-20">
-      <div className="w-full max-w-[1664px] mx-auto">
+    <section>
+      <div className="w-full max-w-[1664px] mx-auto bg-gray-50 p-10">
         <div>
-          <h4 className="text-4xl leading-[1.17] font-semibold text-center text-white lg:pt-2.5 lg:pb-10 lg:text-left">
+          <h4 className="text-4xl leading-[1.17] font-semibold text-center text-black lg:pt-2.5 lg:pb-10 lg:text-left">
             {title}
           </h4>
           <div className="grid gap-5 lg:gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 lg:px-0 mt-5 lg:mt-0">
@@ -32,7 +32,7 @@ const EventsAndNews = async ({
             {(newsandeventbtn?.buttonlink || newsandeventbtn?.buttonclass) && (
               <Link
                 href={newsandeventbtn?.buttonlink}
-                className={`py-2 px-[18px] text-white bg-[#034272] hover:bg-[#034272] inline-block rounded-md text-base md:text-xl font-bold ${newsandeventbtn?.buttonclass}`}
+                className={`bg-[#034272] border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 ${newsandeventbtn?.buttonclass || ''}`}
                 target="_blank" rel="noopener noreferrer"
               >
                 {newsandeventbtn?.buttontext}
