@@ -20,13 +20,13 @@ import {
 export const Hero: HeroContent = {
   title: `
    <span class="sm:hidden"><span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-bold">
-       Journalism & Mass Communication
+       Emerging Media & Creator Economy
       </span> Admissions Open 2026–27</span>
       <span class="hidden sm:block">
       ADMISSIONS <br />
       OPEN FOR <br />
       <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold">
-       Journalism  & Mass <br /> Communication
+       Emerging Media &   <br />Creator Economy
       </span>
       <br />
       PROGRAMMES <br /> 2026-27
@@ -42,7 +42,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -135,7 +135,7 @@ export const industryExperts: IndustryExpertsSection = {
 `,
   description: `K.R. Mangalam University takes pride in collaborating with industry leaders and skill professionals who offer unparalleled hands-on learning experiences to students`,
   cta: {
-    label: "Apply for JMC 2026-2027",
+    label: "Apply for EMCE 2026-2027",
     href: "#",
   },
   cards: [
@@ -408,12 +408,12 @@ export const faqSectionData: FAQSectionData = {
     {
       id: "item-1",
       question:
-        "What are the career opportunities after graduation with a JMC degree?",
+        "What are the career opportunities after graduation with a Emerging Media & Creator Economy degree?",
       answer: `Graduates can work as Journalists, PR Specialists, TV Anchors, Social Media Managers, and Content Creators.`,
     },
     {
       id: "item-2",
-      question: "What skills will one develop in a JMC programme?",
+      question: "What skills will one develop in a Emerging Media & Creator Economy programme?",
       answer: `One will cultivate skills related to news reporting, content creation, video production, digital marketing, and public relations.`,
     },
     {
@@ -425,7 +425,7 @@ export const faqSectionData: FAQSectionData = {
       id: "item-4",
       question:
         "Does the K.R. Mangalam University focus on digital media trends?",
-      answer: `Yes. The JMC courses at KRMU cover digital media elements like SEO, social media marketing, influencer branding, and multimedia journalism.`,
+      answer: `Yes. The Emerging Media & Creator Economy courses at KRMU cover digital media elements like SEO, social media marketing, influencer branding, and multimedia journalism.`,
     },
     {
       id: "item-5",
@@ -474,13 +474,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "3 Specialisations",
-  title: "KRMU’s Journalism & Mass Communication Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  title: "KRMU’s Emerging Media & Creator Economy",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
