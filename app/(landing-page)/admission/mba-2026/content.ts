@@ -751,18 +751,18 @@ export const programmeContent = {
     "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
-    {
-      id: "1",
-      tag: "IBM",
-      title: "MBA",
-      subtitle: "",
-      desc: "Integrates tools, expert sessions, and certifications for tech-driven career readiness, with IBM support.",
-      duration: "2 Years",
-      fee: "₹2,30,000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "Passed Bachelor's with 50% aggregate marks.",
-    },
+    // {
+    //   id: "1",
+    //   tag: "IBM",
+    //   title: "MBA",
+    //   subtitle: "",
+    //   desc: "Integrates tools, expert sessions, and certifications for tech-driven career readiness, with IBM support.",
+    //   duration: "2 Years",
+    //   fee: "₹2,30,000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "Passed Bachelor's with 50% aggregate marks.",
+    // },
     {
       id: "2",
       tag: "EY",

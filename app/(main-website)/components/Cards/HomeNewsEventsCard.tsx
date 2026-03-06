@@ -53,7 +53,7 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
             />
           )}
         </Link>
-        <div className="pt-5 pl-0 sm:pl-7 text-black">
+        <div className="p-5 rounded-b-3xl text-black bg-white">
           <span className="text-sm text-[#898989]">
             Published On: {formattedDate}
           </span>
