@@ -33,7 +33,7 @@ const ShapingFuture = ({
   return (
     <>
       <section>
-        <div className="max-w-[1664px] mx-auto w-full">
+        <div className="max-w-[1664px] mx-auto w-full mt-20">
           <div className="lg:flex lg:bg-white gap-10">
             <div className="lg:w-3/5">
               <div className="pt-12 mx-1">

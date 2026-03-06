@@ -27,7 +27,7 @@ const ElevateCampus = ({
     <>
       <section>
         <div className="max-w-[1664px] mx-auto px-4 md:px-0">
-          <div className="flex sm:gap-10 flex-col xl:flex-row items-center py-5 md:py-20">
+          <div className="flex sm:gap-10 flex-col xl:flex-row items-center md:py-20">
             <div className="w-full lg:w-1/3 flex flex-col">
               <div className="max-w-lg">
                 <h4 className="text-lg font-semibold mb-3">
@@ -63,7 +63,7 @@ const ElevateCampus = ({
               <ElevateSlider />
             </div>
           </div>
-          <div className="flex sm:gap-10 flex-col xl:flex-row items-center py-5 md:pb-20">
+          <div className="flex sm:gap-10 flex-col xl:flex-row items-center md:pb-20">
             <div className="w-full lg:w-2/3">
               <Image
                 src={`${STRAPI_URL}${elevateImage2?.url}`}
@@ -98,7 +98,7 @@ const ElevateCampus = ({
               </div>
             </div>
           </div>
-          <div className="flex sm:gap-10 flex-col xl:flex-row items-center py-5 md:pb-20">
+          <div className="flex sm:gap-10 flex-col xl:flex-row items-center  md:pb-20">
             <div className="w-full lg:w-1/3 flex justify-center items-center">
               <div className="max-w-lg">
                 <h4 className="text-lg font-semibold mb-3">

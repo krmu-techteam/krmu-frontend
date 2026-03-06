@@ -25,7 +25,7 @@ const homeVibrantEventSlider = [
   },
   {
     id: 4,
-    imgUrl: "/wp-content/home2/vibrant/4.webp",
+    imgUrl: "/wp-content/home2/vibrant/7.webp",
     alt: "Event",
   },
   {
@@ -48,7 +48,7 @@ const ElevateSlider = () => {
           align: "start",
           loop: true,
         }}
-        className="w-full md:px-10 mt-5"
+        className="w-full md:px-10"
       >
         <CarouselContent>
           {homeVibrantEventSlider.map((item) => (
