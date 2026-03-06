@@ -11,7 +11,7 @@ const HomeTestimonial = async ({ title, desc }: HomeKRMTestimonialProps) => {
   return (
     <>
       <section>
-        <div className=" max-w-[1664px] mx-auto w-full bg-[#051630] p-12">
+        <div className=" max-w-[1664px] mx-auto w-full bg-[#051630] p-12 rounded-3xl">
           <div className="xl:flex items-center text-white">
             <div className="xl:w-[40%] xl:pr-10 text-center lg:text-left">
               <h4 className="text-4xl lg:text-5xl leading-tight font-semibold mb-5 max-w-sm">

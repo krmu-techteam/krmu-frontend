@@ -19,7 +19,7 @@ const VisitExplore = ({
       <div className="max-w-[1664px] mx-auto w-full bg-gray-50 pt-10">
         <div className="text-black text-center max-w-[1045px] mx-auto w-full">
           <h4 className="text-2xl md:text-4xl xl:text-5xl font-semibold mb-5">
-            {title1} <br /> {title2}
+            {title1} <br /> <span className="text-[#034272]">{title2}</span>
           </h4>
 
           <p className="mb-5 text-lg">{desc}</p>
