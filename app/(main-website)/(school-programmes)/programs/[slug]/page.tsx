@@ -28,6 +28,8 @@ import Script from "next/script";
 import { BALLBtestimonialsData } from "../progdata/sols";
 import ProgTestimonials from "../prog-comp/ProgTestimonials";
 import { BAArchtestimonialsData } from "../progdata/soad";
+import { BCAAIDStestimonialsData } from "../progdata/soet";
+import { BBADigitalMarketingtestimonialsData } from "../progdata/somc";
 // import ProgTestimonials, {
 //   TestimonialsSection,
 // } from "../prog-comp/ProgTestimonials";
@@ -81,6 +83,9 @@ const page = async ({ params }: Props) => {
   const testimonialsMap: Record<string, any> = {
     "ba-llb-hons": BALLBtestimonialsData,
     "barch-architecture": BAArchtestimonialsData,
+    "bca-ai-data-science": BCAAIDStestimonialsData,
+    "bba-digital-marketing": BBADigitalMarketingtestimonialsData,
+    // "mba": MBAtestimonialsData,
 
     // "bba-llb-hons": BBALLBtestimonialsData,
     // "llm": LLMtestimonialsData,
