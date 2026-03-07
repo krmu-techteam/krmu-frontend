@@ -18,7 +18,7 @@ const YourJourney2 = () => {
           </p>
            <HomeYourJourneyForm />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 py-5 xl:p-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 py-5 xl:p-10 test">
           <div className="w-full h-full bg-gray-500 min-h-[300px] relative overflow-hidden rounded-xl">
             <Image src="/wp-content/home2/journey/1.jpg" fill alt="Journey 1" className="z-10 object-cover" />
           </div>
