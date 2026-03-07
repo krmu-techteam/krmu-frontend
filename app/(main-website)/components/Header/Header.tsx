@@ -48,9 +48,13 @@ const Header = ({
           <div className="w-full md:w-[80%] 2xl:w-[90%]">
             <MainHeaderMarquee data={marqueeData} />
           </div>
-          <div className="w-full md:w-[20%] 2xl:w-[10%] p-3 text-center font-semibold text-red-500 bg-white">
-            <Link href="https://www.krmangalam.edu.in/krmu-convocation-2026" target="_blank">Register Now</Link>
-          </div>
+          <Link
+            href="https://www.krmangalam.edu.in/krmu-convocation-2026"
+            target="_blank"
+            className="w-full md:w-[20%] 2xl:w-[10%] p-3 text-center font-semibold text-red-500 bg-white"
+          >
+            Register Now
+          </Link>
         </div>
         <div
           className="px-2.5 xl:px-4"
