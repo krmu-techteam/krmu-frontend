@@ -15,6 +15,21 @@
 
 /* Custom utility class */
 @layer utilities {
+
+
+   @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .mobanimate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
 .interest-lists ul{
  list-style: disc;
  padding-left: 20px;
