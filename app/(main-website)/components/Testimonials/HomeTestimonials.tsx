@@ -34,7 +34,7 @@ const HomeTestimonials = ({ testiData }: TestimonialProp) => {
           {testiData &&
             testiData.map((item) => {
               return (
-                <CarouselItem key={item?.id} className="md:basis-1/2 rounded-md">
+                <CarouselItem key={item?.id} className="2xl:basis-1/2 rounded-md">
                   <HomeTestimonialCard
                     profilename={item?.profilename}
                     info={item?.profileinfo}
@@ -51,7 +51,7 @@ const HomeTestimonials = ({ testiData }: TestimonialProp) => {
         />
         <CarouselNext
           className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px] 
-         top-[115%] right-[20%] sm:right-[30%] xl:top-[88%] xl:right-[152%]"
+         top-[115%] right-[20%] sm:right-[30%] xl:top-[88%] xl:right-[148%] 2xl:right-[152%]"
         />
       </Carousel>
     </>

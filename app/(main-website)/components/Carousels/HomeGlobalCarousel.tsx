@@ -36,7 +36,7 @@ const HomeGlobalCarousel = ({ logos }: GlobalLogosProps) => {
               return (
                 <CarouselItem
                   key={logo?.id}
-                  className="basis-1/2 md:basis-1/3"
+                  className="md:basis-1/4 xl:basis-1/2"
                 >
                   
                   <Image

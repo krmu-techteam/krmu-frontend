@@ -33,10 +33,10 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
 
   return (
     <>
-      <section className="px-4 py-5 sm:py-20">
-        <div className="flex flex-col text-center lg:flex-row gap-5  max-w-[1664px] mx-auto md:text-left">
+      <section className="py-10 xl:py-20 px-5 xl:px-0">
+        <div className="flex flex-col text-center xl:flex-row gap-5 xl:max-w-7xl 2xl:max-w-[1664px] mx-auto md:text-left">
           <div className="w-full xl:w-1/2">                     
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-2 md:mb-5 text-black">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-2 md:mb-5 text-black">
               {leftContent.adecadetitle}
             </h2>
             <h3 className="mb-4 text-2xl md:text-4xl font-light text-[#034272]">
@@ -47,9 +47,9 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
               {leftContent.button1link && (
                 <Link
                   href={leftContent.button1link}
-                  className="bg-[#034272] text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                  className="bg-[#034272] text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold"
                 >
-                  <span className="text-sm sm:text-xl">
+                  <span className="text-sm sm:text-base">
                     {leftContent.button1text}
                   </span>
                   {/* <Image
@@ -63,9 +63,9 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
               {leftContent.button2link && (
                 <Link
                   href={leftContent.button2link}
-                  className="border-2 text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                  className="border-2 text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold"
                 >
-                  <span className="text-xs sm:text-xl">
+                  <span className="text-xs sm:text-base">
                     {leftContent.button2text}
                   </span>
                   {/* <Image
@@ -80,11 +80,11 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
           </div>
           <div className="w-full grid grid-cols-2 xl:w-1/2 text-center gap-2.5 lg:text-left">
             {counters.map(({ counterText, counterContent }, idx) => (
-              <div key={idx} className="flex flex-col justify-center text-center border rounded-md">
+              <div key={idx} className="flex flex-col justify-center text-center border rounded-md p-5 xl:p-0">
                 <span className="text-4xl sm:text-6xl md:text-6xl font-medium text-[#0060aa]">
                   {counterText}
                 </span>
-                <span className="text-sm md:text-xl font-normal leading-[1.3] text-black">
+                <span className="text-sm xl:text-lg 2xl:text-xl font-normal leading-[1.3] text-black">
                   {counterContent}
                 </span>
               </div>

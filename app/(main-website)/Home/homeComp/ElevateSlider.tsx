@@ -48,11 +48,11 @@ const ElevateSlider = () => {
           align: "start",
           loop: true,
         }}
-        className="w-full md:px-10"
+        className="w-full lg:px-5 xl:px-10"
       >
         <CarouselContent>
           {homeVibrantEventSlider.map((item) => (
-            <CarouselItem key={item.id} className="sm:basis-1/2 md:basis-1/3">
+            <CarouselItem key={item.id} className="sm:basis-1/2 xl:basis-1/3">
               <ElevateSlide imgUrl={item.imgUrl} alt={item.alt} />
             </CarouselItem>
           ))}

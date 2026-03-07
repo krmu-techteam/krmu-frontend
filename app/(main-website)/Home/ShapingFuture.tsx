@@ -33,9 +33,9 @@ const ShapingFuture = ({
   return (
     <>
       <section>
-        <div className="max-w-[1664px] mx-auto w-full mt-20">
+        <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full xl:mt-20 px-5 xl:px-0">
           <div className="lg:flex lg:bg-white gap-10">
-            <div className="lg:w-3/5">
+            <div className="lg:w-1/2 2xl:w-3/5">
               <div className="pt-12 mx-1">
                 <div className="my-2">
                   <h3 className="text-2xl">{subtitle}</h3>
@@ -95,12 +95,12 @@ const ShapingFuture = ({
                 </Link>
               </div>
             </div>
-            <div className="lg:w-2/5">
+            <div className="lg:w-1/2 2xl:w-2/5">
               <div className="relative min-h-[596px] h-full">
                 <Image
                   src="/wp-content/home2/shaping/engage-1.webp"
                   fill
-                  className="z-10"
+                  className="z-10 object-cover"
                   alt="Shaping Future"
                 />
 
@@ -117,7 +117,7 @@ const ShapingFuture = ({
                   />
                 </div> */}
               </div>
-              <div className="text-center pt-2.5 pb-5 px-2.5 bg-[#034272] flex justify-center flex-col items-center text-white rounded-b-[41px] lg:hidden">
+              {/* <div className="text-center pt-2.5 pb-5 px-2.5 bg-[#034272] flex justify-center flex-col items-center text-white rounded-b-[41px] lg:hidden">
                 <Link
                   href={link1}
                   className={`text-[14px]  font-semibold my-2 flex gap-2.5 items-center`}
@@ -144,7 +144,7 @@ const ShapingFuture = ({
                     height={32}
                   />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* <div className="text-center  py-2.5 pl-32 bg-[#034272] justify-start items-center text-white rounded-b-[41px] hidden lg:flex">

@@ -39,7 +39,7 @@ const ClubSlider = () => {
           align: "start",
           loop: true,
         }}
-        className="w-full mt-5 md:mt-0 md:px-10"
+        className="w-full mt-5 md:mt-0 xl:px-10"
       >
         <CarouselContent>
           {homeClubSocietiesSlider.map((item) => (

@@ -18,7 +18,7 @@ const EventsAndNews = async ({
 
   return (
     <section>
-      <div className="w-full max-w-[1664px] mx-auto bg-gray-50 p-10">
+      <div className="w-full xl:max-w-[1360px] 2xl:max-w-[1664px] mx-auto bg-gray-50 p-10">
         <div>
           <h4 className="text-5xl leading-[1.17] font-semibold text-center text-black lg:pt-2.5 lg:pb-10 lg:text-left">
             {title}
