@@ -19,7 +19,7 @@ import {
 // Usage types
 export const Hero: HeroContent = {
   title: `
-   <span class="sm:hidden"><span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-bold">
+   <span class="sm:hidden"><span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-bold test">
        Emerging Media & Creator Economy
       </span> Admissions Open 2026–27</span>
       <span class="hidden sm:block">
@@ -32,7 +32,7 @@ export const Hero: HeroContent = {
       PROGRAMMES <br /> 2026-27
       </span>
     `,
-  desc: `The Emerging Media & Creator Economy courses <br />focuses on developing critical <br /> thinking, communication skills, creativity, <br /> and social awareness, preparing students <br /> for the fast-changing world of media, <br /> communication and storytelling`,
+  desc: `The Emerging Media & Creator Economy courses <br />focus on developing critical <br /> thinking, communication skills, creativity, <br /> and social awareness, preparing students <br /> for the fast-changing world of media, <br /> communication and storytelling`,
   heroBg: "/wp-content/landingpage/sjmc-2026/sjmc.webp",
   // middleImg: "/landingpage/law-2026/law.webp",
   middleImg: "",
@@ -250,7 +250,7 @@ export const opportunityData: OpportunitySection = {
   heading: "Learn From Industry Experts",
   highlight: "Opportunity That Transforms",
   cta: {
-    label: "Apply for JMC Programme 2026-2027",
+    label: "Apply for EMCE Programme 2026-2027",
     href: "#",
   },
 };
@@ -476,7 +476,7 @@ export const applySectionData: ApplySectionData = {
 
 export const programmeContent = {
   badge: "3 Specialisations",
-  title: "KRMU’s Emerging Media & Creator Economy",
+  title: "KRMU’s Emerging Media & Creator Economy Programmes",
   subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [

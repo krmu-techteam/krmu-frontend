@@ -5,6 +5,9 @@ import Topbar from "./Topbar";
 import { TOPBARITEMS, TOPBARSOCIALLInks } from "@/lib/types/HeaderType";
 import MobileHeader from "./MobileHeader";
 import { HeaderMenus } from "@/lib/types/header-menu";
+import MainHeaderMarquee from "./MainHeaderMarquee";
+import { heroMarqueeData } from "./HeaderMaruqueeData";
+import Link from "next/link";
 
 type TOPBARPROPS = {
   topbarmenu: TOPBARITEMS[];
@@ -36,9 +39,23 @@ const Header = ({
     setMobileMenu((prev) => !prev);
   };
 
+  const marqueeData = heroMarqueeData;
+
   return (
     <>
       <header className="fixed top-0 left-0 w-full z-20">
+        <div className="flex flex-col md:flex-row bg-[#e31e24]">
+          <div className="w-full md:w-[80%] 2xl:w-[90%]">
+            <MainHeaderMarquee data={marqueeData} />
+          </div>
+          <Link
+            href="https://www.krmangalam.edu.in/krmu-convocation-2026"
+            target="_blank"
+            className="w-full md:w-[20%] 2xl:w-[10%] p-3 text-center font-semibold text-red-500 bg-white"
+          >
+            Register Now
+          </Link>
+        </div>
         <div
           className="px-2.5 xl:px-4"
           style={{
