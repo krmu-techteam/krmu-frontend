@@ -21,13 +21,15 @@ const ProgTestimonialCard = ({ data }: Props) => {
   return (
     <div className="relative overflow-hidden rounded-2xl">
       {/* Image */}
-      <Image
-        src={data.image}
-        width={400}
-        height={600}
-        alt={data.name}
-        className="h-[420px] w-full object-cover"
-      />
+      {data.image && (
+        <Image
+          src={data.image}
+          width={400}
+          height={600}
+          alt={data.name}
+          className="h-[420px] w-full object-cover"
+        />
+      )}
 
       {/* Play Button */}
       {/* {data.videoUrl && (

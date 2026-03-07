@@ -326,7 +326,7 @@ industry. I highly recommend this programme to anyone passionate about AI and da
       programme: "",
     },
   ],
-};
+}; 
 
 export const scholarResearchImpactData: ScholarResearchImpactSection = {
   heading: "Our Scholars’ Research Impact",
