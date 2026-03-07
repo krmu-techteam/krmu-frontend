@@ -30,11 +30,11 @@ const YourJourney2 = () => {
           </div>
         </div>
         <div className="flex justify-center gap-5 flex-wrap">
-          <Link href="#" className="bg-white text-black border border-[#d8d8d8] px-6 py-2 rounded-sm hover:bg-[#0c59a0] hover:text-white">Admission</Link>
-          <Link href="#" className="bg-white text-black border border-[#d8d8d8] px-6 py-2 rounded-sm hover:bg-[#0c59a0] hover:text-white">Fee Structure</Link>
-          <Link href="#" className="bg-white text-black border border-[#d8d8d8] px-6 py-2 rounded-sm hover:bg-[#0c59a0] hover:text-white">Scholarships</Link>
-          <Link href="#" className="bg-white text-black border border-[#d8d8d8] px-6 py-2 rounded-sm hover:bg-[#0c59a0] hover:text-white">Download Prospectus</Link>
-          <Link href="#" className="bg-[#e31e24] text-white border border-[#d8d8d8] px-6 py-2 rounded-sm">Apply Now</Link>
+          <Link href="#" className="bg-white text-black border font-semibold border-[#d8d8d8] px-6 py-2 rounded-sm hover:bg-[#0c59a0] hover:text-white">Admission</Link>
+          <Link href="#" className="bg-white text-black border font-semibold border-[#d8d8d8] px-6 py-2 rounded-sm hover:bg-[#0c59a0] hover:text-white">Fee Structure</Link>
+          <Link href="#" className="bg-white text-black border font-semibold border-[#d8d8d8] px-6 py-2 rounded-sm hover:bg-[#0c59a0] hover:text-white">Scholarships</Link>
+          <Link href="#" className="bg-white text-black border font-semibold border-[#d8d8d8] px-6 py-2 rounded-sm hover:bg-[#0c59a0] hover:text-white">Download Prospectus</Link>
+          <Link href="#" className="bg-[#e31e24] text-white border border-[#d8d8d8] px-6 py-2 rounded-sm font-semibold">Apply Now</Link>
         </div>
       </div>
     </section>

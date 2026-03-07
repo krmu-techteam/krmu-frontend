@@ -32,7 +32,7 @@ const EventsAndNews = async ({
             {(newsandeventbtn?.buttonlink || newsandeventbtn?.buttonclass) && (
               <Link
                 href={newsandeventbtn?.buttonlink}
-                className={`bg-[#034272] border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 ${newsandeventbtn?.buttonclass || ''}`}
+                className={`bg-[#034272] font-semibold text-base border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 ${newsandeventbtn?.buttonclass || ''}`}
                 target="_blank" rel="noopener noreferrer"
               >
                 {newsandeventbtn?.buttontext}

@@ -83,22 +83,22 @@ const ShapingFuture = ({
               <div className="flex items-center gap-5">
                 <Link
                   href={link1}
-                  className="bg-[#034272] border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                  className="bg-[#034272] border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold"
                 >
-                  <span className="text-sm sm:text-xl">{link1text}</span>
+                  <span className="text-sm sm:text-base">{link1text}</span>
                 </Link>
                 <Link
                   href={link2}
-                  className="border-2 text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                  className="border-2 text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold"
                 >
-                  <span className="text-sm sm:text-xl">{link2text}</span>
+                  <span className="text-sm sm:text-base">{link2text}</span>
                 </Link>
               </div>
             </div>
             <div className="lg:w-2/5">
               <div className="relative min-h-[596px] h-full">
                 <Image
-                  src="/wp-content/home2/shaping/shapingengage.webp"
+                  src="/wp-content/home2/shaping/engage-1.webp"
                   fill
                   className="z-10"
                   alt="Shaping Future"

@@ -27,9 +27,9 @@ const HomeTestimonialCard = ({
             className="mb-5 rounded-md"
           />
         </div>
-        <div className="font-bold text-[20px] text-center sm:text-left">
-          <p className="leading-[1.5]">{profilename}</p>
-          <p>{desg}</p>
+        <div className=" text-center sm:text-left">
+          <p className="leading-[1.5] font-bold text-xl">{profilename}</p>
+          <p className="font-normal text-base">{desg}</p>
         </div>
       </div>
       <div>

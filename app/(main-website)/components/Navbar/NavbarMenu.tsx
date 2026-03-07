@@ -565,7 +565,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
               <li>
                 <Link
                   href={applyNowButton?.url || "#"}
-                  className={`bg-[#cb000d] py-2 px-[22px]  text-xs font-medium text-white rounded-[5px] ${
+                  className={`bg-[#cb000d] py-2 px-[22px]  text-xs font-semibold text-white rounded-[5px] ${
                     applyNowButton?.class || ""
                   }`}
                 >
