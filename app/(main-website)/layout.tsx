@@ -67,7 +67,10 @@ export default function RootLayout({
         </noscript>
         <HeaderWrapper />
         <NoPaperFormProvider />
+        <div className="mt-28 lg:mt-5">
+
         {children}
+        </div>
         <Footer />
         {/* <Button className="bg-[#f00] border border-none py-[6px] px-[15px] fixed top-[40%] right-[-42px] rotate-90 rounded-sm h-[27px] z-10">
           Enquire Now
