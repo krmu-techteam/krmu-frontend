@@ -31,7 +31,6 @@ export const Leaderships = ({ data }: Props) => {
   return (
     <section className="pt-[120px] pb-20 bg-white">
       <div className="max-w-[1664px] mx-auto w-full px-4">
-
         {/* ================= TOP SECTION ================= */}
         <div
           key={selectedLeader.id}
@@ -76,14 +75,12 @@ export const Leaderships = ({ data }: Props) => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="md:w-2/5 flex justify-center">
+          <div className="md:w-2/5 flex justify-center min-h-[368px] h-full relative">
             <Image
               src={`${STRAPI_URL}${selectedLeader.leadership_img?.url}`}
-              width={330}
-              height={430}
+              fill
               alt={selectedLeader.name}
-              unoptimized
-              className="object-contain hidden sm:block"
+              className="object-contain hidden sm:block z-10"
             />
           </div>
         </div>
@@ -102,22 +99,21 @@ export const Leaderships = ({ data }: Props) => {
                     onClick={() => handleSelectLeader(leader)}
                   >
                     <div
-                      className={`bg-white border-b-2 transition-all duration-300 ${
+                      className={`bg-white border-b-2 transition-all duration-300 overflow-hidden ${
                         isActive
                           ? "border-[#0060aa]"
-                          : "border-gray-200 opacity-80"
+                          : "border-gray-200"
                       }`}
                     >
-                      <Image
-                        src={`${STRAPI_URL}${leader.leadership_img?.url}`}
-                        width={260}
-                        height={300}
-                        alt={leader.name}
-                        unoptimized
-                        className={`w-full h-[295px] object-contain sm:object-cover transition-all duration-300 ${
-                          isActive ? "grayscale-0" : "grayscale"
-                        }`}
-                      />
+                      <div className="min-h-[295px] h-full relative overflow-hidden">
+                        <Image
+                          src={`${STRAPI_URL}${leader.leadership_img?.url}`}
+                          fill
+                          alt={leader.name}
+                          unoptimized
+                          className={`z-10 transition-all duration-300 hover:scale-105`}
+                        />
+                      </div>
 
                       <div className="text-[#555] text-center py-3">
                         <h5 className="font-bold">{leader.name}</h5>

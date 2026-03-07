@@ -37,40 +37,40 @@ export const BBADigitalMarketingtestimonialsData: TestimonialsSection = {
 
 
 
-// export const MBAtestimonialsData: TestimonialsSection = {
-//   subheading: "Students’ Testimonials",
-//   heading: `Why Do Our Students Trust Us?`,
-//   testimonials: [
-//     {
-//       image: "",
-//       videoUrl: "#",
-//       quote: `KRMU has been a turning point in my academic journey. The curriculum is practical, industry-focused, and taught by faculty who genuinely care about our growth. The exposure I received through live projects, workshops, and industry interactions has boosted my confidence and shaped my career path.`,
-//       name: "Veeresh Tarnal",
-//       programme: "MBA",
-//     },
-//     {
-//       image: "",
-//       videoUrl: "#",
-//       quote: `It was a great experience studying at K.R. Mangalam University. I completed my MBA degree last year. And I was very fortunate to have all my mentors who helped me during my post-graduation. Also, I would like to thank the training and placement cell for supporting each and every student.`,
-//       name: "Prateek Kumar",
-//       programme: "MBA",
-//     },
-//     {
-//       image: "",
-//       videoUrl: "#",
-//       quote: `No doubt, I made the best choice of my career; K.R. Mangalam University is one among those unique institutions which help students not only in building their career but also enhance distinctive competencies and skill sets that help students grow in their professional lives.`,
-//       name: "Prachi",
-//       programme: "MBA",
-//     },
-//     {
-//       image: "",
-//       videoUrl: "#",
-//       quote: `The skill development opportunities at KRMU made a huge difference in my confidence. Through workshops, projects, and hands-on training, I gained practical abilities that I now use it every day in my career.`,
-//       name: "Rajan Kumar",
-//       programme: "MBA",
-//     },
-//   ],
-// };
+export const MBAtestimonialsData: TestimonialsSection = {
+  subheading: "Students’ Testimonials",
+  heading: `Why Do Our Students Trust Us?`,
+  testimonials: [
+    {
+      image: "/wp-content/landingpage/mba-2026/testimonials/veeresh.webp",
+      videoUrl: "#",
+      quote: `KRMU has been a turning point in my academic journey. The curriculum is practical, industry-focused, and taught by faculty who genuinely care about our growth. The exposure I received through live projects, workshops, and industry interactions has boosted my confidence and shaped my career path.`,
+      name: "Veeresh Tarnal",
+      programme: "MBA",
+    },
+    {
+      image: "/wp-content/landingpage/mba-2026/testimonials/prateek.webp",
+      videoUrl: "#",
+      quote: `It was a great experience studying at K.R. Mangalam University. I completed my MBA degree last year. And I was very fortunate to have all my mentors who helped me during my post-graduation. Also, I would like to thank the training and placement cell for supporting each and every student.`,
+      name: "Prateek Kumar",
+      programme: "MBA",
+    },
+    {
+      image: "/wp-content/landingpage/mba-2026/testimonials/prachi.webp",
+      videoUrl: "#",
+      quote: `No doubt, I made the best choice of my career; K.R. Mangalam University is one among those unique institutions which help students not only in building their career but also enhance distinctive competencies and skill sets that help students grow in their professional lives.`,
+      name: "Prachi",
+      programme: "MBA",
+    },
+    {
+      image: "/wp-content/landingpage/mba-2026/testimonials/rajan.webp",
+      videoUrl: "#",
+      quote: `The skill development opportunities at KRMU made a huge difference in my confidence. Through workshops, projects, and hands-on training, I gained practical abilities that I now use it every day in my career.`,
+      name: "Rajan Kumar",
+      programme: "MBA",
+    },
+  ],
+};
 
 
 
