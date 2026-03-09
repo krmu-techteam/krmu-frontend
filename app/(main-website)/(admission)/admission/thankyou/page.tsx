@@ -30,7 +30,7 @@ export default function ThankYouPage() {
 
             {/* <Link
               href="/admissions"
-              className="border border-[#cb000d] text-[#cb000d] px-8 py-3 rounded-md font-semibold hover:bg-[#cb000d] hover:text-white"
+              classNam  e="border border-[#cb000d] text-[#cb000d] px-8 py-3 rounded-md font-semibold hover:bg-[#cb000d] hover:text-white"
             >
               Explore Admissions
             </Link> */}
