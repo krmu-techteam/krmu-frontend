@@ -16,7 +16,7 @@ const VisitExplore = ({
 }: VisitExploreProp) => {
   return (
     <section> 
-      <div className="xl:max-w-[1360px] 2xl:max-w-[1664px] mx-auto w-full bg-gray-50 px-5 xl:px-0 pt-10">
+      <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full bg-gray-50 px-5 xl:px-0 pt-10">
         <div className="text-black text-center max-w-[1045px] mx-auto w-full">
           <h4 className="text-2xl md:text-4xl xl:text-5xl font-semibold mb-5">
             {title1} <br /> <span className="text-[#034272]">{title2}</span>
