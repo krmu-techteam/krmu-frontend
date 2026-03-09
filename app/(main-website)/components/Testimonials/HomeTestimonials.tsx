@@ -47,11 +47,11 @@ const HomeTestimonials = ({ testiData }: TestimonialProp) => {
         </CarouselContent>
         <CarouselPrevious
           className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px]
-         top-[115%] left-[20%] sm:left-[30%] xl:top-[88%] xl:left-[-66%]"
+         top-[107%] sm:top-[115%] left-[20%] sm:left-[30%] xl:top-[88%] xl:left-[-66%]"
         />
         <CarouselNext
           className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px] 
-         top-[115%] right-[20%] sm:right-[30%] xl:top-[88%] xl:right-[148%] 2xl:right-[152%]"
+         top-[107%] sm:top-[115%] right-[20%] sm:right-[30%] xl:top-[88%] xl:right-[148%] 2xl:right-[152%]"
         />
       </Carousel>
     </>

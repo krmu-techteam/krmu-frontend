@@ -30,7 +30,7 @@ const VisitExplore = ({
                   <Link
                     key={btn?.id}
                     href={btn?.buttonlink}
-                    className={`bg-[#034272] font-semibold border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 ${btn?.buttonclass}`}
+                    className={`bg-[#034272] text-sm sm:text-base font-semibold border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 ${btn?.buttonclass}`}
                   >
                     {btn?.buttontext}
                   </Link>

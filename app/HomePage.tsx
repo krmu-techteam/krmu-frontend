@@ -1,18 +1,14 @@
 import { getHomePageData } from "@/lib/api/home";
 import ADecade from "./(main-website)/Home/ADecade";
-import AFS from "./(main-website)/Home/AFS";
 import ElevateCampus from "./(main-website)/Home/ElevateCampus";
 import EventsAndNews from "./(main-website)/Home/EventsAndNews";
 import GlobalPartner from "./(main-website)/Home/GlobalPartner";
 import HeroSection from "./(main-website)/Home/HeroSection";
 import HomeTestimonial from "./(main-website)/Home/HomeTestimonial";
 import OurTopRecruiters from "./(main-website)/Home/OurTopRecruiters";
-import PlacementsRecruiters from "./(main-website)/Home/PlacementsRecruiters";
 import ShapingFuture from "./(main-website)/Home/ShapingFuture";
 import VisitExplore from "./(main-website)/Home/VisitExplore";
 import WhyKRMU from "./(main-website)/Home/WhyKRMU";
-import YourJourney from "./(main-website)/Home/YourJourney";
-import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
 import YourJourney2 from "./(main-website)/Home/homeComp/YourJourney2";
 
 export default async function HomePage() {

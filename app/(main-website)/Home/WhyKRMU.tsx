@@ -12,7 +12,7 @@ const WhyKRMU = ({ title, subtitle, description }: WhyKRMUProp) => {
           <div className="w-full lg:w-1/2">
             <div className="text-white">
               <h4 className="text-2xl font-normal leading-[30px]">{title}</h4>
-              <h3 className="text-3xl md:text-5xl leading-[1.13] font-semibold lg:mb-5">
+              <h3 className="text-2xl md:text-5xl leading-[1.13] font-semibold lg:mb-5">
                 {subtitle}
               </h3>
             </div>

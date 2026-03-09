@@ -36,14 +36,14 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
       <section className="py-10 xl:py-20 px-5 xl:px-0">
         <div className="flex flex-col xl:flex-row gap-5 xl:max-w-7xl 2xl:max-w-[1664px] mx-auto text-center lg:text-left">
           <div className="w-full xl:w-1/2">                     
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-2 md:mb-5 text-black">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-semibold mb-2 md:mb-5 text-black">
               {leftContent.adecadetitle}
             </h2>
             <h3 className="mb-4 text-2xl md:text-4xl font-light text-[#034272]">
               {leftContent.adecadesubtitle}
             </h3>
             <p className="text-lg mb-5">{leftContent.adecadedescription}</p>
-            <div className="flex flex-col sm:flex-row  justify-center md:items-start gap-2.5 sm:gap-5">
+            <div className="flex flex-col sm:flex-row  justify-center md:justify-start md:items-start gap-2.5 sm:gap-5">
               {leftContent.button1link && (
                 <Link
                   href={leftContent.button1link}

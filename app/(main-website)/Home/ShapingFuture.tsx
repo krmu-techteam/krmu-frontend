@@ -34,12 +34,12 @@ const ShapingFuture = ({
     <>
       <section>
         <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full xl:mt-20 px-5 xl:px-0">
-          <div className="lg:flex lg:bg-white gap-5 2xl:gap-10">
+          <div className="lg:flex lg:bg-white gap-5 2xl:gap-10 items-center">
             <div className="lg:w-1/2 2xl:w-3/5">
               <div className="pt-12 mx-1 text-center lg:text-left">
                 <div className="my-2">
-                  <h3 className="text-2xl">{subtitle}</h3>
-                  <h3 className="text-2xl mt-5 font-semibold md:text-4xl lg:text-5xl lg:leading-none">
+                  <h3 className="text-xl sm:text-2xl">{subtitle}</h3>
+                  <h3 className="text-2xl mt-5 font-semibold sm:text-4xl lg:text-5xl lg:leading-none">
                     <span className="text-[#034272]">{highlight}</span> <br />
                     {afterHighLight}
                   </h3>
@@ -83,24 +83,24 @@ const ShapingFuture = ({
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start sm:items-center gap-5">
                 <Link
                   href={link1}
-                  className="bg-[#034272] border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold"
+                  className="bg-[#034272] border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold text-center"
                 >
                   <span className="text-sm sm:text-base">{link1text}</span>
                 </Link>
                 <Link
                   href={link2}
-                  className="border-2 text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold"
+                  className="border-2 text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold text-center"
                 >
                   <span className="text-sm sm:text-base">{link2text}</span>
                 </Link>
               </div>
             </div>
             <div className="lg:w-1/2 2xl:w-2/5 mt-10 lg:mt-0">
-              <div className="relative min-h-[370px] sm:min-h-[1000px] lg:min-h-[800px] xl:min-h-[596px] h-full">
+              <div className="relative min-h-[300px] md:min-h-96 lg:min-h-[800px] xl:min-h-[596px] h-full">
                 <Image
-                  src="/wp-content/home2/shaping/engage-1.webp"
+                  src="/wp-content/home2/shaping/engage-shaping.webp"
                   fill
-                  className="z-10 object-cover"
+                  className="z-10 object-contain xl:object-cover"
                   alt="Shaping Future"
                 />
 
