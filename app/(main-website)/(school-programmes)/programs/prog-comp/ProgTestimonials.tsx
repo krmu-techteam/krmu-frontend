@@ -13,13 +13,6 @@ export type TestimonialsSection = {
   testimonials: TestimonialItem[];
 };
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import ProgTestimonialCard from "./ProgTestimonialCard";
 
 type Props = {
@@ -28,7 +21,7 @@ type Props = {
 
 const ProgTestimonials = ({ data }: Props) => {
   return (
-    <section className="py-20 sm:pt-20 px-4 overflow-hidden w-full">
+    <section className="py-10 sm:pt-20 px-4 overflow-hidden w-full">
       <div className="w-full mx-auto">
         {/* Header */}
 
@@ -46,36 +39,11 @@ const ProgTestimonials = ({ data }: Props) => {
         </div>
 
         {/* Carousel */}
-        <div className="w-full mt-5">
-          <Carousel opts={{ align: "start", loop: true }} className="w-full">
-            {/* <CarouselContent className="mb-10 sm:my-12 sm:pr-[20%]"> */}
-            <CarouselContent className="mb-10 sm:my-12f justify-center">
-              {data.testimonials.map((item, index) => (
-                // <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-2">
-                <CarouselItem
-                  key={index}
-                  className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 pl-2"
-                >
-                  <ProgTestimonialCard data={item} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-
-            {data?.testimonials?.length > 4 && (
-              <div className="pt-10 hidden sm:block">
-                <CarouselPrevious className="bottom-0 top-full left-[25%] sm:left-0 md:top-0 md:left-[85%] xl:left-[90%] landingpagePrevArrow" />
-                <CarouselNext className="bottom-0 top-full md:top-0 right-[25%] sm:right-0 landingpageNextArrow" />
-              </div>
-            )}
-            <div className="sm:hidden">
-              <CarouselPrevious className="bottom-0 top-full left-[25%] sm:left-0 md:top-0 md:left-[85%] xl:left-[90%] landingpagePrevArrow" />
-              <CarouselNext className="bottom-0 top-full md:top-0 right-[25%] sm:right-0 landingpageNextArrow" />
-            </div>
-            {/* <div className="pt-10">
-              <CarouselPrevious className="bottom-0 top-full left-[25%] sm:left-0 md:top-0 md:left-[85%] xl:left-[90%] landingpagePrevArrow" />
-              <CarouselNext className="bottom-0 top-full md:top-0 right-[25%] sm:right-0 landingpageNextArrow" />
-            </div> */}
-          </Carousel>
+        <div className="w-full mt-5 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
+          {data.testimonials &&
+            data.testimonials.map((item, index) => (
+              <ProgTestimonialCard key={index} data={item} />
+            ))}
         </div>
       </div>
     </section>

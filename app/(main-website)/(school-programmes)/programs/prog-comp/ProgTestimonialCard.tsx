@@ -27,7 +27,7 @@ const ProgTestimonialCard = ({ data }: Props) => {
           width={400}
           height={600}
           alt={data.name}
-          className="h-[420px] w-full object-cover"
+          className="min-h-[420px] h-full w-full object-cover"
         />
       )}
 

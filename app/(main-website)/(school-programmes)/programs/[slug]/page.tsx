@@ -29,7 +29,11 @@ import { BALLBtestimonialsData } from "../progdata/sols";
 import ProgTestimonials from "../prog-comp/ProgTestimonials";
 import { BAArchtestimonialsData } from "../progdata/soad";
 import { BCAAIDStestimonialsData } from "../progdata/soet";
-import { BBADigitalMarketingtestimonialsData, MBAtestimonialsData } from "../progdata/somc";
+import {
+  BBADigitalMarketingtestimonialsData,
+  MBAtestimonialsData,
+} from "../progdata/somc";
+import SpecialisationsSection from "../prog-comp/SpecialisationsSection";
 // import ProgTestimonials, {
 //   TestimonialsSection,
 // } from "../prog-comp/ProgTestimonials";
@@ -85,7 +89,7 @@ const page = async ({ params }: Props) => {
     "barch-architecture": BAArchtestimonialsData,
     "bca-ai-data-science": BCAAIDStestimonialsData,
     "bba-digital-marketing": BBADigitalMarketingtestimonialsData,
-    "mba": MBAtestimonialsData,
+    mba: MBAtestimonialsData,
 
     // "bba-llb-hons": BBALLBtestimonialsData,
     // "llm": LLMtestimonialsData,
@@ -196,8 +200,6 @@ const page = async ({ params }: Props) => {
           />
         )}
 
-      
-
         {eligibilitySection && (
           <Eligibility
             elgibilities={eligibilitySection?.elgibility}
@@ -215,6 +217,8 @@ const page = async ({ params }: Props) => {
             highlights={programmeHighlightSection?.programmehighlightcards}
           />
         )}
+
+        {slug === "mba" && <SpecialisationsSection />}
         {specialisationSection && (
           <Specialisation
             heading={specialisationSection?.heading}
@@ -266,7 +270,7 @@ const page = async ({ params }: Props) => {
           />
         )}
         {careerProspectsSection && (
-          <CareerProspects 
+          <CareerProspects
             heading={careerProspectsSection?.heading}
             highlight={careerProspectsSection?.highlightheading}
             desc={careerProspectsSection?.description}
