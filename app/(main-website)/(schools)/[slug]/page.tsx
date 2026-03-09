@@ -1,5 +1,4 @@
 import SchoolAdmissionOpen from "../SchoolComponents/SchoolAdmissionOpen";
-import SchoolAdvantages from "../SchoolComponents/SchoolAdvantages";
 import SchoolCommenceJourney from "../SchoolComponents/SchoolCommenceJourney";
 import SchoolDeansVision from "../SchoolComponents/SchoolDeansVision";
 import SchoolEventAndExperience from "../SchoolComponents/SchoolEventAndExperience";
@@ -15,7 +14,6 @@ import SchoolLetsExplore from "../SchoolComponents/SchoolLetsExplore";
 import SchoolNewsletter from "../SchoolComponents/SchoolNewsletter";
 import SchoolOurAlumni from "../SchoolComponents/SchoolOurAlumni";
 import SchoolProgrammeOffered from "../SchoolComponents/SchoolProgrammeOffered";
-import SchoolStudentAchievements from "../SchoolComponents/SchoolStudentAchievements";
 import SchoolTestimonials from "../SchoolComponents/SchoolTestimonials";
 import { notFound } from "next/navigation";
 import {
@@ -29,6 +27,7 @@ import CustomPage from "@/app/(main-website)/(page)/CustomPage";
 import { STRAPI_URL } from "@/app/constant";
 import { getSchoolSEO } from "@/lib/api/website-seo";
 import { folderRouteSEO } from "@/lib/api/siteseo";
+import SchoolAdvantages2 from "../SchoolComponents/SchoolDesign2/SchoolAdvantages2";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -218,7 +217,7 @@ export default async function Page({ params }: Props) {
         />
       )}
       {school?.advantagetitle && (
-        <SchoolAdvantages
+        <SchoolAdvantages2
           heading={school?.advantagetitle}
           desc={school?.advantagedesc}
           subtitle={school?.advantagesubtitle}

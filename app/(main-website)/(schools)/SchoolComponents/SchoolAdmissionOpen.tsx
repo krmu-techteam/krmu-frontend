@@ -8,27 +8,30 @@ type Props = {
 
 const SchoolAdmissionOpen = ({ title, admBtn }: Props) => {
   return (
-    <div className="px-5">
-      <div
-        className="max-w-[1600px] mx-auto w-full py-7 sm:py-8 px-5 bg-white rounded-4xl flex flex-col items-center justify-center gap-4 -mt-14 mb-10 z-10 relative"
-        style={{
-          boxShadow: "0px 71px 80px 0px rgba(0, 0, 0, .07)",
-        }}
-      >
-        <h3 className="text-xl sm:text-2xl lg:text-4xl xl:text-5xl font-semibold md:mb-5 lg:mb-0 leading-[1.2] text-center grad-text-color">
-          {title}
-        </h3>
-        {(admBtn?.buttonlink || admBtn?.buttonclass) && (
-          <Link
-            href={admBtn?.buttonlink}
-            className={`w-fit sm:w-full bg-red-500 md:max-w-4xl mx-auto p-2.5 text-lg font-bold h-[50px]  text-white rounded-lg text-center ${admBtn.buttonclass}`}
-            target="_blank" rel="noopener noreferrer"
-          >
-            {admBtn?.buttontext}
-          </Link>
-        )}
+    <section className="px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1664px] mx-auto">
+        <div className="bg-white py-5 flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          {/* Heading */}
+          <h3 className="text-center md:text-left text-xl sm:text-2xl lg:text-4xl xl:text-5xl font-semibold leading-tight text-[#034272]">
+            {title}
+          </h3>
+
+          {/* Button */}
+          {(admBtn?.buttonlink || admBtn?.buttonclass) && (
+            <Link
+              href={admBtn?.buttonlink}
+              className={`inline-flex items-center justify-center bg-red-500 hover:bg-red-600 transition-all duration-300 px-8 py-3 text-base sm:text-lg font-semibold text-white rounded-lg whitespace-nowrap ${admBtn.buttonclass}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {admBtn?.buttontext}
+            </Link>
+          )}
+
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
