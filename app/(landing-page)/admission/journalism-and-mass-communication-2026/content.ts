@@ -351,7 +351,7 @@ export const comeToLifeData: ComeToLifeSection = {
 `,
   footerText: ``,
   cta: {
-    label: "Apply for JMC Programme <br />2026-2027",
+    label: "Apply for EMCE Programme <br />2026-2027",
     href: "#",
   },
   slides: [
@@ -464,7 +464,7 @@ export const applySectionData: ApplySectionData = {
   heading: `Begin Your Journey at K.R. Mangalam<br /> University Now`,
   description: "",
   cta: {
-    label: "Apply for JMC Programme 2026-2027",
+    label: "Apply for EMCE Programme 2026-2027",
     href: "#",
   },
   highlights: [
