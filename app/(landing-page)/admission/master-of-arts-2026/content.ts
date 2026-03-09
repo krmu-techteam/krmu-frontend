@@ -764,7 +764,7 @@ export const comeToLifeData: ComeToLifeSection = {
 
 
 export const programmeContent = {
-  badge: "4 Specialisations",
+  badge: "5 Specialisations",
   title: "KRMU’s M.A. Programmes",
   subtitle:
     "All Our Programmes Comprise of Industry-relevant Curriculum",
@@ -797,7 +797,7 @@ export const programmeContent = {
     {
       id: "3",
       tag: "Political Insights",
-      title: "M.A. Political Science",
+      title: "M.A. Political Science**",
       subtitle: "",
       desc: "Gain expertise in political theory, governance, and public policy, developing skills for administration and academia careers.",
       duration: "2 Years",
@@ -817,6 +817,18 @@ export const programmeContent = {
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed Bachelor's with 50% aggregate marks.",
+    },
+    {
+      id: "5",
+      tag: "",
+      title: "M.A. Clinical Psychology**",
+      subtitle: "",
+      desc: "Gain advanced skills in mental health diagnosis, psychotherapy, research, counselling, and evidence-based psychological interventions with this course.",
+      duration: "2 Years",
+      fee: "₹3,50,000",
+      ctaText: "Apply Now !",
+      ctaLink: "#apply-form",
+      eligibility: "To be updated",
     },
   ],
 };

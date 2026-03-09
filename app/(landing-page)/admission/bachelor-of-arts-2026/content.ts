@@ -1,3 +1,4 @@
+import Eligibility from "@/app/(main-website)/(school-programmes)/school-programmes-component/Eligibility";
 import {
   ApplySectionData,
   BusinessHubSection,
@@ -629,7 +630,7 @@ export const applySectionData: ApplySectionData = {
 
 
 export const programmeContent = {
-  badge: "8 Specialisations",
+  badge: "11 Specialisations",
   title: "KRMU’s B.A. Programmes",
   subtitle:
     "All Our Programmes Comprise of Industry-relevant Curriculum",
@@ -722,6 +723,42 @@ export const programmeContent = {
       fee: "₹2,30,000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
+    },
+    {
+      id: "9",
+      tag: "",
+      title: "B.Sc. Clinical Psychology (Hons.)**",
+      subtitle: "",
+      desc: "The course seeks to train students in mental health assessment, therapy, counselling, behavioural research, & psychological interventions.",
+      duration: "4 Years",
+      fee: "₹2,30,000",
+      ctaText: "Apply Now !",
+      ctaLink: "#apply-form",
+      Eligibility: "To be updated",
+    },
+    {
+      id: "10",
+      tag: "",
+      title: "B.A. Programme",
+      subtitle: "",
+      desc: "The B.A. Programme offers interdisciplinary humanities education, fostering critical thinking, communication, and analytical skills.",
+      duration: "3 Years",
+      fee: "₹1,30,000",
+      ctaText: "Apply Now !",
+      ctaLink: "#apply-form",
+      Eligibility: "Passed 12th with 50% aggregate marks.",
+    },
+    {
+      id: "11",
+      tag: "",
+      title: "B.A. (Hons. / Hons. with  Research) Liberal Arts",
+      subtitle: "",
+      desc: "An interdisciplinary undergraduate degree focused on broad-based learning across the humanities, social sciences, and creative disciplines.",
+      duration: "4 Years",
+      fee: "₹1,50,000",
+      ctaText: "Apply Now !",
+      ctaLink: "#apply-form",
+      Eligibility: "Passed 12th with 50% aggregate marks.",
     },
   ],
 };
