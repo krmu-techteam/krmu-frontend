@@ -6,6 +6,7 @@ import { ParagraphBlock } from "@/lib/types/about";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { STRAPI_URL } from "@/app/constant";
 import { LabCard } from "@/lib/types/school-programme";
+import BcaVsBtechTable from "../programs/prog-comp/BcaVsBtechTable";
 
 type Props = {
   heading: string;
@@ -14,6 +15,7 @@ type Props = {
   labimg: StrapiMedia;
   labcontent: ParagraphBlock[];
   labcards: LabCard[];
+  slug: string;
 };
 
 const LabsFacilities = ({
@@ -23,6 +25,7 @@ const LabsFacilities = ({
   labimg,
   labcontent,
   labcards,
+  slug,
 }: Props) => {
   return (
     <>
@@ -69,6 +72,9 @@ const LabsFacilities = ({
               <LabFacilitiesSlider labcards={labcards} />
             </div>
           </div>
+        </div>
+        <div className="max-w-[1320px] mx-auto w-full">
+          {slug === "bca-ai-data-science" && <BcaVsBtechTable />}
         </div>
       </section>
     </>
