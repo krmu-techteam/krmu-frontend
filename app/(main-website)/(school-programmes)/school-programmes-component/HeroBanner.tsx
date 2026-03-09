@@ -50,8 +50,8 @@ const HeroBanner = ({
 
   return (
     <section className="pt-24 sm:pt-40 sm:pb-[50px] px-2.5 sm:px-4">
-      <div className="school-programme-max-width md:flex items-center justify-between">
-        <div className="w-full md:w-7/12">
+      <div className="school-programme-max-width md:flex items-center justify-between gap-10">
+        <div className="w-full lg:w-7/12">
           <p className="text-xs sm:text-2xl font-medium leading-[1.2] mb-2">
             {heroSection?.subtitle}
           </p>
@@ -89,7 +89,7 @@ const HeroBanner = ({
           )} */}
         </div>
 
-        <div className="hidden w-full md:w-5/12 md:flex items-center">
+        <div className="hidden w-full lg:w-5/12 lg:flex items-center videoField">
           {heroSection?.imgvideo === "Video" ? (
             <div
               dangerouslySetInnerHTML={{

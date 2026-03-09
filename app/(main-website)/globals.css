@@ -15,9 +15,14 @@
 
 /* Custom utility class */
 @layer utilities {
+  .videoField div {
+    width: 100%;
+  }
+  .videoField iframe {
+    width: 100%;
+  }
 
-
-   @keyframes marquee {
+  @keyframes marquee {
     0% {
       transform: translateX(0%);
     }
@@ -30,24 +35,24 @@
     animation: marquee 30s linear infinite;
   }
 
-.interest-lists ul{
- list-style: disc;
- padding-left: 20px;
- margin: 10px 0px;
-}
-.tab-content p{
-  margin-bottom: 10px;
-}
+  .interest-lists ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 10px 0px;
+  }
+  .tab-content p {
+    margin-bottom: 10px;
+  }
 
-.tab-content ol{
-  list-style: decimal;
-  padding-left: 40px;
-  margin: 10px 0px;
-}
-.tab-content ol li{
-  margin-bottom: 6px;
-}
-   .whyphdHeading {
+  .tab-content ol {
+    list-style: decimal;
+    padding-left: 40px;
+    margin: 10px 0px;
+  }
+  .tab-content ol li {
+    margin-bottom: 6px;
+  }
+  .whyphdHeading {
     /* padding: 40px 0px; */
     position: relative;
   }
@@ -102,8 +107,7 @@
     }
   }
 
-
-    @media (max-width: 1145px) {
+  @media (max-width: 1145px) {
     .advSchoolImg img {
       width: 434px;
       height: 250px;
@@ -111,9 +115,9 @@
     }
   }
 
-      @media (max-width: 1145px) {
+  @media (max-width: 1145px) {
     .advSchoolImg {
-      left: 42%
+      left: 42%;
     }
   }
 
@@ -1033,7 +1037,7 @@
   .feestructtable .table {
     width: 100%;
   }
-  .feestructtable table a:hover{
+  .feestructtable table a:hover {
     color: #0000ff;
   }
 
@@ -1795,7 +1799,7 @@
     position: relative;
     margin: 30px 0 10px 0px;
   }
-  .faq-wrapper .faq-heading{
+  .faq-wrapper .faq-heading {
     margin-bottom: 20px !important;
     font-size: 32px !important;
   }
@@ -1970,7 +1974,7 @@
     line-height: 1.2;
     margin-bottom: 10px;
   }
-  .dean_heading_h3 p{
+  .dean_heading_h3 p {
     margin-bottom: 10px;
   }
   .single_blog_author_container {
