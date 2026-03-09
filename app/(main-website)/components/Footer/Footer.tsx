@@ -4,6 +4,7 @@ import { getFooter } from "@/lib/api/footer";
 import { getPageAssets } from "@/lib/api/global-setting";
 import Image from "next/image";
 import Link from "next/link";
+import FloatingButtons from "@/app/(main-website)/components/Footer/FloatingButtons";
 
 
 const Footer = async () => {
@@ -26,15 +27,24 @@ const Footer = async () => {
         showIcon={false}
       /> */}
 
+      <FloatingButtons />
+
+      {/* <Link
+        href="https://krmangalam.edu.in/univiser"
+        className="bg-[#f00] text-white border border-none py-[6px] px-[15px] fixed top-[40%] right-[-120px] rotate-90 rounded-sm h-[27px] z-10"
+      >
+        Connect With Campus Pioneer
+      </Link>
+
       <Link
         href="/campus-life/virtual-tour"
         className="bg-[#f00] text-white border border-none py-[6px] px-[15px] fixed top-[70%] right-[-57px] rotate-90 rounded-sm h-[27px] z-50"
       >
         360° Virtual Tour
       </Link>
-        <Link href="https://krmangalam.edu.in/univiser" className="bg-red-600 text-white inline-flex transition-all z-50
+        <Link href="https://krmangalam.edu.in/univiser" className="bg-red-600 text-white inline-flex transition-all
  duration-[250ms] gap-2.5 translate-x-[274px] hover:translate-x-0 cursor-pointer justify-center items-center h-12 fixed top-[40%] right-0 p-4 text-base font-semibold">
-  <Image src="/wp-content/images/message-regular-full.svg" width={20} height={20} alt="" /> Connect With Campus Pioneer</Link>
+  <Image src="/wp-content/images/message-regular-full.svg" width={20} height={20} alt="" /> Connect With Campus Pioneer</Link> */}
       
       <section className="px-5 py-12 xl:p-[50px] bg-[#051630]">
         <div className="grid grid-cols-1 md:grid-cols-2  xl:flex gap-5">

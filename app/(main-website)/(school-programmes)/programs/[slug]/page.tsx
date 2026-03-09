@@ -253,8 +253,10 @@ const page = async ({ params }: Props) => {
             labimg={labfacilitiesSection?.labsimage}
             labcontent={labfacilitiesSection?.labscontent}
             labcards={labfacilitiesSection?.labcards}
+            slug={slug}
           />
         )}
+
         {beyondclassSection && (
           <BeyondClassroom
             heading={beyondclassSection?.heading}
