@@ -624,7 +624,7 @@ export const applySectionData: ApplySectionData = {
 
 
 export const programmeContent = {
-  badge: "7 Specialisations",
+  badge: "9 Specialisations",
   title: "KRMU’s B.Tech. Programmes",
   subtitle:
     "All Our Programmes Comprise of Industry-relevant Curriculum",
@@ -710,6 +710,30 @@ export const programmeContent = {
       desc: "Meticulously designed programme delivering technological design excellence, teaching computing approaches and practical skills to UI/UX students.",
       duration: "4 Years",
       fee: "₹2,30,000",
+      ctaText: "Apply Now !",
+      ctaLink: "#apply-form",
+      eligibility: "Passed 12th with 50% aggregate marks.*",
+    },
+    {
+      id: "8",
+      tag: "Microsoft Certifications",
+      title: "B.Tech. Cloud Computing**",
+      subtitle: "",
+      desc: "This B.Tech. course seeks to train students in cloud architecture, security, AI, and scalable solutions.",
+      duration: "4 Years",
+      fee: "₹2,70,000",
+      ctaText: "Apply Now !",
+      ctaLink: "#apply-form",
+      eligibility: "Passed 12th with 50% aggregate marks.*",
+    },
+    {
+      id: "9",
+      tag: "",
+      title: "B.Tech. Semiconductor Design**",
+      subtitle: "",
+      desc: "The programme intends to build skills in chip design, VLSI systems, fabrication processes, nanoelectronics, and hardware innovation.",
+      duration: "4 Years",
+      fee: "₹2,70,000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",

@@ -574,7 +574,7 @@ export const applySectionData: ApplySectionData = {
 
 
 export const programmeContent = {
-  badge: "5 Specialisations",
+  badge: "6 Specialisations",
   title: "KRMU’s B.Com. Programmes",
   subtitle:
     "All Our Programmes Comprise of Industry-relevant Curriculum",
@@ -634,6 +634,18 @@ export const programmeContent = {
       fee: "₹2,30,000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
+    },
+    {
+      id: "6",
+      tag: "",
+      title: "B.Sc. (Honours / Honours with Research) Finance**",
+      subtitle: "",
+      desc: "This course develops expertise in investment, risk management, financial analysis, markets, and strategic decision-making among students.",
+      duration: "4 Years",
+      fee: "₹2,40,000",
+      ctaText: "Apply Now !",
+      ctaLink: "#apply-form",
+      Eligibility: "To be updated",
     },
   ],
 };

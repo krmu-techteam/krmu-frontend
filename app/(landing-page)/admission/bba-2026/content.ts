@@ -1,3 +1,4 @@
+import Eligibility from "@/app/(main-website)/(school-programmes)/school-programmes-component/Eligibility";
 import {
   ApplySectionData,
   BusinessHubSection,
@@ -896,7 +897,7 @@ export const applySectionData: ApplySectionData = {
 
 
 export const programmeContent = {
-  badge: "21 Specialisations",
+  badge: "22 Specialisations",
   title: "KRMU’s BBA Programmes",
   subtitle:
     "All Our Programmes Comprise of Industry-relevant Curriculum",
@@ -1037,7 +1038,7 @@ export const programmeContent = {
     {
       id: "13",
       tag: "EY",
-      title: "BBA Business Analytics",
+      title: "BBA Business Intelligence & Analytics",
       subtitle: "",
       desc: "Empowers students to analyse data, generate insights, and lead businesses with smarter strategies.",
       duration: "3 Years",
@@ -1048,7 +1049,7 @@ export const programmeContent = {
     {
       id: "14",
       tag: "EY",
-      title: "BBA (Hons. / Hons. with Research) Business Analytics",
+      title: "BBA (Hons. / Hons. with  Research) Business Intelligence & Analytics",
       subtitle: "",
       desc: "Blends data analytics with strategic decision-making, building technical skills and preparing students for data leadership.",
       duration: "4 Years",
@@ -1132,6 +1133,18 @@ export const programmeContent = {
       fee: "₹2,30,000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
+    },
+    {
+      id: "22",
+      tag: "",
+      title: "B.Sc. (Honours / Honours with Research) Finance**",
+      subtitle: "",
+      desc: "This course develops expertise in investment, risk management, financial analysis, markets, and strategic decision-making among students.",
+      duration: "4 Years",
+      fee: "₹2,40,000",
+      ctaText: "Apply Now !",
+      ctaLink: "#apply-form",
+      Eligibility: "To be updated",
     },
   ],
 };

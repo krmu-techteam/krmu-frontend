@@ -1,3 +1,4 @@
+import Eligibility from "@/app/(main-website)/(school-programmes)/school-programmes-component/Eligibility";
 import {
   ApplySectionData,
   BusinessHubSection,
@@ -572,8 +573,8 @@ export const applySectionData: ApplySectionData = {
 
 
 export const programmeContent = {
-  badge: "4 Specialisations",
-  title: "KRMU’s B.Des. Programmes",
+  badge: "5 Specialisations",
+  title: "KRMU’s Design Programmes",
   subtitle:
     "All Our Programmes Comprise of Industry-relevant Curriculum",
 
@@ -621,6 +622,18 @@ export const programmeContent = {
       fee: "₹2,30,000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
+    },
+    {
+      id: "5",
+      tag: "",
+      title: "M. Design (Interior Design)**",
+      subtitle: "",
+      desc: "Hone skills in spatial planning, aesthetics, sustainable design, 3D visualisation, and innovative interior solutions.",
+      duration: "2 Years",
+      fee: "₹2,00,000",
+      ctaText: "Apply Now !",
+      ctaLink: "#apply-form",
+      Eligibility: "A qualifying degree in Design/ Fine Arts or in any stream with 50% aggregate marks.",
     },
   ],
 };

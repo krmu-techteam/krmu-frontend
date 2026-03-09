@@ -510,7 +510,7 @@ export const programmeContent = {
     {
       id: "1",
       tag: "Emversity",
-      title: "B.Sc. (Hons.) Emergency Medical Technology",
+      title: "(B.EMT) Emergency Medical Technologist (Paramedic)**",
       subtitle: "",
       desc: "Gain vital emergency care, lifesaving, and trauma management skills for fast-paced healthcare careers.",
       duration: "3 + 1 Years (Including 1 Year Internship)",
@@ -522,7 +522,7 @@ export const programmeContent = {
     {
       id: "2",
       tag: "Emversity",
-      title: "B.Sc. (Hons.) Respiratory Technology",
+      title: "(B.RT) Bachelor of Respiratory Technology**",
       subtitle: "",
       desc: "Develop essential respiratory care, diagnostics, and patient management skills for today’s advanced healthcare industry.",
       duration: "3 + 1 Years (Including 1 Year Internship)",
@@ -534,7 +534,7 @@ export const programmeContent = {
     {
       id: "3",
       tag: "Emversity",
-      title: "B.Sc. (Hons.) Cardiovascular Technology",
+      title: "B.Sc. (Hons.) Cardiovascular Technology**",
       subtitle: "",
       desc: "Gain expertise in cardiovascular diagnostics, interventional procedures, and patient care for advanced healthcare careers.",
       duration: "3 + 1 Years (Including 1 Year Internship)",
