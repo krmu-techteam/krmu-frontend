@@ -34,12 +34,12 @@ const ShapingFuture = ({
     <>
       <section>
         <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full xl:mt-20 px-5 xl:px-0">
-          <div className="lg:flex lg:bg-white gap-10">
+          <div className="lg:flex lg:bg-white gap-5 2xl:gap-10">
             <div className="lg:w-1/2 2xl:w-3/5">
-              <div className="pt-12 mx-1">
+              <div className="pt-12 mx-1 text-center lg:text-left">
                 <div className="my-2">
                   <h3 className="text-2xl">{subtitle}</h3>
-                  <h3 className="text-2xl mt-5 font-semibold lg:text-5xl lg:leading-none">
+                  <h3 className="text-2xl mt-5 font-semibold md:text-4xl lg:text-5xl lg:leading-none">
                     <span className="text-[#034272]">{highlight}</span> <br />
                     {afterHighLight}
                   </h3>
@@ -61,7 +61,7 @@ const ShapingFuture = ({
                 </div>
                 <p className="mb-2 mt-5 text-lg">{desc}</p>
               </div>
-              <div className="grid md:grid-cols-2 my-10">
+              <div className="grid grid-cols-2 my-10">
                 {shapingCounters &&
                   shapingCounters.map((counter) => {
                     return (
@@ -80,7 +80,7 @@ const ShapingFuture = ({
                   })}
               </div>
 
-              <div className="flex items-center gap-5">
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start sm:items-center gap-5">
                 <Link
                   href={link1}
                   className="bg-[#034272] border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold"
@@ -95,8 +95,8 @@ const ShapingFuture = ({
                 </Link>
               </div>
             </div>
-            <div className="lg:w-1/2 2xl:w-2/5">
-              <div className="relative min-h-[596px] h-full">
+            <div className="lg:w-1/2 2xl:w-2/5 mt-10 lg:mt-0">
+              <div className="relative min-h-[370px] sm:min-h-[1000px] lg:min-h-[800px] xl:min-h-[596px] h-full">
                 <Image
                   src="/wp-content/home2/shaping/engage-1.webp"
                   fill

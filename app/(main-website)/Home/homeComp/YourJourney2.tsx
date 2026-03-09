@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const YourJourney2 = () => {
   return (
-    <section className="pb-10 xl:pb-20 px-5 xl:px-0">
+    <section className="pb-10 xl:pb-20 sm:px-5 xl:px-0">
       <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full bg-gray-50 px-5 xl:px-0 py-10">
         <div className="max-w-7xl mx-auto w-full text-center">
           <p className="font-semibold">Elevate Your Campus Life</p>

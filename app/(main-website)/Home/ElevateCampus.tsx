@@ -27,9 +27,9 @@ const ElevateCampus = ({
     <>
       <section>
         <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto px-5 xl:px-0">
-          <div className="flex gap-10 lg:gap-5 xl:gap-10 flex-col lg:flex-row items-center py-10 xl:py-20">
+          <div className="flex gap-10 lg:gap-5 2xl:gap-10 flex-col lg:flex-row items-center py-10 xl:py-20">
             <div className="w-full lg:w-1/2 xl:w-1/3 flex flex-col">
-              <div className="xl:max-w-lg">
+              <div className="2xl:max-w-lg text-center lg:text-left">
                 <h4 className="text-lg font-semibold mb-3">
                   {elevateCampus?.subtitle}
                 </h4>
@@ -38,7 +38,7 @@ const ElevateCampus = ({
                   <span className="text-[#034272]">
                     {elevateCampus?.highlighttext}
                   </span>{" "}
-                  <br />
+                  <br className="hidden lg:block" />
                   {elevateCampus?.afterhighlighttext}
                 </h3>
                 <p className="mb-5 text-lg">{elevateCampus?.content}</p>
@@ -63,7 +63,7 @@ const ElevateCampus = ({
               <ElevateSlider />
             </div>
           </div>
-          <div className="flex gap-5 xl:gap-10 flex-col xl:flex-row items-center pb-10 xl:pb-20">
+          <div className="flex gap-5 2xl:gap-10 flex-col lg:flex-row items-center pb-10 xl:pb-20">
             <div className="w-full lg:w-1/2 xl:w-2/3">
               <Image
                 src={`${STRAPI_URL}${elevateImage2?.url}`}
@@ -74,13 +74,13 @@ const ElevateCampus = ({
               />
             </div>
             <div className="w-full lg:w-1/2 xl:w-1/3 flex flex-col justify-center items-center">
-              <div className="xl:max-w-lg">
+              <div className="2xl:max-w-lg text-center lg:text-left">
                 <h4 className="text-lg font-semibold mb-3">
                   {elevateCampus2?.subtitle}
                 </h4>
                 <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-tight mb-8">
                   {elevateCampus2?.beforehighlighttext}{" "}
-                  <br className="hidden lg:block" />
+                  <br className="hidden 2xl:block" />
                   <span className="text-[#034272]">
                     {elevateCampus2?.highlighttext}
                   </span>{" "}
@@ -98,9 +98,9 @@ const ElevateCampus = ({
               </div>
             </div>
           </div>
-          <div className="flex gap-5 xl:gap-10 flex-col-reverse lg:flex-row items-center pb-10 xl:pb-20">
+          <div className="flex gap-5 2xl:gap-10  flex-col-reverse lg:flex-row items-center pb-10 xl:pb-20">
             <div className="w-full lg:w-1/3 flex justify-center items-center">
-              <div className="xl:max-w-lg">
+              <div className="2xl:max-w-lg text-center lg:text-left">
                 <h4 className="text-lg font-semibold mb-3">
                   {elevateCampus3?.subtitle}
                 </h4>

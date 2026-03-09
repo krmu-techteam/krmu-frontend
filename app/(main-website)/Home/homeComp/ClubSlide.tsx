@@ -7,7 +7,7 @@ type Props = {
 
 const ClubSlide = ({ imgUrl, alt }: Props) => {
   return (
-    <div className="bg-gray-500 h-full min-h-[600px] rounded-2xl relative overflow-hidden">
+    <div className="bg-gray-500 h-full md:min-h-[600px] rounded-2xl relative overflow-hidden">
       <Image src={imgUrl} fill className="object-cover aspect-auto z-10" alt={alt || ""} />
     </div>
   );

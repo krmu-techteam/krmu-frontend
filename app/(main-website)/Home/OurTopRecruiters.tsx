@@ -24,15 +24,15 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
 }) => {
   return (
     <section className="bg-[#051630] overflow-hidden">
-      <div className="flex gap-5 flex-col lg:flex-row w-full px-5 xl:px-0 xl:max-w-7xl 2xl:max-w-[1664px] mx-auto items-center">
+      <div className="flex lg:gap-5 flex-col lg:flex-row w-full px-5 xl:px-0 xl:max-w-7xl 2xl:max-w-[1664px] mx-auto items-center">
         {/* Left Section */}
-        <div className="w-full lg:w-1/3  text-center md:text-left py-10 xl:py-20">
-          <h4 className="max-w-2xl w-full text-3xl xl:mt-5 font-semibold  xl:text-5xl lg:leading-none text-white">
+        <div className="w-full lg:w-1/3  text-center md:text-left py-10 2xl:py-20">
+          <h4 className="max-w-2xl w-full text-3xl xl:mt-5 font-semibold  xl:text-5xl lg:leading-none text-white text-center lg:text-left">
             {title}
           </h4>
-          <div className="grid grid-cols-2 text-white mt-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 text-white mt-10">
             {counters.map((counter) => (
-              <div key={counter.id} className="flex flex-col mb-5 ourtop-rec">
+              <div key={counter.id} className="flex flex-col mb-5 ourtop-rec text-center lg:text-left">
                 <span className="text-white font-bold mb-[10px] text-3xl xl:text-4xl">
                   {counter.countertext}
                 </span>
@@ -42,7 +42,7 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
               </div>
             ))}
           </div>
-          <div className="flex flex-col xl:flex-row xl:items-center gap-5 mt-5">
+          <div className="flex flex-row lg:flex-col xl:flex-row justify-center lg:justify-start xl:items-center gap-5 mt-5">
             {link1 || title1 ? (
               <Link
                 href={link1}
@@ -69,7 +69,7 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
         </div>
 
         {/* Right Section */}
-        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 pb-12 px-5 w-full lg:w-2/3 lg:px-5 lg:pt-8 lg:pb-2.5 rounded-3xl bg-[#0060aa]">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 py-10 px-5 w-full mb-10 lg:w-2/3 lg:px-5 lg:pt-8 lg:pb-2.5 rounded-3xl bg-[#0060aa]">
           {logos.map((logo, index) => (
             <div
               key={logo.id || index}
