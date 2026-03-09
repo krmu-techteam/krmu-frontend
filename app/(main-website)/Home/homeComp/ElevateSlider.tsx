@@ -25,7 +25,7 @@ const homeVibrantEventSlider = [
   },
   {
     id: 4,
-    imgUrl: "/wp-content/home2/vibrant/testnaved.jpg",
+    imgUrl: "/wp-content/home2/vibrant/rj.webp",
     alt: "Event",
   },
   {
@@ -36,6 +36,16 @@ const homeVibrantEventSlider = [
   {
     id: 6,
     imgUrl: "/wp-content/home2/vibrant/6.webp",
+    alt: "Event",
+  },
+  {
+    id: 7,
+    imgUrl: "/wp-content/home2/vibrant/nora.webp",
+    alt: "Event",
+  },
+  {
+    id: 8,
+    imgUrl: "/wp-content/home2/vibrant/dj.webp",
     alt: "Event",
   },
 ];

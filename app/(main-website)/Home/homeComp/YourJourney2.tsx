@@ -16,10 +16,10 @@ const YourJourney2 = () => {
             commit to providing students with the necessary skills and knowledge
             to thrive in the ever-changing world.
           </p>
-          <div className="flex items-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center max-w-2xl mx-auto w-full">
 
            <HomeYourJourneyForm />
-            <Link href="/programmes" target="_blank" className="text-center max-w-xs w-full bg-[#034272] font-semibold px-2.5 py-5 leading-none rounded-md text-xl outline-none text-white block">Explore Our Programmes</Link>
+            <Link href="/programmes" target="_blank" className="text-center mb-2.5 max-w-xs w-full bg-[#034272] font-semibold px-2.5 py-5 leading-none rounded-md text-sm sm:text-base outline-none text-white block h-14 flex justify-center items-center">Explore Our Programmes</Link>
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 py-5 xl:p-10 test">
