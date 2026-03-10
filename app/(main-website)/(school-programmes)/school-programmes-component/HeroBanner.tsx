@@ -62,7 +62,6 @@ const HeroBanner = ({
             {heroSection?.description}
           </p>
           {(slug === "btech-cse-cloud-computing" ||
-            slug === "master-of-design-m-des-interior-design" ||
             slug ===
               "b-tech-computer-science-and-engineering-semiconductor-design" ||
             slug === "ma-clinical-psychology" ||
