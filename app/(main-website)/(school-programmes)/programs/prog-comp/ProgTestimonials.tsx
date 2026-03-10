@@ -39,7 +39,9 @@ const ProgTestimonials = ({ data }: Props) => {
         </div>
 
         {/* Carousel */}
-        <div className="w-full mt-5 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
+        <div
+          className={`w-full mt-5 ${data.testimonials?.length >= 4 ? "grid sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(280px,1fr))]" : "flex items-center justify-center flex-wrap lg:flex-nowrap"}   gap-5`}
+        >
           {data.testimonials &&
             data.testimonials.map((item, index) => (
               <ProgTestimonialCard key={index} data={item} />

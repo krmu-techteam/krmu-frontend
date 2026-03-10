@@ -34,6 +34,8 @@ import {
   MBAtestimonialsData,
 } from "../progdata/somc";
 import SpecialisationsSection from "../prog-comp/SpecialisationsSection";
+import { BSCHonsForensicSciencetestimonialsData } from "../progdata/sbas";
+import { BSCHonsPhyscologytestimonialsData } from "../progdata/sola";
 // import ProgTestimonials, {
 //   TestimonialsSection,
 // } from "../prog-comp/ProgTestimonials";
@@ -89,8 +91,9 @@ const page = async ({ params }: Props) => {
     "barch-architecture": BAArchtestimonialsData,
     "bca-ai-data-science": BCAAIDStestimonialsData,
     "bba-digital-marketing": BBADigitalMarketingtestimonialsData,
+    "bsc-forensic-science": BSCHonsForensicSciencetestimonialsData,
     mba: MBAtestimonialsData,
-
+    "ba-hons-psychology": BSCHonsPhyscologytestimonialsData,
     // "bba-llb-hons": BBALLBtestimonialsData,
     // "llm": LLMtestimonialsData,
   };

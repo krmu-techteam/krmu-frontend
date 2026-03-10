@@ -49,7 +49,7 @@ const ProgTestimonialCard = ({ data }: Props) => {
       <div className="absolute bottom-0 left-[50%] translate-x-[-50%] w-[94%] mx-auto z-10">
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
 
-        <div className="relative px-5 pb-5 pt-5 mb-4 rounded-2xl bg-white opacity-[0.8]">
+        <div className="relative px-5 pb-5 pt-5 mb-4 rounded-2xl bg-white opacity-[0.8] max-h-[430px] h-full overflow-y-auto overflow-x-hidden">
           {/* Quote */}
           <p
             className={`text-black text-sm leading-relaxed mb-2 transition-all italic ${
