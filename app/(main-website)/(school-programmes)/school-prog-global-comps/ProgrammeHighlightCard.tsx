@@ -12,11 +12,10 @@ const ProgrammeHighlightCard = ({ title, desc, highlightimg }: Props) => {
   return (
     <>
       <div className="proghighcard flex justify-center cursor-pointer rounded-[30px]">
-        <div className="w-1/5">
+        <div className="w-1/5 min-h-[144px] h-full relative overflow-hidden">
           {highlightimg?.url && (
             <Image
-              width={127}
-              height={144}
+              fill
               src={`${STRAPI_URL}${highlightimg?.url}`}
               alt={highlightimg?.alternativeText || "ba-hons-psychology-krmu"}
               className="w-full h-full object-cover rounded-l-[20px]"
