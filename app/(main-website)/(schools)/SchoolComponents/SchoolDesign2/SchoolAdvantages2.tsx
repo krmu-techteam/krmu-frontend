@@ -25,7 +25,7 @@ const SchoolAdvantages2 = ({
           {heading} {subtitle}
         </h4>
         {school_advantage && (
-          <p
+          <div
             dangerouslySetInnerHTML={{
               __html: school_advantage,
             }}
