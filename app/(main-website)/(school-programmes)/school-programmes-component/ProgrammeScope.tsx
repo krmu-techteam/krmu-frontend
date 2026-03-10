@@ -55,7 +55,8 @@ const ProgrammeScope = async ({ scopeData }: Props) => {
                 className={`bg-[#0a41a1] cursor-pointer text-white text-base sm:bg-white p-[15px] flex items-center justify-center max-w-[220px] w-full mx-auto sm:mx-0 sm:text-[#0a41a1] rounded-md font-semibold mt-6 ${
                   scopeData?.scopebtn?.buttonclass || ""
                 }`}
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {scopeData?.scopebtn?.buttontext || "Download"}
               </Link>
@@ -108,15 +109,13 @@ const ProgrammeScope = async ({ scopeData }: Props) => {
             </>
           )} */}
         </div>
-        <div className="w-full xl:w-1/2">
+        <div className="w-full xl:w-1/2 min-h-[831px] h-full relative">
           {scopeData?.scopeimg?.url && (
             <Image
-              width={1728}
-              height={1248}
+              fill
               src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
-              className="w-full h-full object-cover"
+              className="object-cover z-10"
               alt="scope image"
-              
             />
           )}
         </div>
