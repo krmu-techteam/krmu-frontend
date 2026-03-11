@@ -15,6 +15,9 @@
 
 /* Custom utility class */
 @layer utilities {
+  .labFac_container p {
+    margin-bottom: 20px !important;
+  }
   .videoField div {
     width: 100%;
   }

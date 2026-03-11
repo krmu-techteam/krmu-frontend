@@ -42,7 +42,7 @@ const LabsFacilities = ({
               />
             )}
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 labFac_container">
             <h3 className="text-[50px] text-[#0a41a1] font-medium">
               {heading} <span className="text-[#db2a1a]">{highlight}</span>
             </h3>
