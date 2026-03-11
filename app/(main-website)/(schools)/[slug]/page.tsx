@@ -28,6 +28,7 @@ import { STRAPI_URL } from "@/app/constant";
 import { getSchoolSEO } from "@/lib/api/website-seo";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import SchoolAdvantages2 from "../SchoolComponents/SchoolDesign2/SchoolAdvantages2";
+import SchoolExcitedNewsletter from "../SchoolComponents/SchoolDesign2/SchoolExcitedNewsletter";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -202,7 +203,7 @@ export default async function Page({ params }: Props) {
         content={school?.programme_offered?.content}
       />
 
-      <SchoolExcitedAlready
+      {/* <SchoolExcitedAlready
         heading={school?.excitedtitle}
         desc={school?.exciteddescription}
         excbtns={school?.excitedbtns}
@@ -215,7 +216,15 @@ export default async function Page({ params }: Props) {
           btns={school?.newsletterbtns}
           newsletterbg={school?.newsletterbg?.url}
         />
-      )}
+      )} */}
+      <SchoolExcitedNewsletter
+        excitedHeading={school?.excitedtitle}
+        excitedDesc={school?.exciteddescription}
+        excbtns={school?.excitedbtns}
+        newsLetterHeading={school?.newslettertitle}
+        newsLetterDesc={school?.newsletterdesc}
+        newsLetterBtns={school?.newsletterbtns}
+      />
       {school?.advantagetitle && (
         <SchoolAdvantages2
           heading={school?.advantagetitle}
