@@ -645,7 +645,7 @@ export const programmeContent = {
       fee: "₹2,40,000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
-      Eligibility: "To be updated",
+      eligibility: "To be updated",
     },
   ],
 };
