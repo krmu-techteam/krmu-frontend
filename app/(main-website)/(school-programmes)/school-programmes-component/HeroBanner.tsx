@@ -61,6 +61,13 @@ const HeroBanner = ({
           <p className="text-xs sm:text-[15px] font-medium mt-6 mb-4">
             {heroSection?.description}
           </p>
+          {(slug === "btech-cse-cloud-computing" ||
+            slug ===
+              "b-tech-computer-science-and-engineering-semiconductor-design" ||
+            slug === "ma-clinical-psychology" ||
+            slug === "bsc-clinical-psychology") && (
+            <p className="text-right font-bold">**Subject to Approval</p>
+          )}
 
           {formId && (
             <NpfPopup
@@ -89,7 +96,7 @@ const HeroBanner = ({
           )} */}
         </div>
 
-        <div className="hidden w-full lg:w-5/12 lg:flex items-center videoField">
+        <div className="hidden w-full lg:w-5/12 lg:flex items-center videoField min-h-[556px] h-full relative">
           {heroSection?.imgvideo === "Video" ? (
             <div
               dangerouslySetInnerHTML={{
@@ -100,10 +107,10 @@ const HeroBanner = ({
             heroSection?.heroimg && (
               <Image
                 src={`${STRAPI_URL}${heroSection?.heroimg?.url}`}
-                width={600}
-                height={500}
+                fill
                 alt={heroSection?.heroimg?.alternativeText || "Hero Image"}
                 priority={true}
+                className="object-contain z-10"
               />
             )
           )}

@@ -47,13 +47,12 @@ const CareerProspects = ({
                   })}
               </div>
             </div>
-            <div className="w-full xl:w-1/2">
+            <div className="w-full xl:w-1/2 min-h-[644px] h-full relative">
               {careerimg?.url && (
                 <Image
                   src={`${STRAPI_URL}${careerimg?.url}`}
-                  width={660}
-                  height={660}
-                  className="w-full h-full"
+                  fill
+                  className="z-10"
                   alt={careerimg?.alternativeText || "Career Prospectus"}
                   sizes="(max-width: 1024px) 100vw, 660px"
                 />
