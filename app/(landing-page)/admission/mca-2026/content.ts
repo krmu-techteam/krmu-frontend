@@ -748,6 +748,18 @@ export const programmeContent = {
       ctaLink: "#apply-form",
       eligibility: "Passed Bachelor's with 50% aggregate marks.*",
     },
+    {
+      id: "3",
+      tag: "",
+      title: "M.Tech. Computer Science and Engineering",
+      subtitle: "",
+      desc: "Advance your future with M.Tech. CSE by mastering cutting-edge computing, innovating with AI, and leading tomorrow’s technology revolution.",
+      duration: "2 Years",
+      fee: "₹1,20,000",
+      ctaText: "Apply Now !",
+      ctaLink: "#apply-form",
+      eligibility: "Passed a Bachelor's with 50% aggregate marks.**",
+    },
   ],
 };
 
@@ -755,5 +767,8 @@ export const programmeContent = {
 export const eligibilityTerms = [
   {
     description: "*Eligibility: Passed any graduation degree (e.g., B.E. / B.Tech./ B.Sc / B.Com. / B.A./ B. Voc./ BCA, etc.) with Mathematics at 10+2 level or at Graduation level with minimum 50% aggregate marks."
+  },
+  {
+    description: "**Eligibility: Candidates must have a B.E. / B. Tech degree in Computer Science & Engineering or MCA or M.Sc. (CS, IT, Electronics, Statistics, Physics / or equivalent) with a minimum of 50% marks in aggregate."
   },
 ];

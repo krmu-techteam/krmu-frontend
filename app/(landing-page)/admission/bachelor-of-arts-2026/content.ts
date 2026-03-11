@@ -734,7 +734,7 @@ export const programmeContent = {
       fee: "₹2,30,000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
-      Eligibility: "To be updated",
+      eligibility: "To be updated",
     },
     {
       id: "10",
@@ -746,7 +746,7 @@ export const programmeContent = {
       fee: "₹1,30,000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
-      Eligibility: "Passed 12th with 50% aggregate marks.",
+      eligibility: "Passed 12th with 50% aggregate marks.",
     },
     {
       id: "11",
@@ -758,7 +758,7 @@ export const programmeContent = {
       fee: "₹1,50,000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
-      Eligibility: "Passed 12th with 50% aggregate marks.",
+      eligibility: "Passed 12th with 50% aggregate marks.",
     },
   ],
 };

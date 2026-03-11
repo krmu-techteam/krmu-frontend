@@ -633,7 +633,7 @@ export const programmeContent = {
       fee: "₹2,00,000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
-      Eligibility: "A qualifying degree in Design/ Fine Arts or in any stream with 50% aggregate marks.",
+      eligibility: "A qualifying degree in Design/ Fine Arts or in any stream with 50% aggregate marks.",
     },
   ],
 };
