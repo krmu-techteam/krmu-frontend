@@ -33,11 +33,8 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
     month: "short",
     year: "numeric",
   });
-  
 
-  
   const getImgUrl = await getWordImageById(data?.featured_media);
-  
 
   return (
     <div>
@@ -62,16 +59,22 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
               <Link
                 href={`/events-and-news/${data?.slug}`}
                 className="font-medium text-xl leading-[1] mt-2.5 mb-4 inline-block h-[50px]"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <h5>{data.title?.rendered || ""}</h5>
+                <h5
+                  dangerouslySetInnerHTML={{
+                    __html: data.title?.rendered || "",
+                  }}
+                />
               </Link>
             )}
             {data?.slug && (
               <Link
                 href={`/events-and-news/${data?.slug}`}
                 className="text-xs underline italic"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Know More
               </Link>

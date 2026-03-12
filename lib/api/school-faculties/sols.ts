@@ -146,7 +146,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 10335,
     acf: {
-      "staff-qualification": "Ph.D. (pursuing)",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant  Professor",
       schools: [],
     },
