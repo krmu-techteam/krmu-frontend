@@ -55,7 +55,6 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose }: Props) => {
     (component) => component.__component === "temp-menus.about-us-menu",
   );
 
-  console.log('aboutusMenu', aboutusMenu);
 
   return (
     <>

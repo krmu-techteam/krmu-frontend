@@ -17,6 +17,7 @@ const NewsAndEventsCards = () => {
       setLoading(true);
       try {
         const res = await getNewsEventsWP(page, pageSize);
+
         setNews(res.data);
         setTotalPages(res.pagination.totalPages);
       } finally {
@@ -44,7 +45,7 @@ const NewsAndEventsCards = () => {
               title={item.title.rendered}
               slug={item.slug}
               firstImage={item?.featured_media}
-              publishedAt={item.modified}
+              publishedAt={item.date}
             />
           ))}
         </div>

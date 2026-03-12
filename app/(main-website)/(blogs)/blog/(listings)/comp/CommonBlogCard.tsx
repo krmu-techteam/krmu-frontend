@@ -29,7 +29,7 @@ const CommonBlogCard = async ({ title, excerpt, slug, imgId, date }: Props) => {
     year: "numeric",
   });
 
-  console.log('normalizedImgUrl', normalizedImgUrl);
+  
 
   return (
     <div className="w-full">
