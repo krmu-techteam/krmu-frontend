@@ -23,6 +23,10 @@ type NewsEventItem = {
   acf: {
     event_images: number[];
   };
+  yoast_head_json: {
+    title: string;
+    description: string;
+  };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -36,19 +40,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // const singleNewsAndEventsData = await getSingleNewsAndEvents(slug);
 
   const singleNewsEvents = singleNewsAndEventsData.find(
-    (items) => items.slug === slug
+    (items) => items.slug === slug,
   );
 
   const siteTitle = singleNewsEvents?.title?.rendered;
+  const siteMetaTitle = singleNewsEvents?.yoast_head_json?.title;
+  const siteMetaDescription = singleNewsEvents?.yoast_head_json?.description;
+  const siteCanonicalUrl = `${process.env.NEXT_PUBLIC_MAIN_URL}/events-and-news/${slug}`;
 
   return {
-    title: siteTitle || "K.R. Mangalam University",
-    description: siteTitle || "",
-
+    title: siteMetaTitle || siteTitle || "K.R. Mangalam University",
+    description: siteMetaDescription || siteTitle || "",
+    alternates: {
+      canonical: siteCanonicalUrl || "",
+    },
     // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
     openGraph: {
-      title: siteTitle || "K.R. Mangalam University",
-      description: siteTitle || "",
+      title: siteMetaTitle || siteTitle || "K.R. Mangalam University",
+      description: siteMetaDescription || siteTitle || "",
 
       type: "website",
     },
@@ -66,7 +75,7 @@ const page = async ({ params }: Props) => {
   // const singleNewsAndEventsData = await getSingleNewsAndEvents(slug);
 
   const singleNewsEvents = singleNewsAndEventsData.find(
-    (items) => items.slug === slug
+    (items) => items.slug === slug,
   );
 
   // // Return 404 if either is missing
