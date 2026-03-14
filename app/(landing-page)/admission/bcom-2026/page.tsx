@@ -32,6 +32,7 @@ import {
   // scholarResearchImpactData,
   specialisationData,
   testimonialsData,
+  eligibilityTerms,
   whyKRM,
 } from "./content";
 
@@ -41,7 +42,6 @@ import PlacementRate from "../CommonComponent2026/PlacementRate";
 import FAQSection2 from "../CommonComponent2026/FAQSection2";
 import ProgrammeSection from "../CommonComponent2026/ProgrammeSection";
 import EligibilityTerms from "../commonComponent/EligibilityTerms";
-import { eligibilityTerms } from "../btech-2026-demo/content";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
