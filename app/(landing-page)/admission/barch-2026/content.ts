@@ -461,7 +461,7 @@ export const programmeContent = {
       desc: "KRMU’s B.Arch. course develops creative, analytical architects skilled in designing functional, aesthetic, technology-driven spaces.",
       duration: "5 Years",
       eligibility: "Passed 12th with 50% aggregate marks.*",
-      fee: "₹2,30,000",
+      fees: "",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },

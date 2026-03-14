@@ -465,7 +465,7 @@ export const programmeContent = {
       desc: "The course equips graduates with practical skills, ethical insights, and comprehensive physiotherapy knowledge for diverse careers.",
       duration: "4.5 Years",
       eligibility: "Passed 12th with 50% aggregate marks.*",
-      fee: "₹2,30,000",
+      fees: "",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
