@@ -293,7 +293,7 @@ export const smasFaculties: SchoolFacultiesType[] = [
     id: 8942,
     slug: "mr-mohit-agarwal",
     title: {
-      rendered: "Dr. Mohit Agarwal",
+      rendered: "Dr. Mohit Agrawal",
     },
     featured_media: 8943,
     acf: {
