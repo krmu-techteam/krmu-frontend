@@ -298,7 +298,7 @@ export const smasFaculties: SchoolFacultiesType[] = [
     featured_media: 8943,
     acf: {
       "staff-qualification": "M.Pharm, Ph.D. (Pharmaceutical sciences)",
-      staff_designation: " Assistant Professor (Senior Scale)",
+      staff_designation: " Assistant Professor",
       schools: [1098],
     },
     featured_media_url:
