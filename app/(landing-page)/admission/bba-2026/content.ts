@@ -1130,7 +1130,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Offers seamless management education with industry exposure, leadership development, and accelerated career growth opportunities.",
       duration: "4 + 1 Years",
-      // fees: "200000",
+      fees: "",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
