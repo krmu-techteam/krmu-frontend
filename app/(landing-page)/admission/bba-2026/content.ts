@@ -910,7 +910,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Develop expertise in human capital, strategic HR, leadership, organisational development, and talent management.",
       duration: "3 Years",
-      fee: "₹2,30,000",
+      fees: "₹2,30,000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
