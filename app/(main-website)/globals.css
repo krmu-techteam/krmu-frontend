@@ -2051,7 +2051,7 @@
 } */
   .grad-text-color {
     background: -webkit-linear-gradient(0deg, #0060aa 0.43%, #e31e24 91.06%);
-    /* background-clip: border-box; */
+    /* background-clip: border-box; git */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
