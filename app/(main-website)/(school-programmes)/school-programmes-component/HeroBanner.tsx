@@ -65,6 +65,7 @@ const HeroBanner = ({
             slug ===
               "b-tech-computer-science-and-engineering-semiconductor-design" ||
             slug === "ma-clinical-psychology" ||
+            slug === "master-of-design-m-des-interior-design" ||
             slug === "bsc-clinical-psychology") && (
             <p className="text-right font-bold">**Subject to Approval</p>
           )}

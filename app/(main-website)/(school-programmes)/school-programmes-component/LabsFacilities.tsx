@@ -29,7 +29,7 @@ const LabsFacilities = ({
 }: Props) => {
   return (
     <>
-      <section className="prog-global-padding">
+      <section className="">
         <div className="max-w-[1320px] mx-auto w-full flex gap-6 items-center px-2.5 md:px-4">
           <div className="w-1/2 hidden md:block">
             {labimg?.url && (
