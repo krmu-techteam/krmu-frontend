@@ -44,7 +44,7 @@ const WardenHostel = () => {
                     Hostel Fee (to be collected upfront)
                   </td>
                   <td className="p-2.5 sm:px-6 sm:py-4 font-semibold text-right  text-sm">
-                    Rs. 160000/-
+                    Rs. 172000/-
                   </td>
                 </tr>
 
