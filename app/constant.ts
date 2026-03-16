@@ -10,4 +10,4 @@ export const origUrl = process.env.NEXT_PUBLIC_MAIN_URL || "";
 // export const krmBlogURL = `${KRMUWordUrl}/blog2/blog-backend`;
 export const krmBlogURL = process.env.NEXT_PUBLIC_WORD_BLOG_URL || "";
 // export const krmBlogURL = `${KRMUWordUrl}/blog`;
-// export const isLocal = STRAPI_URL.includes("localhost");
+// exp ort const isLocal = STRAPI_URL.includes("localhost");
