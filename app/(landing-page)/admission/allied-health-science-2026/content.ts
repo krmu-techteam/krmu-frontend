@@ -548,4 +548,7 @@ export const eligibilityTerms = [
   {
     description: "*Eligibility: Candidates must have passed the Higher Secondary (10+2), or equivalent examination recognised by any Indian University or a duly constituted Board with minimum 50% aggregate marks in PCM (Physics, Chemistry and Mathematics) / PCB (Physics, Chemistry and Biology) / PCMB (Physics, Chemistry, Mathematics and Biology."
   },
+  {
+    description: "** Subject to Approval"
+  },
 ];

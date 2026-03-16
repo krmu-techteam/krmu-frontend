@@ -755,7 +755,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Advance your future with M.Tech. CSE by mastering cutting-edge computing, innovating with AI, and leading tomorrow’s technology revolution.",
       duration: "2 Years",
-      fees: "",
+      fees: "120000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed a Bachelor's with 50% aggregate marks.**",

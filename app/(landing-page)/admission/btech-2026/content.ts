@@ -682,10 +682,10 @@ export const programmeContent = {
       id: "5",
       tag: "IBM",
       title: "B.Tech. Data Science",
-      subtitle: "270000",
+      subtitle: "",
       desc: "Hands-on experience in big data technologies, machine learning, data visualisation, and cloud platforms through real-world projects and labs.",
       duration: "4 Years",
-      fees: "",
+      fees: "270000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -749,4 +749,8 @@ export const eligibilityTerms = [
   {
     description: "# Lateral B.Tech. Courses are also available except for the Robotics & AI Course."
   },
+  {
+    description: "** Subject to Approval"
+  },
+ 
 ];

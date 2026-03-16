@@ -629,3 +629,13 @@ export const programmeContent = {
     },
   ],
 };
+
+export const eligibilityTerms = [
+  {
+    description: "** Subject to Approval"
+  },
+];
+
+
+
+

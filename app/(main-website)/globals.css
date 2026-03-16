@@ -2055,13 +2055,13 @@ color:#1f5fa8;
 
   .single_blog_author_info .author_name {
     font-size: 16px;
-    color: #fff;
+    /* color: #fff; */
     font-weight: 700;
   }
 
   .single_blog_author_info .author_name a {
     font-size: 16px;
-    color: #fff;
+    /* color: #fff; */
     font-weight: 700;
   }
 

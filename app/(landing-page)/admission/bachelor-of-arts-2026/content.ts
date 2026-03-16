@@ -709,7 +709,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Develops research skills through projects and collaboration, offering insights into politics, international relations, and administration.",
       duration: "3 Years",
-      fees: "142000",
+      fees: "130000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
@@ -720,7 +720,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Gain knowledge of politics, governance, and global affairs, developing research, critical thinking, and communication skills for careers.",
       duration: "4 Years",
-      fees: "142000",
+      fees: "130000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
@@ -731,7 +731,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "The course seeks to train students in mental health assessment, therapy, counselling, behavioural research, & psychological interventions.",
       duration: "4 Years",
-      fees: "340000",
+      fees: "350000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "To be updated",
@@ -762,3 +762,10 @@ export const programmeContent = {
     },
   ],
 };
+
+
+export const eligibilityTerms = [
+  {
+    description: "** Subject to Approval"
+  },
+];
