@@ -651,7 +651,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
-    // { id: 2, titl   e: "Sports and recreation centers" },
+    // { id: 2, title: "Sports and recreation centers" },
     // { id: 3, title: "Cafeteria and food courts" },
     // { id: 4, title: "Peer mentorship programs" },
     // { id: 5, title: "PhD scholar association activities" },
