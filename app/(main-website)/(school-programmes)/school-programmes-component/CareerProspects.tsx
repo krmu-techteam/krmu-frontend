@@ -47,7 +47,7 @@ const CareerProspects = ({
                   })}
               </div>
             </div>
-            <div className="w-full xl:w-1/2 min-h-[300px] sm:min-h-[400px] md:min-h-[644px] h-full relative">
+            <div className="w-full xl:w-1/2 min-h-[300px] sm:min-h-[400px] md:min-h-[644px] h-full relative mb-5 sm:mb-0">
               {careerimg?.url && (
                 <Image
                   src={`${STRAPI_URL}${careerimg?.url}`}
