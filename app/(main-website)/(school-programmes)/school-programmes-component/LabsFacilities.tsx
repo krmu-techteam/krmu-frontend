@@ -31,7 +31,7 @@ const LabsFacilities = ({
     <>
       <section className="">
         <div className="max-w-[1320px] mx-auto w-full flex gap-6 items-center px-2.5 md:px-4">
-          <div className="w-1/2 hidden md:block">
+          <div className="w-1/2 hidden lg:block">
             {labimg?.url && (
               <Image
                 src={`${STRAPI_URL}${labimg?.url}`}
@@ -42,7 +42,7 @@ const LabsFacilities = ({
               />
             )}
           </div>
-          <div className="w-full md:w-1/2 labFac_container">
+          <div className="w-full lg:w-1/2 labFac_container">
             <h3 className="text-[50px] text-[#0a41a1] font-medium">
               {heading} <span className="text-[#db2a1a]">{highlight}</span>
             </h3>

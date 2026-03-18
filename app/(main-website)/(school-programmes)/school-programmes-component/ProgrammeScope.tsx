@@ -109,7 +109,7 @@ const ProgrammeScope = async ({ scopeData }: Props) => {
             </>
           )} */}
         </div>
-        <div className="w-full xl:w-1/2 min-h-[831px] h-full relative">
+        <div className="w-full xl:w-1/2 min-h-[280px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[831px] h-full relative">
           {scopeData?.scopeimg?.url && (
             <Image
               fill
