@@ -168,6 +168,7 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose }: Props) => {
                             href={menu?.url || "#"}
                             className="text-black text-[13px] font-normal"
                             onClick={onClose}
+                            target="_blank"
                           >
                             {menu?.title}
                           </Link>
