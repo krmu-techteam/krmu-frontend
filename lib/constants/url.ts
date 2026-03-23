@@ -1,1 +1,0 @@
-export const NEXT_PUBLIC_STRAPI_API_URL = 'https://truthful-cabbage-82fd27e8f6.strapiapp.com';
