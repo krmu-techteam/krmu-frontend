@@ -84,17 +84,17 @@ const SingleBlogHero = ({
 
       {/* Social Icons */}
       <div className="flex items-center gap-4 mt-3">
-        <a href="#" className="text-white hover:text-blue-500 transition">
+        <a href="https://www.facebook.com/krmuniv/" className="text-white hover:text-blue-500 transition">
           <Facebook size={22} />
         </a>
 
-        <a href="#" className="text-white hover:text-red-500 transition">
+        <a href="https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA" className="text-white hover:text-red-500 transition">
           <Youtube size={22} />
         </a>
 
-        <a href="#" className="text-white hover:text-gray-300 transition">
+        {/* <a href="" className="text-white hover:text-gray-300 transition">
           <Twitter size={22} />
-        </a>
+        </a> */}
       </div>
 
     </div>

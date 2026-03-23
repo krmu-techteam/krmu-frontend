@@ -143,11 +143,11 @@ K.R. Mangalam University offers industry-aligned BSc programs with hands-on labs
 
 <div class="krmu-blog-cta-actions">
 
-<a href="#sidebar-blog-form" class="krmu-blog-cta-btn">
+<a href="https://admissions.krmangalam.edu.in/?utm_source=website&utm_medium=Homepage&utm_campaign=header&_gl=1*1iwmm9u*_gcl_au*MTczMTQ5NTcxOC4xNzczODk2NjIz*_ga*ODAwNDY0ODEyLjE3NzM4OTQ2NzY.*_ga_VJJK572TGN*czE3NzQyNjcyNTYkbzE2JGcwJHQxNzc0MjY3MjU2JGo2MCRsMCRoMA.." class="krmu-blog-cta-btn">
 Apply Now
 </a>
 
-<a href="#" class="krmu-blog-cta-link">
+<a href="https://www.krmangalam.edu.in/programmes" class="krmu-blog-cta-link">
 Explore Programs
 </a>
 
