@@ -24,7 +24,7 @@ const ScholarNotesPG = () => {
               <span className="text-white font-semibold text-base notesul">
                 2nd Instalment and 3rd instalment (where applicable) of
                 scholarship amount will be paid by cheque if the student fulfils
-                ALL the criteria [a), b), c)] listed under:- 
+                ALL the criteria [a), b), c)] listed under:-
                 <ul>
                   {" "}
                   <li>
@@ -37,7 +37,7 @@ const ScholarNotesPG = () => {
                   </li>{" "}
                   <li>
                     There is no case of indiscipline, unfair means or
-                    misconduct.  
+                    misconduct.   
                   </li>{" "}
                 </ul>
               </span>
@@ -58,7 +58,8 @@ const ScholarNotesPG = () => {
               4
             </span>
             <span className="text-white font-semibold text-base">
-              This policy is not applicable for M. Pharma.
+              This policy is applicable for B.Ed ., LL.B and not applicable for
+              M. Pharma.
             </span>
           </div>
           <div className="flex gap-5 mb-8">

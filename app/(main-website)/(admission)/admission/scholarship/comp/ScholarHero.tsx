@@ -6,7 +6,7 @@ const ScholarHero = () => {
       <div className="max-w-[1664px] mx-auto w-full flex-col flex lg:flex-row">
         <div className="lg:w-1/2 text-white">
           <h1 className="text-2xl lg:text-9xl font-semibold my-5">
-            Scholarship <br className="lg:hidden" /> 2025 Intake
+            Scholarship <br className="lg:hidden" /> 2026 Intake
           </h1>
           <p>Only For First 100 students, First Come First Served</p>
         </div>
