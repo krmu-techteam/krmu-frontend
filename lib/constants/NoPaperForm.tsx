@@ -1,10 +1,10 @@
 "use client";
 
 type NoPaperFormProps = {
-  formId: string; // this is the data-w value
+  formId?: string; // this is the data-w value
   height?: string;
 };
-
+ 
 const NoPaperForm = ({ formId, height = "475px" }: NoPaperFormProps) => {
   return (
     <div

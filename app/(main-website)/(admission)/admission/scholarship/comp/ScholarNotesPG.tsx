@@ -24,7 +24,7 @@ const ScholarNotesPG = () => {
               <span className="text-white font-semibold text-base notesul">
                 2nd Instalment and 3rd instalment (where applicable) of
                 scholarship amount will be paid by cheque if the student fulfils
-                ALL the criteria [a), b), c)] listed under:-
+                ALL the criteria listed under:-
                 <ul>
                   {" "}
                   <li>

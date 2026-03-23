@@ -98,6 +98,8 @@ const page = async ({ params }: Props) => {
     // "llm": LLMtestimonialsData,
   };
 
+  const allowedFormSlugs = ["barch-architecture", "bsc-forensic-science"];
+
   const testimonialsData = testimonialsMap[slug];
 
   const allSchoolProgrammeData = await getSchoolProgrammeData(slug);
