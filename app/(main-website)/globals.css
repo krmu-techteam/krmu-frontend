@@ -1763,10 +1763,14 @@ color:#1f5fa8;
     border-radius: 8px;
   }
 
-  .right_sidebar_singlepost_container {
+  .singlepost_all_cat_container {
+  height: fit-content;
+}
+
+  /* .right_sidebar_singlepost_container {
     max-height: calc(100vh - 2rem);
     overflow-y: auto;
-  }
+  } */
   .blog-table-responsive {
     overflow-x: auto;
     overflow-y: hidden;
@@ -2073,6 +2077,18 @@ color:#1f5fa8;
     font-size: 13px;
     color: #fff;
   }
+
+.all_cat_container {
+  max-height: 300px;   /* adjust as needed */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+  /* .all_cat_container {
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+} */
 
   /* blog new css  */
   
