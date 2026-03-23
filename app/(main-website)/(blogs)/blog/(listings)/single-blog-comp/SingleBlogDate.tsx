@@ -13,10 +13,10 @@ const SingleBlogDate = ({ date }: Props) => {
   });
 
   return (
-    <span className="text-[13px] text-white">
-      Published On: {formattedDate}
-    </span>
-  );
+  <span className="text-[16px] text-black lg:text-white">
+    <span className="font-semibold">Published On:</span> {formattedDate}
+  </span>
+);
 };
 
 export default SingleBlogDate;
