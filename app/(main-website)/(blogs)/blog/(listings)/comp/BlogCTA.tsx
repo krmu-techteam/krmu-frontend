@@ -17,12 +17,11 @@ const BlogCTA = () => {
       {/* Text */}
       <div className="flex-1 text-white">
         <h3 className="text-[20px] font-semibold mb-2">
-          Pursuing a career in Science?
+          Wanna Take Your Career to New Heights?
         </h3>
 
         <p className="text-[14px] opacity-90">
-          K.R. Mangalam University offers industry-aligned BSc programs with
-          hands-on labs, expert faculty, and strong placement support.
+          K.R. Mangalam University offers industry-aligned programmes, practical learning, expert faculty, and strong placement support for sure-shot success!
         </p>
       </div>
 
