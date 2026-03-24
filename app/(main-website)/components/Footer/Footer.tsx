@@ -20,6 +20,21 @@ const Footer = async () => {
 
   return (
     <>
+      <div className="fixed bottom-0 left-0 w-full text-center z-50 flex sm:hidden items-center justify-center ">
+        <Link
+          href="https://admissions.krmangalam.edu.in/"
+          target="_blank"
+          className="bg-[#0a41a1] w-1/2 rounded-xl border border-white  text-white py-2.5 inline-block cursor-pointer"
+        >
+          Apply Now
+        </Link>
+        <NpfPopup
+          formId="d63cf9c4d3104c39f3ac28164701a69c"
+          btnClass={`bg-[#0a41a1] w-1/2 rounded-xl border border-white  text-white py-2.5 inline-block cursor-pointer npfWidget-d63cf9c4d3104c39f3ac28164701a69c `}
+          btnText="Enquire Now"
+          showIcon={false}
+        />
+      </div>
       <FloatingButtons />
 
       <section className="px-5 py-12 xl:p-[50px] bg-[#051630]">
@@ -180,23 +195,8 @@ const Footer = async () => {
       {js_in_footer && (
         <script dangerouslySetInnerHTML={{ __html: js_in_footer }} />
       )}
-      <div className="fixed bottom-0 left-0 w-full text-center z-50 flex sm:hidden items-center justify-center ">
-        <Link
-          href="https://admissions.krmangalam.edu.in/"
-          target="_blank"
-          className="bg-[#0a41a1] w-1/2 rounded-xl border border-white  text-white py-2.5 inline-block cursor-pointer"
-        >
-          Apply Now
-        </Link>
-        <NpfPopup
-          formId="d63cf9c4d3104c39f3ac28164701a69c"
-          btnClass={`bg-[#0a41a1] w-1/2 rounded-xl border border-white  text-white py-2.5 inline-block cursor-pointer npfWidget-d63cf9c4d3104c39f3ac28164701a69c `}
-          btnText="Enquire Now"
-          showIcon={false}
-        />
-      </div>
       <NpfChatbot />
-        <div className="fixed bottom-0 left-0 w-full text-center z-50 flex sm:hidden items-center justify-center ">
+      <div className="fixed bottom-0 left-0 w-full text-center z-50 flex sm:hidden items-center justify-center ">
         <Link
           href="https://admissions.krmangalam.edu.in/"
           target="_blank"
