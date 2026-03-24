@@ -15,6 +15,16 @@
 
 /* Custom utility class */
 @layer utilities {
+
+
+  .prog_scope > div{
+    width: 100%;
+  }
+
+  .prog_scope > div > iframe{
+    width: 100% !important;
+  }
+
   .labFac_container p {
     margin-bottom: 20px !important;
   }

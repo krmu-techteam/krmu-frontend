@@ -36,6 +36,7 @@ import {
 import SpecialisationsSection from "../prog-comp/SpecialisationsSection";
 import { BSCHonsForensicSciencetestimonialsData } from "../progdata/sbas";
 import { BSCHonsPhyscologytestimonialsData } from "../progdata/sola";
+
 // import ProgTestimonials, {
 //   TestimonialsSection,
 // } from "../prog-comp/ProgTestimonials";
@@ -98,7 +99,7 @@ const page = async ({ params }: Props) => {
     // "llm": LLMtestimonialsData,
   };
 
-  const allowedFormSlugs = ["barch-architecture", "bsc-forensic-science"];
+  // const allowedFormSlugs = ["barch-architecture", "bsc-forensic-science"];
 
   const testimonialsData = testimonialsMap[slug];
 
@@ -202,6 +203,7 @@ const page = async ({ params }: Props) => {
             heroSection={heroSection}
             formId={heroSection?.formId}
             slug={slug}
+           
           />
         )}
 
@@ -209,6 +211,9 @@ const page = async ({ params }: Props) => {
           <Eligibility
             elgibilities={eligibilitySection?.elgibility}
             mobherobtn={eligibilitySection?.mobherobtn}
+            // allowedFormSlugs={allowedFormSlugs}
+            slug={slug}
+            formId={heroSection?.formId}
           />
         )}
         {programmeScopeSection && (

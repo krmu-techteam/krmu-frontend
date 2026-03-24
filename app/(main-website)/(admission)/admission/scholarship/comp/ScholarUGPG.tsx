@@ -66,9 +66,9 @@ const ScholarUGPG = () => {
                       <table>
                         <thead>
                           <tr>
-                            {" "}
                             <th>Eligibility Criteria</th> <th>Scholarship</th>{" "}
                             <th>Remarks</th>
+
                           </tr>
                         </thead>
                         <tbody>
@@ -101,7 +101,7 @@ const ScholarUGPG = () => {
                           </tr>
                           <tr>
                             <td>80% to less than 85%</td> <td>25%</td>
-                            <td></td>
+                            
                           </tr>
                         </tbody>
                       </table>
