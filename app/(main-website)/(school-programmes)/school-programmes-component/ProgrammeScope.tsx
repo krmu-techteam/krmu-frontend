@@ -3,6 +3,8 @@ import { HeroSection, ProgrammeScopeType } from "@/lib/types/school-programme";
 
 import Link from "next/link";
 import CommonLeadPopup from "../../components/CommonLeadPopup";
+import Image from "next/image";
+import { STRAPI_URL } from "@/app/constant";
 
 type Props = {
   scopeData: ProgrammeScopeType;
@@ -79,13 +81,8 @@ const ProgrammeScope = async ({
         <div
           className={`w-full xl:w-1/2 ${isFormAvailable ? "prog_scope flex items-center mt-10 sm:mt-0" : "min-h-[280px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[831px]"} relative`}
         >
-          <div
-            dangerouslySetInnerHTML={{
-              __html: heroSection?.videofield || "",
-            }}
-            className="scopeIframe"
-          />
-          {/* {heroSection?.imgvideo === "Video" && isFormAvailable ? (
+         
+          {heroSection?.imgvideo === "Video" && isFormAvailable ? (
             <div
               dangerouslySetInnerHTML={{
                 __html: heroSection?.videofield || "",
@@ -100,7 +97,7 @@ const ProgrammeScope = async ({
                 alt="scope image"
               />
             )
-          )} */}
+          )}
           {/* {scopeData?.scopeimg?.url && (
             <Image
               fill
