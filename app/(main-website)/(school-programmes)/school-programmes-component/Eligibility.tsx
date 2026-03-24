@@ -100,24 +100,22 @@ const Eligibility = ({
           </div>
         )}
 
-        {!isFormAvailable && (
-          <div>
-            {formId ? (
-              <NpfPopup
-                formId={formId}
-                btnClass={`bg-[#0a41a1] py-2.5 px-[30px] cursor-pointer flex items-center justify-around sm:hidden text-white rounded-[10px] w-fit mt-5 ${mobherobtn?.buttonclass}`}
-                btnText={`${mobherobtn?.buttontext || ""}`}
-              />
-            ) : (
-              <Link
-                href={"#"}
-                className={`bg-[#0a41a1] py-2.5 px-[30px] cursor-pointer flex items-center justify-around sm:hidden text-white rounded-[10px] w-fit mt-5 ${mobherobtn?.buttonclass}`}
-              >
-                {mobherobtn?.buttontext} <ArrowRight />
-              </Link>
-            )}
-          </div>
-        )}
+        <div className="hidden sm:block">
+          {formId ? (
+            <NpfPopup
+              formId={formId}
+              btnClass={`bg-[#0a41a1] py-2.5 px-[30px] cursor-pointer flex items-center justify-around sm:hidden text-white rounded-[10px] w-fit mt-5 ${mobherobtn?.buttonclass}`}
+              btnText={`${mobherobtn?.buttontext || ""}`}
+            />
+          ) : (
+            <Link
+              href={"#"}
+              className={`bg-[#0a41a1] py-2.5 px-[30px] cursor-pointer flex items-center justify-around sm:hidden text-white rounded-[10px] w-fit mt-5 ${mobherobtn?.buttonclass}`}
+            >
+              {mobherobtn?.buttontext} <ArrowRight />
+            </Link>
+          )}
+        </div>
 
         {/* 
         {(mobherobtn?.buttonclass || mobherobtn?.buttonlink) && (

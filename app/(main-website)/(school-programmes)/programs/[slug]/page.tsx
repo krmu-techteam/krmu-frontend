@@ -362,21 +362,6 @@ const page = async ({ params }: Props) => {
         )}
 
         <ConnectWithUs />
-
-        <div className="fixed bottom-0 left-0 w-full text-center z-50 flex sm:hidden items-center justify-center">
-          <Link
-            href="https://admissions.krmangalam.edu.in/?utm_source=Website&utm_medium=ApplyNow-S"
-            target="_blank"
-            className="bg-[#0a41a1] w-1/2 rounded-xl border border-white  text-white py-2.5 inline-block cursor-pointer"
-          >
-            Apply Now
-          </Link>
-          <NpfPopup
-            formId="d63cf9c4d3104c39f3ac28164701a69c"
-            btnClass={`bg-[#0a41a1] w-1/2 rounded-xl border border-white  text-white py-2.5 inline-block cursor-pointer npfWidget-d63cf9c4d3104c39f3ac28164701a69c`}
-            btnText="Enquire Now"
-          />
-        </div>
       </main>
     </>
   );
