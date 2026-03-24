@@ -132,11 +132,11 @@ gap:16px;
 <div class="krmu-blog-cta-text">
 
 <h3 class="krmu-blog-cta-title">
-Pursuing a career in Science?
+Wanna Take Your Career to New Heights?
 </h3>
 
 <p class="krmu-blog-cta-desc">
-K.R. Mangalam University offers industry-aligned BSc programs with hands-on labs, expert faculty, and strong placement support.
+K.R. Mangalam University offers industry-aligned programmes, practical learning, expert faculty, and strong placement support for sure-shot success!
 </p>
 
 </div>
