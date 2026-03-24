@@ -180,9 +180,7 @@ const Footer = async () => {
       {js_in_footer && (
         <script dangerouslySetInnerHTML={{ __html: js_in_footer }} />
       )}
- 
-      <NpfChatbot />
-     <div className="fixed bottom-0 left-0 w-full text-center z-50 flex sm:hidden items-center justify-center ">
+      <div className="fixed bottom-0 left-0 w-full text-center z-50 flex sm:hidden items-center justify-center ">
         <Link
           href="https://admissions.krmangalam.edu.in/"
           target="_blank"
@@ -197,6 +195,7 @@ const Footer = async () => {
           showIcon={false}
         />
       </div>
+      <NpfChatbot />
     </>
   );
 };
