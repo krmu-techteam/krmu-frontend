@@ -9,7 +9,7 @@ import ScholarNotesUG from "./ScholarNotesUG";
 import ScholarNotesPG from "./ScholarNotesPG";
 const ScholarUGPG = () => {
   return (
-    <section className="py-[60px]">
+    <section className="">
       <div className="w-full">
         <Tabs defaultValue="undergraduate">
           <TabsList

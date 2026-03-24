@@ -4,11 +4,10 @@ const ScholarNotesPG = () => {
   return (
     <section className="bg-[url(/scholarship/notes-bg.webp)] bg-cover bg-no-repeat py-[30px] px-4 mt-10">
       <div className="max-w-[1664px] mx-auto w-full">
-        <h3 className="text-5xl text-white font-semibold mb-5">Notes:</h3>
+        <h3 className="text-5xl text-white font-semibold mb-10">Notes:</h3>
         <div className="flex flex-col lg:flex-row gap-5">
-          <div className="lg:w-1/2">
-            <div>
-              <div className="flex gap-5 mb-8">
+          <div className="lg:w-1/2 flex flex-col gap-5">
+              <div className="flex gap-5">
                 <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                   1
                 </span>
@@ -16,7 +15,7 @@ const ScholarNotesPG = () => {
                   Applicable only on the Programme Fee for Semester 1
                 </span>
               </div>
-              <div className="flex gap-5 mb-8">
+              <div className="flex gap-5">
                 <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                   2
                 </span>
@@ -24,7 +23,7 @@ const ScholarNotesPG = () => {
                   2nd Instalment and 3rd instalment (where applicable) of
                   scholarship amount will be paid by cheque if the student
                   fulfils ALL the criteria listed under:-
-                  <ul>
+                  <ul className="font-normal">
                     {" "}
                     <li>
                       Attendance in immediately preceding semester is 75% or
@@ -41,10 +40,10 @@ const ScholarNotesPG = () => {
                   </ul>
                 </span>
               </div>
-            </div>
+           
           </div>
-          <div className="lg:w-1/2">
-            <div className="flex gap-5 mb-8">
+          <div className="lg:w-1/2 flex flex-col gap-5">
+            <div className="flex gap-5">
               <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                 3
               </span>
@@ -52,7 +51,7 @@ const ScholarNotesPG = () => {
                 No two scholarships can be combined or offered to students.
               </span>
             </div>
-            <div className="flex gap-5 mb-8">
+            <div className="flex gap-5">
               <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                 4
               </span>

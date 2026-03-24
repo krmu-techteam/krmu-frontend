@@ -4,11 +4,11 @@ const ScholarNotesUG = () => {
   return (
     <section className="bg-[url(/scholarship/notes-bg.webp)] bg-cover bg-no-repeat py-[30px] px-4 mt-10">
       <div className="max-w-[1664px] mx-auto w-full ">
-        <h3 className="text-5xl text-white font-semibold mb-5">Notes:</h3>
+        <h3 className="text-5xl text-white font-semibold mb-8">Notes:</h3>
         <div className="flex flex-col lg:flex-row lg:gap-5">
-          <div className="w-full lg:w-4/12">
-            <div>
-              <div className="flex gap-5 mb-8">
+          <div className="w-full lg:w-4/12 flex flex-col gap-5 justify-between">
+        
+              <div className="flex gap-5">
                 <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                   1
                 </span>
@@ -17,7 +17,7 @@ const ScholarNotesUG = () => {
                   Programme fee
                 </span>
               </div>
-              <div className="flex gap-5 mb-8">
+              <div className="flex gap-5">
                 <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                   2
                 </span>
@@ -26,7 +26,7 @@ const ScholarNotesUG = () => {
                   Semester 1 only
                 </span>
               </div>
-              <div className="flex gap-5 mb-8">
+              <div className="flex gap-5">
                 <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                   3
                 </span>
@@ -35,13 +35,13 @@ const ScholarNotesUG = () => {
                   applicable for D.Pharm
                 </span>
               </div>
-                 <div className="flex gap-5 mb-8">
+                 <div className="flex gap-5">
                 <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                   4
                 </span>
                 <span className="text-white font-semibold text-base notesul">
                   For Sports scholarship below criteria will be applicable:-
-                  <ul>
+                  <ul className="font-normal">
                     <li>Latest 3 years performance will be considered</li>
                     <li>
                       Scholarship will awarded upon certificate verification as
@@ -54,10 +54,10 @@ const ScholarNotesUG = () => {
                   </ul>
                 </span>
               </div>
-            </div>
+           
           </div>
-          <div className="w-full lg:w-5/12">
-            <div className="flex gap-5 mb-8">
+          <div className="w-full lg:w-5/12 flex flex-col gap-5 justify-between">
+            <div className="flex gap-5">
                 <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                   5
                 </span>
@@ -66,7 +66,7 @@ const ScholarNotesUG = () => {
                   program. (Only Part B is applicable)
                 </span>
               </div>
-              <div className="flex gap-5 mb-8">
+              <div className="flex gap-5">
                 <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                   6
                 </span>
@@ -74,7 +74,7 @@ const ScholarNotesUG = () => {
                   No two scholarships will be combined
                 </span>
               </div>
-              <div className="flex gap-5 mb-8">
+              <div className="flex gap-5">
                 <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                   7
                 </span>
@@ -84,7 +84,7 @@ const ScholarNotesUG = () => {
                 </span>
               </div>
 
-                  <div className="flex gap-5 mb-8">
+                  <div className="flex gap-5">
               <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                 8
               </span>
@@ -92,7 +92,7 @@ const ScholarNotesUG = () => {
                 2nd Instalment and 3rd instalment (where applicable) of
                 scholarship amount will be paid by cheque if the student fulfils
                 ALL the criteria
-                <ul>
+                <ul className="font-normal">
                   <li>
                     Attendance in immediately preceding semester is 75% or above
                   </li>
@@ -108,10 +108,10 @@ const ScholarNotesUG = () => {
             </div>
            
           </div>
-          <div className="sw-full lg:w-3/12">
+          <div className="w-full lg:w-3/12 flex flex-col gap-5">
         
 
-            <div className="flex gap-5 mb-8">
+            <div className="flex gap-5">
               <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                 9
               </span>
@@ -124,13 +124,13 @@ const ScholarNotesUG = () => {
                 table for CUET will apply
               </span>
             </div>
-            <div className="flex gap-5 mb-8">
+            <div className="flex gap-5">
               <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                 10
               </span>
               <span className="text-white font-semibold text-base">
                 This policy is not applicable for Lateral Entry and Migration
-                <p>
+                <p className="font-normal">
                   <strong>Important :</strong> For detailed sports scholarship{" "}
                   <Link
                     href="https://www.krmangalam.edu.in/wp-content/uploads/2025/03/sports-club-sports-scholarship-policy-2025-26.pdf"
