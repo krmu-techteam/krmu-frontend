@@ -4,6 +4,7 @@ import { HeroSection } from "@/lib/types/school-programme";
 import Image from "next/image";
 import NpfPopup from "../../components/NpfPopup";
 import IndusLearning from "../programs/prog-comp/IndusLearning";
+import NoPaperForm from "@/lib/constants/NoPaperForm";
 
 type Props = {
   title: string;
@@ -11,6 +12,7 @@ type Props = {
   heroSection: HeroSection;
   formId?: string; // dynamic form id
   slug: string;
+  allowedFormSlugs: string[];
 };
 
 const HeroBanner = ({
@@ -19,7 +21,10 @@ const HeroBanner = ({
   heroSection,
   formId,
   slug,
+  allowedFormSlugs,
 }: Props) => {
+  const isFormAvailable = allowedFormSlugs.includes(slug);
+
   // const btnRef = useRef<HTMLButtonElement>(null);
 
   // useEffect(() => {
@@ -47,7 +52,7 @@ const HeroBanner = ({
   return (
     <section className="pt-24 sm:pt-40 sm:pb-[50px] px-2.5 sm:px-4">
       <div className="school-programme-max-width md:flex items-center justify-between gap-10">
-        <div className={`w-full lg:w-7/12`}>
+        <div className={`w-full ${isFormAvailable ? "lg:w-8/12" : "lg:w-1/2"}`}>
           <p className="text-xs sm:text-2xl font-medium leading-[1.2] mb-2">
             {heroSection?.subtitle}
           </p>
@@ -95,9 +100,13 @@ const HeroBanner = ({
         </div>
 
         <div
-          className={`hidden w-full lg:w-5/12 lg:flex items-center videoField min-h-[556px] h-full relative`}
+          className={`hidden w-full ${isFormAvailable ? "lg:w-4/12" : "lg:w-1/2"}  lg:flex items-center videoField min-h-[556px] h-full relative`}
         >
-          {heroSection?.imgvideo === "Video" ? (
+          {isFormAvailable ? (
+            <div className="border">
+              <NoPaperForm formId={formId} height="550px" />
+            </div>
+          ) : heroSection?.imgvideo === "Video" ? (
             <div
               dangerouslySetInnerHTML={{
                 __html: heroSection?.videofield || "",

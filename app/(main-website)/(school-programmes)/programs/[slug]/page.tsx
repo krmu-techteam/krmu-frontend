@@ -99,7 +99,22 @@ const page = async ({ params }: Props) => {
     // "llm": LLMtestimonialsData,
   };
 
-  // const allowedFormSlugs = ["barch-architecture", "bsc-forensic-science"];
+  const allowedFormSlugs = [
+    "barch-architecture",
+    "bsc-forensic-science",
+    "bachelor-of-education-b-ed",
+    "bsc-hons-chemistry-research",
+    "bpharma",
+    "bdes-interior-design",
+    "bjmc",
+    "bfa-fine-arts",
+    "btech-cse-ai-ml",
+    "bsc-hons-chemistry-research",
+    "bba-international-business",
+    "bba-international-business",
+    "b-tech-cse",
+    "master-computer-application-mca",
+  ];
 
   const testimonialsData = testimonialsMap[slug];
 
@@ -203,7 +218,7 @@ const page = async ({ params }: Props) => {
             heroSection={heroSection}
             formId={heroSection?.formId}
             slug={slug}
-           
+            allowedFormSlugs={allowedFormSlugs}
           />
         )}
 
@@ -211,13 +226,18 @@ const page = async ({ params }: Props) => {
           <Eligibility
             elgibilities={eligibilitySection?.elgibility}
             mobherobtn={eligibilitySection?.mobherobtn}
-            // allowedFormSlugs={allowedFormSlugs}
+            allowedFormSlugs={allowedFormSlugs}
             slug={slug}
             formId={heroSection?.formId}
           />
         )}
         {programmeScopeSection && (
-          <ProgrammeScope scopeData={programmeScopeSection} />
+          <ProgrammeScope
+            scopeData={programmeScopeSection}
+            heroSection={heroSection}
+            allowedFormSlugs={allowedFormSlugs}
+            slug={slug}
+          />
         )}
         {programmeHighlightSection && (
           <ProgrammeHighlight

@@ -20,31 +20,7 @@ const Footer = async () => {
 
   return (
     <>
-      {/* <NpfPopup
-        formId="d63cf9c4d3104c39f3ac28164701a69c"
-        btnClass={`bg-[#f00] text-white border border-none py-[6px] px-[15px] fixed top-[40%] right-[-42px] rotate-90 rounded-sm h-[27px] z-10 npfWidget-d63cf9c4d3104c39f3ac28164701a69c`}
-        btnText="Enquire Now"
-        showIcon={false}
-      /> */}
-
       <FloatingButtons />
-
-      {/* <Link
-        href="https://krmangalam.edu.in/univiser"
-        className="bg-[#f00] text-white border border-none py-[6px] px-[15px] fixed top-[40%] right-[-120px] rotate-90 rounded-sm h-[27px] z-10"
-      >
-        Connect With Campus Pioneer
-      </Link>
-
-      <Link
-        href="/campus-life/virtual-tour"
-        className="bg-[#f00] text-white border border-none py-[6px] px-[15px] fixed top-[70%] right-[-57px] rotate-90 rounded-sm h-[27px] z-10"
-      >
-        360° Virtual Tour
-      </Link> */}
-      {/* <Link href="https://krmangalam.edu.in/univiser" className="bg-red-600 text-white inline-flex transition-all
- duration-[250ms] gap-2.5 translate-x-[274px] hover:translate-x-0 cursor-pointer justify-center items-center h-12 fixed top-[40%] right-0 p-4 text-base font-semibold">
-  <Image src="/wp-content/images/message-regular-full.svg" width={20} height={20} alt="" /> Connect With Campus Pioneer</Link> */}
 
       <section className="px-5 py-12 xl:p-[50px] bg-[#051630]">
         <div className="grid grid-cols-1 md:grid-cols-2  xl:flex gap-5">
@@ -204,8 +180,23 @@ const Footer = async () => {
       {js_in_footer && (
         <script dangerouslySetInnerHTML={{ __html: js_in_footer }} />
       )}
-
+ 
       <NpfChatbot />
+     <div className="fixed bottom-0 left-0 w-full text-center z-50 flex sm:hidden items-center justify-center ">
+        <Link
+          href="https://admissions.krmangalam.edu.in/"
+          target="_blank"
+          className="bg-[#0a41a1] w-1/2 rounded-xl border border-white  text-white py-2.5 inline-block cursor-pointer"
+        >
+          Apply Now
+        </Link>
+        <NpfPopup
+          formId="d63cf9c4d3104c39f3ac28164701a69c"
+          btnClass={`bg-[#0a41a1] w-1/2 rounded-xl border border-white  text-white py-2.5 inline-block cursor-pointer npfWidget-d63cf9c4d3104c39f3ac28164701a69c `}
+          btnText="Enquire Now"
+          showIcon={false}
+        />
+      </div>
     </>
   );
 };
