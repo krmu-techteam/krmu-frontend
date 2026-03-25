@@ -5,9 +5,7 @@ import { getPageAssets } from "@/lib/api/global-setting";
 import Image from "next/image";
 import Link from "next/link";
 import FloatingButtons from "@/app/(main-website)/components/Footer/FloatingButtons";
-import NpfPopup from "../NpfPopup";
-import Script from "next/script";
-import NpfButton from "../NpfButton";
+
 
 const Footer = async () => {
   const footerData = await getFooter();
@@ -210,13 +208,13 @@ const Footer = async () => {
 
       <NpfChatbot />
 
-      <Script
+      {/* <Script
         src="https://cdn.npfs.co/js/widget/npfwpopup.js"
         strategy="afterInteractive"
-      />
+      /> */}
 
       {/* Then run your inline script */}
-      <Script id="npf-form" strategy="afterInteractive">
+      {/* <Script id="npf-form" strategy="afterInteractive">
         {`
           function initNpfWidget() {
             if (typeof NpfWidgetsInit !== "undefined") {
@@ -238,9 +236,9 @@ const Footer = async () => {
 
           initNpfWidget();
         `}
-      </Script>
+      </Script> */}
 
-      <div className="fixed bottom-0 left-0 w-full text-center z-50 flex sm:hidden items-center justify-center bg-[#0a41a1]">
+      {/* <div className="fixed bottom-0 left-0 w-full text-center z-50 flex sm:hidden items-center justify-center bg-[#0a41a1]">
         <Link
             href="https://admissions.krmangalam.edu.in"
             className="bg-[#0a41a1] w-1/2 rounded-xl border border-white  text-white py-2.5 inline-block cursor-pointer"
@@ -249,7 +247,7 @@ const Footer = async () => {
             Apply Now
           </Link>
         <NpfButton formId="d63cf9c4d3104c39f3ac28164701a69c" text="Enquire Now" />
-      </div>
+      </div> */}
     </>
   );
 };
