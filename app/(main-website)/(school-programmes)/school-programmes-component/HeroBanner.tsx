@@ -104,7 +104,7 @@ const HeroBanner = ({
         >
           {isFormAvailable ? (
             <div className="border">
-              <NoPaperForm formId={formId} height="550px" />
+              <NoPaperForm formId={formId} height="520px" />
             </div>
           ) : heroSection?.imgvideo === "Video" ? (
             <div

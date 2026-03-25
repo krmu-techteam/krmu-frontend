@@ -116,6 +116,7 @@ const page = async ({ params }: Props) => {
     "bba-international-business",
     "b-tech-cse",
     "master-computer-application-mca",
+    "bsc-hons-agriculture",
   ];
 
   const testimonialsData = testimonialsMap[slug];

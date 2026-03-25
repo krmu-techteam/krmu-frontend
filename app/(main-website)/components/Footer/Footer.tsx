@@ -242,8 +242,9 @@ const Footer = async () => {
 
       <div className="fixed bottom-0 left-0 w-full text-center z-50 flex sm:hidden items-center justify-center bg-[#0a41a1]">
         <Link
-            href="#mob-npf-form"
+            href="https://admissions.krmangalam.edu.in"
             className="bg-[#0a41a1] w-1/2 rounded-xl border border-white  text-white py-2.5 inline-block cursor-pointer"
+            target="_blank"
           >
             Apply Now
           </Link>

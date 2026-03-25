@@ -29,12 +29,12 @@ const ProgrammeScope = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className={`sm:bg-[#0a41a1] ${isFormAvailable ? 'pt-10 sm:py-10 px-4' : ''}`}>
+    <section className={`sm:bg-[#0a41a1] ${(isFormAvailable && heroSection?.imgvideo === "Video") ? 'pt-10 sm:py-10 px-4' : ''}`}>
       <div
-        className={`xl:flex items-center xl:items-stretch  ${isFormAvailable ? "max-w-[1800px] mx-auto lg:gap-10" : "w-full"}`}
+        className={`xl:flex items-center xl:items-stretch  ${(isFormAvailable && heroSection?.imgvideo === "Video") ? "max-w-[1800px] mx-auto lg:gap-10" : "w-full"}`}
       >
         <div
-          className={`w-full xl:w-1/2 ${isFormAvailable ? "" : "pt-10 pb-[30px] px-[30px] sm:p-[60px]"}  h-full sm:text-white text-center sm:text-left`}
+          className={`w-full xl:w-1/2 ${(isFormAvailable && heroSection?.imgvideo === "Video") ? "" : "pt-10 pb-[30px] px-[30px] sm:p-[60px]"}  h-full sm:text-white text-center sm:text-left`}
         >
           <h3 className="leading-[1.2] sm:leading-[1.5] mb-6 text-4xl sm:text-[42px] text-[#e61f21] sm:text-white font-bold">
             {scopeData?.scopeheading}
@@ -79,7 +79,7 @@ const ProgrammeScope = async ({
             ))}
         </div>
         <div
-          className={`w-full xl:w-1/2 ${isFormAvailable ? "prog_scope flex items-center mt-10 sm:mt-0" : "min-h-[280px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[831px]"} relative`}
+          className={`w-full xl:w-1/2 ${(isFormAvailable && heroSection?.imgvideo === "Video") ? "prog_scope flex items-center mt-10 sm:mt-0" : "min-h-[280px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[831px]"} relative`}
         >
          
           {heroSection?.imgvideo === "Video" && isFormAvailable ? (

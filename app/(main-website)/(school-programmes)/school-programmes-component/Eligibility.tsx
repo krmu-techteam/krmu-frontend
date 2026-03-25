@@ -95,7 +95,7 @@ const Eligibility = ({
         </div>
 
         {isFormAvailable && (
-          <div className="border mt-5 sm:hidden">
+          <div className="border mt-5 sm:hidden mob_prog_form">
             <NoPaperForm formId={formId} height="500px" />
           </div>
         )}

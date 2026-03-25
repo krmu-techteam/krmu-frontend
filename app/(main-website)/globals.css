@@ -21,8 +21,17 @@
 
   .prog_scope > div > iframe {
     width: 100% !important;
+    height: 500px !important;
   }
 
+  @media (max-width: 640px) {
+    .prog_scope > div > iframe {
+      height: 180px !important;
+    }
+    .mob_prog_form > .npf_wgts > iframe{
+      height: 550px !important;
+    }
+  }
   .labFac_container p {
     margin-bottom: 20px !important;
   }
