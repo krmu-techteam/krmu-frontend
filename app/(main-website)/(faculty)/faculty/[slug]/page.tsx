@@ -5,16 +5,40 @@ import Image from "next/image";
 
 import { Mail, Phone } from "lucide-react"; // NEW ICONS
 import { getWordImageById } from "@/lib/api/common";
+import { Metadata } from "next";
+import { origUrl } from "@/app/constant";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
-
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  try {
+    const facultyResData = await getFacultyBySlug(slug);
+    const metadata = facultyResData?.[0]?.yoast_head_json;
+    return {
+      title: metadata?.title || "K.R. Mangalam University",
+      description: metadata?.description || "",
+      alternates: {
+        canonical: `${origUrl}/faculty/${slug}` || "",
+      },
+      robots: {
+        index: metadata?.robots?.index.replace("no", "") === "index",
+        follow: metadata?.robots?.follow.replace("no", "") === "follow",
+      },
+    };
+  } catch (error) {
+    console.error("SEO Error:", error);
+    return {
+      title: "K.R. Mangalam University",
+      description: "",
+    };
+  }
+}
 const page = async ({ params }: Props) => {
   const { slug } = await params;
 
-  const facultyResData = await getFacultyBySlug(slug);
-
+  const facultyResData = await getFacultyBySlug(slug); 
   const currentFaculty = facultyResData?.find(
     (fac: singleFaculty) => fac?.slug === slug
   );
