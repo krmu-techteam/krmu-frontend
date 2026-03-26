@@ -471,7 +471,71 @@ export function createBreadcrumbSchema(items: BreadcrumbItem[]) {
 
   return JSON.stringify(schema);
 }
+export interface CourseProvider {
+  name: string;
+  url: string;
+}
 
+export interface CourseOffer {
+  category: string;
+}
+
+export interface CourseSchedule {
+  duration?: string;
+  repeatFrequency?: string;
+  repeatCount?: number;
+  startDate?: string;
+}
+
+export interface CourseInstance {
+  courseMode: string;
+  location?: string;
+  courseWorkload?: string;
+  courseSchedule?: CourseSchedule;
+}
+
+export interface CourseSchemaData {
+  name: string;
+  description: string | undefined;
+  provider: CourseProvider;
+  offers: CourseOffer[];
+  hasCourseInstance: CourseInstance[];
+}
+
+export function createCourseSchema(data: CourseSchemaData) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: data.name,
+    description: data.description,
+    provider: {
+      "@type": "Organization",
+      name: data.provider.name,
+      url: data.provider.url,
+    },
+    offers: data.offers.map((offer) => ({
+      "@type": "Offer",
+      category: offer.category,
+    })),
+    hasCourseInstance: data.hasCourseInstance.map((instance) => ({
+      "@type": "CourseInstance",
+      courseMode: instance.courseMode,
+      location: instance.location,
+      courseWorkload: instance.courseWorkload,
+      courseSchedule: instance.courseSchedule
+        ? {
+            "@type": "Schedule",
+            duration: instance.courseSchedule.duration,
+            repeatFrequency: instance.courseSchedule.repeatFrequency,
+            repeatCount: instance.courseSchedule.repeatCount,
+            startDate: instance.courseSchedule.startDate,
+          }
+        : undefined,
+    })),
+  };
+
+  return JSON.stringify(schema);
+}
 
 export function createBreadcrumbProgSchema(items: BreadcrumbItem[]) {
   const schema = {
@@ -547,6 +611,103 @@ export function createPersonSchema(data: PersonSchemaProps) {
 
   return JSON.stringify(schema);
 }
+
+interface WebsiteSchemaProps{
+  name:string,
+  alternateName?:string;
+  url: string,
+  searchPath?: string,
+}
+
+export const createWebsiteSchema = ({name,alternateName, url, searchPath}: WebsiteSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Website",
+    name: name,
+    alternateName: alternateName,
+    url: url,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${url.replace(/\/$/, "")}${searchPath}{search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  }
+  return JSON.stringify(schema);
+}
+
+ interface ContactPoint {
+  telephone: string;
+  contactType: string;
+  contactOption?: string;
+  areaServed?: string;
+  availableLanguage?: string;
+}
+
+interface OrganizationSchemaProps {
+  name: string;
+  alternateName?: string;
+  url: string;
+  logo: string;
+  sameAs?: string[];
+  contactPoint?: ContactPoint;
+}
+
+export const createOrganizationSchema = ({
+  name,
+  alternateName,
+  url,
+  logo,
+  contactPoint,
+  sameAs = [],
+}: OrganizationSchemaProps) => {
+
+  const cleanUrl = (val: string) => val.replace(/\s+/g, "");
+
+  const schema = {
+    "@context": "https://schema.org/",
+    "@type": "Organization",
+    name,
+    alternateName,
+    url: cleanUrl(url),
+    logo: cleanUrl(logo),
+    contactPoint: contactPoint
+      ? {
+          "@type": "ContactPoint",
+          telephone: contactPoint.telephone,
+          contactType: contactPoint.contactType,
+          contactOption: contactPoint.contactOption || "TollFree",
+          areaServed: contactPoint.areaServed || "IN",
+          availableLanguage: contactPoint.availableLanguage || "en",
+        }
+      : undefined,
+    sameAs: sameAs.map(cleanUrl),
+  };
+
+  return JSON.stringify(schema, null, 2);
+};
+
+interface CollageOrUniversitySchemaProps{
+  name: string;
+  alternateName?: string;
+  url: string;
+  logo: string;
+  sameAs: string[];
+}
+
+export const createCollageOrUniversitySchema = ({name, alternateName, url, logo, sameAs=[]}: CollageOrUniversitySchemaProps) => {
+  const cleanUrl = (val: string) => val.replace(/\s+/g, "");
+  const schema = {
+    "@context": "https://schema.org/",
+    "@type": "CollageOrUniversity",
+    name: name,
+    alternateName: alternateName,
+    url: url,
+    logo: logo,
+    sameAs: sameAs.map(cleanUrl)
+  }
+  return JSON.stringify(schema);
+}
+
 
 type TocFaq = {
   id: number;

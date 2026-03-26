@@ -12,7 +12,7 @@ import Admission2Fee from "./admission2Comp/Admission2Fee";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import { createProgFaqSchema } from "@/lib/api/common";
+import { createBreadcrumbProgSchema, createProgFaqSchema } from "@/lib/api/common";
 import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -55,13 +55,13 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "K.R. Mangalam University",
       images: shareImageUrl
         ? [
-            {
-              url: shareImageUrl,
-              width: 1200,
-              height: 630,
-              alt: seo?.title || "K.R. Mangalam University",
-            },
-          ]
+          {
+            url: shareImageUrl,
+            width: 1200,
+            height: 630,
+            alt: seo?.title || "K.R. Mangalam University",
+          },
+        ]
         : [],
       type: "website",
     },
@@ -97,13 +97,25 @@ const page = async () => {
   );
 
 
+
+
   const singleProgFAQLD = createProgFaqSchema(allFaqs);
+
+  const breadcrumbItems = [
+    { name: "Home", url: "https://www.krmangalam.edu.in/" },
+    { name: "Admissions", url: "https://www.krmangalam.edu.in/admissions" },
+  ];
+  const breadcrumbSchema = createBreadcrumbProgSchema(breadcrumbItems);
 
   return (
     <>
       <Script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: singleProgFAQLD }}
+      />
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
       />
       <Admission2Hero />
       <Admission2Process />

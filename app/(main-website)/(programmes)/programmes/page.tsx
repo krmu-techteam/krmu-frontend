@@ -6,6 +6,8 @@ import ProgrammesSearch from "./comp/ProgrammesSearch";
 import { STRAPI_URL } from "@/app/constant";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
+import { createBreadcrumbProgSchema } from "@/lib/api/common";
+import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("programmes");
@@ -67,12 +69,25 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
+
+
+
 const page = async () => {
   const ProgrammeData = await getProgrammePageData();
   const programmeAlumnis = ProgrammeData?.alumni;
+  const breadcrumbItems = [
+    { name: "Home", url: "https://www.krmangalam.edu.in/" },
+    { name: "Programs", url: "https://www.krmangalam.edu.in/programmes" }, 
+  ];
+
+  const breadcrumbSchema = createBreadcrumbProgSchema(breadcrumbItems);
 
   return (
     <>
+    <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+      />
       <ProgrammesSearch />
       <ProgrammesAlumni alumniData={programmeAlumnis} />
       <ProgrammesOurLocation />

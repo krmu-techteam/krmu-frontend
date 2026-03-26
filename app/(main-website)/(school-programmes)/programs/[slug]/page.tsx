@@ -19,6 +19,7 @@ import { getPHDProgramme } from "@/lib/api/phd-programmes";
 import PHDProgrammes from "../PHDProgramme";
 import {
   createBreadcrumbProgSchema,
+  createCourseSchema,
   createFaqSchema,
   createProgFaqSchema,
   getSchoolProgrammeSEO,
@@ -162,6 +163,7 @@ const page = async ({ params }: Props) => {
   const financialAssistanceSection = singleSchoolProgramme?.financialassistance;
   const tocSection = singleSchoolProgramme?.toc;
   const ourLocationSection = singleSchoolProgramme?.ourlocation;
+ 
 
   if (singlePHDProgramme?.degree === "Doctoral Programme") {
     return <PHDProgrammes phdData={singlePHDProgramme} />;
@@ -175,10 +177,11 @@ const page = async ({ params }: Props) => {
   const faqToC = singleSchoolProgramme?.toc?.tocfaq || [];
 
   let schemaSlug = singleSchoolProgramme?.programmeslug || "";
-
+  let courseWorkload = schemaSlug.includes("part-time") ? "Part Time" : "Full Time";
   let schemaTitle =
-    singleSchoolProgramme?.title + "" + singleSchoolProgramme?.highlightitle;
-
+    singleSchoolProgramme?.title + (singleSchoolProgramme?.highlightitle ? " " + singleSchoolProgramme?.highlightitle : "");
+ 
+  schemaTitle = schemaTitle.trim();
   const allFaqs: FAQProg[] = faqToC.flatMap((section) =>
     section.faq.map((item) => ({
       id: item.id,
@@ -197,6 +200,42 @@ const page = async ({ params }: Props) => {
       url: `https://www.krmangalam.edu.in/programs/${schemaSlug}`,
     },
   ]);
+  const durationObj = eligibilitySection?.elgibility.find(item => item.subtitle === "Duration");
+  let durationISO = "";
+
+  if (durationObj?.title) {
+    const match = durationObj.title.match(/\d+/);
+    if (match) {
+      durationISO = `P${match[0]}Y`;
+    }
+  }
+
+  const courseSchema = createCourseSchema({
+  name: schemaTitle,
+  description: seo.metaDescription,
+  provider: {
+    name: "K.R. Mangalam University",
+    url: `https://www.krmangalam.edu.in/programs/${schemaSlug}`,
+  },
+  offers: [{ category: "Paid" }],
+  hasCourseInstance: [
+    {
+      courseMode: "Onsite",
+      location: "K.R. Mangalam University",
+      courseSchedule: {
+        duration: durationISO,
+        repeatFrequency: "Weekly",
+        repeatCount: 48,
+        startDate: "2013",
+      },
+    },
+    {
+      courseMode: "Onsite",
+      courseWorkload: courseWorkload,
+    },
+  ],
+});
+
 
   return (
     <>
@@ -208,7 +247,10 @@ const page = async ({ params }: Props) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
       />
-
+    <Script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: courseSchema }}
+          />
       <div
         className={`p-0 m-0 ${tagsArray.map((tag) => `tag-${tag}`).join(" ")}`}
       />
