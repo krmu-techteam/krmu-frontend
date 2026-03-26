@@ -98,7 +98,7 @@ const ResearchHeroSection = () => {
             />
           </Link>
           <Link
-            href="/keic"
+            href="https://foundry.krmangalam.edu.in/"
             className="min-h-24 py-[17px] px-10 bg-[#ffffff33] rounded-[30px] text-white text-lg flex items-center justify-center font-semibold w-fit sm:my-5 lg:my-8"
             target="_blank" rel="noopener noreferrer"
           >
