@@ -8,7 +8,7 @@ export async function getAllProgramme(
     "filters[title][$containsi]": `${query}`,
     "fields[0]": "title",
     "fields[1]": "programmeslug",
-    "pagination[pageSize]": "20",
+    "pagination[pageSize]": "1000",
     "pagination[page]": "1",
   });
 

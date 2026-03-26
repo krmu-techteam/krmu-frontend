@@ -13,6 +13,10 @@ import {
   searchPhdProgrammes,
 } from "../../programmesApi/api";
 
+function normalize(text: string) {
+  return text.toLowerCase().replace(/[\.\s]/g, "");
+}
+
 import Image from "next/image";
 import Link from "next/link";
 import ProgrammesHero from "./ProgrammesHero";
@@ -115,11 +119,17 @@ const ProgrammesSearch = () => {
       if (query.length > 0) {
         // SEARCH MODE
         if (degreeRefValue.current === "doctoral-programmes") {
-          const res = await searchPhdProgrammes(query, nextPage, 6);
-          newData = res.data || [];
+          const res = await searchPhdProgrammes("", 1, 1000);
+          const allData = res.data || [];
+          newData = allData.filter((item) =>
+            normalize(item.heading).includes(normalize(query))
+          );
         } else {
-          const res = await searchSchoolProgrammes(query, nextPage, 6);
-          newData = res.data || [];
+          const res = await searchSchoolProgrammes("", 1, 1000);
+          const allData = res.data || [];
+          newData = allData.filter((item) =>
+            normalize(item.title).includes(normalize(query))
+          );
         }
       } else {
         // DROPDOWN MODE
