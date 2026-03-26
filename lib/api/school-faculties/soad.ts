@@ -273,6 +273,21 @@ export const soadFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Ms.-Paramjeet-Kaur-SOAD.jpg",
   },
+   {
+    id: 113804,
+    slug: "dr-sagar-paruthi",
+    title: {
+      rendered: "Dr. Sagar Paruthi",
+    },
+    featured_media: 113836,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [787],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/03/Sagar-11.png",
+  },
   // {
   //   id: 43169,
   //   slug: "mr-koustav-nag",

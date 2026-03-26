@@ -14,13 +14,13 @@ const ResearchHeroSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-16 my-10">
           <div className="p-5 bg-[#051630] text-white font-semibold rounded-[14px] flex flex-col items-center justify-center text-center min-h-56">
             <span className="text-[44px] md:text-[65px] leading-[1.3]">
-              200+
+              250+
             </span>
             <span className="text-xl">Total number of Patents</span>
           </div>
           <div className="p-5 bg-[#051630] text-white font-semibold rounded-[14px] flex flex-col items-center justify-center text-center min-h-56">
             <span className="text-[44px] md:text-[65px] leading-[1.3]">
-              110+
+              156+
             </span>
             <span className="text-xl">Number of Ph.D. Awarded</span>
           </div>
