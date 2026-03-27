@@ -286,7 +286,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/03/Sagar-11.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/03/New-Project-4.webp",
   },
   // {
   //   id: 43169,
