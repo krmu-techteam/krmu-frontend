@@ -34,6 +34,22 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+const noIndexQSSust = [
+  "qs-activities-report",
+  "qs-annual-sustainability-report-2025",
+  "qs-detailed-report",
+  "qs-environment-sustainability-report",
+  "qs-good-governance-report",
+  "qs-knowledge-exchange",
+  "qs-social-impact-report",
+  "qs-sustainable-conferences",
+  "qs-sustainability-focused",
+  "qs-updated-green-campus-policy",
+  "qs-sustainability-march-18",
+  "qs-sustainability",
+  "qs-others",
+];
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params; // ✅ no await
 
@@ -45,6 +61,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (isPage?.is_custom_page === "custom_page") {
     const seo = customSEO[0];
+
+    const isQsSustain = noIndexQSSust.includes(slug);
+
     const shareImageUrl = seo?.shareImg?.url
       ? `${STRAPI_URL}${seo?.shareImg?.url}`
       : undefined;
@@ -56,8 +75,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         canonical: seo?.canonicalUrl || "",
       },
       robots: {
-        index: true,
-        follow: true,
+        index: !isQsSustain,
+        follow: !isQsSustain,
       },
 
       // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
