@@ -16,6 +16,10 @@ import {
   searchPhdProgrammes,
 } from "@/app/(main-website)/(programmes)/programmesApi/api";
 
+function normalize(text: string) {
+  return text.toLowerCase().replace(/[\.\s]/g, "");
+}
+
 
 export interface Criteria {
   id: number;
@@ -116,11 +120,17 @@ const Admission2Search = () => {
       if (query.length > 0) {
         // SEARCH MODE
         if (degreeRefValue.current === "doctoral-programmes") {
-          const res = await searchPhdProgrammes(query, nextPage, 6);
-          newData = res.data || [];
+          const res = await searchPhdProgrammes("", 1, 1000);
+          const allData = res.data || [];
+          newData = allData.filter((item) =>
+            normalize(item.heading).includes(normalize(query))
+          );
         } else {
-          const res = await searchSchoolProgrammes(query, nextPage, 6);
-          newData = res.data || [];
+          const res = await searchSchoolProgrammes("", 1, 1000);
+          const allData = res.data || [];
+          newData = allData.filter((item) =>
+            normalize(item.title).includes(normalize(query))
+          );
         }
       } else {
         // DROPDOWN MODE
@@ -142,7 +152,7 @@ const Admission2Search = () => {
         }
       }
 
-      setShowLoadMore(newData.length === 6);
+      setShowLoadMore(query.length > 0 ? false : newData.length === 6);
 
       if (reset) {
         pageRef.current = 2;

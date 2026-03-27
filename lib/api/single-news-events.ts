@@ -37,9 +37,7 @@ export async function getSingleNewsAndEventsWP(newsandeventsslug: string = "") {
   const res = await fetch(
     `${KRMUWordUrl}/wp-json/wp/v2/events-and-news?slug=${newsandeventsslug}&_fields=id,title,content,featured_media,acf.event_images,slug,yoast_head_json`,
     {
-      next: {
-        revalidate: 3600,
-      },
+      cache:"no-cache"
     }
   );
 

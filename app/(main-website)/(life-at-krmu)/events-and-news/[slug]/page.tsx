@@ -23,9 +23,13 @@ type NewsEventItem = {
   acf: {
     event_images: number[];
   };
-  yoast_head_json: {
+ yoast_head_json: {
     title: string;
-    description: string;
+    description?: string;
+    robots?: {
+      index?: boolean;
+      follow?: boolean;
+    };
   };
 };
 
@@ -42,7 +46,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const singleNewsEvents = singleNewsAndEventsData.find(
     (items) => items.slug === slug,
   );
-
   const siteTitle = singleNewsEvents?.title?.rendered;
   const siteMetaTitle = singleNewsEvents?.yoast_head_json?.title;
   const siteMetaDescription = singleNewsEvents?.yoast_head_json?.description;
@@ -58,9 +61,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: siteMetaTitle || siteTitle || "K.R. Mangalam University",
       description: siteMetaDescription || siteTitle || "",
-
       type: "website",
     },
+    robots: {
+    index: singleNewsEvents?.yoast_head_json?.robots?.index ?? true,
+    follow: singleNewsEvents?.yoast_head_json?.robots?.follow ?? true,
+  },
 
     // ✅ Twitter Card
   };
