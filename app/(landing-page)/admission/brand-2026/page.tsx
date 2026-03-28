@@ -40,6 +40,7 @@ import ProgramsSection from "./components/ProgramsSection";
 import PlacementRate from "../CommonComponent2026/PlacementRate";
 import FAQSection2 from "../CommonComponent2026/FAQSection2";
 import BrandFooter from "./components/BrandFooter";
+import StickyMobileBar from "./components/StickyMobileBar";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -120,6 +121,7 @@ const page = () => {
       <BusinessHub data={businessData} formId={brand2026IdForm} />
       {/* <ApplySection data={applyData} /> */}
       <BrandFooter />
+      <StickyMobileBar phoneNumber="+919311603078" />
     </>
   );
 };
