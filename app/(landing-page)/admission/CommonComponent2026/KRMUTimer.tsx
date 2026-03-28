@@ -56,7 +56,7 @@ export default function KRMUTimer({ targetDate }: ZenithTimerProps) {
   return (
     <div className="flex flex-col md:flex-row text-center md:text-left items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-900 text-white px-4 py-2 rounded-xl shadow-md">
       <span className="text-xs uppercase tracking-wider font-semibold">
-        Grab or Gone! Last Chance for Early Bird Scholarships
+          Now or Never! Grab Your 100% Scholarship Today
       </span>
 
       <div className="flex gap-2 font-mono text-sm">
