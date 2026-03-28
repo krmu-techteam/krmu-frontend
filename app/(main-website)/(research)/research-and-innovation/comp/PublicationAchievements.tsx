@@ -10,8 +10,8 @@ const PublicationAchievements = () => {
           </h3>
           <p>
             K.R. Mangalam University has made significant scholarly
-            contributions, evidenced by over 3,000 publications and a Scopus
-            h-index of 3000 and Citation Index of KRMU= 9.2. This record
+            contributions, evidenced by over 4000 publications and a Scopus
+            h-index of 4000 and Citation Index of KRMU= 7.9. This record
             reflects the depth and impact of our research. Furthermore, our
             commitment to innovation is demonstrated by our repository of over a
             hundred patents, spanning diverse disciplines and showcasing the
@@ -28,7 +28,7 @@ const PublicationAchievements = () => {
               <span className="text-xl uppercase">CITATION INDEX</span>
             </div>
             <div className="flex flex-col justify-center text-center p-8 text-white">
-              <span className="text-[50px] leading-[1]">50</span>
+              <span className="text-[50px] leading-[1]">53</span>
               <span className="text-xl">H INDEX</span>
             </div>
           </div>

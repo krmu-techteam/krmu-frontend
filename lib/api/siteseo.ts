@@ -110,9 +110,7 @@ export async function folderRouteSEO(
   const res = await fetch(
     `${FETCH_STRAPI_URL}/api/site-seos?sort[0]=title:asc&filters[slug][$eq]=${slug}&fields[0]=title&fields[1]=metaDescription&fields[2]=canonicalUrl&fields[3]=index&fields[4]=keyword&populate[shareImg][fields][0]=url`,
     {
-      next: {
-        revalidate: 3600,
-      },
+     cache:"no-cache"
     }
   );
   if (!res.ok) throw new Error("Failed to fetch seo");
