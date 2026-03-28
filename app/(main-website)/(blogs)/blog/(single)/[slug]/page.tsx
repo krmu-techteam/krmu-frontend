@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
 
   const blog = await getSingleBlogDataBySlug(slug);
+  console.log("blog data", blog)
 
   if (!blog || !blog[0]?.yoast_head_json) return {};
 
