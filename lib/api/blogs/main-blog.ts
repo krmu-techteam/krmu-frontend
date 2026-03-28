@@ -23,7 +23,7 @@ export async function getAllBlogsByPerPageOrCategorySlug(
     if (categorySlug) {
       const catRes = await fetch(
         `${krmBlogURL}/wp-json/wp/v2/categories?slug=${categorySlug}`,
-        { next: { revalidate: 3600 } } // 5-minute cache
+        { next: { revalidate: 3600, tags: ["blogs"] } }
       );
 
       if (catRes.ok) {
@@ -41,7 +41,7 @@ export async function getAllBlogsByPerPageOrCategorySlug(
     // 🔥 Optimized single fetch call
     const finalURL = `${krmBlogURL}/wp-json/wp/v2/posts?${params.toString()}`;
 
-    const res = await fetch(finalURL, { next: { revalidate: 3600 } }); // 5-minute cache
+    const res = await fetch(finalURL, { next: { revalidate: 3600, tags: ["blogs"] } });
 
     if (!res.ok) throw new Error("Failed to fetch blogs");
 
@@ -58,7 +58,7 @@ export async function getAllBlogsByPerPageOrCategorySlug(
 export async function getRecentPosts() {
   const res = await fetch(
     `${krmBlogURL}/wp-json/wp/v2/posts?per_page=20`,
-    { next: { revalidate: 3600 } } // ISR caching (Next.js)
+    { next: { revalidate: 3600, tags: ["blogs"] } }
   );
   if (!res.ok) throw new Error("Failed to fetch recent posts");
   const json: MainBlogResponse = await res.json();

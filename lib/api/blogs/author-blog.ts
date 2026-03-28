@@ -7,6 +7,7 @@ export async function getAuthInfoBySlug(authSlug: string = "") {
     {
       next: {
         revalidate: 3600,
+        tags: ["blogs"],
       },
     }
   );
@@ -23,7 +24,7 @@ export async function getPostsByAuthId(authId: number, page: number = 1) {
   const res = await fetch(
     `${krmBlogURL}/wp-json/wp/v2/posts?author=${authId}&per_page=6&page=${page}&_fields=id,title,featured_media,date,slug`,
     {
-      next: { revalidate: 3600 },
+      next: { revalidate: 3600, tags: ["blogs"] },
     }
   );
 
