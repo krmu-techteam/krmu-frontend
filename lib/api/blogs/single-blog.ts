@@ -14,7 +14,8 @@ export async function getSingleBlogDataBySlug(
     `${krmBlogURL}/wp-json/wp/v2/posts?slug=${slug}&_embed`,
     {
       next: {
-        revalidate: 180,
+        revalidate: 3600,
+        tags: ["blogs"],
       },
     },
   );
@@ -55,6 +56,7 @@ export async function getAllBlogCategories(): Promise<AllBlogCategoriesResponse>
     {
       next: {
         revalidate: 3600,
+        tags: ["blogs"],
       },
     },
   );
@@ -89,7 +91,7 @@ export async function getBlogImageById(imgId: number): Promise<string | null> {
     const res = await fetch(
       `${krmBlogURL}/wp-json/wp/v2/media/${imgId}?_fields=guid`,
       {
-        next: { revalidate: 3600 },
+        next: { revalidate: 3600, tags: ["blogs"] },
       },
     );
 
