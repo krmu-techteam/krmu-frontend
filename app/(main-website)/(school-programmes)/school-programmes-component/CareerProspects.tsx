@@ -26,35 +26,35 @@ const CareerProspects = ({
     <>
       <section className="prog-global-padding bg-[#f8f9fd]">
         <div className="max-w-[1320px] mx-auto w-full px-2.5 md:px-4">
-          <h3 className="text-4xl md:text-[40px] font-semibold text-[#0a41a1] mb-6 text-center sm:text-left">
-            {heading} <span className="text-[#db2a1a]">{highlight}</span>
-          </h3>
-          <div className="flex flex-col-reverse lg:flex-row items-start">
-            <div className="w-full xl:w-1/2">
+          <div className="flex flex-col lg:flex-row items-stretch gap-8">
+            <div className="w-full xl:w-1/2 flex flex-col">
+              <h3 className="text-4xl md:text-[40px] font-semibold text-[#0a41a1] mb-6 text-center sm:text-left">
+                {heading} <span className="text-[#db2a1a]">{highlight}</span>
+              </h3>
+
               <p className="mb-6">{desc}</p>
-              <div>
-                {careercards &&
-                  careercards.map((card) => {
-                    return (
-                      <div key={card?.id} className="pl-10 relative">
-                        <span className="absolute -left-2 top-0 px-2.5 py-[5px] rounded-[10px] text-white bg-[#db2a1a]">
-                          {card?.num}
-                        </span>
-                        <h4 className="font-medium text-2xl">{card?.title}</h4>
-                        <p className="mb-4">{card?.description}</p>
-                      </div>
-                    );
-                  })}
+
+              <div className="flex-1">
+                {careercards?.map((card) => (
+                  <div key={card?.id} className="pl-10 relative mb-6">
+                    <span className="absolute -left-2 top-0 px-2.5 py-[5px] rounded-[10px] text-white bg-[#db2a1a]">
+                      {card?.num}
+                    </span>
+
+                    <h4 className="font-medium text-2xl">{card?.title}</h4>
+                    <p>{card?.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="w-full xl:w-1/2 min-h-[300px] sm:min-h-[400px] md:min-h-[644px] h-full relative mb-5 sm:mb-0">
+            <div className="w-full xl:w-1/2 mb-5 sm:mb-0 flex items-center justify-center">
               {careerimg?.url && (
                 <Image
                   src={`${STRAPI_URL}${careerimg?.url}`}
-                  fill
-                  className="z-10 object-contain"
+                  width={660}
+                  height={600}
+                  className="object-contain w-full h-auto rounded-[3px]"
                   alt={careerimg?.alternativeText || "Career Prospectus"}
-                  sizes="(max-width: 1024px) 100vw, 660px"
                 />
               )}
             </div>
