@@ -40,7 +40,7 @@ import ProgramsSection from "./components/ProgramsSection";
 import PlacementRate from "../CommonComponent2026/PlacementRate";
 import FAQSection2 from "../CommonComponent2026/FAQSection2";
 import BrandFooter from "./components/BrandFooter";
-import StickyMobileBar from "./components/StickyMobileBar";
+import StickyMobileBar from "../commonComponent/StickyMobileBar";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
