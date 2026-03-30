@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HeroMarquee from "../../CommonComponent2026/HeroMarquee";
 import CountdownTimer from "./CountdownTimer";
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import { bscFinanceBrochureFileName } from "../content";
 import { BscFinanceHeroContent, HeroMarqueeSection, StatCard } from "../contentype";
 
@@ -61,26 +62,11 @@ const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-3 lg:justify-start justify-center mt-1">
-              <a
-                href={hero.applyBtnHref}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-white border border-white hover:bg-white/90 transition-all duration-200 no-underline font-semibold text-[14px] leading-5 tracking-normal text-[#344054]"
-              >
-                {hero.applyBtnLabel}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="15"
-                  height="15"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
+              <NpfPopup
+                formId="047a23de933bd996c4c01578fad16790"
+                btnClass="npfWidget-047a23de933bd996c4c01578fad16790 inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-white border border-white hover:bg-white/90 transition-all duration-200 font-semibold text-[14px] leading-5 tracking-normal text-[#344054]"
+                btnText={hero.applyBtnLabel}
+              />
 
               <a
                 href={hero.brochureBtnHref}

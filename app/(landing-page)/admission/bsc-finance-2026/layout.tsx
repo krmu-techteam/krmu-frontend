@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import NoPaperFormProvider from "@/lib/constants/NoPaperFormProvider";
 import BscFinanceNavbar from "./components/BscFinanceNavbar";
 import {
   bscFinanceApplyHref,
@@ -34,6 +35,7 @@ export default function BscFinance2026Layout({
     <html lang="en">
       <head />
       <body className={`${inter.className} antialiased`}>
+        <NoPaperFormProvider />
         {/* Navbar is absolute — floats over the hero background */}
         <BscFinanceNavbar
           navLinks={heroNavLinks}

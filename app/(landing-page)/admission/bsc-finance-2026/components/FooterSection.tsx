@@ -1,6 +1,6 @@
 import Image from "next/image";
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import {
-  bscFinanceApplyHref,
   bscFinanceBrochureFileName,
   bscFinanceBrochureHref,
 } from "../content";
@@ -117,27 +117,11 @@ const FooterSection = () => {
               </svg>
             </a>
 
-            <a
-              href={bscFinanceApplyHref}
-              className="inline-flex items-center gap-2 px-4 sm:px-5 py-[10px] rounded-lg bg-[#0060A7] text-white hover:bg-[#004f8c] font-semibold text-[13px] sm:text-[14px] leading-5 tracking-normal transition-all duration-200 no-underline w-full sm:w-auto justify-center"
-              style={{ fontFamily: "Inter, sans-serif" }}
-            >
-              Apply now
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+            <NpfPopup
+              formId="047a23de933bd996c4c01578fad16790"
+              btnClass="npfWidget-047a23de933bd996c4c01578fad16790 inline-flex items-center gap-2 px-4 sm:px-5 py-[10px] rounded-lg bg-[#0060A7] text-white hover:bg-[#004f8c] font-semibold text-[13px] sm:text-[14px] leading-5 tracking-normal transition-all duration-200 w-full sm:w-auto justify-center"
+              btnText="Apply now"
+            />
           </div>
 
           {/* QR Code */}
