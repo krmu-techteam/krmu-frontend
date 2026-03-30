@@ -174,9 +174,9 @@ const ProgrammeStructure = ({
                     >
                       <TabsList className="bg-[#0a41a1] p-2.5 h-16 mobsemtablist">
                         {year.semester.map((sem) => {
-                          const semValue = sem.semestername
-                            .toLowerCase()
-                            .replace(" ", "");
+                          const semValue = sem?.semestername
+                            ?.toLowerCase()
+                            ?.replace(" ", "");
                           return (
                             <TabsTrigger
                               key={sem.id}
@@ -192,10 +192,10 @@ const ProgrammeStructure = ({
 
                     {/* Semester Content */}
                     <div className="p-6 mt-12">
-                      {year.semester.map((sem) => {
+                      {year?.semester?.map((sem) => {
                         const semValue = sem.semestername
-                          .toLowerCase()
-                          .replace(" ", "");
+                          ?.toLowerCase()
+                          ?.replace(" ", "");
                         return (
                           <TabsContent key={sem.id} value={semValue}>
                             <div className="grid md:grid-cols-2 gap-x-10">
