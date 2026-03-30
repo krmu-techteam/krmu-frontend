@@ -35,6 +35,7 @@ import { SeoData } from "./seo";
 import { Metadata } from "next";
 import CommonFooter2 from "../commonComponent/footer/CommonFooter2";
 import ProgrammeSection from "../CommonComponent2026/ProgrammeSection";
+import StickyMobileBar from "../commonComponent/StickyMobileBar";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -126,6 +127,7 @@ const page = () => {
       <BusinessHub data={businessData} formId={llmFormId} />
       <FAQSection data={faqData} />
       <CommonFooter2 />
+      <StickyMobileBar phoneNumber="+919311411717"/>
     </>
   );
 };

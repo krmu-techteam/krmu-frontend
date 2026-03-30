@@ -37,6 +37,7 @@ import { Metadata } from "next";
 import CommonFooter2 from "../commonComponent/footer/CommonFooter2";
 import ProgrammeSection from "../CommonComponent2026/ProgrammeSection";
 import EligibilityTerms from "../commonComponent/EligibilityTerms";
+import StickyMobileBar from "../commonComponent/StickyMobileBar";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -129,6 +130,7 @@ const page = () => {
       <FAQSection data={faqData} />
       <EligibilityTerms items={eligibilityTerms} />
       <CommonFooter2 />
+      <StickyMobileBar phoneNumber="+919311411717" />
     </>
   );
 };

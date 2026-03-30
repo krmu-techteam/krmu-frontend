@@ -12,6 +12,7 @@ import PhdWelcomeUniversity from "./commonComponent/PhdWelcomeUniversity";
 import PhdWhatsHappening from "./commonComponent/PhdWhatsHappening";
 import PhdWhyphd from "./commonComponent/PhdWhyphd";
 import { SeoData } from "./seo";
+import StickyMobileBar from "../commonComponent/StickyMobileBar";
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -56,6 +57,7 @@ const page = async () => {
       <PhdWhatsHappening />
       <PhdGlobal />
       <PhdStudentTestimonials />
+      <StickyMobileBar phoneNumber="+919311411717"/>
     </>
   );
 };
