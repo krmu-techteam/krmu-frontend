@@ -134,7 +134,7 @@ const SingleBlogHero = ({
   <div className="px-4 pt-5 pb-6">
 
     {/* Title */}
-    <h1
+    <div
       dangerouslySetInnerHTML={{ __html: title }}
       className="text-[26px] font-semibold leading-[1.3] text-[#1f5fa8] mb-4"
     />
