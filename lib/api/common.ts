@@ -395,13 +395,13 @@ export async function getWordImageById(imgId: number): Promise<string> {
   const res = await fetch(
     `${KRMUWordUrl}/wp-json/wp/v2/media/${imgId}?_fields=guid`,
     {
-      next: { revalidate: 3600 },
+      cache:"no-cache"
     },
   );
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch image by ID");
-  }
+  // if (!res.ok) {
+  //   throw new Error("Failed to fetch image by ID");
+  // }
 
   const json: BlogImageIdResponse = await res.json();
 
