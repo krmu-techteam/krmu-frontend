@@ -5,14 +5,6 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer utilities {
-  /* Hero background — set via class so it can be swapped per breakpoint */
-  .MainSection {
-    background-image: url("/landingpage/bsc-finance-2026/hero-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center top;
-  }
-
   /* Marquee — consumed by CommonComponent2026/HeroMarquee */
   @keyframes marquee {
     0% {
@@ -25,45 +17,6 @@
 
   .animate-marquee {
     animation: marquee 18s linear infinite;
-  }
-
-  /* Shared carousel arrow overrides used by CommonComponent2026 */
-  .landingpagePrevArrow,
-  .landingpageNextArrow {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-  }
-
-  .landingpagePrevArrow svg,
-  .landingpageNextArrow svg {
-    display: none;
-  }
-
-  .landingpagePrevArrow::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30px;
-    height: 30px;
-    background: url("/wp-content/landingpage/common/move-left.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  .landingpageNextArrow::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30px;
-    height: 30px;
-    background: url("/wp-content/landingpage/common/move-right.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
   }
 
   .embla__slide {

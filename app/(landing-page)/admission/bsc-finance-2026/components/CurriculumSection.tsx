@@ -8,6 +8,7 @@ interface CurriculumSectionProps {
 const CurriculumSection = ({ data }: CurriculumSectionProps) => {
   return (
     <section
+      id="curriculum"
       className="relative overflow-hidden py-16 sm:py-20 lg:py-24"
       style={{ background: "linear-gradient(360deg, #FFFFFF 0%, #F3F5F7 100%)" }}
     >
@@ -47,7 +48,7 @@ const CurriculumSection = ({ data }: CurriculumSectionProps) => {
                   alt={card.title}
                   width={32}
                   height={32}
-                  className="object-contain"
+                  style={{ width: "auto", height: "auto" }}
                 />
               </div>
 

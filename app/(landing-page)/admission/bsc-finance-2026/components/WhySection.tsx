@@ -1,3 +1,4 @@
+import { bscFinanceBrochureFileName } from "../content";
 import { WhySectionData } from "../contentype";
 
 interface WhySectionProps {
@@ -79,7 +80,7 @@ const WhySection = ({ data }: WhySectionProps) => {
         <div className="flex flex-wrap gap-3 items-center justify-center sm:justify-start">
           <a
             href={data.brochureHref}
-            download
+            download={bscFinanceBrochureFileName}
             className="inline-flex items-center gap-2 px-5 py-[10px] rounded-lg border border-[#D1D1D1] bg-white text-[#344054] hover:bg-gray-50 font-semibold text-[14px] leading-5 tracking-normal transition-all duration-200 no-underline"
           >
             {data.brochureLabel}

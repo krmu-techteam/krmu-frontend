@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import BscFinanceNavbar from "./components/BscFinanceNavbar";
-import { heroNavLinks } from "./content";
+import {
+  bscFinanceApplyHref,
+  bscFinanceBrochureFileName,
+  bscFinanceBrochureHref,
+  heroNavLinks,
+} from "./content";
 import "./bsc-finance-2026.css";
 
 const inter = Inter({
@@ -12,7 +17,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "BSc (Hons) Finance 2026 - K.R. Mangalam University",
   description:
-    "Graduate with a degree, 12 months of paid industry experience, and a curriculum aligned to CFA, FRM & actuarial examinations. Apply for BSc (Hons) Finance 2025-26 batch.",
+    "Graduate with a degree, 12 months of paid industry experience, and a curriculum aligned to CFA, FRM & actuarial examinations. Apply for BSc (Hons) Finance 2026-27 batch.",
   openGraph: {
     title: "BSc (Hons) Finance 2026 - K.R. Mangalam University",
     description:
@@ -32,8 +37,9 @@ export default function BscFinance2026Layout({
         {/* Navbar is absolute — floats over the hero background */}
         <BscFinanceNavbar
           navLinks={heroNavLinks}
-          brochureHref="#"
-          applyHref="#apply-section"
+          brochureHref={bscFinanceBrochureHref}
+          brochureDownloadName={bscFinanceBrochureFileName}
+          applyHref={bscFinanceApplyHref}
         />
         {children}
       </body>

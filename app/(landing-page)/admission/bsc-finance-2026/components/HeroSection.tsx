@@ -1,5 +1,7 @@
+import Image from "next/image";
 import HeroMarquee from "../../CommonComponent2026/HeroMarquee";
 import CountdownTimer from "./CountdownTimer";
+import { bscFinanceBrochureFileName } from "../content";
 import { BscFinanceHeroContent, HeroMarqueeSection, StatCard } from "../contentype";
 
 interface HeroSectionProps {
@@ -11,14 +13,24 @@ interface HeroSectionProps {
 const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
   return (
     <>
-      {/* Hero — full viewport, background set via MainSection CSS class */}
+      {/* Hero — full viewport */}
       <section
-        className={`relative min-h-svh flex flex-col justify-center ${hero.lpclName}`}
+        className="relative min-h-svh flex flex-col justify-center"
       >
+        {/* Background image via Next.js Image for optimization */}
+        <Image
+          src="/landingpage/bsc-finance-2026/home-page.png"
+          alt=""
+          fill
+          priority
+          className="object-cover object-top"
+          sizes="100vw"
+          quality={75}
+        />
         {/* Dark gradient overlay — left heavier, right lighter for image visibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[rgba(5,10,28,0.55)] via-[rgba(5,10,28,0.35)] to-[rgba(5,10,28,0.10)]" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[rgba(5,10,28,0.55)] via-[rgba(5,10,28,0.35)] to-[rgba(5,10,28,0.10)]" />
 
-        <div className="relative z-10 max-w-[1200px] mx-auto w-full px-4 sm:px-6 pt-24 sm:pt-28 lg:pt-24 pb-10 sm:pb-12 flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-14">
+        <div className="relative z-[2] max-w-[1200px] mx-auto w-full px-4 sm:px-6 pt-24 sm:pt-28 lg:pt-24 pb-10 sm:pb-12 flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-14">
 
           {/* LEFT — text content */}
           <div className="flex-1 min-w-0 flex flex-col gap-3 sm:gap-4 text-white lg:text-left text-center">
@@ -72,7 +84,7 @@ const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
 
               <a
                 href={hero.brochureBtnHref}
-                download
+                download={bscFinanceBrochureFileName}
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/38 text-white/88 hover:border-white/65 hover:text-white text-sm font-semibold transition-all duration-200 no-underline"
               >
                 {hero.brochureBtnLabel}

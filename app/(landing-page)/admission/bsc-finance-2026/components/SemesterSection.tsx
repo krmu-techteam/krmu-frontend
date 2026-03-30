@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { bscFinanceBrochureFileName } from "../content";
 import { SemesterSectionData } from "../contentype";
 
 interface SemesterSectionProps {
@@ -40,7 +41,7 @@ const SemesterSection = ({ data }: SemesterSectionProps) => {
             <div className="flex flex-wrap gap-3 items-center">
               <a
                 href={data.brochureHref}
-                download
+                download={bscFinanceBrochureFileName}
                 className="inline-flex items-center gap-2 px-4 sm:px-5 py-[10px] rounded-lg border border-[#D1D1D1] bg-white text-[#344054] hover:bg-gray-50 font-semibold text-[13px] sm:text-[14px] leading-5 tracking-normal transition-all duration-200 no-underline"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
