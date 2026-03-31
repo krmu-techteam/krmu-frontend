@@ -1,0 +1,5 @@
+Contact: mailto:tahir.hussain@krmangalam.com
+Expires: 2027-12-31T23:59:59Z
+Preferred-Languages: en
+Canonical: https://www.krmangalam.edu.in/.well-known/security.txt
+Hiring: https://www.krmangalam.edu.in/careers
