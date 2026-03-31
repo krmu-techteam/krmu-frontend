@@ -2,18 +2,24 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import {
+  logoAltFromFilename,
+  organisationLogoSrc,
+  organisationLogosByTab,
+  ORGANISATION_TAB_FOLDERS,
+} from "../organisationLogos";
 import { OrganisationsSectionData } from "../contentype";
 
 interface OrganisationsSectionProps {
   data: OrganisationsSectionData;
 }
 
-const PLACEHOLDER_COUNT = 12;
-
 const headingFont = { fontFamily: "'Libre Caslon Condensed', serif" };
 
 const OrganisationsSection = ({ data }: OrganisationsSectionProps) => {
   const [activeTab, setActiveTab] = useState(0);
+  const folder = ORGANISATION_TAB_FOLDERS[activeTab] ?? ORGANISATION_TAB_FOLDERS[0];
+  const logos = organisationLogosByTab[activeTab] ?? organisationLogosByTab[0];
 
   return (
     <section className="py-16 sm:py-20 lg:py-24" style={{ background: "#000000" }}>
@@ -61,20 +67,8 @@ const OrganisationsSection = ({ data }: OrganisationsSectionProps) => {
             </div>
           </div>
 
-          {/* Right — fictional logo + tabs + logo grid */}
+          {/* Right — tabs + logo grid (images from public/.../Core Finance | Quantitative Finance | Actuarial Science) */}
           <div className="flex flex-col gap-5 sm:gap-6">
-
-            {/* Fictional logo */}
-            <div className="flex items-center w-full">
-              <Image
-                src="/landingpage/bsc-finance-2026/logo-fictional.png"
-                alt="Fictional company logo"
-                width={0}
-                height={0}
-                sizes="200px"
-                className="h-7 sm:h-8 w-auto object-contain"
-              />
-            </div>
 
             {/* Tab bar — wraps naturally, no scrollbar */}
             <div className="flex justify-between border-b border-[#2A2A2A]">
@@ -97,22 +91,23 @@ const OrganisationsSection = ({ data }: OrganisationsSectionProps) => {
 
             {/* Logo grid — 2-col mobile, 3-col tablet, 4-col desktop */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-              {Array.from({ length: PLACEHOLDER_COUNT }).map((_, idx) => (
+              {logos.map((filename, idx) => (
                 <div
-                  key={idx}
-                  className="h-[56px] sm:h-[68px] rounded-lg flex items-center justify-center"
+                  key={`${folder}-${idx}-${filename}`}
+                  className="h-[56px] sm:h-[68px] rounded-lg flex items-center justify-center px-2 py-1.5"
                   style={{
                     background: "#1A1A1A",
                     border: "1px solid #2E2E2E",
                   }}
                 >
                   <Image
-                    src="/landingpage/bsc-finance-2026/logo-fictional.png"
-                    alt="Company logo"
+                    src={organisationLogoSrc(folder, filename)}
+                    alt={logoAltFromFilename(filename)}
                     width={0}
                     height={0}
-                    sizes="120px"
-                    className="h-5 sm:h-6 w-auto object-contain opacity-60"
+                    sizes="(max-width: 640px) 45vw, 120px"
+                    className="max-h-[44px] sm:max-h-[52px] max-w-full object-contain object-center"
+                    style={{ width: "100%", height: "auto" }}
                   />
                 </div>
               ))}

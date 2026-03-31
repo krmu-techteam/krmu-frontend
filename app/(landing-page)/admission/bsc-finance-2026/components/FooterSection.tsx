@@ -1,3 +1,10 @@
+import Image from "next/image";
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+import {
+  bscFinanceBrochureFileName,
+  bscFinanceBrochureHref,
+} from "../content";
+
 const FooterSection = () => {
   return (
     <footer>
@@ -11,12 +18,15 @@ const FooterSection = () => {
         <div className="relative z-10 max-w-[92vw] sm:max-w-[560px] lg:max-w-[600px] mx-auto px-4 sm:px-6 flex flex-col items-center text-center gap-4 sm:gap-5">
 
           {/* KRMU Logo */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/landingpage/bsc-finance-2026/footer-logo.png"
-            alt="KR Mangalam University"
-            className="w-[68px] sm:w-[80px] lg:w-[88px] h-auto object-contain"
-          />
+          <div className="relative" style={{ width: "88px", height: "88px" }}>
+            <Image
+              src="/landingpage/bsc-finance-2026/footer-logo.png"
+              alt="KR Mangalam University"
+              fill
+              sizes="88px"
+              className="object-contain"
+            />
+          </div>
 
           {/* Heading */}
           <h2
@@ -84,8 +94,8 @@ const FooterSection = () => {
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-3 items-center justify-center w-full mt-1">
             <a
-              href="#"
-              download
+              href={bscFinanceBrochureHref}
+              download={bscFinanceBrochureFileName}
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-[10px] rounded-lg border border-[#D1D1D1] bg-white text-[#344054] hover:bg-gray-50 font-semibold text-[13px] sm:text-[14px] leading-5 tracking-normal transition-all duration-200 no-underline w-full sm:w-auto justify-center"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
@@ -107,35 +117,21 @@ const FooterSection = () => {
               </svg>
             </a>
 
-            <a
-              href="#apply-section"
-              className="inline-flex items-center gap-2 px-4 sm:px-5 py-[10px] rounded-lg bg-[#0060A7] text-white hover:bg-[#004f8c] font-semibold text-[13px] sm:text-[14px] leading-5 tracking-normal transition-all duration-200 no-underline w-full sm:w-auto justify-center"
-              style={{ fontFamily: "Inter, sans-serif" }}
-            >
-              Apply now
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+            <NpfPopup
+              formId="047a23de933bd996c4c01578fad16790"
+              btnClass="npfWidget-047a23de933bd996c4c01578fad16790 inline-flex items-center gap-2 px-4 sm:px-5 py-[10px] rounded-lg bg-[#0060A7] text-white hover:bg-[#004f8c] font-semibold text-[13px] sm:text-[14px] leading-5 tracking-normal transition-all duration-200 w-full sm:w-auto justify-center"
+              btnText="Apply now"
+            />
           </div>
 
           {/* QR Code */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/landingpage/bsc-finance-2026/footer-qr.png"
             alt="Scan to apply"
-            className="w-[130px] sm:w-[160px] lg:w-[180px] h-auto object-contain mt-1"
+            width={180}
+            height={180}
+            className="object-contain mt-1"
+            style={{ width: "180px", height: "auto" }}
           />
 
           {/* Contact info */}
@@ -178,12 +174,15 @@ const FooterSection = () => {
         {/* Campus building image */}
         <div className="relative" style={{ marginTop: "-160px" }}>
 
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/landingpage/bsc-finance-2026/footer-campus.png"
             alt="KR Mangalam University Campus"
-            className="w-full h-auto block"
-            style={{ display: "block" }}
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="block"
+            style={{ width: "100%", height: "auto" }}
+            quality={75}
           />
 
           {/* White-to-transparent fade overlay */}

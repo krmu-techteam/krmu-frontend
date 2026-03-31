@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const statRows = [
   [
     { heading: "NAAC A+", sub: "Accredited" },
@@ -36,17 +38,21 @@ const featureRows = [
 
 const AdmissionsSection = () => {
   return (
-    <section className="relative overflow-hidden" style={{ minHeight: "1100px" }}>
+    <section
+      id="admissions"
+      className="relative overflow-hidden min-h-[900px] sm:min-h-[1050px] lg:min-h-[1320px]"
+    >
 
-      {/* Campus image — full section background, tall enough for text to sit over sky/clouds */}
+      {/* Campus photo — full section background */}
       <div className="absolute inset-0 z-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/landingpage/bsc-finance-2026/apply-bg.svg"
+        <Image
+          src="/landingpage/bsc-finance-2026/image12.png"
           alt=""
-          aria-hidden="true"
-          className="w-full h-full object-cover object-top"
-          style={{ display: "block" }}
+          aria-hidden={true}
+          fill
+          className="object-cover object-top"
+          sizes="100vw"
+          quality={75}
         />
       </div>
 
@@ -60,39 +66,42 @@ const AdmissionsSection = () => {
         }}
       />
 
-      {/* Content — heading + cards on top of image (over sky/cloud area) */}
-      <div className="relative z-10 pt-10 sm:pt-14 lg:pt-16 pb-10 sm:pb-14 lg:pb-20 px-4 sm:px-6">
-        <div className="max-w-[1200px] mx-auto">
+      {/* Content — ~15px narrower than 1200px; smaller cards on mobile + desktop */}
+      <div className="relative z-10 px-3 pt-8 pb-8 sm:px-5 sm:pt-12 sm:pb-12 lg:px-6 lg:pt-16 lg:pb-20">
+        <div className="mx-auto w-full max-w-[1185px]">
 
           {/* Heading — centered, Libre Caslon Condensed, white + dark */}
           <h2
-            className="m-0 mb-8 sm:mb-10 font-semibold italic leading-[140%] tracking-[-0.02em] text-center"
+            className="m-0 mb-6 font-semibold italic leading-[140%] tracking-[-0.02em] text-center sm:mb-8 lg:mb-10"
             style={{
               fontFamily: "'Libre Caslon Condensed', serif",
-              fontSize: "clamp(28px, 5vw, 62px)",
+              fontSize: "clamp(22px, 4.5vw, 58px)",
             }}
           >
             <span className="text-white">KR Mangalam University · </span>
             <span className="text-[#111111]">Gurugram, Haryana</span>
           </h2>
 
-          {/* Stat card rows */}
-          <div className="flex flex-col gap-3">
+          {/* Stat card rows — narrower cards, larger gaps */}
+          <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6">
             {statRows.map((row, rIdx) => (
-              <div key={rIdx} className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+              <div
+                key={rIdx}
+                className="grid grid-cols-2  justify-items-center gap-x-3 gap-y-3  sm:gap-y-5 lg:grid-cols-4 lg:gap-y-5"
+              >
                 {row.map((card) => (
                   <div
                     key={card.heading}
-                    className="bg-white rounded-xl px-5 py-4 sm:px-6 sm:py-5 flex flex-col items-center gap-1 text-center"
+                    className="flex w-full max-w-[140px] min-w-0 flex-col items-center gap-0.5 rounded-lg bg-white px-2 py-2 text-center sm:max-w-[178px] sm:gap-1 sm:rounded-xl sm:px-3 sm:py-2.5 lg:max-w-[220px] lg:px-3 lg:py-3"
                   >
                     <span
-                      className="font-semibold text-[18px] sm:text-[22px] lg:text-[24px] leading-8 text-[#0061A6] tracking-normal"
+                      className="font-semibold leading-tight tracking-normal text-[#0061A6] text-[15px] sm:text-[17px] lg:text-[20px]"
                       style={{ fontFamily: "Inter, sans-serif" }}
                     >
                       {card.heading}
                     </span>
                     <span
-                      className="font-medium text-[13px] sm:text-[16px] leading-6 text-[#344054] tracking-normal"
+                      className="font-medium leading-snug tracking-normal text-[#344054] text-[11px] sm:text-[13px] lg:text-[14px]"
                       style={{ fontFamily: "Inter, sans-serif" }}
                     >
                       {card.sub}
@@ -104,14 +113,17 @@ const AdmissionsSection = () => {
 
             {/* Feature text rows */}
             {featureRows.map((row, rIdx) => (
-              <div key={rIdx} className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+              <div
+                key={rIdx}
+                className="grid grid-cols-2 justify-items-center gap-x-3 gap-y-3 sm:gap-x-5 sm:gap-y-5 lg:grid-cols-4 lg:gap-x-6 lg:gap-y-5"
+              >
                 {row.map((text) => (
                   <div
                     key={text}
-                    className="bg-white rounded-xl px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-center text-center"
+                    className="flex w-full max-w-[140px] min-w-0 items-center justify-center rounded-lg bg-white px-2 py-2 text-center sm:max-w-[178px] sm:rounded-xl sm:px-2.5 sm:py-2 lg:max-w-[220px] lg:px-3 lg:py-2.5"
                   >
                     <span
-                      className="font-medium text-[13px] sm:text-[16px] leading-6 text-[#344054] tracking-normal"
+                      className="font-medium leading-snug tracking-normal text-[#344054] text-[11px] sm:text-[13px] lg:text-[14px]"
                       style={{ fontFamily: "Inter, sans-serif" }}
                     >
                       {text}
