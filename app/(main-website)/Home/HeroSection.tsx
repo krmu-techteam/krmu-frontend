@@ -10,7 +10,7 @@ interface HeroSectionProps {
 const HeroSection = ({title, subtitle, video}: HeroSectionProps) => {
   return (
     <>
-      <section className="relative overflow-hidden testing">
+      <section className="relative overflow-hidden">
         <Video video={video} />
         <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center flex-col text-center text-white px-4 md:px-0">
           <p className="text-xl md:text-2xl font-light">
