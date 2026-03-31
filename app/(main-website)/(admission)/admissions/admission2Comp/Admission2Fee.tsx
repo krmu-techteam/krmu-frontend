@@ -122,7 +122,7 @@ const Admission2Fee = () => {
                       Hostel Fee (per annum)
                     </span>
                     <span className="py-[15px] pr-[25px] pl-5 w-1/2 md:w-1/4 font-semibold">
-                      ₹ 160000/-
+                      ₹ 1,72,000/-
                     </span>
                   </div>
                 </div>

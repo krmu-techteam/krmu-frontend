@@ -44,7 +44,7 @@ const Header = ({
   return (
     <>
       <header className="fixed top-0 left-0 w-full z-20">
-        <div className="flex flex-col md:flex-row bg-[#e31e24]">
+        {/* <div className="flex flex-col md:flex-row bg-[#e31e24]">
           <div className="w-full md:w-[80%] 2xl:w-[90%]">
             <MainHeaderMarquee data={marqueeData} />
           </div>
@@ -55,7 +55,7 @@ const Header = ({
           >
             Register Now
           </Link>
-        </div>
+        </div> */}
         <div
           className="px-2.5 xl:px-4"
           style={{

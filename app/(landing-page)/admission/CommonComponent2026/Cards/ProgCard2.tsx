@@ -130,10 +130,14 @@ const ProgCard2 = ({ data }: Props) => {
             {data.duration}
           </span>
 
-          {/* <span className="text-[#6b7280]">Annual Fee</span>
-  <span className="text-[#1f2937] font-semibold text-right">
-    {data.fee}
-  </span> */}
+        {data.fees && (
+  <>
+    <span className="text-[#6b7280]">Annual Fee</span>
+    <span className="text-[#1f2937] font-semibold text-right">
+      {data.fees}
+    </span>
+  </>
+)}
 
           <span className="text-[#6b7280]">Eligibility</span>
           <span className="text-[#1f2937] font-semibold text-right">

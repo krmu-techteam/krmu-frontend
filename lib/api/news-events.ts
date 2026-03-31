@@ -72,7 +72,7 @@ export async function getAllNewsAndEventsWithMeta(
 
 export async function getNewsEventsWP(page = 1, perPage = 10) {
   const res = await fetch(
-    `${KRMUWordUrl}/wp-json/wp/v2/events-and-news?_fields=id,title,slug,acf,featured_media,modified&page=${page}&per_page=${perPage}`,
+    `${KRMUWordUrl}/wp-json/wp/v2/events-and-news?_fields=id,title,slug,acf,featured_media,date,modified&page=${page}&per_page=${perPage}`,
     {
       next: {
         revalidate: 3600,

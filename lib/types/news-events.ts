@@ -40,6 +40,7 @@ export interface NewsEventItem {
   };
   slug: string;
   modified: string;
+  date: string;
   // publishedAt: string;
   // featured_img: StrapiMedia;
   // newsmedia: StrapiMedia[];

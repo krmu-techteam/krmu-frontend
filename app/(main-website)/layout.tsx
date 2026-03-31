@@ -67,7 +67,7 @@ export default function RootLayout({
         </noscript>
         <HeaderWrapper />
         <NoPaperFormProvider />
-        <div className="mt-28 lg:mt-5">
+        <div>
 
         {children}
         </div>

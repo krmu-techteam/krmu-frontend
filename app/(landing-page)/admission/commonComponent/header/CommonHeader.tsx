@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ScrollButton from "../../CommonComponent2026/ScrollButton";
+import KRMUTimer from "../../CommonComponent2026/KRMUTimer";
 
 export const CommonHeader = () => {
   return (
@@ -30,7 +31,7 @@ export const CommonHeader = () => {
             Apply Now
           </button> */}
           {/* <AnimatedCounter targetDate="February 28, 2026 6:30 PM" /> */}
-          {/* <KRMUTimer targetDate="2026-02-28T18:30:00" /> */}
+          <KRMUTimer targetDate="2026-03-31T18:00:00" />
           <ScrollButton
             targetId="apply-section"
             highlightClass="flash-border"

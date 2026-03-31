@@ -223,7 +223,7 @@ export async function searchSchoolProgrammes(
     "fields[1]": "programmeslug",
     "populate[criteria][populate]": "*",
     "pagination[page]": page.toString(),
-    "pagination[pageSize]": pageSize.toString(),
+    "pagination[pageSize]": "1000",
   });
 
   if (searchQuery) {
@@ -249,7 +249,7 @@ export async function searchPhdProgrammes(
     "fields[1]": "phdslug",
     "populate[criteria][populate]": "*",
     "pagination[page]": page.toString(),
-    "pagination[pageSize]": pageSize.toString(),
+    "pagination[pageSize]": "1000",
   });
 
   if (searchQuery) {

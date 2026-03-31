@@ -18,7 +18,7 @@ export default function NpfChatbot() {
         style={{ display: "none" }}
       />
 
-      {/* Chatbot script */}
+      {/* Chatbo t script */}
       <Script
         src="https://chatbot.in1.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/6416018f1c55272a/d40b0b6cfcc444b18529d58cfd3068ca"
         strategy="afterInteractive"

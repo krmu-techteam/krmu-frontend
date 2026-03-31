@@ -33,6 +33,7 @@ import {
   specialisationData,
   testimonialsData,
   whyKRM,
+  eligibilityTerms,
 } from "./content";
 
 import { SeoData } from "./seo";
@@ -40,6 +41,8 @@ import { ba2026Id } from "../constant/lpnpf";
 import PlacementRate from "../CommonComponent2026/PlacementRate";
 import FAQSection2 from "../CommonComponent2026/FAQSection2";
 import ProgrammeSection from "../CommonComponent2026/ProgrammeSection";
+import EligibilityTerms from "../commonComponent/EligibilityTerms";
+import StickyMobileBar from "../commonComponent/StickyMobileBar";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -120,7 +123,9 @@ const page = () => {
       <FAQSection2 data={faqData} />
       <BusinessHub data={businessData} formId={baIdForm} />
       {/* <ApplySection data={applyData} /> */}
+      <EligibilityTerms items={eligibilityTerms} />
       <CommonFooter2 />
+      <StickyMobileBar phoneNumber="+919311411717"/>
     </>
   );
 };

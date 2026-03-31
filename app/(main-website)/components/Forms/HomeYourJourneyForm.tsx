@@ -17,6 +17,9 @@ interface Pagination {
   pageCount: number;
   total: number;
 }
+function normalize(text:string) {
+  return text.toLowerCase().replace(/[\.\s]/g, "");
+}
 const HomeYourJourneyForm = () => {
   const [query, setQuery] = useState("");
   const [programmes, setProgrammes] = useState<ProgrammeItem[]>([]);
@@ -31,15 +34,18 @@ const HomeYourJourneyForm = () => {
 
       setLoading(true);
       try {
-        const data = await getAllProgramme(query);
-        setProgrammes(data);
+        const data = await getAllProgramme("");
+        const filtered = data.filter((item) =>
+          normalize(item.title).includes(normalize(query))
+        );
+        setProgrammes(filtered);
       } catch (error) {
         console.error(error);
       }
       setLoading(false);
     };
 
-    const delay = setTimeout(fetchData, 400); // debounce
+    const delay = setTimeout(fetchData, 400);
     return () => clearTimeout(delay);
   }, [query]);
 

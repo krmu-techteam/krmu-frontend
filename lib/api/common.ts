@@ -18,10 +18,8 @@ import { BlogImageIdResponse } from "../types/blogs/single-blog";
 
 export async function getAlumniData(): Promise<AlumniApiResponse["data"]> {
   const res = await fetch(`${FETCH_STRAPI_URL}/api/alumnis?populate=*`, {
-    next: {
-      revalidate: 3600,
-    },
-  });
+      cache:"no-cache"
+    },);
 
   if (!res.ok) throw new Error("Failed to fetch Alumni Data");
 
@@ -30,10 +28,8 @@ export async function getAlumniData(): Promise<AlumniApiResponse["data"]> {
 }
 export async function getFacilityData(): Promise<FacilityAPIResponse["data"]> {
   const res = await fetch(`${FETCH_STRAPI_URL}/api/facilities?populate=*`, {
-    next: {
-      revalidate: 3600,
-    },
-  });
+      cache:"no-cache"
+    },);
 
   if (!res.ok) throw new Error("Failed to fetch Alumni Data");
 
@@ -43,10 +39,8 @@ export async function getFacilityData(): Promise<FacilityAPIResponse["data"]> {
 
 export async function getTestimonialsData(): Promise<TestimonialItem[]> {
   const res = await fetch(`${FETCH_STRAPI_URL}/api/testimonials?populate=*`, {
-    next: {
-      revalidate: 50,
-    },
-  });
+      cache:"no-cache"
+    },);
   if (!res.ok) throw new Error("Failed to fetch Alumni Data");
 
   const json: TestimonialResponse = await res.json();
@@ -59,9 +53,7 @@ export async function getNewsAndEventsData(): Promise<
   const res = await fetch(
     `${FETCH_STRAPI_URL}/api/news-and-events?populate=*`,
     {
-      next: {
-        revalidate: 50,
-      },
+      cache:"no-cache"
     },
   );
   if (!res.ok) throw new Error("Failed to fetch Alumni Data");
@@ -76,9 +68,7 @@ export async function getTopbarData(): Promise<TOPBARResponse["data"]> {
   const res = await fetch(
     `${FETCH_STRAPI_URL}/api/topbar-menu?populate[TopbarMenuItems]=true&populate[topbarsociallinks][populate][socialicon]=true&populate[topbarsociallinks][fields][0]=url`,
     {
-      next: {
-        revalidate: 3600,
-      },
+      cache:"no-cache"
     },
   );
   if (!res.ok) throw new Error("Failed to fetch Topbar Data");
@@ -91,9 +81,7 @@ export async function getMainMenu() {
   const res = await fetch(
     `${FETCH_STRAPI_URL}/api/main-menu?populate[MainMenuItems][on][menu.dropdown-menu][fields][0]=title&populate[MainMenuItems][on][menu.dropdown-menu][populate][menu_sections][populate]=*&populate[MainMenuItems][on][menu.dropdown-menu][populate][menuimg][populate]=*&populate[MainMenuItems][on][menu.menu-button][populate]=*&populate[MainMenuItems][on][menu.menu-links][populate]=*`,
     {
-      next: {
-        revalidate: 3600,
-      },
+      cache:"no-cache"
     },
   );
   if (!res.ok) throw new Error("Failed to fetch Topbar Data");
@@ -132,9 +120,7 @@ export async function getHeaderMenu(): Promise<HeaderMenuResponse["data"]> {
   const res = await fetch(
     `${FETCH_STRAPI_URL}/api/header-menu-temp?populate[headermenus][on][temp-menus.academic-menu][fields][0]=title&populate[headermenus][on][temp-menus.academic-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][academicmenu][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][discovermenu][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][acadcounter][populate]=*&populate[headermenus][on][menu.menu-links][populate]=*&populate[headermenus][on][menu.menu-button][populate]=*&populate[headermenus][on][temp-menus.admissions][fields][0]=title&populate[headermenus][on][temp-menus.admissions][fields][1]=backgroundimagetext&populate[headermenus][on][temp-menus.admissions][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][enrollnow][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][scholarships][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][visitus][populate]=*&populate[headermenus][on][temp-menus.placement-menu][fields][0]=title&populate[headermenus][on][temp-menus.placement-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.placement-menu][populate][placementcounter][populate]=*&populate[headermenus][on][temp-menus.placement-menu][populate][placement][populate]=*&populate[headermenus][on][temp-menus.research-menu][fields][0]=title&populate[headermenus][on][temp-menus.research-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.research-menu][populate][researchcounter][populate]=*&populate[headermenus][on][temp-menus.research-menu][populate][research][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][fields][0]=title&populate[headermenus][on][temp-menus.life-at-krmu][fields][1]=backgroundimagetext&populate[headermenus][on][temp-menus.life-at-krmu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][populate][lifeatkrmu1][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][populate][lfeatkrmu2][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][fields][0]=title&populate[headermenus][on][temp-menus.about-us-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][aboutuscounter][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][overview][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][administration][populate]=*`,
     {
-      next: {
-        revalidate: 20,
-      },
+      cache:"no-cache"
     },
   );
   if (!res.ok) throw new Error("Failed to fetch Topbar Data");
@@ -212,9 +198,7 @@ export async function getHeaderMenu(): Promise<HeaderMenuResponse["data"]> {
 
 export async function getMetaInfo(): Promise<GlobalResponse["data"]> {
   const res = await fetch(`${FETCH_STRAPI_URL}/api/global?populate=*`, {
-    next: {
-      revalidate: 3600,
-    },
+    cache:"no-cache"
   });
   if (!res.ok) throw new Error("Failed to fetch Meta info Data");
 
@@ -228,9 +212,7 @@ export async function getAdvisoryBoard(): Promise<
   const res = await fetch(
     `${FETCH_STRAPI_URL}/api/advisory-board?populate[advisoryboard][fields][0]=title&populate[advisoryboard][fields][1]=advisoryboardinfo&populate[advisoryboard][populate][advisoryimage]=true`,
     {
-      next: {
-        revalidate: 3600,
-      },
+      cache:"no-cache"
     },
   );
   if (!res.ok) throw new Error("Failed to fetch Meta info Data");
@@ -245,9 +227,7 @@ export async function getSchoolStudentAchievements(
   const res = await fetch(
     `${FETCH_STRAPI_URL}/api/student-achievements?sort[0]=updatedAt:desc&filters[school_categories][name][$eq]=${cat}&populate[achivementimage]=true&pagination[pageSize]=3&pagination[page]=1&status=published&locale[0]=en`,
     {
-      next: {
-        revalidate: 3600,
-      },
+      cache:"no-cache"
     },
   );
   if (!res.ok) throw new Error("Failed to fetch Student Achievements Data");
@@ -305,7 +285,7 @@ export async function isCustomPage(slug: string = ""): Promise<CustomPage[]> {
   try {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/custom-pages?filters[slug][$eq]=${slug}&fields[0]=slug&fields[1]=enable_disable_custom_page&status=published&locale[0]=en`,
-      { next: { revalidate: 3600 } },
+      {cache:"no-cache"}
     );
     if (!res.ok) return [];
     const json: CustomPageResponse = await res.json();
@@ -323,9 +303,7 @@ export async function getSchoolProgrammeSEO(
   const res = await fetch(
     `${FETCH_STRAPI_URL}/api/school-programmes?filters[programmeslug][$eq]=${slug}&fields[0]=programmeslug&populate[SEO][fields][0]=metaTitle&populate[SEO][fields][1]=metaDescription&populate[SEO][fields][2]=metaKeyword&populate[SEO][fields][3]=canonical&populate[SEO][fields][4]=noIndex&populate[SEO][fields][5]=tags`,
     {
-      next: {
-        revalidate: 3600,
-      },
+     cache:"no-cache"
     },
   );
   if (!res.ok) throw new Error("Failed to fetch School Programme SEO");
@@ -395,13 +373,13 @@ export async function getWordImageById(imgId: number): Promise<string> {
   const res = await fetch(
     `${KRMUWordUrl}/wp-json/wp/v2/media/${imgId}?_fields=guid`,
     {
-      next: { revalidate: 3600 },
+      cache:"no-cache"
     },
   );
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch image by ID");
-  }
+  // if (!res.ok) {
+  //   throw new Error("Failed to fetch image by ID");
+  // }
 
   const json: BlogImageIdResponse = await res.json();
 
@@ -471,7 +449,71 @@ export function createBreadcrumbSchema(items: BreadcrumbItem[]) {
 
   return JSON.stringify(schema);
 }
+export interface CourseProvider {
+  name: string;
+  url: string;
+}
 
+export interface CourseOffer {
+  category: string;
+}
+
+export interface CourseSchedule {
+  duration?: string;
+  repeatFrequency?: string;
+  repeatCount?: number;
+  startDate?: string;
+}
+
+export interface CourseInstance {
+  courseMode: string;
+  location?: string;
+  courseWorkload?: string;
+  courseSchedule?: CourseSchedule;
+}
+
+export interface CourseSchemaData {
+  name: string;
+  description: string | undefined;
+  provider: CourseProvider;
+  offers: CourseOffer[];
+  hasCourseInstance: CourseInstance[];
+}
+
+export function createCourseSchema(data: CourseSchemaData) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: data.name,
+    description: data.description,
+    provider: {
+      "@type": "Organization",
+      name: data.provider.name,
+      url: data.provider.url,
+    },
+    offers: data.offers.map((offer) => ({
+      "@type": "Offer",
+      category: offer.category,
+    })),
+    hasCourseInstance: data.hasCourseInstance.map((instance) => ({
+      "@type": "CourseInstance",
+      courseMode: instance.courseMode,
+      location: instance.location,
+      courseWorkload: instance.courseWorkload,
+      courseSchedule: instance.courseSchedule
+        ? {
+            "@type": "Schedule",
+            duration: instance.courseSchedule.duration,
+            repeatFrequency: instance.courseSchedule.repeatFrequency,
+            repeatCount: instance.courseSchedule.repeatCount,
+            startDate: instance.courseSchedule.startDate,
+          }
+        : undefined,
+    })),
+  };
+
+  return JSON.stringify(schema);
+}
 
 export function createBreadcrumbProgSchema(items: BreadcrumbItem[]) {
   const schema = {
@@ -547,6 +589,103 @@ export function createPersonSchema(data: PersonSchemaProps) {
 
   return JSON.stringify(schema);
 }
+
+interface WebsiteSchemaProps{
+  name:string,
+  alternateName?:string;
+  url: string,
+  searchPath?: string,
+}
+
+export const createWebsiteSchema = ({name,alternateName, url, searchPath}: WebsiteSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Website",
+    name: name,
+    alternateName: alternateName,
+    url: url,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${url.replace(/\/$/, "")}${searchPath}{search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  }
+  return JSON.stringify(schema);
+}
+
+ interface ContactPoint {
+  telephone: string;
+  contactType: string;
+  contactOption?: string;
+  areaServed?: string;
+  availableLanguage?: string;
+}
+
+interface OrganizationSchemaProps {
+  name: string;
+  alternateName?: string;
+  url: string;
+  logo: string;
+  sameAs?: string[];
+  contactPoint?: ContactPoint;
+}
+
+export const createOrganizationSchema = ({
+  name,
+  alternateName,
+  url,
+  logo,
+  contactPoint,
+  sameAs = [],
+}: OrganizationSchemaProps) => {
+
+  const cleanUrl = (val: string) => val.replace(/\s+/g, "");
+
+  const schema = {
+    "@context": "https://schema.org/",
+    "@type": "Organization",
+    name,
+    alternateName,
+    url: cleanUrl(url),
+    logo: cleanUrl(logo),
+    contactPoint: contactPoint
+      ? {
+          "@type": "ContactPoint",
+          telephone: contactPoint.telephone,
+          contactType: contactPoint.contactType,
+          contactOption: contactPoint.contactOption || "TollFree",
+          areaServed: contactPoint.areaServed || "IN",
+          availableLanguage: contactPoint.availableLanguage || "en",
+        }
+      : undefined,
+    sameAs: sameAs.map(cleanUrl),
+  };
+
+  return JSON.stringify(schema, null, 2);
+};
+
+interface CollageOrUniversitySchemaProps{
+  name: string;
+  alternateName?: string;
+  url: string;
+  logo: string;
+  sameAs: string[];
+}
+
+export const createCollageOrUniversitySchema = ({name, alternateName, url, logo, sameAs=[]}: CollageOrUniversitySchemaProps) => {
+  const cleanUrl = (val: string) => val.replace(/\s+/g, "");
+  const schema = {
+    "@context": "https://schema.org/",
+    "@type": "CollageOrUniversity",
+    name: name,
+    alternateName: alternateName,
+    url: url,
+    logo: logo,
+    sameAs: sameAs.map(cleanUrl)
+  }
+  return JSON.stringify(schema);
+}
+
 
 type TocFaq = {
   id: number;

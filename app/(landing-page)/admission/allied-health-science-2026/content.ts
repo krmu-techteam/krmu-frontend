@@ -189,8 +189,7 @@ export const specialisationData: SpecialisationSection = {
           desc: `Candidates must have passed 10+2 or an equivalent recognised examination with at least 50% aggregate in PCM, PCB, or PCMB.`,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees: "", //   title: "Annual Fee",
         //   desc: `Rs 2,40,000`,
         // },
       ],
@@ -211,8 +210,7 @@ export const specialisationData: SpecialisationSection = {
           desc: `Candidates must have passed 10+2 or an equivalent recognised examination with at least 50% aggregate in PCM, PCB, or PCMB.`,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees: "", //   title: "Annual Fee",
         //   desc: `Rs 2,40,000`,
         // },
       ],
@@ -233,8 +231,7 @@ export const specialisationData: SpecialisationSection = {
           desc: `Candidates must have passed 10+2 or an equivalent recognised examination with at least 50% aggregate in PCM, PCB, or PCMB.`,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees: "", //   title: "Annual Fee",
         //   desc: `Rs 2,40,000`,
         // },
       ],
@@ -514,7 +511,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Gain vital emergency care, lifesaving, and trauma management skills for fast-paced healthcare careers.",
       duration: "3 + 1 Years (Including 1 Year Internship)",
-      fee: "₹2,30,000",
+      fees: "260000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -526,7 +523,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Develop essential respiratory care, diagnostics, and patient management skills for today’s advanced healthcare industry.",
       duration: "3 + 1 Years (Including 1 Year Internship)",
-      fee: "₹2,30,000",
+      fees: "260000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -538,7 +535,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Gain expertise in cardiovascular diagnostics, interventional procedures, and patient care for advanced healthcare careers.",
       duration: "3 + 1 Years (Including 1 Year Internship)",
-      fee: "₹2,30,000",
+      fees: "260000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -550,5 +547,8 @@ export const programmeContent = {
 export const eligibilityTerms = [
   {
     description: "*Eligibility: Candidates must have passed the Higher Secondary (10+2), or equivalent examination recognised by any Indian University or a duly constituted Board with minimum 50% aggregate marks in PCM (Physics, Chemistry and Mathematics) / PCB (Physics, Chemistry and Biology) / PCMB (Physics, Chemistry, Mathematics and Biology."
+  },
+  {
+    description: "** Subject to Approval"
   },
 ];

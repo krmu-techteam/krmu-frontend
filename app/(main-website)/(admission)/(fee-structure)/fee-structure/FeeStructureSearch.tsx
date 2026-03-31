@@ -4,6 +4,9 @@ import { Search } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getAllProgramme, ProgrammeItem } from "./FeeStructureProgrammeSearch";
+function normalize(text: string) {
+  return text.toLowerCase().replace(/[\.\s]/g, "");
+}
 
 const FeeStructureSearch = () => {
   const [query, setQuery] = useState("");
@@ -19,8 +22,11 @@ const FeeStructureSearch = () => {
 
       setLoading(true);
       try {
-        const data = await getAllProgramme(query);
-        setProgrammes(data);
+        const data = await getAllProgramme("");
+        const filtered = data.filter((item) =>
+          normalize(item.title).includes(normalize(query))
+        );
+        setProgrammes(filtered);
       } catch (err) {
         console.error(err);
       } 

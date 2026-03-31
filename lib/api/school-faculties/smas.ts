@@ -293,11 +293,11 @@ export const smasFaculties: SchoolFacultiesType[] = [
     id: 8942,
     slug: "mr-mohit-agarwal",
     title: {
-      rendered: "Mr. Mohit Agarwal",
+      rendered: "Dr. Mohit Agrawal",
     },
     featured_media: 8943,
     acf: {
-      "staff-qualification": "Ph.D. in Pharmaceutical Science (Pursuing) ",
+      "staff-qualification": "M.Pharm, Ph.D. (Pharmaceutical sciences)",
       staff_designation: " Assistant Professor",
       schools: [1098],
     },

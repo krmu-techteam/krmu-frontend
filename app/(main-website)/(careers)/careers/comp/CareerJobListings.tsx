@@ -12,7 +12,7 @@ const CareerJobListings = () => {
 
   const abortRef = useRef<AbortController | null>(null);
 
-  // Optimized Fetch Function
+  // Optimized Fe tch Function
   const fetchJobs = async (text: string) => {
     // Cancel previous request
     if (abortRef.current) {

@@ -7,14 +7,23 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import NpfPopup from "../../components/NpfPopup";
+import NoPaperForm from "@/lib/constants/NoPaperForm";
 
 type Props = {
   elgibilities: EligibilityItem[];
   mobherobtn: ButtonType;
   formId?: string; // dynamic form id
+  allowedFormSlugs: string[];
+  slug: string;
 };
 
-const Eligibility = ({ elgibilities, mobherobtn, formId }: Props) => {
+const Eligibility = ({
+  elgibilities,
+  mobherobtn,
+  formId,
+  allowedFormSlugs,
+  slug,
+}: Props) => {
   const [expanded, setExpanded] = useState(false);
   // const btnRef = useRef<HTMLButtonElement>(null);
 
@@ -23,6 +32,8 @@ const Eligibility = ({ elgibilities, mobherobtn, formId }: Props) => {
   const longTitle = elgibilities[2]?.title || "";
   const isLong = longTitle.length > maxChars;
   const displayTitle = expanded ? longTitle : longTitle.slice(0, maxChars);
+
+  const isFormAvailable = allowedFormSlugs.includes(slug);
 
   // useEffect(() => {
   //   if (!formId || !btnRef.current) return;
@@ -48,7 +59,7 @@ const Eligibility = ({ elgibilities, mobherobtn, formId }: Props) => {
 
   return (
     <>
-      <div className="max-w-[1664px] w-full mx-auto sm:flex pb-[50px] px-2.5 md:px-4 mt-12 md:mt-0">
+      <div className="max-w-[1664px] w-full mx-auto sm:flex sm:pb-12 px-2.5 md:px-4 sm:mt-12 md:mt-0">
         <div className="w-full sm:w-1/3 lg:w-1/4 sm:px-3 border-r sm:border-r border-[#dee2e6]">
           <h2 className="text-2xl leading-[1.2] text-[#0060aa] font-semibold mb-2">
             {elgibilities[0]?.title}
@@ -56,7 +67,10 @@ const Eligibility = ({ elgibilities, mobherobtn, formId }: Props) => {
           <p className="mb-2.5">{elgibilities[0]?.subtitle}</p>
         </div>
 
-        <div className="w-full sm:w-1/3 lg:w-1/4 sm:px-3 border-r sm:border-r border-[#dee2e6]">
+        <div
+          className="w-full sm:w-1/3 lg:w-1/4 sm:px-3 border-r sm:border-r border-[#dee2e6]"
+          id="mob-npf-form"
+        >
           <h2 className="text-2xl leading-[1.2] text-[#0060aa] font-semibold mb-2">
             {elgibilities[1]?.title}
           </h2>
@@ -77,9 +91,48 @@ const Eligibility = ({ elgibilities, mobherobtn, formId }: Props) => {
               {expanded ? "Read Less" : "Read More"}
             </button>
           )}
-
           <p className="mb-2.5">{elgibilities[2]?.subtitle}</p>
         </div>
+
+        {/* {isFormAvailable && (
+          <div className="border mt-5 sm:hidden mob_prog_form">
+            <div className="flex justify-center items-center bg-[#0060aa] py-2 px-3 text-[22px] font-bold">
+                <h3 className="text-white">ADMISSIONS OPEN 2026-27</h3>
+              </div>
+            <NoPaperForm formId={formId} height="500px" />
+          </div>
+        )} */}
+        {isFormAvailable && (
+          <div className="border border-gray-300 mt-5 sm:hidden mob_prog_form overflow-hidden">
+            <div className="flex justify-center items-center bg-[#0060aa] py-2 px-3 text-[22px] font-bold">
+              <h3 className="text-white">ADMISSIONS OPEN 2026-27</h3>
+            </div>
+            <div className="p-2">
+              <NoPaperForm formId={formId} height="500px" />
+            </div>
+
+          </div>
+        )}
+        {!isFormAvailable && (
+          <div className="">
+            {formId ? (
+              <NpfPopup
+                formId={formId}
+                btnClass={`bg-[#0a41a1] py-2.5 px-[30px] cursor-pointer flex items-center justify-around sm:hidden text-white gap-2 rounded-[10px] w-fit mt-5 ${mobherobtn?.buttonclass}`}
+                btnText={`${mobherobtn?.buttontext || ""}`}
+                showIcon={true}
+              />
+            ) : (
+              <Link
+                href={"#"}
+                className={`bg-[#0a41a1] py-2.5 px-[30px] cursor-pointer flex items-center justify-around sm:hidden text-white rounded-[10px] w-fit mt-5 ${mobherobtn?.buttonclass}`}
+              >
+                {mobherobtn?.buttontext} <ArrowRight />
+              </Link>
+            )}
+          </div>
+        )}
+
         {/* 
         {(mobherobtn?.buttonclass || mobherobtn?.buttonlink) && (
           <Link
@@ -118,7 +171,7 @@ const Eligibility = ({ elgibilities, mobherobtn, formId }: Props) => {
           </>
         )} */}
 
-        {formId ? (
+        {/* {formId ? (
           <NpfPopup
             formId={formId}
             btnClass={`bg-[#0a41a1] py-2.5 px-[30px] cursor-pointer flex items-center justify-around sm:hidden text-white rounded-[10px] w-fit mt-5 ${mobherobtn?.buttonclass}`}
@@ -131,7 +184,7 @@ const Eligibility = ({ elgibilities, mobherobtn, formId }: Props) => {
           >
             {mobherobtn?.buttontext} <ArrowRight />
           </Link>
-        )}
+        )} */}
 
         {/* {formId ? (
           <button

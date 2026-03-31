@@ -204,9 +204,7 @@ export const specialisationData: SpecialisationSection = {
           desc: `Must have passed 10+2 or equivalent examination from any recognised board/university in any stream with a minimum of 50% aggregate marks.`,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
-        //   desc: `Rs 2,10,000`,
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees: "", //   title: "Annual fees: "",  desc: `Rs 2,10,000`,
         // },
       ],
     },
@@ -227,9 +225,7 @@ export const specialisationData: SpecialisationSection = {
           desc: `Must have passed 10+2 or equivalent examination from any recognised board/university in any stream with a minimum of 50% aggregate marks.`,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
-        //   desc: `Rs 2,10,000`,
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees: "", //   title: "Annual fees: "",  desc: `Rs 2,10,000`,
         // },
       ],
     },
@@ -250,9 +246,7 @@ export const specialisationData: SpecialisationSection = {
           desc: `Must have passed 10+2 or equivalent examination from any recognised board/university in any stream with a minimum of 50% aggregate marks.`,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
-        //   desc: `Rs 2,40,000`,
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees: "", //   title: "Annual fees: "",  desc: `Rs 2,40,000`,
         // },
       ],
     },
@@ -273,9 +267,7 @@ export const specialisationData: SpecialisationSection = {
           desc: `Must have passed 10+2 or equivalent examination from any recognised board/university in any stream with a minimum of 50% aggregate marks.`,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
-        //   desc: `Rs 2,40,000`,
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees: "", //   title: "Annual fees: "",  desc: `Rs 2,40,000`,
         // },
       ],
     },
@@ -305,7 +297,7 @@ export const testimonialsData: TestimonialsSection = {
       image: "/landingpage/bdes-2026/testimonials/1.jpg",
       videoUrl: "#",
       quote: `My journey at K.R. Mangalam University has been truly transformative. The faculty’s continuous  guidance played a key role in my academic and personal growth. Their mentorship extended  beyond the classroom, encouraging confidence and creativity. The opportunity for early placement gave me valuable industry exposure. The Training and Placement Cell provided 
-consistent and personalised support. Today, I feel confident, prepared, and ready to take the 
+consistent and personalised support. Today, I fees: "",repared, and ready to take the 
 next step in my professional journey.`,
       name: "Jigyasa Batra",
       programme: "B.Des. (Hons.) Interior Design",
@@ -586,7 +578,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Four-year undergraduate programme combining fashion fundamentals, trends, design training, and business skills for dynamic industry careers.",
       duration: "4 Years",
-      fee: "₹2,30,000",
+      fees: "230000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
@@ -597,7 +589,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Four-year programme combining creativity, technical skills, and industry-focused learning to prepare students for interior design careers.",
       duration: "4 Years",
-      fee: "₹2,30,000",
+      fees: "230000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
@@ -608,7 +600,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "ImaginXP-supported programme teaching user research, interface design, prototyping, and usability for impactful digital experiences.",
       duration: "4 Years",
-      fee: "₹2,30,000",
+      fees: "260000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
@@ -619,7 +611,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "ImaginXP-supported course blending storytelling, character design, and projects, preparing students for global gaming and animation careers.",
       duration: "4 Years",
-      fee: "₹2,30,000",
+      fees: "260000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
@@ -630,10 +622,20 @@ export const programmeContent = {
       subtitle: "",
       desc: "Hone skills in spatial planning, aesthetics, sustainable design, 3D visualisation, and innovative interior solutions.",
       duration: "2 Years",
-      fee: "₹2,00,000",
+      fees: "200000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "A qualifying degree in Design/ Fine Arts or in any stream with 50% aggregate marks.",
     },
   ],
 };
+
+export const eligibilityTerms = [
+  {
+    description: "** Subject to Approval"
+  },
+];
+
+
+
+

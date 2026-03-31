@@ -192,9 +192,9 @@ export const specialisationData: SpecialisationSection = {
           desc: `Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/ Biotechnology/ Technical Vocational subject/ Agriculture/ Engineering Graphics/ Business Studies/ Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks.`,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
-        //   desc: `Rs 2,30,000`,
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
+        //   title: "Annual fees",
+     //   desc: `Rs 2,3`,
         // },
       ],
     },
@@ -216,9 +216,9 @@ export const specialisationData: SpecialisationSection = {
           desc: `Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/ Biotechnology/ Technical Vocational subject/ Agriculture/ Engineering Graphics/ Business Studies/ Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks.`,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
-        //   desc: `2,50,000`,
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
+        //   title: "Annual fees",
+     //   desc: `2,5`,
         // },
       ],
     },
@@ -240,9 +240,9 @@ export const specialisationData: SpecialisationSection = {
           desc: `Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/ Biotechnology/ Technical Vocational subject/ Agriculture/ Engineering Graphics/ Business Studies/ Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks.`,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
-        //   desc: `Rs 2,65,000`,
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
+        //   title: "Annual fees",
+     //   desc: `Rs 2,65,000`,
         // },
       ],
     },
@@ -264,9 +264,9 @@ export const specialisationData: SpecialisationSection = {
           desc: `Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/ Biotechnology/ Technical Vocational subject/ Agriculture/ Engineering Graphics/ Business Studies/ Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks. `,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
-        //   desc: `Rs 2,50,000`,
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
+        //   title: "Annual fees",
+     //   desc: `Rs 2,5`,
         // },
       ],
     },
@@ -288,9 +288,9 @@ export const specialisationData: SpecialisationSection = {
           desc: `Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/ Biotechnology/ Technical Vocational subject/ Agriculture/ Engineering Graphics/ Business Studies/ Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks. `,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
-        //   desc: `Rs 2,50,000`,
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
+        //   title: "Annual fees",
+     //   desc: `Rs 2,5`,
         // },
       ],
     },
@@ -312,9 +312,9 @@ export const specialisationData: SpecialisationSection = {
           desc: `Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/ Biotechnology/ Technical Vocational subject/ Agriculture/ Engineering Graphics/ Business Studies/ Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks.`,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
-        //   desc: `Rs 2,50,000`,
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
+        //   title: "Annual fees",
+     //   desc: `Rs 2,5`,
         // },
       ],
     },
@@ -336,9 +336,9 @@ export const specialisationData: SpecialisationSection = {
           desc: `Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/ Biotechnology/ Technical Vocational subject/ Agriculture/ Engineering Graphics/ Business Studies/ Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks. `,
         },
         // {
-        //   iconUrl: "/wp-content/landingpage/common/annual-fee.svg",
-        //   title: "Annual Fee",
-        //   desc: `Rs 2,50,000`,
+        //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
+        //   title: "Annual fees",
+     //   desc: `Rs 2,5`,
         // },
       ],
     },
@@ -590,7 +590,7 @@ export const businessHubData: BusinessHubSection = {
     { text: "UGC Approved University" },
     { text: "NAAC A+ Accredited" },
     { text: "175+ PhDs Awarded" },
-    { text: "₹60,000 Annual Fellowship" },
+    { text: "₹6 Annual Fellowship" },
   ],
   mapImage: {
     src: "/landingpage/common/map.webp",
@@ -637,7 +637,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Strong foundation in programming, algorithms, data structures, and system design via an industry-relevant curriculum.",
       duration: "4 Years",
-      fee: "₹2,30,000",
+      fees: "250000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -649,7 +649,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Industry-aligned course blending strong engineering foundations with practical training in AI, robotics, cloud, data, and automation.",
       duration: "4 Years",
-      fee: "₹2,30,000",
+      fees: "270000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -661,7 +661,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Curriculum blending strong computer science fundamentals with cutting-edge AI and ML, preparing graduates for high-demand roles.",
       duration: "4 Years",
-      fee: "₹2,30,000",
+      fees: "290000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -673,7 +673,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Practical training via an industry-aligned curriculum designed by experts to protect organisations in an increasingly connected world.",
       duration: "4 Years",
-      fee: "₹2,30,000",
+      fees: "270000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -685,7 +685,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Hands-on experience in big data technologies, machine learning, data visualisation, and cloud platforms through real-world projects and labs.",
       duration: "4 Years",
-      fee: "₹2,30,000",
+      fees: "270000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -697,7 +697,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Master building scalable, user-centric applications by integrating modern front-end design with powerful back-end and cloud technologies.",
       duration: "4 Years",
-      fee: "₹2,30,000",
+      fees: "270000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -709,7 +709,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Meticulously designed programme delivering technological design excellence, teaching computing approaches and practical skills to UI/UX students.",
       duration: "4 Years",
-      fee: "₹2,30,000",
+      fees: "270000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -721,7 +721,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "This B.Tech. course seeks to train students in cloud architecture, security, AI, and scalable solutions.",
       duration: "4 Years",
-      fee: "₹2,70,000",
+      fees: "270000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -733,7 +733,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "The programme intends to build skills in chip design, VLSI systems, fabrication processes, nanoelectronics, and hardware innovation.",
       duration: "4 Years",
-      fee: "₹2,70,000",
+      fees: "270000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
@@ -749,4 +749,8 @@ export const eligibilityTerms = [
   {
     description: "# Lateral B.Tech. Courses are also available except for the Robotics & AI Course."
   },
+  {
+    description: "** Subject to Approval"
+  },
+ 
 ];

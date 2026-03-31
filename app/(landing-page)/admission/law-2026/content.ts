@@ -558,7 +558,7 @@ export const programmeContent = {
       desc: "Provides comprehensive legal education, strong understanding of legal systems, and foundation for successful legal practice.",
       duration: "5 Years",
 
-      fee: "₹2,30,000",
+      fees: "200000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
@@ -569,7 +569,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Five-year integrated business and law programme preparing students for corporate legal challenges through practical experience.",
       duration: "5 Years",
-      fee: "₹2,30,000",
+      fees: "200000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
@@ -580,7 +580,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Develop strong procedural law knowledge, specialised expertise, practical skills, and an interdisciplinary foundation for diverse legal careers.",
       duration: "3 Years",
-      fee: "₹2,30,000",
+      fees: "175000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed Bachelor's with 50% aggregate marks."

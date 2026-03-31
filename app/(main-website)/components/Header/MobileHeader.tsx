@@ -55,7 +55,6 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose }: Props) => {
     (component) => component.__component === "temp-menus.about-us-menu",
   );
 
-  console.log('aboutusMenu', aboutusMenu);
 
   return (
     <>
@@ -169,6 +168,7 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose }: Props) => {
                             href={menu?.url || "#"}
                             className="text-black text-[13px] font-normal"
                             onClick={onClose}
+                            target="_blank"
                           >
                             {menu?.title}
                           </Link>

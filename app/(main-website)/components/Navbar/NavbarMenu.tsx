@@ -176,7 +176,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                             key={menu?.id}
                             className="text-[13px] capitalize pb-[7px] hover:text-blue-700"
                           >
-                            <Link href={menu?.url || "#"}>{menu?.title}</Link>
+                            <Link href={menu?.url || "#"} target="_blank">{menu?.title}</Link>
                           </li>
                         );
                       })}

@@ -17,7 +17,7 @@ export type ProgrammeCardItem = {
   subtitle: string;
   desc: string;
   duration: string;
-  fee: string;
+  fees: string;
   eligibility?: string; // 👈 optional
   ctaText: string;
   ctaLink: string;

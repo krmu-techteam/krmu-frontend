@@ -460,7 +460,7 @@ export const programmeContent = {
       desc: "The course combines studio learning, mentorship, painting techniques, & applied art for creative, practical design skills.",
       duration: "4 Years",
       eligibility: "Passed 12th with 50% aggregate marks.",
-      fee: "₹2,30,000",
+      fees: "132000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },

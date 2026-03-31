@@ -27,7 +27,7 @@ const HostelWarden = () => {
               <tbody>
                 <tr>
                   <td>Hostel Fee (to be collected upfront)</td>
-                  <td>Rs. 1,60,000/-</td>
+                  <td>Rs. 1,72,000/-</td>
                 </tr>
                 <tr>
                   <td>Hostel Security Deposit (Refundable)</td>

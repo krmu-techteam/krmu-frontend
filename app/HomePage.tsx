@@ -10,6 +10,10 @@ import ShapingFuture from "./(main-website)/Home/ShapingFuture";
 import VisitExplore from "./(main-website)/Home/VisitExplore";
 import WhyKRMU from "./(main-website)/Home/WhyKRMU";
 import YourJourney2 from "./(main-website)/Home/homeComp/YourJourney2";
+// import YourJourney from "./(main-website)/Home/YourJourney";
+// import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
+import { createCollageOrUniversitySchema, createOrganizationSchema, createWebsiteSchema } from "@/lib/api/common";
+import Script from "next/script";
 
 export default async function HomePage() {
   const homepageContent = await getHomePageData();
@@ -69,8 +73,60 @@ export default async function HomePage() {
       component.__component === "homepage-components.home-events-and-news",
   );
 
+  const websiteSchema = createWebsiteSchema({
+    name: "K.R. Mangalam University",
+     alternateName: "KRMU",
+    url: "https://www.krmangalam.edu.in",
+    searchPath: "https://www.krmangalam.edu.in/search?q="
+  });
+
+  const organizationSchema = createOrganizationSchema({
+    name: "K.R. Mangalam University",
+    alternateName: "KRMU",
+    url: "https://www.krmangalam.edu.in",
+    logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
+    contactPoint: {
+      telephone: "+91-8192888444",
+      contactType: "customer service",
+      areaServed: "IN", 
+      availableLanguage: "en"
+    },
+    sameAs: [
+      "https://www.facebook.com/krmuniv",
+      "https://www.instagram.com/krmuniv",
+      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+      "https://in.linkedin.com/school/krmuniv"
+    ]
+  });
+
+  const collageOrUniversitySchema = createCollageOrUniversitySchema({
+    name: "K.R. Mangalam University",
+    alternateName: "KRMU",
+    url: "https://www.krmangalam.edu.in", 
+    logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
+    sameAs: [
+    "https://www.facebook.com/krmuniv",
+    "https://www.instagram.com/krmuniv",
+    "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+    "https://in.linkedin.com/school/krmuniv"
+  ]
+  })
+
   return (
     <>
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: websiteSchema }}
+      />
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: collageOrUniversitySchema }}
+      />
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: organizationSchema }}
+      />
+
       {hero && (
         <HeroSection
           title={hero?.title}

@@ -454,7 +454,7 @@ export const programmeContent = {
       desc: "Four-year undergraduate programme delivering agrarian knowledge and practical skills per ICAR, preparing students for modern agricultural challenges.",
       duration: "4 Years",
       eligibility: "Passed 12th with 50% aggregate marks.*",
-      fee: "₹2,30,000",
+      fees: "154000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },

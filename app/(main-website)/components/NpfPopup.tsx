@@ -31,7 +31,7 @@ const NpfPopup = ({
           formTitle:  "Apply Now",
           titleColor: "#FF0033",
           backgroundColor: "#ddd",
-          iframeHeight: "500px",
+          iframeHeight: "520px",
           buttonTextColor: "#FFF",
           target: btnRef.current,
         });
