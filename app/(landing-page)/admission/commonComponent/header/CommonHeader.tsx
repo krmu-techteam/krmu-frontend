@@ -10,6 +10,8 @@ export const CommonHeader = () => {
         boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
       }}
     >
+
+      
       <div className="px-3 flex flex-col xl:flex-row justify-between items-center gap-3">
         <div className="w-full xl:w-3/6 2xl:w-1/3 flex  justify-center xl:justify-start gap-5">
           <Image
@@ -31,7 +33,8 @@ export const CommonHeader = () => {
             Apply Now
           </button> */}
           {/* <AnimatedCounter targetDate="February 28, 2026 6:30 PM" /> */}
-          <KRMUTimer targetDate="2026-03-31T18:00:00" />
+          {/* <KRMUTimer targetDate="2026-04-31T18:00:00" /> */}
+          <KRMUTimer targetDate="" />
           <ScrollButton
             targetId="apply-section"
             highlightClass="flash-border"
