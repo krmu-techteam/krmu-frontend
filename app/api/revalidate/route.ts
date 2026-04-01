@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
 
   try {
     // Revalidate all fetches tagged with "blogs"
-    revalidateTag("blogs");
+    revalidateTag("blogs", "page");
     // Also revalidate the blog pages themselves
     revalidatePath("/blog", "layout");
 
