@@ -10,6 +10,8 @@ export const CommonHeader = () => {
         boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
       }}
     >
+
+      
       <div className="px-3 flex flex-col xl:flex-row justify-between items-center gap-3">
         <div className="w-full xl:w-3/6 2xl:w-1/3 flex  justify-center xl:justify-start gap-5">
           <Image
