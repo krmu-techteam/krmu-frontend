@@ -9,9 +9,9 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    // Revalidate all fetches tagged with "blogs"
+    // Purge all cached fetches tagged with "blogs"
     revalidateTag("blogs", { expire: 0 });
-    // Also revalidate the blog pages themselves
+    // Revalidate blog layout and all pages under /blog
     revalidatePath("/blog", "layout");
 
     return NextResponse.json({ revalidated: true, now: Date.now() });
