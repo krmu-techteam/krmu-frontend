@@ -10,12 +10,13 @@ export async function POST(request: NextRequest) {
 
   try {
     // Revalidate all fetches tagged with "blogs"
-    revalidateTag("blogs", { expire: 0 });
+    revalidateTag("blogs");
     // Also revalidate the blog pages themselves
     revalidatePath("/blog", "layout");
 
     return NextResponse.json({ revalidated: true, now: Date.now() });
-  } catch {
+  } catch (error) {
+    console.error("Revalidation error:", error);
     return NextResponse.json(
       { message: "Error revalidating" },
       { status: 500 },
