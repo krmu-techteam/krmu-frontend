@@ -8,12 +8,11 @@ type Props = {
 
 const SchoolAdmissionOpen = ({ title, admBtn }: Props) => {
   return (
-    <section className="px-4 sm:px-6 lg:px-8">
+    <section className="px-4 sm:px-6 lg:px-8 bg-[#051630]">
       <div className="max-w-[1664px] mx-auto">
-        <div className="bg-white py-5 flex flex-col md:flex-row items-center justify-between gap-6">
-          
+        <div className="py-5 flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Heading */}
-          <h3 className="text-center md:text-left text-xl sm:text-2xl lg:text-4xl xl:text-5xl font-semibold leading-tight text-[#034272]">
+          <h3 className="text-center md:text-left text-xl sm:text-2xl lg:text-5xl font-semibold leading-tight text-white">
             {title}
           </h3>
 
@@ -21,14 +20,13 @@ const SchoolAdmissionOpen = ({ title, admBtn }: Props) => {
           {(admBtn?.buttonlink || admBtn?.buttonclass) && (
             <Link
               href={admBtn?.buttonlink}
-              className={`inline-flex items-center justify-center bg-red-500 hover:bg-red-600 transition-all duration-300 px-8 py-3 text-base sm:text-lg font-semibold text-white rounded-lg whitespace-nowrap ${admBtn.buttonclass}`}
+              className={`inline-flex items-center justify-center bg-white transition-all duration-300 px-8 py-3 text-base sm:text-lg font-semibold text-black rounded-lg whitespace-nowrap ${admBtn.buttonclass}`}
               target="_blank"
               rel="noopener noreferrer"
             >
               {admBtn?.buttontext}
             </Link>
           )}
-
         </div>
       </div>
     </section>

@@ -26,11 +26,11 @@ const SchoolDeansVision = ({
 }: Props) => {
   return (
     <section
-      className="py-[50px] px-4"
-      style={{
-        background:
-          "linear-gradient(95deg,#051630 2.69%,#0060aa 65.94%,#e31e24 97.54%)",
-      }}
+      className="py-[50px] px-4 bg-[#051630]"
+      // style={{
+      //   background:
+      //     "linear-gradient(95deg,#051630 2.69%,#0060aa 65.94%,#e31e24 97.54%)",
+      // }}
     >
       <div className="max-w-[1664px] mx-auto w-full">
         <div className="text-center text-white text-3xl sm:text-5xl mb-5  lg:text-[64px]">

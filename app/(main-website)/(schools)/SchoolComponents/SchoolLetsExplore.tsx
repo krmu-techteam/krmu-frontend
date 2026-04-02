@@ -13,10 +13,10 @@ type Props = {
 const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
   return (
     <section
-      className="py-8"
-      style={{
-        backgroundImage: "linear-gradient(180deg,#051630 0%,#004e8a 100%)",
-      }}
+      className="py-8 bg-[#051630]"
+      // style={{
+      //   backgroundImage: "linear-gradient(180deg,#051630 0%,#004e8a 100%)",
+      // }}
     >
       <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-center">
         <div className="w-full lg:w-2/6 text-white px-4">

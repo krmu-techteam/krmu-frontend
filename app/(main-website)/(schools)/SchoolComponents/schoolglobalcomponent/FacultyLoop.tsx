@@ -113,7 +113,7 @@ const FacultyLoop = ({ WordSchoolslug }: Props) => {
           <Button
             onClick={handleLoadMore}
             disabled={loading}
-            className="py-3.5 px-8 bg-[#cb000d] text-white font-bold"
+            className="py-3.5 px-8 bg-[#051630] text-white font-bold"
           >
             {loading ? "Loading..." : "Load More"}
           </Button>

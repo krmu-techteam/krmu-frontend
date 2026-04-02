@@ -66,7 +66,7 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className={`py-3.5 px-8 bg-[#cb000d] font-bold rounded-sm text-sm md:text-base ${
+                        className={`py-3.5 px-8 bg-white text-black font-bold rounded-sm text-sm md:text-base ${
                           btn.buttonclass || ""
                         }`}
                       >
@@ -76,7 +76,7 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className={`py-3.5 px-8 bg-[#cb000d] font-bold rounded-sm text-sm md:text-base ${
+                        className={`py-3.5 px-8 bg-white text-black font-bold rounded-sm text-sm md:text-base ${
                           btn.buttonclass || ""
                         }`}
                         target="_blank" rel="noopener noreferrer"
@@ -103,7 +103,7 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className="py-3.5 px-8 bg-[#cb000d] font-bold rounded-sm text-sm md:text-base"
+                        className="py-3.5 px-8 bg-white text-black font-bold rounded-sm text-sm md:text-base"
                       >
                         {btn.buttontext}
                       </Link>
@@ -111,7 +111,7 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className={`py-3.5 px-8 bg-[#cb000d] font-bold rounded-sm text-sm md:text-base ${
+                        className={`py-3.5 px-8 bg-white text-black font-bold rounded-sm text-sm md:text-base ${
                           btn.buttonclass || ""
                         }`}
                         target="_blank" rel="noopener noreferrer"

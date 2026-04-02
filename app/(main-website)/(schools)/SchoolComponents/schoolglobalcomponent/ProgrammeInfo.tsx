@@ -14,7 +14,7 @@ type Props = {
   catName: string;
 };
 
-const ProgrammeInfo = ({ catName }: Props) => {
+const   ProgrammeInfo = ({ catName }: Props) => {
   const [programs, setPrograms] = useState<Record<string, ProgrammeCardData[]>>(
     {},
   );
@@ -150,9 +150,10 @@ const ProgrammeInfo = ({ catName }: Props) => {
   const criteria = currentProgram?.criteria;
 
   return (
-    <div className="flex mb-10">
+    <div className="flex">
       {/* LEFT SIDE */}
-      <div className="w-full xl:w-1/2 bg-[url(/schools/prog-bg.webp)] bg-center bg-cover bg-no-repeat p-2.5 sm:p-5 z-10 rounded-3xl">
+      {/* <div className="w-full xl:w-1/2 bg-[url(/schools/prog-bg.webp)] bg-center bg-cover bg-no-repeat p-2.5 sm:p-5 z-10 rounded-3xl"> */}
+      <div className="w-full xl:w-1/2 bg-[#051630] bg-center bg-cover bg-no-repeat p-2.5 sm:p-5 z-10 rounded-3xl">
         <Tabs
           defaultValue="ug"
           value={degreeTabs.find((d) => d.value === activeDegree)?.tabValue}
@@ -286,7 +287,7 @@ const ProgrammeInfo = ({ catName }: Props) => {
             <div className="flex gap-4">
               <Link
                 href={criteria.eligibility_utm_links || "#"}
-                className="text-[#E31E24] text-center font-bold text-base py-2.5 px-[30px] rounded-md"
+                className="text-[#051630] text-center font-bold text-base py-2.5 px-[30px] rounded-md"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -298,7 +299,7 @@ const ProgrammeInfo = ({ catName }: Props) => {
               </Link>
               <Link
                 href={`/programs/${currentProgram?.programmeslug || "#"}`}
-                className="text-white bg-[#E31E24] text-center font-bold text-base py-2.5 px-[30px] rounded-md"
+                className="text-white bg-[#051630] text-center font-bold text-base py-2.5 px-[30px] rounded-md"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

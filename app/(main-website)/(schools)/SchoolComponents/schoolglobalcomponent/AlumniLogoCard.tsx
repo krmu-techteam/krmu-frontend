@@ -8,7 +8,8 @@ type Props = {
 
 const AlumniLogoCard = ({ logoUrl, altText }: Props) => {
   return (
-    <div className="p-2 md:p-4 flex items-center justify-center rounded-[30px] bg-[url(/bg-1.webp)] bg-cover bg-center w-full">
+    // <div className="p-2 md:p-4 flex items-center justify-center rounded-[30px] bg-[url(/bg-1.webp)] bg-cover bg-center w-full">
+    <div className="p-2 md:p-4 flex items-center justify-center rounded-[30px] bg-[#051630] bg-cover bg-center w-full">
       <Image
         src={`${STRAPI_URL}${logoUrl}`}
         width={150}
