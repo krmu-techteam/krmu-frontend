@@ -46,21 +46,21 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/04/Dr.-Sarina-SEMCE.jpg",
   },
-  {
-    id: 10769,
-    slug: "mr-karan-singh-2",
-    title: {
-      rendered: "Mr. Karan Singh",
-    },
-    featured_media: 10764,
-    acf: {
-      "staff-qualification": "Ph.D (Pursuing)",
-      staff_designation: "Assistant  Professor",
-      schools: [1009],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/04/Dr.-Karan-Singh-SEMCE.png",
-  },
+  // {
+  //   id: 10769,
+  //   slug: "mr-karan-singh-2",
+  //   title: {
+  //     rendered: "Mr. Karan Singh",
+  //   },
+  //   featured_media: 10764,
+  //   acf: {
+  //     "staff-qualification": "Ph.D (Pursuing)",
+  //     staff_designation: "Assistant  Professor",
+  //     schools: [1009],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2025/04/Dr.-Karan-Singh-SEMCE.png",
+  // },
   {
     id: 66802,
     slug: "mr-trilok-kumar-singh",
