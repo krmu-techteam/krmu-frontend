@@ -324,7 +324,7 @@ export const pathwaySection: PathwaySectionData = {
   brochureHref: bscFinanceBrochureHref,
   brochureLabel: "Download Brochure",
   applyHref: bscFinanceApplyHref,
-  applyLabel: "Apply now",
+  applyLabel: "Apply Now",
 };
 
 export const semesterSection: SemesterSectionData = {
@@ -384,7 +384,7 @@ export const semesterSection: SemesterSectionData = {
   brochureHref: bscFinanceBrochureHref,
   brochureLabel: "Download Brochure",
   applyHref: bscFinanceApplyHref,
-  applyLabel: "Apply now",
+  applyLabel: "Apply Now",
 };
 
 export const faqSection: FaqSectionData = {
@@ -480,7 +480,7 @@ export const sixStepsSection: SixStepsSectionData = {
   brochureHref: bscFinanceBrochureHref,
   brochureLabel: "Download Brochure",
   applyHref: bscFinanceApplyHref,
-  applyLabel: "Apply now",
+  applyLabel: "Apply Now",
 };
 
 export const heroMarqueeData: HeroMarqueeSection = {

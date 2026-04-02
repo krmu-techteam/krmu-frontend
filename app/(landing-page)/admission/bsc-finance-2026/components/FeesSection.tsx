@@ -122,7 +122,7 @@ const FeesSection = () => {
               >
                 Finance partners
               </span>
-              <div className="relative w-full max-w-[480px]" style={{ aspectRatio: "480/60" }}>
+              <div className="relative w-full max-w-[780px]" style={{ aspectRatio: "480/60" }}>
                 <Image
                   src="/landingpage/bsc-finance-2026/finance-partners.png"
                   alt="Finance partners: ICICI Bank, grayQuest, IDFC First Bank, Axis Bank, Kuhoo, propelld"
