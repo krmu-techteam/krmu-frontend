@@ -94,7 +94,7 @@ const OrganisationsSection = ({ data }: OrganisationsSectionProps) => {
               {logos.map((filename, idx) => (
                 <div
                   key={`${folder}-${idx}-${filename}`}
-                  className="h-[56px] sm:h-[68px] rounded-lg flex items-center justify-center px-2 py-1.5"
+                  className="h-[70px] rounded-lg flex items-center justify-center p-2"
                   style={{
                     background: "#fff",
                     border: "1px solid #2E2E2E",
@@ -106,8 +106,8 @@ const OrganisationsSection = ({ data }: OrganisationsSectionProps) => {
                     width={0}
                     height={0}
                     sizes="(max-width: 640px) 45vw, 120px"
-                    className="max-h-[44px] sm:max-h-[52px] max-w-full object-contain object-center"
-                    style={{ width: "100%", height: "auto" }}
+                    className="object-contain object-center"
+                    style={{ width: "100%", height: "100%" }}
                   />
                 </div>
               ))}
