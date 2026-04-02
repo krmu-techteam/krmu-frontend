@@ -47,6 +47,7 @@ const noIndexQSSust = [
   "qs-updated-green-campus-policy",
   "qs-sustainability-march-18",
   "qs-sustainability",
+  "qs-good-health-and-well-being",
   "qs-others",
 ];
 
