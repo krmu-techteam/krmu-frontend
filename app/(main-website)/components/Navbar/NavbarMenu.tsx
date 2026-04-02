@@ -74,7 +74,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         return (
                           <li
                             key={menu?.id}
-                            className={`text-[13px] capitalize pb-[7px] hover:text-blue-700 ${
+                            className={`text-[13px] capitalize pb-[7px] first:text-red-600 hover:text-blue-700 ${
                               menu?.menuclass || ""
                             }`}
                           >
