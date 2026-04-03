@@ -351,4 +351,49 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/07/Dr.-Monika-Yadav-SOMC.jpg",
   },
+    {
+    id: 113862,
+    slug: "ms-richa-goyal",
+    title: {
+      rendered: "Ms. Richa Goyal",
+    },
+    featured_media: 10291,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant  Professor",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Ms.-Richa-Goyal-SOMC.jpg",
+  },
+   {
+    id: 113864,
+    slug: "dr-neha",
+    title: {
+      rendered: "Dr. Neha",
+    },
+    featured_media: 10291,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant  Professor",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Neha-Sheoran-SOMC.jpg",
+  },
+   {
+    id: 113866,
+    slug: "dr-varsha-jaiswal",
+    title: {
+      rendered: "Dr. Varsha Jaiswal",
+    },
+    featured_media: 10291,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant  Professor",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Varsha-Jaiswal-SOMC.jpg",
+  },
 ];
