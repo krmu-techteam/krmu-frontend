@@ -1,7 +1,9 @@
 import Image from "next/image";
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
-import { bscFinanceBrochureFileName, bscFinanceBrochureHref } from "../content";
-import Link from "next/link";
+import {
+  bscFinanceBrochureFileName,
+  bscFinanceBrochureHref,
+} from "../content";
 
 const FooterSection = () => {
   return (
@@ -14,6 +16,7 @@ const FooterSection = () => {
       >
         {/* All text content */}
         <div className="relative z-10 max-w-[92vw] sm:max-w-[560px] lg:max-w-[600px] mx-auto px-4 sm:px-6 flex flex-col items-center text-center gap-4 sm:gap-5">
+
           {/* KRMU Logo */}
           <div className="relative" style={{ width: "88px", height: "88px" }}>
             <Image
@@ -159,17 +162,17 @@ const FooterSection = () => {
               www.krmangalam.edu.in
             </a>
             <p className="m-0 break-words">
-              Landline: 0124-2867800 · Mobile: 08800697010-15 · Helpline:
-              8192888444
+              Landline: 0124-2867800 · Mobile: 08800697010-15 · Helpline: 8192888444
             </p>
-            <Link href="mailto:admissions@krmangalam.edu.in" className="m-0 break-words">
-              admissions@krmangalam.edu.in
-            </Link>
+            <p className="m-0 break-words">
+              admissions@krmangalam.edu.in · admissions.krmangalam.edu.in
+            </p>
           </div>
+
         </div>
 
         {/* Campus building image */}
-        {/* <div className="relative" style={{ marginTop: "-160px" }}>
+        <div className="relative" style={{ marginTop: "-160px" }}>
 
           <Image
             src="/landingpage/bsc-finance-2026/footer-campus.png"
@@ -180,20 +183,20 @@ const FooterSection = () => {
             className="block"
             style={{ width: "100%", height: "auto" }}
             quality={75}
-          /> */}
+          />
 
-        {/* White-to-transparent fade overlay */}
-        {/* <div
+          {/* White-to-transparent fade overlay */}
+          <div
             className="absolute top-0 left-0 right-0 pointer-events-none"
             style={{
               height: "60%",
               background:
                 "linear-gradient(180deg, #FFFFFF 0%, rgba(255,255,255,0.9) 15%, rgba(255,255,255,0.6) 35%, rgba(255,255,255,0.2) 60%, rgba(255,255,255,0) 100%)",
             }}
-          /> */}
+          />
 
-        {/* Copyright — bottom of campus image */}
-        {/* <div
+          {/* Copyright — bottom of campus image */}
+          <div
             className="absolute bottom-0 left-0 right-0 py-2 px-4 text-center"
           >
             <p
@@ -207,9 +210,10 @@ const FooterSection = () => {
             >
               © KR Mangalam University. All rights reserved. Programme structure subject to regulatory approval.
             </p>
-          </div> */}
+          </div>
 
-        {/* </div> */}
+        </div>
+
       </section>
     </footer>
   );
