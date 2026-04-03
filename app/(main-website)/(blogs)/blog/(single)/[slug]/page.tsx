@@ -47,6 +47,7 @@ const page = async ({ params }: Props) => {
   //   currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
 
   const authorSlug = currentSingleBlog?._embedded?.author?.[0]?.slug;
+  console.log("currentSingleBlog",currentSingleBlog)
 
   const featuedImageId = currentSingleBlog?.featured_media;
   const featuredImageUrl = await getBlogImageById(featuedImageId);

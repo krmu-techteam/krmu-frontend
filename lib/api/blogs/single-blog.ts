@@ -50,11 +50,8 @@ export async function getSingleBlogDataBySlug(
 export async function getAllBlogCategories(): Promise<AllBlogCategoriesResponse> {
   const res = await fetch(
     `${krmBlogURL}/wp-json/wp/v2/categories?per_page=100&_fields=id,name,slug,taxonomy`,
-    {
-      next: {
-        revalidate: 3600,
-        tags: ["blogs"],
-      },
+     {
+      cache:"no-cache"
     },
   );
   if (!res.ok) throw new Error("Failed to fetch Single Blog");
@@ -88,8 +85,8 @@ export async function getBlogImageById(imgId: number): Promise<string | null> {
     const res = await fetch(
       `${krmBlogURL}/wp-json/wp/v2/media/${imgId}?_fields=guid`,
       {
-        next: { revalidate: 3600, tags: ["blogs"] },
-      },
+        cache:"no-cache"
+      }
     );
 
     if (!res.ok) {
