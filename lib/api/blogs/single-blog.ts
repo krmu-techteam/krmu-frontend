@@ -13,12 +13,10 @@ export async function getSingleBlogDataBySlug(
     // `${FETCH_STRAPI_URL}/api/single-blogs?filters[blog_slug][$eq]=${slug}&fields[0]=title&fields[1]=blog_slug&populate[featured_image][populate]=*&populate[single_blog][on][blog.single-blog-component][populate][fields][0]=single_blog_content&populate[single_blog][on][blog.single-blog-component][populate][faqs][populate]=*`,
     `${krmBlogURL}/wp-json/wp/v2/posts?slug=${slug}&_embed`,
     {
-      next: {
-        revalidate: 3600,
-        tags: ["blogs"],
-      },
+      cache:"no-cache"
     },
   );
+  console.log("api form data ", res)
   if (!res.ok) throw new Error("Failed to fetch Single Blog");
   const json: SingleBlogResponse = await res.json();
   return json;
@@ -53,11 +51,8 @@ export async function getSingleBlogDataBySlug(
 export async function getAllBlogCategories(): Promise<AllBlogCategoriesResponse> {
   const res = await fetch(
     `${krmBlogURL}/wp-json/wp/v2/categories?per_page=100&_fields=id,name,slug,taxonomy`,
-    {
-      next: {
-        revalidate: 3600,
-        tags: ["blogs"],
-      },
+     {
+      cache:"no-cache"
     },
   );
   if (!res.ok) throw new Error("Failed to fetch Single Blog");
@@ -91,8 +86,8 @@ export async function getBlogImageById(imgId: number): Promise<string | null> {
     const res = await fetch(
       `${krmBlogURL}/wp-json/wp/v2/media/${imgId}?_fields=guid`,
       {
-        next: { revalidate: 3600, tags: ["blogs"] },
-      },
+        cache:"no-cache"
+      }
     );
 
     if (!res.ok) {

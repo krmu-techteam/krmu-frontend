@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const feePoints = [
   "Total programme cost: ₹9,60,000 across 8 semesters (4 years).",
   "Apprenticeship stipends of ₹10,000–₹50,000/month during Semesters 6 & 8 help offset fees significantly.",
@@ -120,13 +122,15 @@ const FeesSection = () => {
               >
                 Finance partners
               </span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/landingpage/bsc-finance-2026/finance-partners.png"
-                alt="Finance partners: ICICI Bank, grayQuest, IDFC First Bank, Axis Bank, Kuhoo, propelld"
-                className="w-full h-auto object-contain"
-                style={{ maxWidth: "480px" }}
-              />
+              <div className="relative w-full max-w-[480px]" style={{ aspectRatio: "480/60" }}>
+                <Image
+                  src="/landingpage/bsc-finance-2026/finance-partners.png"
+                  alt="Finance partners: ICICI Bank, grayQuest, IDFC First Bank, Axis Bank, Kuhoo, propelld"
+                  fill
+                  sizes="480px"
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
 

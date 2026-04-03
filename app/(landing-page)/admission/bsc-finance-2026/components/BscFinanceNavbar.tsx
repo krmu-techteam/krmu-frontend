@@ -1,15 +1,18 @@
 import Image from "next/image";
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import { NavLink } from "../contentype";
 
 interface BscFinanceNavbarProps {
   navLinks: NavLink[];
   brochureHref: string;
+  brochureDownloadName: string;
   applyHref: string;
 }
 
 const BscFinanceNavbar = ({
   navLinks,
   brochureHref,
+  brochureDownloadName,
   applyHref,
 }: BscFinanceNavbarProps) => {
   return (
@@ -17,14 +20,13 @@ const BscFinanceNavbar = ({
       <div className="max-w-[1200px] mx-auto flex items-center justify-between gap-4 sm:gap-6">
 
         {/* Logo */}
-        <div className="shrink-0">
+        <div className="relative shrink-0" style={{ height: "clamp(28px, 4vw, 40px)", aspectRatio: "268/40" }}>
           <Image
             src="/landingpage/bsc-finance-2026/krmu-logo-naac.png"
             alt="K.R. Mangalam University - NAAC A+ Accredited"
-            width={268}
-            height={40}
+            fill
             priority
-            style={{ width: "auto", height: "clamp(28px, 4vw, 40px)" }}
+            sizes="268px"
             className="object-contain"
           />
         </div>
@@ -49,7 +51,7 @@ const BscFinanceNavbar = ({
         <div className="flex items-center gap-3 shrink-0">
           <a
             href={brochureHref}
-            download
+            download={brochureDownloadName}
             className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/55 text-white/90 hover:text-white hover:border-white/85 text-sm font-semibold transition-all duration-200 no-underline"
           >
             Download Brochure
@@ -70,26 +72,11 @@ const BscFinanceNavbar = ({
             </svg>
           </a>
 
-          <a
-            href={applyHref}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-[#0c1830] hover:bg-white/90 text-sm font-semibold transition-all duration-200 no-underline"
-          >
-            Apply now
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
+          <NpfPopup
+            formId="047a23de933bd996c4c01578fad16790"
+            btnClass="npfWidget-047a23de933bd996c4c01578fad16790 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-[#0c1830] hover:bg-white/90 text-sm font-semibold transition-all duration-200"
+            btnText="Apply now"
+          />
         </div>
 
       </div>

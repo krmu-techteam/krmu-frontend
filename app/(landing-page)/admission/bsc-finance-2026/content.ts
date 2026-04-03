@@ -16,6 +16,12 @@ import {
   WhySectionData,
 } from "./contentype";
 
+/** Add the PDF at: public/landingpage/bsc-finance-2026/BSc(Hons) Finance 2026-27.pdf */
+export const bscFinanceBrochureFileName = "BSc(Hons) Finance 2026-27.pdf";
+export const bscFinanceBrochureHref = `/landingpage/bsc-finance-2026/${encodeURIComponent(bscFinanceBrochureFileName)}`;
+
+export const bscFinanceApplyHref = "https://admissions.krmangalam.edu.in/";
+
 export const Hero: BscFinanceHeroContent = {
   schoolLabel: "SCHOOL OF MANAGEMENT & COMMERCE - GURUGRAM",
   heading: "BSc (Hons) Finance",
@@ -25,10 +31,10 @@ export const Hero: BscFinanceHeroContent = {
   countdownTargetDate: "2026-04-30T23:59:59",
   lastDateLabel: "Last Date to apply - 30th April 2026",
   applyBtnLabel: "Apply for 2026-27 Batch",
-  applyBtnHref: "#apply-section",
+  applyBtnHref: bscFinanceApplyHref,
   brochureBtnLabel: "Download Brochure",
-  brochureBtnHref: "#",
-  lpclName: "MainSection",
+  brochureBtnHref: bscFinanceBrochureHref,
+  lpclName: "",
 };
 
 export const heroNavLinks: NavLink[] = [
@@ -39,9 +45,9 @@ export const heroNavLinks: NavLink[] = [
 ];
 
 export const heroStatCards: StatCard[] = [
-  { value: "12", label: "Guaranteed Paid Apprenticeship" },
-  { value: "\u20B910L", label: "Expected Median Placement" },
+  { value: "12mo", label: "Guaranteed Paid Apprenticeship" },
   { value: "\u20B950K", label: "Stipend per month (up to)" },
+  { value: "\u20B910L", label: "Expected Median Placement" },
   { value: "100", label: "Seats Only" },
 ];
 
@@ -88,10 +94,10 @@ export const whySection: WhySectionData = {
   headingRed: "You won't find another",
   headingDark: "BSc that does all of this.",
   features: whyFeatures,
-  brochureHref: "#",
+  brochureHref: bscFinanceBrochureHref,
   brochureLabel: "Download Brochure",
-  applyHref: "#apply-section",
-  applyLabel: "Apply for 2025-26 Batch",
+  applyHref: bscFinanceApplyHref,
+  applyLabel: "Apply for 2026-27 Batch",
 };
 
 export const apprenticeshipSection: ApprenticeshipSectionData = {
@@ -121,10 +127,10 @@ export const apprenticeshipSection: ApprenticeshipSectionData = {
   ],
   footnote:
     "Governed by AEDP (Government of India). Actual stipend depends on the organisation and role.",
-  brochureHref: "#",
+  brochureHref: bscFinanceBrochureHref,
   brochureLabel: "Download Brochure",
-  applyHref: "#apply-section",
-  applyLabel: "Apply for 2025-26 Batch",
+  applyHref: bscFinanceApplyHref,
+  applyLabel: "Apply for 2026-27 Batch",
 };
 
 export const tracksSection: TracksSectionData = {
@@ -138,12 +144,12 @@ export const tracksSection: TracksSectionData = {
       alignedWith: "CFA & FRM Program",
       bestFor: "Investment, banking & capital markets",
       careerRoles: [
-        "Risk Management",
         "Equity Research Analyst",
-        "Corporate Finance / CFO",
-        "Portfolio Management",
         "Investment Banking",
+        "Portfolio Management",
+        "Corporate Finance / CFO",
         "Credit & Rating Analyst",
+        "Risk Management",
       ],
     },
     {
@@ -155,8 +161,8 @@ export const tracksSection: TracksSectionData = {
         "Quantitative Analyst",
         "Algorithmic Trader",
         "Risk Quant",
-        "Derivatives Structurer",
         "Fintech / Data Scientist",
+        "Derivatives Structurer",
         "Hedge Fund Researcher",
       ],
     },
@@ -175,10 +181,10 @@ export const tracksSection: TracksSectionData = {
       ],
     },
   ],
-  brochureHref: "#",
+  brochureHref: bscFinanceBrochureHref,
   brochureLabel: "Download Brochure",
-  applyHref: "#apply-section",
-  applyLabel: "Apply for 2025-26 Batch",
+  applyHref: bscFinanceApplyHref,
+  applyLabel: "Apply for 2026-27 Batch",
 };
 
 export const alignedWithSection: AlignedWithSectionData = {
@@ -237,14 +243,19 @@ export const curriculumSection: CurriculumSectionData = {
       description: "Data querying, management & analytics",
     },
     {
+      iconSrc: "/landingpage/bsc-finance-2026/icon-financial-modelling.png",
+      title: "Financial Modelling & Valuation",
+      description: "DCF, comparable analysis & deal structuring",
+    },
+    {
+      iconSrc: "/landingpage/bsc-finance-2026/icon-technical-analysis.png",
+      title: "Technical & Fundamental Analysis",
+      description: "Chart patterns, price action & company valuation",
+    },
+    {
       iconSrc: "/landingpage/bsc-finance-2026/icon-equity-research.png",
       title: "Equity Research & Analysis",
       description: "Fundamental, technical & credit analysis",
-    },
-    {
-      iconSrc: "/landingpage/bsc-finance-2026/icon-bloomberg.png",
-      title: "Bloomberg Terminal",
-      description: "Market data, analytics & BMC certification",
     },
     {
       iconSrc: "/landingpage/bsc-finance-2026/icon-risk-management.png",
@@ -252,19 +263,14 @@ export const curriculumSection: CurriculumSectionData = {
       description: "Market, credit & operational risk frameworks",
     },
     {
-      iconSrc: "/landingpage/bsc-finance-2026/icon-financial-modelling.png",
-      title: "Financial Modelling & Valuation",
-      description: "DCF, comparable analysis & deal structuring",
+      iconSrc: "/landingpage/bsc-finance-2026/icon-derivatives.png",
+      title: "Derivatives & Portfolio Management",
+      description: "Options pricing, hedging & asset allocation",
     },
     {
       iconSrc: "/landingpage/bsc-finance-2026/icon-ifrs.png",
       title: "IFRS & Financial Reporting",
       description: "Global accounting standards & compliance",
-    },
-    {
-      iconSrc: "/landingpage/bsc-finance-2026/icon-derivatives.png",
-      title: "Derivatives & Portfolio Management",
-      description: "Options pricing, hedging & asset allocation",
     },
   ],
   footerText: "+ 12 Months of Real Industry Experience Across Two Organisations",
@@ -314,9 +320,9 @@ export const pathwaySection: PathwaySectionData = {
         "Bloomberg BMC, algo trading, risk modelling + 6 months senior apprenticeship. Graduate: BSc (Hons) Finance.",
     },
   ],
-  brochureHref: "#",
+  brochureHref: bscFinanceBrochureHref,
   brochureLabel: "Download Brochure",
-  applyHref: "#apply-section",
+  applyHref: bscFinanceApplyHref,
   applyLabel: "Apply now",
 };
 
@@ -335,48 +341,48 @@ export const semesterSection: SemesterSectionData = {
       credits: "22 credits",
       title: "Analytical Toolkit",
       courses:
-        "Financial Maths 2 · Statistics & Probability · Econometrics · Financial Modelling · Communication 2 · Python for Finance · Macro & International Finance · Ethics & Professionalism 2",
+        "Financial Statement Analysis · Financial Maths 2 (Excel) · Business Statistics · Macroeconomics · Communication 2 · Python for Finance · Advanced Excel & VBA · Ethics 2 · Co-Curricular Activities",
     },
     {
       credits: "22 credits",
       title: "Track Begins",
       courses:
-        "Track Core 1 · Track Core 2 · Corporate Finance 2 · Portfolio Theory · Fixed Income · Derivatives 1 · Excel Advanced · Research Methods",
+        "Common: Quant Methods (R) · Corporate Law · Behavioural Finance · Financial Markets · Modern Indian Language · Python, SQL & C++ · Technical Analysis. Track: Fixed Income & Equity Analysis 1 (Core/Quant) OR Life Contingencies 1 (Actuarial)",
     },
     {
       credits: "22 credits",
       title: "Deepening",
       courses:
-        "Track Core 3 · Track Core 4 · Risk Management · Financial Statement Analysis · Alternative Investments · Bloomberg Fundamentals · Elective 1",
+        "Common: Alt Investments · Taxation · Derivatives · Financial Modelling · Soft Skills · Community Engagement. Track: Equity Analysis 2 / Life Contingencies 2 · Corporate Mgmt / Stochastic Processes",
     },
     {
       credits: "22 credits",
       title: "Advanced",
       courses:
-        "Track Core 5 · Track Core 6 · Derivatives 2 · Behavioural Finance · Fintech & Regulation · Elective 2 · Industry Project",
+        "Common: Portfolio Management · IFRS-1. Track: PE & VC / Derivatives Pricing · M&A / Econometrics · FinTech / Survival Models · ESG / Predictive Analytics",
     },
     {
       credits: "22 credits",
       title: "Apprenticeship Stint 1 [PAID]",
       courses:
-        "6-month paid industry apprenticeship at a KRMU MoU partner organisation. Evaluated on professional competency and project delivery.",
+        "Industry Apprenticeship – 6 months, paid, track-matched (18 cr). Research Project (4 cr). Exit option: BSc Finance.",
     },
     {
       credits: "22 credits",
       title: "The Honours Edge",
       courses:
-        "Bloomberg BMC · Algorithmic Trading · Risk Modelling · Global Markets · Honours Research · Elective 3 · Leadership & Governance",
+        "Common: Risk Management · IFRS-2 · Bloomberg BMC. Track: Strategic Finance / Algo Trading / Loss Reserving · Intl Finance / Adv Strategies / Risk Modelling · Adv Portfolio Mgmt / Actuarial Practice",
     },
     {
       credits: "22 credits",
       title: "Apprenticeship Stint 2 [PAID]",
       courses:
-        "6-month senior paid industry apprenticeship. Students take on greater responsibility. Final project submitted for honours evaluation.",
+        "Advanced Apprenticeship – 6 months, paid, senior level (18 cr). Research Project 2 (4 cr). Graduate: BSc (Hons) Finance.",
     },
   ],
-  brochureHref: "#",
+  brochureHref: bscFinanceBrochureHref,
   brochureLabel: "Download Brochure",
-  applyHref: "#apply-section",
+  applyHref: bscFinanceApplyHref,
   applyLabel: "Apply now",
 };
 
@@ -395,47 +401,47 @@ export const faqSection: FaqSectionData = {
     {
       question: "Is the paid apprenticeship guaranteed?",
       answer:
-        "Yes. Every student is placed into a paid, track-matched industry apprenticeship through KRMU's signed MoUs with partner organisations.",
+        "Yes. KRMU has signed MoUs with companies across all three tracks. Every student gets a paid, track-matched apprenticeship in Semester 6 and Semester 8. The university arranges it, you don't have to find it yourself. This is governed under the Government of India's AEDP framework.",
     },
     {
       question: "How much stipend will I receive?",
       answer:
-        "Stipends range from ₹10,000 to ₹50,000 per month depending on the organisation, role, and track. Governed under AEDP (Government of India).",
+        "\u20B910,000 to \u20B950,000 per month, as per AEDP guidelines. The exact amount depends on the company and your role. Stipends are paid directly by the employer for each 6-month stint.",
     },
     {
       question: "Can I exit after 3 years?",
       answer:
-        "Yes. You can exit with a BSc Finance degree after 3 years (with 1 apprenticeship). Staying for Year 4 earns you BSc (Hons) Finance with 2 apprenticeships.",
+        "Yes. After Semester 6, you can graduate with a BSc Finance. But we recommend completing Year 4, the Honours degree includes a second apprenticeship, Bloomberg certification, and advanced courses that employers value significantly more.",
     },
     {
       question: "Is this too mathematical for Commerce students?",
       answer:
-        "No. The programme is accessible to all streams. Quantitative modules are scaffolded from the ground up. Commerce students do very well here.",
+        "No. Year 1 builds your maths and computing skills from scratch. The Core Finance track needs only standard aptitude. Quant and Actuarial tracks are more mathematical, but they are optional. You choose what fits you.",
     },
     {
       question: "Does this help with CFA, FRM, or actuarial exams?",
       answer:
-        "Yes. The curriculum is aligned to CFA Level 1 & 2, FRM Part 1, IFoA, IAI, and SOA syllabi. You'll finish coursework that overlaps significantly with these certifications.",
+        "Yes. The curriculum is built to cover large portions of the CFA (all 3 levels), FRM, IFoA, IAI, and SOA syllabi. You won't be starting from zero when you sit for these exams.",
     },
     {
       question: "What are the placement expectations?",
       answer:
-        "Graduates are placed in finance, quant, and actuarial roles. Expected median package is 10 LPA. Our apprenticeship partners often convert students to full-time hires.",
+        "\u20B910 LPA is the expected median starting salary. Employers include top investment banks, quant firms, insurance companies, and Big 4 firms. Most students are expected to receive offers through their apprenticeship organisations. Full placement support is provided for all graduates.",
     },
     {
       question: "How is this different from BBA or B.Com?",
       answer:
-        "BBA and B.Com are broad management degrees. This is a specialist finance programme — deeper, more technical, with guaranteed paid industry experience built in.",
+        "BBA and B.Com are general degrees. This is a specialist finance programme with three career tracks, global certification alignment, Python/R/Excel/Bloomberg from Day 1, and a 12-month guaranteed paid apprenticeship. The depth and industry integration are not comparable.",
     },
     {
       question: "Can Humanities students apply?",
       answer:
-        "Yes, all streams are welcome provided Mathematics was studied in the qualifying examination. Minimum 50% aggregate marks required.",
+        "Yes. You need Mathematics in your Class 12th, that's the only subject requirement. The programme is open to Science, Commerce, and Humanities students. Year 1 builds all foundations from scratch.",
     },
     {
       question: "When do I choose my track?",
       answer:
-        "Track selection happens at the beginning of Year 2 (Semester 3), after you have completed foundational coursework and received faculty counselling.",
+        "In Year 2. All of Year 1 is common, giving you two full semesters to understand finance before you decide. Faculty mentors help you through the process.",
     },
   ],
 };
@@ -467,22 +473,25 @@ export const sixStepsSection: SixStepsSectionData = {
     },
     {
       title: "Get enrolled",
-      subtitle: "60 seats only. Secure your place.",
+      subtitle: "100 seats only. Secure your place.",
     },
   ],
-  brochureHref: "#",
+  brochureHref: bscFinanceBrochureHref,
   brochureLabel: "Download Brochure",
-  applyHref: "#apply-section",
+  applyHref: bscFinanceApplyHref,
   applyLabel: "Apply now",
 };
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-    "NAAC A+ Accredited University",
-    "CFA \u00B7 FRM \u00B7 IFoA \u00B7 IAI \u00B7 SOA Aligned",
-    "Stipend up to \u20B950,000",
+    "Only 100 Seats for 2026 Batch",
     "12 Months Guaranteed Paid Apprenticeship",
-    "100 Seats Only",
+    "NAAC A Accredited University",
+    "CFA \u00B7 FRM \u00B7 IFoA \u00B7 IAI \u00B7 SOA Aligned",
+    "Stipend up to \u20B950,000/month",
+    "Study in Gurugram \u2013 India's Financial Capital",
+    "NEP 2020 Compliant",
+    "AEDP Compliant",
   ],
   bgColor: "#e31e24",
   speedClass: "animate-marquee",

@@ -31,7 +31,8 @@ const AlignedWithSection = ({ data }: AlignedWithSectionProps) => {
               width={0}
               height={0}
               sizes="200px"
-              className="h-10 sm:h-12 w-auto object-contain"
+              className="h-10 sm:h-12 object-contain"
+              style={{ width: "auto", height: "auto" }}
             />
           ))}
         </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { FaqSectionData } from "../contentype";
 
@@ -38,7 +39,7 @@ const FaqSection = ({ data }: FaqSectionProps) => {
 
             {/* Heading — single line */}
             <h2
-              className="m-0 font-semibold italic leading-[140%] tracking-[-0.02em] whitespace-nowrap overflow-hidden"
+              className="m-0 font-semibold italic leading-[140%] tracking-[-0.02em]"
               style={{
                 fontFamily: "'Libre Caslon Condensed', serif",
                 fontWeight: 600,
@@ -154,22 +155,27 @@ const FaqSection = ({ data }: FaqSectionProps) => {
           <div className="relative hidden lg:flex justify-center pt-[260px]">
 
             {/* Ellipse — partially off-screen right, behind person */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/landingpage/bsc-finance-2026/faq-ellipse.png"
-              alt=""
-              aria-hidden="true"
-              className="absolute top-[160px] right-[-60px] z-0 h-[420px] w-auto object-contain"
-            />
+            <div className="absolute top-[160px] right-[-60px] z-0" style={{ width: "420px", height: "420px" }}>
+              <Image
+                src="/landingpage/bsc-finance-2026/faq-ellipse.png"
+                alt=""
+                aria-hidden={true}
+                fill
+                sizes="420px"
+                className="object-contain"
+              />
+            </div>
 
             {/* Person image */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/landingpage/bsc-finance-2026/faq-person.png"
-              alt="Student thinking about BSc Finance"
-              className="relative z-10 w-full h-auto object-contain"
-              style={{ maxWidth: "380px" }}
-            />
+            <div className="relative z-10 w-full max-w-[380px]" style={{ aspectRatio: "380/500" }}>
+              <Image
+                src="/landingpage/bsc-finance-2026/faq-person.png"
+                alt="Student thinking about BSc Finance"
+                fill
+                sizes="380px"
+                className="object-contain"
+              />
+            </div>
           </div>
 
         </div>
