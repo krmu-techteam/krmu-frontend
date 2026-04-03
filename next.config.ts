@@ -40,8 +40,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-
-
+   async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          // Clickjacking protection
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
+          },
+        ],
+      },
+    ];
+  },
   //  async rewrites() {
   //   return [
   //     {
