@@ -16,6 +16,7 @@ export async function getSingleBlogDataBySlug(
       cache:"no-cache"
     },
   );
+  console.log("api form data ", res)
   if (!res.ok) throw new Error("Failed to fetch Single Blog");
   const json: SingleBlogResponse = await res.json();
   return json;
