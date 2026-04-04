@@ -17,6 +17,21 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Meena-Bhandari-SBAS.jpg",
   },
   {
+    id: 113742,
+    slug: "dr-arush-sharma",
+    title: {
+      rendered: "Dr. Arush Sharma",
+    },
+    featured_media: 903,
+    acf: {
+      "staff-qualification": "Ph.D. (Chemistry)",
+      staff_designation: "Assistant Professor",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Arush-Sharma.png.jpg",
+  },
+  {
     id: 910,
     slug: "dr-pawan-kumar",
     title: {

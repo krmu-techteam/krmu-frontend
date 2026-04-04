@@ -111,7 +111,7 @@ const HeroBanner = ({
             </div>
           ) : heroSection?.imgvideo === "Video" ? (
             <div
-              className="videoField w-full h-[500px] "
+              className="videoField w-full h-[420px] "
               dangerouslySetInnerHTML={{
                 __html: heroSection?.videofield || "",
               }}

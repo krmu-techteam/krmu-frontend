@@ -17,6 +17,21 @@ export const solaFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/03/Dr.-Shravan-Kumar.png",
   },
   {
+    id: 113876,
+    slug: "dr-amrita-ratnani",
+    title: {
+      rendered: "Dr. Amrita Ratnani",
+    },
+    featured_media: 108496,
+    acf: {
+      "staff-qualification": "Ph.D.in Psychology",
+      staff_designation: "Assistant Professor",
+      schools: [1152],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.Amrita-Ratnani.png.jpg",
+  },
+  {
     id: 41999,
     slug: "dr-renu-verma",
     title: {
