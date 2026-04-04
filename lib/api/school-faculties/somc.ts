@@ -16,7 +16,22 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Deepak-Maun.jpg",
   },
-    {
+  {
+    id: 113882,
+    slug: "dr-indraneel-mandal",
+    title: {
+      rendered: "Dr. Indraneel Mandal",
+    },
+    featured_media: 55322,
+    acf: {
+      "staff-qualification": "MBA, Ph.D, NET",
+      staff_designation: "Assistant Professor",
+      schools: [1126],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr-Indraneel-Mandal.png.jpg",
+  },
+  {
     id: 53038,
     slug: "dr-jitin-kumar-gambhir",
     title: {
@@ -46,7 +61,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/07/Dr.-Manmohan-Chaudhary-SOMC.jpg",
   },
-{
+  {
     id: 107649,
     slug: "dr-mohammed-mustehsan",
     title: {
@@ -61,7 +76,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/07/Dr.-Mohammed-Mustehasan-SOMC.png",
   },
-    {
+  {
     id: 107964,
     slug: "ms-prerna-sharma",
     title: {
@@ -107,8 +122,8 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://www.krmangalam.edu.in/wp-content/uploads/2025/07/Hamza-2.jpg",
   },
-  
-    {
+
+  {
     id: 10685,
     slug: "dr-meenakshi-gujral",
     title: {
@@ -351,7 +366,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/07/Dr.-Monika-Yadav-SOMC.jpg",
   },
-    {
+  {
     id: 113862,
     slug: "ms-richa-goyal",
     title: {
@@ -366,7 +381,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Ms.-Richa-Goyal-SOMC.jpg",
   },
-   {
+  {
     id: 113864,
     slug: "dr-neha",
     title: {
@@ -381,7 +396,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Neha-Sheoran-SOMC.jpg",
   },
-   {
+  {
     id: 113866,
     slug: "dr-varsha-jaiswal",
     title: {
