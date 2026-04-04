@@ -229,4 +229,19 @@ export const solsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.Neha-Sharma-SOLS.jpg",
   },
+  {
+    id: 113872,
+    slug: "niharika",
+    title: {
+      rendered: "Niharika",
+    },
+    featured_media: 1024,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1043],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Niharika.png.jpg",
+  },
 ];

@@ -1,5 +1,5 @@
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
-import { bscFinanceBrochureFileName } from "../content";
+import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 import { PathwaySectionData } from "../contentype";
 
 interface PathwaySectionProps {
@@ -55,29 +55,12 @@ const PathwaySection = ({ data }: PathwaySectionProps) => {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-3 items-center">
-              <a
-                href={data.brochureHref}
-                download={bscFinanceBrochureFileName}
-                className="inline-flex items-center gap-2 px-4 sm:px-5 py-[10px] rounded-lg border border-[#D1D1D1] bg-white text-[#344054] hover:bg-gray-50 font-semibold text-[13px] sm:text-[14px] leading-5 tracking-normal transition-all duration-200 no-underline"
-                style={{ fontFamily: "Inter, sans-serif" }}
-              >
-                {data.brochureLabel}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 8v8M8 12l4 4 4-4" />
-                </svg>
-              </a>
+              <CommonLeadPopup
+                buttonText={data.brochureLabel}
+                buttonClassName="inline-flex items-center gap-2 px-4 sm:px-5 py-[10px] rounded-lg border border-[#D1D1D1] bg-white text-[#344054] hover:bg-gray-50 font-semibold text-[13px] sm:text-[14px] leading-5 tracking-normal transition-all duration-200"
+                redirectUrl={data.brochureHref}
+                form_name="BSc Finance 2026 - Brochure Download"
+              />
 
               <NpfPopup
                 formId="047a23de933bd996c4c01578fad16790"

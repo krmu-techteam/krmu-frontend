@@ -1,5 +1,6 @@
 import Image from "next/image";
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 import { NavLink } from "../contentype";
 
 interface BscFinanceNavbarProps {
@@ -49,28 +50,12 @@ const BscFinanceNavbar = ({
 
         {/* CTA buttons */}
         <div className="flex items-center gap-3 shrink-0">
-          <a
-            href={brochureHref}
-            download={brochureDownloadName}
-            className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/55 text-white/90 hover:text-white hover:border-white/85 text-sm font-semibold transition-all duration-200 no-underline"
-          >
-            Download Brochure
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 8v8M8 12l4 4 4-4" />
-            </svg>
-          </a>
+          <CommonLeadPopup
+            buttonText="Download Brochure"
+            buttonClassName="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-white/55 text-white/90 hover:text-white hover:border-white/85 text-sm font-semibold transition-all duration-200"
+            redirectUrl={brochureHref}
+            form_name="BSc Finance 2026 - Brochure Download"
+          />
 
           <NpfPopup
             formId="047a23de933bd996c4c01578fad16790"
