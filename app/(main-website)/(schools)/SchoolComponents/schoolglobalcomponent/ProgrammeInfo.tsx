@@ -162,7 +162,7 @@ const ProgrammeInfo = ({ catName }: Props) => {
                       onMouseEnter={() => handleMouseEnter(prog.id)}
                       onFocus={() => handleMouseEnter(prog.id)}
                       className={`lg:w-1/2 rounded-4xl h-full font-semibold w-full cursor-pointer p-5 sm:p-[30px] transition-colors ${
-                        isActive
+                        isActive 
                           ? "activehighlightprog"
                           : "text-white hover:bg-white hover:text-black"
                       }`}
