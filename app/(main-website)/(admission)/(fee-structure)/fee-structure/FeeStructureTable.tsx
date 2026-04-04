@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import Link from "next/link";
 import { FeeStructureTab } from "@/lib/types/feestructure";
-import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
+// import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 
 type Props = {
   feeStructTab: FeeStructureTab[];
@@ -41,14 +41,14 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
           >
             Download Fee Structure
           </Link> */}
-
+{/* 
           <CommonLeadPopup
             buttonText={"Download Fee Structure"}
             buttonClassName={`bg-[#898989] sm:leading-[3] inline-block w-full text-center text-sm sm:text-2xl p-5 sm:py-3.5 sm:px-[55px] rounded-none data-[state=active]:bg-[#051630] data-[state=active]:text-white
              text-black  font-semibold`}
             redirectUrl="https://www.krmangalam.edu.in/pdfs/Fee-Structure-2025-26.pdf"
             form_name="Download Fee Structure"
-          />
+          /> */}
         </TabsList>
 
         {/* ------------------ DYNAMIC TAB CONTENT ------------------ */}

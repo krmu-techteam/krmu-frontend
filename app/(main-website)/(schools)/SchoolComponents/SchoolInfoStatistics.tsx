@@ -17,9 +17,9 @@ const SchoolInfoStatistics = ({
   counters,
 }: Props) => {
   return (
-    <section className="py-10">
+    <section className="py-10 px-5">
       <div className="max-w-[1664px] mx-auto w-full flex flex-col xl:flex-row items-center gap-10">
-        <div className="xl:w-1/3 relative h-[660px]">
+        <div className="xl:w-1/3 relative lg:h-[660px]">
           <Image
             src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_8_b2ebfc36f9.webp"
             fill
