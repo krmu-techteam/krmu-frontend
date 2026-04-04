@@ -48,6 +48,7 @@ const noIndexQSSust = [
   "qs-sustainability-march-18",
   "qs-sustainability",
   "qs-good-health-and-well-being",
+  "qs-carbon-net-zero",
   "qs-others",
 ];
 
