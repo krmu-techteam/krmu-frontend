@@ -14,7 +14,7 @@ type Props = {
   catName: string;
 };
 
-const   ProgrammeInfo = ({ catName }: Props) => {
+const ProgrammeInfo = ({ catName }: Props) => {
   const [programs, setPrograms] = useState<Record<string, ProgrammeCardData[]>>(
     {},
   );
@@ -72,44 +72,6 @@ const   ProgrammeInfo = ({ catName }: Props) => {
     },
     [catName],
   );
-
-  // const fetchProg = useCallback(
-  //   async (deg: string) => {
-  //     try {
-  //       let data: ProgrammeCardData[] = [];
-
-  //       if (deg === "Doctoral Programmes") {
-  //         // 🔹 Fetch Ph.D. data using different API
-  //         const phdRes = await getSchoolProgrammePhdDataDegree(
-  //           "Doctoral Programme",
-  //           catName
-  //         );
-  //         // Convert PhD API format to match the rest
-  //         data = phdRes?.data?.map((item: any) => ({
-  //           id: item.id,
-  //           title: item.heading,
-  //           programmeslug: item.phdslug,
-  //           highlightitle: "",
-  //           criteria: item.criteria,
-  //         })) || [];
-  //       } else {
-  //         // 🔹 Fetch UG, PG, Diploma normally
-  //         const res = await getSchoolProgrammeInfoByDegree(deg, catName);
-  //         data = res || [];
-  //       }
-
-  //       setPrograms((prev) => ({ ...prev, [deg]: data }));
-
-  //       // Set default active program if none selected
-  //       if (data.length > 0) {
-  //         setActiveProgramId(data[0].id);
-  //       }
-  //     } catch (err) {
-  //       console.error("Failed to fetch programmes:", err);
-  //     }
-  //   },
-  //   [catName]
-  // );
 
   // On mount / degree change
   useEffect(() => {

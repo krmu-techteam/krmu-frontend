@@ -1,4 +1,4 @@
-import ProgrammeInfo from "./schoolglobalcomponent/ProgrammeInfo";
+import ProgrammeInfoDemo from "./schoolglobalcomponent/ProgrammeInfoDemo";
 
 type Props = {
   degName: string;
@@ -15,7 +15,7 @@ const SchoolProgrammeOffered = ({
 }: Props) => {
   return (
     <>
-      <section className="px-4 py-10" id="Explore-Courses"> 
+      <section className="px-4 py-10" id="Explore-Courses">
         <div className="max-w-[1664px] mx-auto w-full">
           <div className="text-center mb-10 max-w-5xl mx-auto w-full">
             <h3 className="text-3xl mb-5 md:text-4xl lg:text-5xl font-semibold">
@@ -23,7 +23,8 @@ const SchoolProgrammeOffered = ({
             </h3>
             <p>{content}</p>
           </div>
-          <ProgrammeInfo degName={degName} catName={schoolCategoryName} />
+          <ProgrammeInfoDemo degName={degName} catName={schoolCategoryName} />
+          {/* <ProgrammeInfoCards /> */}
         </div>
       </section>
     </>
