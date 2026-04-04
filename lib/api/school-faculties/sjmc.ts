@@ -123,4 +123,19 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Ms.-Yashika-Khandelwal-1-SEMCE.jpg",
   },
+  {
+    id: 113869,
+    slug: "dr-aditi-khare",
+    title: {
+      rendered: "Dr. Aditi Khare",
+    },
+    featured_media: 10763,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant  Professor",
+      schools: [1009],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Aditi-Khare.png.jpg",
+  },
 ];

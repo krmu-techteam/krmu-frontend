@@ -16,8 +16,9 @@ import {
   FileCheck,
   Users,
 } from "lucide-react";
-import BG from "@/public/FAQimg/FAQbg.jpg";
+// import BG from "@/public/FAQimg/FAQbg.jpg";
 import faqCategories from "../faqData/faqD.json";
+import Link from "next/link";
 
 const iconMap: { [key: string]: React.ElementType } = {
   ClipboardList,
@@ -39,31 +40,35 @@ export const FAQ = () => {
   return (
     <>
       {/* Hero Section with Diagonal Lines */}
-      <section
-        className="relative  px-4 overflow-hidden font-serif"
-        style={{
-          backgroundImage: `url(${BG.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="relative max-w-[1664px] pt-[140px] pb-20 lg:py-[8%] mx-auto w-full text-white text-center">
-          <h1 className="text-[80px] md:text-[120px] lg:text-[160px] font-bold tracking-wider ">
-            IQAC
+      <section className="bg-[url(/admission/faq-bg.webp)] bg-bottom lg:bg-cover bg-no-repeat px-4">
+        <div className="max-w-[1664px] pt-[140px] pb-20 lg:py-[10%] mx-auto w-full text-white mx-15">
+          <h1 className="text-[34px] md:text-4xl lg:text-8xl font-semibold my-5 lg:my-10 ">
+            Questions? Look Here
           </h1>
-          <h3 className="text-xl md:text-2xl lg:text-5xl font-normal tracking-wide">
-            Internal Quality Assurance Cell
+          <h3 className="md:text-3xl lg:text-4xl text-lg font-semibold my-5 ">
+            Can’t find an answer?
           </h3>
+          <button
+            className={`py-[13px] px-[29px] text-white bg-[#cb000d] rounded-full font-semibold hover:bg-[#034272] `}
+          >
+            <Link
+              href="https://www.krmangalam.edu.in/contact-us/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contact Us
+            </Link>
+          </button>
         </div>
       </section>
 
       {/* FAQ Content Section */}
-      <section className="relative py-20 px-6 lg:px-0  font-sans overflow-hidden ">
+      <section className="relative pb-20 px-6 lg:px-0  font-sans overflow-hidden ">
         {/* Top right gradient */}
-        <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] bg-radial-[at_60%_75%] from-sky-100 via-blue-200 to-indigo-900 to-80% rounded-full blur-3xl  to-transparent pointer-events-none"></div>
+        {/* <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] bg-radial-[at_60%_75%] from-sky-100 via-blue-200 to-indigo-900 to-80% rounded-full blur-3xl  to-transparent pointer-events-none"></div> */}
         {/* Bottom left gradient */}
         <div className="absolute bottom-[-100px] left-[-100px] w-[500px] h-[500px] bg-radial-[at_60%_75%] from-sky-100 via-blue-200 to-indigo-900 to-80% rounded-full blur-3xl to-transparent  pointer-events-none"></div>
-        <div className="max-w-[1400px] mx-auto w-full relative">
+        <div className="max-w-[1560px] mx-auto my-10   w-full relative">
           <div className="flex flex-col lg:flex-row gap-18 items-start">
             {/* Left: Category Buttons */}
             <div className="w-full lg:w-[350px] flex flex-col gap-8 flex-shrink-0">
