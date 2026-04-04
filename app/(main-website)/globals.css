@@ -28,7 +28,7 @@
     .prog_scope > div > iframe {
       height: 180px !important;
     }
-    .mob_prog_form > .npf_wgts > iframe{
+    .mob_prog_form > .npf_wgts > iframe {
       height: 550px !important;
     }
   }
@@ -40,6 +40,10 @@
   }
   .videoField iframe {
     width: 100%;
+  }
+  .videoField iframe {
+    width: 100%;
+    height: 100%;
   }
 
   @keyframes marquee {
