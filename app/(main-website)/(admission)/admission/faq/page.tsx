@@ -1,13 +1,11 @@
-import { getFaqsData } from "@/lib/api/faq";
-import FAQHero from "./comp/FAQHero";
-import FAQs from "./comp/FAQs";
-
+// import { getFaqsData } from "@/lib/api/faq";
+// import FAQHero from "./comp/FAQHero";
+// import FAQs from "./comp/FAQs";
 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
+import { FAQ } from "./comp/Faq";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("faq");
@@ -70,18 +68,21 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-
 const page = async () => {
-  const faqData = await getFaqsData();
+  // const faqData = await getFaqsData();
 
   return (
     <>
-      <FAQHero
+      <div>
+        <FAQ />
+      </div>
+
+      {/* <FAQHero
         heading={faqData?.heading}
         subheading={faqData?.subheading}
         btn={faqData?.btn}
       />
-      {faqData?.faqs && <FAQs faqs={faqData?.faqs} />}
+      {faqData?.faqs && <FAQs faqs={faqData?.faqs} />} */}
     </>
   );
 };
