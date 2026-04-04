@@ -100,17 +100,18 @@ const HeroBanner = ({
         </div>
 
         <div
-          className={`hidden w-full ${isFormAvailable ? "lg:w-4/12" : "lg:w-1/2"}  lg:flex items-center videoField min-h-[556px] h-full relative`}
+          className={`hidden w-full ${isFormAvailable ? "lg:w-4/12" : "lg:w-1/2"}  lg:flex items-center  min-h-[556px] h-full relative`}
         >
           {isFormAvailable ? (
-            <div className="border overflow-hidden">
-            <div className="flex justify-center items-center bg-[#0060aa] py-2 px-3 text-[22px] font-bold">
-              <h3 className="text-white">ADMISSIONS OPEN 2026-27</h3>
-            </div>
-              <NoPaperForm formId={formId} height="520px" />
+            <div className="border overflow-hidden w-full ">
+              <div className="flex justify-center items-center bg-[#0060aa] py-2 px-3 text-[22px] font-bold">
+                <h3 className="text-white">ADMISSIONS OPEN 2026-27</h3>
+              </div>
+              <NoPaperForm formId={formId} height="500px" />
             </div>
           ) : heroSection?.imgvideo === "Video" ? (
             <div
+              className="videoField w-full h-[500px] "
               dangerouslySetInnerHTML={{
                 __html: heroSection?.videofield || "",
               }}
