@@ -2,7 +2,7 @@ import Image from "next/image";
 import HeroMarquee from "../../CommonComponent2026/HeroMarquee";
 import CountdownTimer from "./CountdownTimer";
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
-import { bscFinanceBrochureFileName } from "../content";
+import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 import { BscFinanceHeroContent, HeroMarqueeSection, StatCard } from "../contentype";
 
 interface HeroSectionProps {
@@ -68,28 +68,12 @@ const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
                 btnText={hero.applyBtnLabel}
               />
 
-              <a
-                href={hero.brochureBtnHref}
-                download={bscFinanceBrochureFileName}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/38 text-white/88 hover:border-white/65 hover:text-white text-sm font-semibold transition-all duration-200 no-underline"
-              >
-                {hero.brochureBtnLabel}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="15"
-                  height="15"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 8v8M8 12l4 4 4-4" />
-                </svg>
-              </a>
+              <CommonLeadPopup
+                buttonText={hero.brochureBtnLabel}
+                buttonClassName="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/38 text-white/88 hover:border-white/65 hover:text-white text-sm font-semibold transition-all duration-200"
+                redirectUrl={hero.brochureBtnHref}
+                form_name="BSc Finance 2026 - Brochure Download"
+              />
             </div>
 
           </div>
