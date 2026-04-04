@@ -68,7 +68,7 @@ export const FAQ = () => {
         {/* <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] bg-radial-[at_60%_75%] from-sky-100 via-blue-200 to-indigo-900 to-80% rounded-full blur-3xl  to-transparent pointer-events-none"></div> */}
         {/* Bottom left gradient */}
         <div className="absolute bottom-[-100px] left-[-100px] w-[500px] h-[500px] bg-radial-[at_60%_75%] from-sky-100 via-blue-200 to-indigo-900 to-80% rounded-full blur-3xl to-transparent  pointer-events-none"></div>
-        <div className="max-w-[1560px] mx-auto my-10   w-full relative">
+        <div className="max-w-[1560px] mx-auto lg:mx-32 my-10   w-full relative">
           <div className="flex flex-col lg:flex-row gap-18 items-start">
             {/* Left: Category Buttons */}
             <div className="w-full lg:w-[350px] flex flex-col gap-8 flex-shrink-0">
