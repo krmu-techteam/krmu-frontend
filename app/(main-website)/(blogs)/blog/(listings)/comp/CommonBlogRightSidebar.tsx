@@ -3,18 +3,16 @@ import Link from "next/link";
 import CommonBlogSidebarSearchField from "./CommonBlogSidebarSearchField";
 import NoPaperForm from "./NoPaperForm";
 
-const CommonBlogRightSidebar = async () => {
-  const recentPosts = await getRecentPosts();
+const CommonBlogRightSidebar = () => {
+  // const recentPosts = await getRecentPosts();
 
   return (
     <aside className="bg-[url(/blogs/sidebarBanner.webp)] bg-cover bg-center bg-no-repeat p-5 overflow-hidden rounded-xl">
-      <div>
-        <CommonBlogSidebarSearchField />
-      </div>
+      <div>{/* <CommonBlogSidebarSearchField /> */}</div>
       <div>
         <h4 className="text-white my-5 text-[32px]">Recent Posts</h4>
       </div>
-      <section className="min-h-[255px] max-h-[255px] overflow-auto scroll-style-1 mb-[50px]">
+      {/* <section className="min-h-[255px] max-h-[255px] overflow-auto scroll-style-1 mb-[50px]">
         {recentPosts &&
           recentPosts?.map((post, i) => {
             return (
@@ -31,9 +29,10 @@ const CommonBlogRightSidebar = async () => {
                 />
               </article>
             );
-          })}
+          })
+          }
       </section>
-      <NoPaperForm />
+      <NoPaperForm /> */}
     </aside>
   );
 };

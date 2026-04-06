@@ -5,7 +5,6 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import NewsAndEventsCards from "./comp/NewsAndEventsCards";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("news-and-events");
@@ -83,7 +82,7 @@ const page = async () => {
       </div>
       <div className="max-w-[1664px] mx-auto w-full py-10">
         <div className="border-t border-[#716d6c] pt-12">
-          <NewsAndEventsCards />
+          {/* <NewsAndEventsCards /> */}
         </div>
       </div>
     </section>

@@ -41,10 +41,6 @@ const page = async ({ params }: Props) => {
 
   if (!currentSingleBlog?.title) return notFound();
 
-  // const schemaScript = singleBlogData[0]?.acf?.krmscript;
-
-  // const featuredImageUrl =
-  //   currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
 
   const authorSlug = currentSingleBlog?._embedded?.author?.[0]?.slug;
   console.log("currentSingleBlog",currentSingleBlog)
@@ -85,28 +81,10 @@ const page = async ({ params }: Props) => {
     dateModified: `${currentSingleBlog?.modified_gmt}Z`,
   });
 
-  // const personJsonLd = createPersonSchema({
-  //   name: "KRMU Team",
-  //   url: "https://www.krmangalam.edu.in/faculty/dr-john-doe/",
-  //   image:
-  //     "https://www.krmangalam.edu.in/wp-content/uploads/2026/01/john-doe.webp",
-  // });
-
   return (
     <>
-      {/* {schemaScript && (
-        <Script
-          id="yoast-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: schemaScript
-              .replace(/<script[^>]*>/g, "")
-              .replace(/<\/script>/g, ""), 
-          }}
-          strategy="beforeInteractive"
-        />
-      )} */}
-      <Script
+      <p>Single Blog</p>
+      {/* <Script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: faqJsonLd }}
       />
@@ -117,9 +95,9 @@ const page = async ({ params }: Props) => {
       <Script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: articleJsonLd }}
-      />
+      /> */}
 
-      <SingleBlogHero
+      {/* <SingleBlogHero
         title={currentSingleBlog?.title?.rendered}
         imgUrl={featuredImageUrl ?? ""}
         authorName={authorName}
@@ -128,7 +106,7 @@ const page = async ({ params }: Props) => {
         imgId={authorImageId}
         authorSlug={authorSlug}
       />
-      <SingleBlogLayout content={currentSingleBlog?.content?.rendered} />
+      <SingleBlogLayout content={currentSingleBlog?.content?.rendered} /> */}
     </>
   );
 };

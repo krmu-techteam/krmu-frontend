@@ -72,17 +72,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const page = async ({ params }: Props) => {
-  const { slug } = await params; // ✅ await params
+// const page = async ({ params }: Props) => {
+const page = async () => {
+  // const { slug } = await params; // ✅ await params
 
-  const singleNewsAndEventsData: NewsEventItem[] =
-    await getSingleNewsAndEventsWP(slug);
+  // const singleNewsAndEventsData: NewsEventItem[] =
+  //   await getSingleNewsAndEventsWP(slug);
 
   // const singleNewsAndEventsData = await getSingleNewsAndEvents(slug);
 
-  const singleNewsEvents = singleNewsAndEventsData.find(
-    (items) => items.slug === slug,
-  );
+  // const singleNewsEvents = singleNewsAndEventsData.find(
+  //   (items) => items.slug === slug,
+  // );
 
   // // Return 404 if either is missing
   // if (!singleNewsEvents) {
@@ -91,7 +92,8 @@ const page = async ({ params }: Props) => {
 
   return (
     <>
-      {singleNewsEvents && (
+    <p>News and Events</p>
+      {/* {singleNewsEvents && (
         <NewsEventsHero title={singleNewsEvents?.title?.rendered} />
       )}
       {singleNewsEvents && (
@@ -99,7 +101,7 @@ const page = async ({ params }: Props) => {
           content={singleNewsEvents?.content?.rendered}
           bgSlideImageIds={singleNewsEvents?.acf?.event_images}
         />
-      )}
+      )} */}
     </>
   );
 };
