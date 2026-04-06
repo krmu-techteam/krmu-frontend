@@ -249,12 +249,12 @@ export default async function HomePage() {
             visitexplorebtns={visitExploreData.visitexplorebtn}
           />
         )}
-        {/* {eventsNewsData && (
+        {eventsNewsData && (
           <EventsAndNews
             title={eventsNewsData?.title}
             newsandeventbtn={eventsNewsData?.newsandeventbtn}
           />
-        )} */}
+        )}
         {/* <PioneerExcellence /> */}
       </main>
     </>

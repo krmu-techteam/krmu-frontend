@@ -2,36 +2,46 @@ import { krmBlogURL } from "@/app/constant";
 import { AuthorResponse } from "@/lib/types/blogs/auth-blogs";
 
 export async function getAuthInfoBySlug(authSlug: string = "") {
-  const res = await fetch(
-    `https://krmangalam.edu.in/blog/wp-json/wp/v2/users?slug=${authSlug}&_fields=id,name,slug,acf.profile_image,acf`,
-    {
-      next: {
-        revalidate: 3600,
-        tags: ["blogs"],
-      },
-    }
-  );
+  try {
+    const res = await fetch(
+      `https://krmangalam.edu.in/blog/wp-json/wp/v2/users?slug=${authSlug}&_fields=id,name,slug,acf.profile_image,acf`,
+      {
+        next: {
+          revalidate: 3600,
+          tags: ["blogs"],
+        },
+      }
+    );
 
-  if (!res.ok) throw new Error("Failed to fetch Author Info");
+    if (!res.ok) throw new Error("Failed to fetch Author Info");
 
-  const json: AuthorResponse = await res.json();
+    const json: AuthorResponse = await res.json();
 
-  return json;
+    return json;
+  } catch (error) {
+    console.error("Author info fetch error:", error);
+    return [];
+  }
 }
 
 // lib/api/blogs/author-blog.ts
 export async function getPostsByAuthId(authId: number, page: number = 1) {
-  const res = await fetch(
-    `${krmBlogURL}/wp-json/wp/v2/posts?author=${authId}&per_page=6&page=${page}&_fields=id,title,featured_media,date,slug`,
-    {
-      next: { revalidate: 3600, tags: ["blogs"] },
-    }
-  );
+  try {
+    const res = await fetch(
+      `${krmBlogURL}/wp-json/wp/v2/posts?author=${authId}&per_page=6&page=${page}&_fields=id,title,featured_media,date,slug`,
+      {
+        next: { revalidate: 3600, tags: ["blogs"] },
+      }
+    );
 
-  if (!res.ok) throw new Error("Failed to fetch posts by author ID");
+    if (!res.ok) throw new Error("Failed to fetch posts by author ID");
 
-  const json = await res.json();
-  return json;
+    const json = await res.json();
+    return json;
+  } catch (error) {
+    console.error("Posts by author fetch error:", error);
+    return [];
+  }
 }
 
 // export async function getPostsByAuthId(authId: number) {
