@@ -335,7 +335,11 @@ export async function isCustomPage(slug: string = ""): Promise<CustomPage[]> {
   try {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/custom-pages?filters[slug][$eq]=${slug}&fields[0]=slug&fields[1]=enable_disable_custom_page&status=published&locale[0]=en`,
+<<<<<<< HEAD
+      {next: { revalidate: 3600 }}
+=======
       { cache: "no-cache" }
+>>>>>>> 99befcb590b70b14fa4c7eaf2ae0eeab4b3dc6ab
     );
     if (!res.ok) return [];
     const json: CustomPageResponse = await res.json();
