@@ -335,7 +335,7 @@ export async function isCustomPage(slug: string = ""): Promise<CustomPage[]> {
   try {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/custom-pages?filters[slug][$eq]=${slug}&fields[0]=slug&fields[1]=enable_disable_custom_page&status=published&locale[0]=en`,
-      {cache:"no-cache"}
+      { cache: "no-cache" }
     );
     if (!res.ok) return [];
     const json: CustomPageResponse = await res.json();
@@ -560,12 +560,12 @@ export function createCourseSchema(data: CourseSchemaData) {
       courseWorkload: instance.courseWorkload,
       courseSchedule: instance.courseSchedule
         ? {
-            "@type": "Schedule",
-            duration: instance.courseSchedule.duration,
-            repeatFrequency: instance.courseSchedule.repeatFrequency,
-            repeatCount: instance.courseSchedule.repeatCount,
-            startDate: instance.courseSchedule.startDate,
-          }
+          "@type": "Schedule",
+          duration: instance.courseSchedule.duration,
+          repeatFrequency: instance.courseSchedule.repeatFrequency,
+          repeatCount: instance.courseSchedule.repeatCount,
+          startDate: instance.courseSchedule.startDate,
+        }
         : undefined,
     })),
   };
@@ -648,14 +648,14 @@ export function createPersonSchema(data: PersonSchemaProps) {
   return JSON.stringify(schema);
 }
 
-interface WebsiteSchemaProps{
-  name:string,
-  alternateName?:string;
+interface WebsiteSchemaProps {
+  name: string,
+  alternateName?: string;
   url: string,
   searchPath?: string,
 }
 
-export const createWebsiteSchema = ({name,alternateName, url, searchPath}: WebsiteSchemaProps) => {
+export const createWebsiteSchema = ({ name, alternateName, url, searchPath }: WebsiteSchemaProps) => {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Website",
@@ -671,7 +671,7 @@ export const createWebsiteSchema = ({name,alternateName, url, searchPath}: Websi
   return JSON.stringify(schema);
 }
 
- interface ContactPoint {
+interface ContactPoint {
   telephone: string;
   contactType: string;
   contactOption?: string;
@@ -708,13 +708,13 @@ export const createOrganizationSchema = ({
     logo: cleanUrl(logo),
     contactPoint: contactPoint
       ? {
-          "@type": "ContactPoint",
-          telephone: contactPoint.telephone,
-          contactType: contactPoint.contactType,
-          contactOption: contactPoint.contactOption || "TollFree",
-          areaServed: contactPoint.areaServed || "IN",
-          availableLanguage: contactPoint.availableLanguage || "en",
-        }
+        "@type": "ContactPoint",
+        telephone: contactPoint.telephone,
+        contactType: contactPoint.contactType,
+        contactOption: contactPoint.contactOption || "TollFree",
+        areaServed: contactPoint.areaServed || "IN",
+        availableLanguage: contactPoint.availableLanguage || "en",
+      }
       : undefined,
     sameAs: sameAs.map(cleanUrl),
   };
@@ -722,7 +722,7 @@ export const createOrganizationSchema = ({
   return JSON.stringify(schema, null, 2);
 };
 
-interface CollageOrUniversitySchemaProps{
+interface CollageOrUniversitySchemaProps {
   name: string;
   alternateName?: string;
   url: string;
@@ -730,7 +730,7 @@ interface CollageOrUniversitySchemaProps{
   sameAs: string[];
 }
 
-export const createCollageOrUniversitySchema = ({name, alternateName, url, logo, sameAs=[]}: CollageOrUniversitySchemaProps) => {
+export const createCollageOrUniversitySchema = ({ name, alternateName, url, logo, sameAs = [] }: CollageOrUniversitySchemaProps) => {
   const cleanUrl = (val: string) => val.replace(/\s+/g, "");
   const schema = {
     "@context": "https://schema.org/",
