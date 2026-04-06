@@ -24,7 +24,6 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
 
   const blog = await getSingleBlogDataBySlug(slug);
-  console.log("blog data", blog)
 
   if (!blog || !blog[0]?.yoast_head_json) return {};
 
@@ -41,9 +40,7 @@ const page = async ({ params }: Props) => {
 
   if (!currentSingleBlog?.title) return notFound();
 
-
   const authorSlug = currentSingleBlog?._embedded?.author?.[0]?.slug;
-  console.log("currentSingleBlog",currentSingleBlog)
 
   const featuedImageId = currentSingleBlog?.featured_media;
   const featuredImageUrl = await getBlogImageById(featuedImageId);
@@ -83,8 +80,7 @@ const page = async ({ params }: Props) => {
 
   return (
     <>
-      <p>Single Blog</p>
-      {/* <Script
+      <Script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: faqJsonLd }}
       />
@@ -95,9 +91,9 @@ const page = async ({ params }: Props) => {
       <Script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: articleJsonLd }}
-      /> */}
+      />
 
-      {/* <SingleBlogHero
+      <SingleBlogHero
         title={currentSingleBlog?.title?.rendered}
         imgUrl={featuredImageUrl ?? ""}
         authorName={authorName}
@@ -106,7 +102,7 @@ const page = async ({ params }: Props) => {
         imgId={authorImageId}
         authorSlug={authorSlug}
       />
-      <SingleBlogLayout content={currentSingleBlog?.content?.rendered} /> */}
+      <SingleBlogLayout content={currentSingleBlog?.content?.rendered} />
     </>
   );
 };

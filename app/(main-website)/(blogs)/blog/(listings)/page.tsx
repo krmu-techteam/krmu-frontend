@@ -12,7 +12,8 @@ type Props = {
 // ---------------------------
 export async function generateMetadata() {
   const pageInfo = await getBlogPageInfo();
-  const seo = pageInfo.blog_seo;
+  const seo = pageInfo?.blog_seo;
+
 
   if (!seo) return {};
 

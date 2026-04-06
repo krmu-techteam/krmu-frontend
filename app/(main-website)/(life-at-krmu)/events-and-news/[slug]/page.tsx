@@ -1,4 +1,3 @@
-import React from "react";
 import NewsEventsHero from "../comp/NewsEventsHero";
 import NewsEventsImageContent from "../comp/NewsEventsImageContent";
 import {
@@ -23,7 +22,7 @@ type NewsEventItem = {
   acf: {
     event_images: number[];
   };
- yoast_head_json: {
+  yoast_head_json: {
     title: string;
     description?: string;
     robots?: {
@@ -64,26 +63,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
     },
     robots: {
-    index: singleNewsEvents?.yoast_head_json?.robots?.index ?? true,
-    follow: singleNewsEvents?.yoast_head_json?.robots?.follow ?? true,
-  },
+      index: singleNewsEvents?.yoast_head_json?.robots?.index ?? true,
+      follow: singleNewsEvents?.yoast_head_json?.robots?.follow ?? true,
+    },
 
     // ✅ Twitter Card
   };
 }
 
-// const page = async ({ params }: Props) => {
-const page = async () => {
-  // const { slug } = await params; // ✅ await params
+const page = async ({ params }: Props) => {
+  const { slug } = await params; // ✅ await params
 
-  // const singleNewsAndEventsData: NewsEventItem[] =
-  //   await getSingleNewsAndEventsWP(slug);
+  const singleNewsAndEventsData: NewsEventItem[] =
+    await getSingleNewsAndEventsWP(slug);
 
   // const singleNewsAndEventsData = await getSingleNewsAndEvents(slug);
 
-  // const singleNewsEvents = singleNewsAndEventsData.find(
-  //   (items) => items.slug === slug,
-  // );
+  const singleNewsEvents = singleNewsAndEventsData.find(
+    (items) => items.slug === slug,
+  );
 
   // // Return 404 if either is missing
   // if (!singleNewsEvents) {
@@ -92,8 +90,7 @@ const page = async () => {
 
   return (
     <>
-    <p>News and Events</p>
-      {/* {singleNewsEvents && (
+      {singleNewsEvents && (
         <NewsEventsHero title={singleNewsEvents?.title?.rendered} />
       )}
       {singleNewsEvents && (
@@ -101,7 +98,7 @@ const page = async () => {
           content={singleNewsEvents?.content?.rendered}
           bgSlideImageIds={singleNewsEvents?.acf?.event_images}
         />
-      )} */}
+      )}
     </>
   );
 };
