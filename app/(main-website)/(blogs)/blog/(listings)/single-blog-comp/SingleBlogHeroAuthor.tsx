@@ -39,34 +39,34 @@ const SingleBlogHeroAuthor = ({
   //       {/* <span className="author_designation">{desg}</span> */}
   //     </div>
   //   </div>
-    
+
   // );
-return (
-  <div className="single_blog_author_container text-center">
-    
-    <div className="single_blog_author_image">
-      <Image
-        src="/blogs/blog-author.webp"
-        width={50}
-        height={50}
-        alt="Author"
-        className="author_img"
-      />
-    </div>
+  return (
+    <div className="single_blog_author_container text-center">
 
-    <div className="single_blog_author_info">
-     <span className="author_name text-black lg:text-white">
-  KRMU Team
-</span>
+      <div className="single_blog_author_image">
+        <Image
+          src="/blogs/blog-author.webp"
+          width={50}
+          height={50}
+          alt="Author"
+          className="author_img"
+        />
+      </div>
 
-      {/* Optional */}
-      {/* <span className="author_designation">
+      <div className="single_blog_author_info">
+        <span className="author_name text-black lg:text-white">
+          KRMU Team
+        </span>
+
+        {/* Optional */}
+        {/* <span className="author_designation">
         Content Team
       </span> */}
-    </div>
+      </div>
 
-  </div>
-);
+    </div>
+  );
 
 };
 
