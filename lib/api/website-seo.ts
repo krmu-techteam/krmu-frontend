@@ -1,18 +1,23 @@
 import { FETCH_STRAPI_URL } from "@/app/constant";
 ///////////////////// HOME PAGE SEO /////////////////////////////////
-export async function HomePageSEO(): Promise<HomepageSeoResponse["data"]> {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/home-page?populate[seofields][populate][shareImage][fields][0]=url`,
-    {
-      next: {
-        revalidate: 30,
-      },
-    }
-  );
-  if (!res.ok) throw new Error("Failed to fetch homepage seo");
+export async function HomePageSEO(): Promise<HomepageSeoResponse["data"] | null> {
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/home-page?populate[seofields][populate][shareImage][fields][0]=url`,
+      {
+        next: {
+          revalidate: 30,
+        },
+      }
+    );
+    if (!res.ok) throw new Error("Failed to fetch homepage seo");
 
-  const json = await res.json();
-  return json.data;
+    const json = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Home page SEO fetch error:", error);
+    return null;
+  }
 }
 
 // =======================
@@ -39,17 +44,22 @@ export type HomepageSeoResponse = {
 export async function getSchoolSEO(
   slug: string
 ): Promise<SchoolSEOResponse["data"]> {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/schools?filters[urlslug][$eq]=${slug}&fields[0]=schoolname&populate[school_seo][populate][shareImage][fields][0]=url`,
-    {
-      next: {
-        revalidate: 3600,
-      },
-    }
-  );
-  if (!res.ok) throw new Error("Failed to fetch School Programme SEO");
-  const json: SchoolSEOResponse = await res.json();
-  return json.data;
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/schools?filters[urlslug][$eq]=${slug}&fields[0]=schoolname&populate[school_seo][populate][shareImage][fields][0]=url`,
+      {
+        next: {
+          revalidate: 3600,
+        },
+      }
+    );
+    if (!res.ok) throw new Error("Failed to fetch School SEO");
+    const json: SchoolSEOResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("School SEO fetch error:", error);
+    return [];
+  }
 }
 
 export interface SchoolSEOResponse {

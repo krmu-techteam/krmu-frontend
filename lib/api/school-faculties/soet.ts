@@ -2,7 +2,6 @@
 
 import { SchoolFacultiesType } from "@/lib/types/common";
 
-
 export const soetFaculties: SchoolFacultiesType[] = [
   {
     id: 10822,
@@ -18,6 +17,66 @@ export const soetFaculties: SchoolFacultiesType[] = [
     },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Pankaj-Agarwal-DEAN-SOET.png",
+  },
+  {
+    id: 113886,
+    slug: "ms-neha-jhakra",
+    title: {
+      rendered: "Ms. Neha Jhakra",
+    },
+    featured_media: 6624,
+    acf: {
+      "staff-qualification": "M.Sc. in Computer Science ",
+      staff_designation: "Teaching Assistant",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Ms.-Neha-Jhakra.png.jpg",
+  },
+  {
+    id: 113884,
+    slug: "mr-ankit-srivastava",
+    title: {
+      rendered: "Mr. Ankit Srivastava",
+    },
+    featured_media: 6624,
+    acf: {
+      "staff-qualification": "Phd (Pursuing from NIT Agartala)",
+      staff_designation: "Assistant Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Ankit-Srivastava.png.jpg",
+  },
+  {
+    id: 113880,
+    slug: "dr-shaheen-usmani",
+    title: {
+      rendered: "Dr. Shaheen Usmani",
+    },
+    featured_media: 6624,
+    acf: {
+      "staff-qualification": "Ph.D, M.Tech, B.E.",
+      staff_designation: "Assistant Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr-Shaheen-Usmani.png.jpg",
+  },
+  {
+    id: 113874,
+    slug: "mr-amit-kumar-singh",
+    title: {
+      rendered: "Mr. Amit Kumar Singh",
+    },
+    featured_media: 6624,
+    acf: {
+      "staff-qualification": "Ph.D. Pursuing ( MNNIT Allahabad)",
+      staff_designation: "Assistant Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Amit-Kumar-Singh.png.jpg",
   },
   {
     id: 10848,

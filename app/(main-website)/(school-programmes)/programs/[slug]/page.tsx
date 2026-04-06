@@ -125,10 +125,9 @@ const page = async ({ params }: Props) => {
   const allSchoolProgrammeData = await getSchoolProgrammeData(slug);
   const allSinglePHDProgramme = await getPHDProgramme(slug);
   const seoData = await getSchoolProgrammeSEO(slug);
-  const seo = seoData[0]?.SEO;
+  const seo = seoData?.[0]?.SEO;
   const tags = seo?.tags;
-  // const tagsArray = tags ? tags.split(",").map((tag) => tag.trim()) : [];
-  const tagsArray = tags ? tags.split(",").map((tag) => tag.trim()) : [];
+  const tagsArray = tags ? tags.split(",").map((tag: string) => tag.trim()) : [];
 
   const singleSchoolProgramme = allSchoolProgrammeData.find(
     (programme) => programme.programmeslug === slug,
@@ -212,7 +211,7 @@ const page = async ({ params }: Props) => {
 
   const courseSchema = createCourseSchema({
   name: schemaTitle,
-  description: seo.metaDescription,
+    description: seo?.metaDescription || "",
   provider: {
     name: "K.R. Mangalam University",
     url: `https://www.krmangalam.edu.in/programs/${schemaSlug}`,

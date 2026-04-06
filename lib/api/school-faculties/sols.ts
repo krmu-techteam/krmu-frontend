@@ -244,4 +244,19 @@ export const solsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Niharika.png.jpg",
   },
+  {
+    id: 113888,
+    slug: "dr-parveen-bondwal",
+    title: {
+      rendered: "Dr. Parveen Bondwal",
+    },
+    featured_media: 1024,
+    acf: {
+      "staff-qualification": "B.A.LL.B, LL.M, Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1043],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Parveen-Bondwal.png.jpg",
+  },
 ];
