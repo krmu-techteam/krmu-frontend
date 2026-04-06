@@ -16,14 +16,14 @@ const HeaderWrapper = async () => {
   const headerAssets = await getPageAssets();
 
   const headerMenus = headerMenuData?.headermenus;
-  const { css_in_header } = headerAssets;
+  const { css_in_header } = headerAssets || {};
 
   return (
     <>
       <Header
-        topbarmenu={topbarmenus}
-        topbarsociallinks={topbarsociallinks}
-        headerMenus={headerMenus}
+        topbarmenu={topbarmenus || []}
+        topbarsociallinks={topbarsociallinks || []}
+        headerMenus={headerMenus || []}
       />
       {css_in_header && (
         <style dangerouslySetInnerHTML={{ __html: css_in_header }} />
