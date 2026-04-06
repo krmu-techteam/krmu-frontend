@@ -27,7 +27,7 @@ export async function getFacultyBySlug(slug: string = "") {
   const res = await fetch(
     `${KRMUWordUrl}/wp-json/wp/v2/faculty?slug=${slug}&_fields=content,slug,title,id,yoast_head_json,featured_media,acf`,
     {
-      cache: "no-store",  
+      next: { revalidate: 3600 },
     }
   );
   if (!res.ok) throw new Error("Failed to fetch Faculty");

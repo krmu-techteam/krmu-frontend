@@ -9,7 +9,7 @@ export async function getDownloadProspectusSetting(): Promise<
   const res = await fetch(
     `${FETCH_STRAPI_URL}/api/controller-setting?fields[0]=download_prospectus_enable_disable&fields[1]=programme_handbook_enable_disable&fields[2]=open_elective_enable_disable&fields[3]=minor_enable_disable`,
     {
-      cache:"no-cache"
+      next: { revalidate: 3600 }
     }
   );
   if (!res.ok) throw new Error("Failed to fetch Donwload Prospectus");
@@ -23,7 +23,7 @@ export async function getPageAssets(): Promise<
   const res = await fetch(
     `${FETCH_STRAPI_URL}/api/page-asset?fields[0]=css_in_header&fields[1]=js_in_footer`,
     {
-     cache:"no-cache"
+     next: { revalidate: 3600 }
     }
   );
   if (!res.ok) throw new Error("Failed to fetch Donwload Prospectus");
