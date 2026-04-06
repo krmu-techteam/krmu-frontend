@@ -17,77 +17,107 @@ import { HeaderMenuResponse } from "../types/header-menu";
 import { BlogImageIdResponse } from "../types/blogs/single-blog";
 
 export async function getAlumniData(): Promise<AlumniApiResponse["data"]> {
-  const res = await fetch(`${FETCH_STRAPI_URL}/api/alumnis?populate=*`, {
-      cache:"no-cache"
+  try {
+    const res = await fetch(`${FETCH_STRAPI_URL}/api/alumnis?populate=*`, {
+      next: { revalidate: 3600 }
     },);
 
-  if (!res.ok) throw new Error("Failed to fetch Alumni Data");
+    if (!res.ok) throw new Error("Failed to fetch Alumni Data");
 
-  const json: AlumniApiResponse = await res.json();
-  return json.data;
+    const json: AlumniApiResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Alumni data fetch error:", error);
+    return [];
+  }
 }
 export async function getFacilityData(): Promise<FacilityAPIResponse["data"]> {
-  const res = await fetch(`${FETCH_STRAPI_URL}/api/facilities?populate=*`, {
-      cache:"no-cache"
+  try {
+    const res = await fetch(`${FETCH_STRAPI_URL}/api/facilities?populate=*`, {
+      next: { revalidate: 3600 }
     },);
 
-  if (!res.ok) throw new Error("Failed to fetch Alumni Data");
+    if (!res.ok) throw new Error("Failed to fetch Facility Data");
 
-  const json: FacilityAPIResponse = await res.json();
-  return json.data;
+    const json: FacilityAPIResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Facility data fetch error:", error);
+    return [];
+  }
 }
 
 export async function getTestimonialsData(): Promise<TestimonialItem[]> {
-  const res = await fetch(`${FETCH_STRAPI_URL}/api/testimonials?populate=*`, {
-      cache:"no-cache"
+  try {
+    const res = await fetch(`${FETCH_STRAPI_URL}/api/testimonials?populate=*`, {
+      next: { revalidate: 3600 }
     },);
-  if (!res.ok) throw new Error("Failed to fetch Alumni Data");
+    if (!res.ok) throw new Error("Failed to fetch Testimonials Data");
 
-  const json: TestimonialResponse = await res.json();
-  return json.data;
+    const json: TestimonialResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Testimonials data fetch error:", error);
+    return [];
+  }
 }
 
 export async function getNewsAndEventsData(): Promise<
   NewsAndEventResponse["data"]
 > {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/news-and-events?populate=*`,
-    {
-      cache:"no-cache"
-    },
-  );
-  if (!res.ok) throw new Error("Failed to fetch Alumni Data");
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/news-and-events?populate=*`,
+      {
+        next: { revalidate: 3600 }
+      },
+    );
+    if (!res.ok) throw new Error("Failed to fetch News and Events Data");
 
-  const json: NewsAndEventResponse = await res.json();
-  return json.data;
+    const json: NewsAndEventResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("News and events fetch error:", error);
+    return [];
+  }
 }
 
 // http://localhost:1337/api/topbar-menu?populate[TopbarMenuItems]=true&populate[topbarsociallinks][populate][socialicon]=true&populate[topbarsociallinks][fields][0]=url
 
 export async function getTopbarData(): Promise<TOPBARResponse["data"]> {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/topbar-menu?populate[TopbarMenuItems]=true&populate[topbarsociallinks][populate][socialicon]=true&populate[topbarsociallinks][fields][0]=url`,
-    {
-      cache:"no-cache"
-    },
-  );
-  if (!res.ok) throw new Error("Failed to fetch Topbar Data");
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/topbar-menu?populate[TopbarMenuItems]=true&populate[topbarsociallinks][populate][socialicon]=true&populate[topbarsociallinks][fields][0]=url`,
+      {
+        next: { revalidate: 3600 }
+      },
+    );
+    if (!res.ok) throw new Error("Failed to fetch Topbar Data");
 
-  const json: TOPBARResponse = await res.json();
-  return json.data;
+    const json: TOPBARResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Topbar data fetch error:", error);
+    return {} as any;
+  }
 }
 
 export async function getMainMenu() {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/main-menu?populate[MainMenuItems][on][menu.dropdown-menu][fields][0]=title&populate[MainMenuItems][on][menu.dropdown-menu][populate][menu_sections][populate]=*&populate[MainMenuItems][on][menu.dropdown-menu][populate][menuimg][populate]=*&populate[MainMenuItems][on][menu.menu-button][populate]=*&populate[MainMenuItems][on][menu.menu-links][populate]=*`,
-    {
-      cache:"no-cache"
-    },
-  );
-  if (!res.ok) throw new Error("Failed to fetch Topbar Data");
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/main-menu?populate[MainMenuItems][on][menu.dropdown-menu][fields][0]=title&populate[MainMenuItems][on][menu.dropdown-menu][populate][menu_sections][populate]=*&populate[MainMenuItems][on][menu.dropdown-menu][populate][menuimg][populate]=*&populate[MainMenuItems][on][menu.menu-button][populate]=*&populate[MainMenuItems][on][menu.menu-links][populate]=*`,
+      {
+        next: { revalidate: 3600 }
+      },
+    );
+    if (!res.ok) throw new Error("Failed to fetch Main Menu Data");
 
-  const json: MainMenuResponse = await res.json();
-  return json.data;
+    const json: MainMenuResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Main menu data fetch error:", error);
+    return [];
+  }
 }
 
 //   {
@@ -117,16 +147,21 @@ export async function getMainMenu() {
 // }
 
 export async function getHeaderMenu(): Promise<HeaderMenuResponse["data"]> {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/header-menu-temp?populate[headermenus][on][temp-menus.academic-menu][fields][0]=title&populate[headermenus][on][temp-menus.academic-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][academicmenu][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][discovermenu][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][acadcounter][populate]=*&populate[headermenus][on][menu.menu-links][populate]=*&populate[headermenus][on][menu.menu-button][populate]=*&populate[headermenus][on][temp-menus.admissions][fields][0]=title&populate[headermenus][on][temp-menus.admissions][fields][1]=backgroundimagetext&populate[headermenus][on][temp-menus.admissions][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][enrollnow][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][scholarships][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][visitus][populate]=*&populate[headermenus][on][temp-menus.placement-menu][fields][0]=title&populate[headermenus][on][temp-menus.placement-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.placement-menu][populate][placementcounter][populate]=*&populate[headermenus][on][temp-menus.placement-menu][populate][placement][populate]=*&populate[headermenus][on][temp-menus.research-menu][fields][0]=title&populate[headermenus][on][temp-menus.research-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.research-menu][populate][researchcounter][populate]=*&populate[headermenus][on][temp-menus.research-menu][populate][research][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][fields][0]=title&populate[headermenus][on][temp-menus.life-at-krmu][fields][1]=backgroundimagetext&populate[headermenus][on][temp-menus.life-at-krmu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][populate][lifeatkrmu1][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][populate][lfeatkrmu2][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][fields][0]=title&populate[headermenus][on][temp-menus.about-us-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][aboutuscounter][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][overview][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][administration][populate]=*`,
-    {
-      cache:"no-cache"
-    },
-  );
-  if (!res.ok) throw new Error("Failed to fetch Topbar Data");
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/header-menu-temp?populate[headermenus][on][temp-menus.academic-menu][fields][0]=title&populate[headermenus][on][temp-menus.academic-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][academicmenu][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][discovermenu][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][acadcounter][populate]=*&populate[headermenus][on][menu.menu-links][populate]=*&populate[headermenus][on][menu.menu-button][populate]=*&populate[headermenus][on][temp-menus.admissions][fields][0]=title&populate[headermenus][on][temp-menus.admissions][fields][1]=backgroundimagetext&populate[headermenus][on][temp-menus.admissions][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][enrollnow][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][scholarships][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][visitus][populate]=*&populate[headermenus][on][temp-menus.placement-menu][fields][0]=title&populate[headermenus][on][temp-menus.placement-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.placement-menu][populate][placementcounter][populate]=*&populate[headermenus][on][temp-menus.placement-menu][populate][placement][populate]=*&populate[headermenus][on][temp-menus.research-menu][fields][0]=title&populate[headermenus][on][temp-menus.research-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.research-menu][populate][researchcounter][populate]=*&populate[headermenus][on][temp-menus.research-menu][populate][research][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][fields][0]=title&populate[headermenus][on][temp-menus.life-at-krmu][fields][1]=backgroundimagetext&populate[headermenus][on][temp-menus.life-at-krmu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][populate][lifeatkrmu1][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][populate][lfeatkrmu2][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][fields][0]=title&populate[headermenus][on][temp-menus.about-us-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][aboutuscounter][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][overview][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][administration][populate]=*`,
+      {
+        next: { revalidate: 3600 }
+      },
+    );
+    if (!res.ok) throw new Error("Failed to fetch Header Menu Data");
 
-  const json: HeaderMenuResponse = await res.json();
-  return json.data;
+    const json: HeaderMenuResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Header menu data fetch error:", error);
+    return {} as any;
+  }
 }
 
 // {
@@ -196,43 +231,58 @@ export async function getHeaderMenu(): Promise<HeaderMenuResponse["data"]> {
 //   }
 // }
 
-export async function getMetaInfo(): Promise<GlobalResponse["data"]> {
-  const res = await fetch(`${FETCH_STRAPI_URL}/api/global?populate=*`, {
-    cache:"no-cache"
-  });
-  if (!res.ok) throw new Error("Failed to fetch Meta info Data");
+export async function getMetaInfo(): Promise<GlobalResponse["data"] | null> {
+  try {
+    const res = await fetch(`${FETCH_STRAPI_URL}/api/global?populate=*`, {
+      next: { revalidate: 3600 }
+    });
+    if (!res.ok) throw new Error("Failed to fetch Meta info Data");
 
-  const json: GlobalResponse = await res.json();
-  return json.data;
+    const json: GlobalResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Meta info data fetch error:", error);
+    return null;
+  }
 }
 
 export async function getAdvisoryBoard(): Promise<
-  AdvisoryBoardResponse["data"]
+  AdvisoryBoardResponse["data"] | null
 > {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/advisory-board?populate[advisoryboard][fields][0]=title&populate[advisoryboard][fields][1]=advisoryboardinfo&populate[advisoryboard][populate][advisoryimage]=true`,
-    {
-      cache:"no-cache"
-    },
-  );
-  if (!res.ok) throw new Error("Failed to fetch Meta info Data");
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/advisory-board?populate[advisoryboard][fields][0]=title&populate[advisoryboard][fields][1]=advisoryboardinfo&populate[advisoryboard][populate][advisoryimage]=true`,
+      {
+        next: { revalidate: 3600 }
+      },
+    );
+    if (!res.ok) throw new Error("Failed to fetch Advisory Board Data");
 
-  const json: AdvisoryBoardResponse = await res.json();
-  return json.data;
+    const json: AdvisoryBoardResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Advisory board data fetch error:", error);
+    return null;
+  }
 }
 
 export async function getSchoolStudentAchievements(
   cat: string,
 ): Promise<StudentAchievementResponse["data"]> {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/student-achievements?sort[0]=updatedAt:desc&filters[school_categories][name][$eq]=${cat}&populate[achivementimage]=true&pagination[pageSize]=3&pagination[page]=1&status=published&locale[0]=en`,
-    {
-      cache:"no-cache"
-    },
-  );
-  if (!res.ok) throw new Error("Failed to fetch Student Achievements Data");
-  const json: StudentAchievementResponse = await res.json();
-  return json.data;
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/student-achievements?sort[0]=updatedAt:desc&filters[school_categories][name][$eq]=${cat}&populate[achivementimage]=true&pagination[pageSize]=3&pagination[page]=1&status=published&locale[0]=en`,
+      {
+        next: { revalidate: 3600 }
+      },
+    );
+    if (!res.ok) throw new Error("Failed to fetch Student Achievements Data");
+    const json: StudentAchievementResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Student achievements fetch error:", error);
+    return [];
+  }
 }
 // export async function getEventsByCategories(
 //   cat: string,
@@ -299,16 +349,21 @@ export async function isCustomPage(slug: string = ""): Promise<CustomPage[]> {
 
 export async function getSchoolProgrammeSEO(
   slug: string,
-): Promise<SchoolProgrammeSEOResponse["data"]> {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/school-programmes?filters[programmeslug][$eq]=${slug}&fields[0]=programmeslug&populate[SEO][fields][0]=metaTitle&populate[SEO][fields][1]=metaDescription&populate[SEO][fields][2]=metaKeyword&populate[SEO][fields][3]=canonical&populate[SEO][fields][4]=noIndex&populate[SEO][fields][5]=tags`,
-    {
-     cache:"no-cache"
-    },
-  );
-  if (!res.ok) throw new Error("Failed to fetch School Programme SEO");
-  const json: SchoolProgrammeSEOResponse = await res.json();
-  return json.data;
+): Promise<SchoolProgrammeSEOResponse["data"] | null> {
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/school-programmes?filters[programmeslug][$eq]=${slug}&fields[0]=programmeslug&populate[SEO][fields][0]=metaTitle&populate[SEO][fields][1]=metaDescription&populate[SEO][fields][2]=metaKeyword&populate[SEO][fields][3]=canonical&populate[SEO][fields][4]=noIndex&populate[SEO][fields][5]=tags`,
+      {
+        next: { revalidate: 3600 }
+      },
+    );
+    if (!res.ok) throw new Error("Failed to fetch School Programme SEO");
+    const json: SchoolProgrammeSEOResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("School programme SEO fetch error:", error);
+    return null;
+  }
 }
 
 ///////////////////////////////
@@ -368,22 +423,25 @@ export interface StrapiPagination {
 }
 
 export async function getWordImageById(imgId: number): Promise<string> {
-  if (!imgId) throw new Error("Image ID is required");
+  if (!imgId) return "";
 
-  const res = await fetch(
-    `${KRMUWordUrl}/wp-json/wp/v2/media/${imgId}?_fields=guid`,
-    {
-      cache:"no-cache"
-    },
-  );
+  try {
+    const res = await fetch(
+      `${KRMUWordUrl}/wp-json/wp/v2/media/${imgId}?_fields=guid`,
+      {
+        next: { revalidate: 3600 }
+      },
+    );
 
-  // if (!res.ok) {
-  //   throw new Error("Failed to fetch image by ID");
-  // }
+    if (!res.ok) throw new Error("Failed to fetch image by ID");
 
-  const json: BlogImageIdResponse = await res.json();
+    const json: BlogImageIdResponse = await res.json();
 
-  return json?.guid?.rendered ?? "";
+    return json?.guid?.rendered ?? "";
+  } catch (error) {
+    console.error("Wordpress image fetch error:", error);
+    return "";
+  }
 }
 
 type BlogFaqItem = {
