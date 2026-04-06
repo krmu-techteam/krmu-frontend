@@ -13,6 +13,8 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const category = await getCategoryBySlug(slug);
 
+  if (!category) return {};
+
   const seo = category.yoast_head_json;
 
 

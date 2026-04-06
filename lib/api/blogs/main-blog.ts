@@ -56,42 +56,57 @@ export async function getAllBlogsByPerPageOrCategorySlug(
 }
 
 export async function getRecentPosts() {
-  const res = await fetch(
-    `${krmBlogURL}/wp-json/wp/v2/posts?per_page=20`,
-    { next: { revalidate: 3600, tags: ["blogs"] } }
-  );
-  if (!res.ok) throw new Error("Failed to fetch recent posts");
-  const json: MainBlogResponse = await res.json();
-  return json;
+  try {
+    const res = await fetch(
+      `${krmBlogURL}/wp-json/wp/v2/posts?per_page=20`,
+      { next: { revalidate: 3600, tags: ["blogs"] } }
+    );
+    if (!res.ok) throw new Error("Failed to fetch recent posts");
+    const json: MainBlogResponse = await res.json();
+    return json;
+  } catch (error) {
+    console.error("Recent posts fetch error:", error);
+    return [];
+  }
 }
 
-export async function getBlogPageInfo(): Promise<BlogPageSEOResponse["data"]> {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/blog?fields[0]=Title&populate[blog_seo][populate][shareImage][fields][0]=url`,
-    {
-      next: { revalidate: 3600 },
-    }
-  );
+export async function getBlogPageInfo(): Promise<BlogPageSEOResponse["data"] | null> {
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/blog?fields[0]=Title&populate[blog_seo][populate][shareImage][fields][0]=url`,
+      {
+        next: { revalidate: 3600 },
+      }
+    );
 
-  if (!res.ok) throw new Error("Failed to fetch blog page info");
+    if (!res.ok) throw new Error("Failed to fetch blog page info");
 
-  const json: BlogPageSEOResponse = await res.json();
-  return json.data;
+    const json: BlogPageSEOResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Blog page info fetch error:", error);
+    return null;
+  }
 }
 export async function getBlogCategoryPageInfo(): Promise<
-  BlogCategoryPageSEOResponse["data"]
+  BlogCategoryPageSEOResponse["data"] | null
 > {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/blog-category?fields[0]=Title&populate[blog_category_seo][populate][shareImage][fields][0]=url`,
-    {
-      next: { revalidate: 3600 },
-    }
-  );
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/blog-category?fields[0]=Title&populate[blog_category_seo][populate][shareImage][fields][0]=url`,
+      {
+        next: { revalidate: 3600 },
+      }
+    );
 
-  if (!res.ok) throw new Error("Failed to fetch blog category page info");
+    if (!res.ok) throw new Error("Failed to fetch blog category page info");
 
-  const json: BlogCategoryPageSEOResponse = await res.json();
-  return json.data;
+    const json: BlogCategoryPageSEOResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Blog category page info fetch error:", error);
+    return null;
+  }
 }
 
 // {
