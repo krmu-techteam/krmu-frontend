@@ -19,7 +19,11 @@ import { BlogImageIdResponse } from "../types/blogs/single-blog";
 export async function getAlumniData(): Promise<AlumniApiResponse["data"]> {
   try {
     const res = await fetch(`${FETCH_STRAPI_URL}/api/alumnis?populate=*`, {
+<<<<<<< HEAD
       cache: "no-cache"
+=======
+      next: { revalidate: 3600 }
+>>>>>>> devPrince
     },);
 
     if (!res.ok) throw new Error("Failed to fetch Alumni Data");
@@ -34,7 +38,11 @@ export async function getAlumniData(): Promise<AlumniApiResponse["data"]> {
 export async function getFacilityData(): Promise<FacilityAPIResponse["data"]> {
   try {
     const res = await fetch(`${FETCH_STRAPI_URL}/api/facilities?populate=*`, {
+<<<<<<< HEAD
       cache: "no-cache"
+=======
+      next: { revalidate: 3600 }
+>>>>>>> devPrince
     },);
 
     if (!res.ok) throw new Error("Failed to fetch Facility Data");
@@ -50,14 +58,22 @@ export async function getFacilityData(): Promise<FacilityAPIResponse["data"]> {
 export async function getTestimonialsData(): Promise<TestimonialItem[]> {
   try {
     const res = await fetch(`${FETCH_STRAPI_URL}/api/testimonials?populate=*`, {
+<<<<<<< HEAD
       cache: "no-cache"
+=======
+      next: { revalidate: 3600 }
+>>>>>>> devPrince
     },);
     if (!res.ok) throw new Error("Failed to fetch Testimonials Data");
 
     const json: TestimonialResponse = await res.json();
     return json.data;
   } catch (error) {
+<<<<<<< HEAD
     console.error("Testimonials fetch error:", error);
+=======
+    console.error("Testimonials data fetch error:", error);
+>>>>>>> devPrince
     return [];
   }
 }
@@ -69,7 +85,11 @@ export async function getNewsAndEventsData(): Promise<
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/news-and-events?populate=*`,
       {
+<<<<<<< HEAD
         cache: "no-cache"
+=======
+        next: { revalidate: 3600 }
+>>>>>>> devPrince
       },
     );
     if (!res.ok) throw new Error("Failed to fetch News and Events Data");
@@ -77,19 +97,31 @@ export async function getNewsAndEventsData(): Promise<
     const json: NewsAndEventResponse = await res.json();
     return json.data;
   } catch (error) {
+<<<<<<< HEAD
     console.error("News and events data fetch error:", error);
+=======
+    console.error("News and events fetch error:", error);
+>>>>>>> devPrince
     return [];
   }
 }
 
 // http://localhost:1337/api/topbar-menu?populate[TopbarMenuItems]=true&populate[topbarsociallinks][populate][socialicon]=true&populate[topbarsociallinks][fields][0]=url
 
+<<<<<<< HEAD
 export async function getTopbarData(): Promise<TOPBARResponse["data"] | null> {
+=======
+export async function getTopbarData(): Promise<TOPBARResponse["data"]> {
+>>>>>>> devPrince
   try {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/topbar-menu?populate[TopbarMenuItems]=true&populate[topbarsociallinks][populate][socialicon]=true&populate[topbarsociallinks][fields][0]=url`,
       {
+<<<<<<< HEAD
         cache: "no-cache"
+=======
+        next: { revalidate: 3600 }
+>>>>>>> devPrince
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Topbar Data");
@@ -98,7 +130,11 @@ export async function getTopbarData(): Promise<TOPBARResponse["data"] | null> {
     return json.data;
   } catch (error) {
     console.error("Topbar data fetch error:", error);
+<<<<<<< HEAD
     return null;
+=======
+    return {} as any;
+>>>>>>> devPrince
   }
 }
 
@@ -107,7 +143,11 @@ export async function getMainMenu() {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/main-menu?populate[MainMenuItems][on][menu.dropdown-menu][fields][0]=title&populate[MainMenuItems][on][menu.dropdown-menu][populate][menu_sections][populate]=*&populate[MainMenuItems][on][menu.dropdown-menu][populate][menuimg][populate]=*&populate[MainMenuItems][on][menu.menu-button][populate]=*&populate[MainMenuItems][on][menu.menu-links][populate]=*`,
       {
+<<<<<<< HEAD
         cache: "no-cache"
+=======
+        next: { revalidate: 3600 }
+>>>>>>> devPrince
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Main Menu Data");
@@ -115,7 +155,11 @@ export async function getMainMenu() {
     const json: MainMenuResponse = await res.json();
     return json.data;
   } catch (error) {
+<<<<<<< HEAD
     console.error("Main menu fetch error:", error);
+=======
+    console.error("Main menu data fetch error:", error);
+>>>>>>> devPrince
     return [];
   }
 }
@@ -146,12 +190,20 @@ export async function getMainMenu() {
 //   }
 // }
 
+<<<<<<< HEAD
 export async function getHeaderMenu(): Promise<HeaderMenuResponse["data"] | null> {
+=======
+export async function getHeaderMenu(): Promise<HeaderMenuResponse["data"]> {
+>>>>>>> devPrince
   try {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/header-menu-temp?populate[headermenus][on][temp-menus.academic-menu][fields][0]=title&populate[headermenus][on][temp-menus.academic-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][academicmenu][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][discovermenu][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][acadcounter][populate]=*&populate[headermenus][on][menu.menu-links][populate]=*&populate[headermenus][on][menu.menu-button][populate]=*&populate[headermenus][on][temp-menus.admissions][fields][0]=title&populate[headermenus][on][temp-menus.admissions][fields][1]=backgroundimagetext&populate[headermenus][on][temp-menus.admissions][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][enrollnow][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][scholarships][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][visitus][populate]=*&populate[headermenus][on][temp-menus.placement-menu][fields][0]=title&populate[headermenus][on][temp-menus.placement-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.placement-menu][populate][placementcounter][populate]=*&populate[headermenus][on][temp-menus.placement-menu][populate][placement][populate]=*&populate[headermenus][on][temp-menus.research-menu][fields][0]=title&populate[headermenus][on][temp-menus.research-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.research-menu][populate][researchcounter][populate]=*&populate[headermenus][on][temp-menus.research-menu][populate][research][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][fields][0]=title&populate[headermenus][on][temp-menus.life-at-krmu][fields][1]=backgroundimagetext&populate[headermenus][on][temp-menus.life-at-krmu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][populate][lifeatkrmu1][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][populate][lfeatkrmu2][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][fields][0]=title&populate[headermenus][on][temp-menus.about-us-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][aboutuscounter][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][overview][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][administration][populate]=*`,
       {
+<<<<<<< HEAD
         cache: "no-cache"
+=======
+        next: { revalidate: 3600 }
+>>>>>>> devPrince
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Header Menu Data");
@@ -159,8 +211,13 @@ export async function getHeaderMenu(): Promise<HeaderMenuResponse["data"] | null
     const json: HeaderMenuResponse = await res.json();
     return json.data;
   } catch (error) {
+<<<<<<< HEAD
     console.error("Header menu fetch error:", error);
     return null;
+=======
+    console.error("Header menu data fetch error:", error);
+    return {} as any;
+>>>>>>> devPrince
   }
 }
 
@@ -234,14 +291,22 @@ export async function getHeaderMenu(): Promise<HeaderMenuResponse["data"] | null
 export async function getMetaInfo(): Promise<GlobalResponse["data"] | null> {
   try {
     const res = await fetch(`${FETCH_STRAPI_URL}/api/global?populate=*`, {
+<<<<<<< HEAD
       cache: "no-cache"
+=======
+      next: { revalidate: 3600 }
+>>>>>>> devPrince
     });
     if (!res.ok) throw new Error("Failed to fetch Meta info Data");
 
     const json: GlobalResponse = await res.json();
     return json.data;
   } catch (error) {
+<<<<<<< HEAD
     console.error("Meta info fetch error:", error);
+=======
+    console.error("Meta info data fetch error:", error);
+>>>>>>> devPrince
     return null;
   }
 }
@@ -253,7 +318,11 @@ export async function getAdvisoryBoard(): Promise<
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/advisory-board?populate[advisoryboard][fields][0]=title&populate[advisoryboard][fields][1]=advisoryboardinfo&populate[advisoryboard][populate][advisoryimage]=true`,
       {
+<<<<<<< HEAD
         cache: "no-cache"
+=======
+        next: { revalidate: 3600 }
+>>>>>>> devPrince
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Advisory Board Data");
@@ -261,7 +330,11 @@ export async function getAdvisoryBoard(): Promise<
     const json: AdvisoryBoardResponse = await res.json();
     return json.data;
   } catch (error) {
+<<<<<<< HEAD
     console.error("Advisory board fetch error:", error);
+=======
+    console.error("Advisory board data fetch error:", error);
+>>>>>>> devPrince
     return null;
   }
 }
@@ -273,14 +346,22 @@ export async function getSchoolStudentAchievements(
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/student-achievements?sort[0]=updatedAt:desc&filters[school_categories][name][$eq]=${cat}&populate[achivementimage]=true&pagination[pageSize]=3&pagination[page]=1&status=published&locale[0]=en`,
       {
+<<<<<<< HEAD
         cache: "no-cache"
+=======
+        next: { revalidate: 3600 }
+>>>>>>> devPrince
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Student Achievements Data");
     const json: StudentAchievementResponse = await res.json();
     return json.data;
   } catch (error) {
+<<<<<<< HEAD
     console.error("Student achievements fetch error:", error, cat);
+=======
+    console.error("Student achievements fetch error:", error);
+>>>>>>> devPrince
     return [];
   }
 }
@@ -349,20 +430,33 @@ export async function isCustomPage(slug: string = ""): Promise<CustomPage[]> {
 
 export async function getSchoolProgrammeSEO(
   slug: string,
+<<<<<<< HEAD
 ): Promise<SchoolProgrammeSEOResponse["data"]> {
+=======
+): Promise<SchoolProgrammeSEOResponse["data"] | null> {
+>>>>>>> devPrince
   try {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/school-programmes?filters[programmeslug][$eq]=${slug}&fields[0]=programmeslug&populate[SEO][fields][0]=metaTitle&populate[SEO][fields][1]=metaDescription&populate[SEO][fields][2]=metaKeyword&populate[SEO][fields][3]=canonical&populate[SEO][fields][4]=noIndex&populate[SEO][fields][5]=tags`,
       {
+<<<<<<< HEAD
         cache: "no-cache"
+=======
+        next: { revalidate: 3600 }
+>>>>>>> devPrince
       },
     );
     if (!res.ok) throw new Error("Failed to fetch School Programme SEO");
     const json: SchoolProgrammeSEOResponse = await res.json();
     return json.data;
   } catch (error) {
+<<<<<<< HEAD
     console.error("School programme SEO fetch error:", error, slug);
     return [];
+=======
+    console.error("School programme SEO fetch error:", error);
+    return null;
+>>>>>>> devPrince
   }
 }
 
@@ -429,17 +523,29 @@ export async function getWordImageById(imgId: number): Promise<string> {
     const res = await fetch(
       `${KRMUWordUrl}/wp-json/wp/v2/media/${imgId}?_fields=guid`,
       {
+<<<<<<< HEAD
         cache: "no-cache"
       },
     );
 
     if (!res.ok) return "";
+=======
+        next: { revalidate: 3600 }
+      },
+    );
+
+    if (!res.ok) throw new Error("Failed to fetch image by ID");
+>>>>>>> devPrince
 
     const json: BlogImageIdResponse = await res.json();
 
     return json?.guid?.rendered ?? "";
   } catch (error) {
+<<<<<<< HEAD
     console.error("Word image fetch error:", error, imgId);
+=======
+    console.error("Wordpress image fetch error:", error);
+>>>>>>> devPrince
     return "";
   }
 }

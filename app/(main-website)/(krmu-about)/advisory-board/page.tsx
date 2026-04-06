@@ -56,13 +56,13 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "K.R. Mangalam University",
       images: shareImageUrl
         ? [
-            {
-              url: shareImageUrl,
-              width: 1200,
-              height: 630,
-              alt: seo?.title || "K.R. Mangalam University",
-            },
-          ]
+          {
+            url: shareImageUrl,
+            width: 1200,
+            height: 630,
+            alt: seo?.title || "K.R. Mangalam University",
+          },
+        ]
         : [],
       type: "website",
     },
@@ -87,7 +87,7 @@ const raleway = Raleway({
 const page = async () => {
   const advisoryData = await getAdvisoryBoard();
 
-  const advisoryMembers = advisoryData?.advisoryboard;
+  const advisoryMembers = advisoryData?.advisoryboard || [];
 
   return (
     <>
@@ -97,7 +97,7 @@ const page = async () => {
             className={`${raleway.className} mb-5 leading-8`}
             style={{ fontFamily: "Raleway, Arial, Helvetica, sans-serif" }}
           >
-            <BlocksRenderer content={advisoryData?.description} />
+            <BlocksRenderer content={advisoryData?.description || []} />
           </div>
         </div>
       </section>
