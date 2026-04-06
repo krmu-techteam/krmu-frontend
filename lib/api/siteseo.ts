@@ -115,24 +115,6 @@ export type FolderRouteSeoResponse = {
 export async function folderRouteSEO(
   slug: string = ""
 ): Promise<FolderRouteSeoResponse["data"]> {
-<<<<<<< HEAD
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/site-seos?sort[0]=title:asc&filters[slug][$eq]=${slug}&fields[0]=title&fields[1]=metaDescription&fields[2]=canonicalUrl&fields[3]=index&fields[4]=keyword&populate[shareImg][fields][0]=url`,
-    {
-      next: { revalidate: 3600 }
-    }
-  );
-  if (!res.ok) throw new Error("Failed to fetch seo");
-  const json = await res.json();
-  return json.data;
-}
-
-export async function getAllSchools() {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/schools?fields[0]=schoolname&fields[1]=urlslug`,
-    { next: { revalidate: 3600 } }
-  );
-=======
   try {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/site-seos?sort[0]=title:asc&filters[slug][$eq]=${slug}&fields[0]=title&fields[1]=metaDescription&fields[2]=canonicalUrl&fields[3]=index&fields[4]=keyword&populate[shareImg][fields][0]=url`,
@@ -155,7 +137,6 @@ export async function getAllSchools() {
       `${FETCH_STRAPI_URL}/api/schools?fields[0]=schoolname&fields[1]=urlslug`,
       { cache: "no-store" }
     );
->>>>>>> 99befcb590b70b14fa4c7eaf2ae0eeab4b3dc6ab
 
     if (!res.ok) {
       throw new Error("Failed to fetch schools");
@@ -179,20 +160,12 @@ export async function getAllSchoolProgrammes() {
   let page = 1;
   let pageCount = 1;
 
-<<<<<<< HEAD
-  while (page <= pageCount) {
-    const res = await fetch(
-      `${FETCH_STRAPI_URL}/api/school-programmes?fields[0]=programmeslug&pagination[pageSize]=50&pagination[page]=${page}`,
-      { next: { revalidate: 3600 } }
-    );
-=======
   try {
     while (page <= pageCount) {
       const res = await fetch(
         `${FETCH_STRAPI_URL}/api/school-programmes?fields[0]=programmeslug&pagination[pageSize]=50&pagination[page]=${page}`,
         { cache: "no-store" }
       );
->>>>>>> 99befcb590b70b14fa4c7eaf2ae0eeab4b3dc6ab
 
       if (!res.ok) throw new Error("Failed to fetch school programmes");
 
@@ -218,20 +191,12 @@ export async function getAllSchoolPhdProgrammes() {
   let page = 1;
   let pageCount = 1;
 
-<<<<<<< HEAD
-  while (page <= pageCount) {
-    const res = await fetch(
-      `${FETCH_STRAPI_URL}/api/phd-single-programmes?fields[0]=phdslug&pagination[pageSize]=50&pagination[page]=${page}`,
-      { next: { revalidate: 3600 } }
-    );
-=======
   try {
     while (page <= pageCount) {
       const res = await fetch(
         `${FETCH_STRAPI_URL}/api/phd-single-programmes?fields[0]=phdslug&pagination[pageSize]=50&pagination[page]=${page}`,
         { cache: "no-store" }
       );
->>>>>>> 99befcb590b70b14fa4c7eaf2ae0eeab4b3dc6ab
 
       if (!res.ok) throw new Error("Failed to fetch PhD programmes");
 
@@ -264,20 +229,12 @@ export async function getAllPhotoGalleries() {
   let page = 1;
   let pageCount = 1;
 
-<<<<<<< HEAD
-  while (page <= pageCount) {
-    const res = await fetch(
-      `${FETCH_STRAPI_URL}/api/photo-galleries?fields[0]=slug&pagination[pageSize]=50&pagination[page]=${page}`,
-      { next: { revalidate: 3600 } }
-    );
-=======
   try {
     while (page <= pageCount) {
       const res = await fetch(
         `${FETCH_STRAPI_URL}/api/photo-galleries?fields[0]=slug&pagination[pageSize]=50&pagination[page]=${page}`,
         { cache: "no-store" }
       );
->>>>>>> 99befcb590b70b14fa4c7eaf2ae0eeab4b3dc6ab
 
       if (!res.ok) throw new Error("Failed to fetch photo galleries");
 
