@@ -9,7 +9,7 @@ interface HomeNewsEventsCardProps {
     title: {
       rendered: string;
     };
-    modified: string;
+    date: string;
     featured_media: number;
     slug: string;
     acf: {
@@ -28,11 +28,12 @@ interface HomeNewsEventsCardProps {
 const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
   data,
 }) => {
-  const formattedDate = new Date(data.modified).toLocaleDateString("en-US", {
+  const formattedDate = new Date(data.date).toLocaleDateString("en-US", {
     day: "2-digit",
     month: "short",
     year: "numeric",
   });
+  console.log(formattedDate, "formattedDate");
 
   const getImgUrl = await getWordImageById(data?.featured_media);
 
