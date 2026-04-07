@@ -13,7 +13,7 @@ type Props = {
 const SchoolFacultyAdvisory = ({ schoolCat, fac_adv }: Props) => {
   return (
     <>
-      <div className="max-w-[1664px] mx-auto w-full py-4 md:p-8">
+      <div className="max-w-[1664px] mx-auto w-full py-4 md:px-8 md:py-20">
         {fac_adv?.fac_adv === "Single" ? (
           <>
             <div

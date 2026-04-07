@@ -117,7 +117,7 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
         <div className="flex justify-center mt-8">
           <Button
             onClick={handleLoadMore}
-            className="py-3.5 px-8 bg-[#051630] text-white font-bold"
+            className="py-3.5 px-8 bg-[#051630] text-white font-bold cursor-pointer"
           >
             Load More
           </Button>

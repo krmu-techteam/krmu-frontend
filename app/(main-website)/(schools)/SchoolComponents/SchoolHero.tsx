@@ -66,7 +66,7 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className={`py-3.5 px-8 bg-white text-black font-bold rounded-sm text-sm md:text-base ${
+                        className={`text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-[#034272] ${
                           btn.buttonclass || ""
                         }`}
                       >
@@ -76,7 +76,7 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className={`py-3.5 px-8 bg-white text-black font-bold rounded-sm text-sm md:text-base ${
+                        className={`text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white ${
                           btn.buttonclass || ""
                         }`}
                         target="_blank" rel="noopener noreferrer"
@@ -103,7 +103,7 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className="py-3.5 px-8 bg-white text-black hover:text-white hover:border border-white hover:bg-transparent font-bold rounded-sm text-sm md:text-base"
+                        className="text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-[#034272]"
                       >
                         {btn.buttontext}
                       </Link>
@@ -111,7 +111,7 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className={`py-3.5 px-8 bg-white text-black hover:text-white hover:border border-white hover:bg-transparent font-bold rounded-sm text-sm md:text-base ${
+                        className={`text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white ${
                           btn.buttonclass || ""
                         }`}
                         target="_blank" rel="noopener noreferrer"

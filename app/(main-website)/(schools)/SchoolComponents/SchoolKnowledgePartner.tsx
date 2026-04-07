@@ -7,7 +7,7 @@ type Props = {
 };
 const SchoolKnowledgePartner = ({ title, logos }: Props) => {
   return (
-    <section className="py-[30px] bg-[#051630] px-4">
+    <section className="py-20 bg-[#051630] px-4">
       <div className="max-w-[1664px] mx-auto w-full">
         <div className="w-full">
           <h4 className="text-white font-semibold text-5xl leading-tight text-center mb-5">

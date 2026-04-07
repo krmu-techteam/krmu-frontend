@@ -29,7 +29,20 @@ import { getSchoolSEO } from "@/lib/api/website-seo";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import SchoolAdvantages2 from "../SchoolComponents/SchoolDesign2/SchoolAdvantages2";
 import SchoolExcitedNewsletter from "../SchoolComponents/SchoolDesign2/SchoolExcitedNewsletter";
-import { soetLogos, sprsLogos } from "../SchoolComponents/schoolData";
+import {
+  sbasLogos,
+  semceLogos,
+  smasLogos,
+  soadLogos,
+  soasLogos,
+  soedLogos,
+  soetLogos,
+  sohmctLogos,
+  solaLogos,
+  solsLogos,
+  somcLogos,
+  sprsLogos,
+} from "../SchoolComponents/schoolData";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -56,14 +69,16 @@ const noIndexQSSust = [
 const schoolsImageMap: Record<string, any> = {
   "school-of-engineering-and-technology": soetLogos,
   "school-of-physiotherapy-and-rehabilitation-sciences": sprsLogos,
-  // "barch-architecture": BAArchtestimonialsData,
-  // "bca-ai-data-science": BCAAIDStestimonialsData,
-  // "bba-digital-marketing": BBADigitalMarketingtestimonialsData,
-  // "bsc-forensic-science": BSCHonsForensicSciencetestimonialsData,
-  // mba: MBAtestimonialsData,
-  // "ba-hons-psychology": BSCHonsPhyscologytestimonialsData,
-  // // "bba-llb-hons": BBALLBtestimonialsData,
-  // // "llm": LLMtestimonialsData,
+  "school-of-management-and-commerce": somcLogos,
+  "school-of-legal-studies": solsLogos,
+  "school-of-medical-and-allied-sciences": smasLogos,
+  "school-of-liberal-arts": solaLogos,
+  "school-of-architecture-design": soadLogos,
+  "school-of-basic-and-applied-sciences": sbasLogos,
+  "school-of-journalism-and-mass-communication": semceLogos,
+  "school-of-hotel-management-and-catering-technology": sohmctLogos,
+  "school-of-education": soedLogos,
+  "school-of-agriculutural-sciences": soasLogos,
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
