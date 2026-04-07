@@ -10,21 +10,21 @@ export const ORGANISATION_TAB_FOLDERS = [
 
 export const organisationLogosByTab: readonly string[][] = [
   [
-    "3oeg9ebm.jpg",
-    "deloitte.png",
-    "ey.png",
-    "hdfc.png",
-    "images-1.png",
-    "images-2.png",
-    "images-0.png",
-    "isec.png",
-    "jmfin.png",
-    "jp-morgan.jpeg",
-    "kotak-mahindra.png",
-    "morgan-stanley.png",
-    "motilal.png",
-    "pwc.png",
-    "whatsapp-1.jpeg",
+    "01-avendus.png",
+    "02-deloitte.png",
+    "03-ey.png",
+    "04-hdfc.png",
+    "05-edelweiss.png",
+    "06-kpmg.png",
+    "07-axis-bank.png",
+    "08-icici.png",
+    "09-jm-financial.png",
+    "10-jp-morgan.png",
+    "11-kotak.png",
+    "12-morgan.png",
+    "13-motilal-oswal.png",
+    "14-pwc.png",
+    "15-goldman.png",
   ],
   [
     "bajaj-allianz.png",
@@ -70,6 +70,6 @@ export function organisationLogoSrc(folder: string, filename: string): string {
 }
 
 export function logoAltFromFilename(filename: string): string {
-  const base = filename.replace(/\.[^.]+$/, "");
+  const base = filename.replace(/\.[^.]+$/, "").replace(/^\d{2}-/, "");
   return base.replace(/[-]+/g, " ").trim() || "Organisation logo";
 }
