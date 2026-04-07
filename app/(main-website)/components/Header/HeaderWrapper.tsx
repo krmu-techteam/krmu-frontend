@@ -21,7 +21,7 @@ const HeaderWrapper = async () => {
   return (
     <>
       <Header
-        topbarmenu={topbarmenus || []}
+        topbarmenu={topbarmenus || []}  
         topbarsociallinks={topbarsociallinks || []}
         headerMenus={headerMenus || []}
       />
