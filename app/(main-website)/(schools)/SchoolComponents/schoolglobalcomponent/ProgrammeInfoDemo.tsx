@@ -113,8 +113,6 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
 
   const criteria = currentProgram?.criteria;
 
-            
-console.log('programs', programs);
 
   return (
     <>
@@ -127,7 +125,7 @@ console.log('programs', programs);
             value={degreeTabs.find((d) => d.value === activeDegree)?.tabValue}
           >
             {/* TAB HEADERS */}
-            <TabsList className="w-full flex-wrap gap-2.5 sm:gap-0 justify-center h-full p-2.5 mb-5 bg-transparent">
+            <TabsList className="w-full flex-wrap gap-2.5 sm:gap-0 justify-center h-full p-2.5 mb-5 sticky top-[76px] bg-white rounded-none">
               
               {degreeTabs.map((deg) => (
                 <TabsTrigger

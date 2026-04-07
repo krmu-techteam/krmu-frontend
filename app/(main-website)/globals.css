@@ -35,6 +35,22 @@
   .labFac_container p {
     margin-bottom: 20px !important;
   }
+  @media (min-width: 1440px) {
+    .videoField iframe {
+      height: 400px !important;
+    }
+  }
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    .videoField iframe {
+      height: 300px !important;
+    }
+  }
+  @media (min-width: 1920px) {
+    .videoField iframe {
+      height: 450px !important;
+    }
+  }
+
   .videoField div {
     width: 100%;
   }

@@ -12,7 +12,14 @@ import WhyKRMU from "./(main-website)/Home/WhyKRMU";
 import YourJourney2 from "./(main-website)/Home/homeComp/YourJourney2";
 // import YourJourney from "./(main-website)/Home/YourJourney";
 // import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
-import { createCollageOrUniversitySchema, createOrganizationSchema, createWebsiteSchema } from "@/lib/api/common";
+import {
+  createCollageOrUniversitySchema,
+  createOrganizationSchema,
+  createWebsiteSchema,
+} from "@/lib/api/common";
+// import YourJourney from "./(main-website)/Home/YourJourney";
+// import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
+
 import Script from "next/script";
 
 export default async function HomePage() {
@@ -75,9 +82,9 @@ export default async function HomePage() {
 
   const websiteSchema = createWebsiteSchema({
     name: "K.R. Mangalam University",
-     alternateName: "KRMU",
+    alternateName: "KRMU",
     url: "https://www.krmangalam.edu.in",
-    searchPath: "https://www.krmangalam.edu.in/search?q="
+    searchPath: "https://www.krmangalam.edu.in/search?q=",
   });
 
   const organizationSchema = createOrganizationSchema({
@@ -88,29 +95,29 @@ export default async function HomePage() {
     contactPoint: {
       telephone: "+91-8192888444",
       contactType: "customer service",
-      areaServed: "IN", 
-      availableLanguage: "en"
+      areaServed: "IN",
+      availableLanguage: "en",
     },
     sameAs: [
       "https://www.facebook.com/krmuniv",
       "https://www.instagram.com/krmuniv",
       "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-      "https://in.linkedin.com/school/krmuniv"
-    ]
+      "https://in.linkedin.com/school/krmuniv",
+    ],
   });
 
   const collageOrUniversitySchema = createCollageOrUniversitySchema({
     name: "K.R. Mangalam University",
     alternateName: "KRMU",
-    url: "https://www.krmangalam.edu.in", 
+    url: "https://www.krmangalam.edu.in",
     logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
     sameAs: [
-    "https://www.facebook.com/krmuniv",
-    "https://www.instagram.com/krmuniv",
-    "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-    "https://in.linkedin.com/school/krmuniv"
-  ]
-  })
+      "https://www.facebook.com/krmuniv",
+      "https://www.instagram.com/krmuniv",
+      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+      "https://in.linkedin.com/school/krmuniv",
+    ],
+  });
 
   return (
     <>

@@ -24,7 +24,7 @@ const SchoolExcellence = ({ title1, title2, btn1, btn2 }: Props) => {
               className={`inline-block py-3.5 px-8 rounded-lg font-medium text-sm sm:text-base 
               bg-white text-[#071c33] border border-white
               transition duration-300 
-              bg-transparent hover:text-white hover:border-white
+               hover:text-white hover:border-white
               ${btn1?.buttonclass}`}
               target="_blank"
               rel="noopener noreferrer"

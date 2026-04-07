@@ -11,7 +11,7 @@ const Footer = async () => {
   const footerData = await getFooter();
   const footerAssets = await getPageAssets();
 
-  const { js_in_footer } = footerAssets;
+  const { js_in_footer } = footerAssets || {};
 
   const footerComp1 = footerData?.footer_comp_1;
   const footerComp2 = footerData?.footer_comp_2;
@@ -67,9 +67,8 @@ const Footer = async () => {
                 {footerComp1?.footer_btn?.btn_link && (
                   <Link
                     href={footerComp1?.footer_btn?.btn_link || "#"}
-                    className={`text-white bg-[#034272] py-[5px] px-5 rounded font-semibold ${
-                      footerComp1?.footer_btn?.btn_class || ""
-                    }`}
+                    className={`text-white bg-[#cb000d] py-[5px] px-5 hover:bg-[#034272] rounded font-semibold ${footerComp1?.footer_btn?.btn_class || ""
+                      }`}
                   >
                     {footerComp1?.footer_btn?.btn_text || ""}
                   </Link>

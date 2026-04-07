@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
 
   const blog = await getSingleBlogDataBySlug(slug);
-  console.log("blog data", blog)
+
 
   if (!blog || !blog[0]?.yoast_head_json) return {};
 
@@ -47,7 +47,6 @@ const page = async ({ params }: Props) => {
   //   currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
 
   const authorSlug = currentSingleBlog?._embedded?.author?.[0]?.slug;
-  console.log("currentSingleBlog",currentSingleBlog)
 
   const featuedImageId = currentSingleBlog?.featured_media;
   const featuredImageUrl = await getBlogImageById(featuedImageId);
