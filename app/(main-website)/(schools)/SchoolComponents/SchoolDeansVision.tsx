@@ -32,7 +32,7 @@ const SchoolDeansVision = ({
       //     "linear-gradient(95deg,#051630 2.69%,#0060aa 65.94%,#e31e24 97.54%)",
       // }}
     >
-      <div className="max-w-[1664px] mx-auto w-full">
+      <div className="max-w-[1664px] mx-auto w-full testing">
         <div className="text-center text-white text-3xl sm:text-5xl mb-5  lg:text-[64px]">
           <h4 className="leading-[1]">{title}</h4>
           <h5 className="leading-[1.2] font-bold">{subtitle}</h5>
