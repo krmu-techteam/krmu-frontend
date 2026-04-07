@@ -28,9 +28,9 @@ const NpfPopup = ({
         new NpfWidgetsInit({
           widgetId: formId,
           baseurl: "widgets.nopaperforms.com",
-          formTitle:  "Apply Now",
-          titleColor: "#FF0033",
-          backgroundColor: "#ddd",
+          formTitle: " ",
+          titleColor: "#ffffff",
+          backgroundColor: "#ffffff",
           iframeHeight: "520px",
           buttonTextColor: "#FFF",
           target: btnRef.current,
