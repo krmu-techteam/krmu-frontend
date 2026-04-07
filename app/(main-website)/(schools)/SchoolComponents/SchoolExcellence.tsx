@@ -14,18 +14,14 @@ const SchoolExcellence = ({ title1, title2, btn1, btn2 }: Props) => {
       <div className="max-w-[1664px] mx-auto w-full grid lg:grid-cols-2 gap-8">
         {/* Card 1 */}
         <div className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 text-center transition duration-300 hover:scale-[1.03] hover:shadow-2xl">
-          <h4 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 font-semibold leading-tight">
+          <h4 className="text-white text-2xl sm:text-4xl mb-6 font-semibold leading-tight">
             {title1}
           </h4>
 
           {(btn1?.buttonlink || btn1?.buttonclass) && (
             <Link
               href={btn1?.buttonlink}
-              className={`inline-block py-3.5 px-8 rounded-lg font-medium text-sm sm:text-base 
-              bg-white text-[#071c33] border border-white
-              transition duration-300 
-               hover:text-white hover:border-white
-              ${btn1?.buttonclass}`}
+              className={`inline-block py-3.5 px-8 text-white rounded-lg border border-white ${btn1?.buttonclass}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -36,21 +32,18 @@ const SchoolExcellence = ({ title1, title2, btn1, btn2 }: Props) => {
 
         {/* Card 2 */}
         <div className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 text-center transition duration-300 hover:scale-[1.03] hover:shadow-2xl">
-          <h4 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-6 font-semibold leading-tight">
+          <h4 className="text-white text-2xl sm:text-4xl mb-6 font-semibold leading-tight">
             {title2}
           </h4>
 
           {(btn2?.buttonlink || btn2?.buttonclass) && (
             <Link
               href={btn2?.buttonlink}
-              className={`inline-block py-3.5 px-8 rounded-lg font-medium text-sm sm:text-base 
-               text-[#071c33] border border-white
-              bg-transparent hover:text-white hover:border-white
-              ${btn2?.buttonclass}`}
+              className={`inline-block py-3.5 px-8 text-white rounded-lg border border-white  ${btn2?.buttonclass}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {btn2?.buttontext}
+              {btn2?.buttontext}ss
             </Link>
           )}
         </div>

@@ -37,7 +37,7 @@ const SchoolHero = ({
       ) : (
         <section
           className={`pt-[150px] pb-20 relative ${
-            fullWidth ? "lg:py-[18%]" : "lg:py-[10%]"
+            fullWidth ? "lg:py-[18%]" : "lg:pt-[10%] lg:pb-[5%]"
           } bg-cover bg-no-repeat bg-center px-4`}
           // style={{ backgroundImage: `url(${STRAPI_URL}${herobanner?.url})` }}
         >
@@ -103,7 +103,7 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className="py-3.5 px-8 bg-white text-black font-bold rounded-sm text-sm md:text-base"
+                        className="py-3.5 px-8 bg-white text-black hover:text-white hover:border border-white hover:bg-transparent font-bold rounded-sm text-sm md:text-base"
                       >
                         {btn.buttontext}
                       </Link>
@@ -111,7 +111,7 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className={`py-3.5 px-8 bg-white text-black font-bold rounded-sm text-sm md:text-base ${
+                        className={`py-3.5 px-8 bg-white text-black hover:text-white hover:border border-white hover:bg-transparent font-bold rounded-sm text-sm md:text-base ${
                           btn.buttonclass || ""
                         }`}
                         target="_blank" rel="noopener noreferrer"

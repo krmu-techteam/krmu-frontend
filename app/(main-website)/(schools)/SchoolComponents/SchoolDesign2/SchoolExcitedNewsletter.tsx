@@ -28,7 +28,7 @@ const SchoolExcitedNewsletter = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="py-14 lg:py-20 bg-[#051630]">
+    <section className="py-14 lg:py-20 mt-10 bg-[#051630]">
       <div className="max-w-[1664px] mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
         {/* LEFT SIDE */}
         <div className="text-center lg:text-left text-white">
@@ -44,11 +44,12 @@ const SchoolExcitedNewsletter = async ({
             {excbtns &&
               excbtns.map((btn) => {
                 if (enable_disable_download_pros === true) {
+                  
                   return (
                     <CommonLeadPopup
                       key={btn?.id}
                       buttonText={btn?.buttontext || "Download Prospectus"}
-                      buttonClassName="py-3.5 px-8 bg-white transition duration-300 font-semibold text-sm sm:text-base rounded-md inline-block cursor-pointer text-black shadow-md"
+                      buttonClassName="py-3.5 px-8 bg-white transition duration-300 font-semibold text-sm sm:text-base rounded-md inline-block cursor-pointer text-black hover:text-white hover:border hover:border-white hover:bg-transparent shadow-md"
                       redirectUrl={btn?.buttonlink || "#"}
                       form_name="Download Prospectus"
                     />
@@ -58,7 +59,7 @@ const SchoolExcitedNewsletter = async ({
                     <Link
                       key={btn?.id}
                       href={btn?.buttonlink || "#"}
-                      className="py-3.5 px-8 bg-white transition duration-300 font-semibold text-sm sm:text-base rounded-md inline-block text-black shadow-md"
+                      className="py-3.5 px-8 bg-white transition duration-300 font-semibold text-sm sm:text-base rounded-md inline-block text-black hover:text-white hover:border hover:border-white hover:bg-transparent shadow-md"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -88,7 +89,7 @@ const SchoolExcitedNewsletter = async ({
                     <Popup
                       key={btn?.id}
                       buttonText={btn.buttontext || "Apply Now"}
-                      buttonClass={`py-3 px-6 bg-white transition duration-300 font-semibold rounded-md inline-block text-sm md:text-base shadow-md text-black`}
+                      buttonClass={`py-3 px-6 bg-white transition duration-300 font-semibold rounded-md inline-block text-sm md:text-base shadow-md text-black hover:text-white hover:border hover:border-white hover:bg-transparent`}
                       buttonIcon=""
                     >
                       <p>This is the content inside the popup.</p>
@@ -99,7 +100,7 @@ const SchoolExcitedNewsletter = async ({
                     <Link
                       key={btn?.id}
                       href={btn?.buttonlink || ""}
-                      className={`py-3 px-6 bg-white transition duration-300 font-semibold rounded-md inline-block text-sm md:text-base shadow-md text-black`}
+                      className={`py-3 px-6 bg-white transition duration-300 font-semibold rounded-md inline-block text-sm md:text-base shadow-md text-black hover:text-white hover:border hover:border-white hover:bg-transparent`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

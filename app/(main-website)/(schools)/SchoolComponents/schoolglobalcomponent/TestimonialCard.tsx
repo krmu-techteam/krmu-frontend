@@ -18,7 +18,7 @@ const TestimonialCard = ({ name, edu, desc, img }: Props) => {
       }}
     >
       <div
-        className="p-5 rounded-t-[25px] text-white flex flex-col gap-2.5  sm:gap-4"
+        className="p-5 rounded-t-[25px] text-white flex items-center gap-4"
         style={{
           background: "linear-gradient(168deg,#051630 6.9%,#005ba1 162.66%)",
         }}
@@ -30,8 +30,10 @@ const TestimonialCard = ({ name, edu, desc, img }: Props) => {
           alt="mask"
           className="rounded-full w-[80px] h-[80px] md:w-[105px] md:h-[105px]"
         />
-        <p className="text-3xl font-medium">{name} </p>
-        <p>{edu}</p>
+        <div className="flex flex-col gap-2.5">
+          <p className="text-3xl font-medium">{name} </p>
+          <p>{edu}</p>
+        </div>
       </div>
       <div className="text-base sm:text-lg p-5 bg-white rounded-b-[25px]">
         <p>{desc}</p>

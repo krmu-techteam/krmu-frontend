@@ -29,6 +29,7 @@ import { getSchoolSEO } from "@/lib/api/website-seo";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import SchoolAdvantages2 from "../SchoolComponents/SchoolDesign2/SchoolAdvantages2";
 import SchoolExcitedNewsletter from "../SchoolComponents/SchoolDesign2/SchoolExcitedNewsletter";
+import { soetLogos, sprsLogos } from "../SchoolComponents/schoolData";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -51,6 +52,19 @@ const noIndexQSSust = [
   "qs-carbon-net-zero",
   "qs-others",
 ];
+
+const schoolsImageMap: Record<string, any> = {
+  "school-of-engineering-and-technology": soetLogos,
+  "school-of-physiotherapy-and-rehabilitation-sciences": sprsLogos,
+  // "barch-architecture": BAArchtestimonialsData,
+  // "bca-ai-data-science": BCAAIDStestimonialsData,
+  // "bba-digital-marketing": BBADigitalMarketingtestimonialsData,
+  // "bsc-forensic-science": BSCHonsForensicSciencetestimonialsData,
+  // mba: MBAtestimonialsData,
+  // "ba-hons-psychology": BSCHonsPhyscologytestimonialsData,
+  // // "bba-llb-hons": BBALLBtestimonialsData,
+  // // "llm": LLMtestimonialsData,
+};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params; // ✅ no await
@@ -183,39 +197,7 @@ export default async function Page({ params }: Props) {
   const degreeName = school?.degree?.name;
   const schoolCategoryName = school?.school_category?.name;
   // const WordSchoolslug = school?.wordschoolslug;
-
-  const somcLogos = [
-    {
-      id: 1,
-      url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mahindra_Auto_7e69aa7cd8.png",
-      alternativeText: "Mahindra Auto",
-    },
-    {
-      id: 2,
-      url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Accenture_svg_1_1d6e10e0e1.png",
-      alternativeText: "Airtel",
-    },
-    {
-      id: 3,
-      url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Wipro_Primary_Logo_Color_RGB_svg_2_e87efcb497.png",
-      alternativeText: "Wipro",
-    },
-    {
-      id: 4,
-      url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Airtel_logo_21addede36.jpg",
-      alternativeText: "Airtel",
-    },
-    {
-      id: 5,
-      url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Tata_Consultancy_Services_old_logo_svg_1_9c85e4fe6a.png",
-      alternativeText: "Tata Consultancy",
-    },
-    {
-      id: 6,
-      url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/gm_logo_b6c926d906.png",
-      alternativeText: "Tata Consultancy",
-    },
-  ];
+  const schoolsLogosData = schoolsImageMap[slug];
 
   return (
     <>
@@ -246,11 +228,7 @@ export default async function Page({ params }: Props) {
       {school?.alumnititle && (
         <SchoolOurAlumni
           title={school?.alumnititle}
-          alumniLogos={
-            slug === "school-of-engineering-and-technology"
-              ? somcLogos
-              : school.alumnilogo
-          }
+          alumniLogos={schoolsLogosData}
         />
       )}
 

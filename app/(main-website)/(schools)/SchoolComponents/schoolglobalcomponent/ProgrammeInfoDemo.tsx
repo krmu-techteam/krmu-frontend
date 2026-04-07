@@ -132,7 +132,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                   key={deg.tabValue}
                   value={deg.tabValue}
                   onClick={() => handleDegreeChange(deg.value)}
-                  className="flex-none mx-2.5  py-2 px-10 rounded-xl cursor-pointer bg-[#f0f0f0] data-[state=active]:text-white  data-[state=active]:bg-[#0161b0]  text-black"
+                  className="flex-none mx-2.5  py-2 px-10 rounded-xl  bg-[#f0f0f0] data-[state=active]:text-white  data-[state=active]:bg-[#0161b0]  text-black"
                 >
                   {deg.label}
                 </TabsTrigger>
@@ -159,7 +159,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                         onClick={() => handleProgramClick(prog.id)}
                         onMouseEnter={() => handleMouseEnter(prog.id)}
                         onFocus={() => handleMouseEnter(prog.id)}
-                        className={`rounded-xl w-full bg-[#f0f7fc] h-full  font-semibold cursor-pointer p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] ${
+                        className={`rounded-xl w-full bg-[#f0f7fc] h-full  font-semibold  p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] ${
                           isActive ? "" : " hover:text-black"
                         }`}
                       >
@@ -173,11 +173,11 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                         </Link>
                         {criteria && (
                           <div className="flex flex-col sm:flex-row gap-2.5">
-                            <div className="bg-white w-full sm:w-1/2 lg:w-1/3 flex flex-col gap-0.5 p-2.5 text-sm">
+                            <div className="bg-white w-full sm:w-1/2 lg:w-1/3 flex flex-col gap-0.5 p-2.5 text-sm cursor-text">
                               <span className="font-normal">Duration:</span>
                               <span>{prog.criteria.Duration}</span>
                             </div>
-                            <div className="bg-white w-full sm:w-1/2 xl:w-1/3 flex flex-col p-2.5 gap-0.5 text-sm">
+                            <div className="bg-white w-full sm:w-1/2 xl:w-1/3 flex flex-col p-2.5 gap-0.5 text-sm cursor-text">
                               <span className="font-normal">
                                 Programme Fee:
                               </span>
@@ -192,7 +192,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
 
                         <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center">
                           <button
-                            className="bg-white border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs"
+                            className="bg-white border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer hover:bg-black hover:text-white"
                             onClick={() => setShow(true)}
                           >
                             Fee Structure
@@ -200,14 +200,14 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                           <Link
                             href={prog.criteria.eligibility_utm_links}
                             target="_blank"
-                            className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs"
+                            className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer hover:bg-red-500 hover:text-white hover:border hover:border-red-500"
                           >
                             Apply Now
                           </Link>
                           <Link
                             href={`/programs/${prog.programmeslug || "#"}`}
                             target="_blank"
-                            className="text-black rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-sm flex items-center gap-2"
+                            className="text-black rounded-sm py-2.5 2xl:py-2.5 text-sm flex items-center gap-2"
                           >
                             <CircleArrowRight /> View Programme
                           </Link>
@@ -236,7 +236,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
           }}
         >
           <span
-            className="absolute right-5 top-5 cursor-pointer inline-block z-50"
+            className="absolute right-5 top-5  inline-block z-50"
             onClick={() => setShow((prev) => !prev)}
           >
             <X />
