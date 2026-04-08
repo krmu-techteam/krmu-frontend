@@ -113,6 +113,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
 
   const criteria = currentProgram?.criteria;
 
+  console.log('programs', programs);
 
   return (
     <>

@@ -33,12 +33,12 @@ const SchoolDeansVision = ({
       // }}
     >
       <div className="max-w-[1664px] mx-auto w-full testing">
-        <div className="text-center text-white text-3xl sm:text-5xl mb-5  lg:text-[64px]">
+        <div className="text-center text-white text-3xl sm:text-5xl mb-5 lg:text-[64px]">
           <h4 className="leading-[1]">{title}</h4>
           <h5 className="leading-[1.2] font-bold">{subtitle}</h5>
         </div>
         <div
-          className="rounded-4xl flex flex-col xl:flex-row gap-10 p-10"
+          className="rounded-4xl flex flex-col xl:flex-row gap-10 p-2.5 sm:p-5 md:p-10 leading-tight"
           style={{
             background:
               "linear-gradient(180deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,.12) 100%)",
@@ -62,7 +62,7 @@ const SchoolDeansVision = ({
             </p>
             <Link
               href={`mailto:${deanEmail}`}
-              className="text-base flex items-center gap-1"
+              className="text-base flex items-center gap-1 break-all sm:break-normal"
             >
               <Mail size={16} /> <span>{deanEmail}</span>
             </Link>

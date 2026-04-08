@@ -12,7 +12,7 @@ const SchoolIndustryCollaboration = ({ title, collabCards }: Props) => {
     <section className="bg-[#051630] pt-8 pb-40 xl:py-20 px-4">
       <div className="max-w-[1664px] mx-auto w-full">
         <div className="w-full">
-          <div className="text-5xl text-white font-semibold leading-tight schIndCollbaheadingPara text-center mb-10">
+          <div className="text-3xl lg:text-5xl text-white font-semibold leading-tight schIndCollbaheadingPara text-center mb-10">
             {title && <BlocksRenderer content={title} />} 
           </div>
         </div>
