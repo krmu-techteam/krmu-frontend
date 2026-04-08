@@ -1,394 +1,398 @@
-[
-  {
-    "id": "admissions",
-    "label": "Admissions",
-    "icon": "ClipboardList",
-    "iconBg": "#0ea5e9",
-    "faqs": [
-      {
-        "question": "How can I apply for admission?",
-        "answer": "You can apply online through the university’s official website by filling out the application form and submitting the required documents."
-      },
-      {
-        "question": "What are the eligibility criteria for admission?",
-        "answer": "Eligibility varies by programme. Generally, undergraduate programmes require completion of Class 12, while postgraduate programmes require a relevant bachelor’s degree with a minimum of 50% marks in aggregate."
-      },
-      {
-        "question": "Does K.R. Mangalam University have an entrance exam for admission?",
-        "answer": "Yes, the University conducts its own entrance exam - K.R. Mangalam Entrance Exam (KREE). "
-      },
-      {
-        "question": "Can I apply for multiple programmes?",
-        "answer": "Yes, you can apply for more than one programme, subject to meeting the eligibility criteria. "
-      },
-      {
-        "question": "What documents are required during admission?",
-        "answer": "Typically, you need academic certificates, ID proof, passport-sized photographs, and any relevant entrance exam scores (as required). "
-      },
-      {
-        "question": "What is the application fee for admission at KRMU?",
-        "answer": "The application fee is Rs 1,000 which can be paid during the application process. "
-      },
-      {
-        "question": "When does the admission process begin? ",
-        "answer": "Admissions usually begin in the first half of the year. The exact dates are announced on KRMU’s official website. "
-      },
-      {
-        "question": "Can international students apply?",
-        "answer": "Yes, the university welcomes international students, subject to eligibility and visa requirements. "
-      },
-      {
-        "question": "Is there a counselling process? ",
-        "answer": "Yes, the university conducts dedicated counselling and interaction rounds prior to admissions, offering students personalised guidance on programme selection, career pathways, and the overall academic experience. ."
-      },
-      {
-        "question": "How will I know if selected?",
-        "answer": "You will receive confirmation via email or admission portal."
-      },
-      {
-        "question": "When can I apply for UG, PG, and PhD programmes?",
-        "answer": "Applications are open now! Apply online at: https://admissions.krmangalam.edu.in/."
-      },
-      {
-        "question": "Can I apply to multiple programmes?",
-        "answer": "Yes! You can choose up to 3 programmes on one application form. Alternatively, submit separate applications for more programmes (application fee applies per form). Note: Don’t apply twice for the same programme in the same year."
-      },
-      {
-        "question": "Can I apply before my Class 12 results are declared?",
-        "answer": "Absolutely! We offer provisional admission based on your expected marks. Submit your official marksheet for verification before the session starts."
-      },
-      {
-        "question": "Does KRMU accept lateral entry students?",
-        "answer": "Yes! Learn more about the eligibility criteria for lateral entry here."
-      },
-      {
-        "question": "How much is the application fee?",
-        "answer": "The application fee is Rs 1000."
-      },
-      {
-        "question": "How do I apply and what documents are needed?",
-        "answer": "Apply online and attach the scanned copies of your qualifying exam documents. Selection is based on the entrance exam KREE, faculty-led interview, and document verification. Start your application here."
-      },
-      {
-        "question": "Are there any diploma courses available at the university?",
-        "answer": "Yes, K.R. Mangalam University offers diploma courses to cater to diverse interests and career aspirations. We currently have a Diploma in Pharmacy programme structured to provide practical and theoretical knowledge, ensuring students are well-prepared for their respective fields."
-      },
-      {
-        "question": "Does K.R. Mangalam University have an entrance exam?",
-        "answer": "The University has formed its own entrance exam K.R. Mangalam Entrance Exam (KREE)."
-      },
-      {
-        "question": "Does KRMU offer sports quota admissions and scholarships?",
-        "answer": "Yes! We offer both. Learn more about our scholarship policy and sports quota admissions [Click here]  (if applicable)."
-      },
-      {
-        "question": "What are the Admission Office hours?",
-        "answer": "The office is open from 9:00 AM to 4:00 PM."
-      },
-      {
-        "question": "What is the admission procedure?",
-        "answer": "To be considered for admission, you must submit the online application, take the KREE entrance exam, and attend a faculty-led interview. You will be selected based on your KREE score, interview performance, and document verification."
-      },
-      {
-        "question": "Can I get a loan to finance my education?",
-        "answer": "Yes! We partner with several banks and financial institutions like IDFC Bank, Axis Bank, ICICI Bank, Propelled, and GrayQuest to provide loan options for our students. Click here to know more."
-      }
-    ]
-  },
-  {
-    "id": "programmes",
-    "label": "Programmes & Courses",
-    "icon": "BookOpen",
-    "iconBg": "#6366f1",
-    "faqs": [
-      {
-        "question": "What programmes are offered at the university?",
-        "answer": "The university offers undergraduate, postgraduate, and doctoral programmes across 11 disciplines, which include Engineering & Technology, Management & Commerce, Architecture & Design, Basic & Applied Sciences, Medical & Allied Sciences, Physiotherapy & Rehabilitation Sciences, Legal Studies, Liberal Arts, Education, Agricultural Sciences and Emerging Media & Creator Economy."
-      },
-      {
-        "question": "Are industry-oriented courses available?",
-        "answer": "Yes, many programmes are designed in collaboration with industry experts to ensure practical relevance."
-      },
-      {
-        "question": "Can I switch my course after admission?",
-        "answer": "Course changes may be allowed under certain conditions and within a specific timeframe."
-      },
-      {
-        "question": "Are interdisciplinary programmes available?",
-        "answer": "Yes, the university offers programmes that combine multiple disciplines."
-      },
-      {
-        "question": "What is the duration of undergraduate programmes?",
-        "answer": "Most undergraduate programmes are of 3–4 years’ duration."
-      },
-      {
-        "question": "Are there honours or research options?",
-        "answer": "Yes, we offer both Honours and Honours with Research options."
-      },
-      {
-        "question": "Do programmes include internships?",
-        "answer": "Many programmes include internships as part of the curriculum."
-      },
-      {
-        "question": "Are there elective subjects available?",
-        "answer": "Yes, students can choose electives based on their interests."
-      },
-      {
-        "question": "Are guest lectures and workshops part of the course?",
-        "answer": "Yes, the KRMU organises frequent expert sessions, industry talks, and technical workshops."
-      },
-      {
-        "question": "Are online courses available at K.R. Mangalam University?",
-        "answer": "No, the university doesn’t offer any online courses."
-      }
-    ]
-  },
-  {
-    "id": "fees",
-    "label": "Fees & Scholarships",
-    "icon": "BadgeDollarSign",
-    "iconBg": "#f59e0b",
-    "faqs": [
-      {
-        "question": "What is the fee structure?",
-        "answer": "Fees vary depending on the programme. Detailed fee structures are available on KRMU’s website's Admission page."
-      },
-      {
-        "question": "Are scholarships available?",
-        "answer": "Yes, the university offers merit-based and need-based scholarships up to 27 crore."
-      },
-      {
-        "question": "How can I apply for a scholarship?",
-        "answer": "Scholarship applications can be submitted during the admission time. Get in touch with our admission counsellors for more detail on this."
-      },
-      {
-        "question": "Are there any early-bird discounts?",
-        "answer": "Occasionally, the university offers early admission benefits. Keep checking KRMU’s Fee page regularly for updates on discounts."
-      },
-      {
-        "question": "Can fees be paid in installments?",
-        "answer": "Yes, the fee payment can be made in installments, in accordance with the university’s prescribed schedule."
-      },
-      {
-        "question": "Are education loans supported at K.R. Mangalam University?",
-        "answer": "Yes, the university assists students in availing education loans through partner banks and fintech firms."
-      },
-      {
-        "question": "Are there scholarships for sports or extracurricular achievements?",
-        "answer": "Yes, students with exceptional achievements in sports are eligible for scholarships, in accordance with the university’s policies."
-      },
-      {
-        "question": "Does the fee include hostel, transport, and other facilities?",
-        "answer": "No, the mentioned fee covers tuition only. Charges for hostel, transport, and other facilities are separate and are not included in the tuition fee."
-      },
-      {
-        "question": "Who all are eligible for scholarships?",
-        "answer": "K.R. Mangalam University offers scholarships for:\n■ SUPER ACHIEVERS\n■ ALUMNI (K.R. MANGALAM SCHOOLS)\n■ SPORTS ACHIEVERS\n■ CUET/ JEE/ CAT/ MAT & other Competitive Exams’ SCORES\n■ CHILDREN OF DEFENCE PERSONNEL\n■ FACULTY/ STAFF MEMBER CONCESSION\n■ SHERO FOR FEMALE STUDENTS"
-      },
-      {
-        "question": "Do international students have a different fee structure?",
-        "answer": "Yes, fees may differ for international students."
-      }
-    ]
-  },
-  {
-    "id": "placements",
-    "label": "Placements & Internships",
-    "icon": "Briefcase",
-    "iconBg": "#ec4899",
-    "faqs": [
-      {
-        "question": "Does the university provide placement support?",
-        "answer": "Yes, with a dedicated placement cell, we offer 100% placement support to our students."
-      },
-      {
-        "question": "What companies visit for placements?",
-        "answer": "Every year, top companies from various industries participate in campus placements."
-      },
-      {
-        "question": "Are internships mandatory?",
-        "answer": "Many programmes include mandatory internships."
-      },
-      {
-        "question": "What is the average placement package?",
-        "answer": "The average placement package at KRMU is Rs 7.5 LPA."
-      },
-      {
-        "question": "Are students trained for placements?",
-        "answer": "Yes, our dedicated placement cell provides comprehensive training to prepare students for placement interviews. This includes aptitude tests, mock interviews, soft skills development, and personalised guidance."
-      },
-      {
-        "question": "Can students apply for off-campus placements?",
-        "answer": "Yes, students can apply for off-campus opportunities."
-      },
-      {
-        "question": "Are international placements available?",
-        "answer": "Yes, international placement opportunities may be available depending on the programme."
-      },
-      {
-        "question": "Does the university provide career counselling?",
-        "answer": "Yes, we offer career guidance and mentorship to our students."
-      },
-      {
-        "question": "What’s the highest package offered at the university?",
-        "answer": "The highest package offered at KRMU is Rs 56.6 LPA."
-      },
-      {
-        "question": "What is the internship stipend range?",
-        "answer": "Stipends vary widely depending on company and role."
-      }
-    ]
-  },
-  {
-    "id": "campus",
-    "label": "Campus Life & Facilities",
-    "icon": "Building2",
-    "iconBg": "#22c55e",
-    "faqs": [
-      {
-        "question": "Does the university provide hostel facilities?",
-        "answer": "Yes, the university offers well-maintained and secure hostel facilities, with separate accommodations for boys and girls."
-      },
-      {
-        "question": "What facilities are available on campus?",
-        "answer": "The campus is equipped with a wide range of modern facilities, including well-stocked libraries, advanced laboratories, garden, messes, gym, sports grounds and courts, common rooms, and multiple cafeterias to support a comfortable and enriching student experience."
-      },
-      {
-        "question": "Are there student clubs and societies?",
-        "answer": "Yes, there are various clubs for cultural, technical, and social activities."
-      },
-      {
-        "question": "Is Wi-Fi available on campus?",
-        "answer": "Yes, the whole university campus is Wi-Fi enabled."
-      },
-      {
-        "question": "Are sports facilities available?",
-        "answer": "Yes, the university encourages sports and fitness activities."
-      },
-      {
-        "question": "Is transportation provided?",
-        "answer": "Yes, the university provides transport facilities for students, with routes covering all parts of the Delhi NCR region to ensure safe and convenient commuting."
-      },
-      {
-        "question": "Are medical facilities available?",
-        "answer": "Basic medical facilities and support are available on campus."
-      },
-      {
-        "question": "Is the campus safe?",
-        "answer": "Yes, the campus is equipped with robust security measures, including 24×7 security personnel and comprehensive CCTV surveillance to ensure a safe and secure environment for all students."
-      },
-      {
-        "question": "Are there events and festivals?",
-        "answer": "Yes, the university hosts a wide range of cultural and academic events throughout the year."
-      },
-      {
-        "question": "Are there dining options on campus?",
-        "answer": "Yes, multiple food outlets, messes and cafeterias are available on campus."
-      }
-    ]
-  },
-  {
-    "id": "exams",
-    "label": "Exams & Results",
-    "icon": "FileCheck",
-    "iconBg": "#ef4444",
-    "faqs": [
-      {
-        "question": "How are exams conducted?",
-        "answer": "Exams are conducted semester-wise."
-      },
-      {
-        "question": "What is the evaluation system?",
-        "answer": "Evaluation includes internal assessments and end-term exams."
-      },
-      {
-        "question": "How can I check my results?",
-        "answer": "Results are available on the student portal."
-      },
-      {
-        "question": "What is the grading system?",
-        "answer": "The university follows a credit-based grading system."
-      },
-      {
-        "question": "Can I apply for re-evaluation?",
-        "answer": "Yes, re-evaluation options are available."
-      },
-      {
-        "question": "Are supplementary exams conducted?",
-        "answer": "Yes, supplementary exams conducted for students who need to reappear."
-      },
-      {
-        "question": "What is the attendance requirement?",
-        "answer": "Students must meet minimum attendance criteria."
-      },
-      {
-        "question": "Are practical exams included?",
-        "answer": "Yes, practical exams are included, depending on the programme."
-      },
-      {
-        "question": "Can I take the exam via online mode?",
-        "answer": "No, the examination is conducted strictly in offline mode. Candidates are required to be physically present to appear for the exam."
-      },
-      {
-        "question": "When are results declared?",
-        "answer": "Results are typically declared after each semester."
-      }
-    ]
-  },
-  {
-    "id": "alumni",
-    "label": "Alumni & Networking",
-    "icon": "Users",
-    "iconBg": "#8b5cf6",
-    "faqs": [
-      {
-        "question": "Does the university have an alumni network?",
-        "answer": "Yes, the university boasts a strong and dynamic alumni network of over 18,000 members across diverse industries."
-      },
-      {
-        "question": "How can students connect with alumni?",
-        "answer": "Students can connect with alumni through events, social media platforms, and mentorship programmes."
-      },
-      {
-        "question": "How can alumni stay connected with the university?",
-        "answer": "Alumni can stay connected through the official alumni portal, social media groups, newsletters, and by participating in university-led events and initiatives."
-      },
-      {
-        "question": "Does the university organise alumni meet-ups or events?",
-        "answer": "Yes, the university regularly organises alumni meets, reunions, webinars, and networking events to help alumni reconnect and engage with the community."
-      },
-      {
-        "question": "What are the benefits of joining the alumni network?",
-        "answer": "The alumni network offers opportunities for professional networking, career support, mentorship, industry connections, and participation in exclusive alumni events."
-      },
-      {
-        "question": "How can I become a part of the K.R. Mangalam University alumni network?",
-        "answer": "All graduates automatically become members of the alumni network. You can also register through the university’s alumni portal to stay connected and updated."
-      },
-      {
-        "question": "Is there an alumni portal?",
-        "answer": "Yes, a platform exists for alumni engagement."
-      },
-      {
-        "question": "How can alumni contribute to the university’s growth?",
-        "answer": "Alumni can contribute by mentoring students, participating in events, offering internships, facilitating placements, and sharing their professional experiences."
-      },
-      {
-        "question": "Does the university highlight alumni achievements?",
-        "answer": "Yes, the university regularly showcases alumni success stories and achievements through its website, newsletters, and social media platforms."
-      },
-      {
-        "question": "Can alumni update their professional details with the university?",
-        "answer": "Yes, alumni are encouraged to regularly update their professional information through the alumni portal to stay engaged and receive relevant updates and opportunities."
-      },
-      {
-        "question": "How does the alumni network help in professional networking?",
-        "answer": "The alumni network connects graduates across industries, enabling knowledge sharing, collaborations, and valuable professional connections."
-      },
-      {
-        "question": "Are alumni eligible to participate in campus events and activities?",
-        "answer": "Yes, alumni are often invited to participate in university events, seminars, cultural programmes, and networking sessions."
-      }
-    ]
-  }
-]
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "id": "admissions",
+      "label": "Admissions",
+      "icon": "ClipboardList",
+      "iconBg": "#0ea5e9",
+      "faqs": [
+        {
+          "question": "How can I apply for admission?",
+          "answer": "You can apply online through the university’s official website by filling out the application form and submitting the required documents."
+        },
+        {
+          "question": "What are the eligibility criteria for admission?",
+          "answer": "Eligibility varies by programme. Generally, undergraduate programmes require completion of Class 12, while postgraduate programmes require a relevant bachelor’s degree with a minimum of 50% marks in aggregate."
+        },
+        {
+          "question": "Does K.R. Mangalam University have an entrance exam for admission?",
+          "answer": "Yes, the University conducts its own entrance exam - K.R. Mangalam Entrance Exam (KREE). "
+        },
+        {
+          "question": "Can I apply for multiple programmes?",
+          "answer": "Yes, you can apply for more than one programme, subject to meeting the eligibility criteria. "
+        },
+        {
+          "question": "What documents are required during admission?",
+          "answer": "Typically, you need academic certificates, ID proof, passport-sized photographs, and any relevant entrance exam scores (as required). "
+        },
+        {
+          "question": "What is the application fee for admission at KRMU?",
+          "answer": "The application fee is Rs 1,000 which can be paid during the application process. "
+        },
+        {
+          "question": "When does the admission process begin? ",
+          "answer": "Admissions usually begin in the first half of the year. The exact dates are announced on KRMU’s official website. "
+        },
+        {
+          "question": "Can international students apply?",
+          "answer": "Yes, the university welcomes international students, subject to eligibility and visa requirements. "
+        },
+        {
+          "question": "Is there a counselling process? ",
+          "answer": "Yes, the university conducts dedicated counselling and interaction rounds prior to admissions, offering students personalised guidance on programme selection, career pathways, and the overall academic experience. ."
+        },
+        {
+          "question": "How will I know if selected?",
+          "answer": "You will receive confirmation via email or admission portal."
+        },
+        {
+          "question": "When can I apply for UG, PG, and PhD programmes?",
+          "answer": "Applications are open now! Apply online at: https://admissions.krmangalam.edu.in/."
+        },
+        {
+          "question": "Can I apply to multiple programmes?",
+          "answer": "Yes! You can choose up to 3 programmes on one application form. Alternatively, submit separate applications for more programmes (application fee applies per form). Note: Don’t apply twice for the same programme in the same year."
+        },
+        {
+          "question": "Can I apply before my Class 12 results are declared?",
+          "answer": "Absolutely! We offer provisional admission based on your expected marks. Submit your official marksheet for verification before the session starts."
+        },
+        {
+          "question": "Does KRMU accept lateral entry students?",
+          "answer": "Yes! Learn more about the eligibility criteria for lateral entry here."
+        },
+        {
+          "question": "How much is the application fee?",
+          "answer": "The application fee is Rs 1000."
+        },
+        {
+          "question": "How do I apply and what documents are needed?",
+          "answer": "Apply online and attach the scanned copies of your qualifying exam documents. Selection is based on the entrance exam KREE, faculty-led interview, and document verification. Start your application here."
+        },
+        {
+          "question": "Are there any diploma courses available at the university?",
+          "answer": "Yes, K.R. Mangalam University offers diploma courses to cater to diverse interests and career aspirations. We currently have a Diploma in Pharmacy programme structured to provide practical and theoretical knowledge, ensuring students are well-prepared for their respective fields."
+        },
+        {
+          "question": "Does K.R. Mangalam University have an entrance exam?",
+          "answer": "The University has formed its own entrance exam K.R. Mangalam Entrance Exam (KREE)."
+        },
+        {
+          "question": "Does KRMU offer sports quota admissions and scholarships?",
+          "answer": "Yes! We offer both. Learn more about our scholarship policy and sports quota admissions [Click here]  (if applicable)."
+        },
+        {
+          "question": "What are the Admission Office hours?",
+          "answer": "The office is open from 9:00 AM to 4:00 PM."
+        },
+        {
+          "question": "What is the admission procedure?",
+          "answer": "To be considered for admission, you must submit the online application, take the KREE entrance exam, and attend a faculty-led interview. You will be selected based on your KREE score, interview performance, and document verification."
+        },
+        {
+          "question": "Can I get a loan to finance my education?",
+          "answer": "Yes! We partner with several banks and financial institutions like IDFC Bank, Axis Bank, ICICI Bank, Propelled, and GrayQuest to provide loan options for our students. Click here to know more."
+        }
+      ]
+    },
+    {
+      "id": "programmes",
+      "label": "Programmes & Courses",
+      "icon": "BookOpen",
+      "iconBg": "#6366f1",
+      "faqs": [
+        {
+          "question": "What programmes are offered at the university?",
+          "answer": "The university offers undergraduate, postgraduate, and doctoral programmes across 11 disciplines, which include Engineering & Technology, Management & Commerce, Architecture & Design, Basic & Applied Sciences, Medical & Allied Sciences, Physiotherapy & Rehabilitation Sciences, Legal Studies, Liberal Arts, Education, Agricultural Sciences and Emerging Media & Creator Economy."
+        },
+        {
+          "question": "Are industry-oriented courses available?",
+          "answer": "Yes, many programmes are designed in collaboration with industry experts to ensure practical relevance."
+        },
+        {
+          "question": "Can I switch my course after admission?",
+          "answer": "Course changes may be allowed under certain conditions and within a specific timeframe."
+        },
+        {
+          "question": "Are interdisciplinary programmes available?",
+          "answer": "Yes, the university offers programmes that combine multiple disciplines."
+        },
+        {
+          "question": "What is the duration of undergraduate programmes?",
+          "answer": "Most undergraduate programmes are of 3–4 years’ duration."
+        },
+        {
+          "question": "Are there honours or research options?",
+          "answer": "Yes, we offer both Honours and Honours with Research options."
+        },
+        {
+          "question": "Do programmes include internships?",
+          "answer": "Many programmes include internships as part of the curriculum."
+        },
+        {
+          "question": "Are there elective subjects available?",
+          "answer": "Yes, students can choose electives based on their interests."
+        },
+        {
+          "question": "Are guest lectures and workshops part of the course?",
+          "answer": "Yes, the KRMU organises frequent expert sessions, industry talks, and technical workshops."
+        },
+        {
+          "question": "Are online courses available at K.R. Mangalam University?",
+          "answer": "No, the university doesn’t offer any online courses."
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "label": "Fees & Scholarships",
+      "icon": "BadgeDollarSign",
+      "iconBg": "#f59e0b",
+      "faqs": [
+        {
+          "question": "What is the fee structure?",
+          "answer": "Fees vary depending on the programme. Detailed fee structures are available on KRMU’s website's Admission page."
+        },
+        {
+          "question": "Are scholarships available?",
+          "answer": "Yes, the university offers merit-based and need-based scholarships up to 27 crore."
+        },
+        {
+          "question": "How can I apply for a scholarship?",
+          "answer": "Scholarship applications can be submitted during the admission time. Get in touch with our admission counsellors for more detail on this."
+        },
+        {
+          "question": "Are there any early-bird discounts?",
+          "answer": "Occasionally, the university offers early admission benefits. Keep checking KRMU’s Fee page regularly for updates on discounts."
+        },
+        {
+          "question": "Can fees be paid in installments?",
+          "answer": "Yes, the fee payment can be made in installments, in accordance with the university’s prescribed schedule."
+        },
+        {
+          "question": "Are education loans supported at K.R. Mangalam University?",
+          "answer": "Yes, the university assists students in availing education loans through partner banks and fintech firms."
+        },
+        {
+          "question": "Are there scholarships for sports or extracurricular achievements?",
+          "answer": "Yes, students with exceptional achievements in sports are eligible for scholarships, in accordance with the university’s policies."
+        },
+        {
+          "question": "Does the fee include hostel, transport, and other facilities?",
+          "answer": "No, the mentioned fee covers tuition only. Charges for hostel, transport, and other facilities are separate and are not included in the tuition fee."
+        },
+        {
+          "question": "Who all are eligible for scholarships?",
+          "answer": "K.R. Mangalam University offers scholarships for:\n■ SUPER ACHIEVERS\n■ ALUMNI (K.R. MANGALAM SCHOOLS)\n■ SPORTS ACHIEVERS\n■ CUET/ JEE/ CAT/ MAT & other Competitive Exams’ SCORES\n■ CHILDREN OF DEFENCE PERSONNEL\n■ FACULTY/ STAFF MEMBER CONCESSION\n■ SHERO FOR FEMALE STUDENTS"
+        },
+        {
+          "question": "Do international students have a different fee structure?",
+          "answer": "Yes, fees may differ for international students."
+        }
+      ]
+    },
+    {
+      "id": "placements",
+      "label": "Placements & Internships",
+      "icon": "Briefcase",
+      "iconBg": "#ec4899",
+      "faqs": [
+        {
+          "question": "Does the university provide placement support?",
+          "answer": "Yes, with a dedicated placement cell, we offer 100% placement support to our students."
+        },
+        {
+          "question": "What companies visit for placements?",
+          "answer": "Every year, top companies from various industries participate in campus placements."
+        },
+        {
+          "question": "Are internships mandatory?",
+          "answer": "Many programmes include mandatory internships."
+        },
+        {
+          "question": "What is the average placement package?",
+          "answer": "The average placement package at KRMU is Rs 7.5 LPA."
+        },
+        {
+          "question": "Are students trained for placements?",
+          "answer": "Yes, our dedicated placement cell provides comprehensive training to prepare students for placement interviews. This includes aptitude tests, mock interviews, soft skills development, and personalised guidance."
+        },
+        {
+          "question": "Can students apply for off-campus placements?",
+          "answer": "Yes, students can apply for off-campus opportunities."
+        },
+        {
+          "question": "Are international placements available?",
+          "answer": "Yes, international placement opportunities may be available depending on the programme."
+        },
+        {
+          "question": "Does the university provide career counselling?",
+          "answer": "Yes, we offer career guidance and mentorship to our students."
+        },
+        {
+          "question": "What’s the highest package offered at the university?",
+          "answer": "The highest package offered at KRMU is Rs 56.6 LPA."
+        },
+        {
+          "question": "What is the internship stipend range?",
+          "answer": "Stipends vary widely depending on company and role."
+        }
+      ]
+    },
+    {
+      "id": "campus",
+      "label": "Campus Life & Facilities",
+      "icon": "Building2",
+      "iconBg": "#22c55e",
+      "faqs": [
+        {
+          "question": "Does the university provide hostel facilities?",
+          "answer": "Yes, the university offers well-maintained and secure hostel facilities, with separate accommodations for boys and girls."
+        },
+        {
+          "question": "What facilities are available on campus?",
+          "answer": "The campus is equipped with a wide range of modern facilities, including well-stocked libraries, advanced laboratories, garden, messes, gym, sports grounds and courts, common rooms, and multiple cafeterias to support a comfortable and enriching student experience."
+        },
+        {
+          "question": "Are there student clubs and societies?",
+          "answer": "Yes, there are various clubs for cultural, technical, and social activities."
+        },
+        {
+          "question": "Is Wi-Fi available on campus?",
+          "answer": "Yes, the whole university campus is Wi-Fi enabled."
+        },
+        {
+          "question": "Are sports facilities available?",
+          "answer": "Yes, the university encourages sports and fitness activities."
+        },
+        {
+          "question": "Is transportation provided?",
+          "answer": "Yes, the university provides transport facilities for students, with routes covering all parts of the Delhi NCR region to ensure safe and convenient commuting."
+        },
+        {
+          "question": "Are medical facilities available?",
+          "answer": "Basic medical facilities and support are available on campus."
+        },
+        {
+          "question": "Is the campus safe?",
+          "answer": "Yes, the campus is equipped with robust security measures, including 24×7 security personnel and comprehensive CCTV surveillance to ensure a safe and secure environment for all students."
+        },
+        {
+          "question": "Are there events and festivals?",
+          "answer": "Yes, the university hosts a wide range of cultural and academic events throughout the year."
+        },
+        {
+          "question": "Are there dining options on campus?",
+          "answer": "Yes, multiple food outlets, messes and cafeterias are available on campus."
+        }
+      ]
+    },
+    {
+      "id": "exams",
+      "label": "Exams & Results",
+      "icon": "FileCheck",
+      "iconBg": "#ef4444",
+      "faqs": [
+        {
+          "question": "How are exams conducted?",
+          "answer": "Exams are conducted semester-wise."
+        },
+        {
+          "question": "What is the evaluation system?",
+          "answer": "Evaluation includes internal assessments and end-term exams."
+        },
+        {
+          "question": "How can I check my results?",
+          "answer": "Results are available on the student portal."
+        },
+        {
+          "question": "What is the grading system?",
+          "answer": "The university follows a credit-based grading system."
+        },
+        {
+          "question": "Can I apply for re-evaluation?",
+          "answer": "Yes, re-evaluation options are available."
+        },
+        {
+          "question": "Are supplementary exams conducted?",
+          "answer": "Yes, supplementary exams conducted for students who need to reappear."
+        },
+        {
+          "question": "What is the attendance requirement?",
+          "answer": "Students must meet minimum attendance criteria."
+        },
+        {
+          "question": "Are practical exams included?",
+          "answer": "Yes, practical exams are included, depending on the programme."
+        },
+        {
+          "question": "Can I take the exam via online mode?",
+          "answer": "No, the examination is conducted strictly in offline mode. Candidates are required to be physically present to appear for the exam."
+        },
+        {
+          "question": "When are results declared?",
+          "answer": "Results are typically declared after each semester."
+        }
+      ]
+    },
+    {
+      "id": "alumni",
+      "label": "Alumni & Networking",
+      "icon": "Users",
+      "iconBg": "#8b5cf6",
+      "faqs": [
+        {
+          "question": "Does the university have an alumni network?",
+          "answer": "Yes, the university boasts a strong and dynamic alumni network of over 18,000 members across diverse industries."
+        },
+        {
+          "question": "How can students connect with alumni?",
+          "answer": "Students can connect with alumni through events, social media platforms, and mentorship programmes."
+        },
+        {
+          "question": "How can alumni stay connected with the university?",
+          "answer": "Alumni can stay connected through the official alumni portal, social media groups, newsletters, and by participating in university-led events and initiatives."
+        },
+        {
+          "question": "Does the university organise alumni meet-ups or events?",
+          "answer": "Yes, the university regularly organises alumni meets, reunions, webinars, and networking events to help alumni reconnect and engage with the community."
+        },
+        {
+          "question": "What are the benefits of joining the alumni network?",
+          "answer": "The alumni network offers opportunities for professional networking, career support, mentorship, industry connections, and participation in exclusive alumni events."
+        },
+        {
+          "question": "How can I become a part of the K.R. Mangalam University alumni network?",
+          "answer": "All graduates automatically become members of the alumni network. You can also register through the university’s alumni portal to stay connected and updated."
+        },
+        {
+          "question": "Is there an alumni portal?",
+          "answer": "Yes, a platform exists for alumni engagement."
+        },
+        {
+          "question": "How can alumni contribute to the university’s growth?",
+          "answer": "Alumni can contribute by mentoring students, participating in events, offering internships, facilitating placements, and sharing their professional experiences."
+        },
+        {
+          "question": "Does the university highlight alumni achievements?",
+          "answer": "Yes, the university regularly showcases alumni success stories and achievements through its website, newsletters, and social media platforms."
+        },
+        {
+          "question": "Can alumni update their professional details with the university?",
+          "answer": "Yes, alumni are encouraged to regularly update their professional information through the alumni portal to stay engaged and receive relevant updates and opportunities."
+        },
+        {
+          "question": "How does the alumni network help in professional networking?",
+          "answer": "The alumni network connects graduates across industries, enabling knowledge sharing, collaborations, and valuable professional connections."
+        },
+        {
+          "question": "Are alumni eligible to participate in campus events and activities?",
+          "answer": "Yes, alumni are often invited to participate in university events, seminars, cultural programmes, and networking sessions."
+        }
+      ]
+    }
+  ]
+}

@@ -35,7 +35,8 @@ export const FAQ = () => {
     "admissions",
   );
   const [openItem, setOpenItem] = useState<string>("item-0");
-  const currentCategory = faqCategories.find((c) => c.id === activeCategory)!;
+  const faqData = faqCategories.mainEntity;
+  const currentCategory = faqData.find((cat) => cat.id === activeCategory);
 
   return (
     <>
@@ -72,7 +73,7 @@ export const FAQ = () => {
           <div className="flex flex-col lg:flex-row gap-18 items-start">
             {/* Left: Category Buttons */}
             <div className="w-full lg:w-[350px] flex flex-col gap-8 flex-shrink-0">
-              {faqCategories.map((cat) => {
+              {faqData.map((cat) => {
                 const Icon = iconMap[cat.icon];
                 const isActive = cat.id === activeCategory;
                 return (
