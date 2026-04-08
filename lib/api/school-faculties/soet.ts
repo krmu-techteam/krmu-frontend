@@ -19,6 +19,20 @@ export const soetFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Pankaj-Agarwal-DEAN-SOET.png",
   },
   {
+    id: 113902,
+    slug: "mr-someshwar-mukherjee",
+    title: {
+      rendered: "Mr. Someshwar Mukherjee",
+    },
+    featured_media: 6624,
+    acf: {
+      "staff-qualification": "BE(Electrical Engg.)",
+      staff_designation: "Professor of Practice",
+      schools: [1266],
+    },
+    featured_media_url: "",
+  },
+  {
     id: 113886,
     slug: "ms-neha-jhakra",
     title: {

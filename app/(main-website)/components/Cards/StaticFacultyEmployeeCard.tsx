@@ -23,7 +23,8 @@ export const StaticFacultyEmployeeCard = ({
         <Link
           href={`/faculty/${slug}`}
           className="hover:text-[#0060aa] cursor-pointer flex flex-col gap-1.5 text-base"
-          target="_blank" rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div className="mb-4">
             {imgURL ? (
@@ -44,7 +45,7 @@ export const StaticFacultyEmployeeCard = ({
 
           <span className=" md:text-2xl font-bold leading-[1]">{name}</span>
           <span
-            className="font-normal md:font-medium break-all"
+            className="font-normal md:font-medium  "
             dangerouslySetInnerHTML={{
               __html: desg,
             }}
