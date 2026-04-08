@@ -51,7 +51,7 @@ const HeroBanner = ({
 
   return (
     <section className="pt-24 sm:pt-40 sm:pb-[50px] px-2.5 sm:px-4">
-      <div className="school-programme-max-width md:flex items-center justify-between gap-10">
+      <div className="school-programme-max-width md:flex items-center justify-between gap-5">
         <div className={`w-full ${isFormAvailable ? "lg:w-8/12" : "lg:w-1/2"}`}>
           <p className="text-xs sm:text-2xl font-medium leading-[1.2] mb-2">
             {heroSection?.subtitle}
@@ -111,7 +111,7 @@ const HeroBanner = ({
             </div>
           ) : heroSection?.imgvideo === "Video" ? (
             <div
-              className="videoField w-full h-[420px] "
+              className="videoField w-full h-[200px] lg:h-[400px]"
               dangerouslySetInnerHTML={{
                 __html: heroSection?.videofield || "",
               }}

@@ -9,12 +9,30 @@ export async function POST(request: NextRequest) {
   }
 
   try {
+    let slug: string | undefined;
+    try {
+      const body = await request.json();
+      slug = body?.slug;
+    } catch {
+      // No body or invalid JSON
+    }
+
     // Purge all cached fetches tagged with "blogs"
     revalidateTag("blogs", { expire: 0 });
-    // Revalidate blog layout and all pages under /blog
-    revalidatePath("/blog", "layout");
 
-    return NextResponse.json({ revalidated: true, now: Date.now() });
+    // Revalidate the blog listing page
+    revalidatePath("/blog", "page");
+
+    // Revalidate the specific blog post if slug is provided
+    if (slug) {
+      revalidatePath(`/blog/${slug}`, "page");
+    }
+
+    return NextResponse.json({
+      revalidated: true,
+      slug: slug || "all",
+      now: Date.now(),
+    });
   } catch (error) {
     console.error("Revalidation error:", error);
     return NextResponse.json(

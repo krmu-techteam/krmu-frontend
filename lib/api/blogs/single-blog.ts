@@ -13,7 +13,7 @@ export async function getSingleBlogDataBySlug(
     const res = await fetch(
       `${krmBlogURL}/wp-json/wp/v2/posts?slug=${slug}&_embed`,
       {
-        next: { revalidate: 3600 }
+        next: { revalidate: 3600, tags: ["blogs"] }
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Single Blog");
@@ -56,7 +56,7 @@ export async function getAllBlogCategories(): Promise<AllBlogCategoriesResponse>
     const res = await fetch(
       `${krmBlogURL}/wp-json/wp/v2/categories?per_page=100&_fields=id,name,slug,taxonomy`,
       {
-        next: { revalidate: 3600 }
+        next: { revalidate: 3600, tags: ["blogs"] }
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Blog Categories");
@@ -94,7 +94,7 @@ export async function getBlogImageById(imgId: number): Promise<string | null> {
     const res = await fetch(
       `${krmBlogURL}/wp-json/wp/v2/media/${imgId}?_fields=guid`,
       {
-        next: { revalidate: 3600 }
+        next: { revalidate: 3600, tags: ["blogs"] }
       }
     );
 
