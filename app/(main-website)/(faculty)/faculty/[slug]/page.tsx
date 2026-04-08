@@ -7,6 +7,7 @@ import { Mail, Phone } from "lucide-react"; // NEW ICONS
 import { getWordImageById } from "@/lib/api/common";
 import { Metadata } from "next";
 import { origUrl } from "@/app/constant";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -38,10 +39,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const page = async ({ params }: Props) => {
   const { slug } = await params;
 
-  const facultyResData = await getFacultyBySlug(slug); 
+  const facultyResData = await getFacultyBySlug(slug);
   const currentFaculty = facultyResData?.find(
     (fac: singleFaculty) => fac?.slug === slug
   );
+
+  if (!currentFaculty) {
+    return notFound();
+  }
 
   const facultyContent = currentFaculty?.content.rendered || "";
   const facultyImgId = currentFaculty?.featured_media;

@@ -84,22 +84,18 @@ const page = async ({ params }: Props) => {
     (items) => items.slug === slug,
   );
 
-  // // Return 404 if either is missing
-  // if (!singleNewsEvents) {
-  //   return notFound();
-  // }
+  // Return 404 if slug doesn't match any event
+  if (!singleNewsEvents) {
+    return notFound();
+  }
 
   return (
     <>
-      {singleNewsEvents && (
-        <NewsEventsHero title={singleNewsEvents?.title?.rendered} />
-      )}
-      {singleNewsEvents && (
-        <NewsEventsImageContent
-          content={singleNewsEvents?.content?.rendered}
-          bgSlideImageIds={singleNewsEvents?.acf?.event_images}
-        />
-      )}
+      <NewsEventsHero title={singleNewsEvents?.title?.rendered} />
+      <NewsEventsImageContent
+        content={singleNewsEvents?.content?.rendered}
+        bgSlideImageIds={singleNewsEvents?.acf?.event_images}
+      />
     </>
   );
 };

@@ -1,6 +1,7 @@
 import CommonBlogLayout from "../../comp/CommonBlogLayout";
 import { strapiSeoToMetadata } from "@/lib/constants/strapiMeta";
 import { getCategoryBySlug } from "@/lib/api/blogs/cat-blog";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -28,6 +29,11 @@ const Page = async ({ params, searchParams }: Props) => {
   const resolvedSearchParams = searchParams;
 
   const { slug } = resolvedParams;
+
+  const category = await getCategoryBySlug(slug);
+  if (!category) {
+    return notFound();
+  }
 
   return (
     <>

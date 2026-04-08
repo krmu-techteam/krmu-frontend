@@ -1,6 +1,7 @@
 import { getStudentsAchievements } from "@/lib/api/student-achievement";
 import StudentAchievementCards from "../comp/StudentAchievementCards";
 import StudentAchievementHero from "../comp/StudentAchievementHero";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -15,12 +16,14 @@ const page = async ({ params }: Props) => {
     studentAchievementsCatName
   );
 
+  if (!achievementData || achievementData.length === 0) {
+    return notFound();
+  }
+
   return (
     <>
       <StudentAchievementHero heading={studentAchievementsCatName} />
-      {achievementData && (
-        <StudentAchievementCards achievementData={achievementData} />
-      )}
+      <StudentAchievementCards achievementData={achievementData} />
     </>
   );
 };
