@@ -5,6 +5,7 @@ import { NavLink } from "../contentype";
 
 interface BscFinanceNavbarProps {
   navLinks: NavLink[];
+  
   brochureHref: string;
   brochureDownloadName: string;
   applyHref: string;
