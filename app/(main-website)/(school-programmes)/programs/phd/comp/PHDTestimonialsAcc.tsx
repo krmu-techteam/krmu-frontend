@@ -36,7 +36,7 @@ const PHDTestimonialsAcc = ({ faqTitle, faqs }: Props) => {
                       {faq?.ques}
                     </AccordionTrigger>
                     <AccordionContent className="flex flex-col gap-4 text-balance text-base text-[#716d6c] pt-[10px] pb-[15px]">
-                      <p>{faq?.ques}</p>
+                      <p>{faq?.ans}</p>
                     </AccordionContent>
                   </AccordionItem>
                 );
