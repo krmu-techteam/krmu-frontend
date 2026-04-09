@@ -18,10 +18,20 @@ const BscFinanceNavbar = ({
 }: BscFinanceNavbarProps) => {
   return (
     <header className="absolute top-0 left-0 right-0 z-50 py-4 sm:py-6 lg:py-8 px-4 sm:px-6">
-      <div className="max-w-[1200px] mx-auto flex items-center justify-between gap-4 sm:gap-6">
+      <div className="max-w-[1200px] mx-auto flex items-center justify-center md:justify-between gap-4 sm:gap-6">
 
         {/* Logo */}
-        <div className="relative shrink-0" style={{ height: "clamp(28px, 4vw, 40px)", aspectRatio: "268/40" }}>
+        <div className="relative shrink-0 hidden md:block" style={{ height: "clamp(28px, 4vw, 40px)", aspectRatio: "268/40" }}>
+          <Image
+            src="/landingpage/bsc-finance-2026/krmu-logo-naac.png"
+            alt="K.R. Mangalam University - NAAC A+ Accredited"
+            fill
+            priority
+            sizes="268px"
+            className="object-contain"
+          />
+        </div>
+        <div className="relative shrink-0 md:hidden" style={{ height: "clamp(42px, 4vw, 40px)", aspectRatio: "268/40" }}>
           <Image
             src="/landingpage/bsc-finance-2026/krmu-logo-naac.png"
             alt="K.R. Mangalam University - NAAC A+ Accredited"
@@ -59,7 +69,7 @@ const BscFinanceNavbar = ({
 
           <NpfPopup
             formId="047a23de933bd996c4c01578fad16790"
-            btnClass="npfWidget-047a23de933bd996c4c01578fad16790 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white text-[#0c1830] hover:bg-white/90 text-sm font-semibold transition-all duration-200"
+            btnClass="npfWidget-047a23de933bd996c4c01578fad16790 inline-flex items-center max-lg:hidden gap-2 px-4 py-2 rounded-lg bg-white text-[#0c1830] hover:bg-white/90 text-sm font-semibold transition-all duration-200 hidden lg:block"
             btnText="Apply now"
           />
         </div>

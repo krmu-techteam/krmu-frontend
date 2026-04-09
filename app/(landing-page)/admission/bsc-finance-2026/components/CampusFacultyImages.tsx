@@ -14,14 +14,7 @@ const CampusFacultyImages = () => {
       */}
       <section className="w-full">
         <div className="relative w-full min-h-[460px] sm:min-h-[500px] md:min-h-[520px] lg:min-h-[560px] " >
-         
-          <div
-            className="pointer-events-none absolute inset-0 z-[1] bg-black" style={{
-              backgroundImage: `url('/landingpage/bsc-finance-2026/dots-bg.png')`,
-              backgroundRepeat: "repeat",
-              backgroundSize: "120px 120px",
-            }}
-          />
+          <Image src="/landingpage/bsc-finance-2026/dots-bg.png" alt="dots-bg" fill className="object-cover" />
           <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center gap-5 px-4 py-10 text-center sm:gap-6 sm:px-6 sm:py-12 md:gap-7 md:px-8 md:py-14 lg:gap-8 lg:py-16" >
             <h2
               className="m-0 w-full max-w-[min(100%,36rem)] shrink-0 font-semibold italic leading-[140%] tracking-[-0.02em] text-[26px] sm:max-w-[min(100%,40rem)] sm:text-[32px] md:max-w-[min(100%,46rem)] md:text-[42px] lg:max-w-[920px] lg:text-[52px] xl:text-[62px]"
