@@ -77,7 +77,7 @@ const OrganisationsSection = ({ data }: OrganisationsSectionProps) => {
                   key={tab.label}
                   onClick={() => setActiveTab(idx)}
                   className={[
-                    "px-3 py-2 sm:py-3 font-medium text-[11px] sm:text-[12px] lg:text-[13px] leading-5 tracking-normal transition-colors duration-200 border-b-2 -mb-px",
+                    "px-3 py-2 sm:py-3 font-medium text-[12px] sm:text-[14px] lg:text-[14px] leading-5 tracking-normal transition-colors duration-200 border-b-2 -mb-px",
                     activeTab === idx
                       ? "border-white text-white"
                       : "border-transparent text-[#8C8C8C] hover:text-[#CCCCCC]",
@@ -94,9 +94,9 @@ const OrganisationsSection = ({ data }: OrganisationsSectionProps) => {
               {logos.map((filename, idx) => (
                 <div
                   key={`${folder}-${idx}-${filename}`}
-                  className="h-[56px] sm:h-[68px] rounded-lg flex items-center justify-center px-2 py-1.5"
+                  className="h-[70px] rounded-lg flex items-center justify-center p-2"
                   style={{
-                    background: "#1A1A1A",
+                    background: "#fff",
                     border: "1px solid #2E2E2E",
                   }}
                 >
@@ -106,8 +106,8 @@ const OrganisationsSection = ({ data }: OrganisationsSectionProps) => {
                     width={0}
                     height={0}
                     sizes="(max-width: 640px) 45vw, 120px"
-                    className="max-h-[44px] sm:max-h-[52px] max-w-full object-contain object-center"
-                    style={{ width: "100%", height: "auto" }}
+                    className="object-contain object-center"
+                    style={{ width: "100%", height: "100%" }}
                   />
                 </div>
               ))}

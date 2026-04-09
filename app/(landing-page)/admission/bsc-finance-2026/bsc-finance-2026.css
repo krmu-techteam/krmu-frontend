@@ -35,32 +35,46 @@ div[style*="z-index"][style*="position: fixed"][style*="background"] {
   backdrop-filter: blur(4px);
 }
 
-/* Popup container */
+/* Popup container — no outline, clean white, no visible border */
 .npfW_popup,
 div[id*="npfPopup"] > div,
 .npf_wgts_popup {
   border-radius: 16px !important;
+  border: none !important;
+  outline: none !important;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3) !important;
   overflow: hidden !important;
+  overflow-x: hidden !important;
   max-width: 520px !important;
   width: 92vw !important;
   margin: auto !important;
+  padding: 0 !important;
 }
 
-/* Iframe inside popup */
+/* Hide the title bar (formTitle space) */
+div[id*="npfPopup"] > div > div,
+.npfW_popup > div,
+.npf_wgts_popup > div {
+  display: none !important;
+}
+
+/* Iframe — show directly, no border/outline */
 .npfW_popup iframe,
 div[id*="npfPopup"] iframe,
 .npf_wgts_popup iframe,
 iframe[src*="nopaperforms"],
 iframe[src*="npfs.co"] {
+  display: block !important;
   border: none !important;
-  border-radius: 12px !important;
+  outline: none !important;
+  border-radius: 16px !important;
   width: 100% !important;
   max-width: 100% !important;
+  overflow-x: hidden !important;
   box-shadow: none !important;
 }
 
-/* Close button */
+/* Close button — white bg */
 .npfW_close,
 .npf_wgts_close,
 div[id*="npfPopup"] span[style*="cursor"],
@@ -70,13 +84,16 @@ div[id*="npfPopup"] .close {
   font-size: 22px !important;
   line-height: 36px !important;
   border-radius: 50% !important;
-  background: #f3f4f6 !important;
+  background: #ffffff !important;
   color: #111 !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   top: 8px !important;
   right: 8px !important;
+  z-index: 10 !important;
   cursor: pointer !important;
 }
 

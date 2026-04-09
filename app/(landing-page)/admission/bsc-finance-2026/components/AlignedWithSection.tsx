@@ -30,8 +30,8 @@ const AlignedWithSection = ({ data }: AlignedWithSectionProps) => {
               alt={logo.alt}
               width={0}
               height={0}
-              sizes="200px"
-              className="h-10 sm:h-12 object-contain"
+              sizes="4000px"
+              className="h-20 sm:h-20 object-contain"
               style={{ width: "auto", height: "auto" }}
             />
           ))}
