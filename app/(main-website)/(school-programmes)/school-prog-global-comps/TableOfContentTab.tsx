@@ -12,7 +12,6 @@ type Props = {
 };
 
 const TableOfContentTab = ({ tocfaqs }: Props) => {
-  console.log("tocfaqs", tocfaqs);
   return (
     <Tabs
       defaultValue={tocfaqs?.[0]?.tocpoint.toLowerCase() ?? ""}
