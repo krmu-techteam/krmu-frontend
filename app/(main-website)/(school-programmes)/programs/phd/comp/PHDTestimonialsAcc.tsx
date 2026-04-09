@@ -32,10 +32,10 @@ const PHDTestimonialsAcc = ({ faqTitle, faqs }: Props) => {
                     value={`item-${i + 1}`}
                     className="last:border-b py-[15px] px-[25px] rounded-[8px] h-fit border border-[#d9dada]"
                   >
-                    <AccordionTrigger className="text-xl text-[#716d6c] p-0 hover:no-underline cursor-pointer phd-acc-panel">
+                    <AccordionTrigger className="text-xl text-[#1a1a1a] font-semibold p-0 hover:no-underline cursor-pointer phd-acc-panel">
                       {faq?.ques}
                     </AccordionTrigger>
-                    <AccordionContent className="flex flex-col gap-4 text-balance text-base text-[#716d6c] pt-[10px] pb-[15px]">
+                    <AccordionContent className="flex flex-col gap-4 text-balance text-base text-[#333] pt-[10px] pb-[15px]">
                       <p>{faq?.ans}</p>
                     </AccordionContent>
                   </AccordionItem>

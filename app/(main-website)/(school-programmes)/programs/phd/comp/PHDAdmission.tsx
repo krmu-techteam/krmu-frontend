@@ -22,7 +22,7 @@ const PHDAdmission = ({ title1, title2, desc1, desc2 }: Props) => {
           <div className="text-3xl md:text-5xl text-white font-semibold mb-10">
             <BlocksRenderer content={title1} />
           </div>
-          <div className="admission-process-section relative p-5">
+          <div className="admission-process-section relative p-5 [&_p]:mb-5 md:[&_p]:mb-1 [&_p]:leading-relaxed [&_p]:text-white">
             <BlocksRenderer content={desc1} />
           </div>
         </div>
@@ -30,7 +30,7 @@ const PHDAdmission = ({ title1, title2, desc1, desc2 }: Props) => {
           <div className="text-3xl md:text-5xl text-white font-semibold mb-5 md:mb-10">
             <BlocksRenderer content={title2} />
           </div>
-          <div className="selection-process-section relative p-5">
+          <div className="selection-process-section relative p-5 [&_p]:mb-5 md:[&_p]:mb-1 [&_p]:leading-relaxed [&_p]:text-white">
             <BlocksRenderer content={desc2} />
           </div>
         </div>
