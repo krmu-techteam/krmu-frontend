@@ -124,7 +124,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Ms.-Yashika-Khandelwal-1-SEMCE.jpg",
   },
   {
-    id: 113869,
+    id: 113871,
     slug: "dr-aditi-khare",
     title: {
       rendered: "Dr. Aditi Khare",
@@ -136,6 +136,6 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Aditi-Khare.png.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/1Dr.-Aditi-kkhare.png.jpg",
   },
 ];
