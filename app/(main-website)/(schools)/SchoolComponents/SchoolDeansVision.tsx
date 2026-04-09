@@ -69,6 +69,7 @@ const SchoolDeansVision = ({
               >
                 <Mail size={16} /> <span>{deanEmail}</span>
               </Link>
+              
             </div>
 
             <div className="text-sm sm:text-base leading-relaxed mb-6 xl:mb-0">

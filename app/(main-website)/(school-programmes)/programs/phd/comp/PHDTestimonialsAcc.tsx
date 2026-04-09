@@ -24,6 +24,7 @@ const PHDTestimonialsAcc = ({ faqTitle, faqs }: Props) => {
             className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-[3.84%] gap-y-2.5"
             defaultValue="item-1"
           >
+            
             {faqs &&
               faqs.map((faq, i) => {
                 return (

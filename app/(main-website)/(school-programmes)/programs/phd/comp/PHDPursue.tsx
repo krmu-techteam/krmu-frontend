@@ -16,6 +16,7 @@ const PHDPursue = ({ pursueContent }: Props) => {
         backgroundSize: 'cover'
       }}
     >
+      
       <div className="absolute inset-0 bg-black/50 z-0"></div>
       <div className="relative z-10 flex flex-col lg:flex-row max-w-[1664px] mx-auto w-full">
         <div className="lg:w-2/5 text-white">

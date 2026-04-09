@@ -45,6 +45,7 @@ const AdmissionTableOfContent = ({
                   {heading}
                   <span className="text-[#e61f21]">{highlight}</span>
                 </h3>
+
                 <p className="text-base">{desc}</p>
               </div>
               <div className="relative p-5 lg:p-0 bg-[url(/programmes/faq.png)] bg-cover bg-no-repeat md:bg-none overflow-hidden rounded-xl md:rounded-none">

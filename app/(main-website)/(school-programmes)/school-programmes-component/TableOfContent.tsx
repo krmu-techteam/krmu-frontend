@@ -51,6 +51,7 @@ const TableOfContent = ({
                 <div className="absolute inset-0 bg-black/60 md:hidden pointer-events-none"></div>
                 <div className="relative z-10">
                   <TableOfContentTab tocfaqs={tocfaqs} />
+                  
                 </div>
               </div>
               <div className="flex items-center justify-center mt-10 md:mt-20">

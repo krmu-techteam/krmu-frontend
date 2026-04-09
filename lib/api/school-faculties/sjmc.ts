@@ -121,6 +121,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/1Dr.-Aditi-kkhare.png.jpg",
   },
+  
   {
     id: 66802,
     slug: "mr-trilok-kumar-singh",
