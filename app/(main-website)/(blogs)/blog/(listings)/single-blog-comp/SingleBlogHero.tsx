@@ -29,6 +29,7 @@ const SingleBlogHero = ({
   //   if (imgUrl) {
   //   imgUrl = imgUrl.replace("wp.krmangalam.edu.in", "krmangalam.edu.in");
   // }
+  console.log('single blog img url', imgUrl);
 
   const normalizedImgUrl = imgUrl
     ?.replace("/blog/wp-content", "/wp-content")
@@ -49,9 +50,9 @@ const SingleBlogHero = ({
 
     {/* IMAGE FIRST ON MOBILE */}
     <div className="w-full lg:w-1/2 order-1 lg:order-2">
-      {normalizedImgUrl && (
+      {imgUrl && (
         <Image
-          src={normalizedImgUrl}
+          src={imgUrl}
           width={768}
           height={432}
           alt={title || "Blog Hero Image"}

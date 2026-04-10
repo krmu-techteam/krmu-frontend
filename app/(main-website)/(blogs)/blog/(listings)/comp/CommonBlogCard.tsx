@@ -13,6 +13,8 @@ type Props = {
 const CommonBlogCard = async ({ title, excerpt, slug, imgId, date }: Props) => {
   let imgUrl = await getBlogImageById(imgId);
 
+  console.log('imgUrl', imgUrl);
+
   // if (imgUrl) {
   //   imgUrl = imgUrl.replace("/blog/wp-content", "/wp-content");
   // }
@@ -47,7 +49,7 @@ const CommonBlogCard = async ({ title, excerpt, slug, imgId, date }: Props) => {
             </span>
             {normalizedImgUrl && (
               <Image
-                src={normalizedImgUrl}
+                src={imgUrl}
                 width={426}
                 height={284}
                 alt=""
