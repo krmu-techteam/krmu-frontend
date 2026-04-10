@@ -40,14 +40,15 @@ const page = () => {
       <StillinDoubt />
       <CourseStructure />
       {/* <QuickComparison /> */}
-      <WhyStudy />
+      {/* <WhyStudy /> */}
+      <CourseDetails />
       <AdmissionProcess />
       <InternationalExposure />
       <FinancialSupport />
       <Scholarship />
       <KRMUFEEStructure />
       <FacilitiesSection data={worldFacilities} />
-      <CourseDetails />
+      
       <CourseFAQ />
       <PreFooterCTA />
       <LocationSection />

@@ -4,7 +4,7 @@ import { HeroMarqueeSection } from "../law-2026/contentype";
 
 type Props = {
   data: HeroMarqueeSection;
-};
+}; 
 
 const HeroMarquee = ({ data }: Props) => {
   const repeatedMessages = [...data.messages, ...data.messages];

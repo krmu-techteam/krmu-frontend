@@ -1,3 +1,4 @@
+import CourseScrollButton from "../../common/CourseScrollButton";
 import PlacementStrategyGrid from "./PlacementStrategyGrid";
 
 const PlacementStrategy = () => {
@@ -22,17 +23,20 @@ const PlacementStrategy = () => {
         <div className="text-center mt-12">
           <div className="closing-statement">
             <h3 className="mb-2">
-              You enter KRMU with Confusion but leave it with a
+              Wanna Launch Your Career with Confidence?
               <span className="highlight-text">
-              {" "}  Career Portfolio &amp; Connections!
+                {" "}
+                Apply for KRMU’s B.Tech. CSE Course!
               </span>
             </h3>
-            <button
-              className="commonbtn2 mt-4 scroll-btn"
-              data-target="formSection"
+
+            <CourseScrollButton
+              targetId="apply-section"
+              highlightClass="flash-border"
+              btnClass="commonbtn2 mt-4 scroll-btn"
             >
-              Start Your Journey Today
-            </button>
+              Enrol Now
+            </CourseScrollButton>
           </div>
         </div>
       </div>

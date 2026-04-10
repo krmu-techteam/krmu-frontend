@@ -4,7 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer utilities {
-
+  .flash-border .heroBannerForm__form {
+    border: 1px solid red;
+    border-radius: 15px;
+  }
 
   /* global.css */
 .custom-scroll::-webkit-scrollbar {
@@ -34,7 +37,7 @@
   }
 
   .animate-marquee {
-    animation: marquee 18s linear infinite;
+    animation: marquee 45s linear infinite;
   }
 
   .bg-gradient-recruiters {
