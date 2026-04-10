@@ -22,7 +22,8 @@ import { worldFaciltiesCourseData } from "./content";
 
 export async function generateMetadata() {
   return {
-    title: "B.Tech. CSE Admission at KRMU | Direct admission in B.Tech. colleges​",
+    title:
+      "B.Tech. CSE Admission at KRMU | Direct admission in B.Tech. colleges​",
     description:
       "Searching for how to get admission in B.Tech.? Your scrolling stops here! Enrol for KRMU’s B.Tech. computer science and engineering admission to kickstart your engineering journey today!",
   };
@@ -39,7 +40,7 @@ const page = () => {
       <HowWeCompare />
       <PlacementStrategy />
       <StillinDoubt />
-      <CourseStructure />
+      {/* <CourseStructure /> */}
       {/* <QuickComparison /> */}
       <DirectAdmissionSection />
       <WhyStudy />
@@ -49,7 +50,7 @@ const page = () => {
       <Scholarship />
       <KRMUFEEStructure />
       <FacilitiesSection data={worldFacilities} />
-      <CourseDetails />
+      {/* <CourseDetails /> */}
       <CourseFAQ />
       <PreFooterCTA />
       <LocationSection />

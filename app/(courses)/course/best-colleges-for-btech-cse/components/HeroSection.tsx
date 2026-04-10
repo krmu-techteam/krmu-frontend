@@ -27,7 +27,7 @@ const HeroSection = () => {
               Est. 2013
             </span>
           </div>
-          <h3 className="text-white font-bold mb-3 leading-[1.2] text-3xl  lg:text-5xl 2xl:text-[46px]">
+          <h3 className="text-white font-bold mb-3 leading-[1.5] text-3xl   lg:text-5xl 2xl:text-[46px] w-full lg:w-[115%]">
             Admission Open At KRMU!
             <br />
             One of the Best Colleges For
@@ -35,7 +35,8 @@ const HeroSection = () => {
             B.Tech. CSE 2026
           </h3>
           <p className="text-white mb-6">
-            Enrol in KRMU, the best private college for B.Tech. CSE in India​ for a sure-shot, successful career in technology!
+            Enrol in KRMU, the best private college for B.Tech. CSE in India​
+            for a sure-shot, successful career in technology!
           </p>
           <div className="text-white flex flex-wrap gap-2 sm:justify-center md:justify-start text-sm">
             <span>100% Placement Support</span>

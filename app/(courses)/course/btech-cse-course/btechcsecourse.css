@@ -10,18 +10,18 @@
   }
 
   /* global.css */
-.custom-scroll::-webkit-scrollbar {
-  width: 6px;
-}
+  .custom-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
 
-.custom-scroll::-webkit-scrollbar-thumb {
-  background: #3b82f6;
-  border-radius: 10px;
-}
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 10px;
+  }
 
-.custom-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
+  .custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
   .hero-sub-header {
     color: #333;
     font-size: 2.2rem !important;
@@ -606,7 +606,7 @@
     /* Force display since we removed d-none d-lg-flex */
     z-index: 5;
     position: relative !important;
-    top: auto !important;
+    top: 250px !important;
     left: auto !important;
     transform: none !important;
     width: auto !important;

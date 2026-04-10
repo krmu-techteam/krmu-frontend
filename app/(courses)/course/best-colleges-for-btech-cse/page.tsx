@@ -21,7 +21,8 @@ import { worldFaciltiesCourseData } from "./content";
 
 export async function generateMetadata() {
   return {
-    title: "Best Colleges for B.Tech CSE in India | Top Private University – KRMU",
+    title:
+      "Best Colleges for B.Tech CSE in India | Top Private University – KRMU",
     description:
       "Looking for the best colleges for B.Tech CSE in India? Discover KRMU, one of the best private college for B.Tech. CSE in India with industry-focused curriculum & placement assistance.",
   };
@@ -38,8 +39,8 @@ const page = () => {
       <HowWeCompare />
       <PlacementStrategy />
       <StillinDoubt />
-      <CourseStructure />
-      {/* <QuickComparison /> */}
+      {/* <CourseStructure /> */}
+      <QuickComparison />
       <WhyStudy />
       <AdmissionProcess />
       <InternationalExposure />
@@ -47,7 +48,7 @@ const page = () => {
       <Scholarship />
       <KRMUFEEStructure />
       <FacilitiesSection data={worldFacilities} />
-      <CourseDetails />
+      {/* <CourseDetails /> */}
       <CourseFAQ />
       <PreFooterCTA />
       <LocationSection />

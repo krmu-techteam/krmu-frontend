@@ -5,16 +5,16 @@ const KRMUFEEStructure = () => {
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-4xl font-bold">
-            KRMU's Fee Structure for{" "}
-            <span className="text-[#e31e24]">B.Tech. Programmes</span>
+            KRMU’s B.Tech. CSE Fees Structure{" "}
+            {/* <span className="text-[#e31e24]">B.Tech. Programmes</span> */}
           </h2>
 
           <p className="text-gray-600 mt-4">
-            Invest in your future with our transparent and competitive B.Tech.
-            CSE course fee structure for B.Tech. Admission 2026. We offer
-            various specialisations in B.Tech. CSE courses, each designed to
-            cater to different interests and career paths. Here are the details
-            of our B.Tech. CSE course fee:
+            Invest in your future at KRMU with our transparent and competitive
+            B.Tech. CSE course fees structure for B.Tech. Admission 2026. We
+            offer various specialisations in B.Tech. CSE courses, each designed
+            to cater to different interests and career paths. Here is our
+            detailed B.Tech. CSE fee structure:
           </p>
         </div>
 
@@ -22,16 +22,18 @@ const KRMUFEEStructure = () => {
         <div className="overflow-x-auto">
           <table className="w-full border border-[#eef2f6] rounded-[15px] overflow-hidden border-separate border-spacing-0 shadow-[0_10px_30px_rgba(1,49,107,0.05)] bg-white">
             <thead>
-              <tr className="bg-[#0060aa] text-white uppercase tracking-wide">
+              <tr className="bg-[#0060aa] text-white uppercase tracking-wide text-center">
                 <th className="p-5 text-[15px] font-bold">Programme Name</th>
                 <th className="p-5 text-[15px] font-bold">Semester 1</th>
                 <th className="p-5 text-[15px] font-bold">Semester 2</th>
-                <th className="p-5 text-[15px] font-bold">Annual</th>
+                <th className="p-5 text-[15px] font-bold">
+                  B.Tech. Computer Science Fees Per Year
+                </th>
               </tr>
             </thead>
 
             <tbody className="text-[#475569] text-[15px]">
-              <tr className="border-b">
+              <tr className="border-b text-center">
                 <td className="p-[18px_25px]">B.Tech. CSE</td>
                 <td className="p-[18px_25px]">₹1,25,000</td>
                 <td className="p-[18px_25px]">₹1,25,000</td>
@@ -40,16 +42,16 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff]">
+              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] text-center">
                 <td className="p-[18px_25px]">B.Tech. Robotics & AI</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
-                <td className="p-[18px_25px] font-bold text-[#01316b]">
+                <td className="p-[18px_25px] font-bold text-[#01316b] ">
                   ₹2,70,000
                 </td>
               </tr>
 
-              <tr className="border-b">
+              <tr className="border-b text-center">
                 <td className="p-[18px_25px]">B.Tech. AI & ML</td>
                 <td className="p-[18px_25px]">₹1,45,000</td>
                 <td className="p-[18px_25px]">₹1,45,000</td>
@@ -58,7 +60,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff]">
+              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] text-center">
                 <td className="p-[18px_25px]">B.Tech. Cybersecurity</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
@@ -67,7 +69,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="border-b">
+              <tr className="border-b text-center">
                 <td className="p-[18px_25px]">B.Tech. Data Science</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
@@ -76,7 +78,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff]">
+              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] text-center">
                 <td className="p-[18px_25px]">
                   B.Tech. Full Stack Development
                 </td>
@@ -87,7 +89,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="border-b">
+              <tr className="border-b text-center">
                 <td className="p-[18px_25px]">B.Tech. UX/UI</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
@@ -96,7 +98,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff]">
+              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] text-center">
                 <td className="p-[18px_25px]">B.Tech. Cloud Computing**</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
@@ -105,7 +107,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr>
+              <tr className="border-b text-center">
                 <td className="p-[18px_25px]">
                   B.Tech. Semiconductor Design**
                 </td>

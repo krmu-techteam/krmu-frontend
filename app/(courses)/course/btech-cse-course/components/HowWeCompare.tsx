@@ -10,7 +10,7 @@ const HowWeCompare = () => {
           </span>
           <h2 className="compare-heading mt-4 mb-2">How We Compare</h2>
           <p className="compare-subheading">
-            See the difference between KRMU's B.Tech programmes and typical
+            See the difference between KRMU’s B.Tech. CSE courses and typical
             university programmes.
           </p>
         </div>

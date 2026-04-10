@@ -39,7 +39,7 @@ export default function Header() {
           <Link href="/">
             <Image
               src="/wp-content/landingpage/common/krmlogo.webp"
-              width={200}
+              width={300}
               height={40}
               alt="Logo"
             />

@@ -39,8 +39,8 @@ const page = () => {
       <HowWeCompare />
       <PlacementStrategy />
       <StillinDoubt />
-      <CourseStructure />
-      {/* <QuickComparison /> */}
+      {/* <CourseStructure /> */}
+      <QuickComparison />
       <WhyStudy />
       <AdmissionProcess />
       <InternationalExposure />
@@ -48,7 +48,7 @@ const page = () => {
       <Scholarship />
       <KRMUFEEStructure />
       <FacilitiesSection data={worldFacilities} />
-      <CourseDetails />
+      {/* <CourseDetails /> */}
       <CourseFAQ />
       <PreFooterCTA />
       <LocationSection />
