@@ -16,7 +16,8 @@
     background-position: center;
   }
 
-  @media (max-width: 640px) {
+  /* Mobile */
+  @media (max-width: 639px) {
     .MainSection {
       background-image: none !important;
       background-color: #1f0b07;
@@ -25,17 +26,40 @@
       background-image: url("/wp-content/landingpage/brand-2026/brand-mob.webp") !important;
       background-size: cover;
       background-position: center;
-      height: 324px;
+      height: 498px;
       display: flex;
       align-items: end;
       justify-content: center;
     }
   }
+
+  /* Tablet */
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .MainSection {
+      background-image: none !important;
+      background-color: #1f0b07;
+    }
+    .MainSection .container-1 {
+      background-image: url("/wp-content/landingpage/brand-2026/brand-mob.webp") !important;
+      background-size: cover;
+      background-position: center;
+      height: 600px; /* Adjusted for tablet */
+      display: flex;
+      align-items: end;
+      justify-content: center;
+    }
+  }
+
+  /* Laptop */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    /* Laptop specific overrides can go here */
+  }
   .whyBgStyle {
     background-color: #003fa1;
   }
 
-  @media (max-width: 640px) {
+  /* Mobile and Tablet */
+  @media (max-width: 1023px) {
     .whyBgStyle {
       background-color: none;
     }
@@ -342,7 +366,8 @@
   }
   /* Mobile version */
 
-  @media (max-width: 640px) {
+  /* Mobile and Tablet */
+  @media (max-width: 1023px) {
     .hero_heading {
       color: #fff;
     }
