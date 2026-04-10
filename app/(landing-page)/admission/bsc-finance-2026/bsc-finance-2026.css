@@ -117,6 +117,7 @@ div[id*="npfPopup"] .close {
     max-height: 80vh !important;
   }
 
+
   .npfW_close,
   .npf_wgts_close,
   div[id*="npfPopup"] span[style*="cursor"],
@@ -127,4 +128,131 @@ div[id*="npfPopup"] .close {
     top: 6px !important;
     right: 6px !important;
   }
+}
+
+/* Placements Section Styles */
+.placement-featured {
+  background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+  border-radius: 24px;
+  padding: 30px;
+  color: white;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-badge {
+  background: #fcd404;
+  color: black;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.featured-name {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+
+.featured-company {
+  color: #cbd5e1;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.featured-package {
+  font-size: 32px;
+  font-weight: 900;
+  color: #fcd404;
+  margin-bottom: 16px;
+}
+
+.featured-note {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+.section-tag {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sec-title span {
+  color: #e31e24;
+}
+
+.stat-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.stat-card .num {
+  font-size: 28px;
+  font-weight: 800;
+  color: #003366;
+  margin-bottom: 4px;
+}
+
+.stat-card .lbl {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.placement-card {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.placement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #cbd5e1;
+}
+
+.p-name {
+  font-weight: 800;
+  font-size: 18px;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.p-company {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.p-pkg {
+  font-weight: 800;
+  color: #e31e24;
+  font-size: 18px;
+}
+
+.p-pkg-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  font-weight: 700;
 }
