@@ -1,0 +1,400 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@layer utilities {
+  .flash-border .heroBannerForm__form {
+    border: 1px solid red;
+    border-radius: 15px;
+  }
+
+  .MainSection {
+    background-image: url("/wp-content/landingpage/brand-2026/brand.webp") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* Mobile */
+  @media (max-width: 639px) {
+    .MainSection {
+      background-image: none !important;
+      background-color: #1f0b07;
+    }
+    .MainSection .container-1 {
+      background-image: url("/wp-content/landingpage/brand-2026/brand-mob.webp") !important;
+      background-size: cover;
+      background-position: center;
+      height: 498px;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .MainSection {
+      background-image: none !important;
+      background-color: #1f0b07;
+    }
+    .MainSection .container-1 {
+      background-image: url("/wp-content/landingpage/brand-2026/brand-mob.webp") !important;
+      background-size: cover;
+      background-position: center;
+      height: 600px; /* Adjusted for tablet */
+      display: flex;
+      align-items: end;
+      justify-content: center;
+    }
+  }
+
+  /* Laptop */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    /* Laptop specific overrides can go here */
+  }
+  .whyBgStyle {
+    background-color: #003fa1;
+  }
+
+  /* Mobile and Tablet */
+  @media (max-width: 1023px) {
+    .whyBgStyle {
+      background-color: none;
+    }
+    .whyBgStyleImage {
+      margin-bottom: 10px;
+    }
+  }
+  .prominentrecruitShadow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .lpul ul {
+    list-style: inside;
+  }
+
+  .promrecCard {
+    position: relative;
+  }
+  .promrecCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .feeStructTableContainer table thead tr,
+  .feeStructTableContainer table td {
+    border: 1px solid #cfcfcf;
+  }
+
+  .testicardShadowoverlay {
+    position: relative;
+  }
+
+  .testicardShadowoverlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .landingpagePrevArrow,
+  .landingpageNextArrow,
+  .scholarPagePrevArrow,
+  .scholarPageNextArrow {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .landingpagePrevArrow svg,
+  .landingpageNextArrow svg,
+  .scholarPagePrevArrow svg,
+  .scholarPageNextArrow svg {
+    display: none;
+  }
+
+  .landingpagePrevArrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: url("/wp-content/landingpage/common/move-left.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .landingpageNextArrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: url("/wp-content/landingpage/common/move-right.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .scholarPagePrevArrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: url("/wp-content/landingpage/common/move-left-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .scholarPageNextArrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: url("/landingpage/common/move-right-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .embla__slide {
+    transition:
+      transform 0.5s ease,
+      opacity 0.5s ease;
+  }
+
+  .highlight-section .npf_wgts {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid red;
+  }
+
+  .npf_wgts iframe {
+    box-shadow: none !important;
+  }
+
+  .heroBannerForm__form {
+    background: #fff;
+    width: 100%;
+    border-radius: 10px;
+    padding-top: 40px;
+
+    height: 583px;
+    position: relative;
+  }
+
+  .heroBannerForm-header {
+    text-align: center;
+    font-family: "Poppins", sans-serif !important;
+  }
+
+  .heroBannerForm-header h3 {
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .heroBannerForm-header h3 span {
+    display: block;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.1;
+    margin-top: 5px;
+  }
+  .prominentrecruitShadow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .lpul ul {
+    list-style: inside;
+  }
+
+  .promrecCard {
+    position: relative;
+  }
+  .promrecCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .feeStructTableContainer table thead tr,
+  .feeStructTableContainer table td {
+    border: 1px solid #cfcfcf;
+  }
+
+  .testicardShadowoverlay {
+    position: relative;
+  }
+
+  .testicardShadowoverlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .landingpagePrevArrow,
+  .landingpageNextArrow,
+  .scholarPagePrevArrow,
+  .scholarPageNextArrow {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .landingpagePrevArrow svg,
+  .landingpageNextArrow svg,
+  .scholarPagePrevArrow svg,
+  .scholarPageNextArrow svg {
+    display: none;
+  }
+
+  .landingpagePrevArrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: url("/wp-content/landingpage/common/move-left.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .landingpageNextArrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: url("/wp-content/landingpage/common/move-right.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .scholarPagePrevArrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: url("/wp-content/landingpage/common/move-left-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .scholarPageNextArrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: url("/landingpage/common/move-right-white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .embla__slide {
+    transition:
+      transform 0.5s ease,
+      opacity 0.5s ease;
+  }
+
+  .highlight-section .npf_wgts {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid red;
+  }
+
+  .npf_wgts iframe {
+    box-shadow: none !important;
+  }
+
+ 
+
+  .npf_wgts iframe {
+    border-radius: 14px;
+    width: 100% !important;
+    float: right;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  @media (max-width: 768px) {
+    .fixed-top {
+      position: static !important;
+    }
+
+    .npf_wgts iframe {
+      width: 100%;
+    }
+    .hero_heading {
+      font-size: 21px;
+      line-height: 1.2;
+      padding-top: 200px;
+    }
+    .hero_heading br {
+      display: none;
+    }
+  }
+  /* Mobile version */
+
+  /* Mobile and Tablet */
+  @media (max-width: 1023px) {
+    .hero_heading {
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .frms999 {
+      text-align: center !important;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .npf_wgts iframe {
+      width: 100% !important;
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 18s linear infinite;
+  }
+}

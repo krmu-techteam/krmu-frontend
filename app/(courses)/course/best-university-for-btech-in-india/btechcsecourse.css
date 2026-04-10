@@ -4,6 +4,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer utilities {
+  .courseheroSection {
+    background: url("https://www.krmangalam.edu.in/wp-content/landingpage/btech-2026/btech-hero-bg.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   /* global.css */
   .custom-scroll::-webkit-scrollbar {
     width: 6px;

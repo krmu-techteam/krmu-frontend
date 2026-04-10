@@ -7,16 +7,10 @@ const formId = "31c1452015d32698095f833b3e7eb9c5";
 const HeroSection = () => {
   return (
     <>
-      <section className="relative">
-        <Image
-          src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_hero_bg_1_6bfcbf6655.webp"
-          fill
-          className="object-cover"
-          alt=""
-        />
-        <div className="px-4 md:px-12 z-50 py-40 flex flex-col lg:flex-row justify-between items-center relative">
+      <section className="courseheroSection">
+        <div className="px-4 md:px-12 z-50 py-10 flex flex-col lg:flex-row justify-between items-center relative">
           <div className="w-full lg:w-1/2 xl:w-1/3">
-            <div className="flex flex-wrap sm:flex-nowrap gap-2 mb-3">
+            <div className="flex justify-center md:justify-start flex-wrap sm:flex-nowrap gap-2 mb-3">
               <span className="mt-[10px] px-[14px] py-[8px] rounded-[20px] text-[14px] font-semibold bg-[#f5a623] text-black">
                 NAAC A Accredited
               </span>
@@ -29,24 +23,51 @@ const HeroSection = () => {
                 Est. 2013
               </span>
             </div>
-            <h3 className="text-white font-bold mb-3 leading-[1.5] text-3xl  lg:text-5xl 2xl:text-[46px] w-full lg:w-[100%]">
+            <h3 className="text-white text-center sm:text-left font-semibold sm:font-bold mb-3 leading-[1.5] text-3xl  lg:text-5xl 2xl:text-[46px] w-full lg:w-[100%]">
               Apply Today At KRMU
               <br />
               Ranked Amongst <br />
               The Best Colleges in
               <br /> Delhi NCR for B.Tech​.
             </h3>
-            <p className="text-white mb-6">
+            <p className="text-white mb-6 hidden sm:block">
               Considered one of the top colleges for B.Tech. in Delhi NCR,
               KRMU’s esteemed educators ensure that every student excels &
               become an expert in the field of engineering
             </p>
-            <div className="text-white flex flex-wrap gap-2 sm:justify-center md:justify-start text-sm">
+            <div className="text-white hidden sm:flex flex-wrap gap-2 sm:justify-center md:justify-start text-sm">
               <span>100% Placement Support</span>
               <span>|</span>
               <span>9 Engineering Specialisations</span>
               <span>|</span>
               <span>₹56.6 LPA Highest Package</span>
+            </div>
+            <div className="p-3 block md:hidden">
+              {/* Row 1 */}
+              <div className="flex flex-wrap mt-[30px] text-white items-center">
+                <div className="flex-1 text-center">
+                  <h3 className="text-[22px] font-semibold">56.6 LPA</h3>
+                  <p className="text-xs">Highest Package</p>
+                </div>
+
+                <div className="flex-1 text-center">
+                  <h3 className="text-[22px] font-semibold">Upto 27Cr</h3>
+                  <p className="text-xs">Scholarship</p>
+                </div>
+              </div>
+
+              {/* Row 2 */}
+              <div className="flex flex-wrap mt-[30px] text-white ">
+                <div className="flex-1 text-center">
+                  <h3 className="text-[22px] font-semibold">800+</h3>
+                  <p className="text-xs">Recruiters</p>
+                </div>
+
+                <div className="flex-1 text-center">
+                  <h3 className="text-[22px] font-semibold">100%</h3>
+                  <p className="text-xs">Placement Assistance</p>
+                </div>
+              </div>
             </div>
             <CourseScrollButton
               targetId="apply-section"
