@@ -2,7 +2,7 @@ import AdmissionProcess from "./components/AdmissionProcess";
 import CourseDetails from "./components/CourseDetails";
 import CourseFAQ from "./components/CourseFAQ";
 import CourseProminentRecruiter from "./components/CourseProminentRecruiter";
-import CourseStructure from "./components/CourseStructure";
+// import CourseStructure from "./components/CourseStructure";
 import FacilitiesSection from "./components/FacilitiesSection";
 import FinancialSupport from "./components/FinancialSupport";
 import HeroSection from "./components/HeroSection";
@@ -13,7 +13,7 @@ import LocationSection from "./components/LocationSection";
 import PlacementOverview from "./components/PlacementOverview";
 import PlacementStrategy from "./components/PlacementStrategy";
 import PreFooterCTA from "./components/PreFooterCTA";
-import QuickComparison from "./components/QuickComparison";
+import FeeVsRoi from "./components/FeeVsRoi";
 import Scholarship from "./components/Scholarship";
 import StillinDoubt from "./components/StillinDoubt";
 import WhyStudy from "./components/WhyStudy";
@@ -38,7 +38,7 @@ const page = () => {
       <HowWeCompare />
       <PlacementStrategy />
       <StillinDoubt />
-      <CourseStructure />
+      {/* <CourseStructure /> */}
       {/* <QuickComparison /> */}
       <WhyStudy />
       <AdmissionProcess />
@@ -46,8 +46,9 @@ const page = () => {
       <FinancialSupport />
       <Scholarship />
       <KRMUFEEStructure />
+      <FeeVsRoi />
       <FacilitiesSection data={worldFacilities} />
-      <CourseDetails />
+      {/* <CourseDetails /> */}
       <CourseFAQ />
       <PreFooterCTA />
       <LocationSection />

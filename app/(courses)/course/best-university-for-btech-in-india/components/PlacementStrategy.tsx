@@ -1,4 +1,5 @@
 import PlacementStrategyGrid from "./PlacementStrategyGrid";
+import CourseScrollButton from "../../common/CourseScrollButton";
 
 const PlacementStrategy = () => {
   return (
@@ -29,12 +30,14 @@ const PlacementStrategy = () => {
                 Career Portfolio &amp; Connections!
               </span>
             </h3>
-            <button
-              className="commonbtn2 mt-4 scroll-btn"
+            <CourseScrollButton
+              targetId="apply-section"
+              highlightClass="flash-border"
+              btnClass="commonbtn2 mt-4 scroll-btn"
               data-target="formSection"
             >
               Start Your Journey Today
-            </button>
+            </CourseScrollButton>
           </div>
         </div>
       </div>

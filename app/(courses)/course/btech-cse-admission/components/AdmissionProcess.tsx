@@ -1,3 +1,4 @@
+import CourseScrollButton from "../../common/CourseScrollButton";
 export default function AdmissionProcess() {
   return (
     <section id="admission-process" className="bg-[#f8fbff] pb-[80px] py-12">
@@ -5,11 +6,13 @@ export default function AdmissionProcess() {
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="mt-3 text-3xl font-bold">
-            How To Get Admission <span className="text-[#e31e24]">In B.Tech.?</span>
+            How To Get Admission{" "}
+            <span className="text-[#e31e24]">In B.Tech.?</span>
           </h2>
 
           <p className="text-gray-600">
-            Commence your B.Tech. computer science and engineering admission journey in just 6 simple steps
+            Commence your B.Tech. computer science and engineering admission
+            journey in just 6 simple steps
           </p>
         </div>
 
@@ -119,7 +122,11 @@ export default function AdmissionProcess() {
 
         {/* Button */}
         <div className="text-center mt-2">
-          <button className="bg-[#e31e24] text-white px-[35px] py-[12px] text-[18px] font-bold rounded-[8px] inline-flex items-center gap-[15px] shadow-[0_8px_25px_rgba(227,30,36,0.3)] hover:scale-105 hover:shadow-[0_10px_30px_rgba(227,30,36,0.4)] transition">
+          <CourseScrollButton
+            targetId="apply-section"
+            highlightClass="flash-border"
+            btnClass="bg-[#e31e24] text-white px-[35px] py-[12px] text-[18px] font-bold rounded-[8px] inline-flex items-center gap-[15px] shadow-[0_8px_25px_rgba(227,30,36,0.3)] hover:scale-105 hover:shadow-[0_10px_30px_rgba(227,30,36,0.4)] transition"
+          >
             Enroll Now
             <svg
               width="18"
@@ -129,7 +136,7 @@ export default function AdmissionProcess() {
             >
               <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
             </svg>
-          </button>
+          </CourseScrollButton>
         </div>
       </div>
     </section>

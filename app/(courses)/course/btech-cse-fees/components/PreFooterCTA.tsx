@@ -1,3 +1,5 @@
+import CourseScrollButton from "../../common/CourseScrollButton";
+
 export default function PreFooterCTA() {
   return (
     <section className="bg-white py-[80px] border-t border-[#f1f5f9]">
@@ -18,7 +20,11 @@ export default function PreFooterCTA() {
         {/* Buttons */}
         <div className="flex justify-center gap-5 mt-10 flex-wrap md:flex-row flex-col">
           {/* Enroll Button */}
-          <button className="bg-[#d8232a] text-white px-[35px] py-[16px] rounded-[12px] font-bold text-[18px] inline-flex items-center justify-center gap-[12px] shadow-[0_10px_20px_rgba(216,35,42,0.15)] hover:bg-[#bd1e24] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_rgba(216,35,42,0.25)] transition w-full md:w-auto">
+          <CourseScrollButton
+            targetId="apply-section"
+            highlightClass="flash-border"
+            btnClass="bg-[#d8232a] text-white px-[35px] py-[16px] rounded-[12px] font-bold text-[18px] inline-flex items-center justify-center gap-[12px] shadow-[0_10px_20px_rgba(216,35,42,0.15)] hover:bg-[#bd1e24] hover:-translate-y-[3px] hover:shadow-[0_15px_30px_rgba(216,35,42,0.25)] transition w-full md:w-auto"
+          >
             Enrol Now. Limited Seats Available!
             <svg
               width="18"
@@ -28,7 +34,7 @@ export default function PreFooterCTA() {
             >
               <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
             </svg>
-          </button>
+          </CourseScrollButton>
 
           {/* Phone Button */}
           <a

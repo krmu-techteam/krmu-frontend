@@ -188,7 +188,7 @@ const Scholarship = () => {
         <div className="mb-10 overflow-x-auto">
           <table className="w-full border border-[#eef2f6] rounded-[12px] overflow-hidden border-separate border-spacing-0">
             <thead>
-              <tr className="bg-[#0060aa] text-white">
+              <tr className="bg-[#0060aa] text-white text-left ">
                 <th className="p-4 text-[16px] font-semibold">Parameter</th>
                 <th className="p-4 text-[16px] font-semibold">Detail</th>
               </tr>
@@ -208,6 +208,52 @@ const Scholarship = () => {
                 </td>
                 <td className="p-4 text-[#475569]">
                   First-come, First-served (Limited Seats)
+                </td>
+              </tr>
+
+              <tr className="border-b">
+                <td className="p-4 text-[#475569]">
+                  <strong>Applicable On</strong>
+                </td>
+                <td className="p-4 text-[#475569]">
+                  First-year Programme Fee only
+                </td>
+              </tr>
+
+              <tr className="border-b">
+                <td className="p-4 text-[#475569]">
+                  <strong>Combination</strong>
+                </td>
+                <td className="p-4 text-[#475569]">
+                  Only one scholarship is allowed
+                </td>
+              </tr>
+
+              <tr className="border-b">
+                <td className="p-4 text-[#475569]">
+                  <strong>Disbursement</strong>
+                </td>
+                <td className="p-4 text-[#475569]">
+                  Instalments (based on % slab)
+                </td>
+              </tr>
+
+              <tr className="border-b">
+                <td className="p-4 text-[#475569]">
+                  <strong>Scholarship Continuation Criteria</strong>
+                </td>
+                <td className="p-4 text-[#475569]">
+                  75% attendance + pass all subjects + no misconduct
+                </td>
+              </tr>
+
+              <tr className="border-b">
+                <td className="p-4 text-[#475569]">
+                  <strong>Criteria for Sports-based Scholarship</strong>
+                </td>
+                <td className="p-4 text-[#475569]">
+                  Last 3 years' performance + certificate verification +
+                  physical test
                 </td>
               </tr>
 

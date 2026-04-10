@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import CourseScrollButton from "../../common/CourseScrollButton";
 
 export default function CourseStructure() {
   const [open, setOpen] = useState<number | null>(0);
@@ -97,7 +98,7 @@ export default function CourseStructure() {
         },
       ],
     },
-     {
+    {
       year: "Year 4",
       semesters: [
         {
@@ -115,7 +116,7 @@ export default function CourseStructure() {
           subjects: [
             "Industry Internship",
             "Major Project -II",
-            "MOOC (Swayam/ NPTEL/AICTE’s ELIS )"
+            "MOOC (Swayam/ NPTEL/AICTE’s ELIS )",
           ],
         },
       ],
@@ -131,9 +132,13 @@ export default function CourseStructure() {
             Apply for KRMU’s B.Tech. CSE Course!
           </p>
 
-          <button className="mt-3 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+          <CourseScrollButton
+            targetId="apply-section"
+            highlightClass="flash-border"
+            btnClass="mt-3 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+          >
             Enrol Now
-          </button>
+          </CourseScrollButton>
 
           <h2 className="text-2xl md:text-3xl font-bold mt-4">
             B.Tech. CSE Course Structure
