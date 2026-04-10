@@ -201,3 +201,36 @@ export type BscFinanceHeroContent = {
   brochureBtnHref: string;
   lpclName: string; // CSS class for MainSection background
 };
+
+// Single recruiter item
+export type ProminentRecruit = {
+  imgUrl: string; // image URL
+  alt: string; // image alt text
+};
+
+// Placement story type
+export type PlacementStory = {
+  id: number;
+  name: string;
+  company: string;
+  package: string;
+  image: string;
+  note?: string;
+  packageLabel?: string;
+};
+
+// Placement stat type
+export type PlacementStat = {
+  value: string;
+  label: string;
+};
+
+// Main Placement Section Data
+export type PlacementSectionData = {
+  eyebrow: string;
+  heading: string;
+  description: string;
+  featuredStory: PlacementStory;
+  stats: PlacementStat[];
+  moreStories: PlacementStory[];
+};
