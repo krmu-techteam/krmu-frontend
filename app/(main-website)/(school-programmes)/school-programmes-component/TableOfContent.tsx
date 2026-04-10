@@ -46,8 +46,13 @@ const TableOfContent = ({
                 </h3>
                 <p className="text-base">{desc}</p>
               </div>
-              <div className="p-5 lg:p-0 bg-[url(/programmes/faq.png)] bg-cover bg-no-repeat md:bg-none">
-                <TableOfContentTab tocfaqs={tocfaqs} />
+              <div className="relative p-5 lg:p-0 bg-[url(/programmes/faq.png)] bg-cover bg-no-repeat md:bg-none overflow-hidden rounded-xl md:rounded-none">
+                {/* Mobile overlay for text readability */}
+                <div className="absolute inset-0 bg-black/60 md:hidden pointer-events-none"></div>
+                <div className="relative z-10">
+                  <TableOfContentTab tocfaqs={tocfaqs} />
+                  
+                </div>
               </div>
               <div className="flex items-center justify-center mt-10 md:mt-20">
                 {(tocbtn?.buttonclass || tocbtn?.buttonlink) && (

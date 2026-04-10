@@ -17,6 +17,7 @@ const TableOfContentTab = ({ tocfaqs }: Props) => {
       defaultValue={tocfaqs?.[0]?.tocpoint.toLowerCase() ?? ""}
       className="flex-row text-white"
     >
+      
       {/* Tab list (dynamic tocpoints) */}
       <TabsList className="flex-col w-1/2 md:w-1/3 h-full bg-transparent items-start">
         <div>

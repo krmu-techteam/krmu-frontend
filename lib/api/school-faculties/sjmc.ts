@@ -62,22 +62,6 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
   //     "https://wp.krmangalam.edu.in/wp-content/uploads/2025/04/Dr.-Karan-Singh-SEMCE.png",
   // },
   {
-    id: 66802,
-    slug: "mr-trilok-kumar-singh",
-    title: {
-      rendered: "Mr. Trilok Kumar Singh",
-    },
-    featured_media: 66804,
-    acf: {
-      "staff-qualification": "Ph.D. (pursuing)",
-      staff_designation: "Teaching Assistant & Research Scholar",
-      schools: [1009],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Mr.-Trilok-Singh-SEMCE.png",
-  },
-
-  {
     id: 10770,
     slug: "ritika-choudhary",
     title: {
@@ -92,7 +76,6 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/04/Dr.-Ritika-Choudhary-SEMCE.jpg",
   },
-
   {
     id: 10767,
     slug: "aditi-agarwal",
@@ -108,7 +91,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Ms.-Aditi-Agarwal-SEMCE.jpg",
   },
-  {
+    {
     id: 113711,
     slug: "yashika-khandelwal",
     title: {
@@ -138,4 +121,22 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/1Dr.-Aditi-kkhare.png.jpg",
   },
+  
+  {
+    id: 66802,
+    slug: "mr-trilok-kumar-singh",
+    title: {
+      rendered: "Mr. Trilok Kumar Singh",
+    },
+    featured_media: 66804,
+    acf: {
+      "staff-qualification": "Ph.D. (pursuing)",
+      staff_designation: "Teaching Assistant & Research Scholar",
+      schools: [1009],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Mr.-Trilok-Singh-SEMCE.png",
+  },
+  
+
 ];

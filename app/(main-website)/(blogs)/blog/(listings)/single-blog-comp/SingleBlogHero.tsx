@@ -54,8 +54,9 @@ const SingleBlogHero = ({
           src={normalizedImgUrl}
           width={768}
           height={432}
-          alt="Single Blog Title"
+          alt={title || "Blog Hero Image"}
           className="rounded-xl w-full object-cover"
+          priority
         />
       )}
     </div>
