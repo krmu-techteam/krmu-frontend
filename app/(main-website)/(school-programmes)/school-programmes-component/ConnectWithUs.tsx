@@ -8,8 +8,8 @@ export const ConnectWithUs = () => {
         <h3 className="text-4xl lg:text-[40px] font-semibold mb-5 text-white text-center sm:text-left">
           Connect With Us
         </h3>
-        <div className="flex flex-wrap md:flex-nowrap items-center gap-6">
-          <div className="w-full md:w-3/12">
+        <div className="flex flex-wrap lg:flex-nowrap items-center gap-6">
+          <div className="w-full lg:w-3/12">
             <Link
               href="tel:9311411717"
               className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-[30px] flex items-center break-all"
@@ -25,7 +25,7 @@ export const ConnectWithUs = () => {
               </span>
             </Link>
           </div>
-          <div className="w-full md:w-4/12">
+          <div className="w-full lg:w-4/12">
             <Link
               href="mailto:welcome@krmangalam.edu.in"
               className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-[30px] flex items-center break-all"
@@ -41,7 +41,7 @@ export const ConnectWithUs = () => {
               </span>
             </Link>
           </div>
-          <div className="w-full md:w-5/12">
+          <div className="w-full lg:w-5/12">
             <Link
               href="https://maps.app.goo.gl/vaYSxzfRzMd1XvFs8"
               className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-[30px] flex items-center"

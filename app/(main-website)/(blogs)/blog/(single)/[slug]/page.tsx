@@ -109,7 +109,7 @@ const BlogPage = async ({ params }: Props) => {
         strategy="afterInteractive"
       />
 
-      {/* <SingleBlogHero
+      <SingleBlogHero
         title={currentSingleBlog?.title?.rendered}
         imgUrl={featuredImageUrl ?? ""}
         authorName={authorName}
@@ -118,7 +118,7 @@ const BlogPage = async ({ params }: Props) => {
         imgId={authorImageId}
         authorSlug={authorSlug}
       />
-      <SingleBlogLayout content={currentSingleBlog?.content?.rendered} /> */}
+      <SingleBlogLayout content={currentSingleBlog?.content?.rendered} />
     </>
   );
 };
