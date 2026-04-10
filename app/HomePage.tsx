@@ -13,71 +13,76 @@ import VisitExplore from "./(main-website)/Home/VisitExplore";
 import WhyKRMU from "./(main-website)/Home/WhyKRMU";
 import YourJourney from "./(main-website)/Home/YourJourney";
 import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
-import { createCollageOrUniversitySchema, createOrganizationSchema, createWebsiteSchema } from "@/lib/api/common";
+import {
+  createCollageOrUniversitySchema,
+  createOrganizationSchema,
+  createWebsiteSchema,
+} from "@/lib/api/common";
 import Script from "next/script";
 
 export default async function HomePage() {
   const homepageContent = await getHomePageData();
 
   const hero = homepageContent.find(
-    (component) => component.__component === "homepage-components.hero-section"
+    (component) => component.__component === "homepage-components.hero-section",
   );
   const aDecadeData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.a-decade-section"
+      component.__component === "homepage-components.a-decade-section",
   );
 
   const yourJourneyData = homepageContent.find(
-    (component) => component.__component === "homepage-components.yourjourney"
+    (component) => component.__component === "homepage-components.yourjourney",
   );
   const AFSData = homepageContent.find(
-    (component) => component.__component === "homepage-components.afs-section"
+    (component) => component.__component === "homepage-components.afs-section",
   );
 
   const ourTopRecruitersData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.our-top-recruiters"
+      component.__component === "homepage-components.our-top-recruiters",
   );
 
   const feeStructureScholarData = homepageContent.find(
-    (component) => component.__component === "homepage-components.fee-scholar"
+    (component) => component.__component === "homepage-components.fee-scholar",
   );
 
   const whyKRMUData = homepageContent.find(
-    (component) => component.__component === "homepage-components.whykrmu"
+    (component) => component.__component === "homepage-components.whykrmu",
   );
 
   const elevateCampusData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.elevate-campus"
+      component.__component === "homepage-components.elevate-campus",
   );
   const homeKRMTestimonialData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.home-testimonials"
+      component.__component === "homepage-components.home-testimonials",
   );
   const shapingFutureData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.shaping-future"
+      component.__component === "homepage-components.shaping-future",
   );
   const globalPartenerData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.global-partener"
+      component.__component === "homepage-components.global-partener",
   );
 
   const visitExploreData = homepageContent.find(
-    (component) => component.__component === "homepage-components.visit-explore"
+    (component) =>
+      component.__component === "homepage-components.visit-explore",
   );
 
   const eventsNewsData = homepageContent.find(
     (component) =>
-      component.__component === "homepage-components.home-events-and-news"
+      component.__component === "homepage-components.home-events-and-news",
   );
 
   const websiteSchema = createWebsiteSchema({
     name: "K.R. Mangalam University",
-     alternateName: "KRMU",
+    alternateName: "KRMU",
     url: "https://www.krmangalam.edu.in",
-    searchPath: "https://www.krmangalam.edu.in/search?q="
+    searchPath: "https://www.krmangalam.edu.in/search?q=",
   });
 
   const organizationSchema = createOrganizationSchema({
@@ -88,29 +93,29 @@ export default async function HomePage() {
     contactPoint: {
       telephone: "+91-8192888444",
       contactType: "customer service",
-      areaServed: "IN", 
-      availableLanguage: "en"
+      areaServed: "IN",
+      availableLanguage: "en",
     },
     sameAs: [
       "https://www.facebook.com/krmuniv",
       "https://www.instagram.com/krmuniv",
       "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-      "https://in.linkedin.com/school/krmuniv"
-    ]
+      "https://in.linkedin.com/school/krmuniv",
+    ],
   });
 
   const collageOrUniversitySchema = createCollageOrUniversitySchema({
     name: "K.R. Mangalam University",
     alternateName: "KRMU",
-    url: "https://www.krmangalam.edu.in", 
+    url: "https://www.krmangalam.edu.in",
     logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
     sameAs: [
-    "https://www.facebook.com/krmuniv",
-    "https://www.instagram.com/krmuniv",
-    "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-    "https://in.linkedin.com/school/krmuniv"
-  ]
-  })
+      "https://www.facebook.com/krmuniv",
+      "https://www.instagram.com/krmuniv",
+      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+      "https://in.linkedin.com/school/krmuniv",
+    ],
+  });
 
   return (
     <>

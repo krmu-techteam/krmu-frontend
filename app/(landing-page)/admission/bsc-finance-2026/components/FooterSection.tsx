@@ -19,7 +19,7 @@ const FooterSection = () => {
           <div className="relative" style={{ width: "88px", height: "88px" }}>
             <Image
               src="/landingpage/bsc-finance-2026/footer-logo.png"
-              alt="KR Mangalam University"
+              alt="K.R. Mangalam University"
               fill
               sizes="88px"
               className="object-contain"
@@ -105,19 +105,9 @@ const FooterSection = () => {
             />
           </div>
 
-          {/* QR Code */}
-          <Image
-            src="/landingpage/bsc-finance-2026/footer-qr.png"
-            alt="Scan to apply"
-            width={180}
-            height={180}
-            className="object-contain mt-1"
-            style={{ width: "180px", height: "auto" }}
-          />
-
           {/* Contact info */}
           <div
-            className="flex flex-col gap-1.5 pb-10 sm:pb-14 lg:pb-[180px]"
+            className="flex flex-col gap-1.5 pb-10 sm:pb-14"
             style={{
               fontFamily: "Inter, sans-serif",
               fontWeight: 400,
@@ -127,7 +117,7 @@ const FooterSection = () => {
               color: "#111111",
             }}
           >
-            <p className="m-0">KR Mangalam University</p>
+            <p className="m-0">K.R. Mangalam University</p>
             <p className="m-0">Sohna Road, Gurugram, Haryana</p>
             <a
               href="https://www.krmangalam.edu.in"
@@ -143,57 +133,16 @@ const FooterSection = () => {
               www.krmangalam.edu.in
             </a>
             <p className="m-0 break-words">
-              Landline: 0124-2867800 · Mobile: 08800697010-15 · Helpline: 8192888444
+            Call: <a href="tel:+919311411717">+91 9311411717</a>
             </p>
-            <p className="m-0 break-words">
-              admissions@krmangalam.edu.in · admissions.krmangalam.edu.in
-            </p>
+           
           </div>
 
         </div>
+        <div className="text-sm text-center py-4"> © K.R. Mangalam University. All rights reserved. Programme structure subject to regulatory approval.</div>
 
-        {/* Campus building image */}
-        <div className="relative" style={{ marginTop: "-160px" }}>
 
-          <Image
-            src="/landingpage/bsc-finance-2026/footer-campus.png"
-            alt="KR Mangalam University Campus"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="block"
-            style={{ width: "100%", height: "auto" }}
-            quality={75}
-          />
-
-          {/* White-to-transparent fade overlay */}
-          <div
-            className="absolute top-0 left-0 right-0 pointer-events-none"
-            style={{
-              height: "60%",
-              background:
-                "linear-gradient(180deg, #FFFFFF 0%, rgba(255,255,255,0.9) 15%, rgba(255,255,255,0.6) 35%, rgba(255,255,255,0.2) 60%, rgba(255,255,255,0) 100%)",
-            }}
-          />
-
-          {/* Copyright — bottom of campus image */}
-          <div
-            className="absolute bottom-0 left-0 right-0 py-2 px-4 text-center"
-          >
-            <p
-              className="m-0 text-white"
-              style={{
-                fontFamily: "Inter, sans-serif",
-                fontWeight: 400,
-                fontSize: "clamp(10px, 2.5vw, 12px)",
-                lineHeight: "18px",
-              }}
-            >
-              © KR Mangalam University. All rights reserved. Programme structure subject to regulatory approval.
-            </p>
-          </div>
-
-        </div>
+    
 
       </section>
     </footer>

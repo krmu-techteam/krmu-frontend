@@ -78,7 +78,7 @@ const AdmissionsSection = () => {
               fontSize: "clamp(22px, 4.5vw, 58px)",
             }}
           >
-            <span className="text-white">KR Mangalam University · </span>
+            <span className="text-white">K.R. Mangalam University · </span>
             <span className="text-[#111111]">Gurugram, Haryana</span>
           </h2>
 

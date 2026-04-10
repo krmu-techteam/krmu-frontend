@@ -1,3 +1,4 @@
+import StickyMobileBar from "../commonComponent/StickyMobileBar";
 import AdmissionsSection from "./components/AdmissionsSection";
 import AlignedWithSection from "./components/AlignedWithSection";
 import ApprenticeshipSection from "./components/ApprenticeshipSection";
@@ -53,6 +54,10 @@ const BscFinance2026Page = () => {
       <FeesSection />
       <FaqSection data={faqSection} />
       <FooterSection />
+      <StickyMobileBar
+        phoneNumber="+91 9311411717"
+        formId="047a23de933bd996c4c01578fad16790"
+      />
     </main>
   );
 };

@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   // assetPrefix: "/blog",
   // basePath: "/blog",
   // assetPrefix: "https://krmangalam.netlify.app",
+  poweredByHeader: false,
   images: {
     remotePatterns: [
       {
@@ -53,6 +54,26 @@ const nextConfig: NextConfig = {
           {
             key: "Content-Security-Policy",
             value: "frame-ancestors 'self';",
+          },
+          // Referrer-Policy
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+          // Anti-sniffing
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          // Anti-XSS (Legacy)
+          {
+            key: "X-XSS-Protection",
+            value: "1; mode=block",
+          },
+          // Permissions-Policy (Feature Policy)
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
           },
         ],
       },

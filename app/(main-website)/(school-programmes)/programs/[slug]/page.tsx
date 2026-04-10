@@ -40,6 +40,10 @@ import { BSCHonsPhyscologytestimonialsData } from "../progdata/sola";
 import Link from "next/link";
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 
+// ====== BSC-FINANCE-2026 LANDING PAGE IMPORTS ======
+import BscFinance2026Page from "@/app/(landing-page)/admission/bsc-finance-2026/page";
+import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
+
 // import ProgTestimonials, {
 //   TestimonialsSection,
 // } from "../prog-comp/ProgTestimonials";
@@ -89,6 +93,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const page = async ({ params }: Props) => {
   const { slug } = await params; // ✅ await params
+
+  // ====== BSC-HONS-FINANCE: Show admission landing page content instead ======
+  // Original programs/bsc-hons-finance content is commented out for this slug.
+  // The admission/bsc-finance-2026 landing page is rendered here instead.
+  if (slug === "bsc-hons-finance") {
+    return <BscFinance2026Page />;
+  }
+  // ====== END BSC-HONS-FINANCE OVERRIDE ======
 
   const testimonialsMap: Record<string, any> = {
     "ba-llb-hons": BALLBtestimonialsData,

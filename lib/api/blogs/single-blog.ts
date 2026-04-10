@@ -1,4 +1,4 @@
-// import { FETCH_STRAPI_URL } from "@/app/constant";
+import { cache } from "react";
 import { krmBlogURL } from "@/app/constant";
 import {
   AllBlogCategoriesResponse,
@@ -6,14 +6,14 @@ import {
   SingleBlogResponse,
 } from "@/lib/types/blogs/single-blog";
 
-export async function getSingleBlogDataBySlug(
+export const getSingleBlogDataBySlug = cache(async (
   slug: string = "",
-): Promise<SingleBlogResponse> {
+): Promise<SingleBlogResponse> => {
   try {
     const res = await fetch(
       `${krmBlogURL}/wp-json/wp/v2/posts?slug=${slug}&_embed`,
       {
-        next: { revalidate: 3600 }
+        next: { revalidate: 3600, tags: ["blogs"] }
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Single Blog");
@@ -23,7 +23,7 @@ export async function getSingleBlogDataBySlug(
     console.error("Single blog fetch error:", error);
     return [];
   }
-}
+});
 
 // {
 //   filters: {
@@ -56,7 +56,7 @@ export async function getAllBlogCategories(): Promise<AllBlogCategoriesResponse>
     const res = await fetch(
       `${krmBlogURL}/wp-json/wp/v2/categories?per_page=100&_fields=id,name,slug,taxonomy`,
       {
-        next: { revalidate: 3600 }
+        next: { revalidate: 3600, tags: ["blogs"] }
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Blog Categories");
@@ -87,14 +87,14 @@ export async function getAllBlogCategories(): Promise<AllBlogCategoriesResponse>
 //   return json?.guid?.rendered ?? "";
 // }
 
-export async function getBlogImageById(imgId: number): Promise<string | null> {
+export const getBlogImageById = cache(async (imgId: number): Promise<string | null> => {
   if (!imgId) return null;
 
   try {
     const res = await fetch(
       `${krmBlogURL}/wp-json/wp/v2/media/${imgId}?_fields=guid`,
       {
-        next: { revalidate: 3600 }
+        next: { revalidate: 3600, tags: ["blogs"] }
       }
     );
 
@@ -109,7 +109,7 @@ export async function getBlogImageById(imgId: number): Promise<string | null> {
     console.error("Error fetching image:", imgId, error);
     return null;
   }
-}
+});
 
 export async function getBlogImageByIdClientComp(id: number) {
   try {
