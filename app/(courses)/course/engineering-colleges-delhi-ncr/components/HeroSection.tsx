@@ -23,11 +23,10 @@ const HeroSection = () => {
             </span>
           </div>
           <h1 className="text-white text-center sm:text-left font-semibold mb-3 leading-[1.5] text-3xl  lg:text-5xl 2xl:text-[46px]">
-            Join one of the
+            Join KRMU
             <br />
-            Top Engineering Colleges in Delhi NCR
+            One of the Top Engineering Colleges in Delhi NCR
             <br />
-            Admissions Open for 2026!
           </h1>
           <p className="text-white mb-6 hidden sm:block">
             Located in the heart of India’s tech corridor, KRMU ranks among the
