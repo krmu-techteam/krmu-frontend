@@ -22,7 +22,7 @@ const KRMUFEEStructure = () => {
         <div className="overflow-x-auto">
           <table className="w-full border border-[#eef2f6] rounded-[15px] overflow-hidden border-separate border-spacing-0 shadow-[0_10px_30px_rgba(1,49,107,0.05)] bg-white">
             <thead>
-              <tr className="bg-[#0060aa] text-white uppercase tracking-wide text-center">
+              <tr className="bg-[#0060aa] text-white uppercase tracking-wide text-left">
                 <th className="p-5 text-[15px] font-bold">Programme Name</th>
                 <th className="p-5 text-[15px] font-bold">Semester 1</th>
                 <th className="p-5 text-[15px] font-bold">Semester 2</th>
@@ -33,7 +33,7 @@ const KRMUFEEStructure = () => {
             </thead>
 
             <tbody className="text-[#475569] text-[15px]">
-              <tr className="border-b text-center">
+              <tr className="border-b ">
                 <td className="p-[18px_25px]">B.Tech. CSE</td>
                 <td className="p-[18px_25px]">₹1,25,000</td>
                 <td className="p-[18px_25px]">₹1,25,000</td>
@@ -42,7 +42,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] text-center">
+              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] ">
                 <td className="p-[18px_25px]">B.Tech. Robotics & AI</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
@@ -51,7 +51,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="border-b text-center">
+              <tr className="border-b ">
                 <td className="p-[18px_25px]">B.Tech. AI & ML</td>
                 <td className="p-[18px_25px]">₹1,45,000</td>
                 <td className="p-[18px_25px]">₹1,45,000</td>
@@ -60,7 +60,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] text-center">
+              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] ">
                 <td className="p-[18px_25px]">B.Tech. Cybersecurity</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
@@ -69,7 +69,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="border-b text-center">
+              <tr className="border-b ">
                 <td className="p-[18px_25px]">B.Tech. Data Science</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
@@ -78,7 +78,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] text-center">
+              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] ">
                 <td className="p-[18px_25px]">
                   B.Tech. Full Stack Development
                 </td>
@@ -89,7 +89,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="border-b text-center">
+              <tr className="border-b ">
                 <td className="p-[18px_25px]">B.Tech. UX/UI</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
@@ -98,7 +98,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] text-center">
+              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] ">
                 <td className="p-[18px_25px]">B.Tech. Cloud Computing**</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
@@ -107,7 +107,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="border-b text-center">
+              <tr className="border-b ">
                 <td className="p-[18px_25px]">
                   B.Tech. Semiconductor Design**
                 </td>
