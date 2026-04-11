@@ -24,6 +24,13 @@ export async function generateMetadata() {
     title: "B.Tech. CSE Course Details: Subjects & Structure",
     description:
       "Learn everything about the KRMU’s B.Tech. CSE course, including course details, structure, and B.Tech. CSE course subjects. A complete guide for aspiring engineers!",
+    alternates: {
+      canonical: "https://www.krmangalam.edu.in/course/btech-cse-course",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 
@@ -48,7 +55,7 @@ const page = () => {
       <Scholarship />
       <KRMUFEEStructure />
       <FacilitiesSection data={worldFacilities} />
-      
+
       <CourseFAQ />
       <PreFooterCTA />
       <LocationSection />

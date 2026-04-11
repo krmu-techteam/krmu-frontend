@@ -24,6 +24,13 @@ export async function generateMetadata() {
     title: "B.Tech. CSE Fee Structure 2026 | B.Tech. CSE Course Fees Per Year",
     description:
       "Get complete details on B.Tech. CSE fee structure, B.Tech. CSE course fees, and B.Tech. computer science fees per year at KRMU for 2026 admission.",
+    alternates: {
+      canonical: "https://www.krmangalam.edu.in/course/btech-cse-fees",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

@@ -22,13 +22,13 @@ const HeroSection = () => {
               Est. 2013
             </span>
           </div>
-          <h3 className="text-white font-semibold sm:font-bold mb-3 leading-[1.2] text-3xl  lg:text-5xl 2xl:text-[46px] text-center sm:text-left">
+          <h1 className="text-white font-semibold sm:font-bold mb-3 leading-[1.2] text-3xl  lg:text-5xl 2xl:text-[46px] text-center sm:text-left">
             B.Tech. CSE Course
             <br />
             ADMISSIONS 2026
             <br />
             ARE NOW OPEN!
-          </h3>
+          </h1>
           <p className="text-white mb-6 hidden md:block">
             Build your future with KRMU's industry-aligned curriculum, hands-on
             training, advanced facilities, and dedicated placement assistance

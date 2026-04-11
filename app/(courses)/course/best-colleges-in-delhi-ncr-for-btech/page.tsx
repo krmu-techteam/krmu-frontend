@@ -24,6 +24,14 @@ export async function generateMetadata() {
     title: " Best Colleges in Delhi NCR for B.Tech​. | KRMU B.Tech. CSE ",
     description:
       "Can’t filter out the right institution from the list of Best Colleges in Delhi NCR for B.Tech​.? Opt for KRMU, a university that strives to promote holistic learning & offers dedicated placement assistance to every student!",
+    alternates: {
+      canonical:
+        "https://www.krmangalam.edu.in/course/best-colleges-in-delhi-ncr-for-btech",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

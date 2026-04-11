@@ -29,7 +29,7 @@ const SingleBlogHero = ({
   //   if (imgUrl) {
   //   imgUrl = imgUrl.replace("wp.krmangalam.edu.in", "krmangalam.edu.in");
   // }
-  console.log("single blog img url", imgUrl);
+
 
   const normalizedImgUrl = imgUrl
     ?.replace("/blog/wp-content", "/wp-content")

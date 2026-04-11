@@ -25,6 +25,13 @@ export async function generateMetadata() {
       "Best Colleges for B.Tech CSE in India | Top Private University – KRMU",
     description:
       "Looking for the best colleges for B.Tech CSE in India? Discover KRMU, one of the best private college for B.Tech. CSE in India with industry-focused curriculum & placement assistance.",
+    alternates: {
+      canonical: "https://www.krmangalam.edu.in/course/best-colleges-for-btech-cse"
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

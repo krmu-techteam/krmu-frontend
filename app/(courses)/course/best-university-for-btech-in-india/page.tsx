@@ -25,6 +25,14 @@ export async function generateMetadata() {
       "KRMU | Best University for B.Tech. in India​| Best Private University in India for B.Tech.",
     description:
       "Explore KRMU, touted as the best private university in India for B.Tech. Discover why it ranks among the best universities in India for B.Tech. CSE with excellent placements & facilities.",
+    alternates: {
+      canonical:
+        "https://www.krmangalam.edu.in/course/best-university-for-btech-in-india",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

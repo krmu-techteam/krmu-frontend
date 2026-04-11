@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="courseheroSection">
       <div className="px-4 md:px-12 z-50 py-10 flex flex-col lg:flex-row justify-between items-center relative">
         <div className="w-full lg:w-1/2 xl:w-1/3">
-          <div className="flex justify-center md:justify-center flex-wrap sm:flex-nowrap gap-2 mb-3">
+          <div className="flex justify-center md:justify-start flex-wrap sm:flex-nowrap gap-2 mb-3">
             <span className="mt-[10px] px-[14px] py-[8px] rounded-[20px] text-[14px] font-semibold bg-[#f5a623] text-black">
               NAAC A Accredited
             </span>
@@ -21,13 +21,13 @@ const HeroSection = () => {
               Est. 2013
             </span>
           </div>
-          <h3 className="text-white font-semibold sm:font-bold mb-3 leading-[1.5] text-center sm:text-left text-3xl lg:text-5xl 2xl:text-[46px] w-full lg:w-[115%]">
+          <h1 className="text-white font-semibold sm:font-bold mb-3 leading-[1.5] text-center sm:text-left text-3xl lg:text-5xl 2xl:text-[46px] w-full lg:w-[115%]">
             Admission Open At KRMU!
             <br />
             One of the Best Colleges For
             <br />
             B.Tech. CSE 2026
-          </h3>
+          </h1>
           <p className="text-white mb-6 hidden sm:block">
             Enrol in KRMU, the best private college for B.Tech. CSE in India​
             for a sure-shot, successful career in technology!

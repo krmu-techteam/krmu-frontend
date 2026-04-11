@@ -26,6 +26,13 @@ export async function generateMetadata() {
       "B.Tech. CSE Admission at KRMU | Direct admission in B.Tech. colleges​",
     description:
       "Searching for how to get admission in B.Tech.? Your scrolling stops here! Enrol for KRMU’s B.Tech. computer science and engineering admission to kickstart your engineering journey today!",
+    alternates: {
+      canonical: "https://www.krmangalam.edu.in/course/btech-cse-admission",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

@@ -165,3 +165,44 @@ export const heroCourseMarqueeData: HeroCourseMarqueeSection = {
   bgColor: "#e31e24",
   speedClass: "animate-marquee",
 };
+
+export const courseTestimonials = [
+  {
+    id: 1,
+    text: ` My 4 years at K.R. Mangalam University were full of learning something
+          useful every day that I can carry forward through my life. I highly
+          appreciate the efforts of my faculty members for being so kind and
+          helping me with my doubts, and giving me proper career guidance.`,
+    name: "Daksh Mehta",
+    course: "B.Tech. CSE",
+  },
+  {
+    id: 2,
+    text: ` I would like to extend my gratitude to the Training and Placement Cell
+          of K.R. Mangalam University for their continued efforts in providing
+          ample amount of chances to students. I am grateful to each mentor who
+          guided me to develop my academic and interpersonal skills.`,
+    name: "Abhinav Anand",
+    course: "B.Tech. CSE",
+  },
+  {
+    id: 3,
+    text: ` Choosing K.R. Mangalam University for my B.Tech in CSE was one of the
+          best decisions I've ever made. The university's rigorous curriculum
+          and industry-relevant training have equipped me with the tools
+          necessary to excel in the tech world. I am proud to share that I am
+          working with Debcor Engineering Pvt Ltd.`,
+    name: "Darshit Raghav",
+    course: "B.Tech. CSE",
+  },
+  {
+    id: 4,
+    text: `  K.R. Mangalam University was a transformative journey for me. The
+          exceptional education and hands-on experience I received in Computer
+          Science Engineering have been instrumental in shaping my career. I am
+          currently thriving as a professional at Nirmata Technologies India
+          Private Ltd.`,
+    name: "Abhinav Sinha",
+    course: "B.Tech. CSE",
+  },
+];

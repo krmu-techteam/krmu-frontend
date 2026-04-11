@@ -24,6 +24,13 @@ export async function generateMetadata() {
     title: "Top BTech Colleges in Gurgaon | Btech Admissions 2026",
     description:
       "Looking for the best BTech colleges in Gurgaon? KRMU offers industry-led B.Tech programmes with 100% placement support and global collaborations. Apply now for the 2026 academic session!",
+    alternates: {
+      canonical: "https://www.krmangalam.edu.in/course/btech-colleges-gurgaon",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

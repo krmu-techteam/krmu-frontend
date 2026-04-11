@@ -23,13 +23,13 @@ const HeroSection = () => {
                 Est. 2013
               </span>
             </div>
-            <h3 className="text-white text-center sm:text-left font-semibold sm:font-bold mb-3 leading-[1.5] text-3xl  lg:text-5xl 2xl:text-[46px] w-full lg:w-[100%]">
+            <h1 className="text-white text-center sm:text-left font-semibold sm:font-bold mb-3 leading-[1.5] text-3xl  lg:text-5xl 2xl:text-[46px] w-full lg:w-[100%]">
               Apply Today At KRMU
               <br />
               Ranked Amongst <br />
               The Best Colleges in
               <br /> Delhi NCR for B.Tech​.
-            </h3>
+            </h1>
             <p className="text-white mb-6 hidden sm:block">
               Considered one of the top colleges for B.Tech. in Delhi NCR,
               KRMU’s esteemed educators ensure that every student excels &

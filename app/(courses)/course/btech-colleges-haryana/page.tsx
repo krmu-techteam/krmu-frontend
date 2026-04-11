@@ -24,6 +24,13 @@ export async function generateMetadata() {
     title: "Best B.Tech. Colleges in Haryana | B.Tech. CSE Admission at KRMU",
     description:
       "Aspiring for a career in engineering? Choose KRMU, one of the top private B.Tech. colleges in Haryana​ offering both practical training & placement assistance to every student. Apply Now!",
+    alternates: {
+      canonical: "https://www.krmangalam.edu.in/course/btech-colleges-haryana",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 

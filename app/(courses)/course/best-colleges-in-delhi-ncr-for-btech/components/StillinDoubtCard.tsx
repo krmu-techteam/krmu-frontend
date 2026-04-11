@@ -1,4 +1,14 @@
-const StillinDoubtCard = () => {
+type Testimonial = {
+  id: number;
+  text: string;
+  name: string;
+  course: string;
+};
+
+type StillinDoubtCardProps = {
+  data: Testimonial;
+};
+const StillinDoubtCard = ({ data }: StillinDoubtCardProps) => {
   return (
     <div className="w-full inline-block bg-white rounded-[20px] p-[30px_20px] min-h-[420px] m-[20px_15px] shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-[#f0f0f0] transition-all flex flex-col justify-between hover:-translate-y-[10px] hover:shadow-[0_15px_40px_rgba(227,30,36,0.1)] hover:border-[rgba(227,30,36,0.2)]">
       {/* Quote Icon */}
@@ -10,20 +20,14 @@ const StillinDoubtCard = () => {
 
       {/* Text */}
       <p className="text-[16px] leading-[1.8] text-[#4a4a4a] italic mb-[30px] flex-grow">
-        Choosing K.R. Mangalam University for my B.Tech in CSE was one of the
-        best decisions I've ever made. The university's rigorous curriculum and
-        industry-relevant training have equipped me with the tools necessary to
-        excel in the tech world. I am proud to share that I am working with
-        Debcor Engineering Pvt Ltd.
+        {data.text}
       </p>
 
       {/* Student Info */}
       <div className="flex items-center pt-[20px] border-t border-[#f5f5f5]">
         <div>
-          <h4 className="text-[18px] font-bold m-0 text-[#222]">
-            Darshit Raghav
-          </h4>
-          <p className="text-[14px] text-[#777] m-0">B.Tech. CSE</p>
+          <h4 className="text-[18px] font-bold m-0 text-[#222]">{data.name}</h4>
+          <p className="text-[14px] text-[#777] m-0">{data.course}</p>
         </div>
       </div>
     </div>
