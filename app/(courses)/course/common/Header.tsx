@@ -52,7 +52,7 @@ export default function Header() {
                 <Link href="#hero">Home</Link>
               </li>
               <li>
-                <Link href="#why-krmu">Why KRMU?</Link>
+                <Link href="#how-we-compare">Why KRMU?</Link>
               </li>
               <li>
                 <Link href="#courses">Courses</Link>

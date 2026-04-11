@@ -2,7 +2,10 @@ import QuickComparisonTable from "./QuickComparisonTable";
 
 const QuickComparison = () => {
   return (
-    <section className="py-[50px] px-4 googleSansFamily">
+    <section
+      className="py-[50px] px-4 googleSansFamily scroll-mt-30"
+      id="courses"
+    >
       <div className="max-w-[1296px] mx-auto w-full">
         <div className="text-center mb-12">
           <span className="bg-[#e2eefb] text-[#003666] px-[15px] py-[5px] rounded-[20px] text-[12px] font-bold uppercase tracking-[1px]">

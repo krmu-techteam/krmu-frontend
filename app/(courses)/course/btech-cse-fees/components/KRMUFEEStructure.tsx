@@ -1,6 +1,6 @@
 const KRMUFEEStructure = () => {
   return (
-    <section className="bg-[#f8fbff] py-12">
+    <section className="bg-[#f8fbff] py-12 scroll-mt-30" id="courses">
       <div className="max-w-[1296px] mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">

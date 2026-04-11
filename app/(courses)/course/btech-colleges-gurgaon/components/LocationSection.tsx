@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function LocationSection() {
   return (
-    <section className="bg-[#f6f9fc] pt-10">
+    <section className="bg-[#f6f9fc] pt-10" id="contact">
       <div className="max-w-[1296px] mx-auto px-4">
         <div className="bg-[#2563a6] rounded-[30px] p-6 md:p-10 flex flex-col lg:flex-row gap-8 items-center">
           {/* LEFT IMAGE */}

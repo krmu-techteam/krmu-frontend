@@ -123,7 +123,10 @@ export default function CourseStructure() {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-10 bg-gradient-to-b from-white to-blue-50">
+    <section
+      className="py-16 px-4 md:px-10 bg-gradient-to-b from-white to-blue-50 scroll-mt-28 lg:scroll-mt-32"
+      id="courses"
+    >
       <div className="max-w-6xl mx-auto">
         {/* 🔥 Top Content */}
         <div className="text-center mb-12">
