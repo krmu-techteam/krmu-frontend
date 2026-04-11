@@ -20,9 +20,11 @@ const admissionData = [
 
 export default function DirectAdmissionSection() {
   return (
-    <section className="w-full py-16 px-4 md:px-10 bg-gradient-to-b from-gray-50 to-white">
+    <section
+      className="w-full py-16 px-4 md:px-10 bg-gradient-to-b from-gray-50 to-white scroll-mt-30"
+      id="courses"
+    >
       <div className="max-w-7xl mx-auto">
-        
         {/* Heading */}
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1 text-sm font-medium bg-blue-100 text-blue-600 rounded-full">
@@ -32,10 +34,11 @@ export default function DirectAdmissionSection() {
             Is Direct Admission in B.Tech. Possible?
           </h2>
           <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
-            In certain conditions, direct admission in B.Tech. colleges in India is possible;
-            however, it depends on the institution, its policies, and applicable regulations.
-            While exams like JEE Main are required by many top universities, some offer
-            alternative pathways for admission.
+            In certain conditions, direct admission in B.Tech. colleges in India
+            is possible; however, it depends on the institution, its policies,
+            and applicable regulations. While exams like JEE Main are required
+            by many top universities, some offer alternative pathways for
+            admission.
           </p>
         </div>
 
@@ -66,13 +69,14 @@ export default function DirectAdmissionSection() {
           <Hash className="text-yellow-600 mt-1" size={22} />
           <div className="italic">
             <p className="text-sm text-gray-700">
-              These are not <strong>“direct” admissions</strong> in the pure sense,
-              but alternative pathways to B.Tech. CSE admission.
+              These are not <strong>“direct” admissions</strong> in the pure
+              sense, but alternative pathways to B.Tech. CSE admission.
             </p>
             <p className="text-sm text-gray-700 mt-2">
               Before applying, ensure the institute has{" "}
-              <strong>AICTE & UGC approval</strong>, as lack of accreditation may
-              impact the validity of your degree and future career opportunities.
+              <strong>AICTE & UGC approval</strong>, as lack of accreditation
+              may impact the validity of your degree and future career
+              opportunities.
             </p>
           </div>
         </div>
