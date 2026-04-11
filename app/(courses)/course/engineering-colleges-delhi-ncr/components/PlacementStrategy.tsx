@@ -11,7 +11,7 @@ const PlacementStrategy = () => {
           </span>
           <h2 className="compare-heading mt-4 mb-2 leading-tight">
             How do we achieve a 92% placement rate @ KRMU? <br />
-            <span className="highlight-text">Here's How We Do It!</span>
+            {/* <span className="highlight-text">Here's How We Do It!</span> */}
           </h2>
           <p className="compare-subheading">
             As one of the best engineering colleges in Delhi NCR, KRMU doesn't

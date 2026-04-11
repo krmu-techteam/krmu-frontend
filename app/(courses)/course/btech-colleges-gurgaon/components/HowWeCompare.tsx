@@ -15,7 +15,7 @@ const HowWeCompare = () => {
             Known as one of the best colleges for B.Tech. in Gurgaon (now
             Gurugram), KRMU not just focuses on practical learning but also
             prepares its students for the real-world’s competitive professional
-            market..
+            market.
           </p>
         </div>
         <HowWeComparisonCard />

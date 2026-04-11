@@ -23,7 +23,7 @@ export async function generateMetadata() {
   return {
     title: "Best Engineering Colleges in Delhi NCR | B.Tech Admissions 2026",
     description:
-      "KRMU is among the top engineering colleges in Delhi NCR, offering industry-led B.Tech programs in AI/ML, Data & Cyber Security near the tech hubs of Gurugram & Noida.",
+      "KRMU is among the top engineering colleges in Delhi NCR, offering industry-led B.Tech programs in AI/ML, Data & Cyber Security in the Delhi NCR region.",
     alternates: {
       canonical:
         "https://www.krmangalam.edu.in/course/engineering-colleges-delhi-ncr",
