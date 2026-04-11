@@ -1,4 +1,22 @@
 import { CourseComeToLifeSection } from "./contentType";
+import { HeroCourseMarqueeSection } from "./contentType";
+
+export const heroCourseMarqueeData: HeroCourseMarqueeSection = {
+  messages: [
+    "100% Sponsored International Study Tour —",
+    "700+ Educators —",
+    "100+ UG & PG Programmes —",
+    "12K+ Students —",
+    "28+ Acres Campus —",
+    "₹56.6 LPA Highest Package —",
+    "₹27 Cr Scholarships —",
+    "800+ Recruiters —",
+    "18K+ Alumni —",
+    "92% Placement Record —",
+  ],
+  bgColor: "#e31e24",
+  speedClass: "animate-marquee",
+};
 
 export const quickComparisonTableData = [
   {
@@ -149,7 +167,7 @@ export const coursePlacementData = [
   },
 ];
 
-export const courseTestimonials = [ 
+export const courseTestimonials = [
   {
     id: 1,
     text: ` My 4 years at K.R. Mangalam University were full of learning something

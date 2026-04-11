@@ -1,4 +1,5 @@
 import PlacementStrategyGrid from "./PlacementStrategyGrid";
+import CourseScrollButton from "../../common/CourseScrollButton";
 
 const PlacementStrategy = () => {
   return (
@@ -13,7 +14,10 @@ const PlacementStrategy = () => {
             <span className="highlight-text">Here's How We Do It!</span>
           </h2>
           <p className="compare-subheading">
-            Touted as the best private college for B.Tech. CSE in India​, KRMU focuses not just on conceptual clarity but career-readiness as well. Our multifaceted approach ensures you are well-prepared for the professional world.
+            Touted as the best private college for B.Tech. CSE in India​, KRMU
+            focuses not just on conceptual clarity but career-readiness as well.
+            Our multifaceted approach ensures you are well-prepared for the
+            professional world.
           </p>
         </div>
         <PlacementStrategyGrid />
@@ -22,15 +26,18 @@ const PlacementStrategy = () => {
             <h3 className="mb-2">
               You enter KRMU with Confusion but leave it with a
               <span className="highlight-text">
-              {" "}  Career Portfolio &amp; Connections!
+                {" "}
+                Career Portfolio &amp; Connections!
               </span>
             </h3>
-            <button
-              className="commonbtn2 mt-4 scroll-btn"
+            <CourseScrollButton
+              targetId="apply-section"
+              highlightClass="flash-border"
+              btnClass="commonbtn2 mt-4 scroll-btn"
               data-target="formSection"
             >
               Start Your Journey Today
-            </button>
+            </CourseScrollButton>
           </div>
         </div>
       </div>

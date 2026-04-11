@@ -1,5 +1,6 @@
 import Image from "next/image";
 import NoPaperFormsWidget from "../../../../(landing-page)/admission/CommonComponent2026/NoPaperFormsWidget";
+import CourseScrollButton from "../../common/CourseScrollButton";
 
 const formId = "31c1452015d32698095f833b3e7eb9c5";
 
@@ -67,7 +68,11 @@ const HeroSection = () => {
             <span>₹56.6 LPA Highest Package</span>
           </div>
           <div className="flex justify-center sm:justify-start">
-            <button className="flex items-center justify-center gap-2 commonbtn2 mt-4">
+            <CourseScrollButton
+              targetId="apply-section"
+              highlightClass="flash-border"
+              btnClass="flex items-center justify-center gap-2 commonbtn2 mt-4"
+            >
               <span>Apply Now</span>
 
               <svg
@@ -78,10 +83,13 @@ const HeroSection = () => {
               >
                 <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
               </svg>
-            </button>
+            </CourseScrollButton>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 xl:w-2/3 mt-5 sm:mt-0">
+        <div
+          className="w-full lg:w-1/2 xl:w-2/3 mt-5 sm:mt-0 scroll-mt-28 lg:scroll-mt-32"
+          id="apply-section"
+        >
           <div className="flex justify-center lg:justify-end">
             {formId && (
               <div className="heroBannerFormcourse__form max-w-[500px] w-full">

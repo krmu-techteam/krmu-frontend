@@ -1,3 +1,5 @@
+import CourseScrollButton from "../../common/CourseScrollButton";
+
 const Scholarship = () => {
   return (
     <section className="bg-white py-12 scroll-mt-24" id="scholarship">
@@ -274,7 +276,13 @@ const Scholarship = () => {
             diverse achievements!
           </p>
 
-          <button className="enroll-now-btn">Apply Now →</button>
+          <CourseScrollButton
+            targetId="apply-section"
+            highlightClass="flash-border"
+            btnClass="enroll-now-btn"
+          >
+            Apply Now →
+          </CourseScrollButton>
         </div>
       </div>
     </section>
