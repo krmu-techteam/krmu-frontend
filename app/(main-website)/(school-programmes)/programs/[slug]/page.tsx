@@ -115,23 +115,7 @@ const page = async ({ params }: Props) => {
     // "llm": LLMtestimonialsData,
   };
 
-  const allowedFormSlugs = [
-    "barch-architecture",
-    "bsc-forensic-science",
-    "bachelor-of-education-b-ed",
-    "bsc-hons-chemistry-research",
-    "bpharma",
-    "bdes-interior-design",
-    "bjmc",
-    "bfa-fine-arts",
-    "btech-cse-ai-ml",
-    "bsc-hons-chemistry-research",
-    "bba-international-business",
-    "bba-international-business",
-    "b-tech-cse",
-    "master-computer-application-mca",
-    "bsc-hons-agriculture",
-  ];
+  const allowedFormSlugs = [''];
 
   const testimonialsData = testimonialsMap[slug];
 
