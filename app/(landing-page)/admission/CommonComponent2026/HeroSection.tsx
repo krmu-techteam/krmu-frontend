@@ -76,7 +76,7 @@ const HeroSection = ({
             )}
           </div> */}
 
-          <div className="w-full xl:w-1/3 container-2 px-5" id="apply-section">
+          <div className="w-full xl:w-1/3 container-2 px-5" id="apply-form">
             {formId && (
               <div className="heroBannerForm__form">
                 <div className="heroBannerForm-header">

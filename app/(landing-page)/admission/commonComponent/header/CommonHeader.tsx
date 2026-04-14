@@ -21,7 +21,7 @@ export const CommonHeader = () => {
             alt="MBA Landing Page Logo"
           />
           <ScrollButton
-            targetId="apply-section"
+            targetId="apply-form"
             highlightClass="flash-border"
             btnClass="max-w-[180px] w-full py-[10px] px-[25px] text-white bg-[#e31e24] rounded-[10px] hidden sm:block 2xl:hidden"
           >
@@ -36,7 +36,7 @@ export const CommonHeader = () => {
          {/* <KRMUTimer targetDate="2026-04-14T00:00:00" /> */}
          
           <ScrollButton
-            targetId="apply-section"
+            targetId="apply-form"
             highlightClass="flash-border"
             btnClass="max-w-[180px] w-full py-[10px] px-[25px] text-white bg-[#e31e24] rounded-[10px] hidden 2xl:block"
           >

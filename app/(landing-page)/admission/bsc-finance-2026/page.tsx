@@ -62,7 +62,6 @@ const BscFinance2026Page = () => {
       <FooterSection />
       <StickyMobileBar
         phoneNumber="+91 9311411717"
-        formId="047a23de933bd996c4c01578fad16790"
       />
     </main>
   );
