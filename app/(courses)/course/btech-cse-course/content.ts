@@ -3,6 +3,49 @@ import {
   HeroCourseMarqueeSection,
 } from "./contentType";
 
+export const faqData = [
+  {
+    ques: "What is B.Tech. CSE, and what makes it unique at K.R. Mangalam University?",
+    ans: "B.Tech. CSE (Bachelor of Technology in Computer Science and Engineering) at our university is a well-rounded programme that combines a rigorous curriculum, expert faculty, and modern facilities, providing a strong foundation for a career in the tech industry.",
+  },
+  {
+    ques: "What are the admission requirements for the B.Tech. CSE programme?",
+    ans: "Admission in B.Tech. Computer Science programme typically requires candidates to have completed their 10+2 education with a minimum specified percentage in relevant subjects. For precise criteria, please refer to our official website.",
+  },
+  {
+    ques: "Does the programme offer opportunities for research and innovation?",
+    ans: "Absolutely, our university actively promotes research and innovation. Students are encouraged to undertake research projects and collaborate with faculty on advanced technological developments making us the best B.Tech. College in Delhi.",
+  },
+  {
+    ques: "What facilities and resources are available for students in the B.Tech. CSE programme?",
+    ans: "We provide fully-equipped computer labs, an extensive digital library, access to various online resources, and opportunities for involvement in tech clubs and competitive events.",
+  },
+  {
+    ques: "How should I filter the best computer science engineering colleges?",
+    ans: "While choosing a B Tech computer science university, you must ensure that the college is accredited and recognised by legal bodies, has an experienced faculty, offers great placement and industrial exposure, and most importantly, has recruitment partnerships with leading tech firms.",
+  },
+  {
+    ques: "What are the career opportunities after completing a B Tech of Computer Science at K.R. Mangalam University?",
+    ans: "A B Tech from Computer Science at K.R. Mangalam University opens doors to exciting careers in software development, artificial intelligence, cybersecurity, data science, and IT consulting. Graduates can work with top tech companies, and startups, or even pursue higher studies and research in emerging technologies.",
+  },
+  {
+    ques: "Is JEE not Mandatory to apply for B.Tech. course at KRMU?",
+    ans: "Admission in B.Tech. without JEE is possible at K.R. Mangalam University (KRMU). Candidates can either take the university entrance exam, i.e., K.R. Mangalam University Entrance Exam (KREE), which is followed by a faculty-led interview, or obtain direct merit-based admission based on their 10+2 PCM scores (minimum 50% aggregate).",
+  },
+  {
+    ques: "What are the in-demand specialisations of the B.Tech. CSE engineering course?",
+    ans: "Artificial Intelligence and Machine Learning, Robotics, Data Science, Cybersecurity, and Cloud computing are the most popular B.Tech. specialisations.",
+  },
+  {
+    ques: "What is the Difference Between B.Tech. and B.E.?",
+    ans: "While B.Tech. focuses on practical application, skill-based knowledge, and technical skill sets, B.E. emphasises theoretical aspects and fundamental engineering principles.",
+  },
+  {
+    ques: "What are the B.Tech. CSE course subjects at K.R. Mangalam University?",
+    ans: "Programming, Data Structures & Algorithms, Operating Systems, Computer Networks, DBMS, Artificial Intelligence, Machine Learning, Cybersecurity, Cloud Computing, and Big Data Analytics are among the subjects covered in KRMU's B.Tech. CSE courses. Depending on their professional interests, students can also select from specialisation electives in fields like AI, Data Science, or Full Stack Development.",
+  },
+];
+
 export const quickComparisonTableData = [
   {
     name: "B.Tech. CSE",
