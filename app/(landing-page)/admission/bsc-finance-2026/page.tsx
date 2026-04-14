@@ -1,3 +1,4 @@
+import StickyMobileBar from "../commonComponent/StickyMobileBar";
 import AdmissionsSection from "./components/AdmissionsSection";
 import AlignedWithSection from "./components/AlignedWithSection";
 import ApprenticeshipSection from "./components/ApprenticeshipSection";
@@ -9,6 +10,8 @@ import FooterSection from "./components/FooterSection";
 import HeroSection from "./components/HeroSection";
 import OrganisationsSection from "./components/OrganisationsSection";
 import PathwaySection from "./components/PathwaySection";
+import PlacementStories from "./components/PlacementStories";
+import RecruitersMarquee from "./components/RecruitersMarquee";
 import SemesterSection from "./components/SemesterSection";
 import SixStepsSection from "./components/SixStepsSection";
 import StudentsImage from "./components/StudentsImage";
@@ -24,6 +27,8 @@ import {
   heroStatCards,
   organisationsSection,
   pathwaySection,
+  placementData,
+  prominentRecruiters,
   semesterSection,
   sixStepsSection,
   tracksSection,
@@ -38,6 +43,8 @@ const BscFinance2026Page = () => {
         statCards={heroStatCards}
         marqueeData={heroMarqueeData}
       />
+      <RecruitersMarquee recruiters={prominentRecruiters} />
+      <PlacementStories data={placementData} />
       <WhySection data={whySection} />
       <ApprenticeshipSection data={apprenticeshipSection} />
       <TracksSection data={tracksSection} />
@@ -53,6 +60,9 @@ const BscFinance2026Page = () => {
       <FeesSection />
       <FaqSection data={faqSection} />
       <FooterSection />
+      <StickyMobileBar
+        phoneNumber="+91 9311411717"
+      />
     </main>
   );
 };

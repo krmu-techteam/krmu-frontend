@@ -1,0 +1,67 @@
+import AdmissionProcess from "./components/AdmissionProcess";
+import CourseDetails from "./components/CourseDetails";
+import CourseFAQ from "./components/CourseFAQ";
+import CourseProminentRecruiter from "./components/CourseProminentRecruiter";
+import CourseStructure from "./components/CourseStructure";
+import FacilitiesSection from "./components/FacilitiesSection";
+import FinancialSupport from "./components/FinancialSupport";
+import HeroSection from "./components/HeroSection";
+import HowWeCompare from "./components/HowWeCompare";
+import InternationalExposure from "./components/InternationalExposure";
+import KRMUFEEStructure from "./components/KRMUFEEStructure";
+import LocationSection from "./components/LocationSection";
+import PlacementOverview from "./components/PlacementOverview";
+import PlacementStrategy from "./components/PlacementStrategy";
+import PreFooterCTA from "./components/PreFooterCTA";
+import QuickComparison from "./components/QuickComparison";
+import Scholarship from "./components/Scholarship";
+import StillinDoubt from "./components/StillinDoubt";
+import WhyStudy from "./components/WhyStudy";
+import { worldFaciltiesCourseData } from "./content";
+
+export async function generateMetadata() {
+  return {
+    title:
+      "KRMU | Best University for B.Tech. in India​| Best Private University in India for B.Tech.",
+    description:
+      "Explore KRMU, touted as the best private university in India for B.Tech. Discover why it ranks among the best universities in India for B.Tech. CSE with excellent placements & facilities.",
+    alternates: {
+      canonical:
+        "https://www.krmangalam.edu.in/course/best-university-for-btech-in-india",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
+
+const page = () => {
+  const worldFacilities = worldFaciltiesCourseData;
+
+  return (
+    <>
+      <HeroSection />
+      <CourseProminentRecruiter />
+      <PlacementOverview />
+      <HowWeCompare />
+      <PlacementStrategy />
+      <StillinDoubt />
+      {/* <CourseStructure /> */}
+      <QuickComparison />
+      <WhyStudy />
+      <AdmissionProcess />
+      <InternationalExposure />
+      <FinancialSupport />
+      <Scholarship />
+      <KRMUFEEStructure />
+      <FacilitiesSection data={worldFacilities} />
+      {/* <CourseDetails /> */}
+      <CourseFAQ />
+      <PreFooterCTA />
+      <LocationSection />
+    </>
+  );
+};
+
+export default page;

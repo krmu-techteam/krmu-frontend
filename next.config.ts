@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   // assetPrefix: "/blog",
   // basePath: "/blog",
   // assetPrefix: "https://krmangalam.netlify.app",
+  poweredByHeader: false,
   images: {
     remotePatterns: [
       {

@@ -50,24 +50,45 @@ const SchoolDeansVision = ({
               src={`${STRAPI_URL}${deanImgUrl}`}
               width={358}
               height={465}
-              alt="Pankaj Aggarwal"
-              className="rounded-[25px]"
+              alt={deanName}
+              className="rounded-[25px] object-cover shadow-xl"
             />
           </div>
-          <div className="xl:w-2/3  text-sm sm:text-base text-white dean_heading_h3">
-            {desc && <BlocksRenderer content={desc} />}
-            <br />
-            <p className="text-2xl md:text-[32px] mb-2.5 sm:mb-3.5">
-              <strong>{deanName}</strong>
-            </p>
-            <Link
-              href={`mailto:${deanEmail}`}
-              className="text-base flex items-center gap-1 break-all sm:break-normal"
-            >
-              <Mail size={16} /> <span>{deanEmail}</span>
-            </Link>
+          <div className="xl:w-4/6 p-5 sm:px-10 sm:pb-10 xl:p-[50px] text-white dean_heading_h3 flex flex-col items-center xl:items-start text-center xl:text-left">
+            {/* Mobile View: Name and Designation directly below image */}
+            <div className="xl:hidden mb-6">
+              <p className="text-2xl md:text-[32px] font-bold mb-1">
+                {deanName}
+              </p>
+              <p className="text-sm sm:text-base mb-3 opacity-90 font-medium">
+                {desg}
+              </p>
+              <Link
+                href={`mailto:${deanEmail}`}
+                className="text-base flex items-center justify-center gap-2 hover:underline opacity-80"
+              >
+                <Mail size={16} /> <span>{deanEmail}</span>
+              </Link>
+              
+            </div>
 
-            <p className="text-sm sm:text-base mt-2.5">{desg}</p>
+            <div className="text-sm sm:text-base leading-relaxed mb-6 xl:mb-0">
+              {desc && <BlocksRenderer content={desc} />}
+            </div>
+
+            {/* Desktop View: Name and Designation at the bottom */}
+            <div className="hidden xl:block mt-6">
+              <p className="text-2xl md:text-[32px] mb-2 font-bold">
+                {deanName}
+              </p>
+              <Link
+                href={`mailto:${deanEmail}`}
+                className="text-base flex items-center gap-2 hover:underline opacity-80 mb-3"
+              >
+                <Mail size={16} /> <span>{deanEmail}</span>
+              </Link>
+              <p className="text-sm sm:text-base opacity-90">{desg}</p>
+            </div>
           </div>
         </div>
       </div>

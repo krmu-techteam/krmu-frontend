@@ -64,6 +64,51 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     {
+      url: `${baseUrl}/course/best-colleges-for-btech-cse`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/course/best-colleges-in-delhi-ncr-for-btech`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/course/best-university-for-btech-in-india`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/course/btech-colleges-gurgaon`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/course/btech-colleges-haryana`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/course/btech-cse-admission`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/course/btech-cse-course`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/course/btech-cse-fees`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/course/engineering-colleges-delhi-ncr`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: baseUrl,
       changeFrequency: "daily",
       priority: 1,

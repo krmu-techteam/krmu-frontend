@@ -12,10 +12,8 @@ type Props = {
 // ---------------------------
 export async function generateMetadata() {
   const pageInfo = await getBlogPageInfo();
-  
-  if (!pageInfo) return {};
+  const seo = pageInfo?.blog_seo;
 
-  const seo = pageInfo.blog_seo;
 
   if (!seo) return {};
 
@@ -32,5 +30,3 @@ const Page = async ({ searchParams }: Props) => {
 };
 
 export default Page;
-
-

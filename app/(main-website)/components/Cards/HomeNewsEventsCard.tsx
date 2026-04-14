@@ -33,7 +33,7 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
     month: "short",
     year: "numeric",
   });
-  console.log(formattedDate, "formattedDate");
+
 
   const getImgUrl = await getWordImageById(data?.featured_media);
 

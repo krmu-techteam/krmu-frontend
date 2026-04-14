@@ -25,7 +25,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
     featured_media: 903,
     acf: {
       "staff-qualification": "Ph.D. (Chemistry)",
-      staff_designation: "Assistant Professor",
+      staff_designation: "Associate Professor (Research)",
       schools: [],
     },
     featured_media_url:

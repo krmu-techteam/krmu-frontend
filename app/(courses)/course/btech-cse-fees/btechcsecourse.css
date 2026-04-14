@@ -1,0 +1,1059 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@layer utilities {
+   .courseheroSection{
+    background: url('https://www.krmangalam.edu.in/wp-content/landingpage/btech-2026/btech-hero-bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* global.css */
+  .custom-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 10px;
+  }
+
+  .custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .hero-sub-header {
+    color: #333;
+    font-size: 2.2rem !important;
+    line-height: 1.2 !important;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 18s linear infinite;
+  }
+
+  .bg-gradient-recruiters {
+    background-color: #ffffff !important;
+    background-image: radial-gradient(
+      rgba(0, 96, 170, 0.1) 2px,
+      transparent 2px
+    ) !important;
+    background-size: 30px 30px !important;
+    background-position: -15px -15px !important;
+    border-bottom: 1px solid #eaeaea;
+  }
+  /* Header */
+
+  .header-sticky-premium {
+    z-index: 9999999999999999999 !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+  }
+  .header-sticky-premium {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05) !important;
+    border-bottom: 1px solid rgba(0, 86, 153, 0.1) !important;
+  }
+
+  .commonbtn3 {
+    background: #0060aa !important;
+    box-shadow: 0px 10px 48px -12px rgba(0, 96, 170, 0.7) !important;
+    border-radius: 100px;
+    font-size: 14px;
+    padding: 10px 20px;
+    color: #fff !important;
+    border: none !important;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .commonbtn3:hover {
+    background: #004d88 !important;
+    transform: translateY(-2px);
+    box-shadow: 0px 15px 55px -10px rgba(0, 96, 170, 0.82) !important;
+    color: #fff !important;
+  }
+
+  header.sticky-on-scroll {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    background: #ffffff !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) !important;
+    animation: header-slide-down 0.4s ease-out;
+  }
+  /* Header */
+
+  /* Comparison Section Styles */
+  .compare-section {
+    background-color: #f8fbff;
+  }
+
+  .compare-badge {
+    background-color: #e2eefb;
+    color: #003666;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .compare-heading {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0d1216;
+  }
+
+  .compare-subheading {
+    color: #6a7c8a;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .compare-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 54, 102, 0.08);
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .compare-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-header-custom {
+    padding: 25px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .krmu-header {
+    background-color: #0e3d8a;
+  }
+
+  .typical-header {
+    background-color: #cbd5e0;
+    color: #4a5568 !important;
+  }
+
+  .card-header-custom h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .card-body-custom {
+    padding: 30px;
+  }
+
+  .compare-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .compare-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f4f8;
+  }
+
+  .compare-list li:last-child {
+    border-bottom: none;
+  }
+
+  .compare-list li p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .icon-check {
+    background: #e6fffa;
+    color: #38b2ac;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  .icon-cross {
+    background: #f7fafc;
+    color: #a0aec0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  /* Sash/Ribbon */
+  .card-sash {
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background: linear-gradient(45deg, #f6ad55, #ed8936);
+    color: #fff;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 10px;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  /* VS Badge */
+  .compare-section .row {
+    position: relative;
+    /* Local context for absolute positioning */
+    gap: 30px;
+    /* Reduced gap between cards on desktop */
+  }
+
+  .vs-badge-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    pointer-events: none;
+    width: auto;
+  }
+
+  .vs-badge {
+    background: #0d1216;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 16px;
+    /* border: 4px solid #fff; */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Progress Bar */
+  .progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #38b2ac, #319795);
+    border-radius: 10px;
+  }
+
+  @media (max-width: 991px) {
+    .vs-badge-container {
+      display: none;
+    }
+
+    .lpa-sec {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .compare-heading {
+      font-size: 24px;
+    }
+  }
+
+  .highlight-text {
+    color: #e31e24;
+  }
+  .googleSansFamily {
+    font-family: "Google Sans", sans-serif;
+  }
+
+  .programme-comparison-section {
+    background-color: #f8fbff;
+  }
+
+  .comparison-table-container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+    /* overflow: hidden; */
+    border: 1px solid #eef2f7;
+  }
+
+  .accordion_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .comparison-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .comparison-table thead th {
+    background-color: #0e3d8a;
+    color: #fff;
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border: none;
+    vertical-align: middle;
+  }
+
+  .comparison-table thead th:first-child {
+    border-top-left-radius: 10px;
+  }
+
+  .comparison-table thead th:last-child {
+    border-top-right-radius: 10px;
+  }
+
+  .comparison-table tbody td {
+    padding: 18px 15px;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #4a5568;
+    border-bottom: 1px solid #edf2f7;
+    transition: all 0.2s ease;
+  }
+
+  .comparison-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .comparison-table tbody tr:hover td {
+    background-color: #f0f7ff;
+    color: #1a202c;
+  }
+
+  .comparison-table .prog-name {
+    font-weight: 700;
+    color: #2d3748;
+    width: 20%;
+  }
+
+  .comparison-table td:nth-child(2) {
+    width: 35%;
+  }
+
+  .comparison-table td:nth-child(3) {
+    width: 20%;
+  }
+
+  .comparison-table td:nth-child(4) {
+    width: 25%;
+  }
+
+  @media (max-width: 991px) {
+    .comparison-table-container {
+      padding: 15px;
+      border-radius: 15px;
+    }
+
+    .comparison-table thead th {
+      font-size: 12px;
+      padding: 15px 10px;
+    }
+
+    .comparison-table tbody td {
+      font-size: 13px;
+      padding: 12px 10px;
+    }
+  }
+
+  /* Placement strategy */
+
+  .strategy-card {
+    padding: 30px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f4f8;
+    text-align: center;
+  }
+
+  .strategy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(227, 30, 36, 0.1);
+    border-color: #e31e24;
+  }
+
+  .strategy-icon {
+    width: 60px;
+    height: 60px;
+    background: #fff5f5;
+    color: #e31e24;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+  }
+
+  .strategy-card:hover .strategy-icon {
+    background: #e31e24;
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+
+  .strategy-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #0d1216;
+  }
+
+  .strategy-card p {
+    font-size: 14px;
+    color: #6a7c8a;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .closing-statement {
+    background: #f8fbff;
+    padding: 40px;
+    border-radius: 30px;
+    border: 2px dashed #0e3d8a33;
+  }
+
+  .closing-statement h3 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0d1216;
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .closing-statement h3 {
+      font-size: 22px;
+    }
+  }
+
+  .commonbtn2 {
+    background: #e31e24;
+    box-shadow: 0 10px 48px -12px rgb(227 30 36 / 0.7);
+    border-radius: 100px;
+    font-family: 14px;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .commonbtn2:hover {
+    background: #c2181d;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 55px -10px rgb(227 30 36 / 0.82);
+    color: #fff !important;
+  }
+
+  /* Why Delhi NCR Section */
+  .why-delhi-ncr-section {
+    background-color: #fcfdfe;
+  }
+
+  .ncr-benefit-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 24px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+  }
+
+  .ncr-benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(1, 96, 170, 0.1);
+    border-color: #0060aa;
+  }
+
+  .ncr-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .ncr-icon.icon-blue {
+    background: #e6f0ff;
+    color: #0060aa;
+  }
+
+  .ncr-icon.icon-red {
+    background: #fff0f0;
+    color: #d8232a;
+  }
+
+  .ncr-icon.icon-gold {
+    background: #fefce8;
+    color: #ca8a04;
+  }
+
+  .benefit-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #01316b;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  .benefit-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 991px) {
+    .ncr-benefit-card {
+      padding: 30px 25px;
+    }
+
+    .benefit-title {
+      font-size: 20px;
+    }
+  }
+
+  /* HORIZONTAL SCROLL COMPARISON SECTION */
+  .compare-scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 5px 20px 5px;
+    width: 100%;
+  }
+
+  .compare-scroll-wrapper::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .compare-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+
+  .compare-scroll-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  .compare-scroll-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .compare-card-wrapper {
+    flex: 0 0 auto;
+    width: 45%;
+    min-width: 340px;
+    max-width: 500px;
+  }
+
+  .vs-badge-container {
+    display: flex !important;
+    /* Force display since we removed d-none d-lg-flex */
+    z-index: 5;
+    position: relative !important;
+    top: 250px !important;
+    left: auto !important;
+    transform: none !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .vs-badge {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+
+  @media (max-width: 640px) {
+    .compare-scroll-inner {
+      width: 1000px !important;
+    }
+  }
+
+  /* Education Loan Section */
+  /* .education-loan-section {
+    background-color: #f8fbff;
+    border-top: 1px solid #eef2f6;
+    border-bottom: 1px solid #eef2f6;
+  } */
+
+  .loan-tag {
+    display: inline-block;
+    background: #e6f0ff;
+    color: #01316b;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+  }
+
+  .loan-heading {
+    font-size: 42px;
+    font-weight: 900;
+    color: #01316b;
+    line-height: 1.2;
+  }
+
+  .loan-subheading {
+    font-size: 22px;
+    font-weight: 700;
+    color: #d8232a;
+    margin-top: 10px;
+  }
+
+  .loan-desc {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.8;
+    max-width: 540px;
+  }
+
+  .loan-feature-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    gap: 15px;
+    height: 100%;
+    border: 1px solid rgba(1, 49, 107, 0.05);
+    box-shadow: 0 10px 30px rgba(1, 49, 107, 0.04);
+    transition: all 0.3s ease;
+  }
+
+  .loan-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(1, 49, 107, 0.08);
+    border-color: rgba(1, 49, 107, 0.1);
+  }
+
+  .loan-feature-icon {
+    width: 48px;
+    height: 48px;
+    background: #f0f7ff;
+    color: #01316b;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .loan-feature-txt strong {
+    display: block;
+    font-size: 16px;
+    color: #01316b;
+    margin-bottom: 5px;
+  }
+
+  .loan-feature-txt p {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  .loan-offer-badge {
+    background: linear-gradient(135deg, #01316b 0%, #00264d 100%);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 10px 20px rgba(1, 49, 107, 0.2);
+  }
+
+  .loan-offer-badge i {
+    color: #ffd700;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 991px) {
+    .loan-heading {
+      font-size: 32px;
+    }
+
+    .loan-content-box {
+      text-align: center;
+    }
+
+    .loan-desc {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .education-loan-section {
+      padding: 60px 0;
+    }
+
+    .admission-process-image-section {
+      padding: 50px 0;
+    }
+  }
+
+  /* Scholarship Section */
+  .scholarship-section {
+    background-color: #ffffff;
+  }
+
+  .scholarship-worth-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff5f5;
+    color: #d8232a;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    border: 1px dashed #d8232a;
+    font-size: 16px;
+  }
+
+  .scholarship-worth-badge i {
+    font-size: 20px;
+  }
+
+  .scholarship-category-grid .category-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+  }
+
+  .scholarship-category-grid .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(1, 49, 107, 0.08);
+    border-color: #01316b;
+  }
+
+  .cat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .cat-icon.icon-blue {
+    background: #e6f0ff;
+    color: #01316b;
+  }
+
+  .cat-icon.icon-pink {
+    background: #fff0f6;
+    color: #d63384;
+  }
+
+  .cat-icon.icon-orange {
+    background: #fff7ed;
+    color: #ea580c;
+  }
+
+  .cat-icon.icon-green {
+    background: #f0fdf4;
+    color: #16a34a;
+  }
+
+  .cat-icon.icon-gold {
+    background: #fefce8;
+    color: #ca8a04;
+  }
+
+  .cat-icon.icon-purple {
+    background: #faf5ff;
+    color: #9333ea;
+  }
+
+  .cat-icon.icon-red {
+    background: #fef2f2;
+    color: #dc2626;
+  }
+
+  .cat-info h6 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 2px;
+  }
+
+  .cat-info p {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 0;
+  }
+
+  .scholarship-param-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eef2f6;
+  }
+
+  .scholarship-param-table thead th {
+    background: #0060aa;
+    color: #ffffff;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+  }
+
+  .scholarship-param-table tbody td {
+    padding: 15px 20px;
+    font-size: 15px;
+    color: #475569;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+  }
+
+  .scholarship-param-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .scholarship-param-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+
+  .scholarship-cta-banner {
+    background: #0060aa;
+    border-radius: 30px;
+    padding: 50px 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(1, 49, 107, 0.2);
+    z-index: 1;
+  }
+
+  .scholarship-cta-banner::before {
+    content: "\f005";
+    font-family: "Open Sans", sans-serif;
+    font-weight: 900;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.05);
+    transform: rotate(15deg);
+    z-index: -1;
+  }
+
+  .cta-heading {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+
+  .cta-text {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .scholarship-worth-badge {
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+
+    .cta-heading {
+      font-size: 22px;
+    }
+
+    .scholarship-param-table tbody td {
+      font-size: 14px;
+      padding: 12px;
+    }
+  }
+
+  .enroll-now-btn {
+    background-color: #e31e24;
+    color: #fff;
+    border: none;
+    padding: 12px 35px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(227, 30, 36, 0.3);
+  }
+
+  /* .stillinDoubtPrev svg{
+ display: none;
+}
+.stillinDoubtPrev{
+  background: #e31e24;
+  position: relative;
+} */
+
+  /* .stillinDoubtPrev::before{
+  content: "";
+  background: url('https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/arrow_2_cfea788c58.svg');
+  width: 18px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-size: contain;
+} */
+
+  .heroBannerFormcourse__form {
+    background: #fff;
+    border-radius: 10px;
+    padding-top: 40px;
+    max-width: 430px;
+    min-height: 583px;
+    height: auto;
+    position: relative;
+  }
+
+  .heroBannerFormcourse-header h3 {
+    font-weight: 100;
+    font-size: 18px;
+  }
+
+  .heroBannerFormcourse-header h3 span {
+    display: block;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 5px;
+  }
+
+  .lp3_accordion {
+    margin: 20px;
+    /* border: 1px solid #ddd;
+    border-radius: 4px; */
+    border-bottom: 2px solid rgba(5, 22, 48, 0.05);
+  }
+
+  .lp3_accordion-header {
+    /* padding: 10px 15px 10px; */
+    padding: px 15px 1px;
+    /* background: #f5f5f5; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .lp3_accordion-header i {
+    display: inline-block;
+    /* Ensure the icon stays inline */
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    /* Default rotation */
+    transition: transform 0.3s ease;
+    /* Smooth rotation animation */
+    cursor: pointer;
+    /* Indicates interactivity */
+  }
+
+  .lp3_accordion-header i.active {
+    transform: rotate(90deg);
+    /* Rotate icon when active */
+  }
+
+  .lp3_accordion-header .text {
+    font-weight: 700;
+  }
+
+  .lp3_accordion-content {
+    display: none;
+    padding: 5px 15px;
+
+    /* border-top: 1px solid #ddd; */
+  }
+
+  /* ───────────────── BASE (OPTIONAL) ───────────────── */
+
+  /* Only use this IF you are NOT using next/font */
+  /*
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+}
+*/
+}

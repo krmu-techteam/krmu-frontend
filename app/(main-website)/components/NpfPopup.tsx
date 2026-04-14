@@ -24,17 +24,18 @@ const NpfPopup = ({
 
     loadNpfScript()
       .then(() => {
-        // @ts-expect-error - test
-        new NpfWidgetsInit({
-          widgetId: formId,
-          baseurl: "widgets.nopaperforms.com",
-          formTitle: " ",
-          titleColor: "#ffffff",
-          backgroundColor: "#ffffff",
-          iframeHeight: "520px",
-          buttonTextColor: "#FFF",
-          target: btnRef.current,
-        });
+        if (typeof window !== "undefined" && (window as any).NpfWidgetsInit) {
+          new (window as any).NpfWidgetsInit({
+            widgetId: formId,
+            baseurl: "widgets.nopaperforms.com",
+            formTitle: " ",
+            titleColor: "#ffffff",
+            backgroundColor: "#ffffff",
+            iframeHeight: "520px",
+            buttonTextColor: "#FFF",
+            target: btnRef.current,
+          });
+        }
       })
       .catch((err) => {
         console.error("NPF init failed:", err);

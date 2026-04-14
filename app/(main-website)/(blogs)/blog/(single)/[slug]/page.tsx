@@ -1,6 +1,5 @@
 import { yoastToMetadata } from "@/lib/constants/yoastMeta";
 import {
-  getBlogImageById,
   getSingleBlogDataBySlug,
 } from "@/lib/api/blogs/single-blog";
 import { notFound } from "next/navigation";
@@ -13,6 +12,9 @@ import {
 } from "@/lib/api/common";
 import Script from "next/script";
 
+// Incremental Static Regeneration (ISR)
+export const revalidate = 3600;
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -22,46 +24,47 @@ type Props = {
 // -------------------------------
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
+  const blogData = await getSingleBlogDataBySlug(slug);
 
-  const blog = await getSingleBlogDataBySlug(slug);
+  if (!blogData || blogData.length === 0 || !blogData[0]?.yoast_head_json) {
+    return {
+      title: "Blog - K.R. Mangalam University",
+      description: "Read the latest blogs from K.R. Mangalam University.",
+    };
+  }
 
-
-  if (!blog || !blog[0]?.yoast_head_json) return {};
-
-  return yoastToMetadata(blog[0].yoast_head_json, slug);
+  return yoastToMetadata(blogData[0].yoast_head_json, slug);
 }
-const page = async ({ params }: Props) => {
+
+const BlogPage = async ({ params }: Props) => {
   const { slug } = await params;
 
+  // Next.js deduplicates this fetch due to react cache() in getSingleBlogDataBySlug
   const singleBlogData = await getSingleBlogDataBySlug(slug);
 
-  if (!singleBlogData) return notFound();
+  if (!singleBlogData || singleBlogData.length === 0) return notFound();
 
-  const currentSingleBlog = singleBlogData.find((blog) => blog?.slug === slug);
+  const currentSingleBlog = singleBlogData[0];
 
   if (!currentSingleBlog?.title) return notFound();
 
-  // const schemaScript = singleBlogData[0]?.acf?.krmscript;
+  // Extract author info from _embedded to avoid extra API calls
+  const authorData = currentSingleBlog?._embedded?.author?.[0];
+  const authorSlug = authorData?.slug;
+  const authorName = authorData?.acf?.profile_name || "KRMU Team";
+  const authorDesignation = authorData?.acf?.profile_position || "Content Team";
+  const authorImageId = authorData?.acf?.profile_image;
 
-  // const featuredImageUrl =
-  //   currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url;
+  // Extract featured image from _embedded instead of calling getBlogImageById
+  const featuredImageUrl =
+    currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url || 
+    currentSingleBlog?.yoast_head_json?.og_image?.[0]?.url;
 
-  const authorSlug = currentSingleBlog?._embedded?.author?.[0]?.slug;
-
-  const featuedImageId = currentSingleBlog?.featured_media;
-  const featuredImageUrl = await getBlogImageById(featuedImageId);
-
-  const authorName =
-    currentSingleBlog?._embedded?.author?.[0]?.acf?.profile_name;
-  const authorDesignation =
-    currentSingleBlog?._embedded?.author?.[0]?.acf?.profile_position;
   const publishedDate = currentSingleBlog?.date;
-  const authorImageId =
-    currentSingleBlog?._embedded?.author?.[0]?.acf?.profile_image;
-
   const blogFaqSchema = currentSingleBlog?.acf?.faqs_section;
+  
+  // JSON-LD Structured Data
   const faqJsonLd = createFaqSchema(blogFaqSchema || []);
-
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: "Home", url: "https://www.krmangalam.edu.in/" },
     { name: "Blog", url: "https://www.krmangalam.edu.in/blog/" },
@@ -76,7 +79,7 @@ const page = async ({ params }: Props) => {
     headline: currentSingleBlog?.title?.rendered,
     description: currentSingleBlog?.yoast_head_json?.description,
     image: currentSingleBlog?.yoast_head_json?.og_image?.[0]?.url,
-    authorName: "KRMU Team",
+    authorName: authorName,
     publisherName: "K.R. Mangalam University",
     publisherLogo:
       "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/KRMU-Logo-NAAC.webp",
@@ -84,38 +87,26 @@ const page = async ({ params }: Props) => {
     dateModified: `${currentSingleBlog?.modified_gmt}Z`,
   });
 
-  // const personJsonLd = createPersonSchema({
-  //   name: "KRMU Team",
-  //   url: "https://www.krmangalam.edu.in/faculty/dr-john-doe/",
-  //   image:
-  //     "https://www.krmangalam.edu.in/wp-content/uploads/2026/01/john-doe.webp",
-  // });
-
   return (
     <>
-      {/* {schemaScript && (
-        <Script
-          id="yoast-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: schemaScript
-              .replace(/<script[^>]*>/g, "")
-              .replace(/<\/script>/g, ""), 
-          }}
-          strategy="beforeInteractive"
-        />
-      )} */}
+      {/* Optimized JSON-LD Scripts */}
       <Script
+        id="blog-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: faqJsonLd }}
+        strategy="afterInteractive"
       />
       <Script
+        id="blog-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+        strategy="afterInteractive"
       />
       <Script
+        id="blog-article-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: articleJsonLd }}
+        strategy="afterInteractive"
       />
 
       <SingleBlogHero
@@ -132,4 +123,5 @@ const page = async ({ params }: Props) => {
   );
 };
 
-export default page;
+export default BlogPage;
+

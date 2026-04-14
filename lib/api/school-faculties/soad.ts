@@ -16,6 +16,20 @@ export const soadFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/12/Dr.-Tanaya-Verma-SOAD.jpg",
   },
+  // {
+  //   id: 113903,
+  //   slug: "mr-vikas-yadav",
+  //   title: {
+  //     rendered: "Mr. Vikas yadav",
+  //   },
+  //   featured_media: 65099,
+  //   acf: {
+  //     "staff-qualification": "Masters of Design",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [787],
+  //   },
+  //   featured_media_url: "",
+  // },
   {
     id: 1254,
     slug: "ar-disha-shah",
@@ -273,7 +287,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Ms.-Paramjeet-Kaur-SOAD.jpg",
   },
-   {
+  {
     id: 113804,
     slug: "dr-sagar-paruthi",
     title: {

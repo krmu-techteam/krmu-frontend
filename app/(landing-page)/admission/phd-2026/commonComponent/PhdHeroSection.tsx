@@ -53,7 +53,7 @@ const PhdHeroSection = ({ formId }: Props) => {
           )} */}
 
           {formId && (
-            <div className="heroBannerForm__form">
+            <div id="apply-form" className="heroBannerForm__form">
               <div className="heroBannerForm-header">
                 <h3 className="mb-0">
                   <strong>

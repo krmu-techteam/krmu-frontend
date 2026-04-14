@@ -16,6 +16,20 @@ export const solsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/11/kaveri.png",
   },
+  // {
+  //   id: 113912,
+  //   slug: "dr-sombir-singh",
+  //   title: {
+  //     rendered: "Dr. SOMBIR SINGH",
+  //   },
+  //   featured_media: 101902,
+  //   acf: {
+  //     "staff-qualification": "Ph.D. (Law) – SKD University, Hanumangarh",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1043],
+  //   },
+  //   featured_media_url: "",
+  // },
   {
     id: 10185,
     slug: "dr-inderpreet-kaur-saggu",

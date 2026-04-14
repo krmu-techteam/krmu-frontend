@@ -100,6 +100,7 @@ const page = async ({ params }: Props) => {
   if (slug === "bsc-hons-finance") {
     return <BscFinance2026Page />;
   }
+
   // ====== END BSC-HONS-FINANCE OVERRIDE ======
 
   const testimonialsMap: Record<string, any> = {
@@ -114,23 +115,7 @@ const page = async ({ params }: Props) => {
     // "llm": LLMtestimonialsData,
   };
 
-  const allowedFormSlugs = [
-    "barch-architecture",
-    "bsc-forensic-science",
-    "bachelor-of-education-b-ed",
-    "bsc-hons-chemistry-research",
-    "bpharma",
-    "bdes-interior-design",
-    "bjmc",
-    "bfa-fine-arts",
-    "btech-cse-ai-ml",
-    "bsc-hons-chemistry-research",
-    "bba-international-business",
-    "bba-international-business",
-    "b-tech-cse",
-    "master-computer-application-mca",
-    "bsc-hons-agriculture",
-  ];
+  const allowedFormSlugs = [''];
 
   const testimonialsData = testimonialsMap[slug];
 
@@ -139,7 +124,9 @@ const page = async ({ params }: Props) => {
   const seoData = await getSchoolProgrammeSEO(slug);
   const seo = seoData?.[0]?.SEO;
   const tags = seo?.tags;
-  const tagsArray = tags ? tags.split(",").map((tag: string) => tag.trim()) : [];
+  const tagsArray = tags
+    ? tags.split(",").map((tag: string) => tag.trim())
+    : [];
 
   const singleSchoolProgramme = allSchoolProgrammeData.find(
     (programme) => programme.programmeslug === slug,
@@ -174,7 +161,6 @@ const page = async ({ params }: Props) => {
   const financialAssistanceSection = singleSchoolProgramme?.financialassistance;
   const tocSection = singleSchoolProgramme?.toc;
   const ourLocationSection = singleSchoolProgramme?.ourlocation;
- 
 
   if (singlePHDProgramme?.degree === "Doctoral Programme") {
     return <PHDProgrammes phdData={singlePHDProgramme} />;
@@ -188,10 +174,15 @@ const page = async ({ params }: Props) => {
   const faqToC = singleSchoolProgramme?.toc?.tocfaq || [];
 
   let schemaSlug = singleSchoolProgramme?.programmeslug || "";
-  let courseWorkload = schemaSlug.includes("part-time") ? "Part Time" : "Full Time";
+  let courseWorkload = schemaSlug.includes("part-time")
+    ? "Part Time"
+    : "Full Time";
   let schemaTitle =
-    singleSchoolProgramme?.title + (singleSchoolProgramme?.highlightitle ? " " + singleSchoolProgramme?.highlightitle : "");
- 
+    singleSchoolProgramme?.title +
+    (singleSchoolProgramme?.highlightitle
+      ? " " + singleSchoolProgramme?.highlightitle
+      : "");
+
   schemaTitle = schemaTitle.trim();
   const allFaqs: FAQProg[] = faqToC.flatMap((section) =>
     section.faq.map((item) => ({
@@ -211,7 +202,9 @@ const page = async ({ params }: Props) => {
       url: `https://www.krmangalam.edu.in/programs/${schemaSlug}`,
     },
   ]);
-  const durationObj = eligibilitySection?.elgibility.find(item => item.subtitle === "Duration");
+  const durationObj = eligibilitySection?.elgibility.find(
+    (item) => item.subtitle === "Duration",
+  );
   let durationISO = "";
 
   if (durationObj?.title) {
@@ -222,31 +215,30 @@ const page = async ({ params }: Props) => {
   }
 
   const courseSchema = createCourseSchema({
-  name: schemaTitle,
+    name: schemaTitle,
     description: seo?.metaDescription || "",
-  provider: {
-    name: "K.R. Mangalam University",
-    url: `https://www.krmangalam.edu.in/programs/${schemaSlug}`,
-  },
-  offers: [{ category: "Paid" }],
-  hasCourseInstance: [
-    {
-      courseMode: "Onsite",
-      location: "K.R. Mangalam University",
-      courseSchedule: {
-        duration: durationISO,
-        repeatFrequency: "Weekly",
-        repeatCount: 48,
-        startDate: "2013",
+    provider: {
+      name: "K.R. Mangalam University",
+      url: `https://www.krmangalam.edu.in/programs/${schemaSlug}`,
+    },
+    offers: [{ category: "Paid" }],
+    hasCourseInstance: [
+      {
+        courseMode: "Onsite",
+        location: "K.R. Mangalam University",
+        courseSchedule: {
+          duration: durationISO,
+          repeatFrequency: "Weekly",
+          repeatCount: 48,
+          startDate: "2013",
+        },
       },
-    },
-    {
-      courseMode: "Onsite",
-      courseWorkload: courseWorkload,
-    },
-  ],
-});
-
+      {
+        courseMode: "Onsite",
+        courseWorkload: courseWorkload,
+      },
+    ],
+  });
 
   return (
     <>
@@ -258,10 +250,10 @@ const page = async ({ params }: Props) => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
       />
-    <Script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: courseSchema }}
-          />
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: courseSchema }}
+      />
       <div
         className={`p-0 m-0 ${tagsArray.map((tag) => `tag-${tag}`).join(" ")}`}
       />

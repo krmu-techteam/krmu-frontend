@@ -1,4 +1,3 @@
-import React from "react";
 import NewsEventsHero from "../comp/NewsEventsHero";
 import NewsEventsImageContent from "../comp/NewsEventsImageContent";
 import {
@@ -23,7 +22,7 @@ type NewsEventItem = {
   acf: {
     event_images: number[];
   };
- yoast_head_json: {
+  yoast_head_json: {
     title: string;
     description?: string;
     robots?: {
@@ -64,9 +63,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
     },
     robots: {
-    index: singleNewsEvents?.yoast_head_json?.robots?.index ?? true,
-    follow: singleNewsEvents?.yoast_head_json?.robots?.follow ?? true,
-  },
+      index: singleNewsEvents?.yoast_head_json?.robots?.index ?? true,
+      follow: singleNewsEvents?.yoast_head_json?.robots?.follow ?? true,
+    },
 
     // ✅ Twitter Card
   };
