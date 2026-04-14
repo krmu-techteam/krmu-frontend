@@ -53,17 +53,8 @@ const PhdHeroSection = ({ formId }: Props) => {
           )} */}
 
           {formId && (
-            <div className="heroBannerForm__form">
-              <div className="heroBannerForm-header">
-                <h3 className="mb-0">
-                  <strong>
-                    Apply Today for{" "}
-                    <span className="uppercase">K.R. Mangalam University</span>
-                  </strong>
-                </h3>
-              </div>
-
-              <NoPaperFormsWidget widgetId={formId} height="480px" />
+            <div id="apply-form" className="w-full scroll-mt-24">
+              <NoPaperFormsWidget widgetId={formId} height="700px" />
             </div>
           )}
         </div>

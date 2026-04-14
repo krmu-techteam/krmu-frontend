@@ -119,19 +119,6 @@ const FooterSection = () => {
           >
             <p className="m-0">K.R. Mangalam University</p>
             <p className="m-0">Sohna Road, Gurugram, Haryana</p>
-            <a
-              href="https://www.krmangalam.edu.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:opacity-75 transition-opacity"
-              style={{
-                fontFamily: "Inter, sans-serif",
-                fontWeight: 400,
-                color: "#111111",
-              }}
-            >
-              www.krmangalam.edu.in
-            </a>
             <p className="m-0 break-words">
             Call: <a href="tel:+919311411717">+91 9311411717</a>
             </p>
