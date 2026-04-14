@@ -85,6 +85,7 @@ const page = async () => {
   return (
     <>
     <Script
+        id="programmes-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
       />
