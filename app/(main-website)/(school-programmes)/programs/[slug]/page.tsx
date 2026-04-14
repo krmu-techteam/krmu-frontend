@@ -243,14 +243,17 @@ const page = async ({ params }: Props) => {
   return (
     <>
       <Script
+        id="program-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: singleProgFAQLD }}
       />
       <Script
+        id="program-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
       />
       <Script
+        id="program-course-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: courseSchema }}
       />

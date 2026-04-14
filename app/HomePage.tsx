@@ -120,14 +120,17 @@ export default async function HomePage() {
   return (
     <>
       <Script
+        id="website-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: websiteSchema }}
       />
       <Script
+        id="collage-university-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: collageOrUniversitySchema }}
       />
       <Script
+        id="organization-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: organizationSchema }}
       />
