@@ -1,8 +1,13 @@
+import {
+  createBreadcrumbProgSchema,
+  createCourseSchema,
+} from "@/lib/api/common";
+import { generateCourseFaqSchema } from "../best-colleges-for-btech-cse/page";
 import AdmissionProcess from "./components/AdmissionProcess";
-import CourseDetails from "./components/CourseDetails";
+// import CourseDetails from "./components/CourseDetails";
 import CourseFAQ from "./components/CourseFAQ";
 import CourseProminentRecruiter from "./components/CourseProminentRecruiter";
-import CourseStructure from "./components/CourseStructure";
+// import CourseStructure from "./components/CourseStructure";
 import FacilitiesSection from "./components/FacilitiesSection";
 import FinancialSupport from "./components/FinancialSupport";
 import HeroSection from "./components/HeroSection";
@@ -17,7 +22,8 @@ import QuickComparison from "./components/QuickComparison";
 import Scholarship from "./components/Scholarship";
 import StillinDoubt from "./components/StillinDoubt";
 import WhyStudy from "./components/WhyStudy";
-import { worldFaciltiesCourseData } from "./content";
+import { faqData, worldFaciltiesCourseData } from "./content";
+import Script from "next/script";
 
 export async function generateMetadata() {
   return {
@@ -36,9 +42,68 @@ export async function generateMetadata() {
 
 const page = () => {
   const worldFacilities = worldFaciltiesCourseData;
+  // FAQ Schema - automatically generated from the data
+  const faqSchema = generateCourseFaqSchema(faqData);
+
+  // Course Schema
+  const durationISO = "P4Y";
+  const courseWorkload = "Full Time";
+  const courseSchema = createCourseSchema({
+    name: "Top BTech Colleges in Gurgaon | Btech Admissions 2026",
+    description:
+      "Looking for the best BTech colleges in Gurgaon? KRMU offers industry-led B.Tech programmes with 100% placement support and global collaborations. Apply now for the 2026 academic session!",
+    provider: {
+      name: "K.R. Mangalam University",
+      url: "https://www.krmangalam.edu.in/course/btech-colleges-gurgaon",
+    },
+    offers: [{ category: "Paid" }],
+    hasCourseInstance: [
+      {
+        courseMode: "Onsite",
+        location: "K.R. Mangalam University",
+        courseSchedule: {
+          duration: durationISO,
+          repeatFrequency: "Weekly",
+          repeatCount: 48,
+          startDate: "2013",
+        },
+      },
+      {
+        courseMode: "Onsite",
+        courseWorkload: courseWorkload,
+      },
+    ],
+  });
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = createBreadcrumbProgSchema([
+    { name: "Home", url: "https://www.krmangalam.edu.in/" },
+    { name: "Course", url: "https://www.krmangalam.edu.in/course" },
+    {
+      name: "Top BTech Colleges in Gurgaon | Btech Admissions 2026",
+      url: "https://www.krmangalam.edu.in/course/btech-colleges-gurgaon",
+    },
+  ]);
 
   return (
     <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+      <Script
+        id="course-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: courseSchema }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+      />
       <HeroSection />
       <CourseProminentRecruiter />
       <PlacementOverview />

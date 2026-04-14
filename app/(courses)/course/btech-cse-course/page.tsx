@@ -1,3 +1,4 @@
+import Script from "next/script";
 import AdmissionProcess from "./components/AdmissionProcess";
 import CourseDetails from "./components/CourseDetails";
 import CourseFAQ from "./components/CourseFAQ";
@@ -13,11 +14,16 @@ import LocationSection from "./components/LocationSection";
 import PlacementOverview from "./components/PlacementOverview";
 import PlacementStrategy from "./components/PlacementStrategy";
 import PreFooterCTA from "./components/PreFooterCTA";
-import QuickComparison from "./components/QuickComparison";
+// import QuickComparison from "./components/QuickComparison";
 import Scholarship from "./components/Scholarship";
 import StillinDoubt from "./components/StillinDoubt";
-import WhyStudy from "./components/WhyStudy";
-import { worldFaciltiesCourseData } from "./content";
+// import WhyStudy from "./components/WhyStudy";
+import { faqData, worldFaciltiesCourseData } from "./content";
+import {
+  createBreadcrumbProgSchema,
+  createCourseSchema,
+} from "@/lib/api/common";
+import { generateCourseFaqSchema } from "../best-colleges-for-btech-cse/page";
 
 export async function generateMetadata() {
   return {
@@ -36,9 +42,68 @@ export async function generateMetadata() {
 
 const page = () => {
   const worldFacilities = worldFaciltiesCourseData;
+  // FAQ Schema - automatically generated from the data
+  const faqSchema = generateCourseFaqSchema(faqData);
+
+  // Course Schema
+  const durationISO = "P4Y";
+  const courseWorkload = "Full Time";
+  const courseSchema = createCourseSchema({
+    name: "B.Tech. CSE Course Details: Subjects & Structure",
+    description:
+      "Learn everything about the KRMU’s B.Tech. CSE course, including course details, structure, and B.Tech. CSE course subjects. A complete guide for aspiring engineers!",
+    provider: {
+      name: "K.R. Mangalam University",
+      url: "https://www.krmangalam.edu.in/course/btech-cse-course",
+    },
+    offers: [{ category: "Paid" }],
+    hasCourseInstance: [
+      {
+        courseMode: "Onsite",
+        location: "K.R. Mangalam University",
+        courseSchedule: {
+          duration: durationISO,
+          repeatFrequency: "Weekly",
+          repeatCount: 48,
+          startDate: "2013",
+        },
+      },
+      {
+        courseMode: "Onsite",
+        courseWorkload: courseWorkload,
+      },
+    ],
+  });
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = createBreadcrumbProgSchema([
+    { name: "Home", url: "https://www.krmangalam.edu.in/" },
+    { name: "Course", url: "https://www.krmangalam.edu.in/course" },
+    {
+      name: "B.Tech. CSE Course Details: Subjects & Structure",
+      url: "https://www.krmangalam.edu.in/course/btech-cse-course",
+    },
+  ]);
 
   return (
     <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+      <Script
+        id="course-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: courseSchema }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+      />
       <HeroSection />
       <CourseProminentRecruiter />
       <PlacementOverview />
