@@ -53,7 +53,6 @@ const PhdHeroSection = ({ formId }: Props) => {
           )} */}
 
           {formId && (
-<<<<<<< HEAD
             <div id="apply-form" className="heroBannerForm__form">
               <div className="heroBannerForm-header">
                 <h3 className="mb-0">
@@ -65,10 +64,6 @@ const PhdHeroSection = ({ formId }: Props) => {
               </div>
 
               <NoPaperFormsWidget widgetId={formId} height="480px" />
-=======
-            <div id="apply-form" className="w-full scroll-mt-24">
-              <NoPaperFormsWidget widgetId={formId} height="700px" />
->>>>>>> devPrince
             </div>
           )}
         </div>
