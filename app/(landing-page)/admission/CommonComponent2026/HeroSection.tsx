@@ -78,17 +78,7 @@ const HeroSection = ({
 
           <div className="w-full xl:w-1/3 container-2 px-5" id="apply-form">
             {formId && (
-              <div className="heroBannerForm__form">
-                <div className="heroBannerForm-header">
-                  <h3 className="mb-0">
-                    <strong>
-                      Apply Today for <span className="uppercase">K.R. Mangalam University</span>
-                    </strong>
-                  </h3>
-                </div>
-
-                <NoPaperFormsWidget widgetId={formId} height="480px" />
-              </div>
+              <NoPaperFormsWidget widgetId={formId} height="700px" />
             )}
           </div>
         </div>
