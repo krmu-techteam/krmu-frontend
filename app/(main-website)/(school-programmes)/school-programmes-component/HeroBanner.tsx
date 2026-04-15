@@ -25,6 +25,10 @@ const HeroBanner = ({
 }: Props) => {
   const isFormAvailable = allowedFormSlugs.includes(slug);
 
+  const iframe = heroSection?.videofield;
+
+  const videoSrc = iframe?.match(/src="([^"]+)"/)?.[1];
+
   // const btnRef = useRef<HTMLButtonElement>(null);
 
   // useEffect(() => {
@@ -51,15 +55,17 @@ const HeroBanner = ({
 
   return (
     <section className="pt-24 sm:pt-40 sm:pb-[50px] px-2.5 sm:px-4">
-      <div className="school-programme-max-width md:flex items-center justify-between gap-5">
-        <div className={`w-full ${isFormAvailable ? "lg:w-8/12" : "lg:w-1/2"}`}>
+      <div className="school-programme-max-width md:flex items-center justify-between gap-5 bg-[#051630] p-10 rounded-4xl">
+        <div
+          className={`w-full text-white ${isFormAvailable ? "lg:w-8/12" : "lg:w-1/2"}`}
+        >
           <p className="text-xs sm:text-2xl font-medium leading-[1.2] mb-2">
             {heroSection?.subtitle}
           </p>
-          <h1 className="text-4xl sm:text-[50px] font-semibold text-[#0060aa] leading-[1.2] mb-2">
+          <h1 className="text-4xl sm:text-[50px] font-bold leading-[1.2] mb-2">
             {title} <span className="text-[#e61f21]">{highlightitle}</span>
           </h1>
-          <p className="text-xs sm:text-[15px] font-medium mt-6 mb-4">
+          <p className="text-xs sm:text-2xl font-medium mt-6 mb-4">
             {heroSection?.description}
           </p>
           {(slug === "btech-cse-cloud-computing" ||
@@ -111,12 +117,15 @@ const HeroBanner = ({
               <NoPaperForm formId={formId} height="500px" />
             </div>
           ) : heroSection?.imgvideo === "Video" ? (
-            <div
-              className="videoField w-full h-[200px] lg:h-[400px]"
-              dangerouslySetInnerHTML={{
-                __html: heroSection?.videofield || "",
-              }}
-            />
+            <>
+              {/* <div
+                className="aspect-video-iframe w-full"
+                dangerouslySetInnerHTML={{
+                  __html: heroSection?.videofield || "",
+                }}
+              /> */}
+              <iframe className="aspect-video" src={videoSrc}></iframe>
+            </>
           ) : (
             heroSection?.heroimg && (
               <Image
