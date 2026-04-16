@@ -179,7 +179,10 @@ const HeroSection = ({
             />
           )} */}
           {formId && (
-            <div className="heroBannerForm__form" id="apply-section">
+            <div
+              className="heroBannerForm__form scroll-mt-40"
+              id="apply-section"
+            >
               <div className="heroBannerForm-header">
                 <h3 className="mb-0">
                   <strong>
