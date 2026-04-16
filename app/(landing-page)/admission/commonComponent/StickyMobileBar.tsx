@@ -1,4 +1,3 @@
-
 "use client";
 
 import { loadNpfScript } from "@/lib/constants/loadNpfScript";
@@ -50,7 +49,7 @@ const StickyMobileBar = ({
         </button>
       ) : (
         <Link
-          href="#apply-form"
+          href="#apply-section"
           className="flex w-1/2 items-center justify-center font-semibold text-lg hover:bg-red-700 transition-colors border-r border-white/20"
         >
           Apply Now
@@ -62,7 +61,6 @@ const StickyMobileBar = ({
       >
         <PhoneCall size={18} fill="currentColor" />
         Call
-        
       </a>
     </div>
   );

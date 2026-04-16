@@ -3,7 +3,7 @@ import HowWeComparisonCard from "./HowWeComparisonCard";
 const HowWeCompare = () => {
   return (
     <section
-      className="py-[50px] googleSansFamily compare-section px-4 scroll-mt-50"
+      className="py-[50px] googleSansFamily compare-section px-4 scroll-mt-30 lg:scroll-mt-50"
       id="how-we-compare"
     >
       <div className="max-w-[1400px] mx-auto w-full">

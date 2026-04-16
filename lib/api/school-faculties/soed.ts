@@ -44,7 +44,7 @@ export const soedFaculties: SchoolFacultiesType[] = [
       schools: [1070],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Pooja-Verma-SOED.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Pooja-Verma-SOED.jpg",
   },
   {
     id: 9667,
@@ -59,7 +59,7 @@ export const soedFaculties: SchoolFacultiesType[] = [
       schools: [1070],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Shikha-SOED.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Shikha-SOED.jpg",
   },
   // {
   //   id: 9653,
@@ -137,7 +137,7 @@ export const soedFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Kanchan-Khatreja-SOED.jpg",
   },
-   {
+  {
     id: 113722,
     slug: "dr-anupam-bansal",
     title: {
@@ -152,7 +152,7 @@ export const soedFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/anupam-bansal.webp",
   },
-   {
+  {
     id: 113719,
     slug: "ms-richa-malaviya",
     title: {
@@ -167,7 +167,7 @@ export const soedFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Ms.-Richa-Malaviya-SOED.jpg",
   },
-   {
+  {
     id: 113786,
     slug: "dr-monika-bishnoi",
     title: {

@@ -119,7 +119,7 @@ export default function Header() {
                 </Link>
                 <Link
                   className="py-2"
-                  href="#why-krmu"
+                  href="#how-we-compare"
                   onClick={() => setOpen(false)}
                 >
                   Why KRMU?
@@ -164,14 +164,16 @@ export default function Header() {
               {/* Buttons */}
               <div className="pt-4 flex flex-col gap-3">
                 <Link
-                  href="#"
+                  href="#apply-section"
                   className="bg-red-500 text-white py-3 rounded-full"
+                  onClick={() => setOpen(false)}
                 >
                   Apply Now
                 </Link>
                 <Link
                   href="tel:+919311411717"
                   className="bg-blue-600 text-white py-3 rounded-full"
+                  onClick={() => setOpen(false)}
                 >
                   Call Now
                 </Link>
