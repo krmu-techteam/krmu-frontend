@@ -39,7 +39,7 @@ const StickyMobileBar = ({
   }, [formId]);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 flex h-14 w-full md:hidden bg-[#d8232a] text-white">
+    <div className="fixed bottom-0 left-0 right-0 z-50 flex h-14 w-full sm:hidden bg-[#d8232a] text-white">
       {formId ? (
         <button
           ref={btnRef}
