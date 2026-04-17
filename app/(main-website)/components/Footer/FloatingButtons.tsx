@@ -11,9 +11,9 @@ export default function FloatingButtons() {
       {pathname !== "/univiser" && (
         <Link
           href="/univiser"
-          className="bg-[#f00] text-white py-[2px] px-[15px] fixed top-[35%] right-[-120px] rotate-90 rounded-sm h-[27px] z-10"
+          className="bg-[#f00] text-white py-[2px] px-[15px] fixed top-[35%] right-[-72px] rotate-90 rounded-sm h-[27px] z-10"
         >
-          Connect With Campus Pioneer
+          Chat with Student
         </Link>
       )}
 
@@ -26,7 +26,7 @@ export default function FloatingButtons() {
 
       <Link
   href="/campus-life/virtual-tour"
-  className="bg-[#f00] text-white py-[2px] px-[15px] fixed top-[70%] right-[-62px] rotate-90 rounded-sm h-[27px] z-10"
+  className="bg-[#f00] text-white py-[2px] px-[15px] fixed top-[60%] right-[-62px] rotate-90 rounded-sm h-[27px] z-10"
 >
   360° Virtual Tour
 </Link>

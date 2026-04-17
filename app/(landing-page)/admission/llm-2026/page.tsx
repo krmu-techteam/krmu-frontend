@@ -109,7 +109,7 @@ const page = () => {
         description={aboutUsData?.description}
         image={aboutUsData?.image}
       />
-      <IndustryExperts data={indusExpData} />
+      {/* <IndustryExperts data={indusExpData} /> */}
       {/* <BusinessLeader data={whyChooseData} progData={whyChooseProgCardData} /> */}
       <ProgrammeSection {...programmeContent} />
       {/* <ProspectusDownload data={prospectusData} /> */}

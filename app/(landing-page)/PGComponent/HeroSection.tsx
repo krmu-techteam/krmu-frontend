@@ -120,10 +120,10 @@ const HeroSection = ({
           </div>
         </div>
 
-        <div className="flex sm:hidden flex-col items-center gap-4 sm:gap-8 justify-center lg:justify-start container-2">
-          {/* Primary CTA */}
+        {/* <div className="flex sm:hidden flex-col items-center gap-4 sm:gap-8 justify-center lg:justify-start container-2"> */}
+        {/* Primary CTA */}
 
-          {/* <Link
+        {/* <Link
             href={primaryCta.href}
             className="flex items-center justify-between w-full sm:max-w-[280px] py-1 px-2 gap-2 border border-white rounded-full"
           >
@@ -134,7 +134,7 @@ const HeroSection = ({
               <MoveUpRight className="text-[#0060aa]" size={24} />
             </div>
           </Link> */}
-          {/* <ScrollButton
+        {/* <ScrollButton
             targetId="apply-section"
             highlightClass="flash-border"
             btnClass="flex items-center justify-between w-full sm:max-w-[280px] py-1 px-2 gap-2 border border-white rounded-full"
@@ -147,8 +147,8 @@ const HeroSection = ({
             </div>
           </ScrollButton> */}
 
-          {/* Secondary CTA */}
-          {/* <Link
+        {/* Secondary CTA */}
+        {/* <Link
             href={secondaryCta.href}
             className="text-white text-sm sm:text-base flex items-center gap-2 sm:gap-4"
           >
@@ -156,7 +156,7 @@ const HeroSection = ({
             <ChevronRight size={18} />
           </Link> */}
 
-          <ScrollButton
+        {/* <ScrollButton
             targetId="apply-section"
             highlightClass="flash-border"
             btnClass="text-white text-sm sm:text-base flex items-center gap-2 sm:gap-4"
@@ -164,7 +164,7 @@ const HeroSection = ({
             {secondaryCta.label}
             <ChevronRight size={18} />
           </ScrollButton>
-        </div>
+        </div> */}
 
         {/* Right Image */}
         <div className="w-full lg:w-1/3 px-4 md:px-0">
