@@ -5,7 +5,7 @@ import ScrollButton from "../../CommonComponent2026/ScrollButton";
 const CommonFooter2 = () => {
   return (
     <section className="py-14 bg-white">
-      <div className="px-6 max-w-[1200px] mx-auto w-full">
+      <div className="px-6 max-w-[1200px] mx-auto w-full temp-class">
         <div className="text-center max-w-[1000px] m-auto">
           <h2 className="text-black mb-4 text-2xl md:text-3xl font-bold leading-[1.2]">
             Apply Today to Ascertain Your Tomorrow!
