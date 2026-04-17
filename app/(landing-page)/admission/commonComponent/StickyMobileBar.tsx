@@ -4,6 +4,7 @@ import { loadNpfScript } from "@/lib/constants/loadNpfScript";
 import { PhoneCall } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import ScrollButton from "../CommonComponent2026/ScrollButton";
 
 const StickyMobileBar = ({
   phoneNumber,
@@ -48,12 +49,13 @@ const StickyMobileBar = ({
           Apply Now
         </button>
       ) : (
-        <Link
-          href="#apply-section"
-          className="flex w-1/2 items-center justify-center font-semibold text-lg hover:bg-red-700 transition-colors border-r border-white/20"
+        <ScrollButton
+          targetId="apply-section"
+          highlightClass="flash-border"
+          btnClass="flex w-1/2 items-center justify-center font-semibold text-lg hover:bg-red-700 transition-colors border-r border-white/20"
         >
           Apply Now
-        </Link>
+        </ScrollButton>
       )}
       <a
         href={`tel:${phoneNumber}`}
