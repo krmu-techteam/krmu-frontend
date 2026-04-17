@@ -42,6 +42,7 @@
 
 import Link from "next/link";
 import { ProgrammeCardItem } from "../../law-2026/contentype";
+import ScrollButton from "../ScrollButton";
 
 type Props = {
   data: ProgrammeCardItem;
@@ -130,14 +131,14 @@ const ProgCard2 = ({ data }: Props) => {
             {data.duration}
           </span>
 
-        {data.fees && (
-  <>
-    <span className="text-[#6b7280]">Annual Fee</span>
-    <span className="text-[#1f2937] font-semibold text-right">
-      {data.fees}
-    </span>
-  </>
-)}
+          {data.fees && (
+            <>
+              <span className="text-[#6b7280]">Annual Fee</span>
+              <span className="text-[#1f2937] font-semibold text-right">
+                {data.fees}
+              </span>
+            </>
+          )}
 
           <span className="text-[#6b7280]">Eligibility</span>
           <span className="text-[#1f2937] font-semibold text-right">
@@ -150,14 +151,16 @@ const ProgCard2 = ({ data }: Props) => {
         </div>
 
         {/* CTA */}
-        <Link
-          href={data.ctaLink}
-          className="w-full text-white bg-[#002d73] hover:bg-[#0052cc]
+
+        <ScrollButton
+          targetId="apply-section"
+          highlightClass="flash-border"
+          btnClass="w-full text-white bg-[#002d73] hover:bg-[#0052cc]
           hover:-translate-y-0.5 py-3 px-5 mt-auto min-h-12
           text-base font-semibold rounded-xl inline-flex justify-center items-center"
         >
           {data.ctaText}
-        </Link>
+        </ScrollButton>
       </div>
     </article>
   );
