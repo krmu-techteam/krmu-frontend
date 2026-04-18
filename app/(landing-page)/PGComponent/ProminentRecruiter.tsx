@@ -1,6 +1,4 @@
 import Image from "next/image";
-import ProminentRecruiterCard from "./ProminentRecruiterCard";
-
 import { ProminentRecruiterContent } from "../admission/PGType";
 import PlacementTestimonials from "./PlacementTestimonials";
 
@@ -11,7 +9,7 @@ type Props = {
 const ProminentRecruiter = ({ data }: Props) => {
   return (
     <section className="py-16 px-4 overflow-hidden bg-white">
-      <div className="max-w-[1400px] mx-auto w-full">
+      <div className="max-w-[1400px] mb-8 mx-auto w-full">
         <h3 className="text-3xl md:text-4xl text-center font-medium mb-20">
           {data?.title}
         </h3>
