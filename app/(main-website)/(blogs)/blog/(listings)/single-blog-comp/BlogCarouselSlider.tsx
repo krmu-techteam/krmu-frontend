@@ -34,9 +34,9 @@ const BlogCarouselSlider = ({ slides }: Props) => {
     <Carousel
       plugins={[autoplay.current]}
       opts={{ align: "start", loop: true }}
-      className="w-full h-[400px] "
+      className="w-full h-auto "
     >
-      <CarouselContent className="my-4 mx-0">
+      <CarouselContent className="mx-.5 ">
         {slides.map((blog, i) => {
           const postDate = new Date(blog.date).toLocaleDateString("en-IN", {
             day: "numeric",
@@ -47,7 +47,7 @@ const BlogCarouselSlider = ({ slides }: Props) => {
           return (
             <CarouselItem
               key={i}
-              className="basis-full h-[400px] sm:basis-1/2 lg:basis-1/3"
+              className="basis-full  sm:basis-1/2 lg:basis-1/3"
             >
               <Link
                 href={`/blog/${blog.slug}`}
@@ -67,7 +67,7 @@ const BlogCarouselSlider = ({ slides }: Props) => {
                       width={426}
                       height={284}
                       alt={blog.title}
-                      className="rounded-[24px] h-[270px] w-full object-cover"
+                      className="rounded-[24px] lg:h-[270px] w-full lg:object-cover object-contain"
                     />
                   </div>
 

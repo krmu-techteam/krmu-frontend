@@ -31,8 +31,8 @@ const BlogCrousel = async ({ currentSlug }: Props) => {
   if (!slides.length) return null;
 
   return (
-    <section className="mt-5 md:mt-12 h-auto">
-      <h2 className="text-2xl md:text-3xl font-bold text-[#093475] mb-6">
+    <section className="mt-6 mb-4 md:my-10 h-auto">
+      <h2 className="text-2xl md:text-3xl font-bold text-[#093475] mb-2">
         Latest Blogs
       </h2>
       <div className="h-auto">
