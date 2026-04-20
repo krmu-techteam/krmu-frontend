@@ -118,7 +118,7 @@ const Eligibility = ({
             </div>
           )}
 
-          {!isFormAvailable && (
+          {isFormAvailable && slug !== "b-tech-cse" && (
             <div className="">
               {formId ? (
                 <NpfPopup
@@ -221,14 +221,15 @@ const Eligibility = ({
               <NoPaperForm formId={formId} height="500px" />
             </div>
           ) : (
-            <div className="border border-gray-300 mt-5 sm:hidden mob_prog_form overflow-hidden">
-              <div className="flex justify-center items-center bg-[#0060aa] py-2 px-3 text-[22px] font-bold">
-                <h3 className="text-white text-center">ADMISSIONS OPEN 2026-27</h3>
-              </div>
-              <div className="p-2">
-                <NoPaperForm formId={formId} height="700px" />
-              </div>
-            </div>
+            ""
+            // <div className="border border-gray-300 mt-5 sm:hidden mob_prog_form overflow-hidden hidden">
+            //   <div className="flex justify-center items-center bg-[#0060aa] py-2 px-3 text-[22px] font-bold">
+            //     <h3 className="text-white text-center">ADMISSIONS OPEN 2026-27</h3>
+            //   </div>
+            //   <div className="p-2">
+            //     <NoPaperForm formId={formId} height="700px" />
+            //   </div>
+            // </div>
           ))}
       </section>
     </>
