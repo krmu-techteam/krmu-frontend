@@ -1,7 +1,5 @@
 import { yoastToMetadata } from "@/lib/constants/yoastMeta";
-import {
-  getSingleBlogDataBySlug,
-} from "@/lib/api/blogs/single-blog";
+import { getSingleBlogDataBySlug } from "@/lib/api/blogs/single-blog";
 import { notFound } from "next/navigation";
 import SingleBlogHero from "../../(listings)/single-blog-comp/SingleBlogHero";
 import SingleBlogLayout from "../../(listings)/single-blog-comp/SingleBlogLayout";
@@ -57,12 +55,12 @@ const BlogPage = async ({ params }: Props) => {
 
   // Extract featured image from _embedded instead of calling getBlogImageById
   const featuredImageUrl =
-    currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url || 
+    currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
     currentSingleBlog?.yoast_head_json?.og_image?.[0]?.url;
 
   const publishedDate = currentSingleBlog?.date;
   const blogFaqSchema = currentSingleBlog?.acf?.faqs_section;
-  
+
   // JSON-LD Structured Data
   const faqJsonLd = createFaqSchema(blogFaqSchema || []);
   const breadcrumbSchema = createBreadcrumbSchema([
@@ -118,10 +116,12 @@ const BlogPage = async ({ params }: Props) => {
         imgId={authorImageId}
         authorSlug={authorSlug}
       />
-      <SingleBlogLayout content={currentSingleBlog?.content?.rendered} />
+      <SingleBlogLayout
+        content={currentSingleBlog?.content?.rendered}
+        currentSlug={currentSingleBlog?.slug}
+      />
     </>
   );
 };
 
 export default BlogPage;
-
