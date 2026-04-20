@@ -29,11 +29,11 @@ import {
 export const heroContent: HeroContent = {
   title: `
           <span class="sm:hidden"><span class="text-[#fcd404] text-3xl md:text-5xl lg:text-8xl font-bold">
-        MCA
+        MCA/M.Tech.
       </span> Admissions Open 2026–27</span>
       <span class="hidden sm:block">
              ADMISSIONS <br>
-OPEN FOR<br><span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-bold">MCA </span> <br>
+OPEN FOR<br><span class="text-[#fcd404] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">MCA/M.Tech. </span> <br>
 
  Programmes <br />2026-27</span>
           `,
