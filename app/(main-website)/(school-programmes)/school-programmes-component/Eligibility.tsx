@@ -111,7 +111,7 @@ const Eligibility = ({
         )} */}
           <div className="max-w-lg mt-10 w-full sm:hidden">
             <iframe
-              className="aspect-video rounded-3xl"
+              className="aspect-video rounded-3xl w-full"
               src={videoSrc}
             ></iframe>
           </div>

@@ -103,7 +103,7 @@ const HeroBanner = ({
           {heroSection?.imgvideo === "Video" && isFormAvailable && slug === 'b-tech-cse' && (
             <div className="max-w-lg mt-10 w-full hidden sm:block">
               <iframe
-                className="aspect-video rounded-3xl"
+                className="aspect-video rounded-3xl w-full"
                 src={videoSrc}
               ></iframe>
             </div>
