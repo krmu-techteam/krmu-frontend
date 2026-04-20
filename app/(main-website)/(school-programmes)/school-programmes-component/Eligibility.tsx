@@ -63,7 +63,9 @@ const Eligibility = ({
 
   return (
     <>
-      <section className="bg-[#f9f9ff] pt-5 pb-10 md:pb-0">
+      <section
+        className={`${slug === "b-tech-cse" ? "bg-[#f9f9ff] pt-5 pb-10 md:pb-0" : ""}`}
+      >
         <div className="max-w-[1664px] w-full mx-auto sm:flex sm:pb-12 px-2.5 md:px-4 sm:mt-12 md:mt-0">
           <div className="w-full sm:w-1/3 lg:w-1/4 sm:px-3 border-r sm:border-r border-[#dee2e6] p-2.5 sm:p-5 bg-white">
             <h2 className="text-2xl leading-[1.2] text-[#0060aa] font-semibold mb-2">
@@ -113,7 +115,7 @@ const Eligibility = ({
               src={videoSrc}
             ></iframe>
           </div>
-          
+
           {!isFormAvailable && (
             <div className="">
               {formId ? (
@@ -204,30 +206,28 @@ const Eligibility = ({
         )} */}
         </div>
         {isFormAvailable &&
-            (slug === "b-tech-cse" ? (
-              <div className="heroBannerForm__form max-w-md mx-auto mt-5 lg:hidden">
-                <div className="heroBannerForm-header">
-                  <h3 className="mb-0">
-                    <strong>
-                      Apply Today for{" "}
-                      <span className="uppercase">
-                        K.R. Mangalam University
-                      </span>
-                    </strong>
-                  </h3>
-                </div>
+          (slug === "b-tech-cse" ? (
+            <div className="heroBannerForm__form max-w-md mx-auto mt-5 lg:hidden">
+              <div className="heroBannerForm-header">
+                <h3 className="mb-0">
+                  <strong>
+                    Apply Today for{" "}
+                    <span className="uppercase">K.R. Mangalam University</span>
+                  </strong>
+                </h3>
+              </div>
+              <NoPaperForm formId={formId} height="500px" />
+            </div>
+          ) : (
+            <div className="border border-gray-300 mt-5 sm:hidden mob_prog_form overflow-hidden">
+              <div className="flex justify-center items-center bg-[#0060aa] py-2 px-3 text-[22px] font-bold">
+                <h3 className="text-white">ADMISSIONS OPEN 2026-27</h3>
+              </div>
+              <div className="p-2">
                 <NoPaperForm formId={formId} height="500px" />
               </div>
-            ) : (
-              <div className="border border-gray-300 mt-5 sm:hidden mob_prog_form overflow-hidden">
-                <div className="flex justify-center items-center bg-[#0060aa] py-2 px-3 text-[22px] font-bold">
-                  <h3 className="text-white">ADMISSIONS OPEN 2026-27</h3>
-                </div>
-                <div className="p-2">
-                  <NoPaperForm formId={formId} height="500px" />
-                </div>
-              </div>
-            ))}
+            </div>
+          ))}
       </section>
     </>
   );
