@@ -6,6 +6,8 @@ import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import { FAQ } from "./comp/Faq";
+import faqCategories from "./faqData/faqD.json";
+import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("faq");
@@ -68,11 +70,47 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+type FAQCategory = {
+  id: string;
+  label: string;
+  icon: string;
+  iconBg: string;
+  faqs: {
+    question: string;
+    answer: string;
+  }[];
+};
+
+const generateCourseFaqSchemaa = (faqData: FAQCategory[]) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqData.flatMap((category) =>
+      category.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    ),
+  };
+};
+
 const page = async () => {
   // const faqData = await getFaqsData();
+  const faqSchema = generateCourseFaqSchemaa(faqCategories.mainEntity);
 
   return (
     <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
       <div>
         <FAQ />
       </div>
