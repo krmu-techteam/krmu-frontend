@@ -115,7 +115,7 @@ const page = async ({ params }: Props) => {
     // "llm": LLMtestimonialsData,
   };
 
-  const allowedFormSlugs = ['b-tech-cse', 'b-tech-cse-robotics-ai'];
+  const allowedFormSlugs = ['b-tech-cse'];
 
   const testimonialsData = testimonialsMap[slug];
 
