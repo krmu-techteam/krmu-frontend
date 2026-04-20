@@ -24,7 +24,8 @@ const HeroBanner = ({
   allowedFormSlugs,
 }: Props) => {
   const isFormAvailable = allowedFormSlugs.includes(slug);
-
+  const iframe = heroSection?.videofield;
+  const videoSrc = iframe?.match(/src="([^"]+)"/)?.[1];
   // const btnRef = useRef<HTMLButtonElement>(null);
 
   // useEffect(() => {
@@ -50,16 +51,29 @@ const HeroBanner = ({
   // }, [formId, heroSection?.herobtn?.buttontext]);
 
   return (
-    <section className="pt-24 sm:pt-40 sm:pb-[50px] px-2.5 sm:px-4">
-      <div className="school-programme-max-width md:flex items-center justify-between gap-5">
-        <div className={`w-full ${isFormAvailable ? "lg:w-8/12" : "lg:w-1/2"}`}>
-          <p className="text-xs sm:text-2xl font-medium leading-[1.2] mb-2">
+    <section
+      className={`pt-24 sm:pt-40 sm:pb-[50px] px-5 sm:px-4 ${slug === "b-tech-cse" ? "bg-[#f9f9ff]" : ""}`}
+    >
+      <div
+        className={`school-programme-max-width md:flex ${slug === "b-tech-cse" ? "items-start gap-10" : "items-center"} justify-between gap-5`}
+      >
+        <div className={`w-full ${isFormAvailable ? "lg:w-8/12 max-w-5xl" : "lg:w-1/2"}`}>
+        {/* <div
+          className={`w-full ${isFormAvailable ? "lg:w-6/12" : "lg:w-1/2"} ${slug === "b-tech-cse" ? "max-w-[900px]" : ""}`}
+        > */}
+          <p
+            className={` font-medium leading-[1.2] mb-2 ${slug === "b-tech-cse" ? "text-[#008ed5] text-xl sm:text-3xl" : "text-xs sm:text-2xl"}`}
+          >
             {heroSection?.subtitle}
           </p>
-          <h1 className="text-4xl sm:text-[50px] font-semibold text-[#0060aa] leading-[1.2] mb-2">
+          <h1
+            className={` ${slug === "b-tech-cse" ? "text-[#040062] text-3xl sm:text-4xl md:text-5xl font-bold" : "text-[#0060aa] text-4xl sm:text-[50px] font-semibold"}  leading-tight mb-2`}
+          >
             {title} <span className="text-[#e61f21]">{highlightitle}</span>
           </h1>
-          <p className="text-xs sm:text-[15px] font-medium mt-6 mb-4">
+          <p
+            className={`${slug === "b-tech-cse" ? "text-base sm:text-2xl" : "text-xs sm:text-[15px] mt-6 mb-4"}  font-medium`}
+          >
             {heroSection?.description}
           </p>
           {(slug === "btech-cse-cloud-computing" ||
@@ -86,6 +100,15 @@ const HeroBanner = ({
 
           {slug === "bba-digital-marketing" && <IndusLearning />}
 
+          {heroSection?.imgvideo === "Video" && isFormAvailable && slug === 'b-tech-cse' && (
+            <div className="max-w-lg mt-10 w-full hidden sm:block">
+              <iframe
+                className="aspect-video rounded-3xl"
+                src={videoSrc}
+              ></iframe>
+            </div>
+          )}
+
           {/* {formId ? (
             <button
               ref={btnRef}
@@ -101,15 +124,31 @@ const HeroBanner = ({
         </div>
 
         <div
-          className={`hidden w-full ${isFormAvailable ? "lg:w-4/12" : "lg:w-1/2"}  lg:flex items-center  min-h-[556px] h-full relative`}
+          className={`hidden w-full ${isFormAvailable ? "lg:w-4/12" : "lg:w-1/2"}  lg:flex  ${slug === "b-tech-cse" ? "" : "min-h-[556px]"} h-full relative`}
         >
           {isFormAvailable ? (
-            <div className="border overflow-hidden w-full ">
-              <div className="flex justify-center items-center bg-[#0060aa] py-2 px-3 text-[22px] font-bold">
-                <h3 className="text-white">ADMISSIONS OPEN 2026-27</h3>
+            slug === "b-tech-cse" ? (
+              <div className="heroBannerForm__form max-w-md mx-auto">
+                <div className="heroBannerForm-header">
+                  <h3 className="mb-0">
+                    <strong>
+                      Apply Today for{" "}
+                      <span className="uppercase">
+                        K.R. Mangalam University
+                      </span>
+                    </strong>
+                  </h3>
+                </div>
+                <NoPaperForm formId={formId} height="500px" />
               </div>
-              <NoPaperForm formId={formId} height="500px" />
-            </div>
+            ) : (
+              <div className="border overflow-hidden w-full ">
+                <div className="flex justify-center items-center bg-[#0060aa] py-2 px-3 text-[22px] font-bold">
+                  <h3 className="text-white">ADMISSIONS OPEN 2026-27</h3>
+                </div>
+                <NoPaperForm formId={formId} height="500px" />
+              </div>
+            )
           ) : heroSection?.imgvideo === "Video" ? (
             <div
               className="videoField w-full h-[200px] lg:h-[400px]"
