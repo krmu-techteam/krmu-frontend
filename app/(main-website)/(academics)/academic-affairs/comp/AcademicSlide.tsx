@@ -8,7 +8,7 @@ import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 
 const AcademicImgURL = [
-  { imageUrl: "slide-1.webp" },
+  // { imageUrl: "slide-1.webp" },
   { imageUrl: "slide-2.webp" },
   { imageUrl: "slide-3.webp" },
   { imageUrl: "slide-4.webp" },

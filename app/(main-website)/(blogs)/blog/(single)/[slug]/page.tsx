@@ -46,6 +46,16 @@ const BlogPage = async ({ params }: Props) => {
 
   if (!currentSingleBlog?.title) return notFound();
 
+  // Clean empty <p> tags from content server-side
+  let cleanedContent = currentSingleBlog?.content?.rendered || "";
+  if (cleanedContent) {
+    // Remove empty <p> tags (including those with only whitespace or &nbsp;)
+    cleanedContent = cleanedContent.replace(
+      /<p[^>]*>(\s|&nbsp;|<br\s*\/?>)*<\/p>/gi,
+      "",
+    );
+  }
+
   // Extract author info from _embedded to avoid extra API calls
   const authorData = currentSingleBlog?._embedded?.author?.[0];
   const authorSlug = authorData?.slug;
@@ -117,7 +127,7 @@ const BlogPage = async ({ params }: Props) => {
         authorSlug={authorSlug}
       />
       <SingleBlogLayout
-        content={currentSingleBlog?.content?.rendered}
+        content={cleanedContent}
         currentSlug={currentSingleBlog?.slug}
       />
     </>
