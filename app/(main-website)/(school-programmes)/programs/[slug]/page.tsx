@@ -115,7 +115,7 @@ const page = async ({ params }: Props) => {
     // "llm": LLMtestimonialsData,
   };
 
-  const allowedFormSlugs = [''];
+  const allowedFormSlugs = ['b-tech-cse'];
 
   const testimonialsData = testimonialsMap[slug];
 
@@ -270,8 +270,8 @@ const page = async ({ params }: Props) => {
             formId={heroSection?.formId}
             slug={slug}
             allowedFormSlugs={allowedFormSlugs}
-          />
-        )}
+            />
+          )}
 
         {eligibilitySection && (
           <Eligibility
@@ -280,6 +280,8 @@ const page = async ({ params }: Props) => {
             allowedFormSlugs={allowedFormSlugs}
             slug={slug}
             formId={heroSection?.formId}
+            heroSection={heroSection}
+            
           />
         )}
         {programmeScopeSection && (

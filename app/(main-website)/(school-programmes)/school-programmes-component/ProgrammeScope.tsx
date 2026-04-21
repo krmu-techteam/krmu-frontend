@@ -21,7 +21,8 @@ const ProgrammeScope = async ({
 }: Props) => {
   const getDownProsSettings = await getDownloadProspectusSetting();
 
-  const isFormAvailable = allowedFormSlugs.includes(slug);
+  // const isFormAvailable = allowedFormSlugs.includes(slug);
+  const isFormAvailable = false;
 
   
 
