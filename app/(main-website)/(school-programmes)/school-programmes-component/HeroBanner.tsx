@@ -64,57 +64,58 @@ const HeroBanner = ({
           {/* <div
           className={`w-full ${isFormAvailable ? "lg:w-6/12" : "lg:w-1/2"} ${slug === "b-tech-cse" ? "max-w-[900px]" : ""}`}
         > */}
-        <div className="max-w-[750px] mr-auto">
-          <p
-            className={` font-medium leading-[1.2] mb-2 ${slug === "b-tech-cse" ? "text-[#008ed5] text-xl sm:text-2xl" : "text-xs sm:text-2xl"}`}
-          >
-            {heroSection?.subtitle}
-          </p>
-          <h1
-            className={` ${slug === "b-tech-cse" ? "text-[#040062] text-3xl sm:text-4xl xl:text-[58px] font-bold leading-[1.1]" : "text-[#0060aa] text-4xl sm:text-[50px] font-semibold leading-tight"}   mb-2`}
-          >
-            {title} <span className="text-[#e61f21]">{highlightitle}</span>
-          </h1>
-          <p
-            className={`${slug === "b-tech-cse" ? "text-base sm:text-xl text-[#575757]" : "text-xs sm:text-[15px] mt-6 mb-4"}  font-medium`}
-          >
-            {heroSection?.description}
-          </p>
-          {(slug === "btech-cse-cloud-computing" ||
-            slug ===
-              "b-tech-computer-science-and-engineering-semiconductor-design" ||
-            slug === "ma-clinical-psychology" ||
-            slug === "master-of-design-m-des-interior-design" ||
-            slug === "ma-political-science" ||
-            slug === "Bachelor-of-Emergency-Medical-Technologist" ||
-            slug === "bsc-clinical-psychology") && (
-            <p className="text-right font-bold">**Subject to Approval</p>
-          )}
+          <div className="max-w-[750px] mr-auto">
+            <p
+              className={` font-medium leading-[1.2] mb-2 ${slug === "b-tech-cse" ? "text-[#008ed5] text-xl sm:text-2xl" : "text-xs sm:text-2xl"}`}
+            >
+              {heroSection?.subtitle}
+            </p>
+            <h1
+              className={` ${slug === "b-tech-cse" ? "text-[#040062] text-3xl sm:text-4xl xl:text-[58px] font-bold leading-[1.1]" : "text-[#0060aa] text-4xl sm:text-[50px] font-semibold leading-tight"}   mb-2`}
+            >
+              {title} <span className="text-[#e61f21]">{highlightitle}</span>
+            </h1>
+            <p
+              className={`${slug === "b-tech-cse" ? "text-base sm:text-xl text-[#575757]" : "text-xs sm:text-[15px] mt-6 mb-4"}  font-medium`}
+            >
+              {heroSection?.description}
+            </p>
+            {(slug === "btech-cse-cloud-computing" ||
+              slug ===
+                "b-tech-computer-science-and-engineering-semiconductor-design" ||
+              slug === "ma-clinical-psychology" ||
+              slug === "master-of-design-m-des-interior-design" ||
+              slug === "ma-political-science" ||
+              slug === "Bachelor-of-Emergency-Medical-Technologist" ||
+              slug === "bsc-clinical-psychology") && (
+              <p className="text-right font-bold">**Subject to Approval</p>
+            )}
 
-          {formId && (
-            <NpfPopup
-              formId={formId}
-              btnClass={`hero-common-btn-b ${slug === "b-tech-cse" ? "mt-5" : "mt-12"} ${
-                heroSection.herobtn.buttonclass || ""
-              }`}
-              btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
-              showIcon={true}
-            />
-          )}
+            {formId && (
+              <NpfPopup
+                formId={formId}
+                btnClass={`hero-common-btn-b ${slug === "b-tech-cse" ? "mt-5" : "mt-12"} ${
+                  heroSection.herobtn.buttonclass || ""
+                }`}
+                btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
+                showIcon={true}
+              />
+            )}
 
-          {slug === "bba-digital-marketing" && <IndusLearning />}
+            {slug === "bba-digital-marketing" && <IndusLearning />}
 
-          {/* <div className="max-w-sm w-full h-[200px] mt-5 bg-red-500 rounded-2xl"></div> */}
-          {/* Custom thumbnail */}
+            {/* <div className="max-w-sm w-full h-[200px] mt-5 bg-red-500 rounded-2xl"></div> */}
+            {/* Custom thumbnail */}
+            {slug === "b-tech-cse" && (
+              <YoutubePopup
+                videoUrl="https://www.youtube.com/watch?v=tIfNUgSn2dw"
+                thumbnail="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
+                ytClassName="max-w-[364px] w-full h-[226px] mt-5 hidden sm:block"
+                playIcon={false}
+              />
+            )}
 
-          <YoutubePopup
-            videoUrl="https://www.youtube.com/watch?v=tIfNUgSn2dw"
-            thumbnail="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
-            ytClassName="max-w-[364px] w-full h-[226px] mt-5 hidden sm:block"
-            playIcon={false}
-          />
-
-          {/* {heroSection?.imgvideo === "Video" && isFormAvailable && slug === 'b-tech-cse' && (
+            {/* {heroSection?.imgvideo === "Video" && isFormAvailable && slug === 'b-tech-cse' && (
             <div className="max-w-2xs mt-10 w-full hidden sm:block">
               <iframe
                 className="aspect-video rounded-3xl w-full"
@@ -123,7 +124,7 @@ const HeroBanner = ({
             </div>
           )} */}
 
-          {/* {formId ? (
+            {/* {formId ? (
             <button
               ref={btnRef}
               className={`hero-common-btn-b mt-12 ${
