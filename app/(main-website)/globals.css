@@ -1852,6 +1852,7 @@
   .blog-table-responsive {
     overflow-x: auto;
     overflow-y: hidden;
+    margin-bottom: 35px;
   }
   .blogcattitle {
     font-size: 24px;
