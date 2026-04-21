@@ -50,7 +50,6 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
-
   .prog_scope > div > iframe {
     width: 100% !important;
     height: 500px !important;
@@ -2050,8 +2049,11 @@
   }
   .krmu_single_blog table {
     width: 100%;
+    text-align: center;
   }
-  .krmu_single_blog table th {
+
+  .krmu_single_blog table th,
+  .krmu_single_blog table tbody tr:first-child td {
     background: linear-gradient(
       68deg,
       rgb(5 102 200 / 99%) 0%,
