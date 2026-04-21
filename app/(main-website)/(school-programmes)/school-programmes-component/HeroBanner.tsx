@@ -54,7 +54,7 @@ const HeroBanner = ({
   // }, [formId, heroSection?.herobtn?.buttontext]);
 
   return (
-    <section className="pt-24 sm:pt-40 sm:pb-[50px] px-2.5 sm:px-4 temp-class">
+    <section className="pt-24 sm:pt-40 sm:pb-[50px] px-2.5 sm:px-4">
       <div className="school-programme-max-width md:flex items-center justify-between gap-5 bg-[#051630] p-10 rounded-4xl">
         <div
           className={`w-full text-white ${isFormAvailable ? "lg:w-8/12" : "lg:w-1/2"}`}
