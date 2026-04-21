@@ -3,11 +3,12 @@
 import { loadNpfScript } from "@/lib/constants/loadNpfScript";
 import { ButtonType } from "@/lib/types/common";
 import { EligibilityItem, HeroSection } from "@/lib/types/school-programme";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, IndianRupee, LaptopMinimalCheck } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import NpfPopup from "../../components/NpfPopup";
 import NoPaperForm from "@/lib/constants/NoPaperForm";
+import YoutubePopup from "./YoutubePopup";
 
 type Props = {
   elgibilities: EligibilityItem[];
@@ -64,42 +65,81 @@ const Eligibility = ({
   return (
     <>
       <section
-        className={`${slug === "b-tech-cse" ? "bg-[#f9f9ff] pt-5 pb-10 md:pb-0 px-5" : "px-4"}`}
+        className={`${slug === "b-tech-cse" ? "bg-[#f9f9ff] pt-5 pb-10 md:pb-0 px-4 sm:px-0" : "px-4"}`}
       >
-        <div className="max-w-[1664px] w-full mx-auto sm:flex sm:pb-12 px-2.5 md:px-4 sm:mt-12 md:mt-0">
-          <div className="w-full sm:w-1/3 lg:w-1/4 sm:px-3 border-r sm:border-r border-[#dee2e6] p-2.5 sm:p-5 bg-white">
-            <h2 className="text-2xl leading-[1.2] text-[#0060aa] font-semibold mb-2">
-              {elgibilities[0]?.title}
-            </h2>
-            <p className="mb-2.5">{elgibilities[0]?.subtitle}</p>
-          </div>
+        <div
+          className={`${slug === "b-tech-cse" ? "max-w-[1440px]" : "max-w-[1664px] md:px-4"} w-full mx-auto sm:flex sm:pb-12  sm:mt-12 md:mt-0`}
+        >
+          {slug === "b-tech-cse" ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
+              <div className="p-5 sm:py-5 sm:px-10 bg-white w-full flex flex-col gap-2.5 justify-center border border-gray-200">
+                <Calendar size={30} color="#60b9e5" />
+                <p className="text-2xl">{elgibilities[0]?.subtitle}</p>
+                <p className="text-2xl md:text-4xl font-semibold">
+                  {elgibilities[0]?.title}
+                </p>
+              </div>
+              <div className="p-5 sm:py-5 sm:px-10 bg-white w-full flex flex-col gap-2.5 justify-center border border-gray-200">
+                <IndianRupee size={30} color="#60b9e5" />
+                <p className="text-2xl">{elgibilities[1]?.subtitle}</p>
+                <p className="text-2xl md:text-4xl font-semibold">  
+                  {elgibilities[1]?.title}
+                </p>
+              </div>
+              <div className="p-5 sm:py-5 sm:px-10 bg-white w-full flex flex-col gap-2.5 justify-center border border-gray-200 text-left">
+                <LaptopMinimalCheck size={30} color="#60b9e5" />
+                 <p className="text-2xl">{elgibilities[2]?.subtitle}</p>
+                <p className="text-2xl font-semibold">
+                  {displayTitle}
+                  {isLong && !expanded && " "}
+                </p>
+                {isLong && (
+                  <button
+                    onClick={() => setExpanded(!expanded)}
+                    className="text-xl leading-[1.2] text-[#0060aa] font-semibold mb-2 cursor-pointer text-left"
+                  >
+                    {expanded ? "Read Less" : "Read More"}
+                  </button>
+                )}
+              </div>
+            </div>
+          ) : (
+            <>
+              <div className="w-full sm:w-1/3 lg:w-1/4 sm:px-3 border-r sm:border-r border-[#dee2e6] p-2.5 sm:p-5 bg-white">
+                <h2 className="text-2xl leading-[1.2] text-[#0060aa] font-semibold mb-2">
+                  {elgibilities[0]?.title}
+                </h2>
+                <p className="mb-2.5">{elgibilities[0]?.subtitle}</p>
+              </div>
 
-          <div
-            className="w-full sm:w-1/3 lg:w-1/4 sm:px-3 border-r sm:border-r border-[#dee2e6] p-2.5 sm:p-5 bg-white"
-            id="mob-npf-form"
-          >
-            <h2 className="text-2xl leading-[1.2] text-[#0060aa] font-semibold mb-2">
-              {elgibilities[1]?.title}
-            </h2>
-            <p className="mb-2.5">{elgibilities[1]?.subtitle}</p>
-          </div>
-
-          {/* Third column with Read More */}
-          <div className="w-full sm:w-1/3 lg:w-2/4 sm:px-3 p-2.5 sm:p-5 bg-white">
-            <h2 className="text-2xl leading-[1.2] text-[#0060aa] font-semibold mb-2 inline-block">
-              {displayTitle}
-              {isLong && !expanded && " "}
-            </h2>{" "}
-            {isLong && (
-              <button
-                onClick={() => setExpanded(!expanded)}
-                className="text-xl leading-[1.2] text-[#0060aa] font-semibold mb-2 cursor-pointer"
+              <div
+                className="w-full sm:w-1/3 lg:w-1/4 sm:px-3 border-r sm:border-r border-[#dee2e6] p-2.5 sm:p-5 bg-white"
+                id="mob-npf-form"
               >
-                {expanded ? "Read Less" : "Read More"}
-              </button>
-            )}
-            <p className="mb-2.5">{elgibilities[2]?.subtitle}</p>
-          </div>
+                <h2 className="text-2xl leading-[1.2] text-[#0060aa] font-semibold mb-2">
+                  {elgibilities[1]?.title}
+                </h2>
+                <p className="mb-2.5">{elgibilities[1]?.subtitle}</p>
+              </div>
+
+              {/* Third column with Read More */}
+              <div className="w-full sm:w-1/3 lg:w-2/4 sm:px-3 p-2.5 sm:p-5 bg-white">
+                <h2 className="text-2xl leading-[1.2] text-[#0060aa] font-semibold mb-2 inline-block">
+                  {displayTitle}
+                  {isLong && !expanded && " "}
+                </h2>{" "}
+                {isLong && (
+                  <button
+                    onClick={() => setExpanded(!expanded)}
+                    className="text-xl leading-[1.2] text-[#0060aa] font-semibold mb-2 cursor-pointer"
+                  >
+                    {expanded ? "Read Less" : "Read More"}
+                  </button>
+                )}
+                <p className="mb-2.5">{elgibilities[2]?.subtitle}</p>
+              </div>
+            </>
+          )}
 
           {/* {isFormAvailable && (
           <div className="border mt-5 sm:hidden mob_prog_form">
@@ -109,14 +149,11 @@ const Eligibility = ({
             <NoPaperForm formId={formId} height="500px" />
           </div>
         )} */}
-          {slug === "b-tech-cse" && (
-            <div className="max-w-lg mt-10 w-full sm:hidden">
-              <iframe
-                className="aspect-video rounded-3xl w-full"
-                src={videoSrc}
-              ></iframe>
-            </div>
-          )}
+          <YoutubePopup
+            videoUrl="https://www.youtube.com/watch?v=tIfNUgSn2dw"
+            thumbnail="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
+            ytClassName="max-w-sm w-full h-[200px] mt-5 sm:hidden"
+          />
 
           {isFormAvailable && slug !== "b-tech-cse" && (
             <div className="">
@@ -218,7 +255,7 @@ const Eligibility = ({
                   </strong>
                 </h3>
               </div>
-              <NoPaperForm formId={formId} height="500px" />
+              <NoPaperForm formId={formId} height="700px" />
             </div>
           ) : (
             ""
