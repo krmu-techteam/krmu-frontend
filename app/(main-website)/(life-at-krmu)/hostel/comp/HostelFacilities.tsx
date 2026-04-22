@@ -1,12 +1,11 @@
-
 import HostelWellFurnished from "./HostelWellFurnished";
 import HostelOnCampus from "./HostelOnCampus";
 import HostelSport from "./HostelSport";
 import HostelSecurity from "./HostelSecurity";
 import HostelWifi from "./HostelWifi";
+import HostelStore from "./HostelStore";
 
 const HostelFacilities = () => {
-  
   return (
     <>
       <section className="py-10 px-4">
@@ -25,12 +24,13 @@ const HostelFacilities = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-center md:text-left">
+            <HostelStore />
+            <HostelSport />
             <HostelWellFurnished />
             <HostelOnCampus />
-            <HostelSport />
             <HostelSecurity />
+            <HostelWifi />
           </div>
-          <HostelWifi />
         </div>
       </section>
     </>
