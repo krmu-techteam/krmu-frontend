@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HostelWifi = () => {
   return (
-    <div className=" mt-10 sm:mt-12 gap-10 text-center md:text-left">
+    <div className="gap-10 text-center md:text-left">
          <div className="">
         <h3 className="text-3xl md:text-4xl font-semibold my-5 sm:mb-5">
           Seamless Connectivity with Free Wireless Fidelity
