@@ -10,7 +10,7 @@ const HostelFacilities = () => {
     <>
       <section className="py-10 px-4">
         <div className="max-w-[1664px] mx-auto w-full">
-          <div className="text-center">
+          <div className="text-center mb-5">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-5">
               Hostel Facilities at K.R. Mangalam University
             </h3>
