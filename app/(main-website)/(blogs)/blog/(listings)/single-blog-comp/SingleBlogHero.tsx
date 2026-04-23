@@ -30,7 +30,6 @@ const SingleBlogHero = ({
   //   imgUrl = imgUrl.replace("wp.krmangalam.edu.in", "krmangalam.edu.in");
   // }
 
-
   const normalizedImgUrl = imgUrl
     ?.replace("/blog/wp-content", "/wp-content")
     ?.replace("wp.krmangalam.edu.in", "www.krmangalam.edu.in");
@@ -46,9 +45,9 @@ const SingleBlogHero = ({
         <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-start gap-[30px] lg:gap-[50px] pt-[30px] lg:pt-[50px]">
           {/* IMAGE FIRST ON MOBILE */}
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
-            {imgUrl && (
+            {normalizedImgUrl && (
               <Image
-                src={imgUrl}
+                src={normalizedImgUrl}
                 width={768}
                 height={432}
                 alt={title || "Blog Hero Image"}

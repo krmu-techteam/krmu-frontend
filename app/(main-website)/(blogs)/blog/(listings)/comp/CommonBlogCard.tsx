@@ -10,18 +10,49 @@ type Props = {
   date: string;
 };
 
+const checkImage = async (url: string | null): Promise<boolean> => {
+  if (!url) return false;
+
+  try {
+    const res = await fetch(url, { method: "HEAD" });
+    return res.ok;
+  } catch {
+    return false;
+  }
+};
+
 const CommonBlogCard = async ({ title, excerpt, slug, imgId, date }: Props) => {
-  let imgUrl = await getBlogImageById(imgId);
+  const imgUrl = await getBlogImageById(imgId);
 
   // if (imgUrl) {
   //   imgUrl = imgUrl.replace("/blog/wp-content", "/wp-content");
   // }
 
-  const normalizedImgUrl = imgUrl
-    ?.replace("/blog/wp-content", "/wp-content")
-    ?.replace("wp.krmangalam.edu.in", "www.krmangalam.edu.in");
+  const finalSrc = imgUrl?.includes(
+    "https://wp.krmangalam.edu.in/blog/wp-content",
+  )
+    ? imgUrl
+    : imgUrl?.replace(
+        /^https:\/\/www\.krmangalam\.edu\.in/,
+        "https://wp.krmangalam.edu.in/",
+      ) || null;
 
-  if (!imgUrl) return null;
+  const finalSrc2 = finalSrc?.includes(
+    "https://wp.krmangalam.edu.in//wp-content",
+  )
+    ? finalSrc.replace(
+        "https://wp.krmangalam.edu.in//wp-content",
+        "https://wp.krmangalam.edu.in/blog/wp-content",
+      )
+    : finalSrc;
+
+  let finalImage: string | null = null;
+
+  if (await checkImage(imgUrl)) {
+    finalImage = imgUrl; // ✅ original works
+  } else if (await checkImage(finalSrc2)) {
+    finalImage = finalSrc2; // ✅ fallback works
+  }
 
   const postDate = new Date(date).toLocaleDateString("en-IN", {
     day: "numeric",
@@ -38,14 +69,14 @@ const CommonBlogCard = async ({ title, excerpt, slug, imgId, date }: Props) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className="p-2.5" data-test={imgUrl} data-test2={normalizedImgUrl}>
+        <div className="p-2.5" data-test={finalSrc} data-test2={imgUrl}>
           <div className="relative">
             <span className="absolute bottom-0 right-0 text-xs bg-red-600 text-white py-2.5 px-5 rounded-tl-[24px]">
               {postDate}
             </span>
-            {imgUrl && (
+            {finalImage && (
               <Image
-                src={imgUrl}
+                src={finalImage}
                 width={426}
                 height={284}
                 alt=""
