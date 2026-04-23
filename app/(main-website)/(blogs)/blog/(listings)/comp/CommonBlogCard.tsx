@@ -10,7 +10,7 @@ type Props = {
   date: string;
 };
 
-const checkImage = async (url: string | null): Promise<boolean> => {
+export const checkImage = async (url: string | null): Promise<boolean> => {
   if (!url) return false;
 
   try {
