@@ -14,7 +14,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
       schools: [1152],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/03/Dr.-Shravan-Kumar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/08/New-Project-6.webp",
   },
   {
     id: 113876,
