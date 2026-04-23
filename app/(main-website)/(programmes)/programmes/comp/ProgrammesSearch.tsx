@@ -57,7 +57,9 @@ const ProgrammesSearch = () => {
 
   // default dropdown selections
   const [selectedSchool, setSelectedSchool] = useState("soet");
-  const [selectedDegree, setSelectedDegree] = useState("undergraduate-programmes");
+  const [selectedDegree, setSelectedDegree] = useState(
+    "undergraduate-programmes",
+  );
 
   const [openSchoolDropdown, setOpenSchoolDropdown] = useState(false);
   const [openDegreeDropdown, setOpenDegreeDropdown] = useState(false);
@@ -111,10 +113,74 @@ const ProgrammesSearch = () => {
   // --------------------------------------------
   // MAIN FETCH FUNCTION — no dependencies
   // --------------------------------------------
+
+  // correct code
+  // const fetchProgrammes = useCallback(
+  //   async (reset: boolean = false, query: string = "") => {
+  //     const nextPage = reset ? 1 : pageRef.current;
+  //     let newData: ProgrammeItem[] = [];
+
+  //     if (query.length > 0) {
+  //       // SEARCH MODE
+  //       if (degreeRefValue.current === "doctoral-programmes") {
+  //         const res = await searchPhdProgrammes("", 1, 1000);
+  //         const allData = res.data || [];
+  //         newData = allData.filter((item) =>
+  //           normalize(item.heading).includes(normalize(query))
+  //         );
+  //       } else {
+  //         const res = await searchSchoolProgrammes("", 1, 1000);
+  //         const allData = res.data || [];
+  //         newData = allData.filter((item) =>
+  //           normalize(item.title).includes(normalize(query))
+  //         );
+  //       }
+  //     } else {
+  //       // DROPDOWN MODE
+  //       if (degreeRefValue.current === "doctoral-programmes") {
+  //         const res = await getAllSchoolPhdProgrammeByCatPaginated(
+  //           schoolRefValue.current,
+  //           nextPage,
+  //           6
+  //         );
+  //         newData = res?.data || [];
+  //       } else {
+  //         const res = await getAllSchoolProgrammeByDegOrCatPaginated(
+  //           degreeRefValue.current,
+  //           schoolRefValue.current,
+  //           nextPage,
+  //           6
+  //         );
+  //         newData = res?.data || [];
+  //       }
+  //     }
+
+  //     setShowLoadMore(newData.length === 6);
+
+  //     if (reset) {
+  //       pageRef.current = 2;
+  //       setProgrammes(newData);
+  //     } else {
+  //       pageRef.current += 1;
+  //       setProgrammes((prev) => [...prev, ...newData]);
+  //     }
+  //   },
+  //   []
+  // );
+
+  // --------------------------------------------
+  // Debounced search effect
+  // --------------------------------------------
   const fetchProgrammes = useCallback(
-    async (reset: boolean = false, query: string = "") => {
+    async (
+      reset: boolean = false,
+      query: string = "",
+      loadAll: boolean = false,
+    ) => {
       const nextPage = reset ? 1 : pageRef.current;
       let newData: ProgrammeItem[] = [];
+
+      const limit = loadAll ? 1000 : 7; // fetch 7 to detect "has more"
 
       if (query.length > 0) {
         // SEARCH MODE
@@ -122,51 +188,55 @@ const ProgrammesSearch = () => {
           const res = await searchPhdProgrammes("", 1, 1000);
           const allData = res.data || [];
           newData = allData.filter((item) =>
-            normalize(item.heading).includes(normalize(query))
+            normalize(item.heading).includes(normalize(query)),
           );
         } else {
           const res = await searchSchoolProgrammes("", 1, 1000);
           const allData = res.data || [];
           newData = allData.filter((item) =>
-            normalize(item.title).includes(normalize(query))
+            normalize(item.title).includes(normalize(query)),
           );
         }
+
+        setShowLoadMore(false); // no button in search
       } else {
         // DROPDOWN MODE
         if (degreeRefValue.current === "doctoral-programmes") {
           const res = await getAllSchoolPhdProgrammeByCatPaginated(
             schoolRefValue.current,
-            nextPage,
-            6
+            loadAll ? 1 : nextPage,
+            limit,
           );
           newData = res?.data || [];
         } else {
           const res = await getAllSchoolProgrammeByDegOrCatPaginated(
             degreeRefValue.current,
             schoolRefValue.current,
-            nextPage,
-            6
+            loadAll ? 1 : nextPage,
+            limit,
           );
           newData = res?.data || [];
         }
+
+        // 👇 check if more than 6 exist
+        const hasMore = newData.length > 6;
+        setShowLoadMore(!loadAll && hasMore);
       }
 
-      setShowLoadMore(newData.length === 6);
+      // 👇 IMPORTANT: only show 6 unless loadAll
+      const displayData = loadAll ? newData : newData.slice(0, 6);
 
-      if (reset) {
+      if (reset || loadAll) {
         pageRef.current = 2;
-        setProgrammes(newData);
+        setProgrammes(displayData);
       } else {
         pageRef.current += 1;
-        setProgrammes((prev) => [...prev, ...newData]);
+        setProgrammes((prev) => [...prev, ...displayData]);
       }
     },
-    []
+    [],
   );
 
-  // --------------------------------------------
-  // Debounced search effect
-  // --------------------------------------------
   useEffect(() => {
     if (debounceTimer.current) clearTimeout(debounceTimer.current);
 
@@ -188,7 +258,6 @@ const ProgrammesSearch = () => {
         {/* FILTER BOX */}
         <div className="bg-white rounded-[10px]">
           <div className="py-2.5 px-5 flex flex-col lg:flex-row items-center gap-5">
-            
             {/* SCHOOL DROPDOWN */}
             <div className="lg:w-1/4 relative" ref={schoolRef}>
               <div
@@ -200,7 +269,7 @@ const ProgrammesSearch = () => {
               >
                 <span className="text-lg font-semibold">
                   {allSchools.find(
-                    (s) => s.school_category.slug === selectedSchool
+                    (s) => s.school_category.slug === selectedSchool,
                   )?.schoolname || "Select School"}
                 </span>
                 <ChevronDown color="#e61f21" />
@@ -305,7 +374,9 @@ const ProgrammesSearch = () => {
                   <h6 className="font-semibold text-xs lg:text-base mb-2 line-clamp-2 sm:line-clamp-3">
                     {"title" in item ? item.title : item.heading}
                   </h6>
-                  <p className="text-[10px] sm:text-sm">Duration: {item.criteria?.Duration}</p>
+                  <p className="text-[10px] sm:text-sm">
+                    Duration: {item.criteria?.Duration}
+                  </p>
                   <p className="text-[10px] sm:text-sm">
                     Fees: Rs. {item.criteria?.programme_fee_per_year}/-
                   </p>
@@ -316,7 +387,8 @@ const ProgrammesSearch = () => {
                     "programmeslug" in item ? item.programmeslug : item.phdslug
                   }`}
                   className="text-[10px] md:text-base font-medium border-b border-white"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Show More
                 </Link>
@@ -336,7 +408,7 @@ const ProgrammesSearch = () => {
         {showLoadMore && (
           <div className="p-4 md:p-12 flex items-center justify-center">
             <button
-              onClick={() => fetchProgrammes(false, searchQuery)}
+              onClick={() => fetchProgrammes(false, searchQuery, true)}
               className="py-[15px] px-[30px] bg-[#e61f21] text-white flex items-center gap-5 rounded-[10px] font-semibold cursor-pointer"
               style={{ boxShadow: "rgba(0,0,0,0.35) 0px 5px 15px" }}
             >
