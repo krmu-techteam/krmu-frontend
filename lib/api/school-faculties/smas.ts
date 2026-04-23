@@ -14,7 +14,7 @@ export const smasFaculties: SchoolFacultiesType[] = [
       schools: [1098],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Hema-Chaudhary.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Dr.-Hema-Chaudhary.jpg",
   },
   {
     id: 9070,
@@ -75,7 +75,7 @@ export const smasFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Sunil-Kumar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/07/Dr.-Sunil-Kumar.png",
   },
   {
     id: 66796,
