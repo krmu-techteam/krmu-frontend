@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ChevronDown, Search } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronRight, Search } from "lucide-react";
 import { useEffect, useRef, useState, useCallback } from "react";
 import {
   getAllSchoolsInfo,
@@ -276,8 +276,23 @@ const ProgrammesSearch = () => {
               </div>
 
               {openSchoolDropdown && (
-                <div className="py-2 absolute left-0 top-10 bg-white w-full rounded-[5px] border border-[#0000002d] z-10">
+                <div className="pb-2 absolute left-0 top-10 bg-white w-full rounded-[5px] border border-[#0000002d] z-10">
                   <ul>
+                    <li className="pt-2.5 pb-2 px-3 cursor-pointer hover:bg-[#f0f0f0] flex justify-between group">
+                      <span>Zenith School of AI</span> <ChevronRight />
+                      <div className="w-full border border-[#0000002d] z-10 max-w-xs absolute hidden top-0 left-full  bg-white group-hover:block">
+                        <ul>
+                          <li className="hover:bg-[#f0f0f0] hover:font-weight py-2 px-3 hover:text-blue-500">
+                            <Link
+                              href="https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026"
+                              target="_blank"
+                            >
+                              BTech AI
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
                     {allSchools.map((school) => (
                       <li
                         key={school.id}
