@@ -109,7 +109,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
   },
   {
     id: 10824,
-    slug: "dr-surendra-yadav-2",
+    slug: "dr-surendra",
     title: {
       rendered: "Dr. Surendra Yadav",
     },
@@ -484,7 +484,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
   },
   {
     id: 10870,
-    slug: "dr-prabhakar-bhandari-2",
+    slug: "dr-prabhakar",
     title: {
       rendered: "Dr. Prabhakar Bhandari",
     },
