@@ -14,7 +14,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/12/Dr.-Tanaya-Verma-SOAD.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.-Tanaya-Verma-SOAD.jpg",
   },
   // {
   //   id: 113903,
@@ -74,7 +74,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/12/Ar.-Praveen-Gupta-SOAD.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Ar.-Praveen-Gupta-SOAD.png",
   },
   {
     id: 108925,
@@ -89,7 +89,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/12/Dr.-Ankita-Majumdar-SOAD.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/09/Dr.-Ankita-Majumdar-SOAD.jpg",
   },
   {
     id: 108166,
@@ -240,7 +240,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/12/Ms.-Ritika-Mittal-SOAD.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/06/Ms.-Ritika-Mittal-SOAD.jpg",
   },
   {
     id: 46267,

@@ -2,6 +2,7 @@ import Image from "next/image";
 import SingleBlogHeroAuthor from "./SingleBlogHeroAuthor";
 import SingleBlogDate from "./SingleBlogDate";
 import { Facebook, Youtube, Twitter } from "lucide-react";
+import { checkImage } from "../comp/CommonBlogCard";
 // import { STRAPI_URL } from "@/app/constant";
 
 type SingleBlogProps = {
@@ -14,7 +15,7 @@ type SingleBlogProps = {
   authorSlug: string;
 };
 
-const SingleBlogHero = ({
+const SingleBlogHero = async ({
   title,
   imgUrl,
   authorName,
@@ -30,10 +31,17 @@ const SingleBlogHero = ({
   //   imgUrl = imgUrl.replace("wp.krmangalam.edu.in", "krmangalam.edu.in");
   // }
 
-
   const normalizedImgUrl = imgUrl
     ?.replace("/blog/wp-content", "/wp-content")
     ?.replace("wp.krmangalam.edu.in", "www.krmangalam.edu.in");
+
+  let finalImage: string | null = null;
+
+  if (await checkImage(imgUrl)) {
+    finalImage = imgUrl; // ✅ original works
+  } else if (await checkImage(normalizedImgUrl)) {
+    finalImage = normalizedImgUrl; // ✅ fallback works
+  }
 
   return (
     <>
@@ -46,9 +54,9 @@ const SingleBlogHero = ({
         <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-start gap-[30px] lg:gap-[50px] pt-[30px] lg:pt-[50px]">
           {/* IMAGE FIRST ON MOBILE */}
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
-            {imgUrl && (
+            {finalImage && (
               <Image
-                src={imgUrl}
+                src={finalImage}
                 width={768}
                 height={432}
                 alt={title || "Blog Hero Image"}
@@ -107,9 +115,9 @@ const SingleBlogHero = ({
       <section className="lg:hidden pt-[56px] bg-white">
         {/* Dark Image Area */}
         <div className="bg-[#111d32] px-4 pt-6 pb-4">
-          {normalizedImgUrl && (
+          {finalImage && (
             <Image
-              src={normalizedImgUrl}
+              src={finalImage}
               width={768}
               height={432}
               alt="Single Blog Title"
