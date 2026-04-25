@@ -16,14 +16,13 @@ const ProgrammeHighlight = ({
   highlights,
 }: Props) => {
   return (
-    <section className="prog-global-padding">
-      <div className="max-w-[1320px] mx-auto w-full">
+    <section className="prog-global-padding bg-[#f9f9f9]">
+      <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container">
           <h2 className="heading">
-            {heading}{" "}
-            <span className="prog-highlight-text">{highlightHeading}</span>
+            {heading} {highlightHeading}
           </h2>
-          <p className="sub-heading">{desc}</p>
+          <p className="  text-gray-600 text-xl font-medium">{desc}</p>
         </div>
         <div className="hidden lg:grid grid-cols-2 gap-5 mt-12">
           {highlights &&

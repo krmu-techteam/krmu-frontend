@@ -24,25 +24,53 @@ const ProgrammeScope = async ({
   // const isFormAvailable = allowedFormSlugs.includes(slug);
   const isFormAvailable = false;
 
-  
-
   const enable_disable_download_pros =
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className={`sm:bg-[#0a41a1] ${(isFormAvailable && heroSection?.imgvideo === "Video") ? 'pt-10 sm:py-10 px-4' : ''}`}>
-      <div
-        className={`xl:flex items-center xl:items-stretch  ${(isFormAvailable && heroSection?.imgvideo === "Video") ? "max-w-[1800px] mx-auto lg:gap-10" : "w-full"}`}
-      >
-        <div
-          className={`w-full xl:w-1/2 ${(isFormAvailable && heroSection?.imgvideo === "Video") ? "" : "pt-10 pb-[30px] px-[30px] sm:p-[60px]"}  h-full sm:text-white text-center sm:text-left`}
-        >
-          <h3 className="leading-[1.2] sm:leading-[1.5] mb-6 text-4xl sm:text-[42px] text-[#e61f21] sm:text-white font-bold">
+    <section className="bg-[#0a41a1] py-12 md:py-20 lg:py-24">
+      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-10 lg:gap-20">
+        
+        {/* Left column: Image */}
+        <div className="w-full md:w-1/2">
+           <div className="relative aspect-[16/10] sm:aspect-video md:aspect-[4/3] w-full rounded-md overflow-hidden">
+              {heroSection?.imgvideo === "Video" && isFormAvailable ? (
+                <div
+                  className="w-full h-full"
+                  dangerouslySetInnerHTML={{
+                    __html: heroSection?.videofield || "",
+                  }}
+                />
+              ) : (
+                scopeData?.scopeimg?.url && (
+                  <Image
+                    fill
+                    src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
+                    className="object-cover"
+                    alt="programme scope"
+                  />
+                )
+              )}
+              {/* {scopeData?.scopeimg?.url && (
+                <Image
+                  fill
+                  src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
+                  className="object-cover z-10"
+                  alt="scope image"
+                />
+              )} */}
+           </div>
+        </div>
+
+        {/* Right column: Content */}
+        <div className="w-full md:w-1/2 text-white">
+          <h3 className="text-[32px] md:text-[50px] font-semibold leading-tight mb-6">
             {scopeData?.scopeheading}
           </h3>
-          <p className="text-base md:text-xl 2xl:text-2xl leading-[2]">
+          <p className="text-base md:text-xl lg:text-[22px] leading-relaxed mb-10 font-light opacity-95">
             {scopeData?.scopecontent}
           </p>
+
           {/* {(scopeData?.scopebtn?.buttonclass ||
             scopeData?.scopebtn?.buttonlink) && (
             <Link
@@ -56,57 +84,25 @@ const ProgrammeScope = async ({
           {/* <button className="bg-[#0a41a1] cursor-pointer text-white text-base sm:bg-white p-[15px] flex items-center justify-center max-w-[220px] w-full mx-auto sm:mx-0 sm:text-[#0a41a1] rounded-md font-semibold mt-6">  
               Programme Scope
             </button> */}
+
           {scopeData?.scopebtn?.buttontext &&
             (enable_disable_download_pros ? (
               <CommonLeadPopup
-                buttonText={scopeData.scopebtn.buttontext || "Download"}
-                buttonClassName={`bg-[#0a41a1] cursor-pointer text-white text-base sm:bg-white p-[15px] flex items-center justify-center max-w-[220px] w-full mx-auto sm:mx-0 sm:text-[#0a41a1] rounded-md font-semibold mt-6 ${
-                  scopeData?.scopebtn?.buttonclass || ""
-                }`}
+                buttonText={scopeData.scopebtn.buttontext || "Download Prospectus"}
+                buttonClassName="inline-block px-10 py-3 text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
                 redirectUrl={scopeData?.scopebtn?.buttonlink || "#"}
                 form_name="Download Prospectus"
               />
             ) : (
               <Link
                 href={scopeData?.scopebtn?.buttonlink || "#"}
-                className={`bg-[#0a41a1] cursor-pointer text-white text-base sm:bg-white p-[15px] flex items-center justify-center max-w-[220px] w-full mx-auto sm:mx-0 sm:text-[#0a41a1] rounded-md font-semibold mt-6 ${
-                  scopeData?.scopebtn?.buttonclass || ""
-                }`}
+                className="inline-block px-10 py-3 text-[18px] font-medium border-2 border-white rounded-xl hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {scopeData?.scopebtn?.buttontext || "Download"}
+                {scopeData?.scopebtn?.buttontext || "Download Prospectus"}
               </Link>
             ))}
-        </div>
-        <div
-          className={`w-full xl:w-1/2 ${(isFormAvailable && heroSection?.imgvideo === "Video") ? "prog_scope flex items-center mt-10 sm:mt-0" : "min-h-[280px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[831px]"} relative`}
-        >
-         
-          {heroSection?.imgvideo === "Video" && isFormAvailable ? (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: heroSection?.videofield || "",
-              }}
-            />
-          ) : (
-            scopeData?.scopeimg?.url && (
-              <Image
-                fill
-                src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
-                className="object-cover z-10"
-                alt="scope image"
-              />
-            )
-          )}
-          {/* {scopeData?.scopeimg?.url && (
-            <Image
-              fill
-              src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
-              className="object-cover z-10"
-              alt="scope image"
-            />
-          )} */}
         </div>
       </div>
     </section>

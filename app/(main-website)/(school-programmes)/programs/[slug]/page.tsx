@@ -270,6 +270,7 @@ const page = async ({ params }: Props) => {
             formId={heroSection?.formId}
             slug={slug}
             allowedFormSlugs={allowedFormSlugs}
+            dreamcareerSection={dreamcareerSection}
             />
           )}
 
@@ -282,6 +283,13 @@ const page = async ({ params }: Props) => {
             formId={heroSection?.formId}
             heroSection={heroSection}
             
+          />
+        )}
+         {dreamcareerSection && (
+          <DreamCareer
+            heading={dreamcareerSection.heading}
+            description={dreamcareerSection.description}
+            logos={dreamcareerSection?.careerlogos}
           />
         )}
         {programmeScopeSection && (
@@ -363,19 +371,7 @@ const page = async ({ params }: Props) => {
             // careerFormId={careerProspectsSection?.careerFormId}
           />
         )}
-        {dreamcareerSection && (
-          <DreamCareer
-            heading={dreamcareerSection.heading}
-            description={dreamcareerSection.description}
-            highestpackagenum={dreamcareerSection.highestpackagenum}
-            highestpackagetitle={dreamcareerSection.highestpackagetitle}
-            campusrecruitersnum={dreamcareerSection.campusrecruitersnum}
-            campusrecruitertitle={dreamcareerSection.campusrecruitertitle}
-            placementassistnum={dreamcareerSection.placementassistnum}
-            placementassisttitle={dreamcareerSection.placementassisttitle}
-            logos={dreamcareerSection?.careerlogos}
-          />
-        )}
+       
 
         {financialAssistanceSection && (
           <FinancialAssistance

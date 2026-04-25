@@ -27,11 +27,18 @@ const LabsFacilities = ({
   labcards,
   slug,
 }: Props) => {
+  // Staging Images for Labs (Design reference)
+  const labStagingImages = [
+    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Whats_App_Image_2026_04_25_at_14_13_46_1_d7ac2ee67c.jpeg",
+    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Whats_App_Image_2026_04_25_at_14_13_45_68bcadfc15.jpeg",
+    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Whats_App_Image_2026_04_25_at_14_13_46_ad8b7eae5d.jpeg",
+  ];
+
   return (
     <>
-      <section className="">
-        <div className="max-w-[1320px] mx-auto w-full flex gap-6 items-center px-2.5 md:px-4">
-          <div className="w-1/2 hidden lg:block">
+      <section className="prog-global-padding bg-white">
+        <div className="max-w-[1440px] mx-auto w-full px-2.5 sm:px-4">
+          {/* <div className="w-1/2 hidden lg:block">
             {labimg?.url && (
               <Image
                 src={`${STRAPI_URL}${labimg?.url}`}
@@ -41,39 +48,64 @@ const LabsFacilities = ({
                 className="w-full"
               />
             )}
-          </div>
-          <div className="w-full lg:w-1/2 labFac_container">
-            <h3 className="text-[50px] text-[#0a41a1] font-medium">
-              {heading} <span className="text-[#db2a1a]">{highlight}</span>
-            </h3>
-            <div className="mb-4">
-              <BlocksRenderer content={labcontent} />
+          </div> */}
+          <div className="w-full labFac_container text-center">
+            <div className="common-prog-container !max-w-4xl mx-auto">
+              <h3 className="heading mb-4 text-[40px]">
+                {heading} {highlight}
+              </h3>
+              <div className="sub-heading text-black/70">
+                <BlocksRenderer content={labcontent} />
+              </div>
             </div>
-            <div className="hidden md:block">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 pb-6">
               {labcards &&
-                labcards.map((lab) => {
+                labcards.map((lab, index) => {
+                  const labImage = labStagingImages[index % labStagingImages.length];
                   return (
-                    <div key={lab?.id} className="mt-2.5">
-                      <h5 className="font-medium mb-2 text-xl">{lab?.title}</h5>
-                      <p>{lab?.description}</p>
+                    <div
+                      key={lab?.id}
+                      className="group bg-white rounded-md overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full"
+                    >
+                      <div className="relative h-[160px] w-full overflow-hidden bg-[#f8f9fa] flex items-center justify-center">
+                        <Image
+                          fill
+                          src={labImage}
+                          alt={lab?.title}
+                          className="object-contain p-6 group-hover:scale-105 transition-transform duration-700"
+                        />
+                      </div>
+                      <div className="p-6 flex-1 flex flex-col items-center text-center">
+                        <h5 className="font-bold mb-3 text-xl text-black leading-tight">
+                          {lab?.title}
+                        </h5>
+                        <p className="text-sm text-gray-500 leading-relaxed">
+                          {lab?.description}
+                        </p>
+                      </div>
                     </div>
                   );
                 })}
-              {(btn?.buttonclass || btn?.buttonlink) && (
+            </div>
+
+            <div className="flex items-center justify-center">
+               {(btn?.buttonclass || btn?.buttonlink) && (
                 <Link
                   href={btn?.buttonlink}
-                  className={`flex items-center justify-center max-w-[180px] w-full rounded-lg p-[15px] bg-[#0a41a1] text-white mt-12 ${btn?.buttonclass}`}
+                  className={`flex items-center text-lg font-medium tracking-wide justify-center gap-3 rounded-md px-8 py-3 bg-[#0a41a1] text-white mt-12 hover:bg-[#083582] transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-1 ${btn?.buttonclass}`}
                 >
                   {btn?.buttontext}
                 </Link>
               )}
             </div>
-            <div className="md:hidden">
+            
+            <div className="md:hidden mt-10">
               <LabFacilitiesSlider labcards={labcards} />
             </div>
           </div>
         </div>
-        <div className="max-w-[1320px] mx-auto w-full">
+        <div className="max-w-[1320px] mx-auto w-full mt-10">
           {slug === "bca-ai-data-science" && <BcaVsBtechTable />}
         </div>
       </section>

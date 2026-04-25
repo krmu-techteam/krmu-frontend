@@ -25,20 +25,16 @@ const Curriculum = ({
 }: Props) => {
   return (
     <>
-      <section className="pt-10">
-        <div className="max-w-[1320px] mx-auto w-full">
-          <div className="common-prog-container">
-            <h2 className="heading">
-              {heading} <span className="prog-highlight-text">{highlight}</span>
-            </h2>
-            <p className="sub-heading">{desc}</p>
-          </div>
+      <section className="pt-12 pb-0 bg-gray-50/50">
+        <div className="max-w-[1440px] mx-auto w-full">
           <ProgrammeStructure
             currbtn={currbtn}
             currFormContainerId={currFormContainerId}
             currFormId={currFormId}
             programStruct={programStruct}
             isYear={isYear}
+            heading={heading}
+            highlight={highlight}
           />
         </div>
       </section>
