@@ -132,6 +132,7 @@ const HeroBanner = ({
                         {dreamcareerSection?.highestpackagetitle || "Highest Package"}
                      </p>
                   </div>
+                  
                   <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
                      <p className="text-3xl font-semibold text-[#0060aa]">
                         800+
