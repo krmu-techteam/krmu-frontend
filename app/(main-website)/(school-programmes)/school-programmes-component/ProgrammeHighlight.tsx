@@ -21,7 +21,7 @@ const ProgrammeHighlight = ({
   const visibleHighlights = highlights?.slice(0, displayCount);
 
   return (
-    <section className="prog-global-padding bg-[#e9ecef] pb-12">
+    <section className="prog-global-padding bg-[#e9ecef] py-6 md:py-16">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container">
           <h2 className="heading">
@@ -30,7 +30,7 @@ const ProgrammeHighlight = ({
           <p className="text-gray-600 text-base md:text-xl font-medium">{desc}</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6 md:my-12 px-4 md:px-0">
           {visibleHighlights &&
             visibleHighlights.map((highlight) => (
               <ProgrammeHighlightCard

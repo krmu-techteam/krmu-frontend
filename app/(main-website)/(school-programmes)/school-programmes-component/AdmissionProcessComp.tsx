@@ -164,7 +164,7 @@ const AdmissionProcessComp = ({
         <button
           className={`${
             admisbtn.buttonclass || ""
-          } text-white bg-[#db2a1a] px-6 py-3 flex items-center justify-around gap-4 rounded-md font-semibold mt-10 cursor-pointer text-lg`}
+          } text-white bg-[#db2a1a] px-6 py-3 flex items-center justify-around gap-4 rounded-md font-semibold mt-5 cursor-pointer text-lg`}
         >
           <span>{admisbtn.buttontext}</span> <ArrowRight />
         </button>
