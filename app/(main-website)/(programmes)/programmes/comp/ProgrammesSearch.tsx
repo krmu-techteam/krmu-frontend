@@ -62,9 +62,20 @@ const zenithProgrammes: ZenithProgrammeItem[] = [
 ];
 
 const schoolOrderMap: Record<string, number> = {
-  "School of Engineering & Technology": 2,
-  "School of Management and Commerce": 1,
+  "School of Engineering & Technology": 1,
+  "School of Management and Commerce": 2,
+  "School of Legal Studies": 3,
+  "School of Medical & Allied Sciences": 4,
+  "School of Liberal Arts ": 5,
+  "School of Basic & Applied Sciences": 6,
+  "School of Architecture & Design": 7,
+  "School of Physiotherapy and Rehabilitation Sciences": 8,
+  "School of Emerging Media and Creator Economy": 9,
+  "School of Education": 10,
+  "School of Agricultural Sciences": 12,
+  "School of Hotel Management & Catering Technology": 13,
 };
+
 export interface Criteria {
   id: number;
   eligibility_criteria: string;
@@ -308,7 +319,11 @@ const ProgrammesSearch = () => {
     };
   }, [searchQuery, selectedSchool, selectedDegree, fetchProgrammes]);
 
-  console.log("allSchools", allSchools);
+  const sortedSchools = [...allSchools].sort((a, b) => {
+    const orderA = schoolOrderMap[a.schoolname] ?? Number.MAX_SAFE_INTEGER;
+    const orderB = schoolOrderMap[b.schoolname] ?? Number.MAX_SAFE_INTEGER;
+    return orderA - orderB;
+  });
 
   return (
     <section className="pt-40 pb-[50px] px-4 bg-[#f9f9f9] temp-class">
@@ -359,8 +374,8 @@ const ProgrammesSearch = () => {
                     >
                       Zenith School of AI
                     </li>
-                    <div className="flex flex-col-reverse">
-                      {allSchools.map((school) => (
+                    <div className="flex flex-col">
+                      {sortedSchools.map((school) => (
                         <li
                           key={school.id}
                           onClick={() => {
@@ -372,7 +387,7 @@ const ProgrammesSearch = () => {
                             selectedSchool === school.school_category.slug
                               ? "bg-[#f0f0f0] font-semibold"
                               : ""
-                          } ${schoolOrderMap[school.schoolname] ? `order-${schoolOrderMap[school.schoolname]}` : ""}`}
+                          }`}
                         >
                           {school.schoolname}
                         </li>
