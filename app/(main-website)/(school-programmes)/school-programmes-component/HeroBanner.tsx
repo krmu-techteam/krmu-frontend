@@ -74,7 +74,7 @@ const HeroBanner = ({
         > */}
           <div className="max-w-[750px] mr-auto">
             <p
-              className={` font-medium leading-[1.2] mb-2 ${slug === "b-tech-cse" ? "text-[#484848] text-md sm:text-xl" : "text-xs sm:text-2xl"}`}
+              className={`font-medium leading-[1.2] mb-2 ${slug === "b-tech-cse" ? "text-[#484848] text-md sm:text-xl" : "text-xs sm:text-2xl"}`}
             >
               {heroSection?.subtitle}
             </p>
