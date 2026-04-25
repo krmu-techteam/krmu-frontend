@@ -37,7 +37,7 @@ const ProgramHighlightSlider = ({ highlights }: Props) => {
   }, [api]);
 
   return (
-    <div className="py-10">
+    <div className="">
       <Carousel
         opts={{
           align: "center",
@@ -54,25 +54,25 @@ const ProgramHighlightSlider = ({ highlights }: Props) => {
           {highlights?.map((highlight, i) => (
             <CarouselItem
               key={highlight?.id}
-              className="basis-2/3 md:basis-1/3 h-full"
+              className="basis-full md:basis-1/3 h-full px-2"
             >
               <div
-                className={`p-5 rounded-2xl text-center transition-all duration-300 shadow-md flex flex-col items-center justify-center h-full ${
+                className={`p-6 rounded-md text-center transition-all duration-500 shadow-sm flex flex-col items-center justify-center h-full min-h-[180px] border ${
                   current === i
-                    ? "bg-[#0a41a1] scale-105"
-                    : "bg-white scale-95"
+                    ? "bg-[#0a41a1] border-[#0a41a1] scale-100 shadow-xl"
+                    : "bg-white border-gray-200 scale-95 opacity-80"
                 }`}
               >
                 <h5
-                  className={`font-semibold ${
-                    current === i ? "text-white" : "text-black"
+                  className={`text-lg font-semibold leading-tight ${
+                    current === i ? "text-white" : "text-[#0a41a1]"
                   }`}
                 >
                   {highlight?.title}
                 </h5>
                 <p
-                  className={`mt-2 text-sm ${
-                    current === i ? "text-[#97a6c0]" : "text-gray-600"
+                  className={`mt-3 text-sm leading-relaxed ${
+                    current === i ? "text-white/90" : "text-gray-600"
                   }`}
                 >
                   {highlight?.subtitle}

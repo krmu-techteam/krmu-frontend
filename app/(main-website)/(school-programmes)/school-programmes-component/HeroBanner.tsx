@@ -61,7 +61,7 @@ const HeroBanner = ({
 
   return (
     <section
-      className={`pt-24 sm:pt-40 sm:pb-12 px-5 sm:px-4 ${slug === "b-tech-cse" ? "bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]" : ""}`}
+      className={`pt-24 sm:pt-40 pb-12 px-5 sm:px-4 ${slug === "b-tech-cse" ? "bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]" : ""}`}
     >
       <div
         className={`w-full mx-auto md:flex items-center ${slug === "b-tech-cse" ? "gap-10 max-w-[1440px]" : "school-programme-max-width"} justify-between gap-5`}
@@ -79,7 +79,7 @@ const HeroBanner = ({
               {heroSection?.subtitle}
             </p>
             <h1
-              className={` ${slug === "b-tech-cse" ? "text-[#0A41A1] text-3xl sm:text-4xl xl:text-[58px] font-bold leading-[1.1]" : "text-[#0060aa] text-4xl sm:text-[52px] font-semibold leading-tight"}   mb-2`}
+              className={` ${slug === "b-tech-cse" ? "text-[#0A41A1] text-3xl sm:text-4xl xl:text-[58px] font-bold leading-[1.1]" : "text-[#0060aa] text-3xl md:text-[52px] font-semibold leading-tight"}   mb-2`}
             >
               {title} <span className="text-[#e61f21]">{highlightitle}</span>
             </h1>
@@ -123,35 +123,30 @@ const HeroBanner = ({
                   playIcon={false}
                 />
                 
-                <div className="flex flex-row gap-4 items-center flex-wrap sm:flex-nowrap lg:ml-10 flex-shrink-0">
-                  <div className="flex flex-col gap-4">
-                    <div className="bg-white border-[1.2px] border-[#e61f21] rounded-md shadow-md w-full sm:w-[190px] sm:h-[100px] flex flex-col items-center justify-center p-3">
-                       <p className="text-3xl font-semibold text-[#e61f21]">
-                          {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
-                       </p>
-                       <p className="text-md font-semibold text-[#555] capitalize mt-1 text-center">
-                          {dreamcareerSection?.highestpackagetitle || "Highest Package"}
-                       </p>
-                    </div>
-                    <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-full sm:w-[190px] sm:h-[100px] flex flex-col items-center justify-center p-3">
-                       <p className="text-3xl font-semibold text-[#0060aa]">
-                          {/* {dreamcareerSection?.campusrecruitersnum} */}
-                          800+
-                       </p>
-                       <p className="text-md font-semibold text-[#555] capitalize mt-1 text-center">
-                          {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
-                       </p>
-                    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-row gap-4 items-stretch lg:ml-10 flex-shrink-0 w-full md:w-auto">
+                  <div className="bg-white border-[1.2px] border-[#e61f21] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
+                     <p className="text-3xl font-semibold text-[#e61f21]">
+                        {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
+                     </p>
+                     <p className="text-md font-semibold text-[#555] capitalize mt-1 text-center">
+                        {dreamcareerSection?.highestpackagetitle || "Highest Package"}
+                     </p>
                   </div>
-                  <div className="flex items-center">
-                    <div className="bg-white border-[1.2px] border-[#16a34a] rounded-md shadow-md w-full sm:w-[190px] sm:h-[100px] flex flex-col items-center justify-center p-3 text-center">
-                       <p className="text-3xl font-semibold text-[#16a34a]">
-                          {dreamcareerSection?.placementassistnum || "100%"}
-                       </p>
-                       <p className="text-md font-semibold text-[#555] capitalize mt-1">
-                          {dreamcareerSection?.placementassisttitle || "Placement Assist"}
-                       </p>
-                    </div>
+                  <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
+                     <p className="text-3xl font-semibold text-[#0060aa]">
+                        800+
+                     </p>
+                     <p className="text-md font-semibold text-[#555] capitalize mt-1 text-center">
+                        {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
+                     </p>
+                  </div>
+                  <div className="sm:col-span-2 md:col-span-1 bg-white border-[1.2px] border-[#16a34a] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 text-center transition-transform hover:scale-105 duration-300">
+                     <p className="text-3xl font-semibold text-[#16a34a]">
+                        {dreamcareerSection?.placementassistnum || "100%"}
+                     </p>
+                     <p className="text-md font-semibold text-[#555] capitalize mt-1">
+                        {dreamcareerSection?.placementassisttitle || "Placement Assist"}
+                     </p>
                   </div>
                 </div>
               </div>

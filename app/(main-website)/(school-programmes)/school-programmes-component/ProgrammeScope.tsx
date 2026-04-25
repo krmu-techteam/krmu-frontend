@@ -28,12 +28,12 @@ const ProgrammeScope = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="bg-[#0a41a1] py-12 md:py-16 lg:py-20">
+    <section className="bg-[#0a41a1] py-10 md:py-16 lg:py-20">
       <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-10 lg:gap-20">
         
         {/* Left column: Image */}
-        <div className="w-full md:w-1/2">
-           <div className="relative aspect-[16/10] sm:aspect-video md:aspect-[4/3] w-full rounded-md overflow-hidden">
+        <div className="w-full md:w-1/2 px-4 md:px-0">
+           <div className="relative aspect-[16/10] sm:aspect-video md:aspect-[4/3] w-full rounded-md overflow-hidden ">
               {heroSection?.imgvideo === "Video" && isFormAvailable ? (
                 <div
                   className="w-full h-full"
@@ -63,11 +63,11 @@ const ProgrammeScope = async ({
         </div>
 
         {/* Right column: Content */}
-        <div className="w-full md:w-1/2 text-white">
+        <div className="w-full md:w-1/2 text-white px-4 md:px-0">
           <h3 className="text-[32px] md:text-[50px] font-semibold leading-tight mb-6">
             {scopeData?.scopeheading}
           </h3>
-          <p className="text-base md:text-xl lg:text-[22px] leading-relaxed mb-10 font-light opacity-95">
+          <p className="text-base text-justify md:text-left md:text-xl lg:text-[22px] leading-relaxed mb-10 font-light opacity-95">
             {scopeData?.scopecontent}
           </p>
 
@@ -87,16 +87,18 @@ const ProgrammeScope = async ({
 
           {scopeData?.scopebtn?.buttontext &&
             (enable_disable_download_pros ? (
-              <CommonLeadPopup
+              <div className="flex items-center justify-center md:justify-left">
+                <CommonLeadPopup
                 buttonText={scopeData.scopebtn.buttontext || "Download Prospectus"}
                 buttonClassName="inline-block px-6 py-2.5 text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
                 redirectUrl={scopeData?.scopebtn?.buttonlink || "#"}
                 form_name="Download Prospectus"
               />
+              </div>
             ) : (
               <Link
                 href={scopeData?.scopebtn?.buttonlink || "#"}
-                className="inline-block px-6 py-2.5 text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
+                className="inline-block px-6 py-2.5 text-[18px]  font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >

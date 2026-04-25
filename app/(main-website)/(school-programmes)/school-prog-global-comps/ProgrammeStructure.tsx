@@ -94,7 +94,7 @@ const ProgrammeStructure = ({
                     {currbtn?.buttontext}
                   </span>
                 }
-                buttonClassName="px-8 py-3 text-base font-semibold text-black bg-transparent hover:bg-transparent rounded-md transition-all duration-300 active:scale-[0.98] flex items-center justify-center border border-gray-300"
+                buttonClassName="px-8 py-3 text-base font-semibold text-[#0a41a1] bg-[#0a41a1]/3 hover:bg-transparent rounded-md transition-all duration-300 active:scale-[0.98] flex items-center justify-center border-2 border-[#0a41a1]"
                 redirectUrl={currbtn?.buttonlink || "#"}
                 form_name="Programme Handbook"
               />
@@ -241,8 +241,8 @@ const ProgrammeStructure = ({
                                 const btnClass = `flex items-center gap-2 text-md font-semibold capitalize px-6 py-3 
                                   rounded-sm shadow-sm transition-all duration-300 border
                                   ${isHandbook 
-                                    ? "bg-transparent text-black border-gray-300 hover:bg-gray-300 hover:-translate-y-1" 
-                                    : "bg-transparent text-black border-gray-300 hover:bg-gray-300  hover:-translate-y-1"} `;
+                                    ? "bg-[#0a41a1]/3 text-[#0a41a1] border-2 border-[#0a41a1] hover:bg-transparent hover:-translate-y-1" 
+                                    : "bg-[#0a41a1]/3 text-[#0a41a1] border-2 border-[#0a41a1] hover:bg-transparent  hover:-translate-y-1"} `;
 
                                 const btnContent = (
                                   <span className="flex items-center gap-2">
