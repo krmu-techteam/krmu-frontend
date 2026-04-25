@@ -2519,6 +2519,7 @@
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 30px;
   }
 
   .admis_proc_btn_grid_items {
@@ -2561,58 +2562,54 @@
     text-align: center;
   }
 
+  /* write heading not button */
   .admis_proc_btn_content .btn_text {
-    background: #db2a1a;
-    border: none;
-    outline: none;
-    color: #ffffff;
-    max-width: 180px;
-    border-radius: 50px;
-    width: 100%;
-    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: balck;
   }
 
   .admis_proc_btn_grid_item:nth-child(2) .admis_proc_btn_content .btn_text {
-    margin-left: -15px;
+    margin-left: 25px;
   }
   .admis_proc_btn_grid_item:nth-child(3) .admis_proc_btn_content .btn_text {
-    margin-left: -25px;
+    margin-left: 8px;
   }
 
   .admis_proc_btn_grid_item:nth-child(4) .admis_proc_btn_content .btn_text {
-    margin-left: -38px;
+    margin-left: -28px;
   }
   .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content .btn_text {
-    margin-left: -45px;
+    margin-left: -24px;
   }
 
   .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content .btn_text {
-    margin-left: -60px;
+    margin-left: -20px;
   }
 
   .admis_proc_btn_grid_item .admis_proc_btn_content .admis_btn_below_text {
-    max-width: 150px;
+    max-width: 140px;
     width: 100%;
     font-size: 14px;
-    margin-top: 15px;
-    font-weight: 500;
+    margin-top: 4px;
+    font-weight: 400;
     color: #5d6670;
     line-height: 1.5;
   }
   .admis_proc_btn_grid_item:nth-child(1)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -15px;
+    margin-left: -12px;
   }
   .admis_proc_btn_grid_item:nth-child(2)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -15px;
+    margin-left: -4px;
   }
   .admis_proc_btn_grid_item:nth-child(3)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -10px;
+    margin-left: -8px;
   }
 
   .admis_proc_btn_grid_item:nth-child(4)
@@ -2629,7 +2626,7 @@
   .admis_proc_btn_grid_item:nth-child(6)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -42px;
+    margin-left: -38px;
   }
 
   .prog-global-padding {
@@ -2640,11 +2637,11 @@
   .common-prog-container .heading {
     font-size: 40px;
     font-weight: bold;
-    color: #0a41a1;
+    color: black;
   }
   .common-prog-container .sub-heading {
     font-size: 20px;
-    color: #a9a9a9;
+    color: #525252;
     font-weight: 400;
   }
   /* Programme Highlights */

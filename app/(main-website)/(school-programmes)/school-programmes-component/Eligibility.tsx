@@ -65,80 +65,95 @@ const Eligibility = ({
   return (
     <>
       <section
-        className={`${slug === "b-tech-cse" ? "bg-[#f9f9ff] pt-5 pb-10 md:pb-0 px-4 sm:px-0" : "px-4"}`}
+        className={`${slug === "b-tech-cse" ? " pt-5 pb-10 md:pb-0 px-4 sm:px-0" : "px-4"} relative z-20 md:mt-[-64px] mb-10`}
       >
         <div
-          className={`${slug === "b-tech-cse" ? "max-w-[1440px]" : "max-w-[1664px] md:px-4"} w-full mx-auto sm:flex sm:pb-12  sm:mt-12 md:mt-0`}
+          className={`${slug === "b-tech-cse" ? "max-w-[1440px]" : "max-w-[1664px] md:px-4"} w-full mx-auto`}
         >
           {slug === "b-tech-cse" ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
-              <div className="p-5 sm:py-5 sm:px-10 bg-white w-full flex flex-col gap-2.5 justify-center border border-gray-200">
-                <Calendar size={30} color="#60b9e5" />
-                <p className="text-2xl">{elgibilities[0]?.subtitle}</p>
-                <p className="text-2xl md:text-4xl font-semibold">
-                  {elgibilities[0]?.title}
-                </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full -mt-[2%]">
+              <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
+                <Calendar size={32} color="#00a1e4" className="flex-shrink-0" />
+                <div className="flex flex-col">
+                  <p className="text-md font-medium text-gray-500 capitalize leading-tight tracking-wide">{elgibilities[0]?.subtitle}</p>
+                  <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
+                    {elgibilities[0]?.title}
+                  </p>
+                </div>
               </div>
-              <div className="p-5 sm:py-5 sm:px-10 bg-white w-full flex flex-col gap-2.5 justify-center border border-gray-200">
-                <IndianRupee size={30} color="#60b9e5" />
-                <p className="text-2xl">{elgibilities[1]?.subtitle}</p>
-                <p className="text-2xl md:text-4xl font-semibold">  
-                  {elgibilities[1]?.title}
-                </p>
+              <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
+                <IndianRupee size={32} color="#00a1e4" className="flex-shrink-0" />
+                <div className="flex flex-col">
+                  <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">{elgibilities[1]?.subtitle}</p>
+                  <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">  
+                    {elgibilities[1]?.title}
+                  </p>
+                </div>
               </div>
-              <div className="p-5 sm:py-5 sm:px-10 bg-white w-full flex flex-col gap-2.5 justify-center border border-gray-200 text-left">
-                <LaptopMinimalCheck size={30} color="#60b9e5" />
-                 <p className="text-2xl">{elgibilities[2]?.subtitle}</p>
-                <p className="text-2xl font-semibold">
-                  {displayTitle}
-                  {isLong && !expanded && " "}
-                </p>
-                {isLong && (
-                  <button
-                    onClick={() => setExpanded(!expanded)}
-                    className="text-xl leading-[1.2] text-[#0060aa] font-semibold mb-2 cursor-pointer text-left"
-                  >
-                    {expanded ? "Read Less" : "Read More"}
-                  </button>
-                )}
+              <div className="bg-white border border-gray-300 rounded-md px-6 py-4 flex items-start gap-5">
+                <LaptopMinimalCheck size={32} color="#00a1e4" className="flex-shrink-0" />
+                <div className="flex flex-col">
+                  <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">{elgibilities[2]?.subtitle}</p>
+                  <div className="flex flex-col mt-1">
+                    <p className="text-md md:text-lg font-semibold text-black leading-tight">
+                      {displayTitle}
+                      {isLong && !expanded && " "}
+                    </p>
+                    {isLong && (
+                      <button
+                        onClick={() => setExpanded(!expanded)}
+                        className="text-xs text-[#0060aa] font-bold mt-1 text-left"
+                      >
+                        {expanded ? "Read Less" : "Read More"}
+                      </button>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           ) : (
-            <>
-              <div className="w-full sm:w-1/3 lg:w-1/4 sm:px-3 border-r sm:border-r border-[#dee2e6] p-2.5 sm:p-5 bg-white">
-                <h2 className="text-2xl leading-[1.2] text-[#0060aa] font-semibold mb-2">
-                  {elgibilities[0]?.title}
-                </h2>
-                <p className="mb-2.5">{elgibilities[0]?.subtitle}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
+              <div className="bg-white border border-gray-200 rounded-md p-6 shadow-lg flex items-center gap-5">
+                <Calendar size={32} color="#00a1e4" className="flex-shrink-0" />
+                <div className="flex flex-col">
+                  <p className="text-[13px] font-bold text-gray-500 uppercase leading-tight tracking-wide">{elgibilities[0]?.subtitle}</p>
+                  <p className="text-[20px] font-extrabold text-black leading-tight mt-1">
+                    {elgibilities[0]?.title}
+                  </p>
+                </div>
               </div>
 
-              <div
-                className="w-full sm:w-1/3 lg:w-1/4 sm:px-3 border-r sm:border-r border-[#dee2e6] p-2.5 sm:p-5 bg-white"
-                id="mob-npf-form"
-              >
-                <h2 className="text-2xl leading-[1.2] text-[#0060aa] font-semibold mb-2">
-                  {elgibilities[1]?.title}
-                </h2>
-                <p className="mb-2.5">{elgibilities[1]?.subtitle}</p>
+              <div className="bg-white border border-gray-200 rounded-md p-6 shadow-lg flex items-center gap-5" id="mob-npf-form">
+                <IndianRupee size={32} color="#00a1e4" className="flex-shrink-0" />
+                <div className="flex flex-col">
+                  <p className="text-[14px] font-bold text-gray-500 uppercase leading-tight tracking-wide">{elgibilities[1]?.subtitle}</p>
+                  <p className="text-[20px] font-extrabold text-black leading-tight mt-1">
+                    {elgibilities[1]?.title}
+                  </p>
+                </div>
               </div>
 
-              {/* Third column with Read More */}
-              <div className="w-full sm:w-1/3 lg:w-2/4 sm:px-3 p-2.5 sm:p-5 bg-white">
-                <h2 className="text-2xl leading-[1.2] text-[#0060aa] font-semibold mb-2 inline-block">
-                  {displayTitle}
-                  {isLong && !expanded && " "}
-                </h2>{" "}
-                {isLong && (
-                  <button
-                    onClick={() => setExpanded(!expanded)}
-                    className="text-xl leading-[1.2] text-[#0060aa] font-semibold mb-2 cursor-pointer"
-                  >
-                    {expanded ? "Read Less" : "Read More"}
-                  </button>
-                )}
-                <p className="mb-2.5">{elgibilities[2]?.subtitle}</p>
+              <div className="bg-white border border-gray-200 rounded-md p-6 shadow-lg flex items-center gap-5">
+                <LaptopMinimalCheck size={32} color="#00a1e4" className="flex-shrink-0" />
+                <div className="flex flex-col">
+                  <p className="text-[13px] font-bold text-gray-500 uppercase leading-tight tracking-wide">{elgibilities[2]?.subtitle}</p>
+                  <div className="flex flex-col mt-1">
+                    <p className="text-[18px] md:text-[20px] font-extrabold text-black leading-tight">
+                      {displayTitle}
+                      {isLong && !expanded && " "}
+                    </p>
+                    {isLong && (
+                      <button
+                        onClick={() => setExpanded(!expanded)}
+                        className="text-xs text-[#0060aa] font-bold mt-1 text-left"
+                      >
+                        {expanded ? "Read Less" : "Read More"}
+                      </button>
+                    )}
+                  </div>
+                </div>
               </div>
-            </>
+            </div>
           )}
 
           {/* {isFormAvailable && (

@@ -24,25 +24,24 @@ const CareerProspects = ({
 }: Props) => {
   return (
     <>
-      <section className="prog-global-padding bg-[#f8f9fd]">
-        <div className="max-w-[1320px] mx-auto w-full px-2.5 md:px-4">
+      <section className="prog-global-padding">
+        <div className="max-w-[1440px] mx-auto w-full px-2.5 md:px-4">
           <div className="flex flex-col lg:flex-row items-stretch gap-8">
             <div className="w-full xl:w-1/2 flex flex-col">
-              <h3 className="text-4xl md:text-[40px] font-semibold text-[#0a41a1] mb-6 text-center sm:text-left">
-                {heading} <span className="text-[#db2a1a]">{highlight}</span>
+              <h3 className="text-4xl md:text-[40px] font-semibold text-black mb-5 text-center sm:text-left">
+                {heading} {highlight}
               </h3>
 
-              <p className="mb-6">{desc}</p>
+              <p className="mb-6 leading-relaxed text-md">{desc}</p>
 
               <div className="flex-1">
                 {careercards?.map((card) => (
-                  <div key={card?.id} className="pl-10 relative mb-6">
-                    <span className="absolute -left-2 top-0 px-2.5 py-[5px] rounded-[10px] text-white bg-[#db2a1a]">
+                  <div key={card?.id} className="pl-10 relative mb-6 -m-2">
+                    <span className="absolute -left-2 top-0 px-2.5 py-[5px] rounded-sm text-white bg-[#0a41a1]">
                       {card?.num}
                     </span>
-
-                    <h4 className="font-medium text-2xl">{card?.title}</h4>
-                    <p>{card?.description}</p>
+                      <h4 className="font-medium text-2xl">{card?.title}</h4>
+                      <p className="leading-relaxed text-md">{card?.description}</p>
                   </div>
                 ))}
               </div>
@@ -60,11 +59,11 @@ const CareerProspects = ({
             </div>
           </div>
         </div>
-        <div className="max-w-[1320px] mx-auto w-full flex justify-center mt-4">
+        <div className="max-w-[1320px] mx-auto w-full flex justify-center mt-8">
           {(btn?.buttonclass || btn?.buttonlink) && (
             <Link
               href={btn?.buttonlink || "#"}
-              className={`text-white bg-[#db2a1a] p-[15px] flex items-center justify-around max-w-3xs w-full rounded-lg font-semibold cursor-pointer ${btn?.buttonclass}`}
+              className={`text-white bg-[#db2a1a] px-6 py-3 flex items-center justify-around max-w-3xs w-full rounded-md font-semibold cursor-pointer ${btn?.buttonclass}`}
             >
               <span>{btn?.buttontext}</span>
               <ArrowRight />
