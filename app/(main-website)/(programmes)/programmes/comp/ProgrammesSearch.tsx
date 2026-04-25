@@ -63,15 +63,16 @@ const zenithProgrammes: ZenithProgrammeItem[] = [
 
 const schoolOrderMap: Record<string, number> = {
   "School of Engineering & Technology": 1,
-  "School of Management and Commerce": 2,
-  "School of Legal Studies": 3,
-  "School of Medical & Allied Sciences": 4,
-  "School of Liberal Arts ": 5,
-  "School of Basic & Applied Sciences": 6,
-  "School of Architecture & Design": 7,
-  "School of Physiotherapy and Rehabilitation Sciences": 8,
-  "School of Emerging Media and Creator Economy": 9,
-  "School of Education": 10,
+  "Zenith School of AI": 2,
+  "School of Management and Commerce": 3,
+  "School of Legal Studies": 4,
+  "School of Medical & Allied Sciences": 5,
+  "School of Liberal Arts ": 6,
+  "School of Basic & Applied Sciences": 7,
+  "School of Architecture & Design": 8,
+  "School of Physiotherapy and Rehabilitation Sciences": 9,
+  "School of Emerging Media and Creator Economy": 10,
+  "School of Education": 11,
   "School of Agricultural Sciences": 12,
   "School of Hotel Management & Catering Technology": 13,
 };
@@ -318,8 +319,15 @@ const ProgrammesSearch = () => {
       if (debounceTimer.current) clearTimeout(debounceTimer.current);
     };
   }, [searchQuery, selectedSchool, selectedDegree, fetchProgrammes]);
-
-  const sortedSchools = [...allSchools].sort((a, b) => {
+  const allSchoolsWithZenith = [
+    {
+      id: "zenith",
+      schoolname: "Zenith School of AI",
+      school_category: { slug: ZENITH_SLUG },
+    },
+    ...allSchools,
+  ];
+  const sortedSchools = [...allSchoolsWithZenith].sort((a, b) => {
     const orderA = schoolOrderMap[a.schoolname] ?? Number.MAX_SAFE_INTEGER;
     const orderB = schoolOrderMap[b.schoolname] ?? Number.MAX_SAFE_INTEGER;
     return orderA - orderB;
@@ -360,39 +368,23 @@ const ProgrammesSearch = () => {
               {openSchoolDropdown && (
                 <div className="pb-2 absolute left-0 top-10 bg-white w-full rounded-[5px] border border-[#0000002d] z-10">
                   <ul>
-                    <li
-                      onClick={() => {
-                        setSelectedSchool(ZENITH_SLUG);
-                        setSearchQuery("");
-                        setOpenSchoolDropdown(false);
-                      }}
-                      className={`pt-2.5 pb-2 px-3 cursor-pointer hover:bg-[#f0f0f0] ${
-                        selectedSchool === ZENITH_SLUG
-                          ? "bg-[#f0f0f0] font-semibold"
-                          : ""
-                      }`}
-                    >
-                      Zenith School of AI
-                    </li>
-                    <div className="flex flex-col">
-                      {sortedSchools.map((school) => (
-                        <li
-                          key={school.id}
-                          onClick={() => {
-                            setSelectedSchool(school.school_category.slug);
-                            setSearchQuery("");
-                            setOpenSchoolDropdown(false);
-                          }}
-                          className={`py-2 px-3 cursor-pointer hover:bg-[#f0f0f0] ${
-                            selectedSchool === school.school_category.slug
-                              ? "bg-[#f0f0f0] font-semibold"
-                              : ""
-                          }`}
-                        >
-                          {school.schoolname}
-                        </li>
-                      ))}
-                    </div>
+                    {sortedSchools.map((school) => (
+                      <li
+                        key={school.id}
+                        onClick={() => {
+                          setSelectedSchool(school.school_category.slug);
+                          setSearchQuery("");
+                          setOpenSchoolDropdown(false);
+                        }}
+                        className={`py-2 px-3 cursor-pointer hover:bg-[#f0f0f0] ${
+                          selectedSchool === school.school_category.slug
+                            ? "bg-[#f0f0f0] font-semibold"
+                            : ""
+                        }`}
+                      >
+                        {school.schoolname}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               )}
