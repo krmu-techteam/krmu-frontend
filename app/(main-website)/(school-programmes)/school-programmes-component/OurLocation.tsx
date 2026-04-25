@@ -23,7 +23,7 @@ const OurLocation = ({ badgetext, img1, img2 }: Props) => {
           />
         </div>
         <div className="sm:w-7/12 pt-6 sm:px-3">
-          <span className="py-2.5 px-4 font-normal rounded-md border border-white text-white text-sm inline-block mb-2">
+          <span className="py-2.5 font-normal rounded-md text-white text-sm inline-block mb-2">
             {badgetext} 
           </span>
           <h3 className="text-white text-2xl md:text-[28px] font-medium leading-[1] mb-4">
