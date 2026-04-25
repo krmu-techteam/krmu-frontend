@@ -40,7 +40,7 @@ const SchoolHero = ({
             fullWidth ? "lg:py-[18%]" : "lg:pt-[10%] lg:pb-[5%]"
           } bg-cover bg-no-repeat bg-center px-4`}
           // style={{ backgroundImage: `url(${STRAPI_URL}${herobanner?.url})` }}
-        >
+        > 
           {herobanner?.url && (
             <Image
               src={`${STRAPI_URL}${herobanner.url}`}

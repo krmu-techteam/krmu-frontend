@@ -238,6 +238,7 @@ export default async function Page({ params }: Props) {
           subheading={schoolKnowComp?.subheading}
           desc={schoolKnowComp?.description}
           counters={schoolKnowComp?.counter}
+          slug={slug}
         />
       )}
       {school?.alumnititle && (
