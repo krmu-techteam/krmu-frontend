@@ -33,7 +33,7 @@ const FinancialAssistance = ({
 
   return (
     <section className="prog-global-padding bg-[#f8f9fd] py-12 md:pt-16 md:pb-20">
-      <div className="max-w-[1440px] mx-auto w-full px-2.5 sm:px-4">
+      <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container !max-w-7xl">
           <h2 className="heading">
             {heading}{" "}{highlightheading} 

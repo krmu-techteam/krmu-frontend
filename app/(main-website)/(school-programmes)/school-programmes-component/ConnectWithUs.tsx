@@ -4,7 +4,7 @@ import Link from "next/link";
 export const ConnectWithUs = () => {
   return (
     <section className="py-10 bg-[url(/programmes/footer-bg.svg)] bg-cover bg-center bg-no-repeat">
-      <div className="max-w-[1440px] mx-auto w-full px-2.5 sm:px-4">
+      <div className="max-w-[1440px] mx-auto w-full">
         <h3 className="text-4xl lg:text-[40px] font-semibold mb-5 text-white text-center sm:text-left">
           Connect With Us
         </h3>
