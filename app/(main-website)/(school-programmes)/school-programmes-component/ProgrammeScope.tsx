@@ -87,7 +87,7 @@ const ProgrammeScope = async ({
 
           {scopeData?.scopebtn?.buttontext &&
             (enable_disable_download_pros ? (
-              <div className="flex items-center justify-center md:justify-left">
+              <div className="flex items-center justify-center md:justify-start">
                 <CommonLeadPopup
                 buttonText={scopeData.scopebtn.buttontext || "Download Prospectus"}
                 buttonClassName="inline-block px-6 py-2.5 text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
