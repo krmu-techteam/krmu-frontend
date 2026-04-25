@@ -123,7 +123,7 @@ const HeroBanner = ({
                   playIcon={false}
                 />
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-row gap-4 items-stretch lg:ml-10 flex-shrink-0 w-full md:w-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch lg:ml-10 flex-shrink-0 w-full md:w-auto">
                   <div className="bg-white border-[1.2px] border-[#e61f21] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
                      <p className="text-3xl font-semibold text-[#e61f21]">
                         {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
@@ -140,13 +140,15 @@ const HeroBanner = ({
                         {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
                      </p>
                   </div>
-                  <div className="sm:col-span-2 md:col-span-1 bg-white border-[1.2px] border-[#16a34a] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 text-center transition-transform hover:scale-105 duration-300">
-                     <p className="text-3xl font-semibold text-[#16a34a]">
-                        {dreamcareerSection?.placementassistnum || "100%"}
-                     </p>
-                     <p className="text-md font-semibold text-[#555] capitalize mt-1">
-                        {dreamcareerSection?.placementassisttitle || "Placement Assist"}
-                     </p>
+                  <div className="sm:col-span-2 flex justify-center">
+                    <div className="bg-white border-[1.2px] border-[#16a34a] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 text-center transition-transform hover:scale-105 duration-300">
+                       <p className="text-3xl font-semibold text-[#16a34a]">
+                          {dreamcareerSection?.placementassistnum || "100%"}
+                       </p>
+                       <p className="text-md font-semibold text-[#555] capitalize mt-1">
+                          {dreamcareerSection?.placementassisttitle || "Placement Assist"}
+                       </p>
+                    </div>
                   </div>
                 </div>
               </div>
