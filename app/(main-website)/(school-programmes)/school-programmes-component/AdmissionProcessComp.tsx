@@ -24,7 +24,7 @@ const AdmissionProcessComp = ({
   admisbtn,
 }: Props) => {
   return (
-    <section className="prog-global-padding bg-[#f9f9f9]">
+    <section className="prog-global-padding bg-[#f9f9f9] pb-20">
       <div className="common-prog-container">
         <h2 className="heading mb-2">
           {heading} {highlight}

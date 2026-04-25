@@ -94,7 +94,7 @@ const ProgrammeStructure = ({
                     {currbtn?.buttontext}
                   </span>
                 }
-                buttonClassName="px-8 py-3 text-base font-semibold text-white bg-[#0a41a1] hover:bg-[#083582] rounded-md transition-all duration-300 active:scale-[0.98] flex items-center justify-center"
+                buttonClassName="px-8 py-3 text-base font-semibold text-black bg-transparent hover:bg-transparent rounded-md transition-all duration-300 active:scale-[0.98] flex items-center justify-center border border-gray-300"
                 redirectUrl={currbtn?.buttonlink || "#"}
                 form_name="Programme Handbook"
               />
@@ -103,7 +103,7 @@ const ProgrammeStructure = ({
         </div>
 
         {/* Unified Navigation Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-4 mb-4 border border-gray-200 bg-white/80 backdrop-blur-md sticky top-0 z-10 transition-all duration-300 rounded-sm">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-4 mb-4 sticky top-0 z-10 transition-all duration-300 rounded-sm">
           {/* Year Navigation */}
           <div className="flex flex-col items-center gap-2">
             <TabsList className="bg-gray-100/80 p-1 h-auto rounded-sm border border-gray-200/50 shadow-inner">
@@ -226,7 +226,7 @@ const ProgrammeStructure = ({
                             </div>
 
                             {/* Semester Action Buttons */}
-                            <div className="flex flex-wrap items-center justify-end gap-4 mt-6 pt-6">
+                            <div className="flex flex-wrap items-center justify-center gap-4 mt-6 pt-6">
                               {sem.pdfbtns?.map((btn) => {
                                 const text = btn?.buttontext?.toLowerCase() || "";
                                 const openElectiveKeywords = ["open elective", "open electives", "value added", "value added courses"];
@@ -241,8 +241,8 @@ const ProgrammeStructure = ({
                                 const btnClass = `flex items-center gap-2 text-md font-semibold capitalize px-6 py-3 
                                   rounded-sm shadow-sm transition-all duration-300 border
                                   ${isHandbook 
-                                    ? "bg-[#0a41a1] text-white border-[#0a41a1] hover:bg-[#083582] hover:-translate-y-1" 
-                                    : "bg-[#0a41a1] text-white border-gray-200 hover:bg-[#0a41a1]/90  hover:-translate-y-1"} `;
+                                    ? "bg-transparent text-black border-gray-300 hover:bg-gray-300 hover:-translate-y-1" 
+                                    : "bg-transparent text-black border-gray-300 hover:bg-gray-300  hover:-translate-y-1"} `;
 
                                 const btnContent = (
                                   <span className="flex items-center gap-2">

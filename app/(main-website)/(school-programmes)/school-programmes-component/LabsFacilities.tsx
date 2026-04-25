@@ -29,14 +29,14 @@ const LabsFacilities = ({
 }: Props) => {
   // Staging Images for Labs (Design reference)
   const labStagingImages = [
-    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Whats_App_Image_2026_04_25_at_14_13_46_1_d7ac2ee67c.jpeg",
-    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Whats_App_Image_2026_04_25_at_14_13_45_68bcadfc15.jpeg",
-    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Whats_App_Image_2026_04_25_at_14_13_46_ad8b7eae5d.jpeg",
+    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/technology_8b0b4c04a3.png",
+    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/artificial_intelligence_0117b8b3e9.png",
+    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/social_2e5de5b706.png",
   ];
 
   return (
     <>
-      <section className="prog-global-padding bg-white">
+      <section className="prog-global-padding bg-[#f9f9f9] pb-8">
         <div className="max-w-[1440px] mx-auto w-full px-2.5 sm:px-4">
           {/* <div className="w-1/2 hidden lg:block">
             {labimg?.url && (
@@ -68,15 +68,15 @@ const LabsFacilities = ({
                       key={lab?.id}
                       className="group bg-white rounded-md overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full"
                     >
-                      <div className="relative h-[160px] w-full overflow-hidden bg-[#f8f9fa] flex items-center justify-center">
+                      <div className="relative h-[120px] w-full overflow-hidden flex items-center justify-center">
                         <Image
                           fill
                           src={labImage}
                           alt={lab?.title}
-                          className="object-contain p-6 group-hover:scale-105 transition-transform duration-700"
+                          className="object-contain px-10 pt-10 pb-0 group-hover:scale-105 transition-transform duration-700"
                         />
                       </div>
-                      <div className="p-6 flex-1 flex flex-col items-center text-center">
+                      <div className="px-5 py-4 flex-1 flex flex-col items-center text-center">
                         <h5 className="font-bold mb-3 text-xl text-black leading-tight">
                           {lab?.title}
                         </h5>

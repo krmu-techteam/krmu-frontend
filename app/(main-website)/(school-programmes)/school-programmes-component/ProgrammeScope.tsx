@@ -28,7 +28,7 @@ const ProgrammeScope = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="bg-[#0a41a1] py-12 md:py-20 lg:py-24">
+    <section className="bg-[#0a41a1] py-12 md:py-16 lg:py-20">
       <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-10 lg:gap-20">
         
         {/* Left column: Image */}
@@ -45,7 +45,7 @@ const ProgrammeScope = async ({
                 scopeData?.scopeimg?.url && (
                   <Image
                     fill
-                    src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
+                    src={`https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/program_scope_img_71b0352a8c.png`}
                     className="object-cover"
                     alt="programme scope"
                   />
@@ -89,14 +89,14 @@ const ProgrammeScope = async ({
             (enable_disable_download_pros ? (
               <CommonLeadPopup
                 buttonText={scopeData.scopebtn.buttontext || "Download Prospectus"}
-                buttonClassName="inline-block px-10 py-3 text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
+                buttonClassName="inline-block px-6 py-2.5 text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
                 redirectUrl={scopeData?.scopebtn?.buttonlink || "#"}
                 form_name="Download Prospectus"
               />
             ) : (
               <Link
                 href={scopeData?.scopebtn?.buttonlink || "#"}
-                className="inline-block px-10 py-3 text-[18px] font-medium border-2 border-white rounded-xl hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
+                className="inline-block px-6 py-2.5 text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >

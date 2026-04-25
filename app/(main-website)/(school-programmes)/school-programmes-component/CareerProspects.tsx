@@ -24,7 +24,7 @@ const CareerProspects = ({
 }: Props) => {
   return (
     <>
-      <section className="prog-global-padding">
+      <section className="prog-global-padding py-12 md:py-20">
         <div className="max-w-[1440px] mx-auto w-full px-2.5 md:px-4">
           <div className="flex flex-col lg:flex-row items-stretch gap-8">
             <div className="w-full xl:w-1/2 flex flex-col">
@@ -59,7 +59,7 @@ const CareerProspects = ({
             </div>
           </div>
         </div>
-        <div className="max-w-[1320px] mx-auto w-full flex justify-center mt-8">
+        <div className="max-w-[1320px] mx-auto w-full flex justify-center mt-12">
           {(btn?.buttonclass || btn?.buttonlink) && (
             <Link
               href={btn?.buttonlink || "#"}

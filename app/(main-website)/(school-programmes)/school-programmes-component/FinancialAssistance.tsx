@@ -32,9 +32,9 @@ const FinancialAssistance = ({
   const points = [point1, point2, point3, point4, point5, point6, point7].filter(Boolean);
 
   return (
-    <section className="prog-global-padding bg-[#f8f9fd]">
+    <section className="prog-global-padding bg-[#f8f9fd] py-12 md:pt-16 md:pb-20">
       <div className="max-w-[1440px] mx-auto w-full px-2.5 sm:px-4">
-        <div className="common-prog-container !max-w-4xl">
+        <div className="common-prog-container !max-w-7xl">
           <h2 className="heading">
             {heading}{" "}{highlightheading} 
           </h2>
@@ -42,16 +42,14 @@ const FinancialAssistance = ({
         </div>
 
         {/* Points Layout */}
-        <div className="mt-10 flex flex-col gap-6">
+        <div className="mt-10 flex flex-col gap-4">
           {/* Row 1: 4 Items */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {points.slice(0, 4).map((point, index) => (
               <div
                 key={index}
-                className="p-5 font-medium text-base text-[#0a41a1] text-center rounded-sm flex items-center justify-center bg-white h-full transition-all duration-300 hover:shadow-xl"
-                style={{
-                  boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-                }}
+                className="p-4 font-medium text-base text-gray-900 text-center rounded-sm flex items-center justify-center bg-white h-full transition-all duration-300 border border-gray-300"
+               
               >
                 {point}
               </div>
@@ -59,14 +57,12 @@ const FinancialAssistance = ({
           </div>
 
           {/* Row 2: 3 Items Centered */}
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             {points.slice(4).map((point, index) => (
               <div
                 key={index + 4}
-                className="p-5 font-medium text-base text-[#0a41a1] text-center rounded-sm flex items-center justify-center bg-white transition-all duration-300 hover:shadow-xl w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
-                style={{
-                  boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-                }}
+                className="p-4 font-medium text-base text-gray-900 text-center rounded-sm flex items-center justify-center bg-white transition-all duration-300  w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] border border-gray-300"
+               
               >
                 {point}
               </div>

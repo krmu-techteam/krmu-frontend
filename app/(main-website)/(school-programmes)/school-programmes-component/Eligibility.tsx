@@ -65,13 +65,13 @@ const Eligibility = ({
   return (
     <>
       <section
-        className={`${slug === "b-tech-cse" ? " pt-5 pb-10 md:pb-0 px-4 sm:px-0" : "px-4"} relative z-20 md:mt-[-64px] mb-10`}
+        className={`bg-gray-50 ${slug === "b-tech-cse" ? " pt-5 pb-10 md:pb-5 px-4 sm:px-4" : "px-4"} relative z-10 mb-5 border-b-4 border-gray-100`}
       >
         <div
           className={`${slug === "b-tech-cse" ? "max-w-[1440px]" : "max-w-[1664px] md:px-4"} w-full mx-auto`}
         >
           {slug === "b-tech-cse" ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full -mt-[2%]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
               <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
                 <Calendar size={32} color="#00a1e4" className="flex-shrink-0" />
                 <div className="flex flex-col">

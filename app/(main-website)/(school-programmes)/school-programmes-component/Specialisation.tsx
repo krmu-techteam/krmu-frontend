@@ -40,7 +40,7 @@ const Specialisation = ({
   };
 
   return (
-    <section className="prog-global-padding">
+    <section className="prog-global-padding pb-20">
       <div className="max-w-[1440px] mx-auto w-full px-2.5 md:px-4">
         <div className="common-prog-container">
           <h2 className="heading">
