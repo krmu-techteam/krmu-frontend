@@ -47,7 +47,7 @@ export default function YoutubePopup({
         <img
           src={thumbnailUrl}
           alt={title}
-          className="w-full h-full rounded-2xl"
+          className="w-full h-full rounded-md object-cover"
         />
 
         {/* Play Button */}

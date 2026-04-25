@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -8,8 +11,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import { ButtonType } from "@/lib/types/common";
 import { Year } from "@/lib/types/school-programme";
-import Link from "next/link";
 import CommonLeadPopup from "../../components/CommonLeadPopup";
+import { BookOpen, FileText, Download } from "lucide-react";
 
 type Props = {
   programStruct: Year[];
@@ -17,14 +20,9 @@ type Props = {
   currFormId: string;
   currFormContainerId: string;
   isYear: boolean;
+  heading?: string;
+  highlight?: string;
 };
-const getDownProsSettings = await getDownloadProspectusSetting();
-
-const enable_disable_handbook =
-  getDownProsSettings?.programme_handbook_enable_disable;
-const enable_disable_open_elective =
-  getDownProsSettings?.open_elective_enable_disable;
-const enable_disable_minor = getDownProsSettings?.minor_enable_disable;
 
 const ProgrammeStructure = ({
   programStruct,
@@ -32,338 +30,251 @@ const ProgrammeStructure = ({
   currFormId,
   currFormContainerId,
   isYear,
+  heading,
+  highlight,
 }: Props) => {
+  const [activeYear, setActiveYear] = useState(
+    programStruct[0]?.year.toLowerCase().replace(" ", "") || ""
+  );
+
+  const [activeSemester, setActiveSemester] = useState(
+    programStruct[0]?.semester[0]?.semestername?.toLowerCase()?.replace(" ", "") || ""
+  );
+
+  const [settings, setSettings] = useState<any>(null);
+
+  // Fetch settings on mount
+  useEffect(() => {
+    const fetchSettings = async () => {
+      const data = await getDownloadProspectusSetting();
+      setSettings(data);
+    };
+    fetchSettings();
+  }, []);
+
+  // Sync semester when year changes
+  useEffect(() => {
+    const currentYearData = programStruct.find(
+      (y) => y.year.toLowerCase().replace(" ", "") === activeYear
+    );
+    if (currentYearData && currentYearData.semester.length > 0) {
+      setActiveSemester(
+        currentYearData.semester[0].semestername.toLowerCase().replace(" ", "")
+      );
+    }
+  }, [activeYear, programStruct]);
+
+  const currentYearDataForNav = programStruct.find(
+    (y) => y.year.toLowerCase().replace(" ", "") === activeYear
+  );
+
+  const enable_disable_handbook = settings?.programme_handbook_enable_disable;
+  const enable_disable_open_elective = settings?.open_elective_enable_disable;
+  const enable_disable_minor = settings?.minor_enable_disable;
+
   return (
     <div className="w-full">
-      <Tabs
-        defaultValue={
-          programStruct[0]?.year.toLowerCase().replace(" ", "") || ""
-        }
-        className="flex-row items-center"
-      >
-        {/* Years */}
-        <TabsList className="flex-col w-1/4 h-full bg-transparent">
-          {/* {(currbtn?.buttonclass || currbtn?.buttonlink) && (
-            <Link
-              href={currbtn?.buttonlink}
-              className={`p-2 sm:py-[15px] sm:px-[25px] inline-block font-normal rounded-[15px] text-xs sm:text-2xl w-full text-white bg-[#db2a1a] text-center mb-6 ${currbtn?.buttonclass}`}
-            >
-              {currbtn?.buttontext}
-            </Link>
-          )} */}
-
-          {currbtn?.buttonlink && (
-            <CommonLeadPopup
-              buttonText={currbtn?.buttontext}
-              buttonClassName={`p-2 sm:py-[15px] sm:px-[25px] inline-block font-normal rounded-[15px] text-xs sm:text-2xl w-full text-white bg-[#db2a1a] text-center mb-6`}
-              redirectUrl={currbtn?.buttonlink || "#"}
-              form_name="Programme Handbook"
-            />
+      <Tabs value={activeYear} onValueChange={setActiveYear} className="w-full">
+        {/* Header Section: Centered Heading & Handbook Button */}
+        <div className="flex flex-col items-center gap-4 mb-8">
+          {(heading || highlight) && (
+            <div className="text-center max-w-4xl">
+              <h2 className="text-[32px] md:text-[42px] font-bold text-black leading-tight">
+                {heading} {highlight}
+              </h2>
+            </div>
           )}
-          {/* {enable_disable_handbook === true ? (
-            <CommonLeadPopup
-              buttonText={currbtn?.buttontext}
-              buttonClassName={`p-2 sm:py-[15px] sm:px-[25px] inline-block font-normal rounded-[15px] text-xs sm:text-2xl w-full text-white bg-[#db2a1a] text-center mb-6`}
-              redirectUrl={currbtn?.buttonlink || "#"}
-              form_name="Programme Handbook"
-            />
-          ) : (
-            <Link
-              href={currbtn?.buttonlink || "#"}
-              className={`p-2 sm:py-[15px] sm:px-[25px] inline-block font-normal rounded-[15px] text-xs sm:text-2xl w-full text-white bg-[#db2a1a] text-center mb-6`}
-              target="_blank" rel="noopener noreferrer"
-            >
-              {currbtn?.buttontext}
-            </Link>
-          )} */}
+          
+          {currbtn?.buttonlink && (
+            <div className="flex-shrink-0">
+              <CommonLeadPopup
+                buttonText={
+                  <span className="flex items-center justify-center gap-2">
+                    <FileText className="w-5 h-5" />
+                    {currbtn?.buttontext}
+                  </span>
+                }
+                buttonClassName="px-8 py-3 text-base font-semibold text-white bg-[#0a41a1] hover:bg-[#083582] rounded-md transition-all duration-300 active:scale-[0.98] flex items-center justify-center"
+                redirectUrl={currbtn?.buttonlink || "#"}
+                form_name="Programme Handbook"
+              />
+            </div>
+          )}
+        </div>
 
-          {/* {enable_disable_handbook === true ? (
-            <PopupForm
-              formId={currFormId}
-              containerId={currFormContainerId}
-              buttonClass="p-2 sm:py-[15px] sm:px-[25px] inline-block font-normal rounded-[15px] text-xs sm:text-2xl w-full text-white bg-[#db2a1a] text-center mb-6"
-              buttonText={currbtn?.buttontext}
-            />
-          ) : (
-            <Link
-              href={currbtn?.buttonlink || "#"}
-              className={`p-2 sm:py-[15px] sm:px-[25px] inline-block font-normal rounded-[15px] text-xs sm:text-2xl w-full text-white bg-[#db2a1a] text-center mb-6 ${
-                currbtn?.buttonclass || ""
-              }`}
-              target="_blank" rel="noopener noreferrer"
-            >
-              {currbtn?.buttontext}
-            </Link>
-          )} */}
+        {/* Unified Navigation Bar */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-4 mb-4 border border-gray-200 bg-white/80 backdrop-blur-md sticky top-0 z-10 transition-all duration-300 rounded-sm">
+          {/* Year Navigation */}
+          <div className="flex flex-col items-center gap-2">
+            <TabsList className="bg-gray-100/80 p-1 h-auto rounded-sm border border-gray-200/50 shadow-inner">
+              {programStruct.map((year) => {
+                const value = year.year.toLowerCase().replace(" ", "");
+                return (
+                  <TabsTrigger
+                    key={year.id}
+                    value={value}
+                    className="px-6 py-2 text-sm md:text-base font-medium transition-all duration-300 rounded-sm
+                      data-[state=active]:bg-white data-[state=active]:text-[#0a41a1] data-[state=active]:shadow-md
+                      hover:text-[#0a41a1] text-gray-500 cursor-pointer"
+                  >
+                    {year.year}
+                  </TabsTrigger>
+                );
+              })}
+            </TabsList>
+          </div>
 
-          {/* {currbtn && (
-            <>
-              {currbtn.buttonclass === "progPopup" ? (
-                <Popup
-                  buttonText={currbtn.buttontext || "Click Here"}
-                  buttonClass={`p-2 sm:py-[15px] sm:px-[25px] inline-block font-normal rounded-[15px] text-xs sm:text-2xl w-full text-white bg-[#db2a1a]  text-center mb-6 ${currbtn?.buttonclass}`}
-                  buttonIcon={null} // add an icon like <ArrowRight /> if needed
-                  formBodyTextColor="#000"
-                >
-                  <p>
-                    This is the content inside the popup for{" "}
-                    {currbtn.buttontext}.
-                  </p>
-                </Popup>
-              ) : currbtn.buttonlink ? (
-                <Link
-                  href={currbtn.buttonlink}
-                  className={`p-2 sm:py-[15px] sm:px-[25px] inline-block font-normal rounded-[15px] text-xs sm:text-2xl w-full text-white bg-[#db2a1a] text-center mb-6 ${
-                    currbtn.buttonclass || ""
-                  }`}
-                  target="_blank" rel="noopener noreferrer"
-                >
-                  {currbtn.buttontext}
-                </Link>
-              ) : null}
-            </>
-          )} */}
+          {/* Divider */}
+          {!isYear && (currentYearDataForNav?.semester.length ?? 0) > 0 && (
+            <div className="hidden md:block h-12 w-[1px] bg-gray-200 mx-4 opacity-50" />
+          )}
 
-          {programStruct.map((year) => {
-            const value = year.year.toLowerCase().replace(" ", "");
-            return (
-              <TabsTrigger
-                key={year.id}
-                value={value}
-                className="relative text-xs md:text-xl cursor-pointer data-[state=active]:shadow-none data-[state=active]:text-[#0a41a1]
-                  data-[state=active]:after:content-['']
-                  data-[state=active]:after:absolute
-                  data-[state=active]:after:top-1/2
-                  data-[state=active]:after:translate-y-[-50%]
-                  data-[state=active]:after:left-full
-                  data-[state=active]:after:ml-[5px]
-                  data-[state=active]:md:after:w-[100px]
-                  data-[state=active]:after:w-[20px]
-                  data-[state=active]:after:h-[2px]
-                  data-[state=active]:after:bg-[#0a41a1]"
+          {/* Semester Navigation (Synced with activeYear) */}
+          {!isYear && (currentYearDataForNav?.semester.length ?? 0) > 0 && (
+            <div className="flex flex-col items-center gap-2">
+              <Tabs 
+                value={activeSemester} 
+                onValueChange={setActiveSemester}
               >
-                {year.year}
-              </TabsTrigger>
-            );
-          })}
-        </TabsList>
+                <TabsList className="bg-blue-50/50 p-1 h-auto rounded-sm border border-blue-100/50 shadow-inner">
+                  {currentYearDataForNav?.semester.map((sem) => {
+                      const semValue = sem?.semestername?.toLowerCase()?.replace(" ", "");
+                      return (
+                        <TabsTrigger
+                          key={sem.id}
+                          value={semValue}
+                          className="px-8 py-2 text-sm md:text-base font-medium transition-all duration-300 rounded-sm
+                            data-[state=active]:bg-[#0a41a1] data-[state=active]:text-white data-[state=active]:shadow-lg
+                            hover:text-[#0a41a1] text-gray-500 cursor-pointer"
+                        >
+                          {sem.semestername}
+                        </TabsTrigger>
+                      );
+                    })}
+                </TabsList>
+              </Tabs>
+            </div>
+          )}
+        </div>
 
-        {/* Year Content */}
-        <div className="w-3/4">
+        {/* Dynamic Content Area */}
+        <div className="min-h-[400px]">
           {programStruct.map((year) => {
             const yearValue = year.year.toLowerCase().replace(" ", "");
             return (
               <TabsContent
                 key={year.id}
                 value={yearValue}
-                className="min-h-[520px] h-full py-10"
+                className="mt-0 focus-visible:outline-none"
               >
                 {year.semester.length > 0 ? (
-                  <Tabs
-                    defaultValue={
-                      year.semester[0]?.semestername
-                        .toLowerCase()
-                        .replace(" ", "") || ""
-                    }
-                  >
-                    {/* Semester Tabs */}
-                    <div
-                      className={`flex mobsemtab sm:ml-0 justify-center items-center ${
-                        isYear ? "hidden" : ""
-                      }`}
-                    >
-                      <TabsList className="bg-[#0a41a1] p-2.5 h-16 mobsemtablist">
-                        {year.semester.map((sem) => {
-                          const semValue = sem?.semestername
-                            ?.toLowerCase()
-                            ?.replace(" ", "");
-                          return (
-                            <TabsTrigger
-                              key={sem.id}
-                              value={semValue}
-                              className="text-white data-[state=active]:text-black cursor-pointer py-2.5 px-6 text-lg"
-                            >
-                              {sem.semestername}
-                            </TabsTrigger>
-                          );
-                        })}
-                      </TabsList>
-                    </div>
-
-                    {/* Semester Content */}
-                    <div className="p-6 mt-12">
+                  <Tabs value={activeSemester} onValueChange={setActiveSemester} className="space-y-8">
+                    <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
                       {year?.semester?.map((sem) => {
-                        const semValue = sem.semestername
-                          ?.toLowerCase()
-                          ?.replace(" ", "");
+                        const semValue = sem.semestername?.toLowerCase()?.replace(" ", "");
                         return (
-                          <TabsContent key={sem.id} value={semValue}>
-                            <div className="grid md:grid-cols-2 gap-x-10">
+                          <TabsContent key={sem.id} value={semValue} className="mt-0 focus-visible:outline-none outline-none">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                               {sem.subjects.map((sub) => (
                                 <div
                                   key={sub.id}
-                                  className="mb-[15px] pb-[15px] border-b border-[#ebebeb]"
+                                  className="group flex flex-col bg-white border border-gray-200 rounded-sm p-4 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-200 hover:-translate-y-2"
                                 >
-                                  {sub.course_name &&
-                                  sub.course_name.length > 0 &&
-                                  sub.course_name[0]?.sub_name ? (
-                                    // ✅ Show Accordion if course_name exists
-                                    <Accordion
-                                      type="single"
-                                      collapsible
-                                      className="w-full subjAccordion"
-                                    >
-                                      {sub.course_name.map((course, index) => (
-                                        <AccordionItem
-                                          key={course.id || index}
-                                          value={`item-${sub.id}-${index}`}
+                                  <div className="flex flex-row gap-4 h-full">
+                                    <div className="flex-shrink-0 w-10 h-10 rounded-md bg-blue-50 flex items-center justify-center text-[#0a41a1] group-hover:bg-[#0a41a1] group-hover:text-white transition-all duration-500 shadow-sm border border-blue-100/50">
+                                      <BookOpen className="w-6 h-6" />
+                                    </div>
+                                    <div className="flex-grow">
+                                      {sub.course_name &&
+                                      sub.course_name.length > 0 &&
+                                      sub.course_name[0]?.sub_name ? (
+                                        <Accordion
+                                          type="single"
+                                          collapsible
+                                          className="w-full"
                                         >
-                                          <AccordionTrigger className="text-sm md:text-lg font-medium subAccPaneltitle hover:no-underline">
-                                            <h5 className="text-xs md:text-xl font-medium cursor-pointer">
-                                              {sub.subjectname}
-                                            </h5>
-                                          </AccordionTrigger>
-                                          <AccordionContent className="whitespace-pre-line text-sm text-gray-700 subAccPanelContent">
-                                            <span
-                                              dangerouslySetInnerHTML={{
-                                                __html: course.sub_name,
-                                              }}
-                                            />
-                                          </AccordionContent>
-                                        </AccordionItem>
-                                      ))}
-                                    </Accordion>
-                                  ) : (
-                                    // ❌ Fallback if no course found
-                                    <h5 className="text-xs md:text-xl font-medium cursor-pointer">
-                                      {sub.subjectname}
-                                    </h5>
-                                  )}
-
-                                  {/* <div className="group">
-                                    <h5 className="text-xs md:text-xl font-medium cursor-pointer">
-                                      {sub.subjectname}
-                                    </h5>
-                                    <ul className="text-sm pl-2 hidden group-hover:block">
-                                      {sub?.course_name &&
-                                        sub.course_name.map((course) => (
-                                          
-                                          <li key={course?.id}>
-                                            {course?.sub_name}
-                                          </li>
-                                        ))}
-                                    </ul>
-                                  </div> */}
-
-                                  {/* <h5 className="text-xs md:text-xl font-medium">
-                                    {sub.subjectname}
-                                    <ul className="text-xs pl-2">
-                                      {sub?.course_name &&
-                                        sub?.course_name?.map((course) => {
-                                          return (
-                                            <li key={course?.id}>
-                                              {course?.sub_name}
-                                            </li>
-                                          );
-                                        })}
-                                    </ul>
-                                  </h5> */}
+                                          {sub.course_name.map((course, index) => (
+                                            <AccordionItem
+                                              key={course.id || index}
+                                              value={`item-${sub.id}-${index}`}
+                                              className="border-none"
+                                            >
+                                              <AccordionTrigger className="py-0 text-left hover:no-underline flex justify-between gap-2 group-data-[state=open]:pb-3">
+                                                <h5 className="text-[17px] md:text-[19px] font-semibold text-gray-800 group-hover:text-[#0a41a1] transition-colors leading-tight">
+                                                  {sub.subjectname}
+                                                </h5>
+                                              </AccordionTrigger>
+                                              <AccordionContent className="mt-4 pt-5 border-t border-gray-100 whitespace-pre-line text-sm md:text-md text-gray-800 leading-relaxed bg-gray-100 p-5 rounded-md italic">
+                                                <div
+                                                  dangerouslySetInnerHTML={{
+                                                    __html: course.sub_name,
+                                                  }}
+                                                />
+                                              </AccordionContent>
+                                            </AccordionItem>
+                                          ))}
+                                        </Accordion>
+                                      ) : (
+                                        <h5 className="text-md md:text-lg font-semibold text-gray-800 group-hover:text-[#0a41a1] transition-colors leading-tight">
+                                          {sub.subjectname}
+                                        </h5>
+                                      )}
+                                    </div>
+                                  </div>
                                 </div>
                               ))}
                             </div>
-                            <div className="flex items-center justify-end mt-4">
+
+                            {/* Semester Action Buttons */}
+                            <div className="flex flex-wrap items-center justify-end gap-4 mt-6 pt-6">
                               {sem.pdfbtns?.map((btn) => {
-                                const text =
-                                  btn?.buttontext?.toLowerCase() || "";
-
-                                // Keyword groups
-                                const openElectiveKeywords = [
-                                  "open elective",
-                                  "open electives",
-                                  "value added",
-                                  "value added courses",
-                                ];
+                                const text = btn?.buttontext?.toLowerCase() || "";
+                                const openElectiveKeywords = ["open elective", "open electives", "value added", "value added courses"];
                                 const minorKeywords = ["minor", "minors"];
+                                
+                                const isHandbook = text.includes("handbook");
+                                const hasOpenElectiveKeyword = openElectiveKeywords.some((word) => text.includes(word));
+                                const hasMinorKeyword = minorKeywords.some((word) => text.includes(word));
 
-                                // Check if text includes any keyword from each group
-                                const hasOpenElectiveKeyword =
-                                  openElectiveKeywords.some((word) =>
-                                    text.includes(word),
-                                  );
-                                const hasMinorKeyword = minorKeywords.some(
-                                  (word) => text.includes(word),
+                                const shouldShowPopup = (isHandbook && enable_disable_handbook) || (hasOpenElectiveKeyword && enable_disable_open_elective) || (hasMinorKeyword && enable_disable_minor);
+
+                                const btnClass = `flex items-center gap-2 text-md font-semibold capitalize px-6 py-3 
+                                  rounded-sm shadow-sm transition-all duration-300 border
+                                  ${isHandbook 
+                                    ? "bg-[#0a41a1] text-white border-[#0a41a1] hover:bg-[#083582] hover:-translate-y-1" 
+                                    : "bg-[#0a41a1] text-white border-gray-200 hover:bg-[#0a41a1]/90  hover:-translate-y-1"} `;
+
+                                const btnContent = (
+                                  <span className="flex items-center gap-2">
+                                    {isHandbook ? <FileText className="w-5 h-5" /> : <Download className="w-5 h-5" />}
+                                    {btn?.buttontext}
+                                  </span>
                                 );
 
-                                // Decide if popup should show
-                                const shouldShowPopup =
-                                  (hasOpenElectiveKeyword &&
-                                    enable_disable_open_elective) ||
-                                  (hasMinorKeyword && enable_disable_minor);
-
-                                // Render conditionally
                                 if (shouldShowPopup) {
                                   return (
                                     <CommonLeadPopup
                                       key={btn?.id}
-                                      buttonText={btn?.buttontext}
-                                      buttonClassName={`text-xs sm:text-xl p-5 font-semibold text-center border border-[#d5d5d5] text-[#dc2e25] bg-[#f0f0f0] rounded-[20px] inline-block`}
+                                      buttonText={btnContent}
+                                      buttonClassName={btnClass}
                                       redirectUrl={btn?.buttonlink || "#"}
-                                      form_name={btn?.buttontext || ""}
+                                      form_name={btn?.buttontext || "Action"}
                                     />
                                   );
                                 }
-                                // if (shouldShowPopup) {
-                                //   return (
-                                //     <PopupForm
-                                //       key={btn?.id}
-                                //       formId={btn?.popupFormId}
-                                //       containerId={btn?.containerPopupFormId}
-                                //       buttonClass="text-xs sm:text-xl p-5 font-semibold text-center border border-[#d5d5d5] text-[#dc2e25] bg-[#f0f0f0] rounded-[20px] inline-block"
-                                //       buttonText={btn?.buttontext}
-                                //     />
-                                //   );
-                                // }
 
                                 return (
-                                  <CommonLeadPopup
+                                  <a
                                     key={btn?.id}
-                                    buttonText={btn?.buttontext}
-                                    buttonClassName={`text-xs sm:text-xl p-5 font-semibold text-center border border-[#d5d5d5] text-[#dc2e25] bg-[#f0f0f0] rounded-[20px] inline-block ${
-                                      btn?.buttonclass || ""
-                                    }`}
-                                    redirectUrl={btn?.buttonlink || "#"}
-                                    form_name={btn?.buttontext}
-                                  />
-                                  // <Link
-                                  //   key={btn?.id}
-                                  //   href={btn?.buttonlink || "#"}
-                                  //   className={`text-xs sm:text-xl p-5 font-semibold text-center border border-[#d5d5d5] text-[#dc2e25] bg-[#f0f0f0] rounded-[20px] inline-block ${
-                                  //     btn?.buttonclass || ""
-                                  //   }`}
-                                  // >
-                                  //   {btn?.buttontext}
-                                  // </Link>
+                                    href={btn?.buttonlink || "#"}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={btnClass}
+                                  >
+                                    {btnContent}
+                                  </a>
                                 );
                               })}
-
-                              {/* {sem.pdfbtns?.map((btn) => (
-                                <PopupForm
-                                  key={btn?.id}
-                                  formId={btn?.popupFormId}
-                                  containerId={btn?.containerPopupFormId}
-                                  buttonClass="text-xs sm:text-xl p-5 font-semibold text-center border border-[#d5d5d5] text-[#dc2e25] bg-[#f0f0f0] rounded-[20px] inline-block"
-                                  buttonText={btn?.buttontext}
-                                />
-                                // <Link
-                                //   key={btn.id}
-                                //   href={btn.buttonlink || "#"}
-                                //   className={`text-xs sm:text-xl p-5 font-semibold text-center border border-[#d5d5d5] text-[#dc2e25] bg-[#f0f0f0] rounded-[20px] inline-block ${
-                                //     btn.buttonclass || ""
-                                //   }`}
-                                // >
-                                //   {btn.buttontext}
-                                // </Link>
-                              ))} */}
                             </div>
                           </TabsContent>
                         );
@@ -371,8 +282,9 @@ const ProgrammeStructure = ({
                     </div>
                   </Tabs>
                 ) : (
-                  <div className="text-center text-gray-400">
-                    No semesters available
+                  <div className="flex flex-col items-center justify-center py-24 text-gray-400 bg-gray-50/50 rounded-3xl border-2 border-dashed border-gray-200">
+                    <BookOpen className="w-16 h-16 mb-6 opacity-20" />
+                    <p className="text-xl font-medium tracking-tight">No semesters available for this selection</p>
                   </div>
                 )}
               </TabsContent>

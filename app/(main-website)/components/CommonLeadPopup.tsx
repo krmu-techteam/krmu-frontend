@@ -1,11 +1,11 @@
 "use client";
 
 import { FETCH_STRAPI_URL } from "@/app/constant";
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, ReactNode } from "react";
 import { createPortal } from "react-dom";
 
 type Props = {
-  buttonText: string;
+  buttonText: ReactNode;
   buttonClassName?: string;
   redirectUrl: string;
   form_name: string;

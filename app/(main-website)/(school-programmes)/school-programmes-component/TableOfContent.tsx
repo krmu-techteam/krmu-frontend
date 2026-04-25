@@ -25,8 +25,8 @@ const TableOfContent = ({
   return (
     <>
       <section className="py-[50px]">
-        <div className="flex items-center lg:gap-6">
-          <div className="lg:w-2/4 xl:w-1/4 hidden lg:block relative h-full min-h-[796px]">
+        <div className="flex items-center">
+          <div className="lg:w-[30%] xl:w-[25%] hidden lg:block relative h-full min-h-[720px]">
               {tocimg?.url && (
                 <Image
                   src={`${STRAPI_URL}${tocimg?.url}`}
@@ -37,12 +37,11 @@ const TableOfContent = ({
               )}
            
           </div>
-          <div className="w-full lg:w-2/4 xl:w-3/4">
+          <div className="w-full lg:w-[65%] xl:w-[70%]">
             <div className="mx-auto max-w-6xl">
-              <div className="text-center mb-20">
-                <h3 className="text-[40px]  font-semibold mb-5 text-[#0a41a1]">
-                  {heading}
-                  <span className="text-[#e61f21]">{highlight}</span>
+              <div className="text-center mb-12">
+                <h3 className="text-[40px]  font-semibold mb-4 text-balck">
+                  {heading} {highlight} 
                 </h3>
                 <p className="text-base">{desc}</p>
               </div>
@@ -54,11 +53,11 @@ const TableOfContent = ({
                   
                 </div>
               </div>
-              <div className="flex items-center justify-center mt-10 md:mt-20">
+              <div className="flex items-center justify-center mt-10">
                 {(tocbtn?.buttonclass || tocbtn?.buttonlink) && (
                   <Link
                     href={tocbtn?.buttonlink}
-                    className={`${tocbtn?.buttonclass} p-4 text-white bg-[#0a41a1] text-base rounded-[8px]`}
+                    className={`${tocbtn?.buttonclass} px-6 py-3 text-white bg-[#0a41a1] text-base rounded-md`}
                   >
                     {tocbtn?.buttontext}
                   </Link>

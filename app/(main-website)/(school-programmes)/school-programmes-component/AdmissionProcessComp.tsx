@@ -26,8 +26,8 @@ const AdmissionProcessComp = ({
   return (
     <section className="prog-global-padding bg-[#f9f9f9]">
       <div className="common-prog-container">
-        <h2 className="heading">
-          {heading} <span className="prog-highlight-text">{highlight}</span>
+        <h2 className="heading mb-2">
+          {heading} {highlight}
         </h2>
         <p className="sub-heading">{desc}</p>
       </div>
@@ -164,7 +164,7 @@ const AdmissionProcessComp = ({
         <button
           className={`${
             admisbtn.buttonclass || ""
-          } text-white bg-[#db2a1a] p-[15px] flex items-center justify-around max-w-3xs w-full rounded-lg font-semibold mt-10 cursor-pointer`}
+          } text-white bg-[#db2a1a] px-6 py-3 flex items-center justify-around gap-4 rounded-md font-semibold mt-10 cursor-pointer text-lg`}
         >
           <span>{admisbtn.buttontext}</span> <ArrowRight />
         </button>
