@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ChevronDown, Search } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronRight, Search } from "lucide-react";
 import { useEffect, useRef, useState, useCallback } from "react";
 import {
   getAllSchoolsInfo,
@@ -21,6 +21,60 @@ import Image from "next/image";
 import Link from "next/link";
 import ProgrammesHero from "./ProgrammesHero";
 // import { Skeleton } from "@/components/ui/skeleton";
+
+type ZenithCriteria = {
+  id: number;
+  eligibility_criteria: string;
+  Duration: string;
+  semester_i: string;
+  semester_ii: string;
+  programme_fee_per_year: string;
+  eligibility_utm_links: string;
+  programme_offered_number: string;
+};
+
+type ZenithProgrammeItem = {
+  id: number;
+  documentId: string;
+  title: string;
+  programmeslug: string;
+  criteria: ZenithCriteria;
+};
+
+const zenithProgrammes: ZenithProgrammeItem[] = [
+  {
+    id: 9991,
+    documentId: "zenith-1",
+    title: "BTech AI",
+    programmeslug:
+      "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026",
+    criteria: {
+      id: 1,
+      eligibility_criteria: "",
+      Duration: "4 Years",
+      semester_i: "",
+      semester_ii: "",
+      programme_fee_per_year: "4.75L ",
+      eligibility_utm_links: "",
+      programme_offered_number: "",
+    },
+  },
+];
+
+const schoolOrderMap: Record<string, number> = {
+  "School of Engineering & Technology": 1,
+  "School of Management and Commerce": 2,
+  "School of Legal Studies": 3,
+  "School of Medical & Allied Sciences": 4,
+  "School of Liberal Arts ": 5,
+  "School of Basic & Applied Sciences": 6,
+  "School of Architecture & Design": 7,
+  "School of Physiotherapy and Rehabilitation Sciences": 8,
+  "School of Emerging Media and Creator Economy": 9,
+  "School of Education": 10,
+  "School of Agricultural Sciences": 12,
+  "School of Hotel Management & Catering Technology": 13,
+};
 
 export interface Criteria {
   id: number;
@@ -79,6 +133,7 @@ const ProgrammesSearch = () => {
   // keep refs of dropdown values
   const schoolRefValue = useRef("soet");
   const degreeRefValue = useRef("undergraduate-programmes");
+  const ZENITH_SLUG = "zenith-ai";
 
   useEffect(() => {
     schoolRefValue.current = selectedSchool;
@@ -171,6 +226,7 @@ const ProgrammesSearch = () => {
   // --------------------------------------------
   // Debounced search effect
   // --------------------------------------------
+
   const fetchProgrammes = useCallback(
     async (
       reset: boolean = false,
@@ -181,7 +237,20 @@ const ProgrammesSearch = () => {
       let newData: ProgrammeItem[] = [];
 
       const limit = loadAll ? 1000 : 7; // fetch 7 to detect "has more"
+      if (schoolRefValue.current === ZENITH_SLUG) {
+        setShowLoadMore(false);
 
+        let filtered = zenithProgrammes;
+
+        if (query.length > 0) {
+          filtered = zenithProgrammes.filter((item) =>
+            normalize(item.title).includes(normalize(query)),
+          );
+        }
+
+        setProgrammes(filtered);
+        return;
+      }
       if (query.length > 0) {
         // SEARCH MODE
         if (degreeRefValue.current === "doctoral-programmes") {
@@ -250,8 +319,14 @@ const ProgrammesSearch = () => {
     };
   }, [searchQuery, selectedSchool, selectedDegree, fetchProgrammes]);
 
+  const sortedSchools = [...allSchools].sort((a, b) => {
+    const orderA = schoolOrderMap[a.schoolname] ?? Number.MAX_SAFE_INTEGER;
+    const orderB = schoolOrderMap[b.schoolname] ?? Number.MAX_SAFE_INTEGER;
+    return orderA - orderB;
+  });
+
   return (
-    <section className="pt-40 pb-[50px] px-4 bg-[#f9f9f9]">
+    <section className="pt-40 pb-[50px] px-4 bg-[#f9f9f9] temp-class">
       <ProgrammesHero />
 
       <div className="max-w-[1320px] mx-auto w-full">
@@ -268,33 +343,56 @@ const ProgrammesSearch = () => {
                 }}
               >
                 <span className="text-lg font-semibold">
+                  {selectedSchool === ZENITH_SLUG
+                    ? "Zenith School of AI"
+                    : allSchools.find(
+                        (s) => s.school_category.slug === selectedSchool,
+                      )?.schoolname || "Select School"}
+                </span>
+                {/* <span className="text-lg font-semibold">
                   {allSchools.find(
                     (s) => s.school_category.slug === selectedSchool,
                   )?.schoolname || "Select School"}
-                </span>
+                </span> */}
                 <ChevronDown color="#e61f21" />
               </div>
 
               {openSchoolDropdown && (
-                <div className="py-2 absolute left-0 top-10 bg-white w-full rounded-[5px] border border-[#0000002d] z-10">
+                <div className="pb-2 absolute left-0 top-10 bg-white w-full rounded-[5px] border border-[#0000002d] z-10">
                   <ul>
-                    {allSchools.map((school) => (
-                      <li
-                        key={school.id}
-                        onClick={() => {
-                          setSelectedSchool(school.school_category.slug);
-                          setSearchQuery(""); // clear search
-                          setOpenSchoolDropdown(false);
-                        }}
-                        className={`py-2 px-3 cursor-pointer hover:bg-[#f0f0f0] ${
-                          selectedSchool === school.school_category.slug
-                            ? "bg-[#f0f0f0] font-semibold"
-                            : ""
-                        }`}
-                      >
-                        {school.schoolname}
-                      </li>
-                    ))}
+                    <li
+                      onClick={() => {
+                        setSelectedSchool(ZENITH_SLUG);
+                        setSearchQuery("");
+                        setOpenSchoolDropdown(false);
+                      }}
+                      className={`pt-2.5 pb-2 px-3 cursor-pointer hover:bg-[#f0f0f0] ${
+                        selectedSchool === ZENITH_SLUG
+                          ? "bg-[#f0f0f0] font-semibold"
+                          : ""
+                      }`}
+                    >
+                      Zenith School of AI
+                    </li>
+                    <div className="flex flex-col">
+                      {sortedSchools.map((school) => (
+                        <li
+                          key={school.id}
+                          onClick={() => {
+                            setSelectedSchool(school.school_category.slug);
+                            setSearchQuery("");
+                            setOpenSchoolDropdown(false);
+                          }}
+                          className={`py-2 px-3 cursor-pointer hover:bg-[#f0f0f0] ${
+                            selectedSchool === school.school_category.slug
+                              ? "bg-[#f0f0f0] font-semibold"
+                              : ""
+                          }`}
+                        >
+                          {school.schoolname}
+                        </li>
+                      ))}
+                    </div>
                   </ul>
                 </div>
               )}
@@ -365,43 +463,60 @@ const ProgrammesSearch = () => {
               No programme found
             </p>
           ) : (
-            programmes.map((item) => (
-              <div
-                key={item.id}
-                className="bg-[#0a41a1] py-[15px] px-4 lg:py-[30px] lg:px-10 rounded-[15px] h-[175px] md:h-[235px] text-white relative"
-              >
-                <div className="mb-[30px]">
-                  <h6 className="font-semibold text-xs lg:text-base mb-2 line-clamp-2 sm:line-clamp-3">
-                    {"title" in item ? item.title : item.heading}
-                  </h6>
-                  <p className="text-[10px] sm:text-sm">
-                    Duration: {item.criteria?.Duration}
-                  </p>
-                  <p className="text-[10px] sm:text-sm">
-                    Fees: Rs. {item.criteria?.programme_fee_per_year}/-
-                  </p>
-                </div>
+            programmes.map((item) => {
+              const slug =
+                "programmeslug" in item ? item.programmeslug : item.phdslug;
 
-                <Link
-                  href={`/programs/${
-                    "programmeslug" in item ? item.programmeslug : item.phdslug
-                  }`}
-                  className="text-[10px] md:text-base font-medium border-b border-white"
-                  target="_blank"
-                  rel="noopener noreferrer"
+              const isExternal = slug.startsWith("http");
+
+              return (
+                <div
+                  key={item.id}
+                  className="bg-[#0a41a1] py-[15px] px-4 lg:py-[30px] lg:px-10 rounded-[15px] h-[175px] md:h-[235px] text-white relative"
                 >
-                  Show More
-                </Link>
+                  <div className="mb-[30px]">
+                    <h6 className="font-semibold text-xs lg:text-base mb-2 line-clamp-2 sm:line-clamp-3">
+                      {"title" in item ? item.title : item.heading}
+                    </h6>
+                    <p className="text-[10px] sm:text-sm">
+                      Duration: {item.criteria?.Duration}
+                    </p>
+                    <p className="text-[10px] sm:text-sm">
+                      Fees: Rs. {item.criteria?.programme_fee_per_year}/-
+                    </p>
+                  </div>
 
-                <Image
-                  src="/programmes/dots.png"
-                  width={45}
-                  height={51}
-                  alt="dots"
-                  className="absolute right-2.5 bottom-2.5"
-                />
-              </div>
-            ))
+                  {/* ✅ Smart Link Handling */}
+                  {isExternal ? (
+                    <a
+                      href={slug}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] md:text-base font-medium border-b border-white"
+                    >
+                      Show More
+                    </a>
+                  ) : (
+                    <Link
+                      href={`/programs/${slug}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[10px] md:text-base font-medium border-b border-white"
+                    >
+                      Show More
+                    </Link>
+                  )}
+
+                  <Image
+                    src="/programmes/dots.png"
+                    width={45}
+                    height={51}
+                    alt="dots"
+                    className="absolute right-2.5 bottom-2.5"
+                  />
+                </div>
+              );
+            })
           )}
         </div>
 
