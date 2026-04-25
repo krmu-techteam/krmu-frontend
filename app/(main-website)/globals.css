@@ -2990,6 +2990,7 @@
   }
   .proghighcard {
     background: #f8f9fd;
+    border: 1px solid #e0e0e0;
   }
   .proghighcard:hover {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

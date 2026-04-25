@@ -11,7 +11,7 @@ type Props = {
 const ProgrammeHighlightCard = ({ title, desc, highlightimg }: Props) => {
   return (
     <>
-      <div className="proghighcard duration-200 flex justify-center cursor-pointer rounded-md border border-gray-200">
+      <div className="proghighcard duration-200 flex justify-center cursor-pointer rounded-md border border-gray-300">
         <div className="w-1/5 min-h-[144px] h-full relative">
           {highlightimg?.url && (
             <Image

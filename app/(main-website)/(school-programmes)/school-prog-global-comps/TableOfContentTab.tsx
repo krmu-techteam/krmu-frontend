@@ -30,7 +30,7 @@ const TableOfContentTab = ({ tocfaqs }: Props) => {
                data-[state=active]:bg-transparent
                data-[state=active]:shadow-none
                after:absolute after:bottom-[-1px] after:left-0 after:w-0 after:h-[3px] after:bg-[#0a41a1] after:transition-all after:duration-300
-               data-[state=active]:after:w-full"
+               data-[state=active]:after:w-full "
           >
             {section.tocpoint}
           </TabsTrigger>
@@ -48,16 +48,16 @@ const TableOfContentTab = ({ tocfaqs }: Props) => {
             <Accordion
               type="single"
               collapsible
-              className="w-full cursor-pointer"
+              className="w-full cursor-pointer space-y-6"
               defaultValue={`item-${section.faq[0]?.id ?? 1}`}
             >
               {section.faq.map((item) => (
                 <AccordionItem
                   key={item.id}
                   value={`item-${item.id}`}
-                  className="border-none hidetocplusminusicon"
+                  className="border border-gray-200 px-4 py-2 rounded-md last:border-b"
                 >
-                  <AccordionTrigger className="text-sm md:text-xl cursor-pointer tocplusminusicon text-black font-semibold text-left py-3 hover:text-[#0a41a1] transition-colors">
+                  <AccordionTrigger className="text-sm md:text-xl cursor-pointer text-black font-semibold text-left py-3 hover:text-[#0a41a1] transition-colors">
                     {item.ques}
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-balance text-gray-700 leading-relaxed pb-6 text-sm md:text-lg">

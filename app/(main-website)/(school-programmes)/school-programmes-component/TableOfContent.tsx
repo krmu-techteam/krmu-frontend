@@ -26,7 +26,7 @@ const TableOfContent = ({
     <>
       <section className="py-[50px]">
         <div className="flex items-center">
-          <div className="lg:w-[30%] xl:w-[25%] hidden lg:block relative h-full min-h-[720px]">
+          {/* <div className="lg:w-[30%] xl:w-[25%] hidden lg:block relative h-full min-h-[720px]">
               {tocimg?.url && (
                 <Image
                   src={`${STRAPI_URL}${tocimg?.url}`}
@@ -36,8 +36,8 @@ const TableOfContent = ({
                 />
               )}
            
-          </div>
-          <div className="w-full lg:w-[65%] xl:w-[70%]">
+          </div> */}
+          <div className="w-full">
             <div className="mx-auto max-w-6xl">
               <div className="text-center mb-12">
                 <h3 className="text-[40px]  font-semibold mb-4 text-balck">

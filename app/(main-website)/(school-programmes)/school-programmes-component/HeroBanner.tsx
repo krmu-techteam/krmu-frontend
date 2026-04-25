@@ -61,7 +61,7 @@ const HeroBanner = ({
 
   return (
     <section
-      className={`h-screen pt-24 sm:pt-40 sm:pb-8 px-5 sm:px-4 ${slug === "b-tech-cse" ? "bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]" : ""}`}
+      className={`pt-24 sm:pt-40 sm:pb-12 px-5 sm:px-4 ${slug === "b-tech-cse" ? "bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]" : ""}`}
     >
       <div
         className={`w-full mx-auto md:flex items-center ${slug === "b-tech-cse" ? "gap-10 max-w-[1440px]" : "school-programme-max-width"} justify-between gap-5`}

@@ -13,13 +13,13 @@ const BeyondClassroom = ({
   beyondclassimages,
 }: Props) => {
   return (
-    <section className="prog-global-padding bg-[#f8f9fa]">
+    <section className="prog-global-padding bg-[#0a41a1]">
       <div className="max-w-[1200px] mx-auto w-full">
         <div className="text-center">
-          <h2 className="text-[40px] font-semibold text-black">
+          <h2 className="text-[40px] font-semibold text-white">
             {heading} {highlight}
           </h2>
-          <p className="sub-heading text-center">{desc}</p>
+          <p className="sub-heading text-center text-white">{desc}</p>
         </div>
       </div>
       {beyondclassimages && (

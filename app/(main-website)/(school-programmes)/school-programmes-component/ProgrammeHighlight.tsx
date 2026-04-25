@@ -16,7 +16,7 @@ const ProgrammeHighlight = ({
   highlights,
 }: Props) => {
   return (
-    <section className="prog-global-padding bg-[#f9f9f9]">
+    <section className="prog-global-padding bg-[#e9ecef] pb-6">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container">
           <h2 className="heading">
@@ -24,7 +24,7 @@ const ProgrammeHighlight = ({
           </h2>
           <p className="  text-gray-600 text-xl font-medium">{desc}</p>
         </div>
-        <div className="hidden lg:grid grid-cols-2 gap-5 mt-12">
+        <div className="hidden lg:grid grid-cols-2 gap-5 my-12">
           {highlights &&
             highlights.map((highlight) => (
               <ProgrammeHighlightCard
