@@ -86,7 +86,7 @@ const ProgrammeStructure = ({
           )}
           
           {currbtn?.buttonlink && (
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 w-full md:w-auto px-4 md:px-0">
               <CommonLeadPopup
                 buttonText={
                   <span className="flex items-center justify-center gap-2">
@@ -94,7 +94,7 @@ const ProgrammeStructure = ({
                     {currbtn?.buttontext}
                   </span>
                 }
-                buttonClassName="px-8 py-3 text-base font-semibold text-[#0a41a1] bg-[#0a41a1]/3 hover:bg-transparent rounded-md transition-all duration-300 active:scale-[0.98] flex items-center justify-center border-2 border-[#0a41a1]"
+                buttonClassName="w-full md:w-auto px-8 py-3 text-base font-semibold text-[#0a41a1] bg-[#0a41a1]/3 hover:bg-transparent rounded-md transition-all duration-300 active:scale-[0.98] flex items-center justify-center border-2 border-[#0a41a1]"
                 redirectUrl={currbtn?.buttonlink || "#"}
                 form_name="Programme Handbook"
               />
@@ -103,17 +103,17 @@ const ProgrammeStructure = ({
         </div>
 
         {/* Unified Navigation Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-4 mb-4 sticky top-0 z-10 transition-all duration-300 rounded-sm">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-4 mb-4 relative md:sticky md:top-20 z-10 transition-all duration-300 rounded-sm bg-white md:bg-white/90 px-4 md:px-0">
           {/* Year Navigation */}
-          <div className="flex flex-col items-center gap-2">
-            <TabsList className="bg-gray-100/80 p-1 h-auto rounded-sm border border-gray-200/50 shadow-inner">
+          <div className="flex flex-col items-center gap-2 w-full md:w-auto">
+            <TabsList className="bg-gray-100 flex-wrap justify-center p-1 h-auto rounded-sm border border-gray-200 shadow-inner w-full md:w-auto">
               {programStruct.map((year) => {
                 const value = year.year.toLowerCase().replace(" ", "");
                 return (
                   <TabsTrigger
                     key={year.id}
                     value={value}
-                    className="px-6 py-2 text-sm md:text-base font-medium transition-all duration-300 rounded-sm
+                    className="px-4 md:px-6 py-2 text-sm md:text-base font-medium transition-all duration-300 rounded-sm
                       data-[state=active]:bg-white data-[state=active]:text-[#0a41a1] data-[state=active]:shadow-md
                       hover:text-[#0a41a1] text-gray-500 cursor-pointer"
                   >
@@ -131,19 +131,20 @@ const ProgrammeStructure = ({
 
           {/* Semester Navigation (Synced with activeYear) */}
           {!isYear && (currentYearDataForNav?.semester.length ?? 0) > 0 && (
-            <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center gap-2 w-full md:w-auto">
               <Tabs 
                 value={activeSemester} 
                 onValueChange={setActiveSemester}
+                className="w-full md:w-auto"
               >
-                <TabsList className="bg-blue-50/50 p-1 h-auto rounded-sm border border-blue-100/50 shadow-inner">
+                <TabsList className="bg-blue-50 flex-wrap justify-center p-1 h-auto rounded-sm border border-blue-100 shadow-inner w-full md:w-auto">
                   {currentYearDataForNav?.semester.map((sem) => {
                       const semValue = sem?.semestername?.toLowerCase()?.replace(" ", "");
                       return (
                         <TabsTrigger
                           key={sem.id}
                           value={semValue}
-                          className="px-8 py-2 text-sm md:text-base font-medium transition-all duration-300 rounded-sm
+                          className="px-6 md:px-8 py-2 text-sm md:text-base font-medium transition-all duration-300 rounded-sm
                             data-[state=active]:bg-[#0a41a1] data-[state=active]:text-white data-[state=active]:shadow-lg
                             hover:text-[#0a41a1] text-gray-500 cursor-pointer"
                         >
@@ -158,7 +159,7 @@ const ProgrammeStructure = ({
         </div>
 
         {/* Dynamic Content Area */}
-        <div className="min-h-[400px]">
+        <div className="min-h-[400px] px-4 md:px-0">
           {programStruct.map((year) => {
             const yearValue = year.year.toLowerCase().replace(" ", "");
             return (

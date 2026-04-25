@@ -25,7 +25,7 @@ const Curriculum = ({
 }: Props) => {
   return (
     <>
-      <section className="py-12">
+      <section className="py-8 md:py-12 pb-1 md:pb-0">
         <div className="max-w-[1440px] mx-auto w-full">
           <ProgrammeStructure
             currbtn={currbtn}

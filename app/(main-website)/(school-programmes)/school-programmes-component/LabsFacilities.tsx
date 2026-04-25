@@ -54,7 +54,7 @@ const LabsFacilities = ({
               <h3 className="heading mb-4 text-[40px]">
                 {heading} {highlight}
               </h3>
-              <div className="sub-heading text-black/70">
+              <div className="sub-heading text-black/70 px-4 md:px-0">
                 <BlocksRenderer content={labcontent} />
               </div>
             </div>

@@ -24,7 +24,7 @@ const AdmissionProcessComp = ({
   admisbtn,
 }: Props) => {
   return (
-    <section className="prog-global-padding bg-[#f9f9f9] pb-20">
+    <section className="prog-global-padding bg-[#f9f9f9] py-10 md:py-20">
       <div className="common-prog-container">
         <h2 className="heading mb-2">
           {heading} {highlight}
@@ -107,8 +107,8 @@ const AdmissionProcessComp = ({
             })} */}
         </div>
       </div>
-      <div className="max-w-[540px] mx-auto w-full flex lg:hidden items-center justify-center px-2.5 md:px-4">
-        <div className="grid grid-cols-2 gap-2.5 md:gap-6">
+      <div className="max-w-[540px] mx-auto w-full flex lg:hidden items-center justify-center px-4">
+        <div className="grid grid-cols-1 gap-5 w-full">
           {admissionCards &&
             admissionCards.map((card) => {
               if (
@@ -118,16 +118,17 @@ const AdmissionProcessComp = ({
                 return (
                   <div
                     key={card?.id}
-                    className={`w-full text-center relative  mob_admis_proc_col flex flex-col justify-end h-[150px] md:h-[180px]`}
+                    className="w-full text-center p-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[120px]"
                   >
-                    <h4 className="text-lg text-[#e61f21] z-10 break-all">
+                    <h4 className="text-xl font-semibold text-[#0a41a1] mb-2">
                       {card?.title}
                     </h4>
-                    <p className="z-10 leading-[1] text-sm text-[#0d6efd] break-all">
+                    <p className="leading-tight text-base text-gray-700 break-all font-medium">
                       <Link
-                        href={`https://${card?.description}`}
+                        href={`https://${card?.description?.trim()}`}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="underline hover:no-underline transition-all"
                       >
                         {card?.description}
                       </Link>
@@ -138,12 +139,12 @@ const AdmissionProcessComp = ({
                 return (
                   <div
                     key={card?.id}
-                    className={`w-full text-center relative  mob_admis_proc_col flex flex-col justify-end h-[150px] md:h-[180px]`}
+                    className="w-full text-center p-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[120px]"
                   >
-                    <h4 className="text-lg text-[#e61f21] z-10 break-all">
+                    <h4 className="text-xl font-semibold text-[#0a41a1] mb-2">
                       {card?.title}
                     </h4>
-                    <p className="z-10 leading-[1] text-sm text-[#0d6efd] break-all">
+                    <p className="leading-relaxed text-base text-gray-700 break-words font-medium">
                       <span>{card?.description}</span>
                     </p>
                   </div>
@@ -164,7 +165,7 @@ const AdmissionProcessComp = ({
         <button
           className={`${
             admisbtn.buttonclass || ""
-          } text-white bg-[#db2a1a] px-6 py-3 flex items-center justify-around gap-4 rounded-md font-semibold mt-5 cursor-pointer text-lg`}
+          } text-white bg-[#db2a1a] px-6 py-3 flex items-center justify-around gap-4 rounded-md font-semibold mt-8 cursor-pointer text-lg`}
         >
           <span>{admisbtn.buttontext}</span> <ArrowRight />
         </button>
