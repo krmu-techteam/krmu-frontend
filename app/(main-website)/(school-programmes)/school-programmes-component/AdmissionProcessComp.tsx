@@ -31,7 +31,7 @@ const AdmissionProcessComp = ({
         </h2>
         <p className="sub-heading">{desc}</p>
       </div>
-      <div className="max-w-[1320px] mx-auto w-full mt-2.5 hidden lg:block px-4">
+      <div className="max-w-[1320px] mx-auto w-full mt-2.5 hidden lg:block px-4 md:px-0">
         <Image
           src={`${STRAPI_URL}${deskimg?.url}`}
           width={1296}
