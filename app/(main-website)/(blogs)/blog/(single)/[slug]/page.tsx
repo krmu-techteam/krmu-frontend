@@ -31,7 +31,19 @@ export async function generateMetadata({ params }: Props) {
     };
   }
 
-  return yoastToMetadata(blogData[0].yoast_head_json, slug);
+  const blog = blogData[0];
+
+  // ✅ Extract tags
+  const tagTerms = (blog?._embedded as any)?.["wp:term"]?.[1] || [];
+  const keywords = tagTerms.map((tag: any) => tag.name);
+
+  // ✅ Merge with Yoast metadata
+  const metadata = yoastToMetadata(blog.yoast_head_json, slug);
+
+  return {
+    ...metadata,
+    keywords: keywords.length ? keywords : metadata.keywords,
+  };
 }
 
 const BlogPage = async ({ params }: Props) => {
