@@ -326,7 +326,7 @@ const ProgrammesSearch = () => {
   });
 
   return (
-    <section className="pt-40 pb-[50px] px-4 bg-[#f9f9f9] temp-class">
+    <section className="pt-40 pb-[50px] px-4 bg-[#f9f9f9]">
       <ProgrammesHero />
 
       <div className="max-w-[1320px] mx-auto w-full">
