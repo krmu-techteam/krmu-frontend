@@ -124,29 +124,29 @@ const HeroBanner = ({
                 />
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch lg:ml-10 flex-shrink-0 w-full md:w-auto">
-                  <div className="bg-white border-[1.2px] border-[#e61f21] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
-                     <p className="text-3xl font-semibold text-[#e61f21]">
+                  <div className="bg-transparent border-[1.2px] border-[#0060aa] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
+                     <p className="text-3xl font-semibold text-[#0060aa]">
                         {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
                      </p>
-                     <p className="text-md font-semibold text-[#555] capitalize mt-1 text-center">
+                     <p className="text-md font-semibold text-[#424242] capitalize mt-1 text-center">
                         {dreamcareerSection?.highestpackagetitle || "Highest Package"}
                      </p>
                   </div>
                   
-                  <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
+                  <div className="bg-transparent border-[1.2px] border-[#0060aa] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
                      <p className="text-3xl font-semibold text-[#0060aa]">
                         800+
                      </p>
-                     <p className="text-md font-semibold text-[#555] capitalize mt-1 text-center">
+                     <p className="text-md font-semibold text-[#424242] capitalize mt-1 text-center">
                         {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
                      </p>
                   </div>
                   <div className="sm:col-span-2 flex justify-center">
-                    <div className="bg-white border-[1.2px] border-[#16a34a] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 text-center transition-transform hover:scale-105 duration-300">
-                       <p className="text-3xl font-semibold text-[#16a34a]">
+                    <div className="bg-transparent border-[1.2px] border-[#0060aa] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 text-center transition-transform hover:scale-105 duration-300">
+                       <p className="text-3xl font-semibold text-[#0060aa]">
                           {dreamcareerSection?.placementassistnum || "100%"}
                        </p>
-                       <p className="text-md font-semibold text-[#555] capitalize mt-1">
+                       <p className="text-md font-semibold text-[#424242] capitalize mt-1">
                           {dreamcareerSection?.placementassisttitle || "Placement Assist"}
                        </p>
                     </div>
