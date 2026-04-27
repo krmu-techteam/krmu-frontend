@@ -48,7 +48,7 @@ export const programs: Program[] = [
   { id: 13, title: "B.Sc. (Hons.) Cyber Security", duration: "3 Years", fees: "₹ 1,35,000 /-", category: "engineering-tech", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bsc-hons-cyber-security/" },
   { id: 14, title: "B.Sc. (Hons.) Data Science", duration: "3 Years", fees: "₹ 1,35,000 /-", category: "engineering-tech", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bsc-hons-data-science/" },
 
-  { id: 15, title: "M.Tech. Automobile Engineering", duration: "2 Years", fees: "₹ 1,10,000 /-", category: "engineering-tech", level: "postgraduate", link: "https://www.krmangalam.edu.in/programs/mtech-automobile-engineering/" },
+  // { id: 15, title: "M.Tech. Automobile Engineering", duration: "2 Years", fees: "₹ 1,10,000 /-", category: "engineering-tech", level: "postgraduate", link: "https://www.krmangalam.edu.in/programs/mtech-automobile-engineering/" },
   { id: 16, title: "MCA (AI & ML) with academic support of IBM and powered by Microsoft Certifications", duration: "2 Years", fees: "₹ 1,50,000 /-", category: "engineering-tech", level: "postgraduate", link: "https://www.krmangalam.edu.in/programs/mca-ai-ml/" },
   { id: 17, title: "MCA", duration: "2 Years", fees: "₹ 1,20,000 /-", category: "engineering-tech", level: "postgraduate", link: "https://www.krmangalam.edu.in/programs/master-computer-application-mca/" },
 
@@ -72,8 +72,8 @@ export const programs: Program[] = [
   // { id: 31, title: "B.A. (Hons.) English", duration: "3 Years", fees: "₹ 1,20,000 /-", category: "liberal-arts", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/ba-hon-english/" },
   // { id: 32, title: "B.A. (Hons.) Psychology", duration: "3 Years", fees: "₹ 1,30,000 /-", category: "liberal-arts", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/ba-hons-psychology/" },
 
-  { id: 33, title: "D.Pharm", duration: "2 Years", fees: "₹ 1,20,000 /-", category: "medical-allied", level: "diploma", link: "https://www.krmangalam.edu.in/programs/dpharm/" },
-  { id: 34, title: "B.Pharm", duration: "4 Years", fees: "₹ 1,95,000 /-", category: "medical-allied", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bpharma/" },
+  { id: 33, title: "D.Pharm.", duration: "2 Years", fees: "₹ 1,20,000 /-", category: "medical-allied", level: "diploma", link: "https://www.krmangalam.edu.in/programs/dpharm/" },
+  { id: 34, title: "B.Pharm.", duration: "4 Years", fees: "₹ 1,95,000 /-", category: "medical-allied", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bpharma/" },
 
   { id: 35, title: "Bachelor of Architecture (B.Arch)", duration: "5 Years", fees: "₹ 1,90,000 /-", category: "architecture-design", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/barch-architecture/" },
 
@@ -106,27 +106,27 @@ export const programs: Program[] = [
 
 
 
-  { id: 127, title: "Ph.D. in Political Science", duration: "Min. 3 Years", fees: "₹ 1,20,000 /-", category: "liberal-arts", level: "doctorate", link: "https://www.krmangalam.edu.in/programs/phd-in-psychology/" },
+  // { id: 127, title: "Ph.D. in Political Science", duration: "Min. 3 Years", fees: "₹ 1,20,000 /-", category: "liberal-arts", level: "doctorate", link: "https://www.krmangalam.edu.in/programs/phd-in-psychology/" },
 
 
-  { id: 54, title: "Integrated BBA+MBA with Academic Support of IBM", duration: "5 Years", fees: "₹ 2,30,000 /-", category: "management-commerce", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/integrated-bba-mba/" },
+  { id: 54, title: "Integrated BBA+MBA with Academic Support of IBM (4 yrs + 1 yr Industry Internship)", duration: "5 Years", fees: "₹ 2,30,000 /-", category: "management-commerce", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/integrated-bba-mba/" },
 
-  { id: 55, title: "B.Pharm (Lateral Entry)", duration: "3 Years", fees: "₹ 1,95,000 /-", category: "medical-allied", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bpharm-lateral/" },
+  { id: 55, title: "B.Pharm. (Lateral)", duration: "3 Years", fees: "₹ 1,95,000 /-", category: "medical-allied", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bpharm-lateral/" },
 
-  { id: 56, title: "B.Sc. (Hons.) Emergency Medical Technology with Academic & Industry Support of Emversity**", duration: "4 Years", fees: "₹ 2,40,000 /-", category: "medical-allied", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bsc-emergency-medical-technology/" },
-  { id: 57, title: "B.Sc. (Hons.) Respiratory Technology with Academic & Industry Support of Emversity", duration: "4 Years", fees: "₹ 2,40,000 /-", category: "medical-allied", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bsc-respiratory-technology/" },
-  { id: 58, title: "B.Sc. (Hons.) Cardiovascular Technology with Academic & Industry Support of Emversity**", duration: "4 Years", fees: "₹ 2,40,000 /-", category: "medical-allied", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bsc-cardiovascular-technology/" },
+  { id: 56, title: "Bachelor of Emergency Medical Technologist (Paramedic) (B.EMT) with Academic & Industry support of Emversity (3 yrs + 1 yr Industry Internship)**", duration: "4 Years", fees: "₹ 2,40,000 /-", category: "medical-allied", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bsc-emergency-medical-technology/" },
+  { id: 57, title: "Bachelor of Respiratory Technology (B.RT) with Academic & Industry support of Emversity (3 yrs + 1 yr Industry Internship) **", duration: "4 Years", fees: "₹ 2,40,000 /-", category: "medical-allied", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bsc-respiratory-technology/" },
+  { id: 58, title: "B.Sc. (Hons.) Cardiovascular Technology with Academic & Industry support of Emversity (3 yrs + 1 yr Industry Internship) **", duration: "4 Years", fees: "₹ 2,40,000 /-", category: "medical-allied", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bsc-cardiovascular-technology/" },
 
-  { id: 59, title: "M.Pharm Pharmaceutics", duration: "2 Years", fees: "₹ 1,54,000 /-", category: "medical-allied", level: "postgraduate", link: "https://www.krmangalam.edu.in/programs/mpharm-pharmaceutics/" },
-  { id: 60, title: "M.Pharm Pharmacology", duration: "2 Years", fees: "₹ 1,54,000 /-", category: "medical-allied", level: "postgraduate", link: "https://www.krmangalam.edu.in/programs/mpharm-pharmacology/" },
+  { id: 59, title: "M.Pharm. (Master of Pharmacy) - Pharmaceutics", duration: "2 Years", fees: "₹ 1,54,000 /-", category: "medical-allied", level: "postgraduate", link: "https://www.krmangalam.edu.in/programs/mpharm-pharmaceutics/" },
+  { id: 60, title: "M.Pharm. (Master of Pharmacy) – Pharmacology", duration: "2 Years", fees: "₹ 1,54,000 /-", category: "medical-allied", level: "postgraduate", link: "https://www.krmangalam.edu.in/programs/mpharm-pharmacology/" },
 
   { id: 61, title: "Bachelor of Design (B.Des.) (Hons. / Hons. with Research) (Fashion Design)", duration: "4 Years", fees: "₹ 2,10,000 /-", category: "architecture-design", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bdes-fashion-design/" },
   { id: 62, title: "Bachelor of Design (B.Des.) (Hons. / Hons. with Research) (Interior Design)", duration: "4 Years", fees: "₹ 2,10,000 /-", category: "architecture-design", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bdes-interior-design/" },
-  { id: 63, title: "Bachelor of Design (B.Des.) (Hons. / Hons. with Research) (Game Design & Animation) with academic support of ImaginXP", duration: "4 Years", fees: "₹ 2,40,000 /-", category: "architecture-design", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bdes-game-design-animation/" },
+  { id: 63, title: "Bachelor of Design B.Des. (Hons. / Hons. with Research) Game Design & Animation", duration: "4 Years", fees: "₹ 2,40,000 /-", category: "architecture-design", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bdes-game-design-animation/" },
   { id: 64, title: "Bachelor of Fine Arts (BFA)", duration: "4 Years", fees: "₹ 1,20,000 /-", category: "architecture-design", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bfa/" },
-  { id: 65, title: "Bachelor of Design (B.Des.) (Hons. / Hons. with Research) (UX/UI & Interaction Design) with academic support of ImaginXP", duration: "4 Years", fees: "₹ 2,40,000 /-", category: "architecture-design", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bdes-ux-ui-interaction-design/" },
+  { id: 65, title: "Bachelor of Design (B.Des.) (Hons./Hons. with Research) UX/UI & Interaction Design", duration: "4 Years", fees: "₹ 2,40,000 /-", category: "architecture-design", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bdes-ux-ui-interaction-design/" },
 
-  { id: 66, title: "B.A. (Hons./Research) Journalism & Mass Communication", duration: "4 Years", fees: "₹ 1,60,000 /-", category: "journalism-masscomm", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bjmc-hons-research/" },
+  { id: 66, title: "B.A. (Hons. / Hons. with Research) Journalism & Mass Communication", duration: "4 Years", fees: "₹ 1,60,000 /-", category: "journalism-masscomm", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bjmc-hons-research/" },
 
   { id: 67, title: "Ph.D. in Journalism & Mass Communication", duration: "Min. 3 Years", fees: "₹ 1,20,000 /-", category: "journalism-masscomm", level: "doctorate", link: "https://www.krmangalam.edu.in/programs/phd-journalism-mass-communication/" },
 
@@ -139,7 +139,7 @@ export const programs: Program[] = [
 
   { id: 124, title: "M.A. in English", duration: "2 Years", fees: "₹ 1,15,000 /-", category: "liberal-arts", level: "postgraduate", link: "https://www.krmangalam.edu.in/programs/ma-applied-psychology/" },
   { id: 125, title: "M.A. in Economics", duration: "2 Years", fees: "₹ 1,15,000 /-", category: "liberal-arts", level: "postgraduate", link: "https://www.krmangalam.edu.in/programs/ma-applied-psychology/" },
-  { id: 126, title: "M.A. in Political Science", duration: "2 Years", fees: "₹ 1,15,000 /-", category: "liberal-arts", level: "postgraduate", link: "https://www.krmangalam.edu.in/programs/ma-applied-psychology/" },
+  { id: 126, title: "M.A. in Political Science**", duration: "2 Years", fees: "₹ 1,15,000 /-", category: "liberal-arts", level: "postgraduate", link: "https://www.krmangalam.edu.in/programs/ma-applied-psychology/" },
 
 
   { id: 70, title: "B.Sc. (Hons. / Hons. with Research ) Physics", duration: "4 Years", fees: "₹ 90,000 /-", category: "basic-applied-sciences", level: "undergraduate", link: "https://www.krmangalam.edu.in/programs/bsc-physics-hons-research/" },
@@ -191,8 +191,8 @@ export const programs: Program[] = [
 { id: 88, title: "BBA (Hons. / Hons. with Research) International Business", duration: "4 Years", fees: "₹ 1,85,000 /-", category: "management-commerce", level: "undergraduate", link: "" },
 { id: 89, title: "BBA (Hons. / Hons. with Research) Travel & Tourism", duration: "4 Years", fees: "₹ 1,85,000 /-", category: "management-commerce", level: "undergraduate", link: "" },
 
-{ id: 90, title: "BBA (Business Analytics) with academic support of Ernst & Young (EY)", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "management-commerce", level: "undergraduate", link: "" },
-{ id: 91, title: "BBA (Hons. / Hons. with Research) (Business Analytics) with academic support of Ernst & Young (EY)", duration: "4 Years", fees: "₹ 1,85,000 /-", category: "management-commerce", level: "undergraduate", link: "" },
+{ id: 90, title: "BBA (Business Intelligence & Analytics) with academic support of Ernst & Young (EY)", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "management-commerce", level: "undergraduate", link: "" },
+{ id: 91, title: "BBA (Hons. / Hons. with Research) (Business Intelligence & Analytics) with academic support of Ernst & Young (EY)", duration: "4 Years", fees: "₹ 1,85,000 /-", category: "management-commerce", level: "undergraduate", link: "" },
 
 { id: 92, title: "BBA (Entrepreneurship) with academic support of GCEC Global Foundation", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "management-commerce", level: "undergraduate", link: "" },
 { id: 93, title: "BBA (Hons. / Hons. with Research) (Entrepreneurship) with academic support of GCEC Global Foundation", duration: "4 Years", fees: "₹ 1,85,000 /-", category: "management-commerce", level: "undergraduate", link: "" },
@@ -214,15 +214,17 @@ export const programs: Program[] = [
 
 { id: 104, title: "B.Com. Programme", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "commerce", level: "undergraduate", link: "" },
 
-{ id: 113, title: "B.Tech. (Lateral) Computer Science and Engineering (AI & ML) with Academic Support of Samatrix & IBM", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "engineering-tech", level: "undergraduate", link: "" },
-{ id: 114, title: "B.Tech. (Lateral) Computer Science and Engineering (Full Stack Development) with Academic Support of Xebia", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "engineering-tech", level: "undergraduate", link: "" },
-{ id: 115, title: "B.Tech. (Lateral) Computer Science & Engineering (UX/UI) with academic support of ImaginXP", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "engineering-tech", level: "undergraduate", link: "" },
-{ id: 116, title: "B.Tech. (Lateral) Computer Science and Engineering (Cyber Security) with academic support of EC-Council and IBM", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "engineering-tech", level: "undergraduate", link: "" },
-{ id: 117, title: "B.Tech. (Lateral) Computer Science and Engineering (Data Science) with academic support of IBM", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "engineering-tech", level: "undergraduate", link: "" },
+{ id: 113, title: "B.Tech. Computer Science and Engineering (AI & ML) with Academic Support of IBM & powered by Microsoft Certifications (Lateral)", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "engineering-tech", level: "undergraduate", link: "" },
+{ id: 114, title: "B.Tech. Computer Science and Engineering (Full Stack Development) with Academic Support of ImaginXP (Lateral)", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "engineering-tech", level: "undergraduate", link: "" },
+{ id: 115, title: "B.Tech. Computer Science & Engineering (UX/UI) with academic support of ImaginXP (Lateral)", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "engineering-tech", level: "undergraduate", link: "" },
+{ id: 116, title: "B.Tech. Computer Science and Engineering (Cyber Security) with academic support of EC-Council and IBM (Lateral)", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "engineering-tech", level: "undergraduate", link: "" },
+{ id: 117, title: "B.Tech. Computer Science and Engineering (Data Science) with academic support of IBM (Lateral)", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "engineering-tech", level: "undergraduate", link: "" },
 { id: 118, title: "B.Tech. (Lateral) Computer Science & Engineering", duration: "3 Years", fees: "₹ 1,85,000 /-", category: "engineering-tech", level: "undergraduate", link: "" },
 { id: 119, title: "M.Tech. Computer Science & Engineering", duration: "2 Years", fees: "₹ 1,85,000 /-", category: "engineering-tech", level: "postgraduate", link: "" },
+{ id: 120, title: "B.Tech. Computer Science and Engineering (Robotics & AI) with academic support of IBM & powered by Microsoft Certifications (Lateral)", duration: "3 Years", fees: "", category: "engineering-tech", level: "undergraduate", link: "" },
+{ id: 121, title: "B.Tech. Computer Science and Engineering (Cloud Computing) powered by Microsoft Certifications**", duration: "4 Years", fees: "", category: "engineering-tech", level: "undergraduate", link: "" },
+{ id: 122, title: "B.Tech. Computer Science and Engineering (Semiconductor Design)**", duration: "4 Years", fees: "", category: "engineering-tech", level: "undergraduate", link: "" },
+{ id: 123, title: "B.Sc. (Hons.) in Finance (with optional specialisations in Quantitative Finance and Actuarial Science)**", duration: "4 Years", fees: "", category: "management-commerce", level: "undergraduate", link: "" },
 
-
-
+{ id: 124, title: "M. Design (Interior Design)**", duration: "2 Years", fees: "", category: "architecture-design", level: "postgraduate", link: "" },
 ];
-
