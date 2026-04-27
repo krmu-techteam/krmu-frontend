@@ -102,7 +102,7 @@ const ProgrammeStructure = ({
         )}
       </div>
 
-      <div className="bg-white rounded-sm overflow-hidden border-y md:border border-gray-200 shadow-xl shadow-gray-200/20">
+      <div className="bg-white rounded-sm overflow-hidden border-0 md:border border-gray-200 shadow-xl shadow-gray-200/20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 min-h-[620px]">
           {/* Left Side: Visual Illustration */}
           <div className="hidden lg:block lg:col-span-4 relative group overflow-hidden border-r border-gray-100">
@@ -193,7 +193,7 @@ const ProgrammeStructure = ({
                       className="mt-0 focus-visible:outline-none"
                     >
                       {year.semester.length > 0 ? (
-                        <div className="space-y-4 pr-4 mt-4">
+                        <div className="space-y-4 pr-0 md:pr-4 mt-4">
                           {year?.semester?.map((sem) => {
                             const semValue = sem.semestername?.toLowerCase()?.replace(" ", "");
                             return (
@@ -250,7 +250,7 @@ const ProgrammeStructure = ({
                                 </div>
 
                                 {/* Semester Action Buttons */}
-                                <div className="flex flex-wrap items-center justify-center gap-4 mt-8 pt-8 border-t border-gray-100">
+                                <div className="flex flex-wrap items-center justify-center gap-4 mt-8 pt-4 md:pt-8 border-t border-gray-100">
                                   {sem.pdfbtns?.map((btn) => {
                                     const text = btn?.buttontext?.toLowerCase() || "";
                                     const openElectiveKeywords = ["open elective", "open electives", "value added", "value added courses"];
@@ -262,7 +262,7 @@ const ProgrammeStructure = ({
 
                                     const shouldShowPopup = (isHandbook && enable_disable_handbook) || (hasOpenElectiveKeyword && enable_disable_open_elective) || (hasMinorKeyword && enable_disable_minor);
 
-                                    const btnClass = `flex items-center gap-2 text-md font-semibold uppercase tracking-wide px-6 py-3 
+                                    const btnClass = `flex items-center gap-2 text-sm md:text-md font-semibold uppercase tracking-wide px-3 py-2 md:px-6 md:py-3 
                                       rounded-sm shadow-sm transition-all duration-300 border-2
                                       ${isHandbook 
                                         ? "bg-[#0a41a1] text-white border-[#0a41a1] hover:bg-white hover:text-[#0a41a1]" 

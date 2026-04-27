@@ -54,12 +54,12 @@ const LabsFacilities = ({
               <h3 className="heading mb-4 text-[40px]">
                 {heading} {highlight}
               </h3>
-              <div className="sub-heading text-black/70 px-4 md:px-0">
+              <div className="sub-heading text-black/70 px-4 md:px-0 text-justify md:text-pretty">
                 <BlocksRenderer content={labcontent} />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 pb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 pb-6 px-4 md:px-0">
               {labcards &&
                 labcards.map((lab, index) => {
                   const labImage = labStagingImages[index % labStagingImages.length];
@@ -100,12 +100,12 @@ const LabsFacilities = ({
               )}
             </div> */}
             
-            <div className="md:hidden mt-10">
+            <div className="md:hidden mt-0 md:mt-10">
               <LabFacilitiesSlider labcards={labcards} />
             </div>
           </div>
         </div>
-        <div className="max-w-[1320px] mx-auto w-full mt-10">
+        <div className="max-w-[1320px] mx-auto w-full mt-0 md:mt-10">
           {slug === "bca-ai-data-science" && <BcaVsBtechTable />}
         </div>
       </section>

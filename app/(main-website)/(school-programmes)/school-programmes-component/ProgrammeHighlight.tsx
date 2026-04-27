@@ -46,7 +46,7 @@ const ProgrammeHighlight = ({
           <div className="flex justify-center mt-8">
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="px-8 py-2 md:py-3 border-2 border-[#0a41a1] text-[#0a41a1] font-semibold rounded-md hover:bg-[#0a41a1] hover:text-white transition-all duration-300 cursor-pointer"
+              className="md:px-8 w-full md:w-auto py-2 text-center md:py-3 border-2 border-[#0a41a1] text-[#0a41a1] font-semibold rounded-md hover:bg-[#0a41a1] hover:text-white transition-all duration-300 cursor-pointer"
             >
               {isExpanded ? "Show Less" : "Read More"}
             </button>
