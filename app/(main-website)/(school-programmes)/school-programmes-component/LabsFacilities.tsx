@@ -89,7 +89,7 @@ const LabsFacilities = ({
                 })}
             </div>
 
-            <div className="flex items-center justify-center">
+            {/* <div className="flex items-center justify-center">
                {(btn?.buttonclass || btn?.buttonlink) && (
                 <Link
                   href={btn?.buttonlink}
@@ -98,7 +98,7 @@ const LabsFacilities = ({
                   {btn?.buttontext}
                 </Link>
               )}
-            </div>
+            </div> */}
             
             <div className="md:hidden mt-10">
               <LabFacilitiesSlider labcards={labcards} />

@@ -76,10 +76,10 @@ const ProgrammeStructure = ({
   return (
     <div className="w-full pb-16">
       {/* Section Header: Full Width & Centered */}
-      <div className="flex flex-col items-center text-center gap-4 mb-12">
+      <div className="flex flex-col items-center text-center px-4 md:px-0 gap-4 mb-12">
         {(heading || highlight) && (
           <div className="max-w-4xl px-4 md:px-0">
-            <h2 className="text-[32px] md:text-[45px] font-bold text-gray-900 leading-tight uppercase tracking-tight">
+            <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight uppercase tracking-tight">
               {heading} {highlight}
             </h2>
           </div>
@@ -94,7 +94,7 @@ const ProgrammeStructure = ({
                   {currbtn?.buttontext}
                 </span>
               }
-              buttonClassName="w-full md:w-auto px-8 py-3 text-base font-semibold text-[#0a41a1] bg-transparent hover:bg-[#0a41a1] hover:text-white rounded-sm transition-all duration-300 shadow-md flex items-center justify-center border-2 border-[#0a41a1]"
+              buttonClassName="w-full md:w-auto px-6 py-2 md:px-8 md:py-3 text-base font-semibold text-[#0a41a1] bg-transparent hover:text-[#0a41a1] hover:bg-blue-50 rounded-sm transition-all duration-300 shadow-md flex items-center justify-center border-2 border-[#0a41a1]"
               redirectUrl={currbtn?.buttonlink || "#"}
               form_name="Programme Handbook"
             />
@@ -102,7 +102,7 @@ const ProgrammeStructure = ({
         )}
       </div>
 
-      <div className="bg-white rounded-sm overflow-hidden border border-gray-200 shadow-xl shadow-gray-200/20">
+      <div className="bg-white rounded-sm overflow-hidden border-y md:border border-gray-200 shadow-xl shadow-gray-200/20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 min-h-[620px]">
           {/* Left Side: Visual Illustration */}
           <div className="hidden lg:block lg:col-span-4 relative group overflow-hidden border-r border-gray-100">
@@ -127,7 +127,7 @@ const ProgrammeStructure = ({
           <div className="lg:col-span-8 bg-white flex flex-col overflow-hidden">
             <Tabs value={activeYear} onValueChange={setActiveYear} className="w-full flex-grow flex flex-col">
               {/* Unified Navigation Bar */}
-              <div className="z-10 flex flex-wrap items-center justify-start gap-8 py-3 px-2 md:px-4 bg-white border-b border-gray-100 shadow-sm transition-all duration-300">
+              <div className="z-10 flex flex-wrap items-center justify-start gap-8 py-3 px-4 bg-white border-b border-gray-100 shadow-sm transition-all duration-300">
                 {/* Year Navigation */}
                 <div className="flex flex-col items-start gap-2 w-full md:w-auto">
                   <TabsList className="bg-gray-100/50 flex-wrap justify-start p-1 h-auto rounded-sm border border-gray-200/60 w-full md:w-auto">
@@ -198,7 +198,7 @@ const ProgrammeStructure = ({
                             const semValue = sem.semestername?.toLowerCase()?.replace(" ", "");
                             return (
                               <div key={sem.id} className={activeSemester === semValue ? "block" : "hidden"}>
-                                <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
+                                <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 px-4 md:px-0">
                                   {sem.subjects.map((sub) => (
                                     <div
                                       key={sub.id}
@@ -250,7 +250,7 @@ const ProgrammeStructure = ({
                                 </div>
 
                                 {/* Semester Action Buttons */}
-                                <div className="flex flex-wrap items-center justify-start gap-4 mt-8 pt-8 border-t border-gray-100">
+                                <div className="flex flex-wrap items-center justify-center gap-4 mt-8 pt-8 border-t border-gray-100">
                                   {sem.pdfbtns?.map((btn) => {
                                     const text = btn?.buttontext?.toLowerCase() || "";
                                     const openElectiveKeywords = ["open elective", "open electives", "value added", "value added courses"];
