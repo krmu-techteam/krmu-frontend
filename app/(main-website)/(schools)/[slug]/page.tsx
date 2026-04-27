@@ -248,14 +248,14 @@ export default async function Page({ params }: Props) {
           school_advantage={school?.school_advantage?.advantage_content}
         />
       )}
-      {school?.induscollabtitle &&
+      {/* {school?.induscollabtitle &&
         Array.isArray(school?.collabcards) &&
         school.collabcards.length > 0 && (
           <SchoolIndustryCollaboration
             title={school.induscollabtitle}
             collabCards={school.collabcards}
           />
-        )}
+        )} */}
       {school?.letsexplorecontent && (
         <SchoolLetsExplore
           content={school?.letsexplorecontent}
