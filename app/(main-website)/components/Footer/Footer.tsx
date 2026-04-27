@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import FloatingButtons from "@/app/(main-website)/components/Footer/FloatingButtons";
 
-
 const Footer = async () => {
   const footerData = await getFooter();
   const footerAssets = await getPageAssets();
@@ -67,8 +66,9 @@ const Footer = async () => {
                 {footerComp1?.footer_btn?.btn_link && (
                   <Link
                     href={footerComp1?.footer_btn?.btn_link || "#"}
-                    className={`text-white bg-[#cb000d] py-[5px] px-5 hover:bg-[#034272] rounded font-semibold ${footerComp1?.footer_btn?.btn_class || ""
-                      }`}
+                    className={`text-white bg-[#cb000d] py-[5px] px-5 hover:bg-[#034272] rounded font-semibold ${
+                      footerComp1?.footer_btn?.btn_class || ""
+                    }`}
                   >
                     {footerComp1?.footer_btn?.btn_text || ""}
                   </Link>
@@ -205,7 +205,22 @@ const Footer = async () => {
         <script dangerouslySetInnerHTML={{ __html: js_in_footer }} />
       )}
 
-      <NpfChatbot />
+      {/* Hide Nia Chatbot */}
+      {/* <NpfChatbot /> */}
+      <div className="fixed bottom-5 right-5" >
+        <a
+          href="https://wa.me/8800697018?text=Hi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/whatsapp_icon_e712c9e9c0.svg"
+            width={45}
+            height={45}
+            alt="Whatsapp Icon"
+          />
+        </a>
+      </div>
 
       {/* <Script
         src="https://cdn.npfs.co/js/widget/npfwpopup.js"
