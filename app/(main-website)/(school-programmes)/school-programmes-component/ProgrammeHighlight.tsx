@@ -43,7 +43,7 @@ const ProgrammeHighlight = ({
         </div>
 
         {highlights && highlights.length > 6 && (
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-8 px-4 md:px-0">
             <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="md:px-8 w-full md:w-auto py-2 text-center md:py-3 border-2 border-[#0a41a1] text-[#0a41a1] font-semibold rounded-md hover:bg-[#0a41a1] hover:text-white transition-all duration-300 cursor-pointer"

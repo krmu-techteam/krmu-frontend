@@ -79,7 +79,7 @@ const ProgrammeStructure = ({
       <div className="flex flex-col items-center text-center px-4 md:px-0 gap-4 mb-12">
         {(heading || highlight) && (
           <div className="max-w-4xl px-4 md:px-0">
-            <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight uppercase tracking-tight">
+            <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight">
               {heading} {highlight}
             </h2>
           </div>
@@ -102,32 +102,25 @@ const ProgrammeStructure = ({
         )}
       </div>
 
-      <div className="bg-white rounded-sm overflow-hidden border-0 md:border border-gray-200 shadow-xl shadow-gray-200/20">
+      <div className="bg-white rounded-xl overflow-hidden shadow-xl shadow-gray-200/20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 min-h-[620px]">
           {/* Left Side: Visual Illustration */}
-          <div className="hidden lg:block lg:col-span-4 relative group overflow-hidden border-r border-gray-100">
+          <div className="hidden lg:block lg:col-span-4 relative group overflow-hidden border-r border-gray-100 bg-[#fdfdfd]">
             <Image
-              src="/curriculum-layout-bg.png"
+              src="/curriculum-s.jpeg"
               fill
-              className="object-cover transition-transform duration-1000 group-hover:scale-110"
+              className="object-cover object-center transition-transform duration-1000 group-hover:scale-105"
               alt="Institutional Curriculum"
               priority
             />
             <div className="absolute inset-0 bg-gray-900/10" />
-            <div className="absolute bottom-10 left-10 right-10 text-white z-10">
-              <h3 className="text-2xl font-bold mb-2 tracking-tight">Academic Excellence</h3>
-              <p className="text-sm opacity-80 leading-relaxed font-light">
-                Explore our world-class curriculum designed to foster innovation, 
-                critical thinking, and professional mastery in your chosen field.
-              </p>
-            </div>
           </div>
 
           {/* Right Side: Content Area */}
           <div className="lg:col-span-8 bg-white flex flex-col overflow-hidden">
             <Tabs value={activeYear} onValueChange={setActiveYear} className="w-full flex-grow flex flex-col">
               {/* Unified Navigation Bar */}
-              <div className="z-10 flex flex-wrap items-center justify-start gap-8 py-3 px-4 bg-white border-b border-gray-100 shadow-sm transition-all duration-300">
+              <div className="z-10 flex flex-wrap items-center justify-start gap-8 py-3 px-4 bg-white border-b border-gray-100  transition-all duration-300">
                 {/* Year Navigation */}
                 <div className="flex flex-col items-start gap-2 w-full md:w-auto">
                   <TabsList className="bg-gray-100/50 flex-wrap justify-start p-1 h-auto rounded-sm border border-gray-200/60 w-full md:w-auto">
@@ -202,10 +195,10 @@ const ProgrammeStructure = ({
                                   {sem.subjects.map((sub) => (
                                     <div
                                       key={sub.id}
-                                      className="group flex flex-col bg-white border border-gray-100 rounded-md p-3 transition-all duration-500 hover:shadow-md hover:border-[#0a41a1]/10 hover:-translate-y-1"
+                                      className="group flex flex-col bg-white rounded-md p-3 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                                     >
                                       <div className="flex flex-row gap-4 h-full items-start">
-                                        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-[#0a41a1] group-hover:bg-[#0a41a1] group-hover:text-white transition-all duration-500 border border-blue-100/50">
+                                        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#0a41a1] flex items-center justify-center text-white transition-all duration-300 border border-[#0a41a1]/10">
                                           <BookOpen className="w-5 h-5" />
                                         </div>
                                         <div className="flex-grow min-w-0">
@@ -224,7 +217,7 @@ const ProgrammeStructure = ({
                                                   className="border-none"
                                                 >
                                                   <AccordionTrigger className="py-0 text-left hover:no-underline flex justify-between gap-2 group-data-[state=open]:pb-3">
-                                                    <h5 className="text-[16px] font-semibold text-gray-800 group-hover:text-[#0a41a1] transition-colors leading-snug">
+                                                    <h5 className="text-[16px] font-semibold text-[#0a41a1] transition-colors leading-snug">
                                                       {sub.subjectname}
                                                     </h5>
                                                   </AccordionTrigger>
@@ -239,7 +232,7 @@ const ProgrammeStructure = ({
                                               ))}
                                             </Accordion>
                                           ) : (
-                                            <h5 className="text-[16px] font-semibold text-gray-800 group-hover:text-[#0a41a1] transition-colors leading-snug">
+                                            <h5 className="text-[16px] font-semibold text-[#0a41a1] transition-colors leading-snug">
                                               {sub.subjectname}
                                             </h5>
                                           )}
