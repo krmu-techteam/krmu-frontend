@@ -7,6 +7,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { ProgrammeAlumniData } from "@/lib/types/programme";
 import Autoplay from "embla-carousel-autoplay";
@@ -42,11 +44,11 @@ const ProgrammeAlumniSlides = ({ alumniData }: Props) => {
         className="w-full"
         opts={{ align: "start", loop: true }}
         setApi={onInit}
-        plugins={[
-          Autoplay({
-            delay: 1500,
-          }),
-        ]}
+        // plugins={[
+        //   Autoplay({
+        //     delay: 1500,
+        //   }),
+        // ]}
       >
         <CarouselContent className="-ml-1">
           {alumniData.map((item, index) => (
@@ -58,6 +60,8 @@ const ProgrammeAlumniSlides = ({ alumniData }: Props) => {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <CarouselPrevious className="left-0" />
+        <CarouselNext className="right-0" />
       </Carousel>
 
       {/* --- Pagination Dots --- */}
