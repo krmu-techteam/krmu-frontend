@@ -89,7 +89,7 @@ const SchoolHero = ({
               </div>
             </div>
           ) : (
-            <div className="max-w-[1664px] mx-auto w-full xl:flex items-center justify-between">
+            <div className="max-w-[1850px] mx-auto w-full xl:flex items-center justify-between test">
               <div className="text-center text-white w-full xl:w-1/2 xl:pr-52">
                 <p className="text-sm md:text-[28px] lg:mb-5 font-medium">
                   {subheading}

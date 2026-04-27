@@ -15,15 +15,10 @@ const indusData = [
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/grantthornton_dfa163d9fe.webp",
     heading: "Grant Thornton",
     pointer: [
-      `This collaboration between Grant Thornton India LLP and K R. Mangalam University with
-the objective of fostering industry-academia engagement, enhancing employability, and
-jointly developing capability-building initiatives for students and faculty.`,
-      `Co-create learning interventions, certification programs, and skill-development initiatives
-aligned with industry needs.`,
-      `Facilitate opportunities for internships, live projects, and placements subject to
-organizational requirements.`,
-      `Encourage joint research, knowledge sharing, and faculty development to strengthen
-academic excellence.`,
+      `This collaboration between Grant Thornton India LLP and K.R. Mangalam University aims to foster industry-academia engagement, enhance employability, and jointly develop capability-building initiatives for students and faculty.`,
+      `Co-create learning interventions, 9 certification programs, and skill-development initiatives aligned with industry needs.`,
+      `Facilitate opportunities for internships, live projects, and placements subject to organizational requirements.`,
+      `Encourage joint research, knowledge sharing, and faculty development to strengthen academic excellence.`,
     ],
   },
   {
