@@ -32,13 +32,13 @@ const FinancialAssistance = ({
   const points = [point1, point2, point3, point4, point5, point6, point7].filter(Boolean);
 
   return (
-    <section className="prog-global-padding bg-[#f8f9fd] py-12 md:pt-16 md:pb-20">
+    <section className="prog-global-padding bg-[#f8f9fd] py-12 md:pt-16 md:pb-20 px-4 md:px-0">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container !max-w-7xl">
-          <h2 className="heading">
+          <h2 className="heading pb-4 md:pb-0">
             {heading}{" "}{highlightheading} 
           </h2>
-          <p className="sub-heading text-black/70">{description}</p>
+          <p className="sub-heading text-black/70 text-justify md:text-center">{description}</p>
         </div>
 
         {/* Points Layout */}
@@ -71,8 +71,8 @@ const FinancialAssistance = ({
         </div>
 
         {/* Logos Grid */}
-        <div className="mt-16 flex items-center justify-center">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 items-center gap-10 w-full sm:w-10/12">
+        <div className="mt-4 md:mt-16 flex items-center justify-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 items-center gap-4 md:gap-10 w-full sm:w-10/12">
             {logos &&
               logos.map((logo) => {
                 return (
