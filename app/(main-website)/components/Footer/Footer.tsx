@@ -5,6 +5,7 @@ import { getPageAssets } from "@/lib/api/global-setting";
 import Image from "next/image";
 import Link from "next/link";
 import FloatingButtons from "@/app/(main-website)/components/Footer/FloatingButtons";
+import NpfAgent from "@/app/NpfAgent";
 
 const Footer = async () => {
   const footerData = await getFooter();
@@ -207,7 +208,8 @@ const Footer = async () => {
 
       {/* Hide Nia Chatbot */}
       {/* <NpfChatbot /> */}
-      <div className="fixed bottom-5 right-5" >
+      <NpfAgent />
+      {/* <div className="fixed bottom-10 right-24">
         <a
           href="https://wa.me/8800697018?text=Hi"
           target="_blank"
@@ -220,7 +222,7 @@ const Footer = async () => {
             alt="Whatsapp Icon"
           />
         </a>
-      </div>
+      </div> */}
 
       {/* <Script
         src="https://cdn.npfs.co/js/widget/npfwpopup.js"
