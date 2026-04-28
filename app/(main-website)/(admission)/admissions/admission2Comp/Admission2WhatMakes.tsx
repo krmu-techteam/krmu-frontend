@@ -31,7 +31,7 @@ const Admission2WhatMakes = () => {
             <div className="card-text">
               <h5 className="card-title">State of the Art Infrastructure</h5>
               <p className="card-desc">
-                Modern Labs ,Well-Equipped Library ,Smart Classrooms ,28+ Acres
+                Modern Labs ,Well-Equipped Library ,Smart Classrooms, 35+ Acres
                 of Lush Green Campus ,Artistic &amp; Modern Infrastructure
               </p>
             </div>
@@ -105,7 +105,8 @@ const Admission2WhatMakes = () => {
           <div className="flex items-center justify-center p-12">
             <Link
               href="/campus-life/virtual-tour"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
               className="common-btn-1"
             >
               Explore our Campus <ArrowRight color="#fff" />
