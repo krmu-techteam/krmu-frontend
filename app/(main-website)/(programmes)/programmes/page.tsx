@@ -8,6 +8,7 @@ import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
 import { createBreadcrumbProgSchema } from "@/lib/api/common";
 import Script from "next/script";
+import ProgrammesHero from "./comp/ProgrammesHero";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("programmes");
@@ -70,25 +71,24 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-
-
 const page = async () => {
   const ProgrammeData = await getProgrammePageData();
   const programmeAlumnis = ProgrammeData?.alumni;
   const breadcrumbItems = [
     { name: "Home", url: "https://www.krmangalam.edu.in/" },
-    { name: "Programs", url: "https://www.krmangalam.edu.in/programmes" }, 
+    { name: "Programs", url: "https://www.krmangalam.edu.in/programmes" },
   ];
 
   const breadcrumbSchema = createBreadcrumbProgSchema(breadcrumbItems);
 
   return (
     <>
-    <Script
+      <Script
         id="programmes-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
       />
+      <ProgrammesHero />
       <ProgrammesSearch />
       <ProgrammesAlumni alumniData={programmeAlumnis} />
       <ProgrammesOurLocation />

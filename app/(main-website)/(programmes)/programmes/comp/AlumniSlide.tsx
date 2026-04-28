@@ -12,13 +12,13 @@ const AlumniSlide = ({ item }: Props) => {
   return (
     <div className="flex gap-5">
       <div className="w-1/2 sm:w-1/3">
-        <div>
+        <div className="overflow-hidden rounded-2xl">
           <Image
             src={`${STRAPI_URL}${item?.alumni_img?.url}`}
             width={325}
             height={300}
             alt=""
-            className="h-[200px] object-contain rounded-[20px] sm:rounded-none w-full"
+            className="h-[200px] object-contain rounded-2xl w-full"
           />
         </div>
         <div className="text-center mt-5 sm:hidden">
@@ -36,7 +36,7 @@ const AlumniSlide = ({ item }: Props) => {
       </div>
       <div className="w-1/2 sm:w-2/3">
         <div className="mb-4">
-          <p className="text-xs sm:text-base line-clamp-20 sm:line-clamp-5">
+          <p className="text-xs sm:text-base line-clamp-20 sm:line-clamp-5 text-left">
             {item?.content}
           </p>
         </div>

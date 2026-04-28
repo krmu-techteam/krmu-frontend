@@ -1,6 +1,12 @@
 "use client";
 
-import { ArrowRight, ChevronDown, ChevronRight, Search } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronDown,
+  ChevronRight,
+  CircleArrowRight,
+  Search,
+} from "lucide-react";
 import { useEffect, useRef, useState, useCallback } from "react";
 import {
   getAllSchoolsInfo,
@@ -333,16 +339,18 @@ const ProgrammesSearch = () => {
     return orderA - orderB;
   });
 
-  return (
-    <section className="pt-40 pb-[50px] px-4 bg-[#f9f9f9]">
-      <ProgrammesHero />
+  console.log("asdasd", programmes);
 
-      <div className="max-w-[1320px] mx-auto w-full">
+  return (
+    <section>
+ 
+
+      <div>
         {/* FILTER BOX */}
-        <div className="bg-white rounded-[10px]">
-          <div className="py-2.5 px-5 flex flex-col lg:flex-row items-center gap-5">
+        <div className="bg-[#051630] p-5">
+          <div className="py-2.5 px-5 flex flex-col lg:flex-row items-center gap-5 max-w-[1440px] mx-auto w-full bg-white rounded-xl">
             {/* SCHOOL DROPDOWN */}
-            <div className="lg:w-1/4 relative" ref={schoolRef}>
+            <div className="lg:w-5/12 relative" ref={schoolRef}>
               <div
                 className="flex items-center justify-between gap-2.5 cursor-pointer"
                 onClick={() => {
@@ -391,7 +399,7 @@ const ProgrammesSearch = () => {
             </div>
 
             {/* DEGREE DROPDOWN */}
-            <div className="lg:w-1/4 relative" ref={degreeRef}>
+            <div className="lg:w-3/12 relative" ref={degreeRef}>
               <div
                 className="flex items-center justify-between gap-2.5 cursor-pointer"
                 onClick={() => {
@@ -432,7 +440,7 @@ const ProgrammesSearch = () => {
             </div>
 
             {/* SEARCH INPUT */}
-            <div className="lg:w-2/4">
+            <div className="lg:w-4/12">
               <div className="flex">
                 <input
                   type="text"
@@ -447,9 +455,10 @@ const ProgrammesSearch = () => {
             </div>
           </div>
         </div>
+        <div className="max-w-[1440px] mx-auto w-full">
 
         {/* PROGRAMMES LIST */}
-        <div className="mt-20 grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+        <div className="mt-10 grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {programmes.length === 0 ? (
             <p className="col-span-3 text-center text-lg font-semibold text-gray-500">
               No programme found
@@ -464,48 +473,76 @@ const ProgrammesSearch = () => {
               return (
                 <div
                   key={item.id}
-                  className="rounded-xl w-full bg-[#f0f7fc] h-full  font-semibold  p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+                  className="rounded-xl w-full bg-[#f0f7fc]  font-semibold  p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] min-h-60 h-full"
                 >
-                  <div className="mb-[30px]">
+                  {" "}
+                  <Link href={`/programs/${slug}`} target="_blank">
                     <h6 className="block w-full text-[#002f56]">
                       {"title" in item ? item.title : item.heading}
                     </h6>
-                    <p className="text-[10px] sm:text-sm">
-                      Duration: {item.criteria?.Duration}
-                    </p>
-                    <p className="text-[10px] sm:text-sm">
-                      Fees: Rs. {item.criteria?.programme_fee_per_year}/-
-                    </p>
+                  </Link>
+                  <div className="flex flex-col sm:flex-row gap-2.5">
+                    <div className="bg-white w-full sm:w-1/2 lg:w-1/4 flex flex-col gap-0.5 p-2.5 text-sm cursor-text">
+                      <span className="font-normal">Duration:</span>
+                      <span>{item.criteria?.Duration}</span>
+                    </div>
+                    <div className="bg-white w-full sm:w-1/2 xl:w-2/4 flex flex-col p-2.5 gap-0.5 text-sm cursor-text">
+                      <span className="font-normal">Programme Fee:</span>
+                      <span>
+                        Rs. {item.criteria?.programme_fee_per_year} / Year
+                      </span>
+                    </div>
+                    <div className="lg:w-1/4"></div>
                   </div>
-
-                  {/* ✅ Smart Link Handling */}
-                  {isExternal ? (
-                    <a
-                      href={slug}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[10px] md:text-base font-medium border-b border-white"
-                    >
-                      Show More
-                    </a>
-                  ) : (
+                  <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center">
                     <Link
-                      href={`/programs/${slug}`}
+                      href={item.criteria.eligibility_utm_links}
                       target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[10px] md:text-base font-medium border-b border-white"
+                      className="bg-white border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer hover:bg-black hover:text-white"
                     >
-                      Show More
+                      Fee Structure
                     </Link>
-                  )}
-
-                  <Image
+                    <Link
+                      href={item.criteria.eligibility_utm_links}
+                      target="_blank"
+                      className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer hover:bg-red-500 hover:text-white hover:border hover:border-red-500"
+                    >
+                      Apply Now
+                    </Link>
+                    {isExternal ? (
+                      <a
+                        href={slug}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[10px] md:text-base font-medium"
+                      >
+                        Show More
+                      </a>
+                    ) : (
+                      <Link
+                        href={`/programs/${slug}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-black rounded-sm py-2.5 2xl:py-2.5 text-sm flex items-center gap-2"
+                      >
+                        <CircleArrowRight /> <span>View Programme</span>
+                      </Link>
+                    )}
+                  </div>
+                  {/* <p className="text-[10px] sm:text-sm">
+                    Duration: {item.criteria?.Duration}
+                  </p>
+                  <p className="text-[10px] sm:text-sm">
+                    Fees: Rs. {item.criteria?.programme_fee_per_year}/-
+                  </p> */}
+                  {/* ✅ Smart Link Handling */}
+                  {/* <Image
                     src="/programmes/dots.png"
                     width={45}
                     height={51}
                     alt="dots"
                     className="absolute right-2.5 bottom-2.5"
-                  />
+                  /> */}
                 </div>
               );
             })
@@ -513,17 +550,18 @@ const ProgrammesSearch = () => {
         </div>
 
         {showLoadMore && (
-          <div className="p-4 md:p-12 flex items-center justify-center">
+          <div className="pt-4 md:pt-12 flex items-center justify-center">
             <button
               onClick={() => fetchProgrammes(false, searchQuery, true)}
-              className="py-[15px] px-[30px] bg-[#e61f21] text-white flex items-center gap-5 rounded-[10px] font-semibold cursor-pointer"
-              style={{ boxShadow: "rgba(0,0,0,0.35) 0px 5px 15px" }}
+              className="text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-[#034272] cursor-pointer"
+              // style={{ boxShadow: "rgba(0,0,0,0.35) 0px 5px 15px" }}
             >
               <span>View All Programmes</span>
               <ArrowRight color="#fff" />
             </button>
           </div>
         )}
+        </div>
       </div>
     </section>
   );

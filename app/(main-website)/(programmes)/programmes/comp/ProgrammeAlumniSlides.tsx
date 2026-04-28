@@ -39,7 +39,7 @@ const ProgrammeAlumniSlides = ({ alumniData }: Props) => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full rounded-2xl">
       <Carousel
         className="w-full"
         opts={{ align: "start", loop: true }}
@@ -52,11 +52,12 @@ const ProgrammeAlumniSlides = ({ alumniData }: Props) => {
       >
         <CarouselContent className="-ml-1">
           {alumniData.map((item, index) => (
-            <CarouselItem key={index} className="lg:basis-1/2">
-              <div className="p-1">
-                {/* FIX: pass correct prop */}
-                <AlumniSlide item={item} />
-              </div>
+            <CarouselItem
+              key={index}
+              className="lg:basis-1/2 odd:bg-white even:bg-amber-100 mx-2 p-5"
+            >
+              {/* FIX: pass correct prop */}
+              <AlumniSlide item={item} />
             </CarouselItem>
           ))}
         </CarouselContent>
@@ -65,7 +66,7 @@ const ProgrammeAlumniSlides = ({ alumniData }: Props) => {
       </Carousel>
 
       {/* --- Pagination Dots --- */}
-      <div className="flex justify-center gap-2 mt-4">
+      <div className="flex justify-center gap-2 mt-10 mb-5">
         {Array.from({ length: totalSlides }).map((_, index) => (
           <button
             key={index}
