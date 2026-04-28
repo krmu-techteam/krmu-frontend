@@ -13,7 +13,7 @@ const PhdHeroSection = ({ formId }: Props) => {
         background: `url(/wp-content/landingpage/phd-2026/phd-hero-bg.webp)`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-      }} 
+      }}
     >
       <div className="max-w-[1300px] mx-auto w-full flex items-center flex-col md:flex-row gap-5 xl:gap-0">
         <div className="w-full md:w-1/3">
@@ -23,9 +23,7 @@ const PhdHeroSection = ({ formId }: Props) => {
               Ph.D.
             </span>{" "}
             <br />
-            <span className="hidden sm:block">
-              Programme Today
-            </span>
+            <span className="hidden sm:block">Programme Today</span>
           </h1>
           <h3 className="text-xl mx-auto sm:mx-0 sm:text-2xl md:text-3xl font-semibold bg-white p-5 w-fit my-5 text-center sm:text-left">
             Full-Time | Part-Time
@@ -53,7 +51,10 @@ const PhdHeroSection = ({ formId }: Props) => {
           )} */}
 
           {formId && (
-            <div id="apply-form" className="heroBannerForm__form">
+            <div
+              id="apply-section"
+              className="heroBannerForm__form scroll-mt-40"
+            >
               <div className="heroBannerForm-header">
                 <h3 className="mb-0">
                   <strong>
