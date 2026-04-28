@@ -19,7 +19,7 @@ const TableOfContentTab = ({ tocfaqs }: Props) => {
     >
       
       {/* Tab list: Horizontal Top Navigation */}
-      <TabsList className="flex flex-row overflow-x-auto w-full h-auto bg-transparent border-b border-gray-200 justify-start no-scrollbar mb-4 ">
+      <TabsList className="flex flex-row overflow-x-auto w-full h-auto bg-transparent border-b border-gray-200 justify-start md:justify-center no-scrollbar mb-8 gap-8 md:gap-16">
         {tocfaqs.map((section) => (
           <TabsTrigger
             key={section.id}
@@ -48,7 +48,7 @@ const TableOfContentTab = ({ tocfaqs }: Props) => {
             <Accordion
               type="single"
               collapsible
-              className="w-full cursor-pointer space-y-6"
+              className="w-full cursor-pointer space-y-4"
               defaultValue={`item-${section.faq[0]?.id ?? 1}`}
             >
               {section.faq.map((item) => (
