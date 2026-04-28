@@ -31,7 +31,7 @@ const Admission2WhatMakes = () => {
             <div className="card-text">
               <h5 className="card-title">State of the Art Infrastructure</h5>
               <p className="card-desc">
-                Modern Labs ,Well-Equipped Library ,Smart Classrooms ,28+ Acres
+                Modern Labs ,Well-Equipped Library ,Smart Classrooms , 35+ Acres
                 of Lush Green Campus ,Artistic &amp; Modern Infrastructure
               </p>
             </div>
