@@ -15,6 +15,16 @@
 
 /* Custom utility class */
 @layer utilities {
+  .progHeroIframe iframe {
+    width: 420px;
+  }
+
+  @media (max-width: 640px) {
+    .progHeroIframe iframe {
+      width: 100%;
+    }
+  }
+
   .heroBannerForm__form {
     background: #fff;
     width: 100%;

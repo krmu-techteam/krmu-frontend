@@ -45,7 +45,7 @@ const Eligibility = ({
 
   const isFormAvailable = allowedFormSlugs.includes(slug);
   const iframe = heroSection?.videofield;
-  // const videoSrc = iframe?.match(/src="([^"]+)"/)?.[1];
+  const videoSrc = iframe?.match(/src="([^"]+)"/)?.[1];
 
   // useEffect(() => {
   //   if (!formId || !btnRef.current) return;
@@ -231,12 +231,21 @@ const Eligibility = ({
 
           <div className="w-full sm:w-[420px] my-5 mx-auto xl:hidden">
             {heroSection?.imgvideo === "Video" ? (
-              <YoutubePopup
-                videoUrl="https://www.youtube.com/watch?v=tIfNUgSn2dw"
-                thumbnail="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
-                ytClassName="w-[420px] h-[280px] hidden sm:block rounded-md overflow-hidden shadow-2xl flex-shrink-0"
-                playIcon={false}
-              />
+              heroSection?.videofield.includes("iframe") ? (
+                <div className="max-w-[420px] w-full rounded-md overflow-hidden shadow-2xl">
+                  <iframe
+                    className="aspect-video rounded-md w-full"
+                    src={videoSrc}
+                  ></iframe>
+                </div>
+              ) : (
+                <YoutubePopup
+                  videoUrl="https://www.youtube.com/watch?v=tIfNUgSn2dw"
+                  thumbnail="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
+                  ytClassName="w-[420px] h-[280px] hidden sm:block rounded-md overflow-hidden shadow-2xl flex-shrink-0"
+                  playIcon={false}
+                />
+              )
             ) : (
               <div className="w-full h-[280px] relative">
                 {heroSection?.heroimg && (

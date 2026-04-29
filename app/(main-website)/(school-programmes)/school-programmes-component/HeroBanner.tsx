@@ -6,6 +6,7 @@ import NpfPopup from "../../components/NpfPopup";
 import IndusLearning from "../programs/prog-comp/IndusLearning";
 import NoPaperForm from "@/lib/constants/NoPaperForm";
 import YoutubePopup from "./YoutubePopup";
+import HeroTitle from "./HeroTitle";
 
 type Props = {
   title: string;
@@ -35,8 +36,8 @@ const HeroBanner = ({
 }: Props) => {
   // const isFormAvailable = allowedFormSlugs.includes(slug);
   // const isFormAvailable = true;
-  // const iframe = heroSection?.videofield;
-  // const videoSrc = iframe?.match(/src="([^"]+)"/)?.[1];
+  const iframe = heroSection?.videofield;
+  const videoSrc = iframe?.match(/src="([^"]+)"/)?.[1];
   // const btnRef = useRef<HTMLButtonElement>(null);
 
   // useEffect(() => {
@@ -78,11 +79,12 @@ const HeroBanner = ({
             >
               {heroSection?.subtitle}
             </p>
-            <h1
+            <HeroTitle title={title} highlightTitle={highlightitle} />
+            {/* <h1
               className={` text-[#0A41A1] text-3xl sm:text-4xl xl:text-[58px] font-bold leading-[1.1]   mb-2`}
             >
               {title} <span className="text-[#e61f21]">{highlightitle}</span>
-            </h1>
+            </h1> */}
             <p className={`text-base sm:text-lg text-[#575757] font-medium`}>
               {heroSection?.description}
             </p>
@@ -114,15 +116,30 @@ const HeroBanner = ({
             {/* <div className="max-w-sm w-full h-[200px] mt-5 bg-red-500 rounded-2xl"></div> */}
             {/* Custom thumbnail */}
 
-            <div className="hidden xl:flex flex-col lg:flex-row items-center gap-10 mt-10">
-              <div className="md:min-w-[420px] w-full">
+            <div className="flex flex-col lg:flex-row items-center gap-10 mt-10">
+              <div className="hidden xl:block md:min-w-[420px] w-full">
                 {heroSection?.imgvideo === "Video" ? (
-                  <YoutubePopup
-                    videoUrl="https://www.youtube.com/watch?v=tIfNUgSn2dw"
-                    thumbnail="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
-                    ytClassName="w-[420px] h-[280px] rounded-md overflow-hidden shadow-2xl flex-shrink-0"
-                    playIcon={false}
-                  />
+                  heroSection?.videofield?.includes("iframe") ? (
+                    <div className="max-w-[420px] w-full rounded-md overflow-hidden shadow-2xl">
+                      <iframe
+                        className="aspect-video rounded-md w-full"
+                        src={videoSrc}
+                      ></iframe>
+                    </div>
+                  ) : (
+                    <YoutubePopup
+                      videoUrl={
+                        heroSection?.videofield ||
+                        "https://www.youtube.com/watch?v=tIfNUgSn2dw&t=59s"
+                      }
+                      thumbnail={
+                        heroSection?.herobtn?.buttonlink ||
+                        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
+                      }
+                      ytClassName="w-[420px] h-[280px] rounded-md overflow-hidden shadow-2xl flex-shrink-0"
+                      playIcon={false}
+                    />
+                  )
                 ) : (
                   <div className="w-full h-[280px] relative flex justify-start">
                     {heroSection?.heroimg && (
