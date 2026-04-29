@@ -2658,10 +2658,9 @@
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-100%);
     }
   }
-
   .animate-marquee {
     animation: marquee 15s linear infinite; /* adjust duration for speed */
   }
@@ -2669,6 +2668,25 @@
   @media (max-width: 640px) {
     .animate-marquee {
       animation: marquee 5s linear infinite; /* adjust duration for speed */
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-310%);
+    }
+  }
+
+  .animatee-marquee {
+    animation: scroll 30s linear infinite; /* adjust duration for speed */
+  }
+
+  @media (max-width: 640px) {
+    .animatee-marquee {
+      animation: scroll 5s linear infinite; /* adjust duration for speed */
     }
   }
 
