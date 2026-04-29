@@ -54,7 +54,7 @@ const ProgrammeAlumniSlides = ({ alumniData }: Props) => {
           {alumniData.map((item, index) => (
             <CarouselItem
               key={index}
-              className="lg:basis-1/2 odd:bg-white even:bg-amber-100 mx-2 p-5"
+              className="lg:basis-1/2 bg-white mx-2 p-5"
             >
               {/* FIX: pass correct prop */}
               <AlumniSlide item={item} />

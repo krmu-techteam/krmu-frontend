@@ -269,7 +269,7 @@ const page = async ({ params }: Props) => {
             heroSection={heroSection}
             formId={heroSection?.formId}
             slug={slug}
-            allowedFormSlugs={allowedFormSlugs}
+            // allowedFormSlugs={allowedFormSlugs}
             dreamcareerSection={dreamcareerSection}
             />
           )}
