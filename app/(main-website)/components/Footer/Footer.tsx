@@ -198,6 +198,14 @@ const Footer = async () => {
                   </div>
                 </>
               )}
+              <div className="mt-5">
+                <Image
+                  src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/footer_logos_d944bc560c.svg"
+                  width={250}
+                  height={200}
+                  alt="Footer Image"
+                />
+              </div>
             </div>
           </div>
         </div>
