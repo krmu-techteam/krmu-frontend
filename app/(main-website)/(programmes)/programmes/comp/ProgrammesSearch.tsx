@@ -460,9 +460,9 @@ const ProgrammesSearch = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-[1440px] mx-auto w-full">
+        <div className="max-w-[1440px] mx-auto w-full px-5 2xl:px-0">
           {/* PROGRAMMES LIST */}
-          <div className="mt-10 grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+          <div className="mt-10 grid md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-8">
             {programmes.length === 0 ? (
               <p className="col-span-3 text-center text-lg font-semibold text-gray-500">
                 No programme found
@@ -628,7 +628,7 @@ const ProgrammesSearch = () => {
             <p className="font-bold text-sm sm:text-base mb-2.5">
               Eligibility:
             </p>
-            <p className="text-xs sm:text-sm mb-5">
+            <div className="text-xs sm:text-sm mb-5">
               {isZenithPopup ? (
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-2">
@@ -687,7 +687,7 @@ const ProgrammesSearch = () => {
               ) : (
                 selectedProgramme?.criteria?.eligibility_criteria
               )}
-            </p>
+            </div>
           </div>
 
           <div className="flex gap-4 items-center">

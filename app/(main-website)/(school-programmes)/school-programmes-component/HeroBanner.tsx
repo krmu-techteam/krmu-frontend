@@ -124,7 +124,7 @@ const HeroBanner = ({
                     playIcon={false}
                   />
                 ) : (
-                  <div className="w-full h-[280px] relative">
+                  <div className="w-full h-[280px] relative flex justify-start">
                     {heroSection?.heroimg && (
                       <Image
                         src={`${STRAPI_URL}${heroSection.heroimg.url}`}
@@ -133,7 +133,7 @@ const HeroBanner = ({
                           heroSection.heroimg.alternativeText || "Hero Image"
                         }
                         priority
-                        className="object-cover z-10"
+                        className="object-fill w-full z-10"
                       />
                     )}
                   </div>
