@@ -12,6 +12,14 @@ const BeyondClassroomSlider = ({ slideimages }: Props) => {
     <div className="relative w-full overflow-hidden py-10">
       <div className="flex animate-marquee">
         {/* Original slides */}
+        <div className="relative w-full sm:w-[calc(100%/3)] lg:w-[calc(100%/4)] mx-2 h-[336px] flex-shrink-0 rounded-xl overflow-hidden">
+          <Image
+            src={`https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1234567_jpg_2_b305571e23.jpeg`}
+            alt=""
+            fill
+            className="object-cover"
+          />
+        </div>
         {slideimages.map((img) => (
           <div
             key={img.id}
