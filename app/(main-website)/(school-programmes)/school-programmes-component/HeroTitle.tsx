@@ -1,29 +1,26 @@
-"use client";
+// "use client";
 
-import { useEffect, useRef, useState } from "react";
+// import { useEffect, useRef, useState } from "react";
 
 export default function HeroTitle({ title, highlightitle }: any) {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const [small, setSmall] = useState(false);
+  // const titleRef = useRef<HTMLHeadingElement>(null);
+  // const [small, setSmall] = useState(false);
 
-  useEffect(() => {
-    const el = titleRef.current;
-    if (!el) return;
+  // useEffect(() => {
+  //   const el = titleRef.current;
+  //   if (!el) return;
 
-    const lineHeight = parseFloat(getComputedStyle(el).lineHeight);
-    const maxHeight = lineHeight * 4;
+  //   const lineHeight = parseFloat(getComputedStyle(el).lineHeight); 
+  //   const maxHeight = lineHeight * 4;
 
-    if (el.scrollHeight > maxHeight) {
-      setSmall(true);
-    }
-  }, [title]);
+  //   if (el.scrollHeight > maxHeight) {
+  //     setSmall(true);
+  //   }
+  // }, [title]);
 
   return (
     <h1
-      ref={titleRef}
-      className={`text-[#0A41A1] font-bold leading-[1.1] mb-2 transition-all
-        ${small ? "text-2xl sm:text-3xl" : "text-3xl sm:text-4xl xl:text-[58px]"}
-      `}
+      className={`text-[#0A41A1] font-bold leading-[1.1] mb-2 transition-all text-3xl sm:text-4xl xl:text-[58px] line-clamp-3`}
     >
       {title} <span className="text-[#e61f21]">{highlightitle}</span>
     </h1>
