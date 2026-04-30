@@ -20,7 +20,7 @@ export default function HeroTitle({ title, highlightitle }: any) {
 
   return (
     <h1
-      className={`text-[#0A41A1] font-bold leading-[1.1] mb-2 transition-all text-3xl sm:text-4xl xl:text-[58px] line-clamp-3`}
+      className={`text-[#0A41A1] font-bold leading-[1.1] mb-2 transition-all text-3xl sm:text-4xl xl:text-[58px]`}
     >
       {title} <span className="text-[#e61f21]">{highlightitle}</span>
     </h1>
