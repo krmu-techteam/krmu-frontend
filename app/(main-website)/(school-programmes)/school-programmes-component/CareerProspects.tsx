@@ -32,7 +32,7 @@ const CareerProspects = ({
                 {heading} {highlight}
               </h3>
 
-              <p className="mb-4 md:mb-6 leading-relaxed text-md text-justify md:text-center">{desc}</p>
+              <p className="mb-4 md:mb-6 leading-relaxed text-md">{desc}</p>
 
               <div className="flex-1">
                 {careercards?.map((card) => (

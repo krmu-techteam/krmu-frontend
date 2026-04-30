@@ -2688,7 +2688,7 @@
   }
 
   .animatee-marquee {
-    animation: scroll 30s linear infinite; /* adjust duration for speed */
+    animation: scroll 40s linear infinite; /* adjust duration for speed */
   }
 
   @media (max-width: 640px) {
