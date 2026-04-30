@@ -62,7 +62,8 @@ const LabsFacilities = ({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 pb-6 px-4 md:px-0">
               {labcards &&
                 labcards.map((lab, index) => {
-                  const labImage = labStagingImages[index % labStagingImages.length];
+                  const labImage =
+                    labStagingImages[index % labStagingImages.length];
                   return (
                     <div
                       key={lab?.id}
@@ -99,7 +100,7 @@ const LabsFacilities = ({
                 </Link>
               )}
             </div> */}
-            
+
             <div className="md:hidden mt-0 md:mt-10">
               <LabFacilitiesSlider labcards={labcards} />
             </div>

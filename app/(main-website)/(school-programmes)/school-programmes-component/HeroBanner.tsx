@@ -136,21 +136,21 @@ const HeroBanner = ({
                         heroSection?.herobtn?.buttonlink ||
                         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
                       }
-                      ytClassName="w-[420px] h-[280px] rounded-md overflow-hidden shadow-2xl flex-shrink-0"
+                      ytClassName="w-[364px] h-[226px] rounded-md overflow-hidden shadow-2xl flex-shrink-0"
                       playIcon={false}
                     />
                   )
                 ) : (
-                  <div className="w-full h-[280px] relative flex justify-start">
+                  <div className="w-full">
                     {heroSection?.heroimg && (
                       <Image
                         src={`${STRAPI_URL}${heroSection.heroimg.url}`}
-                        fill
+                        width={364}
+                        height={226}
                         alt={
                           heroSection.heroimg.alternativeText || "Hero Image"
                         }
-                        priority
-                        className="object-fill w-full z-10"
+                        className="object-cover rounded-md"
                       />
                     )}
                   </div>
