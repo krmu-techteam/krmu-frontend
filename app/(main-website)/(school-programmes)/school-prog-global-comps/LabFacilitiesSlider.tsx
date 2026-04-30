@@ -8,11 +8,14 @@ import { LabCard } from "@/lib/types/school-programme";
 import Autoplay from "embla-carousel-autoplay";
 import { useState } from "react";
 
+import Image from "next/image";
+
 type Props = {
   labcards: LabCard[];
+  images: string[];
 };
 
-const LabFacilitiesSlider = ({ labcards }: Props) => {
+const LabFacilitiesSlider = ({ labcards, images }: Props) => {
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
 
@@ -20,12 +23,12 @@ const LabFacilitiesSlider = ({ labcards }: Props) => {
     <div className="py-10">
       <Carousel
         opts={{
-          align: "center", // center active slide
+          align: "start",
           loop: true,
         }}
         plugins={[
           Autoplay({
-            delay: 1000,
+            delay: 3000,
           }),
         ]}
         setApi={(api) => {
@@ -37,34 +40,36 @@ const LabFacilitiesSlider = ({ labcards }: Props) => {
           });
         }}
       >
-        <CarouselContent className="px-0 my-5">
+        <CarouselContent className="px-0 my-5 flex items-stretch">
           {labcards &&
-            labcards.map((item, i) => (
-              <CarouselItem key={i} className="basis-2/3 md:basis-1/3 h-full">
+            labcards.map((item, i) => {
+               const labImage = images[i % images.length];
+               return (
+              <CarouselItem key={i} className="basis-full sm:basis-1/2 md:basis-1/3 flex">
                 <div
-                  className={`p-5 rounded-2xl text-center transition-all duration-300 shadow-md flex flex-col items-center justify-center h-full ${
-                    current === i
-                      ? "bg-[#0a41a1] scale-105"
-                      : "bg-white scale-95"
+                  className={`group bg-white rounded-md overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col w-full mx-2 ${
+                    current === i ? "ring-2 ring-[#0a41a1]" : ""
                   }`}
                 >
-                  <h5
-                    className={`font-semibold ${
-                      current === i ? "text-white" : "text-black"
-                    }`}
-                  >
-                    {item.title}
-                  </h5>
-                  <p
-                    className={`mt-2 text-sm ${
-                      current === i ? "text-[#97a6c0]" : "text-gray-600"
-                    }`}
-                  >
-                    {item?.description}
-                  </p>
+                  <div className="relative h-[120px] w-full overflow-hidden flex items-center justify-center">
+                    <Image
+                      fill
+                      src={labImage}
+                      alt={item.title}
+                      className="object-contain px-10 pt-10 pb-0 group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div className="px-5 py-4 flex-1 flex flex-col items-center text-center">
+                    <h5 className="font-bold mb-3 text-xl text-black leading-tight">
+                      {item.title}
+                    </h5>
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {item?.description}
+                    </p>
+                  </div>
                 </div>
               </CarouselItem>
-            ))}
+            )})}
         </CarouselContent>
 
         {/* Dots */}

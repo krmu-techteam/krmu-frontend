@@ -27,8 +27,10 @@ const LabsFacilities = ({
   labcards,
   slug,
 }: Props) => {
-  // Staging Images for Labs (Design reference)
-  const labStagingImages = [
+  // Map dynamic images from btn?.containerPopupFormId if available, otherwise use defaults
+  const labStagingImages = btn?.containerPopupFormId 
+    ? btn?.containerPopupFormId.split(',').map(url => url.trim()).filter(url => url !== "")
+    : [
     "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/technology_8b0b4c04a3.png",
     "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/artificial_intelligence_0117b8b3e9.png",
     "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/social_2e5de5b706.png",
@@ -59,34 +61,8 @@ const LabsFacilities = ({
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 pb-6 px-4 md:px-0">
-              {labcards &&
-                labcards.map((lab, index) => {
-                  const labImage = labStagingImages[index % labStagingImages.length];
-                  return (
-                    <div
-                      key={lab?.id}
-                      className="group bg-white rounded-md overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full"
-                    >
-                      <div className="relative h-[120px] w-full overflow-hidden flex items-center justify-center">
-                        <Image
-                          fill
-                          src={labImage}
-                          alt={lab?.title}
-                          className="object-contain px-10 pt-10 pb-0 group-hover:scale-105 transition-transform duration-700"
-                        />
-                      </div>
-                      <div className="px-5 py-4 flex-1 flex flex-col items-center text-center">
-                        <h5 className="font-bold mb-3 text-xl text-black leading-tight">
-                          {lab?.title}
-                        </h5>
-                        <p className="text-sm text-gray-500 leading-relaxed">
-                          {lab?.description}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
+            <div className="mt-10 pb-6 px-4 md:px-0">
+               <LabFacilitiesSlider labcards={labcards} images={labStagingImages} />
             </div>
 
             {/* <div className="flex items-center justify-center">
@@ -100,9 +76,6 @@ const LabsFacilities = ({
               )}
             </div> */}
             
-            <div className="md:hidden mt-0 md:mt-10">
-              <LabFacilitiesSlider labcards={labcards} />
-            </div>
           </div>
         </div>
         <div className="max-w-[1320px] mx-auto w-full mt-0 md:mt-10">
