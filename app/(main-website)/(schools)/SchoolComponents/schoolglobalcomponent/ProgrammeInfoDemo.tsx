@@ -199,7 +199,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                             Fee Structure
                           </button>
                           <Link
-                            href={prog.criteria.eligibility_utm_links}
+                            href={prog.criteria.eligibility_utm_links || '#'}
                             target="_blank"
                             className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer hover:bg-red-500 hover:text-white hover:border hover:border-red-500"
                           >
