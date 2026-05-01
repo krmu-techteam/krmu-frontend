@@ -15,16 +15,6 @@
 
 /* Custom utility class */
 @layer utilities {
-  .progHeroIframe iframe {
-    width: 420px;
-  }
-
-  @media (max-width: 640px) {
-    .progHeroIframe iframe {
-      width: 100%;
-    }
-  }
-
   .heroBannerForm__form {
     background: #fff;
     width: 100%;
@@ -2529,7 +2519,6 @@
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 30px;
   }
 
   .admis_proc_btn_grid_items {
@@ -2572,54 +2561,58 @@
     text-align: center;
   }
 
-  /* write heading not button */
   .admis_proc_btn_content .btn_text {
-    font-size: 18px;
-    font-weight: 500;
-    color: balck;
+    background: #db2a1a;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    max-width: 180px;
+    border-radius: 50px;
+    width: 100%;
+    padding: 10px;
   }
 
   .admis_proc_btn_grid_item:nth-child(2) .admis_proc_btn_content .btn_text {
-    margin-left: 25px;
+    margin-left: -15px;
   }
   .admis_proc_btn_grid_item:nth-child(3) .admis_proc_btn_content .btn_text {
-    margin-left: 8px;
+    margin-left: -25px;
   }
 
   .admis_proc_btn_grid_item:nth-child(4) .admis_proc_btn_content .btn_text {
-    margin-left: -28px;
+    margin-left: -38px;
   }
   .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content .btn_text {
-    margin-left: -24px;
+    margin-left: -45px;
   }
 
   .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content .btn_text {
-    margin-left: -20px;
+    margin-left: -60px;
   }
 
   .admis_proc_btn_grid_item .admis_proc_btn_content .admis_btn_below_text {
-    max-width: 140px;
+    max-width: 150px;
     width: 100%;
     font-size: 14px;
-    margin-top: 4px;
-    font-weight: 400;
+    margin-top: 15px;
+    font-weight: 500;
     color: #5d6670;
     line-height: 1.5;
   }
   .admis_proc_btn_grid_item:nth-child(1)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -12px;
+    margin-left: -15px;
   }
   .admis_proc_btn_grid_item:nth-child(2)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -4px;
+    margin-left: -15px;
   }
   .admis_proc_btn_grid_item:nth-child(3)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -8px;
+    margin-left: -10px;
   }
 
   .admis_proc_btn_grid_item:nth-child(4)
@@ -2636,7 +2629,7 @@
   .admis_proc_btn_grid_item:nth-child(6)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -38px;
+    margin-left: -42px;
   }
 
   .prog-global-padding {
@@ -2647,11 +2640,11 @@
   .common-prog-container .heading {
     font-size: 40px;
     font-weight: bold;
-    color: black;
+    color: #0a41a1;
   }
   .common-prog-container .sub-heading {
     font-size: 20px;
-    color: #525252;
+    color: #a9a9a9;
     font-weight: 400;
   }
   /* Programme Highlights */
@@ -2688,11 +2681,7 @@
   }
 
   .animatee-marquee {
-<<<<<<< HEAD
-    animation: scrollProg 40s linear infinite; /* adjust duration for speed */
-=======
     animation: scrollProg 30s linear infinite; /* adjust duration for speed */
->>>>>>> 7c5d71de17dafa9b2a176fad5508f1e103413562
   }
 
   @media (max-width: 640px) {
@@ -3022,7 +3011,6 @@
   }
   .proghighcard {
     background: #f8f9fd;
-    border: 1px solid #e0e0e0;
   }
   .proghighcard:hover {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
