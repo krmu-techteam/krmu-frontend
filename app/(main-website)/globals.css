@@ -2688,7 +2688,11 @@
   }
 
   .animatee-marquee {
+<<<<<<< HEAD
     animation: scrollProg 40s linear infinite; /* adjust duration for speed */
+=======
+    animation: scrollProg 30s linear infinite; /* adjust duration for speed */
+>>>>>>> 7c5d71de17dafa9b2a176fad5508f1e103413562
   }
 
   @media (max-width: 640px) {
