@@ -26,7 +26,7 @@ export const CommonHeader = () => {
             Apply Now
           </ScrollButton>
         </div>
-        <div className="w-full xl:w-3/6 2xl:w-2/3  flex justify-center sm:justify-end gap-5">
+        <div className="w-full xl:w-3/6 2xl:w-2/3  flex justify-center sm:justify-end gap-5 temp-class">
           {/* <button className="max-w-[180px] w-full py-[15px] px-[25px] text-white bg-[#e31e24] rounded-[15px]">
             Apply Now
           </button> */}

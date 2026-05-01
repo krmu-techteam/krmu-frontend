@@ -2671,7 +2671,7 @@
     }
   }
 
-  @keyframes scroll {
+  @keyframes scrollProg {
     0% {
       transform: translateX(0%);
     }
@@ -2681,12 +2681,12 @@
   }
 
   .animatee-marquee {
-    animation: scroll 30s linear infinite; /* adjust duration for speed */
+    animation: scrollProg 30s linear infinite; /* adjust duration for speed */
   }
 
   @media (max-width: 640px) {
     .animatee-marquee {
-      animation: scroll 5s linear infinite; /* adjust duration for speed */
+      animation: scrollProg 5s linear infinite; /* adjust duration for speed */
     }
   }
 
