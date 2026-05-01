@@ -28,7 +28,7 @@ const ProgrammeScope = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="bg-[#0a41a1] py-10 md:py-16 lg:py-20">
+    <section className="bg-[#0a41a1] py-8 md:py-16">
       <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-10 lg:gap-20">
         
         {/* Left column: Image */}

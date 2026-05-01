@@ -20,7 +20,7 @@ const LabFacilitiesSlider = ({ labcards, images }: Props) => {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="py-10">
+    <div>
       <Carousel
         opts={{
           align: "start",

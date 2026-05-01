@@ -38,7 +38,7 @@ const LabsFacilities = ({
 
   return (
     <>
-      <section className="prog-global-padding bg-[#f9f9f9] pb-8">
+      <section className="prog-global-padding py-8 md:py-16">
         <div className="max-w-[1440px] mx-auto w-full">
           {/* <div className="w-1/2 hidden lg:block">
             {labimg?.url && (
@@ -53,15 +53,15 @@ const LabsFacilities = ({
           </div> */}
           <div className="w-full labFac_container text-center">
             <div className="common-prog-container !max-w-4xl mx-auto">
-              <h3 className="heading mb-4 text-[40px]">
+              <h3 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-4">
                 {heading} {highlight}
               </h3>
-              <div className="sub-heading text-black/70 px-4 md:px-0 text-center">
+              <div className="sub-heading text-black px-4 md:px-0 text-center -mb-4">
                 <BlocksRenderer content={labcontent} />
               </div>
             </div>
 
-            <div className="mt-10 pb-6 px-4 md:px-0">
+            <div className="px-4 md:px-0">
                <LabFacilitiesSlider labcards={labcards} images={labStagingImages} />
             </div>
 

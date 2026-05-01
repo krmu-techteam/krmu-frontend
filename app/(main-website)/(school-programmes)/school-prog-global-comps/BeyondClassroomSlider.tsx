@@ -51,7 +51,7 @@ const BeyondClassroomSlider = ({ slideimages }: Props) => {
     //   </div>
     // </div>
     <section
-      className="pt-12 pb-0"
+      className="pt-12 pb-5"
       id="recruiters"
       aria-label="Our prominent recruiters"
     >

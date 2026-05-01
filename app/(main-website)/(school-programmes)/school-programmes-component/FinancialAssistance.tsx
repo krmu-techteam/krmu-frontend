@@ -32,13 +32,13 @@ const FinancialAssistance = ({
   const points = [point1, point2, point3, point4, point5, point6, point7].filter(Boolean);
 
   return (
-    <section className="prog-global-padding bg-[#f8f9fd] py-12 md:pt-16 md:pb-20 px-4 md:px-0">
+    <section className="prog-global-padding bg-[#f9f9f9] py-8 md:py-16 px-4 md:px-0">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container !max-w-7xl">
-          <h2 className="heading pb-4 md:pb-0">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {heading}{" "}{highlightheading} 
           </h2>
-          <p className="sub-heading text-black/70 text-justify md:text-center">{description}</p>
+          <p className="text-lg md:text-xl text-gray-800 text-justify md:text-center">{description}</p>
         </div>
 
         {/* Points Layout */}

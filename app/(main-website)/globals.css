@@ -2562,40 +2562,38 @@
   }
 
   .admis_proc_btn_content .btn_text {
-    background: #db2a1a;
-    border: none;
-    outline: none;
-    color: #ffffff;
+    font-size: 18px;
     max-width: 180px;
     border-radius: 50px;
     width: 100%;
-    padding: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
   }
 
   .admis_proc_btn_grid_item:nth-child(2) .admis_proc_btn_content .btn_text {
-    margin-left: -15px;
+    margin-left: -28px;
   }
   .admis_proc_btn_grid_item:nth-child(3) .admis_proc_btn_content .btn_text {
-    margin-left: -25px;
+    margin-left: -50px;
   }
 
   .admis_proc_btn_grid_item:nth-child(4) .admis_proc_btn_content .btn_text {
-    margin-left: -38px;
+    margin-left: -50px;
   }
   .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content .btn_text {
-    margin-left: -45px;
+    margin-left: -67px;
   }
 
   .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content .btn_text {
-    margin-left: -60px;
+    margin-left: -78px;
   }
 
   .admis_proc_btn_grid_item .admis_proc_btn_content .admis_btn_below_text {
     max-width: 150px;
     width: 100%;
     font-size: 14px;
-    margin-top: 15px;
-    font-weight: 500;
+    margin-top:-6px;
+    font-weight: 400;
     color: #5d6670;
     line-height: 1.5;
   }
@@ -2612,24 +2610,24 @@
   .admis_proc_btn_grid_item:nth-child(3)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -10px;
+    margin-left: -35px;
   }
 
   .admis_proc_btn_grid_item:nth-child(4)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -22px;
+    margin-left: -35px;
   }
   .admis_proc_btn_grid_item:nth-child(5)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -30px;
+    margin-left: -52px;
   }
 
   .admis_proc_btn_grid_item:nth-child(6)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -42px;
+    margin-left: -60px;
   }
 
   .prog-global-padding {
@@ -2644,7 +2642,7 @@
   }
   .common-prog-container .sub-heading {
     font-size: 20px;
-    color: #a9a9a9;
+    color: #424242;
     font-weight: 400;
   }
   /* Programme Highlights */

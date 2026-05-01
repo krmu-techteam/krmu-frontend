@@ -15,7 +15,7 @@ const DreamCareer = ({
   logos,
 }: Props) => {
   return (
-    <section className="py-8 md:pt-12 md:pb-20 bg-white">
+    <section className="py-8 md:py-16 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <h2 className="text-3xl md:text-4xl font-semibold text-center text-[#1a1a1a] mb-12">
           {heading}

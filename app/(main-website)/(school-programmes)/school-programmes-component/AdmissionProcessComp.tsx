@@ -24,12 +24,12 @@ const AdmissionProcessComp = ({
   admisbtn,
 }: Props) => {
   return (
-    <section className="prog-global-padding bg-[#f9f9f9] py-10 md:py-20">
+    <section className="prog-global-padding bg-[#f9f9f9] py-8 md:py-16">
       <div className="common-prog-container">
-        <h2 className="heading mb-2">
+        <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-2">
           {heading} {highlight}
         </h2>
-        <p className="sub-heading">{desc}</p>
+        <p className="sub-heading mb-5">{desc}</p>
       </div>
       <div className="max-w-[1320px] mx-auto w-full mt-2.5 hidden lg:block px-4 md:px-0">
         <Image
