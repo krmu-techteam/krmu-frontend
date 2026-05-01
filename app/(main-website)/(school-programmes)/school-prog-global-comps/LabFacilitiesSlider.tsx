@@ -3,10 +3,11 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import { LabCard } from "@/lib/types/school-programme";
 import Autoplay from "embla-carousel-autoplay";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 
@@ -16,8 +17,20 @@ type Props = {
 };
 
 const LabFacilitiesSlider = ({ labcards, images }: Props) => {
+  const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   return (
     <div>
@@ -31,14 +44,7 @@ const LabFacilitiesSlider = ({ labcards, images }: Props) => {
             delay: 3000,
           }),
         ]}
-        setApi={(api) => {
-          if (!api) return;
-          setCount(api.scrollSnapList().length);
-
-          api.on("select", () => {
-            setCurrent(api.selectedScrollSnap());
-          });
-        }}
+        setApi={setApi}
       >
         <CarouselContent className="px-0 my-5 flex items-stretch">
           {labcards &&
@@ -75,9 +81,11 @@ const LabFacilitiesSlider = ({ labcards, images }: Props) => {
           {Array.from({ length: count }).map((_, i) => (
             <button
               key={i}
-              className={`h-2 w-2 rounded-full transition-all ${
-                current === i ? "bg-[#0a41a1] w-6" : "bg-gray-400"
+              onClick={() => api?.scrollTo(i)}
+              className={`h-2 rounded-full transition-all cursor-pointer ${
+                current === i ? "bg-[#0a41a1] w-6" : "bg-gray-400 w-2"
               }`}
+              aria-label={`Go to slide ${i + 1}`}
             />
           ))}
         </div>

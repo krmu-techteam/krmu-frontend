@@ -43,7 +43,7 @@ const TableOfContent = ({
                 {(tocbtn?.buttonclass || tocbtn?.buttonlink) && (
                   <Link
                     href={tocbtn?.buttonlink || "#"}
-                    className="w-full md:w-auto py-2 text-center md:px-8 md:py-3 text-white bg-[#0a41a1] text-sm md:text-base font-medium md:font-semibold rounded-sm md:rounded-md hover:bg-[#083380] transition-colors shadow-md"
+                    className="w-full md:w-auto py-2 text-center md:px-8 md:py-2.5 text-white bg-[#0a41a1] text-sm md:text-base font-semibold tracking-[0.025em] rounded-sm md:rounded-md hover:bg-[#083380] transition-colors shadow-md"
                   >
                     {tocbtn?.buttontext}
                   </Link>

@@ -3188,14 +3188,24 @@
     width: fit-content;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     gap: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
+
+  .common-btn-b:hover,
+  .hero-common-btn-b:hover {
+    background: #083380;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
+    transform: translateY(-2px);
+  }
+
   .hero-common-btn-b {
     background: #0a41a1;
     color: #ffffff;
-    padding: 15px 30px;
+    padding: 13px 30px;
     line-height: 1;
     border: 1px solid #0a41a1;
-    border-radius: 10px;
+    border-radius: 4px !important;
     outline: none;
     font-size: 18px;
     display: flex;
@@ -3203,6 +3213,8 @@
     width: fit-content;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     gap: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
 
   @media (max-width: 640px) {

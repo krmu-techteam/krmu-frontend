@@ -64,10 +64,10 @@ const ProgrammeScope = async ({
 
         {/* Right column: Content */}
         <div className="w-full md:w-1/2 text-white px-4 md:px-0">
-          <h3 className="text-[32px] md:text-[50px] font-semibold leading-tight mb-6">
+          <h3 className="text-[32px] md:text-[50px] font-semibold leading-tight mb-2">
             {scopeData?.scopeheading}
           </h3>
-          <p className="text-base text-justify md:text-left md:text-xl lg:text-[22px] leading-relaxed mb-10 font-light opacity-95">
+          <p className="text-base text-justify md:text-xl lg:text-[20px] leading-[1.7] tracking-[0.01em] mb-10 font-normal opacity-90 max-w-2xl">
             {scopeData?.scopecontent}
           </p>
 
