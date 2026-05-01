@@ -47,9 +47,7 @@ const LabFacilitiesSlider = ({ labcards, images }: Props) => {
                return (
               <CarouselItem key={i} className="basis-full sm:basis-1/2 md:basis-1/3 flex">
                 <div
-                  className={`group bg-white rounded-md overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col w-full mx-2 ${
-                    current === i ? "ring-2 ring-[#0a41a1]" : ""
-                  }`}
+                  className={`group bg-white rounded-md overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col w-full mx-2`}
                 >
                   <div className="relative h-[120px] w-full overflow-hidden flex items-center justify-center">
                     <Image
