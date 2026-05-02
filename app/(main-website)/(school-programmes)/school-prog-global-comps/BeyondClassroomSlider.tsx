@@ -45,7 +45,7 @@ const BeyondClassroomSlider = ({ slideimages }: Props) => {
                     alt={rec.alternativeText || ``}
                     width={500}
                     height={366}
-                    className="w-full object-cover h-[220px] sm:h-[300px] md:h-[350px]"
+                    className="w-full object-contain"
                   />
                 </div>
               </div>

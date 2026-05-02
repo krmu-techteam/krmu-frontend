@@ -12,13 +12,13 @@ const ProgrammeHighlightCard = ({ title, desc, highlightimg }: Props) => {
   return (
     <>
       <div className="proghighcard duration-200 flex flex-col sm:flex-row cursor-pointer rounded-[4px] border border-gray-300 overflow-hidden bg-white hover:shadow-md transition-shadow">
-        <div className="w-full sm:w-[220px] min-h-[160px] sm:min-h-[160px] relative flex-shrink-0">
+        <div className="w-full sm:w-[160px] min-h-[160px] sm:min-h-[160px] relative flex-shrink-0">
           {highlightimg?.url && (
             <Image
               fill
               src={`${STRAPI_URL}${highlightimg?.url}`}
               alt={highlightimg?.alternativeText || "ba-hons-psychology-krmu"}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           )}
         </div>
