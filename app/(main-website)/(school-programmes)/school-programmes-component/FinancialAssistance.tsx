@@ -35,7 +35,7 @@ const FinancialAssistance = ({
     <section className="prog-global-padding bg-[#f9f9f9] py-8 md:py-16 px-4 md:px-0">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container !max-w-7xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-[32px] md:text-[42px] font-bold text-gray-900 mb-4">
             {heading}{" "}{highlightheading} 
           </h2>
           <p className="text-lg md:text-xl text-gray-800 text-justify md:text-center">{description}</p>

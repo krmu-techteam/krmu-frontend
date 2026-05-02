@@ -1116,6 +1116,51 @@
     }
   }
 
+  .modern-fee-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: white;
+  }
+  .modern-fee-table table thead tr th,
+  .modern-fee-table table tr:first-child td {
+    background-color: #065084 !important;
+    color: white !important;
+    font-weight: 500;
+    padding: 15px 25px !important;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid #065084 !important;
+    white-space: nowrap;
+  }
+  .modern-fee-table table tbody tr td {
+    padding: 12px 25px;
+    border: 1px solid #e2e8f0 !important;
+    font-size: 15px;
+    color: #424242;
+    line-height: 1.5;
+  }
+  .modern-fee-table table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+  .modern-fee-table table tbody tr:hover {
+    background-color: #F3F4F4;
+    transition: background-color 0.2s ease;
+  }
+
+  /* Mobile Optimizations */
+  @media (max-width: 768px) {
+    .modern-fee-table table thead tr th,
+    .modern-fee-table table tr:first-child td {
+      font-size: 14px;
+      padding: 12px 15px !important;
+    }
+    .modern-fee-table table tbody tr td {
+      font-size: 13px;
+      padding: 10px 15px;
+    }
+  }
+
   .feestructtable .table {
     width: 100%;
   }
@@ -1138,7 +1183,7 @@
   .feestructtable table,
   .feestructtable table th,
   .feestructtable table td {
-    border: 1px solid #000 !important;
+    border: 1px solid #424242 !important;
     border-collapse: collapse;
   }
 
@@ -2651,40 +2696,13 @@
       font-size: 32px;
     }
   }
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  .animate-marquee {
-    animation: marquee 15s linear infinite; /* adjust duration for speed */
-  }
 
-  @media (max-width: 640px) {
-    .animate-marquee {
-      animation: marquee 5s linear infinite; /* adjust duration for speed */
-    }
-  }
 
-  @keyframes scrollProg {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-310%);
-    }
-  }
-
-  .animatee-marquee {
-    animation: scrollProg 30s linear infinite; /* adjust duration for speed */
-  }
-
-  @media (max-width: 640px) {
-    .animatee-marquee {
-      animation: scrollProg 5s linear infinite; /* adjust duration for speed */
+  /* Position NPF Chatbot above mobile sticky footer */
+  @media (max-width: 1023px) {
+    #__eechatIcon, .npf_chatbot_button {
+      margin-bottom: 22px !important;
+      margin-right: -28px !important;
     }
   }
 
@@ -3188,14 +3206,24 @@
     width: fit-content;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     gap: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
+
+  .common-btn-b:hover,
+  .hero-common-btn-b:hover {
+    background: #083380;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
+    transform: translateY(-2px);
+  }
+
   .hero-common-btn-b {
     background: #0a41a1;
     color: #ffffff;
-    padding: 15px 30px;
+    padding: 13px 30px;
     line-height: 1;
     border: 1px solid #0a41a1;
-    border-radius: 10px;
+    border-radius: 4px !important;
     outline: none;
     font-size: 18px;
     display: flex;
@@ -3203,6 +3231,8 @@
     width: fit-content;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     gap: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
 
   @media (max-width: 640px) {

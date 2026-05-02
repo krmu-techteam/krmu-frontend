@@ -24,14 +24,14 @@ const AdmissionProcessComp = ({
   admisbtn,
 }: Props) => {
   return (
-    <section className="prog-global-padding bg-[#f9f9f9] py-8 md:py-16">
+    <section className="prog-global-padding bg-[#f9f9f9] py-8 md:py-16 px-4 md:px-0">
       <div className="common-prog-container">
         <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-2">
           {heading} {highlight}
         </h2>
         <p className="sub-heading mb-5">{desc}</p>
       </div>
-      <div className="max-w-[1320px] mx-auto w-full mt-2.5 hidden lg:block px-4 md:px-0">
+      <div className="max-w-[1320px] mx-auto w-full mt-2.5 hidden lg:block">
         <Image
           src={`${STRAPI_URL}${deskimg?.url}`}
           width={1296}
@@ -107,7 +107,7 @@ const AdmissionProcessComp = ({
             })} */}
         </div>
       </div>
-      <div className="max-w-[540px] mx-auto w-full flex lg:hidden items-center justify-center px-4">
+      <div className="max-w-[540px] mx-auto w-full flex lg:hidden items-center justify-center">
         <div className="grid grid-cols-1 gap-5 w-full">
           {admissionCards &&
             admissionCards.map((card) => {
@@ -165,9 +165,10 @@ const AdmissionProcessComp = ({
         <button
           className={`${
             admisbtn.buttonclass || ""
-          } text-white bg-[#db2a1a] px-6 py-3 flex items-center justify-around gap-4 rounded-md font-semibold mt-8 cursor-pointer text-lg`}
+          } text-white  bg-[#db2a1a] hover:bg-[#c42518] w-full md:w-auto md:px-8 py-2.5 flex items-center justify-center gap-3 rounded-md font-semibold mt-8 cursor-pointer tracking-[0.025em] text-lg shadow-md hover:shadow-xl transition-all duration-300 group`}
         >
-          <span>{admisbtn.buttontext}</span> <ArrowRight />
+          <span>{admisbtn.buttontext}</span>
+          <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" />
         </button>
         {/* {admisbtn && (
           <div>

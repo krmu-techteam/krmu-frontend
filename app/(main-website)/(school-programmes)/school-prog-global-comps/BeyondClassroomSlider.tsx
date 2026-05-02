@@ -1,78 +1,75 @@
 "use client";
-// import { STRAPI_URL } from "@/app/constant";
+import React, { useCallback } from "react";
 import { StrapiMedia } from "@/lib/types/common";
 import Image from "next/image";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Props = {
   slideimages: StrapiMedia[];
 };
 
 const BeyondClassroomSlider = ({ slideimages }: Props) => {
-  return (
-    // <div className="relative w-full overflow-hidden py-10">
-    //   <div className="flex animate-marquee">
-    //     {/* Original slides */}
-    //     <div className="relative w-full sm:w-[calc(100%/3)] lg:w-[calc(100%/4)] mx-2 h-[336px] flex-shrink-0 rounded-xl overflow-hidden">
-    //       <Image
-    //         src={`https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1234567_jpg_2_b305571e23.jpeg`}
-    //         alt=""
-    //         fill
-    //         className="object-cover"
-    //       />
-    //     </div>
-    //     {slideimages.map((img) => (
-    //       <div
-    //         key={img.id}
-    //         className="relative w-full sm:w-[calc(100%/3)] lg:w-[calc(100%/4)] mx-2 h-[336px] flex-shrink-0 rounded-xl overflow-hidden"
-    //       >
-    //         <Image
-    //           src={`${STRAPI_URL}${img.url}`}
-    //           alt={img.alternativeText || `Beyond ${img.id}`}
-    //           fill
-    //           className="object-cover"
-    //         />
-    //       </div>
-    //     ))}
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      duration: 60,
+      skipSnaps: false,
+    },
+    [Autoplay({ delay: 3000, stopOnInteraction: false })]
+  );
 
-    //     {/* Duplicate slides for seamless loop */}
-    //     {slideimages.map((img) => (
-    //       <div
-    //         key={`dup-${img.id}`}
-    //         className="relative w-full sm:w-[calc(100%/3)] lg:w-[calc(100%/4)] h-[336px] flex-shrink-0 rounded-xl overflow-hidden"
-    //       >
-    //         <Image
-    //           src={`${STRAPI_URL}${img.url}`}
-    //           alt={img.alternativeText || `Beyond duplicate ${img.id}`}
-    //           fill
-    //           className="object-cover"
-    //         />
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
-    <section
-      className="pt-12 pb-5"
-      id="recruiters"
-      aria-label="Our prominent recruiters"
-    >
-      <div className="relative flex overflow-x-hidden ">
-        <div className="flex animatee-marquee whitespace-nowrap gap-8 items-center">
-          {[...slideimages, ...slideimages, ...slideimages].map((rec, i) => (
-            <div key={i} className="flex-shrink-0 transition-all duration-300">
-              <div className=" rounded-xl overflow-hidden">
-                <Image
-                  src={rec.url}
-                  alt={rec.alternativeText || ``}
-                  width={500}
-                  height={366}
-                  className="object-cover h-[336px]"
-                />
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  return (
+    <section className="pt-8 overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-4">
+        <div className="embla overflow-hidden" ref={emblaRef}>
+          <div className="flex -ml-4">
+            {[...slideimages, ...slideimages, ...slideimages].map((rec, i) => (
+              <div
+                key={`${rec.id || i}-${i}`}
+                className="flex-[0_0_100%] min-w-0 pl-4 sm:flex-[0_0_50%] lg:flex-[0_0_25%]"
+              >
+                <div className="rounded-sm overflow-hidden shadow-2xl border border-white/10 h-full">
+                  <Image
+                    src={rec.url}
+                    alt={rec.alternativeText || ``}
+                    width={500}
+                    height={366}
+                    className="w-full object-contain"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-50/50 to-transparent pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-50/50 to-transparent pointer-events-none"></div>
+
+        {/* Navigation Buttons */}
+        <div className="flex justify-center gap-6 mt-5">
+          <button
+            onClick={scrollPrev}
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-lg border border-gray-200 text-[#0a41a1] hover:bg-[#0a41a1] hover:text-white transition-all duration-300 group"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-6 h-6 transition-transform group-active:-translate-x-1" />
+          </button>
+          <button
+            onClick={scrollNext}
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-lg border border-gray-200 text-[#0a41a1] hover:bg-[#0a41a1] hover:text-white transition-all duration-300 group"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-6 h-6 transition-transform group-active:translate-x-1" />
+          </button>
+        </div>
       </div>
     </section>
   );

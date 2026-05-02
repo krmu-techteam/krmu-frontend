@@ -1,7 +1,7 @@
 "use client";
 
 import { loadNpfScript } from "@/lib/constants/loadNpfScript";
-import { MoveRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 type Props = {
@@ -42,8 +42,9 @@ const NpfPopup = ({
   }, [formId, btnText]);
 
   return (
-    <button ref={btnRef} className={`${btnClass} cursor-pointer`}>
-      {btnText} {showIcon && <MoveRight size={16} />}
+    <button ref={btnRef} className={`${btnClass} cursor-pointer group flex items-center justify-center gap-2 transition-all duration-300`}>
+      <span>{btnText}</span> 
+      {showIcon && <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1.5" />}
     </button>
   );
 };
