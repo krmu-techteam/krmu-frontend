@@ -229,37 +229,7 @@ const Eligibility = ({
             ytClassName="max-w-sm w-full h-[200px] mt-5 sm:hidden"
           /> */}
 
-          <div className="w-full sm:w-[420px] my-5 mx-auto xl:hidden">
-            {heroSection?.imgvideo === "Video" ? (
-              heroSection?.videofield.includes("iframe") ? (
-                <div className="max-w-[420px] w-full rounded-md overflow-hidden shadow-2xl">
-                  <iframe
-                    className="aspect-video rounded-md w-full"
-                    src={videoSrc}
-                  ></iframe>
-                </div>
-              ) : (
-                <YoutubePopup
-                  videoUrl="https://www.youtube.com/watch?v=tIfNUgSn2dw"
-                  thumbnail="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
-                  ytClassName="w-[420px] h-[280px] hidden sm:block rounded-md overflow-hidden shadow-2xl flex-shrink-0"
-                  playIcon={false}
-                />
-              )
-            ) : (
-              <div className="w-full h-[280px] relative">
-                {heroSection?.heroimg && (
-                  <Image
-                    src={`${STRAPI_URL}${heroSection.heroimg.url}`}
-                    fill
-                    alt={heroSection.heroimg.alternativeText || "Hero Image"}
-                    priority
-                    className="object-cover z-10"
-                  />
-                )}
-              </div>
-            )}
-          </div>
+
 
           {isFormAvailable && slug !== "b-tech-cse" && (
             <div className="">
@@ -280,17 +250,7 @@ const Eligibility = ({
               )}
             </div>
           )}
-          <div className="heroBannerForm__form max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md mt-5 xl:hidden">
-            <div className="heroBannerForm-header">
-              <h3 className="mb-0">
-                <strong>
-                  Apply Today for{" "}
-                  <span className="uppercase">K.R. Mangalam University</span>
-                </strong>
-              </h3>
-            </div>
-            <NoPaperForm formId={formId} height="500px" />
-          </div>
+
 
           {/* 
         {(mobherobtn?.buttonclass || mobherobtn?.buttonlink) && (
@@ -361,30 +321,7 @@ const Eligibility = ({
           </Link>
         )} */}
         </div>
-        {isFormAvailable &&
-          (slug === "b-tech-cse" ? (
-            <div className="heroBannerForm__form max-w-md mx-auto mt-5 lg:hidden">
-              <div className="heroBannerForm-header">
-                <h3 className="mb-0">
-                  <strong>
-                    Apply Today for{" "}
-                    <span className="uppercase">K.R. Mangalam University</span>
-                  </strong>
-                </h3>
-              </div>
-              <NoPaperForm formId={formId} height="700px" />
-            </div>
-          ) : (
-            ""
-            // <div className="border border-gray-300 mt-5 sm:hidden mob_prog_form overflow-hidden hidden">
-            //   <div className="flex justify-center items-center bg-[#0060aa] py-2 px-3 text-[22px] font-bold">
-            //     <h3 className="text-white text-center">ADMISSIONS OPEN 2026-27</h3>
-            //   </div>
-            //   <div className="p-2">
-            //     <NoPaperForm formId={formId} height="700px" />
-            //   </div>
-            // </div>
-          ))}
+
       </section>
     </>
   );

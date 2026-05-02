@@ -73,7 +73,7 @@ const CareerProspects = ({
             </div>
           </div>
         </div>
-        <div className="max-w-[1320px] mx-auto w-full flex justify-center mt-8 md:mt-12">
+        <div className="max-w-[1440px] mx-auto w-full flex justify-center mt-0 md:mt-8 lg:mt-12">
           {(btn?.buttonclass || btn?.buttonlink) && (
             <Link
               href={btn?.buttonlink || "#"}

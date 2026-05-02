@@ -74,11 +74,11 @@ const ProgrammeStructure = ({
   const enable_disable_minor = settings?.minor_enable_disable;
 
   return (
-    <div className="w-full pb-16">
+    <div className="w-full pb-0 md:pb-16">
       {/* Section Header: Full Width & Centered */}
-      <div className="flex flex-col items-center text-center px-4 md:px-0 gap-4 mb-12">
+      <div className="flex flex-col items-center text-center gap-4 mb-12">
         {(heading || highlight) && (
-          <div className="max-w-4xl px-4 md:px-0">
+          <div className="max-w-4xl">
             <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight">
               {heading} {highlight}
             </h2>

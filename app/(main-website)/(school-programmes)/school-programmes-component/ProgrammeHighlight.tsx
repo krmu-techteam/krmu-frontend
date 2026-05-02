@@ -21,7 +21,7 @@ const ProgrammeHighlight = ({
   const visibleHighlights = highlights?.slice(0, displayCount);
 
   return (
-    <section className="prog-global-padding py-8 md:py-16">
+    <section className="prog-global-padding bg-[#f9f9f9] py-8 md:py-16">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container">
           <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight">

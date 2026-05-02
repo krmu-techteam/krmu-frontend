@@ -64,7 +64,7 @@ const HeroBanner = ({
 
   return (
     <section
-      className={`pt-24 sm:pt-40 pb-12 px-5 sm:px-4 bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]`}
+      className={`pt-24 sm:pt-40 pb-12 px-4 sm:px-4 bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]`}
     >
       <div
         className={`w-full mx-auto md:flex items-start gap-10 max-w-[1440px] justify-between`}
@@ -117,7 +117,7 @@ const HeroBanner = ({
             {/* Custom thumbnail */}
 
             <div className="flex flex-col lg:flex-row items-center gap-10 mt-10">
-              <div className="hidden xl:block md:min-w-[420px] w-full">
+              <div className="md:min-w-[420px] w-full">
                 {heroSection?.imgvideo === "Video" ? (
                   heroSection?.videofield?.includes("iframe") ? (
                     <div className="max-w-[420px] w-full rounded-md overflow-hidden shadow-2xl">
@@ -200,9 +200,9 @@ const HeroBanner = ({
         </div>
 
         <div
-          className={`hidden xl:flex w-full md:w-1/2 xl:w-4/12 h-full relative`}
+          className={`flex w-full md:w-1/2 xl:w-4/12 h-full relative`}
         >
-          <div className="heroBannerForm__form max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
+          <div className="heroBannerForm__form max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md mt-10 xl:mt-0">
             <div className="heroBannerForm-header">
               <h3 className="mb-0">
                 <strong>

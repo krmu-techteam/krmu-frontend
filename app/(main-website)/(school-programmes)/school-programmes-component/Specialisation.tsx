@@ -40,12 +40,11 @@ const Specialisation = ({
   };
 
   return (
-    <section className="prog-global-padding pb-20">
+    <section className="prog-global-padding py-8 md:py-16 px-4 md:px-0">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container">
-          <h2 className="heading">
-            {heading}{" "}
-            <span className="text-gray-900">{highlightheading}</span>
+          <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-2">
+            {heading}{" "}{highlightheading} 
           </h2>
         </div>
         {/* Original structure (Commented out as requested): */}
@@ -95,7 +94,7 @@ const Specialisation = ({
         </div> */}
 
         {/* New Product Card Grid: */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-12 px-4 md:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-12">
           {specialisations &&
             specialisations.map((specialisation) => {
               const displayImage = getSpecialisationImage(
