@@ -38,7 +38,7 @@ const FeeStructureSearch = () => {
   }, [query]);
 
   return (
-    <section className="md:py-12 py-6 px-4 bg-gradient-to-br from-[#f1f5f9] to-[#f8fafc]">
+    <section className="md:py-8 py-6 px-4 bg-gradient-to-br from-[#f1f5f9] to-[#f8fafc]">
       <div className="max-w-[750px] mx-auto w-full relative">
         {/* Input Search Container */}
         <div className="relative group">
