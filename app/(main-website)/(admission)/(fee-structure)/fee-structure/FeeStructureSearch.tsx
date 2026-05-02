@@ -62,7 +62,7 @@ const FeeStructureSearch = () => {
               {loading && (
                 <div className="flex flex-col items-center justify-center p-16 space-y-4">
                   <div className="w-8 h-8 border-3 border-gray-100 border-t-[#0062aa] rounded-full animate-spin"></div>
-                  <p className="text-sm text-gray-400 font-bold tracking-wider uppercase">Searching programs...</p>
+                  <p className="text-sm text-gray-400 font-medium tracking-wider uppercase">Searching programs...</p>
                 </div>
               )}
 
@@ -72,7 +72,7 @@ const FeeStructureSearch = () => {
                   <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Search className="w-8 h-8 text-gray-200" />
                   </div>
-                  <p className="text-gray-500 font-bold text-lg">No results found for "{query}"</p>
+                  <p className="text-gray-500 font-medium text-lg">No results found for "{query}"</p>
                 </div>
               )}
 

@@ -20,7 +20,7 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
               <TabsTrigger
                 key={tab.id}
                 value={tab.id.toString()}
-                className="flex-1 cursor-pointer px-2 sm:px-12 py-3 sm:py-4 text-[11px] xs:text-[13px] sm:text-lg font-bold rounded-md transition-all duration-300
+                className="flex-1 cursor-pointer px-2 sm:px-12 py-3 sm:py-4 text-[11px] xs:text-[13px] sm:text-lg font-medium rounded-md transition-all duration-300
                            data-[state=active]:bg-[#0062aa] data-[state=active]:text-white data-[state=active]:shadow-md
                            text-gray-500 hover:text-gray-700 data-[state=inactive]:hover:bg-white/50 leading-tight"
               >
@@ -40,7 +40,7 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
             <Tabs defaultValue={tab.fee_structure_acc[0]?.id.toString()} className="w-full">
               <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
                 {/* Sidebar Navigation: School/Faculty List - Swipeable Slider on Mobile */}
-                <TabsList className="flex flex-row lg:flex-col h-auto w-full lg:w-[450px] bg-white border border-gray-200 rounded-none p-0 sticky top-24 shadow-sm overflow-x-auto scrollbar-hide">
+                <TabsList className="flex flex-row lg:flex-col h-auto w-full lg:w-[450px] bg-white border border-gray-200 rounded-none p-0 sticky top-24 shadow-sm overflow-x-auto lg:overflow-visible scrollbar-hide">
                   {tab.fee_structure_acc?.map((acc) => (
                     <TabsTrigger
                       key={acc.id}
