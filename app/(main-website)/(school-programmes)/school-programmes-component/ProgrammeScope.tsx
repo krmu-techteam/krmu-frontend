@@ -4,6 +4,7 @@ import { HeroSection, ProgrammeScopeType } from "@/lib/types/school-programme";
 import Link from "next/link";
 import CommonLeadPopup from "../../components/CommonLeadPopup";
 import Image from "next/image";
+import { Download } from "lucide-react";
 import { STRAPI_URL } from "@/app/constant";
 
 type Props = {
@@ -28,11 +29,11 @@ const ProgrammeScope = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="bg-[#0a41a1] py-8 md:py-16">
-      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-10 lg:gap-20">
+    <section className="bg-[#0a41a1] py-12 md:py-20">
+      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-6 lg:gap-24 px-4 sm:px-8 xl:px-4">
         
         {/* Left column: Image */}
-        <div className="w-full md:w-1/2 px-4 md:px-0">
+        <div className="w-full md:w-1/2">
            <div className="relative aspect-[16/10] sm:aspect-video md:aspect-[4/3] w-full rounded-md overflow-hidden ">
               {heroSection?.imgvideo === "Video" && isFormAvailable ? (
                 <div
@@ -63,11 +64,11 @@ const ProgrammeScope = async ({
         </div>
 
         {/* Right column: Content */}
-        <div className="w-full md:w-1/2 md:text-left text-center text-white px-4 md:px-0">
-          <h3 className="text-[32px] md:text-[50px] font-semibold leading-tight mb-2">
+        <div className="w-full md:w-1/2 md:text-left text-justify text-white">
+          <h3 className="text-3xl sm:text-4xl md:text-[50px] font-bold leading-tight mb-5">
             {scopeData?.scopeheading}
           </h3>
-          <p className="text-base md:text-left text-pretty md:text-xl lg:text-[20px] leading-[1.7] tracking-[0.01em] mb-10 font-normal opacity-90 max-w-2xl">
+          <p className="text-base sm:text-lg md:text-xl leading-[1.6] md:leading-[1.7] opacity-90 mb-8 max-w-2xl mx-auto md:mx-0">
             {scopeData?.scopecontent}
           </p>
 
@@ -89,7 +90,12 @@ const ProgrammeScope = async ({
             (enable_disable_download_pros ? (
               <div className="flex items-center justify-center md:justify-start">
                 <CommonLeadPopup
-                buttonText={scopeData.scopebtn.buttontext || "Download Prospectus"}
+                buttonText={
+                  <span className="flex items-center gap-2">
+                    <Download className="w-5 h-5" />
+                    {scopeData.scopebtn.buttontext || "Download Prospectus"}
+                  </span>
+                }
                 buttonClassName="inline-block px-6 py-2.5 text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
                 redirectUrl={scopeData?.scopebtn?.buttonlink || "#"}
                 form_name="Download Prospectus"
@@ -102,7 +108,10 @@ const ProgrammeScope = async ({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {scopeData?.scopebtn?.buttontext || "Download Prospectus"}
+                <span className="flex items-center gap-2">
+                  <Download className="w-5 h-5" />
+                  {scopeData?.scopebtn?.buttontext || "Download Prospectus"}
+                </span>
               </Link>
             ))}
         </div>

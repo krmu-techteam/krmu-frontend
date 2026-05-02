@@ -11,8 +11,8 @@ type Props = {
 const ProgrammeHighlightCard = ({ title, desc, highlightimg }: Props) => {
   return (
     <>
-      <div className="proghighcard duration-200 flex flex-col sm:flex-row cursor-pointer rounded-md border border-gray-300 overflow-hidden bg-white hover:shadow-md transition-shadow">
-        <div className="w-full sm:w-1/5 min-h-[160px] sm:min-h-[144px] h-full relative">
+      <div className="proghighcard duration-200 flex flex-col sm:flex-row cursor-pointer rounded-[4px] border border-gray-300 overflow-hidden bg-white hover:shadow-md transition-shadow">
+        <div className="w-full sm:w-[220px] min-h-[160px] sm:min-h-[160px] relative flex-shrink-0">
           {highlightimg?.url && (
             <Image
               fill
@@ -22,11 +22,11 @@ const ProgrammeHighlightCard = ({ title, desc, highlightimg }: Props) => {
             />
           )}
         </div>
-        <div className="w-full sm:w-4/5 p-4 sm:py-2.5 sm:pr-2.5 sm:pl-5 flex flex-col justify-center">
-          <h5 className="text-xl text-[#0a41a1]/90 hover:text-[#0a41a1] font-medium leading-[1.2] mb-2.5">
+        <div className="w-full p-4 sm:py-3 sm:px-6 flex flex-col justify-center">
+          <h5 className="text-lg text-[#0a41a1]/90 hover:text-[#0a41a1] font-semibold leading-tight mb-2">
             {title}
           </h5>
-          <p className="text-[15px] text-[#5c5c5e] leading-relaxed">{desc}</p>
+          <p className="text-[14px] text-[#5c5c5e] leading-snug">{desc}</p>
         </div>
       </div>
     </>

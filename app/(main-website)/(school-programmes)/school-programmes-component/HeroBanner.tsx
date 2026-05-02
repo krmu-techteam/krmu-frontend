@@ -64,16 +64,16 @@ const HeroBanner = ({
 
   return (
     <section
-      className={`pt-24 sm:pt-40 pb-12 px-4 sm:px-4 bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]`}
+      className={`pt-28 sm:pt-40 pb-12 overflow-x-hidden bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]`}
     >
       <div
-        className={`w-full mx-auto md:flex items-start gap-10 max-w-[1440px] justify-between`}
+        className={`w-full mx-auto md:flex items-start gap-8 lg:gap-12 max-w-[1440px] justify-between px-4 sm:px-8 xl:px-4`}
       >
-        <div className={`flex items-center justify-center w-full  xl:w-8/12`}>
+        <div className={`flex items-start justify-center w-full md:w-7/12 xl:w-8/12`}>
           {/* <div
           className={`w-full ${isFormAvailable ? "lg:w-6/12" : "lg:w-1/2"} ${slug === "b-tech-cse" ? "max-w-[900px]" : ""}`}
         > */}
-          <div className="xl:max-w-[750px] mr-auto">
+          <div className="w-full xl:max-w-[800px] mr-auto">
             <p
               className={`font-medium leading-[1.2] mb-2text-[#484848] text-md sm:text-xl`}
             >
@@ -116,8 +116,8 @@ const HeroBanner = ({
             {/* <div className="max-w-sm w-full h-[200px] mt-5 bg-red-500 rounded-2xl"></div> */}
             {/* Custom thumbnail */}
 
-            <div className="flex flex-col lg:flex-row items-center gap-10 mt-10">
-              <div className="md:min-w-[420px] w-full">
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mt-10">
+              <div className="w-full lg:w-auto">
                 {heroSection?.imgvideo === "Video" ? (
                   heroSection?.videofield?.includes("iframe") ? (
                     <div className="max-w-[420px] w-full rounded-md overflow-hidden shadow-2xl">
@@ -136,7 +136,7 @@ const HeroBanner = ({
                         heroSection?.herobtn?.buttonlink ||
                         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
                       }
-                      ytClassName="w-[364px] h-[226px] rounded-md overflow-hidden shadow-2xl flex-shrink-0"
+                      ytClassName="w-full max-w-[420px] aspect-video rounded-md overflow-hidden shadow-2xl flex-shrink-0"
                       playIcon={false}
                     />
                   )
@@ -156,7 +156,7 @@ const HeroBanner = ({
                   </div>
                 )}
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch lg:ml-10 flex-shrink-0 w-full md:w-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch flex-shrink-0 w-full lg:w-auto">
                 <div className="bg-transparent border-[1.2px] border-[#0060aa] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
                   <p className="text-3xl font-semibold text-[#0060aa]">
                     {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
@@ -200,9 +200,9 @@ const HeroBanner = ({
         </div>
 
         <div
-          className={`flex w-full md:w-1/2 xl:w-4/12 h-full relative`}
+          className={`flex w-full md:w-5/12 xl:w-4/12 h-full relative mt-10 md:mt-0`}
         >
-          <div className="heroBannerForm__form max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md mt-10 xl:mt-0">
+          <div className="heroBannerForm__form w-full max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
             <div className="heroBannerForm-header">
               <h3 className="mb-0">
                 <strong>

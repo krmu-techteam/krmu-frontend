@@ -2651,40 +2651,13 @@
       font-size: 32px;
     }
   }
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  .animate-marquee {
-    animation: marquee 15s linear infinite; /* adjust duration for speed */
-  }
 
-  @media (max-width: 640px) {
-    .animate-marquee {
-      animation: marquee 5s linear infinite; /* adjust duration for speed */
-    }
-  }
 
-  @keyframes scrollProg {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-310%);
-    }
-  }
-
-  .animatee-marquee {
-    animation: scrollProg 30s linear infinite; /* adjust duration for speed */
-  }
-
-  @media (max-width: 640px) {
-    .animatee-marquee {
-      animation: scrollProg 5s linear infinite; /* adjust duration for speed */
+  /* Position NPF Chatbot above mobile sticky footer */
+  @media (max-width: 1023px) {
+    #__eechatIcon, .npf_chatbot_button {
+      margin-bottom: 22px !important;
+      margin-right: -28px !important;
     }
   }
 
