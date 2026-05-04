@@ -3,7 +3,7 @@ import Image from "next/image";
 const AdmissionLocation = () => {
   return (
     <section className="py-8 md:py-16 px-4 md:px-0 bg-[#f9f9f9]">
-      <div className="max-w-[1440px] p-6 md:p-12 bg-[#1461ac] rounded-sm md:rounded-2xl flex flex-col md:flex-row  gap-5 md:gap-10 text-center md:text-left">
+      <div className="max-w-[1440px] mx-auto p-6 md:p-12 bg-[#1461ac] rounded-sm md:rounded-2xl flex flex-col md:flex-row  gap-5 md:gap-10 text-center md:text-left">
         <div className="md:w-5/12">
           <Image
             src="/programmes/cyber-city.webp"
