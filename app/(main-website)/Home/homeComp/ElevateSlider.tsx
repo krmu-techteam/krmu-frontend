@@ -8,43 +8,50 @@ import {
 } from "@/components/ui/carousel";
 
 const homeVibrantEventSlider = [
-  {
+    {
     id: 1,
-    imgUrl: "/wp-content/home2/vibrant/1.webp",
+    imgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/jasmin_7eda6b76d8.webp",
     alt: "Event",
   },
   {
     id: 2,
+    // imgUrl: "/wp-content/home2/vibrant/1.webp",
+    imgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/amangupta_a6d8d8073d.webp",
+    alt: "Event",
+  },
+  
+  {
+    id: 3,
     imgUrl: "/wp-content/home2/vibrant/2.webp",
     alt: "Event",
   },
   {
-    id: 3,
+    id: 4,
     imgUrl: "/wp-content/home2/vibrant/3.webp",
     alt: "Event",
   },
   {
-    id: 4,
+    id: 5,
     imgUrl: "/wp-content/home2/vibrant/rj.webp",
     alt: "Event",
   },
   {
-    id: 5,
+    id: 6,
     imgUrl: "/wp-content/home2/vibrant/5.webp",
     alt: "Event",
   },
   {
-    id: 6,
+    id: 7,
     imgUrl: "/wp-content/home2/vibrant/6.webp",
     alt: "Event",
   },
   {
-    id: 7,
+    id: 8,
     imgUrl: "/wp-content/home2/vibrant/nora.webp",
     alt: "Event",
   },
   {
-    id: 8,
+    id: 9,
     imgUrl: "/wp-content/home2/vibrant/dj.webp",
     alt: "Event",
   },

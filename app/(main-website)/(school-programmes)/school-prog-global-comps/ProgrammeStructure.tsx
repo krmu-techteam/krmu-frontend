@@ -35,11 +35,13 @@ const ProgrammeStructure = ({
   highlight,
 }: Props) => {
   const [activeYear, setActiveYear] = useState(
-    programStruct[0]?.year.toLowerCase().replace(" ", "") || ""
+    programStruct[0]?.year.toLowerCase().replace(" ", "") || "",
   );
 
   const [activeSemester, setActiveSemester] = useState(
-    programStruct[0]?.semester[0]?.semestername?.toLowerCase()?.replace(" ", "") || ""
+    programStruct[0]?.semester[0]?.semestername
+      ?.toLowerCase()
+      ?.replace(" ", "") || "",
   );
 
   const [settings, setSettings] = useState<any>(null);
@@ -53,7 +55,6 @@ const ProgrammeStructure = ({
     fetchSettings();
   }, []);
 
- 
   const enable_disable_handbook = settings?.programme_handbook_enable_disable;
   const enable_disable_open_elective = settings?.open_elective_enable_disable;
   const enable_disable_minor = settings?.minor_enable_disable;
@@ -69,7 +70,7 @@ const ProgrammeStructure = ({
             </h2>
           </div>
         )}
-        
+
         {currbtn?.buttonlink && (
           <div className="flex-shrink-0 w-full md:w-auto px-4 md:px-0">
             <CommonLeadPopup
@@ -99,7 +100,6 @@ const ProgrammeStructure = ({
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-br from-[#0a41a1]/60 via-[#0a41a1]/10 to-transparent transition-opacity" />
-            
           </div>
 
           {/* Right Side: Navigation + Content - Minimal & Compact */}
@@ -110,39 +110,55 @@ const ProgrammeStructure = ({
                 {programStruct.map((year) => {
                   const yearValue = year.year.toLowerCase().replace(" ", "");
                   const isYearActive = activeYear === yearValue;
-                  
+
                   return (
-                    <div key={year.id} className="flex-1 flex flex-col items-center relative">
+                    <div
+                      key={year.id}
+                      className="flex-1 flex flex-col items-center relative"
+                    >
                       {/* Year Node - HEADING ONLY (Non-clickable) */}
-                      <div 
+                      <div
                         className={`w-full text-gray-400 px-2 pt-2 pb-0 rounded-sm transition-all duration-500 font-semibold text-[13px] md:text-[15px] capitalize tracking-wide text-center cursor-default antialiased`}
                       >
                         {year.year}
                       </div>
 
-                      
-
                       {/* Compact Branching Lines */}
                       {!isYear && year.semester.length > 0 && (
                         <div className="flex flex-col items-center w-full">
-                          <div className={`w-[1px] h-3 ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"}`} />
-                          
+                          <div
+                            className={`w-[1px] h-3 ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"}`}
+                          />
+
                           <div className="relative flex items-center w-full max-w-[120px]">
-                            <div className={`w-full h-[1px] ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"} rounded-full`} />
-                            <div className={`absolute left-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"} rounded-full`} />
-                            <div className={`absolute right-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"} rounded-full`} />
-                            
+                            <div
+                              className={`w-full h-[1px] ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"} rounded-full`}
+                            />
+                            <div
+                              className={`absolute left-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"} rounded-full`}
+                            />
+                            <div
+                              className={`absolute right-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"} rounded-full`}
+                            />
+
                             {/* Terminal Dots */}
-                            <div className={`absolute left-0 top-3 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"}`} />
-                            <div className={`absolute right-0 top-3 translate-x-1/2 w-1.5 h-1.5 rounded-full ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"}`} />
+                            <div
+                              className={`absolute left-0 top-3 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"}`}
+                            />
+                            <div
+                              className={`absolute right-0 top-3 translate-x-1/2 w-1.5 h-1.5 rounded-full ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"}`}
+                            />
                           </div>
 
                           {/* Minimal Semester Nodes - ONLY CLICKABLE PART */}
                           <div className="flex justify-between w-full mt-5 gap-2">
                             {year.semester.map((sem) => {
-                              const semValue = sem.semestername.toLowerCase().replace(" ", "");
-                              const isSemActive = activeSemester === semValue && isYearActive;
-                              
+                              const semValue = sem.semestername
+                                .toLowerCase()
+                                .replace(" ", "");
+                              const isSemActive =
+                                activeSemester === semValue && isYearActive;
+
                               return (
                                 <button
                                   key={sem.id}
@@ -151,11 +167,15 @@ const ProgrammeStructure = ({
                                     setActiveSemester(semValue);
                                   }}
                                   className={`flex flex-row gap-1 items-center justify-center flex-1 transition-all duration-300 py-[6px] rounded-sm border whitespace-nowrap
-                                    ${isSemActive 
-                                      ? "bg-gradient-to-r from-[#0a41a1] to-[#0e4eb8] border-[#0a41a1] text-white shadow-md z-20" 
-                                      : "bg-transparent border-transparent text-gray-700 hover:text-gray-600 hover:bg-gray-100"} cursor-pointer`}
+                                    ${
+                                      isSemActive
+                                        ? "bg-gradient-to-r from-[#0a41a1] to-[#0e4eb8] border-[#0a41a1] text-white shadow-md z-20"
+                                        : "bg-transparent border-transparent text-gray-700 hover:text-gray-600 hover:bg-gray-100"
+                                    } cursor-pointer`}
                                 >
-                                  <span className="text-[13px] sm:text-[15px] font-medium capitalize tracking-tight sm:tracking-wide antialiased whitespace-nowrap">{sem.semestername}</span>
+                                  <span className="text-[13px] sm:text-[15px] font-medium capitalize tracking-tight sm:tracking-wide antialiased whitespace-nowrap">
+                                    {sem.semestername}
+                                  </span>
                                 </button>
                               );
                             })}
@@ -173,13 +193,21 @@ const ProgrammeStructure = ({
               {programStruct.map((year) => {
                 const yearValue = year.year.toLowerCase().replace(" ", "");
                 return activeYear === yearValue ? (
-                  <div key={year.id} className="animate-in fade-in duration-500">
+                  <div
+                    key={year.id}
+                    className="animate-in fade-in duration-500"
+                  >
                     {year.semester.length > 0 ? (
                       <div className="flex flex-col gap-4">
                         {year.semester.map((sem) => {
-                          const semValue = sem.semestername?.toLowerCase()?.replace(" ", "");
+                          const semValue = sem.semestername
+                            ?.toLowerCase()
+                            ?.replace(" ", "");
                           return activeSemester === semValue ? (
-                            <div key={sem.id} className="animate-in fade-in duration-300">
+                            <div
+                              key={sem.id}
+                              className="animate-in fade-in duration-300"
+                            >
                               {/* Mobile-only Semester Heading */}
                               <div className="md:hidden mb-4">
                                 <h4 className="text-[20px] font-bold text-[#0a41a1] capitalize flex items-center gap-2">
@@ -190,43 +218,86 @@ const ProgrammeStructure = ({
 
                               {/* Subject Grid - Compact Cards */}
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {sem.subjects.map((sub) => (
-                                  <div
-                                    key={sub.id}
-                                    className="flex items-start bg-white/40 backdrop-blur-sm rounded-sm p-3 md:px-4 md:py-3 border border-white/20 transition-all duration-300 antialiased shadow-sm"
-                                  >
-                                    <div className="flex items-start w-full gap-3">
-                                      <div className="w-9 h-9 rounded-full bg-[#0a41a1] flex items-center justify-center flex-shrink-0 border border-[#0a41a1]/10 mt-0.5">
-                                        <IoBookOutline className="w-5 h-5 text-white" />
-                                      </div>
-                                      <div className="flex-grow min-w-0">
-                                        <h5 className="text-[15px] font-semibold text-gray-800 leading-tight">
-                                          {sub.subjectname}
-                                        </h5>
-                                        {sub.course_name && sub.course_name.length > 0 && sub.course_name[0]?.sub_name && (
-                                           <Accordion type="single" collapsible className="w-full">
-                                              <AccordionItem value="content" className="border-none">
-                                                <AccordionTrigger className="py-1 text-[10px] font-semibold text-gray-400 uppercase tracking-wider hover:text-[#0a41a1] hover:no-underline">
-                                                  View Details
-                                                </AccordionTrigger>
-                                                <AccordionContent className="mt-2 pt-2 border-t border-gray-100 text-[12px] text-gray-500 leading-relaxed italic">
-                                                  <div dangerouslySetInnerHTML={{ __html: sub.course_name[0].sub_name }} />
-                                                </AccordionContent>
-                                              </AccordionItem>
-                                           </Accordion>
-                                        )}
+                                {sem.subjects
+                                  .filter((sub) => {
+                                    const hasTitle = sub.subjectname?.trim();
+                                    const hasDetails =
+                                      sub.course_name?.[0]?.sub_name?.trim();
+                                    return hasTitle || hasDetails;
+                                  })
+                                  .map((sub) => (
+                                    <div
+                                      key={sub.id}
+                                      className="flex items-start bg-white/40 backdrop-blur-sm rounded-sm p-3 md:px-4 md:py-3 border border-white/20 transition-all duration-300 antialiased shadow-sm"
+                                    >
+                                      <div className="flex items-center w-full gap-3">
+                                        <div className="flex-grow min-w-0">
+                                          {!(
+                                            sub.course_name &&
+                                            sub.course_name.length > 0 &&
+                                            sub.course_name[0]?.sub_name
+                                          ) ? (
+                                            <>
+                                              <div className="flex items-center w-full gap-3">
+                                                <div className="w-9 h-9 rounded-full bg-[#0a41a1] flex items-center justify-center flex-shrink-0 border border-[#0a41a1]/10 mt-0.5">
+                                                  <IoBookOutline className="w-5 h-5 text-white" />
+                                                </div>
+                                                <h5 className="text-[15px] font-semibold text-gray-800 leading-tight">
+                                                  {sub.subjectname}
+                                                </h5>
+                                              </div>
+                                            </>
+                                          ) : (
+                                            sub.course_name &&
+                                            sub.course_name.length > 0 &&
+                                            sub.course_name[0]?.sub_name && (
+                                              <Accordion
+                                                type="single"
+                                                collapsible
+                                                className="w-full"
+                                              >
+                                                <AccordionItem
+                                                  value="content"
+                                                  className="border-none"
+                                                >
+                                                  <AccordionTrigger className="py-1 cursor-pointer items-center text-[10px] font-semibold text-gray-400 uppercase tracking-wider hover:text-[#0a41a1] hover:no-underline">
+                                                    <div className="flex items-center w-full gap-3">
+                                                      <div className="w-9 h-9 rounded-full bg-[#0a41a1] flex items-center justify-center flex-shrink-0 border border-[#0a41a1]/10 mt-0.5">
+                                                        <IoBookOutline className="w-5 h-5 text-white" />
+                                                      </div>
+                                                      <h5 className="text-[15px] font-semibold text-gray-800 leading-tight">
+                                                        {sub.subjectname}
+                                                      </h5>
+                                                    </div>
+                                                  </AccordionTrigger>
+                                                  <AccordionContent className="mt-2 pt-2 border-t border-gray-100 text-[12px] text-gray-500 leading-relaxed italic">
+                                                    <div
+                                                      dangerouslySetInnerHTML={{
+                                                        __html:
+                                                          sub.course_name[0]
+                                                            .sub_name,
+                                                      }}
+                                                    />
+                                                  </AccordionContent>
+                                                </AccordionItem>
+                                              </Accordion>
+                                            )
+                                          )}
+                                        </div>
                                       </div>
                                     </div>
-                                  </div>
-                                ))}
+                                  ))}
                               </div>
 
                               {/* Compact Action Banner */}
                               <div className="mt-8 flex flex-col gap-4">
                                 {sem.pdfbtns?.map((btn) => {
-                                  const text = btn?.buttontext?.toLowerCase() || "";
+                                  const text =
+                                    btn?.buttontext?.toLowerCase() || "";
                                   const isHandbook = text.includes("handbook");
-                                  const isOpenElective = text.includes("elective") || text.includes("added");
+                                  const isOpenElective =
+                                    text.includes("elective") ||
+                                    text.includes("added");
 
                                   if (isOpenElective) {
                                     return (
@@ -241,7 +312,7 @@ const ProgrammeStructure = ({
                                               <div className="text-left">
                                                 <h4 className="text-[14px] md:text-[16px] font-semibold capitalize tracking-wide leading-none whitespace-nowrap">
                                                   {btn?.buttontext}
-                                                </h4> 
+                                                </h4>
                                               </div>
                                             </div>
                                           </div>
@@ -254,11 +325,18 @@ const ProgrammeStructure = ({
                                   }
 
                                   return (
-                                    <div key={btn?.id} className="flex justify-start mt-2">
+                                    <div
+                                      key={btn?.id}
+                                      className="flex justify-start mt-2"
+                                    >
                                       <CommonLeadPopup
                                         buttonText={
                                           <span className="flex items-center gap-2 whitespace-nowrap">
-                                            {isHandbook ? <FileText className="w-4 h-4" /> : <Download className="w-4 h-4" />}
+                                            {isHandbook ? (
+                                              <FileText className="w-4 h-4" />
+                                            ) : (
+                                              <Download className="w-4 h-4" />
+                                            )}
                                             {btn?.buttontext}
                                           </span>
                                         }
@@ -277,7 +355,9 @@ const ProgrammeStructure = ({
                     ) : (
                       <div className="flex flex-col items-center justify-center py-20 text-gray-300">
                         <BookOpen className="w-10 h-10 mb-2 opacity-10" />
-                        <p className="text-[11px] font-bold uppercase tracking-widest opacity-40">No data available</p>
+                        <p className="text-[11px] font-bold uppercase tracking-widest opacity-40">
+                          No data available
+                        </p>
                       </div>
                     )}
                   </div>
@@ -292,9 +372,6 @@ const ProgrammeStructure = ({
 };
 
 export default ProgrammeStructure;
-
-
-
 
 // "use client";
 
@@ -382,7 +459,7 @@ export default ProgrammeStructure;
 //             </h2>
 //           </div>
 //         )}
-        
+
 //         {currbtn?.buttonlink && (
 //           <div className="flex-shrink-0 w-full md:w-auto px-4 md:px-0 mt-2">
 //             <CommonLeadPopup
@@ -446,9 +523,9 @@ export default ProgrammeStructure;
 
 //                 {/* Semester Navigation */}
 //                 {!isYear && (currentYearDataForNav?.semester.length ?? 0) > 0 && (
-                  
-//                     <Tabs 
-//                       value={activeSemester} 
+
+//                     <Tabs
+//                       value={activeSemester}
 //                       onValueChange={setActiveSemester}
 //                       className="w-full md:w-auto"
 //                     >
@@ -469,7 +546,7 @@ export default ProgrammeStructure;
 //                         })}
 //                       </TabsList>
 //                     </Tabs>
-              
+
 //                 )}
 //               </div>
 
@@ -546,17 +623,17 @@ export default ProgrammeStructure;
 //                                     const text = btn?.buttontext?.toLowerCase() || "";
 //                                     const openElectiveKeywords = ["open elective", "open electives", "value added", "value added courses"];
 //                                     const minorKeywords = ["minor", "minors"];
-                                    
+
 //                                     const isHandbook = text.includes("handbook");
 //                                     const hasOpenElectiveKeyword = openElectiveKeywords.some((word) => text.includes(word));
 //                                     const hasMinorKeyword = minorKeywords.some((word) => text.includes(word));
 
 //                                     const shouldShowPopup = (isHandbook && enable_disable_handbook) || (hasOpenElectiveKeyword && enable_disable_open_elective) || (hasMinorKeyword && enable_disable_minor);
 
-//                                     const btnClass = `flex items-center gap-2 text-sm md:text-md font-semibold uppercase tracking-wide px-3 py-2 md:px-6 md:py-3 
+//                                     const btnClass = `flex items-center gap-2 text-sm md:text-md font-semibold uppercase tracking-wide px-3 py-2 md:px-6 md:py-3
 //                                       rounded-sm shadow-sm transition-all duration-300 border-2
-//                                       ${isHandbook 
-//                                         ? "bg-[#0a41a1] text-white border-[#0a41a1] hover:bg-white hover:text-[#0a41a1]" 
+//                                       ${isHandbook
+//                                         ? "bg-[#0a41a1] text-white border-[#0a41a1] hover:bg-white hover:text-[#0a41a1]"
 //                                         : "bg-transparent text-[#0a41a1] border-[#0a41a1] hover:bg-blue-50 hover:text-[#0a41a1]"} `;
 
 //                                     const btnContent = (
