@@ -36,7 +36,7 @@ export default function HeroTitle({ title, highlightitle }: any) {
   return (
     <h1
       ref={titleRef}
-      className={`text-[#0A41A1] font-bold leading-[1.1] mb-2 [text-wrap:balance] text-3xl sm:text-4xl transition-none ${
+      className={`text-[#0A41A1] md:text-left text-center font-bold leading-[1.1] mb-0 md:mb-2 [text-wrap:balance] text-3xl sm:text-4xl transition-none ${
         isLong ? "xl:text-[36px]" : "xl:text-[45px]"
       }`}
     >

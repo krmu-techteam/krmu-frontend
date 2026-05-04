@@ -64,7 +64,7 @@ const HeroBanner = ({
 
   return (
     <section
-      className={`pt-28 sm:pt-40 pb-12 overflow-x-hidden bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]`}
+      className={`pt-24 sm:pt-40 pb-8 md:pb-12 overflow-x-hidden bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]`}
     >
       <div
         className={`w-full mx-auto md:flex items-start gap-8 lg:gap-12 max-w-[1440px] justify-between px-4 sm:px-8 xl:px-4`}
@@ -73,38 +73,69 @@ const HeroBanner = ({
           {/* <div
           className={`w-full ${isFormAvailable ? "lg:w-6/12" : "lg:w-1/2"} ${slug === "b-tech-cse" ? "max-w-[900px]" : ""}`}
         > */}
-          <div className="w-full xl:max-w-[800px] mr-auto">
-            <p
-              className={`font-medium leading-[1.2] mb-2text-[#484848] text-md sm:text-xl`}
-            >
+          <div className="w-full xl:max-w-[800px] mr-auto flex flex-col">
+            {/* Mobile Media (Top) */}
+            <div className="w-full lg:hidden mb-4 md:mb-8">
+              {heroSection?.imgvideo === "Video" ? (
+                heroSection?.videofield?.includes("iframe") ? (
+                  <div className="w-full rounded-md overflow-hidden shadow-sm">
+                    <iframe
+                      className="aspect-video rounded-md w-full"
+                      src={videoSrc}
+                    ></iframe>
+                  </div>
+                ) : (
+                  <YoutubePopup
+                    videoUrl={
+                      heroSection?.videofield ||
+                      "https://www.youtube.com/watch?v=tIfNUgSn2dw&t=59s"
+                    }
+                    thumbnail={
+                      heroSection?.herobtn?.buttonlink ||
+                      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
+                    }
+                    ytClassName="w-full aspect-video rounded-sm overflow-hidden shadow-sm flex-shrink-0"
+                    playIcon={false}
+                  />
+                )
+              ) : (
+                <div className="w-full">
+                  {heroSection?.heroimg && (
+                    <Image
+                      src={`${STRAPI_URL}${heroSection.heroimg.url}`}
+                      width={800}
+                      height={450}
+                      alt={heroSection.heroimg.alternativeText || "Hero Image"}
+                      className="object-cover rounded-sm w-full h-auto"
+                    />
+                  )}
+                </div>
+              )}
+            </div>
+
+            <p className={`md:block hidden font-medium leading-[1.2] mb-2 text-[#484848] text-md sm:text-xl`}>
               {heroSection?.subtitle}
             </p>
             <HeroTitle title={title} highlightTitle={highlightitle} />
-            {/* <h1
-              className={` text-[#0A41A1] text-3xl sm:text-4xl xl:text-[58px] font-bold leading-[1.1]   mb-2`}
-            >
-              {title} <span className="text-[#e61f21]">{highlightitle}</span>
-            </h1> */}
-            <p className={`text-base sm:text-lg text-[#575757] font-medium`}>
+            <p className={`md:block hidden text-base sm:text-lg text-[#575757] font-medium`}>
               {heroSection?.description}
             </p>
+
             {(slug === "btech-cse-cloud-computing" ||
-              slug ===
-                "b-tech-computer-science-and-engineering-semiconductor-design" ||
+              slug === "b-tech-computer-science-and-engineering-semiconductor-design" ||
               slug === "ma-clinical-psychology" ||
               slug === "master-of-design-m-des-interior-design" ||
               slug === "ma-political-science" ||
               slug === "Bachelor-of-Emergency-Medical-Technologist" ||
               slug === "bsc-clinical-psychology") && (
-              <p className="text-right font-bold">**Subject to Approval</p>
+              <p className="text-right font-bold text-xs mt-2">**Subject to Approval</p>
             )}
+
             <div className="hidden xl:block xl:mt-5">
               {formId && (
                 <NpfPopup
                   formId={formId}
-                  btnClass={`hero-common-btn-b  ${
-                    heroSection.herobtn.buttonclass || ""
-                  } rounded-md`}
+                  btnClass={`hero-common-btn-b  ${heroSection.herobtn.buttonclass || ""} rounded-md`}
                   btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
                   showIcon={true}
                 />
@@ -113,11 +144,9 @@ const HeroBanner = ({
 
             {slug === "bba-digital-marketing" && <IndusLearning />}
 
-            {/* <div className="max-w-sm w-full h-[200px] mt-5 bg-red-500 rounded-2xl"></div> */}
-            {/* Custom thumbnail */}
-
-            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mt-10">
-              <div className="w-full lg:w-auto">
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mt-6 md:mt-10">
+              {/* Desktop Media (Row) */}
+              <div className="hidden lg:block w-full lg:w-auto">
                 {heroSection?.imgvideo === "Video" ? (
                   heroSection?.videofield?.includes("iframe") ? (
                     <div className="max-w-[420px] w-full rounded-md overflow-hidden shadow-2xl">
@@ -128,15 +157,9 @@ const HeroBanner = ({
                     </div>
                   ) : (
                     <YoutubePopup
-                      videoUrl={
-                        heroSection?.videofield ||
-                        "https://www.youtube.com/watch?v=tIfNUgSn2dw&t=59s"
-                      }
-                      thumbnail={
-                        heroSection?.herobtn?.buttonlink ||
-                        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
-                      }
-                      ytClassName="w-full max-w-[420px] aspect-video rounded-md overflow-hidden shadow-2xl flex-shrink-0"
+                      videoUrl={heroSection?.videofield || "https://www.youtube.com/watch?v=tIfNUgSn2dw&t=59s"}
+                      thumbnail={heroSection?.herobtn?.buttonlink || "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"}
+                      ytClassName="w-full max-w-[420px] aspect-video rounded-md overflow-hidden shadow-sm flex-shrink-0"
                       playIcon={false}
                     />
                   )
@@ -147,41 +170,67 @@ const HeroBanner = ({
                         src={`${STRAPI_URL}${heroSection.heroimg.url}`}
                         width={364}
                         height={226}
-                        alt={
-                          heroSection.heroimg.alternativeText || "Hero Image"
-                        }
+                        alt={heroSection.heroimg.alternativeText || "Hero Image"}
                         className="object-cover rounded-md"
                       />
                     )}
                   </div>
                 )}
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch flex-shrink-0 w-full lg:w-auto">
-                <div className="bg-transparent border-[1.2px] border-[#0060aa] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
-                  <p className="text-3xl font-semibold text-[#0060aa]">
+
+              {/* Mobile Stats Bar - Horizontal (Mobile/Tablet Only) */}
+              <div className="flex lg:hidden w-full bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md flex-row items-stretch divide-x divide-gray-100 overflow-hidden">
+                <div className="flex-1 flex flex-col items-center justify-center py-3 px-1 min-h-[85px] sm:min-h-[100px]">
+                  <p className="text-lg sm:text-2xl font-bold text-[#0060aa]">
                     {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
                   </p>
-                  <p className="text-md font-semibold text-[#424242] capitalize mt-1 text-center">
-                    {dreamcareerSection?.highestpackagetitle ||
-                      "Highest Package"}
+                  <p className="text-[9px] sm:text-xs font-semibold text-[#424242] capitalize text-center mt-0.5 leading-tight">
+                    {dreamcareerSection?.highestpackagetitle || "Highest Package"}
                   </p>
                 </div>
 
-                <div className="bg-transparent border-[1.2px] border-[#0060aa] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
-                  <p className="text-3xl font-semibold text-[#0060aa]">800+</p>
-                  <p className="text-md font-semibold text-[#424242] capitalize mt-1 text-center">
-                    {dreamcareerSection?.campusrecruitertitle ||
-                      "Campus Recruiters"}
+                <div className="flex-1 flex flex-col items-center justify-center py-3 px-1 min-h-[85px] sm:min-h-[100px]">
+                  <p className="text-lg sm:text-2xl font-bold text-[#0060aa]">800+</p>
+                  <p className="text-[9px] sm:text-xs font-semibold text-[#424242] capitalize text-center mt-0.5 leading-tight">
+                    {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
                   </p>
                 </div>
-                <div className="sm:col-span-2 flex justify-center">
-                  <div className="bg-transparent border-[1.2px] border-[#0060aa] rounded-md shadow-md w-full md:w-[190px] md:h-[100px] flex flex-col items-center justify-center p-3 text-center transition-transform hover:scale-105 duration-300">
+
+                <div className="flex-1 flex flex-col items-center justify-center py-3 px-1 min-h-[85px] sm:min-h-[100px]">
+                  <p className="text-lg sm:text-2xl font-bold text-[#0060aa]">
+                    {dreamcareerSection?.placementassistnum || "100%"}
+                  </p>
+                  <p className="text-[9px] sm:text-xs font-semibold text-[#424242] capitalize text-center mt-0.5 leading-tight">
+                    {dreamcareerSection?.placementassisttitle || "Placement Assist"}
+                  </p>
+                </div>
+              </div>
+
+              {/* Desktop Stats Cards - Grid (Desktop Only) */}
+              <div className="hidden lg:grid grid-cols-2 gap-4 items-stretch flex-shrink-0 w-auto">
+                <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-[190px] h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
+                  <p className="text-3xl font-semibold text-[#0060aa]">
+                    {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
+                  </p>
+                  <p className="text-md font-semibold text-[#424242] capitalize mt-1 text-center leading-tight">
+                    {dreamcareerSection?.highestpackagetitle || "Highest Package"}
+                  </p>
+                </div>
+
+                <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-[190px] h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
+                  <p className="text-3xl font-semibold text-[#0060aa]">800+</p>
+                  <p className="text-md font-semibold text-[#424242] capitalize mt-1 text-center leading-tight">
+                    {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
+                  </p>
+                </div>
+
+                <div className="col-span-2 flex justify-center">
+                  <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-[190px] h-[100px] flex flex-col items-center justify-center p-3 text-center transition-transform hover:scale-105 duration-300">
                     <p className="text-3xl font-semibold text-[#0060aa]">
                       {dreamcareerSection?.placementassistnum || "100%"}
                     </p>
-                    <p className="text-md font-semibold text-[#424242] capitalize mt-1">
-                      {dreamcareerSection?.placementassisttitle ||
-                        "Placement Assist"}
+                    <p className="text-md font-semibold text-[#424242] capitalize mt-1 leading-tight">
+                      {dreamcareerSection?.placementassisttitle || "Placement Assist"}
                     </p>
                   </div>
                 </div>
@@ -200,7 +249,7 @@ const HeroBanner = ({
         </div>
 
         <div
-          className={`flex w-full md:w-5/12 xl:w-4/12 h-full relative mt-10 md:mt-0`}
+          className={`flex w-full md:w-5/12 xl:w-4/12 h-full relative mt-6 md:mt-0`}
         >
           <div className="heroBannerForm__form w-full max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
             <div className="heroBannerForm-header">
