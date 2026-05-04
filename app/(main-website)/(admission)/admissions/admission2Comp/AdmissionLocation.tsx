@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const AdmissionLocation = () => {
   return (
-    <section className="py-8 md:py-16 px-2.5 bg-[#f9f9f9] sm:px-4">
-      <div className="max-w-[1200px] mx-auto w-full p-6 md:p-12 bg-[#1461ac] rounded-md sm:flex gap-6 md:gap-10 text-center sm:text-left">
-        <div className="sm:w-5/12">
+    <section className="py-8 md:py-16 px-4 md:px-0 bg-[#f9f9f9]">
+      <div className="max-w-[1440px] p-6 md:p-12 bg-[#1461ac] rounded-sm md:rounded-2xl flex flex-col md:flex-row  gap-5 md:gap-10 text-center md:text-left">
+        <div className="md:w-5/12">
           <Image
             src="/programmes/cyber-city.webp"
             width={486}
             height={418}
-            className="w-full h-full border-[8px] border-white/90 rounded-md object-cover shadow-xl"
+            className="w-full h-full border-[8px] border-white/90 rounded-sm md:rounded-2xl object-cover shadow-xl"
             alt="Our Location"
           />
         </div>
-        <div className="sm:w-7/12 pt-6 sm:px-3">
+        <div className="md:w-7/12 mt-0 md:pt-6 md:px-3">
           <span className="py-2.5 font-semibold text-white/90 text-md capitalize tracking-wide inline-block mb-3">
             Our Location
           </span>
-          <h3 className="text-white text-3xl md:text-[36px] font-semibold leading-[1.1] mb-6">
+          <h3 className="text-white text-2xl md:text-[40px] font-bold leading-tight mb-6">
             Learn at One of India’s Biggest Business Hubs, Gurgaon
           </h3>
 

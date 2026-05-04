@@ -7,17 +7,17 @@ type Props = {
 
 const Admission2Alumni = ({ admAlumni }: Props) => {
   return (
-    <section className="py-16 md:py-20 bg-[#f9f9f9]">
-      <div className="max-w-[1320px] mx-auto w-full">
-        <div className="text-center mb-10 md:mb-12">
-          <h3 className="text-3xl md:text-5xl font-bold text-black mb-3">
+    <section className="py-8 md:py-16 px-4 md:px-0 bg-[#f9f9f9]">
+      <div className="max-w-[1440px] mx-auto w-full">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl md:text-5xl font-bold text-black mb-4 leading-tight">
             Voices of Our Alumni
-          </h3>
-          <p className="text-sm md:text-base text-gray-400 font-medium">
+          </h2>
+          <p className="text-sm md:text-lg text-gray-500 font-medium max-w-2xl mx-auto">
             Our Success Stories
           </p>
         </div>
-        <div className="px-6 md:px-10">
+        <div className="md:px-10">
           <Admission2AlumniSlides alumniData={admAlumni} />
         </div>
       </div>

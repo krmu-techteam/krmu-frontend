@@ -35,17 +35,17 @@ const Admission2Hero = () => {
       className="pt-[140px] pb-[50px] px-4 min-h-[600px] flex items-end bg-[url(/mobadm.png)] bg-cover bg-no-repeat bg-center sm:bg-none relative sm:before:hidden before:content-['']
     before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-gradient-to-t before:from-black/90 before:to-transparent"
     >
-      <div className="max-w-[1320px] mx-auto w-full flex flex-col lg:flex-row items-center gap-6 ">
-        <div className="sm:hidden w-full z-10 pb-10">
-          <h1 className="text-white leading-[1.1] font-bold text-3xl mb-2 [text-shadow:_0_2px_10px_rgba(0,0,0,0.8)]">
+      <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row items-center gap-6 ">
+        <div className="sm:hidden w-full z-10 pb-10 flex flex-col items-center text-center">
+          <h1 className="text-white leading-[1.1] font-bold text-3xl mb-2 [text-shadow:_2px_2px_4px_rgba(0,0,0,0.6),_0_0_20px_rgba(0,0,0,0.4)]">
             Unlock Your <br />
             Future at
           </h1>
-          <h2 className="text-white text-4xl font-extrabold mb-5 [text-shadow:_0_2px_15px_rgba(0,0,0,0.9)]">
+          <h2 className="text-white text-4xl font-extrabold mb-5 [text-shadow:_2px_2px_4px_rgba(0,0,0,0.7),_0_0_25px_rgba(0,0,0,0.5)]">
             K.R. Mangalam <br />
             University
           </h2>
-          <p className="text-white w-full text-[17px] mb-8 font-medium [text-shadow:_0_1px_8px_rgba(0,0,0,0.7)] opacity-95">
+          <p className="text-white w-full text-[17px] mb-8 font-medium [text-shadow:_1px_1px_3px_rgba(0,0,0,0.6)] opacity-95">
             Dive into a world of diverse programmes curated to guide you on your
             successful journey
           </p>

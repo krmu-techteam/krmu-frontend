@@ -23,13 +23,13 @@ const AdmissionTableOfContent = ({
 }: Props) => {
   return (
     <>
-      <section className="py-12 md:py-20 px-4 md:px-0 bg-white">
-        <div className="max-w-[1200px] mx-auto w-full">
+      <section className="py-8 md:py-16 px-4 md:px-0 bg-white">
+        <div className="max-w-[1440px] mx-auto w-full">
           <div className="text-center mb-10 md:mb-16">
             <h3 className="text-2xl md:text-[40px] font-bold mb-4 text-black uppercase tracking-tight">
               {heading} <span className="text-[#0a41a1]">{highlight}</span>
             </h3>
-            <p className="text-sm md:text-base text-gray-500 max-w-3xl mx-auto font-medium">{desc}</p>
+            <p className="text-sm md:text-lg text-gray-500 max-w-3xl mx-auto font-medium">{desc}</p>
           </div>
           
           <div className="relative overflow-hidden">
@@ -42,7 +42,7 @@ const AdmissionTableOfContent = ({
             {tocbtn?.btn_link && (
               <Link
                 href={tocbtn?.btn_link}
-                className="w-full md:w-auto py-3.5 px-10 text-white bg-[#0a41a1] hover:bg-[#051730] text-base font-bold rounded-sm transition-all duration-500 shadow-lg shadow-blue-900/10"
+                className="w-full md:w-auto justify-center flex items-center py-3.5 px-10 text-white bg-[#0a41a1] hover:bg-[#051730] text-base font-semibold rounded-sm transition-all duration-500 shadow-lg shadow-blue-900/10"
               >
                 {tocbtn?.btn_text}
               </Link>
