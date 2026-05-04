@@ -4,7 +4,7 @@ import { Wallet, Home, Truck, ShieldCheck } from "lucide-react";
 
 const Admission2Fee = () => {
   return (
-    <section className="py-12 px-4 bg-[#fcfdfe]">
+    <section className="py-8 md:py-16 px-4 md:px-0 bg-[#fcfdfe]">
       <div className="max-w-[1200px] mx-auto w-full">
         <h4 className="text-2xl md:text-3xl mb-8 text-black font-bold border-l-4 border-black pl-5 leading-none">
           Fee Details
@@ -173,7 +173,7 @@ const Admission2Fee = () => {
         <div className="flex lg:hidden items-center justify-center mt-10">
           <Link
             href="/fee-structure"
-            className="py-3 px-10 bg-[#0a41a1] text-white font-bold rounded-xl shadow-md"
+            className="text-center py-3 px-10 bg-[#0a41a1] text-white font-semibold rounded-sm md:rounded-xl shadow-md"
             target="_blank" rel="noopener noreferrer"
           >
             View Fees Structure

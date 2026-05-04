@@ -8,7 +8,7 @@ type Props = {
 
 const Admission2Slide = ({ item }: Props) => {
   return (
-    <div className="flex gap-4 md:gap-6 items-start">
+    <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-center md:items-start text-center md:text-left">
       {/* Alumni Image */}
       <div className="w-[100px] md:w-[150px] shrink-0">
         <div className="aspect-[4/5] overflow-hidden rounded-xs">
@@ -23,7 +23,7 @@ const Admission2Slide = ({ item }: Props) => {
       </div>
 
       {/* Content Section */}
-      <div className="flex-1 flex flex-col justify-between self-stretch">
+      <div className="flex-1 flex flex-col justify-between self-stretch w-full">
         <div className="mb-4">
           <p className="text-[13px] md:text-[15px] text-gray-600 leading-relaxed line-clamp-4 md:line-clamp-5">
             {item?.content}
@@ -31,7 +31,7 @@ const Admission2Slide = ({ item }: Props) => {
         </div>
 
         {/* Footer info: Name & Rating */}
-        <div className="flex items-end justify-between mt-auto">
+        <div className="flex flex-col md:flex-row items-center md:items-end justify-center md:justify-between mt-auto gap-4 md:gap-0">
           <div className="flex flex-col">
             <h6 className="font-bold text-[#051630] text-sm md:text-base leading-none mb-1">
               {item?.name}

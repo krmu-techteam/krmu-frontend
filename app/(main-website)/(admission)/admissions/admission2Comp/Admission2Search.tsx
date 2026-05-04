@@ -342,23 +342,23 @@ const Admission2Search = () => {
   });
 
   return (
-    <section className="px-4 bg-[#f9f9f9] temp-class py-8 md:py-16">
-         <div className="max-w-[600px] mx-auto w-full">
+    <section className="py-8 md:py-16 px-4 md:px-0 bg-[#f9f9f9]">
+      <div className="max-w-[800px] mx-auto w-full">
         <div>
-          <h1 className="text-3xl md:text-[40px] font-bold text-center mb-5 leading-[1.2] text-black">
+          <h1 className="text-2xl md:text-[40px] font-bold text-center mb-5 leading-[1.2] text-black">
             Transform your Life with the Right Programme
           </h1>
         </div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto w-full mt-12">
+      <div className="max-w-[1440px] mx-auto w-full mt-8 md:mt-12">
         {/* FILTER BOX */}
-        <div className="bg-white rounded-xl shadow-[0_15px_50px_rgba(0,0,0,0.08)] border border-gray-100">
-          <div className="flex flex-col lg:flex-row items-center divide-y lg:divide-y-0 lg:divide-x divide-gray-100">
+        <div className="bg-white rounded-md md:rounded-2xl shadow-[0_15px_50px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden">
+          <div className="flex flex-col lg:flex-row items-center lg:divide-x divide-gray-100">
             {/* SCHOOL DROPDOWN */}
-            <div className="w-full lg:w-[35%] relative group rounded-l-xl" ref={schoolRef}>
+            <div className="w-full lg:w-[35%] relative group" ref={schoolRef}>
               <div
-                className="flex items-center justify-between px-8 py-4 cursor-pointer hover:bg-gray-50 transition-colors rounded-l-xl"
+                className="flex items-center justify-between px-8 py-5 cursor-pointer hover:bg-gray-50 transition-colors border-b lg:border-b-0 border-gray-50"
                 onClick={() => {
                   setOpenSchoolDropdown(!openSchoolDropdown);
                   setOpenDegreeDropdown(false);
@@ -375,7 +375,7 @@ const Admission2Search = () => {
               </div>
 
               {openSchoolDropdown && (
-                <div className="absolute left-0 top-full mt-2 bg-white w-full max-h-[300px] overflow-y-auto rounded-2xl shadow-2xl border border-gray-100 z-50 py-2 scrollbar-hide">
+                <div className="absolute left-0 top-full mt-2 bg-white w-full max-h-[400px] overflow-y-auto rounded-2xl shadow-2xl border border-gray-100 z-50 py-3 scrollbar-hide">
                   <ul>
                     {sortedSchools.map((school) => (
                       <li
@@ -385,10 +385,10 @@ const Admission2Search = () => {
                           setSearchQuery("");
                           setOpenSchoolDropdown(false);
                         }}
-                        className={`py-2.5 px-6 text-sm cursor-pointer hover:bg-gray-50 transition-colors ${
+                        className={`py-3 px-6 text-[15px] cursor-pointer hover:bg-gray-50 transition-colors leading-tight ${
                           selectedSchool === school.school_category.slug
-                            ? "bg-blue-50 text-[#0a41a1] font-semibold"
-                            : "text-gray-700"
+                            ? "bg-blue-50 text-[#0a41a1] font-bold"
+                            : "text-gray-700 font-medium"
                         }`}
                       >
                         {school.schoolname}
@@ -402,7 +402,7 @@ const Admission2Search = () => {
             {/* DEGREE DROPDOWN */}
             <div className="w-full lg:w-[30%] relative group" ref={degreeRef}>
               <div
-                className="flex items-center justify-between px-8 py-4 cursor-pointer hover:bg-gray-50 transition-colors"
+                className="flex items-center justify-between px-8 py-5 cursor-pointer hover:bg-gray-50 transition-colors border-b lg:border-b-0 border-gray-50"
                 onClick={() => {
                   setOpenDegreeDropdown(!openDegreeDropdown);
                   setOpenSchoolDropdown(false);
@@ -416,7 +416,7 @@ const Admission2Search = () => {
               </div>
 
               {openDegreeDropdown && (
-                <div className="absolute left-0 top-full mt-2 bg-white w-full rounded-2xl shadow-2xl border border-gray-100 z-50 py-2">
+                <div className="absolute left-0 top-full mt-2 bg-white w-full rounded-2xl shadow-2xl border border-gray-100 z-50 py-3">
                   <ul>
                     {allDegrees.map((degree) => (
                       <li
@@ -426,10 +426,10 @@ const Admission2Search = () => {
                           setSearchQuery("");
                           setOpenDegreeDropdown(false);
                         }}
-                        className={`py-2.5 px-6 text-sm cursor-pointer hover:bg-gray-50 transition-colors ${
+                        className={`py-3 px-6 text-[15px] cursor-pointer hover:bg-gray-50 transition-colors leading-tight ${
                           selectedDegree === degree.slug
-                            ? "bg-blue-50 text-[#0a41a1] font-semibold"
-                            : "text-gray-700"
+                            ? "bg-blue-50 text-[#0a41a1] font-bold"
+                            : "text-gray-700 font-medium"
                         }`}
                       >
                         {degree.name}
@@ -441,8 +441,8 @@ const Admission2Search = () => {
             </div>
 
             {/* SEARCH INPUT */}
-            <div className="w-full lg:w-[35%] bg-white rounded-r-xl">
-              <div className="flex items-center px-8 py-4 rounded-r-xl">
+            <div className="w-full lg:w-[35%] bg-white">
+              <div className="flex items-center px-8 py-5">
                 <input
                   type="text"
                   value={searchQuery}
@@ -457,9 +457,9 @@ const Admission2Search = () => {
         </div>
 
         {/* PROGRAMMES LIST */}
-        <div className="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {programmes.length === 0 ? (
-            <p className="col-span-3 text-center text-lg font-semibold text-gray-500">
+            <p className="col-span-1 md:col-span-2 lg:col-span-3 text-center text-lg font-semibold text-gray-500">
               No programme found
             </p>
           ) : (
@@ -472,7 +472,7 @@ const Admission2Search = () => {
               return (
                 <div
                   key={item.id}
-                  className="group w-full rounded-xl bg-[#0a41a1] hover:bg-[#051730] font-semibold p-5 transition-all duration-300 flex flex-col gap-4 justify-between shadow-md hover:shadow-xl cursor-pointer overflow-hidden relative h-full min-h-[220px] lg:min-h-[250px]"
+                  className="group w-full rounded-sm md:rounded-xl bg-[#0a41a1] hover:bg-[#051730] font-semibold p-6 lg:p-7 transition-all duration-300 flex flex-col gap-6 justify-between shadow-md hover:shadow-xl cursor-pointer overflow-hidden relative h-full min-h-[250px]"
                 >
                   <Link href={`/programs/${slug}`} target="_blank" title={"title" in item ? item.title : item.heading}>
                     <h6 className="block w-full text-white text-sm lg:text-lg font-semibold line-clamp-2 overflow-hidden min-h-[40px] lg:min-h-[48px]">
@@ -496,36 +496,37 @@ const Admission2Search = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-row items-center gap-2 pt-4 border-t border-white/20 flex-nowrap overflow-x-auto scrollbar-hide">
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        setSelectedProgramme(item);
-                        setIsPopupOpen(true);
-                        setSlug(slug);
-                      }}
-                      className="border border-white text-white px-3 sm:px-4 py-2.5 rounded-md text-[10px] sm:text-xs font-bold hover:bg-white hover:text-[#0a41a1] transition-all whitespace-nowrap shrink-0"
-                    >
-                      Fee Structure
-                    </button>
-                    {!slug.includes("zenithschool.ai") && (
-                      <Link
-                        href={item.criteria?.eligibility_utm_links || "#"}
-                        target="_blank"
-                        className="bg-white group-hover:bg-red-600 group-hover:text-white text-red-600 px-3 sm:px-4 py-2.5 rounded-sm text-[10px] sm:text-xs font-bold hover:bg-[#e61f21] hover:text-white transition-all whitespace-nowrap shrink-0"
+                  <div className="flex flex-col md:flex-row md:items-center gap-3 pt-4 border-t border-white/20">
+                    <div className="flex flex-row items-center gap-2 md:contents">
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setSelectedProgramme(item);
+                          setIsPopupOpen(true);
+                          setSlug(slug);
+                        }}
+                        className="flex-1 md:flex-none border border-white text-white px-3 sm:px-4 py-2.5 rounded-md text-[11px] sm:text-xs cursor-pointer font-bold hover:bg-white hover:text-[#0a41a1] transition-all whitespace-nowrap text-center"
                       >
-                        Apply Now
-                      </Link>
-                    )}
-
+                        Fee Structure
+                      </button>
+                      {!slug.includes("zenithschool.ai") && (
+                        <Link
+                          href={item.criteria?.eligibility_utm_links || "#"}
+                          target="_blank"
+                          className="flex-1 md:flex-none bg-white text-red-600 px-3 sm:px-4 py-2.5 rounded-md text-[11px] sm:text-xs font-bold hover:bg-[#e61f21] hover:text-white group-hover:bg-[#e61f21] group-hover:text-white transition-all duration-300 whitespace-nowrap text-center shadow-sm"
+                        >
+                          Apply Now
+                        </Link>
+                      )}
+                    </div>
                     <Link
                       href={slug.includes("zenithschool.ai") ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slug}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white flex items-center gap-1 sm:gap-2 text-[15px] font-medium hover:underline whitespace-nowrap shrink-0"
+                      className="text-white flex items-center  justify-start gap-2 text-[14px] font-medium hover:underline pt-1 md:pt-0 md:ml-auto"
                     >
-                      <CircleArrowRight size={22} /> <span>View Programme</span>
+                      <CircleArrowRight size={20} className="shrink-0" /> <span className="whitespace-nowrap">View Programme</span>
                     </Link>
                   </div>
                 </div>
@@ -535,10 +536,10 @@ const Admission2Search = () => {
         </div>
 
         {showLoadMore && (
-          <div className="p-12 flex items-center justify-center">
+          <div className="py-8 md:py-12 flex items-center justify-center">
             <button
               onClick={() => fetchProgrammes(false, searchQuery, true)}
-              className="group py-4 px-10 bg-[#0a41a1] hover:bg-[#051730] text-white flex items-center gap-4 rounded-xl font-bold transition-all duration-500 ease-in-out shadow-[0_10px_25px_rgba(10,65,161,0.15)] hover:shadow-[0_15px_35px_rgba(10,65,161,0.25)] hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer"
+              className="group text-center py-3.5 px-8 md:py-4 md:px-10 bg-[#0a41a1] hover:bg-[#051730] text-white flex items-center justify-center gap-3 md:gap-4 rounded-sm md:rounded-xl text-md md:text-xl font-semibold transition-all duration-500 ease-in-out shadow-[0_10px_25px_rgba(10,65,161,0.15)] hover:shadow-[0_15px_35px_rgba(10,65,161,0.25)] hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer whitespace-nowrap"
             >
               <span>View All Programmes</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1" />

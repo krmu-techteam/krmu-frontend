@@ -147,7 +147,7 @@ const Admission2Process = () => {
     //   </div>
     // </section>
 
-    <section className="prog-global-padding bg-[#f9f9f9]">
+    <section className="py-8 md:py-16 px-4 md:px-0 bg-[#f9f9f9]">
       <div className="common-prog-container pb-4">
         <h2 className="heading">
           Admission Process
@@ -201,7 +201,7 @@ const Admission2Process = () => {
             })}
         </div>
       </div>
-      <div className="max-w-[540px] mx-auto w-full flex lg:hidden items-center justify-center px-4">
+      <div className="max-w-[540px] mx-auto w-full flex lg:hidden items-center justify-center">
         <div className="grid grid-cols-1 gap-4 w-full">
           {admissionCards &&
             admissionCards.map((card) => {
@@ -209,7 +209,7 @@ const Admission2Process = () => {
               return (
                 <div
                   key={card?.id}
-                  className="w-full text-center px-4 py-3 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[100px] shadow-sm active:shadow-md transition-all duration-300"
+                  className="w-full text-center px-4 py-3 rounded-sm md:rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[100px] shadow-sm active:shadow-md transition-all duration-300"
                 >
                   <h4 className="text-lg font-semibold text-[#0a41a1] mb-1">
                     {card?.title}
