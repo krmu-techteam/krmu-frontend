@@ -10,7 +10,7 @@
   }
 
   .MainSection {
-    background-image: url("/wp-content/landingpage/brand-2026/brand.webp") !important;
+    background-image: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/6_Brand_2_jpg_962eced76e.jpeg") !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -337,8 +337,6 @@
   .npf_wgts iframe {
     box-shadow: none !important;
   }
-
- 
 
   .npf_wgts iframe {
     border-radius: 14px;
