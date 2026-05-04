@@ -12,6 +12,8 @@ const HeroSection = ({
   overviewvideo,
   overviewcounter,
 }: Props) => {
+  const iframe = overviewvideo;
+  const videoSrc = iframe?.match(/src="([^"]+)"/)?.[1];
   return (
     <>
       <section className="bg-[url(/programmes/placementprocessbannerbg.webp)] bg-no-repeat bg-center bg-cover pt-[25%] md:pt-[15%] pb-[12%] px-4">
@@ -24,12 +26,18 @@ const HeroSection = ({
               {title}
             </h1>
           </div>
-          <div
+          {/* <div
             dangerouslySetInnerHTML={{
               __html: overviewvideo,
             }}
             className="lg:w-1/2"
-          />
+          /> */}
+          <div className="lg:w-1/2 ">
+            <iframe
+              className="aspect-video rounded-md w-full"
+              src={videoSrc}
+            ></iframe>
+          </div>
         </div>
       </section>
       <div className="max-w-[1664px] mx-auto w-full md:-mt-[5%] p-5 md:px-0">
