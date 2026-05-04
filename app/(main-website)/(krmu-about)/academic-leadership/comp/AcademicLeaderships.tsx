@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   Carousel,
@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { STRAPI_URL } from "@/app/constant";
 import type { AcademicLeadership } from "@/lib/api/academic-leadership";
+import type { CarouselApi } from "@/components/ui/carousel";
 
 type Props = {
   data: AcademicLeadership[];
@@ -22,14 +23,42 @@ export const AcademicLeaderships = ({ data }: Props) => {
   const [selectedLeader, setSelectedLeader] = useState<AcademicLeadership>(
     data[0],
   );
-
   const [expanded, setExpanded] = useState(false);
+  const [api, setApi] = useState<CarouselApi>();
 
   // Reset read-more on leader change
   const handleSelectLeader = (leader: AcademicLeadership) => {
     setSelectedLeader(leader);
     setExpanded(false);
   };
+
+  // Sync carousel with selected leader
+  useEffect(() => {
+    if (!api) return;
+
+    const index = data.findIndex((leader) => leader.id === selectedLeader.id);
+    if (index !== -1) {
+      api.scrollTo(index);
+    }
+  }, [selectedLeader, api, data]);
+
+  // Auto-select leader when carousel changes (mobile autoplay)
+  useEffect(() => {
+    if (!api) return;
+
+    const onSelect = () => {
+      const index = api.selectedScrollSnap();
+      if (data[index] && data[index].id !== selectedLeader.id) {
+        setSelectedLeader(data[index]);
+        setExpanded(false);
+      }
+    };
+
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api, data, selectedLeader.id]);
 
   return (
     <section className="pt-[120px] pb-20 bg-white">
@@ -75,7 +104,7 @@ export const AcademicLeaderships = ({ data }: Props) => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="md:w-2/5 flex justify-center">
+          <div className=" hidden sm:block md:w-2/5 flex justify-center">
             {selectedLeader.academic_leadership_img?.url && (
               <Image
                 src={`${STRAPI_URL}${selectedLeader.academic_leadership_img.url}`}
@@ -90,7 +119,11 @@ export const AcademicLeaderships = ({ data }: Props) => {
 
         {/* ================= BOTTOM CAROUSEL ================= */}
         <div className="mt-24">
-          <Carousel opts={{ align: "start" }} className="w-full">
+          <Carousel
+            opts={{ align: "start", loop: true }}
+            className="w-full"
+            setApi={setApi}
+          >
             <CarouselContent>
               {data.map((leader) => {
                 const isActive = selectedLeader.id === leader.id;
