@@ -148,7 +148,7 @@ const Admission2Process = () => {
     // </section>
 
     <section className="prog-global-padding bg-[#f9f9f9]">
-      <div className="common-prog-container">
+      <div className="common-prog-container pb-4">
         <h2 className="heading">
           Admission Process
         </h2>
@@ -201,48 +201,37 @@ const Admission2Process = () => {
             })}
         </div>
       </div>
-      <div className="max-w-[540px] mx-auto w-full flex lg:hidden items-center justify-center px-2.5 md:px-4">
-        <div className="grid grid-cols-2 gap-2.5 md:gap-6">
+      <div className="max-w-[540px] mx-auto w-full flex lg:hidden items-center justify-center px-4">
+        <div className="grid grid-cols-1 gap-4 w-full">
           {admissionCards &&
             admissionCards.map((card) => {
-              if (
-                card?.link === "admissions.krmangalam.edu.in" ||
-                card?.description === "admissions.krmangalam.edu.in "
-              ) {
-                return (
-                  <div
-                    key={card?.id}
-                    className={`w-full text-center relative  mob_admis_proc_col flex flex-col justify-end h-[150px] md:h-[180px]`}
-                  >
-                    <h4 className="text-lg text-[#e61f21] z-10 break-all">
-                      {card?.title}
-                    </h4>
-                    <p className="z-10 leading-[1] text-sm text-[#0d6efd] break-all">
+              const isLink = card?.link === "admissions.krmangalam.edu.in" || card?.description === "admissions.krmangalam.edu.in ";
+              return (
+                <div
+                  key={card?.id}
+                  className="w-full text-center px-4 py-3 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[100px] shadow-sm active:shadow-md transition-all duration-300"
+                >
+                  <h4 className="text-lg font-semibold text-[#0a41a1] mb-1">
+                    {card?.title}
+                  </h4>
+                  {isLink ? (
+                    <p className="leading-tight text-sm text-gray-700 break-all font-medium">
                       <Link
-                        href={`https://${card?.description}`}
+                        href={`https://${card?.description?.trim()}`}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="underline hover:no-underline text-[#0d6efd] transition-all"
                       >
                         {card?.description}
                       </Link>
                     </p>
-                  </div>
-                );
-              } else {
-                return (
-                  <div
-                    key={card?.id}
-                    className={`w-full text-center relative  mob_admis_proc_col flex flex-col justify-end h-[150px] md:h-[180px]`}
-                  >
-                    <h4 className="text-lg text-[#e61f21] z-10 break-all">
-                      {card?.title}
-                    </h4>
-                    <p className="z-10 leading-[1] text-sm text-[#0d6efd] break-all">
-                      <span>{card?.description}</span>
+                  ) : (
+                    <p className="leading-relaxed text-sm text-gray-700 break-words font-medium">
+                      {card?.description}
                     </p>
-                  </div>
-                );
-              }
+                  )}
+                </div>
+              );
             })}
         </div>
       </div>

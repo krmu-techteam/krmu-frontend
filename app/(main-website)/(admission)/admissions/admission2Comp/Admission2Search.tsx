@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ChevronDown, Search } from "lucide-react";
+import { ArrowRight, ChevronDown, Search, IndianRupee, Calendar, CircleArrowRight, X } from "lucide-react";
 import { useEffect, useRef, useState, useCallback } from "react";
 
 import Image from "next/image";
@@ -134,6 +134,15 @@ const Admission2Search = () => {
   const schoolRefValue = useRef("soet");
   const degreeRefValue = useRef("undergraduate-programmes");
   const ZENITH_SLUG = "zenith-ai";
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedProgramme, setSelectedProgramme] = useState<any>(null);
+  const [slug, setSlug] = useState("");
+
+  const isZenithPopup =
+    selectedProgramme &&
+    "programmeslug" in selectedProgramme &&
+    selectedProgramme.programmeslug.includes("zenithschool.ai");
 
   useEffect(() => {
     schoolRefValue.current = selectedSchool;
@@ -448,7 +457,7 @@ const Admission2Search = () => {
         </div>
 
         {/* PROGRAMMES LIST */}
-        <div className="mt-20 grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+        <div className="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-4">
           {programmes.length === 0 ? (
             <p className="col-span-3 text-center text-lg font-semibold text-gray-500">
               No programme found
@@ -463,48 +472,62 @@ const Admission2Search = () => {
               return (
                 <div
                   key={item.id}
-                  className="bg-[#0a41a1] py-[15px] px-4 lg:py-[30px] lg:px-10 rounded-[15px] h-[175px] md:h-[235px] text-white relative"
+                  className="group w-full rounded-xl bg-[#0a41a1] hover:bg-[#051730] font-semibold p-5 transition-all duration-300 flex flex-col gap-4 justify-between shadow-md hover:shadow-xl cursor-pointer overflow-hidden relative h-full min-h-[220px] lg:min-h-[250px]"
                 >
-                  <div className="mb-[30px]">
-                    <h6 className="font-semibold text-xs lg:text-base mb-2 line-clamp-2 sm:line-clamp-3">
+                  <Link href={`/programs/${slug}`} target="_blank" title={"title" in item ? item.title : item.heading}>
+                    <h6 className="block w-full text-white text-sm lg:text-lg font-semibold line-clamp-2 overflow-hidden min-h-[40px] lg:min-h-[48px]">
                       {"title" in item ? item.title : item.heading}
                     </h6>
-                    <p className="text-[10px] sm:text-sm">
-                      Duration: {item.criteria?.Duration}
-                    </p>
-                    <p className="text-[10px] sm:text-sm">
-                      Fees: Rs. {item.criteria?.programme_fee_per_year}/-
-                    </p>
+                  </Link>
+                  <div className="flex flex-col sm:flex-row sm:gap-8">
+                    <div className="flex py-2 gap-3 text-white items-center">
+                      <IndianRupee size={22} className="shrink-0" />
+                      <div className="flex flex-col">
+                        <span className="text-[11px] sm:text-xs font-normal opacity-90">Duration:</span>
+                        <span className="text-sm sm:text-base font-bold">{item.criteria?.Duration}</span>
+                      </div>
+                    </div>
+                    <div className="flex py-2 gap-3 text-white items-center">
+                      <Calendar size={22} className="shrink-0" />
+                      <div className="flex flex-col">
+                        <span className="text-[11px] sm:text-xs font-normal opacity-90">Programme Fee:</span>
+                        <span className="text-sm sm:text-base font-bold">Rs. {item.criteria?.programme_fee_per_year} / Year</span>
+                      </div>
+                    </div>
                   </div>
 
-                  {/* ✅ Smart Link Handling */}
-                  {isExternal ? (
-                    <a
-                      href={slug}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[10px] md:text-base font-medium border-b border-white"
+                  <div className="flex flex-row items-center gap-2 pt-4 border-t border-white/20 flex-nowrap overflow-x-auto scrollbar-hide">
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setSelectedProgramme(item);
+                        setIsPopupOpen(true);
+                        setSlug(slug);
+                      }}
+                      className="border border-white text-white px-3 sm:px-4 py-2.5 rounded-md text-[10px] sm:text-xs font-bold hover:bg-white hover:text-[#0a41a1] transition-all whitespace-nowrap shrink-0"
                     >
-                      Show More
-                    </a>
-                  ) : (
-                    <Link
-                      href={`/programs/${slug}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[10px] md:text-base font-medium border-b border-white"
-                    >
-                      Show More
-                    </Link>
-                  )}
+                      Fee Structure
+                    </button>
+                    {!slug.includes("zenithschool.ai") && (
+                      <Link
+                        href={item.criteria?.eligibility_utm_links || "#"}
+                        target="_blank"
+                        className="bg-white group-hover:bg-red-600 group-hover:text-white text-red-600 px-3 sm:px-4 py-2.5 rounded-sm text-[10px] sm:text-xs font-bold hover:bg-[#e61f21] hover:text-white transition-all whitespace-nowrap shrink-0"
+                      >
+                        Apply Now
+                      </Link>
+                    )}
 
-                  <Image
-                    src="/programmes/dots.png"
-                    width={45}
-                    height={51}
-                    alt="dots"
-                    className="absolute right-2.5 bottom-2.5"
-                  />
+                    <Link
+                      href={slug.includes("zenithschool.ai") ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slug}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white flex items-center gap-1 sm:gap-2 text-[15px] font-medium hover:underline whitespace-nowrap shrink-0"
+                    >
+                      <CircleArrowRight size={22} /> <span>View Programme</span>
+                    </Link>
+                  </div>
                 </div>
               );
             })
@@ -512,17 +535,105 @@ const Admission2Search = () => {
         </div>
 
         {showLoadMore && (
-          <div className="p-4 md:p-12 flex items-center justify-center">
+          <div className="p-12 flex items-center justify-center">
             <button
               onClick={() => fetchProgrammes(false, searchQuery, true)}
-              className="py-[15px] px-[30px] bg-[#e61f21] text-white flex items-center gap-5 rounded-[10px] font-semibold cursor-pointer"
-              style={{ boxShadow: "rgba(0,0,0,0.35) 0px 5px 15px" }}
+              className="group py-4 px-10 bg-[#0a41a1] hover:bg-[#051730] text-white flex items-center gap-4 rounded-xl font-bold transition-all duration-500 ease-in-out shadow-[0_10px_25px_rgba(10,65,161,0.15)] hover:shadow-[0_15px_35px_rgba(10,65,161,0.25)] hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer"
             >
               <span>View All Programmes</span>
-              <ArrowRight color="#fff" />
+              <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1" />
             </button>
           </div>
         )}
+      </div>
+
+      {/* FEE STRUCTURE POPUP */}
+      <div
+        className={`fixed top-0 left-0 w-full h-full bg-black/60 backdrop-blur-sm z-[9999] transition-opacity duration-300 ${
+          isPopupOpen ? "opacity-100 flex" : "opacity-0 hidden"
+        }`}
+      >
+        <div className="w-full rounded-xl m-4 p-8 md:p-12 bg-white max-w-4xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-2xl overflow-y-auto max-h-[90vh]">
+          <span
+            className="absolute right-6 top-6 p-1 hover:bg-gray-100 rounded-full cursor-pointer transition-colors"
+            onClick={() => setIsPopupOpen(false)}
+          >
+            <X size={28} strokeWidth={1.5} />
+          </span>
+
+          <div className="text-2xl font-bold text-[#051630] mb-8">
+            Fee Structure
+          </div>
+
+          {selectedProgramme && (
+            <div className="space-y-8">
+              {!isZenithPopup ? (
+                <>
+                  {/* TOP ROW: FEES */}
+                  <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-0 border-b border-gray-100 pb-8">
+                    <div className="flex-1 md:pr-8">
+                      <p className="text-[13px] text-gray-500 uppercase tracking-wide mb-2 font-medium">Semester I</p>
+                      <p className="text-xl font-bold text-black">Rs. {selectedProgramme.criteria?.semester_i} /-</p>
+                    </div>
+                    <div className="hidden md:block w-[1px] h-12 bg-gray-200"></div>
+                    <div className="flex-1 md:px-8">
+                      <p className="text-[13px] text-gray-500 uppercase tracking-wide mb-2 font-medium">Semester II</p>
+                      <p className="text-xl font-bold text-black">Rs. {selectedProgramme.criteria?.semester_ii} /-</p>
+                    </div>
+                    <div className="hidden md:block w-[1px] h-12 bg-gray-200"></div>
+                    <div className="flex-1 md:pl-8">
+                      <p className="text-[13px] text-gray-500 uppercase tracking-wide mb-2 font-medium">Programme Fee Per Year</p>
+                      <p className="text-xl font-bold text-black">Rs. {selectedProgramme.criteria?.programme_fee_per_year} /-</p>
+                    </div>
+                  </div>
+
+                  {/* MIDDLE ROW: DURATION */}
+                  <div className="border-b border-gray-100 pb-8">
+                    <p className="text-lg font-semibold text-black mb-1">Duration:</p>
+                    <p className="text-lg font-bold text-black">{selectedProgramme.criteria?.Duration}</p>
+                  </div>
+
+                  {/* BOTTOM ROW: ELIGIBILITY */}
+                  <div>
+                    <p className="text-lg font-semibold text-black mb-3">Eligibility:</p>
+                    <p className="text-base text-gray-600 leading-relaxed font-medium">
+                      {selectedProgramme.criteria?.eligibility_criteria}
+                    </p>
+                  </div>
+
+                  {/* BUTTONS */}
+                  <div className="flex flex-wrap gap-4 pt-4">
+                    <Link
+                      href={`/programs/${slug}`}
+                      className="bg-[#0a41a1] text-white px-8 py-3 rounded-[5px] font-semibold hover:bg-[#051730] transition-colors"
+                    >
+                      Know More
+                    </Link>
+                    <Link
+                      href={selectedProgramme.criteria?.eligibility_utm_links || "#"}
+                      target="_blank"
+                      className="bg-[#e61f21] text-white px-8 py-3 rounded-[5px] font-semibold hover:bg-[#c41a1c] transition-colors"
+                    >
+                      Apply Now
+                    </Link>
+                  </div>
+                </>
+              ) : (
+                <div className="text-center py-10">
+                  <h3 className="text-xl font-bold mb-4">Zenith School of AI Programme</h3>
+                  <p className="mb-8 text-gray-600">Please visit the official Zenith website for detailed fee structures and admission process.</p>
+                  <a
+                    href="https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026"
+                    target="_blank"
+                    className="inline-block bg-[#e61f21] text-white px-10 py-3 rounded-[5px] font-bold"
+                  >
+                    Go to Zenith Website
+                  </a>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

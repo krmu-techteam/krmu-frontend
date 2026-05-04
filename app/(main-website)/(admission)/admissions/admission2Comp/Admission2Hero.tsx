@@ -32,29 +32,29 @@ const Admission2Hero = () => {
 
   return (
     <section
-      className="pt-[140px] pb-[50px] px-4  bg-[url(/mobadm.png)] bg-cover bg-no-repeat bg-center sm:bg-none relative sm:before:hidden before:content-['']
-    before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-[#00000080]"
+      className="pt-[140px] pb-[50px] px-4 min-h-[600px] flex items-end bg-[url(/mobadm.png)] bg-cover bg-no-repeat bg-center sm:bg-none relative sm:before:hidden before:content-['']
+    before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-gradient-to-t before:from-black/90 before:to-transparent"
     >
       <div className="max-w-[1320px] mx-auto w-full flex flex-col lg:flex-row items-center gap-6 ">
-        <div className="sm:hidden w-full z-10">
-          <h1 className="text-white leading-[1.2] font-semibold text-[26px] mb-2">
+        <div className="sm:hidden w-full z-10 pb-10">
+          <h1 className="text-white leading-[1.1] font-bold text-3xl mb-2 [text-shadow:_0_2px_10px_rgba(0,0,0,0.8)]">
             Unlock Your <br />
             Future at
           </h1>
-          <h2 className="text-white bg-[#0a41a1] py-5 pl-5 pr-10 rounded-r-[20px] w-fit text-2xl font-semibold mb-2">
-            K.R.Mangalam <br />
+          <h2 className="text-white text-4xl font-extrabold mb-5 [text-shadow:_0_2px_15px_rgba(0,0,0,0.9)]">
+            K.R. Mangalam <br />
             University
           </h2>
-          <p className="text-white w-[80%] px-5 text-base mb-5">
+          <p className="text-white w-full text-[17px] mb-8 font-medium [text-shadow:_0_1px_8px_rgba(0,0,0,0.7)] opacity-95">
             Dive into a world of diverse programmes curated to guide you on your
             successful journey
           </p>
           <Link
             href="https://admissions.krmangalam.edu.in/"
             target="_blank" rel="noopener noreferrer"
-            className="bg-[#e61f21] mt-12 rounded-r-[10px] border border-[#0a41a1] py-[15px] px-[30px] flex items-center w-fit text-white leading-0 gap-5"
+            className="bg-[#e61f21] rounded-sm border border-white/10 py-2.5 px-8 flex items-center w-fit text-white text-lg font-medium gap-4 shadow-2xl active:scale-95 transition-all duration-300"
           >
-            Apply Now <ArrowRight color="#ffffff" />
+            Apply Now <ArrowRight color="#ffffff" className="w-6 h-6" />
           </Link>
         </div>
         <div className="hidden sm:block lg:w-1/2">
