@@ -26,13 +26,13 @@ const SchoolKnowledgeLogos = ({ logos }: Props) => {
           }),
         ]}
       >
-        <CarouselContent className="items-center justify-center gap-2">
+        <CarouselContent className="items-center justify-between max-w-6xl mx-auto gap-2">
           {logos &&
             logos.map((logo) => {
               return (
                 <CarouselItem
                   key={logo?.id}
-                  className="sm:basis-1/2 lg:basis-1/2 xl:basis-1/4 flex justify-center items-center bg-white rounded-md text-center"
+                  className="sm:basis-1/2 lg:basis-1/5 flex justify-center items-center pl-0 bg-white rounded-md text-center"
                 >
                   <div>
                     <Image

@@ -166,7 +166,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                         : activeProgramId === prog.id;
 
                     return (
-                      <div
+                      <div 
                         key={prog.id}
                         onClick={() => handleProgramClick(prog.id)}
                         onMouseEnter={() => handleMouseEnter(prog.id)}
