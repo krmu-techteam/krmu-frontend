@@ -1,10 +1,16 @@
 "use client";
 
-import { ArrowRight, ChevronDown, Search, IndianRupee, Calendar, CircleArrowRight, X } from "lucide-react";
+import {
+  ArrowRight,
+  Calendar,
+  ChevronDown,
+  ChevronRight,
+  CircleArrowRight,
+  IndianRupee,
+  Search,
+  X,
+} from "lucide-react";
 import { useEffect, useRef, useState, useCallback } from "react";
-
-import Image from "next/image";
-import Link from "next/link";
 import {
   getAllSchoolsInfo,
   getAllDegreeInfo,
@@ -20,6 +26,11 @@ function normalize(text: string) {
   return text.toLowerCase().replace(/[\.\s]/g, "");
 }
 
+import Image from "next/image";
+import Link from "next/link";
+// import { getAllSchoolPhdProgrammeByCatPaginated, SchoolItem } from "@/app/(main-website)/(programmes)/programmesApi/api";
+// import ProgrammesHero from "./ProgrammesHero";
+// import { Skeleton } from "@/components/ui/skeleton";
 
 type ZenithCriteria = {
   id: number;
@@ -106,9 +117,12 @@ export interface PhdProgramme {
 export type ProgrammeItem = Programme | PhdProgramme;
 
 const Admission2Search = () => {
- const [allSchools, setAllSchools] = useState<SchoolItem[]>([]);
+  const [allSchools, setAllSchools] = useState<SchoolItem[]>([]);
   const [allDegrees, setAllDegrees] = useState<ProgrammeLevel[]>([]);
-
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedProgramme, setSelectedProgramme] =
+    useState<ProgrammeItem | null>(null);
+  const [slugValue, setSlug] = useState("");
   // default dropdown selections
   const [selectedSchool, setSelectedSchool] = useState("soet");
   const [selectedDegree, setSelectedDegree] = useState(
@@ -134,10 +148,6 @@ const Admission2Search = () => {
   const schoolRefValue = useRef("soet");
   const degreeRefValue = useRef("undergraduate-programmes");
   const ZENITH_SLUG = "zenith-ai";
-
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [selectedProgramme, setSelectedProgramme] = useState<any>(null);
-  const [slug, setSlug] = useState("");
 
   const isZenithPopup =
     selectedProgramme &&
@@ -342,40 +352,37 @@ const Admission2Search = () => {
   });
 
   return (
-    <section className="py-8 md:py-16 px-4 md:px-0 bg-[#f9f9f9]">
-      <div className="max-w-[800px] mx-auto w-full">
-        <div>
-          <h1 className="text-2xl md:text-[40px] font-bold text-center mb-5 leading-[1.2] text-black">
-            Transform your Life with the Right Programme
-          </h1>
-        </div>
-      </div>
-
-      <div className="max-w-[1440px] mx-auto w-full mt-8 md:mt-12">
+    <section>
+      <div>
         {/* FILTER BOX */}
-        <div className="bg-white rounded-md md:rounded-2xl shadow-[0_15px_50px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden">
-          <div className="flex flex-col lg:flex-row items-center lg:divide-x divide-gray-100">
+        <div className="bg-[#051630] py-8 px-5">
+          <div className="py-2.5 px-5 flex flex-col lg:flex-row items-center gap-5 max-w-[1440px] mx-auto w-full bg-white rounded-xl">
             {/* SCHOOL DROPDOWN */}
-            <div className="w-full lg:w-[35%] relative group" ref={schoolRef}>
+            <div className="lg:w-5/12 relative" ref={schoolRef}>
               <div
-                className="flex items-center justify-between px-8 py-5 cursor-pointer hover:bg-gray-50 transition-colors border-b lg:border-b-0 border-gray-50"
+                className="flex items-center justify-between gap-2.5 cursor-pointer"
                 onClick={() => {
                   setOpenSchoolDropdown(!openSchoolDropdown);
                   setOpenDegreeDropdown(false);
                 }}
               >
-                <span className="text-[15px] font-medium text-gray-800 truncate">
+                <span className="text-lg font-semibold">
                   {selectedSchool === ZENITH_SLUG
                     ? "Zenith School of AI"
                     : allSchools.find(
                         (s) => s.school_category.slug === selectedSchool,
                       )?.schoolname || "Select School"}
                 </span>
-                <ChevronDown className="w-4 h-4 text-[#e61f21] flex-shrink-0" />
+                {/* <span className="text-lg font-semibold">
+                  {allSchools.find(
+                    (s) => s.school_category.slug === selectedSchool,
+                  )?.schoolname || "Select School"}
+                </span> */}
+                <ChevronDown color="#e61f21" />
               </div>
 
               {openSchoolDropdown && (
-                <div className="absolute left-0 top-full mt-2 bg-white w-full max-h-[400px] overflow-y-auto rounded-2xl shadow-2xl border border-gray-100 z-50 py-3 scrollbar-hide">
+                <div className="pb-2 absolute left-0 top-10 bg-white w-full rounded-[5px] border border-[#0000002d] z-10">
                   <ul>
                     {sortedSchools.map((school) => (
                       <li
@@ -385,10 +392,10 @@ const Admission2Search = () => {
                           setSearchQuery("");
                           setOpenSchoolDropdown(false);
                         }}
-                        className={`py-3 px-6 text-[15px] cursor-pointer hover:bg-gray-50 transition-colors leading-tight ${
+                        className={`py-2 px-3 cursor-pointer hover:bg-[#f0f0f0] ${
                           selectedSchool === school.school_category.slug
-                            ? "bg-blue-50 text-[#0a41a1] font-bold"
-                            : "text-gray-700 font-medium"
+                            ? "bg-[#f0f0f0] font-semibold"
+                            : ""
                         }`}
                       >
                         {school.schoolname}
@@ -400,36 +407,36 @@ const Admission2Search = () => {
             </div>
 
             {/* DEGREE DROPDOWN */}
-            <div className="w-full lg:w-[30%] relative group" ref={degreeRef}>
+            <div className="lg:w-3/12 relative" ref={degreeRef}>
               <div
-                className="flex items-center justify-between px-8 py-5 cursor-pointer hover:bg-gray-50 transition-colors border-b lg:border-b-0 border-gray-50"
+                className="flex items-center justify-between gap-2.5 cursor-pointer"
                 onClick={() => {
                   setOpenDegreeDropdown(!openDegreeDropdown);
                   setOpenSchoolDropdown(false);
                 }}
               >
-                <span className="text-[15px] font-medium text-gray-800 truncate">
+                <span className="text-lg font-semibold">
                   {allDegrees.find((d) => d.slug === selectedDegree)?.name ||
                     "Select Programme Level"}
                 </span>
-                <ChevronDown className="w-4 h-4 text-[#e61f21] flex-shrink-0" />
+                <ChevronDown color="#e61f21" />
               </div>
 
               {openDegreeDropdown && (
-                <div className="absolute left-0 top-full mt-2 bg-white w-full rounded-2xl shadow-2xl border border-gray-100 z-50 py-3">
+                <div className="py-2 absolute left-0 top-10 bg-white w-full rounded-[5px] border border-[#0000002d] z-10">
                   <ul>
                     {allDegrees.map((degree) => (
                       <li
                         key={degree.id}
                         onClick={() => {
                           setSelectedDegree(degree.slug);
-                          setSearchQuery("");
+                          setSearchQuery(""); // clear search
                           setOpenDegreeDropdown(false);
                         }}
-                        className={`py-3 px-6 text-[15px] cursor-pointer hover:bg-gray-50 transition-colors leading-tight ${
+                        className={`py-2 px-3 cursor-pointer hover:bg-[#f0f0f0] ${
                           selectedDegree === degree.slug
-                            ? "bg-blue-50 text-[#0a41a1] font-bold"
-                            : "text-gray-700 font-medium"
+                            ? "bg-[#f0f0f0] font-semibold"
+                            : ""
                         }`}
                       >
                         {degree.name}
@@ -441,199 +448,280 @@ const Admission2Search = () => {
             </div>
 
             {/* SEARCH INPUT */}
-            <div className="w-full lg:w-[35%] bg-white">
-              <div className="flex items-center px-8 py-5">
+            <div className="w-full lg:w-4/12">
+              <div className="flex">
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="block w-full bg-transparent text-[15px] font-medium text-gray-800 placeholder:text-gray-400 focus:outline-none border-none p-0"
+                  id="default-search"
+                  className="block w-full bg-transparent text-lg font-semibold placeholder:text-base"
                   placeholder="Search by Programme Name…"
                 />
-                <Search className="w-5 h-5 text-[#e61f21] flex-shrink-0 ml-2" />
+                <Search className="text-[#e61f21]" />
               </div>
             </div>
           </div>
         </div>
+        <div className="max-w-[1440px] mx-auto w-full px-5 2xl:px-0">
+          {/* PROGRAMMES LIST */}
+          <div className="mt-10 grid md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-8">
+            {programmes.length === 0 ? (
+              <p className="col-span-3 text-center text-lg font-semibold text-gray-500">
+                No programme found
+              </p>
+            ) : (
+              programmes.map((item) => {
+                const slug =
+                  "programmeslug" in item ? item.programmeslug : item.phdslug;
 
-        {/* PROGRAMMES LIST */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {programmes.length === 0 ? (
-            <p className="col-span-1 md:col-span-2 lg:col-span-3 text-center text-lg font-semibold text-gray-500">
-              No programme found
-            </p>
-          ) : (
-            programmes.map((item) => {
-              const slug =
-                "programmeslug" in item ? item.programmeslug : item.phdslug;
+                const isExternal = slug.startsWith("http");
 
-              const isExternal = slug.startsWith("http");
-
-              return (
-                <div
-                  key={item.id}
-                  className="group w-full rounded-sm md:rounded-xl bg-[#0a41a1] hover:bg-[#051730] font-semibold p-6 lg:p-7 transition-all duration-300 flex flex-col gap-6 justify-between shadow-md hover:shadow-xl cursor-pointer overflow-hidden relative h-full min-h-[250px]"
-                >
-                  <Link href={`/programs/${slug}`} target="_blank" title={"title" in item ? item.title : item.heading}>
-                    <h6 className="block w-full text-white text-sm lg:text-lg font-semibold line-clamp-2 overflow-hidden min-h-[40px] lg:min-h-[48px]">
-                      {"title" in item ? item.title : item.heading}
-                    </h6>
-                  </Link>
-                  <div className="flex flex-col sm:flex-row sm:gap-8">
-                    <div className="flex py-2 gap-3 text-white items-center">
-                      <IndianRupee size={22} className="shrink-0" />
-                      <div className="flex flex-col">
-                        <span className="text-[11px] sm:text-xs font-normal opacity-90">Duration:</span>
-                        <span className="text-sm sm:text-base font-bold">{item.criteria?.Duration}</span>
+                return (
+                  <div
+                    key={item.id}
+                    className="group max-w-[458px] min-h-[200px] w-full rounded-xl bg-[#0a41a1] group hover:bg-[#001F3F] h-full  font-semibold p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  hover:text-black"
+                  >
+                    {" "}
+                    <Link href={`/programs/${slug}`} target="_blank">
+                      <h6 className="block w-full text-white">
+                        {"title" in item ? item.title : item.heading}
+                      </h6>
+                    </Link>
+                    <div className="flex flex-col sm:flex-row  sm:gap-5">
+                      <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
+                        <span>
+                          <IndianRupee />
+                        </span>
+                        <div className="flex flex-col gap-0.5">
+                          <span className="font-normal">Duration:</span>
+                          <span>{item.criteria?.Duration}</span>
+                        </div>
+                      </div>
+                      <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
+                        <span>
+                          <Calendar />
+                        </span>
+                        <div className="flex flex-col gap-0.5">
+                          <span className="font-normal">Programme Fee:</span>
+                          <span>
+                            Rs. {item.criteria?.programme_fee_per_year} / Year
+                          </span>
+                        </div>
                       </div>
                     </div>
-                    <div className="flex py-2 gap-3 text-white items-center">
-                      <Calendar size={22} className="shrink-0" />
-                      <div className="flex flex-col">
-                        <span className="text-[11px] sm:text-xs font-normal opacity-90">Programme Fee:</span>
-                        <span className="text-sm sm:text-base font-bold">Rs. {item.criteria?.programme_fee_per_year} / Year</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col md:flex-row md:items-center gap-3 pt-4 border-t border-white/20">
-                    <div className="flex flex-row items-center gap-2 md:contents">
+                    <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center border-t border-[#395c6e] pt-2.5">
                       <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
+                        // href={item.criteria.eligibility_utm_links}
+                        // target="_blank"
+                        onClick={() => {
                           setSelectedProgramme(item);
                           setIsPopupOpen(true);
                           setSlug(slug);
                         }}
-                        className="flex-1 md:flex-none border border-white text-white px-3 sm:px-4 py-2.5 rounded-md text-[11px] sm:text-xs cursor-pointer font-bold hover:bg-white hover:text-[#0a41a1] transition-all whitespace-nowrap text-center"
+                        className="border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer border-white text-white"
                       >
                         Fee Structure
                       </button>
                       {!slug.includes("zenithschool.ai") && (
                         <Link
-                          href={item.criteria?.eligibility_utm_links || "#"}
+                          href={item.criteria.eligibility_utm_links}
                           target="_blank"
-                          className="flex-1 md:flex-none bg-white text-red-600 px-3 sm:px-4 py-2.5 rounded-md text-[11px] sm:text-xs font-bold hover:bg-[#e61f21] hover:text-white group-hover:bg-[#e61f21] group-hover:text-white transition-all duration-300 whitespace-nowrap text-center shadow-sm"
+                          className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-red-500 group-hover:text-white hover:border hover:border-red-500"
                         >
                           Apply Now
                         </Link>
                       )}
+
+                      {/* {isExternal ? (
+                        <Link
+                          href={slug}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[10px] md:text-base font-medium"
+                        >
+                          Show More
+                        </Link>
+                      ) : ( */}
+
+                      <Link
+                        href={`${slug.includes("zenithschool.ai") ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slug}`}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white rounded-sm py-2.5 2xl:py-2.5 text-sm flex items-center gap-2"
+                      >
+                        <CircleArrowRight /> <span>View Programme</span>
+                      </Link>
+                      {/* )} */}
                     </div>
-                    <Link
-                      href={slug.includes("zenithschool.ai") ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slug}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white flex items-center  justify-start gap-2 text-[14px] font-medium hover:underline pt-1 md:pt-0 md:ml-auto"
-                    >
-                      <CircleArrowRight size={20} className="shrink-0" /> <span className="whitespace-nowrap">View Programme</span>
-                    </Link>
                   </div>
-                </div>
-              );
-            })
-          )}
-        </div>
-
-        {showLoadMore && (
-          <div className="py-8 md:py-12 flex items-center justify-center">
-            <button
-              onClick={() => fetchProgrammes(false, searchQuery, true)}
-              className="group text-center py-3.5 px-8 md:py-4 md:px-10 bg-[#0a41a1] hover:bg-[#051730] text-white flex items-center justify-center gap-3 md:gap-4 rounded-sm md:rounded-xl text-md md:text-xl font-semibold transition-all duration-500 ease-in-out shadow-[0_10px_25px_rgba(10,65,161,0.15)] hover:shadow-[0_15px_35px_rgba(10,65,161,0.25)] hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer whitespace-nowrap"
-            >
-              <span>View All Programmes</span>
-              <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1" />
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* FEE STRUCTURE POPUP */}
-      <div
-        className={`fixed top-0 left-0 w-full h-full bg-black/60 backdrop-blur-sm z-[9999] transition-opacity duration-300 ${
-          isPopupOpen ? "opacity-100 flex" : "opacity-0 hidden"
-        }`}
-      >
-        <div className="w-full rounded-xl m-4 p-8 md:p-12 bg-white max-w-4xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-2xl overflow-y-auto max-h-[90vh]">
-          <span
-            className="absolute right-6 top-6 p-1 hover:bg-gray-100 rounded-full cursor-pointer transition-colors"
-            onClick={() => setIsPopupOpen(false)}
-          >
-            <X size={28} strokeWidth={1.5} />
-          </span>
-
-          <div className="text-2xl font-bold text-[#051630] mb-8">
-            Fee Structure
+                );
+              })
+            )}
           </div>
 
-          {selectedProgramme && (
-            <div className="space-y-8">
-              {!isZenithPopup ? (
-                <>
-                  {/* TOP ROW: FEES */}
-                  <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-0 border-b border-gray-100 pb-8">
-                    <div className="flex-1 md:pr-8">
-                      <p className="text-[13px] text-gray-500 uppercase tracking-wide mb-2 font-medium">Semester I</p>
-                      <p className="text-xl font-bold text-black">Rs. {selectedProgramme.criteria?.semester_i} /-</p>
-                    </div>
-                    <div className="hidden md:block w-[1px] h-12 bg-gray-200"></div>
-                    <div className="flex-1 md:px-8">
-                      <p className="text-[13px] text-gray-500 uppercase tracking-wide mb-2 font-medium">Semester II</p>
-                      <p className="text-xl font-bold text-black">Rs. {selectedProgramme.criteria?.semester_ii} /-</p>
-                    </div>
-                    <div className="hidden md:block w-[1px] h-12 bg-gray-200"></div>
-                    <div className="flex-1 md:pl-8">
-                      <p className="text-[13px] text-gray-500 uppercase tracking-wide mb-2 font-medium">Programme Fee Per Year</p>
-                      <p className="text-xl font-bold text-black">Rs. {selectedProgramme.criteria?.programme_fee_per_year} /-</p>
-                    </div>
-                  </div>
-
-                  {/* MIDDLE ROW: DURATION */}
-                  <div className="border-b border-gray-100 pb-8">
-                    <p className="text-lg font-semibold text-black mb-1">Duration:</p>
-                    <p className="text-lg font-bold text-black">{selectedProgramme.criteria?.Duration}</p>
-                  </div>
-
-                  {/* BOTTOM ROW: ELIGIBILITY */}
-                  <div>
-                    <p className="text-lg font-semibold text-black mb-3">Eligibility:</p>
-                    <p className="text-base text-gray-600 leading-relaxed font-medium">
-                      {selectedProgramme.criteria?.eligibility_criteria}
-                    </p>
-                  </div>
-
-                  {/* BUTTONS */}
-                  <div className="flex flex-wrap gap-4 pt-4">
-                    <Link
-                      href={`/programs/${slug}`}
-                      className="bg-[#0a41a1] text-white px-8 py-3 rounded-[5px] font-semibold hover:bg-[#051730] transition-colors"
-                    >
-                      Know More
-                    </Link>
-                    <Link
-                      href={selectedProgramme.criteria?.eligibility_utm_links || "#"}
-                      target="_blank"
-                      className="bg-[#e61f21] text-white px-8 py-3 rounded-[5px] font-semibold hover:bg-[#c41a1c] transition-colors"
-                    >
-                      Apply Now
-                    </Link>
-                  </div>
-                </>
-              ) : (
-                <div className="text-center py-10">
-                  <h3 className="text-xl font-bold mb-4">Zenith School of AI Programme</h3>
-                  <p className="mb-8 text-gray-600">Please visit the official Zenith website for detailed fee structures and admission process.</p>
-                  <a
-                    href="https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026"
-                    target="_blank"
-                    className="inline-block bg-[#e61f21] text-white px-10 py-3 rounded-[5px] font-bold"
-                  >
-                    Go to Zenith Website
-                  </a>
-                </div>
-              )}
+          {showLoadMore && (
+            <div className="pt-4 md:pt-12 flex items-center justify-center">
+              <button
+                onClick={() => fetchProgrammes(false, searchQuery, true)}
+                className="text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-[#034272] cursor-pointer"
+                // style={{ boxShadow: "rgba(0,0,0,0.35) 0px 5px 15px" }}
+              >
+                <span>View All Programmes</span>
+                <ArrowRight color="#fff" />
+              </button>
             </div>
           )}
+        </div>
+      </div>
+      <div
+        className={`fixed  top-0 left-0 w-full h-full bg-black/50 z-50 ${isPopupOpen ? "flex" : "hidden"}`}
+      >
+        <div
+          className="w-full rounded-md sm:m-0 p-2.5 md:p-10 h-fit bg-white max-w-2xl md:max-w-4xl absolute top-1/2 left-1/2 -translate-1/2"
+          style={{
+            boxShadow:
+              "0px -0.6088px 2.21381px 0px rgba(0, 0, 0, 0.02), 0px -1.46302px 5.32008px 0px rgba(0, 0, 0, 0.03), 0px -2.75474px 10.01724px 0px rgba(0, 0, 0, 0.04), 0px -4.91399px 17.86905px 0px rgba(0, 0, 0, 0.04), 0px -9.19107px 33.42209px 0px rgba(0, 0, 0, 0.05), 0px -22px 80px 0px rgba(0, 0, 0, 0.07)",
+          }}
+        >
+          <span
+            className="absolute right-5 top-5  inline-block z-50 cursor-pointer"
+            onClick={() => setIsPopupOpen(false)}
+          >
+            <X />
+          </span>
+
+          <div className="text-xl font-semibold text-[#051630] mb-5">
+            <p>Fee Structure</p>
+          </div>
+          <div className="grid grid-cols-2 sm:flex flex-col md:flex-row gap-4 border-b border-gray-300 pb-2.5 sm:pb-5">
+            {!isZenithPopup && (
+              <>
+                <div className="lg:border-r border-black pr-4">
+                  <p className="mb-5 font-normal text-sm sm:text-base uppercase leading-[1]">
+                    Semester I
+                  </p>
+                  <p className="text-sm sm:text-base leading-[1] font-bold">
+                    Rs. {selectedProgramme?.criteria?.semester_i || "N/A"} /-
+                  </p>
+                </div>
+
+                <div className="lg:border-r border-black pr-4">
+                  <p className="mb-5 font-normal text-sm sm:text-base uppercase leading-[1]">
+                    Semester II
+                  </p>
+                  <p className="text-sm sm:text-base leading-[1] font-bold">
+                    Rs. {selectedProgramme?.criteria?.semester_ii || "N/A"} /-
+                  </p>
+                </div>
+              </>
+            )}
+            <div>
+              <p className="mb-5 font-normal text-sm sm:text-base  leading-[1]">
+                Programme Fee Per Year
+              </p>
+              <p className="text-sm sm:text-base leading-[1] font-bold">
+                {/* {criteria.programme_fee_per_year === "TBD" ? "" : "Rs."}{" "}
+                    {criteria.programme_fee_per_year || "N/A"}{" "}
+                    {criteria.programme_fee_per_year === "TBD" ? "" : "/-"} */}
+                Rs. {selectedProgramme?.criteria?.programme_fee_per_year} /-
+              </p>
+            </div>
+          </div>
+
+          <div className="my-5 border-b border-gray-300">
+            <p className="font-semibold text-sm sm:text-base">Duration:</p>
+            <p className="mb-2.5 sm:mb-5 font-bold text-sm sm:text-base">
+              {selectedProgramme?.criteria?.Duration}
+            </p>
+          </div>
+
+          <div>
+            <p className="font-bold text-sm sm:text-base mb-2.5">
+              Eligibility:
+            </p>
+            <div className="text-xs sm:text-sm mb-5">
+              {isZenithPopup ? (
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="shrink-0 flex items-center justify-center">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-4 h-4 text-[#49DE80] p-0.5 bg-[#194129] rounded-full"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <h4 className="font-bold text-base">
+                        Class 12th with PCM
+                      </h4>
+                      <p className="text-black text-sm font-medium">
+                        Physics, Chemistry, Mathematics as core subjects.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="shrink-0 flex items-center justify-center">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-4 h-4 text-[#49DE80] p-0.5 bg-[#194129] rounded-full"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <h4 className="font-bold text-base">
+                        Minimum 60% in Class 12th
+                      </h4>
+                      <p className="text-black text-sm font-medium">
+                        Or equivalent CGPA from a recognized board.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                selectedProgramme?.criteria?.eligibility_criteria
+              )}
+            </div>
+          </div>
+
+          <div className="flex gap-4 items-center">
+            <Link
+              href={`${isZenithPopup ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slugValue}`}`}
+              className="bg-[#0161b0] text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Know More
+            </Link>
+            {!isZenithPopup && (
+              <Link
+                href={selectedProgramme?.criteria?.eligibility_utm_links || "#"}
+                className="bg-red-500 text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apply Now
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </section>
