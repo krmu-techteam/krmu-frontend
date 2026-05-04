@@ -13,16 +13,16 @@ type Props = {
 const SchoolEventAndExperience = ({ title, desc, btn, eventsexp }: Props) => {
   return (
     // <section className="bg-[url(/schools/events-bg.webp)] bg-cover bg-center py-[30px] px-4">
-    <section className="bg-[#051630] bg-cover bg-center pt-20 pb-8 px-4">
+    <section className="bg-[#051630] bg-cover bg-center py-10 sm:pt-20 sm:pb-8 px-4">
       <div className="max-w-4xl mx-auto w-full text-white text-center">
-        <h3 className="text-3xl sm:text-5xl lg:text-7xl  mb-5 font-semibold">
+        <h3 className="text-3xl sm:text-5xl lg:text-7xl mb-5 font-semibold">
           {title}
         </h3>
 
         <p>{desc}</p>
         
       </div>
-      <div className="max-w-[1664px] mx-auto w-full">
+      <div className="max-w-[1664px] mx-auto w-full mt-10">
         <SchoolEventsAndExperiencesCard eventsexp={eventsexp} />
         <div className="flex justify-center">
           {(btn?.buttonclass || btn?.buttonlink) && (

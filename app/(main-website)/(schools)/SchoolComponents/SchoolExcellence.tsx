@@ -10,7 +10,7 @@ type Props = {
 
 const SchoolExcellence = ({ title1, title2, btn1, btn2 }: Props) => {
   return (
-    <section className="relative py-20 px-4 bg-gradient-to-r from-[#071c33] via-[#0a3a63] to-[#071c33] overflow-hidden">
+    <section className="relative py-10 sm:py-20 px-4 bg-gradient-to-r from-[#071c33] via-[#0a3a63] to-[#071c33] overflow-hidden">
       <div className="max-w-[1664px] mx-auto w-full grid lg:grid-cols-2 gap-8">
         {/* Card 1 */}
         <div className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 text-center transition duration-300 hover:scale-[1.03] hover:shadow-2xl">

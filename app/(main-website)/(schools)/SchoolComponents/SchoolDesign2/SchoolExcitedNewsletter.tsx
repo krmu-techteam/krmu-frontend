@@ -49,7 +49,7 @@ const SchoolExcitedNewsletter = async ({
                     <CommonLeadPopup
                       key={btn?.id}
                       buttonText={btn?.buttontext || "Download Prospectus"}
-                      buttonClassName="border border-white py-2.5 px-8 bg-white transition duration-300 font-semibold text-sm sm:text-base rounded-md inline-block cursor-pointer text-black hover:text-white hover:border hover:border-white hover:bg-transparent shadow-md"
+                      buttonClassName="border border-white w-full sm:w-fit py-2.5 px-8 bg-white transition duration-300 font-semibold text-sm sm:text-base rounded-md inline-block cursor-pointer text-black hover:text-white hover:border hover:border-white hover:bg-transparent shadow-md"
                       redirectUrl={btn?.buttonlink || "#"}
                       form_name="Download Prospectus"
                     />
@@ -59,7 +59,7 @@ const SchoolExcitedNewsletter = async ({
                     <Link
                       key={btn?.id}
                       href={btn?.buttonlink || "#"}
-                      className="border border-white py-2.5 px-8 bg-white transition duration-300 font-semibold text-sm sm:text-base rounded-md inline-block text-black hover:text-white hover:border hover:border-white hover:bg-transparent shadow-md"
+                      className="border border-white w-full sm:w-fit py-2.5 px-8 bg-white transition duration-300 font-semibold text-sm sm:text-base rounded-md inline-block text-black hover:text-white hover:border hover:border-white hover:bg-transparent shadow-md"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -100,7 +100,7 @@ const SchoolExcitedNewsletter = async ({
                     <Link
                       key={btn?.id}
                       href={btn?.buttonlink || ""}
-                      className={`border border-white py-2.5 px-6 bg-white transition duration-300 font-semibold rounded-md inline-block text-sm md:text-base shadow-md text-black hover:text-white hover:border hover:border-white hover:bg-transparent`}
+                      className={`border border-white py-2.5 px-6 w-full sm:w-fit bg-white transition duration-300 font-semibold rounded-md inline-block text-sm md:text-base shadow-md text-black hover:text-white hover:border hover:border-white hover:bg-transparent`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

@@ -39,7 +39,7 @@ const SchoolInfoStatistics = ({
 }: Props) => {
   return (
     <section className="pt-10 lg:pt-20 px-5">
-      <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row sm:items-center gap-10  bg-blue-100/50 p-2.5 md:p-10 rounded-2xl">
+      <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row sm:items-center gap-5 sm:gap-10  bg-blue-100/50 p-2.5 md:p-10 rounded-2xl">
         <div className="w-full lg:w-1/2 xl:w-1/3 relative h-[300px] lg:h-[660px]">
           <Image
             src={infoStaticImages[slug] || "/info.webp"}
@@ -49,8 +49,8 @@ const SchoolInfoStatistics = ({
           />
         </div>
         <div className="w-full lg:w-1/2 xl:w-2/3 text-black">
-          <p className="text-2xl font-medium mb-5">{subheading}</p>
-          <h3 className="text-3xl md:text-4xl xl:text-5xl font-semibold leading-tight mb-5">
+          <p className="text-lg sm:text-2xl font-medium mb-2.5">{subheading}</p>
+          <h3 className="text-xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold leading-tight mb-2.5 sm:mb-5">
             {heading}
           </h3>
           {/* <BlocksRenderer content={desc} /> */}
@@ -58,6 +58,7 @@ const SchoolInfoStatistics = ({
             dangerouslySetInnerHTML={{
               __html: desc,
             }}
+            className="text-sm"
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 xl:mt-10">
             {counters &&

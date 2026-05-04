@@ -31,7 +31,7 @@ const TestimonialCard = ({ name, edu, desc, img }: Props) => {
           className="rounded-full w-[80px] h-[80px] md:w-[105px] md:h-[105px]"
         />
         <div className="flex flex-col gap-2.5">
-          <p className="text-3xl font-medium">{name} </p>
+          <p className="text-xl sm:text-3xl font-medium">{name} </p>
           <p>{edu}</p>
         </div>
       </div>

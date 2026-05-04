@@ -6,9 +6,15 @@ import {
   getSchoolProgrammePhdDataDegree,
 } from "@/lib/api/school-programmes";
 import { ProgrammeCardData } from "@/lib/types/school-programme";
-import { CircleArrowRight, X } from "lucide-react";
+import {
+  Calendar,
+  CalendarDays,
+  CircleArrowRight,
+  IndianRupee,
+  X,
+} from "lucide-react";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type Props = {
   degName: string;
@@ -31,6 +37,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
     { label: "Diploma", value: "Diploma Programmes", tabValue: "diploma" },
   ];
 
+  const sectionRef = useRef<HTMLDivElement>(null);
   // Fetch programmes
   const fetchProg = useCallback(
     async (deg: string) => {
@@ -113,11 +120,9 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
 
   const criteria = currentProgram?.criteria;
 
-
-
   return (
     <>
-      <div className="">
+      <div className="scroll-mt-[90px]" ref={sectionRef}>
         {/* LEFT SIDE */}
         {/* <div className="w-full xl:w-1/2 bg-[url(/schools/prog-bg.webp)] bg-center bg-cover bg-no-repeat p-2.5 sm:p-5 z-10 rounded-3xl"> */}
         <div className="w-full xl:p-5 z-10 rounded-3xl">
@@ -126,14 +131,20 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
             value={degreeTabs.find((d) => d.value === activeDegree)?.tabValue}
           >
             {/* TAB HEADERS */}
-            <TabsList className="w-full flex-wrap gap-2.5 sm:gap-0 justify-center h-full p-2.5 mb-5 sticky top-[76px] bg-white rounded-none">
-              
+            <TabsList className="w-full grid grid-cols-2 sm:flex flex-wrap gap-2.5 sm:gap-0 justify-center h-full p-2.5 mb-5 sticky top-[60px] sm:top-[76px] bg-white rounded-none">
               {degreeTabs.map((deg) => (
                 <TabsTrigger
                   key={deg.tabValue}
                   value={deg.tabValue}
-                  onClick={() => handleDegreeChange(deg.value)}
-                  className="flex-none mx-2.5  py-2 px-10 rounded-xl  bg-[#f0f0f0] data-[state=active]:text-white  data-[state=active]:bg-[#0161b0]  text-black"
+                  onClick={() => {
+                    handleDegreeChange(deg.value);
+
+                    sectionRef.current?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                  }}
+                  className="flex-none mx-2.5 py-2 px-10 rounded-xl cursor-pointer  bg-[#f0f0f0] data-[state=active]:text-white  data-[state=active]:bg-[#0161b0] text-black"
                 >
                   {deg.label}
                 </TabsTrigger>
@@ -145,7 +156,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
               <TabsContent
                 key={deg.tabValue}
                 value={deg.tabValue}
-                className="grid md:grid-cols-2 2xl:grid-cols-3 items-center gap-5"
+                className={`${programs[deg.value]?.length > 2 ? "grid md:grid-cols-2 lg:grid-cols-3 gap-5" : "flex flex-wrap justify-center gap-5"} `}
               >
                 {programs[deg.value]?.length ? (
                   programs[deg.value].map((prog) => {
@@ -160,55 +171,64 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                         onClick={() => handleProgramClick(prog.id)}
                         onMouseEnter={() => handleMouseEnter(prog.id)}
                         onFocus={() => handleMouseEnter(prog.id)}
-                        className={`rounded-xl w-full bg-[#f0f7fc] h-full  font-semibold  p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] ${
+                        className={`${programs[deg.value]?.length > 2 ? "" : "max-w-[528px] min-h-[258px]"}  w-full rounded-xl bg-[#0a41a1] group hover:bg-[#001F3F] h-full  font-semibold p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] ${
                           isActive ? "" : " hover:text-black"
                         }`}
                       >
                         <Link
                           href={`/programs/${prog.programmeslug || "#"}`}
-                          className="block w-full text-[#002f56]"
+                          className="block w-full text-white text-xl"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           {prog.title} {prog.highlightitle}
                         </Link>
                         {criteria && (
-                          <div className="flex flex-col sm:flex-row gap-2.5">
-                            <div className="bg-white w-full sm:w-1/2 lg:w-1/3 flex flex-col gap-0.5 p-2.5 text-sm cursor-text">
-                              <span className="font-normal">Duration:</span>
-                              <span>{prog.criteria.Duration}</span>
-                            </div>
-                            <div className="bg-white w-full sm:w-1/2 xl:w-1/3 flex flex-col p-2.5 gap-0.5 text-sm cursor-text">
-                              <span className="font-normal">
-                                Programme Fee:
-                              </span>
+                          <div className="flex flex-col sm:flex-row  sm:gap-5">
+                            <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                               <span>
-                                Rs. {prog.criteria.programme_fee_per_year} /
-                                Year
+                                <IndianRupee />
                               </span>
+                              <div className="flex flex-col gap-0.5">
+                                <span className="font-normal">Duration:</span>
+                                <span>{prog.criteria.Duration}</span>
+                              </div>
                             </div>
-                            <div className="lg:w-1/3"></div>
+                            <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
+                              <span>
+                                <Calendar />
+                              </span>
+                              <div className="flex flex-col gap-0.5">
+                                <span className="font-normal">
+                                  Programme Fee:
+                                </span>
+                                <span>
+                                  Rs. {prog.criteria.programme_fee_per_year} /
+                                  Year
+                                </span>
+                              </div>
+                            </div>
                           </div>
                         )}
 
-                        <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center">
+                        <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center border-t border-[#395c6e] pt-2.5">
                           <button
-                            className="bg-white border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer hover:bg-black hover:text-white"
+                            className="border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer border-white text-white"
                             onClick={() => setShow(true)}
                           >
                             Fee Structure
                           </button>
                           <Link
-                            href={prog.criteria.eligibility_utm_links || '#'}
+                            href={prog.criteria.eligibility_utm_links || "#"}
                             target="_blank"
-                            className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer hover:bg-red-500 hover:text-white hover:border hover:border-red-500"
+                            className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-red-500 group-hover:text-white hover:border hover:border-red-500"
                           >
                             Apply Now
                           </Link>
                           <Link
                             href={`/programs/${prog.programmeslug || "#"}`}
                             target="_blank"
-                            className="text-black rounded-sm py-2.5 2xl:py-2.5 text-sm flex items-center gap-2"
+                            className="text-white rounded-sm py-2.5 2xl:py-2.5 text-sm flex items-center gap-2"
                           >
                             <CircleArrowRight /> View Programme
                           </Link>
@@ -288,7 +308,9 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
               </div>
 
               <div>
-                <p className="font-bold text-sm sm:text-base mb-2.5">Eligibility:</p>
+                <p className="font-bold text-sm sm:text-base mb-2.5">
+                  Eligibility:
+                </p>
                 <p className="text-xs sm:text-sm mb-5">
                   {criteria.eligibility_criteria || "Not available"}
                 </p>
