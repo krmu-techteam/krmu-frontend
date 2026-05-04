@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { STRAPI_URL } from "@/app/constant";
 import { SpecialisationCard } from "@/lib/types/school-programme";
 import Image from "next/image";
@@ -13,6 +16,8 @@ const Specialisation = ({
   highlightheading,
   specialisations,
 }: Props) => {
+  const [showAll, setShowAll] = useState(false);
+
   // Staging / Testing Image Overrides to avoid hitting live Strapi for test data
   const getSpecialisationImage = (title: string, currentUrl: string) => {
     const lowerTitle = title.toLowerCase();
@@ -39,6 +44,10 @@ const Specialisation = ({
     return currentUrl ? `${STRAPI_URL}${currentUrl}` : "/programmes/specialisation.webp";
   };
 
+  const displayedSpecialisations = showAll 
+    ? specialisations 
+    : specialisations?.slice(0, 4);
+
   return (
     <section className="prog-global-padding py-8 md:py-16 px-4 md:px-0">
       <div className="max-w-[1440px] mx-auto w-full">
@@ -47,56 +56,11 @@ const Specialisation = ({
             {heading}{" "}{highlightheading} 
           </h2>
         </div>
-        {/* Original structure (Commented out as requested): */}
-        {/* <div className="lg:flex mt-12 lg:gap-6">
-          <div className="w-full lg:w-1/2 sm:px-0 text-center">
-            <Image
-              src="/programmes/specialisation.webp"
-              width={636}
-              height={652}
-              alt={heading || ""}
-              className="w-full h-full"
-            />
-          </div>
-          <div className="w-full lg:w-1/2 lg:pl-[30px] mt-8 lg:mt-0 ">
-            <div className="lg:pl-[50px] flex flex-col justify-between gap-[30px] h-full">
-              {specialisations &&
-                specialisations.map((specialisation) => {
-                  return (
-                    <div
-                      key={specialisation?.id}
-                      className="prog_highlight_content_container"
-                    >
-                      <div className="prog_highlight_content_inner_container">
-                        <div className="prog_highlight_img">
-                          <Image
-                            width={111}
-                            height={80}
-                            src={`${STRAPI_URL}${specialisation?.specialisationimg?.url}`}
-                            alt={specialisation?.title}
-                          />
-                        </div>
-                        <div className="prog_highlight_content">
-                          <a
-                            href={specialisation?.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <h5 className="title">{specialisation?.title}</h5>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-            </div>
-          </div>
-        </div> */}
 
         {/* New Product Card Grid: */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
-          {specialisations &&
-            specialisations.map((specialisation) => {
+          {displayedSpecialisations &&
+            displayedSpecialisations.map((specialisation) => {
               const displayImage = getSpecialisationImage(
                 specialisation?.title || "",
                 specialisation?.specialisationimg?.url || ""
@@ -131,6 +95,17 @@ const Specialisation = ({
               );
             })}
         </div>
+
+        {specialisations && specialisations.length > 4 && (
+          <div className="mt-12 flex justify-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-8 py-3 bg-[#0a41a1] text-white rounded-md font-semibold hover:bg-[#0a41a1]/90 transition-all duration-300 shadow-md hover:shadow-xl"
+            >
+              {showAll ? "Show Less" : "Read More"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
