@@ -31,28 +31,27 @@ const ProgrammeScope = async ({
   return (
     <section className="bg-[#0a41a1] py-12 md:py-20">
       <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-6 lg:gap-24 px-4 sm:px-8 xl:px-4">
-        
         {/* Left column: Image */}
         <div className="w-full md:w-1/2">
-           <div className="relative aspect-[16/10] sm:aspect-video md:aspect-[4/3] w-full rounded-md overflow-hidden ">
-              {heroSection?.imgvideo === "Video" && isFormAvailable ? (
-                <div
-                  className="w-full h-full"
-                  dangerouslySetInnerHTML={{
-                    __html: heroSection?.videofield || "",
-                  }}
+          <div className="relative aspect-[16/10] sm:aspect-video md:aspect-[4/3] w-full rounded-md overflow-hidden ">
+            {heroSection?.imgvideo === "Video" && isFormAvailable ? (
+              <div
+                className="w-full h-full"
+                dangerouslySetInnerHTML={{
+                  __html: heroSection?.videofield || "",
+                }}
+              />
+            ) : (
+              scopeData?.scopeimg?.url && (
+                <Image
+                  fill
+                  src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
+                  className="object-cover z-10"
+                  alt="scope image"
                 />
-              ) : (
-                scopeData?.scopeimg?.url && (
-                  <Image
-                    fill
-                    src={`https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/program_scope_img_71b0352a8c.png`}
-                    className="object-cover"
-                    alt="programme scope"
-                  />
-                )
-              )}
-              {/* {scopeData?.scopeimg?.url && (
+              )
+            )}
+            {/* {scopeData?.scopeimg?.url && (
                 <Image
                   fill
                   src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
@@ -60,7 +59,7 @@ const ProgrammeScope = async ({
                   alt="scope image"
                 />
               )} */}
-           </div>
+          </div>
         </div>
 
         {/* Right column: Content */}
@@ -90,16 +89,16 @@ const ProgrammeScope = async ({
             (enable_disable_download_pros ? (
               <div className="flex items-center justify-center md:justify-start">
                 <CommonLeadPopup
-                buttonText={
-                  <span className="flex items-center gap-2">
-                    <Download className="w-5 h-5" />
-                    {scopeData.scopebtn.buttontext || "Download Prospectus"}
-                  </span>
-                }
-                buttonClassName="inline-block px-6 py-2.5 text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
-                redirectUrl={scopeData?.scopebtn?.buttonlink || "#"}
-                form_name="Download Prospectus"
-              />
+                  buttonText={
+                    <span className="flex items-center gap-2">
+                      <Download className="w-5 h-5" />
+                      {scopeData.scopebtn.buttontext || "Download Prospectus"}
+                    </span>
+                  }
+                  buttonClassName="inline-block px-6 py-2.5 text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
+                  redirectUrl={scopeData?.scopebtn?.buttonlink || "#"}
+                  form_name="Download Prospectus"
+                />
               </div>
             ) : (
               <Link
