@@ -62,6 +62,9 @@
     .mob_prog_form > .npf_wgts > iframe {
       height: 550px !important;
     }
+    .academic-leadership-image {
+      display: hidden;
+    }
   }
   .labFac_container p {
     margin-bottom: 20px !important;
