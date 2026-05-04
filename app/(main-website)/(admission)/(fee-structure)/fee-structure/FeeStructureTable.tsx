@@ -40,7 +40,7 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
             <Tabs defaultValue={tab.fee_structure_acc[0]?.id.toString()} className="w-full">
               <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
                 {/* Sidebar Navigation: School/Faculty List - Sticky on Desktop */}
-                <TabsList className="flex flex-row lg:flex-col h-auto w-full lg:w-[450px] bg-white border border-gray-200 rounded-none p-0 lg:sticky lg:top-32 shadow-sm overflow-x-auto lg:overflow-visible scrollbar-hide z-10">
+                <TabsList className="flex flex-row lg:flex-col h-auto w-full lg:w-[450px] bg-white border border-gray-200 rounded-none p-0 px-4 lg:px-0 lg:sticky lg:top-32 shadow-sm overflow-x-auto lg:overflow-visible scrollbar-hide z-10 justify-start items-center lg:items-stretch">
                   {tab.fee_structure_acc?.map((acc) => (
                     <TabsTrigger
                       key={acc.id}
