@@ -88,7 +88,7 @@ const page = async () => {
       <FeeStructureSearch />
       <FeeStructureTable feeStructTab={feeStructTab} />
       <FeeStructurePaymentProc />
-      <FeeStructureSaarc feeStructSAARC={feeStructSAARC} />
+      {/* <FeeStructureSaarc feeStructSAARC={feeStructSAARC} /> */}
     </>
   );
 };
