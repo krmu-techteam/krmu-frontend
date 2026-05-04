@@ -19,7 +19,7 @@ const ProgrammeHighlightCard = ({ title, desc, highlightimg }: Props) => {
               fill
               src={`${STRAPI_URL}${highlightimg?.url}`}
               alt={highlightimg?.alternativeText || "ba-hons-psychology-krmu"}
-              className="w-full object-cover"
+              className="w-full h-full object-contain"
             />
           )}
         </div>
