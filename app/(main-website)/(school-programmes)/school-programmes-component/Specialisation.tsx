@@ -94,7 +94,7 @@ const Specialisation = ({
         </div> */}
 
         {/* New Product Card Grid: */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
           {specialisations &&
             specialisations.map((specialisation) => {
               const displayImage = getSpecialisationImage(
@@ -107,12 +107,12 @@ const Specialisation = ({
                   key={specialisation?.id}
                   className="bg-white border border-gray-100 rounded-md shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden flex flex-col group h-full"
                 >
-                  <div className="relative aspect-[16/10] w-full overflow-hidden">
+                  <div className="relative w-full aspect-[17/14] bg-white flex items-center justify-center overflow-hidden border-b border-gray-50">
                     <Image
                       fill
                       src={displayImage}
                       alt={specialisation?.title}
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="object-contain group-hover:scale-105 transition-transform duration-700 p-1"
                     />
                   </div>
                   <div className="p-4 flex-1 flex flex-col items-center justify-center text-center bg-white z-10">

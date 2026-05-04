@@ -34,7 +34,7 @@ const HomeTestimonialCard = ({
       </div>
       <div>
         <p
-          className="my-5 text-lg"
+          className="my-5 text-lg text-justify sm:text-left"
           dangerouslySetInnerHTML={{
             __html: info,
           }}

@@ -33,20 +33,21 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 text-white mt-10">
             {counters.map((counter) => (
               <div key={counter.id} className="flex flex-col mb-5 ourtop-rec text-center lg:text-left">
-                <span className="text-white font-bold mb-[10px] text-lg sm:text-3xl xl:text-4xl">
+               
+                <span className="text-white font-bold mb-[10px] text-3xl xl:text-4xl ">
                   {counter.countertext}
                 </span>
-                <span className="text-xs font-semibold">
+                <span className="text-sm font-semibold">
                   {counter.countercontent}
                 </span>
               </div>
             ))}
           </div>
-          <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row sm:justify-center lg:justify-start xl:items-center gap-5 mt-5">
+          <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row sm:justify-center lg:justify-start xl:items-center gap-4 mt-5">
             {link1 || title1 ? (
               <Link
                 href={link1}
-                className="bg-white text-black  flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold"
+                className="bg-white text-black  flex justify-center items-center px-5 py-2 rounded-md gap-4 font-semibold"
                 target="_blank"
               >
                 <span className="text-xs sm:text-base">{title1}</span>

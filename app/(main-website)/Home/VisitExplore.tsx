@@ -22,15 +22,15 @@ const VisitExplore = ({
             {title1} <br /> <span className="text-[#034272]">{title2}</span>
           </h4>
 
-          <p className="mb-5 text-lg">{desc}</p>
-          <div className="flex flex-wrap gap-8 items-center justify-center">
+          <p className="mb-5 text-lg text-justify sm:text-center">{desc}</p>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center justify-center w-full max-w-[500px] sm:max-w-none mx-auto">
             {visitexplorebtns &&
               visitexplorebtns.map((btn) => {
                 return (
                   <Link
                     key={btn?.id}
                     href={btn?.buttonlink}
-                    className={`bg-[#034272] text-sm sm:text-base font-semibold border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 ${btn?.buttonclass}`}
+                    className={`bg-[#034272] text-sm sm:text-base font-semibold border-2 text-white flex justify-center items-center px-5 py-3 sm:py-1.5 rounded-md gap-4 w-full sm:w-auto min-h-[50px] sm:min-h-0 ${btn?.buttonclass}`}
                   >
                     {btn?.buttontext}
                   </Link>
