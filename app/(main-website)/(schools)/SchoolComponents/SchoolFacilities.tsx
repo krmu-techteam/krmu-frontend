@@ -74,11 +74,11 @@ const SchoolFacilities = ({ fac_slides }: Props) => {
 
           <CarouselPrevious
             className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px]
-           top-[115%] sm:top-[108%] xl:top-[110%] left-[20%] sm:left-[30%] xl:left-[45%]"
+           top-[118%] sm:top-[115%] md:top-[108%] xl:top-[110%] left-[20%] sm:left-[30%] xl:left-[46%]"
           />
           <CarouselNext
             className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px] 
-            top-[115%] sm:top-[108%]  xl:top-[110%] right-[20%] sm:right-[30%] xl:right-[45%]"
+            top-[118%] sm:top-[115%] md:top-[108%]  xl:top-[110%] right-[20%] sm:right-[30%] xl:right-[46%]"
           />
         </Carousel>
       </div>

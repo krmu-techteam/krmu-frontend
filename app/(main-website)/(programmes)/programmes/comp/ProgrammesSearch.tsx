@@ -2,9 +2,11 @@
 
 import {
   ArrowRight,
+  Calendar,
   ChevronDown,
   ChevronRight,
   CircleArrowRight,
+  IndianRupee,
   Search,
   X,
 } from "lucide-react";
@@ -477,28 +479,37 @@ const ProgrammesSearch = () => {
                 return (
                   <div
                     key={item.id}
-                    className="rounded-xl w-full bg-[#f0f7fc]  font-semibold  p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] min-h-60 h-full"
+                    className="group max-w-[458px] min-h-[200px] w-full rounded-xl bg-[#0a41a1] group hover:bg-[#001F3F] h-full  font-semibold p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  hover:text-black"
                   >
                     {" "}
                     <Link href={`/programs/${slug}`} target="_blank">
-                      <h6 className="block w-full text-[#002f56]">
+                      <h6 className="block w-full text-white">
                         {"title" in item ? item.title : item.heading}
                       </h6>
                     </Link>
-                    <div className="flex flex-col sm:flex-row gap-2.5">
-                      <div className="bg-white w-full sm:w-1/2 lg:w-1/4 flex flex-col gap-0.5 p-2.5 text-sm cursor-text">
-                        <span className="font-normal">Duration:</span>
-                        <span>{item.criteria?.Duration}</span>
-                      </div>
-                      <div className="bg-white w-full sm:w-1/2 xl:w-2/4 flex flex-col p-2.5 gap-0.5 text-sm cursor-text">
-                        <span className="font-normal">Programme Fee:</span>
+                    <div className="flex flex-col sm:flex-row  sm:gap-5">
+                      <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                          Rs. {item.criteria?.programme_fee_per_year} / Year
+                          <IndianRupee />
                         </span>
+                        <div className="flex flex-col gap-0.5">
+                          <span className="font-normal">Duration:</span>
+                          <span>{item.criteria?.Duration}</span>
+                        </div>
                       </div>
-                      <div className="lg:w-1/4"></div>
+                      <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
+                        <span>
+                          <Calendar />
+                        </span>
+                        <div className="flex flex-col gap-0.5">
+                          <span className="font-normal">Programme Fee:</span>
+                          <span>
+                            Rs. {item.criteria?.programme_fee_per_year} / Year
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center">
+                    <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center border-t border-[#395c6e] pt-2.5">
                       <button
                         // href={item.criteria.eligibility_utm_links}
                         // target="_blank"
@@ -507,7 +518,7 @@ const ProgrammesSearch = () => {
                           setIsPopupOpen(true);
                           setSlug(slug);
                         }}
-                        className="bg-white border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer hover:bg-black hover:text-white"
+                        className="border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer border-white text-white"
                       >
                         Fee Structure
                       </button>
@@ -515,7 +526,7 @@ const ProgrammesSearch = () => {
                         <Link
                           href={item.criteria.eligibility_utm_links}
                           target="_blank"
-                          className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer hover:bg-red-500 hover:text-white hover:border hover:border-red-500"
+                          className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-red-500 group-hover:text-white hover:border hover:border-red-500"
                         >
                           Apply Now
                         </Link>
@@ -536,7 +547,7 @@ const ProgrammesSearch = () => {
                         href={`${slug.includes("zenithschool.ai") ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slug}`}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-black rounded-sm py-2.5 2xl:py-2.5 text-sm flex items-center gap-2"
+                        className="text-white rounded-sm py-2.5 2xl:py-2.5 text-sm flex items-center gap-2"
                       >
                         <CircleArrowRight /> <span>View Programme</span>
                       </Link>

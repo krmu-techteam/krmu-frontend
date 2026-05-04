@@ -15,6 +15,20 @@
 
 /* Custom utility class */
 @layer utilities {
+     @media (min-width: 640px) {
+    .schoolBanner {
+      background: none;
+    }
+  }
+  @media (max-width: 640px) {
+    .schoolBanner {
+      
+      background-size: 310%;
+      background-position: center 0;
+      background-repeat: no-repeat;
+    }
+ 
+  }
   .heroBannerForm__form {
     background: #fff;
     width: 100%;

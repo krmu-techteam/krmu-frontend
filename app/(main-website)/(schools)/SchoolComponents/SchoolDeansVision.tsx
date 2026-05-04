@@ -26,7 +26,7 @@ const SchoolDeansVision = ({
 }: Props) => {
   return (
     <section
-      className="py-20 px-4 bg-[#051630]"
+      className="py-10 sm:py-20 px-4 bg-[#051630]"
       // style={{
       //   background:
       //     "linear-gradient(95deg,#051630 2.69%,#0060aa 65.94%,#e31e24 97.54%)",
@@ -45,7 +45,7 @@ const SchoolDeansVision = ({
             backdropFilter: "blur(13.410955429077px)",
           }}
         >
-          <div className="xl:w-1/3 flex justify-center xl:block">
+          <div className="xl:w-3/12 flex justify-center xl:block">
             <Image
               src={`${STRAPI_URL}${deanImgUrl}`}
               width={358}
@@ -54,7 +54,7 @@ const SchoolDeansVision = ({
               className="rounded-[25px] object-cover shadow-xl"
             />
           </div>
-          <div className="xl:w-4/6 p-5 sm:px-10 sm:pb-10 xl:p-[50px] text-white dean_heading_h3 flex flex-col items-center xl:items-start text-center xl:text-left">
+          <div className="xl:w-9/12 text-white dean_heading_h3 flex flex-col items-center xl:items-start text-center xl:text-left">
             {/* Mobile View: Name and Designation directly below image */}
             <div className="xl:hidden mb-6">
               <p className="text-2xl md:text-[32px] font-bold mb-1">

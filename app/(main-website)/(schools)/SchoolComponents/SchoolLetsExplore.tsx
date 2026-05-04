@@ -13,7 +13,7 @@ type Props = {
 const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
   return (
     <section
-      className="bg-[#051630]"
+      className="bg-[#051630] pt-10 pb-20"
       // style={{
       //   backgroundImage: "linear-gradient(180deg,#051630 0%,#004e8a 100%)",
       // }}
@@ -24,7 +24,7 @@ const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
             Let’s explore what makes KRMU’s SOET better than that of other
             universities
           </h4> */}
-          <div className="mb-5 md:mb-0 text-2xl md:text-3xl lg:text-5xl font-semibold leading-[1.3] lg:mx-8 xl:mx-12">
+          <div className="mb-5 md:mb-0 text-2xl md:text-3xl lg:text-5xl font-semibold leading-[1.3] lg:mx-8 xl:mx-12 exploreLetsMob">
             {content && <BlocksRenderer content={content} />}
           </div>
         </div>

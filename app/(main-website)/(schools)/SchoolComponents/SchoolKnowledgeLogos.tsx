@@ -14,7 +14,7 @@ type Props = {
 };
 const SchoolKnowledgeLogos = ({ logos }: Props) => {
   return (
-    <div className="bg-white  px-5 rounded-[20px]">
+    <div className="px-5 rounded-[20px]">
       <Carousel
         opts={{
           align: "start",
@@ -26,13 +26,13 @@ const SchoolKnowledgeLogos = ({ logos }: Props) => {
           }),
         ]}
       >
-        <CarouselContent className="items-center justify-between">
+        <CarouselContent className="items-center justify-between max-w-6xl mx-auto gap-2">
           {logos &&
             logos.map((logo) => {
               return (
                 <CarouselItem
                   key={logo?.id}
-                  className="basis-1/2 sm:basis-1/3 lg:basis-1/5 flex justify-center items-center"
+                  className="sm:basis-1/2 lg:basis-1/5 flex justify-center items-center pl-0 bg-white rounded-md text-center"
                 >
                   <div>
                     <Image
