@@ -150,7 +150,7 @@ const Admission2Process = () => {
     <section className="prog-global-padding bg-[#f9f9f9]">
       <div className="common-prog-container">
         <h2 className="heading">
-          Admission <span className="prog-highlight-text">Process</span>
+          Admission Process
         </h2>
         <p className="sub-heading">
           Commence your Journey in just 6 simple steps

@@ -59,10 +59,8 @@ const Admission2Hero = () => {
         </div>
         <div className="hidden sm:block lg:w-1/2">
           <h1 className="text-[#0060aa] text-3xl md:text-5xl lg:text-[60px] leading-[1.2] font-semibold">
-            Step Into A Successful Future{" "}
-            <span className="text-[#e61f21]">
-              With K.R. Mangalam University
-            </span>
+            Step Into A Successful Future With K.R. Mangalam University
+               
           </h1>
 
           <p className="font-semibold mt-6 mb-4">

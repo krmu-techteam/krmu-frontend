@@ -8,7 +8,7 @@ type Props = {
 
 const FeeStructureTable = ({ feeStructTab }: Props) => {
   return (
-    <div className="py-8 md:py-16 max-w-[1664px] mx-auto w-full px-3 sm:px-6 overflow-hidden">
+    <div className="py-8 md:py-16 max-w-[1664px] mx-auto w-full px-3 sm:px-6">
       <Tabs
         defaultValue={feeStructTab[0]?.id?.toString()}
         className="mx-auto w-full"
@@ -39,8 +39,8 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
           >
             <Tabs defaultValue={tab.fee_structure_acc[0]?.id.toString()} className="w-full">
               <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-                {/* Sidebar Navigation: School/Faculty List - Swipeable Slider on Mobile */}
-                <TabsList className="flex flex-row lg:flex-col h-auto w-full lg:w-[450px] bg-white border border-gray-200 rounded-none p-0 sticky top-24 shadow-sm overflow-x-auto lg:overflow-visible scrollbar-hide">
+                {/* Sidebar Navigation: School/Faculty List - Sticky on Desktop */}
+                <TabsList className="flex flex-row lg:flex-col h-auto w-full lg:w-[450px] bg-white border border-gray-200 rounded-none p-0 lg:sticky lg:top-32 shadow-sm overflow-x-auto lg:overflow-visible scrollbar-hide z-10">
                   {tab.fee_structure_acc?.map((acc) => (
                     <TabsTrigger
                       key={acc.id}
@@ -60,7 +60,7 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
                 </TabsList>
 
                 {/* Main Content: Fee Tables */}
-                <div className="flex-grow w-full min-w-0 bg-white p-4 md:p-8 border border-gray-100 shadow-sm rounded-sm">
+                <div className="flex-grow w-full min-w-0 bg-white p-4 md:p-6 border border-gray-100 shadow-sm rounded-sm">
                   {tab.fee_structure_acc?.map((acc) => (
                     <TabsContent
                       key={acc.id}

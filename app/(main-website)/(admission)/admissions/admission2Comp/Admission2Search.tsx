@@ -333,46 +333,40 @@ const Admission2Search = () => {
   });
 
   return (
-    <section className="pt-40 pb-[50px] px-4 bg-[#f9f9f9] temp-class">
+    <section className="px-4 bg-[#f9f9f9] temp-class py-8 md:py-16">
          <div className="max-w-[600px] mx-auto w-full">
         <div>
-          <h1 className="text-3xl md:text-[40px] font-semibold text-center mb-5 leading-[1.2] text-[#0a41a1]">
-            Transform your Life{" "}
-            <span className="text-[#e61f21]">with the Right Programme</span>
+          <h1 className="text-3xl md:text-[40px] font-bold text-center mb-5 leading-[1.2] text-black">
+            Transform your Life with the Right Programme
           </h1>
         </div>
       </div>
 
-      <div className="max-w-[1320px] mx-auto w-full">
+      <div className="max-w-[1440px] mx-auto w-full mt-12">
         {/* FILTER BOX */}
-        <div className="bg-white rounded-[10px]">
-          <div className="py-2.5 px-5 flex flex-col lg:flex-row items-center gap-5">
+        <div className="bg-white rounded-xl shadow-[0_15px_50px_rgba(0,0,0,0.08)] border border-gray-100">
+          <div className="flex flex-col lg:flex-row items-center divide-y lg:divide-y-0 lg:divide-x divide-gray-100">
             {/* SCHOOL DROPDOWN */}
-            <div className="lg:w-1/4 relative" ref={schoolRef}>
+            <div className="w-full lg:w-[35%] relative group rounded-l-xl" ref={schoolRef}>
               <div
-                className="flex items-center justify-between gap-2.5 cursor-pointer"
+                className="flex items-center justify-between px-8 py-4 cursor-pointer hover:bg-gray-50 transition-colors rounded-l-xl"
                 onClick={() => {
                   setOpenSchoolDropdown(!openSchoolDropdown);
                   setOpenDegreeDropdown(false);
                 }}
               >
-                <span className="text-lg font-semibold">
+                <span className="text-[15px] font-medium text-gray-800 truncate">
                   {selectedSchool === ZENITH_SLUG
                     ? "Zenith School of AI"
                     : allSchools.find(
                         (s) => s.school_category.slug === selectedSchool,
                       )?.schoolname || "Select School"}
                 </span>
-                {/* <span className="text-lg font-semibold">
-                  {allSchools.find(
-                    (s) => s.school_category.slug === selectedSchool,
-                  )?.schoolname || "Select School"}
-                </span> */}
-                <ChevronDown color="#e61f21" />
+                <ChevronDown className="w-4 h-4 text-[#e61f21] flex-shrink-0" />
               </div>
 
               {openSchoolDropdown && (
-                <div className="pb-2 absolute left-0 top-10 bg-white w-full rounded-[5px] border border-[#0000002d] z-10">
+                <div className="absolute left-0 top-full mt-2 bg-white w-full max-h-[300px] overflow-y-auto rounded-2xl shadow-2xl border border-gray-100 z-50 py-2 scrollbar-hide">
                   <ul>
                     {sortedSchools.map((school) => (
                       <li
@@ -382,10 +376,10 @@ const Admission2Search = () => {
                           setSearchQuery("");
                           setOpenSchoolDropdown(false);
                         }}
-                        className={`py-2 px-3 cursor-pointer hover:bg-[#f0f0f0] ${
+                        className={`py-2.5 px-6 text-sm cursor-pointer hover:bg-gray-50 transition-colors ${
                           selectedSchool === school.school_category.slug
-                            ? "bg-[#f0f0f0] font-semibold"
-                            : ""
+                            ? "bg-blue-50 text-[#0a41a1] font-semibold"
+                            : "text-gray-700"
                         }`}
                       >
                         {school.schoolname}
@@ -397,36 +391,36 @@ const Admission2Search = () => {
             </div>
 
             {/* DEGREE DROPDOWN */}
-            <div className="lg:w-1/4 relative" ref={degreeRef}>
+            <div className="w-full lg:w-[30%] relative group" ref={degreeRef}>
               <div
-                className="flex items-center justify-between gap-2.5 cursor-pointer"
+                className="flex items-center justify-between px-8 py-4 cursor-pointer hover:bg-gray-50 transition-colors"
                 onClick={() => {
                   setOpenDegreeDropdown(!openDegreeDropdown);
                   setOpenSchoolDropdown(false);
                 }}
               >
-                <span className="text-lg font-semibold">
+                <span className="text-[15px] font-medium text-gray-800 truncate">
                   {allDegrees.find((d) => d.slug === selectedDegree)?.name ||
                     "Select Programme Level"}
                 </span>
-                <ChevronDown color="#e61f21" />
+                <ChevronDown className="w-4 h-4 text-[#e61f21] flex-shrink-0" />
               </div>
 
               {openDegreeDropdown && (
-                <div className="py-2 absolute left-0 top-10 bg-white w-full rounded-[5px] border border-[#0000002d] z-10">
+                <div className="absolute left-0 top-full mt-2 bg-white w-full rounded-2xl shadow-2xl border border-gray-100 z-50 py-2">
                   <ul>
                     {allDegrees.map((degree) => (
                       <li
                         key={degree.id}
                         onClick={() => {
                           setSelectedDegree(degree.slug);
-                          setSearchQuery(""); // clear search
+                          setSearchQuery("");
                           setOpenDegreeDropdown(false);
                         }}
-                        className={`py-2 px-3 cursor-pointer hover:bg-[#f0f0f0] ${
+                        className={`py-2.5 px-6 text-sm cursor-pointer hover:bg-gray-50 transition-colors ${
                           selectedDegree === degree.slug
-                            ? "bg-[#f0f0f0] font-semibold"
-                            : ""
+                            ? "bg-blue-50 text-[#0a41a1] font-semibold"
+                            : "text-gray-700"
                         }`}
                       >
                         {degree.name}
@@ -438,17 +432,16 @@ const Admission2Search = () => {
             </div>
 
             {/* SEARCH INPUT */}
-            <div className="lg:w-2/4">
-              <div className="flex">
+            <div className="w-full lg:w-[35%] bg-white rounded-r-xl">
+              <div className="flex items-center px-8 py-4 rounded-r-xl">
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  id="default-search"
-                  className="block w-full bg-transparent text-lg font-semibold placeholder:text-base"
+                  className="block w-full bg-transparent text-[15px] font-medium text-gray-800 placeholder:text-gray-400 focus:outline-none border-none p-0"
                   placeholder="Search by Programme Name…"
                 />
-                <Search className="text-[#e61f21]" />
+                <Search className="w-5 h-5 text-[#e61f21] flex-shrink-0 ml-2" />
               </div>
             </div>
           </div>
