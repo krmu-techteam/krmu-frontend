@@ -28,6 +28,7 @@ import { STRAPI_URL } from "@/app/constant";
 import { getSchoolSEO } from "@/lib/api/website-seo";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import SchoolAdvantages2 from "../SchoolComponents/SchoolDesign2/SchoolAdvantages2";
+import SchoolOpenSourceMentorship from "../SchoolComponents/SchoolDesign2/SchoolOpenSourceMentorship";
 import SchoolExcitedNewsletter from "../SchoolComponents/SchoolDesign2/SchoolExcitedNewsletter";
 import {
   sbasLogos,
@@ -287,6 +288,9 @@ export default async function Page({ params }: Props) {
           school_advantage={school?.school_advantage?.advantage_content}
         />
       )}
+      {slug === "school-of-engineering-and-technology" && (
+        <SchoolOpenSourceMentorship />
+      )}
       {/* {school?.induscollabtitle &&
         Array.isArray(school?.collabcards) &&
         school.collabcards.length > 0 && (
@@ -295,6 +299,7 @@ export default async function Page({ params }: Props) {
             collabCards={school.collabcards}
           />
         )} */}
+
       {school?.letsexplorecontent && (
         <SchoolLetsExplore
           content={school?.letsexplorecontent}
