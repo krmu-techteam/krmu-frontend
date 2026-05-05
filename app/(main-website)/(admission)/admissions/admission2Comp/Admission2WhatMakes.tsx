@@ -7,31 +7,36 @@ import { useState } from "react";
 const cards = [
   {
     title: "State of the Art Infrastructure",
-    description: "Modern Labs, Well-Equipped Library, Smart Classrooms, 35+ Acres of Lush Green Campus, Artistic & Modern Infrastructure",
+    description:
+      "Modern Labs, Well-Equipped Library, Smart Classrooms, 35+ Acres of Lush Green Campus, Artistic & Modern Infrastructure",
     image: "/admission2/sai.png",
     alt: "Infrastructure",
   },
   {
     title: "Global Exposure and Partnerships",
-    description: "Collaboration with Esteemed Learning Partners, Partnership with International Universities, International Study Tours, Seminars and Workshops with International Speakers",
+    description:
+      "Collaboration with Esteemed Learning Partners, Partnership with International Universities, International Study Tours, Seminars and Workshops with International Speakers",
     image: "/admission2/gep.png",
     alt: "Global Exposure",
   },
   {
     title: "Multidisciplinary Approach",
-    description: "Specially Curated Programmes for Holistic Learning, Theory Blended with Practical Learning, Experienced Mentors, Industry Relevant Curriculum",
+    description:
+      "Specially Curated Programmes for Holistic Learning, Theory Blended with Practical Learning, Experienced Mentors, Industry Relevant Curriculum",
     image: "/admission2/ma.png",
     alt: "Approach",
   },
   {
     title: "Campus Life",
-    description: "A sprawling, eco-friendly campus inspiring creativity, State-of-the-art sports facilities, fitness centres, and recreational zones, On-campus dining options with a variety of cuisines to suit every taste",
+    description:
+      "A sprawling, eco-friendly campus inspiring creativity, State-of-the-art sports facilities, fitness centres, and recreational zones, On-campus dining options with a variety of cuisines to suit every taste",
     image: "/admission2/cl.png",
     alt: "Campus Life",
   },
   {
     title: "Placements and Career Support",
-    description: "Over 800 On-Campus Recruiters, 100% Placement Assistance, Placement Interview Training, Internship Opportunities",
+    description:
+      "Over 800 On-Campus Recruiters, 100% Placement Assistance, Placement Interview Training, Internship Opportunities",
     image: "/wp-content/images/pc-support.png",
     alt: "Placements",
   },
@@ -46,7 +51,8 @@ const Admission2WhatMakes = () => {
     <section className="py-8 md:py-16 px-4 md:px-0">
       <div className="max-w-[1440px] mx-auto w-full md:px-48">
         <h3 className="mb-5 text-2xl md:text-[40px] font-bold text-black text-center leading-[1.2]">
-          What Makes K.R. Mangalam <br className="hidden md:block" /> University The Best?
+          What Makes K.R. Mangalam <br className="hidden md:block" /> University
+          The Best?
         </h3>
         <p className="font-medium text-center text-gray-600 max-w-4xl mx-auto">
           K.R. Mangalam University has established itself as the pinnacle of
@@ -56,16 +62,17 @@ const Admission2WhatMakes = () => {
           this ever-evolving world.
         </p>
       </div>
-<div className="flex items-center justify-center pt-5">
-  <Link
-            href="/campus-life/virtual-tour"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex items-center  justify-center gap-2 bg-[#0060aa] text-white px-8 py-3 rounded-sm md:rounded-full font-medium border border-transparent hover:bg-white hover:text-[#0060aa] hover:border-[#0060aa] transition-all duration-300 shadow-md hover:shadow-xl active:scale-95"
-          >
-            Explore our Campus <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-</div>
+      <div className="flex items-center justify-center pt-5">
+        <Link
+          href="/campus-life/virtual-tour"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center  justify-center gap-2 bg-[#0060aa] text-white px-8 py-3 rounded-sm md:rounded-full font-medium border border-transparent hover:bg-white hover:text-[#0060aa] hover:border-[#0060aa] transition-all duration-300 shadow-md hover:shadow-xl active:scale-95"
+        >
+          Explore our Campus{" "}
+          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </div>
       <div className="max-w-[1440px] mx-auto w-full mt-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6">
           {visibleCards.map((card, index) => (
@@ -73,11 +80,11 @@ const Admission2WhatMakes = () => {
               key={index}
               className="flex items-stretch md:items-center gap-0 bg-white rounded-sm md:rounded-md border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full"
             >
-              <div className="relative w-[110px] flex-shrink-0 overflow-hidden min-h-[110px] md:h-[140px]">
+              <div className="relative w-[110px] md:w-[120px] flex-shrink-0 overflow-hidden min-h-[130px] md:h-[140px] ">
                 <Image
                   src={card.image}
                   fill
-                  className="object-cover md:object-contain"
+                  className="object-cover w-full md:object-cover "
                   alt={card.alt}
                 />
               </div>
@@ -85,8 +92,8 @@ const Admission2WhatMakes = () => {
                 <h5 className="text-md md:text-xl font-bold text-[#0060aa] mb-1 leading-tight">
                   {card.title}
                 </h5>
-                <p 
-                  className="text-[14px] md:text-[15px] text-gray-600 leading-snug line-clamp-2 md:line-clamp-none" 
+                <p
+                  className="text-[14px] md:text-[15px] text-gray-600 leading-snug line-clamp-2 md:line-clamp-none"
                   title={card.description}
                 >
                   {card.description}
@@ -110,8 +117,6 @@ const Admission2WhatMakes = () => {
               )}
             </button>
           )}
-
-           
         </div>
       </div>
     </section>
@@ -119,4 +124,3 @@ const Admission2WhatMakes = () => {
 };
 
 export default Admission2WhatMakes;
-

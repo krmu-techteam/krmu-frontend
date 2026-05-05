@@ -77,8 +77,8 @@ const Footer = async () => {
               </div>
             )}
           </div>
-          <div className="w-full  xl:w-1/4 break-all">
-            <div className="xl:mx-7 break-all">
+          <div className="w-full  xl:w-1/4 ">
+            <div className="xl:mx-7 ">
               {footerComp2 && (
                 <>
                   <h6 className="text-2xl font-bold pb-2.5  w-1/2 text-white mt-5 md:mt-2.5">
@@ -87,10 +87,7 @@ const Footer = async () => {
                   <ul className="text-white mb-5">
                     {footerComp2?.footer_menu?.map((comp2) => {
                       return (
-                        <li
-                          key={comp2?.id}
-                          className="pb-1.5"
-                        >
+                        <li key={comp2?.id} className="pb-1.5 ">
                           <Link
                             href={comp2?.url || "#"}
                             className="leading-[27.2px] text-base flex items-baseline justify-between"
@@ -121,10 +118,7 @@ const Footer = async () => {
                   <ul className="text-white mb-5">
                     {footerComp3?.footer_menu?.map((comp3) => {
                       return (
-                        <li
-                          key={comp3?.id}
-                          className="pb-1.5"
-                        >
+                        <li key={comp3?.id} className="pb-1.5">
                           <Link
                             href={comp3?.url || "#"}
                             className="leading-[27.2px] text-base flex items-baseline justify-between"
