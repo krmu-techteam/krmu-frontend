@@ -191,7 +191,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                               </span>
                               <div className="flex flex-col gap-0.5">
                                 <span className="font-normal">Duration:</span>
-                                <span>{prog.criteria.Duration}</span>
+                                <span>{prog.criteria?.Duration}</span>
                               </div>
                             </div>
                             <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
@@ -204,7 +204,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                                   Programme Fee:
                                 </span>
                                 <span>
-                                  Rs. {prog.criteria.programme_fee_per_year} /
+                                  Rs. {prog.criteria?.programme_fee_per_year} /
                                   Year
                                 </span>
                               </div>
@@ -219,13 +219,15 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                           >
                             Fee Structure
                           </button>
-                          <Link
-                            href={prog.criteria.eligibility_utm_links || "#"}
-                            target="_blank"
-                            className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-red-500 group-hover:text-white hover:border hover:border-red-500"
-                          >
-                            Apply Now
-                          </Link>
+                          {prog.criteria?.eligibility_utm_links && (
+                            <Link
+                              href={prog.criteria.eligibility_utm_links}
+                              target="_blank"
+                              className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-red-500 group-hover:text-white hover:border hover:border-red-500"
+                            >
+                              Apply Now
+                            </Link>
+                          )}
                           <Link
                             href={`/programs/${prog.programmeslug || "#"}`}
                             target="_blank"

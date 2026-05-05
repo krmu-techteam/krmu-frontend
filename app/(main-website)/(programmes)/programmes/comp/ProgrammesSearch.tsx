@@ -22,7 +22,8 @@ import {
   searchPhdProgrammes,
 } from "../../programmesApi/api";
 
-function normalize(text: string) {
+function normalize(text: string | null | undefined) {
+  if (!text) return "";
   return text.toLowerCase().replace(/[\.\s]/g, "");
 }
 
@@ -472,7 +473,8 @@ const ProgrammesSearch = () => {
             ) : (
               programmes.map((item) => {
                 const slug =
-                  "programmeslug" in item ? item.programmeslug : item.phdslug;
+                  ("programmeslug" in item ? item.programmeslug : item.phdslug) ||
+                  "";
 
                 const isExternal = slug.startsWith("http");
 
@@ -523,7 +525,7 @@ const ProgrammesSearch = () => {
                       >
                         Fee Structure
                       </button>
-                      {!slug.includes("zenithschool.ai") &&
+                      {!(slug || "").includes("zenithschool.ai") &&
                         item.criteria?.eligibility_utm_links && (
                           <Link
                             href={item.criteria.eligibility_utm_links}
