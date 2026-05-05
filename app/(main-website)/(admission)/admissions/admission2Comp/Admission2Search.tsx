@@ -22,8 +22,8 @@ import {
   searchPhdProgrammes,
 } from "@/app/(main-website)/(programmes)/programmesApi/api";
 
-function normalize(text: string) {
-  return text.toLowerCase().replace(/[\.\s]/g, "");
+function normalize(text: string | null | undefined) {
+  return (text || "").toLowerCase().replace(/[\.\s]/g, "");
 }
 
 import Image from "next/image";
@@ -473,7 +473,8 @@ const Admission2Search = () => {
             ) : (
               programmes.map((item) => {
                 const slug =
-                  "programmeslug" in item ? item.programmeslug : item.phdslug;
+                  ("programmeslug" in item ? item.programmeslug : item.phdslug) ||
+                  "";
 
                 const isExternal = slug.startsWith("http");
 
@@ -491,7 +492,7 @@ const Admission2Search = () => {
                     <div className="flex flex-col sm:flex-row  sm:gap-5">
                       <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                          <IndianRupee />
+                           <Calendar />
                         </span>
                         <div className="flex flex-col gap-0.5">
                           <span className="font-normal">Duration:</span>
@@ -500,7 +501,8 @@ const Admission2Search = () => {
                       </div>
                       <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                          <Calendar />
+                         
+                          <IndianRupee />
                         </span>
                         <div className="flex flex-col gap-0.5">
                           <span className="font-normal">Programme Fee:</span>
@@ -523,15 +525,16 @@ const Admission2Search = () => {
                       >
                         Fee Structure
                       </button>
-                      {!slug.includes("zenithschool.ai") && (
-                        <Link
-                          href={item.criteria.eligibility_utm_links}
-                          target="_blank"
-                          className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-red-500 group-hover:text-white hover:border hover:border-red-500"
-                        >
-                          Apply Now
-                        </Link>
-                      )}
+                      {!(slug || "").includes("zenithschool.ai") &&
+                        item.criteria?.eligibility_utm_links && (
+                          <Link
+                            href={item.criteria.eligibility_utm_links}
+                            target="_blank"
+                            className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-red-500 group-hover:text-white hover:border hover:border-red-500"
+                          >
+                            Apply Now
+                          </Link>
+                        )}
 
                       {/* {isExternal ? (
                         <Link
@@ -545,7 +548,7 @@ const Admission2Search = () => {
                       ) : ( */}
 
                       <Link
-                        href={`${slug.includes("zenithschool.ai") ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slug}`}`}
+                        href={`${(slug || "").includes("zenithschool.ai") ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slug}`}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white rounded-sm py-2.5 2xl:py-2.5 text-sm flex items-center gap-2"
@@ -711,9 +714,9 @@ const Admission2Search = () => {
             >
               Know More
             </Link>
-            {!isZenithPopup && (
+            {!isZenithPopup && selectedProgramme?.criteria?.eligibility_utm_links && (
               <Link
-                href={selectedProgramme?.criteria?.eligibility_utm_links || "#"}
+                href={selectedProgramme.criteria.eligibility_utm_links}
                 className="bg-red-500 text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
                 target="_blank"
                 rel="noopener noreferrer"
