@@ -260,7 +260,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
           }}
         >
           <span
-            className="absolute right-5 top-5  inline-block z-50"
+            className="absolute right-5 top-5  inline-block z-50 cursor-pointer"
             onClick={() => setShow((prev) => !prev)}
           >
             <X />

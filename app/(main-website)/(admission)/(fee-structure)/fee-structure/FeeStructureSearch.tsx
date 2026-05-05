@@ -23,8 +23,10 @@ const FeeStructureSearch = () => {
       setLoading(true);
       try {
         const data = await getAllProgramme("");
+        const normalizedQuery = normalize(query);
         const filtered = data.filter((item) =>
-          normalize(item.title).includes(normalize(query))
+          normalize(item.title).includes(normalizedQuery) ||
+          normalize(item.programmeslug).includes(normalizedQuery)
         );
         setProgrammes(filtered);
       } catch (err) {
@@ -42,7 +44,7 @@ const FeeStructureSearch = () => {
       <div className="max-w-[750px] mx-auto w-full relative">
         {/* Input Search Container */}
         <div className="relative group">
-          <div className="absolute left-6 top-1/2 -translate-y-1/2 text-[#0062aa] group-focus-within:scale-110 transition-transform duration-300">
+          <div className="absolute left-6 top-1/2 -translate-y-1/2 text-[#0062aa]">
             <Search className="w-5 h-5 stroke-[2.5]" />
           </div>
           <input
@@ -50,7 +52,7 @@ const FeeStructureSearch = () => {
             placeholder="Search for a program (e.g. B.Tech, MBA)"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full h-13 pl-16 pr-8 text-[17px] text-gray-800 bg-white border border-gray-200 rounded-sm shadow-[0_10px_35px_rgba(0,0,0,0.05)] focus:border-[#0062aa] focus:ring-8 focus:ring-[#0062aa]/5 transition-all duration-300 outline-none placeholder:text-gray-400 font-medium"
+            className="w-full h-14 pl-16 pr-8 text-[17px] text-gray-800 bg-white border-2 border-gray-100 rounded-sm focus:border-[#0062aa] transition-all duration-300 outline-none placeholder:text-gray-400 font-medium shadow-sm"
           />
         </div>
 

@@ -32,8 +32,8 @@ const SchoolHero = ({
         className={`pt-[150px] sm:pb-20 relative ${
           fullWidth
             ? "lg:py-[20%] lg:pb-[5%] pt-[300px] pb-5"
-            : "lg:pt-[10%] lg:pb-[5%] pt-[455px] px-0 schoolBanner"
-        } bg-cover bg-no-repeat bg-center sm:px-4`}
+            : "lg:pt-[10%] lg:pb-[5%] pt-[300px] px-0 schoolBanner"
+        } bg-cover bg-no-repeat bg-center sm:px-4 bg-[#034272]`}
         style={{ backgroundImage: `url(${STRAPI_URL}${herobanner?.url})` }}
       >
         <div className="hidden sm:block">
@@ -49,7 +49,7 @@ const SchoolHero = ({
           )}
         </div>
         {fullWidth ? (
-          <div className="max-w-[1664px] mx-auto w-full px-5">
+          <div className="max-w-[1664px] mx-auto w-full px-5 relative z-10">
             <div className="text-center text-white w-full">
               <p className="text-sm md:text-[28px] lg:mb-5 font-medium text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
                 {subheading}
@@ -87,21 +87,21 @@ const SchoolHero = ({
             </div>
           </div>
         ) : (
-          <div className="max-w-[1850px] mx-auto w-full xl:flex items-center justify-between test bg-[#034272] p-5 -mt-[107px] sm:p-0 sm:-mt-0 sm:bg-transparent">
+          <div className="max-w-[1850px] mx-auto w-full xl:flex items-center justify-between p-5 sm:p-0 relative z-10 bg-transparent">
             <div className="text-center text-white w-full xl:w-1/2 xl:pr-52">
-              <p className="text-sm md:text-[28px] lg:mb-5 font-medium">
+              <p className="text-sm md:text-[28px] lg:mb-5 font-medium text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
                 {subheading}
               </p>
-              <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-[1.2]">
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-[1.2] text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
                 {title}
               </h1>
-              <div className="flex flex-col lg:flex-row items-center justify-center gap-5 my-4">
+              <div className="flex flex-col lg:flex-row items-center justify-center gap-3.5 sm:gap-5 my-4">
                 {heroBtns?.map((btn) =>
                   btn?.buttontext === "Explore Programmes" ? (
                     <Link
                       key={btn.id}
                       href={btn.buttonlink}
-                      className="text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 border border-[#c7c7c7] font-semibold bg-[#034272]"
+                      className="text-white w-full sm:w-fit flex justify-center items-center px-8 py-2.5 rounded-lg gap-4 font-semibold bg-[#034272] transition-all hover:bg-[#02335a]"
                     >
                       {btn.buttontext}
                     </Link>
@@ -109,7 +109,7 @@ const SchoolHero = ({
                     <Link
                       key={btn.id}
                       href={btn.buttonlink}
-                      className={`text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white ${
+                      className={`text-black w-full sm:w-fit flex justify-center items-center px-8 py-2.5 rounded-lg gap-4 font-semibold bg-white transition-all hover:bg-gray-100 ${
                         btn.buttonclass || ""
                       }`}
                       target="_blank"
