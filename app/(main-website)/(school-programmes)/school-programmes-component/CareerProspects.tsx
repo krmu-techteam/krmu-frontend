@@ -12,6 +12,7 @@ type Props = {
   btn: ButtonType;
   careerimg: StrapiMedia;
   careercards: CareerCard[];
+  slug?: string;
 };
 
 const CareerProspects = ({
@@ -21,6 +22,7 @@ const CareerProspects = ({
   btn,
   careerimg,
   careercards,
+  slug,
 }: Props) => {
   return (
     <>
@@ -73,17 +75,19 @@ const CareerProspects = ({
             </div>
           </div>
         </div>
-        <div className="max-w-[1440px] mx-auto w-full flex justify-center mt-0 md:mt-8 lg:mt-12">
-          {(btn?.buttonclass || btn?.buttonlink) && (
-            <Link
-              href={btn?.buttonlink || "#"}
-              className={`text-white bg-[#db2a1a] hover:bg-[#c42518] px-8 py-2.5 flex items-center justify-center gap-3 max-w-xs w-full rounded-md font-semibold tracking-[0.025em] cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 group ${btn?.buttonclass}`}
-            >
-              <span>{btn?.buttontext}</span>
-              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" />
-            </Link>
-          )}
-        </div>
+        {slug !== "bhmct-hotel-management" && (
+          <div className="max-w-[1440px] mx-auto w-full flex justify-center mt-0 md:mt-8 lg:mt-12">
+            {(btn?.buttonclass || btn?.buttonlink) && (
+              <Link
+                href={btn?.buttonlink || "#"}
+                className={`text-white bg-[#db2a1a] hover:bg-[#c42518] px-8 py-2.5 flex items-center justify-center gap-3 max-w-xs w-full rounded-md font-semibold tracking-[0.025em] cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 group ${btn?.buttonclass}`}
+              >
+                <span>{btn?.buttontext}</span>
+                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" />
+              </Link>
+            )}
+          </div>
+        )}
       </section>
     </>
   );

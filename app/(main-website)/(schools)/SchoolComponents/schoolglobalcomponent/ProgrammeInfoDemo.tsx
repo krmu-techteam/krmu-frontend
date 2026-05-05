@@ -131,7 +131,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
             value={degreeTabs.find((d) => d.value === activeDegree)?.tabValue}
           >
             {/* TAB HEADERS */}
-            <TabsList className="w-full grid grid-cols-2 sm:flex flex-wrap gap-2.5 sm:gap-0 justify-center h-full p-2.5 mb-5 sticky top-[60px] sm:top-[76px] bg-white rounded-none">
+            <TabsList className="w-full grid grid-cols-2 sm:flex flex-wrap gap-2 sm:gap-0 justify-center h-auto p-1 sm:p-2.5 mb-2 sm:mb-5 sticky top-[42px] sm:top-[76px] bg-white rounded-none">
               {degreeTabs.map((deg) => (
                 <TabsTrigger
                   key={deg.tabValue}
@@ -156,7 +156,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
               <TabsContent
                 key={deg.tabValue}
                 value={deg.tabValue}
-                className={`${programs[deg.value]?.length > 2 ? "grid md:grid-cols-2 lg:grid-cols-3 gap-5" : "flex flex-wrap justify-center gap-5"} `}
+                className={`${programs[deg.value]?.length > 2 ? "grid md:grid-cols-2 lg:grid-cols-3 gap-5 px-4" : "flex flex-wrap justify-center gap-5"} `}
               >
                 {programs[deg.value]?.length ? (
                   programs[deg.value].map((prog) => {
@@ -205,7 +205,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                                 </span>
                                 <span>
                                   Rs. {prog.criteria?.programme_fee_per_year} /
-                                  Year
+                                  Year {prog.programmeslug === "bhmct-hotel-management" ? "(2025-26)" : ""}
                                 </span>
                               </div>
                             </div>
@@ -260,7 +260,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
           }}
         >
           <span
-            className="absolute right-5 top-5  inline-block z-50"
+            className="absolute right-5 top-5  inline-block z-50 cursor-pointer"
             onClick={() => setShow((prev) => !prev)}
           >
             <X />
@@ -293,7 +293,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                 </div>
                 <div>
                   <p className="mb-5 font-normal text-sm sm:text-base  leading-[1]">
-                    Programme Fee Per Year
+                    Programme Fee Per Year {currentProgram?.programmeslug === "bhmct-hotel-management" ? "(2025-26)" : ""}
                   </p>
                   <p className="text-sm sm:text-base uppercase leading-[1] font-bold">
                     {criteria.programme_fee_per_year === "TBD" ? "" : "Rs."}{" "}

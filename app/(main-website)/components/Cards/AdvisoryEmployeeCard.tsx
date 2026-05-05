@@ -33,7 +33,7 @@ export const AdvisoryEmployeeCard = ({ name, imgUrl, qual, desg }: Props) => {
         <span className="flex flex-col gap-1.5 text-base">
           <span className=" md:text-2xl font-bold leading-[1]">{name}</span>
           <span className="text-[14px] ">{desg}</span>
-          <span className="md:text-[16px] font-semibold">{qual}</span>
+          <span className="md:text-[16px] font-semibold hidden md:block">{qual}</span>
         </span>
         {/* </Link> */}
       </div>

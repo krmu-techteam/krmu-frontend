@@ -325,6 +325,7 @@ const page = async ({ params }: Props) => {
             deskimg={admissionProcessSection?.desktopadmissionprocessimg}
             admissionCards={admissionProcessSection?.admissionprocesscard}
             admisbtn={admissionProcessSection?.admissionbtn}
+            slug={slug}
             // formId={admissionProcessSection?.admissionFormId}
           />
         )}
@@ -368,6 +369,7 @@ const page = async ({ params }: Props) => {
             btn={careerProspectsSection?.careerbtn}
             careerimg={careerProspectsSection?.careerimg}
             careercards={careerProspectsSection?.careercards}
+            slug={slug}
             // careerFormId={careerProspectsSection?.careerFormId}
           />
         )}

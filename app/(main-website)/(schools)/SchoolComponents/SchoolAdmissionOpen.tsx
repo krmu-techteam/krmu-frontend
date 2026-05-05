@@ -12,7 +12,7 @@ const SchoolAdmissionOpen = ({ title, admBtn }: Props) => {
       <div className="max-w-[1664px] mx-auto">
         <div className="py-5 flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Heading */}
-          <h3 className="text-center md:text-left text-xl sm:text-2xl lg:text-5xl font-semibold leading-tight text-white">
+          <h3 className="text-center md:text-left text-lg sm:text-2xl lg:text-5xl font-semibold leading-tight text-white">
             {title}
           </h3>
 
