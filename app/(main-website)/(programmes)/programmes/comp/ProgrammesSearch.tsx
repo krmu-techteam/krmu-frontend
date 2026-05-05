@@ -490,7 +490,7 @@ const ProgrammesSearch = () => {
                     <div className="flex flex-col sm:flex-row  sm:gap-5">
                       <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                          <IndianRupee />
+                           <Calendar />
                         </span>
                         <div className="flex flex-col gap-0.5">
                           <span className="font-normal">Duration:</span>
@@ -499,7 +499,8 @@ const ProgrammesSearch = () => {
                       </div>
                       <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                          <Calendar />
+                          
+                          <IndianRupee />
                         </span>
                         <div className="flex flex-col gap-0.5">
                           <span className="font-normal">Programme Fee:</span>
@@ -522,15 +523,16 @@ const ProgrammesSearch = () => {
                       >
                         Fee Structure
                       </button>
-                      {!slug.includes("zenithschool.ai") && (
-                        <Link
-                          href={item.criteria.eligibility_utm_links}
-                          target="_blank"
-                          className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-red-500 group-hover:text-white hover:border hover:border-red-500"
-                        >
-                          Apply Now
-                        </Link>
-                      )}
+                      {!slug.includes("zenithschool.ai") &&
+                        item.criteria?.eligibility_utm_links && (
+                          <Link
+                            href={item.criteria.eligibility_utm_links}
+                            target="_blank"
+                            className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-red-500 group-hover:text-white hover:border hover:border-red-500"
+                          >
+                            Apply Now
+                          </Link>
+                        )}
 
                       {/* {isExternal ? (
                         <Link
@@ -710,9 +712,9 @@ const ProgrammesSearch = () => {
             >
               Know More
             </Link>
-            {!isZenithPopup && (
+            {!isZenithPopup && selectedProgramme?.criteria?.eligibility_utm_links && (
               <Link
-                href={selectedProgramme?.criteria?.eligibility_utm_links || "#"}
+                href={selectedProgramme.criteria.eligibility_utm_links}
                 className="bg-red-500 text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
                 target="_blank"
                 rel="noopener noreferrer"

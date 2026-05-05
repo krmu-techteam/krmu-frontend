@@ -491,7 +491,7 @@ const Admission2Search = () => {
                     <div className="flex flex-col sm:flex-row  sm:gap-5">
                       <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                          <IndianRupee />
+                           <Calendar />
                         </span>
                         <div className="flex flex-col gap-0.5">
                           <span className="font-normal">Duration:</span>
@@ -500,7 +500,8 @@ const Admission2Search = () => {
                       </div>
                       <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                          <Calendar />
+                         
+                          <IndianRupee />
                         </span>
                         <div className="flex flex-col gap-0.5">
                           <span className="font-normal">Programme Fee:</span>
