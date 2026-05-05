@@ -40,12 +40,12 @@ const SchoolInfoStatistics = ({
   return (
     <section className="pt-10 lg:pt-20 px-5">
       <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row sm:items-center gap-5 sm:gap-10  bg-blue-100/50 p-2.5 md:p-10 rounded-2xl">
-        <div className="w-full lg:w-1/2 xl:w-1/3 relative h-[300px] lg:h-[660px]">
+        <div className="w-full lg:w-1/2 xl:w-1/3 relative h-[400px] sm:h-[500px] lg:h-[660px]">
           <Image
             src={infoStaticImages[slug] || "/info.webp"}
             fill
             alt=""
-            className="object-cover md:object-contain lg:object-cover rounded-2xl"
+            className="object-cover object-top md:object-contain lg:object-cover rounded-2xl"
           />
         </div>
         <div className="w-full lg:w-1/2 xl:w-2/3 text-black">

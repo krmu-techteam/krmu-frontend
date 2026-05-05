@@ -67,7 +67,7 @@ const HeroBanner = ({
       className={`pt-24 sm:pt-40 pb-8 md:pb-12 overflow-x-hidden bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]`}
     >
       <div
-        className={`w-full mx-auto md:flex items-start gap-8 lg:gap-12 max-w-[1440px] justify-between px-4 sm:px-8 xl:px-4`}
+        className={`w-full mx-auto md:flex items-start gap-8 lg:gap-12 max-w-[1440px] justify-between px-4 sm:px-0 xl:px-0`}
       >
         <div className={`flex items-start justify-center w-full md:w-7/12 xl:w-8/12`}>
           {/* <div
@@ -181,62 +181,66 @@ const HeroBanner = ({
               </div>
 
               {/* Mobile Stats Bar - Horizontal (Mobile/Tablet Only) */}
-              <div className="flex lg:hidden w-full bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md flex-row items-stretch divide-x divide-gray-100 overflow-hidden">
-                <div className="flex-1 flex flex-col items-center justify-center py-3 px-1 min-h-[85px] sm:min-h-[100px]">
-                  <p className="text-lg sm:text-2xl font-bold text-[#0060aa]">
-                    {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
-                  </p>
-                  <p className="text-[9px] sm:text-xs font-semibold text-[#424242] capitalize text-center mt-0.5 leading-tight">
-                    {dreamcareerSection?.highestpackagetitle || "Highest Package"}
-                  </p>
-                </div>
+              {slug !== "bhmct-hotel-management" && (
+                <div className="flex lg:hidden w-full bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md flex-row items-stretch divide-x divide-gray-100 overflow-hidden">
+                  <div className="flex-1 flex flex-col items-center justify-center py-3 px-1 min-h-[85px] sm:min-h-[100px]">
+                    <p className="text-lg sm:text-2xl font-bold text-[#0060aa]">
+                      {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
+                    </p>
+                    <p className="text-[9px] sm:text-xs font-semibold text-[#424242] capitalize text-center mt-0.5 leading-tight">
+                      {dreamcareerSection?.highestpackagetitle || "Highest Package"}
+                    </p>
+                  </div>
 
-                <div className="flex-1 flex flex-col items-center justify-center py-3 px-1 min-h-[85px] sm:min-h-[100px]">
-                  <p className="text-lg sm:text-2xl font-bold text-[#0060aa]">800+</p>
-                  <p className="text-[9px] sm:text-xs font-semibold text-[#424242] capitalize text-center mt-0.5 leading-tight">
-                    {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
-                  </p>
-                </div>
+                  <div className="flex-1 flex flex-col items-center justify-center py-3 px-1 min-h-[85px] sm:min-h-[100px]">
+                    <p className="text-lg sm:text-2xl font-bold text-[#0060aa]">800+</p>
+                    <p className="text-[9px] sm:text-xs font-semibold text-[#424242] capitalize text-center mt-0.5 leading-tight">
+                      {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
+                    </p>
+                  </div>
 
-                <div className="flex-1 flex flex-col items-center justify-center py-3 px-1 min-h-[85px] sm:min-h-[100px]">
-                  <p className="text-lg sm:text-2xl font-bold text-[#0060aa]">
-                    {dreamcareerSection?.placementassistnum || "100%"}
-                  </p>
-                  <p className="text-[9px] sm:text-xs font-semibold text-[#424242] capitalize text-center mt-0.5 leading-tight">
-                    {dreamcareerSection?.placementassisttitle || "Placement Assist"}
-                  </p>
-                </div>
-              </div>
-
-              {/* Desktop Stats Cards - Grid (Desktop Only) */}
-              <div className="hidden lg:grid grid-cols-2 gap-4 items-stretch flex-shrink-0 w-auto">
-                <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-[190px] h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
-                  <p className="text-3xl font-semibold text-[#0060aa]">
-                    {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
-                  </p>
-                  <p className="text-md font-semibold text-[#424242] capitalize mt-1 text-center leading-tight">
-                    {dreamcareerSection?.highestpackagetitle || "Highest Package"}
-                  </p>
-                </div>
-
-                <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-[190px] h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
-                  <p className="text-3xl font-semibold text-[#0060aa]">800+</p>
-                  <p className="text-md font-semibold text-[#424242] capitalize mt-1 text-center leading-tight">
-                    {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
-                  </p>
-                </div>
-
-                <div className="col-span-2 flex justify-center">
-                  <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-[190px] h-[100px] flex flex-col items-center justify-center p-3 text-center transition-transform hover:scale-105 duration-300">
-                    <p className="text-3xl font-semibold text-[#0060aa]">
+                  <div className="flex-1 flex flex-col items-center justify-center py-3 px-1 min-h-[85px] sm:min-h-[100px]">
+                    <p className="text-lg sm:text-2xl font-bold text-[#0060aa]">
                       {dreamcareerSection?.placementassistnum || "100%"}
                     </p>
-                    <p className="text-md font-semibold text-[#424242] capitalize mt-1 leading-tight">
+                    <p className="text-[9px] sm:text-xs font-semibold text-[#424242] capitalize text-center mt-0.5 leading-tight">
                       {dreamcareerSection?.placementassisttitle || "Placement Assist"}
                     </p>
                   </div>
                 </div>
-              </div>
+              )}
+
+              {/* Desktop Stats Cards - Grid (Desktop Only) */}
+              {slug !== "bhmct-hotel-management" && (
+                <div className="hidden lg:grid grid-cols-2 gap-4 items-stretch flex-shrink-0 w-auto">
+                  <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-[190px] h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
+                    <p className="text-3xl font-semibold text-[#0060aa]">
+                      {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
+                    </p>
+                    <p className="text-md font-semibold text-[#424242] capitalize mt-1 text-center leading-tight">
+                      {dreamcareerSection?.highestpackagetitle || "Highest Package"}
+                    </p>
+                  </div>
+
+                  <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-[190px] h-[100px] flex flex-col items-center justify-center p-3 transition-transform hover:scale-105 duration-300">
+                    <p className="text-3xl font-semibold text-[#0060aa]">800+</p>
+                    <p className="text-md font-semibold text-[#424242] capitalize mt-1 text-center leading-tight">
+                      {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
+                    </p>
+                  </div>
+
+                  <div className="col-span-2 flex justify-center">
+                    <div className="bg-white border-[1.2px] border-[#0060aa] rounded-md shadow-md w-[190px] h-[100px] flex flex-col items-center justify-center p-3 text-center transition-transform hover:scale-105 duration-300">
+                      <p className="text-3xl font-semibold text-[#0060aa]">
+                        {dreamcareerSection?.placementassistnum || "100%"}
+                      </p>
+                      <p className="text-md font-semibold text-[#424242] capitalize mt-1 leading-tight">
+                        {dreamcareerSection?.placementassisttitle || "Placement Assist"}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* {heroSection?.imgvideo === "Video" && isFormAvailable && slug === 'b-tech-cse' && (
@@ -256,7 +260,7 @@ const HeroBanner = ({
           {slug === "bhmct-hotel-management" ? (
             <div className="w-full h-full min-h-[300px] md:min-h-[450px] relative rounded-md overflow-hidden">
               <Image
-                src="/hotel-management-hero.png"
+                src="/hotel-management.png"
                 fill
                 alt="Hotel Management"
                 className="object-cover"
