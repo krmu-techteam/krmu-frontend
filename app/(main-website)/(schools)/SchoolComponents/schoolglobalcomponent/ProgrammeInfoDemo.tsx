@@ -205,7 +205,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                                 </span>
                                 <span>
                                   Rs. {prog.criteria?.programme_fee_per_year} /
-                                  Year
+                                  Year {prog.programmeslug === "bhmct-hotel-management" ? "(2025-26)" : ""}
                                 </span>
                               </div>
                             </div>
@@ -293,7 +293,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                 </div>
                 <div>
                   <p className="mb-5 font-normal text-sm sm:text-base  leading-[1]">
-                    Programme Fee Per Year
+                    Programme Fee Per Year {currentProgram?.programmeslug === "bhmct-hotel-management" ? "(2025-26)" : ""}
                   </p>
                   <p className="text-sm sm:text-base uppercase leading-[1] font-bold">
                     {criteria.programme_fee_per_year === "TBD" ? "" : "Rs."}{" "}

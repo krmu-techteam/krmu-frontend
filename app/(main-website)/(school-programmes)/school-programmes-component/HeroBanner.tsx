@@ -131,16 +131,18 @@ const HeroBanner = ({
               <p className="text-right font-bold text-xs mt-2">**Subject to Approval</p>
             )}
 
-            <div className="hidden xl:block xl:mt-5">
-              {formId && (
-                <NpfPopup
-                  formId={formId}
-                  btnClass={`hero-common-btn-b  ${heroSection.herobtn.buttonclass || ""} rounded-md`}
-                  btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
-                  showIcon={true}
-                />
-              )}
-            </div>
+            {slug !== "bhmct-hotel-management" && (
+              <div className="hidden xl:block xl:mt-5">
+                {formId && (
+                  <NpfPopup
+                    formId={formId}
+                    btnClass={`hero-common-btn-b  ${heroSection.herobtn.buttonclass || ""} rounded-md`}
+                    btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
+                    showIcon={true}
+                  />
+                )}
+              </div>
+            )}
 
             {slug === "bba-digital-marketing" && <IndusLearning />}
 
@@ -251,17 +253,29 @@ const HeroBanner = ({
         <div
           className={`flex w-full md:w-5/12 xl:w-4/12 h-full relative mt-6 md:mt-0`}
         >
-          <div className="heroBannerForm__form w-full max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
-            <div className="heroBannerForm-header">
-              <h3 className="mb-0">
-                <strong>
-                  Apply Today for{" "}
-                  <span className="uppercase">K.R. Mangalam University</span>
-                </strong>
-              </h3>
+          {slug === "bhmct-hotel-management" ? (
+            <div className="w-full h-full min-h-[300px] md:min-h-[450px] relative rounded-md overflow-hidden">
+              <Image
+                src="/hotel-management-hero.png"
+                fill
+                alt="Hotel Management"
+                className="object-cover"
+                priority
+              />
             </div>
-            <NoPaperForm formId={formId} height="500px" />
-          </div>
+          ) : (
+            <div className="heroBannerForm__form w-full max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
+              <div className="heroBannerForm-header">
+                <h3 className="mb-0">
+                  <strong>
+                    Apply Today for{" "}
+                    <span className="uppercase">K.R. Mangalam University</span>
+                  </strong>
+                </h3>
+              </div>
+              <NoPaperForm formId={formId} height="500px" />
+            </div>
+          )}
           {/* {isFormAvailable ? (
             slug === "b-tech-cse" ? (
               <div className="heroBannerForm__form max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">

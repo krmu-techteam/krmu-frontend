@@ -507,7 +507,7 @@ const Admission2Search = () => {
                         <div className="flex flex-col gap-0.5">
                           <span className="font-normal">Programme Fee:</span>
                           <span>
-                            Rs. {item.criteria?.programme_fee_per_year} / Year
+                            Rs. {item.criteria?.programme_fee_per_year} / Year {slug === "bhmct-hotel-management" ? "(2025-26)" : ""}
                           </span>
                         </div>
                       </div>
@@ -621,7 +621,7 @@ const Admission2Search = () => {
             )}
             <div>
               <p className="mb-5 font-normal text-sm sm:text-base  leading-[1]">
-                Programme Fee Per Year
+                Programme Fee Per Year {slugValue === "bhmct-hotel-management" ? "(2025-26)" : ""}
               </p>
               <p className="text-sm sm:text-base leading-[1] font-bold">
                 {/* {criteria.programme_fee_per_year === "TBD" ? "" : "Rs."}{" "}
