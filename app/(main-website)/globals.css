@@ -21,6 +21,12 @@
     }
   }
 
+  @media (min-width: 640px) {
+    .schoolBanner {
+      background: center;
+    }
+  }
+
   @media (max-width: 640px) {
     .schoolBanner {
 
