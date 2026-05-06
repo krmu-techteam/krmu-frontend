@@ -53,6 +53,22 @@ export default FeeStructureTable;
 const FacultySection = ({ options }: { options: any[] }) => {
   const [activeSchoolId, setActiveSchoolId] = useState(options[0]?.id?.toString() || "");
 
+  const handleTabChange = (val: string) => {
+    setActiveSchoolId(val);
+    // Find the content element and scroll to it
+    const element = document.getElementById("fee-table-section");
+    if (element) {
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   // Sync state if options change (e.g. when category tab changes)
   useEffect(() => {
     if (options.length > 0 && (!activeSchoolId || !options.find(opt => opt.id.toString() === activeSchoolId))) {
@@ -74,10 +90,10 @@ const FacultySection = ({ options }: { options: any[] }) => {
         />
       </div>
 
-      <Tabs value={activeSchoolId} onValueChange={setActiveSchoolId} className="w-full">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+      <Tabs value={activeSchoolId} onValueChange={handleTabChange} className="w-full" id="fee-table-section">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-8 items-start">
           {/* Sidebar Navigation: School/Faculty List - Sticky on Desktop, Hidden on Mobile */}
-          <TabsList className="hidden lg:flex flex-col h-auto w-full lg:w-[450px] bg-white border border-gray-200 rounded-none p-0 lg:sticky lg:top-32 shadow-sm z-10 items-stretch">
+          <TabsList className="hidden lg:flex flex-col h-auto w-full lg:w-[380px] bg-white border border-gray-200 rounded-none p-0 lg:sticky lg:top-32 shadow-sm z-10 items-stretch">
             {options.map((acc) => (
               <TabsTrigger
                 key={acc.id}
@@ -85,9 +101,9 @@ const FacultySection = ({ options }: { options: any[] }) => {
                 className="w-full justify-start text-left px-6 py-4 border-b border-gray-100 last:border-b-0 rounded-none
                            data-[state=active]:bg-[#0062aa] data-[state=active]:text-white text-[#444] font-semibold text-[16px] 
                            relative transition-all duration-300 hover:bg-gray-50 data-[state=active]:hover:bg-[#0062aa] group 
-                           leading-tight"
+                           leading-tight whitespace-normal h-auto"
               >
-                <span className="flex-grow pr-4">{acc.panel_heading}</span>
+                <span className="flex-grow pr-4 block">{acc.panel_heading}</span>
                 {/* Indicative Arrow for Active Faculty */}
                 <div className="opacity-0 group-data-[state=active]:opacity-100 absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 
                               border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent 
@@ -97,7 +113,7 @@ const FacultySection = ({ options }: { options: any[] }) => {
           </TabsList>
 
           {/* Main Content: Fee Tables */}
-          <div className="flex-grow w-full min-w-0 bg-white p-4 md:p-6 border border-gray-100 shadow-sm rounded-sm">
+          <div className="flex-grow w-full min-w-0 bg-white p-4 md:p-4 border border-gray-100 shadow-sm rounded-sm">
             {options.map((acc) => (
               <TabsContent
                 key={acc.id}
