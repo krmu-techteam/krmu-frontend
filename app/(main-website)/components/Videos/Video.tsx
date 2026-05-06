@@ -4,22 +4,19 @@ import { StrapiMedia } from "@/lib/types/common";
 
  
  interface VideoProps {
-  video: StrapiMedia  | null;
+  video: StrapiMedia | null;
+  className?: string;
 }
- 
- 
- const Video = ({video} : VideoProps) => {
-  if (!video) return null;
 
+const Video = ({ video, className }: VideoProps) => {
+  if (!video) return null;
 
   const videoUrl = `${STRAPI_URL}${video.url}`;
 
-
-  
   return (
     <>
       <video
-        className="w-auto min-w-full min-h-[600px] lg:min-h-screen max-w-none"
+        className={className || "w-auto min-w-full min-h-[600px] lg:min-h-screen max-w-none"}
         autoPlay
         muted
         loop

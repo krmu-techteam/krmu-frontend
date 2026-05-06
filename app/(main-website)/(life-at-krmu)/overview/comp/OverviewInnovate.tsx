@@ -6,7 +6,7 @@ const OverviewInnovate = async () => {
   const data = await getOverviewEvents();
 
   return (
-    <section className="px-4">
+    <section className="md:px-4 px-0">
       <div className="max-w-[1344px] mx-auto w-full">
         <div className="flex flex-col lg:flex-row items-stretch">
           <div className="lg:w-[44%] bg-[#051630] px-5 py-10 lg:pt-[60px] lg:pr-[30px] lg:pb-[50px] lg:pl-[60px] text-white">
@@ -76,7 +76,7 @@ const OverviewInnovate = async () => {
                 </Link>
               </div>
             </div>
-            <div className="py-5 px-[60px] bg-[url(/bg.webp)] bg-cover bg-center bg-no-repeat">
+            {/* <div className="py-5 px-[60px] bg-[url(/bg.webp)] bg-cover bg-center bg-no-repeat">
               <Link
                 href="#_overview_hero"
                 className="flex items-center justify-end gap-2 text-[#e31e24]"
@@ -89,7 +89,7 @@ const OverviewInnovate = async () => {
                   alt="chevron"
                 />
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
