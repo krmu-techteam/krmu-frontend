@@ -1,39 +1,38 @@
 const OverviewImpacting = () => {
   return (
-    <div className="bg-[url(/gradient-3.webp)] bg-cover bg-center bg-no-repeat flex-col lg:flex-row pt-[60px] px-[30px] flex gap-10 items-center">
-      <div className="lg:lg:w-1/3 text-white">
-        <h4 className="text-3xl md:text-[32px]">Making a Difference Together</h4>
-        <h3 className="text-3xl md:text-5xl 2xl:text-8xl font-bold my-2.5">Impacting Lives</h3>
-        <p>
-          <strong>
+    <div className="bg-[url(/gradient-3.webp)] bg-cover bg-center bg-no-repeat flex flex-col lg:flex-row py-12 px-6 md:px-12 lg:pt-[60px] lg:px-[30px] gap-10 lg:gap-16 items-center lg:items-start rounded-none overflow-hidden">
+      <div className="w-full lg:w-1/3 text-white text-center lg:text-left">
+        <h4 className="text-lg md:text-2xl font-medium text-white/80 uppercase tracking-wide mb-3">
+          Making a Difference Together
+        </h4>
+        <h3 className="text-3xl md:text-6xl xl:text-7xl font-bold leading-tight mb-8">
+          Impacting Lives
+        </h3>
+        <div className="space-y-6 max-w-2xl mx-auto lg:mx-0">
+          <p className="text-lg md:text-xl font-semibold leading-relaxed">
             It allows young students to participate in various government-led
             community service activities & programmes. The objective of KRMU-NSS
             is to develop responsible personalities through community services.
-          </strong>
-        </p>
-        <br />
-        <p>
-          The programmes aim to promote social welfare in students so that they
-          serve society equally. NSS volunteers work closely with villagers and
-          learn to live satisfactorily with limited resources. They also assist
-          villagers with essential commodities such as food, clothing, and
-          first-aid facilities during uncertainties. Under NSS, volunteers help
-          the deprived section of society raise their living standards and live
-          with dignity.
-        </p>
+          </p>
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+            The programmes aim to promote social welfare in students so that they
+            serve society equally. NSS volunteers work closely with villagers and
+            learn to live satisfactorily with limited resources.
+          </p>
+        </div>
       </div>
-      <div className="lg:w-2/3">
+      <div className="w-full lg:w-2/3">
         <div className="flex flex-col xl:flex-row gap-10 impactinglivescard">
           <div
-            className="w-full xl:w-1/3 text-white p-5 rounded-[25px]"
+            className="w-full xl:w-1/3 text-white p-4 md:p-8 rounded-sm flex flex-col h-full"
             style={{
               background: `linear-gradient(180deg, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0.12) 100%)`,
             }}
           >
-            <h5 className="text-[26px] font-semibold leading-[1.12]">
+            <h5 className="text-[26px] font-semibold leading-[1.12] mb-6">
               Community Engagement and Understanding
             </h5>
-            <ul>
+            <ul className="list-disc pl-0 md:pl-5 space-y-3">
               <li>
                 Enabling students to understand the roots of the community
               </li>
@@ -45,15 +44,15 @@ const OverviewImpacting = () => {
             </ul>
           </div>
           <div
-            className="w-full xl:w-1/3 text-white p-5 rounded-[25px]"
+            className="w-full xl:w-1/3 text-white p-4 md:p-8 rounded-sm flex flex-col h-full"
             style={{
               background: `linear-gradient(180deg, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0.12) 100%)`,
             }}
           >
-            <h5 className="text-[26px] font-semibold leading-[1.12]">
+            <h5 className="text-[26px] font-semibold leading-[1.12] mb-6">
               Personal Growth and Responsibility
             </h5>
-            <ul>
+            <ul className="list-disc pl-0 md:pl-5 space-y-3">
               <li>Developing social and civil responsibility</li>
               <li>
                 Acquiring skills to live in groups harmoniously by sharing
@@ -66,15 +65,15 @@ const OverviewImpacting = () => {
             </ul>
           </div>
           <div
-            className="w-full xl:w-1/3 text-white p-5 rounded-[25px]"
+            className="w-full xl:w-1/3 text-white p-4 md:p-8 rounded-sm flex flex-col h-full"
             style={{
               background: `linear-gradient(180deg, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0.12) 100%)`,
             }}
           >
-            <h5 className="text-[26px] font-semibold leading-[1.12]">
+            <h5 className="text-[26px] font-semibold leading-[1.12] mb-6">
               Crisis Management and Preparedness
             </h5>
-            <ul>
+            <ul className="list-disc pl-0 md:pl-5 space-y-3">
               <li>
                 Developing abilities to manage emergencies and national
                 disasters
@@ -87,5 +86,6 @@ const OverviewImpacting = () => {
     </div>
   );
 };
+
 
 export default OverviewImpacting;

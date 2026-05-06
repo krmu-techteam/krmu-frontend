@@ -76,7 +76,7 @@ const OverviewInnovate = async () => {
                 </Link>
               </div>
             </div>
-            <div className="py-5 px-[60px] bg-[url(/bg.webp)] bg-cover bg-center bg-no-repeat">
+            {/* <div className="py-5 px-[60px] bg-[url(/bg.webp)] bg-cover bg-center bg-no-repeat">
               <Link
                 href="#_overview_hero"
                 className="flex items-center justify-end gap-2 text-[#e31e24]"
@@ -89,7 +89,7 @@ const OverviewInnovate = async () => {
                   alt="chevron"
                 />
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
