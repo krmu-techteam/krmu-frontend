@@ -90,7 +90,7 @@ const page = async () => {
       <OverviewYourInterest />
       <OverviewHearit testimonials={testimonials} />
       <OveviewSecondHome />
-      <section className="px-4">
+      <section className="md:px-4 px-0">
         <div className="max-w-[1664px] mx-auto w-full">
           <OverviewImpacting />
           <OverviewTreasure />

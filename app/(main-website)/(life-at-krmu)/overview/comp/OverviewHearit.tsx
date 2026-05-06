@@ -7,7 +7,7 @@ type Props = {
 
 const OverviewHearit = ({ testimonials }: Props) => {
   return (
-    <section className="py-16 md:py-24 lg:py-32 px-6 md:px-12 bg-[#051630]">
+    <section className="py-16 md:py-24 lg:py-32 px-4 md:px-12 bg-[#051630]">
       <div className="max-w-[1664px] mx-auto w-full">
         <div className="xl:flex items-center text-white gap-16">
           <div className="xl:w-[40%] text-center xl:text-left">

@@ -6,7 +6,7 @@ const OverviewInnovate = async () => {
   const data = await getOverviewEvents();
 
   return (
-    <section className="px-4">
+    <section className="md:px-4 px-0">
       <div className="max-w-[1344px] mx-auto w-full">
         <div className="flex flex-col lg:flex-row items-stretch">
           <div className="lg:w-[44%] bg-[#051630] px-5 py-10 lg:pt-[60px] lg:pr-[30px] lg:pb-[50px] lg:pl-[60px] text-white">

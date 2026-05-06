@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const OverviewYourWellBeing = () => {
   return (
-    <section className="py-12 md:py-20 lg:py-[60px] bg-[#0060aa] px-6 md:px-12 lg:px-4">
+    <section className="py-12 md:py-20 lg:py-[60px] bg-[#0060aa] px-4 md:px-12 lg:px-4">
       <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-0">
         <div className="lg:w-2/5 text-center lg:text-left">
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight">

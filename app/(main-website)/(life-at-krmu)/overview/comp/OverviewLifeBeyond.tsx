@@ -1,7 +1,7 @@
 const OverviewLifeBeyond = () => {
   return (
     <section 
-      className="bg-[url(/gradient-2.webp)] bg-cover bg-no-repeat bg-center py-16 md:py-24 lg:py-32 px-6 md:px-12 lg:px-20" 
+      className="bg-[url(/gradient-2.webp)] bg-cover bg-no-repeat bg-center py-16 md:py-24 lg:py-32 px-4 md:px-12 lg:px-20" 
       id="lifeBeyond"
     >
       <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
