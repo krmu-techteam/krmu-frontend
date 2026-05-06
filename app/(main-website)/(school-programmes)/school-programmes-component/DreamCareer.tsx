@@ -17,15 +17,15 @@ const DreamCareer = ({
   return (
     <section className="py-8 md:py-16 bg-white overflow-hidden px-4 md:px-0">
       <div className="max-w-[1320px] mx-auto">
-        <div className="max-w-3xl mx-auto text-center mb-10 md:mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-3xl md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-4">
             {heading}
           </h2>
-          {description && (
+          {/* {description && (
             <p className="text-lg text-gray-600 leading-relaxed font-medium">
               {description}
             </p>
-          )}
+          )} */}
         </div>
         
         <div className="flex flex-wrap justify-center gap-5">
