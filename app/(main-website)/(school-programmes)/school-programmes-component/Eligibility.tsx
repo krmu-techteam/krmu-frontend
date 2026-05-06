@@ -249,8 +249,10 @@ const Eligibility = ({
             </div>
           )}
 
-          {slug ===
-            "bba-hr-marketing-finance-international-business-travel-and-tourism-semester-abroad-programme-with-university-of-east-anglia-uea-norwich-uk" && (
+          {[
+            "bba-hr-marketing-finance-international-business-travel-and-tourism-semester-abroad-programme-with-university-of-east-anglia-uea-norwich-uk",
+            "bba-hons-hons-with-research-hr-marketing-finance-international-business-travel-and-tourism-semester-abroad-programme-with-university-of-east-anglia-uea-norwich-uk",
+          ].includes(slug) && (
             <p className="my-5 italic">
               *In addition to the regular programme fee at KRMU, students opting
               for the Semester Abroad will be required to pay an additional
