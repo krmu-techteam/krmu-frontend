@@ -260,7 +260,7 @@ const page = async ({ params }: Props) => {
       <div
         className={`p-0 m-0 ${tagsArray.map((tag) => `tag-${tag}`).join(" ")}`}
       />
-      <main className="school-prog-font">
+      <main className="school-prog-font temp-class">
         {/* {tags && <TagDiv tags={tags} extraClass="hidden test-class" />} */}
         {heroSection && (
           <HeroBanner
