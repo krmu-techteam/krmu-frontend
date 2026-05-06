@@ -1,10 +1,10 @@
-
 "use client";
 
 import { loadNpfScript } from "@/lib/constants/loadNpfScript";
 import { PhoneCall } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import ScrollButton from "../CommonComponent2026/ScrollButton";
 
 const StickyMobileBar = ({
   phoneNumber,
@@ -40,7 +40,7 @@ const StickyMobileBar = ({
   }, [formId]);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 flex h-14 w-full md:hidden bg-[#d8232a] text-white">
+    <div className="fixed bottom-0 left-0 right-0 z-50 flex h-14 w-full sm:hidden bg-[#d8232a] text-white">
       {formId ? (
         <button
           ref={btnRef}
@@ -49,12 +49,13 @@ const StickyMobileBar = ({
           Apply Now
         </button>
       ) : (
-        <Link
-          href="#apply-form"
-          className="flex w-1/2 items-center justify-center font-semibold text-lg hover:bg-red-700 transition-colors border-r border-white/20"
+        <ScrollButton
+          targetId="apply-section"
+          highlightClass="flash-border"
+          btnClass="flex w-1/2 items-center justify-center font-semibold text-lg hover:bg-red-700 transition-colors border-r border-white/20"
         >
           Apply Now
-        </Link>
+        </ScrollButton>
       )}
       <a
         href={`tel:${phoneNumber}`}
@@ -62,7 +63,6 @@ const StickyMobileBar = ({
       >
         <PhoneCall size={18} fill="currentColor" />
         Call
-        
       </a>
     </div>
   );

@@ -2,14 +2,13 @@ import React from "react";
 
 const ProgrammesHero = () => {
   return (
-    <div className="max-w-[600px] mx-auto w-full">
-      <div>
-        <h1 className="text-3xl md:text-[40px] font-semibold text-center mb-5 leading-[1.2] text-[#0a41a1]">
-          Transform your Life{" "}
-          <span className="text-[#e61f21]">with the Right Programme</span>
+    <section className="pt-40 pb-12 bg-[#09215b] px-4">
+      <div className="max-w-[1320px] mx-auto w-full text-center mb-5">
+        <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-semibold text-white">
+          Transform your Life with the Right Programme
         </h1>
       </div>
-    </div>
+    </section>
   );
 };
 

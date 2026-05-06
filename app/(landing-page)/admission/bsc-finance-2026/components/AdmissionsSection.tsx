@@ -5,7 +5,7 @@ const statRows = [
     { heading: "NAAC A+", sub: "Accredited" },
     { heading: "UGC", sub: "Approved" },
     { heading: "No. 1", sub: "in Haryana (Times B-School Survey 2026)" },
-    { heading: "28+ Acres", sub: "Green Campus" },
+    { heading: "35+ Acres", sub: "Green Campus" },
   ],
   [
     { heading: "800+", sub: "Recruiters" },
@@ -42,7 +42,6 @@ const AdmissionsSection = () => {
       id="admissions"
       className="relative overflow-hidden min-h-[900px] sm:min-h-[1050px] lg:min-h-[1320px]"
     >
-
       {/* Campus photo — full section background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -69,7 +68,6 @@ const AdmissionsSection = () => {
       {/* Content — ~15px narrower than 1200px; smaller cards on mobile + desktop */}
       <div className="relative z-10 px-3 pt-8 pb-8 sm:px-5 sm:pt-12 sm:pb-12 lg:px-6 lg:pt-16 lg:pb-20">
         <div className="mx-auto w-full max-w-[1185px]">
-
           {/* Heading — centered, Libre Caslon Condensed, white + dark */}
           <h2
             className="m-0 mb-6 font-semibold italic leading-[140%] tracking-[-0.02em] text-center sm:mb-8 lg:mb-10"
@@ -133,10 +131,8 @@ const AdmissionsSection = () => {
               </div>
             ))}
           </div>
-
         </div>
       </div>
-
     </section>
   );
 };

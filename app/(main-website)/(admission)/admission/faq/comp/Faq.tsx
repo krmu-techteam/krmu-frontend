@@ -50,14 +50,14 @@ export const FAQ = () => {
             Can’t find an answer?
           </h3>
           <button
-            className={`py-[13px] px-[29px] text-white bg-[#cb000d] rounded-full font-semibold hover:bg-[#034272] `}
+            className={`border border-white text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold`}
           >
             <Link
               href="https://www.krmangalam.edu.in/contact-us/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Contact Us
+              Contact Us 
             </Link>
           </button>
         </div>

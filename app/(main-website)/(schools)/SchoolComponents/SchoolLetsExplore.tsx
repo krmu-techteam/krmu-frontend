@@ -13,10 +13,10 @@ type Props = {
 const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
   return (
     <section
-      className="py-8"
-      style={{
-        backgroundImage: "linear-gradient(180deg,#051630 0%,#004e8a 100%)",
-      }}
+      className="bg-[#051630] pt-10 pb-20"
+      // style={{
+      //   backgroundImage: "linear-gradient(180deg,#051630 0%,#004e8a 100%)",
+      // }}
     >
       <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-center">
         <div className="w-full lg:w-2/6 text-white px-4">
@@ -24,7 +24,7 @@ const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
             Let’s explore what makes KRMU’s SOET better than that of other
             universities
           </h4> */}
-          <div className="mb-5 md:mb-0 text-2xl md:text-3xl lg:text-5xl font-semibold leading-[1.3] lg:mx-8 xl:mx-12">
+          <div className="mb-5 md:mb-0 text-2xl md:text-3xl lg:text-5xl font-semibold leading-[1.3] lg:mx-8 xl:mx-12 exploreLetsMob">
             {content && <BlocksRenderer content={content} />}
           </div>
         </div>
@@ -38,7 +38,7 @@ const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
                     return (
                       <li
                         key={list?.id}
-                        className="min-h-[135px] h-full flex items-center  pl-5 py-[5.6px] border-b border-[#d9d9d957]"
+                        className="min-h-[135px] h-full flex items-center  pl-5 py-[5.6px] border-b border-[#d9d9d957] last:border-none"
                       >
                         <span className="text-base font-normal italic">
                           {list?.listtext}
@@ -64,7 +64,7 @@ const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
                     return (
                       <li
                         key={list2?.id}
-                        className="min-h-[135px] h-full flex items-center gap-5 pl-5 py-[5.6px] border-b border-[#d9d9d957]"
+                        className="min-h-[135px] h-full flex items-center gap-5 pl-5 py-[5.6px] border-b border-[#d9d9d957] last:border-none"
                       >
                         <ThumbsDown className="text-[#e31e24]" />
                         <span className="text-base font-medium">
@@ -85,7 +85,7 @@ const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
                     return (
                       <li
                         key={list?.id}
-                        className="min-h-[135px] h-full flex items-center gap-5 pl-5 py-[5.6px] border-b border-[#051630]"
+                        className="min-h-[135px] h-full flex items-center gap-5 pl-5 py-[5.6px] border-b border-[#051630] last:border-none"
                       >
                         <div>
                           {" "}

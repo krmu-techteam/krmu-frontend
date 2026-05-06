@@ -43,7 +43,7 @@ const Header = ({
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-20">
+      <header className="fixed top-0 left-0 w-full z-[999]">
         {/* <div className="flex flex-col md:flex-row bg-[#e31e24]">
           <div className="w-full md:w-[80%] 2xl:w-[90%]">
             <MainHeaderMarquee data={marqueeData} />

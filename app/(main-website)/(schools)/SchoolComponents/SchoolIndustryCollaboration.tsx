@@ -9,14 +9,14 @@ type Props = {
 
 const SchoolIndustryCollaboration = ({ title, collabCards }: Props) => {
   return (
-    <section className="bg-[#051630] pt-8 pb-40 xl:py-8 px-4">
-      <div className="max-w-[1664px] mx-auto w-full xl:flex">
-        <div className="w-full xl:w-2/5">
-          <div className="text-3xl mb-5 xl:mb-0 lg:text-5xl lg:text-[64px] text-white font-medium leading-[1.2] schIndCollbaheadingPara">
-            {title && <BlocksRenderer content={title} />}
+    <section className="bg-[#051630] pt-8 pb-40 xl:py-20 px-4">
+      <div className="max-w-[1664px] mx-auto w-full">
+        <div className="w-full">
+          <div className="text-3xl lg:text-5xl text-white font-semibold leading-tight schIndCollbaheadingPara text-center mb-10">
+            {title && <BlocksRenderer content={title} />} 
           </div>
         </div>
-        <div className="w-full xl:w-3/5 py-[30px] md:px-16 2xl:px-[100px]">
+        <div className="w-full md:px-16 2xl:px-[100px]">
           <IndustryCollabCarousel collabData={collabCards} />
         </div>
       </div>

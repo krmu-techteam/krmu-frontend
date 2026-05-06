@@ -1,31 +1,30 @@
 import { PhoneCall } from "lucide-react";
 import Link from "next/link";
+import ScrollButton from "../../CommonComponent2026/ScrollButton";
 
 const CommonFooter2 = () => {
   return (
-    <section
-      className="py-14 bg-white"
-    >
-      <div className="px-6 max-w-[1200px] mx-auto w-full">
+    <section className="py-14 bg-white">
+      <div className="px-6 max-w-[1200px] mx-auto w-full temp-class">
         <div className="text-center max-w-[1000px] m-auto">
           <h2 className="text-black mb-4 text-2xl md:text-3xl font-bold leading-[1.2]">
             Apply Today to Ascertain Your Tomorrow!
             <br />
-           With a 92% Placement Record, KRMU is a Name to Rely Upon!
+            With a 92% Placement Record, KRMU is a Name to Rely Upon!
           </h2>
           <p className="text-black text-lg mb-8">
             Industry-Aligned Courses | Top Recruiters | Global Exposure
-
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 items-center mb-10">
-            <Link
-  href="#apply-form"
-  className="text-white bg-[linear-gradient(135deg,#e31e24_0%,#c41920_100%)] shadow-[0_4px_14px_0_rgba(227,30,36,0.35)] text-lg min-h-14 inline-flex items-center justify-center gap-2 font-semibold cursor-pointer rounded-xl
-  transition-all duration-150 ease-out py-4 px-6 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_0_rgba(227,30,36,0.45)] hover:bg-[linear-gradient(135deg,#ff4d52_0%,#e31e24_100%)]"
->
-  Enrol Now. Limited Seats Available!
-  <svg
+            <ScrollButton
+              targetId="apply-section"
+              highlightClass="flash-border"
+              btnClass="text-white bg-[linear-gradient(135deg,#e31e24_0%,#c41920_100%)] shadow-[0_4px_14px_0_rgba(227,30,36,0.35)] text-lg min-h-14 inline-flex items-center justify-center gap-2 font-semibold cursor-pointer rounded-xl
+             transition-all duration-150 ease-out py-4 px-6 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_0_rgba(227,30,36,0.45)] hover:bg-[linear-gradient(135deg,#ff4d52_0%,#e31e24_100%)]"
+            >
+              Enrol Now. Limited Seats Available!
+              <svg
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
@@ -35,10 +34,8 @@ const CommonFooter2 = () => {
               >
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-</Link>
+            </ScrollButton>
 
-              
-            
             <a
               href="tel:+919311411717"
               className="text-white bg-[#0060aa]  text-lg min-h-14 inline-flex items-center justify-center gap-2 font-semibold cursor-pointer rounded-xl

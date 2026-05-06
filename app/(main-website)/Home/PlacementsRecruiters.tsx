@@ -22,7 +22,7 @@ const PlacementsRecruiters = ({
 }: FeeStructureScholarProp) => {
   return (
     <>
-      <section className="py-8 px-5">
+      <section className="py-8 px-4">
         <div className="max-w-[1664px] mx-auto w-full">
           <div className="flex flex-wrap gap-2.5 items-center justify-around">
             {link1 && (

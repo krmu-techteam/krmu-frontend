@@ -22,7 +22,7 @@ const PHDRegulationCards = () => {
             <li>
               <Link
                 className="hover:text-[#2d7cc1]"
-                href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/2_R_Ph_D_Admission_advertisement_Details_O26_27_7a925a71c3.pdf"
+                href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/3_R_May_Ph_D_Admission_advertisement_Details_O_2025_26_0c9d6653bd.pdf"
               >
                 <strong>Odd Semester 2026-27</strong>
               </Link>
@@ -88,7 +88,8 @@ const PHDRegulationCards = () => {
           <ul className="text-center flex flex-col gap-2.5 text-lg">
             <li className="relative">
               <Link
-                href="https://www.krmangalam.edu.in/wp-content/uploads/2024/10/Ph.D.-Programme-Course-Handbook.pdf"
+                // href="https://www.krmangalam.edu.in/wp-content/uploads/2024/10/Ph.D.-Programme-Course-Handbook.pdf"
+                href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Revised_Ph_D_coursework_structure_w_e_f_Academic_Year_2025_26_0030f5c17e.pdf"
                 className="hover:text-[#2d7cc1]"
               >
                 <strong>Ph.D. Programme Course Handbook</strong>

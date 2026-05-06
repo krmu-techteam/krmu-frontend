@@ -14,7 +14,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Amit_Chawla_SEMCE_png_d5ac801680.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.-Amit-Chawla.webp",
   },
   {
     id: 1028,

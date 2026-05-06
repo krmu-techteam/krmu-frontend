@@ -20,6 +20,13 @@ export interface BREADCRUMB {
   breadcrumbbgcolor: string;
 }
 
+
+export type AlumniMedia = {
+  id: number;
+  url: string;
+  alternativeText: string;
+};
+
 // Strapi media type
 export interface StrapiMedia {
   id: number;

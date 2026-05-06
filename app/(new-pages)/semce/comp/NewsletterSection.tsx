@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function NewsletterSection() {
   return (
-    <section className="max-w-[1664px] mx-auto px-4 py-16">
+    <section className="max-w-[1664px] mx-auto px-4 md:px-0 py-16">
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold">Our Newsletters</h2>

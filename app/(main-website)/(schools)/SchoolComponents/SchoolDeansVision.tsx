@@ -26,26 +26,26 @@ const SchoolDeansVision = ({
 }: Props) => {
   return (
     <section
-      className="py-[50px] px-4"
-      style={{
-        background:
-          "linear-gradient(95deg,#051630 2.69%,#0060aa 65.94%,#e31e24 97.54%)",
-      }}
+      className="py-10 sm:py-20 px-4 bg-[#051630]"
+      // style={{
+      //   background:
+      //     "linear-gradient(95deg,#051630 2.69%,#0060aa 65.94%,#e31e24 97.54%)",
+      // }}
     >
-      <div className="max-w-[1664px] mx-auto w-full">
-        <div className="text-center text-white text-3xl sm:text-5xl mb-5  lg:text-[64px]">
+      <div className="max-w-[1664px] mx-auto w-full testing">
+        <div className="text-center text-white text-3xl sm:text-5xl mb-5 lg:text-[64px]">
           <h4 className="leading-[1]">{title}</h4>
           <h5 className="leading-[1.2] font-bold">{subtitle}</h5>
         </div>
         <div
-          className="rounded-4xl flex flex-col xl:flex-row"
+          className="rounded-4xl flex flex-col xl:flex-row gap-10 p-2.5 sm:p-5 md:p-10 leading-tight"
           style={{
             background:
               "linear-gradient(180deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,.12) 100%)",
             backdropFilter: "blur(13.410955429077px)",
           }}
         >
-          <div className="xl:w-2/6 p-5 sm:p-10 xl:p-[50px] flex justify-center xl:block">
+          <div className="xl:w-3/12 flex justify-center xl:block">
             <Image
               src={`${STRAPI_URL}${deanImgUrl}`}
               width={358}
@@ -54,7 +54,7 @@ const SchoolDeansVision = ({
               className="rounded-[25px] object-cover shadow-xl"
             />
           </div>
-          <div className="xl:w-4/6 p-5 sm:px-10 sm:pb-10 xl:p-[50px] text-white dean_heading_h3 flex flex-col items-center xl:items-start text-center xl:text-left">
+          <div className="xl:w-9/12 text-white dean_heading_h3 flex flex-col items-center xl:items-start text-center xl:text-left">
             {/* Mobile View: Name and Designation directly below image */}
             <div className="xl:hidden mb-6">
               <p className="text-2xl md:text-[32px] font-bold mb-1">

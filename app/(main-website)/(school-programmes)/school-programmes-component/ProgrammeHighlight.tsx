@@ -1,5 +1,7 @@
+"use client";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { HiglightCard } from "@/lib/types/school-programme";
-import ProgramHighlightSlider from "../school-prog-global-comps/ProgramHighlightSlider";
 import ProgrammeHighlightCard from "../school-prog-global-comps/ProgrammeHighlightCard";
 
 type Props = {
@@ -15,19 +17,23 @@ const ProgrammeHighlight = ({
   desc,
   highlights,
 }: Props) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const displayCount = isExpanded ? highlights?.length : 6;
+  const visibleHighlights = highlights?.slice(0, displayCount);
+
   return (
-    <section className="prog-global-padding">
-      <div className="max-w-[1320px] mx-auto w-full">
+    <section className="prog-global-padding bg-[#f9f9f9] py-8 md:py-16">
+      <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container">
-          <h2 className="heading">
-            {heading}{" "}
-            <span className="prog-highlight-text">{highlightHeading}</span>
+          <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight">
+            {heading} {highlightHeading}
           </h2>
-          <p className="sub-heading">{desc}</p>
+          <p className="text-gray-600 text-base md:text-xl font-medium">{desc}</p>
         </div>
-        <div className="hidden lg:grid grid-cols-2 gap-5 mt-12">
-          {highlights &&
-            highlights.map((highlight) => (
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 md:mt-10 px-4 md:px-0">
+          {visibleHighlights &&
+            visibleHighlights.map((highlight) => (
               <ProgrammeHighlightCard
                 key={highlight.id}
                 title={highlight?.title}
@@ -36,11 +42,24 @@ const ProgrammeHighlight = ({
               />
             ))}
         </div>
-        <div className="lg:hidden">
-          <ProgramHighlightSlider highlights={highlights} />
 
-          {/* <ProgramHighlightSlider /> */}
-        </div>
+        {highlights && highlights.length > 6 && (
+          <div className="flex justify-center mt-8 px-4 md:px-0">
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="md:px-6 w-full md:w-auto py-2.5 border-2 border-[#0a41a1] text-[#0a41a1] font-semibold rounded-[4px] hover:bg-[#0a41a1] hover:text-white transition-all duration-300 cursor-pointer group"
+            >
+              <span className="flex items-center justify-center gap-2">
+                {isExpanded ? "Show Less" : "Read More"}
+                {isExpanded ? (
+                  <ChevronUp className="w-6 h-6 transition-transform group-hover:-translate-y-0.5" />
+                ) : (
+                  <ChevronDown className="w-6 h-6 transition-transform group-hover:translate-y-0.5" />
+                )}
+              </span>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

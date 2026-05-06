@@ -18,24 +18,23 @@ const OverviewTestiCard = ({
   return (
     <div className="bg-white  text-black rounded-[30px]  h-full">
       <div
-        className="flex  flex-col gap-4 p-5 rounded-t-[30px]"
+        className="flex flex-col items-center sm:items-start gap-4 p-6 rounded-t-[30px]"
         style={{
           background: "linear-gradient(168deg,#051630 6.9%,#005ba1 162.66%)",
         }}
       >
-        <div>
+        <div className="relative w-32 h-32">
           <Image
             src={`${STRAPI_URL}${profileImage?.url}`}
-            width={128}
-            height={128}
+            fill
             alt={profileImage?.alternativeText || "Profile Image"}
-            className="mb-5 rounded-full"
+            className="rounded-full object-cover"
             unoptimized={true}
           />
         </div>
         <div className="text-white text-center sm:text-left">
-          <p className="leading-[1.5] text-2xl font-semibold mb-2.5">{profilename}</p>
-          <p>{qualification}</p>
+          <p className="leading-tight text-2xl font-bold mb-1">{profilename}</p>
+          <p className="text-white/80 font-medium">{qualification}</p>
         </div>
       </div>
       <div className="p-5">

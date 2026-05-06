@@ -45,7 +45,7 @@ const PhdHeader = () => {
               </Link>
             </li>
           </ul> */}
-          {/* <KRMUTimer targetDate="2026-04-14T00:00:00" /> */}
+         <KRMUTimer targetDate="2026-04-30T00:00:00" />
         </div>
         <div className="lg:w-1/5"></div>
       </div>

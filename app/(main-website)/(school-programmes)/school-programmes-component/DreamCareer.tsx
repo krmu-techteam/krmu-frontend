@@ -5,88 +5,45 @@ import Image from "next/image";
 type Props = {
   heading: string;
   description: string;
-  highestpackagenum: string;
-  highestpackagetitle: string;
-  campusrecruitersnum: string;
-  campusrecruitertitle: string;
-  placementassistnum: string;
-  placementassisttitle: string;
   logos: StrapiMedia[];
 };
 
 const DreamCareer = ({
   heading,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   description,
-  highestpackagenum,
-  highestpackagetitle,
-  campusrecruitersnum,
-  campusrecruitertitle,
-  placementassistnum,
-  placementassisttitle,
   logos,
 }: Props) => {
   return (
-    <section className="prog-global-padding">
-      <div className="max-w-[1320px] mx-auto w-full flex flex-col-reverse md:flex-row gap-6 px-2.5 md:px-4">
-        {/* Left section */}
-        <div className="w-full md:w-1/2">
-          {/* Logos grid */}
-          <div className="p-2.5 sm:p-[30px] border border-[#d8d8d8] rounded-[30px] grid grid-cols-2">
-            {logos?.map((logo) => (
-              <div
-                key={logo.id}
-                className="p-2.5 sm:py-10 flex items-center justify-center"
-              >
-                <Image
-                  src={`${STRAPI_URL}${logo?.url}`}
-                  width={120}
-                  height={120}
-                  alt={logo?.alternativeText || "Career Logo"}
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Stats */}
-          <div className="flex flex-wrap sm:flex-nowrap gap-6 mt-6">
-            {/* Highest Package */}
-            <div className="w-full sm:w-3/5 p-2.5 sm:p-5 border border-[#d8d8d8] rounded-[30px] flex items-center justify-center">
-              <div className="text-center">
-                <h4 className="text-[#db2a1a] text-4xl md:text-[45px] font-normal">
-                  {highestpackagenum}
-                </h4>
-                <p>{highestpackagetitle}</p>
-              </div>
-            </div>
-
-            {/* Recruiters & Assistance */}
-            <div className="w-full sm:w-2/5 p-2.5 sm:p-5 border border-[#d8d8d8] rounded-[30px]">
-              <div className="text-center">
-                <h4 className="text-[#db2a1a] text-4xl md:text-[45px] font-normal">
-                  {/* {campusrecruitersnum} */}800+
-                </h4>
-                <p>{campusrecruitertitle}</p>
-              </div>
-              <div className="text-center mt-4">
-                <h4 className="text-[#db2a1a] text-4xl md:text-[45px] font-normal">
-                  {placementassistnum}
-                </h4>
-                <p>{placementassisttitle}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Right section */}
-        <div className="w-full md:w-1/2">
-          <div className="md:pt-[150px] pt-3 pb-5 px-3 sm:px-10 lg:px-[50px] md:pb-[50px] rounded-[20px] bg-[#0a41a1] h-full text-white">
-            <h4 className="text-[32px] md:text-[50px] mb-5 font-normal leading-[1.2]">
-              {heading}
-            </h4>
-            <p className="font-light text-base sm:text-xl leading-[1.4] md:leading-[2]">
+    <section className="py-8 md:py-16 bg-white overflow-hidden px-4 md:px-0">
+      <div className="max-w-[1320px] mx-auto">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <h2 className="text-3xl md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-4">
+            {heading}
+          </h2>
+          {/* {description && (
+            <p className="text-lg text-gray-600 leading-relaxed font-medium">
               {description}
             </p>
-          </div>
+          )} */}
+        </div>
+        
+        <div className="flex flex-wrap justify-center gap-5">
+          {logos?.map((logo) => (
+            <div
+              key={logo.id}
+              className="bg-white border border-gray-100 rounded-lg p-5 h-[100px] md:h-[120px] w-[calc(50%-1.25rem)] md:w-[calc(25%-1.25rem)] lg:w-[calc(16.6%-1.25rem)] flex items-center justify-center shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src={`${STRAPI_URL}${logo?.url}`}
+                  fill
+                  alt={logo?.alternativeText || "Career Logo"}
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

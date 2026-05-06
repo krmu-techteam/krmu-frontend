@@ -20,10 +20,10 @@ import {
 // Usage types
 export const Hero: HeroContent = {
   title: `
-   <span class="sm:hidden"><span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-bold">
+   <span class="md:hidden"><span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-bold">
         Bachelor of Arts
       </span> Admissions Open 2026–27</span>
-       <span class="hidden sm:block">
+       <span class="hidden md:block">
       ADMISSIONS <br />
       OPEN FOR <br />
       <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold">
@@ -724,18 +724,18 @@ export const programmeContent = {
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
-    {
-      id: "9",
-      tag: "",
-      title: "B.Sc. Clinical Psychology (Hons.)**",
-      subtitle: "",
-      desc: "The course seeks to train students in mental health assessment, therapy, counselling, behavioural research, & psychological interventions.",
-      duration: "4 Years",
-      fees: "350000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "To be updated",
-    },
+    // {
+    //   id: "9",
+    //   tag: "",
+    //   title: "B.Sc. Clinical Psychology (Hons.)**",
+    //   subtitle: "",
+    //   desc: "The course seeks to train students in mental health assessment, therapy, counselling, behavioural research, & psychological interventions.",
+    //   duration: "4 Years",
+    //   fees: "350000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "To be updated",
+    // },
     {
       id: "10",
       tag: "",

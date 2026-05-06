@@ -19,7 +19,7 @@ const EventsAndExperienceCard = ({
 }: Props) => {
   return (
     <div
-      className="px-2.5 pt-2.5 pb-5 rounded-4xl"
+      className="px-2.5 pt-2.5 pb-5 rounded-4xl h-[500px]"
       style={{
         background:
           "linear-gradient(180deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,.12) 100%)",

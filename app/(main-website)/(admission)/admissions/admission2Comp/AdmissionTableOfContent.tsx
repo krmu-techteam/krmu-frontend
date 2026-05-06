@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import { StrapiMedia } from "@/lib/types/common";
 import { STRAPI_URL } from "@/app/constant";
 import Link from "next/link";
@@ -20,51 +19,34 @@ const AdmissionTableOfContent = ({
   highlight,
   desc,
   tocfaqs,
-  tocimg,
   tocbtn,
 }: Props) => {
   return (
     <>
-      <section className="py-[50px]">
-        <div className="flex items-center lg:gap-6">
-          <div className="w-1/4 hidden lg:block">
-            {tocimg && (
-              <Image
-                src={`${STRAPI_URL}${tocimg?.url}`}
-                width={476}
-                height={876}
-                alt={tocimg.alternativeText || "Table of content"}
-                className="w-full h-full"
-              />
-            )}
+      <section className="py-8 md:py-16 px-4 md:px-0 bg-white">
+        <div className="max-w-[1440px] mx-auto w-full">
+          <div className="text-center mb-10 md:mb-16">
+            <h3 className="text-2xl md:text-[40px] font-bold mb-4 text-black uppercase tracking-tight">
+              {heading} <span className="text-[#0a41a1]">{highlight}</span>
+            </h3>
+            <p className="text-sm md:text-lg text-gray-500 max-w-3xl mx-auto font-medium">{desc}</p>
           </div>
-          <div className="w-full lg:w-3/4">
-            <div className="mx-auto max-w-6xl">
-              <div className="text-center mb-20">
-                <h3 className="text-3xl md:text-[40px]  font-semibold mb-5 text-[#0a41a1]">
-                  {heading}
-                  <span className="text-[#e61f21]">{highlight}</span>
-                </h3>
-
-                <p className="text-base">{desc}</p>
-              </div>
-              <div className="relative p-5 lg:p-0 bg-[url(/programmes/faq.png)] bg-cover bg-no-repeat md:bg-none overflow-hidden rounded-xl md:rounded-none">
-                <div className="absolute inset-0 bg-black/60 md:hidden pointer-events-none"></div>
-                <div className="relative z-10 w-full">
-                  <AdmissionTableOfContentTab tocfaqs={tocfaqs} />
-                </div>
-              </div>
-              <div className="flex items-center justify-center mt-10 md:mt-20">
-                {tocbtn?.btn_link && (
-                  <Link
-                    href={tocbtn?.btn_link}
-                    className={` p-4 text-white bg-[#0a41a1] text-base rounded-[8px]`}
-                  >
-                    {tocbtn?.btn_text}
-                  </Link>
-                )}
-              </div>
+          
+          <div className="relative overflow-hidden">
+            <div className="relative z-10 w-full">
+              <AdmissionTableOfContentTab tocfaqs={tocfaqs} />
             </div>
+          </div>
+
+          <div className="flex items-center justify-center mt-8 md:mt-12">
+            {tocbtn?.btn_link && (
+              <Link
+                href={tocbtn?.btn_link}
+                className="w-full md:w-auto justify-center flex items-center py-3.5 px-10 text-white bg-[#0a41a1] hover:bg-[#051730] text-base font-semibold rounded-sm transition-all duration-500 shadow-lg shadow-blue-900/10"
+              >
+                {tocbtn?.btn_text}
+              </Link>
+            )}
           </div>
         </div>
       </section>

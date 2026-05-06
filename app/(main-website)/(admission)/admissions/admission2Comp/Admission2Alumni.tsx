@@ -1,24 +1,25 @@
 import { Adm2Alumni } from "@/lib/types/admission2";
 import Admission2AlumniSlides from "./Admission2AlumniSlides";
 
-
 type Props = {
   admAlumni: Adm2Alumni[];
 };
 
 const Admission2Alumni = ({ admAlumni }: Props) => {
   return (
-    <section className="py-[50px] px-4">
-      <div className="max-w-[600px] mx-auto w-full text-center">
-        <h3 className="text-[40px] font-semibold text-center mb-5 leading-[1.2] text-[#0a41a1]">
-          Voices of <span className="text-[#e61f21]">Our Alumni</span>
-        </h3>
-        <p className="text-base text-[#544d5d] font-medium">
-          Our Success Stories
-        </p>
-      </div>
-      <div className="mt-5">
-        <Admission2AlumniSlides alumniData={admAlumni} />
+    <section className="py-8 md:py-16 px-4 md:px-0 bg-[#f9f9f9]">
+      <div className="max-w-[1440px] mx-auto w-full">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl md:text-5xl font-bold text-black mb-4 leading-tight">
+            Voices of Our Alumni
+          </h2>
+          <p className="text-sm md:text-lg text-gray-500 font-medium max-w-2xl mx-auto">
+            Our Success Stories
+          </p>
+        </div>
+        <div className="md:px-10">
+          <Admission2AlumniSlides alumniData={admAlumni} />
+        </div>
       </div>
     </section>
   );

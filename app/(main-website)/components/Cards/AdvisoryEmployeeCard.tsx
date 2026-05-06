@@ -22,7 +22,7 @@ export const AdvisoryEmployeeCard = ({ name, imgUrl, qual, desg }: Props) => {
             style={{
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
             }}
-            className="rounded-[15px]"
+            className="rounded-[15px] sm:w-[272px] h-[167px] sm:h-[295px]  "
           />
         </div>
         {/* <Link
@@ -33,7 +33,9 @@ export const AdvisoryEmployeeCard = ({ name, imgUrl, qual, desg }: Props) => {
         <span className="flex flex-col gap-1.5 text-base">
           <span className=" md:text-2xl font-bold leading-[1]">{name}</span>
           <span className="text-[14px] ">{desg}</span>
-          <span className="md:text-[16px] font-semibold">{qual}</span>
+          <span className="md:text-[16px] font-semibold hidden md:block">
+            {qual}
+          </span>
         </span>
         {/* </Link> */}
       </div>

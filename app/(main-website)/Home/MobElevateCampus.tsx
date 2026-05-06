@@ -83,8 +83,8 @@ const MobElevateCampus = ({
                       {elevateCampus2?.subtitle}
                     </h4>
                     <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-[1.5] mb-8">
-                      {elevateCampus2?.beforehighlighttext}
-                      <span className="text-[#e31e24]">
+                      {elevateCampus2?.beforehighlighttext}{" "}
+                      <span className="text-[#034272]">
                         {elevateCampus2?.highlighttext}
                       </span>{" "}
                       {elevateCampus2?.afterhighlighttext}
@@ -93,7 +93,7 @@ const MobElevateCampus = ({
                     {(elevateCampus2?.link || elevateCampus2?.linkclass) && (
                       <Link
                         href={elevateCampus2?.link}
-                        className={`text-[#e31e24] pb-2 ${elevateCampus2?.linkclass}`}
+                        className={`text-[#034272] pb-2 ${elevateCampus2?.linkclass}`}
                       >
                         {elevateCampus2?.linktext}
                       </Link>

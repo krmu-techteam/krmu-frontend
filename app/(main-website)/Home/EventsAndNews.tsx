@@ -17,11 +17,11 @@ const EventsAndNews = async ({
   const newsandeventsdata = await getNewsEventsWP(1, 3);
 
   return (
-    <section className="bg-[url(/homenewsevent.webp)] bg-cover bg-no-repeat px-5 pb-12 lg:px-8 lg:pb-20">
-      <div className="w-full">
+    <section>
+      <div className="w-full xl:max-w-7xl 2xl:max-w-[1664px] mx-auto bg-gray-50 p-5 sm:p-10">
         <div>
           <h4
-            className="text-4xl lg:text-5xl leading-[1.17] font-light text-center text-white lg:pt-2.5 lg:pb-16 lg:text-left"
+            className="text-2xl sm:text-4xl xl:text-5xl leading-[1.17] font-semibold text-center text-black lg:pt-2.5 lg:pb-10 lg:text-left"
             dangerouslySetInnerHTML={{
               __html: title || "",
             }}
@@ -36,7 +36,7 @@ const EventsAndNews = async ({
             {(newsandeventbtn?.buttonlink || newsandeventbtn?.buttonclass) && (
               <Link
                 href={newsandeventbtn?.buttonlink}
-                className={`py-2 px-[18px] text-white bg-[#cb000d] hover:bg-[#034272] inline-block rounded-md text-base md:text-xl font-bold ${newsandeventbtn?.buttonclass}`}
+                className={`bg-[#034272] font-semibold text-sm sm:text-base border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 ${newsandeventbtn?.buttonclass || ""}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

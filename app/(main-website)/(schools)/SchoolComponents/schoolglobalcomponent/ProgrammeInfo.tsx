@@ -73,44 +73,6 @@ const ProgrammeInfo = ({ catName }: Props) => {
     [catName],
   );
 
-  // const fetchProg = useCallback(
-  //   async (deg: string) => {
-  //     try {
-  //       let data: ProgrammeCardData[] = [];
-
-  //       if (deg === "Doctoral Programmes") {
-  //         // 🔹 Fetch Ph.D. data using different API
-  //         const phdRes = await getSchoolProgrammePhdDataDegree(
-  //           "Doctoral Programme",
-  //           catName
-  //         );
-  //         // Convert PhD API format to match the rest
-  //         data = phdRes?.data?.map((item: any) => ({
-  //           id: item.id,
-  //           title: item.heading,
-  //           programmeslug: item.phdslug,
-  //           highlightitle: "",
-  //           criteria: item.criteria,
-  //         })) || [];
-  //       } else {
-  //         // 🔹 Fetch UG, PG, Diploma normally
-  //         const res = await getSchoolProgrammeInfoByDegree(deg, catName);
-  //         data = res || [];
-  //       }
-
-  //       setPrograms((prev) => ({ ...prev, [deg]: data }));
-
-  //       // Set default active program if none selected
-  //       if (data.length > 0) {
-  //         setActiveProgramId(data[0].id);
-  //       }
-  //     } catch (err) {
-  //       console.error("Failed to fetch programmes:", err);
-  //     }
-  //   },
-  //   [catName]
-  // );
-
   // On mount / degree change
   useEffect(() => {
     if (!programs[activeDegree]) {
@@ -150,9 +112,10 @@ const ProgrammeInfo = ({ catName }: Props) => {
   const criteria = currentProgram?.criteria;
 
   return (
-    <div className="flex mb-10">
+    <div className="flex">
       {/* LEFT SIDE */}
-      <div className="w-full xl:w-1/2 bg-[url(/schools/prog-bg.webp)] bg-center bg-cover bg-no-repeat p-2.5 sm:p-5 z-10 rounded-3xl">
+      {/* <div className="w-full xl:w-1/2 bg-[url(/schools/prog-bg.webp)] bg-center bg-cover bg-no-repeat p-2.5 sm:p-5 z-10 rounded-3xl"> */}
+      <div className="w-full xl:w-1/2 bg-[#051630] bg-center bg-cover bg-no-repeat p-2.5 sm:p-5 z-10 rounded-3xl">
         <Tabs
           defaultValue="ug"
           value={degreeTabs.find((d) => d.value === activeDegree)?.tabValue}
@@ -199,7 +162,7 @@ const ProgrammeInfo = ({ catName }: Props) => {
                       onMouseEnter={() => handleMouseEnter(prog.id)}
                       onFocus={() => handleMouseEnter(prog.id)}
                       className={`lg:w-1/2 rounded-4xl h-full font-semibold w-full cursor-pointer p-5 sm:p-[30px] transition-colors ${
-                        isActive
+                        isActive 
                           ? "activehighlightprog"
                           : "text-white hover:bg-white hover:text-black"
                       }`}
@@ -286,7 +249,7 @@ const ProgrammeInfo = ({ catName }: Props) => {
             <div className="flex gap-4">
               <Link
                 href={criteria.eligibility_utm_links || "#"}
-                className="text-[#E31E24] text-center font-bold text-base py-2.5 px-[30px] rounded-md"
+                className="text-[#051630] text-center font-bold text-base py-2.5 px-[30px] rounded-md"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -298,7 +261,7 @@ const ProgrammeInfo = ({ catName }: Props) => {
               </Link>
               <Link
                 href={`/programs/${currentProgram?.programmeslug || "#"}`}
-                className="text-white bg-[#E31E24] text-center font-bold text-base py-2.5 px-[30px] rounded-md"
+                className="text-white bg-[#051630] text-center font-bold text-base py-2.5 px-[30px] rounded-md"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

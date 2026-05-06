@@ -28,12 +28,13 @@ const HomeTestimonials = ({ testiData }: TestimonialProp) => {
             delay: 2000,
           }),
         ]}
+        className="rounded-md"
       >
-        <CarouselContent>
+        <CarouselContent className="rounded-md">
           {testiData &&
             testiData.map((item) => {
               return (
-                <CarouselItem key={item?.id} className="md:basis-1/2">
+                <CarouselItem key={item?.id} className="2xl:basis-1/2 rounded-md">
                   <HomeTestimonialCard
                     profilename={item?.profilename}
                     info={item?.profileinfo}
@@ -46,11 +47,11 @@ const HomeTestimonials = ({ testiData }: TestimonialProp) => {
         </CarouselContent>
         <CarouselPrevious
           className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px]
-         top-[115%] left-[20%] sm:left-[30%] xl:top-[100%] xl:left-[-66%]"
+         top-[107%] sm:top-[115%] left-[20%] sm:left-[30%] xl:top-[88%] xl:left-[-66%]"
         />
         <CarouselNext
           className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px] 
-         top-[115%] right-[20%] sm:right-[30%] xl:top-[100%] xl:right-[145%]"
+         top-[107%] sm:top-[115%] right-[20%] sm:right-[30%] xl:top-[88%] xl:right-[148%] 2xl:right-[152%]"
         />
       </Carousel>
     </>

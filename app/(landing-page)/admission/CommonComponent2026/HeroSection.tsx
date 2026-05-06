@@ -25,9 +25,7 @@ const HeroSection = ({
 }: Props) => {
   return (
     <>
-      <section
-        className={`pb-10 sm:py-20 md:pt-14 md:pb-14 ${lpclName || ""}`}
-      >
+      <section className={`pb-10 sm:py-20 md:pt-14 md:pb-14 ${lpclName || ""}`}>
         <div className="max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row items-center gap-5 sm:gap-10">
           <div className="w-full xl:w-2/3 text-white text-center md:text-left container-1 sm:py-0 sm:px-5">
             <div className="p-5 sm:p-0">
@@ -76,9 +74,23 @@ const HeroSection = ({
             )}
           </div> */}
 
-          <div className="w-full xl:w-1/3 container-2 px-5" id="apply-form">
+          <div className="w-full xl:w-1/3 container-2 px-5 scroll-mt-40" id="apply-section">
             {formId && (
-              <NoPaperFormsWidget widgetId={formId} height="700px" />
+              <>
+                <div className="heroBannerForm__form">
+                  <div className="heroBannerForm-header">
+                    <h3 className="mb-0">
+                      <strong>
+                        Apply Today for{" "}
+                        <span className="uppercase">
+                          K.R. Mangalam University
+                        </span>
+                      </strong>
+                    </h3>
+                  </div>
+                  <NoPaperFormsWidget widgetId={formId} height="500px" />
+                </div>
+              </>
             )}
           </div>
         </div>

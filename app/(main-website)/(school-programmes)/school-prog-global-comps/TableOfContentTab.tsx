@@ -15,65 +15,52 @@ const TableOfContentTab = ({ tocfaqs }: Props) => {
   return (
     <Tabs
       defaultValue={tocfaqs?.[0]?.tocpoint.toLowerCase() ?? ""}
-      className="flex-row text-white"
+      className="flex flex-col w-full"
     >
       
-      {/* Tab list (dynamic tocpoints) */}
-      <TabsList className="flex-col w-1/2 md:w-1/3 h-full bg-transparent items-start">
-        <div>
-          <h4 className="text-sm md:text-2xl font-medium mb-8 text-white md:text-black">
-            Table of content
-          </h4>
-        </div>
-
+      {/* Tab list: Horizontal Top Navigation */}
+      <TabsList className="flex flex-row overflow-x-auto w-full h-auto bg-transparent border-b border-gray-200 justify-start md:justify-center no-scrollbar mb-8 gap-8 md:gap-16">
         {tocfaqs.map((section) => (
           <TabsTrigger
             key={section.id}
             value={section.tocpoint.toLowerCase()}
-            className="relative text-xs md:text-xl cursor-pointer p-0 mb-5
-               text-white md:text-black
-               data-[state=active]:md:text-[#0a41a1]
+            className="relative text-base md:text-xl font-medium cursor-pointer px-1 py-2 
+               text-gray-500 
+               data-[state=active]:text-[#0a41a1]
                data-[state=active]:bg-transparent
                data-[state=active]:shadow-none
-               data-[state=active]:after:content-['']
-               data-[state=active]:after:absolute
-               data-[state=active]:after:top-1/2
-               data-[state=active]:after:translate-y-[-50%]
-               data-[state=active]:after:left-full
-               data-[state=active]:after:ml-[5px]
-               data-[state=active]:md:after:w-[100px]
-               data-[state=active]:after:w-[20px]
-               data-[state=active]:after:h-[2px]
-               data-[state=active]:after:bg-[#0a41a1]"
+               after:absolute after:bottom-[-1px] after:left-0 after:w-0 after:h-[3px] after:bg-[#0a41a1] after:transition-all after:duration-300
+               data-[state=active]:after:w-full "
           >
             {section.tocpoint}
           </TabsTrigger>
         ))}
       </TabsList>
 
-      {/* Tab content (dynamic accordions per section) */}
-      <div className="w-1/2 md:w-2/3">
+      {/* Tab content: Full Width Section */}
+      <div className="w-full">
         {tocfaqs.map((section) => (
           <TabsContent
             key={section.id}
             value={section.tocpoint.toLowerCase()}
+            className="mt-0"
           >
             <Accordion
               type="single"
               collapsible
-              className="w-full cursor-pointer"
+              className="w-full cursor-pointer space-y-4"
               defaultValue={`item-${section.faq[0]?.id ?? 1}`}
             >
               {section.faq.map((item) => (
                 <AccordionItem
                   key={item.id}
                   value={`item-${item.id}`}
-                  className="border-none hidetocplusminusicon"
+                  className="border border-gray-200 px-4 py-2 rounded-md last:border-b"
                 >
-                  <AccordionTrigger className="text-sm md:text-xl cursor-pointer tocplusminusicon text-white md:text-black">
+                  <AccordionTrigger className="text-sm md:text-xl cursor-pointer text-black font-semibold text-left py-3 hover:text-[#0a41a1] transition-colors">
                     {item.ques}
                   </AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 text-balance text-white md:text-black">
+                  <AccordionContent className="flex flex-col gap-4 text-balance text-gray-700 leading-relaxed pb-6 text-sm md:text-lg">
                     <p>{item.ans}</p>
                   </AccordionContent>
                 </AccordionItem>

@@ -16,7 +16,7 @@ const HomeTestimonialCard = ({
   profileImage,
 }: ProfileProp) => {
   return (
-    <div className="bg-white p-5 text-black rounded-[30px]  h-full">
+    <div className="bg-white p-5 text-black rounded-md  h-full">
       <div className="flex items-center flex-col sm:flex-row gap-4">
         <div>
           <Image
@@ -24,17 +24,17 @@ const HomeTestimonialCard = ({
             width={128}
             height={128}
             alt={profileImage?.alternativeText || "Profile Image"}
-            className="mb-5"
+            className="mb-5 rounded-md"
           />
         </div>
-        <div className="font-bold text-[20px] text-center sm:text-left">
-          <p className="leading-[1.5]">{profilename}</p>
-          <p>{desg}</p>
+        <div className=" text-center sm:text-left">
+          <p className="leading-[1.5] font-bold text-xl">{profilename}</p>
+          <p className="font-normal text-base">{desg}</p>
         </div>
       </div>
       <div>
         <p
-          className="my-5"
+          className="my-5 text-lg text-justify sm:text-left"
           dangerouslySetInnerHTML={{
             __html: info,
           }}

@@ -1,201 +1,179 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
+import { Wallet, Home, Truck, ShieldCheck } from "lucide-react";
 
 const Admission2Fee = () => {
   return (
-    <section className="py-[50px] px-4">
-      <div className="max-w-[1320px] mx-auto w-full pt-12 pb-20">
-        <h4 className="text-[32px] mb-12 text-[#0a41a1] font-semibold">
+    <section className="py-10 md:py-16 px-4 md:px-0 bg-[#fcfdfe]">
+      <div className="max-w-[1200px] mx-auto w-full">
+        <h4 className="text-2xl md:text-3xl mb-8 text-black font-bold border-l-4 border-black pl-5 leading-none">
           Fee Details
         </h4>
 
-        <div className="mt-6">
-          {/* THIS MAKES THE TABS VERTICAL */}
-          <Tabs
-            defaultValue="item-1"
-            orientation="vertical"
-            className="flex flex-col lg:flex-row"
-          >
-            {/* Vertical tab list */}
-            <div className="w-full lg:w-1/2">
-              <TabsList className="flex flex-col w-full lg:mt-24 bg-none bg-transparent">
-                <TabsTrigger
-                  value="item-1"
-                  className="fee_tab w-full py-[30px] px-5 break-all md:text-xl"
-                >
-                  Application Fee <br className="md:hidden" /> and Registration
-                  Fee
-                </TabsTrigger>
-                <TabsTrigger
-                  value="item-2"
-                  className="fee_tab w-full py-[30px] px-5 break-all md:text-xl"
-                >
-                  Hostel Fee
-                </TabsTrigger>
-                <TabsTrigger
-                  value="item-3"
-                  className="fee_tab w-full py-[30px] px-5 break-all md:text-xl"
-                >
-                  Transport Fee
-                </TabsTrigger>
-                <TabsTrigger
-                  value="item-4"
-                  className="fee_tab w-full py-[30px] px-5 break-all md:text-xl"
-                >
-                  Security Deposit
-                </TabsTrigger>
-              </TabsList>
-              <div className="hidden lg:flex items-center justify-center">
-                <Link
-                  href="/fee-structure"
-                  className="mt-40 bg-[#e61f21] text-white text-lg flex items-center justify-center py-[15px] px-[30px] font-medium w-fit rounded-[10px]"
-                  style={{
-                    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-                  }}
-                >
-                  View Fees Structure
-                </Link>
-              </div>
+        <Tabs
+          defaultValue="item-1"
+          orientation="vertical"
+          className="flex flex-col lg:flex-row gap-6 lg:gap-10"
+        >
+          {/* NAVIGATION */}
+          <div className="w-full lg:w-[380px] shrink-0">
+            <TabsList className="flex flex-col w-full h-auto bg-white border border-gray-100 p-1.5 rounded-md shadow-sm">
+              <TabsTrigger
+                value="item-1"
+                className="w-full text-left justify-start py-3.5 px-4 rounded-md transition-all duration-300 whitespace-nowrap leading-tight flex items-center gap-3
+                data-[state=active]:bg-[#0a41a1] data-[state=active]:text-white data-[state=active]:font-semibold
+                data-[state=inactive]:text-gray-500 hover:bg-gray-50 text-[13px] md:text-sm"
+              >
+                <Wallet size={16} className="shrink-0" />
+                <span>Application Fee and Registration Fee</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="item-2"
+                className="w-full text-left justify-start py-3.5 px-4 rounded-md transition-all duration-300 whitespace-nowrap leading-tight flex items-center gap-3
+                data-[state=active]:bg-[#0a41a1] data-[state=active]:text-white data-[state=active]:font-bold
+                data-[state=inactive]:text-gray-500 hover:bg-gray-50 text-[13px] md:text-sm"
+              >
+                <Home size={16} className="shrink-0" />
+                <span>Hostel Fee</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="item-3"
+                className="w-full text-left justify-start py-3.5 px-4 rounded-md transition-all duration-300 whitespace-nowrap leading-tight flex items-center gap-3
+                data-[state=active]:bg-[#0a41a1] data-[state=active]:text-white data-[state=active]:font-semibold
+                data-[state=inactive]:text-gray-500 hover:bg-gray-50 text-[13px] md:text-sm"
+              >
+                <Truck size={16} className="shrink-0" />
+                <span>Transport Fee</span>
+              </TabsTrigger>
+              <TabsTrigger
+                value="item-4"
+                className="w-full text-left justify-start py-3.5 px-4 rounded-md transition-all duration-300 whitespace-nowrap leading-tight flex items-center gap-3
+                data-[state=active]:bg-[#0a41a1] data-[state=active]:text-white data-[state=active]:font-semibold
+                data-[state=inactive]:text-gray-500 hover:bg-gray-50 text-[13px] md:text-sm"
+              >
+                <ShieldCheck size={16} className="shrink-0" />
+                <span>Security Deposit</span>
+              </TabsTrigger>
+            </TabsList>
+            
+            <div className="hidden lg:block mt-6">
+              <Link
+                href="/fee-structure"
+                className="inline-flex items-center justify-center py-3 px-8 bg-[#0a41a1] hover:bg-[#051730] text-white text-sm font-bold rounded-md transition-all duration-500 shadow-md"
+              >
+                View Fees Structure
+              </Link>
             </div>
-            {/* Content section */}
-            <div className="w-full lg:w-1/2 pt-40 lg:pt-0">
-              <TabsContent value="item-1">
-                <div
-                  className="max-w-[636px] mx-auto w-full bg-white rounded-[10px]"
-                  style={{
-                    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-                  }}
-                >
-                  <div className="flex items-center justify-between bg-[#f9f9f9]">
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 font-semibold">
-                      Fee Type
-                    </span>
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 font-semibold">
-                      Amount
-                    </span>
-                  </div>
-                  <div className="flex justify-between border-b border-[#f2f2f2]">
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 md:w-3/4">
+          </div>
+
+          {/* CONTENT */}
+          <div className="flex-1 w-full overflow-hidden">
+            <TabsContent value="item-1" className="mt-0 outline-none">
+              <div className="bg-white rounded-md border border-gray-100 shadow-sm overflow-hidden">
+                <div className="flex items-center justify-between bg-gray-50/50 px-6 py-4 border-b border-gray-100">
+                  <span className="text-md font-semibold text-gray-400 tracking-wide">Fee Type</span>
+                  <span className="text-md font-semibold text-gray-400 tracking-wide text-right">Amount</span>
+                </div>
+                <div className="divide-y divide-gray-50">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between px-6 py-3 hover:bg-gray-50/30 transition-colors gap-4">
+                    <span className="text-[#051630] font-medium text-sm md:text-[15px] sm:w-3/4 leading-relaxed">
                       Application Fee (one time) (Non refundable)
                     </span>
-                    <span className="py-[15px] pr-[25px] pl-5 font-semibold w-1/2 md:w-1/4">
+                    <span className="text-xl font-semibold text-[#0a41a1] sm:text-right">
                       ₹ 1000/-
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 md:w-3/4">
-                      Registration Fee (To be paid on offer of Admission,
-                      adjusted in Semester Fee)
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between px-6 py-3 hover:bg-gray-50/30 transition-colors gap-4">
+                    <span className="text-[#051630] font-medium text-sm md:text-[15px] sm:w-3/4 leading-relaxed">
+                      Registration Fee (To be paid on offer of Admission, adjusted in Semester Fee)
                     </span>
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 md:w-1/4 font-semibold">
+                    <span className="text-xl font-semibold text-[#0a41a1] sm:text-right">
                       ₹ 25000/-
                     </span>
                   </div>
                 </div>
-              </TabsContent>
+              </div>
+            </TabsContent>
 
-              <TabsContent value="item-2">
-                <div
-                  className="max-w-[636px] mx-auto w-full bg-white rounded-[10px]"
-                  style={{
-                    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-                  }}
-                >
-                  <div className="flex items-center justify-between bg-[#f9f9f9]">
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 font-semibold">
-                      Fee Type
-                    </span>
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 font-semibold">
-                      Amount
-                    </span>
-                  </div>
-                  <div className="flex justify-between border-b border-[#f2f2f2]">
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 md:w-3/4">
+            <TabsContent value="item-2" className="mt-0 outline-none">
+              <div className="bg-white rounded-md border border-gray-100 shadow-sm overflow-hidden">
+                <div className="flex items-center justify-between bg-gray-50/50 px-6 py-3 border-b border-gray-100">
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Fee Type</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest text-right">Amount</span>
+                </div>
+                <div className="divide-y divide-gray-50">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-gray-50/30 transition-colors gap-4">
+                    <span className="text-[#051630] font-medium text-sm md:text-[15px] sm:w-3/4 leading-relaxed">
                       Hostel Security Deposit (Refundable)
                     </span>
-                    <span className="py-[15px] pr-[25px] pl-5 font-semibold w-1/2 md:w-1/4">
+                    <span className="text-xl font-bold text-[#0a41a1] sm:text-right">
                       ₹ 20000/-
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 md:w-3/4">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-gray-50/30 transition-colors gap-4">
+                    <span className="text-[#051630] font-medium text-sm md:text-[15px] sm:w-3/4 leading-relaxed">
                       Hostel Fee (per annum)
                     </span>
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 md:w-1/4 font-semibold">
+                    <span className="text-xl font-bold text-[#0a41a1] sm:text-right">
                       ₹ 1,72,000/-
                     </span>
                   </div>
                 </div>
-              </TabsContent>
-              <TabsContent value="item-3">
-                <div
-                  className="max-w-[636px] mx-auto w-full bg-white rounded-[10px]"
-                  style={{
-                    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-                  }}
-                >
-                  <div className="flex items-center justify-between bg-[#f9f9f9]">
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 font-semibold">
-                      Fee Type
-                    </span>
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 font-semibold">
-                      Amount
-                    </span>
-                  </div>
-                  <div className="flex justify-between border-b border-[#f2f2f2]">
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 md:w-3/4">
+              </div>
+            </TabsContent>
+
+            <TabsContent value="item-3" className="mt-0 outline-none">
+              <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+                <div className="flex items-center justify-between bg-gray-50/50 px-6 py-3 border-b border-gray-100">
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Fee Type</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest text-right">Amount</span>
+                </div>
+                <div className="divide-y divide-gray-50">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-gray-50/30 transition-colors gap-4">
+                    <span className="text-[#051630] font-medium text-sm md:text-[15px] sm:w-3/4 leading-relaxed">
                       Transport Fee (per annum)
                     </span>
-                    <span className="py-[15px] pr-[25px] pl-5 font-semibold w-1/2 md:w-1/4">
+                    <span className="text-xl font-bold text-[#0a41a1] sm:text-right">
                       ₹ 50000/-
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 md:w-3/4">
-                      Shuttle Transport (per annum) (From Rajiv Chowk and Huda
-                      City Centre to the University)
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-gray-50/30 transition-colors gap-4">
+                    <span className="text-[#051630] font-medium text-sm md:text-[15px] sm:w-3/4 leading-relaxed">
+                      Shuttle Transport (per annum) (From Rajiv Chowk and Huda City Centre to the University)
                     </span>
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 md:w-1/4 font-semibold">
+                    <span className="text-xl font-bold text-[#0a41a1] sm:text-right">
                       ₹ 25000/
                     </span>
                   </div>
                 </div>
-              </TabsContent>
-              <TabsContent value="item-4">
-                <div
-                  className="max-w-[636px] mx-auto w-full bg-white rounded-[10px]"
-                  style={{
-                    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-                  }}
-                >
-                  <div className="flex items-center justify-between bg-[#f9f9f9]">
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 font-semibold">
-                      Fee Type
-                    </span>
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 font-semibold">
-                      Amount
-                    </span>
-                  </div>
-                  <div className="flex justify-between border-b border-[#f2f2f2]">
-                    <span className="py-[15px] pr-[25px] pl-5 w-1/2 md:w-3/4">
+              </div>
+            </TabsContent>
+
+            <TabsContent value="item-4" className="mt-0 outline-none">
+              <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+                <div className="flex items-center justify-between bg-gray-50/50 px-6 py-3 border-b border-gray-100">
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Fee Type</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest text-right">Amount</span>
+                </div>
+                <div className="divide-y divide-gray-50">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-gray-50/30 transition-colors gap-4">
+                    <span className="text-[#051630] font-medium text-sm md:text-[15px] sm:w-3/4 leading-relaxed">
                       Security Deposit (Refundable)
                     </span>
-                    <span className="py-[15px] pr-[25px] pl-5 font-semibold w-1/2 md:w-1/4">
+                    <span className="text-xl font-bold text-[#0a41a1] sm:text-right">
                       ₹ 10000/-
                     </span>
                   </div>
                 </div>
-              </TabsContent>
-            </div>
-          </Tabs>
-        </div>
-        <div className="flex lg:hidden items-center justify-center">
+              </div>
+            </TabsContent>
+          </div>
+        </Tabs>
+
+        <div className="flex lg:hidden items-center justify-center mt-10">
           <Link
             href="/fee-structure"
-            className="mt-20 bg-[#e61f21] text-white text-lg flex items-center justify-center py-[15px] px-[30px] font-medium w-fit rounded-[10px]"
-            style={{
-              boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-            }}
+            className="text-center py-3 px-10 bg-[#0a41a1] text-white font-semibold rounded-sm md:rounded-xl shadow-md"
             target="_blank" rel="noopener noreferrer"
           >
             View Fees Structure

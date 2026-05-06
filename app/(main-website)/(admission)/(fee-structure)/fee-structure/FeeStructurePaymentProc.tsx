@@ -40,7 +40,7 @@ const FeeStructurePaymentProc = () => {
             >
               <AccordionItem
                 value="item-1"
-                className="bg-white text-[#716d6c] rounded-[8px]"
+                className="bg-white text-[#716d6c] rounded-sm"
               >
                 <AccordionTrigger className="py-[15px] px-[25px] bg-white text-xl  hover:no-underline cursor-pointer feestructurepaymentaccpanel">
                   How often are the fees reviewed?
@@ -70,7 +70,7 @@ const FeeStructurePaymentProc = () => {
               </AccordionItem>
               <AccordionItem
                 value="item-3"
-                className="bg-white text-[#716d6c] rounded-[8px]"
+                className="bg-white text-[#716d6c] rounded-sm"
               >
                 <AccordionTrigger className="py-[15px] px-[25px] bg-white text-xl  hover:no-underline cursor-pointer feestructurepaymentaccpanel">
                   Are there any additional fees not listed here?
@@ -86,7 +86,7 @@ const FeeStructurePaymentProc = () => {
               </AccordionItem>
               <AccordionItem
                 value="item-4"
-                className="bg-white text-[#716d6c] rounded-[8px]"
+                className="bg-white text-[#716d6c] rounded-sm"
               >
                 <AccordionTrigger className="py-[15px] px-[25px] bg-white text-xl  hover:no-underline cursor-pointer feestructurepaymentaccpanel">
                   How can I apply for financial aid?

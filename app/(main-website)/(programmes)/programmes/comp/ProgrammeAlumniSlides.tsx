@@ -7,6 +7,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { ProgrammeAlumniData } from "@/lib/types/programme";
 import Autoplay from "embla-carousel-autoplay";
@@ -37,31 +39,34 @@ const ProgrammeAlumniSlides = ({ alumniData }: Props) => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full rounded-2xl">
       <Carousel
         className="w-full"
         opts={{ align: "start", loop: true }}
         setApi={onInit}
-        plugins={[
-          Autoplay({
-            delay: 1500,
-          }),
-        ]}
+        // plugins={[
+        //   Autoplay({
+        //     delay: 1500,
+        //   }),
+        // ]}
       >
         <CarouselContent className="-ml-1">
           {alumniData.map((item, index) => (
-            <CarouselItem key={index} className="lg:basis-1/2">
-              <div className="p-1">
-                {/* FIX: pass correct prop */}
-                <AlumniSlide item={item} />
-              </div>
+            <CarouselItem
+              key={index}
+              className="lg:basis-1/2 bg-white mx-2 p-5border border-gray-100 p-5 md:p-6 shadow-sm rounded-none"
+            >
+              {/* FIX: pass correct prop */}
+              <AlumniSlide item={item} />
             </CarouselItem>
           ))}
         </CarouselContent>
+        <CarouselPrevious className="left-0" />
+        <CarouselNext className="right-0" />
       </Carousel>
 
       {/* --- Pagination Dots --- */}
-      <div className="flex justify-center gap-2 mt-4">
+      <div className="flex justify-center gap-2 mt-10 mb-5">
         {Array.from({ length: totalSlides }).map((_, index) => (
           <button
             key={index}

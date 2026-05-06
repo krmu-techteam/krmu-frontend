@@ -11,7 +11,7 @@ const KrmuCampusHero = () => {
           </h1>
           <p>
             {`
-        At K.R. Mangalam University, our 26-acre state-of-the-art Gurugram campus is more than just a physical space, it’s a vibrant hub of learning, innovation, and community. Nestled in the lap of the scenic Aravalli Hills, the campus offers a serene yet stimulating environment that inspires creativity and fuels ambition.`}
+        At K.R. Mangalam University, our 35-acre state-of-the-art Gurugram campus is more than just a physical space, it’s a vibrant hub of learning, innovation, and community. Nestled in the lap of the scenic Aravalli Hills, the campus offers a serene yet stimulating environment that inspires creativity and fuels ambition.`}
           </p>
           <br />
           <p>

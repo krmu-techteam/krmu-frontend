@@ -19,7 +19,7 @@ import { soedFaculties } from "@/lib/api/school-faculties/soed";
 import { soasFaculties } from "@/lib/api/school-faculties/soas";
 
 // ---------- Constants ----------
-const ITEMS_PER_LOAD = 4;
+const ITEMS_PER_LOAD = 5;
 
 // ---------- School Categories (runtime + type-safe) ----------
 export const SCHOOL_CATEGORIES = [
@@ -100,7 +100,7 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
 
   return (
     <div className="pt-16 px-4 pb-4">
-      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5">
         {visibleFaculties.map((faculty) => (
           <StaticFacultyEmployeeCard
             key={faculty.id}
@@ -117,7 +117,7 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
         <div className="flex justify-center mt-8">
           <Button
             onClick={handleLoadMore}
-            className="py-3.5 px-8 bg-[#cb000d] text-white font-bold"
+            className="py-3.5 px-8 bg-[#051630] text-white font-bold cursor-pointer"
           >
             Load More
           </Button>

@@ -1,23 +1,25 @@
 import { getHomePageData } from "@/lib/api/home";
 import ADecade from "./(main-website)/Home/ADecade";
-import AFS from "./(main-website)/Home/AFS";
 import ElevateCampus from "./(main-website)/Home/ElevateCampus";
 import EventsAndNews from "./(main-website)/Home/EventsAndNews";
 import GlobalPartner from "./(main-website)/Home/GlobalPartner";
 import HeroSection from "./(main-website)/Home/HeroSection";
 import HomeTestimonial from "./(main-website)/Home/HomeTestimonial";
 import OurTopRecruiters from "./(main-website)/Home/OurTopRecruiters";
-import PlacementsRecruiters from "./(main-website)/Home/PlacementsRecruiters";
 import ShapingFuture from "./(main-website)/Home/ShapingFuture";
 import VisitExplore from "./(main-website)/Home/VisitExplore";
 import WhyKRMU from "./(main-website)/Home/WhyKRMU";
-import YourJourney from "./(main-website)/Home/YourJourney";
-import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
+import YourJourney2 from "./(main-website)/Home/homeComp/YourJourney2";
+// import YourJourney from "./(main-website)/Home/YourJourney";
+// import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
 import {
   createCollageOrUniversitySchema,
   createOrganizationSchema,
   createWebsiteSchema,
 } from "@/lib/api/common";
+// import YourJourney from "./(main-website)/Home/YourJourney";
+// import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
+
 import Script from "next/script";
 
 export default async function HomePage() {
@@ -150,14 +152,15 @@ export default async function HomePage() {
             rightContent={aDecadeData?.adecaderightcol}
           />
         )}
-        {yourJourneyData && (
+        <YourJourney2 />
+        {/* {yourJourneyData && (
           <YourJourney
             title={yourJourneyData?.title}
             content={yourJourneyData?.description}
             buttons={yourJourneyData?.button}
           />
-        )}
-        {AFSData && (
+        )} */}
+        {/* {AFSData && (
           <AFS
             content1={AFSData?.afs1content}
             content2={AFSData?.afs2content}
@@ -169,16 +172,20 @@ export default async function HomePage() {
             link2={AFSData?.link2}
             link3={AFSData?.link3}
           />
-        )}
+        )} */}
         {ourTopRecruitersData && (
           <OurTopRecruiters
             title={ourTopRecruitersData?.title}
             counters={ourTopRecruitersData?.counter}
             logos={ourTopRecruitersData?.logos}
+            title1={feeStructureScholarData?.text1 || ""}
+            title2={feeStructureScholarData?.text2 || ""}
+            link1={feeStructureScholarData?.link1 || ""}
+            link2={feeStructureScholarData?.link2 || ""}
           />
         )}
 
-        {feeStructureScholarData && (
+        {/* {feeStructureScholarData && (
           <PlacementsRecruiters
             title1={feeStructureScholarData?.text1}
             title2={feeStructureScholarData?.text2}
@@ -187,7 +194,7 @@ export default async function HomePage() {
             link1={feeStructureScholarData?.link1}
             link2={feeStructureScholarData?.link2}
           />
-        )}
+        )} */}
         {whyKRMUData && (
           <WhyKRMU
             title={whyKRMUData?.title}
@@ -195,30 +202,17 @@ export default async function HomePage() {
             description={whyKRMUData?.Descriptions}
           />
         )}
-        <div className="hidden lg:block">
-          {elevateCampusData && (
-            <ElevateCampus
-              elevateCampus={elevateCampusData?.elevatecampus1}
-              elevateImage1={elevateCampusData?.elevatecampusimage1}
-              elevateCampus2={elevateCampusData?.ElevateCampus2}
-              elevateImage2={elevateCampusData?.elevatecampusimage2}
-              elevateCampus3={elevateCampusData?.elevatecampus3}
-              elevateImage3={elevateCampusData?.elevatecampusimage3}
-            />
-          )}
-        </div>
-        <div className="lg:hidden">
-          {elevateCampusData && (
-            <MobElevateCampus
-              elevateCampus={elevateCampusData?.elevatecampus1}
-              elevateImage1={elevateCampusData?.elevatecampusimage1}
-              elevateCampus2={elevateCampusData?.ElevateCampus2}
-              elevateImage2={elevateCampusData?.elevatecampusimage2}
-              elevateCampus3={elevateCampusData?.elevatecampus3}
-              elevateImage3={elevateCampusData?.elevatecampusimage3}
-            />
-          )}
-        </div>
+
+        {elevateCampusData && (
+          <ElevateCampus
+            elevateCampus={elevateCampusData?.elevatecampus1}
+            elevateImage1={elevateCampusData?.elevatecampusimage1}
+            elevateCampus2={elevateCampusData?.ElevateCampus2}
+            elevateImage2={elevateCampusData?.elevatecampusimage2}
+            elevateCampus3={elevateCampusData?.elevatecampus3}
+            elevateImage3={elevateCampusData?.elevatecampusimage3}
+          />
+        )}
 
         {homeKRMTestimonialData && (
           <HomeTestimonial

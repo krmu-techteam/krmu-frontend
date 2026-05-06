@@ -1,8 +1,8 @@
 import AlumniLogoCard from "./AlumniLogoCard";
-import { StrapiMedia } from "@/lib/types/common";
+import { AlumniMedia, StrapiMedia } from "@/lib/types/common";
 
 type Props = {
-  AluLogos: StrapiMedia[];
+  AluLogos: AlumniMedia[] | StrapiMedia[];
 };
 
 const AlumniCarousel = ({ AluLogos }: Props) => {
@@ -15,7 +15,7 @@ const AlumniCarousel = ({ AluLogos }: Props) => {
     <div className="alumni-carousel">
       <div className="alumni-carousel__track">
         {repeatedLogos.map((logo, index) => (
-          <div className="alumni-carousel__item" key={`${logo.id}-${index}`}>
+          <div className="alumni-carousel__item my-5" key={`${logo.id}-${index}`}>
             <AlumniLogoCard
               logoUrl={logo.url}
               altText={logo.alternativeText || ""}
@@ -28,8 +28,6 @@ const AlumniCarousel = ({ AluLogos }: Props) => {
 };
 
 export default AlumniCarousel;
-
-
 
 // "use client";
 // import {

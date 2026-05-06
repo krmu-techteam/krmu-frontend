@@ -5,73 +5,62 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { TOCFAQ } from "@/lib/types/school-programme";
+import { Adm2FAQ } from "@/lib/types/admission2";
 
 type Props = {
-  tocfaqs: TOCFAQ[];
+  tocfaqs: Adm2FAQ[];
 };
 
 const AdmissionTableOfContentTab = ({ tocfaqs }: Props) => {
   return (
     <Tabs
       defaultValue={tocfaqs?.[0]?.tocpoint.toLowerCase() ?? ""}
-      className="flex-row text-white"
+      className="flex flex-col w-full"
     >
-      {/* Tab list (dynamic tocpoints) */}
-      <TabsList className="flex-col w-1/2 md:w-1/3 h-full bg-transparent items-start">
-        <div>
-          <h4 className="text-sm md:text-2xl font-medium mb-8 text-white md:text-black">
-            Table of content
-          </h4>
-        </div>
-
+      {/* Tab list: Horizontal Top Navigation */}
+      <TabsList className="flex flex-row overflow-x-auto w-full h-auto bg-transparent border-b border-gray-100 justify-start md:justify-center no-scrollbar mb-8 gap-8 md:gap-16 p-0">
         {tocfaqs.map((section) => (
           <TabsTrigger
             key={section.id}
             value={section.tocpoint.toLowerCase()}
-            className="relative text-xs md:text-xl cursor-pointer p-0 mb-5
-              font-semibold
-               text-white md:text-black
-               data-[state=active]:md:text-[#0a41a1]
+            className="relative text-[15px] md:text-xl font-bold cursor-pointer px-1 py-3 
+               text-gray-400 rounded-none bg-transparent shadow-none
+               data-[state=active]:text-[#0a41a1]
                data-[state=active]:bg-transparent
                data-[state=active]:shadow-none
-               data-[state=active]:after:content-['']
-               data-[state=active]:after:absolute
-               data-[state=active]:after:top-1/2
-               data-[state=active]:after:translate-y-[-50%]
-               data-[state=active]:after:left-full
-               data-[state=active]:after:ml-[5px]
-               data-[state=active]:md:after:w-[100px]
-               data-[state=active]:after:w-[20px]
-               data-[state=active]:after:h-[2px]
-               data-[state=active]:after:bg-[#0a41a1]"
+               after:absolute after:bottom-[-1px] after:left-0 after:w-0 after:h-[3px] after:bg-[#0a41a1] after:transition-all after:duration-300
+               data-[state=active]:after:w-full "
           >
             {section.tocpoint}
           </TabsTrigger>
         ))}
       </TabsList>
 
-      {/* Tab content (dynamic accordions per section) */}
-      <div className="w-1/2 md:w-2/3">
+      {/* Tab content: Full Width Section */}
+      <div className="w-full pb-4">
         {tocfaqs.map((section) => (
-          <TabsContent key={section.id} value={section.tocpoint.toLowerCase()}>
+          <TabsContent
+            key={section.id}
+            value={section.tocpoint.toLowerCase()}
+            className="mt-0 outline-none"
+          >
             <Accordion
               type="single"
               collapsible
-              className="w-full cursor-pointer"
+              className="w-full space-y-4"
               defaultValue={`item-${section.faq[0]?.id ?? 1}`}
             >
               {section.faq.map((item) => (
                 <AccordionItem
                   key={item.id}
                   value={`item-${item.id}`}
-                  className="border-none hidetocplusminusicon"
+                  className="border border-gray-100 px-6 py-2 rounded-sm bg-white shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-[#0a41a1]/20 last:border-b last:border-gray-100"
                 >
-                  <AccordionTrigger className="text-sm md:text-xl hover:no-underline cursor-pointer tocplusminusicon text-white md:text-black">
+                  <AccordionTrigger className="text-base md:text-xl font-bold text-[#051630] hover:no-underline text-left py-4 transition-colors data-[state=open]:text-[#0a41a1]">
                     {item.ques}
                   </AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 text-balance text-white md:text-black">
-                    <p>{item.ans}</p>
+                  <AccordionContent className="text-sm md:text-lg text-gray-500 leading-relaxed pb-6">
+                    <p className="font-medium">{item.ans}</p>
                   </AccordionContent>
                 </AccordionItem>
               ))}

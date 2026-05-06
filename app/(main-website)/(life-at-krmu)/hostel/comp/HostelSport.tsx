@@ -23,7 +23,7 @@ const HostelSport = () => {
     },
   ];
   return (
-    <div className="sm:mt-5">
+    <div>
       <h4 className="text-3xl md:text-4xl leding-[2] font-semibold mb-5 sm:my-5">
         Sports & Recreation Facilities
       </h4>

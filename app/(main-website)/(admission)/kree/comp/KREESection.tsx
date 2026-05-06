@@ -26,7 +26,7 @@ const KREESection = () => {
               <p>
                 <strong>Online Exam:</strong>
               </p>
-              <p>Exam Duration 30 minutes</p>
+              <p>Exam Duration 1 Hour</p>
             </div>
           </div>
           <div

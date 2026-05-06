@@ -15,8 +15,53 @@
 
 /* Custom utility class */
 @layer utilities {
-  .prog_scope > div {
+     @media (min-width: 640px) {
+    .schoolBanner {
+      background: none;
+    }
+  }
+  @media (max-width: 640px) {
+    .schoolBanner {
+      
+      background-size: 310%;
+      background-position: center 0;
+      background-repeat: no-repeat;
+    }
+ 
+  }
+  .heroBannerForm__form {
+    background: #fff;
     width: 100%;
+    border-radius: 10px;
+    padding-top: 40px;
+
+    height: 583px;
+    position: relative;
+  }
+
+  .heroBannerForm-header {
+    text-align: center;
+    font-family: "Poppins", sans-serif !important;
+  }
+
+  .heroBannerForm-header h3 {
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .heroBannerForm-header h3 span {
+    display: block;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.1;
+    margin-top: 5px;
+  }
+
+  .heroBannerForm__form .npf_wgts iframe {
+    border-radius: 14px;
+    width: 100% !important;
+    float: right;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
   .prog_scope > div > iframe {
@@ -30,6 +75,9 @@
     }
     .mob_prog_form > .npf_wgts > iframe {
       height: 550px !important;
+    }
+    .academic-leadership-image {
+      display: hidden;
     }
   }
   .labFac_container p {
@@ -1085,6 +1133,51 @@
     }
   }
 
+  .modern-fee-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: white;
+  }
+  .modern-fee-table table thead tr th,
+  .modern-fee-table table tr:first-child td {
+    background-color: #065084 !important;
+    color: white !important;
+    font-weight: 500;
+    padding: 15px 25px !important;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid #065084 !important;
+    white-space: nowrap;
+  }
+  .modern-fee-table table tbody tr td {
+    padding: 12px 25px;
+    border: 1px solid #e2e8f0 !important;
+    font-size: 15px;
+    color: #424242;
+    line-height: 1.5;
+  }
+  .modern-fee-table table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+  .modern-fee-table table tbody tr:hover {
+    background-color: #F3F4F4;
+    transition: background-color 0.2s ease;
+  }
+
+  /* Mobile Optimizations */
+  @media (max-width: 768px) {
+    .modern-fee-table table thead tr th,
+    .modern-fee-table table tr:first-child td {
+      font-size: 14px;
+      padding: 12px 15px !important;
+    }
+    .modern-fee-table table tbody tr td {
+      font-size: 13px;
+      padding: 10px 15px;
+    }
+  }
+
   .feestructtable .table {
     width: 100%;
   }
@@ -1107,7 +1200,7 @@
   .feestructtable table,
   .feestructtable table th,
   .feestructtable table td {
-    border: 1px solid #000 !important;
+    border: 1px solid #424242 !important;
     border-collapse: collapse;
   }
 
@@ -1821,6 +1914,7 @@
   .blog-table-responsive {
     overflow-x: auto;
     overflow-y: hidden;
+    margin-bottom: 35px;
   }
   .blogcattitle {
     font-size: 24px;
@@ -2018,7 +2112,23 @@
   }
   .krmu_single_blog table {
     width: 100%;
+    text-align: center;
   }
+  /* 
+  .krmu_single_blog table th,
+  .krmu_single_blog table tbody tr:first-child td {
+    background: linear-gradient(
+      68deg,
+      rgb(5 102 200 / 99%) 0%,
+      rgb(187 37 37) 100%
+    );
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1.2;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+  } */
+
   .krmu_single_blog table th {
     background: linear-gradient(
       68deg,
@@ -2514,40 +2624,38 @@
   }
 
   .admis_proc_btn_content .btn_text {
-    background: #db2a1a;
-    border: none;
-    outline: none;
-    color: #ffffff;
+    font-size: 18px;
     max-width: 180px;
     border-radius: 50px;
     width: 100%;
-    padding: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
   }
 
   .admis_proc_btn_grid_item:nth-child(2) .admis_proc_btn_content .btn_text {
-    margin-left: -15px;
+    margin-left: -28px;
   }
   .admis_proc_btn_grid_item:nth-child(3) .admis_proc_btn_content .btn_text {
-    margin-left: -25px;
+    margin-left: -50px;
   }
 
   .admis_proc_btn_grid_item:nth-child(4) .admis_proc_btn_content .btn_text {
-    margin-left: -38px;
+    margin-left: -50px;
   }
   .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content .btn_text {
-    margin-left: -45px;
+    margin-left: -67px;
   }
 
   .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content .btn_text {
-    margin-left: -60px;
+    margin-left: -78px;
   }
 
   .admis_proc_btn_grid_item .admis_proc_btn_content .admis_btn_below_text {
     max-width: 150px;
     width: 100%;
     font-size: 14px;
-    margin-top: 15px;
-    font-weight: 500;
+    margin-top:-6px;
+    font-weight: 400;
     color: #5d6670;
     line-height: 1.5;
   }
@@ -2564,24 +2672,24 @@
   .admis_proc_btn_grid_item:nth-child(3)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -10px;
+    margin-left: -35px;
   }
 
   .admis_proc_btn_grid_item:nth-child(4)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -22px;
+    margin-left: -35px;
   }
   .admis_proc_btn_grid_item:nth-child(5)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -30px;
+    margin-left: -52px;
   }
 
   .admis_proc_btn_grid_item:nth-child(6)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -42px;
+    margin-left: -60px;
   }
 
   .prog-global-padding {
@@ -2592,11 +2700,11 @@
   .common-prog-container .heading {
     font-size: 40px;
     font-weight: bold;
-    color: #0a41a1;
+    color: black;
   }
   .common-prog-container .sub-heading {
     font-size: 20px;
-    color: #a9a9a9;
+    color: #424242;
     font-weight: 400;
   }
   /* Programme Highlights */
@@ -2605,22 +2713,13 @@
       font-size: 32px;
     }
   }
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
 
-  .animate-marquee {
-    animation: marquee 15s linear infinite; /* adjust duration for speed */
-  }
 
-  @media (max-width: 640px) {
-    .animate-marquee {
-      animation: marquee 5s linear infinite; /* adjust duration for speed */
+  /* Position NPF Chatbot above mobile sticky footer */
+  @media (max-width: 1023px) {
+    #__eechatIcon, .npf_chatbot_button {
+      margin-bottom: 22px !important;
+      margin-right: -28px !important;
     }
   }
 
@@ -3124,14 +3223,24 @@
     width: fit-content;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     gap: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
+
+  .common-btn-b:hover,
+  .hero-common-btn-b:hover {
+    background: #083380;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
+    transform: translateY(-2px);
+  }
+
   .hero-common-btn-b {
     background: #0a41a1;
     color: #ffffff;
-    padding: 15px 30px;
+    padding: 13px 30px;
     line-height: 1;
     border: 1px solid #0a41a1;
-    border-radius: 10px;
+    border-radius: 4px !important;
     outline: none;
     font-size: 18px;
     display: flex;
@@ -3139,6 +3248,8 @@
     width: fit-content;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     gap: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
 
   @media (max-width: 640px) {
@@ -4041,17 +4152,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

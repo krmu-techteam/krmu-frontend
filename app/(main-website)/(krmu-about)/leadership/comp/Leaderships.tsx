@@ -75,7 +75,7 @@ export const Leaderships = ({ data }: Props) => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="md:w-2/5 flex justify-center min-h-[368px] h-full relative">
+          <div className="hidden sm:block md:w-2/5 flex justify-center min-h-[368px] h-full relative">
             <Image
               src={`${STRAPI_URL}${selectedLeader.leadership_img?.url}`}
               fill
@@ -86,7 +86,7 @@ export const Leaderships = ({ data }: Props) => {
         </div>
 
         {/* ================= BOTTOM CAROUSEL ================= */}
-        <div className="mt-24">
+        <div className="mt-16">
           <Carousel opts={{ align: "start" }} className="w-full">
             <CarouselContent>
               {data.map((leader) => {
@@ -100,9 +100,7 @@ export const Leaderships = ({ data }: Props) => {
                   >
                     <div
                       className={`bg-white border-b-2 transition-all duration-300 overflow-hidden ${
-                        isActive
-                          ? "border-[#0060aa]"
-                          : "border-gray-200"
+                        isActive ? "border-[#0060aa]" : "border-gray-200"
                       }`}
                     >
                       <div className="min-h-[295px] h-full relative overflow-hidden">

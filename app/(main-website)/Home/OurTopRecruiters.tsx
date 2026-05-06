@@ -1,42 +1,76 @@
 import { CounterItem, StrapiMedia } from "@/lib/types/common";
 import Image from "next/image";
 import { STRAPI_URL } from "../../constant";
+import Link from "next/link";
 
 interface OurTopRecruitProps {
   title: string;
   counters: CounterItem[];
   logos: StrapiMedia[];
+  title1: string;
+  title2: string;
+  link1: string;
+  link2: string;
 }
 
 const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
   title,
   counters,
   logos,
+  title1,
+  title2,
+  link1,
+  link2,
 }) => {
   return (
     <section className="bg-[#051630] overflow-hidden">
-      <div className="flex flex-col lg:flex-row w-full">
+      <div className="flex lg:gap-5 flex-col lg:flex-row w-full px-5 xl:px-0 xl:max-w-7xl 2xl:max-w-[1664px] mx-auto items-center">
         {/* Left Section */}
-        <div className="w-full lg:w-1/2 pt-12 lg:py-20 px-5 lg:px-0 lg:mx-8 text-center md:text-left">
-          <h4 className="max-w-2xl w-full text-4xl md:text-5xl xl:text-[80px] font-medium leading-[1.13] grad-text-color">
+        <div className="w-full lg:w-1/3  text-center md:text-left py-10 2xl:py-20">
+          <h4 className="lg:max-w-2xl w-full text-2xl sm:text-4xl xl:mt-5 font-semibold  xl:text-5xl lg:leading-none text-white text-center lg:text-left">
             {title}
           </h4>
-          <div className="grid grid-cols-2 text-white mt-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 text-white mt-10">
             {counters.map((counter) => (
-              <div key={counter.id} className="flex flex-col mb-5">
-                <span className="text-2xl md:text-5xl xl:text-[55px] font-semibold">
+              <div key={counter.id} className="flex flex-col mb-5 ourtop-rec text-center lg:text-left">
+               
+                <span className="text-white font-bold mb-[10px] text-3xl xl:text-4xl ">
                   {counter.countertext}
                 </span>
-                <span className="text-sm md:text-xl xl:text-2xl font-semibold">
+                <span className="text-sm font-semibold">
                   {counter.countercontent}
                 </span>
               </div>
             ))}
           </div>
+          <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row sm:justify-center lg:justify-start xl:items-center gap-4 mt-5">
+            {link1 || title1 ? (
+              <Link
+                href={link1}
+                className="bg-white text-black  flex justify-center items-center px-5 py-2 rounded-md gap-4 font-semibold"
+                target="_blank"
+              >
+                <span className="text-xs sm:text-base">{title1}</span>
+              </Link>
+            ) : (
+              ""
+            )}
+            {link2 || title2 ? (
+              <Link
+                href={link2}
+                className="border border-white text-white font-semibold flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                target="_blank"
+              >
+                <span className="text-sm sm:text-base">{title2}</span>
+              </Link>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
 
         {/* Right Section */}
-        <div className="grid grid-cols-2 md:grid-cols-3 pb-12 px-5 w-full lg:w-1/2 lg:px-5 lg:pt-8 lg:pb-2.5 lg:mx-8 bg-[linear-gradient(0deg,_#0060aa_0%,_#051630_100%)]">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6  lg:grid-cols-3 xl:grid-cols-6 py-10 px-5 w-full mb-10 lg:w-2/3 lg:px-5 lg:pt-8 lg:pb-2.5 rounded-3xl bg-[#0060aa]">
           {logos.map((logo, index) => (
             <div
               key={logo.id || index}

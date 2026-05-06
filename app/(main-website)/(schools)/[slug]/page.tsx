@@ -1,5 +1,4 @@
 import SchoolAdmissionOpen from "../SchoolComponents/SchoolAdmissionOpen";
-import SchoolAdvantages from "../SchoolComponents/SchoolAdvantages";
 import SchoolCommenceJourney from "../SchoolComponents/SchoolCommenceJourney";
 import SchoolDeansVision from "../SchoolComponents/SchoolDeansVision";
 import SchoolEventAndExperience from "../SchoolComponents/SchoolEventAndExperience";
@@ -15,7 +14,6 @@ import SchoolLetsExplore from "../SchoolComponents/SchoolLetsExplore";
 import SchoolNewsletter from "../SchoolComponents/SchoolNewsletter";
 import SchoolOurAlumni from "../SchoolComponents/SchoolOurAlumni";
 import SchoolProgrammeOffered from "../SchoolComponents/SchoolProgrammeOffered";
-import SchoolStudentAchievements from "../SchoolComponents/SchoolStudentAchievements";
 import SchoolTestimonials from "../SchoolComponents/SchoolTestimonials";
 import { notFound } from "next/navigation";
 import {
@@ -29,6 +27,23 @@ import CustomPage from "@/app/(main-website)/(page)/CustomPage";
 import { STRAPI_URL } from "@/app/constant";
 import { getSchoolSEO } from "@/lib/api/website-seo";
 import { folderRouteSEO } from "@/lib/api/siteseo";
+import SchoolAdvantages2 from "../SchoolComponents/SchoolDesign2/SchoolAdvantages2";
+import SchoolOpenSourceMentorship from "../SchoolComponents/SchoolDesign2/SchoolOpenSourceMentorship";
+import SchoolExcitedNewsletter from "../SchoolComponents/SchoolDesign2/SchoolExcitedNewsletter";
+import {
+  sbasLogos,
+  semceLogos,
+  smasLogos,
+  soadLogos,
+  soasLogos,
+  soedLogos,
+  soetLogos,
+  sohmctLogos,
+  solaLogos,
+  solsLogos,
+  somcLogos,
+  sprsLogos,
+} from "../SchoolComponents/schoolData";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -51,6 +66,21 @@ const noIndexQSSust = [
   "qs-carbon-net-zero",
   "qs-others",
 ];
+
+const schoolsImageMap: Record<string, any> = {
+  "school-of-engineering-and-technology": soetLogos,
+  "school-of-physiotherapy-and-rehabilitation-sciences": sprsLogos,
+  "school-of-management-and-commerce": somcLogos,
+  "school-of-legal-studies": solsLogos,
+  "school-of-medical-and-allied-sciences": smasLogos,
+  "school-of-liberal-arts": solaLogos,
+  "school-of-architecture-design": soadLogos,
+  "school-of-basic-and-applied-sciences": sbasLogos,
+  "school-of-journalism-and-mass-communication": semceLogos,
+  "school-of-hotel-management-and-catering-technology": sohmctLogos,
+  "school-of-education": soedLogos,
+  "school-of-agriculutural-sciences": soasLogos,
+};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params; // ✅ no await
@@ -183,6 +213,7 @@ export default async function Page({ params }: Props) {
   const degreeName = school?.degree?.name;
   const schoolCategoryName = school?.school_category?.name;
   // const WordSchoolslug = school?.wordschoolslug;
+  const schoolsLogosData = schoolsImageMap[slug];
 
   return (
     <>
@@ -208,12 +239,13 @@ export default async function Page({ params }: Props) {
           subheading={schoolKnowComp?.subheading}
           desc={schoolKnowComp?.description}
           counters={schoolKnowComp?.counter}
+          slug={slug}
         />
       )}
       {school?.alumnititle && (
         <SchoolOurAlumni
           title={school?.alumnititle}
-          alumniLogos={school.alumnilogo}
+          alumniLogos={schoolsLogosData}
         />
       )}
 
@@ -224,7 +256,7 @@ export default async function Page({ params }: Props) {
         content={school?.programme_offered?.content}
       />
 
-      <SchoolExcitedAlready
+      {/* <SchoolExcitedAlready
         heading={school?.excitedtitle}
         desc={school?.exciteddescription}
         excbtns={school?.excitedbtns}
@@ -237,9 +269,17 @@ export default async function Page({ params }: Props) {
           btns={school?.newsletterbtns}
           newsletterbg={school?.newsletterbg?.url}
         />
-      )}
+      )} */}
+      <SchoolExcitedNewsletter
+        excitedHeading={school?.excitedtitle}
+        excitedDesc={school?.exciteddescription}
+        excbtns={school?.excitedbtns}
+        newsLetterHeading={school?.newslettertitle}
+        newsLetterDesc={school?.newsletterdesc}
+        newsLetterBtns={school?.newsletterbtns}
+      />
       {school?.advantagetitle && (
-        <SchoolAdvantages
+        <SchoolAdvantages2
           heading={school?.advantagetitle}
           desc={school?.advantagedesc}
           subtitle={school?.advantagesubtitle}
@@ -248,14 +288,18 @@ export default async function Page({ params }: Props) {
           school_advantage={school?.school_advantage?.advantage_content}
         />
       )}
-      {school?.induscollabtitle &&
+      {slug === "school-of-engineering-and-technology" && (
+        <SchoolOpenSourceMentorship />
+      )}
+      {/* {school?.induscollabtitle &&
         Array.isArray(school?.collabcards) &&
         school.collabcards.length > 0 && (
           <SchoolIndustryCollaboration
             title={school.induscollabtitle}
             collabCards={school.collabcards}
           />
-        )}
+        )} */}
+
       {school?.letsexplorecontent && (
         <SchoolLetsExplore
           content={school?.letsexplorecontent}

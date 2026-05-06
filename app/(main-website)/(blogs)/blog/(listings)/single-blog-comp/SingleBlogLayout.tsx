@@ -1,8 +1,9 @@
 import React from "react";
 import { Raleway } from "next/font/google";
 import SingleBlogContent from "./SingleBlogContent";
-import SingleBlogSidebar from "./SingleBlogSidebar";
+// import SingleBlogSidebar from "./SingleBlogSidebar";
 import SingleBlogCategorySidebar from "./SingleBlogCategorySidebar";
+import BlogCrousel from "../single-blog-comp/BlogCrousel";
 
 // Configure font with fallbacks
 const raleway = Raleway({
@@ -14,6 +15,7 @@ const raleway = Raleway({
 
 type Props = {
   content: string;
+  currentSlug?: string;
 };
 
 // const SingleBlogLayout = ({ content }: Props) => {
@@ -34,11 +36,11 @@ type Props = {
 //   );
 // };
 
-const SingleBlogLayout = ({ content }: Props) => {
+const SingleBlogLayout = ({ content, currentSlug }: Props) => {
+  console.log("Rendering SingleBlogLayout with slug:", currentSlug);
   return (
     <main className={`md:p-7 ${raleway.className} relative z-10`}>
       <div className="max-w-[1664px] mx-auto w-full px-5 2xl:px-10 flex flex-col lg:flex-row gap-10 xl:gap-16 relative z-10 scroll-style-1">
-
         {/* Blog Content */}
         <div className="lg:w-3/4">
           <SingleBlogContent content={content} />
@@ -48,7 +50,9 @@ const SingleBlogLayout = ({ content }: Props) => {
         <div className="lg:w-1/4">
           <SingleBlogCategorySidebar />
         </div>
-
+      </div>
+      <div className="max-w-[1664px] mx-auto w-full h-auto px-5 2xl:px-10  gap-10 xl:gap-16 relative z-10 scroll-style-1">
+        <BlogCrousel currentSlug={currentSlug} />
       </div>
     </main>
   );

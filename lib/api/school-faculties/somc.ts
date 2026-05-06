@@ -285,7 +285,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media: 10440,
     acf: {
       "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant  Professor",
+      staff_designation: "Assistant Dean",
       schools: [1126],
     },
     featured_media_url:
@@ -319,7 +319,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Sapna_Rana_5511a97aed.webp",
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Sarina_Asif_23f2dfa4c2.webp",
   },
   {
     id: 10434,

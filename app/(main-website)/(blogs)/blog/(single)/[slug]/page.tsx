@@ -1,7 +1,5 @@
 import { yoastToMetadata } from "@/lib/constants/yoastMeta";
-import {
-  getSingleBlogDataBySlug,
-} from "@/lib/api/blogs/single-blog";
+import { getSingleBlogDataBySlug } from "@/lib/api/blogs/single-blog";
 import { notFound } from "next/navigation";
 import SingleBlogHero from "../../(listings)/single-blog-comp/SingleBlogHero";
 import SingleBlogLayout from "../../(listings)/single-blog-comp/SingleBlogLayout";
@@ -33,7 +31,19 @@ export async function generateMetadata({ params }: Props) {
     };
   }
 
-  return yoastToMetadata(blogData[0].yoast_head_json, slug);
+  const blog = blogData[0];
+
+  // ✅ Extract tags
+  const tagTerms = (blog?._embedded as any)?.["wp:term"]?.[1] || [];
+  const keywords = tagTerms.map((tag: any) => tag.name);
+
+  // ✅ Merge with Yoast metadata
+  const metadata = yoastToMetadata(blog.yoast_head_json, slug);
+
+  return {
+    ...metadata,
+    keywords: keywords.length ? keywords : metadata.keywords,
+  };
 }
 
 const BlogPage = async ({ params }: Props) => {
@@ -48,6 +58,16 @@ const BlogPage = async ({ params }: Props) => {
 
   if (!currentSingleBlog?.title) return notFound();
 
+  // Clean empty <p> tags from content server-side
+  let cleanedContent = currentSingleBlog?.content?.rendered || "";
+  if (cleanedContent) {
+    // Remove empty <p> tags (including those with only whitespace or &nbsp;)
+    cleanedContent = cleanedContent.replace(
+      /<p[^>]*>(\s|&nbsp;|<br\s*\/?>)*<\/p>/gi,
+      "",
+    );
+  }
+
   // Extract author info from _embedded to avoid extra API calls
   const authorData = currentSingleBlog?._embedded?.author?.[0];
   const authorSlug = authorData?.slug;
@@ -57,12 +77,12 @@ const BlogPage = async ({ params }: Props) => {
 
   // Extract featured image from _embedded instead of calling getBlogImageById
   const featuredImageUrl =
-    currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url || 
+    currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
     currentSingleBlog?.yoast_head_json?.og_image?.[0]?.url;
 
   const publishedDate = currentSingleBlog?.date;
   const blogFaqSchema = currentSingleBlog?.acf?.faqs_section;
-  
+
   // JSON-LD Structured Data
   const faqJsonLd = createFaqSchema(blogFaqSchema || []);
   const breadcrumbSchema = createBreadcrumbSchema([
@@ -118,10 +138,12 @@ const BlogPage = async ({ params }: Props) => {
         imgId={authorImageId}
         authorSlug={authorSlug}
       />
-      <SingleBlogLayout content={currentSingleBlog?.content?.rendered} />
+      <SingleBlogLayout
+        content={cleanedContent}
+        currentSlug={currentSingleBlog?.slug}
+      />
     </>
   );
 };
 
 export default BlogPage;
-

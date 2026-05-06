@@ -4,6 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer utilities {
+   .flash-border {
+    border: 1px solid red;
+    border-radius: 15px;
+  }
   .npf_wgts iframe {
     box-shadow: none !important;
   }

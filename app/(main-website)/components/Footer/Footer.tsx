@@ -5,7 +5,7 @@ import { getPageAssets } from "@/lib/api/global-setting";
 import Image from "next/image";
 import Link from "next/link";
 import FloatingButtons from "@/app/(main-website)/components/Footer/FloatingButtons";
-
+import NpfAgent from "@/app/NpfAgent";
 
 const Footer = async () => {
   const footerData = await getFooter();
@@ -52,7 +52,7 @@ const Footer = async () => {
           <div className="w-full  xl:w-1/4 xl:mx-7">
             {footerComp1 && (
               <div>
-                <h6 className="text-2xl font-bold pb-5 border-b border-white w-1/2 text-white mt-2.5 mb-[15px]">
+                <h6 className="text-2xl font-bold pb-2.5  w-1/2 text-white mt-2.5">
                   {footerComp1?.heading?.heading}
                 </h6>
                 <Image
@@ -67,8 +67,9 @@ const Footer = async () => {
                 {footerComp1?.footer_btn?.btn_link && (
                   <Link
                     href={footerComp1?.footer_btn?.btn_link || "#"}
-                    className={`text-white bg-[#cb000d] py-[5px] px-5 hover:bg-[#034272] rounded font-semibold ${footerComp1?.footer_btn?.btn_class || ""
-                      }`}
+                    className={`text-white bg-[#cb000d] py-[5px] px-5 hover:bg-[#034272] rounded font-semibold ${
+                      footerComp1?.footer_btn?.btn_class || ""
+                    }`}
                   >
                     {footerComp1?.footer_btn?.btn_text || ""}
                   </Link>
@@ -76,31 +77,28 @@ const Footer = async () => {
               </div>
             )}
           </div>
-          <div className="w-full  xl:w-1/4 break-all">
-            <div className="xl:mx-7 break-all">
+          <div className="w-full  xl:w-1/4 ">
+            <div className="xl:mx-7 ">
               {footerComp2 && (
                 <>
-                  <h6 className="text-2xl font-bold pb-5 border-b border-white w-1/2 text-white mt-5 md:mt-2.5 mb-[15px]">
+                  <h6 className="text-2xl font-bold pb-2.5  w-1/2 text-white mt-5 md:mt-2.5">
                     {footerComp2?.heading?.heading}
                   </h6>
                   <ul className="text-white mb-5">
                     {footerComp2?.footer_menu?.map((comp2) => {
                       return (
-                        <li
-                          key={comp2?.id}
-                          className="border-b border-[rgba(254,254,254,.27)] pb-1.5"
-                        >
+                        <li key={comp2?.id} className="pb-1.5 ">
                           <Link
                             href={comp2?.url || "#"}
                             className="leading-[27.2px] text-base flex items-baseline justify-between"
                           >
                             {comp2?.title}
-                            <Image
+                            {/* <Image
                               src="/white-arrow.svg"
                               width={19}
                               height={27}
                               alt="White arrow"
-                            />
+                            /> */}
                           </Link>
                         </li>
                       );
@@ -114,16 +112,13 @@ const Footer = async () => {
             <div className="xl:mx-7">
               {footerComp3 && (
                 <>
-                  <h6 className="text-2xl font-bold pb-5 border-b border-white w-1/2 text-white mt-2.5 mb-[15px]">
+                  <h6 className="text-2xl font-bold pb-2.5  w-1/2 text-white mt-2.5">
                     {footerComp3?.heading?.heading}
                   </h6>
                   <ul className="text-white mb-5">
                     {footerComp3?.footer_menu?.map((comp3) => {
                       return (
-                        <li
-                          key={comp3?.id}
-                          className="border-b border-[rgba(254,254,254,.27)] pb-1.5"
-                        >
+                        <li key={comp3?.id} className="pb-1.5">
                           <Link
                             href={comp3?.url || "#"}
                             className="leading-[27.2px] text-base flex items-baseline justify-between"
@@ -131,12 +126,12 @@ const Footer = async () => {
                             rel="noopener noreferrer"
                           >
                             {comp3?.title}
-                            <Image
+                            {/* <Image
                               src="/white-arrow.svg"
                               width={19}
                               height={27}
                               alt="White arrow"
-                            />
+                            /> */}
                           </Link>
                         </li>
                       );
@@ -150,10 +145,10 @@ const Footer = async () => {
             <div className="xl:mx-7 break-all">
               {footerComp4 && (
                 <>
-                  <h6 className="text-2xl font-bold pb-5 w-1/2 border-b border-white  text-white mt-2.5 mb-[15px]">
+                  <h6 className="text-2xl font-bold pb-2.5 w-1/2   text-white mt-2.5">
                     {footerComp4?.heading?.heading}
                   </h6>
-                  <ul className="text-white">
+                  <ul className="text-white mb-5">
                     {footerComp4?.footer_list_icon?.map((comp4) => {
                       return (
                         <li key={comp4?.id} className="flex gap-3 mb-2.5">
@@ -174,7 +169,7 @@ const Footer = async () => {
                       );
                     })}
                   </ul>
-                  <h6 className="text-2xl font-bold pb-5 border-b border-white w-1/2 text-white mt-2.5 mb-[15px]">
+                  <h6 className="text-2xl font-bold  w-1/2 text-white">
                     {footerComp4?.heading_2?.heading}
                   </h6>
                   <div className="flex">
@@ -197,6 +192,14 @@ const Footer = async () => {
                   </div>
                 </>
               )}
+              <div className="mt-5">
+                <Image
+                  src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/footer_logos_d944bc560c.svg"
+                  width={250}
+                  height={200}
+                  alt="Footer Image"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -205,7 +208,23 @@ const Footer = async () => {
         <script dangerouslySetInnerHTML={{ __html: js_in_footer }} />
       )}
 
-      <NpfChatbot />
+      {/* Hide Nia Chatbot */}
+      {/* <NpfChatbot /> */}
+      <NpfAgent />
+      {/* <div className="fixed bottom-10 right-24">
+        <a
+          href="https://wa.me/8800697018?text=Hi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/whatsapp_icon_e712c9e9c0.svg"
+            width={45}
+            height={45}
+            alt="Whatsapp Icon"
+          />
+        </a>
+      </div> */}
 
       {/* <Script
         src="https://cdn.npfs.co/js/widget/npfwpopup.js"

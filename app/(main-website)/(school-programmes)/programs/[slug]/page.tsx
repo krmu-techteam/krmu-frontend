@@ -115,7 +115,7 @@ const page = async ({ params }: Props) => {
     // "llm": LLMtestimonialsData,
   };
 
-  const allowedFormSlugs = [''];
+  const allowedFormSlugs = ['b-tech-cse'];
 
   const testimonialsData = testimonialsMap[slug];
 
@@ -260,7 +260,7 @@ const page = async ({ params }: Props) => {
       <div
         className={`p-0 m-0 ${tagsArray.map((tag) => `tag-${tag}`).join(" ")}`}
       />
-      <main className="school-prog-font">
+      <main className="school-prog-font temp-class">
         {/* {tags && <TagDiv tags={tags} extraClass="hidden test-class" />} */}
         {heroSection && (
           <HeroBanner
@@ -269,9 +269,10 @@ const page = async ({ params }: Props) => {
             heroSection={heroSection}
             formId={heroSection?.formId}
             slug={slug}
-            allowedFormSlugs={allowedFormSlugs}
-          />
-        )}
+            // allowedFormSlugs={allowedFormSlugs}
+            dreamcareerSection={dreamcareerSection}
+            />
+          )}
 
         {eligibilitySection && (
           <Eligibility
@@ -280,6 +281,15 @@ const page = async ({ params }: Props) => {
             allowedFormSlugs={allowedFormSlugs}
             slug={slug}
             formId={heroSection?.formId}
+            heroSection={heroSection}
+            
+          />
+        )}
+         {dreamcareerSection && (
+          <DreamCareer
+            heading={dreamcareerSection.heading}
+            description={dreamcareerSection.description}
+            logos={dreamcareerSection?.careerlogos}
           />
         )}
         {programmeScopeSection && (
@@ -315,6 +325,7 @@ const page = async ({ params }: Props) => {
             deskimg={admissionProcessSection?.desktopadmissionprocessimg}
             admissionCards={admissionProcessSection?.admissionprocesscard}
             admisbtn={admissionProcessSection?.admissionbtn}
+            slug={slug}
             // formId={admissionProcessSection?.admissionFormId}
           />
         )}
@@ -358,22 +369,11 @@ const page = async ({ params }: Props) => {
             btn={careerProspectsSection?.careerbtn}
             careerimg={careerProspectsSection?.careerimg}
             careercards={careerProspectsSection?.careercards}
+            slug={slug}
             // careerFormId={careerProspectsSection?.careerFormId}
           />
         )}
-        {dreamcareerSection && (
-          <DreamCareer
-            heading={dreamcareerSection.heading}
-            description={dreamcareerSection.description}
-            highestpackagenum={dreamcareerSection.highestpackagenum}
-            highestpackagetitle={dreamcareerSection.highestpackagetitle}
-            campusrecruitersnum={dreamcareerSection.campusrecruitersnum}
-            campusrecruitertitle={dreamcareerSection.campusrecruitertitle}
-            placementassistnum={dreamcareerSection.placementassistnum}
-            placementassisttitle={dreamcareerSection.placementassisttitle}
-            logos={dreamcareerSection?.careerlogos}
-          />
-        )}
+       
 
         {financialAssistanceSection && (
           <FinancialAssistance
