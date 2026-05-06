@@ -52,13 +52,13 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "K.R. Mangalam University",
       images: shareImageUrl
         ? [
-            {
-              url: shareImageUrl,
-              width: 1200,
-              height: 630,
-              alt: seo?.title || "K.R. Mangalam University",
-            },
-          ]
+          {
+            url: shareImageUrl,
+            width: 1200,
+            height: 630,
+            alt: seo?.title || "K.R. Mangalam University",
+          },
+        ]
         : [],
       type: "website",
     },
