@@ -40,90 +40,105 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
             value={tab.id.toString()}
             className="w-full max-w-[1600px] mx-auto outline-none"
           >
-            <div className="w-full">
-              {/* Custom Premium Mobile Dropdown for Schools/Faculties */}
-              <div className="lg:hidden mb-8">
-                <label className="block text-[11px] font-bold text-[#0062aa]/60 mb-2 uppercase tracking-[2px] ml-1">Select School/Faculty</label>
-                <MobileFacultyDropdown 
-                  options={tab.fee_structure_acc} 
-                  defaultValue={tab.fee_structure_acc[0]?.id.toString()}
-                />
-              </div>
-
-              <Tabs defaultValue={tab.fee_structure_acc[0]?.id.toString()} className="w-full">
-                <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-                  {/* Sidebar Navigation: School/Faculty List - Sticky on Desktop, Hidden on Mobile */}
-                  <TabsList className="hidden lg:flex flex-col h-auto w-full lg:w-[450px] bg-white border border-gray-200 rounded-none p-0 lg:sticky lg:top-32 shadow-sm z-10 items-stretch">
-                    {tab.fee_structure_acc?.map((acc) => (
-                      <TabsTrigger
-                        key={acc.id}
-                        value={acc.id.toString()}
-                        className="w-full justify-start text-left px-6 py-4 border-b border-gray-100 last:border-b-0 rounded-none
-                                   data-[state=active]:bg-[#0062aa] data-[state=active]:text-white text-[#444] font-semibold text-[16px] 
-                                   relative transition-all duration-300 hover:bg-gray-50 data-[state=active]:hover:bg-[#0062aa] group 
-                                   leading-tight"
-                      >
-                        <span className="flex-grow pr-4">{acc.panel_heading}</span>
-                        {/* Indicative Arrow for Active Faculty */}
-                        <div className="opacity-0 group-data-[state=active]:opacity-100 absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 
-                                      border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent 
-                                      border-l-[12px] border-l-[#0062aa] transition-opacity duration-300 hidden lg:block" />
-                      </TabsTrigger>
-                    ))}
-                  </TabsList>
-
-                  {/* Hidden Radix TabsList for mobile click sync */}
-                  <div className="hidden">
-                    <TabsList>
-                       {tab.fee_structure_acc?.map((acc) => (
-                         <TabsTrigger key={acc.id} value={acc.id.toString()}>{acc.panel_heading}</TabsTrigger>
-                       ))}
-                    </TabsList>
-                  </div>
-
-                {/* Main Content: Fee Tables */}
-                <div className="flex-grow w-full min-w-0 bg-white p-4 md:p-6 border border-gray-100 shadow-sm rounded-sm">
-                  {tab.fee_structure_acc?.map((acc) => (
-                    <TabsContent
-                      key={acc.id}
-                      value={acc.id.toString()}
-                      className="mt-0 animate-in fade-in duration-500"
-                    >
-                      <div className="mb-6 md:mb-8">
-                        <h3 className="text-xl md:text-3xl font-bold text-[#0062aa] mb-2 leading-tight">
-                          {acc.panel_heading}
-                        </h3>
-                        <div className="h-1 w-16 bg-[#0062aa] rounded-full" />
-                      </div>
-                      
-                      <div
-                        className="overflow-x-auto modern-fee-table scrollbar-thin scrollbar-thumb-gray-200"
-                        dangerouslySetInnerHTML={{ __html: acc.panel_content }}
-                      />
-                    </TabsContent>
-                  ))}
-                </div>
-              </div>
-            </Tabs>
-          </div>
-        </TabsContent>
-      ))}
-    </Tabs>
-  </div>
-);
+            <FacultySection options={tab.fee_structure_acc || []} />
+          </TabsContent>
+        ))}
+      </Tabs>
+    </div>
+  );
 };
 
 export default FeeStructureTable;
 
-const MobileFacultyDropdown = ({ options, defaultValue }: { options: any[], defaultValue: string }) => {
+const FacultySection = ({ options }: { options: any[] }) => {
+  const [activeSchoolId, setActiveSchoolId] = useState(options[0]?.id?.toString() || "");
+
+  // Sync state if options change (e.g. when category tab changes)
+  useEffect(() => {
+    if (options.length > 0 && (!activeSchoolId || !options.find(opt => opt.id.toString() === activeSchoolId))) {
+      setActiveSchoolId(options[0].id.toString());
+    }
+  }, [options, activeSchoolId]);
+
+  return (
+    <div className="w-full">
+      {/* Custom Premium Mobile Dropdown for Schools/Faculties */}
+      <div className="lg:hidden mb-8">
+        <label className="block text-[11px] font-bold text-[#0062aa]/60 mb-2 uppercase tracking-[2px] ml-1">
+          Select School/Faculty
+        </label>
+        <MobileFacultyDropdown
+          options={options}
+          value={activeSchoolId}
+          onChange={setActiveSchoolId}
+        />
+      </div>
+
+      <Tabs value={activeSchoolId} onValueChange={setActiveSchoolId} className="w-full">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          {/* Sidebar Navigation: School/Faculty List - Sticky on Desktop, Hidden on Mobile */}
+          <TabsList className="hidden lg:flex flex-col h-auto w-full lg:w-[450px] bg-white border border-gray-200 rounded-none p-0 lg:sticky lg:top-32 shadow-sm z-10 items-stretch">
+            {options.map((acc) => (
+              <TabsTrigger
+                key={acc.id}
+                value={acc.id.toString()}
+                className="w-full justify-start text-left px-6 py-4 border-b border-gray-100 last:border-b-0 rounded-none
+                           data-[state=active]:bg-[#0062aa] data-[state=active]:text-white text-[#444] font-semibold text-[16px] 
+                           relative transition-all duration-300 hover:bg-gray-50 data-[state=active]:hover:bg-[#0062aa] group 
+                           leading-tight"
+              >
+                <span className="flex-grow pr-4">{acc.panel_heading}</span>
+                {/* Indicative Arrow for Active Faculty */}
+                <div className="opacity-0 group-data-[state=active]:opacity-100 absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 
+                              border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent 
+                              border-l-[12px] border-l-[#0062aa] transition-opacity duration-300 hidden lg:block" />
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+          {/* Main Content: Fee Tables */}
+          <div className="flex-grow w-full min-w-0 bg-white p-4 md:p-6 border border-gray-100 shadow-sm rounded-sm">
+            {options.map((acc) => (
+              <TabsContent
+                key={acc.id}
+                value={acc.id.toString()}
+                className="mt-0 animate-in fade-in duration-500"
+              >
+                <div className="mb-6 md:mb-8">
+                  <h3 className="text-xl md:text-3xl font-bold text-[#0062aa] mb-2 leading-tight">
+                    {acc.panel_heading}
+                  </h3>
+                  <div className="h-1 w-16 bg-[#0062aa] rounded-full" />
+                </div>
+
+                <div
+                  className="overflow-x-auto modern-fee-table scrollbar-thin scrollbar-thumb-gray-200"
+                  dangerouslySetInnerHTML={{ __html: acc.panel_content }}
+                />
+              </TabsContent>
+            ))}
+          </div>
+        </div>
+      </Tabs>
+    </div>
+  );
+};
+
+const MobileFacultyDropdown = ({
+  options,
+  value,
+  onChange,
+}: {
+  options: any[];
+  value: string;
+  onChange: (val: string) => void;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState(options.find(opt => opt.id.toString() === defaultValue));
+  const selected = options.find((opt) => opt.id.toString() === value);
 
   const handleSelect = (option: any) => {
-    setSelected(option);
+    onChange(option.id.toString());
     setIsOpen(false);
-    const trigger = document.querySelector(`[role="tab"][value="${option.id}"]`) as HTMLElement;
-    if (trigger) trigger.click();
   };
 
   // Close dropdown when clicking outside
@@ -137,12 +152,14 @@ const MobileFacultyDropdown = ({ options, defaultValue }: { options: any[], defa
 
   return (
     <div className="relative" onClick={(e) => e.stopPropagation()}>
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full h-14 pl-5 pr-12 bg-white border-2 border-[#0062aa] rounded-sm text-[#0062aa] font-bold text-left flex items-center justify-between shadow-sm"
+        className="w-full h-14 pl-5 pr-5 bg-white border-2 border-[#0062aa] rounded-sm text-[#0062aa] font-bold text-left flex items-center shadow-sm group"
       >
-        <span className="truncate">{selected?.panel_heading}</span>
-        <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
+        <span className="truncate flex-1 mr-4">{selected?.panel_heading}</span>
+        <ChevronDown
+          className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+        />
       </button>
 
       {isOpen && (
@@ -164,3 +181,4 @@ const MobileFacultyDropdown = ({ options, defaultValue }: { options: any[], defa
     </div>
   );
 };
+

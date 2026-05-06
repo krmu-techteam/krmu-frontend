@@ -39,7 +39,7 @@ const BeyondClassroomSlider = ({ slideimages }: Props) => {
                 key={`${rec.id || i}-${i}`}
                 className="flex-[0_0_100%] min-w-0 pl-4 sm:flex-[0_0_50%] lg:flex-[0_0_25%]"
               >
-                <div className="rounded-sm overflow-hidden shadow-2xl border border-white/10 h-full">
+                <div className="rounded-2xl overflow-hidden shadow-2xl h-full">
                   <Image
                     src={rec.url}
                     alt={rec.alternativeText || ``}

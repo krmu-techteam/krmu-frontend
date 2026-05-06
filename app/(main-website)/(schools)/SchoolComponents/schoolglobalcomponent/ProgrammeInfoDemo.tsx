@@ -131,7 +131,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
             value={degreeTabs.find((d) => d.value === activeDegree)?.tabValue}
           >
             {/* TAB HEADERS */}
-            <TabsList className="w-full grid grid-cols-2 sm:flex flex-wrap gap-2 sm:gap-0 justify-center h-auto p-1 sm:p-2.5 mb-2 sm:mb-5 sticky top-[42px] sm:top-[76px] bg-white rounded-none">
+            <TabsList className="w-full grid grid-cols-2 sm:flex flex-wrap gap-2 sm:gap-0 justify-center h-auto p-1 sm:p-2.5 mb-2 sm:mb-5  sticky top-[42px] xl:top-[76px] sm:top-[67px] md:top-[42px] bg-white rounded-none">
               {degreeTabs.map((deg) => (
                 <TabsTrigger
                   key={deg.tabValue}
@@ -166,7 +166,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                         : activeProgramId === prog.id;
 
                     return (
-                      <div 
+                      <div
                         key={prog.id}
                         onClick={() => handleProgramClick(prog.id)}
                         onMouseEnter={() => handleMouseEnter(prog.id)}
@@ -187,7 +187,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                           <div className="flex flex-col sm:flex-row  sm:gap-5">
                             <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                               <span>
-                                 <Calendar />
+                                <Calendar />
                               </span>
                               <div className="flex flex-col gap-0.5">
                                 <span className="font-normal">Duration:</span>
@@ -196,7 +196,6 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                             </div>
                             <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                               <span>
-                               
                                 <IndianRupee />
                               </span>
                               <div className="flex flex-col gap-0.5">
@@ -205,7 +204,11 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                                 </span>
                                 <span>
                                   Rs. {prog.criteria?.programme_fee_per_year} /
-                                  Year {prog.programmeslug === "bhmct-hotel-management" ? "(2025-26)" : ""}
+                                  Year{" "}
+                                  {prog.programmeslug ===
+                                  "bhmct-hotel-management"
+                                    ? "(2025-26)"
+                                    : ""}
                                 </span>
                               </div>
                             </div>
@@ -293,7 +296,10 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                 </div>
                 <div>
                   <p className="mb-5 font-normal text-sm sm:text-base  leading-[1]">
-                    Programme Fee Per Year {currentProgram?.programmeslug === "bhmct-hotel-management" ? "(2025-26)" : ""}
+                    Programme Fee Per Year{" "}
+                    {currentProgram?.programmeslug === "bhmct-hotel-management"
+                      ? "(2025-26)"
+                      : ""}
                   </p>
                   <p className="text-sm sm:text-base uppercase leading-[1] font-bold">
                     {criteria.programme_fee_per_year === "TBD" ? "" : "Rs."}{" "}
