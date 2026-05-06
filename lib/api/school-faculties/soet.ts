@@ -122,21 +122,21 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Surendra_Yadav_dfe39f5272.webp",
   },
-  {
-    id: 109245,
-    slug: "mr-aryan-sharma",
-    title: {
-      rendered: "Mr. Aryan Sharma",
-    },
-    featured_media: 109256,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant Professor",
-      schools: [1266],
-    },
-    featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mr_Aryan_Sharma_653e83cf9b.webp",
-  },
+  // {
+  //   id: 109245,
+  //   slug: "mr-aryan-sharma",
+  //   title: {
+  //     rendered: "Mr. Aryan Sharma",
+  //   },
+  //   featured_media: 109256,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url:
+  //     "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mr_Aryan_Sharma_653e83cf9b.webp",
+  // },
   {
     id: 107299,
     slug: "ms-jyoti-yadav",
@@ -437,21 +437,21 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Ms_Lucky_Verma_a795591f53.webp",
   },
-  {
-    id: 53015,
-    slug: "prof-dr-aman-jatain",
-    title: {
-      rendered: "Prof. Dr. Aman Jatain",
-    },
-    featured_media: 53017,
-    acf: {
-      "staff-qualification": "Ph.D. in Computer Science",
-      staff_designation: "Professor",
-      schools: [1126, 1266],
-    },
-    featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/aman_jaitan_6de41e5c2f.webp",
-  },
+  // {
+  //   id: 53015,
+  //   slug: "prof-dr-aman-jatain",
+  //   title: {
+  //     rendered: "Prof. Dr. Aman Jatain",
+  //   },
+  //   featured_media: 53017,
+  //   acf: {
+  //     "staff-qualification": "Ph.D. in Computer Science",
+  //     staff_designation: "Professor",
+  //     schools: [1126, 1266],
+  //   },
+  //   featured_media_url:
+  //     "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/aman_jaitan_6de41e5c2f.webp",
+  // },
   {
     id: 43155,
     slug: "mrs-neetu-chauhan",
