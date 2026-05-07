@@ -48,7 +48,7 @@ const SportEventsAndTournament = () => {
       <div className="max-w-[1440px] mx-auto w-full">
         {/* Section Header */}
         <div className="mb-12 md:mb-16 text-center">
-          <h4 className="text-3xl md:text-5xl font-bold text-[#051630] mb-6">
+          <h4 className="text-3xl md:text-5xl font-semibold text-[#051630] mb-6">
             Events and Tournaments
           </h4>
           <p className="text-lg text-gray-600 leading-relaxed max-w-5xl mx-auto">

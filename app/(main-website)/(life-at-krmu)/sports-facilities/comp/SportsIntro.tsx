@@ -4,10 +4,10 @@ const SportsIntro = () => {
       <div className="max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-20 items-center">
         {/* Text Content */}
         <div className="order-2 lg:order-1 text-center lg:text-left">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-[#051630]">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6 text-[#051630]">
             Introduction
           </h3>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed text-pretty">
+          <p className="text-base sm:text-md lg:text-lg text-gray-700 leading-relaxed text-pretty">
             K.R. Mangalam University provides cutting-edge facilities aimed at
             nurturing not just academic excellence but also physical fitness and
             sportsmanship among its student body. With sprawling campuses

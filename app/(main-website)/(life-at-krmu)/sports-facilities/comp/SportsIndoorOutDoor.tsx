@@ -16,9 +16,8 @@ const SportsIndoorOutDoor = ({ data }: Props) => {
               key={index} 
               className="mb-8 md:mb-16 last:mb-0"
             >
-              {/* Clean Heading */}
               <div className="text-center md:text-left mb-8 md:mb-12">
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#051630]">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#051630]">
                   {item?.heading}
                 </h3>
               </div>
