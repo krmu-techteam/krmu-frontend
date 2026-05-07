@@ -142,7 +142,7 @@ const Footer = async () => {
             </div>
           </div>
           <div className="w-full  xl:w-1/4">
-            <div className="xl:mx-7 break-all">
+            <div className="xl:mx-7">
               {footerComp4 && (
                 <>
                   <h6 className="text-2xl font-bold pb-2.5 w-1/2   text-white mt-2.5">
