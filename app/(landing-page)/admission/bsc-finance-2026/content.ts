@@ -31,8 +31,8 @@ export const Hero: BscFinanceHeroContent = {
   subheading: "Four Years. Three Tracks. One Defining Career.",
   description:
     "Graduate with a degree, 12 months of paid industry experience, and a curriculum aligned to CFA, FRM & actuarial examinations",
-  countdownTargetDate: "2026-04-30T23:59:59",
-  lastDateLabel: "Last Date to apply - 30th April 2026",
+  countdownTargetDate: "2026-05-31T23:59:59",
+  lastDateLabel: "Last Date to apply - 31st May 2026",
   applyBtnLabel: "Apply for 2026-27 Batch",
   applyBtnHref: bscFinanceApplyHref,
   brochureBtnLabel: "Download Brochure",

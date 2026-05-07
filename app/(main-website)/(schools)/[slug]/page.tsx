@@ -119,13 +119,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         siteName: "K.R. Mangalam University",
         images: shareImageUrl
           ? [
-              {
-                url: shareImageUrl,
-                width: 1200,
-                height: 630,
-                alt: seo?.title || "K.R. Mangalam University",
-              },
-            ]
+            {
+              url: shareImageUrl,
+              width: 1200,
+              height: 630,
+              alt: seo?.title || "K.R. Mangalam University",
+            },
+          ]
           : [],
         type: "website",
       },
@@ -163,13 +163,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         siteName: "K.R. Mangalam University",
         images: shareImageUrl
           ? [
-              {
-                url: shareImageUrl,
-                width: 1200,
-                height: 630,
-                alt: seo?.metaTitle || "K.R. Mangalam University",
-              },
-            ]
+            {
+              url: shareImageUrl,
+              width: 1200,
+              height: 630,
+              alt: seo?.metaTitle || "K.R. Mangalam University",
+            },
+          ]
           : [],
         type: "website",
       },
@@ -344,7 +344,7 @@ export default async function Page({ params }: Props) {
         <SchoolFacultyAdvisory
           fac_adv={school?.fac_adv}
           schoolCat={schoolCat}
-          // WordSchoolslug={WordSchoolslug}
+        // WordSchoolslug={WordSchoolslug}
         />
       )}
       {school?.video_comp && (
