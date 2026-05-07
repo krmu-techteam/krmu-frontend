@@ -473,15 +473,16 @@ const Admission2Search = () => {
             ) : (
               programmes.map((item) => {
                 const slug =
-                  ("programmeslug" in item ? item.programmeslug : item.phdslug) ||
-                  "";
+                  ("programmeslug" in item
+                    ? item.programmeslug
+                    : item.phdslug) || "";
 
                 const isExternal = slug.startsWith("http");
 
                 return (
                   <div
                     key={item.id}
-                    className="group max-w-[458px] min-h-[200px] w-full rounded-xl bg-[#0a41a1] group hover:bg-[#001F3F] h-full  font-semibold p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  hover:text-black"
+                    className="group max-w-[458px] min-h-[200px] w-full rounded-xl bg-[#001F3F] group hover:bg-[#0a41a1] h-full  font-semibold p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  hover:text-black"
                   >
                     {" "}
                     <Link href={`/programs/${slug}`} target="_blank">
@@ -492,7 +493,7 @@ const Admission2Search = () => {
                     <div className="flex flex-col sm:flex-row  sm:gap-5">
                       <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                           <Calendar />
+                          <Calendar />
                         </span>
                         <div className="flex flex-col gap-0.5">
                           <span className="font-normal">Duration:</span>
@@ -501,13 +502,15 @@ const Admission2Search = () => {
                       </div>
                       <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                         
                           <IndianRupee />
                         </span>
                         <div className="flex flex-col gap-0.5">
                           <span className="font-normal">Programme Fee:</span>
                           <span>
-                            Rs. {item.criteria?.programme_fee_per_year} / Year {slug === "bhmct-hotel-management" ? "(2025-26)" : ""}
+                            Rs. {item.criteria?.programme_fee_per_year} / Year{" "}
+                            {slug === "bhmct-hotel-management"
+                              ? "(2025-26)"
+                              : ""}
                           </span>
                         </div>
                       </div>
@@ -530,25 +533,25 @@ const Admission2Search = () => {
                           <Link
                             href={item.criteria.eligibility_utm_links}
                             target="_blank"
-                            className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-red-500 group-hover:text-white hover:border hover:border-red-500"
+                            className="bg-red-600 text-white rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-white group-hover:text-red-600 hover:border-white hover:border-white"
                           >
                             Apply Now
                           </Link>
                         )}
 
                       {/* {isExternal ? (
-                        <Link
-                          href={slug}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[10px] md:text-base font-medium"
-                        >
-                          Show More
-                        </Link>
-                      ) : ( */}
+                                      <Link
+                                        href={slug}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[10px] md:text-base font-medium"
+                                      >
+                                        Show More
+                                      </Link>
+                                    ) : ( */}
 
                       <Link
-                        href={`${(slug || "").includes("zenithschool.ai") ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slug}`}`}
+                        href={`${slug.includes("zenithschool.ai") ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slug}`}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-white rounded-sm py-2.5 2xl:py-2.5 text-sm flex items-center gap-2"
@@ -621,7 +624,8 @@ const Admission2Search = () => {
             )}
             <div>
               <p className="mb-5 font-normal text-sm sm:text-base  leading-[1]">
-                Programme Fee Per Year {slugValue === "bhmct-hotel-management" ? "(2025-26)" : ""}
+                Programme Fee Per Year{" "}
+                {slugValue === "bhmct-hotel-management" ? "(2025-26)" : ""}
               </p>
               <p className="text-sm sm:text-base leading-[1] font-bold">
                 {/* {criteria.programme_fee_per_year === "TBD" ? "" : "Rs."}{" "}
@@ -714,16 +718,17 @@ const Admission2Search = () => {
             >
               Know More
             </Link>
-            {!isZenithPopup && selectedProgramme?.criteria?.eligibility_utm_links && (
-              <Link
-                href={selectedProgramme.criteria.eligibility_utm_links}
-                className="bg-red-500 text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Apply Now
-              </Link>
-            )}
+            {!isZenithPopup &&
+              selectedProgramme?.criteria?.eligibility_utm_links && (
+                <Link
+                  href={selectedProgramme.criteria.eligibility_utm_links}
+                  className="bg-red-500 text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Apply Now
+                </Link>
+              )}
           </div>
         </div>
       </div>
