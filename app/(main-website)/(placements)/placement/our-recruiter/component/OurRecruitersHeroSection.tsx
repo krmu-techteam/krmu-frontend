@@ -1,37 +1,40 @@
 const OurRecruitersHeroSection = () => {
   return (
-    <section className="pt-24 md:pt-[15%] pb-[5%] bg-[url(/placements/recruit-banner.webp)] bg-cover bg-no-repeat bg-left sm:bg-right px-4">
-      <div className="max-w-[1664px] mx-auto w-full text-white">
-        <div className="lg:w-1/2">
-          <h1 className="text-3xl sm:text-5xl md:text-[64px] font-semibold leading-[1.1] mb-5">
+    <section className="relative pt-24 sm:pt-32 md:pt-40 lg:pt-44 xl:pt-48 pb-12 md:pb-24 bg-[url(/placements/recruit-banner.webp)] bg-cover bg-no-repeat bg-[position:80%_center] md:bg-right lg:bg-[95%_center] px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 overflow-hidden">
+      {/* Subtle overlay for better readability on mobile */}
+      <div className="absolute inset-0 bg-black/40 md:bg-transparent" />
+      
+      <div className="relative max-w-[1440px] mx-auto w-full text-white">
+        <div className="w-full sm:w-[85%] md:w-[65%] lg:w-[55%] xl:w-[50%] space-y-4 md:space-y-6">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-[56px] xl:text-[64px] font-semibold leading-[1.1] text-shadow-[2px_2px_10px_rgba(0,0,0,0.8)] md:text-shadow-[none]">
             Meet Our Top <br className="hidden lg:block" /> Recruiters
           </h1>
-          <p>
-            K.R. Mangalam University has built a strong legacy of academic
-            excellence and industry-focused education. Our emphasis on
-            experiential learning, skill development, and professional grooming
-            has led to consistent and growing trust from top recruiters.
-          </p>
-          <br />
-          <p>
-            Each year, renowned companies across sectors such as IT, Finance,
-            Consulting, Education, Media, Healthcare, Legal, and more visit our
-            campus to hire skilled and job-ready graduates. These organisations
-            value the innovation, adaptability, and work ethics our students
-            bring to the workplace.
-          </p>
-          <br />
-          <p>
-            From global corporations to emerging startups, our recruiters
-            represent a wide spectrum of career possibilities for our students.
-            The presence of such leading names reflects our commitment to
-            delivering quality education that aligns with industry standards.
-          </p>
-          <br />
-          <p>
-            We are proud to showcase some of our prominent recruiters whose
-            collaboration strengthens our placement ecosystem.
-          </p>
+          <div className="space-y-3 md:space-y-4 text-sm sm:text-base md:text-lg leading-relaxed opacity-100 md:opacity-90 text-shadow-[1px_1px_8px_rgba(0,0,0,0.7)] md:text-shadow-[none]">
+            <p>
+              K.R. Mangalam University has built a strong legacy of academic
+              excellence and industry-focused education. Our emphasis on
+              experiential learning, skill development, and professional grooming
+              has led to consistent and growing trust from top recruiters.
+            </p>
+            <p>
+              Each year, renowned companies across sectors such as IT, Finance,
+              Consulting, Education, Media, Healthcare, Legal, and more visit
+              our campus to hire skilled and job-ready graduates. These
+              organisations value the innovation, adaptability, and work ethics
+              our students bring to the workplace.
+            </p>
+            <p>
+              From global corporations to emerging startups, our recruiters
+              represent a wide spectrum of career possibilities for our
+              students. The presence of such leading names reflects our
+              commitment to delivering quality education that aligns with
+              industry standards.
+            </p>
+            <p>
+              We are proud to showcase some of our prominent recruiters whose
+              collaboration strengthens our placement ecosystem.
+            </p>
+          </div>
         </div>
       </div>
     </section>
