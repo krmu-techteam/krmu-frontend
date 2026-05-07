@@ -32,7 +32,7 @@ const OverviewTestimonial = ({ testiData }: TestimonialProp) => {
           {testiData &&
             testiData.map((item) => {
               return (
-                <CarouselItem key={item?.id} className="md:basis-1/2">
+                <CarouselItem key={item?.id} className="md:basis-1/2 pt-4 flex">
                   <OverviewTestiCard
                     profilename={item?.name}
                     info={item?.info}
@@ -44,12 +44,10 @@ const OverviewTestimonial = ({ testiData }: TestimonialProp) => {
             })}
         </CarouselContent>
         <CarouselPrevious
-          className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px]
-         top-[115%] left-[20%] sm:left-[30%] xl:top-[100%] xl:left-[-66%]"
+          className="bg-[#051630] text-white hover:bg-[#0060aa] border-none w-[50px] h-[50px] md:w-[60px] md:h-[60px] top-[110%] left-[20%] sm:left-[30%] xl:top-[85%] xl:left-[-66.5%]"
         />
         <CarouselNext
-          className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px] 
-         top-[115%] right-[20%] sm:right-[30%] xl:top-[100%] xl:right-[145%]"
+          className="bg-[#051630] text-white hover:bg-[#0060aa] border-none w-[50px] h-[50px] md:w-[60px] md:h-[60px] top-[110%] right-[20%] sm:right-[30%] xl:top-[85%] xl:left-[-56.5%]"
         />
       </Carousel>
     </>

@@ -86,12 +86,20 @@ const page = async () => {
       <OverviewHero overviewVideo={overviewVideo} />
       <OverviewLifeBeyond />
       <OverviewInnovate />
-      <OverviewYourWellBeing />
-      <OverviewYourInterest />
+      <section className="w-full">
+        <div className="w-full flex flex-col lg:flex-row items-stretch">
+          <div className="w-full lg:w-1/2 flex">
+            <OverviewYourWellBeing />
+          </div>
+          <div className="w-full lg:w-1/2 flex">
+            <OverviewYourInterest />
+          </div>
+        </div>
+      </section>
       <OverviewHearit testimonials={testimonials} />
       <OveviewSecondHome />
-      <section className="md:px-4 px-0">
-        <div className="max-w-[1664px] mx-auto w-full">
+      <section>
+        <div className="w-full">
           <OverviewImpacting />
           <OverviewTreasure />
         </div>

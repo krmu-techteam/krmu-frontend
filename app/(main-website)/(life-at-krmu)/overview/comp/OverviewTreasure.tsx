@@ -3,9 +3,10 @@ import Link from "next/link";
 const OverviewTreasure = () => {
   return (
     <>
-      <div className="bg-[url(/wp-content/images/life-overview.webp)] bg-cover bg-top bg-no-repeat gap-8 flex flex-col lg:flex-row">
+    <div className="bg-[url(/wp-content/images/life-overview.webp)] bg-cover bg-top bg-no-repeat">
+      <div className="max-w-[1440px] mx-auto w-full px-4 md:px-0 flex flex-col lg:flex-row gap-8">
         <div
-          className="lg:w-1/3 mx-4 md:mx-8 px-[30px] pt-[40px] pb-[222px] text-white"
+          className="lg:w-1/3 mx-4 md:mx-0 px-[30px] pt-[40px] pb-[222px] text-white"
           style={{
             background:
               "linear-gradient(180deg,#051630 22%,rgba(5,22,48,0) 100%)",
@@ -30,6 +31,7 @@ const OverviewTreasure = () => {
         </div>
         <div className="lg:w-2/3"></div>
       </div>
+    </div>
     </>
   );
 };

@@ -1,10 +1,14 @@
 const OverviewLifeBeyond = () => {
   return (
     <section 
-      className="bg-[url(/gradient-2.webp)] bg-cover bg-no-repeat bg-center py-16 md:py-24 lg:py-32 px-4 md:px-12 lg:px-20" 
+      className="relative py-16 md:py-24 lg:py-32 px-4 md:px-12 lg:px-20 overflow-hidden" 
+      style={{
+        background: "linear-gradient(135deg, #051630 0%, #004a85 45%, #0060aa 100%)",
+      }}
       id="lifeBeyond"
     >
-      <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,160,227,0.15),transparent_50%)]" />
+      <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         <div className="w-full lg:w-1/2 text-white">
           <h2 className="text-3xl md:text-5xl lg:text-6xl text-center md:text-left font-bold leading-tight mb-8">
             A Life Beyond <br className="hidden md:block" /> Academics

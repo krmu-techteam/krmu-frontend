@@ -2,37 +2,37 @@ import Link from "next/link";
 
 const OverviewYourWellBeing = () => {
   return (
-    <section className="py-12 md:py-20 lg:py-[60px] bg-[#0060aa] px-4 md:px-12 lg:px-4">
-      <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-0">
-        <div className="lg:w-2/5 text-center lg:text-left">
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight">
-            Your <br className="hidden lg:block" /> Well-Being <br className="hidden lg:block" /> Our Priority
-          </h3>
+    <div className="relative py-12 md:py-8 lg:py-16 bg-[#071d3d] text-white flex-grow flex flex-col justify-center h-full transition-all duration-500 overflow-hidden group hover:bg-[#051938]">
+      <div className="relative z-10 w-full text-center lg:text-left px-6 md:px-12 lg:px-20">
+        <h4 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+          Your Well-Being Our Priority
+        </h4>
+        <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-10 max-w-[800px]">
+          Student Welfare provides ample scope, opportunities, and facilities
+          for the students’ all-around development of personality and
+          leadership qualities. Here, all the activities are undertaken to
+          promote opportunities for the youth to enhance their skills and
+          talents to boost their confidence. Besides undertaking engagement
+          activities regarding the facilitation of outcomes during and after
+          the students’ pursuit of academic activities, the office acts as a
+          channel of communication between the students and the university
+          administration.
+        </p>
+        <div>
           <Link
             href="/student-welfare"
+            className="text-sm md:text-base py-3.5 px-10 text-[#071d3d] font-bold rounded-[4px] bg-white inline-block transition-all duration-300 hover:bg-gray-100 hover:shadow-xl hover:-translate-y-1"
             target="_blank" rel="noopener noreferrer"
-            className="text-black text-sm md:text-base hover:bg-[#034272] hover:text-white bg-white py-2.5 md:py-[11px] px-5 md:px-[23px] rounded-[4px] font-semibold inline-block mt-8 lg:mt-5 transition-all"
           >
-            Know more about Student Welfare
+            Know More
           </Link>
         </div>
-        <div className="lg:w-3/5 text-white text-center lg:text-left">
-          <p className="text-md md:text-lg lg:text-xl leading-relaxed lg:leading-normal">
-            Student Welfare provides ample scope, opportunities, and facilities
-            for the students’ all-around development of personality and
-            leadership qualities. Here, all the activities are undertaken to
-            promote opportunities for the youth to enhance their skills and
-            talents to boost their confidence. Besides undertaking engagement
-            activities regarding the facilitation of outcomes during and after
-            the students’ pursuit of academic activities, the office acts as a
-            channel of communication between the students and the university
-            administration.
-          </p>
-        </div>
       </div>
-    </section>
+      
+      {/* Subtle Bottom Border Effect */}
+      <div className="absolute bottom-0 left-0 w-0 h-1 bg-white/30 transition-all duration-700 group-hover:w-full" />
+    </div>
   );
 };
-
 
 export default OverviewYourWellBeing;
