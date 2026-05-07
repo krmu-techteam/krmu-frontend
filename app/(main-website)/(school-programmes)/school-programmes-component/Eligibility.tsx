@@ -254,9 +254,9 @@ const Eligibility = ({
             "bba-hons-hons-with-research-hr-marketing-finance-international-business-travel-and-tourism-semester-abroad-programme-with-university-of-east-anglia-uea-norwich-uk",
           ].includes(slug) && (
             <p className="my-5 italic">
-              *In addition to the regular programme fee at KRMU, students opting
-              for the Semester Abroad will be required to pay an additional
-              tuition fee of GBP 6500 for the semester at UEA.
+              *In addition to the regular programme fee at KRMU, students will
+              be required to pay an additional tuition fee of GBP 6500 for the
+              semester at UEA.
             </p>
           )}
 
