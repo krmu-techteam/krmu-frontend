@@ -87,7 +87,7 @@ const YourJourney2 = () => {
           />
           <Link
             href="https://admissions.krmangalam.edu.in/?utm_source=website&utm_medium=Homepage&utm_campaign=journey-section&_gl=1*rfukfk*_ga*MTk4NDQwNDY4LjE3Nzc4NzU5MzU.*_ga_VJJK572TGN*czE3Nzc4NzU5MzUkbzEkZzEkdDE3Nzc4NzYwNDEkajYwJGwwJGgw"
-            className="bg-[#e31e24] text-white border border-[#d8d8d8] px-6 py-2 rounded-sm font-semibold"
+            className="bg-[#cb000d] hover:bg-[#d03f46] transition-all duration-200 text-white border border-[#d8d8d8] px-6 py-2 rounded-sm font-semibold"
             target="_blank"
           >
             Apply Now

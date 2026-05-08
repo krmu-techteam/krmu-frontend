@@ -116,12 +116,26 @@ const ProgrammeStructure = ({
                       key={year.id}
                       className="flex-1 flex flex-col items-center relative"
                     >
-                      {/* Year Node - HEADING ONLY (Non-clickable) */}
-                      <div
-                        className={`w-full text-gray-400 px-2 pt-2 pb-0 rounded-sm transition-all duration-500 font-semibold text-[13px] md:text-[15px] capitalize tracking-wide text-center cursor-default antialiased`}
+                      {/* Year Node - Clickable if isYear is true */}
+                      <button
+                        onClick={() => {
+                          if (isYear) {
+                            setActiveYear(yearValue);
+                          }
+                        }}
+                        className={`w-full transition-all duration-300 capitalize tracking-wide text-center antialiased
+                          ${
+                            isYear
+                              ? `px-4 py-3 rounded-t-xs border-b-2 font-bold text-[14px] md:text-[16px] cursor-pointer ${
+                                  isYearActive
+                                    ? "text-[#0a41a1] border-[#0a41a1] bg-blue-100/50"
+                                    : "text-gray-400 border-transparent hover:text-gray-600 hover:bg-gray-100/50"
+                                }`
+                              : "px-2 pt-2 pb-0 font-semibold text-[13px] md:text-[15px] text-gray-400 cursor-default"
+                          }`}
                       >
                         {year.year}
-                      </div>
+                      </button>
 
                       {/* Compact Branching Lines */}
                       {!isYear && year.semester.length > 0 && (
@@ -203,18 +217,20 @@ const ProgrammeStructure = ({
                           const semValue = sem.semestername
                             ?.toLowerCase()
                             ?.replace(" ", "");
-                          return activeSemester === semValue ? (
+                          return isYear || activeSemester === semValue ? (
                             <div
                               key={sem.id}
                               className="animate-in fade-in duration-300"
                             >
-                              {/* Mobile-only Semester Heading */}
-                              <div className="md:hidden mb-4">
-                                <h4 className="text-[20px] font-bold text-[#0a41a1] capitalize flex items-center gap-2">
-                                  <span className="w-1.5 h-6 bg-[#0a41a1] rounded-full"></span>
-                                  {sem.semestername}
-                                </h4>
-                              </div>
+                              {/* Semester Heading - Hidden if isYear is true and it's the only semester, otherwise show for grouping */}
+                              {( !isYear || year.semester.length > 1 ) && (
+                                <div className="mb-4">
+                                  <h4 className="text-[18px] md:text-[20px] font-bold text-[#0a41a1] capitalize flex items-center gap-2">
+                                    <span className="w-1.5 h-6 bg-[#0a41a1] rounded-full"></span>
+                                    {sem.semestername}
+                                  </h4>
+                                </div>
+                              )}
 
                               {/* Subject Grid - Compact Cards */}
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

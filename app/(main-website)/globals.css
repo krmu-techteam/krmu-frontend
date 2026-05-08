@@ -4349,8 +4349,104 @@
   * {
     @apply border-border outline-ring/50;
   }
-
   body {
     @apply bg-background text-foreground;
   }
 }
+
+.clubcontent * {
+  background-color: transparent !important;
+  font-family: inherit !important;
+}
+
+.clubcontent p {
+  margin-bottom: 1.25rem !important;
+  line-height: 1.75 !important;
+}
+
+.clubcontent ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.clubcontent ul {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.clubcontent li {
+  margin-bottom: 0.5rem !important;
+}
+
+.clubcontent strong,
+.clubcontent b {
+  color: #051630 !important;
+  font-weight: 700 !important;
+}
+
+.clubcontent table {
+  display: block !important;
+  width: 100% !important;
+  overflow-x: auto !important;
+  clear: both !important;
+  border-collapse: collapse !important;
+  margin-bottom: 1.5rem !important;
+  background-color: white !important;
+}
+
+.clubcontent th,
+.clubcontent td {
+  border: 1px solid #e2e8f0 !important;
+  padding: 0.5rem 1rem !important;
+  text-align: center !important;
+}
+
+.clubcontent th {
+  background-color: #f8fafc !important;
+  font-weight: 700 !important;
+  color: #051630 !important;
+}
+
+.clubcontent tr:nth-child(even) {
+  background-color: #fdfdfd !important;
+}
+
+@media (max-width: 768px) {
+  .clubcontent [style*="display: flex"],
+  .clubcontent [style*="display:flex"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .clubcontent table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+  }
+
+  .clubcontent th,
+  .clubcontent td {
+    white-space: nowrap !important;
+    padding: 0.25rem 0.3rem !important;
+    font-size: 14px !important;
+  }
+
+  .clubcontent * {
+    max-width: 100% !important;
+    height: auto !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+
+  .clubcontent p,
+  .clubcontent span,
+  .clubcontent div {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+}
+

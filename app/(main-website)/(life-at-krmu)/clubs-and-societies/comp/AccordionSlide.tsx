@@ -20,32 +20,29 @@ const AccordionSlide = ({ slides }: Props) => {
         align: "start",
         loop: true,
       }}
-      className="w-full"
+      className="w-full relative group"
     >
-      <CarouselContent>
+      <CarouselContent className="-ml-4">
         {slides &&
           slides.map((image, index) => (
-            <CarouselItem key={index} className="basis-1/2 sm:basis-1/4">
-              <div>
+            <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+              <div className="relative aspect-[4/3] rounded-xs overflow-hidden border border-slate-100 shadow-sm group/item">
                 <Image
                   src={`${STRAPI_URL}${image?.url}`}
-                  width={390}
-                  height={390}
-                  alt={image?.alternativeText || "programme highlight"}
-                  className="h-[300px] object-cover"
+                  fill
+                  alt={image?.alternativeText || "club activity"}
+                  className="object-cover transition-transform duration-500 group-hover/item:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
             </CarouselItem>
           ))}
       </CarouselContent>
-      {slides?.length > 0 ? (
-        <>
-          {" "}
-          <CarouselPrevious className="left-0 bg-[#000000b2] text-white rounded-none" />
-          <CarouselNext className="right-0 bg-[#000000b2] text-white rounded-none" />
-        </>
-      ) : (
-        ""
+      {slides?.length > 1 && (
+        <div className="flex justify-end gap-2 mt-6">
+          <CarouselPrevious className="static translate-y-0 bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 shadow-sm transition-colors" />
+          <CarouselNext className="static translate-y-0 bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 shadow-sm transition-colors" />
+        </div>
       )}
     </Carousel>
   );
