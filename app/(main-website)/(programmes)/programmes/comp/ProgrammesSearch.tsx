@@ -717,7 +717,7 @@ const ProgrammesSearch = () => {
             {!isZenithPopup && selectedProgramme?.criteria?.eligibility_utm_links && (
               <Link
                 href={selectedProgramme.criteria.eligibility_utm_links}
-                className="bg-red-600 text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
+                className="#cb000d text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
                 target="_blank"
                 rel="noopener noreferrer"
               >
