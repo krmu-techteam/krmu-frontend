@@ -155,7 +155,7 @@ const ProgrammesSearch = () => {
     selectedProgramme.programmeslug.includes("zenithschool.ai");
 
   useEffect(() => {
-    schoolRefValue.current = selectedSchool;
+    schoolRefValue.current = selectedSchool; 
     degreeRefValue.current = selectedDegree;
   }, [selectedSchool, selectedDegree]);
 
@@ -481,7 +481,7 @@ const ProgrammesSearch = () => {
                 return (
                   <div
                     key={item.id}
-                    className="group max-w-[458px] min-h-[200px] w-full rounded-xl bg-[#0a41a1] group hover:bg-[#001F3F] h-full  font-semibold p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  hover:text-black"
+                    className="group max-w-[458px] min-h-[200px] w-full rounded-xl bg-[#001F3F] group hover:bg-[#0a41a1] h-full  font-semibold p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  hover:text-black"
                   >
                     {" "}
                     <Link href={`/programs/${slug}`} target="_blank">
@@ -530,7 +530,7 @@ const ProgrammesSearch = () => {
                           <Link
                             href={item.criteria.eligibility_utm_links}
                             target="_blank"
-                            className="bg-white text-red-600 rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-red-500 group-hover:text-white hover:border hover:border-red-500"
+                            className="bg-red-600 text-white rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-white group-hover:text-red-600 hover:border-white hover:border-white"
                           >
                             Apply Now
                           </Link>
