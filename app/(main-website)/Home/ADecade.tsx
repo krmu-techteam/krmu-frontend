@@ -39,7 +39,7 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-semibold mb-2 md:mb-5 text-black">
               {leftContent.adecadetitle}
             </h2>
-            <h3 className="mb-4 text-2xl md:text-4xl font-light text-[#034272]">
+            <h3 className="mb-4 text-2xl md:text-4xl font-light text-[#0a41a1]">
               {leftContent.adecadesubtitle}
             </h3>
             <p className="text-lg mb-5">{leftContent.adecadedescription}</p>
@@ -81,7 +81,7 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
           <div className="w-full grid grid-cols-2 xl:w-1/2 text-center gap-2.5 lg:text-left">
             {counters.map(({ counterText, counterContent }, idx) => (
               <div key={idx} className="flex flex-col justify-center text-center border rounded-md p-5 xl:p-0">
-                <span className="text-4xl sm:text-6xl md:text-6xl font-medium text-[#0060aa]">
+                <span className="text-4xl sm:text-6xl md:text-6xl font-medium text-[#0a41a1]">
                   {counterText}
                 </span>
                 <span className="text-sm xl:text-lg 2xl:text-xl font-normal leading-[1.3] text-black">
