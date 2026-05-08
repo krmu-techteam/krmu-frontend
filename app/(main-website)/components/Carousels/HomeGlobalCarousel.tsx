@@ -36,9 +36,9 @@ const HomeGlobalCarousel = ({ logos }: GlobalLogosProps) => {
               return (
                 <CarouselItem
                   key={logo?.id}
-                  className="basis-1/2 md:basis-1/4 lg:basis-1/5 xl:basis-1/5 pl-4"
+                  className="basis-1/2 md:basis-1/4 lg:basis-1/4 xl:basis-1/3 pl-4"
                 >
-                  <div className="group relative bg-white border border-gray-200 shadow-sm rounded-xl p-3 sm:p-4 h-[90px] sm:h-[110px] flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:border-[#0060aa]/20 hover:-translate-y-1.5 cursor-pointer">
+                  <div className="group relative bg-white border border-gray-200 shadow-sm rounded-xl p-3 sm:p-3 h-[90px] sm:h-[110px] flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:border-[#0060aa]/20 hover:-translate-y-1.5 cursor-pointer">
                     <Image
                       src={`${STRAPI_URL}${logo.url}`}
                       width={250}
