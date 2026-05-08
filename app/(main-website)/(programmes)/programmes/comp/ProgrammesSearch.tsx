@@ -355,12 +355,12 @@ const ProgrammesSearch = () => {
     <section>
       <div>
         {/* FILTER BOX */}
-        <div className="bg-[#051630] py-8 px-5">
-          <div className="py-2.5 px-5 flex flex-col lg:flex-row items-center gap-5 max-w-[1440px] mx-auto w-full bg-white rounded-xl">
+        <div className="bg-[#051630] py-5 md:py-8 px-4 md:px-5">
+          <div className="p-3 lg:py-2.5 lg:px-5 flex flex-col lg:flex-row items-stretch lg:items-center gap-4 lg:gap-5 max-w-[1440px] mx-auto w-full bg-white rounded-lg md:rounded-xl shadow-lg">
             {/* SCHOOL DROPDOWN */}
-            <div className="lg:w-5/12 relative" ref={schoolRef}>
+            <div className="w-full lg:w-5/12 relative border-b lg:border-b-0 lg:border-r border-gray-100 pb-3 lg:pb-0 lg:pr-5" ref={schoolRef}>
               <div
-                className="flex items-center justify-between gap-2.5 cursor-pointer"
+                className="flex items-center justify-between gap-2.5 cursor-pointer hover:opacity-80 transition-opacity"
                 onClick={() => {
                   setOpenSchoolDropdown(!openSchoolDropdown);
                   setOpenDegreeDropdown(false);
@@ -382,8 +382,8 @@ const ProgrammesSearch = () => {
               </div>
 
               {openSchoolDropdown && (
-                <div className="pb-2 absolute left-0 top-10 bg-white w-full rounded-[5px] border border-[#0000002d] z-10">
-                  <ul>
+                <div className="pb-2 absolute left-0 top-full mt-2 bg-white w-full rounded-lg border border-gray-200 z-30 shadow-2xl overflow-hidden">
+                  <ul className="max-h-[300px] overflow-y-auto custom-scrollbar">
                     {sortedSchools.map((school) => (
                       <li
                         key={school.id}
@@ -407,9 +407,9 @@ const ProgrammesSearch = () => {
             </div>
 
             {/* DEGREE DROPDOWN */}
-            <div className="lg:w-3/12 relative" ref={degreeRef}>
+            <div className="w-full lg:w-3/12 relative border-b lg:border-b-0 lg:border-r border-gray-100 pb-3 lg:pb-0 lg:pr-5" ref={degreeRef}>
               <div
-                className="flex items-center justify-between gap-2.5 cursor-pointer"
+                className="flex items-center justify-between gap-2.5 cursor-pointer hover:opacity-80 transition-opacity"
                 onClick={() => {
                   setOpenDegreeDropdown(!openDegreeDropdown);
                   setOpenSchoolDropdown(false);
@@ -423,8 +423,8 @@ const ProgrammesSearch = () => {
               </div>
 
               {openDegreeDropdown && (
-                <div className="py-2 absolute left-0 top-10 bg-white w-full rounded-[5px] border border-[#0000002d] z-10">
-                  <ul>
+                <div className="py-2 absolute left-0 top-full mt-2 bg-white w-full rounded-lg border border-gray-200 z-30 shadow-2xl overflow-hidden">
+                  <ul className="max-h-[300px] overflow-y-auto custom-scrollbar">
                     {allDegrees.map((degree) => (
                       <li
                         key={degree.id}
@@ -448,24 +448,24 @@ const ProgrammesSearch = () => {
             </div>
 
             {/* SEARCH INPUT */}
-            <div className="lg:w-4/12">
-              <div className="flex">
+            <div className="w-full lg:w-4/12 pt-1 lg:pt-0">
+              <div className="flex items-center">
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   id="default-search"
-                  className="block w-full bg-transparent text-lg font-semibold placeholder:text-base"
+                  className="block w-full bg-transparent text-lg font-semibold placeholder:text-gray-400 placeholder:text-base focus:outline-none"
                   placeholder="Search by Programme Name…"
                 />
-                <Search className="text-[#e61f21]" />
+                <Search className="text-[#e61f21] shrink-0" />
               </div>
             </div>
           </div>
         </div>
-        <div className="max-w-[1440px] mx-auto w-full px-5 2xl:px-0">
+        <div className="max-w-[1440px] mx-auto w-full px-4 md:px-5 2xl:px-0">
           {/* PROGRAMMES LIST */}
-          <div className="mt-10 grid md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-8">
+          <div className="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-8 justify-items-center md:justify-items-stretch">
             {programmes.length === 0 ? (
               <p className="col-span-3 text-center text-lg font-semibold text-gray-500">
                 No programme found
@@ -481,7 +481,7 @@ const ProgrammesSearch = () => {
                 return (
                   <div
                     key={item.id}
-                    className="group max-w-[458px] min-h-[200px] w-full rounded-xl bg-[#001F3F] group hover:bg-[#0a41a1] h-full  font-semibold p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  hover:text-black"
+                    className="group w-full max-w-[458px] min-h-[220px] rounded-xl bg-[#001F3F] hover:bg-[#0a41a1] font-semibold p-5 transition-all duration-300 flex flex-col gap-3 justify-between hover:shadow-xl shadow-md text-white border border-white/10"
                   >
                     {" "}
                     <Link href={`/programs/${slug}`} target="_blank">
@@ -551,9 +551,9 @@ const ProgrammesSearch = () => {
                         href={`${slug.includes("zenithschool.ai") ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slug}`}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white rounded-sm py-2.5 2xl:py-2.5 text-sm flex items-center gap-2"
+                        className="text-white rounded-md py-2.5 text-sm flex items-center gap-2 hover:translate-x-1 transition-transform"
                       >
-                        <CircleArrowRight /> <span>View Programme</span>
+                        <CircleArrowRight size={20} /> <span>View Programme</span>
                       </Link>
                       {/* )} */}
                     </div>
@@ -578,48 +578,48 @@ const ProgrammesSearch = () => {
         </div>
       </div>
       <div
-        className={`fixed  top-0 left-0 w-full h-full bg-black/50 z-50 ${isPopupOpen ? "flex" : "hidden"}`}
+        className={`fixed top-0 left-0 w-full h-full bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 ${isPopupOpen ? "flex" : "hidden"}`}
       >
         <div
-          className="w-full rounded-md sm:m-0 p-2.5 md:p-10 h-fit bg-white max-w-2xl md:max-w-4xl absolute top-1/2 left-1/2 -translate-1/2"
+          className="w-full bg-white rounded-2xl p-5 md:p-10 max-w-4xl max-h-[90vh] overflow-y-auto relative shadow-2xl"
           style={{
             boxShadow:
-              "0px -0.6088px 2.21381px 0px rgba(0, 0, 0, 0.02), 0px -1.46302px 5.32008px 0px rgba(0, 0, 0, 0.03), 0px -2.75474px 10.01724px 0px rgba(0, 0, 0, 0.04), 0px -4.91399px 17.86905px 0px rgba(0, 0, 0, 0.04), 0px -9.19107px 33.42209px 0px rgba(0, 0, 0, 0.05), 0px -22px 80px 0px rgba(0, 0, 0, 0.07)",
+              "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
           }}
         >
-          <span
-            className="absolute right-5 top-5  inline-block z-50 cursor-pointer"
+          <button
+            className="absolute right-4 top-4 p-2 hover:bg-gray-100 rounded-full transition-colors z-50"
             onClick={() => setIsPopupOpen(false)}
           >
-            <X />
-          </span>
+            <X size={24} />
+          </button>
 
-          <div className="text-xl font-semibold text-[#051630] mb-5">
-            <p>Fee Structure</p>
+          <div className="text-2xl font-bold text-[#051630] mb-6 border-b pb-4">
+            <h2>Fee Structure</h2>
           </div>
-          <div className="grid grid-cols-2 sm:flex flex-col md:flex-row gap-4 border-b border-gray-300 pb-2.5 sm:pb-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 border-b border-gray-100 pb-6 mb-6">
             {!isZenithPopup && (
               <>
-                <div className="lg:border-r border-black pr-4">
-                  <p className="mb-5 font-normal text-sm sm:text-base uppercase leading-[1]">
+                <div className="bg-gray-50 p-4 rounded-xl">
+                  <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-2">
                     Semester I
                   </p>
-                  <p className="text-sm sm:text-base leading-[1] font-bold">
+                  <p className="text-lg font-bold text-[#051630]">
                     Rs. {selectedProgramme?.criteria?.semester_i || "N/A"} /-
                   </p>
                 </div>
 
-                <div className="lg:border-r border-black pr-4">
-                  <p className="mb-5 font-normal text-sm sm:text-base uppercase leading-[1]">
+                <div className="bg-gray-50 p-4 rounded-xl">
+                  <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-2">
                     Semester II
                   </p>
-                  <p className="text-sm sm:text-base leading-[1] font-bold">
+                  <p className="text-lg font-bold text-[#051630]">
                     Rs. {selectedProgramme?.criteria?.semester_ii || "N/A"} /-
                   </p>
                 </div>
               </>
             )}
-            <div>
+            <div className="bg-blue-50 p-4 rounded-xl sm:col-span-2 lg:col-span-1">
               <p className="mb-5 font-normal text-sm sm:text-base  leading-[1]">
                 Programme Fee Per Year {slugValue === "bhmct-hotel-management" ? "(2025-26)" : ""}
               </p>
@@ -632,9 +632,9 @@ const ProgrammesSearch = () => {
             </div>
           </div>
 
-          <div className="my-5 border-b border-gray-300">
-            <p className="font-semibold text-sm sm:text-base">Duration:</p>
-            <p className="mb-2.5 sm:mb-5 font-bold text-sm sm:text-base">
+          <div className="my-6 bg-gray-50 p-5 rounded-2xl border border-gray-100">
+            <p className="text-sm text-gray-500 uppercase tracking-wider font-semibold mb-2">Duration:</p>
+            <p className="text-xl font-bold text-[#051630]">
               {selectedProgramme?.criteria?.Duration}
             </p>
           </div>
@@ -705,10 +705,10 @@ const ProgrammesSearch = () => {
             </div>
           </div>
 
-          <div className="flex gap-4 items-center">
+          <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mt-8">
             <Link
               href={`${isZenithPopup ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slugValue}`}`}
-              className="bg-[#0161b0] text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
+              className="bg-[#0161b0] text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-[#014d8c] transition-colors shadow-lg shadow-blue-900/20"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -717,7 +717,7 @@ const ProgrammesSearch = () => {
             {!isZenithPopup && selectedProgramme?.criteria?.eligibility_utm_links && (
               <Link
                 href={selectedProgramme.criteria.eligibility_utm_links}
-                className="bg-red-500 text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
+                className="bg-red-600 text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
                 target="_blank"
                 rel="noopener noreferrer"
               >

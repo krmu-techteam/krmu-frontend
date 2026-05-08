@@ -3426,17 +3426,17 @@
 
   .common-btn-b:hover,
   .hero-common-btn-b:hover {
-    background: #083380;
+    background: #bd010d;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
     transform: translateY(-2px);
   }
 
   .hero-common-btn-b {
-    background: #0a41a1;
+    background: #cb000d;
     color: #ffffff;
     padding: 13px 30px;
     line-height: 1;
-    border: 1px solid #0a41a1;
+    border: 1px solid #cb000d;
     border-radius: 4px !important;
     outline: none;
     font-size: 18px;
