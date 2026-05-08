@@ -3502,6 +3502,11 @@
     box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
     transform: translateY(-2px);
   }
+  .progherobtn:hover {
+    background: #cb000d;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
+    transform: translateY(-2px);
+  }
 
   .hero-common-btn-b {
     background: #cb000d;
@@ -3521,8 +3526,27 @@
     cursor: pointer;
   }
 
+  .progherobtn {
+    background: #cb000d;
+    color: #ffffff;
+    padding: 13px 30px;
+    line-height: 1;
+    border: 1px solid #cb000d;
+    border-radius: 5px !important;
+    outline: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    gap: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
   @media (max-width: 640px) {
-    .hero-common-btn-b {
+    .hero-common-btn-b,
+    .progherobtn {
       display: none;
     }
   }
