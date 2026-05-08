@@ -70,7 +70,7 @@ const HeroBanner = ({
   const currentSlug = slug;
   if (slug === "bba-hr") {
     return (
-      <section className="pt-[280px] sm:pt-24 md:pt-40 pb-8 md:pb-12 overflow-x-hidden 2xl:px-0 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/hr_1_12d63d3ae6.png)] bg-size-[240%] sm:bg-cover bg-top sm:bg-center bg-no-repeat relative md:before:content-[''] 
+      <section className="pt-[280px] sm:pt-24 md:pt-40 pb-8 md:pb-12 overflow-x-hidden 2xl:px-0 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/hr_1_1_8f97e39d14.webp)] overflow-hidden bg-size-[240%] sm:bg-cover bg-top sm:bg-center bg-no-repeat relative md:before:content-[''] 
       md:before:absolute before:top-0 before:left-0 before:bg-gradient-to-r before:from-black/90 before:to-black/0 before:h-full before:w-[60%] ">
         <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row justify-center gap-5 xl:gap-10 z-10 pt-5 pb-8 px-4 2xl:px-0 bg-[#0a41a1] sm:bg-transparent">
           <div className="w-full lg:w-1/2 xl:w-3/5 relative z-10">
