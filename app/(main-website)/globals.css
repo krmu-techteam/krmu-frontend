@@ -2758,12 +2758,12 @@
 
   /* Header Menu */
 
-  .headermenu-side-blink {
+  /* .headermenu-side-blink {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translate(-70%, -18%);
-  }
+  } */
 
   .school-prog-font {
     font-family:
