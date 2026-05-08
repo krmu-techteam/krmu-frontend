@@ -78,7 +78,7 @@ const HeroBanner = ({
               <div className="flex flex-col sm:block">
 
              <div>
-              <h3 className="text-white text-xl sm:text-3xl mb-2.5 text-shadow-lg hidden sm:block">
+              <h3 className="text-white text-xl mb-2.5 text-shadow-lg hidden sm:block">
                 {heroSection?.subtitle}
               </h3>
               <h1 className="text-white text-2xl sm:text-4xl xl:text-5xl font-bold mb-2.5 sm:mb-5 text-shadow-lg">
