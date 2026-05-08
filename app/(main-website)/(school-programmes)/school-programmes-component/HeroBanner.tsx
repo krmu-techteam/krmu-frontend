@@ -8,6 +8,7 @@ import NoPaperForm from "@/lib/constants/NoPaperForm";
 import YoutubePopup from "./YoutubePopup";
 import HeroTitle from "./HeroTitle";
 import { StrapiMedia } from "@/lib/types/common";
+import ConnectingDreamSlider from "./ConnectingDreamSlider";
 
 type Props = {
   title: string;
@@ -69,17 +70,21 @@ const HeroBanner = ({
   const currentSlug = slug;
   if (slug === "bba-hr") {
     return (
-      <section className="pt-24 sm:pt-40 pb-8 md:pb-12 overflow-x-hidden 2xl:px-0 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/herobg_3f15cb299b.webp)] bg-cover bg-center bg-no-repeat">
-        <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row justify-center gap-5 xl:gap-10 z-10">
+      <section className="pt-[280px] sm:pt-24 md:pt-40 pb-8 md:pb-12 overflow-x-hidden 2xl:px-0 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/hr_1_12d63d3ae6.png)] bg-size-[240%] sm:bg-cover bg-top sm:bg-center bg-no-repeat relative md:before:content-[''] 
+      md:before:absolute before:top-0 before:left-0 before:bg-gradient-to-r before:from-black/90 before:to-black/0 before:h-full before:w-[60%] ">
+        <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row justify-center gap-5 xl:gap-10 z-10 pt-5 pb-8 px-4 2xl:px-0 bg-[#0a41a1] sm:bg-transparent">
           <div className="w-full lg:w-1/2 xl:w-3/5 relative z-10">
-            <div className="xl:max-w-[720px] w-full">
-              <h3 className="text-white text-2xl sm:text-3xl mb-2.5 text-shadow-lg">
+            <div className="xl:max-w-[600px] w-full">
+              <div className="flex flex-col sm:block">
+
+             <div>
+              <h3 className="text-white text-xl sm:text-3xl mb-2.5 text-shadow-lg hidden sm:block">
                 {heroSection?.subtitle}
               </h3>
-              <h1 className="text-white text-3xl sm:text-4xl xl:text-6xl font-bold mb-5 text-shadow-lg">
+              <h1 className="text-white text-2xl sm:text-4xl xl:text-5xl font-bold mb-2.5 sm:mb-5 text-shadow-lg">
                 {title} {highlightitle}
               </h1>
-              <p className="text-white text-xl mb-5 text-shadow-lg">
+              <p className="text-white text-xl mb-5 text-shadow-lg hidden sm:block">
                 {heroSection?.description}
               </p>
               {(currentSlug === "btech-cse-cloud-computing" ||
@@ -106,53 +111,44 @@ const HeroBanner = ({
                   )}
                 </div>
               )}
-              <div className="my-5 flex flex-col md:flex-row items-baseline gap-5 mb-10">
+              </div>
+              <div className="max-w-lg my-2 sm:my-10 flex items-baseline">
                 <div className="text-white py-2.5 w-full">
-                  <span className="font-bold lg:text-sm xl:text-xl">56.6 LPA</span>
+                  <span className="font-bold lg:text-sm xl:text-xl">
+                    56.6 LPA
+                  </span>
 
-                  <p className="text-base xl:text-xl font-light">
+                  <p className="text-[10px] sm:text-base xl:text-xl font-light">
                     {dreamcareerSection?.highestpackagetitle ||
                       "Highest Package"}
                   </p>
                 </div>
-                <div className="text-white border-x border-white/50 py-2.5 px-5 w-full">
+                <div className="text-white border-l border-white/50 py-2.5 pl-3 w-full">
                   <span className="font-bold lg:text-sm xl:text-xl">800+</span>
-                  <p className="text-base xl:text-xl font-light">
+                  <p className="text-[10px] sm:text-base font-light">
                     {dreamcareerSection?.campusrecruitertitle ||
                       "Campus Recruiters"}
                   </p>
                 </div>
-                <div className="text-white py-2.5 w-full">
+                <div className="text-white py-2.5 border-l border-white/50 pl-3 w-full">
                   <span className="font-bold lg:text-sm xl:text-xl">
                     {" "}
                     {dreamcareerSection?.placementassistnum || "100%"}
                   </span>
-                  <p className="text-base xl:text-xl font-light">
+                  <p className="text-[10px] sm:text-base font-light">
                     {dreamcareerSection?.placementassisttitle ||
                       "Placement Assist"}
                   </p>
                 </div>
               </div>
+               </div>
             </div>
-            <div className="">
-              <h5 className="text-white text-xl">
+            <div>
+              <h5 className="text-white text-lg sm:text-xl">
                 {dreamcareerSection?.heading}
               </h5>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:flex items-stretch gap-2.5 mt-5 flex-wrap xl:flex-nowrap">
-                {logos?.map((logo) => (
-                  <div
-                    key={logo.id}
-                    className="bg-white px-2.5 flex items-center justify-center"
-                  >
-                    <Image
-                      src={`${STRAPI_URL}${logo?.url}`}
-                      width={160}
-                      height={150}
-                      alt={logo?.alternativeText || "Career Logo"}
-                      className="object-contain"
-                    />
-                  </div>
-                ))}
+               <ConnectingDreamSlider logos={logos} />
               </div>
             </div>
           </div>
@@ -416,7 +412,7 @@ const HeroBanner = ({
                   </strong>
                 </h3>
               </div>
-              <NoPaperForm formId={formId} height="500px" />
+              <NoPaperForm formId={formId} height="600px" />
             </div>
           )}
           {/* {isFormAvailable ? (

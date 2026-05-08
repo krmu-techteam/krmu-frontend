@@ -285,13 +285,14 @@ const page = async ({ params }: Props) => {
             heroSection={heroSection}
           />
         )}
-        {dreamcareerSection && (
+        {slug !== "bba-hr" && dreamcareerSection && (
           <DreamCareer
             heading={dreamcareerSection.heading}
             description={dreamcareerSection.description}
             logos={dreamcareerSection?.careerlogos}
           />
         )}
+
         {programmeScopeSection && (
           <ProgrammeScope
             scopeData={programmeScopeSection}
