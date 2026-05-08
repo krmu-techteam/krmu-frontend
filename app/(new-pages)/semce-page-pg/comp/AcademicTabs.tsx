@@ -60,7 +60,7 @@ const AcademicsTabs = () => {
               
               ${
                 active === tab
-                  ? "bg-red-600 text-white shadow-lg scale-[1.03]"
+                  ? "#cb000d text-white shadow-lg scale-[1.03]"
                   : "text-white hover:bg-white/20"
               }
             `}

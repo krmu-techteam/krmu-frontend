@@ -29,7 +29,7 @@ const BlogCTA = () => {
       <div className="flex flex-col gap-2">
         <a
           href="#"
-          className="bg-red-600 text-white px-5 py-2 rounded-full text-[14px] font-semibold text-center"
+          className="#cb000d text-white px-5 py-2 rounded-full text-[14px] font-semibold text-center"
         >
           Apply Now
         </a>

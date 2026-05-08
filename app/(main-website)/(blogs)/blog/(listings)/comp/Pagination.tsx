@@ -65,7 +65,7 @@ export default function Pagination({ currentPage, totalPages, pageNumbers }: Pro
             onClick={() => handlePageChange(Number(num))}
             className={`${btnBase} ${
               num === currentPage
-                ? "bg-red-600 text-white border-red-600"
+                ? "#cb000d text-white border-red-600"
                 : "bg-white text-black hover:bg-gray-100"
             } ${loading ? disabledStyle : ""}`}
           >

@@ -68,7 +68,7 @@ export default function ProgrammeSection() {
               Apply Now
             </button>
 
-            <button className="bg-red-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-600 transition text-xl">
+            <button className="#cb000d text-white font-semibold px-6 py-3 rounded-lg hover:#cb000d transition text-xl">
               Download Brochure
             </button>
           </div>

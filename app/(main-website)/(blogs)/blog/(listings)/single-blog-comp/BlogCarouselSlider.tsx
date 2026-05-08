@@ -59,7 +59,7 @@ const BlogCarouselSlider = ({ slides }: Props) => {
                 <div className="p-2.5 h-full flex flex-col">
                   {/* Image */}
                   <div className="relative">
-                    <span className="absolute bottom-0 right-0 text-xs bg-red-600 text-white py-2.5 px-5 rounded-tl-[24px] z-10">
+                    <span className="absolute bottom-0 right-0 text-xs #cb000d text-white py-2.5 px-5 rounded-tl-[24px] z-10">
                       {postDate}
                     </span>
                     <Image

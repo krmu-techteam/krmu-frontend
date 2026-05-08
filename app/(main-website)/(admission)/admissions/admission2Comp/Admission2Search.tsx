@@ -722,7 +722,7 @@ const Admission2Search = () => {
               selectedProgramme?.criteria?.eligibility_utm_links && (
                 <Link
                   href={selectedProgramme.criteria.eligibility_utm_links}
-                  className="bg-red-500 text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
+                  className="#cb000d text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
