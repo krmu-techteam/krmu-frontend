@@ -36,15 +36,18 @@ const AccrediationLogo: React.FC<ACCREDIATIONLOGOPROP> = ({ logosData }) => {
               return (
                 <CarouselItem
                   key={logo?.id}
-                  className="basis-1/3 lg:basis-1/5"
+                  className="basis-1/3 lg:basis-1/7"
                 >
-                  <div className="flex justify-center">
-                    <Image
-                      src={`${STRAPI_URL}${logo?.url}`}
-                      width={115}
-                      height={115}
-                      alt={logo?.alternativeText || "Accrediation Logo"}
-                    />
+                  <div className="p-1.5">
+                    <div className="flex justify-center items-center h-32 bg-white border border-slate-200 rounded-sm shadow-sm hover:shadow-md hover:border-[#00A0E3]/30 transition-all duration-300 group overflow-hidden">
+                      <Image
+                        src={`${STRAPI_URL}${logo?.url}`}
+                        width={140}
+                        height={140}
+                        className="object-contain group-hover:scale-110 transition-transform duration-300"
+                        alt={logo?.alternativeText || "Accrediation Logo"}
+                      />
+                    </div>
                   </div>
                 </CarouselItem>
               );

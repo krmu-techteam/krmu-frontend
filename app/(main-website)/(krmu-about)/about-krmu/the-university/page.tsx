@@ -84,38 +84,49 @@ const page = async () => {
 
   return (
     <>
-      <section className="min-h-[1px] h-full pt-44 lg:h-[600px] bg-[url(/krmabout.webp)] bg-cover bg-bottom relative prog-banner-shade">
-        <div className="max-w-[1600px] mx-auto w-full text-white h-full flex flex-col justify-center px-4">
-          <div className="z-10 max-w-7xl w-full">
-            <h1 className="text-2xl md:text-6xl xl:text-8xl font-semibold mb-5">
+      <section className="min-h-[1px] h-full pt-44 lg:h-[600px] bg-[url(/krmabout.webp)] bg-cover bg-bottom relative overflow-hidden">
+        {/* Bottom-Weighted Dark Blue Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#051630] via-[#051630]/50 to-transparent z-0" />
+        
+        <div className="max-w-[1600px] mx-auto w-full text-white h-full flex flex-col justify-center items-center text-center px-4 relative z-10">
+          <div className="max-w-6xl w-full">
+            <h1 className="text-2xl md:text-3xl lg:text-5xl xl:text-8xl font-bold mb-6 drop-shadow-[0_4px_15px_rgba(0,0,0,0.6)] leading-tight whitespace-normal md:whitespace-nowrap">
               {aboutData?.title}
             </h1>
-            <p className="text-lg md:text-[22px] mb-10">
+            <div className="w-20 h-1 bg-white mx-auto mb-8 rounded-full shadow-lg opacity-80" />
+            <p className="text-base md:text-md xl:text-lg font-medium drop-shadow-md opacity-95 leading-relaxed max-w-5xl mx-auto">
               {aboutData?.subtitle}
             </p>
           </div>
         </div>
       </section>
-      <section className="py-[60px]">
-        <div className="max-w-[1600px] mx-auto w-full px-4">
-          <h2 className="text-4xl md:text-5xl font-semibold">
+      <section className="py-8 md:py-16 bg-slate-50/50">
+        <div className="max-w-[1440px] mx-auto w-full px-4 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#051630]">
             {aboutData?.accrediation?.title}
-          </h2>
-          <div className="w-full">
+          </h2> 
+          
+          <div className="w-full pt-4 md:pt-8">
             <AccrediationLogo logosData={accrediationLogoData} />
           </div>
         </div>
       </section>
-      <section>
-        <div className="max-w-[1600px] mx-auto w-full px-4">
-          <div className="mb-5">
-            <h3 className="text-[#00A0E3] text-4xl">{KRMGRP?.title}</h3>
-            <h4 className="text-4xl font-semibold leading-[1.3] mt-2.5 mb-3.5">
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-[1440px] mx-auto w-full px-4">
+          <div className="text-center mb-16">
+            <div className="flex justify-center mb-4">
+              <span className="bg-[#00A0E3]/10 text-[#00A0E3] px-6 py-2 rounded-full text-xs md:text-sm font-bold uppercase tracking-[0.2em] border border-[#00A0E3]/20 shadow-sm">
+                {KRMGRP?.title}
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#051630] mb-6 leading-tight">
               {KRMGRP?.subtitle}
-            </h4>
-            <p className="mb-5">{KRMGRP?.description}</p>
+            </h2> 
+            <p className="text-slate-600 text-lg md:text-xl max-w-7xl mx-auto leading-relaxed">
+              {KRMGRP?.description}
+            </p>
           </div>
-          <div className="mb-10">
+          <div className="p-4">
             <KRMUGroupCard krmBranchImages={krmBranchData} />
           </div>
         </div>
