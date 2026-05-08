@@ -7,8 +7,8 @@ type Props = {
 
 const ElevateSlide = ({ imgUrl, alt }: Props) => {
   return (
-    <div className="bg-gray-500 h-full min-h-[500px] rounded-2xl relative overflow-hidden">
-      <Image src={imgUrl} fill className="object-cover z-10" alt={alt || ""} />
+    <div className="bg-gray-50 h-full min-h-[428px] rounded-2xl relative overflow-hidden">
+      <Image src={imgUrl} fill className="object-contain z-10 shadow-2xl" alt={alt || ""} />
     </div>
   );
 };

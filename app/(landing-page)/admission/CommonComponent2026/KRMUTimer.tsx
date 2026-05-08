@@ -83,7 +83,7 @@ export default function KRMUTimer({ targetDate }: ZenithTimerProps) {
         Now or Never! Grab Your 100% Scholarship Today
       </span> */}
 <span className="text-xs uppercase tracking-wider font-semibold">
-        Last Few Hours Left | Early Bird Scholarship Ends Today | Apply Now 
+      2-Day Admission Extension Ends Tomorrow | Avail Up to 100% Scholarships | Apply Now 
       </span>
       <div className="flex gap-2 font-mono text-sm">
         <TimeBox value={format(timeLeft.days)} label="D" />

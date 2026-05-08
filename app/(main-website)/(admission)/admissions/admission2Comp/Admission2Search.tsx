@@ -533,7 +533,7 @@ const Admission2Search = () => {
                           <Link
                             href={item.criteria.eligibility_utm_links}
                             target="_blank"
-                            className="bg-red-600 text-white rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-white group-hover:text-red-600 hover:border-white hover:border-white"
+                            className="bg-[#cb000d] text-white rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-white group-hover:text-[#cb000d] hover:border-white"
                           >
                             Apply Now
                           </Link>
