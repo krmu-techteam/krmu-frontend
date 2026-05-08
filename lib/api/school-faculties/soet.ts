@@ -18,6 +18,123 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Pankaj_Agarwal_DEAN_SOET_2e63c16f24.png",
   },
+  {
+    id: 114214,
+    slug: "dr-shahid-ahmad-wani",
+    title: {
+      rendered: "Dr. Shahid Ahmad Wani",
+    },
+    featured_media: 6624,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/shahid-Ahmad-Wani.jpg",
+  },
+  // {
+  //   id: 114224,
+  //   slug: "dr-satinder-pal-singh",
+  //   title: {
+  //     rendered: "Dr. Satinder Pal Singh",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url: "",
+  // },
+  // {
+  //   id: 114223,
+  //   slug: "mr-gaurav",
+  //   title: {
+  //     rendered: "Mr. Gaurav",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url: "",
+  // },
+  // {
+  //   id: 114221,
+  //   slug: "dr-shahjad",
+  //   title: {
+  //     rendered: "Dr. Shahjad",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url: "",
+  // },
+  {
+    id: 114219,
+    slug: "mr-arsalan-ahmed-alyas",
+    title: {
+      rendered: "Mr. Arsalan Ahmed Alyas",
+    },
+    featured_media: 6624,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/Arsalan-Ahmed-Alyas.jpg",
+  },
+  {
+    id: 114217,
+    slug: "mrs-nainsi-soni",
+    title: {
+      rendered: "Mrs. Nainsi Soni",
+    },
+    featured_media: 6624,
+    acf: {
+      "staff-qualification": "Ph.D. in  Computer Science from LNMIIT",
+      staff_designation: "Professor & Dean- SOET",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/Nainsi-Soni.jpg",
+  },
+  {
+    id: 114215,
+    slug: "Ms. Ruchi Sharma",
+    title: {
+      rendered: "ms-ruchi-sharma",
+    },
+    featured_media: 6624,
+    acf: {
+      "staff-qualification": "Phd (Pursuing) from DIT University",
+      staff_designation: "Assistant Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/ruchi-sharma.jpg",
+  },
+  {
+    id: 114213,
+    slug: "ms-alina-banerjee",
+    title: {
+      rendered: "Ms. Alina Banerjee",
+    },
+    featured_media: 6624,
+    acf: {
+      "staff-qualification": "PhD(Pursuing) from IGDTUW, Delhi",
+      staff_designation: "Assistant Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/Alina-Banerjee.jpg",
+  },
   // {
   //   id: 113902,
   //   slug: "mr-someshwar-mukherjee",

@@ -91,9 +91,8 @@ const SchoolOpenSourceMentorship = () => {
                 </h2>
                 <p className="text-white/75 text-base sm:text-lg leading-relaxed">
                   The School of Engineering and Technology (SOET) runs a focused
-                  Open Source Mentorship Programme, driven by the Technical
-                  Training Team, to prepare students for global, stipend-based
-                  opportunities like{" "}
+                  Open Source Mentorship Programme, driven by our faculties, to
+                  prepare students for global, stipend-based opportunities like{" "}
                   <span className="text-[#00c3ff] font-semibold">
                     Google Summer of Code
                   </span>
