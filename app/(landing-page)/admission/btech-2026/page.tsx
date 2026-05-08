@@ -42,7 +42,7 @@ import FAQSection2 from "../CommonComponent2026/FAQSection2";
 import ProgrammeSection from "../CommonComponent2026/ProgrammeSection";
 import EligibilityTerms from "../commonComponent/EligibilityTerms";
 import StickyMobileBar from "../commonComponent/StickyMobileBar";
-
+import SchoolOpenSourceMentorship from "@/app/(main-website)/(schools)/SchoolComponents/SchoolDesign2/SchoolOpenSourceMentorship";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -118,6 +118,7 @@ const page = () => {
       /> */}
       {/* <IndustryExperts data={industryexpert} /> */}
       {/* <Specialisation data={specialise} /> */}
+      <SchoolOpenSourceMentorship />
       <ProgrammeSection {...programmeContent} />
       <Opportunity data={opport} />
       {/* <FeeStructureTable /> */}
@@ -130,8 +131,8 @@ const page = () => {
       <BusinessHub data={businessData} formId={btechIdForm} />
       {/* {/* <ApplySection data={applyData} /> */}
       <EligibilityTerms items={eligibilityTerms} />
-      <CommonFooter2 /> 
-      <StickyMobileBar phoneNumber="+919311411717"/>
+      <CommonFooter2 />
+      <StickyMobileBar phoneNumber="+919311411717" />
     </>
   );
 };
