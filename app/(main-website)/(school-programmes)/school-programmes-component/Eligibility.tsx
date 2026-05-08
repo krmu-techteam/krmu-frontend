@@ -77,7 +77,7 @@ const Eligibility = ({
         <div className={`max-w-[1440px] w-full mx-auto`}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
             <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
-              <Calendar size={32} color="#00a1e4" className="flex-shrink-0" />
+              <Calendar size={32} color="#0a41a1" className="flex-shrink-0" />
               <div className="flex flex-col">
                 <p className="text-md font-medium text-gray-500 capitalize leading-tight tracking-wide">
                   {elgibilities[0]?.subtitle}
@@ -90,7 +90,7 @@ const Eligibility = ({
             <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
               <IndianRupee
                 size={32}
-                color="#00a1e4"
+                color="#0a41a1"
                 className="flex-shrink-0"
               />
               <div className="flex flex-col">
@@ -105,7 +105,7 @@ const Eligibility = ({
             <div className="bg-white border border-gray-300 rounded-md px-6 py-4 flex items-start gap-5">
               <LaptopMinimalCheck
                 size={32}
-                color="#00a1e4"
+                color="#0a41a1"
                 className="flex-shrink-0"
               />
               <div className="flex flex-col">
