@@ -17,7 +17,7 @@ interface KRMBRANCHPROP {
 const KRMUGroupCard: React.FC<KRMBRANCHPROP> = ({ krmBranchImages }) => {
   return (
     <>
-      <div className="cursor-pointer relative after:content-[''] after:absolute after:top-0 after:right-0 after:w-[17%] after:h-full after:z-[100] after:bg-gradient-to-r after:from-white/0 after:to-white ">
+      <div className="cursor-pointer relative">
         <Carousel
           opts={{
             align: "start",
@@ -35,7 +35,7 @@ const KRMUGroupCard: React.FC<KRMBRANCHPROP> = ({ krmBranchImages }) => {
                 return (
                   <CarouselItem
                     key={branch?.id}
-                    className="basis-1/2 lg:basis-1/5"
+                    className="basis-1/2 lg:basis-1/4"
                   >
                     <div key={branch?.id}>
                       <Image
