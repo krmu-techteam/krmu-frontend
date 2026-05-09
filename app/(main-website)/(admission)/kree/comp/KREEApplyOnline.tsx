@@ -22,7 +22,7 @@ const KREEApplyOnline = ({ appl_btn }: Props) => {
           {appl_btn && appl_btn?.btn_link ? (
             <Link
               href={appl_btn?.btn_link}
-              className={`bg-[#e31e24] hover:bg-[#034272] text-white rounded-[4px] text-sm py-[11px] px-[23px] inline-block ${
+              className={`bg-[#cb000d] hover:bg-[#034272] text-white rounded-[4px] text-sm py-[11px] px-[23px] inline-block ${
                 appl_btn?.btn_class || ""
               }`}
             >
