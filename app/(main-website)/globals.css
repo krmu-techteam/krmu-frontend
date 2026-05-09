@@ -3557,14 +3557,18 @@
 
   .tick-li ul li::before {
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     position: absolute;
-    background: url("/white-circle-check-big.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 0;
-    left: -40px;
+    background-color: currentColor;
+    -webkit-mask-image: url("/white-circle-check-big.svg");
+    mask-image: url("/white-circle-check-big.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    top: 4px;
+    left: -35px;
   }
 
   .phdwhatbtn {
