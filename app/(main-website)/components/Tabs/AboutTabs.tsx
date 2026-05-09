@@ -1,8 +1,6 @@
-import { STRAPI_URL } from "@/app/constant";
-import { Button } from "@/components/ui/button";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Advisory } from "@/lib/api/facAdv";
-import Image from "next/image";
 import DeansSlide from "./DeansSlide";
 import AdvisorySlide from "./AdvisorySlide";
 
@@ -13,24 +11,24 @@ type Props = {
 const AboutTabs = ({ data }: Props) => {
   return (
     <>
-      <Tabs defaultValue="advisoryboard">
-        <div className="flex justify-center">
-          <TabsList className="h-36 lg:h-24 faculty-with-advisory">
+      <Tabs defaultValue="advisoryboard" className="w-full">
+        <div className="flex justify-center mb-10">
+          <TabsList className="h-14 lg:h-16 p-[3px] bg-slate-100 rounded-full border border-slate-200 shadow-inner faculty-with-advisory">
             <TabsTrigger
               value="advisoryboard"
-              className="cursor-pointer break-all py-2.5 px-[100px] text-2xl rounded-[48px]  data-[state=active]:bg-[#051630]  data-[state=active]:text-white"
+              className="cursor-pointer px-8 lg:px-12 text-base lg:text-lg font-semibold rounded-full transition-all duration-300 data-[state=active]:bg-[#051630] data-[state=active]:text-white data-[state=active]:shadow-lg"
             >
               Advisory Board
             </TabsTrigger>
             <TabsTrigger
               value="krmudean"
-              className="cursor-pointer break-all py-2.5 px-[100px] text-2xl rounded-[48px]  data-[state=active]:bg-[#051630]  data-[state=active]:text-white"
+              className="cursor-pointer px-8 lg:px-12 text-base lg:text-lg font-semibold rounded-full transition-all duration-300 data-[state=active]:bg-[#051630] data-[state=active]:text-white data-[state=active]:shadow-lg"
             >
               Deans of KRMU Schools
             </TabsTrigger>
           </TabsList>
         </div>
-        <div className="pt-[60px] pb-36">
+        <div >
           <TabsContent value="advisoryboard" className="w-full">
             <AdvisorySlide  />
           </TabsContent>

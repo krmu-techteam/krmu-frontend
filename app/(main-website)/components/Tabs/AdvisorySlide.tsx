@@ -121,50 +121,77 @@ const deans = [
   },
 ];
 
-const ITEMS_PER_LOAD = 4;
+const ITEMS_PER_LOAD = 5;
 
-const DeansSlide = () => {
-  const [visibleCount, setVisibleCount] = useState(4);
+const AdvisorySlide = () => {
+  const [visibleCount, setVisibleCount] = useState(5);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + ITEMS_PER_LOAD);
+    setIsLoading(true);
+    // Simulate a brief loading delay for better UX
+    setTimeout(() => {
+      setVisibleCount((prev) => prev + ITEMS_PER_LOAD);
+      setIsLoading(false);
+    }, 800);
   };
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
         {deans.slice(0, visibleCount).map((dean, index) => (
           <div
             key={index}
-            className="w-full text-center faculty-post-card-image rounded-tr-3xl"
+            className="group relative flex flex-col bg-gradient-to-b from-blue-50/50 to-white border border-blue-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
           >
-            <div className="-z-10 rounded-tr-2xl">
+            {/* Person Image */}
+            <div className="w-full h-80 relative overflow-hidden bg-white p-2">
               <Image
                 src={dean.img}
                 alt={dean.name}
-                width={264}
-                height={295}
-                className="w-full h-[295px] object-fill"
+                width={300}
+                height={400}
+                className="w-full h-full object-contain object-center"
               />
             </div>
 
-            <div className="p-5 md:py-10 md:px-2.5 h-[200px] text-white bg-[#051630] -mt-5 flex items-center justify-center flex-col">
-              <h5 className="text-2xl font-semibold">{dean.name}</h5>
-              <p className="text-sm font-light text-center">{dean.role}</p>
-              <p className="text-sm font-semibold text-center">{dean.desg}</p>
-              
+            {/* Text Content */}
+            <div className="p-5 flex flex-col flex-grow text-center">
+              <h5 className="text-lg font-bold text-slate-900 leading-tight mb-2">
+                {dean.name}
+              </h5>
+              <div className="w-8 h-1 bg-[#051630] mb-3 mx-auto rounded-full transition-all duration-500 group-hover:w-12" />
+              <p className="text-xs text-slate-600 font-medium leading-relaxed mb-1">
+                {dean.role}
+              </p>
+              <p className="text-[10px] text-slate-400 font-semibold leading-relaxed">
+                {dean.desg}
+              </p>
             </div>
           </div>
         ))}
       </div>
 
       {visibleCount < deans.length && (
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-12">
           <Button
             onClick={handleLoadMore}
-            className="text-[#051630] bg-[#f2f3f5] h-[50px] border border-[#051630] font-semibold text-base hover:bg-[#cb000d] hover:text-white mt-10"
+            disabled={isLoading}
+            className={`group inline-flex items-center gap-2 cursor-pointer px-8 py-6 bg-[#051630] hover:bg-[#051630]/70 text-white border-[#051630] font-semibold text-lg rounded-lg transition-all duration-300 ${
+              isLoading ? "bg-[#051630] text-white" : "text-white"
+            }`}
           >
-            Load More
+            {isLoading ? "Loading..." : "Load More"}
+            {!isLoading && (
+              <svg 
+                className="w-5 h-5" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            )}
           </Button>
         </div>
       )}
@@ -172,7 +199,7 @@ const DeansSlide = () => {
   );
 };
 
-export default DeansSlide;
+export default AdvisorySlide;
 
 // "use client";
 

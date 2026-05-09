@@ -10,7 +10,7 @@ const AdvisoryOrDean = async () => {
   return (
     <>
       <section className="overflow-hidden">
-        <div className="max-w-[1600px] mx-auto w-full flex justify-center px-4 py-10">
+        <div className="max-w-[1600px] mx-auto w-full flex justify-center px-4 py-8 md:py-16">
           <AboutTabsOrAccordion data={advisoryData} />
         </div>
       </section>
