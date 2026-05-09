@@ -32,7 +32,7 @@ const CIF = () => {
       <div className="max-w-[1664px] mx-auto w-full flex items-center justify-center mt-10">
         <Link
           href="/cif"
-          className="blink-effect bg-[#e31e24] py-2.5 px-5 leading-[1] inline-block text-white rounded-[4px]"
+          className="blink-effect bg-[#cb000d] py-2.5 px-5 leading-[1] inline-block text-white rounded-[4px]"
         >
           Know More
         </Link>

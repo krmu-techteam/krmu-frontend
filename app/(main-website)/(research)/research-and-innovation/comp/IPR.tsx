@@ -38,7 +38,7 @@ const IPR = () => {
           </p>
           <Link
             href="/ipr-legal-ethical-matters-cell"
-            className=" blink-effect common-btn-3 mt-5"
+            className="blink-effect common-btn-3 mt-5"
           >
             Know More
           </Link>

@@ -35,7 +35,7 @@ const page = async ({ params }: Props) => {
                     {item?.pdf_btn?.btn_link && (
                       <Link
                         href={item?.pdf_btn?.btn_link || "#"}
-                        className="bg-[#e31e24] text-white py-[9px] px-5 text-xs leading-3.5 inline-block rounded-[4px] font-medium"
+                        className="bg-[#cb000d] text-white py-[9px] px-5 text-xs leading-3.5 inline-block rounded-[4px] font-medium"
                         target="_blank" rel="noopener noreferrer"
                       >
                         {item?.pdf_btn?.btn_text}

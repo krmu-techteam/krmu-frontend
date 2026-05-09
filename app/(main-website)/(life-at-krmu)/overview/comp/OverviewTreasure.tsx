@@ -23,7 +23,7 @@ const OverviewTreasure = () => {
           <div className="text-center lg:text-left">
             <Link
               href="/library"
-              className="bg-[#e31e24] text-white py-[11px] px-[23px] hover:bg-[#051630] text-base font-semibold rounded-[4px] inline-block"
+              className="bg-[#cb000d] text-white py-[11px] px-[23px] hover:bg-[#051630] text-base font-semibold rounded-[4px] inline-block"
             >
               Know More
             </Link>
