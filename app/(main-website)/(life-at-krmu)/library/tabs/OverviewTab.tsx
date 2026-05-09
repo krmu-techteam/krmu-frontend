@@ -24,7 +24,7 @@ const OverviewTab = () => {
             <Link
               href="https://bit.ly/3CEDfs8"
               target="_blank" rel="noopener noreferrer"
-              className="py-[11px] px-[23px] text-sm rounded-[4px] text-white bg-[#e31e24] hover:text-[#051630] hover:cursor-pointer"
+              className="py-[11px] px-[23px] text-sm rounded-[4px] text-white bg-[#cb000d] hover:text-[#051630] hover:cursor-pointer"
             >
               Click Here
             </Link>
@@ -35,7 +35,7 @@ const OverviewTab = () => {
             <Link
               href="http://172.16.16.25:4444/"
               target="_blank" rel="noopener noreferrer"
-              className="py-[11px] px-[23px] text-sm rounded-[4px] text-white bg-[#e31e24] hover:text-[#051630] hover:cursor-pointer"
+              className="py-[11px] px-[23px] text-sm rounded-[4px] text-white bg-[#cb000d] hover:text-[#051630] hover:cursor-pointer"
             >
               Click Here
             </Link>

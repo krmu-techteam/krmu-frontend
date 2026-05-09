@@ -32,21 +32,21 @@ const ResearchInnovationHeroSection = () => {
           <div className="flex flex-wrap gap-5">
             <Link
               href="/PDF"
-              className="bg-[#e31e24] leading-[1.5] py-2.5 px-5 inline-block rounded-[4px] text-xl text-white md:leading-2.5 blink-effect"
+              className="bg-[#cb000d] leading-[1.5] py-2.5 px-5 inline-block rounded-[4px] text-xl text-white md:leading-2.5 blink-effect"
               target="_blank" rel="noopener noreferrer"
             >
               Policies
             </Link>
             <Link
               href="/PDF/publications"
-              className="bg-[#e31e24] leading-[1.5] py-2.5 px-5 inline-block rounded-[4px] text-xl text-white md:leading-2.5 blink-effect"
+              className="bg-[#cb000d] leading-[1.5] py-2.5 px-5 inline-block rounded-[4px] text-xl text-white md:leading-2.5 blink-effect"
               target="_blank" rel="noopener noreferrer"
             >
               Publications
             </Link>
             <Link
               href="/PDF/conferences"
-              className="bg-[#e31e24] leading-[1.5] py-2.5 px-5 inline-block rounded-[4px] text-xl text-white md:leading-2.5 blink-effect"
+              className="bg-[#cb000d] leading-[1.5] py-2.5 px-5 inline-block rounded-[4px] text-xl text-white md:leading-2.5 blink-effect"
               target="_blank" rel="noopener noreferrer"
             >
               Conferences
