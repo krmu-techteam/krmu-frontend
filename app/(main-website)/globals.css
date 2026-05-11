@@ -1097,7 +1097,7 @@
 
   .cdc_card:hover .cdc_text_white {
     color: #fff;
-    z-index: 99999999;
+    /* z-index: 1; */
     position: relative;
   }
 
@@ -4561,4 +4561,3 @@
     line-height: 1.5 !important;
   }
 }
-
