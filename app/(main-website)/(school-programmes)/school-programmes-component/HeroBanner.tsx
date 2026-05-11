@@ -70,103 +70,130 @@ const HeroBanner = ({
   const currentSlug = slug;
   if (slug === "bba-hr") {
     return (
-      <section className="pt-[280px] sm:pt-24 md:pt-40 pb-8 md:pb-12 overflow-x-hidden 2xl:px-0 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/hr_1_1_8f97e39d14.webp)] overflow-hidden bg-size-[240%] sm:bg-cover bg-top sm:bg-center bg-no-repeat relative md:before:content-[''] 
-      md:before:absolute before:top-0 before:left-0 before:bg-gradient-to-r before:from-black/90 before:to-black/0 before:h-full before:w-[60%] ">
-        <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row justify-center gap-5 xl:gap-10 z-10 pt-5 pb-8 px-4 2xl:px-0 bg-[#0a41a1] sm:bg-transparent">
-          <div className="w-full lg:w-1/2 xl:w-3/5 relative z-10">
-            <div className="xl:max-w-[600px] w-full">
-              <div className="flex flex-col sm:block">
-
-             <div>
-              <h3 className="text-white text-xl mb-2.5 text-shadow-lg hidden sm:block">
-                {heroSection?.subtitle}
-              </h3>
-              <h1 className="text-white text-2xl sm:text-4xl xl:text-5xl font-bold mb-2.5 sm:mb-5 text-shadow-lg">
-                {title} {highlightitle}
-              </h1>
-              <p className="text-white text-xl mb-5 text-shadow-lg hidden sm:block">
-                {heroSection?.description}
-              </p>
-              {(currentSlug === "btech-cse-cloud-computing" ||
-                currentSlug ===
-                  "b-tech-computer-science-and-engineering-semiconductor-design" ||
-                currentSlug === "ma-clinical-psychology" ||
-                currentSlug === "master-of-design-m-des-interior-design" ||
-                currentSlug === "ma-political-science" ||
-                currentSlug === "Bachelor-of-Emergency-Medical-Technologist" ||
-                currentSlug === "bsc-clinical-psychology") && (
-                <p className="text-right text-white font-bold text-xs mt-2">
-                  **Subject to Approval
+      <>
+        <section className="pt-[280px] sm:pt-24 md:pt-40 pb-0 md:pb-12 overflow-x-hidden 2xl:px-0 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hr_6bd1b64d96.png)] overflow-hidden bg-size-[240%] sm:bg-cover bg-[center_-120px] sm:bg-[85%_center] bg-no-repeat relative md:before:content-[''] 
+        md:before:absolute before:top-0 before:left-0 before:bg-gradient-to-r before:from-black/85 before:to-black/0 before:h-full before:w-[45%] ">
+          <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 xl:gap-16 z-10 2xl:px-0">
+            <div className="w-full lg:w-1/2 xl:w-1/2 relative z-10">
+              <div className="xl:max-w-[700px] w-full">
+                <div className="flex flex-col sm:block bg-gradient-to-t from-black/90 via-black/50 to-transparent sm:bg-none px-6 sm:p-0">
+                  <div className="mb-0 md:mb-10">
+                <h3 className="text-white/90 text-sm sm:text-base font-normal mb-1 uppercase tracking-[0.05em] drop-shadow-md">
+                  {heroSection?.subtitle}
+                </h3>
+                <h1 className="text-white text-[28px] xl:text-4xl 2xl:text-5xl font-bold mb-0 sm:mb-6 leading-[1.1] drop-shadow-2xl">
+                  {title} <span className="text-white/90">{highlightitle}</span>
+                </h1>
+                <p className="text-white/95 text-md sm:text-lg xl:text-base 2xl:text-lg mb-8 leading-relaxed font-normal hidden sm:block lg:max-w-xs xl:max-w-md 2xl:max-w-lg">
+                  {heroSection?.description}
                 </p>
-              )}
-              {currentSlug !== "bhmct-hotel-management" && (
-                <div className="hidden xl:block xl:mt-5">
-                  {formId && (
-                    <NpfPopup
-                      formId={formId}
-                      btnClass={`progherobtn  ${heroSection.herobtn.buttonclass || ""} rounded-md`}
-                      btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
-                      showIcon={false}
-                    />
-                  )}
+                {(currentSlug === "btech-cse-cloud-computing" ||
+                  currentSlug ===
+                    "b-tech-computer-science-and-engineering-semiconductor-design" ||
+                  currentSlug === "ma-clinical-psychology" ||
+                  currentSlug === "master-of-design-m-des-interior-design" ||
+                  currentSlug === "ma-political-science" ||
+                  currentSlug === "Bachelor-of-Emergency-Medical-Technologist" ||
+                  currentSlug === "bsc-clinical-psychology") && (
+                  <p className="text-right text-white font-bold text-xs mt-2">
+                    **Subject to Approval
+                  </p>
+                )}
+                {currentSlug !== "bhmct-hotel-management" && (
+                  <div className="mt-3 mb-8 xl:mt-8 flex justify-start sm:justify-start">
+                    {formId && (
+                      <NpfPopup
+                        formId={formId}
+                        btnClass={`progherobtn py-2 px-8 text-lg ${heroSection.herobtn.buttonclass || ""} rounded-sm shadow-xl transition-all hover:scale-105`}
+                        btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
+                        showIcon={false}
+                      />
+                    )}
+                  </div>
+                )}
+                  </div>
                 </div>
-              )}
-              </div>
-              <div className="max-w-lg my-2 sm:my-10 flex items-baseline">
-                <div className="text-white py-2.5 w-full">
-                  <span className="font-bold lg:text-sm xl:text-xl">
-                    56.6 LPA
-                  </span>
 
-                  <p className="text-[10px] sm:text-base xl:text-xl font-light">
-                    {dreamcareerSection?.highestpackagetitle ||
-                      "Highest Package"}
-                  </p>
-                </div>
-                <div className="text-white border-l border-white/50 py-2.5 pl-3 w-full">
-                  <span className="font-bold lg:text-sm xl:text-xl">800+</span>
-                  <p className="text-[10px] sm:text-base font-light">
-                    {dreamcareerSection?.campusrecruitertitle ||
-                      "Campus Recruiters"}
-                  </p>
-                </div>
-                <div className="text-white py-2.5 border-l border-white/50 pl-3 w-full">
-                  <span className="font-bold lg:text-sm xl:text-xl">
-                    {" "}
-                    {dreamcareerSection?.placementassistnum || "100%"}
-                  </span>
-                  <p className="text-[10px] sm:text-base font-light">
-                    {dreamcareerSection?.placementassisttitle ||
-                      "Placement Assist"}
-                  </p>
+                {/* Stats Bar - Integrated on Desktop, Dedicated Section on Mobile */}
+                <div className="w-full bg-[#001631] sm:bg-transparent py-8 sm:py-0 mt-0 sm:mt-10 relative z-10">
+                  <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-nowrap items-center sm:gap-x-10">
+                    <div className="flex flex-col sm:pr-8 lg:pr-10 sm:border-r border-white/20 text-center sm:text-left">
+                      <span className="text-white font-semibold text-lg sm:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
+                        {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
+                      </span>
+                      <span className="text-white/90 text-[11px] sm:text-sm xl:text-base mt-1 font-normal whitespace-nowrap overflow-hidden text-ellipsis">
+                        {dreamcareerSection?.highestpackagetitle || "Highest Package"}
+                      </span>
+                    </div>
+                    <div className="flex flex-col sm:px-8 lg:px-10 sm:border-r border-white/20 text-center sm:text-left">
+                      <span className="text-white font-semibold text-lg sm:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">800+</span>
+                      <span className="text-white/90 text-[11px] sm:text-sm xl:text-base mt-1 font-normal whitespace-nowrap overflow-hidden text-ellipsis">
+                        {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
+                      </span>
+                    </div>
+                    <div className="flex flex-col sm:pl-8 lg:pl-10 text-center sm:text-left relative">
+                      <span className="text-white font-semibold text-lg sm:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
+                        {dreamcareerSection?.placementassistnum || "100%"}
+                      </span>
+                      <span className="text-white/90 text-[11px] sm:text-sm xl:text-base mt-1 font-normal whitespace-nowrap overflow-hidden text-ellipsis">
+                        {dreamcareerSection?.placementassisttitle || "Placement Assistance"}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
-               </div>
             </div>
-            <div>
-              <h5 className="text-white text-lg sm:text-xl">
-                {dreamcareerSection?.heading}
-              </h5>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:flex items-stretch gap-2.5 mt-5 flex-wrap xl:flex-nowrap">
-               <ConnectingDreamSlider logos={logos} />
+
+            <div className="hidden lg:flex w-full lg:w-1/2 xl:w-2/5 xl:pl-20 justify-center lg:justify-end">
+              <div className="heroBannerForm__form w-full max-w-md mx-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
+                <div className="heroBannerForm-header">
+                  <h3 className="mb-0">
+                    <strong>
+                      Apply Today for{" "}
+                      <span className="uppercase">K.R. Mangalam University</span>
+                    </strong>
+                  </h3>
+                </div>
+                <NoPaperForm formId={formId} height="500px" />
               </div>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 xl:w-2/5 xl:pl-20 flex justify-center lg:justify-end">
-            <div className="heroBannerForm__form w-full max-w-md mx-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
-              <div className="heroBannerForm-header">
-                <h3 className="mb-0">
-                  <strong>
-                    Apply Today for{" "}
-                    <span className="uppercase">K.R. Mangalam University</span>
-                  </strong>
-                </h3>
-              </div>
+        </section>
+
+        {/* Recruiter Strip outside section for clean white background */}
+        <div className="w-full bg-white pt-16 py-8 md:py-4 border-t border-gray-100">
+          <div className="max-w-[1440px] mx-auto px-4 xl:px-8 2xl:px-0 relative">
+            {/* Centered Heading Badge */}
+            <div className="absolute -top-[48px] md:-top-[52px] left-1/2 -translate-x-1/2 bg-gray-50 md:bg-white px-6 py-2 rounded-t-sm z-20 flex items-center justify-center ">
+              <h5 className="text-[#333] text-[14px] sm:text-lg font-bold whitespace-nowrap">
+                {dreamcareerSection?.heading}
+              </h5>
+            </div>
+            
+            {/* Logo Container */}
+            <div className="min-h-[60px] pt-4">
+              <ConnectingDreamSlider logos={logos} />
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Form - Visible only on mobile for BBA-HR */}
+        <div className="lg:hidden w-full bg-white pb-4 px-4">
+          <div className="heroBannerForm__form w-full max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.1)] rounded-md overflow-hidden">
+            <div className="heroBannerForm-header">
+              <h3 className="mb-0 text-center">
+                <strong>
+                  Apply Today for{" "}
+                  <span className="uppercase">K.R. Mangalam University</span>
+                </strong>
+              </h3>
+            </div>
+            <div className="p-1">
               <NoPaperForm formId={formId} height="500px" />
             </div>
           </div>
         </div>
-      </section>
+      </>
     );
   }
 

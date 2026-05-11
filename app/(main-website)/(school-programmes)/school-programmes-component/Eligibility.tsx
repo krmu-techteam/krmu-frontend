@@ -72,7 +72,7 @@ const Eligibility = ({
   return (
     <>
       <section
-        className={`bg-gray-50 py-5 px-4 sm:px-4 relative z-10 border-b-4 border-gray-100`}
+        className={`bg-gray-50 py-5 px-4 xl:px-8 relative z-10 border-b-4 border-gray-100`}
       >
         <div className={`max-w-[1440px] w-full mx-auto`}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
