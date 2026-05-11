@@ -897,7 +897,7 @@ export const applySectionData: ApplySectionData = {
 
 
 export const programmeContent = {
-  badge: "22 Specialisations",
+  badge: "24 Specialisations",
   title: "KRMU’s BBA Programmes",
   subtitle:
     "All Our Programmes Comprise of Industry-relevant Curriculum",
@@ -1146,6 +1146,30 @@ export const programmeContent = {
       ctaLink: "#apply-form",
       eligibility: "To be updated",
     },
+     {
+      id: "23",
+      tag: "",
+      title: "BBA (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK*",
+      subtitle: "",
+      desc: "Gain global exposure through an international semester, along with core business fundamentals in your chosen specialisation.",
+      duration: "3 Years",
+      fees: "200000",
+      ctaText: "Apply Now !",
+      ctaLink: "#apply-form",
+      eligibility: "Passed 12th with 50% aggregate marks.",
+    },
+     {
+      id: "24",
+      tag: "",
+      title: "BBA (Hons./ Hons with Research) (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK*",
+      subtitle: "",
+      desc: "Advanced domain knowledge with international academic exposure, research orientation, and global business perspectives.",
+      duration: "4 Years",
+      fees: "200000",
+      ctaText: "Apply Now !",
+      ctaLink: "#apply-form",
+      eligibility: "Passed 12th with 50% aggregate marks.",
+    },
   ],
 };
 
@@ -1153,5 +1177,8 @@ export const programmeContent = {
 export const eligibilityTerms = [
   {
     description: "** Subject to Approval"
+  },
+  {
+    description: "*In addition to the regular programme fee at KRMU, students opting for the Semester Abroad will be required to pay an additional tuition fee of GBP 6500 for the semester at UEA."
   },
 ];
