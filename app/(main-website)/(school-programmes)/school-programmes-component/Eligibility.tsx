@@ -6,6 +6,8 @@ import { EligibilityItem, HeroSection } from "@/lib/types/school-programme";
 import {
   ArrowRight,
   Calendar,
+  Clock,
+  Download,
   IndianRupee,
   LaptopMinimalCheck,
 } from "lucide-react";
@@ -72,63 +74,134 @@ const Eligibility = ({
   return (
     <>
       <section
-        className={`bg-gray-50 py-5 px-4 xl:px-8 relative z-10 border-b-4 border-gray-100`}
+        className={`bg-[#eff4ff] py-5 px-4 xl:px-8 relative z-10 border-gray-100`}
       >
         <div className={`max-w-[1440px] w-full mx-auto`}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
-            <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
-              <Calendar size={32} color="#0a41a1" className="flex-shrink-0" />
-              <div className="flex flex-col">
-                <p className="text-md font-medium text-gray-500 capitalize leading-tight tracking-wide">
-                  {elgibilities[0]?.subtitle}
-                </p>
-                <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
-                  {elgibilities[0]?.title}
-                </p>
+          {slug === "bba-hr" && heroSection?.imgvideo === "Video" ? (
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 rounded-3xl p-0 sm:p-4 lg:p-8 items-stretch">
+              {/* Left Column: Media (Video only for this layout) */}
+              <div className="w-full lg:w-1/2 h-[280px] sm:h-[350px] lg:h-auto lg:min-h-[450px] relative rounded-sm sm:rounded-3xl overflow-hidden group shadow-lg">
+                <div className="w-full h-full relative">
+                  <YoutubePopup
+                    videoUrl={heroSection?.videofield || "https://www.youtube.com/watch?v=tIfNUgSn2dw"}
+                    thumbnail={heroSection?.heroimg?.url ? `${STRAPI_URL}${heroSection.heroimg.url}` : "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"}
+                    ytClassName="w-full h-full absolute inset-0 object-cover"
+                    playIcon={true}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
-              <IndianRupee
-                size={32}
-                color="#0a41a1"
-                className="flex-shrink-0"
-              />
-              <div className="flex flex-col">
-                <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
-                  {elgibilities[1]?.subtitle}
-                </p>
-                <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
-                  {elgibilities[1]?.title}
-                </p>
-              </div>
-            </div>
-            <div className="bg-white border border-gray-300 rounded-md px-6 py-4 flex items-start gap-5">
-              <LaptopMinimalCheck
-                size={32}
-                color="#0a41a1"
-                className="flex-shrink-0"
-              />
-              <div className="flex flex-col">
-                <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
-                  {elgibilities[2]?.subtitle}
-                </p>
-                <div className="flex flex-col mt-1">
-                  <p className="text-md md:text-lg font-semibold text-black leading-tight">
-                    {displayTitle}
-                    {isLong && !expanded && " "}
-                  </p>
-                  {isLong && (
-                    <button
-                      onClick={() => setExpanded(!expanded)}
-                      className="text-xs text-[#0060aa] font-bold mt-1 text-left"
+
+              {/* Right Column: Content */}
+              <div className="w-full bg-white rounded-sm md:rounded-3xl p-4 md:p-8 lg:p-10 lg:w-1/2 flex flex-col justify-between shadow-xl">
+                <div>
+                  <div className="grid grid-cols-2 mb-8 divide-x divide-gray-200">
+                    <div className="flex flex-col items-center text-center px-2">
+                      <span className="text-[10px] md:text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">
+                        {elgibilities[0]?.subtitle || "Duration"}
+                      </span>
+                      <span className="text-xl md:text-2xl font-bold text-gray-900 leading-tight">
+                        {elgibilities[0]?.title}
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-center text-center px-2">
+                      <span className="text-[10px] md:text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">
+                        {elgibilities[1]?.subtitle || "Program Fee / Year"}
+                      </span>
+                      <span className="text-xl md:text-2xl font-bold text-gray-900 leading-tight">
+                        {elgibilities[1]?.title}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-gray-200 pt-4 md:pt-8 mb-4 md:mb-8 text-center sm:text-left">
+                    <span className="text-[10px] md:text-xs font-semibold text-gray-500 uppercase tracking-widest mb-3 block">
+                      {elgibilities[2]?.subtitle || "Eligibility"}
+                    </span>
+                    <div className="text-sm md:text-[15px] leading-relaxed text-gray-700 font-medium space-y-2">
+                      {elgibilities[2]?.title}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center gap-3 md:gap-4 mt-4">
+                  <button className="w-full sm:w-auto lg:w-full xl:w-auto flex items-center justify-center gap-2 px-4 md:px-8 py-2.5 sm:py-3.5 border-2 border-gray-900 text-gray-900 font-semibold rounded-lg hover:bg-gray-50 transition-colors text-xs md:text-sm uppercase tracking-wide cursor-pointer whitespace-nowrap">
+                    <Download size={18} />
+                    Download Prospectus
+                  </button>
+                  {formId ? (
+                    <a
+                      href="#apply-form-mobile"
+                      className="w-full sm:w-auto lg:w-full xl:w-auto flex items-center justify-center gap-2 px-4 md:px-10 py-2.5 sm:py-3.5 bg-[#cb000d] text-white font-semibold rounded-lg shadow-lg hover:bg-[#e6002e] transition-all text-xs md:text-sm uppercase tracking-wide hover:scale-105 cursor-pointer whitespace-nowrap"
                     >
-                      {expanded ? "Read Less" : "Read More"}
-                    </button>
+                      Apply Now
+                    </a>
+                  ) : (
+                    <Link
+                      href="#"
+                      className="w-full sm:w-auto lg:w-full xl:w-auto flex items-center justify-center gap-2 px-4 md:px-10 py-3.5 bg-[#cb000d] text-white font-semibold rounded-lg shadow-lg hover:bg-[#e6002e] transition-all text-xs md:text-sm uppercase tracking-wide hover:scale-105 cursor-pointer whitespace-nowrap"
+                    >
+                      Apply Now
+                    </Link>
                   )}
                 </div>
               </div>
             </div>
-          </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
+              <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
+                <Calendar size={32} color="#0a41a1" className="flex-shrink-0" />
+                <div className="flex flex-col">
+                  <p className="text-md font-medium text-gray-500 capitalize leading-tight tracking-wide">
+                    {elgibilities[0]?.subtitle}
+                  </p>
+                  <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
+                    {elgibilities[0]?.title}
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
+                <IndianRupee
+                  size={32}
+                  color="#0a41a1"
+                  className="flex-shrink-0"
+                />
+                <div className="flex flex-col">
+                  <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
+                    {elgibilities[1]?.subtitle}
+                  </p>
+                  <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
+                    {elgibilities[1]?.title}
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white border border-gray-300 rounded-md px-6 py-4 flex items-start gap-5">
+                <LaptopMinimalCheck
+                  size={32}
+                  color="#0a41a1"
+                  className="flex-shrink-0"
+                />
+                <div className="flex flex-col">
+                  <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
+                    {elgibilities[2]?.subtitle}
+                  </p>
+                  <div className="flex flex-col mt-1">
+                    <p className="text-md md:text-lg font-semibold text-black leading-tight">
+                      {displayTitle}
+                      {isLong && !expanded && " "}
+                    </p>
+                    {isLong && (
+                      <button
+                        onClick={() => setExpanded(!expanded)}
+                        className="text-xs text-[#0060aa] font-bold mt-1 text-left"
+                      >
+                        {expanded ? "Read Less" : "Read More"}
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
           {/* {slug === "b-tech-cse" ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
               <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">

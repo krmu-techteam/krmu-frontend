@@ -16,7 +16,7 @@ const ConnectingDreamSlider = ({ logos }: Props) => {
         {logos?.concat(logos).concat(logos).map((logo, index) => (
           <div
             key={`${logo.id}-${index}`}
-            className="flex-shrink-0 px-6 sm:px-12 flex items-center justify-center"
+            className="flex-shrink-0 px-6 sm:px-8 flex items-center justify-center"
           >
             <Image
               src={`${STRAPI_URL}${logo?.url}`}

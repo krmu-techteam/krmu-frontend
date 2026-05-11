@@ -125,13 +125,13 @@ const HeroBanner = ({
                         {dreamcareerSection?.highestpackagetitle || "Highest Package"}
                       </span>
                     </div>
-                    <div className="flex flex-col sm:px-8 lg:px-10 sm:border-r border-white/20 text-center sm:text-left">
+                    <div className="flex flex-col sm:px-8 lg:pr-10 lg:pl-0 sm:border-r border-white/20 text-center sm:text-left">
                       <span className="text-white font-semibold text-lg sm:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">800+</span>
                       <span className="text-white/90 text-[11px] sm:text-sm xl:text-base mt-1 font-normal whitespace-nowrap overflow-hidden text-ellipsis">
                         {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
                       </span>
                     </div>
-                    <div className="flex flex-col sm:pl-8 lg:pl-10 text-center sm:text-left relative">
+                    <div className="flex flex-col sm:pl-8 lg:pl-0 text-center sm:text-left relative">
                       <span className="text-white font-semibold text-lg sm:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
                         {dreamcareerSection?.placementassistnum || "100%"}
                       </span>
