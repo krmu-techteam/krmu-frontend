@@ -80,7 +80,7 @@ const ProgrammeStructure = ({
                   {currbtn?.buttontext}
                 </span>
               }
-              buttonClassName="w-full md:w-auto px-8 py-3 text-md font-semibold tracking-wide text-[#0a41a1] bg-white hover:bg-blue-900/20 hover:text-[#0a41a1] rounded-sm transition-all duration-300 flex items-center justify-center border border-[#0a41a1]/20 cursor-pointer hover:border-[#0a41a1]"
+              buttonClassName="w-full md:w-auto px-8 py-3 text-md font-semibold tracking-wide text-[#051730] bg-white hover:bg-blue-900/20 hover:text-[#051730] rounded-sm transition-all duration-300 flex items-center justify-center border border-[#051730]/20 cursor-pointer hover:border-[#051730]"
               redirectUrl={currbtn?.buttonlink || "#"}
               form_name="Programme Handbook"
             />
@@ -89,7 +89,7 @@ const ProgrammeStructure = ({
       </div>
 
       <div className=" backdrop-blur-xl rounded-sm overflow-hidden border border-white/20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[600px] gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[600px] gap-4 shadow-2xl bg-gradient-to-b from-blue-50 to-gray-100">
           {/* Left Side: Illustration - More Compact */}
           <div className="hidden lg:block lg:col-span-3 relative group overflow-hidden bg-transparent border-r border-white/10">
             <Image
@@ -99,7 +99,7 @@ const ProgrammeStructure = ({
               alt="Curriculum"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-[#0a41a1]/60 via-[#0a41a1]/10 to-transparent transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#051730]/60 via-[#051730]/10 to-transparent transition-opacity" />
           </div>
 
           {/* Right Side: Navigation + Content - Minimal & Compact */}
@@ -128,7 +128,7 @@ const ProgrammeStructure = ({
                             isYear
                               ? `px-4 py-3 rounded-t-xs border-b-2 font-bold text-[14px] md:text-[16px] cursor-pointer ${
                                   isYearActive
-                                    ? "text-[#0a41a1] border-[#0a41a1] bg-blue-100/50"
+                                    ? "text-[#051730] border-[#051730] bg-blue-100/50"
                                     : "text-gray-400 border-transparent hover:text-gray-600 hover:bg-gray-100/50"
                                 }`
                               : "px-2 pt-2 pb-0 font-semibold text-[13px] md:text-[15px] text-gray-400 cursor-default"
@@ -141,26 +141,26 @@ const ProgrammeStructure = ({
                       {!isYear && year.semester.length > 0 && (
                         <div className="flex flex-col items-center w-full">
                           <div
-                            className={`w-[1px] h-3 ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"}`}
+                            className={`w-[1px] h-3 ${isYearActive ? "bg-[#051730]" : "bg-gray-300"}`}
                           />
 
                           <div className="relative flex items-center w-full max-w-[120px]">
                             <div
-                              className={`w-full h-[1px] ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"} rounded-full`}
+                              className={`w-full h-[1px] ${isYearActive ? "bg-[#051730]" : "bg-gray-300"} rounded-full`}
                             />
                             <div
-                              className={`absolute left-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"} rounded-full`}
+                              className={`absolute left-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[#051730]" : "bg-gray-300"} rounded-full`}
                             />
                             <div
-                              className={`absolute right-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"} rounded-full`}
+                              className={`absolute right-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[#051730]" : "bg-gray-300"} rounded-full`}
                             />
 
                             {/* Terminal Dots */}
                             <div
-                              className={`absolute left-0 top-3 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"}`}
+                              className={`absolute left-0 top-3 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${isYearActive ? "bg-[#051730]" : "bg-gray-300"}`}
                             />
                             <div
-                              className={`absolute right-0 top-3 translate-x-1/2 w-1.5 h-1.5 rounded-full ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"}`}
+                              className={`absolute right-0 top-3 translate-x-1/2 w-1.5 h-1.5 rounded-full ${isYearActive ? "bg-[#051730]" : "bg-gray-300"}`}
                             />
                           </div>
 
@@ -183,7 +183,7 @@ const ProgrammeStructure = ({
                                   className={`flex flex-row gap-1 items-center justify-center flex-1 transition-all duration-300 py-[6px] rounded-sm border whitespace-nowrap
                                     ${
                                       isSemActive
-                                        ? "bg-gradient-to-r from-[#0a41a1] to-[#0e4eb8] border-[#0a41a1] text-white shadow-md z-20"
+                                        ? "bg-gradient-to-r from-[#051730] to-[#051730] border-[#051730] text-white shadow-md z-20"
                                         : "bg-transparent border-transparent text-gray-700 hover:text-gray-600 hover:bg-gray-100"
                                     } cursor-pointer`}
                                 >
@@ -203,7 +203,7 @@ const ProgrammeStructure = ({
             </div>
 
             {/* Subjects List - Minimalistic Layout */}
-            <div className="flex-grow p-4 overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-100 bg-white/5">
+            <div className="flex-grow p-4 overflow-y-auto max-h-[700px] scrollbar-thin scrollbar-thumb-gray-100 bg-white/5">
               {programStruct.map((year) => {
                 const yearValue = year.year.toLowerCase().replace(" ", "");
                 return activeYear === yearValue ? (
@@ -225,8 +225,8 @@ const ProgrammeStructure = ({
                               {/* Semester Heading - Hidden if isYear is true and it's the only semester, otherwise show for grouping */}
                               {( !isYear || year.semester.length > 1 ) && (
                                 <div className="mb-4">
-                                  <h4 className="text-[18px] md:text-[20px] font-bold text-[#0a41a1] capitalize flex items-center gap-2">
-                                    <span className="w-1.5 h-6 bg-[#0a41a1] rounded-full"></span>
+                                  <h4 className="text-[18px] md:text-[20px] font-bold text-[#051730] capitalize flex items-center gap-2">
+                                    <span className="w-1.5 h-6 bg-[#051730] rounded-full"></span>
                                     {sem.semestername}
                                   </h4>
                                 </div>
@@ -255,7 +255,7 @@ const ProgrammeStructure = ({
                                           ) ? (
                                             <>
                                               <div className="flex items-center w-full gap-3">
-                                                <div className="w-9 h-9 rounded-full bg-[#0a41a1] flex items-center justify-center flex-shrink-0 border border-[#0a41a1]/10 mt-0.5">
+                                                <div className="w-9 h-9 rounded-full bg-[#051730] flex items-center justify-center flex-shrink-0 border border-[#051730]/10 mt-0.5">
                                                   <IoBookOutline className="w-5 h-5 text-white" />
                                                 </div>
                                                 <h5 className="text-[15px] font-semibold text-gray-800 leading-tight">
@@ -276,9 +276,9 @@ const ProgrammeStructure = ({
                                                   value="content"
                                                   className="border-none"
                                                 >
-                                                  <AccordionTrigger className="py-1 cursor-pointer items-center text-[10px] font-semibold text-gray-400 uppercase tracking-wider hover:text-[#0a41a1] hover:no-underline">
+                                                  <AccordionTrigger className="py-1 cursor-pointer items-center text-[10px] font-semibold text-gray-400 uppercase tracking-wider hover:text-[#051730] hover:no-underline">
                                                     <div className="flex items-center w-full gap-3">
-                                                      <div className="w-9 h-9 rounded-full bg-[#0a41a1] flex items-center justify-center flex-shrink-0 border border-[#0a41a1]/10 mt-0.5">
+                                                      <div className="w-9 h-9 rounded-full bg-[#051730] flex items-center justify-center flex-shrink-0 border border-[#051730]/10 mt-0.5">
                                                         <IoBookOutline className="w-5 h-5 text-white" />
                                                       </div>
                                                       <h5 className="text-[15px] font-semibold text-gray-800 leading-tight">
@@ -320,7 +320,7 @@ const ProgrammeStructure = ({
                                       <CommonLeadPopup
                                         key={btn?.id}
                                         buttonText={
-                                          <div className="flex items-center gap-6 px-6 py-2 bg-[#0a41a1] rounded-sm text-white group shadow-lg transition-all duration-300 hover:scale-[1.005]">
+                                          <div className="flex items-center gap-6 px-6 py-2 bg-[#051730] rounded-sm text-white group shadow-lg transition-all duration-300 hover:scale-[1.005]">
                                             <div className="flex items-center gap-4">
                                               <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
                                                 <Download className="w-5 h-5" />
@@ -356,7 +356,7 @@ const ProgrammeStructure = ({
                                             {btn?.buttontext}
                                           </span>
                                         }
-                                        buttonClassName="w-fit px-8 py-3 bg-white border-2 border-[#0a41a1] text-[#0a41a1] font-bold uppercase tracking-widest text-[13px] rounded-xl hover:bg-[#0a41a1] hover:text-white transition-all duration-300"
+                                        buttonClassName="w-fit px-8 py-3 bg-white border-2 border-[#051730] text-[#051730] font-bold uppercase tracking-widest text-[13px] rounded-sm hover:bg-[#051730] hover:text-white transition-all duration-300"
                                         redirectUrl={btn?.buttonlink || "#"}
                                         form_name={btn?.buttontext || "Action"}
                                       />
@@ -485,7 +485,7 @@ export default ProgrammeStructure;
 //                   {currbtn?.buttontext}
 //                 </span>
 //               }
-//               buttonClassName="w-full md:w-auto px-6 py-2 md:px-8 md:py-3 text-base font-semibold text-[#0a41a1] bg-transparent hover:text-[#0a41a1] hover:bg-blue-50 rounded-sm transition-all duration-300 shadow-md flex items-center justify-center border-2 border-[#0a41a1]"
+//               buttonClassName="w-full md:w-auto px-6 py-2 md:px-8 md:py-3 text-base font-semibold text-[#051730] bg-transparent hover:text-[#051730] hover:bg-blue-50 rounded-sm transition-all duration-300 shadow-md flex items-center justify-center border-2 border-[#051730]"
 //               redirectUrl={currbtn?.buttonlink || "#"}
 //               form_name="Programme Handbook"
 //             />
@@ -522,8 +522,8 @@ export default ProgrammeStructure;
 //                           key={year.id}
 //                           value={value}
 //                           className="px-4 py-2 text-xs md:text-sm font-semibold transition-all duration-300 rounded-sm
-//                             data-[state=active]:bg-white data-[state=active]:text-[#0a41a1] data-[state=active]:shadow-sm
-//                             hover:text-[#0a41a1] text-gray-400 cursor-pointer uppercase tracking-wider"
+//                             data-[state=active]:bg-white data-[state=active]:text-[#051730] data-[state=active]:shadow-sm
+//                             hover:text-[#051730] text-gray-400 cursor-pointer uppercase tracking-wider"
 //                         >
 //                           {year.year}
 //                         </TabsTrigger>
@@ -553,8 +553,8 @@ export default ProgrammeStructure;
 //                               key={sem.id}
 //                               value={semValue}
 //                               className="px-5 py-2 text-xs md:text-sm font-semibold transition-all duration-300 rounded-sm
-//                                 data-[state=active]:bg-[#0a41a1] data-[state=active]:text-white data-[state=active]:shadow-md
-//                                 hover:text-[#0a41a1] text-blue-400 cursor-pointer uppercase tracking-wider"
+//                                 data-[state=active]:bg-[#051730] data-[state=active]:text-white data-[state=active]:shadow-md
+//                                 hover:text-[#051730] text-blue-400 cursor-pointer uppercase tracking-wider"
 //                             >
 //                               {sem.semestername}
 //                             </TabsTrigger>
@@ -589,7 +589,7 @@ export default ProgrammeStructure;
 //                                       className="group flex flex-col bg-white rounded-md p-3 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
 //                                     >
 //                                       <div className="flex flex-row gap-4 h-full items-start">
-//                                         <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#0a41a1] flex items-center justify-center text-white transition-all duration-300 border border-[#0a41a1]/10">
+//                                         <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#051730] flex items-center justify-center text-white transition-all duration-300 border border-[#051730]/10">
 //                                           <BookOpen className="w-5 h-5" />
 //                                         </div>
 //                                         <div className="flex-grow min-w-0">
@@ -608,7 +608,7 @@ export default ProgrammeStructure;
 //                                                   className="border-none"
 //                                                 >
 //                                                   <AccordionTrigger className="py-0 text-left hover:no-underline flex justify-between gap-2 group-data-[state=open]:pb-3">
-//                                                     <h5 className="text-[16px] font-semibold text-[#0a41a1] transition-colors leading-snug">
+//                                                     <h5 className="text-[16px] font-semibold text-[#051730] transition-colors leading-snug">
 //                                                       {sub.subjectname}
 //                                                     </h5>
 //                                                   </AccordionTrigger>
@@ -623,7 +623,7 @@ export default ProgrammeStructure;
 //                                               ))}
 //                                             </Accordion>
 //                                           ) : (
-//                                             <h5 className="text-[16px] font-semibold text-[#0a41a1] transition-colors leading-snug">
+//                                             <h5 className="text-[16px] font-semibold text-[#051730] transition-colors leading-snug">
 //                                               {sub.subjectname}
 //                                             </h5>
 //                                           )}
@@ -649,8 +649,8 @@ export default ProgrammeStructure;
 //                                     const btnClass = `flex items-center gap-2 text-sm md:text-md font-semibold uppercase tracking-wide px-3 py-2 md:px-6 md:py-3
 //                                       rounded-sm shadow-sm transition-all duration-300 border-2
 //                                       ${isHandbook
-//                                         ? "bg-[#0a41a1] text-white border-[#0a41a1] hover:bg-white hover:text-[#0a41a1]"
-//                                         : "bg-transparent text-[#0a41a1] border-[#0a41a1] hover:bg-blue-50 hover:text-[#0a41a1]"} `;
+//                                         ? "bg-[#051730] text-white border-[#051730] hover:bg-white hover:text-[#051730]"
+//                                         : "bg-transparent text-[#051730] border-[#051730] hover:bg-blue-50 hover:text-[#051730]"} `;
 
 //                                     const btnContent = (
 //                                       <span className="flex items-center gap-2">
