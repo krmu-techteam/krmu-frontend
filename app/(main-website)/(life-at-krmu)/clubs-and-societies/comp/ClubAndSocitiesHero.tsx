@@ -8,14 +8,14 @@ type Props = {
 
 export const ClubAndSocitiesHero = ({ title, featured_image_url }: Props) => {
   return (
-    <section className="relative h-[450px] md:h-[600px] w-full flex items-end justify-center overflow-hidden pb-12 md:pb-24">
+    <section className="relative h-[280px] sm:h-[400px] md:h-[600px] w-full flex items-end justify-center overflow-hidden pb-8 md:pb-24">
       {/* Background Image Layer */}
       <div className="absolute inset-0 z-0">
         <Image
           src={`${STRAPI_URL}${featured_image_url}`}
           fill
           alt={title}
-          className="object-cover object-center"
+          className="object-cover object-[center_15%] md:object-center"
           priority
         />
         {/* Professional Multi-layered Overlay - Darker at bottom for text readability */}
