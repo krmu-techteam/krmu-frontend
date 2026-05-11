@@ -5,7 +5,7 @@ const CDCTrainingPlacement = () => {
     <>
       <section className="px-4">
         <div className="max-w-[1664px] mx-auto w-full">
-          <p className="text-xl my-10 text-center md:text-left">
+          <p className="text-xl my-10 text-center md:text-left z-100 relative">
             <strong>
               The Career Development Center at KRMU offers training and
               placement assistance to students through various initiatives
@@ -25,7 +25,7 @@ const CDCTrainingPlacement = () => {
             {/* <CDCCard /> */}
           </div>
 
-          <div className="my-5 cdccard-ul">
+          <div className="my-5 cdccard-ul z-100 relative">
             <h3 className="text-3xl sm:text-4xl font-semibold text-center md:text-left">
               Career Training Modules & Methodology
             </h3>
@@ -54,7 +54,7 @@ const CDCTrainingPlacement = () => {
               <CDCCard /> */}
             </div>
           </div>
-          <div className="my-10 cdccard-ul">
+          <div className="my-10 cdccard-ul z-100 relative">
             <h3 className="text-3xl sm:text-4xl font-semibold text-center md:text-left">
               Skill-Building Opportunities at a Glance
             </h3>
