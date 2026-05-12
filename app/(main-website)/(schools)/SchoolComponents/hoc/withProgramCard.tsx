@@ -56,7 +56,7 @@ const withProgramCard = <P extends object>(
           }
           w-full
           rounded-xl
-          bg-[#051730]
+          bg-[#001732]
           group
           h-full
           font-semibold
