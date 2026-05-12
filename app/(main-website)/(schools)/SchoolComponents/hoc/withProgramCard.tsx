@@ -64,18 +64,18 @@ const withProgramCard = <P extends object>(
     ) {
       // LAST ROW WITH 3 CARDS
       if (positionInRow === 0) {
-        glowClass = "absolute left-[-196px] -bottom-[170px]";
+        glowClass = "absolute left-[-217px] -bottom-[182px]";
       } else if (positionInRow === 1) {
         glowClass = "absolute left-[48%] -translate-x-1/2 -bottom-[220px]";
       } else {
-        glowClass = "absolute right-[-156px] -bottom-[150px]";
+        glowClass = "absolute right-[-217px] -bottom-[182px]";
       }
     } else {
       // NORMAL 4-CARD ROWS
       if (positionInRow === 0) {
-        glowClass = "absolute left-[-196px] -bottom-[170px]";
+        glowClass = "absolute left-[-217px] -bottom-[182px]";
       } else if (positionInRow === 3) {
-        glowClass = "absolute right-[-156px] -bottom-[150px]";
+        glowClass = "absolute right-[-217px] -bottom-[182px]";
       } else {
         glowClass = "absolute left-[48%] -translate-x-1/2 -bottom-[220px]";
       }
