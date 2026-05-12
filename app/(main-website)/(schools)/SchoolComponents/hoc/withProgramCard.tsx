@@ -58,24 +58,30 @@ const withProgramCard = <P extends object>(
 
     let glowClass = "";
 
-    if (
-      remainingCards === 3 &&
-      rowIndex === Math.floor((totalCards - 1) / cardsPerRow)
-    ) {
-      // LAST ROW WITH 3 CARDS
+    const isLastRow = rowIndex === Math.floor((totalCards - 1) / cardsPerRow);
+
+    if (remainingCards === 3 && isLastRow) {
+      // 3 CARDS => left center right
       if (positionInRow === 0) {
         glowClass = "absolute left-[-217px] -bottom-[182px]";
       } else if (positionInRow === 1) {
         glowClass = "absolute left-[48%] -translate-x-1/2 -bottom-[220px]";
       } else {
-        glowClass = "absolute right-[-217px] -bottom-[182px]";
+        glowClass = "absolute right-[-133px] -bottom-[171px]";
+      }
+    } else if (remainingCards === 2 && isLastRow) {
+      // 2 CARDS => left right
+      if (positionInRow === 0) {
+        glowClass = "absolute left-[-217px] -bottom-[182px]";
+      } else {
+        glowClass = "absolute right-[-133px] -bottom-[171px]";
       }
     } else {
-      // NORMAL 4-CARD ROWS
+      // NORMAL 4 CARDS => left center center right
       if (positionInRow === 0) {
         glowClass = "absolute left-[-217px] -bottom-[182px]";
       } else if (positionInRow === 3) {
-        glowClass = "absolute right-[-217px] -bottom-[182px]";
+        glowClass = "absolute right-[-133px] -bottom-[171px]";
       } else {
         glowClass = "absolute left-[48%] -translate-x-1/2 -bottom-[220px]";
       }
