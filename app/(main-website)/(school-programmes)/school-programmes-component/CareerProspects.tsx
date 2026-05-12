@@ -46,7 +46,7 @@ const CareerProspects = ({
   }, [emblaApi, onSelect]);
   if (slug === "bba-hr") {
     return (
-      <section className="relative py-8 md:py-16 overflow-hidden min-h-[800px] flex flex-col items-center">
+      <section className="relative  py-8 md:pt-16 md:pb-[150px] overflow-hidden min-h-[850px] flex flex-col items-center">
         {/* Background Image with Blur */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -56,23 +56,22 @@ const CareerProspects = ({
             alt="University Background"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/40 to-white/95"></div>
         </div>
 
         <div className="relative z-10 max-w-[1440px] mx-auto px-4 w-full flex flex-col items-center">
           {/* Header Section */}
-          <div className="max-w-4xl w-full text-center mb-8">
+          <div className="max-w-4xl w-full text-center mb-6 md:mb-8">
             <h3 className="text-4xl md:text-[52px] font-bold text-[#0B1C30] mb-4 leading-[1.1] tracking-tight">
               {heading} {highlight}
             </h3>
-            <p className="leading-relaxed text-[#45464D] text-lg md:text-xl mx-auto max-w-4xl">
+            <p className="leading-relaxed text-[#45464D] text-lg md:text-xl mx-auto max-w-5xl">
               {desc}
             </p>
           </div>
 
           {/* Action Button */}
           {(btn?.buttonclass || btn?.buttonlink) && (
-            <div className="mb-10">
+            <div className="mb-8 md:mb-10">
               <Link
                 href={btn?.buttonlink || "#"}
                 className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-10 py-3 flex items-center justify-center gap-3 rounded-lg font-semibold tracking-wide shadow-lg hover:shadow-2xl transition-all duration-300 group ${btn?.buttonclass}`}
@@ -83,69 +82,60 @@ const CareerProspects = ({
           )}
 
           {/* Slider Section */}
-          <div className="relative w-full max-w-4xl mx-auto">
-            {/* Navigation Arrows */}
-            <button
+          <div className="relative w-full max-w-lg  mx-auto">
+             <button
               onClick={scrollPrev}
-              className="absolute left-[-20px] md:left-[-60px] top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full border border-[#051630] text-[#051630] hover:bg-white hover:border-white transition-all group cursor-pointer"
+              className="absolute left-[-12px] md:left-[-60px] top-[250px] -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-[#051630] text-[#051630] hover:bg-white hover:border-white transition-all group cursor-pointer"
             >
               <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
             </button>
             
             <button
               onClick={scrollNext}
-             className="absolute right-[-20px] md:right-[-60px] top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full border border-[#051630] text-[#051630] hover:bg-white hover:border-white transition-all group cursor-pointer"
+             className="absolute right-[-12px] md:right-[-60px] top-[250px] -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-[#051630] text-[#051630] hover:bg-white hover:border-white transition-all group cursor-pointer"
             >
               <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
             </button>
+          </div>
+          <div className="relative w-full  mx-auto">
+            
 
-            {/* Carousel Wrapper */}
-            <div className="w-full max-w-4xl mx-auto">
+            {/* Carousel Wrapper (Text Only) */}
+            <div className="w-full">
               <div className="embla overflow-hidden" ref={emblaRef}>
-                <div className="flex">
+                <div className="flex ">
                   {careercards?.map((card, index) => (
                     <div key={card?.id} className="flex-[0_0_100%] min-w-0">
-                      <div className="bg-white/95 backdrop-blur-md rounded-[32px] md:rounded-[40px] py-8 pb-0 md:px-0 border border-white/20 flex flex-col items-center min-h-[450px] md:min-h-[500px] relative">
-                    
-
-                        <div className="max-w-2xl text-center z-10">
-                          <h4 className="font-bold text-2xl md:text-3xl mb-4 text-[#051630]">
-                            {card?.title}
-                          </h4>
-                          <p className="leading-relaxed text-gray-600 text-lg md:text-xl max-w-lg mx-auto">
-                            {card?.description}
-                          </p>
-                        </div>
-                        
-                        {/* Career Image (Students) */}
-                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[90%] md:max-w-2xl z-0 pointer-events-none">
-                          <Image
-                            src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/group_people_751a407e4e.png"
-                            width={800}
-                            height={450}
-                            className="w-full h-auto object-contain"
-                            alt="Career Prospects Students"
-                          />
-                          {/* Dynamic image preserved for later use:
-                          {careerimg?.url && (
-                            <Image
-                              src={`${STRAPI_URL}${careerimg?.url}`}
-                              width={800}
-                              height={450}
-                              className="w-full h-full object-contain"
-                              alt={careerimg?.alternativeText || "Career Prospectus"}
-                            />
-                          )} */}
+                        <div className="bg-white/80 rounded-2xl pt-8 md:pt-12 pb-0 flex flex-col items-center max-w-[457px] min-h-[418px] w-full mx-auto relative transition-all duration-300 border border-white/20 mb-0 md:mb-32">
+                          <div className="text-center z-20 relative px-6">
+                            <h4 className="font-bold text-xl mb-4 text-[#051630]">
+                              {card?.title}
+                            </h4>
+                            <p className="leading-relaxed text-gray-600 text-base max-w-sm mx-auto">
+                              {card?.description}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
                 </div>
+                
+         
+         
               </div>
+                 
+            </div>
+
+            {/* Static Career Image (Stays centered while text slides) */}
+            <Image
+                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/group_people_751a407e4e.png"
+                fill
+                className="-mb-10 object-contain md:translate-y-[28%] transform scale-[1.35] md:scale-[1.1] -translate-x-[14px] translate-y-[120px]"
+                alt="Career Prospects Students"
+              />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
     );
   }
 
