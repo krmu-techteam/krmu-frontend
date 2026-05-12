@@ -203,7 +203,7 @@ const ProgrammeStructure = ({
             </div>
 
             {/* Subjects List - Minimalistic Layout */}
-            <div className="flex-grow p-4 overflow-y-auto max-h-[700px] scrollbar-thin scrollbar-thumb-gray-100 bg-white/5">
+            <div className="flex-grow  px-2 overflow-y-auto max-h-[700px] scrollbar-thin scrollbar-thumb-gray-100 bg-white/5">
               {programStruct.map((year) => {
                 const yearValue = year.year.toLowerCase().replace(" ", "");
                 return activeYear === yearValue ? (
@@ -306,7 +306,7 @@ const ProgrammeStructure = ({
                               </div>
 
                               {/* Compact Action Banner */}
-                              <div className="mt-8 flex flex-col gap-4">
+                              <div className="mt-4 md:mt-8 flex flex-col gap-2 md:gap-4">
                                 {sem.pdfbtns?.map((btn) => {
                                   const text =
                                     btn?.buttontext?.toLowerCase() || "";
@@ -320,10 +320,10 @@ const ProgrammeStructure = ({
                                       <CommonLeadPopup
                                         key={btn?.id}
                                         buttonText={
-                                          <div className="flex items-center gap-6 px-6 py-2 bg-[#051730] rounded-sm text-white group shadow-lg transition-all duration-300 hover:scale-[1.005]">
+                                          <div className="flex items-center gap-6 px-[14px] py-1 md:px-6 md:py-2 bg-[#051730] rounded-sm text-white group shadow-lg transition-all duration-300 hover:scale-[1.005]">
                                             <div className="flex items-center gap-4">
                                               <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
-                                                <Download className="w-5 h-5" />
+                                                <Download className="w-3 h-3 md:w-5 md:h-5" />
                                               </div>
                                               <div className="text-left">
                                                 <h4 className="text-[14px] md:text-[16px] font-semibold capitalize tracking-wide leading-none whitespace-nowrap">
