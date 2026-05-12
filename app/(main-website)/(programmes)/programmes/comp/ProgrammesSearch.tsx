@@ -246,7 +246,7 @@ const ProgrammesSearch = () => {
   // Debounced search effect
   // --------------------------------------------
 
-  const fetchProgrammes = useCallback(
+ const fetchProgrammes = useCallback(
     async (
       reset: boolean = false,
       query: string = "",
@@ -256,20 +256,11 @@ const ProgrammesSearch = () => {
       let newData: ProgrammeItem[] = [];
 
       const limit = loadAll ? 1000 : 7; // fetch 7 to detect "has more"
-      if (schoolRefValue.current === ZENITH_SLUG) {
-        setShowLoadMore(false);
-
-        let filtered = zenithProgrammes;
-
-        if (query.length > 0) {
-          filtered = zenithProgrammes.filter((item) =>
-            normalize(item.title).includes(normalize(query)),
-          );
-        }
-
-        setProgrammes(filtered);
-        return;
-      }
+  if (schoolRefValue.current === ZENITH_SLUG && query.length === 0) {
+      setShowLoadMore(false);
+      setProgrammes(zenithProgrammes);
+      return;
+    }
       if (query.length > 0) {
         // SEARCH MODE
         if (degreeRefValue.current === "doctoral-programmes") {

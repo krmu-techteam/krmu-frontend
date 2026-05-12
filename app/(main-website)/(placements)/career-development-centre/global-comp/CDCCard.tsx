@@ -15,14 +15,14 @@ const CDCCard = ({ heading, content }: Props) => {
         boxShadow: "rgba(149,157,165,.2) 0px 8px 24px",
       }}
     >
-      <h3 className="text-[28px] leading-[1.2] font-semibold my-2.5 z-100000 relative">
+      <h3 className="text-[28px] leading-[1.2] font-semibold my-2.5 z-100 relative">
         {heading}
       </h3>
       <div
         dangerouslySetInnerHTML={{
           __html: content,
         }}
-        className="cdc_text_white"
+        className="cdc_text_white z-100 relative"
       />
       {/* <ul>
         <li>Career Counselling</li>

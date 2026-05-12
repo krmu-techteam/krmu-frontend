@@ -44,6 +44,14 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
           </TabsContent>
         ))}
       </Tabs>
+      <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
+        ** Subject to Approval
+      </p>
+      <p className="text-right text-sm mr-2 mt-1 text-muted-foreground">
+        *In addition to the regular programme fee at KRMU, students will be
+        required to pay an additional tuition fee of GBP 6500 for the semester
+        at UEA
+      </p>
     </div>
   );
 };
@@ -51,7 +59,9 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
 export default FeeStructureTable;
 
 const FacultySection = ({ options }: { options: any[] }) => {
-  const [activeSchoolId, setActiveSchoolId] = useState(options[0]?.id?.toString() || "");
+  const [activeSchoolId, setActiveSchoolId] = useState(
+    options[0]?.id?.toString() || "",
+  );
 
   const handleTabChange = (val: string) => {
     setActiveSchoolId(val);
@@ -60,18 +70,23 @@ const FacultySection = ({ options }: { options: any[] }) => {
     if (element) {
       const headerOffset = 100;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
 
   // Sync state if options change (e.g. when category tab changes)
   useEffect(() => {
-    if (options.length > 0 && (!activeSchoolId || !options.find(opt => opt.id.toString() === activeSchoolId))) {
+    if (
+      options.length > 0 &&
+      (!activeSchoolId ||
+        !options.find((opt) => opt.id.toString() === activeSchoolId))
+    ) {
       setActiveSchoolId(options[0].id.toString());
     }
   }, [options, activeSchoolId]);
@@ -90,7 +105,12 @@ const FacultySection = ({ options }: { options: any[] }) => {
         />
       </div>
 
-      <Tabs value={activeSchoolId} onValueChange={handleTabChange} className="w-full" id="fee-table-section">
+      <Tabs
+        value={activeSchoolId}
+        onValueChange={handleTabChange}
+        className="w-full"
+        id="fee-table-section"
+      >
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-8 items-start">
           {/* Sidebar Navigation: School/Faculty List - Sticky on Desktop, Hidden on Mobile */}
           <TabsList className="hidden lg:flex flex-col h-auto w-full lg:w-[380px] bg-white border border-gray-200 rounded-none p-0 lg:sticky lg:top-32 shadow-sm z-10 items-stretch">
@@ -103,11 +123,15 @@ const FacultySection = ({ options }: { options: any[] }) => {
                            relative transition-all duration-300 hover:bg-gray-50 data-[state=active]:hover:bg-[#0062aa] group 
                            leading-tight whitespace-normal h-auto"
               >
-                <span className="flex-grow pr-4 block">{acc.panel_heading}</span>
+                <span className="flex-grow pr-4 block">
+                  {acc.panel_heading}
+                </span>
                 {/* Indicative Arrow for Active Faculty */}
-                <div className="opacity-0 group-data-[state=active]:opacity-100 absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 
+                <div
+                  className="opacity-0 group-data-[state=active]:opacity-100 absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 
                               border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent 
-                              border-l-[12px] border-l-[#0062aa] transition-opacity duration-300 hidden lg:block" />
+                              border-l-[12px] border-l-[#0062aa] transition-opacity duration-300 hidden lg:block"
+                />
               </TabsTrigger>
             ))}
           </TabsList>
@@ -197,4 +221,3 @@ const MobileFacultyDropdown = ({
     </div>
   );
 };
-
