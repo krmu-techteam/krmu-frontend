@@ -225,7 +225,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                             <Link
                               href={prog.criteria.eligibility_utm_links}
                               target="_blank"
-                              className="bg-[#cb000d] text-white rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-white group-hover:text-[#cb000d] hover:border-[#cb000d] "
+                              className="bg-[#cb000d] text-white rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-white group-hover:text-[#cb000d] hover:border-white "
                             >
                               Apply Now
                             </Link>
@@ -335,7 +335,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                 </Link>
                 <Link
                   href={criteria.eligibility_utm_links || "#"}
-                  className="bg-red-500 text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
+                  className="#cb000d text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

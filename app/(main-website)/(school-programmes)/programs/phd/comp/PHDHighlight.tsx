@@ -167,7 +167,7 @@ const PHDHighlight = ({ heading, highlightheading, btn, imgUrl }: Props) => {
           {btn?.btn_link && (
             <Link
               href={btn?.btn_link}
-              className={`py-3.5 px-8 bg-[#051630] font-bold rounded-sm inline-block text-white ${
+              className={`py-3.5 px-8 bg-[#] font-bold rounded-sm inline-block text-white ${
                 btn?.btn_class || ""
               }`}
               target="_blank" rel="noopener noreferrer"

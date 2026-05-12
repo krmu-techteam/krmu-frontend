@@ -341,7 +341,7 @@ export default function InternationalRelationsForm() {
             <div className="relative">
               <button
                 disabled={loading}
-                className={`w-full bg-red-600 text-white px-10 py-3 rounded-md flex items-center justify-center gap-2
+                className={`w-full #cb000d text-white px-10 py-3 rounded-md flex items-center justify-center gap-2
                   ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
               >
                 {loading && <span className="loader" />} 
@@ -600,7 +600,7 @@ export default function InternationalRelationsForm() {
             <div>
               <button
                 disabled={loading}
-                className={`w-full sm:w-auto sm:min-w-[220px] bg-red-600 text-white px-10 py-3 rounded-md flex items-center justify-center gap-2 transition
+                className={`w-full sm:w-auto sm:min-w-[220px] #cb000d text-white px-10 py-3 rounded-md flex items-center justify-center gap-2 transition
               ${loading ? "opacity-70 cursor-not-allowed" : "hover:bg-red-700"}`}
               >
                 {loading ? "Submitting..." : "Submit"}

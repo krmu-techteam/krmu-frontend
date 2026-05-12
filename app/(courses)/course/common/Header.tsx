@@ -74,7 +74,7 @@ export default function Header() {
             <div className="flex gap-2">
               {/* <Link
                 href="#"
-                className="bg-red-500 text-white px-4 py-2 rounded-full"
+                className="#cb000d text-white px-4 py-2 rounded-full"
               >
                 Apply Now
               </Link> */}
@@ -82,7 +82,7 @@ export default function Header() {
               <CourseScrollButton
                 targetId="apply-section"
                 highlightClass="flash-border"
-                btnClass="bg-red-500 text-white px-4 py-2 rounded-full"
+                btnClass="#cb000d text-white px-4 py-2 rounded-full"
               >
                 Apply Now
               </CourseScrollButton>
@@ -165,7 +165,7 @@ export default function Header() {
               <div className="pt-4 flex flex-col gap-3">
                 <Link
                   href="#apply-section"
-                  className="bg-red-500 text-white py-3 rounded-full"
+                  className="#cb000d text-white py-3 rounded-full"
                   onClick={() => setOpen(false)}
                 >
                   Apply Now

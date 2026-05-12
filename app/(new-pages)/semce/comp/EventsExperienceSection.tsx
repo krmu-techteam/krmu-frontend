@@ -29,7 +29,7 @@ export default function EventsExperienceSection() {
             {/* BUTTON */}
             <Link
               href="#"
-              className="inline-block mt-6 bg-red-600 text-white text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-red-700 transition"
+              className="inline-block mt-6 #cb000d text-white text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-red-700 transition"
             >
               View all Events
             </Link>

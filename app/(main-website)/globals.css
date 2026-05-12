@@ -3272,7 +3272,7 @@
   .prog_highlight_content_container:hover
     .prog_highlight_content_inner_container
     .title {
-    color: #db2a1a;
+    color: #cb000d;
   }
 
   .prog_highlight_btn_container {
@@ -3532,7 +3532,7 @@
     padding: 13px 30px;
     line-height: 1;
     border: 1px solid #cb000d;
-    border-radius: 5px !important;
+    border-radius: 8px !important;
     outline: none;
     font-size: 18px;
     display: flex;
