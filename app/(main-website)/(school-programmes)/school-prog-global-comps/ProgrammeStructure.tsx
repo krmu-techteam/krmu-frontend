@@ -96,7 +96,7 @@ const ProgrammeStructure = ({
               src="/curriculum-s.jpeg"
               fill
               className="object-cover object-center rounded-sm transition-transform duration-1000 group-hover:scale-105"
-              alt="Curriculum"
+              alt="B.Tech CSE Curriculum & Syllabus overview"
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-br from-[#0a41a1]/60 via-[#0a41a1]/10 to-transparent transition-opacity" />
