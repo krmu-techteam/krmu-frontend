@@ -307,6 +307,7 @@ const page = async ({ params }: Props) => {
             highlightHeading={programmeHighlightSection?.highlightheading}
             desc={programmeHighlightSection?.subheading}
             highlights={programmeHighlightSection?.programmehighlightcards}
+            slug={slug}
           />
         )}
 

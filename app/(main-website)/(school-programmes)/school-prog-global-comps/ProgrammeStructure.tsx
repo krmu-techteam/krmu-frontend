@@ -60,12 +60,12 @@ const ProgrammeStructure = ({
   const enable_disable_minor = settings?.minor_enable_disable;
 
   return (
-    <div className="w-full pb-0 md:pb-16 antialiased">
+    <div className="w-full antialiased">
       {/* Section Header */}
       <div className="flex flex-col items-center text-center gap-3 mb-10">
         {(heading || highlight) && (
           <div className="max-w-4xl px-4 md:px-0">
-            <h2 className="text-[26px] md:text-[38px] font-bold text-gray-900 leading-tight tracking-tight">
+            <h2 className="text-[26px] md:text-[45px] font-bold text-[#051730] leading-tight tracking-tight">
               {heading} {highlight}
             </h2>
           </div>
@@ -80,7 +80,7 @@ const ProgrammeStructure = ({
                   {currbtn?.buttontext}
                 </span>
               }
-              buttonClassName="w-full md:w-auto px-8 py-3 text-md font-semibold tracking-wide text-[#051730] bg-white hover:bg-blue-900/20 hover:text-[#051730] rounded-sm transition-all duration-300 flex items-center justify-center border border-[#051730]/20 cursor-pointer hover:border-[#051730]"
+              buttonClassName="w-full md:w-auto px-8 py-3 text-md font-semibold tracking-wide text-[#051730] bg-white hover:bg-transparent hover:text-white hover:border-white rounded-sm transition-all duration-300 flex items-center justify-center border border-[#051730]/20  cursor-pointer hover:border-[#051730]"
               redirectUrl={currbtn?.buttonlink || "#"}
               form_name="Programme Handbook"
             />
@@ -88,25 +88,11 @@ const ProgrammeStructure = ({
         )}
       </div>
 
-      <div className=" backdrop-blur-xl rounded-sm overflow-hidden border border-white/20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[600px] gap-4 shadow-2xl bg-gradient-to-b from-blue-50 to-gray-100">
-          {/* Left Side: Illustration - More Compact */}
-          <div className="hidden lg:block lg:col-span-3 relative group overflow-hidden bg-transparent border-r border-white/10">
-            <Image
-              src="/curriculum-s.jpeg"
-              fill
-              className="object-cover object-center rounded-sm transition-transform duration-1000 group-hover:scale-105"
-              alt="B.Tech CSE Curriculum & Syllabus overview"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-[#051730]/60 via-[#051730]/10 to-transparent transition-opacity" />
-          </div>
-
-          {/* Right Side: Navigation + Content - Minimal & Compact */}
-          <div className="lg:col-span-9 flex flex-col bg-transparent overflow-hidden">
-            {/* Hierarchy Navigation Tree - Compact Version */}
-            <div className="w-full bg-white/10 border-b border-white/10 px-4">
-              <div className="flex flex-wrap lg:flex-nowrap justify-between items-start gap-y-8 gap-x-2 md:gap-4 w-full">
+      <div className="rounded-none md:rounded-xl overflow-hidden bg-white/85 backdrop-blur-md   border border-white/20 shadow-2xl">
+        <div className="min-h-[600px] flex flex-col">
+          {/* Hierarchy Navigation Tree - Compact Version */}
+          <div className="w-full bg-white/5 border-b border-white/10">
+              <div className="flex flex-wrap lg:flex-nowrap justify-between items-start gap-y-2 gap-x-2 md:gap-5 w-full mb-4 px-2 md:px-4">
                 {programStruct.map((year) => {
                   const yearValue = year.year.toLowerCase().replace(" ", "");
                   const isYearActive = activeYear === yearValue;
@@ -128,10 +114,10 @@ const ProgrammeStructure = ({
                             isYear
                               ? `px-4 py-3 rounded-t-xs border-b-2 font-bold text-[14px] md:text-[16px] cursor-pointer ${
                                   isYearActive
-                                    ? "text-[#051730] border-[#051730] bg-blue-100/50"
-                                    : "text-gray-400 border-transparent hover:text-gray-600 hover:bg-gray-100/50"
+                                    ? "text-[#051730] border-[#051730] bg-[#051730]/10"
+                                    : "text-[#051730]/60 border-transparent hover:text-[#051730] hover:bg-[#051730]/5"
                                 }`
-                              : "px-2 pt-2 pb-0 font-semibold text-[13px] md:text-[15px] text-gray-400 cursor-default"
+                              : "px-2 pt-2 pb-0 font-semibold text-[13px] md:text-[15px] text-[#051730]/50 cursor-default"
                           }`}
                       >
                         {year.year}
@@ -165,7 +151,7 @@ const ProgrammeStructure = ({
                           </div>
 
                           {/* Minimal Semester Nodes - ONLY CLICKABLE PART */}
-                          <div className="flex justify-between w-full mt-5 gap-2">
+                          <div className="flex justify-between w-full mt-5 gap-4">
                             {year.semester.map((sem) => {
                               const semValue = sem.semestername
                                 .toLowerCase()
@@ -183,8 +169,8 @@ const ProgrammeStructure = ({
                                   className={`flex flex-row gap-1 items-center justify-center flex-1 transition-all duration-300 py-[6px] rounded-sm border whitespace-nowrap
                                     ${
                                       isSemActive
-                                        ? "bg-gradient-to-r from-[#051730] to-[#051730] border-[#051730] text-white shadow-md z-20"
-                                        : "bg-transparent border-transparent text-gray-700 hover:text-gray-600 hover:bg-gray-100"
+                                        ? "bg-[#051730] text-white border-[#051730] shadow-lg z-20 scale-105"
+                                        : "bg-white/40 border-white/20 text-[#051730]/80 hover:text-[#051730] hover:bg-white/60"
                                     } cursor-pointer`}
                                 >
                                   <span className="text-[13px] sm:text-[15px] font-medium capitalize tracking-tight sm:tracking-wide antialiased whitespace-nowrap">
@@ -203,7 +189,7 @@ const ProgrammeStructure = ({
             </div>
 
             {/* Subjects List - Minimalistic Layout */}
-            <div className="flex-grow  px-2 overflow-y-auto max-h-[700px] scrollbar-thin scrollbar-thumb-gray-100 bg-white/5">
+            <div className="flex-grow  px-2 overflow-y-auto max-h-[700px] scrollbar-thin scrollbar-thumb-gray-100 bg-white/5 mb-4">
               {programStruct.map((year) => {
                 const yearValue = year.year.toLowerCase().replace(" ", "");
                 return activeYear === yearValue ? (
@@ -244,7 +230,7 @@ const ProgrammeStructure = ({
                                   .map((sub) => (
                                     <div
                                       key={sub.id}
-                                      className="flex items-start bg-white/40 backdrop-blur-sm rounded-sm p-3 md:px-4 md:py-3 border border-white/20 transition-all duration-300 antialiased shadow-sm"
+                                      className="flex items-start bg-white/50 backdrop-blur-md rounded-lg p-3 md:px-4 md:py-3 border border-white transition-all duration-300 antialiased shadow-sm hover:shadow-md hover:bg-white/70"
                                     >
                                       <div className="flex items-center w-full gap-3">
                                         <div className="flex-grow min-w-0">
@@ -258,7 +244,7 @@ const ProgrammeStructure = ({
                                                 <div className="w-9 h-9 rounded-full bg-[#051730] flex items-center justify-center flex-shrink-0 border border-[#051730]/10 mt-0.5">
                                                   <IoBookOutline className="w-5 h-5 text-white" />
                                                 </div>
-                                                <h5 className="text-[15px] font-semibold text-gray-800 leading-tight">
+                                                <h5 className="text-[15px] font-semibold text-[#051730] leading-tight">
                                                   {sub.subjectname}
                                                 </h5>
                                               </div>
@@ -305,35 +291,26 @@ const ProgrammeStructure = ({
                                   ))}
                               </div>
 
-                              {/* Compact Action Banner */}
-                              <div className="mt-4 md:mt-8 flex flex-col gap-2 md:gap-4">
+                              {/* Compact Action Banner - Aligned & Standardized */}
+                              <div className="mt-8 flex flex-col md:flex-row items-start gap-4">
                                 {sem.pdfbtns?.map((btn) => {
-                                  const text =
-                                    btn?.buttontext?.toLowerCase() || "";
+                                  const text = btn?.buttontext?.toLowerCase() || "";
                                   const isHandbook = text.includes("handbook");
-                                  const isOpenElective =
-                                    text.includes("elective") ||
-                                    text.includes("added");
+                                  const isOpenElective = text.includes("elective") || text.includes("added");
 
                                   if (isOpenElective) {
                                     return (
                                       <CommonLeadPopup
                                         key={btn?.id}
                                         buttonText={
-                                          <div className="flex items-center gap-6 px-[14px] py-1 md:px-6 md:py-2 bg-[#051730] rounded-sm text-white group shadow-lg transition-all duration-300 hover:scale-[1.005]">
-                                            <div className="flex items-center gap-4">
-                                              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
-                                                <Download className="w-3 h-3 md:w-5 md:h-5" />
-                                              </div>
-                                              <div className="text-left">
-                                                <h4 className="text-[14px] md:text-[16px] font-semibold capitalize tracking-wide leading-none whitespace-nowrap">
-                                                  {btn?.buttontext}
-                                                </h4>
-                                              </div>
-                                            </div>
+                                          <div className="flex items-center gap-4 px-6 py-3 bg-[#051730] rounded-lg text-white shadow-md transition-all duration-300 hover:bg-[#051730]/90">
+                                            <Download className="w-5 h-5" />
+                                            <span className="text-[14px] md:text-[16px] font-semibold whitespace-nowrap">
+                                              {btn?.buttontext}
+                                            </span>
                                           </div>
                                         }
-                                        buttonClassName="w-fit block"
+                                        buttonClassName="w-full md:w-auto"
                                         redirectUrl={btn?.buttonlink || "#"}
                                         form_name={btn?.buttontext || "Action"}
                                       />
@@ -341,26 +318,24 @@ const ProgrammeStructure = ({
                                   }
 
                                   return (
-                                    <div
+                                    <CommonLeadPopup
                                       key={btn?.id}
-                                      className="flex justify-start mt-2"
-                                    >
-                                      <CommonLeadPopup
-                                        buttonText={
-                                          <span className="flex items-center gap-2 whitespace-nowrap">
-                                            {isHandbook ? (
-                                              <FileText className="w-4 h-4" />
-                                            ) : (
-                                              <Download className="w-4 h-4" />
-                                            )}
+                                      buttonText={
+                                        <div className="flex items-center gap-4 px-6 py-3 bg-white/70 backdrop-blur-md border border-[#051730]/20 rounded-lg text-[#051730] shadow-sm transition-all duration-300 hover:bg-white">
+                                          {isHandbook ? (
+                                            <FileText className="w-5 h-5" />
+                                          ) : (
+                                            <Download className="w-5 h-5" />
+                                          )}
+                                          <span className="text-[14px] md:text-[16px] font-semibold whitespace-nowrap">
                                             {btn?.buttontext}
                                           </span>
-                                        }
-                                        buttonClassName="w-fit px-8 py-3 bg-white border-2 border-[#051730] text-[#051730] font-bold uppercase tracking-widest text-[13px] rounded-sm hover:bg-[#051730] hover:text-white transition-all duration-300"
-                                        redirectUrl={btn?.buttonlink || "#"}
-                                        form_name={btn?.buttontext || "Action"}
-                                      />
-                                    </div>
+                                        </div>
+                                      }
+                                      buttonClassName="w-full md:w-auto"
+                                      redirectUrl={btn?.buttonlink || "#"}
+                                      form_name={btn?.buttontext || "Action"}
+                                    />
                                   );
                                 })}
                               </div>
@@ -383,9 +358,8 @@ const ProgrammeStructure = ({
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
 export default ProgrammeStructure;
 
