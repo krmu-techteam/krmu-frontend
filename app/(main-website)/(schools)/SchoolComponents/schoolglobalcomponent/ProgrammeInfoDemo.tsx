@@ -132,7 +132,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
             value={degreeTabs.find((d) => d.value === activeDegree)?.tabValue}
           >
             {/* TAB HEADERS */}
-            <TabsList className="w-full grid grid-cols-2 sm:flex flex-wrap gap-2 sm:gap-0 justify-center h-auto px-1 sm:px-2.5 mb-2 sm:mb-5  sticky top-[44px] md:top-[44px] xl:top-[76px] z-50 md:border-b-[5px] border-[#f4f4f4] bg-white rounded-none">
+            <TabsList className="w-full grid grid-cols-2 sm:flex flex-wrap gap-2 sm:gap-0 justify-center h-auto px-1 sm:px-2.5 mb-2 sm:mb-5  sticky top-[44px] md:top-[44px] xl:top-[76px] z-50 after:content-[''] after:absolute left-0 after:-bottom-[5px] after:w-full after:h-[6px] after:bg-gradient-to-r after:from-white after:via-neutral-500 after:to-white after:opacity-30 bg-white rounded-none">
               {degreeTabs.map((deg) => (
                 <TabsTrigger
                   key={deg.tabValue}
@@ -160,11 +160,12 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                 className={`${programs[deg.value]?.length > 3 ? "grid md:grid-cols-2 xl:grid-cols-4 gap-5" : "flex flex-col sm:flex-row flex-wrap lg:grid grid-cols-2 xl:flex justify-center gap-5"} `}
               >
                 {programs[deg.value]?.length ? (
-                  programs[deg.value].map((prog) => {
+                  programs[deg.value].map((prog, index) => {
                     const isActive =
                       hoverProgramId !== null
                         ? hoverProgramId === prog.id
                         : activeProgramId === prog.id;
+                         const totalCards = programs[deg.value]?.length;
 
                     return (
                       <ProgramCard
@@ -177,6 +178,8 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                         handleMouseEnter={handleMouseEnter}
                         criteria={criteria}
                         setShow={setShow}
+                        index={index}
+                        totalCards={totalCards}
                       />
                       // <div
                       //   key={prog.id}

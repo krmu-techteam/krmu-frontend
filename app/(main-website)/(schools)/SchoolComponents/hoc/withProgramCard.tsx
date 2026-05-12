@@ -30,6 +30,8 @@ interface WithProgramCardProps {
   isActive: boolean;
   handleProgramClick: (id: number) => void;
   handleMouseEnter: (id: number) => void;
+  index: number;
+  totalCards: number;
 }
 
 const withProgramCard = <P extends object>(
@@ -41,10 +43,43 @@ const withProgramCard = <P extends object>(
       deg,
       programs,
       isActive,
+      index,
+      totalCards,
       handleProgramClick,
       handleMouseEnter,
     } = props;
 
+    const cardsPerRow = 4;
+
+    const rowIndex = Math.floor(index / cardsPerRow);
+    const positionInRow = index % cardsPerRow;
+
+    const remainingCards = totalCards - rowIndex * cardsPerRow;
+
+    let glowClass = "";
+
+    if (
+      remainingCards === 3 &&
+      rowIndex === Math.floor((totalCards - 1) / cardsPerRow)
+    ) {
+      // LAST ROW WITH 3 CARDS
+      if (positionInRow === 0) {
+        glowClass = "absolute left-[-196px] -bottom-[170px]";
+      } else if (positionInRow === 1) {
+        glowClass = "absolute left-[48%] -translate-x-1/2 -bottom-[220px]";
+      } else {
+        glowClass = "absolute right-[-156px] -bottom-[150px]";
+      }
+    } else {
+      // NORMAL 4-CARD ROWS
+      if (positionInRow === 0) {
+        glowClass = "absolute left-[-196px] -bottom-[170px]";
+      } else if (positionInRow === 3) {
+        glowClass = "absolute right-[-156px] -bottom-[150px]";
+      } else {
+        glowClass = "absolute left-[48%] -translate-x-1/2 -bottom-[220px]";
+      }
+    }
     return (
       <div
         onClick={() => handleProgramClick(prog.id)}
@@ -68,12 +103,16 @@ const withProgramCard = <P extends object>(
           justify-between
           shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1)]
           transition duration-300 ease-in-out hover:-translate-y-1
+          overflow-hidden
           relative
           ${isActive ? "" : "hover:text-black"}
           `}
       >
         {/* hover:bg-[#0a41a1]
         hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] */}
+        <div
+          className={`absolute ${glowClass} h-[320px] w-[320px] rounded-full bg-gradient-to-br from-[#001732] via-[#59122E] to-[#63174C] blur-[30px] opacity-80`}
+        ></div>
         <WrappedComponent {...props} />
         <Link
           href={`/programs/${prog.programmeslug || "#"}`}

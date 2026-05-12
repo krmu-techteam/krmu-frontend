@@ -37,7 +37,7 @@ const ProgramCardContent = ({ prog, criteria, setShow }: Props) => {
     <>
       <Link
         href={`/programs/${prog.programmeslug || "#"}`}
-        className="block w-full text-white text-base pr-10"
+        className="block w-full text-white text-base pr-10 z-20"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -45,7 +45,7 @@ const ProgramCardContent = ({ prog, criteria, setShow }: Props) => {
       </Link>
 
       {criteria && (
-        <div className="flex flex-col sm:flex-row border-y border-[rgba(255,255,255,0.2)] sm:gap-5">
+        <div className="flex flex-col sm:flex-row border-y border-[rgba(255,255,255,0.2)] sm:gap-5 z-20">
           <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
             <span>
               <Calendar size={20} />
@@ -72,7 +72,7 @@ const ProgramCardContent = ({ prog, criteria, setShow }: Props) => {
         </div>
       )}
 
-      <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center pt-2.5">
+      <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center pt-2.5 z-20">
         <button
           // className="border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer border-white text-white w-full sm:w-1/2"
           className="bg-white cursor-pointer w-full text-sm text-[#0161B0] border border-[#999999] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 sm:w-1/2"
