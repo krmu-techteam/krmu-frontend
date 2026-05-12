@@ -161,10 +161,10 @@ const HeroBanner = ({
         </section>
 
         {/* Recruiter Strip outside section for clean white background */}
-        <div className="w-full bg-white pt-16 py-8 md:py-4 border-t border-gray-100">
+        <div className="w-full bg-white pt-16 py-8 md:py-6 border-t border-gray-100">
           <div className="max-w-[1440px] mx-auto px-4 xl:px-8 2xl:px-0 relative">
             {/* Centered Heading Badge */}
-            <div className="absolute -top-[48px] md:-top-[52px] left-1/2 -translate-x-1/2 bg-gray-50 md:bg-white px-6 py-2 rounded-t-sm z-20 flex items-center justify-center ">
+            <div className="absolute -top-[48px] md:-top-[62px] left-1/2 -translate-x-1/2 bg-gray-50 md:bg-white px-6 py-2 rounded-t-sm z-20 flex items-center justify-center ">
               <h5 className="text-[#333] text-[14px] sm:text-lg font-bold whitespace-nowrap">
                 {dreamcareerSection?.heading}
               </h5>
