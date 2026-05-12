@@ -56,18 +56,18 @@ const withProgramCard = <P extends object>(
           }
           w-full
           rounded-xl
-          bg-[#001F3F]
+          bg-[#051730]
           group
           h-full
           font-semibold
           p-5
-          2xl:p-8
-          transition-colors
+          2xl:p-6
           flex
           flex-col
           gap-2
           justify-between
           shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1)]
+          transition duration-300 ease-in-out hover:-translate-y-1
           relative
           ${isActive ? "" : "hover:text-black"}
           `}
@@ -77,7 +77,7 @@ const withProgramCard = <P extends object>(
         <WrappedComponent {...props} />
         <Link
           href={`/programs/${prog.programmeslug || "#"}`}
-          className="absolute right-5 top-5"
+          className="absolute right-5 top-8"
         >
           <ArrowUpRight size={20} color="#fff" />
         </Link>

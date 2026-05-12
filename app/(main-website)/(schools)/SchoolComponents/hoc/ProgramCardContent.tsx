@@ -45,7 +45,7 @@ const ProgramCardContent = ({ prog, criteria, setShow }: Props) => {
       </Link>
 
       {criteria && (
-        <div className="flex flex-col sm:flex-row border-y border-[#395c6e] sm:gap-5">
+        <div className="flex flex-col sm:flex-row border-y border-[rgba(255,255,255,0.2)] sm:gap-5">
           <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
             <span>
               <Calendar size={20} />
