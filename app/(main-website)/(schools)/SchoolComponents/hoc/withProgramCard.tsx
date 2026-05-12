@@ -2,7 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react";
 import React from "react";
-
+import Link from "next/link";
 type criteriaProps = {
   Duration: string;
   eligibility_criteria: string;
@@ -52,7 +52,7 @@ const withProgramCard = <P extends object>(
         onFocus={() => handleMouseEnter(prog.id)}
         className={`
           ${
-            programs[deg.value]?.length > 2 ? "" : "max-w-[528px] min-h-[258px]"
+            programs[deg.value]?.length > 3 ? "" : "max-w-[528px] min-h-[258px]"
           }
           w-full
           rounded-xl
@@ -61,6 +61,7 @@ const withProgramCard = <P extends object>(
           h-full
           font-semibold
           p-5
+          2xl:p-8
           transition-colors
           flex
           flex-col
@@ -74,7 +75,12 @@ const withProgramCard = <P extends object>(
         {/* hover:bg-[#0a41a1]
         hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] */}
         <WrappedComponent {...props} />
-        <ArrowUpRight className="absolute right-5 top-5" size={20} color="#fff" />
+        <Link
+          href={`/programs/${prog.programmeslug || "#"}`}
+          className="absolute right-5 top-5"
+        >
+          <ArrowUpRight size={20} color="#fff" />
+        </Link>
       </div>
     );
   };

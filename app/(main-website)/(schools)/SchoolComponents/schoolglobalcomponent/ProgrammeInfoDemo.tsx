@@ -126,13 +126,13 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
       <div className="scroll-mt-[90px]" ref={sectionRef}>
         {/* LEFT SIDE */}
         {/* <div className="w-full xl:w-1/2 bg-[url(/schools/prog-bg.webp)] bg-center bg-cover bg-no-repeat p-2.5 sm:p-5 z-10 rounded-3xl"> */}
-        <div className="w-full xl:p-5 z-10 rounded-3xl">
+        <div className="w-full px-4 xl:p-5 rounded-3xl">
           <Tabs
             defaultValue="ug"
             value={degreeTabs.find((d) => d.value === activeDegree)?.tabValue}
           >
             {/* TAB HEADERS */}
-            <TabsList className="w-full grid grid-cols-2 sm:flex flex-wrap gap-2 sm:gap-0 justify-center h-auto p-1 sm:p-2.5 mb-2 sm:mb-5  sticky top-[42px] xl:top-[76px] sm:top-[67px] md:top-[42px] bg-white rounded-none">
+            <TabsList className="w-full grid grid-cols-2 sm:flex flex-wrap gap-2 sm:gap-0 justify-center h-auto px-1 sm:px-2.5 mb-2 sm:mb-5  sticky top-[44px] md:top-[44px] xl:top-[76px] z-50 md:border-b-[5px] border-[#f4f4f4] bg-white rounded-none">
               {degreeTabs.map((deg) => (
                 <TabsTrigger
                   key={deg.tabValue}
@@ -145,7 +145,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                       block: "start",
                     });
                   }}
-                  className="flex-none mx-2.5 py-2 px-10 rounded-xl cursor-pointer  bg-[#f0f0f0] data-[state=active]:text-white  data-[state=active]:bg-[#0161b0] text-black"
+                  className="flex-none mx-2.5 relative py-2 px-10 rounded-xl text-xl cursor-pointer data-[state=active]:shadow-none font-medium text-black data-[state=active]:font-bold data-[state=active]:after:content-[''] data-[state=active]:after:absolute data-[state=active]:after:-bottom-[9px] data-[state=active]:after:left-0 data-[state=active]:after:w-full data-[state=active]:after:h-1 sm:data-[state=active]:after:h-1.5 data-[state=active]:after:bg-[#001732]"
                 >
                   {deg.label}
                 </TabsTrigger>
@@ -157,7 +157,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
               <TabsContent
                 key={deg.tabValue}
                 value={deg.tabValue}
-                className={`${programs[deg.value]?.length > 2 ? "grid md:grid-cols-2 lg:grid-cols-4 gap-5 px-4" : "flex flex-wrap justify-center gap-5"} `}
+                className={`${programs[deg.value]?.length > 3 ? "grid md:grid-cols-2 xl:grid-cols-4 gap-5" : "flex flex-col sm:flex-row flex-wrap lg:grid grid-cols-2 xl:flex justify-center gap-5"} `}
               >
                 {programs[deg.value]?.length ? (
                   programs[deg.value].map((prog) => {
@@ -264,7 +264,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
         {/* RIGHT SIDE */}
       </div>
       <div
-        className={`fixed  top-0 left-0 w-full h-full bg-black/50 z-50 ${show ? "block" : "hidden"}`}
+        className={`fixed  top-0 left-0 w-full z-50 h-full bg-black/50 ${show ? "block" : "hidden"}`}
       >
         <div
           className="w-full rounded-md sm:m-0 p-2.5 md:p-10 h-fit bg-white max-w-2xl md:max-w-4xl absolute top-1/2 left-1/2 -translate-1/2"
@@ -274,7 +274,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
           }}
         >
           <span
-            className="absolute right-5 top-5  inline-block z-50 cursor-pointer"
+            className="absolute right-5 top-5  inline-block  cursor-pointer"
             onClick={() => setShow((prev) => !prev)}
           >
             <X />
