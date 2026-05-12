@@ -29,11 +29,11 @@ const ProgrammeScope = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="bg-[#0a41a1] py-12 md:py-20">
-      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-6 lg:gap-24 px-4 sm:px-8 xl:px-4">
+    <section className="bg-[#051730] py-12 md:py-20">
+      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-6 lg:gap-16 px-4 sm:px-0 xl:px-0">
         {/* Left column: Image */}
         <div className="w-full md:w-1/2">
-          <div className="relative aspect-[16/10] sm:aspect-video md:aspect-[4/3] w-full rounded-md overflow-hidden ">
+          <div className="relative aspect-[16/10] sm:aspect-video md:aspect-[5/3] w-full rounded-md overflow-hidden ">
             {heroSection?.imgvideo === "Video" && isFormAvailable ? (
               <div
                 className="w-full h-full"
@@ -67,7 +67,7 @@ const ProgrammeScope = async ({
           <h3 className="text-3xl sm:text-4xl md:text-[50px] font-bold leading-tight mb-5">
             {scopeData?.scopeheading}
           </h3>
-          <p className="text-base sm:text-lg md:text-xl leading-[1.6] md:leading-[1.7] opacity-90 mb-8 max-w-2xl mx-auto md:mx-0">
+          <p className="text-base sm:text-lg md:text-xl leading-[1.6] md:leading-[1.7] opacity-90 mb-8 max-w-3xl mx-auto md:mx-0">
             {scopeData?.scopecontent}
           </p>
 
