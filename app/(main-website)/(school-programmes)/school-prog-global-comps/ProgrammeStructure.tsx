@@ -88,7 +88,7 @@ const ProgrammeStructure = ({
         )}
       </div>
 
-      <div className="rounded-none md:rounded-xl overflow-hidden bg-white/85 backdrop-blur-md   border border-white/20 shadow-2xl">
+      <div className="rounded-none md:rounded-xl overflow-hidden bg-white/20 backdrop-blur-md   border border-white/20 shadow-2xl">
         <div className="min-h-[600px] flex flex-col">
           {/* Hierarchy Navigation Tree - Compact Version */}
           <div className="w-full bg-white/5 border-b border-white/10">

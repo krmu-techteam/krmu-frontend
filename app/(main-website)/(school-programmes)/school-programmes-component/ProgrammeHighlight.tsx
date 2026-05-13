@@ -75,22 +75,22 @@ const ProgrammeHighlight = ({
             </p>
           </div>
 
-          <div className="relative group/slider px-4 md:px-14">
+          <div className="relative group/slider px-4 xl:px-10 2xl:px-14">
             {/* Slider Controls */}
-            <div className="absolute top-1/2 -left-4 md:-left-12 -translate-y-1/2 z-10 md:block">
+            <div className="absolute top-1/2 left-2 md:left-0 lg:-left-4 -translate-y-1/2 z-10">
               <button
                 onClick={scrollPrev}
-                className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-gray-100 cursor-pointer"
+                className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-gray-100 cursor-pointer hover:scale-110 active:scale-95"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
             </div>
 
-            <div className="absolute top-1/2 -right-4 md:-right-12 -translate-y-1/2 z-10 md:block">
+            <div className="absolute top-1/2 right-2 md:right-0 lg:-right-4 -translate-y-1/2 z-10">
               <button
                 onClick={scrollNext}
-                className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-gray-100 cursor-pointer"
+                className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-gray-100 cursor-pointer hover:scale-110 active:scale-95"
                 aria-label="Next slide"
               >
                 <ChevronRight className="w-6 h-6" />

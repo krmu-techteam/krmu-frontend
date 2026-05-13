@@ -7,6 +7,8 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import Fade from "embla-carousel-fade";
 
 type Props = {
   heading: string;
@@ -27,7 +29,10 @@ const CareerProspects = ({
   careercards,
   slug,
 }: Props) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 60 }, [
+    Autoplay({ delay: 4000, stopOnInteraction: false }),
+    Fade(),
+  ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
@@ -46,7 +51,7 @@ const CareerProspects = ({
   }, [emblaApi, onSelect]);
   if (slug === "bba-hr") {
     return (
-      <section className="relative  py-8 md:pt-16 md:pb-[150px] overflow-hidden min-h-[850px] flex flex-col items-center">
+      <section className="relative py-6 md:pt-8 md:pb-[80px] xl:pb-[150px] overflow-hidden min-h-[600px] md:min-h-[750px] xl:min-h-[850px] flex flex-col items-center">
         {/* Background Image with Blur */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -60,58 +65,56 @@ const CareerProspects = ({
 
         <div className="relative z-10 max-w-[1440px] mx-auto px-4 w-full flex flex-col items-center">
           {/* Header Section */}
-          <div className="max-w-4xl w-full text-center mb-6 md:mb-8">
-            <h3 className="text-4xl md:text-[52px] font-bold text-[#0B1C30] mb-4 leading-[1.1] tracking-tight">
+          <div className="max-w-4xl w-full text-center mb-4">
+            <h3 className="text-3xl md:text-[36px] xl:text-[42px] font-bold text-[#0B1C30] mb-3 md:mb-2 leading-[1.1] tracking-tight">
               {heading} {highlight}
             </h3>
-            <p className="leading-relaxed text-[#45464D] text-lg md:text-xl mx-auto max-w-5xl">
+            <p className="text-[#45464D] text-shadow-xs md:text-shadow-none text-md xl:text-lg mx-auto max-w-full leading-relaxed md:leading-[1.36]">
               {desc}
             </p>
           </div>
 
           {/* Action Button */}
           {(btn?.buttonclass || btn?.buttonlink) && (
-            <div className="mb-8 md:mb-10">
+            <div className="mb-6">
               <Link
                 href={btn?.buttonlink || "#"}
-                className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-10 py-3 flex items-center justify-center gap-3 rounded-lg font-semibold tracking-wide shadow-lg hover:shadow-2xl transition-all duration-300 group ${btn?.buttonclass}`}
+                className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-6 py-3 md:px-10 md:py-3 flex items-center justify-center gap-3 rounded-sm md:rounded-lg font-semibold tracking-wide shadow-lg hover:shadow-2xl transition-all duration-300 group ${btn?.buttonclass}`}
               >
                 <span>{btn?.buttontext}</span>
               </Link>
             </div>
           )}
 
-          {/* Slider Section */}
-          <div className="relative w-full max-w-lg  mx-auto">
-             <button
-              onClick={scrollPrev}
-              className="absolute left-[-12px] md:left-[-60px] top-[250px] -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-[#051630] text-[#051630] hover:bg-white hover:border-white transition-all group cursor-pointer"
-            >
-              <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
-            </button>
-            
-            <button
-              onClick={scrollNext}
-             className="absolute right-[-12px] md:right-[-60px] top-[250px] -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-[#051630] text-[#051630] hover:bg-white hover:border-white transition-all group cursor-pointer"
-            >
-              <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
-            </button>
-          </div>
+
           <div className="relative w-full  mx-auto">
             
-
             {/* Carousel Wrapper (Text Only) */}
-            <div className="w-full">
+            <div className="w-full relative max-w-lg mx-auto">
+              <button
+                onClick={scrollPrev}
+                className="absolute -left-3 md:-left-20 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-md shadow-lg text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-white/40 cursor-pointer hover:scale-110 active:scale-95"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+
+              <button
+                onClick={scrollNext}
+                className="absolute -right-3 md:-right-20 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-md shadow-lg text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-white/40 cursor-pointer hover:scale-110 active:scale-95"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+
               <div className="embla overflow-hidden" ref={emblaRef}>
                 <div className="flex ">
                   {careercards?.map((card, index) => (
                     <div key={card?.id} className="flex-[0_0_100%] min-w-0">
-                        <div className="bg-white/80 rounded-2xl pt-8 md:pt-12 pb-0 flex flex-col items-center max-w-[457px] min-h-[418px] w-full mx-auto relative transition-all duration-300 border border-white/20 mb-0 md:mb-32">
+                        <div className="bg-white/90 backdrop-blur-md rounded-sm md:rounded-2xl pt-4 md:pt-6 pb-0 flex flex-col items-center lg:max-w-[457px] xl:max-w-[457px] 2xl:max-w-[457px] min-h-[320px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[418px] 2xl:min-h-[418px] w-full mx-auto relative transition-all duration-1000 border border-white/40 mb-20 xl:mb-12 2xl:mb-24 shadow-xl hover:shadow-2xl overflow-hidden">
                           <div className="text-center z-20 relative px-6">
-                            <h4 className="font-bold text-xl mb-4 text-[#051630]">
+                            <h4 className={`font-bold text-xl md:text-2xl mb-1 text-[#051630] tracking-tight transition-all duration-1000 delay-100 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
                               {card?.title}
                             </h4>
-                            <p className="leading-relaxed text-gray-600 text-base max-w-sm mx-auto">
+                            <p className={`text-gray-700 text-md md:text-lg max-w-sm mx-auto leading-relaxed md:leading-[1.36] font-normal transition-all duration-1000 delay-300 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
                               {card?.description}
                             </p>
                           </div>
@@ -119,18 +122,14 @@ const CareerProspects = ({
                       </div>
                     ))}
                 </div>
-                
-         
-         
               </div>
-                 
             </div>
 
             {/* Static Career Image (Stays centered while text slides) */}
             <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/group_people_751a407e4e.png"
                 fill
-                className="-mb-10 object-contain md:translate-y-[28%] transform scale-[1.35] md:scale-[1.1] -translate-x-[14px] translate-y-[120px]"
+                className="-mb-10 object-contain md:translate-y-[20%] lg:translate-y-[42%] xl:translate-y-[32%] 2xl:translate-y-[30%] transform scale-[1.35] md:scale-[1] -translate-x-[17px] translate-y-[100px] md:translate-y-[120px]"
                 alt="Career Prospects Students"
               />
             </div>
