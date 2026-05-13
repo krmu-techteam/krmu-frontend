@@ -67,7 +67,7 @@ const ProgrammeHighlight = ({
       <section className="prog-global-padding bg-white py-8 md:py-16 shadow">
         <div className="max-w-[1440px] mx-auto w-full px-4 md:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#051630] leading-[1.1] mb-6">
+            <h2 className="text-3xl text-center md:text-left md:text-5xl font-bold text-[#051630] leading-[1.1] mb-3 md:mb-6">
               {heading} {highlightHeading}
             </h2>
             <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto font-medium">
@@ -75,9 +75,9 @@ const ProgrammeHighlight = ({
             </p>
           </div>
 
-          <div className="relative group/slider px-4 xl:px-10 2xl:px-14">
+          <div className="relative group/slider px-0 xl:px-10 2xl:px-14">
             {/* Slider Controls */}
-            <div className="absolute top-1/2 left-2 md:left-0 lg:-left-4 -translate-y-1/2 z-10">
+            <div className="absolute top-1/2 -left-3 md:left-0 lg:-left-4 -translate-y-1/2 z-10">
               <button
                 onClick={scrollPrev}
                 className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-gray-100 cursor-pointer hover:scale-110 active:scale-95"
@@ -87,7 +87,7 @@ const ProgrammeHighlight = ({
               </button>
             </div>
 
-            <div className="absolute top-1/2 right-2 md:right-0 lg:-right-4 -translate-y-1/2 z-10">
+            <div className="absolute top-1/2 -right-3 md:right-0 lg:-right-4 -translate-y-1/2 z-10">
               <button
                 onClick={scrollNext}
                 className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-gray-100 cursor-pointer hover:scale-110 active:scale-95"
@@ -98,7 +98,7 @@ const ProgrammeHighlight = ({
             </div>
 
             {/* Embla Viewport - Added padding and negative margin to prevent shadow clipping */}
-            <div className="overflow-hidden cursor-grab active:cursor-grabbing pt-5 pb-10 -my-10" ref={emblaRef}>
+            <div className="overflow-hidden cursor-grab active:cursor-grabbing pt-2 md:pt-5 pb-10 -my-10" ref={emblaRef}>
               <div className="flex -ml-4">
                 {highlights?.map((highlight) => (
                   <div key={highlight.id} className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_25%] pl-4 min-w-0">
