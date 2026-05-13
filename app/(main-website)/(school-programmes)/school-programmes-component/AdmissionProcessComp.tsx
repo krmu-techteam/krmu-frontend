@@ -119,7 +119,7 @@ const AdmissionProcessComp = ({
                 return (
                   <div
                     key={card?.id}
-                    className="w-full text-center p-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[120px]"
+                    className="w-full text-center px-4 py-3 md:p-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[100px]"
                   >
                     <h4 className="text-xl font-semibold text-[#0a41a1] mb-2">
                       {card?.title}
@@ -140,7 +140,7 @@ const AdmissionProcessComp = ({
                 return (
                   <div
                     key={card?.id}
-                    className="w-full text-center p-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[120px]"
+                    className="w-full text-center px-4 py-3 md:p-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[100px]"
                   >
                     <h4 className="text-xl font-semibold text-[#0a41a1] mb-2">
                       {card?.title}
