@@ -167,6 +167,8 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                         : activeProgramId === prog.id;
                          const totalCards = programs[deg.value]?.length;
 
+                         console.log('handleMouseEnter', handleMouseEnter);
+
                     return (
                       <ProgramCard
                         key={prog.id}
