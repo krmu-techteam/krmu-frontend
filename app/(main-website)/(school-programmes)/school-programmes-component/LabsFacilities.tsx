@@ -53,7 +53,7 @@ const LabsFacilities = ({
           </div> */}
           <div className="w-full labFac_container text-center">
             <div className="common-prog-container !max-w-4xl mx-auto">
-              <h3 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-4">
+              <h3 className="text-[28px] md:text-[42px] font-bold text-gray-900 leading-tight tracking-tight mb-4">
                 {heading} {highlight}
               </h3>
               <div

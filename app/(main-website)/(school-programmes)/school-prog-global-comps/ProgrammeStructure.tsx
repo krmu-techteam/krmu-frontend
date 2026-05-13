@@ -65,7 +65,7 @@ const ProgrammeStructure = ({
       <div className="flex flex-col items-center text-center gap-3 mb-10">
         {(heading || highlight) && (
           <div className="max-w-4xl px-4 md:px-0">
-            <h2 className="text-[26px] md:text-[45px] font-bold text-[#051730] leading-tight tracking-tight">
+            <h2 className="text-[26px] md:text-[42px] font-bold text-[#051730] leading-tight tracking-tight">
               {heading} {highlight}
             </h2>
           </div>
