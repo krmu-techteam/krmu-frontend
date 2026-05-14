@@ -19,9 +19,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 type Props = {
   degName: string;
   catName: string;
+  title: string;
 };
 
-const ProgrammeInfoDemo = ({ catName }: Props) => {
+const ProgrammeInfoDemo = ({ catName, title }: Props) => {
   const [show, setShow] = useState<boolean>(false);
   const [programs, setPrograms] = useState<Record<string, ProgrammeCardData[]>>(
     {},
@@ -81,6 +82,16 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
     },
     [catName],
   );
+
+  const progNewLine = [
+    "b-tech-cse",
+    "btech-cse-ai-ml",
+    "btech-full-stack-development",
+    "btech-cse-ui-ux",
+    "btech-cse-cyber-security",
+    "btech-cse-in-data-science",
+    "b-tech-cse-robotics-ai",
+  ];
 
   // On mount / degree change
   useEffect(() => {
@@ -171,8 +182,9 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                         onClick={() => handleProgramClick(prog.id)}
                         onMouseEnter={() => handleMouseEnter(prog.id)}
                         onFocus={() => handleMouseEnter(prog.id)}
-                        className={`${programs[deg.value]?.length > 2 ? "" : "max-w-[528px] min-h-[258px]"}  w-full rounded-xl bg-[#001F3F] group hover:bg-[#0a41a1] h-full  font-semibold p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] ${isActive ? "" : " hover:text-black"
-                          }`}
+                        className={`${programs[deg.value]?.length > 2 ? "" : "max-w-[528px] min-h-[258px]"}  w-full rounded-xl bg-[#001F3F] group hover:bg-[#0a41a1] h-full  font-semibold p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] ${
+                          isActive ? "" : " hover:text-black"
+                        }`}
                       >
                         <Link
                           href={`/programs/${prog.programmeslug || "#"}`}
@@ -205,7 +217,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                                   Rs. {prog.criteria?.programme_fee_per_year} /
                                   Year{" "}
                                   {prog.programmeslug ===
-                                    "bhmct-hotel-management"
+                                  "bhmct-hotel-management"
                                     ? "(2025-26)"
                                     : ""}
                                 </span>
@@ -238,6 +250,12 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                             <CircleArrowRight /> View Programme
                           </Link>
                         </div>
+                        {progNewLine.includes(prog.programmeslug) && (
+                          <div className="text-white text-sm items-center mt-3 px-4">
+                            3-Year Lateral Entry option also available for
+                            eligible students
+                          </div>
+                        )}
                       </div>
                     );
                   })
