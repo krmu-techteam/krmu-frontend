@@ -28,7 +28,7 @@ const SchoolExcitedNewsletter = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="py-14 lg:py-20 mt-20 bg-[#051630]">
+    <section className="py-14 lg:py-20 mt-20 bg-[#001732]">
       <div className="max-w-[1664px] mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
         {/* LEFT SIDE */}
         <div className="text-center lg:text-left text-white">

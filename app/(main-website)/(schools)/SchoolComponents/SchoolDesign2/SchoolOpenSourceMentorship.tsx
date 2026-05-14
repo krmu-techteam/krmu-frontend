@@ -10,7 +10,7 @@ const whatYouGet = [
 
 const SchoolOpenSourceMentorship = () => {
   return (
-    <section className="py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-[#051630] text-white">
+    <section className="py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-[#001732] text-white">
       {/* Outer card */}
       <div
         className="max-w-[90rem] mx-auto w-full rounded-3xl p-1"

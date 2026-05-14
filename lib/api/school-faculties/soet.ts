@@ -99,7 +99,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media: 6624,
     acf: {
       "staff-qualification": "Ph.D. in  Computer Science from LNMIIT",
-      staff_designation: "Professor & Dean- SOET",
+      staff_designation: "Assistant Professor",
       schools: [1266],
     },
     featured_media_url:
@@ -218,7 +218,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media: 101738,
     acf: {
       "staff-qualification": "Ph.D.",
-      staff_designation: "Professor",
+      staff_designation: "Assistant Professor",
       schools: [1266],
     },
     featured_media_url:

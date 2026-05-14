@@ -26,7 +26,7 @@ const SchoolDeansVision = ({
 }: Props) => {
   return (
     <section
-      className="py-10 sm:py-20 px-4 bg-[#051630]"
+      className="py-10 sm:py-20 px-4 bg-[#001732]"
       // style={{
       //   background:
       //     "linear-gradient(95deg,#051630 2.69%,#0060aa 65.94%,#e31e24 97.54%)",

@@ -33,7 +33,7 @@ const SchoolHero = ({
           fullWidth
             ? "lg:py-[20%] lg:pb-[5%] pt-[300px] pb-5"
             : "lg:pt-[10%] lg:pb-[5%] pt-[300px] px-0 schoolBanner"
-        } bg-cover bg-no-repeat bg-center sm:px-4 bg-[#034272]`}
+        } bg-cover bg-no-repeat bg-center sm:px-4 bg-[#001732]`}
         style={{ backgroundImage: `url(${STRAPI_URL}${herobanner?.url})` }}
       >
         <div className="hidden sm:block">
@@ -63,7 +63,7 @@ const SchoolHero = ({
                     <Link
                       key={btn.id}
                       href={btn.buttonlink}
-                      className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#034272] ${
+                      className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#001732] ${
                         btn.buttonclass || ""
                       }`}
                     >
@@ -101,7 +101,7 @@ const SchoolHero = ({
                     <Link
                       key={btn.id}
                       href={btn.buttonlink}
-                      className="text-white w-full sm:w-fit flex justify-center items-center px-8 py-2.5 rounded-lg gap-4 font-semibold bg-[#034272] transition-all hover:bg-[#02335a]"
+                      className="text-white w-full sm:w-fit flex justify-center items-center px-8 py-2.5 rounded-lg gap-4 font-semibold bg-[#001732] transition-all hover:bg-[#02335a]"
                     >
                       {btn.buttontext}
                     </Link>

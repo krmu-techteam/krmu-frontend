@@ -100,7 +100,7 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
 
   return (
     <div className="pt-16 px-4 pb-4">
-      <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2.5 sm:gap-5">
         {visibleFaculties.map((faculty) => (
           <StaticFacultyEmployeeCard
             key={faculty.id}

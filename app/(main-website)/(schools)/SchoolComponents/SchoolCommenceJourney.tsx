@@ -30,7 +30,7 @@ const SchoolCommenceJourney = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-3">
           <div className="w-full p-2.5 md:p-5 bg-[url(/schools/1.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
             <span
-              className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#051630] rounded-full mb-5"
+              className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
                 boxShadow: "0px 5px 20px rgb(29 66 197 / 58%)",
               }}
@@ -54,7 +54,7 @@ const SchoolCommenceJourney = ({
           </div>
           <div className="w-full p-2.5 md:p-5 bg-[url(/schools/2.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
             <span
-              className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#051630] rounded-full mb-5"
+              className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
                 boxShadow: "0px 5px 20px rgb(29 66 197 / 58%)",
               }}
@@ -73,7 +73,7 @@ const SchoolCommenceJourney = ({
           </div>
           <div className="w-full p-2.5 md:p-5 bg-[url(/schools/3.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
             <span
-              className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#051630] rounded-full mb-5"
+              className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
                 boxShadow: "0px 5px 20px rgb(29 66 197 / 58%)",
               }}
@@ -92,7 +92,7 @@ const SchoolCommenceJourney = ({
           </div>
           <div className="w-full p-2.5 md:p-5 bg-[url(/schools/4.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
             <span
-              className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#051630] rounded-full mb-5"
+              className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
                 boxShadow: "0px 5px 20px rgb(29 66 197 / 58%)",
               }}
@@ -111,7 +111,7 @@ const SchoolCommenceJourney = ({
           </div>
           <div className="w-full p-2.5 md:p-5 bg-[url(/schools/5.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
             <span
-              className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#051630] rounded-full mb-5"
+              className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
                 boxShadow: "0px 5px 20px rgb(29 66 197 / 58%)",
               }}
@@ -132,7 +132,7 @@ const SchoolCommenceJourney = ({
           </div>
           <div className="w-full p-2.5 md:p-5 bg-[url(/schools/6.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
             <span
-              className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#051630] rounded-full mb-5"
+              className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
                 boxShadow: "0px 5px 20px rgb(29 66 197 / 58%)",
               }}

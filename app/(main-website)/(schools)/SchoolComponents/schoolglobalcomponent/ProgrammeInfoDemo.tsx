@@ -121,6 +121,16 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
 
   const criteria = currentProgram?.criteria;
 
+  const progNewLine = [
+    "b-tech-cse",
+    "btech-cse-ai-ml",
+    "btech-full-stack-development",
+    "btech-cse-ui-ux",
+    "btech-cse-cyber-security",
+    "btech-cse-in-data-science",
+    "b-tech-cse-robotics-ai",
+  ];
+
   return (
     <>
       <div className="scroll-mt-[90px]" ref={sectionRef}>
@@ -182,6 +192,7 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                         setShow={setShow}
                         index={index}
                         totalCards={totalCards}
+                        progNewLine={progNewLine}
                       />
                       // <div
                       //   key={prog.id}

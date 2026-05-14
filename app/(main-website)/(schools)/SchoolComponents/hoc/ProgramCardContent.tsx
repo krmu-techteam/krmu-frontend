@@ -30,9 +30,15 @@ interface Props {
   prog: progProps;
   criteria?: criteriaProps;
   setShow: (value: boolean) => void;
+  progNewLine: string[];
 }
 
-const ProgramCardContent = ({ prog, criteria, setShow }: Props) => {
+const ProgramCardContent = ({
+  prog,
+  criteria,
+  setShow,
+  progNewLine,
+}: Props) => {
   return (
     <>
       <Link
@@ -90,6 +96,7 @@ const ProgramCardContent = ({ prog, criteria, setShow }: Props) => {
             Apply Now
           </Link>
         )}
+
         {/* <Link
           href={`/programs/${prog.programmeslug || "#"}`}
           target="_blank"
@@ -98,6 +105,11 @@ const ProgramCardContent = ({ prog, criteria, setShow }: Props) => {
           <CircleArrowRight /> View Programme
         </Link> */}
       </div>
+      {progNewLine.includes(prog.programmeslug) && (
+        <div className="text-white text-[11px] text-center font-normal relative leading-tight z-20">
+          3-Year Lateral Entry option also available for eligible students
+        </div>
+      )}
     </>
   );
 };

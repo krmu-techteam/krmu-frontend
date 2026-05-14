@@ -8,7 +8,7 @@ type Props = {
 
 const SchoolAdmissionOpen = ({ title, admBtn }: Props) => {
   return (
-    <section className="px-4 sm:px-6 lg:px-8 bg-[#051630]">
+    <section className="px-4 sm:px-6 lg:px-8 bg-[#001732]">
       <div className="max-w-[1664px] mx-auto">
         <div className="py-5 flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Heading */}
