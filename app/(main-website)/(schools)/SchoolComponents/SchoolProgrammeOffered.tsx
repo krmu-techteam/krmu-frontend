@@ -23,7 +23,11 @@ const SchoolProgrammeOffered = ({
             </h3>
             <p>{content}</p>
           </div>
-          <ProgrammeInfoDemo degName={degName} catName={schoolCategoryName} />
+          <ProgrammeInfoDemo
+            degName={degName}
+            catName={schoolCategoryName}
+            title={title}
+          />
           {/* <ProgrammeInfoCards /> */}
         </div>
       </section>
