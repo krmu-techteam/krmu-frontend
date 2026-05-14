@@ -40,7 +40,7 @@ const ShapingFuture = ({
                 <div className="my-2">
                   <h3 className="text-xl sm:text-2xl">{subtitle}</h3>
                   <h3 className="text-2xl mt-5 font-semibold sm:text-4xl lg:text-5xl lg:leading-none">
-                    <span className="text-[#034272]">{highlight}</span> <br />
+                    <span className="text-[#001732]">{highlight}</span> <br />
                     {afterHighLight}
                   </h3>
 
@@ -69,7 +69,7 @@ const ShapingFuture = ({
                         key={counter?.id}
                         className="flex flex-col text-center items-center justify-center mb-5 lg:items-start lg:mx-4 lg:justify-start lg:text-left"
                       >
-                        <span className="text-[#034272] font-bold mb-[10px] text-3xl xl:text-4xl">
+                        <span className="text-[#001732] font-bold mb-[10px] text-3xl xl:text-4xl">
                           {counter?.countertext}
                         </span>
                         <span className="text-sm font-semibold">
@@ -83,7 +83,7 @@ const ShapingFuture = ({
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start sm:items-center gap-5">
                 <Link
                   href={link1}
-                  className="bg-[#034272] border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold text-center"
+                  className="bg-[#001732] border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold text-center"
                 >
                   <span className="text-sm sm:text-base">{link1text}</span>
                 </Link>

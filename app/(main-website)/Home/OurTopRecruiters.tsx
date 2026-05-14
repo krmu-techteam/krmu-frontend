@@ -32,8 +32,10 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
           </h4>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 text-white mt-10">
             {counters.map((counter) => (
-              <div key={counter.id} className="flex flex-col mb-5 ourtop-rec text-center lg:text-left">
-               
+              <div
+                key={counter.id}
+                className="flex flex-col mb-5 ourtop-rec text-center lg:text-left"
+              >
                 <span className="text-white font-bold mb-[10px] text-3xl xl:text-4xl ">
                   {counter.countertext}
                 </span>

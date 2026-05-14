@@ -227,12 +227,13 @@ export default async function Page({ params }: Props) {
         videoLink={school.videolink}
         fullWidth={school?.fullwidthhero}
       />
-      {school.admissionsessiontitle && (
-        <SchoolAdmissionOpen
-          title={school.admissionsessiontitle}
-          admBtn={school.admissionbtn}
-        />
-      )}
+      {slug !== "school-of-hotel-management-and-catering-technology" &&
+        school.admissionsessiontitle && (
+          <SchoolAdmissionOpen
+            title={school.admissionsessiontitle}
+            admBtn={school.admissionbtn}
+          />
+        )}
       {schoolKnowComp && (
         <SchoolInfoStatistics
           heading={schoolKnowComp?.heading}
@@ -254,6 +255,7 @@ export default async function Page({ params }: Props) {
         schoolCategoryName={schoolCategoryName}
         title={school?.programme_offered?.title}
         content={school?.programme_offered?.content}
+        slug={slug}
       />
 
       {/* <SchoolExcitedAlready

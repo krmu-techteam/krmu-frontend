@@ -155,7 +155,7 @@ const ProgrammesSearch = () => {
     selectedProgramme.programmeslug.includes("zenithschool.ai");
 
   useEffect(() => {
-    schoolRefValue.current = selectedSchool; 
+    schoolRefValue.current = selectedSchool;
     degreeRefValue.current = selectedDegree;
   }, [selectedSchool, selectedDegree]);
 
@@ -246,7 +246,7 @@ const ProgrammesSearch = () => {
   // Debounced search effect
   // --------------------------------------------
 
- const fetchProgrammes = useCallback(
+  const fetchProgrammes = useCallback(
     async (
       reset: boolean = false,
       query: string = "",
@@ -256,11 +256,11 @@ const ProgrammesSearch = () => {
       let newData: ProgrammeItem[] = [];
 
       const limit = loadAll ? 1000 : 7; // fetch 7 to detect "has more"
-  if (schoolRefValue.current === ZENITH_SLUG && query.length === 0) {
-      setShowLoadMore(false);
-      setProgrammes(zenithProgrammes);
-      return;
-    }
+      if (schoolRefValue.current === ZENITH_SLUG && query.length === 0) {
+        setShowLoadMore(false);
+        setProgrammes(zenithProgrammes);
+        return;
+      }
       if (query.length > 0) {
         // SEARCH MODE
         if (degreeRefValue.current === "doctoral-programmes") {
@@ -349,7 +349,10 @@ const ProgrammesSearch = () => {
         <div className="bg-[#051630] py-5 md:py-8 px-4 md:px-5">
           <div className="p-3 lg:py-2.5 lg:px-5 flex flex-col lg:flex-row items-stretch lg:items-center gap-4 lg:gap-5 max-w-[1440px] mx-auto w-full bg-white rounded-lg md:rounded-xl shadow-lg">
             {/* SCHOOL DROPDOWN */}
-            <div className="w-full lg:w-5/12 relative border-b lg:border-b-0 lg:border-r border-gray-100 pb-3 lg:pb-0 lg:pr-5" ref={schoolRef}>
+            <div
+              className="w-full lg:w-5/12 relative border-b lg:border-b-0 lg:border-r border-gray-100 pb-3 lg:pb-0 lg:pr-5"
+              ref={schoolRef}
+            >
               <div
                 className="flex items-center justify-between gap-2.5 cursor-pointer hover:opacity-80 transition-opacity"
                 onClick={() => {
@@ -398,7 +401,10 @@ const ProgrammesSearch = () => {
             </div>
 
             {/* DEGREE DROPDOWN */}
-            <div className="w-full lg:w-3/12 relative border-b lg:border-b-0 lg:border-r border-gray-100 pb-3 lg:pb-0 lg:pr-5" ref={degreeRef}>
+            <div
+              className="w-full lg:w-3/12 relative border-b lg:border-b-0 lg:border-r border-gray-100 pb-3 lg:pb-0 lg:pr-5"
+              ref={degreeRef}
+            >
               <div
                 className="flex items-center justify-between gap-2.5 cursor-pointer hover:opacity-80 transition-opacity"
                 onClick={() => {
@@ -464,8 +470,9 @@ const ProgrammesSearch = () => {
             ) : (
               programmes.map((item) => {
                 const slug =
-                  ("programmeslug" in item ? item.programmeslug : item.phdslug) ||
-                  "";
+                  ("programmeslug" in item
+                    ? item.programmeslug
+                    : item.phdslug) || "";
 
                 const isExternal = slug.startsWith("http");
 
@@ -483,7 +490,7 @@ const ProgrammesSearch = () => {
                     <div className="flex flex-col sm:flex-row  sm:gap-5">
                       <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                           <Calendar />
+                          <Calendar />
                         </span>
                         <div className="flex flex-col gap-0.5">
                           <span className="font-normal">Duration:</span>
@@ -492,13 +499,15 @@ const ProgrammesSearch = () => {
                       </div>
                       <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                          
                           <IndianRupee />
                         </span>
                         <div className="flex flex-col gap-0.5">
                           <span className="font-normal">Programme Fee:</span>
                           <span>
-                            Rs. {item.criteria?.programme_fee_per_year} / Year {slug === "bhmct-hotel-management" ? "(2025-26)" : ""}
+                            Rs. {item.criteria?.programme_fee_per_year} / Year{" "}
+                            {slug === "bhmct-hotel-management"
+                              ? "(2025-26)"
+                              : ""}
                           </span>
                         </div>
                       </div>
@@ -544,7 +553,8 @@ const ProgrammesSearch = () => {
                         rel="noopener noreferrer"
                         className="text-white rounded-md py-2.5 text-sm flex items-center gap-2 hover:translate-x-1 transition-transform"
                       >
-                        <CircleArrowRight size={20} /> <span>View Programme</span>
+                        <CircleArrowRight size={20} />{" "}
+                        <span>View Programme</span>
                       </Link>
                       {/* )} */}
                     </div>
@@ -566,6 +576,9 @@ const ProgrammesSearch = () => {
               </button>
             </div>
           )}
+          <p className="text-right text-sm  mt-2 text-muted-foreground">
+            ** Subject to Approval
+          </p>
         </div>
       </div>
       <div
@@ -574,8 +587,7 @@ const ProgrammesSearch = () => {
         <div
           className="w-full bg-white rounded-2xl p-5 md:p-10 max-w-4xl max-h-[90vh] overflow-y-auto relative shadow-2xl"
           style={{
-            boxShadow:
-              "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
           }}
         >
           <button
@@ -612,7 +624,8 @@ const ProgrammesSearch = () => {
             )}
             <div className="bg-blue-50 p-4 rounded-xl sm:col-span-2 lg:col-span-1">
               <p className="mb-5 font-normal text-sm sm:text-base  leading-[1]">
-                Programme Fee Per Year {slugValue === "bhmct-hotel-management" ? "(2025-26)" : ""}
+                Programme Fee Per Year{" "}
+                {slugValue === "bhmct-hotel-management" ? "(2025-26)" : ""}
               </p>
               <p className="text-sm sm:text-base leading-[1] font-bold">
                 {/* {criteria.programme_fee_per_year === "TBD" ? "" : "Rs."}{" "}
@@ -624,7 +637,9 @@ const ProgrammesSearch = () => {
           </div>
 
           <div className="my-6 bg-gray-50 p-5 rounded-2xl border border-gray-100">
-            <p className="text-sm text-gray-500 uppercase tracking-wider font-semibold mb-2">Duration:</p>
+            <p className="text-sm text-gray-500 uppercase tracking-wider font-semibold mb-2">
+              Duration:
+            </p>
             <p className="text-xl font-bold text-[#051630]">
               {selectedProgramme?.criteria?.Duration}
             </p>
@@ -705,16 +720,17 @@ const ProgrammesSearch = () => {
             >
               Know More
             </Link>
-            {!isZenithPopup && selectedProgramme?.criteria?.eligibility_utm_links && (
-              <Link
-                href={selectedProgramme.criteria.eligibility_utm_links}
-                className="bg-red-600 text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Apply Now
-              </Link>
-            )}
+            {!isZenithPopup &&
+              selectedProgramme?.criteria?.eligibility_utm_links && (
+                <Link
+                  href={selectedProgramme.criteria.eligibility_utm_links}
+                  className="bg-red-600 text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Apply Now
+                </Link>
+              )}
           </div>
         </div>
       </div>
