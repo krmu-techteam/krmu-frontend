@@ -5,6 +5,7 @@ type Props = {
   schoolCategoryName: string;
   title: string;
   content: string;
+  slug: string;
 };
 
 const SchoolProgrammeOffered = ({
@@ -12,7 +13,15 @@ const SchoolProgrammeOffered = ({
   schoolCategoryName,
   title,
   content,
+  slug,
 }: Props) => {
+  const STA = [
+    "school-of-management-and-commerce",
+    "school-of-engineering-and-technology",
+    "school-of-medical-and-allied-sciences",
+    "school-of-architecture-design",
+    "school-of-liberal-arts",
+  ];
   return (
     <>
       <section id="Explore-Courses">
@@ -28,7 +37,11 @@ const SchoolProgrammeOffered = ({
             catName={schoolCategoryName}
             title={title}
           />
-          {/* <ProgrammeInfoCards /> */}
+          {STA.includes(slug) && (
+            <p className="text-right text-sm mr-8 mt-2 text-muted-foreground">
+              ** Subject to Approval
+            </p>
+          )}
         </div>
       </section>
     </>

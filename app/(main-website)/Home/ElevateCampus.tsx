@@ -35,7 +35,7 @@ const ElevateCampus = ({
                 </h4>
                 <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-tight mb-8">
                   {elevateCampus?.beforehighlighttext}{" "}
-                  <span className="text-[#034272]">
+                  <span className="text-[#001732]">
                     {elevateCampus?.highlighttext}
                   </span>{" "}
                   <br className="hidden lg:block" />
@@ -45,7 +45,7 @@ const ElevateCampus = ({
                 {(elevateCampus.link || elevateCampus.linkclass) && (
                   <Link
                     href={elevateCampus.link}
-                    className="text-[#034272] pb-2 underline underline-offset-8"
+                    className="text-[#001732] pb-2 underline underline-offset-8"
                   >
                     {elevateCampus?.linktext}
                   </Link>
@@ -81,7 +81,7 @@ const ElevateCampus = ({
                 <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-tight mb-8">
                   {elevateCampus2?.beforehighlighttext}{" "}
                   <br className="hidden 2xl:block" />
-                  <span className="text-[#034272]">
+                  <span className="text-[#001732]">
                     {elevateCampus2?.highlighttext}
                   </span>{" "}
                   {elevateCampus2?.afterhighlighttext}
@@ -90,7 +90,7 @@ const ElevateCampus = ({
                 {(elevateCampus2?.link || elevateCampus2?.linkclass) && (
                   <Link
                     href={elevateCampus2?.link}
-                    className={`text-[#034272] pb-2 ${elevateCampus2?.linkclass} underline underline-offset-8`}
+                    className={`text-[#001732] pb-2 ${elevateCampus2?.linkclass} underline underline-offset-8`}
                   >
                     {elevateCampus2?.linktext}
                   </Link>
@@ -106,8 +106,9 @@ const ElevateCampus = ({
                 </h4>
                 <h3 className="text-2xl md:text-4xl xl:text-5xl font-semibold leading-tight mb-8">
                   {elevateCampus3?.beforehighlighttext}
-                  <span className="text-[#034272]">
-                    <br className="hidden lg:block" /> {elevateCampus3?.highlighttext}
+                  <span className="text-[#001732]">
+                    <br className="hidden lg:block" />{" "}
+                    {elevateCampus3?.highlighttext}
                   </span>
                   {elevateCampus3?.afterhighlighttext}
                 </h3>
@@ -115,7 +116,7 @@ const ElevateCampus = ({
                 {(elevateCampus3?.link || elevateCampus3?.linkclass) && (
                   <Link
                     href={elevateCampus3?.link}
-                    className={`text-[#034272] pb-2 ${elevateCampus3?.linkclass} underline underline-offset-8`}
+                    className={`text-[#001732] pb-2 ${elevateCampus3?.linkclass} underline underline-offset-8`}
                   >
                     {elevateCampus3?.linktext}
                   </Link>

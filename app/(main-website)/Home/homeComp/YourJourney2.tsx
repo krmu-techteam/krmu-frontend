@@ -24,7 +24,7 @@ const YourJourney2 = () => {
             <Link
               href="/programmes"
               target="_blank"
-              className="text-center mb-2.5 max-w-xs w-full bg-[#034272] font-semibold px-2.5 py-5 leading-none rounded-md text-sm sm:text-base outline-none text-white block h-14 flex justify-center items-center"
+              className="text-center mb-2.5 max-w-xs w-full bg-[#001732] font-semibold px-2.5 py-5 leading-none rounded-md text-sm sm:text-base outline-none text-white block h-14 flex justify-center items-center"
             >
               Explore Our Programmes
             </Link>
@@ -60,34 +60,34 @@ const YourJourney2 = () => {
         <div className="hidden sm:flex justify-center gap-5 flex-wrap">
           <Link
             href="/admissions"
-            className="bg-white text-black border font-semibold border-[#d8d8d8] px-6 py-2 rounded-sm hover:bg-[#0c59a0] hover:text-white"
+            className="bg-white text-black border font-medium border-[#d8d8d8] px-6 py-2 rounded-md hover:bg-[#001732] hover:text-white "
             target="_blank"
           >
             Admission
           </Link>
           <Link
             href="/fee-structure"
-            className="bg-white text-black border font-semibold border-[#d8d8d8] px-6 py-2 rounded-sm hover:bg-[#0c59a0] hover:text-white"
+            className="bg-white text-black border font-medium border-[#d8d8d8] px-6 py-2 rounded-md hover:bg-[#001732] hover:text-white"
             target="_blank"
           >
             Fee Structure
           </Link>
           <Link
             href="/admission/scholarship"
-            className="bg-white text-black border font-semibold border-[#d8d8d8] px-6 py-2 rounded-sm hover:bg-[#0c59a0] hover:text-white"
+            className="bg-white text-black border font-medium border-[#d8d8d8] px-6 py-2 rounded-md hover:bg-[#001732] hover:text-white"
             target="_blank"
           >
             Scholarships
           </Link>
           <CommonLeadPopup
-            buttonClassName="bg-white text-black border font-semibold border-[#d8d8d8] px-6 py-2 rounded-sm hover:bg-[#0c59a0] hover:text-white"
+            buttonClassName="bg-white text-black border font-medium border-[#d8d8d8] px-6 py-2 rounded-md hover:bg-[#001732] hover:text-white"
             buttonText="Download Prospectus"
             redirectUrl={`https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf`}
             form_name="Download Prospectus"
           />
           <Link
             href="https://admissions.krmangalam.edu.in/?utm_source=website&utm_medium=Homepage&utm_campaign=journey-section&_gl=1*rfukfk*_ga*MTk4NDQwNDY4LjE3Nzc4NzU5MzU.*_ga_VJJK572TGN*czE3Nzc4NzU5MzUkbzEkZzEkdDE3Nzc4NzYwNDEkajYwJGwwJGgw"
-            className="bg-[#cb000d] hover:bg-[#d03f46] transition-all duration-200 text-white border border-[#d8d8d8] px-6 py-2 rounded-sm font-semibold"
+            className="bg-[#cb000d] hover:bg-[#d03f46] transition-all duration-200 text-white border  px-6 py-2 rounded-md font-medium text-center"
             target="_blank"
           >
             Apply Now
