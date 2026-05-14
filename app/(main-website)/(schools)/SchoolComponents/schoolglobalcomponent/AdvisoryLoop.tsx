@@ -40,10 +40,10 @@ const AdvisoryLoop = ({ schoolCat }: Props) => {
 
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-16 px-2 sm:px-4 pb-4 gap-2.5 sm:gap-5">
+      <div className="flex flex-wrap justify-center pt-16 px-2 sm:px-4 pb-4 gap-5">
         {visibleFaculties.length > 0 ? (
           visibleFaculties.map((faculty) => (
-            <div key={faculty?.id}>
+            <div key={faculty?.id} className="w-full sm:w-[272px] flex justify-center">
               <AdvisoryEmployeeCard
                 name={faculty?.faculty_name}
                 imgUrl={faculty?.faculty_img?.url}

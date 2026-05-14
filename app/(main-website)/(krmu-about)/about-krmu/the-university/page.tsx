@@ -1,3 +1,5 @@
+
+
 import Image from "next/image";
 import Link from "next/link";
 import { getAboutKRMU } from "@/lib/api/about";
@@ -8,6 +10,8 @@ import KRMUGroupCard from "../KRMUGroupCard";
 import HallofFame from "../HallofFame";
 import AdvisoryOrDean from "../AdvisoryOrDean";
 import IndustryCollabLogos from "../IndustryCollabLogos";
+import { Eye, Target } from "lucide-react";
+
 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
@@ -88,7 +92,7 @@ const page = async () => {
         {/* Bottom-Weighted Dark Blue Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#051630] via-[#051630]/50 to-transparent z-0" />
         
-        <div className="max-w-[1600px] mx-auto w-full text-white h-full flex flex-col justify-center items-center text-center px-4 relative z-10">
+        <div className="max-w-[1440px] mx-auto w-full text-white h-full flex flex-col justify-center items-center text-center px-4 relative z-10">
           <div className="max-w-6xl w-full">
             <h1 className="text-2xl md:text-3xl lg:text-5xl xl:text-8xl font-bold mb-6 drop-shadow-[0_4px_15px_rgba(0,0,0,0.6)] leading-tight whitespace-normal md:whitespace-nowrap">
               {aboutData?.title}
@@ -111,18 +115,18 @@ const page = async () => {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-slate-50">
+      <section className="py-8 md:py-16 bg-gradient-to-br from-blue-100 via-blue-50 to-blue-100">
         <div className="max-w-[1440px] mx-auto w-full px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
-              <span className="bg-[#00A0E3]/10 text-[#00A0E3] px-6 py-2 rounded-full text-xs md:text-sm font-bold uppercase tracking-[0.2em] border border-[#00A0E3]/20 shadow-sm">
+              <span className="bg-transparent text-slate-700 px-6 py-2 rounded-full text-xs md:text-sm font-bold uppercase tracking-[0.2em] border border-slate-700 shadow-sm">
                 {KRMGRP?.title}
               </span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-[#051630] mb-6 leading-tight">
               {KRMGRP?.subtitle}
             </h2> 
-            <p className="text-slate-600 text-lg md:text-xl max-w-7xl mx-auto leading-relaxed">
+            <p className="text-slate-600 text-md md:text-lg max-w-8xl mx-auto leading-relaxed">
               {KRMGRP?.description}
             </p>
           </div>
@@ -131,54 +135,105 @@ const page = async () => {
           </div>
         </div>
       </section>
-      <section className="mt-5 bg-[#051630] py-[60px] px-4 xl:px-14">
-        <div className="max-w-[1600px] mx-auto w-full text-white">
-          <h4 className="md:leading-[2] text-2xl font-semibold mb-5">
-            {aboutData?.thenexgentitle}
-          </h4>
-          <p>{aboutData?.thenexgendescription}</p>
+      <section className="bg-[#051630] py-10 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative overflow-hidden bg-gradient-to-r from-white/[0.03] to-transparent border-l-4 border-blue-500 p-8 md:p-10 rounded-r-2xl shadow-2xl">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 md:items-center">
+              <div className="w-full md:w-1/3">
+                <h2 className="text-2xl md:text-3xl text-pretty font-medium text-white leading-tight tracking-tight">
+                  {aboutData?.thenexgentitle}
+                </h2>
+              </div>
+              <div className="w-full md:w-2/3 border-l border-white/10 md:pl-12">
+                <p className="text-slate-300 text-base md:text-lg leading-relaxed opacity-90 font-light">
+                  {aboutData?.thenexgendescription}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <section className="py-[50px] px-4 xl:px-[30px] bg-[#000E8B1A]">
-        <div className="flex flex-col md:flex-row max-w-[1600px] mx-auto w-full gap-2.5">
-          <div className="w-full md:w-2/5 p-5 xl:mr-2.5 xl:ml-8 bg-[url(/aboutvision.webp)] text-white bg-cover">
-            <h4 className="text-3xl md:text-5xl mb-5 lg:text-[64px] font-semibold">
-              {aboutData?.visionmission?.visiontitle}
-            </h4>
+      <section className="py-16 px-4 xl:px-8 bg-white overflow-hidden">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-sm shadow-xl border border-slate-100">
+          
+          {/* Vision Card - Dark Academic */}
+          <div className="relative group p-8 md:p-10 xl:py-16 bg-[#051630] overflow-hidden min-h-[380px] flex flex-col justify-start">
+            {/* Abstract Background Decoration */}
+            <div className="absolute -top-10 -right-10 text-[350px] font-black text-white/[0.03] select-none pointer-events-none transition-transform duration-1000 group-hover:scale-110 group-hover:-rotate-6 leading-none">
+              V
+            </div>
+            {/* CSS Dot Pattern */}
+            <div className="absolute inset-0 opacity-[0.07] pointer-events-none" 
+              style={{ backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`, backgroundSize: '32px 32px' }} 
+            />
+            
+            {/* Content */}
+            <div className="relative z-10">
+              <div className="inline-flex items-center justify-center p-4 bg-white/10 backdrop-blur-xl rounded-sm mb-10 border border-white/20 shadow-xl transition-transform duration-500 group-hover:scale-110">
+                <Eye className="w-8 h-8 text-white" />
+              </div>
+              <h4 className="text-3xl lg:text-5xl font-bold text-white mb-8 tracking-tight leading-[1.1] text-balance">
+                {aboutData?.visionmission?.visiontitle}
+              </h4>
+              <div className="w-20 h-1.5 bg-white mb-10 rounded-full" />
+              <div className="text-blue-50/90 text-md md:text-lg leading-relaxed max-w-xl font-light tick-li">
+                <BlocksRenderer
+                  content={aboutData?.visionmission?.visiondescription}
+                />
+              </div>
+            </div>
+          </div>
 
-            <BlocksRenderer
-              content={aboutData?.visionmission?.visiondescription}
+          {/* Mission Card - Light Academic */}
+          <div className="relative group p-8 md:p-10 xl:py-16 bg-slate-50 overflow-hidden min-h-[550px] flex flex-col justify-start border-t md:border-t-0 md:border-l border-slate-200">
+            {/* Abstract Background Decoration */}
+            <div className="absolute -top-10 -right-10 text-[350px] font-black text-[#051630]/[0.03] select-none pointer-events-none transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-6 leading-none">
+              M
+            </div>
+            {/* CSS Grid Pattern */}
+            <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
+              style={{ backgroundImage: `linear-gradient(#051630 1.5px, transparent 1.5px), linear-gradient(90deg, #051630 1.5px, transparent 1.5px)`, backgroundSize: '48px 48px' }} 
             />
-          </div>
-          <div className="w-full md:w-3/5 p-5 xl:mr-2.5 xl:ml-8 bg-[url(/aboutmission.webp)] bg-cover text-white tick-li">
-            <h4 className="text-3xl md:text-5xl mb-5 lg:text-[64px] font-semibold">
-              {aboutData?.visionmission?.missiontitle}
-            </h4>
-            <BlocksRenderer
-              content={aboutData?.visionmission?.missiondescription}
-            />
+
+            {/* Content */}
+            <div className="relative z-10">
+              <div className="inline-flex items-center justify-center p-4 bg-[#051630]/5 rounded-sm mb-10 border border-[#051630]/10 shadow-sm transition-transform duration-500 group-hover:scale-110">
+                <Target className="w-8 h-8 text-[#051630]" />
+              </div>
+              <h4 className="text-4xl lg:text-5xl font-bold text-[#051630] mb-8 tracking-tight leading-[1.1] text-balance">
+                {aboutData?.visionmission?.missiontitle}
+              </h4>
+              <div className="w-20 h-1.5 bg-[#051630] mb-10 rounded-full" />
+              <div className="text-slate-700 text-md md:text-lg leading-relaxed max-w-xl font-medium tick-li">
+                <BlocksRenderer
+                  content={aboutData?.visionmission?.missiondescription}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section className="py-10 sm:py-20 px-4 md:px-[30px]">
-        <div className="max-w-[1600px] mx-auto w-full">
-          <div className="flex flex-wrap xl:flex-nowrap  gap-5 w-full">
-            <div className="w-full xl:w-1/3 flex flex-col gap-5">
-              <div className="bg-[url(/industry.webp)] flex flex-col justify-end bg-cover h-[250px] sm:h-[300px] bg-top xl:bg-center pt-12 md:pt-[272px] pb-2.5 px-2.5 text-white font-semibold">
+
+
+      <section className="py-8 sm:py-16 px-4 md:px-0 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100">
+        <div className="max-w-[1440px] mx-auto w-full">
+          <div className="flex flex-wrap xl:flex-nowrap w-full">
+            <div className="w-full xl:w-1/3 flex flex-col">
+              <div className="bg-[url(/industry.webp)] flex flex-col justify-end bg-cover h-[200px] sm:h-[240px] bg-top xl:bg-center pt-8 pb-4 px-4 text-white font-semibold">
                 <h3 className="text-xl sm:text-3xl md:text-4xl sm:mb-5">
                   Industry <br />
                   Collaborated
                 </h3>
                 <h5 className="text-2xl sm:mb-5">Academic Curriculum</h5>
               </div>
-              <div className="bg-[url(/nep.webp)] bg-no-repeat bg-bottom-right p-2.5 min-h-0.5 h-80 text-black bg-[#e1e7e9]">
+              <div className="bg-[url(/nep.webp)] bg-no-repeat bg-bottom-right p-4 h-64 text-black bg-[#e1e7e9]">
                 <h3 className="text-3xl md:text-4xl font-semibold leading-[1.3]">
                   Successful <br /> NEP <br /> Implementation
                 </h3>
               </div>
-            </div>
+            </div> 
             <div className="w-full xl:w-1/3">
-              <div className="bg-[url(/stellar.webp)] bg-cover pt-40 md:pt-[440px] pb-[30px] px-2.5 xl:px-[30px] h-full text-white flex flex-col justify-end font-semibold">
+              <div className="bg-[url(/stellar.webp)] bg-cover pt-20 md:pt-40 pb-8 px-6 h-[400px] md:h-[500px] text-white flex flex-col justify-end font-semibold">
                 <h4 className="text-3xl md:text-5xl mb-5">
                   Stellar <br />
                   Placements
@@ -187,7 +242,7 @@ const page = async () => {
               </div>
             </div>
             <div className="w-full xl:w-1/3">
-              <div className="bg-[url(/finance-assist.webp)] bg-no-repeat bg-cover pt-40 px-4 md:pt-[440px] pb-[30px] md:px-[30px] h-full text-white flex flex-col justify-end font-semibold w-full">
+              <div className="bg-[url(/finance-assist.webp)] bg-no-repeat bg-cover pt-20 px-6 md:pt-40 pb-8 h-[400px] md:h-[500px] text-white flex flex-col justify-end font-semibold w-full">
                 <h4 className="text-3xl md:text-5xl mb-5">
                   Financial <br />
                   Assistance
@@ -198,18 +253,18 @@ const page = async () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row mt-5 gap-5">
+          <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/2">
-              <div className="bg-[url(/student.webp)] pt-32 xl:pt-64 pb-[30px] px-[30px] text-white bg-cover h-full">
-                <h4 className="text-3xl">Experience</h4>
-                <h5 className="md:text-5xl font-semibold leading-[1.3]">
+              <div className="bg-[url(/student.webp)] pt-16 md:pt-20 pb-8 px-8 text-white bg-cover h-[300px] md:h-[350px]">
+                <h4 className="text-2xl">Experience</h4>
+                <h5 className="md:text-3xl font-semibold leading-[1.3]">
                   Student Diversity & <br />
                   Vibrant Campus Life
                 </h5>
               </div>
             </div>
             <div className="w-full md:w-1/2">
-              <div className="bg-[url(/andi.jpg)] bg-cover pt-32 xl:pt-64 pb-[30px] px-[30px] text-white  h-full">
+              <div className="bg-[url(/andi.jpg)] bg-cover pt-16 md:pt-32 pb-8 px-8 text-white h-[300px] md:h-[350px]">
                 <h4 className="text-3xl">Our Excellent</h4>
                 <h5 className="md:text-5xl font-semibold leading-[1.3]">
                   Teacher Pedagogy
@@ -222,7 +277,7 @@ const page = async () => {
       <AdvisoryOrDean />
       {/* <AdvisoryDean /> */}
       <section className="py-16 bg-[url(/kree-bg.webp)] bg-cover">
-        <div className="max-w-[1600px] mx-auto w-full text-center">
+        <div className="max-w-[1440px] mx-auto w-full text-center">
           <h3 className="text-white text-5xl font-semibold mb-5">
             {hallOfFameData?.title}
           </h3>
@@ -237,7 +292,7 @@ const page = async () => {
       </section>
 
       <section className="py-16 px-4">
-        <div className="max-w-[1600px] mx-auto w-full">
+        <div className="max-w-[1440px] mx-auto w-full">
           <div className="flex flex-wrap md:flex-nowrap">
             <div className="w-full md:w-3/5">
               <h3 className="text-4xl md:text-5xl font-semibold max-w-lg w-full leading-[1.14] mb-2.5">
@@ -283,7 +338,7 @@ const page = async () => {
       </section>
 
       <section className="py-16 md:py-32 px-4 bg-[url(/krmu-committee.webp)] bg-cover bg-center relative after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[#00000080]">
-        <div className="max-w-[1600px] mx-auto w-full text-white">
+        <div className="max-w-[1440px] mx-auto w-full text-white">
           <div className="w-full xl:w-1/2 relative z-10">
             <h4 className="text-5xl lg:text-[80px] mb-5 leading-[1.13]">
               {aboutData?.krmucommittee?.title}
