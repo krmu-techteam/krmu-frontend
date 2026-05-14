@@ -19,7 +19,7 @@ const SchoolCommenceJourney = ({
   return (
     <div className="py-10 sm:py-16">
       <div className="max-w-[1664px] mx-auto w-full px-4 mb-5 sm:mb-0">
-        <h4 className="text-[#0078bf] text-2xl md:text-4xl lg:text-[64px] leading-[1.2] font-medium">
+        <h4 className="text-[#001732] text-2xl md:text-4xl lg:text-[64px] leading-[1.2] font-medium">
           {highlight_heading}
         </h4>
         <h4 className="text-2xl md:text-4xl lg:text-[64px] leading-[1.2] font-medium">

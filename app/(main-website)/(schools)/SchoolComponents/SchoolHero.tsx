@@ -5,6 +5,7 @@ import Link from "next/link";
 import SchoolHeroSEMCE from "./SchoolHeroSEMCE";
 import SchoolHeroSBAS from "./SchoolHeroSBAS";
 import Image from "next/image";
+import YoutubeVideoSection from "./schoolglobalcomponent/YoutubeVideoSection";
 
 type Props = {
   title: string;
@@ -26,6 +27,9 @@ const SchoolHero = ({
   herobanner,
   fullWidth,
 }: Props) => {
+
+  const videoURL = iframeContent?.match(/src="([^"]+)"/)?.[1];
+
   return (
     <>
       <section
@@ -92,7 +96,7 @@ const SchoolHero = ({
               <p className="text-sm md:text-[28px] lg:mb-5 font-medium text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
                 {subheading}
               </p>
-              <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-[1.2] text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
+              <h1 className="text-2xl md:text-4xl 2xl:text-5xl font-semibold leading-[1.2] text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
                 {title}
               </h1>
               <div className="flex flex-col lg:flex-row items-center justify-center gap-3.5 sm:gap-5 my-4">
@@ -122,7 +126,7 @@ const SchoolHero = ({
               </div>
             </div>
             <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end">
-              {videoFmt === "Iframe" ? (
+              {/* {videoFmt === "Iframe" ? (
                 <div
                   className="w-full customSchoolIframeStyle"
                   dangerouslySetInnerHTML={{ __html: iframeContent }}
@@ -132,7 +136,8 @@ const SchoolHero = ({
                   <source src={videoLink} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-              ) : null}
+              ) : null} */}
+              <YoutubeVideoSection />
             </div>
           </div>
         )}
