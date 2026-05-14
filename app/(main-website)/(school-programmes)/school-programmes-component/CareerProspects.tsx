@@ -127,7 +127,7 @@ const CareerProspects = ({
 
             {/* Static Career Image (Stays centered while text slides) */}
             <Image
-                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/group_people_751a407e4e.png"
+                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/group_img_32f982771f.png"
                 fill
                 className="-mb-10 object-contain md:translate-y-[20%] lg:translate-y-[42%] xl:translate-y-[32%] 2xl:translate-y-[30%] transform scale-[1.35] md:scale-[1] -translate-x-[17px] translate-y-[100px] md:translate-y-[120px]"
                 alt="Career Prospects Students"
