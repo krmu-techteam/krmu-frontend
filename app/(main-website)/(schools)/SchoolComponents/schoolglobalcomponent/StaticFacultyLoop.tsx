@@ -99,17 +99,18 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
   const visibleFaculties = facDatas.slice(0, visibleCount);
 
   return (
-    <div className="pt-16 px-4 pb-4">
-      <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+    <div>
+      <div className="flex flex-wrap justify-center pt-16 px-4 pb-4 gap-5">
         {visibleFaculties.map((faculty) => (
-          <StaticFacultyEmployeeCard
-            key={faculty.id}
-            name={faculty.title?.rendered ?? ""}
-            imgURL={faculty.featured_media_url ?? ""}
-            qual={faculty.acf?.["staff-qualification"] ?? ""}
-            desg={faculty.acf?.staff_designation ?? ""}
-            slug={faculty.slug}
-          />
+          <div key={faculty.id} className="w-full sm:w-[272px] flex justify-center">
+            <StaticFacultyEmployeeCard
+              name={faculty.title?.rendered ?? ""}
+              imgURL={faculty.featured_media_url ?? ""}
+              qual={faculty.acf?.["staff-qualification"] ?? ""}
+              desg={faculty.acf?.staff_designation ?? ""}
+              slug={faculty.slug}
+            />
+          </div>
         ))}
       </div>
 
