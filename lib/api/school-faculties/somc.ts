@@ -216,7 +216,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
   },
   {
     id: 40855,
-    slug: "dr-mohd-anas",
+    slug: "dr-mohd",
     title: {
       rendered: "Dr. Mohd. Anas",
     },
