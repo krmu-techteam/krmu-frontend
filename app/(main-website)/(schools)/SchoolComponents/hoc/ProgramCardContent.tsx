@@ -46,9 +46,10 @@ const ProgramCardContent = ({
         className="block w-full text-white text-base pr-10 z-20"
         target="_blank"
         rel="noopener noreferrer"
-      >
-        {prog.title} {prog.highlightitle}
-      </Link>
+        dangerouslySetInnerHTML={{
+          __html: `${prog.title} ${prog.highlightitle}`,
+        }}
+      />
 
       {criteria && (
         <div className="flex flex-col sm:flex-row border-y border-[rgba(255,255,255,0.2)] sm:gap-5 z-20">
