@@ -226,13 +226,16 @@ export default async function Page({ params }: Props) {
         iframeContent={school.iframe}
         videoLink={school.videolink}
         fullWidth={school?.fullwidthhero}
+        alumniLogos={schoolsLogosData}
+        admTitle={school.admissionsessiontitle}
+        admBtn={school.admissionbtn}
       />
-      {school.admissionsessiontitle && (
+      {/* {school.admissionsessiontitle && (
         <SchoolAdmissionOpen
           title={school.admissionsessiontitle}
           admBtn={school.admissionbtn}
         />
-      )}
+      )} */}
       {schoolKnowComp && (
         <SchoolInfoStatistics
           heading={schoolKnowComp?.heading}

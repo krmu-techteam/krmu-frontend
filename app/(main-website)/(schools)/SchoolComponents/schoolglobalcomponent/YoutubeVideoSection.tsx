@@ -2,16 +2,19 @@
 
 import { useState } from "react";
 import { Play } from "lucide-react";
+import Image from "next/image";
 
 type props = {
-  thumbnail?: string;
+  thumbnail: string;
+  ytUrl: string;
 };
 
-export default function YoutubeVideoSection({ thumbnail }: props) {
+export default function YoutubeVideoSection({ thumbnail, ytUrl }: props) {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const youtubeUrl = "https://www.youtube.com/watch?v=9I6QQ6ZYCi8";
-
+  // const youtubeUrl = "https://www.youtube.com/watch?v=9I6QQ6ZYCi8";
+  const youtubeUrl = ytUrl;
+console.log('check thumbnail url', thumbnail);
   // GET VIDEO ID
   const videoId = youtubeUrl.split("v=")[1]?.split("&")[0];
 
@@ -20,9 +23,9 @@ export default function YoutubeVideoSection({ thumbnail }: props) {
 //     "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop";
 
   return (
-    <section className="w-full ">
+    <section className="w-full">
       <div className="max-w-5xl mx-auto">
-        <div className="relative overflow-hidden rounded-3xl aspect-video group">
+        <div className="relative overflow-hidden rounded-2xl aspect-video group">
           {!isPlaying ? (
             <>
               {/* THUMBNAIL */}
@@ -40,8 +43,9 @@ export default function YoutubeVideoSection({ thumbnail }: props) {
                 onClick={() => setIsPlaying(true)}
                 className="absolute inset-0 flex items-center justify-center"
               >
-                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-2xl group-hover:scale-110 transition duration-300">
-                  <Play className="fill-black text-black ml-1" size={34} />
+                <div className="w-18 h-18 rounded-full relative flex items-center justify-center shadow-2xl group-hover:scale-105 transition duration-300">
+                  {/* <Play className="fill-black text-black ml-1" size={34} /> */}
+                  <Image fill src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/play_icon_colorful_6ca9565f28.svg" alt="playicon" />
                 </div>
               </button>
             </>

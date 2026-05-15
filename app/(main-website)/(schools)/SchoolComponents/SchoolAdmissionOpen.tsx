@@ -8,11 +8,12 @@ type Props = {
 
 const SchoolAdmissionOpen = ({ title, admBtn }: Props) => {
   return (
-    <section className="px-4 sm:px-6 lg:px-8 bg-[#001732]">
+    // <section className="px-4 sm:px-6 lg:px-8 opacity-90 bg-[linear-gradient(90deg,rgba(0,23,50,1)_0%,rgba(0,70,152,0)_51%,rgba(0,23,50,1)_97%)]">
+    <section className="opacity-90 bg-[linear-gradient(90deg,rgba(0,23,50,1)_0%,rgba(0,70,152,0)_51%,rgba(0,23,50,1)_97%)]">
       <div className="max-w-[1664px] mx-auto">
-        <div className="py-5 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="py-5 flex flex-col md:flex-row items-center justify-center gap-6">
           {/* Heading */}
-          <h3 className="text-center md:text-left text-lg sm:text-2xl lg:text-4xl font-semibold leading-tight text-white">
+          <h3 className="text-center md:text-left text-lg sm:text-2xl lg:text-4xl font-medium leading-tight text-white">
             {title}
           </h3>
 

@@ -15,7 +15,7 @@ const SchoolOpenSourceMentorship = () => {
       <div
         className="max-w-[90rem] mx-auto w-full rounded-3xl p-1"
         style={{
-          background: "linear-gradient(to bottom, #002f8e, #f97316)",
+          background: "linear-gradient(to bottom, #002f8e, #cb000d)",
         }}
       >
         <div className="bg-[#051630] rounded-3xl overflow-hidden">

@@ -6,6 +6,7 @@ import Image from "next/image";
 
 type Props = {
   logos: StrapiMedia[] | undefined;
+  showNumberOfSlides?: string;
 };
 
 const ConnectingDreamSlider = ({ logos }: Props) => {
@@ -16,7 +17,7 @@ const ConnectingDreamSlider = ({ logos }: Props) => {
         {logos?.concat(logos).concat(logos).map((logo, index) => (
           <div
             key={`${logo.id}-${index}`}
-            className="flex-shrink-0 px-6 sm:px-8 flex items-center justify-center"
+            className="px-6 sm:px-8 flex items-center justify-center customCarousel"
           >
             <Image
               src={`${STRAPI_URL}${logo?.url}`}

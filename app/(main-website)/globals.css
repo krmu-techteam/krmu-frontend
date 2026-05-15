@@ -15,6 +15,22 @@
 
 /* Custom utility class */
 @layer utilities {
+
+  .alumniHeaderCarousel .customCarousel{
+    padding-left: 0px;
+    padding-right: 10px;
+  }
+  .alumniHeaderCarousel .customCarousel{
+ 
+    width: 100%;
+  }
+  .alumniHeaderCarousel .customCarousel img{
+    /* object-fit: fill; */
+    width: 120px;
+    height: 150px;
+    aspect-ratio: 120/64;
+  }
+
   @media (min-width: 640px) {
     .schoolBanner {
       background: none;
