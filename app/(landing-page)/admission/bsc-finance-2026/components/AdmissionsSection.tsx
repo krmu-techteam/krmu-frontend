@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const statRows = [
   [
-    { heading: "NAAC A+", sub: "Accredited" },
+    { heading: "NAAC A", sub: "Accredited" },
     { heading: "UGC", sub: "Approved" },
     { heading: "No. 1", sub: "in Haryana (Times B-School Survey 2026)" },
     { heading: "35+ Acres", sub: "Green Campus" },
