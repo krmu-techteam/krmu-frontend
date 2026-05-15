@@ -36,7 +36,8 @@ const ProgramHeroDefault = ({
 }: Props) => {
   const iframe = heroSection?.videofield;
   const videoSrc = iframe?.match(/src="([^"]+)"/)?.[1];
-
+   
+ 
   return (
     <section
       className={`pt-24 sm:pt-40 pb-8 md:pb-12 overflow-x-hidden bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]`}

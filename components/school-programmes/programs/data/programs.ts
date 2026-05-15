@@ -112,4 +112,10 @@ export const heroConfigs: Record<string, HeroConfig> = {
     bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_cyber_security_c4b63132b9.png",
     bgPosition: "70% top",
   } as HeroConfig,
+  "b-tech-cse-robotics-ai": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_cse_robotics_ai_5a78b666c7.png",
+    bgPosition: "70% top",
+    mobileBgPosition: "57% -75px",
+  } as HeroConfig,
 };

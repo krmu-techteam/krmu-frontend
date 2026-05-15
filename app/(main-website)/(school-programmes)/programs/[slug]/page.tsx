@@ -287,7 +287,7 @@ const page = async ({ params }: Props) => {
             heroSection={heroSection}
           />
         )}
-        {slug !== "bba-hr" && dreamcareerSection && (
+        {(slug !== "bba-hr" && slug !== "btech-cse-ai-ml") && dreamcareerSection && (
           <DreamCareer
             heading={dreamcareerSection.heading}
             description={dreamcareerSection.description}
