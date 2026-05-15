@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { StrapiMedia } from "@/lib/types/common";
 import { STRAPI_URL } from "@/app/constant";
+import Autoplay from "embla-carousel-autoplay";
 
 type Props = {
   logos: StrapiMedia[];
@@ -31,6 +32,11 @@ const SchoolKnowledgeLogos = ({ logos }: Props) => {
           align: "center",
           loop: true,
         }}
+        plugins={[
+          Autoplay({
+            delay: 3000,
+          }),
+        ]}
         className="w-full max-w-6xl mx-auto"
       >
         <CarouselContent className="-ml-4 items-center">

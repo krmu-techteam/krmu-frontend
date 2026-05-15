@@ -39,7 +39,7 @@ const SchoolAdvantages2 = ({
               return (
                 <div
                   key={advcard?.id}
-                  className={`p-4 bg-[#051630] text-white text-center flex flex-col items-center justify-center  w-full rounded-4xl`}
+                  className={`p-4 bg-[#001732] text-white text-center flex flex-col items-center justify-center  w-full rounded-4xl`}
                 >
                   <Image
                     src={`${STRAPI_URL}${advcard?.cardimg?.url}`}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import SchoolHeroSEMCE from "./SchoolHeroSEMCE";
 import SchoolHeroSBAS from "./SchoolHeroSBAS";
 import Image from "next/image";
+import YoutubeVideoSection from "./schoolglobalcomponent/YoutubeVideoSection";
 
 type Props = {
   title: string;
@@ -26,6 +27,9 @@ const SchoolHero = ({
   herobanner,
   fullWidth,
 }: Props) => {
+
+  const videoURL = iframeContent?.match(/src="([^"]+)"/)?.[1];
+
   return (
     <>
       <section
@@ -33,7 +37,7 @@ const SchoolHero = ({
           fullWidth
             ? "lg:py-[20%] lg:pb-[5%] pt-[300px] pb-5"
             : "lg:pt-[10%] lg:pb-[5%] pt-[300px] px-0 schoolBanner"
-        } bg-cover bg-no-repeat bg-center sm:px-4 bg-[#034272]`}
+        } bg-cover bg-no-repeat bg-center sm:px-4 bg-[#001732]`}
         style={{ backgroundImage: `url(${STRAPI_URL}${herobanner?.url})` }}
       >
         <div className="hidden sm:block">
@@ -63,7 +67,7 @@ const SchoolHero = ({
                     <Link
                       key={btn.id}
                       href={btn.buttonlink}
-                      className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#034272] ${
+                      className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#001732] ${
                         btn.buttonclass || ""
                       }`}
                     >
@@ -92,7 +96,7 @@ const SchoolHero = ({
               <p className="text-sm md:text-[28px] lg:mb-5 font-medium text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
                 {subheading}
               </p>
-              <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-[1.2] text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
+              <h1 className="text-2xl md:text-4xl 2xl:text-5xl font-semibold leading-[1.2] text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
                 {title}
               </h1>
               <div className="flex flex-col lg:flex-row items-center justify-center gap-3.5 sm:gap-5 my-4">
@@ -101,7 +105,7 @@ const SchoolHero = ({
                     <Link
                       key={btn.id}
                       href={btn.buttonlink}
-                      className="text-white w-full sm:w-fit flex justify-center items-center px-8 py-2.5 rounded-lg gap-4 font-semibold bg-[#034272] transition-all hover:bg-[#02335a]"
+                      className="text-white w-full sm:w-fit flex justify-center items-center px-8 py-2.5 rounded-lg gap-4 font-semibold bg-[#001732] transition-all hover:bg-[#02335a]"
                     >
                       {btn.buttontext}
                     </Link>
@@ -122,7 +126,7 @@ const SchoolHero = ({
               </div>
             </div>
             <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end">
-              {videoFmt === "Iframe" ? (
+              {/* {videoFmt === "Iframe" ? (
                 <div
                   className="w-full customSchoolIframeStyle"
                   dangerouslySetInnerHTML={{ __html: iframeContent }}
@@ -132,7 +136,8 @@ const SchoolHero = ({
                   <source src={videoLink} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-              ) : null}
+              ) : null} */}
+              <YoutubeVideoSection />
             </div>
           </div>
         )}

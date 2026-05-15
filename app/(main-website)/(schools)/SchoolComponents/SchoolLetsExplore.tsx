@@ -13,9 +13,9 @@ type Props = {
 const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
   return (
     <section
-      className="bg-[#051630] pt-10 pb-20"
+      className="bg-[#001732] pt-10 pb-20"
       // style={{
-      //   backgroundImage: "linear-gradient(180deg,#051630 0%,#004e8a 100%)",
+      //   backgroundImage: "linear-gradient(180deg,#001732 0%,#004e8a 100%)",
       // }}
     >
       <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-center">
@@ -85,7 +85,7 @@ const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
                     return (
                       <li
                         key={list?.id}
-                        className="min-h-[135px] h-full flex items-center gap-5 pl-5 py-[5.6px] border-b border-[#051630] last:border-none"
+                        className="min-h-[135px] h-full flex items-center gap-5 pl-5 py-[5.6px] border-b border-[#001732] last:border-none"
                       >
                         <div>
                           {" "}

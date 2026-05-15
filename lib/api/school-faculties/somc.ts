@@ -9,7 +9,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 55322,
     acf: {
-      "staff-qualification": `<span class="text-base">Ph.D. (Innovation & Management in Education) (IIM Ahmedabad)</span>`,
+      "staff-qualification": `Ph.D. (Innovation & Management in Education) (IIM Ahmedabad)`,
       staff_designation: "Director, Experiential Learning",
       schools: [1126],
     },
@@ -216,7 +216,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
   },
   {
     id: 40855,
-    slug: "dr-mohd-anas",
+    slug: "dr-mohd",
     title: {
       rendered: "Dr. Mohd. Anas",
     },

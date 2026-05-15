@@ -32,6 +32,7 @@ interface WithProgramCardProps {
   handleMouseEnter: (id: number) => void;
   index: number;
   totalCards: number;
+  progNewLine: string[]
 }
 
 const withProgramCard = <P extends object>(
@@ -45,6 +46,7 @@ const withProgramCard = <P extends object>(
       isActive,
       index,
       totalCards,
+      progNewLine,
       handleProgramClick,
       handleMouseEnter,
     } = props;

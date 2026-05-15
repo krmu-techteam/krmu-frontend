@@ -30,9 +30,15 @@ interface Props {
   prog: progProps;
   criteria?: criteriaProps;
   setShow: (value: boolean) => void;
+  progNewLine: string[];
 }
 
-const ProgramCardContent = ({ prog, criteria, setShow }: Props) => {
+const ProgramCardContent = ({
+  prog,
+  criteria,
+  setShow,
+  progNewLine,
+}: Props) => {
   return (
     <>
       <Link
@@ -40,9 +46,10 @@ const ProgramCardContent = ({ prog, criteria, setShow }: Props) => {
         className="block w-full text-white text-base pr-10 z-20"
         target="_blank"
         rel="noopener noreferrer"
-      >
-        {prog.title} {prog.highlightitle}
-      </Link>
+        dangerouslySetInnerHTML={{
+          __html: `${prog.title}`,
+        }}
+      />
 
       {criteria && (
         <div className="flex flex-col sm:flex-row border-y border-[rgba(255,255,255,0.2)] sm:gap-5 z-20">
@@ -90,6 +97,7 @@ const ProgramCardContent = ({ prog, criteria, setShow }: Props) => {
             Apply Now
           </Link>
         )}
+
         {/* <Link
           href={`/programs/${prog.programmeslug || "#"}`}
           target="_blank"
@@ -98,6 +106,11 @@ const ProgramCardContent = ({ prog, criteria, setShow }: Props) => {
           <CircleArrowRight /> View Programme
         </Link> */}
       </div>
+      {progNewLine.includes(prog.programmeslug) && (
+        <div className="text-white text-[11px] text-center font-normal relative leading-tight z-20">
+          3-Year Lateral Entry option also available for eligible students
+        </div>
+      )}
     </>
   );
 };
