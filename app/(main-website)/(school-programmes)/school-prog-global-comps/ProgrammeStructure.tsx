@@ -80,7 +80,7 @@ const ProgrammeStructure = ({
                   {currbtn?.buttontext}
                 </span>
               }
-              buttonClassName="w-full md:w-auto px-8 py-3 text-md font-semibold tracking-wide text-[#051730] bg-white hover:bg-transparent hover:text-white hover:border-white rounded-sm transition-all duration-300 flex items-center justify-center border border-[#051730]/20  cursor-pointer hover:border-[#051730]"
+              buttonClassName="w-full md:w-auto px-8 py-3 text-md font-semibold tracking-wide text-[#051730] bg-white hover:bg-transparent hover:text-[#051730] hover:border-[#051730] rounded-sm transition-all duration-300 flex items-center justify-center border border-[#051730]/20  cursor-pointer hover:border-[#051730]"
               redirectUrl={currbtn?.buttonlink || "#"}
               form_name="Programme Handbook"
             />
@@ -88,7 +88,10 @@ const ProgrammeStructure = ({
         )}
       </div>
 
-      <div className="rounded-none md:rounded-xl overflow-hidden bg-white/20 backdrop-blur-md   border border-white/20 shadow-2xl">
+      <div className="rounded-none md:rounded-2xl p-0 md:p-6
+  bg-[linear-gradient(to_right,#ffffff,#eef2ff,#faf2f8)]
+  shadow-[0_10px_40px_rgba(99,102,241,0.12)]
+  border border-white/60">
         <div className="min-h-[600px] flex flex-col">
           {/* Hierarchy Navigation Tree - Compact Version */}
           <div className="w-full bg-white/5 border-b border-white/10">
@@ -127,18 +130,18 @@ const ProgrammeStructure = ({
                       {!isYear && year.semester.length > 0 && (
                         <div className="flex flex-col items-center w-full">
                           <div
-                            className={`w-[1px] h-3 ${isYearActive ? "bg-[#051730]" : "bg-gray-300"}`}
+                            className={`w-[1px] h-3 ${isYearActive ? "bg-[linear-gradient(135deg,#0f172a,#1e293b,#020617)]text-white shadow-[0_10px_30px_rgba(15,23,42,0.35)] border border-slate-700" : "bg-gray-300"}`}
                           />
 
                           <div className="relative flex items-center w-full max-w-[120px]">
                             <div
-                              className={`w-full h-[1px] ${isYearActive ? "bg-[#051730]" : "bg-gray-300"} rounded-full`}
+                              className={`w-full h-[1px] ${isYearActive ? "bg-[linear-gradient(135deg,#0f172a,#1e293b,#020617)]text-white shadow-[0_10px_30px_rgba(15,23,42,0.35)] border border-slate-700" : "bg-gray-300"} rounded-full`}
                             />
                             <div
-                              className={`absolute left-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[#051730]" : "bg-gray-300"} rounded-full`}
+                              className={`absolute left-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[linear-gradient(135deg,#0f172a,#1e293b,#020617)]text-white shadow-[0_10px_30px_rgba(15,23,42,0.35)] border border-slate-700" : "bg-gray-300"} rounded-full`}
                             />
                             <div
-                              className={`absolute right-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[#051730]" : "bg-gray-300"} rounded-full`}
+                              className={`absolute right-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[linear-gradient(135deg,#0f172a,#1e293b,#020617)]text-white shadow-[0_10px_30px_rgba(15,23,42,0.35)] border border-slate-700" : "bg-gray-300"} rounded-full`}
                             />
 
                             {/* Terminal Dots */}
@@ -169,8 +172,8 @@ const ProgrammeStructure = ({
                                   className={`flex flex-row gap-1 items-center justify-center flex-1 transition-all duration-300 py-[6px] rounded-sm border whitespace-nowrap
                                     ${
                                       isSemActive
-                                        ? "bg-[#051730] text-white border-[#051730] shadow-lg z-20 scale-105"
-                                        : "bg-white/40 border-white/20 text-[#051730]/80 hover:text-[#051730] hover:bg-white/60"
+                                        ? "bg-[linear-gradient(135deg,#f2f2fd_0%,#e4ecff_40%,#d6e4ff_70%,#c7dcff_100%)] text-[#051730] shadow-lg border-[#c7dcff]"
+                                        : "bg-[#051730]/5 border-white/20 text-[#051730]/80 hover:text-[#051730] hover:bg-white/60 "
                                     } cursor-pointer`}
                                 >
                                   <span className="text-[13px] sm:text-[15px] font-medium capitalize tracking-tight sm:tracking-wide antialiased whitespace-nowrap">
@@ -230,7 +233,7 @@ const ProgrammeStructure = ({
                                   .map((sub) => (
                                     <div
                                       key={sub.id}
-                                      className="flex items-start bg-white/50 backdrop-blur-md rounded-lg p-3 md:px-4 md:py-3 border border-white transition-all duration-300 antialiased shadow-sm hover:shadow-md hover:bg-white/70"
+                                      className="flex items-start bg-gradient-to-br from-[#f2f2fd] to-[#e4ecff] backdrop-blur-md rounded-lg p-3 md:px-4 md:py-3 transition-all duration-300 antialiased shadow-sm hover:shadow-md hover:bg-white/70"
                                     >
                                       <div className="flex items-center w-full gap-3">
                                         <div className="flex-grow min-w-0">
@@ -240,7 +243,7 @@ const ProgrammeStructure = ({
                                             sub.course_name[0]?.sub_name
                                           ) ? (
                                             <>
-                                              <div className="flex items-center w-full gap-3">
+                                              <div className="flex items-center w-full gap-3 ">
                                                 <div className="w-9 h-9 rounded-full bg-[#051730] flex items-center justify-center flex-shrink-0 border border-[#051730]/10 mt-0.5">
                                                   <IoBookOutline className="w-5 h-5 text-white" />
                                                 </div>

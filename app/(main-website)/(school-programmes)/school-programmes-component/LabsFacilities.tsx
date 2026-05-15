@@ -38,7 +38,7 @@ const LabsFacilities = ({
 
   return (
     <>
-      <section className="prog-global-padding py-8 md:py-16 px-4 md:px-0">
+      <section className="prog-global-padding py-8 md:py-16 px-4 md:px-6">
         <div className="max-w-[1440px] mx-auto w-full">
           {/* <div className="w-1/2 hidden lg:block">
             {labimg?.url && (

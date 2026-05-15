@@ -39,6 +39,8 @@ const ProgramHero = (props: Props) => {
     case "bsc-hons-computer-science":
     case "bsc-hons-cyber-security":
     case "b-tech-cse-robotics-ai":
+    case "btech-cse-cloud-computing":
+    case "b-tech-computer-science-and-engineering-semiconductor-design":
       return <ProgramHeroCinematic {...props} />;
     default:
       return <ProgramHeroDefault {...props} />;

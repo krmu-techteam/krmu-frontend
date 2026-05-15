@@ -62,7 +62,7 @@ const ProgrammeHighlight = ({
     emblaApi.on("reInit", onSelect);
   }, [emblaApi, onSelect]);
 
-  if (slug === "bba-hr") {
+  if (slug === "bba-hr" || slug === "b-tech-cse") {
     return (
       <section className="bg-white py-8 md:py-16 shadow">
         <div className="max-w-[1440px] mx-auto w-full px-4 md:px-8">

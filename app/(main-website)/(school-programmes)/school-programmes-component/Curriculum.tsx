@@ -26,9 +26,9 @@ const Curriculum = ({
 }: Props) => {
   return (
     <>
-    <section className="relative py-8 md:py-16 overflow-hidden bg-[#051630]">
+    <section className="relative py-8 md:py-16 overflow-hidden bg-[linear-gradient(to_bottom_right,#f1f5ff,#f8fafc,#eef4ff)]">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <Image
           src="/curriculum-s.jpeg"
           fill
@@ -37,7 +37,7 @@ const Curriculum = ({
           priority
         />
         <div className="absolute inset-0 bg-white/20 backdrop-blur-xs"></div>
-      </div>
+      </div> */}
 
       <div className="relative z-10 max-w-[1440px] mx-auto w-full md:px-8">
         <ProgrammeStructure

@@ -52,7 +52,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
     bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_computer_science_and_engineering_cse_8f15e29b81.png",
     overlayWidth: "50%",
     titleSize: "2xl:text-5xl",
-    mobileBgPosition: "center top",
+    mobileBgPosition: "60% top",
   } as HeroConfig,
 
   "btech-cse-ai-ml": {
@@ -117,5 +117,15 @@ export const heroConfigs: Record<string, HeroConfig> = {
     bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_cse_robotics_ai_5a78b666c7.png",
     bgPosition: "70% top",
     mobileBgPosition: "57% -75px",
+  } as HeroConfig,
+  "btech-cse-cloud-computing": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_cse_cloud_computing_910c6908de.png",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "b-tech-computer-science-and-engineering-semiconductor-design": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_computer_science_and_engineering_semiconductor_design_0788bdf247.png",
+    bgPosition: "70% top",
   } as HeroConfig,
 };
