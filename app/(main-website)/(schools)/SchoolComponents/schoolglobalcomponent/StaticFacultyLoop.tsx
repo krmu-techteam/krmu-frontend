@@ -23,8 +23,10 @@ const getItemsPerLoad = () => {
   // if (typeof window === "undefined") return 5;
 
   const width = window.innerWidth;
+  if (width == 1512) return 4;
   if (width == 1440) return 4;
-  if (width > 1440) return 5;
+  if (width > 1512) return 5;
+  if (width > 1440) return 4;
   if (width < 1440 && width >= 1024) return 3;
   if (width < 1024) return 2;
   return 2;
