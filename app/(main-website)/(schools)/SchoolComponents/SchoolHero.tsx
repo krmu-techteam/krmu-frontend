@@ -49,7 +49,7 @@ const SchoolHero = ({
           )}
         </div>
         {fullWidth ? (
-          <div className="max-w-[1664px] mx-auto w-full px-5 relative z-10">
+          <div className="max-w-[1664px] mx-auto w-full px-5 relative z-10 temp-class">
             <div className="text-center text-white w-full">
               <p className="text-sm md:text-[28px] lg:mb-5 font-medium text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
                 {subheading}
