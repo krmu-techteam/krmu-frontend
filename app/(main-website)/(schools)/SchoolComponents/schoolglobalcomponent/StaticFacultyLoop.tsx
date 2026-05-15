@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StaticFacultyEmployeeCard } from "@/app/(main-website)/components/Cards/StaticFacultyEmployeeCard";
 import { Button } from "@/components/ui/button";
 
@@ -19,7 +19,16 @@ import { soedFaculties } from "@/lib/api/school-faculties/soed";
 import { soasFaculties } from "@/lib/api/school-faculties/soas";
 
 // ---------- Constants ----------
-const ITEMS_PER_LOAD = 5;
+const getItemsPerLoad = () => {
+  // if (typeof window === "undefined") return 5;
+
+  const width = window.innerWidth;
+  if (width == 1440) return 4;
+  if (width > 1440) return 5;
+  if (width < 1440 && width >= 1024) return 3;
+  if (width < 1024) return 2;
+  return 2;
+};
 
 // ---------- School Categories (runtime + type-safe) ----------
 export const SCHOOL_CATEGORIES = [
@@ -82,18 +91,31 @@ const facultyMap: Record<SchoolCategory, Faculty[]> = {
 
 // ---------- Component ----------
 const StaticFacultyLoop = ({ schoolCat }: Props) => {
-
   // ✅ Runtime safety
   if (!isSchoolCategory(schoolCat)) return null;
 
   const facDatas = facultyMap[schoolCat];
 
-  const [visibleCount, setVisibleCount] = useState(ITEMS_PER_LOAD);
+  const [itemsPerLoad, setItemsPerLoad] = useState(5);
+  const [visibleCount, setVisibleCount] = useState(5);
+
+  useEffect(() => {
+    const updateItems = () => {
+      const newCount = getItemsPerLoad();
+      setItemsPerLoad(newCount);
+      setVisibleCount(newCount); // reset on resize
+    };
+
+    updateItems(); // initial run
+
+    window.addEventListener("resize", updateItems);
+    return () => window.removeEventListener("resize", updateItems);
+  }, []);
 
   if (!facDatas.length) return null;
 
   const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + ITEMS_PER_LOAD);
+    setVisibleCount((prev) => prev + itemsPerLoad);
   };
 
   const visibleFaculties = facDatas.slice(0, visibleCount);
@@ -102,7 +124,10 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
     <div>
       <div className="flex flex-wrap justify-center pt-16 px-4 pb-4 gap-5">
         {visibleFaculties.map((faculty) => (
-          <div key={faculty.id} className="w-full sm:w-[272px] flex justify-center">
+          <div
+            key={faculty.id}
+            className="w-full sm:w-[272px] flex justify-center"
+          >
             <StaticFacultyEmployeeCard
               name={faculty.title?.rendered ?? ""}
               imgURL={faculty.featured_media_url ?? ""}
