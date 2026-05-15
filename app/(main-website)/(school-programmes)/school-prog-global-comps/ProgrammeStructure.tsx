@@ -203,7 +203,7 @@ const ProgrammeStructure = ({
             </div>
 
             {/* Subjects List - Minimalistic Layout */}
-            <div className="flex-grow p-4 overflow-y-auto max-h-[500px] scrollbar-thin scrollbar-thumb-gray-100 bg-white/5">
+            <div className="flex-grow p-4 overflow-y-auto max-h-[600px] scrollbar-thin scrollbar-thumb-gray-100 bg-white/5">
               {programStruct.map((year) => {
                 const yearValue = year.year.toLowerCase().replace(" ", "");
                 return activeYear === yearValue ? (
@@ -223,7 +223,7 @@ const ProgrammeStructure = ({
                               className="animate-in fade-in duration-300"
                             >
                               {/* Semester Heading - Hidden if isYear is true and it's the only semester, otherwise show for grouping */}
-                              {( !isYear || year.semester.length > 1 ) && (
+                              {(!isYear || year.semester.length > 1) && (
                                 <div className="mb-4">
                                   <h4 className="text-[18px] md:text-[20px] font-bold text-[#0a41a1] capitalize flex items-center gap-2">
                                     <span className="w-1.5 h-6 bg-[#0a41a1] rounded-full"></span>
@@ -306,7 +306,7 @@ const ProgrammeStructure = ({
                               </div>
 
                               {/* Compact Action Banner */}
-                              <div className="mt-8 flex flex-col gap-4">
+                              <div className="mt-4 xl:mt-8 flex flex-col gap-4">
                                 {sem.pdfbtns?.map((btn) => {
                                   const text =
                                     btn?.buttontext?.toLowerCase() || "";
@@ -320,7 +320,7 @@ const ProgrammeStructure = ({
                                       <CommonLeadPopup
                                         key={btn?.id}
                                         buttonText={
-                                          <div className="flex items-center gap-6 px-6 py-2 bg-[#0a41a1] rounded-sm text-white group shadow-lg transition-all duration-300 hover:scale-[1.005]">
+                                          <div className="flex items-center gap-6 px-2 lg:px-6   py-2 bg-[#0a41a1] rounded-sm text-white group shadow-lg transition-all duration-300 hover:scale-[1.005]">
                                             <div className="flex items-center gap-4">
                                               <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
                                                 <Download className="w-5 h-5" />
