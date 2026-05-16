@@ -229,6 +229,7 @@ export default async function Page({ params }: Props) {
         alumniLogos={schoolsLogosData}
         admTitle={school.admissionsessiontitle}
         admBtn={school.admissionbtn}
+        slug={slug}
       />
       {/* {school.admissionsessiontitle && (
         <SchoolAdmissionOpen

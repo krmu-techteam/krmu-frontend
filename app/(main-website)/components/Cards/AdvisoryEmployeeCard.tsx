@@ -47,7 +47,7 @@ export const AdvisoryEmployeeCard = ({ name, imgUrl, qual, desg }: Props) => {
             </h4>
 
             <h5
-              className="text-[10px] sm:text-sm uppercase py-1"
+              className="text-[11px] uppercase py-1"
               dangerouslySetInnerHTML={{
                 __html: desg,
               }}

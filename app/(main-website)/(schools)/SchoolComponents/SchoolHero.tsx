@@ -22,6 +22,7 @@ type Props = {
   alumniLogos: StrapiMedia[] | undefined;
   admTitle: string;
   admBtn: Button;
+  slug: string;
 };
 
 const SchoolHero = ({
@@ -36,16 +37,49 @@ const SchoolHero = ({
   alumniLogos,
   admTitle,
   admBtn,
+  slug,
 }: Props) => {
+  const ytVideoThumbnail = {
+    soet: {
+      thumbnail:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soetytthumbnail_1_24cf75efc0.webp",
+      ytUrl: "https://www.youtube.com/watch?v=9I6QQ6ZYCi8",
+    },
+    sohmct: {
+      thumbnail:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sohmct_yt_ac9764e49e.webp",
+      ytUrl: "https://www.youtube.com/watch?v=yRbHVk8qaOs",
+    },
+    sbas: {
+      thumbnail:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sbas_1_da2168aa21.webp",
+      ytUrl: "https://www.youtube.com/watch?v=QdsVt6tERg0",
+    },
+  };
+
+  let videoUrl = "";
+  let thumbnail = "";
+
+  if (slug === "school-of-hotel-management-and-catering-technology") {
+    videoUrl = ytVideoThumbnail.sohmct.ytUrl;
+    thumbnail = ytVideoThumbnail.sohmct.thumbnail;
+  }
+  if (slug === "school-of-engineering-and-technology") {
+    videoUrl = ytVideoThumbnail.soet.ytUrl;
+    thumbnail = ytVideoThumbnail.soet.thumbnail;
+  }
+  if (slug === "school-of-basic-and-applied-sciences") {
+    videoUrl = ytVideoThumbnail.sbas.ytUrl;
+    thumbnail = ytVideoThumbnail.sbas.thumbnail;
+  }
+
   const videoURL = iframeContent;
-
-
   return (
     <>
       <section
         className={`pt-[150px] relative ${
           fullWidth
-            ? "lg:py-[20%] lg:pb-[5%] pt-[300px] pb-5"
+            ? "lg:py-[20%] lg:pb-0 pt-[300px] pb-5"
             : "lg:pt-[12%]  pt-[300px] schoolBanner"
         } bg-cover bg-no-repeat bg-center bg-[#001732]`}
         style={{ backgroundImage: `url(${STRAPI_URL}${herobanner?.url})` }}
@@ -120,7 +154,7 @@ const SchoolHero = ({
               <h1 className="text-2xl md:text-4xl 2xl:text-5xl text-shadow-lg leading-[1.2] font-bold">
                 {title}
               </h1>
-              <div className="flex flex-col items-center justify-center gap-3.5 sm:gap-5 my-4">
+              <div className="flex flex-col items-center justify-center gap-3.5 sm:gap-5 mt-0 sm:my-4">
                 {heroBtns?.map((btn) =>
                   btn?.buttontext === "Explore Programmes" ? (
                     <Link
@@ -145,7 +179,12 @@ const SchoolHero = ({
                   ),
                 )}
               </div>
-              <div className="bg-white max-w-[440px] mx-auto mt-16 p-3 rounded-[10px] alumniHeaderCarousel">
+              <div
+                className="max-w-[440px] mx-auto my-2.5 sm:mt-16 p-3 rounded-[10px] alumniHeaderCarousel"
+                style={{
+                  filter: `brightness(0) invert(1)`,
+                }}
+              >
                 <ConnectingDreamSlider logos={alumniLogos} />
               </div>
             </div>
@@ -161,13 +200,13 @@ const SchoolHero = ({
                   Your browser does not support the video tag.
                 </video>
               ) : null} */}
-              <div className="max-w-[600px] w-full mx-auto">
-                <YoutubeVideoSection thumbnail={videoLink} ytUrl={videoURL} />
+              <div className="max-w-[700px] w-full mx-auto">
+                <YoutubeVideoSection thumbnail={thumbnail} ytUrl={videoUrl} />
               </div>
             </div>
           </div>
         )}
-        <div className="xl:mt-20 relative z-20">
+        <div className="2xl:mt-20 relative z-20">
           <SchoolAdmissionOpen title={admTitle} admBtn={admBtn} />
         </div>
       </section>
