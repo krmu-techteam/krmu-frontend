@@ -43,7 +43,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
     overlayOpacity: "0.85",
     overlayWidth: "45%",
     subtitleSize: "sm:text-base",
-    titleSize: "2xl:text-5xl",
+    titleSize: "lg:text-3xl xl:text-[42px] 2xl:text-5xl",
     descSize: "2xl:text-lg",
     contentMaxWidth: "2xl:max-w-lg"
   },
@@ -51,7 +51,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
     ...defaultCinematicConfig,
     bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_computer_science_and_engineering_cse_8f15e29b81.png",
     overlayWidth: "50%",
-    titleSize: "2xl:text-5xl",
+    titleSize: "lg:text-3xl xl:text-[42px] 2xl:text-5xl",
     mobileBgPosition: "60% top",
   } as HeroConfig,
 

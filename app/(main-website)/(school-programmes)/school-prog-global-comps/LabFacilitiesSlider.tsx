@@ -83,7 +83,7 @@ const LabFacilitiesSlider = ({ labcards, images }: Props) => {
               key={i}
               onClick={() => api?.scrollTo(i)}
               className={`h-2 rounded-full transition-all cursor-pointer ${
-                current === i ? "bg-[#0a41a1] w-6" : "bg-gray-400 w-2"
+                current === i ? "bg-[#051730] w-6" : "bg-gray-400 w-2"
               }`}
               aria-label={`Go to slide ${i + 1}`}
             />
