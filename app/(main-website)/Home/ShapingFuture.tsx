@@ -67,12 +67,12 @@ const ShapingFuture = ({
                     return (
                       <div
                         key={counter?.id}
-                        className="flex flex-col text-center items-center justify-center mb-5 lg:items-start lg:mx-4 lg:justify-start lg:text-left"
+                        className="flex flex-col text-center items-center justify-center p-4 lg:items-start lg:justify-start lg:text-left first:border-r first:border-b last:border-l last:border-t border-gray-300 "
                       >
                         <span className="text-[#001732] font-bold mb-[10px] text-3xl xl:text-4xl">
                           {counter?.countertext}
                         </span>
-                        <span className="text-sm font-semibold">
+                        <span className="text-sm p-1 font-semibold">
                           {counter?.countercontent}
                         </span>
                       </div>
@@ -80,16 +80,16 @@ const ShapingFuture = ({
                   })}
               </div>
 
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start sm:items-center gap-5">
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start sm:items-center gap-3">
                 <Link
                   href={link1}
-                  className="bg-[#001732] border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold text-center"
+                  className="bg-[#001732] text-white border border-[#d8d8d8] px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center text-sm"
                 >
                   <span className="text-sm sm:text-base">{link1text}</span>
                 </Link>
                 <Link
                   href={link2}
-                  className="border-2 text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold text-center"
+                  className=" text-black  border border-[#d8d8d8] px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center text-sm"
                 >
                   <span className="text-sm sm:text-base">{link2text}</span>
                 </Link>
