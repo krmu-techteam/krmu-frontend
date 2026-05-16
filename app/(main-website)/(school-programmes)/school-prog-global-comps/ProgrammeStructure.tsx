@@ -60,13 +60,13 @@ const ProgrammeStructure = ({
   const enable_disable_minor = settings?.minor_enable_disable;
 
   return (
-    <div className="w-full py-12 md:py-0 antialiased">
-      <div className="container mx-auto px-4 relative">
+    <div className="w-full antialiased">
+      <div className="container mx-auto relative">
         {/* Section Header */}
         <div className="relative mb-12">
           {(heading || highlight) && (
             <div 
-              className="w-full py-4 md:py-6 mb-6"
+              className="w-full py-4 xl:py-5 2xl:py-6 mb-6"
               style={{
                 background: "linear-gradient(90deg, rgba(0, 23, 50, 0) 0%, #001732 49.04%, rgba(0, 23, 50, 0) 95.67%)"
               }}
@@ -81,7 +81,7 @@ const ProgrammeStructure = ({
         <div className="relative w-full">
           {/* Programme Handbook Button - Positioned absolute to align with card top */}
           {currbtn?.buttonlink && (
-            <div className="hidden md:block absolute right-0 top-0 z-20">
+            <div className="hidden md:block absolute xl:right-0 xl:top-0 2xl:right-56 z-20">
               <CommonLeadPopup
                 buttonText={
                   <span className="flex items-center gap-3">
@@ -99,7 +99,7 @@ const ProgrammeStructure = ({
           )}
 
           {/* Main Content Card */}
-          <div className="xl:max-w-lg 2xl:max-w-xl bg-white rounded-xs shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[650px] mb-12 relative z-10">
+          <div className="xl:max-w-lg 2xl:max-w-xl bg-white rounded-xs shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[600px] mb-0 md:mb-12 relative z-10">
           
           {/* Left Navigation & Content Area */}
           <div className="flex-grow flex flex-col">
@@ -167,8 +167,8 @@ const ProgrammeStructure = ({
               })}
             </div>
 
-            {/* Subjects List */}
-            <div className="flex-grow xl:px-4 2xl:px-6 py-4 overflow-y-auto max-h-[500px] bg-white scrollbar-thin scrollbar-thumb-gray-200">
+            {/* Subjects List - Scrollable Area */}
+            <div className="flex-grow px-2 xl:px-4 2xl:px-6 py-4 overflow-y-auto max-h-[400px] bg-white scrollbar-thin scrollbar-thumb-gray-200">
               {programStruct.map((year) => {
                 const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                 if (activeYear !== yearValue) return null;
@@ -211,7 +211,7 @@ const ProgrammeStructure = ({
                                   ) : (
                                     <div className="flex items-center gap-4 py-2">
                                       <IoArrowForwardCircleOutline className="w-6 h-6 text-[#051730] flex-shrink-0" />
-                                      <span className="text-[18px] font-medium text-gray-700">
+                                      <span className="text-md md:text-[18px] font-medium text-gray-700">
                                         {sub.subjectname}
                                       </span>
                                     </div>
@@ -219,44 +219,45 @@ const ProgrammeStructure = ({
                                 </div>
                               ))}
                           </div>
-
-                          {/* Action Buttons at bottom of list */}
-                          <div className="mt-10 flex flex-col md:flex-row items-center justify-start gap-4 border-t border-gray-100 pt-8">
-                            {sem.pdfbtns?.map((btn) => {
-                              const text = btn?.buttontext?.toLowerCase() || "";
-                              const isDark =
-                                text.includes("minor") ||
-                                text.includes("handbook");
-
-                              return (
-                                <CommonLeadPopup
-                                  key={btn?.id}
-                                  buttonText={
-                                    <div className="flex items-center gap-2">
-                                      <Download className="w-4 h-4" />
-                                      <span className="font-semibold tracking-tight text-sm xl:text-sm 2xl:text-base">
-                                        {btn?.buttontext}
-                                      </span>
-                                    </div>
-                                  }
-                                  buttonClassName={`px-4 3xl:px-6 3xl:py-4 py-3 rounded-sm transition-all duration-300 flex items-center justify-center border-2 w-full md:w-auto min-w-[160px]
-                                    ${
-                                      isDark
-                                        ? "bg-[#051730] text-white border-[#051730] hover:bg-[#0a264a]"
-                                        : "bg-white text-[#051730] border-[#051730] hover:bg-gray-50"
-                                    }`}
-                                  redirectUrl={btn?.buttonlink || "#"}
-                                  form_name={btn?.buttontext || "Action"}
-                                />
-                              );
-                            })}
-                          </div>
                         </div>
                       );
                     })}
                   </div>
                 );
               })}
+            </div>
+
+            {/* Action Buttons - Fixed at Bottom */}
+            <div className="px-2 xl:px-4 2xl:px-6 py-6 border-t border-gray-100 bg-white">
+              {programStruct
+                .find((y) => y.year.toLowerCase().replace(/\s+/g, "") === activeYear)
+                ?.semester.find((s) => (s.semestername || "").toLowerCase().replace(/\s+/g, "") === activeSemester)
+                ?.pdfbtns?.map((btn) => {
+                  const text = btn?.buttontext?.toLowerCase() || "";
+                  const isDark = text.includes("minor") || text.includes("handbook");
+
+                  return (
+                    <CommonLeadPopup
+                      key={btn?.id}
+                      buttonText={
+                        <div className="flex items-center gap-2">
+                          <Download className="w-4 h-4" />
+                          <span className="font-semibold tracking-tight text-sm xl:text-sm 2xl:text-base">
+                            {btn?.buttontext}
+                          </span>
+                        </div>
+                      }
+                      buttonClassName={`px-4 3xl:px-6 3xl:py-4 py-3 rounded-sm transition-all duration-300 flex items-center justify-center border-2 w-full md:w-auto min-w-[160px] inline-flex mr-4 last:mr-0
+                        ${
+                          isDark
+                            ? "bg-[#051730] text-white border-[#051730] hover:bg-[#0a264a]"
+                            : "bg-white text-[#051730] border-[#051730] hover:bg-gray-50"
+                        }`}
+                      redirectUrl={btn?.buttonlink || "#"}
+                      form_name={btn?.buttontext || "Action"}
+                    />
+                  );
+                })}
             </div>
           </div>
         </div>
