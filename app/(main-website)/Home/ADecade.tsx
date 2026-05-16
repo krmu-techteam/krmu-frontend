@@ -42,11 +42,12 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
               {leftContent.adecadesubtitle}
             </h3>
             <p className="text-lg mb-5">{leftContent.adecadedescription}</p>
-            <div className="flex flex-col sm:flex-row  justify-center md:justify-start md:items-start gap-2.5 sm:gap-5">
+            <div className="flex flex-col sm:flex-row  justify-center md:justify-start md:items-start gap-2.5">
               {leftContent.button1link && (
                 <Link
                   href={leftContent.button1link}
-                  className="bg-[#001732] text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-medium"
+                  className="bg-[#001732] text-white border border-[#d8d8d8] px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center text-sm "
+                  // bg-[#e31e24] text-white border border-[#d8d8d8] px-6 py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center text-sm
                 >
                   <span className="text-sm sm:text-base">
                     {leftContent.button1text}
@@ -62,7 +63,7 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
               {leftContent.button2link && (
                 <Link
                   href={leftContent.button2link}
-                  className="border-2 text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-medium"
+                  className=" border border-[#d8d8d8] px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center sm:text-sm "
                 >
                   <span className="text-xs sm:text-base">
                     {leftContent.button2text}
