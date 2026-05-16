@@ -189,6 +189,14 @@ const Hero = () => {
                 <strong>Contact No</strong>:{" "}
                 <a href="tel:9289114766">9289114766</a>
               </p>
+               <Link
+                href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Gender-Sensitization-and-Safety-Committee.pdf"
+                target="_blank" rel="noopener noreferrer"
+                className="py-[13px] px-[29px] mt-5 text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
+              >
+                <FileText color="#fff" />
+                Gender Sensitization and Safety Committee
+              </Link>
             </div>
           </div>
           <div className="w-full lg:w-[58%] committeebox p-5">
