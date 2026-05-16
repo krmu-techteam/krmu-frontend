@@ -95,7 +95,7 @@ const withProgramCard = <P extends object>(
         onFocus={() => handleMouseEnter(prog.id)}
         className={`
           ${
-            programs[deg.value]?.length > 3 ? "" : "max-w-[528px] min-h-[258px]"
+            programs[deg.value]?.length > 3 ? "" : "xl:max-w-[392px] min-h-[258px]"
           }
           w-full
           rounded-xl
