@@ -49,7 +49,7 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
             {link1 || title1 ? (
               <Link
                 href={link1}
-                className="bg-white text-black  flex justify-center items-center px-5 py-2 rounded-md gap-4 font-semibold"
+                className="bg-white text-black  border border-[#d8d8d8] px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center text-sm"
                 target="_blank"
               >
                 <span className="text-xs sm:text-base">{title1}</span>
@@ -60,7 +60,7 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
             {link2 || title2 ? (
               <Link
                 href={link2}
-                className="border border-white text-white font-semibold flex justify-center items-center px-5 py-1.5 rounded-md gap-4"
+                className="border border-white text-white border  px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center text-sm"
                 target="_blank"
               >
                 <span className="text-sm sm:text-base">{title2}</span>
