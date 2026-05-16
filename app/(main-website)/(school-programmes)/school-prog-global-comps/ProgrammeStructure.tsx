@@ -91,7 +91,7 @@ const ProgrammeStructure = ({
       <div className="rounded-none md:rounded-2xl p-0 md:p-6
   bg-[linear-gradient(to_right,#ffffff,#eef2ff,#faf2f8)]
   shadow-[0_10px_40px_rgba(99,102,241,0.12)]
-  border border-white/60">
+   ">
         <div className="min-h-[600px] flex flex-col">
           {/* Hierarchy Navigation Tree - Compact Version */}
           <div className="w-full bg-white/5 border-b border-white/10">

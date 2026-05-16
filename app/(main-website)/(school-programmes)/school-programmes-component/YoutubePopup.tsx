@@ -59,7 +59,7 @@ export default function YoutubePopup({
         />
 
         {/* Play Button */}
-        {playIcon && (
+        {/* {playIcon && (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
             <Image
               src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/play_bed78459c4.png"
@@ -72,7 +72,7 @@ export default function YoutubePopup({
               Play Video
             </span>
           </div>
-        )}
+        )} */}
       </div>
 
       {/* Popup */}
