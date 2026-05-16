@@ -475,6 +475,15 @@ const ProgrammesSearch = () => {
                     : item.phdslug) || "";
 
                 const isExternal = slug.startsWith("http");
+                const progNewLine = [
+                  "b-tech-cse",
+                  "btech-cse-ai-ml",
+                  "btech-full-stack-development",
+                  "btech-cse-ui-ux",
+                  "btech-cse-cyber-security",
+                  "btech-cse-in-data-science",
+                  "b-tech-cse-robotics-ai",
+                ];
 
                 return (
                   <div
@@ -558,6 +567,12 @@ const ProgrammesSearch = () => {
                       </Link>
                       {/* )} */}
                     </div>
+                    {progNewLine.includes(slug) && (
+                      <div className="text-white text-xs items-center mt-3 px-4 ">
+                        3-Year Lateral Entry option also available for eligible
+                        students
+                      </div>
+                    )}
                   </div>
                 );
               })

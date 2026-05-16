@@ -14,7 +14,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/kaveri_0bbfa3fe70.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Prof-Dr.-Kaveri-Sharma.png",
   },
   // {
   //   id: 113912,
@@ -44,7 +44,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Inderpreet_Kaur_Saggu_fc01b42a19.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Inderpreet-Kaur-Saggu.png",
   },
   {
     id: 10206,
@@ -59,7 +59,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Prof_Dr_Shobhna_Jeet_ddae7c013a.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Prof-Dr.-Shobhna-Jeet.png",
   },
   {
     id: 106905,
@@ -74,7 +74,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Tijender_Kumar_Singh_4fe2f8c83c.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Tijender-Kumar-Singh.png",
   },
 
   {
@@ -90,7 +90,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Kriti_Singh_ed479adb52.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Kriti-Singh.png",
   },
   {
     id: 53020,
@@ -105,7 +105,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mr_Anurag_Sharma_d55b508385.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Mr.-Anurag-Sharma.png",
   },
   {
     id: 40864,
@@ -120,7 +120,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Parul_sethi_SOLS_02d22ad6e9.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Ms.-Parul.png",
   },
   {
     id: 17522,
@@ -135,7 +135,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Aarti_Lamba_SOLS_f823795b39.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Aarti-Lamba.png",
   },
   // {
   //   id: 10406,
@@ -165,7 +165,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Ms_Sadhana_Nirban_71faa02772.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Ms.-Sadhana-Nirban.png",
   },
   {
     id: 10297,
@@ -180,7 +180,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mr_Prashant_Panwar_SOLS_598d7418af.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Mr.-Prashant-Panwar.png",
   },
   {
     id: 10294,
@@ -195,7 +195,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Megha_Garg_6e14e2f4fe.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Megha-Garg.png",
   },
 
   {
@@ -211,7 +211,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mr_Thomas_Monteiro_83522d2c83.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Mr.-Thomas-Monteiro.png",
   },
   {
     id: 113713,
@@ -226,7 +226,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Arti_Sharma_d12270133b.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Arti-Sharma.png",
   },
   {
     id: 113717,
@@ -241,7 +241,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Neha_Sharma_4a34a9d350.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Neha-Sharma.png",
   },
   {
     id: 113872,
@@ -256,7 +256,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Niharika_c16b9aeef3.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Niharika.png",
   },
   {
     id: 113888,
@@ -271,6 +271,6 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Parveen_Bondwal_b4ac39e426.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Parveen-Bondwal.png",
   },
 ];

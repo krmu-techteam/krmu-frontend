@@ -19,7 +19,7 @@ const YourJourney2 = () => {
             commit to providing students with the necessary skills and knowledge
             to thrive in the ever-changing world.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center max-w-2xl mx-auto w-full">
+          <div className="flex flex-col sm:flex-row items-center justify-center max-w-2xl mx-auto w-full gap-0 lg:gap-5 ">
             <HomeYourJourneyForm />
             <Link
               href="/programmes"

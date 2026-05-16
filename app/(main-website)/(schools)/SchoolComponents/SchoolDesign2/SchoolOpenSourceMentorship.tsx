@@ -35,7 +35,7 @@ const SchoolOpenSourceMentorship = () => {
               <div
                 className="flex-shrink-0  overflow-hidden flex flex-col xs:flex-row md:flex-col lg:flex-row
                            w-full md:w-[400px] lg:w-[480px]
-                           h-[520px] md:h-auto lg:h-[300px]"
+                           h-[570px] md:h-auto lg:h-[300px]"
                 style={{
                   // background: "linear-gradient(135deg,#0b2347 0%,#002f8e 100%)",
                   backgroundColor: "#002f8e",
@@ -70,7 +70,7 @@ const SchoolOpenSourceMentorship = () => {
                   </div>
 
                   {/* GSoC badge */}
-                  <div className="relative mt-3 w-full h-full">
+                  <div className="relative mt-3 w-full h-[80px]">
                     <Image
                       src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1773422694704_886721c56d.png"
                       alt="GSoC Logo"
