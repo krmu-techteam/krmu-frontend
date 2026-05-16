@@ -49,9 +49,9 @@ const CareerProspects = ({
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
   }, [emblaApi, onSelect]);
-  if (slug === "bba-hr") {
+  if (slug === "bba-hr" || slug === "b-tech-cse") {
     return (
-      <section className="relative py-6 md:pt-8 md:pb-[80px] xl:pb-[150px] overflow-hidden min-h-[600px] md:min-h-[750px] xl:min-h-[850px] flex flex-col items-center">
+      <section className="relative py-6 md:pt-16 md:pb-[80px] xl:pb-[150px] overflow-hidden min-h-[600px] md:min-h-[750px] xl:min-h-[850px] flex flex-col items-center">
         {/* Background Image with Blur */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -127,9 +127,9 @@ const CareerProspects = ({
 
             {/* Static Career Image (Stays centered while text slides) */}
             <Image
-                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/group_people_751a407e4e.png"
+                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/group_img_32f982771f.png"
                 fill
-                className="-mb-10 object-contain md:translate-y-[20%] lg:translate-y-[42%] xl:translate-y-[32%] 2xl:translate-y-[30%] transform scale-[1.35] md:scale-[1] -translate-x-[17px] translate-y-[100px] md:translate-y-[120px]"
+                className="-mb-10 object-contain md:translate-y-[20%] lg:translate-y-[42%] xl:translate-y-[32%] 2xl:translate-y-[30%] transform scale-[1.25] md:scale-[1] translate-x-[4px] translate-y-[110px] md:translate-y-[120px]"
                 alt="Career Prospects Students"
               />
             </div>

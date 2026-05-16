@@ -6,7 +6,7 @@ import Curriculum from "../../school-programmes-component/Curriculum";
 import DreamCareer from "../../school-programmes-component/DreamCareer";
 import Eligibility from "../../school-programmes-component/Eligibility";
 import FinancialAssistance from "../../school-programmes-component/FinancialAssistance";
-import HeroBanner from "../../school-programmes-component/HeroBanner";
+import ProgramHero from "@/components/school-programmes/programs/hero-sections";
 import LabsFacilities from "../../school-programmes-component/LabsFacilities";
 import OurLocation from "../../school-programmes-component/OurLocation";
 import ProgrammeHighlight from "../../school-programmes-component/ProgrammeHighlight";
@@ -57,6 +57,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const seoData = await getSchoolProgrammeSEO(slug);
   const seoPhdData = await getPHDProgramme(slug);
+
+ 
 
   // let seo = seoData?.[0]?.SEO || seoPhdData[0]?.seo; // ✅ safe access
   const seo = seoData?.[0]?.SEO ?? seoPhdData?.[0]?.seo ?? null;
@@ -130,8 +132,7 @@ const page = async ({ params }: Props) => {
 
   const singleSchoolProgramme = allSchoolProgrammeData.find(
     (programme) => programme.programmeslug === slug,
-  );
-
+  ); 
   const singlePHDProgramme = allSinglePHDProgramme?.find(
     (phdprogram) => phdprogram?.phdslug === slug,
   );
@@ -146,6 +147,7 @@ const page = async ({ params }: Props) => {
 
   const title = singleSchoolProgramme?.title;
   const highlightTitle = singleSchoolProgramme?.highlightitle;
+   
 
   const heroSection = singleSchoolProgramme?.herosection;
   const eligibilitySection = singleSchoolProgramme?.programmeeligibility;
@@ -263,7 +265,7 @@ const page = async ({ params }: Props) => {
       <main className="school-prog-font temp-class">
         {/* {tags && <TagDiv tags={tags} extraClass="hidden test-class" />} */}
         {heroSection && (
-          <HeroBanner
+          <ProgramHero
             title={title || ""}
             highlightitle={highlightTitle || ""}
             heroSection={heroSection}
@@ -285,7 +287,7 @@ const page = async ({ params }: Props) => {
             heroSection={heroSection}
           />
         )}
-        {slug !== "bba-hr" && dreamcareerSection && (
+        {(slug !== "bba-hr" && slug !== "btech-cse-ai-ml" && slug !== "b-tech-cse") && dreamcareerSection && (
           <DreamCareer
             heading={dreamcareerSection.heading}
             description={dreamcareerSection.description}

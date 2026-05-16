@@ -62,15 +62,15 @@ const ProgrammeHighlight = ({
     emblaApi.on("reInit", onSelect);
   }, [emblaApi, onSelect]);
 
-  if (slug === "bba-hr") {
+  if (slug === "bba-hr" || slug === "b-tech-cse") {
     return (
-      <section className="prog-global-padding bg-white py-8 md:py-16 shadow">
+      <section className="bg-white py-8 md:py-16 shadow">
         <div className="max-w-[1440px] mx-auto w-full px-4 md:px-8">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl text-center md:text-left md:text-5xl font-bold text-[#051630] leading-[1.1] mb-3 md:mb-6">
+          <div className="text-center mb-4 md:mb-6">
+            <h2 className="text-3xl text-center md:text-center md:text-[42px] font-bold text-[#051630] leading-[1.1] mb-3">
               {heading} {highlightHeading}
             </h2>
-            <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto font-medium">
+            <p className="text-[#424242] text-lg md:text-xl max-w-3xl mx-auto font-normal">
               {desc}
             </p>
           </div>
@@ -98,7 +98,7 @@ const ProgrammeHighlight = ({
             </div>
 
             {/* Embla Viewport - Added padding and negative margin to prevent shadow clipping */}
-            <div className="overflow-hidden cursor-grab active:cursor-grabbing pt-2 md:pt-5 pb-10 -my-10" ref={emblaRef}>
+            <div className="overflow-hidden cursor-grab active:cursor-grabbing pt-2 md:pt-0" ref={emblaRef}>
               <div className="flex -ml-4">
                 {highlights?.map((highlight) => (
                   <div key={highlight.id} className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_25%] pl-4 min-w-0">

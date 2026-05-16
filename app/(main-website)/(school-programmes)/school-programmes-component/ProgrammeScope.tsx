@@ -46,7 +46,7 @@ const ProgrammeScope = async ({
                 <Image
                   fill
                   src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
-                  className="object-cover z-10 rounded-md"
+                  className="object-cover rounded-md"
                   alt="scope image"
                 />
               )

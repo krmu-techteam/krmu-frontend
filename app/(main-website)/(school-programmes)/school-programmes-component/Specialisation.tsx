@@ -49,7 +49,7 @@ const Specialisation = ({
     : specialisations?.slice(0, 4);
 
   return (
-    <section className="prog-global-padding py-8 md:py-16 px-4 md:px-0">
+    <section className="prog-global-padding py-8 md:py-16 px-4 md:px-6">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container">
           <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-2">

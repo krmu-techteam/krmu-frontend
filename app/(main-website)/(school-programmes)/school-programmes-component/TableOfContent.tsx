@@ -29,7 +29,7 @@ const TableOfContent = ({
           <div className="w-full">
             <div className="mx-auto max-w-6xl">
               <div className="text-center mb-4 md:mb-12">
-                <h3 className="text-[28px] md:text-[40px] font-bold mb-4 text-gray-900 uppercase">
+                <h3 className="text-[28px] md:text-[42px] font-bold mb-4 text-gray-900 uppercase">
                   {heading} {highlight}
                 </h3>
                 <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto">{desc}</p>
