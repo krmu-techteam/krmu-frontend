@@ -126,14 +126,14 @@ const Eligibility = ({
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 mt-auto">
-                  <button className="w-full sm:w-auto flex items-center justify-center gap-3 px-6 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-3 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-sm xl:rounded-[5px] 2xl:rounded-[10px] hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group">
+                  <button className="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-3 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-sm xl:rounded-[5px] 2xl:rounded-[10px] hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group">
                     <Download size={20} className="group-hover:-translate-y-1 transition-transform" />
                     Download Prospectus
                   </button>
                   {formId ? (
                     <a
                       href="#apply-form-mobile"
-                      className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 md:px-12 xl:px-12 2xl:px-16 xl:py-2.5 2xl:py-3 bg-[#cb000d] text-white border border-[#cb000d] font-medium rounded-sm xl:rounded-[5px] 2xl:rounded-[10px] shadow-lg hover:bg-[#b0000a] transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap"
+                      className="w-full sm:w-auto flex items-center justify-center gap-2 py-2 px-6 md:px-12 xl:px-12 2xl:px-16 xl:py-2.5 2xl:py-3 bg-[#cb000d] text-white border border-[#cb000d] font-medium rounded-sm xl:rounded-[5px] 2xl:rounded-[10px] shadow-lg hover:bg-[#b0000a] transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap"
                     >
                       Apply Now
                     </a>
