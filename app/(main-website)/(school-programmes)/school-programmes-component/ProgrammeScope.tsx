@@ -67,7 +67,7 @@ const ProgrammeScope = async ({
           <h3 className="text-3xl text-center md:text-left sm:text-3xl xl:text-4xl 2xl:text-[50px] font-bold leading-tight mb-3 xl:mb-3 2xl:mb-5">
             {scopeData?.scopeheading}
           </h3>
-          <p className="text-base text-center md:text-left xl:text-[18px] 2xl:text-xl leading-relaxed md:leading-[1.7] opacity-90 mb-0 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto md:mx-0">
+          <p className="text-base text-center md:text-left xl:text-[18px] 2xl:text-xl leading-relaxed md:leading-[1.7] opacity-90 mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto md:mx-0">
             {scopeData?.scopecontent}
           </p>
 
@@ -95,7 +95,7 @@ const ProgrammeScope = async ({
                       {scopeData.scopebtn.buttontext || "Download Prospectus"}
                     </span>
                   }
-                  buttonClassName="inline-block px-6 py-2.5 text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
+                  buttonClassName="inline-block px-6 py-2 md:py-2.5 text-md md:text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
                   redirectUrl={scopeData?.scopebtn?.buttonlink || "#"}
                   form_name="Download Prospectus"
                 />
