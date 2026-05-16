@@ -35,6 +35,17 @@ const Hero = () => {
               members indulge in any kind of discrimination against any
               community or category of students.
             </p>
+
+            <h3 className="mb-5 text-2xl">Objectives</h3>
+
+      <ul className="my-2.5 list-disc pl-5">
+        <li>To encourage minority students to enrol for career orientation programmes to empower and equip them with the necessary skills to choose career options.</li>
+        <li>To facilitate financial support to students of minority communities from governmental agencies and other sources.</li>
+        <li>To handle matters related to depriving student/faculty/staff based on caste, creed, language, ethnicity, gender, different ability.</li>
+        <li>To oversee the provision of equal opportunities for education to minority students and provide inclusive and cohesive working environment for staff.</li>
+        <li>To eliminate discrimination against or harassment of any individual in all forms by prohibiting it and by providing preventive and protective measures to facilitate its eradication and punishments for those who indulge in any form of discrimination or harassment.</li>
+        <li>To promote equality amongst students/staff/faculty belonging to all sections of society.</li>
+      </ul>
           </div>
           <div className="w-full lg:w-1/2 bg-[#343537] text-white rounded-[20px] p-5 background-transparent">
             <h3 className="mb-5 text-2xl">KRMU Anti-Discrimination Cell shall consist of the following members:</h3>
@@ -48,42 +59,42 @@ const Hero = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Dr. J.S. Yadav</td>
-                    <td>Chairperson</td>
+                    <td>Prof. (Dr.) J.S Yadav</td>
+                    <td>(Professor and Dean-SOAS)	Chairperson</td>
                   </tr>
                   <tr>
-                    <td>Dr. P.C. Jena</td>
+                    <td>Dr. P.C Jena (Professor-SOED)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Helaluddin</td>
+                    <td>Dr. Helaluddin (Librarian)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Dilrajpreet Kaur</td>
+                    <td>Dr. Dilraj Preet Kaur (Associate Professor-SBAS)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Chandra Mohan</td>
+                    <td>Dr. Chander Mohan (Associate Professor-SBAS)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Padmani Koul</td>
+                    <td>Dr. Padmini Kaul (Assistant Professor-SOHS)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Mr. Thomas Monterio</td>
+                    <td>Mr. Thomas Monteiro (Assistant Professor-SOLS)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Sarina</td>
+                    <td>Dr. Sarina (Assistant Professor-SJMC)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Anjana Singh</td>
-                    <td>Special Invitee Member</td>
+                    <td>Dr. Deepak Kumar (Assistant Professor-SOAS)</td>
+                    <td>Member Secretary</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td>Ms. Megha Jain</td>
                     <td>Special Invitee Student Member</td>
                   </tr>
@@ -94,7 +105,7 @@ const Hero = () => {
                   <tr>
                     <td>Dr. Deepak Kumar</td>
                     <td>Member Secretary</td>
-                  </tr>
+                  </tr> */}
                 </tbody>
               </table>
             </div>
@@ -103,21 +114,29 @@ const Hero = () => {
         <div className="max-w-[1664px] mx-auto w-full p-5 rounded-[20px] background-transparent mt-10 flex flex-col lg:flex-row ">
           <div className="lg:w-1/2 text-white">
             <h4 className="text-xl font-semibold mb-5">
-              Anti-Discrimination Cell Helpline
+              Anti-Discrimination and Minority Committee Helpline
             </h4>
             <p>
               <strong>Email</strong>:{" "}
-              <Link href="mailto:joginder.singhyadav@krmangalam.edu.in">
-                joginder.singhyadav@krmangalam.edu.in
+              <Link href="mailto:antidiscrimination.cell@krmangalam.edu.in">
+                antidiscrimination.cell@krmangalam.edu.in
               </Link>
             </p>
-            <p className="mt-2.5">
+            {/* <p className="mt-2.5">
               <strong>Contact No</strong>:{" "}
               <a href="phn:+919416386060">+919416386060</a>
-            </p>
+            </p> */}
+                          <Link
+                href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Anti-Discrimination-and-Minority-Committee.pdf"
+                target="_blank" rel="noopener noreferrer"
+                className="py-[13px] px-[29px] mt-5 text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
+              >
+                <FileText color="#fff" />
+                Anti Discrimination
+              </Link>
           </div>
           <div className="lg:w-1/2 text-white">
-            <h4 className="text-xl font-semibold mb-5">
+            {/* <h4 className="text-xl font-semibold mb-5">
               Dr. Deepak Kumar (Member Secretary, Anti Discrimination Cell)
             </h4>
             <p>
@@ -129,7 +148,7 @@ const Hero = () => {
             <p className="mt-2.5">
               <strong>Contact No</strong>:{" "}
               <a href="tel:+919568056654">+919568056654</a>
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -768,6 +787,7 @@ const Hero = () => {
                   target="_blank" rel="noopener noreferrer"
                   className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center justify-center"
                 >
+                  <FileText color="#fff" />
                   Code of Conduct
                 </Link>
               </div>
@@ -806,10 +826,10 @@ const Hero = () => {
                     </td>
                     <td>Member</td>
                   </tr> */}
-                  <tr>
-                    {" "}
-                    <td>Dean Student Welfare</td> <td>Member</td>{" "}
-                  </tr>{" "}
+                  {/* <tr>
+                    
+                    <td>Dean Student Welfare</td> <td>Member</td>
+                  </tr> */}
                   <tr>
                     {" "}
                     <td>Dr. Shweta Bansal (Deputy Proctor)</td> <td>Member</td>{" "}
@@ -836,11 +856,23 @@ const Hero = () => {
                   </tr>{" "}
                   <tr>
                     {" "}
-                    <td>Mr. Rahul Singh (SOET)</td> <td>Member</td>{" "}
+                    <td>Dr. Vijay Prakash Sharma (SOMC)</td> <td>Member</td>{" "}
                   </tr>{" "}
                   <tr>
                     {" "}
-                    <td>Dr. Imran Siraj (Deputy Proctor)</td>{" "}
+                    <td>Dr. Anshul Saluja (SOED)</td> <td>Member</td>{" "}
+                  </tr>{" "}
+                  <tr>
+                    {" "}
+                    <td>Mr. Karan Singh (SEMCE)</td> <td>Member</td>{" "}
+                  </tr>{" "}
+                  <tr>
+                    {" "}
+                    <td>Mr. Jagdish Chander, (Security & Discipline Officer)</td> <td>Member</td>{" "}
+                  </tr>{" "}
+                  <tr>
+                    {" "}
+                    <td>Dr. Imran Siraj (SOET) (Deputy Proctor)</td>{" "}
                     <td>Member Secretary</td>{" "}
                   </tr>{" "}
                 </tbody>{" "}

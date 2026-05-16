@@ -10,7 +10,7 @@
   }
 
   .MainSection {
-    background-image: url("/wp-content/landingpage/ba-2026/ba-bg.webp") !important;
+    background-image: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/20_BA_jpg_13beffb8e5.jpeg") !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,7 +22,7 @@
       background-color: #1f0b07;
     }
     .MainSection .container-1 {
-      background-image: url("/wp-content/landingpage/ba-2026/ba-hero-mob.webp") !important;
+      background-image: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/20_BA_Mobile_View_jpg_b1e6a6f387.jpeg") !important;
       background-size: cover;
       background-position: center;
       height: 498px;
