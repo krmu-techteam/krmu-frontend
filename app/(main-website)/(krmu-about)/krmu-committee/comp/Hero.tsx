@@ -372,12 +372,12 @@ const Hero = () => {
 
             <div className="my-5 flex flex-col items-start gap-5">
               <Link
-                href="https://www.krmangalam.edu.in/pdfs/Committee-ICC-2023.pdf"
+                href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Internal-Committee-of-KRMU.pdf"
                 target="_blank" rel="noopener noreferrer"
                 className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
               >
                 <FileText color="#fff" />
-                Committee ICC 2023
+                Internal committee
               </Link>
               <Link
                 href="#"
@@ -443,7 +443,7 @@ const Hero = () => {
               </p>
               <div className="flex flex-col gap-5 my-5">
                 <Link
-                  href="https://www.krmangalam.edu.in/pdfs/anti-ragging-committee-of-krmu-2024.pdf"
+                  href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Anti-Ragging-Committee.pdf"
                   target="_blank" rel="noopener noreferrer"
                   className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center justify-center"
                 >
@@ -508,14 +508,13 @@ const Hero = () => {
                     {" "}
                     <td>Dean Student Welfare</td> <td>Member</td>{" "}
                   </tr>{" "}
-                  <tr>
-                    {" "}
+                  {/* <tr>
                     <td>
                       Lt Col Vijay Chaudhary, General Manager (Security and
                       Administration)
-                    </td>{" "}
-                    <td>Member</td>{" "}
-                  </tr>{" "}
+                    </td>
+                    <td>Member</td>
+                  </tr> */}
                   <tr>
                     {" "}
                     <td>Dr. Shweta Bansal (Deputy Proctor)</td> <td>Member</td>{" "}
@@ -628,7 +627,7 @@ const Hero = () => {
                 Committee Grievance Redressal
               </Link>
               <Link
-                href="https://www.krmangalam.edu.in/krmu-committee/#"
+                href="https://www.krmangalam.edu.in/pdfs/Student-Grievance-Redressal.pdf"
                 target="_blank" rel="noopener noreferrer"
                 className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
               >
@@ -800,14 +799,13 @@ const Hero = () => {
                     {" "}
                     <td>Dr. Diwakar Padalia (Proctor)</td> <td>Chairperson</td>{" "}
                   </tr>{" "}
-                  <tr>
-                    {" "}
+                  {/* <tr>
                     <td>
                       Lt Col Vijay Chaudhary, General Manager (Security and
                       Administration)
-                    </td>{" "}
-                    <td>Member</td>{" "}
-                  </tr>{" "}
+                    </td>
+                    <td>Member</td>
+                  </tr> */}
                   <tr>
                     {" "}
                     <td>Dean Student Welfare</td> <td>Member</td>{" "}
