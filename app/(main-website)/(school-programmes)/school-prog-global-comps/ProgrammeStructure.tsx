@@ -11,8 +11,8 @@ import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import { ButtonType } from "@/lib/types/common";
 import { Year } from "@/lib/types/school-programme";
 import CommonLeadPopup from "../../components/CommonLeadPopup";
-import { BookOpen, FileText, Download, ChevronRight } from "lucide-react";
-import { IoBookOutline } from "react-icons/io5";
+import { BookOpen, FileText, Download, ChevronRight, ArrowRightCircle } from "lucide-react";
+import { IoBookOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
 import Image from "next/image";
 
 type Props = {
@@ -35,13 +35,13 @@ const ProgrammeStructure = ({
   highlight,
 }: Props) => {
   const [activeYear, setActiveYear] = useState(
-    programStruct[0]?.year.toLowerCase().replace(" ", "") || "",
+    programStruct[0]?.year.toLowerCase().replace(/\s+/g, "") || "",
   );
 
   const [activeSemester, setActiveSemester] = useState(
     programStruct[0]?.semester[0]?.semestername
       ?.toLowerCase()
-      ?.replace(" ", "") || "",
+      ?.replace(/\s+/g, "") || "",
   );
 
   const [settings, setSettings] = useState<any>(null);
@@ -60,309 +60,211 @@ const ProgrammeStructure = ({
   const enable_disable_minor = settings?.minor_enable_disable;
 
   return (
-    <div className="w-full antialiased">
-      {/* Section Header */}
-      <div className="flex flex-col items-center text-center gap-3 mb-10">
-        {(heading || highlight) && (
-          <div className="max-w-4xl px-4 md:px-0">
-            <h2 className="text-[26px] md:text-[42px] font-bold text-[#051730] leading-tight tracking-tight">
-              {heading} {highlight}
-            </h2>
-          </div>
-        )}
+    <div className="w-full py-12 md:py-0 antialiased">
+      <div className="container mx-auto px-4 relative">
+        {/* Section Header */}
+        <div className="relative mb-12">
+          {(heading || highlight) && (
+            <div 
+              className="w-full py-4 md:py-6 mb-6"
+              style={{
+                background: "linear-gradient(90deg, rgba(0, 23, 50, 0) 0%, #001732 49.04%, rgba(0, 23, 50, 0) 95.67%)"
+              }}
+            >
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
+                {heading} {highlight}
+              </h2>
+            </div>
+          )}
+        </div>
 
-        {currbtn?.buttonlink && (
-          <div className="flex-shrink-0 w-full md:w-auto px-4 md:px-0">
-            <CommonLeadPopup
-              buttonText={
-                <span className="flex items-center justify-center gap-2">
-                  <FileText className="w-4 h-4" />
-                  {currbtn?.buttontext}
-                </span>
-              }
-              buttonClassName="w-full md:w-auto px-8 py-3 text-md font-semibold tracking-wide text-[#051730] bg-white hover:bg-transparent hover:text-[#051730] hover:border-[#051730] rounded-sm transition-all duration-300 flex items-center justify-center border border-[#051730]/20  cursor-pointer hover:border-[#051730]"
-              redirectUrl={currbtn?.buttonlink || "#"}
-              form_name="Programme Handbook"
-            />
-          </div>
-        )}
-      </div>
+        <div className="relative w-full">
+          {/* Programme Handbook Button - Positioned absolute to align with card top */}
+          {currbtn?.buttonlink && (
+            <div className="hidden md:block absolute right-0 top-0 z-20">
+              <CommonLeadPopup
+                buttonText={
+                  <span className="flex items-center gap-3">
+                    <Download className="w-5 h-5" />
+                    <span className="uppercase tracking-widest font-semibold text-[11px] md:text-xs">
+                      {currbtn?.buttontext}
+                    </span>
+                  </span>
+                }
+                buttonClassName="px-6 py-4 bg-[#051730] text-white rounded-sm shadow-xl hover:bg-[#0a264a] transition-all duration-300 border border-[#051730]/10 flex items-center justify-center min-w-[200px]"
+                redirectUrl={currbtn?.buttonlink || "#"}
+                form_name="Programme Handbook"
+              />
+            </div>
+          )}
 
-      <div className="rounded-none md:rounded-2xl p-0 md:p-6
-  bg-[linear-gradient(to_right,#ffffff,#eef2ff,#faf2f8)]
-  shadow-[0_10px_40px_rgba(99,102,241,0.12)]
-   ">
-        <div className="min-h-[600px] flex flex-col">
-          {/* Hierarchy Navigation Tree - Compact Version */}
-          <div className="w-full bg-white/5 border-b border-white/10">
-              <div className="flex flex-wrap lg:flex-nowrap justify-between items-start gap-y-2 gap-x-2 md:gap-5 w-full mb-4 px-2 md:px-4">
-                {programStruct.map((year) => {
-                  const yearValue = year.year.toLowerCase().replace(" ", "");
-                  const isYearActive = activeYear === yearValue;
+          {/* Main Content Card */}
+          <div className="xl:max-w-lg 2xl:max-w-xl bg-white rounded-xs shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[650px] mb-12 relative z-10">
+          
+          {/* Left Navigation & Content Area */}
+          <div className="flex-grow flex flex-col">
+            {/* Year Tabs */}
+            <div className="flex bg-[#EAEAEA] overflow-x-auto no-scrollbar">
+              {programStruct.map((year) => {
+                const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
+                const isYearActive = activeYear === yearValue;
 
-                  return (
-                    <div
-                      key={year.id}
-                      className="flex-1 flex flex-col items-center relative"
-                    >
-                      {/* Year Node - Clickable if isYear is true */}
-                      <button
-                        onClick={() => {
-                          if (isYear) {
-                            setActiveYear(yearValue);
-                          }
-                        }}
-                        className={`w-full transition-all duration-300 capitalize tracking-wide text-center antialiased
-                          ${
-                            isYear
-                              ? `px-4 py-3 rounded-t-xs border-b-2 font-bold text-[14px] md:text-[16px] cursor-pointer ${
-                                  isYearActive
-                                    ? "text-[#051730] border-[#051730] bg-[#051730]/10"
-                                    : "text-[#051730]/60 border-transparent hover:text-[#051730] hover:bg-[#051730]/5"
-                                }`
-                              : "px-2 pt-2 pb-0 font-semibold text-[13px] md:text-[15px] text-[#051730]/50 cursor-default"
-                          }`}
-                      >
-                        {year.year}
-                      </button>
+                return (
+                  <button
+                    key={year.id}
+                    onClick={() => {
+                      setActiveYear(yearValue);
+                      // Reset semester to first of this year
+                      if (year.semester.length > 0) {
+                        setActiveSemester(
+                          year.semester[0].semestername
+                            .toLowerCase()
+                            .replace(/\s+/g, ""),
+                        );
+                      }
+                    }}
+                    className={`px-8 py-5 text-sm font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
+                      ${
+                        isYearActive
+                          ? "bg-[#051730] text-white"
+                          : "text-[#051730] hover:text-[#051730] hover:bg-[#EAEAEA]"
+                      } cursor-pointer`}
+                  >
+                    {year.year}
+                  </button>
+                );
+              })}
+            </div>
 
-                      {/* Compact Branching Lines */}
-                      {!isYear && year.semester.length > 0 && (
-                        <div className="flex flex-col items-center w-full">
-                          <div
-                            className={`w-[1px] h-3 ${isYearActive ? "bg-[linear-gradient(135deg,#0f172a,#1e293b,#020617)]text-white shadow-[0_10px_30px_rgba(15,23,42,0.35)] border border-slate-700" : "bg-gray-300"}`}
-                          />
+            {/* Semester Tabs */}
+            <div className="flex w-full border-b border-gray-100 bg-white overflow-x-auto no-scrollbar">
+              {programStruct
+                .find(
+                  (y) => y.year.toLowerCase().replace(/\s+/g, "") === activeYear,
+                )
+                ?.semester.map((sem) => {
+                  const semValue = (sem.semestername || "")
+                    .toLowerCase()
+                    .replace(/\s+/g, "");
+                const isSemActive = activeSemester === semValue;
 
-                          <div className="relative flex items-center w-full max-w-[120px]">
-                            <div
-                              className={`w-full h-[1px] ${isYearActive ? "bg-[linear-gradient(135deg,#0f172a,#1e293b,#020617)]text-white shadow-[0_10px_30px_rgba(15,23,42,0.35)] border border-slate-700" : "bg-gray-300"} rounded-full`}
-                            />
-                            <div
-                              className={`absolute left-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[linear-gradient(135deg,#0f172a,#1e293b,#020617)]text-white shadow-[0_10px_30px_rgba(15,23,42,0.35)] border border-slate-700" : "bg-gray-300"} rounded-full`}
-                            />
-                            <div
-                              className={`absolute right-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[linear-gradient(135deg,#0f172a,#1e293b,#020617)]text-white shadow-[0_10px_30px_rgba(15,23,42,0.35)] border border-slate-700" : "bg-gray-300"} rounded-full`}
-                            />
+                return (
+                  <button
+                    key={sem.id}
+                    onClick={() => setActiveSemester(semValue)}
+                    className={`flex-1 px-6 py-4 text-lg font-semibold transition-all cursor-pointer duration-300 relative whitespace-nowrap
+                      ${isSemActive ? "text-[#051730]" : "text-[#051730] hover:text-[#051730]"}
+                    `}
+                  >
+                    {sem.semestername}
+                    <div 
+                      className={`absolute bottom-0 left-0 w-full h-1 transition-all duration-300
+                        ${isSemActive ? "bg-[#051730]" : "bg-[#EAEAEA]"}
+                      `} 
+                    />
+                  </button>
+                );
+              })}
+            </div>
 
-                            {/* Terminal Dots */}
-                            <div
-                              className={`absolute left-0 top-3 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${isYearActive ? "bg-[#051730]" : "bg-gray-300"}`}
-                            />
-                            <div
-                              className={`absolute right-0 top-3 translate-x-1/2 w-1.5 h-1.5 rounded-full ${isYearActive ? "bg-[#051730]" : "bg-gray-300"}`}
-                            />
+            {/* Subjects List */}
+            <div className="flex-grow xl:px-4 2xl:px-6 py-4 overflow-y-auto max-h-[500px] bg-white scrollbar-thin scrollbar-thumb-gray-200">
+              {programStruct.map((year) => {
+                const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
+                if (activeYear !== yearValue) return null;
+
+                return (
+                  <div key={year.id} className="animate-in fade-in slide-in-from-bottom-2 duration-500">
+                    {year.semester.map((sem) => {
+                      const semValue = (sem.semestername || "")
+                        .toLowerCase()
+                        .replace(/\s+/g, "");
+                      if (activeSemester !== semValue) return null;
+
+                      return (
+                        <div key={sem.id} className="space-y-4">
+                          <div className="grid grid-cols-1 md:grid-cols-1 gap-1">
+                            {sem.subjects
+                              .filter((sub) => sub.subjectname?.trim() || sub.course_name?.[0]?.sub_name?.trim())
+                              .map((sub) => (
+                                <div key={sub.id} className="group">
+                                  {sub.course_name && sub.course_name.length > 0 && sub.course_name[0]?.sub_name ? (
+                                    <Accordion type="single" collapsible className="w-full">
+                                      <AccordionItem value="content" className="border-none">
+                                        <AccordionTrigger className="py-2 hover:no-underline group">
+                                          <div className="flex items-center gap-4 text-left">
+                                            <IoArrowForwardCircleOutline className="w-6 h-6 text-[#051730] flex-shrink-0 group-hover:scale-110 transition-transform" />
+                                            <span className="text-lg font-medium text-[#051730] group-hover:text-[#051730] transition-colors">
+                                              {sub.subjectname}
+                                            </span>
+                                          </div>
+                                        </AccordionTrigger>
+                                        <AccordionContent className="pl-10 pt-2 text-gray-500 leading-relaxed italic border-l-2 border-[#051730]/10 ml-3">
+                                          <div
+                                            dangerouslySetInnerHTML={{
+                                              __html: sub.course_name[0].sub_name,
+                                            }}
+                                          />
+                                        </AccordionContent>
+                                      </AccordionItem>
+                                    </Accordion>
+                                  ) : (
+                                    <div className="flex items-center gap-4 py-2">
+                                      <IoArrowForwardCircleOutline className="w-6 h-6 text-[#051730] flex-shrink-0" />
+                                      <span className="text-[18px] font-medium text-gray-700">
+                                        {sub.subjectname}
+                                      </span>
+                                    </div>
+                                  )}
+                                </div>
+                              ))}
                           </div>
 
-                          {/* Minimal Semester Nodes - ONLY CLICKABLE PART */}
-                          <div className="flex justify-between w-full mt-5 gap-4">
-                            {year.semester.map((sem) => {
-                              const semValue = sem.semestername
-                                .toLowerCase()
-                                .replace(" ", "");
-                              const isSemActive =
-                                activeSemester === semValue && isYearActive;
+                          {/* Action Buttons at bottom of list */}
+                          <div className="mt-10 flex flex-col md:flex-row items-center justify-start gap-4 border-t border-gray-100 pt-8">
+                            {sem.pdfbtns?.map((btn) => {
+                              const text = btn?.buttontext?.toLowerCase() || "";
+                              const isDark =
+                                text.includes("minor") ||
+                                text.includes("handbook");
 
                               return (
-                                <button
-                                  key={sem.id}
-                                  onClick={() => {
-                                    setActiveYear(yearValue);
-                                    setActiveSemester(semValue);
-                                  }}
-                                  className={`flex flex-row gap-1 items-center justify-center flex-1 transition-all duration-300 py-[6px] rounded-sm border whitespace-nowrap
+                                <CommonLeadPopup
+                                  key={btn?.id}
+                                  buttonText={
+                                    <div className="flex items-center gap-2">
+                                      <Download className="w-4 h-4" />
+                                      <span className="font-semibold tracking-tight text-sm xl:text-sm 2xl:text-base">
+                                        {btn?.buttontext}
+                                      </span>
+                                    </div>
+                                  }
+                                  buttonClassName={`px-4 3xl:px-6 3xl:py-4 py-3 rounded-sm transition-all duration-300 flex items-center justify-center border-2 w-full md:w-auto min-w-[160px]
                                     ${
-                                      isSemActive
-                                        ? "bg-[linear-gradient(135deg,#f2f2fd_0%,#e4ecff_40%,#d6e4ff_70%,#c7dcff_100%)] text-[#051730] shadow-lg border-[#c7dcff]"
-                                        : "bg-[#051730]/5 border-white/20 text-[#051730]/80 hover:text-[#051730] hover:bg-white/60 "
-                                    } cursor-pointer`}
-                                >
-                                  <span className="text-[13px] sm:text-[15px] font-medium capitalize tracking-tight sm:tracking-wide antialiased whitespace-nowrap">
-                                    {sem.semestername}
-                                  </span>
-                                </button>
+                                      isDark
+                                        ? "bg-[#051730] text-white border-[#051730] hover:bg-[#0a264a]"
+                                        : "bg-white text-[#051730] border-[#051730] hover:bg-gray-50"
+                                    }`}
+                                  redirectUrl={btn?.buttonlink || "#"}
+                                  form_name={btn?.buttontext || "Action"}
+                                />
                               );
                             })}
                           </div>
                         </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Subjects List - Minimalistic Layout */}
-            <div className="flex-grow  px-2 overflow-y-auto max-h-[700px] scrollbar-thin scrollbar-thumb-gray-100 bg-white/5 mb-4">
-              {programStruct.map((year) => {
-                const yearValue = year.year.toLowerCase().replace(" ", "");
-                return activeYear === yearValue ? (
-                  <div
-                    key={year.id}
-                    className="animate-in fade-in duration-500"
-                  >
-                    {year.semester.length > 0 ? (
-                      <div className="flex flex-col gap-4">
-                        {year.semester.map((sem) => {
-                          const semValue = sem.semestername
-                            ?.toLowerCase()
-                            ?.replace(" ", "");
-                          return isYear || activeSemester === semValue ? (
-                            <div
-                              key={sem.id}
-                              className="animate-in fade-in duration-300"
-                            >
-                              {/* Semester Heading - Hidden if isYear is true and it's the only semester, otherwise show for grouping */}
-                              {( !isYear || year.semester.length > 1 ) && (
-                                <div className="mb-4">
-                                  <h4 className="text-[18px] md:text-[20px] font-bold text-[#051730] capitalize flex items-center gap-2">
-                                    <span className="w-1.5 h-6 bg-[#051730] rounded-full"></span>
-                                    {sem.semestername}
-                                  </h4>
-                                </div>
-                              )}
-
-                              {/* Subject Grid - Compact Cards */}
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {sem.subjects
-                                  .filter((sub) => {
-                                    const hasTitle = sub.subjectname?.trim();
-                                    const hasDetails =
-                                      sub.course_name?.[0]?.sub_name?.trim();
-                                    return hasTitle || hasDetails;
-                                  })
-                                  .map((sub) => (
-                                    <div
-                                      key={sub.id}
-                                      className="flex items-start bg-gradient-to-br from-[#f2f2fd] to-[#e4ecff] backdrop-blur-md rounded-lg p-3 md:px-4 md:py-3 transition-all duration-300 antialiased shadow-sm hover:shadow-md hover:bg-white/70"
-                                    >
-                                      <div className="flex items-center w-full gap-3">
-                                        <div className="flex-grow min-w-0">
-                                          {!(
-                                            sub.course_name &&
-                                            sub.course_name.length > 0 &&
-                                            sub.course_name[0]?.sub_name
-                                          ) ? (
-                                            <>
-                                              <div className="flex items-center w-full gap-3 ">
-                                                <div className="w-9 h-9 rounded-full bg-[#051730] flex items-center justify-center flex-shrink-0 border border-[#051730]/10 mt-0.5">
-                                                  <IoBookOutline className="w-5 h-5 text-white" />
-                                                </div>
-                                                <h5 className="text-[15px] font-semibold text-[#051730] leading-tight">
-                                                  {sub.subjectname}
-                                                </h5>
-                                              </div>
-                                            </>
-                                          ) : (
-                                            sub.course_name &&
-                                            sub.course_name.length > 0 &&
-                                            sub.course_name[0]?.sub_name && (
-                                              <Accordion
-                                                type="single"
-                                                collapsible
-                                                className="w-full"
-                                              >
-                                                <AccordionItem
-                                                  value="content"
-                                                  className="border-none"
-                                                >
-                                                  <AccordionTrigger className="py-1 cursor-pointer items-center text-[10px] font-semibold text-gray-400 uppercase tracking-wider hover:text-[#051730] hover:no-underline">
-                                                    <div className="flex items-center w-full gap-3">
-                                                      <div className="w-9 h-9 rounded-full bg-[#051730] flex items-center justify-center flex-shrink-0 border border-[#051730]/10 mt-0.5">
-                                                        <IoBookOutline className="w-5 h-5 text-white" />
-                                                      </div>
-                                                      <h5 className="text-[15px] font-semibold text-gray-800 leading-tight">
-                                                        {sub.subjectname}
-                                                      </h5>
-                                                    </div>
-                                                  </AccordionTrigger>
-                                                  <AccordionContent className="mt-2 pt-2 border-t border-gray-100 text-[12px] text-gray-500 leading-relaxed italic">
-                                                    <div
-                                                      dangerouslySetInnerHTML={{
-                                                        __html:
-                                                          sub.course_name[0]
-                                                            .sub_name,
-                                                      }}
-                                                    />
-                                                  </AccordionContent>
-                                                </AccordionItem>
-                                              </Accordion>
-                                            )
-                                          )}
-                                        </div>
-                                      </div>
-                                    </div>
-                                  ))}
-                              </div>
-
-                              {/* Compact Action Banner - Aligned & Standardized */}
-                              <div className="mt-8 flex flex-col md:flex-row items-start gap-4">
-                                {sem.pdfbtns?.map((btn) => {
-                                  const text = btn?.buttontext?.toLowerCase() || "";
-                                  const isHandbook = text.includes("handbook");
-                                  const isOpenElective = text.includes("elective") || text.includes("added");
-
-                                  if (isOpenElective) {
-                                    return (
-                                      <CommonLeadPopup
-                                        key={btn?.id}
-                                        buttonText={
-                                          <div className="flex items-center gap-4 px-6 py-3 bg-[#051730] rounded-lg text-white shadow-md transition-all duration-300 hover:bg-[#051730]/90">
-                                            <Download className="w-5 h-5" />
-                                            <span className="text-[14px] md:text-[16px] font-semibold whitespace-nowrap">
-                                              {btn?.buttontext}
-                                            </span>
-                                          </div>
-                                        }
-                                        buttonClassName="w-full md:w-auto"
-                                        redirectUrl={btn?.buttonlink || "#"}
-                                        form_name={btn?.buttontext || "Action"}
-                                      />
-                                    );
-                                  }
-
-                                  return (
-                                    <CommonLeadPopup
-                                      key={btn?.id}
-                                      buttonText={
-                                        <div className="flex items-center gap-4 px-6 py-3 bg-white/70 backdrop-blur-md border border-[#051730]/20 rounded-lg text-[#051730] shadow-sm transition-all duration-300 hover:bg-white">
-                                          {isHandbook ? (
-                                            <FileText className="w-5 h-5" />
-                                          ) : (
-                                            <Download className="w-5 h-5" />
-                                          )}
-                                          <span className="text-[14px] md:text-[16px] font-semibold whitespace-nowrap">
-                                            {btn?.buttontext}
-                                          </span>
-                                        </div>
-                                      }
-                                      buttonClassName="w-full md:w-auto"
-                                      redirectUrl={btn?.buttonlink || "#"}
-                                      form_name={btn?.buttontext || "Action"}
-                                    />
-                                  );
-                                })}
-                              </div>
-                            </div>
-                          ) : null;
-                        })}
-                      </div>
-                    ) : (
-                      <div className="flex flex-col items-center justify-center py-20 text-gray-300">
-                        <BookOpen className="w-10 h-10 mb-2 opacity-10" />
-                        <p className="text-[11px] font-bold uppercase tracking-widest opacity-40">
-                          No data available
-                        </p>
-                      </div>
-                    )}
+                      );
+                    })}
                   </div>
-                ) : null;
+                );
               })}
             </div>
           </div>
         </div>
       </div>
-    );
-  };
+    </div>
+  </div>
+);
+};
 
 export default ProgrammeStructure;
 

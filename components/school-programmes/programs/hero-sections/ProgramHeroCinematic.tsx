@@ -139,7 +139,7 @@ const ProgramHeroCinematic = ({
         <div className="max-w-[1440px] mx-auto px-0 xl:px-8 2xl:px-0 relative">
           {/* Centered Heading Badge */}
           <div className="absolute -top-[48px] md:-top-[62px] left-1/2 -translate-x-1/2 bg-gray-50 md:bg-white px-6 py-2 rounded-t-sm flex items-center justify-center ">
-            <h5 className="text-[#333] text-[14px] sm:text-lg font-bold whitespace-nowrap">
+            <h5 className="text-[#333] text-[14px] sm:text-[18px] font-semibold whitespace-nowrap">
               {dreamcareerSection?.heading}
             </h5>
           </div>
