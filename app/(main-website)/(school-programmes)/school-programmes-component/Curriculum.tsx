@@ -26,17 +26,17 @@ const Curriculum = ({
 }: Props) => {
   return (
     <>
-    <section className="relative py-8 md:py-0 overflow-hidden bg-[linear-gradient(to_bottom_right,#f1f5ff,#f8fafc,#eef4ff)]">
+    <section className="relative overflow-hidden bg-[linear-gradient(to_bottom_right,#f1f5ff,#f8fafc,#eef4ff)]">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/syllabus_8ed0ea61db.png"
           fill
-          className="object-cover"
+          className="object-cover xl:object-top 2xl:object-center"
           alt="Curriculum Background"
           priority
         />
-        {/* <div className="absolute inset-0 bg-white/20 backdrop-blur-xs"></div> */}
+   
       </div>
 
       <div className="relative z-10 max-w-[1440px] mx-auto w-full md:px-8">
