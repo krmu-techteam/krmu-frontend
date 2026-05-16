@@ -757,12 +757,12 @@ const Hero = () => {
               <br />
               <div className="flex flex-col gap-5 my-5">
                 <Link
-                  href="https://www.krmangalam.edu.in/pdfs/student-discipline-committee-2024.pdf"
+                  href="www.krmangalam.edu.in/pdfs/Constitution-of-Student-Discipline-Committee-of-KRMU-2025.pdf"
                   target="_blank" rel="noopener noreferrer"
                   className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center justify-center"
                 >
                   <FileText color="#fff" />
-                  STUDENT DISCIPLINE COMMITTEE 2024
+                  STUDENT DISCIPLINE COMMITTEE
                 </Link>
                 <Link
                   href="https://www.krmangalam.edu.in/pdfs/COC-Revised-Handbook-of-COC-Professional-Ethics-and-Human-Values.pdf"
