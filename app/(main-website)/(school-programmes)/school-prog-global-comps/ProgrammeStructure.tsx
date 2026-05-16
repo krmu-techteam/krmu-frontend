@@ -98,8 +98,8 @@ const ProgrammeStructure = ({
             </div>
           )}
 
-          {/* Main Content Card */}
-          <div className="xl:max-w-lg 2xl:max-w-xl bg-white rounded-xs shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[600px] mb-0 md:mb-12 relative z-10">
+          {/* Main Content Area - Clean stack without card boundaries to match image */}
+          <div className="xl:max-w-lg 2xl:max-w-xl flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10">
           
           {/* Left Navigation & Content Area */}
           <div className="flex-grow flex flex-col">
@@ -123,11 +123,11 @@ const ProgrammeStructure = ({
                         );
                       }
                     }}
-                    className={`px-8 py-5 text-sm font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
+                    className={`px-8 py-4 text-sm font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
                       ${
                         isYearActive
                           ? "bg-[#051730] text-white"
-                          : "text-[#051730] hover:text-[#051730] hover:bg-[#EAEAEA]"
+                          : "text-[#051730] bg-[#EAEAEA] hover:bg-[#DEDEDE]"
                       } cursor-pointer`}
                   >
                     {year.year}
@@ -136,8 +136,8 @@ const ProgrammeStructure = ({
               })}
             </div>
 
-            {/* Semester Tabs */}
-            <div className="flex w-full border-b border-gray-100 bg-white overflow-x-auto no-scrollbar">
+            {/* Semester Tabs - Transparent with White Text as per screenshot */}
+            <div className="flex w-full border-white bg-transparent overflow-x-auto no-scrollbar">
               {programStruct
                 .find(
                   (y) => y.year.toLowerCase().replace(/\s+/g, "") === activeYear,
@@ -152,14 +152,14 @@ const ProgrammeStructure = ({
                   <button
                     key={sem.id}
                     onClick={() => setActiveSemester(semValue)}
-                    className={`flex-1 px-6 py-4 text-lg font-semibold transition-all cursor-pointer duration-300 relative whitespace-nowrap
-                      ${isSemActive ? "text-[#051730]" : "text-[#051730] hover:text-[#051730]"}
+                    className={`flex-1 px-6 py-4 text-xl font-semibold text-shadow-[0.5px_0.5px_1px_black] transition-all cursor-pointer duration-300 relative whitespace-nowrap
+                      ${isSemActive ? "text-white" : "text-white/70 hover:text-white"}
                     `}
                   >
                     {sem.semestername}
                     <div 
                       className={`absolute bottom-0 left-0 w-full h-1 transition-all duration-300
-                        ${isSemActive ? "bg-[#051730]" : "bg-[#EAEAEA]"}
+                        ${isSemActive ? "bg-[#003879]" : "bg-white"}
                       `} 
                     />
                   </button>
@@ -167,14 +167,14 @@ const ProgrammeStructure = ({
               })}
             </div>
 
-            {/* Subjects List - Scrollable Area */}
-            <div className="flex-grow px-2 xl:px-4 2xl:px-6 py-4 overflow-y-auto max-h-[400px] bg-white scrollbar-thin scrollbar-thumb-gray-200">
+            {/* Subjects List - Transparent Glass Area as per screenshot */}
+            <div className="flex-grow px-2 xl:px-4 2xl:px-6 py-6 overflow-y-auto min-h-[400px] max-h-[400px] bg-transparent no-scrollbar">
               {programStruct.map((year) => {
                 const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                 if (activeYear !== yearValue) return null;
 
                 return (
-                  <div key={year.id} className="animate-in fade-in slide-in-from-bottom-2 duration-500">
+                  <div key={year.id} className="animate-in fade-in duration-500">
                     {year.semester.map((sem) => {
                       const semValue = (sem.semestername || "")
                         .toLowerCase()
@@ -193,8 +193,8 @@ const ProgrammeStructure = ({
                                       <AccordionItem value="content" className="border-none">
                                         <AccordionTrigger className="py-2 hover:no-underline group">
                                           <div className="flex items-center gap-4 text-left">
-                                            <IoArrowForwardCircleOutline className="w-6 h-6 text-[#051730] flex-shrink-0 group-hover:scale-110 transition-transform" />
-                                            <span className="text-lg font-medium text-[#051730] group-hover:text-[#051730] transition-colors">
+                                            <IoArrowForwardCircleOutline className="w-6 h-6 text-white flex-shrink-0 group-hover:scale-110 transition-transform" />
+                                            <span className="text-lg font-medium text-white transition-colors">
                                               {sub.subjectname}
                                             </span>
                                           </div>
@@ -210,8 +210,8 @@ const ProgrammeStructure = ({
                                     </Accordion>
                                   ) : (
                                     <div className="flex items-center gap-4 py-2">
-                                      <IoArrowForwardCircleOutline className="w-6 h-6 text-[#051730] flex-shrink-0" />
-                                      <span className="text-md md:text-[18px] font-medium text-gray-700">
+                                      <IoArrowForwardCircleOutline className="w-6 h-6 text-white flex-shrink-0" />
+                                      <span className="text-md md:text-[18px] font-medium text-white/90">
                                         {sub.subjectname}
                                       </span>
                                     </div>
@@ -227,8 +227,8 @@ const ProgrammeStructure = ({
               })}
             </div>
 
-            {/* Action Buttons - Fixed at Bottom */}
-            <div className="px-2 xl:px-4 2xl:px-6 py-6 border-t border-gray-100 bg-white">
+            {/* Action Buttons Container - Glassy Bottom - Responsive Stack for Mobile */}
+            <div className="px-4 xl:px-6 py-8 bg-transparent min-h-[100px] flex flex-col md:flex-row items-center justify-center gap-4">
               {programStruct
                 .find((y) => y.year.toLowerCase().replace(/\s+/g, "") === activeYear)
                 ?.semester.find((s) => (s.semestername || "").toLowerCase().replace(/\s+/g, "") === activeSemester)
@@ -240,18 +240,18 @@ const ProgrammeStructure = ({
                     <CommonLeadPopup
                       key={btn?.id}
                       buttonText={
-                        <div className="flex items-center gap-2">
-                          <Download className="w-4 h-4" />
-                          <span className="font-semibold tracking-tight text-sm xl:text-sm 2xl:text-base">
+                        <div className="flex items-center gap-2 md:gap-3">
+                          <Download className="w-4 h-4 md:w-5 md:h-5" />
+                          <span className="font-semibold tracking-tight text-sm md:text-lg whitespace-nowrap">
                             {btn?.buttontext}
                           </span>
                         </div>
                       }
-                      buttonClassName={`px-4 3xl:px-6 3xl:py-4 py-3 rounded-sm transition-all duration-300 flex items-center justify-center border-2 w-full md:w-auto min-w-[160px] inline-flex mr-4 last:mr-0
+                      buttonClassName={`px-3 py-3 md:px-6 md:py-4 rounded-md transition-all duration-300 flex items-center justify-center w-full md:w-auto shadow-lg
                         ${
                           isDark
-                            ? "bg-[#051730] text-white border-[#051730] hover:bg-[#0a264a]"
-                            : "bg-white text-[#051730] border-[#051730] hover:bg-gray-50"
+                            ? "bg-[#001732] text-white hover:bg-[#0a264a]"
+                            : "bg-white text-black hover:bg-gray-100"
                         }`}
                       redirectUrl={btn?.buttonlink || "#"}
                       form_name={btn?.buttontext || "Action"}

@@ -43,6 +43,7 @@ import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 // ====== BSC-FINANCE-2026 LANDING PAGE IMPORTS ======
 import BscFinance2026Page from "@/app/(landing-page)/admission/bsc-finance-2026/page";
 import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
+import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -413,7 +414,8 @@ const page = async ({ params }: Props) => {
           />
         )}
 
-        <ConnectWithUs />
+        {/* <ConnectWithUs /> */}
+        <ActionCards />
       </main>
     </>
   );

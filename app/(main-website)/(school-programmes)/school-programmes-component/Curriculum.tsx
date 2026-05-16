@@ -34,12 +34,11 @@ const Curriculum = ({
           fill
           className="object-cover xl:object-top 2xl:object-center"
           alt="Curriculum Background"
-          priority
         />
-   
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10" />
       </div>
 
-      <div className="relative z-10 max-w-[1440px] mx-auto w-full md:px-8">
+      <div className="relative z-20 max-w-[1440px] mx-auto w-full md:px-8">
         <ProgrammeStructure
           currbtn={currbtn}
           currFormContainerId={currFormContainerId}
