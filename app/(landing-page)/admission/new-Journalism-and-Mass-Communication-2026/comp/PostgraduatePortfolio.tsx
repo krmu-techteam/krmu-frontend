@@ -26,7 +26,7 @@ export default function PostgraduatePortfolio({
           <h1 className="text-3xl sm:text-4xl md:text-[52px] leading-tight font-serif font-normal text-[#131B2E]">
             See what our postgraduates create
           </h1>
-          <p className="mt-4 text-base sm:text-lg md:text-[20px] text-[#000000] leading-7 sm:leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg md:text-[20px] text-[#000000] leading-6">
             The MA programme is designed so that every semester adds to your
             portfolio and your research profile.
           </p>
@@ -77,7 +77,7 @@ export default function PostgraduatePortfolio({
                 postgraduate degree
               </h2>
 
-              <p className="mt-4 text-base sm:text-lg md:text-[18px] text-[#000000] leading-7">
+              <p className="mt-4 text-base sm:text-lg md:text-[18px] text-[#000000] leading-6">
                 you are carrying work you can show to editors, hiring managers,
                 collaborators and investors.
               </p>

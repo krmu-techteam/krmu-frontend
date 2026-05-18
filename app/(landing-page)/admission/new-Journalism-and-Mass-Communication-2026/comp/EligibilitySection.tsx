@@ -18,19 +18,19 @@ const eligibilityData = [
 
 const admissionSteps = [
   {
-    step: "Step01",
+    step: "Step-01",
     text: "Submit the online application form",
   },
   {
-    step: "Step02",
+    step: "Step-02",
     text: "Appear for the university level selection process, as applicable (test, portfolio review or interview)",
   },
   {
-    step: "Step03",
+    step: "Step-03",
     text: "Receive admission offer, complete fee payment and document verification",
   },
   {
-    step: "Step04",
+    step: "Step-04",
     text: "Attend orientation and begin classes at SEMCE",
   },
 ];
@@ -56,7 +56,7 @@ const EligibilitySection = ({ heroSection }: { heroSection: any }) => {
                   {item.id}
                 </span>
 
-                <p className="text-[#44474F] text-[14px] font-normal leading-relaxed">
+                <p className="text-[#44474F] text-[14px] font-normal leading-5">
                   {item.text}
                 </p>
               </div>
@@ -101,7 +101,7 @@ const EligibilitySection = ({ heroSection }: { heroSection: any }) => {
                     <span className="text-[#FF9D00] font-semibold text-[14px] whitespace-nowrap text-center">
                       {item.step}
                     </span>
-                    <p className="text-[#FFFFFF] text-[13px] font-normal leading-snug text-center xl:text-left">
+                    <p className="text-[#FFFFFF] text-[13px] font-normal leading-4 text-center xl:text-left">
                       {item.text}
                     </p>
                   </div>
@@ -118,7 +118,7 @@ const EligibilitySection = ({ heroSection }: { heroSection: any }) => {
                 Fees and payment
               </h2>
 
-              <p className="text-[#FFFFFF] text-[13px] md:text-[14px] leading-relaxed">
+              <p className="text-[#FFFFFF] text-[13px] md:text-[14px] leading-5">
                 The MA (Journalism & Mass Communication) is a two year programme
                 spread across four semesters. Fees are charged annually and paid
                 semester wise.
@@ -134,7 +134,7 @@ const EligibilitySection = ({ heroSection }: { heroSection: any }) => {
                 ₹1,20,000 /-
               </h3>
 
-              <p className="text-[#FFFFFF] text-[11px] md:text-sm mt-1 leading-relaxed">
+              <p className="text-[#FFFFFF] text-[11px] md:text-sm mt-1 leading-5">
                 (Hostel, transport and other facilities are charged separately
                 as per university norms.)
               </p>

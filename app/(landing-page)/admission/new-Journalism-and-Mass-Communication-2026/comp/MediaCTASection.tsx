@@ -14,7 +14,7 @@ const MediaCTASection = ({ heroSection }: { heroSection: any }) => {
             <h2 className="max-w-5xl text-white font-serif font-bold text-3xl sm:text-4xl md:text-[50px] leading-tight md:leading-snug">
               Ready to shape the future of media?
             </h2>
-            <p className="mt-5 md:mt-8 max-w-4xl text-[#CBD5E1] text-base md:text-[20px] leading-relaxed">
+            <p className="mt-5 md:mt-8 max-w-4xl text-[#CBD5E1] text-base md:text-[20px] leading-6">
               Applications for the upcoming academic session are now open.
               Secure your place in the next cohort of media leaders.
             </p>

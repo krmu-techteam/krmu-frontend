@@ -14,7 +14,7 @@ const AutoScrollPlugin = (AutoScroll as any).default ?? AutoScroll;
 
 const ProgrammesHero = ({ heroSection }: any) => {
   return (
-    <section className="pt-18 sm:pt-24 lg:pt-28 min-h-screen bg-[#f3f3f7] flex flex-col lg:flex-row items-stretch">
+    <section className="pt-18 sm:pt-20 lg:pt-28 min-h-screen bg-[#f3f3f7] flex flex-col lg:flex-row items-stretch">
       <div className="w-full lg:w-1/2 flex items-center justify-center px-5 sm:px-8 pt-10 pb-10 sm:pt-12 sm:pb-12 lg:px-20 lg:pt-4 lg:pb-4 order-2 lg:order-1">
         <div className="max-w-xl w-full">
           <h1 className="mt-[8px] text-[#07255B] font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight sm:leading-[65px] lg:leading-[75px] tracking-tight">
@@ -28,14 +28,14 @@ const ProgrammesHero = ({ heroSection }: any) => {
             <br />
             Economy
           </h1>
-          <p className="mt-4 text-[#44474F] text-base sm:text-lg font-normal leading-7 sm:leading-[32px]">
+          <p className="mt-4 text-[#44474F] text-base sm:text-lg font-normal line-height-[5px] leading-7">
             A 2 year postgraduate programme for journalists, storytellers and
             media professionals who want to lead newsrooms, content teams and
             creator-led brands in a digital first world.
           </p>
           <div className="mt-3 sm:mt-5 flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5">
-            <button className="w-full flex items-center justify-center gap-2 sm:w-auto bg-[#0161B0] cursor-pointer hover:bg-[#095999] text-white px-8 py-3 rounded-md subpixel-antialiased font-medium text-base sm:text-lg shadow-md transition text-center">
-              <Download className="w-5 h-5" />
+            <button className="w-full flex items-center justify-center gap-2 sm:flex-1 bg-[#0161B0] cursor-pointer hover:bg-[#095999] text-white px-8 py-3 rounded-md subpixel-antialiased font-medium text-base sm:text-lg shadow-md transition text-center whitespace-nowrap">
+              <Download className="w-5 h-5 shrink-0" />
               <Link
                 href="https://www.krmangalam.edu.in/pdfs/handbooks/majmc-handbook-2025-27.pdf"
                 target="_blank"
@@ -45,7 +45,7 @@ const ProgrammesHero = ({ heroSection }: any) => {
             </button>
             <NpfPopup
               formId="31c1452015d32698095f833b3e7eb9c5"
-              btnClass={`hero-common-btn-b  ${heroSection.herobtn.buttonclass || ""} !flex !items-center !justify-center gap-2 !w-full sm:!w-auto !bg-[#E21F21] hover:!bg-[#db3123] !text-white !font-medium !text-base sm:!text-lg !px-8 !py-3 !rounded-md !shadow-md transition !text-center`}
+              btnClass={`hero-common-btn-b  ${heroSection.herobtn.buttonclass || ""} !flex !items-center !justify-center gap-2 !w-full sm:!flex-1 !bg-[#E21F21] hover:!bg-[#db3123] !text-white !font-medium !text-base sm:!text-lg !px-8 !py-3 !rounded-md !shadow-md transition !text-center !whitespace-nowrap`}
               btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
               showIcon={true}
             />
@@ -139,14 +139,13 @@ const ProgrammesHero = ({ heroSection }: any) => {
           </div>
         </div>
       </div>
-
-      <div className="w-full lg:w-1/2 relative min-h-[280px] sm:min-h-[380px] md:min-h-[440px] lg:min-h-[auto] order-1 lg:order-2">
+      <div className="w-full lg:w-1/2 relative min-h-[280px] sm:min-h-[380px] md:min-h-[500px] lg:min-h-[auto] order-1 lg:order-2">
         <Image
           src="/new-Programmes-Hero/new programmes hero.jpg"
           alt="Journalist"
           fill
           priority
-          className="object-cover object-top sm:object-center"
+          className="object-cover object-top lg:object-center"
         />
       </div>
     </section>

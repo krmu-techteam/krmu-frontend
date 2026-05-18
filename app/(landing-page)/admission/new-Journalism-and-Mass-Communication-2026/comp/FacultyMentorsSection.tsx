@@ -74,7 +74,7 @@ export default function FacultyMentorsSection() {
             <h2 className="text-[#001B44] font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight font-medium">
               Faculty & Mentors
             </h2>
-            <p className="mt-4 sm:mt-6 text-[#001B44] text-sm sm:text-base md:text-lg leading-7">
+            <p className="mt-4 sm:mt-6 text-[#001B44] text-sm sm:text-base md:text-lg leading-6">
               A faculty mix that brings together newsroom experience, creator
               economy work and academic research.
             </p>
@@ -115,7 +115,7 @@ export default function FacultyMentorsSection() {
                     <h3 className="text-[#000000] font-serif text-xl sm:text-2xl lg:text-xl leading-snug">
                       {faculty.name}
                     </h3>
-                    <div className="mt-1 sm:mt-2 space-y-0.5">
+                    <div className="mt-0.5 sm:mt-1 space-y-0.5">
                       <p className="text-[#001B44] text-[11px] sm:text-xs tracking-wide font-medium uppercase">
                         {faculty.designation}
                       </p>
