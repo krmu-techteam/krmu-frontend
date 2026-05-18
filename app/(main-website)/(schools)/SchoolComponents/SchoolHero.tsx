@@ -108,7 +108,7 @@ const SchoolHero = ({
           backgroundSize: "cover",
         }}
       >
-        <div className="absolute -bottom-12 left-1/2 -translate-x-1/2">
+        <div className="hidden xl:block absolute -bottom-12 left-1/2 -translate-x-1/2">
           <Image
             src={middleimg}
             width={492}
@@ -181,41 +181,53 @@ const SchoolHero = ({
               </div>
             </div>
           ) : (
-            <div className="max-w-[1850px] mx-auto w-full xl:flex items-start justify-between p-5 sm:p-0 relative z-20">
+            <div className="max-w-[1850px] mx-auto w-full xl:flex items-start justify-between p-0 relative z-20">
               <div className="text-center text-white w-full xl:w-1/2 xl:pr-20">
-                <p className="text-sm md:text-3xl font-medium sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
-                  {subheading}
-                </p>
-                <h1 className="text-2xl md:text-4xl 2xl:text-6xl text-shadow-lg leading-[1.2] font-bold">
-                  {title}
-                </h1>
-                <div className="flex flex-col items-center justify-center gap-3.5 sm:gap-5 mt-0 sm:my-4">
-                  {heroBtns?.map((btn) =>
-                    btn?.buttontext === "Explore Programmes" ? (
-                      <Link
-                        key={btn.id}
-                        href={btn.buttonlink}
-                        className="text-white underline font-medium text-xl"
-                      >
-                        {btn.buttontext}
-                      </Link>
-                    ) : (
-                      <Link
-                        key={btn.id} /* Rectangle 970 */
-                        href={btn.buttonlink}
-                        className={`text-white w-full sm:w-fit flex justify-center items-center px-6 py-3 rounded-lg gap-4 font-semibold bg-[#001732] transition-all ${
-                          btn.buttonclass || ""
-                        }`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Download color="#fff" /> {btn.buttontext}
-                      </Link>
-                    ),
-                  )}
+                <div className="xl:hidden flex justify-center">
+                  <Image
+                    src={middleimg}
+                    width={492}
+                    height={600}
+                    alt={title || ""}
+                    className="object-contain z-10 h-[400px] relative"
+                    priority
+                  />
                 </div>
-                <div className="max-w-[450px] mx-auto my-2.5 sm:mt-16 p-3 rounded-[10px] alumniHeaderCarousel brightness-0 invert">
-                  <ConnectingDreamSlider logos={alumniLogos} />
+                <div className="bg-[#001732] xl:bg-transparent p-5 xl:p-0">
+                  <p className="text-sm md:text-3xl font-medium sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
+                    {subheading}
+                  </p>
+                  <h1 className="text-2xl md:text-4xl 2xl:text-6xl text-shadow-lg leading-[1.2] font-bold">
+                    {title}
+                  </h1>
+                  <div className="flex flex-col items-center justify-center gap-3.5 sm:gap-5 mt-0 sm:my-4">
+                    {heroBtns?.map((btn) =>
+                      btn?.buttontext === "Explore Programmes" ? (
+                        <Link
+                          key={btn.id}
+                          href={btn.buttonlink}
+                          className="text-white underline font-medium text-xl"
+                        >
+                          {btn.buttontext}
+                        </Link>
+                      ) : (
+                        <Link
+                          key={btn.id} /* Rectangle 970 */
+                          href={btn.buttonlink}
+                          className={`text-white w-full sm:w-fit flex justify-center items-center px-6 py-3 rounded-lg gap-4 font-semibold bg-[#001732] transition-all ${
+                            btn.buttonclass || ""
+                          }`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Download color="#fff" /> {btn.buttontext}
+                        </Link>
+                      ),
+                    )}
+                  </div>
+                  <div className="max-w-[450px] mx-auto my-2.5 sm:mt-16 p-3 rounded-[10px] alumniHeaderCarousel brightness-0 invert">
+                    <ConnectingDreamSlider logos={alumniLogos} />
+                  </div>
                 </div>
               </div>
               <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end">
