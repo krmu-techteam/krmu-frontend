@@ -35,20 +35,9 @@ const Hero = () => {
               members indulge in any kind of discrimination against any
               community or category of students.
             </p>
-
-            <h3 className="mb-5 text-2xl">Objectives</h3>
-
-      <ul className="my-2.5 list-disc pl-5">
-        <li>To encourage minority students to enrol for career orientation programmes to empower and equip them with the necessary skills to choose career options.</li>
-        <li>To facilitate financial support to students of minority communities from governmental agencies and other sources.</li>
-        <li>To handle matters related to depriving student/faculty/staff based on caste, creed, language, ethnicity, gender, different ability.</li>
-        <li>To oversee the provision of equal opportunities for education to minority students and provide inclusive and cohesive working environment for staff.</li>
-        <li>To eliminate discrimination against or harassment of any individual in all forms by prohibiting it and by providing preventive and protective measures to facilitate its eradication and punishments for those who indulge in any form of discrimination or harassment.</li>
-        <li>To promote equality amongst students/staff/faculty belonging to all sections of society.</li>
-      </ul>
           </div>
           <div className="w-full lg:w-1/2 bg-[#343537] text-white rounded-[20px] p-5 background-transparent">
-            <h3 className="mb-5 text-2xl">KRMU Anti-Discrimination Cell shall consist of the following members:</h3>
+            <h3 className="mb-5 text-2xl">KRMU Anti-Discrimination and Minority Committee shall consist of the following members:</h3>
             <div className="table-1 transparent-table committee-table ">
               <table>
                 <thead>
@@ -59,8 +48,8 @@ const Hero = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Prof. (Dr.) J.S Yadav</td>
-                    <td>(Professor and Dean-SOAS)	Chairperson</td>
+                    <td>Prof. (Dr.) J.S Yadav (Professor and Dean-SOAS)</td>
+                    <td>Chairperson</td>
                   </tr>
                   <tr>
                     <td>Dr. P.C Jena (Professor-SOED)</td>
@@ -114,29 +103,21 @@ const Hero = () => {
         <div className="max-w-[1664px] mx-auto w-full p-5 rounded-[20px] background-transparent mt-10 flex flex-col lg:flex-row ">
           <div className="lg:w-1/2 text-white">
             <h4 className="text-xl font-semibold mb-5">
-              Anti-Discrimination and Minority Committee Helpline
+              Anti-Discrimination Cell Helpline
             </h4>
             <p>
               <strong>Email</strong>:{" "}
-              <Link href="mailto:antidiscrimination.cell@krmangalam.edu.in">
-                antidiscrimination.cell@krmangalam.edu.in
+              <Link href="mailto:joginder.singhyadav@krmangalam.edu.in">
+                joginder.singhyadav@krmangalam.edu.in
               </Link>
             </p>
-            {/* <p className="mt-2.5">
+            <p className="mt-2.5">
               <strong>Contact No</strong>:{" "}
               <a href="phn:+919416386060">+919416386060</a>
-            </p> */}
-                          <Link
-                href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Anti-Discrimination-and-Minority-Committee.pdf"
-                target="_blank" rel="noopener noreferrer"
-                className="py-[13px] px-[29px] mt-5 text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
-              >
-                <FileText color="#fff" />
-                Anti Discrimination
-              </Link>
+            </p>
           </div>
           <div className="lg:w-1/2 text-white">
-            {/* <h4 className="text-xl font-semibold mb-5">
+            <h4 className="text-xl font-semibold mb-5">
               Dr. Deepak Kumar (Member Secretary, Anti Discrimination Cell)
             </h4>
             <p>
@@ -148,7 +129,7 @@ const Hero = () => {
             <p className="mt-2.5">
               <strong>Contact No</strong>:{" "}
               <a href="tel:+919568056654">+919568056654</a>
-            </p> */}
+            </p>
           </div>
         </div>
       </section>
@@ -189,14 +170,6 @@ const Hero = () => {
                 <strong>Contact No</strong>:{" "}
                 <a href="tel:9289114766">9289114766</a>
               </p>
-               <Link
-                href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Gender-Sensitization-and-Safety-Committee.pdf"
-                target="_blank" rel="noopener noreferrer"
-                className="py-[13px] px-[29px] mt-5 text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
-              >
-                <FileText color="#fff" />
-                Gender Sensitization and Safety Committee
-              </Link>
             </div>
           </div>
           <div className="w-full lg:w-[58%] committeebox p-5">
@@ -216,44 +189,56 @@ const Hero = () => {
                     <td>Chairperson</td>
                   </tr>
                   <tr>
-                    <td>Dr. Vineet Dahiya, Associate Professor, SOET</td>
+                    <td>Mr. Harshvardhan, Associate Professor, SOET</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Ms. Kanchan Khatreja, Assistant Professor, SOED</td>
+                    <td>Dr. Komal Yadav, Associate Professor, SBAS</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Ms. Mamta Shankar, Assistant Professor, SPRS</td>
+                    <td>Dr. Kanchan Khatreja, Assistant Professor, SOED</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Padmani Koul, Assistant Professor, SOHS</td>
+                    <td>Ms. Mamta Shankar, Associate Professor, SPRS</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Mr. Ashwani Kumar, Assistant Professor, SOET</td>
+                    <td>Dr. Padmani Koul, Assistant Professor, SOLA</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Ms. Sarina, Assistant Professor, SJMC</td>
+                    <td>Dr. Ritwik Ghosh, Assistant Professor, SEMCE</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Ms. Yashasvi Rajawat, Assistant Professor, SOAD</td>
+                    <td>Ar. Mansha Samreen, Associate Professor, SOAD</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Monika Yadav, Assistant Professor, SOMC</td>
+                    <td>Dr. Anumeha Mathur, Assistant Professor, SOMC</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Ms. Prerna (2305170030) B.A. LLB. (Hons.)</td>
-                    <td>Student</td>
+                    <td>Dr. Sunil Chahar, Assistant Professor, SMAS</td>
+                    <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Krishna Sindhwani (2305140045) BBA LLB. (Hons.)</td>
-                    <td>Student</td>
+                    <td>Mr. Sanjay Pandey, Assistant Professor, SOHMCT</td>
+                    <td>Member</td>
+                  </tr>
+                  <tr>
+                    <td>Dr. Ambika Bhandari, Assistant Professor, SOAS</td>
+                    <td>Member</td>
+                  </tr>
+                  <tr>
+                    <td>Ms. Prerna (2305170030) B.A. LL.B. (Hons.)</td>
+                    <td>Member Secretary</td>
+                  </tr>
+                  <tr>
+                    <td>Krishna Sindhwani (2305140045) BBA LL.B. (Hons.)</td>
+                    <td>Member Secretary</td>
                   </tr>
                   <tr>
                     <td>Dr. Megha, Assistant Professor, SOLS</td>
@@ -399,12 +384,12 @@ const Hero = () => {
 
             <div className="my-5 flex flex-col items-start gap-5">
               <Link
-                href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Internal-Committee-of-KRMU.pdf"
+                href="https://www.krmangalam.edu.in/pdfs/Committee-ICC-2023.pdf"
                 target="_blank" rel="noopener noreferrer"
                 className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
               >
                 <FileText color="#fff" />
-                Internal committee
+                Committee ICC 2023
               </Link>
               <Link
                 href="#"
@@ -470,7 +455,7 @@ const Hero = () => {
               </p>
               <div className="flex flex-col gap-5 my-5">
                 <Link
-                  href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Anti-Ragging-Committee.pdf"
+                  href="https://www.krmangalam.edu.in/pdfs/anti-ragging-committee-of-krmu-2024.pdf"
                   target="_blank" rel="noopener noreferrer"
                   className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center justify-center"
                 >
@@ -535,13 +520,14 @@ const Hero = () => {
                     {" "}
                     <td>Dean Student Welfare</td> <td>Member</td>{" "}
                   </tr>{" "}
-                  {/* <tr>
+                  <tr>
+                    {" "}
                     <td>
                       Lt Col Vijay Chaudhary, General Manager (Security and
                       Administration)
-                    </td>
-                    <td>Member</td>
-                  </tr> */}
+                    </td>{" "}
+                    <td>Member</td>{" "}
+                  </tr>{" "}
                   <tr>
                     {" "}
                     <td>Dr. Shweta Bansal (Deputy Proctor)</td> <td>Member</td>{" "}
@@ -654,7 +640,7 @@ const Hero = () => {
                 Committee Grievance Redressal
               </Link>
               <Link
-                href="https://www.krmangalam.edu.in/pdfs/Student-Grievance-Redressal.pdf"
+                href="https://www.krmangalam.edu.in/krmu-committee/#"
                 target="_blank" rel="noopener noreferrer"
                 className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
               >
@@ -783,19 +769,18 @@ const Hero = () => {
               <br />
               <div className="flex flex-col gap-5 my-5">
                 <Link
-                  href="www.krmangalam.edu.in/pdfs/Constitution-of-Student-Discipline-Committee-of-KRMU-2025.pdf"
+                  href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Student-Discipline-Committee-of-KRMU-2025.pdf"
                   target="_blank" rel="noopener noreferrer"
                   className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center justify-center"
                 >
                   <FileText color="#fff" />
-                  STUDENT DISCIPLINE COMMITTEE
+                  STUDENT DISCIPLINE COMMITTEE 2024
                 </Link>
                 <Link
                   href="https://www.krmangalam.edu.in/pdfs/COC-Revised-Handbook-of-COC-Professional-Ethics-and-Human-Values.pdf"
                   target="_blank" rel="noopener noreferrer"
                   className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center justify-center"
                 >
-                  <FileText color="#fff" />
                   Code of Conduct
                 </Link>
               </div>
@@ -827,17 +812,18 @@ const Hero = () => {
                     {" "}
                     <td>Dr. Diwakar Padalia (Proctor)</td> <td>Chairperson</td>{" "}
                   </tr>{" "}
-                  {/* <tr>
+                  <tr>
+                    {" "}
                     <td>
                       Lt Col Vijay Chaudhary, General Manager (Security and
                       Administration)
-                    </td>
-                    <td>Member</td>
-                  </tr> */}
-                  {/* <tr>
-                    
-                    <td>Dean Student Welfare</td> <td>Member</td>
-                  </tr> */}
+                    </td>{" "}
+                    <td>Member</td>{" "}
+                  </tr>{" "}
+                  <tr>
+                    {" "}
+                    <td>Dean Student Welfare</td> <td>Member</td>{" "}
+                  </tr>{" "}
                   <tr>
                     {" "}
                     <td>Dr. Shweta Bansal (Deputy Proctor)</td> <td>Member</td>{" "}
@@ -864,23 +850,11 @@ const Hero = () => {
                   </tr>{" "}
                   <tr>
                     {" "}
-                    <td>Dr. Vijay Prakash Sharma (SOMC)</td> <td>Member</td>{" "}
+                    <td>Mr. Rahul Singh (SOET)</td> <td>Member</td>{" "}
                   </tr>{" "}
                   <tr>
                     {" "}
-                    <td>Dr. Anshul Saluja (SOED)</td> <td>Member</td>{" "}
-                  </tr>{" "}
-                  <tr>
-                    {" "}
-                    <td>Mr. Karan Singh (SEMCE)</td> <td>Member</td>{" "}
-                  </tr>{" "}
-                  <tr>
-                    {" "}
-                    <td>Mr. Jagdish Chander, (Security & Discipline Officer)</td> <td>Member</td>{" "}
-                  </tr>{" "}
-                  <tr>
-                    {" "}
-                    <td>Dr. Imran Siraj (SOET) (Deputy Proctor)</td>{" "}
+                    <td>Dr. Imran Siraj (Deputy Proctor)</td>{" "}
                     <td>Member Secretary</td>{" "}
                   </tr>{" "}
                 </tbody>{" "}
