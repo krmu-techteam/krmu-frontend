@@ -39,51 +39,85 @@ const SchoolHero = ({
   admBtn,
   slug,
 }: Props) => {
-  const ytVideoThumbnail = {
+  const schoolBgMedia = {
     soet: {
       thumbnail:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soetytthumbnail_1_24cf75efc0.webp",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soet_1_b32184577b.webp",
       ytUrl: "https://www.youtube.com/watch?v=9I6QQ6ZYCi8",
+      bgURl:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bg_3_3278992eec.webp",
+      middleImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/lady_2b76154bef.png",
     },
     sohmct: {
       thumbnail:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sohmct_yt_ac9764e49e.webp",
       ytUrl: "https://www.youtube.com/watch?v=yRbHVk8qaOs",
+      bgURl: "",
+      middleImg: "",
     },
     sbas: {
       thumbnail:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sbas_1_da2168aa21.webp",
       ytUrl: "https://www.youtube.com/watch?v=QdsVt6tERg0",
+      bgURl: "",
+      middleImg: "",
     },
   };
 
   let videoUrl = "";
   let thumbnail = "";
+  let bgUrl = "";
+  let middleimg = "";
 
   if (slug === "school-of-hotel-management-and-catering-technology") {
-    videoUrl = ytVideoThumbnail.sohmct.ytUrl;
-    thumbnail = ytVideoThumbnail.sohmct.thumbnail;
+    videoUrl = schoolBgMedia.sohmct.ytUrl;
+    thumbnail = schoolBgMedia.sohmct.thumbnail;
+    bgUrl = schoolBgMedia.sohmct.bgURl;
+    middleimg = schoolBgMedia.sohmct.middleImg;
   }
   if (slug === "school-of-engineering-and-technology") {
-    videoUrl = ytVideoThumbnail.soet.ytUrl;
-    thumbnail = ytVideoThumbnail.soet.thumbnail;
+    videoUrl = schoolBgMedia.soet.ytUrl;
+    thumbnail = schoolBgMedia.soet.thumbnail;
+    bgUrl = schoolBgMedia.soet.bgURl;
+    middleimg = schoolBgMedia.soet.middleImg;
   }
   if (slug === "school-of-basic-and-applied-sciences") {
-    videoUrl = ytVideoThumbnail.sbas.ytUrl;
-    thumbnail = ytVideoThumbnail.sbas.thumbnail;
+    videoUrl = schoolBgMedia.sbas.ytUrl;
+    thumbnail = schoolBgMedia.sbas.thumbnail;
+    bgUrl = schoolBgMedia.sbas.bgURl;
+    middleimg = schoolBgMedia.sbas.middleImg;
   }
 
   const videoURL = iframeContent;
   return (
     <>
       <section
-        className={`pt-[150px] relative ${
+        className={`pt-[150px] relative overflow-hidden ${
           fullWidth
             ? "lg:py-[20%] lg:pb-0 pt-[300px] pb-5"
-            : "lg:pt-[12%]  pt-[300px] schoolBanner"
+            : "pt-[280px] schoolBanner"
         } bg-cover bg-no-repeat bg-center bg-[#001732]`}
-        style={{ backgroundImage: `url(${STRAPI_URL}${herobanner?.url})` }}
+        style={{
+          backgroundImage:
+            slug === "school-of-engineering-and-technology"
+              ? `url(${bgUrl})`
+              : `url(${STRAPI_URL}${herobanner?.url})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
       >
+        <div className="absolute -bottom-12 left-1/2 -translate-x-1/2">
+          <Image
+            src={middleimg}
+            width={492}
+            height={600}
+            alt={title || ""}
+            className="object-contain z-10 relative"
+            priority
+          />
+        </div>
         <div
           className="
     h-full
@@ -95,101 +129,97 @@ const SchoolHero = ({
       z-10
   "
         ></div>
-        <div className="hidden sm:block">
-          {herobanner?.url && (
-            <Image
-              src={`${STRAPI_URL}${herobanner.url}`}
-              alt={"hero"}
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover -z-10"
-            />
-          )}
-        </div>
-        {fullWidth ? (
-          <div className="max-w-[1664px] mx-auto w-full px-5 relative z-10 sm:px-4">
-            <div className="text-center text-white w-full">
-              <p className="text-sm md:text-[28px] lg:mb-5 font-medium text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
-                {subheading}
-              </p>
-              <h1 className="text-2xl md:text-4xl lg:text-8xl font-semibold leading-[1.2] text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
-                {title}
-              </h1>
-              <div className="flex flex-col lg:flex-row items-center justify-center gap-2.5 sm:gap-5 my-4">
-                {heroBtns?.map((btn) =>
-                  btn?.buttontext === "Explore Programmes" ? (
-                    <Link
-                      key={btn.id}
-                      href={btn.buttonlink}
-                      className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#001732] ${
-                        btn.buttonclass || ""
-                      }`}
-                    >
-                      {btn.buttontext}
-                    </Link>
-                  ) : (
-                    <Link
-                      key={btn.id}
-                      href={btn.buttonlink}
-                      className={`text-black w-full sm:w-fit flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white ${
-                        btn.buttonclass || ""
-                      }`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {btn.buttontext}
-                    </Link>
-                  ),
-                )}
-              </div>
-            </div>
+        <div className="xl:px-8 2xl:px-16">
+          <div className="hidden sm:block">
+            {herobanner?.url && (
+              <Image
+                src={`${STRAPI_URL}${herobanner.url}`}
+                alt={"hero"}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover -z-10"
+              />
+            )}
           </div>
-        ) : (
-          <div className="max-w-[1850px] mx-auto w-full xl:flex items-start justify-between p-5 sm:p-0 relative z-20">
-            <div className="text-center text-white w-full xl:w-1/2 xl:pr-52">
-              <p className="text-sm md:text-2xl font-normal sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
-                {subheading}
-              </p>
-              <h1 className="text-2xl md:text-4xl 2xl:text-5xl text-shadow-lg leading-[1.2] font-bold">
-                {title}
-              </h1>
-              <div className="flex flex-col items-center justify-center gap-3.5 sm:gap-5 mt-0 sm:my-4">
-                {heroBtns?.map((btn) =>
-                  btn?.buttontext === "Explore Programmes" ? (
-                    <Link
-                      key={btn.id}
-                      href={btn.buttonlink}
-                      className="text-white underline font-medium text-xl"
-                    >
-                      {btn.buttontext}
-                    </Link>
-                  ) : (
-                    <Link
-                      key={btn.id} /* Rectangle 970 */
-                      href={btn.buttonlink}
-                      className={`text-white w-full sm:w-fit flex justify-center items-center px-6 py-3 rounded-lg gap-4 font-semibold bg-[#001732] transition-all ${
-                        btn.buttonclass || ""
-                      }`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Download color="#fff" /> {btn.buttontext}
-                    </Link>
-                  ),
-                )}
-              </div>
-              <div
-                className="max-w-[440px] mx-auto my-2.5 sm:mt-16 p-3 rounded-[10px] alumniHeaderCarousel"
-                style={{
-                  filter: `brightness(0) invert(1)`,
-                }}
-              >
-                <ConnectingDreamSlider logos={alumniLogos} />
+          {fullWidth ? (
+            <div className="max-w-[1664px] mx-auto w-full px-5 relative z-10 sm:px-4">
+              <div className="text-center text-white w-full">
+                <p className="text-sm md:text-[28px] lg:mb-5 font-medium text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
+                  {subheading}
+                </p>
+                <h1 className="text-2xl md:text-4xl lg:text-8xl font-semibold leading-[1.2] text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
+                  {title}
+                </h1>
+                <div className="flex flex-col lg:flex-row items-center justify-center gap-2.5 sm:gap-5 my-4">
+                  {heroBtns?.map((btn) =>
+                    btn?.buttontext === "Explore Programmes" ? (
+                      <Link
+                        key={btn.id}
+                        href={btn.buttonlink}
+                        className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#001732] ${
+                          btn.buttonclass || ""
+                        }`}
+                      >
+                        {btn.buttontext}
+                      </Link>
+                    ) : (
+                      <Link
+                        key={btn.id}
+                        href={btn.buttonlink}
+                        className={`text-black w-full sm:w-fit flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white ${
+                          btn.buttonclass || ""
+                        }`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {btn.buttontext}
+                      </Link>
+                    ),
+                  )}
+                </div>
               </div>
             </div>
-            <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end">
-              {/* {videoFmt === "Iframe" ? (
+          ) : (
+            <div className="max-w-[1850px] mx-auto w-full xl:flex items-start justify-between p-5 sm:p-0 relative z-20">
+              <div className="text-center text-white w-full xl:w-1/2 xl:pr-20">
+                <p className="text-sm md:text-3xl font-medium sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
+                  {subheading}
+                </p>
+                <h1 className="text-2xl md:text-4xl 2xl:text-6xl text-shadow-lg leading-[1.2] font-bold">
+                  {title}
+                </h1>
+                <div className="flex flex-col items-center justify-center gap-3.5 sm:gap-5 mt-0 sm:my-4">
+                  {heroBtns?.map((btn) =>
+                    btn?.buttontext === "Explore Programmes" ? (
+                      <Link
+                        key={btn.id}
+                        href={btn.buttonlink}
+                        className="text-white underline font-medium text-xl"
+                      >
+                        {btn.buttontext}
+                      </Link>
+                    ) : (
+                      <Link
+                        key={btn.id} /* Rectangle 970 */
+                        href={btn.buttonlink}
+                        className={`text-white w-full sm:w-fit flex justify-center items-center px-6 py-3 rounded-lg gap-4 font-semibold bg-[#001732] transition-all ${
+                          btn.buttonclass || ""
+                        }`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Download color="#fff" /> {btn.buttontext}
+                      </Link>
+                    ),
+                  )}
+                </div>
+                <div className="max-w-[450px] mx-auto my-2.5 sm:mt-16 p-3 rounded-[10px] alumniHeaderCarousel brightness-0 invert">
+                  <ConnectingDreamSlider logos={alumniLogos} />
+                </div>
+              </div>
+              <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end">
+                {/* {videoFmt === "Iframe" ? (
                 <div
                   className="w-full customSchoolIframeStyle"
                   dangerouslySetInnerHTML={{ __html: iframeContent }}
@@ -200,13 +230,14 @@ const SchoolHero = ({
                   Your browser does not support the video tag.
                 </video>
               ) : null} */}
-              <div className="max-w-[700px] w-full mx-auto">
-                <YoutubeVideoSection thumbnail={thumbnail} ytUrl={videoUrl} />
+                <div className="w-full max-w-[520px] 2xl:max-w-[680px]">
+                  <YoutubeVideoSection thumbnail={thumbnail} ytUrl={videoUrl} />
+                </div>
               </div>
             </div>
-          </div>
-        )}
-        <div className="2xl:mt-20 relative z-20">
+          )}
+        </div>
+        <div className="relative z-20 w-full">
           <SchoolAdmissionOpen title={admTitle} admBtn={admBtn} />
         </div>
       </section>

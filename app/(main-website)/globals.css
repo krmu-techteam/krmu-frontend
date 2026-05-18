@@ -18,7 +18,7 @@
 
   .alumniHeaderCarousel .customCarousel{
     padding-left: 0px;
-    padding-right: 10px;
+    padding-right: 0px;
     justify-content: center;
   }
   .alumniHeaderCarousel .customCarousel{
@@ -27,9 +27,9 @@
   }
   .alumniHeaderCarousel .customCarousel img{
     /* object-fit: fill; */
-    width: 100px;
+    width: 150px;
     height: 150px;
-    aspect-ratio: 100/64;
+    aspect-ratio: 130/150;
   }
 
   @media (min-width: 640px) {
