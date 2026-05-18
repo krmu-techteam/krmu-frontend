@@ -234,11 +234,11 @@ const Hero = () => {
                   </tr>
                   <tr>
                     <td>Ms. Prerna (2305170030) B.A. LL.B. (Hons.)</td>
-                    <td>Member Secretary</td>
+                    <td>Student Member</td>
                   </tr>
                   <tr>
                     <td>Krishna Sindhwani (2305140045) BBA LL.B. (Hons.)</td>
-                    <td>Member Secretary</td>
+                    <td>Student Member</td>
                   </tr>
                   <tr>
                     <td>Dr. Megha, Assistant Professor, SOLS</td>

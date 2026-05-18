@@ -68,7 +68,6 @@ const ScholarUGPG = () => {
                           <tr>
                             <th>Eligibility Criteria</th> <th>Scholarship</th>{" "}
                             <th>Remarks</th>
-
                           </tr>
                         </thead>
                         <tbody>
@@ -101,7 +100,6 @@ const ScholarUGPG = () => {
                           </tr>
                           <tr>
                             <td>80% to less than 85%</td> <td>25%</td>
-                            
                           </tr>
                         </tbody>
                       </table>
@@ -189,7 +187,7 @@ const ScholarUGPG = () => {
                           </tr>
                           <tr>
                             <td>
-                              <b>Sports Quota</b> – Represented India in Olympic
+                              <b>Sports Quota</b> - Represented India in Olympic
                               Games, Asian Games, World University, World Games,
                               World Championships, World Cups, Commonwealth
                               Games, Asian Meets, Test Matches in Cricket.
@@ -340,27 +338,27 @@ const ScholarUGPG = () => {
                             <td colSpan={3}>
                               <ol>
                                 <li>
-                                  For 100% Scholarship – To be paid in 3
-                                  instalments – 1st instalment (25%) will be
-                                  paid upfront post document verification, and
-                                  the amount of scholarship will be deducted
-                                  from the semester fee at the time of
-                                  registration. 2nd instalment (50%) and 3rd
-                                  instalment (25%) will be paid by cheque in the
-                                  2nd Semester and 3rd Semester, respectively,
-                                  if the student fulfills all the criteria
-                                  listed under Note: 7) given below the table.
+                                  For 100% Scholarship -To be paid in 3
+                                  instalment-1st instalment (25%) will be paid
+                                  upfront post documents verification and the
+                                  amount of scholarship will be deducted from
+                                  the semester fee at the time of registration.
+                                  2nd instalment (50%) and 3rd instalment (25%)
+                                  will be paid by cheque in 2nd Semester and 3rd
+                                  Semester respectively, if the student fulfills
+                                  all the criteria listed under Note : 7) given
+                                  below the table.
                                 </li>
                                 <li>
-                                  For 75% / 50% / 25% / 10% Scholarship – To be
-                                  paid in 2 equal instalments. The 1st
-                                  instalment will be paid upfront post document
-                                  verification, and the amount of scholarship
+                                  For 75%/ 50%/ 25%/ 10% Scholarship - To be
+                                  paid in 2 equal instalments-1st instalment
+                                  will be paid upfront post documents
+                                  verification and the amount of scholarship
                                   will be deducted from the semester fee at the
-                                  time of registration. The 2nd instalment will
-                                  be paid by cheque in the 2nd Semester if the
-                                  student fulfills all the criteria listed under
-                                  Note: 7) given below the table.
+                                  time of registration. 2nd instalment will be
+                                  paid by cheque in 2nd Semester, if the student
+                                  fulfils all the criteria listed under Note: 7)
+                                  given below the table.
                                 </li>
                               </ol>
                             </td>
@@ -421,9 +419,8 @@ const ScholarUGPG = () => {
                     </div>
 
                     <p className="font-semibold text-center my-5">
-                      CUET -2, On the basis of best 3 subjects score with legal
-                      studies as a mandatory subject. This scholarship is
-                      applicable for School of Legal Studies only.
+                      CUET -2, (On the basis average percentile of best 4
+                      subjects)
                     </p>
                     <div className="overflow-x-auto">
                       <table>
@@ -434,15 +431,19 @@ const ScholarUGPG = () => {
                         </thead>
                         <tbody>
                           <tr>
-                            <td>90% & above</td> <td>100%</td>
+                            <td>95 percentile and above</td> <td>100%</td>
                           </tr>
                           <tr>
-                            <td>75% to less than 90%</td>
+                            <td>85 percentile to less than 95 percentile</td>
                             <td>35%</td>
                           </tr>
                           <tr>
-                            <td>60% to less than 75%</td>
+                            <td>70 percentile to less than 85 percentile</td>
                             <td>25%</td>
+                          </tr>
+                          <tr>
+                            <td>50 percentile to less than 70 percentile</td>
+                            <td>10%</td>
                           </tr>
                         </tbody>
                       </table>
