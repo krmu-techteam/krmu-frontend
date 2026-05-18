@@ -24,7 +24,7 @@ const HomeTestimonialCard = ({
             width={128}
             height={128}
             alt={profileImage?.alternativeText || "Profile Image"}
-            className="mb-5 rounded-md"
+            className=" rounded-md"
           />
         </div>
         <div className=" text-center sm:text-left">
