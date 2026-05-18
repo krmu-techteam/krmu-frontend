@@ -42,7 +42,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
     mobileBgSize: "240%",
     overlayOpacity: "0.85",
     overlayWidth: "45%",
-    subtitleSize: "sm:text-base",
+    subtitleSize: "sm:text-base mb-1",
     titleSize: "lg:text-3xl xl:text-[42px] 2xl:text-5xl",
     descSize: "2xl:text-lg",
     contentMaxWidth: "2xl:max-w-lg"

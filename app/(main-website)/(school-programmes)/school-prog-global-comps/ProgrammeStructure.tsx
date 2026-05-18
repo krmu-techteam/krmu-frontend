@@ -11,7 +11,7 @@ import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import { ButtonType } from "@/lib/types/common";
 import { Year } from "@/lib/types/school-programme";
 import CommonLeadPopup from "../../components/CommonLeadPopup";
-import { BookOpen, FileText, Download, ChevronRight, ArrowRightCircle } from "lucide-react";
+import { BookOpen, FileText, Download, ChevronRight, ArrowRightCircle, CircleArrowRight } from "lucide-react";
 import { IoBookOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
 import Image from "next/image";
 
@@ -104,7 +104,7 @@ const ProgrammeStructure = ({
           {/* Left Navigation & Content Area */}
           <div className="flex-grow flex flex-col">
             {/* Year Tabs */}
-            <div className="flex bg-[#EAEAEA] overflow-x-auto no-scrollbar">
+            <div className="flex w-full overflow-x-auto no-scrollbar rounded-xs">
               {programStruct.map((year) => {
                 const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                 const isYearActive = activeYear === yearValue;
@@ -123,7 +123,7 @@ const ProgrammeStructure = ({
                         );
                       }
                     }}
-                    className={`px-8 py-4 text-sm font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
+                    className={`flex-1 px-4 md:px-8 py-4 text-sm lg:text-[17px] 2xl:text-lg font-bold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
                       ${
                         isYearActive
                           ? "bg-[#051730] text-white"
@@ -193,13 +193,14 @@ const ProgrammeStructure = ({
                                       <AccordionItem value="content" className="border-none">
                                         <AccordionTrigger className="py-2 hover:no-underline group">
                                           <div className="flex items-center gap-4 text-left">
-                                            <IoArrowForwardCircleOutline className="w-6 h-6 text-white flex-shrink-0 group-hover:scale-110 transition-transform" />
+                                            <CircleArrowRight size={22} className="text-white flex-shrink-0 group-hover:scale-110 transition-transform"/>
+                                         
                                             <span className="text-lg font-medium text-white transition-colors">
                                               {sub.subjectname}
                                             </span>
                                           </div>
                                         </AccordionTrigger>
-                                        <AccordionContent className="pl-10 pt-2 text-gray-500 leading-relaxed italic border-l-2 border-[#051730]/10 ml-3">
+                                        <AccordionContent className="pl-10 pt-2 text-white/70 text-shadow-xs leading-relaxed italic border-l-2 border-[#051730]/10 ml-3">
                                           <div
                                             dangerouslySetInnerHTML={{
                                               __html: sub.course_name[0].sub_name,
@@ -210,8 +211,8 @@ const ProgrammeStructure = ({
                                     </Accordion>
                                   ) : (
                                     <div className="flex items-center gap-4 py-2">
-                                      <IoArrowForwardCircleOutline className="w-6 h-6 text-white flex-shrink-0" />
-                                      <span className="text-md md:text-[18px] font-medium text-white/90">
+                                      <CircleArrowRight size={22} className="text-white flex-shrink-0" />
+                                      <span className="text-md md:text-[18px] font-normal text-white/90">
                                         {sub.subjectname}
                                       </span>
                                     </div>
@@ -247,7 +248,7 @@ const ProgrammeStructure = ({
                           </span>
                         </div>
                       }
-                      buttonClassName={`px-3 py-3 md:px-6 md:py-4 rounded-md transition-all duration-300 flex items-center justify-center w-full md:w-auto shadow-lg
+                      buttonClassName={`px-3 py-3 md:px-6 rounded-xs transition-all duration-300 flex items-center justify-center w-full md:w-auto shadow-lg
                         ${
                           isDark
                             ? "bg-[#001732] text-white hover:bg-[#0a264a]"
