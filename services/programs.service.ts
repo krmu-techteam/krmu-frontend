@@ -11,11 +11,13 @@ export async function getProgramMetadata(currentSlug: string) {
       const prog = json.data?.[0];
       return {
         schoolCategoryName: prog?.school_category?.name,
+        schoolCategorySlug: prog?.school_category?.slug,
         degreeName: prog?.degree?.name,
+        degreeSlug: prog?.degree?.slug,
       };
     }
   } catch (error) {
     console.error("Error fetching program metadata:", error);
   }
-  return { schoolCategoryName: undefined, degreeName: undefined };
+  return { schoolCategoryName: undefined, schoolCategorySlug: undefined, degreeName: undefined, degreeSlug: undefined };
 }

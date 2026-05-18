@@ -43,7 +43,7 @@ const BeyondClassroomSlider = ({ slideimages }: Props) => {
 
   return (
     <section className="pt-8 overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-4">
+      <div className="max-w-full mx-auto px-4 md:px-8 lg:px-12 xl:px-8 2xl:px-16">
         <div className="embla overflow-hidden" ref={emblaRef}>
           <div className="flex -ml-4">
             {[...slideimages, ...slideimages, ...slideimages].map((rec, i) => (
