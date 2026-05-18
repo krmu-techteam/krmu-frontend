@@ -44,6 +44,7 @@ import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import BscFinance2026Page from "@/app/(landing-page)/admission/bsc-finance-2026/page";
 import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
 import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
+import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -58,8 +59,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const seoData = await getSchoolProgrammeSEO(slug);
   const seoPhdData = await getPHDProgramme(slug);
-
- 
 
   // let seo = seoData?.[0]?.SEO || seoPhdData[0]?.seo; // ✅ safe access
   const seo = seoData?.[0]?.SEO ?? seoPhdData?.[0]?.seo ?? null;
@@ -103,6 +102,9 @@ const page = async ({ params }: Props) => {
   if (slug === "bsc-hons-finance") {
     return <BscFinance2026Page />;
   }
+  if (slug === "mjmc-masters-journalism-mass-communication") {
+    return <JournalismAndMassCommunication />;
+  }
 
   // ====== END BSC-HONS-FINANCE OVERRIDE ======
 
@@ -133,7 +135,7 @@ const page = async ({ params }: Props) => {
 
   const singleSchoolProgramme = allSchoolProgrammeData.find(
     (programme) => programme.programmeslug === slug,
-  ); 
+  );
   const singlePHDProgramme = allSinglePHDProgramme?.find(
     (phdprogram) => phdprogram?.phdslug === slug,
   );
@@ -148,7 +150,6 @@ const page = async ({ params }: Props) => {
 
   const title = singleSchoolProgramme?.title;
   const highlightTitle = singleSchoolProgramme?.highlightitle;
-   
 
   const heroSection = singleSchoolProgramme?.herosection;
   const eligibilitySection = singleSchoolProgramme?.programmeeligibility;
@@ -288,13 +289,16 @@ const page = async ({ params }: Props) => {
             heroSection={heroSection}
           />
         )}
-        {(slug !== "bba-hr" && slug !== "btech-cse-ai-ml" && slug !== "b-tech-cse") && dreamcareerSection && (
-          <DreamCareer
-            heading={dreamcareerSection.heading}
-            description={dreamcareerSection.description}
-            logos={dreamcareerSection?.careerlogos}
-          />
-        )}
+        {slug !== "bba-hr" &&
+          slug !== "btech-cse-ai-ml" &&
+          slug !== "b-tech-cse" &&
+          dreamcareerSection && (
+            <DreamCareer
+              heading={dreamcareerSection.heading}
+              description={dreamcareerSection.description}
+              logos={dreamcareerSection?.careerlogos}
+            />
+          )}
 
         {programmeScopeSection && (
           <ProgrammeScope
