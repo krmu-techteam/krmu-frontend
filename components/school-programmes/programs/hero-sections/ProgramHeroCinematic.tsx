@@ -54,7 +54,7 @@ const ProgramHeroCinematic = ({
           '--overlay-width': config.overlayWidth || '45%'
         } as React.CSSProperties}
       >
-        <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 sm:px-4 md:px-8 lg:px-12 xl:gap-16 z-10 2xl:px-0">
+        <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 sm:px-4 md:px-8 lg:px-1 xl:gap-16 z-10 2xl:px-0">
           <div className="w-full lg:w-1/2 xl:w-1/2 relative z-10">
             <div className="xl:max-w-[700px] w-full">
               <div className="flex flex-col sm:block bg-gradient-to-t from-black/90 via-black/50 to-transparent sm:bg-none px-6 sm:p-0">
