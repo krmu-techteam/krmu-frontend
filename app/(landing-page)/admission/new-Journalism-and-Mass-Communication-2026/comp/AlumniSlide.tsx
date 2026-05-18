@@ -7,8 +7,6 @@ type Props = {
 };
 
 const AlumniSlide = ({ item }: Props) => {
-
-
   return (
     <div className="flex gap-5">
       <div className="w-1/2 sm:w-1/3">

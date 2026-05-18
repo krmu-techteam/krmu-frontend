@@ -1,7 +1,9 @@
 import React from "react";
 import { PhoneCall } from "lucide-react";
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+import Link from "next/link";
 
-const MediaCTASection = () => {
+const MediaCTASection = ({ heroSection }: { heroSection: any }) => {
   return (
     <section className="w-full bg-[#f3f0f4] py-10 sm:py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -17,18 +19,27 @@ const MediaCTASection = () => {
               Secure your place in the next cohort of media leaders.
             </p>
             <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center gap-4 md:gap-5 w-full sm:w-auto">
-              <button className="w-full sm:w-auto min-w-[260px] cursor-pointer bg-[#E21F21] hover:bg-[#d73528] transition-all duration-300 text-white text-lg md:text-xl font-medium px-6 md:px-10 py-4 md:py-5 rounded-[4px]">
+              {/* <button className="w-full sm:w-auto min-w-[260px] cursor-pointer bg-[#E21F21] hover:bg-[#d73528] transition-all duration-300 text-white text-lg md:text-xl font-medium px-6 md:px-10 py-4 md:py-5 rounded-[4px]">
                 Apply Now
-              </button>
-
+              </button> */}
+              <NpfPopup
+                formId="31c1452015d32698095f833b3e7eb9c5"
+                btnClass={`hero-common-btn-b  ${heroSection.herobtn.buttonclass || ""} rounded-md w-full sm:w-auto min-w-[260px] cursor-pointer bg-[#E21F21] hover:bg-[#d73528] transition-all duration-300 text-white text-lg md:text-xl font-medium px-6 md:px-10 py-4 md:py-5 rounded-[4px]`}
+                btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
+                showIcon={true}
+              />
               <button className="w-full sm:w-auto min-w-[260px] cursor-pointer flex items-center justify-center gap-3 md:gap-4 border border-white/20 bg-white/10 hover:bg-white/15 transition-all duration-300 text-white text-lg md:text-xl font-medium px-6 md:px-10 py-4 md:py-5 rounded-md backdrop-blur-sm">
                 <PhoneCall className="w-5 h-5 md:w-6 md:h-6" />
-                +91 9311411717
+                <Link href="tel:+919311411717">+91 9311411717</Link>
               </button>
             </div>
             <div className="flex gap-6 md:gap-10 mt-8 md:mt-10">
-              <p className="text-white text-sm md:text-[16px] leading-relaxed">UGC Recognised</p>
-              <p className="text-white text-sm md:text-[16px] leading-relaxed">NAAC A Accredited</p>
+              <p className="text-white text-sm md:text-[16px] leading-relaxed">
+                UGC Recognised
+              </p>
+              <p className="text-white text-sm md:text-[16px] leading-relaxed">
+                NAAC A Accredited
+              </p>
             </div>
           </div>
         </div>

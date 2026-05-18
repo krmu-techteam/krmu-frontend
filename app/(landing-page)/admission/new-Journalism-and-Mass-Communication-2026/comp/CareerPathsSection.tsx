@@ -17,7 +17,8 @@ export default function CareerPathsSection() {
               Where this MA can take you
             </h2>
             <p className="mt-5 sm:mt-8 text-[#94A3B8] text-sm sm:text-base leading-7 max-w-md">
-              Move from being a content executor to a media professional who can research, design and lead.
+              Move from being a content executor to a media professional who can
+              research, design and lead.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 border-t sm:border-t-0 border-white/10">
@@ -39,7 +40,6 @@ export default function CareerPathsSection() {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

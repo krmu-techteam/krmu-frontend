@@ -1,11 +1,12 @@
-import { ProgrammeAlumniData } from "@/lib/types/programme";
-import ProgrammeAlumniSlides from "./ProgrammeAlumniSlides";
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+import { Download } from "lucide-react";
+import Link from "next/link";
 
 type Props = {
-  alumniData: ProgrammeAlumniData[];
+  heroSection: any;
 };
 
-const ProgrammesAlumni = () => {
+const ProgrammesAlumni = ({ heroSection }: Props) => {
   const steps = [
     {
       number: "1",
@@ -36,8 +37,7 @@ const ProgrammesAlumni = () => {
   const details = [
     {
       label: "Degree awarded",
-      value:
-        "Masters of Arts (Journalism and Mass Communication)",
+      value: "Masters of Arts (Journalism and Mass Communication)",
     },
     {
       label: "Duration",
@@ -45,13 +45,11 @@ const ProgrammesAlumni = () => {
     },
     {
       label: "School",
-      value:
-        "School of Emerging Media & Creator Economy (SEMCE)",
+      value: "School of Emerging Media & Creator Economy (SEMCE)",
     },
     {
       label: "Location",
-      value:
-        "K.R. Mangalam University,\nGurugram, Delhi NCR",
+      value: "K.R. Mangalam University,\nGurugram, Delhi NCR",
     },
     {
       label: "Fees",
@@ -68,9 +66,9 @@ const ProgrammesAlumni = () => {
           </h2>
 
           <p className="mt-6 sm:mt-8 text-[#44474F] text-base sm:text-lg leading-7 sm:leading-[28px] max-w-2xl">
-            We are looking for inquisitive minds, ethical storytellers,
-            and digital pioneers. Our admissions process is designed
-            to uncover your creative potential and professional drive.
+            We are looking for inquisitive minds, ethical storytellers, and
+            digital pioneers. Our admissions process is designed to uncover your
+            creative potential and professional drive.
           </p>
 
           <div className="mt-10 sm:mt-14 space-y-8 sm:space-y-10 lg:space-y-12">
@@ -119,25 +117,31 @@ const ProgrammesAlumni = () => {
 
           <div className="mt-3 border-b border-white/10 pb-3">
             <p className="text-sm sm:text-base leading-7 text-white font-normal">
-              <span className="font-semibold">
-                Eligibility -
-              </span>{" "}
-              Bachelor’s degree in any discipline from a UGC
-              recognised university with minimum 50 percent aggregate
+              <span className="font-semibold">Eligibility -</span> Bachelor’s
+              degree in any discipline from a UGC recognised university with
+              minimum 50 percent aggregate
             </p>
           </div>
           <p className="mt-2 text-center font-semibold text-[#1D81D4] leading-6 sm:leading-7 text-sm sm:text-base">
-            For the detailed fee breakup, please refer to the official
-            fee link or speak with our admissions counsellors.
+            For the detailed fee breakup, please refer to the official fee link
+            or speak with our admissions counsellors.
           </p>
-
           <div className="mt-3 sm:mt-5 space-y-4">
-            <button className="w-full cursor-pointer bg-[#E21F21] hover:bg-red-700 transition text-[#FFFFFF] py-3 sm:py-4 rounded-sm text-base sm:text-lg font-medium">
-              Apply Now
-            </button>
-
+            {/* <button className="w-full cursor-pointer text-center bg-[#E21F21] hover:bg-red-700 transition text-[#FFFFFF] py-3 sm:py-4 rounded-sm text-base sm:text-lg font-medium"> */}
+            <NpfPopup
+              formId="31c1452015d32698095f833b3e7eb9c5"
+              btnClass={`hero-common-btn-b  ${heroSection.herobtn.buttonclass || ""} rounded-md w-full cursor-pointer text-center bg-[#E21F21] hover:bg-red-700 transition text-[#FFFFFF] py-3 sm:py-4 rounded-sm text-base sm:text-lg font-medium`}
+              btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
+              showIcon={true}
+            />
+            {/* </button> */}
             <button className="w-full border cursor-pointer border-[#FFFFFF33] hover:bg-white/10 transition text-[#FFFFFF] py-3 sm:py-4 rounded-md text-base sm:text-lg font-medium">
-              Download Brochure
+              <Link
+                href="https://www.krmangalam.edu.in/pdfs/handbooks/majmc-handbook-2025-27.pdf"
+                target="_blank"
+              >
+                Download Brochure
+              </Link>
             </button>
           </div>
         </div>

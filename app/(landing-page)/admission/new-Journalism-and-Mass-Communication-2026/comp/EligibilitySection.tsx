@@ -1,3 +1,4 @@
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import React from "react";
 
 const eligibilityData = [
@@ -34,7 +35,8 @@ const admissionSteps = [
   },
 ];
 
-const EligibilitySection = () => {
+const EligibilitySection = ({ heroSection }: { heroSection: any }) => {
+  console.log("heroSection", heroSection.herobtn.buttontext);
   return (
     <section className="w-full bg-[#f3f0f4] pb-10 sm:pb-12 lg:pb-16">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
@@ -136,10 +138,16 @@ const EligibilitySection = () => {
                 (Hostel, transport and other facilities are charged separately
                 as per university norms.)
               </p>
-
-              <button className="mt-3 md:mt-4 bg-[#E21F21] hover:bg-[#d73327] cursor-pointer transition-all duration-300 text-[#FFFFFF] text-sm md:text-lg font-medium px-6 md:px-10 py-3 md:py-4 rounded-[4px] min-w-[180px] md:min-w-[240px]">
-                Apply Now
-              </button>
+              <div>
+                {/* <button className="mt-3 md:mt-4 bg-[#E21F21] hover:bg-[#d73327] cursor-pointer transition-all duration-300 text-[#FFFFFF] text-sm md:text-lg font-medium px-6 md:px-10 py-3 md:py-4 rounded-[4px] min-w-[180px] md:min-w-[240px]"> */}
+                <NpfPopup
+                  formId="31c1452015d32698095f833b3e7eb9c5"
+                  btnClass={`hero-common-btn-b  ${heroSection.herobtn.buttonclass || ""} rounded-md mt-3 md:mt-4 bg-[#E21F21] hover:bg-[#d73327] cursor-pointer transition-all duration-300 text-[#FFFFFF] text-sm md:text-lg font-medium px-6 md:px-10 py-3 md:py-4 rounded-[4px] min-w-[180px] md:min-w-[240px]`}
+                  btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
+                  showIcon={true}
+                />
+                {/* </button> */}
+              </div>
             </div>
           </div>
         </div>
