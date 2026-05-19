@@ -80,17 +80,17 @@ const ScholarNotesUG = () => {
               </span>
               <span className="text-white font-semibold text-base notesul">
                2nd Instalment and 3rd instalment (where applicable) of scholarship amount will be paid by cheque if the student fulfils ALL the criteria a, b, c as listed under:-
-                <ul className="font-normal">
-                  <li>
-                    Attendance in immediately preceding semester is 75% or above
-                  </li>
-                  <li>
-                   The student has cleared examination of ALL the subjects which were on offer in the immediately preceding semester
-                  </li>
-                  <li>
-                    There is no case of indiscipline, unfair means or misconduct
-                  </li>
-                </ul>
+                <div className="font-normal flex flex-col gap-2 my-2.5 pl-5">
+                  <span>
+                    a) Attendance in immediately preceding semester is 75% or above
+                  </span>
+                  <span>
+                   b) The student has cleared examination of ALL the subjects which were on offer in the immediately preceding semester
+                  </span>
+                  <span>
+                   c) There is no case of indiscipline, unfair means or misconduct
+                  </span>
+                </div>
               </span>
             </div>
            
