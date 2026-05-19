@@ -33,7 +33,7 @@ const SchoolOpenSourceMentorship = () => {
             >
               {/* Achievement card */}
               <div
-                className="flex-shrink-0  overflow-hidden flex flex-col xs:flex-row md:flex-col lg:flex-row
+                className="flex-shrink-0  overflow-hidden flex flex-col rounded-2xl xs:flex-row md:flex-col lg:flex-row
                            w-full md:w-[400px] lg:w-[480px]
                            h-[520px] md:h-auto lg:h-[300px]"
                 style={{

@@ -42,7 +42,7 @@ const SchoolHero = ({
   const schoolBgMedia = {
     soet: {
       thumbnail:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soet_1_b32184577b.webp",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ytsoet_abda042457.webp",
       ytUrl: "https://www.youtube.com/watch?v=9I6QQ6ZYCi8",
       bgURl:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bg_3_3278992eec.webp",
@@ -112,7 +112,7 @@ const SchoolHero = ({
           <Image
             src={middleimg}
             width={492}
-            height={600}
+            height={700}
             alt={title || ""}
             className="object-contain z-10 relative"
             priority
@@ -194,7 +194,7 @@ const SchoolHero = ({
                   />
                 </div>
                 <div className="bg-[#001732] xl:bg-transparent p-5 xl:p-0">
-                  <p className="text-sm md:text-3xl font-medium sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
+                  <p className="text-sm md:text-2xl font-normal sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
                     {subheading}
                   </p>
                   <h1 className="text-2xl md:text-4xl 2xl:text-6xl text-shadow-lg leading-[1.2] font-bold">
@@ -206,7 +206,7 @@ const SchoolHero = ({
                         <Link
                           key={btn.id}
                           href={btn.buttonlink}
-                          className="text-white underline font-medium text-xl"
+                          className="text-white underline font-bold text-xl"
                         >
                           {btn.buttontext}
                         </Link>
@@ -214,7 +214,7 @@ const SchoolHero = ({
                         <Link
                           key={btn.id} /* Rectangle 970 */
                           href={btn.buttonlink}
-                          className={`text-white w-full sm:w-fit flex justify-center items-center px-6 py-3 rounded-lg gap-4 font-semibold bg-[#001732] transition-all ${
+                          className={`text-white w-full sm:w-fit flex justify-center items-center px-6 py-3.5 rounded-lg gap-4 font-semibold bg-[#001732] border-2 border-[#0189ae] transition-all ${
                             btn.buttonclass || ""
                           }`}
                           target="_blank"
@@ -225,7 +225,7 @@ const SchoolHero = ({
                       ),
                     )}
                   </div>
-                  <div className="max-w-[450px] mx-auto my-2.5 sm:mt-16 p-3 rounded-[10px] alumniHeaderCarousel brightness-0 invert">
+                  <div className="max-w-[450px] mx-auto my-2.5 sm:mt-10 p-3 rounded-[10px] alumniHeaderCarousel brightness-0 invert">
                     <ConnectingDreamSlider logos={alumniLogos} />
                   </div>
                 </div>
@@ -242,14 +242,14 @@ const SchoolHero = ({
                   Your browser does not support the video tag.
                 </video>
               ) : null} */}
-                <div className="w-full max-w-[520px] 2xl:max-w-[680px]">
+                <div className="w-full max-w-[520px] 2xl:max-w-[680px] border-6 border-[#b7e2f3] rounded-xl">
                   <YoutubeVideoSection thumbnail={thumbnail} ytUrl={videoUrl} />
                 </div>
               </div>
             </div>
           )}
         </div>
-        <div className="relative z-20 w-full">
+        <div className="relative z-20 w-full xl:mt-20">
           <SchoolAdmissionOpen title={admTitle} admBtn={admBtn} />
         </div>
       </section>
