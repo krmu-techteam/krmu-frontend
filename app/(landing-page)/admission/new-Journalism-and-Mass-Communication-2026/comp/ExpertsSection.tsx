@@ -76,8 +76,7 @@ export default function ExpertsSection() {
           <h2 className="text-[#FFFFFF] font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight font-medium">
             Real Experts. Real Experience.
           </h2>
-
-          <p className="mt-4 text-[#FFFFFF] text-sm sm:text-base md:text-lg leading-7">
+          <p className="mt-3 text-[#FFFFFF] text-sm sm:text-base md:text-lg leading-7">
             Beyond Theory: Learn from Real-World Practitioners
           </p>
         </div>

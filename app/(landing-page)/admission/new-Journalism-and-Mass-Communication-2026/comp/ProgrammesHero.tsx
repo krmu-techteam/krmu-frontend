@@ -8,85 +8,17 @@ import AutoScroll from "embla-carousel-auto-scroll";
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import Image from "next/image";
 import { Download } from "lucide-react";
+import Link from "next/link";
 
 const AutoScrollPlugin = (AutoScroll as any).default ?? AutoScroll;
 
-const ProgrammesHero = () => {
-  const heroSection = {
-    id: 3440,
-    subtitle:
-      "Master AI & Machine Learning with IBM and Microsoft — From Day One’ ",
-    description:
-      "Step into the future with a B.Tech. CSE (AI & ML) programme designed to fuel intelligence, innovation, and industry excellence.\n\n\n",
-    imgvideo: "Video",
-    videofield: "https://www.youtube.com/watch?v=39uHV_rcawc",
-    formField: null,
-    formId: "31c1452015d32698095f833b3e7eb9c5",
-    herobtn: {
-      id: 43853,
-      buttontext: "Apply Now",
-      buttonlink:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_Tech_Computer_Science_and_Engineering_AI_and_ML_with_academic_support_of_IBM_and_powered_by_Microsoft_Certifications_c28e9ff274.jpg",
-      buttonclass: "npfWidget-31c1452015d32698095f833b3e7eb9c5",
-      popupFormId: null,
-      containerPopupFormId: null,
-    },
-    heroimg: {
-      id: 4976,
-      documentId: "kbtysvh7d8bet4pa209hf3gz",
-      name: "Hero Image.png",
-      alternativeText: "BTech CSE (AI & ML) Students Image at KRMU",
-      caption: null,
-      width: 640,
-      height: 600,
-      formats: {
-        small: {
-          ext: ".png",
-          url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/small_Hero_Image_f55fa9fd76.png",
-          hash: "small_Hero_Image_f55fa9fd76",
-          mime: "image/png",
-          name: "small_Hero Image.png",
-          path: null,
-          size: 499.86,
-          width: 500,
-          height: 469,
-          sizeInBytes: 499860,
-        },
-        thumbnail: {
-          ext: ".png",
-          url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/thumbnail_Hero_Image_f55fa9fd76.png",
-          hash: "thumbnail_Hero_Image_f55fa9fd76",
-          mime: "image/png",
-          name: "thumbnail_Hero Image.png",
-          path: null,
-          size: 68.85,
-          width: 166,
-          height: 156,
-          sizeInBytes: 68847,
-        },
-      },
-      hash: "Hero_Image_f55fa9fd76",
-      ext: ".png",
-      mime: "image/png",
-      size: 173.68,
-      url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Hero_Image_f55fa9fd76.png",
-      previewUrl: null,
-      provider: "strapi-provider-upload-strapi-cloud",
-      provider_metadata: null,
-      createdAt: "2025-10-08T10:20:25.590Z",
-      updatedAt: "2026-05-11T06:39:22.981Z",
-      publishedAt: "2025-10-08T10:20:25.592Z",
-      related: [
-        "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
-        "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
-      ],
-    },
-  };
+const ProgrammesHero = ({ heroSection }: any) => {
   return (
-    <section className="pt-18 sm:pt-24 lg:pt-28 min-h-screen bg-[#f3f3f7] flex flex-col lg:flex-row items-stretch">
+    <section className="pt-18 sm:pt-20 lg:pt-20 xl:pt-28 min-h-screen bg-[#f3f3f7] flex flex-col lg:flex-row items-stretch">
+      {" "}
       <div className="w-full lg:w-1/2 flex items-center justify-center px-5 sm:px-8 pt-10 pb-10 sm:pt-12 sm:pb-12 lg:px-20 lg:pt-4 lg:pb-4 order-2 lg:order-1">
         <div className="max-w-xl w-full">
-          <h1 className="mt-[8px] text-[#07255B] font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight sm:leading-[65px] lg:leading-[75px] tracking-tight">
+          <h1 className="mt-2 text-[#07255B] font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight sm:leading-16.25 lg:leading-18.75 tracking-tight">
             MA in
             <br />
             Journalism,
@@ -97,19 +29,24 @@ const ProgrammesHero = () => {
             <br />
             Economy
           </h1>
-          <p className="mt-4 text-[#44474F] text-base sm:text-lg font-normal leading-7 sm:leading-[32px]">
+          <p className="mt-4 text-[#44474F] text-base sm:text-lg font-normal line-height-[5px] leading-7">
             A 2 year postgraduate programme for journalists, storytellers and
             media professionals who want to lead newsrooms, content teams and
             creator-led brands in a digital first world.
           </p>
           <div className="mt-3 sm:mt-5 flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5">
-            <button className="w-full flex items-center gap-2 sm:w-auto bg-[#0161B0] cursor-pointer hover:bg-[#095999] text-white px-8 py-3 rounded-sm subpixel-antialiased font-medium text-base sm:text-lg shadow-md transition text-center">
-              <Download className="w-5 h-5" />
-              Download Brochure
+            <button className="w-full flex items-center justify-center gap-2 sm:flex-1 bg-[#0161B0] cursor-pointer hover:bg-[#095999] text-white px-8 py-3 rounded-md subpixel-antialiased font-medium text-base sm:text-lg shadow-md transition text-center whitespace-nowrap">
+              <Download className="w-5 h-5 shrink-0" />
+              <Link
+                href="https://www.krmangalam.edu.in/pdfs/handbooks/majmc-handbook-2025-27.pdf"
+                target="_blank"
+              >
+                Download Brochure
+              </Link>
             </button>
             <NpfPopup
               formId="31c1452015d32698095f833b3e7eb9c5"
-              btnClass={`hero-common-btn-b  ${heroSection.herobtn.buttonclass || ""} rounded-md`}
+              btnClass={`hero-common-btn-b  ${heroSection.herobtn.buttonclass || ""} !flex !items-center !justify-center gap-2 !w-full sm:!flex-1 !bg-[#E21F21] hover:!bg-[#db3123] !text-white !font-medium !text-base sm:!text-lg !px-8 !py-3 !rounded-md !shadow-md transition !text-center !whitespace-nowrap`}
               btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
               showIcon={true}
             />
@@ -203,14 +140,13 @@ const ProgrammesHero = () => {
           </div>
         </div>
       </div>
-
-      <div className="w-full lg:w-1/2 relative min-h-[280px] sm:min-h-[380px] md:min-h-[440px] lg:min-h-[auto] order-1 lg:order-2">
+      <div className="w-full lg:w-1/2 relative min-h-70 sm:min-h-95 md:min-h-125 lg:min-h-screen order-1 lg:order-2">
         <Image
           src="/new-Programmes-Hero/new programmes hero.jpg"
           alt="Journalist"
           fill
           priority
-          className="object-cover object-top sm:object-center"
+          className="object-cover object-[75%_top] lg:object-[75%_15%]"
         />
       </div>
     </section>

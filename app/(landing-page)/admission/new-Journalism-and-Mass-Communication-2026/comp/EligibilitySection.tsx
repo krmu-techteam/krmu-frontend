@@ -1,3 +1,4 @@
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import React from "react";
 
 const eligibilityData = [
@@ -17,24 +18,25 @@ const eligibilityData = [
 
 const admissionSteps = [
   {
-    step: "Step01",
+    step: "Step-01",
     text: "Submit the online application form",
   },
   {
-    step: "Step02",
+    step: "Step-02",
     text: "Appear for the university level selection process, as applicable (test, portfolio review or interview)",
   },
   {
-    step: "Step03",
+    step: "Step-03",
     text: "Receive admission offer, complete fee payment and document verification",
   },
   {
-    step: "Step04",
+    step: "Step-04",
     text: "Attend orientation and begin classes at SEMCE",
   },
 ];
 
-const EligibilitySection = () => {
+const EligibilitySection = ({ heroSection }: { heroSection: any }) => {
+  console.log("heroSection", heroSection.herobtn.buttontext);
   return (
     <section className="w-full bg-[#f3f0f4] pb-10 sm:pb-12 lg:pb-16">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
@@ -54,7 +56,7 @@ const EligibilitySection = () => {
                   {item.id}
                 </span>
 
-                <p className="text-[#44474F] text-[14px] font-normal leading-relaxed">
+                <p className="text-[#44474F] text-[14px] font-normal leading-5">
                   {item.text}
                 </p>
               </div>
@@ -99,7 +101,7 @@ const EligibilitySection = () => {
                     <span className="text-[#FF9D00] font-semibold text-[14px] whitespace-nowrap text-center">
                       {item.step}
                     </span>
-                    <p className="text-[#FFFFFF] text-[13px] font-normal leading-snug text-center xl:text-left">
+                    <p className="text-[#FFFFFF] text-[13px] font-normal leading-4 text-center xl:text-left">
                       {item.text}
                     </p>
                   </div>
@@ -116,7 +118,7 @@ const EligibilitySection = () => {
                 Fees and payment
               </h2>
 
-              <p className="text-[#FFFFFF] text-[13px] md:text-[14px] leading-relaxed">
+              <p className="text-[#FFFFFF] text-[13px] md:text-[14px] leading-5">
                 The MA (Journalism & Mass Communication) is a two year programme
                 spread across four semesters. Fees are charged annually and paid
                 semester wise.
@@ -132,14 +134,20 @@ const EligibilitySection = () => {
                 ₹1,20,000 /-
               </h3>
 
-              <p className="text-[#FFFFFF] text-[11px] md:text-sm mt-1 leading-relaxed">
+              <p className="text-[#FFFFFF] text-[11px] md:text-sm mt-1 leading-5">
                 (Hostel, transport and other facilities are charged separately
                 as per university norms.)
               </p>
-
-              <button className="mt-3 md:mt-4 bg-[#E21F21] hover:bg-[#d73327] cursor-pointer transition-all duration-300 text-[#FFFFFF] text-sm md:text-lg font-medium px-6 md:px-10 py-3 md:py-4 rounded-[4px] min-w-[180px] md:min-w-[240px]">
-                Apply Now
-              </button>
+              <div>
+                {/* <button className="mt-3 md:mt-4 bg-[#E21F21] hover:bg-[#d73327] cursor-pointer transition-all duration-300 text-[#FFFFFF] text-sm md:text-lg font-medium px-6 md:px-10 py-3 md:py-4 rounded-[4px] min-w-[180px] md:min-w-[240px]"> */}
+                <NpfPopup
+                  formId="31c1452015d32698095f833b3e7eb9c5"
+                  btnClass={`hero-common-btn-b  ${heroSection.herobtn.buttonclass || ""} rounded-md mt-3 md:mt-4 bg-[#E21F21] hover:bg-[#d73327] cursor-pointer transition-all duration-300 text-[#FFFFFF] text-sm md:text-lg font-medium px-6 md:px-10 py-3 md:py-4 rounded-[4px] min-w-[180px] md:min-w-[240px]`}
+                  btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
+                  showIcon={true}
+                />
+                {/* </button> */}
+              </div>
             </div>
           </div>
         </div>
