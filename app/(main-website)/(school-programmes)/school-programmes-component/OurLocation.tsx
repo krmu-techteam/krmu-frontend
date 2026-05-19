@@ -11,7 +11,7 @@ type Props = {
 
 const OurLocation = ({ badgetext, img1, img2 }: Props) => {
   return (
-    <section className="py-8 md:py-16 px-4 bg-[#051730]/10 sm:px-6">
+    <section className="py-8 2xl:py-16 px-4 xl:px-10 2xl:px-0 bg-[#051730]/10 sm:px-6">
       <div className="max-w-[1440px] mx-auto w-full p-4 md:p-12 bg-[#051730] rounded-md sm:flex gap-3 md:gap-6 text-center sm:text-left">
         <div className="sm:w-5/12">
           <Image

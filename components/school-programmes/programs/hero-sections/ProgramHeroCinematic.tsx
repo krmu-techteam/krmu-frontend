@@ -54,7 +54,7 @@ const ProgramHeroCinematic = ({
           '--overlay-width': config.overlayWidth || '45%'
         } as React.CSSProperties}
       >
-        <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 sm:px-4 md:px-8 lg:px-1 xl:gap-16 z-10 2xl:px-0">
+        <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 sm:px-4 md:px-8 lg:px-2 xl:gap-16 z-10 2xl:px-0">
           <div className="w-full lg:w-1/2 xl:w-1/2 relative z-10">
             <div className="xl:max-w-[700px] w-full">
               <div className="flex flex-col sm:block bg-gradient-to-t from-black/90 via-black/50 to-transparent sm:bg-none px-6 sm:p-0">
@@ -89,7 +89,7 @@ const ProgramHeroCinematic = ({
               </div>
 
               {/* Stats Bar - Integrated on Desktop, Dedicated Section on Mobile */}
-              <div className="w-full bg-[#001631] sm:bg-transparent py-8 sm:py-0 mt-0 sm:mt-10 relative z-10 px-2 md:px-0">
+              <div className="w-full bg-[#001631] sm:bg-transparent py-8 sm:py-0 mt-0 sm:mt-10 relative z-10 px-2 xl:px-10 2xl:px-0">
                 <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-nowrap items-center sm:gap-x-10">
                   <div className="flex flex-col sm:pr-8 lg:pr-10 sm:border-r border-white/20 text-center sm:text-left">
                     <span className="text-white font-semibold text-lg sm:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
@@ -136,7 +136,7 @@ const ProgramHeroCinematic = ({
 
       {/* Recruiter Strip outside section for clean white background */}
       <div className="w-full bg-white pt-16 py-8 pb-4 md:py-6 border-t border-gray-100">
-        <div className="max-w-[1440px] mx-auto px-0 xl:px-8 2xl:px-0 relative">
+        <div className="max-w-[1440px] mx-auto px-0 xl:px-10 2xl:px-0 relative">
           {/* Centered Heading Badge */}
           <div className="absolute -top-[48px] md:-top-[62px] left-1/2 -translate-x-1/2 bg-gray-50 md:bg-white px-6 py-2 rounded-t-sm flex items-center justify-center ">
             <h5 className="text-[#333] text-[14px] sm:text-[18px] font-semibold whitespace-nowrap">

@@ -25,9 +25,9 @@ const AdmissionProcessComp = ({
   slug,
 }: Props) => {
   return (
-    <section className="prog-global-padding bg-[#f9f9f9] py-8 md:py-16 px-4 md:px-6">
+    <section className="prog-global-padding bg-[#f9f9f9] py-8 xl:py-12 2xl:py-16 px-4 md:px-6 xl:px-10 2xl:px-0">
       <div className="common-prog-container">
-        <h2 className="text-[28px] md:text-[42px] font-bold text-gray-900 leading-tight tracking-tight mb-2">
+        <h2 className="text-[28px] md:text-[40px] font-bold text-gray-900 leading-tight tracking-tight mb-2">
           {heading} {highlight}
         </h2>
         <p className="sub-heading mb-5">{desc}</p>
@@ -108,8 +108,8 @@ const AdmissionProcessComp = ({
             })} */}
         </div>
       </div>
-      <div className="max-w-[540px] mx-auto w-full flex lg:hidden items-center justify-center">
-        <div className="grid grid-cols-1 gap-5 w-full">
+      <div className="max-w-full px-4 mx-auto w-full flex lg:hidden items-center justify-center">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 w-full">
           {admissionCards &&
             admissionCards.map((card) => {
               if (
@@ -119,9 +119,9 @@ const AdmissionProcessComp = ({
                 return (
                   <div
                     key={card?.id}
-                    className="w-full text-center px-4 py-3 md:p-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[100px]"
+                    className="w-full text-center px-2 py-3 md:px-4 md:py-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[100px]"
                   >
-                    <h4 className="text-xl font-semibold text-[#0a41a1] mb-2">
+                    <h4 className="text-lg lg:text-xl font-semibold text-[#0a41a1] mb-2">
                       {card?.title}
                     </h4>
                     <p className="leading-tight text-base text-gray-700 break-all font-medium">
@@ -140,12 +140,12 @@ const AdmissionProcessComp = ({
                 return (
                   <div
                     key={card?.id}
-                    className="w-full text-center px-4 py-3 md:p-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[100px]"
+                    className="w-full text-center px-2 py-3 md:px-4 md:py-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[100px]"
                   >
-                    <h4 className="text-xl font-semibold text-[#0a41a1] mb-2">
+                    <h4 className="text-lg lg:text-xl font-semibold text-[#0a41a1] mb-2">
                       {card?.title}
                     </h4>
-                    <p className="leading-relaxed text-base text-gray-700 break-words font-medium">
+                    <p className="leading-relaxed text-sm lg:text-md text-gray-700 break-words font-medium">
                       <span>{card?.description}</span>
                     </p>
                   </div>

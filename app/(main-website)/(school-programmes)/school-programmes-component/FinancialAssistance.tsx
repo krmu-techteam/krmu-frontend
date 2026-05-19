@@ -32,17 +32,17 @@ const FinancialAssistance = ({
   const points = [point1, point2, point3, point4, point5, point6, point7].filter(Boolean);
 
   return (
-    <section className="prog-global-padding bg-[#f9f9f9] py-8 md:py-16 px-4 md:px-6">
+    <section className="prog-global-padding bg-[#f9f9f9] py-8 lg:py-12 2xl:py-16 px-4 xl:px-10 2xl:px-0">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container !max-w-7xl">
-          <h2 className="text-[32px] md:text-[42px] font-bold text-gray-900 mb-2 md:mb-4">
+          <h2 className="text-[32px] md:text-[40px] font-bold text-gray-900 mb-1 lg:mb-2 2xl:mb-4">
             {heading}{" "}{highlightheading} 
           </h2>
           <p className="text-lg md:text-xl text-gray-800 text-center">{description}</p>
         </div>
 
         {/* Points Layout */}
-        <div className="mt-10 flex flex-col gap-4">
+        <div className="lg:mt-6 2xl:mt-10 flex flex-col gap-4">
           {/* Row 1: 4 Items */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {points.slice(0, 4).map((point, index) => (
@@ -71,8 +71,8 @@ const FinancialAssistance = ({
         </div>
 
         {/* Logos Grid */}
-        <div className="mt-4 md:mt-16 flex items-center justify-center">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 items-center gap-4 md:gap-10 w-full sm:w-10/12">
+        <div className="mt-4 lg:mt-12 2xl:mt-16 flex items-center justify-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 items-center gap-4 lg:gap-4 2xl:gap-10 w-full sm:w-full">
             {logos &&
               logos.map((logo) => {
                 return (

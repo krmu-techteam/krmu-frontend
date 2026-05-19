@@ -74,7 +74,7 @@ const Eligibility = ({
   return (
     <>
       <section
-        className={`bg-[#eff4ff] py-8 md:py-12 px-4 xl:px-8 relative z-10 border-gray-100`}
+        className={`bg-[#eff4ff] py-8 md:py-12 px-4 xl:px-10 2xl:px-0 relative z-10 border-gray-100`}
       >
         <div className={`max-w-[1440px] w-full mx-auto`}>
           {/* {slug === "bba-hr" && heroSection?.imgvideo === "Video" ? ( */}

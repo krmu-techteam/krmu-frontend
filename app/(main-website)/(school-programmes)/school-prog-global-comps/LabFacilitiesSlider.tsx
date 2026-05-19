@@ -77,7 +77,7 @@ const LabFacilitiesSlider = ({ labcards, images }: Props) => {
         </CarouselContent>
 
         {/* Dots */}
-        <div className="flex justify-center mt-4 gap-2">
+        <div className="flex justify-center mt-0 gap-2">
           {Array.from({ length: count }).map((_, i) => (
             <button
               key={i}

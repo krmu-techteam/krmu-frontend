@@ -58,7 +58,7 @@ export const ActionCards = () => {
   ];
 
   return (
-    <section className="relative py-12 md:py-16 px-4 bg-[#f8f9fa] overflow-hidden">
+    <section className="relative py-12 lg:py-12 2xl:py-16 px-4 xl:px-10 2xl:px-0 bg-[#f8f9fa] overflow-hidden">
       {/* Modern Dot Pattern Background */}
       <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
       
@@ -67,7 +67,7 @@ export const ActionCards = () => {
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-red-100/40 rounded-full blur-[100px] pointer-events-none mix-blend-multiply"></div>
 
       <div className="relative z-10 max-w-[1280px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 xl:gap-4 2xl:gap-8">
           {actionCards.map((actionCard) => (
             <ActionCard key={actionCard.id} actionCard={actionCard} />
           ))}
@@ -114,7 +114,7 @@ const ActionCard = ({ actionCard }: ActionCardProps) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setOpacity(1)}
       onMouseLeave={() => setOpacity(0)}
-      className={`${actionCard.cardBg} ${actionCard.textColor} ${actionCard.borderColor} border rounded-md p-6 md:p-6 flex flex-col items-center text-center shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 h-full relative overflow-hidden group`}
+      className={`${actionCard.cardBg} ${actionCard.textColor} ${actionCard.borderColor} border rounded-md p-6 md:p-6 xl:p-6 2xl:p-6 flex flex-col items-center text-center shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 h-full relative overflow-hidden group`}
     >
       {/* Spotlight Effect Layer */}
       <div 
@@ -126,21 +126,21 @@ const ActionCard = ({ actionCard }: ActionCardProps) => {
       />
 
       <div className="relative z-10 flex flex-col h-full w-full items-center">
-        <div className="mb-4 p-3 bg-white/5 rounded-full ring-1 ring-white/10 group-hover:bg-white/10 transition-colors duration-500">
+        <div className="mb-4 xl:mb-3 2xl:mb-4 p-3 xl:p-2 2xl:p-3 bg-white/5 rounded-full ring-1 ring-white/10 group-hover:bg-white/10 transition-colors duration-500">
           {actionCard.mainIcon}
         </div>
         
-        <h3 className="text-xl md:text-2xl font-bold mb-3 tracking-tight">{actionCard.title}</h3>
+        <h3 className="text-xl md:text-2xl xl:text-lg 2xl:text-2xl font-bold mb-3 xl:mb-2 2xl:mb-3 tracking-wide">{actionCard.title}</h3>
         
-        <p className="text-sm md:text-[15px] opacity-75 leading-relaxed mb-8 flex-grow">
+        <p className="text-sm md:text-[15px] xl:text-[15px] 2xl:text-[15px] opacity-75 leading-relaxed mb-8 xl:mb-4 2xl:mb-8 flex-grow">
           {actionCard.description}
         </p>
         
         <Link 
           href={actionCard.link}
-          className={`${actionCard.buttonBg} w-full py-3.5 rounded-md font-semibold flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg group/btn mt-auto`}
+          className={`${actionCard.buttonBg} w-full py-3.5 xl:py-2.5 2xl:py-3.5 rounded-md font-semibold flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg group/btn mt-auto`}
         >
-          <span className="flex items-center text-[15px] tracking-wide">
+          <span className="flex items-center text-[15px] xl:text-[14px] 2xl:text-[15px] tracking-wide">
             {actionCard.buttonText}
             {actionCard.icon}
           </span>

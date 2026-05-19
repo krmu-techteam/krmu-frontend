@@ -61,17 +61,17 @@ const ProgrammeStructure = ({
 
   return (
     <div className="w-full antialiased">
-      <div className="container mx-auto relative">
+      <div className="container mx-auto relative px-4 md:px-0">
         {/* Section Header */}
         <div className="relative mb-12">
           {(heading || highlight) && (
             <div 
-              className="w-full py-4 xl:py-5 2xl:py-6 mb-6"
+              className="w-full py-4 xl:py-4 2xl:py-6 mb-6"
               style={{
                 background: "linear-gradient(90deg, rgba(0, 23, 50, 0) 0%, #001732 49.04%, rgba(0, 23, 50, 0) 95.67%)"
               }}
             >
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
+              <h2 className="text-2xl md:text-3xl lg:text-[40px] font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
                 {heading} {highlight}
               </h2>
             </div>
@@ -123,7 +123,7 @@ const ProgrammeStructure = ({
                         );
                       }
                     }}
-                    className={`flex-1 px-4 md:px-8 py-4 text-sm lg:text-[17px] 2xl:text-lg font-bold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
+                    className={`flex-1 px-4 md:px-8 py-4 text-sm lg:text-[16px] 2xl:text-lg font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
                       ${
                         isYearActive
                           ? "bg-[#051730] text-white"
@@ -152,8 +152,8 @@ const ProgrammeStructure = ({
                   <button
                     key={sem.id}
                     onClick={() => setActiveSemester(semValue)}
-                    className={`flex-1 px-6 py-4 text-xl font-semibold text-shadow-[0.5px_0.5px_1px_black] transition-all cursor-pointer duration-300 relative whitespace-nowrap
-                      ${isSemActive ? "text-white" : "text-white/70 hover:text-white"}
+                    className={`flex-1 px-6 py-4 text-xl font-normal text-shadow-[0.5px_0.5px_1px_black] transition-all cursor-pointer duration-300 relative whitespace-nowrap
+                      ${isSemActive ? "text-white" : "text-white/85 hover:text-white"}
                     `}
                   >
                     {sem.semestername}
@@ -168,7 +168,7 @@ const ProgrammeStructure = ({
             </div>
 
             {/* Subjects List - Transparent Glass Area as per screenshot */}
-            <div className="flex-grow px-2 xl:px-4 2xl:px-6 py-6 overflow-y-auto min-h-[400px] max-h-[400px] bg-transparent no-scrollbar">
+            <div className="flex-grow px-2 xl:px-0 2xl:px-6 py-6 overflow-y-auto min-h-[400px] max-h-[400px] bg-transparent no-scrollbar">
               {programStruct.map((year) => {
                 const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                 if (activeYear !== yearValue) return null;

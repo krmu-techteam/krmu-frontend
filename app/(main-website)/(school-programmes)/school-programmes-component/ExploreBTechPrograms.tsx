@@ -39,8 +39,8 @@ export default async function ExplorePrograms({
       {/* Red Side Accent Block */}
       <div className="absolute top-0 left-0 w-[80%] sm:w-[60%] md:w-[40%] lg:w-[28%] h-full bg-[#dc2626]"></div>
 
-      <div className="container mx-auto px-4 relative z-10 h-full">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center lg:items-stretch h-full">
+      <div className="container mx-auto px-4 xl:px-10 2xl:px-0 relative z-10 h-full">
+        <div className="flex flex-col lg:flex-row gap-8 xl:gap-12 2xl:gap-16 items-center lg:items-stretch h-full">
           
           {/* Left Column: Image */}
           <div className="w-full lg:w-[30%] flex justify-center lg:justify-end items-end relative mt-8 lg:mt-0 lg:-mb-16">
@@ -70,7 +70,7 @@ export default async function ExplorePrograms({
             </div>
 
             {/* 2x3 Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 xl:gap-4 2xl:gap-5 w-full mb-10">
               {otherPrograms.map((prog, index) => (
                 <Link
                   href={`/programs/${prog.programmeslug}`}
