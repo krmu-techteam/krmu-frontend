@@ -64,7 +64,7 @@ const ProgrammeHighlight = ({
 
   if (slug === "bba-hr" || slug === "b-tech-cse") {
     return (
-      <section className="bg-white py-8 xl:py-12 2xl:py-16 shadow">
+      <section className="bg-[#f9f9f9] py-8 xl:py-12 2xl:py-16">
         <div className="max-w-[1440px] mx-auto w-full px-4 md:px-8 xl:px-10 2xl:px-0">
           <div className="text-center mb-4 md:mb-6">
             <h2 className="text-3xl text-center md:text-center md:text-[40px] font-bold text-[#051630] leading-[1.1] mb-3">

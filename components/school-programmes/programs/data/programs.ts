@@ -26,7 +26,7 @@ const defaultCinematicConfig: Partial<HeroConfig> = {
   overlayWidth: "60%",
   titleMaxWidth: "lg:max-w-[80%] 2xl:max-w-full",
   subtitleMaxWidth: "lg:max-w-[80%] 2xl:max-w-full",
-  subtitleSize: "sm:text-base",
+  subtitleSize: "",
   titleSize: "text-[24px] lg:text-xl xl:text-3xl 2xl:text-[52px]",
   descSize: "2xl:text-lg",
   contentMaxWidth: "2xl:max-w-lg",

@@ -9,70 +9,12 @@ import HoverCard from "./HoverCard";
 // Map schoolCategorySlug to school-specific student cutout images
 const SCHOOL_STUDENT_CUTOUTS = {
   "soet": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_tech_fd8498effb.png",
+    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/BBA_d4936f5bd4.png",
     alt: "SOET Engineering Student",
     className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
   },
-  "somc": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/BBA_d4936f5bd4.png",
-    alt: "SOMC Management Student",
-    className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
-  },
-  "sols": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/BBA_d4936f5bd4.png",
-    alt: "SOLS Law Student",
-    className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
-  },
-  "smas": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_tech_fd8498effb.png",
-    alt: "SMAS Medical Student",
-    className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
-  },
-  "sola": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_tech_fd8498effb.png",
-    alt: "SOLA Liberal Arts Student",
-    className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
-  },
-  "soad": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_tech_fd8498effb.png",
-    alt: "SOAD Architecture & Design Student",
-    className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
-  },
-  "sbas": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_tech_fd8498effb.png",
-    alt: "SBAS Basic Sciences Student",
-    className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
-  },
-  "sojmc": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_tech_fd8498effb.png",
-    alt: "SOJMC Journalism Student",
-    className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
-  },
-  "semce": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_tech_fd8498effb.png",
-    alt: "SOJMC Journalism Student",
-    className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
-  },
-  "sohmct": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_tech_fd8498effb.png",
-    alt: "SOHMCT Hotel Management Student",
-    className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
-  },
-  "soed": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_tech_fd8498effb.png",
-    alt: "SOED Education Student",
-    className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
-  },
-  "soas": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_tech_fd8498effb.png",
-    alt: "SOAS Agricultural Student",
-    className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
-  },
-  "sprs": {
-    src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_tech_fd8498effb.png",
-    alt: "SPRS Physiotherapy Student",
-    className: "scale-[1.14] lg:scale-[1.18] xl:scale-[1.35] 2xl:scale-[1.22]",
-  },
+ 
+ 
 };
 
 export default async function ExplorePrograms({ 
@@ -81,11 +23,6 @@ export default async function ExplorePrograms({
   currentSlug: string;
 }) {
   const { schoolCategoryName, schoolCategorySlug, degreeName } = await getProgramMetadata(currentSlug);
-
-  console.log("=========================================");
-  console.log("DEBUG schoolCategoryName:", schoolCategoryName);
-  console.log("DEBUG schoolCategorySlug:", schoolCategorySlug);
-  console.log("=========================================");
 
   if (!schoolCategoryName || !degreeName) return null;
 

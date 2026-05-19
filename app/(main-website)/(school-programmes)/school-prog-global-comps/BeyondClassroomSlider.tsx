@@ -49,7 +49,7 @@ const BeyondClassroomSlider = ({ slideimages }: Props) => {
             {[...slideimages, ...slideimages, ...slideimages].map((rec, i) => (
               <div
                 key={`${rec.id || i}-${i}`}
-                className="flex-[0_0_100%] min-w-0 pl-4 sm:flex-[0_0_50%] lg:flex-[0_0_33%]"
+                className="flex-[0_0_100%] min-w-0 pl-4 sm:flex-[0_0_50%] lg:flex-[0_0_33%] 2xl:flex-[0_0_25%]"
               >
                 <div className="rounded-2xl overflow-hidden shadow-2xl h-full">
                   <Image
