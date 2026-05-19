@@ -15,17 +15,30 @@
 
 /* Custom utility class */
 @layer utilities {
+  .card-gradient-1 .inner-card {
+    bottom: -214px;
+    left: -236px;
+  }
+  .card-gradient-4 .inner-card {
+    bottom: -214px;
+    right: -115px;
+  }
+  .card-gradient-2 .inner-card,
+  .card-gradient-3 .inner-card {
+    bottom: -250px;
+    left: 44%;
+    transform: translateX(-50%);
+  }
 
-  .alumniHeaderCarousel .customCarousel{
+  .alumniHeaderCarousel .customCarousel {
     padding-left: 0px;
     padding-right: 0px;
     justify-content: center;
   }
-  .alumniHeaderCarousel .customCarousel{
- 
+  .alumniHeaderCarousel .customCarousel {
     width: 100%;
   }
-  .alumniHeaderCarousel .customCarousel img{
+  .alumniHeaderCarousel .customCarousel img {
     /* object-fit: fill; */
     width: 150px;
     height: 150px;
@@ -4647,7 +4660,7 @@
     font-size: 14px !important;
     line-height: 1.5 !important;
   }
-   .clubcontent p:empty {
+  .clubcontent p:empty {
     display: none !important;
   }
 
@@ -4659,7 +4672,7 @@
     margin: 0 0 12px !important;
     min-height: unset !important;
   }
-    .clubcontent p {
+  .clubcontent p {
     min-height: unset !important;
   }
 
@@ -4679,8 +4692,7 @@
     margin-top: px !important;
     padding: 0 !important;
   }
-    /* .clubcontent p {
+  /* .clubcontent p {
     margin-bottom: -10px !important;
   } */
 }
-

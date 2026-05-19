@@ -29,13 +29,13 @@ const SchoolTestimonialsCard = ({ testimonials }: Props) => {
           }),
         ]}
       >
-        <CarouselContent>
+        <CarouselContent className="my-10">
           {testimonials &&
             testimonials.map((testimonial) => {
               return (
                 <CarouselItem
                   key={testimonial?.id}
-                  className="md:basis-1/2 py-5"
+                  className="md:basis-1/2"
                 >
                   <TestimonialCard
                     name={testimonial?.name}

@@ -169,15 +169,16 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                 value={deg.tabValue}
                 className={`${programs[deg.value]?.length > 3 ? "grid md:grid-cols-2 xl:grid-cols-4 gap-5" : "flex flex-col sm:flex-row flex-wrap lg:grid grid-cols-2 xl:flex justify-center gap-5"} `}
               >
-                {programs[deg.value]?.length ? (
+                {programs[deg.value] === undefined ? (
+                  // LOADING STATE
+                  <div className="p-5 text-black">Loading...</div>
+                ) : programs[deg.value]?.length ? (
                   programs[deg.value].map((prog, index) => {
                     const isActive =
                       hoverProgramId !== null
                         ? hoverProgramId === prog.id
                         : activeProgramId === prog.id;
-                         const totalCards = programs[deg.value]?.length;
-
-                         console.log('handleMouseEnter', handleMouseEnter);
+                    const totalCards = programs[deg.value]?.length;
 
                     return (
                       <ProgramCard
@@ -194,79 +195,6 @@ const ProgrammeInfoDemo = ({ catName }: Props) => {
                         totalCards={totalCards}
                         progNewLine={progNewLine}
                       />
-                      // <div
-                      //   key={prog.id}
-                      //   onClick={() => handleProgramClick(prog.id)}
-                      //   onMouseEnter={() => handleMouseEnter(prog.id)}
-                      //   onFocus={() => handleMouseEnter(prog.id)}
-                      //   className={`${programs[deg.value]?.length > 2 ? "" : "max-w-[528px] min-h-[258px]"}  w-full rounded-xl bg-[#001F3F] group hover:bg-[#0a41a1] h-full  font-semibold p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] ${isActive ? "" : " hover:text-black"
-                      //     }`}
-                      // >
-                      //   <Link
-                      //     href={`/programs/${prog.programmeslug || "#"}`}
-                      //     className="block w-full text-white text-xl"
-                      //     target="_blank"
-                      //     rel="noopener noreferrer"
-                      //   >
-                      //     {prog.title} {prog.highlightitle}
-                      //   </Link>
-                      //   {criteria && (
-                      //     <div className="flex flex-col sm:flex-row  sm:gap-5">
-                      //       <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
-                      //         <span>
-                      //           <Calendar />
-                      //         </span>
-                      //         <div className="flex flex-col gap-0.5">
-                      //           <span className="font-normal">Duration:</span>
-                      //           <span>{prog.criteria?.Duration}</span>
-                      //         </div>
-                      //       </div>
-                      //       <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
-                      //         <span>
-                      //           <IndianRupee />
-                      //         </span>
-                      //         <div className="flex flex-col gap-0.5">
-                      //           <span className="font-normal">
-                      //             Programme Fee:
-                      //           </span>
-                      //           <span>
-                      //             Rs. {prog.criteria?.programme_fee_per_year} /
-                      //             Year{" "}
-                      //             {prog.programmeslug ===
-                      //               "bhmct-hotel-management"
-                      //               ? "(2025-26)"
-                      //               : ""}
-                      //           </span>
-                      //         </div>
-                      //       </div>
-                      //     </div>
-                      //   )}
-
-                      //   <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center border-t border-[#395c6e] pt-2.5">
-                      //     <button
-                      //       className="border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer border-white text-white"
-                      //       onClick={() => setShow(true)}
-                      //     >
-                      //       Fee Structure
-                      //     </button>
-                      //     {prog.criteria?.eligibility_utm_links && (
-                      //       <Link
-                      //         href={prog.criteria.eligibility_utm_links}
-                      //         target="_blank"
-                      //         className="bg-[#cb000d] text-white rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-white group-hover:text-[#cb000d] hover:border-white "
-                      //       >
-                      //         Apply Now
-                      //       </Link>
-                      //     )}
-                      //     <Link
-                      //       href={`/programs/${prog.programmeslug || "#"}`}
-                      //       target="_blank"
-                      //       className="text-white rounded-sm py-2.5 2xl:py-2.5 text-sm flex items-center gap-2"
-                      //     >
-                      //       <CircleArrowRight /> View Programme
-                      //     </Link>
-                      //   </div>
-                      // </div>
                     );
                   })
                 ) : (

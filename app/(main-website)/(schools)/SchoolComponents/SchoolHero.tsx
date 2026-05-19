@@ -93,10 +93,10 @@ const SchoolHero = ({
   return (
     <>
       <section
-        className={`pt-[150px] relative overflow-hidden ${
+        className={` relative overflow-hidden ${
           fullWidth
             ? "lg:py-[20%] lg:pb-0 pt-[300px] pb-5"
-            : "pt-[280px] schoolBanner"
+            : "pt-[100px] sm:pt-[140px] lg:pt-[280px] schoolBanner"
         } bg-cover bg-no-repeat bg-center bg-[#001732]`}
         style={{
           backgroundImage:
@@ -193,7 +193,7 @@ const SchoolHero = ({
                     priority
                   />
                 </div>
-                <div className="bg-[#001732] xl:bg-transparent p-5 xl:p-0">
+                <div className="bg-[#001732] xl:bg-transparent p-5 xl:p-0 z-20 relative -mt-28 sm:mt-0">
                   <p className="text-sm md:text-2xl font-normal sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
                     {subheading}
                   </p>

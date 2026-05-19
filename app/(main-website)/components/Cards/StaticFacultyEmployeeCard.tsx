@@ -100,7 +100,7 @@ export const StaticFacultyEmployeeCard = ({
       {/* IMAGE SECTION */}
       <Link
         href={`/faculty/${slug}`}
-        className="relative flex h-[130px] sm:h-[280px] w-full items-end justify-center overflow-hidden bg-[#001732]"
+        className="relative flex h-[240px] sm:h-[280px] w-full items-end justify-center overflow-hidden bg-[#001732]"
       >
         {/* BG LOGO */}
         <div className="absolute inset-0 flex items-center justify-center p-6">
@@ -120,7 +120,7 @@ export const StaticFacultyEmployeeCard = ({
           height={295}
           alt={name}
           priority={false}
-          className="relative z-10 h-[120px] -mb-2 sm:h-full sm:w-full rounded-t-[15px] object-contain transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+          className="relative z-10 h-[240px] -mb-2 sm:h-full sm:w-full rounded-t-[15px] object-contain transition-transform duration-500 ease-out group-hover:scale-[1.03]"
           style={{
             boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
           }}

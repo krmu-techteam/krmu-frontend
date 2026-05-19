@@ -14,7 +14,7 @@ export const AdvisoryEmployeeCard = ({ name, imgUrl, qual, desg }: Props) => {
   return (
     <div className="overflow-hidden rounded-t-xl bg-white group hover:shadow-xl duration-300 ease-in-out">
       {/* IMAGE SECTION */}
-      <div className="bg-[#001732]  relative h-[130px] sm:h-[297px] w-full overflow-hidden flex items-end justify-center">
+      <div className="bg-[#001732]  relative  w-full overflow-hidden flex items-end justify-center">
         <div className="absolute inset-0 flex items-center justify-center p-6">
           <Image
             src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/KRMU_Logo_white_3_33a6547c3f.png"
@@ -36,29 +36,25 @@ export const AdvisoryEmployeeCard = ({ name, imgUrl, qual, desg }: Props) => {
           }}
         />
       </div>
+      {/* DETAILS */}
+      <div className="p-1.5 sm:p-5">
+        <h4 className="text-[11px] sm:text-base font-bold inline-block leading-snug">
+          {name}
+        </h4>
 
-      {/* CONTENT */}
-      <div>
-        {/* DETAILS */}
-        <div className="border-b border-[#ddd] p-1.5 sm:p-5">
-          <h4 className="text-[11px] sm:text-base font-bold inline-block leading-snug">
-            {name}
-          </h4>
+        <h5
+          className="text-[11px] uppercase py-1"
+          dangerouslySetInnerHTML={{
+            __html: desg,
+          }}
+        />
 
-          <h5
-            className="text-[11px] uppercase py-1"
-            dangerouslySetInnerHTML={{
-              __html: desg,
-            }}
-          />
-
-          <h6
-            className="text-[10px] sm:text-xs font-bold"
-            dangerouslySetInnerHTML={{
-              __html: qual,
-            }}
-          />
-        </div>
+        <h6
+          className="text-[10px] sm:text-xs font-bold"
+          dangerouslySetInnerHTML={{
+            __html: qual,
+          }}
+        />
       </div>
     </div>
   );

@@ -43,7 +43,7 @@ const SchoolOpenSourceMentorship = () => {
                 }}
               >
                 {/* Photo */}
-                <div className="relative w-full h-[260px] xs:w-[180px] xs:h-auto md:w-full md:h-[200px] lg:w-[190px] lg:h-auto flex-shrink-0">
+                <div className="relative w-full h-[260px] xs:w-[180px] xs:h-auto md:w-full  lg:h-auto lg:w-[190px] flex-shrink-0">
                   <Image
                     src="/schools/OP.JPG"
                     alt="Jayant Parashar"
