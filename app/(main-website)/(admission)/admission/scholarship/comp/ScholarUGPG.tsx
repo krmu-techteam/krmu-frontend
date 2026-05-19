@@ -88,7 +88,7 @@ const ScholarUGPG = () => {
                           <tr>
                             <td>85% to less than 90%</td>
                             <td id="undergraduate">35%</td>
-                            <td rowSpan={2}>
+                            <td rowSpan={3}>
                               To be paid in 2 equal instalments-1st instalment
                               will be paid upfront post documents verification
                               and the amount of scholarship will be deducted
@@ -100,6 +100,9 @@ const ScholarUGPG = () => {
                           </tr>
                           <tr>
                             <td>80% to less than 85%</td> <td>25%</td>
+                          </tr>
+                          <tr>
+                            <td>75% to less than 80%</td> <td>10%</td>
                           </tr>
                         </tbody>
                       </table>
@@ -388,7 +391,7 @@ const ScholarUGPG = () => {
                     }}
                   >
                     <p className="font-semibold text-center mb-5">
-                      CUET -1 (On the basis of best 4 subjects score)
+                      CUET -1 (On the basis percentage of best 4 subjects score)
                     </p>
                     <div className="overflow-x-auto">
                       <table>
@@ -419,7 +422,7 @@ const ScholarUGPG = () => {
                     </div>
 
                     <p className="font-semibold text-center my-5">
-                      CUET -2, (On the basis average percentile of best 4
+                      CUET -2 (On the basis average percentile of best 4
                       subjects)
                     </p>
                     <div className="overflow-x-auto">
@@ -465,11 +468,11 @@ const ScholarUGPG = () => {
                             <td>35%</td>
                           </tr>
                           <tr>
-                            <td>85.01 percentile to 90th percentile</td>{" "}
+                            <td>80.01 percentile to 90th percentile</td>{" "}
                             <td>25%</td>
                           </tr>
                           <tr>
-                            <td>75.01 percentile to 85th percentile</td>{" "}
+                            <td>70.01 percentile to 80th percentile</td>{" "}
                             <td>10%</td>
                           </tr>
                         </tbody>

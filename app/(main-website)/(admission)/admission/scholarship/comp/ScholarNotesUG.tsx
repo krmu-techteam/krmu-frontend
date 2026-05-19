@@ -56,8 +56,7 @@ const ScholarNotesUG = () => {
                   6
                 </span>
                 <span className="text-white font-semibold text-base">
-                 Part A Scholarship will be awarded on the basis of an overall aggregate marks obtained in the last qualifying examination
-
+        Part A Scholarship will be awarded on the basis of an overall aggregate marks obtained in the last qualifying examination
                 </span>
               </div>
               <div className="flex gap-5">
