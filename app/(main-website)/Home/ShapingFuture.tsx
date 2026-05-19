@@ -61,23 +61,30 @@ const ShapingFuture = ({
                 </div>
                 <p className="mb-2 mt-5 text-lg">{desc}</p>
               </div>
-              <div className="grid grid-cols-2 my-10">
-                {shapingCounters &&
-                  shapingCounters.map((counter) => {
-                    return (
-                      <div
-                        key={counter?.id}
-                        className="flex flex-col text-center items-center justify-center p-4 lg:items-start lg:justify-start lg:text-left first:border-r first:border-b last:border-l last:border-t border-gray-300 "
-                      >
-                        <span className="text-[#001732] font-bold mb-[10px] text-3xl xl:text-4xl">
-                          {counter?.countertext}
-                        </span>
-                        <span className="text-sm p-1 font-semibold">
-                          {counter?.countercontent}
-                        </span>
-                      </div>
-                    );
-                  })}
+              <div className="relative   ">
+                <div className="grid grid-cols-2 my-10">
+                  {/* Vertical Line */}
+                  <div className="absolute left-1/2 top-0 h-full w-[1px] bg-gray-300 -translate-x-1/2" />
+
+                  {/* Horizontal Line */}
+                  <div className="absolute top-1/2 left-0  w-full h-[1px] bg-gray-300 -translate-y-1/2" />
+                  {shapingCounters &&
+                    shapingCounters.map((counter) => {
+                      return (
+                        <div
+                          key={counter?.id}
+                          className="flex flex-col text-center items-center justify-center w-full p-4 lg:items-start lg:justify-start lg:text-left "
+                        >
+                          <span className="text-[#001732] font-bold mb-[10px] text-3xl xl:text-4xl">
+                            {counter?.countertext}
+                          </span>
+                          <span className="text-sm p-1 font-semibold">
+                            {counter?.countercontent}
+                          </span>
+                        </div>
+                      );
+                    })}
+                </div>
               </div>
 
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start sm:items-center gap-3">
