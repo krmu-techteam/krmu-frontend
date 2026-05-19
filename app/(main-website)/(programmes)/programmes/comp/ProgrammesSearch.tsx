@@ -254,15 +254,15 @@ const ProgrammesSearch = () => {
     ) => {
       const nextPage = reset ? 1 : pageRef.current;
       let newData: ProgrammeItem[] = [];
-
-      const limit = loadAll ? 1000 : 7; // fetch 7 to detect "has more"
+      const limit = loadAll ? 1000 : 7;
+      // Zenith with no search → show only BTech AI card
       if (schoolRefValue.current === ZENITH_SLUG && query.length === 0) {
         setShowLoadMore(false);
         setProgrammes(zenithProgrammes);
         return;
       }
       if (query.length > 0) {
-        // SEARCH MODE
+        // SEARCH MODE — all results, no slice
         if (degreeRefValue.current === "doctoral-programmes") {
           const res = await searchPhdProgrammes("", 1, 1000);
           const allData = res.data || [];
@@ -276,33 +276,30 @@ const ProgrammesSearch = () => {
             normalize(item.title).includes(normalize(query)),
           );
         }
-
-        setShowLoadMore(false); // no button in search
-      } else {
-        // DROPDOWN MODE
-        if (degreeRefValue.current === "doctoral-programmes") {
-          const res = await getAllSchoolPhdProgrammeByCatPaginated(
-            schoolRefValue.current,
-            loadAll ? 1 : nextPage,
-            limit,
-          );
-          newData = res?.data || [];
-        } else {
-          const res = await getAllSchoolProgrammeByDegOrCatPaginated(
-            degreeRefValue.current,
-            schoolRefValue.current,
-            loadAll ? 1 : nextPage,
-            limit,
-          );
-          newData = res?.data || [];
-        }
-
-        // 👇 check if more than 6 exist
-        const hasMore = newData.length > 6;
-        setShowLoadMore(!loadAll && hasMore);
+        setShowLoadMore(false);
+        setProgrammes(newData); // ✅ show all, no slice
+        return;
       }
-
-      // 👇 IMPORTANT: only show 6 unless loadAll
+      // DROPDOWN MODE
+      if (degreeRefValue.current === "doctoral-programmes") {
+        const res = await getAllSchoolPhdProgrammeByCatPaginated(
+          schoolRefValue.current,
+          loadAll ? 1 : nextPage,
+          limit,
+        );
+        newData = res?.data || [];
+      } else {
+        const res = await getAllSchoolProgrammeByDegOrCatPaginated(
+          degreeRefValue.current,
+          schoolRefValue.current,
+          loadAll ? 1 : nextPage,
+          limit,
+        );
+        newData = res?.data || [];
+      }
+      const hasMore = newData.length > 6;
+      setShowLoadMore(!loadAll && hasMore);
+      // ✅ Dropdown: slice to 6 unless loadAll
       const displayData = loadAll ? newData : newData.slice(0, 6);
 
       if (reset || loadAll) {
