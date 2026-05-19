@@ -9,6 +9,9 @@ export async function getProgramMetadata(currentSlug: string) {
     if (res.ok) {
       const json = await res.json();
       const prog = json.data?.[0];
+      console.log("=========================================");
+      console.log("DEBUG prog?.school_category details:", JSON.stringify(prog?.school_category, null, 2));
+      console.log("=========================================");
       return {
         schoolCategoryName: prog?.school_category?.name,
         schoolCategorySlug: prog?.school_category?.slug,

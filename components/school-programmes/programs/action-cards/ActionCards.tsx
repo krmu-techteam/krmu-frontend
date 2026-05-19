@@ -58,7 +58,7 @@ export const ActionCards = () => {
   ];
 
   return (
-    <section className="relative py-12 lg:py-12 2xl:py-16 px-4 xl:px-10 2xl:px-0 bg-[#f8f9fa] overflow-hidden">
+    <section className="relative py-8 lg:py-12 2xl:py-16 px-4 xl:px-10 2xl:px-0 bg-[#f8f9fa] overflow-hidden">
       {/* Modern Dot Pattern Background */}
       <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
       
@@ -66,7 +66,7 @@ export const ActionCards = () => {
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-200/30 rounded-full blur-[100px] pointer-events-none mix-blend-multiply"></div>
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-red-100/40 rounded-full blur-[100px] pointer-events-none mix-blend-multiply"></div>
 
-      <div className="relative z-10 max-w-[1280px] mx-auto">
+      <div className="relative z-10 max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 xl:gap-4 2xl:gap-8">
           {actionCards.map((actionCard) => (
             <ActionCard key={actionCard.id} actionCard={actionCard} />
