@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NoPaperFormProvider from "@/lib/constants/NoPaperFormProvider";
-import "./bsc-finance-2026.css";
 import JournalismAndMassCommunication from "./page";
 
 const inter = Inter({

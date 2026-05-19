@@ -1,5 +1,7 @@
 import React from "react";
 import { ArrowRightCircle } from "lucide-react";
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+import Link from "next/link";
 
 const portfolioItems = [
   "Long foarm feature stories, investigations and explainers",
@@ -12,15 +14,19 @@ const portfolioItems = [
   "A dissertation or capstone project that connects research with real media practice",
 ];
 
-export default function PostgraduatePortfolio() {
+export default function PostgraduatePortfolio({
+  heroSection,
+}: {
+  heroSection: any;
+}) {
   return (
     <section className="w-full bg-[#f3f0f4] py-10 sm:py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-        <div className="mb-15 lg:mb-20 max-w-4xl">
+        <div className="mb-10 lg:mb-15 max-w-4xl">
           <h1 className="text-3xl sm:text-4xl md:text-[52px] leading-tight font-serif font-normal text-[#131B2E]">
             See what our postgraduates create
           </h1>
-          <p className="mt-4 text-base sm:text-lg md:text-[20px] text-[#000000] leading-7 sm:leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg md:text-[20px] text-[#000000] leading-6">
             The MA programme is designed so that every semester adds to your
             portfolio and your research profile.
           </p>
@@ -71,14 +77,14 @@ export default function PostgraduatePortfolio() {
                 postgraduate degree
               </h2>
 
-              <p className="mt-4 text-base sm:text-lg md:text-[18px] text-[#000000] leading-7">
+              <p className="mt-4 text-base sm:text-lg md:text-[18px] text-[#000000] leading-6">
                 you are carrying work you can show to editors, hiring managers,
                 collaborators and investors.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-              <button
+              {/* <button
                 className="
                 w-full sm:w-auto
                 bg-[#E21F21]
@@ -93,9 +99,25 @@ export default function PostgraduatePortfolio() {
                 rounded-[3px]
                 sm:min-w-[220px]
               "
-              >
-                Apply Now
-              </button>
+              > */}
+              <NpfPopup
+                formId="31c1452015d32698095f833b3e7eb9c5"
+                btnClass={`hero-common-btn-b  ${heroSection.herobtn.buttonclass || ""} rounded-md w-full sm:w-auto
+                bg-[#E21F21]
+                hover:bg-[#db3123]
+                transition-all duration-300
+                font-semibold
+                cursor-pointer
+                text-white
+                text-sm sm:text-md
+                px-6 sm:px-8
+                py-3 sm:py-4
+                rounded-[3px]
+                sm:min-w-[220px]`}
+                btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
+                showIcon={true}
+              />
+              {/* </button> */}
               <button
                 className="
                 w-full sm:w-auto
@@ -112,7 +134,12 @@ export default function PostgraduatePortfolio() {
                 sm:min-w-[220px]
               "
               >
-                Download Brochure
+                <Link
+                  href="https://www.krmangalam.edu.in/pdfs/handbooks/majmc-handbook-2025-27.pdf"
+                  target="_blank"
+                >
+                  Download Brochure
+                </Link>
               </button>
             </div>
           </div>

@@ -48,14 +48,14 @@ const ProgrammesOurLocation = () => {
   return (
     <section className="py-10 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 bg-[#FFFFFF]">
       <div className="max-w-7xl mx-auto">
-
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-[#001B44] leading-tight md:leading-[56px]">
             What you will study over 2 years
           </h2>
 
-          <p className="mt-5 text-sm sm:text-base text-[#44474F] leading-6 sm:leading-7 max-w-2xl mx-auto">
-            From theory and global media to creator economy, research, data journalism and digital entrepreneurship.
+          <p className="mt-5 text-sm sm:text-base text-[#44474F] leading-6 sm:leading-5 max-w-2xl mx-auto">
+            From theory and global media to creator economy, research, data
+            journalism and digital entrepreneurship.
           </p>
         </div>
 
@@ -63,21 +63,24 @@ const ProgrammesOurLocation = () => {
           {studyData.map((item, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl shadow-xl p-5 sm:p-6 md:p-8 lg:p-10 overflow-hidden transition-all duration-300 hover:-translate-y-1 ${item.dark
-                ? "bg-[#001B44] text-white"
-                : "bg-white text-[#001B44]"
-                }`}
+              className={`relative rounded-2xl shadow-xl p-5 sm:p-6 md:p-8 lg:p-10 overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
+                item.dark
+                  ? "bg-[#001B44] text-white"
+                  : "bg-white text-[#001B44]"
+              }`}
             >
               <span
-                className={`absolute top-4 right-4 sm:top-5 sm:right-5 text-5xl sm:text-6xl md:text-7xl font-serif opacity-10 ${item.dark ? "text-white" : "text-black"
-                  }`}
+                className={`absolute top-4 right-4 sm:top-5 sm:right-5 text-5xl sm:text-6xl md:text-7xl font-serif opacity-10 ${
+                  item.dark ? "text-white" : "text-black"
+                }`}
               >
                 {item.number}
               </span>
 
               <p
-                className={`text-[10px] sm:text-xs tracking-[2px] sm:tracking-[3px] font-light uppercase mb-4 sm:mb-5 ${item.dark ? "text-[#E2DFFF]" : "text-[#011B44]"
-                  }`}
+                className={`text-[10px] sm:text-xs tracking-[2px] sm:tracking-[3px] font-light uppercase mb-4 sm:mb-5 ${
+                  item.dark ? "text-[#E2DFFF]" : "text-[#011B44]"
+                }`}
               >
                 {item.year}
               </p>
@@ -87,13 +90,15 @@ const ProgrammesOurLocation = () => {
               </h3>
 
               <div
-                className={`w-full h-px my-5 sm:my-6 ${item.dark ? "bg-white/20" : "bg-gray-200"
-                  }`}
+                className={`w-full h-px my-5 sm:my-6 ${
+                  item.dark ? "bg-white/20" : "bg-gray-200"
+                }`}
               />
 
               <p
-                className={`text-sm sm:text-base leading-7 font-bold ${item.dark ? "text-[#FFFFFF]" : "text-[#001B44]"
-                  }`}
+                className={`text-sm sm:text-base leading-7 font-bold ${
+                  item.dark ? "text-[#FFFFFF]" : "text-[#001B44]"
+                }`}
               >
                 {item.description}
               </p>
@@ -102,15 +107,15 @@ const ProgrammesOurLocation = () => {
                 {item.points.map((point, i) => (
                   <li
                     key={i}
-                    className={`flex items-start gap-3 text-sm sm:text-[15px] leading-6 sm:leading-7 ${item.dark ? "text-gray-300" : "text-[#000000]"
-                      }`}
+                    className={`flex items-start gap-3 text-sm sm:text-[15px] leading-6 sm:leading-7 ${
+                      item.dark ? "text-gray-300" : "text-[#000000]"
+                    }`}
                   >
                     <ArrowRightCircle
                       size={18}
-                      className={`mt-1 shrink-0 ${item.dark
-                        ? "text-[#bad7f0]"
-                        : "text-[#1a1919]"
-                        }`}
+                      className={`mt-1 shrink-0 ${
+                        item.dark ? "text-[#bad7f0]" : "text-[#1a1919]"
+                      }`}
                     />
 
                     <span>{point}</span>
@@ -121,8 +126,10 @@ const ProgrammesOurLocation = () => {
           ))}
         </div>
         <div className="text-center mt-12 sm:mt-16 max-w-4xl mx-auto px-2">
-          <p className="text-lg sm:text-xl md:text-[22px] font-serif font-semibold text-[#000000] leading-8 sm:leading-9">
-            By the end of two years you do not just complete a syllabus – you complete a portfolio, a research project and a set of industry level skills.
+          <p className="text-lg sm:text-xl md:text-[22px] font-serif font-semibold text-[#000000] leading-6 sm:leading-7">
+            By the end of two years you do not just complete a syllabus – you
+            complete a portfolio, a research project and a set of industry level
+            skills.
           </p>
         </div>
       </div>

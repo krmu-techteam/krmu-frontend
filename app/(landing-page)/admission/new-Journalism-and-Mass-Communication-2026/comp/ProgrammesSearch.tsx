@@ -47,7 +47,7 @@ const ProgrammesSearch = () => {
             </div>
 
             <div>
-              <p className="text-[#44474F] text-base sm:text-lg lg:text-[20px] leading-relaxed lg:leading-[32.5px] font-normal">
+              <p className="text-[#44474F] text-base sm:text-lg lg:text-[20px] leading-relaxed lg:leading-[30.5px] font-normal">
                 Media has shifted from slow, one way communication to real time,
                 multi platform storytelling. Newsrooms, brands, creators and
                 platforms are all fighting for one thing – sharp minds who can

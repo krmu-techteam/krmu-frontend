@@ -88,6 +88,77 @@ const JournalismAndMassCommunication = async () => {
 
   const breadcrumbSchema = createBreadcrumbProgSchema(breadcrumbItems);
 
+  const heroSection: any = {
+    id: 3440,
+    subtitle:
+      "Master AI & Machine Learning with IBM and Microsoft — From Day One’ ",
+    description:
+      "Step into the future with a B.Tech. CSE (AI & ML) programme designed to fuel intelligence, innovation, and industry excellence.\n\n\n",
+    imgvideo: "Video",
+    videofield: "https://www.youtube.com/watch?v=39uHV_rcawc",
+    formField: null,
+    formId: "31c1452015d32698095f833b3e7eb9c5",
+    herobtn: {
+      id: 43853,
+      buttontext: "Apply Now",
+      buttonlink:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_Tech_Computer_Science_and_Engineering_AI_and_ML_with_academic_support_of_IBM_and_powered_by_Microsoft_Certifications_c28e9ff274.jpg",
+      buttonclass: "npfWidget-31c1452015d32698095f833b3e7eb9c5",
+      popupFormId: null,
+      containerPopupFormId: null,
+    },
+    heroimg: {
+      id: 4976,
+      documentId: "kbtysvh7d8bet4pa209hf3gz",
+      name: "Hero Image.png",
+      alternativeText: "BTech CSE (AI & ML) Students Image at KRMU",
+      caption: null,
+      width: 640,
+      height: 600,
+      formats: {
+        small: {
+          ext: ".png",
+          url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/small_Hero_Image_f55fa9fd76.png",
+          hash: "small_Hero_Image_f55fa9fd76",
+          mime: "image/png",
+          name: "small_Hero Image.png",
+          path: null,
+          size: 499.86,
+          width: 500,
+          height: 469,
+          sizeInBytes: 499860,
+        },
+        thumbnail: {
+          ext: ".png",
+          url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/thumbnail_Hero_Image_f55fa9fd76.png",
+          hash: "thumbnail_Hero_Image_f55fa9fd76",
+          mime: "image/png",
+          name: "thumbnail_Hero Image.png",
+          path: null,
+          size: 68.85,
+          width: 166,
+          height: 156,
+          sizeInBytes: 68847,
+        },
+      },
+      hash: "Hero_Image_f55fa9fd76",
+      ext: ".png",
+      mime: "image/png",
+      size: 173.68,
+      url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Hero_Image_f55fa9fd76.png",
+      previewUrl: null,
+      provider: "strapi-provider-upload-strapi-cloud",
+      provider_metadata: null,
+      createdAt: "2025-10-08T10:20:25.590Z",
+      updatedAt: "2026-05-11T06:39:22.981Z",
+      publishedAt: "2025-10-08T10:20:25.592Z",
+      related: [
+        "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+        "This object has been omitted by React in the console log to avoid sending too much data from the server. Try logging smaller or more specific objects.",
+      ],
+    },
+  };
+
   return (
     <>
       <Script
@@ -95,18 +166,18 @@ const JournalismAndMassCommunication = async () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
       />
-      <ProgrammesHero />
+      <ProgrammesHero heroSection={heroSection} />
       <ProgrammesSearch />
-      <ProgrammesAlumni />
+      <ProgrammesAlumni heroSection={heroSection} />
       <ProgrammesOurLocation />
       <LearnByDoingSection />
       <CareerPathsSection />
       <ExpertsSection />
       <FacultyMentorsSection />
-      <PostgraduatePortfolio />
-      <EligibilitySection />
+      <PostgraduatePortfolio heroSection={heroSection} />
+      <EligibilitySection heroSection={heroSection} />
       <FAQSection />
-      <MediaCTASection />
+      <MediaCTASection heroSection={heroSection} />
     </>
   );
 };
