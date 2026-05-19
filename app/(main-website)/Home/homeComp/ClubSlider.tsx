@@ -48,8 +48,8 @@ const ClubSlider = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-0" />
-        <CarouselNext className="right-0" />
+        <CarouselPrevious className="bg-[#001732] text-white rounded-[50%] left-0 " />
+        <CarouselNext className="bg-[#001732] text-white rounded-[50%] right-0" />
       </Carousel>
     </>
   );

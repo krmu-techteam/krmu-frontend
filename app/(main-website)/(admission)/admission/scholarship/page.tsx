@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
     return {
       title: "K.R. Mangalam University",
       description: "",
-      robots: {
+      robots: { 
         index: true,
         follow: true,
       },

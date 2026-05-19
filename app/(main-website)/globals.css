@@ -3611,14 +3611,18 @@
 
   .tick-li ul li::before {
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     position: absolute;
-    background: url("/white-circle-check-big.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 0;
-    left: -40px;
+    background-color: currentColor;
+    -webkit-mask-image: url("/white-circle-check-big.svg");
+    mask-image: url("/white-circle-check-big.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    top: 4px;
+    left: -35px;
   }
 
   .phdwhatbtn {
@@ -3680,13 +3684,7 @@
   .faculty-with-advisory {
     border-radius: 48px;
     background: #ebecec;
-    box-shadow:
-      0px 1.30061px 2.21381px 0px rgba(0, 0, 0, 0.01),
-      0px 3.12555px 5.32008px 0px rgba(0, 0, 0, 0.02),
-      0px 5.88513px 10.01724px 0px rgba(0, 0, 0, 0.03),
-      0px 10.49806px 17.86905px 0px rgba(0, 0, 0, 0.03),
-      0px 19.63548px 33.42209px 0px rgba(0, 0, 0, 0.04),
-      0px 47px 80px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   }
 
   .from-blue-50 {
@@ -4523,50 +4521,94 @@
 .clubcontent * {
   background-color: transparent !important;
   font-family: inherit !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
+/* --- Suppress empty paragraphs (from CMS) globally --- */
+.clubcontent p:empty,
+.clubcontent p:has(> br:only-child) {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+}
+
+/* --- Uniform 10px spacing between all block elements --- */
+.clubcontent p,
+.clubcontent ul,
+.clubcontent ol,
+.clubcontent li,
+.clubcontent table,
+.clubcontent figure,
+.clubcontent h1,
+.clubcontent h2,
+.clubcontent h3,
+.clubcontent h4,
+.clubcontent h5,
+.clubcontent h6,
+.clubcontent blockquote {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+/* --- Paragraphs --- */
 .clubcontent p {
-  margin-bottom: 1.25rem !important;
-  line-height: 1.75 !important;
+  line-height: 1.6 !important;
+  min-height: unset !important;
 }
 
+/* --- Lists --- */
 .clubcontent ol {
   list-style-type: decimal !important;
   padding-left: 1.5rem !important;
-  margin-bottom: 1.25rem !important;
 }
 
 .clubcontent ul {
   list-style-type: disc !important;
   padding-left: 1.5rem !important;
-  margin-bottom: 1.25rem !important;
 }
 
 .clubcontent li {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 4px !important;
+  line-height: 1.6 !important;
 }
 
+/* --- Bold / Strong --- */
 .clubcontent strong,
 .clubcontent b {
   color: #051630 !important;
   font-weight: 700 !important;
+  white-space: normal !important;
+}
+
+/* --- Images --- */
+.clubcontent img {
+  height: auto !important;
+  display: block !important;
+}
+
+/* --- Tables (desktop) --- */
+.clubcontent figure.table {
+  overflow-x: auto !important;
+  width: 100% !important;
+  margin-bottom: 10px !important;
 }
 
 .clubcontent table {
-  display: block !important;
+  display: table !important;
   width: 100% !important;
-  overflow-x: auto !important;
-  clear: both !important;
   border-collapse: collapse !important;
-  margin-bottom: 1.5rem !important;
   background-color: white !important;
+  margin-bottom: 10px !important;
 }
 
 .clubcontent th,
 .clubcontent td {
   border: 1px solid #e2e8f0 !important;
   padding: 0.5rem 1rem !important;
-  text-align: center !important;
+  text-align: left !important;
+  word-break: break-word !important;
 }
 
 .clubcontent th {
@@ -4580,94 +4622,81 @@
 }
 
 @media (max-width: 768px) {
-  .clubcontent [style*="display: flex"],
-  .clubcontent [style*="display:flex"] {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 1rem !important;
+  .clubcontent figure.table {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    float: none !important;
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+    display: block !important;
   }
 
   .clubcontent table {
     display: block !important;
-    width: 100% !important;
-    overflow-x: auto !important;
-  }
-
-  .clubcontent th,
-  .clubcontent td {
-    white-space: nowrap !important;
-    padding: 0.25rem 0.3rem !important;
-    font-size: 14px !important;
-  }
-
-  .clubcontent * {
-    max-width: 100% !important;
-    height: auto !important;
-    word-wrap: break-word !important;
-    word-break: break-word !important;
-    white-space: normal !important;
-  }
-
-  .clubcontent p,
-  .clubcontent span,
-  .clubcontent div {
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-  }
-}
-@media (max-width: 768px) {
-  .clubcontent figure.table {
-    overflow-x: auto !important;
-    float: none !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .clubcontent figure.table table {
-    display: table !important;
-    width: 100% !important;
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch !important;
-  }
-
-  .clubcontent table {
-    font-size: 13px !important;
+    width: 100% !important;
+    font-size: 12px !important;
+    margin-bottom: 10px !important;
   }
 
   .clubcontent th,
   .clubcontent td {
-    padding: 0.5rem !important;
+    padding: 0.4rem 0.5rem !important;
     font-size: 12px !important;
-    white-space: normal !important;
-    word-wrap: break-word !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
   }
 
   .clubcontent th {
-    font-size: 13px !important;
+    font-size: 12px !important;
   }
 
+  /* Collapse flex layouts from CMS to vertical stack */
   .clubcontent [style*="display: flex"],
   .clubcontent [style*="display:flex"] {
     flex-direction: column !important;
     align-items: flex-start !important;
-    gap: 1rem !important;
+    gap: 10px !important;
   }
 
+  /* Text sizing */
   .clubcontent p,
   .clubcontent span,
+  .clubcontent li,
   .clubcontent div {
     font-size: 14px !important;
     line-height: 1.5 !important;
   }
+<<<<<<< HEAD
   .clubcontent p:empty {
     display: none !important;
+=======
+
+  /* Keep spacing consistent on mobile too */
+  .clubcontent p,
+  .clubcontent ul,
+  .clubcontent ol,
+  .clubcontent table,
+  .clubcontent figure {
+    margin-bottom: 10px !important;
+>>>>>>> 5079e22537d8e6c406bb14bec19c2431dc8b9fba
   }
 
-  .clubcontent strong {
+  /* Images should not overflow */
+  .clubcontent img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Prevent any inline width/height from overflowing */
+  .clubcontent * {
+    height: auto !important;
+    word-wrap: break-word !important;
     white-space: normal !important;
   }
 
+<<<<<<< HEAD
   .clubcontent p {
     margin: 0 0 12px !important;
     min-height: unset !important;
@@ -4696,3 +4725,12 @@
     margin-bottom: -10px !important;
   } */
 }
+=======
+  /* Table cells can still nowrap for readability inside scroll container */
+  .clubcontent th,
+  .clubcontent td {
+    white-space: nowrap !important;
+  }
+}
+
+>>>>>>> 5079e22537d8e6c406bb14bec19c2431dc8b9fba

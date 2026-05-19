@@ -184,6 +184,68 @@ const ProgrammesSearch = () => {
     loadFilters();
   }, []);
 
+  // --------------------------------------------
+  // MAIN FETCH FUNCTION — no dependencies
+  // --------------------------------------------
+
+  // correct code
+  // const fetchProgrammes = useCallback(
+  //   async (reset: boolean = false, query: string = "") => {
+  //     const nextPage = reset ? 1 : pageRef.current;
+  //     let newData: ProgrammeItem[] = [];
+
+  //     if (query.length > 0) {
+  //       // SEARCH MODE
+  //       if (degreeRefValue.current === "doctoral-programmes") {
+  //         const res = await searchPhdProgrammes("", 1, 1000);
+  //         const allData = res.data || [];
+  //         newData = allData.filter((item) =>
+  //           normalize(item.heading).includes(normalize(query))
+  //         );
+  //       } else {
+  //         const res = await searchSchoolProgrammes("", 1, 1000);
+  //         const allData = res.data || [];
+  //         newData = allData.filter((item) =>
+  //           normalize(item.title).includes(normalize(query))
+  //         );
+  //       }
+  //     } else {
+  //       // DROPDOWN MODE
+  //       if (degreeRefValue.current === "doctoral-programmes") {
+  //         const res = await getAllSchoolPhdProgrammeByCatPaginated(
+  //           schoolRefValue.current,
+  //           nextPage,
+  //           6
+  //         );
+  //         newData = res?.data || [];
+  //       } else {
+  //         const res = await getAllSchoolProgrammeByDegOrCatPaginated(
+  //           degreeRefValue.current,
+  //           schoolRefValue.current,
+  //           nextPage,
+  //           6
+  //         );
+  //         newData = res?.data || [];
+  //       }
+  //     }
+
+  //     setShowLoadMore(newData.length === 6);
+
+  //     if (reset) {
+  //       pageRef.current = 2;
+  //       setProgrammes(newData);
+  //     } else {
+  //       pageRef.current += 1;
+  //       setProgrammes((prev) => [...prev, ...newData]);
+  //     }
+  //   },
+  //   []
+  // );
+
+  // --------------------------------------------
+  // Debounced search effect
+  // --------------------------------------------
+
   const fetchProgrammes = useCallback(
     async (
       reset: boolean = false,
@@ -192,15 +254,15 @@ const ProgrammesSearch = () => {
     ) => {
       const nextPage = reset ? 1 : pageRef.current;
       let newData: ProgrammeItem[] = [];
-
-      const limit = loadAll ? 1000 : 5; // fetch 7 to detect "has more"
+      const limit = loadAll ? 1000 : 7;
+      // Zenith with no search → show only BTech AI card
       if (schoolRefValue.current === ZENITH_SLUG && query.length === 0) {
         setShowLoadMore(false);
         setProgrammes(zenithProgrammes);
         return;
       }
       if (query.length > 0) {
-        // SEARCH MODE
+        // SEARCH MODE — all results, no slice
         if (degreeRefValue.current === "doctoral-programmes") {
           const res = await searchPhdProgrammes("", 1, 1000);
           const allData = res.data || [];
@@ -214,34 +276,31 @@ const ProgrammesSearch = () => {
             normalize(item.title).includes(normalize(query)),
           );
         }
-
-        setShowLoadMore(false); // no button in search
-      } else {
-        // DROPDOWN MODE
-        if (degreeRefValue.current === "doctoral-programmes") {
-          const res = await getAllSchoolPhdProgrammeByCatPaginated(
-            schoolRefValue.current,
-            loadAll ? 1 : nextPage,
-            limit,
-          );
-          newData = res?.data || [];
-        } else {
-          const res = await getAllSchoolProgrammeByDegOrCatPaginated(
-            degreeRefValue.current,
-            schoolRefValue.current,
-            loadAll ? 1 : nextPage,
-            limit,
-          );
-          newData = res?.data || [];
-        }
-
-        // 👇 check if more than 6 exist
-        const hasMore = newData.length > 4;
-        setShowLoadMore(!loadAll && hasMore);
+        setShowLoadMore(false);
+        setProgrammes(newData); // ✅ show all, no slice
+        return;
       }
-
-      // 👇 IMPORTANT: only show 6 unless loadAll
-      const displayData = loadAll ? newData : newData.slice(0, 4);
+      // DROPDOWN MODE
+      if (degreeRefValue.current === "doctoral-programmes") {
+        const res = await getAllSchoolPhdProgrammeByCatPaginated(
+          schoolRefValue.current,
+          loadAll ? 1 : nextPage,
+          limit,
+        );
+        newData = res?.data || [];
+      } else {
+        const res = await getAllSchoolProgrammeByDegOrCatPaginated(
+          degreeRefValue.current,
+          schoolRefValue.current,
+          loadAll ? 1 : nextPage,
+          limit,
+        );
+        newData = res?.data || [];
+      }
+      const hasMore = newData.length > 6;
+      setShowLoadMore(!loadAll && hasMore);
+      // ✅ Dropdown: slice to 6 unless loadAll
+      const displayData = loadAll ? newData : newData.slice(0, 6);
 
       if (reset || loadAll) {
         pageRef.current = 2;
@@ -415,6 +474,15 @@ const ProgrammesSearch = () => {
                     : item.phdslug) || "";
 
                 const isExternal = slug.startsWith("http");
+                const progNewLine = [
+                  "b-tech-cse",
+                  "btech-cse-ai-ml",
+                  "btech-full-stack-development",
+                  "btech-cse-ui-ux",
+                  "btech-cse-cyber-security",
+                  "btech-cse-in-data-science",
+                  "b-tech-cse-robotics-ai",
+                ];
 
                 const totalCards = programmes.length;
 
@@ -493,7 +561,7 @@ const ProgrammesSearch = () => {
                     <div className="flex flex-col sm:flex-row border-y border-[rgba(255,255,255,0.2)] sm:gap-5 z-20">
                       <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                          <Calendar size={20} />
+                          <Calendar />
                         </span>
                         <div className="flex flex-col gap-0.5">
                           <span className="font-normal text-xs">Duration:</span>
@@ -504,13 +572,11 @@ const ProgrammesSearch = () => {
                       </div>
                       <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                          <IndianRupee size={20} />
+                          <IndianRupee />
                         </span>
                         <div className="flex flex-col gap-0.5">
-                          <span className="font-normal text-xs">
-                            Programme Fee:
-                          </span>
-                          <span className="text-xs">
+                          <span className="font-normal">Programme Fee:</span>
+                          <span>
                             Rs. {item.criteria?.programme_fee_per_year} / Year{" "}
                             {slug === "bhmct-hotel-management"
                               ? "(2025-26)"
@@ -555,8 +621,23 @@ const ProgrammesSearch = () => {
                         </Link>
                       ) : ( */}
 
+                      <Link
+                        href={`${slug.includes("zenithschool.ai") ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slug}`}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white rounded-md py-2.5 text-sm flex items-center gap-2 hover:translate-x-1 transition-transform"
+                      >
+                        <CircleArrowRight size={20} />{" "}
+                        <span>View Programme</span>
+                      </Link>
                       {/* )} */}
                     </div>
+                    {progNewLine.includes(slug) && (
+                      <div className="text-white text-xs items-center mt-3 px-4 ">
+                        3-Year Lateral Entry option also available for eligible
+                        students
+                      </div>
+                    )}
                   </div>
                 );
               })
@@ -575,6 +656,9 @@ const ProgrammesSearch = () => {
               </button>
             </div>
           )}
+          <p className="text-right text-sm  mt-2 text-muted-foreground">
+            ** Subject to Approval
+          </p>
         </div>
       </div>
       <div
@@ -720,7 +804,7 @@ const ProgrammesSearch = () => {
               selectedProgramme?.criteria?.eligibility_utm_links && (
                 <Link
                   href={selectedProgramme.criteria.eligibility_utm_links}
-                  className="#cb000d text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
+                  className="bg-red-600 text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

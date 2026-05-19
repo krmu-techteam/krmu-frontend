@@ -5,6 +5,7 @@ type Props = {
   schoolCategoryName: string;
   title: string;
   content: string;
+  slug: string;
 };
 
 const SchoolProgrammeOffered = ({
@@ -12,7 +13,15 @@ const SchoolProgrammeOffered = ({
   schoolCategoryName,
   title,
   content,
+  slug,
 }: Props) => {
+  const STA = [
+    "school-of-management-and-commerce",
+    "school-of-engineering-and-technology",
+    "school-of-medical-and-allied-sciences",
+    "school-of-architecture-design",
+    "school-of-liberal-arts",
+  ];
   return (
     <>
       <section id="Explore-Courses" className="pt-10 md:pt-20">
@@ -23,8 +32,21 @@ const SchoolProgrammeOffered = ({
             </h3>
             <p>{content}</p>
           </div>
+<<<<<<< HEAD
           <ProgrammeInfoDemo degName={degName} catName={schoolCategoryName} />
           {/* <ProgrammeInfoCards /> */}
+=======
+          <ProgrammeInfoDemo
+            degName={degName}
+            catName={schoolCategoryName}
+            title={title}
+          />
+          {STA.includes(slug) && (
+            <p className="text-right text-sm mr-8 mt-2 text-muted-foreground">
+              ** Subject to Approval
+            </p>
+          )}
+>>>>>>> 5079e22537d8e6c406bb14bec19c2431dc8b9fba
         </div>
       </section>
     </>

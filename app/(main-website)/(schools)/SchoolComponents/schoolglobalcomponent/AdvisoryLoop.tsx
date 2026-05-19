@@ -42,9 +42,10 @@ const AdvisoryLoop = ({ schoolCat }: Props) => {
     return <div className="text-center text-black py-10">Loading ...</div>;
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-16 px-2 sm:px-4 pb-4 gap-2.5 sm:gap-5">
+      <div className="flex flex-wrap justify-center pt-16 px-2 sm:px-4 pb-4 gap-5">
         {visibleFaculties.length > 0 ? (
           visibleFaculties.map((faculty) => (
+<<<<<<< HEAD
             <AdvisoryEmployeeCard
               key={faculty?.id}
               name={faculty?.faculty_name}
@@ -53,6 +54,17 @@ const AdvisoryLoop = ({ schoolCat }: Props) => {
               desg={faculty?.faculty_card_desg}
               slug={faculty?.facultyslug}
             />
+=======
+            <div key={faculty?.id} className="w-full sm:w-[272px] flex justify-center">
+              <AdvisoryEmployeeCard
+                name={faculty?.faculty_name}
+                imgUrl={faculty?.faculty_img?.url}
+                qual={faculty?.faculty_qualification}
+                desg={faculty?.faculty_card_desg}
+                slug={faculty?.facultyslug}
+              />
+            </div>
+>>>>>>> 5079e22537d8e6c406bb14bec19c2431dc8b9fba
           ))
         ) : (
           <div className="col-span-full text-center text-gray-500 py-10">

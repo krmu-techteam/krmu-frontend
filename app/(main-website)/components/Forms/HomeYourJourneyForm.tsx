@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { getAllProgramme } from "../../(admission)/(fee-structure)/fee-structure/FeeStructureProgrammeSearch";
+import { Search } from "lucide-react";
 
 interface ProgrammeItem {
   id: number;
@@ -17,7 +18,7 @@ interface Pagination {
   pageCount: number;
   total: number;
 }
-function normalize(text:string) {
+function normalize(text: string) {
   return text.toLowerCase().replace(/[\.\s]/g, "");
 }
 const HomeYourJourneyForm = () => {
@@ -36,7 +37,7 @@ const HomeYourJourneyForm = () => {
       try {
         const data = await getAllProgramme("");
         const filtered = data.filter((item) =>
-          normalize(item.title).includes(normalize(query))
+          normalize(item.title).includes(normalize(query)),
         );
         setProgrammes(filtered);
       } catch (error) {
@@ -50,19 +51,20 @@ const HomeYourJourneyForm = () => {
   }, [query]);
 
   return (
-    <div className="relative w-full">
-      <form onSubmit={(e) => e.preventDefault()}>
+    <div className="relative w-full max-w-xs ">
+      <form onSubmit={(e) => e.preventDefault()} className="relative w-full  ">
+        <Search className="absolute left-2 top-7 transform -translate-y-1/2 text-[#7f8b80]" />
+
         {/* Search Input */}
         <input
           type="search"
           placeholder="Search Your Programmes"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="text-center max-w-xs w-full bg-white font-semibold p-2.5 mb-2.5 rounded-md h-14 text-xl outline-none text-[#0160af] border-2 border-[#0160af]"
+          className="w-full bg-white font-medium py-2.5 pl-10 pr-4 mb-2.5 rounded-md h-14 text-base md:text-lg outline-none text-[#7f8b99] border-2 border-[#001732]"
         />
 
         {/* Submit Button */}
-    
       </form>
 
       {/* Dropdown Results */}
@@ -81,7 +83,11 @@ const HomeYourJourneyForm = () => {
           {!loading &&
             programmes.map((item) => (
               <div key={item.id} className="mb-3 last:mb-0">
-                <Link href={`/programs/${item.programmeslug}`} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={`/programs/${item.programmeslug}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span className="text-lg font-semibold text-black hover:text-[#cb000d] cursor-pointer">
                     {item.title}
                   </span>

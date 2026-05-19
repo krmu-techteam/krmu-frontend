@@ -136,34 +136,182 @@ const ProgrammeStructure = ({
               })}
             </div>
 
-            {/* Semester Tabs - Transparent with White Text as per screenshot */}
-            <div className="flex w-full border-white bg-transparent overflow-x-auto no-scrollbar">
-              {programStruct
-                .find(
-                  (y) => y.year.toLowerCase().replace(/\s+/g, "") === activeYear,
-                )
-                ?.semester.map((sem) => {
-                  const semValue = (sem.semestername || "")
-                    .toLowerCase()
-                    .replace(/\s+/g, "");
-                const isSemActive = activeSemester === semValue;
-
-                return (
-                  <button
-                    key={sem.id}
-                    onClick={() => setActiveSemester(semValue)}
-                    className={`flex-1 px-6 py-4 text-xl font-semibold text-shadow-[0.5px_0.5px_1px_black] transition-all cursor-pointer duration-300 relative whitespace-nowrap
-                      ${isSemActive ? "text-white" : "text-white/70 hover:text-white"}
-                    `}
+            {/* Subjects List - Minimalistic Layout */}
+            <div className="flex-grow p-4 overflow-y-auto max-h-[600px] scrollbar-thin scrollbar-thumb-gray-100 bg-white/5">
+              {programStruct.map((year) => {
+                const yearValue = year.year.toLowerCase().replace(" ", "");
+                return activeYear === yearValue ? (
+                  <div
+                    key={year.id}
+                    className="animate-in fade-in duration-500"
                   >
-                    {sem.semestername}
-                    <div 
-                      className={`absolute bottom-0 left-0 w-full h-1 transition-all duration-300
-                        ${isSemActive ? "bg-[#003879]" : "bg-white"}
-                      `} 
-                    />
-                  </button>
-                );
+                    {year.semester.length > 0 ? (
+                      <div className="flex flex-col gap-4">
+                        {year.semester.map((sem) => {
+                          const semValue = sem.semestername
+                            ?.toLowerCase()
+                            ?.replace(" ", "");
+                          return isYear || activeSemester === semValue ? (
+                            <div
+                              key={sem.id}
+                              className="animate-in fade-in duration-300"
+                            >
+                              {/* Semester Heading - Hidden if isYear is true and it's the only semester, otherwise show for grouping */}
+                              {(!isYear || year.semester.length > 1) && (
+                                <div className="mb-4">
+                                  <h4 className="text-[18px] md:text-[20px] font-bold text-[#0a41a1] capitalize flex items-center gap-2">
+                                    <span className="w-1.5 h-6 bg-[#0a41a1] rounded-full"></span>
+                                    {sem.semestername}
+                                  </h4>
+                                </div>
+                              )}
+
+                              {/* Subject Grid - Compact Cards */}
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                {sem.subjects
+                                  .filter((sub) => {
+                                    const hasTitle = sub.subjectname?.trim();
+                                    const hasDetails =
+                                      sub.course_name?.[0]?.sub_name?.trim();
+                                    return hasTitle || hasDetails;
+                                  })
+                                  .map((sub) => (
+                                    <div
+                                      key={sub.id}
+                                      className="flex items-start bg-white/40 backdrop-blur-sm rounded-sm p-3 md:px-4 md:py-3 border border-white/20 transition-all duration-300 antialiased shadow-sm"
+                                    >
+                                      <div className="flex items-center w-full gap-3">
+                                        <div className="flex-grow min-w-0">
+                                          {!(
+                                            sub.course_name &&
+                                            sub.course_name.length > 0 &&
+                                            sub.course_name[0]?.sub_name
+                                          ) ? (
+                                            <>
+                                              <div className="flex items-center w-full gap-3">
+                                                <div className="w-9 h-9 rounded-full bg-[#0a41a1] flex items-center justify-center flex-shrink-0 border border-[#0a41a1]/10 mt-0.5">
+                                                  <IoBookOutline className="w-5 h-5 text-white" />
+                                                </div>
+                                                <h5 className="text-[15px] font-semibold text-gray-800 leading-tight">
+                                                  {sub.subjectname}
+                                                </h5>
+                                              </div>
+                                            </>
+                                          ) : (
+                                            sub.course_name &&
+                                            sub.course_name.length > 0 &&
+                                            sub.course_name[0]?.sub_name && (
+                                              <Accordion
+                                                type="single"
+                                                collapsible
+                                                className="w-full"
+                                              >
+                                                <AccordionItem
+                                                  value="content"
+                                                  className="border-none"
+                                                >
+                                                  <AccordionTrigger className="py-1 cursor-pointer items-center text-[10px] font-semibold text-gray-400 uppercase tracking-wider hover:text-[#0a41a1] hover:no-underline">
+                                                    <div className="flex items-center w-full gap-3">
+                                                      <div className="w-9 h-9 rounded-full bg-[#0a41a1] flex items-center justify-center flex-shrink-0 border border-[#0a41a1]/10 mt-0.5">
+                                                        <IoBookOutline className="w-5 h-5 text-white" />
+                                                      </div>
+                                                      <h5 className="text-[15px] font-semibold text-gray-800 leading-tight">
+                                                        {sub.subjectname}
+                                                      </h5>
+                                                    </div>
+                                                  </AccordionTrigger>
+                                                  <AccordionContent className="mt-2 pt-2 border-t border-gray-100 text-[12px] text-gray-500 leading-relaxed italic">
+                                                    <div
+                                                      dangerouslySetInnerHTML={{
+                                                        __html:
+                                                          sub.course_name[0]
+                                                            .sub_name,
+                                                      }}
+                                                    />
+                                                  </AccordionContent>
+                                                </AccordionItem>
+                                              </Accordion>
+                                            )
+                                          )}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  ))}
+                              </div>
+
+                              {/* Compact Action Banner */}
+                              <div className="mt-4 xl:mt-8 flex flex-col gap-4">
+                                {sem.pdfbtns?.map((btn) => {
+                                  const text =
+                                    btn?.buttontext?.toLowerCase() || "";
+                                  const isHandbook = text.includes("handbook");
+                                  const isOpenElective =
+                                    text.includes("elective") ||
+                                    text.includes("added");
+
+                                  if (isOpenElective) {
+                                    return (
+                                      <CommonLeadPopup
+                                        key={btn?.id}
+                                        buttonText={
+                                          <div className="flex items-center gap-6 px-2 lg:px-6   py-2 bg-[#0a41a1] rounded-sm text-white group shadow-lg transition-all duration-300 hover:scale-[1.005]">
+                                            <div className="flex items-center gap-4">
+                                              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
+                                                <Download className="w-5 h-5" />
+                                              </div>
+                                              <div className="text-left">
+                                                <h4 className="text-[14px] md:text-[16px] font-semibold capitalize tracking-wide leading-none whitespace-nowrap">
+                                                  {btn?.buttontext}
+                                                </h4>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        }
+                                        buttonClassName="w-fit block"
+                                        redirectUrl={btn?.buttonlink || "#"}
+                                        form_name={btn?.buttontext || "Action"}
+                                      />
+                                    );
+                                  }
+
+                                  return (
+                                    <div
+                                      key={btn?.id}
+                                      className="flex justify-start mt-2"
+                                    >
+                                      <CommonLeadPopup
+                                        buttonText={
+                                          <span className="flex items-center gap-2 whitespace-nowrap">
+                                            {isHandbook ? (
+                                              <FileText className="w-4 h-4" />
+                                            ) : (
+                                              <Download className="w-4 h-4" />
+                                            )}
+                                            {btn?.buttontext}
+                                          </span>
+                                        }
+                                        buttonClassName="w-fit px-8 py-3 bg-white border-2 border-[#0a41a1] text-[#0a41a1] font-bold uppercase tracking-widest text-[13px] rounded-xl hover:bg-[#0a41a1] hover:text-white transition-all duration-300"
+                                        redirectUrl={btn?.buttonlink || "#"}
+                                        form_name={btn?.buttontext || "Action"}
+                                      />
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          ) : null;
+                        })}
+                      </div>
+                    ) : (
+                      <div className="flex flex-col items-center justify-center py-20 text-gray-300">
+                        <BookOpen className="w-10 h-10 mb-2 opacity-10" />
+                        <p className="text-[11px] font-bold uppercase tracking-widest opacity-40">
+                          No data available
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ) : null;
               })}
             </div>
 

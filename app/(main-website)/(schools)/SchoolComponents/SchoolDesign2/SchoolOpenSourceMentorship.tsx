@@ -22,7 +22,7 @@ const SchoolOpenSourceMentorship = () => {
           <div className="p-5 sm:p-8 lg:p-12">
             {/* ── Top Row: Achievement card (left) + Title & Description (right) ── */}
             <div
-              className="flex flex-col md:flex-row gap-6 lg:gap-10 pb-8 items-center  relative"
+              className="flex flex-col sm:flex-row gap-10 pb-8  items-center"
               style={{
                 borderBottom: "5px solid transparent",
                 backgroundImage:
@@ -33,9 +33,13 @@ const SchoolOpenSourceMentorship = () => {
             >
               {/* Achievement card */}
               <div
+<<<<<<< HEAD
                 className="flex-shrink-0  overflow-hidden flex flex-col rounded-2xl xs:flex-row md:flex-col lg:flex-row
                            w-full md:w-[400px] lg:w-[480px]
                            h-[520px] md:h-auto lg:h-[300px]"
+=======
+                className="flex flex-col sm:flex-row w-full  md:w-[50%] lg:w-[40%] "
+>>>>>>> 5079e22537d8e6c406bb14bec19c2431dc8b9fba
                 style={{
                   // background: "linear-gradient(135deg,#0b2347 0%,#002f8e 100%)",
                   backgroundColor: "#002f8e",
@@ -43,17 +47,22 @@ const SchoolOpenSourceMentorship = () => {
                 }}
               >
                 {/* Photo */}
+<<<<<<< HEAD
                 <div className="relative w-full h-[260px] xs:w-[180px] xs:h-auto md:w-full  lg:h-auto lg:w-[190px] flex-shrink-0">
+=======
+                <div className="relative  w-full sm:w-2/5">
+>>>>>>> 5079e22537d8e6c406bb14bec19c2431dc8b9fba
                   <Image
                     src="/schools/OP.JPG"
                     alt="Jayant Parashar"
-                    fill
-                    className="object-cover object-top"
+                    width={300}
+                    height={200}
+                    className="h-[300px] sm:h-full w-full"
                   />
                 </div>
 
                 {/* Text info */}
-                <div className="flex flex-col justify-between px-5 py-5 flex-1 min-w-0">
+                <div className="flex flex-col p-5 w-full sm:w-3/5">
                   <div>
                     <p className="text-white font-semibold lg:text-3xl text-xl leading-tight">
                       Jayant Parashar
@@ -70,7 +79,7 @@ const SchoolOpenSourceMentorship = () => {
                   </div>
 
                   {/* GSoC badge */}
-                  <div className="relative mt-3 w-full h-full">
+                  <div className="relative mt-3 w-full h-[80px] lg:h-[70px]">
                     <Image
                       src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1773422694704_886721c56d.png"
                       alt="GSoC Logo"
@@ -82,7 +91,7 @@ const SchoolOpenSourceMentorship = () => {
               </div>
 
               {/* Title + Description */}
-              <div className="flex flex-col justify-center min-w-0 h-full ">
+              <div className="sm:w-full md:w-[50%] lg:w-[60%]">
                 <h2 className="text-3xl sm:text-4xl xl:text-4xl leading-tight mb-4">
                   Open Source{" "}
                   <span className="text-[#4da6ff] font-semibold">
