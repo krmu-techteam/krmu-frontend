@@ -11,7 +11,7 @@ import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import { ButtonType } from "@/lib/types/common";
 import { Year } from "@/lib/types/school-programme";
 import CommonLeadPopup from "../../components/CommonLeadPopup";
-import { BookOpen, FileText, Download, ChevronRight, ArrowRightCircle } from "lucide-react";
+import { BookOpen, FileText, Download, ChevronRight, ArrowRightCircle, CircleArrowRight } from "lucide-react";
 import { IoBookOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
 import Image from "next/image";
 
@@ -66,12 +66,12 @@ const ProgrammeStructure = ({
         <div className="relative mb-12">
           {(heading || highlight) && (
             <div 
-              className="w-full py-4 xl:py-5 2xl:py-6 mb-6"
+              className="w-full py-4 xl:py-4 2xl:py-6 mb-6"
               style={{
                 background: "linear-gradient(90deg, rgba(0, 23, 50, 0) 0%, #001732 49.04%, rgba(0, 23, 50, 0) 95.67%)"
               }}
             >
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
+              <h2 className="text-2xl md:text-3xl lg:text-[40px] font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
                 {heading} {highlight}
               </h2>
             </div>
@@ -81,7 +81,7 @@ const ProgrammeStructure = ({
         <div className="relative w-full">
           {/* Programme Handbook Button - Positioned absolute to align with card top */}
           {currbtn?.buttonlink && (
-            <div className="hidden md:block absolute xl:right-0 xl:top-0 2xl:right-56 z-20">
+            <div className="absolute xl:right-0 xl:top-0 2xl:right-72 z-20">
               <CommonLeadPopup
                 buttonText={
                   <span className="flex items-center gap-3">
@@ -104,7 +104,7 @@ const ProgrammeStructure = ({
           {/* Left Navigation & Content Area */}
           <div className="flex-grow flex flex-col">
             {/* Year Tabs */}
-            <div className="flex bg-[#EAEAEA] overflow-x-auto no-scrollbar">
+            <div className="flex w-full overflow-x-auto no-scrollbar rounded-xs">
               {programStruct.map((year) => {
                 const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                 const isYearActive = activeYear === yearValue;
@@ -123,7 +123,7 @@ const ProgrammeStructure = ({
                         );
                       }
                     }}
-                    className={`px-8 py-4 text-sm font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
+                    className={`flex-1 px-4 md:px-8 py-4 text-sm lg:text-[16px] 2xl:text-lg font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
                       ${
                         isYearActive
                           ? "bg-[#051730] text-white"
@@ -152,8 +152,8 @@ const ProgrammeStructure = ({
                   <button
                     key={sem.id}
                     onClick={() => setActiveSemester(semValue)}
-                    className={`flex-1 px-6 py-4 text-xl font-semibold text-shadow-[0.5px_0.5px_1px_black] transition-all cursor-pointer duration-300 relative whitespace-nowrap
-                      ${isSemActive ? "text-white" : "text-white/70 hover:text-white"}
+                    className={`flex-1 px-6 py-4 text-xl font-normal text-shadow-[0.5px_0.5px_1px_black] transition-all cursor-pointer duration-300 relative whitespace-nowrap
+                      ${isSemActive ? "text-white" : "text-white/85 hover:text-white"}
                     `}
                   >
                     {sem.semestername}
@@ -168,7 +168,7 @@ const ProgrammeStructure = ({
             </div>
 
             {/* Subjects List - Transparent Glass Area as per screenshot */}
-            <div className="flex-grow px-2 xl:px-4 2xl:px-6 py-6 overflow-y-auto min-h-[400px] max-h-[400px] bg-transparent no-scrollbar">
+            <div className="flex-grow py-6 overflow-y-auto min-h-[400px] max-h-[400px] bg-transparent no-scrollbar">
               {programStruct.map((year) => {
                 const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                 if (activeYear !== yearValue) return null;
@@ -193,13 +193,14 @@ const ProgrammeStructure = ({
                                       <AccordionItem value="content" className="border-none">
                                         <AccordionTrigger className="py-2 hover:no-underline group">
                                           <div className="flex items-center gap-4 text-left">
-                                            <IoArrowForwardCircleOutline className="w-6 h-6 text-white flex-shrink-0 group-hover:scale-110 transition-transform" />
+                                            <CircleArrowRight size={22} className="text-white flex-shrink-0 group-hover:scale-110 transition-transform"/>
+                                         
                                             <span className="text-lg font-medium text-white transition-colors">
                                               {sub.subjectname}
                                             </span>
                                           </div>
                                         </AccordionTrigger>
-                                        <AccordionContent className="pl-10 pt-2 text-gray-500 leading-relaxed italic border-l-2 border-[#051730]/10 ml-3">
+                                        <AccordionContent className="pl-10 pt-2 text-white/70 text-shadow-xs leading-relaxed italic border-l-2 border-[#051730]/10 ml-3">
                                           <div
                                             dangerouslySetInnerHTML={{
                                               __html: sub.course_name[0].sub_name,
@@ -210,8 +211,8 @@ const ProgrammeStructure = ({
                                     </Accordion>
                                   ) : (
                                     <div className="flex items-center gap-4 py-2">
-                                      <IoArrowForwardCircleOutline className="w-6 h-6 text-white flex-shrink-0" />
-                                      <span className="text-md md:text-[18px] font-medium text-white/90">
+                                      <CircleArrowRight size={22} className="text-white flex-shrink-0" />
+                                      <span className="text-md md:text-[18px] font-normal text-white/90">
                                         {sub.subjectname}
                                       </span>
                                     </div>
@@ -228,7 +229,7 @@ const ProgrammeStructure = ({
             </div>
 
             {/* Action Buttons Container - Glassy Bottom - Responsive Stack for Mobile */}
-            <div className="px-4 xl:px-6 py-8 bg-transparent min-h-[100px] flex flex-col md:flex-row items-center justify-center gap-4">
+            <div className="py-8 bg-transparent min-h-[100px] flex flex-col md:flex-row items-center justify-center gap-4">
               {programStruct
                 .find((y) => y.year.toLowerCase().replace(/\s+/g, "") === activeYear)
                 ?.semester.find((s) => (s.semestername || "").toLowerCase().replace(/\s+/g, "") === activeSemester)
@@ -247,7 +248,7 @@ const ProgrammeStructure = ({
                           </span>
                         </div>
                       }
-                      buttonClassName={`px-3 py-3 md:px-6 md:py-4 rounded-md transition-all duration-300 flex items-center justify-center w-full md:w-auto shadow-lg
+                      buttonClassName={`px-3 py-3 md:px-6 rounded-xs transition-all duration-300 flex items-center justify-center w-full md:w-auto shadow-lg
                         ${
                           isDark
                             ? "bg-[#001732] text-white hover:bg-[#0a264a]"

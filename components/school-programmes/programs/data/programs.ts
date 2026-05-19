@@ -26,7 +26,7 @@ const defaultCinematicConfig: Partial<HeroConfig> = {
   overlayWidth: "60%",
   titleMaxWidth: "lg:max-w-[80%] 2xl:max-w-full",
   subtitleMaxWidth: "lg:max-w-[80%] 2xl:max-w-full",
-  subtitleSize: "sm:text-base",
+  subtitleSize: "",
   titleSize: "text-[24px] lg:text-xl xl:text-3xl 2xl:text-[52px]",
   descSize: "2xl:text-lg",
   contentMaxWidth: "2xl:max-w-lg",
@@ -42,9 +42,9 @@ export const heroConfigs: Record<string, HeroConfig> = {
     mobileBgSize: "240%",
     overlayOpacity: "0.85",
     overlayWidth: "45%",
-    subtitleSize: "sm:text-base",
-    titleSize: "lg:text-3xl xl:text-[42px] 2xl:text-5xl",
-    descSize: "2xl:text-lg",
+    subtitleSize: "sm:text-base mb-1",
+    titleSize: "lg:text-3xl xl:text-[40px] 2xl:text-5xl",
+    descSize: "xl:text-[15px] 2xl:text-lg ",
     contentMaxWidth: "2xl:max-w-lg"
   },
   "b-tech-cse": {

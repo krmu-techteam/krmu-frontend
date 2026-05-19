@@ -17,7 +17,7 @@ const ConnectingDreamSlider = ({ logos }: Props) => {
         {logos?.concat(logos).concat(logos).map((logo, index) => (
           <div
             key={`${logo.id}-${index}`}
-            className="px-6 sm:px-8 flex items-center justify-center customCarousel"
+            className="px-2 sm:px-4 md:px-6 xl:px-8 flex items-center justify-center customCarousel"
           >
             <Image
               src={`${STRAPI_URL}${logo?.url}`}
