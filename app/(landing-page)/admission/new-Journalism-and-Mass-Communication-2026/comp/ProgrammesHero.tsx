@@ -14,10 +14,11 @@ const AutoScrollPlugin = (AutoScroll as any).default ?? AutoScroll;
 
 const ProgrammesHero = ({ heroSection }: any) => {
   return (
-    <section className="pt-18 sm:pt-20 lg:pt-28 min-h-screen bg-[#f3f3f7] flex flex-col lg:flex-row items-stretch">
+    <section className="pt-18 sm:pt-20 lg:pt-20 xl:pt-28 min-h-screen bg-[#f3f3f7] flex flex-col lg:flex-row items-stretch">
+      {" "}
       <div className="w-full lg:w-1/2 flex items-center justify-center px-5 sm:px-8 pt-10 pb-10 sm:pt-12 sm:pb-12 lg:px-20 lg:pt-4 lg:pb-4 order-2 lg:order-1">
         <div className="max-w-xl w-full">
-          <h1 className="mt-[8px] text-[#07255B] font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight sm:leading-[65px] lg:leading-[75px] tracking-tight">
+          <h1 className="mt-2 text-[#07255B] font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight sm:leading-16.25 lg:leading-18.75 tracking-tight">
             MA in
             <br />
             Journalism,
@@ -139,13 +140,13 @@ const ProgrammesHero = ({ heroSection }: any) => {
           </div>
         </div>
       </div>
-      <div className="w-full lg:w-1/2 relative min-h-[280px] sm:min-h-[380px] md:min-h-[500px] lg:min-h-[auto] order-1 lg:order-2">
+      <div className="w-full lg:w-1/2 relative min-h-70 sm:min-h-95 md:min-h-125 lg:min-h-screen order-1 lg:order-2">
         <Image
           src="/new-Programmes-Hero/new programmes hero.jpg"
           alt="Journalist"
           fill
           priority
-          className="object-cover object-top lg:object-center"
+          className="object-cover object-[75%_top] lg:object-[75%_15%]"
         />
       </div>
     </section>

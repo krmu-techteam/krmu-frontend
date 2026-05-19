@@ -10,11 +10,11 @@ export default function LearnByDoingSection() {
     <section className="w-full bg-[#f3f4fb] py-4 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal font-serif text-[#131B2E] leading-5 sm:leading-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal font-serif text-[#131B2E] leading-7 sm:leading-8 lg:leading-10">
             Learn by doing, not just reading
           </h2>
 
-          <p className="mt-1 sm:mt-3 text-sm sm:text-base text-[#000000] leading-5 sm:leading-6 max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-3 text-sm sm:text-base text-[#000000] leading-5 sm:leading-6 max-w-2xl mx-auto">
             At the MA level, your work is expected to look and feel
             professional. The programme is built around projects, labs and
             internships that mirror real world roles.
@@ -23,7 +23,7 @@ export default function LearnByDoingSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-5 sm:mt-14">
           <div className="h-full flex flex-col gap-6">
-            <div className="relative h-[420px] sm:h-[520px] md:h-[650px] rounded-2xl overflow-hidden">
+            <div className="relative h-105 sm:h-130 md:h-162.5 rounded-2xl overflow-hidden">
               <Image
                 src="/new-Programmes-Hero/learn_by_doing.png"
                 alt="Newsroom Lab"
@@ -31,10 +31,10 @@ export default function LearnByDoingSection() {
                 className="object-cover object-left"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
 
               <div className="absolute bottom-0 left-0 px-4 pb-2 pt-6 sm:p-6 md:p-8 text-[#FFFFFF] z-10">
-                <h3 className="text-2xl sm:text-3xl font-serif font-semibold leading-snug">
+                <h3 className="text-2xl sm:text-3xl font-serif font-semibold leading-6">
                   Multimedia Newsroom Labs
                 </h3>
                 <p className="mt-3 text-sm sm:text-base leading-6 max-w-lg text-[#FFFFFF]">
@@ -47,7 +47,7 @@ export default function LearnByDoingSection() {
           </div>
 
           <div className="flex flex-col gap-6 h-full">
-            <div className="bg-[#0161B0] rounded-2xl px-4 pb-2 pt-6 sm:p-8 md:p-10 flex items-end min-h-[240px] sm:min-h-[280px] flex-1">
+            <div className="bg-[#0161B0] rounded-2xl px-4 pb-2 pt-6 sm:p-8 md:p-10 flex items-end min-h-60 sm:min-h-70 flex-1">
               <div>
                 <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#FFFFFF] leading-snug">
                   Fact Checking and Media Literacy Projects
