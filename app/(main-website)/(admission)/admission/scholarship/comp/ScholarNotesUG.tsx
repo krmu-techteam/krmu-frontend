@@ -66,11 +66,11 @@ const ScholarNotesUG = () => {
                 </span>
                 <span className="text-white font-semibold text-base notesul">
                   For Sports scholarship below criteria will be applicable :-
-                  <ul>
-                    <li>Latest 3 years performance will be considered</li>
-                    <li>Scholarship will awarded upon certificate verification as well as Physical test</li>
-                    <li>University will only cover Traveling allowance, Registration and match fees</li>
-                  </ul>
+                  <div className="flex flex-col gap-2 my-2.5 pl-5">
+                    <span>a) Latest 3 years performance will be considered</span>
+                    <span>b) Scholarship will awarded upon certificate verification as well as Physical test</span>
+                    <span>c) University will only cover Traveling allowance, Registration and match fees</span>
+                  </div>
                 </span>
               </div>
 
@@ -113,14 +113,14 @@ const ScholarNotesUG = () => {
               <span className="text-white font-semibold text-base">
                 This policy is not applicable for Lateral Entry and Migration
                 <p className="font-normal">
-                  <strong>Important :</strong> For detailed sports scholarship{" "}
-                  <Link
+                  <strong>Important :</strong> For detailed sports scholarship visit our website
+                  {/* <Link
                     href="https://www.krmangalam.edu.in/wp-content/uploads/2025/03/sports-club-sports-scholarship-policy-2025-26.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Click here
-                  </Link>
+                  </Link> */}
                 </p>
               </span>
             </div>
