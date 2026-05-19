@@ -39,7 +39,7 @@ export default function HoverCard({ href, className, style, children }: HoverCar
       />
 
       {/* 2. Inner Card Content Container */}
-      <div className="relative w-full h-full rounded-[7px] bg-[#051730]/95 backdrop-blur-md p-4 min-h-[118px] flex flex-col justify-between overflow-hidden z-20">
+      <div className="relative w-full h-full rounded-[7px] bg-[#051730]/95 backdrop-blur-md p-3 md:p-4 min-h-[118px] flex flex-col justify-between overflow-hidden z-20">
         
         {/* 3. Dynamic Cursor-Tracking Inner Ambient Spotlight */}
         <div 

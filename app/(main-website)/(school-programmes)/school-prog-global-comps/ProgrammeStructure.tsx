@@ -61,7 +61,7 @@ const ProgrammeStructure = ({
 
   return (
     <div className="w-full antialiased">
-      <div className="container mx-auto relative px-4 md:px-0">
+      <div className="container mx-auto relative">
         {/* Section Header */}
         <div className="relative mb-12">
           {(heading || highlight) && (
@@ -81,7 +81,7 @@ const ProgrammeStructure = ({
         <div className="relative w-full">
           {/* Programme Handbook Button - Positioned absolute to align with card top */}
           {currbtn?.buttonlink && (
-            <div className="hidden md:block absolute xl:right-0 xl:top-0 2xl:right-56 z-20">
+            <div className="absolute xl:right-0 xl:top-0 2xl:right-72 z-20">
               <CommonLeadPopup
                 buttonText={
                   <span className="flex items-center gap-3">
@@ -168,7 +168,7 @@ const ProgrammeStructure = ({
             </div>
 
             {/* Subjects List - Transparent Glass Area as per screenshot */}
-            <div className="flex-grow px-2 xl:px-0 2xl:px-6 py-6 overflow-y-auto min-h-[400px] max-h-[400px] bg-transparent no-scrollbar">
+            <div className="flex-grow py-6 overflow-y-auto min-h-[400px] max-h-[400px] bg-transparent no-scrollbar">
               {programStruct.map((year) => {
                 const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                 if (activeYear !== yearValue) return null;
@@ -229,7 +229,7 @@ const ProgrammeStructure = ({
             </div>
 
             {/* Action Buttons Container - Glassy Bottom - Responsive Stack for Mobile */}
-            <div className="px-4 xl:px-6 py-8 bg-transparent min-h-[100px] flex flex-col md:flex-row items-center justify-center gap-4">
+            <div className="py-8 bg-transparent min-h-[100px] flex flex-col md:flex-row items-center justify-center gap-4">
               {programStruct
                 .find((y) => y.year.toLowerCase().replace(/\s+/g, "") === activeYear)
                 ?.semester.find((s) => (s.semestername || "").toLowerCase().replace(/\s+/g, "") === activeSemester)

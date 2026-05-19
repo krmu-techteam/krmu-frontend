@@ -108,7 +108,7 @@ const AdmissionProcessComp = ({
             })} */}
         </div>
       </div>
-      <div className="max-w-full px-4 mx-auto w-full flex lg:hidden items-center justify-center">
+      <div className="max-w-full mx-auto w-full flex lg:hidden items-center justify-center">
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4 w-full">
           {admissionCards &&
             admissionCards.map((card) => {
