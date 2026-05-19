@@ -102,7 +102,7 @@ const SchoolHero = ({
           backgroundImage:
             slug === "school-of-engineering-and-technology"
               ? `url(${bgUrl})`
-              : `url(${STRAPI_URL}${herobanner?.url})`,
+              : `url( ${STRAPI_URL}${herobanner?.url})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
