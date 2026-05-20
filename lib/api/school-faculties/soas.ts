@@ -14,7 +14,7 @@ export const soasFaculties: SchoolFacultiesType[] = [
       schools: [1178],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Prof-Dr.-J.S.Yadav-SOAS.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Joginder-Singh-Yadav.png",
   },
   {
     id: 65251,
@@ -29,7 +29,7 @@ export const soasFaculties: SchoolFacultiesType[] = [
       schools: [1178],
     },
     featured_media_url:
-      "https://www.krmangalam.edu.in/wp-content/uploads/2024/09/gajraj.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Gajraj-Yadav.png",
   },
   {
     id: 46563,
@@ -44,7 +44,7 @@ export const soasFaculties: SchoolFacultiesType[] = [
       schools: [1178],
     },
     featured_media_url:
-      "https://www.krmangalam.edu.in/wp-content/uploads/2024/06/rabiya.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Rabiya-Basri.png",
   },
   {
     id: 41992,
@@ -59,7 +59,7 @@ export const soasFaculties: SchoolFacultiesType[] = [
       schools: [1178],
     },
     featured_media_url:
-      "https://www.krmangalam.edu.in/wp-content/uploads/2024/05/anjali-toma.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Anjali-Tomar.png",
   },
 
   {
@@ -75,7 +75,7 @@ export const soasFaculties: SchoolFacultiesType[] = [
       schools: [1070],
     },
     featured_media_url:
-      "https://www.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Deepak-Kumar.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Deepak-Kumar.png",
   },
   {
     id: 1189,
@@ -90,7 +90,7 @@ export const soasFaculties: SchoolFacultiesType[] = [
       schools: [1178],
     },
     featured_media_url:
-      "https://www.krmangalam.edu.in/wp-content/uploads/2023/11/Mask-group-64.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Ambika-Bhandari.png",
   },
   {
     id: 113816,
@@ -105,7 +105,7 @@ export const soasFaculties: SchoolFacultiesType[] = [
       schools: [1178],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Agnibha-Sinha-SOAS-1.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Agnibha-Sinha.png",
   },
   {
     id: 113818,
@@ -120,6 +120,6 @@ export const soasFaculties: SchoolFacultiesType[] = [
       schools: [1178],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Jay-Nath-Patel1.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Jay-Nath-Patel.png",
   },
 ];

@@ -65,12 +65,12 @@ export const solaFaculties: SchoolFacultiesType[] = [
     id: 10712,
     slug: "rohini-kumari",
     title: {
-      rendered: "Ms. Rohini Kumari",
+      rendered: "Dr. Rohini Kumari",
     },
     featured_media: 10703,
     acf: {
-      "staff-qualification": "Ph.D (Pursuing)",
-      staff_designation: "Assistant  Professor",
+      "staff-qualification": "Ph.D. in Economics (Gender Economics)",
+      staff_designation: "Assistant Professor (Sr. Scale), Economics",
       schools: [1126, 1152],
     },
     featured_media_url:
@@ -409,7 +409,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
       schools: [1152, 1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Padmani-Koul.Dr. Pooja Singh",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Padmani-Koul.png",
   },
   {
     id: 10427,

@@ -14,7 +14,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.-Amit-Chawla.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Amit-Chawla.png",
   },
   {
     id: 1028,
@@ -29,7 +29,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Ritwik_Ghosh_d1a2fc3bdf.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Ritwik-Ghosh.png",
   },
   {
     id: 1029,
@@ -44,7 +44,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Sarina_d35269c58b.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Sarina.png",
   },
   // {
   //   id: 10769,
@@ -74,7 +74,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Ritika_Choudhary_a8ef176ab1.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Ritika-Choudhary.png",
   },
   {
     id: 10767,
@@ -89,7 +89,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Ms_Aditi_Agarwal_add357e84c.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Ms.-Aditi-Agarwal.png",
   },
   {
     id: 113711,
@@ -104,7 +104,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Yashika_Khandelwal_8b001d35fb.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Yashika-Khandelwal.png",
   },
   {
     id: 113871,
@@ -119,7 +119,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Aditi_Khare_9a76f8ae9e.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Aditi-Khare.png",
   },
 
   {
@@ -135,6 +135,6 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mr_Trilok_Kumar_Singh_d516cc88c6.webp",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Mr.-Trilok-Kumar-Singh.png",
   },
 ];
