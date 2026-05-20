@@ -17,7 +17,7 @@
 @layer utilities {
   .card-gradient-1 .inner-card {
     bottom: -214px;
-    left: -236px;
+    left: -255px;
   }
   .card-gradient-4 .inner-card {
     bottom: -214px;
@@ -25,7 +25,7 @@
   }
   .card-gradient-2 .inner-card,
   .card-gradient-3 .inner-card {
-    bottom: -250px;
+    bottom: -285px;
     left: 44%;
     transform: translateX(-50%);
   }

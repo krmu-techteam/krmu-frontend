@@ -55,7 +55,7 @@ const AdvisoryLoop = ({ schoolCat }: Props) => {
     );
   return (
     <>
-      <div className="grid grid-cols-5 pt-16 px-2 sm:px-4 pb-4 gap-5">
+      <div className="grid grid xl:grid-cols-5 pt-16 px-2 sm:px-4 pb-4 gap-5">
         {visibleFaculties.length > 0 ? (
           visibleFaculties.map((faculty) => (
             <AdvisoryEmployeeCard
