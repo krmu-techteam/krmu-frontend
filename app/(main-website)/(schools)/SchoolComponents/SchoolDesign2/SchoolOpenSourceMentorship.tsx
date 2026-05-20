@@ -33,7 +33,7 @@ const SchoolOpenSourceMentorship = () => {
             >
               {/* Achievement card */}
               <div
-                className="flex flex-col sm:flex-row w-full  md:w-[50%] lg:w-[40%] "
+                className="flex flex-col sm:flex-row w-full  md:w-[50%] lg:w-[40%] rounded-2xl overflow-hidden"
                 style={{
                   // background: "linear-gradient(135deg,#0b2347 0%,#002f8e 100%)",
                   backgroundColor: "#002f8e",
