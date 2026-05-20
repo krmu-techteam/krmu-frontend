@@ -26,8 +26,8 @@ type NewsEventItem = {
     title: string;
     description?: string;
     robots?: {
-      index?: boolean;
-      follow?: boolean;
+      index?: string;
+      follow?: string;
     };
   };
 };
@@ -50,6 +50,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteMetaDescription = singleNewsEvents?.yoast_head_json?.description;
   const siteCanonicalUrl = `${process.env.NEXT_PUBLIC_MAIN_URL}/events-and-news/${slug}`;
 
+  console.log(
+    "singleNewsEvents?.yoast_head_json?.robots?.follow",
+    singleNewsEvents,
+  );
+
+  const indexNoIndex = singleNewsEvents?.yoast_head_json?.robots?.index;
+
   return {
     title: siteMetaTitle || siteTitle || "K.R. Mangalam University",
     description: siteMetaDescription || siteTitle || "",
@@ -63,11 +70,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
     },
     robots: {
-      index: singleNewsEvents?.yoast_head_json?.robots?.index ?? true,
-      follow: singleNewsEvents?.yoast_head_json?.robots?.follow ?? true,
-    },
+      index:
+        singleNewsEvents?.yoast_head_json?.robots?.follow === "nofollow"
+          ? false
+          : singleNewsEvents?.yoast_head_json?.robots?.follow === "follow"
+            ? true
+            : true,
 
-    // ✅ Twitter Card
+      follow:
+        singleNewsEvents?.yoast_head_json?.robots?.follow === "nofollow"
+          ? false
+          : singleNewsEvents?.yoast_head_json?.robots?.follow === "follow"
+            ? true
+            : true,
+    },
   };
 }
 
