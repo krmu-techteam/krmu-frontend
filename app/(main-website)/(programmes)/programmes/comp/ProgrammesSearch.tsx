@@ -126,7 +126,7 @@ const ProgrammesSearch = () => {
   // default dropdown selections
   const [selectedSchool, setSelectedSchool] = useState("soet");
   const [selectedDegree, setSelectedDegree] = useState(
-    "undergraduate-programmes",
+    "undergraduate-programmes"
   );
 
   const [openSchoolDropdown, setOpenSchoolDropdown] = useState(false);
@@ -148,6 +148,18 @@ const ProgrammesSearch = () => {
   const schoolRefValue = useRef("soet");
   const degreeRefValue = useRef("undergraduate-programmes");
   const ZENITH_SLUG = "zenith-ai";
+
+  // Read URL params safely on mount
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const schoolParam = params.get("school");
+      if (schoolParam) {
+        setSelectedSchool(schoolParam);
+        schoolRefValue.current = schoolParam;
+      }
+    }
+  }, []);
 
   const isZenithPopup =
     selectedProgramme &&

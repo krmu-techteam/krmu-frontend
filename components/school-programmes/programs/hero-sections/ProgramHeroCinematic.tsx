@@ -54,12 +54,12 @@ const ProgramHeroCinematic = ({
           '--overlay-width': config.overlayWidth || '45%'
         } as React.CSSProperties}
       >
-        <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 xl:gap-16 z-10 2xl:px-0">
+        <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 sm:px-4 md:px-8 lg:px-10 xl:px-0 xl:gap-16 z-10 2xl:px-0">
           <div className="w-full lg:w-1/2 xl:w-1/2 relative z-10">
             <div className="xl:max-w-[700px] w-full">
               <div className="flex flex-col sm:block bg-gradient-to-t from-black/90 via-black/50 to-transparent sm:bg-none px-6 sm:p-0">
                 <div className="mb-0 md:mb-10">
-                  <h3 className={`text-white/90 md:block hidden ${config.subtitleMaxWidth || "xl:max-w-[65%] 2xl:max-w-[70%]"} text-[18px] [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.subtitleSize || "sm:text-base"} font-normal uppercase tracking-[0.05em] drop-shadow-md`}>
+                  <h3 className={`text-white/90 md:block hidden ${config.subtitleMaxWidth || "xl:max-w-[65%] 2xl:max-w-[70%]"} [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.subtitleSize || "text-md lg:text-[14px] xl:text-lg"} font-normal uppercase tracking-[0.05em] drop-shadow-md`}>
                     {heroSection?.subtitle}
                   </h3>
                   <h1 className={`text-white ${config.titleSize} ${config.titleMaxWidth || ""} font-bold mb-0 sm:mb-3 leading-[1.1] [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)]`}>
@@ -69,7 +69,7 @@ const ProgramHeroCinematic = ({
                       dangerouslySetInnerHTML={{ __html: highlightitle }}
                     />
                   </h1>
-                  <p className={`text-white/95 text-md sm:text-lg [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.descSize} mb-4 leading-relaxed font-normal hidden sm:block lg:max-w-xs xl:max-w-md ${config.contentMaxWidth || "2xl:max-w-lg"}`}>
+                  <p className={`text-white/95 text-[15px] xl:text-lg [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.descSize} mb-4 leading-relaxed font-normal hidden sm:block lg:max-w-xs xl:max-w-md ${config.contentMaxWidth || "2xl:max-w-lg"}`}>
                     {heroSection?.description}
                   </p>
                   
@@ -89,9 +89,9 @@ const ProgramHeroCinematic = ({
               </div>
 
               {/* Stats Bar - Integrated on Desktop, Dedicated Section on Mobile */}
-              <div className="w-full bg-[#001631] sm:bg-transparent py-8 sm:py-0 mt-0 sm:mt-10 relative z-10 px-2 md:px-0">
+              <div className="w-full bg-[#001631] sm:bg-transparent py-8 sm:py-0 mt-0 sm:mt-10 relative z-10 px-2 xl:px-10 2xl:px-0">
                 <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-nowrap items-center sm:gap-x-10">
-                  <div className="flex flex-col sm:pr-8 lg:pr-10 sm:border-r border-white/20 text-center sm:text-left">
+                  <div className="flex flex-col sm:pr-8 lg:pr-4 xl:pr-10 sm:border-r border-white/20 text-center sm:text-left">
                     <span className="text-white font-semibold text-lg sm:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
                       {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
                     </span>
@@ -99,7 +99,7 @@ const ProgramHeroCinematic = ({
                       {dreamcareerSection?.highestpackagetitle || "Highest Package"}
                     </span>
                   </div>
-                  <div className="flex flex-col sm:px-8 lg:pr-10 lg:pl-0 sm:border-r border-white/20 text-center sm:text-left">
+                  <div className="flex flex-col sm:px-8 lg:px-4 xl:pr-10 lg:pl-0 sm:border-r border-white/20 text-center sm:text-left">
                     <span className="text-white font-semibold text-lg sm:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">800+</span>
                     <span className="text-white/90 text-[11px] sm:text-sm xl:text-base mt-1 font-normal whitespace-nowrap overflow-hidden text-ellipsis">
                       {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
@@ -136,7 +136,7 @@ const ProgramHeroCinematic = ({
 
       {/* Recruiter Strip outside section for clean white background */}
       <div className="w-full bg-white pt-16 py-8 pb-4 md:py-6 border-t border-gray-100">
-        <div className="max-w-[1440px] mx-auto px-0 xl:px-8 2xl:px-0 relative">
+        <div className="max-w-[1440px] mx-auto px-0 lg:px-10 2xl:px-0 relative">
           {/* Centered Heading Badge */}
           <div className="absolute -top-[48px] md:-top-[62px] left-1/2 -translate-x-1/2 bg-gray-50 md:bg-white px-6 py-2 rounded-t-sm flex items-center justify-center ">
             <h5 className="text-[#333] text-[14px] sm:text-[18px] font-semibold whitespace-nowrap">

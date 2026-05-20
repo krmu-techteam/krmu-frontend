@@ -51,7 +51,7 @@ const CareerProspects = ({
   }, [emblaApi, onSelect]);
   if (slug === "bba-hr" || slug === "b-tech-cse") {
     return (
-      <section className="relative py-6 md:pt-16 md:pb-[80px] xl:pb-[150px] overflow-hidden min-h-[600px] md:min-h-[750px] xl:min-h-[850px] flex flex-col items-center">
+      <section className="relative py-6 lg:pt-12 2xl:pt-16 2xl:pb-[80px] xl:pb-[150px] overflow-hidden min-h-[600px] md:min-h-[750px] xl:min-h-[850px] flex flex-col items-center">
         {/* Background Image with Blur */}
         <div className="absolute inset-0 z-0">
           <Image

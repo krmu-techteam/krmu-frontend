@@ -29,8 +29,8 @@ const ProgrammeScope = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="bg-[#051730] py-12 md:py-16">
-      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-5 lg:gap-16 px-4 sm:px-6 xl:px-8">
+    <section className="bg-[#051730] py-8 xl:py-12 2xl:py-16">
+      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-5 xl:gap-12 2xl:gap-16 px-4 sm:px-6 lg:px-10 2xl:px-0">
         {/* Left column: Image */}
         <div className="w-full md:w-1/2">
           <div className="relative aspect-[16/10] sm:aspect-video md:aspect-[5/3] w-full rounded-md overflow-hidden ">
@@ -64,10 +64,10 @@ const ProgrammeScope = async ({
 
         {/* Right column: Content */}
         <div className="w-full md:w-1/2 md:text-left text-justify text-white">
-          <h3 className="text-3xl text-center md:text-left sm:text-3xl xl:text-4xl 2xl:text-[50px] font-bold leading-tight mb-3 xl:mb-3 2xl:mb-5">
+          <h3 className="text-xl text-center md:text-left sm:text-3xl xl:text-[40px] 2xl:text-[50px] font-bold leading-tight mb-2 xl:mb-3 2xl:mb-5">
             {scopeData?.scopeheading}
           </h3>
-          <p className="text-base text-center md:text-left xl:text-[18px] 2xl:text-xl leading-relaxed md:leading-[1.7] opacity-90 mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto md:mx-0">
+          <p className="text-[15px] text-center md:text-left xl:text-[17px] 2xl:text-xl leading-relaxed md:leading-[1.7] opacity-90 mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto md:mx-0">
             {scopeData?.scopecontent}
           </p>
 

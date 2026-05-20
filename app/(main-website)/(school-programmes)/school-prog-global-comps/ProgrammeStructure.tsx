@@ -11,8 +11,8 @@ import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import { ButtonType } from "@/lib/types/common";
 import { Year } from "@/lib/types/school-programme";
 import CommonLeadPopup from "../../components/CommonLeadPopup";
-import { BookOpen, FileText, Download, ChevronRight, ArrowRightCircle } from "lucide-react";
-import { IoBookOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
+import { BookOpen, FileText, Download, ChevronRight } from "lucide-react";
+import { IoBookOutline } from "react-icons/io5";
 import Image from "next/image";
 
 type Props = {
@@ -35,13 +35,13 @@ const ProgrammeStructure = ({
   highlight,
 }: Props) => {
   const [activeYear, setActiveYear] = useState(
-    programStruct[0]?.year.toLowerCase().replace(/\s+/g, "") || "",
+    programStruct[0]?.year.toLowerCase().replace(" ", "") || "",
   );
 
   const [activeSemester, setActiveSemester] = useState(
     programStruct[0]?.semester[0]?.semestername
       ?.toLowerCase()
-      ?.replace(/\s+/g, "") || "",
+      ?.replace(" ", "") || "",
   );
 
   const [settings, setSettings] = useState<any>(null);
@@ -60,80 +60,146 @@ const ProgrammeStructure = ({
   const enable_disable_minor = settings?.minor_enable_disable;
 
   return (
-    <div className="w-full antialiased">
-      <div className="container mx-auto relative">
-        {/* Section Header */}
-        <div className="relative mb-12">
-          {(heading || highlight) && (
-            <div 
-              className="w-full py-4 xl:py-5 2xl:py-6 mb-6"
-              style={{
-                background: "linear-gradient(90deg, rgba(0, 23, 50, 0) 0%, #001732 49.04%, rgba(0, 23, 50, 0) 95.67%)"
-              }}
-            >
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
-                {heading} {highlight}
-              </h2>
-            </div>
-          )}
-        </div>
+    <div className="w-full pb-0 md:pb-16 antialiased">
+      {/* Section Header */}
+      <div className="flex flex-col items-center text-center gap-3 mb-10">
+        {(heading || highlight) && (
+          <div className="max-w-4xl px-4 md:px-0">
+            <h2 className="text-[26px] md:text-[38px] font-bold text-gray-900 leading-tight tracking-tight">
+              {heading} {highlight}
+            </h2>
+          </div>
+        )}
 
-        <div className="relative w-full">
-          {/* Programme Handbook Button - Positioned absolute to align with card top */}
-          {currbtn?.buttonlink && (
-            <div className="hidden md:block absolute xl:right-0 xl:top-0 2xl:right-56 z-20">
-              <CommonLeadPopup
-                buttonText={
-                  <span className="flex items-center gap-3">
-                    <Download className="w-5 h-5" />
-                    <span className="uppercase tracking-widest font-semibold text-[11px] md:text-xs">
-                      {currbtn?.buttontext}
-                    </span>
-                  </span>
-                }
-                buttonClassName="px-6 py-4 bg-[#051730] text-white rounded-sm shadow-xl hover:bg-[#0a264a] transition-all duration-300 border border-[#051730]/10 flex items-center justify-center min-w-[200px]"
-                redirectUrl={currbtn?.buttonlink || "#"}
-                form_name="Programme Handbook"
-              />
-            </div>
-          )}
+        {currbtn?.buttonlink && (
+          <div className="flex-shrink-0 w-full md:w-auto px-4 md:px-0">
+            <CommonLeadPopup
+              buttonText={
+                <span className="flex items-center justify-center gap-2">
+                  <FileText className="w-4 h-4" />
+                  {currbtn?.buttontext}
+                </span>
+              }
+              buttonClassName="w-full md:w-auto px-8 py-3 text-md font-semibold tracking-wide text-[#0a41a1] bg-white hover:bg-blue-900/20 hover:text-[#0a41a1] rounded-sm transition-all duration-300 flex items-center justify-center border border-[#0a41a1]/20 cursor-pointer hover:border-[#0a41a1]"
+              redirectUrl={currbtn?.buttonlink || "#"}
+              form_name="Programme Handbook"
+            />
+          </div>
+        )}
+      </div>
 
-          {/* Main Content Area - Clean stack without card boundaries to match image */}
-          <div className="xl:max-w-lg 2xl:max-w-xl flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10">
-          
-          {/* Left Navigation & Content Area */}
-          <div className="flex-grow flex flex-col">
-            {/* Year Tabs */}
-            <div className="flex bg-[#EAEAEA] overflow-x-auto no-scrollbar">
-              {programStruct.map((year) => {
-                const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
-                const isYearActive = activeYear === yearValue;
+      <div className=" backdrop-blur-xl rounded-sm overflow-hidden border border-white/20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[600px] gap-4">
+          {/* Left Side: Illustration - More Compact */}
+          <div className="hidden lg:block lg:col-span-3 relative group overflow-hidden bg-transparent border-r border-white/10">
+            <Image
+              src="/curriculum-s.jpeg"
+              fill
+              className="object-cover object-center rounded-sm transition-transform duration-1000 group-hover:scale-105"
+              alt="B.Tech CSE Curriculum & Syllabus overview"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0a41a1]/60 via-[#0a41a1]/10 to-transparent transition-opacity" />
+          </div>
 
-                return (
-                  <button
-                    key={year.id}
-                    onClick={() => {
-                      setActiveYear(yearValue);
-                      // Reset semester to first of this year
-                      if (year.semester.length > 0) {
-                        setActiveSemester(
-                          year.semester[0].semestername
-                            .toLowerCase()
-                            .replace(/\s+/g, ""),
-                        );
-                      }
-                    }}
-                    className={`px-8 py-4 text-sm font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
-                      ${
-                        isYearActive
-                          ? "bg-[#051730] text-white"
-                          : "text-[#051730] bg-[#EAEAEA] hover:bg-[#DEDEDE]"
-                      } cursor-pointer`}
-                  >
-                    {year.year}
-                  </button>
-                );
-              })}
+          {/* Right Side: Navigation + Content - Minimal & Compact */}
+          <div className="lg:col-span-9 flex flex-col bg-transparent overflow-hidden">
+            {/* Hierarchy Navigation Tree - Compact Version */}
+            <div className="w-full bg-white/10 border-b border-white/10 px-4">
+              <div className="flex flex-wrap lg:flex-nowrap justify-between items-start gap-y-8 gap-x-2 md:gap-4 w-full">
+                {programStruct.map((year) => {
+                  const yearValue = year.year.toLowerCase().replace(" ", "");
+                  const isYearActive = activeYear === yearValue;
+
+                  return (
+                    <div
+                      key={year.id}
+                      className="flex-1 flex flex-col items-center relative"
+                    >
+                      {/* Year Node - Clickable if isYear is true */}
+                      <button
+                        onClick={() => {
+                          if (isYear) {
+                            setActiveYear(yearValue);
+                          }
+                        }}
+                        className={`w-full transition-all duration-300 capitalize tracking-wide text-center antialiased
+                          ${
+                            isYear
+                              ? `px-4 py-3 rounded-t-xs border-b-2 font-bold text-[14px] md:text-[16px] cursor-pointer ${
+                                  isYearActive
+                                    ? "text-[#0a41a1] border-[#0a41a1] bg-blue-100/50"
+                                    : "text-gray-400 border-transparent hover:text-gray-600 hover:bg-gray-100/50"
+                                }`
+                              : "px-2 pt-2 pb-0 font-semibold text-[13px] md:text-[15px] text-gray-400 cursor-default"
+                          }`}
+                      >
+                        {year.year}
+                      </button>
+
+                      {/* Compact Branching Lines */}
+                      {!isYear && year.semester.length > 0 && (
+                        <div className="flex flex-col items-center w-full">
+                          <div
+                            className={`w-[1px] h-3 ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"}`}
+                          />
+
+                          <div className="relative flex items-center w-full max-w-[120px]">
+                            <div
+                              className={`w-full h-[1px] ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"} rounded-full`}
+                            />
+                            <div
+                              className={`absolute left-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"} rounded-full`}
+                            />
+                            <div
+                              className={`absolute right-0 top-0 w-[1px] h-3 ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"} rounded-full`}
+                            />
+
+                            {/* Terminal Dots */}
+                            <div
+                              className={`absolute left-0 top-3 -translate-x-1/2 w-1.5 h-1.5 rounded-full ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"}`}
+                            />
+                            <div
+                              className={`absolute right-0 top-3 translate-x-1/2 w-1.5 h-1.5 rounded-full ${isYearActive ? "bg-[#0a41a1]" : "bg-gray-300"}`}
+                            />
+                          </div>
+
+                          {/* Minimal Semester Nodes - ONLY CLICKABLE PART */}
+                          <div className="flex justify-between w-full mt-5 gap-2">
+                            {year.semester.map((sem) => {
+                              const semValue = sem.semestername
+                                .toLowerCase()
+                                .replace(" ", "");
+                              const isSemActive =
+                                activeSemester === semValue && isYearActive;
+
+                              return (
+                                <button
+                                  key={sem.id}
+                                  onClick={() => {
+                                    setActiveYear(yearValue);
+                                    setActiveSemester(semValue);
+                                  }}
+                                  className={`flex flex-row gap-1 items-center justify-center flex-1 transition-all duration-300 py-[6px] rounded-sm border whitespace-nowrap
+                                    ${
+                                      isSemActive
+                                        ? "bg-gradient-to-r from-[#0a41a1] to-[#0e4eb8] border-[#0a41a1] text-white shadow-md z-20"
+                                        : "bg-transparent border-transparent text-gray-700 hover:text-gray-600 hover:bg-gray-100"
+                                    } cursor-pointer`}
+                                >
+                                  <span className="text-[13px] sm:text-[15px] font-medium capitalize tracking-tight sm:tracking-wide antialiased whitespace-nowrap">
+                                    {sem.semestername}
+                                  </span>
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Subjects List - Minimalistic Layout */}
@@ -314,105 +380,11 @@ const ProgrammeStructure = ({
                 ) : null;
               })}
             </div>
-
-            {/* Subjects List - Transparent Glass Area as per screenshot */}
-            <div className="flex-grow px-2 xl:px-4 2xl:px-6 py-6 overflow-y-auto min-h-[400px] max-h-[400px] bg-transparent no-scrollbar">
-              {programStruct.map((year) => {
-                const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
-                if (activeYear !== yearValue) return null;
-
-                return (
-                  <div key={year.id} className="animate-in fade-in duration-500">
-                    {year.semester.map((sem) => {
-                      const semValue = (sem.semestername || "")
-                        .toLowerCase()
-                        .replace(/\s+/g, "");
-                      if (activeSemester !== semValue) return null;
-
-                      return (
-                        <div key={sem.id} className="space-y-4">
-                          <div className="grid grid-cols-1 md:grid-cols-1 gap-1">
-                            {sem.subjects
-                              .filter((sub) => sub.subjectname?.trim() || sub.course_name?.[0]?.sub_name?.trim())
-                              .map((sub) => (
-                                <div key={sub.id} className="group">
-                                  {sub.course_name && sub.course_name.length > 0 && sub.course_name[0]?.sub_name ? (
-                                    <Accordion type="single" collapsible className="w-full">
-                                      <AccordionItem value="content" className="border-none">
-                                        <AccordionTrigger className="py-2 hover:no-underline group">
-                                          <div className="flex items-center gap-4 text-left">
-                                            <IoArrowForwardCircleOutline className="w-6 h-6 text-white flex-shrink-0 group-hover:scale-110 transition-transform" />
-                                            <span className="text-lg font-medium text-white transition-colors">
-                                              {sub.subjectname}
-                                            </span>
-                                          </div>
-                                        </AccordionTrigger>
-                                        <AccordionContent className="pl-10 pt-2 text-gray-500 leading-relaxed italic border-l-2 border-[#051730]/10 ml-3">
-                                          <div
-                                            dangerouslySetInnerHTML={{
-                                              __html: sub.course_name[0].sub_name,
-                                            }}
-                                          />
-                                        </AccordionContent>
-                                      </AccordionItem>
-                                    </Accordion>
-                                  ) : (
-                                    <div className="flex items-center gap-4 py-2">
-                                      <IoArrowForwardCircleOutline className="w-6 h-6 text-white flex-shrink-0" />
-                                      <span className="text-md md:text-[18px] font-medium text-white/90">
-                                        {sub.subjectname}
-                                      </span>
-                                    </div>
-                                  )}
-                                </div>
-                              ))}
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Action Buttons Container - Glassy Bottom - Responsive Stack for Mobile */}
-            <div className="px-4 xl:px-6 py-8 bg-transparent min-h-[100px] flex flex-col md:flex-row items-center justify-center gap-4">
-              {programStruct
-                .find((y) => y.year.toLowerCase().replace(/\s+/g, "") === activeYear)
-                ?.semester.find((s) => (s.semestername || "").toLowerCase().replace(/\s+/g, "") === activeSemester)
-                ?.pdfbtns?.map((btn) => {
-                  const text = btn?.buttontext?.toLowerCase() || "";
-                  const isDark = text.includes("minor") || text.includes("handbook");
-
-                  return (
-                    <CommonLeadPopup
-                      key={btn?.id}
-                      buttonText={
-                        <div className="flex items-center gap-2 md:gap-3">
-                          <Download className="w-4 h-4 md:w-5 md:h-5" />
-                          <span className="font-semibold tracking-tight text-sm md:text-lg whitespace-nowrap">
-                            {btn?.buttontext}
-                          </span>
-                        </div>
-                      }
-                      buttonClassName={`px-3 py-3 md:px-6 md:py-4 rounded-md transition-all duration-300 flex items-center justify-center w-full md:w-auto shadow-lg
-                        ${
-                          isDark
-                            ? "bg-[#001732] text-white hover:bg-[#0a264a]"
-                            : "bg-white text-black hover:bg-gray-100"
-                        }`}
-                      redirectUrl={btn?.buttonlink || "#"}
-                      form_name={btn?.buttontext || "Action"}
-                    />
-                  );
-                })}
-            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
 };
 
 export default ProgrammeStructure;
@@ -513,7 +485,7 @@ export default ProgrammeStructure;
 //                   {currbtn?.buttontext}
 //                 </span>
 //               }
-//               buttonClassName="w-full md:w-auto px-6 py-2 md:px-8 md:py-3 text-base font-semibold text-[#051730] bg-transparent hover:text-[#051730] hover:bg-blue-50 rounded-sm transition-all duration-300 shadow-md flex items-center justify-center border-2 border-[#051730]"
+//               buttonClassName="w-full md:w-auto px-6 py-2 md:px-8 md:py-3 text-base font-semibold text-[#0a41a1] bg-transparent hover:text-[#0a41a1] hover:bg-blue-50 rounded-sm transition-all duration-300 shadow-md flex items-center justify-center border-2 border-[#0a41a1]"
 //               redirectUrl={currbtn?.buttonlink || "#"}
 //               form_name="Programme Handbook"
 //             />
@@ -550,8 +522,8 @@ export default ProgrammeStructure;
 //                           key={year.id}
 //                           value={value}
 //                           className="px-4 py-2 text-xs md:text-sm font-semibold transition-all duration-300 rounded-sm
-//                             data-[state=active]:bg-white data-[state=active]:text-[#051730] data-[state=active]:shadow-sm
-//                             hover:text-[#051730] text-gray-400 cursor-pointer uppercase tracking-wider"
+//                             data-[state=active]:bg-white data-[state=active]:text-[#0a41a1] data-[state=active]:shadow-sm
+//                             hover:text-[#0a41a1] text-gray-400 cursor-pointer uppercase tracking-wider"
 //                         >
 //                           {year.year}
 //                         </TabsTrigger>
@@ -581,8 +553,8 @@ export default ProgrammeStructure;
 //                               key={sem.id}
 //                               value={semValue}
 //                               className="px-5 py-2 text-xs md:text-sm font-semibold transition-all duration-300 rounded-sm
-//                                 data-[state=active]:bg-[#051730] data-[state=active]:text-white data-[state=active]:shadow-md
-//                                 hover:text-[#051730] text-blue-400 cursor-pointer uppercase tracking-wider"
+//                                 data-[state=active]:bg-[#0a41a1] data-[state=active]:text-white data-[state=active]:shadow-md
+//                                 hover:text-[#0a41a1] text-blue-400 cursor-pointer uppercase tracking-wider"
 //                             >
 //                               {sem.semestername}
 //                             </TabsTrigger>
@@ -617,7 +589,7 @@ export default ProgrammeStructure;
 //                                       className="group flex flex-col bg-white rounded-md p-3 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
 //                                     >
 //                                       <div className="flex flex-row gap-4 h-full items-start">
-//                                         <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#051730] flex items-center justify-center text-white transition-all duration-300 border border-[#051730]/10">
+//                                         <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#0a41a1] flex items-center justify-center text-white transition-all duration-300 border border-[#0a41a1]/10">
 //                                           <BookOpen className="w-5 h-5" />
 //                                         </div>
 //                                         <div className="flex-grow min-w-0">
@@ -636,7 +608,7 @@ export default ProgrammeStructure;
 //                                                   className="border-none"
 //                                                 >
 //                                                   <AccordionTrigger className="py-0 text-left hover:no-underline flex justify-between gap-2 group-data-[state=open]:pb-3">
-//                                                     <h5 className="text-[16px] font-semibold text-[#051730] transition-colors leading-snug">
+//                                                     <h5 className="text-[16px] font-semibold text-[#0a41a1] transition-colors leading-snug">
 //                                                       {sub.subjectname}
 //                                                     </h5>
 //                                                   </AccordionTrigger>
@@ -651,7 +623,7 @@ export default ProgrammeStructure;
 //                                               ))}
 //                                             </Accordion>
 //                                           ) : (
-//                                             <h5 className="text-[16px] font-semibold text-[#051730] transition-colors leading-snug">
+//                                             <h5 className="text-[16px] font-semibold text-[#0a41a1] transition-colors leading-snug">
 //                                               {sub.subjectname}
 //                                             </h5>
 //                                           )}
@@ -677,8 +649,8 @@ export default ProgrammeStructure;
 //                                     const btnClass = `flex items-center gap-2 text-sm md:text-md font-semibold uppercase tracking-wide px-3 py-2 md:px-6 md:py-3
 //                                       rounded-sm shadow-sm transition-all duration-300 border-2
 //                                       ${isHandbook
-//                                         ? "bg-[#051730] text-white border-[#051730] hover:bg-white hover:text-[#051730]"
-//                                         : "bg-transparent text-[#051730] border-[#051730] hover:bg-blue-50 hover:text-[#051730]"} `;
+//                                         ? "bg-[#0a41a1] text-white border-[#0a41a1] hover:bg-white hover:text-[#0a41a1]"
+//                                         : "bg-transparent text-[#0a41a1] border-[#0a41a1] hover:bg-blue-50 hover:text-[#0a41a1]"} `;
 
 //                                     const btnContent = (
 //                                       <span className="flex items-center gap-2">

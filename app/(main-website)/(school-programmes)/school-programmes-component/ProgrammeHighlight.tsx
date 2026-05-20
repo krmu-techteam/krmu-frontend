@@ -64,10 +64,10 @@ const ProgrammeHighlight = ({
 
   if (slug === "bba-hr" || slug === "b-tech-cse") {
     return (
-      <section className="bg-white py-8 md:py-16 shadow">
-        <div className="max-w-[1440px] mx-auto w-full px-4 md:px-8">
+      <section className="bg-[#f9f9f9] py-8 xl:py-12 2xl:py-16">
+        <div className="max-w-[1440px] mx-auto w-full px-4 md:px-8 xl:px-10 2xl:px-0">
           <div className="text-center mb-4 md:mb-6">
-            <h2 className="text-3xl text-center md:text-center md:text-[42px] font-bold text-[#051630] leading-[1.1] mb-3">
+            <h2 className="text-3xl text-center md:text-center md:text-[40px] font-bold text-[#051630] leading-[1.1] mb-3">
               {heading} {highlightHeading}
             </h2>
             <p className="text-[#424242] text-lg md:text-xl max-w-3xl mx-auto font-normal">
@@ -75,7 +75,7 @@ const ProgrammeHighlight = ({
             </p>
           </div>
 
-          <div className="relative group/slider px-0 xl:px-10 2xl:px-14">
+          <div className="relative group/slider px-0 xl:px-0 2xl:px-0">
             {/* Slider Controls */}
             <div className="absolute top-1/2 -left-3 md:left-0 lg:-left-4 -translate-y-1/2 z-10">
               <button
@@ -99,9 +99,9 @@ const ProgrammeHighlight = ({
 
             {/* Embla Viewport - Added padding and negative margin to prevent shadow clipping */}
             <div className="overflow-hidden cursor-grab active:cursor-grabbing pt-2 md:pt-0" ref={emblaRef}>
-              <div className="flex -ml-4">
+              <div className="flex xl:ml-0 2xl:-ml-4 ">
                 {highlights?.map((highlight) => (
-                  <div key={highlight.id} className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_25%] pl-4 min-w-0">
+                  <div key={highlight.id} className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33%] xl:flex-[0_0_25%] xl:pl-0 2xl:pl-4 min-w-0">
                     <ProgrammeHighlightModernCard
                       title={highlight?.title}
                       desc={highlight?.subtitle}

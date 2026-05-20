@@ -83,7 +83,7 @@ export default function YoutubePopup({
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-5xl 2xl:max-w-7xl aspect-video shadow-2xl overflow-hidden rounded-xl cursor-auto"
+            className="relative w-full max-w-5xl 2xl:max-w-7xl aspect-video shadow-2xl overflow-hidden rounded-md cursor-auto"
           >
             {/* Close */}
             <button

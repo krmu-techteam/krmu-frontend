@@ -13,6 +13,7 @@ import ProgrammeHighlight from "../../school-programmes-component/ProgrammeHighl
 import ProgrammeScope from "../../school-programmes-component/ProgrammeScope";
 import Specialisation from "../../school-programmes-component/Specialisation";
 import TableOfContent from "../../school-programmes-component/TableOfContent";
+import ExplorePrograms from "../../school-programmes-component/ExploreBTechPrograms";
 import { notFound } from "next/navigation";
 import AdmissionProcessComp from "../../school-programmes-component/AdmissionProcessComp";
 import { getPHDProgramme } from "@/lib/api/phd-programmes";
@@ -409,6 +410,9 @@ const page = async ({ params }: Props) => {
             tocbtn={tocSection?.tocbtn}
           />
         )}
+        
+        <ExplorePrograms currentSlug={slug} />
+
         {ourLocationSection && (
           <OurLocation
             badgetext={ourLocationSection?.badgetext}
