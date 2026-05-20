@@ -20,9 +20,10 @@ import ProgramCard from "../hoc/ProgramCard";
 type Props = {
   degName: string;
   catName: string;
+  title?: string;
 };
 
-const ProgrammeInfoDemo = ({ catName }: Props) => {
+const ProgrammeInfoDemo = ({ catName, title }: Props) => {
   const [show, setShow] = useState<boolean>(false);
   const [programs, setPrograms] = useState<Record<string, ProgrammeCardData[]>>(
     {},

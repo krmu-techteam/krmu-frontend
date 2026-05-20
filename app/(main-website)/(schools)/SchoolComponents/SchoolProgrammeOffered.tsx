@@ -32,10 +32,6 @@ const SchoolProgrammeOffered = ({
             </h3>
             <p>{content}</p>
           </div>
-<<<<<<< HEAD
-          <ProgrammeInfoDemo degName={degName} catName={schoolCategoryName} />
-          {/* <ProgrammeInfoCards /> */}
-=======
           <ProgrammeInfoDemo
             degName={degName}
             catName={schoolCategoryName}
@@ -46,7 +42,6 @@ const SchoolProgrammeOffered = ({
               ** Subject to Approval
             </p>
           )}
->>>>>>> 5079e22537d8e6c406bb14bec19c2431dc8b9fba
         </div>
       </section>
     </>

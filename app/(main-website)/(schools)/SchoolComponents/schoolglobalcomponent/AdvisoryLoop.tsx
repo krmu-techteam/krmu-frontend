@@ -39,13 +39,25 @@ const AdvisoryLoop = ({ schoolCat }: Props) => {
   const visibleFaculties = advisoryFaculties.slice(0, visibleCount);
 
   if (visibleFaculties?.length === 0)
-    return <div className="text-center text-black py-10">Loading ...</div>;
+    return (
+      <div className="flex flex-col items-center justify-center py-14">
+        {/* Loader */}
+        <div className="relative h-14 w-14">
+          <div className="absolute inset-0 rounded-full border-4 border-gray-200"></div>
+          <div className="absolute inset-0 rounded-full border-4 border-black border-t-transparent animate-spin"></div>
+        </div>
+
+        {/* Text */}
+        <p className="mt-4 text-sm font-medium text-gray-700 animate-pulse">
+          Loading Members...
+        </p>
+      </div>
+    );
   return (
     <>
-      <div className="flex flex-wrap justify-center pt-16 px-2 sm:px-4 pb-4 gap-5">
+      <div className="grid grid-cols-5 pt-16 px-2 sm:px-4 pb-4 gap-5">
         {visibleFaculties.length > 0 ? (
           visibleFaculties.map((faculty) => (
-<<<<<<< HEAD
             <AdvisoryEmployeeCard
               key={faculty?.id}
               name={faculty?.faculty_name}
@@ -54,17 +66,6 @@ const AdvisoryLoop = ({ schoolCat }: Props) => {
               desg={faculty?.faculty_card_desg}
               slug={faculty?.facultyslug}
             />
-=======
-            <div key={faculty?.id} className="w-full sm:w-[272px] flex justify-center">
-              <AdvisoryEmployeeCard
-                name={faculty?.faculty_name}
-                imgUrl={faculty?.faculty_img?.url}
-                qual={faculty?.faculty_qualification}
-                desg={faculty?.faculty_card_desg}
-                slug={faculty?.facultyslug}
-              />
-            </div>
->>>>>>> 5079e22537d8e6c406bb14bec19c2431dc8b9fba
           ))
         ) : (
           <div className="col-span-full text-center text-gray-500 py-10">

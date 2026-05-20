@@ -4668,10 +4668,6 @@
     font-size: 14px !important;
     line-height: 1.5 !important;
   }
-<<<<<<< HEAD
-  .clubcontent p:empty {
-    display: none !important;
-=======
 
   /* Keep spacing consistent on mobile too */
   .clubcontent p,
@@ -4680,7 +4676,6 @@
   .clubcontent table,
   .clubcontent figure {
     margin-bottom: 10px !important;
->>>>>>> 5079e22537d8e6c406bb14bec19c2431dc8b9fba
   }
 
   /* Images should not overflow */
@@ -4696,36 +4691,6 @@
     white-space: normal !important;
   }
 
-<<<<<<< HEAD
-  .clubcontent p {
-    margin: 0 0 12px !important;
-    min-height: unset !important;
-  }
-  .clubcontent p {
-    min-height: unset !important;
-  }
-
-  .clubcontent p:empty {
-    display: none !important;
-  }
-
-  .clubcontent p {
-    margin-bottom: 12px !important;
-  }
-}
-@media (max-width: 360px) {
-  .clubcontent figure.table {
-    overflow-x: auto !important;
-    float: none !important;
-    width: 100% !important;
-    margin-top: px !important;
-    padding: 0 !important;
-  }
-  /* .clubcontent p {
-    margin-bottom: -10px !important;
-  } */
-}
-=======
   /* Table cells can still nowrap for readability inside scroll container */
   .clubcontent th,
   .clubcontent td {
@@ -4733,4 +4698,3 @@
   }
 }
 
->>>>>>> 5079e22537d8e6c406bb14bec19c2431dc8b9fba
