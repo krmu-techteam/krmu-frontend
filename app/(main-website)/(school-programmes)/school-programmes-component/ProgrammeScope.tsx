@@ -47,7 +47,7 @@ const ProgrammeScope = async ({
                   fill
                   src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
                   className="object-contain z-10"
-                  alt="scope image"
+                  alt={scopeData?.scopeimg?.alternativeText || "scope image"}
                 />
               )
             )}
