@@ -59,23 +59,11 @@ const ScholarNotesUG = () => {
         Part A Scholarship will be awarded on the basis of an overall aggregate marks obtained in the last qualifying examination
                 </span>
               </div>
-              <div className="flex gap-5">
-                <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
-                  7
-                </span>
-                <span className="text-white font-semibold text-base notesul">
-                  For Sports scholarship below criteria will be applicable :-
-                  <div className="flex flex-col gap-2 my-2.5 pl-5">
-                    <span>a) Latest 3 years performance will be considered</span>
-                    <span>b) Scholarship will awarded upon certificate verification as well as Physical test</span>
-                    <span>c) University will only cover Traveling allowance, Registration and match fees</span>
-                  </div>
-                </span>
-              </div>
+              
 
                   <div className="flex gap-5">
               <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
-                8
+                7
               </span>
               <span className="text-white font-semibold text-base notesul">
                2nd Instalment and 3rd instalment (where applicable) of scholarship amount will be paid by cheque if the student fulfils ALL the criteria a, b, c as listed under:-
@@ -92,6 +80,19 @@ const ScholarNotesUG = () => {
                 </div>
               </span>
             </div>
+             <div className="flex gap-5">
+                <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
+                  8
+                </span>
+                <span className="text-white font-semibold text-base notesul">
+                  For Sports scholarship below criteria will be applicable :-
+                  <div className="flex flex-col gap-2 my-2.5 pl-5">
+                    <span>a) Latest 3 years performance will be considered</span>
+                    <span>b) Scholarship will awarded upon certificate verification as well as Physical test</span>
+                    <span>c) University will only cover Traveling allowance, Registration and match fees</span>
+                  </div>
+                </span>
+              </div>
            
           </div>
           <div className="w-full lg:w-3/12 flex flex-col gap-5">
