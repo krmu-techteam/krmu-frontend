@@ -180,7 +180,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/06/Mr.-Indrajeet-Kumar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Mr.-Indrajeet-Kumar.png",
   },
   {
     id: 51399,

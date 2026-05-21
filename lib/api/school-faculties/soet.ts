@@ -222,7 +222,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Prof-Dr.-Shweta-A.-Bansal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Prof-Dr.-Shweta-A.-Bansal.png",
   },
   {
     id: 10824,
@@ -417,7 +417,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1126, 1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Aarti-1.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Aarti1.png",
   },
   {
     id: 60578,
@@ -870,7 +870,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/06/Ms.-Kriti-Sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/kriti-sharma.png",
   },
   {
     id: 113762,
