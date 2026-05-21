@@ -292,6 +292,16 @@ const ProgrammesSearch = () => {
     return orderA - orderB;
   });
 
+  const progNewLine = [
+    "b-tech-cse",
+    "btech-cse-ai-ml",
+    "btech-full-stack-development",
+    "btech-cse-ui-ux",
+    "btech-cse-cyber-security",
+    "btech-cse-in-data-science",
+    "b-tech-cse-robotics-ai",
+  ];
+
   return (
     <section>
       <div>
