@@ -14,7 +14,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Prof.-Meena-Bhandari.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/01/Prof.-Meena-Bhandari.png",
   },
   {
     id: 113742,
@@ -44,7 +44,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Prof.-Pawan-Kumar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/10/Prof.-Pawan-Kumar.png",
   },
   {
     id: 908,
@@ -59,7 +59,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Diwakar-Padalia.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/10/Dr.-Diwakar-Padalia.png",
   },
   {
     id: 911,
@@ -74,7 +74,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Seema-Raj.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/10/Dr.-Seema-Raj.png",
   },
   {
     id: 106818,
@@ -89,7 +89,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr-Saba-Rashid.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr-Saba-Rashid-1.png",
   },
   {
     id: 106793,
@@ -104,7 +104,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Sarita-Yadav.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Sarita-Yadav-1.png",
   },
   {
     id: 106738,
@@ -119,7 +119,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Mahipal-Singh-Sankhla.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Mahipal-Singh-Sankhla-1.png",
   },
   {
     id: 106736,
@@ -134,7 +134,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Baljeet-Yadav.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Baljeet-Yadav-1.png",
   },
   {
     id: 105118,
@@ -149,7 +149,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Vishal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Vishal-1.png",
   },
   {
     id: 104674,
@@ -164,7 +164,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Pooja-Sindhu.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Pooja-Sindhu-1.png",
   },
   {
     id: 79849,
@@ -179,7 +179,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Ms.-Kritika-Singh.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/12/Ms.-Kritika-Singh.png",
   },
   {
     id: 79684,
@@ -194,7 +194,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Prawar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/12/Dr.-Prawar.png",
   },
   {
     id: 72160,
@@ -209,7 +209,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Divyanshi-Mangla.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/10/Dr.-Divyanshi-Mangla.png",
   },
   {
     id: 71089,
@@ -224,7 +224,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Shivani-Sehgal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/10/Dr.-Shivani-Sehgal.png",
   },
   {
     id: 68861,
@@ -239,7 +239,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Pratibha-Sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.-Pratibha-Sharma.png",
   },
   {
     id: 68858,
@@ -254,7 +254,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Saloni-Rathee.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.-Saloni-Rathee.png",
   },
   {
     id: 60405,
@@ -269,7 +269,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Mohabbat-Ali.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Mohabbat-Ali.png",
   },
   {
     id: 10068,
@@ -285,7 +285,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Dilraj-Preet-Kaur.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Dilraj-Preet-Kaur.png",
   },
   {
     id: 9994,
@@ -300,7 +300,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Ms.-Sapna.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Ms.-Sapna.png",
   },
   {
     id: 9987,
@@ -315,7 +315,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Mr.-Nitin-Tyagi.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Mr.-Nitin-Tyagi.png",
   },
   {
     id: 9984,
@@ -330,7 +330,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Rishi-Ranjan-Kumar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Rishi-Ranjan-Kumar.png",
   },
   {
     id: 9976,
@@ -345,7 +345,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Nitish-Yadav.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Nitish-Yadav.png",
   },
   {
     id: 9974,
@@ -360,7 +360,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Vicky-Kapoor.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Vicky-Kapoor.png",
   },
   {
     id: 9973,
@@ -375,7 +375,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Sujata-Kumari.pngs",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Sujata-Kumari.png",
   },
   {
     id: 9962,
@@ -390,7 +390,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Mamta-Raj.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mamta-Raj.png",
   },
   {
     id: 9957,
@@ -405,7 +405,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Kriti.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Kriti.png",
   },
   {
     id: 9956,
@@ -420,7 +420,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Mehak-Ahuja.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mehak-Ahuja.png",
   },
   {
     id: 9944,
@@ -435,7 +435,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Ritika-Khatri.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Ritika-Khatri.png",
   },
   {
     id: 9883,
@@ -450,7 +450,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Mina-Kumari.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mina-Kumari.png",
   },
   {
     id: 9188,
@@ -465,7 +465,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Pardeep-Kumar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Pardeep-Kumar.png",
   },
   {
     id: 8921,
@@ -480,7 +480,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Neeraj-Kumari.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Neeraj-Kumari.png",
   },
   {
     id: 1008,
@@ -495,7 +495,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Rajni-Gautam.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Rajni-Gautam.png",
   },
   {
     id: 1005,
@@ -510,7 +510,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Yogendra-Kumar-Rajoria.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Yogendra-Kumar-Rajoria.png",
   },
   {
     id: 1002,
@@ -525,7 +525,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Ruby-Jindal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Ruby-Jindal.png",
   },
   {
     id: 981,
@@ -540,7 +540,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Pooja-Vats.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Pooja-Vats.png",
   },
 
   {
@@ -556,7 +556,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Chandra-Mohan.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/10/Dr.-Chandra-Mohan.png",
   },
   {
     id: 113724,
@@ -571,7 +571,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Kumud-Kant-Awasthi.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Kumud-Kant-Awasthi.png",
   },
   {
     id: 113730,
@@ -586,7 +586,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Ms.-Manju-Yadav.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Ms.-Manju-Yadav.png",
   },
   {
     id: 113747,
@@ -601,7 +601,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Monika-Phougat.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Monika-Phougat.png",
   },
   {
     id: 113749,
@@ -616,7 +616,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Ms.-Nainy-Khera.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Ms.-Nainy-Khera.png",
   },
   {
     id: 113768,
@@ -631,7 +631,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Pooja-Bansal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Pooja-Bansal.png",
   },
   {
     id: 113771,
@@ -646,7 +646,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Gaurav-Gupta.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Gaurav-Gupta.png",
   },
   {
     id: 113773,
@@ -661,7 +661,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Mr.-Ajay-Kumar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Mr.-Ajay-Kumar.png",
   },
   {
     id: 113776,
@@ -676,7 +676,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Sourabh-Kumar-Singh.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Sourabh-Kumar-Singh.png",
   },
   {
     id: 113802,
@@ -691,6 +691,6 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Garima-Awasthi.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Garima-Awasthi.png",
   },
 ];
