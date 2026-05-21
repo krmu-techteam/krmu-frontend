@@ -1,3 +1,5 @@
+"use client";
+import Autoplay from "embla-carousel-autoplay";
 import ElevateSlide from "./ElevateSlide";
 import {
   Carousel,
@@ -67,6 +69,11 @@ const ElevateSlider = () => {
           align: "start",
           loop: true,
         }}
+        plugins={[
+          Autoplay({
+            delay: 3000,
+          }),
+        ]}
         className="w-full lg:px-5 xl:px-10"
       >
         <CarouselContent>

@@ -120,7 +120,6 @@ const SchoolHero = ({
             />
           )}
         </div>
-
         <div
           className="
     h-full

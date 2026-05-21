@@ -30,7 +30,7 @@ const ElevateCampus = ({
           <div className="flex gap-10 lg:gap-5 2xl:gap-10 flex-col lg:flex-row items-center py-10 xl:py-20">
             <div className="w-full lg:w-1/2 xl:w-1/3 flex flex-col">
               <div className="2xl:max-w-lg text-center lg:text-left">
-                <h4 className="font-weight-500 text-lg uppercase tracking-[1px] mb-3">
+                <h4 className="font-weight-500 text-xs sm:text-sm uppercase tracking-wide sm:tracking-[1px] mb-3">
                   {elevateCampus?.subtitle}
                 </h4>
                 <h3 className="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-5">
@@ -75,7 +75,7 @@ const ElevateCampus = ({
             </div>
             <div className="w-full lg:w-1/2 xl:w-1/3 flex flex-col justify-center items-center">
               <div className="2xl:max-w-lg text-center lg:text-left">
-                <h4 className="font-weight-500 text-lg uppercase tracking-[1px] mb-3">
+                <h4 className="font-weight-500 text-xs sm:text-sm uppercase tracking-wide sm:tracking-[1px] mb-3">
                   {elevateCampus2?.subtitle}
                 </h4>
                 <h3 className="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-5">
@@ -98,16 +98,16 @@ const ElevateCampus = ({
               </div>
             </div>
           </div>
-          <div className="flex  flex-col-reverse lg:flex-row items-center pb-10 xl:pb-20">
-            <div className="w-full lg:w-1/3 flex justify-center items-center">
+          <div className="flex gap-5 2xl:gap-10 flex-col lg:flex-row items-center pb-10 xl:pb-20">
+            <div className="w-full lg:w-1/2 xl:w-1/3 flex flex-col justify-center items-center">
               <div className="2xl:max-w-lg text-center lg:text-left">
-                <h4 className="font-weight-500 text-lg uppercase tracking-[1px] mt-5 mb-3">
+                <h4 className="font-weight-500 text-xs sm:text-sm uppercase tracking-wide sm:tracking-[1px] mt-5 mb-3">
                   {elevateCampus3?.subtitle}
                 </h4>
                 <h3 className="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight mb-5">
                   {elevateCampus3?.beforehighlighttext}
                   <span className="text-[#001732]">
-                    <br className="hidden lg:block" />{" "}
+                    {/* <br className="hidden lg:block" /> */}{" "}
                     {elevateCampus3?.highlighttext}
                   </span>
                   {elevateCampus3?.afterhighlighttext}

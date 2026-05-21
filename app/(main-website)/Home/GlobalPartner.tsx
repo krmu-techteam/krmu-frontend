@@ -5,14 +5,14 @@ interface GlobalPartenerProp {
   title: string;
   desc: string;
   logoSliderHeading: string;
-  globalLogos: StrapiMedia[]
+  globalLogos: StrapiMedia[];
 }
- 
+
 const GlobalPartner = ({
   title,
   desc,
   logoSliderHeading,
-  globalLogos
+  globalLogos,
 }: GlobalPartenerProp) => {
   return (
     <>
@@ -22,7 +22,7 @@ const GlobalPartner = ({
             <h5 className="text-2xl md:text-4xl xl:text-5xl leading-tight font-semibold mt-2.5 mb-4 ">
               {title}
             </h5>
-            <p className="text-lg">{desc}</p>
+            <p className="text-lg text-justify">{desc}</p>
           </div>
           <div className="w-full xl:w-1/2">
             <div className="text-center">
@@ -31,7 +31,7 @@ const GlobalPartner = ({
               </h4>
             </div>
             <div>
-              <HomeGlobalCarousel logos={globalLogos} /> 
+              <HomeGlobalCarousel logos={globalLogos} />
             </div>
           </div>
         </div>

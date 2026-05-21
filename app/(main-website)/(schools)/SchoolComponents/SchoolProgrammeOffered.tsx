@@ -32,16 +32,8 @@ const SchoolProgrammeOffered = ({
             </h3>
             <p>{content}</p>
           </div>
-          <ProgrammeInfoDemo
-            degName={degName}
-            catName={schoolCategoryName}
-            title={title}
-          />
-          {STA.includes(slug) && (
-            <p className="text-right text-sm mr-8 mt-2 text-muted-foreground">
-              ** Subject to Approval
-            </p>
-          )}
+          <ProgrammeInfoDemo degName={degName} catName={schoolCategoryName} />
+          {/* <ProgrammeInfoCards /> */}
         </div>
       </section>
     </>

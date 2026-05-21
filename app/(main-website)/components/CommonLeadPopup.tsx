@@ -83,7 +83,11 @@ const CommonLeadPopup = ({
   return (
     <>
       {/* Trigger Button */}
-      <button onClick={() => setOpen(true)} className={`${buttonClassName} cursor-pointer`}>
+      <button
+        onClick={() => setOpen(true)}
+        className={`${buttonClassName} cursor-pointer`}
+      >
+        <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
         {buttonText}
       </button>
 
@@ -140,8 +144,8 @@ const CommonLeadPopup = ({
                     className="mt-1"
                     defaultChecked
                   />
-                  I agree to receive information about my enquiry by signing up at
-                  K.R. Mangalam University.
+                  I agree to receive information about my enquiry by signing up
+                  at K.R. Mangalam University.
                 </label>
 
                 {error && <p className="text-red-600 text-sm">{error}</p>}
@@ -156,7 +160,7 @@ const CommonLeadPopup = ({
               </form>
             </div>
           </div>,
-          document.body
+          document.body,
         )}
     </>
   );

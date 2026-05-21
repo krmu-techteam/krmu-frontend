@@ -7,7 +7,7 @@ interface WhyKRMUProp {
 const WhyKRMU = ({ title, subtitle, description }: WhyKRMUProp) => {
   return (
     <>
-      <section className="w-full px-5 py-10 xl:px-0 lg:py-12 bg-gray-700">
+      <section className="w-full px-5 py-10 xl:px-0 lg:py-20 bg-gray-700">
         <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full flex gap-5 flex-col lg:flex-row items-center text-center lg:text-left">
           <div className="w-full lg:w-1/2">
             <div className="text-white">
@@ -17,7 +17,7 @@ const WhyKRMU = ({ title, subtitle, description }: WhyKRMUProp) => {
               </h3>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 text-white text-lg ">
+          <div className="w-full lg:w-1/2 text-white text-lg text-justify">
             <p>{description}</p>
           </div>
         </div>

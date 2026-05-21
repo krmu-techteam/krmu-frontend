@@ -6,15 +6,15 @@ import CommonLeadPopup from "../../components/CommonLeadPopup";
 const YourJourney2 = () => {
   return (
     <section className="pb-10 xl:pb-20 sm:px-5 xl:px-0">
-      <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full bg-gray-50 px-5 xl:px-0 py-10">
+      <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full px-5 xl:px-0 ">
         <div className="max-w-7xl mx-auto w-full text-center">
-          <p className="font-weight-500 text-lg uppercase tracking-[1px] mb-3">
+          <p className="font-weight-500 text-xs sm:text-sm uppercase tracking-wide sm:tracking-[1px] mb-3">
             Elevate Your Campus Life
           </p>
           <h4 className="text-2xl sm:text-4xl lg:text-5xl font-semibold m-2 md:mb-5 text-black ">
             Your Journey to Excellence Begins Here
           </h4>
-          <p className="mb-5 max-w-5xl mx-auto text-lg">
+          <p className="mb-5 max-w-5xl mx-auto text-lg text-justify sm:text-center">
             Our multidisciplinary approach to education ensures students receive
             a well-rounded experience, blending theoretical knowledge with
             real-world applications. As the leading university in Gurugram, we
@@ -26,8 +26,9 @@ const YourJourney2 = () => {
             <Link
               href="/programmes"
               target="_blank"
-              className="text-center mb-2.5 max-w-xs w-full bg-[#001732] font-semibold px-2.5 py-5 leading-none rounded-md text-sm sm:text-base outline-none text-white block h-14 flex justify-center items-center"
+              className="w-full flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-[#001732] text-white border-1 border-transparent hover:bg-[#001732] shadow-lg px-6 hover:bg-[#001732] mb-2.5"
             >
+              <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
               Explore Our Programmes
             </Link>
           </div>
@@ -62,36 +63,40 @@ const YourJourney2 = () => {
         <div className="hidden sm:flex justify-center gap-5 flex-wrap">
           <Link
             href="/admissions"
-            className="bg-[#001732] text-white  font-medium  px-6 py-2 rounded-md hover:bg-[#00326c] hover:text-white h-14 flex justify-center items-center text-sm sm:text-base"
             target="_blank"
+            className=" flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-[#001732] text-white border-1 border-transparent hover:bg-[#001732] shadow-lg px-6 hover:bg-[#001732] mb-2.5"
           >
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
             Admission
           </Link>
           <Link
             href="/fee-structure"
-            className="bg-[#001732] text-white  font-medium  px-6 py-2 rounded-md hover:bg-[#00326c] hover:text-white h-14 flex justify-center items-center text-sm sm:text-base"
             target="_blank"
+            className=" flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-[#001732] text-white border-1 border-transparent hover:bg-[#001732] shadow-lg px-6 hover:bg-[#001732] mb-2.5"
           >
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
             Fee Structure
           </Link>
           <Link
             href="/admission/scholarship"
-            className="bg-[#001732] text-white  font-medium  px-6 py-2 rounded-md hover:bg-[#00326c] hover:text-white h-14 flex justify-center items-center text-sm sm:text-base"
             target="_blank"
+            className=" flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-[#001732] text-white border-1 border-transparent hover:bg-[#001732] shadow-lg px-6 hover:bg-[#001732] mb-2.5"
           >
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
             Scholarships
           </Link>
           <CommonLeadPopup
-            buttonClassName="bg-[#001732] text-white  font-medium  px-6 py-2 rounded-md hover:bg-[#00326c] hover:text-white h-14 flex justify-center items-center text-sm sm:text-base"
+            buttonClassName="flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-[#001732] text-white border-1 border-transparent hover:bg-[#001732] shadow-lg px-6 hover:bg-[#001732] mb-2.5"
             buttonText="Download Prospectus"
             redirectUrl={`https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf`}
             form_name="Download Prospectus"
           />
           <Link
             href="https://admissions.krmangalam.edu.in/?utm_source=website&utm_medium=Homepage&utm_campaign=journey-section&_gl=1*rfukfk*_ga*MTk4NDQwNDY4LjE3Nzc4NzU5MzU.*_ga_VJJK572TGN*czE3Nzc4NzU5MzUkbzEkZzEkdDE3Nzc4NzYwNDEkajYwJGwwJGgw"
-            className="bg-[#cb000d] hover:bg-[#d03f46] transition-all duration-200 text-white   px-6 py-2 rounded-lg font-medium text-center flex items-center justify-center h-14 text-sm sm:text-base"
+            className="flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-[#d03f46] text-white border-1 border-transparent hover:bg-[#d03f46] shadow-lg px-6 hover:bg-[#d03f30] mb-2.5"
             target="_blank"
           >
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
             Apply Now
           </Link>
         </div>
