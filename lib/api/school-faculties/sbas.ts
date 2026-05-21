@@ -194,7 +194,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Prawar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/12/Dr.-Prawar.png",
   },
   {
     id: 72160,
@@ -239,7 +239,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Pratibha-Sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.-Pratibha-Sharma.png",
   },
   {
     id: 68858,
@@ -330,7 +330,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Rishi-Ranjan-Kumar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Rishi-Ranjan-Kumar.png",
   },
   {
     id: 9976,
@@ -435,7 +435,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Ritika-Khatri.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Ritika-Khatri.png",
   },
   {
     id: 9883,
@@ -495,7 +495,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Rajni-Gautam.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Rajni-Gautam.png",
   },
   {
     id: 1005,
@@ -525,7 +525,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Ruby-Jindal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Ruby-Jindal.png",
   },
   {
     id: 981,
@@ -540,7 +540,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Pooja-Vats.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Pooja-Vats.png",
   },
 
   {
