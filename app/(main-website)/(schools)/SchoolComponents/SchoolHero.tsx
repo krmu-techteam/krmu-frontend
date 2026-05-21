@@ -121,7 +121,7 @@ const SchoolHero = ({
                 )}
               </div>
             </div>
-            <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end">
+            <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end temp-class">
               {videoFmt === "Iframe" ? (
                 <div
                   className="w-full customSchoolIframeStyle"
