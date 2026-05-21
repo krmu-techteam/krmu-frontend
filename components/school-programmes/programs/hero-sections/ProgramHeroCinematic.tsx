@@ -54,7 +54,7 @@ const ProgramHeroCinematic = ({
           '--overlay-width': config.overlayWidth || '45%'
         } as React.CSSProperties}
       >
-        <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 sm:px-4 md:px-8 lg:px-10 xl:px-0 xl:gap-16 z-10 2xl:px-0">
+        <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 sm:px-4 md:px-8 lg:px-10 xl:px-2 xl:gap-16 z-10 2xl:px-0">
           <div className="w-full lg:w-1/2 xl:w-1/2 relative z-10">
             <div className="xl:max-w-[700px] w-full">
               <div className="flex flex-col sm:block bg-gradient-to-t from-black/90 via-black/50 to-transparent sm:bg-none px-6 sm:p-0">
@@ -89,7 +89,7 @@ const ProgramHeroCinematic = ({
               </div>
 
               {/* Stats Bar - Integrated on Desktop, Dedicated Section on Mobile */}
-              <div className="w-full bg-[#001631] sm:bg-transparent py-8 sm:py-0 mt-0 sm:mt-10 relative z-10 px-2 xl:px-10 2xl:px-0">
+              <div className="w-full bg-[#001631] sm:bg-transparent py-8 sm:py-0 mt-0 sm:mt-10 relative z-10">
                 <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-nowrap items-center sm:gap-x-10">
                   <div className="flex flex-col sm:pr-8 lg:pr-4 xl:pr-10 sm:border-r border-white/20 text-center sm:text-left">
                     <span className="text-white font-semibold text-lg sm:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
