@@ -34,27 +34,29 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
         </div>
 
         {/* ------------------ DYNAMIC TAB CONTENT ------------------ */}
-        {feeStructTab.map((tab) => (
-          <TabsContent
-            key={tab.id}
-            value={tab.id.toString()}
-            className="w-full max-w-[1600px] mx-auto outline-none"
-          >
-            <FacultySection options={tab.fee_structure_acc || []} />
-            {tab.tab_heading === "Fee Structure for Indian Students" && (
-              <div>
-                <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
-                  ** Subject to Approval
-                </p>
-                <p className="text-right text-sm mr-2 mt-1 text-muted-foreground">
-                  *In addition to the regular programme fee at KRMU, students
-                  will be required to pay an additional tuition fee of GBP 6500
-                  for the semester at UEA
-                </p>
-              </div>
-            )}
-          </TabsContent>
-        ))}
+        {feeStructTab.map((tab) => {
+          console.log("Rendering content for tab:", tab.tab_heading);
+          return (
+            <TabsContent
+              key={tab.id}
+              value={tab.id.toString()}
+              className="w-full max-w-[1600px] mx-auto outline-none"
+            >
+              <FacultySection options={tab.fee_structure_acc || []} />
+              {tab.tab_heading === "Fee Structure for Indian Students" && (
+                <div>
+                  <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
+                    ** Subject to Approval
+                  </p>
+                  <p className="text-right text-sm mr-2 mt-1 text-muted-foreground">
+                    The programme fee payable in subsequent years may increase
+                    up to 10% per annum
+                  </p>
+                </div>
+              )}
+            </TabsContent>
+          );
+        })}
       </Tabs>
 
       {/* <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
@@ -168,6 +170,9 @@ const FacultySection = ({ options }: { options: any[] }) => {
                   className="overflow-x-auto modern-fee-table scrollbar-thin scrollbar-thumb-gray-200"
                   dangerouslySetInnerHTML={{ __html: acc.panel_content }}
                 />
+                <div>
+                  <p></p>
+                </div>
               </TabsContent>
             ))}
           </div>
