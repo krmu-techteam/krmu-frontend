@@ -6,6 +6,7 @@ import {
 } from "@/lib/api/single-news-events";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { NoIndexEventsSlugs } from "../NoIndexEventsSlugs";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -50,12 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteMetaDescription = singleNewsEvents?.yoast_head_json?.description;
   const siteCanonicalUrl = `${process.env.NEXT_PUBLIC_MAIN_URL}/events-and-news/${slug}`;
 
-  console.log(
-    "singleNewsEvents?.yoast_head_json?.robots?.follow",
-    singleNewsEvents,
-  );
-
-  const indexNoIndex = singleNewsEvents?.yoast_head_json?.robots?.index;
+  const isForceNoIndex = NoIndexEventsSlugs.includes(slug);
 
   return {
     title: siteMetaTitle || siteTitle || "K.R. Mangalam University",
@@ -70,15 +66,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
     },
     robots: {
-      index:
-        singleNewsEvents?.yoast_head_json?.robots?.follow === "nofollow"
+      index: isForceNoIndex
+        ? false
+        : singleNewsEvents?.yoast_head_json?.robots?.follow === "nofollow"
           ? false
           : singleNewsEvents?.yoast_head_json?.robots?.follow === "follow"
             ? true
             : true,
 
-      follow:
-        singleNewsEvents?.yoast_head_json?.robots?.follow === "nofollow"
+      follow: isForceNoIndex
+        ? false
+        : singleNewsEvents?.yoast_head_json?.robots?.follow === "nofollow"
           ? false
           : singleNewsEvents?.yoast_head_json?.robots?.follow === "follow"
             ? true
