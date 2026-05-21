@@ -49,7 +49,7 @@ const AdvisoryLoop = ({ schoolCat }: Props) => {
 
         {/* Text */}
         <p className="mt-4 text-sm font-medium text-gray-700 animate-pulse">
-          Loading Members...
+          Loading...
         </p>
       </div>
     );
