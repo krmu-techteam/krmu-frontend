@@ -26,13 +26,16 @@ const HeroSection = ({
   return (
     <>
       <section className={`pb-10 sm:py-20 md:pt-14 md:pb-14 ${lpclName || ""}`}>
-        <div className="max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row items-center gap-5 sm:gap-10">
-          <div className="w-full xl:w-2/3 text-white text-center md:text-left container-1 sm:py-0 sm:px-5">
-            <div className="p-5 sm:p-0">
+        <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row items-center lg:justify-between gap-5 sm:gap-6 pb-6">
+          <div className="w-full lg:w-[55%] xl:w-2/3 text-white text-center lg:text-left container-1 sm:py-0 sm:px-5">
+            <div className="p-5 sm:p-0 lg:max-w-[540px] xl:max-w-[720px] mx-auto lg:mx-0">
               <h1
-                className="text-white font-semibold text-2xl md:text-5xl leading-[1.4] z-10 relative"
+                className="text-white font-semibold text-2xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.3] z-10 relative"
                 dangerouslySetInnerHTML={{
                   __html: content || "",
+                }}
+                style={{
+                  textShadow: "2px 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9)"
                 }}
               />
             </div>
@@ -41,7 +44,10 @@ const HeroSection = ({
               dangerouslySetInnerHTML={{
                 __html: desc || "",
               }}
-              className="hidden sm:block"
+               style={{
+                  textShadow: "2px 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9)"
+                }}
+              className="hidden lg:block"
             />
           </div>
           <div className="grid grid-cols-2 sm:hidden text-center text-white">
@@ -74,7 +80,7 @@ const HeroSection = ({
             )}
           </div> */}
 
-          <div className="w-full xl:w-1/3 container-2 px-5 scroll-mt-40" id="apply-section">
+          <div className="w-full lg:w-[40%] xl:w-1/3 container-2 px-5 scroll-mt-40" id="apply-section">
             {formId && (
               <>
                 <div className="heroBannerForm__form">
