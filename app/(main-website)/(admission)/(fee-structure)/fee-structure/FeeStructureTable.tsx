@@ -41,17 +41,30 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
             className="w-full max-w-[1600px] mx-auto outline-none"
           >
             <FacultySection options={tab.fee_structure_acc || []} />
+            {tab.tab_heading === "Fee Structure for Indian Students" && (
+              <div>
+                <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
+                  ** Subject to Approval
+                </p>
+                <p className="text-right text-sm mr-2 mt-1 text-muted-foreground">
+                  *In addition to the regular programme fee at KRMU, students
+                  will be required to pay an additional tuition fee of GBP 6500
+                  for the semester at UEA
+                </p>
+              </div>
+            )}
           </TabsContent>
         ))}
       </Tabs>
-      <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
+
+      {/* <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
         ** Subject to Approval
       </p>
       <p className="text-right text-sm mr-2 mt-1 text-muted-foreground">
         *In addition to the regular programme fee at KRMU, students will be
         required to pay an additional tuition fee of GBP 6500 for the semester
         at UEA
-      </p>
+      </p> */}
     </div>
   );
 };

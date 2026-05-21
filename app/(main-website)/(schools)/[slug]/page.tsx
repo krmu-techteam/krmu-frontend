@@ -258,6 +258,7 @@ export default async function Page({ params }: Props) {
         schoolCategoryName={schoolCategoryName}
         title={school?.programme_offered?.title}
         content={school?.programme_offered?.content}
+        slug={slug}
       />
 
       {/* <SchoolExcitedAlready

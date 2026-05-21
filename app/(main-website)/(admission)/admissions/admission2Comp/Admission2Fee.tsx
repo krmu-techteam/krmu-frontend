@@ -55,13 +55,13 @@ const Admission2Fee = () => {
                 <span>Security Deposit</span>
               </TabsTrigger>
             </TabsList>
-            
+
             <div className="hidden lg:block mt-6">
               <Link
                 href="/fee-structure"
                 className="inline-flex items-center justify-center py-3 px-8 bg-[#0a41a1] hover:bg-[#051730] text-white text-sm font-bold rounded-md transition-all duration-500 shadow-md"
               >
-                View Fees Structure
+                View Fee Structure
               </Link>
             </div>
           </div>
@@ -71,8 +71,12 @@ const Admission2Fee = () => {
             <TabsContent value="item-1" className="mt-0 outline-none">
               <div className="bg-white rounded-md border border-gray-100 shadow-sm overflow-hidden">
                 <div className="flex items-center justify-between bg-gray-50/50 px-6 py-4 border-b border-gray-100">
-                  <span className="text-md font-semibold text-gray-400 tracking-wide">Fee Type</span>
-                  <span className="text-md font-semibold text-gray-400 tracking-wide text-right">Amount</span>
+                  <span className="text-md font-semibold text-gray-400 tracking-wide">
+                    Fee Type
+                  </span>
+                  <span className="text-md font-semibold text-gray-400 tracking-wide text-right">
+                    Amount
+                  </span>
                 </div>
                 <div className="divide-y divide-gray-50">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between px-6 py-3 hover:bg-gray-50/30 transition-colors gap-4">
@@ -85,10 +89,11 @@ const Admission2Fee = () => {
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between px-6 py-3 hover:bg-gray-50/30 transition-colors gap-4">
                     <span className="text-[#051630] font-medium text-sm md:text-[15px] sm:w-3/4 leading-relaxed">
-                      Registration Fee (To be paid on offer of Admission, adjusted in Semester Fee)
+                      Registration Fee (To be paid on offer of Admission,
+                      adjusted in Semester Fee)
                     </span>
                     <span className="text-xl font-semibold text-[#0a41a1] sm:text-right">
-                      ₹ 25000/-
+                      ₹ 25,000/-
                     </span>
                   </div>
                 </div>
@@ -98,8 +103,12 @@ const Admission2Fee = () => {
             <TabsContent value="item-2" className="mt-0 outline-none">
               <div className="bg-white rounded-md border border-gray-100 shadow-sm overflow-hidden">
                 <div className="flex items-center justify-between bg-gray-50/50 px-6 py-3 border-b border-gray-100">
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Fee Type</span>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest text-right">Amount</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                    Fee Type
+                  </span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest text-right">
+                    Amount
+                  </span>
                 </div>
                 <div className="divide-y divide-gray-50">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-gray-50/30 transition-colors gap-4">
@@ -107,7 +116,7 @@ const Admission2Fee = () => {
                       Hostel Security Deposit (Refundable)
                     </span>
                     <span className="text-xl font-bold text-[#0a41a1] sm:text-right">
-                      ₹ 20000/-
+                      ₹ 20,000/-
                     </span>
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-gray-50/30 transition-colors gap-4">
@@ -125,8 +134,12 @@ const Admission2Fee = () => {
             <TabsContent value="item-3" className="mt-0 outline-none">
               <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
                 <div className="flex items-center justify-between bg-gray-50/50 px-6 py-3 border-b border-gray-100">
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Fee Type</span>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest text-right">Amount</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                    Fee Type
+                  </span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest text-right">
+                    Amount
+                  </span>
                 </div>
                 <div className="divide-y divide-gray-50">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-gray-50/30 transition-colors gap-4">
@@ -134,15 +147,16 @@ const Admission2Fee = () => {
                       Transport Fee (per annum)
                     </span>
                     <span className="text-xl font-bold text-[#0a41a1] sm:text-right">
-                      ₹ 50000/-
+                      ₹ 54,000/-
                     </span>
                   </div>
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-gray-50/30 transition-colors gap-4">
                     <span className="text-[#051630] font-medium text-sm md:text-[15px] sm:w-3/4 leading-relaxed">
-                      Shuttle Transport (per annum) (From Rajiv Chowk and Huda City Centre to the University)
+                      Shuttle Transport (per annum) (From Rajiv Chowk and Huda
+                      City Centre to the University)
                     </span>
                     <span className="text-xl font-bold text-[#0a41a1] sm:text-right">
-                      ₹ 25000/
+                      ₹ 27,000/
                     </span>
                   </div>
                 </div>
@@ -152,8 +166,12 @@ const Admission2Fee = () => {
             <TabsContent value="item-4" className="mt-0 outline-none">
               <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
                 <div className="flex items-center justify-between bg-gray-50/50 px-6 py-3 border-b border-gray-100">
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Fee Type</span>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest text-right">Amount</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                    Fee Type
+                  </span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest text-right">
+                    Amount
+                  </span>
                 </div>
                 <div className="divide-y divide-gray-50">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between p-6 hover:bg-gray-50/30 transition-colors gap-4">
@@ -161,7 +179,7 @@ const Admission2Fee = () => {
                       Security Deposit (Refundable)
                     </span>
                     <span className="text-xl font-bold text-[#0a41a1] sm:text-right">
-                      ₹ 10000/-
+                      ₹ 10,000/-
                     </span>
                   </div>
                 </div>
@@ -174,9 +192,10 @@ const Admission2Fee = () => {
           <Link
             href="/fee-structure"
             className="text-center py-3 px-10 bg-[#0a41a1] text-white font-semibold rounded-sm md:rounded-xl shadow-md"
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            View Fees Structure
+            View Fee Structure
           </Link>
         </div>
       </div>

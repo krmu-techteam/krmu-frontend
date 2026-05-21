@@ -1,3 +1,5 @@
+"use client";
+import Autoplay from "embla-carousel-autoplay";
 import ClubSlide from "./ClubSlide";
 import ElevateSlide from "./ElevateSlide";
 import {
@@ -39,17 +41,25 @@ const ClubSlider = () => {
           align: "start",
           loop: true,
         }}
-        className="w-full mt-5 md:mt-0 xl:px-10"
+        plugins={[
+          Autoplay({
+            delay: 3000,
+          }),
+        ]}
+        className="w-full md:mt-0 "
       >
         <CarouselContent>
-          {homeClubSocietiesSlider.map((item) => (
-            <CarouselItem key={item.id}>
-              <ClubSlide imgUrl={item.imgUrl} alt={item.alt} />
-            </CarouselItem>
-          ))}
+          {homeClubSocietiesSlider &&
+            homeClubSocietiesSlider.map((item) => {
+              return (
+                <CarouselItem key={item.id}>
+                  <ClubSlide imgUrl={item.imgUrl} alt={item.alt} />
+                </CarouselItem>
+              );
+            })}
         </CarouselContent>
-        <CarouselPrevious className="left-0" />
-        <CarouselNext className="right-0" />
+        <CarouselPrevious className="bg-[#001732] text-white rounded-[50%] left-0 " />
+        <CarouselNext className="bg-[#001732] text-white rounded-[50%] right-0" />
       </Carousel>
     </>
   );

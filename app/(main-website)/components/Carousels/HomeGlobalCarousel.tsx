@@ -8,7 +8,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"; 
+} from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
 interface GlobalLogosProps {
@@ -38,7 +38,7 @@ const HomeGlobalCarousel = ({ logos }: GlobalLogosProps) => {
                   key={logo?.id}
                   className="basis-1/2 md:basis-1/4 lg:basis-1/4 xl:basis-1/3 pl-4"
                 >
-                  <div className="group relative bg-white border border-gray-200 shadow-sm rounded-xl p-3 sm:p-3 h-[90px] sm:h-[110px] flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:border-[#0060aa]/20 hover:-translate-y-1.5 cursor-pointer">
+                  <div className="group relative bg-white border border-gray-200 shadow-sm rounded-xl p-3 sm:p-3 h-[90px] sm:h-[110px] flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:border-[#001732]/20 hover:-translate-y-1.5 cursor-pointer">
                     <Image
                       src={`${STRAPI_URL}${logo.url}`}
                       width={250}
@@ -51,8 +51,8 @@ const HomeGlobalCarousel = ({ logos }: GlobalLogosProps) => {
               );
             })}
         </CarouselContent>
-        <CarouselPrevious className="bg-[#707070] text-white rounded-none left-0" />
-        <CarouselNext className="bg-[#707070] text-white rounded-none right-0" />
+        <CarouselPrevious className="bg-[#001732] text-white rounded-[50%] left-0" />
+        <CarouselNext className="bg-[#001732] text-white rounded-[50%] right-0" />
       </Carousel>
     </>
   );

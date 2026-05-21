@@ -39,7 +39,11 @@ const KREEEnroll = ({ kreeEnrolData }: Props) => {
           defaultValue=""
         >
           {kreeEnrolData?.map((item) => (
-            <AccordionItem key={item.id} value={`kree-${item.id}`} className="mb-2.5">
+            <AccordionItem
+              key={item.id}
+              value={`kree-${item.id}`}
+              className="mb-2.5"
+            >
               <AccordionTrigger className="bg-[#051630] py-[15px] px-5 text-white text-base cursor-pointer hover:no-underline">
                 {item.heading}
               </AccordionTrigger>
@@ -53,6 +57,9 @@ const KREEEnroll = ({ kreeEnrolData }: Props) => {
             </AccordionItem>
           ))}
         </Accordion>
+        <p className="text-right text-sm  mt-2 text-muted-foreground">
+          ** Subject to Approval
+        </p>
       </div>
     </section>
   );
