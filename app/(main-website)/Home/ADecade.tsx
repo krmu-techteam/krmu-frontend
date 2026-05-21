@@ -38,20 +38,23 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-semibold mb-2 md:mb-5 text-black">
               {leftContent.adecadetitle}
             </h2>
-            <h3 className="mb-4 text-2xl md:text-4xl font-light text-[#001732]">
+            <h3 className="mb-4 text-xl md:text-4xl font-light text-[#001732]">
               {leftContent.adecadesubtitle}
             </h3>
-            <p className="text-lg mb-5">{leftContent.adecadedescription}</p>
-            <div className="flex flex-col sm:flex-row  justify-center md:justify-start md:items-start gap-2.5">
+            <p className="text-lg mb-5 text-justify">
+              {leftContent.adecadedescription}
+            </p>
+            <div className="flex flex-col sm:flex-row  justify-center md:justify-start md:items-start gap-2.5 sm:gap-5">
               {leftContent.button1link && (
                 <Link
                   href={leftContent.button1link}
-                  className="bg-[#001732] text-white   px-6 py-4 sm:py-2.5 rounded-md font-semibold col-span-2 text-center flex items-center justify-center h-14"
-                  // bg-[#e31e24] text-white border  px-6 py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center text-sm
+                  // className="bg-[#001732] text-white   px-6 py-4 sm:py-2.5 rounded-md font-semibold col-span-2 text-center flex items-center justify-center h-14"
+
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-[#001732] text-white border-1 border-transparent hover:bg-[#001732] shadow-lg px-6 hover:bg-[#001732]"
                 >
-                  <span className="text-sm sm:text-base">
-                    {leftContent.button1text}
-                  </span>
+                  <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
+                  {leftContent.button1text}
+
                   {/* <Image
                     src="/arrow-2.svg"
                     alt="arrow 2"
@@ -63,11 +66,10 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
               {leftContent.button2link && (
                 <Link
                   href={leftContent.button2link}
-                  className=" border border-[#d8d8d8] px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center  h-14 "
+                  className=" border border-[#d8d8d8] px-6 py-4 sm:py-2.5 rounded-sm font-medium col-span-2 text-center flex items-center justify-center  h-14 leading-none tracking-wide text-[14px] md:text-base"
                 >
-                  <span className="text-sm sm:text-base">
-                    {leftContent.button2text}
-                  </span>
+                  {leftContent.button2text}
+
                   {/* <Image
                     src="/arrow-2.svg"
                     alt="arrow 2"
@@ -84,10 +86,10 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
                 key={idx}
                 className="flex flex-col justify-center items-center text-center border rounded-md p-5 xl:p-0"
               >
-                <span className="text-4xl sm:text-6xl md:text-6xl font-medium text-[#001732]">
+                <span className="text-2xl sm:text-4xl lg:text-5xl font-semibold text-black">
                   {counterText}
                 </span>
-                <span className="text-sm xl:text-lg 2xl:text-xl font-normal leading-[1.3] text-black  sm:w-[54%] ">
+                <span className="text-sm xl:text-lg 2xl:text-lg font-normal leading-[1.3] text-black  sm:w-[54%] lg:w-[67%]">
                   {counterContent}
                 </span>
               </div>

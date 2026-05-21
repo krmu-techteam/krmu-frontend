@@ -12,14 +12,14 @@ const ProgrammesConnectWithUs = () => {
           <div className="w-full md:w-3/12">
             <Link
               href="tel:9311411717"
-              className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-[30px] flex items-center break-all"
+              className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-sm flex items-center break-all"
             >
               <div>
-                <div className="w-[50px] h-[50px] bg-[#e31e24] flex items-center justify-center rounded-full">
+                <div className="w-[50px] h-[50px] bg-[#cb000d] flex items-center justify-center rounded-full">
                   <PhoneCall className="text-xl text-white" />
                 </div>
               </div>
-              <span className=" p-2.5 flex flex-wrap items-center lg:gap-2.5 text-sm font-bold text-white">
+              <span className=" p-2.5 flex flex-wrap items-center lg:gap-2.5 text-sm font-medium text-white">
                 <span className="">Call Us:</span>
                 <span>9311411717</span>
               </span>
@@ -28,14 +28,14 @@ const ProgrammesConnectWithUs = () => {
           <div className="w-full md:w-4/12">
             <Link
               href="mailto:welcome@krmangalam.edu.in"
-              className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-[30px] flex items-center break-all"
+              className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-sm flex items-center break-all"
             >
               <div>
-                <div className="w-[50px] h-[50px] bg-[#e31e24] flex items-center justify-center rounded-full">
+                <div className="w-[50px] h-[50px] bg-[#cb000d] flex items-center justify-center rounded-full">
                   <Mail className="text-xl text-white" />
                 </div>
               </div>
-              <span className=" p-2.5 flex flex-wrap items-center lg:gap-2.5 text-sm font-bold text-white break-all">
+              <span className=" p-2.5 flex flex-wrap items-center lg:gap-2.5 text-sm font-medium text-white break-all">
                 <span className="">Email Us:</span>
                 <span>welcome@krmangalam.edu.in</span>
               </span>
@@ -44,15 +44,15 @@ const ProgrammesConnectWithUs = () => {
           <div className="w-full md:w-5/12">
             <Link
               href="https://maps.app.goo.gl/UbKoco3Af9VZQvPv5"
-              className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-[30px] flex items-center"
+              className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-sm flex items-center"
               target="_blank" rel="noopener noreferrer"
             >
               <div>
-                <div className="w-[50px] h-[50px] bg-[#e31e24] flex items-center justify-center rounded-full">
+                <div className="w-[50px] h-[50px] bg-[#cb000d] flex items-center justify-center rounded-full">
                   <MapPin className="text-xl text-white" />
                 </div>
               </div>
-              <span className=" p-2.5 flex items-center gap-2.5 text-sm font-bold text-white">
+              <span className=" p-1.5 flex items-center gap-2.5 text-sm font-medium text-white">
                 <span className=""></span>
                 <span>
                   Address: K.R. Mangalam University, Sohna - Gurgaon Road,

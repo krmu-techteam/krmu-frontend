@@ -1,4 +1,5 @@
 import { STRAPI_URL } from "@/app/constant";
+import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 
 type Props = {
@@ -11,34 +12,50 @@ type Props = {
 
 export const AdvisoryEmployeeCard = ({ name, imgUrl, qual, desg }: Props) => {
   return (
-    <>
-      <div>
-        <div className="mb-4">
+    <div className="overflow-hidden rounded-t-xl bg-white group hover:shadow-xl duration-300 ease-in-out">
+      {/* IMAGE SECTION */}
+      <div className="bg-[#001732]  relative  w-full overflow-hidden flex items-end justify-center">
+        <div className="absolute inset-0 flex items-center justify-center p-6">
           <Image
-            src={`${STRAPI_URL}${imgUrl}`}
-            width={272}
-            height={295}
-            alt={name}
-            style={{
-              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-            }}
-            className="rounded-[15px] sm:w-[272px] h-[167px] sm:h-[295px]  "
+            src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/KRMU_Logo_white_3_33a6547c3f.png"
+            width={290}
+            height={299}
+            alt="KRMU Logo"
+            className="object-contain opacity-95"
           />
         </div>
-        {/* <Link
-          href={`/faculty/${slug}`}
-          className="hover:text-[#0060aa] cursor-pointer flex flex-col gap-1.5 text-base"
-          target="_blank" rel="noopener noreferrer"
-        > */}
-        <span className="flex flex-col gap-1.5 text-base">
-          <span className=" md:text-2xl font-bold leading-[1]">{name}</span>
-          <span className="text-[14px] ">{desg}</span>
-          <span className="md:text-[16px] font-semibold hidden md:block">
-            {qual}
-          </span>
-        </span>
-        {/* </Link> */}
+
+        <Image
+          src={`${STRAPI_URL}${imgUrl}`}
+          width={272}
+          height={295}
+          alt={name}
+          className="h-[120px] sm:w-full sm:h-full rounded-t-[15px] relative z-10 object-contain group-hover:scale-103  duration-500 ease"
+          style={{
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+          }}
+        />
       </div>
-    </>
+      {/* DETAILS */}
+      <div className="p-1.5 sm:p-5">
+        <h4 className="text-[11px] sm:text-base font-bold inline-block leading-snug">
+          {name}
+        </h4>
+
+        <h5
+          className="text-[11px] uppercase py-1"
+          dangerouslySetInnerHTML={{
+            __html: desg,
+          }}
+        />
+
+        <h6
+          className="text-[10px] sm:text-xs font-bold"
+          dangerouslySetInnerHTML={{
+            __html: qual,
+          }}
+        />
+      </div>
+    </div>
   );
 };

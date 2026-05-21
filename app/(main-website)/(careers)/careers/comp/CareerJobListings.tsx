@@ -71,7 +71,7 @@ const CareerJobListings = () => {
               className="bg-[#0516301f] rounded-full w-full -mr-12 pl-4 pr-10"
               placeholder="Search Faster..."
             />
-            <button className="bg-red-600 py-4 px-8 rounded-full">
+            <button className="#cb000d py-4 px-8 rounded-full">
               <MoveRight color="white" />
             </button>
           </div>

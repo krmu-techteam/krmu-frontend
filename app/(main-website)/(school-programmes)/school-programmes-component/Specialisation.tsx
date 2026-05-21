@@ -49,7 +49,7 @@ const Specialisation = ({
     : specialisations?.slice(0, 4);
 
   return (
-    <section className="prog-global-padding py-8 md:py-16 px-4 md:px-0">
+    <section className="prog-global-padding py-8 md:py-16 px-4 md:px-6">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container">
           <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-2">
@@ -86,7 +86,7 @@ const Specialisation = ({
                       rel="noopener noreferrer"
                       className="hover:no-underline"
                     >
-                      <h5 className="text-lg font-semibold text-[#0a41a1]/80 group-hover:text-[#0a41a1] transition-colors duration-300 leading-tight">
+                      <h5 className="text-lg font-semibold text-[#051730]/80 group-hover:text-[#051730] transition-colors duration-300 leading-tight">
                         {specialisation?.title}
                       </h5>
                     </a>
@@ -100,7 +100,7 @@ const Specialisation = ({
           <div className="mt-12 flex justify-center">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-8 py-3 bg-[#0a41a1] text-white rounded-md font-semibold hover:bg-[#0a41a1]/90 transition-all duration-300 shadow-md hover:shadow-xl"
+              className="px-8 py-3 bg-[#051730] text-white rounded-md font-semibold hover:bg-[#051730]/90 transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer"
             >
               {showAll ? "Show Less" : "Read More"}
             </button>

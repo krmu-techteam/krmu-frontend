@@ -33,25 +33,26 @@ const AdvisoryLoop = ({ schoolCat }: Props) => {
   const advisoryFaculties = faculties.filter(
     (faculty) =>
       faculty.faculty_type?.toLowerCase() === "advisory" ||
-      faculty.faculty_type?.toLowerCase() === "both"
+      faculty.faculty_type?.toLowerCase() === "both",
   );
 
   const visibleFaculties = advisoryFaculties.slice(0, visibleCount);
 
+  if (visibleFaculties?.length === 0)
+    return <div className="text-center text-black py-10">Loading ...</div>;
   return (
     <>
       <div className="flex flex-wrap justify-center pt-16 px-2 sm:px-4 pb-4 gap-5">
         {visibleFaculties.length > 0 ? (
           visibleFaculties.map((faculty) => (
-            <div key={faculty?.id} className="w-full sm:w-[272px] flex justify-center">
-              <AdvisoryEmployeeCard
-                name={faculty?.faculty_name}
-                imgUrl={faculty?.faculty_img?.url}
-                qual={faculty?.faculty_qualification}
-                desg={faculty?.faculty_card_desg}
-                slug={faculty?.facultyslug}
-              />
-            </div>
+            <AdvisoryEmployeeCard
+              key={faculty?.id}
+              name={faculty?.faculty_name}
+              imgUrl={faculty?.faculty_img?.url}
+              qual={faculty?.faculty_qualification}
+              desg={faculty?.faculty_card_desg}
+              slug={faculty?.facultyslug}
+            />
           ))
         ) : (
           <div className="col-span-full text-center text-gray-500 py-10">

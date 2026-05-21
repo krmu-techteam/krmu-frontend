@@ -37,7 +37,7 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
   const getImgUrl = await getWordImageById(data?.featured_media);
 
   return (
-    <div>
+    <div className="rounded-3xl overflow-hidden shadow-md">
       <div>
         <Link href={`/events-and-news/${data.slug}`}>
           {getImgUrl && (

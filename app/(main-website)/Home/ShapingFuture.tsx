@@ -33,12 +33,12 @@ const ShapingFuture = ({
   return (
     <>
       <section>
-        <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full xl:mt-20 px-5 xl:px-0">
+        <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full xl:mt-20  pt-10 sm:py-0 px-5 xl:px-0">
           <div className="lg:flex lg:bg-white gap-5 2xl:gap-10 items-center">
             <div className="lg:w-1/2 2xl:w-3/5">
-              <div className="pt-8 mx-1 text-center lg:text-left">
+              <div className="pt-0 sm:pt-10 mx-1 text-center lg:text-left">
                 <div className="my-2">
-                  <h3 className="font-weight-500 text-lg uppercase tracking-[1px] mb-3">
+                  <h3 className="font-weight-500 text-xs sm:text-sm uppercase tracking-wide sm:tracking-[1px] mb-3">
                     {subtitle}
                   </h3>
                   <h3 className="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
@@ -61,7 +61,7 @@ const ShapingFuture = ({
                   />
                 </Link> */}
                 </div>
-                <p className="mb-2 mt-5 text-lg ">{desc}</p>
+                <p className="mb-2 mt-5 text-lg text-justify ">{desc}</p>
               </div>
               <div className="relative   ">
                 <div className="grid grid-cols-2 my-10">
@@ -80,7 +80,7 @@ const ShapingFuture = ({
                           <span className="text-2xl mt-5 font-semibold sm:text-4xl lg:text-5xl lg:leading-none ">
                             {counter?.countertext}
                           </span>
-                          <span className=" p-1 text-base">
+                          <span className=" p-1 text-sm sm:text-lg">
                             {counter?.countercontent}
                           </span>
                         </div>
@@ -89,18 +89,19 @@ const ShapingFuture = ({
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row justify-center lg:justify-start sm:items-center gap-3">
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start sm:items-center gap-2.5 sm:gap-5">
                 <Link
                   href={link1}
-                  className="bg-[#001732] text-white border  px-6 py-4 sm:py-2.5 rounded-md font-semibold col-span-2 text-center flex items-center justify-center  h-14"
+                  className="flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-[#001732] text-white border-1 border-transparent hover:bg-[#001732] shadow-lg px-6 hover:bg-[#001732]"
                 >
-                  <span className="text-sm sm:text-base">{link1text}</span>
+                  <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
+                  {link1text}
                 </Link>
                 <Link
                   href={link2}
-                  className=" text-black  border  px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center h-14"
+                  className=" text-black  border  px-6 py-4 sm:py-2.5 rounded-sm font-medium col-span-2 text-center flex items-center justify-center h-14 text-[14px] md:text-base"
                 >
-                  <span className="text-sm sm:text-base">{link2text}</span>
+                  {link2text}
                 </Link>
               </div>
             </div>

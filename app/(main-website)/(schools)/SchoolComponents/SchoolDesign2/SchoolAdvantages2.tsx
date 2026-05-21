@@ -35,22 +35,26 @@ const SchoolAdvantages2 = ({
       <div className="max-w-[1664px] mx-auto w-full">
         <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
           {advcards &&
-            advcards.map((advcard) => {
+            advcards.map((advcard, index) => {
               return (
                 <div
                   key={advcard?.id}
-                  className={`p-4 bg-[#051630] text-white text-center flex flex-col items-center justify-center  w-full rounded-4xl`}
+                  className={`card-gradient-${index + 1} overflow-hidden relative p-4 bg-[#001732] text-white text-center flex flex-col items-center justify-center  w-full rounded-4xl`}
                 >
+                  <div
+                    className={`absolute inner-card  h-[320px] w-[320px] rounded-full bg-gradient-to-br from-[#001732] via-[#59122E] to-[#63174C] blur-[30px] opacity-80`}
+                  ></div>
                   <Image
                     src={`${STRAPI_URL}${advcard?.cardimg?.url}`}
                     width={49}
                     height={49}
                     alt={advcard?.title}
+                    className="z-10"
                   />
-                  <h6 className="text-2xl font-semibold my-3">
+                  <h6 className="text-2xl font-semibold my-3 z-10">
                     {advcard?.title}
                   </h6>
-                  <p className="mb-5">{advcard?.cardcontent}</p>
+                  <p className="mb-5 z-10">{advcard?.cardcontent}</p>
                 </div>
               );
             })}

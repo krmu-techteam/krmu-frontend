@@ -25,9 +25,9 @@ const AdmissionProcessComp = ({
   slug,
 }: Props) => {
   return (
-    <section className="prog-global-padding bg-[#f9f9f9] py-8 md:py-16 px-4 md:px-0">
+    <section className="prog-global-padding bg-[#f9f9f9] py-8 lg:py-12 2xl:py-16 px-4 md:px-6 xl:px-10 2xl:px-0">
       <div className="common-prog-container">
-        <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-2">
+        <h2 className="text-[28px] md:text-[40px] font-bold text-gray-900 leading-tight tracking-tight mb-2">
           {heading} {highlight}
         </h2>
         <p className="sub-heading mb-5">{desc}</p>
@@ -108,8 +108,8 @@ const AdmissionProcessComp = ({
             })} */}
         </div>
       </div>
-      <div className="max-w-[540px] mx-auto w-full flex lg:hidden items-center justify-center">
-        <div className="grid grid-cols-1 gap-5 w-full">
+      <div className="max-w-full mx-auto w-full flex lg:hidden items-center justify-center">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 w-full">
           {admissionCards &&
             admissionCards.map((card) => {
               if (
@@ -119,9 +119,9 @@ const AdmissionProcessComp = ({
                 return (
                   <div
                     key={card?.id}
-                    className="w-full text-center p-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[120px]"
+                    className="w-full text-center px-2 py-3 md:px-4 md:py-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[100px]"
                   >
-                    <h4 className="text-xl font-semibold text-[#0a41a1] mb-2">
+                    <h4 className="text-lg lg:text-xl font-semibold text-[#0a41a1] mb-2">
                       {card?.title}
                     </h4>
                     <p className="leading-tight text-base text-gray-700 break-all font-medium">
@@ -140,12 +140,12 @@ const AdmissionProcessComp = ({
                 return (
                   <div
                     key={card?.id}
-                    className="w-full text-center p-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[120px]"
+                    className="w-full text-center px-2 py-3 md:px-4 md:py-6 rounded-md border border-gray-200 bg-white flex flex-col items-center justify-center min-h-[100px]"
                   >
-                    <h4 className="text-xl font-semibold text-[#0a41a1] mb-2">
+                    <h4 className="text-lg lg:text-xl font-semibold text-[#0a41a1] mb-2">
                       {card?.title}
                     </h4>
-                    <p className="leading-relaxed text-base text-gray-700 break-words font-medium">
+                    <p className="leading-relaxed text-sm lg:text-md text-gray-700 break-words font-medium">
                       <span>{card?.description}</span>
                     </p>
                   </div>
@@ -158,7 +158,7 @@ const AdmissionProcessComp = ({
         {/* {(admisbtn?.buttonclass || admisbtn?.buttonlink) && (
           <Link
             href={admisbtn?.buttonlink}
-            className={`${admisbtn?.buttonclass} text-white bg-[#db2a1a] p-[15px] flex items-center justify-around max-w-3xs w-full rounded-lg font-semibold mt-10`}
+            className={`${admisbtn?.buttonclass} text-white bg-[#cb000d] p-[15px] flex items-center justify-around max-w-3xs w-full rounded-lg font-semibold mt-10`}
           >
             <span>{admisbtn?.buttontext}</span> <ArrowRight />
           </Link>
@@ -167,7 +167,7 @@ const AdmissionProcessComp = ({
           <button
             className={`${
               admisbtn.buttonclass || ""
-            } text-white  bg-[#db2a1a] hover:bg-[#c42518] w-full md:w-auto md:px-8 py-2.5 flex items-center justify-center gap-3 rounded-md font-semibold mt-8 cursor-pointer tracking-[0.025em] text-lg shadow-md hover:shadow-xl transition-all duration-300 group`}
+            } text-white  bg-[#cb000d] hover:bg-[#c42518] w-full md:w-auto md:px-8 py-2.5 flex items-center justify-center gap-3 rounded-md font-semibold mt-8 cursor-pointer tracking-[0.025em] text-lg shadow-md hover:shadow-xl transition-all duration-300 group`}
           >
             <span>{admisbtn.buttontext}</span>
             <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" />
@@ -178,7 +178,7 @@ const AdmissionProcessComp = ({
             {admisbtn.buttonclass === "progPopup" ? (
               <Popup
                 buttonText={admisbtn.buttontext || "Apply Now"}
-                buttonClass={`${admisbtn?.buttonclass} text-white bg-[#db2a1a] p-[15px] flex items-center justify-around w-3xs flex text-center rounded-lg font-semibold mt-10`}
+                buttonClass={`${admisbtn?.buttonclass} text-white bg-[#cb000d] p-[15px] flex items-center justify-around w-3xs flex text-center rounded-lg font-semibold mt-10`}
                 buttonIcon={<ArrowRight />}
               >
                 <p>This is the content inside the popup.</p>
@@ -188,7 +188,7 @@ const AdmissionProcessComp = ({
                 href={admisbtn.buttonlink}
                 className={`${
                   admisbtn.buttonclass || ""
-                } text-white bg-[#db2a1a] p-[15px] flex items-center justify-around max-w-3xs w-full rounded-lg font-semibold mt-10`}
+                } text-white bg-[#cb000d] p-[15px] flex items-center justify-around max-w-3xs w-full rounded-lg font-semibold mt-10`}
               >
                 <span>{admisbtn.buttontext}</span> <ArrowRight />
               </Link>

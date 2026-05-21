@@ -43,7 +43,7 @@ const Footer = async () => {
         />
       </div> */}
 
-      {/* <Link href="https://krmangalam.edu.in/univiser" className="bg-red-600 text-white inline-flex transition-all
+      {/* <Link href="https://krmangalam.edu.in/univiser" className="#cb000d text-white inline-flex transition-all
  duration-[250ms] gap-2.5 translate-x-[274px] hover:translate-x-0 cursor-pointer justify-center items-center h-12 fixed top-[40%] right-0 p-4 text-base font-semibold">
   <Image src="/wp-content/images/message-regular-full.svg" width={20} height={20} alt="" /> Connect With Campus Pioneer</Link> */}
 

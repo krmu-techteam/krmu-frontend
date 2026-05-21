@@ -18,9 +18,7 @@ const SchoolTestimonials = ({ title, desc, testis }: Props) => {
           <p className="mt-2">{desc}</p>
         </div>
         <div className="w-full xl:w-3/5">
-          <div className="">
-            <SchoolTestimonialsCard testimonials={testis} />
-          </div>
+          <SchoolTestimonialsCard testimonials={testis} />
         </div>
       </div>
     </section>

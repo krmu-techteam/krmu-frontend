@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const ConnectWithUs = () => {
   return (
-    <section className="py-8 md:py-16 bg-[url(/programmes/footer-bg.svg)] bg-cover bg-center bg-no-repeat px-4 md:px-0">
+    <section className="py-8 md:py-16  bg-gradient-to-br  from-slate-500 via-slate-800 to-slate-950 bg-cover bg-center bg-no-repeat px-4 md:px-6">
       <div className="max-w-[1440px] mx-auto w-full">
         <h3 className="text-4xl lg:text-[40px] font-semibold mb-5 text-white text-center sm:text-left">
           Connect With Us
@@ -44,7 +44,7 @@ export const ConnectWithUs = () => {
           <div className="w-full lg:w-5/12">
             <Link
               href="https://maps.app.goo.gl/vaYSxzfRzMd1XvFs8"
-              className="bg-[#ffffff0d] backdrop-blur-[22px] p-[4px] border border-[#ffffff40] rounded-md flex items-center"
+              className="bg-[#ffffff0d] backdrop-blur-[22px] py-[3px] px-2.5 border border-[#ffffff40] rounded-md flex items-center"
               target="_blank" rel="noopener noreferrer"
             >
               <div>

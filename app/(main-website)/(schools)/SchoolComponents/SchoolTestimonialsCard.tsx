@@ -29,13 +29,13 @@ const SchoolTestimonialsCard = ({ testimonials }: Props) => {
           }),
         ]}
       >
-        <CarouselContent>
+        <CarouselContent className="my-10">
           {testimonials &&
             testimonials.map((testimonial) => {
               return (
                 <CarouselItem
                   key={testimonial?.id}
-                  className="md:basis-1/2 py-5"
+                  className="md:basis-1/2"
                 >
                   <TestimonialCard
                     name={testimonial?.name}
@@ -53,7 +53,7 @@ const SchoolTestimonialsCard = ({ testimonials }: Props) => {
         />
         <CarouselNext
           className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px] 
-         top-[105%] right-[20%] sm:right-[30%] xl:top-[80%] xl:right-[152%]"
+         top-[105%] right-[20%] sm:right-[30%] xl:top-[80%] xl:right-[149%]"
         />
       </Carousel>
       {/* <TestimonialCard /> */}

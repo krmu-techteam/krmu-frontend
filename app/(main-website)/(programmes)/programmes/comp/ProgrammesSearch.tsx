@@ -149,6 +149,18 @@ const ProgrammesSearch = () => {
   const degreeRefValue = useRef("undergraduate-programmes");
   const ZENITH_SLUG = "zenith-ai";
 
+  // Read URL params safely on mount
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const schoolParam = params.get("school");
+      if (schoolParam) {
+        setSelectedSchool(schoolParam);
+        schoolRefValue.current = schoolParam;
+      }
+    }
+  }, []);
+
   const isZenithPopup =
     selectedProgramme &&
     "programmeslug" in selectedProgramme &&
@@ -184,68 +196,6 @@ const ProgrammesSearch = () => {
     loadFilters();
   }, []);
 
-  // --------------------------------------------
-  // MAIN FETCH FUNCTION — no dependencies
-  // --------------------------------------------
-
-  // correct code
-  // const fetchProgrammes = useCallback(
-  //   async (reset: boolean = false, query: string = "") => {
-  //     const nextPage = reset ? 1 : pageRef.current;
-  //     let newData: ProgrammeItem[] = [];
-
-  //     if (query.length > 0) {
-  //       // SEARCH MODE
-  //       if (degreeRefValue.current === "doctoral-programmes") {
-  //         const res = await searchPhdProgrammes("", 1, 1000);
-  //         const allData = res.data || [];
-  //         newData = allData.filter((item) =>
-  //           normalize(item.heading).includes(normalize(query))
-  //         );
-  //       } else {
-  //         const res = await searchSchoolProgrammes("", 1, 1000);
-  //         const allData = res.data || [];
-  //         newData = allData.filter((item) =>
-  //           normalize(item.title).includes(normalize(query))
-  //         );
-  //       }
-  //     } else {
-  //       // DROPDOWN MODE
-  //       if (degreeRefValue.current === "doctoral-programmes") {
-  //         const res = await getAllSchoolPhdProgrammeByCatPaginated(
-  //           schoolRefValue.current,
-  //           nextPage,
-  //           6
-  //         );
-  //         newData = res?.data || [];
-  //       } else {
-  //         const res = await getAllSchoolProgrammeByDegOrCatPaginated(
-  //           degreeRefValue.current,
-  //           schoolRefValue.current,
-  //           nextPage,
-  //           6
-  //         );
-  //         newData = res?.data || [];
-  //       }
-  //     }
-
-  //     setShowLoadMore(newData.length === 6);
-
-  //     if (reset) {
-  //       pageRef.current = 2;
-  //       setProgrammes(newData);
-  //     } else {
-  //       pageRef.current += 1;
-  //       setProgrammes((prev) => [...prev, ...newData]);
-  //     }
-  //   },
-  //   []
-  // );
-
-  // --------------------------------------------
-  // Debounced search effect
-  // --------------------------------------------
-
   const fetchProgrammes = useCallback(
     async (
       reset: boolean = false,
@@ -254,8 +204,8 @@ const ProgrammesSearch = () => {
     ) => {
       const nextPage = reset ? 1 : pageRef.current;
       let newData: ProgrammeItem[] = [];
-      const limit = loadAll ? 1000 : 7;
-      // Zenith with no search → show only BTech AI card
+
+      const limit = loadAll ? 1000 : 5; // fetch 7 to detect "has more"
       if (schoolRefValue.current === ZENITH_SLUG && query.length === 0) {
         setShowLoadMore(false);
         setProgrammes(zenithProgrammes);
@@ -276,31 +226,34 @@ const ProgrammesSearch = () => {
             normalize(item.title).includes(normalize(query)),
           );
         }
-        setShowLoadMore(false);
-        setProgrammes(newData); // ✅ show all, no slice
-        return;
-      }
-      // DROPDOWN MODE
-      if (degreeRefValue.current === "doctoral-programmes") {
-        const res = await getAllSchoolPhdProgrammeByCatPaginated(
-          schoolRefValue.current,
-          loadAll ? 1 : nextPage,
-          limit,
-        );
-        newData = res?.data || [];
+
+        setShowLoadMore(false); // no button in search
       } else {
-        const res = await getAllSchoolProgrammeByDegOrCatPaginated(
-          degreeRefValue.current,
-          schoolRefValue.current,
-          loadAll ? 1 : nextPage,
-          limit,
-        );
-        newData = res?.data || [];
+        // DROPDOWN MODE
+        if (degreeRefValue.current === "doctoral-programmes") {
+          const res = await getAllSchoolPhdProgrammeByCatPaginated(
+            schoolRefValue.current,
+            loadAll ? 1 : nextPage,
+            limit,
+          );
+          newData = res?.data || [];
+        } else {
+          const res = await getAllSchoolProgrammeByDegOrCatPaginated(
+            degreeRefValue.current,
+            schoolRefValue.current,
+            loadAll ? 1 : nextPage,
+            limit,
+          );
+          newData = res?.data || [];
+        }
+
+        // 👇 check if more than 6 exist
+        const hasMore = newData.length > 4;
+        setShowLoadMore(!loadAll && hasMore);
       }
-      const hasMore = newData.length > 6;
-      setShowLoadMore(!loadAll && hasMore);
-      // ✅ Dropdown: slice to 6 unless loadAll
-      const displayData = loadAll ? newData : newData.slice(0, 6);
+
+      // 👇 IMPORTANT: only show 6 unless loadAll
+      const displayData = loadAll ? newData : newData.slice(0, 4);
 
       if (reset || loadAll) {
         pageRef.current = 2;
@@ -344,7 +297,7 @@ const ProgrammesSearch = () => {
       <div>
         {/* FILTER BOX */}
         <div className="bg-[#051630] py-5 md:py-8 px-4 md:px-5">
-          <div className="p-3 lg:py-2.5 lg:px-5 flex flex-col lg:flex-row items-stretch lg:items-center gap-4 lg:gap-5 max-w-[1440px] mx-auto w-full bg-white rounded-lg md:rounded-xl shadow-lg">
+          <div className="p-3 lg:py-2.5 lg:px-5 flex flex-col lg:flex-row items-stretch lg:items-center gap-4 lg:gap-5 max-w-[1664px] mx-auto w-full bg-white rounded-lg md:rounded-xl shadow-lg">
             {/* SCHOOL DROPDOWN */}
             <div
               className="w-full lg:w-5/12 relative border-b lg:border-b-0 lg:border-r border-gray-100 pb-3 lg:pb-0 lg:pr-5"
@@ -457,59 +410,119 @@ const ProgrammesSearch = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-[1440px] mx-auto w-full px-4 md:px-5 2xl:px-0">
+        <div className="max-w-[1664px] mx-auto w-full px-4 md:px-5 2xl:px-0">
           {/* PROGRAMMES LIST */}
-          <div className="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-8 justify-items-center md:justify-items-stretch">
+          <div
+            className={`mt-6 md:mt-10 ${programmes?.length > 3 ? "grid md:grid-cols-2 xl:grid-cols-4 gap-5" : "flex flex-col sm:flex-row flex-wrap lg:grid grid-cols-2 xl:flex justify-center gap-5"} `}
+          >
             {programmes.length === 0 ? (
               <p className="col-span-3 text-center text-lg font-semibold text-gray-500">
                 No programme found
               </p>
             ) : (
-              programmes.map((item) => {
+              programmes.map((item, index) => {
                 const slug =
                   ("programmeslug" in item
                     ? item.programmeslug
                     : item.phdslug) || "";
 
                 const isExternal = slug.startsWith("http");
-                const progNewLine = [
-                  "b-tech-cse",
-                  "btech-cse-ai-ml",
-                  "btech-full-stack-development",
-                  "btech-cse-ui-ux",
-                  "btech-cse-cyber-security",
-                  "btech-cse-in-data-science",
-                  "b-tech-cse-robotics-ai",
-                ];
+
+                const totalCards = programmes.length;
+
+                const cardsPerRow = 4;
+
+                const rowIndex = Math.floor(index / cardsPerRow);
+                const positionInRow = index % cardsPerRow;
+
+                const remainingCards = totalCards - rowIndex * cardsPerRow;
+
+                let glowClass = "";
+
+                const isLastRow =
+                  rowIndex === Math.floor((totalCards - 1) / cardsPerRow);
+
+                if (remainingCards === 3 && isLastRow) {
+                  // 3 CARDS => left center right
+                  if (positionInRow === 0) {
+                    glowClass = "absolute left-[-237px] -bottom-[183px]";
+                  } else if (positionInRow === 1) {
+                    glowClass =
+                      "absolute left-[48%] -translate-x-1/2 -bottom-[240px]";
+                  } else {
+                    glowClass = "absolute right-[-133px] -bottom-[201px]";
+                  }
+                } else if (remainingCards === 2 && isLastRow) {
+                  // 2 CARDS => left right
+                  if (positionInRow === 0) {
+                    glowClass = "absolute left-[-237px] -bottom-[183px]";
+                  } else {
+                    glowClass = "absolute right-[-133px] -bottom-[171px]";
+                  }
+                } else {
+                  // NORMAL 4 CARDS => left center center right
+                  if (positionInRow === 0) {
+                    glowClass = "absolute left-[-237px] -bottom-[183px]";
+                  } else if (positionInRow === 3) {
+                    glowClass = "absolute right-[-133px] -bottom-[201px]";
+                  } else {
+                    glowClass =
+                      "absolute left-[48%] -translate-x-1/2 -bottom-[240px]";
+                  }
+                }
 
                 return (
                   <div
                     key={item.id}
-                    className="group w-full max-w-[458px] min-h-[220px] rounded-xl bg-[#001F3F] hover:bg-[#0a41a1] font-semibold p-5 transition-all duration-300 flex flex-col gap-3 justify-between hover:shadow-xl shadow-md text-white border border-white/10"
+                    className={`${
+                      programmes.length > 3 ? "" : "max-w-[528px] min-h-[258px]"
+                    }
+          w-full
+          rounded-xl
+          bg-[#001732]
+          group
+          h-full
+          font-semibold
+          p-5
+          2xl:p-6
+          flex
+          flex-col
+          gap-2
+          justify-between
+          shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1)]
+          transition duration-300 ease-in-out hover:-translate-y-1
+          overflow-hidden
+          relative`}
                   >
-                    {" "}
+                    <div
+                      className={`absolute ${glowClass} h-[320px] w-[320px] rounded-full bg-gradient-to-br from-[#001732] via-[#59122E] to-[#63174C] blur-[30px] opacity-80`}
+                    ></div>
                     <Link href={`/programs/${slug}`} target="_blank">
-                      <h6 className="block w-full text-white">
+                      <h6 className="block w-full text-white text-base pr-10 z-20">
                         {"title" in item ? item.title : item.heading}
                       </h6>
                     </Link>
-                    <div className="flex flex-col sm:flex-row  sm:gap-5">
+                    <div className="flex flex-col sm:flex-row border-y border-[rgba(255,255,255,0.2)] sm:gap-5 z-20">
                       <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                          <Calendar />
+                          <Calendar size={20} />
                         </span>
                         <div className="flex flex-col gap-0.5">
-                          <span className="font-normal">Duration:</span>
-                          <span>{item.criteria?.Duration}</span>
+                          <span className="font-normal text-xs">Duration:</span>
+                          <span className="text-xs">
+                            {item.criteria?.Duration}
+                          </span>
                         </div>
                       </div>
                       <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
                         <span>
-                          <IndianRupee />
+                          <IndianRupee size={20} />
                         </span>
                         <div className="flex flex-col gap-0.5">
-                          <span className="font-normal">Programme Fee:</span>
-                          <span>
+                          <span className="font-normal text-xs">
+                            Programme Fee:
+                          </span>
+                          <span className="text-xs">
                             Rs. {item.criteria?.programme_fee_per_year} / Year{" "}
                             {slug === "bhmct-hotel-management"
                               ? "(2025-26)"
@@ -518,7 +531,7 @@ const ProgrammesSearch = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center border-t border-[#395c6e] pt-2.5">
+                    <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center pt-2.5 z-20">
                       <button
                         // href={item.criteria.eligibility_utm_links}
                         // target="_blank"
@@ -527,7 +540,7 @@ const ProgrammesSearch = () => {
                           setIsPopupOpen(true);
                           setSlug(slug);
                         }}
-                        className="border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer border-white text-white"
+                        className="bg-white cursor-pointer w-full text-sm text-[#0161B0] border border-[#999999] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 sm:w-1/2"
                       >
                         Fee Structure
                       </button>
@@ -536,7 +549,8 @@ const ProgrammesSearch = () => {
                           <Link
                             href={item.criteria.eligibility_utm_links}
                             target="_blank"
-                            className="bg-[#cb000d] text-white rounded-sm border p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer group-hover:bg-white group-hover:text-[#cb000d] hover:border-white"
+                            className="bg-[#cb000d] w-full text-sm text-white text-center border border-[#cb000d] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 
+            sm:w-1/2"
                           >
                             Apply Now
                           </Link>
@@ -553,15 +567,6 @@ const ProgrammesSearch = () => {
                         </Link>
                       ) : ( */}
 
-                      <Link
-                        href={`${slug.includes("zenithschool.ai") ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slug}`}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white rounded-md py-2.5 text-sm flex items-center gap-2 hover:translate-x-1 transition-transform"
-                      >
-                        <CircleArrowRight size={20} />{" "}
-                        <span>View Programme</span>
-                      </Link>
                       {/* )} */}
                     </div>
                     {progNewLine.includes(slug) && (
@@ -736,7 +741,7 @@ const ProgrammesSearch = () => {
               selectedProgramme?.criteria?.eligibility_utm_links && (
                 <Link
                   href={selectedProgramme.criteria.eligibility_utm_links}
-                  className="bg-red-600 text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
+                  className="#cb000d text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

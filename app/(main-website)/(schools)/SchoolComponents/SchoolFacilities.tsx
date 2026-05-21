@@ -31,7 +31,7 @@ const SchoolFacilities = ({ fac_slides }: Props) => {
   }, [api]);
 
   return (
-    <div className="pt-[30px] pb-32 px-4 sm:pt-20 sm:pb-40 bg-[#051630]">
+    <div className="pt-[30px] pb-32 px-4 sm:pt-20 sm:pb-40 bg-[#001732]">
       <div className="max-w-[1664px] mx-auto w-full">
         <div className="text-center text-white px-4">
           <h5 className="text-3xl md:text-5xl lg:text-6xl xl:text-[80px] leading-[1.16] font-medium">
@@ -78,7 +78,7 @@ const SchoolFacilities = ({ fac_slides }: Props) => {
           />
           <CarouselNext
             className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px] 
-            top-[118%] sm:top-[115%] md:top-[108%]  xl:top-[110%] right-[20%] sm:right-[30%] xl:right-[46%]"
+            top-[118%] sm:top-[115%] md:top-[108%]  xl:top-[110%] right-[20%] sm:right-[30%] xl:right-[43%]"
           />
         </Carousel>
       </div>

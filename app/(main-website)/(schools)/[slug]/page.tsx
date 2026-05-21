@@ -226,14 +226,17 @@ export default async function Page({ params }: Props) {
         iframeContent={school.iframe}
         videoLink={school.videolink}
         fullWidth={school?.fullwidthhero}
+        alumniLogos={schoolsLogosData}
+        admTitle={school.admissionsessiontitle}
+        admBtn={school.admissionbtn}
+        slug={slug}
       />
-      {slug !== "school-of-hotel-management-and-catering-technology" &&
-        school.admissionsessiontitle && (
-          <SchoolAdmissionOpen
-            title={school.admissionsessiontitle}
-            admBtn={school.admissionbtn}
-          />
-        )}
+      {/* {school.admissionsessiontitle && (
+        <SchoolAdmissionOpen
+          title={school.admissionsessiontitle}
+          admBtn={school.admissionbtn}
+        />
+      )} */}
       {schoolKnowComp && (
         <SchoolInfoStatistics
           heading={schoolKnowComp?.heading}

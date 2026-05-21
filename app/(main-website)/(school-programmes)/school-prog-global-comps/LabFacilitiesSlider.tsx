@@ -77,13 +77,13 @@ const LabFacilitiesSlider = ({ labcards, images }: Props) => {
         </CarouselContent>
 
         {/* Dots */}
-        <div className="flex justify-center mt-4 gap-2">
+        <div className="flex justify-center mt-0 gap-2">
           {Array.from({ length: count }).map((_, i) => (
             <button
               key={i}
               onClick={() => api?.scrollTo(i)}
               className={`h-2 rounded-full transition-all cursor-pointer ${
-                current === i ? "bg-[#0a41a1] w-6" : "bg-gray-400 w-2"
+                current === i ? "bg-[#051730] w-6" : "bg-gray-400 w-2"
               }`}
               aria-label={`Go to slide ${i + 1}`}
             />

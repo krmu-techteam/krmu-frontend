@@ -6,13 +6,14 @@ import Curriculum from "../../school-programmes-component/Curriculum";
 import DreamCareer from "../../school-programmes-component/DreamCareer";
 import Eligibility from "../../school-programmes-component/Eligibility";
 import FinancialAssistance from "../../school-programmes-component/FinancialAssistance";
-import HeroBanner from "../../school-programmes-component/HeroBanner";
+import ProgramHero from "@/components/school-programmes/programs/hero-sections";
 import LabsFacilities from "../../school-programmes-component/LabsFacilities";
 import OurLocation from "../../school-programmes-component/OurLocation";
 import ProgrammeHighlight from "../../school-programmes-component/ProgrammeHighlight";
 import ProgrammeScope from "../../school-programmes-component/ProgrammeScope";
 import Specialisation from "../../school-programmes-component/Specialisation";
 import TableOfContent from "../../school-programmes-component/TableOfContent";
+import ExplorePrograms from "../../school-programmes-component/ExploreBTechPrograms";
 import { notFound } from "next/navigation";
 import AdmissionProcessComp from "../../school-programmes-component/AdmissionProcessComp";
 import { getPHDProgramme } from "@/lib/api/phd-programmes";
@@ -43,6 +44,8 @@ import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 // ====== BSC-FINANCE-2026 LANDING PAGE IMPORTS ======
 import BscFinance2026Page from "@/app/(landing-page)/admission/bsc-finance-2026/page";
 import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
+import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
+import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -100,6 +103,9 @@ const page = async ({ params }: Props) => {
   if (slug === "bsc-hons-finance") {
     return <BscFinance2026Page />;
   }
+  if (slug === "mjmc-masters-journalism-mass-communication") {
+    return <JournalismAndMassCommunication />;
+  }
 
   // ====== END BSC-HONS-FINANCE OVERRIDE ======
 
@@ -115,7 +121,7 @@ const page = async ({ params }: Props) => {
     // "llm": LLMtestimonialsData,
   };
 
-  const allowedFormSlugs = ['b-tech-cse'];
+  const allowedFormSlugs = ["b-tech-cse"];
 
   const testimonialsData = testimonialsMap[slug];
 
@@ -131,7 +137,6 @@ const page = async ({ params }: Props) => {
   const singleSchoolProgramme = allSchoolProgrammeData.find(
     (programme) => programme.programmeslug === slug,
   );
-
   const singlePHDProgramme = allSinglePHDProgramme?.find(
     (phdprogram) => phdprogram?.phdslug === slug,
   );
@@ -263,7 +268,7 @@ const page = async ({ params }: Props) => {
       <main className="school-prog-font temp-class">
         {/* {tags && <TagDiv tags={tags} extraClass="hidden test-class" />} */}
         {heroSection && (
-          <HeroBanner
+          <ProgramHero
             title={title || ""}
             highlightitle={highlightTitle || ""}
             heroSection={heroSection}
@@ -271,8 +276,9 @@ const page = async ({ params }: Props) => {
             slug={slug}
             // allowedFormSlugs={allowedFormSlugs}
             dreamcareerSection={dreamcareerSection}
-            />
-          )}
+            logos={dreamcareerSection?.careerlogos}
+          />
+        )}
 
         {eligibilitySection && (
           <Eligibility
@@ -282,16 +288,19 @@ const page = async ({ params }: Props) => {
             slug={slug}
             formId={heroSection?.formId}
             heroSection={heroSection}
-            
           />
         )}
-         {dreamcareerSection && (
-          <DreamCareer
-            heading={dreamcareerSection.heading}
-            description={dreamcareerSection.description}
-            logos={dreamcareerSection?.careerlogos}
-          />
-        )}
+        {slug !== "bba-hr" &&
+          slug !== "btech-cse-ai-ml" &&
+          slug !== "b-tech-cse" &&
+          dreamcareerSection && (
+            <DreamCareer
+              heading={dreamcareerSection.heading}
+              description={dreamcareerSection.description}
+              logos={dreamcareerSection?.careerlogos}
+            />
+          )}
+
         {programmeScopeSection && (
           <ProgrammeScope
             scopeData={programmeScopeSection}
@@ -306,6 +315,7 @@ const page = async ({ params }: Props) => {
             highlightHeading={programmeHighlightSection?.highlightheading}
             desc={programmeHighlightSection?.subheading}
             highlights={programmeHighlightSection?.programmehighlightcards}
+            slug={slug}
           />
         )}
 
@@ -373,7 +383,6 @@ const page = async ({ params }: Props) => {
             // careerFormId={careerProspectsSection?.careerFormId}
           />
         )}
-       
 
         {financialAssistanceSection && (
           <FinancialAssistance
@@ -401,6 +410,9 @@ const page = async ({ params }: Props) => {
             tocbtn={tocSection?.tocbtn}
           />
         )}
+        
+        <ExplorePrograms currentSlug={slug} />
+
         {ourLocationSection && (
           <OurLocation
             badgetext={ourLocationSection?.badgetext}
@@ -410,7 +422,8 @@ const page = async ({ params }: Props) => {
           />
         )}
 
-        <ConnectWithUs />
+        {/* <ConnectWithUs /> */}
+        <ActionCards />
       </main>
     </>
   );

@@ -15,6 +15,36 @@
 
 /* Custom utility class */
 @layer utilities {
+  .card-gradient-1 .inner-card {
+    bottom: -214px;
+    left: -236px;
+  }
+  .card-gradient-4 .inner-card {
+    bottom: -214px;
+    right: -115px;
+  }
+  .card-gradient-2 .inner-card,
+  .card-gradient-3 .inner-card {
+    bottom: -250px;
+    left: 44%;
+    transform: translateX(-50%);
+  }
+
+  .alumniHeaderCarousel .customCarousel {
+    padding-left: 0px;
+    padding-right: 0px;
+    justify-content: center;
+  }
+  .alumniHeaderCarousel .customCarousel {
+    width: 100%;
+  }
+  .alumniHeaderCarousel .customCarousel img {
+    /* object-fit: fill; */
+    width: 150px;
+    height: 150px;
+    aspect-ratio: 130/64;
+  }
+
   @media (min-width: 640px) {
     .schoolBanner {
       background: none;
@@ -2844,7 +2874,9 @@
     padding-bottom: 10px;
     font-weight: 600;
   }
-
+  .admis_proc_btn_grid_item:nth-child(1) .admis_proc_btn_content .btn_text {
+    margin-left: -15px;
+  }
   .admis_proc_btn_grid_item:nth-child(2) .admis_proc_btn_content .btn_text {
     margin-left: -28px;
   }
@@ -2858,11 +2890,11 @@
   }
 
   .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content .btn_text {
-    margin-left: -67px;
+    margin-left: -53px;
   }
 
   .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content .btn_text {
-    margin-left: -78px;
+    margin-left: -63px;
   }
 
   .admis_proc_btn_grid_item .admis_proc_btn_content .admis_btn_below_text {
@@ -2878,7 +2910,7 @@
   .admis_proc_btn_grid_item:nth-child(1)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -15px;
+    margin-left: -20px;
   }
 
   .admis_proc_btn_grid_item:nth-child(2)
@@ -2902,13 +2934,13 @@
   .admis_proc_btn_grid_item:nth-child(5)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -52px;
+    margin-left: -40px;
   }
 
   .admis_proc_btn_grid_item:nth-child(6)
     .admis_proc_btn_content
     .admis_btn_below_text {
-    margin-left: -60px;
+    margin-left: -44px;
   }
 
   .prog-global-padding {
@@ -3272,7 +3304,7 @@
   .prog_highlight_content_container:hover
     .prog_highlight_content_inner_container
     .title {
-    color: #db2a1a;
+    color: #cb000d;
   }
 
   .prog_highlight_btn_container {
@@ -3502,6 +3534,11 @@
     box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
     transform: translateY(-2px);
   }
+  .progherobtn:hover {
+    background: #cb000d;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
+    transform: translateY(-2px);
+  }
 
   .hero-common-btn-b {
     background: #cb000d;
@@ -3521,8 +3558,27 @@
     cursor: pointer;
   }
 
+  .progherobtn {
+    background: #cb000d;
+    color: #ffffff;
+    padding: 13px 30px;
+    line-height: 1;
+    border: 1px solid #cb000d;
+    border-radius: 4px !important;
+    outline: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    gap: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
   @media (max-width: 640px) {
-    .hero-common-btn-b {
+    .hero-common-btn-b,
+    .progherobtn {
       display: none;
     }
   }
@@ -3630,7 +3686,9 @@
   .faculty-with-advisory {
     border-radius: 48px;
     background: #ebecec;
-    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    box-shadow:
+      rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+      rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   }
 
   .from-blue-50 {
@@ -4614,33 +4672,39 @@
     font-size: 14px !important;
     line-height: 1.5 !important;
   }
-
-  /* Keep spacing consistent on mobile too */
-  .clubcontent p,
-  .clubcontent ul,
-  .clubcontent ol,
-  .clubcontent table,
-  .clubcontent figure {
-    margin-bottom: 10px !important;
+  .clubcontent p:empty {
+    display: none !important;
   }
 
-  /* Images should not overflow */
-  .clubcontent img {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* Prevent any inline width/height from overflowing */
-  .clubcontent * {
-    height: auto !important;
-    word-wrap: break-word !important;
+  .clubcontent strong {
     white-space: normal !important;
   }
 
-  /* Table cells can still nowrap for readability inside scroll container */
-  .clubcontent th,
-  .clubcontent td {
-    white-space: nowrap !important;
+  .clubcontent p {
+    margin: 0 0 12px !important;
+    min-height: unset !important;
+  }
+  .clubcontent p {
+    min-height: unset !important;
+  }
+
+  .clubcontent p:empty {
+    display: none !important;
+  }
+
+  .clubcontent p {
+    margin-bottom: 12px !important;
   }
 }
-
+@media (max-width: 360px) {
+  .clubcontent figure.table {
+    overflow-x: auto !important;
+    float: none !important;
+    width: 100% !important;
+    margin-top: px !important;
+    padding: 0 !important;
+  }
+  /* .clubcontent p {
+    margin-bottom: -10px !important;
+  } */
+}

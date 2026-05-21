@@ -53,7 +53,7 @@ const HomeYourJourneyForm = () => {
   return (
     <div className="relative w-full max-w-xs ">
       <form onSubmit={(e) => e.preventDefault()} className="relative w-full  ">
-        <Search className="absolute left-2 top-7 transform -translate-y-1/2 text-[#7f8b80]" />
+        <Search className="absolute left-6 sm:left-3 top-7 transform -translate-y-1/2 text-[#7f8b80]" />
 
         {/* Search Input */}
         <input
@@ -61,7 +61,7 @@ const HomeYourJourneyForm = () => {
           placeholder="Search Your Programmes"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full bg-white font-medium py-2.5 pl-10 pr-4 mb-2.5 rounded-md h-14 text-base md:text-lg outline-none text-[#7f8b99] border-2 border-[#001732]"
+          className="w-full  flex items-center justify-center  gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-lg leading-none tracking-wide relative overflow-hidden group text-[#7f8b80] border-1 border-[#001732]  shadow-lg pl-16 sm:pl-10  mb-2.5 "
         />
 
         {/* Submit Button */}
@@ -72,7 +72,7 @@ const HomeYourJourneyForm = () => {
         <div
           className="absolute left-0 right-0 mt-2 bg-white rounded-md p-4 z-20
                max-h-[300px] overflow-y-auto"
-          style={{ boxShadow: "0 0 6px -1px rgba(0,0,0,.3)" }}
+          style={{ boxShadow: "0 0 6px -1px #001732 " }}
         >
           {loading && <p className="text-sm">Searching...</p>}
 

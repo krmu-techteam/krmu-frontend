@@ -10,12 +10,12 @@ const whatYouGet = [
 
 const SchoolOpenSourceMentorship = () => {
   return (
-    <section className="py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-[#051630] text-white">
+    <section className="py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-[#001732] text-white">
       {/* Outer card */}
       <div
         className="max-w-[90rem] mx-auto w-full rounded-3xl p-1"
         style={{
-          background: "linear-gradient(to bottom, #002f8e, #f97316)",
+          background: "linear-gradient(to bottom, #002f8e, #cb000d)",
         }}
       >
         <div className="bg-[#051630] rounded-3xl overflow-hidden">
@@ -33,7 +33,9 @@ const SchoolOpenSourceMentorship = () => {
             >
               {/* Achievement card */}
               <div
-                className="flex flex-col sm:flex-row w-full  md:w-[50%] lg:w-[40%] rounded-2xl overflow-hidden"
+                className="flex-shrink-0  overflow-hidden flex flex-col rounded-2xl xs:flex-row md:flex-col lg:flex-row
+                           w-full md:w-[400px] lg:w-[480px]
+                           h-[520px] md:h-auto lg:h-[300px]"
                 style={{
                   // background: "linear-gradient(135deg,#0b2347 0%,#002f8e 100%)",
                   backgroundColor: "#002f8e",
@@ -41,7 +43,7 @@ const SchoolOpenSourceMentorship = () => {
                 }}
               >
                 {/* Photo */}
-                <div className="relative  w-full sm:w-2/5">
+                <div className="relative w-full h-[260px] xs:w-[180px] xs:h-auto md:w-full  lg:h-auto lg:w-[190px] flex-shrink-0">
                   <Image
                     src="/schools/OP.JPG"
                     alt="Jayant Parashar"

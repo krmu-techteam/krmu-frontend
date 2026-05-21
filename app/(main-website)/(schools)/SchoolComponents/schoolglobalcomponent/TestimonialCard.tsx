@@ -13,9 +13,9 @@ const TestimonialCard = ({ name, edu, desc, img }: Props) => {
   return (
     <div
       className="bg-white rounded-b-[25px] h-full"
-      style={{
-        boxShadow: "-2px 0px 20px 0px rgba(0,0,0,7%)",
-      }}
+      // style={{
+      //   boxShadow: "-2px 0px 20px 0px rgba(0,0,0,7%)",
+      // }}
     >
       <div
         className="p-5 rounded-t-[25px] text-white flex items-center gap-4"
@@ -35,7 +35,7 @@ const TestimonialCard = ({ name, edu, desc, img }: Props) => {
           <p>{edu}</p>
         </div>
       </div>
-      <div className="text-base sm:text-lg p-5 bg-white rounded-b-[25px]">
+      <div className="text-base sm:text-lg p-5 bg-white rounded-b-[25px] border-b border-x min-h-[300px] border-[#e2e2e2]">
         <p>{desc}</p>
       </div>
     </div>

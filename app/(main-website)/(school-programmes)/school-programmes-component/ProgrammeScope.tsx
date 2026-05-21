@@ -29,11 +29,11 @@ const ProgrammeScope = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="bg-[#0a41a1] py-12 md:py-20">
-      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-6 lg:gap-24 px-4 sm:px-8 xl:px-4">
+    <section className="bg-[#051730] py-8 xl:py-12 2xl:py-16">
+      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-5 xl:gap-12 2xl:gap-16 px-4 sm:px-6 lg:px-10 2xl:px-0">
         {/* Left column: Image */}
         <div className="w-full md:w-1/2">
-          <div className="relative aspect-[16/10] sm:aspect-video md:aspect-[4/3] w-full rounded-md overflow-hidden ">
+          <div className="relative aspect-[16/10] sm:aspect-video md:aspect-[5/3] w-full rounded-md overflow-hidden ">
             {heroSection?.imgvideo === "Video" && isFormAvailable ? (
               <div
                 className="w-full h-full"
@@ -46,8 +46,8 @@ const ProgrammeScope = async ({
                 <Image
                   fill
                   src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
-                  className="object-contain z-10"
-                  alt={scopeData?.scopeimg?.alternativeText || "scope image"}
+                  className="object-cover rounded-md"
+                  alt="scope image"
                 />
               )
             )}
@@ -64,10 +64,10 @@ const ProgrammeScope = async ({
 
         {/* Right column: Content */}
         <div className="w-full md:w-1/2 md:text-left text-justify text-white">
-          <h3 className="text-3xl sm:text-4xl md:text-[50px] font-bold leading-tight mb-5">
+          <h3 className="text-xl text-center md:text-left sm:text-3xl xl:text-[40px] 2xl:text-[50px] font-bold leading-tight mb-2 xl:mb-3 2xl:mb-5">
             {scopeData?.scopeheading}
           </h3>
-          <p className="text-base sm:text-lg md:text-xl leading-[1.6] md:leading-[1.7] opacity-90 mb-8 max-w-2xl mx-auto md:mx-0">
+          <p className="text-[15px] text-center md:text-left xl:text-[17px] 2xl:text-xl leading-relaxed md:leading-[1.7] opacity-90 mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto md:mx-0">
             {scopeData?.scopecontent}
           </p>
 
@@ -95,7 +95,7 @@ const ProgrammeScope = async ({
                       {scopeData.scopebtn.buttontext || "Download Prospectus"}
                     </span>
                   }
-                  buttonClassName="inline-block px-6 py-2.5 text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
+                  buttonClassName="inline-block px-6 py-2 md:py-2.5 text-md md:text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
                   redirectUrl={scopeData?.scopebtn?.buttonlink || "#"}
                   form_name="Download Prospectus"
                 />

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
+import { LuX } from "react-icons/lu";
 
 type Props = {
   videoUrl: string;
@@ -30,12 +32,16 @@ export default function YoutubePopup({
 
   // 👉 Auto thumbnail if not passed
   const thumbnailUrl =
-    thumbnail || `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    thumbnail ||
+    (videoId
+      ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+      : "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png");
 
   // 👉 Disable background scroll
-  useEffect(() => {
+  useEffect(() => { 
     document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
+
 
   return (
     <>
@@ -44,39 +50,54 @@ export default function YoutubePopup({
         onClick={() => setOpen(true)}
         className={`relative cursor-pointer group ${ytClassName}`}
       >
-        <img
+        <Image
           src={thumbnailUrl}
           alt={title}
+          width={800}
+          height={450}
           className="w-full h-full rounded-md object-cover"
         />
 
         {/* Play Button */}
-        {playIcon && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-black/60 p-4 rounded-full group-hover:scale-110 transition">
-              ▶
-            </div>
+        {/* {playIcon && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+            <Image
+              src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/play_bed78459c4.png"
+              alt="Play Video"
+              width={72}
+              height={72}
+              className="h-[72px] w-[72px] object-contain transition-transform duration-300 group-hover:scale-110"
+            />
+            <span className="text-[12px] font-bold antialiased tracking-[0.3em] text-white uppercase drop-shadow-lg">
+              Play Video
+            </span>
           </div>
-        )}
+        )} */}
       </div>
 
       {/* Popup */}
       {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-          <div className="relative w-[90%] md:w-[800px]">
+        <div
+          onClick={() => setOpen(false)}
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 p-4 md:p-10 cursor-pointer backdrop-blur-md"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-5xl 2xl:max-w-7xl aspect-video shadow-2xl overflow-hidden rounded-md cursor-auto"
+          >
             {/* Close */}
             <button
               onClick={() => setOpen(false)}
-              className="absolute -top-10 right-0 text-white text-3xl cursor-pointer"
+              className="absolute top-12 right-2 z-[10000] bg-black/40 hover:bg-black/60 text-white w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 hover:rotate-90 hover:scale-110 backdrop-blur-xl border border-white/10 cursor-pointer group"
             >
-              ✕
+              <LuX size={24} className="transition-transform" />
             </button>
 
             {/* Video */}
-            <div className="aspect-video rounded-xl overflow-hidden">
+            <div className="w-full h-full bg-black">
               <iframe
                 className="w-full h-full"
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
                 title="YouTube video"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
