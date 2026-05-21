@@ -119,7 +119,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Mahipal-Singh-Sankhla.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Mahipal-Singh-Sankhla-1.png",
   },
   {
     id: 106736,
@@ -179,7 +179,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Ms.-Kritika-Singh.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/12/Ms.-Kritika-Singh.png",
   },
   {
     id: 79684,
@@ -285,7 +285,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Dilraj-Preet-Kaur.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Dilraj-Preet-Kaur.png",
   },
   {
     id: 9994,
