@@ -29,7 +29,7 @@ const HomeTestimonialCard = ({
         </div>
         <div className=" text-center sm:text-left">
           <p className="leading-[1.5] font-bold text-xl">{profilename}</p>
-          <p className="font-normal text-base">{desg}</p>
+          <p className="font-normal text-lg">{desg}</p>
         </div>
       </div>
       <div>

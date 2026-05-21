@@ -27,7 +27,7 @@ const EventsAndNews = async ({
             }}
           />
 
-          <div className="grid gap-5 lg:gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 lg:px-0 mt-5 lg:mt-0">
+          <div className="grid gap-5 lg:gap-10 grid-cols-1 md:grid-cols-3  lg:grid-cols-3 lg:px-0 mt-5 lg:mt-0">
             {newsandeventsdata?.data?.map((item: NewsEventItem, i: number) => (
               <HomeNewsEventsCard key={i} data={item} />
             ))}
@@ -36,7 +36,7 @@ const EventsAndNews = async ({
             {(newsandeventbtn?.buttonlink || newsandeventbtn?.buttonclass) && (
               <Link
                 href={newsandeventbtn?.buttonlink}
-                className={`bg-[#001732] font-semibold text-sm sm:text-base border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 ${newsandeventbtn?.buttonclass || ""}`}
+                className={`bg-[#001732] font-semibold text-sm sm:text-base border-2 text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 ${newsandeventbtn?.buttonclass || ""} h-14`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

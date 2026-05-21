@@ -27,19 +27,19 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
       <div className="flex lg:gap-5 flex-col lg:flex-row w-full px-5 xl:px-0 xl:max-w-7xl 2xl:max-w-[1664px] mx-auto items-center">
         {/* Left Section */}
         <div className="w-full lg:w-1/3  text-center md:text-left py-10 2xl:py-20">
-          <h4 className="lg:max-w-2xl w-full text-2xl sm:text-4xl xl:mt-5 font-semibold  xl:text-5xl lg:leading-none text-white text-center lg:text-left">
+          <h4 className="lg:max-w-2xl w-full text-2xl sm:text-4xl lg:text-5xl font-semibold text-white text-center lg:text-left">
             {title}
           </h4>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-2 text-white mt-10">
             {counters.map((counter) => (
               <div
                 key={counter.id}
-                className="flex flex-col mb-5 ourtop-rec text-center lg:text-left"
+                className="flex flex-col mr-3 ourtop-rec text-center lg:text-left"
               >
-                <span className="text-white font-bold mb-[10px] text-3xl xl:text-4xl ">
+                <span className="text-white text-2xl sm:text-4xl md:text-4xl font-medium  ">
                   {counter.countertext}
                 </span>
-                <span className="text-sm font-semibold">
+                <span className="text-lg mb-5 font-light ">
                   {counter.countercontent}
                 </span>
               </div>
@@ -49,10 +49,10 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
             {link1 || title1 ? (
               <Link
                 href={link1}
-                className="bg-white text-black  border border-[#d8d8d8] px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center text-sm"
+                className="bg-white text-black   px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center  h-14"
                 target="_blank"
               >
-                <span className="text-xs sm:text-base">{title1}</span>
+                <span className="text-sm sm:text-base">{title1}</span>
               </Link>
             ) : (
               ""
@@ -60,7 +60,7 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
             {link2 || title2 ? (
               <Link
                 href={link2}
-                className="border border-white text-white border  px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center text-sm"
+                className="border border-white text-white border  px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center  h-14"
                 target="_blank"
               >
                 <span className="text-sm sm:text-base">{title2}</span>
