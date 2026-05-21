@@ -36,10 +36,12 @@ const ShapingFuture = ({
         <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full xl:mt-20 px-5 xl:px-0">
           <div className="lg:flex lg:bg-white gap-5 2xl:gap-10 items-center">
             <div className="lg:w-1/2 2xl:w-3/5">
-              <div className="pt-12 mx-1 text-center lg:text-left">
+              <div className="pt-8 mx-1 text-center lg:text-left">
                 <div className="my-2">
-                  <h3 className="text-xl sm:text-2xl">{subtitle}</h3>
-                  <h3 className="text-2xl mt-5 font-semibold sm:text-4xl lg:text-5xl lg:leading-none">
+                  <h3 className="font-weight-500 text-lg uppercase tracking-[1px] mb-3">
+                    {subtitle}
+                  </h3>
+                  <h3 className="text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
                     <span className="text-[#001732]">{highlight}</span> <br />
                     {afterHighLight}
                   </h3>
@@ -59,7 +61,7 @@ const ShapingFuture = ({
                   />
                 </Link> */}
                 </div>
-                <p className="mb-2 mt-5 text-lg">{desc}</p>
+                <p className="mb-2 mt-5 text-lg ">{desc}</p>
               </div>
               <div className="relative   ">
                 <div className="grid grid-cols-2 my-10">
@@ -75,10 +77,10 @@ const ShapingFuture = ({
                           key={counter?.id}
                           className="flex flex-col text-center items-center justify-center w-full p-4 lg:items-start lg:justify-start lg:text-left "
                         >
-                          <span className="text-[#001732] font-bold mb-[10px] text-3xl xl:text-4xl">
+                          <span className="text-2xl mt-5 font-semibold sm:text-4xl lg:text-5xl lg:leading-none ">
                             {counter?.countertext}
                           </span>
-                          <span className="text-sm p-1 font-semibold">
+                          <span className=" p-1 text-base">
                             {counter?.countercontent}
                           </span>
                         </div>
@@ -90,24 +92,24 @@ const ShapingFuture = ({
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start sm:items-center gap-3">
                 <Link
                   href={link1}
-                  className="bg-[#001732] text-white border border-[#d8d8d8] px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center text-sm"
+                  className="bg-[#001732] text-white border  px-6 py-4 sm:py-2.5 rounded-md font-semibold col-span-2 text-center flex items-center justify-center  h-14"
                 >
                   <span className="text-sm sm:text-base">{link1text}</span>
                 </Link>
                 <Link
                   href={link2}
-                  className=" text-black  border border-[#d8d8d8] px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center text-sm"
+                  className=" text-black  border  px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center h-14"
                 >
                   <span className="text-sm sm:text-base">{link2text}</span>
                 </Link>
               </div>
             </div>
-            <div className="lg:w-1/2 2xl:w-2/5 mt-10 lg:mt-0">
-              <div className="relative min-h-[300px] md:min-h-96 lg:min-h-[800px] xl:min-h-[596px] h-full">
+            <div className="lg:w-1/2 2xl:w-2/5 mt-10 lg:mt-0 rounded-2xl overflow-hidden">
+              <div className="relative min-h-[300px] md:min-h-96 lg:min-h-[800px] xl:min-h-[596px] h-full rounded-2xl overflow-hidden">
                 <Image
                   src="/wp-content/home2/shaping/engage-shaping.webp"
                   fill
-                  className="z-10 object-contain xl:object-cover"
+                  className="z-10 object-cover  "
                   alt="Shaping Future"
                 />
 

@@ -8,18 +8,20 @@ import {
 } from "@/components/ui/carousel";
 
 const homeVibrantEventSlider = [
-    {
+  {
     id: 1,
-    imgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/jasmin_7eda6b76d8.webp",
+    imgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/jasmin_7eda6b76d8.webp",
     alt: "Event",
   },
   {
     id: 2,
     // imgUrl: "/wp-content/home2/vibrant/1.webp",
-    imgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/amangupta_a6d8d8073d.webp",
+    imgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/amangupta_a6d8d8073d.webp",
     alt: "Event",
   },
-  
+
   {
     id: 3,
     imgUrl: "/wp-content/home2/vibrant/2.webp",
@@ -74,8 +76,8 @@ const ElevateSlider = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-0" />
-        <CarouselNext className="right-0" />
+        <CarouselPrevious className="bg-[#001732] text-white rounded-[50%] left-0 " />
+        <CarouselNext className="bg-[#001732] text-white rounded-[50%] right-0" />
       </Carousel>
     </>
   );
