@@ -34,7 +34,6 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
     year: "numeric",
   });
 
-
   const getImgUrl = await getWordImageById(data?.featured_media);
 
   return (
@@ -52,14 +51,14 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
           )}
         </Link>
         <div className="p-5 rounded-b-3xl text-black bg-white">
-          <span className="text-sm text-[#898989]">
+          <span className="text-sm sm:text-xs lg:text-sm text-[#898989]">
             Published On: {formattedDate}
           </span>
           <div className="flex flex-col">
             {data?.slug && (
               <Link
                 href={`/events-and-news/${data?.slug}`}
-                className="font-medium text-xl leading-[1] mt-2.5 mb-4 inline-block h-[50px]"
+                className="font-medium text-lg sm:text-sm lg:text-lg leading-[1] mt-2.5 mb-4 inline-block h-[50px]"
                 target="_blank"
                 rel="noopener noreferrer"
               >

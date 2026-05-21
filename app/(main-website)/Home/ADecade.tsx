@@ -46,7 +46,7 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
               {leftContent.button1link && (
                 <Link
                   href={leftContent.button1link}
-                  className="bg-[#001732] text-white   px-6 py-4 sm:py-2.5 rounded-md font-semibold col-span-2 text-center flex items-center justify-center text-sm h-14"
+                  className="bg-[#001732] text-white   px-6 py-4 sm:py-2.5 rounded-md font-semibold col-span-2 text-center flex items-center justify-center h-14"
                   // bg-[#e31e24] text-white border  px-6 py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center text-sm
                 >
                   <span className="text-sm sm:text-base">
@@ -63,7 +63,7 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
               {leftContent.button2link && (
                 <Link
                   href={leftContent.button2link}
-                  className=" border border-[#d8d8d8] px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center sm:text-sm h-14 "
+                  className=" border border-[#d8d8d8] px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center  h-14 "
                 >
                   <span className="text-sm sm:text-base">
                     {leftContent.button2text}
@@ -82,12 +82,12 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
             {counters.map(({ counterText, counterContent }, idx) => (
               <div
                 key={idx}
-                className="flex flex-col justify-center text-center border rounded-md p-5 xl:p-0"
+                className="flex flex-col justify-center items-center text-center border rounded-md p-5 xl:p-0"
               >
                 <span className="text-4xl sm:text-6xl md:text-6xl font-medium text-[#001732]">
                   {counterText}
                 </span>
-                <span className="text-sm xl:text-lg 2xl:text-xl font-normal leading-[1.3] text-black">
+                <span className="text-sm xl:text-lg 2xl:text-xl font-normal leading-[1.3] text-black  sm:w-[54%] ">
                   {counterContent}
                 </span>
               </div>
