@@ -89,7 +89,7 @@ const ProgramHeroCinematic = ({
               </div>
 
               {/* Stats Bar - Integrated on Desktop, Dedicated Section on Mobile */}
-              <div className="w-full bg-[#001631] sm:bg-transparent py-8 sm:py-0 mt-0 sm:mt-10 relative z-10 px-2 xl:px-0 2xl:px-0">
+              <div className="w-full bg-[#001631] sm:bg-transparent py-8 sm:py-0 mt-0 sm:mt-10 relative z-10">
                 <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-nowrap items-center sm:gap-x-10">
                   <div className="flex flex-col sm:pr-8 lg:pr-4 xl:pr-10 sm:border-r border-white/20 text-center sm:text-left">
                     <span className="text-white font-semibold text-lg sm:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
