@@ -79,9 +79,9 @@ const ProgrammeStructure = ({
         </div>
 
         <div className="relative w-full">
-          {/* Programme Handbook Button - Positioned absolute to align with card top */}
+          {/* Programme Handbook Button - Responsive layout to prevent overlaying tabs */}
           {currbtn?.buttonlink && (
-            <div className="absolute xl:right-0 xl:top-0 2xl:right-72 z-20">
+            <div className="relative xl:absolute xl:right-0 xl:top-0 2xl:right-72 z-20 mb-6 xl:mb-0 w-full xl:w-auto flex justify-center xl:justify-start">
               <CommonLeadPopup
                 buttonText={
                   <span className="flex items-center gap-3">
