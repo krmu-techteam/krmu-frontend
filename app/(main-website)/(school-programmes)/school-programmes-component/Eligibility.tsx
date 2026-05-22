@@ -74,13 +74,13 @@ const Eligibility = ({
   return (
     <>
       <section
-        className={`bg-[#eff4ff] py-8 md:py-12 px-4 lg:px-10 2xl:px-0 relative z-10 border-gray-100`}
+        className={`bg-[#eff4ff] py-8 lg:py-10 xl:py-12 px-4 lg:px-10 2xl:px-0 relative z-10 border-gray-100`}
       >
         <div className={`max-w-[1440px] w-full mx-auto`}>
           {/* {slug === "bba-hr" && heroSection?.imgvideo === "Video" ? ( */}
          
           {(slug === "bba-hr" || slug === "btech-cse-ai-ml" || slug === "b-tech-cse") && heroSection?.imgvideo === "Video" ? (
-            <div className="flex flex-col lg:flex-row gap-6 lg:gap-6 2xl:gap-8 rounded-md p-0 sm:px-4 xl:px-0 2xl:px-0 items-stretch">
+            <div className="flex flex-col lg:flex-row gap-4 lg:gap-4 2xl:gap-8 rounded-md p-0 sm:px-4 lg:px-0 xl:px-0 2xl:px-0 items-stretch">
               {/* Left Column: Media (Video only for this layout) */}
               <div className="w-full lg:w-1/2 h-[280px] sm:h-[350px] lg:h-auto lg:min-h-[450px] relative  overflow-hidden group shadow-xs">
                 <div className="w-full h-full relative">
@@ -94,7 +94,7 @@ const Eligibility = ({
               </div>
 
               {/* Right Column: Content */}
-              <div className="w-full bg-white rounded-md p-6 md:p-8 2xl:p-10 lg:w-1/2 flex flex-col justify-between shadow-xs">
+              <div className="w-full bg-white rounded-md p-6 lg:p-6 xl:p-8 2xl:p-10 lg:w-1/2 flex flex-col justify-between shadow-xs">
                 <div>
                   <div className="grid grid-cols-2 mb-6 divide-x divide-gray-200">
                     <div className="flex flex-col items-start text-left pr-4">
@@ -126,14 +126,14 @@ const Eligibility = ({
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 mt-auto">
-                  <button className="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-3 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-md hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group">
+                  <button className="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 lg:px-2 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-3 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-md hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group">
                     <Download size={20} className="group-hover:-translate-y-1 transition-transform" />
                     Download Prospectus
                   </button>
                   {formId ? (
                     <a
                       href="#apply-form-mobile"
-                      className="w-full sm:w-auto flex items-center justify-center gap-2 py-2 px-6 md:px-12 xl:px-12 2xl:px-16 xl:py-2.5 2xl:py-3 bg-[#cb000d] text-white border border-[#cb000d] font-medium rounded-md shadow-lg hover:bg-[#b0000a] transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap"
+                      className="w-full sm:w-auto flex items-center justify-center gap-2 py-2 px-6 lg:px-9 xl:px-12 2xl:px-16 xl:py-2.5 2xl:py-3 bg-[#cb000d] text-white border border-[#cb000d] font-medium rounded-md shadow-lg hover:bg-[#b0000a] transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap"
                     >
                       Apply Now
                     </a>

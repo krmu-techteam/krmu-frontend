@@ -49,7 +49,7 @@ const Specialisation = ({
     : specialisations?.slice(0, 4);
 
   return (
-    <section className="prog-global-padding py-8 md:py-16 px-4 md:px-6">
+    <section className="prog-global-padding py-8 lg:px-10 lg:py-10 xl:py-12 2xl:py-16 px-4 xl:px-10 2xl:px-0">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container">
           <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-2">
@@ -58,7 +58,7 @@ const Specialisation = ({
         </div>
 
         {/* New Product Card Grid: */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 lg:mt-8 xl:mt-12">
           {displayedSpecialisations &&
             displayedSpecialisations.map((specialisation) => {
               const displayImage = getSpecialisationImage(
