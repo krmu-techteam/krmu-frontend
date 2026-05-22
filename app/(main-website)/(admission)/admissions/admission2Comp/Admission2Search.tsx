@@ -494,7 +494,20 @@ const Admission2Search = () => {
                     className="group max-w-[458px] min-h-[200px] w-full rounded-xl bg-[#001F3F] group hover:bg-[#0a41a1] h-full  font-semibold p-5 transition-colors flex flex-col gap-2 justify-between hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  hover:text-black"
                   >
                     {" "}
-                    <Link href={`/programs/${slug}`} target="_blank">
+                    {/* <Link href={`/programs/${slug}`} target="_blank">
+                      <h6 className="block w-full text-white">
+                        {"title" in item ? item.title : item.heading}
+                      </h6>
+                    </Link> */}
+                    <Link
+                      href={
+                        slug.includes("zenithschool.ai")
+                          ? slug
+                          : `/programs/${slug}`
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <h6 className="block w-full text-white">
                         {"title" in item ? item.title : item.heading}
                       </h6>
