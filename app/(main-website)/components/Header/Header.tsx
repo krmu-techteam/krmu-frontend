@@ -43,7 +43,7 @@ const Header = ({
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-[999]">
+      <header className="fixed top-0 left-0 w-full z-40">
         {/* <div className="flex flex-col md:flex-row bg-[#e31e24]">
           <div className="w-full md:w-[80%] 2xl:w-[90%]">
             <MainHeaderMarquee data={marqueeData} />
@@ -59,8 +59,8 @@ const Header = ({
         <div
           className="px-2.5 xl:px-4"
           style={{
-            background: showTopbar
-              ? "#051730" // when scrolled down
+            background: showMobileMenu || showTopbar
+              ? "#051730" // when scrolled down or mobile menu is open
               : "rgba(137, 137, 137, 0.7)", // default
           }}
         >
