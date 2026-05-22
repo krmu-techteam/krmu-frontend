@@ -160,7 +160,7 @@ export const soedFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 9335,
     acf: {
-      "staff-qualification": "M.Phil.",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant Professor",
       schools: [1070],
     },
