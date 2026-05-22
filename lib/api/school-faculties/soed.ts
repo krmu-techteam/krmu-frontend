@@ -154,9 +154,9 @@ export const soedFaculties: SchoolFacultiesType[] = [
   },
   {
     id: 113719,
-    slug: "ms-richa-malaviya",
+    slug: "dr-richa-malaviya",
     title: {
-      rendered: "Ms. Richa Malaviya",
+      rendered: "Dr. Richa Malaviya",
     },
     featured_media: 9335,
     acf: {
