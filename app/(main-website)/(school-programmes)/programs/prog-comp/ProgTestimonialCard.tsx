@@ -60,14 +60,14 @@ const ProgTestimonialCard = ({ data }: Props) => {
           </p>
 
           {/* Read More */}
-          {data.quote.length > 120 && (
+          {/* {data.quote.length > 120 && (
             <button
               onClick={() => setExpanded(!expanded)}
               className="text-xs text-red-500 underline mb-3 cursor-pointer"
             >
               {expanded ? "Read less" : "Read more"}
             </button>
-          )}
+          )} */}
 
           {/* Name + Programme */}
           <div className="flex gap-4 text-xs text-black">
