@@ -520,14 +520,7 @@ const Hero = () => {
                     {" "}
                     <td>Dean Student Welfare</td> <td>Member</td>{" "}
                   </tr>{" "}
-                  <tr>
-                    {" "}
-                    <td>
-                      Lt Col Vijay Chaudhary, General Manager (Security and
-                      Administration)
-                    </td>{" "}
-                    <td>Member</td>{" "}
-                  </tr>{" "}
+                   
                   <tr>
                     {" "}
                     <td>Dr. Shweta Bansal (Deputy Proctor)</td> <td>Member</td>{" "}
@@ -813,14 +806,7 @@ const Hero = () => {
                     {" "}
                     <td>Dr. Diwakar Padalia (Proctor)</td> <td>Chairperson</td>{" "}
                   </tr>{" "}
-                  <tr>
-                    {" "}
-                    <td>
-                      Lt Col Vijay Chaudhary, General Manager (Security and
-                      Administration)
-                    </td>{" "}
-                    <td>Member</td>{" "}
-                  </tr>{" "}
+                   
                   <tr>
                     {" "}
                     <td>Dean Student Welfare</td> <td>Member</td>{" "}
