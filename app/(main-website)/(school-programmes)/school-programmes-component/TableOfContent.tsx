@@ -24,7 +24,7 @@ const TableOfContent = ({
 }: Props) => {
   return (
     <>
-      <section className="py-8 lg:py-12 2xl:py-16 px-4 lg:px-10 2xl:px-0">
+      <section className="py-8 lg:py-10 xl:py-12 2xl:py-16 px-4 lg:px-10 2xl:px-0">
         <div className="flex items-center">
           <div className="w-full">
             <div className="mx-auto xl:max-w-[1230px] 2xl:max-w-7xl">
