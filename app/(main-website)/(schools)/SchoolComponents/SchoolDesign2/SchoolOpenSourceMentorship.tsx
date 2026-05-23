@@ -10,12 +10,12 @@ const whatYouGet = [
 
 const SchoolOpenSourceMentorship = () => {
   return (
-    <section className="py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-[#001732] text-white">
+    <section className="py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-[#051630] text-white">
       {/* Outer card */}
       <div
         className="max-w-[90rem] mx-auto w-full rounded-3xl p-1"
         style={{
-          background: "linear-gradient(to bottom, #002f8e, #cb000d)",
+          background: "linear-gradient(to bottom, #002f8e, #f97316)",
         }}
       >
         <div className="bg-[#051630] rounded-3xl overflow-hidden">
@@ -33,9 +33,7 @@ const SchoolOpenSourceMentorship = () => {
             >
               {/* Achievement card */}
               <div
-                className="flex-shrink-0  overflow-hidden flex flex-col rounded-2xl xs:flex-row md:flex-col lg:flex-row
-                           w-full md:w-[400px] lg:w-[480px]
-                           h-[520px] md:h-auto lg:h-[300px]"
+                className="flex flex-col sm:flex-row w-full  md:w-[50%] lg:w-[50%] xl:w-[40%] rounded-2xl overflow-hidden"
                 style={{
                   // background: "linear-gradient(135deg,#0b2347 0%,#002f8e 100%)",
                   backgroundColor: "#002f8e",
@@ -43,7 +41,7 @@ const SchoolOpenSourceMentorship = () => {
                 }}
               >
                 {/* Photo */}
-                <div className="relative w-full h-[260px] xs:w-[180px] xs:h-auto md:w-full  lg:h-auto lg:w-[190px] flex-shrink-0">
+                <div className="relative  w-full sm:w-2/5">
                   <Image
                     src="/schools/OP.JPG"
                     alt="Jayant Parashar"
@@ -83,7 +81,7 @@ const SchoolOpenSourceMentorship = () => {
               </div>
 
               {/* Title + Description */}
-              <div className="sm:w-full md:w-[50%] lg:w-[60%]">
+              <div className="sm:w-full md:w-[50%] lg:w-[50%] xl:w-[60%]">
                 <h2 className="text-3xl sm:text-4xl xl:text-4xl leading-tight mb-4">
                   Open Source{" "}
                   <span className="text-[#4da6ff] font-semibold">

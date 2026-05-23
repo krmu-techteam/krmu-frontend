@@ -89,7 +89,7 @@ export const StaticFacultyEmployeeCard = ({
 
     // LinkedIn first
     return items.sort((a, b) =>
-      a.type === "linkedin" ? -1 : b.type === "linkedin" ? 1 : 0
+      a.type === "linkedin" ? -1 : b.type === "linkedin" ? 1 : 0,
     );
   }, [facultyContent]);
 
@@ -171,21 +171,11 @@ export const StaticFacultyEmployeeCard = ({
                 return (
                   <li key={`${item.type}-${index}`}>
                     <Link
-                      href={
-                        isLinkedin
-                          ? item.value
-                          : `mailto:${item.value}`
-                      }
+                      href={isLinkedin ? item.value : `mailto:${item.value}`}
                       target={isLinkedin ? "_blank" : undefined}
-                      rel={
-                        isLinkedin
-                          ? "noopener noreferrer"
-                          : undefined
-                      }
+                      rel={isLinkedin ? "noopener noreferrer" : undefined}
                       className={`flex items-center justify-center rounded-md p-1.5 transition-opacity hover:opacity-90 ${
-                        isLinkedin
-                          ? "bg-[#0077b5]"
-                          : "bg-[#001732]"
+                        isLinkedin ? "bg-[#0077b5]" : "bg-[#001732]"
                       }`}
                     >
                       {isLinkedin ? (

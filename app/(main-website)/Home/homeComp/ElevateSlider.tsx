@@ -74,7 +74,7 @@ const ElevateSlider = () => {
             delay: 3000,
           }),
         ]}
-        className="w-full lg:px-5 xl:px-10"
+        className="w-full lg:px-5 xl:px-8.5"
       >
         <CarouselContent>
           {homeVibrantEventSlider.map((item) => (

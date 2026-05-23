@@ -33,10 +33,10 @@ const ShapingFuture = ({
   return (
     <>
       <section>
-        <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full xl:mt-20  pt-10 sm:py-0 px-5 xl:px-0">
+        <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full mb-10 xl:my-20  pt-10 sm:py-0 px-5 xl:px-0">
           <div className="lg:flex lg:bg-white gap-5 2xl:gap-10 items-center">
             <div className="lg:w-1/2 2xl:w-3/5">
-              <div className="pt-0 sm:pt-10 mx-1 text-center lg:text-left">
+              <div className=" mx-1 text-center lg:text-left">
                 <div className="my-2">
                   <h3 className="font-weight-500 text-xs sm:text-sm uppercase tracking-wide sm:tracking-[1px] mb-3">
                     {subtitle}
@@ -66,10 +66,10 @@ const ShapingFuture = ({
               <div className="relative   ">
                 <div className="grid grid-cols-2 my-10">
                   {/* Vertical Line */}
-                  <div className="absolute left-1/2 top-0 h-full w-[1px] bg-gray-300 -translate-x-1/2" />
+                  <div className="absolute left-1/2 top-0 h-full w-[0.5px] bg-gray-200 -translate-x-1/2" />
 
                   {/* Horizontal Line */}
-                  <div className="absolute top-1/2 left-0  w-full h-[1px] bg-gray-300 -translate-y-1/2" />
+                  <div className="absolute top-1/2 left-0  w-full h-[0.5px] bg-gray-200 -translate-y-1/2" />
                   {shapingCounters &&
                     shapingCounters.map((counter) => {
                       return (
@@ -108,7 +108,7 @@ const ShapingFuture = ({
             <div className="lg:w-1/2 2xl:w-2/5 mt-10 lg:mt-0 rounded-2xl overflow-hidden">
               <div className="relative min-h-[300px] md:min-h-96 lg:min-h-[800px] xl:min-h-[596px] h-full rounded-2xl overflow-hidden">
                 <Image
-                  src="/wp-content/home2/shaping/engage-shaping.webp"
+                  src="https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/research-img.png"
                   fill
                   className="z-10 object-cover  "
                   alt="Shaping Future"
