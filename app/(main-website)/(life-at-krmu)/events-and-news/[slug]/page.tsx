@@ -6,6 +6,7 @@ import {
 } from "@/lib/api/single-news-events";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { NoIndexEventsSlugs } from "../NoIndexEventsSlugs";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -26,8 +27,8 @@ type NewsEventItem = {
     title: string;
     description?: string;
     robots?: {
-      index?: boolean;
-      follow?: boolean;
+      index?: string;
+      follow?: string;
     };
   };
 };
@@ -50,6 +51,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteMetaDescription = singleNewsEvents?.yoast_head_json?.description;
   const siteCanonicalUrl = `${process.env.NEXT_PUBLIC_MAIN_URL}/events-and-news/${slug}`;
 
+  const isForceNoIndex = NoIndexEventsSlugs.includes(slug);
+
   return {
     title: siteMetaTitle || siteTitle || "K.R. Mangalam University",
     description: siteMetaDescription || siteTitle || "",
@@ -63,11 +66,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
     },
     robots: {
-      index: singleNewsEvents?.yoast_head_json?.robots?.index ?? true,
-      follow: singleNewsEvents?.yoast_head_json?.robots?.follow ?? true,
-    },
+      index: isForceNoIndex
+        ? false
+        : singleNewsEvents?.yoast_head_json?.robots?.follow === "nofollow"
+          ? false
+          : singleNewsEvents?.yoast_head_json?.robots?.follow === "follow"
+            ? true
+            : true,
 
-    // ✅ Twitter Card
+      follow: isForceNoIndex
+        ? false
+        : singleNewsEvents?.yoast_head_json?.robots?.follow === "nofollow"
+          ? false
+          : singleNewsEvents?.yoast_head_json?.robots?.follow === "follow"
+            ? true
+            : true,
+    },
   };
 }
 

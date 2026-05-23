@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { getAllProgramme } from "../../(admission)/(fee-structure)/fee-structure/FeeStructureProgrammeSearch";
+import { Search } from "lucide-react";
 
 interface ProgrammeItem {
   id: number;
@@ -17,7 +18,7 @@ interface Pagination {
   pageCount: number;
   total: number;
 }
-function normalize(text:string) {
+function normalize(text: string) {
   return text.toLowerCase().replace(/[\.\s]/g, "");
 }
 const HomeYourJourneyForm = () => {
@@ -36,7 +37,7 @@ const HomeYourJourneyForm = () => {
       try {
         const data = await getAllProgramme("");
         const filtered = data.filter((item) =>
-          normalize(item.title).includes(normalize(query))
+          normalize(item.title).includes(normalize(query)),
         );
         setProgrammes(filtered);
       } catch (error) {
@@ -50,19 +51,20 @@ const HomeYourJourneyForm = () => {
   }, [query]);
 
   return (
-    <div className="relative w-full">
-      <form onSubmit={(e) => e.preventDefault()}>
+    <div className="relative w-full  ">
+      <form onSubmit={(e) => e.preventDefault()} className="relative w-full  ">
+        <Search className="absolute left-[5rem] sm:left-3 top-7 transform -translate-y-1/2 text-[#7f8b80]" />
+
         {/* Search Input */}
         <input
           type="search"
           placeholder="Search Your Programmes"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="text-center max-w-xs w-full bg-white font-semibold p-2.5 mb-2.5 rounded-md h-14 text-xl outline-none text-[#0160af] border-2 border-[#0160af]"
+          className="w-full  flex items-center justify-center  gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-lg leading-none tracking-wide relative overflow-hidden group text-[#7f8b80] border-1 border-[#001732]  shadow-lg pl-[7rem] sm:pl-10  mb-2.5 "
         />
 
         {/* Submit Button */}
-    
       </form>
 
       {/* Dropdown Results */}
@@ -70,7 +72,7 @@ const HomeYourJourneyForm = () => {
         <div
           className="absolute left-0 right-0 mt-2 bg-white rounded-md p-4 z-20
                max-h-[300px] overflow-y-auto"
-          style={{ boxShadow: "0 0 6px -1px rgba(0,0,0,.3)" }}
+          style={{ boxShadow: "0 0 6px -1px #001732 " }}
         >
           {loading && <p className="text-sm">Searching...</p>}
 
@@ -81,7 +83,11 @@ const HomeYourJourneyForm = () => {
           {!loading &&
             programmes.map((item) => (
               <div key={item.id} className="mb-3 last:mb-0">
-                <Link href={`/programs/${item.programmeslug}`} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={`/programs/${item.programmeslug}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span className="text-lg font-semibold text-black hover:text-[#cb000d] cursor-pointer">
                     {item.title}
                   </span>

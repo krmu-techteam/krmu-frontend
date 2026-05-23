@@ -126,7 +126,7 @@ const ProgrammesSearch = () => {
   // default dropdown selections
   const [selectedSchool, setSelectedSchool] = useState("soet");
   const [selectedDegree, setSelectedDegree] = useState(
-    "undergraduate-programmes"
+    "undergraduate-programmes",
   );
 
   const [openSchoolDropdown, setOpenSchoolDropdown] = useState(false);
@@ -212,7 +212,7 @@ const ProgrammesSearch = () => {
         return;
       }
       if (query.length > 0) {
-        // SEARCH MODE
+        // SEARCH MODE — all results, no slice
         if (degreeRefValue.current === "doctoral-programmes") {
           const res = await searchPhdProgrammes("", 1, 1000);
           const allData = res.data || [];
@@ -291,6 +291,16 @@ const ProgrammesSearch = () => {
     const orderB = schoolOrderMap[b.schoolname] ?? Number.MAX_SAFE_INTEGER;
     return orderA - orderB;
   });
+
+  const progNewLine = [
+    "b-tech-cse",
+    "btech-cse-ai-ml",
+    "btech-full-stack-development",
+    "btech-cse-ui-ux",
+    "btech-cse-cyber-security",
+    "btech-cse-in-data-science",
+    "b-tech-cse-robotics-ai",
+  ];
 
   return (
     <section>
@@ -569,6 +579,12 @@ const ProgrammesSearch = () => {
 
                       {/* )} */}
                     </div>
+                    {progNewLine.includes(slug) && (
+                      <div className="text-white text-xs items-center mt-3 px-4 ">
+                        3-Year Lateral Entry option also available for eligible
+                        students
+                      </div>
+                    )}
                   </div>
                 );
               })
@@ -587,6 +603,9 @@ const ProgrammesSearch = () => {
               </button>
             </div>
           )}
+          <p className="text-right text-sm  mt-2 text-muted-foreground">
+            ** Subject to Approval
+          </p>
         </div>
       </div>
       <div

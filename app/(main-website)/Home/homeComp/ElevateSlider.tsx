@@ -1,3 +1,5 @@
+"use client";
+import Autoplay from "embla-carousel-autoplay";
 import ElevateSlide from "./ElevateSlide";
 import {
   Carousel,
@@ -8,18 +10,20 @@ import {
 } from "@/components/ui/carousel";
 
 const homeVibrantEventSlider = [
-    {
+  {
     id: 1,
-    imgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/jasmin_7eda6b76d8.webp",
+    imgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/jasmin_7eda6b76d8.webp",
     alt: "Event",
   },
   {
     id: 2,
     // imgUrl: "/wp-content/home2/vibrant/1.webp",
-    imgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/amangupta_a6d8d8073d.webp",
+    imgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/amangupta_a6d8d8073d.webp",
     alt: "Event",
   },
-  
+
   {
     id: 3,
     imgUrl: "/wp-content/home2/vibrant/2.webp",
@@ -65,7 +69,12 @@ const ElevateSlider = () => {
           align: "start",
           loop: true,
         }}
-        className="w-full lg:px-5 xl:px-10"
+        plugins={[
+          Autoplay({
+            delay: 3000,
+          }),
+        ]}
+        className="w-full lg:px-5 xl:px-8.5"
       >
         <CarouselContent>
           {homeVibrantEventSlider.map((item) => (
@@ -74,8 +83,8 @@ const ElevateSlider = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-0" />
-        <CarouselNext className="right-0" />
+        <CarouselPrevious className="bg-[#001732] text-white rounded-[50%] left-0 " />
+        <CarouselNext className="bg-[#001732] text-white rounded-[50%] right-0" />
       </Carousel>
     </>
   );

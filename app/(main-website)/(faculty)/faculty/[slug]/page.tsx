@@ -140,7 +140,7 @@ const page = async ({ params }: Props) => {
 
         {/* ⭐ CLEAN SOCIAL LINKS (NO <i>, NO HTML INJECTION) */}
         <div className="fac_social_links text-white">
-          <ul className="space-y-3 mt-4 border-b border-white py-5">
+          <ul className="space-y-3 mt-4  py-5">
             {socialItems.map((item, index) => (
               <li key={index} className="flex items-center gap-3">
                 {item.type === "email" && (

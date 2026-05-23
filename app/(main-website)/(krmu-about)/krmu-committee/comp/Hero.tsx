@@ -37,7 +37,7 @@ const Hero = () => {
             </p>
           </div>
           <div className="w-full lg:w-1/2 bg-[#343537] text-white rounded-[20px] p-5 background-transparent">
-            <h3 className="mb-5 text-2xl">KRMU Anti-Discrimination Cell shall consist of the following members:</h3>
+            <h3 className="mb-5 text-2xl">KRMU Anti-Discrimination and Minority Committee shall consist of the following members:</h3>
             <div className="table-1 transparent-table committee-table ">
               <table>
                 <thead>
@@ -48,42 +48,42 @@ const Hero = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Dr. J.S. Yadav</td>
+                    <td>Prof. (Dr.) J.S Yadav (Professor and Dean-SOAS)</td>
                     <td>Chairperson</td>
                   </tr>
                   <tr>
-                    <td>Dr. P.C. Jena</td>
+                    <td>Dr. P.C Jena (Professor-SOED)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Helaluddin</td>
+                    <td>Dr. Helaluddin (Librarian)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Dilrajpreet Kaur</td>
+                    <td>Dr. Dilraj Preet Kaur (Associate Professor-SBAS)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Chandra Mohan</td>
+                    <td>Dr. Chander Mohan (Associate Professor-SBAS)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Padmani Koul</td>
+                    <td>Dr. Padmini Kaul (Assistant Professor-SOHS)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Mr. Thomas Monterio</td>
+                    <td>Mr. Thomas Monteiro (Assistant Professor-SOLS)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Sarina</td>
+                    <td>Dr. Sarina (Assistant Professor-SJMC)</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Anjana Singh</td>
-                    <td>Special Invitee Member</td>
+                    <td>Dr. Deepak Kumar (Assistant Professor-SOAS)</td>
+                    <td>Member Secretary</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <td>Ms. Megha Jain</td>
                     <td>Special Invitee Student Member</td>
                   </tr>
@@ -94,7 +94,7 @@ const Hero = () => {
                   <tr>
                     <td>Dr. Deepak Kumar</td>
                     <td>Member Secretary</td>
-                  </tr>
+                  </tr> */}
                 </tbody>
               </table>
             </div>
@@ -189,44 +189,56 @@ const Hero = () => {
                     <td>Chairperson</td>
                   </tr>
                   <tr>
-                    <td>Dr. Vineet Dahiya, Associate Professor, SOET</td>
+                    <td>Mr. Harshvardhan, Associate Professor, SOET</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Ms. Kanchan Khatreja, Assistant Professor, SOED</td>
+                    <td>Dr. Komal Yadav, Associate Professor, SBAS</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Ms. Mamta Shankar, Assistant Professor, SPRS</td>
+                    <td>Dr. Kanchan Khatreja, Assistant Professor, SOED</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Padmani Koul, Assistant Professor, SOHS</td>
+                    <td>Ms. Mamta Shankar, Associate Professor, SPRS</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Mr. Ashwani Kumar, Assistant Professor, SOET</td>
+                    <td>Dr. Padmani Koul, Assistant Professor, SOLA</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Ms. Sarina, Assistant Professor, SJMC</td>
+                    <td>Dr. Ritwik Ghosh, Assistant Professor, SEMCE</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Ms. Yashasvi Rajawat, Assistant Professor, SOAD</td>
+                    <td>Ar. Mansha Samreen, Associate Professor, SOAD</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Dr. Monika Yadav, Assistant Professor, SOMC</td>
+                    <td>Dr. Anumeha Mathur, Assistant Professor, SOMC</td>
                     <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Ms. Prerna (2305170030) B.A. LLB. (Hons.)</td>
-                    <td>Student</td>
+                    <td>Dr. Sunil Chahar, Assistant Professor, SMAS</td>
+                    <td>Member</td>
                   </tr>
                   <tr>
-                    <td>Krishna Sindhwani (2305140045) BBA LLB. (Hons.)</td>
-                    <td>Student</td>
+                    <td>Mr. Sanjay Pandey, Assistant Professor, SOHMCT</td>
+                    <td>Member</td>
+                  </tr>
+                  <tr>
+                    <td>Dr. Ambika Bhandari, Assistant Professor, SOAS</td>
+                    <td>Member</td>
+                  </tr>
+                  <tr>
+                    <td>Ms. Prerna (2305170030) B.A. LL.B. (Hons.)</td>
+                    <td>Student Member</td>
+                  </tr>
+                  <tr>
+                    <td>Krishna Sindhwani (2305140045) BBA LL.B. (Hons.)</td>
+                    <td>Student Member</td>
                   </tr>
                   <tr>
                     <td>Dr. Megha, Assistant Professor, SOLS</td>
@@ -757,18 +769,19 @@ const Hero = () => {
               <br />
               <div className="flex flex-col gap-5 my-5">
                 <Link
-                  href="https://www.krmangalam.edu.in/pdfs/student-discipline-committee-2024.pdf"
+                  href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Student-Discipline-Committee-of-KRMU-2025.pdf"
                   target="_blank" rel="noopener noreferrer"
                   className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center justify-center"
                 >
                   <FileText color="#fff" />
-                  STUDENT DISCIPLINE COMMITTEE 2024
+                  STUDENT DISCIPLINE COMMITTEE
                 </Link>
                 <Link
                   href="https://www.krmangalam.edu.in/pdfs/COC-Revised-Handbook-of-COC-Professional-Ethics-and-Human-Values.pdf"
                   target="_blank" rel="noopener noreferrer"
                   className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center justify-center"
                 >
+                  <FileText color="#fff" />
                   Code of Conduct
                 </Link>
               </div>

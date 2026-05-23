@@ -24,6 +24,7 @@ const SchoolKnowledgeLogos = ({ logos }: Props) => {
   };
 
   const basisClass = getBasis(logos?.length || 0);
+  const showArrows = logos?.length > 4;
 
   return (
     <div className="px-12 rounded-[20px]">
@@ -60,8 +61,13 @@ const SchoolKnowledgeLogos = ({ logos }: Props) => {
               );
             })}
         </CarouselContent>
-        <CarouselPrevious className="hidden md:flex -left-12" />
-        <CarouselNext className="hidden md:flex -right-12" />
+
+        {showArrows && (
+          <>
+            <CarouselPrevious className="hidden md:flex -left-12" />
+            <CarouselNext className="hidden md:flex -right-12" />
+          </>
+        )}
       </Carousel>
     </div>
   );
