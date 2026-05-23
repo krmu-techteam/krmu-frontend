@@ -58,7 +58,7 @@ export const ActionCards = () => {
   ];
 
   return (
-    <section className="relative py-8 md:p-6 lg:py-12 2xl:py-16 px-4 lg:px-10 2xl:px-0 bg-[#f8f9fa] overflow-hidden">
+    <section className="relative py-8 md:p-6 lg:py-10 xl:py-12 2xl:py-16 px-4 lg:px-10 2xl:px-0 bg-[#f8f9fa] overflow-hidden">
       {/* Modern Dot Pattern Background */}
       <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
       

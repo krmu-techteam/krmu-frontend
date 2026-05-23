@@ -80,7 +80,7 @@ const Eligibility = ({
           {/* {slug === "bba-hr" && heroSection?.imgvideo === "Video" ? ( */}
          
           {(slug === "bba-hr" || slug === "btech-cse-ai-ml" || slug === "b-tech-cse") && heroSection?.imgvideo === "Video" ? (
-            <div className="flex flex-col lg:flex-row gap-4 lg:gap-4 2xl:gap-8 rounded-md p-0 sm:px-4 lg:px-0 xl:px-0 2xl:px-0 items-stretch">
+            <div className="flex flex-col lg:flex-row gap-4 lg:gap-4 2xl:gap-8 rounded-md p-0 sm:px-0 lg:px-0 xl:px-0 2xl:px-0 items-stretch">
               {/* Left Column: Media (Video only for this layout) */}
               <div className="w-full lg:w-1/2 h-[280px] sm:h-[350px] lg:h-auto lg:min-h-[450px] relative  overflow-hidden group shadow-xs">
                 <div className="w-full h-full relative">
@@ -149,7 +149,7 @@ const Eligibility = ({
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4 xl:gap-8 w-full">
               <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
                 <Calendar size={32} color="#0a41a1" className="flex-shrink-0" />
                 <div className="flex flex-col">

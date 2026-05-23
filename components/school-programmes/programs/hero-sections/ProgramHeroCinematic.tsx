@@ -57,7 +57,7 @@ const ProgramHeroCinematic = ({
         } as React.CSSProperties}
       >
         <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 lg:px-10 xl:px-0 xl:gap-16 z-10 2xl:px-0">
-          <div className="w-full lg:w-1/2 xl:w-1/2 relative z-10">
+          <div className="w-full lg:w-[60%] xl:w-1/2 relative z-10">
             <div className="xl:max-w-[700px] w-full">
               <div className="flex flex-col lg:block bg-gradient-to-t from-black/90 via-black/50 to-transparent lg:bg-none px-6 sm:px-4 md:px-6 lg:p-0">
                 <div className="mb-0 lg:mb-10">
@@ -107,7 +107,7 @@ const ProgramHeroCinematic = ({
                       {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
                     </span>
                   </div>
-                  <div className="flex flex-col lg:pl-8 text-center lg:text-left relative">
+                  <div className="flex flex-col text-center lg:text-left relative">
                     <span className="text-white font-semibold text-lg md:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
                       {dreamcareerSection?.placementassistnum || "100%"}
                     </span>
@@ -120,7 +120,7 @@ const ProgramHeroCinematic = ({
             </div>
           </div>
 
-          <div className="hidden lg:flex w-full lg:w-1/2 xl:w-2/5 xl:pl-20 justify-center lg:justify-end">
+          <div className="hidden lg:flex w-full lg:w-[40%] xl:w-2/5 xl:pl-20 justify-center lg:justify-end">
             <div className="heroBannerForm__form w-full max-w-md mx-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
               <div className="heroBannerForm-header">
                 <h3 className="mb-0">

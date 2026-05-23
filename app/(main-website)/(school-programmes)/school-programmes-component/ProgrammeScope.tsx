@@ -29,8 +29,8 @@ const ProgrammeScope = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="bg-[#051730] py-8 md:p-6 lg:py-10 xl:py-12 2xl:py-16">
-      <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center gap-4 xl:gap-12 2xl:gap-16 px-4 md:px-0 lg:px-10 2xl:px-0">
+    <section className="bg-[#051730] py-8 md:p-6 lg:p-10 xl:py-12 2xl:py-16">
+      <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center gap-4 xl:gap-8 2xl:gap-10 px-4 md:px-0 lg:px-0 2xl:px-0">
         {/* Left column: Image */}
         <div className="w-full sm:w-1/2">
           {heroSection?.imgvideo === "Video" && isFormAvailable ? (
@@ -63,7 +63,7 @@ const ProgrammeScope = async ({
           <h3 className="text-xl text-center sm:text-left sm:text-2xl md:text-[28px] lg:text-[32px] xl:text-[40px] 2xl:text-[50px] font-bold leading-tight mb-2 xl:mb-3 2xl:mb-5">
             {scopeData?.scopeheading}
           </h3>
-          <p className="text-[14px] sm:text-[14px] md:text-[14px] lg:text-[16px] xl:text-[17px] 2xl:text-xl text-center sm:text-left leading-relaxed sm:leading-[1.7] opacity-90 mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto sm:mx-0">
+          <p className="text-[14px] sm:text-[14px] md:text-[14px] lg:text-[15px] xl:text-[17px] 2xl:text-xl text-center sm:text-left leading-relaxed sm:leading-[1.7] opacity-90 mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto sm:mx-0">
             {scopeData?.scopecontent}
           </p>
 

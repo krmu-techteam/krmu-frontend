@@ -12,7 +12,7 @@ type Props = {
 const OurLocation = ({ badgetext, img1, img2 }: Props) => {
   return (
     <section className="py-8 md:p-6 lg:py-10 xl:py-12 2xl:py-16 px-4 lg:px-10 2xl:px-0 bg-[#051730]/10 sm:px-6">
-      <div className="max-w-[1440px] mx-auto w-full p-4 md:p-6 lg:p-12 bg-[#051730] rounded-md sm:flex gap-3 md:gap-6 text-center sm:text-left">
+      <div className="max-w-[1440px] mx-auto w-full p-4 md:p-6 lg:p-10 xl:p-12 bg-[#051730] rounded-md sm:flex gap-3 md:gap-4 lg:gap-10 xl:gap-12 text-center sm:text-left">
         <div className="sm:w-5/12">
           <Image
             src={`${STRAPI_URL}${img1?.url}`}
@@ -22,7 +22,7 @@ const OurLocation = ({ badgetext, img1, img2 }: Props) => {
             alt={img1?.alternativeText || "Our Location"}
           />
         </div>
-        <div className="sm:w-7/12 pt-6 px-0 lg:px-3">
+        <div className="sm:w-7/12 pt-6 px-0 lg:px-0 xl:px-3">
           <span className="py-2.5 font-normal rounded-md text-slate-100 text-sm inline-block">
             {badgetext} 
           </span>
