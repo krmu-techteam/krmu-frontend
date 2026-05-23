@@ -58,8 +58,9 @@ const SchoolHero = ({
                 {title}
               </h1>
               <div className="flex flex-col lg:flex-row items-center justify-center gap-2.5 sm:gap-5 my-4">
-                {heroBtns?.map((btn) =>
-                  btn?.buttontext === "Explore Programmes" ? (
+                {heroBtns?.map((btn) => {
+                  if (!btn?.buttonlink) return null;
+                  return btn?.buttontext === "Explore Programmes" ? (
                     <Link
                       key={btn.id}
                       href={btn.buttonlink}
@@ -81,8 +82,8 @@ const SchoolHero = ({
                     >
                       {btn.buttontext}
                     </Link>
-                  ),
-                )}
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -96,8 +97,9 @@ const SchoolHero = ({
                 {title}
               </h1>
               <div className="flex flex-col lg:flex-row items-center justify-center gap-3.5 sm:gap-5 my-4">
-                {heroBtns?.map((btn) =>
-                  btn?.buttontext === "Explore Programmes" ? (
+                {heroBtns?.map((btn) => {
+                  if (!btn?.buttonlink) return null;
+                  return btn?.buttontext === "Explore Programmes" ? (
                     <Link
                       key={btn.id}
                       href={btn.buttonlink}
@@ -117,8 +119,8 @@ const SchoolHero = ({
                     >
                       {btn.buttontext}
                     </Link>
-                  ),
-                )}
+                  );
+                })}
               </div>
             </div>
             <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end temp-class">
