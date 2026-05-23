@@ -58,7 +58,7 @@ export const ActionCards = () => {
   ];
 
   return (
-    <section className="relative py-8 lg:py-12 2xl:py-16 px-4 lg:px-10 2xl:px-0 bg-[#f8f9fa] overflow-hidden">
+    <section className="relative py-8 md:p-6 lg:py-12 2xl:py-16 px-4 lg:px-10 2xl:px-0 bg-[#f8f9fa] overflow-hidden">
       {/* Modern Dot Pattern Background */}
       <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
       
@@ -67,7 +67,7 @@ export const ActionCards = () => {
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-red-100/40 rounded-full blur-[100px] pointer-events-none mix-blend-multiply"></div>
 
       <div className="relative z-10 max-w-[1440px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 xl:gap-4 2xl:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8 xl:gap-4 2xl:gap-8">
           {actionCards.map((actionCard) => (
             <ActionCard key={actionCard.id} actionCard={actionCard} />
           ))}
@@ -130,15 +130,15 @@ const ActionCard = ({ actionCard }: ActionCardProps) => {
           {actionCard.mainIcon}
         </div>
         
-        <h3 className="text-xl md:text-2xl xl:text-lg 2xl:text-2xl font-bold mb-3 xl:mb-2 2xl:mb-3 tracking-wide">{actionCard.title}</h3>
+        <h3 className="text-xl md:text-xl xl:text-lg 2xl:text-2xl font-bold mb-3 xl:mb-2 2xl:mb-3 tracking-wide">{actionCard.title}</h3>
         
-        <p className="text-sm md:text-[15px] xl:text-[15px] 2xl:text-[15px] opacity-75 leading-relaxed mb-8 xl:mb-4 2xl:mb-8 flex-grow">
+        <p className="text-sm md:text-[14px] xl:text-[15px] 2xl:text-[15px] opacity-75 leading-relaxed mb-8 xl:mb-4 2xl:mb-8 flex-grow">
           {actionCard.description}
         </p>
         
         <Link 
           href={actionCard.link}
-          className={`${actionCard.buttonBg} w-full py-3.5 xl:py-2.5 2xl:py-3.5 rounded-md font-semibold flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg group/btn mt-auto`}
+          className={`${actionCard.buttonBg} w-full py-2 xl:py-2.5 2xl:py-3.5 rounded-md font-semibold flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg group/btn mt-auto`}
         >
           <span className="flex items-center text-[15px] xl:text-[14px] 2xl:text-[15px] tracking-wide">
             {actionCard.buttonText}

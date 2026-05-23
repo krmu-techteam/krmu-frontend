@@ -74,7 +74,7 @@ const Eligibility = ({
   return (
     <>
       <section
-        className={`bg-[#eff4ff] py-8 lg:py-10 xl:py-12 px-4 lg:px-10 2xl:px-0 relative z-10 border-gray-100`}
+        className={`bg-[#eff4ff] py-8 md:p-6 lg:py-10 xl:py-12 px-4 lg:px-10 2xl:px-0 relative z-10 border-gray-100`}
       >
         <div className={`max-w-[1440px] w-full mx-auto`}>
           {/* {slug === "bba-hr" && heroSection?.imgvideo === "Video" ? ( */}
@@ -149,7 +149,7 @@ const Eligibility = ({
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 w-full">
               <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
                 <Calendar size={32} color="#0a41a1" className="flex-shrink-0" />
                 <div className="flex flex-col">

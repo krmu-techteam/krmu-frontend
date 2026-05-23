@@ -57,7 +57,7 @@ export default async function ExplorePrograms({
         style={{ backgroundImage: `url('https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bg_university_de1b82693c.png')` }}
       ></div>
   
-      <div className="max-w-[1440px] mx-auto px-4 lg:px-10 2xl:px-0 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-10 2xl:px-0 relative z-10">
         <div className="relative flex flex-col lg:flex-row gap-8 lg:gap-6 xl:gap-16 items-stretch">
           
           {/* Absolute Left Column: Student Banner (Locked inside the 1440px container on desktop, zero gap top & bottom!) */}
@@ -80,13 +80,13 @@ export default async function ExplorePrograms({
           <div className="hidden lg:block lg:w-[40%] xl:w-[35%] pointer-events-none"></div>
 
           {/* Right Column: Content & Grid */}
-          <div className="w-full lg:w-[60%] xl:w-[65%] flex flex-col justify-center py-12 md:py-16 lg:py-24 xl:py-28">
+          <div className="w-full lg:w-[60%] xl:w-[65%] flex flex-col justify-center py-12 md:py-6 lg:py-24 xl:py-28">
             
             <div className="text-left lg:mb-4 2xl:mb-6">
               <h2 className="text-2xl text-center md:text-left md:text-[32px] xl:text-[40px] font-semibold text-white mb-2 tracking-tight [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]">
                 Explore Other Programmes
               </h2>
-              <p className="text-[#d1cce5] text-center md:text-left [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] max-w-3xl text-[15px] md:text-[15px]  xl:text-[17px] 2xl:text-[18px] leading-relaxed mb-4 md:mb-0">
+              <p className="text-[#d1cce5] text-center md:text-left [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] max-w-3xl text-[15px] md:text-[15px]  xl:text-[17px] 2xl:text-[18px] leading-relaxed mb-4 sm:mb-4 lg:mb-0">
                 Discover other programmes that open doors to exciting career Portunities and future growth. Choose from a wide range of industry-oriented courses designed to help you build a successful future with confidence.
               </p>
             </div>

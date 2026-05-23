@@ -19,7 +19,7 @@ const TableOfContentTab = ({ tocfaqs }: Props) => {
     >
       
       {/* Tab list: Horizontal Top Navigation */}
-      <TabsList className="flex flex-row overflow-x-auto w-full h-auto bg-transparent border-b border-gray-200 justify-start md:justify-center no-scrollbar mb-8 gap-8 md:gap-16 rounded-none p-0">
+      <TabsList className="flex flex-row overflow-x-auto w-full h-auto bg-transparent border-b border-gray-200 justify-start md:justify-center no-scrollbar sm:mb-4 lg:mb-8 gap-8 md:gap-16 rounded-none p-0">
         {tocfaqs.map((section) => (
           <TabsTrigger
             key={section.id}

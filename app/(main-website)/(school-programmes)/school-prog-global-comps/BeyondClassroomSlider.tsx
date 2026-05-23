@@ -43,7 +43,7 @@ const BeyondClassroomSlider = ({ slideimages }: Props) => {
 
   return (
     <section className="pt-8 overflow-hidden">
-      <div className="max-w-full mx-auto px-4 md:px-8 lg:px-8 xl:px-10 2xl:px-16">
+      <div className="max-w-full mx-auto px-4 md:px-0 lg:px-8 xl:px-10 2xl:px-16">
         <div className="embla overflow-hidden" ref={emblaRef}>
           <div className="flex -ml-4">
             {[...slideimages, ...slideimages, ...slideimages].map((rec, i) => (
@@ -66,7 +66,7 @@ const BeyondClassroomSlider = ({ slideimages }: Props) => {
         </div>
 
         {/* Pagination Dots */}
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-2 md:mt-4 lg:mt-8">
           {slideimages.map((_, index) => (
             <button
               key={index}
