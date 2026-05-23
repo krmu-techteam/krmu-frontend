@@ -35,6 +35,18 @@ const Hero = () => {
               members indulge in any kind of discrimination against any
               community or category of students.
             </p>
+            <div className="mt-5">
+              <h3 className="mb-5 text-2xl">Objectives</h3>
+
+      <ul className="my-2.5 list-disc pl-5">
+        <li>To encourage minority students to enrol for career orientation programmes to empower and equip them with the necessary skills to choose career options.</li>
+        <li>To facilitate financial support to students of minority communities from governmental agencies and other sources.</li>
+        <li>To handle matters related to depriving student/faculty/staff based on caste, creed, language, ethnicity, gender, different ability.</li>
+        <li>To oversee the provision of equal opportunities for education to minority students and provide inclusive and cohesive working environment for staff.</li>
+        <li>To eliminate discrimination against or harassment of any individual in all forms by prohibiting it and by providing preventive and protective measures to facilitate its eradication and punishments for those who indulge in any form of discrimination or harassment.</li>
+        <li>To promote equality amongst students/staff/faculty belonging to all sections of society.</li>
+      </ul>
+            </div>
           </div>
           <div className="w-full lg:w-1/2 bg-[#343537] text-white rounded-[20px] p-5 background-transparent">
             <h3 className="mb-5 text-2xl">KRMU Anti-Discrimination and Minority Committee shall consist of the following members:</h3>
@@ -115,6 +127,17 @@ const Hero = () => {
               <strong>Contact No</strong>:{" "}
               <a href="phn:+919416386060">+919416386060</a>
             </p>
+            <div className="my-5 flex flex-col items-start gap-5">
+              <Link
+                href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Anti-Discrimination-and-Minority-Committee.pdf"
+                target="_blank" rel="noopener noreferrer"
+                className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
+              >
+                <FileText color="#fff" />
+                Anti-Discrimination & Minority Committee
+              </Link>
+             
+            </div>
           </div>
           <div className="lg:w-1/2 text-white">
             <h4 className="text-xl font-semibold mb-5">
@@ -130,7 +153,9 @@ const Hero = () => {
               <strong>Contact No</strong>:{" "}
               <a href="tel:+919568056654">+919568056654</a>
             </p>
+             
           </div>
+           
         </div>
       </section>
       <section>
@@ -170,6 +195,17 @@ const Hero = () => {
                 <strong>Contact No</strong>:{" "}
                 <a href="tel:9289114766">9289114766</a>
               </p>
+              <div className="my-5 flex flex-col items-start gap-5">
+              <Link
+                href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Gender-Sensitization-and-Safety-Committee.pdf"
+                target="_blank" rel="noopener noreferrer"
+                className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
+              >
+                <FileText color="#fff" />
+                Gender Sensitisation & Safety Committee
+              </Link>
+              
+            </div>
             </div>
           </div>
           <div className="w-full lg:w-[58%] committeebox p-5">
@@ -177,7 +213,7 @@ const Hero = () => {
               The Gender Sensitisation & Safety Committee consists of the
               following members:
             </h3>
-            <div className="table-1 white-table committee-table">
+              <div className="table-1 white-table committee-table">
               <table>
                 <tbody>
                   <tr>
@@ -384,12 +420,12 @@ const Hero = () => {
 
             <div className="my-5 flex flex-col items-start gap-5">
               <Link
-                href="https://www.krmangalam.edu.in/pdfs/Committee-ICC-2023.pdf"
+                href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Internal-Committee-of-KRMU.pdf"
                 target="_blank" rel="noopener noreferrer"
                 className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
               >
                 <FileText color="#fff" />
-                Committee ICC 2023
+                Internal Committee
               </Link>
               <Link
                 href="#"
@@ -455,7 +491,7 @@ const Hero = () => {
               </p>
               <div className="flex flex-col gap-5 my-5">
                 <Link
-                  href="https://www.krmangalam.edu.in/pdfs/anti-ragging-committee-of-krmu-2024.pdf"
+                  href="https://www.krmangalam.edu.in/pdfs/Constitution-of-Anti-Ragging-Committee.pdf"
                   target="_blank" rel="noopener noreferrer"
                   className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center justify-center"
                 >
@@ -633,10 +669,11 @@ const Hero = () => {
                 Committee Grievance Redressal
               </Link>
               <Link
-                href="https://www.krmangalam.edu.in/krmu-committee/#"
+                href="https://www.krmangalam.edu.in/pdfs/Student-Grievance-Redressal.pdf"
                 target="_blank" rel="noopener noreferrer"
                 className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
               >
+                 <FileText color="#fff" />
                 Student Grievance
               </Link>
             </div>
@@ -809,10 +846,6 @@ const Hero = () => {
                    
                   <tr>
                     {" "}
-                    <td>Dean Student Welfare</td> <td>Member</td>{" "}
-                  </tr>{" "}
-                  <tr>
-                    {" "}
                     <td>Dr. Shweta Bansal (Deputy Proctor)</td> <td>Member</td>{" "}
                   </tr>{" "}
                   <tr>
@@ -821,7 +854,7 @@ const Hero = () => {
                   </tr>{" "}
                   <tr>
                     {" "}
-                    <td>Dr. Shobna Jeet (SOLS)</td> <td>Member</td>{" "}
+                    <td>Dr. Shobhna Jeet (SOLS)</td> <td>Member</td>{" "}
                   </tr>{" "}
                   <tr>
                     {" "}
@@ -837,11 +870,25 @@ const Hero = () => {
                   </tr>{" "}
                   <tr>
                     {" "}
-                    <td>Mr. Rahul Singh (SOET)</td> <td>Member</td>{" "}
+                    <td>Dr. Vijay Prakash Sharma (SOMC)</td> <td>Member</td>{" "}
                   </tr>{" "}
                   <tr>
                     {" "}
-                    <td>Dr. Imran Siraj (Deputy Proctor)</td>{" "}
+                    <td>Dr. Anshul Saluja (SOED)</td> <td>Member</td>{" "}
+                  </tr>{" "}
+                  <tr>
+                    {" "}
+                    <td>Mr. Karan Singh (SEMCE)</td>{" "}
+                    <td>Member</td>{" "}
+                  </tr>{" "}
+                  <tr>
+                    {" "}
+                    <td>Mr. Jagdish Chander, (Security & Discipline Officer)</td>{" "}
+                    <td>Member</td>{" "}
+                  </tr>{" "}
+                  <tr>
+                    {" "}
+                    <td>Dr. Imran Siraj (SOET) (Deputy Proctor)</td>{" "}
                     <td>Member Secretary</td>{" "}
                   </tr>{" "}
                 </tbody>{" "}
