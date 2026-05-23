@@ -33,7 +33,7 @@ const ShapingFuture = ({
   return (
     <>
       <section>
-        <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full mb-10 xl:my-20  pt-10 sm:py-0 px-5 xl:px-0">
+        <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full mb-10 mt-10 xl:my-20  pt-10 sm:py-0 px-5 xl:px-0">
           <div className="lg:flex lg:bg-white gap-5 2xl:gap-10 items-center">
             <div className="lg:w-1/2 2xl:w-3/5">
               <div className=" mx-1 text-center lg:text-left">
@@ -61,7 +61,9 @@ const ShapingFuture = ({
                   />
                 </Link> */}
                 </div>
-                <p className="mb-2 mt-5 text-lg text-justify ">{desc}</p>
+                <p className="mb-2 mt-5 text-lg text-justify sm:text-left ">
+                  {desc}
+                </p>
               </div>
               <div className="relative   ">
                 <div className="grid grid-cols-2 my-10">
@@ -106,7 +108,7 @@ const ShapingFuture = ({
               </div>
             </div>
             <div className="lg:w-1/2 2xl:w-2/5 mt-10 lg:mt-0 rounded-2xl overflow-hidden">
-              <div className="relative min-h-[300px] md:min-h-96 lg:min-h-[800px] xl:min-h-[596px] h-full rounded-2xl overflow-hidden">
+              <div className="relative min-h-[400px] md:min-h-[700px] lg:min-h-[450px] xl:min-h-[600px] h-full rounded-2xl overflow-hidden">
                 <Image
                   src="https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/research-img.png"
                   fill

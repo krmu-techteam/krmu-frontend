@@ -22,7 +22,7 @@ const GlobalPartner = ({
             <h5 className="text-2xl md:text-4xl xl:text-5xl leading-tight font-semibold mb-4 ">
               {title}
             </h5>
-            <p className="text-lg text-justify">{desc}</p>
+            <p className="text-lg text-justify sm:text-left">{desc}</p>
           </div>
           <div className="w-full xl:w-1/2">
             <div className="text-center">

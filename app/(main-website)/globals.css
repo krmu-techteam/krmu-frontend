@@ -4531,6 +4531,33 @@
   }
 }
 
+.whatsappClass {
+  position: fixed;
+  right: 0;
+  top: 70%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 30px 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  z-index: 1;
+}
+
+.whatsapp-text {
+  position: absolute;
+  /* top: 80%; */
+  right: 50px;
+  background: #25d366;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px 0 0 30px;
+  white-space: nowrap;
+}
+
 .clubcontent * {
   background-color: transparent !important;
   font-family: inherit !important;

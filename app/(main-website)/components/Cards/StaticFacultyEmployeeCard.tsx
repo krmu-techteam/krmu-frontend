@@ -96,7 +96,7 @@ export const StaticFacultyEmployeeCard = ({
   const isLoading = facultyContent === null;
 
   return (
-    <div className="overflow-hidden rounded-t-xl bg-white transition-all duration-300 ease-in-out hover:shadow-xl group">
+    <div className="overflow-hidden rounded-t-xl bg-white transition-all duration-300 ease-in-out hover:shadow-xl group flex flex-col">
       {/* IMAGE SECTION */}
       <Link
         href={`/faculty/${slug}`}
@@ -128,9 +128,9 @@ export const StaticFacultyEmployeeCard = ({
       </Link>
 
       {/* CONTENT */}
-      <div className="flex flex-col">
+      <div className="flex flex-col flex-1">
         {/* DETAILS */}
-        <div className="h-[105px] border-b border-[#ddd] p-1.5 sm:h-full sm:p-5">
+        <div className="min-h-[105px] border-b border-[#ddd] p-1.5 sm:p-5 flex-1">
           <Link
             href={`/faculty/${slug}`}
             target="_blank"
@@ -155,7 +155,7 @@ export const StaticFacultyEmployeeCard = ({
         </div>
 
         {/* SOCIAL ICONS */}
-        <div className="flex h-16 items-center justify-center">
+        <div className="flex h-16 items-center justify-center mt-auto">
           {isLoading ? (
             // LOADING
             <div className="flex items-center gap-3">
