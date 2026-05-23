@@ -124,7 +124,7 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
 
   return (
     <div>
-      <div className="flex flex-wrap justify-center pt-16 px-4 pb-4 gap-5">
+      <div className="flex flex-wrap justify-center pt-16 px-4 pb-4 gap-5 mt-5 sm:mt-0">
         {visibleFaculties.map((faculty) => (
           <div
             key={faculty.id}

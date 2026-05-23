@@ -33,6 +33,21 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Shahid-Ahmad-Wani.png",
   },
+  {
+    id: 114223,
+    slug: "mr-gaurav",
+    title: {
+      rendered: "Mr. Gaurav",
+    },
+    featured_media: 6624,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/GAURAV.png",
+  },
   // {
   //   id: 114224,
   //   slug: "dr-satinder-pal-singh",
@@ -47,20 +62,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
   //   },
   //   featured_media_url: "",
   // },
-  // {
-  //   id: 114223,
-  //   slug: "mr-gaurav",
-  //   title: {
-  //     rendered: "Mr. Gaurav",
-  //   },
-  //   featured_media: 6624,
-  //   acf: {
-  //     "staff-qualification": "Ph.D.",
-  //     staff_designation: "Assistant Professor",
-  //     schools: [1266],
-  //   },
-  //   featured_media_url: "",
-  // },
+  //
   // {
   //   id: 114221,
   //   slug: "dr-shahjad",

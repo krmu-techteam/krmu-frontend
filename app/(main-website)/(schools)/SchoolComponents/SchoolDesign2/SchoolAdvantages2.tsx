@@ -29,6 +29,7 @@ const SchoolAdvantages2 = ({
             dangerouslySetInnerHTML={{
               __html: school_advantage,
             }}
+            className="spanFixed"
           />
         )}
       </div>

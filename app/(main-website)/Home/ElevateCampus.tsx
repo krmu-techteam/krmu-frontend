@@ -100,7 +100,7 @@ const ElevateCampus = ({
           </div>
           <div className="flex gap-5 2xl:gap-10 flex-col lg:flex-row items-center pb-10 xl:pb-20">
             <div className="w-full lg:w-1/2 xl:w-1/3 flex flex-col justify-center items-center">
-              <div className="2xl:max-w-lg text-center lg:text-left">
+              <div className="w-full text-center lg:text-left">
                 <h4 className="font-weight-500 text-xs sm:text-sm uppercase tracking-wide sm:tracking-[1px] mt-5 mb-3">
                   {elevateCampus3?.subtitle}
                 </h4>

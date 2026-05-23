@@ -51,9 +51,9 @@ const HomeYourJourneyForm = () => {
   }, [query]);
 
   return (
-    <div className="relative w-full max-w-xs ">
+    <div className="relative w-full  ">
       <form onSubmit={(e) => e.preventDefault()} className="relative w-full  ">
-        <Search className="absolute left-6 sm:left-3 top-7 transform -translate-y-1/2 text-[#7f8b80]" />
+        <Search className="absolute left-[5rem] sm:left-3 top-7 transform -translate-y-1/2 text-[#7f8b80]" />
 
         {/* Search Input */}
         <input
@@ -61,7 +61,7 @@ const HomeYourJourneyForm = () => {
           placeholder="Search Your Programmes"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full  flex items-center justify-center  gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-lg leading-none tracking-wide relative overflow-hidden group text-[#7f8b80] border-1 border-[#001732]  shadow-lg pl-16 sm:pl-10  mb-2.5 "
+          className="w-full  flex items-center justify-center  gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-lg leading-none tracking-wide relative overflow-hidden group text-[#7f8b80] border-1 border-[#001732]  shadow-lg pl-[7rem] sm:pl-10  mb-2.5 "
         />
 
         {/* Submit Button */}

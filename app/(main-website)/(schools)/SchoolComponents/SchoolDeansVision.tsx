@@ -46,13 +46,15 @@ const SchoolDeansVision = ({
           }}
         >
           <div className="xl:w-3/12 flex justify-center xl:block">
-            <Image
-              src={`${STRAPI_URL}${deanImgUrl}`}
-              width={358}
-              height={465}
-              alt={deanName}
-              className="rounded-[25px] object-cover shadow-xl"
-            />
+            <div className="bg-white w-[90%] rounded-3xl">
+              <Image
+                src={`${STRAPI_URL}${deanImgUrl}`}
+                width={358}
+                height={465}
+                alt={deanName}
+                className="rounded-[25px] object-cover shadow-xl"
+              />
+            </div>
           </div>
           <div className="xl:w-9/12 text-white dean_heading_h3 flex flex-col items-center xl:items-start text-center xl:text-left">
             {/* Mobile View: Name and Designation directly below image */}
@@ -69,7 +71,6 @@ const SchoolDeansVision = ({
               >
                 <Mail size={16} /> <span>{deanEmail}</span>
               </Link>
-              
             </div>
 
             <div className="text-sm sm:text-base leading-relaxed mb-6 xl:mb-0">

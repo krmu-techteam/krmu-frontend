@@ -13,7 +13,7 @@ type Props = {
 const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
   return (
     <section
-      className="bg-[#001732] pt-10 pb-20"
+      className="bg-[#001732] pb-20"
       // style={{
       //   backgroundImage: "linear-gradient(180deg,#001732 0%,#004e8a 100%)",
       // }}

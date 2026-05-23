@@ -32,7 +32,7 @@ const EventsAndNews = async ({
               <HomeNewsEventsCard key={i} data={item} />
             ))}
           </div>
-          <div className="flex justify-center py-4">
+          <div className="flex justify-center pt-6 sm:pt-12">
             {(newsandeventbtn?.buttonlink || newsandeventbtn?.buttonclass) && (
               <Link
                 href={newsandeventbtn?.buttonlink}
