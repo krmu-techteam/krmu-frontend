@@ -24,9 +24,9 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
 }) => {
   return (
     <section className="bg-[#051630] overflow-hidden">
-      <div className="flex lg:gap-5 flex-col lg:flex-row w-full px-5 xl:px-0 xl:max-w-7xl 2xl:max-w-[1664px] mx-auto items-center">
+      <div className="flex lg:gap-5 flex-col lg:flex-row w-full px-5 mt-10 sm:mt-20 mb-10 sm:mb-20 xl:px-0 xl:max-w-7xl 2xl:max-w-[1664px] m-auto items-center">
         {/* Left Section */}
-        <div className="w-full lg:w-1/3  text-center md:text-left py-10 2xl:py-20">
+        <div className="w-full lg:w-1/3  text-center md:text-left pb-10 2xl:py-10">
           <h4 className="lg:max-w-2xl w-full text-2xl sm:text-4xl lg:text-5xl font-semibold text-white text-center lg:text-left">
             {title}
           </h4>
@@ -45,14 +45,14 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
               </div>
             ))}
           </div>
-          <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row sm:justify-center lg:justify-start xl:items-center gap-4 mt-5">
+          <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row sm:justify-center lg:justify-start xl:items-center gap-2.5 sm:gap-5 mt-5">
             {link1 || title1 ? (
               <Link
                 href={link1}
-                className="bg-white text-black   px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center  h-14"
+                className="flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-white text-black border-1 border-transparent hover:bg-white shadow-lg px-6 hover:bg-white "
                 target="_blank"
               >
-                <span className="text-sm sm:text-base">{title1}</span>
+                {title1}
               </Link>
             ) : (
               ""
@@ -60,10 +60,11 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
             {link2 || title2 ? (
               <Link
                 href={link2}
-                className="border border-white text-white border  px-6 py-4 sm:py-2.5 rounded-sm font-semibold col-span-2 text-center flex items-center justify-center  h-14"
+                className="flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6  text-white border border-white  shadow-lg px-6  "
                 target="_blank"
               >
-                <span className="text-sm sm:text-base">{title2}</span>
+                <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
+                {title2}
               </Link>
             ) : (
               ""
@@ -72,7 +73,7 @@ const OurTopRecruiters: React.FC<OurTopRecruitProps> = ({
         </div>
 
         {/* Right Section */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6  lg:grid-cols-3 xl:grid-cols-6 py-10 px-5 w-full mb-10 lg:w-2/3 lg:px-5 lg:pt-8 lg:pb-2.5 rounded-3xl bg-[#0060aa]">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6  lg:grid-cols-3 xl:grid-cols-6 py-10 px-5 w-full  lg:w-2/3 lg:px-5 lg:pt-8 lg:pb-2.5 rounded-3xl bg-[#0060aa]">
           {logos.map((logo, index) => (
             <div
               key={logo.id || index}

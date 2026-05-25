@@ -62,7 +62,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
   //   },
   //   featured_media_url: "",
   // },
-
+  //
   // {
   //   id: 114221,
   //   slug: "dr-shahjad",

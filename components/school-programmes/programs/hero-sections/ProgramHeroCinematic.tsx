@@ -38,7 +38,7 @@ const ProgramHeroCinematic = ({
   return (
     <>
       <section 
-        className="pt-[280px] sm:pt-24 md:pt-40 pb-0 md:pb-12 overflow-x-hidden 2xl:px-0 overflow-hidden 
+        className="pt-[280px] sm:pt-24 lg:pt-32 xl:pt-40 pb-0 md:pb-12 overflow-x-hidden 2xl:px-0 overflow-hidden 
         [background-position:var(--bg-pos-mobile)] sm:[background-position:var(--bg-pos-desktop)] 
         [background-size:var(--bg-size-mobile)] sm:[background-size:var(--bg-size-desktop)] 
         bg-no-repeat relative before:content-[''] before:absolute before:top-0 before:left-0 
@@ -89,7 +89,7 @@ const ProgramHeroCinematic = ({
               </div>
 
               {/* Stats Bar - Integrated on Desktop, Dedicated Section on Mobile */}
-              <div className="w-full bg-[#001631] sm:bg-transparent py-8 sm:py-0 mt-0 sm:mt-10 relative z-10 px-2 xl:px-10 2xl:px-0">
+              <div className="w-full bg-[#001631] sm:bg-transparent py-8 sm:py-0 mt-0 sm:mt-10 relative z-10">
                 <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-nowrap items-center sm:gap-x-10">
                   <div className="flex flex-col sm:pr-8 lg:pr-4 xl:pr-10 sm:border-r border-white/20 text-center sm:text-left">
                     <span className="text-white font-semibold text-lg sm:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
@@ -135,7 +135,7 @@ const ProgramHeroCinematic = ({
       </section>
 
       {/* Recruiter Strip outside section for clean white background */}
-      <div className="w-full bg-white pt-16 py-8 pb-4 md:py-6 border-t border-gray-100">
+      <div className="w-full bg-white pt-16 py-8 pb-8 md:py-6 border-t border-gray-100">
         <div className="max-w-[1440px] mx-auto px-0 lg:px-10 2xl:px-0 relative">
           {/* Centered Heading Badge */}
           <div className="absolute -top-[48px] md:-top-[62px] left-1/2 -translate-x-1/2 bg-gray-50 md:bg-white px-6 py-2 rounded-t-sm flex items-center justify-center ">

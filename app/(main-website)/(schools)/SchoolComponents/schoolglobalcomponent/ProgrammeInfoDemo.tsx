@@ -240,7 +240,15 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
               <div className="text-xl font-semibold text-[#051630] mb-5">
                 <p>Fee Structure</p>
               </div>
-              <div className="grid grid-cols-2 sm:flex flex-col md:flex-row gap-4 border-b border-gray-300 pb-2.5 sm:pb-5">
+              <div className="grid grid-cols-2 sm:flex flex-col md:flex-row gap-4 border-b border-gray-300 pb-2.5 sm:pb-5 mb-2.5 sm:mb-5">
+                <div className="lg:border-r border-black pr-4">
+                  <p className="mb-5 font-normal text-sm sm:text-base uppercase leading-[1]">
+                    Duration
+                  </p>
+                  <p className="text-sm sm:text-base  leading-[1] font-bold">
+                    {criteria.Duration || "N/A"}
+                  </p>
+                </div>
                 <div className="lg:border-r border-black pr-4">
                   <p className="mb-5 font-normal text-sm sm:text-base uppercase leading-[1]">
                     Semester I
@@ -274,13 +282,6 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
                     {criteria.programme_fee_per_year === "TBD" ? "" : "/-"}
                   </p>
                 </div>
-              </div>
-
-              <div className="my-5 border-b border-gray-300">
-                <p className="font-semibold text-sm sm:text-base">Duration:</p>
-                <p className="mb-2.5 sm:mb-5 font-bold text-sm sm:text-base">
-                  {criteria.Duration || "N/A"}
-                </p>
               </div>
 
               <div>

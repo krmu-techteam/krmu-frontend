@@ -152,6 +152,10 @@ export default async function HomePage() {
             rightContent={aDecadeData?.adecaderightcol}
           />
         )}
+
+        {/* Gradient Separator */}
+        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+
         <YourJourney2 />
         {/* {yourJourneyData && (
           <YourJourney
@@ -235,6 +239,9 @@ export default async function HomePage() {
             shapingCounters={shapingFutureData?.shapingCounter}
           />
         )}
+        {/* Gradient Separator */}
+        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+
         {globalPartenerData && (
           <GlobalPartner
             title={globalPartenerData?.title}

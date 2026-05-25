@@ -15,6 +15,7 @@ import Specialisation from "../../school-programmes-component/Specialisation";
 import TableOfContent from "../../school-programmes-component/TableOfContent";
 import ExplorePrograms from "../../school-programmes-component/ExploreBTechPrograms";
 import { notFound } from "next/navigation";
+import ScholarshipBanner from "../../school-programmes-component/ScholarshipBanner";
 import AdmissionProcessComp from "../../school-programmes-component/AdmissionProcessComp";
 import { getPHDProgramme } from "@/lib/api/phd-programmes";
 import PHDProgrammes from "../PHDProgramme";
@@ -399,6 +400,9 @@ const page = async ({ params }: Props) => {
             logos={financialAssistanceSection?.financelogos}
           />
         )}
+
+        <ScholarshipBanner />
+
         {testimonialsData && <ProgTestimonials data={testimonialsData} />}
         {tocSection && (
           <TableOfContent

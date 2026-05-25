@@ -40,17 +40,17 @@ const ProgramHeroDefault = ({
  
   return (
     <section
-      className={`pt-24 sm:pt-40 pb-8 md:pb-12 overflow-x-hidden bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]`}
+      className={`pt-24 sm:pt-40 pb-8 lg:pb-12 overflow-x-hidden bg-[linear-gradient(105.22deg,_#FFFFFF_4.74%,_#DAE3F6_80.51%)]`}
     >
       <div
-        className={`w-full mx-auto md:flex items-start gap-8 lg:gap-12 max-w-[1440px] justify-between px-4 sm:px-0 xl:px-0`}
+        className={`w-full mx-auto lg:flex items-start gap-8 lg:gap-12 max-w-[1440px] justify-between px-4 sm:px-0 xl:px-0`}
       >
         <div
-          className={`flex items-start justify-center w-full md:w-7/12 xl:w-8/12`}
+          className={`flex items-start justify-center w-full lg:w-7/12 xl:w-8/12`}
         >
           <div className="w-full xl:max-w-[800px] mr-auto flex flex-col">
             {/* Mobile Media (Top) */}
-            <div className="w-full lg:hidden mb-4 md:mb-8">
+            <div className="w-full lg:hidden mb-4 lg:mb-8">
               {heroSection?.imgvideo === "Video" ? (
                 heroSection?.videofield?.includes("iframe") ? (
                   <div className="w-full rounded-md overflow-hidden shadow-sm">
@@ -89,13 +89,13 @@ const ProgramHeroDefault = ({
             </div>
 
             <p
-              className={`md:block hidden font-medium leading-[1.2] mb-2 text-[#484848] text-md sm:text-xl`}
+              className={`lg:block hidden font-medium leading-[1.2] mb-2 text-[#484848] text-md sm:text-xl`}
             >
               {heroSection?.subtitle}
             </p>
             <HeroTitle title={title} highlightitle={highlightitle} />
             <p
-              className={`md:block hidden text-base sm:text-lg text-[#575757] font-medium`}
+              className={`lg:block hidden text-base sm:text-lg text-[#575757] font-medium`}
             >
               {heroSection?.description}
             </p>
@@ -246,10 +246,10 @@ const ProgramHeroDefault = ({
         </div>
 
         <div
-          className={`flex w-full md:w-5/12 xl:w-4/12 h-full relative mt-6 md:mt-0`}
+          className={`flex w-full lg:w-5/12 xl:w-4/12 h-full relative mt-6 lg:mt-0`}
         >
           {slug === "bhmct-hotel-management" ? (
-            <div className="w-full h-full min-h-[300px] md:min-h-[450px] relative rounded-md overflow-hidden">
+            <div className="w-full h-full min-h-[300px] lg:min-h-[450px] relative rounded-md overflow-hidden">
               <Image
                 src="/hotel-management.png"
                 fill
