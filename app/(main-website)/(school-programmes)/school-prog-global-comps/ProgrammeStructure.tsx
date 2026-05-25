@@ -260,7 +260,7 @@ const ProgrammeStructure = ({
               </div>
 
               {/* Action Buttons Container - Glassy Bottom - Responsive Stack for Mobile */}
-              <div className="py-8 bg-transparent min-h-[100px] flex flex-col md:flex-row items-center justify-center gap-4">
+              <div className="py-8 bg-transparent min-h-[100px] flex flex-col md:flex-row items-center md:justify-start justify-center gap-4">
                 {programStruct
                   .find(
                     (y) =>
@@ -288,7 +288,7 @@ const ProgrammeStructure = ({
                             </span>
                           </div>
                         }
-                        buttonClassName={`px-3 py-3 md:px-6 rounded-xs transition-all duration-300 flex items-center justify-center w-full md:w-auto shadow-lg
+                        buttonClassName={`px-3 h-12 md:h-14 md:px-6 rounded-xs transition-all duration-300 flex items-center justify-center w-full md:w-auto shadow-lg
                         ${
                           isDark
                             ? "bg-[#001732] text-white hover:bg-[#0a264a]"

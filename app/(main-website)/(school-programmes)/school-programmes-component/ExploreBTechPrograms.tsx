@@ -11,9 +11,8 @@ const SCHOOL_STUDENT_CUTOUTS = {
   "soet": {
     src: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/BBA_d4936f5bd4.png",
     alt: "SOET Engineering Student",
-    className: "lg:translate-x-[-30%] lg:translate-y-[1%] xl:translate-x-[-35%] xl:translate-y-[0.5%] 2xl:translate-x-[-40%] 2xl:translate-y-0",
+    className: "lg:translate-x-[-40%] lg:translate-y-[0%] xl:translate-x-[-40%] xl:translate-y-[0%] 2xl:translate-x-[-45%] 2xl:translate-y-0",
   },
-
 
 };
 
@@ -70,7 +69,7 @@ export default async function ExplorePrograms({
           alt={cutout.alt}
           width={650}
           height={850}
-          className={`absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-auto h-[110%] lg:h-[132%] xl:h-[126%] 2xl:h-[120%] object-contain object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] select-none origin-bottom ${cutout.className}`}
+          className={`absolute bottom-0 left-1/2 -translate-x-1/2 z-10 w-auto h-full object-cover object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] select-none origin-bottom ${cutout.className}`}
           priority
           unoptimized
         />
