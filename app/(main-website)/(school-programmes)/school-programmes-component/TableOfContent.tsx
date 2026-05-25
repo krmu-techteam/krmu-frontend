@@ -29,10 +29,10 @@ const TableOfContent = ({
           <div className="w-full">
             <div className="mx-auto xl:max-w-[1230px] 2xl:max-w-7xl">
               <div className="text-center mb-4 lg:mb-6 2xl:mb-12">
-                <h3 className="text-[28px] lg:text-[40px] font-bold lg:mb-2 2xl:mb-4 text-gray-900 uppercase">
+                <h3 className="text-2xl lg:text-[40px] font-semibold md:font-bold mb-3 lg:mb-2 2xl:mb-4 text-gray-900 uppercase">
                   {heading} {highlight}
                 </h3>
-                <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto">{desc}</p>
+                <p className="text-md md:text-base text-gray-600 max-w-3xl mx-auto">{desc}</p>
               </div>
               <div className="relative p-0 lg:p-0 overflow-hidden rounded-xl md:rounded-none">
                 <div className="relative z-10 w-full">

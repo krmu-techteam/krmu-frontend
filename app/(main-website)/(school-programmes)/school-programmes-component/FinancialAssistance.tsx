@@ -35,14 +35,14 @@ const FinancialAssistance = ({
     <section className="prog-global-padding bg-[#f9f9f9] py-8 md:p-6 lg:py-10 xl:py-10 2xl:py-16 px-4 lg:px-10 2xl:px-0">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container !max-w-7xl">
-          <h2 className="text-[32px] md:text-[40px] font-bold text-gray-900 mb-1 lg:mb-2 2xl:mb-4">
+          <h2 className="text-2xl md:text-[40px] font-semibold md:font-bold text-gray-900 mb-2 2xl:mb-4">
             {heading}{" "}{highlightheading} 
           </h2>
           <p className="text-lg md:text-[17px] lg:text-xl text-gray-800 text-center md:mb-4">{description}</p>
         </div>
 
         {/* Points Layout */}
-        <div className="lg:mt-6 2xl:mt-10 flex flex-col gap-4">
+        <div className="mt-4 lg:mt-6 2xl:mt-10 flex flex-col gap-4">
           {/* Row 1: 4 Items */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {points.slice(0, 4).map((point, index) => (

@@ -79,7 +79,7 @@ export default async function ExplorePrograms({
           <div className="hidden lg:block lg:w-[40%] xl:w-[35%] pointer-events-none"></div>
 
           {/* Right Column: Content & Grid */}
-          <div className="w-full lg:w-[60%] xl:w-[65%] flex flex-col justify-center py-12 md:py-6 lg:py-24 xl:py-28">
+          <div className="w-full lg:w-[60%] xl:w-[65%] flex flex-col justify-center py-8 md:py-6 lg:py-24 xl:py-28">
             
             <div className="text-left lg:mb-4 2xl:mb-6">
               <h2 className="text-2xl text-center md:text-left md:text-[32px] xl:text-[40px] font-semibold text-white mb-2 tracking-tight [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]">

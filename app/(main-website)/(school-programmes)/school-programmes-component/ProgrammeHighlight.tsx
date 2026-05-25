@@ -66,11 +66,11 @@ const ProgrammeHighlight = ({
     return (
       <section className="bg-[#f9f9f9] py-8 md:p-6 lg:p-10 xl:py-12 2xl:py-16">
         <div className="max-w-[1440px] mx-auto w-full px-4 md:px-0 lg:px-0 2xl:px-0">
-          <div className="text-center mb-4 md:mb-6">
-            <h2 className="text-3xl text-center md:text-center md:text-[40px] font-bold text-[#051630] leading-[1.1] mb-3">
+          <div className="text-center mb-2 md:mb-6">
+            <h2 className="text-2xl text-center md:text-center md:text-[40px] font-semibold md:font-bold text-[#051630] leading-[1.1] mb-2 md:mb-3">
               {heading} {highlightHeading}
             </h2>
-            <p className="text-[#424242] text-lg md:text-xl max-w-3xl mx-auto font-normal">
+            <p className="text-[#424242] text-md md:text-xl max-w-3xl mx-auto font-normal">
               {desc}
             </p>
           </div>

@@ -66,7 +66,7 @@ const CareerProspects = ({
         <div className="relative z-10 max-w-[1440px] mx-auto px-4 w-full flex flex-col items-center">
           {/* Header Section */}
           <div className="max-w-4xl w-full text-center mb-4">
-            <h3 className="text-3xl md:text-[36px] xl:text-[42px] font-bold text-[#0B1C30] mb-3 md:mb-2 leading-[1.1] tracking-tight">
+            <h3 className="text-2xl md:text-[36px] xl:text-[42px] font-semibold md:font-bold text-[#0B1C30] mb-3 md:mb-2 leading-[1.1] tracking-tight">
               {heading} {highlight}
             </h3>
             <p className="text-[#45464D] text-shadow-xs md:text-shadow-none text-md xl:text-lg mx-auto max-w-full leading-relaxed md:leading-[1.36]">
@@ -109,9 +109,9 @@ const CareerProspects = ({
                 <div className="flex ">
                   {careercards?.map((card, index) => (
                     <div key={card?.id} className="flex-[0_0_100%] min-w-0">
-                        <div className="bg-white/90 backdrop-blur-md rounded-sm md:rounded-2xl pt-4 md:pt-6 pb-0 flex flex-col items-center lg:max-w-[457px] xl:max-w-[457px] 2xl:max-w-[457px] min-h-[320px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[418px] 2xl:min-h-[418px] w-full mx-auto relative transition-all duration-1000 border border-white/40 mb-20 xl:mb-12 2xl:mb-24 shadow-xl hover:shadow-2xl overflow-hidden">
+                        <div className="bg-white/90 backdrop-blur-md rounded-sm md:rounded-2xl pt-4 md:pt-6 pb-0 flex flex-col items-center lg:max-w-[457px] xl:max-w-[457px] 2xl:max-w-[457px] min-h-[350px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[418px] 2xl:min-h-[418px] w-full mx-auto relative transition-all duration-1000 border border-white/40 mb-10 md:mb-20 xl:mb-12 2xl:mb-24 shadow-xl hover:shadow-2xl overflow-hidden">
                           <div className="text-center z-20 relative px-6">
-                            <h4 className={`font-bold text-xl md:text-2xl mb-1 text-[#051630] tracking-tight transition-all duration-1000 delay-100 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+                            <h4 className={`font-semibold md:font-bold text-xl md:text-2xl mb-1 text-[#051630] tracking-tight transition-all duration-1000 delay-100 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
                               {card?.title}
                             </h4>
                             <p className={`text-gray-700 text-md md:text-lg max-w-sm mx-auto leading-relaxed md:leading-[1.36] font-normal transition-all duration-1000 delay-300 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>

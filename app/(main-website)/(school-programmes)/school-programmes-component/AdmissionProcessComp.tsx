@@ -27,10 +27,12 @@ const AdmissionProcessComp = ({
   return (
     <section className="prog-global-padding bg-[#f9f9f9] py-8 md:p-6 lg:py-12 2xl:py-16 px-4 lg:px-10 2xl:px-0">
       <div className="common-prog-container">
-        <h2 className="text-[28px] md:text-[40px] font-bold text-gray-900 leading-tight tracking-tight mb-2">
+        <h2 className="text-2xl md:text-[40px] font-semibold md:font-bold text-gray-900 leading-tight tracking-tight mb-2 md:mb-3">
           {heading} {highlight}
         </h2>
-        <p className="sub-heading mb-5">{desc}</p>
+        <p className="text-[#424242] text-md md:text-xl mb-3 md:mb-5">
+          {desc}
+        </p>
       </div>
       <div className="max-w-[1320px] mx-auto w-full mt-2.5 hidden lg:block">
         <Image

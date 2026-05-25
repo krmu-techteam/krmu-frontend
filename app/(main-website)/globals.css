@@ -2954,11 +2954,7 @@
     color: black;
   }
 
-  .common-prog-container .sub-heading {
-    font-size: 20px;
-    color: #424242;
-    font-weight: 400;
-  }
+ 
 
   /* Programme Highlights */
   @media (max-width: 768px) {

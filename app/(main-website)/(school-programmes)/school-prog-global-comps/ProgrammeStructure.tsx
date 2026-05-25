@@ -79,7 +79,7 @@ const ProgrammeStructure = ({
                   "linear-gradient(90deg, rgba(0, 23, 50, 0) 0%, #001732 49.04%, rgba(0, 23, 50, 0) 95.67%)",
               }}
             >
-              <h2 className="text-2xl md:text-3xl lg:text-[40px] font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
+              <h2 className="text-2xl md:text-3xl lg:text-[40px] font-semibold md:font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
                 {heading} {highlight}
               </h2>
             </div>
@@ -260,7 +260,7 @@ const ProgrammeStructure = ({
               </div>
 
               {/* Action Buttons Container - Glassy Bottom - Responsive Stack for Mobile */}
-              <div className="py-8 bg-transparent min-h-[100px] flex flex-row items-center md:justify-start justify-center gap-3 md:gap-4 overflow-x-auto no-scrollbar w-full">
+              <div className="py-8 bg-transparent min-h-[100px] flex flex-row items-center md:justify-start justify-center gap-4 md:gap-4 overflow-x-auto no-scrollbar w-full">
                 {programStruct
                   .find(
                     (y) =>

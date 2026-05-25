@@ -8,7 +8,7 @@ const ScholarshipBanner = () => {
           <h3 className="text-2xl text-center sm:text-left md:text-3xl font-semibold text-white sm:mb-2 mb-4">
             Scholarship 2026
           </h3>
-          <p className="text-sm md:text-base text-gray-200/90 sm:max-w-lg lg:max-w-3xl font-normal text-center sm:text-left sm:leading-normal lg:leading-relaxed">
+          <p className="text-md md:text-base text-gray-200/90 sm:max-w-lg lg:max-w-3xl font-normal text-center sm:text-left sm:leading-normal lg:leading-relaxed">
             We offer up to 100% scholarships for academic toppers, sports achievers, and students across multiple categories, ensuring that ambition, hard work, and potential always find their way forward.
           </p>
         </div>
