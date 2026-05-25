@@ -562,11 +562,22 @@ const ProgrammesSearch = () => {
           overflow-hidden
           relative`}
                   >
-                    <div
-                      className={`absolute ${glowClass} h-[320px] w-[320px] rounded-full bg-gradient-to-br from-[#001732] via-[#59122E] to-[#63174C] blur-[30px] opacity-80`}
-                    ></div>
-                    <Link href={`/programs/${slug}`} target="_blank">
-                      <h6 className="block w-full text-white text-base pr-10 z-20">
+                    {" "}
+                    {/* <Link href={`/programs/${slug}`} target="_blank">
+                      <h6 className="block w-full text-white">
+                        {"title" in item ? item.title : item.heading}
+                      </h6>
+                    </Link> */}
+                    <Link
+                      href={
+                        slug.includes("zenithschool.ai")
+                          ? slug
+                          : `/programs/${slug}`
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <h6 className="block w-full text-white">
                         {"title" in item ? item.title : item.heading}
                       </h6>
                     </Link>

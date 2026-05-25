@@ -5,7 +5,7 @@ import KRMUTimer from "../../CommonComponent2026/KRMUTimer";
 export const CommonHeader = () => {
   return (
     <header
-      className="p-2 bg-white sticky top-0 z-100000"
+      className="p-2 bg-white sticky top-0 z-[100000]"
       style={{
         boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
       }}

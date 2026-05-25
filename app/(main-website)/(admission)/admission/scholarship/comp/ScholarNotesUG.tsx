@@ -59,7 +59,8 @@ const ScholarNotesUG = () => {
         Part A Scholarship will be awarded on the basis of an overall aggregate marks obtained in the last qualifying examination
                 </span>
               </div>
-                <div className="flex gap-5">
+              
+ <div className="flex gap-5">
                 <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                   7
                 </span>
@@ -72,7 +73,6 @@ const ScholarNotesUG = () => {
                   </div>
                 </span>
               </div>
-
                   <div className="flex gap-5">
               <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                 8
@@ -92,7 +92,7 @@ const ScholarNotesUG = () => {
                 </div>
               </span>
             </div>
-           
+            
            
           </div>
           <div className="w-full lg:w-3/12 flex flex-col gap-5">

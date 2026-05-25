@@ -120,123 +120,83 @@ const SchoolHero = ({
             />
           )}
         </div>
-
-        <div
-          className="
-    h-full
-    w-1/2
-    opacity-40
-    bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0.6)61.25%,rgba(102,102,102,0)100.31%)]
-      absolute
-      inset-0
-      z-10
-  "
-        ></div>
-        <div className="xl:px-8 2xl:px-16">
-          <div className="hidden sm:block">
-            {herobanner?.url && (
-              <Image
-                src={`${STRAPI_URL}${herobanner.url}`}
-                alt={"hero"}
-                fill
-                priority
-                sizes="100vw"
-                className="object-cover -z-10"
-              />
-            )}
-          </div>
-          {fullWidth ? (
-            <div className="max-w-[1664px] mx-auto w-full px-5 relative z-10 sm:px-4">
-              <div className="text-center text-white w-full">
-                <p className="text-sm md:text-[28px] lg:mb-5 font-medium text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
-                  {subheading}
-                </p>
-                <h1 className="text-2xl md:text-4xl lg:text-8xl font-semibold leading-[1.2] text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
-                  {title}
-                </h1>
-                <div className="flex flex-col lg:flex-row items-center justify-center gap-2.5 sm:gap-5 my-4">
-                  {heroBtns?.map((btn) =>
-                    btn?.buttontext === "Explore Programmes" ? (
-                      <Link
-                        key={btn.id}
-                        href={btn.buttonlink}
-                        className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#001732] ${
-                          btn.buttonclass || ""
-                        }`}
-                      >
-                        {btn.buttontext}
-                      </Link>
-                    ) : (
-                      <Link
-                        key={btn.id}
-                        href={btn.buttonlink}
-                        className={`text-black w-full sm:w-fit flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white ${
-                          btn.buttonclass || ""
-                        }`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {btn.buttontext}
-                      </Link>
-                    ),
-                  )}
-                </div>
+        {fullWidth ? (
+          <div className="max-w-[1664px] mx-auto w-full px-5 relative z-10 temp-class">
+            <div className="text-center text-white w-full">
+              <p className="text-sm md:text-[28px] lg:mb-5 font-medium text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
+                {subheading}
+              </p>
+              <h1 className="text-2xl md:text-4xl lg:text-8xl font-semibold leading-[1.2] text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
+                {title}
+              </h1>
+              <div className="flex flex-col lg:flex-row items-center justify-center gap-2.5 sm:gap-5 my-4">
+                {heroBtns?.map((btn) => {
+                  if (!btn?.buttonlink) return null;
+                  return btn?.buttontext === "Explore Programmes" ? (
+                    <Link
+                      key={btn.id}
+                      href={btn.buttonlink}
+                      className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#034272] ${
+                        btn.buttonclass || ""
+                      }`}
+                    >
+                      {btn.buttontext}
+                    </Link>
+                  ) : (
+                    <Link
+                      key={btn.id}
+                      href={btn.buttonlink}
+                      className={`text-black w-full sm:w-fit flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white ${
+                        btn.buttonclass || ""
+                      }`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {btn.buttontext}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
-          ) : (
-            <div className="max-w-[1850px] mx-auto w-full xl:flex items-start justify-between p-0 relative z-20">
-              <div className="text-center text-white w-full xl:w-1/2 xl:pr-20">
-                <div className="xl:hidden flex justify-center">
-                  {middleimg && (
-                    <Image
-                      src={middleimg}
-                      width={492}
-                      height={600}
-                      alt={title || ""}
-                      className="object-contain z-10 h-[400px] relative"
-                      priority
-                    />
-                  )}
-                </div>
-                <div className="bg-[#001732] xl:bg-transparent p-5 xl:p-0 z-20 relative -mt-28 sm:mt-0">
-                  <p className="text-sm lg:text-lg 2xl:text-2xl font-normal sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
-                    {subheading}
-                  </p>
-                  <h1 className="text-2xl md:text-4xl 2xl:text-6xl text-shadow-lg leading-[1.2] font-bold">
-                    {title}
-                  </h1>
-                  <div className="flex flex-col items-center justify-center gap-3.5 sm:gap-5 mt-0 sm:my-4">
-                    {heroBtns?.map((btn) =>
-                      btn?.buttontext === "Explore Programmes" ? (
-                        <Link
-                          key={btn.id}
-                          href={btn.buttonlink}
-                          className="text-white underline font-bold text-xl"
-                        >
-                          {btn.buttontext}
-                        </Link>
-                      ) : (
-                        <Link
-                          key={btn.id} /* Rectangle 970 */
-                          href={btn.buttonlink}
-                          className={`text-white w-full sm:w-fit flex justify-center items-center px-6 py-3.5 rounded-lg gap-4 font-semibold bg-[#001732] border-2 border-[#0189ae] transition-all ${
-                            btn.buttonclass || ""
-                          }`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Download color="#fff" /> {btn.buttontext}
-                        </Link>
-                      ),
-                    )}
-                  </div>
-                  <div className="max-w-[450px] mx-auto my-2.5 sm:mt-10 p-3 rounded-[10px] alumniHeaderCarousel brightness-0 invert">
-                    <ConnectingDreamSlider logos={alumniLogos} />
-                  </div>
-                </div>
+          </div>
+        ) : (
+          <div className="max-w-[1850px] mx-auto w-full xl:flex items-center justify-between p-5 sm:p-0 relative z-10 bg-transparent">
+            <div className="text-center text-white w-full xl:w-1/2 xl:pr-52">
+              <p className="text-sm md:text-[28px] lg:mb-5 font-medium text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
+                {subheading}
+              </p>
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-[1.2] text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)]">
+                {title}
+              </h1>
+              <div className="flex flex-col lg:flex-row items-center justify-center gap-3.5 sm:gap-5 my-4">
+                {heroBtns?.map((btn) => {
+                  if (!btn?.buttonlink) return null;
+                  return btn?.buttontext === "Explore Programmes" ? (
+                    <Link
+                      key={btn.id}
+                      href={btn.buttonlink}
+                      className="text-white w-full sm:w-fit flex justify-center items-center px-8 py-2.5 rounded-lg gap-4 font-semibold bg-[#034272] transition-all hover:bg-[#02335a]"
+                    >
+                      {btn.buttontext}
+                    </Link>
+                  ) : (
+                    <Link
+                      key={btn.id}
+                      href={btn.buttonlink}
+                      className={`text-black w-full sm:w-fit flex justify-center items-center px-8 py-2.5 rounded-lg gap-4 font-semibold bg-white transition-all hover:bg-gray-100 ${
+                        btn.buttonclass || ""
+                      }`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {btn.buttontext}
+                    </Link>
+                  );
+                })}
               </div>
-              <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end px-5 pb-5 sm:pb-0 sm:px-0 bg-[#001732] sm:bg-transparent">
-                {/* {videoFmt === "Iframe" ? (
+            </div>
+            <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end temp-class">
+              {videoFmt === "Iframe" ? (
                 <div
                   className="w-full customSchoolIframeStyle"
                   dangerouslySetInnerHTML={{ __html: iframeContent }}

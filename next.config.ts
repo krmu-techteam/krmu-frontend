@@ -79,14 +79,18 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  //  async rewrites() {
-  //   return [
-  //     {
-  //       source: "/KRMU_QS/:path*",
-  //       destination: "/api/r2/:path*",
-  //     },
-  //   ];
-  // },
+  async rewrites() {
+    return [
+      {
+        source: "/meta/:slug",
+        destination: "/admission/:slug",
+      },
+      {
+        source: "/meta/:slug/:path*",
+        destination: "/admission/:slug/:path*",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
