@@ -1616,7 +1616,7 @@
   }
 
   .fac_info_container {
-    padding: 30px 30px 0px;
+    padding: 30px 30px;
     border-radius: 30px;
     max-width: 1600px;
     margin: 0 auto 100px;
@@ -1640,6 +1640,12 @@
   .fac_name_desg_int,
   .fac_social_links {
     width: 33.333%;
+  }
+
+  .fac_img_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .faculty_main_content_container .fusion-fullwidth {
@@ -1752,7 +1758,7 @@
 
     .fac_img_container {
       width: 100%;
-      order: 3;
+      /* order: 3; */
       margin-top: 20px;
     }
   }
