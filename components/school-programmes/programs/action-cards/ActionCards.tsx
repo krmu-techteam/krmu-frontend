@@ -138,7 +138,7 @@ const ActionCard = ({ actionCard }: ActionCardProps) => {
         
         <Link 
           href={actionCard.link}
-          className={`${actionCard.buttonBg} w-full py-2 xl:py-2.5 2xl:py-3.5 rounded-md font-semibold flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg group/btn mt-auto`}
+          className={`${actionCard.buttonBg} w-auto px-6 py-2 xl:py-2.5 2xl:py-3 rounded-md font-semibold flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg group/btn mt-auto`}
         >
           <span className="flex items-center text-[15px] xl:text-[14px] 2xl:text-[15px] tracking-wide">
             {actionCard.buttonText}

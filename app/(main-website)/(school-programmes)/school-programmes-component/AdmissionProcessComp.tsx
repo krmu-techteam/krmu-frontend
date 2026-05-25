@@ -160,19 +160,21 @@ const AdmissionProcessComp = ({
         {/* {(admisbtn?.buttonclass || admisbtn?.buttonlink) && (
           <Link
             href={admisbtn?.buttonlink}
-            className={`${admisbtn?.buttonclass} text-white bg-[#cb000d] p-[15px] flex items-center justify-around max-w-3xs w-full rounded-lg font-semibold mt-10`}
+            className={`${admisbtn?.buttonclass} text-white bg-[#cb000d] p-[15px] flex items-center justify-around max-w-3xs w-full rounded-lg font-semibold mt-10 relative overflow-hidden group`}
           >
             <span>{admisbtn?.buttontext}</span> <ArrowRight />
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
           </Link>
         )} */}
         {admisbtn && slug !== "bhmct-hotel-management" && (
           <button
             className={`${
               admisbtn.buttonclass || ""
-            } text-white  bg-[#cb000d] hover:bg-[#c42518] w-full md:w-auto md:px-8 py-2.5 flex items-center justify-center gap-3 rounded-md font-semibold mt-8 cursor-pointer tracking-[0.025em] text-lg shadow-md hover:shadow-xl transition-all duration-300 group`}
+            } text-white bg-[#cb000d] hover:bg-[#c42518] w-full md:w-auto md:px-8 py-2.5 flex items-center justify-center gap-3 rounded-md font-semibold mt-8 cursor-pointer tracking-[0.025em] text-lg shadow-md hover:shadow-xl transition-all duration-300 group relative overflow-hidden`}
           >
             <span>{admisbtn.buttontext}</span>
             <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" />
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
           </button>
         )}
         {/* {admisbtn && (
@@ -180,9 +182,10 @@ const AdmissionProcessComp = ({
             {admisbtn.buttonclass === "progPopup" ? (
               <Popup
                 buttonText={admisbtn.buttontext || "Apply Now"}
-                buttonClass={`${admisbtn?.buttonclass} text-white bg-[#cb000d] p-[15px] flex items-center justify-around w-3xs flex text-center rounded-lg font-semibold mt-10`}
+                buttonClass={`${admisbtn?.buttonclass} text-white bg-[#cb000d] p-[15px] flex items-center justify-around w-3xs flex text-center rounded-lg font-semibold mt-10 relative overflow-hidden group`}
                 buttonIcon={<ArrowRight />}
               >
+                <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
                 <p>This is the content inside the popup.</p>
               </Popup>
             ) : admisbtn.buttonlink ? (
@@ -190,9 +193,10 @@ const AdmissionProcessComp = ({
                 href={admisbtn.buttonlink}
                 className={`${
                   admisbtn.buttonclass || ""
-                } text-white bg-[#cb000d] p-[15px] flex items-center justify-around max-w-3xs w-full rounded-lg font-semibold mt-10`}
+                } text-white bg-[#cb000d] p-[15px] flex items-center justify-around max-w-3xs w-full rounded-lg font-semibold mt-10 relative overflow-hidden group`}
               >
                 <span>{admisbtn.buttontext}</span> <ArrowRight />
+                <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
               </Link>
             ) : null}
           </div>

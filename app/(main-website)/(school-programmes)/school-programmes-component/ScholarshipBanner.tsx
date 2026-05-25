@@ -16,9 +16,11 @@ const ScholarshipBanner = () => {
           <Link
             href="/admission/scholarship"
             target="_blank"
-            className="inline-block px-6 py-2 md:px-10 md:py-2.5 lg:px-12 lg:py-3.5 bg-white text-[#051630] font-bold text-sm md:text-md rounded-sm hover:bg-gray-100 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-md text-center w-auto uppercase"
+            className="inline-block px-6 py-2 md:px-10 md:py-2.5 lg:px-12 lg:py-3.5 bg-white text-[#051630] font-bold text-sm md:text-md rounded-sm border border-white hover:text-white hover:border-white transition-all duration-300 shadow-md text-center w-auto uppercase relative overflow-hidden group"
           >
-            Explore
+            <span className="relative z-10">Explore</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0a41a1] to-[#0161b0] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none z-10"></div>
           </Link>
         </div>
       </div>

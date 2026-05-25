@@ -38,11 +38,10 @@ const ProgramHeroCinematic = ({
   return (
     <>
       <section 
-        className="pt-[280px] sm:pt-[320px] md:pt-[360px] lg:pt-32 xl:pt-40 pb-0 lg:pb-12 overflow-x-hidden 2xl:px-0 overflow-hidden 
+        className="hero-cinematic-overlay pt-[280px] sm:pt-[320px] md:pt-[360px] lg:pt-32 xl:pt-40 pb-0 lg:pb-12 overflow-x-hidden 2xl:px-0 overflow-hidden 
         [background-position:var(--bg-pos-mobile)] sm:[background-position:var(--bg-pos-tablet)] lg:[background-position:var(--bg-pos-desktop)] 
         [background-size:var(--bg-size-mobile)] sm:[background-size:var(--bg-size-tablet)] lg:[background-size:var(--bg-size-desktop)] 
         bg-no-repeat relative before:content-[''] before:absolute before:top-0 before:left-0 
-        before:bg-gradient-to-r before:from-[var(--overlay-start)] before:to-transparent 
         before:h-full before:w-full lg:before:w-[var(--overlay-width)] before:z-0"
         style={{ 
           backgroundImage: `url(${config.bgUrl})`,
@@ -52,7 +51,8 @@ const ProgramHeroCinematic = ({
           '--bg-size-desktop': config.bgSize || 'cover',
           '--bg-size-tablet': config.tabletBgSize || 'cover',
           '--bg-size-mobile': config.mobileBgSize || '240%',
-          '--overlay-start': `rgba(0,0,0,${config.overlayOpacity || '0.85'})`,
+          '--overlay-start-desktop': `rgba(0,0,0,${config.overlayOpacity || '0.85'})`,
+          '--overlay-start-mobile': 'rgba(0,0,0,0.5)',
           '--overlay-width': config.overlayWidth || '45%'
         } as React.CSSProperties}
       >
@@ -64,10 +64,10 @@ const ProgramHeroCinematic = ({
                   <h3 className={`text-white/90 lg:block hidden ${config.subtitleMaxWidth || "xl:max-w-[65%] 2xl:max-w-[70%]"} [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.subtitleSize || "text-md lg:text-[14px] xl:text-lg"} font-normal uppercase tracking-[0.05em] drop-shadow-md`}>
                     {heroSection?.subtitle}
                   </h3>
-                  <h1 className={`text-white ${config.titleSize} ${config.titleMaxWidth || ""} font-semibold md:font-bold mb-0 lg:mb-3 leading-[1.1] [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)]`}>
+                  <h1 className={`text-white ${config.titleSize} ${config.titleMaxWidth || ""} font-semibold md:font-bold mb-0 lg:mb-3 leading-[1.1] antialiased [text-shadow:0px_2px_4px_rgba(0,0,0,0.8),0px_4px_10px_rgba(0,0,0,0.8),0px_10px_20px_rgba(0,0,0,0.9)]`}>
                     {title}{" "}
                     <span 
-                      className={`${config.highlightClass || "text-white/90"} [&_.highlight]:text-[#f5a623] font-semibold`}
+                      className={`${config.highlightClass || "text-white/90"} [&_.highlight]:text-[#f5a623] font-semibold antialiased [text-shadow:0px_2px_4px_rgba(0,0,0,0.8),0px_4px_10px_rgba(0,0,0,0.8),0px_10px_20px_rgba(0,0,0,0.9)]`}
                       dangerouslySetInnerHTML={{ __html: highlightitle }}
                     />
                   </h1>
@@ -80,7 +80,7 @@ const ProgramHeroCinematic = ({
                       {formId && (
                         <NpfPopup
                           formId={formId}
-                          btnClass={`progherobtn px-6 py-2 lg:py-2 lg:px-8 md:py-[8px] md:px-6 text-sm md:text-[14px] lg:text-lg ${heroSection.herobtn.buttonclass || ""} rounded-md shadow-xl transition-all hover:scale-105`}
+                          btnClass={`progherobtn px-6 py-2 lg:py-2 lg:px-8 md:py-[8px] md:px-6 text-sm md:text-[14px] lg:text-lg ${heroSection.herobtn.buttonclass || ""} rounded-md shadow-xl transition-all`}
                           btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
                           showIcon={false}
                         />

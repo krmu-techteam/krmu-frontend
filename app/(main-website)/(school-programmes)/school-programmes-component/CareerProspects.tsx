@@ -79,9 +79,10 @@ const CareerProspects = ({
             <div className="mb-6">
               <Link
                 href={btn?.buttonlink || "#"}
-                className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-6 py-3 md:px-10 md:py-3 flex items-center justify-center gap-3 rounded-sm md:rounded-lg font-semibold tracking-wide shadow-lg hover:shadow-2xl transition-all duration-300 group ${btn?.buttonclass}`}
+                className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-6 py-3 md:px-10 md:py-3 flex items-center justify-center gap-3 rounded-sm md:rounded-lg font-semibold tracking-wide shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden ${btn?.buttonclass || ""}`}
               >
                 <span>{btn?.buttontext}</span>
+                <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
               </Link>
             </div>
           )}
@@ -190,10 +191,11 @@ const CareerProspects = ({
         <div className="max-w-[1440px] mx-auto w-full flex justify-center mt-0 md:mt-8 lg:mt-12">
           <Link
             href={btn?.buttonlink || "#"}
-            className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-8 py-2.5 flex items-center justify-center gap-3 max-w-xs w-full rounded-md font-semibold tracking-[0.025em] cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 group ${btn?.buttonclass}`}
+            className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-8 py-2.5 flex items-center justify-center gap-3 max-w-xs w-full rounded-md font-semibold tracking-[0.025em] cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 group relative overflow-hidden ${btn?.buttonclass || ""}`}
           >
             <span>{btn?.buttontext}</span>
             <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" />
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
           </Link>
         </div>
       )}

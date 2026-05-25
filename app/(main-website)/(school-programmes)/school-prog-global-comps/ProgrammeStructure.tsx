@@ -99,7 +99,7 @@ const ProgrammeStructure = ({
                     </span>
                   </span>
                 }
-                buttonClassName="px-6 py-4 bg-[#051730] text-white rounded-sm shadow-xl hover:bg-[#0a264a] transition-all duration-300 border border-[#051730]/10 flex items-center justify-center min-w-[200px]"
+                buttonClassName="px-6 py-4 bg-[#051730] text-white rounded-sm md:rounded-md shadow-xl hover:bg-[#0a264a] transition-all duration-300 border border-[#051730]/10 flex items-center justify-center min-w-[200px]"
                 redirectUrl={currbtn?.buttonlink || "#"}
                 form_name="Programme Handbook"
               />
@@ -111,7 +111,7 @@ const ProgrammeStructure = ({
             {/* Left Navigation & Content Area */}
             <div className="flex-grow flex flex-col">
               {/* Year Tabs */}
-              <div className="flex w-full overflow-x-auto no-scrollbar rounded-xs">
+              <div className="flex w-full overflow-x-auto no-scrollbar rounded-sm md:rounded-md">
                 {programStruct.map((year) => {
                   const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                   const isYearActive = activeYear === yearValue;
@@ -288,7 +288,7 @@ const ProgrammeStructure = ({
                             </span>
                           </div>
                         }
-                        buttonClassName={`px-3 h-12 md:h-14 md:px-6 rounded-xs transition-all duration-300 flex items-center justify-center w-auto shadow-lg
+                        buttonClassName={`px-3 h-12 md:h-14 md:px-6 rounded-sm md:rounded-md transition-all duration-300 flex items-center justify-center w-auto shadow-lg
                         ${
                           isDark
                             ? "bg-[#001732] text-white hover:bg-[#0a264a]"

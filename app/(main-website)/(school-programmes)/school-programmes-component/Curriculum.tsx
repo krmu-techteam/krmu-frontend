@@ -38,7 +38,7 @@ const Curriculum = ({
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10" />
       </div>
 
-      <div className="relative z-20 max-w-[1440px] mx-auto w-full px-4  md:px-6 lg:px-10 2xl:px-0">
+      <div className="relative z-20 max-w-[1440px] mx-auto w-full px-4  md:px-6 lg:px-10 xl:px-0 2xl:px-0">
         <ProgrammeStructure
           currbtn={currbtn}
           currFormContainerId={currFormContainerId}
