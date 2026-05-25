@@ -46,14 +46,14 @@ const LabFacilitiesSlider = ({ labcards, images }: Props) => {
         ]}
         setApi={setApi}
       >
-        <CarouselContent className="px-0 my-5 flex items-stretch">
+        <CarouselContent className="-ml-4 sm:-ml-4 lg:-ml-6 xl:-ml-4 2xl:-ml-8 px-0 my-5 flex items-stretch">
           {labcards &&
             labcards.map((item, i) => {
                const labImage = images[i % images.length];
                return (
-              <CarouselItem key={i} className="basis-full sm:basis-1/2 md:basis-1/3 flex">
+              <CarouselItem key={i} className="pl-4 sm:pl-4 lg:pl-6 xl:pl-8 2xl:pl-4 basis-full sm:basis-1/2 md:basis-1/3 flex">
                 <div
-                  className={`group bg-white rounded-md overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col w-full mx-2`}
+                  className={`group bg-white rounded-md overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col w-full`}
                 >
                   {/* <div className="relative h-[120px] w-full overflow-hidden flex items-center justify-center">
                     <Image

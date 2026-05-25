@@ -66,7 +66,7 @@ const CareerProspects = ({
         <div className="relative z-10 max-w-[1440px] mx-auto px-4 w-full flex flex-col items-center">
           {/* Header Section */}
           <div className="max-w-4xl w-full text-center mb-4">
-            <h3 className="text-3xl md:text-[36px] xl:text-[42px] font-bold text-[#0B1C30] mb-3 md:mb-2 leading-[1.1] tracking-tight">
+            <h3 className="text-2xl md:text-[36px] xl:text-[42px] font-semibold md:font-bold text-[#0B1C30] mb-3 md:mb-2 leading-[1.1] tracking-tight">
               {heading} {highlight}
             </h3>
             <p className="text-[#45464D] text-shadow-xs md:text-shadow-none text-md xl:text-lg mx-auto max-w-full leading-relaxed md:leading-[1.36]">
@@ -79,9 +79,10 @@ const CareerProspects = ({
             <div className="mb-6">
               <Link
                 href={btn?.buttonlink || "#"}
-                className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-6 py-3 md:px-10 md:py-3 flex items-center justify-center gap-3 rounded-sm md:rounded-lg font-semibold tracking-wide shadow-lg hover:shadow-2xl transition-all duration-300 group ${btn?.buttonclass}`}
+                className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-6 py-3 md:px-10 md:py-3 flex items-center justify-center gap-3 rounded-sm md:rounded-lg font-semibold tracking-wide shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden ${btn?.buttonclass || ""}`}
               >
                 <span>{btn?.buttontext}</span>
+                <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
               </Link>
             </div>
           )}
@@ -109,9 +110,9 @@ const CareerProspects = ({
                 <div className="flex ">
                   {careercards?.map((card, index) => (
                     <div key={card?.id} className="flex-[0_0_100%] min-w-0">
-                        <div className="bg-white/90 backdrop-blur-md rounded-sm md:rounded-2xl pt-4 md:pt-6 pb-0 flex flex-col items-center lg:max-w-[457px] xl:max-w-[457px] 2xl:max-w-[457px] min-h-[320px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[418px] 2xl:min-h-[418px] w-full mx-auto relative transition-all duration-1000 border border-white/40 mb-20 xl:mb-12 2xl:mb-24 shadow-xl hover:shadow-2xl overflow-hidden">
+                        <div className="bg-white/90 backdrop-blur-md rounded-sm md:rounded-2xl pt-4 md:pt-6 pb-0 flex flex-col items-center lg:max-w-[457px] xl:max-w-[457px] 2xl:max-w-[457px] min-h-[350px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[418px] 2xl:min-h-[418px] w-full mx-auto relative transition-all duration-1000 border border-white/40 mb-10 md:mb-20 xl:mb-12 2xl:mb-24 shadow-xl hover:shadow-2xl overflow-hidden">
                           <div className="text-center z-20 relative px-6">
-                            <h4 className={`font-bold text-xl md:text-2xl mb-1 text-[#051630] tracking-tight transition-all duration-1000 delay-100 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+                            <h4 className={`font-semibold md:font-bold text-xl md:text-2xl mb-1 text-[#051630] tracking-tight transition-all duration-1000 delay-100 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
                               {card?.title}
                             </h4>
                             <p className={`text-gray-700 text-md md:text-lg max-w-sm mx-auto leading-relaxed md:leading-[1.36] font-normal transition-all duration-1000 delay-300 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
@@ -129,7 +130,7 @@ const CareerProspects = ({
             <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/group_img_32f982771f.png"
                 fill
-                className="-mb-10 object-contain md:translate-y-[20%] lg:translate-y-[42%] xl:translate-y-[32%] 2xl:translate-y-[30%] transform scale-[1.25] md:scale-[1] translate-x-[4px] translate-y-[110px] md:translate-y-[120px]"
+                className="-mb-10 object-contain md:translate-y-[20%] lg:translate-y-[42%] xl:translate-y-[32%] 2xl:translate-y-[30%] transform scale-[1.25] lg:scale-[1.2] xl:scale-[1] translate-x-[4px] translate-y-[110px] md:translate-y-[120px]"
                 alt="Career Prospects Students"
               />
             </div>
@@ -190,10 +191,11 @@ const CareerProspects = ({
         <div className="max-w-[1440px] mx-auto w-full flex justify-center mt-0 md:mt-8 lg:mt-12">
           <Link
             href={btn?.buttonlink || "#"}
-            className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-8 py-2.5 flex items-center justify-center gap-3 max-w-xs w-full rounded-md font-semibold tracking-[0.025em] cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 group ${btn?.buttonclass}`}
+            className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-8 py-2.5 flex items-center justify-center gap-3 max-w-xs w-full rounded-md font-semibold tracking-[0.025em] cursor-pointer shadow-md hover:shadow-xl transition-all duration-300 group relative overflow-hidden ${btn?.buttonclass || ""}`}
           >
             <span>{btn?.buttontext}</span>
             <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" />
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
           </Link>
         </div>
       )}

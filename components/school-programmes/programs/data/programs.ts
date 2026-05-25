@@ -2,8 +2,10 @@ export type HeroConfig = {
   bgUrl: string;
   bgPosition?: string;
   mobileBgPosition?: string;
+  tabletBgPosition?: string;
   bgSize?: string;
   mobileBgSize?: string;
+  tabletBgSize?: string;
   overlayOpacity?: string;
   overlayWidth?: string;
   subtitleSize?: string;
@@ -38,8 +40,10 @@ export const heroConfigs: Record<string, HeroConfig> = {
     bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hr_6bd1b64d96.png",
     bgPosition: "85% center",
     mobileBgPosition: "center -120px",
+    tabletBgPosition: "60% center",
     bgSize: "cover",
     mobileBgSize: "240%",
+    tabletBgSize: "cover",
     overlayOpacity: "0.85",
     overlayWidth: "45%",
     subtitleSize: "sm:text-base mb-1",

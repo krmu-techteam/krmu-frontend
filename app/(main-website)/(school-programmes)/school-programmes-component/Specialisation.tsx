@@ -49,7 +49,7 @@ const Specialisation = ({
     : specialisations?.slice(0, 4);
 
   return (
-    <section className="prog-global-padding py-8 lg:px-10 lg:py-10 xl:py-12 2xl:py-16 px-4 xl:px-10 2xl:px-0">
+    <section className="prog-global-padding py-8 md:p-6 lg:px-10 lg:py-10 xl:py-12 2xl:py-16 px-4  xl:px-10 2xl:px-0">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container">
           <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-2">
@@ -97,7 +97,7 @@ const Specialisation = ({
         </div>
 
         {specialisations && specialisations.length > 4 && (
-          <div className="lg:mt-8 xl:mt-12 flex justify-center">
+          <div className="mt-4 lg:mt-8 xl:mt-12 flex justify-center">
             <button
               onClick={() => setShowAll(!showAll)}
               className="px-8 py-3 bg-[#051730] text-white rounded-md font-semibold hover:bg-[#051730]/90 transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer"

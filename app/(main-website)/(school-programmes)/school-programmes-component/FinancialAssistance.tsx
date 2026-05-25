@@ -32,23 +32,23 @@ const FinancialAssistance = ({
   const points = [point1, point2, point3, point4, point5, point6, point7].filter(Boolean);
 
   return (
-    <section className="prog-global-padding bg-[#f9f9f9] py-8 lg:py-10 xl:py-10 2xl:py-16 px-4 lg:px-10 2xl:px-0">
+    <section className="prog-global-padding bg-[#f9f9f9] py-8 md:p-6 lg:py-10 xl:py-10 2xl:py-16 px-4 lg:px-10 2xl:px-0">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container !max-w-7xl">
-          <h2 className="text-[32px] md:text-[40px] font-bold text-gray-900 mb-1 lg:mb-2 2xl:mb-4">
+          <h2 className="text-2xl md:text-[40px] font-semibold md:font-bold text-gray-900 mb-2 2xl:mb-4">
             {heading}{" "}{highlightheading} 
           </h2>
-          <p className="text-lg md:text-xl text-gray-800 text-center">{description}</p>
+          <p className="text-lg md:text-[17px] lg:text-xl text-gray-800 text-center md:mb-4">{description}</p>
         </div>
 
         {/* Points Layout */}
-        <div className="lg:mt-6 2xl:mt-10 flex flex-col gap-4">
+        <div className="mt-4 lg:mt-6 2xl:mt-10 flex flex-col gap-4">
           {/* Row 1: 4 Items */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {points.slice(0, 4).map((point, index) => (
               <div
                 key={index}
-                className="p-4 font-medium text-base text-gray-900 text-center rounded-sm flex items-center justify-center bg-white h-full transition-all duration-300 border border-gray-300"
+                className="p-4 font-medium text-base text-gray-900 text-center rounded-sm md:rounded-md flex items-center justify-center bg-white h-full transition-all duration-300 border border-gray-300"
                
               >
                 {point}
@@ -61,7 +61,7 @@ const FinancialAssistance = ({
             {points.slice(4).map((point, index) => (
               <div
                 key={index + 4}
-                className="p-4 font-medium text-base text-gray-900 text-center rounded-sm flex items-center justify-center bg-white transition-all duration-300  w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] border border-gray-300"
+                className="p-4 font-medium text-base text-gray-900 text-center rounded-sm md:rounded-md flex items-center justify-center bg-white transition-all duration-300  w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] border border-gray-300"
                
               >
                 {point}
@@ -76,7 +76,7 @@ const FinancialAssistance = ({
             {logos &&
               logos.map((logo) => {
                 return (
-                  <div key={logo?.id} className="flex items-center justify-center border border-gray-200 p-4 rounded-sm bg-white hover:border-[#0a41a1] transition-all duration-300 group h-24">
+                  <div key={logo?.id} className="flex items-center justify-center border border-gray-200 p-4 rounded-sm md:rounded-md bg-white hover:border-[#0a41a1] transition-all duration-300 group h-24">
                     <Image
                       src={`${STRAPI_URL}${logo?.url}`}
                       width={126}
