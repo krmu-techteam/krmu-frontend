@@ -64,7 +64,7 @@ const ProgramHeroCinematic = ({
                   <h3 className={`text-white/90 lg:block hidden ${config.subtitleMaxWidth || "xl:max-w-[65%] 2xl:max-w-[70%]"} [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.subtitleSize || "text-md lg:text-[14px] xl:text-lg"} font-normal uppercase tracking-[0.05em] drop-shadow-md`}>
                     {heroSection?.subtitle}
                   </h3>
-                  <h1 className={`text-white ${config.titleSize} ${config.titleMaxWidth || ""} font-bold mb-0 lg:mb-3 leading-[1.1] [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)]`}>
+                  <h1 className={`text-white ${config.titleSize} ${config.titleMaxWidth || ""} font-semibold md:font-bold mb-0 lg:mb-3 leading-[1.1] [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)]`}>
                     {title}{" "}
                     <span 
                       className={`${config.highlightClass || "text-white/90"} [&_.highlight]:text-[#f5a623] font-semibold`}
@@ -80,7 +80,7 @@ const ProgramHeroCinematic = ({
                       {formId && (
                         <NpfPopup
                           formId={formId}
-                          btnClass={`progherobtn lg:py-2 lg:px-8 md:py-[8px] md:px-6 md:text-[14px] lg:text-lg ${heroSection.herobtn.buttonclass || ""} rounded-md shadow-xl transition-all hover:scale-105`}
+                          btnClass={`progherobtn px-6 py-2 lg:py-2 lg:px-8 md:py-[8px] md:px-6 text-sm md:text-[14px] lg:text-lg ${heroSection.herobtn.buttonclass || ""} rounded-md shadow-xl transition-all hover:scale-105`}
                           btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
                           showIcon={false}
                         />
@@ -94,7 +94,7 @@ const ProgramHeroCinematic = ({
               <div className="w-full bg-[#001631] lg:bg-transparent py-8 md:py-6 lg:py-0 mt-0 lg:mt-10 relative z-10">
                 <div className="grid grid-cols-3 gap-2 lg:flex lg:flex-nowrap items-center lg:gap-x-10">
                   <div className="flex flex-col lg:pr-8 xl:pr-10 lg:border-r border-white/20 text-center lg:text-left">
-                    <span className="text-white font-semibold text-lg md:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
+                    <span className="text-white font-semibold text-xl md:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
                       {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
                     </span>
                     <span className="text-white/90 text-[11px] md:text-sm xl:text-base mt-1 font-normal whitespace-nowrap overflow-hidden text-ellipsis">
@@ -102,13 +102,13 @@ const ProgramHeroCinematic = ({
                     </span>
                   </div>
                   <div className="flex flex-col lg:px-8 xl:pr-10 lg:pl-0 lg:border-r border-white/20 text-center lg:text-left">
-                    <span className="text-white font-semibold text-lg md:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">800+</span>
+                    <span className="text-white font-semibold text-xl md:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">800+</span>
                     <span className="text-white/90 text-[11px] md:text-sm xl:text-base mt-1 font-normal whitespace-nowrap overflow-hidden text-ellipsis">
                       {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
                     </span>
                   </div>
                   <div className="flex flex-col text-center lg:text-left relative">
-                    <span className="text-white font-semibold text-lg md:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
+                    <span className="text-white font-semibold text-xl md:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
                       {dreamcareerSection?.placementassistnum || "100%"}
                     </span>
                     <span className="text-white/90 text-[11px] md:text-sm xl:text-base mt-1 font-normal whitespace-nowrap overflow-hidden text-ellipsis">
