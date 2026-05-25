@@ -38,9 +38,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const page = async ({ params }: Props) => {
   const { slug } = await params;
 
-  const facultyResData = await getFacultyBySlug(slug); 
+  const facultyResData = await getFacultyBySlug(slug);
   const currentFaculty = facultyResData?.find(
-    (fac: singleFaculty) => fac?.slug === slug
+    (fac: singleFaculty) => fac?.slug === slug,
   );
 
   const facultyContent = currentFaculty?.content.rendered || "";
@@ -110,16 +110,18 @@ const page = async ({ params }: Props) => {
       }}
     >
       <div className="fac_info_container">
-        <div className="fac_img_container text-center">
-          {facImgUrl && (
-            <Image
-              src={facImgUrl}
-              width={272}
-              height={292}
-              className="h-[292px] rounded-[20px] inline-block w-full sm:w-fit object-cover"
-              alt=""
-            />
-          )}
+        <div className="fac_img_container  ">
+          <div className=" rounded-[20px] overflow-hidden w-[300px]  bg-white">
+            {facImgUrl && (
+              <Image
+                src={facImgUrl}
+                width={300}
+                height={300}
+                className="h-[300px] rounded-[20px] w-full  object-cover"
+                alt=""
+              />
+            )}
+          </div>
         </div>
 
         <div className="fac_name_desg_int text-white">
@@ -172,8 +174,8 @@ const page = async ({ params }: Props) => {
                     item.type === "email"
                       ? `mailto:${item.value}`
                       : item.type === "phone"
-                      ? `tel:${item.value}`
-                      : item.value
+                        ? `tel:${item.value}`
+                        : item.value
                   }
                   className="text-base break-all"
                   target={item.type === "linkedin" ? "_blank" : undefined}
