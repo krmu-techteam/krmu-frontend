@@ -169,7 +169,7 @@ const page = async ({ params }: Props) => {
   const ourLocationSection = singleSchoolProgramme?.ourlocation;
 
   if (singlePHDProgramme?.degree === "Doctoral Programme") {
-    return <PHDProgrammes phdData={singlePHDProgramme} />;
+    return <PHDProgrammes phdData={singlePHDProgramme} slug={slug} />;
   }
 
   type FAQProg = {

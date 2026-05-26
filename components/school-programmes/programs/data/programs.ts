@@ -29,7 +29,7 @@ const defaultCinematicConfig: Partial<HeroConfig> = {
   titleMaxWidth: "lg:max-w-[80%] 2xl:max-w-full",
   subtitleMaxWidth: "lg:max-w-[80%] 2xl:max-w-full",
   subtitleSize: "",
-  titleSize: "text-[24px] lg:text-xl xl:text-3xl 2xl:text-[52px]",
+  titleSize: "text-[24px] lg:text-3xl xl:text-[42px] 2xl:text-[52px]",
   descSize: "2xl:text-lg",
   contentMaxWidth: "2xl:max-w-lg",
   highlightClass: "block text-white text-[18px] xl:text-[30px] 2xl:text-[35px] mt-2 md:mt-3 leading-[1.26]"
@@ -37,17 +37,17 @@ const defaultCinematicConfig: Partial<HeroConfig> = {
 
 export const heroConfigs: Record<string, HeroConfig> = {
   "bba-hr": {
-    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hr_6bd1b64d96.png",
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hr_fb78e052aa.jpg",
     bgPosition: "85% center",
-    mobileBgPosition: "center -120px",
+    mobileBgPosition: "center top",
     tabletBgPosition: "60% center",
     bgSize: "cover",
-    mobileBgSize: "240%",
+    mobileBgSize: "cover",
     tabletBgSize: "cover",
     overlayOpacity: "0.85",
     overlayWidth: "45%",
     subtitleSize: "sm:text-base mb-1",
-    titleSize: "lg:text-3xl xl:text-[40px] 2xl:text-5xl",
+    titleSize: "text-[24px] lg:text-3xl xl:text-[42px] 2xl:text-[52px]",
     descSize: "xl:text-[15px] 2xl:text-lg ",
     contentMaxWidth: "2xl:max-w-lg"
   },
@@ -154,7 +154,183 @@ export const heroConfigs: Record<string, HeroConfig> = {
   } as HeroConfig,
   "phd-mechanical-engineering": {
     ...defaultCinematicConfig,
-    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_computer_science_engineering_eda2b57229.jpg",
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_mechanical_engineering_2800e1e94c.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hons-hr-research": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_hr_research_ffa83ec57c.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hons-hons-with-research-hr-marketing-finance-international-business-travel-and-tourism-semester-abroad-programme-with-university-of-east-anglia-uea-norwich-uk": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_international_business_research_ee08c1cf96.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-marketing": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_marketing_105f198350.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hons-with-research-marketing": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_with_research_marketing_13b6cbab13.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hr-marketing-finance-international-business-travel-and-tourism-semester-abroad-programme-with-university-of-east-anglia-uea-norwich-uk": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_hons_with_research_hr_marketing_finance_international_business_travel_and_tourism_semester_abroad_programme_with_university_of_east_anglia_uea_norwich_uk_adc22342a4.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-finance": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_finance_a0747576c5.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hons-finance-research": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_finance_research_231128d1f8.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hons-hons-with-research-digital-marketing": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_hons_with_research_digital_marketing_8937bb8d41.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-digital-marketing": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_digital_marketing_e5a4bc86e9.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-international-business": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_international_business_143cea9a5d.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hons-international-business-research": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_international_business_research_38e59b4ad9.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-travel-tourism-management": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_travel_tourism_management_cac9d0998c.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hons-travel-tourism-research": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_travel_tourism_research_38c935ac3d.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-business-intelligence-and-analytics": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_business_intelligence_and_analytics_5963e3963e.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-entrepreneurship": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_entrepreneurship_7dc0d95fb8.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hons-entrepreneurship-research": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_entrepreneurship_research_5c93f9a2c3.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-international-accounting-and-finance": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_international_accounting_and_finance_e277c2565b.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hons-international-accounting-and-finance-research": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_international_accounting_and_finance_research_9cf4e07906.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-logistics-supply-chain-management": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_logistics_supply_chain_management_29911cbd9b.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hons-logistics-supply-chain-management-research": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_logistics_supply_chain_management_research_58a594b636.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bcom-hons-2": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bcom_hons_2_a7e7bf11a9.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bcom-hons-research": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bcom_hons_research_14998ee877.jpg",
+    bgPosition: "70% top",
+    mobileBgPosition: "center top",
+  } as HeroConfig,
+  "bcom-international-accounting-finance-acca-2": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bcom_international_accounting_finance_acca_2_ccfeede68c.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bcom-hons-international-accounting-finance-acca-research": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bcom_hons_international_accounting_finance_acca_research_e4b23c1dbb.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bcom": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bcom_b2cf7e8ef3.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "integrated-bba-mba": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/integrated_bba_mba_85ddd89e40.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "mba-fintech": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/mba_fintech_4bcb466da2.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "mba": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/mba_8e2fcc935a.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "mba-digital-marketing": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/mba_digital_marketing_2728a5c094.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-management": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_management_57cf30bda7.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-commerce": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_commerce_cabc2265e0.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-llb-hons": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_llb_hons_db274f3d60.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "ba-llb-hons": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ba_llb_hons_e4c8c7ad8a.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "llb-hons": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/llb_hons_ee323a2777.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "llm-masters-law": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/llm_masters_law_e697049d86.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
 };

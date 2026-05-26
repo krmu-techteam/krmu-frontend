@@ -20,9 +20,9 @@ export const ActionCards = () => {
       buttonText: "Apply Now",
       link: "#apply-form",
       icon: <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover/btn:translate-x-1" />,
-      mainIcon: <GraduationCap className="w-10 h-10 text-red-500 group-hover:-translate-y-1 transition-transform duration-500" strokeWidth={1.5} />,
+      mainIcon: <GraduationCap className="w-10 h-10 text-[#CB000D] group-hover:-translate-y-1 transition-transform duration-500" strokeWidth={1.5} />,
       cardBg: "bg-gradient-to-br from-[#002952] to-[#051730]",
-      buttonBg: "bg-[#E31E24] text-white hover:bg-[#c41a1f] border border-transparent",
+      buttonBg: "bg-[#CB000D] text-white hover:bg-[#c41a1f] border border-transparent",
       textColor: "text-white",
       glowColor: "rgba(227, 30, 36, 0.2)",
       borderColor: "border-white/10 hover:border-red-500/30"
