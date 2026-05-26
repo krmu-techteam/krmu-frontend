@@ -47,7 +47,11 @@ const ConnectingDreamSlider = ({ logos }: Props) => {
 
   if (!logos || logos.length === 0) return null;
 
-  if (!mounted || !isSlider) {
+  if (!mounted) {
+    return <div className="w-full min-h-[56px] sm:min-h-[64px]" />;
+  }
+
+  if (!isSlider) {
     return (
       <div className="w-full flex flex-row flex-nowrap justify-center items-center gap-x-2 sm:gap-x-6 xl:gap-x-8">
         {logos.map((logo) => (

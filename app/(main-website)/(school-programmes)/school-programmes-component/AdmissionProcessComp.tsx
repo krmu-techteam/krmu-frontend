@@ -30,7 +30,7 @@ const AdmissionProcessComp = ({
         <h2 className="text-2xl md:text-[40px] font-semibold md:font-bold text-gray-900 leading-tight tracking-tight mb-2 md:mb-3">
           {heading} {highlight}
         </h2>
-        <p className="text-[#424242] text-md md:text-xl mb-3 md:mb-5">
+        <p className="text-[#424242] text-md md:text-xl mb-5 md:mb-10">
           {desc}
         </p>
       </div>
