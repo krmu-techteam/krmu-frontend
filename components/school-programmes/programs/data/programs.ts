@@ -132,4 +132,29 @@ export const heroConfigs: Record<string, HeroConfig> = {
     bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_computer_science_and_engineering_semiconductor_design_0788bdf247.png",
     bgPosition: "70% top",
   } as HeroConfig,
+  "master-computer-application-mca": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/master_computer_application_mca_2f32723431.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "mca-ai-ml": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/mca_ai_ml_c83d8e88be.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "mtech-computer-science": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/mtech_computer_science_815a162413.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-computer-science-engineering": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_computer_science_engineering_eda2b57229.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-mechanical-engineering": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_computer_science_engineering_eda2b57229.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
 };

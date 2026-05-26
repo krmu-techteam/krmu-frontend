@@ -42,7 +42,7 @@ const ProgramHeroCinematic = ({
         [background-position:var(--bg-pos-mobile)] sm:[background-position:var(--bg-pos-tablet)] lg:[background-position:var(--bg-pos-desktop)] 
         [background-size:var(--bg-size-mobile)] sm:[background-size:var(--bg-size-tablet)] lg:[background-size:var(--bg-size-desktop)] 
         bg-no-repeat relative before:content-[''] before:absolute before:top-0 before:left-0 
-        before:h-full before:w-full lg:before:w-[var(--overlay-width)] before:z-0"
+        before:h-full before:w-full before:z-0"
         style={{ 
           backgroundImage: `url(${config.bgUrl})`,
           '--bg-pos-desktop': config.bgPosition || 'center center',

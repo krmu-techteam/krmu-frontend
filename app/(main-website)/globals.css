@@ -4758,8 +4758,9 @@
   .hero-cinematic-overlay::before {
     background: linear-gradient(
       to right,
-      var(--overlay-start-desktop),
-      transparent
+      var(--overlay-start-desktop) 0%,
+      rgba(0, 0, 0, 0) 45%,
+      rgba(0, 0, 0, 0) 100%
     ) !important;
   }
 }
