@@ -18,7 +18,7 @@ const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
       //   backgroundImage: "linear-gradient(180deg,#001732 0%,#004e8a 100%)",
       // }}
     >
-      <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-center">
+      <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-center pt-20">
         <div className="w-full lg:w-2/6 text-white px-4">
           {/* <h4 className="mb-5 md:mb-0 text-2xl md:text-3xl lg:text-5xl font-semibold leading-[1.3] lg:mx-8 xl:mx-12">
             Let’s explore what makes KRMU’s SOET better than that of other
@@ -66,10 +66,14 @@ const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
                         key={list2?.id}
                         className="min-h-[135px] h-full flex items-center gap-5 pl-5 py-[5.6px] border-b border-[#d9d9d957] last:border-none"
                       >
-                        <ThumbsDown className="text-[#e31e24]" />
-                        <span className="text-base font-medium">
-                          {list2?.listtext}
-                        </span>
+                        <div className="w-[15%]">
+                          <ThumbsDown className="text-[#e31e24]" />
+                        </div>
+                        <div className="w-[85%] pr-2.5">
+                          <span className="text-sm xl:text-base font-medium max-w-[220px] lg:max-w-full">
+                            {list2?.listtext}
+                          </span>
+                        </div>
                       </li>
                     );
                   })}
@@ -87,13 +91,14 @@ const SchoolLetsExplore = ({ content, list1, list2, list3 }: Props) => {
                         key={list?.id}
                         className="min-h-[135px] h-full flex items-center gap-5 pl-5 py-[5.6px] border-b border-[#001732] last:border-none"
                       >
-                        <div>
-                          {" "}
+                        <div className="w-[15%]">
                           <CircleCheckBig className="text-[#2ea975] w-10 h-6" />
                         </div>
-                        <span className="text-base font-medium">
-                          {list?.listtext}
-                        </span>
+                        <div className="w-[85%] pr-2.5">
+                          <span className="text-base font-medium">
+                            {list?.listtext}
+                          </span>
+                        </div>
                       </li>
                     );
                   })}

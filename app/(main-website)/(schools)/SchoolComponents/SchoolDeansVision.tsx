@@ -46,7 +46,7 @@ const SchoolDeansVision = ({
           }}
         >
           <div className="xl:w-3/12 flex justify-center xl:block">
-            <div className="bg-white w-[90%] rounded-3xl">
+            <div className="bg-white w-fit rounded-3xl flex justify-center items-center">
               <Image
                 src={`${STRAPI_URL}${deanImgUrl}`}
                 width={358}

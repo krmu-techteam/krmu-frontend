@@ -96,8 +96,6 @@ const ScholarNotesUG = () => {
            
           </div>
           <div className="w-full lg:w-3/12 flex flex-col gap-5">
-        
-
             <div className="flex gap-5">
               <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center">
                 9

@@ -30,7 +30,7 @@ const EventsAndExperienceCard = ({
         width={340}
         height={263}
         alt={title || ""}
-        className="max-h-[263px] min-h-[264px] w-full h-full p-2.5 rounded-4xl"
+        className="object-cover max-h-[263px] min-h-[264px] w-full h-full p-2.5 rounded-4xl"
       />
       <div className="text-white px-5">
         <h5 className="mt-5 mb-3.5 text-xl font-medium">{title}</h5>

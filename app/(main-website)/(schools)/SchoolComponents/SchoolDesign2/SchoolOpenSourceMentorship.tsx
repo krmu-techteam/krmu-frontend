@@ -19,41 +19,21 @@ const SchoolOpenSourceMentorship = () => {
         }}
       >
         <div className="bg-[#051630] rounded-3xl overflow-hidden">
-          <div className="p-5 sm:p-8 lg:p-12">
+          <div className="p-2.5 sm:p-5 md:p-8 lg:p-12">
             {/* ── Top Row: Achievement card (left) + Title & Description (right) ── */}
-            <div
-              className="flex flex-col sm:flex-row gap-10 pb-8  items-center"
-              style={{
-                borderBottom: "5px solid transparent",
-                backgroundImage:
-                  "linear-gradient(#051630, #051630), linear-gradient(to right, transparent, #3b6794 50%, transparent)",
-                backgroundOrigin: "padding-box, border-box",
-                backgroundClip: "padding-box, border-box",
-              }}
-            >
-              {/* Achievement card */}
-              <div
-                className="flex flex-col sm:flex-row w-full  md:w-[50%] lg:w-[50%] xl:w-[40%] rounded-2xl overflow-hidden"
-                style={{
-                  // background: "linear-gradient(135deg,#0b2347 0%,#002f8e 100%)",
-                  backgroundColor: "#002f8e",
-                  // border: "1px solid rgba(255,255,255,0.15)",
-                }}
-              >
-                {/* Photo */}
-                <div className="relative  w-full sm:w-2/5">
-                  <Image
-                    src="/schools/OP.JPG"
-                    alt="Jayant Parashar"
-                    width={300}
-                    height={200}
-                    className="h-[300px] sm:h-full w-full"
-                  />
-                </div>
-
-                {/* Text info */}
-                <div className="flex flex-col p-5 w-full sm:w-3/5">
-                  <div>
+            <div className="flex flex-col lg:flex-row gap-10 items-center">
+              <div className="w-full max-w-md lg:max-w-full lg:w-3/5 xl:w-1/2 2xl:w-2/5">
+                <div className="flex flex-col sm:flex-row rounded-2xl overflow-hidden">
+                  <div className="relative overflow-hidden w-full sm:w-2/5">
+                    <Image
+                      src="/schools/OP.JPG"
+                      alt="Jayant Parashar"
+                      width={271}
+                      height={360}
+                      className="object-cover object-top-left sm:object-top h-[420px] sm:h-full w-full"
+                    />
+                  </div>
+                  <div className="w-full sm:w-3/5 p-5 bg-[#002f8e]">
                     <p className="text-white font-semibold lg:text-3xl text-xl leading-tight">
                       Jayant Parashar
                     </p>
@@ -66,22 +46,19 @@ const SchoolOpenSourceMentorship = () => {
                     <p className="text-white lg:text-[17px] text-sm mt-2">
                       Google Stipend · GSoC 2026
                     </p>
-                  </div>
 
-                  {/* GSoC badge */}
-                  <div className="relative mt-3 w-full h-[80px] lg:h-[70px]">
-                    <Image
-                      src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1773422694704_886721c56d.png"
-                      alt="GSoC Logo"
-                      fill
-                      className="object-cover rounded-lg w-full h-full"
-                    />
+                    <div className="relative mt-3 w-full h-[80px] lg:h-[70px]">
+                      <Image
+                        src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1773422694704_886721c56d.png"
+                        alt="GSoC Logo"
+                        fill
+                        className="object-cover rounded-lg w-full h-full"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-
-              {/* Title + Description */}
-              <div className="sm:w-full md:w-[50%] lg:w-[50%] xl:w-[60%]">
+              <div className="w-full lg:w-2/5 xl:w-1/2 2xl:w-3/5">
                 <h2 className="text-3xl sm:text-4xl xl:text-4xl leading-tight mb-4">
                   Open Source{" "}
                   <span className="text-[#4da6ff] font-semibold">
@@ -119,6 +96,7 @@ const SchoolOpenSourceMentorship = () => {
                 </p>
               </div>
             </div>
+           
             {/* <hr className="color-white" /> */}
 
             {/* ── What You Get ── */}

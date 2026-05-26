@@ -1,21 +1,8 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
 import "./globals.css";
-
-// import { Button } from "@/components/ui/button";
-import Script from "next/script";
 import NoPaperFormProvider from "@/lib/constants/NoPaperFormProvider";
 import HeaderWrapper from "./components/Header/HeaderWrapper";
 import Footer from "./components/Footer/Footer";
-
-// import EnquirePopup from "./components/EnquirePopup";
-
-// import NpfPopupButton from "./components/NpfPopupButton";
-
-const montserrat = Montserrat({
-  weight: ["300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "KRMU",
@@ -25,61 +12,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default function MainWebsiteLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        {/* ✅ Google Tag Manager Script */}
-        <Script id="gtm-head" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-MKXDVSJ9');
-          `}
-        </Script>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-VJJK572TGN"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-VJJK572TGN');
-        `}
-        </Script>
-      </head>
-      <body className={`${montserrat.className} antialiased`}>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MKXDVSJ9"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
+    <>
+      <div id="main-header">
         <HeaderWrapper />
-        <NoPaperFormProvider />
-        <div>
-
+      </div>
+      <NoPaperFormProvider />
+      <div>
         {children}
-        </div>
+      </div>
+      <div id="main-footer">
         <Footer />
-        {/* <Button className="bg-[#f00] border border-none py-[6px] px-[15px] fixed top-[40%] right-[-42px] rotate-90 rounded-sm h-[27px] z-10">
-          Enquire Now
-        </Button> */}
-        {/* <NpfPopupButton formId="d63cf9c4d3104c39f3ac28164701a69c" /> */}
-
-        {/* <NpfPopupButton /> */}
-        {/* <EnquirePopup /> */}
-      </body>
-    </html>
+      </div>
+    </>
   );
 }

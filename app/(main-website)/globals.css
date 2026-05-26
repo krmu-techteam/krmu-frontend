@@ -4750,3 +4750,13 @@
     margin-bottom: -10px !important;
   } */
 }
+
+.schoolBanner {
+  background-image: var(--mobile-bg);
+}
+
+@media (min-width: 1280px) {
+  .schoolBanner {
+    background-image: var(--desktop-bg);
+  }
+}

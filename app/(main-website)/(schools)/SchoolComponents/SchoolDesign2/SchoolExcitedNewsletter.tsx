@@ -100,7 +100,7 @@ const SchoolExcitedNewsletter = async ({
                     <Link
                       key={btn?.id}
                       href={btn?.buttonlink || ""}
-                      className={`border border-white py-2.5 px-6 w-full sm:w-fit bg-white transition duration-300 font-semibold rounded-md inline-block text-sm md:text-base shadow-md text-black hover:text-white hover:border hover:border-white hover:bg-transparent`}
+                      className={`border border-white py-2.5 px-6 w-full max-w-[250px] 2xl:max-w-fit text-center bg-white transition duration-300 font-semibold rounded-md inline-block text-sm md:text-base shadow-md text-black hover:text-white hover:border hover:border-white hover:bg-transparent`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

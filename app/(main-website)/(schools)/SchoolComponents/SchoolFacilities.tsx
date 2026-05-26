@@ -31,7 +31,7 @@ const SchoolFacilities = ({ fac_slides }: Props) => {
   }, [api]);
 
   return (
-    <div className="pt-[30px] pb-32 px-4 sm:pt-20 sm:pb-40 bg-[#001732]">
+    <div className="pt-[30px] pb-32 px-4 sm:pt-16 sm:pb-40 bg-[#001732]">
       <div className="max-w-[1664px] mx-auto w-full">
         <div className="text-center text-white px-4">
           <h5 className="text-3xl md:text-5xl lg:text-6xl xl:text-[80px] leading-[1.16] font-medium">
@@ -56,10 +56,10 @@ const SchoolFacilities = ({ fac_slides }: Props) => {
                   index === current ? "fac_active_slide" : ""
                 }`}
               >
-                <h6 className="text-[10px] sm:text-xl md:text-2xl mt-5 font-semibold text-center fac_title text-white">
+                <h6 className="text-[10px] sm:text-xl md:text-2xl my-5 font-semibold text-center fac_title text-white xl:h-16">
                   {slide.title}
                 </h6>
-                <div className="fac_slide_img_container mt-10">
+                <div className="fac_slide_img_container">
                   <Image
                     src={`${STRAPI_URL}${slide?.facility_img?.url}`}
                     width={1140}

@@ -21,7 +21,7 @@ const SchoolFacultyAdvisory = ({ schoolCat, fac_adv }: Props) => {
                 dangerouslySetInnerHTML={{
                   __html: fac_adv?.fac_title,
                 }}
-                className="text-[45px] text-center"
+                className="text-3xl md:text-[45px] text-center"
               />
               {/* <FacultyLoop
               // schoolCat={schoolCat}
