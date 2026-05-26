@@ -61,7 +61,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
 
   "btech-cse-ai-ml": {
     ...defaultCinematicConfig,
-    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_cse_ai_ml_15cdb3df4d.png",
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_cse_ai_ml_024c301deb.jpg",
   } as HeroConfig,
 
   "btech-cse-cyber-security": {
@@ -71,7 +71,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
 
   "btech-cse-in-data-science": {
     ...defaultCinematicConfig,
-    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_cse_in_data_science_5d0e006c7a.png",
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_cse_in_data_science_c2556561a6.jpg",
   } as HeroConfig,
 
   "btech-full-stack-development": {
