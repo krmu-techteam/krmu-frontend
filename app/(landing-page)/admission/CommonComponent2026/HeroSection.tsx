@@ -34,9 +34,6 @@ const HeroSection = ({
                 dangerouslySetInnerHTML={{
                   __html: content || "",
                 }}
-                style={{
-                  textShadow: "2px 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9)"
-                }}
               />
             </div>
 
@@ -44,9 +41,6 @@ const HeroSection = ({
               dangerouslySetInnerHTML={{
                 __html: desc || "",
               }}
-               style={{
-                  textShadow: "2px 2px 8px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.9)"
-                }}
               className="hidden lg:block"
             />
           </div>
