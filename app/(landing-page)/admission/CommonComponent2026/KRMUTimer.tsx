@@ -83,7 +83,7 @@ export default function KRMUTimer({ targetDate }: ZenithTimerProps) {
         Now or Never! Grab Your 100% Scholarship Today
       </span> */}
 <span className="text-xs uppercase tracking-wider font-semibold">
-      Application Deadline Ends on 20th May | Avail Up to 100% Scholarships
+      Fully Sponsored Europe Study Tour Awaits — Apply Before May 31
       </span>
       <div className="flex gap-2 font-mono text-sm">
         <TimeBox value={format(timeLeft.days)} label="D" />
