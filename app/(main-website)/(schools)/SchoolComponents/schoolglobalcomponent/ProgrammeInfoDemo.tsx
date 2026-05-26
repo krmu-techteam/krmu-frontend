@@ -137,7 +137,7 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
       <div className="scroll-mt-[90px]" ref={sectionRef}>
         {/* LEFT SIDE */}
         {/* <div className="w-full xl:w-1/2 bg-[url(/schools/prog-bg.webp)] bg-center bg-cover bg-no-repeat p-2.5 sm:p-5 z-10 rounded-3xl"> */}
-        <div className="w-full px-4 xl:p-5 rounded-3xl">
+        <div className="w-full  xl:p-5 rounded-3xl">
           <Tabs
             defaultValue="ug"
             value={degreeTabs.find((d) => d.value === activeDegree)?.tabValue}
@@ -168,7 +168,7 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
               <TabsContent
                 key={deg.tabValue}
                 value={deg.tabValue}
-                className={`${programs[deg.value]?.length > 3 ? "grid md:grid-cols-2 xl:grid-cols-4 gap-5" : "flex flex-col sm:flex-row flex-wrap lg:grid grid-cols-2 xl:flex justify-center gap-5"} `}
+                className={`${programs[deg.value]?.length > 3 ? "grid md:grid-cols-2 xl:grid-cols-4 gap-5" : "flex flex-col sm:flex-row flex-wrap lg:grid grid-cols-2 xl:flex justify-center gap-5"} px-4 `}
               >
                 {programs[deg.value] === undefined ? (
                   // LOADING STATE
@@ -241,16 +241,9 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
                 <p>Fee Structure</p>
               </div>
               <div className="grid grid-cols-2 sm:flex flex-col md:flex-row gap-4 border-b border-gray-300 pb-2.5 sm:pb-5 mb-2.5 sm:mb-5">
-                <div className="lg:border-r border-black pr-4">
-                  <p className="mb-5 font-normal text-sm sm:text-base uppercase leading-[1]">
-                    Duration
-                  </p>
-                  <p className="text-sm sm:text-base  leading-[1] font-bold">
-                    {criteria.Duration || "N/A"}
-                  </p>
-                </div>
-                <div className="lg:border-r border-black pr-4">
-                  <p className="mb-5 font-normal text-sm sm:text-base uppercase leading-[1]">
+               
+                <div className="lg:border-r border-gray-200 pr-4">
+                  <p className="mb-5 font-normal text-sm sm:text-base leading-[1]">
                     Semester I
                   </p>
                   <p className="text-sm sm:text-base  leading-[1] font-bold">
@@ -259,8 +252,8 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
                     {criteria.semester_i === "TBD" ? "" : "/-"}
                   </p>
                 </div>
-                <div className="lg:border-r border-black pr-4">
-                  <p className="mb-5 font-normal text-sm sm:text-base uppercase leading-[1]">
+                <div className="lg:border-r border-gray-200 pr-4">
+                  <p className="mb-5 font-normal text-sm sm:text-base leading-[1]">
                     Semester II
                   </p>
                   <p className="text-sm sm:text-base  leading-[1] font-bold">
@@ -276,10 +269,18 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
                       ? "(2025-26)"
                       : ""}
                   </p>
-                  <p className="text-sm sm:text-base uppercase leading-[1] font-bold">
+                  <p className="text-sm sm:text-base leading-[1] font-bold">
                     {criteria.programme_fee_per_year === "TBD" ? "" : "Rs."}{" "}
                     {criteria.programme_fee_per_year || "N/A"}{" "}
                     {criteria.programme_fee_per_year === "TBD" ? "" : "/-"}
+                  </p>
+                </div>
+                 <div className="pr-4 sm:ml-auto">
+                  <p className="mb-5 font-normal text-sm sm:text-base leading-[1]">
+                    Duration
+                  </p>
+                  <p className="text-sm sm:text-base  leading-[1] font-bold">
+                    {criteria.Duration || "N/A"}
                   </p>
                 </div>
               </div>
