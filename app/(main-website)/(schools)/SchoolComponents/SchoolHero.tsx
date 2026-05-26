@@ -67,8 +67,8 @@ const SchoolHero = ({
     "school-of-basic-and-applied-sciences": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/sbas-banner.png",
-      middleImg: "/schools/middleImg/sbas-middleimg.png",
+      bgURl: "/schools/banners/sbas-banner-2.webp",
+      middleImg: "/schools/middleImg/sbas-middleimg-2.png",
       mobileBgImg: "/schools/banners/mob-sbas-banner.webp",
       notCutoutBg: false,
     },
@@ -94,8 +94,8 @@ const SchoolHero = ({
     "school-of-emerging-media-and-creator-economy": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/semce-banner.png",
-      middleImg: "/schools/middleImg/semce-middleimg.webp",
+      bgURl: "/schools/banners/semce-banner-2.webp",
+      middleImg: "/schools/middleImg/semce-middleimg-2.png",
       mobileBgImg: "/schools/banners/mob-semce-banner.webp",
       notCutoutBg: false,
     },
@@ -103,8 +103,8 @@ const SchoolHero = ({
     "school-of-architecture-design": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/soad-banner.webp",
-      middleImg: "/schools/middleImg/soad-middleimg.png",
+      bgURl: "/schools/banners/soad-banner-2.webp",
+      middleImg: "/schools/middleImg/soad-middleimg-2.png",
       mobileBgImg: "/schools/banners/mob-soad-banner.webp",
       notCutoutBg: false,
     },
@@ -130,9 +130,9 @@ const SchoolHero = ({
     "school-of-physiotherapy-and-rehabilitation-sciences": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/sprs-banner.png",
-      middleImg: "/schools/middleImg/sprs-middleimg.png",
-      mobileBgImg: "/schools/banners/mob-sprs-banner.webp",
+      bgURl: "/schools/banners/sprs-banner-2.webp",
+      middleImg: "/schools/middleImg/sprs-middleimg-2.png",
+      mobileBgImg: "/schools/banners/mob-sprs-banner-2.webp",
       notCutoutBg: false,
     },
     "school-of-medical-and-allied-sciences": {
@@ -179,26 +179,26 @@ const SchoolHero = ({
         className={`relative overflow-hidden ${
           fullWidth
             ? "lg:py-[20%] lg:pb-0 pt-[300px] pb-5"
-            : `${notCutoutBg ? 'pt-[45px]' : 'pt-[100px] '} sm:pt-[140px] lg:pt-[280px]  schoolBanner`
+            : `${notCutoutBg ? "pt-[45px] sm:pt-0 xl:pt-[380px]" : "pt-[100px] sm:pt-[140px] lg:pt-[280px]"} schoolBanner`
         } bg-cover bg-no-repeat bg-center`}
         style={
           {
             "--mobile-bg": `url(${mobileBg})`,
             "--desktop-bg": `url(${desktopBg})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center right",
             backgroundRepeat: "no-repeat",
           } as React.CSSProperties
         }
       >
         {notCutoutBg && (
-          <div className="flex sm:hidden items-center justify-center">
+          <div className={`flex xl:hidden items-center justify-center w-full`}>
             <Image
               src={mobileBgImg}
               width={640}
               height={640}
               alt=""
-              className="h-[400px] object-cover"
+              className={`${notCutoutBg ? "h-[400px] md:h-[800px]" : "h-[400px]"} w-full  object-cover`}
             />
           </div>
         )}
@@ -296,7 +296,7 @@ const SchoolHero = ({
                   <p className="text-sm lg:text-lg 2xl:text-2xl font-normal sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
                     {subheading}
                   </p>
-                  <h1 className="text-2xl md:text-4xl 2xl:text-6xl text-shadow-lg leading-[1.2] font-bold">
+                  <h1 className="text-2xl md:text-4xl xl:text-6xl text-shadow-lg leading-[1.2] font-bold">
                     {title}
                   </h1>
                   <div className="flex flex-col items-center justify-center gap-3.5 sm:gap-5 mt-5 sm:my-4">
@@ -313,7 +313,7 @@ const SchoolHero = ({
                         <Link
                           key={btn.id} /* Rectangle 970 */
                           href={btn.buttonlink || "#"}
-                          className={`text-white w-full sm:w-fit flex justify-center items-center max-w-[220px] sm:max-w-none p-2.5 sm:px-6 sm:py-3.5 rounded-lg gap-4 font-semibold bg-[#001732] border-2 border-[#0189ae] transition-all ${
+                          className={`text-white w-full md:text-xl sm:w-fit flex justify-center items-center max-w-[220px] sm:max-w-none p-2.5 sm:px-6 sm:py-3.5 rounded-lg gap-4 font-semibold bg-[#001732] border-2 border-[#0189ae] transition-all ${
                             btn.buttonclass || ""
                           }`}
                           target="_blank"
@@ -324,32 +324,34 @@ const SchoolHero = ({
                       ),
                     )}
                   </div>
-                  <div className="max-w-[450px] mx-auto my-2.5 sm:mt-10 p-3 rounded-[10px] alumniHeaderCarousel brightness-0 invert">
-                    <ConnectingDreamSlider logos={alumniLogos} />
-                  </div>
+                  {slug !== "school-of-legal-studies" && (
+                    <div className="hidden xl:block max-w-[450px] mx-auto my-2.5 sm:mt-10 p-3 rounded-[10px] alumniHeaderCarousel brightness-0 invert">
+                      <ConnectingDreamSlider logos={alumniLogos} />
+                    </div>
+                  )}
                 </div>
               </div>
-              <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end px-5 pb-5 sm:pb-0 sm:px-0 bg-[#001732] xl:bg-transparent">
-                {/* {videoFmt === "Iframe" ? (
+              {/* {videoFmt === "Iframe" ? (
                 <div
-                  className="w-full customSchoolIframeStyle"
-                  dangerouslySetInnerHTML={{ __html: iframeContent }}
+                className="w-full customSchoolIframeStyle"
+                dangerouslySetInnerHTML={{ __html: iframeContent }}
                 />
-              ) : videoFmt === "videourl" ? (
-                <video controls className="w-full">
+                ) : videoFmt === "videourl" ? (
+                  <video controls className="w-full">
                   <source src={videoLink} type="video/mp4" />
                   Your browser does not support the video tag.
-                </video>
-              ) : null} */}
-                {videoUrl && (
-                  <div className="w-full max-w-[520px] 2xl:max-w-[680px] border-6 border-[#b7e2f3] rounded-xl">
+                  </video>
+                  ) : null} */}
+              {videoUrl && (
+                <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end px-5 pb-5 sm:pb-0 sm:px-0 bg-[#001732] xl:bg-transparent">
+                  <div className="w-full max-w-[520px] 2xl:max-w-[680px] border-6 border-[#b7e2f3] rounded-3xl">
                     <YoutubeVideoSection
                       thumbnail={thumbnail}
                       ytUrl={videoUrl}
                     />
                   </div>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           )}
         </div>

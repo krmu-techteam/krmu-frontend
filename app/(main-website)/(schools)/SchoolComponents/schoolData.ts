@@ -1,17 +1,17 @@
 export const soetLogos = [
   {
     id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mahindra_Auto_7e69aa7cd8.png",
-    alternativeText: "Mahindra Auto",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_703_0a830c4fe7.png",
+    alternativeText: "GM",
   },
   {
     id: 2,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/airtel_logo_png_79a3301511.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_700_329878f8e6.png",
     alternativeText: "Airtel",
   },
   {
     id: 3,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Wipro_Primary_Logo_Color_RGB_svg_2_e87efcb497.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_701_54243f1690.png",
     alternativeText: "Wipro",
   },
   // {
@@ -21,12 +21,12 @@ export const soetLogos = [
   // },
   {
     id: 5,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Tata_Consultancy_Services_old_logo_svg_1_9c85e4fe6a.png",
-    alternativeText: "Tata Consultancy",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_704_322587e296.png",
+    alternativeText: "Mahindra",
   },
   {
     id: 6,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/gm_logo_b6c926d906.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_702_bf06081d42.png",
     alternativeText: "Tata Consultancy",
   },
 ];
@@ -34,12 +34,12 @@ export const soetLogos = [
 export const sprsLogos = [
   {
     id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Paras_7e74f94f60.jfif",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_750_71274a38ff.png",
     alternativeText: "Paras",
   },
   {
     id: 2,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/NH_Narayana_be370a18f5.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_748_3b2cc65202.png",
     alternativeText: "NH Narayana",
   },
   {
@@ -49,22 +49,22 @@ export const sprsLogos = [
   },
   {
     id: 4,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ck_birla_healthcare_pvt_ltd_logo_2cfba769d5.jpg",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_749_ef9e7cc541.png",
     alternativeText: "CK Birla",
   },
   {
     id: 5,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Medanta_The_Medicity_Logo_Vector_svg_fc7e2c1e91.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_745_9ccea8228b.png",
     alternativeText: "Medanta",
   },
   {
     id: 6,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/logo_talent_fb9777cee6.webp",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_746_87d0f342d7.png",
     alternativeText: "Asian Hospital",
   },
   {
     id: 6,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Sarvadaya_41587a3e3b.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_747_91b6a44d23.png",
     alternativeText: "Sarvodya",
   },
 ];
@@ -72,32 +72,32 @@ export const sprsLogos = [
 export const somcLogos = [
   {
     id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/KPMG_2dbd87cd44.webp",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_733_444db7e18b.png",
     alternativeText: "KPMG",
   },
   {
     id: 2,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Pepsi_Co_d633d9ad82.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_735_51db77de98.png",
     alternativeText: "Pepsico",
   },
   {
     id: 3,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Larsen_Toubro_Logo_198c9520ed.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_729_9131d7d0df.png",
     alternativeText: "L&T",
   },
   {
     id: 4,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Amazon_logo_svg_59b53bd9d1.webp",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_730_6314d96092.png",
     alternativeText: "Amazon",
   },
   {
     id: 5,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Deloitte_3c8fad6196.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_731_b7ce1ea41d.png",
     alternativeText: "Deliotte",
   },
   {
     id: 6,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/IBM_99b95e91ae.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_732_18f9651ed3.png",
     alternativeText: "IBM",
   },
 ];
@@ -133,27 +133,27 @@ export const solsLogos = [
 export const smasLogos = [
   {
     id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Biocon_Biocologics_Logo_without_Tagline_0979dd97c0.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_743_8b3efb0f2b.png",
     alternativeText: "Biocon Biologics",
   },
   {
     id: 2,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Torrent_Pharma_d88577b36f.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_682_a834104895.png",
     alternativeText: "Torrent",
   },
   {
     id: 3,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Sun_Pharma_5ed93a8e4f.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_740_f714430e9c.png",
     alternativeText: "Sun",
   },
   {
     id: 4,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Apollo_Hospitals_ccd2fb3186.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_741_464bd25474.png",
     alternativeText: "Apollo",
   },
   {
     id: 5,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Max_Healthcare_39d9571a65.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Max_1_87e436ff27.png",
     alternativeText: "Max Health Care",
   },
 ];
@@ -161,7 +161,7 @@ export const smasLogos = [
 export const solaLogos = [
   {
     id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/HDFC_Bank_760c9caa95.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/HDFC_bank_78c692844c.png",
     alternativeText: "HDFC",
   },
   {
@@ -187,29 +187,29 @@ export const solaLogos = [
 ];
 
 export const soadLogos = [
-  {
-    id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ubisoft_aad19192be.png",
-    alternativeText: "Ubisoft",
-  },
+  // {
+  //   id: 1,
+  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_760_09ec9862d4.png",
+  //   alternativeText: "Ubisoft",
+  // },
   {
     id: 2,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Zara_e5d5794e55.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_761_5ad51143d1.png",
     alternativeText: "ZARA",
   },
   {
     id: 3,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/splashlearn_f8510124a5.webp",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_757_507a5342cf.png",
     alternativeText: "Splash Learn",
   },
   {
     id: 4,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Persistent_1d8eeed721.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_758_c3d0941007.png",
     alternativeText: "Persistent",
   },
   {
     id: 5,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/zynga_logo_png_transparent_df0f02b646.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_759_96dca5fa11.png",
     alternativeText: "Zynga",
   },
 ];
@@ -217,27 +217,27 @@ export const soadLogos = [
 export const sbasLogos = [
   {
     id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Tata_Consultancy_Services_old_logo_svg_1_9c85e4fe6a.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_724_9489a6a172.png",
     alternativeText: "TCS",
   },
   {
     id: 2,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Accenture_9d55174252.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_725_86f74b8606.png",
     alternativeText: "Accenture",
   },
   {
     id: 3,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Deloitte_3c8fad6196.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_726_225dcc0a67.png",
     alternativeText: "Deliotte",
   },
-  {
-    id: 4,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ecs_corporation_cea6ab8a21.webp",
-    alternativeText: "ECS",
-  },
+  // {
+  //   id: 4,
+  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ECS_2_6b633be17c.png",
+  //   alternativeText: "ECS",
+  // },
   {
     id: 5,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Quest_Diagnostics_logo_b0e6ed4031.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_727_14658e69e2.png",
     alternativeText: "Quest",
   },
   {
@@ -246,11 +246,11 @@ export const sbasLogos = [
     alternativeText: "Orion Group Logo",
   },
 
-  {
-    id: 7,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/pyramid_af4d867eed.jpg",
-    alternativeText: "Pyramid Logo",
-  },
+  // {
+  //   id: 7,
+  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_762_7ddad40b12.png",
+  //   alternativeText: "Pyramid Logo",
+  // },
 ];
 
 export const semceLogos = [
@@ -282,116 +282,121 @@ export const semceLogos = [
 ];
 
 export const sohmctLogos = [
-  {
-    id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Hyatt_e7afc75696.png",
-    alternativeText: "Dainik Bhaskar",
-  },
+  // {
+  //   id: 1,
+  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Hyatt_e7afc75696.png",
+  //   alternativeText: "Dainik Bhaskar",
+  // },
   {
     id: 2,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/oberoi_hotel_5b5abbe084.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_692_a6e25d5a9a.png",
     alternativeText: "Oberoi Hotel",
   },
   {
     id: 3,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/casino_Hotel_bc96d56b08.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_763_cfd8802e64.png",
     alternativeText: "Casino Hotel",
   },
   {
     id: 4,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Taco_Bell_1869c44a21.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_695_912932340e.png",
     alternativeText: "Taco Bell",
   },
   {
     id: 5,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/logo_color_ea76b56219.svg",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_693_7a818920b9.png",
     alternativeText: "Rosette",
   },
   {
     id: 6,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/The_Oberoi_Group_287755752c.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_694_b9a5c9e558.png",
     alternativeText: "Oberoi Group",
   },
   {
     id: 8,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Radisson_70c08f8439.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Radisson_3d49990848.png",
     alternativeText: "Radission blu",
   },
   {
     id: 9,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ITC_Hotels_6ace6ce0f3.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_696_f2718386a5.png",
     alternativeText: "ITC Hotel",
   },
   {
     id: 10,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/JW_Marriott_783ebd95a6.png",
-    alternativeText: "ITC Hotel",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_697_750492c422.png",
+    alternativeText: "JW",
+  },
+  {
+    id: 10,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_690_2a92def578.png",
+    alternativeText: "Hyatt",
   },
 ];
 
 
 export const soedLogos = [
   {
-    id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/JEI_logo_1_b3a599d46d.png",
-    alternativeText: "JEI Learning centre",
+    id: 1, 
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/whitehatjr_a7c7bdc566.png",
+    alternativeText: "White Hat Jr",
   },
   {
     id: 2,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Whitehat_Jr_Logo_f139d0a3cb.png",
-    alternativeText: "White Hat Jr.",
-  },
-  {
-    id: 3,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Toppr_logo_dafd0f3cac.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/toppr_12_6ecc03ac01.png",
     alternativeText: "Toppr",
   },
   {
-    id: 4,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Vedantulogo_orange_60a7e8819b.png",
+    id: 3,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/vedantu_088a5ac144.png",
     alternativeText: "Vedantu",
   },
   {
+    id: 4,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/simplilearn_fa9b95d9bc.png",
+    alternativeText: "Simplilearn",
+  },
+  {
     id: 5,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/images_4_3105fd767c.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/chegg_562e2eac53.png",
     alternativeText: "Chegg Logo",
   },
   {
     id: 6,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/new_logo_4989c040cb.svg",
-    alternativeText: "Simplilearn",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/jei_39c5f5a573.png",
+    alternativeText: "JEI",
   },
     {
     id: 7,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Meritnation_logo_c4f4591eb7.jpg",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/meritnation_a9206459ea.png",
     alternativeText: "Meritnation",
   },
 ];
 
 export const soasLogos = [
-  {
-    id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/John_Deere_1c1d6793e1.png",
-    alternativeText: "John Deere",
-  },
+  // {
+  //   id: 1,
+  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_717_8308279f07.png",
+  //   alternativeText: "John Deere",
+  // },
   {
     id: 2,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Cargill_1c99f7f5ad.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_722_11e527caf1.png",
     alternativeText: "Cargil Logo",
   },
   {
     id: 3,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mahindra_146368a404.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_720_d15039e25f.png",
     alternativeText: "Mahindra",
   },
   {
     id: 4,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/23_00ef005d3e.jpg",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_718_9cceeea8b8.png",
     alternativeText: "JK Seeds",
   },
   {
     id: 5,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/CNH_Industrial_a2e0287dfa.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_721_beb2608fa2.png",
     alternativeText: "CNH Industrial",
   },
 ];

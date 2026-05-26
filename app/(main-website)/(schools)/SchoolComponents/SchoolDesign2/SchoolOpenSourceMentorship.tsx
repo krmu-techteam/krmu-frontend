@@ -47,12 +47,13 @@ const SchoolOpenSourceMentorship = () => {
                       Google Stipend · GSoC 2026
                     </p>
 
-                    <div className="relative mt-3 w-full h-[80px] lg:h-[70px]">
+                    <div className="relative mt-3 w-full">
                       <Image
                         src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1773422694704_886721c56d.png"
                         alt="GSoC Logo"
-                        fill
-                        className="object-cover rounded-lg w-full h-full"
+                        width={350}
+                        height={120}
+                        className="object-cover rounded-lg w-full h-[120px] object-center"
                       />
                     </div>
                   </div>

@@ -79,10 +79,10 @@ const ProgramCardContent = ({
         </div>
       )}
 
-      <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center pt-2.5 z-20">
+      <div className="flex gap-1.5 sm:gap-2.5 items-center pt-2.5 z-20">
         <button
           // className="border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer border-white text-white w-full sm:w-1/2"
-          className="bg-white cursor-pointer w-full text-sm text-[#0161B0] border border-[#999999] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 sm:w-1/2"
+          className="bg-white cursor-pointer text-sm text-[#0161B0] border border-[#999999] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 w-1/2"
           onClick={() => setShow(true)}
         >
           Fee Structure
@@ -91,8 +91,7 @@ const ProgramCardContent = ({
           <Link
             href={prog.criteria.eligibility_utm_links}
             target="_blank"
-            className="bg-[#cb000d] w-full text-sm text-white text-center border border-[#cb000d] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 
-            sm:w-1/2"
+            className="bg-[#cb000d] block text-sm text-white text-center border border-[#cb000d] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 w-1/2"
           >
             Apply Now
           </Link>

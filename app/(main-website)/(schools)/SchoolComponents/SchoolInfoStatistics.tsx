@@ -39,7 +39,7 @@ const SchoolInfoStatistics = ({
 }: Props) => {
   return (
     <section className="pt-10 lg:pt-20 px-5">
-      <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row sm:items-center gap-5 sm:gap-10 px-2.5 md:px-10 rounded-2xl">
+      <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row sm:items-center gap-5 sm:gap-10 sm:px-2.5 md:px-10 rounded-2xl">
         <div className="w-full lg:w-1/2 xl:w-1/3 relative h-[400px] sm:h-[500px] lg:h-[660px]">
           <Image
             src={infoStaticImages[slug] || "/info.webp"}

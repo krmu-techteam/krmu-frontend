@@ -13,7 +13,7 @@ const ConnectingDreamSlider = ({ logos }: Props) => {
   return (
     <div className="w-full overflow-hidden relative">
       {/* Universal Slider (Marquee) */}
-      <div className="flex animate-marquee whitespace-nowrap">
+      <div className="flex animate-marquee whitespace-nowrap gap-2">
         {logos?.concat(logos).concat(logos).map((logo, index) => (
           <div
             key={`${logo.id}-${index}`}
@@ -38,7 +38,7 @@ const ConnectingDreamSlider = ({ logos }: Props) => {
         .animate-marquee {
           display: flex;
           width: max-content;
-          animation: marquee 40s linear infinite;
+          animation: marquee 20s linear infinite;
         }
         .animate-marquee:hover {
           animation-play-state: paused;

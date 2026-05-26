@@ -15,6 +15,13 @@
 
 /* Custom utility class */
 @layer utilities {
+
+  .allSiteEnquireNowBtn{
+    position: fixed !important;
+    top: 65%;
+    right: -60px;
+    transform: rotate(90deg);
+  }
   .card-gradient-1 .inner-card {
     bottom: -214px;
     left: -255px;
