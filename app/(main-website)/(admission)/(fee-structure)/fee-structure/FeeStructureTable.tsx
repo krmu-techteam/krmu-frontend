@@ -35,7 +35,7 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
 
         {/* ------------------ DYNAMIC TAB CONTENT ------------------ */}
         {feeStructTab.map((tab) => {
-          console.log("Rendering content for tab:", tab.tab_heading);
+          // console.log("Rendering content for tab:", tab.tab_heading);
           return (
             <TabsContent
               key={tab.id}

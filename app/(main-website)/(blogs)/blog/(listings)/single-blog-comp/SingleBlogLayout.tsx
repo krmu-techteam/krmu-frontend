@@ -37,7 +37,7 @@ type Props = {
 // };
 
 const SingleBlogLayout = ({ content, currentSlug }: Props) => {
-  console.log("Rendering SingleBlogLayout with slug:", currentSlug);
+  // console.log("Rendering SingleBlogLayout with slug:", currentSlug);
   return (
     <main className={`md:p-7 ${raleway.className} relative z-10`}>
       <div className="max-w-[1664px] mx-auto w-full px-5 2xl:px-10 flex flex-col lg:flex-row gap-10 xl:gap-16 relative z-10 scroll-style-1">
