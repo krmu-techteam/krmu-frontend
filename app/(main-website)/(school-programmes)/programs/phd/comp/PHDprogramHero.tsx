@@ -59,7 +59,7 @@ const PHDprogramHero = ({
               <div className="flex flex-col lg:block bg-gradient-to-t from-black/95 via-black/40 to-transparent lg:bg-none px-6 pt-14 pb-6 sm:px-6 sm:pt-20 sm:pb-8 md:px-8 lg:p-0">
                 <div className="mb-0 lg:mb-10">
                   <h1 
-                    className="text-white text-[24px] lg:text-xl xl:text-3xl 2xl:text-[52px] font-semibold md:font-bold mb-0 lg:mb-3 leading-[1.1] antialiased [text-shadow:0px_2px_4px_rgba(0,0,0,0.8),0px_4px_10px_rgba(0,0,0,0.8),0px_10px_20px_rgba(0,0,0,0.9)]"
+                    className="text-white text-[24px] lg:text-xl xl:text-3xl 2xl:text-[52px] font-semibold md:font-bold mb-0 lg:mb-3 leading-[1.1] antialiased [text-shadow:0px_4px_8px_rgba(0,0,0,0.5)]"
                     dangerouslySetInnerHTML={{ __html: heading }}
                   />
                 </div>

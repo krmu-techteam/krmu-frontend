@@ -64,10 +64,10 @@ const ProgramHeroCinematic = ({
                   <h3 className={`text-white/90 lg:block hidden ${config.subtitleMaxWidth || "xl:max-w-[65%] 2xl:max-w-[70%]"} [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.subtitleSize || "text-md lg:text-[14px] xl:text-lg"} font-normal uppercase tracking-[0.05em] drop-shadow-md`}>
                     {heroSection?.subtitle}
                   </h3>
-                  <h1 className={`text-white ${config.titleSize} ${config.titleMaxWidth || ""} font-semibold md:font-bold mb-0 lg:mb-3 leading-[1.1] antialiased [text-shadow:0px_2px_4px_rgba(0,0,0,0.8),0px_4px_10px_rgba(0,0,0,0.8),0px_10px_20px_rgba(0,0,0,0.9)]`}>
+                  <h1 className={`text-white ${config.titleSize} ${config.titleMaxWidth || ""} font-semibold md:font-bold mb-0 lg:mb-3 leading-[1.1] antialiased [text-shadow:0px_4px_8px_rgba(0,0,0,0.5)]`}>
                     {title}{" "}
                     <span 
-                      className={`${config.highlightClass || "text-white/90"} [&_.highlight]:text-[#f5a623] font-semibold antialiased [text-shadow:0px_2px_4px_rgba(0,0,0,0.8),0px_4px_10px_rgba(0,0,0,0.8),0px_10px_20px_rgba(0,0,0,0.9)]`}
+                      className={`${config.highlightClass || "text-white/90"} [&_.highlight]:text-[#f5a623] font-semibold antialiased [text-shadow:0px_4px_8px_rgba(0,0,0,0.5)]`}
                       dangerouslySetInnerHTML={{ __html: highlightitle }}
                     />
                   </h1>
