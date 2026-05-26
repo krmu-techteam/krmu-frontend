@@ -64,20 +64,20 @@ const ProgrammeHighlight = ({
 
   if (slug === "bba-hr" || slug === "b-tech-cse") {
     return (
-      <section className="bg-[#f9f9f9] py-8 lg:py-10 xl:py-12 2xl:py-16">
-        <div className="max-w-[1440px] mx-auto w-full px-4 md:px-10 xl:px-10 2xl:px-0">
-          <div className="text-center mb-4 md:mb-6">
-            <h2 className="text-3xl text-center md:text-center md:text-[40px] font-bold text-[#051630] leading-[1.1] mb-3">
+      <section className="bg-[#f9f9f9] py-8 md:p-6 lg:p-10 xl:py-12 2xl:py-16">
+        <div className="max-w-[1440px] mx-auto w-full px-4 md:px-0 lg:px-0 2xl:px-0">
+          <div className="text-center mb-2 md:mb-6">
+            <h2 className="text-2xl text-center md:text-center md:text-[40px] font-semibold md:font-bold text-[#051630] leading-[1.1] mb-2 md:mb-3">
               {heading} {highlightHeading}
             </h2>
-            <p className="text-[#424242] text-lg md:text-xl max-w-3xl mx-auto font-normal">
+            <p className="text-[#424242] text-md md:text-xl max-w-3xl mx-auto font-normal">
               {desc}
             </p>
           </div>
 
           <div className="relative group/slider">
             {/* Slider Controls */}
-            <div className="absolute top-1/2 -left-3 md:left-0 lg:-left-4 -translate-y-1/2 z-10">
+            <div className="absolute top-1/2 -left-3 md:-left-4 lg:-left-0 -translate-y-1/2 z-10">
               <button
                 onClick={scrollPrev}
                 className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-gray-100 cursor-pointer hover:scale-110 active:scale-95"
@@ -87,7 +87,7 @@ const ProgrammeHighlight = ({
               </button>
             </div>
 
-            <div className="absolute top-1/2 -right-3 md:right-0 lg:-right-4 -translate-y-1/2 z-10">
+            <div className="absolute top-1/2 -right-3 md:-right-4 -translate-y-1/2 z-10">
               <button
                 onClick={scrollNext}
                 className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-gray-100 cursor-pointer hover:scale-110 active:scale-95"
@@ -101,7 +101,7 @@ const ProgrammeHighlight = ({
             <div className="overflow-hidden cursor-grab active:cursor-grabbing pt-2 md:pt-0" ref={emblaRef}>
               <div className="flex xl:ml-0 2xl:-ml-4 ">
                 {highlights?.map((highlight) => (
-                  <div key={highlight.id} className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33%] xl:flex-[0_0_25%] lg:pl-0 2xl:pl-4 min-w-0">
+                  <div key={highlight.id} className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33%] xl:flex-[0_0_25%] lg:pl-0 xl:pl-4 2xl:pl-4 min-w-0">
                     <ProgrammeHighlightModernCard
                       title={highlight?.title}
                       desc={highlight?.subtitle}

@@ -2960,11 +2960,7 @@
     color: black;
   }
 
-  .common-prog-container .sub-heading {
-    font-size: 20px;
-    color: #424242;
-    font-weight: 400;
-  }
+ 
 
   /* Programme Highlights */
   @media (max-width: 768px) {
@@ -3534,16 +3530,18 @@
     cursor: pointer;
   }
 
-  .common-btn-b:hover,
-  .hero-common-btn-b:hover {
+  .common-btn-b:hover {
     background: #bd010d;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
     transform: translateY(-2px);
   }
+  .hero-common-btn-b:hover {
+    background: #bd010d;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
+  }
   .progherobtn:hover {
     background: #cb000d;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
-    transform: translateY(-2px);
   }
 
   .hero-common-btn-b {
@@ -4758,5 +4756,25 @@
 @media (min-width: 1280px) {
   .schoolBanner {
     background-image: var(--desktop-bg);
+  }
+}
+/* Cinematic Hero Double-Sided Vignette Overlay for Mobile/Tablet */
+.hero-cinematic-overlay::before {
+  background: linear-gradient(
+    to right,
+    var(--overlay-start-mobile) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0) 70%,
+    var(--overlay-start-mobile) 100%
+  ) !important;
+}
+
+@media (min-width: 1024px) {
+  .hero-cinematic-overlay::before {
+    background: linear-gradient(
+      to right,
+      var(--overlay-start-desktop),
+      transparent
+    ) !important;
   }
 }

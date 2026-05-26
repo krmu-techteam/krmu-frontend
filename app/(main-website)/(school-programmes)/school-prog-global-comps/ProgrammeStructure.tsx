@@ -79,7 +79,7 @@ const ProgrammeStructure = ({
                   "linear-gradient(90deg, rgba(0, 23, 50, 0) 0%, #001732 49.04%, rgba(0, 23, 50, 0) 95.67%)",
               }}
             >
-              <h2 className="text-2xl md:text-3xl lg:text-[40px] font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
+              <h2 className="text-2xl md:text-3xl lg:text-[40px] font-semibold md:font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
                 {heading} {highlight}
               </h2>
             </div>
@@ -99,7 +99,7 @@ const ProgrammeStructure = ({
                     </span>
                   </span>
                 }
-                buttonClassName="px-6 py-4 bg-[#051730] text-white rounded-sm shadow-xl hover:bg-[#0a264a] transition-all duration-300 border border-[#051730]/10 flex items-center justify-center min-w-[200px]"
+                buttonClassName="px-6 py-4 bg-[#051730] text-white rounded-sm md:rounded-md shadow-xl hover:bg-[#0a264a] transition-all duration-300 border border-[#051730]/10 flex items-center justify-center min-w-[200px]"
                 redirectUrl={currbtn?.buttonlink || "#"}
                 form_name="Programme Handbook"
               />
@@ -111,7 +111,7 @@ const ProgrammeStructure = ({
             {/* Left Navigation & Content Area */}
             <div className="flex-grow flex flex-col">
               {/* Year Tabs */}
-              <div className="flex w-full overflow-x-auto no-scrollbar rounded-xs">
+              <div className="flex w-full overflow-x-auto no-scrollbar rounded-sm md:rounded-md">
                 {programStruct.map((year) => {
                   const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                   const isYearActive = activeYear === yearValue;
@@ -260,7 +260,7 @@ const ProgrammeStructure = ({
               </div>
 
               {/* Action Buttons Container - Glassy Bottom - Responsive Stack for Mobile */}
-              <div className="py-8 bg-transparent min-h-[100px] flex flex-col md:flex-row items-center justify-center gap-4">
+              <div className="py-8 bg-transparent min-h-[100px] flex flex-row items-center md:justify-start justify-center gap-4 md:gap-4 overflow-x-auto no-scrollbar w-full">
                 {programStruct
                   .find(
                     (y) =>
@@ -283,12 +283,12 @@ const ProgrammeStructure = ({
                         buttonText={
                           <div className="flex items-center gap-2 md:gap-3">
                             <Download className="w-4 h-4 md:w-5 md:h-5" />
-                            <span className="font-semibold tracking-tight text-sm md:text-lg whitespace-nowrap">
+                            <span className="font-semibold tracking-tight text-[13px] md:text-lg whitespace-nowrap">
                               {btn?.buttontext}
                             </span>
                           </div>
                         }
-                        buttonClassName={`px-3 py-3 md:px-6 rounded-xs transition-all duration-300 flex items-center justify-center w-full md:w-auto shadow-lg
+                        buttonClassName={`px-3 h-12 md:h-14 md:px-6 rounded-sm md:rounded-md transition-all duration-300 flex items-center justify-center w-auto shadow-lg
                         ${
                           isDark
                             ? "bg-[#001732] text-white hover:bg-[#0a264a]"

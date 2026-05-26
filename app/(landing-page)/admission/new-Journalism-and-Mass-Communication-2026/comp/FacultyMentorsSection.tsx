@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { Tv, GraduationCap, Clapperboard } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -80,6 +81,53 @@ export default function FacultyMentorsSection() {
             </p>
           </div>
         </div>
+
+        {/* "At SEMCE, MA students learn from:" boxes */}
+        <div className="mt-8 sm:mt-10">
+          <p className="text-[#001B44] text-base sm:text-lg font-semibold mb-4">
+            At SEMCE, MA students learn from:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {/* Card 1 */}
+            <div className="bg-white rounded-xl px-5 py-6 border border-[#001B44]/10 shadow-sm  items-start gap-4">
+              <div className="flex-shrink-0 w-11 h-11 rounded-full bg-white  flex items-center justify-center">
+                <Tv className="w-5 h-5 text-[#8200db]" />
+              </div>
+              <p className="text-[#001B44] text-sm sm:text-base leading-relaxed mt-2">
+                Faculty who have worked with organisations like BBC, All India
+                Radio, Hindustan Times, Zee Media, Aaj Tak and leading digital
+                media houses
+              </p>
+            </div>
+            {/* Card 2 */}
+            <div className="bg-white rounded-xl px-5 py-6 border border-[#001B44]/10 shadow-sm  items-start gap-4">
+              <div className="flex-shrink-0 w-11 h-11 rounded-full bg-white flex items-center justify-center">
+                <GraduationCap className="w-6 h-6 text-[#8200db]" />
+              </div>
+              <p className="text-[#001B44] text-sm sm:text-base leading-relaxed mt-2">
+                Academics with PhDs and published research in areas such as
+                digital media, fake news, data journalism, visual communication,
+                communication research, development communication and HCI
+              </p>
+            </div>
+            {/* Card 3 */}
+            <div className="bg-white rounded-xl px-5 py-6 border border-[#001B44]/10 shadow-sm  items-start gap-4">
+              <div className="flex-shrink-0 w-11 h-11 rounded-full bg-white flex items-center justify-center">
+                <Clapperboard className="w-5 h-5 text-[#8200db]" />
+              </div>
+              <p className="text-[#001B44] text-sm sm:text-base leading-relaxed mt-2">
+                Practitioners who have produced films, shows, campaigns and
+                digital content for brands, production houses and channels
+              </p>
+            </div>
+          </div>
+          <p className="text-[#001B44] text-sm sm:text-base  mt-6">
+            The same core faculty that drives the SEMCE undergraduate programmes
+            teaches at the MA level, with additional research focus, advanced
+            project guidance and dissertation supervision.
+          </p>
+        </div>
+
         <Carousel
           plugins={[
             AutoScroll({
