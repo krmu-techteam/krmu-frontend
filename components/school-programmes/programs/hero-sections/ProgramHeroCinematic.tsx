@@ -42,7 +42,7 @@ const ProgramHeroCinematic = ({
         [background-position:var(--bg-pos-mobile)] sm:[background-position:var(--bg-pos-tablet)] lg:[background-position:var(--bg-pos-desktop)] 
         [background-size:var(--bg-size-mobile)] sm:[background-size:var(--bg-size-tablet)] lg:[background-size:var(--bg-size-desktop)] 
         bg-no-repeat relative before:content-[''] before:absolute before:top-0 before:left-0 
-        before:h-full before:w-full lg:before:w-[var(--overlay-width)] before:z-0"
+        before:h-full before:w-full before:z-0"
         style={{ 
           backgroundImage: `url(${config.bgUrl})`,
           '--bg-pos-desktop': config.bgPosition || 'center center',
@@ -59,7 +59,7 @@ const ProgramHeroCinematic = ({
         <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 lg:px-10 xl:px-0 xl:gap-16 z-10 2xl:px-0">
           <div className="w-full lg:w-[60%] xl:w-1/2 relative z-10">
             <div className="xl:max-w-[700px] w-full">
-              <div className="flex flex-col lg:block bg-gradient-to-t from-black/90 via-black/50 to-transparent lg:bg-none px-6 sm:px-4 md:px-6 lg:p-0">
+              <div className="flex flex-col lg:block bg-gradient-to-t from-black/95 via-black/40 to-transparent lg:bg-none px-6 pt-14 pb-6 sm:px-6 sm:pt-20 sm:pb-8 md:px-8 lg:p-0">
                 <div className="mb-0 lg:mb-10">
                   <h3 className={`text-white/90 lg:block hidden ${config.subtitleMaxWidth || "xl:max-w-[65%] 2xl:max-w-[70%]"} [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.subtitleSize || "text-md lg:text-[14px] xl:text-lg"} font-normal uppercase tracking-[0.05em] drop-shadow-md`}>
                     {heroSection?.subtitle}

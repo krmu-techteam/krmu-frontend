@@ -169,7 +169,7 @@ const page = async ({ params }: Props) => {
   const ourLocationSection = singleSchoolProgramme?.ourlocation;
 
   if (singlePHDProgramme?.degree === "Doctoral Programme") {
-    return <PHDProgrammes phdData={singlePHDProgramme} />;
+    return <PHDProgrammes phdData={singlePHDProgramme} slug={slug} />;
   }
 
   type FAQProg = {
@@ -291,7 +291,7 @@ const page = async ({ params }: Props) => {
             heroSection={heroSection}
           />
         )}
-        {slug !== "bba-hr" &&
+        {/* {slug !== "bba-hr" &&
           slug !== "btech-cse-ai-ml" &&
           slug !== "b-tech-cse" &&
           dreamcareerSection && (
@@ -300,7 +300,7 @@ const page = async ({ params }: Props) => {
               description={dreamcareerSection.description}
               logos={dreamcareerSection?.careerlogos}
             />
-          )}
+          )} */}
 
         {programmeScopeSection && (
           <ProgrammeScope
