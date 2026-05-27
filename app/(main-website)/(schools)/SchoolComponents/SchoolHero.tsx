@@ -68,8 +68,8 @@ const SchoolHero = ({
     "school-of-basic-and-applied-sciences": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/sbas-banner-2.webp",
-      middleImg: "/schools/middleImg/sbas-middleimg-2.png",
+      bgURl: "/schools/banners/sbas-banner-3.webp",
+      middleImg: "/schools/middleImg/sbas-middleimg-3.png",
       mobileBgImg: "/schools/banners/mob-sbas-banner.webp",
       notCutoutBg: false,
     },

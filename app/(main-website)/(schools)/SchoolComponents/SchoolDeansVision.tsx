@@ -73,7 +73,7 @@ const SchoolDeansVision = ({
               </Link>
             </div>
 
-            <div className="text-sm sm:text-base leading-relaxed mb-6 xl:mb-0">
+            <div className="text-sm sm:text-base text-justify md:text-left leading-relaxed mb-6 xl:mb-0">
               {desc && <BlocksRenderer content={desc} />}
             </div>
 
@@ -82,13 +82,14 @@ const SchoolDeansVision = ({
               <p className="text-2xl md:text-[32px] mb-2 font-bold">
                 {deanName}
               </p>
+              <p className="text-sm sm:text-base opacity-90">{desg}</p>
               <Link
                 href={`mailto:${deanEmail}`}
                 className="text-base flex items-center gap-2 hover:underline opacity-80 mb-3"
               >
                 <Mail size={16} /> <span>{deanEmail}</span>
               </Link>
-              <p className="text-sm sm:text-base opacity-90">{desg}</p>
+              
             </div>
           </div>
         </div>
