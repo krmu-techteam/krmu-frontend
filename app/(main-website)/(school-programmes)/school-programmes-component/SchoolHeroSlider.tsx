@@ -40,7 +40,7 @@ const SchoolHeroSlider = ({
               alt={logo.alternativeText || "logo"}
               width={140}
               height={70}
-              className="object-contain h-[45px] w-auto"
+              className="object-contain h-[60px] w-auto"
               unoptimized
             />
           </div>

@@ -256,27 +256,27 @@ export const sbasHerosLogos = [
 export const semceHerosLogos = [
   {
     id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dainik_Bhaskar_ecb6231598.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_772_5a3a471551.png",
     alternativeText: "Dainik Bhaskar",
   },
   {
     id: 2,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/The_Indian_Expres_1599805ad8.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_770_f535e3429a.png",
     alternativeText: "The Indian Express",
   },
   {
     id: 3,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Zeenews_5977faf4e2.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_774_a8e4d3dd30.png",
     alternativeText: "Zee News",
   },
   {
     id: 4,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dainik_Jagran_logo_7002fb0179.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_771_0eee6c5e1b.png",
     alternativeText: "Dainik Jagran",
   },
   {
     id: 5,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/the_times_of_india_c9d7645b1a.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_773_5ca2f322b2.png",
     alternativeText: "TOI",
   },
 ];
