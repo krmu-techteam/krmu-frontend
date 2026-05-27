@@ -102,7 +102,7 @@ const Specialisation = ({
               onClick={() => setShowAll(!showAll)}
               className="px-8 py-3 bg-[#051730] text-white rounded-md font-semibold hover:bg-[#051730]/90 transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer"
             >
-              {showAll ? "Show Less" : "Read More"}
+              {showAll ? "Show Less" : "Show More"}
             </button>
           </div>
         )}

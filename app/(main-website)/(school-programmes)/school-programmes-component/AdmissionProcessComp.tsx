@@ -35,11 +35,18 @@ const AdmissionProcessComp = ({
         </p>
       </div>
       <div className="max-w-[1320px] mx-auto w-full mt-2.5 hidden lg:block">
-        <Image
+        {/* <Image
           src={`${STRAPI_URL}${deskimg?.url}`}
           width={1296}
           height={170}
           alt={deskimg?.alternativeText || "Admission Process"}
+        /> */}
+        <Image
+          src="/admisison-steps.png"
+          width={1296}
+          height={170}
+          alt="Admission Process"
+          className="w-full h-auto"
         />
         <div className="admis_proc_btn_grid_items">
           {admissionCards &&

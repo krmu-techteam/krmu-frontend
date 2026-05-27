@@ -1,4 +1,5 @@
 import { getSchoolProgrammeData } from "@/lib/api/school-programmes";
+import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import BeyondClassroom from "../../school-programmes-component/BeyondClassroom";
 import CareerProspects from "../../school-programmes-component/CareerProspects";
 import { ConnectWithUs } from "../../school-programmes-component/ConnectWithUs";
@@ -46,6 +47,7 @@ import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import BscFinance2026Page from "@/app/(landing-page)/admission/bsc-finance-2026/page";
 import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
 import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
+import { heroConfigs } from "@/components/school-programmes/programs/data/programs";
 import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
 
 // import ProgTestimonials, {
@@ -128,6 +130,8 @@ const page = async ({ params }: Props) => {
 
   const allSchoolProgrammeData = await getSchoolProgrammeData(slug);
   const allSinglePHDProgramme = await getPHDProgramme(slug);
+  const getDownProsSettings = await getDownloadProspectusSetting();
+  const enable_disable_download_pros = getDownProsSettings?.download_prospectus_enable_disable;
   const seoData = await getSchoolProgrammeSEO(slug);
   const seo = seoData?.[0]?.SEO;
   const tags = seo?.tags;
@@ -289,18 +293,18 @@ const page = async ({ params }: Props) => {
             slug={slug}
             formId={heroSection?.formId}
             heroSection={heroSection}
+            enableDownloadPros={enable_disable_download_pros}
+            prospectusBtn={programmeScopeSection?.scopebtn}
           />
         )}
-        {/* {slug !== "bba-hr" &&
-          slug !== "btech-cse-ai-ml" &&
-          slug !== "b-tech-cse" &&
+        {!(slug in heroConfigs) &&
           dreamcareerSection && (
             <DreamCareer
               heading={dreamcareerSection.heading}
               description={dreamcareerSection.description}
               logos={dreamcareerSection?.careerlogos}
             />
-          )} */}
+          )}
 
         {programmeScopeSection && (
           <ProgrammeScope
