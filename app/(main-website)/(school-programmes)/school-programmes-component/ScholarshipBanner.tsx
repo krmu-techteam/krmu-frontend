@@ -24,7 +24,7 @@ const ScholarshipBanner = () => {
               Explore
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0a41a1] to-[#0161b0] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#051630] to-[#082146] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
             <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none z-10"></div>
           </Link>
         </div>

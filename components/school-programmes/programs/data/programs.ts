@@ -300,17 +300,17 @@ export const heroConfigs: Record<string, HeroConfig> = {
   } as HeroConfig,
   "mba-digital-marketing": {
     ...defaultCinematicConfig,
-    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/mba_digital_marketing_2728a5c094.jpg",
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/mba_digital_marketing_7fcc4e9f4f.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
   "phd-management": {
     ...defaultCinematicConfig,
-    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_management_57cf30bda7.jpg",
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_management_7abbd89661.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
   "phd-commerce": {
     ...defaultCinematicConfig,
-    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_commerce_cabc2265e0.jpg",
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_commerce_fd5e648fa9.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
   "bba-llb-hons": {

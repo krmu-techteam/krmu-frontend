@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import NpfPopup from "../../components/NpfPopup";
+import CommonLeadPopup from "../../components/CommonLeadPopup";
 import NoPaperForm from "@/lib/constants/NoPaperForm";
 import YoutubePopup from "./YoutubePopup";
 import Image from "next/image";
@@ -26,6 +27,8 @@ type Props = {
   allowedFormSlugs: string[];
   slug: string;
   heroSection?: HeroSection;
+  enableDownloadPros?: boolean;
+  prospectusBtn?: ButtonType;
 };
 
 const Eligibility = ({
@@ -35,6 +38,8 @@ const Eligibility = ({
   allowedFormSlugs,
   heroSection,
   slug,
+  enableDownloadPros,
+  prospectusBtn,
 }: Props) => {
   const [expanded, setExpanded] = useState(false);
   // const btnRef = useRef<HTMLButtonElement>(null);
@@ -44,6 +49,18 @@ const Eligibility = ({
   const longTitle = elgibilities[2]?.title || "";
   const isLong = longTitle.length > maxChars;
   const displayTitle = expanded ? longTitle : longTitle.slice(0, maxChars);
+
+  const handleApplyClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const visibleForm = Array.from(document.querySelectorAll(".heroBannerForm__form")).find(
+      (el) => el.getBoundingClientRect().height > 0
+    );
+    if (visibleForm) {
+      visibleForm.scrollIntoView({ behavior: "smooth", block: "center" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   const isFormAvailable = allowedFormSlugs.includes(slug);
   const iframe = heroSection?.videofield;
@@ -126,20 +143,41 @@ const Eligibility = ({
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 mt-auto">
-                  <button className="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 lg:px-2 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-3 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-md hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group">
-                    <Download size={20} className="group-hover:-translate-y-1 transition-transform" />
-                    Download Prospectus
-                  </button>
-                  {formId ? (
+                  {enableDownloadPros ? (
+                    <CommonLeadPopup
+                      buttonText={
+                        <span className="flex items-center gap-3 justify-center">
+                          <Download size={20} className="group-hover:-translate-y-1 transition-transform" />
+                          {prospectusBtn?.buttontext || "Download Prospectus"}
+                        </span>
+                      }
+                      buttonClassName="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 lg:px-2 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-3 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-md hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group"
+                      redirectUrl={prospectusBtn?.buttonlink || "#"}
+                      form_name="Download Prospectus"
+                    />
+                  ) : (
+                    <Link
+                      href={prospectusBtn?.buttonlink || "#"}
+                      className="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 lg:px-2 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-3 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-md hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Download size={20} className="group-hover:-translate-y-1 transition-transform" />
+                      {prospectusBtn?.buttontext || "Download Prospectus"}
+                    </Link>
+                  )}
+                   {formId ? (
                     <a
                       href="#apply-form-mobile"
+                      onClick={handleApplyClick}
                       className="w-full sm:w-auto flex items-center justify-center gap-2 py-2 px-6 lg:px-9 xl:px-12 2xl:px-16 xl:py-2.5 2xl:py-3 bg-[#cb000d] text-white border border-[#cb000d] font-medium rounded-md shadow-lg hover:bg-[#b0000a] transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap"
                     >
                       Apply Now
                     </a>
                   ) : (
                     <Link
-                      href="#"
+                      href="#apply-form-mobile"
+                      onClick={handleApplyClick}
                       className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 md:px-12 xl:px-12 2xl:px-16 xl:py-2.5 2xl:py-3 bg-[#cb000d] border border-[#cb000d] text-white font-medium rounded-md shadow-lg hover:bg-[#b0000a] transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap"
                     >
                       Apply Now

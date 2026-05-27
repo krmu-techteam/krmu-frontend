@@ -154,7 +154,7 @@ const ProgramHeroCinematic = ({
       </div>
 
       {/* Mobile Form - Visible only on mobile for BBA-HR */}
-      <div className="lg:hidden w-full bg-white pb-0 px-0">
+      <div id="apply-form-mobile" className="lg:hidden w-full bg-white pb-0 px-0">
         <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.1)] rounded-none lg:rounded-md overflow-hidden">
           <div className="heroBannerForm-header">
             <h3 className="mb-0 text-center">

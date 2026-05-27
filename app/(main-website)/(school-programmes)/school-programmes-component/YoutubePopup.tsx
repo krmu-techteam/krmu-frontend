@@ -88,9 +88,9 @@ export default function YoutubePopup({
             {/* Close */}
             <button
               onClick={() => setOpen(false)}
-              className="absolute top-12 right-2 z-[10000] bg-black/40 hover:bg-black/60 text-white w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 hover:rotate-90 hover:scale-110 backdrop-blur-xl border border-white/10 cursor-pointer group"
+              className="absolute top-3 right-1 z-[10000] text-white flex items-center justify-center transition-all duration-300 hover:rotate-90 hover:scale-110  cursor-pointer group"
             >
-              <LuX size={24} className="transition-transform" />
+              <LuX size={25} className="transition-transform" />
             </button>
 
             {/* Video */}
