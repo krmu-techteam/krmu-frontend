@@ -79,7 +79,7 @@ const Eligibility = ({
         <div className={`max-w-[1440px] w-full mx-auto`}>
           {/* {slug === "bba-hr" && heroSection?.imgvideo === "Video" ? ( */}
          
-          {(slug === "bba-hr" || slug === "btech-cse-ai-ml" || slug === "b-tech-cse") && heroSection?.imgvideo === "Video" ? (
+          {heroSection?.imgvideo === "Video" ? (
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-4 2xl:gap-8 rounded-md p-0 sm:px-0 lg:px-0 xl:px-0 2xl:px-0 items-stretch">
               {/* Left Column: Media (Video only for this layout) */}
               <div className="w-full lg:w-1/2 h-[280px] sm:h-[350px] lg:h-auto lg:min-h-[450px] relative  overflow-hidden group shadow-xs">
