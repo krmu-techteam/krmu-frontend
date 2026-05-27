@@ -91,7 +91,7 @@ const schoolsHeroLogosMap: Record<string, any> = {
   "school-of-liberal-arts": solaHerosLogos,
   "school-of-architecture-design": soadHerosLogos,
   "school-of-basic-and-applied-sciences": sbasHerosLogos,
-  "school-of-emerging-media-and-creator-economy": semceHerosLogos,
+  // "school-of-emerging-media-and-creator-economy": semceHerosLogos,
   "school-of-hotel-management-and-catering-technology": sohmctHerosLogos,
   "school-of-education": soedHerosLogos,
   "school-of-agriculutural-sciences": soasHerosLogos,
