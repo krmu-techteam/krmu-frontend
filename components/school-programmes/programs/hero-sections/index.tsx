@@ -78,9 +78,11 @@ const ProgramHero = (props: Props) => {
     case "phd-management":
     case "phd-commerce":
     case "bba-llb-hons":
-    case "ba-llb-hons":
+    case "ba-llb-hons": 
     case "llb-hons":
     case "llm-masters-law":
+    case "phd-law":
+    case "bpharma":
       return <ProgramHeroCinematic {...props} />;
     default:
       return <ProgramHeroDefault {...props} />;

@@ -53,7 +53,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
   },
   "b-tech-cse": {
     ...defaultCinematicConfig,
-    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_computer_science_and_engineering_cse_8f15e29b81.png",
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_cse_82febea33b.jpg",
     overlayWidth: "50%",
     titleSize: "lg:text-3xl xl:text-[42px] 2xl:text-5xl",
     mobileBgPosition: "60% top",
@@ -118,7 +118,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
   } as HeroConfig,
   "b-tech-cse-robotics-ai": {
     ...defaultCinematicConfig,
-    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_cse_robotics_ai_5a78b666c7.png",
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_cse_robotics_ai_67aa0ef598.jpg",
     bgPosition: "70% top",
     mobileBgPosition: "57% -75px",
   } as HeroConfig,
@@ -331,6 +331,16 @@ export const heroConfigs: Record<string, HeroConfig> = {
   "llm-masters-law": {
     ...defaultCinematicConfig,
     bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/llm_masters_law_e697049d86.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-law": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_law_215b11ace2.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bpharma": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bpharma_9cf4f7bb72.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
 };
