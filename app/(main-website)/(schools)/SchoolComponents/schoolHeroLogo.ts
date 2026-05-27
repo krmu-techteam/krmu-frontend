@@ -240,11 +240,11 @@ export const sbasHerosLogos = [
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_727_14658e69e2.png",
     alternativeText: "Quest",
   },
-  {
-    id: 6,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Orion_39ea1118ec.png",
-    alternativeText: "Orion Group Logo",
-  },
+  // {
+  //   id: 6,
+  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Orion_39ea1118ec.png",
+  //   alternativeText: "Orion Group Logo",
+  // },
 
   // {
   //   id: 7,
