@@ -44,6 +44,7 @@ import {
   somcLogos,
   sprsLogos,
 } from "../SchoolComponents/schoolData";
+import { sbasHerosLogos, semceHerosLogos, smasHerosLogos, soadHerosLogos, soasHerosLogos, soedHerosLogos, soetHerosLogos, sohmctHerosLogos, solaHerosLogos, solsHerosLogos, somcHerosLogos, sprsHerosLogos } from "../SchoolComponents/schoolHeroLogo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -76,10 +77,24 @@ const schoolsImageMap: Record<string, any> = {
   "school-of-liberal-arts": solaLogos,
   "school-of-architecture-design": soadLogos,
   "school-of-basic-and-applied-sciences": sbasLogos,
-  "school-of-journalism-and-mass-communication": semceLogos,
+  "school-of-emerging-media-and-creator-economy": semceLogos,
   "school-of-hotel-management-and-catering-technology": sohmctLogos,
   "school-of-education": soedLogos,
   "school-of-agriculutural-sciences": soasLogos,
+};
+const schoolsHeroLogosMap: Record<string, any> = {
+  "school-of-engineering-and-technology": soetHerosLogos,
+  "school-of-physiotherapy-and-rehabilitation-sciences": sprsHerosLogos,
+  "school-of-management-and-commerce": somcHerosLogos,
+  // "school-of-legal-studies": solsHerosLogos,
+  "school-of-medical-and-allied-sciences": smasHerosLogos,
+  "school-of-liberal-arts": solaHerosLogos,
+  "school-of-architecture-design": soadHerosLogos,
+  "school-of-basic-and-applied-sciences": sbasHerosLogos,
+  // "school-of-emerging-media-and-creator-economy": semceHerosLogos,
+  "school-of-hotel-management-and-catering-technology": sohmctHerosLogos,
+  "school-of-education": soedHerosLogos,
+  "school-of-agriculutural-sciences": soasHerosLogos,
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -214,6 +229,7 @@ export default async function Page({ params }: Props) {
   const schoolCategoryName = school?.school_category?.name;
   // const WordSchoolslug = school?.wordschoolslug;
   const schoolsLogosData = schoolsImageMap[slug];
+  const schoolsHerosLogosData = schoolsHeroLogosMap[slug];
 
   return (
     <>
@@ -226,7 +242,7 @@ export default async function Page({ params }: Props) {
         iframeContent={school.iframe}
         videoLink={school.videolink}
         fullWidth={school?.fullwidthhero}
-        alumniLogos={schoolsLogosData}
+        alumniLogos={schoolsHerosLogosData}
         admTitle={school.admissionsessiontitle}
         admBtn={school.admissionbtn}
         slug={slug}

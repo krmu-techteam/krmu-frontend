@@ -9,6 +9,7 @@ import YoutubeVideoSection from "./schoolglobalcomponent/YoutubeVideoSection";
 import ConnectingDreamSlider from "../../(school-programmes)/school-programmes-component/ConnectingDreamSlider";
 import { Download } from "lucide-react";
 import SchoolAdmissionOpen from "./SchoolAdmissionOpen";
+import SchoolHeroSlider from "../../(school-programmes)/school-programmes-component/SchoolHeroSlider";
 
 type Props = {
   title: string;
@@ -104,7 +105,7 @@ const SchoolHero = ({
       thumbnail: "",
       ytUrl: "",
       bgURl: "/schools/banners/soad-banner-2.webp",
-      middleImg: "/schools/middleImg/soad-middleimg-2.png",
+      middleImg: "/schools/middleImg/soad-middleimg.webp",
       mobileBgImg: "/schools/banners/mob-soad-banner.webp",
       notCutoutBg: false,
     },
@@ -179,14 +180,14 @@ const SchoolHero = ({
         className={`relative overflow-hidden ${
           fullWidth
             ? "lg:py-[20%] lg:pb-0 pt-[300px] pb-5"
-            : `${notCutoutBg ? "pt-[45px] sm:pt-0 xl:pt-[380px]" : "pt-[100px] sm:pt-[140px] lg:pt-[280px]"} schoolBanner`
+            : `${notCutoutBg ? "pt-[45px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : "pt-[100px] sm:pt-[140px] lg:pt-[280px]"} schoolBanner`
         } bg-cover bg-no-repeat bg-center`}
         style={
           {
             "--mobile-bg": `url(${mobileBg})`,
             "--desktop-bg": `url(${desktopBg})`,
             backgroundSize: "cover",
-            backgroundPosition: "center right",
+            backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           } as React.CSSProperties
         }
@@ -198,7 +199,7 @@ const SchoolHero = ({
               width={640}
               height={640}
               alt=""
-              className={`${notCutoutBg ? "h-[400px] md:h-[800px]" : "h-[400px]"} w-full  object-cover`}
+              className={`${notCutoutBg ? "h-full" : "h-[400px]"} w-full  object-cover`}
             />
           </div>
         )}
@@ -284,15 +285,15 @@ const SchoolHero = ({
                   {middleimg && (
                     <Image
                       src={middleimg}
-                      width={492}
+                      width={600}
                       height={600}
                       alt={title || ""}
-                      className="object-contain z-10 h-[400px] relative"
+                      className={`object-contain z-10 h-full md:h-[400px] xl:h-full w-full  relative`}
                       priority
                     />
                   )}
                 </div>
-                <div className="bg-[#001732] xl:bg-transparent p-5 xl:p-0 z-20 relative -mt-28 sm:mt-0">
+                <div className={`bg-[#001732] ${slug === 'school-of-legal-studies' ? 'xl:-translate-y-[60px]' : ''}  xl:bg-transparent p-5 xl:p-0 z-20 relative  ${notCutoutBg ? '-mt-10' : '-mt-28 sm:mt-0'}`}>
                   <p className="text-sm lg:text-lg 2xl:text-2xl font-normal sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
                     {subheading}
                   </p>
@@ -324,11 +325,11 @@ const SchoolHero = ({
                       ),
                     )}
                   </div>
-                  {slug !== "school-of-legal-studies" && (
-                    <div className="hidden xl:block max-w-[450px] mx-auto my-2.5 sm:mt-10 p-3 rounded-[10px] alumniHeaderCarousel brightness-0 invert">
-                      <ConnectingDreamSlider logos={alumniLogos} />
-                    </div>
-                  )}
+
+                  <div className="hidden xl:block max-w-[450px] mx-auto my-2.5 sm:mt-10 p-3 rounded-[10px] alumniHeaderCarousel brightness-0 invert">
+                    {/* <ConnectingDreamSlider logos={alumniLogos} /> */}
+                    <SchoolHeroSlider logos={alumniLogos} />
+                  </div>
                 </div>
               </div>
               {/* {videoFmt === "Iframe" ? (
