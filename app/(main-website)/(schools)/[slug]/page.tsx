@@ -327,6 +327,7 @@ export default async function Page({ params }: Props) {
           list1={school?.listitem1?.listsitems}
           list2={school?.listitem2}
           list3={school?.listitem3}
+          slug={slug}
         />
       )}
       {school?.knowledgetitle && (
