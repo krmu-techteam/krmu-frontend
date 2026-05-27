@@ -57,7 +57,7 @@ const TableOfContentTab = ({ tocfaqs }: Props) => {
                   value={`item-${item.id}`}
                   className="border border-gray-200 px-4 py-2 rounded-md last:border-b"
                 >
-                  <AccordionTrigger className="text-sm md:text-xl cursor-pointer text-black font-semibold text-left py-3 hover:text-[#0a41a1] transition-colors">
+                  <AccordionTrigger className="text-sm md:text-xl cursor-pointer text-black font-semibold text-left py-3 hover:text-[#051730] hover:no-underline transition-colors">
                     {item.ques}
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-balance text-gray-700 leading-relaxed pb-6 text-sm md:text-lg">

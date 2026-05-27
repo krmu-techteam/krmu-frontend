@@ -42,9 +42,9 @@ const FinancialAssistance = ({
         </div>
 
         {/* Points Layout */}
-        <div className="mt-4 lg:mt-6 2xl:mt-10 flex flex-col gap-4">
+        <div className="mt-4 lg:mt-6 2xl:mt-10 flex flex-col gap-8">
           {/* Row 1: 4 Items */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 xl:gap-8">
             {points.slice(0, 4).map((point, index) => (
               <div
                 key={index}
@@ -57,7 +57,7 @@ const FinancialAssistance = ({
           </div>
 
           {/* Row 2: 3 Items Centered */}
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 xl:gap-8">
             {points.slice(4).map((point, index) => (
               <div
                 key={index + 4}
@@ -72,7 +72,7 @@ const FinancialAssistance = ({
 
         {/* Logos Grid */}
         <div className="mt-4 lg:mt-12 2xl:mt-16 flex items-center justify-center">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 items-center gap-4 lg:gap-4 2xl:gap-10 w-full sm:w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 items-center gap-4 xl:gap-8 w-full sm:w-full">
             {logos &&
               logos.map((logo) => {
                 return (
