@@ -308,11 +308,11 @@ export const heroConfigs: Record<string, HeroConfig> = {
     bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_management_57cf30bda7.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
-  "phd-commerce": {
-    ...defaultCinematicConfig,
-    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_commerce_cabc2265e0.jpg",
-    bgPosition: "70% top",
-  } as HeroConfig,
+  // "phd-commerce": {
+  //   ...defaultCinematicConfig,
+  //   bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_commerce_cabc2265e0.jpg",
+  //   bgPosition: "70% top",
+  // } as HeroConfig,
   "bba-llb-hons": {
     ...defaultCinematicConfig,
     bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_llb_hons_db274f3d60.jpg",
