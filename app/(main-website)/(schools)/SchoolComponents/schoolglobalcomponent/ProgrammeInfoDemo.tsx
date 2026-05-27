@@ -10,6 +10,7 @@ import {
   Calendar,
   CalendarDays,
   CircleArrowRight,
+  Clock,
   IndianRupee,
   X,
 } from "lucide-react";
@@ -241,47 +242,51 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
                 <p>Fee Structure</p>
               </div>
               <div className="grid grid-cols-2 sm:flex flex-col md:flex-row gap-4 border-b border-gray-300 pb-2.5 sm:pb-5 mb-2.5 sm:mb-5">
-               
                 <div className="lg:border-r border-gray-200 pr-4">
-                  <p className="mb-5 font-normal text-sm sm:text-base leading-[1]">
+                  <p className="mobsize mb-2.5 font-normal text-sm leading-[1]">
                     Semester I
                   </p>
-                  <p className="text-sm sm:text-base  leading-[1] font-bold">
+                  <p className="text-sm leading-[1] font-bold">
                     {criteria.semester_i === "TBD" ? "" : "Rs."}{" "}
                     {criteria.semester_i || "N/A"}{" "}
                     {criteria.semester_i === "TBD" ? "" : "/-"}
                   </p>
                 </div>
                 <div className="lg:border-r border-gray-200 pr-4">
-                  <p className="mb-5 font-normal text-sm sm:text-base leading-[1]">
+                  <p className="mobsize mb-2.5 font-normal text-sm leading-[1]">
                     Semester II
                   </p>
-                  <p className="text-sm sm:text-base  leading-[1] font-bold">
+                  <p className="text-sm leading-[1] font-bold">
                     {criteria.semester_ii === "TBD" ? "" : "Rs."}{" "}
                     {criteria.semester_ii || "N/A"}{" "}
                     {criteria.semester_ii === "TBD" ? "" : "/-"}
                   </p>
                 </div>
                 <div>
-                  <p className="mb-5 font-normal text-sm sm:text-base  leading-[1]">
+                  <p className="mobsize mb-2.5 font-normal text-sm  leading-[1]">
                     Programme Fee Per Year{" "}
                     {currentProgram?.programmeslug === "bhmct-hotel-management"
                       ? "(2025-26)"
                       : ""}
                   </p>
-                  <p className="text-sm sm:text-base leading-[1] font-bold">
+                  <p className="text-sm leading-[1] font-bold">
                     {criteria.programme_fee_per_year === "TBD" ? "" : "Rs."}{" "}
                     {criteria.programme_fee_per_year || "N/A"}{" "}
                     {criteria.programme_fee_per_year === "TBD" ? "" : "/-"}
                   </p>
                 </div>
-                 <div className="pr-4 sm:ml-auto">
-                  <p className="mb-5 font-normal text-sm sm:text-base leading-[1]">
-                    Duration
-                  </p>
-                  <p className="text-sm sm:text-base  leading-[1] font-bold">
-                    {criteria.Duration || "N/A"}
-                  </p>
+                <div className="pr-4 sm:ml-auto">
+                  <div className="flex items-center gap-2.5">
+                    <Clock size={20} />
+                    <div>
+                      <p className="mobsize mb-2.5 font-normal text-sm leading-[1]">
+                        Duration
+                      </p>
+                      <p className="text-sm leading-[1] font-bold">
+                        {criteria.Duration || "N/A"}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
