@@ -113,8 +113,8 @@ const SchoolHero = ({
     "school-of-education": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/soed-banner.png",
-      middleImg: "/schools/middleImg/soed-middleimg.png",
+      bgURl: "/schools/banners/soed-banner-3.webp",
+      middleImg: "/schools/middleImg/soed-middleimg-2.png",
       mobileBgImg: "/schools/banners/mob-soed-banner.webp",
       notCutoutBg: false,
     },
@@ -180,7 +180,7 @@ const SchoolHero = ({
         className={`relative overflow-hidden ${
           fullWidth
             ? "lg:py-[20%] lg:pb-0 pt-[300px] pb-5"
-            : `${notCutoutBg ? "pt-[45px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : "pt-[100px] sm:pt-[140px] lg:pt-[280px]"} schoolBanner`
+            : `${notCutoutBg ? "pt-[45px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : "pt-[100px] sm:pt-[140px] lg:pt-[280px] xl:pt-[180px] 2xl:pt-[280px]"} schoolBanner`
         } bg-cover bg-no-repeat bg-center`}
         style={
           {
@@ -279,7 +279,7 @@ const SchoolHero = ({
               </div>
             </div>
           ) : (
-            <div className="max-w-[1850px] mx-auto w-full xl:flex items-start justify-between p-0 relative z-20">
+            <div className="max-w-[1850px] mx-auto w-full xl:flex items-center justify-between p-0 relative z-20">
               <div className="text-center text-white w-full xl:w-1/2 xl:pr-20">
                 <div className="xl:hidden flex justify-center">
                   {middleimg && (
