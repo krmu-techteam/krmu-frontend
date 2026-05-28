@@ -11,7 +11,7 @@ export const CommonHeader = () => {
       }}
     >
       <div className="px-3 flex flex-col sm:flex-row justify-between items-center gap-3">
-        <div className="w-full xl:w-3/6 2xl:w-1/3 flex justify-center sm:justify-start gap-5">
+        <div className="w-full md:w-2/6 xl:w-3/6 2xl:w-1/3 flex justify-center sm:justify-start gap-5">
           <Image
             src="/wp-content/landingpage/common/krmlogo.webp"
             width={350}
@@ -26,7 +26,7 @@ export const CommonHeader = () => {
             Apply Now
           </ScrollButton>
         </div>
-        <div className="w-full xl:w-3/6 2xl:w-2/3  flex justify-center sm:justify-end gap-5 temp-class">
+        <div className="w-full md:w-4/6 xl:w-3/6 2xl:w-2/3  flex justify-center sm:justify-end gap-5 temp-class">
           {/* <button className="max-w-[180px] w-full py-[15px] px-[25px] text-white bg-[#e31e24] rounded-[15px]">
             Apply Now
           </button> */}
