@@ -488,23 +488,13 @@ const ProgrammesSearch = () => {
                     className="group w-full max-w-[458px] min-h-[220px] rounded-xl bg-[#001F3F] hover:bg-[#0a41a1] font-semibold p-5 transition-all duration-300 flex flex-col gap-3 justify-between hover:shadow-xl shadow-md text-white border border-white/10"
                   >
                     {" "}
-                    {/* <Link href={`/programs/${slug}`} target="_blank">
-                      <h6 className="block w-full text-white">
-                        {"title" in item ? item.title : item.heading}
-                      </h6>
-                    </Link> */}
-                    <Link
-                      href={
-                        slug.includes("zenithschool.ai")
-                          ? slug
-                          : `/programs/${slug}`
-                      }
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <h6 className="block w-full text-white">
-                        {"title" in item ? item.title : item.heading}
-                      </h6>
+                    <Link href={`/programs/${slug}`} target="_blank">
+                      <h6
+                        className="block w-full text-white"
+                        dangerouslySetInnerHTML={{
+                          __html: "title" in item ? item.title : item.heading,
+                        }}
+                      />
                     </Link>
                     <div className="flex flex-col sm:flex-row  sm:gap-5">
                       <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
