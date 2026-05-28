@@ -47,7 +47,7 @@ const ProgramCardContent = ({
         target="_blank"
         rel="noopener noreferrer"
         dangerouslySetInnerHTML={{
-          __html: `${prog.title}`,
+          __html: `${prog.title} ${prog.highlightitle ? prog.highlightitle : ''}`,
         }}
       />
 
