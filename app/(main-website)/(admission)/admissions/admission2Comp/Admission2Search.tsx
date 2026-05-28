@@ -505,9 +505,12 @@ const Admission2Search = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <h6 className="block w-full text-white">
-                        {"title" in item ? item.title : item.heading}
-                      </h6>
+                      <h6
+                        className="block w-full text-white"
+                        dangerouslySetInnerHTML={{
+                          __html: "title" in item ? item.title : item.heading,
+                        }}
+                      />
                     </Link>
                     <div className="flex flex-col sm:flex-row border-y border-[rgba(255,255,255,0.2)] sm:gap-5 z-20">
                       <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
