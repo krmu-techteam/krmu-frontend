@@ -191,9 +191,11 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
                           className="block w-full text-white text-xl"
                           target="_blank"
                           rel="noopener noreferrer"
-                        >
-                          {prog.title} {prog.highlightitle}
-                        </Link>
+                          dangerouslySetInnerHTML={{
+                            __html: `${prog.title} ${prog.highlightitle}`,
+                          }}
+                        />
+
                         {criteria && (
                           <div className="flex flex-col sm:flex-row  sm:gap-5">
                             <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
