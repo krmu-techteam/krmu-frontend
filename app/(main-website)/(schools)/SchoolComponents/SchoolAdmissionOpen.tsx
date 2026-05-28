@@ -21,10 +21,11 @@ const SchoolAdmissionOpen = ({ title, admBtn }: Props) => {
           {(admBtn?.buttonlink || admBtn?.buttonclass) && (
             <Link
               href={admBtn?.buttonlink}
-              className={`inline-flex items-center justify-center bg-[#cb000d] transition-all duration-300 px-8 py-2.5  text-base sm:text-md font-semibold text-white rounded-sm whitespace-nowrap ${admBtn.buttonclass}`}
+              className={`inline-flex items-center justify-center bg-[#cb000d]  px-8 py-2.5  text-base sm:text-md font-semibold text-white rounded-sm whitespace-nowrap transition-all  relative overflow-hidden group  ${admBtn.buttonclass}`}
               target="_blank"
               rel="noopener noreferrer"
             >
+              <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
               {admBtn?.buttontext}
             </Link>
           )}

@@ -131,7 +131,8 @@ const page = async ({ params }: Props) => {
   const allSchoolProgrammeData = await getSchoolProgrammeData(slug);
   const allSinglePHDProgramme = await getPHDProgramme(slug);
   const getDownProsSettings = await getDownloadProspectusSetting();
-  const enable_disable_download_pros = getDownProsSettings?.download_prospectus_enable_disable;
+  const enable_disable_download_pros =
+    getDownProsSettings?.download_prospectus_enable_disable;
   const seoData = await getSchoolProgrammeSEO(slug);
   const seo = seoData?.[0]?.SEO;
   const tags = seo?.tags;
@@ -297,14 +298,13 @@ const page = async ({ params }: Props) => {
             prospectusBtn={programmeScopeSection?.scopebtn}
           />
         )}
-        {!(slug in heroConfigs) &&
-          dreamcareerSection && (
-            <DreamCareer
-              heading={dreamcareerSection.heading}
-              description={dreamcareerSection.description}
-              logos={dreamcareerSection?.careerlogos}
-            />
-          )}
+        {!(slug in heroConfigs) && dreamcareerSection && (
+          <DreamCareer
+            heading={dreamcareerSection.heading}
+            description={dreamcareerSection.description}
+            logos={dreamcareerSection?.careerlogos}
+          />
+        )}
 
         {programmeScopeSection && (
           <ProgrammeScope
@@ -418,7 +418,7 @@ const page = async ({ params }: Props) => {
             tocbtn={tocSection?.tocbtn}
           />
         )}
-        
+
         <ExplorePrograms currentSlug={slug} />
 
         {ourLocationSection && (
@@ -431,7 +431,9 @@ const page = async ({ params }: Props) => {
         )}
 
         {/* <ConnectWithUs /> */}
-        <ActionCards />
+        {singleSchoolProgramme?.school_category && (
+          <ActionCards schoolCat={singleSchoolProgramme.school_category} />
+        )}
       </main>
     </>
   );

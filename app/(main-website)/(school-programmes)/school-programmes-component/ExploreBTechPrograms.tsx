@@ -106,12 +106,14 @@ export default async function ExplorePrograms({
                     </div>
 
                     <div className="pr-4 xl:pr-6 2xl:pr-8 flex flex-col justify-center h-full">
-                      <span className="text-white text-[15px] md:text-[12.5px] xl:text-[16px] 2xl:text-[17px] font-normal leading-snug tracking-wide group-hover:text-white/95 transition-colors duration-500 ease-out [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]">
-                        {prog.title}
+                      <span className="text-white text-[15px] md:text-[12.5px] xl:text-[16px] 2xl:text-[17px] font-normal leading-snug tracking-wide group-hover:text-white/95 transition-colors duration-500 ease-out [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]" dangerouslySetInnerHTML={{
+                        __html: prog.title
+                      }}>
                       </span>
                       {prog.highlightitle && (
-                        <span className="text-[#a59ebf] text-[13px] sm:text-[14px] leading-snug mt-1.5 group-hover:text-white/80 transition-colors duration-500 ease-out [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]">
-                          {prog.highlightitle}
+                        <span className="text-[#a59ebf] text-[13px] sm:text-[14px] leading-snug mt-1.5 group-hover:text-white/80 transition-colors duration-500 ease-out [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]" dangerouslySetInnerHTML={{
+                          __html: prog.highlightitle
+                        }}>
                         </span>
                       )}
                     </div>

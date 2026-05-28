@@ -204,6 +204,12 @@ export interface OurLocation {
   img1: StrapiMedia;
   img2: StrapiMedia;
 }
+export interface SchoolCategoryType {
+  id: number;
+  documentId: string;
+  name: string;
+  slug: string;
+}
 
 export interface Programme {
   id: number;
@@ -232,6 +238,7 @@ export interface Programme {
   degree: ProgrammeDegreeCard;
   criteria: CriteriaType;
   formId: string;
+  school_category: SchoolCategoryType;
 }
 
 export interface CriteriaType {

@@ -6,7 +6,7 @@ import {
 } from "../types/school-programme";
 
 export async function getSchoolProgrammeData(
-  slug?: string
+  slug?: string,
 ): Promise<SchoolProgrammeResponse["data"]> {
   let urlcode = "";
   if (slug) {
@@ -15,12 +15,12 @@ export async function getSchoolProgrammeData(
   const res = await fetch(
     // `${FETCH_STRAPI_URL}/api/school-programmes?${urlcode}&populate[herosection][populate][herobtn][populate]=*&populate[herosection][populate][heroimg][populate]=*&populate[programmeeligibility][populate]=*&populate[programmescope][populate]=*&populate[programmehighlight][populate][programmehighlightcards][populate]=*&populate[specialisation][populate][specialisationcards][populate]=*&populate[admissionprocess][populate][admissionbtn][populate]=*&populate[admissionprocess][populate][admissionprocesscard][populate]=*&populate[admissionprocess][populate][desktopadmissionprocessimg][populate]=*&populate[curriculum][populate][currbtn][populate]=*&populate[curriculum][populate][years][populate][semester][populate][subjects][populate]=*&populate[curriculum][populate][years][populate][semester][populate][pdfbtns][populate]=*&populate[labsfacilities][populate]=*&populate[beyondclassroom][populate]=*&populate[career][populate]=*&populate[dreamcareer][populate]=*&populate[financialassistance][populate]=*&populate[toc][populate][tocfaq][populate]=*&populate[toc][populate][tocimg][populate]=*&populate[toc][populate][tocbtn][populate]=*&populate[ourlocation][populate]=*`,
     // `${FETCH_STRAPI_URL}/api/school-programmes?${urlcode}populate[herosection][populate][herobtn][populate]=*&populate[herosection][populate][heroimg][populate]=*&populate[programmeeligibility][populate]=*&populate[programmescope][populate]=*&populate[programmehighlight][populate][programmehighlightcards][populate]=*&populate[specialisation][populate][specialisationcards][populate]=*&populate[admissionprocess][populate][admissionbtn][populate]=*&populate[admissionprocess][populate][admissionprocesscard][populate]=*&populate[admissionprocess][populate][desktopadmissionprocessimg][populate]=*&populate[curriculum][populate][currbtn][populate]=*&populate[curriculum][populate][years][populate][semester][populate][subjects][populate][course_name][populate]=*&populate[curriculum][populate][years][populate][semester][populate][pdfbtns][populate]=*&populate[labsfacilities][populate]=*&populate[beyondclassroom][populate]=*&populate[career][populate]=*&populate[dreamcareer][populate]=*&populate[financialassistance][populate]=*&populate[toc][populate][tocfaq][populate]=*&populate[toc][populate][tocimg][populate]=*&populate[toc][populate][tocbtn][populate]=*&populate[ourlocation][populate]=*`,
-    `${FETCH_STRAPI_URL}/api/school-programmes?${urlcode}populate[herosection][populate][herobtn][populate]=*&populate[herosection][populate][heroimg][populate]=*&populate[programmeeligibility][populate]=*&populate[programmescope][populate]=*&populate[programmehighlight][populate][programmehighlightcards][populate]=*&populate[specialisation][populate][specialisationcards][populate]=*&populate[admissionprocess][populate][admissionbtn][populate]=*&populate[admissionprocess][populate][admissionprocesscard][populate]=*&populate[admissionprocess][populate][desktopadmissionprocessimg][populate]=*&populate[curriculum][populate][currbtn][populate]=*&populate[curriculum][populate][years][populate][semester][populate][subjects][populate][course_name][populate]=*&populate[curriculum][populate][years][populate][semester][populate][pdfbtns][populate]=*&populate[labsfacilities][populate]=*&populate[beyondclassroom][populate]=*&populate[career][populate]=*&populate[dreamcareer][populate]=*&populate[financialassistance][populate]=*&populate[toc][populate][tocfaq][populate]=*&populate[toc][populate][tocimg][populate]=*&populate[toc][populate][tocbtn][populate]=*&populate[ourlocation][populate]=*`,
+    `${FETCH_STRAPI_URL}/api/school-programmes?${urlcode}populate[herosection][populate][herobtn][populate]=*&populate[herosection][populate][heroimg][populate]=*&populate[programmeeligibility][populate]=*&populate[programmescope][populate]=*&populate[programmehighlight][populate][programmehighlightcards][populate]=*&populate[specialisation][populate][specialisationcards][populate]=*&populate[admissionprocess][populate][admissionbtn][populate]=*&populate[admissionprocess][populate][admissionprocesscard][populate]=*&populate[admissionprocess][populate][desktopadmissionprocessimg][populate]=*&populate[curriculum][populate][currbtn][populate]=*&populate[curriculum][populate][years][populate][semester][populate][subjects][populate][course_name][populate]=*&populate[curriculum][populate][years][populate][semester][populate][pdfbtns][populate]=*&populate[labsfacilities][populate]=*&populate[beyondclassroom][populate]=*&populate[career][populate]=*&populate[dreamcareer][populate]=*&populate[financialassistance][populate]=*&populate[toc][populate][tocfaq][populate]=*&populate[toc][populate][tocimg][populate]=*&populate[toc][populate][tocbtn][populate]=*&populate[ourlocation][populate]=*&populate[school_category][fields][0]=id&populate[school_category][fields][1]=name&populate[school_category][fields][2]=slug`,
     {
       next: {
         revalidate: 3600,
       },
-    }
+    },
   );
   if (!res.ok) throw new Error("Failed to fetch School Programme Data");
   const json: SchoolProgrammeResponse = await res.json();
@@ -91,13 +91,17 @@ export async function getSchoolProgrammeData(
 //         tocbtn: { populate: '*' }
 //       }
 //     },
-//     ourlocation: { populate: '*' }
+//     ourlocation: { populate: '*' },
+
+//     school_category: {
+//       fields: ["id", "name", "slug"],
+//     },
 //   }
 // }
 
 export async function getSchoolProgrammeInfoByDegree(
   deg: string = "Undergraduate Programmes",
-  schoolCatName: string
+  schoolCatName: string,
 ): Promise<SCHOOLPROGRAMMECARDINFORESPONSE["data"]> {
   const res = await fetch(
     // `${FETCH_STRAPI_URL}/api/school-programmes?filters[degrees][name][$eq]=${deg}&filters[school_categories][name][$eq]=${schoolCatName}&fields[0]=title&fields[1]=programmeslug&populate[criteria][fields][0]=Duration&populate[criteria][fields][1]=eligibility_criteria&populate[criteria][fields][2]=semester_i&populate[criteria][fields][3]=semester_ii&populate[criteria][fields][4]=programme_fee_per_year&populate[criteria][fields][5]=eligibility_utm_links&populate[criteria][populate][degree][fields][0]=name&populate[criteria][populate][degree][fields][1]=slug&pagination[pageSize]=50&pagination[page]=1&sort[0]=id:asc`,
@@ -106,7 +110,7 @@ export async function getSchoolProgrammeInfoByDegree(
       next: {
         revalidate: 43200,
       },
-    }
+    },
   );
   if (!res.ok) throw new Error("Failed to school Programme Info");
   const json: SCHOOLPROGRAMMECARDINFORESPONSE = await res.json();
@@ -115,7 +119,7 @@ export async function getSchoolProgrammeInfoByDegree(
 
 export async function getSchoolProgrammePhdDataDegree(
   deg: string = "Doctoral Programme",
-  schoolCatName: string
+  schoolCatName: string,
 ): Promise<SchoolPhDProgrammeResponse["data"]> {
   const res = await fetch(
     // `${FETCH_STRAPI_URL}/api/school-programmes?filters[degrees][name][$eq]=${deg}&filters[school_categories][name][$eq]=${schoolCatName}&fields[0]=title&fields[1]=programmeslug&populate[criteria][fields][0]=Duration&populate[criteria][fields][1]=eligibility_criteria&populate[criteria][fields][2]=semester_i&populate[criteria][fields][3]=semester_ii&populate[criteria][fields][4]=programme_fee_per_year&populate[criteria][fields][5]=eligibility_utm_links&populate[criteria][populate][degree][fields][0]=name&populate[criteria][populate][degree][fields][1]=slug&pagination[pageSize]=50&pagination[page]=1&sort[0]=id:asc`,
@@ -124,7 +128,7 @@ export async function getSchoolProgrammePhdDataDegree(
       next: {
         revalidate: 28800,
       },
-    }
+    },
   );
   if (!res.ok) throw new Error("Failed to school PHD Programme Info");
   const json: SchoolPhDProgrammeResponse = await res.json();

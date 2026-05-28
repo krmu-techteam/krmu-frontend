@@ -9,7 +9,7 @@ export async function getAllSchoolsInfo() {
       next: {
         revalidate: 3600,
       },
-    }
+    },
   );
 
   if (!res.ok) throw new Error("Failed to fetch School Info");
@@ -23,7 +23,7 @@ export async function getAllDegreeInfo() {
       next: {
         revalidate: 3600,
       },
-    }
+    },
   );
 
   if (!res.ok) throw new Error("Failed to fetch Degree Info");
@@ -108,6 +108,7 @@ export interface Programme {
   id: number;
   documentId: string;
   title: string;
+  highlightitle: string;
   programmeslug: string;
   criteria: Criteria;
 }
@@ -126,17 +127,18 @@ export interface ProgrammesResponse {
   };
 }
 
-export async function getAllSchoolProgrammeByDegOrCatPaginated( 
+export async function getAllSchoolProgrammeByDegOrCatPaginated(
   deg: string = "undergraduate-programmes",
   cat: string = "soet",
   page: number = 1,
-  pageSize: number = 6
+  pageSize: number = 6,
 ): Promise<ProgrammesResponse> {
   const url =
     `${FETCH_STRAPI_URL}/api/school-programmes` +
     `?sort[0]=order_num:asc&filters[degree][slug][$eq]=${deg}` +
     `&filters[school_category][slug][$eq]=${cat}` +
     `&fields[0]=title` +
+    `&fields[2]=highlightitle` +
     `&fields[1]=programmeslug` +
     `&populate[criteria][populate]=*` +
     `&pagination[page]=${page}` +
@@ -188,7 +190,7 @@ export interface PhdProgrammesResponse {
 export async function getAllSchoolPhdProgrammeByCatPaginated(
   cat: string = "soet",
   page: number = 1,
-  pageSize: number = 6
+  pageSize: number = 6,
 ): Promise<PhdProgrammesResponse> {
   const url =
     `${FETCH_STRAPI_URL}/api/phd-single-programmes` +
@@ -215,7 +217,7 @@ export async function getAllSchoolPhdProgrammeByCatPaginated(
 export async function searchSchoolProgrammes(
   searchQuery: string = "",
   page: number = 1,
-  pageSize: number = 6
+  pageSize: number = 6,
 ): Promise<ProgrammesResponse> {
   // Start query string
   const queryParams = new URLSearchParams({
@@ -241,7 +243,7 @@ export async function searchSchoolProgrammes(
 export async function searchPhdProgrammes(
   searchQuery: string = "",
   page: number = 1,
-  pageSize: number = 6
+  pageSize: number = 6,
 ): Promise<PhdProgrammesResponse> {
   // Build query parameters safely
   const queryParams = new URLSearchParams({

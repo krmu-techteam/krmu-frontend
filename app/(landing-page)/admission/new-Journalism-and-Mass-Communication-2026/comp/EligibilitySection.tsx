@@ -36,7 +36,6 @@ const admissionSteps = [
 ];
 
 const EligibilitySection = ({ heroSection }: { heroSection: any }) => {
-  console.log("heroSection", heroSection.herobtn.buttontext);
   return (
     <section className="w-full bg-[#f3f0f4] pb-10 sm:pb-12 lg:pb-16">
       <div className="max-w-7xl mx-auto px-5 md:px-8">

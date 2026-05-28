@@ -91,7 +91,7 @@ const ProgrammeScope = async ({
                       {scopeData.scopebtn.buttontext || "Download Prospectus"}
                     </span>
                   }
-                  buttonClassName="inline-block px-6 py-2 md:py-2 xl:py-2.5 text-md md:text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
+                  buttonClassName="inline-block px-6 py-2 md:py-2 xl:py-2.5 text-md md:text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#051730] transition-all duration-300"
                   redirectUrl={scopeData?.scopebtn?.buttonlink || "#"}
                   form_name="Download Prospectus"
                 />
@@ -99,7 +99,7 @@ const ProgrammeScope = async ({
             ) : (
               <Link
                 href={scopeData?.scopebtn?.buttonlink || "#"}
-                className="inline-block px-6 py-2.5 text-[18px]  font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
+                className="inline-block px-6 py-2.5 text-[18px]  font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#051730] transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >

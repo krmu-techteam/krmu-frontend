@@ -21,10 +21,11 @@ const SchoolExcellence = ({ title1, title2, btn1, btn2 }: Props) => {
           {(btn1?.buttonlink || btn1?.buttonclass) && (
             <Link
               href={btn1?.buttonlink}
-              className={`inline-block text-sm sm:text-base py-3.5 px-3.5 sm:px-8 text-white rounded-lg border border-white ${btn1?.buttonclass}`}
+              className={`inline-block text-sm sm:text-base py-3.5 px-3.5 sm:px-8 text-white rounded-lg border border-white transition-all  relative overflow-hidden group ${btn1?.buttonclass}`}
               target="_blank"
               rel="noopener noreferrer"
             >
+              <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
               {btn1?.buttontext}
             </Link>
           )}
@@ -39,10 +40,11 @@ const SchoolExcellence = ({ title1, title2, btn1, btn2 }: Props) => {
           {(btn2?.buttonlink || btn2?.buttonclass) && (
             <Link
               href={btn2?.buttonlink}
-              className={`inline-block text-sm sm:text-base py-3.5 px-3.5 sm:px-8 text-white rounded-lg border border-white  ${btn2?.buttonclass}`}
+              className={`inline-block text-sm sm:text-base py-3.5 px-3.5 sm:px-8 text-white rounded-lg border border-white transition-all  relative overflow-hidden group  ${btn2?.buttonclass}`}
               target="_blank"
               rel="noopener noreferrer"
             >
+              <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
               {btn2?.buttontext}ss
             </Link>
           )}
