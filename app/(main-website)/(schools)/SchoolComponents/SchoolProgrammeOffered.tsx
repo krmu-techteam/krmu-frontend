@@ -32,7 +32,7 @@ const SchoolProgrammeOffered = ({
             </h3>
             <p>{content}</p>
           </div>
-          <ProgrammeInfoDemo degName={degName} catName={schoolCategoryName} />
+          <ProgrammeInfoDemo degName={degName} catName={schoolCategoryName} slug={slug} />
           {/* <ProgrammeInfoCards /> */}
         </div>
       </section>

@@ -58,7 +58,7 @@ const ProgramCardContent = ({
               <Calendar size={20} />
             </span>
             <div className="flex flex-col gap-0.5">
-              <span className="font-normal text-xs">Duration:</span>
+              <span className="font-semibold text-xs">Duration:</span>
               <span className="text-xs">{prog.criteria?.Duration}</span>
             </div>
           </div>
@@ -67,7 +67,7 @@ const ProgramCardContent = ({
               <IndianRupee size={20} />
             </span>
             <div className="flex flex-col gap-0.5">
-              <span className="font-normal text-xs">Programme Fee:</span>
+              <span className="font-semibold text-xs">Programme Fee:</span>
               <span className="text-xs">
                 Rs. {prog.criteria?.programme_fee_per_year} / Year{" "}
                 {prog.programmeslug === "bhmct-hotel-management"
@@ -82,7 +82,7 @@ const ProgramCardContent = ({
       <div className="flex gap-1.5 sm:gap-2.5 items-center pt-2.5 z-20">
         <button
           // className="border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer border-white text-white w-full sm:w-1/2"
-          className="bg-white cursor-pointer text-sm text-[#0161B0] border border-[#999999] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 w-1/2"
+          className="bg-white cursor-pointer text-sm text-[#001732] border border-[#999999] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 w-1/2"
           onClick={() => setShow(true)}
         >
           Fee Structure

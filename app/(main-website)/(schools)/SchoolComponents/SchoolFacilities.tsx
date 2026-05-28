@@ -56,7 +56,7 @@ const SchoolFacilities = ({ fac_slides }: Props) => {
                   index === current ? "fac_active_slide" : ""
                 }`}
               >
-                <h6 className="text-[10px] sm:text-xl md:text-2xl my-5 font-semibold text-center fac_title text-white xl:h-16">
+                <h6 className="max-w-[250px] mx-auto sm:max-w-fit text-lg sm:text-xl md:text-2xl my-5 font-semibold text-center fac_title text-white xl:h-16">
                   {slide.title}
                 </h6>
                 <div className="fac_slide_img_container">

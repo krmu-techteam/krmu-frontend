@@ -28,7 +28,7 @@ const SchoolCommenceJourney = ({
       </div>
       <div className="lg:hidden px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-3">
-          <div className="w-full p-2.5 md:p-5 bg-[url(/schools/1.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
+          <div className="w-full p-5 rounded-sm bg-[url(/schools/1.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom border border-gray-200 mb-5">
             <span
               className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
@@ -40,6 +40,7 @@ const SchoolCommenceJourney = ({
                 width={30}
                 height={30}
                 alt="Start your application"
+                className="p-1.5"
               />
             </span>
             <p className="text-lg text-black font-semibold">
@@ -52,7 +53,7 @@ const SchoolCommenceJourney = ({
               </Link>{" "}
             </p>
           </div>
-          <div className="w-full p-2.5 md:p-5 bg-[url(/schools/2.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
+          <div className="w-full p-5 rounded-sm bg-[url(/schools/2.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom border border-gray-200 mb-5">
             <span
               className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
@@ -71,7 +72,7 @@ const SchoolCommenceJourney = ({
             </p>
             <p>Pay the required Application Fee</p>
           </div>
-          <div className="w-full p-2.5 md:p-5 bg-[url(/schools/3.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
+          <div className="w-full p-5 rounded-sm bg-[url(/schools/3.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom border border-gray-200 mb-5">
             <span
               className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
@@ -90,7 +91,7 @@ const SchoolCommenceJourney = ({
             </p>
             <p>K.R. Mangalam University Entrance Examination (KREE)</p>
           </div>
-          <div className="w-full p-2.5 md:p-5 bg-[url(/schools/4.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
+          <div className="w-full p-5 rounded-sm bg-[url(/schools/4.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom border border-gray-200 mb-5">
             <span
               className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
@@ -109,7 +110,7 @@ const SchoolCommenceJourney = ({
             </p>
             <p>Attend our Faculty-Led Interview.</p>
           </div>
-          <div className="w-full p-2.5 md:p-5 bg-[url(/schools/5.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
+          <div className="w-full p-5 rounded-sm bg-[url(/schools/5.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom border border-gray-200 mb-5">
             <span
               className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
@@ -130,7 +131,7 @@ const SchoolCommenceJourney = ({
               You will receive the offer letter after the successful interaction
             </p>
           </div>
-          <div className="w-full p-2.5 md:p-5 bg-[url(/schools/6.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
+          <div className="w-full p-5 rounded-sm bg-[url(/schools/6.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom border border-gray-200 mb-5">
             <span
               className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{

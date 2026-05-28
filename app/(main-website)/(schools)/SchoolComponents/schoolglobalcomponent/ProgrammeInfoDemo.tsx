@@ -22,9 +22,10 @@ type Props = {
   degName: string;
   catName: string;
   title?: string;
+  slug: string;
 };
 
-const ProgrammeInfoDemo = ({ catName, title }: Props) => {
+const ProgrammeInfoDemo = ({ catName, title, slug }: Props) => {
   const [show, setShow] = useState<boolean>(false);
   const [programs, setPrograms] = useState<Record<string, ProgrammeCardData[]>>(
     {},
@@ -224,7 +225,7 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
         className={`fixed  top-0 left-0 w-full z-50 h-full bg-black/50 ${show ? "block" : "hidden"}`}
       >
         <div
-          className="w-full rounded-md sm:m-0 p-2.5 md:p-10 h-fit bg-white max-w-2xl md:max-w-4xl absolute top-1/2 left-1/2 -translate-1/2"
+          className="w-full rounded-md sm:m-0 p-2.5 md:py-5 md:px-8 h-fit bg-white max-w-2xl md:max-w-3xl absolute top-1/2 left-1/2 -translate-1/2"
           style={{
             boxShadow:
               "0px -0.6088px 2.21381px 0px rgba(0, 0, 0, 0.02), 0px -1.46302px 5.32008px 0px rgba(0, 0, 0, 0.03), 0px -2.75474px 10.01724px 0px rgba(0, 0, 0, 0.04), 0px -4.91399px 17.86905px 0px rgba(0, 0, 0, 0.04), 0px -9.19107px 33.42209px 0px rgba(0, 0, 0, 0.05), 0px -22px 80px 0px rgba(0, 0, 0, 0.07)",
@@ -243,7 +244,7 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
               </div>
               <div className="grid grid-cols-2 sm:flex flex-col md:flex-row gap-4 border-b border-gray-300 pb-2.5 sm:pb-5 mb-2.5 sm:mb-5">
                 <div className="lg:border-r border-gray-200 pr-4">
-                  <p className="mobsize mb-2.5 font-normal text-sm leading-[1]">
+                  <p className="mb-2.5 font-normal text-base leading-[1]">
                     Semester I
                   </p>
                   <p className="text-sm leading-[1] font-bold">
@@ -253,17 +254,17 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
                   </p>
                 </div>
                 <div className="lg:border-r border-gray-200 pr-4">
-                  <p className="mobsize mb-2.5 font-normal text-sm leading-[1]">
+                  <p className="mb-2.5 font-normal text-sm leading-[1]">
                     Semester II
                   </p>
-                  <p className="text-sm leading-[1] font-bold">
+                  <p className="text-sm  leading-[1] font-bold">
                     {criteria.semester_ii === "TBD" ? "" : "Rs."}{" "}
                     {criteria.semester_ii || "N/A"}{" "}
                     {criteria.semester_ii === "TBD" ? "" : "/-"}
                   </p>
                 </div>
                 <div>
-                  <p className="mobsize mb-2.5 font-normal text-sm  leading-[1]">
+                  <p className="mb-2.5 font-normal text-sm leading-[1]">
                     Programme Fee Per Year{" "}
                     {currentProgram?.programmeslug === "bhmct-hotel-management"
                       ? "(2025-26)"
@@ -279,10 +280,10 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
                   <div className="flex items-center gap-2.5">
                     <Clock size={20} />
                     <div>
-                      <p className="mobsize mb-2.5 font-normal text-sm leading-[1]">
+                      <p className="mb-2.5 font-normal text-sm leading-[1]">
                         Duration
                       </p>
-                      <p className="text-sm leading-[1] font-bold">
+                      <p className="text-sm  leading-[1] font-bold">
                         {criteria.Duration || "N/A"}
                       </p>
                     </div>
@@ -291,9 +292,7 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
               </div>
 
               <div>
-                <p className="font-bold text-sm sm:text-base mb-2.5">
-                  Eligibility:
-                </p>
+                <p className="font-bold text-sm mb-2.5">Eligibility:</p>
                 <p className="text-xs sm:text-sm mb-5">
                   {criteria.eligibility_criteria || "Not available"}
                 </p>
@@ -302,20 +301,23 @@ const ProgrammeInfoDemo = ({ catName, title }: Props) => {
               <div className="flex gap-4 items-center">
                 <Link
                   href={`/programs/${currentProgram?.programmeslug || "#"}`}
-                  className="bg-[#001732] text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm"
+                  className="bg-[#001732] text-white text-center inline-block px-4 py-2.5 leading-none font-semibold rounded-sm"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Know More
                 </Link>
-                <Link
-                  href={criteria.eligibility_utm_links || "#"}
-                  className="#cb000d text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm bg-[#cb000d]"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply Now
-                </Link>
+                {slug !==
+                  "school-of-hotel-management-and-catering-technology" && (
+                  <Link
+                    href={criteria.eligibility_utm_links || "#"}
+                    className="#cb000d text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm font-semibold bg-[#cb000d]"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Apply Now
+                  </Link>
+                )}
               </div>
             </>
           ) : (

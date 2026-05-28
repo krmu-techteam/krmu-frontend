@@ -134,20 +134,20 @@ export const StaticFacultyEmployeeCard = ({
           <Link
             href={`/faculty/${slug}`}
             target="_blank"
-            className="inline-block text-[11px] font-bold leading-snug sm:text-base"
+            className="inline-block font-bold leading-snug text-base"
           >
             {name}
           </Link>
 
           <h5
-            className="py-1 text-[10px] uppercase sm:text-xs"
+            className="py-1 uppercase text-xs"
             dangerouslySetInnerHTML={{
               __html: desg,
             }}
           />
 
           <h6
-            className="text-[10px] font-bold sm:text-xs"
+            className="font-bold text-xs"
             dangerouslySetInnerHTML={{
               __html: qual,
             }}

@@ -93,7 +93,7 @@ const Admission2WhatMakes = () => {
                   {card.title}
                 </h5>
                 <p
-                  className="text-[14px] md:text-[15px] text-gray-600 leading-snug line-clamp-2 md:line-clamp-none"
+                  className="text-[14px] md:text-[15px] text-gray-600 leading-snug "
                   title={card.description}
                 >
                   {card.description}
