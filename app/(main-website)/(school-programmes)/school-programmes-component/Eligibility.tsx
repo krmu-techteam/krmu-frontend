@@ -99,7 +99,7 @@ const Eligibility = ({
           {heroSection?.imgvideo === "Video" ? (
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-4 2xl:gap-8 rounded-md p-0 sm:px-0 lg:px-0 xl:px-0 2xl:px-0 items-stretch">
               {/* Left Column: Media (Video only for this layout) */}
-              <div className="w-full lg:w-1/2 h-[280px] sm:h-[350px] lg:h-auto lg:min-h-[450px] relative  overflow-hidden group shadow-xs">
+              <div className="w-full lg:w-1/2 h-[220px] sm:h-[300px] lg:h-auto lg:min-h-[380px] relative  overflow-hidden group shadow-xs">
                 <div className="w-full h-full relative">
                   <YoutubePopup
                     videoUrl={heroSection?.videofield || "https://www.youtube.com/watch?v=tIfNUgSn2dw"}
@@ -111,9 +111,9 @@ const Eligibility = ({
               </div>
 
               {/* Right Column: Content */}
-              <div className="w-full bg-white rounded-md p-6 lg:p-6 xl:p-8 2xl:p-10 lg:w-1/2 flex flex-col justify-between shadow-xs">
+              <div className="w-full bg-white rounded-md p-5 lg:p-5 xl:p-6 2xl:p-8 lg:w-1/2 flex flex-col justify-between shadow-xs">
                 <div>
-                  <div className="grid grid-cols-2 mb-6 divide-x divide-gray-200">
+                  <div className="grid grid-cols-2 mb-4 divide-x divide-gray-200">
                     <div className="flex flex-col items-start text-left pr-4">
                       <span className="font-poppins text-[12px] md:text-[14px] font-normal leading-tight md:leading-[24px] text-gray-600 uppercase tracking-normal mb-1">
                         {elgibilities[0]?.subtitle || "Duration"}
@@ -132,7 +132,7 @@ const Eligibility = ({
                     </div>
                   </div>
 
-                  <div className="border-t border-gray-100 pt-4 mb-4 text-left">
+                  <div className="border-t border-gray-100 pt-3 mb-3 text-left">
                     <span className="font-poppins text-[14px] font-normal leading-[24px] text-gray-600 uppercase tracking-normal">
                       {elgibilities[2]?.subtitle || "Eligibility"}
                     </span>
@@ -151,14 +151,14 @@ const Eligibility = ({
                           {prospectusBtn?.buttontext || "Download Prospectus"}
                         </span>
                       }
-                      buttonClassName="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 lg:px-2 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-3 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-md hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group"
+                      buttonClassName="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 lg:px-2 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-2.5 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-md hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group"
                       redirectUrl={prospectusBtn?.buttonlink || "#"}
                       form_name="Download Prospectus"
                     />
                   ) : (
                     <Link
                       href={prospectusBtn?.buttonlink || "#"}
-                      className="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 lg:px-2 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-3 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-md hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group"
+                      className="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 lg:px-2 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-2.5 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-md hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -170,7 +170,7 @@ const Eligibility = ({
                     <a
                       href="#apply-form-mobile"
                       onClick={handleApplyClick}
-                      className="w-full sm:w-auto flex items-center justify-center gap-2 py-2 px-6 lg:px-9 xl:px-12 2xl:px-16 xl:py-2.5 2xl:py-3 bg-[#cb000d] text-white border border-[#cb000d] font-medium rounded-md shadow-lg hover:bg-[#b0000a] transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap"
+                      className="w-full sm:w-auto flex items-center justify-center gap-2 py-2 px-6 lg:px-9 xl:px-12 2xl:px-16 xl:py-2.5 2xl:py-2.5 bg-[#cb000d] text-white border border-[#cb000d] font-medium rounded-md shadow-lg hover:bg-[#b0000a] transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap"
                     >
                       Apply Now
                     </a>
