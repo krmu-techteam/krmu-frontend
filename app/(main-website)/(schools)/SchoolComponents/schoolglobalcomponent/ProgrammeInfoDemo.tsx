@@ -301,20 +301,22 @@ const ProgrammeInfoDemo = ({ catName, title, slug }: Props) => {
               <div className="flex gap-4 items-center">
                 <Link
                   href={`/programs/${currentProgram?.programmeslug || "#"}`}
-                  className="bg-[#001732] text-white text-center inline-block px-4 py-2.5 leading-none font-semibold rounded-sm"
+                  className="bg-[#001732] text-white text-center inline-block px-4 py-2.5 leading-none font-semibold rounded-sm transition-all  relative overflow-hidden group"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
                   Know More
                 </Link>
                 {slug !==
                   "school-of-hotel-management-and-catering-technology" && (
                   <Link
                     href={criteria.eligibility_utm_links || "#"}
-                    className="#cb000d text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm font-semibold bg-[#cb000d]"
+                    className="#cb000d text-white text-center inline-block px-4 py-2.5 leading-none rounded-sm font-semibold bg-[#cb000d]  transition-all  relative overflow-hidden group"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
+                    <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
                     Apply Now
                   </Link>
                 )}

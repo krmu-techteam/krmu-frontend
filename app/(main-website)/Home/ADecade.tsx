@@ -50,7 +50,7 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
                   href={leftContent.button1link}
                   // className="bg-[#001732] text-white   px-6 py-4 sm:py-2.5 rounded-md font-semibold col-span-2 text-center flex items-center justify-center h-14"
 
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-[#001732] text-white border-1 border-transparent hover:bg-[#001732] shadow-lg px-6 hover:bg-[#001732]"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-[#001732] text-white border-1 border-transparent shadow-lg "
                 >
                   <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
                   {leftContent.button1text}

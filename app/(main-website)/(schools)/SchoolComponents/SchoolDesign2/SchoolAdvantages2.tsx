@@ -21,7 +21,7 @@ const SchoolAdvantages2 = ({
   return (
     <section className="py-10 sm:py-20 bg-[url(/schools/advantages-bg.webp)] bg-no-repeat bg-center bg-cover relative px-4">
       <div className="max-w-7xl mx-auto w-full text-center mb-10">
-        <h4 className="text-3xl md:text-4xl xl:text-5xl font-semibold mb-5">
+        <h4 className="text-2xl sm:text-4xl font-semibold mb-5">
           {heading} {subtitle}
         </h4>
         {school_advantage && (

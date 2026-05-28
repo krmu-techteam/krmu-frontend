@@ -32,7 +32,7 @@ const SchoolExcitedNewsletter = async ({
       <div className="max-w-[1664px] mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
         {/* LEFT SIDE */}
         <div className="text-center lg:text-left text-white">
-          <h4 className="text-3xl md:text-4xl xl:text-5xl font-semibold mb-5">
+          <h4 className="text-2xl sm:text-4xl font-semibold mb-5">
             {excitedHeading}
           </h4>
 
@@ -44,7 +44,6 @@ const SchoolExcitedNewsletter = async ({
             {excbtns &&
               excbtns.map((btn) => {
                 if (enable_disable_download_pros === true) {
-                  
                   return (
                     <CommonLeadPopup
                       key={btn?.id}
@@ -73,7 +72,7 @@ const SchoolExcitedNewsletter = async ({
 
         {/* RIGHT SIDE */}
         <div className="text-center lg:text-left text-white border-t lg:border-t-0 lg:border-l border-white/20 pt-10 lg:pt-0 lg:pl-14">
-          <h4 className="text-3xl md:text-4xl xl:text-5xl font-semibold mb-5">
+          <h4 className="text-2xl sm:text-4xl font-semibold mb-5">
             {newsLetterHeading}
           </h4>
 
@@ -89,7 +88,7 @@ const SchoolExcitedNewsletter = async ({
                     <Popup
                       key={btn?.id}
                       buttonText={btn.buttontext || "Apply Now"}
-                      buttonClass={`border border-white py-2.5 px-6 bg-white w-full max-w-[250px] 2xl:max-w-fit transition duration-300 font-semibold rounded-md inline-block text-sm md:text-base shadow-md text-black hover:text-white hover:border hover:border-white hover:bg-transparent`}
+                      buttonClass={`border border-white py-2.5 px-6 bg-white w-full max-w-[250px] 2xl:max-w-fit transition duration-800 font-semibold rounded-md inline-block text-sm md:text-base shadow-md text-black hover:text-white hover:border hover:border-white hover:bg-transparent`}
                       buttonIcon=""
                     >
                       <p>This is the content inside the popup.</p>
@@ -100,10 +99,11 @@ const SchoolExcitedNewsletter = async ({
                     <Link
                       key={btn?.id}
                       href={btn?.buttonlink || ""}
-                      className={`border border-white py-2.5 px-6 w-full max-w-[250px] 2xl:max-w-fit text-center bg-white transition duration-300 font-semibold rounded-md inline-block text-sm md:text-base shadow-md text-black hover:text-white hover:border hover:border-white hover:bg-transparent`}
+                      className={`border border-white py-2.5 px-6 w-full max-w-[250px] 2xl:max-w-fit text-center bg-white transition-all  relative overflow-hidden group font-semibold rounded-md inline-block text-sm md:text-base shadow-md text-black hover:text-white hover:border hover:border-white hover:bg-transparent`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
+                      <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
                       {btn?.buttontext}
                     </Link>
                   );

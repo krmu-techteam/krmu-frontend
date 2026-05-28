@@ -43,7 +43,7 @@ const SchoolHero = ({
   const schoolBgMedia = {
     "school-of-engineering-and-technology": {
       thumbnail:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ytsoet_abda042457.webp",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/img2_219c145b08.png",
       ytUrl: "https://www.youtube.com/watch?v=9I6QQ6ZYCi8",
       bgURl:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bg_3_3278992eec.webp",
@@ -293,7 +293,9 @@ const SchoolHero = ({
                     />
                   )}
                 </div>
-                <div className={`bg-[#001732] ${slug === 'school-of-legal-studies' ? 'xl:-translate-y-[60px]' : ''}  xl:bg-transparent p-5 xl:p-0 z-20 relative  ${notCutoutBg ? '-mt-10' : '-mt-28 sm:mt-0'}`}>
+                <div
+                  className={`bg-[#001732] ${slug === "school-of-legal-studies" ? "xl:-translate-y-[60px]" : ""}  xl:bg-transparent p-5 xl:p-0 z-20 relative  ${notCutoutBg ? "-mt-10" : "-mt-28 sm:mt-0"}`}
+                >
                   <p className="text-sm lg:text-lg 2xl:text-2xl font-normal sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
                     {subheading}
                   </p>
@@ -314,12 +316,12 @@ const SchoolHero = ({
                         <Link
                           key={btn.id} /* Rectangle 970 */
                           href={btn.buttonlink || "#"}
-                          className={`text-white w-full md:text-xl sm:w-fit flex justify-center items-center max-w-[220px] sm:max-w-none p-2.5 sm:px-6 sm:py-3.5 rounded-lg gap-4 font-semibold bg-[#001732] border-2 border-[#0189ae] transition-all ${
-                            btn.buttonclass || ""
-                          }`}
+                          // text-white w-full md:text-xl sm:w-fit flex justify-center items-center max-w-[220px] sm:max-w-none p-2.5 sm:px-6 sm:py-3.5 rounded-lg gap-4 font-semibold bg-[#001732] border-2 border-[#0189ae] transition-all
+                          className={`  text-white w-full md:text-xl sm:w-fit flex justify-center items-center max-w-[220px] sm:max-w-none p-2.5 sm:px-6 sm:py-3.5 rounded-lg gap-4 font-semibold bg-[#001732] border-2 border-[#0189ae] transition-all  relative overflow-hidden group ${btn.buttonclass || ""}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
+                          <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
                           <Download color="#fff" /> {btn.buttontext}
                         </Link>
                       ),
