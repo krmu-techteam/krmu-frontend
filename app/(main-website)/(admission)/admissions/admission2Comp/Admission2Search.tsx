@@ -508,7 +508,11 @@ const Admission2Search = () => {
                       <h6
                         className="block w-full text-white"
                         dangerouslySetInnerHTML={{
-                          __html: "title" in item ? item.title : item.heading,
+                          __html:
+                            ("title" in item ? item.title : item.heading) +
+                            ("highlightitle" in item
+                              ? ` ${item.highlightitle ? item.highlightitle : ""}`
+                              : ""),
                         }}
                       />
                     </Link>
@@ -748,7 +752,7 @@ const Admission2Search = () => {
               selectedProgramme?.criteria?.eligibility_utm_links && (
                 <Link
                   href={selectedProgramme.criteria.eligibility_utm_links}
-                  className="#cb000d text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
+                  className="text-[#cb000d] text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

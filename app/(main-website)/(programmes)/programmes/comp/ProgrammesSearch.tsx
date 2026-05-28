@@ -480,7 +480,6 @@ const ProgrammesSearch = () => {
                       "absolute left-[48%] -translate-x-1/2 -bottom-[240px]";
                   }
                 }
-
                 return (
                   <div
                     key={item.id}
@@ -509,9 +508,14 @@ const ProgrammesSearch = () => {
                       <h6
                         className="block w-full text-white"
                         dangerouslySetInnerHTML={{
-                          __html: "title" in item ? item.title : item.heading,
+                          __html:
+                            ("title" in item ? item.title : item.heading) +
+                            ("highlightitle" in item
+                              ? ` ${item.highlightitle ? item.highlightitle : ''}`
+                              : ""),
                         }}
                       />
+                      <p></p>
                     </Link>
                     <div className="flex flex-col sm:flex-row border-y border-[rgba(255,255,255,0.2)] sm:gap-5 z-20">
                       <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
@@ -752,7 +756,7 @@ const ProgrammesSearch = () => {
               selectedProgramme?.criteria?.eligibility_utm_links && (
                 <Link
                   href={selectedProgramme.criteria.eligibility_utm_links}
-                  className="#cb000d text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
+                  className="text-[#cb000d] text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
