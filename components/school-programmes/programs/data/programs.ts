@@ -39,7 +39,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
   "bba-hr": {
     bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hr_fb78e052aa.jpg",
     bgPosition: "85% center",
-    mobileBgPosition: "center top",
+    mobileBgPosition: "63% top",
     tabletBgPosition: "60% center",
     bgSize: "cover",
     mobileBgSize: "cover",
@@ -315,7 +315,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
   } as HeroConfig,
   "bba-llb-hons": {
     ...defaultCinematicConfig,
-    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_llb_hons_db274f3d60.jpg",
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_llb_hons_4bc85d47c2.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
   "ba-llb-hons": {
@@ -340,7 +340,27 @@ export const heroConfigs: Record<string, HeroConfig> = {
   } as HeroConfig,
   "bpharma": {
     ...defaultCinematicConfig,
-    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bpharma_9cf4f7bb72.jpg",
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bpharma_3b6b74ba3b.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bpharm-lateral-entry": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bpharm_lateral_entry_314ac91d0f.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "m-pharm-pharmaceutics": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/m_pharm_pharmaceutics_4ba2741769.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "m-pharm-pharmacology": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/m_pharm_pharmacology_5a7f1c75fb.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-pharmaceutical-sciences": {
+    ...defaultCinematicConfig,
+    bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_pharmaceutical_sciences_619379fd90.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
 };
