@@ -52,9 +52,9 @@ const Eligibility = ({
 
   const handleApplyClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    const visibleForm = Array.from(document.querySelectorAll(".heroBannerForm__form")).find(
-      (el) => el.getBoundingClientRect().height > 0
-    );
+    const visibleForm = Array.from(
+      document.querySelectorAll(".heroBannerForm__form"),
+    ).find((el) => el.getBoundingClientRect().height > 0);
     if (visibleForm) {
       visibleForm.scrollIntoView({ behavior: "smooth", block: "center" });
     } else {
@@ -95,15 +95,21 @@ const Eligibility = ({
       >
         <div className={`max-w-[1440px] w-full mx-auto`}>
           {/* {slug === "bba-hr" && heroSection?.imgvideo === "Video" ? ( */}
-         
+
           {heroSection?.imgvideo === "Video" ? (
             <div className="flex flex-col lg:flex-row gap-4 lg:gap-4 2xl:gap-8 rounded-md p-0 sm:px-0 lg:px-0 xl:px-0 2xl:px-0 items-stretch">
               {/* Left Column: Media (Video only for this layout) */}
               <div className="w-full lg:w-1/2 h-[220px] sm:h-[300px] lg:h-auto lg:min-h-[380px] relative  overflow-hidden group shadow-xs">
                 <div className="w-full h-full relative">
                   <YoutubePopup
-                    videoUrl={heroSection?.videofield || "https://www.youtube.com/watch?v=tIfNUgSn2dw"}
-                    thumbnail={heroSection?.herobtn?.buttonlink || "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"}
+                    videoUrl={
+                      heroSection?.videofield ||
+                      "https://www.youtube.com/watch?v=tIfNUgSn2dw"
+                    }
+                    thumbnail={
+                      heroSection?.herobtn?.buttonlink ||
+                      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
+                    }
                     ytClassName="w-full h-full absolute inset-0 object-cover"
                     playIcon={true}
                   />
@@ -147,7 +153,10 @@ const Eligibility = ({
                     <CommonLeadPopup
                       buttonText={
                         <span className="flex items-center gap-3 justify-center">
-                          <Download size={20} className="group-hover:-translate-y-1 transition-transform" />
+                          <Download
+                            size={20}
+                            className="group-hover:-translate-y-1 transition-transform"
+                          />
                           {prospectusBtn?.buttontext || "Download Prospectus"}
                         </span>
                       }
@@ -162,11 +171,14 @@ const Eligibility = ({
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Download size={20} className="group-hover:-translate-y-1 transition-transform" />
+                      <Download
+                        size={20}
+                        className="group-hover:-translate-y-1 transition-transform"
+                      />
                       {prospectusBtn?.buttontext || "Download Prospectus"}
                     </Link>
                   )}
-                   {formId ? (
+                  {formId ? (
                     <a
                       href="#apply-form-mobile"
                       onClick={handleApplyClick}
