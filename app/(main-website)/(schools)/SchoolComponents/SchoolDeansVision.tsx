@@ -33,8 +33,8 @@ const SchoolDeansVision = ({
       // }}
     >
       <div className="max-w-[1664px] mx-auto w-full testing">
-        <div className="text-center text-white text-3xl sm:text-5xl mb-5 lg:text-[64px]">
-          <h4 className="leading-[1]">{title}</h4>
+        <div className="text-center text-white text-3xl sm:text-5xl mb-5 ">
+          <h4 className="leading-[1] ">{title}</h4>
           <h5 className="leading-[1.2] font-bold">{subtitle}</h5>
         </div>
         <div
@@ -89,7 +89,6 @@ const SchoolDeansVision = ({
               >
                 <Mail size={16} /> <span>{deanEmail}</span>
               </Link>
-              
             </div>
           </div>
         </div>

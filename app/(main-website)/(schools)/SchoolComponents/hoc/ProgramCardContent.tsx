@@ -47,7 +47,7 @@ const ProgramCardContent = ({
         target="_blank"
         rel="noopener noreferrer"
         dangerouslySetInnerHTML={{
-          __html: `${prog.title} ${prog.highlightitle ? prog.highlightitle : ''}`,
+          __html: `${prog.title} ${prog.highlightitle ? prog.highlightitle : ""}`,
         }}
       />
 
@@ -91,8 +91,9 @@ const ProgramCardContent = ({
           <Link
             href={prog.criteria.eligibility_utm_links}
             target="_blank"
-            className="bg-[#cb000d] block text-sm text-white text-center border border-[#cb000d] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 w-1/2"
+            className="bg-[#cb000d] block text-sm text-white text-center border border-[#cb000d] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 w-1/2 transition-all relative overflow-hidden group"
           >
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
             Apply Now
           </Link>
         )}

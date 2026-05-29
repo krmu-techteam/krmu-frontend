@@ -142,11 +142,12 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
       </div>
 
       {visibleCount < facDatas.length && (
-        <div className="flex justify-center my-8">
+        <div className="flex justify-center mt-8">
           <Button
             onClick={handleLoadMore}
-            className="py-3.5 px-8 bg-[#051630] text-white font-bold cursor-pointer"
+            className="py-3.5 px-8 bg-[#051630] text-white font-bold cursor-pointer transition-all  relative overflow-hidden group"
           >
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
             Load More
           </Button>
         </div>

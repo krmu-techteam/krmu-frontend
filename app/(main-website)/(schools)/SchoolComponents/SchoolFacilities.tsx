@@ -13,8 +13,6 @@ import {
 import { FacilitySlide } from "@/lib/types/schools";
 import { STRAPI_URL } from "@/app/constant";
 
-
-
 type Props = {
   fac_slides: FacilitySlide[];
 };
@@ -31,10 +29,10 @@ const SchoolFacilities = ({ fac_slides }: Props) => {
   }, [api]);
 
   return (
-    <div className="pt-[30px] pb-32 px-4 sm:pt-16 sm:pb-40 bg-[#001732]">
+    <div className="pb-20 px-4   bg-[#001732]">
       <div className="max-w-[1664px] mx-auto w-full">
         <div className="text-center text-white px-4">
-          <h5 className="text-3xl md:text-5xl lg:text-6xl xl:text-[80px] leading-[1.16] font-medium">
+          <h5 className="text-3xl sm:text-5xl leading-[1.16] font-medium">
             Facilities
           </h5>
         </div>
@@ -52,11 +50,11 @@ const SchoolFacilities = ({ fac_slides }: Props) => {
             {fac_slides.map((slide, index) => (
               <CarouselItem
                 key={slide.id}
-                className={`basis-[100%] md:basis-[70%] lg:basis-[60%] p-0 fac_slide ${
+                className={`basis-[120%] md:basis-[70%] lg:basis-[60%] p-0 fac_slide ${
                   index === current ? "fac_active_slide" : ""
                 }`}
               >
-                <h6 className="max-w-[250px] mx-auto sm:max-w-fit text-lg sm:text-xl md:text-2xl my-5 font-semibold text-center fac_title text-white xl:h-16">
+                <h6 className=" max-w-[280px] ml-21 sm:mx-auto  sm:max-w-fit text-md sm:text-xl  my-5 font-semibold text-center fac_title text-white h-16">
                   {slide.title}
                 </h6>
                 <div className="fac_slide_img_container">
@@ -74,11 +72,11 @@ const SchoolFacilities = ({ fac_slides }: Props) => {
 
           <CarouselPrevious
             className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px]
-           top-[118%] sm:top-[115%] md:top-[108%] xl:top-[110%] left-[20%] sm:left-[30%] xl:left-[46%]"
+           top-[105%] sm:top-[103%] md:top-[105%] xl:top-[103%] left-[20%] sm:left-[30%] xl:left-[46%]"
           />
           <CarouselNext
             className="bg-[#2c3a4f] text-[#bfc4ca] hover:bg-[#051630] hover:text-white cursor-pointer buttonPrevNextSize w-[60px] h-[60px] 
-            top-[118%] sm:top-[115%] md:top-[108%]  xl:top-[110%] right-[20%] sm:right-[30%] xl:right-[43%]"
+            top-[105%] sm:top-[103%] md:top-[105%]  xl:top-[103%] right-[20%] sm:right-[30%] xl:right-[43%]"
           />
         </Carousel>
       </div>

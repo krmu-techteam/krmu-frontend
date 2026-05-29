@@ -48,7 +48,12 @@ const SchoolCommenceJourney = ({
             </p>
             <p>
               At{" "}
-              <Link href="https://admissions.krmangalam.edu.in/" className="underline" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://admissions.krmangalam.edu.in/"
+                className="underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 admissions.krmangalam.edu.in
               </Link>{" "}
             </p>
@@ -162,11 +167,13 @@ const SchoolCommenceJourney = ({
         {btn?.btn_link && (
           <Link
             href={btn?.btn_link || "#"}
-            className={`py-2.5 px-8 bg-[#cb000d] font-bold rounded-sm inline-block text-white ${
+            className={`py-2.5 px-8 bg-[#cb000d] font-bold rounded-sm inline-block text-white transition-all  relative overflow-hidden group ${
               btn?.btn_class || ""
             }`}
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
           >
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
             {btn?.btn_text || ""}
           </Link>
         )}

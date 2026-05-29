@@ -27,12 +27,16 @@ const SchoolProgrammeOffered = ({
       <section id="Explore-Courses" className="pt-10 md:pt-20">
         <div className="max-w-[1664px] mx-auto w-full">
           <div className="text-center max-w-5xl mx-auto w-full px-4">
-            <h3 className="text-3xl mb-5 md:text-4xl lg:text-5xl font-semibold">
+            <h3 className=" mb-5 text-2xl sm:text-4xl font-semibold">
               {title}
             </h3>
             <p>{content}</p>
           </div>
-          <ProgrammeInfoDemo degName={degName} catName={schoolCategoryName} slug={slug} />
+          <ProgrammeInfoDemo
+            degName={degName}
+            catName={schoolCategoryName}
+            slug={slug}
+          />
           {/* <ProgrammeInfoCards /> */}
         </div>
       </section>
