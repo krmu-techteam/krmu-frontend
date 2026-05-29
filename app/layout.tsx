@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="msvalidate.01" content="B1E2DD84EEE4C57BC7E505179DB9E4F1" />
         {/* ✅ Google Tag Manager Script */}
         <Script id="gtm-head" strategy="afterInteractive">
           {`
