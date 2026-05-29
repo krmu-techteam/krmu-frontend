@@ -93,19 +93,21 @@ const SchoolHero = ({
     },
 
     "school-of-emerging-media-and-creator-economy": {
-      thumbnail: "",
-      ytUrl: "",
-      bgURl: "/schools/banners/semce-banner-2.webp",
+      thumbnail:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/school_of_emerging_media_and_creator_economy_d34aa4d87b.png",
+      ytUrl: "https://www.youtube.com/watch?v=RV4YQUNAVMA",
+      bgURl: "/schools/banners/mob-semce-banner.webp", ///schools/banners/semce-banner-2.webp
       middleImg: "/schools/middleImg/semce-middleimg-2.png",
       mobileBgImg: "/schools/banners/mob-semce-banner.webp",
       notCutoutBg: false,
     },
 
     "school-of-architecture-design": {
-      thumbnail: "",
-      ytUrl: "",
-      bgURl: "/schools/banners/soad-banner-2.webp",
-      middleImg: "/schools/middleImg/soad-middleimg.webp",
+      thumbnail:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/school_of_architecture_design_d66a3af7ce.png",
+      ytUrl: "https://www.youtube.com/watch?v=U3U9_dXYruQ",
+      bgURl: "/schools/banners/mob-soad-banner.webp", //schools/banners/soad-banner-2.webp
+      middleImg: "/schools/middleImg/sa.png",
       mobileBgImg: "/schools/banners/mob-soad-banner.webp",
       notCutoutBg: false,
     },
@@ -203,14 +205,14 @@ const SchoolHero = ({
             />
           </div>
         )}
-        <div className="hidden xl:block absolute -bottom-12 left-1/2 -translate-x-1/2">
+        <div className="hidden xl:block absolute   left-1/2 -translate-x-1/2">
           {videoUrl && middleimg && (
             <Image
               src={middleimg}
               width={492}
               height={700}
               alt={title || ""}
-              className="object-contain z-10 relative"
+              className="object-contain  z-10 relative"
               priority
             />
           )}

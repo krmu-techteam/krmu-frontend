@@ -431,7 +431,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
   "bachelor-of-physiotherapy-bpt": {
     ...defaultCinematicConfig,
     bgUrl:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bachelor_of_physiotherapy_bpt_a61a61c1ec.jpg",
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bachelor_of_physiotherapy_bpt_fa1bcf54b9.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
   "ba-hon-english": {
@@ -474,6 +474,12 @@ export const heroConfigs: Record<string, HeroConfig> = {
     ...defaultCinematicConfig,
     bgUrl:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ba_hons_political_science_21b55797c1.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "ba-hons-psychology": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ba_hons_psychology_edf8d5438f.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
 };
