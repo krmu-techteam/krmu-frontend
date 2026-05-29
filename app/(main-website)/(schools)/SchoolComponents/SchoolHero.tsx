@@ -179,11 +179,10 @@ const SchoolHero = ({
   return (
     <>
       <section
-        className={`relative overflow-hidden ${
-          fullWidth
+        className={`relative overflow-hidden ${fullWidth
             ? "lg:py-[20%] lg:pb-0 pt-[300px] pb-5"
             : `${notCutoutBg ? "pt-[45px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : "pt-[100px] sm:pt-[140px] lg:pt-[280px] xl:pt-[180px] 2xl:pt-[280px]"} schoolBanner`
-        } bg-cover bg-no-repeat bg-center`}
+          } bg-cover bg-no-repeat bg-center`}
         style={
           {
             "--mobile-bg": `url(${mobileBg})`,
@@ -205,7 +204,7 @@ const SchoolHero = ({
             />
           </div>
         )}
-        <div className="hidden xl:block absolute   left-1/2 -translate-x-1/2">
+        <div className="hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2">
           {videoUrl && middleimg && (
             <Image
               src={middleimg}
@@ -257,9 +256,8 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#001732] ${
-                          btn.buttonclass || ""
-                        }`}
+                        className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#001732] ${btn.buttonclass || ""
+                          }`}
                       >
                         {btn.buttontext}
                       </Link>
@@ -267,9 +265,8 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className={`text-black w-full sm:w-fit flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white ${
-                          btn.buttonclass || ""
-                        }`}
+                        className={`text-black w-full sm:w-fit flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white ${btn.buttonclass || ""
+                          }`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
