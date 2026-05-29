@@ -38,10 +38,9 @@ export default function YoutubePopup({
       : "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png");
 
   // 👉 Disable background scroll
-  useEffect(() => { 
+  useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
-
 
   return (
     <>
