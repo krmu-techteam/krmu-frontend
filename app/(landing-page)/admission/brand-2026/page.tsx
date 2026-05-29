@@ -109,7 +109,7 @@ const page = () => {
       /> */}
       {/* <IndustryExperts data={industryexpert} /> */}
       {/* <Specialisation data={specialise} /> */}
-      <ProgramsSection />
+     {/* <ProgramsSection /> */}
       <Opportunity data={opport} />
       {/* <FeeStructureTable /> */}
       {/* <Testimonials data={testiomonial} /> */}
