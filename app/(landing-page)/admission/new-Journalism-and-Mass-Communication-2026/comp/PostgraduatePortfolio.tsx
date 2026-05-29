@@ -31,7 +31,7 @@ export default function PostgraduatePortfolio({
             portfolio and your research profile.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-[487px_1fr] gap-10 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[487px_1fr] gap-10 xl:gap-24 items-start">
           <div className="w-full flex justify-center lg:justify-start">
             <img
               src="/new-Programmes-Hero/See_what_our_postgraduates.png"

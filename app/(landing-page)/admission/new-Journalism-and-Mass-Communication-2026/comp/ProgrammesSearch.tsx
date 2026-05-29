@@ -31,7 +31,7 @@ const ProgrammesSearch = () => {
     <section>
       <section className="bg-[#f3f3f7] pb-10 sm:pb-12 lg:pb-16 px-6 lg:px-16">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-[120px] pt-8 sm:pt-12 lg:pt-[120px] pb-10 sm:pb-12 lg:pb-[80px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-16">
             <div>
               <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#5B00DF] mb-5">
                 The Context
