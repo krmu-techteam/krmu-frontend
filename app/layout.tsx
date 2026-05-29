@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./(main-website)/globals.css";
-import Script from "next/script";
+// import Script from "next/script";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* ✅ Google Tag Manager Script */}
-        <Script id="gtm-head" strategy="afterInteractive">
+        {/* <Script id="gtm-head" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -37,15 +37,15 @@ export default function RootLayout({
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-VJJK572TGN"
           strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
+        /> */}
+        {/* <Script id="google-analytics" strategy="afterInteractive">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-VJJK572TGN');
         `}
-        </Script>
+        </Script> */}
       </head>
       <body className={`${montserrat.className} antialiased`}>
         <noscript>

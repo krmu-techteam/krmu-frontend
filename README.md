@@ -110,8 +110,8 @@ Content is managed through **Strapi CMS** (headless), allowing the content team 
 
 | Technology | Purpose |
 |---|---|
-| [Google Analytics](https://analytics.google.com/) | Website traffic analytics |
-| [Google Tag Manager](https://tagmanager.google.com/) | Tag management and event tracking |
+<!-- | [Google Analytics](https://analytics.google.com/) | Website traffic analytics |
+| [Google Tag Manager](https://tagmanager.google.com/) | Tag management and event tracking | -->
 | [NoPaperForms](https://www.nopaperforms.com/) | Lead capture, form handling, and chatbot widget |
 
 </details>
