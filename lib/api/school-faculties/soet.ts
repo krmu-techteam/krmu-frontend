@@ -314,7 +314,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1098],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Ravinder-Beniwal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/12/Dr.-Ravinder-Beniwal-1.png",
   },
   {
     id: 71732,
