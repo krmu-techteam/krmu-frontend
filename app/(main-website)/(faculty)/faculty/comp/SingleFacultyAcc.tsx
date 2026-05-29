@@ -27,7 +27,7 @@ const SingleFacultyAcc = ({ facTabs }: Props) => {
           >
             {tabs.map((tab) => (
               <AccordionItem key={tab.id} value={`item-${tab.id}`}>
-                <AccordionTrigger className="fac_acc_ques justify-center text-2xl font-semibold">
+                <AccordionTrigger className="fac_acc_ques justify-center text-2xl font-semibold temp-class">
                   {tab.tabname}
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col gap-4 text-balance">
