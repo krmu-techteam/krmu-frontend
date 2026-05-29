@@ -82,8 +82,8 @@ export default function KRMUTimer({ targetDate }: ZenithTimerProps) {
       {/* <span className="text-xs uppercase tracking-wider font-semibold">
         Now or Never! Grab Your 100% Scholarship Today
       </span> */}
-<span className="text-xs uppercase tracking-wider font-semibold">
-      Fully Sponsored Europe Study Tour + 27 Cr Scholarship Await — Apply By May 31
+<span className="text-[10px] xl:text-xs uppercase tracking-wider font-semibold">
+      Grab Up to 100% Scholarships Worth Rs 27 Cr + Get a Chance to Fly to Europe (First Come, First Serve)
       </span>
       <div className="flex gap-2 font-mono text-sm">
         <TimeBox value={format(timeLeft.days)} label="D" />
