@@ -8,7 +8,7 @@ import { HeaderMenus } from "@/lib/types/header-menu";
 import MainHeaderMarquee from "./MainHeaderMarquee";
 import { heroMarqueeData } from "./HeaderMaruqueeData";
 import Link from "next/link";
-import { BicolorDivider } from "@/modules/home";
+import BicolorDivider from "../Navbar/BicolorDivider";
 
 type TOPBARPROPS = {
   topbarmenu: TOPBARITEMS[];

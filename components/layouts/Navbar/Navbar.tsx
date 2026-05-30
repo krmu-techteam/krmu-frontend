@@ -6,8 +6,8 @@ import { HeaderMenus } from "@/lib/types/header-menu";
 
 type Props = {
   navbarData: HeaderMenus[];
-  handleMobileMenu: () => void; // toggle function
-  showMobilebar: boolean; // whether mobile menu is open
+  handleMobileMenu: () => void; 
+  showMobilebar: boolean; 
 };
 
 const Navbar = ({ navbarData, handleMobileMenu, showMobilebar }: Props) => {

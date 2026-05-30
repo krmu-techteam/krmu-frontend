@@ -3,7 +3,7 @@ import ADecade from "./(main-website)/Home/ADecade";
 import ElevateCampus from "./(main-website)/Home/ElevateCampus";
 import EventsAndNews from "./(main-website)/Home/EventsAndNews";
 import GlobalPartner from "./(main-website)/Home/GlobalPartner";
-import HeroSection from "./(main-website)/Home/HeroSection";
+import { AboutSection, HeroSection, JourneySection, LifeAtKRMU, NewsEventsSection, PartnersSection, PlacementsSection, ResearchSection, TestimonialsSection, VisitSection } from "@/modules/home";
 import HomeTestimonial from "./(main-website)/Home/HomeTestimonial";
 import OurTopRecruiters from "./(main-website)/Home/OurTopRecruiters";
 import ShapingFuture from "./(main-website)/Home/ShapingFuture";
@@ -137,13 +137,17 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: organizationSchema }}
       />
 
-      {hero && (
-        <HeroSection
-          title={hero?.title}
-          subtitle={hero?.subtitle}
-          video={hero?.HeroSectionVideo}
-        />
-      )}
+      <HeroSection />
+      <AboutSection />
+      <JourneySection />
+      <PlacementsSection />
+      <LifeAtKRMU />
+      <TestimonialsSection />
+      <ResearchSection />
+      <PartnersSection />
+      <VisitSection />
+      <NewsEventsSection />
+
 
       <main className="w-full">
         {aDecadeData && (

@@ -1,3 +1,5 @@
+import React from 'react';
+
 const BicolorDivider = () => {
   return (
     <div className="h-2 w-full flex">
