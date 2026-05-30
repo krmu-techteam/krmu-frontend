@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NoPaperFormProvider from "@/lib/constants/NoPaperFormProvider";
-import HeaderWrapper from "./components/Header/HeaderWrapper";
-import Footer from "./components/Footer/Footer";
+import MainWebsiteLayout from "@/components/layouts/MainWebsiteLayout";
 
 export const metadata: Metadata = {
   title: "KRMU",
@@ -12,23 +10,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function MainWebsiteLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <>
-      <div id="main-header">
-        <HeaderWrapper />
-      </div>
-      <NoPaperFormProvider />
-      <div>
-        {children}
-      </div>
-      <div id="main-footer">
-        <Footer />
-      </div>
-    </>
-  );
+  return <MainWebsiteLayout>{children}</MainWebsiteLayout>;
 }

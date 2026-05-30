@@ -4,7 +4,7 @@ import { getFooter } from "@/lib/api/footer";
 import { getPageAssets } from "@/lib/api/global-setting";
 import Image from "next/image";
 import Link from "next/link";
-import FloatingButtons from "@/app/(main-website)/components/Footer/FloatingButtons";
+import FloatingButtons from "./FloatingButtons";
 import NpfAgent from "@/app/NpfAgent";
 
 const Footer = async () => {

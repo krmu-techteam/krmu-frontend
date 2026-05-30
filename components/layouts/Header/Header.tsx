@@ -8,6 +8,7 @@ import { HeaderMenus } from "@/lib/types/header-menu";
 import MainHeaderMarquee from "./MainHeaderMarquee";
 import { heroMarqueeData } from "./HeaderMaruqueeData";
 import Link from "next/link";
+import { BicolorDivider } from "@/modules/home";
 
 type TOPBARPROPS = {
   topbarmenu: TOPBARITEMS[];
@@ -44,6 +45,7 @@ const Header = ({
   return (
     <>
       <header className="fixed top-0 left-0 w-full z-40">
+        <BicolorDivider />
         {/* <div className="flex flex-col md:flex-row bg-[#e31e24]">
           <div className="w-full md:w-[80%] 2xl:w-[90%]">
             <MainHeaderMarquee data={marqueeData} />
