@@ -13,6 +13,155 @@
   --color-university-blue: var(--university-blue);
 }
 
+:root {
+  --background: #132737;
+  --foreground: #ededed;
+  --primary: #c41525;
+  --primary-hover: #a3121f;
+  --secondary: #0161B0;
+  --secondary-hover: #03579c;
+  --bg-dark: #0B1221;
+  --surface: #1a1a1a;
+  --border: #333333;
+  --whatsapp: #25D366;
+  --hero-bar-dark: #0a121d;
+  --brand-navy: #132737;
+  --brand-navy-deep: #0B1221;
+  --brand-navy-secondary: #111622;
+  --brand-gold: #E7C268;
+  --brand-slate-card: #0F172A;
+  --brand-blue: #00a2ff;
+  --brand-gray: #434343;
+  --brand-research-button: #0f4673;
+  --school-nav-navy: #003152;
+  --school-nav-blue: #0e83d8;
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+}
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-brand-dark: var(--bg-dark);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-whatsapp: var(--whatsapp);
+  --color-hero-bar: var(--hero-bar);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-navy-deep: var(--brand-navy-deep);
+  --color-brand-navy-secondary: var(--brand-navy-secondary);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-slate-card: var(--brand-slate-card);
+  --color-brand-gray: var(--brand-gray);
+  --color-brand-gradient-dark: linear-gradient(135deg, #111111 0%, #181c25 60%, rgba(231, 194, 104, 0.08) 100%);
+  --color-brand-research-button: var(--brand-research-button);
+  --color-brand-research-button-hover: var(--brand-research-button-hover);
+  --color-school-nav-navy: var(--school-nav-navy);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+  --font-poppins: var(--font-poppins);
+  --color-school-nav-blue: var(--school-nav-blue);
+}
+
+.dark {
+  --background: #132737;
+  --foreground: #ededed;
+  --border: #333333;
+  --surface: #1a1a1a;
+}
+
+
+body {
+  background: #132737 url('/bg-noise.png');
+  background-repeat: repeat;
+  background-size: 50px;
+  color: var(--foreground);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+body:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/yellow-bg.png');
+  background-repeat: no-repeat;
+  background-size:100%;
+  width: 300px;
+  height: 100%;
+  z-index: -1;
+
+}
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: -50px;
+  bottom: 0;
+  background: url('/blue-bg.png');
+  background-repeat: repeat;
+  background-size:100%;
+  width: 500px;
+  height: 100%;
+  z-index: -1;
+
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+  }
+  .sidebar-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .sidebar-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.02);
+  }
+}
+
 /* Custom utility class */
 @layer utilities {
   @media(max-width: 480px){

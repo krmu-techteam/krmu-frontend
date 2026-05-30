@@ -1,8 +1,7 @@
 import Image from "next/image";
 import NavbarMenu from "./NavbarMenu";
 import Link from "next/link";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { HeaderMenus } from "@/lib/types/header-menu";
 
 type Props = {
@@ -13,36 +12,39 @@ type Props = {
 
 const Navbar = ({ navbarData, handleMobileMenu, showMobilebar }: Props) => {
   return (
-    <>
-      <div className="max-w-[1900px] mx-auto w-full flex py-1.5 gap-2">
-        <div className="w-2/4 md:w-1/5 flex items-center justify-center">
-          <Link href="/">
+    <div className="w-full px-4 md:px-12 lg:px-6 xl:px-16 flex items-center justify-between py-2 transition-colors">
+      <div className="flex items-center group cursor-pointer shrink-0">
+        <Link href="/">
+          <div className="relative h-14 md:h-16 w-52 md:w-60 lg:w-68 xl:w-76 flex items-center">
             <Image
-              // src="/KRMU-logo-univ.png"
-              src="/KRMU-Logo-NAAC.webp"
-              width={370}
-              height={60}
-              alt="Website Logo"
+              src="/krmu.png"
+              alt="K.R. Mangalam University"
+              width={512}
+              height={128}
+              className="w-full h-auto object-contain"
+              priority
+              quality={100}
+              unoptimized
             />
-          </Link>
-        </div>
-        <div className="w-2/4 md:w-4/5 flex items-center justify-end gap-2">
-          <NavbarMenu mainMenu={navbarData} />
-         
-          {!showMobilebar ? (
-            <GiHamburgerMenu
-              onClick={handleMobileMenu}
-              className="xl:hidden text-white text-3xl"
-            />
-          ) : (
-            <X
-              onClick={handleMobileMenu}
-              className="xl:hidden text-white text-3xl"
-            />
-          )}
-        </div>
+          </div>
+        </Link>
       </div>
-    </>
+
+      <div className="flex items-center gap-4">
+        <NavbarMenu mainMenu={navbarData} />
+        
+        <button
+          onClick={handleMobileMenu}
+          className="xl:hidden text-white hover:text-[#cb000d] transition-colors p-2 shrink-0"
+        >
+          {showMobilebar ? (
+            <X size={26} strokeWidth={2.5} />
+          ) : (
+            <Menu size={26} strokeWidth={2.5} />
+          )}
+        </button>
+      </div>
+    </div>
   );
 };
 

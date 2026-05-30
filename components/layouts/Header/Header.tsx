@@ -59,18 +59,14 @@ const Header = ({
           </Link>
         </div> */}
         <div
-          className="px-2.5 xl:px-4"
+          className="transition-all duration-300 backdrop-blur-md shadow-sm"
           style={{
             background: showMobileMenu || showTopbar
-              ? "#051730" // when scrolled down or mobile menu is open
-              : "rgba(137, 137, 137, 0.7)", // default
+              ? "#061623" 
+              : "#061623",
           }}
         >
-          {showTopbar ? (
-            ""
-          ) : (
-            <Topbar topbarmenu={topbarmenu} sociallinks={topbarsociallinks} />
-          )}
+          <Topbar topbarmenu={topbarmenu} sociallinks={topbarsociallinks} />
           <Navbar
             handleMobileMenu={handleMobileMenu}
             showMobilebar={showMobileMenu}
