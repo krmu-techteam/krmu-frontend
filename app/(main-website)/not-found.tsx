@@ -27,53 +27,45 @@ export default function NotFound() {
           display: none !important;
         }
         
-        /* Ensure normal overflow and set white base */
+        /* Ensure normal overflow and set dark base with noise */
         body {
           overflow: auto !important;
-          background: #ffffff !important;
+          background: #132737 url('/bg-noise.png') !important;
+          background-repeat: repeat !important;
+          background-size: 50px !important;
+          position: relative !important;
+          isolation: isolate !important;
+        }
+        
+        body:after {
+          content: "" !important;
+          position: fixed !important;
+          top: 0 !important;
+          right: 0 !important;
+          bottom: 0 !important;
+          background: url('/yellow-bg.png') no-repeat !important;
+          background-size: 100% !important;
+          width: 300px !important;
+          height: 100% !important;
+          z-index: -1 !important;
+        }
+        body:before {
+          content: "" !important;
+          position: fixed !important;
+          top: 0 !important;
+          left: -50px !important;
+          bottom: 0 !important;
+          background: url('/blue-bg.png') repeat !important;
+          background-size: 100% !important;
+          width: 500px !important;
+          height: 100% !important;
+          z-index: -1 !important;
         }
 
-        /* Ambient background using #0360A8, #E41F23, and white */
+        /* Ambient background */
         .gradient-bg {
           position: relative;
-          background: linear-gradient(135deg, 
-            rgba(3, 96, 168, 0.08) 0%, 
-            rgba(255, 255, 255, 1) 50%, 
-            rgba(228, 31, 35, 0.08) 100%
-          );
-        }
-
-        /* Ambient floating glows */
-        .ambient-glow-1 {
-          position: absolute;
-          width: 600px;
-          height: 600px;
-          top: -200px;
-          left: -200px;
-          background: radial-gradient(circle, rgba(3,96,168,0.2) 0%, rgba(255,255,255,0) 70%);
-          filter: blur(50px);
-          pointer-events: none;
-          z-index: 0;
-          animation: float-orb 14s ease-in-out infinite alternate;
-        }
-
-        .ambient-glow-2 {
-          position: absolute;
-          width: 700px;
-          height: 700px;
-          bottom: -250px;
-          right: -250px;
-          background: radial-gradient(circle, rgba(228,31,35,0.18) 0%, rgba(255,255,255,0) 70%);
-          filter: blur(60px);
-          pointer-events: none;
-          z-index: 0;
-          animation: float-orb 16s ease-in-out infinite alternate-reverse;
-        }
-
-        @keyframes float-orb {
-          0% { transform: translate(0px, 0px) scale(1); }
-          50% { transform: translate(40px, -30px) scale(1.05); }
-          100% { transform: translate(0px, 0px) scale(1); }
+          background: transparent;
         }
 
         /* Animated 404 text floating directly on background */
@@ -81,10 +73,10 @@ export default function NotFound() {
           font-size: 150px;
           line-height: 0.95;
           font-weight: 900;
-          background: linear-gradient(135deg, #0360A8 0%, #E41F23 100%);
+          background: linear-gradient(135deg, #c41525 0%, #E7C268 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          filter: drop-shadow(0px 15px 30px rgba(3, 96, 168, 0.15));
+          filter: drop-shadow(0px 15px 30px rgba(196, 21, 37, 0.3));
           animation: text-pulse 4s ease-in-out infinite;
           letter-spacing: -0.05em;
         }
@@ -107,31 +99,28 @@ export default function NotFound() {
 
         .btn-brand-secondary {
           background: transparent;
-          border: 1.5px solid #0360A8;
-          color: #0360A8;
+          border: 1.5px solid #0161B0;
+          color: #ffffff;
           transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .btn-brand-secondary:hover {
-          background: rgba(3, 96, 168, 0.06);
+          background: rgba(255, 255, 255, 0.1);
           transform: translateY(-2px);
         }
       `}} />
       <div className="relative flex flex-col items-center justify-center min-h-screen gradient-bg px-4 py-12 overflow-hidden select-none">
-        {/* Glow Effects */}
-        <div className="ambient-glow-1" />
-        <div className="ambient-glow-2" />
-
         {/* Content Centered Directly on Page */}
         <div className="relative z-10 flex flex-col items-center text-center max-w-xl">
           {/* Brand Logo */}
           <div className="mb-10 transform hover:scale-[1.02] transition-transform duration-300">
             <Image
-              src="https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75"
-              width={400}
-              height={125}
+              src="/krmu.png"
+              width={256}
+              height={64}
               alt="K.R. Mangalam University Logo"
               className="object-contain"
               priority
+              unoptimized
             />
           </div>
 
@@ -139,10 +128,10 @@ export default function NotFound() {
           <div className="animated-404 mb-6">404</div>
 
           {/* Messages */}
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-800 tracking-tight leading-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white tracking-tight leading-tight">
             Oops! Page Not Found
           </h2>
-          <p className="text-gray-600 mb-10 text-lg md:text-xl max-w-md leading-relaxed">
+          <p className="text-gray-300 mb-10 text-lg md:text-xl max-w-md leading-relaxed">
             The page you are looking for might have been moved, renamed, or is temporarily unavailable.
           </p>
 
