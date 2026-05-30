@@ -146,21 +146,22 @@ export default async function HomePage() {
       <ResearchSection />
       <PartnersSection />
       <VisitSection />
-      <NewsEventsSection />
+      <NewsEventsSection title={eventsNewsData?.title}
+            newsandeventbtn={eventsNewsData?.newsandeventbtn}/>
 
 
       <main className="w-full">
-        {aDecadeData && (
+        {/* {aDecadeData && (
           <ADecade
             leftContent={aDecadeData?.adecadeleftcol}
             rightContent={aDecadeData?.adecaderightcol}
           />
-        )}
+        )} */}
 
         {/* Gradient Separator */}
-        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+        {/* <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div> */}
 
-        <YourJourney2 />
+        {/* <YourJourney2 /> */}
         {/* {yourJourneyData && (
           <YourJourney
             title={yourJourneyData?.title}
@@ -181,7 +182,7 @@ export default async function HomePage() {
             link3={AFSData?.link3}
           />
         )} */}
-        {ourTopRecruitersData && (
+        {/* {ourTopRecruitersData && (
           <OurTopRecruiters
             title={ourTopRecruitersData?.title}
             counters={ourTopRecruitersData?.counter}
@@ -191,7 +192,7 @@ export default async function HomePage() {
             link1={feeStructureScholarData?.link1 || ""}
             link2={feeStructureScholarData?.link2 || ""}
           />
-        )}
+        )} */}
 
         {/* {feeStructureScholarData && (
           <PlacementsRecruiters
@@ -203,7 +204,7 @@ export default async function HomePage() {
             link2={feeStructureScholarData?.link2}
           />
         )} */}
-        {whyKRMUData && (
+        {/* {whyKRMUData && (
           <WhyKRMU
             title={whyKRMUData?.title}
             subtitle={whyKRMUData?.subtitle}
@@ -220,9 +221,9 @@ export default async function HomePage() {
             elevateCampus3={elevateCampusData?.elevatecampus3}
             elevateImage3={elevateCampusData?.elevatecampusimage3}
           />
-        )}
+        )} */}
 
-        {homeKRMTestimonialData && (
+        {/* {homeKRMTestimonialData && (
           <HomeTestimonial
             title={homeKRMTestimonialData?.title}
             desc={homeKRMTestimonialData?.description}
@@ -242,32 +243,32 @@ export default async function HomePage() {
             mobShapimage={shapingFutureData?.mobileshapingimage}
             shapingCounters={shapingFutureData?.shapingCounter}
           />
-        )}
+        )} */}
         {/* Gradient Separator */}
-        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+        {/* <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div> */}
 
-        {globalPartenerData && (
+        {/* {globalPartenerData && (
           <GlobalPartner
             title={globalPartenerData?.title}
             desc={globalPartenerData?.descriptions}
             logoSliderHeading={globalPartenerData?.logosliderheading}
             globalLogos={globalPartenerData?.globalpartnerimages}
           />
-        )}
-        {visitExploreData && (
+        )} */}
+        {/* {visitExploreData && (
           <VisitExplore
             title1={visitExploreData?.title1}
             title2={visitExploreData?.title2}
             desc={visitExploreData.description}
             visitexplorebtns={visitExploreData.visitexplorebtn}
           />
-        )}
-        {eventsNewsData && (
+        )} */}
+        {/* {eventsNewsData && (
           <EventsAndNews
             title={eventsNewsData?.title}
             newsandeventbtn={eventsNewsData?.newsandeventbtn}
           />
-        )}
+        )} */}
         {/* <PioneerExcellence /> */}
       </main>
     </>

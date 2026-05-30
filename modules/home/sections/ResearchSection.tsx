@@ -12,7 +12,7 @@ export default function ResearchSection() {
     <section className="relative w-full py-6 md:py-10 lg:py-16 xl:py-20 overflow-hidden font-poppins">
       
 
-      <div className="container mx-auto relative z-10">
+      <div className="w-full max-w-[1285px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-0 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 items-start relative xl:h-[750px]">
           
           {/* Left Column - Image and Stats */}
