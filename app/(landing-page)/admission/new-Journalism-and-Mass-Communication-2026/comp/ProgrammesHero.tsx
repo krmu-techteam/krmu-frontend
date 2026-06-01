@@ -21,14 +21,13 @@ const ProgrammesHero = ({ heroSection }: any) => {
           <h1 className="mt-2 text-[#07255B] font-serif text-4xl sm:text-5xl   xl:text-7xl leading-tight sm:leading-16.25 md:leading-tight xl:leading-18.75 tracking-tight">
             MA in
             <br />
-            Journalism,
+            (Journalism  
             <br />
-            Digital Media
+            and Mass
             <br />
-            and the Creator
-            <br />
-            Economy
+           Communication)
           </h1>
+          {/* MA in<br>Journalism,<br>Digital Media<br>and the Creator<br>Economy */}
           <p className="mt-4 text-[#44474F] text-base sm:text-lg font-normal line-height-[5px] leading-7">
             A 2 year postgraduate programme for journalists, storytellers and
             media professionals who want to lead newsrooms, content teams and
@@ -58,7 +57,8 @@ const ProgrammesHero = ({ heroSection }: any) => {
             <Carousel
               plugins={[
                 AutoScroll({
-                  speed: 1.5,
+                  // speed: 1.5,
+                  speed: 1,
                   stopOnInteraction: false,
                   playOnInit: true,
                 }),
@@ -116,7 +116,8 @@ const ProgrammesHero = ({ heroSection }: any) => {
 
                 <CarouselItem className="basis-1/3 sm:basis-1/4 pl-4 flex justify-center">
                   <Image
-                    src="/new-Programmes-Hero/all-india-radio.png"
+                    // src="/new-Programmes-Hero/all-india-radio.png"
+                    src="/new-Programmes-Hero/air-transparent.png"
                     alt="all-india-radio"
                     width={100}
                     height={100}
