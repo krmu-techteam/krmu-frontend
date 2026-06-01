@@ -578,10 +578,11 @@ const Footer = async () => {
               <div className="mt-4 flex justify-center lg:justify-end">
                 <Image
                   src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/footer_logos_d944bc560c.svg"
-                  width={200}
+                  width={560}
                   height={160}
                   alt="Accreditation Logos"
-                  className="object-contain"
+                  className="w-auto h-auto max-w-[280px]"
+                  unoptimized
                 />
               </div>
             </div>
