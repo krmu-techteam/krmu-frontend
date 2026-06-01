@@ -72,7 +72,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     <h2 className="text-2xl font-normal font-poppins text-white mb-6">
                       Program Level
                     </h2>
-                    
+
                     <div className="grid grid-cols-2 gap-5">
                       {/* Undergraduate */}
                       <Link
@@ -153,7 +153,8 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                     {/* Academics Counters */}
                     <div className="grid grid-cols-2 gap-5 mt-6">
-                      {academicMenu?.acadcounter && academicMenu.acadcounter.length > 0 ? (
+                      {academicMenu?.acadcounter &&
+                      academicMenu.acadcounter.length > 0 ? (
                         academicMenu.acadcounter.map((counter) => (
                           <div
                             key={counter.id}
@@ -190,20 +191,24 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                       <ul className="flex flex-col gap-3 overflow-hidden">
                         {academicMenu?.academicmenu?.menulinks.map((school) => {
-                          const isZenith = school.title.toLowerCase().includes('zenith');
+                          const isZenith = school.title
+                            .toLowerCase()
+                            .includes("zenith");
                           return (
                             <li key={school.id}>
                               <Link
                                 href={school.url || "#"}
                                 className={`font-poppins relative transition-all duration-300 text-[15px] font-light flex items-center group ${
                                   isZenith
-                                    ? 'text-[#3b82f6] hover:text-[#3b82f6]/80 font-normal'
-                                    : 'text-white/60 hover:text-white'
+                                    ? "text-[#3b82f6] hover:text-[#3b82f6]/80 font-normal"
+                                    : "text-white/60 hover:text-white"
                                 }`}
                               >
-                                <span className={`absolute -left-4 w-1.5 h-1.5 rounded-full scale-0 group-hover:scale-100 transition-all opacity-0 group-hover:opacity-100 ${
-                                  isZenith ? 'bg-[#3b82f6]' : 'bg-[#cb000d]'
-                                }`} />
+                                <span
+                                  className={`absolute -left-4 w-1.5 h-1.5 rounded-full scale-0 group-hover:scale-100 transition-all opacity-0 group-hover:opacity-100 ${
+                                    isZenith ? "bg-[#3b82f6]" : "bg-[#cb000d]"
+                                  }`}
+                                />
                                 <span>{school.title}</span>
                               </Link>
                             </li>
@@ -298,16 +303,18 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                             {admissionMenu?.scholarships?.heading}
                           </h3>
                           <ul className="flex flex-col gap-1">
-                            {admissionMenu?.scholarships?.menulinks.map((menu) => (
-                              <li key={menu.id}>
-                                <Link
-                                  href={menu.url || "#"}
-                                  className="font-poppins font-light text-white/70 hover:text-white transition-colors duration-200 text-[15px] py-1 flex items-center"
-                                >
-                                  <span>{menu.title}</span>
-                                </Link>
-                              </li>
-                            ))}
+                            {admissionMenu?.scholarships?.menulinks.map(
+                              (menu) => (
+                                <li key={menu.id}>
+                                  <Link
+                                    href={menu.url || "#"}
+                                    className="font-poppins font-light text-white/70 hover:text-white transition-colors duration-200 text-[15px] py-1 flex items-center"
+                                  >
+                                    <span>{menu.title}</span>
+                                  </Link>
+                                </li>
+                              ),
+                            )}
                           </ul>
                         </div>
                       )}
@@ -335,13 +342,20 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                       {/* Location & Contact Info */}
                       <div className="space-y-2 text-white/70 font-poppins font-light text-[14px] leading-relaxed mb-6">
-                        <p className="tracking-wide">Sohna Road, Gurugram, Haryana - 122103</p>
                         <p className="tracking-wide">
-                          <a href="mailto:Helpwelcome@krmangalam.edu.in" className="hover:text-white transition-colors">
+                          Sohna Road, Gurugram, Haryana - 122103
+                        </p>
+                        <p className="tracking-wide">
+                          <a
+                            href="mailto:Helpwelcome@krmangalam.edu.in"
+                            className="hover:text-white transition-colors"
+                          >
                             Helpwelcome@krmangalam.edu.in
                           </a>
                         </p>
-                        <p className="tracking-wide">01148884888, 8800697010 - 15, 8192888444</p>
+                        <p className="tracking-wide">
+                          01148884888, 8800697010 - 15, 8192888444
+                        </p>
                       </div>
                     </div>
 
@@ -358,7 +372,10 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         className="group bg-[#cb000d] hover:bg-[#cb000d]/90 text-white font-poppins font-normal py-3 px-5 rounded-[3px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center shadow-lg"
                       >
                         <span>APPLY NOW</span>
-                        <ArrowUpRight size={16} className="transition-transform duration-300 ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                        <ArrowUpRight
+                          size={16}
+                          className="transition-transform duration-300 ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                        />
                       </Link>
                     </div>
                   </div>
@@ -394,16 +411,16 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                 <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
                 <div className="absolute bottom-[-10%] left-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
+                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12">
                   {/* Left Column: Links */}
-                  <div className="col-span-3">
+                  <div className="col-span-4">
                     <h2 className="text-2xl font-normal font-poppins text-white mb-6">
                       {placementMenu?.placement?.heading}
                     </h2>
                     <ul className="flex flex-col gap-3">
                       {placementMenu?.placement?.menulinks.map((menu) => (
                         <li key={menu.id}>
-                          <Link 
+                          <Link
                             href={menu.url || "#"}
                             className="relative text-white/60 hover:text-white transition-all duration-300 text-[15px] font-light flex items-center group font-poppins"
                           >
@@ -416,25 +433,35 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                   {/* Center Column: Stats */}
                   <div className="col-span-4 px-6">
-                    <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-sm p-8 flex flex-col justify-center gap-8 h-full">
-                      {placementMenu?.placementcounter.map((counter, idx) => (
-                        <React.Fragment key={counter.id}>
-                          {idx > 0 && <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />}
-                          <div className="text-center group">
-                            <p className="text-3xl font-rajdhani font-normal text-white mb-1 transition-transform duration-500 group-hover:scale-110 font-poppins">
-                              {counter.countertext}
-                            </p>
-                            <p className="text-white/60 text-sm tracking-wide font-normal font-poppins">
-                              {counter.countercontent}
-                            </p>
-                          </div>
-                        </React.Fragment>
-                      ))}
+                    <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-sm p-8 h-[250px] flex items-center justify-center">
+                      <div className="w-full flex flex-col items-center justify-center gap-8">
+                        {placementMenu?.placementcounter.map((counter, idx) => (
+                          <React.Fragment key={counter.id}>
+                            {/* Counter Content */}
+                            <div className="text-center group">
+                              <p className="text-3xl font-normal text-white mb-1 transition-transform duration-500 group-hover:scale-110 font-poppins">
+                                {counter.countertext}
+                              </p>
+
+                              <p className="text-white/60 text-sm tracking-wide font-normal font-poppins">
+                                {counter.countercontent}
+                              </p>
+                            </div>
+
+                            {idx !==
+                              placementMenu.placementcounter.length - 1 && (
+                              <div className="w-full flex items-center justify-center">
+                                <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+                              </div>
+                            )}
+                          </React.Fragment>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
                   {/* Right Column: Image & Actions */}
-                  <div className="col-span-5 pl-6 space-y-6 flex flex-col justify-between">
+                  <div className="col-span-4 pl-6 space-y-6 flex flex-col justify-between">
                     <div className="relative rounded-sm overflow-hidden border border-white/10 group">
                       {/* <Image
                         src={`${STRAPI_URL}${placementMenu?.backgroundimage?.url}`}
@@ -446,8 +473,8 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                       <Image
                         src="/modules/home/placements/om-mishra.webp"
                         alt="Placements Highlight"
-                        width={800}
-                        height={800}
+                        width={420}
+                        height={380}
                         className="w-full h-auto transition-transform duration-1000 group-hover:scale-110 opacity-90"
                       />
                     </div>
@@ -455,15 +482,15 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     <div className="flex gap-4">
                       <Link
                         href="#"
-                        className="flex-1 bg-transparent hover:bg-white/5 border border-white/20 text-white font-medium py-2.5 px-4 rounded-sm text-xs tracking-wider flex items-center justify-center gap-1.5 transition-all uppercase"
+                        className="flex-1 bg-transparent hover:bg-white/5 border border-white/20 text-white font-medium py-3 px-4 rounded-[3px] text-[14px] flex items-center justify-center gap-2 transition-all font-poppins tracking-wide"
                       >
-                        <Download size={12} /> Brochure
+                        <Download size={14} /> Brochure
                       </Link>
                       <Link
                         href={applyNowButton?.url || "/apply"}
-                        className="flex-1 bg-[#cb000d] hover:bg-[#cb000d]/80 text-white font-semibold py-2.5 px-4 rounded-sm text-xs tracking-wider flex items-center justify-center gap-1.5 transition-all uppercase shadow-lg"
+                        className="flex-1 bg-[#cb000d] hover:bg-[#cb000d]/80 text-white font-medium py-3 px-4 rounded-[3px] text-[14px] flex items-center justify-center gap-2 transition-all shadow-lg font-poppins tracking-wide"
                       >
-                        Apply Now <ArrowUpRight size={12} />
+                        Apply Now <ArrowUpRight size={14} />
                       </Link>
                     </div>
                   </div>
@@ -491,14 +518,17 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     </h2>
                     <ul className="flex flex-col gap-1">
                       {researchMenu?.research?.menulinks.map((menu) => {
-                        const isHighlighted = menu.title.toLowerCase().includes("call") || menu.title.toLowerCase().includes("admission");
+                        const isHighlighted =
+                          menu.title.toLowerCase().includes("call") ||
+                          menu.title.toLowerCase().includes("admission");
                         return (
                           <li key={menu.id}>
-                            <Link 
+                            <Link
                               href={menu.url || "#"}
-                              className={isHighlighted 
-                                ? "font-poppins text-[#3C7ED4] hover:text-[#3C7ED4]/80 underline transition-all duration-200 text-[15px] font-normal tracking-wide block mt-6"
-                                : "font-poppins text-white/70 hover:text-white transition-all duration-200 text-[15px] font-light tracking-wide block py-1"
+                              className={
+                                isHighlighted
+                                  ? "font-poppins text-[#3C7ED4] hover:text-[#3C7ED4]/80 underline transition-all duration-200 text-[15px] font-normal tracking-wide block mt-6"
+                                  : "font-poppins text-white/70 hover:text-white transition-all duration-200 text-[15px] font-light tracking-wide block py-1"
                               }
                             >
                               {menu.title}
@@ -514,7 +544,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     <div className="bg-[#0b1c28]/45 border border-white/5 rounded-sm p-4 flex flex-col justify-center gap-3 h-full shadow-xl">
                       {researchMenu?.researchcounter?.map((counter, idx) => (
                         <React.Fragment key={counter.id}>
-                          {idx > 0 && <div className="h-px w-[80%] bg-white/10 mx-auto my-2" />}
+                          {idx > 0 && (
+                            <div className="h-px w-[80%] bg-white/10 mx-auto my-2" />
+                          )}
                           <div className="text-center">
                             <p className="text-[34px] font-poppins font-normal text-white mb-1">
                               {counter.countertext}
@@ -553,14 +585,20 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         className="group flex-[3] border border-white/20 hover:border-white/40 bg-transparent hover:bg-white/5 text-white font-poppins font-normal py-3 px-5 rounded-[3px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center uppercase"
                       >
                         <span>DOWNLOAD BROCHURE</span>
-                        <Download size={15} className="transition-transform duration-300 ease-in-out group-hover:translate-y-0.5" />
+                        <Download
+                          size={15}
+                          className="transition-transform duration-300 ease-in-out group-hover:translate-y-0.5"
+                        />
                       </Link>
                       <Link
                         href={applyNowButton?.url || "/apply"}
                         className="group flex-[2] bg-[#cb000d] hover:bg-[#cb000d]/90 text-white font-poppins font-normal py-3 px-5 rounded-[3px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center shadow-lg uppercase"
                       >
                         <span>APPLY NOW</span>
-                        <ArrowUpRight size={16} className="transition-transform duration-300 ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                        <ArrowUpRight
+                          size={16}
+                          className="transition-transform duration-300 ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                        />
                       </Link>
                     </div>
                   </div>
@@ -605,13 +643,17 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         {lifeatkrmuMenu?.title}
                       </h2>
                       <p className="text-white/60 text-sm font-light">
-                        {lifeatkrmuMenu?.lfeatkrmu2?.heading || "Explore Facilities"}
+                        {lifeatkrmuMenu?.lfeatkrmu2?.heading ||
+                          "Explore Facilities"}
                       </p>
                     </div>
 
                     <div className="grid grid-cols-3 gap-4 mt-2">
-                      {[...(lifeatkrmuMenu?.lifeatkrmu1?.menulinks || []), ...(lifeatkrmuMenu?.lfeatkrmu2?.menulinks || [])].map((link) => (
-                        <Link 
+                      {[
+                        ...(lifeatkrmuMenu?.lifeatkrmu1?.menulinks || []),
+                        ...(lifeatkrmuMenu?.lfeatkrmu2?.menulinks || []),
+                      ].map((link) => (
+                        <Link
                           key={link.id}
                           href={link.url || "#"}
                           className="flex items-center justify-center py-3 px-4 border border-white/10 text-center text-sm font-light tracking-wide text-white/90 hover:text-white hover:bg-white/5 transition-all duration-300 min-h-[50px] rounded-sm"
@@ -626,17 +668,19 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                   <div className="col-span-4 pl-6 flex flex-col justify-center">
                     {lifeatkrmuMenu?.backgroundimage?.url && (
                       <div className="relative rounded-sm overflow-hidden border border-white/10 group h-56">
-                        <Image 
-                          src={`${STRAPI_URL}${lifeatkrmuMenu?.backgroundimage?.url}`} 
-                          alt="Campus Life" 
+                        <Image
+                          src={`${STRAPI_URL}${lifeatkrmuMenu?.backgroundimage?.url}`}
+                          alt="Campus Life"
                           fill
                           sizes="(max-width: 768px) 100vw, 33vw"
-                          className="object-cover transition-transform duration-1000 group-hover:scale-105" 
+                          className="object-cover transition-transform duration-1000 group-hover:scale-105"
                           priority
                         />
                         {lifeatkrmuMenu?.backgroundimagetext && (
                           <div className="absolute inset-0 bg-black/40 flex items-end p-4">
-                            <p className="text-white text-xs font-light">{lifeatkrmuMenu?.backgroundimagetext}</p>
+                            <p className="text-white text-xs font-light">
+                              {lifeatkrmuMenu?.backgroundimagetext}
+                            </p>
                           </div>
                         )}
                       </div>
@@ -669,12 +713,12 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     <div className="col-span-3">
                       {aboutusMenu?.backgroundimage?.url && (
                         <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-white/10 group h-full">
-                          <Image 
-                            src={`${STRAPI_URL}${aboutusMenu?.backgroundimage?.url}`} 
-                            alt="About KRMU" 
+                          <Image
+                            src={`${STRAPI_URL}${aboutusMenu?.backgroundimage?.url}`}
+                            alt="About KRMU"
                             fill
                             sizes="(max-width: 1024px) 100vw, 400px"
-                            className="object-cover transition-transform duration-1000 group-hover:scale-105" 
+                            className="object-cover transition-transform duration-1000 group-hover:scale-105"
                             priority
                           />
                         </div>
@@ -684,9 +728,13 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     {/* Col 2: Content & Action */}
                     <div className="col-span-5 flex flex-col justify-between pr-6">
                       <p className="text-white/80 text-sm font-light leading-relaxed">
-                        Welcome to a world where education meets excitement! At K.R. Mangalam University (KRMU), we believe that university life should be a perfect blend of learning, growth, and fun. Our campus is not just a place to study.
+                        Welcome to a world where education meets excitement! At
+                        K.R. Mangalam University (KRMU), we believe that
+                        university life should be a perfect blend of learning,
+                        growth, and fun. Our campus is not just a place to
+                        study.
                       </p>
-                      
+
                       <div className="flex gap-4 mt-4">
                         <Link
                           href="#"
@@ -707,11 +755,13 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     <div className="col-span-4 border-l border-white/10 pl-8 flex flex-col justify-between">
                       <div className="space-y-6">
                         <div>
-                          <h4 className="text-white font-semibold text-sm mb-2">{aboutusMenu?.overview?.heading}</h4>
+                          <h4 className="text-white font-semibold text-sm mb-2">
+                            {aboutusMenu?.overview?.heading}
+                          </h4>
                           <ul className="flex flex-col gap-2">
                             {aboutusMenu?.overview?.menulinks.map((menu) => (
                               <li key={menu.id}>
-                                <Link 
+                                <Link
                                   href={menu.url || "#"}
                                   className="text-white/60 hover:text-white transition-colors text-sm font-light"
                                   target="_blank"
@@ -725,18 +775,22 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         </div>
 
                         <div>
-                          <h4 className="text-white font-semibold text-sm mb-2">{aboutusMenu?.administration?.heading}</h4>
+                          <h4 className="text-white font-semibold text-sm mb-2">
+                            {aboutusMenu?.administration?.heading}
+                          </h4>
                           <ul className="flex flex-col gap-2">
-                            {aboutusMenu?.administration?.menulinks.map((menu) => (
-                              <li key={menu.id}>
-                                <Link 
-                                  href={menu.url || "#"}
-                                  className="text-white/60 hover:text-white transition-colors text-sm font-light"
-                                >
-                                  {menu.title}
-                                </Link>
-                              </li>
-                            ))}
+                            {aboutusMenu?.administration?.menulinks.map(
+                              (menu) => (
+                                <li key={menu.id}>
+                                  <Link
+                                    href={menu.url || "#"}
+                                    className="text-white/60 hover:text-white transition-colors text-sm font-light"
+                                  >
+                                    {menu.title}
+                                  </Link>
+                                </li>
+                              ),
+                            )}
                           </ul>
                         </div>
                       </div>
@@ -746,9 +800,16 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                   {/* Bottom Row: Stats */}
                   <div className="grid grid-cols-2 gap-6 pt-4 border-t border-white/10">
                     {aboutusMenu?.aboutuscounter.map((counter) => (
-                      <div key={counter.id} className="bg-white/5 border border-white/10 rounded-sm px-8 py-4 flex flex-col justify-center items-center text-center group hover:bg-white/10 transition-all duration-500">
-                        <span className="text-2xl font-bold text-white mb-0.5">{counter.countertext}</span>
-                        <span className="text-xs text-white/50 leading-tight tracking-wide font-light">{counter.countercontent}</span>
+                      <div
+                        key={counter.id}
+                        className="bg-white/5 border border-white/10 rounded-sm px-8 py-4 flex flex-col justify-center items-center text-center group hover:bg-white/10 transition-all duration-500"
+                      >
+                        <span className="text-2xl font-bold text-white mb-0.5">
+                          {counter.countertext}
+                        </span>
+                        <span className="text-xs text-white/50 leading-tight tracking-wide font-light">
+                          {counter.countercontent}
+                        </span>
                       </div>
                     ))}
                   </div>
