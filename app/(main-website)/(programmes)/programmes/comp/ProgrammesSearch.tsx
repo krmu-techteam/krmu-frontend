@@ -11,6 +11,7 @@ import {
   X,
 } from "lucide-react";
 import { useEffect, useRef, useState, useCallback } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   getAllSchoolsInfo,
   getAllDegreeInfo,
@@ -149,17 +150,28 @@ const ProgrammesSearch = () => {
   const degreeRefValue = useRef("undergraduate-programmes");
   const ZENITH_SLUG = "zenith-ai";
 
-  // Read URL params safely on mount
+  const searchParams = useSearchParams();
+
+  // Read URL params safely on mount or URL change
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const params = new URLSearchParams(window.location.search);
-      const schoolParam = params.get("school");
-      if (schoolParam) {
-        setSelectedSchool(schoolParam);
-        schoolRefValue.current = schoolParam;
-      }
+    const schoolParam = searchParams.get("school");
+    if (schoolParam) {
+      setSelectedSchool(schoolParam);
+      schoolRefValue.current = schoolParam;
+    } else {
+      setSelectedSchool("soet");
+      schoolRefValue.current = "soet";
     }
-  }, []);
+
+    const degreeParam = searchParams.get("degree");
+    if (degreeParam) {
+      setSelectedDegree(degreeParam);
+      degreeRefValue.current = degreeParam;
+    } else {
+      setSelectedDegree("undergraduate-programmes");
+      degreeRefValue.current = "undergraduate-programmes";
+    }
+  }, [searchParams]);
 
   const isZenithPopup =
     selectedProgramme &&

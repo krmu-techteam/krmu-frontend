@@ -36,7 +36,7 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
   ];
 
   return (
-    <div className="fixed inset-0 z-[999] flex items-start justify-center bg-[#132737]/20 backdrop-blur-xl transition-all duration-300 overflow-hidden pt-[15vh] md:pt-[20vh]">
+    <div className="fixed inset-0 z-[999] flex items-start justify-center bg-[#04101A]/20 backdrop-blur-xl transition-all duration-300 overflow-hidden pt-[15vh] md:pt-[20vh]">
       <button
         onClick={onClose}
         className="absolute top-8 right-8 text-white/50 hover:text-white transition-all p-3 rounded-full hover:bg-white/5 border border-white/5 hover:border-white/10 cursor-pointer z-20"
