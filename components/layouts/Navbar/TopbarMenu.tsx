@@ -8,7 +8,7 @@ type TopbarProps = {
 
 const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
   return (
-    <ul className="flex flex-wrap gap-4 items-center justify-center uppercase tracking-wide text-xs">
+    <ul className="flex flex-wrap gap-4 items-center justify-center font-poppins text-[14px]">
       {topbarmenu?.map((item) => {
         if (item.__component === "menu.menu-button") {
           return (
@@ -16,13 +16,13 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
               {item.url ? (
                 <Link
                   href={item.url}
-                  className={`font-bold text-white/80 hover:text-white transition ${item.class}`}
+                  className={`font-medium text-white/80 hover:text-white transition ${item.class}`}
                   target="_blank" rel="noopener noreferrer"
                 >
                   {item.title}
                 </Link>
               ) : (
-                <span className={`font-bold text-white/80 ${item.class}`}>
+                <span className={`font-medium text-white/80 ${item.class}`}>
                   {item.title}
                 </span>
               )}
@@ -36,13 +36,13 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
               {item.url ? (
                 <Link
                   href={item.url}
-                  className={`font-bold text-white/80 hover:text-white transition ${item.menuclass}`}
+                  className={`font-medium text-white/80 hover:text-white transition ${item.menuclass}`}
                   target="_blank" rel="noopener noreferrer"
                 >
                   {item.title}
                 </Link>
               ) : (
-                <span className={`font-bold text-white/80 ${item.menuclass}`}>
+                <span className={`font-medium text-white/80 ${item.menuclass}`}>
                   {item.title}
                 </span>
               )}

@@ -53,13 +53,13 @@ const NavbarMenu = ({ mainMenu }: Props) => {
   return (
     <>
       <div className="hidden xl:block">
-        <ul className="flex items-center gap-6">
+        <ul className="flex items-center xl:gap-3 2xl:gap-6">
           {/* Academics */}
           {academicMenu && (
             <li className="krm-sub-menu-has-children">
-              <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1.5 min-h-[64px] cursor-pointer">
+              <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer">
                 <span>{academicMenu?.title}</span>
-                <ChevronDown size={14} className="opacity-70 transition-transform duration-300" />
+                <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
               </div>
               <div className="absolute left-0 right-0 w-full top-full bg-[#061623]/95 backdrop-blur-3xl border-b border-white/10 py-10 md:py-12 overflow-hidden mt-0 krmsubmenu-container z-50">
                 {/* Decorative background circles */}
@@ -130,7 +130,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
             programmesLinks.__component === "menu.menu-links" && (
               <li>
                 <Link
-                  className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1.5 min-h-[64px] ${
+                  className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px]  min-h-[64px] ${
                     programmesLinks?.menuclass || ""
                   }`}
                   href={programmesLinks.url}
@@ -143,9 +143,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
           {/* Admissions */}
           {admissionMenu && (
             <li className="krm-sub-menu-has-children">
-              <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1.5 min-h-[64px] cursor-pointer">
+              <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer">
                 <span>{admissionMenu?.title}</span>
-                <ChevronDown size={14} className="opacity-70 transition-transform duration-300" />
+                <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
               </div>
               <div className="absolute left-0 right-0 w-full top-full bg-[#061623]/95 backdrop-blur-3xl border-b border-white/10 py-10 md:py-12 overflow-hidden mt-0 krmsubmenu-container z-50">
                 {/* Decorative background effects */}
@@ -269,7 +269,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
           {zenithLinks && zenithLinks.__component === "menu.menu-links" && (
             <li>
               <Link
-                className={`font-poppins font-semibold tracking-wide text-[#ff0010] hover:text-[#ff0010]/85 transition-colors flex items-center gap-1.5 min-h-[64px] ${
+                className={`font-poppins font-semibold tracking-wide text-[#ff0010] hover:text-[#ff0010]/85 transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] ${
                   zenithLinks?.menuclass || ""
                 }`}
                 href={zenithLinks.url}
@@ -284,9 +284,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
           {/* Placements */}
           {placementMenu && (
             <li className="krm-sub-menu-has-children">
-              <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1.5 min-h-[64px] cursor-pointer">
+              <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer">
                 <span>{placementMenu?.title}</span>
-                <ChevronDown size={14} className="opacity-70 transition-transform duration-300" />
+                <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
               </div>
               <div className="absolute left-0 right-0 w-full top-full bg-[#061623]/95 backdrop-blur-3xl border-b border-white/10 py-10 md:py-12 overflow-hidden mt-0 krmsubmenu-container z-50">
                 <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
@@ -369,9 +369,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
           {/* Research */}
           {researchMenu && (
             <li className="krm-sub-menu-has-children">
-              <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1.5 min-h-[64px] cursor-pointer">
+              <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer">
                 <span>{researchMenu?.title}</span>
-                <ChevronDown size={14} className="opacity-70 transition-transform duration-300" />
+                <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
               </div>
               <div className="absolute left-0 right-0 w-full top-full bg-[#061623]/95 backdrop-blur-3xl border-b border-white/10 py-10 md:py-12 overflow-hidden mt-0 krmsubmenu-container z-50">
                 <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
@@ -454,7 +454,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
             sustainabilityLinks.__component === "menu.menu-links" && (
               <li>
                 <Link
-                  className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1.5 min-h-[64px] ${
+                  className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] ${
                     sustainabilityLinks?.menuclass || ""
                   }`}
                   href={sustainabilityLinks.url}
@@ -469,9 +469,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
           {/* Life at KRMU */}
           {lifeatkrmuMenu && (
             <li className="krm-sub-menu-has-children">
-              <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1.5 min-h-[64px] cursor-pointer">
+              <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px]  min-h-[64px] cursor-pointer">
                 <span>{lifeatkrmuMenu?.title}</span>
-                <ChevronDown size={14} className="opacity-70 transition-transform duration-300" />
+                <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
               </div>
               <div className="absolute left-0 right-0 w-full top-full bg-[#061623]/95 backdrop-blur-3xl border-b border-white/10 py-10 md:py-12 overflow-hidden mt-0 krmsubmenu-container z-50">
                 <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
@@ -530,9 +530,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
           {/* About Us */}
           {aboutusMenu && (
             <li className="krm-sub-menu-has-children">
-              <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1.5 min-h-[64px] cursor-pointer">
+              <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer">
                 <span>{aboutusMenu?.title}</span>
-                <ChevronDown size={14} className="opacity-70 transition-transform duration-300" />
+                <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
               </div>
               <div className="absolute left-0 right-0 w-full top-full bg-[#061623]/95 backdrop-blur-3xl border-b border-white/10 py-10 md:py-12 overflow-hidden mt-0 krmsubmenu-container z-50">
                 <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
@@ -576,7 +576,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         </Link>
                         <Link
                           href={applyNowButton?.url || "/apply"}
-                          className="flex-1 bg-[#cb000d] hover:bg-[#cb000d]/80 text-white font-semibold py-2.5 px-4 rounded-sm text-xs tracking-wider flex items-center justify-center gap-1.5 transition-all uppercase shadow-lg"
+                          className="flex-1 bg-[#cb000d] hover:bg-[#cb000d]/80 text-white font-semibold py-2.5 px-4 rounded-sm text-[15px] tracking-wider flex items-center justify-center gap-1.5 transition-all uppercase shadow-lg"
                         >
                           Apply Now <ArrowUpRight size={12} />
                         </Link>
@@ -641,7 +641,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
           {careersLinks && careersLinks.__component === "menu.menu-links" && (
             <li>
               <Link
-                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1.5 min-h-[64px] ${
+                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[13px] 2xl:text-[15px] min-h-[64px] ${
                   careersLinks?.menuclass || ""
                 }`}
                 href={careersLinks.url}
@@ -657,12 +657,12 @@ const NavbarMenu = ({ mainMenu }: Props) => {
               <li>
                 <Link
                   href={applyNowButton?.url || "#"}
-                  className={`bg-[#cb000d] hover:bg-[#cb000d]/80 text-white font-semibold py-2 px-5 rounded-sm text-xs tracking-widest flex items-center gap-1.5 transition-all uppercase shadow-lg relative overflow-hidden group ${
+                  className={`bg-[#cb000d] hover:bg-[#cb000d]/80 text-white font-medium py-2 px-5 xl:py-2 xl:px-4 rounded-xs text-xs xl:text-[14px]  tracking-wide xl:tracking-normal  flex items-center gap-1.5 transition-all capitalize shadow-lg relative overflow-hidden group font-poppins ${
                     applyNowButton?.class || ""
                   }`}
                 >
                   <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
-                  {applyNowButton?.title} <ArrowUpRight size={13} strokeWidth={2.5} />
+                  {applyNowButton?.title} <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </li>
             )}

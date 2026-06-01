@@ -26,7 +26,7 @@ export default async function NewsEventsSection({
         style={{ opacity: 0.66 }}
       ></div>
 
-      <div className="w-full max-w-[1530px] mx-auto px-4 md:px-6 relative z-10">
+      <div className="w-full max-w-[1530px] mx-auto px-4 md:px-16 2xl:px-0 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-6 md:mb-6">
           <h2 className="text-3xl md:text-[45px] font-serif font-bold text-white leading-tight" dangerouslySetInnerHTML={{ __html: title || "" }}></h2>
           {(newsandeventbtn?.buttonlink || newsandeventbtn?.buttontext) && (

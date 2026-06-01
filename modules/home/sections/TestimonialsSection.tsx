@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
           {TESTIMONIALS.map((t) => (
             <div
               key={t.id}
-              className="grid grid-cols-1 lg:grid-cols-10 items-center px-12 md:px-16 pt-12 md:pt-12 mb-4 gap-8 lg:gap-6"
+              className="grid grid-cols-1 lg:grid-cols-10 items-center px-l md:pl-16 pt-12 md:pt-12 mb-4 gap-8 lg:gap-6"
             >
               {/* Left Column - Content */}
               <div className="lg:col-span-6 flex flex-col md:min-h-[400px] relative pt-4 md:pt-0">
