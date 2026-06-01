@@ -281,7 +281,14 @@ import FloatingButtons from "./FloatingButtons";
 import NpfAgent from "@/app/NpfAgent";
 import BicolorDivider from "../Navbar/BicolorDivider";
 
-const footerLinks = {
+type FooterLink = {
+  name: string;
+  href: string;
+  target?: React.HTMLAttributeAnchorTarget;
+  rel?: string;
+};
+
+const footerLinks: Record<string, FooterLink[]> = {
   programmes: [
     { name: 'UG Programmes', href: '/programmes?degree=undergraduate-programmes' },
     { name: 'PG Programmes', href: '/programmes?degree=postgraduate-programmes' },
