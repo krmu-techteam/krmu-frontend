@@ -58,7 +58,7 @@ export default function ResearchSection() {
               </p>
               
               <div className="flex flex-col gap-6 justify-center items-center">
-                <button className="bg-brand-research-button hover:bg-brand-research-button/80 text-white px-16 py-2.5 rounded-sm font-semibold transition-all w-fit flex items-center gap-2 group">
+                <button className="bg-brand-research-button hover:bg-brand-research-button/80 text-white px-16 py-2.5 rounded-[3px] font-medium transition-all w-fit flex items-center gap-2 group cursor-pointer">
                   Research
                 </button>
                 

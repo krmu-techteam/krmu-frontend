@@ -23,7 +23,7 @@ export const Button = ({
   iconClassName = '',
   onClick
 }: ButtonProps) => {
-  const baseStyles = "w-full sm:w-auto flex items-center justify-center gap-2 h-[45px] rounded-sm font-normal transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide relative overflow-hidden group px-6";
+  const baseStyles = "w-full sm:w-auto flex items-center justify-center gap-2 h-[45px] rounded-[3px] font-normal transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide relative overflow-hidden group px-6";
   
   const variants = {
     primary: "bg-[#CB000D] text-white border-1 border-transparent hover:bg-[#CB000D]/90 shadow-lg",

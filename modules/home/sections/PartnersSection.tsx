@@ -37,7 +37,7 @@ export default function PartnersSection() {
           {PARTNER_UNIVERSITIES.map((partner, i) => (
             <div 
               key={i} 
-              className="h-[70px] md:h-[90px] bg-white rounded-md px-4 py-2 flex items-center justify-center shadow-md hover:shadow-xl cursor-pointer m-1 w-auto max-w-full mx-auto"
+              className="h-[70px] md:h-[90px] bg-white rounded-[3px] px-4 py-2 flex items-center justify-center shadow-md hover:shadow-xl cursor-pointer m-1 w-auto max-w-full mx-auto"
             >
               <Image 
                 src={partner.logo} 
