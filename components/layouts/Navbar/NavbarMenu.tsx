@@ -850,17 +850,6 @@ const NavbarMenu = ({ mainMenu }: Props) => {
         </ul>
       </div>
 
-      {/* Apply Now Mobile Button (Triggered under xl) */}
-      {applyNowButton && applyNowButton.__component === "menu.menu-button" && (
-        <Link
-          href={applyNowButton?.url || "#"}
-          className={`bg-[#cb000d] py-2 px-4 inline-block text-xs font-semibold text-white rounded-sm xl:hidden shadow-md ${
-            applyNowButton?.class || ""
-          }`}
-        >
-          {applyNowButton?.title}
-        </Link>
-      )}
     </>
   );
 };

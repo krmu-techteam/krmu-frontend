@@ -10,9 +10,11 @@ type TopbarProps = {
 
 const Topbar = ({ topbarmenu, sociallinks }: TopbarProps) => {
   return (
-    <div className="bg-[#0b1626] text-white/80 py-2 px-4 md:px-16 text-xs flex flex-col md:flex-row justify-between items-center border-b border-white/10 w-full relative z-60 transition-colors">
+    <div className="flex bg-[#0b1626] text-white/80 py-2 px-4 md:px-16 text-xs justify-center xl:justify-between items-center border-b border-white/10 w-full relative z-60 transition-colors">
       <SocialIcons sociallinks={sociallinks} />
-      <TopbarMenu topbarmenu={topbarmenu} />
+      <div className="hidden xl:block">
+        <TopbarMenu topbarmenu={topbarmenu} />
+      </div>
     </div>
   );
 };

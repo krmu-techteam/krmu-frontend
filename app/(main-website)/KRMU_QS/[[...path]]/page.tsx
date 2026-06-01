@@ -90,7 +90,7 @@ export default function KRMUQSBrowser() {
 
       {/* FOLDERS */}
       <div className="mb-6">
-        {folders.map((folderPrefix) => {
+        {folders.map((folderPrefix) => { 
           /**
            * R2 folder prefix →
            * Main-Krmu-QS/KRMU_QS/A/B/
