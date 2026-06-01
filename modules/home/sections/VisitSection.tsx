@@ -8,7 +8,7 @@ import SectionDivider from '@/components/common/SectionDivider';
 
 export default function VisitSection() {
   return (
-    <section className="relative w-full py-6 md:py-10 lg:py-16 xl:py-20 overflow-hidden font-poppins">
+    <section className="relative w-full py-6 md:py-12 xl:py-20 overflow-hidden font-poppins">
       <style dangerouslySetInnerHTML={{ __html: `
         .visit-left-col {
           padding-left: 1rem;

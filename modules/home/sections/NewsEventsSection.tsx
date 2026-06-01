@@ -19,14 +19,14 @@ export default async function NewsEventsSection({
   const newsandeventsdata = await getNewsEventsWP(1, 10);
   return (
     <section 
-      className="relative w-full py-6 md:py-10 lg:py-16 xl:py-20 overflow-hidden font-poppins"
+      className="relative w-full py-6 px-11 xl:px-0 md:py-12 xl:py-20 overflow-hidden font-poppins"
     >
       <div 
         className="absolute -top-[100px] left-[88%] -translate-x-1/2 w-[948px] h-[948px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.05)_0%,transparent_85%)] rounded-full blur-[140px] z-0 pointer-events-none transition-opacity"
         style={{ opacity: 0.66 }}
       ></div>
 
-      <div className="w-full max-w-[1530px] mx-auto px-4 md:px-16 2xl:px-0 relative z-10">
+      <div className="w-full max-w-[1530px] mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-6 md:mb-6">
           <h2 className="text-3xl md:text-[45px] font-serif font-bold text-white leading-tight" dangerouslySetInnerHTML={{ __html: title || "" }}></h2>
           {(newsandeventbtn?.buttonlink || newsandeventbtn?.buttontext) && (
@@ -51,7 +51,7 @@ export default async function NewsEventsSection({
           showArrows={false}
           autoplayDelay={5000}
           containerClassName="-ml-3"
-          slideClassName="pl-1 basis-[85%] md:basis-1/2 lg:basis-1/4"
+          slideClassName="pl-1 basis-[85%] base:basis-1 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
         >
           {newsandeventsdata?.data?.map((event: NewsEventItem, i: number) => (
             <div 

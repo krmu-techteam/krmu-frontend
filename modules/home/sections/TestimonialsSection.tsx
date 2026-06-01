@@ -10,7 +10,7 @@ import { TESTIMONIALS } from "../constants";
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative w-full py-6 md:py-10 lg:py-16 xl:py-20 font-poppins">
+    <section className="relative w-full py-6 px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
       {/* Precision Spec Lines - Gradient Style */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>

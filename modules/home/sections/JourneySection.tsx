@@ -9,20 +9,20 @@ import { JOURNEY_VIDEOS } from '../constants';
 
 export default function JourneySection() {
   return (
-    <section className="relative w-full overflow-hidden py-6 md:py-10 lg:py-16 xl:py-20 font-poppins text-center transition-colors duration-500">
+    <section className="relative w-full overflow-hidden py-6 px-11 xl:px-0 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none"></div>
 
       <div className="container mx-auto relative z-10">
-        <div className="max-w-4xl mx-auto mb-12">
+        <div className="max-w-4xl mx-auto mb-10 xl:mb-12">
           <h2 className="text-3xl md:text-4xl xl:text-[42px] font-serif font-bold text-white mb-6 leading-[1.2] tracking-tight">
             Your Journey to Excellence Begins Here
           </h2>
 
-          <p className="max-w-4xl mx-auto text-white/70 text-base md:text-[16px] leading-relaxed mb-10 font-light font-poppins">
+          <p className="max-w-4xl mx-auto text-white/70 text-base md:text-[16px] leading-relaxed mb-8 xl:mb-10 font-light font-poppins">
             Our multidisciplinary approach to education ensures students receive a well-rounded experience, blending theoretical knowledge with real-world applications. As the leading university in Gurugram, we commit to providing students with the necessary skills and knowledge to thrive in the ever-changing world.
           </p>
 
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-5 px-4 md:px-0">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 xl:gap-5 px-4 md:px-0">
             <Button 
                href="#" 
                variant="outline"
@@ -56,10 +56,10 @@ export default function JourneySection() {
         </div>
 
         {/* Video Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-5 mb-8 xl:mb-10">
           {JOURNEY_VIDEOS.map((video) => (
             <div key={video.id} className="group cursor-pointer">
-              <div className="relative aspect-video overflow-hidden rounded-sm shadow-xl mb-5 bg-black">
+              <div className="relative aspect-video overflow-hidden rounded-[3px] shadow-xl mb-5 bg-black">
                 <Image 
                    src={video.thumbnail}
                    alt={video.title}

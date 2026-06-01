@@ -6,11 +6,11 @@ import { ABOUT_STAT, ABOUT_STAT_BG_COLORS } from '../constants';
 
 export default function AboutSection() {
   return (
-    <section className="relative w-full overflow-hidden py-6 md:py-10 lg:py-16 xl:py-20 font-poppins text-center transition-colors duration-500">
+    <section className="relative w-full overflow-hidden px-11 xl:px-0 py-6 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none"></div>
       <div className="container mx-auto relative z-10">
-        <div className="max-w-5xl mx-auto relative mb-6 md:mb-10 lg:mb-12">
-          <span className="inline-block bg-brand-navy-deep text-brand-gold px-3 py-1 text-[11px] xl:text-[20px] font-medium capitalize tracking-normal mb-6 rounded-md border border-white/5 font-poppins">
+        <div className="max-w-5xl mx-auto relative mb-6 md:mb-8 xl:mb-12">
+          <span className="inline-block bg-brand-navy-deep text-brand-gold px-3 py-1 text-md xl:text-[20px] font-medium capitalize tracking-normal mb-6 rounded-md border border-white/5 font-poppins">
             Best University in Gurugram
           </span>
 
@@ -34,12 +34,12 @@ export default function AboutSection() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 xl:gap-5">
           {ABOUT_STAT.map((stat, idx) => (
             <div 
               key={idx} 
               style={{ backgroundColor: ABOUT_STAT_BG_COLORS[idx % ABOUT_STAT_BG_COLORS.length] }}
-              className="group relative overflow-hidden rounded-sm py-7 px-6 border border-white/5 shadow-xl hover:border-brand-gold/30 hover:shadow-2xl hover:shadow-brand-gold/10 hover:-translate-y-1 transition-all duration-500 ease-out cursor-default text-start min-h-[120px] flex flex-col justify-center"
+              className="group relative overflow-hidden rounded-sm py-7 px-6 border border-white/5 shadow-xl hover:border-brand-gold/30 hover:shadow-2xl hover:shadow-brand-gold/10 hover:-translate-y-1 transition-all duration-500 ease-out cursor-default text-start min-h-[100px] xl:min-h-[120px] flex flex-col justify-center"
             >
               <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
  

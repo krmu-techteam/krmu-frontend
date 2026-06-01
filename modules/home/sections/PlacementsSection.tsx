@@ -17,9 +17,9 @@ export default function PlacementsSection() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <section className="relative w-full overflow-hidden py-6 md:py-10 lg:py-16 xl:py-20 font-poppins">
+    <section className="relative w-full overflow-hidden py-6 px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
       <div className="container mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-10 px-4 md:px-0">
+        <div className="flex flex-col lg:flex-row items-start gap-8 xl:gap-10 px-4 md:px-0">
           {/* Left: Success Card Carousel (30% Width) */}
           <div className="w-full lg:w-[30%] flex flex-col items-center lg:items-start order-2 lg:order-1">
             <div className="w-full max-w-[360px] lg:max-w-none">

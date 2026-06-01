@@ -7,7 +7,7 @@ import SectionDivider from '@/components/common/SectionDivider';
  
 export default function PartnersSection() {
   return (
-    <section className="relative w-full py-6 md:py-8 lg:py-12 xl:py-16 overflow-hidden font-poppins">
+    <section className="relative w-full py-6 px-11 xl:px-0 md:py-12 xl:py-16 overflow-hidden font-poppins">
       {/* Institutional Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.05)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none"></div>
 

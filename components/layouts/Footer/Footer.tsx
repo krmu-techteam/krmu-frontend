@@ -351,7 +351,7 @@ const Footer = async () => {
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-brand-dark/70 transition-opacity"></div>
 
-        <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
+        <div className="container mx-auto px-6 md:px-11 xl:px-20 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-12 text-white text-left">
             {/* Column 1: Programmes */}
             <div>
@@ -486,7 +486,7 @@ const Footer = async () => {
 
       {/* Bottom Footer Section with Brand Dark Background */}
       <div className="bg-brand-navy pb-6 pt-10 border-t border-white/5">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20">
+        <div className="container mx-auto px-6 md:px-11 xl:px-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left text-white items-start">
             {/* Helpline Section */}
             <div className="flex flex-col h-full justify-between min-h-[120px]">
