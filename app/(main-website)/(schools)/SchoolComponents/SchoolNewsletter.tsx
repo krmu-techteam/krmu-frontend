@@ -13,7 +13,7 @@ type Props = {
 const SchoolNewsletter = ({ heading, desc, btns, newsletterbg }: Props) => {
   return (
     <section
-      className="bg-cover bg-center py-14 mt-14 px-4 temp-class"
+      className="bg-cover bg-center py-14 mt-14 px-4"
       style={{
         background: `url(${STRAPI_URL}${newsletterbg})`,
         backgroundRepeat: "no-repeat",
