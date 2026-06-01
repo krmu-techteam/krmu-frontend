@@ -19,7 +19,7 @@ const ProgrammesHero = ({ heroSection }: any) => {
       <div className="w-full lg:w-1/2 flex items-center justify-center px-5 sm:px-8 pt-10 pb-10 sm:pt-12 sm:pb-12 lg:px-20 lg:pt-4 lg:pb-4 order-2 lg:order-1">
         <div className="xl:max-w-xl w-full">
           <h1 className="mt-2 text-[#07255B] font-serif text-4xl sm:text-5xl   xl:text-7xl leading-tight sm:leading-16.25 md:leading-tight xl:leading-18.75 tracking-tight">
-            MA in
+            M.A.
             <br />
             (Journalism  
             <br />
