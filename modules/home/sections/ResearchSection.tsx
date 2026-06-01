@@ -9,7 +9,7 @@ import { RESEARCH_STATS } from '../constants';
 
 export default function ResearchSection() {
   return (
-    <section className="relative w-full py-6 px-11 xl:px-0 md:py-12 xl:py-20 overflow-hidden font-poppins">
+    <section className="relative w-full py-6 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 overflow-hidden font-poppins">
       
 
       <div className="w-full max-w-[1285px] mx-auto xl:px-0 relative z-10">
@@ -28,13 +28,13 @@ export default function ResearchSection() {
               />
             </div>
             
-            <div className="grid grid-cols-2 max-w-2xl px-4 lg:px-12 xl:max-w-[600px] xl:mx-16">
+            <div className="grid grid-cols-2 max-w-2xl px-0 lg:px-12 xl:max-w-[600px] xl:mx-16">
               {RESEARCH_STATS.map((stat, i) => {
                 const borderClass = 
-                  i === 0 ? "border-r border-b border-[#262626] pb-5 px-4 md:px-5" :
-                  i === 1 ? "border-b border-[#262626] pb-5 px-4 md:px-5" :
-                  i === 2 ? "border-r border-[#262626] pt-5 px-4 md:px-5" :
-                  "pt-5 px-4 md:px-5";
+                  i === 0 ? "border-r border-b border-[#262626] pb-5 px-3 md:px-5" :
+                  i === 1 ? "border-b border-[#262626] pb-5 px-3 md:px-5" :
+                  i === 2 ? "border-r border-[#262626] pt-5 px-3 md:px-5" :
+                  "pt-5 px-3 md:px-5";
                 return (
                   <div key={i} className={`flex flex-col justify-center items-center ${borderClass}`}>
                     <span className="text-brand-gold text-2xl md:text-3xl font-normal mb-2 text-center">{stat.value}</span>

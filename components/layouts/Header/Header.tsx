@@ -73,13 +73,12 @@ const Header = ({
             navbarData={headerMenus}
           />
         </div>
-        {showMobileMenu && (
-          <MobileHeader
-            topbarmenu={topbarmenu}
-            navbarData={headerMenus}
-            onClose={() => setMobileMenu(false)}
-          />
-        )}
+        <MobileHeader
+          topbarmenu={topbarmenu}
+          navbarData={headerMenus}
+          onClose={() => setMobileMenu(false)}
+          isOpen={showMobileMenu}
+        />
       </header>
     </>
   );

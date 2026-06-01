@@ -28,7 +28,7 @@ export default function VisitSection() {
       <div className="w-full flex flex-col lg:flex-row items-stretch gap-6">
         
         {/* Left Column - Content */}
-        <div className="visit-left-col w-full lg:w-[45%] flex flex-col justify-center py-12 lg:py-20 pr-6 relative z-10">
+        <div className="visit-left-col w-full lg:w-[45%] flex flex-col justify-center pl-6 md:pl-0 py-12 lg:py-20 pr-6 relative z-10">
           <div className="w-full max-w-[620px] lg:ml-0 flex flex-col">
             <h2 className="text-3xl md:text-[42px] font-serif font-bold text-white mb-6 leading-tight md:leading-[1.2]">
               Visit and Explore<br />

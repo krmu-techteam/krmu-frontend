@@ -7,7 +7,7 @@ import SectionDivider from '@/components/common/SectionDivider';
  
 export default function PartnersSection() {
   return (
-    <section className="relative w-full py-6 px-11 xl:px-0 md:py-12 xl:py-16 overflow-hidden font-poppins">
+    <section className="relative w-full py-6 px-6 md:px-11 xl:px-0 md:py-12 xl:py-16 overflow-hidden font-poppins">
       {/* Institutional Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.05)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none"></div>
 
@@ -16,7 +16,7 @@ export default function PartnersSection() {
           Global Partners
         </h2>
         
-        <p className="max-w-3xl mx-auto text-white/70 text-base md:text-[16px] leading-relaxed mb-16 font-light">
+        <p className="max-w-3xl mx-auto text-white/70 text-base md:text-[16px] leading-relaxed mb-6 md:mb-16 font-light">
           K.R. Mangalam University is dedicated to broadening educational and research opportunities through strategic 
           international partnerships with esteemed universities and institutions around the world. These collaborations 
           enhance our academic landscape, offering unique global perspectives and industry insights.

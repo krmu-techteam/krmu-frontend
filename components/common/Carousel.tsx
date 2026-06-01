@@ -96,7 +96,7 @@ export const Carousel = ({
       {showArrows && childrenArray.length > 1 && (
         <>
           <button
-            className={`absolute left-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all z-20 disabled:opacity-0 ${prevArrowClassName}`}
+            className={`absolute left-0 md:left-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all z-20 disabled:opacity-0 ${prevArrowClassName}`}
             onClick={scrollPrev}
             disabled={!prevBtnEnabled}
             aria-label="Previous slide"
@@ -104,7 +104,7 @@ export const Carousel = ({
             <ChevronLeft size={24} />
           </button>
           <button
-            className={`absolute right-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all z-20 disabled:opacity-0 ${nextArrowClassName}`}
+            className={`absolute right-0 md:right-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all z-20 disabled:opacity-0 ${nextArrowClassName}`}
             onClick={scrollNext}
             disabled={!nextBtnEnabled}
             aria-label="Next slide"

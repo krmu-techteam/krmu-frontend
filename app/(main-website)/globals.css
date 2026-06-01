@@ -3,6 +3,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 @theme {
   --university-red: red;
   --university-blue: #00f;
@@ -14,7 +23,7 @@
 }
 
 :root {
-  --font-body: 'Poppins', sans-serif;
+  --font-body: var(--font-poppins), 'Poppins', sans-serif;
   --background: #132737;
   --foreground: #ededed;
   --primary: #c41525;
@@ -88,7 +97,7 @@ body {
   background-repeat: repeat;
   background-size: 50px;
   color: var(--foreground);
-  font-family: var(--font-body);
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
   min-height: 100vh;
 }
 body:after {

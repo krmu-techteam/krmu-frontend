@@ -6,7 +6,7 @@ import { ABOUT_STAT, ABOUT_STAT_BG_COLORS } from '../constants';
 
 export default function AboutSection() {
   return (
-    <section className="relative w-full overflow-hidden px-11 xl:px-0 py-6 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
+    <section className="relative w-full overflow-hidden px-6 md:px-11 xl:px-0 py-6 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none"></div>
       <div className="container mx-auto relative z-10">
         <div className="max-w-5xl mx-auto relative mb-6 md:mb-8 xl:mb-12">

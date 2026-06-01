@@ -12,9 +12,10 @@ type Props = {
   navbarData: HeaderMenus[];
   topbarmenu: TOPBARITEMS[];
   onClose: () => void;
+  isOpen: boolean;
 };
 
-const MobileHeader = ({ topbarmenu, navbarData, onClose }: Props) => {
+const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
 
   const academicMenu = navbarData.find(
@@ -57,11 +58,15 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose }: Props) => {
     <>
       {/* Mobile Drawer Overlay */}
       <div 
-        className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 xl:hidden"
+        className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-50 xl:hidden transition-opacity duration-300 ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
         onClick={onClose}
       >
         <div 
-          className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-[#061623] shadow-[-10px_0_30px_rgba(0,0,0,0.3)] flex flex-col z-50 border-l border-white/10 overflow-hidden"
+          className={`fixed top-0 right-0 h-full w-[85%] max-w-sm bg-[#061623] shadow-[-10px_0_30px_rgba(0,0,0,0.3)] flex flex-col z-50 border-l border-white/10 overflow-hidden transition-transform duration-300 ease-out ${
+            isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Drawer Header */}

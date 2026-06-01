@@ -9,7 +9,7 @@ import { LIFE_AT_KRMU_CAROUSEL_CONFIGS, LIFE_AT_KRMU_GALLERY } from '../constant
 export default function LifeAtKRMU() {
 
   return (
-    <section className="relative w-full overflow-hidden py-6 px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
+    <section className="relative w-full overflow-hidden py-6 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
       
       
       {/* Precision Spec Glow (Bottom Left) - Spec: Blue Institutional Soft Light */}
@@ -17,7 +17,7 @@ export default function LifeAtKRMU() {
         className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none opacity-40 transition-opacity"
       ></div>
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10 text-center mb-12">
+      <div className="container mx-auto px-0 md:px-12 relative z-10 text-center mb-12">
         <h3 className="font-serif font-bold text-[32px] xl:text-[49px] leading-[1.2] md:leading-[30px] mb-6 md:mb-11 text-white">Why KRMU?</h3>
         <h2 className="font-poppins font-extralight text-[24px] md:text-[42px] leading-[1.2] md:leading-[30px] text-white mb-6">
           A closer look at Life at KRMU
