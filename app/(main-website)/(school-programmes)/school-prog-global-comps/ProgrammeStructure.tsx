@@ -176,7 +176,7 @@ const ProgrammeStructure = ({
               </div>
 
               {/* Subjects List - Transparent Glass Area as per screenshot */}
-              <div className="flex-grow py-6 overflow-y-auto min-h-[400px] max-h-[400px] bg-transparent no-scrollbar">
+              <div className="flex-grow py-6 h-[auto]  bg-transparent no-scrollbar">
                 {programStruct.map((year) => {
                   const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                   if (activeYear !== yearValue) return null;

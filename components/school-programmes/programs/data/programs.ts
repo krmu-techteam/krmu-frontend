@@ -482,4 +482,28 @@ export const heroConfigs: Record<string, HeroConfig> = {
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ba_hons_psychology_edf8d5438f.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
+  "ma-economics": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/M_A_Economics_0f70f674f0.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-in-psychology": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Ph_D_in_Psychology_c8b90c4d1c.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-english-literature-studies": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Ph_D_in_English_f5f350cb52.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-economics": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Ph_D_in_Economics_30727ee703.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
 };
