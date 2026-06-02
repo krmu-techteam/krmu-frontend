@@ -84,7 +84,7 @@ const Admission2WhatMakes = () => {
                 <Image
                   src={card.image}
                   fill
-                  className="object-cover w-full md:object-cover "
+                  className="object-contain w-full md:object-cover "
                   alt={card.alt}
                 />
               </div>
