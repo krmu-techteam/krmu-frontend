@@ -1,8 +1,14 @@
 "use client";
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import React, { useState } from "react";
 import Image from "next/image";
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 
 const deans = [
   { name: "Dr. Tanaya Verma", role: "Dean- SOAD", img: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dr_Tanaya_Verma_SOAD_0c930f1c6b.jpg" },
@@ -23,72 +29,86 @@ const DeansSlide = () => {
   const [visibleCount, setVisibleCount] = useState(5);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleLoadMore = () => {
-    setIsLoading(true);
-    // Simulate a brief loading delay for better UX
-    setTimeout(() => {
-      setVisibleCount((prev) => prev + ITEMS_PER_LOAD);
-      setIsLoading(false);
-    }, 800);
-  };
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  React.useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   return (
-    <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
-        {deans.slice(0, visibleCount).map((dean, index) => (
-          <div
-            key={index}
-            className="group relative flex flex-col bg-gradient-to-b from-blue-50/50 to-white border border-blue-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
-          >
-            {/* Person Image */}
-            <div className="w-full h-80 relative overflow-hidden bg-white p-2">
-              <Image
-                src={dean.img}
-                alt={dean.name}
-                width={300}
-                height={400}
-                className="w-full h-full object-contain object-center"
-              />
-            </div>
+    <div className="relative px-4 md:px-0">
+      <Carousel
+        setApi={setApi}
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 3000,
+          }),
+        ]}
+        className="w-full"
+      >
+        <CarouselContent className="-ml-4 md:-ml-6">
+          {deans.map((dean, index) => (
+            <CarouselItem
+              key={index}
+              className="pl-4 md:pl-6 basis-full sm:basis-1/2 md:basis-1/4 lg:basis-1/5"
+            >
+              <div
+                className="group relative flex flex-col bg-[#0b1a27] border-[1px] border-transparent hover:border-[#00A0E3] transition-all duration-300 h-full"
+              >
+                {/* Person Image */}
+                <div className="w-full h-[220px] sm:h-[260px]">
+                  <div className="w-full h-full relative overflow-hidden rounded-[2px] bg-white">
+                  <Image
+                    src={dean.img}
+                    alt={dean.name}
+                    fill
+                    className="object-contain object-bottom pt-4"
+                  />
+                  </div>
+                </div>
 
-            {/* Text Content */}
-            <div className="p-5 flex flex-col flex-grow text-center">
-              <h5 className="text-lg font-bold text-slate-900 leading-tight mb-2">
-                {dean.name}
-              </h5>
-              <div className="w-8 h-1 bg-[#051630] mb-3 mx-auto rounded-full transition-all duration-500 group-hover:w-12" />
-              <p className="text-xs text-slate-600 font-medium leading-relaxed">
-                {dean.role}
-              </p>
-            </div>
-          </div>
+                {/* Text Content */}
+                <div className="p-5 flex flex-col flex-grow text-left">
+                  <h5 className="text-[18px] sm:text-[20px] font-serif font-bold text-white leading-tight mb-3">
+                    {dean.name}
+                  </h5>
+                  <p className="text-[13px] sm:text-[14px] text-[#5AB9E5] font-bold leading-snug mt-auto">
+                    {dean.role}
+                  </p>
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+      
+      {/* Dots Indicator */}
+      <div className="flex justify-center gap-2 mt-10">
+        {Array.from({ length: count }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => api?.scrollTo(index)}
+            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+              index === current ? "bg-[#00A0E3] w-6" : "bg-white/30"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
         ))}
       </div>
-
-      {visibleCount < deans.length && (
-        <div className="flex justify-center mt-12">
-          <Button
-            onClick={handleLoadMore}
-            disabled={isLoading}
-            className={`group inline-flex items-center gap-2 cursor-pointer px-8 py-6 bg-[#051630] hover:bg-[#051630]/70 text-white border-[#051630] font-semibold text-lg rounded-lg transition-all duration-300 ${
-              isLoading ? "bg-[#051630] text-white" : "text-white"
-            }`}
-          >
-            {isLoading ? "Loading..." : "Load More"}
-            {!isLoading && (
-              <svg 
-                className="w-5 h-5 transition-transform duration-300 group-hover:translate-y-1" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            )}
-          </Button>
-        </div>
-      )}
-    </>
+    </div>
   );
 };
 
