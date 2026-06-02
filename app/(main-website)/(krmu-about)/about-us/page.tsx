@@ -7,7 +7,6 @@ import { STRAPI_URL } from "@/app/constant";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import PioneerExcellence from "@/app/(main-website)/Home/PioneerExcellence";
-import AdvisoryOrDean from "../about-krmu/AdvisoryOrDean";
 import HallofFame from "../about-krmu/HallofFame";
 import IndustryCollabLogos from "../about-krmu/IndustryCollabLogos";
 import {
@@ -15,8 +14,10 @@ import {
   AccreditationSection,
   GroupInstitutionsSection,
   NextGenerationSection,
+  VisionMissionSection,
+  WhyKRMUSection,
+  AdvisoryOrDeanSection,
 } from "@/modules/about";
-
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("the-university");
   const seo = seoData[0];
@@ -103,87 +104,9 @@ const page = async () => {
         thenexgentitle={aboutData?.thenexgentitle}
         thenexgendescription={aboutData?.thenexgendescription}
       />
-      <section className="py-[50px] px-4 xl:px-[30px] bg-[#000E8B1A]">
-        <div className="flex flex-col md:flex-row max-w-[1600px] mx-auto w-full gap-2.5">
-          <div className="w-full md:w-2/5 p-5 xl:mr-2.5 xl:ml-8 bg-[url(/aboutvision.webp)] text-white bg-cover">
-            <h4 className="text-3xl md:text-5xl mb-5 lg:text-[64px] font-semibold">
-              {aboutData?.visionmission?.visiontitle}
-            </h4>
-
-            <BlocksRenderer
-              content={aboutData?.visionmission?.visiondescription}
-            />
-          </div>
-          <div className="w-full md:w-3/5 p-5 xl:mr-2.5 xl:ml-8 bg-[url(/aboutmission.webp)] bg-cover text-white tick-li">
-            <h4 className="text-3xl md:text-5xl mb-5 lg:text-[64px] font-semibold">
-              {aboutData?.visionmission?.missiontitle}
-            </h4>
-            <BlocksRenderer
-              content={aboutData?.visionmission?.missiondescription}
-            />
-          </div>
-        </div>
-      </section>
-      <section className="py-10 sm:py-20 px-4 md:px-[30px]">
-        <div className="max-w-[1600px] mx-auto w-full">
-          <div className="flex flex-wrap xl:flex-nowrap  gap-5 w-full">
-            <div className="w-full xl:w-1/3 flex flex-col gap-5">
-              <div className="bg-[url(/industry.webp)] flex flex-col justify-end bg-cover h-[250px] sm:h-[300px] bg-top xl:bg-center pt-12 md:pt-[272px] pb-2.5 px-2.5 text-white font-semibold">
-                <h3 className="text-xl sm:text-3xl md:text-4xl sm:mb-5">
-                  Industry <br />
-                  Collaborated
-                </h3>
-                <h5 className="text-2xl sm:mb-5">Academic Curriculum</h5>
-              </div>
-              <div className="bg-[url(/nep.webp)] bg-no-repeat bg-bottom-right p-2.5 min-h-0.5 h-80 text-black bg-[#e1e7e9]">
-                <h3 className="text-3xl md:text-4xl font-semibold leading-[1.3]">
-                  Successful <br /> NEP <br /> Implementation
-                </h3>
-              </div>
-            </div>
-            <div className="w-full xl:w-1/3">
-              <div className="bg-[url(/stellar.webp)] bg-cover pt-40 md:pt-[440px] pb-[30px] px-2.5 xl:px-[30px] h-full text-white flex flex-col justify-end font-semibold">
-                <h4 className="text-3xl md:text-5xl mb-5">
-                  Stellar <br />
-                  Placements
-                </h4>
-                <h5 className="text-2xl mb-2.5">Kick Start Careers</h5>
-              </div>
-            </div>
-            <div className="w-full xl:w-1/3">
-              <div className="bg-[url(/finance-assist.webp)] bg-no-repeat bg-cover pt-40 px-4 md:pt-[440px] pb-[30px] md:px-[30px] h-full text-white flex flex-col justify-end font-semibold w-full">
-                <h4 className="text-3xl md:text-5xl mb-5">
-                  Financial <br />
-                  Assistance
-                </h4>
-                <h5 className="text-2xl mb-2.5">
-                  Through Scholarships & Loans
-                </h5>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row mt-5 gap-5">
-            <div className="w-full md:w-1/2">
-              <div className="bg-[url(/student.webp)] pt-32 xl:pt-64 pb-[30px] px-[30px] text-white bg-cover h-full">
-                <h4 className="text-3xl">Experience</h4>
-                <h5 className="md:text-5xl font-semibold leading-[1.3]">
-                  Student Diversity & <br />
-                  Vibrant Campus Life
-                </h5>
-              </div>
-            </div>
-            <div className="w-full md:w-1/2">
-              <div className="bg-[url(/andi.jpg)] bg-cover pt-32 xl:pt-64 pb-[30px] px-[30px] text-white  h-full">
-                <h4 className="text-3xl">Our Excellent</h4>
-                <h5 className="md:text-5xl font-semibold leading-[1.3]">
-                  Teacher Pedagogy
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <AdvisoryOrDean />
+      <VisionMissionSection />
+       <WhyKRMUSection />
+      <AdvisoryOrDeanSection />
       {/* <AdvisoryDean /> */}
       <section className="py-16 bg-[url(/kree-bg.webp)] bg-cover">
         <div className="max-w-[1600px] mx-auto w-full text-center">

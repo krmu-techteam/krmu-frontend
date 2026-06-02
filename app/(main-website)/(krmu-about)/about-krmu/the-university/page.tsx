@@ -8,7 +8,7 @@ import { STRAPI_URL } from "@/app/constant";
 import AccrediationLogo from "../AccrediationLogo";
 import KRMUGroupCard from "../KRMUGroupCard";
 import HallofFame from "../HallofFame";
-import AdvisoryOrDean from "../AdvisoryOrDean";
+import { AdvisoryOrDeanSection } from "@/modules/about";
 import IndustryCollabLogos from "../IndustryCollabLogos";
 import { Eye, Target } from "lucide-react";
 
@@ -274,7 +274,7 @@ const page = async () => {
           </div>
         </div>
       </section>
-      <AdvisoryOrDean />
+      <AdvisoryOrDeanSection />
       {/* <AdvisoryDean /> */}
       <section className="py-16 bg-[url(/kree-bg.webp)] bg-cover">
         <div className="max-w-[1440px] mx-auto w-full text-center">
