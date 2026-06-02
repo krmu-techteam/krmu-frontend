@@ -7,11 +7,15 @@ import { STRAPI_URL } from "@/app/constant";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import PioneerExcellence from "@/app/(main-website)/Home/PioneerExcellence";
-import AccrediationLogo from "../about-krmu/AccrediationLogo";
-import KRMUGroupCard from "../about-krmu/KRMUGroupCard";
 import AdvisoryOrDean from "../about-krmu/AdvisoryOrDean";
 import HallofFame from "../about-krmu/HallofFame";
 import IndustryCollabLogos from "../about-krmu/IndustryCollabLogos";
+import {
+  HeroSection,
+  AccreditationSection,
+  GroupInstitutionsSection,
+  NextGenerationSection,
+} from "@/modules/about";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("the-university");
@@ -84,50 +88,21 @@ const page = async () => {
 
   return (
     <>
-      <section className="min-h-[1px] h-full pt-44 lg:h-[600px] bg-[url(/krmabout.webp)] bg-cover bg-bottom relative prog-banner-shade">
-        <div className="max-w-[1600px] mx-auto w-full text-white h-full flex flex-col justify-center px-4">
-          <div className="z-10 max-w-7xl w-full">
-            <h1 className="text-2xl md:text-6xl xl:text-8xl font-semibold mb-5">
-              {aboutData?.title}
-            </h1>
-            <p className="text-lg md:text-[22px] mb-10">
-              {aboutData?.subtitle}
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="py-[60px]">
-        <div className="max-w-[1600px] mx-auto w-full px-4">
-          <h2 className="text-4xl md:text-5xl font-semibold">
-            {aboutData?.accrediation?.title}
-          </h2>
-          <div className="w-full">
-            <AccrediationLogo logosData={accrediationLogoData} />
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="max-w-[1600px] mx-auto w-full px-4">
-          <div className="mb-5">
-            <h3 className="text-[#00A0E3] text-4xl">{KRMGRP?.title}</h3>
-            <h4 className="text-4xl font-semibold leading-[1.3] mt-2.5 mb-3.5">
-              {KRMGRP?.subtitle}
-            </h4>
-            <p className="mb-5">{KRMGRP?.description}</p>
-          </div>
-          <div className="mb-10">
-            <KRMUGroupCard krmBranchImages={krmBranchData} />
-          </div>
-        </div>
-      </section>
-      <section className="mt-5 bg-[#051630] py-[60px] px-4 xl:px-14">
-        <div className="max-w-[1600px] mx-auto w-full text-white">
-          <h4 className="md:leading-[2] text-2xl font-semibold mb-5">
-            {aboutData?.thenexgentitle}
-          </h4>
-          <p>{aboutData?.thenexgendescription}</p>
-        </div>
-      </section>
+      <HeroSection title={aboutData.title} subtitle={aboutData.subtitle} />
+      <AccreditationSection
+        title={aboutData?.accrediation?.title}
+        logosData={accrediationLogoData}
+      />
+      <GroupInstitutionsSection
+        title={KRMGRP?.title}
+        subtitle={KRMGRP?.subtitle}
+        description={KRMGRP?.description}
+        krmBranchData={krmBranchData}
+      />
+      <NextGenerationSection
+        thenexgentitle={aboutData?.thenexgentitle}
+        thenexgendescription={aboutData?.thenexgendescription}
+      />
       <section className="py-[50px] px-4 xl:px-[30px] bg-[#000E8B1A]">
         <div className="flex flex-col md:flex-row max-w-[1600px] mx-auto w-full gap-2.5">
           <div className="w-full md:w-2/5 p-5 xl:mr-2.5 xl:ml-8 bg-[url(/aboutvision.webp)] text-white bg-cover">
