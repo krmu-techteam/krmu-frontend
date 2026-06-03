@@ -19,6 +19,7 @@ import {
   AdvisoryOrDeanSection,
   HallOfFameSection,
   GlobalPartnershipsSection,
+  KrmuCommitteeSection,
 } from "@/modules/about";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("the-university");
@@ -116,25 +117,7 @@ const page = async () => {
 
       <GlobalPartnershipsSection aboutData={aboutData} />
 
-      <section className="py-16 md:py-32 px-4 bg-[url(/krmu-committee.webp)] bg-cover bg-center relative after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[#00000080]">
-        <div className="max-w-[1600px] mx-auto w-full text-white">
-          <div className="w-full xl:w-1/2 relative z-10">
-            <h4 className="text-5xl lg:text-[80px] mb-5 leading-[1.13]">
-              {aboutData?.krmucommittee?.title}
-            </h4>
-            <BlocksRenderer content={aboutData?.krmucommittee?.description} />
-            {(aboutData?.krmucommittee?.committeebtn?.buttonlink ||
-              aboutData?.krmucommittee?.committeebtn?.buttonclass) && (
-              <Link
-                href={aboutData?.krmucommittee?.committeebtn?.buttonlink}
-                className={`mt-5 p-2.5 px-[18px] bg-[#cb000d] text-base inline-block rounded-sm leading-4 text-white ${aboutData?.krmucommittee?.committeebtn?.buttonclass}`}
-              >
-                {aboutData?.krmucommittee?.committeebtn?.buttontext}
-              </Link>
-            )}
-          </div>
-        </div>
-      </section>
+      <KrmuCommitteeSection aboutData={aboutData} />
       <PioneerExcellence />
     </>
   );

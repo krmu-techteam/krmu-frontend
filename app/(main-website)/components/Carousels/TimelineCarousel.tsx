@@ -13,112 +13,151 @@ const TimelineCarousel = () => {
   const [nav2, setNav2] = useState<Slider | null>(null);
   const sliderRef1 = useRef<Slider | null>(null);
   const sliderRef2 = useRef<Slider | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     setNav1(sliderRef1.current);
     setNav2(sliderRef2.current);
   }, []);
-  // Timeline Nav Settings
-  const navSettings: Settings = {
-    asNavFor: nav2 || undefined,
-    slidesToShow: timelineData.length >= 5 ? 5 : timelineData.length,
-    swipeToSlide: true,
-    focusOnSelect: true,
-    arrows: false,
-    infinite: false,
-    responsive: [
-      {
-        breakpoint: 1100, // Mobile
-        settings: {
-          slidesToShow: 4,
-          centerMode: true,
-        },
-      },
-      {
-        breakpoint: 768, // Mobile
-        settings: {
-          slidesToShow: 1,
-          centerMode: true,
-        },
-      },
-      {
-        breakpoint: 640, // Mobile
-        settings: {
-          slidesToShow: 1,
-          centerMode: true,
-        },
-      },
-    ],
-  };
 
-  // Timeline Slide Settings
+  useEffect(() => {
+    // Ensure the active year is scrolled into view horizontally without jumping the page vertically
+    const activeBtn = document.getElementById(`timeline-year-${currentSlide}`);
+    const container = document.getElementById("timeline-nav-container");
+    
+    if (activeBtn && container) {
+      const containerRect = container.getBoundingClientRect();
+      const btnRect = activeBtn.getBoundingClientRect();
+      
+      // Calculate the offset required to center the button in the container
+      const offsetLeft = activeBtn.offsetLeft;
+      const centerPos = offsetLeft - (containerRect.width / 2) + (btnRect.width / 2);
+      
+      container.scrollTo({
+        left: centerPos,
+        behavior: "smooth"
+      });
+    }
+  }, [currentSlide]);
+
+  // Timeline Slide Settings (Top Grid)
   const slideSettings: Settings = {
-    asNavFor: nav1 || undefined,
-    slidesToShow: 1,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: "0px",
     swipeToSlide: true,
-    focusOnSelect: true,
-    arrows: true,
-    infinite: false,
-    adaptiveHeight: true,
+    arrows: false,
+    infinite: true,
+    accessibility: false,
+    beforeChange: (current, next) => setCurrentSlide(next),
     responsive: [
       {
-        breakpoint: 768, // Mobile
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 3,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          centerMode: true,
         },
       },
     ],
   };
 
   return (
-    <div className=" pb-32 -mt-10 overflow-x-auto overflow-y-hidden no-scrollbar relative">
-      {/* Timeline Nav */}
-      <div className="timeline  xl:pb-[50px] xl:pl-[180px]">
-        <Slider {...navSettings} ref={sliderRef1}>
-          {timelineData.map((item, index) => (
-            <div
-              key={index}
-              className={`timeline-nav__item ln${
-                index + 1
-              } timelinenav_slide relative text-white text-center cursor-pointer ${
-                index === 0 ? "current-item" : ""
-              }`}
-            >
-              {item.year}
-            </div>
-          ))}
+    <div className="pb-16 relative">
+      <style>{`
+        /* Hide border for all slides by default */
+        .timeline-slider .slick-slide .my-slide-inner {
+          border-left-color: transparent !important;
+        }
+        /* Show border ONLY for the 2nd and 3rd visible (active) slides */
+        .timeline-slider .slick-active ~ .slick-active .my-slide-inner {
+          border-left-color: rgba(255, 255, 255, 0.2) !important;
+        }
+      `}</style>
+      {/* Timeline Slides */}
+      <div className="mb-16">
+        <Slider
+          {...slideSettings}
+          ref={sliderRef2}
+          className="timeline-slider -mx-4"
+        >
+          {timelineData.map((item, index) => {
+            const isActive = index === currentSlide;
+            return (
+              <div key={index} className="px-4 outline-none">
+                <div
+                  className={`my-slide-inner flex flex-col pl-6 border-l h-full min-h-[350px] transition-all duration-500 ${
+                    isActive ? "opacity-100" : "opacity-40"
+                  }`}
+                >
+                  <h4
+                    className={`text-3xl md:text-[40px] font-bold mb-2 font-poppins transition-colors duration-500 ${
+                      isActive ? "text-white" : "text-white/60"
+                    }`}
+                  >
+                    {item.year}
+                  </h4>
+                  <p
+                    className={`text-xl md:text-[22px] mb-1 font-poppins transition-colors duration-500 ${
+                      isActive ? "text-white" : "text-white/50"
+                    }`}
+                  >
+                    {item.title}
+                  </p>
+                  <p
+                    className={`text-[13px] sm:text-[14px] mb-6 font-poppins transition-colors duration-500 ${
+                      isActive ? "text-white/60" : "text-white/30"
+                    }`}
+                  >
+                    {item.subtitle}
+                  </p>
+                  <div className="relative h-[220px] md:h-[250px] w-full rounded-[4px] overflow-hidden mt-auto">
+                    <Image
+                      src={item.image}
+                      alt={`timeline image ${item.year}`}
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                    {!isActive && (
+                      <div className="absolute inset-0 bg-[#061623]/40 transition-opacity duration-500"></div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </Slider>
       </div>
 
-      {/* Timeline Slides */}
-      <Slider
-        {...slideSettings}
-        ref={sliderRef2}
-        className="timeline-slider flex"
-      >
-        {timelineData.map((item, index) => (
-          <div key={index} className="timeline-slide">
-            <div className="flex justify-center items-center relative p-5 timeline-content-container">
-              <div className="rounded-t-xl sm:rounded-xl w-full sm:w-3/5 timeline-image">
-                <Image
-                  src={item.image}
-                  alt={`timeline image ${item.year}`}
-                  width={551}
-                  height={355}
-                  className="sm:rounded-t-xl sm:rounded-xl"
-                />
-              </div>
-              <div className="sm:-ml-10 -z-10 py-5 lg:ml-0 pl-5 sm:pl-10 lg:pr-20 text-white timelinetext-bg timeline-content w-full w- sm:w-2/5">
-                <h4 className="md:text-8xl text-xs font-normal mb-2.5 sm:mb-5">
-                  {item.year}
-                </h4>
-                <p className="text-xs md:text-[26px] mb-2.5 sm:mb-5">{item.title}</p>
-                <p className="mb-2.5 text-xs sm:mb-2.5 md:text-lg">{item.subtitle}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </Slider>
+      {/* Timeline Nav (Bottom) */}
+      <div className="timeline-nav-bottom px-4 max-w-[1200px] mx-auto mt-8">
+        <div id="timeline-nav-container" className="flex overflow-x-auto no-scrollbar justify-start lg:justify-center items-center space-x-6 md:space-x-8 pb-4 min-h-[80px]">
+          {timelineData.map((item, index) => {
+            const isActive = index === currentSlide;
+            return (
+              <button
+                key={index}
+                id={`timeline-year-${index}`}
+                onClick={() => sliderRef2.current?.slickGoTo(index)}
+                className={`outline-none flex-shrink-0 transition-all duration-300 font-poppins ${
+                  isActive
+                    ? "text-3xl md:text-[38px] font-bold text-white"
+                    : "text-lg md:text-[20px] text-white/60 hover:text-white/80"
+                }`}
+              >
+                {item.year}
+              </button>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

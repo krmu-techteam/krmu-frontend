@@ -3,12 +3,12 @@ import TimelineCarousel from "../components/Carousels/TimelineCarousel";
 const PioneerExcellence = () => {
   return (
     <>
-      <section className="pt-12 bg-[url(/clouduniversitybg.webp)] bg-cover bg-bottom bg-no-repeat">
-        <div className="max-w-[1600px] mx-auto w-full pb-14 2xl:pb-0 px-4 2xl:px-[200px]">
-          <h3 className="text-4xl lg:text-5xl font-semibold mb-5 grad-text-color-2">
+      <section className="py-16 md:pt-20 pb-0">
+        <div className="max-w-[1530px] mx-auto w-full mb-16">
+          <h3 className="text-3xl md:text-[42px] font-serif font-semibold mb-6 text-white leading-[1.2]">
             K.R. Mangalam Group: Pioneering Excellence in Education
           </h3>
-          <p className="mb-5">
+          <p className="text-[14px] sm:text-[16px] leading-relaxed text-white/80 mb-6 font-poppins">
             The K.R. Mangalam legacy, encompassing a distinguished group of
             educational institutions including schools and the university is a
             testament to our enduring commitment to academic excellence and
@@ -18,7 +18,7 @@ const PioneerExcellence = () => {
             umbrella has been a milestone in our quest for educational
             excellence.
           </p>
-          <p className="p-5 md:p-0 bg-[#051630] md:bg-transparent text-white md:text-black">
+          <p className="text-[14px] sm:text-[16px] leading-relaxed text-white/80 font-poppins">
             Throughout our history, the K.R. Mangalam Group has been at the
             forefront of educational innovation, constantly evolving to meet the
             needs of a changing world. Our institutions are more than just
@@ -27,7 +27,9 @@ const PioneerExcellence = () => {
             excel.
           </p>
         </div>
-        <TimelineCarousel />
+        <div className="max-w-[1600px] mx-auto w-full px-4">
+          <TimelineCarousel />
+        </div>
       </section>
     </>
   );
