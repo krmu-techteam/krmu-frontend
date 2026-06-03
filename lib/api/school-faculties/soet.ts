@@ -41,7 +41,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 6624,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant Professor",
       schools: [1266],
     },
@@ -852,7 +852,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 9132,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant  Professor",
       schools: [1266],
     },
@@ -882,7 +882,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 9132,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant  Professor",
       schools: [1266],
     },
@@ -913,7 +913,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 9132,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "Ph.D. (Submitted – 2026)",
       staff_designation: "Assistant  Professor",
       schools: [1266],
     },
@@ -929,7 +929,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 9132,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant  Professor",
       schools: [1266],
     },
