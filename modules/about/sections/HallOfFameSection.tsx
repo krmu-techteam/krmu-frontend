@@ -1,11 +1,12 @@
 import Link from "next/link"
 import { HallofFame } from "../components"
 import { HALLFAME } from "../types"
+import SectionDivider from "@/components/common/SectionDivider"
 
 
 const HallOfFameSection = ({title, hallfame}: {title: string, hallfame: HALLFAME[]}) => {
     return(
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 relative">
         <div className="max-w-[1530px] mx-auto w-full text-center px-4 md:px-12">
           <h3 className="text-white text-3xl md:text-[42px] font-serif font-semibold mb-12">
             {title || "Our Hall of Fame"}
@@ -21,6 +22,7 @@ const HallOfFameSection = ({title, hallfame}: {title: string, hallfame: HALLFAME
             </Link>
           </div>
         </div>
+        <SectionDivider />
       </section>
     )
 }

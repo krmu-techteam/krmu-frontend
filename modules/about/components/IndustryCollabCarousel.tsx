@@ -5,11 +5,11 @@ import { Carousel } from "@/components/common/Carousel";
 import { StrapiMedia } from "@/lib/types/common";
 import { STRAPI_URL } from "@/app/constant";
 
-interface IndustryCollabLogosProps {
+interface IndustryCollabCarouselProps {
   indusLogos: StrapiMedia[];
 }
 
-const IndustryCollabLogos = ({ indusLogos }: IndustryCollabLogosProps) => {
+const IndustryCollabCarousel = ({ indusLogos }: IndustryCollabCarouselProps) => {
   return (
     <div>
       <Carousel
@@ -43,4 +43,4 @@ const IndustryCollabLogos = ({ indusLogos }: IndustryCollabLogosProps) => {
   );
 };
 
-export default IndustryCollabLogos;
+export default IndustryCollabCarousel;

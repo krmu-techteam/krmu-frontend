@@ -18,6 +18,7 @@ import {
   WhyKRMUSection,
   AdvisoryOrDeanSection,
   HallOfFameSection,
+  GlobalPartnershipsSection,
 } from "@/modules/about";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("the-university");
@@ -106,55 +107,14 @@ const page = async () => {
         thenexgendescription={aboutData?.thenexgendescription}
       />
       <VisionMissionSection />
-       <WhyKRMUSection />
+      <WhyKRMUSection />
       <AdvisoryOrDeanSection />
-      <HallOfFameSection title={hallOfFameData?.title} hallfame={hallOfFameData?.hallfame} />
+      <HallOfFameSection
+        title={hallOfFameData?.title}
+        hallfame={hallOfFameData?.hallfame}
+      />
 
-      <section className="py-16 px-4">
-        <div className="max-w-[1600px] mx-auto w-full">
-          <div className="flex flex-wrap md:flex-nowrap">
-            <div className="w-full md:w-3/5">
-              <h3 className="text-4xl md:text-5xl font-semibold max-w-lg w-full leading-[1.14] mb-2.5">
-                {aboutData?.internationcollaboration?.title}
-              </h3>
-              <BlocksRenderer
-                content={aboutData?.internationcollaboration?.description}
-              />
-              {(aboutData?.internationcollaboration?.intcollabbtn?.buttonlink ||
-                aboutData?.internationcollaboration?.intcollabbtn
-                  ?.buttonclass) && (
-                <Link
-                  href={
-                    aboutData?.internationcollaboration?.intcollabbtn
-                      ?.buttonlink
-                  }
-                  className={`p-2.5 px-[18px] bg-[#cb000d] text-base inline-block rounded-sm leading-4 text-white ${aboutData?.internationcollaboration?.intcollabbtn?.buttonclass}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {
-                    aboutData?.internationcollaboration?.intcollabbtn
-                      ?.buttontext
-                  }
-                </Link>
-              )}
-              <IndustryCollabLogos
-                indusLogos={
-                  aboutData?.internationcollaboration?.internationcollablogos
-                }
-              />
-            </div>
-            <div className="w-full md:w-2/5">
-              <Image
-                src={`${STRAPI_URL}${aboutData?.internationcollaboration?.image.url}`}
-                width={600}
-                height={600}
-                alt="about collab"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <GlobalPartnershipsSection aboutData={aboutData} />
 
       <section className="py-16 md:py-32 px-4 bg-[url(/krmu-committee.webp)] bg-cover bg-center relative after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[#00000080]">
         <div className="max-w-[1600px] mx-auto w-full text-white">
