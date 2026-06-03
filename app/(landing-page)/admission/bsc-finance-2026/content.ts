@@ -31,8 +31,8 @@ export const Hero: BscFinanceHeroContent = {
   subheading: "Four Years. Three Tracks. One Defining Career.",
   description:
     "Graduate with a degree, 12 months of paid industry experience, and a curriculum aligned to CFA, FRM & actuarial examinations",
-  countdownTargetDate: "2026-05-31T23:59:59",
-  lastDateLabel: "Last Date to apply - 31st May 2026",
+  countdownTargetDate: "2026-06-30T23:59:59",
+  lastDateLabel: "Last Date to apply - 30th June 2026",
   applyBtnLabel: "Apply for 2026-27 Batch",
   applyBtnHref: bscFinanceApplyHref,
   brochureBtnLabel: "Download Brochure",
@@ -196,9 +196,18 @@ export const alignedWithSection: AlignedWithSectionData = {
   logos: [
     { src: "/landingpage/bsc-finance-2026/logo-cfa.png", alt: "CFA Institute" },
     { src: "/landingpage/bsc-finance-2026/logo-frm.png", alt: "FRM (GARP)" },
-    { src: "/landingpage/bsc-finance-2026/logo-ifoa.png", alt: "Institute and Faculty of Actuaries" },
-    { src: "/landingpage/bsc-finance-2026/logo-iai.png", alt: "Institute of Actuaries of India" },
-    { src: "/landingpage/bsc-finance-2026/logo-soa.png", alt: "Society of Actuaries" },
+    {
+      src: "/landingpage/bsc-finance-2026/logo-ifoa.png",
+      alt: "Institute and Faculty of Actuaries",
+    },
+    {
+      src: "/landingpage/bsc-finance-2026/logo-iai.png",
+      alt: "Institute of Actuaries of India",
+    },
+    {
+      src: "/landingpage/bsc-finance-2026/logo-soa.png",
+      alt: "Society of Actuaries",
+    },
   ],
   alignmentLines: [
     "CFA Institute · Aligned to all 3 Levels",
@@ -276,7 +285,8 @@ export const curriculumSection: CurriculumSectionData = {
       description: "Global accounting standards & compliance",
     },
   ],
-  footerText: "+ 12 Months of Real Industry Experience Across Two Organisations",
+  footerText:
+    "+ 12 Months of Real Industry Experience Across Two Organisations",
 };
 
 export const pathwaySection: PathwaySectionData = {
@@ -501,32 +511,51 @@ export const heroMarqueeData: HeroMarqueeSection = {
 };
 
 export const prominentRecruiters: ProminentRecruit[] = [
-  { imgUrl: "/landingpage/bsc-finance-2026/core-finance/01-avendus.png", alt: "Avendus" },
-  { imgUrl: "/landingpage/bsc-finance-2026/core-finance/02-deloitte.png", alt: "Deloitte" },
+  {
+    imgUrl: "/landingpage/bsc-finance-2026/core-finance/01-avendus.png",
+    alt: "Avendus",
+  },
+  {
+    imgUrl: "/landingpage/bsc-finance-2026/core-finance/02-deloitte.png",
+    alt: "Deloitte",
+  },
   { imgUrl: "/landingpage/bsc-finance-2026/core-finance/03-ey.png", alt: "EY" },
-  { imgUrl: "/landingpage/bsc-finance-2026/core-finance/04-hdfc.png", alt: "HDFC" },
-  { imgUrl: "/landingpage/bsc-finance-2026/core-finance/06-kpmg.png", alt: "KPMG" },
-  { imgUrl: "/landingpage/bsc-finance-2026/core-finance/08-icici.png", alt: "ICICI" },
-  { imgUrl: "/landingpage/bsc-finance-2026/core-finance/10-jp-morgan.png", alt: "JP Morgan" },
+  {
+    imgUrl: "/landingpage/bsc-finance-2026/core-finance/04-hdfc.png",
+    alt: "HDFC",
+  },
+  {
+    imgUrl: "/landingpage/bsc-finance-2026/core-finance/06-kpmg.png",
+    alt: "KPMG",
+  },
+  {
+    imgUrl: "/landingpage/bsc-finance-2026/core-finance/08-icici.png",
+    alt: "ICICI",
+  },
+  {
+    imgUrl: "/landingpage/bsc-finance-2026/core-finance/10-jp-morgan.png",
+    alt: "JP Morgan",
+  },
 ];
 
 export const placementData: PlacementSectionData = {
   eyebrow: "Our Stars",
   heading: "The World's Leading Companies <br/> <span>Hire Our Talent</span>",
-  description: "BSc (Hons) Finance students secure opportunities with top global firms through track-matched apprenticeships and placement-driven learning designed for real hiring success.",
+  description:
+    "BSc (Hons) Finance students secure opportunities with top global firms through track-matched apprenticeships and placement-driven learning designed for real hiring success.",
   featuredStory: {
     id: 1,
     name: "Rishav Bakshi",
     company: "Placed at Ferrari Quebec",
     package: "₹56.6 LPA",
     image: "/landingpage/bsc-finance-2026/placements/p1.png",
-    note: "A standout placement story that reflects global exposure, practical learning, and strong career outcomes."
+    note: "A standout placement story that reflects global exposure, practical learning, and strong career outcomes.",
   },
   stats: [
     { value: "100%", label: "Placement Assistance" },
     { value: "800+", label: "Companies Visited" },
     { value: "₹56.6L", label: "Highest Package" },
-    { value: "18K+", label: "Alumni Base" }
+    { value: "18K+", label: "Alumni Base" },
   ],
   moreStories: [
     {
@@ -535,7 +564,7 @@ export const placementData: PlacementSectionData = {
       company: "Ferrari Quebec",
       package: "₹56.6 LPA",
       packageLabel: "Highest Package",
-      image: "/landingpage/bsc-finance-2026/placements/p1.png"
+      image: "/landingpage/bsc-finance-2026/placements/p1.png",
     },
     {
       id: 3,
@@ -543,7 +572,7 @@ export const placementData: PlacementSectionData = {
       company: "UNIAS",
       package: "₹36 LPA",
       packageLabel: "Package",
-      image: "/landingpage/bsc-finance-2026/placements/p2.png"
+      image: "/landingpage/bsc-finance-2026/placements/p2.png",
     },
     {
       id: 4,
@@ -551,7 +580,7 @@ export const placementData: PlacementSectionData = {
       company: "Autodesk",
       package: "₹34 LPA",
       packageLabel: "Package",
-      image: "/landingpage/bsc-finance-2026/placements/p3.png"
+      image: "/landingpage/bsc-finance-2026/placements/p3.png",
     },
     {
       id: 5,
@@ -559,7 +588,7 @@ export const placementData: PlacementSectionData = {
       company: "Autodesk",
       package: "₹34 LPA",
       packageLabel: "Package",
-      image: "/landingpage/bsc-finance-2026/placements/p4.png"
+      image: "/landingpage/bsc-finance-2026/placements/p4.png",
     },
     {
       id: 6,
@@ -567,7 +596,7 @@ export const placementData: PlacementSectionData = {
       company: "Cargoflash",
       package: "₹24 LPA",
       packageLabel: "Package",
-      image: "/landingpage/bsc-finance-2026/placements/p5.png"
-    }
-  ]
+      image: "/landingpage/bsc-finance-2026/placements/p5.png",
+    },
+  ],
 };
