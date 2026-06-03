@@ -4955,3 +4955,4 @@ body:before {
 
 
 }
+@keyframes shimmer { 100% { transform: translateX(100%); } }

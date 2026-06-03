@@ -4,6 +4,7 @@ import Link from 'next/link';
 import SectionDivider from '@/components/common/SectionDivider';
 import { ABOUT_STAT, ABOUT_STAT_BG_COLORS } from '../constants';
 
+
 export default function AboutSection() {
   return (
     <section className="relative w-full overflow-hidden px-6 md:px-11 xl:px-0 py-6 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
@@ -13,7 +14,7 @@ export default function AboutSection() {
           <span className="inline-block bg-brand-navy-deep text-brand-gold px-3 py-1 text-md xl:text-[20px] font-medium capitalize tracking-normal mb-6 rounded-md border border-white/5 font-poppins">
             Best University in Gurugram
           </span>
-
+ 
           <h2 className="text-3xl md:text-4xl xl:text-[42px] font-serif font-bold text-white mb-6 leading-[1.2] tracking-tight">
             A Decade of Educational Excellence
           </h2>
