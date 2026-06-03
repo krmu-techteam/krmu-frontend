@@ -38,6 +38,9 @@ const SchoolProgrammeOffered = ({
             slug={slug}
           />
           {/* <ProgrammeInfoCards /> */}
+          <p className="text-right text-sm  mt-2 mr-8 text-muted-foreground">
+            ** Subject to Approval
+          </p>
         </div>
       </section>
     </>
