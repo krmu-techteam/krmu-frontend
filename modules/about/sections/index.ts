@@ -5,5 +5,7 @@ export { default as NextGenerationSection } from "./NextGenerationSection";
 export { default as VisionMissionSection } from "./VisionMissionSection";
 export { default as WhyKRMUSection } from "./WhyKRMUSection";
 export { default as AdvisoryOrDeanSection } from "./AdvisoryOrDeanSection";
+export { default as HallOfFameSection } from "./HallOfFameSection";
+
 
 

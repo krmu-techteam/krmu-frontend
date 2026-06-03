@@ -531,14 +531,14 @@ const Footer = async () => {
               )}
               
               {/* Social Icons */}
-              <div className="flex justify-center md:justify-start gap-6 mt-4">
+              <div className="flex justify-center md:justify-start gap-4 mt-4">
                 {footerComp4?.footer_social_icons?.map((comp4) => (
                   <Link
                     key={comp4?.id}
                     href={comp4?.footer_url || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white/30 hover:text-white transition-all duration-300 transform hover:-translate-y-1 block relative w-4 h-4"
+                    className="text-white/30 hover:text-white transition-all duration-300 transform hover:-translate-y-1 block relative w-5 h-5"
                   >
                     <Image
                       src={`${STRAPI_URL}${comp4?.footer_icon?.url}`}

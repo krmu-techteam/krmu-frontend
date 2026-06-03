@@ -6,8 +6,6 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 const deans = [
@@ -127,15 +125,12 @@ const deans = [
   },
 ];
 
-const ITEMS_PER_LOAD = 5;
-
 import React from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { type CarouselApi } from "@/components/ui/carousel";
 
-// ... existing code down to the component definition ...
 
-const AdvisorySlide = () => {
+const AdvisoryCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
@@ -222,7 +217,7 @@ const AdvisorySlide = () => {
   );
 };
 
-export default AdvisorySlide;
+export default AdvisoryCarousel;
 
 // "use client";
 

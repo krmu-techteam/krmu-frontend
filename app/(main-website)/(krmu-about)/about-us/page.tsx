@@ -17,6 +17,7 @@ import {
   VisionMissionSection,
   WhyKRMUSection,
   AdvisoryOrDeanSection,
+  HallOfFameSection,
 } from "@/modules/about";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("the-university");
@@ -107,21 +108,7 @@ const page = async () => {
       <VisionMissionSection />
        <WhyKRMUSection />
       <AdvisoryOrDeanSection />
-      {/* <AdvisoryDean /> */}
-      <section className="py-16 bg-[url(/kree-bg.webp)] bg-cover">
-        <div className="max-w-[1600px] mx-auto w-full text-center">
-          <h3 className="text-white text-5xl font-semibold mb-5">
-            {hallOfFameData?.title}
-          </h3>
-          <HallofFame fameData={hallOfFameData?.hallfame} />
-          <Link
-            href="/awards-and-achievements"
-            className="p-2.5 px-[18px] bg-white text-base inline-block rounded-sm leading-4 text-[#cb000d]"
-          >
-            Know More
-          </Link>
-        </div>
-      </section>
+      <HallOfFameSection title={hallOfFameData?.title} hallfame={hallOfFameData?.hallfame} />
 
       <section className="py-16 px-4">
         <div className="max-w-[1600px] mx-auto w-full">
