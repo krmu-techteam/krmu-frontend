@@ -68,28 +68,36 @@ const SchoolHero = ({
     "school-of-basic-and-applied-sciences": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/sbas-banner-3.webp",
-      middleImg: "/schools/middleImg/sbas-middleimg-3.png",
-      mobileBgImg: "/schools/banners/mob-sbas-banner.webp",
+      bgURl:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Basic_and_Applied_Sciences_0edbe69d5b.jpg",
+      middleImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Basic_and_Applied_Sciences_28ac4558ce.png",
+      mobileBgImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Basic_and_Applied_Sciences_2b105e2474.png",
       notCutoutBg: false,
     },
 
     "school-of-management-and-commerce": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/somc-banner.png",
-      middleImg: "/schools/middleImg/somc-middleimg.png",
-      mobileBgImg: "/schools/banners/mob-somc-banner.png",
+      bgURl:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Management_and_Commerce_bc9bdfd468.jpg",
+      middleImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Management_and_Commerce_f18ea32ac1.png",
+      mobileBgImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Management_and_Commerce_06115115bc.jpg",
       notCutoutBg: false,
     },
 
     "school-of-agriculutural-sciences": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/soas-banner.png",
-      middleImg: "/schools/middleImg/soas-middleimg.png",
-      mobileBgImg: "/schools/banners/mob-soas-banner.webp",
-      notCutoutBg: false,
+      bgURl:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Agricultural_Sciences_c8932590b0.jpg",
+      middleImg: "",
+      mobileBgImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Agricultural_Sciences_233167137a.png",
+      notCutoutBg: true,
     },
 
     "school-of-emerging-media-and-creator-economy": {
@@ -141,18 +149,24 @@ const SchoolHero = ({
     "school-of-medical-and-allied-sciences": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/smas-banner.png",
-      middleImg: "",
-      mobileBgImg: "/schools/banners/mob-smas-banner.png",
-      notCutoutBg: true,
+      bgURl:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_d96ca6b437.jpg",
+      middleImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_136315b85b.png",
+      mobileBgImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_d6510ddac9.jpg",
+      notCutoutBg: false,
     },
     "school-of-legal-studies": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/sols-banner.png",
-      middleImg: "",
-      mobileBgImg: "/schools/banners/mob-sols-banner.png",
-      notCutoutBg: true,
+      bgURl:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Legal_Studies_8f68606605.jpg",
+      middleImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Legal_Studies_6f45e90d77.png",
+      mobileBgImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Legal_Studies_3bba92175a.jpg",
+      notCutoutBg: false,
     },
   };
 
@@ -179,10 +193,11 @@ const SchoolHero = ({
   return (
     <>
       <section
-        className={`relative overflow-hidden ${fullWidth
+        className={`relative overflow-hidden ${
+          fullWidth
             ? "lg:py-[20%] lg:pb-0 pt-[300px] pb-5"
             : `${notCutoutBg ? "pt-[45px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : "pt-[100px] sm:pt-[140px] lg:pt-[280px] xl:pt-[180px] 2xl:pt-[280px]"} schoolBanner`
-          } bg-cover bg-no-repeat bg-center`}
+        } bg-cover bg-no-repeat bg-center`}
         style={
           {
             "--mobile-bg": `url(${mobileBg})`,
@@ -256,8 +271,9 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#001732] ${btn.buttonclass || ""
-                          }`}
+                        className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#001732] ${
+                          btn.buttonclass || ""
+                        }`}
                       >
                         {btn.buttontext}
                       </Link>
@@ -265,8 +281,9 @@ const SchoolHero = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className={`text-black w-full sm:w-fit flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white ${btn.buttonclass || ""
-                          }`}
+                        className={`text-black w-full sm:w-fit flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white ${
+                          btn.buttonclass || ""
+                        }`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
