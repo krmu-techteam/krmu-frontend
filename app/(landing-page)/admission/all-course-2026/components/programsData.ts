@@ -1,0 +1,1632 @@
+// data/programsData.ts
+
+export type Program = {
+  id: number;
+  title: string;
+  duration: string;
+  fees: string;
+  category: string;
+  level: string;
+  semester1?: string;
+  semester2?: string;
+  Eligibility?: string;
+};
+
+export const schools = [
+  { label: "School of Engineering and Technology", value: "engineering-tech" },
+  { label: "School of Management and Commerce", value: "management-commerce" },
+  { label: "School of Legal Studies", value: "legal-studies" },
+  { label: "School of Medical and Allied Sciences", value: "medical-allied" },
+  { label: "School of Physiotherapy and Rehabilitation Sciences", value: "physiotherapy-rehabilitation" },
+  { label: "School of Liberal Arts", value: "liberal-arts" },
+  { label: "School of Basic and Applied Sciences", value: "basic-applied-sciences" },
+  { label: "School of Architecture and Design", value: "architecture-design" },
+  { label: "School of Emerging Media and Creator Economy", value: "journalism-masscomm" },
+  { label: "School of Education", value: "education" },
+  { label: "School of Agricultural Sciences", value: "agricultural-sciences" },
+  { label: "Zenith School of AI", value: "zenith-ai" },
+];
+
+export const levels = [
+  { label: "Undergraduate", value: "undergraduate" },
+  { label: "Postgraduate", value: "postgraduate" },
+  { label: "Diploma", value: "diploma" },
+  { label: "Doctorate", value: "doctorate" },
+];
+
+export const programs: Program[] = [
+  {
+    id: 1,
+    title: "B.Tech. Computer Science and Engineering (CSE)",
+    duration: "4 Years",
+    semester1: "₹ 1,25,000 /-",
+    semester2: "₹ 1,25,000 /-",
+    Eligibility:
+      "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
+    fees: "₹ 2,50,000 /-",
+    category: "engineering-tech",
+    level: "undergraduate",
+
+  },
+  {
+    id: 2,
+    title:
+      "B.Tech. Computer Science and Engineering (AI & ML) with Academic Support of IBM & powered by Microsoft Certifications",
+    duration: "4 Years",
+    semester1: "₹ 1,45,000 /-",
+    semester2: "₹ 1,45,000 /-",
+    Eligibility:
+      "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
+    fees: "₹ 2,90,000 /-",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 3,
+    title:
+      "B.Tech. Computer Science and Engineering (Full Stack Development) with Academic Support of ImaginXP",
+    duration: "4 Years",
+    fees: "₹ 2,70,000 /-",
+    semester1: "₹ 1,35,000 /-",
+    semester2: "₹ 1,35,000 /-",
+    Eligibility:
+      "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 4,
+    title:
+      "B.Tech. Computer Science & Engineering (UX/UI) with academic support of ImaginXP",
+    duration: "4 Years",
+    fees: "₹ 2,70,000 /-",
+    category: "engineering-tech",
+    semester1: "₹ 1,35,000 /-",
+    semester2: "₹ 1,35,000 /-",
+    Eligibility:
+      "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 5,
+    title:
+      "B.Tech. Computer Science and Engineering (Cyber Security) with academic support of EC-Council and IBM",
+    duration: "4 Years",
+    fees: "₹ 2,70,000 /-",
+    semester1: "₹ 1,35,000 /-",
+    semester2: "₹ 1,35,000 /-",
+    Eligibility:
+      "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 6,
+    title:
+      "B.Tech. Computer Science and Engineering (Data Science) with academic support of IBM",
+    duration: "4 Years",
+    fees: "₹ 2,70,000 /-",
+    semester1: "₹ 1,35,000 /-",
+    semester2: "₹ 1,35,000 /-",
+    Eligibility:
+      "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 7,
+    title:
+      "B.Tech. Computer Science and Engineering (Robotics & AI) with academic support of IBM & powered by Microsoft Certifications",
+    duration: "4 Years",
+    fees: "₹ 2,70,000 /-",
+    category: "engineering-tech",
+    semester1: "₹ 1,35,000 /-",
+    semester2: "₹ 1,35,000 /-",
+    Eligibility:
+      "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 120,
+    title:
+      "B.Tech. Computer Science and Engineering (Robotics & AI) with academic support of IBM & powered by Microsoft Certifications (Lateral)",
+    duration: "3 Years",
+    semester1: "₹ 1,35,000 /-",
+    semester2: "₹ 1,35,000 /-",
+    Eligibility:
+      "50% marks in 10+2 examination with Physics & Maths as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University",
+    fees: "₹ 2,70,000 /-",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 121,
+    title:
+      "B.Tech. Computer Science and Engineering (Cloud Computing) powered by Microsoft Certifications**",
+    duration: "4 Years",
+    semester1: "₹ 1,35,000 /-",
+    semester2: "₹ 1,35,000 /-",
+    Eligibility:
+      "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
+    fees: "₹ 2,70,000 /-",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 122,
+    title: "B.Tech. Computer Science and Engineering (Semiconductor Design)**",
+    duration: "4 Years",
+    semester1: "₹ 1,35,000 /-",
+    semester2: "₹ 1,35,000 /-",
+    Eligibility:
+      "Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks.",
+    fees: "₹ 2,70,000 /-",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 113,
+    title:
+      "B.Tech. Computer Science and Engineering (AI & ML) with Academic Support of IBM & powered by Microsoft Certifications (Lateral)",
+    duration: "3 Years",
+    fees: "₹ 2,90,000 /-",
+    semester1: "₹ 1,45,000 /-",
+    semester2: "₹ 1,45,000 /-",
+    Eligibility:
+      "50% marks in 10+2 examination with Physics & Maths as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 114,
+    title:
+      "B.Tech. Computer Science and Engineering (Full Stack Development) with Academic Support of ImaginXP (Lateral)",
+    duration: "3 Years",
+    semester1: "₹ 1,35,000 /-",
+    semester2: "₹ 1,35,000 /-",
+    Eligibility:
+      "50% marks in 10+2 examination with Physics & Maths as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University",
+    fees: "₹ 2,70,000 /-",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 115,
+    title:
+      "B.Tech. Computer Science & Engineering (UX/UI) with academic support of ImaginXP (Lateral)",
+    duration: "3 Years",
+    semester1: "₹ 1,35,000 /-",
+    semester2: "₹ 1,35,000 /-",
+    Eligibility:
+      "50% marks in 10+2 examination with Physics & Maths as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University",
+    fees: "₹ 2,70,000 /-",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 116,
+    title:
+      "B.Tech. Computer Science and Engineering (Cyber Security) with academic support of EC-Council and IBM (Lateral)",
+    duration: "3 Years",
+    fees: "₹ 2,70,000 /-",
+    semester1: "₹ 1,35,000 /-",
+    semester2: "₹ 1,35,000 /-",
+    Eligibility:
+      "Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks.",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 117,
+    title:
+      "B.Tech. Computer Science and Engineering (Data Science) with academic support of IBM (Lateral)",
+    duration: "3 Years",
+    fees: "₹ 2,70,000 /-",
+    semester1: "₹ 1,35,000 /-",
+    semester2: "₹ 1,35,000 /-",
+    Eligibility:
+      "Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks.",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 118,
+    title: "B.Tech. (Lateral) Computer Science & Engineering",
+    duration: "3 Years",
+    semester1: "₹ 1,25,000 /-",
+    semester2: "₹ 1,25,000 /-",
+    Eligibility:
+      "Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks.",
+    fees: "₹ 2,50,000 /-",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 127,
+    title: "BTech AI",
+    duration: "4 Years",
+    Eligibility:
+      "Class 12th with PCM Physics, Chemistry, Mathematics as core subjects. Minimum 60% in Class 12th Or equivalent CGPA from a recognized board.",
+    fees: "₹ 4.75L /-",
+    category: "zenith-ai",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 8,
+    title:
+      "BCA (AI & Data Science) with academic support of IBM & powered by Microsoft Certifications",
+    duration: "3 Years",
+    fees: "₹ 1,80,000 /-",
+    category: "engineering-tech",
+    semester1: "₹ 90,000 /-",
+    semester2: "₹ 90,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 9,
+    title:
+      "BCA (Hons./ Hons. with Research) (AI & Data Science) with academic support of IBM & powered by Microsoft Certifications",
+    duration: "4 Years",
+    fees: "₹ 1,80,000 /-",
+    category: "engineering-tech",
+    semester1: "₹ 90,000 /-",
+    semester2: "₹ 90,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks.",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 10,
+    title: "BCA (Cyber Security) with academic support of EC-Council",
+    duration: "3 Years",
+    fees: "₹ 1,80,000 /-",
+    semester1: "₹ 90,000 /-",
+    semester2: "₹ 90,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 11,
+    title:
+      "BCA (Hons./ Hons. with Research) (Cyber Security) with academic support of EC-Council",
+    duration: "4 Years",
+    fees: "₹ 1,80,000 /-",
+    semester1: "₹ 90,000 /-",
+    semester2: "₹ 90,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks.",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 12,
+    title: "B.Sc. (Hons.) Computer Science with academic support of IBM",
+    duration: "3 Years",
+    semester1: "₹ 75,000 /-",
+    semester2: "₹ 71,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent equivalent from any recognized board/university in any stream with Mathematics/ Statistics/Computer Science/Information Science as one subject with minimum 50% aggregate marks.",
+    fees: "₹ 1,46,000 /-",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 13,
+    title: "B.Sc. (Hons.) Cyber Security",
+    duration: "3 Years",
+    semester1: "₹ 75,000 /-",
+    semester2: "₹ 71,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent equivalent from any recognized board/university in any stream with Mathematics/ Statistics/Computer Science/Information Science as one subject with minimum 50% aggregate marks.",
+    fees: "₹ 1,46,000 /-",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 14,
+    title: "B.Sc. (Hons.) Data Science",
+    duration: "3 Years",
+    semester1: "₹ 75,000 /-",
+    semester2: "₹ 71,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent equivalent from any recognized board/university in any stream with Mathematics/ Statistics/Computer Science/Information Science as one subject with minimum 50% aggregate marks.",
+    fees: "₹ 1,46,000 /-",
+    category: "engineering-tech",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 16,
+    title:
+      "MCA (AI & ML) with academic support of IBM and powered by Microsoft Certifications",
+    duration: "2 Years",
+    fees: "₹ 1,65,000 /-",
+    semester1: "₹ 85,000 /-",
+    semester2: "₹ 80,000 /-",
+    Eligibility:
+      "Passed any graduation degree (e.g.: B.E. / B.Tech./ B.Sc / B.Com. / B.A./ B. Voc./ BCA etc.,) with Mathematics at 10+2 level or at Graduation level with minimum 50% aggregate marks.",
+    category: "engineering-tech",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 17,
+    title: "MCA",
+    duration: "2 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "Passed any graduation degree (e.g.: B.E. / B.Tech./ B.Sc / B.Com. / B.A./ B. Voc./ BCA etc.,) with Mathematics at 10+2 level or at Graduation level with minimum 50% aggregate marks.",
+    category: "engineering-tech",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 18,
+    title: "MBA with academic support of IBM",
+    duration: "2 Years",
+    fees: "₹ 3,30,000 /-",
+    semester1: "₹ 1,65,000 /-",
+    semester2: "₹ 1,65,000 /-",
+    Eligibility:
+      "Candidate must have a bachelor's degree or equivalent degree from a recognized university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 19,
+    title: "MBA (Digital Marketing) with academic support of IIDE",
+    duration: "2 Years",
+    fees: "₹ 3,85,000 /-",
+    category: "management-commerce",
+    semester1: "₹ 1,95,000 /-",
+    semester2: "₹ 1,90,000 /-",
+    Eligibility:
+      "Candidate must have a bachelor's degree or equivalent degree from a recognised university with minimum 50% aggregate marks.",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 20,
+    title: "MBA (Fintech) with academic support of Ernst & Young (EY)",
+    duration: "2 Years",
+    fees: "₹ 3,85,000 /-",
+    semester1: "₹ 1,95,000 /-",
+    semester2: "₹ 1,90,000 /-",
+    Eligibility:
+      "Candidate must have a bachelor's degree or equivalent degree from a recognized university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 21,
+    title: "BBA LL.B. (Hons.)",
+    duration: "5 Years",
+    fees: "₹ 2,00,000 /-",
+    category: "legal-studies",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university with minimum 50% aggregate marks",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 22,
+    title: "B.A. LL.B. (Hons.)",
+    duration: "5 Years",
+    fees: "₹ 2,00,000 /-",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university with minimum 50% aggregate marks",
+    category: "legal-studies",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 23,
+    title: "LL.B. (Hons.)",
+    duration: "3 Years",
+    fees: "₹ 1,75,000 /-",
+    category: "legal-studies",
+    semester1: "₹ 90,000 /-",
+    semester2: "₹ 85,000 /-",
+    Eligibility:
+      "Candidate must have a bachelor's degree or equivalent degree from a recognized university with minimum 50% aggregate marks",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 24,
+    title: "LL.M.",
+    duration: "1 Year",
+    fees: "₹ 1,60,000 /-",
+    category: "legal-studies",
+    semester1: "₹ 80,000 /-",
+    semester2: "₹ 80,000 /-",
+    Eligibility:
+      "Candidate must have a LLB degree from a recognized university with minimum 50% aggregate marks",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 25,
+    title: "Bachelor of Physiotherapy (BPT)",
+    duration: "5 Years",
+    fees: "₹ 1,95,000 /-",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 95,000 /-",
+    Eligibility:
+      "• Candidate must have passed Senior Secondary (10+2) or equivalent with Physics, Chemistry and Biology (or Botany and Zoology) with 50% aggregate with English Pass. • He/she should have completed 17 years of age at the time of admission or will complete that age on or before 31 December of the year of his/her admission to the first year of the Undergraduate Allied and Healthcare Course. • Medical fitness certificate is mandatory to submit and it is to be endorsed by Government medical officer.",
+    category: "physiotherapy-rehabilitation",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 26,
+    title: "D.Pharm.",
+    duration: "2 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "Candidate must have passed in any of the following examinations with Physics, Chemistry and Biology/Mathematics. 1. Intermediate examination in Science; 2. The first year of the three year degree course in Science 3. 10+2 examination (academic stream) in Science from recognized Board, 4. Pre degree examination 5. Any other qualification approved by the Pharmacy Council of India as equivalent to any of the above examination.",
+    category: "medical-allied",
+    level: "diploma",
+    
+  },
+  {
+    id: 27,
+    title: "B.Pharm.",
+    duration: "4 Years",
+    fees: "₹ 2,14,000 /-",
+    semester1: "₹ 1,10,000 /-",
+    semester2: "₹ 1,04,000 /-",
+    Eligibility:
+      "1. Candidate must have passed 10+2 examinations from any recognized board/ university with Physics, Chemistry, Biology/ Maths as mandatory course and with minimum 50% aggregate marks, 2. Candidate must attain the age of 17 years or more on 31st December of the applying year.The age shall be determined as per entry in the Matriculation/Secondary school or its equivalent examination certificate.",
+    category: "medical-allied",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 47,
+    title: "B.Pharm. (Lateral)",
+    duration: "3 Years",
+    fees: "₹ 2,14,000 /-",
+    semester1: "₹ 1,10,000 /-",
+    semester2: "₹ 1,04,000 /-",
+    Eligibility:
+      "1.Passed 2 years D. Pharm Course from a recognized university/college approved by Pharmacy council of India(PCI) with minimum 50% aggregate marks. 2. Candidate must attain the age of 18 yearsor more on 31 Dec of applying year.The age shall be determined as per entry in the Matriculation/Secondary school or its equivalent examination certificate.",
+    category: "medical-allied",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 28,
+    title: "Bachelor of Architecture (B.Arch)",
+    duration: "5 Years",
+    fees: "₹ 2,10,000 /-",
+    semester1: "₹ 1,05,000 /-",
+    semester2: "₹ 1,05,000 /-",
+    Eligibility:
+      "Candidates must have passed the 10+2 or equivalent examination with Physics and Mathematics as compulsory subjects, along with one of the following: Chemistry, Biology, a Technical Vocational subject, Computer Science, Information Technology, Informatics Practices, Engineering Graphics, or Business Studies, with at least 45% aggregate marks. Alternatively, candidates may have passed the 10+3 Diploma Examination with Mathematics as a compulsory subject and at least 45% aggregate marks.",
+    category: "architecture-design",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 56,
+    title: "Bachelor of Fine Arts (BFA)",
+    duration: "4 Years",
+    fees: "₹ 1,32,000 /-",
+    semester1: "₹ 66,000 /-",
+    semester2: "₹ 66,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks.",
+    category: "architecture-design",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 53,
+    title:
+      "Bachelor of Design (B.Des.) (Hons. / Hons. with Research) (Fashion Design)",
+    duration: "4 Years",
+    fees: "₹ 2,30,000 /-",
+    semester1: "₹ 1,15,000 /-",
+    semester2: "₹ 1,15,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
+    category: "architecture-design",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 54,
+    title:
+      "Bachelor of Design (B.Des.) (Hons. / Hons. with Research) (Interior Design)",
+    duration: "4 Years",
+    fees: "₹ 2,30,000 /-",
+    semester1: "₹ 1,15,000 /-",
+    semester2: "₹ 1,15,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
+    category: "architecture-design",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 55,
+    title:
+      "Bachelor of Design B.Des. (Hons. / Hons. with Research) Game Design & Animation",
+    duration: "4 Years",
+    fees: "₹ 2,60,000 /-",
+    semester1: "₹ 1,30,000 /-",
+    semester2: "₹ 1,30,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
+    category: "architecture-design",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 57,
+    title:
+      "Bachelor of Design (B.Des.) (Hons./Hons. with Research) UX/UI & Interaction Design",
+    duration: "4 Years",
+    fees: "₹ 2,60,000 /-",
+    semester1: "₹ 1,30,000 /-",
+    semester2: "₹ 1,30,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
+    category: "architecture-design",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 29,
+    title: "B.A. Journalism & Mass Communication",
+    duration: "3 Years",
+    fees: "₹1,60,000 /-",
+    semester1: "₹ 80,000 /-",
+    semester2: "₹ 80,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate Marks.",
+    category: "journalism-masscomm",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 58,
+    title: "B.A. (Hons. / Hons. with Research) Journalism & Mass Communication",
+    duration: "4 Years",
+    semester1: "₹ 80,000 /-",
+    semester2: "₹ 80,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
+    fees: "₹ 1,60,000 /-",
+    category: "journalism-masscomm",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 30,
+    title: "M.A. Journalism & Mass Communication",
+    duration: "2 Years",
+    fees: "₹ 1,10,000 /-",
+    category: "journalism-masscomm",
+    semester1: "₹ 55,000 /-",
+    semester2: "₹ 55,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate Marks.",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 31,
+    title: "Bachelor of Education (B.Ed.)",
+    duration: "2 Years",
+    fees: "₹ 1,35,000 /-",
+    category: "education",
+    semester1: "₹ 70,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "UG/PG degree from a recognized university with minimum 50% aggregate marks.",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 32,
+    title: "Bachelor of Elementary Education (B.El.Ed.)",
+    duration: "4 Years",
+    fees: "₹ 1,35,000 /-",
+    semester1: "₹ 70,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks.",
+    category: "education",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 33,
+    title: "B.Sc. (Hons.) Agriculture",
+    duration: "4 Years",
+    semester1: "₹ 77,000 /-",
+    semester2: "₹ 77,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent Examination from any recognized board/university in Physics, Chemistry, Maths/ Biology / Agriculture with minimum 50% aggregate marks",
+    fees: "₹ 1,54,000 /-",
+    category: "agricultural-sciences",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 34,
+    title: "Ph.D. in Computer Science and Engineering",
+    duration: "Min. 3 Years",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    fees: "₹ 1,30,000 /-",
+    category: "engineering-tech",
+    level: "doctorate",
+    
+  },
+  {
+    id: 35,
+    title: "Ph.D. in Mechanical Engineering",
+    duration: "Min. 3 Years",
+    fees: "₹ 1,30,000 /-",
+    category: "engineering-tech",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    level: "doctorate",
+    
+  },
+  {
+    id: 36,
+    title: "Ph.D. in Management",
+    duration: "Min. 3 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    category: "management-commerce",
+    level: "doctorate",
+    
+  },
+  {
+    id: 37,
+    title: "Ph.D. in Commerce",
+    duration: "Min. 3 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    category: "management-commerce",
+    level: "doctorate",
+    
+  },
+  {
+    id: 38,
+    title: "Ph.D. in Law",
+    duration: "Min. 3 Years",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    fees: "₹ 1,30,000 /-",
+    category: "legal-studies",
+    level: "doctorate",
+    
+  },
+  {
+    id: 39,
+    title: "Ph.D. in Pharmaceutical Sciences",
+    duration: "Min. 3 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    category: "medical-allied",
+    level: "doctorate",
+    
+  },
+  {
+    id: 40,
+    title: "Ph.D. in Psychology",
+    duration: "Min. 3 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    category: "liberal-arts",
+    level: "doctorate",
+    
+  },
+  {
+    id: 41,
+    title: "Ph.D. in English",
+    duration: "Min. 3 Years",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    fees: "₹ 1,30,000 /-",
+    category: "liberal-arts",
+    level: "doctorate",
+    
+  },
+  {
+    id: 42,
+    title: "Ph.D. in Economics",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    duration: "Min. 3 Years",
+    fees: "₹ 1,30,000 /-",
+    category: "liberal-arts",
+    level: "doctorate",
+    
+  },
+  {
+    id: 88,
+    title: "BBA Human Resource",
+    duration: "3 Years",
+    fees: "₹ 2,00,000 /-",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 89,
+    title: "BBA Marketing",
+    duration: "3 Years",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,00,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 90,
+    title: "BBA Finance",
+    duration: "3 Years",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,00,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 91,
+    title: "BBA International Business",
+    duration: "3 Years",
+    fees: "₹ 2,00,000 /-",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 92,
+    title: "BBA Travel & Tourism",
+    duration: "3 Years",
+    fees: "₹ 2,00,000 /-",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 93,
+    title: "BBA (Hons. / Hons. with Research) Human Resource",
+    duration: "4 Years",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,00,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 94,
+    title: "BBA (Hons. / Hons. with Research) Marketing",
+    duration: "4 Years",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,00,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 95,
+    title: "BBA (Hons. / Hons. with Research) Finance",
+    duration: "4 Years",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,00,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 96,
+    title: "BBA (Hons. / Hons. with Research) International Business",
+    duration: "4 Years",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,00,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 97,
+    title: "BBA (Hons. / Hons. with Research) Travel & Tourism",
+    duration: "4 Years",
+    fees: "₹ 2,00,000 /-",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 98,
+    title:
+      "BBA (Business Intelligence & Analytics) with academic support of Ernst & Young (EY)",
+    duration: "3 Years",
+    semester1: "₹ 1,15,000 /-",
+    semester2: "₹ 1,15,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,30,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 99,
+    title:
+      "BBA (Hons. / Hons. with Research) (Business Intelligence & Analytics) with academic support of Ernst & Young (EY)",
+    duration: "4 Years",
+    fees: "₹ 2,30,000 /-",
+    semester1: "₹ 1,15,000 /-",
+    semester2: "₹ 1,15,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 100,
+    title:
+      "BBA (Entrepreneurship) with academic support of GCEC Global Foundation",
+    duration: "3 Years",
+    semester1: "₹ 1,15,000 /-",
+    semester2: "₹ 1,10,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,25,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 101,
+    title:
+      "BBA (Hons. / Hons. with Research) (Entrepreneurship) with academic support of GCEC Global Foundation",
+    duration: "4 Years",
+    semester1: "₹ 1,15,000 /-",
+    semester2: "₹ 1,10,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,25,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 102,
+    title:
+      "BBA (International Accounting and Finance) (ACCA – UK) with academic support of Grant Thornton",
+    duration: "3 Years",
+    fees: "₹ 2,25,000 /-",
+    semester1: "₹ 1,15,000 /-",
+    semester2: "₹ 1,10,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 103,
+    title:
+      "BBA (Hons. / Hons. with Research) (International Accounting and Finance) (ACCA – UK) with academic support of Grant Thornton",
+    duration: "4 Years",
+    fees: "₹ 2,25,000 /-",
+    semester1: "₹ 1,15,000 /-",
+    semester2: "₹ 1,10,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 104,
+    title: "BBA (Digital Marketing) with academic support of IIDE",
+    duration: "3 Years",
+    semester1: "₹ 1,15,000 /-",
+    semester2: "₹ 1,10,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,25,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 105,
+    title:
+      "BBA (Hons. / Hons. with Research) (Digital Marketing) with academic support of IIDE",
+    duration: "4 Years",
+    semester1: "₹ 1,15,000 /-",
+    semester2: "₹ 1,10,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,25,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 106,
+    title:
+      "BBA (Logistics and Supply Chain Management) with academic support of Safexpress",
+    duration: "3 Years",
+    fees: "₹ 2,25,000 /-",
+    semester1: "₹ 1,15,000 /-",
+    semester2: "₹ 1,10,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 107,
+    title:
+      "BBA (Hons. / Hons. with Research) (Logistics and Supply Chain Management) with academic support of Safexpress",
+    duration: "4 Years",
+    fees: "₹ 2,25,000 /-",
+    semester1: "₹ 1,15,000 /-",
+    semester2: "₹ 1,10,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 125,
+    title:
+      "BBA (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK",
+    duration: "3 Years",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,00,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 126,
+    title:
+      "BBA (Hons./ Hons with Research) (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK",
+    duration: "4 Years",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 2,00,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 123,
+    title:
+      "B.Sc. (Hons.) in Finance (with optional specialisations in Quantitative Finance and Actuarial Science)**",
+    duration: "4 Years",
+    semester1: "₹ 1,20,000 /-",
+    semester2: "₹ 1,20,000 /-",
+    Eligibility:
+      "10+2 or equivalent from any recognised board Mathematics as a subject in the qualifying examination Minimum 50% aggregate marks (relaxation as per University norms) All streams welcome — Science, Commerce, Humanities",
+    fees: "₹ 2,40,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 110,
+    title:
+      "B.Com. (Hons.) (International Accounting and Finance) (ACCA – UK) with academic support of Grant Thornton",
+    duration: "3 Years",
+    fees: "₹ 1,80,000 /-",
+    semester1: "₹ 90,000 /-",
+    semester2: "₹ 90,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 111,
+    title:
+      "B.Com. (Hons. / Hons. with Research) (International Accounting and Finance) (ACCA – UK) with academic support of Grant Thornton",
+    duration: "4 Years",
+    semester1: "₹ 90,000 /-",
+    semester2: "₹ 90,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
+    fees: "₹ 1,80,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 43,
+    title: "B.Com. (Hons.)",
+    semester1: "₹ 80,000 /-",
+    semester2: "₹ 74,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university with minimum 50% aggregate marks",
+    duration: "3 Years",
+    fees: "₹ 1,54,000 /-",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 44,
+    title: "B.Com. (Hons. / Hons. with Research)",
+    duration: "4 Years",
+    fees: "₹ 1,54,000 /-",
+    semester1: "₹ 80,000 /-",
+    semester2: "₹ 74,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university with minimum 50% aggregate marks",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 45,
+    title: "B.Com. Programme",
+    duration: "3 Years",
+    fees: "₹ 1,35,000 /-",
+    semester1: "₹ 70,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university with minimum 50% aggregate marks.",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 46,
+    title:
+      "Integrated BBA+MBA with Academic Support of IBM (4 yrs + 1 yr Industry Internship)",
+    duration: "4 + 1 Years",
+    fees: "₹ 2,50,000 /-",
+    semester1: "₹ 1,25,000 /-",
+    semester2: "₹ 1,25,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university with minimum 50% aggregate marks",
+    category: "management-commerce",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 51,
+    title: "M.Pharm. (Master of Pharmacy) - Pharmaceutics",
+    duration: "2 Years",
+    fees: "₹ 1,70,000 /-",
+    semester1: "₹ 85,000 /-",
+    semester2: "₹ 85,000 /-",
+    Eligibility:
+      "Candidate should pass in the following examinations: B. Pharmacy degree examination of an Indian university established by law in India from an institution approved by Pharmacy Council of India (PCI) and has scored not less than 55% of the maximum marks (aggregate of 4 years of B.Pharmacy). Every student, selected for admission to post graduate pharmacy program in any PCI approved institution should have obtained registration with the State Pharmacy Council or should obtain the same within one month from the date of his/her admission, failing which the admission of the candidate shall be cancelled.",
+    category: "medical-allied",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 52,
+    title: "M.Pharm. (Master of Pharmacy) – Pharmacology",
+    duration: "2 Years",
+    fees: "₹ 1,70,000 /-",
+    semester1: "₹ 85,000 /-",
+    semester2: "₹ 85,000 /-",
+    Eligibility:
+      "Candidate should pass in the following examinations: B. Pharmacy degree examination of an Indian university established by law in India from an institution approved by Pharmacy Council of India (PCI) and has scored not less than 55% of the maximum marks (aggregate of 4 years of B.Pharmacy). Every student, selected for admission to post graduate pharmacy program in any PCI approved institution should have obtained registration with the State Pharmacy Council or should obtain the same within one month from the date of his/her admission, failing which the admission of the candidate shall be cancelled.",
+    category: "medical-allied",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 59,
+    title: "Ph.D. in Journalism & Mass Communication",
+    duration: "Min. 3 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    category: "journalism-masscomm",
+    level: "doctorate",
+    
+  },
+  {
+    id: 60,
+    title: "Ph.D. in Education",
+    duration: "Min. 3 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "A postgraduate degree or equivalent in the concerned subject from a recognized Indian University, or a postgraduate degree approved by the Association of Indian Universities/UGC/AICTE with not less than 55% marks in aggregate or its equivalent grade ‘B’ in the UGC 7-point scale. Ph.D. admission is open only for those students who have qualified UGC-NET (including JRF/UGC-CSIR NET/GATE) teacher fellowship or have passed M.Phil. Ph.D. admission is open for regular University faculty.",
+    category: "education",
+    level: "doctorate",
+    
+  },
+  {
+    id: 61,
+    title: "M.A. Education",
+    duration: "2 Years",
+    fees: "₹ 1,20,000 /-",
+    category: "education",
+    semester1: "₹ 60,000 /-",
+    semester2: "₹ 60,000 /-",
+    Eligibility:
+      "Bachelor’s degree in Education or a related discipline from a recognised university with a minimum 50% aggregate marks.",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 62,
+    title: "M.A. Applied Psychology",
+    duration: "2 Years",
+    fees: "₹ 1,25,000 /-",
+    category: "liberal-arts",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 60,000 /-",
+    Eligibility:
+      "The candidate should have passed a Bachelor degree (any discipline) or equivalent degree from a recognised university with a minimum of 50% marks in aggregate.",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 130,
+    title: "M.A. English",
+    duration: "2 Years",
+    semester1: "₹ 60,000 /-",
+    semester2: "₹ 60,000 /-",
+    Eligibility:
+      "Bachelor’s degree in English or a related discipline from a recognized university with minimum 50% aggregate marks",
+    fees: "₹ 1,20,000 /-",
+    category: "liberal-arts",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 64,
+    title: "M.A. Economics",
+    duration: "2 Years",
+    fees: "₹ 1,20,000 /-",
+    semester1: "₹ 60,000 /-",
+    semester2: "₹ 60,000 /-",
+    Eligibility:
+      "Bachelor’s degree in Economics or a related discipline from a recognised university with a minimum 50% aggregate marks.",
+    category: "liberal-arts",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 65,
+    title: "M.A. Political Science**",
+    duration: "2 Years",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 60,000 /-",
+    Eligibility:
+      "Bachelor’s degree in Political Science or a related discipline from a recognised university with a minimum of 50% aggregate marks.",
+    fees: "₹ 1,25,000 /-",
+    category: "liberal-arts",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 66,
+    title: "B.Sc. (Hons. / Hons. with Research ) Physics",
+    duration: "4 Years",
+    fees: "₹ 98,000 /-",
+    semester1: "₹ 50,000 /-",
+    semester2: "₹ 48,000 /-",
+    Eligibility:
+      "Passed the 10+2 or equivalent examination from any recognised board/ University with PCB/PCM as mandatory course with minimum 50% aggregate marks.",
+    category: "basic-applied-sciences",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 67,
+    title: "B.Sc. (Hons. / Hons. with Research) Chemistry",
+    duration: "4 Years",
+    fees: "₹ 98,000 /-",
+    semester1: "₹ 50,000 /-",
+    semester2: "₹ 48,000 /-",
+    Eligibility:
+      "Passed the 10+2 or equivalent examination from any recognised board/ University with PCB/PCM as mandatory course with minimum 50% aggregate marks.",
+    category: "basic-applied-sciences",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 68,
+    title: "B.Sc. (Hons. / Hons. with Research) Maths",
+    duration: "4 Years",
+    fees: "₹ 98,000 /-",
+    semester1: "₹ 50,000 /-",
+    semester2: "₹ 48,000 /-",
+    Eligibility:
+      "Passed the 10+2 or equivalent examination from any recognized board/ University with PCM as mandatory course with minimum 50% aggregate marks.",
+    category: "basic-applied-sciences",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 69,
+    title: "B.Sc. (Hons.) Forensic Science",
+    duration: "3 Years",
+    fees: "₹ 1,42,000 /-",
+    semester1: "₹ 71,000 /-",
+    semester2: "₹ 71,000 /-",
+    Eligibility:
+      "Passed the 10+2 or equivalent examination from any recognized board/ University in Science (Physics/Chemistry/Biology/Mathematics) with minimum 50% aggregate marks.",
+    category: "basic-applied-sciences",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 70,
+    title: "B.Sc. (Hons. / Hons. with Research) Forensic Science",
+    duration: "4 Years",
+    fees: "₹ 1,42,000 /-",
+    semester1: "₹ 71,000 /-",
+    semester2: "₹ 71,000 /-",
+    Eligibility:
+      "Passed the 10+2 or equivalent examination from any recognised board/ University in Science (Physics/Chemistry/Biology/Mathematics) with minimum 50% aggregate marks.",
+    category: "basic-applied-sciences",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 71,
+    title: "M.Sc. Forensic Science",
+    duration: "2 Years",
+    fees: "₹ 1,36,000 /-",
+    semester1: "₹ 70,000 /-",
+    semester2: "₹ 66,000 /-",
+    Eligibility:
+      "Candidates who have completed B.Sc. (Any Science Stream) from a recognised university with minimum aggregate 50% marks",
+    category: "basic-applied-sciences",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 72,
+    title: "M.Sc. (Part time)",
+    duration: "2 Years",
+    semester1: "₹ 30,000 /-",
+    semester2: "₹ 30,000 /-",
+    Eligibility:
+      "Pass with 55% aggregate marks in Bachelors degree with Physics Chemistry or Mathematics or equivalent.",
+    fees: "₹ 60,000 /-",
+    category: "basic-applied-sciences",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 73,
+    title: "Integrated B.Sc.–M.Sc. Forensic Science",
+    duration: "5 Years",
+    fees: "₹ 1,42,000 /-",
+    semester1: "₹ 71,000 /-",
+    semester2: "₹ 71,000 /-",
+    Eligibility:
+      "Passed the 10+2 or equivalent examination from any recognised board/ University in Science (Physics/Chemistry/Biology/Mathematics) with minimum 50% aggregate marks.",
+    category: "basic-applied-sciences",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 74,
+    title: "Ph.D. in Physics",
+    duration: "Min. 3 Years",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    fees: "₹ 1,30,000 /-",
+    category: "basic-applied-sciences",
+    level: "doctorate",
+    
+  },
+  {
+    id: 75,
+    title: "Ph.D. in Chemistry",
+    duration: "Min. 3 Years",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    fees: "₹ 1,30,000 /-",
+    category: "basic-applied-sciences",
+    level: "doctorate",
+    
+  },
+  {
+    id: 76,
+    title: "Ph.D. in Mathematics",
+    duration: "Min. 3 Years",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
+    fees: "₹ 1,30,000 /-",
+    category: "basic-applied-sciences",
+    level: "doctorate",
+    
+  },
+  {
+    id: 77,
+    title: "Ph.D. in Forensic Science",
+    duration: "Min. 3 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "A postgraduate degree or equivalent in the concerned subject from a recognized Indian University, or a postgraduate degree approved by the Association of Indian Universities/UGC/AICTE with not less than 55% marks in aggregate or its equivalent grade ‘B’ in the UGC 7-point scale. Ph.D. admission is open only for those students who have qualified UGC-NET (including JRF/UGC-CSIR NET/GATE) teacher fellowship or have passed M.Phil. Ph.D. admission is open for regular University faculty.",
+    category: "basic-applied-sciences",
+    level: "doctorate",
+    
+  },
+  {
+    id: 78,
+    title: "B.A. (Hons.) English",
+    duration: "3 Years",
+    fees: "₹ 1,30,000 /-",
+    category: "liberal-arts",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university in any stream with minimum 50% aggregate Marks.",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 79,
+    title: "B.A. (Hons. / Hons. with Research) English",
+    duration: "4 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university in any stream with minimum 50% aggregate Marks.",
+    category: "liberal-arts",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 80,
+    title: "B.A. (Hons.) Economics",
+    duration: "3 Years",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university in any stream with minimum 50% aggregate Marks.",
+    fees: "₹ 1,30,000 /-",
+    category: "liberal-arts",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 81,
+    title: "B.A. (Hons. / Hons. with Research) Economics",
+    duration: "4 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate Marks.",
+    category: "liberal-arts",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 82,
+    title: "B.A. (Hons.) Psychology",
+    duration: "3 Years",
+    fees: "₹ 1,42,000 /-",
+    semester1: "₹ 71,000 /-",
+    semester2: "₹ 71,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate Marks.",
+    category: "liberal-arts",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 83,
+    title: "B.A. (Hons. / Hons. with Research) Psychology",
+    duration: "4 Years",
+    fees: "₹ 1,42,000 /-",
+    semester1: "₹ 71,000 /-",
+    semester2: "₹ 71,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university in any stream with minimum 50% aggregate Marks.",
+    category: "liberal-arts",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 84,
+    title: "B.A. Programme",
+    duration: "3 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "Must have passed 10+2 or equivalent examination from any recognised board/university in any stream with a minimum of 50% aggregate marks.",
+    category: "liberal-arts",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 85,
+    title: "B.A. (Hons. / Hons. with Research) (Liberal Arts)",
+    duration: "4 Years",
+    fees: "₹ 1,50,000 /-",
+    semester1: "₹ 75,000 /-",
+    semester2: "₹ 75,000 /-",
+    Eligibility:
+      "10+2 or equivalent from a recognized board with minimum 50% aggregate marks.",
+    category: "liberal-arts",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 86,
+    title: "B.A. (Hons.) Political Science",
+    duration: "3 Years",
+    fees: "₹ 1,30,000 /-",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university in any stream with minimum 50% aggregate Marks.",
+    category: "liberal-arts",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 87,
+    title: "B.A. (Hons. / Hons. with Research) Political Science",
+    duration: "4 Years",
+    semester1: "₹ 65,000 /-",
+    semester2: "₹ 65,000 /-",
+    Eligibility:
+      "Passed 10+2 or equivalent examination from any recognised board/university in any stream with minimum 50% aggregate Marks.",
+    fees: "₹ 1,30,000 /-",
+    category: "liberal-arts",
+    level: "undergraduate",
+    
+  },
+  {
+    id: 119,
+    title: "M.Tech. Computer Science & Engineering",
+    duration: "2 Years",
+    semester1: "₹ 60,000 /-",
+    semester2: "₹ 60,000 /-",
+    Eligibility:
+      "Candidates must have a B.E. / B.Tech degree in Mechanical Engineering/Automobile Engineering with a minimum of 50% marks in aggregate.",
+    fees: "₹ 1,20,000 /-",
+    category: "engineering-tech",
+    level: "postgraduate",
+    
+  },
+  {
+    id: 124,
+    title: "M. Design (Interior Design)**",
+    duration: "2 Years",
+    semester1: "₹ 1,00,000 /-",
+    semester2: "₹ 1,00,000 /-",
+    Eligibility:
+      "The candidates must have a qualifying degree in Design/Fine Arts or in any stream with at least 50% marks from a recognised University.",
+    fees: "₹ 2,00,000 /-",
+    category: "architecture-design",
+    level: "postgraduate",
+    
+  },
+];
