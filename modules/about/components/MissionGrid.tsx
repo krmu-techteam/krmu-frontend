@@ -17,7 +17,7 @@ const MissionGrid = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-5">
       {missionPoints.map((item, index) => (
         <div key={index} className="group flex items-start gap-4">
-          <div className="flex items-center justify-center text-[#315F84] mt-1">
+          <div className="flex items-center justify-center text-white/90 mt-1">
             <CircleArrowRight size={24} />
           </div>
           <p className="text-white/90 text-[16px] font-poppins leading-[1.6]">

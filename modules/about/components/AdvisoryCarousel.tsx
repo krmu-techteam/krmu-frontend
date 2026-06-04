@@ -168,7 +168,7 @@ const AdvisoryCarousel = () => {
               className="pl-4 md:pl-6 basis-full sm:basis-1/2 md:basis-1/4 lg:basis-1/5"
             >
               <div
-                className="group relative flex flex-col bg-[#0b1a27] rounded-[3px] border-[1px] border-transparent hover:border-[#00A0E3] transition-all duration-300 h-full"
+                className="group relative flex flex-col bg-[#0b1a27] rounded-md border-[1px] border-transparent hover:border-[#00A0E3] transition-all duration-300 h-full"
               >
                 {/* Person Image */}
                 <div className="w-full h-[220px] sm:h-[260px] p-3">

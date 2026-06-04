@@ -22,7 +22,7 @@ interface GlobalPartnershipsSectionProps {
 }
 const GlobalPartnershipsSection = ({ aboutData }: GlobalPartnershipsSectionProps) => {
     return (
-        <section className="py-16 md:py-24 px-4 bg-transparent relative">
+        <section className="py-8 sm:py-10 lg:py-12 xl:py-20 px-6 sm:px-8 lg:px-12 xl:px-16 bg-transparent relative">
         <div className="max-w-[1530px] mx-auto w-full bg-gradient-to-r from-[#061623] via-[#061623] to-[#061623]/20 rounded-[4px] flex flex-col lg:flex-row items-stretch overflow-hidden">
           <div className="w-full lg:w-[60%] text-white p-8 lg:p-14 flex flex-col justify-center">
             <h3 className="text-3xl md:text-[42px] font-serif font-semibold w-full leading-[1.2] mb-6">

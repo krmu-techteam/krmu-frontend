@@ -72,12 +72,18 @@ const TimelineCarousel = () => {
     <div className="pb-16 relative">
       <style>{`
         /* Hide border for all slides by default */
-        .timeline-slider .slick-slide .my-slide-inner {
-          border-left-color: transparent !important;
+        .timeline-slider .slick-slide .my-slide-inner::before {
+          content: "";
+          position: absolute;
+          left: -16px;
+          top: 0;
+          bottom: 0;
+          width: 1px;
+          background-color: transparent;
         }
         /* Show border ONLY for the 2nd and 3rd visible (active) slides */
-        .timeline-slider .slick-active ~ .slick-active .my-slide-inner {
-          border-left-color: rgba(255, 255, 255, 0.2) !important;
+        .timeline-slider .slick-active ~ .slick-active .my-slide-inner::before {
+          background-color: rgba(255, 255, 255, 0.2);
         }
       `}</style>
       {/* Timeline Slides */}
@@ -92,7 +98,7 @@ const TimelineCarousel = () => {
             return (
               <div key={index} className="px-4 outline-none">
                 <div
-                  className={`my-slide-inner flex flex-col pl-6 border-l h-full min-h-[350px] transition-all duration-500 ${
+                  className={`my-slide-inner relative flex flex-col h-full min-h-[350px] transition-all duration-500 ${
                     isActive ? "opacity-100" : "opacity-40"
                   }`}
                 >
@@ -117,16 +123,16 @@ const TimelineCarousel = () => {
                   >
                     {item.subtitle}
                   </p>
-                  <div className="relative h-[220px] md:h-[250px] w-full rounded-[4px] overflow-hidden mt-auto">
+                  <div className="relative h-[220px] md:h-[250px] w-full mt-auto rounded-[8px] overflow-hidden">
                     <Image
                       src={item.image}
                       alt={`timeline image ${item.year}`}
                       fill
-                      className="object-cover"
+                      className="object-cover rounded-[8px]"
                       unoptimized
                     />
                     {!isActive && (
-                      <div className="absolute inset-0 bg-[#061623]/40 transition-opacity duration-500"></div>
+                      <div className="absolute inset-0 transition-opacity duration-500"></div>
                     )}
                   </div>
                 </div>

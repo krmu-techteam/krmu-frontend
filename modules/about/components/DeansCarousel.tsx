@@ -103,7 +103,7 @@ const DeansCarousel = () => {
               <div className="group relative flex flex-col h-full">
                 {/* Person Image */}
                 <div className="w-full h-[220px] sm:h-[260px]">
-                  <div className="w-full h-full relative overflow-hidden rounded-[3px] bg-white">
+                  <div className="w-full h-full relative overflow-hidden rounded-md bg-white">
                     <Image
                       src={dean.img}
                       alt={dean.name}

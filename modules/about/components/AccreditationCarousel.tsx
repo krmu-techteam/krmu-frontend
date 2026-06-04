@@ -41,7 +41,7 @@ const AccreditationCarousel: React.FC<
               key={logo?.id}
               className="pl-4 md:pl-6 basis-auto"
             >
-              <div className="h-full py-0">
+              <div className="h-full">
                 <div className="flex items-center justify-center h-[110px] sm:h-[120px] px-6 sm:px-12 bg-white border border-slate-200 rounded-[3px] shadow-sm hover:shadow-md hover:border-[#00A0E3]/30 transition-all duration-300 overflow-hidden group">
                   
                   <Image
