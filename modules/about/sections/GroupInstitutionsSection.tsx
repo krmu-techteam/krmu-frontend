@@ -23,10 +23,10 @@ const GroupInstitutionsSection = ({
           <h3 className="text-white text-[34px] lg:text-[42px] font-serif font-bold leading-tight mb-5">
             {title}
           </h3>
-          <h4 className="text-white text-[16px] text-pretty lg:text-center font-poppins md:text-lg font-semibold leading-[1.5] mb-5 px-16 lg:px-0">
+          <h4 className="text-white text-[16px] text-center md:text-pretty lg:text-center font-poppins md:text-lg font-semibold leading-[1.5] mb-5 px-0 md:px-16 lg:px-0">
             {subtitle}
           </h4>
-          <p className="text-white/85 text-justify lg:text-center font-poppins text-[16px] lg:text-[16px] leading-[1.9]">
+          <p className="text-white/85 text-center md:text-justify lg:text-center font-poppins text-[16px] lg:text-[16px] leading-[1.9]">
             {description}
           </p>
         </div>

@@ -5,12 +5,12 @@ import { AdvisoryCarousel, DeansCarousel } from "../components";
 const AdvisoryOrDeanSection = async () => {
   return (
     <>
-      <section className="relative py-8 sm:py-10 lg:py-12 xl:py-16 px-6 sm:px-10 lg:px-12 xl:px-16  overflow-hidden">
+      <section className="relative py-8 sm:py-10 lg:py-12 xl:py-16 px-2 sm:px-10 lg:px-12 xl:px-16  overflow-hidden">
         <div className="max-w-[1530px] mx-auto w-full ">
           
           {/* Advisory Board Section */}
           <div className="mb-16">
-            <h2 className="text-white text-4xl sm:text-[42px] font-serif font-bold mb-8">
+            <h2 className="text-white text-center md:text-left text-[34px] sm:text-[42px] font-serif font-bold mb-8">
               Advisory Board
             </h2>
             <AdvisoryCarousel />
@@ -18,7 +18,7 @@ const AdvisoryOrDeanSection = async () => {
 
           {/* Deans Section */}
           <div>
-            <h2 className="text-white text-4xl sm:text-[42px] font-serif font-bold mb-8">
+            <h2 className="text-white text-center md:text-left text-[34px] sm:text-[42px] font-serif font-bold mb-8">
               Deans of KRMU Schools
             </h2>
             <DeansCarousel />
