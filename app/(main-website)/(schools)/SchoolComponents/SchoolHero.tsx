@@ -193,10 +193,10 @@ const SchoolHero = ({
   return (
     <>
       <section
-        className={`relative overflow-hidden ${
+        className={`relative overflow-hidden  ${
           fullWidth
             ? "lg:py-[20%] lg:pb-0 pt-[300px] pb-5"
-            : `${notCutoutBg ? "pt-[45px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : "pt-[100px] sm:pt-[140px] lg:pt-[280px] xl:pt-[180px] 2xl:pt-[280px]"} schoolBanner`
+            : `${notCutoutBg ? "pt-[45px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : `pt-[100px] sm:pt-[140px] lg:pt-[280px] xl:pt-[180px] 2xl:pt-[280px] ${slug === "school-of-legal-studies" ? "2xl:pt-[400px]" : ""} `} schoolBanner`
         } bg-cover bg-no-repeat bg-center`}
         style={
           {
@@ -219,7 +219,9 @@ const SchoolHero = ({
             />
           </div>
         )}
-        <div className="hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2">
+        <div
+          className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[80px]" : ""} `}
+        >
           {videoUrl && middleimg && (
             <Image
               src={middleimg}
@@ -310,7 +312,7 @@ const SchoolHero = ({
                   )}
                 </div>
                 <div
-                  className={`bg-[#001732] ${slug === "school-of-legal-studies" ? "xl:-translate-y-[60px]" : ""}  xl:bg-transparent p-5 xl:p-0 z-20 relative  ${notCutoutBg ? "-mt-10" : "-mt-28 sm:mt-0"}`}
+                  className={`bg-[#001732] ${slug === "school-of-legal-studies" ? "2xl:-translate-y-[60px]" : ""}  xl:bg-transparent p-5 xl:p-0 z-20 relative  ${notCutoutBg ? "-mt-10" : "-mt-28 sm:mt-0"}`}
                 >
                   <p className="text-sm lg:text-lg 2xl:text-2xl font-normal sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
                     {subheading}
