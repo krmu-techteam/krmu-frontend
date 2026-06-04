@@ -144,7 +144,7 @@ const TimelineCarousel = () => {
 
       {/* Timeline Nav (Bottom) */}
       <div className="timeline-nav-bottom px-4 max-w-[1200px] mx-auto mt-8">
-        <div id="timeline-nav-container" className="flex overflow-x-auto no-scrollbar justify-start lg:justify-center items-center space-x-6 md:space-x-8 pb-4 min-h-[80px]">
+        <div id="timeline-nav-container" className="flex overflow-x-auto no-scrollbar justify-start items-center space-x-6 md:space-x-8 pb-4 min-h-[80px]">
           {timelineData.map((item, index) => {
             const isActive = index === currentSlide;
             return (

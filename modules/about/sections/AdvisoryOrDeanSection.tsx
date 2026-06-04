@@ -5,7 +5,7 @@ import { AdvisoryCarousel, DeansCarousel } from "../components";
 const AdvisoryOrDeanSection = async () => {
   return (
     <>
-      <section className="relative py-8 sm:py-10 lg:py-12 xl:py-20 px-6 sm:px-8 lg:px-12 xl:px-16  overflow-hidden">
+      <section className="relative py-8 sm:py-10 lg:py-12 xl:py-16 px-6 sm:px-10 lg:px-12 xl:px-16  overflow-hidden">
         <div className="max-w-[1530px] mx-auto w-full ">
           
           {/* Advisory Board Section */}

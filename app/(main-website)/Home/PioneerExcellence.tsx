@@ -3,7 +3,7 @@ import TimelineCarousel from "../components/Carousels/TimelineCarousel";
 const PioneerExcellence = () => {
   return (
     <>
-      <section className="pt-8 sm:pt-10 lg:pt-12 xl:pt-20 px-6 sm:px-8 lg:px-12 xl:px-16">
+      <section className="pt-8 sm:pt-10 lg:pt-12 xl:pt-16 px-6 sm:px-10 lg:px-12 xl:px-16">
         <div className="max-w-[1530px] mx-auto w-full mb-16">
           <h3 className="text-3xl md:text-[42px] font-serif font-semibold mb-6 text-white leading-[1.2]">
             K.R. Mangalam Group: Pioneering Excellence in Education

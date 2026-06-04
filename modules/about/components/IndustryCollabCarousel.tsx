@@ -20,7 +20,7 @@ const IndustryCollabCarousel = ({ indusLogos }: IndustryCollabCarouselProps) => 
         showDots={false}
         stopOnInteraction={false}
         containerClassName="-ml-4 md:-ml-4"
-        slideClassName="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 pl-4 md:pl-4"
+        slideClassName="basis-1/2 sm:basis-1/3 md:basis-1/3 xl:basis-1/5 pl-4 md:pl-4"
       >
         {indusLogos &&
           [...indusLogos, ...indusLogos, ...indusLogos].map((logo, index) => (

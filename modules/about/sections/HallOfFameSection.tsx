@@ -6,7 +6,7 @@ import SectionDivider from "@/components/common/SectionDivider"
 
 const HallOfFameSection = ({title, hallfame}: {title: string, hallfame: HALLFAME[]}) => {
     return(
-        <section className="py-8 sm:py-10 lg:py-12 xl:py-20 px-6 sm:px-8 lg:px-12 xl:px-16  relative">
+        <section className="py-8 sm:py-10 lg:py-12 xl:py-16 px-6 sm:px-10 lg:px-12 xl:px-16  relative">
         <div className="max-w-[1530px] mx-auto w-full text-center ">
           <h3 className="text-white text-3xl md:text-[42px] font-serif font-semibold mb-12">
             {title || "Our Hall of Fame"}

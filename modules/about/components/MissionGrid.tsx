@@ -14,7 +14,7 @@ const missionPoints = [
 
 const MissionGrid = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-14 gap-y-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-14 gap-y-5">
       {missionPoints.map((item, index) => (
         <div key={index} className="group flex items-start gap-4">
           <div className="flex items-center justify-center text-white/90 mt-1">

@@ -22,13 +22,13 @@ interface GlobalPartnershipsSectionProps {
 }
 const GlobalPartnershipsSection = ({ aboutData }: GlobalPartnershipsSectionProps) => {
     return (
-        <section className="py-8 sm:py-10 lg:py-12 xl:py-20 px-6 sm:px-8 lg:px-12 xl:px-16 bg-transparent relative">
+        <section className="py-8 sm:py-10 lg:py-12 xl:py-16 px-6 sm:px-10 lg:px-12 xl:px-16 bg-transparent relative">
         <div className="max-w-[1530px] mx-auto w-full bg-gradient-to-r from-[#061623] via-[#061623] to-[#061623]/20 rounded-[4px] flex flex-col lg:flex-row items-stretch overflow-hidden">
-          <div className="w-full lg:w-[60%] text-white p-8 lg:p-14 flex flex-col justify-center">
+          <div className="w-full lg:w-[60%] text-white p-10 xl:p-14 flex flex-col justify-center">
             <h3 className="text-3xl md:text-[42px] font-serif font-semibold w-full leading-[1.2] mb-6">
               {aboutData?.internationcollaboration?.title}
             </h3>
-            <div className="text-[14px] sm:text-[15px] leading-relaxed text-white/90 mb-0 font-poppins pr-0 md:pr-10">
+            <div className="text-[14px] text-justify sm:text-[15px] leading-relaxed text-white/90 mb-0 font-poppins pr-0 lg:pr-10">
               <BlocksRenderer
                 content={aboutData?.internationcollaboration?.description || []}
               />
@@ -62,7 +62,7 @@ const GlobalPartnershipsSection = ({ aboutData }: GlobalPartnershipsSectionProps
               />
             </div>
           </div>
-          <div className="w-full lg:w-[40%] relative flex items-end justify-end mt-8 lg:mt-0 pt-8 lg:pt-0">
+          <div className="w-full lg:w-[40%] relative flex items-center lg:items-end justify-center lg:justify-end mt-0 lg:mt-0 pt-0 lg:pt-0">
             <Image
               src="/modules/about/international-collaborations/international-collaborations.png"
               width={600}

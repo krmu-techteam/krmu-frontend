@@ -10,9 +10,9 @@ const AccreditationSection = ({
   logosData: StrapiMedia[];
 }) => {
   return (
-    <section className="relative py-8 md:py-12 lg:py-20">
-      <div className="max-w-[1530px] mx-auto w-full px-6 sm:px-8 lg:px-12 xl:px-16">
-        <div className="flex justify-center pb-6 md:mb-8">
+    <section className="relative py-8 md:py-12 lg:py-16">
+      <div className="max-w-[1530px] mx-auto w-full px-6 sm:px-10 lg:px-12 xl:px-16">
+        <div className="flex justify-center pb-6 md:mb-4">
           <h2 className="text-3xl md:text-4xl xl:text-[42px] font-serif font-bold text-white leading-[1.2] tracking-tight">
             {title}
           </h2>
