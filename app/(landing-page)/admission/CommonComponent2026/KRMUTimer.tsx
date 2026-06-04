@@ -78,12 +78,13 @@ export default function KRMUTimer({ targetDate }: ZenithTimerProps) {
   const format = (num: number) => String(num).padStart(2, "0");
 
   return (
-    <div className="flex flex-col md:flex-row text-center md:text-left items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-900 text-white px-4 py-2 rounded-xl shadow-md">
+    // <div className="flex flex-col md:flex-row text-center md:text-left items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-900 text-white px-4 py-2 rounded-xl shadow-md">
+    <div className="flex flex-col md:flex-row text-center md:text-left items-center gap-2 bg-[#fcd404] text-black px-4 py-2 rounded-xl shadow-md">
       {/* <span className="text-xs uppercase tracking-wider font-semibold">
         Now or Never! Grab Your 100% Scholarship Today
       </span> */}
-<span className="text-[10px] xl:text-xs uppercase tracking-wider font-semibold">
-      Grab Up to 100% Scholarships Worth Rs 27 Cr + Get a Chance to Fly to Europe (First Come, First Serve)
+<span className="text-[10px] xl:text-xs uppercase tracking-wider font-extrabold">
+      Registration Closing on June 6 | Join Ankur Warikoo LIVE | Limited Seats Available
       </span>
       <div className="flex gap-2 font-mono text-sm">
         <TimeBox value={format(timeLeft.days)} label="D" />
@@ -99,7 +100,7 @@ function TimeBox({ value, label }: { value: string; label: string }) {
   return (
     <div className="flex items-center gap-1 bg-black/30 px-2 py-1 rounded-md">
       <span className="font-semibold">{value}</span>
-      <span className="text-xs text-yellow-400">{label}</span>
+      <span className="text-xs text-black">{label}</span>
     </div>
   );
 }
