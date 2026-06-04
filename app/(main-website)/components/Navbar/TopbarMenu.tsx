@@ -32,7 +32,7 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
 
         if (item.__component === "menu.menu-links") {
           return (
-            <li key={item.id}>
+            <li key={item.id} className="first:bg-[#001732] first:px-2 first:py-[2px]">
               {(item.url) ? (
                 <Link
                   href={item.url}
