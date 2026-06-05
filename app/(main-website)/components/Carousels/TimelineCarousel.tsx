@@ -69,7 +69,7 @@ const TimelineCarousel = () => {
   };
 
   return (
-    <div className="pb-16 relative">
+    <div className="pb-4 lg:pb-16 relative">
       <style>{`
         /* Hide border for all slides by default */
         .timeline-slider .slick-slide .my-slide-inner::before {
@@ -87,7 +87,7 @@ const TimelineCarousel = () => {
         }
       `}</style>
       {/* Timeline Slides */}
-      <div className="mb-16">
+      <div className="mb-6 lg:mb-16">
         <Slider
           {...slideSettings}
           ref={sliderRef2}
@@ -98,32 +98,32 @@ const TimelineCarousel = () => {
             return (
               <div key={index} className="px-4 outline-none">
                 <div
-                  className={`my-slide-inner relative flex flex-col h-full min-h-[350px] transition-all duration-500 ${
+                  className={`my-slide-inner px-3 relative flex flex-col h-full lg:min-h-[350px] transition-all duration-500 ${
                     isActive ? "opacity-100" : "opacity-40"
                   }`}
                 >
                   <h4
-                    className={`text-3xl md:text-[40px] font-bold mb-2 font-poppins transition-colors duration-500 ${
+                    className={`text-3xl px-3 sm:px-10 lg:px-12 xl:px-16 md:text-[40px] font-bold mb-2 font-poppins transition-colors duration-500 ${
                       isActive ? "text-white" : "text-white/60"
                     }`}
                   >
                     {item.year}
                   </h4>
                   <p
-                    className={`text-xl md:text-[22px] mb-1 font-poppins transition-colors duration-500 ${
+                    className={`text-xl px-3 sm:px-10 lg:px-12 xl:px-16 md:text-[22px] mb-1 font-poppins transition-colors duration-500 ${
                       isActive ? "text-white" : "text-white/50"
                     }`}
                   >
                     {item.title}
                   </p>
                   <p
-                    className={`text-[13px] sm:text-[14px] mb-6 font-poppins transition-colors duration-500 ${
+                    className={`text-[13px] px-3 sm:px-10 lg:px-12 xl:px-16 sm:text-[14px] mb-3 lg:mb-6 font-poppins transition-colors duration-500 ${
                       isActive ? "text-white/60" : "text-white/30"
                     }`}
                   >
                     {item.subtitle}
                   </p>
-                  <div className="relative h-[220px] md:h-[250px] w-full mt-auto rounded-[8px] overflow-hidden">
+                  <div className="relative h-[220px] md:h-[250px] w-full mt-3 sm:mt-4 lg:mt-auto rounded-[8px] overflow-hidden">
                     <Image
                       src={item.image}
                       alt={`timeline image ${item.year}`}
@@ -143,7 +143,7 @@ const TimelineCarousel = () => {
       </div>
 
       {/* Timeline Nav (Bottom) */}
-      <div className="timeline-nav-bottom px-4 max-w-[1200px] mx-auto mt-8">
+      <div className="timeline-nav-bottom px-6 max-w-[1200px] mx-auto mt-2 lg:mt-8">
         <div id="timeline-nav-container" className="flex overflow-x-auto no-scrollbar justify-start items-center space-x-6 md:space-x-8 pb-4 min-h-[80px]">
           {timelineData.map((item, index) => {
             const isActive = index === currentSlide;

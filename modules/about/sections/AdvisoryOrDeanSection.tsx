@@ -10,7 +10,7 @@ const AdvisoryOrDeanSection = async () => {
           
           {/* Advisory Board Section */}
           <div className="mb-16">
-            <h2 className="text-white text-center md:text-left text-[34px] sm:text-[42px] font-serif font-bold mb-8">
+            <h2 className="heading-primary mb-6 md:mb-8 text-center md:text-left">
               Advisory Board
             </h2>
             <AdvisoryCarousel />
@@ -18,7 +18,7 @@ const AdvisoryOrDeanSection = async () => {
 
           {/* Deans Section */}
           <div>
-            <h2 className="text-white text-center md:text-left text-[34px] sm:text-[42px] font-serif font-bold mb-8">
+            <h2 className="heading-primary mb-6 md:mb-8 text-center md:text-left">
               Deans of KRMU Schools
             </h2>
             <DeansCarousel />

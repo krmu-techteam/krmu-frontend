@@ -8,8 +8,8 @@ const WhyKRMUSection = () => {
       <div className="max-w-[1530px] mx-auto">
         
         {/* Heading */}
-        <div className="text-center text-white mb-8">
-          <h2 className="font-serif text-[36px] sm:text-[42px] font-bold leading-[1.2] mb-4">
+        <div className="text-center text-white mb-6 md:mb-8">
+          <h2 className="heading-primary mb-4">
             Why KRMU
           </h2>
 

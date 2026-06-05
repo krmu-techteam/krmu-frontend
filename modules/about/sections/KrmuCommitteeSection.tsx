@@ -21,19 +21,20 @@ interface KrmuCommitteeSectionProps {
 const KrmuCommitteeSection = ({ aboutData }: KrmuCommitteeSectionProps) => {
   return (
     <section className="py-8 sm:py-10 lg:py-12 xl:py-16 px-6 sm:px-8 lg:px-12 xl:px-16 relative">
-      <div className="max-w-[1530px] mx-auto w-full relative">
+      <div className="max-w-[1530px] mx-auto w-full relative flex flex-col lg:block">
         {/* Main Background Image Container */}
-        <div className="w-full h-[500px] lg:h-[600px] xl:h-[760px] 2xl:h-[890px] relative overflow-hidden flex items-center justify-center">
+        <div className="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[600px] xl:h-[760px] 2xl:h-[890px] relative overflow-hidden flex items-center justify-center lg:rounded-[3px] rounded-t-[3px]">
           <Image
             src="/modules/about/krmu-committe/krmu-committe.jpg"
             fill
-            className=" object-cover object-center rounded-[3px]"
+            className=" object-cover object-center lg:rounded-[3px] rounded-t-[3px]"
             alt="KRMU Committee"
             unoptimized
           />
+        </div>
           
-          {/* White Card overlapping bottom-left */}
-          <div className="absolute bottom-0 left-0 md:bottom-12 md:left-12 z-10 w-full md:w-[420px] 2xl:w-[500px] bg-white p-6 md:p-8 text-[#061623] shadow-xl rounded-[3px]">
+        {/* White Card overlapping bottom-left */}
+        <div className="relative lg:absolute bottom-0 left-0 lg:bottom-12 lg:left-12 z-10 w-full lg:w-[420px] 2xl:w-[500px] bg-white p-6 md:p-8 text-[#061623] shadow-xl lg:rounded-[3px] rounded-b-[3px]">
             <h4 className="text-3xl md:text-[36px] font-serif font-semibold mb-5 leading-[1.2]">
               {aboutData?.krmucommittee?.title || "KRMU Committee"}
             </h4>
@@ -53,7 +54,6 @@ const KrmuCommitteeSection = ({ aboutData }: KrmuCommitteeSectionProps) => {
               </Link>
             )}
           </div>
-        </div>
       </div>
       <SectionDivider />
     </section>

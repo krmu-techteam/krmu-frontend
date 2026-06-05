@@ -20,7 +20,7 @@ const MissionGrid = () => {
           <div className="flex items-center justify-center text-white/90 mt-1">
             <CircleArrowRight size={24} />
           </div>
-          <p className="text-white/90 text-[16px] font-poppins leading-[1.6]">
+          <p className="text-white/90 text-[16px] text-left font-poppins leading-[1.6]">
             {item}
           </p>
         </div>

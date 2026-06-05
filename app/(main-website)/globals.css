@@ -4956,3 +4956,9 @@ body:before {
 
 }
 @keyframes shimmer { 100% { transform: translateX(100%); } }
+
+
+/* Tailwind Custom */
+.heading-primary {
+  @apply text-3xl md:text-4xl xl:text-[42px] font-serif font-bold text-white leading-[1.2] tracking-tight;
+}

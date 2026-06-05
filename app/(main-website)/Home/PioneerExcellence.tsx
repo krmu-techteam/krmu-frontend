@@ -3,9 +3,9 @@ import TimelineCarousel from "../components/Carousels/TimelineCarousel";
 const PioneerExcellence = () => {
   return (
     <>
-      <section className="pt-8 sm:pt-10 lg:pt-12 xl:pt-16 px-6 sm:px-10 lg:px-12 xl:px-16">
-        <div className="max-w-[1530px] mx-auto w-full mb-16">
-          <h3 className="text-3xl md:text-[42px] font-serif font-semibold mb-6 text-white leading-[1.2]">
+      <section className="pt-8 sm:pt-10 lg:pt-12 xl:pt-16">
+        <div className="max-w-[1530px] mx-auto w-full lg:mb-16 mb-8 px-6 sm:px-10 lg:px-12 xl:px-16">
+          <h3 className="heading-primary mb-6">
             K.R. Mangalam Group: Pioneering Excellence in Education
           </h3>
           <p className="text-[14px] sm:text-[16px] leading-relaxed text-white/80 mb-6 font-poppins">
