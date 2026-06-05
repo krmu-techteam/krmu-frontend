@@ -637,18 +637,18 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                 <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
                   {/* Left Column: Grid */}
-                  <div className="col-span-8 flex flex-col gap-6">
+                  <div className="col-span-7 flex flex-col gap-6">
                     <div className="flex flex-col">
                       <h2 className="text-2xl font-normal font-poppins text-white leading-tight">
                         {lifeatkrmuMenu?.title}
                       </h2>
-                      <p className="text-white/60 text-sm font-light">
+                      <p className="text-white/60 font-poppins text-sm font-light">
                         {lifeatkrmuMenu?.lfeatkrmu2?.heading ||
                           "Explore Facilities"}
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-4 mt-2">
+                    <div className="grid grid-cols-3 gap-3 mt-4">
                       {[
                         ...(lifeatkrmuMenu?.lifeatkrmu1?.menulinks || []),
                         ...(lifeatkrmuMenu?.lfeatkrmu2?.menulinks || []),
@@ -656,7 +656,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         <Link
                           key={link.id}
                           href={link.url || "#"}
-                          className="flex items-center justify-center py-3 px-4 border border-white/10 text-center text-sm font-light tracking-wide text-white/90 hover:text-white hover:bg-white/5 transition-all duration-300 min-h-[50px] rounded-sm"
+                          className="flex items-center justify-center py-3 px-3 border border-white/10 bg-transparent text-center text-[12px] xl:text-[13px] font-normal tracking-wide text-white/80 hover:text-white hover:bg-white/5 hover:border-white/30 transition-all duration-300 min-h-[46px] font-poppins rounded-[3px]"
                         >
                           {link.title}
                         </Link>
@@ -665,26 +665,17 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                   </div>
 
                   {/* Right Column: Featured Image */}
-                  <div className="col-span-4 pl-6 flex flex-col justify-center">
-                    {lifeatkrmuMenu?.backgroundimage?.url && (
-                      <div className="relative rounded-sm overflow-hidden border border-white/10 group h-56">
-                        <Image
-                          src={`${STRAPI_URL}${lifeatkrmuMenu?.backgroundimage?.url}`}
-                          alt="Campus Life"
-                          fill
-                          sizes="(max-width: 768px) 100vw, 33vw"
-                          className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                          priority
-                        />
-                        {lifeatkrmuMenu?.backgroundimagetext && (
-                          <div className="absolute inset-0 bg-black/40 flex items-end p-4">
-                            <p className="text-white text-xs font-light">
-                              {lifeatkrmuMenu?.backgroundimagetext}
-                            </p>
-                          </div>
-                        )}
-                      </div>
-                    )}
+                  <div className="col-span-5 pl-4 flex flex-col justify-center py-2">
+                    <div className="relative rounded-[4px] overflow-hidden border border-white/10 w-full aspect-video shadow-2xl">
+                      <Image
+                        src="/modules/header/campus/campus.png"
+                        alt="Campus Life"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover scale-[1.03] hover:scale-[1.05] transition-transform duration-1000"
+                        priority
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -702,17 +693,17 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                 <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
                 <div className="absolute bottom-[-10%] left-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10">
-                  <h2 className="text-2xl font-normal font-poppins text-white mb-6 tracking-tight">
-                    {aboutusMenu?.title}
-                  </h2>
+                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
+                  {/* Left Column: Image, Text, Buttons, Stats */}
+                  <div className="col-span-8 flex flex-col gap-6">
+                    <h2 className="text-2xl font-normal font-poppins text-white leading-tight">
+                      {aboutusMenu?.title}
+                    </h2>
 
-                  {/* Top Row: 3 Columns */}
-                  <div className="grid grid-cols-12 gap-8 items-stretch mb-8">
-                    {/* Col 1: Image */}
-                    <div className="col-span-3">
+                    <div className="flex flex-col xl:flex-row gap-6 items-stretch">
+                      {/* Image */}
                       {aboutusMenu?.backgroundimage?.url && (
-                        <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-white/10 group h-full">
+                        <div className="relative w-full xl:w-1/2 rounded-[4px] overflow-hidden border border-white/10 group aspect-video shadow-lg">
                           <Image
                             src={`${STRAPI_URL}${aboutusMenu?.backgroundimage?.url}`}
                             alt="About KRMU"
@@ -723,95 +714,95 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                           />
                         </div>
                       )}
-                    </div>
 
-                    {/* Col 2: Content & Action */}
-                    <div className="col-span-5 flex flex-col justify-between pr-6">
-                      <p className="text-white/80 text-sm font-light leading-relaxed">
-                        Welcome to a world where education meets excitement! At
-                        K.R. Mangalam University (KRMU), we believe that
-                        university life should be a perfect blend of learning,
-                        growth, and fun. Our campus is not just a place to
-                        study.
-                      </p>
+                      {/* Content & Action */}
+                      <div className="w-full xl:w-1/2 flex flex-col justify-center gap-4 pr-4">
+                        <p className="text-white/80 text-[13px] font-light leading-relaxed font-poppins">
+                          Welcome to a world where education meets excitement! At
+                          K.R. Mangalam University (KRMU), we believe that
+                          university life should be a perfect blend of learning,
+                          growth, and fun. Our campus is not just a place to
+                          study.
+                        </p>
 
-                      <div className="flex gap-4 mt-4">
-                        <Link
-                          href="#"
-                          className="flex-1 bg-transparent hover:bg-white/5 border border-white/20 text-white font-medium py-2.5 px-4 rounded-sm text-xs tracking-wider flex items-center justify-center gap-1.5 transition-all uppercase"
-                        >
-                          <Download size={12} /> Brochure
-                        </Link>
-                        <Link
-                          href={applyNowButton?.url || "/apply"}
-                          className="flex-1 bg-[#cb000d] hover:bg-[#cb000d]/80 text-white font-semibold py-2.5 px-4 rounded-sm text-[15px] tracking-wider flex items-center justify-center gap-1.5 transition-all uppercase shadow-lg"
-                        >
-                          Apply Now <ArrowUpRight size={12} />
-                        </Link>
+                        <div className="flex gap-3 mt-2">
+                          <Link
+                            href="#"
+                            className="flex-1 bg-transparent border border-white/20 hover:bg-white/5 text-white/90 font-medium py-2.5 px-4 rounded-[3px] text-[11px] tracking-wider flex items-center justify-center gap-1.5 transition-all uppercase font-poppins"
+                          >
+                            Download Brochure
+                          </Link>
+                          <Link
+                            href={applyNowButton?.url || "/apply"}
+                            className="flex-1 bg-[#cb000d] hover:bg-[#cb000d]/80 text-white font-semibold py-2.5 px-4 rounded-[3px] text-[13px] tracking-wider flex items-center justify-center gap-1.5 transition-all uppercase shadow-lg font-poppins"
+                          >
+                            Apply Now <ArrowUpRight size={14} />
+                          </Link>
+                        </div>
                       </div>
                     </div>
 
-                    {/* Col 3: Links */}
-                    <div className="col-span-4 border-l border-white/10 pl-8 flex flex-col justify-between">
-                      <div className="space-y-6">
-                        <div>
-                          <h4 className="text-white font-semibold text-sm mb-2">
-                            {aboutusMenu?.overview?.heading}
-                          </h4>
-                          <ul className="flex flex-col gap-2">
-                            {aboutusMenu?.overview?.menulinks.map((menu) => (
+                    {/* Stats Boxes */}
+                    <div className="grid grid-cols-2 gap-4 mt-2">
+                      {aboutusMenu?.aboutuscounter.map((counter: any) => (
+                        <div
+                          key={counter.id}
+                          className="bg-[#0b1622] border border-white/5 rounded-[4px] px-6 py-5 flex flex-col justify-center items-center text-center transition-all duration-500"
+                        >
+                          <span className="text-[20px] font-bold text-white mb-1 font-poppins">
+                            {counter.countertext}
+                          </span>
+                          <span className="text-[11px] text-white/50 leading-tight font-light font-poppins">
+                            {counter.countercontent}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Right Column: Links */}
+                  <div className="col-span-4 border-l border-white/10 pl-8 lg:pl-10 flex flex-col">
+                    <div className="space-y-8 mt-2">
+                      <div>
+                        <h4 className="text-white font-bold text-[13px] mb-4 font-poppins tracking-wide">
+                          {aboutusMenu?.overview?.heading || "Overview"}
+                        </h4>
+                        <ul className="flex flex-col gap-3">
+                          {aboutusMenu?.overview?.menulinks.map((menu: any) => (
+                            <li key={menu.id}>
+                              <Link
+                                href={menu.url || "#"}
+                                className="text-white/70 hover:text-white transition-colors text-[13px] font-light font-poppins"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {menu.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="text-white font-bold text-[13px] mb-4 font-poppins tracking-wide">
+                          {aboutusMenu?.administration?.heading || "Administration"}
+                        </h4>
+                        <ul className="flex flex-col gap-3">
+                          {aboutusMenu?.administration?.menulinks.map(
+                            (menu: any) => (
                               <li key={menu.id}>
                                 <Link
                                   href={menu.url || "#"}
-                                  className="text-white/60 hover:text-white transition-colors text-sm font-light"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
+                                  className="text-white/70 hover:text-white transition-colors text-[13px] font-light font-poppins"
                                 >
                                   {menu.title}
                                 </Link>
                               </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        <div>
-                          <h4 className="text-white font-semibold text-sm mb-2">
-                            {aboutusMenu?.administration?.heading}
-                          </h4>
-                          <ul className="flex flex-col gap-2">
-                            {aboutusMenu?.administration?.menulinks.map(
-                              (menu) => (
-                                <li key={menu.id}>
-                                  <Link
-                                    href={menu.url || "#"}
-                                    className="text-white/60 hover:text-white transition-colors text-sm font-light"
-                                  >
-                                    {menu.title}
-                                  </Link>
-                                </li>
-                              ),
-                            )}
-                          </ul>
-                        </div>
+                            )
+                          )}
+                        </ul>
                       </div>
                     </div>
-                  </div>
-
-                  {/* Bottom Row: Stats */}
-                  <div className="grid grid-cols-2 gap-6 pt-4 border-t border-white/10">
-                    {aboutusMenu?.aboutuscounter.map((counter) => (
-                      <div
-                        key={counter.id}
-                        className="bg-white/5 border border-white/10 rounded-sm px-8 py-4 flex flex-col justify-center items-center text-center group hover:bg-white/10 transition-all duration-500"
-                      >
-                        <span className="text-2xl font-bold text-white mb-0.5">
-                          {counter.countertext}
-                        </span>
-                        <span className="text-xs text-white/50 leading-tight tracking-wide font-light">
-                          {counter.countercontent}
-                        </span>
-                      </div>
-                    ))}
                   </div>
                 </div>
               </div>
