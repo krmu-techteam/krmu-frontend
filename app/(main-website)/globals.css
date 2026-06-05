@@ -47,6 +47,11 @@
   --school-nav-blue: #0e83d8;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   position: relative;
   isolation: isolate;

@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { X, ChevronDown, Download, ArrowUpRight } from "lucide-react";
+import { X, ChevronDown, Download, ArrowUpRight, ArrowRight, BookOpen, Layers, UserPlus, Rocket, Briefcase, Microscope, Leaf, Users, Building2 } from "lucide-react";
 import { HeaderMenus } from "@/lib/types/header-menu";
 import { TOPBARITEMS } from "@/lib/types/HeaderType";
 import { STRAPI_URL } from "@/app/constant";
@@ -17,6 +17,17 @@ type Props = {
 
 const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   const academicMenu = navbarData.find(
     (component) => component.__component === "temp-menus.academic-menu",
@@ -70,12 +81,12 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
           onClick={(e) => e.stopPropagation()}
         >
           {/* Drawer Header */}
-          <div className="flex items-center justify-between p-6 bg-white/5 border-b border-white/5">
-            <div className="relative h-10 w-36">
+          <div className="flex items-center px-4 py-2 justify-between bg-white/5 border-b border-white/5">
+            <div className="relative h-10 w-52">
               <Image src="/KRMU-Logo-NAAC.webp" alt="Logo" fill className="object-contain" />
             </div>
             <button 
-              className="text-white/70 hover:text-[#cb000d] transition-colors p-2"
+              className="text-white hover:text-[#cb000d] transition-colors p-2"
               onClick={onClose}
             >
               <X size={24} />
@@ -84,15 +95,18 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
 
           <div className="flex flex-col h-full overflow-hidden relative">
             {/* Main Menu View */}
-            <div className={`flex flex-col h-full p-8 transition-all duration-500 overflow-y-auto ${activeSubMenu ? '-translate-x-full opacity-0 pointer-events-none h-0 overflow-hidden' : 'translate-x-0 opacity-100'}`}>
-              <nav className="flex flex-col gap-6 text-lg font-semibold tracking-tight mb-12">
+            <div className={`flex flex-col h-full transition-all duration-500 overflow-y-auto ${activeSubMenu ? '-translate-x-full opacity-0 pointer-events-none h-0 overflow-hidden' : 'translate-x-0 opacity-100'}`}>
+              <nav className="flex flex-col text-[17px] font-normal font-poppins tracking-normal">
                 {academicMenu && (
                   <button 
                     onClick={() => setActiveSubMenu("academics")} 
-                    className="flex items-center justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 pb-3 text-white/90 text-left group"
+                    className="flex pl-4 pr-6 py-2 items-center justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 text-white/90 text-left group"
                   >
-                    {academicMenu?.title}
-                    <ChevronDown size={18} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
+                    <div className="flex items-center gap-3">
+                      <BookOpen size={20} strokeWidth={1.5} className="text-white/40 group-hover:text-[#cb000d] transition-colors" />
+                      {academicMenu?.title}
+                    </div>
+                    <ChevronDown size={18} strokeWidth={1.5} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
                   </button>
                 )}
 
@@ -100,19 +114,26 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                   <Link 
                     href={programmesLinks.url || "#"} 
                     onClick={onClose} 
-                    className="hover:text-[#cb000d] transition-colors border-b border-white/5 pb-3 text-white/90"
+                    className="flex items-center pl-4 pr-6 py-2 justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 text-white/90 group"
                   >
-                    {programmesLinks.title}
+                    <div className="flex items-center gap-3">
+                      <Layers size={20} strokeWidth={1.5} className="text-white/40 group-hover:text-[#cb000d] transition-colors" />
+                      {programmesLinks.title}
+                    </div>
+                    <ChevronDown size={18} strokeWidth={1.5} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
                   </Link>
                 )}
 
                 {admissionMenu && (
                   <button 
                     onClick={() => setActiveSubMenu("admissions")} 
-                    className="flex items-center justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 pb-3 text-white/90 text-left group"
+                    className="flex pl-4 pr-6 py-2 items-center justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 text-white/90 text-left group"
                   >
-                    {admissionMenu?.title}
-                    <ChevronDown size={18} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
+                    <div className="flex items-center gap-3">
+                      <UserPlus size={20} strokeWidth={1.5} className="text-white/40 group-hover:text-[#cb000d] transition-colors" />
+                      {admissionMenu?.title}
+                    </div>
+                    <ChevronDown size={18} strokeWidth={1.5} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
                   </button>
                 )}
 
@@ -122,29 +143,39 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                     onClick={onClose} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-[#ff0010] transition-colors border-b border-white/5 pb-3 text-[#ff0010]"
+                    className="flex items-center pl-4 pr-6 py-2 justify-between hover:text-[#ff0010] transition-colors border-b border-white/5 text-[#ff0010] group"
                   >
-                    {zenithLinks.title}
+                    <div className="flex items-center gap-3">
+                      <Rocket size={20} strokeWidth={1.5} className="text-white/40 group-hover:text-[#ff0010] transition-colors" />
+                      {zenithLinks.title}
+                    </div>
+                    <ArrowUpRight size={18} strokeWidth={1.5} className="opacity-50 group-hover:opacity-100 transition-all" />
                   </Link>
                 )}
 
                 {placementMenu && (
                   <button 
                     onClick={() => setActiveSubMenu("placements")} 
-                    className="flex items-center justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 pb-3 text-white/90 text-left group"
+                    className="flex items-center pl-4 pr-6 py-2 justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 text-white/90 text-left group"
                   >
-                    {placementMenu?.title}
-                    <ChevronDown size={18} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
+                    <div className="flex items-center gap-3">
+                      <Briefcase size={20} strokeWidth={1.5} className="text-white/40 group-hover:text-[#cb000d] transition-colors" />
+                      {placementMenu?.title}
+                    </div>
+                    <ChevronDown size={18} strokeWidth={1.5} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
                   </button>
                 )}
 
                 {researchMenu && (
                   <button 
                     onClick={() => setActiveSubMenu("research")} 
-                    className="flex items-center justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 pb-3 text-white/90 text-left group"
+                    className="flex items-center pl-4 pr-6 py-2 justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 text-white/90 text-left group"
                   >
-                    {researchMenu?.title}
-                    <ChevronDown size={18} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
+                    <div className="flex items-center gap-3">
+                      <Microscope size={20} strokeWidth={1.5} className="text-white/40 group-hover:text-[#cb000d] transition-colors" />
+                      {researchMenu?.title}
+                    </div>
+                    <ChevronDown size={18} strokeWidth={1.5} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
                   </button>
                 )}
 
@@ -154,29 +185,39 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                     onClick={onClose} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-[#cb000d] transition-colors border-b border-white/5 pb-3 text-white/90"
+                    className="flex items-center pl-4 pr-6 py-2 justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 text-white/90 group"
                   >
-                    {sustainabilityLinks.title}
+                    <div className="flex items-center gap-3">
+                      <Leaf size={20} strokeWidth={1.5} className="text-white/40 group-hover:text-[#cb000d] transition-colors" />
+                      {sustainabilityLinks.title}
+                    </div>
+                    <ArrowUpRight size={18} strokeWidth={1.5} className="opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
                   </Link>
                 )}
 
                 {lifeatkrmuMenu && (
                   <button 
                     onClick={() => setActiveSubMenu("campus")} 
-                    className="flex items-center justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 pb-3 text-white/90 text-left group"
+                    className="flex items-center pl-4 pr-6 py-2 justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 text-white/90 text-left group"
                   >
-                    {lifeatkrmuMenu?.title}
-                    <ChevronDown size={18} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
+                    <div className="flex items-center gap-3">
+                      <Users size={20} strokeWidth={1.5} className="text-white/40 group-hover:text-[#cb000d] transition-colors" />
+                      {lifeatkrmuMenu?.title}
+                    </div>
+                    <ChevronDown size={18} strokeWidth={1.5} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
                   </button>
                 )}
 
                 {aboutusMenu && (
                   <button 
                     onClick={() => setActiveSubMenu("about")} 
-                    className="flex items-center justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 pb-3 text-white/90 text-left group"
+                    className="flex items-center pl-4 pr-6 py-2 justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 text-white/90 text-left group"
                   >
-                    {aboutusMenu?.title}
-                    <ChevronDown size={18} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
+                    <div className="flex items-center gap-3">
+                      <Building2 size={20} strokeWidth={1.5} className="text-white/40 group-hover:text-[#cb000d] transition-colors" />
+                      {aboutusMenu?.title}
+                    </div>
+                    <ChevronDown size={18} strokeWidth={1.5} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
                   </button>
                 )}
 
@@ -184,27 +225,39 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                   <Link 
                     href={careersLinks.url || "#"} 
                     onClick={onClose} 
-                    className="hover:text-[#cb000d] transition-colors border-b border-white/5 pb-3 text-white/90"
+                    className="flex items-center pl-4 pr-6 py-2 justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 text-white/90 group"
                   >
-                    {careersLinks.title}
+                    <div className="flex items-center gap-3">
+                      <Briefcase size={20} strokeWidth={1.5} className="text-white/40 group-hover:text-[#cb000d] transition-colors" />
+                      {careersLinks.title}
+                    </div>
+                    <ChevronDown size={18} strokeWidth={1.5} className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all" />
                   </Link>
                 )}
               </nav>
 
               {/* Bottom Quick Links */}
-              <div className="mt-auto pt-8 border-t border-white/10 space-y-4">
-                <p className="text-xs uppercase tracking-wider text-white/40 font-semibold">Quick links</p>
-                <div className="flex flex-wrap gap-2.5">
-                  {topbarmenu.map((menu) => (
+              <div className="pt-6 pb-24 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-[#0060A9]"></div>
+                  <p className="text-[15px] tracking-wide text-[#0674c9] font-medium font-poppins">Quick Links</p>
+                  <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-[#0060A9]"></div>
+                </div>
+                <div className="grid grid-cols-2 gap-3 px-6">
+                  {topbarmenu.map((menu, idx) => (
                     <Link
                       key={menu?.id}
                       href={menu?.url || "#"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white/80 hover:text-white transition-colors py-1.5 px-3 rounded-[3px] border border-white/20 text-xs"
+                      className={`flex items-center justify-between gap-2 text-white/90 hover:text-white transition-all py-2.5 px-4 rounded-[10px] border border-white/10 bg-white/[0.03] hover:bg-white/[0.08] text-[13px] font-poppins ${
+                        idx === 0 || idx === topbarmenu.length - 1 ? "col-span-2" : "col-span-1"
+                      }`}
                       onClick={onClose}
                     >
-                      {menu?.title}
+                      <span className="truncate">{menu?.title}</span>
+                      <ArrowRight size={14} className="text-white/70 shrink-0" strokeWidth={1.5} />
+                      
                     </Link>
                   ))}
                 </div>
