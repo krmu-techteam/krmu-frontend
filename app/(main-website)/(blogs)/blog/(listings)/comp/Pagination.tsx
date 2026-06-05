@@ -10,7 +10,11 @@ type Props = {
   pageNumbers: (number | string)[];
 };
 
-export default function Pagination({ currentPage, totalPages, pageNumbers }: Props) {
+export default function Pagination({
+  currentPage,
+  totalPages,
+  pageNumbers,
+}: Props) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -27,11 +31,9 @@ export default function Pagination({ currentPage, totalPages, pageNumbers }: Pro
     setLoading(false);
   }, [searchParams]);
 
-  const btnBase =
-    "px-3 py-1 border rounded transition";
+  const btnBase = "px-3 py-1 border rounded transition";
 
-  const disabledStyle =
-    "opacity-50 pointer-events-none cursor-not-allowed";
+  const disabledStyle = "opacity-50 pointer-events-none cursor-not-allowed";
 
   return (
     <div
@@ -65,13 +67,13 @@ export default function Pagination({ currentPage, totalPages, pageNumbers }: Pro
             onClick={() => handlePageChange(Number(num))}
             className={`${btnBase} ${
               num === currentPage
-                ? "#cb000d text-white border-red-600"
+                ? "#cb000d text-black border-red-600"
                 : "bg-white text-black hover:bg-gray-100"
             } ${loading ? disabledStyle : ""}`}
           >
             {num}
           </button>
-        )
+        ),
       )}
 
       {/* Next */}
@@ -96,6 +98,6 @@ export default function Pagination({ currentPage, totalPages, pageNumbers }: Pro
           alt="Preloader"
         />
       )} */}
-    </div>                        
+    </div>
   );
 }
