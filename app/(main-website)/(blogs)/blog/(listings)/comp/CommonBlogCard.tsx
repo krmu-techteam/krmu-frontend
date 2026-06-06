@@ -93,13 +93,17 @@ const CommonBlogCard = async ({ title, excerpt, slug, imgId, date }: Props) => {
             />
 
             <div
-              dangerouslySetInnerHTML={{ __html: excerpt }}
+              dangerouslySetInnerHTML={{
+                __html: `${excerpt
+                  .split("[&hellip;]")[0]
+                  .trim()}...&nbsp<span style="color: #093475;">Read More</span>`,
+              }}
               className="mb-5"
             />
 
-            <span className="text-lg font-normal text-[#093475] block">
-              Read More
-            </span>
+            {/* <span className="text-lg font-normal text-[#093475] block">
+              Read More 
+            </span> */}
           </div>
         </div>
       </Link>
