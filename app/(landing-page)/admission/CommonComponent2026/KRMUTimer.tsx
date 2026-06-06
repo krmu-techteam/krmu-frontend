@@ -84,7 +84,7 @@ export default function KRMUTimer({ targetDate }: ZenithTimerProps) {
         Now or Never! Grab Your 100% Scholarship Today
       </span> */}
 <span className="text-[10px] xl:text-xs uppercase tracking-wider font-extrabold">
-      Registration Closing on June 6 | Join Ankur Warikoo LIVE | Limited Seats Available
+      Registration Closing on June 7 | Join Ankur Warikoo LIVE | Limited Seats Available
       </span>
       <div className="flex gap-2 font-mono text-sm">
         <TimeBox value={format(timeLeft.days)} label="D" />
