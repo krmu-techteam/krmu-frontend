@@ -7,12 +7,12 @@ type Props = {
 
 const ProgrammesAlumni = ({ alumniData }: Props) => {
   return (
-    <section className="py-20 bg-[#f9f9f9] mt-20">
-      <div className="max-w-[1440px] mx-auto w-full text-center">
-        <h3 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-semibold">
+    <section className="py-16">
+      <div className="max-w-[1530px] mx-auto w-full text-center pr-13 pl-10">
+        <h3 className="mb-4 text-3xl md:text-5xl lg:text-6xl text-white font-semibold">
           Voices of Our Alumni
         </h3>
-        <p className="mb-10">
+        <p className="mb-10 font-poppins text-white/80">
           Our Success Stories
         </p>
         <div>

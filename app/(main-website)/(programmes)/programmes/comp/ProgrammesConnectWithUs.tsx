@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ProgrammesConnectWithUs = () => {
   return (
-    <section className="py-10 bg-[url(/programmes/footer-bg.svg)] bg-cover bg-center bg-no-repeat">
+    <section className="py-10 bg-white/[0.09] bg-cover bg-center bg-no-repeat">
       <div className="max-w-[1320px] mx-auto w-full px-2.5 sm:px-4">
         <h3 className="text-4xl lg:text-[40px] font-semibold mb-5 text-white text-center sm:text-left">
           Connect With Us
@@ -19,7 +19,7 @@ const ProgrammesConnectWithUs = () => {
                   <PhoneCall className="text-xl text-white" />
                 </div>
               </div>
-              <span className=" p-2.5 flex flex-wrap items-center lg:gap-2.5 text-sm font-medium text-white">
+              <span className=" p-2.5 flex font-poppins flex-wrap items-center lg:gap-2.5 text-sm font-medium text-white">
                 <span className="">Call Us:</span>
                 <span>9311411717</span>
               </span>
@@ -35,7 +35,7 @@ const ProgrammesConnectWithUs = () => {
                   <Mail className="text-xl text-white" />
                 </div>
               </div>
-              <span className=" p-2.5 flex flex-wrap items-center lg:gap-2.5 text-sm font-medium text-white break-all">
+              <span className=" p-2.5 font-poppins flex flex-wrap items-center lg:gap-2.5 text-sm font-medium text-white break-all">
                 <span className="">Email Us:</span>
                 <span>welcome@krmangalam.edu.in</span>
               </span>
@@ -52,7 +52,7 @@ const ProgrammesConnectWithUs = () => {
                   <MapPin className="text-xl text-white" />
                 </div>
               </div>
-              <span className=" p-1.5 flex items-center gap-2.5 text-sm font-medium text-white">
+              <span className=" p-1.5 flex font-poppins items-center gap-2.5 text-sm font-medium text-white">
                 <span className=""></span>
                 <span>
                   Address: K.R. Mangalam University, Sohna - Gurgaon Road,

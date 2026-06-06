@@ -51,7 +51,7 @@ export default function ProgrammesFilterHeader({
 
   return (
     <>
-    <div className="md:sticky md:top-[140px] z-20 bg-[#061623] p-3 mb-2 rounded-sm">
+    <div className="lg:sticky lg:top-[130px] z-[40] bg-[#061623] p-3 mb-2 rounded-sm shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
       {/* Filters & Search Row */}
       <div className="w-full flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         {/* Tabs */}

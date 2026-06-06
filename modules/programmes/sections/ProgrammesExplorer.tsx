@@ -356,10 +356,10 @@ const ProgrammesExplorer = () => {
   });
 
   return (
-    <section className="w-full px-4 md:px-5 2xl:px-0 font-poppins">
+    <section className="w-full px-4 md:px-8 2xl:px-0 font-poppins">
       <div className="mx-auto flex flex-col md:flex-row gap-6 lg:gap-8 items-start max-w-[1530px] lg:px-3">
         {/* Sidebar for Schools */}
-        <div className="hidden lg:block w-[300px] shrink-0">
+        <div className="hidden lg:block w-[300px] shrink-0 sticky top-[130px] self-start max-h-[calc(100vh-140px)] overflow-y-auto no-scrollbar">
           <ProgrammesSidebar 
             activeSchoolSlug={selectedSchool}
             onSchoolChange={(slug) => {
@@ -388,21 +388,23 @@ const ProgrammesExplorer = () => {
             viewMode={viewMode}
             onViewModeChange={setViewMode}
           />
-          <ProgrammesList 
-            programmes={mappedProgrammes}
-            isLoading={isLoading}
-            showLoadMore={showLoadMore}
-            onLoadMore={() => {}}
-            onProgrammeClick={(id) => {
-              const p = programmes.find(x => x.id === id);
-              if (p) {
-                 setSelectedProgramme(p);
-                 setIsPopupOpen(true);
-                 setSlug(("programmeslug" in p ? p.programmeslug : p.phdslug) || "");
-              }
-            }}
-            viewMode={viewMode}
-          />
+          <div className="flex-1 mt-4 lg:mt-0">
+            <ProgrammesList 
+              programmes={mappedProgrammes}
+              isLoading={isLoading}
+              showLoadMore={showLoadMore}
+              onLoadMore={() => {}}
+              onProgrammeClick={(id) => {
+                const p = programmes.find(x => x.id === id);
+                if (p) {
+                   setSelectedProgramme(p);
+                   setIsPopupOpen(true);
+                   setSlug(("programmeslug" in p ? p.programmeslug : p.phdslug) || "");
+                }
+              }}
+              viewMode={viewMode}
+            />
+          </div>
         </div>
       </div>
 
