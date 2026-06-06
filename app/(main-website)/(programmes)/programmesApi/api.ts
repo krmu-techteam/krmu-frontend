@@ -133,10 +133,13 @@ export async function getAllSchoolProgrammeByDegOrCatPaginated(
   page: number = 1,
   pageSize: number = 6,
 ): Promise<ProgrammesResponse> {
-  const url =
-    `${FETCH_STRAPI_URL}/api/school-programmes` +
-    `?sort[0]=order_num:asc&filters[degree][slug][$eq]=${deg}` +
-    `&filters[school_category][slug][$eq]=${cat}` +
+  let url = `${FETCH_STRAPI_URL}/api/school-programmes?sort[0]=order_num:asc`;
+  
+  if (deg !== "all") {
+    url += `&filters[degree][slug][$eq]=${deg}`;
+  }
+  
+  url += `&filters[school_category][slug][$eq]=${cat}` +
     `&fields[0]=title` +
     `&fields[2]=highlightitle` +
     `&fields[1]=programmeslug` +

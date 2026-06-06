@@ -27,10 +27,8 @@ function normalize(text: string | null | undefined) {
   if (!text) return "";
   return text.toLowerCase().replace(/[\.\s]/g, "");
 }
-
-import Image from "next/image";
 import Link from "next/link";
-import ProgrammesHero from "./ProgrammesHero";
+
 // import { Skeleton } from "@/components/ui/skeleton";
 
 type ZenithCriteria = {

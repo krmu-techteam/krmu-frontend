@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
-import { X, Search } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { X, Search, Loader2, GraduationCap, ArrowRight, BookOpen } from 'lucide-react';
 import Link from 'next/link';
+import { searchSchoolProgrammes, searchPhdProgrammes } from '@/app/(main-website)/(programmes)/programmesApi/api';
 
 interface HeroSearchProps {
   isOpen: boolean;
@@ -11,6 +12,50 @@ interface HeroSearchProps {
 
 export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const [query, setQuery] = useState("");
+  const [suggestions, setSuggestions] = useState<any[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+
+  useEffect(() => {
+    const fetchSuggestions = async () => {
+      const searchTerm = query.trim();
+      if (searchTerm.length < 2) {
+        setSuggestions([]);
+        return;
+      }
+      setIsSearching(true);
+      try {
+        // Fetch all data once (cached by Next.js) and filter locally for robust fuzzy matching
+        const [schoolRes, phdRes] = await Promise.all([
+          searchSchoolProgrammes("", 1, 1000),
+          searchPhdProgrammes("", 1, 1000)
+        ]);
+        
+        const schoolData = schoolRes?.data || [];
+        const phdData = phdRes?.data || [];
+        const allData = [...schoolData, ...phdData];
+
+        // Clean user query: remove spaces and dots for fuzzy match (e.g. "b tech" -> "btech")
+        const cleanSearch = searchTerm.replace(/[\s.]/g, '').toLowerCase();
+
+        const filtered = allData.filter((item) => {
+          const title = (item.title || item.heading || "").toLowerCase();
+          // Clean the target title as well
+          const cleanTitle = title.replace(/[\s.]/g, '');
+          return cleanTitle.includes(cleanSearch);
+        }).slice(0, 6);
+
+        setSuggestions(filtered);
+      } catch (err) {
+        console.error("Failed to fetch suggestions", err);
+      } finally {
+        setIsSearching(false);
+      }
+    };
+
+    const timer = setTimeout(fetchSuggestions, 300);
+    return () => clearTimeout(timer);
+  }, [query]);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -19,6 +64,9 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
     if (isOpen) {
       inputRef.current?.focus();
       window.addEventListener("keydown", handleEsc);
+    } else {
+      setQuery("");
+      setSuggestions([]);
     }
     return () => {
       window.removeEventListener("keydown", handleEsc);
@@ -27,56 +75,95 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
 
   if (!isOpen) return null;
 
-  const popularSearches = [
-    { name: "B.Tech Computer Science", href: "/programmes" },
-    { name: "MBA Admission 2026", href: "/admissions" },
-    { name: "Fee Structure", href: "/admissions" },
-    { name: "Scholarships", href: "/admissions" },
-    { name: "Placement Report", href: "/placements" },
-  ];
-
   return (
-    <div className="fixed inset-0 z-[999] flex items-start justify-center bg-[#04101A]/20 backdrop-blur-xl transition-all duration-300 overflow-hidden pt-[15vh] md:pt-[20vh]">
-      <button
-        onClick={onClose}
-        className="absolute top-8 right-8 text-white/50 hover:text-white transition-all p-3 rounded-full hover:bg-white/5 border border-white/5 hover:border-white/10 cursor-pointer z-20"
-      >
-        <X size={20} />
-      </button>
-
-      <div className="w-full max-w-2xl px-6 flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-8 duration-300 ease-out relative z-10">
-        <div className="flex flex-col gap-2">
-          <div className="relative group">
+    <div className="fixed inset-0 z-[999] flex items-start justify-center transition-all duration-300 overflow-hidden pt-[15vh] md:pt-[20vh]">
+      {/* Base Light Blur for the whole screen */}
+      <div className="absolute inset-0 bg-[#04101A]/30 backdrop-blur-sm" />
+      
+      {/* Heavy Blur only in the center, fading out to the left and right */}
+      <div 
+        className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-full max-w-4xl backdrop-blur-xl pointer-events-none"
+        style={{
+          WebkitMaskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
+          maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)'
+        }}
+      />
+      <div className="w-full max-w-2xl px-6 flex flex-col items-center animate-in fade-in zoom-in-95 duration-200 ease-out relative z-10">
+        <div className="w-full bg-white/[0.05] border border-white/10 rounded-2xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl flex flex-col">
+          {/* Top Search Input */}
+          <div className="flex items-center px-4 md:px-6 py-4 border-b border-white/10 w-full relative">
+            <Search className="text-white/60 shrink-0" size={22} strokeWidth={1.5} />
             <input
               ref={inputRef}
               type="text"
-              placeholder="Search programs, admissions, campus..."
-              className="w-full bg-white/[0.03] border border-white/15 text-white rounded-sm py-5 pl-14 pr-6 text-lg md:text-xl focus:outline-none focus:border-secondary/60 focus:bg-white/[0.05] focus:ring-4 focus:ring-secondary/10 transition-all duration-300 placeholder-white/30 font-light tracking-wide shadow-2xl"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search programs..."
+              className="w-full bg-transparent border-none text-white px-4 text-lg md:text-[19px] focus:outline-none focus:ring-0 placeholder-white/40 tracking-wide"
             />
-            <Search 
-              className="absolute left-5 top-1/2 -translate-y-1/2 text-white/30 group-focus-within:text-secondary transition-colors duration-300" 
-              size={22} 
-            />
+            <button
+              onClick={onClose}
+              className="cursor-pointer text-white/90"
+              title="Close"
+            >
+              <X className="text-white/60 shrink-0" size={22} strokeWidth={1.5}/>
+            </button>
           </div>
-          <div className="flex justify-between items-center px-1">
-            <span className="text-[11px] text-white/30 uppercase tracking-widest">Type your search query</span>
-            <span className="text-[11px] text-white/30 uppercase tracking-widest hidden sm:inline">ESC to close</span>
-          </div>
-        </div>
 
-        <div className="text-white/80">
-          <p className="text-[12px] font-medium uppercase tracking-widest text-white/40 mb-4">Popular Searches</p>
-          <div className="flex flex-wrap gap-2.5">
-            {popularSearches.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={onClose}
-                className="bg-white/[0.02] hover:bg-secondary/10 border border-white/10 hover:border-secondary/40 text-[13px] font-normal px-4.5 py-2.5 rounded-sm transition-all duration-300 text-white/80 hover:text-white"
-              >
-                {item.name}
-              </Link>
-            ))}
+          {/* Suggestions or Loader */}
+          {query.trim().length > 0 && (
+            <div className="flex flex-col p-2 max-h-[55vh] overflow-y-auto custom-scrollbar">
+              {isSearching ? (
+                <div className="flex justify-center py-10">
+                  <Loader2 className="animate-spin text-white/50" size={24} />
+                </div>
+              ) : suggestions.length > 0 ? (
+                suggestions.map((item) => {
+                  const slug = item.programmeslug || item.phdslug;
+                  const titleStr = item.title 
+                    ? (item.title + (item.highlightitle ? ` ${item.highlightitle}` : "")) 
+                    : item.heading;
+                  const cleanTitle = (item.title 
+                    ? (item.title + (item.highlightitle ? ` ${item.highlightitle}` : "")) 
+                    : item.heading || "").replace(/<[^>]*>?/gm, '');
+
+                  return (
+                    <Link
+                      key={item.id}
+                      href={`/programs/${slug}`}
+                      onClick={onClose}
+                      title={cleanTitle}
+                      className="flex items-center gap-4 px-4 py-3 md:py-4 rounded-xl border border-transparent hover:border-white/10 hover:bg-white/[0.08] hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] transition-all duration-300 group"
+                    >
+                      <div className="text-[#00AEEF] group-hover:text-white shrink-0 transition-colors">
+                        <BookOpen size={24} strokeWidth={1.5} />
+                      </div>
+                      <div className="flex flex-col flex-1">
+                        <span 
+                          className="text-[15px] md:text-[16px] font-medium text-white/90 group-hover:text-white transition-colors tracking-wide line-clamp-1"
+                          dangerouslySetInnerHTML={{ __html: titleStr }}
+                        />
+                        {/* <span className="text-[12px] md:text-[13px] text-white/50 group-hover:text-white/80 transition-colors mt-0.5">
+                          {item.programmeslug ? "Degree Programme" : "Ph.D. Programme"}
+                        </span> */}
+                      </div>
+                      <ArrowRight size={18} className="text-white/90 group-hover:text-white/80 transition-all duration-300 shrink-0 group-hover:translate-x-1.5" strokeWidth={1.5} />
+                    </Link>
+                  );
+                })
+              ) : (
+                <div className="py-10 text-center text-white/40 text-sm tracking-wide">
+                  No results found for "{query}"
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Footer */}
+          <div className="border-t border-white/5 bg-white/[0.02] px-4 py-3 flex justify-center items-center">
+            <span className="text-[12px] text-white/40 font-medium tracking-wide">
+              Press <kbd className="px-1.5 py-0.5 bg-white/10 rounded-sm text-white/60 mx-1 border border-white/5 font-sans font-semibold">ESC</kbd> to close
+            </span>
           </div>
         </div>
       </div>

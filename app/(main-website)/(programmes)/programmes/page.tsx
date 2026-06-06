@@ -10,6 +10,7 @@ import { createBreadcrumbProgSchema } from "@/lib/api/common";
 import Script from "next/script";
 import ProgrammesHero from "./comp/ProgrammesHero";
 import { Suspense } from "react";
+import { HeroSection, ProgrammesExplorer } from "@/modules/programmes";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("programmes");
@@ -89,9 +90,11 @@ const page = async () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
       />
-      <ProgrammesHero />
+      {/* <ProgrammesHero /> */}
+      <HeroSection />
       <Suspense fallback={<div>Loading Programs...</div>}>
-        <ProgrammesSearch />
+        {/* <ProgrammesSearch /> */}
+        <ProgrammesExplorer />
       </Suspense>
       <ProgrammesAlumni alumniData={programmeAlumnis} />
       <ProgrammesOurLocation />
