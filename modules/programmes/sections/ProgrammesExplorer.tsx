@@ -332,14 +332,14 @@ const ProgrammesExplorer = () => {
 
     if ("programmeslug" in item) {
       slug = item.programmeslug || "";
-      const fullTitle = (item.title || "") + (item.highlightitle ? ` ${item.highlightitle}` : "");
+      const fullTitle = (item.title || "") + ((item as any).highlightitle ? ` ${(item as any).highlightitle}` : "");
       isZenith = fullTitle.includes("Zenith") || slug.includes("zenithschool.ai");
     } else {
       slug = item.phdslug || "";
     }
 
     const titleStr = "title" in item 
-      ? (item.title || "") + (item.highlightitle ? ` ${item.highlightitle}` : "") 
+      ? (item.title || "") + ((item as any).highlightitle ? ` ${(item as any).highlightitle}` : "") 
       : (item.heading || "");
 
     return {
