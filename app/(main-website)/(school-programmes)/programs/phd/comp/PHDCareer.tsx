@@ -43,7 +43,7 @@ const PHDCareer = ({ careerOptions }: Props) => {
         </div>
         <div className="lg:w-1/2">
           {careerOptions?.testimonials?.length > 0 && (
-            <div className="p-5 md:pt-[50px] pb-[170px] md:pb-[100px] md:px-[70px] bg-[#051630] rounded-[58px]">
+            <div className="p-5 md:pt-[50px] pb-[110px] md:pb-[100px] md:px-[70px] bg-[#051630] rounded-[58px]">
               <h4 className="text-2xl font-semibold text-center text-white mb-5">
                 {careerOptions?.testimonialheading}
               </h4>
@@ -67,11 +67,11 @@ const PHDCareer = ({ careerOptions }: Props) => {
 
                 <CarouselPrevious
                   className="border border-white bg-transparent text-white cursor-pointer
-          w-[60px] h-[60px] top-[115%] left-[20%] sm:left-[30%] xl:top-[115%]"
+          w-[60px] h-[60px] top-[110%] min-[1024px]:top-[110%] left-[20%] sm:left-[30%] xl:top-[115%]"
                 />
                 <CarouselNext
                   className="border border-white bg-transparent text-white cursor-pointer
-          w-[60px] h-[60px] top-[115%] right-[20%] sm:right-[30%] xl:top-[115%]"
+          w-[60px] h-[60px] top-[110%] min-[1024px]:top-[110%] right-[20%] sm:right-[30%] xl:top-[115%]"
                 />
               </Carousel>
             </div>
