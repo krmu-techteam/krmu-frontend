@@ -176,12 +176,13 @@ const PHDHighlight = ({ heading, highlightheading, btn, imgUrl }: Props) => {
           {btn?.btn_link && (
             <Link
               href={btn?.btn_link}
-              className={`py-3.5 px-8 bg-[#] font-bold rounded-sm inline-block text-white ${
+              className={`npfWidget-31c1452015d32698095f833b3e7eb9c5 text-white bg-[#cb000d] hover:bg-[#c42518] w-full md:w-auto md:px-8 py-2.5 flex items-center justify-center gap-3 rounded-md font-semibold mt-8 cursor-pointer tracking-[0.025em] text-lg shadow-md hover:shadow-xl transition-all duration-300 group relative overflow-hidden  ${
                 btn?.btn_class || ""
               }`}
               target="_blank"
               rel="noopener noreferrer"
             >
+              <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
               {btn?.btn_text}
             </Link>
           )}
