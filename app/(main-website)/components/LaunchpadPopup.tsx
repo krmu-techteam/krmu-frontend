@@ -62,7 +62,7 @@ export default function LaunchpadPopup() {
             duration: 0.6,
             ease: "easeOut",
           }}
-          className="fixed bottom-5 left-1/2 -translate-x-1/2 sm:-translate-x-0 sm:left-5 z-[9999]"
+          className="fixed bottom-5 left-1/2 -translate-x-1/2 sm:-translate-x-0 sm:left-5 z-[9999] h-[226px]"
         >
           <div
             className={`${domine.className} relative w-[300px] overflow-hidden rounded-md bg-white shadow-[0_10px_40px_rgba(0,0,0,0.25)]`}
@@ -94,7 +94,7 @@ export default function LaunchpadPopup() {
             <Link
               href="https://launchpad.krmangalam.edu.in"
               target="_blank"
-              className="w-full font-domine py-2 inline-block p-3 text-center font-semibold transition hover:bg-slate-100"
+              className="w-full font-domine py-2 inline-block p-3 text-center font-semibold transition text-sm hover:bg-slate-100"
             >
               VISIT NOW
             </Link>
