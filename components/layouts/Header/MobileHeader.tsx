@@ -3,10 +3,12 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { X, ChevronDown, Download, ArrowUpRight, ArrowRight, BookOpen, Layers, UserPlus, Rocket, Briefcase, Microscope, Leaf, Users, Building2, ChevronRight } from "lucide-react";
+import { X, Search, ChevronDown, Download, ArrowUpRight, ArrowRight, BookOpen, Layers, UserPlus, Rocket, Briefcase, Microscope, Leaf, Users, Building2, ChevronRight } from "lucide-react";
 import { HeaderMenus } from "@/lib/types/header-menu";
 import { TOPBARITEMS } from "@/lib/types/HeaderType";
 import { STRAPI_URL } from "@/app/constant";
+
+import { HeroSearch } from "@/modules/home";
 
 type Props = {
   navbarData: HeaderMenus[];
@@ -17,6 +19,7 @@ type Props = {
 
 const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
     if (isOpen) {

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { X, Search, Loader2, GraduationCap, ArrowRight, BookOpen } from 'lucide-react';
 import Link from 'next/link';
 import { searchSchoolProgrammes, searchPhdProgrammes } from '@/app/(main-website)/(programmes)/programmesApi/api';
@@ -11,10 +12,15 @@ interface HeroSearchProps {
 }
 
 export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
+  const [mounted, setMounted] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const fetchSuggestions = async () => {
@@ -73,10 +79,10 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
     };
   }, [isOpen, onClose]);
 
-  if (!isOpen) return null;
+  if (!mounted || !isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 z-[999] flex items-start justify-center transition-all duration-300 overflow-hidden pt-[15vh] md:pt-[20vh]">
+  return createPortal(
+    <div className="fixed inset-0 z-[999] flex items-start justify-center transition-all duration-300 overflow-hidden pt-20 md:pt-[20vh]">
       {/* Base Light Blur for the whole screen */}
       <div className="absolute inset-0 bg-[#04101A]/30 backdrop-blur-sm" />
       
@@ -88,10 +94,10 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
           maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)'
         }}
       />
-      <div className="w-full max-w-2xl px-6 flex flex-col items-center animate-in fade-in zoom-in-95 duration-200 ease-out relative z-10">
+      <div className="w-full max-w-2xl px-4 md:px-6 flex flex-col items-center animate-in fade-in zoom-in-95 duration-200 ease-out relative z-10 pb-4">
         <div className="w-full bg-white/[0.05] border border-white/10 rounded-2xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl flex flex-col">
           {/* Top Search Input */}
-          <div className="flex items-center px-4 md:px-6 py-4 border-b border-white/10 w-full relative">
+          <div className="flex items-center px-4 md:px-6 py-4 border-b border-white/10 w-full relative group overflow-hidden shrink-0">
             <Search className="text-white/60 shrink-0" size={22} strokeWidth={1.5} />
             <input
               ref={inputRef}
@@ -99,20 +105,20 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search programs..."
-              className="w-full bg-transparent border-none text-white px-4 text-lg md:text-[19px] focus:outline-none focus:ring-0 placeholder-white/40 tracking-wide"
+              className="w-full bg-transparent border-none text-white pl-4 pr-10 md:pr-14 text-[16px] md:text-[19px] focus:outline-none focus:ring-0 placeholder-white/40 tracking-wide"
             />
             <button
               onClick={onClose}
-              className="cursor-pointer text-white/90"
+              className="cursor-pointer text-white/90 opacity-0 translate-x-8 pointer-events-none group-focus-within:opacity-100 group-focus-within:translate-x-0 group-focus-within:pointer-events-auto transition-all duration-300 ease-out absolute right-4 md:right-6 shrink-0"
               title="Close"
             >
-              <X className="text-white/60 shrink-0" size={22} strokeWidth={1.5}/>
+              <X className="text-white/60 shrink-0 hover:text-white transition-colors" size={22} strokeWidth={1.5}/>
             </button>
           </div>
 
           {/* Suggestions or Loader */}
           {query.trim().length > 0 && (
-            <div className="flex flex-col p-2 max-h-[55vh] overflow-y-auto custom-scrollbar">
+            <div className="flex flex-col p-2 max-h-[60vh] md:max-h-[55vh] overflow-y-auto custom-scrollbar">
               {isSearching ? (
                 <div className="flex justify-center py-10">
                   <Loader2 className="animate-spin text-white/50" size={24} />
@@ -167,7 +173,8 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 
