@@ -44,7 +44,7 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
         // Clean user query: remove spaces and dots for fuzzy match (e.g. "b tech" -> "btech")
         const cleanSearch = searchTerm.replace(/[\s.]/g, '').toLowerCase();
 
-        const filtered = allData.filter((item) => {
+        const filtered = allData.filter((item: any) => {
           const title = (item.title || item.heading || "").toLowerCase();
           // Clean the target title as well
           const cleanTitle = title.replace(/[\s.]/g, '');
@@ -124,7 +124,7 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
                   <Loader2 className="animate-spin text-white/50" size={24} />
                 </div>
               ) : suggestions.length > 0 ? (
-                suggestions.map((item) => {
+                suggestions.map((item: any) => {
                   const slug = item.programmeslug || item.phdslug;
                   const titleStr = item.title 
                     ? (item.title + (item.highlightitle ? ` ${item.highlightitle}` : "")) 
