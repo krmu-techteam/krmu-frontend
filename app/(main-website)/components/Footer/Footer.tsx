@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FloatingButtons from "@/app/(main-website)/components/Footer/FloatingButtons";
 import NpfAgent from "@/app/NpfAgent";
+import LaunchpadPopup from "../LaunchpadPopup";
 
 const Footer = async () => {
   const footerData = await getFooter();
@@ -266,6 +267,7 @@ const Footer = async () => {
           </Link>
         <NpfButton formId="d63cf9c4d3104c39f3ac28164701a69c" text="Enquire Now" />
       </div> */}
+      <LaunchpadPopup />
     </>
   );
 };
