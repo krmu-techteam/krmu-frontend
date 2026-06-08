@@ -105,7 +105,7 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search programs..."
-              className="w-full bg-transparent border-none text-white pl-4 pr-10 md:pr-14 text-[16px] md:text-[19px] focus:outline-none focus:ring-0 placeholder-white/40 tracking-wide"
+              className="w-full bg-transparent font-poppins border-none text-white pl-4 pr-10 md:pr-14 text-[16px] md:text-[18px] focus:outline-none focus:ring-0 placeholder-white/40 tracking-wide"
             />
             <button
               onClick={onClose}
@@ -146,7 +146,7 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
                       </div>
                       <div className="flex flex-col flex-1">
                         <span 
-                          className="text-[15px] md:text-[16px] font-medium text-white/90 group-hover:text-white transition-colors tracking-wide line-clamp-1"
+                          className="text-[15px] md:text-[16px] font-poppins font-medium text-white/90 group-hover:text-white transition-colors tracking-wide line-clamp-1"
                           dangerouslySetInnerHTML={{ __html: titleStr }}
                         />
                         {/* <span className="text-[12px] md:text-[13px] text-white/50 group-hover:text-white/80 transition-colors mt-0.5">
