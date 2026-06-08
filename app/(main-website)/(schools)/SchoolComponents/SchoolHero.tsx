@@ -59,10 +59,10 @@ const SchoolHero = ({
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sohmct_yt_ac9764e49e.webp",
       ytUrl: "https://www.youtube.com/watch?v=yRbHVk8qaOs",
       bgURl:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/10_sohmct_ca3af5fc84.webp",
-      middleImg: "",
-      mobileBgImg: "/schools/banners/mob-sohmct-banner.png",
-      notCutoutBg: true,
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Hotel_Management_and_Catering_Technology_1_a5b1fbe841.jpg",
+      middleImg: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Hotel_Management_and_Catering_Technology_2_0661fa8786.png",
+      mobileBgImg: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Hotel_Management_and_Catering_Technology_1_a5b1fbe841.jpg",
+      notCutoutBg: false,
     },
 
     "school-of-basic-and-applied-sciences": {
@@ -104,8 +104,8 @@ const SchoolHero = ({
       thumbnail:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/school_of_emerging_media_and_creator_economy_d34aa4d87b.png",
       ytUrl: "https://www.youtube.com/watch?v=RV4YQUNAVMA",
-      bgURl: "/schools/banners/mob-semce-banner.webp", ///schools/banners/semce-banner-2.webp
-      middleImg: "/schools/middleImg/semce-middleimg-2.png",
+      bgURl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Emerging_Media_and_Creator_Economy_1_11c030bd7f.jpg", ///schools/banners/semce-banner-2.webp
+      middleImg: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Emerging_Media_and_Creator_Economy_2_4755b03dd1.png",
       mobileBgImg: "/schools/banners/mob-semce-banner.webp",
       notCutoutBg: false,
     },
@@ -132,9 +132,9 @@ const SchoolHero = ({
     "school-of-liberal-arts": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/sola-banner.png",
-      middleImg: "/schools/middleImg/sola-middleimg.png",
-      mobileBgImg: "/schools/banners/mob-sola-banner.webp",
+      bgURl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_1000005800_68e600ebe1.png",
+      middleImg: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Liberal_Arts_2_8710a4eeba.png",
+      mobileBgImg: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Liberal_Arts_1_30728f292c.jpg",
       notCutoutBg: false,
     },
 

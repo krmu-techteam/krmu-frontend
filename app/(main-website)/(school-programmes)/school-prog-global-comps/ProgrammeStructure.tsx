@@ -88,7 +88,7 @@ const ProgrammeStructure = ({
 
         <div className="relative w-full">
           {/* Programme Handbook Button - Responsive layout to prevent overlaying tabs */}
-          {currbtn?.buttonlink && (
+          {/* {currbtn?.buttonlink && (
             <div className="relative xl:absolute xl:right-0 xl:top-0 2xl:right-72 z-20 mb-6 xl:mb-0 w-full xl:w-auto flex justify-center xl:justify-start">
               <CommonLeadPopup
                 buttonText={
@@ -104,11 +104,29 @@ const ProgrammeStructure = ({
                 form_name="Programme Handbook"
               />
             </div>
-          )}
+          )} */}
 
           {/* Main Content Area - Clean stack without card boundaries to match image */}
           <div className="xl:max-w-lg 2xl:max-w-xl flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10">
             {/* Left Navigation & Content Area */}
+            {currbtn?.buttonlink && (
+              <div className="mb-5 sm:mb-3 w-full xl:w-auto flex justify-center xl:justify-start">
+                <CommonLeadPopup
+                  buttonText={
+                    <span className="flex items-center gap-3 underline underline-offset-8">
+                      <Download className="w-5 h-5" />
+                      <span className="uppercase tracking-widest font-semibold text-sm md:text-lg">
+                        {currbtn?.buttontext}
+                      </span>
+                    </span>
+                  }
+                  buttonClassName="text-white flex items-center justify-center min-w-[200px]"
+                  redirectUrl={currbtn?.buttonlink || "#"}
+                  form_name="Programme Handbook"
+                  shadowGradient={false}
+                />
+              </div>
+            )}
             <div className="flex-grow flex flex-col">
               {/* Year Tabs */}
               <div className="flex w-full overflow-x-auto no-scrollbar rounded-sm md:rounded-md">

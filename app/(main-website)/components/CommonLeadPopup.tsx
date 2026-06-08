@@ -9,6 +9,7 @@ type Props = {
   buttonClassName?: string;
   redirectUrl: string;
   form_name: string;
+  shadowGradient?: boolean;
 };
 
 const CommonLeadPopup = ({
@@ -16,6 +17,7 @@ const CommonLeadPopup = ({
   buttonClassName,
   redirectUrl,
   form_name,
+  shadowGradient = true,
 }: Props) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -33,6 +35,8 @@ const CommonLeadPopup = ({
     const email = data.get("email")?.toString().trim();
     const mobile = data.get("mobile")?.toString().trim();
 
+    const nameRegex = /^[A-Za-z\s]{2,50}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const indianMobileRegex = /^[6-9]\d{9}$/;
 
     if (!mobile || !indianMobileRegex.test(mobile)) {
@@ -41,6 +45,19 @@ const CommonLeadPopup = ({
       return;
     }
 
+    // Email validation
+    if (!email || !emailRegex.test(email)) {
+      setError("Please enter a valid email address.");
+      setLoading(false);
+      return;
+    }
+
+    // Name validation
+    if (!name || !nameRegex.test(name)) {
+      setError("Please enter a valid name.");
+      setLoading(false);
+      return;
+    }
     const payload = {
       name,
       email,
@@ -87,7 +104,9 @@ const CommonLeadPopup = ({
         onClick={() => setOpen(true)}
         className={`relative overflow-hidden group ${buttonClassName} cursor-pointer`}
       >
-        <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
+        {shadowGradient && (
+          <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
+        )}
         {buttonText}
       </button>
 
@@ -114,6 +133,10 @@ const CommonLeadPopup = ({
                 <input
                   name="name"
                   required
+                  minLength={2}
+                  maxLength={50}
+                  pattern="[A-Za-z\s]+"
+                  title="Only letters and spaces are allowed"
                   placeholder="Your Name*"
                   className="w-full h-12 px-4 rounded-lg border text-black border-gray-300"
                 />
