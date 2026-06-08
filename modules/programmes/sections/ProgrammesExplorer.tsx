@@ -124,9 +124,7 @@ const ProgrammesExplorer = () => {
   const [slugValue, setSlug] = useState("");
   // default dropdown selections
   const [selectedSchool, setSelectedSchool] = useState("soet");
-  const [selectedDegree, setSelectedDegree] = useState(
-    "undergraduate-programmes",
-  );
+  const [selectedDegree, setSelectedDegree] = useState("all");
 
   const [openSchoolDropdown, setOpenSchoolDropdown] = useState(false);
   const [openDegreeDropdown, setOpenDegreeDropdown] = useState(false);
@@ -138,14 +136,14 @@ const ProgrammesExplorer = () => {
   const [showLoadMore, setShowLoadMore] = useState(true);
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
+  const [viewMode, setViewMode] = useState<'list' | 'grid'>('grid');
   const [isLoading, setIsLoading] = useState(true);
   const [isFiltersLoading, setIsFiltersLoading] = useState(true);
   const debounceTimer = useRef<NodeJS.Timeout | null>(null);
 
   // keep refs of dropdown values
   const schoolRefValue = useRef("soet");
-  const degreeRefValue = useRef("undergraduate-programmes");
+  const degreeRefValue = useRef("all");
   const ZENITH_SLUG = "zenith-ai";
 
   const searchParams = useSearchParams();
@@ -166,8 +164,8 @@ const ProgrammesExplorer = () => {
       setSelectedDegree(degreeParam);
       degreeRefValue.current = degreeParam;
     } else {
-      setSelectedDegree("undergraduate-programmes");
-      degreeRefValue.current = "undergraduate-programmes";
+      setSelectedDegree("all");
+      degreeRefValue.current = "all";
     }
   }, [searchParams]);
 
@@ -255,6 +253,21 @@ const ProgrammesExplorer = () => {
             limit,
           );
           newData = res?.data || [];
+        } else if (degreeRefValue.current === "all") {
+          const [progRes, phdRes] = await Promise.all([
+            getAllSchoolProgrammeByDegOrCatPaginated(
+              "all",
+              schoolRefValue.current,
+              1,
+              limit,
+            ),
+            getAllSchoolPhdProgrammeByCatPaginated(
+              schoolRefValue.current,
+              1,
+              limit,
+            ),
+          ]);
+          newData = [...(progRes?.data || []), ...(phdRes?.data || [])];
         } else {
           const res = await getAllSchoolProgrammeByDegOrCatPaginated(
             degreeRefValue.current,
@@ -357,9 +370,9 @@ const ProgrammesExplorer = () => {
 
   return (
     <section className="w-full px-4 md:px-8 2xl:px-0 font-poppins">
-      <div className="mx-auto flex flex-col md:flex-row gap-6 lg:gap-8 items-start max-w-[1530px] lg:px-3">
+      <div className="mx-auto flex flex-col lg:flex-row gap-6 lg:gap-8 items-start max-w-[1530px] lg:px-3">
         {/* Sidebar for Schools */}
-        <div className="hidden lg:block w-[300px] shrink-0 sticky top-[130px] self-start max-h-[calc(100vh-140px)] overflow-y-auto no-scrollbar">
+        <div className="w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] lg:w-[300px] shrink-0 lg:sticky lg:top-[130px] self-start lg:max-h-[calc(100vh-140px)] lg:overflow-y-auto no-scrollbar -mx-4 md:-mx-8 lg:mx-0 bg-[#061623] lg:bg-transparent py-1 lg:py-0">
           <ProgrammesSidebar 
             activeSchoolSlug={selectedSchool}
             onSchoolChange={(slug) => {

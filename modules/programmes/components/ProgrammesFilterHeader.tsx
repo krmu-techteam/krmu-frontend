@@ -51,7 +51,7 @@ export default function ProgrammesFilterHeader({
 
   return (
     <>
-    <div className="lg:sticky lg:top-[130px] z-[40] bg-[#061623] p-3 mb-2 rounded-sm shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+    <div className="lg:sticky lg:top-[130px] z-[20] bg-[#061623] py-3 px-4 md:px-8 lg:px-3 mb-2 rounded-none lg:rounded-sm -mx-4 md:-mx-8 lg:mx-0">
       {/* Filters & Search Row */}
       <div className="w-full flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         {/* Tabs */}
@@ -61,7 +61,7 @@ export default function ProgrammesFilterHeader({
           onMouseLeave={onMouseLeave}
           onMouseUp={onMouseUp}
           onMouseMove={onMouseMove}
-          className="flex overflow-x-auto no-scrollbar items-center w-full lg:flex-1 cursor-grab active:cursor-grabbing gap-6 md:gap-8"
+          className="flex overflow-x-auto no-scrollbar items-center justify-start w-full lg:flex-1 cursor-grab active:cursor-grabbing gap-6 md:gap-8"
         >
           {/* Commented out dynamic mapping as requested
           {degreesList.map((degree) => (
@@ -93,7 +93,7 @@ export default function ProgrammesFilterHeader({
             <button
               key={degree.slug}
               onClick={() => onDegreeChange(degree.slug)}
-              className={`whitespace-nowrap text-[14px] md:text-[15px] transition-all relative cursor-pointer ${
+              className={`whitespace-nowrap px-2 py-1 text-center text-[14px] md:text-[15px] transition-all relative cursor-pointer ${
                 activeDegreeSlug === degree.slug 
                   ? 'text-white font-medium' 
                   : 'text-white/60 font-normal hover:text-white/90'
@@ -101,7 +101,7 @@ export default function ProgrammesFilterHeader({
             >
               {degree.name}
               {activeDegreeSlug === degree.slug && (
-                <div className="absolute -bottom-[1px] left-0 right-0 h-[2px] bg-white" />
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white" />
               )}
             </button>
           ))}
@@ -121,7 +121,7 @@ export default function ProgrammesFilterHeader({
       </div>
     </div>
      {/* Program Count & Toggles */}
-      <div className="flex items-center justify-between px-[2px] mb-2">
+      <div className="flex items-center justify-between px-[2px] lg:mb-2">
         <span className="text-white/80 text-[14px] font-normal">
           {programCount} Programs Found
         </span>

@@ -53,28 +53,36 @@ export default function ProgrammesSidebar({ activeSchoolSlug, onSchoolChange, sc
       onMouseLeave={onMouseLeave}
       onMouseUp={onMouseUp}
       onMouseMove={onMouseMove}
-      className="md:sticky md:top-[140px] md:max-h-[calc(100vh-8rem)] overflow-x-auto md:overflow-y-auto no-scrollbar cursor-grab active:cursor-grabbing w-full md:w-[320px] shrink-0"
+      className="overflow-x-auto lg:overflow-y-auto no-scrollbar cursor-grab active:cursor-grabbing w-full lg:w-[320px] shrink-0"
     >
-      <div className="flex flex-row md:flex-col py-2 md:py-4 min-w-max md:min-w-0 bg-[#061623] rounded-sm">
+      <div className="flex flex-row lg:flex-col py-1 min-w-max lg:min-w-0 bg-transparent lg:bg-[#061623] rounded-none lg:rounded-sm">
         {isLoading ? (
           Array.from({ length: 8 }).map((_, i) => (
-            <div key={`skeleton-${i}`} className="px-5 md:px-6 py-4 md:py-4 w-[150px] md:w-full">
+            <div key={`skeleton-${i}`} className="px-5 lg:px-6 py-4 lg:py-4 w-[150px] lg:w-full">
               <Skeleton className="h-4 w-3/4 bg-white/5 rounded-sm" />
             </div>
           ))
         ) : (
-          schoolsList.map((school) => (
-            <button
-              key={school.id}
-              onClick={() => onSchoolChange(school.slug)}
-              className={`text-left px-5 md:px-6 py-3 md:py-3 text-[14px] md:text-[15px] transition-all duration-300 cursor-pointer whitespace-nowrap md:whitespace-normal leading-snug ${
-                activeSchoolSlug === school.slug
-                  ? 'text-[#00AEEF] font-medium'
-                  : 'text-white/60 hover:text-white/90'
-              }`}
-            >
-              {school.name}
-            </button>
+          schoolsList.map((school, index) => (
+            <React.Fragment key={school.id}>
+              <button
+                onClick={() => onSchoolChange(school.slug)}
+                className={`text-left px-4 lg:pl-3 lg:pr-5 py-3 lg:py-2 text-[14px] lg:text-[15px] transition-all duration-300 cursor-pointer whitespace-nowrap lg:whitespace-normal leading-snug ${
+                  activeSchoolSlug === school.slug
+                    ? 'text-[#00AEEF] font-medium'
+                    : 'text-white/60 hover:text-white/90'
+                }`}
+              >
+                {school.name}
+              </button>
+              {index !== schoolsList.length - 1 && (
+                <div className="relative w-[1px] self-stretch lg:hidden shrink-0 my-1">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/30 to-transparent" />
+                  <div className="absolute inset-y-[10%] left-1/2 -translate-x-1/2 w-[24px] bg-[#00AEEF]/10 blur-[10px]" />
+                  <div className="absolute inset-y-[25%] left-1/2 -translate-x-1/2 w-[8px] bg-white/20 blur-[4px]" />
+                </div>
+              )}
+            </React.Fragment>
           ))
         )}
       </div>

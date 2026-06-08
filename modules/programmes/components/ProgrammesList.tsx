@@ -56,11 +56,13 @@ export default function ProgrammesList({
             </div>
           ))
         ) : programmes.length > 0 ? (
-          programmes.map((program) => (
+          programmes.map((program, index) => (
             <ProgrammeCard 
               key={program.id} 
               program={program} 
               viewMode={viewMode} 
+              index={index}
+              totalCards={programmes.length}
               onFeeClick={() => onProgrammeClick(program.id)}
             />
           ))

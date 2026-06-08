@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="mx-auto max-w-[1536px] lg:px-3 ">
         <div className="w-full rounded-sm relative z-10 bg-brand-navy-deep backdrop-blur-sm overflow-hidden">
           <div className="flex flex-col-reverse md:flex-row items-stretch gap-0">
-            <div className="w-full md:w-1/2 px-6 py-10 md:pl-12 lg:pl-16 md:py-12 text-center md:text-left flex flex-col justify-center">
+            <div className="w-full md:w-1/2 px-6 py-6 md:pl-8 lg:pl-16 md:py-12 text-center md:text-left flex flex-col justify-center">
               <span className="text-white/60 text-xs md:text-sm uppercase tracking-[0.2em] font-light font-poppins block">
                 Academics
               </span>
@@ -15,7 +15,7 @@ const HeroSection = () => {
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-white font-serif leading-tight">
                   Programs
                 </h1>
-                <div className="w-48 md:w-90 h-[2px] bg-linear-to-r from-white/40 to-transparent mx-auto md:ml-0" />
+                <div className="w-52 lg:w-90 h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent md:from-white/40 md:via-white/20 md:to-transparent mx-auto md:ml-0" />
               </div>
               <p className="text-white/70 text-sm md:text-base lg:text-lg font-light font-poppins max-w-lg leading-relaxed mx-auto md:ml-0">
                 Transform your Life with the Right Programme
@@ -28,7 +28,7 @@ const HeroSection = () => {
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col justify-end">
-              <div className="relative h-[220px] md:h-[320px] lg:h-[400px] lg:rounded-r-md overflow-hidden">
+              <div className="relative h-[220px] md:h-[340px] lg:h-[400px] lg:rounded-r-md overflow-hidden">
                  <Image
                   src="/modules/programmes/hero/university.jpg"
                   alt="Programs at KRMU"
