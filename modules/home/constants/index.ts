@@ -33,6 +33,7 @@ export const JOURNEY_VIDEOS: JourneyVideoType[] = [
     title: "Aarambh 2025 K.R. Mangalam University",
     thumbnail: "/modules/home/journey/j4.png",
     duration: "1:48",
+    link: "https://www.youtube.com/watch?v=f3hA3WhmYN8",
   },
   {
     id: 2,
@@ -40,12 +41,14 @@ export const JOURNEY_VIDEOS: JourneyVideoType[] = [
       "How Global Exposure is Empowering Indian Students Ft. British Council India",
     thumbnail: "/modules/home/journey/j2.png",
     duration: "7:30",
+    link: "https://www.youtube.com/watch?v=Q0OyZv7Rybw",
   },
   {
     id: 3,
     title: "Big Move! EY India Partners with K. R. Mangalam University",
     thumbnail: "/modules/home/journey/j3.png",
     duration: "2:35",
+    link: "https://www.youtube.com/watch?v=PtA6I56Zuyc",
   },
 ];
 

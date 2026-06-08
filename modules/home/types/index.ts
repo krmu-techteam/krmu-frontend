@@ -8,6 +8,7 @@ export interface JourneyVideoType {
   title: string;
   thumbnail: string;
   duration: string;
+  link: string;
 }
 
 export interface GalleryImageType {

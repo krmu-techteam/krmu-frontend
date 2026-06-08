@@ -1,7 +1,7 @@
 import HeaderWrapper from "./Header/HeaderWrapper";
 import Footer from "./Footer/Footer";
 import NoPaperFormProvider from "@/lib/constants/NoPaperFormProvider";
-import FloatingActionMenu from "./Footer/FloatingActionMenu";
+// import FloatingActionMenu from "./Footer/FloatingActionMenu";
 
 export default function MainWebsiteLayout({
   children,
@@ -19,7 +19,7 @@ export default function MainWebsiteLayout({
        
       </div>
       <div id="main-footer">
-        <FloatingActionMenu />
+        {/* <FloatingActionMenu /> */}
         <Footer />
       </div>
     </>

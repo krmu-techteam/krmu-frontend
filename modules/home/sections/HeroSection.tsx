@@ -35,8 +35,8 @@ export const HeroSection = () => {
         </div>
       </section>
 
-      <div className="w-full bg-linear-to-t from-brand-dark via-brand-dark to-transparent py-4 px-0 md:px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6 relative z-20 mt-2 transition-all font-poppins text-white shadow-2xl">
-       <div className="relative w-full lg:w-auto h-8 md:h-20">
+      <div className="w-full bg-linear-to-t from-brand-dark via-brand-dark to-transparent py-0 px-0 md:px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6 relative z-20 mt-2 transition-all font-poppins text-white shadow-2xl">
+       <div className="relative w-full lg:w-auto h-8 md:h-16">
   {/* Left/Right fade on mobile */}
   <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-brand-dark to-transparent z-10 pointer-events-none lg:hidden" />
   <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-brand-dark to-transparent z-10 pointer-events-none lg:hidden" />
@@ -44,7 +44,7 @@ export const HeroSection = () => {
   <div className="flex items-center gap-5 md:gap-6 lg:gap-14 w-full h-full lg:w-auto overflow-x-auto scrollbar-hide px-6 lg:px-0">
     <button
       onClick={() => setIsSearchOpen(true)}
-      className="hidden lg:flex w-12 h-12 border border-white/20 rounded-sm items-center justify-center hover:bg-white/10 transition-all shadow-sm text-white cursor-pointer shrink-0"
+      className="hidden lg:flex w-10 h-10 border border-white/20 rounded-sm items-center justify-center hover:bg-white/10 transition-all shadow-sm text-white cursor-pointer shrink-0"
     >
       <Search size={20} strokeWidth={2.5} />
     </button>

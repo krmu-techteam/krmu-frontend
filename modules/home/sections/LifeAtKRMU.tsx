@@ -38,11 +38,11 @@ export default function LifeAtKRMU() {
           showDots={false}
           className="w-full"
           containerClassName="gap-0"
-          slideClassName="basis-full md:basis-[500px]"
-          options={{ loop: true, align: 'start' }}
+          slideClassName="basis-full md:basis-[500px] group"
+          options={{ loop: true, align: 'center' }}
         >
           {LIFE_AT_KRMU_GALLERY.map((img) => (
-            <div key={img.id} className="aspect-video overflow-hidden grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-700 ease-in-out border-r border-white/5 mx-2 md:mx-0">
+            <div key={img.id} className="aspect-video overflow-hidden grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-data-[active=true]:grayscale-0 group-data-[active=true]:opacity-100 transition-all duration-700 ease-in-out border-r border-white/5 mx-2 md:mx-0">
               <div className="relative w-full h-full">
                 <Image 
                   src={img.src} 

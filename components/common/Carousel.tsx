@@ -5,6 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { EmblaOptionsType } from 'embla-carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import AutoScroll from 'embla-carousel-auto-scroll';
+import Fade from 'embla-carousel-fade';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface CarouselProps {
@@ -22,6 +23,7 @@ interface CarouselProps {
   slideClassName?: string;
   prevArrowClassName?: string;
   nextArrowClassName?: string;
+  fade?: boolean;
 }
 
 export const Carousel = ({
@@ -39,6 +41,7 @@ export const Carousel = ({
   slideClassName = '',
   prevArrowClassName = '',
   nextArrowClassName = '',
+  fade = false,
 }: CarouselProps) => {
   const plugins = React.useMemo(() => {
     const list = [];
@@ -48,8 +51,11 @@ export const Carousel = ({
     if (autoScroll) {
       list.push(AutoScroll({ speed: autoScrollSpeed, stopOnInteraction, stopOnMouseEnter: true }));
     }
+    if (fade) {
+      list.push(Fade());
+    }
     return list;
-  }, [autoplay, autoplayDelay, autoScroll, autoScrollSpeed, stopOnInteraction]);
+  }, [autoplay, autoplayDelay, autoScroll, autoScrollSpeed, stopOnInteraction, fade]);
 
   const [emblaRef, emblaApi] = useEmblaCarousel(options, plugins);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
@@ -86,6 +92,7 @@ export const Carousel = ({
             <div 
               key={index} 
               className={`min-w-0 shrink-0 grow-0 ${slideClassName || 'basis-full'}`}
+              data-active={index === selectedIndex}
             >
               {child}
             </div>

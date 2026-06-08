@@ -569,7 +569,7 @@ const Footer = async () => {
 
             {/* Virtual Tour Section & Accreditation Logos */}
             <div className="flex flex-col items-center lg:items-end">
-              <Link href="#" className="relative group p-4 block">
+              <Link href="/campus-life/virtual-tour" target='_blank' className="relative group p-4 block">
                 <div className="relative w-36 h-16">
                   <Image 
                     src="/modules/home/footer/virtual-tour.png"

@@ -88,14 +88,14 @@ export default function PlacementsSection() {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row flex-wrap items-center gap-3">
-              <Button href="#" variant="outline">
+              <Button href="/placement-highlights" variant="outline">
                 Placement Records
               </Button>
-              <Button href="#" variant="outline">
+              <Button href="/placement/our-recruiter" variant="outline">
                 Our Recruiters
               </Button>
               <Button
-                href="#"
+                href="https://admissions.krmangalam.edu.in/?utm_source=website&utm_medium=Homepage&utm_campaign=placement-section&_gl=1*118e21a*_ga*MTk4NDQwNDY4LjE3Nzc4NzU5MzU.*_ga_VJJK572TGN*czE3Nzc4NzU5MzUkbzEkZzEkdDE3Nzc4NzU5MzUkbjEkbjQkbjEkbjEkbjE"
                 variant="primary"
                 icon={ArrowUpRight}
                 iconPosition="right"

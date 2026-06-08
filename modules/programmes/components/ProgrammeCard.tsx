@@ -159,7 +159,7 @@ export default function ProgrammeCard({ program, viewMode = 'list', index = 0, t
           <Link 
             href={program.eligibilityUtmLink} 
             target="_blank"
-            className={`flex items-center justify-center px-3 md:px-4 py-2 border border-[#cb000d] rounded text-[12px] md:text-[14px] bg-[#cb000d]/10 font-medium text-[#eb1321] group-hover:bg-[#cb000d] group-hover:text-white transition-colors flex-1`}
+            className={`flex items-center justify-center px-3 md:px-4 py-2 border border-[#cb000d] rounded text-[12px] md:text-[14px] bg-[#cb000d] font-medium text-white transition-colors flex-1`}
           >
             <span>APPLY NOW</span>
           </Link>

@@ -20,7 +20,7 @@ export default function TestimonialsSection() {
           What our Learners say?
         </h2>
 
-        <Carousel showArrows={false} autoplayDelay={6000}>
+        <Carousel showArrows={false} autoplayDelay={6000} fade={true} options={{ loop: true, duration: 60 }}>
           {TESTIMONIALS.map((t) => (
             <div
               key={t.id}

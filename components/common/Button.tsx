@@ -11,6 +11,7 @@ interface ButtonProps {
   className?: string;
   iconClassName?: string;
   onClick?: () => void;
+  target?: string;
 }
 
 export const Button = ({
@@ -21,7 +22,8 @@ export const Button = ({
   iconPosition = 'left',
   className = '',
   iconClassName = '',
-  onClick
+  onClick,
+  target
 }: ButtonProps) => {
   const baseStyles = "w-full sm:w-auto flex items-center justify-center gap-2 h-[45px] rounded-[3px] font-normal transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide relative overflow-hidden group px-6";
   
@@ -43,6 +45,7 @@ export const Button = ({
     <Link 
       href={href}
       onClick={onClick}
+      target={target}
       className={`${baseStyles} ${variants[variant]} ${className}`}
     >
       {content}

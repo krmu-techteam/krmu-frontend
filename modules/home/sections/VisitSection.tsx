@@ -4,6 +4,7 @@ import React from 'react';
 import {   CalendarCheck } from 'lucide-react';
 import Image from 'next/image';
 import SectionDivider from '@/components/common/SectionDivider';
+import Link from 'next/link';
  
 
 export default function VisitSection() {
@@ -51,7 +52,7 @@ export default function VisitSection() {
               </button>
 
               {/* Virtual Tour */}
-              <button className="relative group transition-all shrink-0 w-20 h-20 md:w-24 md:h-24">
+              <Link href='/campus-life/virtual-tour' target='_blank' className="relative group transition-all shrink-0 w-20 h-20 md:w-24 md:h-24">
                 <div className="relative h-full w-full">
                   <Image 
                     src="/modules/home/hero/virtual-tour.png" 
@@ -62,7 +63,7 @@ export default function VisitSection() {
                     className="object-contain"
                   />
                 </div> 
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -114,7 +114,12 @@ export default function ProgrammesFilterHeader({
             type="text"
             placeholder="Search by Program Name..."
             value={searchQuery}
-            onChange={(e) => onSearchChange(e.target.value)}
+            onChange={(e) => {
+              onSearchChange(e.target.value);
+              if (e.target.value.length > 0 && activeDegreeSlug !== 'all') {
+                onDegreeChange('all');
+              }
+            }}
             className="w-full bg-transparent border border-white/10 rounded py-2 pl-10 pr-4 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 transition-all text-[14px] font-light"
           />
         </div>
