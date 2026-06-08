@@ -475,7 +475,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
               </div>
               <div className="absolute flex right-0 min-w-[1000px] w-full krmsubmenu-container krmsubmenu-1">
                 <div
-                  className="w-1/2 px-[30px] bg-[url(/menu-6.webp)] bg-cover bg-center bg-no-repeat relative krmsubmenu-img-container flex items-end rounded-l-[10px] 
+                  className="w-1/3 px-[30px] bg-[url(/menu-6.webp)] bg-cover bg-center bg-no-repeat relative krmsubmenu-img-container flex items-end rounded-l-[10px] 
                 overflow-hidden"
                   style={{
                     backgroundImage: `url(${STRAPI_URL}${aboutusMenu?.backgroundimage?.url})`,
@@ -499,8 +499,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     })}
                   </div>
                 </div>
-                <div className="rounded-r-sm bg-white w-1/2 p-[30px] flex">
-                  <div className="pr-[30px] border-r border-[#d9dada]">
+                <div className="rounded-r-sm bg-white w-2/3 p-[30px] flex">
+                  {/* Overview */}
+                  <div className="pr-[30px] border-r border-[#d9dada] w-1/3">
                     <h5 className="text-lg text-[#051630] my-2.5 font-semibold">
                       {aboutusMenu?.overview?.heading}
                     </h5>
@@ -525,7 +526,8 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                       })}
                     </ul>
                   </div>
-                  <div className="ml-[15px] px-[30px]">
+                  {/* Administration */}
+                  <div className="px-[30px] border-r border-[#d9dada] w-1/3">
                     <h5 className="text-lg text-[#051630] my-2.5 font-semibold">
                       {aboutusMenu?.administration?.heading}
                     </h5>
@@ -542,6 +544,42 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                           </li>
                         );
                       })}
+                    </ul>
+                  </div>
+                  {/* Others */}
+                  <div className="px-[30px] w-1/3">
+                    <h5 className="text-lg text-[#051630] my-2.5 font-semibold">
+                      Others
+                    </h5>
+                    <ul>
+                      <li
+                        className={`text-[13px] capitalize pb-[7px] hover:text-blue-700`}
+                      >
+                        <Link href="https://alumni.krmangalam.edu.in/?_gl=1*119v2hv*_gcl_au*ODU0NDc0OTE3LjE3NTk1NTIyMjE.">
+                          Alumni
+                        </Link>
+                      </li>
+                      <li
+                        className={`text-[13px] capitalize pb-[7px] hover:text-blue-700`}
+                      >
+                        <Link href="https://foundry.krmangalam.edu.in">
+                          Foundry
+                        </Link>
+                      </li>
+                      <li
+                        className={`text-[13px] capitalize pb-[7px] hover:text-blue-700`}
+                      >
+                        <Link href="https://lms.krmangalam.edu.in/?_gl=1*zg02u4*_gcl_au*ODU0NDc0OTE3LjE3NTk1NTIyMjE.">
+                          LMS
+                        </Link>
+                      </li>
+                      <li
+                        className={`text-[13px] capitalize pb-[7px] hover:text-blue-700`}
+                      >
+                        <Link href="https://krmu.icloudems.com/corecampus/index.php">
+                          ERP
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 </div>

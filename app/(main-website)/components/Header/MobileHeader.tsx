@@ -55,7 +55,6 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose }: Props) => {
     (component) => component.__component === "temp-menus.about-us-menu",
   );
 
-
   return (
     <>
       <div className="pt-[50px] px-5 overflow-y-auto h-screen z-50 bg-[#051630] xl:hidden">
@@ -199,7 +198,12 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose }: Props) => {
             </li>
             {zenithLinks && zenithLinks.__component === "menu.menu-links" && (
               <li className="pt-2.5 pb-4  font-semibold text-[#ff0010]">
-                <Link href={zenithLinks?.url || "#"} onClick={onClose} target="_blank" rel="noopener noreferrer">
+                <Link
+                  href={zenithLinks?.url || "#"}
+                  onClick={onClose}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {zenithLinks?.title}
                 </Link>
               </li>
@@ -296,7 +300,8 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose }: Props) => {
                   <Link
                     href={sustainabilityLinks?.url || "#"}
                     onClick={onClose}
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {sustainabilityLinks?.title}
                   </Link>
@@ -335,7 +340,8 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose }: Props) => {
                             href={menu?.url || "#"}
                             className="text-black text-[13px] font-normal"
                             onClick={onClose}
-                            target="_blank" rel="noopener noreferrer"
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
                             {menu?.title}
                           </Link>
@@ -382,45 +388,95 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose }: Props) => {
                 }`}
               >
                 <div className="bg-white p-5 mt-5  rounded-[10px]">
-                  
-                    <h5 className="mt-2.5 mb-[15px] leading-[1.2] text-[#051630] text-lg">
+                  <h5 className="mt-2.5 mb-[15px] leading-[1.2] text-[#051630] text-lg">
                     {aboutusMenu?.overview?.heading}
                   </h5>
-                    <ul className="mb-5">
-                      {aboutusMenu?.overview?.menulinks.map((menu) => {
-                        return (
-                          <li key={menu?.id}>
-                            <Link
-                              href={menu?.url || "#"}
-                              className="text-black text-[13px] font-normal"
-                              onClick={onClose}
-                              target="_blank" rel="noopener noreferrer"
-                            >
-                              {menu?.title}
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                   <h5 className="mt-2.5 mb-[15px] leading-[1.2] text-[#051630] text-lg">
+                  <ul className="mb-5">
+                    {aboutusMenu?.overview?.menulinks.map((menu) => {
+                      return (
+                        <li key={menu?.id}>
+                          <Link
+                            href={menu?.url || "#"}
+                            className="text-black text-[13px] font-normal"
+                            onClick={onClose}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {menu?.title}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <h5 className="mt-2.5 mb-[15px] leading-[1.2] text-[#051630] text-lg">
                     {aboutusMenu?.administration?.heading}
                   </h5>
-                     <ul className="mb-5">
-                      {aboutusMenu?.administration?.menulinks.map((menu) => {
-                        return (
-                          <li key={menu?.id}>
-                            <Link
-                              href={menu?.url || "#"}
-                              className="text-black text-[13px] font-normal"
-                              onClick={onClose}
-                              target="_blank" rel="noopener noreferrer"
-                            >
-                              {menu?.title}
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
+                  <ul className="mb-5">
+                    {aboutusMenu?.administration?.menulinks.map((menu) => {
+                      return (
+                        <li key={menu?.id}>
+                          <Link
+                            href={menu?.url || "#"}
+                            className="text-black text-[13px] font-normal"
+                            onClick={onClose}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {menu?.title}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <h5 className="mt-2.5 mb-[15px] leading-[1.2] text-[#051630] text-lg">
+                    Others
+                  </h5>
+                  <ul className="mb-5">
+                    <li>
+                      <Link
+                        href="https://alumni.krmangalam.edu.in/?_gl=1*119v2hv*_gcl_au*ODU0NDc0OTE3LjE3NTk1NTIyMjE."
+                        className="text-black text-[13px] font-normal"
+                        onClick={onClose}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Alumni
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="https://foundry.krmangalam.edu.in"
+                        className="text-black text-[13px] font-normal"
+                        onClick={onClose}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Foundry
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="https://lms.krmangalam.edu.in/?_gl=1*zg02u4*_gcl_au*ODU0NDc0OTE3LjE3NTk1NTIyMjE."
+                        className="text-black text-[13px] font-normal"
+                        onClick={onClose}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        LMS
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="https://krmu.icloudems.com/corecampus/index.php"
+                        className="text-black text-[13px] font-normal"
+                        onClick={onClose}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        ERP
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </li>
@@ -441,7 +497,8 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose }: Props) => {
               <Link
                 key={menu?.id}
                 href={menu?.url || "#"}
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white py-1.5 px-3 rounded-[5px] border border-white"
                 onClick={onClose}
               >
