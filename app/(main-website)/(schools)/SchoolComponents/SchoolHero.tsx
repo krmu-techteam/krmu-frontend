@@ -81,9 +81,9 @@ const SchoolHero = ({
       thumbnail: "",
       ytUrl: "",
       bgURl:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Management_and_Commerce_bc9bdfd468.jpg",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Management_and_Commerce_jpg_d03b9be31f.jpeg",
       middleImg:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Management_and_Commerce_f18ea32ac1.png",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Management_and_Commerce_81961cccc7.png",
       mobileBgImg:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Management_and_Commerce_06115115bc.jpg",
       notCutoutBg: false,
