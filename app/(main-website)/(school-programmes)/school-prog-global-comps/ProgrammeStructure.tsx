@@ -115,7 +115,7 @@ const ProgrammeStructure = ({
                   buttonText={
                     <span className="flex items-center gap-3 underline underline-offset-8">
                       <Download className="w-5 h-5" />
-                      <span className="uppercase tracking-widest font-semibold text-sm md:text-lg">
+                      <span className="uppercase tracking-widest font-semibold text-sm md:text-lg underline">
                         {currbtn?.buttontext}
                       </span>
                     </span>

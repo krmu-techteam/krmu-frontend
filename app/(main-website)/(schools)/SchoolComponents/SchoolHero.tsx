@@ -60,8 +60,10 @@ const SchoolHero = ({
       ytUrl: "https://www.youtube.com/watch?v=yRbHVk8qaOs",
       bgURl:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Hotel_Management_and_Catering_Technology_1_a5b1fbe841.jpg",
-      middleImg: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Hotel_Management_and_Catering_Technology_2_0661fa8786.png",
-      mobileBgImg: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Hotel_Management_and_Catering_Technology_1_a5b1fbe841.jpg",
+      middleImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Hotel_Management_and_Catering_Technology_2_0661fa8786.png",
+      mobileBgImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Hotel_Management_and_Catering_Technology_1_a5b1fbe841.jpg",
       notCutoutBg: false,
     },
 
@@ -104,8 +106,10 @@ const SchoolHero = ({
       thumbnail:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/school_of_emerging_media_and_creator_economy_d34aa4d87b.png",
       ytUrl: "https://www.youtube.com/watch?v=RV4YQUNAVMA",
-      bgURl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Emerging_Media_and_Creator_Economy_1_11c030bd7f.jpg", ///schools/banners/semce-banner-2.webp
-      middleImg: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Emerging_Media_and_Creator_Economy_2_4755b03dd1.png",
+      bgURl:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Emerging_Media_and_Creator_Economy_1_11c030bd7f.jpg", ///schools/banners/semce-banner-2.webp
+      middleImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Emerging_Media_and_Creator_Economy_2_4755b03dd1.png",
       mobileBgImg: "/schools/banners/mob-semce-banner.webp",
       notCutoutBg: false,
     },
@@ -114,9 +118,12 @@ const SchoolHero = ({
       thumbnail:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/school_of_architecture_design_d66a3af7ce.png",
       ytUrl: "https://www.youtube.com/watch?v=U3U9_dXYruQ",
-      bgURl: "/schools/banners/mob-soad-banner.webp", //schools/banners/soad-banner-2.webp
-      middleImg: "/schools/middleImg/sa.png",
-      mobileBgImg: "/schools/banners/mob-soad-banner.webp",
+      bgURl:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/architecture_bg_a9f5687333.jpg", //schools/banners/soad-banner-2.webp
+      middleImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/girl2_f7ad360baa.png",
+      mobileBgImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/architecture_bg_a9f5687333.jpg",
       notCutoutBg: false,
     },
 
@@ -132,29 +139,35 @@ const SchoolHero = ({
     "school-of-liberal-arts": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_1000005800_68e600ebe1.png",
-      middleImg: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Liberal_Arts_2_8710a4eeba.png",
-      mobileBgImg: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Liberal_Arts_1_30728f292c.jpg",
+      bgURl:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_1000005800_68e600ebe1.png",
+      middleImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Liberal_Arts_2_8710a4eeba.png",
+      mobileBgImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Liberal_Arts_1_30728f292c.jpg",
       notCutoutBg: false,
     },
 
     "school-of-physiotherapy-and-rehabilitation-sciences": {
       thumbnail: "",
       ytUrl: "",
-      bgURl: "/schools/banners/sprs-banner-2.webp",
-      middleImg: "/schools/middleImg/sprs-middleimg-2.png",
-      mobileBgImg: "/schools/banners/mob-sprs-banner-2.webp",
+      bgURl:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sprs_aaa7271685.webp",
+      middleImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/girl1_40afa36f8a.png",
+      mobileBgImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/physiotherapy_bg_e2dd650444.webp",
       notCutoutBg: false,
     },
     "school-of-medical-and-allied-sciences": {
       thumbnail: "",
       ytUrl: "",
       bgURl:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_d96ca6b437.jpg",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/medical_allied_bg_1_196402d4f1.webp",
       middleImg:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_136315b85b.png",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/girl3_fbc75334d9.png",
       mobileBgImg:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_d6510ddac9.jpg",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/medical_allied_bg_76b1f3c229.webp",
       notCutoutBg: false,
     },
     "school-of-legal-studies": {
@@ -220,7 +233,7 @@ const SchoolHero = ({
           </div>
         )}
         <div
-          className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[80px]" : ""} `}
+          className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[80px]" : ""}  ${slug === "school-of-architecture-design" ? "-mb-[30px]" : ""}`}
         >
           {videoUrl && middleimg && (
             <Image
@@ -228,7 +241,7 @@ const SchoolHero = ({
               width={492}
               height={700}
               alt={title || ""}
-              className="object-contain  z-10 relative"
+              className={`object-contain  z-10 relative ${slug === "school-of-architecture-design" && "w-[1140px]"}`}
               priority
             />
           )}
@@ -298,7 +311,7 @@ const SchoolHero = ({
             </div>
           ) : (
             <div className="max-w-[1850px] mx-auto w-full xl:flex items-center justify-between p-0 relative z-20">
-              <div className="text-center text-white w-full xl:w-1/2 xl:pr-20">
+              <div className={`text-center text-white w-full xl:w-1/2 xl:pr-0`}>
                 <div className="xl:hidden flex justify-center">
                   {middleimg && (
                     <Image
@@ -312,7 +325,7 @@ const SchoolHero = ({
                   )}
                 </div>
                 <div
-                  className={`bg-[#001732] ${slug === "school-of-legal-studies" ? "2xl:-translate-y-[60px]" : ""}  xl:bg-transparent p-5 xl:p-0 z-20 relative  ${notCutoutBg ? "-mt-10" : "-mt-28 sm:mt-0"}`}
+                  className={`bg-[#001732] ${slug === "school-of-legal-studies" ? "2xl:-translate-y-[60px]" : ""}  xl:bg-transparent p-5 xl:p-0 z-20 relative  ${notCutoutBg ? "-mt-10" : `${slug === "school-of-physiotherapy-and-rehabilitation-sciences" || "school-of-architecture-design" ? "mt-0" : "-mt-28 sm:mt-0"}`}`}
                 >
                   <p className="text-sm lg:text-lg 2xl:text-2xl font-normal sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
                     {subheading}
