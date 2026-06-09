@@ -27,7 +27,8 @@ const infoStaticImages: Record<string, string> = {
   'school-of-basic-and-applied-sciences': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sbas_info_a4df052f90.webp',
   'school-of-emerging-media-and-creator-economy': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Untitled_121_8b1ed1d1df.png',
   // 'school-of-emerging-media-and-creator-economy': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sjmc_info_4152524039.webp',
-  'school-of-hotel-management-and-catering-technology': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/shmct_info_902ba1a177.webp',
+  // 'school-of-hotel-management-and-catering-technology': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/shmct_info_902ba1a177.webp',
+  'school-of-hotel-management-and-catering-technology': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/hotel_mgmt_9cad25aca6.png',
   'school-of-agriculutural-sciences': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soas_info_fc180558e4.webp',
   'school-of-education': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soed_info_bc9daec6fd.webp'
 
