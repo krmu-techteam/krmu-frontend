@@ -55,8 +55,7 @@ const ContactWithUs = () => {
               </div>
               <span className=" p-2.5 flex items-center gap-2.5 text-sm font-semibold text-white">
                 <span className="font-normal tracking-wide leading-relaxed">
-                  <span className="font-semibold">Address:</span> K.R. Mangalam University, Sohna - Gurgaon Road,
-                  Sohna, Sohna Rural, Gurugram, Haryana 122103
+                  <span className="font-semibold">Address:</span> K.R. Mangalam University, Sohna Road, Gurugram, Haryana - 122103
                 </span>
               </span>
             </Link>
