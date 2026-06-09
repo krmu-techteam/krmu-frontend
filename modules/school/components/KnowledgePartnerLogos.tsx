@@ -1,0 +1,77 @@
+"use client";
+import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { StrapiMedia } from "@/lib/types/common";
+import { STRAPI_URL } from "@/app/constant";
+import Autoplay from "embla-carousel-autoplay";
+
+type Props = {
+  logos: StrapiMedia[];
+};
+const KnowledgePartnerLogos = ({ logos }: Props) => {
+  const getBasis = (len: number) => {
+    if (len === 1) return "lg:basis-full";
+    if (len === 2) return "lg:basis-1/2";
+    if (len === 3) return "lg:basis-1/3";
+    if (len === 4) return "lg:basis-1/4";
+    return "lg:basis-1/6";
+  };
+
+  const basisClass = getBasis(logos?.length || 0);
+  const showArrows = logos?.length > 5;
+
+  return (
+    <div className="px-12 rounded-sm">
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 3000,
+          }),
+        ]}
+        className="w-full"
+      >
+        <CarouselContent className="-ml-4 items-center">
+          {logos &&
+            logos.map((logo) => {
+              return (
+                <CarouselItem
+                  key={logo?.id}
+                  className={`sm:basis-1/2 ${basisClass} pl-4 flex justify-center items-center`}
+                >
+                  <div className="bg-white rounded-sm p-2 w-full h-[110px] flex justify-center items-center shadow-sm border border-gray-100 mb-2">
+                    <Image
+                      src={`${STRAPI_URL}${logo?.url}`}
+                      width={logo?.width || 215}
+                      height={logo.height || 115}
+                      alt={logo.alternativeText || "Knowledge Partner Logo"}
+                      className="h-[100px] w-auto max-w-full object-contain"
+                      unoptimized
+                    />
+                  </div>
+                </CarouselItem>
+              );
+            })}
+        </CarouselContent>
+
+        {showArrows && (
+          <>
+            <CarouselPrevious className="hidden md:flex -left-12" />
+            <CarouselNext className="hidden md:flex -right-12" />
+          </>
+        )}
+      </Carousel>
+    </div>
+  );
+};
+
+export default KnowledgePartnerLogos;

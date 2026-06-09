@@ -10,20 +10,27 @@ const whatYouGet = [
 
 const SchoolOpenSourceMentorship = () => {
   return (
-    <section className="py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-[#051630] text-white">
+    <section className="py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 text-white">
       {/* Outer card */}
-      <div
-        className="max-w-[90rem] mx-auto w-full rounded-3xl p-1"
-        style={{
-          background: "linear-gradient(to bottom, #002f8e, #cb000d)",
-        }}
-      >
-        <div className="bg-[#051630] rounded-3xl overflow-hidden">
+      <div className="max-w-[1530px] mx-auto w-full relative rounded-sm">
+        {/* Gradient Border Mask */}
+        <div 
+          className="absolute inset-0 rounded-sm pointer-events-none"
+          style={{
+            padding: "3px",
+            background: "linear-gradient(to bottom, #002f8e, #cb000d)",
+            WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+            WebkitMaskComposite: "xor",
+            maskComposite: "exclude"
+          }}
+        ></div>
+        
+        <div className="rounded-sm overflow-hidden relative z-10">
           <div className="p-2.5 sm:p-5 md:p-8 lg:p-12">
             {/* ── Top Row: Achievement card (left) + Title & Description (right) ── */}
             <div className="flex flex-col lg:flex-row gap-10 items-center">
               <div className="w-full max-w-md lg:max-w-full lg:w-3/5 xl:w-1/2 2xl:w-2/5">
-                <div className="flex flex-col sm:flex-row rounded-2xl overflow-hidden">
+                <div className="flex flex-col sm:flex-row rounded-sm overflow-hidden">
                   <div className="relative overflow-hidden w-full sm:w-2/5">
                     <Image
                       src="/schools/OP.JPG"
@@ -53,20 +60,20 @@ const SchoolOpenSourceMentorship = () => {
                         alt="GSoC Logo"
                         width={350}
                         height={120}
-                        className="object-cover rounded-lg w-full h-[120px] object-center"
+                        className="object-cover rounded-sm w-full h-[120px] object-center"
                       />
                     </div>
                   </div>
                 </div>
               </div>
               <div className="w-full lg:w-2/5 xl:w-1/2 2xl:w-3/5">
-                <h2 className="text-3xl sm:text-4xl xl:text-4xl leading-tight mb-4">
+                <h2 className="text-3xl sm:text-4xl font-bold xl:text-4xl leading-tight mb-4">
                   Open Source{" "}
-                  <span className="text-[#4da6ff] font-semibold">
+                  <span className="text-[#4da6ff] font-bold">
                     Mentorship Programme
                   </span>
                 </h2>
-                <p className="text-white/75 text-base sm:text-lg leading-relaxed">
+                <p className="text-white/75 font-poppins text-base sm:text-[18px] leading-relaxed">
                   The School of Engineering and Technology (SOET) runs a focused
                   Open Source Mentorship Programme, driven by our faculties, to
                   prepare students for global, stipend-based opportunities like{" "}
@@ -111,7 +118,7 @@ const SchoolOpenSourceMentorship = () => {
                 {whatYouGet.slice(0, 3).map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex flex-col items-center justify-center rounded-xl px-3 py-3 text-center  text-white/85 text-base sm:text-lg leading-relaxed"
+                    className="flex flex-col font-poppins items-center justify-center rounded-sm px-3 py-3 text-center  text-white/85 text-base sm:text-[17px] leading-relaxed"
                     style={{ border: "2px solid #4da6ff" }}
                   >
                     {item.split("\n").map((line, i) => (
@@ -129,7 +136,7 @@ const SchoolOpenSourceMentorship = () => {
                 {whatYouGet.slice(3).map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex flex-col items-center justify-center rounded-xl px-3 py-3 text-center  text-white/85 text-base sm:text-lg leading-relaxed"
+                    className="flex flex-col font-poppins items-center justify-center rounded-sm px-3 py-3 text-center  text-white/85 text-base sm:text-lg leading-relaxed"
                     style={{ border: "2px solid #4da6ff" }}
                   >
                     {item}

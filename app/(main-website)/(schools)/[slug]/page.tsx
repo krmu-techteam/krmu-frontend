@@ -20,8 +20,6 @@ import CustomPage from "@/app/(main-website)/(page)/CustomPage";
 import { STRAPI_URL } from "@/app/constant";
 import { getSchoolSEO } from "@/lib/api/website-seo";
 import { folderRouteSEO } from "@/lib/api/siteseo";
-import SchoolAdvantages2 from "../SchoolComponents/SchoolDesign2/SchoolAdvantages2";
-import SchoolOpenSourceMentorship from "../SchoolComponents/SchoolDesign2/SchoolOpenSourceMentorship";
 
 import {
   sbasLogos,
@@ -38,7 +36,7 @@ import {
   sprsLogos,
 } from "../SchoolComponents/schoolData";
 import { sbasHerosLogos, smasHerosLogos, soadHerosLogos, soasHerosLogos, soedHerosLogos, soetHerosLogos, sohmctHerosLogos, solaHerosLogos, somcHerosLogos, sprsHerosLogos } from "../SchoolComponents/schoolHeroLogo";
-import { HeroSection , OverviewSection, AlumniSection, ExcitedNewsletterSection } from "@/modules/school";
+import { HeroSection , OverviewSection, AlumniSection, ExcitedNewsletterSection, AdvantagesSection, OpenSourceMentorshipSection, UniversityComparisonSection, KnowledgePartnersSection } from "@/modules/school";
 import { ProgrammesExplorer } from "@/modules/programmes";
 import SectionDivider from "@/components/common/SectionDivider";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
@@ -310,7 +308,7 @@ export default async function Page({ params }: Props) {
         newsLetterBtns={school?.newsletterbtns}
       />
       {school?.advantagetitle && (
-        <SchoolAdvantages2
+        <AdvantagesSection
           heading={school?.advantagetitle}
           desc={school?.advantagedesc}
           subtitle={school?.advantagesubtitle}
@@ -320,7 +318,7 @@ export default async function Page({ params }: Props) {
         />
       )}
       {slug === "school-of-engineering-and-technology" && (
-        <SchoolOpenSourceMentorship />
+        <OpenSourceMentorshipSection />
       )}
       {/* {school?.induscollabtitle &&
         Array.isArray(school?.collabcards) &&
@@ -332,7 +330,7 @@ export default async function Page({ params }: Props) {
         )} */}
 
       {school?.letsexplorecontent && (
-        <SchoolLetsExplore
+        <UniversityComparisonSection
           content={school?.letsexplorecontent}
           list1={school?.listitem1?.listsitems}
           list2={school?.listitem2}
@@ -341,7 +339,7 @@ export default async function Page({ params }: Props) {
         />
       )}
       {school?.knowledgetitle && (
-        <SchoolKnowledgePartner
+        <KnowledgePartnersSection
           title={school?.knowledgetitle}
           logos={school?.knowledgepartenerlogos}
         />

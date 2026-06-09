@@ -1,4 +1,6 @@
+import { ParagraphBlock } from "@/lib/types/about";
 import { StrapiMedia, CounterItem, AlumniMedia, ButtonType } from "@/lib/types/common";
+import { ListItem, SchoolList } from "@/lib/types/schools";
 
 export interface Button {
   id: number;
@@ -53,4 +55,12 @@ export interface ExcitedNewsletterSectionProps {
   newsLetterHeading: string;
   newsLetterDesc: string;
   newsLetterBtns: Button[];
+};
+
+export type UniversityComparisonSectionProps = {
+  content: ParagraphBlock[];
+  list1: ListItem[];
+  list2: SchoolList;
+  list3: SchoolList;
+  slug: string;
 };

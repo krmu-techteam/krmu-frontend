@@ -20,3 +20,11 @@ export const OVERVIEW_SECTION_IMAGES: Record<string, string> = {
   'school-of-education': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soed_info_bc9daec6fd.webp'
 
 };
+
+export const WHATYOU_GET_OPEN_SOURCE_MENTORSHIP = [
+  "Guided project & organisation selection",
+  "Proposal writing with expert reviews",
+  "Hands-on contributions\n(Git, PRs, real repositories)",
+  "6-month structured preparation with continuous support from the Technical Training Team",
+  "Corporate-like work environment with daily progress tracking, real development workflows, and mentorship by past selected contributors.",
+];
