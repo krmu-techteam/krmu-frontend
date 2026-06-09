@@ -1,19 +1,12 @@
-import SchoolAdmissionOpen from "../SchoolComponents/SchoolAdmissionOpen";
+
 import SchoolCommenceJourney from "../SchoolComponents/SchoolCommenceJourney";
 import SchoolDeansVision from "../SchoolComponents/SchoolDeansVision";
 import SchoolEventAndExperience from "../SchoolComponents/SchoolEventAndExperience";
 import SchoolExcellence from "../SchoolComponents/SchoolExcellence";
-import SchoolExcitedAlready from "../SchoolComponents/SchoolExcitedAlready";
 import SchoolFacilities from "../SchoolComponents/SchoolFacilities";
 import SchoolFacultyAdvisory from "../SchoolComponents/SchoolFacultyAdvisory";
-import SchoolHero from "../SchoolComponents/SchoolHero";
-import SchoolIndustryCollaboration from "../SchoolComponents/SchoolIndustryCollaboration";
-import SchoolInfoStatistics from "../SchoolComponents/SchoolInfoStatistics";
 import SchoolKnowledgePartner from "../SchoolComponents/SchoolKnowledgePartner";
 import SchoolLetsExplore from "../SchoolComponents/SchoolLetsExplore";
-import SchoolNewsletter from "../SchoolComponents/SchoolNewsletter";
-import SchoolOurAlumni from "../SchoolComponents/SchoolOurAlumni";
-import SchoolProgrammeOffered from "../SchoolComponents/SchoolProgrammeOffered";
 import SchoolTestimonials from "../SchoolComponents/SchoolTestimonials";
 import { notFound } from "next/navigation";
 import {
@@ -29,7 +22,7 @@ import { getSchoolSEO } from "@/lib/api/website-seo";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import SchoolAdvantages2 from "../SchoolComponents/SchoolDesign2/SchoolAdvantages2";
 import SchoolOpenSourceMentorship from "../SchoolComponents/SchoolDesign2/SchoolOpenSourceMentorship";
-import SchoolExcitedNewsletter from "../SchoolComponents/SchoolDesign2/SchoolExcitedNewsletter";
+
 import {
   sbasLogos,
   semceLogos,
@@ -44,7 +37,11 @@ import {
   somcLogos,
   sprsLogos,
 } from "../SchoolComponents/schoolData";
-import { sbasHerosLogos, semceHerosLogos, smasHerosLogos, soadHerosLogos, soasHerosLogos, soedHerosLogos, soetHerosLogos, sohmctHerosLogos, solaHerosLogos, solsHerosLogos, somcHerosLogos, sprsHerosLogos } from "../SchoolComponents/schoolHeroLogo";
+import { sbasHerosLogos, smasHerosLogos, soadHerosLogos, soasHerosLogos, soedHerosLogos, soetHerosLogos, sohmctHerosLogos, solaHerosLogos, somcHerosLogos, sprsHerosLogos } from "../SchoolComponents/schoolHeroLogo";
+import { HeroSection , OverviewSection, AlumniSection, ExcitedNewsletterSection } from "@/modules/school";
+import { ProgrammesExplorer } from "@/modules/programmes";
+import SectionDivider from "@/components/common/SectionDivider";
+import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -208,7 +205,11 @@ export default async function Page({ params }: Props) {
   const custPage = await checkCustomPage(slug);
   const isPage = custPage[0];
 
+  const getDownProsSettings = await getDownloadProspectusSetting();
+  const enable_disable_download_pros = getDownProsSettings?.download_prospectus_enable_disable;
+
   const school = allSchools.find((school) => school.urlslug === slug);
+  const prospectusUrl = school?.excitedbtns?.[0]?.buttonlink || "#";
   if (isPage?.is_custom_page === "custom_page") {
     return <CustomPage slug={isPage?.slug || ""} />;
   }
@@ -233,7 +234,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <>
-      <SchoolHero
+      <HeroSection
         herobanner={school?.schoolherobanner}
         title={school.schoolname}
         subheading={school.subheading}
@@ -254,7 +255,7 @@ export default async function Page({ params }: Props) {
         />
       )} */}
       {schoolKnowComp && (
-        <SchoolInfoStatistics
+        <OverviewSection
           heading={schoolKnowComp?.heading}
           subheading={schoolKnowComp?.subheading}
           desc={schoolKnowComp?.description}
@@ -263,19 +264,28 @@ export default async function Page({ params }: Props) {
         />
       )}
       {school?.alumnititle && (
-        <SchoolOurAlumni
+        <AlumniSection
           title={school?.alumnititle}
           alumniLogos={schoolsLogosData}
         />
       )}
-
-      <SchoolProgrammeOffered
+      <div className="relative pt-8 md:pt-12 xl:pt-20 pb-20">
+        <ProgrammesExplorer 
+          initialSchoolSlug={school?.school_category?.slug} 
+          title={school?.programme_offered?.title}
+          content={school?.programme_offered?.content}
+          isProspectusPopupEnabled={enable_disable_download_pros}
+          prospectusUrl={prospectusUrl}
+        />
+        <SectionDivider />
+      </div>
+      {/* <SchoolProgrammeOffered
         degName={degreeName}
         schoolCategoryName={schoolCategoryName}
         title={school?.programme_offered?.title}
         content={school?.programme_offered?.content}
         slug={slug}
-      />
+      /> */}
 
       {/* <SchoolExcitedAlready
         heading={school?.excitedtitle}
@@ -291,7 +301,7 @@ export default async function Page({ params }: Props) {
           newsletterbg={school?.newsletterbg?.url}
         />
       )} */}
-      <SchoolExcitedNewsletter
+      <ExcitedNewsletterSection
         excitedHeading={school?.excitedtitle}
         excitedDesc={school?.exciteddescription}
         excbtns={school?.excitedbtns}

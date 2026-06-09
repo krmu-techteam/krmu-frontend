@@ -13,17 +13,18 @@ interface ProgrammesFilterHeaderProps {
   programCount: number;
   viewMode: 'list' | 'grid';
   onViewModeChange: (mode: 'list' | 'grid') => void;
+  availableDegrees?: string[];
 }
 
 export default function ProgrammesFilterHeader({
   activeDegreeSlug,
   onDegreeChange,
-  degreesList,
   searchQuery,
   onSearchChange,
   programCount,
   viewMode,
-  onViewModeChange
+  onViewModeChange,
+  availableDegrees
 }: ProgrammesFilterHeaderProps) {
 
   
@@ -89,7 +90,7 @@ export default function ProgrammesFilterHeader({
             { name: "Postgraduate", slug: "postgraduate-programmes" },
             { name: "Doctoral", slug: "doctoral-programmes" },
             { name: "Diploma", slug: "diploma-programmes" }
-          ].map((degree) => (
+          ].filter(deg => availableDegrees ? availableDegrees.includes(deg.slug) : true).map((degree) => (
             <button
               key={degree.slug}
               onClick={() => onDegreeChange(degree.slug)}

@@ -3,7 +3,7 @@ import { CircleX, MoveRight } from "lucide-react";
 import { useState } from "react";
 
 type PopupProps = {
-  buttonText?: string;
+  buttonText?: React.ReactNode;
   buttonClass?: string;
   buttonIcon?: React.ReactNode;
   formBodyTextColor?: string;

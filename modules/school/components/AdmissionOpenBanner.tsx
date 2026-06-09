@@ -1,23 +1,13 @@
-import { Button } from "@/lib/types/home";
 import Link from "next/link";
 import { ArrowRightCircle, ArrowUpRight } from "lucide-react";
+import { HeroBannerProps, splitTitleByFor } from "@/modules/school";
 
-type Props = {
-  title: string;
-  admBtn: Button;
-};
-
-const SchoolAdmissionOpen = ({ title, admBtn }: Props) => {
-  // Try to split the title to make the first part bold as shown in the design
-  // e.g., "Admissions Open For Session 2026-27"
-  const splitIndex = title.toLowerCase().indexOf("for");
-  const hasSplit = splitIndex !== -1;
-  const boldText = hasSplit ? title.substring(0, splitIndex) : title;
-  const normalText = hasSplit ? title.substring(splitIndex) : "";
+const AdmissionOpenBanner = ({ title, admBtn }: HeroBannerProps) => {
+  const { boldText, normalText } = splitTitleByFor(title);
 
   return (
-    <section className="w-full relative z-20 px-2.5 sm:px-0 py-6 lg:py-8">
-      <div className="max-w-[1664px] mx-auto px-5 sm:px-3 py-4 sm:py-3 flex flex-col md:flex-row items-center justify-between gap-6 bg-[linear-gradient(90deg,#8B3D22_11.06%,#003763_100%)] rounded-sm">
+    <section className="w-full relative z-20 py-6 lg:py-8">
+      <div className="max-w-[1530px] mx-auto px-5 sm:px-3 py-4 sm:py-3 flex flex-col md:flex-row items-center justify-between gap-6 bg-[linear-gradient(90deg,#8B3D22_11.06%,#003763_100%)] rounded-sm">
         {/* Heading */}
         <h3 className="text-center font-poppins md:text-left text-2xl lg:text-3xl text-white">
           <span className="font-semibold">{boldText}</span>
@@ -52,5 +42,4 @@ const SchoolAdmissionOpen = ({ title, admBtn }: Props) => {
   );
 };
 
-export default SchoolAdmissionOpen;
-
+export default AdmissionOpenBanner;
