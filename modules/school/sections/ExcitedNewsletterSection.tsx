@@ -4,6 +4,7 @@ import { ExcitedNewsletterSectionProps, NewsletterDownloader } from "@/modules/s
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 import { Download } from "lucide-react";
+import SectionDivider from "@/components/common/SectionDivider";
 
 
 const ExcitedNewsletterSection = async ({
@@ -83,6 +84,7 @@ const ExcitedNewsletterSection = async ({
           </div>
         </div>
       </div>
+      <SectionDivider />
     </section>
   );
 };
