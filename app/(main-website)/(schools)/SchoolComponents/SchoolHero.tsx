@@ -116,7 +116,7 @@ const SchoolHero = ({
 
     "school-of-architecture-design": {
       thumbnail:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/school_of_architecture_design_d66a3af7ce.png",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/school_of_architecture_design_89e7b8e3be.png",
       ytUrl: "https://www.youtube.com/watch?v=U3U9_dXYruQ",
       bgURl:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/architecture_bg_a9f5687333.jpg", //schools/banners/soad-banner-2.webp
