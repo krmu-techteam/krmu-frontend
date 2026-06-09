@@ -163,7 +163,7 @@ const SchoolHero = ({
       thumbnail: "",
       ytUrl: "",
       bgURl:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/medical_allied_bg_1_196402d4f1.webp",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/hghg_24a0676b45.webp",
       middleImg:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/girl3_fbc75334d9.png",
       mobileBgImg:
@@ -233,7 +233,7 @@ const SchoolHero = ({
           </div>
         )}
         <div
-          className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[80px]" : ""}  ${slug === "school-of-architecture-design" ? "-mb-[30px]" : ""}`}
+          className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[80px]" : ""}  ${slug === "school-of-architecture-design" ? "" : ""}`}
         >
           {videoUrl && middleimg && (
             <Image
