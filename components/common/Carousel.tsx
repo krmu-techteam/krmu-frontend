@@ -23,6 +23,8 @@ interface CarouselProps {
   slideClassName?: string;
   prevArrowClassName?: string;
   nextArrowClassName?: string;
+  activeDotClassName?: string;
+  dotClassName?: string;
   fade?: boolean;
 }
 
@@ -41,6 +43,8 @@ export const Carousel = ({
   slideClassName = '',
   prevArrowClassName = '',
   nextArrowClassName = '',
+  activeDotClassName = '',
+  dotClassName = '',
   fade = false,
 }: CarouselProps) => {
   const plugins = React.useMemo(() => {
@@ -127,7 +131,9 @@ export const Carousel = ({
             <button
               key={index}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === selectedIndex ? 'bg-brand-gold w-6' : 'bg-slate-300 dark:bg-white/20'
+                index === selectedIndex
+                  ? activeDotClassName || 'bg-brand-gold w-6'
+                  : dotClassName || 'bg-slate-300 dark:bg-white/20'
               }`}
               onClick={() => scrollTo(index)}
               aria-label={`Go to slide ${index + 1}`}

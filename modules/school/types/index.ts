@@ -1,6 +1,7 @@
 import { ParagraphBlock } from "@/lib/types/about";
 import { StrapiMedia, CounterItem, AlumniMedia, ButtonType } from "@/lib/types/common";
-import { ListItem, SchoolList } from "@/lib/types/schools";
+import { ListItem, SchoolList, SchoolTestimonials } from "@/lib/types/schools";
+ 
 
 export interface Button {
   id: number;
@@ -63,4 +64,35 @@ export type UniversityComparisonSectionProps = {
   list2: SchoolList;
   list3: SchoolList;
   slug: string;
+};
+
+export interface ExcellenceSectionProps {
+  title1: string;
+  title2: string;
+  btn1: Button;
+  btn2: Button;
+}
+
+export interface ExcellenceCardProps {
+  title: string;
+  btnLink?: string;
+  btnText?: string;
+  btnClass?: string;
+  gradientDirection: "r" | "l";
+};
+
+export interface TestimonialSectionProps {
+  title: string;
+  desc: string;
+  testis: SchoolTestimonials[];
+}
+
+export interface DeanSectionProps {
+  title: string;
+  subtitle: string;
+  deanName: string;
+  deanEmail: string;
+  desg: string;
+  desc: ParagraphBlock[];
+  deanImgUrl: string;
 };

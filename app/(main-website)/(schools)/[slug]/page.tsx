@@ -1,13 +1,4 @@
-
-import SchoolCommenceJourney from "../SchoolComponents/SchoolCommenceJourney";
-import SchoolDeansVision from "../SchoolComponents/SchoolDeansVision";
-import SchoolEventAndExperience from "../SchoolComponents/SchoolEventAndExperience";
-import SchoolExcellence from "../SchoolComponents/SchoolExcellence";
-import SchoolFacilities from "../SchoolComponents/SchoolFacilities";
-import SchoolFacultyAdvisory from "../SchoolComponents/SchoolFacultyAdvisory";
-import SchoolKnowledgePartner from "../SchoolComponents/SchoolKnowledgePartner";
-import SchoolLetsExplore from "../SchoolComponents/SchoolLetsExplore";
-import SchoolTestimonials from "../SchoolComponents/SchoolTestimonials";
+ 
 import { notFound } from "next/navigation";
 import {
   getEventsAndExperiencesBySchoolCat,
@@ -36,7 +27,9 @@ import {
   sprsLogos,
 } from "../SchoolComponents/schoolData";
 import { sbasHerosLogos, smasHerosLogos, soadHerosLogos, soasHerosLogos, soedHerosLogos, soetHerosLogos, sohmctHerosLogos, solaHerosLogos, somcHerosLogos, sprsHerosLogos } from "../SchoolComponents/schoolHeroLogo";
-import { HeroSection , OverviewSection, AlumniSection, ExcitedNewsletterSection, AdvantagesSection, OpenSourceMentorshipSection, UniversityComparisonSection, KnowledgePartnersSection } from "@/modules/school";
+
+import { HeroSection , OverviewSection, AlumniSection, ExcitedNewsletterSection, AdvantagesSection, OpenSourceMentorshipSection, UniversityComparisonSection, KnowledgePartnersSection, ExcellenceSection, TestimonialsSection, DeanSection, FacultyAdvisorySection, EventAndExperienceSection, FacilitiesSection, CommenceJourneySection } from "@/modules/school";
+
 import { ProgrammesExplorer } from "@/modules/programmes";
 import SectionDivider from "@/components/common/SectionDivider";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
@@ -345,7 +338,7 @@ export default async function Page({ params }: Props) {
         />
       )}
       {school?.coetitle1 && (
-        <SchoolExcellence
+        <ExcellenceSection
           title1={school?.coetitle1}
           title2={school?.coetitle2}
           btn1={school?.coebtn1}
@@ -353,14 +346,14 @@ export default async function Page({ params }: Props) {
         />
       )}
       {school?.tetimonialtitle && (
-        <SchoolTestimonials
+        <TestimonialsSection
           title={school?.tetimonialtitle}
           desc={school?.testimonialdesc}
           testis={school?.testimonials}
         />
       )}
       {school?.showdeaninfo && (
-        <SchoolDeansVision
+        <DeanSection
           deanName={school?.deansname}
           desg={school?.deandesignation}
           deanEmail={school?.deanemail}
@@ -371,7 +364,7 @@ export default async function Page({ params }: Props) {
         />
       )}
       {school?.fac_adv && (
-        <SchoolFacultyAdvisory
+        <FacultyAdvisorySection
           fac_adv={school?.fac_adv}
           schoolCat={schoolCat}
           // WordSchoolslug={WordSchoolslug}
@@ -384,7 +377,7 @@ export default async function Page({ params }: Props) {
         />
       )}
       {school?.eventstitle && (
-        <SchoolEventAndExperience
+        <EventAndExperienceSection
           title={school?.eventstitle}
           desc={school?.eventsdesc}
           btn={school?.eventsbtn}
@@ -399,10 +392,10 @@ export default async function Page({ params }: Props) {
         />
       )} */}
       {school?.facility_slide && (
-        <SchoolFacilities fac_slides={school?.facility_slide} />
+        <FacilitiesSection fac_slides={school?.facility_slide} />
       )}
       {school?.commence_journey && (
-        <SchoolCommenceJourney
+        <CommenceJourneySection
           highlight_heading={school?.commence_journey?.highlight_heading}
           heading={school?.commence_journey?.heading}
           imgUrl={school?.commence_journey?.commence_img?.url}

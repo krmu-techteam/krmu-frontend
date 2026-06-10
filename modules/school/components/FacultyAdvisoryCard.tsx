@@ -21,7 +21,7 @@ type SocialItem = {
   value: string;
 };
 
-export const StaticFacultyEmployeeCard = ({
+export const FacultyAdvisoryCard = ({
   name,
   desg,
   slug,
@@ -96,7 +96,7 @@ export const StaticFacultyEmployeeCard = ({
   const isLoading = facultyContent === null;
 
   return (
-    <div className="overflow-hidden rounded-t-xl bg-[#061623]/50 transition-all duration-300 ease-in-out group flex flex-col font-poppins">
+    <div className="overflow-hidden rounded-t-xl bg-[#061623]/50 transition-all duration-300 ease-in-out  group flex flex-col font-poppins">
       {/* IMAGE SECTION */}
       <Link
         href={`/faculty/${slug}`}
@@ -121,6 +121,7 @@ export const StaticFacultyEmployeeCard = ({
           alt={name}
           priority={false}
           className="relative z-10 h-[240px] -mb-2 sm:h-full sm:w-full rounded-t-[15px] object-contain transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+          
         />
       </Link>
 
@@ -137,14 +138,14 @@ export const StaticFacultyEmployeeCard = ({
           </Link>
 
           <h5
-            className="py-1 uppercase text-white text-[12px] tracking-wide"
+            className="py-1 uppercase text-white text-xs"
             dangerouslySetInnerHTML={{
               __html: desg,
             }}
           />
 
           <h6
-            className="font-semibold text-white text-[10px] tracking-wide"
+            className="font-bold text-white text-xs"
             dangerouslySetInnerHTML={{
               __html: qual,
             }}
@@ -172,7 +173,7 @@ export const StaticFacultyEmployeeCard = ({
                       target={isLinkedin ? "_blank" : undefined}
                       rel={isLinkedin ? "noopener noreferrer" : undefined}
                       className={`flex items-center justify-center rounded-md p-1.5 transition-opacity hover:opacity-90 ${
-                        isLinkedin ? "bg-[#0077b5]" : "bg-[#001732]"
+                        isLinkedin ? "bg-[#0077b5]" : "bg-white/30"
                       }`}
                     >
                       {isLinkedin ? (
