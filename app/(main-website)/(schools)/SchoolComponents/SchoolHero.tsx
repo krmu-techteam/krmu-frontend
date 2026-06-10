@@ -233,7 +233,7 @@ const SchoolHero = ({
           </div>
         )}
         <div
-          className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[80px]" : ""}  ${slug === "school-of-architecture-design" ? "" : ""}`}
+          className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[50px] left-[52%]" : ""}  ${slug === "school-of-architecture-design" ? "" : ""}`}
         >
           {videoUrl && middleimg && (
             <Image

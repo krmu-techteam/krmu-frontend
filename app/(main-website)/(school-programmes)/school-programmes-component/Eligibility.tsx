@@ -19,6 +19,7 @@ import NoPaperForm from "@/lib/constants/NoPaperForm";
 import YoutubePopup from "./YoutubePopup";
 import Image from "next/image";
 import { STRAPI_URL } from "@/app/constant";
+import { div } from "framer-motion/client";
 
 type Props = {
   elgibilities: EligibilityItem[];
@@ -273,11 +274,17 @@ const Eligibility = ({
                   </div>
                 </div>
               </div>
-              {progNewLine.includes(slug) && (
-                <span className="font-poppins text-[14px] w-fit right-0 font-normal leading-[24px] text-gray-600 uppercase tracking-normal mt-3 block">
-                  3-Year Lateral Entry option also available for eligible
-                  students
-                </span>
+              {progNewLine.includes(slug) ? (
+                <div className="relative w-full">
+                  <p className="font-poppins text-[14px]  text-right font-normal leading-[24px] text-gray-600 uppercase tracking-normal mt-3 block">
+                    3-Year Lateral Entry option also available for eligible
+                    students
+                  </p>
+                </div>
+              ) : (
+                <p className="font-poppins text-[14px]  text-right font-normal leading-[24px] text-gray-600 uppercase tracking-normal mt-3 block">
+                  **Subject to Approval
+                </p>
               )}
             </div>
           )}
