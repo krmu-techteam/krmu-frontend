@@ -26,6 +26,9 @@ const HeroSection = ({
   title,
   subheading,
   heroBtns,
+  videoFmt,
+  iframeContent,
+  videoLink,
   herobanner,
   fullWidth,
   alumniLogos,
@@ -157,7 +160,8 @@ const HeroSection = ({
   } = schoolBgMedia[slug as keyof typeof schoolBgMedia] || {};
 
   const schoolBanners = Object.keys(schoolBgMedia);
-
+  const videoURL = iframeContent;
+  fullWidth = false;
 
   const desktopBg = schoolBanners.includes(slug)
     ? bgUrl
