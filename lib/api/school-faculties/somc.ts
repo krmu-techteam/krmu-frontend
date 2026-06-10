@@ -233,7 +233,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     id: 17612,
     slug: "takrar-ahmad-yattoo",
     title: {
-      rendered: "Ms. Takrar Ahmad Yattoo",
+      rendered: "Mr. Takrar Ahmad Yattoo",
     },
     featured_media: 17613,
     acf: {

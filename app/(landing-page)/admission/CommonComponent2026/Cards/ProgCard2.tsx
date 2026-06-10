@@ -55,7 +55,7 @@ const blueBadge: string[] = [
   "Xebia",
   "IIDE",
   "Safexpress",
-  "EY",
+  "EY India",
   "EC-Council",
   "Samatrix.io",
   "GCEC Global Foundation",
