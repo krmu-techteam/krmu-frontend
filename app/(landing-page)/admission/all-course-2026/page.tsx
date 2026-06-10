@@ -96,7 +96,6 @@ const page = () => {
         middleImg={heroContent?.middleImg}
         mobileImg={heroContent?.mobileImg}
         lpclName={heroContent?.lpclName}
-        formHeight={'480px'}
       />
       <Counter counters={counters} />
       <ProminentRecruiter recruiters={recruiters} />
