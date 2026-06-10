@@ -88,7 +88,7 @@ const HeroSection = ({
                       </strong>
                     </h3>
                   </div>
-                  <NoPaperFormsWidget widgetId={formId} height="500px" />
+                  <NoPaperFormsWidget widgetId={formId} height="400px" />
                 </div>
               </>
             )}
