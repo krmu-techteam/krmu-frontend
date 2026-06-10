@@ -74,7 +74,10 @@ const HeroSection = ({
             )}
           </div> */}
 
-          <div className="w-full lg:w-[40%] xl:w-1/3 container-2 px-5 scroll-mt-40" id="apply-section">
+          <div
+            className="w-full lg:w-[40%] xl:w-1/3 container-2 px-5 scroll-mt-40"
+            id="apply-section"
+          >
             {formId && (
               <>
                 <div className="heroBannerForm__form">
@@ -88,7 +91,7 @@ const HeroSection = ({
                       </strong>
                     </h3>
                   </div>
-                  <NoPaperFormsWidget widgetId={formId} height="400px" />
+                  <NoPaperFormsWidget widgetId={formId} height="500px" />
                 </div>
               </>
             )}
