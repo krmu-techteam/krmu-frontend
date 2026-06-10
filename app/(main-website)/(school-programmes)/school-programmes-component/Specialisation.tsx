@@ -48,12 +48,12 @@ const Specialisation = ({
     if (lowerTitle.includes("ux") || lowerTitle.includes("ui")) {
       return "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_computer_science_and_engineering_ux_ui_00fecef876.jpeg";
     }
-    // if (lowerTitle.includes("cloud computing")) {
-    //   return "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_computer_science_and_engineering_ux_ui_00fecef876.jpeg";
-    // }
-    // if (lowerTitle.includes("semiconductor design")) {
-    //   return "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_computer_science_and_engineering_cyber_security_c32ad8f7f8.jpeg";
-    // }
+    if (lowerTitle.includes("cloud computing")) {
+      return "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1_5ee34b2594.png";
+    }
+    if (lowerTitle.includes("semiconductor design")) {
+      return "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/2_6e0ebe6cdd.png";
+    }
     return currentUrl
       ? `${STRAPI_URL}${currentUrl}`
       : "/programmes/specialisation.webp";

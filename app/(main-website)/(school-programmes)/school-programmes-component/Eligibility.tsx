@@ -44,8 +44,7 @@ const Eligibility = ({
   const [expanded, setExpanded] = useState(false);
   // const btnRef = useRef<HTMLButtonElement>(null);
 
-  // limit characters for h2
-  const maxChars = 50;
+  const maxChars = 56; // limit characters for h2
   const longTitle = elgibilities[2]?.title || "";
   const isLong = longTitle.length > maxChars;
   const displayTitle = expanded ? longTitle : longTitle.slice(0, maxChars);
