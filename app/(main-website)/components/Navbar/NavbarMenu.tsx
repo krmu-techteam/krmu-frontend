@@ -555,28 +555,28 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                       <li
                         className={`text-[13px] capitalize pb-[7px] hover:text-blue-700`}
                       >
-                        <Link href="https://alumni.krmangalam.edu.in/?_gl=1*119v2hv*_gcl_au*ODU0NDc0OTE3LjE3NTk1NTIyMjE.">
+                        <Link href="https://alumni.krmangalam.edu.in/?_gl=1*119v2hv*_gcl_au*ODU0NDc0OTE3LjE3NTk1NTIyMjE." target="_blank">
                           Alumni
                         </Link>
                       </li>
                       <li
                         className={`text-[13px] capitalize pb-[7px] hover:text-blue-700`}
                       >
-                        <Link href="https://foundry.krmangalam.edu.in">
+                        <Link href="https://foundry.krmangalam.edu.in" target="_blank">
                           Foundry
                         </Link>
                       </li>
                       <li
                         className={`text-[13px] capitalize pb-[7px] hover:text-blue-700`}
                       >
-                        <Link href="https://lms.krmangalam.edu.in/?_gl=1*zg02u4*_gcl_au*ODU0NDc0OTE3LjE3NTk1NTIyMjE.">
+                        <Link href="https://lms.krmangalam.edu.in/?_gl=1*zg02u4*_gcl_au*ODU0NDc0OTE3LjE3NTk1NTIyMjE." target="_blank">
                           LMS
                         </Link>
                       </li>
                       <li
                         className={`text-[13px] capitalize pb-[7px] hover:text-blue-700`}
                       >
-                        <Link href="https://krmu.icloudems.com/corecampus/index.php">
+                        <Link href="https://krmu.icloudems.com/corecampus/index.php" target="_blank">
                           ERP
                         </Link>
                       </li>
