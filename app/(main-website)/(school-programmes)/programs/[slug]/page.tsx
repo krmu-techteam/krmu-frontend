@@ -354,6 +354,7 @@ const page = async ({ params }: Props) => {
             currFormId={curriculumSection?.currFormId}
             currFormContainerId={curriculumSection?.currContainerId}
             isYear={curriculumSection?.only_years}
+            slug={slug}
           />
         )}
         {labfacilitiesSection && (

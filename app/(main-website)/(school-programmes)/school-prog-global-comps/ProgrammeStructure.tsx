@@ -30,6 +30,7 @@ type Props = {
   isYear: boolean;
   heading?: string;
   highlight?: string;
+  slug?: string;
 };
 
 const ProgrammeStructure = ({
@@ -40,6 +41,7 @@ const ProgrammeStructure = ({
   isYear,
   heading,
   highlight,
+  slug,
 }: Props) => {
   const [activeYear, setActiveYear] = useState(
     programStruct[0]?.year.toLowerCase().replace(/\s+/g, "") || "",
@@ -107,7 +109,9 @@ const ProgrammeStructure = ({
           )} */}
 
           {/* Main Content Area - Clean stack without card boundaries to match image */}
-          <div className="xl:max-w-lg 2xl:max-w-xl flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10">
+          <div
+            className={` ${slug === "bachelor-of-physiotherapy-bpt" ? "lg:max-w-lg xl:max-w-2xl" : "xl:max-w-lg 2xl:max-w-xl"} flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10`}
+          >
             {/* Left Navigation & Content Area */}
             {currbtn?.buttonlink && (
               <div className="mb-5 sm:mb-3 w-full xl:w-auto flex justify-center xl:justify-start">
