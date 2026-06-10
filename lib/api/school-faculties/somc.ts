@@ -24,7 +24,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 55322,
     acf: {
-      "staff-qualification": "MBA, Ph.D, NET",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant Professor",
       schools: [1126],
     },
@@ -80,7 +80,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     id: 107964,
     slug: "ms-prerna-sharma",
     title: {
-      rendered: "Ms. Prerna Sharma",
+      rendered: "Dr. Prerna Sharma",
     },
     featured_media: 107965,
     acf: {
@@ -95,7 +95,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     id: 108935,
     slug: "ms-indumati-pandey",
     title: {
-      rendered: "Ms. Indumati Pandey",
+      rendered: "Dr. Indumati Pandey",
     },
     featured_media: 108939,
     acf: {
@@ -233,7 +233,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     id: 17612,
     slug: "takrar-ahmad-yattoo",
     title: {
-      rendered: "Dr. Takrar Ahmad Yattoo",
+      rendered: "Ms. Takrar Ahmad Yattoo",
     },
     featured_media: 17613,
     acf: {
@@ -370,7 +370,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     id: 113862,
     slug: "ms-richa-goyal",
     title: {
-      rendered: "Ms. Richa Goyal",
+      rendered: "Dr. Richa Goyal",
     },
     featured_media: 10291,
     acf: {
