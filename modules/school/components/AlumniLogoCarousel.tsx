@@ -29,8 +29,8 @@ const AlumniCarousel = ({ AluLogos }: AlumniLogoCarouselProps) => {
         autoScrollSpeed={1.5}
         showArrows={false}
         showDots={false}
-        slideClassName="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6 pl-4 md:pl-6"
-        containerClassName={`-ml-4 md:-ml-6 ${!shouldLoopAndScroll ? 'xl:justify-center' : ''}`}
+        slideClassName="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5 xl:basis-1/6 pl-4 xl:pl-6"
+        containerClassName={`-ml-4 xl:-ml-6 ${!shouldLoopAndScroll ? 'xl:justify-center' : ''}`}
       >
         {displayLogos.map((logo, index) => (
           <div

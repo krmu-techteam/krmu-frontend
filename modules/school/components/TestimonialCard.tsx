@@ -11,7 +11,7 @@ type Props = {
 
 export default function TestimonialCard({ name, edu, desc, img }: Props) {
   return (
-    <div className="border border-[#1a3353] rounded-xl p-6 sm:p-8 h-full flex flex-col sm:flex-row gap-6">
+    <div className="border border-[#1a3353] rounded-xl p-6 sm:p-8 h-full flex flex-col xl:flex-row gap-6">
       <div className="shrink-0">
         <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden border border-[#1a3353]">
           {img && (

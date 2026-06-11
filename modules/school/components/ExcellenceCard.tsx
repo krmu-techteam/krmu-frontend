@@ -18,10 +18,10 @@ export default function ExcellenceCard({
 
   return (
     <div
-      className={`group font-poppins ${gradientClass} border border-[#1a3353] rounded-xl p-8 sm:p-10 flex flex-col justify-between items-center text-center transition-all duration-300 hover:shadow-[0_0_30px_rgba(5,52,91,0.5)]`}
+      className={`group font-poppins ${gradientClass} border border-[#1a3353] rounded-xl p-6 xl:p-10 flex flex-col justify-between items-center text-center transition-all duration-300 hover:shadow-[0_0_30px_rgba(5,52,91,0.5)]`}
     >
       <div className="flex-1 flex items-center justify-center mb-8">
-        <h4 className="text-white text-xl sm:text-2xl md:text-3xl font-medium leading-relaxed">
+        <h4 className="text-white text-xl sm:text-2xl xl:text-3xl font-medium leading-relaxed">
           {title}
         </h4>
       </div>
@@ -29,7 +29,7 @@ export default function ExcellenceCard({
       {(btnLink || btnText) && (
         <Link
           href={btnLink || "#"}
-          className={`inline-flex items-center gap-2 text-sm sm:text-base py-3.5 px-3.5 sm:px-8 text-white rounded-sm border border-white transition-all relative overflow-hidden group ${
+          className={`inline-flex items-center gap-2 text-sm xl:text-base py-3.5 px-3.5 xl:px-8 text-white rounded-sm border border-white transition-all relative overflow-hidden group ${
             btnClass || ""
           }`}
           target="_blank"

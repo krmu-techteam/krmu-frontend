@@ -5,9 +5,9 @@ type UniversityComparisonTableProps = Omit<UniversityComparisonSectionProps, 'co
 
 const UniversityComparisonTable = ({ list1, list2, list3 }: UniversityComparisonTableProps) => {
   return (
-    <div className="w-full border border-[#0084ff]/70 rounded-sm shadow-2xl py-6 md:py-7 lg:py-7">
+    <div className="w-full border border-[#0084ff]/70 rounded-sm shadow-2xl py-4 md:py-4 xl:py-7">
       {/* Table Header Row */}
-      <div className="hidden md:grid grid-cols-3 gap-6 pb-6 border-b border-[#0084ff]/30 px-6 md:px-10 lg:px-14">
+      <div className="hidden md:grid grid-cols-3 gap-6 pb-4 border-b border-[#0084ff]/30 px-6 md:px-8 xl:px-14">
         <div></div> {/* Empty top-left */}
         <div className="text-lg md:text-xl font-bold text-white col-span-1">
           {list2?.listheading || "Traditional College"}
@@ -26,7 +26,7 @@ const UniversityComparisonTable = ({ list1, list2, list3 }: UniversityComparison
           return (
             <div 
               key={item?.id || index} 
-              className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-start py-4 px-6 md:px-10 lg:px-14"
+              className="grid grid-cols-1 md:grid-cols-3 gap-4 xl:gap-6 items-start py-4 px-6 md:px-8 xl:px-14"
             >
               {/* Feature Title */}
               <div className="text-[16px] md:text-[17px] text-white/90 font-medium md:pt-1">

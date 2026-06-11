@@ -21,15 +21,15 @@ const ExcitedNewsletterSection = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="py-14 lg:py-24 bg-transparent relative z-10 font-poppins">
-      <div className="max-w-[1530px] mx-auto px-4 md:px-8 2xl:px-3 w-full grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+    <section className="py-12 xl:py-20 bg-transparent relative z-10 font-poppins px-6 md:px-8 lg:px-11 2xl:px-16">
+      <div className="max-w-[1530px] mx-auto  grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
         {/* LEFT SIDE CARD */}
-        <div className="bg-[#0B1521] rounded-md border border-white/5 p-8 md:p-12 text-left text-white flex flex-col justify-center">
-          <h4 className="text-3xl md:text-[40px] leading-tight mb-3 font-serif">
+        <div className="bg-[#0B1521] rounded-md border border-white/5 p-8 xl:p-12 text-left text-white flex flex-col justify-center">
+          <h4 className="text-3xl xl:text-[40px] leading-tight mb-3 font-serif">
             {excitedHeading}
           </h4>
 
-          <h5 className="text-base md:text-lg text-white/80 mb-10 font-light">
+          <h5 className="text-md xl:text-lg text-white/80 mb-10 font-light">
             {excitedDesc}
           </h5>
 
@@ -70,12 +70,12 @@ const ExcitedNewsletterSection = async ({
         </div>
 
         {/* RIGHT SIDE CARD */}
-        <div className="bg-[#0B1521] rounded-md border border-white/5 p-8 md:p-12 text-left text-white flex flex-col justify-center">
-          <h4 className="text-3xl md:text-[40px] leading-tight mb-3 font-serif">
+        <div className="bg-[#0B1521] rounded-md border border-white/5 p-8 xl:p-12 text-left text-white flex flex-col justify-center">
+          <h4 className="text-3xl xl:text-[40px] leading-tight mb-3 font-serif">
             {newsLetterHeading}
           </h4>
 
-          <h5 className="text-base md:text-lg text-white/80 mb-10 font-light">
+          <h5 className="text-md xl:text-lg text-white/80 mb-10 font-light">
             {newsLetterDesc}
           </h5>
 

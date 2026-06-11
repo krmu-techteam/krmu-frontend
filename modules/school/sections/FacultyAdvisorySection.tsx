@@ -15,23 +15,23 @@ const FacultyAdvisorySection = ({ schoolCat, fac_adv }: Props) => {
   const isBoth = fac_adv?.fac_adv !== "Single";
 
   return (
-    <section className="relative py-12 md:px-8 md:py-20 bg-transparent font-poppins">
+    <section className="relative py-12 xl:py-16 px-6 md:px-8 lg:px-11 2xl:px-16 bg-transparent font-poppins">
       <div className="max-w-[1530px] mx-auto w-full">
         {/* Faculty List */}
-        <div className="mb-16">
+        <div>
           <div
             dangerouslySetInnerHTML={{
               __html: fac_adv?.fac_title || `Faculty At ${schoolCat.toUpperCase()}`,
             }}
-            className="text-3xl md:text-[42px] text-left px-4 md:px-0 font-bold text-white mb-10 font-poppins"
+            className="text-3xl xl:text-[42px] text-left px-4 md:px-0 font-bold text-white mb-6 xl:mb-8 font-poppins"
           />
           <FacultyAdvisoryCards schoolCat={schoolCat} />
         </div>
 
         {/* Advisory List (if applicable) */}
         {isBoth && (
-          <div className="">
-            <div className="text-3xl md:text-[42px] text-left px-4 md:px-0 font-bold text-white mb-10 font-poppins">
+          <div>
+            <div className="text-3xl md:text-[42px] text-left px-4 md:px-0 font-bold text-white mb-8 font-poppins">
               Advisory Board
             </div>
             <AdvisoryCards schoolCat={schoolCat} />

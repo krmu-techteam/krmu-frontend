@@ -52,9 +52,9 @@ export default function ProgrammesFilterHeader({
 
   return (
     <>
-    <div className="lg:sticky lg:top-[130px] z-[20] bg-[#061623] py-3 px-4 md:px-8 lg:px-3 mb-2 rounded-none lg:rounded-sm -mx-4 md:-mx-8 lg:mx-0">
+    <div className="xl:sticky xl:top-[130px] z-[20] bg-[#061623] py-3 px-6 md:px-8 lg:px-11 xl:px-3 mb-2 rounded-none xl:rounded-sm -mx-4 md:-mx-8 xl:mx-0">
       {/* Filters & Search Row */}
-      <div className="w-full flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+      <div className="w-full flex flex-col xl:flex-row xl:items-center justify-between gap-4">
         {/* Tabs */}
         <div 
           ref={scrollRef}
@@ -62,7 +62,7 @@ export default function ProgrammesFilterHeader({
           onMouseLeave={onMouseLeave}
           onMouseUp={onMouseUp}
           onMouseMove={onMouseMove}
-          className="flex overflow-x-auto no-scrollbar items-center justify-start w-full lg:flex-1 cursor-grab active:cursor-grabbing gap-6 md:gap-8"
+          className="flex overflow-x-auto no-scrollbar items-center justify-center xl:justify-start w-full xl:flex-1 cursor-grab active:cursor-grabbing gap-6 md:gap-8"
         >
           {/* Commented out dynamic mapping as requested
           {degreesList.map((degree) => (
@@ -82,7 +82,7 @@ export default function ProgrammesFilterHeader({
             </button>
           ))}
           */}
-
+ 
           {/* Hardcoded tabs to match design */}
           {[
             { name: "All", slug: "all" },
@@ -107,9 +107,9 @@ export default function ProgrammesFilterHeader({
             </button>
           ))}
         </div>
-
+ 
         {/* Search Component */}
-        <div className="relative w-full lg:w-72 shrink-0">
+        <div className="relative w-full xl:w-72 shrink-0">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40" size={16} />
           <input
             type="text"
@@ -127,7 +127,7 @@ export default function ProgrammesFilterHeader({
       </div>
     </div>
      {/* Program Count & Toggles */}
-      <div className="flex items-center justify-between px-[2px] lg:mb-2">
+      <div className="flex items-center justify-between px-6 lg:px-3 xl:px-[2px] xl:mb-2">
         <span className="text-white/80 text-[14px] font-normal">
           {programCount} Programs Found
         </span>

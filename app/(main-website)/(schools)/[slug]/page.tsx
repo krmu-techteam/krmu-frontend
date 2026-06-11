@@ -260,7 +260,7 @@ export default async function Page({ params }: Props) {
           alumniLogos={schoolsLogosData}
         />
       )}
-      <div className="relative pt-8 md:pt-12 xl:pt-20 pb-20">
+      <div className="relative pt-8 md:pt-12 xl:pt-20 pb-5 md:pb-12 xl:pb-20">
         <ProgrammesExplorer 
           initialSchoolSlug={school?.school_category?.slug} 
           title={school?.programme_offered?.title}

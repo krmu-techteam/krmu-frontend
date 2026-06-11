@@ -453,18 +453,18 @@ const ProgrammesExplorer = ({
   });
 
   return (
-    <section className="w-full px-4 md:px-8 2xl:px-0 font-poppins">
-      <div className="mx-auto max-w-[1530px] lg:px-3">
+    <section className="w-full px-0 md:px-8 2xl:px-0 font-poppins">
+      <div className="mx-auto max-w-[1530px] xl:px-3">
         {(title || content) && (
-          <div className="">
+          <div className="px-6 lg:px-3 xl:px-0">
             <div className="flex-1">
               {title && (
-                <h2 className="heading-primary mb-3 md:mb-4">{title}</h2>
+                <h2 className="heading-primary text-center md:text-left mb-3 md:mb-4">{title}</h2>
               )}
             </div>
-            <div className="mb-8 md:mb-8 flex  items-start lg:items-center justify-between gap-6">
+            <div className="mb-8 md:mb-8 flex flex-col md:flex-row gap-6  items-start lg:items-center justify-between">
               {content && (
-                <p className="text-white/70 text-base md:text-md max-w-[1100px]">
+                <p className="text-white/70 text-center md:text-left text-base md:text-md max-w-[1100px]">
                   {content}
                 </p>
               )}
@@ -476,7 +476,7 @@ const ProgrammesExplorer = ({
                       <span>Download Prospectus</span>
                     </div>
                   }
-                  buttonClassName="flex items-center gap-2 px-5 py-2.5 border border-white/20 text-white/90 text-[15px] font-medium rounded-sm hover:bg-white/5 transition-all whitespace-nowrap shrink-0"
+                  buttonClassName="flex mx-auto md:mx-0 items-center gap-2 px-5 py-2.5 border border-white/20 text-white/90 text-[15px] font-medium rounded-sm hover:bg-white/5 transition-all whitespace-nowrap shrink-0"
                   redirectUrl={prospectusUrl}
                   form_name="Download Prospectus"
                   
@@ -495,9 +495,9 @@ const ProgrammesExplorer = ({
             </div>
           </div>
         )}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+        <div className="flex flex-col xl:flex-row gap-6 xl:gap-8 items-start">
           {/* Sidebar for Schools */}
-          <div className="w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] lg:w-[300px] shrink-0 lg:sticky lg:top-[130px] self-start lg:max-h-[calc(100vh-140px)] lg:overflow-y-auto no-scrollbar -mx-4 md:-mx-8 lg:mx-0 bg-[#061623] lg:bg-transparent py-1 lg:py-0">
+          <div className="w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] xl:w-[300px] shrink-0 xl:sticky xl:top-[130px] self-start xl:max-h-[calc(100vh-140px)] xl:overflow-y-auto no-scrollbar -mx-4 md:-mx-8 xl:mx-0 bg-[#061623] xl:bg-transparent py-1 xl:py-0">
             <ProgrammesSidebar
               activeSchoolSlug={selectedSchool}
               onSchoolChange={(slug) => {
@@ -527,7 +527,7 @@ const ProgrammesExplorer = ({
               onViewModeChange={setViewMode}
               availableDegrees={availableDegrees}
             />
-            <div className="flex-1 mt-4 lg:mt-0">
+            <div className="flex-1 mt-4 xl:mt-0">
               <ProgrammesList
                 programmes={mappedProgrammes}
                 isLoading={isLoading}

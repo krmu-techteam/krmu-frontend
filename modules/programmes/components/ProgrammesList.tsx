@@ -34,7 +34,7 @@ export default function ProgrammesList({
   viewMode = 'list'
 }: ProgrammesListProps) {
   return (
-    <div className="flex-1 w-full min-w-0 overflow-hidden relative">
+    <div className="flex-1 w-full min-w-0 overflow-hidden relative px-6 md:px-0 lg:px-3 xl:px-0">
       {/* List Content */}
       <div className={viewMode === 'list' 
         ? "flex flex-col gap-4" 

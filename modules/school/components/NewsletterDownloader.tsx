@@ -34,8 +34,8 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
   }, []);
 
   return (
-    <div className="flex gap-4 justify-start flex-col sm:flex-row items-stretch sm:items-center w-full">
-      <div className="relative w-full sm:w-[280px] shrink-0 newsletter-dropdown z-20">
+    <div className="flex gap-4 justify-start flex-col sm:flex-row lg:flex-col xl:flex-row items-stretch sm:items-center lg:items-stretch xl:items-center w-full">
+      <div className="relative w-full sm:w-[280px] lg:w-full xl:w-[280px] shrink-0 newsletter-dropdown z-20">
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
@@ -90,7 +90,7 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
               <span className="uppercase tracking-wide text-sm font-medium">DOWNLOAD</span>
             </div>
           }
-          buttonClass="border border-white/30 py-3.5 px-7 transition-all rounded-sm text-white hover:bg-white/5 w-full sm:w-auto shrink-0 inline-block"
+          buttonClass="border border-white/30 py-3.5 px-7 transition-all rounded-sm text-white hover:bg-white/5 w-full sm:w-auto lg:w-full xl:w-auto shrink-0 inline-block"
           buttonIcon=""
         >
           <p>This is the content inside the popup.</p>
@@ -99,7 +99,7 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
         <Link
           href={selectedBtn?.buttonlink || "#"}
           onClick={handleDownloadClick}
-          className="border border-white/30 py-3.5 px-7 transition-all rounded-sm flex items-center justify-center gap-3 text-white hover:bg-white/5 w-full sm:w-auto shrink-0"
+          className="border border-white/30 py-3.5 px-7 transition-all rounded-sm flex items-center justify-center gap-3 text-white hover:bg-white/5 w-full sm:w-auto lg:w-full xl:w-auto shrink-0"
           target={selectedBtn?.buttonlink ? "_blank" : "_self"}
           rel="noopener noreferrer"
         >

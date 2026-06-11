@@ -1,11 +1,11 @@
 const MentorshipProgrammeInfo = () => {
   return (
     <div className="h-full flex flex-col justify-center">
-      <h2 className="text-3xl sm:text-4xl font-bold xl:text-4xl leading-tight mb-4">
+      <h2 className="text-3xl xl:text-4xl font-semibold xl:font-bold leading-tight mb-4">
         Open Source{" "}
-        <span className="text-[#4da6ff] font-bold">Mentorship Programme</span>
+        <span className="text-[#4da6ff] font-semibold xl:font-bold">Mentorship Programme</span>
       </h2>
-      <p className="text-white/75 font-poppins text-base sm:text-[18px] leading-relaxed">
+      <p className="text-white/75 font-poppins text-base text-[17px] xl:text-[18px] leading-relaxed">
         The School of Engineering and Technology (SOET) runs a focused
         Open Source Mentorship Programme, driven by our faculties, to
         prepare students for global, stipend-based opportunities like{" "}

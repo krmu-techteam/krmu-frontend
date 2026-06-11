@@ -4,7 +4,7 @@ import SectionDivider from "@/components/common/SectionDivider";
 
 const ExcellenceSection = ({ title1, title2, btn1, btn2 }: ExcellenceSectionProps) => {
   return (
-    <section className="relative py-10 sm:py-20 px-4">
+    <section className="relative py-12 xl:py-20 px-6 md:px-8 lg:px-11 2xl:px-16">
       <div className="max-w-[1530px] mx-auto w-full grid lg:grid-cols-2 gap-8">
         <ExcellenceCard
           title={title1}
