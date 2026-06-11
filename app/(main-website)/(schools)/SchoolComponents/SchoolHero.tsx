@@ -174,9 +174,9 @@ const SchoolHero = ({
       thumbnail: "",
       ytUrl: "",
       bgURl:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Legal_Studies_8f68606605.jpg",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Legal_Studies_jpg_40fc22291b.jpeg",
       middleImg:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Legal_Studies_6f45e90d77.png",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Legal_Studies_6f45e90d77_bea8808f47.png",
       mobileBgImg:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Legal_Studies_3bba92175a.jpg",
       notCutoutBg: false,
@@ -330,7 +330,18 @@ const SchoolHero = ({
                   <p className="text-sm lg:text-lg 2xl:text-2xl font-normal sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
                     {subheading}
                   </p>
-                  <h1 className={`text-2xl md:text-4xl xl:text-6xl text-shadow-lg leading-[1.2] font-bold ${slug === 'school-of-architecture-design' && 'max-w-[705px] mx-auto'}`}>
+                  <h1
+                    className={`text-2xl md:text-4xl xl:text-6xl text-shadow-lg leading-[1.2] font-bold ${
+                      slug === "school-of-architecture-design" ||
+                      slug === "school-of-emerging-media-and-creator-economy" ||
+                      slug ===
+                        "school-of-hotel-management-and-catering-technology"
+                        ? "max-w-[705px] mx-auto"
+                        : ""
+                    }
+                    ${slug === 'school-of-liberal-arts' && 'max-w-[580px] mx-auto'}    
+                    `}
+                  >
                     {title}
                   </h1>
                   <div className="flex flex-col items-center justify-center gap-3.5 sm:gap-5 mt-5 sm:my-4">
