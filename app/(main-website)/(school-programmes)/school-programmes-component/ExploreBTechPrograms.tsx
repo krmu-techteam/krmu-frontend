@@ -87,7 +87,7 @@ export default async function ExplorePrograms({
               </h2>
               <p className="text-[#d1cce5] text-center md:text-left [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] max-w-3xl text-[15px] md:text-[15px]  xl:text-[17px] 2xl:text-[18px] leading-relaxed mb-4 sm:mb-4 lg:mb-0">
                 Discover other programmes that open doors to exciting career
-                Opportunities and future growth. Choose from a wide range of
+                opportunities and future growth. Choose from a wide range of
                 industry-oriented courses designed to help you build a
                 successful future with confidence.
               </p>
