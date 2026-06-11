@@ -8,7 +8,7 @@ export { default as UniversityComparisonSection } from "./UniversityComparisonSe
 export { default as KnowledgePartnersSection } from "./KnowledgePartnersSection";
 export { default as ExcellenceSection } from "./ExcellenceSection";
 export { default as TestimonialsSection } from "./TestimonialsSection";
-export { default as DeanSection } from "./DeansVision";
+export { default as DeanSection } from "./DeansVisionSection";
 export { default as FacultyAdvisorySection } from "./FacultyAdvisorySection";
 export { default as EventAndExperienceSection } from "./EventAndExperienceSection";
 export { default as FacilitiesSection } from "./FacilitiesSection";

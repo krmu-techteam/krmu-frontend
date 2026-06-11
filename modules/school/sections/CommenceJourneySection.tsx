@@ -58,16 +58,16 @@ const CommenceJourneySection = ({
   ];
 
   return (
-    <section className="relative w-full py-16 md:py-20 overflow-hidden font-poppins">
+    <section className="relative w-full px-0 xl:px-0 py-12 xl:py-20 overflow-hidden font-poppins">
       {/* Background radial spec glow */}
       <div 
         className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.05)_0%,transparent_70%)] rounded-full blur-[80px] z-0 pointer-events-none opacity-50"
       ></div>
 
-      <div className="w-full max-w-[1530px] mx-auto relative z-10 px-6">
+      <div className="w-full max-w-[1530px] mx-auto relative z-10 px-4 lg:px-6">
         {/* Title */}
         <div className="text-center mb-16">
-          <h2 className="font-serif font-bold text-3xl md:text-[49px] leading-tight text-white antialiased tracking-wide">
+          <h2 className="heading-primary">
             {highlight_heading}{" "}
             <span className="text-white font-normal block sm:inline">
               {heading}
@@ -76,9 +76,9 @@ const CommenceJourneySection = ({
         </div>
 
         {/* Desktop Interactive Grid */}
-        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-center max-w-[1280px] mx-auto">
+        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 items-center max-w-[1280px] mx-auto">
           {/* Left Column: Image Card */}
-          <div className="relative w-full max-w-[540px] aspect-[4/5] rounded-sm overflow-hidden shadow-2xl border border-white/10 group mx-auto">
+          <div className="relative w-full max-w-[540px] aspect-[3/3.83] xl:aspect-[4/5] rounded-sm overflow-hidden shadow-2xl border border-white/10 group mx-auto">
             {imgUrl && (
               <Image
                 src="/modules/school/commence-your-journey.jpg"
@@ -147,6 +147,7 @@ const CommenceJourneySection = ({
               title="Get Enrolled"
               desc="Be prepared to embark on your journey"
               iconSrc="/schools/like.svg"
+              isActive={true}
             />
           </div>
 

@@ -11,8 +11,20 @@ type Props = {
   schoolCat: string;
 };
 
+// ---------- Constants ----------
+const getItemsPerLoad = () => {
+  if (typeof window === "undefined") return 5;
+  const width = window.innerWidth;
+  if (width >= 1440) return 5;
+  if (width >= 1280) return 5;
+  if (width >= 1024) return 3;
+  if (width >= 768) return 3;
+  return 2;
+};
+
 const AdvisoryCards = ({ schoolCat }: Props) => {
   const [faculties, setFaculties] = useState<FACULTYCARD[]>([]);
+  const [itemsPerLoad, setItemsPerLoad] = useState(5);
   const [visibleCount, setVisibleCount] = useState(5);
   const [loading, setLoading] = useState(false);
   const [loadingMore, setLoadingMore] = useState(false);
@@ -27,6 +39,19 @@ const AdvisoryCards = ({ schoolCat }: Props) => {
     fetchFaculties();
   }, [schoolCat]);
 
+  useEffect(() => {
+    const updateItems = () => {
+      const newCount = getItemsPerLoad();
+      setItemsPerLoad(newCount);
+      setVisibleCount(newCount);
+    };
+
+    updateItems();
+
+    window.addEventListener("resize", updateItems);
+    return () => window.removeEventListener("resize", updateItems);
+  }, []);
+
   // ✅ Show only Advisory members
   const advisoryFaculties = faculties.filter(
     (faculty) =>
@@ -37,7 +62,7 @@ const AdvisoryCards = ({ schoolCat }: Props) => {
   const handleLoadMore = () => {
     setLoadingMore(true);
     setTimeout(() => {
-      setVisibleCount((prev) => Math.min(prev + 5, advisoryFaculties.length));
+      setVisibleCount((prev) => Math.min(prev + itemsPerLoad, advisoryFaculties.length));
       setLoadingMore(false);
     }, 800); // simulate skeleton loading for 800ms
   };
@@ -47,8 +72,8 @@ const AdvisoryCards = ({ schoolCat }: Props) => {
   // Initial loading state or empty state with skeletons
   if (loading && faculties.length === 0) {
     return (
-      <div className="mt-5 sm:mt-0 grid grid-cols-2 md:grid-cols-5 pt-16 px-4 md:px-0 pb-4 gap-5">
-        {Array.from({ length: 5 }).map((_, idx) => (
+      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5">
+        {Array.from({ length: itemsPerLoad }).map((_, idx) => (
           <div
             key={idx}
             className="overflow-hidden rounded-t-xl bg-white/5 border border-white/10 flex flex-col w-full font-poppins"
@@ -71,7 +96,7 @@ const AdvisoryCards = ({ schoolCat }: Props) => {
 
   return (
     <div className="font-poppins">
-      <div className="mt-5 sm:mt-0 grid grid-cols-2 md:grid-cols-5 pt-16 px-4 md:px-0 pb-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5">
         {visibleFaculties.length > 0 ? (
           visibleFaculties.map((faculty) => (
             <AdvisoryCard
@@ -92,8 +117,8 @@ const AdvisoryCards = ({ schoolCat }: Props) => {
 
       {/* Skeletons showing when loadingMore is true */}
       {loadingMore && (
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-5 w-full px-4 md:px-0 mt-5">
-          {Array.from({ length: Math.min(5, advisoryFaculties.length - visibleCount) }).map((_, idx) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5 w-full px-4 md:px-0 mt-5">
+          {Array.from({ length: Math.min(itemsPerLoad, advisoryFaculties.length - visibleCount) }).map((_, idx) => (
             <div
               key={idx}
               className="overflow-hidden rounded-t-xl bg-white/5 border border-white/10 flex flex-col w-full font-poppins"
@@ -114,7 +139,7 @@ const AdvisoryCards = ({ schoolCat }: Props) => {
       )}
 
       {!loadingMore && visibleCount < advisoryFaculties.length && (
-        <div className="py-10 flex justify-center">
+        <div className="pt-10 flex justify-center">
           <button
             onClick={handleLoadMore}
             className="text-white font-medium cursor-pointer transition-all hover:underline text-lg bg-transparent border-none outline-none"

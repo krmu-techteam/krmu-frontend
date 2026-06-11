@@ -9,7 +9,7 @@ type Props = {
 
 const KnowledgePartnerLogos = ({ logos }: Props) => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 xl:gap-6">
       {logos &&
         logos.map((logo) => {
           return (

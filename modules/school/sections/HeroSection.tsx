@@ -209,7 +209,7 @@ const HeroSection = ({
         <div
           className="h-full w-1/2 opacity-40 bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0.6)61.25%,rgba(102,102,102,0)100.31%)] absolute inset-0 z-10"
         ></div>
-        <div className="xl:px-8 2xl:px-16">
+        <div className="xl:px-11 2xl:px-16">
           {/* <div className="hidden sm:block">
             {herobanner?.url && (
               <Image
@@ -329,7 +329,7 @@ const HeroSection = ({
                   </video>
                   ) : null} */}
               {videoUrl && (
-                <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end px-5 pb-5 sm:pb-0 sm:px-0 bg-[#001732] xl:bg-transparent">
+                <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end px-5  sm:pb-0 sm:px-0 bg-[#001732] xl:bg-transparent">
                   <div className="w-full max-w-[520px] 2xl:max-w-[680px] border-6 border-[#b7e2f3] rounded-3xl">
                     <YoutubeVideoSection
                       thumbnail={thumbnail}
@@ -341,7 +341,7 @@ const HeroSection = ({
             </div>
           )}
         </div>
-        <div className="relative z-20 w-full xl:mt-20">
+        <div className="relative z-20 w-full bg-[#001732] xl:bg-transparent xl:mt-20">
           <AdmissionOpenBanner title={admTitle} admBtn={admBtn} />
         </div>
       </section>

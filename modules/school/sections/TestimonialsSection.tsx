@@ -6,7 +6,7 @@ import { TestimonialSectionProps } from "@/modules/school";
 
 const TestimonialsSection = ({ title, desc, testis }: TestimonialSectionProps) => {
   return (
-    <section className="py-16 sm:py-20 px-4 font-poppins relative overflow-hidden bg-transparent">
+    <section className="py-12 xl:py-20 px-6 md:px-8 lg:px-11 2xl:px-16 font-poppins relative overflow-hidden bg-transparent">
       <div className="max-w-[1530px] mx-auto w-full relative z-10">
         <div className="mb-12 max-w-4xl">
           <h4 className="text-white text-3xl md:text-5xl font-bold mb-4 font-serif">

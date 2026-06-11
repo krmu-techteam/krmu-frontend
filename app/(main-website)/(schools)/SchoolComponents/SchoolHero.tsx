@@ -358,7 +358,7 @@ const SchoolHero = ({
             </div>
           )}
         </div>
-        <div className="relative z-20 w-full xl:mt-20">
+        <div className="relative z-20 w-full bg-[#001732] xl:bg-transparent xl:mt-20">
           <SchoolAdmissionOpen title={admTitle} admBtn={admBtn} />
         </div>
       </section>

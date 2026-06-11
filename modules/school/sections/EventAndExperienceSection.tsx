@@ -14,7 +14,7 @@ type Props = {
 
 const EventAndExperienceSection = ({ title, desc, btn, eventsexp }: Props) => {
   return (
-    <section className="relative w-full py-10 sm:py-20 px-6 md:px-11 xl:px-16 overflow-hidden font-poppins">
+    <section className="relative w-full py-6 xl:py-14 px-6 md:px-8 lg:px-11 2xl:px-16 overflow-hidden font-poppins">
       {/* Background radial gradient */}
       <div 
         className="absolute -top-[100px] left-[88%] -translate-x-1/2 w-[948px] h-[948px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.05)_0%,transparent_85%)] rounded-full blur-[140px] z-0 pointer-events-none transition-opacity"

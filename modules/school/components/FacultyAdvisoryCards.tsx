@@ -22,12 +22,10 @@ import { FacultyAdvisoryCard } from "./FacultyAdvisoryCard";
 // ---------- Constants ----------
 const getItemsPerLoad = () => {
   const width = window.innerWidth;
-  if (width == 1512) return 4;
-  if (width == 1440) return 4;
-  if (width > 1512) return 5;
-  if (width > 1440) return 4;
-  if (width < 1440 && width >= 1024) return 3;
-  if (width < 1024) return 2;
+  if (width >= 1440) return 5;
+  if (width >= 1280) return 5;
+  if (width >= 1024) return 3;
+  if (width >= 768) return 3;
   return 2;
 };
 
@@ -122,7 +120,7 @@ const FacultyAdvisoryCards = ({ schoolCat }: Props) => {
 
   return (
     <div className="font-poppins">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-5 sm:pt-16 pb-4 gap-5 mt-16 sm:mt-0 px-4 md:px-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5">
         {visibleFaculties.map((faculty) => (
           <div
             key={faculty.id}
@@ -141,7 +139,7 @@ const FacultyAdvisoryCards = ({ schoolCat }: Props) => {
 
       {/* Skeletons showing when loadingMore is true */}
       {loadingMore && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 pt-5 pb-4 gap-5 px-4 md:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5  gap-5">
           {Array.from({ length: Math.min(itemsPerLoad, facDatas.length - visibleCount) }).map((_, idx) => (
             <div
               key={idx}

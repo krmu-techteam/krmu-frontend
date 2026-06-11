@@ -3,7 +3,7 @@ import { WHATYOU_GET_OPEN_SOURCE_MENTORSHIP } from "@/modules/school/constants";
 const MentorshipFeatures = () => {
   return (
     <div>
-      <h3 className="text-center text-[#4da6ff] text-2xl sm:text-2xl font-semibold m-6">
+      <h3 className="text-center text-white font-poppins text-2xl sm:text-2xl font-semibold m-6">
         What You Get:
       </h3>
 

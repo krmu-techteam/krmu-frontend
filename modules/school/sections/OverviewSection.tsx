@@ -11,8 +11,8 @@ const OverviewSection = ({
   slug,
 }: OverviewSectionProps) => {
   return (
-    <section className="relative py-8 md:py-12 xl:py-20">
-         <div className="grid max-w-[1530px] mx-auto md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <section className="relative py-8 md:py-12 xl:py-20 px-6 md:px-8 lg:px-11 2xl:px-16">
+         <div className="grid max-w-[1530px] mx-auto md:grid-cols-3 lg:grid-cols-3 gap-5">
             {counters &&
               counters.map((counter, index) => {
                 return (
@@ -25,7 +25,7 @@ const OverviewSection = ({
                 );
               })}
           </div>
-      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row gap-8 lg:gap-12 mt-12 px-5 sm:px-0">
+      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row gap-8 lg:gap-12 mt-12">
         <div className="w-full lg:w-5/12 relative h-[400px] sm:h-[500px] lg:h-[450px] shrink-0">
           <Image
             src={OVERVIEW_SECTION_IMAGES[slug] || "/info.webp"}

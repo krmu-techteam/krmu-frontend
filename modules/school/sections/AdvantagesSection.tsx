@@ -20,12 +20,12 @@ const AdvantagesSection = ({
   school_advantage,
 }: Props) => {
   return (
-    <section className="py-14 lg:py-20 bg-transparent relative z-10 font-poppins text-white">
-      <div className="max-w-[1530px] mx-auto px-4 md:px-8 2xl:px-3 w-full">
-        <div className="flex flex-col lg:flex-row gap-14 lg:gap-16 xl:gap-20 items-start">
+    <section className="py-12 xl:py-20 bg-transparent relative z-10 font-poppins text-white px-6 md:px-8 lg:px-11 2xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full">
+        <div className="flex flex-col xl:flex-row gap-14 xl:gap-20 items-start">
           
           {/* Left Column: Content + Grid */}
-          <div className="w-full lg:w-[60%] xl:w-[65%] flex flex-col">
+          <div className="w-full xl:w-[65%] flex flex-col order-2 xl:order-1">
             {/* Heading */}
             <h2 className="text-3xl md:text-[45px] leading-tight mb-6 font-serif">
               {heading} {subtitle}
@@ -72,7 +72,7 @@ const AdvantagesSection = ({
 
           {/* Right Column: Image */}
           {advimg?.url && (
-            <div className="w-full lg:w-[40%] xl:w-[35%] shrink-0 flex justify-center lg:justify-end">
+            <div className="w-full xl:w-[35%] shrink-0 flex justify-center xl:justify-end order-1 xl:order-2">
               <div className="relative w-full rounded-sm overflow-hidden flex items-center justify-center bg-[#0B1521]">
                 <Image
                   src={`${STRAPI_URL}${advimg.url}`}

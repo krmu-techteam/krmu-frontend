@@ -12,7 +12,7 @@ type Props = {
 
 const FacilitiesSection = ({ fac_slides }: Props) => {
   return (
-    <section className="relative w-full py-16 md:py-20 overflow-hidden font-poppins">
+    <section className="relative w-full py-6 xl:py-14 overflow-hidden font-poppins">
       {/* Precision Spec Glow (Bottom Left) */}
       <div 
         className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none opacity-40 transition-opacity"
