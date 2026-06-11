@@ -115,7 +115,7 @@ const page = async ({ params }: Props) => {
   const testimonialsMap: Record<string, any> = {
     "ba-llb-hons": BALLBtestimonialsData,
     "barch-architecture": BAArchtestimonialsData,
-    "bca-ai-data-science": BCAAIDStestimonialsData,
+    // "bca-ai-data-science": BCAAIDStestimonialsData,
     "bba-digital-marketing": BBADigitalMarketingtestimonialsData,
     "bsc-forensic-science": BSCHonsForensicSciencetestimonialsData,
     mba: MBAtestimonialsData,
