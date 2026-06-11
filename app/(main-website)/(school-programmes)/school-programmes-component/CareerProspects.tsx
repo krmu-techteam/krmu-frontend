@@ -56,7 +56,7 @@ const CareerProspects = ({
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative py-6 lg:pt-12 2xl:pt-16 2xl:pb-[80px] xl:pb-[150px] overflow-hidden min-h-[600px] md:min-h-[750px] xl:min-h-[850px] flex flex-col items-center">
+    <section className="relative py-6 lg:pt-12 2xl:pt-16 2xl:pb-[80px] xl:pb-[150px] overflow-hidden min-h-[600px] md:min-h-[850px] xl:min-h-[850px] flex flex-col items-center">
       {/* Background Image with Blur */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -82,7 +82,7 @@ const CareerProspects = ({
         {/* Action Button */}
         {slug !== "bhmct-hotel-management" &&
           (btn?.buttonclass || btn?.buttonlink) && (
-            <div className="mb-6">
+            <div>
               <Link
                 href={btn?.buttonlink || "#"}
                 className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-6 py-3 md:px-10 md:py-3 flex items-center justify-center gap-3 rounded-sm md:rounded-lg font-semibold tracking-wide shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden ${btn?.buttonclass || ""}`}
@@ -95,7 +95,7 @@ const CareerProspects = ({
 
         <div className="relative w-full mx-auto">
           {/* Carousel Wrapper (Text Only) */}
-          <div className="w-full relative max-w-lg mx-auto">
+          <div className="w-full relative max-w-lg mx-auto mt-8">
             <button
               onClick={scrollPrev}
               className="absolute -left-3 md:-left-20 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-md shadow-lg text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-white/40 cursor-pointer hover:scale-110 active:scale-95"
@@ -138,7 +138,7 @@ const CareerProspects = ({
           <Image
             src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/group_img_32f982771f.png"
             fill
-            className="-mb-10 object-contain translate-y-[35%] md:translate-y-[20%] lg:translate-y-[42%] xl:translate-y-[32%] 2xl:translate-y-[35%] transform scale-[1.25] lg:scale-[1.2] xl:scale-[1] translate-x-[4px]  "
+            className=" bottom-0 object-contain translate-y-[35%] md:translate-y-[45%] lg:translate-y-[45%] xl:translate-y-[40%] 2xl:translate-y-[37%] transform scale-[1.25] lg:scale-[1.2] xl:scale-[1] translate-x-[4px]  "
             alt="Career Prospects Students"
           />
         </div>
