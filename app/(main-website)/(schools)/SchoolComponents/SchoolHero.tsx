@@ -233,7 +233,7 @@ const SchoolHero = ({
           </div>
         )}
         <div
-          className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[50px] left-[52%]" : ""}  ${slug === "school-of-hotel-management-and-catering-technology" ? "bottom-[10px]" : ""}`}
+          className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[50px] left-[52%]" : ""}  ${slug === "school-of-hotel-management-and-catering-technology" ? "bottom-[-40px]" : ""} `}
         >
           {videoUrl && middleimg && (
             <Image
@@ -339,7 +339,7 @@ const SchoolHero = ({
                         ? "max-w-[705px] mx-auto"
                         : ""
                     }
-                    ${slug === 'school-of-liberal-arts' && 'max-w-[580px] mx-auto'}    
+                    ${slug === "school-of-liberal-arts" && "max-w-[580px] mx-auto"}    
                     `}
                   >
                     {title}
