@@ -60,7 +60,12 @@ const TableOfContentTab = ({ tocfaqs }: Props) => {
                     {item.ques}
                   </AccordionTrigger>
                   <AccordionContent className="flex flex-col gap-4 text-gray-700 leading-relaxed pb-6 text-sm md:text-lg">
-                    <p>{item.ans}</p>
+                    <p
+                    className="school_faq"
+                      dangerouslySetInnerHTML={{
+                        __html: item.ans,
+                      }}
+                    />
                   </AccordionContent>
                 </AccordionItem>
               ))}

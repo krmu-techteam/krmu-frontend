@@ -15,6 +15,11 @@
 
 /* Custom utility class */
 @layer utilities {
+  .school_faq ul {
+    list-style: disc;
+    margin: 10px 0px;
+    padding-left: 40px;
+  }
   @media (max-width: 480px) {
     .mobsize {
       font-size: 10px !important;
