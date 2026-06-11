@@ -76,6 +76,11 @@ const Eligibility = ({
     "b-tech-cse-robotics-ai",
   ];
 
+  const progSubLine = [
+    "btech-cse-cloud-computing",
+    "b-tech-computer-science-and-engineering-semiconductor-design",
+  ];
+
   // useEffect(() => {
   //   if (!formId || !btnRef.current) return;
 
@@ -274,14 +279,16 @@ const Eligibility = ({
                   </div>
                 </div>
               </div>
-              {progNewLine.includes(slug) ? (
+              {progNewLine.includes(slug) && (
                 <div className="relative w-full">
                   <p className="font-poppins text-[14px]  text-right font-normal leading-[24px] text-gray-600 uppercase tracking-normal mt-3 block">
                     3-Year Lateral Entry option also available for eligible
                     students
                   </p>
                 </div>
-              ) : (
+              )}
+
+              {progSubLine.includes(slug) && (
                 <p className="font-poppins text-[14px]  text-right font-normal leading-[24px] text-gray-600 uppercase tracking-normal mt-3 block">
                   **Subject to Approval
                 </p>
