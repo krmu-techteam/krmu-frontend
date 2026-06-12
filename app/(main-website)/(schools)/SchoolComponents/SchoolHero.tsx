@@ -241,7 +241,7 @@ const SchoolHero = ({
               width={492}
               height={700}
               alt={title || ""}
-              className={`object-contain ${slug === 'school-of-architecture-design' && 'w-[200px] sm:w-[450px]'}  z-10 relative`}
+              className={`object-contain ${slug === 'school-of-architecture-design' && 'w-[450px]'}  z-10 relative`}
               priority
             />
           )}
@@ -319,7 +319,7 @@ const SchoolHero = ({
                       width={600}
                       height={600}
                       alt={title || ""}
-                      className={`object-contain z-10 h-full md:h-[400px] xl:h-full w-full  relative`}
+                      className={`object-contain z-10 w-[200px] md:h-[400px] xl:h-full sm:w-full  relative`}
                       priority
                     />
                   )}
