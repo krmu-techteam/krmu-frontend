@@ -181,21 +181,21 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Mr.-Ankit-Srivastava-1.png",
   },
-  {
-    id: 113880,
-    slug: "dr-shaheen-usmani",
-    title: {
-      rendered: "Dr. Shaheen Usmani",
-    },
-    featured_media: 6624,
-    acf: {
-      "staff-qualification": "Ph.D, M.Tech, B.E.",
-      staff_designation: "Assistant Professor",
-      schools: [1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Shaheen-Usmani.png",
-  },
+  // {
+  //   id: 113880,
+  //   slug: "dr-shaheen-usmani",
+  //   title: {
+  //     rendered: "Dr. Shaheen Usmani",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Ph.D, M.Tech, B.E.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Shaheen-Usmani.png",
+  // },
   {
     id: 113874,
     slug: "mr-amit-kumar-singh",
