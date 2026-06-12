@@ -163,11 +163,11 @@ const SchoolHero = ({
       thumbnail: "",
       ytUrl: "",
       bgURl:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/hghg_24a0676b45.webp",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_jpg_1_8fc7057c8c.jpeg",
       middleImg:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/girl3_fbc75334d9.png",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_f6083aef6e.png",
       mobileBgImg:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/medical_allied_bg_76b1f3c229.webp",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_jpg_555205c827.jpeg",
       notCutoutBg: false,
     },
     "school-of-legal-studies": {
