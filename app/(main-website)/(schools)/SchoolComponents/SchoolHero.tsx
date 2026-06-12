@@ -241,7 +241,7 @@ const SchoolHero = ({
               width={492}
               height={700}
               alt={title || ""}
-              className={`object-contain ${slug === 'school-of-architecture-design' && 'w-[450px]'}  z-10 relative`}
+              className={`object-contain ${slug === 'school-of-architecture-design' && 'w-[200px] sm:w-[450px]'}  z-10 relative`}
               priority
             />
           )}
