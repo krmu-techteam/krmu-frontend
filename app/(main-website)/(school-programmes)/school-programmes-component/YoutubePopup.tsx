@@ -55,6 +55,7 @@ export default function YoutubePopup({
           width={800}
           height={450}
           className="w-full h-full rounded-md object-cover"
+          unoptimized
         />
 
         {/* Play Button */}

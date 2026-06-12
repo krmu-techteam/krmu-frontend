@@ -10,7 +10,7 @@ interface ButtonProps {
   iconPosition?: 'left' | 'right';
   className?: string;
   iconClassName?: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   target?: string;
 }
 

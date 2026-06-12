@@ -3067,43 +3067,44 @@ body:before {
   }
 
   .admis_proc_btn_content .btn_text {
-    font-size: 18px;
-    max-width: 180px;
+    font-size: 17px;
+    max-width: 190px;
     border-radius: 50px;
     width: 100%;
     padding-bottom: 10px;
-    font-weight: 600;
+    font-weight: 500;
+    color: #fff;
   }
   .admis_proc_btn_grid_item:nth-child(1) .admis_proc_btn_content .btn_text {
     margin-left: -15px;
   }
   .admis_proc_btn_grid_item:nth-child(2) .admis_proc_btn_content .btn_text {
-    margin-left: -28px;
+    margin-left: -19px;
   }
 
   .admis_proc_btn_grid_item:nth-child(3) .admis_proc_btn_content .btn_text {
-    margin-left: -50px;
+    margin-left: -40px;
   }
 
   .admis_proc_btn_grid_item:nth-child(4) .admis_proc_btn_content .btn_text {
-    margin-left: -50px;
+    margin-left: -43px;
   }
 
   .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content .btn_text {
-    margin-left: -53px;
+    margin-left: -48px;
   }
 
   .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content .btn_text {
-    margin-left: -63px;
+    margin-left: -55px;
   }
 
   .admis_proc_btn_grid_item .admis_proc_btn_content .admis_btn_below_text {
-    max-width: 150px;
+    max-width: 180px;
     width: 100%;
-    font-size: 14px;
+    font-size: 13px;
     margin-top: -6px;
     font-weight: 400;
-    color: #5d6670;
+    color: #e9ecef;
     line-height: 1.5;
   }
 

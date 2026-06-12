@@ -25,12 +25,12 @@ const AdmissionProcessComp = ({
   slug,
 }: Props) => {
   return (
-    <section className="prog-global-padding bg-[#f9f9f9] py-8 md:p-6 lg:py-12 2xl:py-16 px-4 lg:px-10 2xl:px-0">
+    <section className="prog-global-padding py-8 md:p-6 lg:py-12 2xl:py-16 px-4 lg:px-10 2xl:px-0">
       <div className="common-prog-container">
-        <h2 className="text-2xl md:text-[40px] font-semibold md:font-bold text-gray-900 leading-tight tracking-tight mb-2 md:mb-3">
+        <h2 className="heading-primary mb-3">
           {heading} {highlight}
         </h2>
-        <p className="text-[#424242] text-md md:text-xl mb-5 md:mb-10">
+        <p className="text-white/90 text-md font-poppins mb-5 md:mb-10">
           {desc}
         </p>
       </div>

@@ -8,6 +8,7 @@ import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
+import Button from "@/components/common/Button";
 
 type Props = {
   heading: string;
@@ -56,19 +57,21 @@ const CareerProspects = ({
         <Image
           src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/university_bg_374a0a0fef.png"
           fill
-          className="object-cover blur-[4px] opacity-40"
+          className="object-cover"
           alt="University Background"
           priority
         />
+        {/* Light Overlay to enhance readability */}
+        <div className="absolute inset-0 bg-white/50 backdrop-blur-[1px]" />
       </div>
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-4 w-full flex flex-col items-center">
         {/* Header Section */}
         <div className="max-w-4xl w-full text-center mb-4">
-          <h3 className="text-2xl md:text-[36px] xl:text-[42px] font-semibold md:font-bold text-[#0B1C30] mb-3 md:mb-2 leading-[1.1] tracking-tight">
+          <h3 className="text-2xl font-serif md:text-[36px] xl:text-[42px] font-bold text-[#0B1C30] mb-3 md:mb-2">
             {heading} {highlight}
           </h3>
-          <p className="text-[#45464D] text-shadow-xs md:text-shadow-none text-md xl:text-lg mx-auto max-w-full leading-relaxed md:leading-[1.36]">
+          <p className="text-[#061623] font-poppins text-shadow-xs md:text-shadow-none text-md xl:text-lg mx-auto max-w-full leading-relaxed md:leading-[1.36]">
             {desc}
           </p>
         </div>
@@ -76,13 +79,13 @@ const CareerProspects = ({
         {/* Action Button */}
         {slug !== "bhmct-hotel-management" && (btn?.buttonclass || btn?.buttonlink) && (
           <div className="mb-6">
-            <Link
+            <Button
+              variant="primary"
               href={btn?.buttonlink || "#"}
-              className={`text-white bg-[#cb000d] hover:bg-[#c42518] px-6 py-3 md:px-10 md:py-3 flex items-center justify-center gap-3 rounded-sm md:rounded-lg font-semibold tracking-wide shadow-lg hover:shadow-2xl transition-all duration-300 group relative overflow-hidden ${btn?.buttonclass || ""}`}
+              className={btn?.buttonclass || ""}
             >
-              <span>{btn?.buttontext}</span>
-              <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
-            </Link>
+              {btn?.buttontext}
+            </Button>
           </div>
         )}
 
@@ -109,10 +112,10 @@ const CareerProspects = ({
                   <div key={card?.id} className="flex-[0_0_100%] min-w-0">
                     <div className="bg-white/90 backdrop-blur-md rounded-sm md:rounded-2xl pt-4 md:pt-6 pb-0 flex flex-col items-center lg:max-w-[457px] xl:max-w-[457px] 2xl:max-w-[457px] min-h-[350px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[418px] 2xl:min-h-[418px] w-full mx-auto relative transition-all duration-1000 border border-white/40 mb-10 md:mb-20 xl:mb-12 2xl:mb-24 shadow-xl hover:shadow-2xl overflow-hidden">
                       <div className="text-center z-20 relative px-6">
-                        <h4 className={`font-semibold md:font-bold text-xl md:text-2xl mb-1 text-[#051630] tracking-tight transition-all duration-1000 delay-100 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+                        <h4 className={`font-poppins font-bold text-xl md:text-2xl mb-1 text-[#061623] tracking-tight transition-all duration-1000 delay-100 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
                           {card?.title}
                         </h4>
-                        <p className={`text-gray-700 text-md md:text-lg max-w-sm mx-auto leading-relaxed md:leading-[1.36] font-normal transition-all duration-1000 delay-300 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+                        <p className={`text-[#061623]/90 text-md md:text-[17px] max-w-sm mx-auto leading-relaxed md:leading-[1.36] font-normal transition-all font-poppins duration-1000 delay-300 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
                           {card?.description}
                         </p>
                       </div>

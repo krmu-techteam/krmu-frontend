@@ -76,7 +76,7 @@ const CommonLeadPopup = ({
       setOpen(false);
       form.reset();
 
-      window.location.href = redirectUrl;
+      window.open(redirectUrl, "_blank");
     }
   };
 

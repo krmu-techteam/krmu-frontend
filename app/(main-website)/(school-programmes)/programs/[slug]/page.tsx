@@ -2,12 +2,9 @@ import { getSchoolProgrammeData } from "@/lib/api/school-programmes";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import BeyondClassroom from "../../school-programmes-component/BeyondClassroom";
 import CareerProspects from "../../school-programmes-component/CareerProspects";
-import { ConnectWithUs } from "../../school-programmes-component/ConnectWithUs";
 import Curriculum from "../../school-programmes-component/Curriculum";
 import DreamCareer from "../../school-programmes-component/DreamCareer";
-import Eligibility from "../../school-programmes-component/Eligibility";
 import FinancialAssistance from "../../school-programmes-component/FinancialAssistance";
-import ProgramHero from "@/components/school-programmes/programs/hero-sections";
 import LabsFacilities from "../../school-programmes-component/LabsFacilities";
 import OurLocation from "../../school-programmes-component/OurLocation";
 import ProgrammeHighlight from "../../school-programmes-component/ProgrammeHighlight";
@@ -23,7 +20,6 @@ import PHDProgrammes from "../PHDProgramme";
 import {
   createBreadcrumbProgSchema,
   createCourseSchema,
-  createFaqSchema,
   createProgFaqSchema,
   getSchoolProgrammeSEO,
 } from "@/lib/api/common";
@@ -40,8 +36,7 @@ import {
 import SpecialisationsSection from "../prog-comp/SpecialisationsSection";
 import { BSCHonsForensicSciencetestimonialsData } from "../progdata/sbas";
 import { BSCHonsPhyscologytestimonialsData } from "../progdata/sola";
-import Link from "next/link";
-import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+
 
 // ====== BSC-FINANCE-2026 LANDING PAGE IMPORTS ======
 import BscFinance2026Page from "@/app/(landing-page)/admission/bsc-finance-2026/page";
@@ -49,6 +44,7 @@ import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
 import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
 import { heroConfigs } from "@/components/school-programmes/programs/data/programs";
 import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
+import { AdmissionProcessSection, BeyondClassroomSection, EligibilitySection, HeroSection, LabsFacilitieSection, ProgrammeHighlightSection, ProgrammeScopeSection, SpecialisationSection } from "@/modules/programs";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -274,7 +270,7 @@ const page = async ({ params }: Props) => {
       <main className="school-prog-font temp-class">
         {/* {tags && <TagDiv tags={tags} extraClass="hidden test-class" />} */}
         {heroSection && (
-          <ProgramHero
+          <HeroSection
             title={title || ""}
             highlightitle={highlightTitle || ""}
             heroSection={heroSection}
@@ -287,7 +283,7 @@ const page = async ({ params }: Props) => {
         )}
 
         {eligibilitySection && (
-          <Eligibility
+          <EligibilitySection
             elgibilities={eligibilitySection?.elgibility}
             mobherobtn={eligibilitySection?.mobherobtn}
             allowedFormSlugs={allowedFormSlugs}
@@ -307,7 +303,7 @@ const page = async ({ params }: Props) => {
         )}
 
         {programmeScopeSection && (
-          <ProgrammeScope
+          <ProgrammeScopeSection
             scopeData={programmeScopeSection}
             heroSection={heroSection}
             allowedFormSlugs={allowedFormSlugs}
@@ -315,7 +311,7 @@ const page = async ({ params }: Props) => {
           />
         )}
         {programmeHighlightSection && (
-          <ProgrammeHighlight
+          <ProgrammeHighlightSection
             heading={programmeHighlightSection?.heading}
             highlightHeading={programmeHighlightSection?.highlightheading}
             desc={programmeHighlightSection?.subheading}
@@ -326,14 +322,14 @@ const page = async ({ params }: Props) => {
 
         {slug === "mba" && <SpecialisationsSection />}
         {specialisationSection && (
-          <Specialisation
+          <SpecialisationSection
             heading={specialisationSection?.heading}
             highlightheading={specialisationSection?.highlightheading}
             specialisations={specialisationSection?.specialisationcards}
           />
         )}
         {admissionProcessSection && (
-          <AdmissionProcessComp
+          <AdmissionProcessSection
             heading={admissionProcessSection?.heading}
             highlight={admissionProcessSection?.highlightheading}
             desc={admissionProcessSection?.description}
@@ -357,7 +353,7 @@ const page = async ({ params }: Props) => {
           />
         )}
         {labfacilitiesSection && (
-          <LabsFacilities
+          <LabsFacilitieSection
             heading={labfacilitiesSection?.heading}
             highlight={labfacilitiesSection?.highlightheading}
             btn={labfacilitiesSection?.labbtn}
@@ -369,7 +365,7 @@ const page = async ({ params }: Props) => {
         )}
 
         {beyondclassSection && (
-          <BeyondClassroom
+          <BeyondClassroomSection
             heading={beyondclassSection?.heading}
             highlight={beyondclassSection?.highlightheading}
             desc={beyondclassSection?.description}

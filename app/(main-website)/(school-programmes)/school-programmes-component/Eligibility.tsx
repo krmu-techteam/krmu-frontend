@@ -91,7 +91,7 @@ const Eligibility = ({
   return (
     <>
       <section
-        className={`bg-[#eff4ff] py-8 md:p-6 lg:py-10 xl:py-12 px-4 lg:px-10 2xl:px-0 relative z-10 border-gray-100`}
+        className={`pb-8 md:pb-6 pt-0 lg:pb-10 xl:pb-12 px-4 lg:px-10 2xl:px-0 relative z-10 border-gray-100`}
       >
         <div className={`max-w-[1440px] w-full mx-auto`}>
           {/* {slug === "bba-hr" && heroSection?.imgvideo === "Video" ? ( */}
@@ -121,7 +121,7 @@ const Eligibility = ({
                 <div>
                   <div className="grid grid-cols-2 mb-4 divide-x divide-gray-200">
                     <div className="flex flex-col items-start text-left pr-4">
-                      <span className="font-poppins text-[12px] md:text-[14px] font-normal leading-tight md:leading-[24px] text-gray-600 uppercase tracking-normal mb-1">
+                      <span className="font-poppins text-[12px] md:text-[14px] leading-tight md:leading-[24px] text-gray-600 font-normal uppercase tracking-normal mb-1">
                         {elgibilities[0]?.subtitle || "Duration"}
                       </span>
                       <span className="text-xl md:text-3xl font-semibold text-gray-900 leading-tight">
@@ -200,51 +200,68 @@ const Eligibility = ({
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4 xl:gap-8 w-full">
-              <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
-                <Calendar size={32} color="#0a41a1" className="flex-shrink-0" />
-                <div className="flex flex-col">
-                  <p className="text-md font-medium text-gray-500 capitalize leading-tight tracking-wide">
+              {/* Card 1: Duration */}
+              <div 
+                className="group relative overflow-hidden rounded-sm py-6 px-6 border border-white/5 shadow-xl hover:border-brand-gold/30 hover:shadow-2xl hover:shadow-brand-gold/10 hover:-translate-y-1 transition-all duration-500 ease-out cursor-default text-start flex items-start gap-5"
+                style={{ backgroundColor: "#081D2D" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
+                <Calendar size={32} color="#E7C268" className="flex-shrink-0 relative z-10" />
+                <div className="flex flex-col relative z-10">
+                  <p className="text-xs md:text-sm font-medium text-white/60 uppercase leading-none tracking-wider">
                     {elgibilities[0]?.subtitle}
                   </p>
-                  <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
+                  <p className="text-md md:text-lg font-semibold text-white leading-tight mt-2">
                     {elgibilities[0]?.title}
                   </p>
                 </div>
               </div>
-              <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
+
+              {/* Card 2: Fee */}
+              <div 
+                className="group relative overflow-hidden rounded-sm py-6 px-6 border border-white/5 shadow-xl hover:border-brand-gold/30 hover:shadow-2xl hover:shadow-brand-gold/10 hover:-translate-y-1 transition-all duration-500 ease-out cursor-default text-start flex items-start gap-5"
+                style={{ backgroundColor: "#0D2131" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
                 <IndianRupee
                   size={32}
-                  color="#0a41a1"
-                  className="flex-shrink-0"
+                  color="#E7C268"
+                  className="flex-shrink-0 relative z-10"
                 />
-                <div className="flex flex-col">
-                  <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
+                <div className="flex flex-col relative z-10">
+                  <p className="text-xs md:text-sm font-medium text-white/60 uppercase leading-none tracking-wider">
                     {elgibilities[1]?.subtitle}
                   </p>
-                  <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
+                  <p className="text-md md:text-lg font-semibold text-white leading-tight mt-2">
                     {elgibilities[1]?.title}
                   </p>
                 </div>
               </div>
-              <div className="bg-white border border-gray-300 rounded-md px-6 py-4 flex items-start gap-5">
+
+              {/* Card 3: Requirements */}
+              <div 
+                className="group relative overflow-hidden rounded-sm py-6 px-6 border border-white/5 shadow-xl hover:border-brand-gold/30 hover:shadow-2xl hover:shadow-brand-gold/10 hover:-translate-y-1 transition-all duration-500 ease-out cursor-default text-start flex items-start gap-5"
+                style={{ backgroundColor: "#182C3C" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
                 <LaptopMinimalCheck
                   size={32}
-                  color="#0a41a1"
-                  className="flex-shrink-0"
+                  color="#E7C268"
+                  className="flex-shrink-0 relative z-10"
                 />
-                <div className="flex flex-col">
-                  <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
+                <div className="flex flex-col relative z-10">
+                  <p className="text-xs md:text-sm font-medium text-white/60 uppercase leading-none tracking-wider">
                     {elgibilities[2]?.subtitle}
                   </p>
-                  <div className="flex flex-col mt-1">
-                    <p className="text-md md:text-lg font-semibold text-black leading-tight">
+                  <div className="flex flex-col mt-2">
+                    <p className="text-md md:text-lg font-semibold text-white leading-normal">
                       {displayTitle}
                       {isLong && !expanded && " "}
                     </p>
                     {isLong && (
                       <button
                         onClick={() => setExpanded(!expanded)}
-                        className="text-xs text-[#0060aa] font-bold mt-1 text-left"
+                        className="text-xs text-[#E7C268] font-bold mt-1.5 text-left hover:underline cursor-pointer"
                       >
                         {expanded ? "Read Less" : "Read More"}
                       </button>
