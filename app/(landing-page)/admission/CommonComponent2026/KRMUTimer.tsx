@@ -30,7 +30,7 @@ export default function KRMUTimer({ targetDate }: ZenithTimerProps) {
   };
 
   const [mounted, setMounted] = useState(false);
-  const [show, setShow] = useState(false);// 👈 new
+  const [show, setShow] = useState(false); // 👈 new
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -38,39 +38,39 @@ export default function KRMUTimer({ targetDate }: ZenithTimerProps) {
     seconds: 0,
   });
 
- useEffect(() => {
-  setMounted(true);
+  useEffect(() => {
+    setMounted(true);
 
-  const target = new Date(targetDate);
+    const target = new Date(targetDate);
 
-  // 👉 target ka end of day (11:59:59 PM)
-  const endOfDay = new Date(target);
-  endOfDay.setHours(23, 59, 59, 999);
+    // 👉 target ka end of day (11:59:59 PM)
+    const endOfDay = new Date(target);
+    endOfDay.setHours(23, 59, 59, 999);
 
-  const now = new Date();
+    const now = new Date();
 
-  const shouldShow = now.getTime() <= endOfDay.getTime();
-  setShow(shouldShow);
+    const shouldShow = now.getTime() <= endOfDay.getTime();
+    setShow(shouldShow);
 
-  if (shouldShow) {
-    setTimeLeft(calculateTimeLeft());
-
-    const timer = setInterval(() => {
-      const currentTime = new Date();
-
-      // 👉 midnight ke baad hide
-      if (currentTime.getTime() > endOfDay.getTime()) {
-        setShow(false);
-        clearInterval(timer);
-        return;
-      }
-
+    if (shouldShow) {
       setTimeLeft(calculateTimeLeft());
-    }, 1000);
 
-    return () => clearInterval(timer);
-  }
-}, [targetDate]);
+      const timer = setInterval(() => {
+        const currentTime = new Date();
+
+        // 👉 midnight ke baad hide
+        if (currentTime.getTime() > endOfDay.getTime()) {
+          setShow(false);
+          clearInterval(timer);
+          return;
+        }
+
+        setTimeLeft(calculateTimeLeft());
+      }, 1000);
+
+      return () => clearInterval(timer);
+    }
+  }, [targetDate]);
 
   // ⭐ hide if not tomorrow
   if (!mounted || !show) return null;
@@ -83,8 +83,9 @@ export default function KRMUTimer({ targetDate }: ZenithTimerProps) {
       {/* <span className="text-xs uppercase tracking-wider font-semibold">
         Now or Never! Grab Your 100% Scholarship Today
       </span> */}
-<span className="text-[10px] xl:text-xs uppercase tracking-wider font-extrabold">
-      Limited Scholarship Pool, Unlimited Potential - Avail Upto 100% Scholarship Before It's Gone.
+      <span className="text-[10px] xl:text-xs uppercase tracking-wider font-extrabold">
+        Limited Scholarship Pool, Unlimited Potential - Avail Upto 100%
+        Scholarship Before It's Gone.
       </span>
       <div className="flex gap-2 font-mono text-sm">
         <TimeBox value={format(timeLeft.days)} label="D" />
