@@ -121,7 +121,7 @@ const SchoolHero = ({
       bgURl:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Architecture_and_Design_jpg_1_0519194f1b.jpeg", //schools/banners/soad-banner-2.webp
       middleImg:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Architecture_and_Design_4_b4eca9b270.png",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Architecture_and_Design_1_4d5e42239f.png",
       mobileBgImg:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Architecture_and_Design_jpg_1_0519194f1b.jpeg",
       notCutoutBg: false,
@@ -241,7 +241,7 @@ const SchoolHero = ({
               width={492}
               height={700}
               alt={title || ""}
-              className={`object-contain ${slug === 'school-of-architecture-design' && 'w-[524px]'}  z-10 relative`}
+              className={`object-contain ${slug === 'school-of-architecture-design' && 'w-[450px]'}  z-10 relative`}
               priority
             />
           )}
