@@ -1,7 +1,5 @@
-import {
-  CinematicRecruiterStripProps,
-  RecruiterCarousel,
-} from "@/modules/programs";
+import { CinematicRecruiterStripProps } from "../types";
+import RecruiterCarousel from "./RecruiterCarousel";
 
 const CinematicRecruiterStrip = ({
   dreamcareerSection,

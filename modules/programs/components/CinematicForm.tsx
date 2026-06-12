@@ -1,6 +1,6 @@
  
 import NoPaperForm from "@/lib/constants/NoPaperForm";
-import { CinematicFormProps } from "@/modules/programs";
+import { CinematicFormProps } from "../types";
 
 
 const CinematicForm = ({ formId, isMobile = false }: CinematicFormProps) => {

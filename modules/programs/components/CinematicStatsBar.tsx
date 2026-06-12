@@ -1,5 +1,5 @@
  
-import { DreamCareerSection } from "@/modules/programs";
+import { DreamCareerSection } from "../types";
  
 const CinematicStatsBar = ({ dreamcareerSection }: DreamCareerSection) => {
   return (

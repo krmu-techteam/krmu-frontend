@@ -3,7 +3,7 @@
 import { STRAPI_URL } from "@/app/constant";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { RecruiterCarouselProps } from "@/modules/programs";
+import { RecruiterCarouselProps } from "../types";
 
  
 const RecruiterCarousel = ({ logos }: RecruiterCarouselProps) => {

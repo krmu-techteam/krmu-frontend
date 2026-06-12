@@ -1,12 +1,10 @@
 import React from "react";
-import {
-  HERO_CONFIGS,
-  HeroSectionProps,
-  CinematicHeroContent,
-  CinematicStatsBar,
-  CinematicRecruiterStrip,
-  CinematicForm,
-} from "@/modules/programs";
+import { HERO_CONFIGS } from "../constants";
+import { HeroSectionProps } from "../types";
+import CinematicHeroContent from "./CinematicHeroContent";
+import CinematicStatsBar from "./CinematicStatsBar";
+import CinematicRecruiterStrip from "./CinematicRecruiterStrip";
+import CinematicForm from "./CinematicForm";
 
 const ProgramHeroCinematic = ({
   title,
