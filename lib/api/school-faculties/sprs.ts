@@ -244,19 +244,19 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mansi-Dewan.png",
   },
-  {
-    id: 115110,
-    slug: "dr-aarti-belwal-pt ",
-    title: {
-      rendered: "Dr. Aarti Belwal (PT)",
-    },
-    featured_media: 106768,
-    acf: {
-      "staff-qualification": "Master of Physiotherapy",
-      staff_designation: "Assistant  Professor",
-      schools: [],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/aarti-removebg-preview-Picsart-AiImageEnhancer.png",
-  },
+  // {
+  //   id: 115110,
+  //   slug: "dr-aarti-belwal-pt ",
+  //   title: {
+  //     rendered: "Dr. Aarti Belwal (PT)",
+  //   },
+  //   featured_media: 106768,
+  //   acf: {
+  //     "staff-qualification": "Master of Physiotherapy",
+  //     staff_designation: "Assistant  Professor",
+  //     schools: [],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/aarti-removebg-preview-Picsart-AiImageEnhancer.png",
+  // },
 ];
