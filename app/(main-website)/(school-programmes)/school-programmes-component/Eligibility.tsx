@@ -272,7 +272,7 @@ const Eligibility = ({
                     <div className="flex flex-col mt-1">
                       {/* ✅ LINE CLAMP APPLIED HERE */}
                       <p
-                        className={`text-md md:text-lg font-semibold text-black leading-tight ${
+                        className={`text-md md:text-lg font-semibold w-full break-all  text-black leading-tight ${
                           expanded ? "" : "line-clamp-2"
                         }`}
                       >
