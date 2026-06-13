@@ -237,7 +237,7 @@ const ProgrammeStructure = ({
                                           value="content"
                                           className="border-none"
                                         >
-                                          <AccordionTrigger className="py-2 hover:no-underline group">
+                                          <AccordionTrigger className="accordianSVG py-2 hover:no-underline group">
                                             <div className="flex items-center gap-4 text-left">
                                               <CircleArrowRight
                                                 size={22}

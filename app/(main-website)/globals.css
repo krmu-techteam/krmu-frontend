@@ -84,6 +84,12 @@
     }
   }
 
+  .accordianSVG svg {
+    color: white;
+    width: auto;
+    height: auto;
+  }
+
   .heroBannerForm__form {
     background: #fff;
     width: 100%;
