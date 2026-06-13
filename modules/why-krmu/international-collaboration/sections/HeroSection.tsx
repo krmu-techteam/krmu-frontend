@@ -52,7 +52,7 @@ const HeroSection = ({ title, desc, heroBtn, heroGrid }: Props) => {
             <div className="flex flex-col-reverse xl:flex-row items-stretch xl:items-center justify-between gap-0 xl:gap-16">
               
               {/* Left Column: Heading and Description */}
-              <div className="w-full xl:w-1/2 flex flex-col items-start text-left px-6 sm:px-10 md:px-16 lg:px-20 xl:px-0 xl:pr-6 py-12 xl:py-12 bg-gradient-to-b from-[#1c3850] to-[#000000] xl:bg-transparent">
+              <div className="w-full xl:w-1/2 flex flex-col items-start text-left px-6 sm:px-10 md:px-16 lg:px-20 xl:px-0 xl:pr-6 py-12 xl:py-12">
                 <div className="text-2xl sm:text-3xl md:text-4xl xl:text-[38px] 2xl:text-[46px] font-bold leading-[1.15] mb-6 font-serif text-white tracking-tight [&_p]:m-0 xl:whitespace-nowrap">
                   <BlocksRenderer content={title} />
                 </div>
