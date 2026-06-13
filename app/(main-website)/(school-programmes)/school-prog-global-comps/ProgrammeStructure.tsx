@@ -110,7 +110,7 @@ const ProgrammeStructure = ({
 
           {/* Main Content Area - Clean stack without card boundaries to match image */}
           <div
-            className={` ${slug === "bachelor-of-physiotherapy-bpt" ? "lg:max-w-lg xl:max-w-2xl" : "xl:max-w-lg 2xl:max-w-xl"} flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10`}
+            className={` ${slug === "bachelor-of-physiotherapy-bpt" || slug === "barch-architecture" || slug === "ba-llb-hons" || slug === "bba-llb-hons" || slug === "integrated-bba-mba" || slug === "dual-degree-bsc-mscforensic-science" ? "lg:max-w-lg xl:max-w-2xl" : "xl:max-w-lg 2xl:max-w-xl"} flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10`}
           >
             {/* Left Navigation & Content Area */}
             {currbtn?.buttonlink && (
