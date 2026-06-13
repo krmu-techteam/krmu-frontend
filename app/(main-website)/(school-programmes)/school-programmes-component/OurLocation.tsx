@@ -1,4 +1,5 @@
 import { STRAPI_URL } from "@/app/constant";
+import SectionDivider from "@/components/common/SectionDivider";
 import { StrapiMedia } from "@/lib/types/common";
 import Image from "next/image";
 
@@ -11,7 +12,7 @@ type Props = {
 
 const OurLocation = ({ badgetext, img1, img2 }: Props) => {
   return (
-    <section className="py-8 md:p-6 lg:py-10 xl:py-12 2xl:py-16 px-4 lg:px-10 2xl:px-0 bg-[#051730]/10 sm:px-6">
+    <section className="relative z-4 py-8 md:p-6 lg:py-10 xl:py-20 px-4 lg:px-16 2xl:px-0 bg-[#051730]/10 sm:px-6">
       <div className="max-w-[1440px] mx-auto w-full p-4 md:p-6 lg:p-10 xl:p-12 bg-[#051730] rounded-md sm:flex gap-3 md:gap-4 lg:gap-10 xl:gap-12 text-center sm:text-left">
         <div className="sm:w-5/12">
           <Image
@@ -39,6 +40,7 @@ const OurLocation = ({ badgetext, img1, img2 }: Props) => {
           />
         </div>
       </div>
+      <SectionDivider />
     </section>
   );
 };

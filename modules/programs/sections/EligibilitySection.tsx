@@ -57,7 +57,7 @@ const EligibilitySection = ({
   return (
     <>
       <section
-        className={`pb-8 md:pb-6 pt-0 lg:pb-10 xl:pb-12 px-4 lg:px-10 2xl:px-0 relative z-10 border-gray-100`}
+        className={`pb-8 md:pb-6 pt-0 lg:pb-10 xl:pb-20 px-4 lg:px-16 2xl:px-0 relative z-10 border-gray-100`}
       >
         <div className={`max-w-[1440px] w-full mx-auto`}>
           {heroSection?.imgvideo === "Video" ? (

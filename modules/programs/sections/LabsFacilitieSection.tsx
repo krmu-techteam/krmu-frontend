@@ -23,7 +23,7 @@ const LabsFacilitieSection = ({
 
   return (
     <>
-      <section className="relative z-4 py-8 md:py-6 lg:pt-10 lg:pb-0 xl:pt-12 xl:pb-4 2xl:pt-16 2xl:pb-8 px-4 md:px-6 lg:px-10 2xl:px-0">
+      <section className="relative z-4 py-8 md:py-6 lg:pt-10 lg:pb-0 xl:pt-20 xl:pb-10 2xl:pt-20 2xl:pb-8 px-4 md:px-6 lg:px-16 2xl:px-0">
         <div className="max-w-[1440px] mx-auto w-full">
           <div className="w-full labFac_container text-center">
             <div className="common-prog-container !max-w-4xl mx-auto">

@@ -149,3 +149,50 @@ export interface LabFacilitiesSectionProps {
   labcards: LabCard[];
   slug: string;
 };
+
+// Financial Assistance Section
+export interface FinancialPartnerLogoProps {
+  logo: StrapiMedia;
+}
+export interface FinancialPointCardProps {
+  point: string;
+  className?: string;
+}
+export interface FinancialAssistanceSectionProps {
+  heading: string;
+  highlightheading: string;
+  description: string;
+  point1: string;
+  point2: string;
+  point3: string;
+  point4: string;
+  point5: string;
+  point6: string;
+  point7: string;
+  logos: StrapiMedia[];
+}
+
+// Frequently Asked Questions Section
+export interface FAQ {
+  id: number;
+  ques: string;
+  ans: string;
+}
+export interface TOCFAQ {
+  id: number;
+  tocpoint: string;
+  faq: FAQ[];
+}
+export interface FrequentlyAskedQuestionsSectionProps {
+  heading: string;
+  highlight: string;
+  desc: string;
+  tocfaqs: TOCFAQ[];
+  tocimg: StrapiMedia;
+  tocbtn: ButtonType;
+};
+
+export interface FAQAccordionProps {
+  tocfaqs: TOCFAQ[];
+  tocbtn?: ButtonType;
+};

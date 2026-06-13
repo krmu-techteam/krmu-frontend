@@ -20,8 +20,8 @@ const ProgrammeScopeSection = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="relative z-10 py-8 md:p-6 lg:p-10 xl:py-12 2xl:py-16">
-      <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center gap-6 xl:gap-8 2xl:gap-10 px-4 md:px-0 lg:px-0 2xl:px-0">
+    <section className="relative z-10 py-8 md:p-6 lg:p-10 xl:py-20">
+      <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center gap-6 xl:gap-10 px-4 md:px-0 lg:px-6 2xl:px-0">
         {/* Left column: Image */}
         <div className="w-full sm:w-1/2">
           {heroSection?.imgvideo === "Video" && isFormAvailable ? (
@@ -51,7 +51,7 @@ const ProgrammeScopeSection = async ({
 
         {/* Right column: Content */}
         <div className="w-full sm:w-1/2 sm:text-left text-justify text-white">
-          <h3 className="text-2xl text-center sm:text-left sm:text-2xl md:text-[28px] lg:text-[32px] xl:text-[40px] 2xl:text-[42px] font-semibold font-serif md:font-bold leading-tight mb-3 xl:mb-3 2xl:mb-5">
+          <h3 className="heading-primary mb-3 xl:mb-3 2xl:mb-5">
             {scopeData?.scopeheading}
           </h3>
           <p className="text-md sm:text-[14px] md:text-[14px] lg:text-[15px] xl:text-[17px] 2xl:text-[18px] text-center sm:text-left leading-relaxed font-poppins sm:leading-[1.7] opacity-90 mb-0 sm:mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto sm:mx-0">

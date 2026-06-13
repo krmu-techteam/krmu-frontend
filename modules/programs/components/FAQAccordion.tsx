@@ -1,18 +1,28 @@
+"use client";
+
+import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/accordion";
-import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { TOCFAQ } from "@/lib/types/school-programme";
-import { ButtonType } from "@/lib/types/common";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { Accordion } from "@/components/ui/accordion";
+import { ArrowUpRight } from "lucide-react";
 import Button from "@/components/common/Button";
+import { FAQAccordionProps } from "../types";
+import FAQAccordionItem from "./FAQAccordionItem";
 
-type Props = {
-  tocfaqs: TOCFAQ[];
-  tocbtn?: ButtonType;
-};
+const FAQAccordion = ({ tocfaqs, tocbtn }: FAQAccordionProps) => {
 
-const TableOfContentTab = ({ tocfaqs, tocbtn }: Props) => {
+  const handleApplyClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const visibleForm = Array.from(
+      document.querySelectorAll(".heroBannerForm__form")
+    ).find((el) => el.getBoundingClientRect().height > 0);
+    
+    if (visibleForm) {
+      visibleForm.scrollIntoView({ behavior: "smooth", block: "center" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <Tabs
       defaultValue={tocfaqs?.[0]?.tocpoint.toLowerCase() ?? ""}
@@ -42,11 +52,12 @@ const TableOfContentTab = ({ tocfaqs, tocbtn }: Props) => {
         {(tocbtn?.buttonclass || tocbtn?.buttonlink) && (
           <Button
             href={tocbtn?.buttonlink || "#"}
+            onClick={handleApplyClick}
             target="_blank"
             variant="primary"
             icon={ArrowUpRight}
             iconPosition="right"
-            className={`!bg-[#CB000D] hover:!bg-[#CB000D]/90 text-white font-bold !text-xs uppercase tracking-wider  !h-auto !py-2.5 !px-6 transition-all duration-300 shrink-0 font-poppins ${tocbtn?.buttonclass || ""}`}
+            className={`!bg-[#CB000D] hover:!bg-[#CB000D]/90 text-white font-bold !text-xs uppercase tracking-wider !h-auto !py-2.5 !px-6 transition-all duration-300 shrink-0 font-poppins ${tocbtn?.buttonclass || ""}`}
           >
             APPLY NOW
           </Button>
@@ -68,26 +79,7 @@ const TableOfContentTab = ({ tocfaqs, tocbtn }: Props) => {
               defaultValue={`item-${section.faq[0]?.id ?? 1}`}
             >
               {section.faq.map((item) => (
-                <AccordionItem
-                  key={item.id}
-                  value={`item-${item.id}`}
-                  className="border border-[#0055A4]  px-6 py-4 rounded-sm transition-all duration-300 shadow-md group last:border-b"
-                >
-                  <AccordionPrimitive.Header className="flex w-full">
-                    <AccordionPrimitive.Trigger className="flex flex-1 items-start gap-4 text-left py-1 text-white hover:no-underline transition-all duration-200 group focus-visible:outline-none">
-                      {/* Left side: Plain Arrow Indicator */}
-                      <ArrowRight className="h-4.5 w-4.5 text-white shrink-0 mt-1 transition-transform duration-200 group-data-[state=open]:rotate-90" />
-                      
-                      {/* Question Text */}
-                      <span className="text-[15px] md:text-[17px] font-poppins font-medium text-white tracking-tight leading-tight block">
-                        {item.ques}
-                      </span>
-                    </AccordionPrimitive.Trigger>
-                  </AccordionPrimitive.Header>
-                  <AccordionContent className="text-white/80 leading-relaxed pl-8 pb-1 pt-3 text-sm md:text-base font-poppins [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:my-2 [&_li]:mb-1">
-                    <div dangerouslySetInnerHTML={{ __html: item.ans }} />
-                  </AccordionContent>
-                </AccordionItem>
+                <FAQAccordionItem key={item.id} item={item} />
               ))}
             </Accordion>
           </TabsContent>
@@ -97,6 +89,4 @@ const TableOfContentTab = ({ tocfaqs, tocbtn }: Props) => {
   );
 };
 
-export default TableOfContentTab;
-
-
+export default FAQAccordion;
