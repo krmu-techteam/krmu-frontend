@@ -17,7 +17,6 @@ type Props = {
 };
 
 export const ActionCards = ({ schoolCat }: Props) => {
-
   const brochureLinks: Record<string, string> = {
     soet: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOET_Print2_2174445457.pdf",
 
@@ -66,7 +65,7 @@ export const ActionCards = ({ schoolCat }: Props) => {
       id: 2,
       title: "Connect",
       description:
-        "If you would like to speak to a admission counselor please connect with us.",
+        "If you would like to speak to an admission counselor please connect with us.",
       buttonText: "Talk Now",
       link: "tel:9311411717",
       icon: (
@@ -89,7 +88,7 @@ export const ActionCards = ({ schoolCat }: Props) => {
       id: 3,
       title: "Brochure",
       description:
-        "Download our latest prospectus for a detailed look at our program offerings.",
+        "Download our latest prospectus for a detailed look at our programme offerings.",
       buttonText: "Download Now",
       link: brochureLink,
       icon: (
