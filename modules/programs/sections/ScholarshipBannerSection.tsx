@@ -1,9 +1,9 @@
 import { GraduationCap, ArrowUpRight } from "lucide-react";
 import Button from "@/components/common/Button";
 
-const ScholarshipBanner = () => {
+const ScholarshipBannerSection = () => {
   return (
-    <section className="w-full bg-[#1e2f42]/95 border-t border-b border-white/[0.08] py-12 md:py-16 px-4 md:px-8 xl:px-10 2xl:px-0 relative z-10 overflow-hidden backdrop-blur-2xl">
+    <section className="w-full bg-[#1e2f42]/95 border-t border-b border-white/[0.08] py-12 md:py-16 px-4 md:px-8 xl:px-16 2xl:px-0 relative z-10 overflow-hidden backdrop-blur-2xl">
       
       {/* Soft Blue Center Glow Behind the Glass Band */}
       <div 
@@ -28,7 +28,7 @@ const ScholarshipBanner = () => {
               <h3 className="heading-primary mb-2">
                 Scholarship <span className="text-[#0055A4]">2026</span>
               </h3>
-              <p className="text-sm md:text-base text-white/80 max-w-3xl font-poppins font-normal leading-relaxed">
+              <p className="text-sm md:text-base text-white/80 max-w-4xl font-poppins font-normal leading-relaxed">
                 We offer up to 100% scholarships for academic toppers, sports achievers, and students across multiple categories, ensuring that ambition, hard work, and potential always find their way forward.
               </p>
             </div>
@@ -54,7 +54,7 @@ const ScholarshipBanner = () => {
   );
 };
 
-export default ScholarshipBanner;
+export default ScholarshipBannerSection;
 
 
 

@@ -56,10 +56,10 @@ const Specialisation = ({
   const isSlider = specialisations && specialisations.length > 4;
 
   return (
-    <section className="relative z-10 prog-global-padding py-8 md:p-6 lg:px-10 lg:py-10 xl:py-12 2xl:py-16 px-4 xl:px-10 2xl:px-0">
+    <section className="relative z-10 prog-global-padding py-8 md:p-6 lg:px-10 lg:py-10 xl:py-16 px-4 xl:px-16 2xl:px-0">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container mb-2 md:mb-6">
-          <h2 className="text-2xl text-center md:text-left md:text-[42px] font-bold font-serif md:font-bold text-white leading-[1.1] mb-2 md:mb-3">
+          <h2 className="heading-primary mb-2 md:mb-3">
             {heading} {highlightheading} 
           </h2>
         </div>

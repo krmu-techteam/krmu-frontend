@@ -50,10 +50,10 @@ const ProgrammeHighlight = ({
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative z-10 py-8 md:p-6 lg:p-10 xl:py-12 2xl:py-16">
-      <div className="max-w-[1440px] mx-auto w-full px-4 md:px-0 lg:px-0 2xl:px-0">
+    <section className="relative z-10 py-8 md:p-6 lg:p-10 xl:py-20">
+      <div className="max-w-[1440px] mx-auto w-full px-4 md:px-0 lg:px-4 2xl:px-0">
         <div className="text-center mb-2 md:mb-6">
-          <h2 className="text-2xl text-center md:text-center md:text-[42px] font-bold font-serif md:font-bold text-white leading-[1.1] mb-2 md:mb-3">
+          <h2 className="heading-primary mb-2 md:mb-3">
             {heading} {highlightHeading}
           </h2>
           <p className="text-white/90 font-poppins text-md md:text-md max-w-3xl mx-auto font-normal">
@@ -90,7 +90,7 @@ const ProgrammeHighlight = ({
               {highlights?.map((highlight) => (
                 <div
                   key={highlight.id}
-                  className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33%] xl:flex-[0_0_25%] lg:pl-0 xl:pl-4 2xl:pl-4 min-w-0"
+                  className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33%] xl:flex-[0_0_25%] lg:pl-0 xl:pl-2 2xl:pl-4 min-w-0"
                 >
                   <ProgrammeHighlightCard
                     title={highlight?.title}

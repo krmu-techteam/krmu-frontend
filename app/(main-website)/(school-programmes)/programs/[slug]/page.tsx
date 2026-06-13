@@ -44,7 +44,7 @@ import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
 import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
 import { heroConfigs } from "@/components/school-programmes/programs/data/programs";
 import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
-import { AdmissionProcessSection, BeyondClassroomSection, EligibilitySection, HeroSection, LabsFacilitieSection, ProgrammeHighlightSection, ProgrammeScopeSection, SpecialisationSection } from "@/modules/programs";
+import { AdmissionProcessSection, BeyondClassroomSection, EligibilitySection, FinancialAssistanceSection, FrequentlyAskedQuestionsSection, HeroSection, LabsFacilitieSection, ProgrammeHighlightSection, ProgrammeScopeSection, ScholarshipBannerSection, SpecialisationSection } from "@/modules/programs";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -386,7 +386,7 @@ const page = async ({ params }: Props) => {
         )}
 
         {financialAssistanceSection && (
-          <FinancialAssistance
+          <FinancialAssistanceSection
             heading={financialAssistanceSection?.heading}
             highlightheading={financialAssistanceSection?.highlightheading}
             description={financialAssistanceSection?.description}
@@ -401,11 +401,11 @@ const page = async ({ params }: Props) => {
           />
         )}
 
-        <ScholarshipBanner />
+        <ScholarshipBannerSection />
 
         {testimonialsData && <ProgTestimonials data={testimonialsData} />}
         {tocSection && (
-          <TableOfContent
+          <FrequentlyAskedQuestionsSection
             heading={tocSection?.heading}
             highlight={tocSection?.highlightheading}
             desc={tocSection?.description}

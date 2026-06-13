@@ -48,7 +48,7 @@ const FinancialAssistance = ({
             {points.slice(0, 4).map((point, index) => (
               <div
                 key={index}
-                className="p-4 font-medium text-base text-gray-900 text-center rounded-sm md:rounded-md flex items-center justify-center bg-white h-full transition-all duration-300 border border-gray-300"
+                className="p-4 font-normal text-base text-white font-poppins text-center rounded-sm flex items-center justify-center  h-full transition-all duration-300 border border-gray-300"
                
               >
                 {point}
@@ -61,7 +61,7 @@ const FinancialAssistance = ({
             {points.slice(4).map((point, index) => (
               <div
                 key={index + 4}
-                className="p-4 font-medium text-base text-gray-900 text-center rounded-sm md:rounded-md flex items-center justify-center bg-white transition-all duration-300  w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] border border-gray-300"
+                className="p-4 font-normal text-base text-white font-poppins text-center rounded-sm flex items-center justify-center transition-all duration-300  w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] border border-gray-300"
                
               >
                 {point}
@@ -76,7 +76,7 @@ const FinancialAssistance = ({
             {logos &&
               logos.map((logo) => {
                 return (
-                  <div key={logo?.id} className="flex items-center justify-center border border-gray-200 p-4 rounded-sm md:rounded-md bg-white hover:border-[#0a41a1] transition-all duration-300 group h-24">
+                  <div key={logo?.id} className="flex items-center justify-center border border-gray-200 p-4 rounded-sm bg-white hover:border-[#0a41a1] transition-all duration-300 group h-24">
                     <Image
                       src={`${STRAPI_URL}${logo?.url}`}
                       width={126}

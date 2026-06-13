@@ -40,7 +40,7 @@ const ProgramHeroCinematic = ({
           } as React.CSSProperties
         }
       >
-        <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 lg:px-10 xl:px-0 xl:gap-16 z-10 2xl:px-0">
+        <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 lg:px-10 xl:px-1 xl:gap-16 z-10 2xl:px-0">
           <div className="w-full lg:w-[60%] xl:w-1/2 relative z-10">
             <div className="xl:max-w-[700px] w-full">
               <CinematicHeroContent

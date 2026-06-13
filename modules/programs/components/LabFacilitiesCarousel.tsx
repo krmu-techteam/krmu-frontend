@@ -22,7 +22,7 @@ const LabFacilitiesCarousel = ({ labcards, images }: Props) => {
         showArrows={false}
         showDots={true}
         containerClassName="-ml-4 sm:-ml-4 lg:-ml-6 xl:-ml-6 2xl:-ml-6 px-0 my-5 flex items-stretch"
-        slideClassName="pl-4 sm:pl-4 lg:pl-6 xl:pl-8 2xl:pl-8 basis-full sm:basis-1/3 xl:basis-1/4 flex"
+        slideClassName="pl-4 sm:pl-4 lg:pl-6 xl:pl-8 2xl:pl-8 basis-full sm:basis-1/3 xl:basis-1/3 2xl:basis-1/4 flex"
         activeDotClassName="bg-[#0055A4] w-6 h-2"
         dotClassName="bg-gray-400 w-2 h-2"
       >

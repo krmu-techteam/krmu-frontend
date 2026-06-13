@@ -6,3 +6,6 @@ export { default as SpecialisationSection } from "./SpecialisationSection";
 export { default as AdmissionProcessSection } from "./AdmissionProcessSection";
 export { default as LabsFacilitieSection } from "./LabsFacilitieSection";
 export { default as BeyondClassroomSection } from "./BeyondClassroomSection";
+export { default as FinancialAssistanceSection } from "./FinancialAssistanceSection";
+export { default as ScholarshipBannerSection } from "./ScholarshipBannerSection";
+export { default as FrequentlyAskedQuestionsSection } from "./FrequentlyAskedQuestionsSection";
