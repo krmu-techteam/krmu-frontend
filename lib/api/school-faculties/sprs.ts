@@ -5,12 +5,12 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 8883,
     slug: "dr-mamta-shankar",
     title: {
-      rendered: "Mamta Shankar",
+      rendered: "Dr. Mamta Shankar (PT)",
     },
     featured_media: 8884,
     acf: {
-      "staff-qualification": "MSPT, B.Sc",
-      staff_designation: "Associate Professor",
+      "staff-qualification": "Ph.D.",
+      staff_designation: "School Coordinator",
       schools: [1098],
     },
     featured_media_url:
@@ -20,7 +20,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 68869,
     slug: "dr-shazia-mattu",
     title: {
-      rendered: "Dr. Shazia Mattu",
+      rendered: "Dr. Shazia Mattu (PT)",
     },
     featured_media: 101429,
     acf: {
@@ -35,11 +35,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 9108,
     slug: "dr-barnali-bhattacharjee",
     title: {
-      rendered: "Barnali Bhattacharjee",
+      rendered: "Dr. Barnali Bhattacharjee (PT)",
     },
     featured_media: 9109,
     acf: {
-      "staff-qualification": "MPT",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Associate Professor",
       schools: [1098],
     },
@@ -80,7 +80,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 106798,
     slug: "dr-sumit-kalra",
     title: {
-      rendered: "Dr. Sumit Kalra",
+      rendered: "Prof. (Dr.) Sumit Kalra",
     },
     featured_media: 106799,
     acf: {
@@ -96,11 +96,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 103319,
     slug: "dr-shishir-nigam",
     title: {
-      rendered: "Dr. Shishir Nigam",
+      rendered: "Dr. Shishir Nigam (PT)",
     },
     featured_media: 106779,
     acf: {
-      "staff-qualification": "MPT",
+      "staff-qualification": "M.P.T Sports",
       staff_designation: "Professor",
       schools: [1098],
     },
@@ -111,11 +111,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 69976,
     slug: "dr-hemant-kumar-pt",
     title: {
-      rendered: "Hemant Kumar (PT)",
+      rendered: "Dr. Hemant Kumar (PT)",
     },
     featured_media: 101936,
     acf: {
-      "staff-qualification": "BPT",
+      "staff-qualification": "B.P.T",
       staff_designation: "Demonstrator",
       schools: [1098],
     },
@@ -127,11 +127,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 68853,
     slug: "dr-pt-pious-divya",
     title: {
-      rendered: "Pious Divya",
+      rendered: "Dr. Pious Divya (PT)",
     },
     featured_media: 106742,
     acf: {
-      "staff-qualification": "MPT",
+      "staff-qualification": "M.P.T- Musculoskeletal",
       staff_designation: "Assistant Professor",
       schools: [1098],
     },
@@ -157,7 +157,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 68207,
     slug: "dr-aatika-waheed",
     title: {
-      rendered: "Dr. Aatika Waheed",
+      rendered: "Dr. Aatika Waheed (PT)",
     },
     featured_media: 68220,
     acf: {
@@ -172,11 +172,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 53026,
     slug: "dr-kangana-juneja-kansal",
     title: {
-      rendered: "Kangana Juneja Kansal",
+      rendered: "Dr. Kangana Juneja (PT)",
     },
     featured_media: 53035,
     acf: {
-      "staff-qualification": "M.P.T, Orthopaedics",
+      "staff-qualification": "M.P.T- Musculoskeletal",
       staff_designation: "Assistant Professor",
       schools: [],
     },
@@ -203,11 +203,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 9097,
     slug: "dr-shweta-kumar",
     title: {
-      rendered: "Shweta Kumar",
+      rendered: "Dr. Shweta Kumar (PT)",
     },
     featured_media: 9098,
     acf: {
-      "staff-qualification": "MPT",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant  Professor",
       schools: [1098],
     },
@@ -218,11 +218,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 8993,
     slug: "dr-ankita-samuel",
     title: {
-      rendered: "Ankita Samuel",
+      rendered: "Dr. Ankita Samuel (PT)",
     },
     featured_media: 106768,
     acf: {
-      "staff-qualification": "MPT",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant  Professor",
       schools: [],
     },
@@ -233,15 +233,30 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 113780,
     slug: "mansi-dewan",
     title: {
-      rendered: "Dr. Mansi Dewan",
+      rendered: "Dr. Mansi Dewan (PT)",
     },
     featured_media: 106768,
     acf: {
-      "staff-qualification": "MPT",
+      "staff-qualification": "M.P.T",
       staff_designation: "Assistant  Professor",
       schools: [],
     },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mansi-Dewan.png",
+  },
+  {
+    id: 115110,
+    slug: "dr-aarti-belwal-pt ",
+    title: {
+      rendered: "Dr. Aarti Belwal (PT)",
+    },
+    featured_media: 106768,
+    acf: {
+      "staff-qualification": "Master of Physiotherapy",
+      staff_designation: "Assistant  Professor",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/aarti-removebg-preview-Picsart-AiImageEnhancer.png",
   },
 ];
