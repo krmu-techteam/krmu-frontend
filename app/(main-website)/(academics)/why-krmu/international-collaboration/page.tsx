@@ -1,10 +1,11 @@
 import { getInternationCollabData } from "@/lib/api/international-collab";
 import InternationalCollabCards from "./comp/InternationalCollabCards";
-import InternationalCollabHero from "./comp/InternationalCollabHero";
+ 
 import { STRAPI_URL } from "@/app/constant";
 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
+import { HeroSection } from "@/modules/why-krmu/international-collaboration";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("international-collaboration");
@@ -131,7 +132,7 @@ const page = async () => {
 
   return (
     <>
-      <InternationalCollabHero
+      <HeroSection
         title={intCollabData?.title}
         desc={intCollabData?.desc}
         heroBtn={intCollabData?.int_collab_btn}
