@@ -704,4 +704,22 @@ export const heroConfigs: Record<string, HeroConfig> = {
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ma_applied_psychology_c0cc6ec962.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
+  "bsc-forensic-science": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_forensic_science_f027afd435.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hons-hons-with-research-analytics": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Hons_with_Research_Business_Intelligence_and_Analytics_in_knowledge_partnership_with_EY_India_a86277fccc.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bsc-hons-data-science": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_data_science_ebc3c05707.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
 };
