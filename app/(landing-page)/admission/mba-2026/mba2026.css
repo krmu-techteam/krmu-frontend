@@ -16,7 +16,13 @@
     background-position: center;
   }
 
-  @media (max-width: 640px) {
+  html,
+  body {
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+
+  @media (max-width: 1023.98px) {
     .MainSection {
       background-image: none !important;
       background-color: #1f0b07;
@@ -32,6 +38,13 @@
     }
   }
 
+  @media (min-width: 641px) and (max-width: 1023.98px) {
+    .MainSection .container-1 {
+      height: 750px;
+      max-width: 800px;
+    }
+  }
+
   @media (max-width: 640px) {
     .testislideNext {
       top: 110% !important;
@@ -40,6 +53,12 @@
     .testislidePrev {
       top: 110% !important;
       left: 20%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    body {
+      padding-bottom: 56px;
     }
   }
 

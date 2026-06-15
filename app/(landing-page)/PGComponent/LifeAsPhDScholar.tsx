@@ -21,7 +21,7 @@ const LifeAsPhDScholar = ({ data }: Props) => {
         </div>
 
         {/* Image */}
-        <div className="relative w-full h-[260px] sm:h-[360px] md:h-[450px] xl:h-[600px] overflow-hidden mb-12 rounded-xl">
+        <div className="relative h-[150px] sm:h-[160px] md:h-[250px] lg:h-[350px] xl:h-[600px] overflow-hidden mb-12 rounded-xl">
           {/* <Image
             src={data.image.src}
             fill
@@ -33,7 +33,7 @@ const LifeAsPhDScholar = ({ data }: Props) => {
             src="/wp-content/landingpage/common/Collage-img.webp"
             fill
             alt="Life @ KRMU"
-            className="w-full  object-contain sm:object-cover"
+            className="object-contain "
             priority
           />
         </div>

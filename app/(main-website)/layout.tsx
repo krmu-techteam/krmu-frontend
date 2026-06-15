@@ -23,9 +23,7 @@ export default function MainWebsiteLayout({
         <HeaderWrapper />
       </div>
       <NoPaperFormProvider />
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
       <div id="main-footer">
         <Footer />
       </div>

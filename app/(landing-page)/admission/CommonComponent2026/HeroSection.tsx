@@ -25,12 +25,12 @@ const HeroSection = ({
 }: Props) => {
   return (
     <>
-      <section className={`pb-10 sm:py-20 md:pt-14 md:pb-14 ${lpclName || ""}`}>
-        <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row items-center lg:justify-between gap-5 sm:gap-6 pb-6">
+      <section className={`pb-10 sm:pb-16 md:pb-14 lg:py-20 ${lpclName || ""}`}>
+        <div className="max-w-[1440px] lg:px-4 mx-auto w-full flex flex-col lg:flex-row items-center lg:justify-between gap-8 md:gap-10 lg:gap-16 pb-6">
           <div className="w-full lg:w-[55%] xl:w-2/3 text-white text-center lg:text-left container-1 sm:py-0 sm:px-5">
             <div className="p-5 sm:p-0 lg:max-w-[540px] xl:max-w-[720px] mx-auto lg:mx-0">
               <h1
-                className="text-white font-semibold text-2xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.3] z-10 relative"
+                className="text-white font-semibold text-2xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.3] z-10 relative"
                 dangerouslySetInnerHTML={{
                   __html: content || "",
                 }}
@@ -75,7 +75,7 @@ const HeroSection = ({
           </div> */}
 
           <div
-            className="w-full lg:w-[40%] xl:w-1/3 container-2 px-5 scroll-mt-40"
+            className="w-full max-w-[520px] md:max-w-[560px] lg:max-w-none lg:w-[40%] xl:w-1/3 mx-auto lg:mx-0 container-2 px-5 scroll-mt-40"
             id="apply-section"
           >
             {formId && (

@@ -17,12 +17,15 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
                 <Link
                   href={item.url}
                   className={`font-semibold text-white text-xs primary ${item.class}`}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {item.title}
                 </Link>
               ) : (
-                <span className={`font-semibold text-white text-xs primary ${item.class}`}>
+                <span
+                  className={`font-semibold text-white text-xs primary ${item.class}`}
+                >
                   {item.title}
                 </span>
               )}
@@ -32,17 +35,26 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
 
         if (item.__component === "menu.menu-links") {
           return (
-            <li key={item.id} className="first:bg-[#001732] first:rounded-[5px] first:px-2 first:py-[2px]">
-              {(item.url) ? (
+            <li
+              key={item.id}
+              className="first:bg-[#001732] first:transition-all  first:relative first:overflow-hidden group  first:rounded-[5px] first:px-2 first:py-[2px]"
+            >
+              {topbarmenu.indexOf(item) === 0 && (
+                <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
+              )}
+              {item.url ? (
                 <Link
                   href={item.url}
                   className={`font-semibold text-white text-xs ${item.menuclass}`}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {item.title}
                 </Link>
               ) : (
-                <span className={`font-semibold text-white text-xs ${item.menuclass}`}>
+                <span
+                  className={`font-semibold text-white text-xs ${item.menuclass}`}
+                >
                   {item.title}
                 </span>
               )}

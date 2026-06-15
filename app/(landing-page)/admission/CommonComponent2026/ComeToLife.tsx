@@ -70,15 +70,15 @@ const ComeToLife = ({ data }: Props) => {
           <ScrollButton
             targetId="apply-section"
             highlightClass="flash-border"
-            btnClass="flex items-center bg-[#0060aa] cursor-pointer text-white justify-between max-w-[320px] w-full py-0.5 pl-3 pr-2 text-sm gap-2 border border-white rounded-full"
+            btnClass="inline-flex items-center justify-between bg-[#0060aa] text-white max-w-[320px] w-full py-[6px] pl-[15px] pr-[6px] text-sm gap-2 border border-white rounded-full cursor-pointer transition-all duration-200 outline-none hover:bg-[#004a8a]"
           >
             <span
-              className="w-4/5 text-center"
+              className="flex-1 text-center font-semibold"
               dangerouslySetInnerHTML={{
                 __html: data.cta.label,
               }}
             />
-            <span className="bg-white p-3 rounded-full w-1/5">
+            <span className="bg-white p-[10px] rounded-[50%]">
               <MoveUpRight className="text-[#0060aa]" size={30} />
             </span>
           </ScrollButton>
