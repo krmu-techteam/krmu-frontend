@@ -358,10 +358,10 @@ const Footer = async () => {
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-brand-dark/70 transition-opacity"></div>
 
-        <div className="container mx-auto px-6 md:px-11 xl:px-20 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-12 text-white text-left">
+        <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-11 xl:px-16 relative z-10">
+          <div className="columns-2 gap-6 md:gap-8 lg:gap-12 text-white text-left md:grid md:grid-cols-3 lg:grid-cols-5 space-y-6 md:space-y-0">
             {/* Column 1: Programmes */}
-            <div>
+            <div className="inline-block w-full break-inside-avoid">
               <h4 className="text-lg font-serif font-semibold mb-2 text-white tracking-wide">Programmes</h4>
               <ul className="space-y-1">
                 {footerLinks.programmes.map((link) => (
@@ -379,14 +379,14 @@ const Footer = async () => {
               </ul>
               <Link
                 href={footerComp1?.footer_btn?.btn_link || "#"}
-                className="cursor-pointer mt-8 px-6 py-2.5 border border-white/80 hover:bg-white hover:text-brand-dark hover:border-white transition-all text-xs font-bold uppercase tracking-widest rounded-sm inline-block text-center"
+                className="cursor-pointer mt-4 px-6 py-2.5 border border-white/80 hover:bg-white hover:text-brand-dark hover:border-white transition-all text-xs font-bold uppercase tracking-widest rounded-sm inline-block text-center"
               >
                 {footerComp1?.footer_btn?.btn_text || "Download Handbook"}
               </Link>
             </div>
 
             {/* Column 2: Quick Links */}
-            <div>
+            <div className="inline-block w-full break-inside-avoid">
               <h4 className="text-lg font-serif font-semibold mb-2 text-white tracking-wide">
                 {footerComp3?.heading?.heading || "Quick Links"}
               </h4>
@@ -422,7 +422,7 @@ const Footer = async () => {
             </div>
 
             {/* Column 3: About KRMU */}
-            <div>
+            <div className="inline-block w-full break-inside-avoid">
               <h4 className="text-lg font-serif font-semibold mb-2 text-white tracking-wide">
                 {footerComp2?.heading?.heading || "About KRMU"}
               </h4>
@@ -451,7 +451,7 @@ const Footer = async () => {
             </div>
 
             {/* Column 4: Student Resources */}
-            <div>
+            <div className="inline-block w-full break-inside-avoid">
               <h4 className="text-lg font-serif font-semibold mb-2 text-white tracking-wide">Resources</h4>
               <ul className="space-y-1">
                 {footerLinks.studentResources.map((link) => (
@@ -470,7 +470,7 @@ const Footer = async () => {
             </div>
 
             {/* Column 5: Legal & Compliance */}
-            <div>
+            <div className="inline-block w-full break-inside-avoid">
               <h4 className="text-lg font-serif font-semibold mb-2 text-white tracking-wide">Compliance</h4>
               <ul className="space-y-1">
                 {footerLinks.legal.map((link) => (
@@ -493,10 +493,10 @@ const Footer = async () => {
 
       {/* Bottom Footer Section with Brand Dark Background */}
       <div className="bg-brand-navy pb-6 pt-10 border-t border-white/5">
-        <div className="container mx-auto px-6 md:px-11 xl:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left text-white items-start">
+        <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-11 xl:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12 text-center md:text-left text-white items-start">
             {/* Helpline Section */}
-            <div className="flex flex-col h-full justify-between min-h-[120px]">
+            <div className="flex flex-col h-full justify-between min-h-[90px] lg:min-h-[120px]">
               <div>
                 <h5 className="text-md font-semibold mb-1 text-white">General Helpline No</h5>
                 {phoneItem ? (
@@ -595,7 +595,7 @@ const Footer = async () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-end items-center gap-6 text-white/30 text-md mt-8 border-t border-white/5 pt-6">
+          <div className="flex flex-col md:flex-row justify-end items-center gap-6 text-white/30 text-md mt-4 lg:mt-8 border-t border-white/5 pt-6">
             <p className="text-center md:text-right">Copyrights © 2026 All Rights Reserved by KR Mangalam University.</p>
           </div>
         </div>

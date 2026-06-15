@@ -453,8 +453,8 @@ const ProgrammesExplorer = ({
   });
 
   return (
-    <section className="w-full px-0 md:px-8 2xl:px-0 font-poppins">
-      <div className="mx-auto max-w-[1530px] xl:px-3">
+    <section className="w-full px-0 xl:px-16 font-poppins">
+      <div className="mx-auto max-w-[1530px]">
         {(title || content) && (
           <div className="px-6 lg:px-3 xl:px-0">
             <div className="flex-1">

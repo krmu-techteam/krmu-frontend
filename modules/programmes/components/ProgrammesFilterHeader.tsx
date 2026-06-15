@@ -109,8 +109,8 @@ export default function ProgrammesFilterHeader({
         </div>
  
         {/* Search Component */}
-        <div className="relative w-full xl:w-72 shrink-0">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40" size={16} />
+        <div className="relative w-full xl:w-72 shrink-0 px-4 md:px-6 lg:px-8">
+          <Search className="absolute left-7 md:left-10 top-1/2 -translate-y-1/2 text-white/40" size={16}  />
           <input
             type="text"
             placeholder="Search by Program Name..."
@@ -127,7 +127,7 @@ export default function ProgrammesFilterHeader({
       </div>
     </div>
      {/* Program Count & Toggles */}
-      <div className="flex items-center justify-between px-6 lg:px-3 xl:px-[2px] xl:mb-2">
+      <div className="flex items-center justify-between px-6 md:px-8 lg:px-11 xl:px-[2px] xl:mb-2">
         <span className="text-white/80 text-[14px] font-normal">
           {programCount} Programs Found
         </span>

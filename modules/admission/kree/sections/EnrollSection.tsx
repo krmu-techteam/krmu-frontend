@@ -8,12 +8,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { KREEEnrollAcc } from "@/lib/types/kree";
+import SectionDivider from "@/components/common/SectionDivider";
 
 type Props = {
   kreeEnrolData: KREEEnrollAcc[];
 };
 
-const KREEEnroll = ({ kreeEnrolData }: Props) => {
+const EnrollSection = ({ kreeEnrolData }: Props) => {
   // Track selected school tab on desktop
   const [activeTabId, setActiveTabId] = useState<number | string>(
     kreeEnrolData?.[0]?.id || ""
@@ -34,7 +35,7 @@ const KREEEnroll = ({ kreeEnrolData }: Props) => {
   const activeItem = kreeEnrolData?.find((item) => item.id === activeTabId) || kreeEnrolData?.[0];
 
   return (
-    <section className="py-[6%] lg:py-[5%] px-16">
+    <section className="relative z-4 py-[6%] lg:py-[5%] px-16">
       <div className="max-w-[1530px] mx-auto w-full">
         {/* Title Section */}
         <h2 className="heading-primary text-center mt-2.5 mb-[15px]">
@@ -171,8 +172,10 @@ const KREEEnroll = ({ kreeEnrolData }: Props) => {
           background: rgba(255, 255, 255, 0.3) ;
         }
       `}</style>
+
+      <SectionDivider />
     </section>
   );
 };
 
-export default KREEEnroll;
+export default EnrollSection;

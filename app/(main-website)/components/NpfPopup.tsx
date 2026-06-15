@@ -30,7 +30,7 @@ const NpfPopup = ({
           baseurl: "widgets.nopaperforms.com",
           formTitle:  "Apply Now",
           titleColor: "#FF0033",
-          backgroundColor: "#ddd",
+          backgroundColor: "#ffffff",
           iframeHeight: "500px",
           buttonTextColor: "#FFF",
           target: btnRef.current,

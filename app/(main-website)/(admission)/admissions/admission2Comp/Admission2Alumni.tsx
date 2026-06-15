@@ -7,7 +7,7 @@ type Props = {
 
 const Admission2Alumni = ({ admAlumni }: Props) => {
   return (
-    <section className="py-8 md:py-16 px-4 md:px-0 bg-[#f9f9f9]">
+    <section className="py-8 md:py-16 px-4 md:px-0">
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-2xl md:text-5xl font-bold text-black mb-4 leading-tight">

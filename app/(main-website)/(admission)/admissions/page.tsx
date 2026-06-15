@@ -1,19 +1,25 @@
 import { getAdmission2PageData } from "@/lib/api/Admission/admission2";
-import AdmissionLocation from "./admission2Comp/AdmissionLocation";
-import AdmissionTableOfContent from "./admission2Comp/AdmissionTableOfContent";
 import ContactWithUs from "./admission2Comp/ContactWithUs";
-import Admission2Alumni from "./admission2Comp/Admission2Alumni";
-import Admission2Search from "./admission2Comp/Admission2Search";
-import Admission2WhatMakes from "./admission2Comp/Admission2WhatMakes";
-import Admission2Process from "./admission2Comp/Admission2Process";
-import Admission2Hero from "./admission2Comp/Admission2Hero";
-import Admission2Fee from "./admission2Comp/Admission2Fee";
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import { createBreadcrumbProgSchema, createProgFaqSchema } from "@/lib/api/common";
+import {
+  createBreadcrumbProgSchema,
+  createProgFaqSchema,
+} from "@/lib/api/common";
 import Script from "next/script";
+import {
+  AdmissionProcessSection,
+  AlumniVoicesSection,
+  ContactWithUSection,
+  FeeOverviewSection,
+  FrequentlyAskedQuestionSection,
+  HeroSection,
+  LocationSection,
+  WhyKRMangalamUniversitySection,
+} from "@/modules/admission/admissions";
+import { ProgrammesExplorer } from "@/modules/programmes";
+import SectionDivider from "@/components/common/SectionDivider";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("admissions");
@@ -55,13 +61,13 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "K.R. Mangalam University",
       images: shareImageUrl
         ? [
-          {
-            url: shareImageUrl,
-            width: 1200,
-            height: 630,
-            alt: seo?.title || "K.R. Mangalam University",
-          },
-        ]
+            {
+              url: shareImageUrl,
+              width: 1200,
+              height: 630,
+              alt: seo?.title || "K.R. Mangalam University",
+            },
+          ]
         : [],
       type: "website",
     },
@@ -96,9 +102,6 @@ const page = async () => {
     })),
   );
 
-
-
-
   const singleProgFAQLD = createProgFaqSchema(allFaqs);
 
   const breadcrumbItems = [
@@ -117,15 +120,18 @@ const page = async () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
       />
-      <Admission2Hero />
-      <Admission2Process />
-      <Admission2WhatMakes />
-      <Admission2Search />
+      <HeroSection />
+      <AdmissionProcessSection />
+      <WhyKRMangalamUniversitySection />
+      <div className="relative pt-8 md:pt-12 xl:pt-20 pb-5 md:pb-12 xl:pb-20">
+        <ProgrammesExplorer />
+        <SectionDivider />
+      </div> 
       {/* <ScholarshipSection />
       <FinancialAssistanceSection /> */}
-      <Admission2Fee />
-      <Admission2Alumni admAlumni={admAlumni} />
-      <AdmissionTableOfContent
+      <FeeOverviewSection />
+      <AlumniVoicesSection admAlumni={admAlumni} />
+      <FrequentlyAskedQuestionSection
         heading={admTOC?.heading}
         highlight={admTOC?.highlightheading}
         desc={admTOC?.description}
@@ -133,8 +139,8 @@ const page = async () => {
         tocimg={admTOC?.tocimg}
         tocbtn={admTOC?.tocbtn}
       />
-      <AdmissionLocation />
-      <ContactWithUs />
+      <LocationSection />
+      <ContactWithUSection />
       {/* 
 
 
