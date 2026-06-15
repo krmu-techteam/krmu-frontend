@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface AnimatedHeadingProps {
   lines: string[];
@@ -21,7 +21,7 @@ export const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   const isHexColor = lineColor.startsWith("#") || lineColor.startsWith("rgb") || lineColor.startsWith("hsl");
 
   // Variants for container stagger
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {},
     visible: {
       transition: {
@@ -32,13 +32,13 @@ export const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   };
 
   // Variants for individual letters (springy slide-up and fade-in typing)
-  const letterVariants = {
+  const letterVariants: Variants = {
     hidden: { opacity: 0, y: 15 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: stiffness,
         damping: damping,
         mass: 0.8
