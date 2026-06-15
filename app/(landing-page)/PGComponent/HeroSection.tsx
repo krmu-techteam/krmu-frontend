@@ -28,7 +28,7 @@ const HeroSection = ({
 }: Props) => {
   return (
     <section
-      className={`pb-10 sm:py-20 md:pt-14 md:pb-14 ${ugHeroClsName || ""}`}
+      className={`pb-10 sm:pb-16 md:pb-14 lg:py-20 ${ugHeroClsName || ""}`}
       // style={{
       //   background: `url(${bgImage})`,
       //   backgroundSize: "cover",
@@ -36,12 +36,12 @@ const HeroSection = ({
       //   backgroundPosition: "center",
       // }}
     >
-      <div className="max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+      <div className="max-w-[1400px] lg:px-10 mx-auto w-full flex flex-col lg:flex-row items-center gap-8 md:gap-10 lg:gap-16">
         {/* Left Content */}
-        <div className="w-full lg:w-2/3 text-center lg:text-left px-4 container-1 md:px-0">
-          <div className="max-w-[600px] w-full">
+        <div className="w-full lg:w-2/3 text-center lg:text-left px-4 md:px-6 lg:px-0 container-1">
+          <div className="max-w-[600px] w-full mx-auto lg:mx-0 ]">
             <h1
-              className="text-3xl sm:text-4xl lg:text-5xl text-white font-semibold leading-tight lg:leading-[1.3] mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-white font-semibold leading-tight lg:leading-[1.3] mb-4"
               dangerouslySetInnerHTML={{
                 __html: title,
               }}
@@ -167,7 +167,7 @@ const HeroSection = ({
         </div> */}
 
         {/* Right Image */}
-        <div className="w-full lg:w-1/3 px-4 md:px-0">
+        <div className="w-full max-w-[520px] md:max-w-[560px] lg:max-w-none lg:w-1/3 mx-auto lg:mx-0 px-4 md:px-0">
           {/* {image.src && (
             <Image
               src={image.src}

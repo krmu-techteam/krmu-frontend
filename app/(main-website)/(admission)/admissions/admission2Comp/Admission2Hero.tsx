@@ -51,7 +51,8 @@ const Admission2Hero = () => {
           </p>
           <Link
             href="https://admissions.krmangalam.edu.in/"
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#e61f21] rounded-sm border border-white/10 py-2.5 px-8 flex items-center w-fit text-white text-lg font-medium gap-4 shadow-2xl active:scale-95 transition-all duration-300"
           >
             Apply Now <ArrowRight color="#ffffff" className="w-6 h-6" />
@@ -60,7 +61,6 @@ const Admission2Hero = () => {
         <div className="hidden sm:block lg:w-1/2">
           <h1 className="text-[#0060aa] text-3xl md:text-5xl lg:text-[60px] leading-[1.2] font-semibold">
             Step Into A Successful Future With K.R. Mangalam University
-               
           </h1>
 
           <p className="font-semibold mt-6 mb-4">

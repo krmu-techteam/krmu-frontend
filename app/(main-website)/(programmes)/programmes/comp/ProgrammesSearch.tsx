@@ -504,14 +504,17 @@ const ProgrammesSearch = () => {
           relative`}
                   >
                     {" "}
-                    <Link href={`/programs/${slug}`} target="_blank">
+                    <Link
+                      href={isExternal ? slug : `/programs/${slug}`}
+                      target="_blank"
+                    >
                       <h6
                         className="block w-full text-white"
                         dangerouslySetInnerHTML={{
                           __html:
                             ("title" in item ? item.title : item.heading) +
                             ("highlightitle" in item
-                              ? ` ${item.highlightitle ? item.highlightitle : ''}`
+                              ? ` ${item.highlightitle ? item.highlightitle : ""}`
                               : ""),
                         }}
                       />
