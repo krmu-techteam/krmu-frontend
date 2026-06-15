@@ -4,9 +4,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer utilities {
+  @media (max-width: 767px) {
+    body {
+      padding-bottom: 56px;
+    }
+  }
 
-
-   .heroBannerForm__form {
+  .heroBannerForm__form {
     background: #fff;
     width: 100%;
     border-radius: 10px;
@@ -24,7 +28,7 @@
 
   .heroBannerForm-header h3 {
     font-weight: 100;
-    font-size: 18px; 
+    font-size: 18px;
     line-height: 1;
   }
   .heroBannerForm-header h3 span {
@@ -34,7 +38,6 @@
     line-height: 1.1;
     margin-top: 5px;
   }
-
 
   .flash-border .heroBannerForm__form {
     border: 1px solid red;
@@ -203,7 +206,6 @@
   .npf_wgts iframe {
     box-shadow: none !important;
   }
-
 
   .npf_wgts iframe {
     border-radius: 14px;

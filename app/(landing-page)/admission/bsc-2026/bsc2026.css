@@ -4,8 +4,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer utilities {
+  @media (max-width: 767px) {
+    body {
+      padding-bottom: 56px;
+    }
+  }
 
-   .flash-border .heroBannerForm__form {
+  .flash-border .heroBannerForm__form {
     border: 1px solid red;
     border-radius: 15px;
   }

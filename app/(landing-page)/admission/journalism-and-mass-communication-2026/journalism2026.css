@@ -4,8 +4,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer utilities {
-  
-   .flash-border .heroBannerForm__form {
+  @media (max-width: 767px) {
+    body {
+      padding-bottom: 56px;
+    }
+  }
+
+  .flash-border .heroBannerForm__form {
     border: 1px solid red;
     border-radius: 15px;
   }
@@ -39,7 +44,7 @@
     }
   }
 
-    .whyBgStyle {
+  .whyBgStyle {
     background-color: #003fa1;
   }
 
@@ -159,7 +164,9 @@
     background-repeat: no-repeat;
   }
   .embla__slide {
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition:
+      transform 0.5s ease,
+      opacity 0.5s ease;
   }
 
   .highlight-section .npf_wgts {
@@ -167,21 +174,21 @@
     border: 1px solid red;
   }
 
-      .npf_wgts iframe {
+  .npf_wgts iframe {
     box-shadow: none !important;
   }
 
-.heroBannerForm__form {
+  .heroBannerForm__form {
     background: #fff;
-width: 100%;
+    width: 100%;
     border-radius: 10px;
     padding-top: 40px;
-    
+
     height: 583px;
     position: relative;
   }
 
-  .heroBannerForm-header{
+  .heroBannerForm-header {
     text-align: center;
     font-family: "Poppins", sans-serif !important;
   }
@@ -199,7 +206,7 @@ width: 100%;
     margin-top: 5px;
   }
 
-.npf_wgts iframe {
+  .npf_wgts iframe {
     border-radius: 14px;
     width: 100% !important;
     float: right;
@@ -229,7 +236,6 @@ width: 100%;
     .hero_heading {
       color: #fff;
     }
-    
   }
 
   @media (max-width: 768px) {
