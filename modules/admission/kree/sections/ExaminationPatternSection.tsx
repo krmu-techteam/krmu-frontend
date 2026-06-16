@@ -1,6 +1,8 @@
-const KREEExaminationPattern = () => {
+import SectionDivider from "@/components/common/SectionDivider";
+
+const ExaminationPatternSection = () => {
   return (
-    <section className="py-[4%] px-4">
+    <section className="relative z-4 py-[4%] px-4">
       <div className="max-w-[1664px] mx-auto w-full">
         <h4 className="heading-primary text-center">
           KREE Examination Pattern
@@ -39,8 +41,9 @@ const KREEExaminationPattern = () => {
           </table>
         </div>
       </div>
+      <SectionDivider />
     </section>
   );
 };
 
-export default KREEExaminationPattern;
+export default ExaminationPatternSection;

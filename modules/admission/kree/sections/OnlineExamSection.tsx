@@ -1,16 +1,16 @@
-const KREEOnlineExam = () => {
+const OnlineExamSection = () => {
   return (
     <section className="pt-[3%] pb-[2%] px-4">
       <div className="max-w-[1600px] mx-auto w-full">
-        <h4 className="heading-primary text-center mb-3">
+        <h4 className="text-4xl md:text-5xl text-center font-semibold">
           Online Exam Format
         </h4>
         <div className="flex flex-col lg:flex-row gap-10 md:gap-20">
           <div className="lg:w-1/2">
-            <h4 className="text-2xl font-medium mt-2.5 mb-[15px] text-white font-poppins">
+            <h4 className="text-2xl font-semibold mt-2.5 mb-[15px]">
               Undergraduate Programmes
             </h4>
-            <div className="online_exam_table font-poppins text-white">
+            <div className="online_exam_table">
               <table>
                 <tbody>
                   <tr>
@@ -38,10 +38,10 @@ const KREEOnlineExam = () => {
             </div>
           </div>
           <div className="lg:w-1/2">
-            <h4 className="text-2xl font-medium mt-2.5 mb-[15px] text-white font-poppins">
+            <h4 className="text-2xl font-semibold mt-2.5 mb-[15px]">
               Postgraduate Programmes
             </h4>
-            <div className="online_exam_table font-poppins text-white">
+            <div className="online_exam_table">
                <table>
                 <tbody>
                   <tr>
@@ -93,11 +93,11 @@ const KREEOnlineExam = () => {
             </div>
           </div>
         </div>
-        <p className="text-center mt-5 text-white/80 font-poppins"><strong>Note: There are no sectional time limit.</strong></p>
-        <p className="text-center mt-5 text-white/80 font-poppins"><strong>The KREE will carry no negative marking. For each correct answer candidate will get 1 mark. You are free to use a pen and paper as when required.</strong></p>
+        <p className="text-center mt-5"><strong>Note: There are no sectional time limit.</strong></p>
+        <p className="text-center mt-5"><strong>The KREE will carry no negative marking. For each correct answer candidate will get 1 mark. You are free to use a pen and paper as when required.</strong></p>
         <div className="text-center my-10">
-          <h4 className="text-xl md:text-3xl font-medium mb-3 text-white/80 font-poppins">Declaration of Result</h4>
-          <p className="font-poppins text-white/80">
+          <h4 className="text-xl md:text-5xl font-semibold mb-5">Declaration of Result</h4>
+          <p>
             Results for the KREE will be declared within 48 hours of the
             examination via mail and <br />
             telephonic confirmation
@@ -108,4 +108,4 @@ const KREEOnlineExam = () => {
   );
 };
 
-export default KREEOnlineExam;
+export default OnlineExamSection;

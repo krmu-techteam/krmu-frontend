@@ -1,17 +1,10 @@
 import { getKREEData } from "@/lib/api/kree";
-import KREEAdmissionOnline from "./comp/KREEAdmissionOnline";
-import KREEApplyOnline from "./comp/KREEApplyOnline";
-import KREEEnroll from "./comp/KREEEnroll";
-import KREEExaminationPattern from "./comp/KREEExaminationPattern";
- 
 import KREEOnlineExam from "./comp/KREEOnlineExam";
-import KREESection from "./comp/KREESection";
+ 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import { AdmissionHelplineSection, ApplyOnlineSection, EnrollSection, HeroSection } from "@/modules/admission/kree";
-
-
+import { AdmissionHelplineSection, ApplyOnlineSection, EnrollSection, ExaminationPatternSection, ExamStructureSection, HeroSection } from "@/modules/admission/kree";
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -87,8 +80,9 @@ const page = async () => {
       <EnrollSection kreeEnrolData={kreeEnrol} />
       <ApplyOnlineSection appl_btn={applyOnline?.apply_btn} />
       <AdmissionHelplineSection />
-      <KREEExaminationPattern />
-      <KREESection />
+      <ExaminationPatternSection />
+    
+      <ExamStructureSection  />
       <KREEOnlineExam />
     </>
   );

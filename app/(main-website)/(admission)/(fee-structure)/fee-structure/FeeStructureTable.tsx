@@ -1,9 +1,13 @@
 "use client";
+import React, { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { FeeStructureTab } from "@/lib/types/feestructure";
-import { ChevronDown } from "lucide-react";
-import { useState, useEffect } from "react";
-// import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 
 type Props = {
   feeStructTab: FeeStructureTab[];
@@ -11,21 +15,21 @@ type Props = {
 
 const FeeStructureTable = ({ feeStructTab }: Props) => {
   return (
-    <div className="py-8 md:py-16 max-w-[1664px] mx-auto w-full px-3 sm:px-6">
+    <div className="py-8 md:py-16 max-w-[1530px] mx-auto w-full px-6 md:px-11 xl:px-16">
       <Tabs
         defaultValue={feeStructTab[0]?.id?.toString()}
         className="mx-auto w-full"
       >
         {/* ------------------ MODERN SEGMENTED TABS ------------------ */}
         <div className="flex justify-center mb-10 md:mb-16">
-          <TabsList className="h-auto flex bg-gray-100 p-1 w-full max-w-2xl rounded-sm border border-gray-200 shadow-sm gap-1">
+          <TabsList className="h-auto flex bg-[#061623] p-1 w-full max-w-2xl rounded-full border border-gray-500 shadow-sm gap-1">
             {feeStructTab.map((tab) => (
               <TabsTrigger
                 key={tab.id}
                 value={tab.id.toString()}
-                className="flex-1 cursor-pointer px-1.5 sm:px-3 py-3 text-[11px] xs:text-[12px] sm:text-base font-semibold transition-all duration-300
-                           data-[state=active]:bg-[#0062aa] data-[state=active]:text-white 
-                           text-gray-500 rounded-sm shadow-none leading-tight"
+                className="flex-1 font-poppins cursor-pointer px-1.5 sm:px-3 py-3 text-[11px] xs:text-[12px] sm:text-base font-semibold transition-all duration-300
+                           data-[state=active]:bg-white data-[state=active]:text-[#061623] 
+                           text-white/80 rounded-full shadow-none leading-tight"
               >
                 {tab.tab_heading}
               </TabsTrigger>
@@ -35,20 +39,19 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
 
         {/* ------------------ DYNAMIC TAB CONTENT ------------------ */}
         {feeStructTab.map((tab) => {
-          // console.log("Rendering content for tab:", tab.tab_heading);
           return (
             <TabsContent
               key={tab.id}
               value={tab.id.toString()}
-              className="w-full max-w-[1600px] mx-auto outline-none"
+              className="w-full mx-auto outline-none"
             >
               <FacultySection options={tab.fee_structure_acc || []} />
               {tab.tab_heading === "Fee Structure for Indian Students" && (
                 <div>
-                  <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
+                  <p className="text-right text-sm mr-2 mt-4 text-muted-foreground font-poppins">
                     ** Subject to Approval
                   </p>
-                  <p className="text-right text-sm mr-2 mt-1 text-muted-foreground">
+                  <p className="text-right text-sm mr-2 mt-1 text-muted-foreground font-poppins">
                     The programme fee payable in subsequent years may increase
                     up to 10% per annum
                   </p>
@@ -58,15 +61,6 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
           );
         })}
       </Tabs>
-
-      {/* <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
-        ** Subject to Approval
-      </p>
-      <p className="text-right text-sm mr-2 mt-1 text-muted-foreground">
-        *In addition to the regular programme fee at KRMU, students will be
-        required to pay an additional tuition fee of GBP 6500 for the semester
-        at UEA
-      </p> */}
     </div>
   );
 };
@@ -78,20 +72,17 @@ const FacultySection = ({ options }: { options: any[] }) => {
     options[0]?.id?.toString() || "",
   );
 
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
   const handleTabChange = (val: string) => {
     setActiveSchoolId(val);
-    // Find the content element and scroll to it
-    const element = document.getElementById("fee-table-section");
-    if (element) {
-      const headerOffset = 100;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+    if (containerRef.current) {
+      const yOffset = -140; // Offset to clear the sticky header
+      const y =
+        containerRef.current.getBoundingClientRect().top +
+        window.scrollY +
+        yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
@@ -106,136 +97,123 @@ const FacultySection = ({ options }: { options: any[] }) => {
     }
   }, [options, activeSchoolId]);
 
+  const activeSchool = options.find((opt) => opt.id.toString() === activeSchoolId) || options[0];
+
   return (
-    <div className="w-full">
-      {/* Custom Premium Mobile Dropdown for Schools/Faculties */}
-      <div className="lg:hidden mb-8">
-        <label className="block text-[11px] font-bold text-[#0062aa]/60 mb-2 uppercase tracking-[2px] ml-1">
-          Select School/Faculty
-        </label>
-        <MobileFacultyDropdown
-          options={options}
-          value={activeSchoolId}
-          onChange={setActiveSchoolId}
-        />
+    <div className="w-full" ref={containerRef}>
+      {/* 1. DESKTOP VIEW (Side-by-side tabs) - Visible on lg and above */}
+      <div className="hidden lg:flex gap-8 items-start w-full">
+        {/* Left Column: Vertical button list */}
+        <div className="w-[35%] sticky top-[150px] flex flex-col gap-2 z-10">
+          {options.map((acc) => {
+            const isActive = acc.id.toString() === activeSchoolId;
+            return (
+              <button
+                key={acc.id}
+                onClick={() => handleTabChange(acc.id.toString())}
+                className={`w-full text-left font-poppins py-3 px-5 rounded-[4px] border transition-all duration-300 text-sm font-semibold cursor-pointer whitespace-normal h-auto leading-tight ${
+                  isActive
+                    ? "bg-[#0055A4] border-[#0055A4] text-white shadow-[0_4px_15px_rgba(0,85,164,0.2)]"
+                    : "bg-[#132431]/60 border-gray-600/50 text-white/80 hover:bg-[#132431] hover:text-white"
+                }`}
+              >
+                {acc.panel_heading}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Right Column: Selected school content pane */}
+        <div className="w-[65%] bg-[#132431]/60 rounded-[6px] border border-gray-600/40 p-8 shadow-xl min-h-[400px]">
+          {activeSchool ? (
+            <div className="prose prose-invert max-w-none font-poppins text-white/95 leading-relaxed">
+              <h3 className="text-xl font-semibold text-white mb-6 pb-3 border-b border-white/10 leading-tight">
+                {activeSchool.panel_heading}
+              </h3>
+              
+              <div
+                className="overflow-x-auto modern-fee-table scrollbar-thin scrollbar-thumb-gray-200"
+                dangerouslySetInnerHTML={{ __html: activeSchool.panel_content }}
+              />
+            </div>
+          ) : (
+            <div className="text-white/50 text-center py-12">
+              Select a school/faculty to view fee structure.
+            </div>
+          )}
+        </div>
       </div>
 
-      <Tabs
-        value={activeSchoolId}
-        onValueChange={handleTabChange}
-        className="w-full"
-        id="fee-table-section"
-      >
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-8 items-start">
-          {/* Sidebar Navigation: School/Faculty List - Sticky on Desktop, Hidden on Mobile */}
-          <TabsList className="hidden lg:flex flex-col h-auto w-full lg:w-[380px] bg-white border border-gray-200 rounded-none p-0 lg:sticky lg:top-32 shadow-sm z-10 items-stretch">
-            {options.map((acc) => (
-              <TabsTrigger
-                key={acc.id}
-                value={acc.id.toString()}
-                className="w-full justify-start text-left px-6 py-4 border-b border-gray-100 last:border-b-0 rounded-none
-                           data-[state=active]:bg-[#0062aa] data-[state=active]:text-white text-[#444] font-semibold text-[16px] 
-                           relative transition-all duration-300 hover:bg-gray-50 data-[state=active]:hover:bg-[#0062aa] group 
-                           leading-tight whitespace-normal h-auto"
-              >
-                <span className="flex-grow pr-4 block">
-                  {acc.panel_heading}
-                </span>
-                {/* Indicative Arrow for Active Faculty */}
-                <div
-                  className="opacity-0 group-data-[state=active]:opacity-100 absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 
-                              border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent 
-                              border-l-[12px] border-l-[#0062aa] transition-opacity duration-300 hidden lg:block"
-                />
-              </TabsTrigger>
-            ))}
-          </TabsList>
+      {/* 2. MOBILE & TABLET LAYOUT (Accordion) - Visible below lg */}
+      <div className="lg:hidden">
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full kree-accordion"
+        >
+          {options.map((acc) => (
+            <AccordionItem
+              key={acc.id}
+              value={`fee-${acc.id}`}
+              className="mb-2.5"
+            >
+              <AccordionTrigger className="bg-[#132431] rounded-[3px] border border-gray-500 font-poppins py-[15px] px-5 text-white text-base cursor-pointer hover:no-underline">
+                {acc.panel_heading}
+              </AccordionTrigger>
 
-          {/* Main Content: Fee Tables */}
-          <div className="flex-grow w-full min-w-0 bg-white p-4 md:p-4 border border-gray-100 shadow-sm rounded-sm">
-            {options.map((acc) => (
-              <TabsContent
-                key={acc.id}
-                value={acc.id.toString()}
-                className="mt-0 animate-in fade-in duration-500"
-              >
-                <div className="mb-6 md:mb-8">
-                  <h3 className="text-xl md:text-3xl font-bold text-[#0062aa] mb-2 leading-tight">
-                    {acc.panel_heading}
-                  </h3>
-                  <div className="h-1 w-16 bg-[#0062aa] rounded-full" />
-                </div>
-
+              <AccordionContent className="flex flex-col gap-4 font-poppins text-white text-balance py-5 md:p-5">
                 <div
-                  className="overflow-x-auto modern-fee-table scrollbar-thin scrollbar-thumb-gray-200"
+                  className="overflow-x-auto modern-fee-table"
                   dangerouslySetInnerHTML={{ __html: acc.panel_content }}
                 />
-                <div>
-                  <p></p>
-                </div>
-              </TabsContent>
-            ))}
-          </div>
-        </div>
-      </Tabs>
-    </div>
-  );
-};
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
 
-const MobileFacultyDropdown = ({
-  options,
-  value,
-  onChange,
-}: {
-  options: any[];
-  value: string;
-  onChange: (val: string) => void;
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const selected = options.find((opt) => opt.id.toString() === value);
-
-  const handleSelect = (option: any) => {
-    onChange(option.id.toString());
-    setIsOpen(false);
-  };
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClick = () => setIsOpen(false);
-    if (isOpen) {
-      window.addEventListener("click", handleClick);
-    }
-    return () => window.removeEventListener("click", handleClick);
-  }, [isOpen]);
-
-  return (
-    <div className="relative" onClick={(e) => e.stopPropagation()}>
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full h-14 pl-5 pr-5 bg-white border-2 border-[#0062aa] rounded-sm text-[#0062aa] font-bold text-left flex items-center shadow-sm group"
-      >
-        <span className="truncate flex-1 mr-4">{selected?.panel_heading}</span>
-        <ChevronDown
-          className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-        />
-      </button>
-
-      {isOpen && (
-        <div className="absolute top-[calc(100%+8px)] left-0 right-0 bg-white border-2 border-gray-100 rounded-none z-[60]  animate-in fade-in zoom-in duration-200">
-          <div className="max-h-[300px] overflow-y-auto scrollbar-hide">
-            {options.map((option) => (
-              <div
-                key={option.id}
-                onClick={() => handleSelect(option)}
-                className={`px-5 py-3.5 text-sm font-semibold transition-colors cursor-pointer
-                  ${selected?.id === option.id ? "bg-[#0062aa] text-white" : "text-gray-600 hover:bg-gray-50"}`}
-              >
-                {option.panel_heading}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      {/* Local custom styles to theme the table inside dark content panels */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        .modern-fee-table table {
+          background-color: #1a2c3d !important;
+          border-collapse: collapse !important;
+          width: 100% !important;
+          color: #ffffff !important;
+          border: 1px solid rgba(255, 255, 255, 0.1) !important;
+          margin-bottom: 0 !important;
+        }
+        .modern-fee-table table thead tr th,
+        .modern-fee-table table tr:first-child td {
+          background-color: #0055A4 !important;
+          color: #ffffff !important;
+          border: 1px solid rgba(255, 255, 255, 0.15) !important;
+          font-weight: 600 !important;
+          padding: 12px 15px !important;
+          font-family: var(--font-poppins), sans-serif !important;
+        }
+        .modern-fee-table table tbody tr td,
+        .modern-fee-table table tr:not(:first-child) td {
+          background-color: transparent !important;
+          color: rgba(255, 255, 255, 0.9) !important;
+          border: 1px solid rgba(255, 255, 255, 0.1) !important;
+          padding: 10px 14px !important;
+          font-family: var(--font-poppins), sans-serif !important;
+        }
+        .modern-fee-table table tbody tr:nth-child(even) {
+          background-color: rgba(255, 255, 255, 0.02) !important;
+        }
+        .modern-fee-table table tbody tr:hover {
+          background-color: rgba(255, 255, 255, 0.05) !important;
+        }
+        .modern-fee-table table tr td:last-child {
+          color: #E7C268 !important; /* Brand Gold */
+          font-weight: 600 !important;
+        }
+        .modern-fee-table table td small,
+        .modern-fee-table table td .sub-text {
+          color: rgba(255, 255, 255, 0.6) !important;
+        }
+      `}} />
     </div>
   );
 };

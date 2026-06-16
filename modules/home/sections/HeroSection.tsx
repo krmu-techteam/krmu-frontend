@@ -39,7 +39,7 @@ export const HeroSection = () => {
         </div>
       </section>
 
-      <div className="w-full bg-linear-to-t from-[#0B1221] via-[#0B1221] to-transparent pt-2 pb-6 px-0 lg:px-16 flex flex-col lg:flex-row justify-between items-center  gap-4 sm:gap-0 lg:gap-6 relative z-20 mt-3 transition-all font-poppins text-white shadow-2xl">
+      <div className="w-full bg-linear-to-t from-[#0B1221] via-[#0B1221] to-transparent pt-2 pb-6 md:pb-0 px-0 lg:px-16 flex flex-col lg:flex-row justify-between items-center  gap-4 sm:gap-0 lg:gap-6 relative z-20 mt-3 lg:mt-0 transition-all font-poppins text-white shadow-2xl">
        <div className="relative w-full lg:w-auto h-8 md:h-16">
   {/* Left/Right fade on mobile */}
   <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#0B1221] to-transparent z-10 pointer-events-none lg:hidden" />

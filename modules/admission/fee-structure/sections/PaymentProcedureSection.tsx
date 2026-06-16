@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import Link from "next/link";
 
-const FeeStructurePaymentProc = () => {
+const PaymentProcedureSection = () => {
   return (
     <section className="py-[30px] ">
       <div className="max-w-[1530px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-11 xl:px-16">
@@ -108,4 +108,4 @@ const FeeStructurePaymentProc = () => {
   );
 };
 
-export default FeeStructurePaymentProc;
+export default PaymentProcedureSection;

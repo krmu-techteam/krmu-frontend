@@ -1,16 +1,13 @@
 import FeeStructureTable from "./FeeStructureTable";
-import FeeStructureHero from "./FeeStructureHero";
-import FeeStructurePaymentProc from "./FeeStructurePaymentProc";
-import FeeStructureSaarc from "./FeeStructureSaarc";
 import { getFeeStructurePageData } from "@/lib/api/feestructure";
-import FeeStructureSearch from "./FeeStructureSearch";
-
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
+import {
+  FeeStructureSearchSection,
+  HeroSection,
+  PaymentProcedureSection,
+} from "@/modules/admission/fee-structure";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("fee-structure");
@@ -52,13 +49,13 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "K.R. Mangalam University",
       images: shareImageUrl
         ? [
-          {
-            url: shareImageUrl,
-            width: 1200,
-            height: 630,
-            alt: seo?.title || "K.R. Mangalam University",
-          },
-        ]
+            {
+              url: shareImageUrl,
+              width: 1200,
+              height: 630,
+              alt: seo?.title || "K.R. Mangalam University",
+            },
+          ]
         : [],
       type: "website",
     },
@@ -76,7 +73,6 @@ export async function generateMetadata(): Promise<Metadata> {
 const page = async () => {
   const feeStructure = await getFeeStructurePageData();
 
-
   // API response → fee_structure_tab array
   const feeStructTab = feeStructure?.fee_structure_tab;
   const feeStructHero = feeStructure?.fee_structure_hero;
@@ -84,10 +80,10 @@ const page = async () => {
 
   return (
     <>
-      <FeeStructureHero feeStructHero={feeStructHero} />
-      <FeeStructureSearch />
+      <HeroSection feeStructHero={feeStructHero} />
+      <FeeStructureSearchSection />
       <FeeStructureTable feeStructTab={feeStructTab} />
-      <FeeStructurePaymentProc />
+      <PaymentProcedureSection />
       {/* <FeeStructureSaarc feeStructSAARC={feeStructSAARC} /> */}
     </>
   );
