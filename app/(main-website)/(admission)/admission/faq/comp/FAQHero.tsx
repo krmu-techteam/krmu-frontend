@@ -10,7 +10,7 @@ type Props = {
 const FAQHero = ({ heading, subheading, btn }: Props) => {
   return (
     <section className="bg-[url(/admission/faq-bg.webp)] bg-no-repeat px-4">
-      <div className="max-w-[1664px] pt-[140px] pb-20 lg:py-[10%] mx-auto w-full text-white">
+      <div className="max-w-[1530px] pt-[140px] pb-20 lg:py-[10%] mx-auto w-full text-white">
         <h1 className="text-[34px] md:text-4xl lg:text-8xl font-semibold my-5">{heading}</h1>
         <h3 className="md:text-3xl lg:text-4xl font-semibold my-10">{subheading}</h3>
         {btn?.btn_link ? (
