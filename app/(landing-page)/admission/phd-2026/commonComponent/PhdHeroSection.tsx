@@ -32,7 +32,7 @@ const PhdHeroSection = ({ formId }: Props) => {
             14 Disciplines | Attractive Fellowship
           </h4>
         </div>
-        <div className="w-1/3 hidden xl:block">
+        <div className="w-1/3 hidden xl:block -mb-10">
           <Image
             src="/landingpage/phd/hero-main.webp"
             width={570}

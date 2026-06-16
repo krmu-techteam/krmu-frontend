@@ -9,12 +9,13 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 8884,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "M.P.T.",
       staff_designation: "School Coordinator",
       schools: [1098],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Mamta-Shankar.png",
+      // "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Mamta-Shankar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Mamta-1.png",
   },
   {
     id: 68869,
@@ -24,7 +25,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 101429,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "M.P.T.",
       staff_designation: "Associate Professor",
       schools: [1098],
     },
@@ -39,7 +40,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 9109,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "M.P.T.",
       staff_designation: "Associate Professor",
       schools: [1098],
     },
@@ -100,7 +101,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 106779,
     acf: {
-      "staff-qualification": "M.P.T Sports",
+      "staff-qualification": "M.P.T.",
       staff_designation: "Professor",
       schools: [1098],
     },
@@ -131,7 +132,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 106742,
     acf: {
-      "staff-qualification": "M.P.T- Musculoskeletal",
+      "staff-qualification": "M.P.T.",
       staff_designation: "Assistant Professor",
       schools: [1098],
     },
@@ -161,10 +162,10 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 68220,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "M.P.T.",
       staff_designation: "Assistant Professor",
       schools: [1098],
-    },
+    },  
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Aatika-Waheed.png",
   },
@@ -176,12 +177,13 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 53035,
     acf: {
-      "staff-qualification": "M.P.T- Musculoskeletal",
+      "staff-qualification": "M.P.T.",
       staff_designation: "Assistant Professor",
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Kangana-Juneja-Kansal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/07/Kangana-1.png",
+      // "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Kangana-Juneja-Kansal.png",
   },
   // {
   //   id: 9172,
@@ -207,7 +209,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 9098,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "M.P.T.",
       staff_designation: "Assistant  Professor",
       schools: [1098],
     },
@@ -222,12 +224,12 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 106768,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "M.P.T.",
       staff_designation: "Assistant  Professor",
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Ankita-Samuel.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Ankita-1.png",
   },
   {
     id: 113780,
@@ -237,26 +239,26 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 106768,
     acf: {
-      "staff-qualification": "M.P.T",
+      "staff-qualification": "M.P.T.",
       staff_designation: "Assistant  Professor",
       schools: [],
     },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mansi-Dewan.png",
   },
-  // {
-  //   id: 115110,
-  //   slug: "dr-aarti-belwal-pt ",
-  //   title: {
-  //     rendered: "Dr. Aarti Belwal (PT)",
-  //   },
-  //   featured_media: 106768,
-  //   acf: {
-  //     "staff-qualification": "Master of Physiotherapy",
-  //     staff_designation: "Assistant  Professor",
-  //     schools: [],
-  //   },
-  //   featured_media_url:
-  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/aarti-removebg-preview-Picsart-AiImageEnhancer.png",
-  // },
+  {
+    id: 115110,
+    slug: "dr-aarti-belwal-pt ",
+    title: {
+      rendered: "Dr. Aarti Belwal (PT)",
+    },
+    featured_media: 106768,
+    acf: {
+      "staff-qualification": "M.P.T.",
+      staff_designation: "Assistant  Professor",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Aarti-Belwal-Picsart-AiImageEnhancer.png",
+  },
 ];

@@ -12,8 +12,8 @@ const domine = Domine({
   weight: ["400", "500", "600", "700"],
 });
 
-const INITIAL_DELAY = 10000; // 15s
-const VISIBLE_TIME = 10000; // 10s
+const INITIAL_DELAY = 15000; // 15s
+const VISIBLE_TIME = 15000; // 10s
 const REPEAT_TIME = 10 * 60 * 1000; // 10min
 
 export default function LaunchpadPopup() {
