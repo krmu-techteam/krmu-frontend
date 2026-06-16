@@ -5,11 +5,12 @@ import Image from 'next/image';
 import { Carousel } from '@/components/common/Carousel';
 import SectionDivider from '@/components/common/SectionDivider';
 import { LIFE_AT_KRMU_CAROUSEL_CONFIGS, LIFE_AT_KRMU_GALLERY } from '../constants';
+import Link from 'next/link';
 
 export default function LifeAtKRMU() {
 
   return (
-    <section className="relative w-full overflow-hidden py-6 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
+    <section className="relative w-full overflow-hidden py-8 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
       
       
       {/* Precision Spec Glow (Bottom Left) - Spec: Blue Institutional Soft Light */}
@@ -23,9 +24,7 @@ export default function LifeAtKRMU() {
           A closer look at Life at KRMU
         </h2>
         <p className="max-w-[933px] mx-auto text-white/80 text-sm md:text-[16px] leading-[1.6] md:leading-[30px] font-normal text-center">
-          At K.R. Mangalam University, life goes beyond the classroom. Our campus blends academic excellence with vibrant 
-          student life. Students explore their passions through cultural events, sports, and community service. We foster a 
-          friendly, positive environment to learn, grow, and build lasting relationships.
+          At K.R. Mangalam University, life goes beyond the classroom. Our campus is a thriving hub of academic excellence, cultural diversity, and vibrant student life. We encourage students to explore their passion by making them participate in various cultural events, sports, and community services. We believe in creating a friendly and positive environment where students can learn, grow, and build lasting relationships that shape their futures.
         </p>
       </div>
 
@@ -83,10 +82,12 @@ export default function LifeAtKRMU() {
                 
                 <div className="flex cursor-pointer items-center justify-between border-t border-white/10 pt-4 md:pt-5 mt-4 -mx-6 md:-mx-10 -mb-6 md:-mb-10 px-6 md:px-10 pb-4 md:pb-5 bg-black/20 backdrop-blur-md group-hover:bg-black/60 transition-all">
                   <span className="text-white font-poppins font-medium text-xl xl:text-[24px] leading-tight md:leading-[30px] transition-colors group-hover:text-brand-gold">{card.label}</span>
+                  <Link href={card.url}>
                   <ArrowUpRight 
                     size={24} 
                     className="text-white group-hover:text-brand-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" 
                   />
+                  </Link>
                 </div>
               </div>
             </div>

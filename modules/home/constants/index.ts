@@ -206,18 +206,21 @@ export const LIFE_AT_KRMU_CAROUSEL_CONFIGS: LifeAtKRMUFeatureCardType[] = [
     label: "Events",
     bg: "/modules/home/life/event1.jpg",
     accent: "Excitement.",
+    url:"/happenings/news-and-events"
   },
   {
     title: "Explore.\nExperience.\nExcel.",
     label: "Facilities",
     bg: "/modules/home/life/event2.jpg",
     accent: "Experience.",
+    url:"/campus-life/campus-facilities"
   },
   {
     title: "Connect.\nCreate.\nCelebrate.",
     label: "Clubs & Societies",
     bg: "/modules/home/life/event3.jpg",
     accent: "Create.",
+    url:"/clubs-and-societies"
   },
 ];
 

@@ -11,7 +11,7 @@ export const HeroNav = () => {
   ];
 
   return (
-    <nav className="flex items-center gap-4 md:gap-6 lg:gap-10 text-[12px] md:text-[13px] lg:text-[15px] font-medium tracking-wider uppercase">
+    <nav className="flex items-center gap-4 md:gap-8 lg:gap-6 xl:gap-8 text-[12px] md:text-[15px] lg:text-[13px] xl:text-[15px] font-medium tracking-wider uppercase">
       {links.map((link) => (
         <Link
           key={link.name}

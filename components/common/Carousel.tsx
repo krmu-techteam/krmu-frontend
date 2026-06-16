@@ -126,7 +126,7 @@ export const Carousel = ({
       )}
 
       {showDots && childrenArray.length > 1 && (
-        <div className="flex justify-center gap-2 mt-6">
+        <div className="flex justify-center gap-2 pt-3 md:pt-6">
           {scrollSnaps.map((_, index) => (
             <button
               key={index}

@@ -17,7 +17,7 @@ export default function PlacementsSection() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <section className="relative w-full overflow-hidden py-6 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
+    <section className="relative w-full overflow-hidden py-8 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
       <div className="container mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row items-start gap-8 xl:gap-10  md:px-0">
           {/* Left: Success Card Carousel (30% Width) */}
@@ -49,7 +49,7 @@ export default function PlacementsSection() {
 
           {/* Right: Content & Stats (70% Width) */}
           <div className="w-full lg:w-[70%] text-left order-1 lg:order-2">
-            <h2 className="text-3xl md:text-4xl xl:text-[42px] font-serif font-bold text-white mb-6 leading-[1.2] tracking-tight">
+            <h2 className="text-[29px] md:text-4xl xl:text-[42px] font-serif font-bold text-white mb-6 leading-[1.2] tracking-tight">
               Explore the{" "}
               <span className="text-brand-gold">Top Global recruiters</span>{" "}
               <br className="hidden md:block" />

@@ -4,7 +4,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { Carousel } from '@/components/common/Carousel';
-import { getNewsEventsWP } from '@/lib/api/news-events';
+import { getHomeNewsEvents } from "../services";
 import { NewsEventItem } from '@/lib/types/news-events';
 import { ButtonType } from '@/lib/types/common';
 import { EventAndNewsCard } from '../components';
@@ -16,10 +16,10 @@ export default async function NewsEventsSection({
   title?: string;
   newsandeventbtn?: ButtonType;
 }) {
-  const newsandeventsdata = await getNewsEventsWP(1, 10);
+  const newsandeventsdata = await getHomeNewsEvents(1, 10);
   return (
     <section 
-      className="relative w-full py-6 px-6 md:px-11 xl:px-16 xl:py-20 overflow-hidden font-poppins"
+      className="relative w-full pt-0 pb-8 px-6 md:px-11 xl:px-16 md:py-12 xl:pt-12 xl:pb-20 overflow-hidden font-poppins"
     >
       <div 
         className="absolute -top-[100px] left-[88%] -translate-x-1/2 w-[948px] h-[948px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.05)_0%,transparent_85%)] rounded-full blur-[140px] z-0 pointer-events-none transition-opacity"

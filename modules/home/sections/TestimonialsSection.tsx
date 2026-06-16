@@ -10,13 +10,13 @@ import { TESTIMONIALS } from "../constants";
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative w-full py-6 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
+    <section className="relative w-full py-8 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
       {/* Precision Spec Lines - Gradient Style */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
 
       <div className="container mx-auto relative z-10">
-        <h2 className="text-3xl md:text-[42px] font-serif font-bold text-white text-left leading-tight md:leading-[1.2] ">
+        <h2 className="text-3xl md:text-[42px] text-center md:text-left font-serif font-bold text-white  leading-tight md:leading-[1.2] ">
           What our Learners say?
         </h2>
 
@@ -24,11 +24,11 @@ export default function TestimonialsSection() {
           {TESTIMONIALS.map((t) => (
             <div
               key={t.id}
-              className="grid grid-cols-1 lg:grid-cols-10 items-center px-l md:pl-16 pt-12 md:pt-12 mb-4 gap-8 lg:gap-6"
+              className="grid grid-cols-1 lg:grid-cols-10 items-center pt-12 md:pt-12 mb-4 gap-6"
             >
               {/* Left Column - Content */}
-              <div className="lg:col-span-6 flex flex-col md:min-h-[400px] relative pt-4 md:pt-0">
-                <div className="absolute -top-10 left-0 md:-top-12 md:-left-16 pointer-events-none">
+              <div className="lg:col-span-6 flex flex-col md:min-h-[400px] relative pt-4 md:pt-0 pl-4 md:pl-8">
+                <div className="absolute -top-10 left-2 md:-top-12 md:left-4 pointer-events-none">
                   <Image 
                     src="/modules/home/testimonial/quote.png" 
                     alt="Quote Icon" 
@@ -55,7 +55,7 @@ export default function TestimonialsSection() {
                   </p>
                 </div>
 
-                <button className="flex items-center gap-3 text-white hover:text-brand-gold transition-colors group cursor-pointer w-fit mb-12 lg:mb-0">
+                <button className="flex items-center gap-3 text-white hover:text-brand-gold transition-colors group cursor-pointer w-fit mb-0 lg:mb-0">
                   <div className="w-6 h-6 rounded-full border border-white flex items-center justify-center group-hover:border-brand-gold group-hover:bg-brand-gold/10 transition-all">
                     <ArrowRight
                       size={14}

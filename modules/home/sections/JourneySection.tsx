@@ -13,10 +13,10 @@ export default function JourneySection() {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   return (
-    <section className="relative w-full overflow-hidden py-6 px-6 md:px-11 xl:px-16 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
+    <section className="relative w-full overflow-hidden pt-6 pb-8 px-6 md:px-11 xl:px-16 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none"></div>
 
-      <div className="mx-auto relative z-10">
+      <div className="w-full max-w-[1530px] mx-auto relative z-10">
         <div className="max-w-4xl mx-auto mb-10 xl:mb-12">
           <h2 className="text-3xl md:text-4xl xl:text-[42px] font-serif font-bold text-white mb-6 leading-[1.2] tracking-tight">
             Your Journey to Excellence Begins Here
@@ -46,7 +46,7 @@ export default function JourneySection() {
               buttonClassName="w-full sm:w-auto flex items-center justify-center h-[45px] rounded-[3px] font-normal transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide relative overflow-hidden group px-6 border border-white/20 text-white hover:border-white/40"
               buttonText={
                 <div className="flex items-center gap-2">
-                  Download Brochure
+                  Download Prospectus
                   <Download size={18} className="group-hover:translate-y-0.5 transition-transform" />
                 </div>
               }
