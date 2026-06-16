@@ -219,25 +219,40 @@ export async function searchSchoolProgrammes(
   page: number = 1,
   pageSize: number = 6,
 ): Promise<ProgrammesResponse> {
-  // Start query string
-  const queryParams = new URLSearchParams({
-    "fields[0]": "title",
-    "fields[1]": "programmeslug",
-    "populate[criteria][populate]": "*",
-    "pagination[page]": page.toString(),
-    "pagination[pageSize]": "1000",
-  });
+  const buildUrl = (p: number) => {
+    const queryParams = new URLSearchParams({
+      "fields[0]": "title",
+      "fields[1]": "programmeslug",
+      "populate[criteria][populate]": "*",
+      "pagination[page]": p.toString(),
+      "pagination[pageSize]": "100",
+    });
+    if (searchQuery) {
+      queryParams.append("filters[title][$containsi]", searchQuery);
+    }
+    return `${FETCH_STRAPI_URL}/api/school-programmes?${queryParams.toString()}`;
+  };
 
-  if (searchQuery) {
-    queryParams.append("filters[title][$containsi]", searchQuery);
-  }
+  const first = await fetch(buildUrl(1), { next: { revalidate: 3600 } });
+  if (!first.ok) throw new Error("Failed to fetch school programmes");
+  const firstJson: ProgrammesResponse = await first.json();
 
-  const url = `${FETCH_STRAPI_URL}/api/school-programmes?${queryParams.toString()}`;
+  const pageCount = firstJson.meta?.pagination?.pageCount ?? 1;
+  if (pageCount <= 1) return firstJson;
 
-  const res = await fetch(url, { next: { revalidate: 3600 } });
-  if (!res.ok) throw new Error("Failed to fetch school programmes");
+  const rest = await Promise.all(
+    Array.from({ length: pageCount - 1 }, (_, i) =>
+      fetch(buildUrl(i + 2), { next: { revalidate: 3600 } }).then((r) => {
+        if (!r.ok) throw new Error("Failed to fetch school programmes");
+        return r.json() as Promise<ProgrammesResponse>;
+      }),
+    ),
+  );
 
-  return res.json();
+  return {
+    ...firstJson,
+    data: [...firstJson.data, ...rest.flatMap((r) => r.data)],
+  };
 }
 
 export async function searchPhdProgrammes(
@@ -245,25 +260,40 @@ export async function searchPhdProgrammes(
   page: number = 1,
   pageSize: number = 6,
 ): Promise<PhdProgrammesResponse> {
-  // Build query parameters safely
-  const queryParams = new URLSearchParams({
-    "fields[0]": "heading",
-    "fields[1]": "phdslug",
-    "populate[criteria][populate]": "*",
-    "pagination[page]": page.toString(),
-    "pagination[pageSize]": "1000",
-  });
+  const buildUrl = (p: number) => {
+    const queryParams = new URLSearchParams({
+      "fields[0]": "heading",
+      "fields[1]": "phdslug",
+      "populate[criteria][populate]": "*",
+      "pagination[page]": p.toString(),
+      "pagination[pageSize]": "100",
+    });
+    if (searchQuery) {
+      queryParams.append("filters[heading][$containsi]", searchQuery);
+    }
+    return `${FETCH_STRAPI_URL}/api/phd-single-programmes?${queryParams.toString()}`;
+  };
 
-  if (searchQuery) {
-    queryParams.append("filters[heading][$containsi]", searchQuery);
-  }
+  const first = await fetch(buildUrl(1), { next: { revalidate: 3600 } });
+  if (!first.ok) throw new Error("Failed to fetch PhD programmes");
+  const firstJson: PhdProgrammesResponse = await first.json();
 
-  const url = `${FETCH_STRAPI_URL}/api/phd-single-programmes?${queryParams.toString()}`;
+  const pageCount = firstJson.meta?.pagination?.pageCount ?? 1;
+  if (pageCount <= 1) return firstJson;
 
-  const res = await fetch(url, { next: { revalidate: 3600 } });
-  if (!res.ok) throw new Error("Failed to fetch PhD programmes");
+  const rest = await Promise.all(
+    Array.from({ length: pageCount - 1 }, (_, i) =>
+      fetch(buildUrl(i + 2), { next: { revalidate: 3600 } }).then((r) => {
+        if (!r.ok) throw new Error("Failed to fetch PhD programmes");
+        return r.json() as Promise<PhdProgrammesResponse>;
+      }),
+    ),
+  );
 
-  return res.json();
+  return {
+    ...firstJson,
+    data: [...firstJson.data, ...rest.flatMap((r) => r.data)],
+  };
 }
 
 // /api/school-programmes?filters[title][$contains]=B.Tech.&populate[criteria][populate]=*&fields[0]=title&fields[1]=programmeslug&pagination[pageSize]=6&pagination[page]=1

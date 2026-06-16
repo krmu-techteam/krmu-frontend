@@ -9,6 +9,76 @@
       padding-bottom: 56px;
     }
   }
+  .heroBannerForm__form {
+    background: #fff;
+    width: 100%;
+    border-radius: 10px;
+    padding-top: 40px;
+
+    height: 583px;
+    position: relative;
+  }
+
+  .heroBannerForm-header {
+    text-align: center;
+    /* font-family: "Inter", serif !important; */
+    font-family: "Poppins", sans-serif !important;
+  }
+
+  .heroBannerForm-header h3 {
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .heroBannerForm-header h3 span {
+    display: block;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.1;
+    margin-top: 5px;
+  }
+
+  .flash-border .heroBannerForm__form {
+    border: 1px solid red;
+    border-radius: 15px;
+  }
+
+  .MainSection {
+    background-image: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Brand_jpg_543ab64ee2.jpeg") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (max-width: 1023.98px) {
+    .MainSection {
+      background-image: none !important;
+      background-color: #1f0b07;
+    }
+    .MainSection .container-1 {
+      background-image: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Brand_jpg_543ab64ee2.jpeg") !important;
+      background-size: cover;
+      background-position: center;
+      height: 498px;
+      /* display: flex;
+      align-items: end;
+      justify-content: center; */
+    }
+  }
+
+  @media (min-width: 0px) and (max-width: 767px) {
+    .MainSection .container-1 {
+      display: flex;
+      align-items: end;
+      justify-content: center;
+    }
+  }
+  @media (min-width: 641px) and (max-width: 1023.98px) {
+    .MainSection .container-1 {
+      height: 750px;
+      max-width: 800px;
+    }
+  }
 
   .whyBgStyle {
     background-color: #003fa1;

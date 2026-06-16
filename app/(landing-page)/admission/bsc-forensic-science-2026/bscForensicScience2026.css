@@ -30,7 +30,15 @@
       background-image: url("/wp-content/landingpage/bsc-forensic-science-2026/bsc-forensic-science-mob.webp") !important;
       background-size: cover;
       background-position: center;
-      height: 498px;
+      height: 450px;
+      /* display: flex;
+      align-items: end;
+      justify-content: center; */
+    }
+  }
+
+  @media (min-width: 0px) and (max-width: 767px) {
+    .MainSection .container-1 {
       display: flex;
       align-items: end;
       justify-content: center;

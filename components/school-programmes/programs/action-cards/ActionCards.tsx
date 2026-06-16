@@ -88,7 +88,7 @@ export const ActionCards = ({ schoolCat }: Props) => {
       id: 3,
       title: "Brochure",
       description:
-        "Download our latest prospectus for a detailed look at our programme offerings.",
+        "Download our latest brochure for a detailed look at our programme offerings.",
       buttonText: "Download Now",
       link: brochureLink,
       icon: (

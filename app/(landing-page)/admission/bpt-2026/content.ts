@@ -25,7 +25,7 @@ export const Hero: HeroContent = {
       <span class="hidden sm:block">
       ADMISSIONS <br />
       OPEN FOR <br />
-      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold">
+      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-5xl font-bold">
        Bachelor of Physiotherapy
       </span>
       <br />
@@ -41,7 +41,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -448,13 +448,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "Healing in Every Move",
   title: "KRMU’s BPT Programme",
-  subtitle:
-    "Our Programme Comprise of Industry-relevant Curriculum",
+  subtitle: "Our Programme Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -472,9 +469,9 @@ export const programmeContent = {
   ],
 };
 
-
 export const eligibilityTerms = [
   {
-    description: "*Eligibility: Candidates must have passed 10+2 or equivalent from an recognised board/university in any stream with Physics, Chemistry, Biology with a minimum of 50% aggregate marks."
+    description:
+      "*Eligibility: Candidates must have passed 10+2 or equivalent from an recognised board/university in any stream with Physics, Chemistry, Biology with a minimum of 50% aggregate marks.",
   },
 ];
