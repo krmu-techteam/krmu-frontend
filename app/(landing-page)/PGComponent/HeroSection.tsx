@@ -36,10 +36,10 @@ const HeroSection = ({
       //   backgroundPosition: "center",
       // }}
     >
-      <div className="max-w-[1400px] lg:px-10 mx-auto w-full flex flex-col lg:flex-row items-center gap-8 md:gap-10 lg:gap-16">
+      <div className="max-w-[1440px] lg:px-4 mx-auto w-full flex flex-col lg:flex-row items-center lg:justify-between gap-8 md:gap-10 lg:gap-16 pb-6">
         {/* Left Content */}
-        <div className="w-full lg:w-2/3 text-center lg:text-left px-4 md:px-6 lg:px-0 container-1">
-          <div className="max-w-[600px] w-full mx-auto lg:mx-0 ]">
+        <div className="w-full lg:w-[55%] xl:w-2/3 text-white text-center lg:text-left  container-1  sm:py-0 sm:px-5">
+          <div className="relative p-5 sm:p-0 lg:max-w-[540px] xl:max-w-[720px] h-fit top-0 md:top-[600px] lg:top-0  mx-auto lg:mx-0">
             <h1
               className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-white font-semibold leading-tight lg:leading-[1.3] mb-4"
               dangerouslySetInnerHTML={{
@@ -49,7 +49,7 @@ const HeroSection = ({
 
             {/* <p className="text-[#9ba2ac] text-base sm:text-lg mb-6"> */}
             <p
-              className="text-white text-base sm:text-lg mb-6 hidden sm:block"
+              className="hidden lg:block font-medium"
               dangerouslySetInnerHTML={{
                 __html: description,
               }}
@@ -167,7 +167,7 @@ const HeroSection = ({
         </div> */}
 
         {/* Right Image */}
-        <div className="w-full max-w-[520px] md:max-w-[560px] lg:max-w-none lg:w-1/3 mx-auto lg:mx-0 px-4 md:px-0">
+        <div className="w-full max-w-[520px] md:max-w-[560px] lg:max-w-none lg:w-[40%] xl:w-1/3 mx-auto mt-0 md:mt-[200px] lg:mt-0 lg:mx-0 container-2 px-5 scroll-mt-40">
           {/* {image.src && (
             <Image
               src={image.src}

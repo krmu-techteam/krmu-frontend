@@ -25,7 +25,7 @@ export const Hero: HeroContent = {
       <span class="hidden sm:block">
       ADMISSIONS <br />
       OPEN FOR <br />
-      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-bold">
+      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-[60px] xl:text-8xl font-bold">
        UG & PG
       </span>
       <br />
@@ -41,7 +41,7 @@ export const Hero: HeroContent = {
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
     "50+ Industry Collaborations",
-      "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -782,8 +782,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
 export const faqSectionData: FAQSectionData = {
   eyebrow: "(FAQs)",
   heading: "Frequently Asked Questions",
-  description:
-    "",
+  description: "",
   faqs: [
     {
       id: "item-1",

@@ -25,7 +25,7 @@ export const Hero: HeroContent = {
       <span class="hidden sm:block">
       ADMISSIONS <br />
       OPEN FOR <br />
-      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold">
+      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
        B.Sc. (Hons.) Agriculture
       </span>
       <br />

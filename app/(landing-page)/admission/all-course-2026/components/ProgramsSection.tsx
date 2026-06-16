@@ -4,7 +4,6 @@ import { useState, useMemo, useEffect } from "react";
 import { programs, schools, levels, Program } from "./programsData";
 import { Calendar, IndianRupee, ChevronDown, Search } from "lucide-react";
 
-
 export default function ProgramsSection() {
   // Default selections
   const [selectedSchool, setSelectedSchool] =
@@ -59,8 +58,10 @@ export default function ProgramsSection() {
 
   const totalCards = filteredPrograms.length;
 
-  const currentSchoolLabel = schools.find((s) => s.value === selectedSchool)?.label || "Select School";
-  const currentLevelLabel = levels.find((l) => l.value === selectedLevel)?.label || "Select Level";
+  const currentSchoolLabel =
+    schools.find((s) => s.value === selectedSchool)?.label || "Select School";
+  const currentLevelLabel =
+    levels.find((l) => l.value === selectedLevel)?.label || "Select Level";
 
   return (
     <section className="py-16 bg-white">
@@ -73,7 +74,6 @@ export default function ProgramsSection() {
 
         {/* Filters */}
         <div className="max-w-6xl mx-auto mb-10 bg-white rounded-sm md:rounded-sm shadow-[0_4px_25px_rgba(0,0,0,0.08)] border border-gray-200/80 flex flex-col md:flex-row items-center p-2 md:p-1 gap-0 relative">
-          
           {/* Custom School Dropdown */}
           <div className="relative w-full md:w-[45%] px-4 py-3 md:py-3.5 select-none">
             <button
@@ -86,7 +86,11 @@ export default function ProgramsSection() {
             >
               <span className="truncate">{currentSchoolLabel}</span>
               <span className="text-[#cb000d] flex-shrink-0 ml-2">
-                <ChevronDown size={18} strokeWidth={2.5} className={`transition-transform duration-200 ${isSchoolDropdownOpen ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  size={18}
+                  strokeWidth={2.5}
+                  className={`transition-transform duration-200 ${isSchoolDropdownOpen ? "rotate-180" : ""}`}
+                />
               </span>
             </button>
 
@@ -128,7 +132,11 @@ export default function ProgramsSection() {
             >
               <span className="truncate">{currentLevelLabel}</span>
               <span className="text-[#cb000d] flex-shrink-0 ml-2">
-                <ChevronDown size={18} strokeWidth={2.5} className={`transition-transform duration-200 ${isLevelDropdownOpen ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  size={18}
+                  strokeWidth={2.5}
+                  className={`transition-transform duration-200 ${isLevelDropdownOpen ? "rotate-180" : ""}`}
+                />
               </span>
             </button>
 
@@ -174,14 +182,16 @@ export default function ProgramsSection() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredPrograms.map((prog: Program, index: number) => {
-
             // 4-column layout on desktop (lg)
             const cardsPerRow = 4;
             const rowIndex = Math.floor(index / cardsPerRow);
             const positionInRow = index % cardsPerRow;
-            const cardsInThisRow = Math.min(cardsPerRow, totalCards - rowIndex * cardsPerRow);
+            const cardsInThisRow = Math.min(
+              cardsPerRow,
+              totalCards - rowIndex * cardsPerRow,
+            );
 
             // Determine desktop glow type: "left", "center", "right"
             let lgGlowType = "center";
@@ -205,22 +215,28 @@ export default function ProgramsSection() {
             const smGlowType = smPositionInRow === 0 ? "left" : "right";
 
             // Construct class names
-            let glowClass = "left-[50%] -translate-x-1/2 -bottom-[240px] right-auto"; // base/mobile
+            let glowClass =
+              "left-[50%] -translate-x-1/2 -bottom-[240px] right-auto"; // base/mobile
 
             // Add tablet classes
             if (smGlowType === "left") {
-              glowClass += " sm:left-[-237px] sm:right-auto sm:translate-x-0 sm:-bottom-[183px]";
+              glowClass +=
+                " sm:left-[-237px] sm:right-auto sm:translate-x-0 sm:-bottom-[183px]";
             } else {
-              glowClass += " sm:right-[-133px] sm:left-auto sm:translate-x-0 sm:-bottom-[201px]";
+              glowClass +=
+                " sm:right-[-133px] sm:left-auto sm:translate-x-0 sm:-bottom-[201px]";
             }
 
             // Add desktop classes
             if (lgGlowType === "left") {
-              glowClass += " lg:left-[-237px] lg:right-auto lg:translate-x-0 lg:-bottom-[183px]";
+              glowClass +=
+                " lg:left-[-237px] lg:right-auto lg:translate-x-0 lg:-bottom-[183px]";
             } else if (lgGlowType === "right") {
-              glowClass += " lg:right-[-133px] lg:left-auto lg:translate-x-0 lg:-bottom-[201px]";
+              glowClass +=
+                " lg:right-[-133px] lg:left-auto lg:translate-x-0 lg:-bottom-[201px]";
             } else {
-              glowClass += " lg:left-[50%] lg:right-auto lg:-translate-x-1/2 lg:-bottom-[240px]";
+              glowClass +=
+                " lg:left-[50%] lg:right-auto lg:-translate-x-1/2 lg:-bottom-[240px]";
             }
 
             const formattedFee = prog.fees.replace(/[₹\s\/-]/g, "").trim();
@@ -234,12 +250,10 @@ export default function ProgramsSection() {
                   className={`absolute ${glowClass} h-[320px] w-[320px] rounded-full bg-gradient-to-br from-[#001732] via-[#59122E] to-[#63174C] blur-[30px] opacity-80 pointer-events-none z-0`}
                 ></div>
 
-                
-
                 <div className="z-10 pr-10">
                   <h6 className="block w-full text-white text-base md:text-lg font-semibold leading-snug">
-                      {prog.title}
-                    </h6>
+                    {prog.title}
+                  </h6>
                 </div>
 
                 <div className="flex flex-col sm:flex-row border-y border-[rgba(255,255,255,0.2)] sm:gap-5 z-20">
@@ -257,7 +271,9 @@ export default function ProgramsSection() {
                       <IndianRupee size={20} />
                     </span>
                     <div className="flex flex-col gap-0.5">
-                      <span className="font-semibold text-xs">Programme Fee:</span>
+                      <span className="font-semibold text-xs">
+                        Programme Fee:
+                      </span>
                       <span className="text-xs">
                         Rs. {formattedFee} / Year{" "}
                       </span>
@@ -304,7 +320,7 @@ export default function ProgramsSection() {
             className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
             onClick={() => setIsModalOpen(false)}
           />
-          
+
           {/* Modal Container */}
           <div className="bg-white text-gray-900 rounded-sm shadow-2xl w-full max-w-[680px] overflow-hidden relative z-10 transition-all duration-200">
             {/* Header */}
@@ -314,8 +330,18 @@ export default function ProgramsSection() {
                 onClick={() => setIsModalOpen(false)}
                 className="text-gray-400 cursor-pointer hover:text-gray-600 transition-colors p-1.5 rounded-xs hover:bg-gray-100"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </div>
@@ -374,7 +400,8 @@ export default function ProgramsSection() {
               {/* Duration */}
               <div>
                 <p className="text-base text-gray-700">
-                  <span className="font-semibold text-gray-900">Duration:</span> {selectedProgram.duration}
+                  <span className="font-semibold text-gray-900">Duration:</span>{" "}
+                  {selectedProgram.duration}
                 </p>
               </div>
 
@@ -397,5 +424,3 @@ export default function ProgramsSection() {
     </section>
   );
 }
-
-
