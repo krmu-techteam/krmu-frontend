@@ -121,7 +121,7 @@ const SchoolHero = ({
       bgURl:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Architecture_and_Design_jpg_1_0519194f1b.jpeg", //schools/banners/soad-banner-2.webp
       middleImg:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Architecture_and_Design_1_4d5e42239f.png",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Architecture_and_Design_5_2a944ecd36.png",
       mobileBgImg:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Architecture_and_Design_jpg_1_0519194f1b.jpeg",
       notCutoutBg: false,
@@ -233,7 +233,7 @@ const SchoolHero = ({
           </div>
         )}
         <div
-          className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === 'school-of-architecture-design' && 'lg:left-[53%]'} ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[50px] left-[52%]" : ""}  ${slug === "school-of-hotel-management-and-catering-technology" ? "bottom-[10px]" : ""}`}
+          className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === 'school-of-architecture-design' && 'lg:left-[51%]'} ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[50px] left-[52%]" : ""}  ${slug === "school-of-hotel-management-and-catering-technology" ? "bottom-[10px]" : ""}`}
         >
           {videoUrl && middleimg && (
             <Image
