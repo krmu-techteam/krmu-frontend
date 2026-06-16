@@ -1,4 +1,5 @@
 import { ButtonType, CounterItem, StrapiMedia } from "@/lib/types/common";
+import { ADecadeSectionComponent } from "@/lib/types/home";
 
 export interface HomeStatType {
   number?: string;
