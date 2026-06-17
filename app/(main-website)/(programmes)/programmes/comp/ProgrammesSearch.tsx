@@ -218,13 +218,21 @@ const ProgrammesSearch = () => {
           searchPhdProgrammes("", 1, 1000),
         ]);
         const normalizedQuery = normalize(query);
-        const filteredSchool = (schoolRes.data || []).filter((item) =>
-          normalize(item.title).includes(normalizedQuery),
-        );
         const filteredPhd = (phdRes.data || []).filter((item) =>
           normalize(item.heading).includes(normalizedQuery),
         );
-        newData = [...filteredSchool, ...filteredPhd];
+        const filteredSchool = (schoolRes.data || []).filter((item) =>
+          normalize(item.title).includes(normalizedQuery),
+        );
+        // PhD records take priority; drop school-programme rows whose
+        // normalized title collides with a PhD heading (stale duplicates).
+        const phdTitles = new Set(
+          filteredPhd.map((item) => normalize(item.heading)),
+        );
+        const schoolDeduped = filteredSchool.filter(
+          (item) => !phdTitles.has(normalize(item.title)),
+        );
+        newData = [...filteredPhd, ...schoolDeduped];
 
         setShowLoadMore(false); // no button in search
       } else {
