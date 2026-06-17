@@ -68,7 +68,8 @@ const blueBadge: string[] = [
 const ProgCard2 = ({ data }: Props) => {
   return (
     <article
-      className="relative bg-white rounded-2xl overflow-hidden flex flex-col transition-all
+      className="relative max-w-[400px] min-h-[258px]
+         bg-white rounded-2xl overflow-hidden flex flex-col transition-all
       duration-[250ms]
       shadow-[0_4px_6px_-1px_rgb(0_0_0/0.1),0_2px_4px_-2px_rgb(0_0_0/0.1)]
       ease-[cubic-bezier(0.16,1,0.3,1)]
