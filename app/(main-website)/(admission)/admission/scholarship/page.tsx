@@ -1,10 +1,10 @@
-import ScholarHero from "./comp/ScholarHero";
-import ScholarUGPG from "./comp/ScholarUGPG";
+ 
+ 
 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import ScholarTestimonials from "./comp/ScholarTestimonials";
+import { HeroSection, TestimonialSection, UGPGSection } from "@/modules/admission/scholarship"; 
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("scholarship");
@@ -70,10 +70,10 @@ export async function generateMetadata(): Promise<Metadata> {
 const page = () => {
   return (
     <>
-      <ScholarHero />
-      <ScholarUGPG />
+      <HeroSection />
+      <UGPGSection />
 
-      <ScholarTestimonials />
+      <TestimonialSection />
     </>
   );
 };

@@ -58,8 +58,8 @@ const ScholarUGPG = () => {
                     style={{
                       background: `linear-gradient(180deg,rgba(255,255,255,.09) 0%,rgba(255,255,255,.05) 100%)`,
                       boxShadow: `0px 0px 20px 0px rgba(0,0,0,.25)`,
-                      borderBottomLeftRadius: "12px",
-                      borderBottomRightRadius: "12px",
+                      borderBottomLeftRadius: "4px",
+                      borderBottomRightRadius: "4px",
                     }}
                   >
                     <div className="overflow-x-auto">
@@ -386,8 +386,8 @@ const ScholarUGPG = () => {
                     style={{
                       background: `linear-gradient(180deg,rgba(255,255,255,.09) 0%,rgba(255,255,255,.05) 100%)`,
                       boxShadow: `0px 0px 20px 0px rgba(0,0,0,.25)`,
-                      borderBottomLeftRadius: "12px",
-                      borderBottomRightRadius: "12px",
+                      borderBottomLeftRadius: "4px",
+                      borderBottomRightRadius: "4px",
                     }}
                   >
                     <p className="font-semibold text-center mb-5">
