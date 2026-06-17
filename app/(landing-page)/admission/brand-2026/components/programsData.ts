@@ -17,11 +17,20 @@ export const schools = [
   { label: "School of Management and Commerce", value: "management-commerce" },
   { label: "School of Legal Studies", value: "legal-studies" },
   { label: "School of Medical and Allied Sciences", value: "medical-allied" },
-  { label: "School of Physiotherapy and Rehabilitation Sciences", value: "physiotherapy-rehabilitation" },
+  {
+    label: "School of Physiotherapy and Rehabilitation Sciences",
+    value: "physiotherapy-rehabilitation",
+  },
   { label: "School of Liberal Arts", value: "liberal-arts" },
-  { label: "School of Basic and Applied Sciences", value: "basic-applied-sciences" },
+  {
+    label: "School of Basic and Applied Sciences",
+    value: "basic-applied-sciences",
+  },
   { label: "School of Architecture and Design", value: "architecture-design" },
-  { label: "School of Emerging Media and Creator Economy", value: "journalism-masscomm" },
+  {
+    label: "School of Emerging Media and Creator Economy",
+    value: "journalism-masscomm",
+  },
   { label: "School of Education", value: "education" },
   { label: "School of Agricultural Sciences", value: "agricultural-sciences" },
   { label: "Zenith School of AI", value: "zenith-ai" },
@@ -46,7 +55,6 @@ export const programs: Program[] = [
     fees: "₹ 2,50,000 /-",
     category: "engineering-tech",
     level: "undergraduate",
-
   },
   {
     id: 2,
@@ -60,7 +68,6 @@ export const programs: Program[] = [
     fees: "₹ 2,90,000 /-",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 3,
@@ -74,7 +81,6 @@ export const programs: Program[] = [
       "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 4,
@@ -88,7 +94,6 @@ export const programs: Program[] = [
     Eligibility:
       "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
     level: "undergraduate",
-    
   },
   {
     id: 5,
@@ -102,7 +107,6 @@ export const programs: Program[] = [
       "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 6,
@@ -116,7 +120,6 @@ export const programs: Program[] = [
       "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 7,
@@ -130,7 +133,6 @@ export const programs: Program[] = [
     Eligibility:
       "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
     level: "undergraduate",
-    
   },
   {
     id: 120,
@@ -144,35 +146,33 @@ export const programs: Program[] = [
     fees: "₹ 2,70,000 /-",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
-  {
-    id: 121,
-    title:
-      "B.Tech. Computer Science and Engineering (Cloud Computing) powered by Microsoft Certifications**",
-    duration: "4 Years",
-    semester1: "₹ 1,35,000 /-",
-    semester2: "₹ 1,35,000 /-",
-    Eligibility:
-      "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
-    fees: "₹ 2,70,000 /-",
-    category: "engineering-tech",
-    level: "undergraduate",
-    
-  },
-  {
-    id: 122,
-    title: "B.Tech. Computer Science and Engineering (Semiconductor Design)**",
-    duration: "4 Years",
-    semester1: "₹ 1,35,000 /-",
-    semester2: "₹ 1,35,000 /-",
-    Eligibility:
-      "Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks.",
-    fees: "₹ 2,70,000 /-",
-    category: "engineering-tech",
-    level: "undergraduate",
-    
-  },
+  // {
+  //   id: 121,
+  //   title:
+  //     "B.Tech. Computer Science and Engineering (Cloud Computing) powered by Microsoft Certifications**",
+  //   duration: "4 Years",
+  //   semester1: "₹ 1,35,000 /-",
+  //   semester2: "₹ 1,35,000 /-",
+  //   Eligibility:
+  //     "Passed 10+2 examination with Physics and Mathematics as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University with minimum 50% aggregate marks.",
+  //   fees: "₹ 2,70,000 /-",
+  //   category: "engineering-tech",
+  //   level: "undergraduate",
+
+  // },
+  // {
+  //   id: 122,
+  //   title: "B.Tech. Computer Science and Engineering (Semiconductor Design)**",
+  //   duration: "4 Years",
+  //   semester1: "₹ 1,35,000 /-",
+  //   semester2: "₹ 1,35,000 /-",
+  //   Eligibility:
+  //     "Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks.",
+  //   fees: "₹ 2,70,000 /-",
+  //   category: "engineering-tech",
+  //   level: "undergraduate",
+  // },
   {
     id: 113,
     title:
@@ -185,7 +185,6 @@ export const programs: Program[] = [
       "50% marks in 10+2 examination with Physics & Maths as mandatory course. For remaining single course select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognized Board/ University",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 114,
@@ -199,7 +198,6 @@ export const programs: Program[] = [
     fees: "₹ 2,70,000 /-",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 115,
@@ -213,7 +211,6 @@ export const programs: Program[] = [
     fees: "₹ 2,70,000 /-",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 116,
@@ -227,7 +224,6 @@ export const programs: Program[] = [
       "Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks.",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 117,
@@ -241,7 +237,6 @@ export const programs: Program[] = [
       "Passed 10+2 examination with Physics and Mathematics as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognised Board/ University with minimum 50% aggregate marks.",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 118,
@@ -254,7 +249,6 @@ export const programs: Program[] = [
     fees: "₹ 2,50,000 /-",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 127,
@@ -265,7 +259,6 @@ export const programs: Program[] = [
     fees: "₹ 4.75L /-",
     category: "zenith-ai",
     level: "undergraduate",
-    
   },
   {
     id: 8,
@@ -279,7 +272,6 @@ export const programs: Program[] = [
     Eligibility:
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
     level: "undergraduate",
-    
   },
   {
     id: 9,
@@ -293,7 +285,6 @@ export const programs: Program[] = [
     Eligibility:
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks.",
     level: "undergraduate",
-    
   },
   {
     id: 10,
@@ -306,7 +297,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 11,
@@ -320,7 +310,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks.",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 12,
@@ -333,7 +322,6 @@ export const programs: Program[] = [
     fees: "₹ 1,46,000 /-",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 13,
@@ -346,7 +334,6 @@ export const programs: Program[] = [
     fees: "₹ 1,46,000 /-",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 14,
@@ -359,7 +346,6 @@ export const programs: Program[] = [
     fees: "₹ 1,46,000 /-",
     category: "engineering-tech",
     level: "undergraduate",
-    
   },
   {
     id: 16,
@@ -373,7 +359,6 @@ export const programs: Program[] = [
       "Passed any graduation degree (e.g.: B.E. / B.Tech./ B.Sc / B.Com. / B.A./ B. Voc./ BCA etc.,) with Mathematics at 10+2 level or at Graduation level with minimum 50% aggregate marks.",
     category: "engineering-tech",
     level: "postgraduate",
-    
   },
   {
     id: 17,
@@ -386,7 +371,6 @@ export const programs: Program[] = [
       "Passed any graduation degree (e.g.: B.E. / B.Tech./ B.Sc / B.Com. / B.A./ B. Voc./ BCA etc.,) with Mathematics at 10+2 level or at Graduation level with minimum 50% aggregate marks.",
     category: "engineering-tech",
     level: "postgraduate",
-    
   },
   {
     id: 18,
@@ -399,7 +383,6 @@ export const programs: Program[] = [
       "Candidate must have a bachelor's degree or equivalent degree from a recognized university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "postgraduate",
-    
   },
   {
     id: 19,
@@ -412,7 +395,6 @@ export const programs: Program[] = [
     Eligibility:
       "Candidate must have a bachelor's degree or equivalent degree from a recognised university with minimum 50% aggregate marks.",
     level: "postgraduate",
-    
   },
   {
     id: 20,
@@ -425,7 +407,6 @@ export const programs: Program[] = [
       "Candidate must have a bachelor's degree or equivalent degree from a recognized university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "postgraduate",
-    
   },
   {
     id: 21,
@@ -438,7 +419,6 @@ export const programs: Program[] = [
     Eligibility:
       "Passed 10+2 or equivalent examination from any recognized board/university with minimum 50% aggregate marks",
     level: "undergraduate",
-    
   },
   {
     id: 22,
@@ -451,7 +431,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university with minimum 50% aggregate marks",
     category: "legal-studies",
     level: "undergraduate",
-    
   },
   {
     id: 23,
@@ -464,7 +443,6 @@ export const programs: Program[] = [
     Eligibility:
       "Candidate must have a bachelor's degree or equivalent degree from a recognized university with minimum 50% aggregate marks",
     level: "undergraduate",
-    
   },
   {
     id: 24,
@@ -477,7 +455,6 @@ export const programs: Program[] = [
     Eligibility:
       "Candidate must have a LLB degree from a recognized university with minimum 50% aggregate marks",
     level: "postgraduate",
-    
   },
   {
     id: 25,
@@ -490,7 +467,6 @@ export const programs: Program[] = [
       "• Candidate must have passed Senior Secondary (10+2) or equivalent with Physics, Chemistry and Biology (or Botany and Zoology) with 50% aggregate with English Pass. • He/she should have completed 17 years of age at the time of admission or will complete that age on or before 31 December of the year of his/her admission to the first year of the Undergraduate Allied and Healthcare Course. • Medical fitness certificate is mandatory to submit and it is to be endorsed by Government medical officer.",
     category: "physiotherapy-rehabilitation",
     level: "undergraduate",
-    
   },
   {
     id: 26,
@@ -503,7 +479,6 @@ export const programs: Program[] = [
       "Candidate must have passed in any of the following examinations with Physics, Chemistry and Biology/Mathematics. 1. Intermediate examination in Science; 2. The first year of the three year degree course in Science 3. 10+2 examination (academic stream) in Science from recognized Board, 4. Pre degree examination 5. Any other qualification approved by the Pharmacy Council of India as equivalent to any of the above examination.",
     category: "medical-allied",
     level: "diploma",
-    
   },
   {
     id: 27,
@@ -516,7 +491,6 @@ export const programs: Program[] = [
       "1. Candidate must have passed 10+2 examinations from any recognized board/ university with Physics, Chemistry, Biology/ Maths as mandatory course and with minimum 50% aggregate marks, 2. Candidate must attain the age of 17 years or more on 31st December of the applying year.The age shall be determined as per entry in the Matriculation/Secondary school or its equivalent examination certificate.",
     category: "medical-allied",
     level: "undergraduate",
-    
   },
   {
     id: 47,
@@ -529,7 +503,6 @@ export const programs: Program[] = [
       "1.Passed 2 years D. Pharm Course from a recognized university/college approved by Pharmacy council of India(PCI) with minimum 50% aggregate marks. 2. Candidate must attain the age of 18 yearsor more on 31 Dec of applying year.The age shall be determined as per entry in the Matriculation/Secondary school or its equivalent examination certificate.",
     category: "medical-allied",
     level: "undergraduate",
-    
   },
   {
     id: 28,
@@ -542,7 +515,6 @@ export const programs: Program[] = [
       "Candidates must have passed the 10+2 or equivalent examination with Physics and Mathematics as compulsory subjects, along with one of the following: Chemistry, Biology, a Technical Vocational subject, Computer Science, Information Technology, Informatics Practices, Engineering Graphics, or Business Studies, with at least 45% aggregate marks. Alternatively, candidates may have passed the 10+3 Diploma Examination with Mathematics as a compulsory subject and at least 45% aggregate marks.",
     category: "architecture-design",
     level: "undergraduate",
-    
   },
   {
     id: 56,
@@ -555,7 +527,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks.",
     category: "architecture-design",
     level: "undergraduate",
-    
   },
   {
     id: 53,
@@ -569,7 +540,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
     category: "architecture-design",
     level: "undergraduate",
-    
   },
   {
     id: 54,
@@ -583,7 +553,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
     category: "architecture-design",
     level: "undergraduate",
-    
   },
   {
     id: 55,
@@ -597,7 +566,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
     category: "architecture-design",
     level: "undergraduate",
-    
   },
   {
     id: 57,
@@ -611,7 +579,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks",
     category: "architecture-design",
     level: "undergraduate",
-    
   },
   {
     id: 29,
@@ -624,7 +591,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate Marks.",
     category: "journalism-masscomm",
     level: "undergraduate",
-    
   },
   {
     id: 58,
@@ -637,7 +603,6 @@ export const programs: Program[] = [
     fees: "₹ 1,60,000 /-",
     category: "journalism-masscomm",
     level: "undergraduate",
-    
   },
   {
     id: 30,
@@ -650,7 +615,6 @@ export const programs: Program[] = [
     Eligibility:
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate Marks.",
     level: "postgraduate",
-    
   },
   {
     id: 31,
@@ -663,7 +627,6 @@ export const programs: Program[] = [
     Eligibility:
       "UG/PG degree from a recognized university with minimum 50% aggregate marks.",
     level: "undergraduate",
-    
   },
   {
     id: 32,
@@ -676,7 +639,6 @@ export const programs: Program[] = [
       "10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate marks.",
     category: "education",
     level: "undergraduate",
-    
   },
   {
     id: 33,
@@ -689,7 +651,6 @@ export const programs: Program[] = [
     fees: "₹ 1,54,000 /-",
     category: "agricultural-sciences",
     level: "undergraduate",
-    
   },
   {
     id: 34,
@@ -702,7 +663,6 @@ export const programs: Program[] = [
     fees: "₹ 1,30,000 /-",
     category: "engineering-tech",
     level: "doctorate",
-    
   },
   {
     id: 35,
@@ -715,7 +675,6 @@ export const programs: Program[] = [
     Eligibility:
       "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
     level: "doctorate",
-    
   },
   {
     id: 36,
@@ -728,7 +687,6 @@ export const programs: Program[] = [
       "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
     category: "management-commerce",
     level: "doctorate",
-    
   },
   {
     id: 37,
@@ -741,7 +699,6 @@ export const programs: Program[] = [
       "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
     category: "management-commerce",
     level: "doctorate",
-    
   },
   {
     id: 38,
@@ -754,7 +711,6 @@ export const programs: Program[] = [
     fees: "₹ 1,30,000 /-",
     category: "legal-studies",
     level: "doctorate",
-    
   },
   {
     id: 39,
@@ -767,7 +723,6 @@ export const programs: Program[] = [
       "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
     category: "medical-allied",
     level: "doctorate",
-    
   },
   {
     id: 40,
@@ -780,7 +735,6 @@ export const programs: Program[] = [
       "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
     category: "liberal-arts",
     level: "doctorate",
-    
   },
   {
     id: 41,
@@ -793,7 +747,6 @@ export const programs: Program[] = [
     fees: "₹ 1,30,000 /-",
     category: "liberal-arts",
     level: "doctorate",
-    
   },
   {
     id: 42,
@@ -806,7 +759,6 @@ export const programs: Program[] = [
     fees: "₹ 1,30,000 /-",
     category: "liberal-arts",
     level: "doctorate",
-    
   },
   {
     id: 88,
@@ -819,7 +771,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 89,
@@ -832,7 +783,6 @@ export const programs: Program[] = [
     fees: "₹ 2,00,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 90,
@@ -845,7 +795,6 @@ export const programs: Program[] = [
     fees: "₹ 2,00,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 91,
@@ -858,7 +807,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 92,
@@ -871,7 +819,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 93,
@@ -884,7 +831,6 @@ export const programs: Program[] = [
     fees: "₹ 2,00,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 94,
@@ -897,7 +843,6 @@ export const programs: Program[] = [
     fees: "₹ 2,00,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 95,
@@ -910,7 +855,6 @@ export const programs: Program[] = [
     fees: "₹ 2,00,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 96,
@@ -923,7 +867,6 @@ export const programs: Program[] = [
     fees: "₹ 2,00,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 97,
@@ -936,7 +879,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 98,
@@ -950,7 +892,6 @@ export const programs: Program[] = [
     fees: "₹ 2,30,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 99,
@@ -964,7 +905,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 100,
@@ -978,7 +918,6 @@ export const programs: Program[] = [
     fees: "₹ 2,25,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 101,
@@ -992,7 +931,6 @@ export const programs: Program[] = [
     fees: "₹ 2,25,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 102,
@@ -1006,7 +944,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 103,
@@ -1020,7 +957,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 104,
@@ -1033,7 +969,6 @@ export const programs: Program[] = [
     fees: "₹ 2,25,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 105,
@@ -1047,7 +982,6 @@ export const programs: Program[] = [
     fees: "₹ 2,25,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 106,
@@ -1061,7 +995,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 107,
@@ -1075,7 +1008,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 125,
@@ -1089,7 +1021,6 @@ export const programs: Program[] = [
     fees: "₹ 2,00,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 126,
@@ -1103,7 +1034,6 @@ export const programs: Program[] = [
     fees: "₹ 2,00,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 123,
@@ -1117,7 +1047,6 @@ export const programs: Program[] = [
     fees: "₹ 2,40,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 110,
@@ -1131,7 +1060,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 111,
@@ -1145,7 +1073,6 @@ export const programs: Program[] = [
     fees: "₹ 1,80,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 43,
@@ -1158,7 +1085,6 @@ export const programs: Program[] = [
     fees: "₹ 1,54,000 /-",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 44,
@@ -1171,7 +1097,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university with minimum 50% aggregate marks",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 45,
@@ -1184,7 +1109,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university with minimum 50% aggregate marks.",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 46,
@@ -1198,7 +1122,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university with minimum 50% aggregate marks",
     category: "management-commerce",
     level: "undergraduate",
-    
   },
   {
     id: 51,
@@ -1211,7 +1134,6 @@ export const programs: Program[] = [
       "Candidate should pass in the following examinations: B. Pharmacy degree examination of an Indian university established by law in India from an institution approved by Pharmacy Council of India (PCI) and has scored not less than 55% of the maximum marks (aggregate of 4 years of B.Pharmacy). Every student, selected for admission to post graduate pharmacy program in any PCI approved institution should have obtained registration with the State Pharmacy Council or should obtain the same within one month from the date of his/her admission, failing which the admission of the candidate shall be cancelled.",
     category: "medical-allied",
     level: "postgraduate",
-    
   },
   {
     id: 52,
@@ -1224,7 +1146,6 @@ export const programs: Program[] = [
       "Candidate should pass in the following examinations: B. Pharmacy degree examination of an Indian university established by law in India from an institution approved by Pharmacy Council of India (PCI) and has scored not less than 55% of the maximum marks (aggregate of 4 years of B.Pharmacy). Every student, selected for admission to post graduate pharmacy program in any PCI approved institution should have obtained registration with the State Pharmacy Council or should obtain the same within one month from the date of his/her admission, failing which the admission of the candidate shall be cancelled.",
     category: "medical-allied",
     level: "postgraduate",
-    
   },
   {
     id: 59,
@@ -1237,7 +1158,6 @@ export const programs: Program[] = [
       "The candidate should have a postgraduate degree or its equivalent from a recognized University, in a respective discipline, with a minimum of 55% marks or a minimum CGPA of 5.5 on a 10 point scale.",
     category: "journalism-masscomm",
     level: "doctorate",
-    
   },
   {
     id: 60,
@@ -1250,21 +1170,19 @@ export const programs: Program[] = [
       "A postgraduate degree or equivalent in the concerned subject from a recognized Indian University, or a postgraduate degree approved by the Association of Indian Universities/UGC/AICTE with not less than 55% marks in aggregate or its equivalent grade ‘B’ in the UGC 7-point scale. Ph.D. admission is open only for those students who have qualified UGC-NET (including JRF/UGC-CSIR NET/GATE) teacher fellowship or have passed M.Phil. Ph.D. admission is open for regular University faculty.",
     category: "education",
     level: "doctorate",
-    
   },
-  {
-    id: 61,
-    title: "M.A. Education",
-    duration: "2 Years",
-    fees: "₹ 1,20,000 /-",
-    category: "education",
-    semester1: "₹ 60,000 /-",
-    semester2: "₹ 60,000 /-",
-    Eligibility:
-      "Bachelor’s degree in Education or a related discipline from a recognised university with a minimum 50% aggregate marks.",
-    level: "postgraduate",
-    
-  },
+  // {
+  //   id: 61,
+  //   title: "M.A. Education",
+  //   duration: "2 Years",
+  //   fees: "₹ 1,20,000 /-",
+  //   category: "education",
+  //   semester1: "₹ 60,000 /-",
+  //   semester2: "₹ 60,000 /-",
+  //   Eligibility:
+  //     "Bachelor’s degree in Education or a related discipline from a recognised university with a minimum 50% aggregate marks.",
+  //   level: "postgraduate",
+  // },
   {
     id: 62,
     title: "M.A. Applied Psychology",
@@ -1276,47 +1194,43 @@ export const programs: Program[] = [
     Eligibility:
       "The candidate should have passed a Bachelor degree (any discipline) or equivalent degree from a recognised university with a minimum of 50% marks in aggregate.",
     level: "postgraduate",
-    
   },
-  {
-    id: 130,
-    title: "M.A. English",
-    duration: "2 Years",
-    semester1: "₹ 60,000 /-",
-    semester2: "₹ 60,000 /-",
-    Eligibility:
-      "Bachelor’s degree in English or a related discipline from a recognized university with minimum 50% aggregate marks",
-    fees: "₹ 1,20,000 /-",
-    category: "liberal-arts",
-    level: "postgraduate",
-    
-  },
-  {
-    id: 64,
-    title: "M.A. Economics",
-    duration: "2 Years",
-    fees: "₹ 1,20,000 /-",
-    semester1: "₹ 60,000 /-",
-    semester2: "₹ 60,000 /-",
-    Eligibility:
-      "Bachelor’s degree in Economics or a related discipline from a recognised university with a minimum 50% aggregate marks.",
-    category: "liberal-arts",
-    level: "postgraduate",
-    
-  },
-  {
-    id: 65,
-    title: "M.A. Political Science**",
-    duration: "2 Years",
-    semester1: "₹ 65,000 /-",
-    semester2: "₹ 60,000 /-",
-    Eligibility:
-      "Bachelor’s degree in Political Science or a related discipline from a recognised university with a minimum of 50% aggregate marks.",
-    fees: "₹ 1,25,000 /-",
-    category: "liberal-arts",
-    level: "postgraduate",
-    
-  },
+  // {
+  //   id: 130,
+  //   title: "M.A. English",
+  //   duration: "2 Years",
+  //   semester1: "₹ 60,000 /-",
+  //   semester2: "₹ 60,000 /-",
+  //   Eligibility:
+  //     "Bachelor’s degree in English or a related discipline from a recognized university with minimum 50% aggregate marks",
+  //   fees: "₹ 1,20,000 /-",
+  //   category: "liberal-arts",
+  //   level: "postgraduate",
+  // },
+  // {
+  //   id: 64,
+  //   title: "M.A. Economics",
+  //   duration: "2 Years",
+  //   fees: "₹ 1,20,000 /-",
+  //   semester1: "₹ 60,000 /-",
+  //   semester2: "₹ 60,000 /-",
+  //   Eligibility:
+  //     "Bachelor’s degree in Economics or a related discipline from a recognised university with a minimum 50% aggregate marks.",
+  //   category: "liberal-arts",
+  //   level: "postgraduate",
+  // },
+  // {
+  //   id: 65,
+  //   title: "M.A. Political Science**",
+  //   duration: "2 Years",
+  //   semester1: "₹ 65,000 /-",
+  //   semester2: "₹ 60,000 /-",
+  //   Eligibility:
+  //     "Bachelor’s degree in Political Science or a related discipline from a recognised university with a minimum of 50% aggregate marks.",
+  //   fees: "₹ 1,25,000 /-",
+  //   category: "liberal-arts",
+  //   level: "postgraduate",
+  // },
   {
     id: 66,
     title: "B.Sc. (Hons. / Hons. with Research ) Physics",
@@ -1328,7 +1242,6 @@ export const programs: Program[] = [
       "Passed the 10+2 or equivalent examination from any recognised board/ University with PCB/PCM as mandatory course with minimum 50% aggregate marks.",
     category: "basic-applied-sciences",
     level: "undergraduate",
-    
   },
   {
     id: 67,
@@ -1341,7 +1254,6 @@ export const programs: Program[] = [
       "Passed the 10+2 or equivalent examination from any recognised board/ University with PCB/PCM as mandatory course with minimum 50% aggregate marks.",
     category: "basic-applied-sciences",
     level: "undergraduate",
-    
   },
   {
     id: 68,
@@ -1354,7 +1266,6 @@ export const programs: Program[] = [
       "Passed the 10+2 or equivalent examination from any recognized board/ University with PCM as mandatory course with minimum 50% aggregate marks.",
     category: "basic-applied-sciences",
     level: "undergraduate",
-    
   },
   {
     id: 69,
@@ -1367,7 +1278,6 @@ export const programs: Program[] = [
       "Passed the 10+2 or equivalent examination from any recognized board/ University in Science (Physics/Chemistry/Biology/Mathematics) with minimum 50% aggregate marks.",
     category: "basic-applied-sciences",
     level: "undergraduate",
-    
   },
   {
     id: 70,
@@ -1380,7 +1290,6 @@ export const programs: Program[] = [
       "Passed the 10+2 or equivalent examination from any recognised board/ University in Science (Physics/Chemistry/Biology/Mathematics) with minimum 50% aggregate marks.",
     category: "basic-applied-sciences",
     level: "undergraduate",
-    
   },
   {
     id: 71,
@@ -1393,7 +1302,6 @@ export const programs: Program[] = [
       "Candidates who have completed B.Sc. (Any Science Stream) from a recognised university with minimum aggregate 50% marks",
     category: "basic-applied-sciences",
     level: "postgraduate",
-    
   },
   {
     id: 72,
@@ -1406,7 +1314,6 @@ export const programs: Program[] = [
     fees: "₹ 60,000 /-",
     category: "basic-applied-sciences",
     level: "postgraduate",
-    
   },
   {
     id: 73,
@@ -1419,7 +1326,6 @@ export const programs: Program[] = [
       "Passed the 10+2 or equivalent examination from any recognised board/ University in Science (Physics/Chemistry/Biology/Mathematics) with minimum 50% aggregate marks.",
     category: "basic-applied-sciences",
     level: "undergraduate",
-    
   },
   {
     id: 74,
@@ -1432,7 +1338,6 @@ export const programs: Program[] = [
     fees: "₹ 1,30,000 /-",
     category: "basic-applied-sciences",
     level: "doctorate",
-    
   },
   {
     id: 75,
@@ -1445,7 +1350,6 @@ export const programs: Program[] = [
     fees: "₹ 1,30,000 /-",
     category: "basic-applied-sciences",
     level: "doctorate",
-    
   },
   {
     id: 76,
@@ -1458,7 +1362,6 @@ export const programs: Program[] = [
     fees: "₹ 1,30,000 /-",
     category: "basic-applied-sciences",
     level: "doctorate",
-    
   },
   {
     id: 77,
@@ -1471,7 +1374,6 @@ export const programs: Program[] = [
       "A postgraduate degree or equivalent in the concerned subject from a recognized Indian University, or a postgraduate degree approved by the Association of Indian Universities/UGC/AICTE with not less than 55% marks in aggregate or its equivalent grade ‘B’ in the UGC 7-point scale. Ph.D. admission is open only for those students who have qualified UGC-NET (including JRF/UGC-CSIR NET/GATE) teacher fellowship or have passed M.Phil. Ph.D. admission is open for regular University faculty.",
     category: "basic-applied-sciences",
     level: "doctorate",
-    
   },
   {
     id: 78,
@@ -1484,7 +1386,6 @@ export const programs: Program[] = [
     Eligibility:
       "Passed 10+2 or equivalent examination from any recognised board/university in any stream with minimum 50% aggregate Marks.",
     level: "undergraduate",
-    
   },
   {
     id: 79,
@@ -1497,7 +1398,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university in any stream with minimum 50% aggregate Marks.",
     category: "liberal-arts",
     level: "undergraduate",
-    
   },
   {
     id: 80,
@@ -1510,7 +1410,6 @@ export const programs: Program[] = [
     fees: "₹ 1,30,000 /-",
     category: "liberal-arts",
     level: "undergraduate",
-    
   },
   {
     id: 81,
@@ -1523,7 +1422,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate Marks.",
     category: "liberal-arts",
     level: "undergraduate",
-    
   },
   {
     id: 82,
@@ -1536,7 +1434,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognized board/university in any stream with minimum 50% aggregate Marks.",
     category: "liberal-arts",
     level: "undergraduate",
-    
   },
   {
     id: 83,
@@ -1549,7 +1446,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university in any stream with minimum 50% aggregate Marks.",
     category: "liberal-arts",
     level: "undergraduate",
-    
   },
   {
     id: 84,
@@ -1562,21 +1458,19 @@ export const programs: Program[] = [
       "Must have passed 10+2 or equivalent examination from any recognised board/university in any stream with a minimum of 50% aggregate marks.",
     category: "liberal-arts",
     level: "undergraduate",
-    
   },
-  {
-    id: 85,
-    title: "B.A. (Hons. / Hons. with Research) (Liberal Arts)",
-    duration: "4 Years",
-    fees: "₹ 1,50,000 /-",
-    semester1: "₹ 75,000 /-",
-    semester2: "₹ 75,000 /-",
-    Eligibility:
-      "10+2 or equivalent from a recognized board with minimum 50% aggregate marks.",
-    category: "liberal-arts",
-    level: "undergraduate",
-    
-  },
+  // {
+  //   id: 85,
+  //   title: "B.A. (Hons. / Hons. with Research) (Liberal Arts)",
+  //   duration: "4 Years",
+  //   fees: "₹ 1,50,000 /-",
+  //   semester1: "₹ 75,000 /-",
+  //   semester2: "₹ 75,000 /-",
+  //   Eligibility:
+  //     "10+2 or equivalent from a recognized board with minimum 50% aggregate marks.",
+  //   category: "liberal-arts",
+  //   level: "undergraduate",
+  // },
   {
     id: 86,
     title: "B.A. (Hons.) Political Science",
@@ -1588,7 +1482,6 @@ export const programs: Program[] = [
       "Passed 10+2 or equivalent examination from any recognised board/university in any stream with minimum 50% aggregate Marks.",
     category: "liberal-arts",
     level: "undergraduate",
-    
   },
   {
     id: 87,
@@ -1601,32 +1494,29 @@ export const programs: Program[] = [
     fees: "₹ 1,30,000 /-",
     category: "liberal-arts",
     level: "undergraduate",
-    
   },
-  {
-    id: 119,
-    title: "M.Tech. Computer Science & Engineering",
-    duration: "2 Years",
-    semester1: "₹ 60,000 /-",
-    semester2: "₹ 60,000 /-",
-    Eligibility:
-      "Candidates must have a B.E. / B.Tech degree in Mechanical Engineering/Automobile Engineering with a minimum of 50% marks in aggregate.",
-    fees: "₹ 1,20,000 /-",
-    category: "engineering-tech",
-    level: "postgraduate",
-    
-  },
-  {
-    id: 124,
-    title: "M. Design (Interior Design)**",
-    duration: "2 Years",
-    semester1: "₹ 1,00,000 /-",
-    semester2: "₹ 1,00,000 /-",
-    Eligibility:
-      "The candidates must have a qualifying degree in Design/Fine Arts or in any stream with at least 50% marks from a recognised University.",
-    fees: "₹ 2,00,000 /-",
-    category: "architecture-design",
-    level: "postgraduate",
-    
-  },
+  // {
+  //   id: 119,
+  //   title: "M.Tech. Computer Science & Engineering",
+  //   duration: "2 Years",
+  //   semester1: "₹ 60,000 /-",
+  //   semester2: "₹ 60,000 /-",
+  //   Eligibility:
+  //     "Candidates must have a B.E. / B.Tech degree in Mechanical Engineering/Automobile Engineering with a minimum of 50% marks in aggregate.",
+  //   fees: "₹ 1,20,000 /-",
+  //   category: "engineering-tech",
+  //   level: "postgraduate",
+  // },
+  // {
+  //   id: 124,
+  //   title: "M. Design (Interior Design)**",
+  //   duration: "2 Years",
+  //   semester1: "₹ 1,00,000 /-",
+  //   semester2: "₹ 1,00,000 /-",
+  //   Eligibility:
+  //     "The candidates must have a qualifying degree in Design/Fine Arts or in any stream with at least 50% marks from a recognised University.",
+  //   fees: "₹ 2,00,000 /-",
+  //   category: "architecture-design",
+  //   level: "postgraduate",
+  // },
 ];
