@@ -1,19 +1,17 @@
 import { getPlacementOverview } from "@/lib/api/placement";
-import BridgingAcademia from "../components/BridgingAcademia";
-import CDT from "../components/CDT";
-import ContactEnquiries from "../components/ContactEnquiries";
-import HeroSection from "../components/HeroSection";
-import PlacementHighlight from "../components/PlacementHighlight";
-import { PlacementPolicy } from "../components/PlacementPolicy";
-import YourPathsuccess from "../components/YourPathsuccess";
-
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 
-
-
+import {
+  BridgingAcademiaSection,
+  CareerDevelopmentTeamSection,
+  ContactEnquiriesSection,
+  HeroSection,
+  HighlightSection,
+  PolicySection,
+  YourPathsuccessSection,
+} from "@/modules/placement/overview";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("placementoverview");
@@ -81,13 +79,13 @@ const page = async () => {
 
   const overviewHero = placementOverview?.placementsoverviewcontainer.find(
     (component) =>
-      component?.__component === "placement-overview.placement-hero"
+      component?.__component === "placement-overview.placement-hero",
   );
 
   const overviewHightlight =
     placementOverview?.placementsoverviewcontainer.find(
       (component) =>
-        component?.__component === "placement-overview.placement-highlight"
+        component?.__component === "placement-overview.placement-highlight",
     );
 
   return (
@@ -101,17 +99,17 @@ const page = async () => {
         />
       )}
       {overviewHightlight && (
-        <PlacementHighlight
+        <HighlightSection
           heading={overviewHightlight?.heading}
           slideImages={overviewHightlight?.placementhighlights}
           btn={overviewHightlight?.highlightbtn}
         />
       )}
-      <YourPathsuccess />
-      <BridgingAcademia />
-      <PlacementPolicy />
-      <CDT />
-      <ContactEnquiries />
+      <YourPathsuccessSection />
+      <BridgingAcademiaSection />
+      <PolicySection />
+      <CareerDevelopmentTeamSection />
+      <ContactEnquiriesSection />
     </>
   );
 };
