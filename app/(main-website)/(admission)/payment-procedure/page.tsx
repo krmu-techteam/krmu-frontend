@@ -1,12 +1,12 @@
 import { STRAPI_URL } from "@/app/constant";
-import HelpDesk from "./comp/HelpDesk";
-import OnlineFee from "./comp/OnlineFee";
-import PaymentProcedureFAQ from "./comp/PaymentProcedureFAQ";
-import PaymentProcedureHero from "./comp/PaymentProcedureHero";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
-
-
+import {
+  HelpDeskSection,
+  HeroSection,
+  OnlineFeeSection,
+  PaymentProcedureFaqSection,
+} from "@/modules/admission/payment-procedure";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("payment-procedure");
@@ -69,15 +69,15 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const page = () => {
+const PaymentProcedurePage = () => {
   return (
     <>
-      <PaymentProcedureHero />
-      <OnlineFee />
-      <PaymentProcedureFAQ />
-      <HelpDesk />
+      <HeroSection />
+      <OnlineFeeSection />
+      <PaymentProcedureFaqSection />
+      <HelpDeskSection />
     </>
   );
 };
 
-export default page;
+export default PaymentProcedurePage;

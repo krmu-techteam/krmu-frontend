@@ -70,7 +70,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const page = async () => {
+const FeeStructurePage = async () => {
   const feeStructure = await getFeeStructurePageData();
 
   // API response → fee_structure_tab array
@@ -89,4 +89,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default FeeStructurePage;

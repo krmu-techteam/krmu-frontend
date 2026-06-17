@@ -98,7 +98,7 @@ const generateCourseFaqSchemaa = (faqData: FAQCategory[]) => {
   };
 };
 
-const page = async () => {
+const FAQPage = async () => {
   // const faqData = await getFaqsData();
   const faqSchema = generateCourseFaqSchemaa(faqCategories.mainEntity);
 
@@ -125,4 +125,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default FAQPage;

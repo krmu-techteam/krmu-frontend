@@ -1,11 +1,8 @@
-import React from "react";
-import FinanceAssistanceHero from "./comp/FinanceAssistanceHero";
-import BankNbfc from "./comp/BankNbfc";
-import FinanceAssistancePointer from "./comp/FinanceAssistancePointer";
-import { getFinancialPageData } from "@/lib/api/financialAssistance";
+
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
+import { getFinancialAssistanceData, HeroSection, LoanProviderSection, PointerSection } from "@/modules/admission/financial-assistance";
 
 
 
@@ -70,24 +67,24 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const page = async () => {
-  const financialAssistanceData = await getFinancialPageData();
+const FinancialAssistancePage = async () => {
+  const financial_assistance = await getFinancialAssistanceData();
 
   return (
     <>
-      <FinanceAssistanceHero
-        heading={financialAssistanceData?.heading}
-        subheading={financialAssistanceData?.subheading}
-        content={financialAssistanceData?.content}
+      <HeroSection
+        heading={financial_assistance?.heading}
+        subheading={financial_assistance?.subheading}
+        content={financial_assistance?.content}
       />
-      <BankNbfc
-        bankLoansCards={financialAssistanceData?.bank_loan}
-        nbfccardsData={financialAssistanceData?.nbfc_card}
+      <LoanProviderSection
+        bankLoansCards={financial_assistance?.bank_loan}
+        nbfccardsData={financial_assistance?.nbfc_card}
       />
 
-      <FinanceAssistancePointer />
+      <PointerSection />
     </>
   );
 };
 
-export default page;
+export default FinancialAssistancePage;

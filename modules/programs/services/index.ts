@@ -1,1 +1,1 @@
-export { default as HeroSection } from "../sections/HeroSection";
+

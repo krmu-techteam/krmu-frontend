@@ -82,7 +82,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const page = async () => {
+const AddmissionPage= async () => {
   const admission2Data = await getAdmission2PageData();
 
   const admTOC = admission2Data?.adm_toc;
@@ -150,4 +150,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default AddmissionPage;
