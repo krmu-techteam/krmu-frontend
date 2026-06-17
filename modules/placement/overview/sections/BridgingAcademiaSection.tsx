@@ -4,7 +4,7 @@ import SectionDivider from "@/components/common/SectionDivider";
 
 const BridgingAcademiaSection = () => {
   return (
-    <section className="relative z-5 px-4 lg:py-24">
+    <section className="relative z-5 px-6 md:px-7 xl:px-16  lg:py-20">
       <div className="max-w-[1530px] mx-auto w-full lg:flex items-center gap-6">
         <div className="lg:w-[40%]">
           <Image src="/placements/67.webp" width={570} height={700} className="w-[90%] h-[600px]" alt="" />

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ContactEnquiriesSection = () => {
   return (
-    <section className="bg-[url(/placements/contact-bg.webp)] bg-no-repeat bg-cover bg-center py-[30px] px-4">
+    <section className="bg-[url(/placements/contact-bg.webp)] bg-no-repeat bg-cover bg-center py-[30px] px-6 md:px-7 xl:px-16">
       <div className="max-w-[1530px] mx-auto lg:flex">
         <div className="lg:w-1/2">
           <h4 className="text-[#3d5fa5] leading-[1.2] text-[45px] font-bold mb-5">

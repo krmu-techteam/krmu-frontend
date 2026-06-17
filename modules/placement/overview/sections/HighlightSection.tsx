@@ -12,7 +12,7 @@ type Props = {
 const HighlightSection = ({ heading, slideImages, btn }: Props) => {
   return (
     <>
-      <section className="relative z-5 py-[30px] mt-5 px-4">
+      <section className="relative z-5 py-[30px] mt-5 px-6 md:px-7 xl:px-16">
         <div className="max-w-[1530px] mx-auto w-full mb-7">
           <h2 className="heading-primary text-center mb-7">
             {heading}

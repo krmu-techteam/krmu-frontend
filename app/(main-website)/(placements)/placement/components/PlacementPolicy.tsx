@@ -1,6 +1,6 @@
 export const PlacementPolicy = () => {
   return (
-    <section className="py-10 md:py-[90px] bg-[url(/placements/Placement-Policy.webp)] bg-cover bg-no-repeat px-4">
+    <section className="py-10 md:py-[90px] bg-[url(/placements/Placement-Policy.webp)] bg-cover bg-no-repeat px-6 md:px-7 xl:px-16">
       <div className="max-w-[1664px] mx-auto w-full lg:flex gap-10">
         <div className="text-white lg:w-1/3 mb-5 lg:mb-0">
           <h3 className="text-3xl md:text-5xl leading-[1.5] font-semibold mb-5 md:mb-0">
