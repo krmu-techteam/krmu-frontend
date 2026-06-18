@@ -1,7 +1,6 @@
-"use client";
-
 import Link from "next/link";
 import SectionDivider from "@/components/common/SectionDivider";
+import {StatCard} from "@/components/common/StatCard";
 import { ABOUT_STAT_BG_COLORS } from "../constants";
 import { ADecadeLeftCol, ADecadeRightCol } from "../types";
 import { getAboutStats } from "../utils";
@@ -41,23 +40,12 @@ export default function AboutSection({
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 xl:gap-5">
           {aboutStats.map((stat, idx) => (
-            <div
+            <StatCard
               key={idx}
-              style={{
-                backgroundColor:
-                  ABOUT_STAT_BG_COLORS[idx % ABOUT_STAT_BG_COLORS.length],
-              }}
-              className="group relative overflow-hidden rounded-sm py-7 px-6 border border-white/5 shadow-xl hover:border-brand-gold/30 hover:shadow-2xl hover:shadow-brand-gold/10 hover:-translate-y-1 transition-all duration-500 ease-out cursor-default text-start min-h-[100px] xl:min-h-[120px] flex flex-col justify-center"
-            >
-              <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
-
-              <div className="text-3xl md:text-4xl font-light text-brand-gold mb-2 leading-none relative z-10 transition-colors duration-500 ease-out">
-                {stat.number}
-              </div>
-              <div className="text-white/80 text-[14px] 2xl:text-[16px] capitalize tracking-wide font-light leading-tight relative z-10 transition-colors">
-                {stat.label}
-              </div>
-            </div>
+              bgColor={ABOUT_STAT_BG_COLORS[idx % ABOUT_STAT_BG_COLORS.length]}
+              number={stat.number}
+              label={stat.label}
+            />
           ))}
         </div>
       </div>

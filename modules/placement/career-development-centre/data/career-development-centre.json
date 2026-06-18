@@ -1,0 +1,99 @@
+{
+  "data": {
+    "heroSection": {
+      "title": "Career Development Center",
+      "backgroundImage": "/placements/70.webp",
+      "description": "The Career Development Center at K.R. Mangalam University is dedicated to empowering students with the skills, guidance, and opportunities needed to excel in today’s competitive job market. We bridge the gap between academia and industry by offering holistic career support throughout a student’s academic journey. The Career Development Center regularly arranges corporate visits, industrial tours, or interactions with professionals to expose students to the corporate culture. This helps them understand the expectations and dynamics of a corporate environment."
+    },
+
+    "trainingPlacementSection": {
+      "introText": "The Career Development Center at KRMU offers training and placement assistance to students through various initiatives including:",
+
+      "topCards": [
+        {
+          "heading": "Training",
+          "items": [
+            "Career Counselling",
+            "Career Skills",
+            "Tech Skills",
+            "Industry Engagement"
+          ]
+        },
+        {
+          "heading": "Placement",
+          "items": [
+            "Campus Placement Drives",
+            "Mega Job Fairs / Pool Drives",
+            "Internships + Pre-Placements"
+          ]
+        }
+      ],
+
+      "trainingMethodology": {
+        "title": "Career Training Modules & Methodology",
+        "points": [
+          "Quantitative Aptitude and Logical Reasoning",
+          "Soft Skills (Body Language, Professional Grooming & Etiquettes)",
+          "VARC (Verbal Ability and Reading Comprehension)"
+        ],
+        "cards": [
+          {
+            "heading": "Training Modules",
+            "items": [
+              "Personality Development",
+              "Group Discussions",
+              "Presentation Skills",
+              "Personal Interviews"
+            ]
+          },
+          {
+            "heading": "Training Overview",
+            "items": [
+              "Courses Embedded in Curriculum",
+              "Boot Camps",
+              "Profile Based Trainings",
+              "Company Specific Trainings"
+            ]
+          },
+          {
+            "heading": "Training Support",
+            "items": [
+              "Company Specific Curriculum",
+              "Using Standardised curriculum training is provided to students to cover all aspects of placement",
+              "Students engage in GD & Mock Interviews as part of their preparation for placement",
+              "Boot Camp",
+              "CDC conducts intensive training before the placement starts"
+            ]
+          }
+        ]
+      },
+
+      "skillBuilding": {
+        "title": "Skill-Building Opportunities at a Glance",
+        "points": [
+          "Quantitative Aptitude and Logical Reasoning",
+          "Soft Skills (Body Language, Professional Grooming & Etiquettes)",
+          "VARC (Verbal Ability and Reading Comprehension)"
+        ],
+        "cards": [
+          {
+            "heading": "Credit Based Courses",
+            "description": "The curriculum includes audit-based courses covering various subjects."
+          },
+          {
+            "heading": "Value Added Skills",
+            "description": "Students develop valuable skills through workshops and boot camps, including Full Stack Development workshops, AIML training, and IoT skills."
+          },
+          {
+            "heading": "Placement Supports",
+            "description": "The university provides comprehensive placement support to students."
+          },
+          {
+            "heading": "Skilling Partners",
+            "description": "Collaborations with top industry partners like AD Consultants Pvt Ltd., Mang ERP Ltd., JK Cements, ICT (Ultratech group) enhance students skill."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "stats": [
+    {
+      "id": 1,
+      "number": "800+",
+      "label": "Recruiters",
+      "bgColor": "#081D2D"
+    },
+    {
+      "id": 2,
+      "number": "100%",
+      "label": "Placements Assistance",
+      "bgColor": "#0D2131"
+    },
+    {
+      "id": 3,
+      "number": "₹56.6 LPA",
+      "label": "Highest Package",
+      "bgColor": "#182C3C"
+    }
+  ]
+}

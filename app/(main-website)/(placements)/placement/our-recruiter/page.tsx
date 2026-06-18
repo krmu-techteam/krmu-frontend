@@ -1,17 +1,14 @@
 import { getPlacementRecruitersData } from "@/lib/api/placement";
-import OurRecruiterCounter from "./component/OurRecruiterCounter";
-import OurRecruitersHeroSection from "./component/OurRecruitersHeroSection";
-import ProminentRecruiters from "./component/ProminentRecruiters";
-
-
-
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
-
+import {
+  getHeroSectionContent,
+  getHighlightSectionContent,
+  HeroSection,
+  HighlightSection,
+  ProminentRecruitersSection,
+} from "@/modules/placement/our-recruiter";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("our-recruiter");
@@ -74,19 +71,18 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-
-const page = async () => {
+const OurRecruiterPage = async () => {
   const placementRecruitersData = await getPlacementRecruitersData();
-
-  const recruitLogos = placementRecruitersData?.recruiters_logo;
+  const heroSection = await getHeroSectionContent();
+  const highlightSection = await getHighlightSectionContent();
 
   return (
     <>
-      <OurRecruitersHeroSection />
-      <OurRecruiterCounter />
-      <ProminentRecruiters recruitLogos={recruitLogos} />
+      <HeroSection {...heroSection} />
+      <HighlightSection stats={highlightSection} />
+      <ProminentRecruitersSection recruitLogos={placementRecruitersData?.recruiters_logo} />
     </>
   );
 };
 
-export default page;
+export default OurRecruiterPage;

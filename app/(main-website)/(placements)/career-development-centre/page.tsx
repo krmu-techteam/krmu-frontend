@@ -1,18 +1,13 @@
 import { getCDCTeam } from "@/lib/api/cdcteam";
 import CDCAdvisoryBoard from "./comp/CDCAdvisoryBoard";
 import CDCCOntact from "./comp/CDCCOntact";
-import CDCHeroSection from "./comp/CDCHeroSection";
-import CDCTrainingPlacement from "./comp/CDCTrainingPlacement";
 import MeetOurTeam from "./comp/MeetOurTeam";
 import TeamMembers from "./comp/TeamMembers";
-
-
-
-
 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
+import { CareerServicesSection, getCareerDevelopmentCentreContent, HeroSection } from "@/modules/placement/career-development-centre";
  
 
 
@@ -83,13 +78,14 @@ const page = async () => {
 
   const cdcTeamData = await getCDCTeam();
 
+  const heroSectionContent = await getCareerDevelopmentCentreContent(); 
 
   
 
   return (
     <>
-      <CDCHeroSection />
-      <CDCTrainingPlacement />
+      <HeroSection {...heroSectionContent.heroSection} />
+      <CareerServicesSection {...heroSectionContent.trainingPlacementSection} />
       <MeetOurTeam />
       <TeamMembers cdcTeamData={cdcTeamData} />
       <CDCAdvisoryBoard />
