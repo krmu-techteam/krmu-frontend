@@ -600,8 +600,7 @@ export default function InternationalRelationsForm() {
             <div>
               <button
                 disabled={loading}
-                className={`w-full sm:w-auto sm:min-w-[220px] #cb000d text-white px-10 py-3 rounded-md flex items-center justify-center gap-2 transition
-              ${loading ? "opacity-70 cursor-not-allowed" : "hover:bg-red-700"}`}
+                className={`w-full sm:w-auto sm:min-w-[220px] text-white px-10 py-3 rounded-md flex items-center justify-center gap-2 transition bg-red-700 hover:bg-red-900`}
               >
                 {loading ? "Submitting..." : "Submit"}
               </button>

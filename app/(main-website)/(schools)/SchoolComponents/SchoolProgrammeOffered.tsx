@@ -24,6 +24,9 @@ const SchoolProgrammeOffered = ({
   ];
 
   const removeSubToApproval = [
+    "school-of-architecture-design",
+    "school-of-liberal-arts",
+    "school-of-engineering-and-technology",
     "school-of-education",
     "school-of-physiotherapy-and-rehabilitation-sciences",
     "school-of-agriculutural-sciences",

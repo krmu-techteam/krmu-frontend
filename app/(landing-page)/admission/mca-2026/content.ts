@@ -33,7 +33,7 @@ export const heroContent: HeroContent = {
       </span> Admissions Open 2026–27</span>
       <span class="hidden sm:block">
              ADMISSIONS <br>
-OPEN FOR<br><span class="text-[#fcd404] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">MCA/M.Tech. </span> <br>
+OPEN FOR<br><span class="text-[#fcd404] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">MCA </span> <br>
 
  Programmes <br />2026-27</span>
           `,
@@ -54,7 +54,7 @@ OPEN FOR<br><span class="text-[#fcd404] text-3xl sm:text-4xl md:text-5xl lg:text
     height: 400,
   },
   bgImage: "/wp-content/landingpage/mca-2026/mca.webp",
-  ugHeroClsName: "MainSection"
+  ugHeroClsName: "MainSection",
 };
 
 export const placementStatsContent: PlacementStatsContent = {
@@ -716,12 +716,10 @@ export const comeToLifeData: ComeToLifeSection = {
   ],
 };
 
-
 export const programmeContent = {
   badge: "2 Specialisations",
   title: "KRMU’s MCA Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -748,27 +746,28 @@ export const programmeContent = {
       ctaLink: "#apply-form",
       eligibility: "Passed Bachelor's with 50% aggregate marks.*",
     },
-    {
-      id: "3",
-      tag: "",
-      title: "M.Tech. Computer Science and Engineering",
-      subtitle: "",
-      desc: "Advance your future with M.Tech. CSE by mastering cutting-edge computing, innovating with AI, and leading tomorrow’s technology revolution.",
-      duration: "2 Years",
-      fees: "120000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "Passed a Bachelor's with 50% aggregate marks.**",
-    },
+    // {
+    //   id: "3",
+    //   tag: "",
+    //   title: "M.Tech. Computer Science and Engineering",
+    //   subtitle: "",
+    //   desc: "Advance your future with M.Tech. CSE by mastering cutting-edge computing, innovating with AI, and leading tomorrow’s technology revolution.",
+    //   duration: "2 Years",
+    //   fees: "120000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "Passed a Bachelor's with 50% aggregate marks.**",
+    // },
   ],
 };
 
-
 export const eligibilityTerms = [
   {
-    description: "*Eligibility: Passed any graduation degree (e.g., B.E. / B.Tech./ B.Sc / B.Com. / B.A./ B. Voc./ BCA, etc.) with Mathematics at 10+2 level or at Graduation level with minimum 50% aggregate marks."
+    description:
+      "*Eligibility: Passed any graduation degree (e.g., B.E. / B.Tech./ B.Sc / B.Com. / B.A./ B. Voc./ BCA, etc.) with Mathematics at 10+2 level or at Graduation level with minimum 50% aggregate marks.",
   },
-  {
-    description: "**Eligibility: Candidates must have a B.E. / B. Tech degree in Computer Science & Engineering or MCA or M.Sc. (CS, IT, Electronics, Statistics, Physics / or equivalent) with a minimum of 50% marks in aggregate."
-  },
+  // {
+  //   description:
+  //     "**Eligibility: Candidates must have a B.E. / B. Tech degree in Computer Science & Engineering or MCA or M.Sc. (CS, IT, Electronics, Statistics, Physics / or equivalent) with a minimum of 50% marks in aggregate.",
+  // },
 ];
