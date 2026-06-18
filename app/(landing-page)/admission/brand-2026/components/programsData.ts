@@ -398,7 +398,7 @@ export const programs: Program[] = [
   },
   {
     id: 20,
-    title: "MBA (Fintech) with academic support of Ernst & Young (EY)",
+    title: "MBA (Fintech) in knowledge partnership with EY-India",
     duration: "2 Years",
     fees: "₹ 3,85,000 /-",
     semester1: "₹ 1,95,000 /-",
