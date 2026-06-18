@@ -747,7 +747,7 @@ export const eligibilityTerms = [
     description:
       "# Lateral B.Tech. Courses are also available except for the Robotics & AI Course.",
   },
-  {
-    description: "** Subject to Approval",
-  },
+  // {
+  //   description: "** Subject to Approval",
+  // },
 ];

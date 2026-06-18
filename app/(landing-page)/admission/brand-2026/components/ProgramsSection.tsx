@@ -45,14 +45,22 @@ export default function ProgramsSection() {
   };
 
   const filteredPrograms = useMemo(() => {
+    const normalize = (text: string) =>
+      text.toLowerCase().replace(/[\.\s]/g, "");
+    const query = search.trim();
+    const isSearching = query.length > 0;
+    const normalizedQuery = normalize(query);
+
     return programs.filter((p) => {
+      // When the user is searching, ignore school/level filters so the
+      // search works globally across all schools and levels.
+      if (isSearching) {
+        return normalize(p.title).includes(normalizedQuery);
+      }
+
       const matchSchool = selectedSchool ? p.category === selectedSchool : true;
-
       const matchLevel = selectedLevel ? p.level === selectedLevel : true;
-
-      const matchSearch = p.title.toLowerCase().includes(search.toLowerCase());
-
-      return matchSchool && matchLevel && matchSearch;
+      return matchSchool && matchLevel;
     });
   }, [selectedSchool, selectedLevel, search]);
 

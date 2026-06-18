@@ -110,11 +110,11 @@ const ProgrammeStructure = ({
 
           {/* Main Content Area - Clean stack without card boundaries to match image */}
           <div
-            className={` ${slug === "bachelor-of-physiotherapy-bpt" || slug === "barch-architecture" || slug === "ba-llb-hons" || slug === "bba-llb-hons" || slug === "integrated-bba-mba" || slug === "dual-degree-bsc-mscforensic-science" ? "lg:max-w-lg xl:max-w-2xl" : "xl:max-w-lg 2xl:max-w-xl"} flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10`}
+            className={` ${slug === "bachelor-of-physiotherapy-bpt" || slug === "barch-architecture" || slug === "ba-llb-hons" || slug === "bba-llb-hons" || slug === "integrated-bba-mba" || slug === "dual-degree-bsc-mscforensic-science" ? "md:max-w-[70%] lg:max-w-lg xl:max-w-2xl" : "xl:max-w-lg 2xl:max-w-xl"} flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10`}
           >
             {/* Left Navigation & Content Area */}
             {currbtn?.buttonlink && (
-              <div className="mb-5 sm:mb-3 w-full xl:w-auto flex justify-center xl:justify-start">
+              <div className="mb-5 sm:mb-3 w-full xl:w-auto flex justify-start">
                 <CommonLeadPopup
                   buttonText={
                     <span className="flex items-center gap-3 underline underline-offset-8">
@@ -133,7 +133,7 @@ const ProgrammeStructure = ({
             )}
             <div className="flex-grow flex flex-col">
               {/* Year Tabs */}
-              <div className="flex w-full overflow-x-auto no-scrollbar rounded-sm md:rounded-md">
+              <div className="flex w-full  overflow-x-auto  no-scrollbar rounded-sm md:rounded-md">
                 {programStruct.map((year) => {
                   const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                   const isYearActive = activeYear === yearValue;
@@ -152,7 +152,7 @@ const ProgrammeStructure = ({
                           );
                         }
                       }}
-                      className={`flex-1 px-4 md:px-8 py-4 text-sm lg:text-[16px] 2xl:text-lg font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
+                      className={`flex-1 px-4 py-4 text-sm lg:text-[16px] 2xl:text-lg font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
                       ${
                         isYearActive
                           ? "bg-[#051730] text-white"

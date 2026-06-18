@@ -232,7 +232,30 @@ const ProgrammesSearch = () => {
         const schoolDeduped = filteredSchool.filter(
           (item) => !phdTitles.has(normalize(item.title)),
         );
-        newData = [...filteredPhd, ...schoolDeduped];
+
+        // Rank matches: whole-word match (e.g. "MA " in "MA English") > prefix
+        // match on normalized title > generic substring match.
+        const rawQuery = query.toLowerCase().replace(/\./g, "").trim();
+        const escapedQuery = rawQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const wordRe = new RegExp(`(^|\\s)${escapedQuery}(\\s|$)`);
+        const rankMatch = (title: string): number => {
+          const lowered = title.toLowerCase().replace(/\./g, "");
+          if (wordRe.test(lowered)) return 0;
+          if (normalize(title).startsWith(normalizedQuery)) return 1;
+          return 2;
+        };
+
+        const combined = [...filteredPhd, ...schoolDeduped];
+        newData = combined
+          .map((item, idx) => ({
+            item,
+            rank: rankMatch(
+              "title" in item ? item.title : (item as PhdProgramme).heading,
+            ),
+            idx,
+          }))
+          .sort((a, b) => a.rank - b.rank || a.idx - b.idx)
+          .map(({ item }) => item);
 
         setShowLoadMore(false); // no button in search
       } else {
