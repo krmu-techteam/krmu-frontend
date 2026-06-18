@@ -320,6 +320,8 @@ export default function ProgramsSection() {
             No programmes found.
           </p>
         )}
+
+        <p className="py-5 text-right">** Subject to Approval</p>
       </div>
 
       {/* Modal */}

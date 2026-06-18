@@ -59,7 +59,7 @@ export const programs: Program[] = [
   {
     id: 2,
     title:
-      "B.Tech. Computer Science and Engineering (AI & ML) with Academic Support of IBM & powered by Microsoft Certifications",
+      "B.Tech. Computer Science and Engineering (AI & ML) with academic support of IBM & powered by Microsoft Certifications",
     duration: "4 Years",
     semester1: "₹ 1,45,000 /-",
     semester2: "₹ 1,45,000 /-",
@@ -72,7 +72,7 @@ export const programs: Program[] = [
   {
     id: 3,
     title:
-      "B.Tech. Computer Science and Engineering (Full Stack Development) with Academic Support of ImaginXP",
+      "B.Tech. Computer Science and Engineering (Full Stack Development) with academic support of ImaginXP",
     duration: "4 Years",
     fees: "₹ 2,70,000 /-",
     semester1: "₹ 1,35,000 /-",
@@ -176,7 +176,7 @@ export const programs: Program[] = [
   {
     id: 113,
     title:
-      "B.Tech. Computer Science and Engineering (AI & ML) with Academic Support of IBM & powered by Microsoft Certifications (Lateral)",
+      "B.Tech. Computer Science and Engineering (AI & ML) with academic support of IBM & powered by Microsoft Certifications (Lateral)",
     duration: "3 Years",
     fees: "₹ 2,90,000 /-",
     semester1: "₹ 1,45,000 /-",
@@ -189,7 +189,7 @@ export const programs: Program[] = [
   {
     id: 114,
     title:
-      "B.Tech. Computer Science and Engineering (Full Stack Development) with Academic Support of ImaginXP (Lateral)",
+      "B.Tech. Computer Science and Engineering (Full Stack Development) with academic support of ImaginXP (Lateral)",
     duration: "3 Years",
     semester1: "₹ 1,35,000 /-",
     semester2: "₹ 1,35,000 /-",
@@ -252,7 +252,7 @@ export const programs: Program[] = [
   },
   {
     id: 127,
-    title: "BTech AI",
+    title: "B.Tech. AI",
     duration: "4 Years",
     Eligibility:
       "Class 12th with PCM Physics, Chemistry, Mathematics as core subjects. Minimum 60% in Class 12th Or equivalent CGPA from a recognized board.",
@@ -276,7 +276,7 @@ export const programs: Program[] = [
   {
     id: 9,
     title:
-      "BCA (Hons./ Hons. with Research) (AI & Data Science) with academic support of IBM & powered by Microsoft Certifications",
+      "BCA (Hons. / Hons. with Research) (AI & Data Science) with academic support of IBM & powered by Microsoft Certifications",
     duration: "4 Years",
     fees: "₹ 1,80,000 /-",
     category: "engineering-tech",
@@ -506,7 +506,7 @@ export const programs: Program[] = [
   },
   {
     id: 28,
-    title: "Bachelor of Architecture (B.Arch)",
+    title: "Bachelor of Architecture (B. Arch)",
     duration: "5 Years",
     fees: "₹ 2,10,000 /-",
     semester1: "₹ 1,05,000 /-",
@@ -557,7 +557,7 @@ export const programs: Program[] = [
   {
     id: 55,
     title:
-      "Bachelor of Design B.Des. (Hons. / Hons. with Research) Game Design & Animation",
+      "Bachelor of Design (B.Des.) (Hons. / Hons. with Research) Game Design & Animation",
     duration: "4 Years",
     fees: "₹ 2,60,000 /-",
     semester1: "₹ 1,30,000 /-",
@@ -883,7 +883,7 @@ export const programs: Program[] = [
   {
     id: 98,
     title:
-      "BBA (Business Intelligence & Analytics) with academic support of Ernst & Young (EY)",
+      "BBA (Business Intelligence & Analytics) in knowledge partnership with EY-India",
     duration: "3 Years",
     semester1: "₹ 1,15,000 /-",
     semester2: "₹ 1,15,000 /-",
@@ -896,7 +896,7 @@ export const programs: Program[] = [
   {
     id: 99,
     title:
-      "BBA (Hons. / Hons. with Research) (Business Intelligence & Analytics) with academic support of Ernst & Young (EY)",
+      "BBA (Hons. / Hons. with Research) (Business Intelligence & Analytics) in knowledge partnership with EY-India",
     duration: "4 Years",
     fees: "₹ 2,30,000 /-",
     semester1: "₹ 1,15,000 /-",
@@ -1025,7 +1025,7 @@ export const programs: Program[] = [
   {
     id: 126,
     title:
-      "BBA (Hons./ Hons with Research) (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK",
+      "BBA (Hons. / Hons with Research) (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK",
     duration: "4 Years",
     semester1: "₹ 1,00,000 /-",
     semester2: "₹ 1,00,000 /-",
@@ -1113,7 +1113,7 @@ export const programs: Program[] = [
   {
     id: 46,
     title:
-      "Integrated BBA+MBA with Academic Support of IBM (4 yrs + 1 yr Industry Internship)",
+      "Integrated BBA+MBA with academic support of IBM (4 yrs + 1 yr Industry Internship)",
     duration: "4 + 1 Years",
     fees: "₹ 2,50,000 /-",
     semester1: "₹ 1,25,000 /-",
