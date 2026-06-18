@@ -25,7 +25,7 @@ const PHDprogramHero = ({
   const [readMore, setReadMore] = useState(false);
 
   // Limit eligible criteria text to ~120 characters before "Read more"
-  const shortText = eligibleCriteria?.countercontent?.slice(0, 120) || "";
+  const shortText = eligibleCriteria?.countercontent?.slice(0, 122) || "";
   const isLong =
     eligibleCriteria?.countercontent &&
     eligibleCriteria.countercontent.length > 120;
