@@ -1,15 +1,13 @@
-import CDC from "./comp/CDC";
-import { HeroSection } from "./comp/HeroSection";
-import PlacementSupport from "./comp/PlacementSupport";
-import Restriction from "./comp/Restriction";
-import StudentEncouraged from "./comp/StudentEncouraged";
-
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
+import {
+  CDCProgramSection,
+  HeroSection,
+  PlacementGuidelineSection,
+  PlacementPoliciesSection,
+  PlacementPreparationSection,
+} from "@/modules/placement/the-placements-process";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("the-placements-process");
@@ -72,15 +70,14 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-
 const page = () => {
   return (
     <>
       <HeroSection />
-      <StudentEncouraged />
-      <PlacementSupport />
-      <CDC />
-      <Restriction />
+      <PlacementGuidelineSection />
+      <PlacementPreparationSection />
+      <CDCProgramSection />
+      <PlacementPoliciesSection />
     </>
   );
 };
