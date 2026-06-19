@@ -84,8 +84,8 @@ export default function KRMUTimer({ targetDate }: ZenithTimerProps) {
         Now or Never! Grab Your 100% Scholarship Today
       </span> */}
       <span className="text-[10px] xl:text-xs uppercase tracking-wider font-extrabold">
-        Registration Closing on June 18 | Join Aparshakti Khurana LIVE | Limited
-        Seats Available
+        Grab Up to 100% Scholarships Worth Rs 27 Cr + Get a Chance to Fly to
+        Europe (First Come, First Serve)
       </span>
       <div className="flex gap-2 font-mono text-sm">
         <TimeBox value={format(timeLeft.days)} label="D" />
