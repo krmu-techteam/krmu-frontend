@@ -233,19 +233,6 @@ const page = async ({ params }: Props) => {
         </div>
         <div className="absolute bottom-[-90px] right-[-240px] w-[300px] h-[500px] bg-radial-[at_60%_75%] from-red-500 via-red-500  to-80% rounded-md blur-3xl to-transparent  pointer-events-none"></div>
         <div className="fac_info_container">
-          <div className="fac_img_container">
-            {facImgUrl && (
-              <Image
-                src={facImgUrl}
-                width={280}
-                height={340}
-                className="faculty_profile_img"
-                alt={facultyName}
-                priority
-              />
-            )}
-          </div>
-
           <div className="fac_name_desg_int text-white">
             <h1 className="faculty_profile_name">{facultyName}</h1>
             <p className="faculty_profile_designation">{facultyDesignation}</p>
@@ -278,6 +265,19 @@ const page = async ({ params }: Props) => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          <div className="fac_img_container">
+            {facImgUrl && (
+              <Image
+                src={facImgUrl}
+                width={280}
+                height={340}
+                className="faculty_profile_img"
+                alt={facultyName}
+                priority
+              />
+            )}
           </div>
         </div>
       </div>

@@ -165,7 +165,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
       "staff-qualification": "M.P.T.",
       staff_designation: "Assistant Professor",
       schools: [1098],
-    },  
+    },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Aatika-Waheed.png",
   },
@@ -183,7 +183,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/07/Kangana-1.png",
-      // "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Kangana-Juneja-Kansal.png",
+    // "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Kangana-Juneja-Kansal.png",
   },
   // {
   //   id: 9172,
@@ -244,7 +244,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mansi-Dewan.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/mansi.png",
   },
   {
     id: 115110,
