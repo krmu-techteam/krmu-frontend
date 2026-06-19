@@ -91,13 +91,9 @@ export default function KRMUTimer({
         Now or Never! Grab Your 100% Scholarship Today
       </span> */}
       {mainWebsiteTimer && (
-        <Link
-          href="https://admissions.krmangalam.edu.in/?utm_source=Website&utm_medium=Homepage&utm_campaign=Deadline"
-          target="_blank"
-          className="border-b border-white border-dotted vi text-sm text-white pb-0.5 ml-2 font-semibold"
-        >
+        <span className="border-b border-white border-dotted vi text-sm text-white pb-0.5 ml-2 font-semibold inline-block">
           Apply Now
-        </Link>
+        </span>
       )}
       <span
         className={`text-[10px] xl:text-xs uppercase tracking-wider font-extrabold ${mainWebsiteTimer && "text-white"}`}
