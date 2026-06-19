@@ -213,9 +213,9 @@ const Footer = async () => {
       {/* Hide Nia Chatbot */}
       {/* <NpfChatbot /> */}
 
-      <div className="fixed bottom-0 left-0 w-full bg-[#cb000d] flex justify-center z-30">
+      <Link href="https://admissions.krmangalam.edu.in/?utm_source=Website&utm_medium=Homepage&utm_campaign=Deadline" target="_blank" className="fixed bottom-0 left-0 w-full bg-[#cb000d] flex justify-center z-30">
         <KRMUTimer targetDate="2026-06-20T23:59:59" mainWebsiteTimer={true} />
-      </div>
+      </Link>
       <NpfAgent />
       {/* <div className="fixed bottom-10 right-24">
         <a
