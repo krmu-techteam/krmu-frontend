@@ -3445,7 +3445,6 @@ body:before {
   .cdccard-ul ul {
     list-style: disc;
     padding-left: 40px;
-    z-index: 9999999;
     position: relative;
   }
 

@@ -36,7 +36,36 @@ export interface TrainingPlacementSectionProps {
 export interface CareerDevelopmentCentre {
   heroSection: HeroSectionProps;
   trainingPlacementSection: TrainingPlacementSectionProps;
+  directorMessage: DirectorMessageProps;
+  contactSection: ContactSectionProps;
 }
 export interface CareerServicesSectionData {
   data: CareerDevelopmentCentre;
+}
+
+export interface ContactSectionProps {
+  title: string;
+  description: string;
+  registrationLabel: string;
+  registrationLink: string;
+  phone: string;
+  email: string;
+  bgImage: string;
+}
+
+export interface DirectorMessageProps {
+  id: number;
+  title: string;
+  directorName: string;
+  designation: string;
+  email: string;
+  contactNumber: string;
+  profileImage: {
+    url: string;
+    alternativeText: string;
+  };
+  message: {
+    id: number;
+    content: string;
+  }[];
 }

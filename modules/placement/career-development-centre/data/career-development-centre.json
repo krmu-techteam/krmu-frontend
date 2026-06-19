@@ -94,6 +94,45 @@
           }
         ]
       }
+    },
+   "directorMessage": {
+  "id": 1,
+  "title": "Meet Our Career Development Center Team",
+  "directorName": "Dr. Vibha Thakur",
+  "designation": "Director (Career Development Center)",
+  "email": "director.cdc@krmangalam.edu.in",
+  "contactNumber": "+91-9827085056",
+  "profileImage": {
+    "url": "/placements/dr_vibha-removebg-preview-modified.webp",
+    "alternativeText": "Dr. Vibha Thakur"
+  },
+  "message": [
+    {
+      "id": 1,
+      "content": "As the Director of the Career Development Center at K.R. Mangalam University, Gurugram, Delhi NCR, it is my privilege to extend a warm welcome. At K.R. Mangalam University, we are deeply committed to providing quality education and preparing industry-ready graduates equipped with the skills needed to thrive in an ever-evolving corporate landscape. Our focus is on fostering the holistic growth and comprehensive development of our students."
+    },
+    {
+      "id": 2,
+      "content": "The Career Skills and Tech Skills departments regularly conduct sessions on emerging topics in soft skills and technical expertise. Initiatives such as bootcamps, summer and winter schools, profile-based training, and company-specific training programs form the core of our upskilling efforts. The CDC places a strong emphasis on building a solid foundation for students by offering advanced courses that enhance analytical and computational abilities."
+    },
+    {
+      "id": 3,
+      "content": "We prioritise industry exposure through projects, excursions, internships, hands-on workshops, on-the-job training, and educational tours. These experiences ensure that our students are well-prepared to navigate real-world challenges and make meaningful contributions to their chosen fields."
+    },
+    {
+      "id": 4,
+      "content": "On behalf of K.R. Mangalam University, it gives me great pleasure to invite companies to our campus for recruitment. We are confident that you will discover a talented, ambitious, and dynamic pool of young professionals ready to make a difference in your organisation."
+    }
+  ]
+},
+    "contactSection": {
+      "title": "Contact and Inquiries",
+      "description": "For any queries related to placements, internship opportunities, or industry collaborations, please reach out to our dedicated Career Development Centre. We are here to assist students, recruiters, and industry partners in building successful career pathways and fostering meaningful connections.",
+      "registrationLabel": "Company Registration Form",
+      "registrationLink": "https://tinyurl.com/krmu-2025",
+      "phone": "+91-9827085056",
+      "email": "director.cdc@krmangalam.edu.in",
+      "bgImage": "/placements/contact-bg.webp"
     }
   }
 }

@@ -1,16 +1,17 @@
 import { getCDCTeam } from "@/lib/api/cdcteam";
-import CDCAdvisoryBoard from "./comp/CDCAdvisoryBoard";
-import CDCCOntact from "./comp/CDCCOntact";
-import MeetOurTeam from "./comp/MeetOurTeam";
-import TeamMembers from "./comp/TeamMembers";
-
+import { getCorpAdvisoryTeamData } from "@/lib/api/corpadvteam";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import { CareerServicesSection, getCareerDevelopmentCentreContent, HeroSection } from "@/modules/placement/career-development-centre";
- 
-
-
+import {
+  CareerServicesSection,
+  CDCAdvisoryBoardSection,
+  ContactSection,
+  DirectorMessageSection,
+  getCareerDevelopmentCentreContent,
+  HeroSection,
+  TeamMemberSection,
+} from "@/modules/placement/career-development-centre";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("career-development-centre");
@@ -73,23 +74,20 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-
 const page = async () => {
-
   const cdcTeamData = await getCDCTeam();
+  const corpData = await getCorpAdvisoryTeamData();
 
-  const heroSectionContent = await getCareerDevelopmentCentreContent(); 
-
-  
+  const heroSectionContent = await getCareerDevelopmentCentreContent();
 
   return (
     <>
       <HeroSection {...heroSectionContent.heroSection} />
       <CareerServicesSection {...heroSectionContent.trainingPlacementSection} />
-      <MeetOurTeam />
-      <TeamMembers cdcTeamData={cdcTeamData} />
-      <CDCAdvisoryBoard />
-      <CDCCOntact />
+      <DirectorMessageSection {...heroSectionContent.directorMessage}/>
+      <TeamMemberSection cdcTeamData={cdcTeamData} />
+      <CDCAdvisoryBoardSection corpData={corpData} />
+      <ContactSection {...heroSectionContent.contactSection} />
     </>
   );
 };
