@@ -7,6 +7,7 @@ import Link from "next/link";
 import FloatingButtons from "@/app/(main-website)/components/Footer/FloatingButtons";
 import NpfAgent from "@/app/NpfAgent";
 import LaunchpadPopup from "../LaunchpadPopup";
+import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
 
 const Footer = async () => {
   const footerData = await getFooter();
@@ -211,6 +212,10 @@ const Footer = async () => {
 
       {/* Hide Nia Chatbot */}
       {/* <NpfChatbot /> */}
+
+      <div className="fixed bottom-0 left-0 w-full bg-[#cb000d] flex justify-center z-30">
+        <KRMUTimer targetDate="2026-06-20T23:59:59" mainWebsiteTimer={true} />
+      </div>
       <NpfAgent />
       {/* <div className="fixed bottom-10 right-24">
         <a

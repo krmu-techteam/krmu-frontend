@@ -11,9 +11,13 @@ type TimeLeft = {
 
 interface ZenithTimerProps {
   targetDate: string;
+  mainWebsiteTimer?: boolean;
 }
 
-export default function KRMUTimer({ targetDate }: ZenithTimerProps) {
+export default function KRMUTimer({
+  targetDate,
+  mainWebsiteTimer,
+}: ZenithTimerProps) {
   const calculateTimeLeft = (): TimeLeft => {
     const difference = +new Date(targetDate) - Date.now();
 
@@ -79,29 +83,63 @@ export default function KRMUTimer({ targetDate }: ZenithTimerProps) {
 
   return (
     // <div className="flex flex-col md:flex-row text-center md:text-left items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-900 text-white px-4 py-2 rounded-xl shadow-md">
-    <div className="flex flex-col md:flex-row text-center md:text-left items-center gap-2 bg-[#fcd404] text-black px-4 py-2 rounded-xl shadow-md">
+    <div
+      className={`flex flex-col ${mainWebsiteTimer ? "md:flex-row-reverse bg-[#cb000d] px-2 py-2" : "md:flex-row bg-[#fcd404] px-4 py-2"}  text-center md:text-left items-center gap-2  text-black  rounded-xl ${!mainWebsiteTimer && "shadow-md"} `}
+    >
       {/* <span className="text-xs uppercase tracking-wider font-semibold">
         Now or Never! Grab Your 100% Scholarship Today
       </span> */}
-      <span className="text-[10px] xl:text-xs uppercase tracking-wider font-extrabold">
+      <span
+        className={`text-[10px] xl:text-xs uppercase tracking-wider font-extrabold ${mainWebsiteTimer && "text-white"}`}
+      >
         Grab Up to 100% Scholarships Worth Rs 27 Cr + Get a Chance to Fly to
         Europe (First Come, First Serve)
       </span>
       <div className="flex gap-2 font-mono text-sm">
-        <TimeBox value={format(timeLeft.days)} label="D" />
-        <TimeBox value={format(timeLeft.hours)} label="H" />
-        <TimeBox value={format(timeLeft.minutes)} label="M" />
-        <TimeBox value={format(timeLeft.seconds)} label="S" />
+        <TimeBox
+          value={format(timeLeft.days)}
+          mainWebsiteTimer={mainWebsiteTimer}
+          label="D"
+        />
+        <TimeBox
+          value={format(timeLeft.hours)}
+          mainWebsiteTimer={mainWebsiteTimer}
+          label="H"
+        />
+        <TimeBox
+          value={format(timeLeft.minutes)}
+          mainWebsiteTimer={mainWebsiteTimer}
+          label="M"
+        />
+        <TimeBox
+          value={format(timeLeft.seconds)}
+          mainWebsiteTimer={mainWebsiteTimer}
+          label="S"
+        />
       </div>
     </div>
   );
 }
 
-function TimeBox({ value, label }: { value: string; label: string }) {
+function TimeBox({
+  value,
+  label,
+  mainWebsiteTimer,
+}: {
+  value: string;
+  label: string;
+  mainWebsiteTimer?: boolean;
+}) {
   return (
-    <div className="flex items-center gap-1 bg-black/30 px-2 py-1 rounded-md">
-      <span className="font-semibold">{value}</span>
-      <span className="text-xs text-black">{label}</span>
+    <div
+      className={`flex items-center gap-1 ${mainWebsiteTimer ? "bg-white tick-animation" : "bg-black/30"}  px-2 py-1 rounded-md`}
+    >
+      <span
+        className={` ${mainWebsiteTimer ? "font-medium" : "font-semibold"}`}
+      >
+        {value}
+      </span>
+      <span className={`text-xs text-black`}>{label}</span>
     </div>
   );
 }

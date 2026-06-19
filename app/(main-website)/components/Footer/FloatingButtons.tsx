@@ -9,11 +9,11 @@ export default function FloatingButtons() {
   return (
     <>
       {/* Desktop Version: Side-floating buttons */}
-      <div className="hidden lg:block">
+      <div className="block">
         {pathname !== "/univiser" && (
           <Link
             href="/univiser"
-            className="bg-[#cb000d] text-white py-[6px] px-5 fixed top-[35%] right-[-80px] rotate-90 rounded-b-sm z-[9999] whitespace-nowrap shadow-2xl text-md font-medium tracking-wide hover:bg-[#c4020f] transition-all"
+            className="bg-[#051730] text-white py-[6px] px-5 fixed top-[25%] lg:top-[35%] right-[-80px] rotate-90 rounded-b-sm z-[9999] whitespace-nowrap shadow-2xl text-md font-medium tracking-wide hover:bg-[#c4020f] transition-all"
           >
             Chat with Student
           </Link>
@@ -21,14 +21,14 @@ export default function FloatingButtons() {
 
         <Link
           href="/campus-life/virtual-tour"
-          className="bg-[#cb000d] text-white py-[6px] px-5 fixed top-[65%] right-[-73px] rotate-90  rounded-b-sm z-[9999] whitespace-nowrap shadow-2xl text-md font-medium tracking-wide hover:bg-[#c4020f] transition-all"
+          className="bg-[#051730] text-white py-[6px] px-5 fixed top-[55%] lg:top-[65%] right-[-73px] rotate-90  rounded-b-sm z-[9999] whitespace-nowrap shadow-2xl text-md font-medium tracking-wide hover:bg-[#c4020f] transition-all"
         >
           360° Virtual Tour
         </Link>
       </div>
 
       {/* Mobile Version: Sticky bottom bar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[9999] flex shadow-[0_-4px_12px_rgba(0,0,0,0.2)]">
+      {/* <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[9999] flex shadow-[0_-4px_12px_rgba(0,0,0,0.2)]">
         {pathname !== "/univiser" && (
           <Link
             href="/univiser"
@@ -43,7 +43,7 @@ export default function FloatingButtons() {
         >
           360° Virtual Tour
         </Link>
-      </div>
+      </div> */}
     </>
   );
 }

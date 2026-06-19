@@ -1,4 +1,3 @@
-import React from "react";
 import TopbarMenu from "../Navbar/TopbarMenu";
 import SocialIcons from "./SocialIcons";
 import { TOPBARITEMS, TOPBARSOCIALLInks } from "@/lib/types/HeaderType";
@@ -16,7 +15,6 @@ const Topbar = ({ topbarmenu, sociallinks }: TopbarProps) => {
         style={{ borderBottom: "1px solid rgba(156,156,156,.41)" }}
       >
         <div className="hidden md:block">
-          
           <TopbarMenu topbarmenu={topbarmenu} />
         </div>
         <SocialIcons sociallinks={sociallinks} />
