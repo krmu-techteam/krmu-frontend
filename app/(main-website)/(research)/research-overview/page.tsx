@@ -1,12 +1,14 @@
 import { folderRouteSEO } from "@/lib/api/siteseo";
-import ResearchHeroSection from "./comp/ResearchHeroSection";
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
-import PhdStudentTestimonials from "@/app/(landing-page)/admission/phd-2026/commonComponent/PhdStudentTestimonials";
-
+import {
+  getResearchOverviewContent,
+  HeroSection,
+  PhdStudentTestimonialSection,
+} from "@/modules/research/research-overview";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const seoData = await folderRouteSEO('research-overview');
+  const seoData = await folderRouteSEO("research-overview");
   const seo = seoData[0];
 
   const shareImageUrl = seo?.shareImg?.url
@@ -66,11 +68,19 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const page = () => {
+const page = async () => {
+  const researchOverview = await getResearchOverviewContent();
+  const { title, stats, paragraphs, links } = researchOverview.heroSection;
+
   return (
     <>
-      <ResearchHeroSection />
-      <PhdStudentTestimonials />
+      <HeroSection
+        heroTitle={title}
+        stats={stats}
+        content={paragraphs}
+        links={links}
+      />
+      <PhdStudentTestimonialSection testimonials={researchOverview.testimonials}/>
     </>
   );
 };

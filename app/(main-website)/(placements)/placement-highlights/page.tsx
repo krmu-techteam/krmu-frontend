@@ -1,14 +1,8 @@
 import { STRAPI_URL } from "@/app/constant";
 import { getPlacementHighlightData } from "@/lib/api/placement-highlight";
-
-import Image from "next/image";
-
-
-
-
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
+import { HeroSection, PlacementHighlightSection } from "@/modules/placement/placement-highlights";
 
 
 
@@ -82,35 +76,8 @@ const page = async () => {
 
   return (
     <>
-      <section className="pt-20 md:pt-[15%] pb-[10%] bg-[url(/placements/placement_banner.webp)] common-overlay">
-        <div className="max-w-[1664px] mx-auto w-full">
-          <h1 className="text-3xl md:text-5xl text-white text-center font-bold z-10 relative">
-            {heading}
-          </h1>
-        </div>
-      </section>
-      <section className="py-[50px] px-4">
-        <div className="max-w-[1664px] mx-auto w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-col-3 lg:grid-cols-4 gap-8">
-            {placementImgs.map((img, i) => {
-              return (
-                <div
-                  key={i}
-                  className="w-full flex items-center justify-center"
-                >
-                  <Image
-                    src={`${STRAPI_URL}${img?.url}`}
-                    width={377}
-                    height={377}
-                    alt={img?.alternativeText || ""}
-                    className="border border-black"
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <HeroSection heading={heading} />
+      <PlacementHighlightSection placementImgs={placementImgs} />
     </>
   );
 };

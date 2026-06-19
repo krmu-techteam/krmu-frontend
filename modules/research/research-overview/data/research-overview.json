@@ -1,0 +1,122 @@
+{
+  "data": {
+    "heroSection": {
+      "title": "Exploring New Frontiers in Research at K.R. Mangalam University",
+      "backgroundImage": "/placements/researchoverviewbg.webp",
+
+      "stats": [
+        {
+          "id": 1,
+          "value": "250+",
+          "title": "Total number of Patents"
+        },
+        {
+          "id": 2,
+          "value": "156+",
+          "title": "Number of Ph.D. Awarded"
+        },
+        {
+          "id": 3,
+          "value": "2Cr+",
+          "title": "Total amount of consultancy grant awarded"
+        },
+        {
+          "id": 4,
+          "value": "4000+",
+          "title": "Total number of publications, chapters and books by university"
+        }
+      ],
+
+      "paragraphs": [
+        {
+          "id": 1,
+          "isHighlighted": true,
+          "content": "Innovation fuels discovery at the K.R. Mangalam University, contributed by dedicated faculties and over 5,000 undergraduates, postgraduates, and research scholars working in the multidisciplinary domains reflecting compliance with the United Nation’s Sustainable Development Goals (SDG) and uplifting Research Excellence Framework at the global level."
+        },
+        {
+          "id": 2,
+          "isHighlighted": false,
+          "content": "The Research and Development Cell is home to disparate schools under the umbrella of K.R. Mangalam University located in the heart of Gurugram, Haryana. Professors, Researchers, and students are actively participating in the interdisciplinary research and collaborate with experts from different disciplines and institutions, allowing access to pooling of resources imparting significantly enhancement in the research capabilities and enable the pursuit of more ambitious projects."
+        },
+        {
+          "id": 3,
+          "isHighlighted": false,
+          "content": "The young scientific minds are encouraged to identify and understand the root cause of the core problem and find the best solution to culminate the issue at the ground level. Also, we have close links to the Centre of Excellence empowering research orientation among the professors and students. Moreover, the fundamental motive is to transform discoveries and novelties into remedies and other programmes promoting scientific upgradation and inculcating the findings for benefit of the society."
+        }
+      ],
+
+      "links": [
+        {
+          "id": 1,
+          "title": "Research and Development Cell (RDC)",
+          "url": "/research-and-innovation"
+        },
+        {
+          "id": 2,
+          "title": "Central Instrumentation Facility (CIF)",
+          "url": "/cif"
+        },
+        {
+          "id": 3,
+          "title": "K.R. Mangalam Entrepreneurship and Innovation Center (KEIC)",
+          "url": "https://foundry.krmangalam.edu.in/"
+        },
+        {
+          "id": 4,
+          "title": "IPR, Legal & Ethical Matters Cell",
+          "url": "/ipr-legal-ethical-matters-cell"
+        },
+        {
+          "id": 5,
+          "title": "Ongoing Projects and Collaborations",
+          "url": "/research-and-innovation/#_ongoing-collab"
+        },
+        {
+          "id": 6,
+          "title": "Research Highlights",
+          "url": "/research-and-innovation/#_res-highlights"
+        },
+        {
+          "id": 7,
+          "title": "Research Achievements",
+          "url": "/research-and-innovation/#research-achievements"
+        },
+        {
+          "id": 8,
+          "title": "Publications and Achievements",
+          "url": "/research-and-innovation/#_publications-achievements"
+        },
+        {
+          "id": 9,
+          "title": "Academic Research",
+          "url": "/research-and-innovation/#_academics-resources"
+        },
+        {
+          "id": 10,
+          "title": "Interdisciplinary Research Centers and Laboratories",
+          "url": "/research-centre"
+        }
+      ]
+    },
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "Dr. Sushil Kumar",
+        "image": "/landingpage/phd/testimonial/sushil.png",
+        "quote": "K.R. Mangalam University provided me with a strong research foundation and mentorship in the emerging field of econophysics. The dedication, innovative approach, and academic support of the faculty played a pivotal role in my successful PhD journey and subsequent growth in publications and career advancement. I sincerely credit KRMU for shaping my academic path and enabling me to reach the highest levels of professional achievement."
+      },
+      {
+        "id": 2,
+        "name": "Dr. Shikha Sharma",
+        "image": "/landingpage/phd/testimonial/shikha.png",
+        "quote": "My academic journey began at K.R. Mangalam University, where the strong foundation, supportive faculty, and enriching research environment shaped my Ph.D. experience. Even years after graduating, I continue to value the guidance and opportunities I received at KRMU, which paved the way for my current professional role at NIFT Panchkula. I am deeply grateful to K.R. Mangalam University for its lasting impact on my career and personal growth."
+      },
+      {
+        "id": 3,
+        "name": "Dr. Unnati",
+        "image": "/landingpage/phd/testimonial/unnatii.png",
+        "quote": "My journey at K.R. Mangalam University has been transformative and empowering. The strong academic foundation, research support, and encouragement I received at KRMU equipped me to grow as a dedicated researcher and successfully transition into post-doctoral work. I am grateful for the mentorship and vibrant scholarly environment at KRMU, which played a key role in shaping my academic path and enabling me to pursue new frontiers in research with confidence and purpose."
+      }
+    ]
+  }
+}
