@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type TimeLeft = {
@@ -84,11 +85,20 @@ export default function KRMUTimer({
   return (
     // <div className="flex flex-col md:flex-row text-center md:text-left items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-900 text-white px-4 py-2 rounded-xl shadow-md">
     <div
-      className={`flex flex-col ${mainWebsiteTimer ? "md:flex-row-reverse bg-[#cb000d] px-2 py-2" : "md:flex-row bg-[#fcd404] px-4 py-2"}  text-center md:text-left items-center gap-2  text-black  rounded-xl ${!mainWebsiteTimer && "shadow-md"} `}
+      className={`flex  ${mainWebsiteTimer ? "flex-col-reverse lg:flex-row-reverse bg-[#cb000d] px-2 py-2" : "flex-col md:flex-row bg-[#fcd404] px-4 py-2"}  text-center md:text-left items-center gap-2  text-black  rounded-xl ${!mainWebsiteTimer && "shadow-md"} `}
     >
       {/* <span className="text-xs uppercase tracking-wider font-semibold">
         Now or Never! Grab Your 100% Scholarship Today
       </span> */}
+      {mainWebsiteTimer && (
+        <Link
+          href="https://admissions.krmangalam.edu.in/?utm_source=Website&utm_medium=Homepage&utm_campaign=Deadline"
+          target="_blank"
+          className="border-b border-white border-dotted vi text-sm text-white pb-0.5 ml-2 font-semibold"
+        >
+          Apply Now
+        </Link>
+      )}
       <span
         className={`text-[10px] xl:text-xs uppercase tracking-wider font-extrabold ${mainWebsiteTimer && "text-white"}`}
       >

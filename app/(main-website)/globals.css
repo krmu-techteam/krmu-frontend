@@ -17,7 +17,20 @@
 @layer utilities {
   @media (max-width: 640px) {
     .npf_chatbot_button {
-      bottom: 80px !important;
+      bottom: 115px !important;
+    }
+    .mob-side-btn-1 {
+      font-size: 12px !important;
+      right: -58px !important;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .mob-side-btn-2 {
+      right: -52px;
+      font-size: 12px !important;
+      padding-left: 10px;
+      padding-right: 10px;
+      top: 45%;
     }
   }
   .tick-animation {
