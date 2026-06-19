@@ -121,7 +121,7 @@ const page = () => {
       <BusinessHub data={businessData} formId={allCourse2026IdForm} />
       {/* <ApplySection data={applyData} /> */}
       <BrandFooter />
-      <StickyMobileBar phoneNumber="+919311603078" />
+      {/* <StickyMobileBar phoneNumber="+919311603078" /> */}
     </>
   );
 };
