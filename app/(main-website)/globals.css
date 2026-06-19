@@ -21,12 +21,12 @@
     }
     .mob-side-btn-1 {
       font-size: 12px !important;
-      right: -58px !important;
+      right: -55px !important;
       padding-left: 10px;
       padding-right: 10px;
     }
     .mob-side-btn-2 {
-      right: -52px;
+      right: -50px;
       font-size: 12px !important;
       padding-left: 10px;
       padding-right: 10px;
@@ -2014,7 +2014,7 @@
     position: absolute;
     top: -200px;
     bottom: 0;
-    left: max(0px, calc(51% - 560px));
+    right: max(0px, calc(51% - 480px));
     z-index: 0;
     width: 350px;
     height: 200%;
@@ -2026,7 +2026,7 @@
 
   .faculty_profile_overlay_logo {
     position: absolute;
-    top: 40%;
+    top: 43%;
     left: 48%;
     width: min(85%, 300px);
     height: auto;
@@ -2292,7 +2292,7 @@
       --faculty-overlay-rotate: 28deg;
       --faculty-overlay-logo-rotate: -28deg;
       top: -130px;
-      left: max(0px, calc(50% - 430px));
+      right: max(0px, calc(50% - 430px));
       width: 285px;
       height: 175%;
       rotate: var(--faculty-overlay-rotate);
@@ -2334,8 +2334,10 @@
       --faculty-overlay-rotate: 24deg;
       --faculty-overlay-logo-rotate: -24deg;
       top: auto;
-      bottom: -100px;
-      left: 25%;
+      /* bottom: -100px;
+      right: 25%; */
+              bottom: -139px;
+        right: -7%;
       width: 245px;
       height: 150%;
       rotate: var(--faculty-overlay-rotate);
