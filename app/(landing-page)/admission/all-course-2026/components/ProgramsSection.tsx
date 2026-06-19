@@ -50,14 +50,50 @@ export default function ProgramsSection() {
     const query = search.trim();
     const isSearching = query.length > 0;
     const normalizedQuery = normalize(query);
+    const getLeadingAbbreviation = (text: string) =>
+      text.trim().match(/^([A-Z]{2,}|[A-Za-z]+(?:\.[A-Za-z]+)+\.?)/)?.[0] || "";
+    const getSearchRank = (title: string) => {
+      const normalizedTitle = normalize(title);
+      const normalizedLeadingAbbreviation = normalize(
+        getLeadingAbbreviation(title),
+      );
+      const titleWords = title
+        .toLowerCase()
+        .split(/[^a-z0-9]+/)
+        .filter(Boolean);
+
+      if (!normalizedTitle.includes(normalizedQuery)) return null;
+      if (normalizedTitle === normalizedQuery) return 0;
+      if (normalizedLeadingAbbreviation === normalizedQuery) return 1;
+      if (normalizedLeadingAbbreviation.startsWith(normalizedQuery)) return 2;
+      if (normalizedTitle.startsWith(normalizedQuery)) return 3;
+      if (titleWords.some((word) => normalize(word) === normalizedQuery)) {
+        return 4;
+      }
+      if (
+        titleWords.some((word) => normalize(word).startsWith(normalizedQuery))
+      ) {
+        return 5;
+      }
+      return 6;
+    };
+
+    if (isSearching) {
+      return programs
+        .map((program, index) => ({
+          program,
+          index,
+          rank: getSearchRank(program.title),
+        }))
+        .filter(
+          (item): item is { program: Program; index: number; rank: number } =>
+            item.rank !== null,
+        )
+        .sort((a, b) => a.rank - b.rank || a.index - b.index)
+        .map(({ program }) => program);
+    }
 
     return programs.filter((p) => {
-      // When the user is searching, ignore school/level filters so the
-      // search works globally across all schools and levels.
-      if (isSearching) {
-        return normalize(p.title).includes(normalizedQuery);
-      }
-
       const matchSchool = selectedSchool ? p.category === selectedSchool : true;
       const matchLevel = selectedLevel ? p.level === selectedLevel : true;
       return matchSchool && matchLevel;
