@@ -4,8 +4,8 @@ import {
   ArrowRight,
   Calendar,
   ChevronDown,
-  ChevronRight,
-  CircleArrowRight,
+  // ChevronRight,
+  // CircleArrowRight,
   IndianRupee,
   Search,
   X,
@@ -27,9 +27,9 @@ function normalize(text: string | null | undefined) {
   return text.toLowerCase().replace(/[\.\s]/g, "");
 }
 
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
-import ProgrammesHero from "./ProgrammesHero";
+// import ProgrammesHero from "./ProgrammesHero";
 // import { Skeleton } from "@/components/ui/skeleton";
 
 type ZenithCriteria = {

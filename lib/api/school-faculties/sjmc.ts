@@ -17,6 +17,21 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Amit-Chawla.png",
   },
   {
+    id: 115349,
+    slug: "dr-manav-sharma",
+    title: {
+      rendered: "Dr. Manav Sharma",
+    },
+    featured_media: 100052,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1009],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr-Manav-Sharma.png",
+  },
+  {
     id: 1028,
     slug: "mr-ritwik-ghosh",
     title: {

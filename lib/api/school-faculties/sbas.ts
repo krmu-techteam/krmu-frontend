@@ -363,6 +363,21 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Vicky-Kapoor.png",
   },
   {
+    id: 115351,
+    slug: "dr-pooja-punyani",
+    title: {
+      rendered: "Dr. Pooja Punyani",
+    },
+    featured_media: 101949,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant  Professor",
+      schools: [787],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Pooja-Punyani-1.png",
+  },
+  {
     id: 9973,
     slug: "dr-sujata-kumari-2",
     title: {
@@ -556,7 +571,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/10/Dr.-Chandra-Mohan.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/10/Dr.-Chandra-Mohan-1.png",
   },
   {
     id: 113724,
