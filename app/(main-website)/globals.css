@@ -1952,10 +1952,10 @@
   .fac_name_desg_int {
     position: relative;
     align-self: center;
-    width: min(100%, 500px);
-    max-width: 560px;
-    margin-top: 50px;
-    padding: 34px 38px;
+    width: min(100%);
+    /* max-width: 560px; */
+    /* margin-top: 50px; */
+    /* padding: 34px 38px; */
 
     /* border-width: 2px;
     border-style: solid;
@@ -2285,7 +2285,7 @@
       padding: 0 24px;
       gap: 140px;
       align-items: end;
-      flex-direction: row-reverse;
+      /* flex-direction: row; */
     }
 
     .faculty_profile_hero_overlay {
@@ -2336,8 +2336,8 @@
       top: auto;
       /* bottom: -100px;
       right: 25%; */
-              bottom: -139px;
-        right: -7%;
+      bottom: -139px;
+      right: -7%;
       width: 245px;
       height: 150%;
       rotate: var(--faculty-overlay-rotate);
