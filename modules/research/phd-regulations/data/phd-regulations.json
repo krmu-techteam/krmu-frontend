@@ -1,0 +1,56 @@
+{
+  "data": {
+    "heroSection": {
+      "title": "Ph.D. Programmes",
+      "description": "The Ph.D. Cell at K.R. Mangalam University is dedicated to fostering a culture of research excellence that aligns with the University’s mission to enhance employability, entrepreneurship, and lifelong learning through a futuristic curriculum, progressive pedagogy, and cutting-edge technology. By integrating global needs and expectations through collaborations with premier institutions, industries, and research centers, the Ph.D. Cell aims to cultivate leaders who are equipped with ethical values and an understanding of environmental realities. This vision supports the University’s aspiration to become an internationally recognized institution of higher learning, driving innovation and preparing socially responsible scholars who contribute meaningfully to nation-building."
+    },
+    "regulationCards": [
+      {
+        "title": "Call for Ph.D. Admission",
+        "showNewTag": true,
+        "links": [
+          {
+            "label": "Odd Semester 2026-27",
+            "url": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/4_R_June_Ph_D_Admission_advertisement_Details_O_2025_26_8b3350e84d.pdf"
+          },
+          {
+            "label": "Even Semester 2025-26",
+            "url": "https://krmangalam.edu.in/pdfs/5R-Ph-D-Admission-advertisement-Details-E-2025-26.pdf"
+          }
+        ]
+      },
+      {
+        "title": "Ph.D. Regulations and SoPs for Ph.D. Programmes",
+        "url": "/PDF/regulations-2"
+      },
+      {
+        "title": "Ph.D. Entrance Exam Syllabus",
+        "url": "/PDF/syllabus"
+      },
+      {
+        "title": "Presently Enrolled Ph.D. Research Scholars",
+        "url": "https://www.krmangalam.edu.in/pdfs/list-of-existing-research-scholars.pdf"
+      },
+      {
+        "title": "Ph.D. Programme Course Handbook",
+        "url": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Revised_Ph_D_coursework_structure_w_e_f_Academic_Year_2025_26_0030f5c17e.pdf"
+      },
+      {
+        "title": "Ph.D. Submission Checklist",
+        "url": "/PDF/phd-submission-checklist"
+      },
+      {
+        "title": "List of Eligible Ph.D. Supervisor",
+        "url": "https://www.krmangalam.edu.in/pdfs/list-eligible-supervisors.pdf"
+      },
+      {
+        "title": "List of Ph.D. Awarded",
+        "url": "/PDF/list-of-ph-d-awarded"
+      }
+    ],
+    "contactSection": {
+      "title": "Contact Us",
+      "email": ["phdadmissions@krmangalam.edu.in", "rdc@krmangalam.edu.in"]
+    }
+  }
+}

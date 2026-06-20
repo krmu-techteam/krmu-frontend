@@ -1,9 +1,12 @@
 import { folderRouteSEO } from "@/lib/api/siteseo";
-import PHDRegulationCards from "./comp/PHDRegulationCards";
-import PHDRegulationHero from "./comp/PHDRegulationHero";
+import {
+  getHeroSectionContent,
+  HeroSection,
+  PHDRegulationCardSection,
+} from "@/modules/research/phd-regulations";
+
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
-
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("phd-regulations");
@@ -66,13 +69,17 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const page = () => {
+const page = async () => {
+  const { data } = await getHeroSectionContent();
   return (
     <>
-      <section className="pt-[140px] lg:pt-[10%] md:pb-[100px] bg-[#09215b] px-4">
-        <div className="max-w-[1664px] mx-auto w-full">
-          <PHDRegulationHero />
-          <PHDRegulationCards />
+      <section className="pt-[140px] lg:pt-[10%] md:pb-[100px]">
+        <div className="max-w-[1530px] mx-auto w-full px-6 md:px-7 xl:px-16">
+          <HeroSection heroSection={data.heroSection} />
+          <PHDRegulationCardSection
+            regulationCards={data.regulationCards}
+            contactSection={data.contactSection}
+          />
         </div>
       </section>
     </>
