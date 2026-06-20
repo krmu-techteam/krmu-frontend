@@ -10,11 +10,11 @@ import PublicationAchievements from "./comp/PublicationAchievements";
 import RDC from "./comp/RDC";
 import ResearchAchievements from "./comp/ResearchAchievements";
 import ResearchHighlight from "./comp/ResearchHighlight";
-import ResearchInnovationHeroSection from "./comp/ResearchInnovationHeroSection";
 import TeamLibrary from "./comp/TeamLibrary";
 import TeamRDC from "./comp/TeamRDC";
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
+import { getResearchandinnovationContent, HeroSection } from "@/modules/research/research-and-innovation";
 
 
 
@@ -79,10 +79,13 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const page = () => {
+const page = async () => {
+  const {data} = await getResearchandinnovationContent();
+ 
   return (
     <>
-      <ResearchInnovationHeroSection />
+    <HeroSection heroSection={data?.heroSection}/>
+      {/* <ResearchInnovationHeroSection /> */}
 
       <section className=" px-4 pt-[30px] pb-[50px] bg-[url(/research/bg-gradient.webp)] bg-cover bg-center">
         <RDC />
