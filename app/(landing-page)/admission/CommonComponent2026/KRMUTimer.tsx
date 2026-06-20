@@ -96,7 +96,7 @@ export default function KRMUTimer({
         </span>
       )}
       <span
-        className={`text-[10px] xl:text-xs uppercase tracking-wider font-extrabold ${mainWebsiteTimer && "text-white"}`}
+        className={`text-[10px] xl:text-sm capitalize tracking-wider font-extrabold ${mainWebsiteTimer && "text-white"}`}
       >
         Grab Up to 100% Scholarships Worth Rs 27 Cr + Get a Chance to Fly to
         Europe (First Come, First Serve)

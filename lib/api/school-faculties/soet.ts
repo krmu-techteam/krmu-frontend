@@ -164,7 +164,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms.-Neha-Jhakra.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Ms-Neha-Jhakra.png",
   },
   {
     id: 113884,
@@ -464,7 +464,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1126, 1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms.-Megha-Sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms-Megha-Sharma-SOET.png",
   },
   {
     id: 60025,
@@ -584,7 +584,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1126, 1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms.-Neetu-Chauhan.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Ms-neetu-chauhan-SOET.png",
   },
   {
     id: 42014,
@@ -827,7 +827,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Rajesh-Kumar-Badrana.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Mr.-Rajesh-Kumar-SOET.jpg",
   },
   {
     id: 113751,
@@ -872,7 +872,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/kriti-sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Ms-Kriti-Sharma-SOET.png",
   },
   {
     id: 113762,
@@ -934,7 +934,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms.-Swati-Jain-Kansal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Ms-Swati-Jain-Kansal-SOET.png",
   },
   // {
   //   id: 1226,
