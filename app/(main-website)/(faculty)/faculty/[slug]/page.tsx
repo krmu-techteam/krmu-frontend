@@ -21,9 +21,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { getWordImageById } from "@/lib/api/common";
+import { createPersonSchema, getWordImageById } from "@/lib/api/common";
 import { Metadata } from "next";
 import { origUrl } from "@/app/constant";
+import Script from "next/script";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -218,18 +219,33 @@ const page = async ({ params }: Props) => {
 
   const cleanedHTML = $.html();
 
+  const personFacultySchema = {
+    name: facultyName || "",
+    image: facImgUrl || "",
+    url: slug ? `https://krmangalam.edu.in/faculty/${slug}` : "",
+  };
+
+  const personJsonLd = createPersonSchema(personFacultySchema);
+
   return (
-    <section className="faculty_container h-full w-full">
-      {/* Hero Section */}
-      <div className="relative bg-[#0a1d3a] overflow-hidden h-[550px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-25 pointer-events-none"
-          style={{
-            backgroundImage:
-              'url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/img_3717a6e847.png")',
-          }}
-        />
-        {/* <Image
+    <>
+      <Script
+        id="blog-person-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: personJsonLd }}
+        strategy="afterInteractive"
+      />
+      <section className="faculty_container h-full w-full">
+        {/* Hero Section */}
+        <div className="relative bg-[#0a1d3a] overflow-hidden h-[550px]">
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-25 pointer-events-none"
+            style={{
+              backgroundImage:
+                'url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/img_3717a6e847.png")',
+            }}
+          />
+          {/* <Image
           src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/KRMU_Logo_white_3_33a6547c3f.png"
           width={290}
           height={299}
@@ -238,143 +254,148 @@ const page = async ({ params }: Props) => {
           className="hidden lg:block absolute lg:right-[6%] xl:right-[17%] 2xl:right-[25%] top-[53%] -translate-y-1/2 w-[240px] lg:w-[180px] xl:w-[200px] h-auto  pointer-events-none select-none "
         /> */}
 
-        <div className="relative max-w-[1080px] h-full  mx-auto pt-[100px] sm:pt-[170px]  px-4 sm:px-6 lg:px-10 ">
-          <div className="rounded-2xl fac_name_desg_int p-4 md:p-5 flex flex-col md:flex-row items-center md:items-stretch gap-5 md:gap-8 ">
-            <Image
-              src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/KRMU_Logo_white_3_33a6547c3f.png"
-              width={290}
-              height={299}
-              alt=""
-              aria-hidden="true"
-              className="hidden lg:block absolute lg:right-[20px] xl:right-[20px]  top-[120px] -translate-y-1/2 w-[240px] lg:w-[180px] xl:w-[200px] h-auto  pointer-events-none select-none "
-            />
-            <div className="bg-[#eef2f7] rounded-xl overflow-hidden flex-shrink-0 w-[240px] sm:w-[260px] md:w-[280px] h-[240px] sm:h-[260px] md:h-[280px] flex items-center justify-center">
-              {facImgUrl && (
-                <Image
-                  src={facImgUrl}
-                  width={300}
-                  height={300}
-                  alt={facultyName}
-                  priority
-                  className="w-full h-full object-cover object-top"
-                />
-              )}
-            </div>
+          <div className="relative max-w-[1080px] h-full  mx-auto pt-[100px] sm:pt-[170px]  px-4 sm:px-6 lg:px-10 ">
+            <div className="rounded-2xl fac_name_desg_int p-4 md:p-5 flex flex-col md:flex-row items-center md:items-stretch gap-5 md:gap-8 ">
+              <Image
+                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/KRMU_Logo_white_3_33a6547c3f.png"
+                width={290}
+                height={299}
+                alt=""
+                aria-hidden="true"
+                className="hidden lg:block absolute lg:right-[20px] xl:right-[20px]  top-[120px] -translate-y-1/2 w-[240px] lg:w-[180px] xl:w-[200px] h-auto  pointer-events-none select-none "
+              />
+              <div className="bg-[#eef2f7] rounded-xl overflow-hidden flex-shrink-0 w-[240px] sm:w-[260px] md:w-[280px] h-[240px] sm:h-[260px] md:h-[280px] flex items-center justify-center">
+                {facImgUrl && (
+                  <Image
+                    src={facImgUrl}
+                    width={300}
+                    height={300}
+                    alt={facultyName}
+                    priority
+                    className="w-full h-full object-cover object-top"
+                  />
+                )}
+              </div>
 
-            <div className="flex-1 text-white py-4 text-center md:text-left">
-              <h1 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-bold leading-tight">
-                {facultyName}
-              </h1>
-              <p className="text-sm sm:text-base md:text-lg text-white/85 mt-1 mb-5 md:mb-6">
-                {facultyDesignation}
-              </p>
+              <div className="flex-1 text-white py-4 text-center md:text-left">
+                <h1 className="text-2xl sm:text-3xl md:text-[34px] lg:text-[38px] font-bold leading-tight">
+                  {facultyName}
+                </h1>
+                <p className="text-sm sm:text-base md:text-lg text-white/85 mt-1 mb-5 md:mb-6">
+                  {facultyDesignation}
+                </p>
 
-              <ul className="flex flex-col gap-3 md:gap-3.5">
-                {socialItems.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-center gap-3 text-white/95 text-sm md:text-[15px] break-all justify-center md:justify-start"
-                  >
-                    <span className="w-7 h-7 md:w-8 md:h-8 rounded-sm bg-[#2196f3] inline-flex items-center justify-center flex-shrink-0">
-                      {item.type === "email" && (
-                        <Image
-                          src={
-                            "https://cdn-icons-png.flaticon.com/512/9068/9068642.png"
-                          }
-                          width={32}
-                          height={32}
-                          alt="LinkedIn"
-                          className=""
-                          unoptimized
-                        />
-                      )}
-                      {item.type === "linkedin" && (
-                        <Image
-                          src={
-                            "https://cdn-icons-png.flaticon.com/512/3536/3536505.png"
-                          }
-                          width={35}
-                          height={35}
-                          alt="LinkedIn"
-                          className=" text-white"
-                          unoptimized
-                        />
-                      )}
-                      {item.type === "phone" && (
-                        <Phone
-                          aria-hidden="true"
-                          className="w-4 h-4 md:w-[18px] md:h-[18px] text-white"
-                        />
-                      )}
-                      {item.type === "link" && (
-                        <FileText
-                          aria-hidden="true"
-                          className="w-4 h-4 md:w-[18px] md:h-[18px] text-white"
-                        />
-                      )}
-                    </span>
-
-                    <a
-                      href={
-                        item.type === "email"
-                          ? `mailto:${item.value}`
-                          : item.type === "phone"
-                            ? `tel:${item.value}`
-                            : item.value
-                      }
-                      target={item.type === "linkedin" ? "_blank" : undefined}
-                      rel={item.type === "linkedin" ? "noreferrer" : undefined}
+                <ul className="flex flex-col gap-3 md:gap-3.5">
+                  {socialItems.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex items-center gap-3 text-white/95 text-sm md:text-[15px] break-all justify-center md:justify-start"
                     >
-                      {item.text || item.value}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+                      <span className="w-7 h-7 md:w-8 md:h-8 rounded-sm bg-[#2196f3] inline-flex items-center justify-center flex-shrink-0">
+                        {item.type === "email" && (
+                          <Image
+                            src={
+                              "https://cdn-icons-png.flaticon.com/512/9068/9068642.png"
+                            }
+                            width={32}
+                            height={32}
+                            alt="LinkedIn"
+                            className=""
+                            unoptimized
+                          />
+                        )}
+                        {item.type === "linkedin" && (
+                          <Image
+                            src={
+                              "https://cdn-icons-png.flaticon.com/512/3536/3536505.png"
+                            }
+                            width={35}
+                            height={35}
+                            alt="LinkedIn"
+                            className=" text-white"
+                            unoptimized
+                          />
+                        )}
+                        {item.type === "phone" && (
+                          <Phone
+                            aria-hidden="true"
+                            className="w-4 h-4 md:w-[18px] md:h-[18px] text-white"
+                          />
+                        )}
+                        {item.type === "link" && (
+                          <FileText
+                            aria-hidden="true"
+                            className="w-4 h-4 md:w-[18px] md:h-[18px] text-white"
+                          />
+                        )}
+                      </span>
+
+                      <a
+                        href={
+                          item.type === "email"
+                            ? `mailto:${item.value}`
+                            : item.type === "phone"
+                              ? `tel:${item.value}`
+                              : item.value
+                        }
+                        target={item.type === "linkedin" ? "_blank" : undefined}
+                        rel={
+                          item.type === "linkedin" ? "noreferrer" : undefined
+                        }
+                      >
+                        {item.text || item.value}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="faculty_profile_body">
-        {interestHTML && (
-          <div
-            dangerouslySetInnerHTML={{ __html: interestHTML }}
-            className="faculty_interest_wrapper"
-          />
-        )}
+        <div className="faculty_profile_body">
+          {interestHTML && (
+            <div
+              dangerouslySetInnerHTML={{ __html: interestHTML }}
+              className="faculty_interest_wrapper"
+            />
+          )}
 
-        {tabSections.length > 0 ? (
-          <Accordion
-            type="multiple"
-            defaultValue={[`${tabSections[0]?.id}-0`]}
-            className="faculty_profile_card"
-          >
-            {tabSections.map((section, index) => (
-              <AccordionItem
-                key={`${section.id}-${index}`}
-                value={`${section.id}-${index}`}
-                className="faculty_profile_section"
-              >
-                <AccordionTrigger className="faculty_profile_trigger">
-                  <span className="faculty_section_title">
-                    <FacultySectionIcon title={section.title} />
-                    {section.title}
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="faculty_section_content">
-                  <div dangerouslySetInnerHTML={{ __html: section.content }} />
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        ) : (
-          <div
-            dangerouslySetInnerHTML={{ __html: cleanedHTML }}
-            className="faculty_main_content_container"
-          />
-        )}
-      </div>
-    </section>
+          {tabSections.length > 0 ? (
+            <Accordion
+              type="multiple"
+              defaultValue={[`${tabSections[0]?.id}-0`]}
+              className="faculty_profile_card"
+            >
+              {tabSections.map((section, index) => (
+                <AccordionItem
+                  key={`${section.id}-${index}`}
+                  value={`${section.id}-${index}`}
+                  className="faculty_profile_section"
+                >
+                  <AccordionTrigger className="faculty_profile_trigger">
+                    <span className="faculty_section_title">
+                      <FacultySectionIcon title={section.title} />
+                      {section.title}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="faculty_section_content">
+                    <div
+                      dangerouslySetInnerHTML={{ __html: section.content }}
+                    />
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          ) : (
+            <div
+              dangerouslySetInnerHTML={{ __html: cleanedHTML }}
+              className="faculty_main_content_container"
+            />
+          )}
+        </div>
+      </section>
+    </>
   );
 };
 

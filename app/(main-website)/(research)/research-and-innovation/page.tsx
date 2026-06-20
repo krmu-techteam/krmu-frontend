@@ -15,7 +15,7 @@ import TeamLibrary from "./comp/TeamLibrary";
 import TeamRDC from "./comp/TeamRDC";
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
-
+ 
 
 
 export async function generateMetadata(): Promise<Metadata> {

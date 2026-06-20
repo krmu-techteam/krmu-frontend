@@ -6,9 +6,9 @@ const CIF = () => {
     <section className="bg-[url(/research/facbg.webp)] bg-cover bg-center pt-[50px] pb-[30px] px-4">
       <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row gap-10">
         <div className="text-white lg:w-3/5">
-          <h3 className="text-3xl md:text-5xl font-semibold mb-5">
+          <h2 className="text-3xl md:text-5xl font-semibold mb-5">
             Central Instrumentation Facility (CIF)
-          </h3>
+          </h2>
           <p>
             K.R. Mangalam University boasts many specialised research
             laboratories, each equipped with modern technology to support a wide

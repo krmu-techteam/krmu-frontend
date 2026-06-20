@@ -5,7 +5,7 @@ const AcademicResources = () => {
   return (
     <>
       <div className="max-w-[1664px] mx-auto w-full text-white" id="_academics-resources">
-        <h3 className="mb-5 text-3xl md:text-[45px] font-semibold">Academic Resources</h3>
+        <h2 className="mb-5 text-3xl md:text-[45px] font-semibold">Academic Resources</h2>
         <h4 className="mb-5 text-xl font-semibold">CENTRAL LIBRARY</h4>
       </div>
       <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row text-white text-justify gap-10">
