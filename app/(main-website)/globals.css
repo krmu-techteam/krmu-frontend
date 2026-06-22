@@ -15,6 +15,9 @@
 
 /* Custom utility class */
 @layer utilities {
+  .feeStruct_btn{
+    background: #f3f4f6;
+  }
   @media (max-width: 640px) {
     .npf_chatbot_button {
       bottom: 115px !important;
