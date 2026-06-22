@@ -7,3 +7,4 @@ export { default as KEICSection } from "./KEICSection";
 export { default as IPRLegalEthicsSection } from "./IPRLegalEthicsSection";
 export { default as OnGoingProjectsSection } from "./OnGoingProjectsSection";
 export { default as ResearchHighlightSection } from "./ResearchHighlightSection";
+export { default as ResearchAchievementsSection } from "./ResearchAchievementsSection";

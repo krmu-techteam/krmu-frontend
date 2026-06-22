@@ -92,6 +92,19 @@ export interface ResearchHighlightsProps {
   highlights: ResearchHighlights[]
 }
 
+export interface ResearchAchievement {
+  name: string;
+  designation: string;
+  school: string;
+  imageUrl: string;
+  certificateUrl: string;
+  content: string;
+}
+export interface ResearchAchievementSectionProps {
+  title: string;
+  achievements: ResearchAchievement[];
+}
+
 export interface RDCSectionData {
   heroSection: HeroSectionProps;
   rdcSection: RDCSectionProps;
@@ -102,6 +115,7 @@ export interface RDCSectionData {
   iprLegalEthicsSection: IPRLegalEthicsSectionProps;
   onGoingProjectsSection: OnGoingProjectsSectionProps;
   researchHighlightSection: ResearchHighlightsProps;
+  researchAchievementSection: ResearchAchievementSectionProps;
 }
 
 export interface ResearchAndInnovationResponse {

@@ -2,7 +2,6 @@ import { folderRouteSEO } from "@/lib/api/siteseo";
 import AcademicResources from "./comp/AcademicResources";
 import ContactEnquiries from "./comp/ContactEnquiries";
 import PublicationAchievements from "./comp/PublicationAchievements";
-import ResearchAchievements from "./comp/ResearchAchievements";
 import TeamLibrary from "./comp/TeamLibrary";
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
@@ -14,6 +13,7 @@ import {
   KEICSection,
   OnGoingProjectsSection,
   RDCSection,
+  ResearchAchievementsSection,
   ResearchDeanMessageSection,
   ResearchHighlightSection,
   TeamRDCSection,
@@ -98,9 +98,9 @@ const ResearchAndInnovationPage = async () => {
       />
       <OnGoingProjectsSection onGoingProjectsSection={data?.onGoingProjectsSection} />
       <ResearchHighlightSection  researchHighlightSection={data?.researchHighlightSection} />
-      <ResearchAchievements />
+      <ResearchAchievementsSection researchAchievementSection={data?.researchAchievementSection}/>
       <PublicationAchievements />
-      <section className="py-[50px] px-4 bg-[url(/research/acadbg.webp)] bg-cover">
+      <section className="bg-[url(/research/acadbg.webp)] bg-cover py-8 md:py-12 xl:py-20">
         <AcademicResources />
         <TeamLibrary />
       </section>
