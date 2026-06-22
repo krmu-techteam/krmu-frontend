@@ -701,7 +701,7 @@ export const createOrganizationSchema = ({
 
   const schema = {
     "@context": "https://schema.org/",
-    "@type": "Organization",
+    "@type": "EducationalOrganization",
     name,
     alternateName,
     url: cleanUrl(url),
@@ -734,7 +734,7 @@ export const createCollageOrUniversitySchema = ({ name, alternateName, url, logo
   const cleanUrl = (val: string) => val.replace(/\s+/g, "");
   const schema = {
     "@context": "https://schema.org/",
-    "@type": "CollageOrUniversity",
+    "@type": "CollegeOrUniversity",
     name: name,
     alternateName: alternateName,
     url: url,
