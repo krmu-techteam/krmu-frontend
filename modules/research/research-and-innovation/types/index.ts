@@ -139,21 +139,7 @@ export interface TeamLibrarySectionProps {
   teamLibrarySliders: TeamLibrarySliders[];
 }
 
-export interface PhoneNumber {
-  label: string;
-  number: string;
-}
 
-export interface Email {
-  label: string;
-  email: string;
-  mailTo: string;
-}
-
-export interface QuickLink {
-  label: string;
-  url: string;
-}
 export interface PhoneNumber {
   number: string;
   formatted: string;
@@ -201,7 +187,7 @@ export interface RDCSectionData {
   researchHighlightSection: ResearchHighlightsProps;
   researchAchievementSection: ResearchAchievementSectionProps;
   publicationAndAchievementSection: PublicationAndAchievementSectionProps;
-  academicResourceSection: AcademicResourcesSectionProps;
+  academicResourcesSection: AcademicResourcesSectionProps;
   teamLibrarySection: TeamLibrarySectionProps;
   contactEnquiriesSection: ContactEnquiriesSectionProps;
 }
