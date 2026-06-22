@@ -89,7 +89,7 @@ export interface ResearchHighlights {
 }
 export interface ResearchHighlightsProps {
   title: string;
-  highlights: ResearchHighlights[]
+  highlights: ResearchHighlights[];
 }
 
 export interface ResearchAchievement {
@@ -113,7 +113,7 @@ export interface PublicationAndAchievementSectionProps {
   title: string;
   description: string;
   imageUrl: string;
-  statistics: Statistics[]
+  statistics: Statistics[];
 }
 
 export interface AcademicResourcesImages {
@@ -127,7 +127,66 @@ export interface AcademicResourcesSectionProps {
   description_three: string;
   description_four: string;
   linkInfo: Links;
-  images: AcademicResourcesImages[]
+  images: AcademicResourcesImages[];
+}
+
+export interface TeamLibrarySliders {
+  imageUrl: string;
+  content: string;
+}
+export interface TeamLibrarySectionProps {
+  title: string;
+  teamLibrarySliders: TeamLibrarySliders[];
+}
+
+export interface PhoneNumber {
+  label: string;
+  number: string;
+}
+
+export interface Email {
+  label: string;
+  email: string;
+  mailTo: string;
+}
+
+export interface QuickLink {
+  label: string;
+  url: string;
+}
+export interface PhoneNumber {
+  number: string;
+  formatted: string;
+  link: string;
+}
+
+export interface Email {
+  email: string;
+  mailTo: string;
+}
+
+export interface QuickLink {
+  label: string;
+  url: string;
+}
+ 
+export interface CompanyRegistrationForm {
+  label: string;
+  url: string;
+  linkText: string;
+}
+
+export interface ContactEnquiriesSectionProps {
+  title: string;
+  description: string;
+  companyRegistrationForm: CompanyRegistrationForm;
+  phoneNumbers: {
+    numbers: PhoneNumber[];
+  };
+  email: Email;
+  quickLinks: {
+    links: QuickLink[];
+  };
 }
 
 export interface RDCSectionData {
@@ -142,6 +201,9 @@ export interface RDCSectionData {
   researchHighlightSection: ResearchHighlightsProps;
   researchAchievementSection: ResearchAchievementSectionProps;
   publicationAndAchievementSection: PublicationAndAchievementSectionProps;
+  academicResourceSection: AcademicResourcesSectionProps;
+  teamLibrarySection: TeamLibrarySectionProps;
+  contactEnquiriesSection: ContactEnquiriesSectionProps;
 }
 
 export interface ResearchAndInnovationResponse {

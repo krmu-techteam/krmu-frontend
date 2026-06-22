@@ -10,3 +10,5 @@ export { default as ResearchHighlightSection } from "./ResearchHighlightSection"
 export { default as ResearchAchievementsSection } from "./ResearchAchievementsSection";
 export { default as PublicationAchievementsSection } from "./PublicationAchievementsSection";
 export { default as AcademicResourcesSection } from "./AcademicResourcesSection";
+export { default as TeamLibrarySection } from "./TeamLibrarySection";
+export { default as ContactEnquiriesSection } from "./ContactEnquiriesSection";

@@ -6,5 +6,6 @@ export { default as IPRSlider } from "./IPRSlider";
 export { default as OnGoingProjectSlider } from "./OnGoingProjectSlider";
 export { default as ResearchHighlightSlider } from "./ResearchHighlightSlider";
 export { default as ResearchAchievementSlider } from "./ResearchAchievementSlider";
+export { default as TeamLibrarySlider } from "./TeamLibrarySlider";
 
 

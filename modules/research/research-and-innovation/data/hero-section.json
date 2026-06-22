@@ -227,8 +227,8 @@
       ]
     },
     "academicResourcesSection": {
-      "title":"Academic Resources",
-      "subTitle":"CENTRAL LIBRARY",
+      "title": "Academic Resources",
+      "subTitle": "CENTRAL LIBRARY",
       "description_one": "K.R. Mangalam University Library denoted as Central Library which has spreaded over 15683 sq. ft. and have a collection of 45,000 books, 2500 reference books, 380 journals, e-journals databases, 1200 dissertations/ reports, 100+ theses & more than 400 law reports & Supreme Court cases etc. Library invested so far more than 1.5 crore of rupees on books & other resources. It is ever inflating day by day, year by year.",
       "description_two": "Presently, it subscribes to over number of databases, e-resources like, Supreme Court Cases (SCC online), Manupatra online, J-Gate database; and is member of DELNET, NDLI, Shodh Sindhu, Shodh Ganga, Shodh Shuddhi, Shodh Chakra, IRINS etc. All the services provided by the INFLIBNET/ UGC/ Ministry of Education, Govt. of India for the benefit of our intellectual communities i.e. students and faculty members and providing 24×7 services through its Digital Library platform.",
       "description_three": "The Library alienated into many sections for its smooth functioning & services like, Acquisition Section, Technical Section, Processing Section, Circulation Section, Periodical Section, Reference Section, Digital Section, Research Section, IKS Section (Indian Knowledge System), Competitive Examinations Preparation Section, & Maintenance Section.",
@@ -247,6 +247,92 @@
       "linkInfo": {
         "label": "Know More",
         "url": "https://library.krmangalam.edu.in/user?_gl=1*1i62dbw*_gcl_au*MTk0MzAxMjY5Mi4xNzY1MTcwMjg4#/home"
+      }
+    },
+    "teamLibrarySection": {
+      "title": "Team Library",
+      "teamLibrarySliders": [
+        {
+          "imageUrl": "/library/Hela.jpg",
+          "content": "<h5>Dr. Helaluddin (Ph.D.)</h5><ul><li>University Librarian</li><li>University Nodal Officer to IRINS/UGC</li><li>University Coordinator for Ph.D. Thesis to INFLIBNET/UGC</li><li>University Coordinator for Anti-Plagiarism Checking</li></ul>"
+        },
+        {
+          "imageUrl": "/library/shaida.jpg",
+          "content": "<h5>Mr. Shaida Husain</h5><ul><li>Assistant Librarian</li></ul>"
+        },
+        {
+          "imageUrl": "/library/akhilesh.jpg",
+          "content": "<h5>Mr. Akhilesh Kumar Singh</h5><ul><li>Professional Assistant</li></ul>"
+        },
+        {
+          "imageUrl": "/library/manmohan.jpg",
+          "content": "<h5>Mr. Manmohan Das</h5><ul><li>Professional Assistant</li></ul>"
+        },
+        {
+          "imageUrl": "/library/kapil.jpg",
+          "content": "<h5>Mr. Kapil Dev</h5><ul><li>Library Assistant</li></ul>"
+        }
+      ]
+    },
+    "contactEnquiriesSection": {
+      "title": "Contact and Inquiries",
+      "description": "For further information or to get involved with our research endeavours, please contact our research department:",
+      "companyRegistrationForm": {
+        "label": "Company Registration Form",
+        "url": "https://tinyurl.com/krmu-2025",
+        "linkText": "Link"
+      },
+      "phoneNumbers": {
+        "label": "Phone Numbers",
+        "numbers": [
+          {
+            "number": "9289143055",
+            "formatted": "(+91)-9289-1430-55",
+            "link": "tel:+919289143055"
+          },
+          {
+            "number": "8800697009",
+            "formatted": "(+91)-8800-6970-09",
+            "link": "tel:+918800697009"
+          }
+        ]
+      },
+      "email": {
+        "label": "Email",
+        "email": "rdc@krmangalam.edu.in",
+        "mailTo": "mailto:rdc@krmangalam.edu.in"
+      },
+      "quickLinks": {
+        "links": [
+          {
+            "label": "DST",
+            "url": "https://dst.gov.in/call-for-proposals"
+          },
+          {
+            "label": "DBT",
+            "url": "https://dbtindia.gov.in/whats-new/call-for-proposals"
+          },
+          {
+            "label": "ICMR",
+            "url": "https://main.icmr.nic.in/call%20for%20proposals"
+          },
+          {
+            "label": "BIRAC",
+            "url": "https://www.birac.nic.in/"
+          },
+          {
+            "label": "ICSSR",
+            "url": "https://icssr.org/"
+          },
+          {
+            "label": "WHO",
+            "url": "https://www.who.int/"
+          },
+          {
+            "label": "CSIR",
+            "url": "https://www.csir.res.in/"
+          }
+        ]
       }
     }
   }

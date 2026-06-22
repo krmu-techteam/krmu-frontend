@@ -2,6 +2,7 @@
 import {
   AcademicResourcesSection,
   CIFSection,
+  ContactEnquiriesSection,
   HeroSection,
   IPRLegalEthicsSection,
   KEICSection,
@@ -11,6 +12,7 @@ import {
   ResearchAchievementsSection,
   ResearchDeanMessageSection,
   ResearchHighlightSection,
+  TeamLibrarySection,
   TeamRDCSection,
 } from "../sections"; 
 
@@ -86,5 +88,17 @@ export const researchSections = [
     Component: AcademicResourcesSection,
     propName: "academicResourcesSection",
     dataKey: "academicResourcesSection",
+  },
+  {
+    key: "team-library",
+    Component: TeamLibrarySection,
+    propName: "teamLibrarySection",
+    dataKey: "teamLibrarySection",
+  },
+  {
+    key: "contact-enquiries",
+    Component: ContactEnquiriesSection,
+    propName: "contactEnquiriesSection",
+    dataKey: "contactEnquiriesSection",
   },
 ] as const;

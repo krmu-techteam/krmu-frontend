@@ -1,7 +1,4 @@
 import { folderRouteSEO } from "@/lib/api/siteseo";
-import AcademicResources from "./comp/AcademicResources";
-import ContactEnquiries from "./comp/ContactEnquiries";
-import TeamLibrary from "./comp/TeamLibrary";
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
 import {
@@ -77,11 +74,6 @@ const ResearchAndInnovationPage = async () => {
   return (
     <>
       <SectionsRenderer sections={researchSections} data={data} />
-      <section className="bg-[url(/research/acadbg.webp)] bg-cover py-8 md:py-12 xl:py-20">
-        <AcademicResources />
-        <TeamLibrary />
-      </section>
-      <ContactEnquiries />
     </>
   );
 };
