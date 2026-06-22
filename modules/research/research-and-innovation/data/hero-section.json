@@ -100,6 +100,66 @@
         "label": "Know More",
         "url": "/cif"
       }
+    },
+    "keicSection": {
+      "title": "K.R. Mangalam Entrepreneurship and Innovation Center (KEIC)",
+      "description": "KEIC is the cornerstone of our innovation ecosystem. This dynamic center offers an incubation program to nurture start-ups, a state-of-the-art maker lab for prototyping and creative exploration, and coworking spaces that encourage collaborative ventures. The center is also home to our pioneering BBA in Entrepreneurship program, developed in collaboration with the GCEC Global Foundation [https://www.gcecglobal.com], preparing the next generation of entrepreneurial leaders.",
+      "images": [
+        {
+          "url": "/keic/keic-1.webp"
+        },
+        {
+          "url": "/keic/keic-2.webp"
+        },
+        {
+          "url": "/keic/keic-3.webp"
+        },
+        {
+          "url": "/keic/keic-4.webp"
+        }
+      ],
+      "linkInfo": {
+        "label": "Know More",
+        "url": "/keic"
+      }
+    },
+    "iprLegalEthicsSection": {
+      "title": "IPR, Legal & Ethical Matters Cell",
+      "description_one": "Intellectual property rights are crucial in fostering innovation, creativity, and economic growth. They provide creators and innovators with the assurance that their efforts will be protected, encouraging them to invest in research and development and bring their ideas to the market.",
+      "description_two": "Intellectual Property (IP) plays a significant role in providing a competitive edge to an organization. The intangible assets of an organization – such as knowhow, inventions, brands, designs and other creative and innovative products are, in present times, more valuable than its physical assets.",
+      "description_three": "With this backdrop, Intellectual Property Rights (IPR) cell seeks to provide guidance to academic and non-academic staff, students, scholars, and outside agencies alike on the practices and rules of the University regarding IPR and related obligations (which include the nature of IP, its ownership, exploitation, technology-transfer, and confidentiality requirements). With the initiative to fulfil the commitment of the University towards promoting academic freedom and providing a conducive environment for research and development.",
+      "linkInfo": {
+        "label": "Know More",
+        "url": "/ipr"
+      },
+      "images": [
+        {
+          "url": "/ipr/item-1.jpg"
+        },
+        {
+          "url": "/ipr/item-2.jpg"
+        },
+        {
+          "url": "/ipr/item-3.jpg"
+        }
+      ]
+    },
+    "onGoingProjectsSection": {
+      "title": "Ongoing Projects and Collaborations",
+      "description_one": "Our University takes pride in actively promoting research endeavors among both faculty and students. At K. R. Mangalam University, we have successfully secured substantial research funding from esteemed sources, including government bodies and corporate houses. Notably, our institution has achieved significant milestones by securing projects exceeding 4 Crores from renowned entities such as DST, DST-FICCI, DST-SEED, ICSSR and various corporate houses. Apart from research funding more that 2 Cr consultancy projects were also in record.",
+      "description_two": "Join us on a journey of academic discovery and contribute to thecutting-edge research landscape at K.R. Mangalam University!",
+      "description_three": "We are engaged in numerous pioneering research projects, many in collaboration with industry leaders, government bodies, and international institutions. These projects not only contribute to academic knowledge but also have tangible impacts on communities and industries.",
+      "images": [
+        {
+          "url": "/ongoing/item-1.webp"
+        },
+        {
+          "url": "/ongoing/item-2.webp"
+        },
+        {
+          "url": "/ongoing/item-3.jpg"
+        }
+      ]
     }
   }
 }

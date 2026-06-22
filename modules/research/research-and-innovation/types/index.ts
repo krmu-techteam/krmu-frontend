@@ -52,6 +52,36 @@ export interface TeamRDCSectionProps {
   title: string;
   teamRDCMembers: TeamRDCMembers[];
 }
+export interface KEICImages {
+  url: string;
+}
+export interface KEICSectionProps {
+  title: string;
+  description: string;
+  linkInfo: Links;
+  images: KEICImages[];
+}
+export interface IPRImages {
+  url: string;
+}
+export interface IPRLegalEthicsSectionProps {
+  title: string;
+  description_one: string;
+  description_two: string;
+  description_three: string;
+  linkInfo: Links;
+  images: IPRImages[];
+}
+export interface OnGoingProjectsImages {
+  url: string;
+}
+export interface OnGoingProjectsSectionProps {
+  title: string;
+  description_one: string;
+  description_two: string;
+  description_three: string;
+  images: OnGoingProjectsImages[];
+}
 
 export interface RDCSectionData {
   heroSection: HeroSectionProps;
@@ -59,6 +89,9 @@ export interface RDCSectionData {
   researchDeanMessageSection: ResearchDeanMessageProps;
   teamRdcSection: TeamRDCSectionProps;
   cifSection: CIFSectionProps;
+  keicSection: KEICSectionProps;
+  iprLegalEthicsSection: IPRLegalEthicsSectionProps;
+  onGoingProjectsSection: OnGoingProjectsSectionProps;
 }
 
 export interface ResearchAndInnovationResponse {

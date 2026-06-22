@@ -1,9 +1,6 @@
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import AcademicResources from "./comp/AcademicResources";
 import ContactEnquiries from "./comp/ContactEnquiries";
-import IPR from "./comp/IPR";
-import KEIC from "./comp/KEIC";
-import OnGoing from "./comp/OnGoing";
 import PublicationAchievements from "./comp/PublicationAchievements";
 import ResearchAchievements from "./comp/ResearchAchievements";
 import ResearchHighlight from "./comp/ResearchHighlight";
@@ -14,6 +11,9 @@ import {
   CIFSection,
   getResearchandinnovationContent,
   HeroSection,
+  IPRLegalEthicsSection,
+  KEICSection,
+  OngoingProjectsSection,
   RDCSection,
   ResearchDeanMessageSection,
   TeamRDCSection,
@@ -80,23 +80,23 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const page = async () => {
+const ResearchAndInnovationPage = async () => {
   const { data } = await getResearchandinnovationContent();
 
   return (
     <>
       <HeroSection heroSection={data?.heroSection} />
-      {/* <ResearchInnovationHeroSection /> */}
-
-      <section>
-        <RDCSection rdcSection={data?.rdcSection} />
-        <ResearchDeanMessageSection researchDeanMessageSection={data?.researchDeanMessageSection} />
-        <TeamRDCSection teamRdcSection={data?.teamRdcSection} />
-      </section>
-      <CIFSection cifSection={data?.cifSection}/>
-      <KEIC />
-      <IPR />
-      <OnGoing />
+      <RDCSection rdcSection={data?.rdcSection} />
+      <ResearchDeanMessageSection
+        researchDeanMessageSection={data?.researchDeanMessageSection}
+      />
+      <TeamRDCSection teamRdcSection={data?.teamRdcSection} />
+      <CIFSection cifSection={data?.cifSection} />
+      <KEICSection keicSection={data?.keicSection} />
+      <IPRLegalEthicsSection
+        iprLegalEthicsSection={data?.iprLegalEthicsSection}
+      />
+      <OngoingProjectsSection onGoingProjectsSection={data?.onGoingProjectsSection} />
       <ResearchHighlight />
       <ResearchAchievements />
       <PublicationAchievements />
@@ -109,4 +109,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default ResearchAndInnovationPage;
