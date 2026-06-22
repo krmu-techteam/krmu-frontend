@@ -3,7 +3,6 @@ import AcademicResources from "./comp/AcademicResources";
 import ContactEnquiries from "./comp/ContactEnquiries";
 import PublicationAchievements from "./comp/PublicationAchievements";
 import ResearchAchievements from "./comp/ResearchAchievements";
-import ResearchHighlight from "./comp/ResearchHighlight";
 import TeamLibrary from "./comp/TeamLibrary";
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
@@ -13,9 +12,10 @@ import {
   HeroSection,
   IPRLegalEthicsSection,
   KEICSection,
-  OngoingProjectsSection,
+  OnGoingProjectsSection,
   RDCSection,
   ResearchDeanMessageSection,
+  ResearchHighlightSection,
   TeamRDCSection,
 } from "@/modules/research/research-and-innovation";
 
@@ -96,8 +96,8 @@ const ResearchAndInnovationPage = async () => {
       <IPRLegalEthicsSection
         iprLegalEthicsSection={data?.iprLegalEthicsSection}
       />
-      <OngoingProjectsSection onGoingProjectsSection={data?.onGoingProjectsSection} />
-      <ResearchHighlight />
+      <OnGoingProjectsSection onGoingProjectsSection={data?.onGoingProjectsSection} />
+      <ResearchHighlightSection  researchHighlightSection={data?.researchHighlightSection} />
       <ResearchAchievements />
       <PublicationAchievements />
       <section className="py-[50px] px-4 bg-[url(/research/acadbg.webp)] bg-cover">

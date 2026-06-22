@@ -4,4 +4,5 @@ export { default as TeamRDCCard } from "./TeamRDCCard";
 export { default as KEICSlider } from "./KEICSlider";
 export { default as IPRSlider } from "./IPRSlider";
 export { default as OnGoingProjectSlider } from "./OnGoingProjectSlider";
+export { default as ResearchHighlightSlider } from "./ResearchHighlightSlider";
 

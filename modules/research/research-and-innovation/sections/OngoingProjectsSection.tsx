@@ -2,7 +2,7 @@ import SectionDivider from "@/components/common/SectionDivider";
 import { OnGoingProjectSlider } from "../components";
 import { OnGoingProjectsSectionProps } from "../types";
 
-const OnGoing = ({onGoingProjectsSection} : {onGoingProjectsSection : OnGoingProjectsSectionProps}) => {
+const OnGoingProjectsSection = ({onGoingProjectsSection} : {onGoingProjectsSection : OnGoingProjectsSectionProps}) => {
     const {title, description_one, description_two, description_three, images} = onGoingProjectsSection;
  
 
@@ -36,4 +36,4 @@ const OnGoing = ({onGoingProjectsSection} : {onGoingProjectsSection : OnGoingPro
   );
 };
 
-export default OnGoing;
+export default OnGoingProjectsSection;

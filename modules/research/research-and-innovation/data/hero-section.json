@@ -160,6 +160,31 @@
           "url": "/ongoing/item-3.jpg"
         }
       ]
+    },
+    "researchHighlightSection": {
+      "title": "Research Highlights",
+      "highlights": [
+        {
+          "imageUrl": "/research-innovation/highlight-1.png",
+          "link": "https://www.sciencedirect.com/science/article/pii/S1110866525000179",
+          "content": "ADVANCED SEGMENTATION METHOD FOR INTEGRATING MULTI-OMICS DATA FOR EARLY CANCER DETECTION"
+        },
+        {
+          "imageUrl": "/research-innovation/highlight2.png",
+          "link": "https://www.sciencedirect.com/science/article/abs/pii/S1386142525000368",
+          "content": "INVESTIGATION INTO THE VIBRATIONAL CHARACTERISTICS OF MONOLAYERED RUDDLESDEN-POPPER COMPOUNDS (SR, BA)2HFO4"
+        },
+        {
+          "imageUrl": "/research-innovation/highlight-3.png",
+          "link": "https://www.sciencedirect.com/science/article/pii/S2352012425000207",
+          "content": "UTILIZATION OF NUMERICAL AND MACHINE LEARNING TO PREDICT THE MONOTONIC COMPRESSIVE RESPONSE OF SQUARE DOUBLE-SKIN TUBULAR COLUMNS (SDSTC)"
+        },
+        {
+          "imageUrl": "/research-innovation/highlight-4.png",
+          "link": "https://doi.org/10.1007/s11831-025-10253-4",
+          "content": "ADVANCING PULMONARY INFECTION DIAGNOSIS: A COMPREHENSIVE REVIEW OF DEEP LEARNING APPROACHES IN RADIOLOGICAL DATA ANALYSIS"
+        }
+      ]
     }
   }
 }

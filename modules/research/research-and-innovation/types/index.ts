@@ -82,6 +82,15 @@ export interface OnGoingProjectsSectionProps {
   description_three: string;
   images: OnGoingProjectsImages[];
 }
+export interface ResearchHighlights {
+  imageUrl: string;
+  link: string;
+  content: string;
+}
+export interface ResearchHighlightsProps {
+  title: string;
+  highlights: ResearchHighlights[]
+}
 
 export interface RDCSectionData {
   heroSection: HeroSectionProps;
@@ -92,6 +101,7 @@ export interface RDCSectionData {
   keicSection: KEICSectionProps;
   iprLegalEthicsSection: IPRLegalEthicsSectionProps;
   onGoingProjectsSection: OnGoingProjectsSectionProps;
+  researchHighlightSection: ResearchHighlightsProps;
 }
 
 export interface ResearchAndInnovationResponse {
