@@ -206,6 +206,48 @@
           "content": "WHO report titled “Pathogens Prioritization: A Scientific Framework for Epidemic and Pandemic Research Preparedness.” This comprehensive report involved the teamwork of more than 200 scientists from 50 countries, evaluating 1,652 pathogens across 28 virus families and one core group of bacteria. The published report provides a structured method for ranking pathogens based on their probability of causing epidemics or pandemics. This framework will aid researchers and policymakers in allocating resources effectively for preparedness and response. By identifying high-risk pathogens, the framework aims to guide research efforts towards preventing, detecting, and controlling future outbreaks."
         }
       ]
+    },
+    "publicationAndAchievementSection": {
+      "title": "Publications and Achievements",
+      "description": "K.R. Mangalam University has made significant scholarly contributions, evidenced by over 4000 publications and a Scopus h-index of 4000 and Citation Index of KRMU= 7.9. This record reflects the depth and impact of our research. Furthermore, our commitment to innovation is demonstrated by our repository of over a hundred patents, spanning diverse disciplines and showcasing the practical application of our research. Opportunities for Researchers and Students.",
+      "imageUrl": "/research/hand.webp",
+      "statistics": [
+        {
+          "label": "Publications",
+          "value": "4000+"
+        },
+        {
+          "label": "CITATION INDEX",
+          "value": "7.9"
+        },
+        {
+          "label": "H INDEX",
+          "value": "53"
+        }
+      ]
+    },
+    "academicResourcesSection": {
+      "title":"Academic Resources",
+      "subTitle":"CENTRAL LIBRARY",
+      "description_one": "K.R. Mangalam University Library denoted as Central Library which has spreaded over 15683 sq. ft. and have a collection of 45,000 books, 2500 reference books, 380 journals, e-journals databases, 1200 dissertations/ reports, 100+ theses & more than 400 law reports & Supreme Court cases etc. Library invested so far more than 1.5 crore of rupees on books & other resources. It is ever inflating day by day, year by year.",
+      "description_two": "Presently, it subscribes to over number of databases, e-resources like, Supreme Court Cases (SCC online), Manupatra online, J-Gate database; and is member of DELNET, NDLI, Shodh Sindhu, Shodh Ganga, Shodh Shuddhi, Shodh Chakra, IRINS etc. All the services provided by the INFLIBNET/ UGC/ Ministry of Education, Govt. of India for the benefit of our intellectual communities i.e. students and faculty members and providing 24×7 services through its Digital Library platform.",
+      "description_three": "The Library alienated into many sections for its smooth functioning & services like, Acquisition Section, Technical Section, Processing Section, Circulation Section, Periodical Section, Reference Section, Digital Section, Research Section, IKS Section (Indian Knowledge System), Competitive Examinations Preparation Section, & Maintenance Section.",
+      "description_four": "K.R. Mangalam University Library is having a main Central Library besides many other Departmental Libraries, e.g. School of Architecture Library, School of Medical & Allied Sciences Library, School of Physiotherapy & Rehabilitation Sciences Library, School of Legal Studies Library, School of Education Library, School of Agricultural Sciences Library, School of Management & Commerce Library, School of Humanities Library, School of Basic & Applied Science Library, School of Journalism & Mass Communication Library, and School of Engineering Library.",
+      "images": [
+        {
+          "url": "/academicResources/item-1.webp"
+        },
+        {
+          "url": "/academicResources/item-2.webp"
+        },
+        {
+          "url": "/academicResources/item-3.webp"
+        }
+      ],
+      "linkInfo": {
+        "label": "Know More",
+        "url": "https://library.krmangalam.edu.in/user?_gl=1*1i62dbw*_gcl_au*MTk0MzAxMjY5Mi4xNzY1MTcwMjg4#/home"
+      }
     }
   }
 }

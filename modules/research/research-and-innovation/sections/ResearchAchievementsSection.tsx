@@ -1,3 +1,4 @@
+import SectionDivider from "@/components/common/SectionDivider";
 import { ResearchAchievementSlider } from "../components";
 import { ResearchAchievementSectionProps } from "../types";
 
@@ -10,7 +11,7 @@ const ResearchAchievementsSection = ({
 
   return (
     <section
-      className="bg-[url(/research/gradient-3.webp)] bg-cover py-8 md:py-12 xl:py-20"
+      className="relative bg-[url(/research/gradient-3.webp)] bg-cover py-8 md:py-12 xl:py-20"
       id="research-achievements"
     >
       <div className="max-w-[1530px] mx-auto w-full px-6 md:px-7 xl:px-16">
@@ -21,6 +22,7 @@ const ResearchAchievementsSection = ({
           <ResearchAchievementSlider achievements={achievements} />
         </div>
       </div>
+      <SectionDivider />
     </section>
   );
 };

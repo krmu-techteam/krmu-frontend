@@ -1,23 +1,14 @@
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import AcademicResources from "./comp/AcademicResources";
 import ContactEnquiries from "./comp/ContactEnquiries";
-import PublicationAchievements from "./comp/PublicationAchievements";
 import TeamLibrary from "./comp/TeamLibrary";
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
 import {
-  CIFSection,
   getResearchandinnovationContent,
-  HeroSection,
-  IPRLegalEthicsSection,
-  KEICSection,
-  OnGoingProjectsSection,
-  RDCSection,
-  ResearchAchievementsSection,
-  ResearchDeanMessageSection,
-  ResearchHighlightSection,
-  TeamRDCSection,
+  researchSections,
 } from "@/modules/research/research-and-innovation";
+import { SectionsRenderer } from "@/components/common/SectionRenderer";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("research-and-innovation");
@@ -85,21 +76,7 @@ const ResearchAndInnovationPage = async () => {
 
   return (
     <>
-      <HeroSection heroSection={data?.heroSection} />
-      <RDCSection rdcSection={data?.rdcSection} />
-      <ResearchDeanMessageSection
-        researchDeanMessageSection={data?.researchDeanMessageSection}
-      />
-      <TeamRDCSection teamRdcSection={data?.teamRdcSection} />
-      <CIFSection cifSection={data?.cifSection} />
-      <KEICSection keicSection={data?.keicSection} />
-      <IPRLegalEthicsSection
-        iprLegalEthicsSection={data?.iprLegalEthicsSection}
-      />
-      <OnGoingProjectsSection onGoingProjectsSection={data?.onGoingProjectsSection} />
-      <ResearchHighlightSection  researchHighlightSection={data?.researchHighlightSection} />
-      <ResearchAchievementsSection researchAchievementSection={data?.researchAchievementSection}/>
-      <PublicationAchievements />
+      <SectionsRenderer sections={researchSections} data={data} />
       <section className="bg-[url(/research/acadbg.webp)] bg-cover py-8 md:py-12 xl:py-20">
         <AcademicResources />
         <TeamLibrary />

@@ -105,6 +105,31 @@ export interface ResearchAchievementSectionProps {
   achievements: ResearchAchievement[];
 }
 
+export interface Statistics {
+  label: string;
+  value: string;
+}
+export interface PublicationAndAchievementSectionProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+  statistics: Statistics[]
+}
+
+export interface AcademicResourcesImages {
+  url: string;
+}
+export interface AcademicResourcesSectionProps {
+  title: string;
+  subTitle: string;
+  description_one: string;
+  description_two: string;
+  description_three: string;
+  description_four: string;
+  linkInfo: Links;
+  images: AcademicResourcesImages[]
+}
+
 export interface RDCSectionData {
   heroSection: HeroSectionProps;
   rdcSection: RDCSectionProps;
@@ -116,6 +141,7 @@ export interface RDCSectionData {
   onGoingProjectsSection: OnGoingProjectsSectionProps;
   researchHighlightSection: ResearchHighlightsProps;
   researchAchievementSection: ResearchAchievementSectionProps;
+  publicationAndAchievementSection: PublicationAndAchievementSectionProps;
 }
 
 export interface ResearchAndInnovationResponse {
