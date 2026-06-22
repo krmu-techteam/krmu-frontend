@@ -96,17 +96,18 @@ export const StaticFacultyEmployeeCard = ({
   const isLoading = facultyContent === null;
 
   return (
-    <Link
-      href={`/faculty/${slug}`}
-      target="_blank"
-      className="w-full overflow-hidden bg-white transition-all duration-300 ease-in-out hover:shadow-xl group flex flex-col"
-    >
+    <div className="relative w-full overflow-hidden bg-white transition-all duration-300 ease-in-out hover:shadow-xl group flex flex-col">
+      {/* CARD LINK OVERLAY */}
+      <Link
+        href={`/faculty/${slug}`}
+        target="_blank"
+        className="absolute inset-0 z-10"
+        aria-label={name}
+      />
+
       {/* IMAGE SECTION */}
-      <div
-        // href={`/faculty/${slug}`}
-        className="relative flex h-full sm:h-[240px] md:h-[280px] w-full items-end justify-center overflow-hidden bg-white"
-      >
-        {/* FACULTY IMAGE */}
+      <div className="relative flex h-full sm:h-[240px] md:h-[280px] w-full items-end justify-center overflow-hidden bg-white">
+        {/* SOCIAL ICONS */}
         <ul className="absolute top-0 -right-2 flex h-14 items-center justify-center gap-2 px-4 sm:h-16 sm:py-2 z-30">
           {socialItems.map((item, index) => {
             const isLinkedin = item.type === "linkedin";
@@ -117,7 +118,7 @@ export const StaticFacultyEmployeeCard = ({
                   href={isLinkedin ? item.value : `mailto:${item.value}`}
                   target={isLinkedin ? "_blank" : undefined}
                   rel={isLinkedin ? "noopener noreferrer" : undefined}
-                  className={`flex items-center justify-center rounded-[4px] p-1.5 transition-opacity hover:opacity-90 ${
+                  className={`relative z-40 flex items-center justify-center rounded-[4px] p-1.5 transition-opacity hover:opacity-90 ${
                     isLinkedin ? "bg-[#0077b5]" : "bg-[#001732]"
                   }`}
                 >
@@ -137,6 +138,8 @@ export const StaticFacultyEmployeeCard = ({
             );
           })}
         </ul>
+
+        {/* FACULTY IMAGE */}
         <Image
           src={imgURL}
           width={272}
@@ -151,18 +154,9 @@ export const StaticFacultyEmployeeCard = ({
       </div>
 
       {/* CONTENT */}
-      <div
-        // href={`/faculty/${slug}`}
-        // target="_blank"
-        className="flex flex-col flex-1"
-      >
-        {/* DETAILS */}
+      <div className="flex flex-col flex-1">
         <div className="min-h-[105px] border-b border-[#ddd] p-1.5 sm:p-5 flex-1 bg-[#001732]">
-          <span
-            // href={`/faculty/${slug}`}
-            // target="_blank"
-            className="inline-block font-bold leading-snug text-lg text-white"
-          >
+          <span className="inline-block font-bold leading-snug text-lg text-white">
             {name}
           </span>
 
@@ -180,53 +174,7 @@ export const StaticFacultyEmployeeCard = ({
             }}
           />
         </div>
-
-        {/* SOCIAL ICONS */}
-        {/* <div className="flex h-16 items-center justify-center mt-auto">
-          {isLoading ? (
-            // LOADING
-            <div className="flex items-center gap-3">
-              <Skeleton className="h-9 w-9 rounded-md" />
-              <Skeleton className="h-9 w-9 rounded-md" />
-            </div>
-          ) : socialItems.length > 0 ? (
-            // ICONS
-            <ul className="flex h-14 items-center justify-center gap-3 px-4 sm:h-16 sm:py-2">
-              {socialItems.map((item, index) => {
-                const isLinkedin = item.type === "linkedin";
-
-                return (
-                  <li key={`${item.type}-${index}`}>
-                    <Link
-                      href={isLinkedin ? item.value : `mailto:${item.value}`}
-                      target={isLinkedin ? "_blank" : undefined}
-                      rel={isLinkedin ? "noopener noreferrer" : undefined}
-                      className={`flex items-center justify-center rounded-md p-1.5 transition-opacity hover:opacity-90 ${
-                        isLinkedin ? "bg-[#0077b5]" : "bg-[#001732]"
-                      }`}
-                    >
-                      {isLinkedin ? (
-                        <Image
-                          src="/linkedin.svg"
-                          width={20}
-                          height={20}
-                          alt="LinkedIn"
-                          className="h-5 w-5"
-                        />
-                      ) : (
-                        <Mail size={20} color="#fff" />
-                      )}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          ) : (
-            // EMPTY SPACE
-            <div className="h-9" />
-          )}
-        </div> */}
       </div>
-    </Link>
+    </div>
   );
 };
