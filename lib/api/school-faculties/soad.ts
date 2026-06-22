@@ -74,7 +74,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Ar.-Praveen-Gupta.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Ar.-Praveen-Gupta-SOAD.jpg",
   },
   {
     id: 108925,
@@ -300,7 +300,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/03/Dr.-Sagar-Paruthi.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/03/Dr.-Sagar-Paruthi-SOAD.jpg",
   },
   // {
   //   id: 43169,
