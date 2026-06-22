@@ -18,6 +18,36 @@ export const sprsFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mamta-Shankar.png",
   },
   {
+    id: 115540,
+    slug: "dr-deepak-kumar-pt",
+    title: {
+      rendered: "Dr. Deepak Kumar (PT)",
+    },
+    featured_media: 115540,
+    acf: {
+      "staff-qualification": "M.P.T.",
+      staff_designation: "Assistant Professor",
+      schools: [1098],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Deepak.png",
+  },
+  {
+    id: 115560,
+    slug: "mr-shalender",
+    title: {
+      rendered: "Mr. SHALENDER",
+    },
+    featured_media: 115560,
+    acf: {
+      "staff-qualification": "M.P.T.",
+      staff_designation: "DEMOSTRATOR",
+      schools: [1098],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Shailender.png",
+  },
+  {
     id: 68869,
     slug: "dr-shazia-mattu",
     title: {
