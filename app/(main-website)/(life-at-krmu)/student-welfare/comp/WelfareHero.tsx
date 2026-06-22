@@ -9,7 +9,10 @@ const playfair = Playfair_Display({
 const WelfareHero = () => {
   return (
     <section className="bg-[#051630] ">
-      <div className="h-[300px] sm:h-[340px] md:h-[510px] lg:h-[600px] xl:h-[850px]  bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1407_6a699f3b68.jpg)] bg-cover bg-center bg-no-repeat" />
+      <div
+        className="h-[300px] sm:h-[340px] md:h-[510px] lg:h-[450px] xl:h-[600px] 2xl:h-[700px] bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1407_6a699f3b68.jpg)] bg-cover bg-no-repeat"
+        style={{ backgroundPosition: "center 5%" }}
+      />
 
       <div className=" bg-[#051630] px-4 pb-[60px]">
         <div className="flex justify-center items-center text-center flex-col max-w-[1350px] mx-auto w-full text-white welfare_desg_int">

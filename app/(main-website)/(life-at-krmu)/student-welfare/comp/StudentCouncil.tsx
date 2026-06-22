@@ -2,6 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+});
 
 type StudentCouncilMember = {
   id: number;
@@ -141,47 +147,97 @@ const StudentCouncil = () => {
     // },
   ];
 
-  const INITIAL_COUNT = 4;
+  const INITIAL_COUNT = 5;
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
 
   return (
-    <section className="py-[50px] px-4">
-      <div className="max-w-[1664px] mx-auto w-full">
-        <h3 className="mb-10 text-4xl font-semibold text-center">
-          Student Council
-        </h3>
+    <>
+      <section className={` bg-[#F0F3F9] px-8 sm:px-8 md:px-12 py-12 md:py-12`}>
+        <div className="mx-auto w-full max-w-[1500px]">
+          <h2
+            className={`${playfair.className} mb-8 text-center text-3xl font-bold text-[#0a1d3a] md:mb-10 md:text-4xl lg:text-[42px]`}
+          >
+            Student Council
+          </h2>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
-          {data.slice(0, visibleCount).map((member) => (
-            <div
-              key={member.id}
-              className="w-full flex flex-col justify-center items-center stu_coun text-center"
-            >
+          <div className="flex flex-col items-center gap-10 rounded-2xl border-4 border-white bg-[#EDF5FF] p-4 md:flex-row md:items-stretch md:gap-8 md:p-6 min-h-[350px]">
+            <div className="w-full flex-shrink-0 overflow-hidden rounded-2xl md:w-[440px] lg:w-[650px]">
               <Image
-                src={member.image}
-                width={150}
-                height={150}
-                className="mb-2.5 object-cover"
-                alt={member.name}
+                src="/student-welfare/council.jpeg"
+                width={1000}
+                height={1000}
+                alt="K.R. Mangalam University Student Council"
+                className=" h-full w-full object-fit"
               />
-              <span className="font-semibold text-sm sm:text-xl">{member.name}</span>
-              <span className="text-xs sm:text-sm">{member.role}</span>
             </div>
-          ))}
-        </div>
 
-        {visibleCount < data.length && (
-          <div className="mt-10 flex justify-center">
-            <button
-              onClick={() => setVisibleCount(data.length)}
-              className="px-6 py-2 rounded-md bg-[#051730] text-white hover:bg-gray-800 transition cursor-pointer"
-            >
-              Load More
-            </button>
+            <p className="self-center text-justify text-sm leading-[1.85] font-medium text-[#0a1d3a]  md:text-[16px]">
+              The K.R. Mangalam University Student Council serves as the
+              representative body of the student community, acting as a vital
+              link between students and the university administration. Working
+              under the Department of Student Welfare (DSW) the Council
+              advocates for student interests, addresses student concerns, and
+              contributes to the development of a vibrant and inclusive campus
+              environment. Through student engagement activities, the Council
+              encourages active participation, leadership, teamwork, creativity,
+              and democratic values. The Student Council strives to create a
+              supportive, dynamic, and memorable university journey for all
+              students.
+            </p>
           </div>
-        )}
-      </div>
-    </section>
+        </div>
+      </section>
+
+      <section className={` bg-[#F0F3F9] px-8 pb-10  md:px-12`}>
+        <div className="mx-auto w-full max-w-[1500px]">
+          <h3
+            className={`${playfair.className} mb-6 text-center text-[30px] font-bold leading-tight text-black md:text-[34px]`}
+          >
+            Student Council Members
+          </h3>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+            {data.slice(0, visibleCount).map((member, index) => (
+              <article
+                key={`${member.name}-${member.role}`}
+                className="flex min-h-[375px] flex-col items-center   rounded-xl bg-[#EDE3C7] px-5 pb-5 pt-4 text-center"
+              >
+                <div
+                  className={`relative mb-4 h-[235px] w-full overflow-hidden rounded-lg   bg-white  shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
+                >
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover  "
+                    priority={index < 5}
+                  />
+                </div>
+                <h4
+                  className={`${playfair.className} text-[18px] font-bold leading-tight text-black`}
+                >
+                  {member.name}
+                </h4>
+                <p className="mt-1 text-[18px] leading-tight text-black">
+                  {member.role}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          {visibleCount < data.length && (
+            <div className="mt-10 flex justify-center">
+              <button
+                onClick={() => setVisibleCount(data.length)}
+                className="px-6 py-2 rounded-md bg-[#051730] text-white hover:bg-gray-800 transition cursor-pointer"
+              >
+                Load More
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
+    </>
   );
 };
 

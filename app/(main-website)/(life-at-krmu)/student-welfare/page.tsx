@@ -7,16 +7,12 @@ import VisionMission from "./comp/VisionMission";
 import WelfareHero from "./comp/WelfareHero";
 import WelfareImage from "./comp/WelfareImage";
 import TabScroll from "./comp/TabScroll";
-
-
+import ClubsSocieties from "./comp/ClubsSocieties";
 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import StudentCouncil from "./comp/StudentCouncil";
-
-
-
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("student-welfare");
@@ -89,10 +85,12 @@ const page = async () => {
     <>
       <WelfareHero />
       <DSWMessage />
-      <AssistantDSWMessage />
+      {/* <AssistantDSWMessage /> */}
       <VisionMission />
       <TeamMember />
+      <ClubsSocieties />
       <StudentCouncil />
+
       {/* <WelfareImage /> */}
       <TabScroll />
       {photoGallery && <PhotoGallery photoGallery={photoGallery} />}
