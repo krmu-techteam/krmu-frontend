@@ -47,36 +47,36 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Barnali-Bhattacharjee.png",
   },
-  {
-    id: 106728,
-    slug: "dr-sampada-s-jahagirdar",
-    title: {
-      rendered: "Dr. Sampada S Jahagirdar",
-    },
-    featured_media: 106729,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Associate Professor",
-      schools: [1098],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Sampada-S-Jahagirdar.png",
-  },
-  {
-    id: 108927,
-    slug: "dr-yukti-gogia-pt",
-    title: {
-      rendered: "Dr. Yukti Gogia (PT)",
-    },
-    featured_media: 108928,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Clinical demonstrator",
-      schools: [1098],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/09/Dr.-Yukti-Gogia.png",
-  },
+  // {
+  //   id: 106728,
+  //   slug: "dr-sampada-s-jahagirdar",
+  //   title: {
+  //     rendered: "Dr. Sampada S Jahagirdar",
+  //   },
+  //   featured_media: 106729,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Associate Professor",
+  //     schools: [1098],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Sampada-S-Jahagirdar.png",
+  // },
+  // {
+  //   id: 108927,
+  //   slug: "dr-yukti-gogia-pt",
+  //   title: {
+  //     rendered: "Dr. Yukti Gogia (PT)",
+  //   },
+  //   featured_media: 108928,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Clinical demonstrator",
+  //     schools: [1098],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2025/09/Dr.-Yukti-Gogia.png",
+  // },
   {
     id: 106798,
     slug: "dr-sumit-kalra",
@@ -167,7 +167,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
       schools: [1098],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.-Aatika-Waheed.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.-Aatika-Waheed-1.png",
   },
   {
     id: 53026,
@@ -229,7 +229,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Ankita-Samuel.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Ankita-Samuel-1.png",
   },
   {
     id: 113780,
@@ -255,7 +255,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     featured_media: 106768,
     acf: {
       "staff-qualification": "M.P.T.",
-      staff_designation: "Assistant  Professor",
+      staff_designation: "Demonstrator",
       schools: [],
     },
     featured_media_url:
