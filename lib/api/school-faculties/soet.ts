@@ -16,7 +16,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Pankaj-Agarwal-DEAN-SOET.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Pankaj-Agarwal-DEAN-SOET.jpg",
   },
   {
     id: 114214,
