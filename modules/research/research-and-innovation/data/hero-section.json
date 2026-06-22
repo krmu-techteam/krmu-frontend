@@ -28,6 +28,78 @@
         "name": "Dr. Seema Raj",
         "designation": "Dean Research"
       }
+    },
+    "researchDeanMessageSection": {
+      "title": "Message from the Dean Research",
+      "subTitle": "Greetings from Team Research & Development of (RDC) Cell",
+      "description_one": "In recent past, there is a marked change in global environment where the capacity to innovate and commercialize new high-tech products has taken the shape of a distributed global network. Sensing this pulse, India has recognized the strategic and economic importance of competitiveness and knowledge economy. India strives to be ‘Vishwaguru’ and to be placed in top three Economic leaders of World. Knowledge and only knowledge through innovations in every walk of life can be the sole path to achieve this Goal.",
+      "description_two": "Research, Development and Innovation have become integral part of the journey towards it. It is high time that apart from Public Funded R&D Institutes, Industries, Institutes of National Importance and all other Higher Education Institutes come forward to take the challenge and contribute significantly for development of Society as a whole.",
+      "description_three": "We are also looking forward to have very active collaboration with top ranking Academic Institutions and Industries to have outcome based projects. We encourage our Faculty members to have Consultancy projects and Collaborative Projects. We maintain high standards of Integrity and Ethics and comply with ethical codes of research.",
+      "description_four": "KRMU envisages to align its R&D endevours in line with Nation’s aspirations such as ‘Atma Nirbhar Bharat’, ‘Technology-enabled development, energy transition and climate action’, ‘Swachh Bharat’, ‘Ayushman Bharat’, ‘Atal Innovation Mission’ ‘Skill Development’ etc."
+    },
+    "teamRdcSection": {
+      "title": "Team RDC",
+      "teamRDCMembers": [
+        {
+          "name": "Prof. (Dr.) Pawan Kumar (PhD)",
+          "designation": "Associate Dean Research",
+          "facultyUrl": "/faculty/dr-pawan-kumar",
+          "facultyImageUrl": "/teamrdc/pawan.webp"
+        },
+        {
+          "name": "Dr. Seema Raj (M.Phil, PhD)",
+          "designation": "Dean Research",
+          "facultyUrl": "/faculty/dr-seema-raj",
+          "facultyImageUrl": "/teamrdc/seema.png"
+        },
+        {
+          "name": "Dr. Surendra Kumar Yadav (PhD)",
+          "designation": "Associate Dean PhD Programme",
+          "facultyUrl": "/faculty/dr-surendra",
+          "facultyImageUrl": "/teamrdc/surendra.webp"
+        },
+        {
+          "name": "Dr. Prabhakar Bhandari (PhD)",
+          "designation": "Research Finance Officer",
+          "facultyUrl": "/faculty/dr-prabhakar",
+          "facultyImageUrl": "/teamrdc/prabhakar.webp"
+        },
+        {
+          "name": "Dr. Shivani Wadhwa (PhD)",
+          "designation": "Research Communication Officer",
+          "facultyUrl": "/faculty/dr-shivani-wadhwa",
+          "facultyImageUrl": "/teamrdc/wadhwa.png"
+        },
+        {
+          "name": "Aman Vishwakarma",
+          "designation": "MIS Executive",
+          "facultyUrl": "",
+          "facultyImageUrl": "/teamrdc/aman.png"
+        }
+      ]
+    },
+    "cifSection": {
+      "title": "Central Instrumentation Facility (CIF)",
+      "description_one": "K.R. Mangalam University boasts many specialised research laboratories, each equipped with modern technology to support a wide array of academic and scientific inquiries. Our labs cater to diverse disciplines, enabling groundbreaking research and innovation.",
+      "description_two": "At the heart of our research infrastructure is the Central Instrumentation Facility (CIF). This premier facility is a resource hub for our researchers, providing access to high-end instruments for advanced experimental and analytical work. Key instruments available at CIF include HPLC, UV-VIS spectrophotometer.",
+      "images": [
+        {
+          "url": "/cif/item-1.webp"
+        },
+        {
+          "url": "/cif/item-2.webp"
+        },
+        {
+          "url": "/cif/item-3.webp"
+        },
+        {
+          "url": "/cif/item-4.webp"
+        }
+      ],
+      "linkInfo": {
+        "label": "Know More",
+        "url": "/cif"
+      }
     }
   }
 }

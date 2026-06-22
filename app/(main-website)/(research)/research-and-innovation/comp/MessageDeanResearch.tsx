@@ -31,7 +31,7 @@ const MessageDeanResearch = () => {
           </p>
         </div>
       </div>
-      <div className="lg:w-1/2 font-poppins">
+      <div className="lg:w-1/2 leading-[1.8] font-poppins">
         <p className="font-poppins">
           We are also looking forward to have very active collaboration with top
           ranking Academic Institutions and Industries to have outcome based

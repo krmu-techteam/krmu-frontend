@@ -1,21 +1,23 @@
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import AcademicResources from "./comp/AcademicResources";
-import CIF from "./comp/CIF";
 import ContactEnquiries from "./comp/ContactEnquiries";
 import IPR from "./comp/IPR";
 import KEIC from "./comp/KEIC";
-import MessageDeanResearch from "./comp/MessageDeanResearch";
 import OnGoing from "./comp/OnGoing";
 import PublicationAchievements from "./comp/PublicationAchievements";
 import ResearchAchievements from "./comp/ResearchAchievements";
 import ResearchHighlight from "./comp/ResearchHighlight";
 import TeamLibrary from "./comp/TeamLibrary";
-import TeamRDC from "./comp/TeamRDC";
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
-import { getResearchandinnovationContent, HeroSection, RDCSection } from "@/modules/research/research-and-innovation";
-
-
+import {
+  CIFSection,
+  getResearchandinnovationContent,
+  HeroSection,
+  RDCSection,
+  ResearchDeanMessageSection,
+  TeamRDCSection,
+} from "@/modules/research/research-and-innovation";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("research-and-innovation");
@@ -79,19 +81,19 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const page = async () => {
-  const {data} = await getResearchandinnovationContent();
- 
+  const { data } = await getResearchandinnovationContent();
+
   return (
     <>
-    <HeroSection heroSection={data?.heroSection}/>
+      <HeroSection heroSection={data?.heroSection} />
       {/* <ResearchInnovationHeroSection /> */}
 
       <section>
-        <RDCSection rdcSection={data?.rdcSection}/>
-        <MessageDeanResearch />
-        <TeamRDC />
+        <RDCSection rdcSection={data?.rdcSection} />
+        <ResearchDeanMessageSection researchDeanMessageSection={data?.researchDeanMessageSection} />
+        <TeamRDCSection teamRdcSection={data?.teamRdcSection} />
       </section>
-      <CIF />
+      <CIFSection cifSection={data?.cifSection}/>
       <KEIC />
       <IPR />
       <OnGoing />
