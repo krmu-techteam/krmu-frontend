@@ -18,6 +18,16 @@
           "url": "/PDF/conferences"
         }
       ]
+    },
+    "rdcSection": {
+      "title": "Research and Development Cell (RDC)",
+      "description_one": "The Research and Development Cell, led by the esteemed Dean of Research, is the fulcrum of our research activities. With dedicated Associate and Assistant Deans, the RDC oversees diverse research initiatives, promoting interdisciplinary studies and innovative research methodologies. The cell plays a pivotal role in advancing our research agenda, fostering academic partnerships, and enhancing the university’s research profile on the global stage.",
+      "description_two": "K.R. Mangalam University maintains its own comprehensive data repository encompassing all its publications, spanning journal articles, patents, books, and book chapters. Faculty members responsible for these publications personally upload their details onto our research application. Moreover, the application also facilitates the submission of reimbursement requests for conference registrations, fees for workshops, seminars, and memberships. Additionally, it serves as a platform for managing in-house conferences and both applied and granted projects.",
+      "imageUrl": "/research/seema.webp",
+      "deanInfo": {
+        "name": "Dr. Seema Raj",
+        "designation": "Dean Research"
+      }
     }
   }
 }

@@ -7,14 +7,13 @@ import KEIC from "./comp/KEIC";
 import MessageDeanResearch from "./comp/MessageDeanResearch";
 import OnGoing from "./comp/OnGoing";
 import PublicationAchievements from "./comp/PublicationAchievements";
-import RDC from "./comp/RDC";
 import ResearchAchievements from "./comp/ResearchAchievements";
 import ResearchHighlight from "./comp/ResearchHighlight";
 import TeamLibrary from "./comp/TeamLibrary";
 import TeamRDC from "./comp/TeamRDC";
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
-import { getResearchandinnovationContent, HeroSection } from "@/modules/research/research-and-innovation";
+import { getResearchandinnovationContent, HeroSection, RDCSection } from "@/modules/research/research-and-innovation";
 
 
 
@@ -87,8 +86,8 @@ const page = async () => {
     <HeroSection heroSection={data?.heroSection}/>
       {/* <ResearchInnovationHeroSection /> */}
 
-      <section className=" px-4 pt-[30px] pb-[50px] bg-[url(/research/bg-gradient.webp)] bg-cover bg-center">
-        <RDC />
+      <section>
+        <RDCSection rdcSection={data?.rdcSection}/>
         <MessageDeanResearch />
         <TeamRDC />
       </section>
