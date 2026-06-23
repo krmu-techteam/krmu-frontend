@@ -14,7 +14,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Deepak-Maun.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Deepak-Maun.jpeg",
   },
   {
     id: 113882,
@@ -29,7 +29,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Indraneel-Mandal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Indraneel-Mandal.jpeg",
   },
   {
     id: 53038,
