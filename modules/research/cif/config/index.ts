@@ -1,4 +1,9 @@
-import { HeroSection, OverviewSection } from "../sections";
+import {
+  CIFTeamSection,
+  DirectorMessageSection,
+  HeroSection,
+  OverviewSection,
+} from "../sections";
 import { RendererConfig } from "@/lib/types/common";
 
 export const CIFConfig: RendererConfig[] = [
@@ -13,5 +18,17 @@ export const CIFConfig: RendererConfig[] = [
     Component: OverviewSection,
     propName: "overviewSection",
     dataKey: "overviewSection",
+  },
+  {
+    key: "director-message",
+    Component: DirectorMessageSection,
+    propName: "directorMessageSection",
+    dataKey: "directorMessageSection",
+  },
+  {
+    key: "cif-team",
+    Component: CIFTeamSection,
+    propName: "cifTeamSection",
+    dataKey: "cifTeamSection",
   },
 ];

@@ -19,10 +19,39 @@ export interface OverviewSectionProps {
   images: CIFGalleryImages[];
 }
 
+export interface DirectorMessageSectionProps {
+  title: string;
+  message: string;
+  imageUrl: string;
+  name: string;
+  role: string;
+}
+
+export interface CIFTeamMember {
+  name: string;
+  designation: string;
+  image: string;
+  link: string;
+}
+
+export interface CIFCTA {
+  text: string;
+  url: string;
+  iconUrl: string;
+}
+
+export interface CIFTeamSectionProps {
+  title: string;
+  cta: CIFCTA;
+  teamMember: CIFTeamMember;
+}
+
 // CIF DATA
 export interface CIFSectionData {
   heroSection: HeroSectionProps;
   overviewSection: OverviewSectionProps;
+  directorMessageSection: DirectorMessageSectionProps;
+  cifTeamSection: CIFTeamSectionProps;
 }
 
 // CIF PAGE

@@ -1,9 +1,7 @@
 import { STRAPI_URL } from "@/app/constant";
 import CIFAchievements from "./comp/CIFAchievements";
 import CIFFacilities from "./comp/CIFFacilities";
-import { CIFIntegral } from "./comp/CIFIntegral";
 import CIFUpcomingEvents from "./comp/CIFUpcomingEvents";
-import MessageDirector from "./comp/MessageDirector";
 import TeamCIF from "./comp/TeamCIF";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
@@ -79,12 +77,8 @@ const CifPage = async () => {
         sections={CIFConfig}
         data={data}
         key={CIFConfig.map((item) => item.key).join("-")}
-      />
-      <CIFIntegral />
-      <section className="bg-[url(/research/bg-gradient.webp)] bg-no-repeat bg-cover py-[30px] px-4">
-        <MessageDirector />
-        <TeamCIF />
-      </section>
+      /> 
+
       <CIFFacilities />
       <CIFAchievements />
       <CIFUpcomingEvents />
