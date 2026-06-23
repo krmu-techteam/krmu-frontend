@@ -64,6 +64,7 @@ export const StaticFacultyEmployeeCard = ({
     const $ = cheerio.load(facultyContent);
 
     const items: SocialItem[] = [];
+    let emailAdded = false;
 
     $(".fusion-checklist li a").each((_, el) => {
       const href = $(el).attr("href")?.trim();
@@ -78,12 +79,13 @@ export const StaticFacultyEmployeeCard = ({
         });
       }
 
-      // EMAIL
-      else if (href.startsWith("mailto:")) {
+      // EMAIL — only add the first email found
+      else if (href.startsWith("mailto:") && !emailAdded) {
         items.push({
           type: "email",
           value: href.replace("mailto:", ""),
         });
+        emailAdded = true;
       }
     });
 
