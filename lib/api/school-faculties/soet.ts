@@ -209,7 +209,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Amit-Kumar-Singh.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/amit-kumar-singh.jpeg",
   },
   {
     id: 10848,
@@ -344,7 +344,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Mr.-Deepak.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/deepak-soet.jpeg",
   },
   {
     id: 65581,
