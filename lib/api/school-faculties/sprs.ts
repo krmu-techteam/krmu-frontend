@@ -120,7 +120,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
       schools: [1098],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Sumit-Kalra-SPRS.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Prof-Sumit-Kalra.png",
   },
 
   {
@@ -136,7 +136,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
       schools: [1098],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Shishir-Nigam.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/04/Prof-Sumit-Kalra-1.png",
   },
   {
     id: 69976,
@@ -151,7 +151,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
       schools: [1098],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/10/Dr.Hemant-Kumar-P.T.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/10/Dr.-Hemant-Kumar.png",
   },
 
   {
