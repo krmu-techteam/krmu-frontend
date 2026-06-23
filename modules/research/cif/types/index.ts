@@ -66,6 +66,11 @@ export interface AchievementSectionProps {
   achievements: Achievement[];
 }
 
+export interface UpcomingEventsSectionProps {
+  title: string;
+  imageUrl: string;
+}
+
 // CIF DATA
 export interface CIFSectionData {
   heroSection: HeroSectionProps;

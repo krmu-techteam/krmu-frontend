@@ -98,6 +98,10 @@
           "url": "#"
         }
       ]
+    },
+    "upcomingEventsSection": {
+      "title": "Upcoming Events",
+      "imageUrl": "/research/poster.jpg"
     }
   }
 }

@@ -5,6 +5,7 @@ import {
   DirectorMessageSection,
   HeroSection,
   OverviewSection,
+  UpcomingEventsSection,
 } from "../sections";
 import { RendererConfig } from "@/lib/types/common";
 
@@ -44,5 +45,11 @@ export const CIFConfig: RendererConfig[] = [
     Component: AchievementSection,
     propName: "achievementSection",
     dataKey: "achievementSection",
+  },
+  {
+    key: "upcoming-events",
+    Component: UpcomingEventsSection,
+    propName: "upcomingEventsSection",
+    dataKey: "upcomingEventsSection",
   },
 ];

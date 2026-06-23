@@ -4,3 +4,4 @@ export { default as DirectorMessageSection } from "./DirectorMessageSection";
 export { default as CIFTeamSection } from "./CIFTeamSection";
 export { default as CIFFacilitiesSection } from "./CIFFacilitiesSection";
 export { default as AchievementSection } from "./AchievementSection";
+export { default as UpcomingEventsSection } from "./UpcomingEventsSection";
