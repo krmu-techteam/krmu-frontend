@@ -44,7 +44,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Jitin-Kumar-Gambhir.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/07/Dr.-Jitin-Gambhir-SOMC.jpg",
   },
   {
     id: 10719,
@@ -74,7 +74,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mohammed-Mustehsan.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/07/Dr.-Mohammed-Mustehasan-SOMC.jpg",
   },
   {
     id: 107964,
@@ -120,7 +120,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Hamza-Naim.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/07/Dr.-Hamza-Naim-SOMC.jpg",
   },
 
   {
@@ -151,7 +151,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mohd-Adil.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Mohd.-Adil-SOMC.jpg",
   },
   {
     id: 97595,
@@ -181,7 +181,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mohd-Rafiq-Shah.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/02/Dr.-Rafiq-Shah-SOMC.jpg",
   },
   {
     id: 54018,
@@ -196,7 +196,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/07/Dr.-Vijay-Prakash-Sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/07/Dr.-Vijay-Prakash-Sharma-SOMC.jpg",
   },
 
   {
@@ -227,7 +227,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1214],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mohd.-Anas.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Dr.-Mohd.-Anas-Kamil-SOMC.jpg",
   },
   {
     id: 17612,
@@ -242,7 +242,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Takrar-Ahmad-Yattoo.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Mr.-Takrar-Ahmed-SOMC.jpg",
   },
   {
     id: 10721,
@@ -349,7 +349,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mohammed-Nizamuddin.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mohammed-Nizamuddin-SOMC.jpg",
   },
   {
     id: 10295,
