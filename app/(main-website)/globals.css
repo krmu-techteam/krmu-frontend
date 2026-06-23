@@ -15,7 +15,7 @@
 
 /* Custom utility class */
 @layer utilities {
-  .feeStruct_btn{
+  .feeStruct_btn {
     background: #f3f4f6;
   }
   @media (max-width: 640px) {
@@ -2112,7 +2112,7 @@
 
   .faculty_interest_wrapper .interest-title {
     color: #000000;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 1.2;
     font-weight: 800;
     margin-bottom: 14px;
