@@ -90,8 +90,78 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/Arshalan-Ayas.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/Mr.-Arsalan-Ahmed-Alyas-SOET.png",
   },
+  // {
+  //   id: 115495,
+  //   slug: "dr-ritesh-kumar",
+  //   title: {
+  //     rendered: "Dr. Ritesh Kumar",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Dual Degree M.Tech. + Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url: "",
+  // },
+  // {
+  //   id: 115624,
+  //   slug: "ms-anjali-pal",
+  //   title: {
+  //     rendered: "Ms. Anjali Pal",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url: "",
+  // },
+  // {
+  //   id: 115623,
+  //   slug: "ms-aayushi-bansal",
+  //   title: {
+  //     rendered: "Ms. Aayushi Bansal",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url: "",
+  // },
+  // {
+  //   id: 115622,
+  //   slug: "mr-niraj-kumar",
+  //   title: {
+  //     rendered: "Mr. Niraj Kumar",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url: "",
+  // },
+  // {
+  //   id: 115620,
+  //   slug: "dr-apeksha-mittal",
+  //   title: {
+  //     rendered: "Dr. Apeksha Mittal ",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url: "",
+  // },
   {
     id: 114217,
     slug: "mrs-nainsi-soni",
