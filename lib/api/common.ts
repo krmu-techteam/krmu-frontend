@@ -722,6 +722,8 @@ export const createOrganizationSchema = ({
   return JSON.stringify(schema, null, 2);
 };
 
+
+
 interface CollageOrUniversitySchemaProps {
   name: string;
   alternateName?: string;
@@ -763,3 +765,38 @@ export function mapTocToFaqSchemaData(tocData: TocFaq[]) {
     })),
   );
 }
+
+
+
+
+interface HowToStep {
+  name: string;
+  text: string;
+}
+
+interface HowToSchemaProps {
+  name: string;
+  description: string;
+  steps: HowToStep[];
+}
+
+export const createHowToSchema = ({
+  name,
+  description,
+  steps,
+}: HowToSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
+  };
+
+  return JSON.stringify(schema);
+};
