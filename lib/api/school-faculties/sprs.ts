@@ -215,7 +215,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
       schools: [1098],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Shailender.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Mr.-SHALENDER-SPRS.png",
   },
   {
     id: 115617,
