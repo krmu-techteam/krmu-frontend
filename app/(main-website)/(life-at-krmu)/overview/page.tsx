@@ -1,6 +1,5 @@
 import { getLifeAtKRMUOverviewData } from "@/lib/api/lkoverview";
 import OverviewHearit from "./comp/OverviewHearit";
-import OverviewHero from "./comp/OverviewHero";
 import OverviewImpacting from "./comp/OverviewImpacting";
 import OverviewInnovate from "./comp/OverviewInnovate";
 import OverviewLifeBeyond from "./comp/OverviewLifeBeyond";
@@ -12,9 +11,8 @@ import OverviewYourWellBeing from "./comp/OverviewYourWellBeing";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
-
+import { SectionsRenderer } from "@/components/common/SectionRenderer";
+import { getOverviewContent, Sections } from "@/modules/life-at-krmu/overview";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("life-at-krmu-overview");
@@ -81,9 +79,14 @@ const page = async () => {
   const overviewData = await getLifeAtKRMUOverviewData();
   const overviewVideo = overviewData?.overview_video;
   const testimonials = overviewData?.hear_it_testimonials;
+  const { data } = await getOverviewContent();
   return (
     <>
-      <OverviewHero overviewVideo={overviewVideo} />
+      <SectionsRenderer
+        sections={Sections}
+        data={data}
+        extraProps={{ overviewVideo }}
+      />
       <OverviewLifeBeyond />
       <OverviewInnovate />
       <section className="w-full">

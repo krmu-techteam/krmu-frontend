@@ -9,16 +9,18 @@ type Section = {
 type Props = {
   sections: readonly Section[];
   data: Record<string, any>;
+  extraProps?: Record<string, any>;
 };
 
 export const SectionsRenderer = ({
   sections,
   data,
+  extraProps = {},
 }: Props) => {
   return (
     <>
       {sections.map(({ key, Component, propName }) => {
-        const sectionData = data[propName];
+        const sectionData = data?.[propName];
 
         if (!sectionData) return null;
 
@@ -26,6 +28,7 @@ export const SectionsRenderer = ({
           <Component
             key={key}
             {...{ [propName]: sectionData }}
+            {...extraProps}
           />
         );
       })}
