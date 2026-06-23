@@ -56,6 +56,16 @@ export interface CIFFacilitiesSectionProps {
   facilities: CIFFacility[];
 }
 
+export interface Achievement {
+  title: string;
+  imageUrl: string;
+  url: string;
+}
+export interface AchievementSectionProps {
+  title: string;
+  achievements: Achievement[];
+}
+
 // CIF DATA
 export interface CIFSectionData {
   heroSection: HeroSectionProps;

@@ -1,4 +1,5 @@
 import {
+  AchievementSection,
   CIFFacilitiesSection,
   CIFTeamSection,
   DirectorMessageSection,
@@ -37,5 +38,11 @@ export const CIFConfig: RendererConfig[] = [
     Component: CIFFacilitiesSection,
     propName: "cifFacilitiesSection",
     dataKey: "cifFacilitiesSection",
+  },
+  {
+    key: "achivement",
+    Component: AchievementSection,
+    propName: "achievementSection",
+    dataKey: "achievementSection",
   },
 ];

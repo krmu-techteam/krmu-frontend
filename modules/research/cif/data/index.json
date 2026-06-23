@@ -78,6 +78,26 @@
           "url": "/muffle-furnance"
         }
       ]
+    },
+    "achievementSection": {
+      "title": "Achievements",
+      "achievements": [
+        {
+          "title": "Tuning the structural, optical, and dielectric properties of europium-doped barium titanate ceramics",
+          "imageUrl": "/research/achive.webp",
+          "url": "#"
+        },
+        {
+          "title": "Computational analysis of modified solar air heater having combination of ribs and protrusion in S-shaped configuration",
+          "imageUrl": "/research/achieve2.jpg",
+          "url": "#"
+        },
+        {
+          "title": "Comparative thermo-hydraulic analysis of periodic stepped open micro pin-fin heat sink",
+          "imageUrl": "/research/achieve3.jpg",
+          "url": "#"
+        }
+      ]
     }
   }
 }

@@ -1,5 +1,4 @@
 import { STRAPI_URL } from "@/app/constant";
-import CIFAchievements from "./comp/CIFAchievements";
 import CIFUpcomingEvents from "./comp/CIFUpcomingEvents";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
@@ -76,8 +75,6 @@ const CifPage = async () => {
         data={data}
         key={CIFConfig.map((item) => item.key).join("-")}
       />
-
-      <CIFAchievements />
       <CIFUpcomingEvents />
     </>
   );
