@@ -1,4 +1,5 @@
 import {
+  CIFFacilitiesSection,
   CIFTeamSection,
   DirectorMessageSection,
   HeroSection,
@@ -30,5 +31,11 @@ export const CIFConfig: RendererConfig[] = [
     Component: CIFTeamSection,
     propName: "cifTeamSection",
     dataKey: "cifTeamSection",
+  },
+  {
+    key: "cif-facilities",
+    Component: CIFFacilitiesSection,
+    propName: "cifFacilitiesSection",
+    dataKey: "cifFacilitiesSection",
   },
 ];

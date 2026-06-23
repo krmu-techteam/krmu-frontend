@@ -46,12 +46,23 @@ export interface CIFTeamSectionProps {
   teamMember: CIFTeamMember;
 }
 
+export interface CIFFacility {
+  label: string;
+  url: string;
+}
+
+export interface CIFFacilitiesSectionProps {
+  title: string;
+  facilities: CIFFacility[];
+}
+
 // CIF DATA
 export interface CIFSectionData {
   heroSection: HeroSectionProps;
   overviewSection: OverviewSectionProps;
   directorMessageSection: DirectorMessageSectionProps;
   cifTeamSection: CIFTeamSectionProps;
+  cifFacilitiesSection: CIFFacilitiesSectionProps;
 }
 
 // CIF PAGE

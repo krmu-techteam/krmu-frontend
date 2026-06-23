@@ -1,8 +1,6 @@
 import { STRAPI_URL } from "@/app/constant";
 import CIFAchievements from "./comp/CIFAchievements";
-import CIFFacilities from "./comp/CIFFacilities";
 import CIFUpcomingEvents from "./comp/CIFUpcomingEvents";
-import TeamCIF from "./comp/TeamCIF";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
 import { SectionsRenderer } from "@/components/common/SectionRenderer";
@@ -77,9 +75,8 @@ const CifPage = async () => {
         sections={CIFConfig}
         data={data}
         key={CIFConfig.map((item) => item.key).join("-")}
-      /> 
+      />
 
-      <CIFFacilities />
       <CIFAchievements />
       <CIFUpcomingEvents />
     </>

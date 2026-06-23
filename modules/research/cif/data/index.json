@@ -39,16 +39,45 @@
     "cifTeamSection": {
       "title": "Team CIF",
       "cta": {
-        "text":"Interdisciplinary Research Centers and Laboratories",
-        "url":"/research-centre",
-        "iconUrl":"/placements/white-arrow.svg"
+        "text": "Interdisciplinary Research Centers and Laboratories",
+        "url": "/research-centre",
+        "iconUrl": "/placements/white-arrow.svg"
       },
       "teamMember": {
-        "name":"Dr. Prabhakar Bhandari (PhD)",
-        "designation":"Director – Operations & Maintenance",
-        "image":"/research/prabhakar.webp",
-        "link":"/faculty/dr-prabhakar-bhandari"
+        "name": "Dr. Prabhakar Bhandari (PhD)",
+        "designation": "Director – Operations & Maintenance",
+        "image": "/research/prabhakar.webp",
+        "link": "/faculty/dr-prabhakar-bhandari"
       }
+    },
+    "cifFacilitiesSection": {
+      "title": "Facilities",
+      "facilities": [
+        {
+          "label": "TGA/DSC",
+          "url": "/tga-dsc"
+        },
+        {
+          "label": "Fourier Transform Infrared Spectrometer (FTIR)",
+          "url": "/fourier-transform-infrared-spectrometer-ftir"
+        },
+        {
+          "label": "Double beam UV-Visible Spectrometer",
+          "url": "/double-beam-uv-visible-spectrometer"
+        },
+        {
+          "label": "Refrigerated Centrifuge",
+          "url": "/refrigerated-centrifuges"
+        },
+        {
+          "label": "LCR Meter",
+          "url": "/lcr-meter-instrument"
+        },
+        {
+          "label": "Muffle Furnance",
+          "url": "/muffle-furnance"
+        }
+      ]
     }
   }
 }
