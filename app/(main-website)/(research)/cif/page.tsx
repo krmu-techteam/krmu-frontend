@@ -1,15 +1,14 @@
 import { STRAPI_URL } from "@/app/constant";
 import CIFAchievements from "./comp/CIFAchievements";
 import CIFFacilities from "./comp/CIFFacilities";
-import CIFHeroSection from "./comp/CIFHeroSection";
 import { CIFIntegral } from "./comp/CIFIntegral";
 import CIFUpcomingEvents from "./comp/CIFUpcomingEvents";
 import MessageDirector from "./comp/MessageDirector";
 import TeamCIF from "./comp/TeamCIF";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
-
-
+import { SectionsRenderer } from "@/components/common/SectionRenderer";
+import { CIFConfig, getCIFContent } from "@/modules/research/cif";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("cif");
@@ -72,10 +71,15 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const page = () => {
+const CifPage = async () => {
+  const { data } = await getCIFContent();
   return (
     <>
-      <CIFHeroSection />
+      <SectionsRenderer
+        sections={CIFConfig}
+        data={data}
+        key={CIFConfig.map((item) => item.key).join("-")}
+      />
       <CIFIntegral />
       <section className="bg-[url(/research/bg-gradient.webp)] bg-no-repeat bg-cover py-[30px] px-4">
         <MessageDirector />
@@ -88,4 +92,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CifPage;

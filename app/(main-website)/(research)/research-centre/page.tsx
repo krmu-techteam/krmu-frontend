@@ -1,8 +1,11 @@
 import { Metadata } from "next";
-import ResearchCenterTable from "./comp/ResearchCenterTable";
-import ResearchCentreHero from "./comp/ResearchCentreHero";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
+import { SectionsRenderer } from "@/components/common/SectionRenderer";
+import {
+  researchCentreConfig,
+  getResearchCentreContent,
+} from "@/modules/research/research-centre";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("researchcentre");
@@ -64,11 +67,15 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
-const page = () => {
+const page = async () => {
+  const { data } = await getResearchCentreContent();
   return (
     <>
-      <ResearchCentreHero />
-      <ResearchCenterTable />
+      <SectionsRenderer
+        sections={researchCentreConfig}
+        data={data}
+        key={researchCentreConfig.map((item) => item.key).join("-")}
+      />
     </>
   );
 };

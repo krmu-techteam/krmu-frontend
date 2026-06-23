@@ -278,3 +278,10 @@ export type SchoolFacultiesType = {
 
   featured_media_url: string;
 };
+
+export interface RendererConfig {
+  key: string;
+  Component: React.ComponentType<any>;
+  propName: string;
+  dataKey: string;
+}

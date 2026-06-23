@@ -1,0 +1,33 @@
+{
+  "data": {
+    "heroSection": {
+      "title": "Central Instrumentation Facility",
+      "imageUrl": "/research/ciflogo.png"
+    },
+    "overviewSection": {
+      "description": "Central Instrumentation Facility (CIF) is an Integral part of K.R Mangalam University. CIF is a modern lab equipped with advanced analytical instruments such as FTIR (Fourier-Transform Infrared Spectrometer), UV-VIS (Double beam UV-visible spectrometer), LCR meter, DSC/TGA/DTA etc. It provides vital support for research and educational activities, allowing users from different Institutes and Industries to access these sophisticated tools and ensures that the facility’s resources are available to a broad range of researchers and students. The CIF endeavors to foster scientific innovation and enhance the quality of research.",
+      "objectives": {
+        "title": "Objectives",
+        "list": [
+          "Provide access to advanced scientific instruments and equipment for researchers and students in Basic Sciences, Medical & Allied Sciences & Multidisciplinary Sciences.",
+          "Facilitate high-quality research by offering technical assistance and training on the use of instruments.",
+          "Promote interdisciplinary collaboration and innovation by bringing together researchers from different fields."
+        ]
+      },
+      "images": [
+        {
+          "url": "/cif/item-1.webp"
+        },
+        {
+          "url": "/cif/item-2.webp"
+        },
+        {
+          "url": "/cif/item-3.webp"
+        },
+        {
+          "url": "/cif/item-4.webp"
+        }
+      ]
+    }
+  }
+}

@@ -24,3 +24,4 @@ export interface DeanHonorHTML {
   dean_honor_html_field: string; // HTML string content
   acc_title: string;
 }
+ 

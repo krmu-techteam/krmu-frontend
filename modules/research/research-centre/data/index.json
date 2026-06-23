@@ -1,0 +1,35 @@
+{
+  "data": {
+    "heroSection": {
+      "title": "Research Centre"
+    },
+    "researchCentersSection": {
+      "researchCenters": [
+        {
+          "title": "Centre of Excellence in Artificial Intelligence (CoE-AI)",
+          "reportUrl": "https://www.krmangalam.edu.in/centre-of-excellence-artificial-intelligence/",
+          "viewUrl": "https://krmangalam.edu.in/pdfs/coe-ai-annual-report-2024-25.pdf",
+          "viewText": "View Report"
+        },
+        {
+          "title": "Centre of Excellence for Advanced Material Research (CEAMR)",
+          "reportUrl": "https://www.krmangalam.edu.in/cif/",
+          "viewUrl": "https://www.krmangalam.edu.in/pdfs/ceamr-annual-report-2024-25.pdf",
+          "viewText": "View Report"
+        },
+        {
+          "title": "Centre of Excellence for Sustainable Development Goals (CoE-SDG)",
+          "reportUrl": "",
+          "viewUrl": "https://krmangalam.edu.in/pdfs/coe-sdg-annual-report-2024-25.pdf",
+          "viewText": "View Report"
+        },
+        {
+          "title": "K.R. Mangalam Entrepreneurship and Incubation Centre (KEIC)",
+          "reportUrl": "https://www.krmangalam.edu.in/keic/",
+          "viewUrl": "https://krmangalam.edu.in/pdfs/keic-foundation-annual-report-2024-25.pdf",
+          "viewText": "View Report"
+        }
+      ]
+    }
+  }
+}
