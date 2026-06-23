@@ -13,6 +13,7 @@ import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import StudentCouncil from "./comp/StudentCouncil";
+import GrievenceAndCounseling from "./comp/GrievenceAndCounseling";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("student-welfare");
@@ -90,9 +91,10 @@ const page = async () => {
       <TeamMember />
       <ClubsSocieties />
       <StudentCouncil />
+      <GrievenceAndCounseling />
 
       {/* <WelfareImage /> */}
-      <TabScroll />
+      {/* <TabScroll /> */}
       {photoGallery && <PhotoGallery photoGallery={photoGallery} />}
     </>
   );

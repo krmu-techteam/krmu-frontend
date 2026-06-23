@@ -237,6 +237,52 @@ const StudentCouncil = () => {
           )}
         </div>
       </section>
+
+      <section className={` bg-[#F0F3F9] px-8 sm:px-8 md:px-12 pb-12`}>
+        <div className="mx-auto w-full max-w-[1500px]">
+          <div className="flex flex-col items-center gap-10 rounded-2xl border-4 border-white bg-[#DAE9FF] p-4 md:flex-row md:items-stretch md:gap-8 md:p-8 min-h-[350px]">
+            <div className="w-full flex-shrink-0 overflow-hidden rounded-4xl md:w-[440px]  lg:w-[460px]">
+              <Image
+                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_608_0f98d1ae42.jpg"
+                width={1000}
+                height={1000}
+                alt="K.R. Mangalam University Student Council"
+                className=" h-full w-full object-fit"
+              />
+            </div>
+            <div>
+              <h2
+                className={`${playfair.className}  text-3xl font-bold text-[#004865] mb-4 md:text-4xl lg:text-[42px]`}
+              >
+                Best Student Council Member
+              </h2>
+
+              <p className=" text-justify text-sm leading-[1.85] font-medium text-[#000000]  md:text-[16px]">
+                Being recognized as the Best Student Council Member is truly an
+                honor and a moment of immense gratitude. This achievement is not
+                just mine, but a reflection of the constant support, guidance,
+                and teamwork shared by my fellow council members and the
+                Department of Student Welfare. <br className="mb-4" />
+                My journey in the Student Council has been a learning experience
+                filled with opportunities to lead, collaborate, and contribute
+                meaningfully to the student community. It has helped me grow
+                both personally and professionally, shaping my perspective and
+                strengthening my sense of responsibility.{" "}
+                <br className="mb-4" /> I am sincerely thankful for the trust
+                placed in me, and I remain committed to continuing my efforts
+                towards creating a more engaging, inclusive, and vibrant campus
+                environment.
+              </p>
+              <p className=" text-justify text-sm leading-[1.85] font-bold mt-4 text-[#000000]  md:text-[16px]">
+                Nirdesh Jain,
+              </p>
+              <span className=" text-justify text-sm leading-[1.85]  text-[#000000]  md:text-[16px]">
+                Cultural Coordinator
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

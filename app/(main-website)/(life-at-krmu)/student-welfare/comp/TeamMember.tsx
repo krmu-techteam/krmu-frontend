@@ -67,7 +67,7 @@ const TeamMember = () => {
               className="flex min-h-[300px] flex-col items-center justify-center rounded-md bg-[#EDE3C7] px-5 pb-5 pt-4 text-center"
             >
               <div
-                className={`relative mb-4 h-[200px] w-[200px] overflow-hidden rounded-full  bg-[linear-gradient(180deg,#DFCC99_0%,#FFFFFF_100%)] shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
+                className={`relative mb-4 h-[250px] w-[250px] overflow-hidden rounded-full  bg-[linear-gradient(180deg,#DFCC99_0%,#FFFFFF_100%)] shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
               >
                 <Image
                   src={member.image}
