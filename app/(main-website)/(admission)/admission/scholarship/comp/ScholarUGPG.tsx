@@ -391,7 +391,7 @@ const ScholarUGPG = () => {
                     }}
                   >
                     <p className="font-semibold text-center mb-5">
-                      CUET -1 (On the basis percentage of best 4 subjects score)
+                      CUET -1 (On the basis of percentage of best 4 subjects score)
                     </p>
                     <div className="overflow-x-auto">
                       <table>
@@ -422,7 +422,7 @@ const ScholarUGPG = () => {
                     </div>
 
                     <p className="font-semibold text-center my-5">
-                      CUET -2 (On the basis average percentile of best 4
+                      CUET -2 (On the basis of average percentile of best 4
                       subjects)
                     </p>
                     <div className="overflow-x-auto">

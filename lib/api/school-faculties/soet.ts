@@ -31,7 +31,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/Shahid-Ahmad-Wani-SOET.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/Shahid-Ahmad-Wani-SOET.jpeg",
   },
   {
     id: 114223,
@@ -609,7 +609,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1126, 1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/06/Ms.-Rishika-Mehta.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms.-Rishika-Mehta.jpeg",
   },
   {
     id: 53041,
@@ -714,7 +714,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Swati.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Swati.jpeg",
   },
   {
     id: 10858,
@@ -745,7 +745,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Kaushal-Kumar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Kaushal-Kumar.jpeg",
   },
 
   // {
@@ -777,7 +777,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1152],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Preeti-Rathi.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/preeti-soet.jpeg",
   },
   {
     id: 10713,
@@ -792,7 +792,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1126, 1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Vandna.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Vandna.jpeg",
   },
   // {
   //   id: 10693,
@@ -837,7 +837,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Sneh-Lata-Yadav.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Sneh-Lata-Yadav.jpeg",
   },
   {
     id: 9402,
