@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { StaticFacultyEmployeeCard } from "@/app/(main-website)/components/Cards/StaticFacultyEmployeeCard";
-import { Button } from "@/components/ui/button";
 
 // ---------- Faculty Data Imports ----------
 import { soetFaculties } from "@/lib/api/school-faculties/soet";
@@ -100,6 +99,7 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
 
   const [itemsPerLoad, setItemsPerLoad] = useState(5);
   const [visibleCount, setVisibleCount] = useState(5);
+  const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const updateItems = () => {
@@ -114,11 +114,31 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
     return () => window.removeEventListener("resize", updateItems);
   }, []);
 
-  if (!facDatas.length) return null;
+  // Infinite Scroll with Intersection Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && visibleCount < facDatas.length) {
+          setVisibleCount((prev) =>
+            Math.min(prev + itemsPerLoad, facDatas.length),
+          );
+        }
+      },
+      { threshold: 0.1 },
+    );
 
-  const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + itemsPerLoad);
-  };
+    if (endRef.current) {
+      observer.observe(endRef.current);
+    }
+
+    return () => {
+      if (endRef.current) {
+        observer.unobserve(endRef.current);
+      }
+    };
+  }, [visibleCount, facDatas.length, itemsPerLoad]);
+
+  if (!facDatas.length) return null;
 
   const visibleFaculties = facDatas.slice(0, visibleCount);
 
@@ -141,17 +161,8 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
         ))}
       </div>
 
-      {visibleCount < facDatas.length && (
-        <div className="flex justify-center mt-8">
-          <Button
-            onClick={handleLoadMore}
-            className="py-3.5 px-8 bg-[#051630] text-white font-bold cursor-pointer transition-all  relative overflow-hidden group"
-          >
-            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
-            Load More
-          </Button>
-        </div>
-      )}
+      {/* Infinite scroll trigger element */}
+      <div ref={endRef} className="h-4" />
     </div>
   );
 };
