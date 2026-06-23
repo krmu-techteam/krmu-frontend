@@ -494,7 +494,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms.-Suman.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms-Suman-SOET.png",
   },
   {
     id: 60007,

@@ -59,7 +59,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Manmohan-Chaudhry.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Manmohan-Chaudhry-1.png",
   },
   {
     id: 107649,

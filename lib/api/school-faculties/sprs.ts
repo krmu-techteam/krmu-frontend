@@ -32,21 +32,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Deepak.png",
   },
-  {
-    id: 115560,
-    slug: "mr-shalender",
-    title: {
-      rendered: "Mr. SHALENDER",
-    },
-    featured_media: 115560,
-    acf: {
-      "staff-qualification": "M.P.T.",
-      staff_designation: "DEMOSTRATOR",
-      schools: [1098],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Shailender.png",
-  },
+  
   {
     id: 68869,
     slug: "dr-shazia-mattu",
@@ -199,6 +185,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.-Aatika-Waheed-1.png",
   },
+ 
   {
     id: 53026,
     slug: "dr-kangana-juneja-kansal",
@@ -214,6 +201,21 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/07/Dr.-Kangana-Juneja-kansal.png",
     // "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Kangana-Juneja-Kansal.png",
+  },
+   {
+    id: 115560,
+    slug: "mr-shalender",
+    title: {
+      rendered: "Mr. SHALENDER",
+    },
+    featured_media: 115560,
+    acf: {
+      "staff-qualification": "M.P.T.",
+      staff_designation: "DEMOSTRATOR",
+      schools: [1098],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Shailender.png",
   },
   // {
   //   id: 9172,
