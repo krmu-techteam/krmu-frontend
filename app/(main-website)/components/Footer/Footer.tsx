@@ -8,6 +8,7 @@ import FloatingButtons from "@/app/(main-website)/components/Footer/FloatingButt
 import NpfAgent from "@/app/NpfAgent";
 import LaunchpadPopup from "../LaunchpadPopup";
 import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
+import { createCollegeSchema } from "@/lib/api/common";
 
 const Footer = async () => {
   const footerData = await getFooter();
@@ -20,8 +21,16 @@ const Footer = async () => {
   const footerComp3 = footerData?.footer_comp_3;
   const footerComp4 = footerData?.footer_comp_4;
 
+  const schema = createCollegeSchema();
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
       {/* <NpfPopup
         formId="d63cf9c4d3104c39f3ac28164701a69c"
         btnClass={`bg-[#f00] text-white border border-none py-[6px] px-[15px] fixed top-[40%] right-[-42px] rotate-90 rounded-sm h-[27px] z-10 npfWidget-d63cf9c4d3104c39f3ac28164701a69c`}
@@ -213,7 +222,11 @@ const Footer = async () => {
       {/* Hide Nia Chatbot */}
       {/* <NpfChatbot /> */}
 
-      <Link href="https://admissions.krmangalam.edu.in/?utm_source=Website&utm_medium=Homepage&utm_campaign=Deadline" target="_blank" className="fixed bottom-0 left-0 w-full bg-[#cb000d] flex justify-center z-30">
+      <Link
+        href="https://admissions.krmangalam.edu.in/?utm_source=Website&utm_medium=Homepage&utm_campaign=Deadline"
+        target="_blank"
+        className="fixed bottom-0 left-0 w-full bg-[#cb000d] flex justify-center z-30"
+      >
         <KRMUTimer targetDate="2026-06-20T23:59:59" mainWebsiteTimer={true} />
       </Link>
       <NpfAgent />
@@ -272,6 +285,7 @@ const Footer = async () => {
           </Link>
         <NpfButton formId="d63cf9c4d3104c39f3ac28164701a69c" text="Enquire Now" />
       </div> */}
+
       <LaunchpadPopup />
     </>
   );
