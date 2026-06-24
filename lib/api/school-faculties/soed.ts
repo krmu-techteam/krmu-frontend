@@ -119,7 +119,7 @@ export const soedFaculties: SchoolFacultiesType[] = [
       schools: [1070],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Mudasir-Hamid.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Mudasir-Hamid.jpg",
   },
 
   {
@@ -135,7 +135,7 @@ export const soedFaculties: SchoolFacultiesType[] = [
       schools: [1070],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Kanchan-Khatreja.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Kanchan-Khatreja.jpg",
   },
   {
     id: 113722,

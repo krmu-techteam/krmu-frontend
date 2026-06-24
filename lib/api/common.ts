@@ -756,6 +756,66 @@ export const createCollageOrUniversitySchema = ({
   return JSON.stringify(schema);
 };
 
+type CollageOrUniversityHomepageSchemaProps = {
+  name: string;
+  alternateName?: string;
+  url: string;
+  logo: string;
+  sameAs?: string[];
+  address?: {
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
+  telephone?: string;
+  email?: string;
+  foundingDate?: string;
+};
+
+export const createCollageOrUniversityHomepageSchema = ({
+  name,
+  alternateName,
+  url,
+  logo,
+  sameAs = [],
+  address,
+  telephone,
+  email,
+  foundingDate,
+}: CollageOrUniversityHomepageSchemaProps) => {
+  const cleanUrl = (val: string) => val.replace(/\s+/g, "");
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    name,
+    alternateName,
+    url,
+    logo,
+    sameAs: sameAs.map(cleanUrl),
+    ...(address && {
+      address: {
+        "@type": "PostalAddress",
+        ...address,
+      },
+    }),
+    ...(telephone && { telephone }),
+    ...(email && { email }),
+    ...(foundingDate && { foundingDate }),
+    ...(telephone && {
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone,
+        contactType: "Admissions",
+      },
+    }),
+  };
+
+  return JSON.stringify(schema);
+};
+
 type TocFaq = {
   id: number;
   tocpoint: string;
