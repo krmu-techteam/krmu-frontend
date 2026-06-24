@@ -10,6 +10,27 @@
       "title": "A Life Beyond \nAcademics",
       "description": "Welcome to a world where education meets excitement! At K.R. Mangalam University (KRMU), we believe that university life should be a perfect blend of learning, growth, and fun. Our campus is not just a place to study; it’s where you’ll make memories that last a lifetime.",
       "videoSrc": "https://www.youtube.com/embed/fvbEreUXZVU?si=OA22YOD_02bqdkn_"
+    },
+    "studentLifeSection": {
+      "title": "Facilities That Foster Excellence",
+      "subTitleOne": "Innovate",
+      "subTitleTwo": "Engage",
+      "subTitleThree": "Succeed",
+      "description": "Every day is an opportunity to explore, learn, and connect at KRMU, where the sprawling campus is a bustling hub of activities, events, and interactions that cultivate a sense of belonging and community.",
+      "buttonText": "Explore KRMU Facilities",
+      "buttonLink": "/krmu-campus-facilities",
+      "campusHappenings": {
+        "title": "What’s Happening at KRMU",
+        "subTitleOne": "Stay Updated",
+        "subTitleTwo": "with Campus",
+        "subTitleThree": "Happenings",
+        "instaImageUrl": "/life-at-krmu/insta.webp",
+        "instaHandle": "@krmuniv on Instagram",
+        "instaLabel": "Check Instagram",
+        "instaLink": "https://www.instagram.com/krmuniv/",
+        "viewMoreText": "View More",
+        "viewMoreLink": "/happenings/news-and-events"
+      }
     }
   }
 }

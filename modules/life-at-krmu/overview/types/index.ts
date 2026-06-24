@@ -16,9 +16,33 @@ export interface CampusLifeSectionProps {
   videoSrc: string;
 }
 
+export interface CampusHappeningsProps {
+  title: string;
+  subTitleOne: string;
+  subTitleTwo: string;
+  subTitleThree: string;
+  instaImageUrl: string;
+  instaHandle: string;
+  instaLabel: string;
+  instaLink: string;
+  viewMoreText: string;
+  viewMoreLink: string;
+}
+export interface StudentLifeSectionProps {
+  title: string;
+  subTitleOne: string;
+  subTitleTwo: string;
+  subTitleThree: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+  campusHappenings: CampusHappeningsProps;
+}
+
 interface dataProps {
   heroSection: HeroSectionProps;
   campusLifeSection: CampusLifeSectionProps;
+  studentLifeSection: StudentLifeSectionProps;
 }
 
 export interface OverviewContentProps {

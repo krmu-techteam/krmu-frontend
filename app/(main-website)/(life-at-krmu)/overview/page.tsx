@@ -1,7 +1,6 @@
 import { getLifeAtKRMUOverviewData } from "@/lib/api/lkoverview";
 import OverviewHearit from "./comp/OverviewHearit";
 import OverviewImpacting from "./comp/OverviewImpacting";
-import OverviewInnovate from "./comp/OverviewInnovate";
 import OverviewTreasure from "./comp/OverviewTreasure";
 import OveviewSecondHome from "./comp/OveviewSecondHome";
 import OverviewYourInterest from "./comp/OverviewYourInterest";
@@ -85,7 +84,6 @@ const page = async () => {
         data={data}
         extraProps={{ overviewData }}
       />
-      <OverviewInnovate />
       <section className="w-full">
         <div className="w-full flex flex-col lg:flex-row items-stretch">
           <div className="w-full lg:w-1/2 flex">
