@@ -12,12 +12,12 @@ const page = () => {
       </section>
       <section>
         <div className="max-w-[1664px] mx-auto w-full flex flex-col md:flex-row gap-5 px-4">
-          <div className="w-full md:w-1/2">
-            <Image src="/cuet-left.webp" width={768} height={624} alt="" className="w-full h-full object-contain" />
+          <div className="w-full">
+            <Image src="/cuet-left.webp" width={768} height={624} alt="" className="w-full h-full object-contain w-full max-w-[768px] mx-auto" />
           </div>
-          <div className="w-full md:w-1/2">
+          {/* <div className="w-full md:w-1/2">
             <Image src="/cuet-right.webp" width={768} height={624} alt="" className="w-full h-full object-contain" />
-          </div>
+          </div> */}
         </div>
       </section>
     </>
