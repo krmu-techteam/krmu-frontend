@@ -99,6 +99,7 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
 
   const [itemsPerLoad, setItemsPerLoad] = useState(5);
   const [visibleCount, setVisibleCount] = useState(5);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -118,10 +119,12 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting && visibleCount < facDatas.length) {
-          setVisibleCount((prev) =>
-            Math.min(prev + itemsPerLoad, facDatas.length),
-          );
+        if (
+          entries[0].isIntersecting &&
+          visibleCount < facDatas.length &&
+          !isLoadingMore
+        ) {
+          setIsLoadingMore(true);
         }
       },
       { threshold: 0.1 },
@@ -136,11 +139,24 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
         observer.unobserve(endRef.current);
       }
     };
-  }, [visibleCount, facDatas.length, itemsPerLoad]);
+  }, [visibleCount, facDatas.length, isLoadingMore]);
+
+  // Delayed batch reveal so the skeleton row remains visible briefly
+  useEffect(() => {
+    if (!isLoadingMore) return;
+
+    const timer = setTimeout(() => {
+      setVisibleCount((prev) => Math.min(prev + itemsPerLoad, facDatas.length));
+      setIsLoadingMore(false);
+    }, 600);
+
+    return () => clearTimeout(timer);
+  }, [isLoadingMore, itemsPerLoad, facDatas.length]);
 
   if (!facDatas.length) return null;
 
   const visibleFaculties = facDatas.slice(0, visibleCount);
+  const hasMore = visibleCount < facDatas.length;
 
   return (
     <div>
@@ -160,6 +176,22 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
           </div>
         ))}
       </div>
+
+      {/* Loading indicator while next batch is being prepared */}
+      {isLoadingMore && hasMore && (
+        <div className="flex flex-col items-center justify-center py-14">
+          {/* Loader */}
+          <div className="relative h-14 w-14">
+            <div className="absolute inset-0 rounded-full border-4 border-gray-200"></div>
+            <div className="absolute inset-0 rounded-full border-4 border-black border-t-transparent animate-spin"></div>
+          </div>
+
+          {/* Text */}
+          <p className="mt-4 text-sm font-medium text-gray-700 animate-pulse">
+            Loading...
+          </p>
+        </div>
+      )}
 
       {/* Infinite scroll trigger element */}
       <div ref={endRef} className="h-4" />
