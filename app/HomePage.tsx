@@ -130,7 +130,6 @@ const collageOrUniversitySchema = createCollageOrUniversityHomepageSchema({
   foundingDate: "2013",
 });
 
-console.log('collageOrUniversitySchema', collageOrUniversitySchema);
 
   return (
     <>

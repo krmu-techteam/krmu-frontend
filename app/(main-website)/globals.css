@@ -17,7 +17,7 @@
 @layer utilities {
   .newsEventsContent p{
     margin-bottom: 10px !important;
-    /* font-size: 18px !important; */
+    font-size: 18px !important;
   }
   .newsEventsContent h4{
     font-size: 20px !important;
