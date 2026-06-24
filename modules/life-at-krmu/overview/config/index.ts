@@ -1,5 +1,5 @@
 import { RendererConfig } from "@/lib/types/common";
-import { HeroSection } from "../sections";
+import { CampusLifeSection, HeroSection } from "../sections";
 
 export const Sections: RendererConfig[] = [
   {
@@ -7,5 +7,11 @@ export const Sections: RendererConfig[] = [
     Component: HeroSection,
     propName: "heroSection",
     dataKey: "heroSection",
+  },
+  {
+    key: "campus-life",
+    Component: CampusLifeSection,
+    propName: "campusLifeSection",
+    dataKey: "campusLifeSection",
   },
 ];

@@ -2,7 +2,6 @@ import { getLifeAtKRMUOverviewData } from "@/lib/api/lkoverview";
 import OverviewHearit from "./comp/OverviewHearit";
 import OverviewImpacting from "./comp/OverviewImpacting";
 import OverviewInnovate from "./comp/OverviewInnovate";
-import OverviewLifeBeyond from "./comp/OverviewLifeBeyond";
 import OverviewTreasure from "./comp/OverviewTreasure";
 import OveviewSecondHome from "./comp/OveviewSecondHome";
 import OverviewYourInterest from "./comp/OverviewYourInterest";
@@ -77,7 +76,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const page = async () => {
   const overviewData = await getLifeAtKRMUOverviewData();
-  const overviewVideo = overviewData?.overview_video;
   const testimonials = overviewData?.hear_it_testimonials;
   const { data } = await getOverviewContent();
   return (
@@ -85,9 +83,8 @@ const page = async () => {
       <SectionsRenderer
         sections={Sections}
         data={data}
-        extraProps={{ overviewVideo }}
+        extraProps={{ overviewData }}
       />
-      <OverviewLifeBeyond />
       <OverviewInnovate />
       <section className="w-full">
         <div className="w-full flex flex-col lg:flex-row items-stretch">
