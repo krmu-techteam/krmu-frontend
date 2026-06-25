@@ -49,6 +49,9 @@ import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
 import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
 import { heroConfigs } from "@/components/school-programmes/programs/data/programs";
 import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
+import NewHeroSection from "@/components/school-programmes/programs/new-design-sections/components/heroSection";
+import LogoSection from "@/components/school-programmes/programs/new-design-sections/components/logoSection";
+import CareerOutcome from "@/components/school-programmes/programs/new-design-sections/components/careerOutcome";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -273,31 +276,38 @@ const page = async ({ params }: Props) => {
       />
       <main className="school-prog-font temp-class">
         {/* {tags && <TagDiv tags={tags} extraClass="hidden test-class" />} */}
-        {heroSection && (
-          <ProgramHero
-            title={title || ""}
-            highlightitle={highlightTitle || ""}
-            heroSection={heroSection}
-            formId={heroSection?.formId}
-            slug={slug}
-            // allowedFormSlugs={allowedFormSlugs}
-            dreamcareerSection={dreamcareerSection}
-            logos={dreamcareerSection?.careerlogos}
-          />
-        )}
+        {heroSection &&
+          (slug === "mba-fintech" ? (
+            <NewHeroSection formId={heroSection?.formId} />
+          ) : (
+            <ProgramHero
+              title={title || ""}
+              highlightitle={highlightTitle || ""}
+              heroSection={heroSection}
+              formId={heroSection?.formId}
+              slug={slug}
+              // allowedFormSlugs={allowedFormSlugs}
+              dreamcareerSection={dreamcareerSection}
+              logos={dreamcareerSection?.careerlogos}
+            />
+          ))}
 
-        {eligibilitySection && (
-          <Eligibility
-            elgibilities={eligibilitySection?.elgibility}
-            mobherobtn={eligibilitySection?.mobherobtn}
-            allowedFormSlugs={allowedFormSlugs}
-            slug={slug}
-            formId={heroSection?.formId}
-            heroSection={heroSection}
-            enableDownloadPros={enable_disable_download_pros}
-            prospectusBtn={programmeScopeSection?.scopebtn}
-          />
-        )}
+        {eligibilitySection &&
+          (slug === "mba-fintech" ? (
+            <LogoSection />
+          ) : (
+            <Eligibility
+              elgibilities={eligibilitySection?.elgibility}
+              mobherobtn={eligibilitySection?.mobherobtn}
+              allowedFormSlugs={allowedFormSlugs}
+              slug={slug}
+              formId={heroSection?.formId}
+              heroSection={heroSection}
+              enableDownloadPros={enable_disable_download_pros}
+              prospectusBtn={programmeScopeSection?.scopebtn}
+            />
+          ))}
+
         {!(slug in heroConfigs) && dreamcareerSection && (
           <DreamCareer
             heading={dreamcareerSection.heading}
@@ -306,14 +316,18 @@ const page = async ({ params }: Props) => {
           />
         )}
 
-        {programmeScopeSection && (
-          <ProgrammeScope
-            scopeData={programmeScopeSection}
-            heroSection={heroSection}
-            allowedFormSlugs={allowedFormSlugs}
-            slug={slug}
-          />
-        )}
+        {programmeScopeSection &&
+          (slug === "mba-fintech" ? (
+            <CareerOutcome />
+          ) : (
+            <ProgrammeScope
+              scopeData={programmeScopeSection}
+              heroSection={heroSection}
+              allowedFormSlugs={allowedFormSlugs}
+              slug={slug}
+            />
+          ))}
+
         {programmeHighlightSection && (
           <ProgrammeHighlight
             heading={programmeHighlightSection?.heading}
