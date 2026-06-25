@@ -12,7 +12,7 @@ type Props = {
 
 export const AdvisoryEmployeeCard = ({ name, imgUrl, qual, desg }: Props) => {
   return (
-    <div className="overflow-hidden rounded-t-xl bg-white group hover:shadow-xl duration-300 ease-in-out">
+    <div className="overflow-hidden w-[272px]  rounded-t-xl bg-white group hover:shadow-xl duration-300 ease-in-out">
       {/* IMAGE SECTION */}
       <div className="bg-[#001732]  relative  w-full overflow-hidden flex items-end justify-center">
         <div className="absolute inset-0 flex items-center justify-center p-6">
@@ -30,27 +30,25 @@ export const AdvisoryEmployeeCard = ({ name, imgUrl, qual, desg }: Props) => {
           width={272}
           height={295}
           alt={name}
-          className="h-[120px] sm:w-full sm:h-full rounded-t-[15px] relative z-10 object-contain group-hover:scale-103  duration-500 ease"
+          className="h-full sm:h-[240px] md:h-[280px] rounded-t-[15px] relative z-10 object-contain group-hover:scale-103  duration-500 ease"
           style={{
             boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
           }}
         />
       </div>
       {/* DETAILS */}
-      <div className="p-1.5 sm:p-5">
-        <h4 className="text-[11px] sm:text-base font-bold inline-block leading-snug">
-          {name}
-        </h4>
+      <div className="min-h-[105px] p-1.5 sm:p-5 flex-1">
+        <h4 className="inline-block font-bold leading-snug text-lg">{name}</h4>
 
         <h5
-          className="text-[11px] uppercase py-1"
+          className="py-1 uppercase text-sm"
           dangerouslySetInnerHTML={{
             __html: desg,
           }}
         />
 
         <h6
-          className="text-[10px] sm:text-xs font-bold"
+          className="text-sm font-bold"
           dangerouslySetInnerHTML={{
             __html: qual,
           }}
