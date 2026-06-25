@@ -100,6 +100,7 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
   const [itemsPerLoad, setItemsPerLoad] = useState(5);
   const [visibleCount, setVisibleCount] = useState(5);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -148,15 +149,32 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
     const timer = setTimeout(() => {
       setVisibleCount((prev) => Math.min(prev + itemsPerLoad, facDatas.length));
       setIsLoadingMore(false);
-    }, 600);
+    }, 300);
 
     return () => clearTimeout(timer);
-  }, [isLoadingMore, itemsPerLoad, facDatas.length]);
+  }, [isLoadingMore, facDatas.length]);
 
   if (!facDatas.length) return null;
 
   const visibleFaculties = facDatas.slice(0, visibleCount);
   const hasMore = visibleCount < facDatas.length;
+
+  // Initial fetch loader
+  if (isLoadingMore && visibleFaculties.length === 5)
+    return (
+      <div className="flex flex-col items-center justify-center py-20">
+        {/* Loader */}
+        <div className="relative h-14 w-14">
+          <div className="absolute inset-0 rounded-full border-4 border-gray-200"></div>
+          <div className="absolute inset-0 rounded-full border-4 border-black border-t-transparent animate-spin"></div>
+        </div>
+
+        {/* Text */}
+        <p className="mt-4 text-sm font-medium text-gray-700 animate-pulse">
+          Loading...
+        </p>
+      </div>
+    );
 
   return (
     <div>
