@@ -1,0 +1,69 @@
+{
+  "data": {
+    "libraryContent": {
+      "overview": {
+        "tagLine": "Library is in your Pocket, Smartphone to Smart Library",
+        "heading": "Library is trying to reach nearest to you, on your fingertips, just a click away",
+        "description": "K.R. Mangalam University has embraced the digital era with its innovative approach to library services, offering a blend of traditional and modern resources. This analysis delves into the various aspects of their library services as presented on their webpage.",
+        "imageUrl": "/library/liboverview.webp",
+        "bookRenewal": [
+          {
+            "title": "Book Renewal 1:",
+            "description": "Use your Roll No or Employee ID to Login",
+            "linkInfo": {
+              "text": "Click Here",
+              "url": "https://bit.ly/3CEDfs8"
+            }
+          },
+          {
+            "title": "Book Renewal 2:",
+            "description": "Use your Roll No or Employee ID to Login",
+            "linkInfo": {
+              "text": "Click Here",
+              "url": "http://172.16.16.25:4444"
+            }
+          }
+        ]
+      },
+      "membership": {
+        "tagLine": "Seamless Access to Knowledge:",
+        "heading": "Simplified Library Membership at KR Mangalam University",
+        "description": "KR Mangalam University’s library membership process is streamlined for ease and efficiency. Students and staff are required to fill out an online form just once, after which a membership ID is sent via SMS. This digital approach ensures quick and hassle-free access to a wealth of academic resources.",
+        "membershipGuidelines": [
+          {
+            "pointNumber": "/library/lp01.svg",
+            "content": "Every student & staff members have to fill & submit library Membership form Online (once only)."
+          },
+          {
+            "pointNumber": "/library/lp02.svg",
+            "content": "Your Library Membership ID will be sent on to your Mobile Number as SMS."
+          },
+          {
+            "pointNumber": "/library/lp03.svg",
+            "content": "First time this SMS will be treated as ID proof. You have to show your SMS ID received from the Library while borrowing the books."
+          },
+          {
+            "pointNumber": "/library/lp04.svg",
+            "content": "Any mistake of your Mobile Number may trouble you the failure of SMS."
+          },
+          {
+            "pointNumber": "/library/lp05.svg",
+            "content": "If any delay in making ID card, you can show any Photo ID proof as an alternate."
+          },
+          {
+            "pointNumber": "/library/lp06.svg",
+            "content": "After the issue of Roll No from the concern office/ University, you will be asked to show your photo ID proof while borrowing the book."
+          },
+          {
+            "pointNumber": "/library/lp07.svg",
+            "content": "Borrowing books by authorizing any person will be sole responsibility of the user."
+          },
+          {
+            "pointNumber": "/library/lp08.svg",
+            "content": "Any changes in mobile number or e-mail Id should be inform the Head Librarian by filling up the CORRECTION form available at http://drhilaluddin.blogspot.in/ ISSUE OF BOOKS"
+          }
+        ]
+      }
+    }
+  }
+}

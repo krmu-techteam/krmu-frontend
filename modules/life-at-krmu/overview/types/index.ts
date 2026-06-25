@@ -38,11 +38,76 @@ export interface StudentLifeSectionProps {
   buttonLink: string;
   campusHappenings: CampusHappeningsProps;
 }
+export interface StudentWelfareSectionProps {
+  title: string;
+  description: string;
+  linkInfo: {
+    text: string;
+    url?: string;
+  };
+}
 
+export interface StudentInterestSectionProps {
+  title: string;
+  subTitle: string;
+  description: string;
+  linkInfo: {
+    text: string;
+    url?: string;
+  };
+}
+
+export interface WellBeingAndInterestSectionProps {
+  studentwelfare: StudentWelfareSectionProps;
+  studentInterest: StudentInterestSectionProps;
+}
+
+export interface StudentTestimonialSectionProps {
+  title: string;
+  description: string;
+}
+
+export interface LinkInfo {
+  text: string;
+  url?: string;
+}
+export interface HostelImages {
+  url: string;
+}
+
+export interface HostelLifeSectionProps {
+  title: string;
+  description: string;
+  linkInfo: LinkInfo;
+  images: HostelImages[];
+}
+
+export interface ImpactingLivesCards {
+  title: string;
+  points: string[];
+}
+
+export interface ImpactingLivesSectionProps {
+  tagLine: string;
+  heading: string;
+  description: string[];
+  cards: ImpactingLivesCards[];
+}
+
+export interface LibrarySectionProps {
+  title: string;
+  description: string;
+  linkInfo: LinkInfo;
+}
 interface dataProps {
   heroSection: HeroSectionProps;
   campusLifeSection: CampusLifeSectionProps;
   studentLifeSection: StudentLifeSectionProps;
+  wellBeingAndInterestSection: WellBeingAndInterestSectionProps;
+  studentTestimonialSection: StudentTestimonialSectionProps;
+  hostelLifeSection: HostelLifeSectionProps;
+  impactingLivesSection: ImpactingLivesSectionProps;
+  librarySection: LibrarySectionProps;
 }
 
 export interface OverviewContentProps {

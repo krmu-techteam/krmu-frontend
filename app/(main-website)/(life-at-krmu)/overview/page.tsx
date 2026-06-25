@@ -1,16 +1,12 @@
-import { getLifeAtKRMUOverviewData } from "@/lib/api/lkoverview";
-import OverviewHearit from "./comp/OverviewHearit";
-import OverviewImpacting from "./comp/OverviewImpacting";
-import OverviewTreasure from "./comp/OverviewTreasure";
-import OveviewSecondHome from "./comp/OveviewSecondHome";
-import OverviewYourInterest from "./comp/OverviewYourInterest";
-import OverviewYourWellBeing from "./comp/OverviewYourWellBeing";
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import { SectionsRenderer } from "@/components/common/SectionRenderer";
-import { getOverviewContent, Sections } from "@/modules/life-at-krmu/overview";
+import {
+  getLifeAtKRMUOverviewData,
+  getOverviewContent,
+  Sections,
+} from "@/modules/life-at-krmu/overview";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("life-at-krmu-overview");
@@ -73,9 +69,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const page = async () => {
+const OverviewPage = async () => {
   const overviewData = await getLifeAtKRMUOverviewData();
-  const testimonials = overviewData?.hear_it_testimonials;
   const { data } = await getOverviewContent();
   return (
     <>
@@ -84,26 +79,8 @@ const page = async () => {
         data={data}
         extraProps={{ overviewData }}
       />
-      <section className="w-full">
-        <div className="w-full flex flex-col lg:flex-row items-stretch">
-          <div className="w-full lg:w-1/2 flex">
-            <OverviewYourWellBeing />
-          </div>
-          <div className="w-full lg:w-1/2 flex">
-            <OverviewYourInterest />
-          </div>
-        </div>
-      </section>
-      <OverviewHearit testimonials={testimonials} />
-      <OveviewSecondHome />
-      <section>
-        <div className="w-full">
-          <OverviewImpacting />
-          <OverviewTreasure />
-        </div>
-      </section>
     </>
   );
 };
 
-export default page;
+export default OverviewPage;

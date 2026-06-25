@@ -31,6 +31,92 @@
         "viewMoreText": "View More",
         "viewMoreLink": "/happenings/news-and-events"
       }
+    },
+    "wellBeingAndInterestSection": {
+      "studentwelfare": {
+        "title": "Your Well-Being Our Priority",
+        "description": "Student Welfare provides ample scope, opportunities, and facilities for the students' all-around development of personality and leadership qualities. Here, all the activities are undertaken to promote opportunities for the youth to enhance their skills and talents to boost their confidence. Besides undertaking engagement activities regarding the facilitation of outcomes during and after the students’ pursuit of academic activities, the office acts as a channel of communication between the students and the university administration.",
+        "linkInfo": {
+          "text": "Know More",
+          "url": "/student-welfare"
+        }
+      },
+      "studentInterest": {
+        "title": "Your Interest Our Platform",
+        "subTitle": "KRMU Clubs and Societies",
+        "description": "At K.R. Mangalam University (KRMU), student life goes beyond academics. Our dynamic clubs and societies create a vibrant space for students to explore their interests, develop leadership skills, and connect with like-minded peers. Whether you’re passionate about art, music, sports, technology, or social causes, there’s a club for everyone! These student-led initiatives provide hands-on learning, foster creativity, and encourage teamwork.",
+        "linkInfo": {
+          "text": "Know More",
+          "url": "/clubs-and-societies"
+        }
+      }
+    },
+    "studentTestimonialSection": {
+      "title": "Hear it from the students themselves",
+      "description": "Discover what our satisfied students and alumni have to say about their transformative experiences at KRMU"
+    },
+    "hostelLifeSection": {
+      "title": "Find Your Second Home",
+      "description": "The KRMU hostels have well-ventilated rooms to provide the students with a rejuvenating atmosphere to relax and study. Our hostel rooms are furnished with comfortable beds, study tables, chairs, built-in cupboards, ceiling fans, lights, and central air conditioners to offer the most comfortable stay.",
+      "linkInfo": {
+        "text": "Know More",
+        "url": "/hostel"
+      },
+      "images": [
+        {
+          "url": "/life-at-krmu/secondhome/item1.webp"
+        },
+        {
+          "url": "/life-at-krmu/secondhome/item2.webp"
+        },
+        {
+          "url": "/life-at-krmu/secondhome/item3.webp"
+        },
+        {
+          "url": "/life-at-krmu/secondhome/item4.webp"
+        }
+      ]
+    },
+    "impactingLivesSection": {
+      "tagLine": "Making a Difference Together",
+      "heading": "Impacting Lives",
+      "description": [
+        "It allows young students to participate in various government-led community service activities & programmes. The objective of KRMU-NSS is to develop responsible personalities through community services.",
+        "The programmes aim to promote social welfare in students so that they serve society equally. NSS volunteers work closely with villagers and learn to live satisfactorily with limited resources."
+      ],
+      "cards": [
+        {
+          "title": "Community Engagement and Understanding",
+          "points": [
+            "Enabling students to understand the roots of the community",
+            "Identifying their responsibilities towards the community",
+            "Understanding the requirements and pain-points of the community and offering robust solutions"
+          ]
+        },
+        {
+          "title": "Personal Growth and Responsibility",
+          "points": [
+            "Developing social and civil responsibility",
+            "Acquiring skills to live in groups harmoniously by sharing duties",
+            "Attaining leadership qualities, democratic attitude, and skills to encourage community participation"
+          ]
+        },
+        {
+          "title": "Crisis Management and Preparedness",
+          "points": [
+            "Developing abilities to manage emergencies and national disasters",
+            "Practicing national integration and social accord"
+          ]
+        }
+      ]
+    },
+    "librarySection": {
+      "title": "A Treasure Trove of Learning Resources",
+      "description": "With thousands of volumes, journals, and digital resources, KRMU’s library is not just a collection of books but a quiet haven for thinkers, creators, and dreamers.",
+      "linkInfo": {
+        "text": "Know More",
+        "url": "/library"
+      }
     }
   }
 }

@@ -2,7 +2,12 @@ import { RendererConfig } from "@/lib/types/common";
 import {
   CampusLifeSection,
   HeroSection,
+  HostelLifeSection,
+  ImpactingLivesSection,
+  LibrarySection,
   StudentLifeSection,
+  StudentTestimonialsSection,
+  WellBeingAndInterestSection,
 } from "../sections";
 
 export const Sections: RendererConfig[] = [
@@ -23,5 +28,35 @@ export const Sections: RendererConfig[] = [
     Component: StudentLifeSection,
     propName: "studentLifeSection",
     dataKey: "studentLifeSection",
+  },
+  {
+    key: "well-being-and-interest",
+    Component: WellBeingAndInterestSection,
+    propName: "wellBeingAndInterestSection",
+    dataKey: "wellBeingAndInterestSection",
+  },
+  {
+    key: "student-testimonial",
+    Component: StudentTestimonialsSection,
+    propName: "studentTestimonialSection",
+    dataKey: "studentTestimonialSection",
+  },
+  {
+    key: "hostel-life",
+    Component: HostelLifeSection,
+    propName: "hostelLifeSection",
+    dataKey: "hostelLifeSection",
+  },
+  {
+    key: "impacting-lives",
+    Component: ImpactingLivesSection,
+    propName: "impactingLivesSection",
+    dataKey: "impactingLivesSection",
+  },
+  {
+    key: "library",
+    Component: LibrarySection,
+    propName: "librarySection",
+    dataKey: "librarySection",
   },
 ];
