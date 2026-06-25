@@ -70,7 +70,7 @@ const AdvisoryLoop = ({ schoolCat }: Props) => {
         Math.min(prev + ITEMS_PER_LOAD, advisoryFaculties.length),
       );
       setIsLoadingMore(false);
-    }, 600);
+    }, 300);
 
     return () => clearTimeout(timer);
   }, [isLoadingMore, advisoryFaculties.length]);
@@ -81,7 +81,7 @@ const AdvisoryLoop = ({ schoolCat }: Props) => {
   // Initial fetch loader
   if (loading && visibleFaculties.length === 0)
     return (
-      <div className="flex flex-col items-center justify-center py-14">
+      <div className="flex flex-col items-center justify-center py-20">
         {/* Loader */}
         <div className="relative h-14 w-14">
           <div className="absolute inset-0 rounded-full border-4 border-gray-200"></div>
@@ -97,17 +97,19 @@ const AdvisoryLoop = ({ schoolCat }: Props) => {
 
   return (
     <>
-      <div className="mt-5 sm:mt-0 grid grid-cols-2 md:grid-cols-5 pt-16 px-2 sm:px-4 pb-4 gap-5">
+      <div className="flex flex-wrap justify-center pt-5 sm:pt-16 px-4 pb-4 gap-5 mt-16 sm:mt-2">
         {visibleFaculties.length > 0 ? (
           visibleFaculties.map((faculty) => (
-            <AdvisoryEmployeeCard
-              key={faculty?.id}
-              name={faculty?.faculty_name}
-              imgUrl={faculty?.faculty_img?.url}
-              qual={faculty?.faculty_qualification}
-              desg={faculty?.faculty_card_desg}
-              slug={faculty?.facultyslug}
-            />
+            <div key={faculty.id} className=" flex justify-center">
+              <AdvisoryEmployeeCard
+                key={faculty?.id}
+                name={faculty?.faculty_name}
+                imgUrl={faculty?.faculty_img?.url}
+                qual={faculty?.faculty_qualification}
+                desg={faculty?.faculty_card_desg}
+                slug={faculty?.facultyslug}
+              />
+            </div>
           ))
         ) : (
           <div className="col-span-full text-center text-gray-500 py-10">
