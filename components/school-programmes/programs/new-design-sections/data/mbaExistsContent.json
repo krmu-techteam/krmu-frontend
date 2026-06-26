@@ -1,0 +1,26 @@
+{
+  "mbaExists": {
+    "badge": "WHY THIS MBA EXISTS",
+    "titleLineOne": "We cannot tell you what the jobs of 2028 will be.",
+    "titleLineTwo": "We can tell you what those jobs will demand.",
+    "readMoreLink": "#read-more",
+    "demands": [
+      {
+        "id": "01",
+        "label": "Hard work"
+      },
+      {
+        "id": "02",
+        "label": "Fluency with AI"
+      },
+      {
+        "id": "03",
+        "label": "Judgement to act"
+      },
+      {
+        "id": "04",
+        "label": "Composure under pressure"
+      }
+    ]
+  }
+}

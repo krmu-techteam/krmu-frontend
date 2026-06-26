@@ -1,0 +1,34 @@
+{
+  "facultyAndIndustry": {
+    "badge": "FACULTY & INDUSTRY",
+    "title": "Who teaches you, and who teaches alongside them.",
+    "classroomImage": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1562_8c17bcfeca.jpg",
+    "dean": {
+      "name": "Dr. Hima Gupta",
+      "designation": "Dean",
+      "qualification": "Ph.D.",
+      "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Hima_Gupta_adb3700f07.png",
+      "linkedin": "https://www.linkedin.com/school/k.r.-mangalam-university/"
+    },
+    "sections": [
+      {
+        "title": "Core faculty",
+        "desc": "Doctorates from top business schools, with industry experience.",
+        "linkText": "Read More",
+        "link": "#"
+      },
+      {
+        "title": "Senior industry leaders",
+        "desc": "Practitioners co-teach courses, set real problems, and sit on the juries that grade your work.",
+        "linkText": "Read More",
+        "link": "#"
+      },
+      {
+        "title": "Curriculum partners",
+        "desc": "Harvard Business Impact cases and simulations across courses; IBM, EY and IIDE in Year Two.",
+        "linkText": "Read More",
+        "link": "#"
+      }
+    ]
+  }
+}

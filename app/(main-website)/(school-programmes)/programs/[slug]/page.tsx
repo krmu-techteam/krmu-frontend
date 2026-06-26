@@ -1,5 +1,6 @@
 import { getSchoolProgrammeData } from "@/lib/api/school-programmes";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
+
 import BeyondClassroom from "../../school-programmes-component/BeyondClassroom";
 import CareerProspects from "../../school-programmes-component/CareerProspects";
 import { ConnectWithUs } from "../../school-programmes-component/ConnectWithUs";
@@ -52,6 +53,13 @@ import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-J
 import NewHeroSection from "@/components/school-programmes/programs/new-design-sections/components/heroSection";
 import LogoSection from "@/components/school-programmes/programs/new-design-sections/components/logoSection";
 import CareerOutcome from "@/components/school-programmes/programs/new-design-sections/components/careerOutcome";
+import MbaExists from "@/components/school-programmes/programs/new-design-sections/components/mbaExists";
+import TwoYearArc from "@/components/school-programmes/programs/new-design-sections/components/twoYearArc";
+import CareerGoal from "@/components/school-programmes/programs/new-design-sections/components/careerGoal";
+import LeaveWith from "@/components/school-programmes/programs/new-design-sections/components/leaveWith";
+import FacultyAndIndustry from "@/components/school-programmes/programs/new-design-sections/components/facultyAndIndustry";
+import ExperimentalInfra from "@/components/school-programmes/programs/new-design-sections/components/experimentalInfra";
+import Expectations from "@/components/school-programmes/programs/new-design-sections/components/expectations";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -328,15 +336,18 @@ const page = async ({ params }: Props) => {
             />
           ))}
 
-        {programmeHighlightSection && (
-          <ProgrammeHighlight
-            heading={programmeHighlightSection?.heading}
-            highlightHeading={programmeHighlightSection?.highlightheading}
-            desc={programmeHighlightSection?.subheading}
-            highlights={programmeHighlightSection?.programmehighlightcards}
-            slug={slug}
-          />
-        )}
+        {programmeHighlightSection &&
+          (slug === "mba-fintech" ? (
+            <MbaExists />
+          ) : (
+            <ProgrammeHighlight
+              heading={programmeHighlightSection?.heading}
+              highlightHeading={programmeHighlightSection?.highlightheading}
+              desc={programmeHighlightSection?.subheading}
+              highlights={programmeHighlightSection?.programmehighlightcards}
+              slug={slug}
+            />
+          ))}
 
         {slug === "mba" && <SpecialisationsSection />}
         {specialisationSection && (
@@ -346,79 +357,100 @@ const page = async ({ params }: Props) => {
             specialisations={specialisationSection?.specialisationcards}
           />
         )}
-        {admissionProcessSection && (
-          <AdmissionProcessComp
-            heading={admissionProcessSection?.heading}
-            highlight={admissionProcessSection?.highlightheading}
-            desc={admissionProcessSection?.description}
-            deskimg={admissionProcessSection?.desktopadmissionprocessimg}
-            admissionCards={admissionProcessSection?.admissionprocesscard}
-            admisbtn={admissionProcessSection?.admissionbtn}
-            slug={slug}
-            // formId={admissionProcessSection?.admissionFormId}
-          />
-        )}
-        {curriculumSection && (
-          <Curriculum
-            heading={curriculumSection?.heading}
-            highlight={curriculumSection?.highlightheading}
-            desc={curriculumSection?.description}
-            programStruct={curriculumSection?.years}
-            currbtn={curriculumSection?.currbtn}
-            currFormId={curriculumSection?.currFormId}
-            currFormContainerId={curriculumSection?.currContainerId}
-            isYear={curriculumSection?.only_years}
-            slug={slug}
-          />
-        )}
-        {labfacilitiesSection && (
-          <LabsFacilities
-            heading={labfacilitiesSection?.heading}
-            highlight={labfacilitiesSection?.highlightheading}
-            btn={labfacilitiesSection?.labbtn}
-            labimg={labfacilitiesSection?.labsimage}
-            labcontent={labfacilitiesSection?.labscontent}
-            labcards={labfacilitiesSection?.labcards}
-            slug={slug}
-          />
-        )}
+        {admissionProcessSection &&
+          (slug === "mba-fintech" ? (
+            <TwoYearArc />
+          ) : (
+            <AdmissionProcessComp
+              heading={admissionProcessSection?.heading}
+              highlight={admissionProcessSection?.highlightheading}
+              desc={admissionProcessSection?.description}
+              deskimg={admissionProcessSection?.desktopadmissionprocessimg}
+              admissionCards={admissionProcessSection?.admissionprocesscard}
+              admisbtn={admissionProcessSection?.admissionbtn}
+              slug={slug}
+              // formId={admissionProcessSection?.admissionFormId}
+            />
+          ))}
 
-        {beyondclassSection && (
-          <BeyondClassroom
-            heading={beyondclassSection?.heading}
-            highlight={beyondclassSection?.highlightheading}
-            desc={beyondclassSection?.description}
-            beyondclassimages={beyondclassSection?.beyondclassroomimages}
-          />
-        )}
-        {careerProspectsSection && (
-          <CareerProspects
-            heading={careerProspectsSection?.heading}
-            highlight={careerProspectsSection?.highlightheading}
-            desc={careerProspectsSection?.description}
-            btn={careerProspectsSection?.careerbtn}
-            careerimg={careerProspectsSection?.careerimg}
-            careercards={careerProspectsSection?.careercards}
-            slug={slug}
-            // careerFormId={careerProspectsSection?.careerFormId}
-          />
-        )}
+        {curriculumSection &&
+          (slug === "mba-fintech" ? (
+            <CareerGoal />
+          ) : (
+            <Curriculum
+              heading={curriculumSection?.heading}
+              highlight={curriculumSection?.highlightheading}
+              desc={curriculumSection?.description}
+              programStruct={curriculumSection?.years}
+              currbtn={curriculumSection?.currbtn}
+              currFormId={curriculumSection?.currFormId}
+              currFormContainerId={curriculumSection?.currContainerId}
+              isYear={curriculumSection?.only_years}
+              slug={slug}
+            />
+          ))}
 
-        {financialAssistanceSection && (
-          <FinancialAssistance
-            heading={financialAssistanceSection?.heading}
-            highlightheading={financialAssistanceSection?.highlightheading}
-            description={financialAssistanceSection?.description}
-            point1={financialAssistanceSection?.point1}
-            point2={financialAssistanceSection?.point2}
-            point3={financialAssistanceSection?.point3}
-            point4={financialAssistanceSection?.point4}
-            point5={financialAssistanceSection?.point5}
-            point6={financialAssistanceSection?.point6}
-            point7={financialAssistanceSection?.point7}
-            logos={financialAssistanceSection?.financelogos}
-          />
-        )}
+        {labfacilitiesSection &&
+          (slug === "mba-fintech" ? (
+            <LeaveWith />
+          ) : (
+            <LabsFacilities
+              heading={labfacilitiesSection?.heading}
+              highlight={labfacilitiesSection?.highlightheading}
+              btn={labfacilitiesSection?.labbtn}
+              labimg={labfacilitiesSection?.labsimage}
+              labcontent={labfacilitiesSection?.labscontent}
+              labcards={labfacilitiesSection?.labcards}
+              slug={slug}
+            />
+          ))}
+
+        {beyondclassSection &&
+          (slug === "mba-fintech" ? (
+            <FacultyAndIndustry />
+          ) : (
+            <BeyondClassroom
+              heading={beyondclassSection?.heading}
+              highlight={beyondclassSection?.highlightheading}
+              desc={beyondclassSection?.description}
+              beyondclassimages={beyondclassSection?.beyondclassroomimages}
+            />
+          ))}
+
+        {careerProspectsSection &&
+          (slug === "mba-fintech" ? (
+            <ExperimentalInfra />
+          ) : (
+            <CareerProspects
+              heading={careerProspectsSection?.heading}
+              highlight={careerProspectsSection?.highlightheading}
+              desc={careerProspectsSection?.description}
+              btn={careerProspectsSection?.careerbtn}
+              careerimg={careerProspectsSection?.careerimg}
+              careercards={careerProspectsSection?.careercards}
+              slug={slug}
+              // careerFormId={careerProspectsSection?.careerFormId}
+            />
+          ))}
+
+        {financialAssistanceSection &&
+          (slug === "mba-fintech" ? (
+            <Expectations />
+          ) : (
+            <FinancialAssistance
+              heading={financialAssistanceSection?.heading}
+              highlightheading={financialAssistanceSection?.highlightheading}
+              description={financialAssistanceSection?.description}
+              point1={financialAssistanceSection?.point1}
+              point2={financialAssistanceSection?.point2}
+              point3={financialAssistanceSection?.point3}
+              point4={financialAssistanceSection?.point4}
+              point5={financialAssistanceSection?.point5}
+              point6={financialAssistanceSection?.point6}
+              point7={financialAssistanceSection?.point7}
+              logos={financialAssistanceSection?.financelogos}
+            />
+          ))}
 
         <ScholarshipBanner />
 

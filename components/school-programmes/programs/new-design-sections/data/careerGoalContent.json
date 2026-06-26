@@ -1,0 +1,113 @@
+{
+  "careerGoal": {
+    "badge": "CAREER OUTCOMES",
+    "title": "Built for one goal – significantly better career outcomes.",
+    "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1558_c43e07abdb.jpg",
+    "semesters": [
+      {
+        "id": "semester1",
+        "tabLabel": "Semester 1",
+        "courses": [
+          {
+            "title": "Managerial Economics",
+            "desc": "How do you use economic reasoning – about prices, demand, competition, and policy – to make sharper business decisions?",
+            "linkText": "Read More"
+          },
+          {
+            "title": "Business Analytics and Data Visualization",
+            "desc": "How do you go from a vague business problem to a decision-ready insight that a senior manager can actually act on?",
+            "linkText": "Read More"
+          },
+          {
+            "title": "Management Theory and Practice",
+            "desc": "How do you build the personal philosophy, the ethical frame, and the judgement to lead well when there is no rulebook?",
+            "linkText": "Read More"
+          },
+          {
+            "title": "Organizational Behaviour",
+            "desc": "How do you read people, motivate teams, and shape workplace culture, including when you are not yet the boss?",
+            "linkText": "Read More"
+          }
+        ]
+      },
+      {
+        "id": "semester2",
+        "tabLabel": "Semester 2",
+        "courses": [
+          {
+            "title": "Corporate Finance",
+            "desc": "How to manage budgets, optimize capital structures, and make investment decisions to drive long-term business value.",
+            "linkText": "Read More"
+          },
+          {
+            "title": "Marketing Management",
+            "desc": "How to build strong brands, capture consumer attention, and position products strategically in highly competitive markets.",
+            "linkText": "Read More"
+          },
+          {
+            "title": "Operations & Supply Chain Management",
+            "desc": "How to design efficient processes, manage global supply chains, and deliver quality at scale with digital automation.",
+            "linkText": "Read More"
+          },
+          {
+            "title": "Strategic Human Resources",
+            "desc": "How to recruit, develop, and retain top talent to build high-performing organizations and drive alignment.",
+            "linkText": "Read More"
+          }
+        ]
+      },
+      {
+        "id": "semester3",
+        "tabLabel": "Semester 3",
+        "courses": [
+          {
+            "title": "Strategic Management",
+            "desc": "How to formulate winning corporate strategies and sustain competitive advantage in rapidly changing ecosystems.",
+            "linkText": "Read More"
+          },
+          {
+            "title": "Entrepreneurship & Innovation",
+            "desc": "How to design a new venture, validate ideas in the market, build prototypes, and pitch to venture capital investors.",
+            "linkText": "Read More"
+          },
+          {
+            "title": "Digital Business Models",
+            "desc": "How to pivot traditional businesses into digital-first ecosystems and leverage network effects for exponential growth.",
+            "linkText": "Read More"
+          },
+          {
+            "title": "Consumer Behaviour & Insights",
+            "desc": "How to leverage behavioral economics and user research to decode buying decisions and customer journeys.",
+            "linkText": "Read More"
+          }
+        ]
+      },
+      {
+        "id": "semester4",
+        "tabLabel": "Semester 4",
+        "courses": [
+          {
+            "title": "Leadership & Change Management",
+            "desc": "How to lead large organizations through digital transformations, transitions, restructuring, and systemic change.",
+            "linkText": "Read More"
+          },
+          {
+            "title": "Corporate Governance & Ethics",
+            "desc": "How to establish board structures, maintain transparency, manage regulatory compliance, and act with ethical responsibility.",
+            "linkText": "Read More"
+          },
+          {
+            "title": "Capstone Project",
+            "desc": "Integrate learning across all modules to address and solve a complex real-world strategic challenge for a client partner.",
+            "linkText": "Read More"
+          },
+          {
+            "title": "Negotiation & Conflict Resolution",
+            "desc": "How to achieve mutually beneficial outcomes, navigate disputes, and construct deals in complex corporate settings.",
+            "linkText": "Read More"
+          }
+        ]
+      }
+    ]
+  }
+}
