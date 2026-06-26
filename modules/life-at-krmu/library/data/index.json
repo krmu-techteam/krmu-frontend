@@ -63,6 +63,365 @@
             "content": "Any changes in mobile number or e-mail Id should be inform the Head Librarian by filling up the CORRECTION form available at http://drhilaluddin.blogspot.in/ ISSUE OF BOOKS"
           }
         ]
+      },
+      "bookIssueGuidelines": {
+        "tagLine": "Empowering Learning",
+        "heading": "Efficient Book Issuance System",
+        "description": "The university’s library facilitates an online request system for book issuance, prioritizing convenience and time-saving. With a limit of three books per borrow, which can be increased upon request, the system is designed to cater to the diverse academic needs of students and faculty.",
+        "bookIssueContents": [
+          {
+            "content": "Students are advised to submit their request on-line to save their time."
+          },
+          {
+            "content": "You must collect your requested books at free time or you may request for your own suitable date & time."
+          },
+          {
+            "content": "Any damaged books which are separated for binding will not be issued 3LATE FINE"
+          },
+          { "content": "Reply will be sent on to your Mobile Number as SMS." },
+          {
+            "content": "You must show your Identity Card at the time of getting books."
+          },
+          { "content": "Books are issued for 15 days." },
+          {
+            "content": "Using abbreviation in title will not be accepted/ entertained."
+          },
+          {
+            "content": "You must check every book before taking it out. You will be responsible if any damage found at the time of return."
+          },
+          {
+            "content": "If you failed to collect the books on time your books will be cancelled and may be issued to other members. There is system of first come first serve."
+          },
+          {
+            "content": "There is limit of 3 books to borrow at a time, which may be increased if desired & requested."
+          },
+          {
+            "content": "Kindly clear your Library dues as soon as possible. No book will be issued if any book or fine is pending."
+          }
+        ]
+      },
+      "lateFine": {
+        "tagLine": "Maintaining Accountability",
+        "heading": "Structured Late Fine System",
+        "description": "The library implements a clear late fine policy to ensure the timely return of books. The fine structure is designed to maintain discipline among users, with different rates for the initial and extended late periods, reflecting the library’s commitment to resource availability for all.",
+        "fineRules": [
+          {
+            "content": "There is a provision of late fine @ Rs. 10/- per book per day for first 10 days, & 20/- (per day per book) after 10 days for students."
+          },
+          {
+            "content": "Rs. 10/- for staff (per day per book). From the date of announcement of the suspension of classes announced before University exams."
+          },
+          {
+            "content": "The amount of fine should be deposited in account section and one copy of the Receipt of the paid amount should be deposited in the library."
+          },
+          {
+            "content": "Library membership will remain closed till the dues remains unpaid, and they can not borrow any book."
+          },
+          {
+            "content": "University Librarian has the power of relaxation of fine up to 100%."
+          },
+          {
+            "content": "Vice Chancellor has the power of relaxation of fine up to 100%."
+          },
+          {
+            "content": "Chancellor has the power of relaxation of fine up to 100%."
+          },
+          {
+            "content": "4MISSING/ LOST OF BOOK"
+          }
+        ],
+        "memberLoanPolicy": {
+          "headers": [
+            "Categories of Members",
+            "Maximum No. of Books",
+            "Maximum Period of Loan",
+            "Late Fine"
+          ],
+          "rows": [
+            {
+              "memberCategory": "All Teaching Staff",
+              "maxBooks": "05",
+              "loanPeriod": {
+                "Semester": "Odd Semester:",
+                "duration1": "1st August to September end",
+                "duration2": "1st October to November end",
+                "evenSemester": "Even Semester:",
+                "evenDuration1": "2nd January to February end",
+                "evenDuration2": "2nd March to 10th May"
+              },
+              "lateFine": "Rs. 10 & 20"
+            },
+            {
+              "memberCategory": "Non Teaching Staff",
+              "maxBooks": "02",
+              "loanPeriod": "Same as teaching staff",
+              "lateFine": "Rs. 10 & 20"
+            },
+            {
+              "memberCategory": "Regular Student",
+              "maxBooks": "03",
+              "loanPeriod": "15 Days",
+              "lateFine": "Rs. 10 & 20"
+            },
+            {
+              "memberCategory": "Post Graduate Student",
+              "maxBooks": "04",
+              "loanPeriod": "15 Days",
+              "lateFine": "Rs. 10 & 20"
+            },
+            {
+              "memberCategory": "Phd Students",
+              "maxBooks": "05",
+              "loanPeriod": "15 Days",
+              "lateFine": "Rs. 10 & 20"
+            }
+          ]
+        }
+      },
+      "lostBookPolicy": {
+        "tagLine": "Responsibility and Replacement",
+        "heading": "Handling Lost Books",
+        "description": "The library has set procedures for handling damaged books, where borrowers may be asked to replace the book or pay a binding charge. This policy underscores the importance of maintaining the integrity of library resources.",
+        "lostBookPolicyContents": [
+          {
+            "content": "Lost or missing of books may be replaced with a latest edition’s new copy of the same book. Indian edition book shall be replaced with Indian edition and foreign edition book with foreign edition.",
+            "imageUrl": "/library/lp01.svg"
+          },
+          {
+            "content": "Cost of the missing or lost of books may be deposited in account section of the college.",
+            "imageUrl": "/library/lp02.svg"
+          },
+          {
+            "content": "Printed cost of the lost book (document/ item) + Rs. 100/- (processing charge) & late fine if any may be deposited in account section. If lost/ missing book is important and out of print, then printing cost with 50% extra charge, with late fine if any, will be charged.",
+            "imageUrl": "/library/lp03.svg"
+          },
+          {
+            "content": "One copy of Receipt of the paid amount should be deposited in the Library to clear the dues.",
+            "imageUrl": "/library/lp04.svg"
+          },
+          {
+            "content": "His/ her library membership will remain closed till the due(s) remains unpaid, and they can not borrow any book.",
+            "imageUrl": "/library/lp05.svg"
+          }
+        ]
+      },
+      "damagedBookPolicy": {
+        "tagLine": "Preserving Resources",
+        "heading": "Addressing Book Damages",
+        "description": "The library has set procedures for handling damaged books, where borrowers may be asked to replace the book or pay a binding charge. This policy underscores the importance of maintaining the integrity of library resources.",
+        "damagedBookPolicyContents": [
+          {
+            "content": "Any book found damaged at the time of returning, the borrower may be asked to replace the book with a new one or pay binding charge Rs. 100/- in account section, and deposit one copy of the receipt in Library.",
+            "imageUrl": "/library/lp01.svg"
+          },
+          {
+            "content": "If the damage is minor, then they may be asked to pay a penalty of mishandling Rs. 50/- in account section, and deposit one copy of the receipt in Library.",
+            "imageUrl": "/library/lp02.svg"
+          },
+          {
+            "content": "His/ her library membership will remain closed till the penalty remains unpaid, and they cannot borrow any book. 6BOOK RENEWAL?",
+            "imageUrl": "/library/lp03.svg"
+          }
+        ]
+      },
+      "bookRenewalPolicy": {
+        "tagLine": "Flexible Learning Support",
+        "heading": "Easy Book Renewal Process",
+        "description": "The library’s book renewal system is designed for flexibility, allowing users to extend their borrowing period through an online request. This system accommodates the varying pace and depth of study and research undertaken by users.",
+        "bookRenewalPolicyContents": [
+          {
+            "content": "Books are issued for 21 days only.",
+            "imageUrl": "/library/lp01.svg"
+          },
+          {
+            "content": "If further you need for more than 21 days, then you have to submit a Renewal Request Online only.",
+            "imageUrl": "/library/lp02.svg"
+          },
+          {
+            "content": "If further you need for more than 21 days, then you have to submit a Renewal Request Online only.",
+            "imageUrl": "/library/lp03.svg"
+          },
+          {
+            "content": "Renewal Request may be submitted in advance before two days of the Due Date.",
+            "imageUrl": "/library/lp04.svg"
+          },
+          {
+            "content": "Remember, the Due Date is the date of starting of fine.",
+            "imageUrl": "/library/lp05.svg"
+          },
+          {
+            "content": "Requested books will be renewed before 11:30 A.M. every day and updated to view it Online before 04:00 P.M. every day.",
+            "imageUrl": "/library/lp06.svg"
+          }
+        ]
+      },
+      "renewalStatus": {
+        "tagLine": "Stay Updated",
+        "heading": "Convenient Renewal Status Checks",
+        "description": "Users can easily check their renewal status online, including due dates and membership status. This feature adds transparency and convenience, allowing users to manage their borrowing efficiently.",
+        "renewalStatusContents": [
+          {
+            "content": "You may check Renewal Status Online (next Due Date, Membership Status, and Fine if any etc) yourself.",
+            "imageUrl": "/library/lp01.svg"
+          },
+          {
+            "content": "Login the Renewal Status strictly be made through Gmail only.",
+            "imageUrl": "/library/lp02.svg"
+          },
+          {
+            "content": "If there is any fine & Membership is Closed, then you have to deposit fine in Account section.",
+            "imageUrl": "/library/lp03.svg"
+          },
+          {
+            "content": "Ask Account Section official for two copies of the receipt of thefine you have paid.",
+            "imageUrl": "/library/lp04.svg"
+          },
+          {
+            "content": "Deposit one copy of fine receipt in Library to update your Library account.",
+            "imageUrl": "/library/lp05.svg"
+          },
+          {
+            "content": "To get Status through SMS your mobile number should be correct, in working and registered in the library.",
+            "imageUrl": "/library/lp06.svg"
+          },
+          {
+            "content": "Students shall be barred this book renewal facility if any due remains pending.",
+            "imageUrl": "/library/lp07.svg"
+          },
+          {
+            "content": "Your feedback will be useful for enhancements of Library services.",
+            "imageUrl": "/library/lp08.svg"
+          }
+        ]
+      },
+      "bookRecallAndReservation": {
+        "tagLine": "Dynamic Resource Management",
+        "heading": "Book Recall and Reservation",
+        "description": "The library’s system for recalling issued books and reserving desired ones ensures optimal circulation and availability of resources. This dynamic approach caters to the evolving needs of the academic community.",
+        "bookRecallAndReservationContents": [
+          {
+            "content": "Library may recall any issued book, any time without assigning any reason.",
+            "imageUrl": "/library/lp01.svg"
+          },
+          {
+            "content": "Any book which is issued out may be reserved by staff & students.",
+            "imageUrl": "/library/lp02.svg"
+          },
+          {
+            "content": "They will be informed about the arrival of books through SMS/e-mail.",
+            "imageUrl": "/library/lp03.svg"
+          },
+          {
+            "content": "Three days waiting will be provided to borrow the reserved book.",
+            "imageUrl": "/library/lp04.svg"
+          },
+          {
+            "content": "Deposit one copy of fine receipt in Library to update your Library account.",
+            "imageUrl": "/library/lp05.svg"
+          },
+          {
+            "content": "After three days the reservation will be cancelled and reserved bookmay be issued to any other deserving member.",
+            "imageUrl": "/library/lp06.svg"
+          },
+          {
+            "content": "Your mobile number and e-mail ID should be correct & in working to get SMS/ email alert.",
+            "imageUrl": "/library/lp07.svg"
+          }
+        ]
+      },
+      "promptCorrection": {
+        "tagLine": "Ensuring Accuracy",
+        "heading": "Prompt Correction Services",
+        "description": "The library provides an online platform for users to submit  corrections or changes in their details, ensuring that communication and services remain efficient and personalized.",
+        "promptCorrectionContents": [
+          {
+            "content": "Any correction or change of address, e-mail, mobile number, etc. may be submitted through online."
+          },
+          {
+            "content": "SMS alert will be given for any action taken."
+          }
+        ]
+      },
+      "readingRoom": {
+        "tagLine": "Fostering Focus",
+        "heading": "Reading Room Facilities and Discipline",
+        "description": "The library offers a dedicated reading room with a focus on discipline and silence, creating an environment conducive to deep study and concentration.",
+        "leftContents": [
+          "Reading room facilities are provided for self reading to students with sufficient number of seating capacity.",
+          "There is a separate reading area for faculty/ staff members/students.",
+          "Subject discussions, which disturb others, will not be allowed in silence zone.",
+          "Silence will strictly be observed in the reading area.",
+          "A person shall not sleep, smoke or spit in any part of the library.",
+          "A person shall not sleep, smoke or spit in any part of the library.",
+          "Students are expected to be in discipline.",
+          "Use of cellular phones and any other electronic/ battery operated gadget in the Library is strictly prohibited.",
+          "No personal book or belonging shall be allowed to be taken inside the library without the permission of the librarian."
+        ],
+        "rightContents": [
+          "A person shall not write upon, damage, mutilate or mark any book belonging to the library.",
+          "All members and their personal belongings including Library books issued to them are subject to a search/ check by the library staff at the Library entrance. Property Counter is provided to put their personal belongings.",
+          "Any infringement of the library rules will render the privilege of admission and of borrowing books from the Library liable to cancellation.",
+          "The Vice Chancellor/ Chancellor/ Librarian reserves the right to suspend the membership privilege of any member found misbehaving with the library staff or for indecent behavior.",
+          "Students may be barred reading room facility if any due remainspending.",
+          "A person shall not sleep, smoke or spit in any part of the library.",
+          "Students may be barred reading room facility if any due remains pending.",
+          "Locker facilities are available for students to put their valuable in safe locked mode."
+        ]
+      },
+      "digitalLibrary": {
+        "tagLine": "Digital Age Learning",
+        "heading": "Advanced Digital Library Services",
+        "description": "The digital library section, equipped with the latest computer terminals and online journals, reflects the university’s commitment to providing advanced study and research tools in the digital era.",
+        "digitalLibraryContents": [
+          {
+            "content": "Digital Library facility is an additional service the Library.",
+            "imageUrl": "/library/lp01.svg"
+          },
+          {
+            "content": "Latest & new computer terminals are installed to access the information and browse the net for on-line resources.",
+            "imageUrl": "/library/lp02.svg"
+          },
+          {
+            "content": "Online journals are subscribed to support the subject area of users for advance study/ research.",
+            "imageUrl": "/library/lp03.svg"
+          },
+          {
+            "content": "Library is a member of DELNET database. Every members may utilize/explore it.",
+            "imageUrl": "/library/lp04.svg"
+          },
+          {
+            "content": "Using or accessing of any objectionable website is not allowed in the Digital Library section.",
+            "imageUrl": "/library/lp05.svg"
+          },
+          {
+            "content": "There are a lot of course materials uploaded/ linked for users’ access for their academic development.",
+            "imageUrl": "/library/lp06.svg"
+          },
+          {
+            "content": "Students may be barred digital library facility if any due remains pending.",
+            "imageUrl": "/library/lp07.svg"
+          }
+        ]
+      },
+      "feedbackAndComplaints": {
+        "tagLine": "Valuing Feedback",
+        "heading": "Library Complaint and Suggestion System",
+        "description": " The library encourages users to submit complaints and suggestions online, demonstrating its commitment to continuous improvement and user satisfaction.",
+        "feedbackAndComplaintsContents": [
+          {
+            "content": "Any complaint regarding Library may be brought to the notice of the Librarian or submitted through Online.",
+            "imageUrl": "/library/lp01.svg"
+          },
+          {
+            "content": "Any suggestion regarding Library may be submitted through Online.",
+            "imageUrl": "/library/lp02.svg"
+          },
+          {
+            "content": "To get SMS alert about your complaint/ suggestion, your mobile number should be correct & in working.",
+            "imageUrl": "/library/lp03.svg"
+          }
+        ],
+        "imageUrl": "/library/liabrary.webp"
       }
     }
   }
