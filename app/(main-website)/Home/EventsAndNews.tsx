@@ -27,7 +27,7 @@ const EventsAndNews = async ({
             }}
           />
 
-          <div className="grid gap-5 lg:gap-10 grid-cols-1 md:grid-cols-3  lg:grid-cols-3 lg:px-0 mt-5 lg:mt-0 ">
+          <div className="grid gap-5 lg:gap-10  md:grid-cols-3  lg:grid-cols-3 lg:px-0 mt-5 lg:mt-0 ">
             {newsandeventsdata?.data?.map((item: NewsEventItem, i: number) => (
               <HomeNewsEventsCard key={i} data={item} />
             ))}
