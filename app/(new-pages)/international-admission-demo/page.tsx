@@ -26,9 +26,10 @@ const page = () => {
       <WhyStudy />
       <WhyChoose /> */}
       <PatentCampusResearch />
-      {/* <GlobalLearning />
+      <GlobalLearning />
       <StudyInGurgaon />
       <BenefitOfStudy />
+      {/* 
       <SchoolProgrammesDiscipline />
       <ProgrammeTabs />
       <ScholarshipSection />

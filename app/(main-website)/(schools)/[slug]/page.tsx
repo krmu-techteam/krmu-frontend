@@ -44,7 +44,26 @@ import {
   somcLogos,
   sprsLogos,
 } from "../SchoolComponents/schoolData";
-import { sbasHerosLogos, semceHerosLogos, smasHerosLogos, soadHerosLogos, soasHerosLogos, soedHerosLogos, soetHerosLogos, sohmctHerosLogos, solaHerosLogos, solsHerosLogos, somcHerosLogos, sprsHerosLogos } from "../SchoolComponents/schoolHeroLogo";
+import {
+  sbasHerosLogos,
+  semceHerosLogos,
+  smasHerosLogos,
+  soadHerosLogos,
+  soasHerosLogos,
+  soedHerosLogos,
+  soetHerosLogos,
+  sohmctHerosLogos,
+  solaHerosLogos,
+  solsHerosLogos,
+  somcHerosLogos,
+  sprsHerosLogos,
+} from "../SchoolComponents/schoolHeroLogo";
+import { createProgrammeItemListSchema } from "@/lib/api/common";
+import {
+  getSchoolProgrammePhdSchema,
+  getSchoolProgrammesForSchema,
+} from "@/lib/api/school-programmes";
+import Script from "next/script";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -231,8 +250,39 @@ export default async function Page({ params }: Props) {
   const schoolsLogosData = schoolsImageMap[slug];
   const schoolsHerosLogosData = schoolsHeroLogosMap[slug];
 
+  const allSchoolProgrammeNames = await getSchoolProgrammesForSchema(
+    school.school_category?.name,
+  );
+
+  const allPHDSchoolProgrammeNames = await getSchoolProgrammePhdSchema(
+    school.school_category?.name,
+  );
+
+  const programmes = [
+    ...allSchoolProgrammeNames.map((programme) => ({
+      name: programme.title,
+      url: `https://www.krmangalam.edu.in/programs/${programme.programmeslug}`,
+    })),
+    ...allPHDSchoolProgrammeNames.map((programme) => ({
+      name: programme.heading,
+      url: `https://www.krmangalam.edu.in/programs/${programme.phdslug}`,
+    })),
+  ];
+
+  const schoolSchema = createProgrammeItemListSchema({
+    name: `Programmes Offered - ${school.schoolname}`,
+    description: `List of undergraduate, postgraduate and doctoral programmes offered by ${school.schoolname} at K.R. Mangalam University.`,
+    url: `https://www.krmangalam.edu.in/${school.urlslug}`,
+    programmes,
+  });
+
   return (
     <>
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: schoolSchema }}
+      />
       <SchoolHero
         herobanner={school?.schoolherobanner}
         title={school.schoolname}

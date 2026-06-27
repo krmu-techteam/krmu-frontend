@@ -87,11 +87,11 @@ export const internationalAdmissionHighlights = [
   },
   {
     icon: "/international-admission/icons/facilities.png",
-    title: `Modern Hostels & <br />Campus <strong>Facilities</strong>`,
+    title: `Modern Hostels & <br class="hidden sm:block" />Campus <strong>Facilities</strong>`,
   },
   {
     icon: "/international-admission/icons/international-exposure.png",
-    title: `<strong>Global Collaborations</strong> <br /> & International <br /> Exposure`,
+    title: `<strong>Global Collaborations</strong> <br  /> & International <br /> Exposure`,
   },
 ];
 
