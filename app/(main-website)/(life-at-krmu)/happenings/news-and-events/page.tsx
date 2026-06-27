@@ -1,11 +1,11 @@
 import { getNewsEvents } from "@/lib/api/news-events";
-
-import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import NewsAndEventsCards from "./comp/NewsAndEventsCards";
+import {
+  HeroSection,
+  NewsListingSection,
+} from "@/modules/life-at-krmu/news-and-events";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("news-and-events");
@@ -73,21 +73,13 @@ const page = async () => {
   if (!newsEventsPage) return null;
 
   return (
-    <section className="pt-[140px] px-4 lg:pt-[12%] pb-[9%] bg-[url(/bg-gradient.webp)] bg-no bg-cover bg-center">
-      <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-center text-white">
-        <div className="w-full lg:w-3/5 text-white font-semibold leading-[1.2] text-2xl md:text-3xl lg:text-[64px] mb-5">
-          <BlocksRenderer content={newsEventsPage.main_heading} />
-        </div>
-        <div className="w-full lg:w-2/5">
-          <BlocksRenderer content={newsEventsPage.main_desc} />
-        </div>
-      </div>
-      <div className="max-w-[1664px] mx-auto w-full py-10">
-        <div className="border-t border-[#716d6c] pt-12">
-          <NewsAndEventsCards />
-        </div>
-      </div>
-    </section>
+    <>
+      <HeroSection
+        title={newsEventsPage.main_heading}
+        main_desc={newsEventsPage.main_desc}
+      />
+      <NewsListingSection />
+    </>
   );
 };
 
