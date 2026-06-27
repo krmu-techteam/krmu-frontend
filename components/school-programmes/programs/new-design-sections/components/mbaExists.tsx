@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import { getMbaExistsContent } from "../lib/getContent";
 import { Fraunces, Inter } from "next/font/google";
@@ -19,6 +21,8 @@ const fraunces = Fraunces({
 const MbaExists = () => {
   const data = getMbaExistsContent();
   const content = data.mbaExists;
+
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <section className="relative w-full bg-[radial-gradient(40%_80%_at_15%_50%,#024178_0%,#012D52_50%,#012D52_100%)] py-16 overflow-hidden text-white flex flex-col justify-center">
@@ -42,21 +46,47 @@ const MbaExists = () => {
             {content.titleLineTwo}
           </h2>
 
-          {/* Read More Link */}
-          <div className="mb-12 sm:mb-6">
-            <Link
-              href={content.readMoreLink}
-              className="inline-flex items-center gap-2 group text-white"
+          {/* Read More Button */}
+          <div className="mb-6">
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                setIsExpanded(!isExpanded);
+              }}
+              className="inline-flex items-center gap-2 group text-white cursor-pointer bg-transparent border-0 p-0 text-left"
             >
               <span className="text-white text-xs transition-transform group-hover:translate-x-0.5">
-                <Play size={12} fill="white" />
+                <Play
+                  size={12}
+                  fill="white"
+                  className={`text-white transition-transform duration-300 ${isExpanded ? "rotate-90" : ""}`}
+                />
               </span>
               <span
                 className={`${inter.className} font-bold text-[15px] sm:text-[16px] underline decoration-1 underline-offset-2`}
               >
-                Read More
+                {isExpanded ? "Read Less" : "Read More"}
               </span>
-            </Link>
+            </button>
+          </div>
+
+          {/* Smooth Expandable Content Panel */}
+          <div
+            className={`grid transition-all duration-300 ease-in-out ${
+              isExpanded
+                ? "grid-rows-[1fr] opacity-100 mb-8"
+                : "grid-rows-[0fr] opacity-0 mb-0"
+            }`}
+          >
+            <div className="overflow-hidden">
+              {content.details && (
+                <p
+                  className={`${inter.className} text-sm sm:text-base leading-relaxed text-[#FFF1C2] max-w-4xl`}
+                >
+                  {content.details}
+                </p>
+              )}
+            </div>
           </div>
 
           {/* Demands / Capsules */}

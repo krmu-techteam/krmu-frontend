@@ -1,0 +1,17 @@
+{
+  "threeIndustryTracks": {
+    "titleLineOne": "Three industry tracks.",
+    "titleLineTwo": "One August 2026 intake.",
+    "description": "Start your application now – early applicants get scholarship priority.",
+    "primaryCta": {
+      "text": "Begin your application",
+      "link": "#apply"
+    },
+    "secondaryCta": {
+      "text": "Talk to admissions",
+      "link": "#admissions"
+    },
+    "footerText": "Prefer WhatsApp or a call? +91 93114 11717 · Response within 24 hours",
+    "phoneNumber": "+919311411717"
+  }
+}

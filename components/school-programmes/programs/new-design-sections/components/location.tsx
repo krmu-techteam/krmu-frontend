@@ -1,0 +1,126 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { getLocationContent } from "../lib/getContent";
+import { Fraunces, Inter } from "next/font/google";
+import { Phone, MapPin } from "lucide-react";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["italic", "normal"],
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["italic", "normal"],
+});
+
+const Location = () => {
+  const data = getLocationContent();
+  const content = data.location;
+
+  const renderIcon = (iconName: string) => {
+    switch (iconName) {
+      case "Phone":
+        return (
+          <Phone
+            strokeWidth={1.5}
+            className="w-6 h-6 text-[#002C51] shrink-0"
+          />
+        );
+      case "MapPin":
+        return (
+          <MapPin
+            strokeWidth={1.5}
+            className="w-6 h-6 text-[#002C51] shrink-0"
+          />
+        );
+      default:
+        return (
+          <Phone
+            strokeWidth={1.5}
+            className="w-6 h-6 text-[#002C51] shrink-0"
+          />
+        );
+    }
+  };
+
+  return (
+    <section className="w-full bg-[#FDF7EB] py-16 md:py-20 text-[#012D52]">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:pl-30 xl:px-20">
+        <div className="flex gap-8 items-center">
+          {/* Left Column: Heading, description & contact details */}
+          <div className="max-w-[541px] flex flex-col">
+            {/* Subheading / Badge */}
+            <span
+              className={`${inter.className} text-[#7A5821] text-xs sm:text-[11px] leading-[16px] font-medium tracking-[1.54px] uppercase block mb-3`}
+            >
+              {content.badge}
+            </span>
+
+            {/* Title */}
+            <h2
+              className={`${fraunces.className} text-[#002C51] text-3xl sm:text-4xl md:text-[38px] font-semibold mb-2`}
+            >
+              {content.title}
+            </h2>
+
+            {/* Description */}
+            <p
+              className={`${inter.className} text-[#002C51] text-sm sm:text-base md:text-[16px] leading-relaxed mb-10 `}
+            >
+              {content.description}
+            </p>
+
+            {/* Contact Info blocks */}
+            <div className="flex flex-col gap-6">
+              {content.contactInfo.map((info) => (
+                <div key={info.id} className="flex items-center gap-5">
+                  {/* Icon Container */}
+                  <div className="w-[50px] h-[50px] bg-[#F7F0E0]  rounded-[5px] flex items-center justify-center shrink-0">
+                    {renderIcon(info.icon)}
+                  </div>
+
+                  {/* Text details */}
+                  <div
+                    className={`${inter.className} text-[#002C51] text-[16px] max-w-[340px] `}
+                  >
+                    <span className="font-bold">{info.label}</span> ·{" "}
+                    {info.id === "call" ? (
+                      <a
+                        href={info.link}
+                        className="hover:underline transition-all"
+                      >
+                        {info.value}
+                      </a>
+                    ) : (
+                      <span cl>{info.value}</span>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column: Campus dome building image */}
+          <div className="min-w-[500px] min-h-[450px] flex justify-center ">
+            <div className="relative w-full max-w-[608px] aspect-[4/3] sm:aspect-[1.33/1] lg:aspect-[1.25/1] overflow-hidden  ">
+              <Image
+                src={content.image}
+                alt="KRMU Campus dome building with students"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 608px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Location;

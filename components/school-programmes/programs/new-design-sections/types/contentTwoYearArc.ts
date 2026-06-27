@@ -5,6 +5,7 @@ export interface SemesterType {
   icon: string;
   linkText: string;
   highlight?: boolean;
+  details?: string;
 }
 
 export interface TwoYearArcContentType {
@@ -16,3 +17,4 @@ export interface TwoYearArcContentType {
 export interface TwoYearArcPageContentType {
   twoYearArc: TwoYearArcContentType;
 }
+

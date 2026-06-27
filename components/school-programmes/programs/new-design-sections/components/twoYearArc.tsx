@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import { getTwoYearArcContent } from "../lib/getContent";
 import { Fraunces, Inter } from "next/font/google";
@@ -19,6 +21,8 @@ const fraunces = Fraunces({
 const TwoYearArc = () => {
   const data = getTwoYearArcContent();
   const content = data.twoYearArc;
+
+  const [activeSemester, setActiveSemester] = useState<number | null>(null);
 
   // Helper to dynamically render Lucide Icons by name
   const renderIcon = (iconName: string) => {
@@ -53,19 +57,20 @@ const TwoYearArc = () => {
         {/* 5-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-5 border border-[#D0C6B1] overflow-hidden shadow-[0_4px_20px_rgba(181,142,61,0.05)]">
           {content.semesters.map((sem, idx) => {
+            const isOpen = activeSemester === idx;
             return (
               <div
                 key={idx}
-                className="group flex flex-col  p-6  bg-[#F7F0E0] hover:bg-[#012D52] transition-all duration-300 border-b md:border-b-0 md:border-r border-[#D0C6B1] last:border-b-0 last:border-r-0"
+                className="group flex flex-col p-6 bg-[#F7F0E0] hover:bg-[#012D52] transition-all duration-300 border-b md:border-b-0 md:border-r border-[#D0C6B1] last:border-b-0 last:border-r-0"
               >
                 {/* Top Content */}
-                <div className=" min-h-[150px] md:min-h-[210px]">
+                <div className="mb-4 min-h-[205px]">
                   {/* Icon */}
                   <div className="mb-6">{renderIcon(sem.icon)}</div>
 
                   {/* Period Name */}
                   <div
-                    className={`${inter.className} text-xs sm:text-[12px] font-bold tracking-[0.1em] uppercase mb-2 text-[#A17200]  transition-colors duration-300`}
+                    className={`${inter.className} text-xs sm:text-[12px] font-bold tracking-[0.1em] uppercase mb-2 text-[#A17200] transition-colors duration-300`}
                   >
                     {sem.period}
                   </div>
@@ -79,23 +84,53 @@ const TwoYearArc = () => {
 
                   {/* Description */}
                   <p
-                    className={`${inter.className} text-[13px] sm:text-[12px]  text-[#012D52] group-hover:text-[#F7F0E0] opacity-[77%] font-medium transition-colors duration-300`}
+                    className={`${inter.className} text-[13px] sm:text-[12px] text-[#012D52] group-hover:text-[#F7F0E0] opacity-[77%] font-medium transition-colors duration-300`}
                   >
                     {sem.desc}
                   </p>
                 </div>
 
-                {/* Bottom Read More Link */}
-                <div>
-                  <Link
-                    href="#"
-                    className="inline-flex items-center gap-1 font-semibold text-[14px] tracking-[0.7px] underline underline-offset-2 decoration-1 text-[#A17200]  transition-colors duration-300"
+                {/* Bottom Read More Section */}
+                <div className="flex flex-col">
+                  {/* Toggle Button */}
+                  <div>
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (sem.details) {
+                          setActiveSemester(isOpen ? null : idx);
+                        }
+                      }}
+                      className="inline-flex items-center gap-1.5 font-semibold text-[14px] tracking-[0.7px] underline underline-offset-2 decoration-1 text-[#A17200] group-hover:text-white transition-colors duration-300 cursor-pointer bg-transparent border-0 p-0 text-left"
+                    >
+                      <span className="transition-transform duration-300">
+                        <Icons.Play
+                          size={8}
+                          className={`text-current fill-current transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
+                        />
+                      </span>{" "}
+                      {isOpen ? "Read Less" : sem.linkText}
+                    </button>
+                  </div>
+
+                  {/* Smooth Expandable Content Panel */}
+                  <div
+                    className={`grid transition-all duration-300 ease-in-out ${
+                      isOpen
+                        ? "grid-rows-[1fr] opacity-100 mt-4"
+                        : "grid-rows-[0fr] opacity-0"
+                    }`}
                   >
-                    <span className=" transition-transform group-hover:translate-x-0.5">
-                      <Icons.Play size={8} fill="#A17200" />
-                    </span>{" "}
-                    {sem.linkText}
-                  </Link>
+                    <div className="overflow-hidden">
+                      {sem.details && (
+                        <p
+                          className={`${inter.className} text-[13px] sm:text-[12px] leading-relaxed text-[#012D52] group-hover:text-[#F7F0E0] opacity-[85%] transition-colors duration-300`}
+                        >
+                          {sem.details}
+                        </p>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
             );

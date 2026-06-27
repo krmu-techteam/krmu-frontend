@@ -8,9 +8,11 @@ export interface MbaExistsContentType {
   titleLineOne: string;
   titleLineTwo: string;
   readMoreLink: string;
+  details?: string;
   demands: DemandType[];
 }
 
 export interface MbaExistsPageContentType {
   mbaExists: MbaExistsContentType;
 }
+

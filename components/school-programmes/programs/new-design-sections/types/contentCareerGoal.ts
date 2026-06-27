@@ -2,6 +2,7 @@ export interface CourseCardType {
   title: string;
   desc: string;
   linkText: string;
+  details?: string[];
 }
 
 export interface SemesterTabType {
@@ -20,3 +21,4 @@ export interface CareerGoalContentType {
 export interface CareerGoalPageContentType {
   careerGoal: CareerGoalContentType;
 }
+

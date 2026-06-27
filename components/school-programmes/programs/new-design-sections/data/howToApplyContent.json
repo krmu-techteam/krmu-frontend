@@ -1,0 +1,53 @@
+{
+  "howToApply": {
+    "badge": "ADMISSIONS · AUGUST 2026 INTAKE",
+    "title": "How to apply.",
+    "leftCards": [
+      {
+        "id": "eligibility",
+        "icon": "GraduationCap",
+        "title": "Eligibility",
+        "desc": "A bachelor's degree in any discipline. Work experience welcome, not required."
+      },
+      {
+        "id": "selection",
+        "icon": "Check",
+        "title": "Selection",
+        "desc": "KRMU Entrance Examination, followed by a faculty-led personal interview."
+      }
+    ],
+    "steps": [
+      {
+        "number": 1,
+        "title": "Apply online",
+        "desc": "admissions.krmangalam.edu.in · application fee ₹1,000"
+      },
+      {
+        "number": 2,
+        "title": "Entrance examination",
+        "desc": "The KRMU Entrance Examination"
+      },
+      {
+        "number": 3,
+        "title": "Personal interview",
+        "desc": "With the faculty panel"
+      },
+      {
+        "number": 4,
+        "title": "Offer & scholarship decision",
+        "desc": "Your admission offer with any scholarship award"
+      },
+      {
+        "number": 5,
+        "title": "Enrol",
+        "desc": "Confirm your seat in the August 2026 cohort"
+      }
+    ],
+    "cta": {
+      "buttonText": "Begin your application",
+      "buttonLink": "#apply",
+      "phoneText": "or call an admissions counsellor – +91 93114 11717",
+      "phoneNumber": "+919311411717"
+    }
+  }
+}

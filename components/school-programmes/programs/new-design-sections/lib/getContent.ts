@@ -18,6 +18,18 @@ import { ExperimentalInfraPageContentType } from "../types/contentExperimentalIn
 import ExperimentalInfraContentData from "../data/experimentalInfraContent.json";
 import { ExpectationsPageContentType } from "../types/contentExpectations";
 import ExpectationsContentData from "../data/expectationsContent.json";
+import { CareerProspectsPageContentType } from "../types/contentCareerProspects";
+import CareerProspectsContentData from "../data/careerProspectsContent.json";
+import { FeeFinancePageContentType } from "../types/contentFeeFinance";
+import FeeFinanceContentData from "../data/feeFinanceContent.json";
+import { HowToApplyPageContentType } from "../types/contentHowToApply";
+import HowToApplyContentData from "../data/howToApplyContent.json";
+import { LocationPageContentType } from "../types/contentLocation";
+import LocationContentData from "../data/locationContent.json";
+import { ThreeIndustryTracksPageContentType } from "../types/contentThreeIndustryTracks";
+import ThreeIndustryTracksContentData from "../data/threeIndustryTracksContent.json";
+import { CommonQuestionPageContentType } from "../types/contentCommonQuestion";
+import CommonQuestionContentData from "../data/commonQuestionContent.json";
 
 export function getContent(): HeroPageContentType {
   return HeroContentData as HeroPageContentType;
@@ -58,6 +70,36 @@ export function getExperimentalInfraContent(): ExperimentalInfraPageContentType 
 export function getExpectationsContent(): ExpectationsPageContentType {
   return ExpectationsContentData as ExpectationsPageContentType;
 }
+
+export function getCareerProspectsContent(): CareerProspectsPageContentType {
+  return CareerProspectsContentData as CareerProspectsPageContentType;
+}
+
+export function getFeeFinanceContent(): FeeFinancePageContentType {
+  return FeeFinanceContentData as FeeFinancePageContentType;
+}
+
+export function getHowToApplyContent(): HowToApplyPageContentType {
+  return HowToApplyContentData as HowToApplyPageContentType;
+}
+
+export function getLocationContent(): LocationPageContentType {
+  return LocationContentData as LocationPageContentType;
+}
+
+export function getThreeIndustryTracksContent(): ThreeIndustryTracksPageContentType {
+  return ThreeIndustryTracksContentData as ThreeIndustryTracksPageContentType;
+}
+
+export function getCommonQuestionContent(): CommonQuestionPageContentType {
+  return CommonQuestionContentData as CommonQuestionPageContentType;
+}
+
+
+
+
+
+
 
 
 

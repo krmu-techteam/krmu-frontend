@@ -2,22 +2,18 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { getFacultyAndIndustryContent } from "../lib/getContent";
 import { Fraunces, Inter } from "next/font/google";
 import * as Icons from "lucide-react";
-import { getFacultyBySlug } from "@/lib/api/faculty";
-import * as cheerio from "cheerio";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-
-// Import SOMC faculties only
-import { somcFaculties } from "@/lib/api/school-faculties/somc";
 import Autoplay from "embla-carousel-autoplay";
+import { FacultyCardType } from "../types/contentFacultyAndIndustry";
+import Link from "next/link";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,99 +27,59 @@ const fraunces = Fraunces({
   style: ["italic", "normal"],
 });
 
-// Inner Component for handling individual Faculty Card's social link parsing
+// Inner Component for handling individual Faculty Card
 const FacultyCard = ({
   name,
   desg,
   qual,
   imgUrl,
-  slug,
-  isDean,
-  linkedinUrlProp,
+  linkedin,
+  onOpenProfile,
 }: {
   name: string;
   desg: string;
   qual: string;
   imgUrl: string;
-  slug?: string;
-  isDean?: boolean;
-  linkedinUrlProp?: string;
+  linkedin: string;
+  onOpenProfile: () => void;
 }) => {
-  const [linkedinUrl, setLinkedinUrl] = useState<string>(
-    linkedinUrlProp || "#",
-  );
-
-  useEffect(() => {
-    if (isDean || !slug) return;
-    let mounted = true;
-    const fetchLinkedin = async () => {
-      try {
-        const res = await getFacultyBySlug(slug);
-        if (!mounted || !res?.[0]?.content?.rendered) return;
-        const $ = cheerio.load(res[0].content.rendered);
-        $(".fusion-checklist li a").each((_, el) => {
-          const href = $(el).attr("href")?.trim();
-          if (href && href.includes("linkedin.com")) {
-            setLinkedinUrl(href);
-          }
-        });
-      } catch (e) {
-        console.error("Error parsing LinkedIn for faculty card", e);
-      }
-    };
-    fetchLinkedin();
-    return () => {
-      mounted = false;
-    };
-  }, [slug, isDean]);
-
   return (
-    <div className="relative group overflow-hidden rounded-[5px] bg-white shadow-lg flex flex-col min-h-[400px] max-w-[267px]">
-      {/* Top Image Section */}
-      <div className="relative h-[250px] w-full overflow-hidden flex items-end justify-center">
-        {/* LinkedIn Link Icon */}
-        <Link
-          href={linkedinUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute top-2 right-2 z-20  hover:scale-108 transition-transform"
-        >
-          <Image
-            src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/8e9127f3a23f0410f6e38ad1af59850e5bb1f1df_9de1bd0ecf.png"
-            alt={name}
-            width={1024}
-            height={1024}
-            className="object-cover w-[50px] h-[50px] "
-          />
+    <div className="relative group flex flex-col min-h-[374px] max-w-[268px]  border border-[#D0C6B1]/30 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer rounded-[5px]">
+      {linkedin && (
+        <Link href={linkedin}>
+          <div className="absolute w-13 h-13 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/8e9127f3a23f0410f6e38ad1af59850e5bb1f1df_9de1bd0ecf.png)] bg-cover bg-center right-1 top-1 z-99 " />
         </Link>
+      )}
 
-        {/* Portrait Image */}
-        <div className="relative w-full h-full">
-          <Image
-            src={imgUrl}
-            alt={name}
-            fill
-            className="object-cover object-top transition-transform  duration-500 group-hover:scale-[1.03]"
-          />
-        </div>
+      {/* Top Portrait Image Container */}
+      <div
+        onClick={onOpenProfile}
+        className="relative w-full min-h-[200px] overflow-hidden bg-white"
+      >
+        <Image
+          src={imgUrl}
+          alt={name}
+          fill
+          className="object-contain  transition-transform duration-300 group-hover:scale-[1.03]"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
+        />
       </div>
 
       {/* Bottom Profile Details */}
       <div
-        className={`relative ${inter.className} flex-1 flex flex-col  text-center bg-[#012D52] z-10 `}
+        onClick={onOpenProfile}
+        className={`relative ${inter.className} flex-1 flex flex-col  p-6 bg-[#012D52] text-center`}
       >
-        <div
-          className="absolute h-[5px] top-[2px] w-full bg-[linear-gradient(90deg,#192F4B_1.92%,#006B6F_50.96%,#192F4B_100%)] 
-"
-        />
-        <div className="pt-8">
+        <div className="absolute h-[7px] top-0 left-0 w-full bg-[linear-gradient(90deg,#192F4B_1.92%,#006B6F_50.96%,#192F4B_100%)]" />
+
+        <div className="flex flex-col items-center flex-1 justify-center">
           <h4 className="font-bold text-[14px] text-white tracking-wide mb-1 leading-snug">
             {name}
           </h4>
-          <p className="text-[14px] text-[#EDBA55]  tracking-[0.5px] mb-2 leading-relaxed">
+          <p className="text-[14px] text-[#E7C268] uppercase  tracking-[0.5px] mb-2 ">
             {desg}
           </p>
-          <p className="text-[14px] text-white  leading-relaxed px-2">{qual}</p>
+          <p className="text-[14px] text-white leading-relaxed  ">{qual}</p>
         </div>
       </div>
     </div>
@@ -133,6 +89,11 @@ const FacultyCard = ({
 const FacultyAndIndustry = () => {
   const data = getFacultyAndIndustryContent();
   const content = data.facultyAndIndustry;
+
+  const [activeSection, setActiveSection] = useState<number | null>(null);
+  const [activeFaculty, setActiveFaculty] = useState<FacultyCardType | null>(
+    null,
+  );
 
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
@@ -148,39 +109,13 @@ const FacultyAndIndustry = () => {
     });
   }, [api]);
 
-  // Construct Cards List (Dean first, followed by top SOMC faculties)
-  const cards: any[] = [];
-
-  // 1. Add Dean Card statically from content
-  if (content.dean) {
-    cards.push({
-      id: "dean",
-      name: content.dean.name,
-      desg: content.dean.designation,
-      qual: content.dean.qualification,
-      imgUrl: content.dean.image,
-      isDean: true,
-      linkedin: content.dean.linkedin,
-    });
-  }
-
-  // 2. Add first 3 faculties from somc.ts
-  somcFaculties.forEach((fac) => {
-    cards.push({
-      id: fac.id,
-      name: fac.title?.rendered ?? "",
-      desg: fac.acf?.staff_designation ?? "",
-      qual: fac.acf?.["staff-qualification"] ?? "",
-      imgUrl: fac.featured_media_url ?? "/blank.jpg",
-      slug: fac.slug,
-    });
-  });
+  const cards = content.faculties || [];
 
   return (
     <section className="w-full bg-[#FDF7EB] text-[#012D52]">
       {/* Top Part: Info & Grid */}
       <div className="w-full py-16 md:py-20">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Subtitle & Title */}
           <div className="mb-6">
             <span
@@ -198,49 +133,101 @@ const FacultyAndIndustry = () => {
           <div className="w-full flex gap-8 lg:gap-12 items-center">
             {/* Left Column: Image Banner */}
             <div className="w-[50%]">
-              <div className="relative min-w-[496px] min-h-[486px]  overflow-hidden shadow-xl shadow-slate-900/10">
+              <div className="relative min-w-[496px] min-h-[486px] overflow-hidden shadow-xl shadow-slate-900/10">
                 <Image
                   src={content.classroomImage}
                   alt="MBA Classroom setting"
                   width={1024}
                   height={1024}
-                  className=" object-cover"
+                  className="object-cover"
                 />
               </div>
             </div>
 
             {/* Right Column: Three Sub-sections */}
-            <div className=" flex flex-col gap-4 pr-0 lg:pr-8">
-              {content.sections.map((sect, idx) => (
-                <div
-                  key={idx}
-                  className="group pb-6 border-b border-[#C5A76B] last:border-b-0 last:pb-0"
-                >
-                  <h3
-                    className={`${fraunces.className} text-[20px] sm:text-[23px] font-semibold text-[#012D52]`}
+            <div className="flex flex-col gap-6 pr-0 lg:pr-8 w-full max-w-[580px]">
+              {content.sections.map((sect, idx) => {
+                const isOpen = activeSection === idx;
+                return (
+                  <div
+                    key={idx}
+                    className="pb-6 border-b border-[#C5A76B] last:border-b-0 last:pb-0"
                   >
-                    {sect.title}
-                  </h3>
-                  <p
-                    className={`${inter.className} text-[14px] sm:text-[16px] leading-relaxed tracking-[0.7px]  text-[#012D52] mb-3`}
-                  >
-                    {sect.desc}
-                  </p>
-                  <Link
-                    href={sect.link}
-                    className="inline-flex items-center gap-1 font-semibold text-[14px] tracking-[0.7px] underline underline-offset-2 decoration-1 text-[#AA8324] transition-colors duration-300"
-                  >
-                    <span className="transition-transform group-hover:translate-x-0.5">
-                      <Icons.Play
-                        size={8}
-                        fill="currentColor"
-                        className="text-current"
-                      />
-                    </span>
-                    {sect.linkText}
-                  </Link>
-                </div>
-              ))}
+                    <h3
+                      className={`${fraunces.className} text-[20px] sm:text-[23px] font-semibold text-[#012D52]`}
+                    >
+                      {sect.title}
+                    </h3>
+                    <p
+                      className={`${inter.className} text-[14px] sm:text-[16px] leading-relaxed tracking-[0.7px] text-[#012D52] mb-3`}
+                    >
+                      {sect.desc}
+                    </p>
+
+                    {/* Read More Trigger Button */}
+                    <button
+                      onClick={() => {
+                        if (sect.details || sect.partners) {
+                          setActiveSection(isOpen ? null : idx);
+                        }
+                      }}
+                      className="group inline-flex items-center gap-1.5 font-semibold text-[14px] tracking-[0.7px] underline underline-offset-2 decoration-1 text-[#AA8324] transition-colors duration-300 cursor-pointer bg-transparent border-0 p-0 text-left"
+                    >
+                      <span className="transition-transform duration-300">
+                        <Icons.Play
+                          size={8}
+                          fill="currentColor"
+                          className={`text-current transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
+                        />
+                      </span>
+                      {isOpen ? "Read Less" : sect.linkText}
+                    </button>
+
+                    {/* Smooth Expandable Content Panel */}
+                    <div
+                      className={`grid transition-all duration-300 ease-in-out ${
+                        isOpen
+                          ? "grid-rows-[1fr] opacity-100 mt-4"
+                          : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        {/* Detailed Text Block */}
+                        {sect.details && (
+                          <p
+                            className={`${inter.className} text-[14px] sm:text-[15px] leading-relaxed text-black/80 mb-2`}
+                          >
+                            {sect.details}
+                          </p>
+                        )}
+
+                        {/* Curriculum Partners Grid Block */}
+                        {sect.partners && (
+                          <div className="flex flex-col gap-4 mt-2">
+                            {sect.partners.map((partner, pIdx) => (
+                              <div
+                                key={pIdx}
+                                className="border-b border-[#BCB093]/20 pb-3 last:border-b-0 last:pb-0"
+                              >
+                                <h4
+                                  className={`${inter.className} font-bold text-xs sm:text-[13px] text-[#012D52] mb-1`}
+                                >
+                                  {partner.name}
+                                </h4>
+                                <p
+                                  className={`${inter.className} text-[12px] sm:text-[13px] leading-relaxed text-black/80`}
+                                >
+                                  {partner.role}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -248,8 +235,8 @@ const FacultyAndIndustry = () => {
 
       {/* Bottom Part: Faculty slider section */}
       {cards.length > 0 && (
-        <div className="w-full bg-[#F7F0E0] py-16 ">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        <div className="w-full bg-[#F7F0E0] py-16">
+          <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <h3
               className={`${fraunces.className} text-[28px] sm:text-[38px] font-bold text-[#0F2A4D] mb-8`}
             >
@@ -271,19 +258,18 @@ const FacultyAndIndustry = () => {
               className="w-full mb-10"
             >
               <CarouselContent className="-ml-6">
-                {cards.map((card) => (
+                {cards.map((card, idx) => (
                   <CarouselItem
-                    key={card.id}
+                    key={idx}
                     className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pl-6"
                   >
                     <FacultyCard
                       name={card.name}
-                      desg={card.desg}
-                      qual={card.qual}
-                      imgUrl={card.imgUrl}
-                      slug={card.slug}
-                      isDean={card.isDean}
-                      linkedinUrlProp={card.linkedin}
+                      desg={card.designation}
+                      qual={card.qualification}
+                      imgUrl={card.image}
+                      linkedin={card.linkedin}
+                      onOpenProfile={() => setActiveFaculty(card)}
                     />
                   </CarouselItem>
                 ))}
@@ -305,6 +291,86 @@ const FacultyAndIndustry = () => {
                 ))}
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* Faculty Profile Modal Overlay */}
+      {activeFaculty && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 sm:p-6">
+          {/* Overlay */}
+          <div
+            onClick={() => setActiveFaculty(null)}
+            className="absolute inset-0 bg-black/50 backdrop-blur-md transition-opacity duration-300"
+          />
+
+          {/* Modal */}
+          <div className="relative z-10 w-full max-w-4xl overflow-hidden rounded-3xl bg-[#FDF7EB] shadow-[0_25px_80px_rgba(0,0,0,0.25)] border border-[#BCB093]/30 animate-in fade-in zoom-in-95 duration-300">
+            {/* Close */}
+            <button
+              onClick={() => setActiveFaculty(null)}
+              className="absolute right-5 top-5 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-white shadow-lg hover:bg-[#012D52] hover:text-white transition-all duration-300 cursor-pointer"
+            >
+              <Icons.X size={22} />
+            </button>
+
+            <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr]">
+              {/* Left Side */}
+              <div className="bg-gradient-to-b from-[#F6E8C9] to-[#FDF7EB] p-6 flex justify-center items-start">
+                <div className="relative  w-full max-w-[260px] overflow-hidden rounded-2xl shadow-xl">
+                  <Image
+                    src={activeFaculty.image}
+                    alt={activeFaculty.name}
+                    width={1024}
+                    height={1024}
+                    className="object-contain w-full h-full object-top"
+                  />
+                </div>
+              </div>
+
+              {/* Right Side */}
+              <div className="flex max-h-[85vh] flex-col">
+                {/* Header */}
+                <div className="border-b border-[#BCB093]/30 px-8 pt-8 pb-6">
+                  <h2
+                    className={`${fraunces.className} flex items-center gap-2 text-3xl lg:text-4xl font-semibold text-[#012D52] leading-tight`}
+                  >
+                    {activeFaculty.name}
+
+                    {activeFaculty.linkedin && (
+                      <a href={activeFaculty.linkedin}>
+                        <div className="w-15 h-15 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/8e9127f3a23f0410f6e38ad1af59850e5bb1f1df_9de1bd0ecf.png)] bg-cover bg-center z-99 " />
+                      </a>
+                    )}
+                  </h2>
+
+                  <div className="mt-3 flex flex-col items-start gap-3">
+                    <span
+                      className={`${inter.className} rounded-full bg-[#A17200]/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-[#A17200]`}
+                    >
+                      {activeFaculty.designation}
+                    </span>
+
+                    <span
+                      className={`${inter.className} text-sm px-4 font-medium text-[#012D52]/75`}
+                    >
+                      {activeFaculty.qualification}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Scrollable Content */}
+                <div className="flex-1 overflow-y-auto px-8 py-7">
+                  <div
+                    className={`${inter.className} space-y-5 text-[15px] leading-8 text-[#2F3A45]`}
+                  >
+                    {activeFaculty.details.split("\n\n").map((para, idx) => (
+                      <p key={idx}>{para}</p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}

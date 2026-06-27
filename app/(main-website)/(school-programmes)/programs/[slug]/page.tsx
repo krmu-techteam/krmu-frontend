@@ -60,6 +60,13 @@ import LeaveWith from "@/components/school-programmes/programs/new-design-sectio
 import FacultyAndIndustry from "@/components/school-programmes/programs/new-design-sections/components/facultyAndIndustry";
 import ExperimentalInfra from "@/components/school-programmes/programs/new-design-sections/components/experimentalInfra";
 import Expectations from "@/components/school-programmes/programs/new-design-sections/components/expectations";
+import CareerProspectsNew from "@/components/school-programmes/programs/new-design-sections/components/careerProspects";
+import FeeFinance from "@/components/school-programmes/programs/new-design-sections/components/feeFinance";
+import HowToApply from "@/components/school-programmes/programs/new-design-sections/components/howToApply";
+import LocationNew from "@/components/school-programmes/programs/new-design-sections/components/location";
+import ThreeIndustryTracks from "@/components/school-programmes/programs/new-design-sections/components/threeIndustryTracks";
+import CommonQuestion from "@/components/school-programmes/programs/new-design-sections/components/commonQuestion";
+import OldCareerProspects from "@/components/school-programmes/programs/new-design-sections/components/oldCareerProspect";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -435,7 +442,9 @@ const page = async ({ params }: Props) => {
 
         {financialAssistanceSection &&
           (slug === "mba-fintech" ? (
-            <Expectations />
+            <>
+              <Expectations />
+            </>
           ) : (
             <FinancialAssistance
               heading={financialAssistanceSection?.heading}
@@ -452,35 +461,56 @@ const page = async ({ params }: Props) => {
             />
           ))}
 
-        <ScholarshipBanner />
+        {slug === "mba-fintech" ? (
+          <CareerProspectsNew />
+        ) : (
+          <ScholarshipBanner />
+        )}
 
         {testimonialsData && <ProgTestimonials data={testimonialsData} />}
-        {tocSection && (
-          <TableOfContent
-            heading={tocSection?.heading}
-            highlight={tocSection?.highlightheading}
-            desc={tocSection?.description}
-            tocfaqs={tocSection?.tocfaq}
-            tocimg={tocSection?.tocimg}
-            tocbtn={tocSection?.tocbtn}
-          />
+
+        {tocSection &&
+          (slug === "mba-fintech" ? (
+            <FeeFinance />
+          ) : (
+            <TableOfContent
+              heading={tocSection?.heading}
+              highlight={tocSection?.highlightheading}
+              desc={tocSection?.description}
+              tocfaqs={tocSection?.tocfaq}
+              tocimg={tocSection?.tocimg}
+              tocbtn={tocSection?.tocbtn}
+            />
+          ))}
+
+        {slug === "mba-fintech" ? (
+          <HowToApply />
+        ) : (
+          <ExplorePrograms currentSlug={slug} />
         )}
 
-        <ExplorePrograms currentSlug={slug} />
-
-        {ourLocationSection && (
-          <OurLocation
-            badgetext={ourLocationSection?.badgetext}
-            heading={ourLocationSection?.badgetext}
-            img1={ourLocationSection?.img1}
-            img2={ourLocationSection?.img2}
-          />
-        )}
+        {ourLocationSection &&
+          (slug === "mba-fintech" ? (
+            <LocationNew />
+          ) : (
+            <OurLocation
+              badgetext={ourLocationSection?.badgetext}
+              heading={ourLocationSection?.badgetext}
+              img1={ourLocationSection?.img1}
+              img2={ourLocationSection?.img2}
+            />
+          ))}
 
         {/* <ConnectWithUs /> */}
-        {singleSchoolProgramme?.school_category && (
-          <ActionCards schoolCat={singleSchoolProgramme.school_category} />
-        )}
+        {singleSchoolProgramme?.school_category &&
+          (slug === "mba-fintech" ? (
+            <>
+              <CommonQuestion />
+              <ThreeIndustryTracks />
+            </>
+          ) : (
+            <ActionCards schoolCat={singleSchoolProgramme.school_category} />
+          ))}
       </main>
     </>
   );
