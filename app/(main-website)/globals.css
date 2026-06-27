@@ -11,21 +11,25 @@
   --bg-hover-1: #034272;
   --color-university-red: var(--university-red);
   --color-university-blue: var(--university-blue);
+  --font-host: var(--font-host-grotesk);
 }
 
 /* Custom utility class */
 @layer utilities {
-  .newsEventsContent p{
+  .font-host {
+    font-family: var(--font-host);
+  }
+  .newsEventsContent p {
     margin-bottom: 10px !important;
     font-size: 18px !important;
   }
-  .newsEventsContent h4{
+  .newsEventsContent h4 {
     font-size: 20px !important;
   }
-  .newsEventsContent ul{
+  .newsEventsContent ul {
     margin: 10px 0px;
   }
-  .newsEventsContent ul li{
+  .newsEventsContent ul li {
     margin-bottom: 10px !important;
     /* font-size: 16px !important; */
   }
