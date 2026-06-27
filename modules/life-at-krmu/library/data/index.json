@@ -422,6 +422,274 @@
           }
         ],
         "imageUrl": "/library/liabrary.webp"
+      },
+      "librarySupport": {
+        "tagLine": "Assistance at Every Step",
+        "heading": "Library staffs are ready to help users, if they need so. Remember, politeness always pays in form of personalized service.",
+        "imageUrl": "/library/liabrary.webp"
+      },
+      "feedbackRequest": {
+        "tagLine": "Your valuable suggestion may be useful for improvement of Library Services.",
+        "heading": "Therefore you are requested to fill & submit true data.",
+        "imageUrl": "/library/liabrary.webp"
+      },
+      "helpAndSupport": {
+        "tagLine": "Need Help?",
+        "heading": "Yes, a due weightage is given",
+        "description": "Library staffs are ready to help users, if they need so. Remember. politeness always pays in form of personalized service.",
+        "imageUrl": "/library/liabrary.webp"
+      },
+      "ebookLibrary": {
+        "title": "E-Books",
+        "subTitle": "Branch Wise E-Books",
+        "branches": [
+          {
+            "id": 1,
+            "branch": "Automobile Engineering",
+            "noOfBooks": 16,
+            "linkInfo": {
+              "text": "Download",
+              "url": "#"
+            }
+          },
+          {
+            "id": 2,
+            "branch": "Civil Engineering",
+            "noOfBooks": 27,
+            "linkInfo": {
+              "text": "Download",
+              "url": "#"
+            }
+          },
+          {
+            "id": 3,
+            "branch": "Computer Science Engineering/ IT",
+            "noOfBooks": 27,
+            "linkInfo": {
+              "text": "Download",
+              "url": "#"
+            }
+          },
+          {
+            "id": 4,
+            "branch": "Electronics & Communication Engineering",
+            "noOfBooks": 51,
+            "linkInfo": {
+              "text": "Download",
+              "url": "#"
+            }
+          },
+          {
+            "id": 5,
+            "branch": "Mechanical Engineering",
+            "noOfBooks": 34,
+            "linkInfo": {
+              "text": "Download",
+              "url": "#"
+            }
+          },
+          {
+            "id": 6,
+            "branch": "Management",
+            "noOfBooks": 4,
+            "linkInfo": {
+              "text": "Download",
+              "url": "#"
+            }
+          },
+          {
+            "id": 7,
+            "branch": "Applied Science & Humanities",
+            "noOfBooks": 0,
+            "linkInfo": {
+              "text": "Download",
+              "url": "#"
+            }
+          }
+        ],
+        "krmu": {
+          "heading": "KRMU E-Books",
+          "branches": [
+            {
+              "id": 1,
+              "branch": "School of Law",
+              "noOfBooks": 16,
+              "linkInfo": {
+                "text": "Download",
+                "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/E-books/E-Books of School of Law, K.R. Mangalam University.pdf"
+              }
+            }
+          ]
+        }
+      },
+      "journalResources": {
+        "title": "Journals",
+        "subTitle": "Journals/ E-Journals/ Periodicals",
+        "journals": [
+          {
+            "id": 1,
+            "resource": "Engineering Science &amp; Technology (IESTC)",
+            "totalJournals": "2,233",
+            "loginInfo": {
+              "url": "http://infotrac.galegroup.com/itweb/krmu",
+              "password": "new"
+            }
+          },
+          {
+            "id": 2,
+            "resource": "Management (IMC)",
+            "totalJournals": "3,210",
+            "loginInfo": {
+              "url": "http://infotrac.galegroup.com/itweb/krmu",
+              "password": "new"
+            }
+          },
+          {
+            "id": 3,
+            "resource": "Pharmacy (IPC)",
+            "totalJournals": "509",
+            "loginInfo": {
+              "url": "http://infotrac.galegroup.com/itweb/krmu",
+              "password": "new"
+            }
+          },
+          {
+            "id": 4,
+            "resource": "Architecture/ environmental Engineering (Greener)",
+            "totalJournals": "1,000",
+            "loginInfo": {
+              "url": "http://infotrac.galegroup.com/itweb/krmu",
+              "password": "new"
+            }
+          },
+          {
+            "id": 5,
+            "resource": "Manupatra (Law)",
+            "totalJournals": "0",
+            "loginInfo": {
+              "text": "IP Based (No Login & password required. Accessible within campus only)"
+            }
+          }
+        ],
+        "otherEJournals": [
+          {
+            "id": 1,
+            "branch": "Chemistry",
+            "noOfJournals": 15,
+            "linkInfo": {
+              "text": "Download",
+              "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/Journals/Chemistry.docx"
+            }
+          },
+          {
+            "id": 2,
+            "branch": "Civil Engineering",
+            "noOfJournals": 15,
+            "linkInfo": {
+              "text": "Download",
+              "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/Journals/Civil Engineering (OS) On-line Journals.docx"
+            }
+          },
+          {
+            "id": 3,
+            "branch": "Computer Science Engineering/ IT",
+            "noOfJournals": 28,
+            "linkInfo": {
+              "text": "Download",
+              "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/Journals/Computer Science and Engineering (OS) On-line Journals.docx"
+            }
+          },
+          {
+            "id": 4,
+            "branch": "Electronics & Communication Engineering (ECE/ EEE)",
+            "noOfJournals": 25,
+            "linkInfo": {
+              "text": "Download",
+              "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/Journals/ECE and EEE (OS) On-line Journals.docx"
+            }
+          },
+          {
+            "id": 5,
+            "branch": "Automobile Engineering",
+            "noOfJournals": 16,
+            "linkInfo": {
+              "text": "Download",
+              "url": "#"
+            }
+          },
+          {
+            "id": 6,
+            "branch": "English",
+            "noOfJournals": 8,
+            "linkInfo": {
+              "text": "Download",
+              "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/Journals/English.docx"
+            }
+          },
+          {
+            "id": 7,
+            "branch": "Law",
+            "noOfJournals": 40,
+            "linkInfo": {
+              "text": "Download",
+              "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/Journals/Law Journals.docx"
+            }
+          },
+          {
+            "id": 8,
+            "branch": "Journals/ E-Journals/ Periodicals and Information Science",
+            "noOfJournals": 31,
+            "linkInfo": {
+              "text": "Download",
+              "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/Journals/Library &amp; Information Science.docx"
+            }
+          },
+          {
+            "id": 9,
+            "branch": "Management",
+            "noOfJournals": 35,
+            "linkInfo": {
+              "text": "Download",
+              "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/Journals/Management (OS) On-line Journals.docx"
+            }
+          },
+          {
+            "id": 10,
+            "branch": "Mathematics",
+            "noOfJournals": 35,
+            "linkInfo": {
+              "text": "Download",
+              "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/Journals/Maths.docx"
+            }
+          },
+          {
+            "id": 11,
+            "branch": "Mechanical Engineering",
+            "noOfJournals": 26,
+            "linkInfo": {
+              "text": "Download",
+              "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/Journals/Mechanical Engineering (OS) On-line Journals.docx"
+            }
+          },
+          {
+            "id": 12,
+            "branch": "Pharmacy",
+            "noOfJournals": 50,
+            "linkInfo": {
+              "text": "Download",
+              "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/Journals/Pharmacy Journals.docx"
+            }
+          },
+          {
+            "id": 13,
+            "branch": "Physics",
+            "noOfJournals": 20,
+            "linkInfo": {
+              "text": "Download",
+              "url": "https://www.krmangalam.edu.in/wp-content/uploads/2023/Journals/Physics.docx"
+            }
+          }
+        ]
       }
     }
   }

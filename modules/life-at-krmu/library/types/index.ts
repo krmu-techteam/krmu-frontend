@@ -111,6 +111,58 @@ export interface FeedbackAndComplaints extends Library {
   feedbackAndComplaintsContents: LibraryCard[];
   imageUrl: string;
 }
+export interface LibraryContentType {
+  tagLine: string;
+  heading: string;
+  description?: string;
+  imageUrl: string;
+}
+
+export interface EBookLinkInfo {
+  text: string;
+  url: string;
+}
+export interface Branch {
+  id: number;
+  branch: string;
+  noOfBooks: number;
+  linkInfo: EBookLinkInfo;
+}
+
+export interface KRMu {
+  heading: string;
+  branches: Branch[];
+}
+export interface EBookLibrary {
+  title: string;
+  subTitle: string;
+  branches: Branch[];
+  krmu: KRMu;
+}
+export interface LoginInfo {
+  url?: string;
+  password?: string;
+  text?: string;
+}
+export interface Journal {
+  id: number;
+  resource: string;
+  totalJournals: number;
+  loginInfo: LoginInfo;
+}
+
+export interface OtherEJournal {
+  id: number;
+  branch: string;
+  noOfJournals: number;
+  linkInfo: EBookLinkInfo;
+}
+export interface JournalResources {
+  title: string;
+  subTitle: string;
+  journals: Journal[];
+  otherEJournals: OtherEJournal[];
+}
 export interface LibraryContentProps {
   overview: OverviewProps;
   membership: MembershipProps;
@@ -125,6 +177,11 @@ export interface LibraryContentProps {
   readingRoom: ReadingRoom;
   digitalLibrary: DigitalLibrary;
   feedbackAndComplaints: FeedbackAndComplaints;
+  librarySupport: LibraryContentType;
+  feedbackRequest: LibraryContentType;
+  helpAndSupport: LibraryContentType;
+  ebookLibrary: EBookLibrary;
+  journalResources: JournalResources;
 }
 export interface DataProps {
   libraryContent: LibraryContentProps;

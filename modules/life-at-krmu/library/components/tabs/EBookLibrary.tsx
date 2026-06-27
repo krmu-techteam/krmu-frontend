@@ -1,10 +1,17 @@
 import Link from "next/link";
+import { LibraryContentProps } from "../../types";
 
-const EBookLibrary = () => {
+const EBookLibrary = ({
+  libraryContent,
+}: {
+  libraryContent: LibraryContentProps;
+}) => {
+  if (!libraryContent.ebookLibrary) return null;
+  const { title, subTitle, branches, krmu } = libraryContent.ebookLibrary;
   return (
-    <div className="libcontent">
-      <h4>E-Books</h4>
-      <h3>Branch Wise E-Books</h3>
+    <div className="libcontent font-poppins text-white">
+      <h4>{title}</h4>
+      <h3>{subTitle}</h3>
       <div className="libtable">
         <table>
           <tbody>
@@ -14,78 +21,28 @@ const EBookLibrary = () => {
               <td>No. of Books</td>
               <td>View &amp; Download</td>
             </tr>
-            <tr>
-              <td>1</td>
-              <td>Automobile Engineering</td>
-              <td>16</td>
-              <td>
-                <Link href="#" target="_blank" rel="noopener noreferrer">
-                  Download
-                </Link>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Civil Engineering</td>
-              <td>27</td>
-              <td>
-                <Link href="#" target="_blank" rel="noopener noreferrer">
-                  Download
-                </Link>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Computer Science Engineering/ IT</td>
-              <td>27</td>
-              <td>
-                <Link href="#" target="_blank" rel="noopener noreferrer">
-                  Download
-                </Link>
-              </td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Electronics &amp; Communication Engineering</td>
-              <td>51</td>
-              <td>
-                <Link href="#" target="_blank" rel="noopener noreferrer">
-                  Download
-                </Link>
-              </td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Mechanical Engineering</td>
-              <td>34</td>
-              <td>
-                <Link href="#" target="_blank" rel="noopener noreferrer">
-                  Download
-                </Link>
-              </td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Management</td>
-              <td>04</td>
-              <td>
-                <Link href="#" target="_blank" rel="noopener noreferrer">
-                  Download
-                </Link>
-              </td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Applied Science &amp; Humanities</td>
-              <td>0</td>
-              <td>
-                <Link href="#">Download</Link>
-              </td>
-            </tr>
+            {branches?.map((branch, idx) => {
+              return (
+                <tr key={idx}>
+                  <td>{branch.id}</td>
+                  <td>{branch.branch}</td>
+                  <td>{branch.noOfBooks}</td>
+                  <td>
+                    <Link
+                      href={branch.linkInfo.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {branch.linkInfo.text}
+                    </Link>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
         <br />
-        <h3>KRMU E-Books</h3>
+        <h3>{krmu.heading}</h3>
       </div>
       <div className="libtable">
         <table>
@@ -96,20 +53,24 @@ const EBookLibrary = () => {
               <td>No. of Books</td>
               <td>View &amp; Download</td>
             </tr>
-            <tr>
-              <td>1</td>
-              <td>School of Law</td>
-              <td>16</td>
-              <td>
-                <Link
-                  href="https://www.krmangalam.edu.in/wp-content/uploads/2023/E-books/E-Books of School of Law, K.R. Mangalam University.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Download
-                </Link>
-              </td>
-            </tr>
+            {krmu.branches?.map((branch) => {
+              return (
+                <tr key={branch.id}>
+                  <td>{branch.id}</td>
+                  <td>{branch.branch}</td>
+                  <td>{branch.noOfBooks}</td>
+                  <td>
+                    <Link
+                      href={branch.linkInfo.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {branch.linkInfo.text}
+                    </Link>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
