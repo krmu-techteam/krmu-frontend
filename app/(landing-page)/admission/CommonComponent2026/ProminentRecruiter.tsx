@@ -40,13 +40,13 @@ const ProminentRecruiter = ({ recruiters }: Props) => {
           </div>
         </div>
       </section>
-      <div className="max-w-[1400px] rounded-2xl mt-[30px] mx-auto overflow-hidden">
+      <div className="max-w-[1400px]  mt-[30px] mx-auto overflow-hidden">
         <Image
           src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/cuet_1_079fc125f8.webp"
           width={1920}
           height={670}
           alt=""
-          className="hidden sm:block"
+          className="hidden sm:block rounded-2xl"
         />
         <Image
           src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/CUET_Landing_Page_2_5cea8861dc.png"
