@@ -250,7 +250,6 @@ export default async function Page({ params }: Props) {
   const schoolsLogosData = schoolsImageMap[slug];
   const schoolsHerosLogosData = schoolsHeroLogosMap[slug];
 
-  console.log("school", school);
   const allSchoolProgrammeNames = await getSchoolProgrammesForSchema(
     school.school_category?.name,
   );

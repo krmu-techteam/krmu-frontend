@@ -817,7 +817,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Ms-Neha-Jhakra.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Ms.-NEHA-JHAKRA.jpeg",
   },
 
   // {
