@@ -75,7 +75,7 @@ export const internationalAdmissionHighlights = [
   },
   {
     icon: "/international-admission/icons/countries.png",
-    title: `Students from <br class="lg:hidden xl:block" /> <strong>Multiple Countries</strong>`,
+    title: `Students from <br /> <strong>Multiple Countries</strong>`,
   },
   {
     icon: "/international-admission/icons/industry.png",
@@ -87,11 +87,11 @@ export const internationalAdmissionHighlights = [
   },
   {
     icon: "/international-admission/icons/facilities.png",
-    title: `Modern Hostels & <br class=" lg:hidden xl:block" />Campus <strong>Facilities</strong>`,
+    title: `Modern Hostels & <br class="hidden sm:block" />Campus <strong>Facilities</strong>`,
   },
   {
     icon: "/international-admission/icons/international-exposure.png",
-    title: `<strong>Global Collaborations</strong> <br class="lg:hidden xl:block" /> & International <br /> Exposure`,
+    title: `<strong>Global Collaborations</strong> <br  /> & International <br /> Exposure`,
   },
 ];
 

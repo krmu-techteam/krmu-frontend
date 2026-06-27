@@ -32,18 +32,18 @@ const PatentCampusResearch = () => {
           </p>
         </div>
       </div>
-      <div className="max-w-[1664px] mx-auto w-full grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-3 sm:gap-5 mt-10">
+      <div className="max-w-[1664px] patentCampusGrid mx-auto w-full grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 sm:gap-5 mt-5 sm:mt-10">
         {internationalAdmissionHighlights.map((item, index) => (
           <div
             key={index}
-            className="relative flex flex-col items-center justify-center gap-2 px-5 py-2.5 sm:p-5  lg:py-10 lg:px-5 text-center text-white"
+            className="relative patentCampusGrid-card flex flex-col items-center justify-center gap-2 px-5 py-2.5 sm:p-5  lg:py-10 lg:px-5 text-center text-white"
           >
             <Image
               src="/international-admission/dashed-border.svg"
               width={444}
               height={444}
               alt=""
-              className="absolute  object-fill w-[230px] h-auto"
+              className="absolute  object-fill w-[140px] sm:w-[170px] lg:w-[225px] xl:w-[230px] h-auto patentCampusDashedBorder"
             />
 
             <Image

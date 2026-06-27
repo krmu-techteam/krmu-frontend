@@ -99,6 +99,40 @@ export async function getSchoolProgrammeData(
 //   }
 // }
 
+export async function getSchoolProgrammePhdSchema(
+  schoolCatName: string,
+): Promise<SchoolPhDProgrammeResponse["data"]> {
+  const res = await fetch(
+    // `${FETCH_STRAPI_URL}/api/school-programmes?filters[degrees][name][$eq]=${deg}&filters[school_categories][name][$eq]=${schoolCatName}&fields[0]=title&fields[1]=programmeslug&populate[criteria][fields][0]=Duration&populate[criteria][fields][1]=eligibility_criteria&populate[criteria][fields][2]=semester_i&populate[criteria][fields][3]=semester_ii&populate[criteria][fields][4]=programme_fee_per_year&populate[criteria][fields][5]=eligibility_utm_links&populate[criteria][populate][degree][fields][0]=name&populate[criteria][populate][degree][fields][1]=slug&pagination[pageSize]=50&pagination[page]=1&sort[0]=id:asc`,
+    `${FETCH_STRAPI_URL}/api/phd-single-programmes?filters[school_category][name][$eq]=${schoolCatName}&field[0]=title&field[1]=phdslug[populate]=*`,
+    {
+      next: {
+        revalidate: 28800,
+      },
+    },
+  );
+  if (!res.ok) throw new Error("Failed to school PHD Programme Info");
+  const json: SchoolPhDProgrammeResponse = await res.json();
+  return json.data;
+}
+
+export async function getSchoolProgrammesForSchema(
+  schoolCatName: string,
+): Promise<SCHOOLPROGRAMMECARDINFORESPONSE["data"]> {
+  const res = await fetch(
+    `${FETCH_STRAPI_URL}/api/school-programmes?filters[school_category][name][$eq]=${schoolCatName}&fields[0]=title&fields[1]=programmeslug&pagination[page]=1&pagination[pageSize]=80`,
+    {
+      next: {
+        revalidate: 43200,
+      },
+    },
+  );
+
+  if (!res.ok) throw new Error("Failed to fetch school programmes");
+
+  const json: SCHOOLPROGRAMMECARDINFORESPONSE = await res.json();
+  return json.data;
+}
 export async function getSchoolProgrammeInfoByDegree(
   deg: string = "Undergraduate Programmes",
   schoolCatName: string,

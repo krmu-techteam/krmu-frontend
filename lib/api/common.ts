@@ -816,6 +816,41 @@ export const createCollageOrUniversityHomepageSchema = ({
   return JSON.stringify(schema);
 };
 
+interface ItemListProgramme {
+  name: string;
+  url: string;
+}
+
+interface CreateItemListSchemaProps {
+  name: string;
+  description?: string;
+  url: string;
+  programmes: ItemListProgramme[];
+}
+
+export const createProgrammeItemListSchema = ({
+  name,
+  description,
+  url,
+  programmes,
+}: CreateItemListSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    ...(description && { description }),
+    url,
+    itemListElement: programmes.map((programme, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: programme.name,
+      url: programme.url,
+    })),
+  };
+
+  return JSON.stringify(schema);
+};
+
 type TocFaq = {
   id: number;
   tocpoint: string;
