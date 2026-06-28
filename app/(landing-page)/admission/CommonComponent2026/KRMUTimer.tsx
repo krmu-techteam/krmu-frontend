@@ -98,7 +98,7 @@ export default function KRMUTimer({
       <span
         className={`text-[10px] xl:text-sm capitalize tracking-wider font-extrabold ${mainWebsiteTimer && "text-white"}`}
       >
-        Registration Closing on June 24 | Join RJ Naved LIVE | Limited Seats Available
+        Grab Up to 100% Scholarships Worth Rs 27 Cr + Get a Chance to Fly to Europe (First Come, First Serve)
       </span>
       <div className="flex gap-2 font-mono text-sm">
         <TimeBox
