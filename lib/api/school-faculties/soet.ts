@@ -115,6 +115,22 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr-Anshu-SOET.png",
   },
+  // Dr Aarti
+  {
+    id: 60875,
+    slug: "dr-aarti",
+    title: {
+      rendered: "Dr. Aarti",
+    },
+    featured_media: 60880,
+    acf: {
+      "staff-qualification": "Ph.D. (Engg.)",
+      staff_designation: "Assistant  Professor",
+      schools: [1126, 1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr-Aarti-SOET.png",
+  },
   // Amar Saraswat
   {
     id: 10285,
@@ -130,6 +146,70 @@ export const soetFaculties: SchoolFacultiesType[] = [
     },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Amar-Saraswat-SOET.jpg",
+  },
+  // Dr Ayyala Kishore
+  {
+    id: 65449,
+    slug: "doctor-ayyala-kishore-ajay-kumar",
+    title: {
+      rendered: "Dr. Ayyala Kishore Ajay Kumar",
+    },
+    featured_media: 65454,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.Ayyala-kishore-ajay-kumar-SOET.jpg",
+  },
+  // Dr Imran Siraj
+  {
+    id: 42014,
+    slug: "dr-imran-siraj",
+    title: {
+      rendered: "Dr. Imran Siraj",
+    },
+    featured_media: 42021,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant  Professor",
+      schools: [1126, 1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Dr.-Imran-Siraj-SOET.jpg",
+  },
+  // Dr Manish Kumar
+  {
+    id: 71732,
+    slug: "dr-manish-kumar",
+    title: {
+      rendered: "Dr. Manish Kumar",
+    },
+    featured_media: 71736,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1098],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/10/Dr.-Manish-Kumar-SOET.jpg",
+  },
+  // Monika Khatkar
+  {
+    id: 9402,
+    slug: "monika-khatkar",
+    title: {
+      rendered: "Dr. Monika Khatkar",
+    },
+    featured_media: 9338,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant  Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr-Monika-Khatkar-SOET.png",
   },
   // Dr Prabhakar
   {
@@ -147,119 +227,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Prabhakar-Bhandari-SOET.jpg",
   },
-  // Jyoti Kataria
-  {
-    id: 60034,
-    slug: "ms-jyoti-kataria",
-    title: {
-      rendered: "Ms. Jyoti Kataria",
-    },
-    featured_media: 60036,
-    acf: {
-      "staff-qualification": "Ph.D. pursuing",
-      staff_designation: "Assistant  Professor",
-      schools: [1126, 1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms.-Jyoti-Kataria-2.png",
-  },
-  // Ms Suman
-  {
-    id: 60012,
-    slug: "ms-suman",
-    title: {
-      rendered: "Ms. Suman",
-    },
-    featured_media: 60013,
-    acf: {
-      "staff-qualification": "Ph.D. pursuing",
-      staff_designation: "Assistant  Professor",
-      schools: [1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms-Suman-SOET.png",
-  },
-  // Dr Rupesh
-  {
-    id: 65581,
-    slug: "dr-rupesh-kumar-tipu",
-    title: {
-      rendered: "Dr. Rupesh Kumar Tipu",
-    },
-    featured_media: 65587,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant Professor",
-      schools: [1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.Rupesh-kumar-Tipu-SOET.jpg",
-  },
-  // Dr Vandna Batra
-  {
-    id: 10713,
-    slug: "vaandna",
-    title: {
-      rendered: "Dr. Vandna",
-    },
-    featured_media: 10704,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant  Professor",
-      schools: [1126, 1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Vandna.jpeg",
-  },
-  // Ruchika bhakkar
-  {
-    id: 9131,
-    slug: "ms-ruchika-bhakhar",
-    title: {
-      rendered: "Ms. Ruchika Bhakhar",
-    },
-    featured_media: 9132,
-    acf: {
-      "staff-qualification": "Ph.D. (Pursuing)",
-      staff_designation: "Assistant  Professor",
-      schools: [1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Ms-Ruchika-Bhakhar-SOET.png",
-  },
-  // Saneh Lata Yadav
-  {
-    id: 9992,
-    slug: "saneh-lata-yadav",
-    title: {
-      rendered: "Dr. Saneh Lata Yadav",
-    },
-    featured_media: 55396,
-    acf: {
-      "staff-qualification": "Ph.D. (Computer Science) ",
-      staff_designation: "Assistant  Professor",
-      schools: [787],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Sneh-Lata-Yadav.jpeg",
-  },
-  // Dr Surabhi Shanker
-  {
-    id: 113752,
-    slug: "dr-surabhi-shanker",
-    title: {
-      rendered: "Dr. Surabhi Shanker",
-    },
-    featured_media: 9132,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant  Professor",
-      schools: [1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr-Surabhi-Shanker-SOET.png",
-  },
-  // Dr. Preeti Rathi?
+  // Dr. Preeti Rathi
   {
     id: 10813,
     slug: "dr-preeti-rathi",
@@ -291,85 +259,21 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr-Rakhi-Dua-SOET.png",
   },
-  // Ms Neetu Chauhan
+  // Dr Ravinder Beniwal
   {
-    id: 43155,
-    slug: "mrs-neetu-chauhan",
+    id: 80010,
+    slug: "dr-ravinder-beniwal",
     title: {
-      rendered: "Ms. Neetu Chauhan",
+      rendered: "Dr. Ravinder Beniwal",
     },
-    featured_media: 101432,
-    acf: {
-      "staff-qualification": "Ph.D. (Pursuing)",
-      staff_designation: "Assistant Professor",
-      schools: [1126, 1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Ms-neetu-chauhan-SOET.png",
-  },
-  // Dr Imran Siraj
-  {
-    id: 42014,
-    slug: "dr-imran-siraj",
-    title: {
-      rendered: "Dr. Imran Siraj",
-    },
-    featured_media: 42021,
+    featured_media: 80203,
     acf: {
       "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant  Professor",
-      schools: [1126, 1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Dr.-Imran-Siraj-SOET.jpg",
-  },
-  // Ms Lucky Verma
-  {
-    id: 53041,
-    slug: "ms-lucky-verma",
-    title: {
-      rendered: "Ms. Lucky Verma",
-    },
-    featured_media: 53044,
-    acf: {
-      "staff-qualification": "Ph.D. Pursuing",
       staff_designation: "Assistant Professor",
-      schools: [1126, 1266],
+      schools: [1098],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/07/Ms-Lucky-Verma-SOET.png",
-  },
-  // Rishika Mehta
-  {
-    id: 58540,
-    slug: "ms-rishika-mehta",
-    title: {
-      rendered: "Ms. Rishika Mehta",
-    },
-    featured_media: 106777,
-    acf: {
-      "staff-qualification": "Ph.D. CSE pursuing",
-      staff_designation: "Assistant  Professor",
-      schools: [1126, 1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms.-Rishika-Mehta.jpeg",
-  },
-  // Mansi Kajal
-  {
-    id: 58540,
-    slug: "ms-mansi-kajal",
-    title: {
-      rendered: "Ms. Mansi Kajal",
-    },
-    featured_media: 106777,
-    acf: {
-      "staff-qualification": "Ph.D. CSE",
-      staff_designation: "Assistant  Professor",
-      schools: [1126, 1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms-Mansi-kajal-SOET.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/12/Dr.-Ravinder-Beniwal.jpg",
   },
   // Dr Reenu
   {
@@ -387,60 +291,60 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr-Reenu-SOET.png",
   },
-  // Megha Sharma
+  // Rishika Mehta
   {
-    id: 60032,
-    slug: "ms-megha-sharma",
+    id: 58540,
+    slug: "ms-rishika-mehta",
     title: {
-      rendered: "Ms. Megha Sharma",
+      rendered: "Ms. Rishika Mehta",
     },
-    featured_media: 60033,
+    featured_media: 106777,
     acf: {
       "staff-qualification": "Ph.D. CSE pursuing",
       staff_designation: "Assistant  Professor",
       schools: [1126, 1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms-Megha-Sharma-SOET.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms.-Rishika-Mehta.jpeg",
   },
-  // Dr Aarti
+  // Saneh Lata Yadav
   {
-    id: 60875,
-    slug: "dr-aarti",
+    id: 9992,
+    slug: "saneh-lata-yadav",
     title: {
-      rendered: "Dr. Aarti",
+      rendered: "Dr. Saneh Lata Yadav",
     },
-    featured_media: 60880,
+    featured_media: 55396,
     acf: {
-      "staff-qualification": "Ph.D. (Engg.)",
+      "staff-qualification": "Ph.D. (Computer Science) ",
       staff_designation: "Assistant  Professor",
-      schools: [1126, 1266],
+      schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr-Aarti-SOET.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Sneh-Lata-Yadav.jpeg",
   },
-  // Dr Ayyala Kishore
+  // Dr. Shahjad
+  // {
+  //   id: 114221,
+  //   slug: "dr-shahjad",
+  //   title: {
+  //     rendered: "Dr. Shahjad",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url: "",
+  // },
+
+  // Dr Surabhi Shanker
   {
-    id: 65449,
-    slug: "doctor-ayyala-kishore-ajay-kumar",
+    id: 113752,
+    slug: "dr-surabhi-shanker",
     title: {
-      rendered: "Dr. Ayyala Kishore Ajay Kumar",
-    },
-    featured_media: 65454,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant Professor",
-      schools: [1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.Ayyala-kishore-ajay-kumar-SOET.jpg",
-  },
-  // Dr Kriti Sharma
-  {
-    id: 113760,
-    slug: "ms-kriti-sharma",
-    title: {
-      rendered: "Ms. Kriti Sharma",
+      rendered: "Dr. Surabhi Shanker",
     },
     featured_media: 9132,
     acf: {
@@ -449,39 +353,23 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Ms-Kriti-Sharma-SOET.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr-Surabhi-Shanker-SOET.png",
   },
-  // Dr Manish Kumar
+  // Dr Vandna Batra
   {
-    id: 71732,
-    slug: "dr-manish-kumar",
+    id: 10713,
+    slug: "vaandna",
     title: {
-      rendered: "Dr. Manish Kumar",
+      rendered: "Dr. Vandna",
     },
-    featured_media: 71736,
+    featured_media: 10704,
     acf: {
       "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant Professor",
-      schools: [1098],
+      staff_designation: "Assistant  Professor",
+      schools: [1126, 1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/10/Dr.-Manish-Kumar-SOET.jpg",
-  },
-  // Dr Ravinder Beniwal
-  {
-    id: 80010,
-    slug: "dr-ravinder-beniwal",
-    title: {
-      rendered: "Dr. Ravinder Beniwal",
-    },
-    featured_media: 80203,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant Professor",
-      schools: [1098],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/12/Dr.-Ravinder-Beniwal.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Vandna.jpeg",
   },
   // Dr Digvijay Singh
   {
@@ -499,37 +387,21 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.Digvijay-Singh-SOET.jpg",
   },
-  // Monika Khatkar
+  // Dr Rupesh
   {
-    id: 9402,
-    slug: "monika-khatkar",
+    id: 65581,
+    slug: "dr-rupesh-kumar-tipu",
     title: {
-      rendered: "Dr. Monika Khatkar",
+      rendered: "Dr. Rupesh Kumar Tipu",
     },
-    featured_media: 9338,
+    featured_media: 65587,
     acf: {
       "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant  Professor",
+      staff_designation: "Assistant Professor",
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr-Monika-Khatkar-SOET.png",
-  },
-  // Mr Mohammad Aijaz
-  {
-    id: 113782,
-    slug: "mr-mohammad-aijaz",
-    title: {
-      rendered: "Mr. Mohammad Aijaz",
-    },
-    featured_media: 9132,
-    acf: {
-      "staff-qualification": "Ph.D. (Submitted – 2026)",
-      staff_designation: "Assistant  Professor",
-      schools: [1266],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Mr.-Mohammad-Aijaz-SOET.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.Rupesh-kumar-Tipu-SOET.jpg",
   },
   // Deepak Kaushik
   {
@@ -547,6 +419,54 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/deepak-soet.jpeg",
   },
+  // Gaurav
+  {
+    id: 114223,
+    slug: "mr-gaurav",
+    title: {
+      rendered: "Mr. Gaurav",
+    },
+    featured_media: 6624,
+    acf: {
+      "staff-qualification": "Ph.D. (Pursuing)",
+      staff_designation: "Assistant Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/Mr.-Gaurav-SOET.jpg",
+  },
+  // Mr Mohammad Aijaz
+  {
+    id: 113782,
+    slug: "mr-mohammad-aijaz",
+    title: {
+      rendered: "Mr. Mohammad Aijaz",
+    },
+    featured_media: 9132,
+    acf: {
+      "staff-qualification": "Ph.D. (Submitted – 2026)",
+      staff_designation: "Assistant  Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Mr.-Mohammad-Aijaz-SOET.jpg",
+  },
+  // Jyoti Kataria
+  {
+    id: 60034,
+    slug: "ms-jyoti-kataria",
+    title: {
+      rendered: "Ms. Jyoti Kataria",
+    },
+    featured_media: 60036,
+    acf: {
+      "staff-qualification": "Ph.D. pursuing",
+      staff_designation: "Assistant  Professor",
+      schools: [1126, 1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms.-Jyoti-Kataria-2.png",
+  },
   // Jyoti Kaurav
   {
     id: 106734,
@@ -562,22 +482,6 @@ export const soetFaculties: SchoolFacultiesType[] = [
     },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Ms-Jyoti-Kaurav-SOET.png",
-  },
-  // Ritu Devi
-  {
-    id: 106731,
-    slug: "ms-ritu-devi",
-    title: {
-      rendered: "Ms. Ritu Devi",
-    },
-    featured_media: 106733,
-    acf: {
-      "staff-qualification": "Ph.D. (pursuing)",
-      staff_designation: "Assistant Professor",
-      schools: [1098],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Ms-Ritu-Devi-SOET.png",
   },
   // Jyoti Yadav
   {
@@ -595,22 +499,135 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/06/Ms-Jyoti-Yadav-SOET.png",
   },
-  // Gaurav
+  // Dr Kriti Sharma
   {
-    id: 114223,
-    slug: "mr-gaurav",
+    id: 113760,
+    slug: "ms-kriti-sharma",
     title: {
-      rendered: "Mr. Gaurav",
+      rendered: "Ms. Kriti Sharma",
     },
-    featured_media: 6624,
+    featured_media: 9132,
     acf: {
-      "staff-qualification": "Ph.D. (Pursuing)",
-      staff_designation: "Assistant Professor",
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant  Professor",
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/Mr.-Gaurav-SOET.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Ms-Kriti-Sharma-SOET.png",
   },
+  // Ms Lucky Verma
+  {
+    id: 53041,
+    slug: "ms-lucky-verma",
+    title: {
+      rendered: "Ms. Lucky Verma",
+    },
+    featured_media: 53044,
+    acf: {
+      "staff-qualification": "Ph.D. Pursuing",
+      staff_designation: "Assistant Professor",
+      schools: [1126, 1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/07/Ms-Lucky-Verma-SOET.png",
+  },
+  // Mansi Kajal
+  {
+    id: 58540,
+    slug: "ms-mansi-kajal",
+    title: {
+      rendered: "Ms. Mansi Kajal",
+    },
+    featured_media: 106777,
+    acf: {
+      "staff-qualification": "Ph.D. CSE",
+      staff_designation: "Assistant  Professor",
+      schools: [1126, 1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms-Mansi-kajal-SOET.png",
+  },
+  // Ms Neetu Chauhan
+  {
+    id: 43155,
+    slug: "mrs-neetu-chauhan",
+    title: {
+      rendered: "Ms. Neetu Chauhan",
+    },
+    featured_media: 101432,
+    acf: {
+      "staff-qualification": "Ph.D. (Pursuing)",
+      staff_designation: "Assistant Professor",
+      schools: [1126, 1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Ms-neetu-chauhan-SOET.png",
+  },
+  // Ritu Devi
+  {
+    id: 106731,
+    slug: "ms-ritu-devi",
+    title: {
+      rendered: "Ms. Ritu Devi",
+    },
+    featured_media: 106733,
+    acf: {
+      "staff-qualification": "Ph.D. (pursuing)",
+      staff_designation: "Assistant Professor",
+      schools: [1098],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Ms-Ritu-Devi-SOET.png",
+  },
+  // Ruchika bhakkar
+  {
+    id: 9131,
+    slug: "ms-ruchika-bhakhar",
+    title: {
+      rendered: "Ms. Ruchika Bhakhar",
+    },
+    featured_media: 9132,
+    acf: {
+      "staff-qualification": "Ph.D. (Pursuing)",
+      staff_designation: "Assistant  Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Ms-Ruchika-Bhakhar-SOET.png",
+  },
+  // Megha Sharma
+  {
+    id: 60032,
+    slug: "ms-megha-sharma",
+    title: {
+      rendered: "Ms. Megha Sharma",
+    },
+    featured_media: 60033,
+    acf: {
+      "staff-qualification": "Ph.D. CSE pursuing",
+      staff_designation: "Assistant  Professor",
+      schools: [1126, 1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms-Megha-Sharma-SOET.png",
+  },
+  // Ms Suman
+  {
+    id: 60012,
+    slug: "ms-suman",
+    title: {
+      rendered: "Ms. Suman",
+    },
+    featured_media: 60013,
+    acf: {
+      "staff-qualification": "Ph.D. pursuing",
+      staff_designation: "Assistant  Professor",
+      schools: [1266],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Ms-Suman-SOET.png",
+  },
+
   // Rajesh Kumar
   {
     id: 113754,
@@ -835,20 +852,6 @@ export const soetFaculties: SchoolFacultiesType[] = [
   //   featured_media_url: "",
   // },
   //
-  // {
-  //   id: 114221,
-  //   slug: "dr-shahjad",
-  //   title: {
-  //     rendered: "Dr. Shahjad",
-  //   },
-  //   featured_media: 6624,
-  //   acf: {
-  //     "staff-qualification": "Ph.D.",
-  //     staff_designation: "Assistant Professor",
-  //     schools: [1266],
-  //   },
-  //   featured_media_url: "",
-  // },
 
   // {
   //   id: 115495,
