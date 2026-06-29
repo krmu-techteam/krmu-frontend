@@ -1,0 +1,103 @@
+{
+  "data": {
+    "heroSection": {
+      "heading": "National Service Scheme (NSS)-KRMU ‘NOT ME BUT YOU’",
+      "description": "The National Service Scheme (NSS) launched on 24th September 1969 on the birth century of Mahatma Gandhi by Union Education Minister Dr. V.K.R.V. Rao in 37 universities covering all States and simultaneously requested the Chief Ministers of States for their cooperation and help. The motto of the National Service Scheme is aimed to involve the students at colleges and universities by inculcating the feeling of empathy and self-extension. The motto of the National Service Scheme is “Not Me, But You”. It emphasizes on the welfare of whole society. It is one of the best platforms for the students where they can execute their selfless service for not only the community people but for whole country. National Service Scheme provide the opportunities to the students to develop their personality by involving them in community service. Therefore, this is very crucial to design the activities like socio-physical activities, cultural activities which uphold and promote the values of patriotism, communal harmony, and national integration among student volunteers.",
+      "descriptionTwo": "The symbol of the National Service Scheme is based on the ‘Rath’ wheel of the Konark Sun Temple situated in Orissa. These giant wheels of the Sun Temple portray the cycle of creation, preservation and release signifying the movement in life across time and space.",
+      "imageUrl": "/community-connect/communityconnect.webp"
+    },
+    "nssMottoSection": {
+      "heading": "The motto of the National Service Scheme",
+      "description": "The Motto of NSS – Not Me, But You, reflects the essence of democratic living and selfless service. It also explains that the welfare of an individual depends upon the welfare of the society as a whole, therefore, the NSS volunteers shall strive for the well-being of society. NSS helps students develop a tolerant and liberal approach to respecting difference in opinions."
+    },
+    "nssOverviewSection": {
+      "heading": "National Service Scheme, K.R. Mangalam University, Gurugram",
+      "descriptions": [
+        "The National Service Scheme (NSS) Unit at K.R. Mangalam University was established in 2017, following its allotment by the Department of Higher Education, Panchkula, Haryana. Dr. Chandra Mohan served as the first NSS Coordinator at the University.",
+        "K.R. Mangalam University has consistently demonstrated its commitment to national service—not only in the field of education but also through its dedicated efforts toward societal welfare, carried out with the utmost integrity and honesty. In collaboration with the Department of Higher Education, Panchkula, Haryana, and the Ministry of Youth Affairs and Sports, the university actively contributes to social reform initiatives through its NSS unit.",
+        "NSS-KRMU has successfully organized the Viksit Bharat District Youth Parliament under the aegis of the Department of Youth Affairs, New Delhi, and participated in the Swachhata Hi Seva campaign (2024–25). Every year, seven-day special camps are conducted in adopted villages such as Lakhuwas and Abheypur, focusing on various social themes.",
+        "Over the past five years, NSS volunteers from K.R. Mangalam University have actively taken part in numerous national, state, and district-level events, including the National Integration Camp (NIC), Pravasi Bharatiya Diwas, State NSS Awards Function, Adventure Camps, Blood Donation Drives, National Unity Day celebrations, legal awareness programs, Van Mahotsav, and many other impactful initiatives."
+      ]
+    },
+    "objectivesSection": {
+      "heading": "The broad objectives of NSS are to:",
+      "points": [
+        "Understand the community in which they work.",
+        "Understand themselves in relation to their community.",
+        "Identify the needs and problems of the community and involve them in problem Solving process.",
+        "Develop among them a sense of social and civic responsibility.",
+        "Utilize their knowledge in finding practical solution to individual and community Problems.",
+        "Develop competence required for group living and sharing of responsibilities.",
+        "Gain skills in mobilizing community participation.",
+        "Acquire leadership qualities and democratic attitude.",
+        "Develop capacity to meet emergencies and natural disasters.",
+        "Practice national integration and social harmony."
+      ],
+      "magazine": {
+        "heading": "NSS Magazine",
+        "imageUrl": "/community-connect/nss-magazine.webp",
+        "documents": [
+          {
+            "year": "2023-2024",
+            "pdfUrl": "https://krmangalam.edu.in/pdfs/legancy-of-service-final.pdf"
+          },
+          {
+            "year": "2024-2025",
+            "pdfUrl": "https://krmangalam.edu.in/pdfs/nss_2024oct-dec-000.pdf"
+          }
+        ]
+      }
+    },
+    "benefitsSection": {
+      "heading": "Benefits of NSS:",
+      "imageUrl": "/community-connect/benefit-nss.webp",
+      "points": [
+        "Preference in Admission / Employment.",
+        "Helps in acquiring leadership qualities and democratic attitude.",
+        "Provides diversified opportunities to students in colleges and niversities to develop their personality through community service.",
+        "Helps in developing positive attitude, self-confidence, courage & patience.",
+        "Gets opportunities to see the community closely and thus gets an experience of human nature in relation to his / her environment",
+        "Gets the opportunity to participate in various National / State level programme such as National Integration, Motivational Lamps, value-oriented self-development camps, Adventure camps, workshops. Youth exhibition, cultural programmes etc.",
+        "Honoured at University level for their excellent and outstanding work in NSS.",
+        "May be nominated for Indira Gandhi Awards at National Level.",
+        "Practical training in first aid and disaster management.",
+        "Promotion of universal humanitarian values."
+      ]
+    },
+    "committeeSection": {
+      "heading": "NSS Committee",
+      "subHeading": "NSS Committee:",
+      "imageUrl": "/community-connect/nss-committee.png",
+      "members": {
+        "name": "Dr. Neeraj Kumari",
+        "designation": "NSS Programme Coordinator",
+        "mobile": "9718029841",
+        "email": "Neeraj.kumari@krmangalam.edu.in"
+      }
+    },
+
+    "eligibilitySection": {
+      "joinCriteria": {
+        "heading": "Criteria to Join NSS",
+        "points": [
+          "The candidate must be a legitimate student officially enrolled at the university.",
+          "The candidate should not be a member of any other club/society.",
+          "Students are eligible to be part of NSS for a maximum of two years."
+        ]
+      },
+      "certificateCriteria": {
+        "heading": "Criteria to Earn NSS Merit Certificate",
+        "points": [
+          "Volunteers who have completed two years of volunteership.",
+          "A volunteer should complete 240 hours during his volunteership (two year) tenure.",
+          "He/ She must attend the day-night 7-day special camp.",
+          "Volunteers are generally expected to attend NSS activities regularly and meet the attendance requirements set by the NSS unit.",
+          "Volunteers who have displayed consistent attendance in all NSS programs and activities. They also require to submit regular reports or documentation of their NSS activities in the form of NSS diaries, including details of the work they have done and the impact it has had on the community.",
+          "A volunteer who has planted minimum 2 plants/ sapling in a year and 4 plants in volunteership period with GEO tagging (volunteer should ensure for 100% survival rate of their sapling) or donate two times blood in two years or literate at least five illiterate people during his/ her volunteership period.",
+          "On being satisfied that all requirements as per NSS norms have been met, the certificate can be issued."
+        ]
+      }
+    },
+    "gallerySection": {}
+  }
+}
