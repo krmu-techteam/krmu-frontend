@@ -147,7 +147,7 @@ export interface LoginInfo {
 export interface Journal {
   id: number;
   resource: string;
-  totalJournals: number;
+  totalJournals: string;
   loginInfo: LoginInfo;
 }
 

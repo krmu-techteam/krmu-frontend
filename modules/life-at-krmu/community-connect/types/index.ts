@@ -68,10 +68,6 @@ export interface CommitteeSectionProps {
   members: Members;
 }
 
-export interface Awards {
-  headers: string[];
-  records: RecordDetails[];
-}
 export interface RegistrationForm {
   text: string;
   url: string;
@@ -82,11 +78,15 @@ export interface RecordDetails {
   yearOfAward: string;
   rowSpan?: number;
 }
+export interface Awards {
+  headers: string[];
+  records: RecordDetails[];
+  registrationForm?: RegistrationForm;
+}
 export interface AwardsSectionProps {
   heading: string;
   imageUrl: string;
   awards: Awards;
-  registrationForm: RegistrationForm;
 }
 // Data Props
 export interface DataProps {
