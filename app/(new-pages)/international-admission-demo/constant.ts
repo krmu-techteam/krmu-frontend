@@ -3,19 +3,19 @@ export const Companies = [
     name: "Google",
     logo: "/international-admission/logos/google.png",
     left: "0%",
-    top: "90%",
+    top: "87%",
   },
   {
     name: "EY",
     logo: "/international-admission/logos/ey.png",
-    left: "2%",
-    top: "60%",
+    left: "5%",
+    top: "56%",
   },
   {
     name: "Microsoft",
     logo: "/international-admission/logos/microsoft.png",
-    left: "12%",
-    top: "30%",
+    left: "14%",
+    top: "25%",
   },
   {
     name: "Genpact",
@@ -32,26 +32,26 @@ export const Companies = [
   {
     name: "KPMG",
     logo: "/international-admission/logos/kpmg.png",
-    left: "71%",
-    top: "8%",
+    left: "70%",
+    top: "4%",
   },
   {
     name: "SafeXpress",
     logo: "/international-admission/logos/safeexpress.png",
-    left: "90%",
-    top: "32%",
+    left: "85%",
+    top: "22%",
   },
   {
     name: "Amazon",
     logo: "/international-admission/logos/amazon.png",
-    left: "98%",
-    top: "60%",
+    left: "95%",
+    top: "52%",
   },
   {
     name: "Dell",
     logo: "/international-admission/logos/dell.png",
     left: "100%",
-    top: "90%",
+    top: "87%",
   },
 ];
 
@@ -62,8 +62,8 @@ export const NetworkContent = [
     desc: "A growing global community of successful graduates making an impact across industries.",
   },
   {
-    number: "100+",
-    title: "Future-Focused Programmes",
+    number: "100+ Future-Focused",
+    title: "Programmes",
     desc: "Choose from undergraduate, postgraduate, doctoral, and professional programmes across diverse disciplines.",
   },
 ];

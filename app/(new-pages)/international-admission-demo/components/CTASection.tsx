@@ -2,9 +2,9 @@
 
 export default function CTASection() {
   return (
-    <section className="bg-[#071C38] py-14 md:py-20">
+    <section className="bg-[#071C38] py-10 md:py-20">
       <div className="mx-auto max-w-5xl px-5 text-center">
-        <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+        <h2 className="mx-auto max-w-4xl text-3xl font-bold leading-tight text-white sm:text-5xl xl:text-6xl">
           Begin Your Global
           <br />
           Academic Journey in India

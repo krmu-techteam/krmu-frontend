@@ -257,6 +257,8 @@ export default async function Page({ params }: Props) {
   const allPHDSchoolProgrammeNames = await getSchoolProgrammePhdSchema(
     school.school_category?.name,
   );
+  
+
 
   const programmes = [
     ...allSchoolProgrammeNames.map((programme) => ({
