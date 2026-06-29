@@ -46,14 +46,14 @@ const CommonQuestion = () => {
         </div>
 
         {/* Accordions Container */}
-        <div className="max-w-4xl flex flex-col gap-4">
+        <div className=" flex flex-col gap-4 mr-[10%] lg:mr-[10%]">
           {content.faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
               <div
                 key={faq.id}
                 onClick={() => toggleIndex(idx)}
-                className="border border-[#C9BA99] bg-[#FDF7EB] rounded-[10px] p-5 sm:p-[26px] transition-all duration-300 hover:shadow-md cursor-pointer select-none max-w-[796px]"
+                className="border border-[#C9BA99] bg-[#FDF7EB] rounded-[10px] p-5 sm:p-[26px] transition-all duration-300 hover:shadow-md cursor-pointer select-none "
               >
                 {/* Accordion Header */}
                 <div className="flex justify-between items-center w-full gap-6 text-left">

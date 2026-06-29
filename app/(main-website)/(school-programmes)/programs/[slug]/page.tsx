@@ -67,6 +67,11 @@ import LocationNew from "@/components/school-programmes/programs/new-design-sect
 import ThreeIndustryTracks from "@/components/school-programmes/programs/new-design-sections/components/threeIndustryTracks";
 import CommonQuestion from "@/components/school-programmes/programs/new-design-sections/components/commonQuestion";
 import OldCareerProspects from "@/components/school-programmes/programs/new-design-sections/components/oldCareerProspect";
+import {
+  getContent,
+  getDigitalContent,
+  getIBMContent,
+} from "@/components/school-programmes/programs/new-design-sections/lib/getContent";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -136,7 +141,7 @@ const page = async ({ params }: Props) => {
     // "bca-ai-data-science": BCAAIDStestimonialsData,
     "bba-digital-marketing": BBADigitalMarketingtestimonialsData,
     "bsc-forensic-science": BSCHonsForensicSciencetestimonialsData,
-    mba: MBAtestimonialsData,
+    // "mba": MBAtestimonialsData,
     "ba-hons-psychology": BSCHonsPhyscologytestimonialsData,
     // "bba-llb-hons": BBALLBtestimonialsData,
     // "llm": LLMtestimonialsData,
@@ -292,8 +297,19 @@ const page = async ({ params }: Props) => {
       <main className="school-prog-font temp-class">
         {/* {tags && <TagDiv tags={tags} extraClass="hidden test-class" />} */}
         {heroSection &&
-          (slug === "mba-fintech" ? (
-            <NewHeroSection formId={heroSection?.formId} />
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
+            <NewHeroSection
+              formId={heroSection?.formId}
+              dataContent={
+                slug === "mba-fintech"
+                  ? getContent()
+                  : slug === "mba"
+                    ? getIBMContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalContent()
+                      : null
+              }
+            />
           ) : (
             <ProgramHero
               title={title || ""}
@@ -308,7 +324,7 @@ const page = async ({ params }: Props) => {
           ))}
 
         {eligibilitySection &&
-          (slug === "mba-fintech" ? (
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
             <LogoSection />
           ) : (
             <Eligibility
@@ -332,8 +348,8 @@ const page = async ({ params }: Props) => {
         )}
 
         {programmeScopeSection &&
-          (slug === "mba-fintech" ? (
-            <CareerOutcome />
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
+            <CareerOutcome slug={slug} />
           ) : (
             <ProgrammeScope
               scopeData={programmeScopeSection}
@@ -344,7 +360,7 @@ const page = async ({ params }: Props) => {
           ))}
 
         {programmeHighlightSection &&
-          (slug === "mba-fintech" ? (
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
             <MbaExists />
           ) : (
             <ProgrammeHighlight
@@ -356,7 +372,7 @@ const page = async ({ params }: Props) => {
             />
           ))}
 
-        {slug === "mba" && <SpecialisationsSection />}
+        {/* {slug === "mba" && <SpecialisationsSection />} */}
         {specialisationSection && (
           <Specialisation
             heading={specialisationSection?.heading}
@@ -365,7 +381,7 @@ const page = async ({ params }: Props) => {
           />
         )}
         {admissionProcessSection &&
-          (slug === "mba-fintech" ? (
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
             <TwoYearArc />
           ) : (
             <AdmissionProcessComp
@@ -381,8 +397,8 @@ const page = async ({ params }: Props) => {
           ))}
 
         {curriculumSection &&
-          (slug === "mba-fintech" ? (
-            <CareerGoal />
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
+            <CareerGoal slug={slug} />
           ) : (
             <Curriculum
               heading={curriculumSection?.heading}
@@ -398,7 +414,7 @@ const page = async ({ params }: Props) => {
           ))}
 
         {labfacilitiesSection &&
-          (slug === "mba-fintech" ? (
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
             <LeaveWith />
           ) : (
             <LabsFacilities
@@ -413,8 +429,8 @@ const page = async ({ params }: Props) => {
           ))}
 
         {beyondclassSection &&
-          (slug === "mba-fintech" ? (
-            <FacultyAndIndustry />
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
+            <FacultyAndIndustry slug={slug} />
           ) : (
             <BeyondClassroom
               heading={beyondclassSection?.heading}
@@ -425,7 +441,7 @@ const page = async ({ params }: Props) => {
           ))}
 
         {careerProspectsSection &&
-          (slug === "mba-fintech" ? (
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
             <ExperimentalInfra />
           ) : (
             <CareerProspects
@@ -441,7 +457,7 @@ const page = async ({ params }: Props) => {
           ))}
 
         {financialAssistanceSection &&
-          (slug === "mba-fintech" ? (
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
             <>
               <Expectations />
             </>
@@ -461,8 +477,8 @@ const page = async ({ params }: Props) => {
             />
           ))}
 
-        {slug === "mba-fintech" ? (
-          <CareerProspectsNew />
+        {slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
+          <CareerProspectsNew slug={slug} />
         ) : (
           <ScholarshipBanner />
         )}
@@ -470,7 +486,7 @@ const page = async ({ params }: Props) => {
         {testimonialsData && <ProgTestimonials data={testimonialsData} />}
 
         {tocSection &&
-          (slug === "mba-fintech" ? (
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
             <FeeFinance />
           ) : (
             <TableOfContent
@@ -483,14 +499,14 @@ const page = async ({ params }: Props) => {
             />
           ))}
 
-        {slug === "mba-fintech" ? (
+        {slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
           <HowToApply />
         ) : (
           <ExplorePrograms currentSlug={slug} />
         )}
 
         {ourLocationSection &&
-          (slug === "mba-fintech" ? (
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
             <LocationNew />
           ) : (
             <OurLocation
@@ -503,7 +519,7 @@ const page = async ({ params }: Props) => {
 
         {/* <ConnectWithUs /> */}
         {singleSchoolProgramme?.school_category &&
-          (slug === "mba-fintech" ? (
+          (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
             <>
               <CommonQuestion />
               <ThreeIndustryTracks />

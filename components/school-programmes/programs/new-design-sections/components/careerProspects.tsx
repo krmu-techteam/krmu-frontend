@@ -24,7 +24,11 @@ const fraunces = Fraunces({
   style: ["italic", "normal"],
 });
 
-const CareerProspects = () => {
+type Props = {
+  slug?: string;
+};
+
+const CareerProspects = ({ slug }: Props) => {
   const data = getCareerProspectsContent();
   const content = data.careerProspects;
 
@@ -142,11 +146,20 @@ const CareerProspects = () => {
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[480px] aspect-[4/3] sm:aspect-[1/1] lg:aspect-[1/1] overflow-hidden">
               <Image
-                src={content.image}
+                src={
+                  slug === "mba-fintech"
+                    ? content.image
+                    : slug === "mba-digital-marketing"
+                      ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b57bd559ef015d3f57b2cd2788895db489a63906_23a2dcc6a9.png"
+                      : slug === "mba"
+                        ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1602_1bf41df812.jpg"
+                        : ""
+                }
                 alt="Career prospects group image"
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                width={1930}
+                height={1930}
+                className="object-cover w-full h-full"
+                // sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
               />
             </div>
           </div>

@@ -1,38 +1,49 @@
 import { HeroPageContentType } from "../types/contentHero";
-import HeroContentData from "../data/heroContent.json";
+import HeroContentData from "../data/fintech/heroContent.json";
+import digitalHeroContent from "../data/digitalMarketing/digitalheroContent.json";
+import ibmHeroContent from "../data/ibm/ibmheroContent.json";
+
 import { LogoPageContentType } from "../types/contentLogo";
-import LogoContentData from "../data/logoContent.json";
+import LogoContentData from "../data/fintech/logoContent.json";
 import { CareerOutcomePageContentType } from "../types/contentCareerOutcome";
-import CareerOutcomeContentData from "../data/careerOutcomeContent.json";
+import CareerOutcomeContentData from "../data/fintech/careerOutcomeContent.json";
 import { MbaExistsPageContentType } from "../types/contentMbaExists";
-import MbaExistsContentData from "../data/mbaExistsContent.json";
+import MbaExistsContentData from "../data/fintech/mbaExistsContent.json";
 import { TwoYearArcPageContentType } from "../types/contentTwoYearArc";
-import TwoYearArcContentData from "../data/twoYearArcContent.json";
+import TwoYearArcContentData from "../data/fintech/twoYearArcContent.json";
 import { CareerGoalPageContentType } from "../types/contentCareerGoal";
-import CareerGoalContentData from "../data/careerGoalContent.json";
+import CareerGoalContentData from "../data/fintech/careerGoalContent.json";
 import { LeaveWithPageContentType } from "../types/contentLeaveWith";
-import LeaveWithContentData from "../data/leaveWithContent.json";
+import LeaveWithContentData from "../data/fintech/leaveWithContent.json";
 import { FacultyAndIndustryPageContentType } from "../types/contentFacultyAndIndustry";
-import FacultyAndIndustryContentData from "../data/facultyAndIndustryContent.json";
+import FacultyAndIndustryContentData from "../data/fintech/facultyAndIndustryContent.json";
 import { ExperimentalInfraPageContentType } from "../types/contentExperimentalInfra";
-import ExperimentalInfraContentData from "../data/experimentalInfraContent.json";
+import ExperimentalInfraContentData from "../data/fintech/experimentalInfraContent.json";
 import { ExpectationsPageContentType } from "../types/contentExpectations";
-import ExpectationsContentData from "../data/expectationsContent.json";
+import ExpectationsContentData from "../data/fintech/expectationsContent.json";
 import { CareerProspectsPageContentType } from "../types/contentCareerProspects";
-import CareerProspectsContentData from "../data/careerProspectsContent.json";
+import CareerProspectsContentData from "../data/fintech/careerProspectsContent.json";
 import { FeeFinancePageContentType } from "../types/contentFeeFinance";
-import FeeFinanceContentData from "../data/feeFinanceContent.json";
+import FeeFinanceContentData from "../data/fintech/feeFinanceContent.json";
 import { HowToApplyPageContentType } from "../types/contentHowToApply";
-import HowToApplyContentData from "../data/howToApplyContent.json";
+import HowToApplyContentData from "../data/fintech/howToApplyContent.json";
 import { LocationPageContentType } from "../types/contentLocation";
-import LocationContentData from "../data/locationContent.json";
+import LocationContentData from "../data/fintech/locationContent.json";
 import { ThreeIndustryTracksPageContentType } from "../types/contentThreeIndustryTracks";
-import ThreeIndustryTracksContentData from "../data/threeIndustryTracksContent.json";
+import ThreeIndustryTracksContentData from "../data/fintech/threeIndustryTracksContent.json";
 import { CommonQuestionPageContentType } from "../types/contentCommonQuestion";
-import CommonQuestionContentData from "../data/commonQuestionContent.json";
+import CommonQuestionContentData from "../data/fintech/commonQuestionContent.json";
 
 export function getContent(): HeroPageContentType {
   return HeroContentData as HeroPageContentType;
+}
+
+export function getDigitalContent(): HeroPageContentType {
+  return digitalHeroContent as HeroPageContentType;
+}
+
+export function getIBMContent(): HeroPageContentType {
+  return ibmHeroContent as HeroPageContentType;
 }
 
 export function getLogoContent(): LogoPageContentType {
@@ -94,13 +105,3 @@ export function getThreeIndustryTracksContent(): ThreeIndustryTracksPageContentT
 export function getCommonQuestionContent(): CommonQuestionPageContentType {
   return CommonQuestionContentData as CommonQuestionPageContentType;
 }
-
-
-
-
-
-
-
-
-
-

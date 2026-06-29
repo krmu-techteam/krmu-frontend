@@ -13,10 +13,11 @@ const playfair = Playfair_Display({
 
 type Props = {
   formId?: string;
+  dataContent?: any;
 };
 
-const NewHeroSection = ({ formId }: Props) => {
-  const data = getContent();
+const NewHeroSection = ({ formId, dataContent }: Props) => {
+  const data = dataContent;
   const hero = data.hero;
 
   // Find the primary button (Apply Now) to see if it should trigger NpfPopup
@@ -30,7 +31,7 @@ const NewHeroSection = ({ formId }: Props) => {
 
   return (
     <section className="relative w-full bg-[radial-gradient(50%_50%_at_50%_50%,#024178_0%,#012D52_50%,#012D52_100%)] text-white pt-20 pb-0 sm:pt-24 md:pt-28 lg:pt-30 overflow-hidden flex flex-col justify-between min-h-[520px] sm:min-h-[600px] lg:min-h-[700px]">
-      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col lg:flex-row items-start justify-between gap-8 sm:gap-10 lg:gap-8 py-8 sm:py-10 lg:py-16 mb-4 sm:mb-6">
+      <div className="max-w-[1440px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col-reverse lg:flex-row items-start justify-between gap-8 sm:gap-10 lg:gap-8 py-8 sm:py-10 lg:py-16 mb-4 sm:mb-6">
         {/* Left Content Column */}
         <div className="w-full lg:w-[50%] flex flex-col text-left">
           {/* Badge */}
@@ -99,14 +100,14 @@ const NewHeroSection = ({ formId }: Props) => {
 
         {/* Right Image Column */}
         <div className="w-full lg:w-[50%] flex justify-center lg:justify-end mt-2 lg:mt-0">
-          <div className="relative rounded-[10px] w-full max-w-[340px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[492px] aspect-[4/3] sm:aspect-square max-h-[340px] sm:max-h-[420px] lg:max-h-[440px] overflow-hidden flex items-center justify-center">
+          <div className="relative rounded-[10px] w-full max-w-[340px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[492px] aspect-[4/3] sm:aspect-square h-[300px] sm:h-[400px] lg:h-[450px] overflow-hidden flex items-center justify-center">
             <Image
               src={hero.image}
               alt="MBA Fintech Student"
-              fill
+              width={1024}
+              height={1024}
               priority
-              className="object-top sm:object-cover "
-              sizes="(max-width: 425px) 100vw, (max-width: 768px) 80vw, (max-width: 1280px) 50vw, 492px"
+              className="object-top sm:object-cover w-full h-full "
             />
           </div>
         </div>

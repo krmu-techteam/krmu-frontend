@@ -16,7 +16,11 @@ const fraunces = Fraunces({
   style: ["italic", "normal"],
 });
 
-const CareerOutcome = () => {
+type Props = {
+  slug?: string;
+};
+
+const CareerOutcome = ({ slug }: Props) => {
   const data = getCareerOutcomeContent();
   const content = data.careerOutcome;
 
@@ -54,7 +58,7 @@ const CareerOutcome = () => {
             {content.stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-[#FDF7EB] border border-[#EADCB9] rounded-[5px] flex flex-col justify-between shadow-[0_4px_20px_rgba(181,142,61,0.05)] min-h-[180px] sm:min-h-[200px] md:min-h-[220px] transition-transform duration-300 hover:-translate-y-1"
+                className="bg-[#FDF7EB] border border-[#EADCB9] rounded-[5px] flex flex-col justify-start shadow-[0_4px_20px_rgba(181,142,61,0.05)] min-h-[180px] sm:min-h-[200px] md:min-h-[220px] transition-transform duration-300 hover:-translate-y-1"
               >
                 <div className="relative w-full h-[3px] bg-[#7D662F] top-[3px]" />
                 <div className="p-5 sm:p-6 md:p-8">
@@ -95,10 +99,18 @@ const CareerOutcome = () => {
               </h3>
               <div className="relative w-full max-w-full lg:max-w-[500px] aspect-[4/3] sm:aspect-[4/3] lg:aspect-[1/1] rounded-[10px] overflow-hidden shadow-xl shadow-slate-900/10">
                 <Image
-                  src={content.sectionTwo.image}
+                  src={
+                    slug === "mba-fintech"
+                      ? content.sectionTwo.image
+                      : slug === "mba-digital-marketing"
+                        ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1541_1_c2efd0af99.jpg"
+                        : slug === "mba"
+                          ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1541_fa1c297a76.jpg"
+                          : ""
+                  }
                   alt="MBA Students discussing career outcomes"
                   fill
-                  className="object-cover"
+                  className="object-start lg:object-cover"
                   sizes="(max-width: 1024px) 100vw, 470px"
                 />
               </div>

@@ -44,7 +44,7 @@ const FacultyCard = ({
   onOpenProfile: () => void;
 }) => {
   return (
-    <div className="relative group flex flex-col min-h-[374px] max-w-[268px]  border border-[#D0C6B1]/30 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer rounded-[5px]">
+    <div className="relative group flex flex-col min-h-[374px] w-full max-w-[268px] mx-auto border border-[#D0C6B1]/30 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer rounded-[5px]">
       {linkedin && (
         <Link href={linkedin}>
           <div className="absolute w-13 h-13 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/8e9127f3a23f0410f6e38ad1af59850e5bb1f1df_9de1bd0ecf.png)] bg-cover bg-center right-1 top-1 z-99 " />
@@ -86,7 +86,11 @@ const FacultyCard = ({
   );
 };
 
-const FacultyAndIndustry = () => {
+type Props = {
+  slug: string;
+};
+
+const FacultyAndIndustry = ({ slug }: Props) => {
   const data = getFacultyAndIndustryContent();
   const content = data.facultyAndIndustry;
 
@@ -115,7 +119,7 @@ const FacultyAndIndustry = () => {
     <section className="w-full bg-[#FDF7EB] text-[#012D52]">
       {/* Top Part: Info & Grid */}
       <div className="w-full py-16 md:py-20">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Subtitle & Title */}
           <div className="mb-6">
             <span
@@ -130,22 +134,30 @@ const FacultyAndIndustry = () => {
             </h2>
           </div>
 
-          <div className="w-full flex gap-8 lg:gap-12 items-center">
+          <div className="w-full flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
             {/* Left Column: Image Banner */}
-            <div className="w-[50%]">
-              <div className="relative min-w-[496px] min-h-[486px] overflow-hidden shadow-xl shadow-slate-900/10">
+            <div className="w-full lg:w-1/2">
+              <div className="relative w-full max-w-[496px] aspect-[496/486] overflow-hidden shadow-xl shadow-slate-900/10 mx-auto">
                 <Image
-                  src={content.classroomImage}
+                  src={
+                    slug === "mba-fintech"
+                      ? content.classroomImage
+                      : slug === "mba-digital-marketing"
+                        ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1562_47c760d501.jpg"
+                        : slug === "mba"
+                          ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1562_1_e3e2d575b4.jpg"
+                          : ""
+                  }
                   alt="MBA Classroom setting"
-                  width={1024}
-                  height={1024}
+                  fill
                   className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 496px"
                 />
               </div>
             </div>
 
             {/* Right Column: Three Sub-sections */}
-            <div className="flex flex-col gap-6 pr-0 lg:pr-8 w-full max-w-[580px]">
+            <div className="flex flex-col gap-6 pr-0 lg:pr-8 w-full lg:w-1/2 max-w-[580px]">
               {content.sections.map((sect, idx) => {
                 const isOpen = activeSection === idx;
                 return (
@@ -236,7 +248,7 @@ const FacultyAndIndustry = () => {
       {/* Bottom Part: Faculty slider section */}
       {cards.length > 0 && (
         <div className="w-full bg-[#F7F0E0] py-16">
-          <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <h3
               className={`${fraunces.className} text-[28px] sm:text-[38px] font-bold text-[#0F2A4D] mb-8`}
             >
@@ -305,7 +317,7 @@ const FacultyAndIndustry = () => {
           />
 
           {/* Modal */}
-          <div className="relative z-10 w-full max-w-4xl overflow-hidden rounded-3xl bg-[#FDF7EB] shadow-[0_25px_80px_rgba(0,0,0,0.25)] border border-[#BCB093]/30 animate-in fade-in zoom-in-95 duration-300">
+          <div className="relative z-10 w-full max-w-4xl max-h-[90vh] lg:max-h-[85vh] overflow-hidden rounded-3xl bg-[#FDF7EB] shadow-[0_25px_80px_rgba(0,0,0,0.25)] border border-[#BCB093]/30 animate-in fade-in zoom-in-95 duration-300 flex flex-col">
             {/* Close */}
             <button
               onClick={() => setActiveFaculty(null)}
@@ -314,22 +326,22 @@ const FacultyAndIndustry = () => {
               <Icons.X size={22} />
             </button>
 
-            <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr]">
+            <div className="flex flex-col lg:grid lg:grid-cols-[320px_1fr] overflow-y-auto lg:overflow-hidden max-h-[90vh] lg:max-h-[85vh]">
               {/* Left Side */}
-              <div className="bg-gradient-to-b from-[#F6E8C9] to-[#FDF7EB] p-6 flex justify-center items-start">
-                <div className="relative  w-full max-w-[260px] overflow-hidden rounded-2xl shadow-xl">
+              <div className="bg-gradient-to-b from-[#F6E8C9] to-[#FDF7EB] p-6 flex justify-center items-start flex-shrink-0">
+                <div className="relative w-[220px] h-[220px] lg:w-full lg:h-auto lg:max-w-[260px] aspect-square lg:aspect-auto overflow-hidden rounded-2xl shadow-xl">
                   <Image
                     src={activeFaculty.image}
                     alt={activeFaculty.name}
-                    width={1024}
-                    height={1024}
-                    className="object-contain w-full h-full object-top"
+                    fill
+                    className="object-cover lg:object-contain object-top"
+                    sizes="(max-width: 1024px) 220px, 260px"
                   />
                 </div>
               </div>
 
               {/* Right Side */}
-              <div className="flex max-h-[85vh] flex-col">
+              <div className="flex flex-col flex-1 lg:max-h-[85vh] lg:overflow-hidden">
                 {/* Header */}
                 <div className="border-b border-[#BCB093]/30 px-8 pt-8 pb-6">
                   <h2
@@ -360,7 +372,7 @@ const FacultyAndIndustry = () => {
                 </div>
 
                 {/* Scrollable Content */}
-                <div className="flex-1 overflow-y-auto px-8 py-7">
+                <div className="flex-1 overflow-y-visible lg:overflow-y-auto px-8 py-7">
                   <div
                     className={`${inter.className} space-y-5 text-[15px] leading-8 text-[#2F3A45]`}
                   >

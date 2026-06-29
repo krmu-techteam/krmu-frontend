@@ -20,8 +20,8 @@ const LogoSection = () => {
   const logo = data.logo;
 
   return (
-    <section className="w-full py-6 px-4 sm:px-8 md:px-12 lg:px-20 bg-[#FDF7EB]">
-      <div className="max-w-[1280px] mx-auto flex flex-col sm:flex-row  items-center justify-between gap-6 sm:gap-4">
+    <section className="w-full py-12 px-4 sm:px-8 md:px-12 lg:px-16 bg-[#FDF7EB]">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4">
         {/* Label */}
         <h2
           className={`${inter.className} text-center sm:text-left text-[12px] sm:text-[13px] uppercase tracking-wider leading-snug`}
@@ -49,20 +49,22 @@ const LogoSection = () => {
         </Link>
 
         {/* Fintech Track */}
-        <div className="flex flex-col items-center">
-          <Image
-            src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/cf4669f3a50b9b289d3f5edcd5e3aa0b79d7fecd_22e0e5810c.png"
-            alt="Fintech track"
-            width={40}
-            height={40}
-            className="mb-2 grayscale"
-          />
-          <h2
-            className={`${inter.className} text-center font-medium text-[11px] sm:text-[12px]`}
-          >
-            Fintech track
-          </h2>
-        </div>
+        <Link href="/programs/mba-fintech" target="_blank">
+          <div className="flex flex-col items-center">
+            <Image
+              src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/cf4669f3a50b9b289d3f5edcd5e3aa0b79d7fecd_22e0e5810c.png"
+              alt="Fintech track"
+              width={40}
+              height={40}
+              className="mb-2 grayscale"
+            />
+            <h2
+              className={`${inter.className} text-center font-medium text-[11px] sm:text-[12px]`}
+            >
+              Fintech track
+            </h2>
+          </div>
+        </Link>
 
         {/* Digital Marketing Track */}
         <Link href="/programs/mba-digital-marketing" target="_blank">

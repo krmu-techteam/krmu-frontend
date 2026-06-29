@@ -51,9 +51,9 @@ const Location = () => {
   return (
     <section className="w-full bg-[#FDF7EB] py-16 md:py-20 text-[#012D52]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:pl-30 xl:px-20">
-        <div className="flex gap-8 items-center">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center justify-between">
           {/* Left Column: Heading, description & contact details */}
-          <div className="max-w-[541px] flex flex-col">
+          <div className="w-full lg:max-w-[541px] flex flex-col">
             {/* Subheading / Badge */}
             <span
               className={`${inter.className} text-[#7A5821] text-xs sm:text-[11px] leading-[16px] font-medium tracking-[1.54px] uppercase block mb-3`}
@@ -97,7 +97,7 @@ const Location = () => {
                         {info.value}
                       </a>
                     ) : (
-                      <span cl>{info.value}</span>
+                      <span>{info.value}</span>
                     )}
                   </div>
                 </div>
@@ -106,14 +106,14 @@ const Location = () => {
           </div>
 
           {/* Right Column: Campus dome building image */}
-          <div className="min-w-[500px] min-h-[450px] flex justify-center ">
-            <div className="relative w-full max-w-[608px] aspect-[4/3] sm:aspect-[1.33/1] lg:aspect-[1.25/1] overflow-hidden  ">
+          <div className="w-full lg:w-[50%] lg:min-w-[420px] flex justify-center">
+            <div className="relative w-full aspect-[4/3] overflow-hidden">
               <Image
                 src={content.image}
                 alt="KRMU Campus dome building with students"
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 608px"
+                width={1440}
+                height={1440}
+                className="object-cover w-full h-full"
               />
             </div>
           </div>

@@ -19,7 +19,11 @@ const fraunces = Fraunces({
   style: ["italic", "normal"],
 });
 
-const CareerGoal = () => {
+type Props = {
+  slug: string;
+};
+
+const CareerGoal = ({ slug }: Props) => {
   const data = getCareerGoalContent();
   const content = data.careerGoal;
 
@@ -36,7 +40,7 @@ const CareerGoal = () => {
 
   return (
     <section className="w-full bg-[#F7F0E0] py-14 text-[#012D52]">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         {/* Header */}
         <div className="mb-6">
           <span
@@ -93,11 +97,40 @@ const CareerGoal = () => {
                     >
                       {course.title}
                     </h3>
-                    <p
-                      className={`${inter.className} text-[13px] sm:text-[15px] leading-relaxed text-[#000000]`}
+
+                    <ul
+                      className={`${inter.className} text-[13px] sm:text-[15px]  leading-relaxed text-[#000000]`}
                     >
-                      {course.desc}
-                    </p>
+                      <li className="italic">
+                        {" "}
+                        <span className="font-bold">Macro:</span> {course.desc}
+                      </li>
+
+                      <li className="list-none p-0 m-0">
+                        <div
+                          className={`grid transition-all duration-300 ease-in-out ${
+                            isOpen
+                              ? "grid-rows-[1fr] opacity-100 mt-3"
+                              : "grid-rows-[0fr] opacity-0"
+                          }`}
+                        >
+                          <div className="overflow-hidden">
+                            {course.details && (
+                              <ul className="list-disc pl-8 flex flex-col gap-2">
+                                {course.details.map((detail, dIdx) => (
+                                  <li
+                                    key={dIdx}
+                                    className={`${inter.className} text-[13px] sm:text-[15px] leading-relaxed text-[#000000]`}
+                                  >
+                                    {detail}
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
 
                   <div className="flex flex-col">
@@ -120,30 +153,6 @@ const CareerGoal = () => {
                         {isOpen ? "Read Less" : course.linkText}
                       </button>
                     </div>
-
-                    {/* Smooth Expandable Content Panel */}
-                    <div
-                      className={`grid transition-all duration-300 ease-in-out ${
-                        isOpen
-                          ? "grid-rows-[1fr] opacity-100 mt-3"
-                          : "grid-rows-[0fr] opacity-0"
-                      }`}
-                    >
-                      <div className="overflow-hidden">
-                        {course.details && (
-                          <ul className="flex flex-col gap-2 list-disc pl-5 mt-2 text-black/80">
-                            {course.details.map((detail, dIdx) => (
-                              <li
-                                key={dIdx}
-                                className={`${inter.className} text-[13px] sm:text-[14px] leading-relaxed`}
-                              >
-                                {detail}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    </div>
                   </div>
                 </div>
               );
@@ -154,7 +163,15 @@ const CareerGoal = () => {
           <div className="lg:col-span-6 w-full">
             <div className="relative w-full overflow-hidden">
               <Image
-                src={content.image}
+                src={
+                  slug === "mba-fintech"
+                    ? content.image
+                    : slug === "mba-digital-marketing"
+                      ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1558_d6088c87fb.jpg"
+                      : slug === "mba"
+                        ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1558_1_d58f8940b2.jpg"
+                        : ""
+                }
                 alt="Cohort MBA students walking on university steps"
                 width={1024}
                 height={1024}

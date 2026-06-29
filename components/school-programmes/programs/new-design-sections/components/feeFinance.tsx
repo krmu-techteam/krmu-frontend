@@ -40,9 +40,9 @@ const FeeFinance = () => {
         </div>
 
         {/* Layout Grid */}
-        <div className="flex justify-center gap-8  items-stretch">
+        <div className="flex flex-col md:flex-row justify-center gap-8 items-stretch">
           {/* Left Card - Program Fee */}
-          <div className="border border-[#8C969E] rounded-[10px] bg-[#F7F0E0] p-6  flex flex-col justify-between transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(188,176,147,0.15)] min-w-[532px]">
+          <div className="border border-[#8C969E] rounded-[10px] bg-[#F7F0E0] p-6 flex flex-col justify-between transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(188,176,147,0.15)] w-full max-w-[532px] mx-auto">
             <div>
               <h3
                 className={`${fraunces.className} text-2xl md:text-[28px] text-[#002C51]  mb-4`}
@@ -92,7 +92,7 @@ const FeeFinance = () => {
             <div className="">
               <a
                 href={pf.button.link}
-                className={`${inter.className} inline-block border border-[#012D52] text-[#012D52] hover:bg-[#012D52] hover:text-white px-5 py-5 rounded-[10px] font-semibold text-sm sm:text-[18px] transition-all duration-300 text-center`}
+                className={`${inter.className} w-full sm:w-auto inline-block text-center border border-[#012D52] text-[#012D52] hover:bg-[#012D52] hover:text-white px-5 py-5 rounded-[10px] font-semibold text-sm sm:text-[18px] transition-all duration-300`}
               >
                 {pf.button.text}
               </a>
@@ -100,7 +100,7 @@ const FeeFinance = () => {
           </div>
 
           {/* Right Card - Education-loan partners */}
-          <div className="rounded-[10px] bg-[radial-gradient(50%_50%_at_50%_50%,#024178_0%,#012D52_80%,#012D52_100%)] p-6 px-8 text-white flex flex-col justify-between transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(1,45,82,0.25)] max-w-[532px]">
+          <div className="rounded-[10px] bg-[radial-gradient(50%_50%_at_50%_50%,#024178_0%,#012D52_80%,#012D52_100%)] p-6 px-8 text-white flex flex-col justify-between transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(1,45,82,0.25)] w-full max-w-[532px] mx-auto">
             <div>
               <h3
                 className={`${fraunces.className} text-2xl md:text-[28px] text-[#E7C268]  mb-4`}
