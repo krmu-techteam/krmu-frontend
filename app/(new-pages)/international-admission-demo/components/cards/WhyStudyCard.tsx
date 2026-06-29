@@ -3,7 +3,7 @@ import Image from "next/image";
 const WhyStudyCard = () => {
   return (
     <div>
-      <div className="h-[200px] relative rounded-2xl overflow-hidden">
+      <div className="h-[180px] sm:h-[200px] relative rounded-2xl overflow-hidden">
         <Image
           src="/international-admission/thumbnail.png"
           fill

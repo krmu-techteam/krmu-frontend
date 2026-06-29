@@ -4,8 +4,7 @@ import Stats from "./Stats";
 export default function HeroStatsSection() {
   return (
     <>
-      <HeroSection />
-      <Stats />
+   
     </>
   );
 }

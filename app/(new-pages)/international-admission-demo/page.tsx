@@ -14,15 +14,18 @@ import { lifeInternationalAdmissionData } from "./constant";
 import FAQSection from "./components/FAQSection";
 import SingleImage from "./components/SingleImage";
 import CTASection from "./components/CTASection";
-import HeroStatsSection from "./components/HeroStatsSection";
+import HeroSection from "./components/HeroSection";
+import Stats from "./components/Stats";
 
 const page = () => {
   const lifeData = lifeInternationalAdmissionData;
   return (
     <>
-      <HeroStatsSection />
+      <HeroSection />
+      <Stats />
       <RankingRecognition />
-      <SuccessNetwork />
+      {/* <SuccessNetwork /> */}
+
       <WhyStudy />
       <WhyChoose />
       <PatentCampusResearch />
@@ -35,7 +38,8 @@ const page = () => {
       <WordClassFacility />
       <FAQSection />
       <SingleImage />
-      <CTASection />
+      {/* <CTASection /> */}
+      
     </>
   );
 };
