@@ -232,7 +232,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
     id: 9992,
     slug: "saneh-lata-yadav",
     title: {
-      rendered: "Dr. Sneh Lata Yadav",
+      rendered: "Dr. Saneh Lata Yadav",
     },
     featured_media: 55396,
     acf: {

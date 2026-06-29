@@ -120,7 +120,7 @@ export async function getSchoolProgrammesForSchema(
   schoolCatName: string,
 ): Promise<SCHOOLPROGRAMMECARDINFORESPONSE["data"]> {
   const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/school-programmes?filters[school_category][name][$eq]=${schoolCatName}&fields[0]=title&fields[1]=programmeslug&pagination[page]=1&pagination[pageSize]=80`,
+    `${FETCH_STRAPI_URL}/api/school-programmes?filters[school_category][name][$eq]=${schoolCatName}&fields[0]=title&fields[1]=programmeslug&pagination[page]=1&pagination[pageSize]=100`,
     {
       next: {
         revalidate: 43200,

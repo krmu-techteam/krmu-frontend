@@ -20,23 +20,22 @@ const page = () => {
   const lifeData = lifeInternationalAdmissionData;
   return (
     <>
-      {/* <HeroStatsSection />
+      <HeroStatsSection />
       <RankingRecognition />
       <SuccessNetwork />
       <WhyStudy />
-      <WhyChoose /> */}
+      <WhyChoose />
       <PatentCampusResearch />
       <GlobalLearning />
       <StudyInGurgaon />
       <BenefitOfStudy />
-      {/* 
       <SchoolProgrammesDiscipline />
       <ProgrammeTabs />
       <ScholarshipSection />
       <WordClassFacility />
       <FAQSection />
       <SingleImage />
-      <CTASection /> */}
+      <CTASection />
     </>
   );
 };
