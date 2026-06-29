@@ -6,6 +6,7 @@ import Image from "next/image";
 // import { getCareerGoalContent } from "../lib/getContent";
 import { Fraunces, Inter } from "next/font/google";
 import * as Icons from "lucide-react";
+import { CareerGoalPageContentType } from "../types/contentCareerGoal";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,11 +22,12 @@ const fraunces = Fraunces({
 
 type Props = {
   slug: string;
-  dataContent: any;
+  dataContent: CareerGoalPageContentType | null;
 };
 
 const CareerGoal = ({ slug, dataContent }: Props) => {
   const data = dataContent;
+  if (!data || !data.careerGoal) return null;
   const content = data.careerGoal;
 
   // Manage active tab index and course expanded index

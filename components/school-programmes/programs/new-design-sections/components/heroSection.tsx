@@ -4,6 +4,7 @@ import Link from "next/link";
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import { getContent } from "../lib/getContent";
 import { Playfair_Display } from "next/font/google";
+import { HeroPageContentType } from "../types/contentHero";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -13,11 +14,12 @@ const playfair = Playfair_Display({
 
 type Props = {
   formId?: string;
-  dataContent?: any;
+  dataContent?: HeroPageContentType | null;
 };
 
 const NewHeroSection = ({ formId, dataContent }: Props) => {
   const data = dataContent;
+  if (!data || !data.hero) return null;
   const hero = data.hero;
 
   // Find the primary button (Apply Now) to see if it should trigger NpfPopup
