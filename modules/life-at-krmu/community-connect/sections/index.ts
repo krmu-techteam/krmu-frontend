@@ -6,3 +6,4 @@ export { default as BenefitsSection } from "./BenefitsSection";
 export { default as CommitteeSection } from "./CommitteeSection";
 export { default as EligibilitySection } from "./EligibilitySection";
 export { default as GallerySection } from "./GallerySection";
+export { default as AwardsSection } from "./AwardsSection";

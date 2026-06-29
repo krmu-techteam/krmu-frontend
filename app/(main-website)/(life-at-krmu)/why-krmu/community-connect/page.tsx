@@ -1,5 +1,4 @@
 import { getNSSCommunityConnectData } from "@/lib/api/community-connect";
-import CommunityConnectNSSAward from "./comp/CommunityConnectNSSAward";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
@@ -82,9 +81,6 @@ const page = async () => {
         data={data}
         extraProps={{ NSSCommunityConnectData }}
       />
-
-      {/* <CommunityConnectImgGrid data={imgGridData} /> */}
-      <CommunityConnectNSSAward />
     </>
   );
 };

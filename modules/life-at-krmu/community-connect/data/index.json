@@ -98,6 +98,77 @@
         ]
       }
     },
-    "gallerySection": {}
+    "gallerySection": {},
+    "awardsSection": {
+      "heading": "NSS Awards",
+      "imageUrl": "/community-connect/nss-table-1.webp",
+      "awards": {
+        "headers": [
+          "Name of the Award/ recognition",
+          "Name of Awarding Govt./ Govt. recognized bodies",
+          "Year of award"
+        ],
+        "records": [
+          {
+            "awardTitle": "Appreciation Certificate for outstanding activity and contribution to community",
+            "awardingOrganization": "I Can Foundation",
+            "yearOfAward": "2023-24"
+          },
+          {
+            "awardTitle": "National Award for Social Initiatives from Bhagidari Jan Sahyog Samiti",
+            "awardingOrganization": "Bhagidari Jan Sahyog Samiti",
+            "yearOfAward": "2024-25"
+          },
+          {
+            "awardTitle": "Special Award to Ms. Akriti Winner of Debate Competition",
+            "awardingOrganization": "Bhagidari Jan Sahyog Samiti",
+            "yearOfAward": "2024-25"
+          },
+          {
+            "awardTitle": "First Position in Fusion Dance to Mr Ansh, 3rd Position in Musical Fusion to Ms Mitali, First Position in Drama to Ms Mitali",
+            "awardingOrganization": "NIC Camp organized by Indira Gandhi University, Meerpur",
+            "yearOfAward": "2024-25"
+          },
+          {
+            "awardTitle": "Adarsh Rai (B Tech CSE) – 1st Position, Volleyball competition",
+            "awardingOrganization": "University Level Camp, Maharshi Markendshwar University, Mullana",
+            "yearOfAward": "2024-25",
+            "rowSpan": 8
+          },
+          {
+            "awardTitle": "Abhas Mishra (B Tech CSE) – 1st Position, Treasure hunt",
+            "yearOfAward": "2024-25"
+          },
+          {
+            "awardTitle": "Abhas Mishra (B Tech CSE) – 3rd Position, Tug of war",
+            "yearOfAward": "2024-25"
+          },
+          {
+            "awardTitle": "Yashvi Sahu (BCA Hons) – 1st Position, Tug of war",
+            "yearOfAward": "2024-25"
+          },
+          {
+            "awardTitle": "Yashvi Sahu (BCA Hons) – 1st Position, Group singing",
+            "yearOfAward": "2024-25"
+          },
+          {
+            "awardTitle": "Avneet Tanwar (B Tech CSE) – Best volunteer award during the camp",
+            "yearOfAward": "2024-25"
+          },
+          {
+            "awardTitle": "Avneet Tanwar (B Tech CSE) – 2nd Position, Group singing",
+            "yearOfAward": "2024-25"
+          },
+          {
+            "awardTitle": "Adarsh Rai (B Tech CSE) – 1st Position, Volleyball competition",
+            "yearOfAward": "2024-25"
+          }
+        ],
+        "registrationForm": {
+          "text": "NSS Registration Form",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSeC0NIGoHcymc2_V1TsHViBi2SMsITtGPwtbp1-rr6HXCLejg/viewform"
+        }
+      }
+    }
   }
 }

@@ -1,5 +1,6 @@
 import { RendererConfig } from "@/lib/types/common";
 import {
+  AwardsSection,
   BenefitsSection,
   CommitteeSection,
   EligibilitySection,
@@ -58,5 +59,11 @@ export const Sections: RendererConfig[] = [
     Component: GallerySection,
     propName: "gallerySection",
     dataKey: "gallerySection",
+  },
+  {
+    key: "awards",
+    Component: AwardsSection,
+    propName: "awardsSection",
+    dataKey: "awardsSection",
   },
 ];

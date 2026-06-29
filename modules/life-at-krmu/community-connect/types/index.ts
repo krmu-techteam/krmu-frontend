@@ -68,6 +68,26 @@ export interface CommitteeSectionProps {
   members: Members;
 }
 
+export interface Awards {
+  headers: string[];
+  records: RecordDetails[];
+}
+export interface RegistrationForm {
+  text: string;
+  url: string;
+}
+export interface RecordDetails {
+  awardTitle: string;
+  awardingOrganization?: string;
+  yearOfAward: string;
+  rowSpan?: number;
+}
+export interface AwardsSectionProps {
+  heading: string;
+  imageUrl: string;
+  awards: Awards;
+  registrationForm: RegistrationForm;
+}
 // Data Props
 export interface DataProps {
   heroSection: HeroSectionProps;
@@ -77,6 +97,7 @@ export interface DataProps {
   benefitsSection: BenefitsSectionProps;
   committeeSection: CommitteeSectionProps;
   eligibilitySection: EligibilitySectionProps;
+  awardsSection: AwardsSectionProps;
 }
 
 // Response Props
