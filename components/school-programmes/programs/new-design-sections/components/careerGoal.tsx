@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { getCareerGoalContent } from "../lib/getContent";
+// import Link from "next/link";
+// import { getCareerGoalContent } from "../lib/getContent";
 import { Fraunces, Inter } from "next/font/google";
 import * as Icons from "lucide-react";
 
@@ -21,10 +21,11 @@ const fraunces = Fraunces({
 
 type Props = {
   slug: string;
+  dataContent: any;
 };
 
-const CareerGoal = ({ slug }: Props) => {
-  const data = getCareerGoalContent();
+const CareerGoal = ({ slug, dataContent }: Props) => {
+  const data = dataContent;
   const content = data.careerGoal;
 
   // Manage active tab index and course expanded index
@@ -101,10 +102,18 @@ const CareerGoal = ({ slug }: Props) => {
                     <ul
                       className={`${inter.className} text-[13px] sm:text-[15px]  leading-relaxed text-[#000000]`}
                     >
-                      <li className="italic">
-                        {" "}
-                        <span className="font-bold">Macro:</span> {course.desc}
-                      </li>
+                      {activeSemester.id === "semester3"
+                        ? course?.desc && (
+                            <li className="list-none italic text-xs sm:text-[14px] text-black/60 mt-1.5">
+                              {course.desc}
+                            </li>
+                          )
+                        : course?.desc && (
+                            <li className="list-none italic">
+                              <span className="font-bold ">Macro:</span>{" "}
+                              {course.desc}
+                            </li>
+                          )}
 
                       <li className="list-none p-0 m-0">
                         <div
@@ -133,27 +142,29 @@ const CareerGoal = ({ slug }: Props) => {
                     </ul>
                   </div>
 
-                  <div className="flex flex-col">
-                    <div>
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          if (course.details) {
-                            setActiveCourseIdx(isOpen ? null : idx);
-                          }
-                        }}
-                        className="inline-flex items-center gap-1.5 font-semibold text-[14px] tracking-[0.7px] underline underline-offset-2 decoration-1 text-[#A17200] hover:text-[#87601A] transition-colors duration-300 cursor-pointer bg-transparent border-0 p-0 text-left"
-                      >
-                        <span className="transition-transform duration-300">
-                          <Icons.Play
-                            size={8}
-                            className={`text-current fill-current transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
-                          />
-                        </span>{" "}
-                        {isOpen ? "Read Less" : course.linkText}
-                      </button>
+                  {course?.linkText && (
+                    <div className="flex flex-col">
+                      <div>
+                        <button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            if (course.details) {
+                              setActiveCourseIdx(isOpen ? null : idx);
+                            }
+                          }}
+                          className="inline-flex items-center gap-1.5 font-semibold text-[14px] tracking-[0.7px] underline underline-offset-2 decoration-1 text-[#A17200] hover:text-[#87601A] transition-colors duration-300 cursor-pointer bg-transparent border-0 p-0 text-left"
+                        >
+                          <span className="transition-transform duration-300">
+                            <Icons.Play
+                              size={8}
+                              className={`text-current fill-current transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
+                            />
+                          </span>{" "}
+                          {isOpen ? "Read Less" : course?.linkText}
+                        </button>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               );
             })}

@@ -153,16 +153,16 @@
         "tabLabel": "Semester 3",
         "courses": [
           {
-            "title": "AI and ML Transforming Finance  "
+            "title": "Customer Relationship Management (CRM) Systems "
           },
           {
-            "title": "Digital Payments Evolution and Tools  "
+            "title": "Performance Marketing  "
           },
           {
-            "title": "Financial Analytics and Risk Assessment  "
+            "title": "Search Engine Optimization "
           },
           {
-            "title": "Blockchain for Decentralised Finance  "
+            "title": "Social Media Marketing "
           }
         ]
       },
@@ -171,16 +171,16 @@
         "tabLabel": "Semester 4",
         "courses": [
           {
-            "title": "Fintech in Wealth Management "
+            "title": "Consumer Behaviour "
           },
           {
-            "title": "Investment Analysis & Portfolio Management "
+            "title": "Retail Marketing "
           },
           {
-            "title": "AI for Financial Services "
+            "title": "Content Strategy & Story Telling "
           },
           {
-            "title": "Financial Markets & Institutions"
+            "title": "Product & Brand Management "
           }
         ]
       }

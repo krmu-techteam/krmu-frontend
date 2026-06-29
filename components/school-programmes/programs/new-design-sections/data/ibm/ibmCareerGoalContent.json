@@ -150,37 +150,11 @@
       },
       {
         "id": "semester3",
-        "tabLabel": "Semester 3",
+        "tabLabel": "Semester (3 & 4)*",
         "courses": [
           {
-            "title": "AI and ML Transforming Finance  "
-          },
-          {
-            "title": "Digital Payments Evolution and Tools  "
-          },
-          {
-            "title": "Financial Analytics and Risk Assessment  "
-          },
-          {
-            "title": "Blockchain for Decentralised Finance  "
-          }
-        ]
-      },
-      {
-        "id": "semester4",
-        "tabLabel": "Semester 4",
-        "courses": [
-          {
-            "title": "Fintech in Wealth Management "
-          },
-          {
-            "title": "Investment Analysis & Portfolio Management "
-          },
-          {
-            "title": "AI for Financial Services "
-          },
-          {
-            "title": "Financial Markets & Institutions"
+            "title": "The students will choose a combination of Major and Minor specialization. Across semester 3 and 4, they will choose 4-5 electives focused on the Major and 2-3 electives focused on the Minor specialization.",
+            "desc": "*The list of electives courses being offered will be shared at the end of semester 2."
           }
         ]
       }

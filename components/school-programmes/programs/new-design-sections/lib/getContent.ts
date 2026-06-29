@@ -11,8 +11,12 @@ import { MbaExistsPageContentType } from "../types/contentMbaExists";
 import MbaExistsContentData from "../data/fintech/mbaExistsContent.json";
 import { TwoYearArcPageContentType } from "../types/contentTwoYearArc";
 import TwoYearArcContentData from "../data/fintech/twoYearArcContent.json";
+
 import { CareerGoalPageContentType } from "../types/contentCareerGoal";
 import CareerGoalContentData from "../data/fintech/careerGoalContent.json";
+import ibmCareerGoalContentData from "../data/ibm/ibmCareerGoalContent.json";
+import digitalCareerGoalContentData from "../data/digitalMarketing/digitalCareerGoalContent.json";
+
 import { LeaveWithPageContentType } from "../types/contentLeaveWith";
 import LeaveWithContentData from "../data/fintech/leaveWithContent.json";
 import { FacultyAndIndustryPageContentType } from "../types/contentFacultyAndIndustry";
@@ -64,6 +68,14 @@ export function getTwoYearArcContent(): TwoYearArcPageContentType {
 
 export function getCareerGoalContent(): CareerGoalPageContentType {
   return CareerGoalContentData as CareerGoalPageContentType;
+}
+
+export function getIBMGoalContent(): CareerGoalPageContentType {
+  return ibmCareerGoalContentData as CareerGoalPageContentType;
+}
+
+export function getDigitalGoalContent(): CareerGoalPageContentType {
+  return digitalCareerGoalContentData as CareerGoalPageContentType;
 }
 
 export function getLeaveWithContent(): LeaveWithPageContentType {

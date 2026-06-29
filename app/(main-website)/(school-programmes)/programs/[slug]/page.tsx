@@ -68,9 +68,12 @@ import ThreeIndustryTracks from "@/components/school-programmes/programs/new-des
 import CommonQuestion from "@/components/school-programmes/programs/new-design-sections/components/commonQuestion";
 import OldCareerProspects from "@/components/school-programmes/programs/new-design-sections/components/oldCareerProspect";
 import {
+  getCareerGoalContent,
   getContent,
   getDigitalContent,
+  getDigitalGoalContent,
   getIBMContent,
+  getIBMGoalContent,
 } from "@/components/school-programmes/programs/new-design-sections/lib/getContent";
 
 // import ProgTestimonials, {
@@ -398,7 +401,18 @@ const page = async ({ params }: Props) => {
 
         {curriculumSection &&
           (slug === "mba-fintech" || "mba" || "mba-digital-marketing" ? (
-            <CareerGoal slug={slug} />
+            <CareerGoal
+              slug={slug}
+              dataContent={
+                slug === "mba-fintech"
+                  ? getCareerGoalContent()
+                  : slug === "mba"
+                    ? getIBMGoalContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalGoalContent()
+                      : null
+              }
+            />
           ) : (
             <Curriculum
               heading={curriculumSection?.heading}
