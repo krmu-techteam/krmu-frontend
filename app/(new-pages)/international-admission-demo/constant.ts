@@ -313,3 +313,50 @@ export const faqs = [
       "International students must obtain a valid Student Visa before joining the programme.",
   },
 ];
+
+// Bullet point item
+export type BeginHubHighlight = {
+  text: string;
+};
+
+// Image config
+export type BeginHubImage = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
+// Main Begin Hub section
+export type BeginHubSection = {
+  heading: string; // supports <br />
+  description: string;
+  highlights: BeginHubHighlight[];
+  mapImage: BeginHubImage;
+  formNote: string; // supports <br />
+  formImage: BeginHubImage;
+};
+export const beginHubData: BeginHubSection = {
+  heading: `Begin Your Global Academic <br /> Journey in India`,
+  description:
+    "Study at a university that combines academic excellence, innovation, industry exposure, and global opportunities.",
+  highlights: [
+    { text: "UGC Approved University" },
+    { text: "NAAC A+ Accredited" },
+    { text: "175+ PhDs Awarded" },
+    { text: "₹60,000 Annual Fellowship" },
+  ],
+  mapImage: {
+    src: "/landingpage/common/map.webp",
+    alt: "Campus Location Map",
+    width: 520,
+    height: 300,
+  },
+  formNote: `No charges for enquiry. <br /> We will contact you within 24–48 hours.`,
+  formImage: {
+    src: "/landing/hero-form.png",
+    alt: "Admission Form",
+    width: 480,
+    height: 640,
+  },
+};

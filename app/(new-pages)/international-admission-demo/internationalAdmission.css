@@ -111,7 +111,8 @@
   }
 }
 
-.intPrevBtn svg {
+.intPrevBtn svg,
+.intNextBtn svg {
   width: 25px !important;
   height: 25px !important;
 }
