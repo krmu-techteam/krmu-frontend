@@ -929,14 +929,14 @@ export const whyStudyData = [
     title: "Global Recognition",
     description:
       "Degrees from top Indian universities are increasingly recognised by employers and universities worldwide — India's global standing has never been stronger.",
-    image: "/international-admission/why-study/thumbnail-7.png",
+    image: "/international-admission/why-study/thumbnail7.png",
   },
   {
     id: 8,
     title: "Start-up & Entrepreneurship",
     description:
       "India's third-largest start-up ecosystem provides an unmatched environment for ambitious students who want to build, launch, and lead ventures.",
-    image: "/international-admission/why-study/thumbnail-8.png",
+    image: "/international-admission/why-study/thumbnail8.png",
   },
 ];
 
