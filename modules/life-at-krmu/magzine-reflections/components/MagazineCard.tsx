@@ -11,30 +11,27 @@ type Props = {
 
 const MagazineCard = ({ magazineimg, magazinePDF }: Props) => {
   return (
-    <div
-      className="p-5 rounded-[8px]"
-      style={{
-        boxShadow: "0px 0px 2px 2px #c6dcfd",
-      }}
-    >
-      <Image
-        src={`${STRAPI_URL}${magazineimg?.url}`}
-        width={392}
-        height={446}
-        alt={`${magazineimg?.alternativeText || ""}`}
-        className="w-full h-[446px] object-contain"
-      />
-      <div className="mt-[30px] flex justify-center">
+    <div className="rounded-xl border border-[#061623] bg-[#061623] font-poppins p-5">
+      <div className="flex items-center justify-center overflow-hidden rounded-lg bg-[#061623] h-[380px]">
+        <Image
+          src={`${STRAPI_URL}${magazineimg?.url}`}
+          width={392}
+          height={446}
+          alt={magazineimg?.alternativeText || "Magazine Cover"}
+          className="max-h-full max-w-full object-contain"
+        />
+      </div>
+
+      <div className="mt-6 flex justify-center">
         <Link
           href={`${STRAPI_URL}${magazinePDF?.url}`}
-          className="flex items-center gap-3 p-5 sm:x-2.5 border-2 border-black rounded-full w-fit font-semibold hover:bg-[#034272] hover:text-white
-         duration-300 ease-in-out"
           target="_blank"
           rel="noopener noreferrer"
           download
+          className="inline-flex items-center gap-2 rounded-full bg-[#034272] px-6 py-3 font-medium text-white transition-all duration-300 hover:bg-[#022d4c] hover:shadow-lg"
         >
           <span>Download PDF</span>
-          <Download />
+          <Download size={18} />
         </Link>
       </div>
     </div>
