@@ -12,6 +12,7 @@ const WordClassFacility = () => {
           width={1920}
           height={400}
           alt=""
+          className="w-full"
         />
       </div>
     </section>

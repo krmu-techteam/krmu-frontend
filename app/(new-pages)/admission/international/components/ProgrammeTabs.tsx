@@ -10,7 +10,7 @@ export default function ProgrammeTabs() {
 
   return (
     <section className="bg-[#F5F2EC]">
-      <div className="overflow-hidden rounded-lg bg-[#F5F2EC] lg:flex">
+      <div className="overflow-hidden bg-[#F5F2EC] lg:flex">
         {/* ================= LEFT SIDEBAR ================= */}
 
         <aside className="bg-[#061B38] lg:w-[320px] xl:w-1/4 lg:shrink-0">

@@ -17,7 +17,7 @@ const WhyChoose = () => {
         pb-16
         md:pb-24
         lg:pb-40
-        -mt-20
+        sm:-mt-20
         lg:-mt-40
       "
     >

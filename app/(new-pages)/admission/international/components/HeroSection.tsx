@@ -1,7 +1,24 @@
-const HeroSection = () => {
+import NoPaperFormsWidget from "@/app/(landing-page)/admission/CommonComponent2026/NoPaperFormsWidget";
+
+type Props = {
+  formId: string;
+};
+const HeroSection = ({ formId }: Props) => {
   return (
     <section className="bg-[#edece4] relative px-5 2xl:px-0 py-10 xl:py-0">
-      <div className="bg-white absolute right-0 top-0 max-w-[600px] w-full h-[850px] form-white-container hidden xl:block"></div>
+      <div className="bg-white absolute right-0 top-0 max-w-[600px] px-10 w-full h-[850px] form-white-container hidden xl:flex items-center justify-center">
+        <div className="relative z-30 w-full">
+          <div className="text-center">
+            <h3 className="text-center font-poppins font-bold text-2xl">
+              <span className="text-[#cb000d]">
+                Apply for International Admission
+              </span>{" "}
+              <br /> at K.R. Mangalam University Today
+            </h3>
+          </div>
+          <NoPaperFormsWidget widgetId={formId} height="600px" />
+        </div>
+      </div>
       <div className="flex flex-col md:flex-row items-center gap-10 max-w-[1664px] mx-auto">
         <div className="w-full md:w-1/2 xl:w-8/12 flex items-start left-container">
           <div className="w-full xl:w-1/2 2xl:w-3/5 col-1">
@@ -65,7 +82,19 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-full h-[600px] xl:h-[850px] md:w-1/2 bg-white xl:bg-transparent xl:w-4/12 relative outer-right-container"></div>
+        <div className="w-full h-[750px] md:h-[900px] lg:h-[700px] xl:h-[850px] md:w-1/2 bg-white xl:bg-transparent xl:w-4/12 relative outer-right-container flex items-center justify-center rounded-2xl sm:pt-10 md:pt-0">
+          <div className="relative z-30 w-full pt-5 sm:pt-0 sm:p-4 md:p-5 xl:hidden">
+            <div className="text-center">
+              <h3 className="text-center font-poppins font-bold text-sm sm:text-base md:text-lg xl:text-2xl">
+                <span className="text-[#cb000d]">
+                  Apply for International Admission
+                </span>{" "}
+                <br /> at K.R. Mangalam University Today
+              </h3>
+            </div>
+            <NoPaperFormsWidget widgetId={formId} height="650px" />
+          </div>
+        </div>
       </div>
     </section>
   );
