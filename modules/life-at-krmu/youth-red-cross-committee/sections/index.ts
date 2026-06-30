@@ -1,0 +1,11 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as CommitteeSection } from "./CommitteeSection";
+export { default as ResourcesSection } from "./ResourcesSection";
+export { default as BenefitsSection } from "./BenefitsSection";
+export { default as EligibilitySection } from "./EligibilitySection";
+export { default as CommitteeActivitiesSection } from "./CommitteeActivitiesSection";
+export { default as AwardsSection } from "./AwardsSection";
+export { default as MottoSection } from "./MottoSection";
+export { default as FuturePlansSection } from "./FuturePlansSection";
+export { default as ActivityGallerySection } from "./ActivityGallerySection";
+export { default as ContactSection } from "./ContactSection";

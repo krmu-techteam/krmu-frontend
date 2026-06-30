@@ -1,24 +1,12 @@
 import React from "react";
-import YRCHero from "./comp/YRCHero";
-import YRCCommittee from "./comp/YRCCommittee";
-import YRCMagazines from "./comp/YRCMagazines";
-import YRCBenefits from "./comp/YRCBenefits";
-import YRCCriteria from "./comp/YRCCriteria";
-import Committee from "./comp/Committee";
-import YRCAward from "./comp/YRCAward";
-import YRCMotto from "./comp/YRCMotto";
-import YRCFuturePlan from "./comp/YRCFuturePlan";
-import YRCGlimpse from "./comp/YRCGlimpse";
-import YRCContactUs from "./comp/YRCContactUs";
-
-
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
-
+import { SectionsRenderer } from "@/components/common/SectionRenderer";
+import {
+  getYouthRedCrossCommitteeData,
+  Sections,
+} from "@/modules/life-at-krmu/youth-red-cross-committee";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("youth-red-cross-committee");
@@ -81,21 +69,11 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-
-const page = () => {
+const page = async () => {
+  const { data } = await getYouthRedCrossCommitteeData();
   return (
     <>
-      <YRCHero />
-      <YRCCommittee />
-      <YRCMagazines />
-      <YRCBenefits />
-      <YRCCriteria />
-      <Committee />
-      <YRCAward />
-      <YRCMotto />
-      <YRCFuturePlan />
-      <YRCGlimpse />
-      <YRCContactUs />
+      <SectionsRenderer sections={Sections} data={data} />
     </>
   );
 };

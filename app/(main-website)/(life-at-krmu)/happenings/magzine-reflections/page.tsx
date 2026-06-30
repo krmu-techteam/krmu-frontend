@@ -1,17 +1,12 @@
 import { getMagazineReflection } from "@/lib/api/magazine-reflection";
-import EditorialReflection from "./comp/EditorialReflection";
-import MagazineHero from "./comp/MagazineHero";
-import ReflectionCards from "./comp/ReflectionCards";
-
-
-
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
-
+import {
+  EditorialSection,
+  HeroSection,
+  MagazineCardsSection,
+} from "@/modules/life-at-krmu/magzine-reflections";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("magzine-reflections");
@@ -79,9 +74,12 @@ const page = async () => {
 
   return (
     <>
-      <MagazineHero title={magazineData?.title} bgImage={magazineData?.bgimage} />
-      <EditorialReflection content={magazineData?.reflectioncontent} />
-      <ReflectionCards magazinecards={magazineData?.magazinecard} />
+      <HeroSection
+        title={magazineData?.title}
+        bgImage={magazineData?.bgimage}
+      />
+      <EditorialSection content={magazineData?.reflectioncontent} />
+      <MagazineCardsSection magazinecards={magazineData?.magazinecard} />
     </>
   );
 };
