@@ -10,15 +10,17 @@ import SchoolProgrammesDiscipline from "./components/SchoolProgrammesDiscipline"
 import ProgrammeTabs from "./components/ProgrammeTabs";
 import ScholarshipSection from "./components/ScholarshipSection";
 import WordClassFacility from "./components/WordClassFacility";
-import { beginHubData } from "./constant";
+import { beginHubData, WorldClassData } from "./constant";
 import FAQSection from "./components/FAQSection";
 import SingleImage from "./components/SingleImage";
 import HeroSection from "./components/HeroSection";
 import Stats from "./components/Stats";
 import BeginYour from "./components/BeginYour";
+import WorldClass from "./components/WorldClass";
 
 const page = () => {
   const beginData = beginHubData;
+  const worldFacilityData = WorldClassData
   return (
     <>
       <HeroSection formId="6798d0b6e4d6bb9947d6aacc2d86256c" />
@@ -34,6 +36,7 @@ const page = () => {
       <SchoolProgrammesDiscipline />
       <ProgrammeTabs />
       <ScholarshipSection />
+      <WorldClass data={worldFacilityData} />
       <WordClassFacility />
       <FAQSection />
       <SingleImage />

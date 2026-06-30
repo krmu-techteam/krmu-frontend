@@ -3,6 +3,7 @@ import { BeginHubSection } from "../constant";
 import NoPaperFormsWidget from "@/app/(landing-page)/admission/CommonComponent2026/NoPaperFormsWidget";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import ScrollButton from "@/app/(landing-page)/admission/CommonComponent2026/ScrollButton";
 
 type Props = {
   data: BeginHubSection;
@@ -92,9 +93,16 @@ const BeginYour = ({ data, formId }: Props) => {
           Industry-Aligned Courses | Top Recruiters | Global Exposure
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 items-center mb-10">
-          <button className="text-white bg-[linear-gradient(135deg,#e31e24_0%,#c41920_100%)] shadow-[0_4px_14px_0_rgba(227,30,36,0.35)] text-lg min-h-14 inline-flex items-center justify-center gap-2 font-semibold cursor-pointer rounded-xl   transition-all duration-150 ease-out py-4 px-6 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_0_rgba(227,30,36,0.45)] hover:bg-[linear-gradient(135deg,#ff4d52_0%,#e31e24_100%)]">
-            Enrol Now. Limited Seats Available! <ArrowUpRight color="#fff" />
-          </button>
+
+          <ScrollButton
+            targetId="apply-section"
+            highlightClass="flash-border"
+            btnClass="text-white bg-[linear-gradient(135deg,#e31e24_0%,#c41920_100%)] shadow-[0_4px_14px_0_rgba(227,30,36,0.35)] text-lg min-h-14 inline-flex items-center justify-center gap-2 font-semibold cursor-pointer rounded-xl   transition-all duration-150 ease-out py-4 px-6 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_0_rgba(227,30,36,0.45)] hover:bg-[linear-gradient(135deg,#ff4d52_0%,#e31e24_100%)]"
+          >
+            Enrol Now. Limited Seats Available!
+            <ArrowUpRight color="#fff" />
+          </ScrollButton>
+          
           <Link
             href="tel:+919311411717"
             className="text-white bg-[#0060aa]  text-lg min-h-14 inline-flex items-center justify-center gap-2 font-semibold cursor-pointer rounded-xl   transistion-all duration-150 ease-out py-4 px-6 hover:-translate-y-0.5"
@@ -118,6 +126,8 @@ const BeginYour = ({ data, formId }: Props) => {
             </svg>{" "}
             +91 9311411717
           </Link>
+
+
         </div>
         <div className="flex flex-wrap justify-center gap-6">
           <div className="flex items-center gap-2 text-sm text-white">

@@ -1,23 +1,30 @@
 import Image from "next/image";
 
-const WhyStudyCard = () => {
+interface WhyStudyCardProps {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const WhyStudyCard = ({
+  title,
+  description,
+  image,
+}: WhyStudyCardProps) => {
   return (
     <div>
-      <div className="h-[180px] sm:h-[200px] relative rounded-2xl overflow-hidden">
+      <div className="relative h-[180px] overflow-hidden rounded-2xl sm:h-[200px]">
         <Image
-          src="/international-admission/thumbnail.png"
+          src={image}
           fill
-          alt=""
-          className="w-full"
+          alt={title}
+          className="object-cover"
         />
       </div>
-      <div className="bg-[#edece4] pt-10 pb-5 px-5 font-poppins -mt-5">
-        <h5 className="leading-9 font-bold">World-Class Education</h5>
-        <p>
-          Home to globally recognised IITs, IIMs, and NAAC accredited
-          universities. Renowned for excellence in Engineering, Technology,
-          Medicine, Business, and Sciences.
-        </p>
+
+      <div className="bg-[#edece4] pt-10 pb-5 px-5 font-poppins -mt-5 h-[240px]">
+        <h5 className="font-bold leading-9">{title}</h5>
+        <p>{description}</p>
       </div>
     </div>
   );

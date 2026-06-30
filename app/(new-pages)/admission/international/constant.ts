@@ -53,6 +53,60 @@ export const Companies = [
     left: "100%",
     top: "87%",
   },
+  {
+    name: "Deloitte",
+    logo: "/international-admission/logos/deloitte.png",
+    left: "100%",
+    top: "87%",
+  },
+  {
+    name: "flipkart",
+    logo: "/international-admission/logos/flipkart.png",
+    left: "100%",
+    top: "87%",
+  },
+  {
+    name: "mercedes-benz",
+    logo: "/international-admission/logos/mercedes-benz.png",
+    left: "100%",
+    top: "87%",
+  },
+  {
+    name: "dabur",
+    logo: "/international-admission/logos/dabur.png",
+    left: "100%",
+    top: "87%",
+  },
+  {
+    name: "reliance",
+    logo: "/international-admission/logos/reliance.png",
+    left: "100%",
+    top: "87%",
+  },
+  {
+    name: "oberoi",
+    logo: "/international-admission/logos/oberoi.png",
+    left: "100%",
+    top: "87%",
+  },
+  {
+    name: "infosys",
+    logo: "/international-admission/logos/infosys.png",
+    left: "100%",
+    top: "87%",
+  },
+  {
+    name: "sun",
+    logo: "/international-admission/logos/sun.png",
+    left: "100%",
+    top: "87%",
+  },
+  {
+    name: "zomato",
+    logo: "/international-admission/logos/zomato.png",
+    left: "100%",
+    top: "87%",
+  },
 ];
 
 export const NetworkContent = [
@@ -129,6 +183,24 @@ export const globalLearningData = {
       width: 135,
       height: 34,
     },
+    {
+      name: "University of Houston",
+      src: "/international-admission/logos/uoh.png",
+      width: 135,
+      height: 34,
+    },
+    {
+      name: "German Varsity",
+      src: "/international-admission/logos/gv.png",
+      width: 135,
+      height: 34,
+    },
+    {
+      name: "JU",
+      src: "/international-admission/logos/ju.png",
+      width: 135,
+      height: 34,
+    },
   ],
 
   bottomLogos: [
@@ -153,6 +225,18 @@ export const globalLearningData = {
     {
       name: "University of Ferrara",
       src: "/international-admission/logos/fu.png",
+      width: 97,
+      height: 79,
+    },
+    {
+      name: "Logo",
+      src: "/international-admission/logos/logo-1.png",
+      width: 97,
+      height: 79,
+    },
+    {
+      name: "University of Ferrara",
+      src: "/international-admission/logos/cmu.png",
       width: 97,
       height: 79,
     },
@@ -704,14 +788,14 @@ export type LifeInternationalAdmissionSection = {
 };
 
 export const lifeInternationalAdmissionData: LifeInternationalAdmissionSection =
-  {
-    heading: "Life as a BBA  Student at KRMU",
-    description: "",
-    image: {
-      src: "/landingpage/common/collage.webp",
-      alt: "Life as a PhD Scholar at KR Mangalam",
-    },
-  };
+{
+  heading: "Life as a BBA  Student at KRMU",
+  description: "",
+  image: {
+    src: "/landingpage/common/collage.webp",
+    alt: "Life as a PhD Scholar at KR Mangalam",
+  },
+};
 
 export const faqs = [
   {
@@ -792,4 +876,135 @@ export const beginHubData: BeginHubSection = {
     width: 480,
     height: 640,
   },
+};
+
+
+
+
+export const whyStudyData = [
+  {
+    id: 1,
+    title: "World-Class Education",
+    description:
+      "Home to globally recognised IITs, IIMs, and NAAC accredited universities. Renowned for excellence in Engineering, Technology, Medicine, Business, and Sciences.",
+    image: "/international-admission/why-study/thumbnail-1.png",
+  },
+  {
+    id: 2,
+    title: "Affordable International Education",
+    description:
+      "Tuition fees and cost of living are a fraction of what you'd pay in other countries — without compromising on quality or career outcomes.",
+    image: "/international-admission/why-study/thumbnail-2.png",
+  },
+  {
+    id: 3,
+    title: "English-Medium Instruction",
+    description:
+      "All programmes are taught in English, ensuring full accessibility for international students — with zero language barrier in classrooms.",
+    image: "/international-admission/why-study/thumbnail-3.png",
+  },
+  {
+    id: 4,
+    title: "Booming Career Opportunities",
+    description:
+      "One of the world's fastest-growing economies with a thriving start-up scene in Gurugram, Bangalore, Delhi, and Mumbai — and a massive global hiring network.",
+    image: "/international-admission/why-study/thumbnail-4.png",
+  },
+  {
+    id: 5,
+    title: "Research & Innovation Hub",
+    description:
+      "Rapidly growing investments in AI, Biotechnology, and Space Technology — paired with India's centuries-old legacy in Mathematics, Medicine, and Philosophy.",
+    image: "/international-admission/why-study/thumbnail-5.png",
+  },
+  {
+    id: 6,
+    title: "A Unique Life Experience",
+    description:
+      "India's blend of ancient heritage and modern ambition creates a life-changing personal journey — cultural immersion, diversity, and real-world resilience.",
+    image: "/international-admission/why-study/thumbnail-6.png",
+  },
+  {
+    id: 7,
+    title: "Global Recognition",
+    description:
+      "Degrees from top Indian universities are increasingly recognised by employers and universities worldwide — India's global standing has never been stronger.",
+    image: "/international-admission/why-study/thumbnail-7.png",
+  },
+  {
+    id: 8,
+    title: "Start-up & Entrepreneurship",
+    description:
+      "India's third-largest start-up ecosystem provides an unmatched environment for ambitious students who want to build, launch, and lead ventures.",
+    image: "/international-admission/why-study/thumbnail-8.png",
+  },
+];
+
+
+
+
+export type WorldClassImageData = {
+  image: string;
+  alt?: string;
+};
+
+export type WorldClassSection = {
+  heading: string;
+  slides: WorldClassImageData[];
+};
+
+export const WorldClassData: WorldClassSection = {
+  heading: "World-Class Facilities & Infrastructure",
+  slides: [
+    {
+      image: "/international-admission/world-class/image-1.jpg",
+      alt: "Research Impact 1",
+    },
+    {
+      image: "/international-admission/world-class/image-2.jpg",
+      alt: "Research Impact 2",
+    },
+    {
+      image: "/international-admission/world-class/image-3.jpg",
+      alt: "Research Impact 3",
+    },
+
+    {
+      image: "/international-admission/world-class/image-1.jpg",
+      alt: "Research Impact 1",
+    },
+    {
+      image: "/international-admission/world-class/image-2.jpg",
+      alt: "Research Impact 2",
+    },
+    {
+      image: "/international-admission/world-class/image-3.jpg",
+      alt: "Research Impact 3",
+    },
+    {
+      image: "/international-admission/world-class/image-1.jpg",
+      alt: "Research Impact 1",
+    },
+    {
+      image: "/international-admission/world-class/image-2.jpg",
+      alt: "Research Impact 2",
+    },
+    {
+      image: "/international-admission/world-class/image-3.jpg",
+      alt: "Research Impact 3",
+    },
+    {
+      image: "/international-admission/world-class/image-1.jpg",
+      alt: "Research Impact 1",
+    },
+    {
+      image: "/international-admission/world-class/image-2.jpg",
+      alt: "Research Impact 2",
+    },
+    {
+      image: "/international-admission/world-class/image-3.jpg",
+      alt: "Research Impact 3",
+    },
+   
+  ],
 };
