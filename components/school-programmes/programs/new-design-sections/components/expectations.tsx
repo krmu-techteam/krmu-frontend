@@ -1,9 +1,9 @@
 import React from "react";
 import { getExpectationsContent } from "../lib/getContent";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Poppins } from "next/font/google";
 import { CircleArrowRight } from "lucide-react";
 
-const inter = Inter({
+const inter = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["italic", "normal"],
@@ -20,8 +20,8 @@ const Expectations = () => {
   const content = data.expectations;
 
   return (
-    <section className="w-full bg-[#F7F0E0] py-18 text-[#012D52]">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+    <section className="w-full bg-[#F7F0E0] text-[#012D52]">
+      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
         {/* Header */}
         <div className="mb-8">
           <span

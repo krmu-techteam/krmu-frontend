@@ -18,7 +18,7 @@ export default function FAQSection() {
   const visibleFaqs = showAll ? faqs : faqs.slice(0, 6);
 
   return (
-    <section className="bg-[#F5F2EC] py-14 md:py-20">
+    <section className="bg-[#F5F2EC] py-14 md:py-20" id="faqs">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
 
         <h2 className="mb-10 text-center text-4xl font-bold text-[#071C38] md:text-5xl lg:text-6xl">

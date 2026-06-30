@@ -9,7 +9,7 @@ export default function ProgrammeTabs() {
   const programmes = internationalAdmissionSchools[active]?.programmes ?? [];
 
   return (
-    <section className="bg-[#F5F2EC]">
+    <section className="bg-[#F5F2EC]" id="programmes">
       <div className="overflow-hidden bg-[#F5F2EC] lg:flex">
         {/* ================= LEFT SIDEBAR ================= */}
 

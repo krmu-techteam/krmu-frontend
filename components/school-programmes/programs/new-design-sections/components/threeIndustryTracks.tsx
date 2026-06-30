@@ -2,10 +2,10 @@
 
 import React from "react";
 import { getThreeIndustryTracksContent } from "../lib/getContent";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Poppins } from "next/font/google";
 import Link from "next/link";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["italic", "normal"],
@@ -22,8 +22,8 @@ const ThreeIndustryTracks = () => {
   const content = data.threeIndustryTracks;
 
   return (
-    <section className="w-full bg-[#012D52] bg-[radial-gradient(50%_90%_at_50%_50%,#024178_10%,#012D52_50%,#012D52_100%)] text-white py-14 text-center relative overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 flex flex-col items-center">
+    <section className="w-full bg-[#012D52] bg-[radial-gradient(50%_90%_at_50%_50%,#024178_10%,#012D52_50%,#012D52_100%)] text-white text-center relative overflow-hidden">
+      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20 flex flex-col items-center">
         {/* Title */}
         <h2
           className={`${fraunces.className} text-white text-3xl sm:text-4xl md:text-5xl lg:text-[38px] leading-tight mb-4 max-w-2xl`}
@@ -35,7 +35,7 @@ const ThreeIndustryTracks = () => {
 
         {/* Description */}
         <p
-          className={`${inter.className} text-white text-sm sm:text-base md:text-[12px] mb-4 max-w-[620px]`}
+          className={`${poppins.className} text-white text-sm sm:text-base md:text-[12px] mb-4 max-w-[620px]`}
         >
           {content.description}
         </p>
@@ -45,7 +45,7 @@ const ThreeIndustryTracks = () => {
           {/* Primary CTA */}
           <Link
             href={content.primaryCta.link}
-            className={`${inter.className} bg-[#DE0000] hover:bg-[#b30000] text-white font-medium text-sm sm:text-[16px] px-4 py-2 rounded-[5px] transition-all duration-300  w-full sm:w-auto text-center cursor-pointer`}
+            className={`${poppins.className} bg-[#DE0000] hover:bg-[#b30000] text-white font-medium text-sm sm:text-[16px] px-4 py-2 rounded-[5px] transition-all duration-300  w-full sm:w-auto text-center cursor-pointer`}
           >
             {content.primaryCta.text}
           </Link>
@@ -53,7 +53,7 @@ const ThreeIndustryTracks = () => {
           {/* Secondary CTA */}
           <Link
             href={`tel:${content.secondaryCta.link}`}
-            className={`${inter.className} border border-[#A4A4A4] bg-[#012D52] hover:bg-white/10 text-white font-medium text-sm sm:text-[16px] px-4 py-2 rounded-[5px] transition-all duration-300 w-full sm:w-auto text-center cursor-pointer`}
+            className={`${poppins.className} border border-[#A4A4A4] bg-[#012D52] hover:bg-white/10 text-white font-medium text-sm sm:text-[16px] px-4 py-2 rounded-[5px] transition-all duration-300 w-full sm:w-auto text-center cursor-pointer`}
           >
             {content.secondaryCta.text}
           </Link>
@@ -61,7 +61,7 @@ const ThreeIndustryTracks = () => {
 
         {/* Footer Contact Line */}
         <div
-          className={`${inter.className} text-xs sm:text-[12px] text-white mt-2`}
+          className={`${poppins.className} text-xs sm:text-[12px] text-white mt-2`}
         >
           Prefer WhatsApp or a call?{" "}
           <Link

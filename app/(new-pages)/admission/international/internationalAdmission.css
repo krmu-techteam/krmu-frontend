@@ -162,3 +162,23 @@
 .heroBannerForm__form{
   height: 700px;
 }
+
+
+@keyframes galleryScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.gallery-scroll {
+  display: flex;
+  width: max-content;
+  animation: galleryScroll 60s linear infinite;
+}
+
+.gallery-scroll:hover {
+  animation-play-state: paused;
+}

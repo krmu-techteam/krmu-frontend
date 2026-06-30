@@ -25,12 +25,12 @@ const MbaExists = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section className="relative w-full bg-[radial-gradient(40%_80%_at_15%_50%,#024178_0%,#012D52_50%,#012D52_100%)] py-16 overflow-hidden text-white flex flex-col justify-center">
-      <div className="max-w-[1440px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-[40px] relative z-10">
-        <div className="pl-0 md:pl-10 lg:pl-[43px]">
+    <section className="relative w-full bg-[radial-gradient(40%_80%_at_15%_50%,#024178_0%,#012D52_50%,#012D52_100%)]  overflow-hidden text-white flex flex-col justify-center">
+      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
+        <div className="">
           {/* Badge */}
           <span
-            className={`${inter.className} text-[#EDBA55] text-xs sm:text-[15px] font-semibold tracking-[0.17em] uppercase block mb-4`}
+            className={`${inter.className} text-[#EDBA55] text-xs sm:text-[15px] font-semibold tracking-[0.7px] uppercase block mb-4`}
           >
             {content.badge}
           </span>

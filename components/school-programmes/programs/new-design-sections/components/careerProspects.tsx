@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { getCareerProspectsContent } from "../lib/getContent";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Poppins } from "next/font/google";
 import {
   Carousel,
   CarouselContent,
@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-const inter = Inter({
+const inter = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["italic", "normal"],
@@ -47,8 +47,8 @@ const CareerProspects = ({ slug }: Props) => {
   }, [api]);
 
   return (
-    <section className="relative w-full  bg-[radial-gradient(40%_80%_at_20%_45%,#024178_0%,#012D52_50%,#012D52_100%)] text-white py-16 md:py-20  overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+    <section className="relative w-full  bg-[radial-gradient(40%_80%_at_20%_45%,#024178_0%,#012D52_50%,#012D52_100%)] text-white  overflow-hidden">
+      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Content Column */}
           <div className="lg:col-span-7 flex flex-col justify-center">

@@ -2,9 +2,9 @@
 
 import React from "react";
 import { getFeeFinanceContent } from "../lib/getContent";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Poppins } from "next/font/google";
 
-const inter = Inter({
+const inter = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["italic", "normal"],
@@ -23,8 +23,8 @@ const FeeFinance = () => {
   const lp = content.loanPartners;
 
   return (
-    <section className="w-full bg-[#FDF7EB] py-16 md:py-20 text-[#012D52]">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+    <section className="w-full bg-[#FDF7EB] text-[#012D52]">
+      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
         {/* Header */}
         <div className="mb-6 max-w-4xl">
           <span
@@ -40,9 +40,9 @@ const FeeFinance = () => {
         </div>
 
         {/* Layout Grid */}
-        <div className="flex flex-col md:flex-row justify-center gap-8 items-stretch">
+        <div className="flex flex-col md:flex-row   items-stretch gap-8">
           {/* Left Card - Program Fee */}
-          <div className="border border-[#8C969E] rounded-[10px] bg-[#F7F0E0] p-6 flex flex-col justify-between transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(188,176,147,0.15)] w-full max-w-[532px] mx-auto">
+          <div className="border border-[#8C969E] rounded-[10px] bg-[#F7F0E0] p-6 flex flex-col justify-between transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(188,176,147,0.15)] w-full max-w-[48%] ">
             <div>
               <h3
                 className={`${fraunces.className} text-2xl md:text-[28px] text-[#002C51]  mb-4`}
@@ -89,18 +89,18 @@ const FeeFinance = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="">
+            {/* <div className="">
               <a
                 href={pf.button.link}
                 className={`${inter.className} w-full sm:w-auto inline-block text-center border border-[#012D52] text-[#012D52] hover:bg-[#012D52] hover:text-white px-5 py-5 rounded-[10px] font-semibold text-sm sm:text-[18px] transition-all duration-300`}
               >
                 {pf.button.text}
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Card - Education-loan partners */}
-          <div className="rounded-[10px] bg-[radial-gradient(50%_50%_at_50%_50%,#024178_0%,#012D52_80%,#012D52_100%)] p-6 px-8 text-white flex flex-col justify-between transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(1,45,82,0.25)] w-full max-w-[532px] mx-auto">
+          <div className="rounded-[10px] bg-[radial-gradient(50%_50%_at_50%_50%,#024178_0%,#012D52_80%,#012D52_100%)] p-6 px-8 text-white flex flex-col justify-between transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(1,45,82,0.25)] w-full max-w-[48%] ">
             <div>
               <h3
                 className={`${fraunces.className} text-2xl md:text-[28px] text-[#E7C268]  mb-4`}

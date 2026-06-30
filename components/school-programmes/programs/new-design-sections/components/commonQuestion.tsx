@@ -2,10 +2,10 @@
 
 import React, { useState } from "react";
 import { getCommonQuestionContent } from "../lib/getContent";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Poppins } from "next/font/google";
 import { Plus, Minus } from "lucide-react";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["italic", "normal"],
@@ -29,12 +29,12 @@ const CommonQuestion = () => {
   };
 
   return (
-    <section className="w-full bg-[#F7F0E0] py-16  text-[#012D52]">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-30">
+    <section className="w-full bg-[#F7F0E0] text-[#012D52]">
+      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
         {/* Header */}
         <div className="mb-8 max-w-4xl">
           <span
-            className={`${inter.className} text-[#7A5821] text-xs sm:text-[11px] leading-[16px] font-medium tracking-[1.54px] uppercase block mb-3`}
+            className={`${poppins.className} text-[#7A5821] text-xs sm:text-[11px] leading-[16px] font-medium tracking-[1.54px] uppercase block mb-3`}
           >
             {content.badge}
           </span>
@@ -46,7 +46,7 @@ const CommonQuestion = () => {
         </div>
 
         {/* Accordions Container */}
-        <div className=" flex flex-col gap-4 mr-[10%] lg:mr-[10%]">
+        <div className=" flex flex-col gap-4 mr-[10%] lg:mr-[20%]">
           {content.faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
@@ -81,7 +81,7 @@ const CommonQuestion = () => {
                 >
                   <div className="overflow-hidden">
                     <p
-                      className={`${inter.className} text-black/85 text-[14px] sm:text-[16px] leading-relaxed pt-2`}
+                      className={`${poppins.className} text-black/85 text-[14px] sm:text-[16px] leading-relaxed pt-2`}
                     >
                       {faq.answer}
                     </p>

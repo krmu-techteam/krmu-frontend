@@ -3,13 +3,20 @@ import Image from "next/image";
 import Link from "next/link";
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 // import { getContent } from "../lib/getContent";
-import { Playfair_Display } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 import { HeroPageContentType } from "../types/contentHero";
 import { HeroSection } from "@/lib/types/school-programme";
+import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
+  style: ["italic", "normal"],
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600"],
   style: ["italic", "normal"],
 });
 
@@ -35,7 +42,7 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
       id="hero-section"
       className="relative w-full bg-[radial-gradient(50%_50%_at_50%_50%,#024178_0%,#012D52_50%,#012D52_100%)] text-white pt-20 pb-0 sm:pt-24 md:pt-28 lg:pt-30 overflow-hidden flex flex-col justify-between min-h-[520px] sm:min-h-[600px] lg:min-h-[700px]"
     >
-      <div className="max-w-[1440px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col-reverse lg:flex-row items-start justify-between gap-8 sm:gap-10 lg:gap-8 py-8 sm:py-10 lg:py-16 mb-4 sm:mb-6">
+      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col-reverse lg:flex-row items-start justify-between gap-8 sm:gap-10 lg:gap-8 py-8 sm:py-10 lg:py-20">
         {/* Left Content Column */}
         <div className="w-full lg:w-[50%] flex flex-col text-left">
           {/* Badge */}
@@ -51,7 +58,9 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
           </h1>
 
           {/* Description */}
-          <p className="text-white w-full lg:w-[85%] text-sm sm:text-[15px] md:text-[16px] lg:text-[17px] tracking-wide mb-4 max-w-2xl">
+          <p
+            className={`${poppins.className} text-white w-full lg:w-[85%] font-light text-sm sm:text-[15px] md:text-[16px] lg:text-[17px] tracking-wide mb-4 max-w-2xl`}
+          >
             {hero.content}
           </p>
 
@@ -76,13 +85,20 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
             )}
 
             {secondaryButton && (
-              <Link
-                href={secondaryButton.link}
-                target="_blank"
-                className="border border-white hover:border-white hover:bg-white/10 text-white font-medium text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 text-center whitespace-nowrap"
-              >
-                {secondaryButton.title}
-              </Link>
+              <CommonLeadPopup
+                buttonText={secondaryButton.title}
+                buttonClassName="border border-white hover:border-white hover:bg-white/10 text-white font-medium text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 text-center whitespace-nowrap"
+                redirectUrl={secondaryButton.link || "#"}
+                form_name="Programme Brochure"
+                shadowGradient={false}
+              />
+              // <Link
+              //   href={secondaryButton.link}
+              //   target="_blank"
+              //   className="border border-white hover:border-white hover:bg-white/10 text-white font-medium text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 text-center whitespace-nowrap"
+              // >
+              //   {secondaryButton.title}
+              // </Link>
             )}
           </div>
 
@@ -120,15 +136,17 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
       </div>
 
       {/* Bottom Announcement Banner */}
-      <div className="w-full bg-[#B08233] py-2.5 sm:py-3.5 text-center text-white text-[11px] sm:text-[14px] md:text-[16px] lg:text-[17px] font-medium tracking-wide z-10">
-        <div className="max-w-[1440px] mx-auto px-4 flex flex-wrap justify-center items-center gap-1">
-          <span className="font-bold">{hero.banner.text}</span>
-          <span>&nbsp;{hero.banner.text2}&nbsp;</span>
+      <div
+        className={`${poppins.className} w-full bg-[#B08233] py-2.5 sm:py-3.5 text-center text-white text-[11px] sm:text-[14px] md:text-[16px] lg:text-[17px] tracking-wide z-10`}
+      >
+        <div className="max-w-[1280px] mx-auto px-4 flex flex-wrap justify-center items-center gap-1">
+          <span className="font-semibold">{hero.banner.text}</span>
+          <span className="font-light">&nbsp;{hero.banner.text2}&nbsp;</span>
           {hero.banner.linkText && hero.banner.link && (
             <Link
               href={hero.banner.link}
               target="_blank"
-              className="underline hover:text-slate-100 transition-colors inline-flex items-center gap-1"
+              className="underline hover:text-slate-100 transition-colors inline-flex items-center gap-1 font-light"
             >
               {hero.banner.linkText}
             </Link>

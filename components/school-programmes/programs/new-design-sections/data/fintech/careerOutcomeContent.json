@@ -13,13 +13,13 @@
         "value": "800+",
         "label": "Campus recruiters",
         "desc": "KRMU's university-wide recruiter network.",
-        "icon": "Briefcase"
+        "icon": "BriefcaseBusiness"
       },
       {
         "value": "PPO",
         "label": "Pre-Placement Offer pathway",
         "desc": "Built into the Year-Two capstone engagement.",
-        "icon": "UserCheck"
+        "icon": "UserRoundCheck"
       }
     ],
     "sectionTwo": {
@@ -29,7 +29,7 @@
         {
           "title": "Industry leads, theory follows",
           "desc": "Every flagship course opens and closes with a senior practitioner.",
-          "icon": "CheckSquare"
+          "icon": "LaptopMinimalCheck"
         },
         {
           "title": "A specialisation with a name behind it",
@@ -39,12 +39,12 @@
         {
           "title": "Real work, from the first semester",
           "desc": "Field visits, real financial statements, and an 8–10 week company internship.",
-          "icon": "BarChart3"
+          "icon": "ListMinus"
         },
         {
           "title": "A portfolio that does the talking",
           "desc": "Graduate with real deliverables – every CV claim linked to proof.",
-          "icon": "FileText"
+          "icon": "File"
         }
       ]
     }

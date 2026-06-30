@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { getExperimentalInfraContent } from "../lib/getContent";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Poppins } from "next/font/google";
 
-const inter = Inter({
+const inter = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["italic", "normal"],
@@ -20,8 +20,8 @@ const ExperimentalInfra = () => {
   const content = data.experimentalInfra;
 
   return (
-    <section className="w-full bg-[#FDF7EB] py-16 md:py-24 text-[#012D52]">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+    <section className="w-full bg-[#FDF7EB]  text-[#012D52]">
+      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
         {/* Header */}
         <div className="mb-12">
           <span
@@ -57,7 +57,7 @@ const ExperimentalInfra = () => {
               <div className="p-5 lg:p-4 flex-1 flex flex-col justify-start">
                 {/* Subtitle / Label */}
                 <span
-                  className={`${fraunces.className} text-[#87601A] font-semibold text-[17px] sm:text-[26px] block mb-4`}
+                  className={`${fraunces.className} text-[#87601A] font-semibold text-[17px] sm:text-[26px] block mb-2`}
                 >
                   {card.label}
                 </span>

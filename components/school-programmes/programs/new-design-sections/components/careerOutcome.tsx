@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import { getCareerOutcomeContent } from "../lib/getContent";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Poppins } from "next/font/google";
 import * as Icons from "lucide-react";
 
-const inter = Inter({
+const inter = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["italic", "normal"],
@@ -28,27 +28,32 @@ const CareerOutcome = ({ slug }: Props) => {
     const IconComponent = (Icons as any)[iconName];
     if (IconComponent) {
       return (
-        <IconComponent className="w-[28px] h-[28px] sm:w-[35px] sm:h-[35px] text-[#B08233]" />
+        <IconComponent
+          strokeWidth={1.2}
+          className="w-[28px] h-[28px] sm:w-[35px] sm:h-[35px] text-[#B08233]"
+        />
       );
     }
-    return <Icons.HelpCircle className="w-7 h-7 text-[#B58E3D]" />;
+    return (
+      <Icons.HelpCircle strokeWidth={1} className="w-7 h-7 text-[#B58E3D]" />
+    );
   };
 
   return (
     <>
       {/* ── SECTION 1: Badge, Heading & Stats Grid ── */}
-      <section className="w-full bg-[#F7F0E0] py-10 sm:py-14 md:py-20 text-[#012D52]">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      <section className="w-full bg-[#F7F0E0]  text-[#012D52]">
+        <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
           {/* Badge */}
           <span
-            className={`${inter.className} text-[#B58E3D] text-[10px] sm:text-[12px] lg:text-[15px] font-bold tracking-[0.17em] uppercase block mb-3 sm:mb-4`}
+            className={`${inter.className} text-[#87601A] text-[10px] sm:text-[12px] lg:text-[15px] font-semibold tracking-[0.7px] uppercase block mb-3 sm:mb-4`}
           >
             {content.badge}
           </span>
 
           {/* Heading */}
           <h2
-            className={`${fraunces.className} text-[#0F2A4D] text-xl sm:text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] leading-tight font-medium max-w-4xl mb-8 sm:mb-10 md:mb-12`}
+            className={`${fraunces.className} text-[#0F2A4D] text-xl sm:text-2xl md:text-3xl lg:text-[38px] xl:text-[42px]  font-semibold max-w-4xl mb-8 sm:mb-10 `}
           >
             {content.title}
           </h2>
@@ -60,7 +65,7 @@ const CareerOutcome = ({ slug }: Props) => {
                 key={idx}
                 className="bg-[#FDF7EB] border border-[#EADCB9] rounded-[5px] flex flex-col justify-start shadow-[0_4px_20px_rgba(181,142,61,0.05)] min-h-[180px] sm:min-h-[200px] md:min-h-[220px] transition-transform duration-300 hover:-translate-y-1"
               >
-                <div className="relative w-full h-[3px] bg-[#7D662F] top-[3px]" />
+                <div className="relative w-full h-[3px] bg-[#7D662F] " />
                 <div className="p-5 sm:p-6 md:p-8">
                   <div>
                     <div className="mb-4 sm:mb-6">{renderIcon(stat.icon)}</div>
@@ -74,7 +79,9 @@ const CareerOutcome = ({ slug }: Props) => {
                     <div className="text-[#0F2A4D] font-bold text-[13px] sm:text-[14px] md:text-[16px] mb-1">
                       {stat.label}
                     </div>
-                    <div className="text-[#0F2A4D] text-[12px] sm:text-[13px] md:text-[16px] tracking-[0.06em]">
+                    <div
+                      className={`${inter.className} font-light text-[#0F2A4D] text-[12px] sm:text-[13px] md:text-[16px] tracking-[0.06em]`}
+                    >
                       {stat.desc}
                     </div>
                   </div>
@@ -86,10 +93,10 @@ const CareerOutcome = ({ slug }: Props) => {
       </section>
 
       {/* ── SECTION 2: Image + Features List ── */}
-      <section className="w-full bg-[#FDF7EB] py-10 sm:py-14 md:py-20 text-[#012D52]">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      <section className="w-full bg-[#FDF7EB]  text-[#012D52]">
+        <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
           {/* Stack on mobile, side-by-side on lg+ */}
-          <div className="flex flex-col lg:flex-row w-full justify-center items-end gap-8 lg:gap-10 xl:gap-14">
+          <div className="flex flex-col lg:flex-row w-full justify-center items-end gap-4">
             {/* Left Column: Heading + Image */}
             <div className="w-full lg:w-[45%]">
               <h3
@@ -97,7 +104,7 @@ const CareerOutcome = ({ slug }: Props) => {
               >
                 {content.sectionTwo.heading}
               </h3>
-              <div className="relative w-full max-w-full lg:max-w-[500px] aspect-[4/3] sm:aspect-[4/3] lg:aspect-[1/1] rounded-[10px] overflow-hidden shadow-xl shadow-slate-900/10">
+              <div className="relative w-full max-w-full lg:max-w-[500px] min-h-[461px] overflow-hidden shadow-xl shadow-slate-900/10">
                 <Image
                   src={
                     slug === "mba-fintech"
@@ -109,9 +116,9 @@ const CareerOutcome = ({ slug }: Props) => {
                           : ""
                   }
                   alt="MBA Students discussing career outcomes"
-                  fill
-                  className="object-start lg:object-cover"
-                  sizes="(max-width: 1024px) 100vw, 470px"
+                  width={1024}
+                  height={1024}
+                  className="object-cover w-full h-[461px]"
                 />
               </div>
             </div>
@@ -132,7 +139,9 @@ const CareerOutcome = ({ slug }: Props) => {
                     >
                       {feature.title}
                     </h4>
-                    <p className="text-[#012D52] text-[12px] sm:text-[13px] md:text-[15px] lg:text-[16px] leading-relaxed">
+                    <p
+                      className={`${inter.className} font-light text-[#012D52] text-[12px] sm:text-[13px] md:text-[15px] lg:text-[16px] leading-relaxed`}
+                    >
                       {feature.desc}
                     </p>
                   </div>

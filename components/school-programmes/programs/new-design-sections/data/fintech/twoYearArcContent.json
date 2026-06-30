@@ -23,7 +23,7 @@
         "period": "SUMMER",
         "title": "8 to 10 week internship",
         "desc": "A problem brief from a real company. You work under joint guidance of a faculty mentor and an industry mentor.",
-        "icon": "Briefcase",
+        "icon": "BriefcaseBusiness",
         "linkText": "Read More",
         "details": "A problem brief from a real company. You work under joint guidance of a faculty mentor and an industry mentor. Expect weekly reviews leading to a graded portfolio deliverable that the hiring manager's team can use to make actual decisions. From the internship, you return to campus with high self-confidence and a solid understanding of what works in real-world situations."
       },
@@ -31,7 +31,7 @@
         "period": "SEMESTER 3",
         "title": "Sector commitment",
         "desc": "Commit to one or two sectors and job roles.",
-        "icon": "CircleDot",
+        "icon": "CircleStop",
         "linkText": "Read More",
         "details": "Commit to one or two sectors and job roles. Move from analysing problems to recommending solutions for specific organisations within the sector. Specialisation electives co-delivered with EY India."
       },
