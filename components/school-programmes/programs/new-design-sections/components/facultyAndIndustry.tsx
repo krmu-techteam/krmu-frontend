@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { getFacultyAndIndustryContent } from "../lib/getContent";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Poppins } from "next/font/google";
 import * as Icons from "lucide-react";
 import {
   Carousel,
@@ -15,7 +15,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { FacultyCardType } from "../types/contentFacultyAndIndustry";
 import Link from "next/link";
 
-const inter = Inter({
+const inter = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["italic", "normal"],
@@ -44,7 +44,7 @@ const FacultyCard = ({
   onOpenProfile: () => void;
 }) => {
   return (
-    <div className="relative group flex flex-col min-h-[374px] w-full max-w-[268px] mx-auto border border-[#D0C6B1]/30 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer rounded-[5px]">
+    <div className="relative group flex flex-col min-h-[374px] w-full max-w-[280px] mx-auto border border-[#D0C6B1]/30 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer rounded-[5px]">
       {linkedin && (
         <Link href={linkedin}>
           <div className="absolute w-13 h-13 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/8e9127f3a23f0410f6e38ad1af59850e5bb1f1df_9de1bd0ecf.png)] bg-cover bg-center right-1 top-1 z-99 " />
@@ -72,14 +72,14 @@ const FacultyCard = ({
       >
         <div className="absolute h-[7px] top-0 left-0 w-full bg-[linear-gradient(90deg,#192F4B_1.92%,#006B6F_50.96%,#192F4B_100%)]" />
 
-        <div className="flex flex-col items-center flex-1 justify-center">
+        <div className="flex flex-col items-center flex-1 justify-start">
           <h4 className="font-bold text-[14px] text-white tracking-wide mb-1 leading-snug">
             {name}
           </h4>
           <p className="text-[14px] text-[#E7C268] uppercase  tracking-[0.5px] mb-2 ">
             {desg}
           </p>
-          <p className="text-[14px] text-white leading-relaxed  ">{qual}</p>
+          <p className="text-[12px] text-white leading-relaxed  ">{qual}</p>
         </div>
       </div>
     </div>
@@ -104,6 +104,21 @@ const FacultyAndIndustry = ({ slug }: Props) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    if (activeFaculty) {
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none"; // Mobile
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    };
+  }, [activeFaculty]);
+
+  useEffect(() => {
     if (!api) return;
     setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap());
@@ -120,8 +135,8 @@ const FacultyAndIndustry = ({ slug }: Props) => {
   return (
     <section className="w-full bg-[#FDF7EB] text-[#012D52]">
       {/* Top Part: Info & Grid */}
-      <div className="w-full py-16 md:py-20">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      <div className="w-full ">
+        <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
           {/* Subtitle & Title */}
           <div className="mb-6">
             <span
@@ -136,9 +151,9 @@ const FacultyAndIndustry = ({ slug }: Props) => {
             </h2>
           </div>
 
-          <div className="w-full flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+          <div className="w-full flex flex-col lg:flex-row gap-8  items-center">
             {/* Left Column: Image Banner */}
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-[45%]">
               <div className="relative w-full max-w-[496px] aspect-[496/486] overflow-hidden shadow-xl shadow-slate-900/10 mx-auto">
                 <Image
                   src={
@@ -159,7 +174,7 @@ const FacultyAndIndustry = ({ slug }: Props) => {
             </div>
 
             {/* Right Column: Three Sub-sections */}
-            <div className="flex flex-col gap-6 pr-0 lg:pr-8 w-full lg:w-1/2 max-w-[580px]">
+            <div className="flex flex-col gap-6 pr-0 lg:pr-8 w-full lg:w-[55%] ">
               {content.sections.map((sect, idx) => {
                 const isOpen = activeSection === idx;
                 return (
@@ -249,8 +264,8 @@ const FacultyAndIndustry = ({ slug }: Props) => {
 
       {/* Bottom Part: Faculty slider section */}
       {cards.length > 0 && (
-        <div className="w-full bg-[#F7F0E0] py-16">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        <div className="w-full bg-[#F7F0E0]">
+          <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
             <h3
               className={`${fraunces.className} text-[28px] sm:text-[38px] font-bold text-[#0F2A4D] mb-8`}
             >
@@ -275,7 +290,7 @@ const FacultyAndIndustry = ({ slug }: Props) => {
                 {cards.map((card, idx) => (
                   <CarouselItem
                     key={idx}
-                    className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pl-6"
+                    className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 "
                   >
                     <FacultyCard
                       name={card.name}
@@ -312,7 +327,7 @@ const FacultyAndIndustry = ({ slug }: Props) => {
       {/* Faculty Profile Modal Overlay */}
 
       {activeFaculty && (
-        <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 sm:p-6">
+        <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 sm:p-6 ">
           {/* Overlay */}
           <div
             onClick={() => setActiveFaculty(null)}
@@ -329,27 +344,23 @@ const FacultyAndIndustry = ({ slug }: Props) => {
               <Icons.X size={22} />
             </button>
 
-            <div className="flex flex-col lg:grid lg:grid-cols-[320px_1fr] overflow-y-auto lg:overflow-hidden max-h-[90vh] lg:max-h-[85vh]">
+            <div className="flex flex-col  overflow-y-auto lg:overflow-hidden max-h-[90vh] lg:max-h-[85vh]">
               {/* Left Side */}
-              <div className="bg-gradient-to-b from-[#F6E8C9] to-[#FDF7EB] p-6 flex justify-center items-start flex-shrink-0">
-                <div className="relative w-[220px] h-[220px] lg:w-full lg:h-auto lg:max-w-[260px] aspect-square lg:aspect-auto overflow-hidden rounded-2xl shadow-xl">
+              <div className="bg-gradient-to-b from-[#F6E8C9] to-[#FDF7EB] p-6 flex flex-col sm:flex-row items-center sm:items-start  ">
+                <div className="relative w-[60%] sm:w-[40%] h-[220px] lg:w-full lg:h-auto lg:max-w-[260px] bg-white aspect-square lg:aspect-auto overflow-hidden rounded-2xl shadow-xl">
                   <Image
                     src={activeFaculty.image}
                     alt={activeFaculty.name}
                     width={1024}
                     height={1024}
-                    className="object-cover lg:object-contain object-top w-full h-full"
+                    className="object-cover  w-full h-full"
                     // sizes="(max-width: 1024px) 220px, 260px"
                   />
                 </div>
-              </div>
 
-              {/* Right Side */}
-              <div className="flex flex-col flex-1 lg:max-h-[85vh] lg:overflow-hidden">
-                {/* Header */}
-                <div className="border-b border-[#BCB093]/30 px-8 pt-8 pb-6">
+                <div className=" px-0 sm:px-8 pt-8 pb-0 sm:pb-6">
                   <h2
-                    className={`${fraunces.className} flex items-center gap-2 text-3xl lg:text-4xl font-semibold text-[#012D52] leading-tight`}
+                    className={`${fraunces.className} flex justify-center sm:justify-start items-center gap-2 text-3xl lg:text-4xl font-semibold text-[#012D52] leading-tight`}
                   >
                     {activeFaculty.name}
 
@@ -362,21 +373,26 @@ const FacultyAndIndustry = ({ slug }: Props) => {
 
                   <div className="mt-3 flex flex-col items-start gap-3">
                     <span
-                      className={`${inter.className} rounded-full bg-[#A17200]/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-[#A17200]`}
+                      className={`${inter.className} rounded-full bg-[#A17200]/10 mx-4 sm:mx-0 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-[#A17200]`}
                     >
                       {activeFaculty.designation}
                     </span>
 
                     <span
-                      className={`${inter.className} text-sm px-4 font-medium text-[#012D52]/75`}
+                      className={`${inter.className} text-sm px-4 sm:px-0 font-medium text-[#012D52]/75`}
                     >
                       {activeFaculty.qualification}
                     </span>
                   </div>
                 </div>
+              </div>
+
+              {/* Right Side */}
+              <div className="flex flex-col flex-1 lg:max-h-[85vh] overflow-hidden">
+                {/* Header */}
 
                 {/* Scrollable Content */}
-                <div className="flex-1 overflow-y-visible lg:overflow-y-auto px-8 py-7">
+                <div className="flex-1 overflow-y-auto px-8  pt-0 sm:py-7">
                   <div
                     className={`${inter.className} space-y-5 text-[15px] leading-8 text-[#2F3A45]`}
                   >

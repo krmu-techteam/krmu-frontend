@@ -2,10 +2,10 @@
 
 import React, { useState } from "react";
 import { getTwoYearArcContent } from "../lib/getContent";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Poppins } from "next/font/google";
 import * as Icons from "lucide-react";
 
-const inter = Inter({
+const inter = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["italic", "normal"],
@@ -27,21 +27,21 @@ const TwoYearArc = () => {
     const IconComponent = (Icons as any)[iconName];
     if (IconComponent) {
       return (
-        <IconComponent className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] lg:w-[24px] lg:h-[24px] text-[#A17200] group-hover:text-[#D4C49E] transition-colors duration-300" />
+        <IconComponent className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] lg:w-[24px] lg:h-[24px] text-[#B08233] group-hover:text-[#D4C49E] transition-colors duration-300" />
       );
     }
     return (
-      <Icons.HelpCircle className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] lg:w-[24px] lg:h-[24px] text-[#A17200] group-hover:text-[#D4C49E] transition-colors duration-300" />
+      <Icons.HelpCircle className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] lg:w-[24px] lg:h-[24px] text-[#B08233] group-hover:text-[#D4C49E] transition-colors duration-300" />
     );
   };
 
   return (
-    <section className="w-full bg-[#FDF7EB] py-10 sm:py-14 md:py-20 lg:py-24 text-[#012D52]">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+    <section className="w-full bg-[#FDF7EB]  text-[#012D52]">
+      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
         {/* Top Header */}
         <div className="mb-6 sm:mb-8">
           <span
-            className={`${inter.className} text-[#87601A] text-[10px] sm:text-[12px] lg:text-[15px] font-semibold tracking-[0.7px] uppercase block mb-2`}
+            className={`${inter.className} text-[#A17200] text-[10px] sm:text-[12px] lg:text-[15px] font-semibold tracking-[0.7px] uppercase block mb-2`}
           >
             {content.badge}
           </span>
@@ -68,7 +68,7 @@ const TwoYearArc = () => {
               >
                 {/* Top Content — smooth height transition */}
                 <div
-                  className={`mb-4 overflow-hidden transition-all duration-500 ease-in-out flex flex-col justify-start ${
+                  className={`mb-2 overflow-hidden transition-all duration-500 ease-in-out flex flex-col justify-start ${
                     isOpen
                       ? "h-auto max-h-[600px]"
                       : "h-[140px] sm:h-[150px] lg:h-[210px] xl:h-[220px] max-h-[200px] sm:max-h-[200px] lg:max-h-[270px] xl:max-h-[220px]"
@@ -110,7 +110,7 @@ const TwoYearArc = () => {
                         setActiveSemester(isOpen ? null : idx);
                       }
                     }}
-                    className="inline-flex items-center gap-1.5 font-semibold text-[12px] sm:text-[13px] lg:text-[14px] tracking-[0.7px] underline underline-offset-2 decoration-1 text-[#A17200] group-hover:text-white transition-colors duration-300 cursor-pointer bg-transparent border-0 p-0 text-left w-fit"
+                    className="inline-flex items-center gap-1.5 font-semibold text-[12px] sm:text-[13px] lg:text-[14px] tracking-[0.7px] underline underline-offset-2 decoration-1 text-[#AA8324]  transition-colors duration-300 cursor-pointer bg-transparent border-0 p-0 text-left w-fit"
                   >
                     <Icons.Play
                       size={7}

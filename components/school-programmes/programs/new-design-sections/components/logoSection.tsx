@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { getLogoContent } from "../lib/getContent";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Poppins } from "next/font/google";
 import Link from "next/link";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   style: ["italic", "normal"],
@@ -20,11 +20,11 @@ const LogoSection = () => {
   const logo = data.logo;
 
   return (
-    <section className="w-full py-12 px-4 sm:px-8 md:px-12 lg:px-16 bg-[#FDF7EB]">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4">
+    <section className="relative w-full bg-[#FDF7EB]">
+      <div className="max-w-[1280px] mx-auto py-12 px-4 sm:px-8 md:px-12 lg:px-16 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4 ">
         {/* Label */}
         <h2
-          className={`${inter.className} text-center sm:text-left text-[12px] sm:text-[13px] uppercase tracking-wider leading-snug`}
+          className={`${poppins.className} text-[#0F2A4D] text-center sm:text-left text-[12px] sm:text-[13px] uppercase tracking-wider leading-snug`}
         >
           Specialisations and Curriculum <br />
           Delivered with
@@ -41,7 +41,7 @@ const LogoSection = () => {
               className="mb-2 grayscale"
             />
             <h2
-              className={`${inter.className} text-center text-[11px] sm:text-[12px] font-medium`}
+              className={`${poppins.className} text-[#0F2A4D] text-center text-[11px] sm:text-[12px] `}
             >
               Analytics track
             </h2>
@@ -59,7 +59,7 @@ const LogoSection = () => {
               className="mb-2 grayscale"
             />
             <h2
-              className={`${inter.className} text-center font-medium text-[11px] sm:text-[12px]`}
+              className={`${poppins.className} text-[#0F2A4D] text-center  text-[11px] sm:text-[12px]`}
             >
               Fintech track
             </h2>
@@ -77,7 +77,7 @@ const LogoSection = () => {
               className="mb-2 grayscale"
             />
             <h2
-              className={`${inter.className} text-center font-medium text-[11px] sm:text-[12px]`}
+              className={`${poppins.className} text-[#0F2A4D] text-center  text-[11px] sm:text-[12px]`}
             >
               Digital Marketing track
             </h2>
@@ -86,7 +86,7 @@ const LogoSection = () => {
 
         {/* Harvard Business Impact */}
         <h2
-          className={`${fraunces.className} text-center text-[18px] sm:text-[21px] font-bold`}
+          className={`${fraunces.className} text-[#0F2A4D] text-center text-[18px] sm:text-[21px] font-bold`}
         >
           Harvard Business Impact
         </h2>

@@ -5,7 +5,7 @@
     "footnote": "The programme does not promise a job. It promises the work that will earn you one.",
     "items": [
       {
-        "icon": "Search",
+        "icon": "SearchCheck",
         "desc": "Business diagnoses of three real companies"
       },
       {
@@ -13,11 +13,11 @@
         "desc": "An internship deliverable signed off by a real firm"
       },
       {
-        "icon": "FileText",
+        "icon": "File",
         "desc": "A sector report on your chosen industry"
       },
       {
-        "icon": "CircleDot",
+        "icon": "CircleStop",
         "desc": "A capstone a host organisation can act on"
       },
       {
