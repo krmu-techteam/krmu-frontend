@@ -37,7 +37,7 @@ const Stats = () => {
             width={580}
             height={580}
             alt=""
-            className="absolute bottom-0 object-contain"
+            className="absolute bottom-0 object-contain z-40"
           />
         </div>
         <div className="w-full sm:w-4/12 xl:w-3/12 2xl:w-3/12 text-white pb-5 sm:py-10">

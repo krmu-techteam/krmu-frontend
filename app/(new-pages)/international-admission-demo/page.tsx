@@ -10,24 +10,21 @@ import SchoolProgrammesDiscipline from "./components/SchoolProgrammesDiscipline"
 import ProgrammeTabs from "./components/ProgrammeTabs";
 import ScholarshipSection from "./components/ScholarshipSection";
 import WordClassFacility from "./components/WordClassFacility";
-import { beginHubData, lifeInternationalAdmissionData } from "./constant";
+import { beginHubData } from "./constant";
 import FAQSection from "./components/FAQSection";
 import SingleImage from "./components/SingleImage";
-import CTASection from "./components/CTASection";
 import HeroSection from "./components/HeroSection";
 import Stats from "./components/Stats";
 import BeginYour from "./components/BeginYour";
 
 const page = () => {
-  const lifeData = lifeInternationalAdmissionData;
   const beginData = beginHubData;
   return (
     <>
-      <HeroSection />
+      <HeroSection formId="6798d0b6e4d6bb9947d6aacc2d86256c" />
       <Stats />
-      <RankingRecognition /> 
-      {/* <SuccessNetwork /> */}
-
+      <RankingRecognition />
+      <SuccessNetwork />
       <WhyStudy />
       <WhyChoose />
       <PatentCampusResearch />
@@ -40,9 +37,8 @@ const page = () => {
       <WordClassFacility />
       <FAQSection />
       <SingleImage />
-      <BeginYour data={beginData} formId={`05a47f33fc1a48e7f6b357b1aaa542c7`} />
+      <BeginYour data={beginData} formId={`6798d0b6e4d6bb9947d6aacc2d86256c`} />
       {/* <CTASection /> */}
-      
     </>
   );
 };

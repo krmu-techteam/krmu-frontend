@@ -94,11 +94,11 @@ export const internationalAdmissionHighlights = [
     title: `<strong>Global Collaborations</strong> <br  /> & International <br /> Exposure`,
   },
 ];
-
 export const globalLearningData = {
   title: "Global Learning Experience",
   subtitle: "International Collaborations",
-  logos: [
+
+  topLogos: [
     {
       name: "University of East Anglia",
       src: "/international-admission/logos/uea.png",
@@ -129,6 +129,9 @@ export const globalLearningData = {
       width: 135,
       height: 34,
     },
+  ],
+
+  bottomLogos: [
     {
       name: "Confucius Institute",
       src: "/international-admission/logos/confucius.png",
@@ -167,7 +170,7 @@ export const internationalAdmissionSchools = [
         duration: "4 Years",
       },
       {
-        title: "B.Tech. Computer Science and Engineering",
+        title: "B.Tech. Computer Science and Engineering (Lateral)",
         duration: "3 Years",
         lateral: true,
       },
@@ -178,9 +181,146 @@ export const internationalAdmissionSchools = [
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (AI & ML) with academic support of IBM & powered by Microsoft Certifications",
+          "B.Tech. Computer Science and Engineering (AI & ML) with academic support of IBM & powered by Microsoft Certifications (Lateral)",
         duration: "3 Years",
         lateral: true,
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (Full Stack Development) with academic support of ImaginXP",
+        duration: "4 Years",
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (Full Stack Development) with academic support of ImaginXP (Lateral)",
+        duration: "3 Years",
+        lateral: true,
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (UX/UI) with academic support of ImaginXP",
+        duration: "4 Years",
+        lateral: false,
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (UX/UI) with academic support of ImaginXP (Lateral)",
+        duration: "3 Years",
+        lateral: true,
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (UX/UI) with academic support of ImaginXP (Lateral)",
+        duration: "3 Years",
+        lateral: true,
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (Cyber Security) with academic support of EC-Council and IBM",
+        duration: "4 Years",
+        lateral: false,
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (Cyber Security) with academic support of EC-Council and IBM (Lateral)",
+        duration: "3 Years",
+        lateral: true,
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (Data Science) with academic support of IBM",
+        duration: "4 Years",
+        lateral: false,
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (Data Science) with academic support of IBM (Lateral)",
+        duration: "3 Years",
+        lateral: true,
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (Robotics and AI) with academic support of IBM & powered by Microsoft Certifications",
+        duration: "4 Years",
+        lateral: false,
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (Robotics & AI) with academic support of IBM & powered by Microsoft Certifications (Lateral)",
+        duration: "3 Years",
+        lateral: true,
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (Cloud Computing) powered by Microsoft Certifications**",
+        duration: "4 Years",
+        lateral: false,
+      },
+      {
+        title:
+          "B.Tech. Computer Science and Engineering (Semiconductor Design)**",
+        duration: "4 Years",
+        lateral: false,
+      },
+      {
+        title:
+          "BCA (AI & Data Science) with academic support of IBM & powered by Microsoft Certifications",
+        duration: "3 Years",
+        lateral: false,
+      },
+      {
+        title:
+          "BCA (Hons. / Hons. with Research) AI & Data Science with academic support of IBM & powered by Microsoft Certifications",
+        duration: "4 Years",
+        lateral: false,
+      },
+      {
+        title:
+          "BCA (Hons. / Hons. with Research) AI & Data Science with academic support of IBM & powered by Microsoft Certifications",
+        duration: "4 Years",
+        lateral: false,
+      },
+      {
+        title: "BCA (Cyber Security) with Academic support of EC-Council",
+        duration: "3 Years",
+        lateral: false,
+      },
+      {
+        title:
+          "BCA (Hons./ Hons. with Research) Cyber Security with Academic support of EC-Council",
+        duration: "4 Years",
+        lateral: false,
+      },
+      {
+        title: "B.Sc. (Hons.) Computer Science with academic support of IBM",
+        duration: "3 Years",
+        lateral: false,
+      },
+      {
+        title: "B.Sc. (Hons.) Cyber Security",
+        duration: "3 Years",
+        lateral: false,
+      },
+      {
+        title: "B.Sc. (Hons.) Data Science",
+        duration: "3 Years",
+        lateral: false,
+      },
+      {
+        title: "M.Tech. Computer Science and Engineering",
+        duration: "2 Years",
+        lateral: false,
+      },
+      {
+        title: "MCA",
+        duration: "2 Years",
+        lateral: false,
+      },
+      {
+        title:
+          "MCA (AI & ML) with academic support of IBM and powered by Microsoft Certifications",
+        duration: "2 Years",
+        lateral: false,
       },
     ],
   },
@@ -190,11 +330,100 @@ export const internationalAdmissionSchools = [
     name: "School of Management and Commerce",
     programmes: [
       {
-        title: "BBA",
+        title: "BBA (HR/Mktng/Fin/IB/Travel & Tourism)",
         duration: "3 Years",
       },
       {
-        title: "MBA",
+        title:
+          "BBA (Hons. / Hons. with Research) (HR/Mktng/Fin/IB/Travel & Tourism)",
+        duration: "4 Years",
+      },
+      {
+        title:
+          "BBA (Business Intelligence & Analytics) with academic support of Ernst & Young (EY)",
+        duration: "3 Years",
+      },
+      {
+        title:
+          "BBA (Hons. / Hons. with Research) (Business Intelligence & Analytics) with academic support of Ernst & Young (EY)",
+        duration: "4 Years",
+      },
+      {
+        title:
+          "BBA (Entrepreneurship) with academic support of GCEC Global Foundation",
+        duration: "3 Years",
+      },
+      {
+        title:
+          "BBA (Hons. / Hons. with Research) (Entrepreneurship) with academic support of GCEC Global Foundation",
+        duration: "4 Years",
+      },
+      {
+        title:
+          "BBA (International Accounting and Finance) (ACCA - UK) with academic support of Grant Thornton",
+        duration: "3 Years",
+      },
+      {
+        title:
+          "BBA (Hons. / Hons. with Research) (International Accounting and Finance) (ACCA - UK) with academic support of Grant Thornton",
+        duration: "4 Years",
+      },
+      {
+        title:
+          "BBA (Logistics and Supply Chain Management) with academic support of Safexpress",
+        duration: "3 Years",
+      },
+      {
+        title:
+          "BBA (Hons. / Hons. with Research) (Logistics and Supply Chain Management) with academic support of Safexpress",
+        duration: "4 Years",
+      },
+      {
+        title: "BBA (Digital Marketing) with academic support of IIDE",
+        duration: "3 Years",
+      },
+      {
+        title:
+          "BBA (Hons. / Hons. with Research) (Digital Marketing) with academic support of IIDE",
+        duration: "4 Years",
+      },
+      {
+        title: "B.Com. (Hons.)",
+        duration: "3 Years",
+      },
+      {
+        title: "B.Com. (Hons. / Hons. With Research)",
+        duration: "4 Years",
+      },
+      {
+        title:
+          "B.Com. (Hons.) (International Accounting and Finance) (ACCA - UK) With academic support of Grant Thornton",
+        duration: "3 Years",
+      },
+      {
+        title:
+          "B.Com. (Hons. / Hons. with Research) (International Accounting and Finance) (ACCA - UK) With academic support of Grant Thornton",
+        duration: "4 Years",
+      },
+      {
+        title: "B.Com. Programme",
+        duration: "3 Years",
+      },
+      {
+        title:
+          "Integrated BBA + MBA with academic support of IBM (4 yrs + 1 yr Industry Internship)",
+        duration: "4+1 Years",
+      },
+      {
+        title: "MBA with academic support of IBM",
+        duration: "4+1 Years",
+      },
+      {
+        title: "MBA (Digital Marketing) with academic support of IIDE",
+        duration: "2 Years",
+      },
+      {
+        title: "MBA (Fintech) with academic support of Ernst & Young (EY)",
         duration: "2 Years",
       },
     ],
@@ -202,62 +431,266 @@ export const internationalAdmissionSchools = [
 
   {
     id: 3,
-    name: "School of Basic & Applied Sciences",
-    programmes: [],
+    name: "B.Sc. (Hons. / Hons. with Research) Physics",
+    programmes: [
+      {
+        title: "B.Sc. (Hons. / Hons. with Research) Physics",
+        duration: "4 Years",
+      },
+      {
+        title: "B.Sc. (Hons. / Hons. with Research) Chemistry",
+        duration: "4 Years",
+      },
+      {
+        title: "B.Sc. (Hons. / Hons. with Research) Maths",
+        duration: "4 Years",
+      },
+      {
+        title: "B.Sc. (Hons.) Forensic Science",
+        duration: "3 Years",
+      },
+      {
+        title: "B.Sc. (Hons. / Hons. with Research) Forensic Science",
+        duration: "4 Years",
+      },
+      {
+        title: "Integrated/ Dual Degree B.Sc. - M.Sc. (Forensic Science)",
+        duration: "5 Years",
+      },
+      {
+        title: "M.Sc. (Hons.) (Part Time)",
+        duration: "2 Years",
+      },
+      {
+        title: "M.Sc. Forensic Science",
+        duration: "2 Years",
+      },
+    ],
   },
 
   {
     id: 4,
     name: "School of Medical & Allied Sciences",
-    programmes: [],
+    programmes: [
+      {
+        title: "B.Pharm.",
+        duration: "4 Years",
+      },
+      {
+        title: "B.Pharm. (Lateral)",
+        duration: "3 Years",
+        lateral: true,
+      },
+      {
+        title: "D.Pharm.",
+        duration: "2 Years",
+      },
+      {
+        title: "Master of Pharmacy (M.Pharm.) - Pharmaceutics",
+        duration: "2 Years",
+      },
+      {
+        title: "Master of Pharmacy (M.Pharm.) - Pharmacology",
+        duration: "2 Years",
+      },
+    ],
   },
 
   {
     id: 5,
     name: "School of Physiotherapy and Rehabilitation Sciences",
-    programmes: [],
+    programmes: [
+      {
+        title: "Bachelor of Physiotherapy (BPT)",
+        duration: "5 Years",
+      },
+    ],
   },
 
   {
     id: 6,
-    name: "School of Emerging Media & Creator Economy",
-    programmes: [],
+    name: "School of Architecture & Design",
+    programmes: [
+      {
+        title: "Bachelor of Architecture (B.Arch)",
+        duration: "5 Years",
+      },
+      {
+        title: "Bachelor of Fine Arts (BFA)",
+        duration: "4 Years",
+      },
+      {
+        title:
+          "Bachelor of Design (B.Des.) (Hons. / Hons. with Research) Fashion Design",
+        duration: "4 Years",
+      },
+      {
+        title:
+          "Bachelor of Design (B.Des.) (Hons. / Hons. with Research) Interior Design",
+        duration: "4 Years",
+      },
+      {
+        title:
+          "Bachelor of Design (B.Des.) (Hons. / Hons. with Research) Game Design & Animation",
+        duration: "4 Years",
+      },
+      {
+        title:
+          "Bachelor of Design (B.Des.) (Hons. / Hons. with Research) (UX/UI & Interaction Design)",
+        duration: "4 Years",
+      },
+      {
+        title: "M. Design (Interior Design)**",
+        duration: "2 Years",
+      },
+    ],
   },
 
   {
     id: 7,
-    name: "School of Architecture & Design",
-    programmes: [],
+    name: "School of Legal Studies",
+    programmes: [
+      {
+        title: "BBA LL.B. (Hons.)",
+        duration: "5 Years",
+      },
+      {
+        title: "B.A. LL.B. (Hons.)",
+        duration: "5 Years",
+      },
+      {
+        title: "LL.B. (Hons.)",
+        duration: "3 Years",
+      },
+      {
+        title: "LL.M.",
+        duration: "1 Years",
+      },
+    ],
   },
 
   {
     id: 8,
-    name: "School of Liberal Arts",
-    programmes: [],
+    name: "School of Emerging Media & Creator Economy",
+    programmes: [
+      {
+        title: "B.A. (Journalism And Mass Communication)",
+        duration: "3 Years",
+      },
+      {
+        title:
+          "B.A. (Hons. / Hons. with Research) (Journalism and Mass Communication)",
+        duration: "4 Years",
+      },
+      {
+        title: "M.A. (Journalism and Mass Communication)",
+        duration: "2 Years",
+      },
+    ],
   },
 
   {
     id: 9,
-    name: "School of Agricultural Sciences",
-    programmes: [],
+    name: "School of Liberal Arts",
+    programmes: [
+      {
+        title: "B.A. (Hons.) English",
+        duration: "3 Years",
+      },
+      {
+        title: "B.A. (Hons. / Hons. with Research) English",
+        duration: "4 Years",
+      },
+      {
+        title: "B.A. (Hons.) Economics",
+        duration: "3 Years",
+      },
+      {
+        title: "B.A. (Hons. / Hons. with Research) Economics",
+        duration: "4 Years",
+      },
+      {
+        title: "B.A. (Hons.) Psychology",
+        duration: "3 Years",
+      },
+      {
+        title: "B.A. (Hons. / Hons. with Research) Psychology",
+        duration: "4 Years",
+      },
+      {
+        title: "B.A. (Hons.) Political Science",
+        duration: "3 Years",
+      },
+      {
+        title: "B.A. (Hons. / Hons. with Research) Political Science",
+        duration: "4 Years",
+      },
+      {
+        title: "B.A. (Hons. / Hons. with Research) (Liberal Arts)",
+        duration: "4 Years",
+      },
+      {
+        title: "M.A. English",
+        duration: "2 Years",
+      },
+      {
+        title: "M.A. Economics",
+        duration: "2 Years",
+      },
+      {
+        title: "M.A. Applied Psychology",
+        duration: "2 Years",
+      },
+      {
+        title: "M.A. Political Science",
+        duration: "2 Years",
+      },
+      {
+        title: "B.A Program",
+        duration: "3 Years",
+      },
+    ],
   },
 
   {
     id: 10,
-    name: "Ph.D",
-    programmes: [],
+    name: "School of Education",
+    programmes: [
+      {
+        title: "Bachelor of Elementary Education (B.El.Ed.)",
+        duration: "4 Years",
+      },
+      {
+        title: "Bachelor of Education (B.Ed.)",
+        duration: "2 Years",
+      },
+      {
+        title: "M.A. Education",
+        duration: "2 Years",
+      },
+    ],
   },
 
   {
     id: 11,
-    name: "School of Legal Studies",
-    programmes: [],
+    name: "School of Agricultural Sciences",
+    programmes: [
+      {
+        title: "B.Sc. (Hons.) Agriculture",
+        duration: "4 Years",
+      },
+    ],
   },
 
   {
     id: 12,
-    name: "School of Education",
-    programmes: [],
+    name: "Ph.D",
+    programmes: [
+      {
+        title: "Ph.D",
+        duration: "Min. 3 Years",
+      },
+    ],
   },
 ];
 

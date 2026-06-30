@@ -62,6 +62,10 @@
   .middle-container .heading-4 {
     font-size: 60px;
   }
+  .outer-right-container,
+  .form-white-container {
+    height: 650px;
+  }
 }
 @media (min-width: 1320px) and (max-width: 1440px) {
   .middle-container {
@@ -71,7 +75,7 @@
   }
   .outer-right-container,
   .form-white-container {
-    height: 600px;
+    height: 800px;
   }
   /* .left-container {
     flex-direction: column;
@@ -87,7 +91,7 @@
 @media (min-width: 1281px) and (max-width: 1320px) {
   .outer-right-container,
   .form-white-container {
-    height: 520px;
+    height: 650px;
   }
   .main-heading {
     font-size: 72px;
@@ -115,4 +119,46 @@
 .intNextBtn svg {
   width: 25px !important;
   height: 25px !important;
+}
+.marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.reverse .marquee-track {
+  animation-direction: reverse;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+.npf_wgts iframe {
+  box-shadow: none !important;
+}
+
+.npf_wgts iframe {
+  border-radius: 14px;
+  width: 100% !important;
+  float: right;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.heroBannerForm__form{
+  height: 700px;
 }

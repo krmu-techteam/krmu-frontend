@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { BeginHubSection } from "../constant";
 import NoPaperFormsWidget from "@/app/(landing-page)/admission/CommonComponent2026/NoPaperFormsWidget";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 type Props = {
   data: BeginHubSection;
@@ -75,12 +77,89 @@ const BeginYour = ({ data, formId }: Props) => {
                     </h3>
                   </div>
 
-                  <NoPaperFormsWidget widgetId={formId} height="480px" />
+                  <NoPaperFormsWidget widgetId={formId} height="600px" />
                 </div>
               )}
             </div>
           </div>
         </div>
+      </div>
+      <div className="max-w-[1400px] mx-auto border-2 border-[#263e51] p-10 text-center text-white rounded-3xl">
+        <h6 className="max-w-[860px] mx-auto mb-5 text-[42px] font-semibold font-poppins">
+          Apply for International Admission at K.R. Mangalam University Today
+        </h6>
+        <p className="mb-7 font-poppins text-2xl">
+          Industry-Aligned Courses | Top Recruiters | Global Exposure
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center gap-4 items-center mb-10">
+          <button className="text-white bg-[linear-gradient(135deg,#e31e24_0%,#c41920_100%)] shadow-[0_4px_14px_0_rgba(227,30,36,0.35)] text-lg min-h-14 inline-flex items-center justify-center gap-2 font-semibold cursor-pointer rounded-xl   transition-all duration-150 ease-out py-4 px-6 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_0_rgba(227,30,36,0.45)] hover:bg-[linear-gradient(135deg,#ff4d52_0%,#e31e24_100%)]">
+            Enrol Now. Limited Seats Available! <ArrowUpRight color="#fff" />
+          </button>
+          <Link
+            href="tel:+919311411717"
+            className="text-white bg-[#0060aa]  text-lg min-h-14 inline-flex items-center justify-center gap-2 font-semibold cursor-pointer rounded-xl   transistion-all duration-150 ease-out py-4 px-6 hover:-translate-y-0.5"
+          >
+            {" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-phone-call-icon lucide-phone-call"
+            >
+              <path d="M13 2a9 9 0 0 1 9 9" />
+              <path d="M13 6a5 5 0 0 1 5 5" />
+              <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+            </svg>{" "}
+            +91 9311411717
+          </Link>
+        </div>
+        <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex items-center gap-2 text-sm text-white">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              color="#f5a623"
+            >
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
+            </svg>
+            <span>UGC Recognised</span>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-white">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              color="#f5a623"
+            >
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <span>NAAC A Accredited</span>
+          </div>
+          {/* <div className="flex items-center gap-2 text-sm text-black">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                color="#f5a623"
+              >
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path>
+              </svg>
+              <span>BCI Approved</span>
+            </div> */}
+        </div>
+      </div>
+      <div className="py-5 text-white text-center">
+        <p>&copy; Copyright K.R. Mangalam University. All Rights Reserved.</p>
       </div>
     </section>
   );
