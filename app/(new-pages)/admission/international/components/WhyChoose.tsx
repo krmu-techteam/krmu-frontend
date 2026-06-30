@@ -20,6 +20,7 @@ const WhyChoose = () => {
         sm:-mt-20
         lg:-mt-40
       "
+      id="why-choose"
     >
       {/* Girl Image */}
       <Image

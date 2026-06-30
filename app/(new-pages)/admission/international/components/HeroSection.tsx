@@ -6,7 +6,7 @@ type Props = {
 const HeroSection = ({ formId }: Props) => {
   return (
     <section className="bg-[#edece4] relative px-5 2xl:px-0 py-10 xl:py-0">
-      <div className="bg-white absolute right-0 top-0 max-w-[600px] px-10 w-full h-[850px] form-white-container hidden xl:flex items-center justify-center">
+      <div className="bg-white absolute right-0 top-0 max-w-150 w-full h-212.5 form-white-container hidden xl:flex items-center justify-center"  id="apply-section">
         <div className="relative z-30 w-full">
           <div className="text-center">
             <h3 className="text-center font-poppins font-bold text-2xl">

@@ -3,7 +3,7 @@ import Image from "next/image";
 const Stats = () => {
   return (
     <section className="bg-[linear-gradient(93.9deg,#001732_60.99%,#004698_100%)] pt-10 sm:pt-0 pb-52 px-5">
-      <div className="max-w-[1664px] mx-auto flex flex-col sm:flex-row gap-5">
+      <div className="max-w-35.6 mx-auto flex flex-col sm:flex-row gap-5">
         <div className="w-full sm:w-4/12 xl:w-3/12 2xl:w-2/12 text-white sm:pt-10 xl:pr-10">
           <h2 className="text-3xl md:text-5xl lg:text-7xl 2xl:text-[91px] leading-none font-semibold font-fraunces">
             800<span aria-hidden="true">+</span>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
+import ScrollButton from "@/app/(landing-page)/admission/CommonComponent2026/ScrollButton";
 const menus = [
   {
     name: "Why Choose?",
@@ -53,10 +53,13 @@ export default function InternationalHeader() {
                 {item.name}
               </Link>
             ))}
-
-            <button className="rounded-md bg-[#E31B23] px-6 py-2 text-sm font-semibold text-white transition hover:bg-[#c6151d]">
+            <ScrollButton
+              targetId="apply-section"
+              highlightClass="flash-border"
+              btnClass="rounded-md bg-[#E31B23] px-6 py-2 text-sm font-semibold text-white transition hover:bg-[#c6151d]"
+            >
               Apply Now
-            </button>
+            </ScrollButton>
           </nav>
 
           {/* Mobile Button */}
@@ -71,9 +74,8 @@ export default function InternationalHeader() {
 
       {/* Mobile Menu */}
       <div
-        className={`overflow-hidden bg-[#071C38] transition-all duration-300 lg:hidden ${
-          open ? "max-h-96" : "max-h-0"
-        }`}
+        className={`overflow-hidden bg-[#071C38] transition-all duration-300 lg:hidden ${open ? "max-h-96" : "max-h-0"
+          }`}
       >
         <div className="space-y-2 px-5 py-4">
           {menus.map((item) => (
