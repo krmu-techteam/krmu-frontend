@@ -115,6 +115,8 @@ const FacultyAndIndustry = ({ slug }: Props) => {
 
   const cards = content.faculties || [];
 
+  console.log(activeFaculty);
+
   return (
     <section className="w-full bg-[#FDF7EB] text-[#012D52]">
       {/* Top Part: Info & Grid */}
@@ -308,6 +310,7 @@ const FacultyAndIndustry = ({ slug }: Props) => {
       )}
 
       {/* Faculty Profile Modal Overlay */}
+
       {activeFaculty && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 sm:p-6">
           {/* Overlay */}
@@ -333,9 +336,10 @@ const FacultyAndIndustry = ({ slug }: Props) => {
                   <Image
                     src={activeFaculty.image}
                     alt={activeFaculty.name}
-                    fill
-                    className="object-cover lg:object-contain object-top"
-                    sizes="(max-width: 1024px) 220px, 260px"
+                    width={1024}
+                    height={1024}
+                    className="object-cover lg:object-contain object-top w-full h-full"
+                    // sizes="(max-width: 1024px) 220px, 260px"
                   />
                 </div>
               </div>
@@ -350,9 +354,9 @@ const FacultyAndIndustry = ({ slug }: Props) => {
                     {activeFaculty.name}
 
                     {activeFaculty.linkedin && (
-                      <a href={activeFaculty.linkedin}>
+                      <Link href={activeFaculty.linkedin}>
                         <div className="w-15 h-15 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/8e9127f3a23f0410f6e38ad1af59850e5bb1f1df_9de1bd0ecf.png)] bg-cover bg-center z-99 " />
-                      </a>
+                      </Link>
                     )}
                   </h2>
 
