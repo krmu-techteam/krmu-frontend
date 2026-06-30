@@ -19,6 +19,7 @@ import NoPaperForm from "@/lib/constants/NoPaperForm";
 import YoutubePopup from "./YoutubePopup";
 import Image from "next/image";
 import { STRAPI_URL } from "@/app/constant";
+import { div } from "framer-motion/client";
 
 type Props = {
   elgibilities: EligibilityItem[];
@@ -44,8 +45,7 @@ const Eligibility = ({
   const [expanded, setExpanded] = useState(false);
   // const btnRef = useRef<HTMLButtonElement>(null);
 
-  // limit characters for h2
-  const maxChars = 50;
+  const maxChars = 74; // limit characters for h2
   const longTitle = elgibilities[2]?.title || "";
   const isLong = longTitle.length > maxChars;
   const displayTitle = expanded ? longTitle : longTitle.slice(0, maxChars);
@@ -65,6 +65,21 @@ const Eligibility = ({
   const isFormAvailable = allowedFormSlugs.includes(slug);
   const iframe = heroSection?.videofield;
   const videoSrc = iframe?.match(/src="([^"]+)"/)?.[1];
+
+  const progNewLine = [
+    "b-tech-cse",
+    "btech-cse-ai-ml",
+    "btech-full-stack-development",
+    "btech-cse-ui-ux",
+    "btech-cse-cyber-security",
+    "btech-cse-in-data-science",
+    "b-tech-cse-robotics-ai",
+  ];
+
+  const progSubLine = [
+    "btech-cse-cloud-computing",
+    "b-tech-computer-science-and-engineering-semiconductor-design",
+  ];
 
   // useEffect(() => {
   //   if (!formId || !btnRef.current) return;
@@ -145,6 +160,12 @@ const Eligibility = ({
                     <div className="text-sm md:text-[16px] leading-relaxed text-gray-700 font-medium">
                       {elgibilities[2]?.title}
                     </div>
+                    {progNewLine.includes(slug) && (
+                      <span className="font-poppins text-[14px] font-normal leading-[24px] text-gray-600 uppercase tracking-normal mt-3 block">
+                        3-Year Lateral Entry option also available for eligible
+                        students
+                      </span>
+                    )}
                   </div>
                 </div>
 
@@ -199,59 +220,90 @@ const Eligibility = ({
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4 xl:gap-8 w-full">
-              <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
-                <Calendar size={32} color="#0a41a1" className="flex-shrink-0" />
-                <div className="flex flex-col">
-                  <p className="text-md font-medium text-gray-500 capitalize leading-tight tracking-wide">
-                    {elgibilities[0]?.subtitle}
-                  </p>
-                  <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
-                    {elgibilities[0]?.title}
-                  </p>
-                </div>
-              </div>
-              <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
-                <IndianRupee
-                  size={32}
-                  color="#0a41a1"
-                  className="flex-shrink-0"
-                />
-                <div className="flex flex-col">
-                  <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
-                    {elgibilities[1]?.subtitle}
-                  </p>
-                  <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
-                    {elgibilities[1]?.title}
-                  </p>
-                </div>
-              </div>
-              <div className="bg-white border border-gray-300 rounded-md px-6 py-4 flex items-start gap-5">
-                <LaptopMinimalCheck
-                  size={32}
-                  color="#0a41a1"
-                  className="flex-shrink-0"
-                />
-                <div className="flex flex-col">
-                  <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
-                    {elgibilities[2]?.subtitle}
-                  </p>
-                  <div className="flex flex-col mt-1">
-                    <p className="text-md md:text-lg font-semibold text-black leading-tight">
-                      {displayTitle}
-                      {isLong && !expanded && " "}
+            <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4 xl:gap-8 w-full">
+                {/* Card 1 */}
+                <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
+                  <Calendar
+                    size={32}
+                    color="#0a41a1"
+                    className="flex-shrink-0"
+                  />
+                  <div className="flex flex-col">
+                    <p className="text-md font-medium text-gray-500 capitalize leading-tight tracking-wide">
+                      {elgibilities[0]?.subtitle}
                     </p>
-                    {isLong && (
+                    <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
+                      {elgibilities[0]?.title}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 2 */}
+                <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
+                  <IndianRupee
+                    size={32}
+                    color="#0a41a1"
+                    className="flex-shrink-0"
+                  />
+                  <div className="flex flex-col">
+                    <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
+                      {elgibilities[1]?.subtitle}
+                    </p>
+                    <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
+                      {elgibilities[1]?.title}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 3 (UPDATED) */}
+                <div className="bg-white border border-gray-300 rounded-md px-6 py-4 flex items-start gap-5">
+                  <LaptopMinimalCheck
+                    size={32}
+                    color="#0a41a1"
+                    className="flex-shrink-0"
+                  />
+
+                  <div className="flex flex-col">
+                    <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
+                      {elgibilities[2]?.subtitle}
+                    </p>
+
+                    <div className="flex flex-col mt-1">
+                      {/* ✅ LINE CLAMP APPLIED HERE */}
+                      <p
+                        className={`text-md md:text-lg font-semibold w-full   text-black leading-tight ${
+                          expanded ? "" : "line-clamp-2"
+                        }`}
+                      >
+                        {elgibilities[2]?.title}
+                      </p>
+
+                      {/* Toggle Button */}
                       <button
                         onClick={() => setExpanded(!expanded)}
                         className="text-xs text-[#0060aa] font-bold mt-1 text-left"
                       >
                         {expanded ? "Read Less" : "Read More"}
                       </button>
-                    )}
+                    </div>
                   </div>
                 </div>
               </div>
+              {progNewLine.includes(slug) && (
+                <div className="relative w-full">
+                  <p className="font-poppins text-[14px]  text-right font-normal leading-[24px] text-gray-600 uppercase tracking-normal mt-3 block">
+                    3-Year Lateral Entry option also available for eligible
+                    students
+                  </p>
+                </div>
+              )}
+
+              {progSubLine.includes(slug) && (
+                <p className="font-poppins text-[14px]  text-right font-normal leading-[24px] text-gray-600 uppercase tracking-normal mt-3 block">
+                  **Subject to Approval
+                </p>
+              )}
             </div>
           )}
           {/* {slug === "b-tech-cse" ? (

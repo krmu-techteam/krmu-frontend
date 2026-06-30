@@ -97,13 +97,13 @@ const JournalismAndMassCommunication = async () => {
     imgvideo: "Video",
     videofield: "https://www.youtube.com/watch?v=39uHV_rcawc",
     formField: null,
-    formId: "31c1452015d32698095f833b3e7eb9c5",
+    formId: "acdc7065c22d12fc12a12848d5db1825",
     herobtn: {
       id: 43853,
       buttontext: "Apply Now",
       buttonlink:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_Tech_Computer_Science_and_Engineering_AI_and_ML_with_academic_support_of_IBM_and_powered_by_Microsoft_Certifications_c28e9ff274.jpg",
-      buttonclass: "npfWidget-31c1452015d32698095f833b3e7eb9c5",
+      buttonclass: "npfWidget-acdc7065c22d12fc12a12848d5db1825",
       popupFormId: null,
       containerPopupFormId: null,
     },

@@ -1,34 +1,53 @@
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["italic", "normal"],
+});
+
 const WelfareHero = () => {
   return (
-    <section
-      className="pt-[140px] md:pt-[24%] pb-[3%] px-4 bg-[url(/student-welfare/bg.webp)] bg-cover bg-center bg-no-repeat relative after:content-[''] after:absolute after:top-0
-     after:left-0 after:w-full after:h-full after:bg-[#0009]
-    "
-    >
-      <div className="max-w-[1664px] mx-auto w-full text-white">
-        <div className=" w-full lg:w-2/3 z-10 relative">
-          <h3 className="text-[26px] font-medium leading-[1.3]">
-            Student Welfare at K.R. Mangalam University
-          </h3>
-          <h1 className="text-3xl md:text-5xl font-semibold leading-[1.5] mb-5">
-            Nurturing Tomorrow’s Leaders
+    <section className="bg-[#051630] ">
+      <div className="h-[300px] sm:h-[340px] md:h-[510px] lg:h-[600px] xl:h-[850px]  bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1407_6a699f3b68.jpg)] bg-cover bg-center bg-no-repeat" />
+
+      <div className=" bg-[#051630] px-4 pb-[60px]">
+        <div className="flex justify-center items-center text-center flex-col max-w-[1350px] mx-auto w-full text-white welfare_desg_int">
+          <h1
+            className={`${playfair.className}   font-semibold leading-[1.25] text-[34px] sm:text-5xl md:text-6xl lg:text-[80px] bg-clip-text text-transparent -mt-[36px] sm:-mt-[52px] md:-mt-[64px] lg:-mt-[90px] mb-6 `}
+            style={{
+              backgroundImage:
+                "linear-gradient(90deg,#FF9D00 0%,#68BCFF 50%,#FF1D21 100%)",
+            }}
+          >
+            Empowering Students Beyond Classrooms.
           </h1>
-          <p className="mb-5">
-            The Department of Student Welfare (DSW) is committed to the holistic
-            development and well-being of students by promoting leadership,
-            co-curricular and extracurricular engagement, and skill enhancement.
-            The department facilitates a supportive and inclusive learning
-            environment by coordinating student-centric initiatives and
-            services.
-          </p>
-          <p>
-            DSW also functions as an institutional interface between students
-            and the University administration, ensuring effective grievance
-            redressal, student representation, and continuous support throughout
-            and beyond the academic lifecycle.
-          </p>
+
+          <h3 className="flex flex-wrap items-center gap-y-2 text-[10px]  md:text-base lg:text-[22px] font-semibold tracking-[0.18em] uppercase mb-6">
+            <span className="mr-2">Student Welfare at</span>
+            <span className="bg-[#0063B0] ">K.R. Mangalam </span>
+            <span className="bg-[#F7000E] pl-1 "> University</span>
+          </h3>
+
+          <div className="space-y-4 text-sm md:text-[15px] leading-[1.8] max-w-[760px] text-white/85">
+            <p>
+              The Department of Student Welfare (DSW) is committed to creating a
+              supportive, inclusive, and student-friendly campus environment. It
+              focuses on students&rsquo; academic, social, and personal
+              well-being through cultural activities, workshops, awareness
+              programs, and student engagement initiatives.
+            </p>
+            <p>
+              The department also works closely with the Student Council and
+              student bodies to encourage participation, leadership, and
+              effective communication between students and the institution. DSW
+              continues to support and guide students throughout their academic
+              journey while promoting a vibrant and empowering campus culture.
+            </p>
+          </div>
+
+          <div className="mt-10 border-t border-dashed border-white/25"></div>
         </div>
-        <div></div>
       </div>
     </section>
   );

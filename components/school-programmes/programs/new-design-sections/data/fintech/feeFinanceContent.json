@@ -1,0 +1,36 @@
+{
+  "feeFinance": {
+    "badge": "FEES, SCHOLARSHIPS & FINANCING",
+    "title": "A serious MBA, priced honestly – with scholarships up to 100%.",
+    "programFee": {
+      "title": "Program Fee",
+      "amount": "₹3,85,000",
+      "unit": "/ year",
+      "subtext": "Subject to final approval by university authorities. Application fee ₹1,000.",
+      "bullets": [
+        "Scholarships up to 100% – merit, sports and more",
+        "Early applicants get scholarship priority"
+      ],
+      "button": {
+        "text": "Check scholarship eligibility",
+        "link": "#scholarship"
+      }
+    },
+    "loanPartners": {
+      "title": "Education-loan partners",
+      "description": "Up to 100% funding – tuition, books, hostel and travel – with concessional rates and 5–15 year terms.",
+      "partners": [
+        "Kuhoo",
+        "ICICI Bank",
+        "Axis Bank",
+        "IDFC First Bank",
+        "Propelld",
+        "GrayQuest"
+      ],
+      "bullets": [
+        "Zero processing fees on select partners",
+        "The admissions team helps you compare offers"
+      ]
+    }
+  }
+}

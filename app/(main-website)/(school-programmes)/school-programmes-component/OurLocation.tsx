@@ -24,10 +24,10 @@ const OurLocation = ({ badgetext, img1, img2 }: Props) => {
         </div>
         <div className="sm:w-7/12 pt-6 px-0 lg:px-0 xl:px-3">
           <span className="py-2.5 font-normal rounded-md text-slate-100 text-sm inline-block">
-            {badgetext} 
+            {badgetext}
           </span>
           <h3 className="text-slate-100 text-[22px] lg:text-[28px] font-medium leading-[1.3] lg:leading-[1] mb-4">
-            Learn at One of India’s Biggest Business Hubs, Gurgaon
+            Learn at One of India’s Biggest Business Hubs, Gurugram
           </h3>
 
           <Image

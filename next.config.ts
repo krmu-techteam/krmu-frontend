@@ -41,7 +41,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-   async headers() {
+  async headers() {
     return [
       {
         source: "/(.*)",
@@ -88,6 +88,21 @@ const nextConfig: NextConfig = {
       {
         source: "/meta/:slug/:path*",
         destination: "/admission/:slug/:path*",
+      },
+      {
+        source: "/llms.txt",
+        destination:
+          "https://geo.flowblinq.com/api/serve/krmangalam-edu-in-uhLBq5/llms.txt",
+      },
+      {
+        source: "/llms-full.txt",
+        destination:
+          "https://geo.flowblinq.com/api/serve/krmangalam-edu-in-uhLBq5/llms-full.txt",
+      },
+      {
+        source: "/.well-known/ucp.json",
+        destination:
+          "https://geo.flowblinq.com/api/serve/krmangalam-edu-in-uhLBq5/business.json",
       },
     ];
   },

@@ -9,9 +9,9 @@ const KEIC = () => {
           <KeicSlide />
         </div>
         <div className="text-white lg:w-3/5">
-          <h3 className="text-3xl md:text-[44px] font-semibold mb-5 leading-[1.2]">
+          <h2 className="text-3xl md:text-[44px] font-semibold mb-5 leading-[1.2]">
             K.R. Mangalam Entrepreneurship <br /> and Innovation Center (KEIC)
-          </h3>
+          </h2>
           <p>
             KEIC is the cornerstone of our innovation ecosystem. This dynamic
             center offers an incubation program to nurture start-ups, a

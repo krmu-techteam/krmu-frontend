@@ -8,10 +8,13 @@ type Props = {
 };
 
 import { Metadata } from "next";
+import { folderRouteSEO } from "@/lib/api/siteseo";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params; // ✅ await params
   const photoGalleryUsingSlug = await getGallerImagesUsingSlug(slug);
+  const gallerySiteSeo = await folderRouteSEO(slug);
+  const seo = gallerySiteSeo[0];
 
   const photoGalleryData = photoGalleryUsingSlug.find(
     (item) => item.slug === slug,
@@ -22,9 +25,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = photoGalleryData?.title;
 
   return {
-    title: `${title} -  Photo Gallery | KRMU` || "K.R. Mangalam University",
+    title:
+      seo?.title ??
+      (title ? `${title} - Photo Gallery | KRMU` : "K.R. Mangalam University"),
+
+    description: seo?.metaDescription ?? "",
+
     alternates: {
-      canonical: currentPhotoGalleryURL || "",
+      canonical: currentPhotoGalleryURL,
     },
   };
 }

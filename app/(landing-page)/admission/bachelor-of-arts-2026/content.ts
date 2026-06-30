@@ -42,7 +42,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -628,12 +628,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
 export const programmeContent = {
   badge: "11 Specialisations",
   title: "KRMU’s B.A. Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -748,24 +746,23 @@ export const programmeContent = {
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.",
     },
-    {
-      id: "11",
-      tag: "",
-      title: "B.A. (Hons. / Hons. with  Research) Liberal Arts",
-      subtitle: "",
-      desc: "An interdisciplinary undergraduate degree focused on broad-based learning across the humanities, social sciences, and creative disciplines.",
-      duration: "4 Years",
-      fees: "150000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "Passed 12th with 50% aggregate marks.",
-    },
+    // {
+    //   id: "11",
+    //   tag: "",
+    //   title: "B.A. (Hons. / Hons. with  Research) Liberal Arts",
+    //   subtitle: "",
+    //   desc: "An interdisciplinary undergraduate degree focused on broad-based learning across the humanities, social sciences, and creative disciplines.",
+    //   duration: "4 Years",
+    //   fees: "150000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "Passed 12th with 50% aggregate marks.",
+    // },
   ],
 };
 
-
 export const eligibilityTerms = [
-  {
-    description: "** Subject to Approval"
-  },
+  // {
+  //   description: "** Subject to Approval",
+  // },
 ];

@@ -20,14 +20,16 @@ const infoStaticImages: Record<string, string> = {
     "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sols_info_356ffbbb2f.webp",
   'school-of-medical-and-allied-sciences': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/smas_info_a437a7a78f.webp',
   // 'school-of-physiotherapy-and-rehabilitation-sciences': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sprs_info_ab151f554d.webp',
-  'school-of-physiotherapy-and-rehabilitation-sciences': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sprs_scope_24ba1deb85.webp',
+  // 'school-of-physiotherapy-and-rehabilitation-sciences': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sprs_scope_24ba1deb85.webp',
+  'school-of-physiotherapy-and-rehabilitation-sciences': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/healthcare_1_930ae5c0d9.webp',
   'school-of-liberal-arts': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sola_info_0bea1c1947.webp',
   'school-of-architecture-design': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soad_scope_ee5ccb0f5f.webp',
   // 'school-of-architecture-design': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soad_info_fb5a40c9cc.png',
   'school-of-basic-and-applied-sciences': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sbas_info_a4df052f90.webp',
   'school-of-emerging-media-and-creator-economy': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Untitled_121_8b1ed1d1df.png',
   // 'school-of-emerging-media-and-creator-economy': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sjmc_info_4152524039.webp',
-  'school-of-hotel-management-and-catering-technology': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/shmct_info_902ba1a177.webp',
+  // 'school-of-hotel-management-and-catering-technology': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/shmct_info_902ba1a177.webp',
+  'school-of-hotel-management-and-catering-technology': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/hotel_mgmt_9cad25aca6.png',
   'school-of-agriculutural-sciences': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soas_info_fc180558e4.webp',
   'school-of-education': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soed_info_bc9daec6fd.webp'
 

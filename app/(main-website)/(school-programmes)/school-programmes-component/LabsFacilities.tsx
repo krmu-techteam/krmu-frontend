@@ -6,7 +6,6 @@ import { ParagraphBlock } from "@/lib/types/about";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { STRAPI_URL } from "@/app/constant";
 import { LabCard } from "@/lib/types/school-programme";
-import BcaVsBtechTable from "../programs/prog-comp/BcaVsBtechTable";
 
 type Props = {
   heading: string;
@@ -79,9 +78,9 @@ const LabsFacilities = ({
             
           </div>
         </div>
-        <div className="max-w-[1320px] mx-auto w-full mt-0 md:mt-10">
+        {/* <div className="max-w-[1320px] mx-auto w-full mt-0 md:mt-10">
           {slug === "bca-ai-data-science" && <BcaVsBtechTable />}
-        </div>
+        </div> */}
       </section>
     </>
   );

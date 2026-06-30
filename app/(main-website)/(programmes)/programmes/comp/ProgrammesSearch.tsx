@@ -4,8 +4,8 @@ import {
   ArrowRight,
   Calendar,
   ChevronDown,
-  ChevronRight,
-  CircleArrowRight,
+  // ChevronRight,
+  // CircleArrowRight,
   IndianRupee,
   Search,
   X,
@@ -27,9 +27,9 @@ function normalize(text: string | null | undefined) {
   return text.toLowerCase().replace(/[\.\s]/g, "");
 }
 
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
-import ProgrammesHero from "./ProgrammesHero";
+// import ProgrammesHero from "./ProgrammesHero";
 // import { Skeleton } from "@/components/ui/skeleton";
 
 type ZenithCriteria = {
@@ -212,20 +212,50 @@ const ProgrammesSearch = () => {
         return;
       }
       if (query.length > 0) {
-        // SEARCH MODE — all results, no slice
-        if (degreeRefValue.current === "doctoral-programmes") {
-          const res = await searchPhdProgrammes("", 1, 1000);
-          const allData = res.data || [];
-          newData = allData.filter((item) =>
-            normalize(item.heading).includes(normalize(query)),
-          );
-        } else {
-          const res = await searchSchoolProgrammes("", 1, 1000);
-          const allData = res.data || [];
-          newData = allData.filter((item) =>
-            normalize(item.title).includes(normalize(query)),
-          );
-        }
+        // SEARCH MODE — search across UG, PG and PhD programmes together
+        const [schoolRes, phdRes] = await Promise.all([
+          searchSchoolProgrammes("", 1, 1000),
+          searchPhdProgrammes("", 1, 1000),
+        ]);
+        const normalizedQuery = normalize(query);
+        const filteredPhd = (phdRes.data || []).filter((item) =>
+          normalize(item.heading).includes(normalizedQuery),
+        );
+        const filteredSchool = (schoolRes.data || []).filter((item) =>
+          normalize(item.title).includes(normalizedQuery),
+        );
+        // PhD records take priority; drop school-programme rows whose
+        // normalized title collides with a PhD heading (stale duplicates).
+        const phdTitles = new Set(
+          filteredPhd.map((item) => normalize(item.heading)),
+        );
+        const schoolDeduped = filteredSchool.filter(
+          (item) => !phdTitles.has(normalize(item.title)),
+        );
+
+        // Rank matches: whole-word match (e.g. "MA " in "MA English") > prefix
+        // match on normalized title > generic substring match.
+        const rawQuery = query.toLowerCase().replace(/\./g, "").trim();
+        const escapedQuery = rawQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const wordRe = new RegExp(`(^|\\s)${escapedQuery}(\\s|$)`);
+        const rankMatch = (title: string): number => {
+          const lowered = title.toLowerCase().replace(/\./g, "");
+          if (wordRe.test(lowered)) return 0;
+          if (normalize(title).startsWith(normalizedQuery)) return 1;
+          return 2;
+        };
+
+        const combined = [...filteredPhd, ...schoolDeduped];
+        newData = combined
+          .map((item, idx) => ({
+            item,
+            rank: rankMatch(
+              "title" in item ? item.title : (item as PhdProgramme).heading,
+            ),
+            idx,
+          }))
+          .sort((a, b) => a.rank - b.rank || a.idx - b.idx)
+          .map(({ item }) => item);
 
         setShowLoadMore(false); // no button in search
       } else {
@@ -252,8 +282,9 @@ const ProgrammesSearch = () => {
         setShowLoadMore(!loadAll && hasMore);
       }
 
-      // 👇 IMPORTANT: only show 6 unless loadAll
-      const displayData = loadAll ? newData : newData.slice(0, 4);
+      // 👇 IMPORTANT: only show 4 unless loadAll or in search mode
+      const displayData =
+        loadAll || query.length > 0 ? newData : newData.slice(0, 4);
 
       if (reset || loadAll) {
         pageRef.current = 2;
@@ -503,15 +534,20 @@ const ProgrammesSearch = () => {
           overflow-hidden
           relative`}
                   >
-                    {" "}
-                    <Link href={`/programs/${slug}`} target="_blank">
+                    <div
+                      className={`absolute ${glowClass} h-[320px] w-[320px] rounded-full bg-gradient-to-br from-[#001732] via-[#59122E] to-[#63174C] blur-[30px] opacity-80`}
+                    ></div>{" "}
+                    <Link
+                      href={isExternal ? slug : `/programs/${slug}`}
+                      target="_blank"
+                    >
                       <h6
                         className="block w-full text-white"
                         dangerouslySetInnerHTML={{
                           __html:
                             ("title" in item ? item.title : item.heading) +
                             ("highlightitle" in item
-                              ? ` ${item.highlightitle ? item.highlightitle : ''}`
+                              ? ` ${item.highlightitle ? item.highlightitle : ""}`
                               : ""),
                         }}
                       />
@@ -555,7 +591,7 @@ const ProgrammesSearch = () => {
                           setIsPopupOpen(true);
                           setSlug(slug);
                         }}
-                        className="bg-white cursor-pointer w-full text-sm text-[#0161B0] border border-[#999999] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 sm:w-1/2"
+                        className="bg-white cursor-pointer w-full text-sm text-[#001732] border border-[#999999] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 sm:w-1/2"
                       >
                         Fee Structure
                       </button>
@@ -585,7 +621,7 @@ const ProgrammesSearch = () => {
                       {/* )} */}
                     </div>
                     {progNewLine.includes(slug) && (
-                      <div className="text-white text-xs items-center mt-3 px-4 ">
+                      <div className="text-white text-xs items-center mt-3 px-4 z-10000">
                         3-Year Lateral Entry option also available for eligible
                         students
                       </div>
@@ -600,7 +636,7 @@ const ProgrammesSearch = () => {
             <div className="pt-4 md:pt-12 flex items-center justify-center">
               <button
                 onClick={() => fetchProgrammes(false, searchQuery, true)}
-                className="text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-[#034272] cursor-pointer"
+                className="text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-[#001732] cursor-pointer"
                 // style={{ boxShadow: "rgba(0,0,0,0.35) 0px 5px 15px" }}
               >
                 <span>View All Programmes</span>

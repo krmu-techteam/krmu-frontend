@@ -57,6 +57,21 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         {children}
+        <img
+          src="https://geo.flowblinq.com/api/t/krmangalam-edu-in-uhLBq5"
+          width="1"
+          height="1"
+          alt=""
+          style={{
+            position: "absolute",
+            opacity: 0,
+            pointerEvents: "none",
+          }}
+        />
+        <Script
+          src="https://geo.flowblinq.com/api/t/krmangalam-edu-in-uhLBq5"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

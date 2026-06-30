@@ -46,7 +46,7 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
               alt={data.title?.rendered || ""}
               width={466}
               height={312}
-              className="w-full rounded-t-3xl object-fill"
+              className="w-full rounded-t-3xl object-fill md:h-[342px]"
             />
           )}
         </Link>
@@ -58,7 +58,7 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
             {data?.slug && (
               <Link
                 href={`/events-and-news/${data?.slug}`}
-                className="font-medium text-lg sm:text-sm lg:text-lg leading-[1] mt-2.5 mb-4 inline-block h-[50px]"
+                className="font-medium text-lg sm:text-sm lg:text-lg leading-[1] mt-2.5 mb-4 inline-block h-[50px] temp-class"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -66,6 +66,7 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
                   dangerouslySetInnerHTML={{
                     __html: data.title?.rendered || "",
                   }}
+                  className="line-clamp-3"
                 />
               </Link>
             )}

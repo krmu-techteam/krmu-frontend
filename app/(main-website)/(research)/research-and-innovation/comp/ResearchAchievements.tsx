@@ -28,9 +28,9 @@ const ResearchAchievements = () => {
       id="research-achievements"
     >
       <div className="max-w-[1664px] mx-auto w-full">
-        <h3 className="text-3xl md:text-5xl text-white font-semibold mb-5 md:mb-10">
+        <h2 className="text-3xl md:text-5xl text-white font-semibold mb-5 md:mb-10">
           Research Achievements
-        </h3>
+        </h2>
         <div>
           <ResearchAchievementCard slide={ResAchievSlide} />
         </div>

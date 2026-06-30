@@ -22,7 +22,7 @@ const PHDRegulationCards = () => {
             <li>
               <Link
                 className="hover:text-[#2d7cc1]"
-                href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/4_R_June_Ph_D_Admission_advertisement_Details_O_2025_26_8b3350e84d.pdf"
+                href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/5_R_July_Ph_D_Admission_advertisement_Details_O_2025_26_341795b69c.pdf"
               >
                 <strong>Odd Semester 2026-27</strong>
               </Link>

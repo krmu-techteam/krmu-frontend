@@ -40,7 +40,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -194,7 +194,7 @@ export const specialisationData: SpecialisationSection = {
         // {
         //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
         //   title: "Annual fees",
-     //   desc: `Rs 2,3`,
+        //   desc: `Rs 2,3`,
         // },
       ],
     },
@@ -218,7 +218,7 @@ export const specialisationData: SpecialisationSection = {
         // {
         //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
         //   title: "Annual fees",
-     //   desc: `2,5`,
+        //   desc: `2,5`,
         // },
       ],
     },
@@ -242,7 +242,7 @@ export const specialisationData: SpecialisationSection = {
         // {
         //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
         //   title: "Annual fees",
-     //   desc: `Rs 2,65,000`,
+        //   desc: `Rs 2,65,000`,
         // },
       ],
     },
@@ -266,7 +266,7 @@ export const specialisationData: SpecialisationSection = {
         // {
         //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
         //   title: "Annual fees",
-     //   desc: `Rs 2,5`,
+        //   desc: `Rs 2,5`,
         // },
       ],
     },
@@ -290,7 +290,7 @@ export const specialisationData: SpecialisationSection = {
         // {
         //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
         //   title: "Annual fees",
-     //   desc: `Rs 2,5`,
+        //   desc: `Rs 2,5`,
         // },
       ],
     },
@@ -314,7 +314,7 @@ export const specialisationData: SpecialisationSection = {
         // {
         //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
         //   title: "Annual fees",
-     //   desc: `Rs 2,5`,
+        //   desc: `Rs 2,5`,
         // },
       ],
     },
@@ -338,7 +338,7 @@ export const specialisationData: SpecialisationSection = {
         // {
         //   iconUrl: "/wp-content/landingpage/common/annual-fees.sv
         //   title: "Annual fees",
-     //   desc: `Rs 2,5`,
+        //   desc: `Rs 2,5`,
         // },
       ],
     },
@@ -621,13 +621,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "9 Specialisations",
   title: "KRMU’s B.Tech. Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -714,43 +711,43 @@ export const programmeContent = {
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
     },
-    {
-      id: "8",
-      tag: "Microsoft Certifications",
-      title: "B.Tech. Cloud Computing**",
-      subtitle: "",
-      desc: "This B.Tech. course seeks to train students in cloud architecture, security, AI, and scalable solutions.",
-      duration: "4 Years",
-      fees: "270000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "Passed 12th with 50% aggregate marks.*",
-    },
-    {
-      id: "9",
-      tag: "",
-      title: "B.Tech. Semiconductor Design**",
-      subtitle: "",
-      desc: "The programme intends to build skills in chip design, VLSI systems, fabrication processes, nanoelectronics, and hardware innovation.",
-      duration: "4 Years",
-      fees: "270000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "Passed 12th with 50% aggregate marks.*",
-    },
+    // {
+    //   id: "8",
+    //   tag: "Microsoft Certifications",
+    //   title: "B.Tech. Cloud Computing**",
+    //   subtitle: "",
+    //   desc: "This B.Tech. course seeks to train students in cloud architecture, security, AI, and scalable solutions.",
+    //   duration: "4 Years",
+    //   fees: "270000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "Passed 12th with 50% aggregate marks.*",
+    // },
+    // {
+    //   id: "9",
+    //   tag: "",
+    //   title: "B.Tech. Semiconductor Design**",
+    //   subtitle: "",
+    //   desc: "The programme intends to build skills in chip design, VLSI systems, fabrication processes, nanoelectronics, and hardware innovation.",
+    //   duration: "4 Years",
+    //   fees: "270000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "Passed 12th with 50% aggregate marks.*",
+    // },
   ],
 };
 
-
 export const eligibilityTerms = [
   {
-    description: "*Eligibility: 50% marks in 10+2 examination with Physics & Maths as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognised Board/ University."
+    description:
+      "*Eligibility: 50% marks in 10+2 examination with Physics & Maths as mandatory courses. For the remaining single course, select any course from Chemistry/ Computer Science/ Electronics/ Information Technology/ Biology/ Informatics Practices/Biotechnology/ Technical Vocational subject/ Agriculture/Engineering Graphics/ Business Studies/Entrepreneurship from any recognised Board/ University.",
   },
   {
-    description: "# Lateral B.Tech. Courses are also available except for the Robotics & AI Course."
+    description:
+      "# Lateral B.Tech. Courses are also available except for the Robotics & AI Course.",
   },
-  {
-    description: "** Subject to Approval"
-  },
- 
+  // {
+  //   description: "** Subject to Approval",
+  // },
 ];

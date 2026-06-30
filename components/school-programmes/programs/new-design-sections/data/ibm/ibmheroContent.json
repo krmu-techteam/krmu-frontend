@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "sub_heading": "KRMU · SCHOOL OF MANAGEMENT & COMMERCE",
+    "heading": "An MBA designed for the next decade, not the last one.",
+    "content": "MBA with academic support of IBM. Intern with a real company. Graduate with a portfolio of real work that earns the job.",
+    "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1598_1_95475392a6.jpg",
+    "button": [
+      {
+        "title": "Apply Now",
+        "link": "#apply",
+        "variant": "primary"
+      },
+      {
+        "title": "Download Brochure",
+        "link": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOMC_a992b7ec7f.pdf",
+        "variant": "secondary"
+      }
+    ],
+    "stats": [
+      {
+        "label": "DURATION",
+        "value": "2 years, full-time"
+      },
+      {
+        "label": "LAUNCH",
+        "value": "August 2026"
+      },
+      {
+        "label": "PROGRAMME FEE",
+        "value": "₹3,30,000 / year"
+      }
+    ],
+    "banner": {
+      "text": "August 2026 intake now open ",
+      "text2": "· Scholarships up to 100% ·",
+      "linkText": "Apply on the admissions portal",
+      "link": "https://admissions.krmangalam.edu.in/"
+    }
+  }
+}

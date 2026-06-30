@@ -29,7 +29,7 @@ const Specialisation = ({
   // Staging / Testing Image Overrides to avoid hitting live Strapi for test data
   const getSpecialisationImage = (title: string, currentUrl: string) => {
     const lowerTitle = title.toLowerCase();
-    
+
     if (lowerTitle.includes("robotics")) {
       return "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_computer_science_and_engineering_robotics_and_ai_b9b24da4a4.jpeg";
     }
@@ -48,8 +48,15 @@ const Specialisation = ({
     if (lowerTitle.includes("ux") || lowerTitle.includes("ui")) {
       return "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_computer_science_and_engineering_ux_ui_00fecef876.jpeg";
     }
-
-    return currentUrl ? `${STRAPI_URL}${currentUrl}` : "/programmes/specialisation.webp";
+    if (lowerTitle.includes("cloud computing")) {
+      return "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1_5ee34b2594.png";
+    }
+    if (lowerTitle.includes("semiconductor design")) {
+      return "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/2_6e0ebe6cdd.png";
+    }
+    return currentUrl
+      ? `${STRAPI_URL}${currentUrl}`
+      : "/programmes/specialisation.webp";
   };
 
   const isSlider = specialisations && specialisations.length > 4;
@@ -59,7 +66,7 @@ const Specialisation = ({
       <div className="max-w-[1440px] mx-auto w-full">
         <div className="common-prog-container">
           <h2 className="text-[28px] md:text-[45px] font-bold text-gray-900 leading-tight tracking-tight mb-2">
-            {heading}{" "}{highlightheading} 
+            {heading} {highlightheading}
           </h2>
         </div>
 
@@ -71,7 +78,7 @@ const Specialisation = ({
                 {specialisations.map((specialisation) => {
                   const displayImage = getSpecialisationImage(
                     specialisation?.title || "",
-                    specialisation?.specialisationimg?.url || ""
+                    specialisation?.specialisationimg?.url || "",
                   );
 
                   return (
@@ -123,7 +130,7 @@ const Specialisation = ({
                   {specialisations.map((specialisation, i) => {
                     const displayImage = getSpecialisationImage(
                       specialisation?.title || "",
-                      specialisation?.specialisationimg?.url || ""
+                      specialisation?.specialisationimg?.url || "",
                     );
 
                     return (
@@ -131,9 +138,7 @@ const Specialisation = ({
                         key={specialisation?.id || i}
                         className="pl-4 sm:pl-4 lg:pl-6 xl:pl-6 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 flex"
                       >
-                        <div
-                          className="bg-white border border-gray-100 rounded-md shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden flex flex-col group h-full w-full"
-                        >
+                        <div className="bg-white border border-gray-100 rounded-md shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden flex flex-col group h-full w-full">
                           <div className="relative w-full aspect-[17/14] bg-white flex items-center justify-center overflow-hidden border-b border-gray-50">
                             <Image
                               fill
@@ -179,11 +184,12 @@ const Specialisation = ({
             )}
           </div>
         )}
+        <p className="text-right text-sm  mt-2  text-muted-foreground">
+          ** Subject to Approval
+        </p>
       </div>
     </section>
   );
 };
 
 export default Specialisation;
-
-

@@ -2,9 +2,9 @@ const MessageDeanResearch = () => {
   return (
     <div className="max-w-[1664px] mx-auto w-full px-4 text-white flex flex-col lg:flex-row items-center gap-10 mt-10 lg:mt-0">
       <div className="lg:w-1/2">
-        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
+        <h2  className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
           Message from the Dean Research
-        </h3>
+        </h2>
         <div className="text-sm text-white leading-[2] text-justify">
           <p className="text-lg">
             <strong>

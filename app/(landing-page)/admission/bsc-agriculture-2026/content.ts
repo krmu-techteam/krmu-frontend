@@ -19,14 +19,18 @@ import {
 
 // Usage types
 export const Hero: HeroContent = {
-  title: `
+  title: `<span class="sm:hidden"><span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-bold">
+        B.Sc.
+      </span> Admissions Open 2026–27</span>
+      <span class="hidden sm:block">
       ADMISSIONS <br />
       OPEN FOR <br />
-      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold">
+      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
        B.Sc. (Hons.) Agriculture
       </span>
       <br />
       PROGRAMME <br /> 2026-27 
+      </span>
     `,
   desc: `Discover the foundation of agricultural excellence <br /> with K.R. Mangalam University’s 
    four-year agriculture programme, <br /> designed  to build strong agrarian knowledge, <br />practical expertise, and an understanding <br /> of modern farming practices`,
@@ -39,7 +43,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -437,13 +441,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "Learn Smart. Farm Smarter",
   title: "KRMU’s B.Sc. (Hons.) Agriculture Programme",
-  subtitle:
-    "Our Programme Comprise of Industry-relevant Curriculum",
+  subtitle: "Our Programme Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -461,9 +462,9 @@ export const programmeContent = {
   ],
 };
 
-
 export const eligibilityTerms = [
   {
-    description: "*Eligibility: Must have passed 10+2 or equivalent examination from any recognised board/university in Physics, Chemistry, Maths/Biology/Agriculture with a minimum of  50% aggregate marks. "
+    description:
+      "*Eligibility: Must have passed 10+2 or equivalent examination from any recognised board/university in Physics, Chemistry, Maths/Biology/Agriculture with a minimum of  50% aggregate marks. ",
   },
 ];

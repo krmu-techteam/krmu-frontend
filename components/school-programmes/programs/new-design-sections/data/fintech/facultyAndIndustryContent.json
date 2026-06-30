@@ -1,0 +1,106 @@
+{
+  "facultyAndIndustry": {
+    "badge": "FACULTY & INDUSTRY",
+    "title": "Who teaches you, and who teaches alongside them.",
+    "classroomImage": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1562_8c17bcfeca.jpg",
+    "sections": [
+      {
+        "title": "Core faculty",
+        "desc": "Doctorates from top business schools, with industry experience.",
+        "linkText": "Read More",
+        "link": "#",
+        "details": "Courses are taught by faculty who hold doctorates from top business schools and also bring industry experience from before their PhD. Their work extends beyond classroom delivery into curriculum design, project mentorship, and active engagements in consulting and executive education, thus bringing insights from industry into classrooms."
+      },
+      {
+        "title": "Senior industry leaders",
+        "desc": "Practitioners co-teach courses, set real problems, and sit on the juries that grade your work.",
+        "linkText": "Read More",
+        "link": "#",
+        "details": "Multiple courses are co-taught with serving industry leaders who carry deep expertise in their domain. They open the course, return for a synthesis block of real problems, and sit on the juries that grade student work."
+      },
+      {
+        "title": "Curriculum partners",
+        "desc": "Harvard Business Impact cases and simulations across courses; IBM, EY and IIDE in Year Two.",
+        "linkText": "Read More",
+        "link": "#",
+        "partners": [
+          {
+            "name": "Harvard Business Impact",
+            "role": "(formerly Harvard Business Publishing). Case studies and simulations from the HBI collection are used across courses."
+          },
+          {
+            "name": "IBM",
+            "role": "Co-delivers the Analytics specialisation track in Year Two."
+          },
+          {
+            "name": "Ernst & Young (EY)",
+            "role": "Co-delivers the Fintech specialisation track in Year Two."
+          },
+          {
+            "name": "IIDE",
+            "role": "Co-delivers the Digital Marketing specialisation track in Year Two."
+          }
+        ]
+      }
+    ],
+    "faculties": [
+      {
+        "name": "Dr. Hima Gupta",
+        "designation": "Dean",
+        "qualification": "Ph.D.",
+        "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Hima_Gupta_adb3700f07.png",
+        "details": "Dr. Hima Gupta is Professor and Dean of the School of Management and Commerce at K.R. Mangalam University, Gurugram, with over 25 years in management education.\n\nShe has held senior academic roles at IILM University, Symbiosis University, Indira Institute of Management, and Jaypee Business School. Her research spans Operations Strategy, Quality Management, Healthcare Analytics, Six Sigma, and World Class Manufacturing, with approximately 40 publications in Scopus-indexed journals and 4 patents under the Indian Patent System. A certified Six Sigma and Business Analytics Professional, she has supervised multiple PhD scholars. She serves on the editorial boards of several international journals.\n\nBefore academia, she worked as Deputy Manager at LNJ Bhilwara Group, managing MIS, budgetary planning, and feasibility analysis for new projects — a corporate grounding that continues to shape how she designs and teaches management curricula. She has also delivered Management Development Programmes for TATA Motors, Gestamp, Yazaki India, and JBM.",
+        "linkedin": "https://www.linkedin.com/school/k.r.-mangalam-university/"
+      },
+      {
+        "name": "Dr. Deepak Maun",
+        "designation": "Director, Experiential Learning",
+        "qualification": "Ph.D. (Innovation & Management in Education) (IIM Ahmedabad)",
+        "image": "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Deepak-Maun.jpeg",
+        "details": "Dr. Deepak Maun is a Dairy Technologist with an MBA and PhD from IIM Ahmedabad. He has 10+ years of experience spanning corporate (Operations/Supply Chain), Ed-Tech startup, and academia. He has a track record of building academic and operational systems from scratch.\n\nConvinced about the need for lifelong learning, he created first-of-its-kind course in Indian universities on “Self-Directed Learning” to help graduating students learn how to learn when they enter the real world of work. He loves tinkering and has an insatiable itch to play with tools to build, break, or repair stuff. He wants to engage all his students in such ‘experiential learning’ to help them discover their passions and build respect and appreciation for people who work with their hands.\n\nHe also created a highly admired course on “Strategic Planning and Change Management in Education” focused on school principals as audience. To Ph.D. students, he taught courses on “Governance of Higher Education” and “History of Education in India”. His research interests include University governance and leadership, student employability, and Ph.D. education.",
+        "linkedin": "https://www.linkedin.com/school/k.r.-mangalam-university/"
+      },
+      {
+        "name": "Prof. Anjana Dharmani ",
+        "designation": "Faculty, Marketing ",
+        "qualification": "Ph.D. (Innovation & Management in Education) (IIM Ahmedabad)",
+        "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Anjana_Anji_Dharmani_328dfdc625.jpg",
+        "details": "Prof. Anjana Dharmani is completing her doctoral research in the Marketing Area at XLRI Jamshedpur, with a thesis on B2B Influencer Marketing. She is one of twenty researchers globally — and the only one from India — selected to the B2B Think Tank at Penn State University's Institute for the Study of Business Markets. Papers targeting the Journal of the Academy of Marketing Science, Journal of Service Research, and Industrial Marketing Management are in active submission, supported by a research grant from XLRI. Before her doctoral work, she spent two years at SAP Labs as a technology developer and a year in international B2B sales, grounding her research in the commercial realities she now studies. She brings to the marketing classroom research depth on the questions that Indian businesses — digital, platform-driven, relationship-led — are actively trying to answer. ",
+        "linkedin": "https://www.linkedin.com/in/anjana-dharmani/"
+      },
+
+      {
+        "name": "Alok Srivastava",
+        "designation": "Faculty, Strategy & Entrepreneurship",
+        "qualification": "IIT Delhi · IIM Calcutta",
+        "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Alok_Srivastava_5397aefc3c.jpg",
+        "details": "Alok Srivastava is a business leader, entrepreneur, educator, and TEDx speaker with over 17 years of experience spanning strategy, innovation, technology, and business transformation. An alumnus of IIT Delhi and IIM Calcutta, he has held leadership roles across global organizations including JPMorgan (London), OYO, 99acres, Rivigo, Lanco, and his own startup venture - Reniso.\n\nHis professional journey spans diverse sectors such as real estate, hospitality, logistics, consumer internet, infrastructure, fintech, and emerging technologies. As a mentor, consultant, and visiting faculty, he has delivered 500+ sessions across premier institutions including IITs, IIMs, IIIT Delhi, Masters’ Union, and leading universities in India and abroad.\n\nAlok’s areas of expertise include Design Thinking, Business Strategy, AI and Ethics, Entrepreneurship, Service Marketing, Product Development, Leadership, and Sustainable Business Practices. Known for his highly interactive and experience-driven approach, he combines real-world business insights with practical frameworks to help students and professionals bridge the gap between theory and execution.",
+        "linkedin": "https://www.linkedin.com/in/alok-srivastava/"
+      },
+      {
+        "name": "Sandeep Kochhar",
+        "designation": "Faculty, Communication and Placement Training",
+        "qualification": "Global C-Suite Executive Coach",
+        "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Sandeep_Kochhar_0809e870ef.jpg",
+        "details": "Sandeep Kochhar is a Global C-Suite Executive Coach, Leadership Transformation Consultant, & Strategic Business StoryTeller with over 20 years of Corporate Consulting experience. A Certified Leadership Coach progressing toward Coaching Mastery under the International Coaching Federation (ICF) track, Sandeep has accumulated 22,000+ hours of one on one & Group Coaching, Coaching CFOs, CXOs, Founders, & Senior Leadership teams across industries & geographies. He uses StoryTelling as a Transformational Leadership tool to impact sustainable change across individuals & organizations.\n\nAs CEO of BlewMinds Consulting LLP, a Leadership & Organizational Transformation practice operating across geographies in the space of unconventional Learning, Executive Coaching, & People Transformation, he brings rare depth at the intersection of Business Consulting, Human Psychology, & Organizational Change. He has consulted with over 250+ clients from startups to MNCs.\n\nHe is currently guest faculty at ISB, IIM Lucknow, IIM Calcutta, IIM Indore in Leadership & Management areas including Storytelling, Consulting, Entrpreneurship, Communication & Careers, Human Resources & Coaching.",
+        "linkedin": "https://www.linkedin.com/in/sandeepkochhar/"
+      },
+      {
+        "name": "Rakhi Gupta",
+        "designation": "Faculty, Communication and Placement Training",
+        "qualification": "Former VP, NatWest Group",
+        "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rakhi_Gupta_d129741a02.jpg",
+        "details": "Rakhi Gupta spent nearly fifteen years as a Vice President at NatWest Group (Formerly Royal Bank of Scotland), supporting a Global Head of Market Operations and nine senior business leaders managing 800+ employees across globally dispersed operations. Her work spans strategy development, organisational design, business restructuring, and performance management at a level where decisions carry consequences measured in headcount, cost, and regulatory compliance. She has led cross-functional teams across India, the UK, and beyond, and built the governance frameworks that keep large organisations honest with themselves about whether strategy is actually being executed. Before NatWest, she spent a decade at the New Zealand High Commission managing immigration policy and multi-region stakeholder engagement.",
+        "linkedin": "https://www.linkedin.com/in/rakhi-gupta-81b53935/"
+      },
+      {
+        "name": "Abhinash Jena",
+        "designation": "Faculty, Business Analytics",
+        "qualification": "Partner, Project Guru",
+        "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Abhinash_Jena_0aab506709.jpg",
+        "details": "Abhinash Jena is a business analytics practitioner, research consultant, and Partner at Project Guru, with fifteen years of experience teaching applied analytics to professionals, scholars, and students across India. He has mentored over 500 trainees in Power BI, Excel, Python, and SQL, and designed analytics programmes delivered at multiple B-Schools. He brings applied research experience across emerging sectors including advanced air mobility and eVTOL infrastructure planning in India.\n\nHis classroom starts with real business problems — students learn to frame the question, model the data, build the dashboard, and defend the decision. His assessments are AI-aware and mapped to the specific skill profiles that analytics employers search for, connecting what happens in the classroom directly to what gets students hired.",
+        "linkedin": "https://www.linkedin.com/in/abhinash-jena-05706410/"
+      }
+    ]
+  }
+}

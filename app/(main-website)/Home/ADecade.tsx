@@ -84,12 +84,25 @@ const ADecade = ({ leftContent, rightContent }: ADecadeProps) => {
             {counters.map(({ counterText, counterContent }, idx) => (
               <div
                 key={idx}
-                className="flex flex-col justify-center items-center text-center border rounded-md p-5 xl:p-0"
+                className={`flex flex-col justify-center items-center text-center  rounded-xl p-5 xl:p-0 ${
+                  idx === 0
+                    ? "bg-linear-to-br from-[#001732] to-[#7087A8]"
+                    : idx === 3
+                      ? "bg-linear-to-br from-[#7087A8] to-[#001732]"
+                      : idx === 1
+                        ? "bg-linear-to-tr from-[#7087A8] to-[#001732]"
+                        : idx === 2
+                          ? "bg-linear-to-bl from-[#7087A8] to-[#001732]"
+                          : ""
+                }`}
               >
-                <span className="text-2xl sm:text-4xl lg:text-5xl font-semibold text-black">
+                <span
+                  className="text-2xl sm:text-4xl lg:text-5xl  font-bold text-white"
+                  // style={{ fontFamily: "sans-serif" }}
+                >
                   {counterText}
                 </span>
-                <span className="text-sm xl:text-lg 2xl:text-lg font-normal leading-[1.3] text-black  sm:w-[54%] lg:w-[67%]">
+                <span className="text-sm xl:text-xl 2xl:text-xl  leading-[1.3] text-white  sm:w-[54%] lg:w-[67%]">
                   {counterContent}
                 </span>
               </div>

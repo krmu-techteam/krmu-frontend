@@ -6,9 +6,9 @@ const ContactEnquiries = () => {
     <section className="bg-[url(/placements/contact-bg.webp)] bg-no-repeat bg-cover bg-center py-[30px] px-4">
       <div className="max-w-[1664px] mx-auto lg:flex">
         <div className="lg:w-1/2 text-[#3d5fa5]">
-          <h4 className="leading-[1.2] text-[45px] font-semibold mb-5">
+          <h2 className="leading-[1.2] text-[45px] font-semibold mb-5">
             Contact and Inquiries
-          </h4>
+          </h2>
           <p className="mb-5">
             For any queries related to placements, internship opportunities, or
             industry collaborations, please reach out to our dedicated Career

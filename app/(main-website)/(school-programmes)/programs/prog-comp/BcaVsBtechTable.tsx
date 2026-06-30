@@ -3,11 +3,11 @@ export default function BcaVsBtechTable() {
     <div className="pt-5">
       <div className="px-4">
         <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center">
-          BCA vs B.Tech (Computer Science) Comparison
+          BCA vs B.Tech. (Computer Science) Comparison
         </h2>
 
         <p className="text-gray-600 text-center mb-6 max-w-3xl mx-auto">
-          Choosing between BCA and B.Tech in Computer Science? Here’s a quick
+          Confused between BCA and B.Tech. in Computer Science? Here’s a quick
           comparison to help you decide.
         </p>
 
@@ -18,7 +18,7 @@ export default function BcaVsBtechTable() {
                 <th className="px-6 py-4 text-sm font-semibold">Parameter</th>
                 <th className="px-6 py-4 text-sm font-semibold">BCA</th>
                 <th className="px-6 py-4 text-sm font-semibold">
-                  B.Tech Computer Science
+                  B.Tech. Computer Science
                 </th>
               </tr>
             </thead>
@@ -59,7 +59,7 @@ export default function BcaVsBtechTable() {
               <tr className="hover:bg-gray-50">
                 <td className="px-6 py-4 font-medium">Higher Studies</td>
                 <td className="px-6 py-4">Usually MCA</td>
-                <td className="px-6 py-4">Can directly pursue M.Tech/MS</td>
+                <td className="px-6 py-4">Can directly pursue M.Tech./MS</td>
               </tr>
 
               <tr className="hover:bg-gray-50">

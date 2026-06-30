@@ -20,9 +20,9 @@ const OnGoing = () => {
           <RISlide slide={onGoingImgSlies} />
         </div>
         <div className="lg:w-1/2">
-          <h3 className="text-3xl md:text-[44px] text-[#3d5fa5] font-semibold mb-5 leading-[1.2]">
+          <h2 className="text-3xl md:text-[44px] text-[#3d5fa5] font-semibold mb-5 leading-[1.2]">
             Ongoing Projects and <br /> Collaborations
-          </h3>
+          </h2>
           <p>
             Our University takes pride in actively promoting research endeavors
             among both faculty and students. At K. R. Mangalam University, we

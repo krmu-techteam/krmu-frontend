@@ -431,7 +431,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
   "bachelor-of-physiotherapy-bpt": {
     ...defaultCinematicConfig,
     bgUrl:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bachelor_of_physiotherapy_bpt_a61a61c1ec.jpg",
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bachelor_of_physiotherapy_bpt_fa1bcf54b9.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
   "ba-hon-english": {
@@ -474,6 +474,252 @@ export const heroConfigs: Record<string, HeroConfig> = {
     ...defaultCinematicConfig,
     bgUrl:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ba_hons_political_science_21b55797c1.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "ba-hons-psychology": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ba_hons_psychology_edf8d5438f.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "ma-economics": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/M_A_Economics_0f70f674f0.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-in-psychology": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Ph_D_in_Psychology_c8b90c4d1c.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-english-literature-studies": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Ph_D_in_English_f5f350cb52.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-economics": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Ph_D_in_Economics_30727ee703.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bsc-hons-agriculture": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_agriculture_6bb52cea5a.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bachelor-of-education-b-ed": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bachelor_of_education_b_ed_26022e26f5.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bachelor-elementary-education-b-el-ed": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bachelor_elementary_education_b_el_ed_9e8b20200a.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "ma-education": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ma_education_0f846e9878.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-education": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_education_215b1ad988.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bhmct-hotel-management": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bhmct_hotel_management_9bad95b93e.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  bjmc: {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bjmc_b7ac71f1ca.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bjmc-hons-research": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bjmc_hons_research_2834882620.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "mjmc-masters-journalism-mass-communication": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/mjmc_masters_journalism_mass_communication_5cedfae3da.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-journalism-mass-communication": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_journalism_mass_communication_fb2ff0e833.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "b-sc-hons-with-research-physics": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_sc_hons_with_research_physics_4b4cff3f5e.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bsc-hons-chemistry-research": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_chemistry_research_73789a819d.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bsc-hons-hons-maths-research": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_hons_maths_research_f0b8f57512.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bsc-hons-forensic-science-research": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_forensic_science_98222ef944.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "dual-degree-bsc-mscforensic-science": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/dual_degree_bsc_mscforensic_science_3030baec59.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "m-sc-part-time": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/m_sc_part_time_cd5b3c0f80.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "m-sc-forensic-science": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/m_sc_forensic_science_781cbf138c.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-forensic-science": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_forensic_science_51ed045a7b.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-physics": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_physics_df5ffd4cb0.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-mathematics": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_mathematics_236f3cca77.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "phd-chemistry": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_chemistry_0d286f9bc0.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "barch-architecture": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/barch_architecture_fec73c8a5a.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bfa-fine-arts": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bfa_fine_arts_693142ea65.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bachelor-of-design-b-des-fashion-design": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bachelor_of_design_b_des_fashion_design_4c2664c491.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bdes-interior-design": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bdes_interior_design_860ff25463.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bdes-game-animation": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bdes_game_animation_f2c444ec17.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bachelor-of-design-ux-ui-interaction-design": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bachelor_of_design_ux_ui_interaction_design_2b4050cc1c.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "master-of-design-m-des-interior-design": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/master_of_design_m_des_interior_design_b339cceb62.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "ba-hons-hons-political-science-research": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ba_hons_hons_political_science_research_feb550d3cf.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "ba-hons-hons-liberal-arts-research": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ba_hons_hons_liberal_arts_research_8d991929b7.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "ma-english": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ma_english_e2749c7a49.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "ma-political-science": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ma_political_science_d137f0caa3.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "ma-applied-psychology": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ma_applied_psychology_c0cc6ec962.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bsc-forensic-science": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_forensic_science_f027afd435.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bba-hons-hons-with-research-analytics": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Hons_with_Research_Business_Intelligence_and_Analytics_in_knowledge_partnership_with_EY_India_a86277fccc.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
+  "bsc-hons-data-science": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_data_science_ebc3c05707.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
 };

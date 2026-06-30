@@ -43,7 +43,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -562,13 +562,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "5 Specialisations",
   title: "KRMU’s Design Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -615,27 +612,23 @@ export const programmeContent = {
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
-    {
-      id: "5",
-      tag: "",
-      title: "M. Design (Interior Design)**",
-      subtitle: "",
-      desc: "Hone skills in spatial planning, aesthetics, sustainable design, 3D visualisation, and innovative interior solutions.",
-      duration: "2 Years",
-      fees: "200000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "A qualifying degree in Design/ Fine Arts or in any stream with 50% aggregate marks.",
-    },
+    // {
+    //   id: "5",
+    //   tag: "",
+    //   title: "M. Design (Interior Design)**",
+    //   subtitle: "",
+    //   desc: "Hone skills in spatial planning, aesthetics, sustainable design, 3D visualisation, and innovative interior solutions.",
+    //   duration: "2 Years",
+    //   fees: "200000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "A qualifying degree in Design/ Fine Arts or in any stream with 50% aggregate marks.",
+    // },
   ],
 };
 
 export const eligibilityTerms = [
-  {
-    description: "** Subject to Approval"
-  },
+  // {
+  //   description: "** Subject to Approval",
+  // },
 ];
-
-
-
-

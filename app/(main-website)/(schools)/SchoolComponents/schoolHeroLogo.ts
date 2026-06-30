@@ -29,6 +29,31 @@ export const soetHerosLogos = [
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_702_bf06081d42.png",
     alternativeText: "Tata Consultancy",
   },
+  {
+    id: 7,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_726_225dcc0a67.png",
+    alternativeText: "Deloitte",
+  },
+  {
+    id: 8,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Apple_127ee571ae.png",
+    alternativeText: "Apple",
+  },
+  {
+    id: 9,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_730_6314d96092.png",
+    alternativeText: "Amazon",
+  },
+  {
+    id: 10,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_725_86f74b8606.png",
+    alternativeText: "Accenture",
+  },
+  {
+    id: 10,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Infosys_c369f2a20f.png",
+    alternativeText: "Infosys",
+  },
 ];
 
 export const sprsHerosLogos = [
@@ -334,10 +359,9 @@ export const sohmctHerosLogos = [
   },
 ];
 
-
 export const soedHerosLogos = [
   {
-    id: 1, 
+    id: 1,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/whitehatjr_a7c7bdc566.png",
     alternativeText: "White Hat Jr",
   },
@@ -366,7 +390,7 @@ export const soedHerosLogos = [
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/jei_39c5f5a573.png",
     alternativeText: "JEI",
   },
-    {
+  {
     id: 7,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/meritnation_a9206459ea.png",
     alternativeText: "Meritnation",

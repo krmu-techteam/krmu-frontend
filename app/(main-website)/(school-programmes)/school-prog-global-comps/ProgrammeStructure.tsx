@@ -30,6 +30,7 @@ type Props = {
   isYear: boolean;
   heading?: string;
   highlight?: string;
+  slug?: string;
 };
 
 const ProgrammeStructure = ({
@@ -40,6 +41,7 @@ const ProgrammeStructure = ({
   isYear,
   heading,
   highlight,
+  slug,
 }: Props) => {
   const [activeYear, setActiveYear] = useState(
     programStruct[0]?.year.toLowerCase().replace(/\s+/g, "") || "",
@@ -88,7 +90,7 @@ const ProgrammeStructure = ({
 
         <div className="relative w-full">
           {/* Programme Handbook Button - Responsive layout to prevent overlaying tabs */}
-          {currbtn?.buttonlink && (
+          {/* {currbtn?.buttonlink && (
             <div className="relative xl:absolute xl:right-0 xl:top-0 2xl:right-72 z-20 mb-6 xl:mb-0 w-full xl:w-auto flex justify-center xl:justify-start">
               <CommonLeadPopup
                 buttonText={
@@ -104,14 +106,34 @@ const ProgrammeStructure = ({
                 form_name="Programme Handbook"
               />
             </div>
-          )}
+          )} */}
 
           {/* Main Content Area - Clean stack without card boundaries to match image */}
-          <div className="xl:max-w-lg 2xl:max-w-xl flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10">
+          <div
+            className={` ${slug === "bachelor-of-physiotherapy-bpt" || slug === "barch-architecture" || slug === "ba-llb-hons" || slug === "bba-llb-hons" || slug === "integrated-bba-mba" || slug === "dual-degree-bsc-mscforensic-science" ? "md:max-w-[70%] lg:max-w-lg xl:max-w-2xl" : "xl:max-w-lg 2xl:max-w-xl"} flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10`}
+          >
             {/* Left Navigation & Content Area */}
+            {currbtn?.buttonlink && (
+              <div className="mb-5 sm:mb-3 w-full xl:w-auto flex justify-start">
+                <CommonLeadPopup
+                  buttonText={
+                    <span className="flex items-center gap-3 underline underline-offset-8">
+                      <Download className="w-5 h-5" />
+                      <span className="uppercase tracking-widest font-semibold text-sm md:text-lg underline">
+                        {currbtn?.buttontext}
+                      </span>
+                    </span>
+                  }
+                  buttonClassName="text-white flex items-center justify-center min-w-[200px]"
+                  redirectUrl={currbtn?.buttonlink || "#"}
+                  form_name="Programme Handbook"
+                  shadowGradient={false}
+                />
+              </div>
+            )}
             <div className="flex-grow flex flex-col">
               {/* Year Tabs */}
-              <div className="flex w-full overflow-x-auto no-scrollbar rounded-sm md:rounded-md">
+              <div className="flex w-full  overflow-x-auto  no-scrollbar rounded-sm md:rounded-md">
                 {programStruct.map((year) => {
                   const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                   const isYearActive = activeYear === yearValue;
@@ -130,7 +152,7 @@ const ProgrammeStructure = ({
                           );
                         }
                       }}
-                      className={`flex-1 px-4 md:px-8 py-4 text-sm lg:text-[16px] 2xl:text-lg font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
+                      className={`flex-1 px-4 py-4 text-sm lg:text-[16px] 2xl:text-lg font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
                       ${
                         isYearActive
                           ? "bg-[#051730] text-white"
@@ -176,7 +198,7 @@ const ProgrammeStructure = ({
               </div>
 
               {/* Subjects List - Transparent Glass Area as per screenshot */}
-              <div className="flex-grow py-6 overflow-y-auto min-h-[400px] max-h-[400px] bg-transparent no-scrollbar">
+              <div className="flex-grow py-6 h-[auto]  bg-transparent no-scrollbar">
                 {programStruct.map((year) => {
                   const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                   if (activeYear !== yearValue) return null;
@@ -215,7 +237,7 @@ const ProgrammeStructure = ({
                                           value="content"
                                           className="border-none"
                                         >
-                                          <AccordionTrigger className="py-2 hover:no-underline group">
+                                          <AccordionTrigger className="accordianSVG py-2 hover:no-underline group">
                                             <div className="flex items-center gap-4 text-left">
                                               <CircleArrowRight
                                                 size={22}

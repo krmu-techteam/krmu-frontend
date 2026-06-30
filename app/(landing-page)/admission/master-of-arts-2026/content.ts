@@ -762,50 +762,48 @@ export const comeToLifeData: ComeToLifeSection = {
   ],
 };
 
-
 export const programmeContent = {
   badge: "5 Specialisations",
   title: "KRMU’s M.A. Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
-    {
-      id: "1",
-      tag: "English Studies",
-      title: "M.A. English",
-      subtitle: "",
-      desc: "Develops skills in literature and theory, preparing students for academia, media, and publishing careers.",
-      duration: "2 Years",
-      fees: "120000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "Passed Bachelor's with 50% aggregate marks.",
-    },
-    {
-      id: "2",
-      tag: "Economic Analysis",
-      title: "M.A. Economics",
-      subtitle: "",
-      desc: "Builds foundations in theory, analysis, and policy, developing skills for careers in research, banking, and analytics.",
-      duration: "2 Years",
-      fees: "120000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "Passed Bachelor's with 50% aggregate marks.",
-    },
-    {
-      id: "3",
-      tag: "Political Insights",
-      title: "M.A. Political Science**",
-      subtitle: "",
-      desc: "Gain expertise in political theory, governance, and public policy, developing skills for administration and academia careers.",
-      duration: "2 Years",
-      fees: "125000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "Passed Bachelor's with 50% aggregate marks.",
-    },
+    // {
+    //   id: "1",
+    //   tag: "English Studies",
+    //   title: "M.A. English",
+    //   subtitle: "",
+    //   desc: "Develops skills in literature and theory, preparing students for academia, media, and publishing careers.",
+    //   duration: "2 Years",
+    //   fees: "120000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "Passed Bachelor's with 50% aggregate marks.",
+    // },
+    // {
+    //   id: "2",
+    //   tag: "Economic Analysis",
+    //   title: "M.A. Economics",
+    //   subtitle: "",
+    //   desc: "Builds foundations in theory, analysis, and policy, developing skills for careers in research, banking, and analytics.",
+    //   duration: "2 Years",
+    //   fees: "120000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "Passed Bachelor's with 50% aggregate marks.",
+    // },
+    // {
+    //   id: "3",
+    //   tag: "Political Insights",
+    //   title: "M.A. Political Science**",
+    //   subtitle: "",
+    //   desc: "Gain expertise in political theory, governance, and public policy, developing skills for administration and academia careers.",
+    //   duration: "2 Years",
+    //   fees: "125000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "Passed Bachelor's with 50% aggregate marks.",
+    // },
     {
       id: "4",
       tag: "Applied Psychology",
@@ -834,7 +832,7 @@ export const programmeContent = {
 };
 
 export const eligibilityTerms = [
-  {
-    description: "** Subject to Approval"
-  },
+  // {
+  //   description: "** Subject to Approval",
+  // },
 ];

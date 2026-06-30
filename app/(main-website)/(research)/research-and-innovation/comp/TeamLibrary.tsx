@@ -4,7 +4,7 @@ const TeamLibrary = () => {
   const libSlide = [
     {
       imgUrl: "/library/Hela.jpg",
-      content: ` <h1>Dr. Helaluddin (Ph.D.)</h1>
+      content: ` <h5>Dr. Helaluddin (Ph.D.)</h5>
         <ul>
           <li>University Librarian</li>
           <li>University Nodal Officer to IRINS/UGC</li>
@@ -14,28 +14,28 @@ const TeamLibrary = () => {
     },
     {
       imgUrl: "/library/shaida.jpg",
-      content: `<h1>Mr. Shaida Husain</h1>
+      content: `<h5>Mr. Shaida Husain</h5>
       <ul>
               <li>Assistant Librarian</li>
             </ul>`,
     },
     {
       imgUrl: "/library/akhilesh.jpg",
-      content: `<h1>Mr. Akhilesh Kumar Singh</h1>
+      content: `<h5>Mr. Akhilesh Kumar Singh</h5>
       <ul>
               <li>Professional Assistant</li>
             </ul>`,
     },
     {
       imgUrl: "/library/manmohan.jpg",
-      content: `<h1>Mr. Manmohan Das</h1>
+      content: `<h5>Mr. Manmohan Das</h5>
       <ul>
               <li>Professional Assistant</li>
             </ul>`,
     },
     {
       imgUrl: "/library/kapil.jpg",
-      content: `<h1>Mr. Kapil Dev</h1>
+      content: `<h5>Mr. Kapil Dev</h5>
       <ul>
               <li>Library Assistant</li>
             </ul>`,
@@ -44,9 +44,9 @@ const TeamLibrary = () => {
 
   return (
     <div className="max-w-[1664px] mx-auto w-full">
-      <h3 className="text-3xl mb-5 lg:mb-0 md:text-5xl font-semibold text-white">
+      <h2 className="text-3xl mb-5 lg:mb-0 md:text-5xl font-semibold text-white">
         Team Library
-      </h3>
+      </h2>
       <div className="profile-card">
         {libSlide &&
           libSlide?.map((item, i) => {

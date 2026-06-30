@@ -760,7 +760,7 @@ export const programmeContent = {
     },
     {
       id: "2",
-      tag: "EY",
+      tag: "EY India",
       title: "MBA Fintech",
       subtitle: "",
       desc: "Prepares students for careers in technology-enabled finance, focusing on AI-driven financial products and services.",

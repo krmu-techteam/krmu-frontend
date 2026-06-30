@@ -17,6 +17,21 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Amit-Chawla.png",
   },
   {
+    id: 115349,
+    slug: "dr-manav-sharma",
+    title: {
+      rendered: "Dr. Manav Sharma",
+    },
+    featured_media: 100052,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1009],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr-Manav-Sharma.png",
+  },
+  {
     id: 1028,
     slug: "mr-ritwik-ghosh",
     title: {
@@ -44,7 +59,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Sarina.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Sarina.png",
   },
   // {
   //   id: 10769,
@@ -74,7 +89,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Ritika-Choudhary.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Ritika-Choudhary.png",
   },
   {
     id: 10767,
@@ -89,7 +104,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Ms.-Aditi-Agarwal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Ms.-Aditi-Agarwal.png",
   },
   {
     id: 113711,
@@ -104,7 +119,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Yashika-Khandelwal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Yashika-Khandelwal.png",
   },
   {
     id: 113871,
@@ -119,7 +134,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Aditi-Khare.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Aditi-Khare-1.png",
   },
 
   {
