@@ -21,4 +21,3 @@ export interface CareerGoalContentType {
 export interface CareerGoalPageContentType {
   careerGoal: CareerGoalContentType;
 }
-

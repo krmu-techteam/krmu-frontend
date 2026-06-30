@@ -2,9 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
-import { getContent } from "../lib/getContent";
+// import { getContent } from "../lib/getContent";
 import { Playfair_Display } from "next/font/google";
 import { HeroPageContentType } from "../types/contentHero";
+import { HeroSection } from "@/lib/types/school-programme";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -15,9 +16,10 @@ const playfair = Playfair_Display({
 type Props = {
   formId?: string;
   dataContent?: HeroPageContentType | null;
+  heroSection: HeroSection;
 };
 
-const NewHeroSection = ({ formId, dataContent }: Props) => {
+const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
   const data = dataContent;
   if (!data || !data.hero) return null;
   const hero = data.hero;
@@ -28,11 +30,11 @@ const NewHeroSection = ({ formId, dataContent }: Props) => {
   const secondaryButton =
     hero.button.find((btn) => btn.variant === "secondary") || hero.button[1];
 
-  // Fallback formId if not provided (e.g. standard KRMU formId or fallback)
-  const finalFormId = formId || "2282";
-
   return (
-    <section className="relative w-full bg-[radial-gradient(50%_50%_at_50%_50%,#024178_0%,#012D52_50%,#012D52_100%)] text-white pt-20 pb-0 sm:pt-24 md:pt-28 lg:pt-30 overflow-hidden flex flex-col justify-between min-h-[520px] sm:min-h-[600px] lg:min-h-[700px]">
+    <section
+      id="hero-section"
+      className="relative w-full bg-[radial-gradient(50%_50%_at_50%_50%,#024178_0%,#012D52_50%,#012D52_100%)] text-white pt-20 pb-0 sm:pt-24 md:pt-28 lg:pt-30 overflow-hidden flex flex-col justify-between min-h-[520px] sm:min-h-[600px] lg:min-h-[700px]"
+    >
       <div className="max-w-[1440px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col-reverse lg:flex-row items-start justify-between gap-8 sm:gap-10 lg:gap-8 py-8 sm:py-10 lg:py-16 mb-4 sm:mb-6">
         {/* Left Content Column */}
         <div className="w-full lg:w-[50%] flex flex-col text-left">
@@ -55,26 +57,28 @@ const NewHeroSection = ({ formId, dataContent }: Props) => {
 
           {/* Buttons */}
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-6 ">
-            {primaryButton &&
-              (finalFormId ? (
-                <NpfPopup
-                  formId={finalFormId}
-                  btnClass="bg-[#DE0000] hover:bg-[#b30000] text-white font-semibold text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 shadow-lg shadow-black/30 whitespace-nowrap"
-                  btnText={primaryButton.title}
-                  showIcon={false}
-                />
-              ) : (
-                <Link
-                  href={primaryButton.link}
-                  className="bg-[#DE0000] hover:bg-[#b30000] text-white font-semibold text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 shadow-lg shadow-black/30 text-center whitespace-nowrap"
-                >
-                  {primaryButton.title}
-                </Link>
-              ))}
+            {/* {formId && (
+              <NpfPopup
+                formId={formId}
+                btnClass="bg-[#DE0000] hover:bg-[#b30000] text-white font-semibold text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 shadow-lg shadow-black/30 whitespace-nowrap"
+                btnText={primaryButton.title}
+                showIcon={false}
+              />
+            )} */}
+
+            {formId && (
+              <NpfPopup
+                formId={formId}
+                btnClass={`bg-[#DE0000] hover:bg-[#b30000] text-white font-semibold text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 shadow-lg shadow-black/30 whitespace-nowrap ${heroSection.herobtn.buttonclass || ""}`}
+                btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
+                showIcon={false}
+              />
+            )}
 
             {secondaryButton && (
               <Link
                 href={secondaryButton.link}
+                target="_blank"
                 className="border border-white hover:border-white hover:bg-white/10 text-white font-medium text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 text-center whitespace-nowrap"
               >
                 {secondaryButton.title}
@@ -123,6 +127,7 @@ const NewHeroSection = ({ formId, dataContent }: Props) => {
           {hero.banner.linkText && hero.banner.link && (
             <Link
               href={hero.banner.link}
+              target="_blank"
               className="underline hover:text-slate-100 transition-colors inline-flex items-center gap-1"
             >
               {hero.banner.linkText}

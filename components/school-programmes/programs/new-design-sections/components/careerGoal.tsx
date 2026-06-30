@@ -22,7 +22,7 @@ const fraunces = Fraunces({
 
 type Props = {
   slug: string;
-  dataContent: CareerGoalPageContentType | null;
+  dataContent?: CareerGoalPageContentType | null;
 };
 
 const CareerGoal = ({ slug, dataContent }: Props) => {

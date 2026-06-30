@@ -3,6 +3,7 @@
 import React from "react";
 import { getThreeIndustryTracksContent } from "../lib/getContent";
 import { Fraunces, Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,20 +43,20 @@ const ThreeIndustryTracks = () => {
         {/* Side-by-side CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4 w-full sm:w-auto">
           {/* Primary CTA */}
-          <a
+          <Link
             href={content.primaryCta.link}
             className={`${inter.className} bg-[#DE0000] hover:bg-[#b30000] text-white font-medium text-sm sm:text-[16px] px-4 py-2 rounded-[5px] transition-all duration-300  w-full sm:w-auto text-center cursor-pointer`}
           >
             {content.primaryCta.text}
-          </a>
+          </Link>
 
           {/* Secondary CTA */}
-          <a
-            href={content.secondaryCta.link}
+          <Link
+            href={`tel:${content.secondaryCta.link}`}
             className={`${inter.className} border border-[#A4A4A4] bg-[#012D52] hover:bg-white/10 text-white font-medium text-sm sm:text-[16px] px-4 py-2 rounded-[5px] transition-all duration-300 w-full sm:w-auto text-center cursor-pointer`}
           >
             {content.secondaryCta.text}
-          </a>
+          </Link>
         </div>
 
         {/* Footer Contact Line */}
@@ -63,12 +64,12 @@ const ThreeIndustryTracks = () => {
           className={`${inter.className} text-xs sm:text-[12px] text-white mt-2`}
         >
           Prefer WhatsApp or a call?{" "}
-          <a
+          <Link
             href={`tel:${content.phoneNumber}`}
             className="text-white font-bold hover:underline transition-all"
           >
             +91 93114 11717
-          </a>{" "}
+          </Link>{" "}
           · Response within 24 hours
         </div>
       </div>

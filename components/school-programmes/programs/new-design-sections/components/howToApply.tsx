@@ -5,6 +5,9 @@ import { getHowToApplyContent } from "../lib/getContent";
 import { Fraunces, Inter } from "next/font/google";
 import { Check } from "lucide-react";
 import { GraduationCap } from "lucide-react";
+import Link from "next/link";
+import { HeroSection } from "@/lib/types/school-programme";
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,7 +21,12 @@ const fraunces = Fraunces({
   style: ["italic", "normal"],
 });
 
-const HowToApply = () => {
+type Props = {
+  formId?: string;
+  heroSection?: HeroSection;
+};
+
+const HowToApply = ({ formId, heroSection }: Props) => {
   const data = getHowToApplyContent();
   const content = data.howToApply;
 
@@ -125,17 +133,28 @@ const HowToApply = () => {
 
             {/* CTA Button and Admissions Counsellor Info */}
             <div className="mt-4 flex flex-col items-start gap-4">
-              <a
+              {/* <Link
                 href={content.cta.buttonLink}
                 className={`${inter.className} bg-[#DE0000] hover:bg-[#b30000] text-white text-sm sm:text-[19px] px-6 py-3.5 rounded-[5px] transition-all duration-300 shadow-md hover:shadow-lg inline-block w-full sm:w-auto text-center cursor-pointer`}
               >
                 {content.cta.buttonText}
-              </a>
+              </Link> */}
+              {formId && (
+                <NpfPopup
+                  formId={formId}
+                  btnClass={`${inter.className} bg-[#DE0000] hover:bg-[#b30000] text-white text-sm sm:text-[19px] px-6 py-3.5 rounded-[5px] transition-all duration-300 shadow-md hover:shadow-lg inline-block w-full sm:w-auto text-center cursor-pointer ${heroSection?.herobtn?.buttonclass || ""}`}
+                  btnText={`${content.cta.buttonText}`}
+                  showIcon={false}
+                />
+              )}
+
               <span
                 className={`${inter.className} text-xs sm:text-[16px] text-black`}
               >
                 or call an admissions counsellor –{" "}
-                <a href={`tel:${content.cta.phoneNumber}`}>+91 93114 11717</a>
+                <Link href={`tel:${content.cta.phoneNumber}`}>
+                  +91 93114 11717
+                </Link>
               </span>
             </div>
           </div>
