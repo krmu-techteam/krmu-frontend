@@ -7,7 +7,7 @@ import { useState } from "react";
 import ScrollButton from "@/app/(landing-page)/admission/CommonComponent2026/ScrollButton";
 const menus = [
   {
-    name: "Why Choose?",
+    name: "Why Choose Us",
     href: "#why-choose",
   },
   {
@@ -19,7 +19,7 @@ const menus = [
     href: "#facilities",
   },
   {
-    name: "Faq's",
+    name: "FAQs",
     href: "#faqs",
   },
 ];

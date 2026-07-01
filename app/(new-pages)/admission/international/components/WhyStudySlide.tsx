@@ -15,13 +15,13 @@ const WhyStudySlide = () => {
       <Carousel
         opts={{
           align: "start",
-          loop: true,
+          // loop: true,
         }}
         className="w-full"
       >
-        <div className="absolute -bottom-11 sm:-top-14 xl:-top-20 right-5 flex gap-4 z-20 w-[130px] h-12">
-          <CarouselPrevious className="left-0 text-white bg-transparent border-4 border-white w-12 h-12 intPrevBtn disabled:border-white-[#a8bacf]" />
-          <CarouselNext className="right-0 text-white bg-transparent border-4 border-white w-12 h-12 intNextBtn" />
+        <div className="absolute -bottom-11 sm:-top-14 xl:-top-20 right-5 flex gap-4 z-20 w-[110px] h-12">
+          <CarouselPrevious className="left-0 text-white bg-transparent border-4 border-white w-12 h-12 intPrevBtn disabled:border-white-[#a8bacf] disable:bg-[#001732]" />
+          <CarouselNext className="right-0 text-white bg-transparent border-4 border-white w-12 h-12 intNextBtn disabled:border-white-[#a8bacf] disable:bg-[#001732]" />
         </div>
 
         <CarouselContent>

@@ -37,7 +37,7 @@ export default function FAQSection() {
               value={`item-${index}`}
               className="overflow-hidden rounded-xl border border-[#E3DED6] bg-white"
             >
-              <AccordionTrigger className="text-base sm:text-lg font-bold font-poppins leading-tight px-5">
+              <AccordionTrigger className="text-base sm:text-lg font-bold font-poppins leading-tight px-5 hover:no-underline cursor-pointer">
                 {faq.question}
               </AccordionTrigger>
 
@@ -52,7 +52,7 @@ export default function FAQSection() {
           <div className="mt-10 flex justify-center">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="rounded-md bg-[#0B2243] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#12335d]"
+              className="rounded-md bg-[#0B2243] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#12335d] cursor-pointer"
             >
               {showAll ? "Less" : "More"}
             </button>

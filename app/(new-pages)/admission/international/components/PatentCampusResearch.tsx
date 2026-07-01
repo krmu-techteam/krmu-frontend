@@ -3,7 +3,7 @@ import { internationalAdmissionHighlights } from "../constant";
 
 const PatentCampusResearch = () => {
   return (
-    <section className="py-[50px] px-5 bg-[linear-gradient(101.26deg,#001732_42.76%,#004698_125.45%)]">
+    <section className="py-[50px] px-5 bg-[linear-gradient(101.26deg,#001732_42.76%,#004698_125.45%)] z-40 relative">
       <div className="max-w-[1427px] mx-auto w-full flex flex-col md:flex-row items-baseline gap-5 md:gap-0">
         <div className="w-full md:w-1/3 text-white">
           <h4 className="text-3xl font-fraunces mb-5">

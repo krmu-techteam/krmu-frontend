@@ -10,7 +10,7 @@ export default function ProgrammeTabs() {
 
   return (
     <section className="bg-[#F5F2EC] relative" id="programmes">
-      <div className="absolute inset-0 bg-[#001732] w-[20%] 2xl:w-[28%] h-full hidden lg:block"></div>
+      <div className="absolute inset-0 bg-[#001732] w-[20%] 2xl:w-[28%] h-full hidden lg:block programtab-blue-div"></div>
         <div className="overflow-hidden bg-[#F5F2EC] lg:flex max-w-[1486px] mx-auto">
           {/* ================= LEFT SIDEBAR ================= */}
 
