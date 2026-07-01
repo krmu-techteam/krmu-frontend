@@ -8,38 +8,38 @@ const BenefitOfStudy = () => {
           <h4 className="text-2xl sm:text-[28px] font-extrabold mb-5">
             Benefits of Studying in Gurugram
           </h4>
-          <ul className="xl:text-base font-poppins font-medium space-y-3">
-            <li className="flex items-center gap-2">
+          <ul className="xl:text-base font-poppins font-semibold">
+            <li className="flex items-center gap-2 leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Home to numerous Fortune 500 companies
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Leading technology and startup ecosystem
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Excellent connectivity through metro, road, and airport
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Strong internship and placement opportunities
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Safe and modern urban infrastructure
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>

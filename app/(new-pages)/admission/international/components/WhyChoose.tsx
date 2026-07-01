@@ -16,6 +16,7 @@ const WhyChoose = () => {
         xl:pt-[542px]
         sm:-mt-20
         lg:-mt-40
+        internation-admission-section
       "
       id="why-choose"
     >

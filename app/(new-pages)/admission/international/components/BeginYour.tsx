@@ -24,9 +24,9 @@ const BeginYour = ({ data, formId }: Props) => {
       </div>
 
       <div className="max-w-[1400px] mx-auto w-full">
-        <div className="flex flex-col lg:flex-row gap-14 items-start">
+        <div className="flex flex-col lg:flex-row gap-14">
           {/* LEFT CONTENT */}
-          <div className="text-white w-full lg:w-2/3">
+          <div className="text-white w-full lg:w-2/3 overflow-hidden">
             <h1
               className="text-2xl md:text-4xl xl:text-5xl font-bold leading-tight mb-6"
               dangerouslySetInnerHTML={{ __html: data.heading }}
@@ -50,7 +50,7 @@ const BeginYour = ({ data, formId }: Props) => {
                 width={data.mapImage.width}
                 height={data.mapImage.height}
                 alt={data.mapImage.alt}
-                className="rounded-lg w-full"
+                className="rounded-lg w-full h-[420px] object-cover"
               />
             </div>
           </div>
@@ -92,7 +92,7 @@ const BeginYour = ({ data, formId }: Props) => {
       </div>
       <div className="max-w-[1400px] mx-auto border-2 border-[#263e51] p-10 text-center text-white rounded-3xl mt-10">
         <h6 className="max-w-[860px] mx-auto mb-5 text-[42px] font-semibold font-poppins">
-          Apply for International Admission at K.R. Mangalam University Today
+          Apply for International Admission at <br /> K.R. Mangalam University Today
         </h6>
         <p className="mb-7 font-poppins text-2xl">
           Industry-Aligned Courses | Top Recruiters | Global Exposure

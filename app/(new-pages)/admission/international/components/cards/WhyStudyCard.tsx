@@ -24,7 +24,7 @@ const WhyStudyCard = ({
 
       <div className="bg-[#edece4] pt-10 pb-5 px-5 font-poppins -mt-5 h-auto lg:h-[200px] rounded-b-xl">
         <h5 className="font-bold leading-tight mb-2 text-sm">{title}</h5>
-        <p className="leading-tight text-justify">{description}</p>
+        <p className="leading-tight text-justify text-base">{description}</p>
       </div>
     </div>
   );

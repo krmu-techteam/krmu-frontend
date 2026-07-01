@@ -14,7 +14,7 @@ const PatentCampusResearch = () => {
           </p>
         </div>
         <div className="w-full md:w-1/3 text-white md:border-x border-white/20 md:px-10">
-          <div>
+          <div className="py-8">
             <h4 className="text-3xl font-fraunces mb-5">
               35+ Acre Green <br className="hidden md:block" /> Campus
             </h4>

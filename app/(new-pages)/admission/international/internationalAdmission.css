@@ -91,6 +91,9 @@
   .why-choose-girl {
     right: 0;
   }
+  .internation-admission-section{
+    background-position-x: -235px;
+  }
 }
 
 @media(min-width: 2560px){
@@ -104,7 +107,10 @@
     top: 45px;
     left: 70px;
   }
-
+  .why-choose-girl {
+    right: 4px;
+    bottom: -55px;
+  }
   .outer-right-container,
   .form-white-container {
     height: 700px;

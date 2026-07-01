@@ -10,7 +10,7 @@ const HeroSection = ({ formId }: Props) => {
         <div className="relative z-30 w-full">
           <div className="text-center">
             <h3 className="text-center font-poppins font-bold text-xl">
-              <span className="text-[#001732]">
+              <span className="text-[#001732] px-5 inline-block">
                 Apply for International Admission Here
               </span>{" "}
               {/* <br /> at K.R. Mangalam University Today */}
@@ -19,7 +19,7 @@ const HeroSection = ({ formId }: Props) => {
           <NoPaperFormsWidget widgetId={formId} height="600px" />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row items-center gap-10 max-w-[1664px] mx-auto">
+      <div className="flex flex-col md:flex-row items-center gap-10 max-w-[1427px] mx-auto">
         <div className="w-full md:w-1/2 xl:w-9/12 flex items-start left-container">
           <div className="w-full xl:w-[55%] 2xl:w-3/5 col-1">
             <h1 className="font-host text-5xl md:text-6xl xl:text-8xl font-extrabold mb-5 leading-none main-heading text-[#001732]">
@@ -42,7 +42,7 @@ const HeroSection = ({ formId }: Props) => {
               <span className="text-4xl xl:text-6xl text-[#001732] font-bold font-fraunces heading-1">
                 Up to
               </span>
-              <p className="text-6xl xl:text-9xl leading-none text-[#E11F23] font-bold font-fraunces heading-2">
+              <p className="text-6xl xl:text-8xl leading-none text-[#E11F23] font-bold font-fraunces heading-2">
                 60<span className="font-light">%</span>
               </p>
               <span className="text-3xl xl:text-[40px] text-[#001732] font-bold font-fraunces heading-3">
@@ -56,7 +56,7 @@ const HeroSection = ({ formId }: Props) => {
               <span className="text-6xl text-[#001732] font-bold font-fraunces heading-1">
                 Up to
               </span>
-              <p className="text-9xl leading-none text-[#E11F23] font-bold font-fraunces heading-2">
+              <p className="text-[111px] leading-none text-[#E11F23] font-bold font-fraunces heading-2">
                 60<span className="font-light">%</span>
               </p>
               <span className="text-[40px] text-[#001732] font-bold font-fraunces heading-3">
@@ -64,7 +64,7 @@ const HeroSection = ({ formId }: Props) => {
               </span>
   <p
   className="
-   bg-[linear-gradient(347.33deg,_#CAC492_9.54%,_#CB000D_68.63%)]
+   bg-[linear-gradient(90deg,_#CAC492_0%,_#CB7059_43%,_#CB000D_100%)]
     bg-clip-text
     text-transparent
     [-webkit-background-clip:text]
@@ -87,7 +87,7 @@ const HeroSection = ({ formId }: Props) => {
           <div className="relative z-30 w-full pt-5 sm:pt-0 sm:p-4 md:p-5 xl:hidden">
             <div className="text-center">
               <h3 className="text-center font-poppins font-bold text-sm sm:text-base md:text-lg xl:text-2xl">
-                <span className="text-black">
+                <span className="text-black px-5 inline-block">
                    Apply for International Admission Here
                 </span>{" "}
                 {/* <br /> at K.R. Mangalam University Today */}
