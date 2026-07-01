@@ -123,7 +123,20 @@ const page = async ({ params }: Props) => {
   }
 
   const $ = cheerio.load(facultyContent);
-  const interestHTML = $(".interest-lists").prop("outerHTML") || "";
+  let interestHTML = $(".interest-lists").prop("outerHTML") || "";
+
+  // Replace h3 with h2 in interestHTML
+  if (interestHTML) {
+    const $interest = cheerio.load(interestHTML);
+    $interest("h3").each((_, el) => {
+      const $el = $interest(el);
+      const h2 = $interest("<h2>")
+        .append($el.contents())
+        .attr("class", $el.attr("class"));
+      $el.replaceWith(h2);
+    });
+    interestHTML = $interest.html() || interestHTML;
+  }
 
   const socialItems: {
     type: "email" | "linkedin" | "phone" | "link";
@@ -299,7 +312,7 @@ const page = async ({ params }: Props) => {
                             }
                             width={32}
                             height={32}
-                            alt="LinkedIn"
+                            alt="Mail"
                             className=""
                             unoptimized
                           />

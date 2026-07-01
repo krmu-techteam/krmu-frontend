@@ -270,7 +270,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
       schools: [1152],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Minhaj-Ahmed-Khan.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/07/Dr.-Minhaj-Ahmed-Khan.jpg",
   },
   {
     id: 54739,
@@ -362,7 +362,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
       schools: [1152],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Mr.-Amit-Kumar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Mr.-Amit-Kumar.jpg",
   },
   {
     id: 10804,

@@ -199,22 +199,53 @@ const Admission2Search = () => {
         return;
       }
       if (query.length > 0) {
-        // SEARCH MODE
-        if (degreeRefValue.current === "doctoral-programmes") {
-          const res = await searchPhdProgrammes("", 1, 1000);
-          const allData = res.data || [];
-          newData = allData.filter((item) =>
-            normalize(item.heading).includes(normalize(query)),
-          );
-        } else {
-          const res = await searchSchoolProgrammes("", 1, 1000);
-          const allData = res.data || [];
-          newData = allData.filter((item) =>
-            normalize(item.title).includes(normalize(query)),
-          );
-        }
+        // SEARCH MODE — search across UG, PG and PhD programmes together
+        const [schoolRes, phdRes] = await Promise.all([
+          searchSchoolProgrammes("", 1, 1000),
+          searchPhdProgrammes("", 1, 1000),
+        ]);
+        const normalizedQuery = normalize(query);
+        const filteredPhd = (phdRes.data || []).filter((item) =>
+          normalize(item.heading).includes(normalizedQuery),
+        );
+        const filteredSchool = (schoolRes.data || []).filter((item) =>
+          normalize(item.title).includes(normalizedQuery),
+        );
+        // PhD records take priority; drop school-programme rows whose
+        // normalized title collides with a PhD heading (stale duplicates).
+        const phdTitles = new Set(
+          filteredPhd.map((item) => normalize(item.heading)),
+        );
+        const schoolDeduped = filteredSchool.filter(
+          (item) => !phdTitles.has(normalize(item.title)),
+        );
 
-        setShowLoadMore(false); // no button in search
+        // Rank matches: whole-word match (e.g. "MA " in "MA English") > prefix
+        // match on normalized title > generic substring match.
+        const rawQuery = query.toLowerCase().replace(/\./g, "").trim();
+        const escapedQuery = rawQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const wordRe = new RegExp(`(^|\\s)${escapedQuery}(\\s|$)`);
+        const rankMatch = (title: string): number => {
+          const lowered = title.toLowerCase().replace(/\./g, "");
+          if (wordRe.test(lowered)) return 0;
+          if (normalize(title).startsWith(normalizedQuery)) return 1;
+          return 2;
+        };
+
+        const combined = [...filteredPhd, ...schoolDeduped];
+        newData = combined
+          .map((item, idx) => ({
+            item,
+            rank: rankMatch(
+              "title" in item ? item.title : (item as PhdProgramme).heading,
+            ),
+            idx,
+          }))
+          .sort((a, b) => a.rank - b.rank || a.idx - b.idx)
+          .map(({ item }) => item);
+
+        const hasMore = newData.length > 4;
+        setShowLoadMore(!loadAll && hasMore);
       } else {
         // DROPDOWN MODE
         if (degreeRefValue.current === "doctoral-programmes") {

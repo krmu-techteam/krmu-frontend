@@ -13,6 +13,7 @@ import YourJourney2 from "./(main-website)/Home/homeComp/YourJourney2";
 // import YourJourney from "./(main-website)/Home/YourJourney";
 // import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
 import {
+  createCollageOrUniversityHomepageSchema,
   createCollageOrUniversitySchema,
   createOrganizationSchema,
   createWebsiteSchema,
@@ -106,18 +107,29 @@ export default async function HomePage() {
     ],
   });
 
-  const collageOrUniversitySchema = createCollageOrUniversitySchema({
-    name: "K.R. Mangalam University",
-    alternateName: "KRMU",
-    url: "https://www.krmangalam.edu.in",
-    logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
-    sameAs: [
-      "https://www.facebook.com/krmuniv",
-      "https://www.instagram.com/krmuniv",
-      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-      "https://in.linkedin.com/school/krmuniv",
-    ],
-  });
+const collageOrUniversitySchema = createCollageOrUniversityHomepageSchema({
+  name: "K.R. Mangalam University",
+  alternateName: "KRMU",
+  url: "https://www.krmangalam.edu.in",
+  logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
+  sameAs: [
+    "https://www.facebook.com/krmuniv",
+    "https://www.instagram.com/krmuniv",
+    "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+    "https://in.linkedin.com/school/krmuniv",
+  ],
+  address: {
+    streetAddress: "Sohna Road",
+    addressLocality: "Gurugram",
+    addressRegion: "Haryana",
+    postalCode: "122103",
+    addressCountry: "IN",
+  },
+  telephone: "+91-1247198500",
+  email: "admissions@krmangalam.edu.in",
+  foundingDate: "2013",
+});
+
 
   return (
     <>

@@ -17,6 +17,36 @@ export const soasFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Prof-Dr.-J.S.Yadav-SOAS-1.png",
   },
   {
+    id: 115333,
+    slug: "dr-naveen-kumar",
+    title: {
+      rendered: "Dr. Naveen Kumar",
+    },
+    featured_media: 101437,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Professor",
+      schools: [1178],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Naveen-Kumar-SOAS.png",
+  },
+  {
+    id: 115654,
+    slug: "dr-smrutishree-sahoo",
+    title: {
+      rendered: "Dr. Smrutishree Sahoo",
+    },
+    featured_media: 101437,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1178],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Smrutishree-Sahoo-SOAS-1.png",
+  },
+  {
     id: 65251,
     slug: "dr-gajraj-yadav",
     title: {
@@ -29,7 +59,7 @@ export const soasFaculties: SchoolFacultiesType[] = [
       schools: [1178],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Gajraj-Yadav.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/gajraj.jpeg",
   },
   {
     id: 46563,

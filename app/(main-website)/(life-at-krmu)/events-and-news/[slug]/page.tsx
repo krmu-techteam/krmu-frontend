@@ -111,6 +111,7 @@ const page = async ({ params }: Props) => {
       )}
       {singleNewsEvents && (
         <NewsEventsImageContent
+          slug={slug}
           content={singleNewsEvents?.content?.rendered}
           bgSlideImageIds={singleNewsEvents?.acf?.event_images}
         />

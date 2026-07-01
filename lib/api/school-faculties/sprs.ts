@@ -5,7 +5,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 8883,
     slug: "dr-mamta-shankar",
     title: {
-      rendered: "Dr. Mamta Shankar (PT)",
+      rendered: "Ms. Mamta Shankar (PT)",
     },
     featured_media: 8884,
     acf: {
@@ -21,7 +21,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 115540,
     slug: "dr-deepak-kumar-pt",
     title: {
-      rendered: "Dr. Deepak Kumar (PT)",
+      rendered: "Mr. Deepak Kumar (PT)",
     },
     featured_media: 115540,
     acf: {
@@ -32,16 +32,16 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Deepak.png",
   },
-  
+
   {
     id: 68869,
     slug: "dr-shazia-mattu",
     title: {
-      rendered: "Dr. Shazia Mattu (PT)",
+      rendered: "Ms. Shazia Mattu (PT)",
     },
     featured_media: 101429,
     acf: {
-      "staff-qualification": "M.P.T.",
+      "staff-qualification": "Ph.D. Persuing",
       staff_designation: "Associate Professor",
       schools: [1098],
     },
@@ -52,7 +52,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 9108,
     slug: "dr-barnali-bhattacharjee",
     title: {
-      rendered: "Dr. Barnali Bhattacharjee (PT)",
+      rendered: "Ms. Barnali Bhattacharjee (PT)",
     },
     featured_media: 9109,
     acf: {
@@ -113,7 +113,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 103319,
     slug: "dr-shishir-nigam",
     title: {
-      rendered: "Dr. Shishir Nigam (PT)",
+      rendered: "Mr. Shishir Nigam (PT)",
     },
     featured_media: 106779,
     acf: {
@@ -128,7 +128,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 69976,
     slug: "dr-hemant-kumar-pt",
     title: {
-      rendered: "Dr. Hemant Kumar (PT)",
+      rendered: "Mr. Hemant Kumar (PT)",
     },
     featured_media: 101936,
     acf: {
@@ -144,7 +144,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 68853,
     slug: "dr-pt-pious-divya",
     title: {
-      rendered: "Dr. Pious Divya (PT)",
+      rendered: "Ms. Pious Divya (PT)",
     },
     featured_media: 106742,
     acf: {
@@ -174,7 +174,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 68207,
     slug: "dr-aatika-waheed",
     title: {
-      rendered: "Dr. Aatika Waheed (PT)",
+      rendered: "Ms. Aatika Waheed (PT)",
     },
     featured_media: 68220,
     acf: {
@@ -185,12 +185,12 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Dr.-Aatika-Waheed-1.png",
   },
- 
+
   {
     id: 53026,
     slug: "dr-kangana-juneja-kansal",
     title: {
-      rendered: "Dr. Kangana Juneja kansal (PT)",
+      rendered: "Ms. Kangana Juneja kansal (PT)",
     },
     featured_media: 53035,
     acf: {
@@ -202,11 +202,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/07/Dr.-Kangana-Juneja-kansal.png",
     // "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Kangana-Juneja-Kansal.png",
   },
-   {
+  {
     id: 115560,
     slug: "mr-shalender",
     title: {
-      rendered: "Mr. SHALENDER",
+      rendered: "Mr. Shalender",
     },
     featured_media: 115560,
     acf: {
@@ -215,7 +215,22 @@ export const sprsFaculties: SchoolFacultiesType[] = [
       schools: [1098],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Shailender.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Mr.-SHALENDER-SPRS.png",
+  },
+  {
+    id: 115617,
+    slug: "ms-aanchal-sharma",
+    title: {
+      rendered: "Ms. Aanchal Sharma",
+    },
+    featured_media: 115560,
+    acf: {
+      "staff-qualification": "MBA",
+      staff_designation: "Clinical Demonstrator",
+      schools: [1098],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr.-Aanchal.png",
   },
   // {
   //   id: 9172,
@@ -237,7 +252,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 9097,
     slug: "dr-shweta-kumar",
     title: {
-      rendered: "Dr. Shweta Kumar (PT)",
+      rendered: "Ms. Shweta Kumar (PT)",
     },
     featured_media: 9098,
     acf: {
@@ -252,7 +267,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 8993,
     slug: "dr-ankita-samuel",
     title: {
-      rendered: "Dr. Ankita Samuel (PT)",
+      rendered: "Ms. Ankita Samuel (PT)",
     },
     featured_media: 106768,
     acf: {
@@ -267,7 +282,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 113780,
     slug: "mansi-dewan",
     title: {
-      rendered: "Dr. Mansi Dewan (PT)",
+      rendered: "Ms. Mansi Dewan (PT)",
     },
     featured_media: 106768,
     acf: {
@@ -282,7 +297,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 115110,
     slug: "dr-aarti-belwal-pt",
     title: {
-      rendered: "Dr. Aarti Belwal (PT)",
+      rendered: "Ms. Aarti Belwal (PT)",
     },
     featured_media: 106768,
     acf: {

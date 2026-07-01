@@ -37,6 +37,8 @@ export type BlogSEO = {
   tags: string | null;
   shareImage: ImageAsset | null;
   title?: string | null;
+  description?: string;
+
 };
 
 export type BlogData = {

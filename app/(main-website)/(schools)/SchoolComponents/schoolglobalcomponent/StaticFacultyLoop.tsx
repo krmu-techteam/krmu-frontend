@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { StaticFacultyEmployeeCard } from "@/app/(main-website)/components/Cards/StaticFacultyEmployeeCard";
-import { Button } from "@/components/ui/button";
 
 // ---------- Faculty Data Imports ----------
 import { soetFaculties } from "@/lib/api/school-faculties/soet";
@@ -100,6 +99,9 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
 
   const [itemsPerLoad, setItemsPerLoad] = useState(5);
   const [visibleCount, setVisibleCount] = useState(5);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
+  // const [loading, setLoading] = useState(false);
+  const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const updateItems = () => {
@@ -114,13 +116,65 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
     return () => window.removeEventListener("resize", updateItems);
   }, []);
 
+  // Infinite Scroll with Intersection Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (
+          entries[0].isIntersecting &&
+          visibleCount < facDatas.length &&
+          !isLoadingMore
+        ) {
+          setIsLoadingMore(true);
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    if (endRef.current) {
+      observer.observe(endRef.current);
+    }
+
+    return () => {
+      if (endRef.current) {
+        observer.unobserve(endRef.current);
+      }
+    };
+  }, [visibleCount, facDatas.length, isLoadingMore]);
+
+  // Delayed batch reveal so the skeleton row remains visible briefly
+  useEffect(() => {
+    if (!isLoadingMore) return;
+
+    const timer = setTimeout(() => {
+      setVisibleCount((prev) => Math.min(prev + itemsPerLoad, facDatas.length));
+      setIsLoadingMore(false);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [isLoadingMore, facDatas.length]);
+
   if (!facDatas.length) return null;
 
-  const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + itemsPerLoad);
-  };
-
   const visibleFaculties = facDatas.slice(0, visibleCount);
+  const hasMore = visibleCount < facDatas.length;
+
+  // Initial fetch loader
+  if (isLoadingMore && visibleFaculties.length === 5)
+    return (
+      <div className="flex flex-col items-center justify-center py-20">
+        {/* Loader */}
+        <div className="relative h-14 w-14">
+          <div className="absolute inset-0 rounded-full border-4 border-gray-200"></div>
+          <div className="absolute inset-0 rounded-full border-4 border-black border-t-transparent animate-spin"></div>
+        </div>
+
+        {/* Text */}
+        <p className="mt-4 text-sm font-medium text-gray-700 animate-pulse">
+          Loading...
+        </p>
+      </div>
+    );
 
   return (
     <div>
@@ -141,17 +195,24 @@ const StaticFacultyLoop = ({ schoolCat }: Props) => {
         ))}
       </div>
 
-      {visibleCount < facDatas.length && (
-        <div className="flex justify-center mt-8">
-          <Button
-            onClick={handleLoadMore}
-            className="py-3.5 px-8 bg-[#051630] text-white font-bold cursor-pointer transition-all  relative overflow-hidden group"
-          >
-            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
-            Load More
-          </Button>
+      {/* Loading indicator while next batch is being prepared */}
+      {isLoadingMore && hasMore && (
+        <div className="flex flex-col items-center justify-center py-14">
+          {/* Loader */}
+          <div className="relative h-14 w-14">
+            <div className="absolute inset-0 rounded-full border-4 border-gray-200"></div>
+            <div className="absolute inset-0 rounded-full border-4 border-black border-t-transparent animate-spin"></div>
+          </div>
+
+          {/* Text */}
+          <p className="mt-4 text-sm font-medium text-gray-700 animate-pulse">
+            Loading...
+          </p>
         </div>
       )}
+
+      {/* Infinite scroll trigger element */}
+      <div ref={endRef} className="h-4" />
     </div>
   );
 };

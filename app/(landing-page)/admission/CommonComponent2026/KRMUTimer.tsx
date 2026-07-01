@@ -85,20 +85,25 @@ export default function KRMUTimer({
   return (
     // <div className="flex flex-col md:flex-row text-center md:text-left items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-900 text-white px-4 py-2 rounded-xl shadow-md">
     <div
-      className={`flex  ${mainWebsiteTimer ? "flex-col-reverse lg:flex-row-reverse bg-[#cb000d] px-2 py-2" : "flex-col md:flex-row bg-[#fcd404] px-4 py-2"}  text-center md:text-left items-center gap-2  text-black  rounded-xl ${!mainWebsiteTimer && "shadow-md"} `}
+      className={`flex  ${mainWebsiteTimer ? "flex-col-reverse lg:flex-row bg-[#cb000d] px-2 py-2 gap-2" : "flex-col md:flex-row bg-[#fcd404] px-4 py-2"}  text-center md:text-left items-center gap-2  text-black  rounded-xl ${!mainWebsiteTimer && "shadow-md"} `}
     >
       {/* <span className="text-xs uppercase tracking-wider font-semibold">
         Now or Never! Grab Your 100% Scholarship Today
       </span> */}
-      {mainWebsiteTimer && (
-        <span className="border-b border-white border-dotted vi text-sm text-white pb-0.5 ml-2 font-semibold inline-block">
-          Apply Now
-        </span>
-      )}
+
       <span
-        className={`text-[10px] xl:text-sm capitalize tracking-wider font-extrabold ${mainWebsiteTimer && "text-white"}`}
+        className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-[10px] sm:text-sm" : "text-[10px]"}`}
       >
-        Registration Closing on June 24 | Join RJ Naved LIVE | Limited Seats Available
+        Grab Up to 100% Scholarships Worth Rs 27 Cr + Get a Chance to Fly to
+        Europe (First Come, First Serve){" "}
+        {mainWebsiteTimer && (
+          <span className="border-b border-white border-dotted">Apply Now</span>
+        )}
+        {/* {mainWebsiteTimer && (
+          <span className="border-b border-white border-dotted vi text-sm text-white pb-0.5 ml-2 font-semibold inline">
+            Apply Now
+          </span>
+        )} */}
       </span>
       <div className="flex gap-2 font-mono text-sm">
         <TimeBox
