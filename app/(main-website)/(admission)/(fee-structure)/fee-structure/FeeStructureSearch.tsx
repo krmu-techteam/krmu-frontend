@@ -24,14 +24,37 @@ const FeeStructureSearch = () => {
       try {
         const data = await getAllProgramme("");
         const normalizedQuery = normalize(query);
-        const filtered = data.filter((item) =>
-          normalize(item.title).includes(normalizedQuery) ||
-          normalize(item.programmeslug).includes(normalizedQuery)
+        const filtered = data.filter(
+          (item) =>
+            normalize(item.title).includes(normalizedQuery) ||
+            normalize(item.programmeslug).includes(normalizedQuery),
         );
-        setProgrammes(filtered);
+
+        // Rank matches: whole-word match (e.g. "MA" in "MA English") > prefix
+        // match on normalized title > generic substring match.
+        const rawQuery = query.toLowerCase().replace(/\./g, "").trim();
+        const escapedQuery = rawQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const wordRe = new RegExp(`(^|\\s)${escapedQuery}(\\s|$)`);
+        const rankMatch = (title: string): number => {
+          const lowered = title.toLowerCase().replace(/\./g, "");
+          if (wordRe.test(lowered)) return 0;
+          if (normalize(title).startsWith(normalizedQuery)) return 1;
+          return 2;
+        };
+
+        const sorted = filtered
+          .map((item, idx) => ({
+            item,
+            rank: rankMatch(item.title),
+            idx,
+          }))
+          .sort((a, b) => a.rank - b.rank || a.idx - b.idx)
+          .map(({ item }) => item);
+
+        setProgrammes(sorted);
       } catch (err) {
         console.error(err);
-      } 
+      }
       setLoading(false);
     };
 
@@ -58,13 +81,15 @@ const FeeStructureSearch = () => {
 
         {/* Search Result Dropdown */}
         {query.trim() !== "" && (
-          <div className="absolute top-full left-0 right-0 bg-white rounded-sm shadow-[0_30px_60px_rgba(0,0,0,0.12)] z-50 overflow-hidden border border-gray-100">
+          <div className="absolute top-full left-0 right-0 bg-white rounded-sm shadow-[0_30px_60px_rgba(0,0,0,0.12)] z-10 overflow-hidden border border-gray-100">
             <div className="max-h-[450px] overflow-y-auto scrollbar-hide">
               {/* Loading State */}
               {loading && (
                 <div className="flex flex-col items-center justify-center p-16 space-y-4">
                   <div className="w-8 h-8 border-3 border-gray-100 border-t-[#0062aa] rounded-full animate-spin"></div>
-                  <p className="text-sm text-gray-400 font-medium tracking-wider uppercase">Searching programs...</p>
+                  <p className="text-sm text-gray-400 font-medium tracking-wider uppercase">
+                    Searching programs...
+                  </p>
                 </div>
               )}
 
@@ -74,7 +99,9 @@ const FeeStructureSearch = () => {
                   <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Search className="w-8 h-8 text-gray-200" />
                   </div>
-                  <p className="text-gray-500 font-medium text-lg">No results found for "{query}"</p>
+                  <p className="text-gray-500 font-medium text-lg">
+                    No results found for "{query}"
+                  </p>
                 </div>
               )}
 
@@ -94,11 +121,21 @@ const FeeStructureSearch = () => {
                       </span>
                     </div>
                     <div className="translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300">
-                       <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
-                          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                          </svg>
-                       </div>
+                      <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
+                        <svg
+                          className="w-5 h-5 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2.5}
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          />
+                        </svg>
+                      </div>
                     </div>
                   </Link>
                 ))}
