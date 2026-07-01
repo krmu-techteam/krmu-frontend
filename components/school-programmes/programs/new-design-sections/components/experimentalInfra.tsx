@@ -49,7 +49,7 @@ const ExperimentalInfra = () => {
                   src={card.image}
                   alt={card.title}
                   fill
-                  className="object-cover"
+                  className="object-fit"
                 />
               </div>
 

@@ -42,7 +42,7 @@ const FeeFinance = () => {
         {/* Layout Grid */}
         <div className="flex flex-col md:flex-row   items-stretch gap-8">
           {/* Left Card - Program Fee */}
-          <div className="border border-[#8C969E] rounded-[10px] bg-[#F7F0E0] p-6 flex flex-col justify-between transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(188,176,147,0.15)] w-full max-w-[48%] ">
+          <div className="border border-[#8C969E] rounded-[10px] bg-[#F7F0E0] p-6 flex flex-col justify-between transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(188,176,147,0.15)] w-full sm:max-w-[48%] ">
             <div>
               <h3
                 className={`${fraunces.className} text-2xl md:text-[28px] text-[#002C51]  mb-4`}
@@ -53,7 +53,7 @@ const FeeFinance = () => {
               {/* Amount Display */}
               <div className="flex items-baseline gap-2 mb-4">
                 <span
-                  className={`${fraunces.className} text-[#002C51] text-4xl sm:text-5xl md:text-[46px] font-bold tracking-tight`}
+                  className={`${fraunces.className} text-[#002C51] text-4xl sm:text-5xl md:text-[38px] lg:text-[46px] font-bold tracking-tight`}
                 >
                   {pf.amount}
                 </span>
@@ -100,7 +100,7 @@ const FeeFinance = () => {
           </div>
 
           {/* Right Card - Education-loan partners */}
-          <div className="rounded-[10px] bg-[radial-gradient(50%_50%_at_50%_50%,#024178_0%,#012D52_80%,#012D52_100%)] p-6 px-8 text-white flex flex-col justify-between transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(1,45,82,0.25)] w-full max-w-[48%] ">
+          <div className="rounded-[10px] bg-[radial-gradient(50%_50%_at_50%_50%,#024178_0%,#012D52_80%,#012D52_100%)] p-6 px-8 text-white flex flex-col justify-between transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(1,45,82,0.25)] w-full sm:max-w-[48%] ">
             <div>
               <h3
                 className={`${fraunces.className} text-2xl md:text-[28px] text-[#E7C268]  mb-4`}
