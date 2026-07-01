@@ -4,6 +4,7 @@ import {
   Host_Grotesk,
   Inter,
   Poppins,
+  Roboto_Condensed,
 } from "next/font/google";
 import "./internationalAdmission.css";
 import InternationalHeader from "./components/InternationalHeader";
@@ -43,6 +44,14 @@ const poppins = Poppins({
   display: "swap",
 });
 
+
+const robotoCondensed = Roboto_Condensed({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-family-roboto-condensed",
+  display: "swap",
+});
+
 export default function InternationalAdmissionLayout({
   children,
 }: {
@@ -51,7 +60,7 @@ export default function InternationalAdmissionLayout({
   return (
     <html
       lang="en"
-      className={`${hostGrotesk.variable} ${fraunces.variable} ${inter.variable} ${bigShouldersDisplay.variable} ${poppins.variable}`}
+      className={`${hostGrotesk.variable} ${fraunces.variable} ${inter.variable} ${bigShouldersDisplay.variable} ${poppins.variable} ${robotoCondensed.variable}`}
     >
       <body className="antialiased">
         <Header />

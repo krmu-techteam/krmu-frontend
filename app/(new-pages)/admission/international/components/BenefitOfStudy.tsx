@@ -3,12 +3,12 @@ import { Check } from "lucide-react";
 const BenefitOfStudy = () => {
   return (
     <section className="bg-[url(/international-admission/benefit-bg.webp)] bg-no-repeat bg-cover bg-top">
-      <div className="max-w-[1664px] mx-auto w-full flex">
-        <div className="w-full lg:w-2/5 bg-[#001732]/80 p-5 xl:px-10 xl:pt-10 xl:pb-32 font-poppins text-white xl:h-[650px]">
-          <h4 className="text-3xl font-extrabold mb-5">
+      <div className="max-w-[1427px] mx-auto w-full flex">
+        <div className="w-full lg:w-[40%] bg-[#001732]/80 px-5 sm:px-10 xl:pt-10 font-poppins sm:h-[572px] text-white py-10 xl:py-0">
+          <h4 className="text-2xl sm:text-[28px] font-extrabold mb-5">
             Benefits of studying in Gurugram
           </h4>
-          <ul className="xl:text-lg font-semibold leading-snug xl:leading-[50px] space-y-2">
+          <ul className="xl:text-base font-poppins font-medium space-y-3">
             <li className="flex items-center gap-2">
               <div>
                 <Check color="#fff" />
@@ -47,7 +47,7 @@ const BenefitOfStudy = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden lg:w-3/5"></div>
+        <div className="hidden lg:w-[60%]"></div>
       </div>
     </section>
   );

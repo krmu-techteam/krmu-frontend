@@ -13,7 +13,7 @@ const WhyChoose = () => {
         sm:pt-[350px]
         md:pt-[420px]
         lg:pt-[520px]
-        xl:pt-[600px]
+        xl:pt-[425px]
         pb-16
         md:pb-24
         lg:pb-40
@@ -35,7 +35,7 @@ const WhyChoose = () => {
           sm:right-6
           md:right-10
           lg:right-20
-          xl:right-36
+          xl:right-0
           w-[180px]
           sm:w-[220px]
           md:w-[280px]
@@ -46,7 +46,7 @@ const WhyChoose = () => {
         "
       />
 
-      <div className="relative z-20 max-w-[1664px] mx-auto px-5 sm:px-8 lg:px-12">
+      <div className="relative z-20 max-w-[1427px] mx-auto px-5 sm:px-8 lg:px-12">
         <div className="flex flex-col lg:flex-row items-center">
           {/* Left Content */}
           <div className="w-full lg:w-2/3">

@@ -140,7 +140,7 @@ const BeginYour = ({ data, formId }: Props) => {
             >
               <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path>
             </svg>
-            <span>UGC Recognised</span>
+            <span className="text-xl">UGC Recognised</span>
           </div>
           <div className="flex items-center gap-2 text-sm text-white">
             <svg
@@ -152,7 +152,7 @@ const BeginYour = ({ data, formId }: Props) => {
             >
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
             </svg>
-            <span>NAAC A Accredited</span>
+            <span className="text-xl">NAAC A Accredited</span>
           </div>
           {/* <div className="flex items-center gap-2 text-sm text-black">
               <svg

@@ -9,7 +9,7 @@ const HeroSection = ({ formId }: Props) => {
       <div className="bg-white absolute right-0 top-0 max-w-[420px] 2xl:max-w-[500px] w-full h-[750px] form-white-container hidden xl:flex items-center justify-center"  id="apply-section">
         <div className="relative z-30 w-full">
           <div className="text-center">
-            <h3 className="text-center font-poppins font-bold text-2xl">
+            <h3 className="text-center font-poppins font-bold text-xl">
               <span className="text-[#cb000d]">
                 Apply for International Admission
               </span>{" "}
@@ -20,8 +20,8 @@ const HeroSection = ({ formId }: Props) => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-10 max-w-[1427px] mx-auto">
-        <div className="w-full md:w-1/2 xl:w-8/12 flex items-start left-container">
-          <div className="w-full xl:w-1/2 2xl:w-3/5 col-1">
+        <div className="w-full md:w-1/2 xl:w-9/12 flex items-start left-container">
+          <div className="w-full xl:w-[55%] 2xl:w-3/5 col-1">
             <h1 className="font-host text-5xl md:text-6xl xl:text-8xl font-extrabold mb-5 leading-none main-heading">
               International Admissions
             </h1>
@@ -48,9 +48,10 @@ const HeroSection = ({ formId }: Props) => {
               <span className="text-3xl xl:text-[40px] text-[#001732] font-bold font-fraunces heading-3">
                 Scholarship
               </span>
+              
             </div>
           </div>
-          <div className="hidden xl:block w-1/2 2xl:w-2/5 col-2">
+          <div className="hidden xl:flex items-start w-[45%] 2xl:w-2/5 col-2">
             <div className="-mt-10 text-center middle-container">
               <span className="text-6xl text-[#001732] font-bold font-fraunces heading-1">
                 Up to
@@ -82,7 +83,7 @@ const HeroSection = ({ formId }: Props) => {
             </div>
           </div>
         </div>
-        <div className="w-full h-[750px] md:h-[900px] lg:h-[700px] xl:h-[750px] md:w-1/2 bg-white xl:bg-transparent xl:w-4/12 relative outer-right-container flex items-center justify-center rounded-2xl sm:pt-10 md:pt-0">
+        <div className="w-full h-[750px] md:h-[900px] lg:h-[700px] xl:h-[700px] md:w-1/2  xl:w-3/12  bg-white xl:bg-transparent relative outer-right-container flex items-center justify-center rounded-2xl sm:pt-10 md:pt-0">
           <div className="relative z-30 w-full pt-5 sm:pt-0 sm:p-4 md:p-5 xl:hidden">
             <div className="text-center">
               <h3 className="text-center font-poppins font-bold text-sm sm:text-base md:text-lg xl:text-2xl">
