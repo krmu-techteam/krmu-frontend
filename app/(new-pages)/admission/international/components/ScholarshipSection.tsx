@@ -21,7 +21,7 @@ export default function ScholarshipSection() {
             </p>
           </div>
         </div>
-        <div className="w-full xl:w-1/2 flex justify-center">
+        <div className="w-full xl:w-1/2 flex justify-center xl:justify-end">
           <div>
             <div className="relative w-fit">
               <Image
