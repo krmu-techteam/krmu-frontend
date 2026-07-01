@@ -22,9 +22,9 @@ const WhyStudyCard = ({
         />
       </div>
 
-      <div className="bg-[#edece4] pt-10 pb-5 px-5 font-poppins -mt-5 h-[240px]">
-        <h5 className="font-bold leading-9">{title}</h5>
-        <p>{description}</p>
+      <div className="bg-[#edece4] pt-10 pb-5 px-5 font-poppins -mt-5 h-auto lg:h-[200px] rounded-b-xl">
+        <h5 className="font-bold leading-tight mb-2 text-sm">{title}</h5>
+        <p className="leading-tight text-justify">{description}</p>
       </div>
     </div>
   );

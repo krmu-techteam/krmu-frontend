@@ -244,7 +244,8 @@ const Admission2Search = () => {
           .sort((a, b) => a.rank - b.rank || a.idx - b.idx)
           .map(({ item }) => item);
 
-        setShowLoadMore(false); // no button in search
+        const hasMore = newData.length > 4;
+        setShowLoadMore(!loadAll && hasMore);
       } else {
         // DROPDOWN MODE
         if (degreeRefValue.current === "doctoral-programmes") {

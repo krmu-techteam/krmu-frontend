@@ -6,7 +6,7 @@ function normalize(text: string | null | undefined) {
 }
 
 export async function getAllProgramme(
-  query: string = ""
+  query: string = "",
 ): Promise<ProgrammeItem[]> {
   // Fetch school programmes
   let schoolData: any[] = [];
@@ -26,7 +26,7 @@ export async function getAllProgramme(
       `${FETCH_STRAPI_URL}/api/school-programmes?${queryParams.toString()}`,
       {
         next: { revalidate: 3600 },
-      }
+      },
     );
 
     if (!res.ok) throw new Error("Failed to fetch School Info");
@@ -55,7 +55,7 @@ export async function getAllProgramme(
       `${FETCH_STRAPI_URL}/api/phd-single-programmes?${queryParams.toString()}`,
       {
         next: { revalidate: 3600 },
-      }
+      },
     );
 
     if (!res.ok) throw new Error("Failed to fetch PhD Info");
@@ -76,7 +76,7 @@ export async function getAllProgramme(
 
   // Dedup: drop school-programme rows whose normalized title collides with a PhD heading (stale duplicates)
   const normalizedPhdTitles = new Set(
-    mappedPhd.map((item) => normalize(item.title))
+    mappedPhd.map((item) => normalize(item.title)),
   );
 
   const schoolMapped: ProgrammeItem[] = schoolData.map((item: any) => ({
@@ -87,7 +87,7 @@ export async function getAllProgramme(
   }));
 
   const schoolDeduped = schoolMapped.filter(
-    (item) => !normalizedPhdTitles.has(normalize(item.title))
+    (item) => !normalizedPhdTitles.has(normalize(item.title)),
   );
 
   return [...mappedPhd, ...schoolDeduped];
@@ -113,4 +113,3 @@ export interface ProgrammeResponse {
     pagination: Pagination;
   };
 }
-

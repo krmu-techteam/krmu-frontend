@@ -12,12 +12,12 @@ interface ProgrammeItem {
   programmeslug: string;
 }
 
-interface Pagination {
-  page: number;
-  pageSize: number;
-  pageCount: number;
-  total: number;
-}
+// interface Pagination {
+//   page: number;
+//   pageSize: number;
+//   pageCount: number;
+//   total: number;
+// }
 function normalize(text: string) {
   return text.toLowerCase().replace(/[\.\s]/g, "");
 }
