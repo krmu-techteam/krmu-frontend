@@ -74,7 +74,7 @@ const HowToApply = ({ formId, heroSection }: Props) => {
         </div>
 
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-10  items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 xl:gap-0  items-start">
           {/* Left Column: Eligibility and Selection Cards */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             {content.leftCards.map((card) => (

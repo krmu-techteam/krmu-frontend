@@ -29,8 +29,8 @@ const rankingData = [
 
 const RankingRecognition = () => {
   return (
-    <section className="px-5 xl:px-0 ">
-      <div className="bg-[linear-gradient(145.75deg,#FFFFFF_19.74%,#EDECE4_79.7%)] p-5 sm:py-10 sm:px-10 xl:px-20 max-w-[1664px] -mt-52 mx-auto rounded-[10px] z-40 relative shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
+    <section className="px-5 xl:px-0 relative z-[99999999] py-10 lg:py-0">
+      <div className="bg-[linear-gradient(145.75deg,#FFFFFF_19.74%,#EDECE4_79.7%)] p-5 sm:py-10 sm:px-10 xl:px-20 max-w-[1427px] lg:-mt-52 mx-auto rounded-[10px] z-40 relative shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-8 mb-5 sm:mb-10">
           {rankingData.map((item, index) => (
             <div
@@ -42,7 +42,7 @@ const RankingRecognition = () => {
                 width={185}
                 height={163}
                 alt={item.alt}
-                className=""
+                className="w-[150px]"
               />
               <p className="text-xs sm:text-sm lg:text-base">{item.description}</p>
             </div>

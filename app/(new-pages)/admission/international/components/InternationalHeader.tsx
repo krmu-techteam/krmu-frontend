@@ -28,7 +28,7 @@ export default function InternationalHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#071C38] shadow-md px-5">
+    <header className="sticky top-0 z-[9999999999999] bg-[#071C38] shadow-md px-5">
       <div className="mx-auto max-w-[1664px]">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}

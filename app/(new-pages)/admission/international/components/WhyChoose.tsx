@@ -13,29 +13,29 @@ const WhyChoose = () => {
         sm:pt-[350px]
         md:pt-[420px]
         lg:pt-[520px]
-        xl:pt-[600px]
-        pb-16
-        md:pb-24
-        lg:pb-40
+        xl:pt-[425px]
+        
         sm:-mt-20
         lg:-mt-40
       "
       id="why-choose"
     >
       {/* Girl Image */}
-      <Image
-        src="/international-admission/girl-3.png"
-        alt="Girl"
-        width={438}
-        height={671}
-        className="
+
+      <div className="relative z-20 max-w-[1427px] mx-auto">
+        <Image
+          src="/international-admission/girl-3.png"
+          alt="Girl"
+          width={438}
+          height={671}
+          className="
           absolute
           bottom-0
           right-0
           sm:right-6
           md:right-10
           lg:right-20
-          xl:right-36
+          xl:right-0
           w-[180px]
           sm:w-[220px]
           md:w-[280px]
@@ -44,12 +44,10 @@ const WhyChoose = () => {
           h-auto
           z-10
         "
-      />
-
-      <div className="relative z-20 max-w-[1664px] mx-auto px-5 sm:px-8 lg:px-12">
+        />
         <div className="flex flex-col lg:flex-row items-center">
           {/* Left Content */}
-          <div className="w-full lg:w-2/3">
+          <div className="w-full lg:w-2/3 pb-[188px]">
             <h3
               className="
                 text-3xl

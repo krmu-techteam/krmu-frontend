@@ -12,12 +12,12 @@ interface ProgrammeItem {
   programmeslug: string;
 }
 
-interface Pagination {
-  page: number;
-  pageSize: number;
-  pageCount: number;
-  total: number;
-}
+// interface Pagination {
+//   page: number;
+//   pageSize: number;
+//   pageCount: number;
+//   total: number;
+// }
 function normalize(text: string) {
   return text.toLowerCase().replace(/[\.\s]/g, "");
 }
@@ -36,10 +36,33 @@ const HomeYourJourneyForm = () => {
       setLoading(true);
       try {
         const data = await getAllProgramme("");
+        const normalizedQuery = normalize(query);
         const filtered = data.filter((item) =>
-          normalize(item.title).includes(normalize(query)),
+          normalize(item.title).includes(normalizedQuery),
         );
-        setProgrammes(filtered);
+
+        // Rank matches: whole-word match (e.g. "MA" in "MA English") > prefix
+        // match on normalized title > generic substring match.
+        const rawQuery = query.toLowerCase().replace(/\./g, "").trim();
+        const escapedQuery = rawQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const wordRe = new RegExp(`(^|\\s)${escapedQuery}(\\s|$)`);
+        const rankMatch = (title: string): number => {
+          const lowered = title.toLowerCase().replace(/\./g, "");
+          if (wordRe.test(lowered)) return 0;
+          if (normalize(title).startsWith(normalizedQuery)) return 1;
+          return 2;
+        };
+
+        const sorted = filtered
+          .map((item, idx) => ({
+            item,
+            rank: rankMatch(item.title),
+            idx,
+          }))
+          .sort((a, b) => a.rank - b.rank || a.idx - b.idx)
+          .map(({ item }) => item);
+
+        setProgrammes(sorted);
       } catch (error) {
         console.error(error);
       }

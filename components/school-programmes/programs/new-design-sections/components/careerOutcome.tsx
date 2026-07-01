@@ -104,7 +104,7 @@ const CareerOutcome = ({ slug }: Props) => {
               >
                 {content.sectionTwo.heading}
               </h3>
-              <div className="relative w-full max-w-full lg:max-w-[500px] min-h-[461px] overflow-hidden shadow-xl shadow-slate-900/10">
+              <div className="relative w-full max-w-full lg:max-w-[500px]  overflow-hidden shadow-xl shadow-slate-900/10">
                 <Image
                   src={
                     slug === "mba-fintech"
@@ -118,7 +118,7 @@ const CareerOutcome = ({ slug }: Props) => {
                   alt="MBA Students discussing career outcomes"
                   width={1024}
                   height={1024}
-                  className="object-cover w-full h-[461px]"
+                  className=" w-full h-[300px] sm:h-[486px]"
                 />
               </div>
             </div>
