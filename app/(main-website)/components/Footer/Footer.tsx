@@ -222,13 +222,13 @@ const Footer = async () => {
       {/* Hide Nia Chatbot */}
       {/* <NpfChatbot /> */}
 
-      <Link
+      {/* <Link
         href="https://admissions.krmangalam.edu.in/?utm_source=Website&utm_medium=Homepage&utm_campaign=Deadline"
         target="_blank"
         className="fixed bottom-0 left-0 w-full bg-[#cb000d] flex lg:hidden justify-center z-30"
       >
         <KRMUTimer targetDate="2026-06-30T23:59:59" mainWebsiteTimer={true} />
-      </Link>
+      </Link> */}
       <NpfAgent />
       {/* <div className="fixed bottom-10 right-24">
         <a
@@ -286,7 +286,7 @@ const Footer = async () => {
         <NpfButton formId="d63cf9c4d3104c39f3ac28164701a69c" text="Enquire Now" />
       </div> */}
 
-      <LaunchpadPopup />
+      {/* <LaunchpadPopup /> */}
     </>
   );
 };
