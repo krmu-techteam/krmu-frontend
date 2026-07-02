@@ -32,7 +32,7 @@ export default function ProgrammeTabs() {
       <div className="relative z-10 mx-auto flex max-w-[1486px] flex-col lg:flex-row">
         {/* ================= LEFT SIDEBAR ================= */}
 
-        <aside className="bg-[#001732] lg:sticky lg:top-20 lg:h-fit lg:w-[320px] lg:flex-shrink-0 xl:w-[30%]">
+        <aside className="bg-[#001732] lg:sticky lg:top-0 lg:h-fit lg:w-[320px] lg:flex-shrink-0 xl:w-[30%]">
           {/* Mobile Tabs */}
           <div className="overflow-x-auto lg:hidden">
             <div className="flex gap-3 px-4 py-4 w-max min-w-full">
@@ -86,9 +86,7 @@ export default function ProgrammeTabs() {
                     {programme.title}
 
                     {programme.lateral && (
-                      <span className="ml-1 text-[#E31B23]">
-                        (Lateral)
-                      </span>
+                      <span className="ml-1 text-[#E31B23]">(Lateral)</span>
                     )}
                   </h3>
 

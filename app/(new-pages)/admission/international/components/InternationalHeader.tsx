@@ -28,7 +28,7 @@ export default function InternationalHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-[9999999999999] bg-[#071C38] shadow-md px-5">
+    <header className="z-[9999999999999] bg-[#071C38] shadow-md px-5">
       <div className="mx-auto max-w-[1664px]">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
@@ -74,8 +74,9 @@ export default function InternationalHeader() {
 
       {/* Mobile Menu */}
       <div
-        className={`overflow-hidden bg-[#071C38] transition-all duration-300 lg:hidden ${open ? "max-h-96" : "max-h-0"
-          }`}
+        className={`overflow-hidden bg-[#071C38] transition-all duration-300 lg:hidden ${
+          open ? "max-h-96" : "max-h-0"
+        }`}
       >
         <div className="space-y-2 px-5 py-4">
           {menus.map((item) => (
@@ -89,7 +90,10 @@ export default function InternationalHeader() {
             </Link>
           ))}
 
-          <Link href="#" className="mt-3 w-full rounded-md bg-[#E31B23] p-3 font-semibold text-white">
+          <Link
+            href="#"
+            className="mt-3 w-full rounded-md bg-[#E31B23] p-3 font-semibold text-white"
+          >
             Apply Now
           </Link>
         </div>
