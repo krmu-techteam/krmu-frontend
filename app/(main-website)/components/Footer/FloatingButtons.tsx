@@ -13,7 +13,7 @@ export default function FloatingButtons() {
         {pathname !== "/univiser" && (
           <Link
             href="/univiser"
-            className="bg-[#051730] text-white py-[6px] px-5 fixed top-[25%] lg:top-[35%] right-[-80px] rotate-90 rounded-b-sm z-[9999] whitespace-nowrap shadow-2xl text-md font-medium tracking-wide hover:bg-[#c4020f] transition-all mob-side-btn-1"
+            className="bg-[#051730] text-white pl-[10px] pr-[10px] py-[6px] px-5 fixed top-[25%] lg:top-[35%] right-[-55px] md:right-[-70px] rotate-90 rounded-b-sm z-[9999] whitespace-nowrap shadow-2xl text-[12px] md:text-[16px] font-medium tracking-wide hover:bg-[#c4020f] transition-all"
           >
             Chat with Student
           </Link>
@@ -21,7 +21,7 @@ export default function FloatingButtons() {
 
         <Link
           href="/campus-life/virtual-tour"
-          className="bg-[#051730] text-white py-[6px] px-5 fixed top-[55%] lg:top-[65%] right-[-73px] rotate-90  rounded-b-sm z-[9999] whitespace-nowrap shadow-2xl text-md font-medium tracking-wide hover:bg-[#c4020f] transition-all mob-side-btn-2"
+          className="bg-[#051730] text-white pl-[10px] pr-[10px] py-[6px] px-5 fixed top-[55%] lg:top-[65%] right-[-50px] md:right-[-63px] rotate-90 rounded-b-sm z-[9999] whitespace-nowrap shadow-2xl text-[12px] md:text-[16px] font-medium tracking-wide hover:bg-[#c4020f] transition-all"
         >
           360° Virtual Tour
         </Link>
