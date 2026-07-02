@@ -10,11 +10,11 @@ export default function ProgrammeTabs() {
 
   return (
     <section className="bg-[#F5F2EC] relative" id="programmes">
-      <div className="absolute inset-0 bg-[#001732] w-[20%] 2xl:w-[28%] h-full hidden lg:block programtab-blue-div"></div>
-        <div className="overflow-hidden bg-[#F5F2EC] lg:flex max-w-[1486px] mx-auto">
+      <div className="absolute inset-0 bg-[#001732] w-[20%] 2xl:w-[50%] h-full hidden lg:block programtab-blue-div" />
+        <div className="bg-[#F5F2EC] lg:flex max-w-[1486px] mx-auto z-50">
           {/* ================= LEFT SIDEBAR ================= */}
 
-          <aside className="bg-[#001732] lg:w-[320px] xl:w-[30%] lg:shrink-0 z-[40]">
+          <aside className="bg-[#001732] lg:w-[320px] xl:w-[30%] lg:shrink-0 z-[40] sticky top-20 h-full">
             {/* Mobile Tabs */}
             <div className="lg:hidden overflow-x-auto scrollbar-hide">
               <div className="flex w-max gap-3 p-4">
@@ -59,7 +59,7 @@ export default function ProgrammeTabs() {
 
           {/* ================= RIGHT CONTENT ================= */}
 
-          <div className="flex-1 p-4 sm:p-6">
+          <div className="flex-1 p-4 sm:p-6 relative z-40 bg-[#F5F2EC]">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               {programmes.length ? (
                 programmes.map((programme, index) => (

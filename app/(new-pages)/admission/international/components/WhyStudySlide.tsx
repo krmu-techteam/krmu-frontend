@@ -1,5 +1,8 @@
+"use client";
+
 import { whyStudyData } from "../constant";
 import WhyStudyCard from "./cards/WhyStudyCard";
+import Autoplay from "embla-carousel-autoplay";
 
 import {
   Carousel,
@@ -17,11 +20,16 @@ const WhyStudySlide = () => {
           align: "start",
           // loop: true,
         }}
+        plugins={[
+          Autoplay({
+            delay: 2000,
+          }),
+        ]}
         className="w-full"
       >
         <div className="absolute -bottom-11 sm:-top-14 xl:-top-20 right-5 flex gap-4 z-20 w-[110px] h-12">
-          <CarouselPrevious className="left-0 text-white bg-transparent border-4 border-white w-12 h-12 intPrevBtn disabled:border-white-[#a8bacf] disable:bg-[#001732]" />
-          <CarouselNext className="right-0 text-white bg-transparent border-4 border-white w-12 h-12 intNextBtn disabled:border-white-[#a8bacf] disable:bg-[#001732]" />
+          <CarouselPrevious className="left-0 text-white bg-transparent border-4 border-white w-12 h-12 intPrevBtn disabled:border-white-[#a8bacf] disabled:bg-[#001732]" />
+          <CarouselNext className="right-0 text-white bg-transparent border-4 border-white w-12 h-12 intNextBtn disabled:border-white-[#a8bacf] disabled:bg-[#001732]" />
         </div>
 
         <CarouselContent>
