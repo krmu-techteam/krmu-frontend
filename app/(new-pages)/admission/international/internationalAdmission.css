@@ -72,6 +72,9 @@
   }
 }
 @media (min-width: 1520px) and (max-width: 1650px) {
+  .middle-container .heading-2{
+    font-size: 110px;
+  }
   .middle-container .heading-4 {
     font-size: 70px;
   }
@@ -79,8 +82,23 @@
 @media (min-width: 1440px) and (max-width: 1520px) {
   .middle-container {
     position: relative;
-    top: -20px;
+    top: 0px;
     left: 70px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1500px) {
+  .why-choose-girl {
+    right: 0;
+  }
+  .internation-admission-section{
+    background-position-x: -235px;
+  }
+}
+
+@media(min-width: 2560px){
+  .programtab-blue-div{
+    display: none;
   }
 }
 @media (min-width: 1320px) and (max-width: 1440px) {
@@ -88,6 +106,10 @@
     position: relative;
     top: 45px;
     left: 70px;
+  }
+  .why-choose-girl {
+    right: 4px;
+    bottom: -55px;
   }
   .outer-right-container,
   .form-white-container {
@@ -176,7 +198,7 @@
 }
 
 .heroBannerForm__form {
-  height: 700px;
+  height: 670px;
 }
 
 @keyframes galleryScroll {

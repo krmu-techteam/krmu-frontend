@@ -6,40 +6,40 @@ const BenefitOfStudy = () => {
       <div className="max-w-[1427px] mx-auto w-full flex">
         <div className="w-full lg:w-[40%] bg-[#001732]/80 px-5 sm:px-10 xl:pt-10 font-poppins sm:h-[572px] text-white py-10 xl:py-0">
           <h4 className="text-2xl sm:text-[28px] font-extrabold mb-5">
-            Benefits of studying in Gurugram
+            Benefits of Studying in Gurugram
           </h4>
-          <ul className="xl:text-base font-poppins font-medium space-y-3">
-            <li className="flex items-center gap-2">
+          <ul className="xl:text-base font-poppins font-semibold">
+            <li className="flex items-center gap-2 leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Home to numerous Fortune 500 companies
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Leading technology and startup ecosystem
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Excellent connectivity through metro, road, and airport
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Strong internship and placement opportunities
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Safe and modern urban infrastructure
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
