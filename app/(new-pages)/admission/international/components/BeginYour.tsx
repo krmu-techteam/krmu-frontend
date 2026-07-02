@@ -12,12 +12,12 @@ type Props = {
 
 const BeginYour = ({ data, formId }: Props) => {
   return (
-    <section className="relative overflow-hidden bg-[#001732] pt-[50px]">
-      <div className="max-w-[1427px] mx-auto flex px-5">
-        <div className="w-full lg:w-1/2"></div>
-        <div className="w-full lg:w-1/2 flex justify-end">
+    <section className="relative overflow-hidden bg-[#001732] pt-[50px] px-5">
+      <div className="max-w-[1427px] mx-auto flex lg:px-5">
+        <div className="hidden lg:block lg:w-1/2"></div>
+        <div className="w-full lg:w-1/2 lg:flex lg:justify-end">
           <p
-            className="text-white text-sm text-right mb-5"
+            className="text-white text-sm lg:text-right mb-5"
             dangerouslySetInnerHTML={{ __html: data.formNote }}
           />
         </div>
@@ -32,7 +32,7 @@ const BeginYour = ({ data, formId }: Props) => {
               dangerouslySetInnerHTML={{ __html: data.heading }}
             />
 
-            <p className="text-white text-[26px] max-w-[780px] mb-8">
+            <p className="text-white lg:text-[26px] max-w-[780px] mb-8">
               {data.description}
             </p>
 
@@ -52,7 +52,7 @@ const BeginYour = ({ data, formId }: Props) => {
                 width={data.mapImage.width}
                 height={data.mapImage.height}
                 alt={data.mapImage.alt}
-                className="rounded-lg w-full h-[420px] object-cover"
+                className="rounded-lg w-full lg:h-[420px] object-cover"
               />
             </div>
           </div>
@@ -75,36 +75,36 @@ const BeginYour = ({ data, formId }: Props) => {
               {formId && (
                 <div className="heroBannerForm__form">
                   <div className="heroBannerForm-header">
-                    <h3 className="mb-0">
+                    <h3 className="mb-0 text-center font-poppins font-bold text-xl beginFormHeading">
                       Apply for International <br />
                       Admission Here
                     </h3>
                   </div>
 
-                  <NoPaperFormsWidget widgetId={formId} height="600px" />
+                  <NoPaperFormsWidget widgetId={formId} height="650px" />
                 </div>
               )}
             </div>
           </div>
         </div>
       </div>
-      <div className="max-w-[1400px] mx-auto border-2 border-[#263e51] p-10 text-center text-white rounded-3xl mt-10">
-        <h6 className="max-w-[860px] mx-auto mb-5 text-[42px] font-semibold font-poppins">
-          Apply for International Admission at <br /> K.R. Mangalam University
-          Today
+      <div className="max-w-[1400px] mx-auto border-2 border-[#263e51] p-5 lg:p-10 text-center text-white rounded-3xl mt-10">
+        <h6 className="max-w-[860px] mx-auto mb-5 text-xl md:text-2xl lg:text-[42px] font-semibold font-poppins">
+          Apply for International Admission at{" "}
+          <br className="hidden lg:block" /> K.R. Mangalam University Today
         </h6>
         <p className="mb-7 font-poppins text-2xl">
           Industry-Aligned Courses | Top Recruiters | Global Exposure
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 items-center mb-10">
-          <ScrollButton
-            targetId="apply-section"
-            highlightClass="flash-border"
-            btnClass="text-white bg-[linear-gradient(135deg,#e31e24_0%,#c41920_100%)] shadow-[0_4px_14px_0_rgba(227,30,36,0.35)] text-lg min-h-14 inline-flex items-center justify-center gap-2 font-semibold cursor-pointer rounded-xl   transition-all duration-150 ease-out py-4 px-6 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_0_rgba(227,30,36,0.45)] hover:bg-[linear-gradient(135deg,#ff4d52_0%,#e31e24_100%)]"
+          <Link
+            href="#apply-section"
+            // highlightClass="flash-border"
+            className="text-white bg-[linear-gradient(135deg,#e31e24_0%,#c41920_100%)] shadow-[0_4px_14px_0_rgba(227,30,36,0.35)] tex-sm md:text-lg min-h-14 inline-flex items-center justify-center gap-2 font-semibold cursor-pointer rounded-xl   transition-all duration-150 ease-out py-4 px-6 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_0_rgba(227,30,36,0.45)] hover:bg-[linear-gradient(135deg,#ff4d52_0%,#e31e24_100%)]"
           >
             Enrol Now. Limited Seats Available!
             <ArrowUpRight color="#fff" />
-          </ScrollButton>
+          </Link>
 
           <Link
             href="tel:+919311411717"
