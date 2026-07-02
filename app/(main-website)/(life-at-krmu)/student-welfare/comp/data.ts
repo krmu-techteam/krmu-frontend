@@ -36,77 +36,77 @@ export const eventsData: EventItem[] = [
   },
   {
     id: 5,
-    title: "Fashion Walk",
+    title: "Kalakriti",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1490_e1d105ceb7.jpg",
     link: "/happenings/gallery-image",
   },
   {
     id: 6,
-    title: "Fit Fiesta",
+    title: "Kalam Conclave",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1491_8c725236e3.jpg",
     link: "/happenings/gallery-image",
   },
   {
     id: 7,
-    title: "Jasmine Concert",
+    title: "KRMU HAAT",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Picture18_1_b4e0e52ab9.jpg",
     link: "/happenings/gallery-image",
   },
   {
     id: 8,
-    title: "Kala Utsav 2.0",
+    title: "Lits Talk",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1493_f10d7ce00d.jpg",
     link: "/happenings/gallery-image",
   },
   {
     id: 9,
-    title: "Fashion Walk",
+    title: "DJ Shreya",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1494_3af75b0af6.jpg",
-    link: "/happenings/gallery-image",
+    link: "/photo-gallery/solesta-26",
   },
   {
     id: 10,
-    title: "Fit Fiesta",
+    title: "Republic Day",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1495_385dd50d46.jpg",
     link: "/happenings/gallery-image",
   },
   {
     id: 11,
-    title: "Jasmine Concert",
+    title: "Science Fista",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1496_7b279c5e9c.jpg",
     link: "/happenings/gallery-image",
   },
   {
     id: 12,
-    title: "Kala Utsav 2.0",
+    title: "Spot Light",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1497_b64d49ea54.jpg",
     link: "/happenings/gallery-image",
   },
   {
     id: 13,
-    title: "Fashion Walk",
+    title: "Tech Fusion",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1498_2aee2c02c0.jpg",
     link: "/happenings/gallery-image",
   },
   {
     id: 14,
-    title: "Fit Fiesta",
+    title: "Tech Nexus",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1499_9d91bce5a1.jpg",
     link: "/happenings/gallery-image",
   },
   {
     id: 15,
-    title: "Jasmine Concert",
+    title: "Workshop",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1500_b46dc0ca03.jpg",
     link: "/happenings/gallery-image",
