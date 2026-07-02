@@ -52,7 +52,7 @@ export default function FAQSection() {
           <div className="mt-10 flex justify-center">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="rounded-md bg-[#0B2243] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#12335d] cursor-pointer"
+              className="rounded-md bg-[#0B2243] px-8 py-3 text-lg font-bold font-poppins text-white transition hover:bg-[#12335d] cursor-pointer"
             >
               {showAll ? "Less" : "More"}
             </button>
