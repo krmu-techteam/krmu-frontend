@@ -53,13 +53,13 @@ export default function InternationalHeader() {
                 {item.name}
               </Link>
             ))}
-            <ScrollButton
-              targetId="apply-section"
-              highlightClass="flash-border"
-              btnClass="rounded-md bg-[#E31B23] px-6 py-2 text-sm font-semibold text-white transition hover:bg-[#c6151d]"
+            <Link
+              href="#apply-section"
+              // highlightClass="flash-border"
+              className="rounded-md bg-[#E31B23] px-6 py-2 text-sm font-semibold text-white transition hover:bg-[#c6151d]"
             >
               Apply Now
-            </ScrollButton>
+            </Link>
           </nav>
 
           {/* Mobile Button */}
@@ -89,9 +89,9 @@ export default function InternationalHeader() {
             </Link>
           ))}
 
-          <button className="mt-3 w-full rounded-md bg-[#E31B23] py-3 font-semibold text-white">
+          <Link href="#" className="mt-3 w-full rounded-md bg-[#E31B23] p-3 font-semibold text-white">
             Apply Now
-          </button>
+          </Link>
         </div>
       </div>
     </header>
