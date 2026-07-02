@@ -627,7 +627,7 @@ export const internationalAdmissionSchools = [
       },
       {
         title: "LL.M.",
-        duration: "1 Years",
+        duration: "1 Year",
       },
     ],
   },

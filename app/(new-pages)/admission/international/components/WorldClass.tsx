@@ -8,12 +8,12 @@ type Props = {
 const WorldClass = ({ data }: Props) => {
   return (
     <section className="py-10 md:py-14 lg:py-16">
-      <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-        <h4 className="mb-4 font-poppins text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
+      <div className="mx-auto  px-4 text-center sm:px-6 lg:px-8">
+        <h4 className="mb-4 font-poppins text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl xl:text-[62px]">
           {data.heading}
         </h4>
 
-        <p className="mx-auto max-w-5xl text-sm leading-7 text-gray-700 sm:text-base lg:text-lg">
+        <p className="mx-auto max-w-6xl text-sm leading-7 text-gray-700 sm:text-base lg:text-lg xl:pb-16">
           K.R. Mangalam University offers a modern and student-centric campus
           designed to support effective learning and holistic development for
           its students. The university provides smart classrooms, a
@@ -25,7 +25,7 @@ const WorldClass = ({ data }: Props) => {
         </p>
       </div>
 
-      <div className="mt-8 overflow-hidden md:mt-10">
+      <div className="mt-8 xl:mt-0 overflow-hidden md:mt-10">
         <div className="gallery-scroll">
           {[...data.slides, ...data.slides].map((slide, index) => (
             <div

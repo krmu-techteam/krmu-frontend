@@ -26,24 +26,25 @@ const HeroSection = ({ formId }: Props) => {
       <div className="flex flex-col md:flex-row items-center gap-10 max-w-[1427px] mx-auto">
         <div className="w-full md:w-1/2 xl:w-9/12 flex items-start left-container">
           <div className="w-full xl:w-[55%] 2xl:w-3/5 col-1">
-            <h1 className="font-host text-5xl md:text-6xl xl:text-8xl font-extrabold mb-1 leading-none main-heading text-[#001732]">
-              International Admissions
-            </h1>
-            <h4 className="text-2xl lg:text-3xl text-[#E11F23] font-bold font-host main-heading-2">
-              Open For The Session 2026–27
-            </h4>
-            <h5 className="text-[#001732] italic text-4xl lg:text-5xl mb-5 leading-tight font-fraunces mt-5">
-              Study in India. <br className="hidden md:block" /> Lead the World.
-            </h5>
-            <p className="font-inter text-xl 2xl:text-[22px]">
-              Join one of India's fastest-growing{" "}
-              <strong>NAAC ‘A’ accredited</strong>{" "}
-              universities and experience
-              internationally recognised <br className="hidden xl:block" />{" "}
-              education in the heart of Gurugram, India's leading{" "}
-              <br className="hidden xl:block" /> corporate and innovation hub.
-            </p>
-
+            <div className="relative xl:-top-16">
+              <h1 className="font-host text-5xl md:text-6xl xl:text-8xl font-extrabold mb-1 leading-none main-heading text-[#001732]">
+                International Admissions
+              </h1>
+              <h4 className="text-2xl lg:text-3xl text-[#E11F23] font-bold font-host main-heading-2">
+                Open For The Session 2026–27
+              </h4>
+              <h5 className="text-[#001732] italic text-4xl lg:text-5xl mb-5 leading-tight font-fraunces mt-5">
+                Study in India. <br className="hidden md:block" /> Lead the
+                World.
+              </h5>
+              <p className="font-inter text-xl 2xl:text-[22px]">
+                Join one of India's fastest-growing{" "}
+                <strong>NAAC ‘A’ accredited</strong> universities and experience
+                internationally recognised <br className="hidden xl:block" />{" "}
+                education in the heart of Gurugram, India's leading{" "}
+                <br className="hidden xl:block" /> corporate and innovation hub.
+              </p>
+            </div>
             <div className="xl:hidden mt-5">
               <span className="text-4xl xl:text-6xl text-[#001732] font-bold font-fraunces heading-1">
                 Up to
