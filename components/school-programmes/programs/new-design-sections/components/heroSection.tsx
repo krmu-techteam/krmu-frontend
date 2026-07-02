@@ -32,8 +32,8 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
   const hero = data.hero;
 
   // Find the primary button (Apply Now) to see if it should trigger NpfPopup
-  const primaryButton =
-    hero.button.find((btn) => btn.variant === "primary") || hero.button[0];
+  // const primaryButton =
+  //   hero.button.find((btn) => btn.variant === "primary") || hero.button[0];
   const secondaryButton =
     hero.button.find((btn) => btn.variant === "secondary") || hero.button[1];
 
@@ -61,7 +61,9 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
           <p
             className={`${poppins.className} text-white w-full lg:w-[85%] font-light text-sm sm:text-[15px] md:text-[16px] lg:text-[17px] tracking-wide mb-4 max-w-2xl`}
           >
-            {hero.content}
+            <span className="font-semibold">{hero.content}</span>
+            <br />
+            {hero.content2}
           </p>
 
           {/* Buttons */}

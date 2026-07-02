@@ -16,7 +16,11 @@ const fraunces = Fraunces({
   style: ["italic", "normal"],
 });
 
-const FeeFinance = () => {
+type Props = {
+  slug: string;
+};
+
+const FeeFinance = ({ slug }: Props) => {
   const data = getFeeFinanceContent();
   const content = data.feeFinance;
   const pf = content.programFee;
@@ -55,7 +59,7 @@ const FeeFinance = () => {
                 <span
                   className={`${fraunces.className} text-[#002C51] text-4xl sm:text-5xl md:text-[38px] lg:text-[46px] font-bold tracking-tight`}
                 >
-                  {pf.amount}
+                  {slug === "mba" ? "₹3,30,000" : pf.amount}
                 </span>
                 <span
                   className={`${inter.className} text-[#002C51] text-lg sm:text-[21px] `}

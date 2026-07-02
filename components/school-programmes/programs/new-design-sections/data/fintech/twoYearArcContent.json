@@ -1,11 +1,11 @@
 {
   "twoYearArc": {
     "badge": "THE TWO-YEAR ARC",
-    "title": "Two years, from watching to deciding",
+    "title": "Two years, from watching to deciding.",
     "semesters": [
       {
         "period": "SEMESTER 1",
-        "title": "Foundation and first diagnoses",
+        "title": "Foundation and First Diagnoses",
         "desc": "Through cases, classroom interactions, and field visits, watch practitioners make decisions.",
         "icon": "Eye",
         "linkText": "Read More",
@@ -13,7 +13,7 @@
       },
       {
         "period": "SEMESTER 2",
-        "title": "Cross-functional integration",
+        "title": "Cross-Functional Integration",
         "desc": "Start doing cross-functional projects. Present diagnoses to mixed juries of faculty and sector practitioners",
         "icon": "FileText",
         "linkText": "Read More",
@@ -21,7 +21,7 @@
       },
       {
         "period": "SUMMER",
-        "title": "8 to 10 week internship",
+        "title": "8 to 10 Week Internship",
         "desc": "A problem brief from a real company. You work under joint guidance of a faculty mentor and an industry mentor.",
         "icon": "BriefcaseBusiness",
         "linkText": "Read More",
@@ -29,7 +29,7 @@
       },
       {
         "period": "SEMESTER 3",
-        "title": "Sector commitment",
+        "title": "Sector Commitment",
         "desc": "Commit to one or two sectors and job roles.",
         "icon": "CircleStop",
         "linkText": "Read More",

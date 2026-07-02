@@ -1,6 +1,6 @@
 const SchoolProgrammesDiscipline = () => {
   return (
-    <section className="px-5 py-10">
+    <section className="px-5 py-10 xl:py-[64px]">
       <div className="max-w-[1427px] mx-auto w-full flex flex-col lg:flex-row items-baseline">
         <div className="w-full lg:w-1/2 xl:w-3/5">
           <h4 className="text-3xl md:text-4xl xl:text-6xl font-extrabold font-poppins text-[#001732] leading-tight mb-2.5">

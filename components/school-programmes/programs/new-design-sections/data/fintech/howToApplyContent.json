@@ -19,22 +19,22 @@
     "steps": [
       {
         "number": 1,
-        "title": "Apply online",
-        "desc": "admissions.krmangalam.edu.in · application fee ₹1,000"
+        "title": "Apply Online",
+        "desc": "admissions.krmangalam.edu.in ; Application fee ₹1,000"
       },
       {
         "number": 2,
-        "title": "Entrance examination",
+        "title": "Entrance Examination",
         "desc": "The KRMU Entrance Examination"
       },
       {
         "number": 3,
-        "title": "Personal interview",
+        "title": "Personal Interview",
         "desc": "With the faculty panel"
       },
       {
         "number": 4,
-        "title": "Offer & scholarship decision",
+        "title": "Offer & Scholarship Decision",
         "desc": "Your admission offer with any scholarship award"
       },
       {
@@ -44,7 +44,7 @@
       }
     ],
     "cta": {
-      "buttonText": "Begin your application",
+      "buttonText": "Begin Your Application",
       "buttonLink": "#hero-section",
       "phoneText": "or call an admissions counsellor – +91 93114 11717",
       "phoneNumber": "+919311411717"

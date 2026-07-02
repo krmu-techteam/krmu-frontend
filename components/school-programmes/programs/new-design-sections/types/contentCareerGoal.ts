@@ -14,6 +14,7 @@ export interface SemesterTabType {
 export interface CareerGoalContentType {
   badge: string;
   title: string;
+  description?: string;
   image: string;
   semesters: SemesterTabType[];
 }

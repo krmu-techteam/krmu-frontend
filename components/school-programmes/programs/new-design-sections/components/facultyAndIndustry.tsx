@@ -133,7 +133,7 @@ const FacultyAndIndustry = ({ slug }: Props) => {
   console.log(activeFaculty);
 
   return (
-    <section className="w-full bg-[#FDF7EB] text-[#012D52]">
+    <section className="w-full bg-[#F7F0E0] text-[#012D52]">
       {/* Top Part: Info & Grid */}
       <div className="w-full ">
         <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
@@ -264,7 +264,7 @@ const FacultyAndIndustry = ({ slug }: Props) => {
 
       {/* Bottom Part: Faculty slider section */}
       {cards.length > 0 && (
-        <div className="w-full bg-[#F7F0E0]">
+        <div className="w-full  bg-[#FDF7EB]">
           <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
             <h3
               className={`${fraunces.className} text-[28px] sm:text-[38px] font-bold text-[#0F2A4D] mb-8`}

@@ -120,7 +120,7 @@ export const Companies = [
   { name: "Dabur", logo: "/international-admission/new-logos/dabur.png" },
   {
     name: "Mercedes",
-    logo: "/international-admission/new-logos/mercedes.png",
+    logo: "/international-admission/new-logos/mercedes-benz.svg",
   },
   { name: "Flipkart", logo: "/international-admission/new-logos/flipkart.png" },
   { name: "Deloitte", logo: "/international-admission/new-logos/deloitte.png" },
@@ -627,7 +627,7 @@ export const internationalAdmissionSchools = [
       },
       {
         title: "LL.M.",
-        duration: "1 Years",
+        duration: "1 Year",
       },
     ],
   },

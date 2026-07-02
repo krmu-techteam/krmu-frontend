@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { getCommonQuestionContent } from "../lib/getContent";
 import { Fraunces, Inter, Poppins } from "next/font/google";
 import { Plus, Minus } from "lucide-react";
+import { CommonQuestionPageContentType } from "../types/contentCommonQuestion";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,8 +18,13 @@ const fraunces = Fraunces({
   style: ["italic", "normal"],
 });
 
-const CommonQuestion = () => {
-  const data = getCommonQuestionContent();
+type Props = {
+  dataContent?: CommonQuestionPageContentType | null;
+};
+
+const CommonQuestion = ({ dataContent }: Props) => {
+  const data = dataContent;
+  if (!data || !data.commonQuestion) return null;
   const content = data.commonQuestion;
 
   // Keep track of which accordion items are open

@@ -37,7 +37,7 @@ const Stats = () => {
             width={580}
             height={580}
             alt=""
-            className="absolute bottom-0 object-contain z-40"
+            className="absolute bottom-0 2xl:-bottom-10 object-contain z-40 stats-girl-img"
           />
         </div>
         <div className="w-full md:w-1/3 xl:w-3/12 text-white pb-5 sm:py-10">

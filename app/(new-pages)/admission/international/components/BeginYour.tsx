@@ -12,7 +12,7 @@ type Props = {
 
 const BeginYour = ({ data, formId }: Props) => {
   return (
-    <section className="relative overflow-hidden bg-[#001732] pt-[50px] px-5">
+    <section className="relative overflow-hidden bg-[#001732] pt-[50px] px-5 font-poppins">
       <div className="max-w-[1427px] mx-auto flex lg:px-5">
         <div className="hidden lg:block lg:w-1/2"></div>
         <div className="w-full lg:w-1/2 lg:flex lg:justify-end">
@@ -28,7 +28,7 @@ const BeginYour = ({ data, formId }: Props) => {
           {/* LEFT CONTENT */}
           <div className="text-white w-full lg:w-2/3 overflow-hidden">
             <h1
-              className="text-2xl md:text-4xl xl:text-5xl font-bold leading-tight mb-6"
+              className="text-2xl md:text-4xl xl:text-5xl font-extrabold font-poppins leading-tight mb-6"
               dangerouslySetInnerHTML={{ __html: data.heading }}
             />
 
@@ -75,7 +75,7 @@ const BeginYour = ({ data, formId }: Props) => {
               {formId && (
                 <div className="heroBannerForm__form">
                   <div className="heroBannerForm-header">
-                    <h3 className="mb-0 text-center font-poppins font-bold text-xl beginFormHeading">
+                    <h3 className="mb-0 text-center font-poppins font-bold beginFormHeading">
                       Apply for International <br />
                       Admission Here
                     </h3>
@@ -169,7 +169,7 @@ const BeginYour = ({ data, formId }: Props) => {
             </div> */}
         </div>
       </div>
-      <div className="py-5 text-white text-center">
+      <div className="py-5 text-white text-center text-xl">
         <p>&copy; Copyright K.R. Mangalam University. All Rights Reserved.</p>
       </div>
     </section>

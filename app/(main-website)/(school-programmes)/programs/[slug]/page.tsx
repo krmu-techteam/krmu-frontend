@@ -69,9 +69,11 @@ import CommonQuestion from "@/components/school-programmes/programs/new-design-s
 import OldCareerProspects from "@/components/school-programmes/programs/new-design-sections/components/oldCareerProspect";
 import {
   getCareerGoalContent,
+  getCommonQuestionContent,
   getContent,
   getDigitalContent,
   getDigitalGoalContent,
+  getIBMCommonQuestionContent,
   getIBMContent,
   getIBMGoalContent,
 } from "@/components/school-programmes/programs/new-design-sections/lib/getContent";
@@ -358,7 +360,7 @@ const page = async ({ params }: Props) => {
 
         {programmeScopeSection &&
           (isMbaSlug ? (
-            <CareerOutcome slug={slug} />
+            <FacultyAndIndustry slug={slug} />
           ) : (
             <ProgrammeScope
               scopeData={programmeScopeSection}
@@ -370,7 +372,7 @@ const page = async ({ params }: Props) => {
 
         {programmeHighlightSection &&
           (isMbaSlug ? (
-            <MbaExists />
+            <CareerOutcome slug={slug} />
           ) : (
             <ProgrammeHighlight
               heading={programmeHighlightSection?.heading}
@@ -391,7 +393,7 @@ const page = async ({ params }: Props) => {
         )}
         {admissionProcessSection &&
           (isMbaSlug ? (
-            <TwoYearArc />
+            <MbaExists />
           ) : (
             <AdmissionProcessComp
               heading={admissionProcessSection?.heading}
@@ -407,18 +409,7 @@ const page = async ({ params }: Props) => {
 
         {curriculumSection &&
           (isMbaSlug ? (
-            <CareerGoal
-              slug={slug}
-              dataContent={
-                slug === "mba-fintech"
-                  ? getCareerGoalContent()
-                  : slug === "mba"
-                    ? getIBMGoalContent()
-                    : slug === "mba-digital-marketing"
-                      ? getDigitalGoalContent()
-                      : null
-              }
-            />
+            <TwoYearArc />
           ) : (
             <Curriculum
               heading={curriculumSection?.heading}
@@ -435,7 +426,18 @@ const page = async ({ params }: Props) => {
 
         {labfacilitiesSection &&
           (isMbaSlug ? (
-            <LeaveWith />
+            <CareerGoal
+              slug={slug}
+              dataContent={
+                slug === "mba-fintech"
+                  ? getCareerGoalContent()
+                  : slug === "mba"
+                    ? getIBMGoalContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalGoalContent()
+                      : null
+              }
+            />
           ) : (
             <LabsFacilities
               heading={labfacilitiesSection?.heading}
@@ -450,7 +452,7 @@ const page = async ({ params }: Props) => {
 
         {beyondclassSection &&
           (isMbaSlug ? (
-            <FacultyAndIndustry slug={slug} />
+            <LeaveWith />
           ) : (
             <BeyondClassroom
               heading={beyondclassSection?.heading}
@@ -503,7 +505,7 @@ const page = async ({ params }: Props) => {
 
         {tocSection &&
           (isMbaSlug ? (
-            <FeeFinance />
+            <FeeFinance slug={slug} />
           ) : (
             <TableOfContent
               heading={tocSection?.heading}
@@ -537,7 +539,17 @@ const page = async ({ params }: Props) => {
         {singleSchoolProgramme?.school_category &&
           (isMbaSlug ? (
             <>
-              <CommonQuestion />
+              <CommonQuestion
+                dataContent={
+                  slug === "mba-fintech"
+                    ? getCommonQuestionContent()
+                    : slug === "mba"
+                      ? getIBMCommonQuestionContent()
+                      : slug === "mba-digital-marketing"
+                        ? getCommonQuestionContent()
+                        : null
+                }
+              />
               <ThreeIndustryTracks />
             </>
           ) : (

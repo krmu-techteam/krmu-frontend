@@ -35,8 +35,11 @@ import { LocationPageContentType } from "../types/contentLocation";
 import LocationContentData from "../data/fintech/locationContent.json";
 import { ThreeIndustryTracksPageContentType } from "../types/contentThreeIndustryTracks";
 import ThreeIndustryTracksContentData from "../data/fintech/threeIndustryTracksContent.json";
+
 import { CommonQuestionPageContentType } from "../types/contentCommonQuestion";
 import CommonQuestionContentData from "../data/fintech/commonQuestionContent.json";
+import ibmCommonQuestionContentData from "../data/ibm/ibmCommonQuestionContent.json";
+// import digitalCommonQuestionContentData from "../data/digitalMarketing/digitalCommonQuestionContent.json";
 
 export function getContent(): HeroPageContentType {
   return HeroContentData as HeroPageContentType;
@@ -116,4 +119,8 @@ export function getThreeIndustryTracksContent(): ThreeIndustryTracksPageContentT
 
 export function getCommonQuestionContent(): CommonQuestionPageContentType {
   return CommonQuestionContentData as CommonQuestionPageContentType;
+}
+
+export function getIBMCommonQuestionContent(): CommonQuestionPageContentType {
+  return ibmCommonQuestionContentData as CommonQuestionPageContentType;
 }

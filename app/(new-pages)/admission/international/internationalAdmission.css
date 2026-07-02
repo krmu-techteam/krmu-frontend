@@ -46,6 +46,55 @@
     )
     1;
 }
+@media (min-width: 1728px) and (max-width: 2000px) {
+  .middle-container{
+    margin-top: -90px;
+  }
+}
+@media (min-width: 1800px) and (max-width: 2000px) {
+  .form-white-container {
+    height: 700px !important;
+  }
+  .outer-right-container {
+    height: 650px;
+  }
+  .middle-container {
+    position: relative;
+    top: -18px !important;
+  }
+}
+@media (min-width: 1600px) and (max-width: 1800px) {
+  .form-white-container {
+    max-width: 430px;
+  }
+  .form-white-container {
+    height: 750px !important;
+  }
+  .outer-right-container {
+    height: 660px;
+  }
+  /* .middle-container {
+    position: relative;
+    top: -83px !important;
+  } */
+}
+@media (min-width: 1520px) and (max-width: 1599px) {
+
+}
+@media (min-width: 1520px) and (max-width: 1599px) {
+  .form-white-container {
+    max-width: 430px;
+  }
+  .form-white-container {
+    height: 720px;
+  }
+  .outer-right-container {
+    height: 675px;
+  }
+  .stats-girl-img {
+    bottom: -86px;
+  }
+}
 
 @media (max-width: 480px) {
   .patentCampusGrid {
@@ -196,13 +245,16 @@
   float: right;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.npf_wgts iframe form #registerBtn {
+  background-color: #cb000d !important;
+}
 
 .heroBannerForm__form {
   height: 670px;
 }
 .beginFormHeading {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.4;
 }
 
