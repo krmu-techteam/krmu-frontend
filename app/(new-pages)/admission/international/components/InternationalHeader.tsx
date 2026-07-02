@@ -28,9 +28,9 @@ export default function InternationalHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="z-[9999999999999] bg-[#071C38] shadow-md px-5">
+    <header className="fixed top-0 z-[9999999999999] bg-[#071C38] shadow-md px-5 w-full">
       <div className="mx-auto max-w-[1664px]">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-20 items-center justify-between gap-5 lg:gap-0">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image

@@ -9,37 +9,37 @@ const BenefitOfStudy = () => {
             Benefits of Studying in Gurugram
           </h4>
           <ul className="xl:text-base font-poppins font-semibold">
-            <li className="flex items-center gap-2 leading-[50px]">
+            <li className="flex items-start md:items-center gap-2 leading-relaxed md:leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Home to Numerous Fortune 500 Companies
             </li>
-            <li className="flex items-center gap-2 leading-[50px]">
+            <li className="flex items-start md:items-center gap-2 leading-relaxed md:leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Leading Technology and Startup Ecosystem
             </li>
-            <li className="flex items-center gap-2 leading-[50px]">
+            <li className="flex items-start md:items-center gap-2 leading-relaxed md:leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Excellent Connectivity Through Metro, Road, and Airport
             </li>
-            <li className="flex items-center gap-2 leading-[50px]">
+            <li className="flex items-start md:items-center gap-2 leading-relaxed md:leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Strong Internship and Placement Opportunities
             </li>
-            <li className="flex items-center gap-2 leading-[50px]">
+            <li className="flex items-start md:items-center gap-2 leading-relaxed md:leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
               Safe and Modern Urban Infrastructure
             </li>
-            <li className="flex items-center gap-2 leading-[50px]">
+            <li className="flex items-start md:items-center gap-2 leading-relaxed md:leading-[50px]">
               <div>
                 <Check color="#fff" />
               </div>
