@@ -13,10 +13,10 @@ const WhyChoose = () => {
         sm:pt-[350px]
         md:pt-[420px]
         lg:pt-[520px]
-        xl:pt-[425px]
-        
+        xl:pt-[542px]
         sm:-mt-20
         lg:-mt-40
+        internation-admission-section
       "
       id="why-choose"
     >
@@ -24,7 +24,7 @@ const WhyChoose = () => {
 
       <div className="relative z-20 max-w-[1427px] mx-auto">
         <Image
-          src="/international-admission/girl-3.png"
+          src="/international-admission/girl-5.png"
           alt="Girl"
           width={438}
           height={671}
@@ -32,10 +32,12 @@ const WhyChoose = () => {
           absolute
           bottom-0
           right-0
+          2xl:bottom-[-77px]
           sm:right-6
           md:right-10
           lg:right-20
-          xl:right-0
+          xl:right-[-40px]
+          2xl:right-[-77px]
           w-[180px]
           sm:w-[220px]
           md:w-[280px]
@@ -43,11 +45,12 @@ const WhyChoose = () => {
           xl:w-[438px]
           h-auto
           z-10
+          why-choose-girl
         "
         />
         <div className="flex flex-col lg:flex-row items-center">
           {/* Left Content */}
-          <div className="w-full lg:w-2/3 pb-[188px]">
+          <div className="w-full lg:w-2/3 pb-10 pl-5">
             <h3
               className="
                 text-3xl
@@ -75,6 +78,7 @@ const WhyChoose = () => {
                 font-semibold
                 font-fraunces
                 mb-4
+                italic
               "
             >
               A University Built for Global Learners

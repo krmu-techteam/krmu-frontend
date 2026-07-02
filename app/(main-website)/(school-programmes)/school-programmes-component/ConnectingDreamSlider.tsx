@@ -57,14 +57,14 @@ const ConnectingDreamSlider = ({ logos }: Props) => {
         {logos.map((logo) => (
           <div
             key={logo.id}
-            className="px-2 sm:px-4 md:px-6 flex items-center justify-center"
+            className="px-2 sm:px-4 md:px-6 w-[200px] h-[100px]  flex items-center justify-center"
           >
             <Image
               src={`${STRAPI_URL}${logo?.url}`}
-              width={180}
-              height={180}
+              width={1440}
+              height={1440}
               alt={logo?.alternativeText || "Career Logo"}
-              className="object-contain max-h-[56px] sm:max-h-16 w-auto transition-all"
+              className="object-contain w-full h-full "
             />
           </div>
         ))}
@@ -76,26 +76,33 @@ const ConnectingDreamSlider = ({ logos }: Props) => {
     <div className="w-full overflow-hidden relative">
       {/* Universal Slider (Marquee) */}
       <div className="flex animate-marquee whitespace-nowrap gap-2.5">
-        {logos?.concat(logos).concat(logos).map((logo, index) => (
-          <div
-            key={`${logo.id}-${index}`}
-            className="px-4 md:px-6 xl:px-8 flex items-center justify-center customCarousel"
-          >
-            <Image
-              src={`${STRAPI_URL}${logo?.url}`}
-              width={180}
-              height={180}
-              alt={logo?.alternativeText || "Career Logo"}
-              className="object-contain max-h-[56px] sm:max-h-16 w-auto transition-all"
-            />
-          </div>
-        ))}
+        {logos
+          ?.concat(logos)
+          .concat(logos)
+          .map((logo, index) => (
+            <div
+              key={`${logo.id}-${index}`}
+              className="px-4 md:px-6 xl:px-8 flex items-center justify-center customCarousel"
+            >
+              <Image
+                src={`${STRAPI_URL}${logo?.url}`}
+                width={180}
+                height={180}
+                alt={logo?.alternativeText || "Career Logo"}
+                className="object-contain max-h-[56px] sm:max-h-16 w-auto transition-all"
+              />
+            </div>
+          ))}
       </div>
 
       <style jsx>{`
         @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-33.33%); }
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.33%);
+          }
         }
         .animate-marquee {
           display: flex;

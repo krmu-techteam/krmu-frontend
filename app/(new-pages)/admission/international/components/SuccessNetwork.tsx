@@ -74,7 +74,7 @@ const SuccessNetwork = () => {
                 {item.title}
               </h3>
 
-              <p className="mx-auto mt-2 max-w-[366px] font-poppins text-sm font-semibold leading-tight text-[#001732]" dangerouslySetInnerHTML={{
+              <p className="mx-auto mt-2 max-w-[366px] font-poppins text-sm font-medium leading-tight text-[#001732]" dangerouslySetInnerHTML={{
                 __html: item.desc
               }} />
 
