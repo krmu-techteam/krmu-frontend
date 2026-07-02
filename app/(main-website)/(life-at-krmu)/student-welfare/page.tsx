@@ -14,6 +14,8 @@ import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import StudentCouncil from "./comp/StudentCouncil";
 import GrievenceAndCounseling from "./comp/GrievenceAndCounseling";
+import { EventGallery } from "./comp/EventGallery";
+import { SocialConnect } from "./comp/SocialConnect";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("student-welfare");
@@ -95,7 +97,9 @@ const page = async () => {
 
       {/* <WelfareImage /> */}
       {/* <TabScroll /> */}
-      {photoGallery && <PhotoGallery photoGallery={photoGallery} />}
+      {photoGallery && <EventGallery />}
+      <SocialConnect />
+      {/* {photoGallery && <PhotoGallery photoGallery={photoGallery} />} */}
     </>
   );
 };

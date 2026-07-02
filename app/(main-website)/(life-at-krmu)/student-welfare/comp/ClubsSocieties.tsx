@@ -19,7 +19,7 @@ const ClubsSocieties = () => {
       /> */}
 
       <div
-        className={`max-w-[1500px] h-fit top-8 rounded-md bg-[linear-gradient(180deg,#E7C268_0%,#FFF3D7_100%)] px-6 py-6 text-[#001732] shadow-[0_18px_45px_rgba(15,23,42,0.12)] backdrop-blur-[1px] md:top-10 md:px-8 md:py-7`}
+        className={`max-w-[1550px] h-fit top-8 rounded-md bg-[linear-gradient(180deg,#E7C268_0%,#FFF3D7_100%)] px-6 py-6 text-[#001732] shadow-[0_18px_45px_rgba(15,23,42,0.12)] backdrop-blur-[1px] md:top-10 md:px-8 md:py-7`}
       >
         <h2
           className={`${playfair.className} text-[30px] font-bold leading-tight md:text-[36px]`}
@@ -27,7 +27,7 @@ const ClubsSocieties = () => {
           Clubs and Societies
         </h2>
 
-        <p className="mt-3 max-w-[1340px] text-[14px] font-medium leading-[1.45] md:text-[17px]">
+        <p className="mt-3  text-[14px] font-medium leading-[1.45] md:text-[17px]">
           KRMU offers a vibrant campus life to the students and the faculty.
           From cultural events to scientific experiments, from robotic
           developments to artistic strokes, apprentices at KRMU keep their

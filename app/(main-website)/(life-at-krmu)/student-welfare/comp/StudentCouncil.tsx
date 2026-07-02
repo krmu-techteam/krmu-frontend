@@ -153,7 +153,7 @@ const StudentCouncil = () => {
   return (
     <>
       <section className={` bg-[#F0F3F9] px-8 sm:px-8 md:px-12 py-12 md:py-12`}>
-        <div className="mx-auto w-full max-w-[1500px]">
+        <div className="mx-auto w-full max-w-[1550px]">
           <h2
             className={`${playfair.className} mb-8 text-center text-3xl font-bold text-[#0a1d3a] md:mb-10 md:text-4xl lg:text-[42px]`}
           >
@@ -189,7 +189,7 @@ const StudentCouncil = () => {
       </section>
 
       <section className={` bg-[#F0F3F9] px-8 pb-10  md:px-12`}>
-        <div className="mx-auto w-full max-w-[1500px]">
+        <div className="mx-auto w-full max-w-[1550px]">
           <h3
             className={`${playfair.className} mb-6 text-center text-[30px] font-bold leading-tight text-black md:text-[34px]`}
           >
@@ -239,7 +239,7 @@ const StudentCouncil = () => {
       </section>
 
       <section className={` bg-[#F0F3F9] px-8 sm:px-8 md:px-12 pb-12`}>
-        <div className="mx-auto w-full max-w-[1500px]">
+        <div className="mx-auto w-full max-w-[1550px]">
           <div className="flex flex-col items-center gap-10 rounded-2xl border-4 border-white bg-[#DAE9FF] p-4 md:flex-row md:items-stretch md:gap-8 md:p-8 min-h-[350px]">
             <div className="w-full flex-shrink-0 overflow-hidden rounded-4xl md:w-[440px]  lg:w-[460px]">
               <Image

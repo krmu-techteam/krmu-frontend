@@ -3,7 +3,7 @@ import Image from "next/image";
 const DSWMessage = () => {
   return (
     <section className="bg-white px-8 py-8 md:px-12 md:py-12">
-      <div className="mx-auto w-full max-w-[1500px] overflow-hidden rounded-md bg-[linear-gradient(165deg,#A598BF_6%,#120032_13.48%)] px-6 py-8 text-white  md:px-8 md:py-9 lg:px-9">
+      <div className="mx-auto w-full max-w-[1550px] overflow-hidden rounded-md bg-[linear-gradient(165deg,#A598BF_6%,#120032_13.48%)] px-6 py-8 text-white  md:px-8 md:py-9 lg:px-9">
         <div className="grid items-start gap-7 lg:grid-cols-[190px_1fr] xl:grid-cols-[240px_1fr]">
           <div className="mx-auto h-[200px] w-[200px] rounded-full border-1 border-dashed border-[#ff9d00] p-1.5 lg:mx-0 xl:h-[220px] xl:w-[220px]">
             <div className="relative h-full w-full overflow-hidden rounded-full bg-white">

@@ -46,7 +46,7 @@ const welfareCards = [
 const VisionMission = () => {
   return (
     <section className="bg-white px-8 pb-12 md:px-12">
-      <div className="relative mx-auto w-full max-w-[1500px] overflow-hidden rounded-md bg-[linear-gradient(180deg,#001732_0%,#994246_100%)] px-6 pb-8 pt-10 text-white md:px-[65px] md:pb-[60px] md:pt-[82px]">
+      <div className="relative mx-auto w-full max-w-[1550px] overflow-hidden rounded-md bg-[linear-gradient(180deg,#001732_0%,#994246_100%)] px-6 pb-8 pt-10 text-white md:px-[65px] md:pb-[60px] md:pt-[82px]">
         <div className="pointer-events-none absolute inset-x-[8%]  top-[30px]  hidden h-[500px] w-[1150px]  md:block">
           <Image
             src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/887730a7857f46073d15c2fcef7de92802f16b60_1cb06209a1.png"
@@ -120,7 +120,7 @@ const VisionMission = () => {
         </div>
       </div>
 
-      <div className="mx-auto pt-12 grid w-full max-w-[1500px] gap-5 md:grid-cols-3">
+      <div className="mx-auto pt-12 grid w-full max-w-[1550px] gap-5 md:grid-cols-3">
         {welfareCards.map((card) => (
           <article
             key={card.title}

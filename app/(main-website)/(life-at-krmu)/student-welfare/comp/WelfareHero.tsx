@@ -14,10 +14,10 @@ const WelfareHero = () => {
         style={{ backgroundPosition: "center 5%" }}
       />
 
-      <div className=" bg-[#051630] px-4 pb-[60px]">
-        <div className="flex justify-center items-center text-center flex-col max-w-[1350px] mx-auto w-full text-white welfare_desg_int">
+      <div className="max-w-[1650px] mx-auto  bg-[#051630] px-4 pb-[60px]">
+        <div className="flex justify-center items-center text-center flex-col max-w-[1550px] mx-auto w-full text-white welfare_desg_int">
           <h1
-            className={`${playfair.className}   font-semibold leading-[1.25] text-[34px] sm:text-5xl md:text-6xl lg:text-[80px] bg-clip-text text-transparent -mt-[36px] sm:-mt-[52px] md:-mt-[64px] lg:-mt-[90px] mb-6 `}
+            className={`${playfair.className}   font-semibold leading-[1.25] text-[34px] sm:text-5xl md:text-6xl lg:text-[104px] bg-clip-text text-transparent -mt-[36px] sm:-mt-[52px] md:-mt-[64px] lg:-mt-[90px] mb-6 `}
             style={{
               backgroundImage:
                 "linear-gradient(90deg,#FF9D00 0%,#68BCFF 50%,#FF1D21 100%)",
