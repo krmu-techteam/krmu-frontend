@@ -92,10 +92,10 @@ export default function KRMUTimer({
       </span> */}
 
       <span
-        className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-[10px] sm:text-sm" : "text-[10px]"}`}
+        className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-[10px] sm:text-sm" : "text-[12px]"}`}
       >
-        Grab Up to 100% Scholarships Worth Rs 27 Cr + Get a Chance to Fly to
-        Europe (First Come, First Serve){" "}
+        Registration Closing on July 2 | Join Sameeksha Sud LIVE | Limited Seats
+        Available
         {mainWebsiteTimer && (
           <span className="border-b border-white border-dotted">Apply Now</span>
         )}

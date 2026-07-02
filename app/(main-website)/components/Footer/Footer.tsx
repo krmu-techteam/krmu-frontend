@@ -150,6 +150,13 @@ const Footer = async () => {
                   </ul>
                 </>
               )}
+
+
+
+
+
+
+              
             </div>
           </div>
           <div className="w-full  xl:w-1/4">

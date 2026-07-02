@@ -109,27 +109,31 @@
 //   },
 // ];
 
-
-
 export const Companies = [
-  { name: "Google", logo: "/international-admission/logos/google.png" },
-  { name: "EY", logo: "/international-admission/logos/ey.png" },
-  { name: "Microsoft", logo: "/international-admission/logos/microsoft.png" },
-  { name: "Sun", logo: "/international-admission/logos/sun.png" },
-  { name: "Infosys", logo: "/international-admission/logos/infosys.png" },
-  { name: "Oberoi", logo: "/international-admission/logos/oberoi.png" },
-  { name: "Reliance", logo: "/international-admission/logos/reliance.png" },
-  { name: "Dabur", logo: "/international-admission/logos/dabur.png" },
-  { name: "Mercedes", logo: "/international-admission/logos/mercedes-benz.png" },
-  { name: "Flipkart", logo: "/international-admission/logos/flipkart.png" },
-  { name: "Deloitte", logo: "/international-admission/logos/deloitte.png" },
-  { name: "Zomato", logo: "/international-admission/logos/zomato.png" },
-  { name: "Dell", logo: "/international-admission/logos/dell.png" },
-  { name: "Amazon", logo: "/international-admission/logos/amazon.png" },
-  { name: "SafeExpress", logo: "/international-admission/logos/safeexpress.png" },
-  { name: "KPMG", logo: "/international-admission/logos/kpmg.png" },
-  { name: "Genpact", logo: "/international-admission/logos/genpact.png" },
-  { name: "HCL", logo: "/international-admission/logos/hcl.png" },
+  { name: "Google", logo: "/international-admission/new-logos/google.png" },
+  { name: "EY", logo: "/international-admission/new-logos/ey.png" },
+  { name: "Microsoft", logo: "/international-admission/new-logos/microsoft.png" },
+  { name: "Sun", logo: "/international-admission/new-logos/sun-pharma.png" },
+  { name: "Infosys", logo: "/international-admission/new-logos/infosys.png" },
+  { name: "Oberoi", logo: "/international-admission/new-logos/oberoi.png" },
+  { name: "Reliance", logo: "/international-admission/new-logos/reliance.png" },
+  { name: "Dabur", logo: "/international-admission/new-logos/dabur.png" },
+  {
+    name: "Mercedes",
+    logo: "/international-admission/new-logos/mercedes.png",
+  },
+  { name: "Flipkart", logo: "/international-admission/new-logos/flipkart.png" },
+  { name: "Deloitte", logo: "/international-admission/new-logos/deloitte.png" },
+  { name: "Zomato", logo: "/international-admission/new-logos/zomato.png" },
+  { name: "Dell", logo: "/international-admission/new-logos/dell.png" },
+  { name: "Amazon", logo: "/international-admission/new-logos/amazon.png" },
+  {
+    name: "SafeExpress",
+    logo: "/international-admission/new-logos/safe-express.png",
+  },
+  { name: "KPMG", logo: "/international-admission/new-logos/kpmg.png" },
+  { name: "Genpact", logo: "/international-admission/new-logos/genpact.png" },
+  { name: "HCL", logo: "/international-admission/new-logos/hcl.png" },
 ];
 
 export const NetworkContent = [
@@ -206,12 +210,7 @@ export const globalLearningData = {
       width: 135,
       height: 34,
     },
-    {
-      name: "University of Houston",
-      src: "/international-admission/logos/uoh.png",
-      width: 135,
-      height: 34,
-    },
+
     {
       name: "German Varsity",
       src: "/international-admission/logos/gv.png",
@@ -277,18 +276,19 @@ export const internationalAdmissionSchools = [
         duration: "4 Years",
       },
       {
-        title: "B.Tech. Computer Science and Engineering (Lateral)",
+        title: "B.Tech. Computer Science and Engineering",
         duration: "3 Years",
         lateral: true,
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (AI and ML) with academic support of IBM & powered by Microsoft Certifications",
+          "B.Tech. Computer Science and Engineering (AI & ML) with academic support of IBM & powered by Microsoft Certification",
         duration: "4 Years",
+        lateral: false,
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (AI & ML) with academic support of IBM & powered by Microsoft Certifications (Lateral)",
+          "B.Tech. Computer Science and Engineering (AI & ML) with academic support of IBM & powered by Microsoft Certifications",
         duration: "3 Years",
         lateral: true,
       },
@@ -296,10 +296,11 @@ export const internationalAdmissionSchools = [
         title:
           "B.Tech. Computer Science and Engineering (Full Stack Development) with academic support of ImaginXP",
         duration: "4 Years",
+        lateral: false,
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (Full Stack Development) with academic support of ImaginXP (Lateral)",
+          "B.Tech. Computer Science and Engineering (Full Stack Development) with academic support of Xebia",
         duration: "3 Years",
         lateral: true,
       },
@@ -311,13 +312,7 @@ export const internationalAdmissionSchools = [
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (UX/UI) with academic support of ImaginXP (Lateral)",
-        duration: "3 Years",
-        lateral: true,
-      },
-      {
-        title:
-          "B.Tech. Computer Science and Engineering (UX/UI) with academic support of ImaginXP (Lateral)",
+          "B.Tech. Computer Science and Engineering (UX/UI) with academic support of ImaginXP",
         duration: "3 Years",
         lateral: true,
       },
@@ -325,11 +320,10 @@ export const internationalAdmissionSchools = [
         title:
           "B.Tech. Computer Science and Engineering (Cyber Security) with academic support of EC-Council and IBM",
         duration: "4 Years",
-        lateral: false,
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (Cyber Security) with academic support of EC-Council and IBM (Lateral)",
+          "B.Tech. Computer Science and Engineering (Cyber Security) with academic support of EC-Council and IBM",
         duration: "3 Years",
         lateral: true,
       },
@@ -337,97 +331,63 @@ export const internationalAdmissionSchools = [
         title:
           "B.Tech. Computer Science and Engineering (Data Science) with academic support of IBM",
         duration: "4 Years",
-        lateral: false,
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (Data Science) with academic support of IBM (Lateral)",
+          "B.Tech. Computer Science and Engineering (Data Science) with academic support of IBM",
         duration: "3 Years",
         lateral: true,
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (Robotics and AI) with academic support of IBM & powered by Microsoft Certifications",
+          "B.Tech. Computer Science and Engineering (Robotics & AI) with academic support of IBM & powered by Microsoft Certifications",
         duration: "4 Years",
-        lateral: false,
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (Robotics & AI) with academic support of IBM & powered by Microsoft Certifications (Lateral)",
+          "B.Tech. Computer Science and Engineering (Robotics & AI) with academic support of IBM & powered by Microsoft Certifications",
         duration: "3 Years",
         lateral: true,
-      },
-      {
-        title:
-          "B.Tech. Computer Science and Engineering (Cloud Computing) powered by Microsoft Certifications**",
-        duration: "4 Years",
-        lateral: false,
-      },
-      {
-        title:
-          "B.Tech. Computer Science and Engineering (Semiconductor Design)**",
-        duration: "4 Years",
-        lateral: false,
       },
       {
         title:
           "BCA (AI & Data Science) with academic support of IBM & powered by Microsoft Certifications",
         duration: "3 Years",
-        lateral: false,
       },
       {
         title:
           "BCA (Hons. / Hons. with Research) AI & Data Science with academic support of IBM & powered by Microsoft Certifications",
         duration: "4 Years",
-        lateral: false,
       },
       {
-        title:
-          "BCA (Hons. / Hons. with Research) AI & Data Science with academic support of IBM & powered by Microsoft Certifications",
-        duration: "4 Years",
-        lateral: false,
-      },
-      {
-        title: "BCA (Cyber Security) with Academic support of EC-Council",
+        title: "BCA (Cyber Security) with academic support of EC-Council",
         duration: "3 Years",
-        lateral: false,
       },
       {
         title:
-          "BCA (Hons./ Hons. with Research) Cyber Security with Academic support of EC-Council",
+          "BCA (Hons. / Hons. with Research) Cyber Security with academic support of EC-Council",
         duration: "4 Years",
-        lateral: false,
       },
       {
         title: "B.Sc. (Hons.) Computer Science with academic support of IBM",
         duration: "3 Years",
-        lateral: false,
       },
       {
         title: "B.Sc. (Hons.) Cyber Security",
         duration: "3 Years",
-        lateral: false,
       },
       {
         title: "B.Sc. (Hons.) Data Science",
         duration: "3 Years",
-        lateral: false,
-      },
-      {
-        title: "M.Tech. Computer Science and Engineering",
-        duration: "2 Years",
-        lateral: false,
       },
       {
         title: "MCA",
         duration: "2 Years",
-        lateral: false,
       },
       {
         title:
           "MCA (AI & ML) with academic support of IBM and powered by Microsoft Certifications",
         duration: "2 Years",
-        lateral: false,
       },
     ],
   },
@@ -447,12 +407,12 @@ export const internationalAdmissionSchools = [
       },
       {
         title:
-          "BBA (Business Intelligence & Analytics) with academic support of Ernst & Young (EY)",
+          "BBA (Business Intelligence & Analytics) in knowledge partnership with EY India",
         duration: "3 Years",
       },
       {
         title:
-          "BBA (Hons. / Hons. with Research) (Business Intelligence & Analytics) with academic support of Ernst & Young (EY)",
+          "BBA (Hons. / Hons. with Research) (Business Intelligence & Analytics) in knowledge partnership with EY India",
         duration: "4 Years",
       },
       {
@@ -504,12 +464,12 @@ export const internationalAdmissionSchools = [
       },
       {
         title:
-          "B.Com. (Hons.) (International Accounting and Finance) (ACCA - UK) With academic support of Grant Thornton",
+          "B.Com. (Hons.) (International Accounting and Finance) (ACCA - UK) with academic support of Grant Thornton",
         duration: "3 Years",
       },
       {
         title:
-          "B.Com. (Hons. / Hons. with Research) (International Accounting and Finance) (ACCA - UK) With academic support of Grant Thornton",
+          "B.Com. (Hons. / Hons. with Research) (International Accounting and Finance) (ACCA - UK) with academic support of Grant Thornton",
         duration: "4 Years",
       },
       {
@@ -519,18 +479,18 @@ export const internationalAdmissionSchools = [
       {
         title:
           "Integrated BBA + MBA with academic support of IBM (4 yrs + 1 yr Industry Internship)",
-        duration: "4+1 Years",
+        duration: "5 Years",
       },
       {
         title: "MBA with academic support of IBM",
-        duration: "4+1 Years",
+        duration: "2 Years",
       },
       {
         title: "MBA (Digital Marketing) with academic support of IIDE",
         duration: "2 Years",
       },
       {
-        title: "MBA (Fintech) with academic support of Ernst & Young (EY)",
+        title: "MBA (Fintech) in knowledge partnership with EY India",
         duration: "2 Years",
       },
     ],
@@ -538,7 +498,7 @@ export const internationalAdmissionSchools = [
 
   {
     id: 3,
-    name: "B.Sc. (Hons. / Hons. with Research) Physics",
+    name: "School of Basic & Applied Sciences",
     programmes: [
       {
         title: "B.Sc. (Hons. / Hons. with Research) Physics",
@@ -646,10 +606,6 @@ export const internationalAdmissionSchools = [
           "Bachelor of Design (B.Des.) (Hons. / Hons. with Research) (UX/UI & Interaction Design)",
         duration: "4 Years",
       },
-      {
-        title: "M. Design (Interior Design)**",
-        duration: "2 Years",
-      },
     ],
   },
 
@@ -701,6 +657,10 @@ export const internationalAdmissionSchools = [
     name: "School of Liberal Arts",
     programmes: [
       {
+        title: "B.A. Programme",
+        duration: "3 Years",
+      },
+      {
         title: "B.A. (Hons.) English",
         duration: "3 Years",
       },
@@ -733,28 +693,8 @@ export const internationalAdmissionSchools = [
         duration: "4 Years",
       },
       {
-        title: "B.A. (Hons. / Hons. with Research) (Liberal Arts)",
-        duration: "4 Years",
-      },
-      {
-        title: "M.A. English",
-        duration: "2 Years",
-      },
-      {
-        title: "M.A. Economics",
-        duration: "2 Years",
-      },
-      {
         title: "M.A. Applied Psychology",
         duration: "2 Years",
-      },
-      {
-        title: "M.A. Political Science",
-        duration: "2 Years",
-      },
-      {
-        title: "B.A Program",
-        duration: "3 Years",
       },
     ],
   },
@@ -769,10 +709,6 @@ export const internationalAdmissionSchools = [
       },
       {
         title: "Bachelor of Education (B.Ed.)",
-        duration: "2 Years",
-      },
-      {
-        title: "M.A. Education",
         duration: "2 Years",
       },
     ],
@@ -791,10 +727,10 @@ export const internationalAdmissionSchools = [
 
   {
     id: 12,
-    name: "Ph.D",
+    name: "Ph.D.",
     programmes: [
       {
-        title: "Ph.D",
+        title: "Ph.D.",
         duration: "Min. 3 Years",
       },
     ],
@@ -811,14 +747,14 @@ export type LifeInternationalAdmissionSection = {
 };
 
 export const lifeInternationalAdmissionData: LifeInternationalAdmissionSection =
-{
-  heading: "Life as a BBA  Student at KRMU",
-  description: "",
-  image: {
-    src: "/landingpage/common/collage.webp",
-    alt: "Life as a PhD Scholar at KR Mangalam",
-  },
-};
+  {
+    heading: "Life as a BBA  Student at KRMU",
+    description: "",
+    image: {
+      src: "/landingpage/common/collage.webp",
+      alt: "Life as a PhD Scholar at KR Mangalam",
+    },
+  };
 
 export const faqs = [
   {
@@ -829,28 +765,59 @@ export const faqs = [
   {
     question: "Is K.R. Mangalam University recognised in India?",
     answer:
-      "Yes. K.R. Mangalam University is recognised by the University Grants Commission (UGC) and other relevant statutory bodies.",
+      "Yes, K.R. Mangalam University is recognised by the UGC and approved by relevant statutory bodies for applicable programmes.",
   },
   {
     question: "What is the language of instruction? Do I need to know Hindi?",
     answer:
-      "English is the primary language of instruction. Knowledge of Hindi is not mandatory.",
+      "All programmes at the university are taught entirely in English. You do not need to know Hindi to study here. However, basic conversational Hindi can be helpful for day-to-day life, and many students pick it up naturally during their stay in India.",
   },
   {
     question:
       "Is on-campus hostel accommodation available for international students?",
     answer:
-      "Yes, separate hostel facilities are available for boys and girls with modern amenities.",
+      "Yes, KRMU has separate, well-furnished hostels for boys and girls with AC rooms, high-speed Wi-Fi, hygienic mess facilities, laundry, gym, indoor games, and 24×7 security. International students are given priority in hostel allotment.",
   },
   {
     question: "Can international students apply for scholarships?",
     answer:
-      "Yes. Eligible international students can avail merit-based scholarships based on academic performance.",
+      "Yes! Eligible students may apply for available scholarship opportunities.",
   },
   {
     question: "What type of visa do I need to study in India?",
     answer:
-      "International students must obtain a valid Student Visa before joining the programme.",
+      "You will need a Student Visa (S-Visa) issued by the Indian Embassy or Consulate in your home country. Once you receive your offer letter from KRMU, our International Admissions team will provide you with a guidance document to support your visa application process.",
+  },
+  {
+    question: "Can I work part-time while studying in India on a student visa?",
+    answer:
+      "Student visas in India do not generally permit paid employment outside the university. However, students may engage in campus-based opportunities, research assistantships, internships facilitated by the university, and startup activities through KRMU's Entrepreneurship & Innovation Centre (KEIC).",
+  },
+  {
+    question:
+      "What is the food like on campus? Are international dietary needs accommodated?",
+    answer:
+      "KRMU's campus cafeterias offer a diverse menu that includes vegetarian, non-vegetarian, and international cuisine options. Hygienic preparation is a priority. Students with specific dietary requirements (halal, vegan, gluten-free, etc.) can discuss their needs with the hostel mess team who are experienced in catering to a diverse international student community.",
+  },
+  {
+    question: "Is India safe for international students?",
+    answer:
+      "India hosts thousands of international students every year and offers a welcoming multicultural environment. KRMU also provides dedicated student support services, ensuring their safety. ",
+  },
+  {
+    question: "Where is KRMU located and how do I get there from the airport?",
+    answer:
+      "KRMU is located on Sohna Road, Gurugram, Delhi-NCR — approximately 45–60 minutes from Indira Gandhi International Airport (IGI), New Delhi. Gurugram is well-connected by metro (Delhi Metro's Yellow Line), road, and cabs. The university also provides transport facilities. Our team can help arrange airport pickup for new international arrivals.",
+  },
+  {
+    question: "What career support does KRMU offer international students?",
+    answer:
+      "KRMU offers 100% placement assistance through a dedicated Career Development Centre (CDC) with access to 800+ recruiters including Google, Microsoft, Amazon, Deloitte, and Infosys. International students also benefit from KRMU's Entrepreneurship & Innovation Centre (KEIC), internship programmes, and sponsored international study tours available to selected students.",
+  },
+  {
+    question: "Are there research opportunities for international students?",
+    answer:
+      "Absolutely! KRMU is a research-driven university with 100+ specialised labs, a Central Instrumentation Facility (CIF), INR 16 Crore + in research grants, 4,000+ publications, and 250+ patents. Ph.D. programmes are open to international students across all disciplines, and undergraduate/postgraduate students are encouraged to participate in ongoing research projects.",
   },
 ];
 
@@ -900,9 +867,6 @@ export const beginHubData: BeginHubSection = {
     height: 640,
   },
 };
-
-
-
 
 export const whyStudyData = [
   {
@@ -963,9 +927,6 @@ export const whyStudyData = [
   },
 ];
 
-
-
-
 export type WorldClassImageData = {
   image: string;
   alt?: string;
@@ -980,54 +941,44 @@ export const WorldClassData: WorldClassSection = {
   heading: "World-Class Facilities & Infrastructure",
   slides: [
     {
-      image: "/international-admission/world-class/image-1.jpg",
-      alt: "Research Impact 1",
+      image: "/landingpage/common/infra/1.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-2.jpg",
-      alt: "Research Impact 2",
+      image: "/landingpage/common/infra/2.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-3.jpg",
-      alt: "Research Impact 3",
-    },
-
-    {
-      image: "/international-admission/world-class/image-1.jpg",
-      alt: "Research Impact 1",
+      image: "/landingpage/common/infra/3.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-2.jpg",
-      alt: "Research Impact 2",
+      image: "/landingpage/common/infra/4.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-3.jpg",
-      alt: "Research Impact 3",
+      image: "/landingpage/common/infra/5.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-1.jpg",
-      alt: "Research Impact 1",
+      image: "/landingpage/common/infra/6.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-2.jpg",
-      alt: "Research Impact 2",
+      image: "/landingpage/common/infra/7.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-3.jpg",
-      alt: "Research Impact 3",
+      image: "/landingpage/common/infra/8.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-1.jpg",
-      alt: "Research Impact 1",
+      image: "/landingpage/common/infra/9.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-2.jpg",
-      alt: "Research Impact 2",
+      image: "/landingpage/common/infra/10.webp",
+      alt: "World Class Lab",
     },
-    {
-      image: "/international-admission/world-class/image-3.jpg",
-      alt: "Research Impact 3",
-    },
-   
   ],
 };

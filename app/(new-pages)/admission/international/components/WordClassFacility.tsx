@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-
-
 const WordClassFacility = () => {
   return (
     <section id="facilities">
@@ -10,7 +8,7 @@ const WordClassFacility = () => {
       </h3>
       <div className="w-full sm:mt-10">
         <Image
-          src="/international-admission/life.webp"
+          src="/international-admission/life-at.webp"
           width={1920}
           height={400}
           alt=""
