@@ -110,30 +110,30 @@
 // ];
 
 export const Companies = [
-  { name: "Google", logo: "/international-admission/logos/google.png" },
-  { name: "EY", logo: "/international-admission/logos/ey.png" },
-  { name: "Microsoft", logo: "/international-admission/logos/microsoft.png" },
-  { name: "Sun", logo: "/international-admission/logos/sun.png" },
-  { name: "Infosys", logo: "/international-admission/logos/infosys.png" },
-  { name: "Oberoi", logo: "/international-admission/logos/oberoi.png" },
-  { name: "Reliance", logo: "/international-admission/logos/reliance.png" },
-  { name: "Dabur", logo: "/international-admission/logos/dabur.png" },
+  { name: "Google", logo: "/international-admission/new-logos/google.png" },
+  { name: "EY", logo: "/international-admission/new-logos/ey.png" },
+  { name: "Microsoft", logo: "/international-admission/new-logos/microsoft.png" },
+  { name: "Sun", logo: "/international-admission/new-logos/sun-pharma.png" },
+  { name: "Infosys", logo: "/international-admission/new-logos/infosys.png" },
+  { name: "Oberoi", logo: "/international-admission/new-logos/oberoi.png" },
+  { name: "Reliance", logo: "/international-admission/new-logos/reliance.png" },
+  { name: "Dabur", logo: "/international-admission/new-logos/dabur.png" },
   {
     name: "Mercedes",
-    logo: "/international-admission/logos/mercedes-benz.png",
+    logo: "/international-admission/new-logos/mercedes.png",
   },
-  { name: "Flipkart", logo: "/international-admission/logos/flipkart.png" },
-  { name: "Deloitte", logo: "/international-admission/logos/deloitte.png" },
-  { name: "Zomato", logo: "/international-admission/logos/zomato.png" },
-  { name: "Dell", logo: "/international-admission/logos/dell.png" },
-  { name: "Amazon", logo: "/international-admission/logos/amazon.png" },
+  { name: "Flipkart", logo: "/international-admission/new-logos/flipkart.png" },
+  { name: "Deloitte", logo: "/international-admission/new-logos/deloitte.png" },
+  { name: "Zomato", logo: "/international-admission/new-logos/zomato.png" },
+  { name: "Dell", logo: "/international-admission/new-logos/dell.png" },
+  { name: "Amazon", logo: "/international-admission/new-logos/amazon.png" },
   {
     name: "SafeExpress",
-    logo: "/international-admission/logos/safeexpress.png",
+    logo: "/international-admission/new-logos/safe-express.png",
   },
-  { name: "KPMG", logo: "/international-admission/logos/kpmg.png" },
-  { name: "Genpact", logo: "/international-admission/logos/genpact.png" },
-  { name: "HCL", logo: "/international-admission/logos/hcl.png" },
+  { name: "KPMG", logo: "/international-admission/new-logos/kpmg.png" },
+  { name: "Genpact", logo: "/international-admission/new-logos/genpact.png" },
+  { name: "HCL", logo: "/international-admission/new-logos/hcl.png" },
 ];
 
 export const NetworkContent = [
@@ -282,8 +282,9 @@ export const internationalAdmissionSchools = [
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (AI and ML) with academic support of IBM & powered by Microsoft Certifications",
+          "B.Tech. Computer Science and Engineering (AI & ML) with academic support of IBM & powered by Microsoft Certification",
         duration: "4 Years",
+        lateral: false,
       },
       {
         title:
@@ -295,10 +296,11 @@ export const internationalAdmissionSchools = [
         title:
           "B.Tech. Computer Science and Engineering (Full Stack Development) with academic support of ImaginXP",
         duration: "4 Years",
+        lateral: false,
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (Full Stack Development) with academic support of ImaginXP",
+          "B.Tech. Computer Science and Engineering (Full Stack Development) with academic support of Xebia",
         duration: "3 Years",
         lateral: true,
       },
@@ -307,12 +309,6 @@ export const internationalAdmissionSchools = [
           "B.Tech. Computer Science and Engineering (UX/UI) with academic support of ImaginXP",
         duration: "4 Years",
         lateral: false,
-      },
-      {
-        title:
-          "B.Tech. Computer Science and Engineering (UX/UI) with academic support of ImaginXP",
-        duration: "3 Years",
-        lateral: true,
       },
       {
         title:
@@ -324,7 +320,6 @@ export const internationalAdmissionSchools = [
         title:
           "B.Tech. Computer Science and Engineering (Cyber Security) with academic support of EC-Council and IBM",
         duration: "4 Years",
-        lateral: false,
       },
       {
         title:
@@ -336,7 +331,6 @@ export const internationalAdmissionSchools = [
         title:
           "B.Tech. Computer Science and Engineering (Data Science) with academic support of IBM",
         duration: "4 Years",
-        lateral: false,
       },
       {
         title:
@@ -346,9 +340,8 @@ export const internationalAdmissionSchools = [
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (Robotics and AI) with academic support of IBM & powered by Microsoft Certifications",
+          "B.Tech. Computer Science and Engineering (Robotics & AI) with academic support of IBM & powered by Microsoft Certifications",
         duration: "4 Years",
-        lateral: false,
       },
       {
         title:
@@ -358,75 +351,43 @@ export const internationalAdmissionSchools = [
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (Cloud Computing) powered by Microsoft Certifications**",
-        duration: "4 Years",
-        lateral: false,
-      },
-      {
-        title:
-          "B.Tech. Computer Science and Engineering (Semiconductor Design)**",
-        duration: "4 Years",
-        lateral: false,
-      },
-      {
-        title:
           "BCA (AI & Data Science) with academic support of IBM & powered by Microsoft Certifications",
         duration: "3 Years",
-        lateral: false,
       },
       {
         title:
           "BCA (Hons. / Hons. with Research) AI & Data Science with academic support of IBM & powered by Microsoft Certifications",
         duration: "4 Years",
-        lateral: false,
       },
       {
-        title:
-          "BCA (Hons. / Hons. with Research) AI & Data Science with academic support of IBM & powered by Microsoft Certifications",
-        duration: "4 Years",
-        lateral: false,
-      },
-      {
-        title: "BCA (Cyber Security) with Academic support of EC-Council",
+        title: "BCA (Cyber Security) with academic support of EC-Council",
         duration: "3 Years",
-        lateral: false,
       },
       {
         title:
-          "BCA (Hons./ Hons. with Research) Cyber Security with Academic support of EC-Council",
+          "BCA (Hons. / Hons. with Research) Cyber Security with academic support of EC-Council",
         duration: "4 Years",
-        lateral: false,
       },
       {
         title: "B.Sc. (Hons.) Computer Science with academic support of IBM",
         duration: "3 Years",
-        lateral: false,
       },
       {
         title: "B.Sc. (Hons.) Cyber Security",
         duration: "3 Years",
-        lateral: false,
       },
       {
         title: "B.Sc. (Hons.) Data Science",
         duration: "3 Years",
-        lateral: false,
-      },
-      {
-        title: "M.Tech. Computer Science and Engineering",
-        duration: "2 Years",
-        lateral: false,
       },
       {
         title: "MCA",
         duration: "2 Years",
-        lateral: false,
       },
       {
         title:
           "MCA (AI & ML) with academic support of IBM and powered by Microsoft Certifications",
         duration: "2 Years",
-        lateral: false,
       },
     ],
   },
@@ -518,11 +479,11 @@ export const internationalAdmissionSchools = [
       {
         title:
           "Integrated BBA + MBA with academic support of IBM (4 yrs + 1 yr Industry Internship)",
-        duration: "4+1 Years",
+        duration: "5 Years",
       },
       {
         title: "MBA with academic support of IBM",
-        duration: "4+1 Years",
+        duration: "2 Years",
       },
       {
         title: "MBA (Digital Marketing) with academic support of IIDE",
@@ -696,6 +657,10 @@ export const internationalAdmissionSchools = [
     name: "School of Liberal Arts",
     programmes: [
       {
+        title: "B.A. Programme",
+        duration: "3 Years",
+      },
+      {
         title: "B.A. (Hons.) English",
         duration: "3 Years",
       },
@@ -727,29 +692,9 @@ export const internationalAdmissionSchools = [
         title: "B.A. (Hons. / Hons. with Research) Political Science",
         duration: "4 Years",
       },
-      // {
-      //   title: "B.A. (Hons. / Hons. with Research) (Liberal Arts)",
-      //   duration: "4 Years",
-      // },
-      {
-        title: "M.A. English",
-        duration: "2 Years",
-      },
-      {
-        title: "M.A. Economics",
-        duration: "2 Years",
-      },
       {
         title: "M.A. Applied Psychology",
         duration: "2 Years",
-      },
-      {
-        title: "M.A. Political Science",
-        duration: "2 Years",
-      },
-      {
-        title: "B.A Programme",
-        duration: "3 Years",
       },
     ],
   },
@@ -764,10 +709,6 @@ export const internationalAdmissionSchools = [
       },
       {
         title: "Bachelor of Education (B.Ed.)",
-        duration: "2 Years",
-      },
-      {
-        title: "M.A. Education",
         duration: "2 Years",
       },
     ],
@@ -786,10 +727,10 @@ export const internationalAdmissionSchools = [
 
   {
     id: 12,
-    name: "Ph.D",
+    name: "Ph.D.",
     programmes: [
       {
-        title: "Ph.D",
+        title: "Ph.D.",
         duration: "Min. 3 Years",
       },
     ],

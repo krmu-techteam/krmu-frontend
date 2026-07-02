@@ -32,7 +32,9 @@ const BeginYour = ({ data, formId }: Props) => {
               dangerouslySetInnerHTML={{ __html: data.heading }}
             />
 
-            <p className="text-white text-[26px] max-w-[780px] mb-8">{data.description}</p>
+            <p className="text-white text-[26px] max-w-[780px] mb-8">
+              {data.description}
+            </p>
 
             {/* <ul className="space-y-3 text-sm">
                 {data.highlights.map((item, index) => (
@@ -74,12 +76,8 @@ const BeginYour = ({ data, formId }: Props) => {
                 <div className="heroBannerForm__form">
                   <div className="heroBannerForm-header">
                     <h3 className="mb-0">
-                      <strong>
-                        Apply Today for{" "}
-                        <span className="uppercase">
-                          K.R. Mangalam University
-                        </span>
-                      </strong>
+                      Apply for International <br />
+                      Admission Here
                     </h3>
                   </div>
 
@@ -92,7 +90,8 @@ const BeginYour = ({ data, formId }: Props) => {
       </div>
       <div className="max-w-[1400px] mx-auto border-2 border-[#263e51] p-10 text-center text-white rounded-3xl mt-10">
         <h6 className="max-w-[860px] mx-auto mb-5 text-[42px] font-semibold font-poppins">
-          Apply for International Admission at <br /> K.R. Mangalam University Today
+          Apply for International Admission at <br /> K.R. Mangalam University
+          Today
         </h6>
         <p className="mb-7 font-poppins text-2xl">
           Industry-Aligned Courses | Top Recruiters | Global Exposure
