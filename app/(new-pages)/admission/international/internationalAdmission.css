@@ -46,6 +46,11 @@
     )
     1;
 }
+@media (min-width: 1728px) and (max-width: 2000px) {
+  .middle-container{
+    margin-top: -90px;
+  }
+}
 @media (min-width: 1800px) and (max-width: 2000px) {
   .form-white-container {
     height: 700px !important;
@@ -60,13 +65,13 @@
 }
 @media (min-width: 1600px) and (max-width: 1800px) {
   .form-white-container {
-    max-width: 420px;
+    max-width: 430px;
   }
   .form-white-container {
     height: 750px !important;
   }
   .outer-right-container {
-    height: 700px;
+    height: 660px;
   }
   /* .middle-container {
     position: relative;
@@ -74,14 +79,17 @@
   } */
 }
 @media (min-width: 1520px) and (max-width: 1599px) {
+
+}
+@media (min-width: 1520px) and (max-width: 1599px) {
   .form-white-container {
-    max-width: 420px;
+    max-width: 430px;
   }
   .form-white-container {
-    height: 700px;
+    height: 720px;
   }
   .outer-right-container {
-    height: 684px;
+    height: 675px;
   }
   .stats-girl-img {
     bottom: -86px;
