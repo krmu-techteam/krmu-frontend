@@ -52,7 +52,7 @@ const HeroSection = ({ formId }: Props) => {
             </div>
           </div>
           <div className="hidden xl:flex items-start w-[45%] 2xl:w-2/5 col-2">
-            <div className="-mt-30 text-center middle-container">
+            <div className="-mt-30 2xl:-mt-[60px] text-center middle-container">
               <span className="text-6xl text-[#001732] font-bold font-fraunces heading-1">
                 Up to
               </span>
