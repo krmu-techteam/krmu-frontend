@@ -8,13 +8,13 @@ const HeroSection = ({ formId }: Props) => {
   return (
     <section className="bg-[#edece4] relative px-5 2xl:px-0 py-10 xl:py-0 2xl:pt-10">
       <div
-        className="bg-white absolute right-0 top-0 max-w-[420px] 2xl:max-w-[600px] w-full h-[800px] 2xl:h-[900px] 2xl:pr-20 form-white-container hidden xl:flex items-center justify-center"
+        className="bg-white absolute right-0 top-0 max-w-[420px] 2xl:max-w-[600px] w-full h-[800px] 2xl:h-[900px] 2xl:pr-10 form-white-container hidden xl:flex items-center justify-center"
         id="apply-section"
       >
         <div className="relative z-30 w-full">
           <div className="text-center">
             <h3 className="text-center font-poppins font-bold text-xl">
-              <span className="text-[#001732] px-5 inline-block">
+              <span className="text-[#001732] px-5 inline-block text-[22px]">
                 Apply for International <br /> Admission Here
               </span>{" "}
               {/* <br /> at K.R. Mangalam University Today */}
@@ -26,7 +26,7 @@ const HeroSection = ({ formId }: Props) => {
       <div className="flex flex-col md:flex-row items-center gap-10 max-w-[1427px] mx-auto">
         <div className="w-full md:w-1/2 xl:w-9/12 flex items-start left-container">
           <div className="w-full xl:w-[55%] 2xl:w-3/5 col-1">
-            <h1 className="font-host text-5xl md:text-6xl xl:text-8xl font-extrabold mb-5 leading-none main-heading text-[#001732]">
+            <h1 className="font-host text-5xl md:text-6xl xl:text-8xl font-extrabold mb-1 leading-none main-heading text-[#001732]">
               International Admissions
             </h1>
             <h4 className="text-2xl lg:text-3xl text-[#E11F23] font-bold font-host main-heading-2">
@@ -35,10 +35,10 @@ const HeroSection = ({ formId }: Props) => {
             <h5 className="text-[#001732] italic text-4xl lg:text-5xl mb-5 leading-tight font-fraunces mt-5">
               Study in India. <br className="hidden md:block" /> Lead the World.
             </h5>
-            <p className="font-inter text-xl">
+            <p className="font-inter text-xl 2xl:text-[22px]">
               Join one of India's fastest-growing{" "}
               <strong>NAAC ‘A’ accredited</strong>{" "}
-              <br className="hidden xl:block" /> universities and experience
+              universities and experience
               internationally recognised <br className="hidden xl:block" />{" "}
               education in the heart of Gurugram, India's leading{" "}
               <br className="hidden xl:block" /> corporate and innovation hub.
@@ -97,11 +97,11 @@ const HeroSection = ({ formId }: Props) => {
             </div>
           </div>
         </div>
-        <div className="w-full h-[750px] md:h-[900px] lg:h-[700px] xl:h-[800px] md:w-1/2  xl:w-3/12  bg-white xl:bg-transparent relative outer-right-container flex items-center justify-center rounded-2xl sm:pt-10 md:pt-0">
+        <div className="w-full h-[750px] md:h-[900px] lg:h-[800px] xl:h-[800px] md:w-1/2  xl:w-3/12  bg-white xl:bg-transparent relative outer-right-container flex items-center justify-center rounded-2xl sm:pt-10 md:pt-0">
           <div className="relative z-30 w-full pt-5 sm:pt-0 sm:p-4 md:p-5 xl:hidden">
             <div className="text-center">
               <h3 className="text-center font-poppins font-bold text-sm sm:text-base md:text-lg xl:text-2xl">
-                <span className="text-black px-5 inline-block">
+                <span className="text-black px-5 inline-block text-[22px]">
                   Apply for International Admission Here
                 </span>{" "}
                 {/* <br /> at K.R. Mangalam University Today */}

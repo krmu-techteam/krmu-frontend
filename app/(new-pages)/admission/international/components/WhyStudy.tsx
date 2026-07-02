@@ -2,7 +2,7 @@ import WhyStudySlide from "./WhyStudySlide";
 
 const WhyStudy = () => {
   return (
-    <section className="bg-[linear-gradient(98.17deg,#001732_55.07%,#004698_99.64%)] overflow-hidden pb-20 sm:pb-0 pl-20">
+    <section className="bg-[linear-gradient(98.17deg,#001732_55.07%,#004698_99.64%)] overflow-hidden pb-20 sm:pb-0 md:pl-20 px-5 ">
       <div className="mx-auto py-10 md:py-20 flex flex-col md:flex-row items-center pr-5">
         <div className="w-full md:w-1/2 text-white">
           <h3 className="font-poppins text-4xl xl:text-6xl font-bold mb-5">Why Study in India?</h3>
