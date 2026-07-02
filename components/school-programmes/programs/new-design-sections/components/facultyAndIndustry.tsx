@@ -151,7 +151,7 @@ const FacultyAndIndustry = ({ slug }: Props) => {
             </h2>
           </div>
 
-          <div className="w-full flex flex-col lg:flex-row gap-8  items-center">
+          <div className="w-full flex flex-col lg:flex-row gap-8  items-start">
             {/* Left Column: Image Banner */}
             <div className="w-full lg:w-[45%]">
               <div className="relative w-full max-w-[496px] aspect-[496/486] overflow-hidden shadow-xl shadow-slate-900/10 mx-auto">
