@@ -21,8 +21,7 @@ const WorldClass = ({ data }: Props) => {
           analytics labs, and seminar halls to enhance academic engagement.
           Additionally, the availability of dedicated spaces for innovation,
           entrepreneurship, and skill development creates an environment that
-          encourages practical learning, collaboration, and professional
-          growth.
+          encourages practical learning, collaboration, and professional growth.
         </p>
       </div>
 
@@ -32,25 +31,21 @@ const WorldClass = ({ data }: Props) => {
             <div
               key={index}
               className="
-                relative flex-shrink-0
-                w-[85vw] min-w-[85vw]
-                 sm:w-[60vw] sm:min-w-[60vw]
-                 md:w-[45vw] md:min-w-[45vw]
-                 lg:w-[33.333vw] lg:min-w-[33.333vw]
-                 xl:w-[30vw] xl:min-w-[30vw]
-                 h-[477px]
+                relative
+                w-full
               "
             >
               <Image
                 src={slide.image}
                 alt={slide.alt || ""}
-                fill
-                className="object-cover"
-                sizes="(max-width:640px) 85vw,
-                       (max-width:768px) 60vw,
-                       (max-width:1024px) 45vw,
-                       (max-width:1280px) 33vw,
-                       30vw"
+                width={837}
+                height={443}
+                className="object-contain"
+                // sizes="(max-width:640px) 85vw,
+                //        (max-width:768px) 60vw,
+                //        (max-width:1024px) 45vw,
+                //        (max-width:1280px) 33vw,
+                //        30vw"
               />
             </div>
           ))}

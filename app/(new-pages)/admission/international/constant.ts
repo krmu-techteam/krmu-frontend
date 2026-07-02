@@ -853,7 +853,8 @@ export const faqs = [
       "Student visas in India do not generally permit paid employment outside the university. However, students may engage in campus-based opportunities, research assistantships, internships facilitated by the university, and startup activities through KRMU's Entrepreneurship & Innovation Centre (KEIC).",
   },
   {
-    question: "What is the food like on campus? Are international dietary needs accommodated?",
+    question:
+      "What is the food like on campus? Are international dietary needs accommodated?",
     answer:
       "KRMU's campus cafeterias offer a diverse menu that includes vegetarian, non-vegetarian, and international cuisine options. Hygienic preparation is a priority. Students with specific dietary requirements (halal, vegan, gluten-free, etc.) can discuss their needs with the hostel mess team who are experienced in catering to a diverse international student community.",
   },
@@ -999,53 +1000,44 @@ export const WorldClassData: WorldClassSection = {
   heading: "World-Class Facilities & Infrastructure",
   slides: [
     {
-      image: "/international-admission/world-class/image-1.jpg",
-      alt: "Research Impact 1",
+      image: "/landingpage/common/infra/1.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-2.jpg",
-      alt: "Research Impact 2",
+      image: "/landingpage/common/infra/2.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-3.jpg",
-      alt: "Research Impact 3",
-    },
-
-    {
-      image: "/international-admission/world-class/image-1.jpg",
-      alt: "Research Impact 1",
+      image: "/landingpage/common/infra/3.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-2.jpg",
-      alt: "Research Impact 2",
+      image: "/landingpage/common/infra/4.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-3.jpg",
-      alt: "Research Impact 3",
+      image: "/landingpage/common/infra/5.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-1.jpg",
-      alt: "Research Impact 1",
+      image: "/landingpage/common/infra/6.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-2.jpg",
-      alt: "Research Impact 2",
+      image: "/landingpage/common/infra/7.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-3.jpg",
-      alt: "Research Impact 3",
+      image: "/landingpage/common/infra/8.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-1.jpg",
-      alt: "Research Impact 1",
+      image: "/landingpage/common/infra/9.webp",
+      alt: "World Class Lab",
     },
     {
-      image: "/international-admission/world-class/image-2.jpg",
-      alt: "Research Impact 2",
-    },
-    {
-      image: "/international-admission/world-class/image-3.jpg",
-      alt: "Research Impact 3",
+      image: "/landingpage/common/infra/10.webp",
+      alt: "World Class Lab",
     },
   ],
 };
