@@ -48,13 +48,13 @@ const SuccessNetwork = () => {
                   repeat: Infinity,
                 }}
               >
-                <div className="flex h-[144px] w-[144px] items-center justify-center rounded-full border border-[#D8D8D8] bg-white shadow-lg hover:scale-105 transition-transform duration-300">
+                <div className="flex h-[144px] w-[144px] overflow-hidden items-center justify-center rounded-full border border-[#D8D8D8] bg-white shadow-lg hover:scale-105 transition-transform duration-300">
                   <Image
                     src={company.logo}
                     alt={company.name}
                     width={85}
                     height={45}
-                    className="w-[65%] h-auto object-contain"
+                    className="w-[90%] h-auto object-contain"
                   />
                 </div>
               </motion.div>
