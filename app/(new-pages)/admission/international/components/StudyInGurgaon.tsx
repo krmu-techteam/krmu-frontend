@@ -1,6 +1,6 @@
 const StudyInGurgaon = () => {
   return (
-    <section className="px-5 2xl:px-0 py-10">
+    <section className="px-5 2xl:px-0 py-10 xl:py-16">
       <div className="max-w-[1427px] mx-auto w-full flex flex-col lg:flex-row items-center 2xl:items-center gap-5">
         <div className="w-full lg:w-1/2 xl:w-3/5">
           <h4 className="text-3xl md:text-4xl xl:text-6xl font-extrabold font-poppins text-[#001732] xl:mb-5 leading-snug xl:leading-18 2xl:leading-20">
