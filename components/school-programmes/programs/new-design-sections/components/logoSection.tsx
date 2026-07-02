@@ -38,7 +38,7 @@ const LogoSection = () => {
               alt="Analytics track"
               width={87}
               height={33}
-              className="mb-2 grayscale"
+              className="mb-2 "
             />
             <h2
               className={`${poppins.className} text-[#0F2A4D] text-center text-[11px] sm:text-[12px] `}
@@ -56,7 +56,7 @@ const LogoSection = () => {
               alt="Fintech track"
               width={40}
               height={40}
-              className="mb-2 grayscale"
+              className="mb-2 "
             />
             <h2
               className={`${poppins.className} text-[#0F2A4D] text-center  text-[11px] sm:text-[12px]`}
@@ -74,7 +74,7 @@ const LogoSection = () => {
               alt="Digital Marketing track"
               width={68}
               height={42}
-              className="mb-2 grayscale"
+              className="mb-2 "
             />
             <h2
               className={`${poppins.className} text-[#0F2A4D] text-center  text-[11px] sm:text-[12px]`}

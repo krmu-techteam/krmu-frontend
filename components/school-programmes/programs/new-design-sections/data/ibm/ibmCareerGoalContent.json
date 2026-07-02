@@ -1,7 +1,7 @@
 {
   "careerGoal": {
-    "badge": "CAREER OUTCOMES",
-    "title": "Built for one goal – significantly better career outcomes.",
+    "badge": "CURRICULUM AND SYLLABUS",
+    "title": "A well-planned curriculum designed from scratch; Mapped to real job descriptions. ",
     "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1558_c43e07abdb.jpg",
     "semesters": [
       {
@@ -150,11 +150,51 @@
       },
       {
         "id": "semester3",
-        "tabLabel": "Semester (3 & 4)*",
+        "tabLabel": "Semester 3",
         "courses": [
           {
-            "title": "The students will choose a combination of Major and Minor specialization. Across semester 3 and 4, they will choose 4-5 electives focused on the Major and 2-3 electives focused on the Minor specialization.",
-            "desc": "*The list of electives courses being offered will be shared at the end of semester 2."
+            "title": "Strategic Management"
+          },
+          {
+            "title": "DSE I",
+            "linkText": "Read More",
+            "details": [
+              "Compensation and Reward Management/Consumer Behaviour/Project Management/Financial Markets & Institutions",
+              "Industrial Relations, Legal and Social Perspective/Retail Marketing/Procurement Management/Financial Modelling"
+            ]
+          },
+          {
+            "title": "DSE II",
+            "linkText": "Read More",
+            "details": ["Predictive Modeling", "Creating Intelligent Machines"]
+          },
+          {
+            "title": "Summer Internship Project Report / Rural and Social Immersion"
+          }
+        ]
+      },
+      {
+        "id": "semester4",
+        "tabLabel": "Semester 4",
+        "courses": [
+          {
+            "title": "Business AI and Emerging Technologies"
+          },
+          {
+            "title": "DSE I",
+            "linkText": "Read More",
+            "details": [
+              "Talent Management and Workforce Optimization/Investment Analysis & Portfolio Management/AI Driven SCM/Product & Brand Management",
+              "Talent Analytics/AI for Financial Services/Service Operations Management/Integrated Marketing Communications"
+            ]
+          },
+          {
+            "title": "DSE II",
+            "linkText": "Read More",
+            "details": ["Time Series Modeling", "Prescriptive Analytics"]
+          },
+          {
+            "title": "Capstone Project"
           }
         ]
       }

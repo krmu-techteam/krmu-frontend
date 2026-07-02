@@ -4,11 +4,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 // import Link from "next/link";
 // import { getCareerGoalContent } from "../lib/getContent";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, Inter, Poppins } from "next/font/google";
 import * as Icons from "lucide-react";
 import { CareerGoalPageContentType } from "../types/contentCareerGoal";
 
-const inter = Inter({
+const inter = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["italic", "normal"],
@@ -51,11 +51,19 @@ const CareerGoal = ({ slug, dataContent }: Props) => {
           >
             {content.badge}
           </span>
+
           <h2
-            className={`${fraunces.className} text-[#0F2A4D] text-2xl sm:text-3xl md:text-4xl lg:text-[38px] leading-tight font-medium max-w-[720px]`}
+            className={`${fraunces.className} text-[#0F2A4D] text-2xl sm:text-3xl md:text-4xl lg:text-[38px] leading-tight font-medium max-w-[910px]`}
           >
             {content.title}
           </h2>
+          {content?.description && (
+            <p
+              className={`${inter.className} p-4 py-3   border border-[#557C9C33] rounded-[13px] italic text-xs text-black/60 mt-1.5 max-w-[850px]`}
+            >
+              {content.description}
+            </p>
+          )}
         </div>
 
         {/* Semester Tab Row */}

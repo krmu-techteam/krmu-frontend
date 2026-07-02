@@ -20,6 +20,7 @@ export interface HeroContentType {
   sub_heading: string;
   heading: string;
   content: string;
+  content2?: string;
   image: string;
   button: ButtonType[];
   stats: StatType[];
