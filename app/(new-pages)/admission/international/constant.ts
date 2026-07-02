@@ -300,7 +300,7 @@ export const internationalAdmissionSchools = [
       },
       {
         title:
-          "B.Tech. Computer Science and Engineering (Full Stack Development) with academic support of Xebia",
+          "B.Tech. Computer Science and Engineering (Full Stack Development) with academic support of ImaginXP",
         duration: "3 Years",
         lateral: true,
       },
@@ -544,7 +544,7 @@ export const internationalAdmissionSchools = [
         duration: "4 Years",
       },
       {
-        title: "B.Pharm. (Lateral)",
+        title: "B.Pharm.",
         duration: "3 Years",
         lateral: true,
       },
@@ -637,7 +637,7 @@ export const internationalAdmissionSchools = [
     name: "School of Emerging Media & Creator Economy",
     programmes: [
       {
-        title: "B.A. (Journalism And Mass Communication)",
+        title: "B.A. (Journalism and Mass Communication)",
         duration: "3 Years",
       },
       {
