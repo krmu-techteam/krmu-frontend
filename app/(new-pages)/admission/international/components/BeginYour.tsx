@@ -52,7 +52,7 @@ const BeginYour = ({ data, formId }: Props) => {
                 width={data.mapImage.width}
                 height={data.mapImage.height}
                 alt={data.mapImage.alt}
-                className="rounded-lg w-full lg:h-[420px] object-cover"
+                className="rounded-lg w-full lg:h-[478px] object-cover"
               />
             </div>
           </div>
