@@ -23,30 +23,29 @@ const page = () => {
   const worldFacilityData = WorldClassData;
   return (
     <>
-      <main className="overflow-hidden">
+      <div className="overflow-hidden">
         <HeroSection formId="6798d0b6e4d6bb9947d6aacc2d86256c" />
-        <Stats />
-        <RankingRecognition />
-        {/* <SuccessNetwork /> */}
-        <WhyStudy />
+      </div>
+      <Stats />
+      <RankingRecognition />
+      {/* <SuccessNetwork /> */}
+      <WhyStudy />
+      <div className="overflow-hidden">
         <WhyChoose />
-        <PatentCampusResearch />
-        <GlobalLearning />
-        <StudyInGurgaon />
-        <BenefitOfStudy />
-        <SchoolProgrammesDiscipline />
-        <ProgrammeTabs />
-        <ScholarshipSection />
-        <WorldClass data={worldFacilityData} />
-        <WordClassFacility />
-        <FAQSection />
-        <SingleImage />
-        <BeginYour
-          data={beginData}
-          formId={`6798d0b6e4d6bb9947d6aacc2d86256c`}
-        />
-        {/* <CTASection /> */}
-      </main>
+      </div>
+      <PatentCampusResearch />
+      <GlobalLearning />
+      <StudyInGurgaon />
+      <BenefitOfStudy />
+      <SchoolProgrammesDiscipline />
+      <ProgrammeTabs />
+      <ScholarshipSection />
+      <WorldClass data={worldFacilityData} />
+      <WordClassFacility />
+      <FAQSection />
+      <SingleImage />
+      <BeginYour data={beginData} formId={`6798d0b6e4d6bb9947d6aacc2d86256c`} />
+      {/* <CTASection /> */}
     </>
   );
 };

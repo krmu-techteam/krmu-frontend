@@ -9,7 +9,7 @@ const WhyChoose = () => {
         bg-cover
         bg-top
         bg-no-repeat
-        pt-[280px]
+        pt-[40px]
         sm:pt-[350px]
         md:pt-[420px]
         lg:pt-[520px]
@@ -46,6 +46,7 @@ const WhyChoose = () => {
           h-auto
           z-10
           why-choose-girl
+          hidden xl:block
         "
         />
         <div className="flex flex-col lg:flex-row items-center">

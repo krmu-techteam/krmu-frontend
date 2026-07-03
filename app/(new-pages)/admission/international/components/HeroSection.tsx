@@ -6,7 +6,7 @@ type Props = {
 };
 const HeroSection = ({ formId }: Props) => {
   return (
-    <section className="bg-[#edece4] px-5 2xl:px-0 py-10 xl:py-0 relative">
+    <section className="bg-[#edece4] px-5 2xl:px-0 sm:py-10 xl:py-0 relative">
       <div className="flex flex-col md:flex-row gap-10 max-w-[1427px] mx-auto">
         <div className="w-full md:w-1/2 xl:w-[70%] flex items-start left-container pt-[35px]">
           <div className="w-full xl:w-[55%] 2xl:w-3/5 col-1">
@@ -86,7 +86,7 @@ const HeroSection = ({ formId }: Props) => {
           <div className="z-30 w-full pt-5 sm:pt-0 sm:p-4 md:p-5 bg-white right-container">
             <div className="text-center">
               <h3 className="text-center font-poppins font-bold text-sm sm:text-base md:text-lg xl:text-2xl">
-                <span className="text-black px-5 inline-block text-[22px]">
+                <span className="text-black px-5 inline-block text-[22px]" id="apply-section">
                   Apply for International Admission Here
                 </span>{" "}
                 {/* <br /> at K.R. Mangalam University Today */}
