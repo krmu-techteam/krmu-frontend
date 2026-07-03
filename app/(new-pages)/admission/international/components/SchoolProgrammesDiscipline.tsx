@@ -11,7 +11,7 @@ const SchoolProgrammesDiscipline = () => {
           </h5>
         </div>
         <div className="w-full lg:w-1/2 xl:w-2/5 text-[#001732]">
-          <p className="text-lg font-poppins">
+          <p className="text-base mt-2.5 sm:mt-0 sm:text-lg font-poppins">
             From Engineering and Medicine to Law, Design, and Business — find your path at KRMU. All programmes taught in English with industry-integrated curriculum.
           </p>
         </div>

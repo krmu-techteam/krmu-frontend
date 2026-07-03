@@ -8,7 +8,7 @@ const BenefitOfStudy = () => {
           <h4 className="text-2xl sm:text-[28px] font-extrabold mb-5">
             Benefits of Studying in Gurugram
           </h4>
-          <ul className="xl:text-base font-poppins font-semibold">
+          <ul className="xl:text-base font-poppins font-semibold space-y-2 sm:space-y-0">
             <li className="flex items-start md:items-center gap-2 leading-relaxed md:leading-[50px]">
               <div>
                 <Check color="#fff" />
