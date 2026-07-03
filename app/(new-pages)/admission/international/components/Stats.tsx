@@ -17,7 +17,7 @@ const Stats = () => {
             Access extensive placement and career development opportunities.
           </p>
         </div>
-        <div className="w-full md:w-1/3 xl:w-2/12 text-white sm:py-10">
+        <div className="w-full md:w-1/3 xl:w-2/12 text-white py-2.5 border-y border-white/10 sm:py-10">
           <h2 className="text-3xl md:text-5xl lg:text-7xl 2xl:text-[70px] leading-none font-semibold font-fraunces">
             700<span aria-hidden="true">+</span>
           </h2>

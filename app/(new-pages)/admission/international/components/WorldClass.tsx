@@ -13,7 +13,7 @@ const WorldClass = ({ data }: Props) => {
           {data.heading}
         </h4>
 
-        <p className="mx-auto max-w-6xl text-sm leading-7 text-gray-700 sm:text-base lg:text-lg xl:pb-16">
+        <p className="mx-auto max-w-6xl text-sm sm:leading-7 text-gray-700 sm:text-base lg:text-lg xl:pb-16">
           K.R. Mangalam University offers a modern and student-centric campus
           designed to support effective learning and holistic development for
           its students. The university provides smart classrooms, a

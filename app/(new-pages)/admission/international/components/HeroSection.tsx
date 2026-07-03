@@ -14,7 +14,7 @@ const HeroSection = ({ formId }: Props) => {
               <h1 className="font-host text-5xl md:text-6xl xl:text-8xl font-extrabold mb-1 leading-none main-heading text-[#001732] sm:mt-5">
                 International Admissions
               </h1>
-              <h4 className="text-2xl lg:text-3xl text-[#E11F23] font-bold font-host main-heading-2">
+              <h4 className="text-lg sm:text-2xl lg:text-3xl text-[#E11F23] font-bold font-host main-heading-2">
                 Open For The Session 2026–27
               </h4>
               <h5 className="text-[#001732] italic text-xl sm:text-4xl lg:text-5xl mb-2.5 sm:mb-5 leading-tight font-fraunces mt-2.5 sm:mt-5">
@@ -82,7 +82,7 @@ const HeroSection = ({ formId }: Props) => {
           </div>
         </div>
         <div className="w-full md:w-1/2 xl:w-[30%] sm:bg-white outer-right-container sm:flex items-center justify-center sm:pt-10 md:pt-0 xl:pt-5 2xl:pt-0">
-          <div className="relative">
+          <div className="relative sm:hidden">
             <Image
               src="/international-admission/girl-2.png"
               width={300}
@@ -94,10 +94,10 @@ const HeroSection = ({ formId }: Props) => {
               <span className="text-base text-[#001732] font-bold font-fraunces heading-1">
                 Up to
               </span>
-              <p className="text-2xl leading-none text-[#E11F23] font-bold font-fraunces heading-2">
+              <p className="text-3xl leading-none text-[#E11F23] font-bold font-fraunces heading-2">
                 60<span className="font-light">%</span>
               </p>
-              <span className="text-lg text-[#001732] font-bold font-fraunces heading-3">
+              <span className="text-base text-[#001732] font-bold font-fraunces heading-3">
                 Scholarship
               </span>
             </div>

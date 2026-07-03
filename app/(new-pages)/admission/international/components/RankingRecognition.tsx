@@ -5,24 +5,24 @@ const rankingData = [
     image: "/international-admission/rank-1.png",
     alt: "No. 1 Ranking",
     description:
-      `#1 In Haryana & No. 14 Among the Top 50 Institutes for Placements <br />(Times B School Survey 2026)`,
+      `#1 In Haryana & No. 14 Among the Top 50 Institutes for Placements <br /><span class="font-bold sm:font-normal">(Times B School Survey 2026)</span>`,
   },
   {
     image: "/international-admission/rank-1.png",
     alt: "No. 1 Ranking",
     description:
-      `#1 In Haryana & No. 17 Among the Top 100 B-Schools in India <br />(Times B School Survey 2026)`,
+      `#1 In Haryana & No. 17 Among the Top 100 B-Schools in India <br /><span class="font-bold sm:font-normal">(Times B School Survey 2026)</span>`,
   },
   {
     image: "/international-admission/rank-7.png",
     alt: "No. 7 Ranking",
     description:
-      `#7 Among Top 40 Private Universities in India <br />(Times B School Survey 2026)`,
+      `#7 Among Top 40 Private Universities in India <br /><span class="font-bold sm:font-normal">(Times B School Survey 2026)</span>`,
   },
   {
     image: "/international-admission/trophy.png",
     alt: "Trophy",
-    description: `Ranked in Diamond+ Band <br />Finest B-School Ranking 2026 <br />(World Institutional Ranking)`,
+    description: `Ranked in Diamond+ Band <br class="hidden sm:block" />Finest B-School Ranking 2026 <br  /><span class="font-bold sm:font-normal">(World Institutional Ranking)</span>`,
   },
 ];
 

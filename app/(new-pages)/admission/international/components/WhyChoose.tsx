@@ -87,7 +87,7 @@ const WhyChoose = () => {
 
         <div className="flex flex-col lg:flex-row items-center">
           {/* Left Content */}
-          <div className="w-full lg:w-2/3 pb-10 pl-5">
+          <div className="w-full lg:w-2/3 p-5 sm:pb-10 sm:pl-5">
             <h3
               className="
                 text-3xl
