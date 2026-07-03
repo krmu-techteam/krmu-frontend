@@ -13,7 +13,7 @@ const PatentCampusResearch = () => {
             A strong culture of innovation and entrepreneurship.
           </p>
         </div>
-        <div className="w-full md:w-1/3 text-white border-y py-2.5 sm:py-0 md:border-x border-[#1a3658] md:px-10">
+        <div className="w-full md:w-1/3 text-white border-y py-2.5 sm:py-0 sm:border-y-0 sm:border-x border-[#1a3658] md:px-10">
           <div className="py-2 sm:py-8">
             <h4 className="text-3xl font-fraunces mb-2 sm:mb-5">
               35+ Acre Green <br className="hidden md:block" /> Campus
