@@ -145,7 +145,7 @@ export const NetworkContent = [
   {
     number: "100+ Future-Focused",
     title: "Programmes",
-    desc: `Choose from undergraduate, postgraduate, doctoral, and professional programmes across<br /> diverse disciplines.`,
+    desc: `Choose from undergraduate, postgraduate, doctoral, and professional programmes across<br class="hidden sm:block" /> diverse disciplines.`,
   },
 ];
 

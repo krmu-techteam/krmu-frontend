@@ -63,14 +63,33 @@
 
 @media (max-width: 480px) {
   .patentCampusGrid {
-    gap: 20px !important;
+    gap: 0px !important;
+    row-gap: 36px !important;
+    column-gap: 18px !important;
   }
   .patentCampusGrid-card {
-    padding: 20px !important;
+    padding: 10px !important;
   }
   .patentCampusGrid-card h4 {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
+  .patentCampusDashedBorder{
+    width: 176px !important;
+  }
+  .patentCampusImage{
+    width: 54px !important;
+  }
+}
+@media (min-width: 425px) and (max-width: 460px) {
+  .patentCampusGrid{
+    row-gap: 60px !important;
+  }
+}
+
+@media (max-width: 330px) {
+.patentCampusGrid-card h4{
+  font-size: 10px !important;
+}
 }
 
 @media (min-width: 1280px) and (max-width: 1500px) {
@@ -225,6 +244,21 @@
 @media (max-width: 640px) {
   .beginFormHeading {
     font-size: 18px;
+  }
+  .npf_wgts iframe{
+    border-radius: 0px;
+  }
+  .internation-admission-section{
+    position: relative;
+  }
+  .internation-admission-section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
   }
 }
 

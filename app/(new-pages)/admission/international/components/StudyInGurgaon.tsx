@@ -8,7 +8,7 @@ const StudyInGurgaon = () => {
           </h4>
         </div>
         <div className="w-full lg:w-1/2 xl:w-2/5 text-[#001732]">
-          <p className="text-lg font-poppins">
+          <p className="text-base mt-2.5 sm:mt-0 sm:text-lg font-poppins">
             Located in Gurugram (Delhi NCR), K.R. Mangalam University offers
             students direct access to one of India's most dynamic business
             ecosystems.

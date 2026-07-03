@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const backgrounds = [
-  "/international-admission/monuments/khajraho-img.png",
-  "/international-admission/monuments/lotus-temple-img.png",
-  "/international-admission/monuments/qutub-minar-img.png",
+  // "/international-admission/monuments/khajraho-img.png",
   "/international-admission/monuments/taj-mahal-img.png",
-  "/international-admission/monuments/university-img.png",
+  "/international-admission/monuments/qutub-minar-img.png",
+  "/international-admission/monuments/lotus-temple-img.png",
+  // "/international-admission/monuments/university-img.png",
 ];
 
 const WhyChoose = () => {
