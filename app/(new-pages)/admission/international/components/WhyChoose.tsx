@@ -1,14 +1,32 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
+const backgrounds = [
+  "/international-admission/monuments/khajraho-img.png",
+  "/international-admission/monuments/lotus-temple-img.png",
+  "/international-admission/monuments/qutub-minar-img.png",
+  "/international-admission/monuments/taj-mahal-img.png",
+  "/international-admission/monuments/university-img.png",
+];
+
 const WhyChoose = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % backgrounds.length);
+    }, 4000); // Change every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section
       className="
         relative
-        bg-[url('/international-admission/sunset.jpg')]
-        bg-cover
-        bg-top
-        bg-no-repeat
+        overflow-hidden
         pt-[40px]
         sm:pt-[350px]
         md:pt-[420px]
@@ -20,8 +38,25 @@ const WhyChoose = () => {
       "
       id="why-choose"
     >
-      {/* Girl Image */}
+      {/* Background Images */}
+      <div className="absolute inset-0 -z-20">
+        {backgrounds.map((bg, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-top bg-no-repeat transition-opacity duration-[1800ms] ease-in-out ${
+              index === current ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              backgroundImage: `url(${bg})`,
+            }}
+          />
+        ))}
+      </div>
 
+      {/* Optional Dark Overlay */}
+      <div className="absolute inset-0 bg-black/10 -z-10" />
+
+      {/* Girl Image */}
       <div className="relative z-20 max-w-[1427px] mx-auto">
         <Image
           src="/international-admission/girl-5.png"
@@ -29,26 +64,27 @@ const WhyChoose = () => {
           width={438}
           height={671}
           className="
-          absolute
-          bottom-0
-          right-0
-          2xl:bottom-[-77px]
-          sm:right-6
-          md:right-10
-          lg:right-20
-          xl:right-[-40px]
-          2xl:right-[-77px]
-          w-[180px]
-          sm:w-[220px]
-          md:w-[280px]
-          lg:w-[360px]
-          xl:w-[438px]
-          h-auto
-          z-10
-          why-choose-girl
-          hidden xl:block
-        "
+            absolute
+            bottom-0
+            right-0
+            2xl:bottom-[-77px]
+            sm:right-6
+            md:right-10
+            lg:right-20
+            xl:right-[-40px]
+            2xl:right-[-77px]
+            w-[180px]
+            sm:w-[220px]
+            md:w-[280px]
+            lg:w-[360px]
+            xl:w-[438px]
+            h-auto
+            z-10
+            why-choose-girl
+            hidden xl:block
+          "
         />
+
         <div className="flex flex-col lg:flex-row items-center">
           {/* Left Content */}
           <div className="w-full lg:w-2/3 pb-10 pl-5">

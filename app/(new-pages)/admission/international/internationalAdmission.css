@@ -40,12 +40,11 @@
     z-index: -1;
   }
 }
-@media(min-width: 1520px){
-  .main-stats-section{
+@media (min-width: 1520px) {
+  .main-stats-section {
     margin-top: -70px;
   }
 }
-
 
 .long-dash-border {
   border: 2px solid transparent;
@@ -223,8 +222,8 @@
   font-size: 24px;
   line-height: 1.4;
 }
-@media(max-width: 640px){
-  .beginFormHeading{
+@media (max-width: 640px) {
+  .beginFormHeading {
     font-size: 18px;
   }
 }
@@ -248,18 +247,28 @@
   animation-play-state: paused;
 }
 
-@media(min-width: 1320px){
-  .scholarship-content{
+@media (min-width: 1024px) {
+  .whychoose-section {
+    margin-top: -60px;
+    z-index: 99999;
+    position: relative;
+  }
+  .why-slide-card-container {
+    z-index: 99999999;
+  }
+}
+@media (min-width: 1320px) {
+  .scholarship-content {
     max-width: 500px;
   }
-  .scholar-main-heading{
+  .scholar-main-heading {
     font-size: 62px;
   }
-  .scholarship-subheading{
+  .scholarship-subheading {
     max-width: 100%;
     font-size: 35px;
   }
-  .scholarship-desc{
+  .scholarship-desc {
     max-width: 420px;
     font-size: 18px;
   }

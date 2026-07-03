@@ -28,9 +28,9 @@ const page = () => {
       </div>
       <Stats />
       <RankingRecognition />
-      {/* <SuccessNetwork /> */}
+      <SuccessNetwork />
       <WhyStudy />
-      <div className="overflow-hidden">
+      <div className="overflow-hidden whychoose-section">
         <WhyChoose />
       </div>
       <PatentCampusResearch />
