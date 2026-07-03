@@ -9,7 +9,7 @@ const Stats = () => {
             800<span aria-hidden="true">+</span>
           </h2>
 
-          <h3 className="text-2xl font-medium mb-1 font-fraunces">
+          <h3 className="text-[26px] font-medium mb-1 font-fraunces">
             Recruiters
           </h3>
 
@@ -22,7 +22,7 @@ const Stats = () => {
             700<span aria-hidden="true">+</span>
           </h2>
 
-          <h3 className="text-2xl font-medium mb-1 font-fraunces">
+          <h3 className="text-[26px] font-medium mb-1 font-fraunces">
             Faculty Members
           </h3>
 
@@ -45,7 +45,7 @@ const Stats = () => {
             12,000<span aria-hidden="true">+</span>
           </h2>
 
-          <h3 className="text-2xl font-medium mb-1 font-fraunces">Students</h3>
+          <h3 className="text-[26px] font-medium mb-1 font-fraunces">Students</h3>
 
           <p className="text-sm xl:max-w-[300px]">
             Be part of a vibrant and multicultural learning environment.
