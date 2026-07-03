@@ -7,14 +7,14 @@ export default function ScholarshipSection() {
     <section className="relative overflow-hidden bg-[url('/international-admission/stone-bg.jpg')] bg-cover bg-no-repeat bg-center pt-10 pb-16 md:pt-20 pb-40 px-5">
       <div className="max-w-[1427px] mx-auto flex flex-col xl:flex-row gap-10 xl:gap-0">
         <div className="w-full xl:w-1/2 text-white">
-          <div className="max-w-125 xl:max-w-[360px] 2xl:max-w-[500px]">
-            <h4 className="font-poppins text-3xl sm:text-5xl 2xl:text-[62px] font-extrabold mb-2.5 sm:mb-0 sm:leading-20">
+          <div className="max-w-125 xl:max-w-[360px] 2xl:max-w-[500px] scholarship-content">
+            <h4 className="font-poppins text-3xl sm:text-5xl 2xl:text-[62px] scholar-main-heading font-extrabold mb-2.5 sm:mb-0 sm:leading-20">
               Scholarships
             </h4>
-            <h5 className="text-2xl sm:text-[28px] 2xl:text-[35px] max-w-[400px] 2xl:max-w-full font-fraunces italic font-medium leading-tight mb-5">
+            <h5 className="text-2xl sm:text-[28px] 2xl:text-[35px] max-w-[400px] 2xl:max-w-full scholarship-subheading font-fraunces italic font-medium leading-tight mb-5">
               Make Your Study in India Dream Affordable
             </h5>
-            <p className="text-base 2xl:text-lg 2xl:max-w-[420px] text-justify">
+            <p className="text-base 2xl:text-lg 2xl:max-w-[420px] scholarship-desc text-justify">
               Merit-based scholarships and transparent fee structures ensure
               that world-class Indian education remains accessible to every
               international student.
@@ -28,7 +28,7 @@ export default function ScholarshipSection() {
                 src="/international-admission/scholarship-img.webp"
                 width={627}
                 height={441}
-                alt=""
+                alt="Up to 60% scholarship for international students at K.R. Mangalam University"
                 className="relative"
               />
               <div className="absolute rounded-2xl -bottom-28 md:-bottom-20 left-1/2 w-[90%] -translate-x-1/2 bg-[#001732] p-6 shadow-2xl">

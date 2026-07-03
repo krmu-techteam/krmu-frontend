@@ -110,30 +110,30 @@
 // ];
 
 export const Companies = [
-  { name: "Google", logo: "/international-admission/new-logos/google.png" },
-  { name: "EY", logo: "/international-admission/new-logos/ey.png" },
-  { name: "Microsoft", logo: "/international-admission/new-logos/microsoft.png" },
-  { name: "Sun", logo: "/international-admission/new-logos/sun-pharma.png" },
-  { name: "Infosys", logo: "/international-admission/new-logos/infosys.png" },
-  { name: "Oberoi", logo: "/international-admission/new-logos/oberoi.png" },
-  { name: "Reliance", logo: "/international-admission/new-logos/reliance.png" },
-  { name: "Dabur", logo: "/international-admission/new-logos/dabur.png" },
+  { name: "Google - KRMU recruiter partner logo", logo: "/international-admission/new-logos/google.png" },
+  { name: "EY - KRMU recruiter partner logo", logo: "/international-admission/new-logos/ey.png" },
+  { name: "Microsoft - KRMU recruiter partner logo", logo: "/international-admission/new-logos/microsoft.png" },
+  { name: "Sun Pharma - KRMU recruiter partner logo", logo: "/international-admission/new-logos/sun-pharma.png" },
+  { name: "Infosys - KRMU recruiter partner logo", logo: "/international-admission/new-logos/infosys.png" },
+  { name: "Oberoi Group - KRMU recruiter partner logo", logo: "/international-admission/new-logos/oberoi.png" },
+  { name: "Reliance - KRMU recruiter partner logo", logo: "/international-admission/new-logos/reliance.png" },
+  { name: "Dabur - KRMU recruiter partner logo", logo: "/international-admission/new-logos/dabur.png" },
   {
-    name: "Mercedes",
+    name: "Mercedes-Benz - KRMU recruiter partner logo",
     logo: "/international-admission/new-logos/mercedes-benz.svg",
   },
-  { name: "Flipkart", logo: "/international-admission/new-logos/flipkart.png" },
-  { name: "Deloitte", logo: "/international-admission/new-logos/deloitte.png" },
-  { name: "Zomato", logo: "/international-admission/new-logos/zomato.png" },
-  { name: "Dell", logo: "/international-admission/new-logos/dell.png" },
-  { name: "Amazon", logo: "/international-admission/new-logos/amazon.png" },
+  { name: "Flipkart - KRMU recruiter partner logo", logo: "/international-admission/new-logos/flipkart.png" },
+  { name: "Deloitte - KRMU recruiter partner logo", logo: "/international-admission/new-logos/deloitte.png" },
+  { name: "Zomato - KRMU recruiter partner logo", logo: "/international-admission/new-logos/zomato.png" },
+  { name: "Dell - KRMU recruiter partner logo", logo: "/international-admission/new-logos/dell.png" },
+  { name: "Amazon - KRMU recruiter partner logo", logo: "/international-admission/new-logos/amazon.png" },
   {
-    name: "SafeExpress",
+    name: "Safe Express - KRMU recruiter partner logo",
     logo: "/international-admission/new-logos/safe-express.png",
   },
-  { name: "KPMG", logo: "/international-admission/new-logos/kpmg.png" },
-  { name: "Genpact", logo: "/international-admission/new-logos/genpact.png" },
-  { name: "HCL", logo: "/international-admission/new-logos/hcl.png" },
+  { name: "KPMG - KRMU recruiter partner logo", logo: "/international-admission/new-logos/kpmg.png" },
+  { name: "Genpact - KRMU recruiter partner logo", logo: "/international-admission/new-logos/genpact.png" },
+  { name: "HCL - KRMU recruiter partner logo", logo: "/international-admission/new-logos/hcl.png" },
 ];
 
 export const NetworkContent = [
@@ -145,7 +145,7 @@ export const NetworkContent = [
   {
     number: "100+ Future-Focused",
     title: "Programmes",
-    desc: `Choose from undergraduate, postgraduate, doctoral, and professional programmes across<br /> diverse disciplines.`,
+    desc: `Choose from undergraduate, postgraduate, doctoral, and professional programmes across<br class="hidden sm:block" /> diverse disciplines.`,
   },
 ];
 
@@ -218,8 +218,8 @@ export const globalLearningData = {
       height: 34,
     },
     {
-      name: "JU",
-      src: "/international-admission/logos/ju.png",
+      name: "jinggangshan university ",
+      src: "/international-admission/logos/JSU.jpg",
       width: 135,
       height: 34,
     },
@@ -942,43 +942,43 @@ export const WorldClassData: WorldClassSection = {
   slides: [
     {
       image: "/landingpage/common/infra/1.webp",
-      alt: "World Class Lab",
+      alt: "KRMU smart classroom / lab facility",
     },
     {
       image: "/landingpage/common/infra/2.webp",
-      alt: "World Class Lab",
+      alt: "KRMU central library with digital resources",
     },
     {
       image: "/landingpage/common/infra/3.webp",
-      alt: "World Class Lab",
+      alt: "KRMU computer and analytics lab",
     },
     {
       image: "/landingpage/common/infra/4.webp",
-      alt: "World Class Lab",
+      alt: "KRMU seminar hall facility",
     },
     {
       image: "/landingpage/common/infra/5.webp",
-      alt: "World Class Lab",
+      alt: "KRMU innovation and entrepreneurship space",
     },
     {
       image: "/landingpage/common/infra/6.webp",
-      alt: "World Class Lab",
+      alt: "KRMU skill development facility",
     },
     {
       image: "/landingpage/common/infra/7.webp",
-      alt: "World Class Lab",
+      alt: "KRMU campus infrastructure",
     },
     {
       image: "/landingpage/common/infra/8.webp",
-      alt: "World Class Lab",
+      alt: "KRMU academic facility",
     },
     {
       image: "/landingpage/common/infra/9.webp",
-      alt: "World Class Lab",
+      alt: "KRMU campus facility",
     },
     {
       image: "/landingpage/common/infra/10.webp",
-      alt: "World Class Lab",
+      alt: "KRMU campus facility",
     },
   ],
 };

@@ -6,30 +6,29 @@ type Props = {
 };
 const HeroSection = ({ formId }: Props) => {
   return (
-    <section className="bg-[#edece4] px-5 2xl:px-0 py-10 xl:py-0 relative">
-      <div className="flex flex-col md:flex-row gap-10 max-w-[1427px] mx-auto">
+    <section className="bg-[#edece4] px-5 2xl:px-0 pb-5 sm:pb-0 sm:py-10 xl:py-0 relative">
+      <div className="flex flex-col md:flex-row gap-5 sm:gap-10 max-w-[1427px] mx-auto">
         <div className="w-full md:w-1/2 xl:w-[70%] flex items-start left-container pt-[35px]">
           <div className="w-full xl:w-[55%] 2xl:w-3/5 col-1">
-            <div>
-              <h1 className="font-host text-5xl md:text-6xl xl:text-8xl font-extrabold mb-1 leading-none main-heading text-[#001732] mt-5">
+            <div className="text-center sm:text-left">
+              <h1 className="font-host text-5xl md:text-6xl xl:text-8xl font-extrabold mb-1 leading-none main-heading text-[#001732] sm:mt-5">
                 International Admissions
               </h1>
-              <h4 className="text-2xl lg:text-3xl text-[#E11F23] font-bold font-host main-heading-2">
+              <h4 className="text-lg sm:text-2xl lg:text-3xl text-[#E11F23] font-bold font-host main-heading-2">
                 Open For The Session 2026–27
               </h4>
-              <h5 className="text-[#001732] italic text-4xl lg:text-5xl mb-5 leading-tight font-fraunces mt-5">
+              <h5 className="text-[#001732] italic text-xl sm:text-4xl lg:text-5xl mb-2.5 sm:mb-5 leading-tight font-fraunces mt-2.5 sm:mt-5">
                 Study in India. <br className="hidden md:block" /> Lead the
                 World.
               </h5>
-              <p className="font-inter text-xl 2xl:text-[22px]">
+              <p className="font-inter text-sm sm:text-xl 2xl:text-[22px]">
                 Join one of India's fastest-growing{" "}
                 <strong>NAAC ‘A’ accredited</strong> universities and experience
                 internationally recognised education in the heart of Gurugram,
-                India's leading corporate and
-                innovation hub.
+                India's leading corporate and innovation hub.
               </p>
             </div>
-            <div className="xl:hidden mt-5">
+            <div className="hidden sm:block xl:hidden mt-5">
               <span className="text-4xl xl:text-6xl text-[#001732] font-bold font-fraunces heading-1">
                 Up to
               </span>
@@ -75,18 +74,41 @@ const HeroSection = ({ formId }: Props) => {
                   src="/international-admission/Scholarship.png"
                   width={384}
                   height={65}
-                  alt=""
+                  alt="Up to 60% scholarship badge for international students at KRMU"
                   className="w-[320px] 2xl:w-[458px] object-contain"
                 />
               </div>
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2  xl:w-[30%] bg-white outer-right-container flex items-center justify-center sm:pt-10 md:pt-0 xl:pt-5 2xl:pt-0">
+        <div className="w-full md:w-1/2 xl:w-[30%] sm:bg-white outer-right-container sm:flex items-center justify-center sm:pt-10 md:pt-0 xl:pt-5 2xl:pt-0">
+          <div className="relative sm:hidden">
+            <Image
+              src="/international-admission/girl-2.png"
+              width={300}
+              height={300}
+              alt=""
+              className="International student studying at K.R. Mangalam University campus"
+            />
+            <div className="sm:hidden absolute bottom-10 -right-2.5 w-[137px] h-[132px] flex flex-col items-center justify-center  rounded-full bg-white shadow-md">
+              <span className="text-base text-[#001732] font-bold font-fraunces heading-1">
+                Up to
+              </span>
+              <p className="text-3xl leading-none text-[#E11F23] font-bold font-fraunces heading-2">
+                60<span className="font-light">%</span>
+              </p>
+              <span className="text-base text-[#001732] font-bold font-fraunces heading-3">
+                Scholarship
+              </span>
+            </div>
+          </div>
           <div className="z-30 w-full pt-5 sm:pt-0 sm:p-4 md:p-5 bg-white right-container">
             <div className="text-center">
               <h3 className="text-center font-poppins font-bold text-sm sm:text-base md:text-lg xl:text-2xl">
-                <span className="text-black px-5 inline-block text-[22px]">
+                <span
+                  className="text-black px-5 inline-block text-[22px]"
+                  id="apply-section"
+                >
                   Apply for International Admission Here
                 </span>{" "}
                 {/* <br /> at K.R. Mangalam University Today */}

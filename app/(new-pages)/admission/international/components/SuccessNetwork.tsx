@@ -90,18 +90,18 @@ const SuccessNetwork = () => {
       <div className="xl:hidden bg-[#efeee7] py-10">
         <div className="max-w-7xl mx-auto px-5">
           {/* Content */}
-          <div className="text-center">
+          <div className="text-center space-y-4 sm:space-y-0">
             {NetworkContent.map((item, index) => (
               <div key={item.title}>
                 <h2 className="font-fraunces text-2xl sm:text-3xl font-bold text-[#CB000D]">
                   {item.number}
                 </h2>
 
-                <h3 className="mt-2 font-fraunces text-xl sm:text-3xl font-bold text-[#CB000D]">
+                <h3 className="sm:mt-2 font-fraunces text-xl sm:text-3xl font-bold text-[#CB000D]">
                   {item.title}
                 </h3>
 
-                <p className="mx-auto mt-4 font-poppins text-sm font-semibold leading-tight text-[#001732]" dangerouslySetInnerHTML={{
+                <p className="mx-auto mt-1 sm:mt-4 w-75 sm:w-full font-poppins text-sm font-semibold leading-tight text-[#001732]" dangerouslySetInnerHTML={{
                   __html: item.desc
                 }} />
 
