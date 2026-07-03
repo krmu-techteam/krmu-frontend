@@ -74,7 +74,7 @@ const HeroSection = ({ formId }: Props) => {
                   src="/international-admission/Scholarship.png"
                   width={384}
                   height={65}
-                  alt=""
+                  alt="Up to 60% scholarship badge for international students at KRMU"
                   className="w-[320px] 2xl:w-[458px] object-contain"
                 />
               </div>
@@ -88,7 +88,7 @@ const HeroSection = ({ formId }: Props) => {
               width={300}
               height={300}
               alt=""
-              className=""
+              className="International student studying at K.R. Mangalam University campus"
             />
             <div className="sm:hidden absolute bottom-10 -right-2.5 w-[137px] h-[132px] flex flex-col items-center justify-center  rounded-full bg-white shadow-md">
               <span className="text-base text-[#001732] font-bold font-fraunces heading-1">

@@ -18,6 +18,23 @@ import Stats from "./components/Stats";
 import BeginYour from "./components/BeginYour";
 import WorldClass from "./components/WorldClass";
 import ScrollToTop from "./components/ScrollToTop";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "International Admissions | K.R. Mangalam University",
+    description:
+      "Apply for international admission at K.R. Mangalam University. NAAC A+ accredited, UGC-recognised degrees, scholarships up to 60% for global students.				",
+
+    alternates: {
+      canonical: "https://www.krmangalam.edu.in/admission/international",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 const page = () => {
   const beginData = beginHubData;

@@ -3,25 +3,25 @@ import Image from "next/image";
 const rankingData = [
   {
     image: "/international-admission/rank-1.png",
-    alt: "No. 1 Ranking",
+    alt: "KRMU ranked No.1 in Haryana for placements, Times B School Survey 2026",
     description:
       `#1 In Haryana & No. 14 Among the Top 50 Institutes for Placements <br /><span class="font-bold sm:font-normal">(Times B School Survey 2026)</span>`,
   },
   {
     image: "/international-admission/rank-1.png",
-    alt: "No. 1 Ranking",
+    alt: "KRMU ranked No.1 in Haryana among top 100 B-Schools, Times B School Survey 2026",
     description:
       `#1 In Haryana & No. 17 Among the Top 100 B-Schools in India <br /><span class="font-bold sm:font-normal">(Times B School Survey 2026)</span>`,
   },
   {
     image: "/international-admission/rank-7.png",
-    alt: "No. 7 Ranking",
+    alt: "KRMU ranked No.7 among top 40 private universities in India",
     description:
       `#7 Among Top 40 Private Universities in India <br /><span class="font-bold sm:font-normal">(Times B School Survey 2026)</span>`,
   },
   {
     image: "/international-admission/trophy.png",
-    alt: "Trophy",
+    alt: "KRMU Diamond+ Band ranking trophy, Finest B-School Ranking 2026",
     description: `Ranked in Diamond+ Band <br class="hidden sm:block" />Finest B-School Ranking 2026 <br  /><span class="font-bold sm:font-normal">(World Institutional Ranking)</span>`,
   },
 ];

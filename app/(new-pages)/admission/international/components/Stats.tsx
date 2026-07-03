@@ -36,7 +36,7 @@ const Stats = () => {
             src="/international-admission/girl-2.png"
             width={580}
             height={580}
-            alt=""
+            alt="International student studying at K.R. Mangalam University campus"
             className="absolute bottom-0 2xl:bottom-[-78px] object-contain z-40 stats-girl-img"
           />
         </div>

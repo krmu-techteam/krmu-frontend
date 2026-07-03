@@ -27,7 +27,7 @@ const BeginYour = ({ data, formId }: Props) => {
         <div className="flex flex-col lg:flex-row gap-14">
           {/* LEFT CONTENT */}
           <div className="text-white w-full lg:w-2/3 overflow-hidden">
-            <h1
+            <h2
               className="text-2xl md:text-4xl xl:text-5xl font-extrabold font-poppins leading-tight mb-6"
               dangerouslySetInnerHTML={{ __html: data.heading }}
             />
