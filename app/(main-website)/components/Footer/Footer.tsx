@@ -236,7 +236,7 @@ const Footer = async () => {
       >
         <KRMUTimer targetDate="2026-06-30T23:59:59" mainWebsiteTimer={true} />
       </Link> */}
-      <NpfAgent />
+    
       {/* <div className="fixed bottom-10 right-24">
         <a
           href="https://wa.me/8800697018?text=Hi"
