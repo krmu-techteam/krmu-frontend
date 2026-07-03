@@ -116,8 +116,8 @@ const CareerOutcome = ({ slug }: Props) => {
                           : ""
                   }
                   alt="MBA Students discussing career outcomes"
-                  width={1024}
-                  height={1024}
+                  width={1440}
+                  height={1440}
                   className=" w-full h-[300px] sm:h-[486px]"
                 />
               </div>
