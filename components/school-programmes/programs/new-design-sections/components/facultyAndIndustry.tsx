@@ -76,7 +76,7 @@ const FacultyCard = ({
           <h4 className="font-bold text-[14px] text-white tracking-wide mb-1 leading-snug">
             {name}
           </h4>
-          <p className="text-[14px] text-[#E7C268] uppercase  tracking-[0.5px] mb-2 ">
+          <p className="text-[12px] text-[#E7C268] uppercase  tracking-[0.5px] mb-2 ">
             {desg}
           </p>
           <p className="text-[12px] text-white leading-relaxed  ">{qual}</p>

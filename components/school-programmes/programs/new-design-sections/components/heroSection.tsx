@@ -86,7 +86,7 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
               />
             )}
 
-            {secondaryButton && (
+            {/* {secondaryButton && (
               <CommonLeadPopup
                 buttonText={secondaryButton.title}
                 buttonClassName="border border-white hover:border-white hover:bg-white/10 text-white font-medium text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 text-center whitespace-nowrap"
@@ -94,14 +94,7 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
                 form_name="Programme Brochure"
                 shadowGradient={false}
               />
-              // <Link
-              //   href={secondaryButton.link}
-              //   target="_blank"
-              //   className="border border-white hover:border-white hover:bg-white/10 text-white font-medium text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 text-center whitespace-nowrap"
-              // >
-              //   {secondaryButton.title}
-              // </Link>
-            )}
+            )} */}
           </div>
 
           {/* Divider */}
