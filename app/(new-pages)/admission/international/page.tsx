@@ -17,6 +17,7 @@ import HeroSection from "./components/HeroSection";
 import Stats from "./components/Stats";
 import BeginYour from "./components/BeginYour";
 import WorldClass from "./components/WorldClass";
+import ScrollToTop from "./components/ScrollToTop";
 
 const page = () => {
   const beginData = beginHubData;
@@ -46,6 +47,7 @@ const page = () => {
       <SingleImage />
       <BeginYour data={beginData} formId={`6798d0b6e4d6bb9947d6aacc2d86256c`} />
       {/* <CTASection /> */}
+      <ScrollToTop />
     </>
   );
 };

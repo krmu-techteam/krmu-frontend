@@ -28,7 +28,7 @@ const rankingData = [
 
 const RankingRecognition = () => {
   return (
-    <section className="px-5 xl:px-0 relative z-[99999999] py-10 lg:py-0">
+    <section className="px-5 xl:px-0 relative z-[9999] py-10 lg:py-0">
       <div className="bg-[linear-gradient(145.75deg,#FFFFFF_19.74%,#EDECE4_79.7%)] p-5 sm:pt-10 sm:pb-10 xl:pb-5 sm:px-10 xl:px-20 max-w-[1427px] lg:-mt-52 mx-auto rounded-[10px] z-40 relative shadow-[0px_4px_4px_rgba(0,0,0,0.25)]">
         <div>
           <h2 className="font-host text-[#001732] text-center text-2xl sm:text-3xl md:text-4xl xl:text-6xl font-extrabold mb-1.5 sm:mb-2.5">
