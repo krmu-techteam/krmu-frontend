@@ -49,6 +49,7 @@ import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
 import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
 import { heroConfigs } from "@/components/school-programmes/programs/data/programs";
 import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
+import ResearchAndInnovation from "../../school-programmes-component/ResearchAndInnovation";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -370,13 +371,17 @@ const page = async ({ params }: Props) => {
         )}
 
         {beyondclassSection && (
-          <BeyondClassroom
-            heading={beyondclassSection?.heading}
-            highlight={beyondclassSection?.highlightheading}
-            desc={beyondclassSection?.description}
-            beyondclassimages={beyondclassSection?.beyondclassroomimages}
-          />
+          <>
+            {slug === "b-tech-cse" && <ResearchAndInnovation />}
+            <BeyondClassroom
+              heading={beyondclassSection.heading}
+              highlight={beyondclassSection.highlightheading}
+              desc={beyondclassSection.description}
+              beyondclassimages={beyondclassSection.beyondclassroomimages}
+            />
+          </>
         )}
+
         {careerProspectsSection && (
           <CareerProspects
             heading={careerProspectsSection?.heading}

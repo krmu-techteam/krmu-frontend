@@ -5212,6 +5212,19 @@
   }
 }
 
+.vertical-line {
+  width: 1px;
+  /* height: 450px; */
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(142, 170, 212, 0.08) 12%,
+    rgba(142, 170, 212, 0.22) 50%,
+    rgba(142, 170, 212, 0.08) 88%,
+    transparent
+  );
+}
+
 .whatsappClass {
   position: fixed;
   right: 0;
