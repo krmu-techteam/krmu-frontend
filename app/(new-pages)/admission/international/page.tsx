@@ -30,7 +30,7 @@ const page = () => {
       <RankingRecognition />
       <SuccessNetwork />
       <WhyStudy />
-      <div className="overflow-hidden">
+      <div className="overflow-hidden whychoose-section">
         <WhyChoose />
       </div>
       <PatentCampusResearch />

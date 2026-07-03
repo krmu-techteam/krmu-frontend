@@ -16,7 +16,7 @@ const WhyStudy = () => {
           </p>
         </div>
       </div>
-      <div className="w-full z-30 relative">
+      <div className="w-full z-30 relative why-slide-card-container">
         <WhyStudySlide />
       </div>
     </section>
