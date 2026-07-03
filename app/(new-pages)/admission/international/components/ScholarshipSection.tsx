@@ -28,7 +28,7 @@ export default function ScholarshipSection() {
                 src="/international-admission/scholarship-img.webp"
                 width={627}
                 height={441}
-                alt=""
+                alt="Up to 60% scholarship for international students at K.R. Mangalam University"
                 className="relative"
               />
               <div className="absolute rounded-2xl -bottom-28 md:-bottom-20 left-1/2 w-[90%] -translate-x-1/2 bg-[#001732] p-6 shadow-2xl">

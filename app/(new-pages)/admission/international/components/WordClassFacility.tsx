@@ -11,7 +11,7 @@ const WordClassFacility = () => {
           src="/international-admission/life-at.webp"
           width={1920}
           height={400}
-          alt=""
+          alt="Student life at K.R. Mangalam University campus"
           className="w-full"
         />
       </div>

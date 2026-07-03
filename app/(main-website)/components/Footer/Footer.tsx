@@ -6,8 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import FloatingButtons from "@/app/(main-website)/components/Footer/FloatingButtons";
 import NpfAgent from "@/app/NpfAgent";
-import LaunchpadPopup from "../LaunchpadPopup";
-import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
+// import LaunchpadPopup from "../LaunchpadPopup";
+// import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
 import { createCollegeSchema } from "@/lib/api/common";
 
 const Footer = async () => {

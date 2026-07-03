@@ -38,7 +38,7 @@ export default function ProgrammeTabs() {
               htmlFor="school-select"
               className="mb-2 block text-sm font-semibold text-white"
             >
-              Select School
+              Choose Your School & Programme for dropdown
             </label>
 
             <select
