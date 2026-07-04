@@ -302,14 +302,19 @@ export default async function Page({ params }: Props) {
   return (
     <>
       <Script
-        id="website-schema"
+        id="school-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: schoolSchema }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schoolSchema),
+        }}
       />
+
       <Script
-        id="website-schema"
+        id="college-university-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: collegeUniversitySchema }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(collegeUniversitySchema),
+        }}
       />
       <SchoolHero
         herobanner={school?.schoolherobanner}

@@ -185,9 +185,9 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: organizationSchema }}
       />
       <Script
-        id="organization-schema"
+        id="collage-university-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: collegeUniversitySchema }}
+        dangerouslySetInnerHTML={{ __html: collageOrUniversitySchema }}
       />
 
       {hero && (
