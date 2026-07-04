@@ -13,9 +13,6 @@ import YourJourney2 from "./(main-website)/Home/homeComp/YourJourney2";
 // import YourJourney from "./(main-website)/Home/YourJourney";
 // import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
 import {
-  commonCollegeUniversitySchema,
-  createCollageOrUniversityHomepageSchema,
-  createCollageOrUniversitySchema,
   createOrganizationSchema,
   createWebsiteSchema,
 } from "@/lib/api/common";
@@ -108,44 +105,6 @@ export default async function HomePage() {
     ],
   });
 
-  const collegeUniversitySchema = commonCollegeUniversitySchema({
-    name: "K.R. Mangalam University",
-    alternateName: "KRMU",
-    url: "https://www.krmangalam.edu.in",
-    logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
-    award: "NAAC 'A' Grade",
-    numberOfEmployees: {
-      name: "Faculty",
-      value: 700,
-    },
-    amenityFeature: [
-      {
-        name: "Campus Area",
-        value: "35+ acres",
-      },
-      {
-        name: "Total Students",
-        value: "12000+",
-      },
-      {
-        name: "Recruiting Companies",
-        value: "800+",
-      },
-      {
-        name: "Highest Package",
-        value: "56.6 LPA",
-      },
-    ],
-    sameAs: [
-      "https://www.facebook.com/krmuniv",
-      "https://www.instagram.com/krmuniv",
-      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-      "https://in.linkedin.com/school/krmuniv",
-    ],
-  });
-
- 
-
   return (
     <>
       <Script
@@ -163,13 +122,6 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: organizationSchema }}
       />
-      {collegeUniversitySchema && (
-        <Script
-          id="collage-university-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: collegeUniversitySchema }}
-        />
-      )}
 
       {hero && (
         <HeroSection
