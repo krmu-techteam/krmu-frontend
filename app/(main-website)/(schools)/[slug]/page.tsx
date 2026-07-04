@@ -299,15 +299,19 @@ export default async function Page({ params }: Props) {
     ],
   });
 
+
+
   return (
     <>
-      <Script
-        id="school-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(schoolSchema),
-        }}
-      />
+      {schoolSchema && (
+        <Script
+          id="school-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: schoolSchema,
+          }}
+        />
+      )}
 
       <Script
         id="college-university-schema"

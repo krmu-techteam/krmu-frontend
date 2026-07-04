@@ -108,29 +108,6 @@ export default async function HomePage() {
     ],
   });
 
-  const collageOrUniversitySchema = createCollageOrUniversityHomepageSchema({
-    name: "K.R. Mangalam University",
-    alternateName: "KRMU",
-    url: "https://www.krmangalam.edu.in",
-    logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
-    sameAs: [
-      "https://www.facebook.com/krmuniv",
-      "https://www.instagram.com/krmuniv",
-      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-      "https://in.linkedin.com/school/krmuniv",
-    ],
-    address: {
-      streetAddress: "Sohna Road",
-      addressLocality: "Gurugram",
-      addressRegion: "Haryana",
-      postalCode: "122103",
-      addressCountry: "IN",
-    },
-    telephone: "+91-1247198500",
-    email: "admissions@krmangalam.edu.in",
-    foundingDate: "2013",
-  });
-
   const collegeUniversitySchema = commonCollegeUniversitySchema({
     name: "K.R. Mangalam University",
     alternateName: "KRMU",
@@ -167,6 +144,8 @@ export default async function HomePage() {
     ],
   });
 
+ 
+
   return (
     <>
       <Script
@@ -184,11 +163,13 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: organizationSchema }}
       />
-      <Script
-        id="collage-university-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: collageOrUniversitySchema }}
-      />
+      {collegeUniversitySchema && (
+        <Script
+          id="collage-university-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: collegeUniversitySchema }}
+        />
+      )}
 
       {hero && (
         <HeroSection
