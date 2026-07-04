@@ -1,5 +1,6 @@
 export interface InfraCardType {
   image: string;
+  alt: string;
   label: string;
   title: string;
   desc: string;

@@ -155,7 +155,15 @@ const CareerProspects = ({ slug }: Props) => {
                         ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1602_1bf41df812.jpg"
                         : ""
                 }
-                alt="Career prospects group image"
+                alt={
+                  slug === "mba-fintech"
+                    ? "MBA Fintech students exploring career prospects in finance and technology"
+                    : slug === "mba-digital-marketing"
+                      ? "KRMU MBA in Digital Marketing graduates group photo, career prospects"
+                      : slug === "mba"
+                        ? "KRMU MBA graduates group photo, career prospects"
+                        : ""
+                }
                 width={1930}
                 height={1930}
                 className="object-cover w-full h-full"

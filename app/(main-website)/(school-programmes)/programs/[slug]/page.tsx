@@ -72,9 +72,15 @@ import {
   getCommonQuestionContent,
   getContent,
   getDigitalContent,
+  getDigitalExperimentalInfraContent,
+  getDigitalFacultyAndIndustryContent,
   getDigitalGoalContent,
+  getExperimentalInfraContent,
+  getFacultyAndIndustryContent,
   getIBMCommonQuestionContent,
   getIBMContent,
+  getIBMEExperimentalInfraContent,
+  getIBMFacultyAndIndustryContent,
   getIBMGoalContent,
 } from "@/components/school-programmes/programs/new-design-sections/lib/getContent";
 
@@ -360,7 +366,18 @@ const page = async ({ params }: Props) => {
 
         {programmeScopeSection &&
           (isMbaSlug ? (
-            <FacultyAndIndustry slug={slug} />
+            <FacultyAndIndustry
+              slug={slug}
+              dataContent={
+                slug === "mba-fintech"
+                  ? getFacultyAndIndustryContent()
+                  : slug === "mba"
+                    ? getIBMFacultyAndIndustryContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalFacultyAndIndustryContent()
+                      : null
+              }
+            />
           ) : (
             <ProgrammeScope
               scopeData={programmeScopeSection}
@@ -464,7 +481,17 @@ const page = async ({ params }: Props) => {
 
         {careerProspectsSection &&
           (isMbaSlug ? (
-            <ExperimentalInfra />
+            <ExperimentalInfra
+              dataContent={
+                slug === "mba-fintech"
+                  ? getExperimentalInfraContent()
+                  : slug === "mba"
+                    ? getIBMEExperimentalInfraContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalExperimentalInfraContent()
+                      : null
+              }
+            />
           ) : (
             <CareerProspects
               heading={careerProspectsSection?.heading}
@@ -525,7 +552,7 @@ const page = async ({ params }: Props) => {
 
         {ourLocationSection &&
           (isMbaSlug ? (
-            <LocationNew />
+            <LocationNew slug={slug} />
           ) : (
             <OurLocation
               badgetext={ourLocationSection?.badgetext}

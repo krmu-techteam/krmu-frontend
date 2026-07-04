@@ -19,10 +19,17 @@ import digitalCareerGoalContentData from "../data/digitalMarketing/digitalCareer
 
 import { LeaveWithPageContentType } from "../types/contentLeaveWith";
 import LeaveWithContentData from "../data/fintech/leaveWithContent.json";
+
 import { FacultyAndIndustryPageContentType } from "../types/contentFacultyAndIndustry";
 import FacultyAndIndustryContentData from "../data/fintech/facultyAndIndustryContent.json";
+import ibmFacultyAndIndustryContentData from "../data/ibm/ibmFacultyAndIndustryContent.json";
+import digitalFacultyAndIndustryContentData from "../data/digitalMarketing/digitalFacultyAndIndustryContent.json";
+
 import { ExperimentalInfraPageContentType } from "../types/contentExperimentalInfra";
 import ExperimentalInfraContentData from "../data/fintech/experimentalInfraContent.json";
+import ibmExperimentalInfraContentData from "../data/ibm/ibmExperimentalInfraContent.json";
+import digitalExperimentalInfraContentData from "../data/digitalMarketing/digitalExperimentalInfraContent.json";
+
 import { ExpectationsPageContentType } from "../types/contentExpectations";
 import ExpectationsContentData from "../data/fintech/expectationsContent.json";
 import { CareerProspectsPageContentType } from "../types/contentCareerProspects";
@@ -89,8 +96,24 @@ export function getFacultyAndIndustryContent(): FacultyAndIndustryPageContentTyp
   return FacultyAndIndustryContentData as FacultyAndIndustryPageContentType;
 }
 
+export function getIBMFacultyAndIndustryContent(): FacultyAndIndustryPageContentType {
+  return ibmFacultyAndIndustryContentData as FacultyAndIndustryPageContentType;
+}
+
+export function getDigitalFacultyAndIndustryContent(): FacultyAndIndustryPageContentType {
+  return digitalFacultyAndIndustryContentData as FacultyAndIndustryPageContentType;
+}
+
 export function getExperimentalInfraContent(): ExperimentalInfraPageContentType {
   return ExperimentalInfraContentData as ExperimentalInfraPageContentType;
+}
+
+export function getIBMEExperimentalInfraContent(): ExperimentalInfraPageContentType {
+  return ibmExperimentalInfraContentData as ExperimentalInfraPageContentType;
+}
+
+export function getDigitalExperimentalInfraContent(): ExperimentalInfraPageContentType {
+  return digitalExperimentalInfraContentData as ExperimentalInfraPageContentType;
 }
 
 export function getExpectationsContent(): ExpectationsPageContentType {

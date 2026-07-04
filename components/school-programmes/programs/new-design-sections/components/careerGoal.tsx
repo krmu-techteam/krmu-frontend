@@ -184,16 +184,8 @@ const CareerGoal = ({ slug, dataContent }: Props) => {
           <div className="lg:col-span-6 w-full">
             <div className="relative w-full overflow-hidden">
               <Image
-                src={
-                  slug === "mba-fintech"
-                    ? content.image
-                    : slug === "mba-digital-marketing"
-                      ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1558_d6088c87fb.jpg"
-                      : slug === "mba"
-                        ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1558_1_d58f8940b2.jpg"
-                        : ""
-                }
-                alt="Cohort MBA students walking on university steps"
+                src={content.image}
+                alt={content.alt}
                 width={1024}
                 height={1024}
                 className="relative object-cover w-[462px] h-[445px] mx-auto"

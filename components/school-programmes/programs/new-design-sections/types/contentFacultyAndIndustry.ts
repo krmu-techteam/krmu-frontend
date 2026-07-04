@@ -22,6 +22,7 @@ export interface FacultyAndIndustrySectionType {
 
 export interface FacultyCardType {
   name: string;
+  altText: string;
   designation: string;
   qualification: string;
   image: string;
@@ -33,6 +34,7 @@ export interface FacultyAndIndustryContentType {
   badge: string;
   title: string;
   classroomImage: string;
+  alt: string;
   dean: DeanType;
   sections: FacultyAndIndustrySectionType[];
   faculties: FacultyCardType[];
