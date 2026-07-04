@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { getExperimentalInfraContent } from "../lib/getContent";
 import { Fraunces, Inter, Poppins } from "next/font/google";
+import { ExperimentalInfraPageContentType } from "../types/contentExperimentalInfra";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -15,8 +16,13 @@ const fraunces = Fraunces({
   style: ["italic", "normal"],
 });
 
-const ExperimentalInfra = () => {
-  const data = getExperimentalInfraContent();
+type Props = {
+  dataContent?: ExperimentalInfraPageContentType | null;
+};
+
+const ExperimentalInfra = ({ dataContent }: Props) => {
+  const data = dataContent;
+  if (!data || !data.experimentalInfra) return null;
   const content = data.experimentalInfra;
 
   return (
@@ -47,7 +53,7 @@ const ExperimentalInfra = () => {
               <div className="relative h-[178px] w-full bg-[#F7F0E0] flex items-center justify-center">
                 <Image
                   src={card.image}
-                  alt={card.title}
+                  alt={card.alt}
                   fill
                   className="object-fit"
                 />

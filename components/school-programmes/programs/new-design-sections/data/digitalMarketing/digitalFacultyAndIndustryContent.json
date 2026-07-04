@@ -2,8 +2,8 @@
   "facultyAndIndustry": {
     "badge": "FACULTY & INDUSTRY",
     "title": "Who teaches you, and who teaches alongside them.",
-    "classroomImage": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1562_8c17bcfeca.jpg",
-    "alt": "MBA Fintech classroom session at K.R. Mangalam University",
+    "classroomImage": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1562_47c760d501.jpg",
+    "alt": "MBA in Digital Marketing classroom session at K.R. Mangalam University",
     "sections": [
       {
         "title": "Core Faculty",
@@ -47,7 +47,7 @@
     "faculties": [
       {
         "name": "Dr. Hima Gupta",
-        "altText": "Dr. Hima Gupta, Dean and MBA Fintech faculty at KRMU",
+        "altText": "Dr. Hima Gupta, Dean, MBA faculty at KRMU",
         "designation": "Dean (School of Management & Commerce)",
         "qualification": "Ph.D. (Management), MBA (IMT Ghaziabad) plus 35 years of experience",
         "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Hima_Gupta_adb3700f07.png",
@@ -56,7 +56,7 @@
       },
       {
         "name": "Dr. Deepak Maun",
-        "altText": "Dr. Deepak Maun, Director of Experiential Learning, MBA Fintech faculty at KRMU",
+        "altText": "Dr. Deepak Maun, Director of Experiential Learning, KRMU MBA faculty",
         "designation": "Director, Experiential Learning",
         "qualification": "Ph.D. (Innovation & Management in Education) (IIM Ahmedabad)",
         "image": "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Deepak-Maun.jpeg",
@@ -65,7 +65,7 @@
       },
       {
         "name": "Prof. Anjana Dharmani ",
-        "altText": "Prof. Anjana Dharmani, Faculty of Marketing, MBA Fintech programme at KRMU",
+        "altText": "Prof. Anjana Dharmani, Marketing faculty, KRMU MBA in Digital Marketing",
         "designation": "Faculty, Marketing ",
         "qualification": " Ph.D. (Marketing) (Pursuing) (XLRI, Jamshedpur)",
         "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Anjana_Anji_Dharmani_328dfdc625.jpg",
@@ -75,7 +75,7 @@
 
       {
         "name": "Alok Srivastava",
-        "altText": "Alok Srivastava, Faculty of Strategy and Entrepreneurship, MBA Fintech at KRMU",
+        "altText": "Alok Srivastava, Strategy and Entrepreneurship faculty, KRMU MBA",
         "designation": "Faculty, Strategy & Entrepreneurship",
         "qualification": "IIT Delhi · IIM Calcutta",
         "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Alok_Srivastava_5397aefc3c.jpg",
@@ -84,7 +84,7 @@
       },
       {
         "name": "Sandeep Kochhar",
-        "altText": "Sandeep Kochhar, Faculty of Communication and Placement Training, MBA Fintech at KRMU",
+        "altText": "Sandeep Kochhar, Communication and Placement Training faculty, KRMU MBA",
         "designation": "Faculty, Communication and Placement Training",
         "qualification": "Global C-Suite Executive Coach",
         "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Sandeep_Kochhar_0809e870ef.jpg",
@@ -93,7 +93,7 @@
       },
       {
         "name": "Rakhi Gupta",
-        "altText": "Rakhi Gupta, Faculty of Communication and Placement Training, MBA Fintech at KRMU",
+        "altText": "Rakhi Gupta, Communication and Placement Training faculty, KRMU MBA",
         "designation": "Faculty, Communication and Placement Training",
         "qualification": "Former VP, NatWest Group",
         "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rakhi_Gupta_d129741a02.jpg",
@@ -102,7 +102,7 @@
       },
       {
         "name": "Abhinash Jena",
-        "altText": "Abhinash Jena, Faculty of Business Analytics, MBA Fintech at KRMU",
+        "altText": "Abhinash Jena, Business Analytics faculty, KRMU MBA",
         "designation": "Faculty, Business Analytics",
         "qualification": "Partner, Project Guru",
         "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Abhinash_Jena_0aab506709.jpg",
@@ -111,7 +111,7 @@
       },
       {
         "name": "Arnab Chatterjee ",
-        "altText": "Arnab Chatterjee, Faculty of Organisational Behaviour and Human Resource Management,  MBA Fintech at KRMU",
+        "altText": "Arnab Chatterjee, Faculty of Organisational Behaviour and Human Resource Management, KRMU MBA",
         "designation": "Faculty, Organisational Behaviour and Human Resource Management",
         "qualification": "Doctoral Researcher at Christ University ",
         "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Arnab_Chatterjee_d2506dce06.png",

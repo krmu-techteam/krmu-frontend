@@ -22,6 +22,7 @@ export interface HeroContentType {
   content: string;
   content2?: string;
   image: string;
+  altText: string;
   button: ButtonType[];
   stats: StatType[];
   banner: BannerType;

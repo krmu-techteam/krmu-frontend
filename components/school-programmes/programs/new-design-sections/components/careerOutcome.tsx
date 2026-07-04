@@ -115,7 +115,15 @@ const CareerOutcome = ({ slug }: Props) => {
                           ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1541_fa1c297a76.jpg"
                           : ""
                   }
-                  alt="MBA Students discussing career outcomes"
+                  alt={
+                    slug === "mba-fintech"
+                      ? "MBA Fintech students discussing career outcomes at K.R. Mangalam University"
+                      : slug === "mba-digital-marketing"
+                        ? "MBA in Digital Marketing students discussing career outcomes at KRMU placement session"
+                        : slug === "mba"
+                          ? "MBA students discussing career outcomes at KRMU placement session"
+                          : ""
+                  }
                   width={1440}
                   height={1440}
                   className=" w-full h-[300px] sm:h-[486px]"

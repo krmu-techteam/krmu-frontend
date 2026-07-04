@@ -120,7 +120,7 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
           <div className="relative rounded-[10px] w-full max-w-[340px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[492px] aspect-[4/3] sm:aspect-square h-[300px] sm:h-[400px] lg:h-[450px] overflow-hidden flex items-center justify-center">
             <Image
               src={hero.image}
-              alt="MBA Fintech Student"
+              alt={hero.altText}
               width={1024}
               height={1024}
               priority

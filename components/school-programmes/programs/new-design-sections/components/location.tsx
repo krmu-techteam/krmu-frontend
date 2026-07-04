@@ -18,7 +18,11 @@ const fraunces = Fraunces({
   style: ["italic", "normal"],
 });
 
-const Location = () => {
+type Props = {
+  slug: string;
+};
+
+const Location = ({ slug }: Props) => {
   const data = getLocationContent();
   const content = data.location;
 
@@ -110,7 +114,15 @@ const Location = () => {
             <div className="relative w-full aspect-[4/3] overflow-hidden">
               <Image
                 src={content.image}
-                alt="KRMU Campus dome building with students"
+                alt={
+                  slug === "mba-fintech"
+                    ? "K.R. Mangalam University campus dome building with students in Gurugram"
+                    : slug === "mba-digital-marketing"
+                      ? "K.R. Mangalam University campus dome building with students, Sohna Road Gurugram"
+                      : slug === "mba"
+                        ? "K.R. Mangalam University campus dome building with students, Sohna Road Gurugram"
+                        : ""
+                }
                 width={1440}
                 height={1440}
                 className="object-cover w-full h-full"

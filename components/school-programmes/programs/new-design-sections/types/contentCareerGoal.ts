@@ -16,6 +16,7 @@ export interface CareerGoalContentType {
   title: string;
   description?: string;
   image: string;
+  alt: string;
   semesters: SemesterTabType[];
 }
 

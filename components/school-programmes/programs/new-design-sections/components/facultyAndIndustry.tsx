@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { getFacultyAndIndustryContent } from "../lib/getContent";
 import { Fraunces, Inter, Poppins } from "next/font/google";
 import * as Icons from "lucide-react";
 import {
@@ -12,7 +11,10 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { FacultyCardType } from "../types/contentFacultyAndIndustry";
+import {
+  FacultyAndIndustryPageContentType,
+  FacultyCardType,
+} from "../types/contentFacultyAndIndustry";
 import Link from "next/link";
 
 const inter = Poppins({
@@ -30,6 +32,7 @@ const fraunces = Fraunces({
 // Inner Component for handling individual Faculty Card
 const FacultyCard = ({
   name,
+  alt,
   desg,
   qual,
   imgUrl,
@@ -37,6 +40,7 @@ const FacultyCard = ({
   onOpenProfile,
 }: {
   name: string;
+  alt: string;
   desg: string;
   qual: string;
   imgUrl: string;
@@ -58,7 +62,7 @@ const FacultyCard = ({
       >
         <Image
           src={imgUrl}
-          alt={name}
+          alt={alt}
           fill
           className="object-contain  transition-transform duration-300 group-hover:scale-[1.03]"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
@@ -88,10 +92,12 @@ const FacultyCard = ({
 
 type Props = {
   slug: string;
+  dataContent?: FacultyAndIndustryPageContentType | null;
 };
 
-const FacultyAndIndustry = ({ slug }: Props) => {
-  const data = getFacultyAndIndustryContent();
+const FacultyAndIndustry = ({ slug, dataContent }: Props) => {
+  const data = dataContent;
+  if (!data || !data.facultyAndIndustry) return null;
   const content = data.facultyAndIndustry;
 
   const [activeSection, setActiveSection] = useState<number | null>(null);
@@ -130,8 +136,6 @@ const FacultyAndIndustry = ({ slug }: Props) => {
 
   const cards = content.faculties || [];
 
-  console.log(activeFaculty);
-
   return (
     <section className="w-full bg-[#F7F0E0] text-[#012D52]">
       {/* Top Part: Info & Grid */}
@@ -156,16 +160,8 @@ const FacultyAndIndustry = ({ slug }: Props) => {
             <div className="w-full lg:w-[45%]">
               <div className="relative w-full max-w-[496px] aspect-[496/486] overflow-hidden shadow-xl shadow-slate-900/10 mx-auto">
                 <Image
-                  src={
-                    slug === "mba-fintech"
-                      ? content.classroomImage
-                      : slug === "mba-digital-marketing"
-                        ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1562_47c760d501.jpg"
-                        : slug === "mba"
-                          ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1562_1_e3e2d575b4.jpg"
-                          : ""
-                  }
-                  alt="MBA Classroom setting"
+                  src={content.classroomImage}
+                  alt={content.alt}
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 496px"
@@ -294,6 +290,7 @@ const FacultyAndIndustry = ({ slug }: Props) => {
                   >
                     <FacultyCard
                       name={card.name}
+                      alt={card.altText}
                       desg={card.designation}
                       qual={card.qualification}
                       imgUrl={card.image}
