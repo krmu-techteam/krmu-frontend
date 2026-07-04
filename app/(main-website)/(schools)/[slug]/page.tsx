@@ -64,6 +64,7 @@ import {
   getSchoolProgrammesForSchema,
 } from "@/lib/api/school-programmes";
 import Script from "next/script";
+import { allProgrammes } from "./allProgrammesList";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -257,19 +258,22 @@ export default async function Page({ params }: Props) {
   const allPHDSchoolProgrammeNames = await getSchoolProgrammePhdSchema(
     school.school_category?.name,
   );
-  
 
+  // const programmes = [
+  //   ...allSchoolProgrammeNames.map((programme) => ({
+  //     name: programme.title,
+  //     url: `https://www.krmangalam.edu.in/programs/${programme.programmeslug}`,
+  //   })),
+  //   ...allPHDSchoolProgrammeNames.map((programme) => ({
+  //     name: programme.heading,
+  //     url: `https://www.krmangalam.edu.in/programs/${programme.phdslug}`,
+  //   })),
+  // ];
 
-  const programmes = [
-    ...allSchoolProgrammeNames.map((programme) => ({
-      name: programme.title,
-      url: `https://www.krmangalam.edu.in/programs/${programme.programmeslug}`,
-    })),
-    ...allPHDSchoolProgrammeNames.map((programme) => ({
-      name: programme.heading,
-      url: `https://www.krmangalam.edu.in/programs/${programme.phdslug}`,
-    })),
-  ];
+  const getAllProgrammes =
+    allProgrammes.find((prog) => prog.slug === slug)?.links ?? [];
+
+  const programmes = [...getAllProgrammes];
 
   const schoolSchema = createProgrammeItemListSchema({
     name: `Programmes Offered - ${school.schoolname}`,
