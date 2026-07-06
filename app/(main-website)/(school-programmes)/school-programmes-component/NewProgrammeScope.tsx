@@ -236,15 +236,15 @@ const NewProgrammeScope = async ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mt-20 md:mt-24">
           {/* Left Column: Skills Circle Badge */}
           <div className="lg:col-span-4 flex justify-center items-center">
-            <div className="relative rounded-full w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[455px] md:h-[455px] flex items-center justify-center overflow-hidden">
+            <div className="relative rounded-full w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[455px] md:h-[455px] flex items-center justify-center ">
               {/* Outer Dashed Ring with slow rotating animation */}
-              <div className="absolute inset-0 rounded-full border-t-5 border-dashed border-blue-500/30 " />
+              <div className="absolute inset-0 rounded-full border-t-[5px] border-dashed border-blue-500/30 " />
 
               {/* Inner Solid Blue Ring */}
               <div className="absolute inset-[15px] rounded-full border border-blue-500/10" />
 
               {/* Gold Compass Marker Pointing NE */}
-              <div className="absolute w-[25px] h-[25px] z-999 top-0 right-[16%]">
+              <div className="absolute w-[25px] h-[25px] z-999 top-10 right-[16%]">
                 <Image
                   src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Polygon_2_829da6039f.png"
                   alt=""
