@@ -102,7 +102,7 @@ const page = () => {
         formId={mbaFormId}
         ugHeroClsName={ugHeroClsName}
       />
-      <PlacementStats data={placementData} />
+      {/* <PlacementStats data={placementData} /> */}
       <ProminentRecruiter data={prominentData} />
       <AboutUs
         title={aboutUsContent?.title}
