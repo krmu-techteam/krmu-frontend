@@ -50,6 +50,8 @@ import { ActionCards } from "@/components/school-programmes/programs/action-card
 import { heroConfigs } from "@/components/school-programmes/programs/data/programs";
 import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
 import ResearchAndInnovation from "../../school-programmes-component/ResearchAndInnovation";
+import { WhyKrmuCse } from "../../school-programmes-component/WhyKrmuCse";
+import NewProgrammeScope from "../../school-programmes-component/NewProgrammeScope";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -307,14 +309,23 @@ const page = async ({ params }: Props) => {
           />
         )}
 
-        {programmeScopeSection && (
-          <ProgrammeScope
-            scopeData={programmeScopeSection}
-            heroSection={heroSection}
-            allowedFormSlugs={allowedFormSlugs}
-            slug={slug}
-          />
-        )}
+        {programmeScopeSection &&
+          (slug === "b-tech-cse" ? (
+            <NewProgrammeScope
+              scopeData={programmeScopeSection}
+              heroSection={heroSection}
+              allowedFormSlugs={allowedFormSlugs}
+              slug={slug}
+            />
+          ) : (
+            <ProgrammeScope
+              scopeData={programmeScopeSection}
+              heroSection={heroSection}
+              allowedFormSlugs={allowedFormSlugs}
+              slug={slug}
+            />
+          ))}
+
         {programmeHighlightSection && (
           <ProgrammeHighlight
             heading={programmeHighlightSection?.heading}
@@ -327,11 +338,14 @@ const page = async ({ params }: Props) => {
 
         {slug === "mba" && <SpecialisationsSection />}
         {specialisationSection && (
-          <Specialisation
-            heading={specialisationSection?.heading}
-            highlightheading={specialisationSection?.highlightheading}
-            specialisations={specialisationSection?.specialisationcards}
-          />
+          <>
+            {slug === "b-tech-cse" && <WhyKrmuCse />}
+            <Specialisation
+              heading={specialisationSection?.heading}
+              highlightheading={specialisationSection?.highlightheading}
+              specialisations={specialisationSection?.specialisationcards}
+            />
+          </>
         )}
         {admissionProcessSection && (
           <AdmissionProcessComp
