@@ -5,11 +5,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 8883,
     slug: "dr-mamta-shankar",
     title: {
-      rendered: "Ms. Mamta Shankar (PT)",
+      rendered: "Dr. Mamta Shankar (PT)",
     },
     featured_media: 8884,
     acf: {
-      "staff-qualification": "M.P.T.",
+      "staff-qualification": "Ph.D. Pursuing",
       staff_designation: "School Coordinator",
       schools: [1098],
     },
@@ -51,11 +51,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 9108,
     slug: "dr-barnali-bhattacharjee",
     title: {
-      rendered: "Ms. Barnali Bhattacharjee (PT)",
+      rendered: "Dr. Barnali Bhattacharjee (PT)",
     },
     featured_media: 9109,
     acf: {
-      "staff-qualification": "M.P.T.",
+      "staff-qualification": "Ph.D. Pursuing",
       staff_designation: "Associate Professor",
       schools: [1098],
     },
@@ -66,11 +66,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 68869,
     slug: "dr-shazia-mattu",
     title: {
-      rendered: "Ms. Shazia Mattu (PT)",
+      rendered: "Dr. Shazia Mattu (PT)",
     },
     featured_media: 101429,
     acf: {
-      "staff-qualification": "Ph.D. Persuing",
+      "staff-qualification": "Ph.D. Pursuing",
       staff_designation: "Associate Professor",
       schools: [1098],
     },
@@ -81,11 +81,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 8993,
     slug: "dr-ankita-samuel",
     title: {
-      rendered: "Ms. Ankita Samuel (PT)",
+      rendered: "Dr. Ankita Samuel (PT)",
     },
     featured_media: 106768,
     acf: {
-      "staff-qualification": "M.P.T.",
+      "staff-qualification": "Ph..D pursuing",
       staff_designation: "Assistant  Professor",
       schools: [],
     },
@@ -96,11 +96,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 9097,
     slug: "dr-shweta-kumar",
     title: {
-      rendered: "Ms. Shweta Kumar (PT)",
+      rendered: "Dr. Shweta Kumar (PT)",
     },
     featured_media: 9098,
     acf: {
-      "staff-qualification": "M.P.T.",
+      "staff-qualification": "Ph.D. Pursuing",
       staff_designation: "Assistant  Professor",
       schools: [1098],
     },
@@ -111,11 +111,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 68207,
     slug: "dr-aatika-waheed",
     title: {
-      rendered: "Ms. Aatika Waheed (PT)",
+      rendered: "Dr. Aatika Waheed (PT)",
     },
     featured_media: 68220,
     acf: {
-      "staff-qualification": "M.P.T.",
+      "staff-qualification": "Ph.D. Pursuing",
       staff_designation: "Assistant Professor",
       schools: [1098],
     },
@@ -157,11 +157,11 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     id: 115540,
     slug: "dr-deepak-kumar-pt",
     title: {
-      rendered: "Mr. Deepak Kumar (PT)",
+      rendered: "Dr. Deepak Kumar (PT)",
     },
     featured_media: 115540,
     acf: {
-      "staff-qualification": "M.P.T.",
+      "staff-qualification": "Ph.D. Pursuing",
       staff_designation: "Assistant Professor",
       schools: [1098],
     },
