@@ -85,9 +85,9 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 106768,
     acf: {
-      "staff-qualification": "Ph..D pursuing",
+      "staff-qualification": "Ph.D. Pursuing",
       staff_designation: "Assistant  Professor",
-      schools: [],
+      schools: [1098],
     },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Ankita-Samuel-1.png",
