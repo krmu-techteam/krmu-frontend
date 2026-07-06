@@ -4,31 +4,38 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer utilities {
-  @media (max-width: 767px) {
-    body {
-      padding-bottom: 56px;
-    }
-  }
   .flash-border .heroBannerForm__form {
     border: 1px solid red;
     border-radius: 15px;
   }
 
   .MainSection {
-    background-image: url("/wp-content/landingpage/brand-2026/brand.webp") !important;
+    background-image: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/6_Brand_2_jpg_962eced76e.jpeg") !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  html,
+  body {
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+
+  @media (max-width: 767px) {
+    body {
+      padding-bottom: 56px;
+    }
   }
 
   /* Mobile */
   @media (max-width: 639px) {
     .MainSection {
       background-image: none !important;
-      background-color: #1f0b07;
+      background-color: #010101;
     }
     .MainSection .container-1 {
-      background-image: url("/wp-content/landingpage/brand-2026/brand-mob.webp") !important;
+      background-image: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Brand_jpg_543ab64ee2.jpeg") !important;
       background-size: cover;
       background-position: center;
       height: 498px;
@@ -42,13 +49,13 @@
   @media (min-width: 640px) and (max-width: 1023px) {
     .MainSection {
       background-image: none !important;
-      background-color: #1f0b07;
+      background-color: #010101;
     }
     .MainSection .container-1 {
-      background-image: url("/wp-content/landingpage/brand-2026/brand-mob.webp") !important;
+      background-image: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Brand_jpg_543ab64ee2.jpeg") !important;
       background-size: cover;
       background-position: center;
-      height: 750px; /* Adjusted for tablet */
+      height: 700px; /* Adjusted for tablet */
       /* display: flex;
       align-items: end;
       justify-content: center; */

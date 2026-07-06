@@ -31,21 +31,21 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr-Manav-Sharma.png",
   },
-  {
-    id: 1028,
-    slug: "mr-ritwik-ghosh",
-    title: {
-      rendered: "Dr. Ritwik Ghosh",
-    },
-    featured_media: 1026,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant Professor",
-      schools: [1009],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Ritwik-Ghosh.png",
-  },
+  // {
+  //   id: 1028,
+  //   slug: "mr-ritwik-ghosh",
+  //   title: {
+  //     rendered: "Dr. Ritwik Ghosh",
+  //   },
+  //   featured_media: 1026,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1009],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Ritwik-Ghosh.png",
+  // },
   {
     id: 1029,
     slug: "dr-sarina",
@@ -95,7 +95,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
     id: 10767,
     slug: "aditi-agarwal",
     title: {
-      rendered: "Ms. Aditi Agarwal",
+      rendered: "Dr. Aditi Agarwal",
     },
     featured_media: 10763,
     acf: {
@@ -137,19 +137,19 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Aditi-Khare-1.png",
   },
 
-  {
-    id: 66802,
-    slug: "mr-trilok-kumar-singh",
-    title: {
-      rendered: "Mr. Trilok Kumar Singh",
-    },
-    featured_media: 66804,
-    acf: {
-      "staff-qualification": "Ph.D. (pursuing)",
-      staff_designation: "Teaching Assistant & Research Scholar",
-      schools: [1009],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Mr.-Trilok-Kumar-Singh.png",
-  },
+  // {
+  //   id: 66802,
+  //   slug: "mr-trilok-kumar-singh",
+  //   title: {
+  //     rendered: "Mr. Trilok Kumar Singh",
+  //   },
+  //   featured_media: 66804,
+  //   acf: {
+  //     "staff-qualification": "Ph.D. (pursuing)",
+  //     staff_designation: "Teaching Assistant & Research Scholar",
+  //     schools: [1009],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Mr.-Trilok-Kumar-Singh.png",
+  // },
 ];
