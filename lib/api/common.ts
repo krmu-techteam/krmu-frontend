@@ -944,3 +944,63 @@ export function createCollegeSchema() {
     ],
   };
 }
+
+
+
+
+type QuantitativeValue = {
+  name: string;
+  value: number | string;
+};
+
+type AmenityFeature = {
+  name: string;
+  value: string | number;
+};
+
+interface CommonCollegeUniversitySchemaProps {
+  name: string;
+  alternateName?: string;
+  url: string;
+  logo: string;
+  award?: string;
+  numberOfEmployees?: QuantitativeValue;
+  amenityFeature?: AmenityFeature[];
+  sameAs?: string[];
+}
+
+export function commonCollegeUniversitySchema({
+  name,
+  alternateName,
+  url,
+  logo,
+  award,
+  numberOfEmployees,
+  amenityFeature = [],
+  sameAs = [],
+}: CommonCollegeUniversitySchemaProps) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    name,
+    ...(alternateName && { alternateName }),
+    url,
+    logo,
+    ...(award && { award }),
+    ...(numberOfEmployees && {
+      numberOfEmployees: {
+        "@type": "QuantitativeValue",
+        name: numberOfEmployees.name,
+        value: numberOfEmployees.value,
+      },
+    }),
+    ...(amenityFeature.length > 0 && {
+      amenityFeature: amenityFeature.map((feature) => ({
+        "@type": "LocationFeatureSpecification",
+        name: feature.name,
+        value: feature.value,
+      })),
+    }),
+    ...(sameAs.length > 0 && { sameAs }),
+  };
+}
