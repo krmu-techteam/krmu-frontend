@@ -277,7 +277,7 @@ const FacultyAndIndustry = ({ slug, dataContent }: Props) => {
               }}
               plugins={[
                 Autoplay({
-                  delay: 3000,
+                  delay: 5000,
                 }),
               ]}
               className="w-full mb-10"
