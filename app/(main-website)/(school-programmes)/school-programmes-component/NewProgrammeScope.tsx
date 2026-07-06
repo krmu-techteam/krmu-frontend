@@ -17,7 +17,8 @@ type Props = {
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
 });
 
 const NewProgrammeScope = async ({
@@ -62,11 +63,10 @@ const NewProgrammeScope = async ({
       id: 1,
       content: (
         <span>
-          <strong className="text-white font-semibold">
+          <strong className="text-white font-bold">
             Artificial Intelligence
           </strong>{" "}
-          and{" "}
-          <strong className="text-white font-semibold">Machine Learning</strong>{" "}
+          and <strong className="text-white font-bold">Machine Learning</strong>{" "}
           engineering for modern-day applications and system development.
         </span>
       ),
@@ -76,7 +76,7 @@ const NewProgrammeScope = async ({
       content: (
         <span>
           Cloud computing, DevOps workflows, cybersecurity awareness and{" "}
-          <strong className="text-white font-semibold">
+          <strong className="text-white font-bold">
             secure coding practices
           </strong>{" "}
           are embedded into the curriculum.
@@ -89,9 +89,7 @@ const NewProgrammeScope = async ({
         <span>
           Students also engage in lab work and project deliverables, which
           formulate team-based development skills with{" "}
-          <strong className="text-white font-semibold">
-            agile methodologies
-          </strong>{" "}
+          <strong className="text-white font-bold">agile methodologies</strong>{" "}
           to stay competitive in the career.
         </span>
       ),
@@ -101,9 +99,8 @@ const NewProgrammeScope = async ({
       content: (
         <span>
           Analytical and problem-solving skills are{" "}
-          <strong className="text-white font-semibold">sharpened</strong>{" "}
-          through{" "}
-          <strong className="text-white font-semibold">
+          <strong className="text-white font-bold">sharpened</strong> through{" "}
+          <strong className="text-white font-bold">
             competitive programming
           </strong>{" "}
           exposure and project-based learning, which accounts for 15% of total
@@ -117,7 +114,7 @@ const NewProgrammeScope = async ({
         <span>
           Proficiency in multiple programming languages like C++, Java, and
           Python with an emphasis on writing{" "}
-          <strong className="text-white font-semibold">production-grade</strong>{" "}
+          <strong className="text-white font-bold">production-grade</strong>{" "}
           code using modern development frameworks.
         </span>
       ),
@@ -126,36 +123,22 @@ const NewProgrammeScope = async ({
 
   return (
     <section
-      className={`${inter.className} bg-[linear-gradient(180deg,#002958_0%,#001732_100%)] text-white py-10 `}
+      className={`${inter.className} bg-[linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),linear-gradient(180deg,#002958_0%,#001732_100%)] text-white pt-14 pb-[120px]`}
     >
-      <div className="max-w-[1500px] mx-auto px-6 ">
+      <div className="max-w-[1500px] mx-auto px-8 ">
         {/* Top Section: Image (Left) & Heading/Content (Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-14 gap-8 lg:gap-14 items-center">
           {/* Left Column: Image */}
           <div className="lg:col-span-7 w-full">
-            {heroSection?.imgvideo === "Video" && isFormAvailable ? (
-              <div className="relative aspect-[16/10] sm:aspect-[4/3] lg:aspect-[4/3] xl:aspect-[5/3] w-full rounded-2xl overflow-hidden shadow-2xl">
-                <div
-                  className="w-full h-full"
-                  dangerouslySetInnerHTML={{
-                    __html: heroSection?.videofield || "",
-                  }}
-                />
-              </div>
-            ) : (
-              scopeData?.scopeimg?.url && (
-                <div className="w-full relative aspect-[16/11] sm:aspect-[1.5] lg:aspect-[1.4] xl:aspect-[1.5] rounded-[24px] overflow-hidden shadow-2xl border border-blue-900/30">
-                  <Image
-                    src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
-                    fill
-                    className="object-cover"
-                    alt="B.Tech. CSE Programme Scope"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 640px"
-                    priority
-                  />
-                </div>
-              )
-            )}
+            <div className="w-full  relative rounded-[24px] overflow-hidden shadow-2xl border border-blue-900/30">
+              <Image
+                src={`https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_635_0916216e9a.jpg`}
+                width={1024}
+                height={1024}
+                className="object-cover"
+                alt="B.Tech. CSE Programme Scope"
+              />
+            </div>
           </div>
 
           {/* Right Column: Heading & Content */}
@@ -164,7 +147,7 @@ const NewProgrammeScope = async ({
               B.Tech. CSE <br /> Programme Scope
             </h3>
 
-            <div className="space-y-4 text-[15px] sm:text-[16px] lg:text-[18px] font-light  text-white text-justify">
+            <div className="space-y-4 text-[15px] sm:text-[16px] lg:text-[18px] font-light  text-white text-justify opacity-[90%]">
               {/* {paragraphs.length > 0 ? (
                 paragraphs.map((para, i) => <p key={i}>{para}</p>)
               ) : (
@@ -239,7 +222,7 @@ const NewProgrammeScope = async ({
             <div className="relative rounded-full w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:min-w-[455px] md:h-[455px] flex items-center justify-center ">
               {/* Outer Dashed Ring with slow rotating animation */}
               <svg
-                className="absolute inset-0 w-full h-full z-9999"
+                className="absolute inset-0 w-full h-full z-9"
                 viewBox="0 0 100 100"
                 fill="none"
               >
@@ -271,12 +254,12 @@ const NewProgrammeScope = async ({
                   strokeLinecap="round"
                 />
               </svg>
-              <div className="absolute inset-[5px] shadow-[inset_0_0_1px_rgba(59,130,246,0.15)] bg-[#031a35]  rounded-full" />
+              <div className="absolute inset-[5px] bg-[#031a35]  rounded-full" />
               {/* Inner Solid Blue Ring */}
               <div className="absolute inset-[18px] bg-[linear-gradient(180deg,#002550_0%,#000D1D_100%)] rounded-full" />
 
               {/* Gold Compass Marker Pointing NE */}
-              <div className="absolute w-[25px] h-[25px] z-999 top-12 right-[16%]">
+              <div className="absolute w-[25px] h-[25px] z-9 top-14 right-[16%]">
                 <Image
                   src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Polygon_2_829da6039f.png"
                   alt=""
@@ -287,19 +270,21 @@ const NewProgrammeScope = async ({
               </div>
 
               {/* Center Content Circle */}
-              <div className="absolute inset-[24px] rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,#004698_10.58%,#001732_100%)]  flex flex-col justify-center items-center p-6 sm:p-8 text-center  z-0">
-                <span className="text-[#e5c158] font-bold text-xs sm:text-sm tracking-wider uppercase mb-1">
+              <div
+                className={` ${inter.className} absolute inset-[24px] rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,#004698_10.58%,#001732_100%)]  flex flex-col justify-center items-center p-6 sm:p-8 text-center  z-0`}
+              >
+                <span className="text-[#E7C268] font-bold text-xs sm:text-[29px] leading-[100%]  ">
                   Skills Developed
                 </span>
-                <h4 className="text-white font-extrabold text-lg sm:text-xl md:text-2xl leading-tight mb-4">
+                <h4 className="text-white font-extrabold text-lg sm:text-xl md:text-[29px] leading-[115%]  mb-4">
                   During the B.Tech
                   <br />
                   CSE Programme
                 </h4>
-                <div className="w-10 h-[1.5px] bg-blue-500/40 mb-4" />
-                <p className="text-xs sm:text-[13px] text-blue-100/70 leading-relaxed max-w-[250px]">
+
+                <p className="text-xs sm:text-[18px] text-white font-light leading-[120%]  max-w-[284px]">
                   Within the span of 4 years, students{" "}
-                  <strong className="text-white font-semibold">
+                  <strong className="text-white font-bold">
                     develop technical and professional skills
                   </strong>{" "}
                   required by employers in the tech and engineering sectors,
@@ -310,19 +295,21 @@ const NewProgrammeScope = async ({
           </div>
 
           {/* Right Column: Skills Checklist */}
-          <div className="lg:col-span-7 flex flex-col">
-            <div className="divide-y divide-blue-900/35 border-t border-b border-blue-900/35">
+          <div className="lg:col-span-8 flex flex-col">
+            <div className="  ">
               {skillsList.map((item) => (
-                <div
-                  key={item.id}
-                  className="flex items-start gap-4 py-5 md:py-6 text-left"
-                >
-                  <div className="flex-shrink-0 w-8 h-8 rounded bg-[#081e3d] border border-blue-500/20 flex items-center justify-center text-blue-400 shadow-md">
-                    <Check className="w-5 h-5 text-blue-400 stroke-[3]" />
+                <div key={item.id} className="flex flex-col text-left">
+                  <div className="flex items-center gap-4 ">
+                    <div className="flex-shrink-0 w-[44px] h-[44px] rounded bg-[#00244E]  flex items-center justify-center text-[#0073FF] shadow-md">
+                      <Check className="w-6 h-6 text-[#0073FF] stroke-[2]" />
+                    </div>
+                    <p className="max-w-[755px] text-[14px] sm:text-[15px] md:text-[18px] font-light text-white leading-[120%] opacity-[80%]">
+                      {item.content}
+                    </p>
                   </div>
-                  <div className="text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed text-[#94a3b8]">
-                    {item.content}
-                  </div>
+                  {skillsList.length !== item.id && (
+                    <div className="   h-[2px] w-full my-6 bg-[linear-gradient(90deg,#2B4058_0%,#001732_100%)]" />
+                  )}
                 </div>
               ))}
             </div>
