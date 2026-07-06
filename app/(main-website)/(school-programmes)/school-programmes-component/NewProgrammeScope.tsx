@@ -233,18 +233,50 @@ const NewProgrammeScope = async ({
         </div>
 
         {/* Bottom Section: Skills Circle (Left) & Skills Checklist (Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mt-20 md:mt-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center pl-12 mt-20 md:mt-24">
           {/* Left Column: Skills Circle Badge */}
-          <div className="lg:col-span-4 flex justify-center items-center">
-            <div className="relative rounded-full w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[455px] md:h-[455px] flex items-center justify-center ">
+          <div className="lg:col-span-4 min-w-[455px] flex justify-center items-center">
+            <div className="relative rounded-full w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:min-w-[455px] md:h-[455px] flex items-center justify-center ">
               {/* Outer Dashed Ring with slow rotating animation */}
-              <div className="absolute inset-0 rounded-full border-t-[5px] border-dashed border-blue-500/30 " />
+              <svg
+                className="absolute inset-0 w-full h-full z-9999"
+                viewBox="0 0 100 100"
+                fill="none"
+              >
+                <defs>
+                  <linearGradient
+                    id="dashGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="50%"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stopColor="#0073FF" stopOpacity="1" />
+                    <stop offset="20%" stopColor="#0073FF" stopOpacity="1" />
+                    <stop offset="50%" stopColor="#29A8FF" stopOpacity="1" />
+                    <stop offset="80%" stopColor="#001732" stopOpacity="0" />
+                    <stop offset="100%" stopColor="#001732" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
 
+                <circle
+                  cx="50"
+                  cy="49"
+                  r="48"
+                  fill="none"
+                  stroke="url(#dashGradient)"
+                  strokeWidth="0.2"
+                  strokeDasharray="1.8 2.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <div className="absolute inset-[5px] shadow-[inset_0_0_1px_rgba(59,130,246,0.15)] bg-[#031a35]  rounded-full" />
               {/* Inner Solid Blue Ring */}
-              <div className="absolute inset-[15px] rounded-full border border-blue-500/10" />
+              <div className="absolute inset-[18px] bg-[linear-gradient(180deg,#002550_0%,#000D1D_100%)] rounded-full" />
 
               {/* Gold Compass Marker Pointing NE */}
-              <div className="absolute w-[25px] h-[25px] z-999 top-10 right-[16%]">
+              <div className="absolute w-[25px] h-[25px] z-999 top-12 right-[16%]">
                 <Image
                   src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Polygon_2_829da6039f.png"
                   alt=""
@@ -255,7 +287,7 @@ const NewProgrammeScope = async ({
               </div>
 
               {/* Center Content Circle */}
-              <div className="absolute inset-[24px] rounded-full bg-gradient-to-b from-[#061933] to-[#020b18] border border-blue-500/20 flex flex-col justify-center items-center p-6 sm:p-8 text-center shadow-[inset_0_0_24px_rgba(59,130,246,0.15)] z-0">
+              <div className="absolute inset-[24px] rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,#004698_10.58%,#001732_100%)]  flex flex-col justify-center items-center p-6 sm:p-8 text-center  z-0">
                 <span className="text-[#e5c158] font-bold text-xs sm:text-sm tracking-wider uppercase mb-1">
                   Skills Developed
                 </span>
