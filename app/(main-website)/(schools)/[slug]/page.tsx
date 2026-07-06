@@ -58,12 +58,13 @@ import {
   somcHerosLogos,
   sprsHerosLogos,
 } from "../SchoolComponents/schoolHeroLogo";
-import { createProgrammeItemListSchema } from "@/lib/api/common";
 import {
-  getSchoolProgrammePhdSchema,
-  getSchoolProgrammesForSchema,
-} from "@/lib/api/school-programmes";
+  commonCollegeUniversitySchema,
+  createProgrammeItemListSchema,
+} from "@/lib/api/common";
+
 import Script from "next/script";
+import { allProgrammes } from "./allProgrammesList";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -250,26 +251,10 @@ export default async function Page({ params }: Props) {
   const schoolsLogosData = schoolsImageMap[slug];
   const schoolsHerosLogosData = schoolsHeroLogosMap[slug];
 
-  const allSchoolProgrammeNames = await getSchoolProgrammesForSchema(
-    school.school_category?.name,
-  );
+  const getAllProgrammes =
+    allProgrammes.find((prog) => prog.slug === slug)?.links ?? [];
 
-  const allPHDSchoolProgrammeNames = await getSchoolProgrammePhdSchema(
-    school.school_category?.name,
-  );
-  
-
-
-  const programmes = [
-    ...allSchoolProgrammeNames.map((programme) => ({
-      name: programme.title,
-      url: `https://www.krmangalam.edu.in/programs/${programme.programmeslug}`,
-    })),
-    ...allPHDSchoolProgrammeNames.map((programme) => ({
-      name: programme.heading,
-      url: `https://www.krmangalam.edu.in/programs/${programme.phdslug}`,
-    })),
-  ];
+  const programmes = [...getAllProgrammes];
 
   const schoolSchema = createProgrammeItemListSchema({
     name: `Programmes Offered - ${school.schoolname}`,
@@ -278,12 +263,62 @@ export default async function Page({ params }: Props) {
     programmes,
   });
 
+  const collegeUniversitySchema = commonCollegeUniversitySchema({
+    name: "K.R. Mangalam University",
+    alternateName: "KRMU",
+    url: "https://www.krmangalam.edu.in",
+    logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
+    award: "NAAC 'A' Grade",
+    numberOfEmployees: {
+      name: "Faculty",
+      value: 700,
+    },
+    amenityFeature: [
+      {
+        name: "Campus Area",
+        value: "35+ acres",
+      },
+      {
+        name: "Total Students",
+        value: "12000+",
+      },
+      {
+        name: "Recruiting Companies",
+        value: "800+",
+      },
+      {
+        name: "Highest Package",
+        value: "56.6 LPA",
+      },
+    ],
+    sameAs: [
+      "https://www.facebook.com/krmuniv",
+      "https://www.instagram.com/krmuniv",
+      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+      "https://in.linkedin.com/school/krmuniv",
+    ],
+  });
+
+
+
   return (
     <>
+      {schoolSchema && (
+        <Script
+          id="school-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: schoolSchema,
+          }}
+        />
+      )}
+
       <Script
-        id="website-schema"
+        id="college-university-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: schoolSchema }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(collegeUniversitySchema),
+        }}
       />
       <SchoolHero
         herobanner={school?.schoolherobanner}
