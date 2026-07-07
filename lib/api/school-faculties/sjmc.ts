@@ -99,7 +99,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 10763,
     acf: {
-      "staff-qualification": "Ph.D",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant  Professor",
       schools: [1009],
     },
@@ -114,7 +114,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 10763,
     acf: {
-      "staff-qualification": "Ph.D (Pursuing)",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant  Professor",
       schools: [1009],
     },
