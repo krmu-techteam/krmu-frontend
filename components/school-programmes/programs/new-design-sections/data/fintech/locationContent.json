@@ -1,0 +1,24 @@
+{
+  "location": {
+    "badge": "LOCATION",
+    "title": "On campus in Gurugram – India's corporate, consulting and start-up corridor.",
+    "description": "Twenty minutes from Cyber City, within easy reach of the firms students intern with, are hired by, or build alongside.",
+    "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1587_4347e56c65.jpg",
+    "contactInfo": [
+      {
+        "id": "call",
+        "icon": "Phone",
+        "label": "Call",
+        "value": "+91 93114 11717",
+        "link": "tel:+919311411717"
+      },
+      {
+        "id": "address",
+        "icon": "MapPin",
+        "label": "Address",
+        "value": "K.R. Mangalam University, Sohna-Gurgaon Road, Sohna, Gurugram, Haryana 122103",
+        "link": "https://maps.google.com"
+      }
+    ]
+  }
+}

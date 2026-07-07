@@ -1,0 +1,190 @@
+{
+  "careerGoal": {
+    "badge": "CURRICULUM AND SYLLABUS",
+    "title": "A well-planned curriculum designed from scratch; Mapped to real job descriptions. ",
+    "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1558_c43e07abdb.jpg",
+    "alt": "Cohort of MBA Fintech students walking on the KRMU campus steps",
+    "semesters": [
+      {
+        "id": "semester1",
+        "tabLabel": "Semester 1",
+        "courses": [
+          {
+            "title": "Managerial Economics",
+            "desc": "How do you use economic reasoning – about prices, demand, competition, and policy – to make sharper business decisions?",
+            "linkText": "Read More",
+            "details": [
+              "How do you tell whether a price hike will earn more revenue, or lose customers faster than the margin grows?",
+              "How do you tell which of your costs will move with volume and which will not, and price accordingly?",
+              "How do you decide what to make in-house and what to outsource, using cost-and-control logic rather than gut?",
+              "How do you read currency movement and tell whether it helps or hurts your business, and by how much?",
+              "How do you compete in a market where the marginal cost has dropped close to zero, like power at the wholesale level, content, or digital services?"
+            ]
+          },
+          {
+            "title": "Business Analytics and Data Visualization",
+            "desc": "How do you go from a vague business problem to a decision-ready insight that a senior manager can actually act on?",
+            "linkText": "Read More",
+            "details": [
+              "How do you turn a vague business concern ('sales are down', 'customers are unhappy') into a clear question with measurable variables?",
+              "How do you turn messy operational data (CRM dumps, ERP exports, Excel files from three departments) into something you can actually analyse?",
+              "How do you decide the level of detail to hold the data at – every transaction, daily totals, or monthly summaries?",
+              "How do you tell whether two variables are causally related, correlated, or just moving together by coincidence?",
+              "How do you read a dataset and spot the trend, the anomaly, and the lurking outlier in under thirty minutes?",
+              "How do you build a dashboard a senior manager actually reads, instead of one that looks impressive and gets ignored?"
+            ]
+          },
+          {
+            "title": "Management Theory and Practice",
+            "desc": "How do you build the personal philosophy, the ethical frame, and the judgement to lead well when there is no rulebook?",
+            "linkText": "Read More",
+            "details": [
+              "How do you tell whether a decision is ethical when 'the policy' does not cover the situation?",
+              "How do you build a personal framework for hard choices that holds up under pressure, against incentive, and over time?",
+              "How do you decide what to spend your life on, and let that choice shape the work you say yes to?",
+              "How do you read a company's actual culture from its hiring, its processes, and its structure, not from what HR says it is?",
+              "How do you turn an abstract vision into the daily decisions that actually create or destroy that culture?"
+            ]
+          },
+          {
+            "title": "Organizational Behaviour",
+            "desc": "How do you read people, motivate teams, and shape workplace culture, including when you are not yet the boss?",
+            "linkText": "Read More",
+            "details": [
+              "How do you tell what genuinely motivates you, and keep doing the work that gives you that?",
+              "How do you give and receive feedback without it becoming about ego, defensiveness, or politics?",
+              "How do you motivate a team member who is checking out, without resorting to threats or hollow pep talks?",
+              "How do you build a team that actually performs, rather than one that just plays nice in meetings?",
+              "How do you handle a conflict on your team that is starting to leak into the work?",
+              "How do you get a cross-functional project done when you have no formal authority over any of the people involved?"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "semester2",
+        "tabLabel": "Semester 2",
+        "courses": [
+          {
+            "title": "Sales & Distribution Management",
+            "desc": "How do you build, run, and improve a sales and distribution engine that hits the number without breaking the channel?",
+            "linkText": "Read More",
+            "details": [
+              "How do you set sales targets that stretch the team without setting them up to fail?",
+              "How do you sell into a large account where the buying decision involves five or more people across departments?",
+              "How do you set up a distribution network in India given the realities of GT, MT, and e-commerce living side by side?",
+              "How do you choose, deploy, and actually use a CRM so that it helps the team rather than burdening them?"
+            ]
+          },
+          {
+            "title": "Managerial Finance",
+            "desc": "How do you make and defend capital decisions – where to invest, how to fund it, when to return cash – so that the business creates value rather than destroys it?",
+            "linkText": "Read More",
+            "details": [
+              "How do you evaluate whether a capital expenditure project will create or destroy value for the business?",
+              "How do you decide the right mix of debt and equity for a company at a given stage of its life?",
+              "How do you decide whether to return cash to shareholders (dividends, buybacks) or reinvest it?",
+              "How do you manage working capital tightly enough that the business is not asking for cash every quarter?",
+              "How do you stress-test a financial plan against realistic downside scenarios – recession, regulation, a key customer leaving?"
+            ]
+          },
+          {
+            "title": "Human Resource Management",
+            "desc": "How do you find, build, and keep the team that actually does the work – as a line manager who hires them, or as an HR specialist who builds the systems they work in?",
+            "linkText": "Read More",
+            "details": [
+              "How do you interview a candidate so that you actually learn whether they can do the job?",
+              "How do you design a performance review system that drives improvement rather than ritual?",
+              "How do you set a compensation structure that retains your good people without breaking the budget?",
+              "How do you design an organisation – reporting lines, spans of control, decision rights – that supports the strategy?"
+            ]
+          },
+          {
+            "title": "Legal Environment & Corporate Governance",
+            "desc": "How do you make business decisions that stay inside the legal and governance lines – without becoming the manager who needs a lawyer for every small choice?",
+            "linkText": "Read More",
+            "details": [
+              "How do you read a commercial contract well enough to know what you are committing your company to?",
+              "How do you tell whether a hiring, firing, or HR decision is legally safe in the Indian context?",
+              "How do you stay on the right side of competition law in pricing, partnerships, and market conduct?",
+              "How do you protect your company's intellectual property, and respect someone else's?",
+              "How do you stay compliant with SEBI, GST, and labour codes without burying your team in paperwork?"
+            ]
+          },
+          {
+            "title": "Entrepreneurship & Innovation",
+            "desc": "How do you turn an idea into a business – yours or your employer's – that actually works in the market?",
+            "linkText": "Read More",
+            "details": [
+              "How do you test whether your idea has product-market fit, or whether you have just convinced yourself?",
+              "How do you find your first ten customers without a marketing budget?",
+              "How do you build a founding team where the equity split, the roles, and the trust survive the hard quarters?",
+              "How do you decide whether to bootstrap, raise angel money, or raise institutional capital?",
+              "How do you price your product when there is no comparable in the market?"
+            ]
+          },
+          {
+            "title": "Field Challenge Studio",
+            "desc": "How do you take a real problem – yours, your client's, or your country's – and work it through a disciplined process into a recommendation someone can act on?",
+            "linkText": "Read More",
+            "details": [
+              "How do you turn a vague problem statement into a sharp question you can investigate?",
+              "How do you conduct on-ground interviews with people who do not naturally trust outsiders?",
+              "How do you observe behaviour, not just listen to claims — and spot the gap between the two?",
+              "How do you bring management frameworks to a solution design without forcing the problem into the framework?",
+              "How do you stress-test a solution against the realities of cost, capability, time, and adoption?"
+            ]
+          },
+          {
+            "title": "Business Research Method",
+            "desc": "How do you talk to customers, users, and stakeholders so you actually learn what is true – not what they want you to hear, and not what you want to believe?",
+            "linkText": "Read More",
+            "details": [
+              "How do you get past 'would you use this?' and 'do you like this idea?' – the two most useless questions in business?",
+              "How do you ask about problems people actually have, instead of pitching solutions you already believe in?",
+              "How do you decide whom to talk to – and know when you have narrowed the segment enough that the signal becomes sharp?",
+              "How do you tell whether someone is being polite, or whether they really mean to take the action they just said they would?",
+              "How do you synthesise a series of conversations into something you can actually act on – decisions, not just notes?"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "semester3",
+        "tabLabel": "Semester 3",
+        "courses": [
+          {
+            "title": "AI and ML Transforming Finance  "
+          },
+          {
+            "title": "Digital Payments Evolution and Tools  "
+          },
+          {
+            "title": "Financial Analytics and Risk Assessment  "
+          },
+          {
+            "title": "Blockchain for Decentralised Finance  "
+          }
+        ]
+      },
+      {
+        "id": "semester4",
+        "tabLabel": "Semester 4",
+        "courses": [
+          {
+            "title": "Fintech in Wealth Management "
+          },
+          {
+            "title": "Investment Analysis & Portfolio Management "
+          },
+          {
+            "title": "AI for Financial Services "
+          },
+          {
+            "title": "Financial Markets & Institutions"
+          }
+        ]
+      }
+    ]
+  }
+}
