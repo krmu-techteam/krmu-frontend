@@ -80,23 +80,23 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/bba-2026/prominent/accenture.png",
+    imgUrl: "/landingpage/bba-2026/test/accenture.png",
     alt: "accenture Logo",
   },
   {
-    imgUrl: "/landingpage/bba-2026/prominent/amazon.png",
+    imgUrl: "/landingpage/bba-2026/test/amazon.png",
     alt: "amazon Logo",
   },
   {
-    imgUrl: "/landingpage/bba-2026/prominent/deloitte.png",
+    imgUrl: "/landingpage/bba-2026/test/deloitte.png",
     alt: "deloitte Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/bba-2026/recruiters/KPMG_blue_logo.png",
+    imgUrl: "/landingpage/bba-2026/test/kpmg.png",
     alt: "kpmg Logo",
   },
   {
-    imgUrl: "/landingpage/bba-2026/prominent/pepsico.png",
+    imgUrl: "/landingpage/bba-2026/test/pepsico.png",
     alt: "pepsico Logo",
   },
 ];

@@ -62,7 +62,7 @@ export default function ProgrammeTabs() {
                 <button
                   key={school.id}
                   onClick={() => handleTabClick(index)}
-                  className={`rounded-md px-5 py-3 text-left font-roboto-condensed text-lg font-semibold transition-all duration-300 ${
+                  className={`rounded-md px-5 py-3 text-left font-roboto-condensed text-lg font-semibold transition-all duration-300 cursor-pointer ${
                     active === index
                       ? "bg-[#E31B23] text-white shadow-lg"
                       : "text-white hover:bg-white/10"

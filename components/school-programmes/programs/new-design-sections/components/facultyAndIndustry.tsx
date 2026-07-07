@@ -8,6 +8,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
@@ -48,7 +50,7 @@ const FacultyCard = ({
   onOpenProfile: () => void;
 }) => {
   return (
-    <div className="relative group flex flex-col min-h-[374px] w-full max-w-[280px] mx-auto border border-[#D0C6B1]/30 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer rounded-[5px]">
+    <div className="relative group flex flex-col h-full w-full max-w-[280px] mx-auto border border-[#D0C6B1]/30 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer rounded-[5px]">
       {linkedin && (
         <Link href={linkedin}>
           <div className="absolute w-13 h-13 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/8e9127f3a23f0410f6e38ad1af59850e5bb1f1df_9de1bd0ecf.png)] bg-cover bg-center right-1 top-1 z-99 " />
@@ -58,7 +60,7 @@ const FacultyCard = ({
       {/* Top Portrait Image Container */}
       <div
         onClick={onOpenProfile}
-        className="relative w-full min-h-[200px] overflow-hidden bg-white"
+        className="relative w-full min-h-[194px] xl:min-h-[200px] overflow-hidden bg-white"
       >
         <Image
           src={imgUrl}
@@ -262,12 +264,6 @@ const FacultyAndIndustry = ({ slug, dataContent }: Props) => {
       {cards.length > 0 && (
         <div className="w-full  bg-[#FDF7EB]">
           <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
-            <h3
-              className={`${fraunces.className} text-[28px] sm:text-[38px] font-bold text-[#0F2A4D] mb-8`}
-            >
-              Faculty
-            </h3>
-
             {/* Carousel Slider */}
             <Carousel
               setApi={setApi}
@@ -282,6 +278,24 @@ const FacultyAndIndustry = ({ slug, dataContent }: Props) => {
               ]}
               className="w-full mb-10"
             >
+              <div className="flex items-center justify-between mb-8">
+                <h3
+                  className={`${fraunces.className} text-[28px] sm:text-[38px] font-bold text-[#0F2A4D]`}
+                >
+                  Faculty
+                </h3>
+                <div className="flex items-center gap-4 mx-4">
+                  <CarouselPrevious
+                    variant="ghost"
+                    className="static translate-y-0 w-10 h-10 md:w-10 md:h-10 rounded-full bg-[#F7F0E0] text-[#012D52] hover:bg-[#012D52] hover:text-white border border-[#BCB093]/40 transition-all duration-300 flex items-center justify-center cursor"
+                  />
+                  <CarouselNext
+                    variant="ghost"
+                    className="static translate-y-0 w-10 h-10 md:w-10 md:h-10 rounded-full bg-[#F7F0E0] text-[#012D52] hover:bg-[#012D52] hover:text-white border border-[#BCB093]/40 transition-all duration-300 flex items-center justify-center"
+                  />
+                </div>
+              </div>
+
               <CarouselContent className="-ml-6">
                 {cards.map((card, idx) => (
                   <CarouselItem

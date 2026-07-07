@@ -54,7 +54,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
   // Kaushal Kumar
   {
     id: 10825,
-    slug: "dr-kaushal-kumar-2",
+    slug: "dr-kaushal-kumar",
     title: {
       rendered: "Dr. Kaushal Kumar",
     },
@@ -65,12 +65,12 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Kaushal-Kumar.jpeg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/kaushalkumar.jpeg",
   },
   // Dr Meenu
   {
     id: 10858,
-    slug: "dr-meenu-vijarania-2",
+    slug: "dr-meenu-vijarania",
     title: {
       rendered: "Dr. Meenu Vijarania",
     },
@@ -81,12 +81,12 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Meenu-Vijarania-3.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Meenu-Vijarania.webp",
   },
   // Dr Swati
   {
     id: 10859,
-    slug: "dr-swati-2",
+    slug: "dr-swati",
     title: {
       rendered: "Dr. Swati",
     },
@@ -97,7 +97,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Swati.jpeg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/drswati.jpeg",
   },
   // Anshu
   {

@@ -33,7 +33,7 @@ const Stats = () => {
         </div>
         <div className="w-5/12 text-white relative hidden xl:block">
           <Image
-            src="/international-admission/girl-2.png"
+            src="/international-admission/international-girl-2.png"
             width={580}
             height={580}
             alt="International student studying at K.R. Mangalam University campus"

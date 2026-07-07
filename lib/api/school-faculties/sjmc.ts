@@ -14,7 +14,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Amit-Chawla.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/MBA-Facultiy.png",
   },
   {
     id: 115349,
@@ -29,7 +29,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr-Manav-Sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/SOMCE.png",
   },
   // {
   //   id: 1028,
