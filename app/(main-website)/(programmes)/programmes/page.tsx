@@ -92,7 +92,7 @@ const page = async () => {
       <ProgrammesSearch />
       <ProgrammesAlumni alumniData={programmeAlumnis} />
       <ProgrammesOurLocation />
-      {/* <ProgrammesConnectWithUs /> */}
+      <ProgrammesConnectWithUs />
     </>
   );
 };
