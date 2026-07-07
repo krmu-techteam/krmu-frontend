@@ -125,49 +125,28 @@ const NewProgrammeScope = async ({
     <section
       className={`${inter.className} bg-[linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),linear-gradient(180deg,#002958_0%,#001732_100%)] text-white pt-14 pb-[120px]`}
     >
-      <div className="max-w-[1500px] mx-auto px-8 ">
+      <div className="flex flex-col max-w-[1500px] mx-auto px-8 ">
         {/* Top Section: Image (Left) & Heading/Content (Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-14 gap-8 lg:gap-14 items-center">
+        <div className="flex flex-col md:flex-row lg:flex-row  gap-8 lg:gap-12 items-center">
           {/* Left Column: Image */}
-          <div className="lg:col-span-7 w-full">
-            <div className="w-full  relative rounded-[24px] overflow-hidden shadow-2xl border border-blue-900/30">
-              <Image
-                src={`https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_635_0916216e9a.jpg`}
-                width={1024}
-                height={1024}
-                className="object-cover"
-                alt="B.Tech. CSE Programme Scope"
-              />
-            </div>
+
+          <div className="max-w-[45%]   relative rounded-[24px] overflow-hidden shadow-2xl border border-blue-900/30">
+            <Image
+              src={`https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_635_0916216e9a.jpg`}
+              width={1024}
+              height={1024}
+              className="object-cover"
+              alt="B.Tech. CSE Programme Scope"
+            />
           </div>
 
           {/* Right Column: Heading & Content */}
-          <div className="lg:col-span-7 max-w-[680px] flex flex-col justify-center">
+          <div className="  flex flex-col max-w-[51%] justify-center">
             <h3 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[35px] font-bold  mb-6 tracking-tight text-white text-left">
               B.Tech. CSE <br /> Programme Scope
             </h3>
 
-            <div className="space-y-4 text-[15px] sm:text-[16px] lg:text-[18px] font-light  text-white text-justify opacity-[90%]">
-              {/* {paragraphs.length > 0 ? (
-                paragraphs.map((para, i) => <p key={i}>{para}</p>)
-              ) : (
-                <>
-                  <p>
-                    The B.Tech. CSE programme prepares students to pursue
-                    careers that require innovative problem-solving through
-                    computational techniques. Students can build their future in
-                    some of the fastest-growing careers in technology, such as
-                    software engineering, artificial intelligence, cloud
-                    computing, data science, cybersecurity, robotics and more.
-                  </p>
-                  <p>
-                    In addition, students can opt for advanced or specialised
-                    studies at the postgraduate and doctoral levels for teaching
-                    and research-based careers in India and abroad, and even
-                    start their own ventures.
-                  </p>
-                </>
-              )} */}
+            <div className="space-y-4 text-[15px] sm:text-[16px] lg:text-[18px] font-light  text-white text-justify tracking-wide leading-6 opacity-[90%]">
               <p>
                 The B.Tech. CSE programme prepares students to pursue careers
                 that require innovative problem-solving through computational
@@ -216,9 +195,9 @@ const NewProgrammeScope = async ({
         </div>
 
         {/* Bottom Section: Skills Circle (Left) & Skills Checklist (Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center pl-12 mt-20 md:mt-24">
+        <div className="flex gap-12  items-center pl-8 mt-20 md:mt-24">
           {/* Left Column: Skills Circle Badge */}
-          <div className="lg:col-span-4 min-w-[455px] flex justify-center items-center">
+          <div className=" min-w-[455px] flex justify-center items-center">
             <div className="relative rounded-full w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:min-w-[455px] md:h-[455px] flex items-center justify-center ">
               {/* Outer Dashed Ring with slow rotating animation */}
               <svg
@@ -259,13 +238,13 @@ const NewProgrammeScope = async ({
               <div className="absolute inset-[18px] bg-[linear-gradient(180deg,#002550_0%,#000D1D_100%)] rounded-full" />
 
               {/* Gold Compass Marker Pointing NE */}
-              <div className="absolute w-[25px] h-[25px] z-9 top-14 right-[16%]">
+              <div className="absolute w-[28px] h-[28px] z-9 top-13 right-[16%]">
                 <Image
                   src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Polygon_2_829da6039f.png"
                   alt=""
                   width={1024}
                   height={1024}
-                  className="object-cover w-full h-full"
+                  className="object-fit w-full h-full"
                 />
               </div>
 
@@ -295,7 +274,7 @@ const NewProgrammeScope = async ({
           </div>
 
           {/* Right Column: Skills Checklist */}
-          <div className="lg:col-span-8 flex flex-col">
+          <div className=" flex flex-col max-w-[780px]">
             <div className="  ">
               {skillsList.map((item) => (
                 <div key={item.id} className="flex flex-col text-left">
@@ -303,7 +282,7 @@ const NewProgrammeScope = async ({
                     <div className="flex-shrink-0 w-[44px] h-[44px] rounded bg-[#00244E]  flex items-center justify-center text-[#0073FF] shadow-md">
                       <Check className="w-6 h-6 text-[#0073FF] stroke-[2]" />
                     </div>
-                    <p className="max-w-[755px] text-[14px] sm:text-[15px] md:text-[18px] font-light text-white leading-[120%] opacity-[80%]">
+                    <p className=" text-[14px] sm:text-[15px] md:text-[18px] font-light text-white leading-[120%] opacity-[80%]">
                       {item.content}
                     </p>
                   </div>
