@@ -176,7 +176,7 @@ const page = async () => {
         tocbtn={admTOC?.tocbtn}
       />
       <AdmissionLocation />
-      <ContactWithUs />
+      {/* <ContactWithUs /> */}
       {/* 
 
 
