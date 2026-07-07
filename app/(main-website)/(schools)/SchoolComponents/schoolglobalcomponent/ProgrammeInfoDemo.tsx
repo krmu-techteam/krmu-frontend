@@ -34,6 +34,9 @@ const ProgrammeInfoDemo = ({ catName, title, slug }: Props) => {
   const [activeProgramId, setActiveProgramId] = useState<number | null>(null);
   const [hoverProgramId, setHoverProgramId] = useState<number | null>(null);
 
+  // ✅ NEW: track whether all degrees have finished loading once
+  const [allLoaded, setAllLoaded] = useState(false);
+
   const degreeTabs = [
     { label: "UG", value: "Undergraduate Programmes", tabValue: "ug" },
     { label: "PG", value: "Postgraduate Programmes", tabValue: "pg" },
@@ -42,31 +45,29 @@ const ProgrammeInfoDemo = ({ catName, title, slug }: Props) => {
   ];
 
   const sectionRef = useRef<HTMLDivElement>(null);
-  // Fetch programmes
+
+  // Fetch programmes for a single degree, returns the fetched data
   const fetchProg = useCallback(
     async (deg: string) => {
       try {
         let data: ProgrammeCardData[] = [];
 
         if (deg === "Doctoral Programmes") {
-          // ✅ Fetch Ph.D. data (returns PhdProgrammeCardData[])
           const phdData = await getSchoolProgrammePhdDataDegree(
             "Doctoral Programme",
             catName,
           );
 
-          // ✅ Map Ph.D. data to ProgrammeCardData structure
           data =
             phdData?.map((item) => ({
               id: item.id,
               documentId: item.documentId,
               title: item.heading,
-              programmeslug: item?.phdslug, // use category slug or add your own if exists
+              programmeslug: item?.phdslug,
               highlightitle: "",
               criteria: item.criteria,
             })) || [];
         } else {
-          // ✅ Fetch UG/PG/Diploma data
           const programmeData = await getSchoolProgrammeInfoByDegree(
             deg,
             catName,
@@ -74,26 +75,46 @@ const ProgrammeInfoDemo = ({ catName, title, slug }: Props) => {
           data = programmeData || [];
         }
 
-        // ✅ Update state
         setPrograms((prev) => ({ ...prev, [deg]: data }));
-        if (data.length > 0) {
-          setActiveProgramId(data[0].id);
-        }
+        return data;
       } catch (err) {
         console.error("Failed to fetch programmes:", err);
+        setPrograms((prev) => ({ ...prev, [deg]: [] }));
+        return [];
       }
     },
     [catName],
   );
 
-  // On mount / degree change
+  // ✅ NEW: fetch ALL degree tabs up front so we know which ones have data
   useEffect(() => {
-    if (!programs[activeDegree]) {
-      fetchProg(activeDegree);
-    } else if (programs[activeDegree].length > 0 && !activeProgramId) {
-      setActiveProgramId(programs[activeDegree][0].id);
-    }
-  }, [fetchProg, activeDegree, programs, activeProgramId]);
+    let cancelled = false;
+
+    const loadAll = async () => {
+      const results = await Promise.all(
+        degreeTabs.map((deg) => fetchProg(deg.value)),
+      );
+
+      if (cancelled) return;
+
+      // pick the first degree that actually has programmes as active
+      const firstAvailableIndex = results.findIndex((data) => data.length > 0);
+      if (firstAvailableIndex !== -1) {
+        const firstAvailableDeg = degreeTabs[firstAvailableIndex];
+        setActiveDegree(firstAvailableDeg.value);
+        setActiveProgramId(results[firstAvailableIndex][0].id);
+      }
+
+      setAllLoaded(true);
+    };
+
+    loadAll();
+
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [catName]);
 
   const handleDegreeChange = (deg: string) => {
     setActiveDegree(deg);
@@ -134,60 +155,67 @@ const ProgrammeInfoDemo = ({ catName, title, slug }: Props) => {
     "b-tech-cse-robotics-ai",
   ];
 
+  // ✅ NEW: only tabs that actually have programmes
+  const visibleDegreeTabs = degreeTabs.filter(
+    (deg) => (programs[deg.value]?.length ?? 0) > 0,
+  );
+
   return (
     <>
       <div className="scroll-mt-[90px]" ref={sectionRef}>
-        {/* LEFT SIDE */}
-        {/* <div className="w-full xl:w-1/2 bg-[url(/schools/prog-bg.webp)] bg-center bg-cover bg-no-repeat p-2.5 sm:p-5 z-10 rounded-3xl"> */}
         <div className="w-full  xl:p-5 rounded-3xl">
-          <Tabs
-            defaultValue="ug"
-            value={degreeTabs.find((d) => d.value === activeDegree)?.tabValue}
-          >
-            {/* TAB HEADERS */}
-            <TabsList className="w-full grid grid-cols-2 sm:flex flex-wrap gap-2 sm:gap-0 justify-center h-auto px-1 sm:px-2.5 mb-2 sm:mb-5  sticky top-[44px] md:top-[44px] xl:top-[76px] z-30 after:content-[''] after:absolute left-0 after:-bottom-[5px] after:w-full after:h-[6px] after:bg-gradient-to-r after:from-white after:via-neutral-500 after:to-white after:opacity-30 bg-white rounded-none">
-              {degreeTabs.map((deg) => (
-                <TabsTrigger
+          {!allLoaded ? (
+            // ✅ NEW: single loader while we check all degrees
+            <div className="flex flex-col items-center justify-center py-14">
+              <div className="relative h-14 w-14">
+                <div className="absolute inset-0 rounded-full border-4 border-gray-200"></div>
+                <div className="absolute inset-0 rounded-full border-4 border-black border-t-transparent animate-spin"></div>
+              </div>
+              <p className="mt-4 text-sm font-medium text-gray-700 animate-pulse">
+                Loading...
+              </p>
+            </div>
+          ) : visibleDegreeTabs.length === 0 ? (
+            <p className="text-black p-5 text-center">
+              No programmes available.
+            </p>
+          ) : (
+            <Tabs
+              defaultValue={visibleDegreeTabs[0]?.tabValue}
+              value={
+                visibleDegreeTabs.find((d) => d.value === activeDegree)
+                  ?.tabValue
+              }
+            >
+              {/* TAB HEADERS — only degrees that have data */}
+              <TabsList className="w-full grid grid-cols-2 sm:flex flex-wrap gap-2 sm:gap-0 justify-center h-auto px-1 sm:px-2.5 mb-2 sm:mb-5  sticky top-[44px] md:top-[44px] xl:top-[76px] z-30 after:content-[''] after:absolute left-0 after:-bottom-[5px] after:w-full after:h-[6px] after:bg-gradient-to-r after:from-white after:via-neutral-500 after:to-white after:opacity-30 bg-white rounded-none">
+                {visibleDegreeTabs.map((deg) => (
+                  <TabsTrigger
+                    key={deg.tabValue}
+                    value={deg.tabValue}
+                    onClick={() => {
+                      handleDegreeChange(deg.value);
+
+                      sectionRef.current?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }}
+                    className="flex-none mx-2.5 relative py-2 px-10 rounded-xl text-xl cursor-pointer data-[state=active]:shadow-none font-medium text-black data-[state=active]:font-bold data-[state=active]:after:content-[''] data-[state=active]:after:absolute data-[state=active]:after:-bottom-[9px] data-[state=active]:after:left-0 data-[state=active]:after:w-full data-[state=active]:after:h-1 sm:data-[state=active]:after:h-1.5 data-[state=active]:after:bg-[#001732]"
+                  >
+                    {deg.label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+
+              {/* TAB CONTENTS — only degrees that have data */}
+              {visibleDegreeTabs.map((deg) => (
+                <TabsContent
                   key={deg.tabValue}
                   value={deg.tabValue}
-                  onClick={() => {
-                    handleDegreeChange(deg.value);
-
-                    sectionRef.current?.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                  }}
-                  className="flex-none mx-2.5 relative py-2 px-10 rounded-xl text-xl cursor-pointer data-[state=active]:shadow-none font-medium text-black data-[state=active]:font-bold data-[state=active]:after:content-[''] data-[state=active]:after:absolute data-[state=active]:after:-bottom-[9px] data-[state=active]:after:left-0 data-[state=active]:after:w-full data-[state=active]:after:h-1 sm:data-[state=active]:after:h-1.5 data-[state=active]:after:bg-[#001732]"
+                  className={`${programs[deg.value]?.length > 3 ? "grid md:grid-cols-2 xl:grid-cols-4 gap-5" : "flex flex-col sm:flex-row flex-wrap lg:grid grid-cols-2 xl:flex justify-center gap-5"} px-4 `}
                 >
-                  {deg.label}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-
-            {/* TAB CONTENTS */}
-            {degreeTabs.map((deg) => (
-              <TabsContent
-                key={deg.tabValue}
-                value={deg.tabValue}
-                className={`${programs[deg.value]?.length > 3 ? "grid md:grid-cols-2 xl:grid-cols-4 gap-5" : "flex flex-col sm:flex-row flex-wrap lg:grid grid-cols-2 xl:flex justify-center gap-5"} px-4 `}
-              >
-                {programs[deg.value] === undefined ? (
-                  // LOADING STATE
-                  <div className="flex flex-col items-center justify-center py-14">
-                    {/* Loader */}
-                    <div className="relative h-14 w-14">
-                      <div className="absolute inset-0 rounded-full border-4 border-gray-200"></div>
-                      <div className="absolute inset-0 rounded-full border-4 border-black border-t-transparent animate-spin"></div>
-                    </div>
-
-                    {/* Text */}
-                    <p className="mt-4 text-sm font-medium text-gray-700 animate-pulse">
-                      Loading...
-                    </p>
-                  </div>
-                ) : programs[deg.value]?.length ? (
-                  programs[deg.value].map((prog, index) => {
+                  {programs[deg.value].map((prog, index) => {
                     const isActive =
                       hoverProgramId !== null
                         ? hoverProgramId === prog.id
@@ -210,16 +238,12 @@ const ProgrammeInfoDemo = ({ catName, title, slug }: Props) => {
                         progNewLine={progNewLine}
                       />
                     );
-                  })
-                ) : (
-                  <p className="text-black p-5">No programmes available.</p>
-                )}
-              </TabsContent>
-            ))}
-          </Tabs>
+                  })}
+                </TabsContent>
+              ))}
+            </Tabs>
+          )}
         </div>
-
-        {/* RIGHT SIDE */}
       </div>
       <div
         className={`fixed  top-0 left-0 w-full z-50 h-full bg-black/50 ${show ? "block" : "hidden"}`}

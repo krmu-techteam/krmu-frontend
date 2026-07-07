@@ -56,7 +56,7 @@ export default function InternationalHeader() {
             <ScrollButton
               targetId="apply-section"
               highlightClass="flash-border"
-              btnClass="rounded-md bg-[#E31B23] px-6 py-2 text-sm font-semibold text-white transition hover:bg-[#c6151d]"
+              btnClass="rounded-md bg-[#E31B23] px-6 py-2 text-sm font-semibold text-white transition hover:bg-[#c6151d] cursor-pointer"
             >
               Apply Now
             </ScrollButton>
@@ -93,7 +93,7 @@ export default function InternationalHeader() {
           <ScrollButton
             targetId="apply-section"
             highlightClass="flash-border"
-            btnClass="mt-3 w-full rounded-md bg-[#E31B23] p-3 font-semibold text-white"
+            btnClass="mt-3 w-full rounded-md bg-[#E31B23] p-3 font-semibold text-white cursor-pointer"
           >
             Apply Now
           </ScrollButton>

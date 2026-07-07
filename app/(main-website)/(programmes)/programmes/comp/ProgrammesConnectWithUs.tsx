@@ -11,7 +11,7 @@ const ProgrammesConnectWithUs = () => {
         <div className="flex flex-wrap md:flex-nowrap items-center gap-6">
           <div className="w-full md:w-3/12">
             <Link
-              href="tel:9311411717"
+              href="tel:8800697010"
               className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-sm flex items-center break-all"
             >
               <div>
@@ -21,7 +21,7 @@ const ProgrammesConnectWithUs = () => {
               </div>
               <span className=" p-2.5 flex flex-wrap items-center lg:gap-2.5 text-sm font-medium text-white">
                 <span className="">Call Us:</span>
-                <span>9311411717</span>
+                <span>8800697010</span>
               </span>
             </Link>
           </div>
