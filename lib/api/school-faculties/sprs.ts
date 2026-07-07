@@ -132,7 +132,7 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     acf: {
       "staff-qualification": "M.P.T.",
       staff_designation: "Assistant  Professor",
-      schools: [],
+      schools: [1098],
     },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Mansi-Dewan.png",
@@ -147,11 +147,10 @@ export const sprsFaculties: SchoolFacultiesType[] = [
     acf: {
       "staff-qualification": "M.P.T.",
       staff_designation: "Assistant Professor",
-      schools: [],
+      schools: [1098],
     },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/07/Dr.-Kangana-Juneja-kansal.png",
-    // "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Kangana-Juneja-Kansal.png",
   },
   {
     id: 115540,

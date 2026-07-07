@@ -29,7 +29,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr-Manav-Sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/SOMCE.png",
   },
   // {
   //   id: 1028,
@@ -99,7 +99,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 10763,
     acf: {
-      "staff-qualification": "Ph.D (Pursuing)",
+      "staff-qualification": "Ph.D",
       staff_designation: "Assistant  Professor",
       schools: [1009],
     },

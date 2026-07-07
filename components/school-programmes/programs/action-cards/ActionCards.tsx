@@ -67,7 +67,7 @@ export const ActionCards = ({ schoolCat }: Props) => {
       description:
         "If you would like to speak to an admission counselor please connect with us.",
       buttonText: "Talk Now",
-      link: "tel:9311411717",
+      link: "tel:8800697010",
       icon: (
         <Phone className="w-4 h-4 ml-2 transition-transform duration-300 group-hover/btn:rotate-12" />
       ),
