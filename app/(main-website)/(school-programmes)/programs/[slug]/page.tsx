@@ -86,6 +86,7 @@ import {
   getIBMFacultyAndIndustryContent,
   getIBMGoalContent,
 } from "@/components/school-programmes/programs/new-design-sections/lib/getContent";
+import { ProgrammeOverview } from "../../school-programmes-component/ProgrammeOverview";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -382,12 +383,15 @@ const page = async ({ params }: Props) => {
               }
             />
           ) : slug === "b-tech-cse" ? (
-            <NewProgrammeScope
-              scopeData={programmeScopeSection}
-              heroSection={heroSection}
-              allowedFormSlugs={allowedFormSlugs}
-              slug={slug}
-            />
+            <>
+              <ProgrammeOverview />
+              <NewProgrammeScope
+                scopeData={programmeScopeSection}
+                heroSection={heroSection}
+                allowedFormSlugs={allowedFormSlugs}
+                slug={slug}
+              />
+            </>
           ) : (
             <ProgrammeScope
               scopeData={programmeScopeSection}
