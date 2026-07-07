@@ -60,7 +60,7 @@ const ThreeIndustryTracks = () => {
         </div>
 
         {/* Footer Contact Line */}
-        <div
+        {/* <div
           className={`${poppins.className} text-xs sm:text-[12px] text-white mt-2`}
         >
           Prefer WhatsApp or a call?{" "}
@@ -71,7 +71,7 @@ const ThreeIndustryTracks = () => {
             +91 93114 11717
           </Link>{" "}
           · Response within 24 hours
-        </div>
+        </div> */}
       </div>
     </section>
   );
