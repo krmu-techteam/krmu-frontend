@@ -1,0 +1,38 @@
+{
+  "commonQuestion": {
+    "badge": "COMMON QUESTIONS",
+    "title": "What you might want to know.",
+    "faqs": [
+      {
+        "id": 1,
+        "question": "What is the programme fee, and what scholarships are available?",
+        "answer": "₹3,85,000 per year, subject to final approval. Scholarships of up to 100% are available for academic merit, sports achievement and other categories – assessed as part of your application. Education loans from six partner lenders can cover up to 100% of the fee."
+      },
+      {
+        "id": 2,
+        "question": "Am I eligible? Do I need work experience?",
+        "answer": "You need a bachelor's degree in any discipline from a recognised university. Work experience is not required – the cohort deliberately mixes freshers and experienced candidates."
+      },
+      {
+        "id": 3,
+        "question": "How is this different from other private MBA programmes in the NCR?",
+        "answer": "Most MBA programmes are theory-first, with industry exposure added on top. This programme inverts that: industry leads, theory follows. Year Two is a specialisation co-delivered with IBM, EY or IIDE, and you graduate with a portfolio of real work as the primary evidence of what you can do."
+      },
+      {
+        "id": 4,
+        "question": "What about placements?",
+        "answer": "KRMU's placement cell brings 800+ recruiters to campus, with a highest package of ₹56.6 LPA. Within the MBA, the summer internship, the Year-Two capstone and the PPO pathway are designed so your work is in front of employers well before placement season – with mentorship and structured exposure to sectors and roles throughout."
+      },
+      {
+        "id": 5,
+        "question": "What kind of internships and projects will I work on?",
+        "answer": "An 8–10 week summer internship under a signed problem brief from a real organisation – a bank, fintech, brand, agency or consulting firm – with weekly reviews and a graded deliverable. In Year Two, a long-term industry engagement with the possibility of a Pre-Placement Offer."
+      },
+      {
+        "id": 6,
+        "question": "Who is this MBA not for?",
+        "answer": "A programme built around active participation, repeated field work and cross-functional projects is not the right fit for someone looking for a credential that can be earned passively. It is built for students prepared to do the work – and it rewards them for it."
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "careerOutcome": {
+    "badge": "CAREER OUTCOMES",
+    "title": "Built for one goal – significantly better career outcomes.",
+    "stats": [
+      {
+        "value": "₹56.6 LPA",
+        "label": "Highest package",
+        "desc": "KRMU placement drives, university-wide.",
+        "icon": "TrendingUp"
+      },
+      {
+        "value": "800+",
+        "label": "Campus recruiters",
+        "desc": "KRMU's university-wide recruiter network.",
+        "icon": "BriefcaseBusiness"
+      },
+      {
+        "value": "PPO",
+        "label": "Pre-Placement Offer pathway",
+        "desc": "Built into the Year-Two capstone engagement.",
+        "icon": "UserRoundCheck"
+      }
+    ],
+    "sectionTwo": {
+      "heading": "Four things a typical MBA doesn't give you.",
+      "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1112_0ac0a22e79.png",
+      "features": [
+        {
+          "title": "Industry Leads, Theory Follows",
+          "desc": "Every flagship course opens and closes with a senior practitioner.",
+          "icon": "LaptopMinimalCheck"
+        },
+        {
+          "title": "A Specialisation With a Name Behind It",
+          "desc": "Year Two co-delivered with IBM, EY or IIDE – live cases, real budgets.",
+          "icon": "Layers"
+        },
+        {
+          "title": "Real Work, From the First Semester",
+          "desc": "Field visits, real financial statements, and an 8–10 week company internship.",
+          "icon": "ListMinus"
+        },
+        {
+          "title": "A Portfolio That Does the Talking",
+          "desc": "Graduate with real deliverables – every CV claim linked to proof.",
+          "icon": "File"
+        }
+      ]
+    }
+  }
+}
