@@ -6,10 +6,9 @@ const SingleImage = () => {
       <Image
         src="/international-admission/black-white-university.webp"
         alt="K.R. Mangalam University campus building"
-        fill
-        className="object-cover"
-        sizes="100vw"
-        priority
+        width={1440}
+        height={1440}
+        className="object-cover w-full h-full"
       />
     </div>
   );
