@@ -1,5 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "PhD Admission Advertisement 2025-26 | KRMU",
+  description:
+    "K.R. Mangalam University PhD admission advertisement for 2025-26. Download eligibility, application details, and official notice here.",
+};
 
 const PHDRegulationCards = () => {
   return (
@@ -23,6 +30,10 @@ const PHDRegulationCards = () => {
               <Link
                 className="hover:text-[#2d7cc1]"
                 href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/5_R_July_Ph_D_Admission_advertisement_Details_O_2025_26_341795b69c.pdf"
+                title="PhD Admission Advertisement 2025-26 | KRMU"
+                aria-label="K.R. Mangalam University PhD admission advertisement for 2025-26. Download eligibility, application details, and official notice here."
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <strong>Odd Semester 2026-27</strong>
               </Link>
