@@ -52,7 +52,7 @@ const FacultyCard = ({
   return (
     <div className="relative group flex flex-col h-full w-full max-w-[280px] mx-auto border border-[#D0C6B1]/30 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer rounded-[5px]">
       {linkedin && (
-        <Link href={linkedin}>
+        <Link href={linkedin} target="_blank">
           <div className="absolute w-13 h-13 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/8e9127f3a23f0410f6e38ad1af59850e5bb1f1df_9de1bd0ecf.png)] bg-cover bg-center right-1 top-1 z-99 " />
         </Link>
       )}
@@ -376,7 +376,7 @@ const FacultyAndIndustry = ({ slug, dataContent }: Props) => {
                     {activeFaculty.name}
 
                     {activeFaculty.linkedin && (
-                      <Link href={activeFaculty.linkedin}>
+                      <Link href={activeFaculty.linkedin} target="_blank">
                         <div className="w-15 h-15 bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/8e9127f3a23f0410f6e38ad1af59850e5bb1f1df_9de1bd0ecf.png)] bg-cover bg-center z-99 " />
                       </Link>
                     )}
