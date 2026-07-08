@@ -51,12 +51,12 @@ const ThreeIndustryTracks = () => {
           </Link>
 
           {/* Secondary CTA */}
-          <Link
+          {/* <Link
             href={`tel:${content.secondaryCta.link}`}
             className={`${poppins.className} border border-[#A4A4A4] bg-[#012D52] hover:bg-white/10 text-white font-medium text-sm sm:text-[16px] px-4 py-2 rounded-[5px] transition-all duration-300 w-full sm:w-auto text-center cursor-pointer`}
           >
             {content.secondaryCta.text}
-          </Link>
+          </Link> */}
         </div>
 
         {/* Footer Contact Line */}
