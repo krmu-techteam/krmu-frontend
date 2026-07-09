@@ -21,7 +21,7 @@ import {
 /** Add the PDF at: public/landingpage/bsc-finance-2026/BSc(Hons) Finance 2026-27.pdf */
 // export const bscFinanceBrochureFileName = "BSc(Hons) Finance 2026-27.pdf";
 export const bscFinanceBrochureFileName = "bsc-hons-finance-2026-27.pdf";
-export const bscFinanceBrochureHref = `/landingpage/bsc-finance-2026/${encodeURIComponent(bscFinanceBrochureFileName)}`;
+export const bscFinanceBrochureHref = `/landingpage/bsc-finance-2026/bsc-hons-finance-2026-27.pdf`;
 
 export const bscFinanceApplyHref = "https://admissions.krmangalam.edu.in/";
 
