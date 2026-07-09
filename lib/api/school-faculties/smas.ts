@@ -410,4 +410,50 @@ export const smasFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Khushboo-Saxena-1.png",
   },
+
+    {
+    id: 115850,
+    slug: "dr-arun-parashar",
+    title: {
+      rendered: "Dr. Arun Parashar",
+    },
+    featured_media: 101428,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor (Selection Grade)",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/Arun-Parashar-SMAS.png",
+  },
+    {
+    id: 115852,
+    slug: "dr-sonia-yadav",
+    title: {
+      rendered: "Dr. Sonia Yadav",
+    },
+    featured_media: 101428,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Associate Professor",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/Dr.-Sonia-Yadav.png",
+  },
+  {
+    id: 115857,
+    slug: "dr-manisha-bhatti",
+    title: {
+      rendered: "Dr. Manisha Bhatti",
+    },
+    featured_media: 101428,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/manisha-bhaati.png",
+  },
 ];

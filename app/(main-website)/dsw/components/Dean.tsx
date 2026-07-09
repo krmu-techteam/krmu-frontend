@@ -19,7 +19,7 @@ const Dean = () => {
           Prof. (Dr.) Shweta A Bansal,  
         </h4>
         <h5 className="text-[26px]">Dean, Department of Student Welfare  </h5>
-        <div>
+        <div className="flex items-baseline gap-5 mt-5">
           <Image
             src="/dsw/quotes.png"
             width={78}
@@ -27,7 +27,7 @@ const Dean = () => {
             alt=""
             className=""
           />
-          <p>
+          <p className="text-lg">
             Dear Students, Welcome to a vibrant community of learning,
             innovation, and endless opportunities. Your university journey is
             not just about earning a degree, but about discovering your
