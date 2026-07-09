@@ -17,7 +17,7 @@ export default function Brand2026LandingPageLayout({
   return (
     <html lang="en">
       <head>
-        <Script id="gtm-script" strategy="afterInteractive">
+         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){
               w[l]=w[l]||[];
@@ -31,12 +31,12 @@ export default function Brand2026LandingPageLayout({
               j.async=true;
               j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
               f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-N6SCNHWD');
+            })(window,document,'script','dataLayer','GTM-TD7GV8Z3');
           `}
         </Script>
       </head>
       <body className={`${inter.className} antialiased`}>
-        {/* Google Tag Manager (noscript) */}
+       {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TD7GV8Z3"
