@@ -1,7 +1,5 @@
 import {
   AboutSection,
-  AboutSectionComponentProps,
-  getHomePageContent,
   HeroSection,
   JourneySection,
   LifeAtKRMU,
@@ -19,13 +17,23 @@ import {
 } from "@/lib/api/common";
 
 import Script from "next/script";
+import { homeService } from "@/modules/home/home.provider";
+import { Container } from "@/components/common/Container";
 
 export default async function HomePage() {
-  const homepageContent = await getHomePageContent();
-
-  const about_section = homepageContent.find(
-    (component) => component.__component === "homepage-components.a-decade-section",
-  ) as AboutSectionComponentProps | undefined;
+  const heroSection = await homeService.getComponent(
+    "homepage-components.hero-section",
+  );
+  const aboutSection = await homeService.getComponent(
+    "homepage-components.a-decade-section",
+  );
+  const newsEventsSection = await homeService.getComponent(
+    "homepage-components.home-events-and-news",
+  );
+  const testimonialsSection = await homeService.getComponent(
+    "homepage-components.home-testimonials",
+  );
+  const testimonialsData = await homeService.getTestimonials();
 
   const websiteSchema = createWebsiteSchema({
     name: "K.R. Mangalam University",
@@ -84,22 +92,35 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: organizationSchema }}
       />
       <main>
-        <HeroSection />
-        {about_section && (
-          <AboutSection
-            topContent={about_section.adecadeleftcol}
-            bottomContent={about_section.adecaderightcol}
-          />
-        )}
-        <JourneySection />
-         <PlacementsSection />
-         <LifeAtKRMU />
-         <TestimonialsSection />
-         <ResearchSection />
-         <PartnersSection />
-         <VisitSection />
-         <NewsEventsSection />
-        
+        {heroSection && <HeroSection {...heroSection} />}
+        <Container>
+          {aboutSection && (
+            <AboutSection
+              topContent={aboutSection.adecadeleftcol}
+              bottomContent={aboutSection.adecaderightcol}
+            />
+          )}
+          <JourneySection />
+          <PlacementsSection />
+        </Container>
+        <LifeAtKRMU />
+
+        <TestimonialsSection
+          {...testimonialsSection}
+          testimonialsData={testimonialsData}
+        />
+        <Container>
+          <ResearchSection />
+          <PartnersSection />
+        </Container>
+        <VisitSection />
+        <Container>
+          {newsEventsSection ? (
+            <NewsEventsSection {...(newsEventsSection as any)} />
+          ) : (
+            <NewsEventsSection />
+          )}
+        </Container>
       </main>
     </>
   );

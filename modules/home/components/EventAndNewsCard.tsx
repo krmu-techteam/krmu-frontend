@@ -18,9 +18,7 @@ interface EventAndNewsCardProps {
   };
 }
 
-const EventAndNewsCard: React.FC<EventAndNewsCardProps> = async ({
-  data,
-}) => {
+const EventAndNewsCard: React.FC<EventAndNewsCardProps> = async ({ data }) => {
   const formattedDate = new Date(data.date).toLocaleDateString("en-US", {
     day: "2-digit",
     month: "short",
@@ -43,7 +41,8 @@ const EventAndNewsCard: React.FC<EventAndNewsCardProps> = async ({
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
             <span className="text-white text-[12px] font-normal tracking-wide flex items-center gap-2 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-              Read Full Story <ArrowUpRight size={14} className="text-brand-gold" />
+              Read Full Story{" "}
+              <ArrowUpRight size={14} className="text-brand-gold" />
             </span>
           </div>
         </div>
@@ -55,7 +54,7 @@ const EventAndNewsCard: React.FC<EventAndNewsCardProps> = async ({
 
       <Link href={`/events-and-news/${data.slug}`} className="block">
         <h3
-          className="text-white font-serif text-lg md:text-xl leading-snug group-hover:text-brand-gold transition-colors line-clamp-2"
+          className="text-white font-serif text-[20px] md:text-xl font-semibold tracking-wide leading-snug group-hover:text-brand-gold transition-colors line-clamp-2"
           dangerouslySetInnerHTML={{
             __html: data.title?.rendered || "",
           }}
@@ -66,4 +65,3 @@ const EventAndNewsCard: React.FC<EventAndNewsCardProps> = async ({
 };
 
 export default EventAndNewsCard;
-

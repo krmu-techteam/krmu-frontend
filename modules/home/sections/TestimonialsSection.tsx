@@ -1,45 +1,77 @@
 "use client";
 
 import React from "react";
-import {   ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Carousel } from "@/components/common/Carousel";
 import SectionDivider from "@/components/common/SectionDivider";
 import { TESTIMONIALS } from "../constants";
- 
+import { SectionTitle } from "@/components/common/SectionTitle";
 
-export default function TestimonialsSection() {
+import { TestimonialItem } from "@/lib/constants/testimonial";
+
+export default function TestimonialsSection({
+  title,
+  desc,
+  testimonialsData,
+}: {
+  title?: string;
+  desc?: string;
+  testimonialsData?: TestimonialItem[];
+}) {
+  const list =
+    testimonialsData && testimonialsData.length > 0
+      ? testimonialsData.map((t) => ({
+          id: t.id,
+          name: t.profilename,
+          role: t.profiledesignation,
+          quote: t.profileinfo,
+          image: t.profile?.url || "/modules/home/testimonial/t1.png",
+        }))
+      : TESTIMONIALS;
+
   return (
-    <section className="relative w-full py-8 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
+    <section className="relative w-full py-8 md:py-12 xl:py-20 font-poppins max-w-[1530px] mx-auto">
       {/* Precision Spec Lines - Gradient Style */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
 
-      <div className="container mx-auto relative z-10">
-        <h2 className="text-3xl md:text-[42px] text-center md:text-left font-serif font-bold text-white  leading-tight md:leading-[1.2] ">
-          What our Learners say?
-        </h2>
+      <div className="max-w-[1530px] mx-auto relative z-10">
+        <div className="px-6 md:px-7 xl:px-16">
+          <SectionTitle
+            title={title || "What our Learners say?"}
+            className="mb-0"
+          />
+        </div>
 
-        <Carousel showArrows={false} autoplayDelay={6000} fade={true} options={{ loop: true, duration: 60 }}>
-          {TESTIMONIALS.map((t) => (
+        <Carousel
+          showArrows={false}
+          autoplayDelay={6000}
+          fade={true}
+          options={{ loop: true, duration: 60 }}
+          className="relative lg:pb-4 [&>div:last-child]:lg:absolute [&>div:last-child]:lg:bottom-0 [&>div:last-child]:lg:right-16 [&>div:last-child]:lg:w-[520px] [&>div:last-child]:lg:justify-center"
+          activeDotClassName="bg-brand-gold w-2"
+        >
+          {list.map((t, index) => (
             <div
               key={t.id}
-              className="grid grid-cols-1 lg:grid-cols-10 items-center pt-12 md:pt-12 mb-4 gap-6"
+              className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] items-center pt-8 mb-4 px-6 md:px-7 xl:px-16"
             >
               {/* Left Column - Content */}
-              <div className="lg:col-span-6 flex flex-col md:min-h-[400px] relative pt-4 md:pt-0 pl-4 md:pl-8">
-                <div className="absolute -top-10 left-2 md:-top-12 md:left-4 pointer-events-none">
-                  <Image 
-                    src="/modules/home/testimonial/quote.png" 
-                    alt="Quote Icon" 
-                    width={130} 
-                    height={100} 
-                    className="w-20 md:w-[150px] h-auto brightness-0 invert opacity-20"
+              <div className="flex flex-col md:min-h-[400px] relative pt-4 md:pt-0">
+                <div className="absolute -top-6 -left-2 md:-top-6 md:-left-8 pointer-events-none z-0">
+                  <Image
+                    src="/modules/home/testimonial/quote.png"
+                    alt="Quote Icon"
+                    width={130}
+                    height={100}
+                    className="w-16 md:w-[100px] h-auto brightness-0 invert opacity-70"
+                    unoptimized
                   />
                 </div>
 
-                <div className="relative  h-auto mb-8 max-w-[690px] z-10 pt-4 md:pt-6">
-                  <p className="text-lg md:text-[23px] text-white font-serif font-medium leading-relaxed md:leading-[36px] opacity-90">
+                <div className="relative h-auto mb-8 w-full z-10 pt-4 md:pt-6">
+                  <p className="text-lg md:text-xl tracking-tight text-justify lg:text-[32px] text-white font-serif font-medium md:leading-[1.4] opacity-90">
                     {t.quote}
                   </p>
                 </div>
@@ -69,18 +101,18 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Right Column - Image Card */}
-              <div className="lg:col-span-4 relative flex justify-center lg:justify-end">
-                <div className="relative w-full max-w-[500px] aspect-square rounded-sm overflow-hidden border border-white/10 bg-brand-navy-deep">
+              <div className="relative flex justify-center lg:justify-end lg:pt-6">
+                <div className="relative rounded-[4px] w-full max-w-[520px] aspect-square">
                   <Image
                     src={t.image}
                     alt={t.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
-                    priority={t.id === 1}
+                    className="object-cover rounded-[4px]"
+                    priority={index === 0}
                   />
                   {/* Subtle glass overlay frame */}
-                  <div className="absolute inset-0 border border-white/5 pointer-events-none"></div>
+                  <div className="absolute inset-0 pointer-events-none"></div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import {
-    HomeEventAndNewsType,
+  HomeEventAndNewsType,
   HomeStatType,
   JourneyVideoType,
   LifeAtKRMUFeatureCardType,
@@ -12,6 +12,7 @@ import {
   SuccessStoryType,
   TestimonialType,
 } from "../types";
+export { HOMEPAGE_QUERY, TESTIMONIALS_QUERY } from "./query";
 
 export const ABOUT_STAT: HomeStatType[] = [
   { number: "10+", label: "Years of Educational Experience" },
@@ -204,103 +205,160 @@ export const LIFE_AT_KRMU_CAROUSEL_CONFIGS: LifeAtKRMUFeatureCardType[] = [
   {
     title: "Energy.\nExcitement.\nExcellence.",
     label: "Events",
-    bg: "/modules/home/life/event1.jpg",
+    bg: "/modules/home/life/event1.png",
     accent: "Excitement.",
-    url:"/happenings/news-and-events"
+    url: "/happenings/news-and-events",
   },
   {
     title: "Explore.\nExperience.\nExcel.",
     label: "Facilities",
     bg: "/modules/home/life/event2.jpg",
     accent: "Experience.",
-    url:"/campus-life/campus-facilities"
+    url: "/campus-life/campus-facilities",
   },
   {
     title: "Connect.\nCreate.\nCelebrate.",
     label: "Clubs & Societies",
     bg: "/modules/home/life/event3.jpg",
     accent: "Create.",
-    url:"/clubs-and-societies"
+    url: "/clubs-and-societies",
   },
 ];
 
 export const HOME_EVENTS_CONFIGS: HomeEventAndNewsType[] = [
   {
-    title: 'Design 2030 Conference',
-    date: 'February 24, 2026',
-    image: '/modules/home/events/event1.webp',
-    link: '#'
+    title: "Design 2030 Conference",
+    date: "February 24, 2026",
+    image: "/modules/home/events/event1.webp",
+    link: "#",
   },
   {
-    title: 'Hackathon 5.0',
-    date: 'February 20, 2026',
-    image: '/modules/home/events/event2.webp',
-    link: '#'
+    title: "Hackathon 5.0",
+    date: "February 20, 2026",
+    image: "/modules/home/events/event2.webp",
+    link: "#",
   },
   {
     title: "Valentine's Theme Lunch",
-    date: 'February 16, 2026',
-    image: '/modules/home/events/event3.webp',
-    link: '#'
+    date: "February 16, 2026",
+    image: "/modules/home/events/event3.webp",
+    link: "#",
   },
   {
-    title: 'Workshop on Voice Craft: Radio Advertisement',
-    date: 'February 16, 2026',
-    image: '/modules/home/events/event4.webp',
-    link: '#'
+    title: "Workshop on Voice Craft: Radio Advertisement",
+    date: "February 16, 2026",
+    image: "/modules/home/events/event4.webp",
+    link: "#",
   },
   {
-    title: 'Annual Sports Meet 2026',
-    date: 'February 12, 2026',
-    image: '/modules/home/events/event5.webp',
-    link: '#'
+    title: "Annual Sports Meet 2026",
+    date: "February 12, 2026",
+    image: "/modules/home/events/event5.webp",
+    link: "#",
   },
   {
-    title: 'Interaction with Industry Experts',
-    date: 'February 10, 2026',
-    image: '/modules/home/events/event6.webp',
-    link: '#'
+    title: "Interaction with Industry Experts",
+    date: "February 10, 2026",
+    image: "/modules/home/events/event6.webp",
+    link: "#",
   },
   {
-    title: 'Cultural Fest Highlights',
-    date: 'February 08, 2026',
-    image: '/modules/home/events/event7.webp',
-    link: '#'
+    title: "Cultural Fest Highlights",
+    date: "February 08, 2026",
+    image: "/modules/home/events/event7.webp",
+    link: "#",
   },
   {
-    title: 'Innovation Summit 2026',
-    date: 'February 05, 2026',
-    image: '/modules/home/events/event8.webp',
-    link: '#'
-  }
+    title: "Innovation Summit 2026",
+    date: "February 05, 2026",
+    image: "/modules/home/events/event8.webp",
+    link: "#",
+  },
 ];
 
 export const PARTNER_UNIVERSITIES: PartnerUniversityType[] = [
-  { name: 'Cardiff Metropolitan University', logo: '/modules/home/partners/cardiff-metropolitan-university.png' },
-  { name: 'Cardiff University', logo: '/modules/home/partners/cardiff-university.png' },
-  { name: 'Dublin City University', logo: '/modules/home/partners/dublin-city-university.png' },
-  { name: 'George Mason University', logo: '/modules/home/partners/george-mason-university.png' },
-  { name: 'Maynooth University', logo: '/modules/home/partners/maynooth-university.png' },
-  { name: 'Nanyang Technological University', logo: '/modules/home/partners/nanyang-technological-university.png' },
-  { name: 'Robert Gordon University', logo: '/modules/home/partners/robert-gordon-university.png' },
-  { name: 'Trinity College Dublin', logo: '/modules/home/partners/trinity-college-dublin.png' },
-  { name: 'University College Dublin', logo: '/modules/home/partners/university-college-dublin.png' },
-  { name: 'University of Florida', logo: '/modules/home/partners/university-of-Florida.png' },
-  { name: 'University of Essex', logo: '/modules/home/partners/university-of-essex.png' },
-  { name: 'University of Houston', logo: '/modules/home/partners/university-of-houston.png' },
-  { name: 'University of Kent', logo: '/modules/home/partners/university-of-kent.png' },
-  { name: 'University of Leeds', logo: '/modules/home/partners/university-of-leeds.png' },
-  { name: 'University of Manchester', logo: '/modules/home/partners/university-of-manchester.png' },
-  { name: 'University of Plymouth', logo: '/modules/home/partners/university-of-plymouth.png' },
-  { name: 'University of Strathclyde', logo: '/modules/home/partners/university-of-strathclyde.png' },
-  { name: 'University of Sussex', logo: '/modules/home/partners/university-of-sussex.png' },
+  {
+    name: "Cardiff Metropolitan University",
+    logo: "/modules/home/partners/cardiff-metropolitan-university.png",
+  },
+  {
+    name: "Cardiff University",
+    logo: "/modules/home/partners/cardiff-university.png",
+  },
+  {
+    name: "Dublin City University",
+    logo: "/modules/home/partners/dublin-city-university.png",
+  },
+  {
+    name: "George Mason University",
+    logo: "/modules/home/partners/george-mason-university.png",
+  },
+  {
+    name: "Maynooth University",
+    logo: "/modules/home/partners/maynooth-university.png",
+  },
+  {
+    name: "Nanyang Technological University",
+    logo: "/modules/home/partners/nanyang-technological-university.png",
+  },
+  {
+    name: "Robert Gordon University",
+    logo: "/modules/home/partners/robert-gordon-university.png",
+  },
+  {
+    name: "Trinity College Dublin",
+    logo: "/modules/home/partners/trinity-college-dublin.png",
+  },
+  {
+    name: "University College Dublin",
+    logo: "/modules/home/partners/university-college-dublin.png",
+  },
+  {
+    name: "University of Florida",
+    logo: "/modules/home/partners/university-of-Florida.png",
+  },
+  {
+    name: "University of Essex",
+    logo: "/modules/home/partners/university-of-essex.png",
+  },
+  {
+    name: "University of Houston",
+    logo: "/modules/home/partners/university-of-houston.png",
+  },
+  {
+    name: "University of Kent",
+    logo: "/modules/home/partners/university-of-kent.png",
+  },
+  {
+    name: "University of Leeds",
+    logo: "/modules/home/partners/university-of-leeds.png",
+  },
+  {
+    name: "University of Manchester",
+    logo: "/modules/home/partners/university-of-manchester.png",
+  },
+  {
+    name: "University of Plymouth",
+    logo: "/modules/home/partners/university-of-plymouth.png",
+  },
+  {
+    name: "University of Strathclyde",
+    logo: "/modules/home/partners/university-of-strathclyde.png",
+  },
+  {
+    name: "University of Sussex",
+    logo: "/modules/home/partners/university-of-sussex.png",
+  },
 ];
 
 export const RESEARCH_STATS: ResearchStatsType[] = [
-  { value: '100+', label: 'High-End Teaching\nand Research Labs' },
-  { value: '4000+', label: 'No. of Research\nPublications' },
-  { value: '16Cr+', label: 'Research and consultancy\ngrants to the university' },
-  { value: '250+', label: 'No. of Patents granted\n& published' }
+  { value: "100+", label: "High-End Teaching\nand Research Labs" },
+  { value: "4000+", label: "No. of Research\nPublications" },
+  {
+    value: "16Cr+",
+    label: "Research and consultancy\ngrants to the university",
+  },
+  { value: "250+", label: "No. of Patents granted\n& published" },
 ];
 
 export const TESTIMONIALS: TestimonialType[] = [

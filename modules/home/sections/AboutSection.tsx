@@ -1,9 +1,11 @@
 import Link from "next/link";
 import SectionDivider from "@/components/common/SectionDivider";
-import {StatCard} from "@/components/common/StatCard";
+import { StatCard } from "@/components/common/StatCard";
 import { ABOUT_STAT_BG_COLORS } from "../constants";
 import { ADecadeLeftCol, ADecadeRightCol } from "../types";
 import { getAboutStats } from "../utils";
+import { ArrowRight, ChevronRightIcon } from "lucide-react";
+import { SectionTitle } from "@/components/common/SectionTitle";
 
 export default function AboutSection({
   topContent,
@@ -14,31 +16,32 @@ export default function AboutSection({
 }) {
   const aboutStats = getAboutStats(bottomContent);
   return (
-    <section className="relative w-full overflow-hidden px-6 md:px-11 xl:px-16 py-8 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
+    <section className="relative w-full overflow-hidden py-8 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none"></div>
-      <div className="container mx-auto relative z-10">
+      <div className="relative z-10">
         <div className="max-w-5xl mx-auto relative mb-6 md:mb-8 xl:mb-12">
-          <span className="inline-block bg-brand-navy-deep text-brand-gold px-3 py-1 text-md xl:text-[20px] font-medium capitalize tracking-normal mb-6 rounded-md border border-white/5 font-poppins">
+          <span className="inline-block bg-[#041726] text-brand-gold px-3 py-1 text-md xl:text-[20px] font-medium capitalize tracking-normal mb-6 rounded-[4px] border border-white/5 font-poppins">
             {topContent?.adecadesubtitle}
           </span>
 
-          <h2 className="text-3xl md:text-4xl xl:text-[42px] font-serif font-bold text-white mb-6 leading-[1.2] tracking-tight">
-            {topContent?.adecadetitle}
-          </h2>
+          <SectionTitle title={topContent?.adecadetitle} />
 
-          <p className="max-w-4xl mx-auto text-white/70 text-base md:text-[16px] leading-relaxed mb-6 font-light font-poppins">
+          <p className="max-w-5xl mx-auto text-white/70 text-base md:text-[16px] leading-relaxed mb-6 font-light font-poppins">
             {topContent?.adecadedescription}
           </p>
 
           <Link
             href={topContent?.button1link}
-            className="inline-flex items-center text-md font-normal tracking-wide text-white hover:text-white/70  transition-colors duration-300"
+            className="inline-flex gap-1 items-center underline text-[16px] font-light tracking-wide text-white hover:text-white/70  transition-colors duration-300"
           >
-            Know More
+            <span>
+              <ArrowRight size={18} />
+            </span>
+            <span>Know More</span>
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 xl:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 xl:gap-4">
           {aboutStats.map((stat, idx) => (
             <StatCard
               key={idx}

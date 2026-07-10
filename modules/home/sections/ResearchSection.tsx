@@ -5,6 +5,7 @@ import Image from "next/image";
 import SectionDivider from "@/components/common/SectionDivider";
 import { RESEARCH_STATS } from "../constants";
 import Link from "next/link";
+import { SectionTitle } from "@/components/common/SectionTitle";
 
 export default function ResearchSection() {
   return (
@@ -57,11 +58,11 @@ export default function ResearchSection() {
               <p className="text-center text-white/90 text-lg tracking-wide font-normal mb-4">
                 Shaping Futures, Embracing Innovation
               </p>
-              <h2 className="text-4xl md:text-[42px] font-serif text-white leading-tight font-bold text-center">
-                Engage in Leading-Edge Research
-              </h2>
-
-              <div className="w-7 h-1 bg-secondary mb-8 mx-auto rounded-md"></div>
+              <SectionTitle
+                title="Engage in Leading-Edge Research"
+                className="leading-tight text-center mb-0"
+              />
+              <div className="mx-auto mb-8 h-2 w-7 rounded-md bg-white/70 block"></div>
 
               <p className="text-white/70 text-base md:text-md text-center mb-6 font-light">
                 K.R. Mangalam University thrives on innovation, bringing

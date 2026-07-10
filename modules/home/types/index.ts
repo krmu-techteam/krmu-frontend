@@ -1,287 +1,247 @@
-import { ButtonType, CounterItem, StrapiMedia } from "@/lib/types/common";
-import { ADecadeSectionComponent } from "@/lib/types/home";
+// ========================================================
+// Common Types
+// ========================================================
 
-export interface HomeStatType {
-  number?: string;
-  label: string;
-}
-
-export interface JourneyVideoType {
-  id: number;
-  title: string;
-  thumbnail: string;
-  duration: string;
-  link: string;
-}
-
-export interface GalleryImageType {
-  id: number;
-  src: string;
-  alt: string;
-}
-
-export interface RecruiterLogoType {
-  name: string;
-  logo: string;
-}
-
-export interface SuccessStoryType {
-  name: string;
-  school: string;
-  course: string;
-  package: string;
-  image: string;
-}
-
-export interface PlacementStatType {
-  label: string;
-  value: string;
-}
-
-export interface PlacementCardConfigType {
-  style: React.CSSProperties;
-}
-
-export interface LifeAtKRMUGalleryType {
-  id: number;
-  src: string;
-  alt: string;
-}
-
-export interface LifeAtKRMUFeatureCardType {
-  title: string;
-  label: string;
-  bg: string;
-  accent: string;
+export interface StrapiMediaFormat {
+  ext: string;
   url: string;
-}
-
-export interface HomeEventAndNewsType {
-  title: string;
-  date: string;
-  image: string;
-  link: string;
-}
-
-export interface PartnerUniversityType {
+  hash: string;
+  mime: string;
   name: string;
-  logo: string;
+  path: string | null;
+  size: number;
+  width: number;
+  height: number;
+  sizeInBytes: number;
 }
 
-export interface ResearchStatsType {
-  value: string;
-  label: string;
-}
-
-export interface TestimonialType {
+export interface StrapiMedia {
   id: number;
+  documentId: string;
   name: string;
-  role: string;
-  quote: string;
-  image: string;
+  alternativeText: string | null;
+  caption: string | null;
+  width: number | null;
+  height: number | null;
+
+  formats: {
+    thumbnail?: StrapiMediaFormat;
+    small?: StrapiMediaFormat;
+    medium?: StrapiMediaFormat;
+    large?: StrapiMediaFormat;
+  } | null;
+
+  hash: string;
+  ext: string;
+  mime: string;
+  size: number;
+  url: string;
+  previewUrl: string | null;
+  provider: string;
+  provider_metadata: unknown;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
 }
 
-// ==========================================
-// CMS API / Strapi Schema Component Types
-// ==========================================
-
-// Hero Section Component Type
-export interface HeroSectionComponent {
-  __component: "homepage-components.hero-section";
+export interface BaseComponent {
   id: number;
-  title: string;
-  subtitle: string;
-  HeroSectionVideo: StrapiMedia | null;
+  __component: string;
 }
 
-// A Decade Section (About) Component Type
-export interface ADecadeLeftCol {
-  id: number;
-  adecadetitle: string;
-  adecadesubtitle: string;
-  adecadedescription: string;
-  button1text: string;
-  button1link: string;
-  button2text: string;
-  button2link: string;
-}
-
-export interface ADecadeRightCol {
-  id: number;
-  counter1text: string;
-  counter1content: string;
-  counter2text: string;
-  counter2content: string;
-  counter3text: string;
-  counter3content: string;
-  counter4text: string;
-  counter4content: string;
-}
-
-export interface AboutSectionComponentProps {
-  __component: "homepage-components.a-decade-section";
-  id: number;
-  adecadeleftcol: ADecadeLeftCol;
-  adecaderightcol: ADecadeRightCol;
-}
-
-// Your Journey Component Type
 export interface Button {
   id: number;
   buttontext: string;
   buttonlink: string;
-  buttonclass: string | null;
-  popupFormId?: string | null;
-  containerPopupFormId?: string | null;
+  buttonclass: string;
+  popupFormId: number | null;
+  containerPopupFormId: number | null;
 }
 
-export interface YourJourneyComponent {
-  __component: "homepage-components.yourjourney";
+export interface Counter {
   id: number;
+  countertext: string;
+  countercontent: string;
+}
+
+export interface CTA {
+  id: number;
+  beforehighlighttext?: string | null;
+  highlighttext: string;
+  afterhighlighttext?: string | null;
+
+  subtitle: string;
+  content: string;
+
+  linktext: string;
+  linkclass: string;
+  link: string;
+}
+
+// ========================================================
+// Components
+// ========================================================
+
+export interface HeroSectionComponent extends BaseComponent {
+  __component: "homepage-components.hero-section";
+  title: string;
+  subtitle: string;
+}
+
+export interface ADecadeSectionComponent extends BaseComponent {
+  __component: "homepage-components.a-decade-section";
+
+  adecadeleftcol: {
+    id: number;
+    adecadetitle: string;
+    adecadesubtitle: string;
+    adecadedescription: string;
+    button1text: string;
+    button1link: string;
+    button2text: string;
+    button2link: string;
+  };
+
+  adecaderightcol: {
+    id: number;
+    counter1text: string;
+    counter1content: string;
+    counter2text: string;
+    counter2content: string;
+    counter3text: string;
+    counter3content: string;
+    counter4text: string;
+    counter4content: string;
+  };
+}
+
+export interface JourneyComponent extends BaseComponent {
+  __component: "homepage-components.yourjourney";
+
   title: string;
   description: string;
+
   button: Button[];
 }
 
-// AFS Section Component Type
-export interface AFSComponent {
+export interface AFSComponent extends BaseComponent {
   __component: "homepage-components.afs-section";
-  id: number;
+
   afs1content: string;
   afs2content: string;
   afs3content: string;
-  afsimage1: StrapiMedia;
-  afsimage2: StrapiMedia;
-  afsimage3: StrapiMedia;
+
   link1: string;
   link2: string;
   link3: string;
+
+  afsimage1: StrapiMedia;
+  afsimage2: StrapiMedia;
+  afsimage3: StrapiMedia;
 }
 
-// Our Top Recruiters Component Type
-export interface OurTopRecruitComp {
+export interface RecruitersComponent extends BaseComponent {
   __component: "homepage-components.our-top-recruiters";
-  id: number;
+
   title: string;
-  counter: CounterItem[];
+
+  counter: Counter[];
+
   logos: StrapiMedia[];
 }
 
-// Fee Structure & Scholarship Banner Component Type
-export interface FeeStructureScholar {
+export interface FeeScholarComponent extends BaseComponent {
   __component: "homepage-components.fee-scholar";
-  id: number;
+
   text1: string;
   text2: string;
-  FeeStructureImage: StrapiMedia;
-  ScholarshipImage: StrapiMedia;
+
   link1: string;
   link2: string;
+
+  FeeStructureImage: StrapiMedia;
+  ScholarshipImage: StrapiMedia;
 }
 
-// Why KRMU Component Type
-export interface whyKRMU {
+export interface WhyKrmuComponent extends BaseComponent {
   __component: "homepage-components.whykrmu";
-  id: number;
+
   title: string;
   subtitle: string;
   Descriptions: string;
 }
 
-// Elevate Campus Component Type
-export interface ElevateCampusContent {
-  id: number;
-  highlighttext: string;
-  subtitle: string;
-  content: string;
-  linktext: string;
-  linkclass: string;
-  link: string;
-  beforehighlighttext: string;
-  afterhighlighttext: string | null;
-}
-
-export interface ElevateCampus {
+export interface ElevateCampusComponent extends BaseComponent {
   __component: "homepage-components.elevate-campus";
-  id: number;
-  elevatecampus1: ElevateCampusContent;
+
+  elevatecampus1: CTA;
+  ElevateCampus2: CTA;
+  elevatecampus3: CTA;
+
   elevatecampusimage1: StrapiMedia;
-  ElevateCampus2: ElevateCampusContent;
   elevatecampusimage2: StrapiMedia;
-  elevatecampus3: ElevateCampusContent;
   elevatecampusimage3: StrapiMedia;
 }
 
-// Testimonials Component Type
-export interface HomeKRMTestimonial {
+export interface TestimonialsComponent extends BaseComponent {
   __component: "homepage-components.home-testimonials";
-  id: number;
+
   title: string;
   description: string;
 }
 
-// Shaping Future (Research) Component Type
-export interface ShapingFutureType {
+export interface ShapingFutureComponent extends BaseComponent {
   __component: "homepage-components.shaping-future";
-  id: number;
+
   subtitle: string;
   highlightext: string;
   afterhighlighttext: string;
+
   descriptions: string;
+
   link1text: string;
   link1: string;
+
   link2text: string;
   link2: string;
+
   shapingimage: StrapiMedia;
   mobileshapingimage: StrapiMedia;
-  shapingCounter: CounterItem[];
+
+  shapingCounter: Counter[];
 }
 
-// Global Partner Component Type
-export interface GlobalPartnerType {
+export interface GlobalPartnerComponent extends BaseComponent {
   __component: "homepage-components.global-partener";
-  id: number;
+
   title: string;
   descriptions: string;
   logosliderheading: string;
+
   globalpartnerimages: StrapiMedia[];
 }
 
-// Visit and Explore Component Type
-export interface VisitExploreType {
-  __component: "homepage-components.visit-explore";
-  id: number;
-  title1: string;
-  title2: string;
-  description: string;
-  visitexplorebtn: ButtonType[];
-}
+// ========================================================
+// Union
+// ========================================================
 
-// Home News and Events Component Type
-export interface HomeNewsandEventsType {
-  __component: "homepage-components.home-events-and-news";
-  id: number;
-  title: string;
-  newsandeventbtn: ButtonType;
-}
-
-// Union of all Page Content Components
-export type PageComponent =
+export type HomePageComponent =
   | HeroSectionComponent
   | ADecadeSectionComponent
-  | YourJourneyComponent
+  | JourneyComponent
   | AFSComponent
-  | OurTopRecruitComp
-  | FeeStructureScholar
-  | whyKRMU
-  | ElevateCampus
-  | HomeKRMTestimonial
-  | ShapingFutureType
-  | GlobalPartnerType
-  | VisitExploreType
-  | HomeNewsandEventsType;
+  | RecruitersComponent
+  | FeeScholarComponent
+  | WhyKrmuComponent
+  | ElevateCampusComponent
+  | TestimonialsComponent
+  | ShapingFutureComponent
+  | GlobalPartnerComponent;
 
-// HomePage API Response Structure
+// ========================================================
+// API Response
+// ========================================================
+
 export interface HomePageResponse {
   data: {
     id: number;
@@ -289,7 +249,33 @@ export interface HomePageResponse {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
-    PageContent: PageComponent[];
+
+    PageContent: HomePageComponent[];
   };
-  meta: unknown;
+
+  meta: Record<string, unknown>;
+}
+
+export interface HomeComponentMap {
+  "homepage-components.hero-section": HeroSectionComponent;
+
+  "homepage-components.a-decade-section": ADecadeSectionComponent;
+
+  "homepage-components.yourjourney": JourneyComponent;
+
+  "homepage-components.afs-section": AFSComponent;
+
+  "homepage-components.our-top-recruiters": RecruitersComponent;
+
+  "homepage-components.fee-scholar": FeeScholarComponent;
+
+  "homepage-components.whykrmu": WhyKrmuComponent;
+
+  "homepage-components.elevate-campus": ElevateCampusComponent;
+
+  "homepage-components.home-testimonials": TestimonialsComponent;
+
+  "homepage-components.shaping-future": ShapingFutureComponent;
+
+  "homepage-components.global-partener": GlobalPartnerComponent;
 }

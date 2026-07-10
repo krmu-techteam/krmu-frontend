@@ -12,13 +12,16 @@ import {
   RECRUITER_LOGOS,
   SUCCESS_STORIES,
 } from "../constants";
+import { SectionTitle } from "@/components/common/SectionTitle";
+import { PlacementStatCard, RecruiterLogoCard } from "../components/placements";
+import ShowMoreButton from "@/components/common/ShowMoreButton";
 
 export default function PlacementsSection() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <section className="relative w-full overflow-hidden py-8 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
-      <div className="container mx-auto relative z-10">
+    <section className="relative w-full overflow-hidden py-8 md:py-12 xl:py-20 font-poppins">
+      <div className="relative z-10">
         <div className="flex flex-col lg:flex-row items-start gap-8 xl:gap-10  md:px-0">
           {/* Left: Success Card Carousel (30% Width) */}
           <div className="w-full lg:w-[30%] flex flex-col items-center lg:items-start order-2 lg:order-1">
@@ -49,13 +52,12 @@ export default function PlacementsSection() {
 
           {/* Right: Content & Stats (70% Width) */}
           <div className="w-full lg:w-[70%] text-left order-1 lg:order-2">
-            <h2 className="text-[29px] md:text-4xl xl:text-[42px] font-serif font-bold text-white mb-6 leading-[1.2] tracking-tight">
-              Explore the{" "}
-              <span className="text-brand-gold">Top Global recruiters</span>{" "}
-              <br className="hidden md:block" />
-              who choose KRMU talent
-            </h2>
-
+            <SectionTitle
+              title="Explore the"
+              highlight="Top Global recruiters"
+              subtitle="who choose KRMU talent"
+              variant="highlight"
+            />
             <p className="max-w-2xl text-white/70 text-base md:text-[16px] leading-relaxed mb-6 font-light font-poppins">
               KRMU offers top placements with{" "}
               <span className="font-semibold text-white">
@@ -66,24 +68,15 @@ export default function PlacementsSection() {
             </p>
 
             {/* Stats Grid - Discrete Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 xl:gap-5 mb-10 lg:max-w-[860px]">
-              {PLACEMENT_STATS.map((stat, i) => {
-                const config = PLACEMENT_CARD_CONFIGS[i];
-                return (
-                  <div
-                    key={i}
-                    style={config.style}
-                    className="w-full h-[95px] p-4 md:p-5 rounded-[4px] shadow-xl hover:border-brand-gold/30 hover:shadow-2xl hover:shadow-brand-gold/10 hover:-translate-y-[3px] transition-all duration-500 ease-out group flex flex-col justify-center"
-                  >
-                    <p className="text-brand-gold font-normal text-2xl md:text-[26px] mb-[6px] leading-none transition-colors duration-500 ease-out">
-                      {stat.value}
-                    </p>
-                    <p className="text-white/80 text-[14px] md:text-sm font-light leading-tight">
-                      {stat.label}
-                    </p>
-                  </div>
-                );
-              })}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 xl:gap-4 mb-10 lg:max-w-[860px]">
+              {PLACEMENT_STATS.map((stat, index) => (
+                <PlacementStatCard
+                  key={stat.label}
+                  value={stat.value}
+                  label={stat.label}
+                  style={PLACEMENT_CARD_CONFIGS[index]?.style}
+                />
+              ))}
             </div>
 
             {/* Buttons */}
@@ -113,43 +106,20 @@ export default function PlacementsSection() {
               0,
               showMore ? RECRUITER_LOGOS.length : 10,
             ).map((company, i) => (
-              <div
+              <RecruiterLogoCard
                 key={i}
-                className="bg-transparent flex items-center justify-center rounded-[4px] border border-brand-gray h-[100px] hover:border-white/30 hover:bg-white/5 transition-all duration-500 group overflow-hidden"
-              >
-                <div className="relative w-full h-20 group-hover:scale-110 transition-transform duration-500">
-                  <Image
-                    src={company.logo}
-                    alt={company.name}
-                    fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                    className="object-contain px-4 py-3"
-                  />
-                </div>
-              </div>
+                logo={company.logo}
+                name={company.name}
+              />
             ))}
           </div>
 
-          <button
+          <ShowMoreButton
+            expanded={showMore}
             onClick={() => setShowMore(!showMore)}
-            className="mt-12 mx-auto flex items-center gap-3 text-white font-normal capitalize text-md tracking-wide hover:text-white/80 transition-colors group cursor-pointer"
-          >
-            {showMore ? (
-              <>
-                <span className="w-6 h-6 flex items-center justify-center rounded-full border border-white group-hover:border-white/80 transition-colors">
-                  <ChevronUp size={16} />
-                </span>
-                Show Less
-              </>
-            ) : (
-              <>
-                <span className="w-6 h-6 flex items-center justify-center rounded-full border border-white group-hover:border-white/80 transition-colors">
-                  <ChevronDown size={16} />
-                </span>
-                Show More
-              </>
-            )}
-          </button>
+            iconClassName="text-white"
+            className="mt-12 mx-auto"
+          />
         </div>
       </div>
       <SectionDivider />

@@ -1,6 +1,7 @@
-import React from 'react';
+import { HeroSectionVideo } from "../types";
 
-export const HeroVideo = () => {
+export const HeroVideo = ({ HeroSectionVideo }: HeroSectionVideo) => {
+  console.log(HeroSectionVideo);
   return (
     <>
       <video
@@ -13,7 +14,7 @@ export const HeroVideo = () => {
         <source src="/modules/home/hero/krmu-video.mp4" type="video/mp4" />
         <source src="/hero-bg.mp4" type="video/mp4" />
       </video>
-      
+
       {/* Gradients and Overlays */}
       <div className="absolute top-0 left-0 w-full h-full bg-brand-dark/35 z-10 transition-colors group-hover/hero:bg-brand-dark/25 duration-700"></div>
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-linear-to-t from-brand-dark via-brand-dark/40 to-transparent z-10"></div>
