@@ -7,7 +7,7 @@ import Link from "next/link";
 import FloatingButtons from "@/app/(main-website)/components/Footer/FloatingButtons";
 import NpfAgent from "@/app/NpfAgent";
 // import LaunchpadPopup from "../LaunchpadPopup";
-// import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
+import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
 import { createCollegeSchema } from "@/lib/api/common";
 
 const Footer = async () => {
@@ -229,13 +229,13 @@ const Footer = async () => {
       {/* Hide Nia Chatbot */}
       {/* <NpfChatbot /> */}
 
-      {/* <Link
+      <Link
         href="https://admissions.krmangalam.edu.in/?utm_source=Website&utm_medium=Homepage&utm_campaign=Deadline"
         target="_blank"
-        className="fixed bottom-0 left-0 w-full bg-[#cb000d] flex lg:hidden justify-center z-30"
+        className="fixed bottom-0 left-0 w-full bg-[#cb000d] flex justify-center z-30"
       >
-        <KRMUTimer targetDate="2026-06-30T23:59:59" mainWebsiteTimer={true} />
-      </Link> */}
+        <KRMUTimer targetDate="2026-07-11T23:59:59" mainWebsiteTimer={true} />
+      </Link>
     
       {/* <div className="fixed bottom-10 right-24">
         <a
