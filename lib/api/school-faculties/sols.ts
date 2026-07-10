@@ -62,20 +62,35 @@ export const solsFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Shobhna-Jeet.png",
   },
   {
-    id: 106905,
-    slug: "dr-tijender-kumar-singh",
+    id: 115862,
+    slug: "ms-kritika-kakkar-2",
     title: {
-      rendered: "Dr. Tijender Kumar Singh",
+      rendered: "Ms. Kritika Kakkar",
     },
-    featured_media: 106906,
+    featured_media: 115862,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant Professor",
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Tijender-Kumar-Singh.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/Kritika-Kakkar.png",
   },
+  // {
+  //   id: 106905,
+  //   slug: "dr-tijender-kumar-singh",
+  //   title: {
+  //     rendered: "Dr. Tijender Kumar Singh",
+  //   },
+  //   featured_media: 106906,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Tijender-Kumar-Singh.jpg",
+  // },
 
   {
     id: 57750,
