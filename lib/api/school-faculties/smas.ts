@@ -411,7 +411,7 @@ export const smasFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Khushboo-Saxena-1.png",
   },
 
-    {
+  {
     id: 115850,
     slug: "dr-arun-parashar",
     title: {
@@ -426,7 +426,7 @@ export const smasFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/Arun-Parashar-SMAS.png",
   },
-    {
+  {
     id: 115852,
     slug: "dr-sonia-yadav",
     title: {
