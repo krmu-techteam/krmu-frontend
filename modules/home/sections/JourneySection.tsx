@@ -73,7 +73,7 @@ export default function JourneySection() {
             <div
               key={video.id}
               className="group cursor-pointer"
-              onClick={() => setSelectedVideo(video.link)}
+              onClick={() => setSelectedVideo(video.link || null)}
             >
               <div className="relative aspect-video overflow-hidden rounded-[4px] shadow-xl mb-5 bg-black">
                 <Image

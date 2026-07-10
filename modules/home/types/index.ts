@@ -1,3 +1,6 @@
+import React from "react";
+import { ButtonType } from "@/lib/types/common";
+
 // ========================================================
 // Common Types
 // ========================================================
@@ -88,31 +91,33 @@ export interface HeroSectionComponent extends BaseComponent {
   subtitle: string;
 }
 
+export interface ADecadeLeftCol {
+  id: number;
+  adecadetitle: string;
+  adecadesubtitle: string;
+  adecadedescription: string;
+  button1text: string;
+  button1link: string;
+  button2text: string;
+  button2link: string;
+}
+
+export interface ADecadeRightCol {
+  id: number;
+  counter1text: string;
+  counter1content: string;
+  counter2text: string;
+  counter2content: string;
+  counter3text: string;
+  counter3content: string;
+  counter4text: string;
+  counter4content: string;
+}
+
 export interface ADecadeSectionComponent extends BaseComponent {
   __component: "homepage-components.a-decade-section";
-
-  adecadeleftcol: {
-    id: number;
-    adecadetitle: string;
-    adecadesubtitle: string;
-    adecadedescription: string;
-    button1text: string;
-    button1link: string;
-    button2text: string;
-    button2link: string;
-  };
-
-  adecaderightcol: {
-    id: number;
-    counter1text: string;
-    counter1content: string;
-    counter2text: string;
-    counter2content: string;
-    counter3text: string;
-    counter3content: string;
-    counter4text: string;
-    counter4content: string;
-  };
+  adecadeleftcol: ADecadeLeftCol;
+  adecaderightcol: ADecadeRightCol;
 }
 
 export interface JourneyComponent extends BaseComponent {
@@ -221,6 +226,12 @@ export interface GlobalPartnerComponent extends BaseComponent {
   globalpartnerimages: StrapiMedia[];
 }
 
+export interface HomeEventsAndNewsComponent extends BaseComponent {
+  __component: "homepage-components.home-events-and-news";
+  title: string;
+  newsandeventbtn: ButtonType;
+}
+
 // ========================================================
 // Union
 // ========================================================
@@ -236,7 +247,8 @@ export type HomePageComponent =
   | ElevateCampusComponent
   | TestimonialsComponent
   | ShapingFutureComponent
-  | GlobalPartnerComponent;
+  | GlobalPartnerComponent
+  | HomeEventsAndNewsComponent;
 
 // ========================================================
 // API Response
@@ -278,4 +290,86 @@ export interface HomeComponentMap {
   "homepage-components.shaping-future": ShapingFutureComponent;
 
   "homepage-components.global-partener": GlobalPartnerComponent;
+
+  "homepage-components.home-events-and-news": HomeEventsAndNewsComponent;
+}
+
+export interface HomeStatType {
+  number?: string;
+  label: string;
+}
+
+export interface JourneyVideoType {
+  id: number;
+  title: string;
+  thumbnail: string;
+  duration: string;
+  link?: string;
+}
+
+export interface GalleryImageType {
+  id: number;
+  src: string;
+  alt: string;
+}
+
+export interface RecruiterLogoType {
+  name: string;
+  logo: string;
+}
+
+export interface SuccessStoryType {
+  name: string;
+  school: string;
+  course: string;
+  package: string;
+  image: string;
+}
+
+export interface PlacementStatType {
+  label: string;
+  value: string;
+}
+
+export interface PlacementCardConfigType {
+  style: React.CSSProperties;
+}
+
+export interface LifeAtKRMUGalleryType {
+  id: number;
+  src: string;
+  alt: string;
+}
+
+export interface LifeAtKRMUFeatureCardType {
+  title: string;
+  label: string;
+  bg: string;
+  accent: string;
+  url?: string;
+}
+
+export interface HomeEventAndNewsType {
+  title: string;
+  date: string;
+  image: string;
+  link: string;
+}
+
+export interface PartnerUniversityType {
+  name: string;
+  logo: string;
+}
+
+export interface ResearchStatsType {
+  value: string;
+  label: string;
+}
+
+export interface TestimonialType {
+  id: number;
+  name: string;
+  role: string;
+  quote: string;
+  image: string;
 }

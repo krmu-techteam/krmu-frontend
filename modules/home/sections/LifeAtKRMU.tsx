@@ -109,7 +109,7 @@ export default function LifeAtKRMU() {
                 </div>
               </div>
               <Link
-                href={card.url}
+                href={card.url || "#"}
                 className="block w-full transition-colors duration-300"
               >
                 <div className="flex items-center justify-between px-8 py-5">

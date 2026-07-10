@@ -7,16 +7,13 @@ import { Carousel } from "@/components/common/Carousel";
 import SectionDivider from "@/components/common/SectionDivider";
 import { TESTIMONIALS } from "../constants";
 import { SectionTitle } from "@/components/common/SectionTitle";
-
 import { TestimonialItem } from "@/lib/constants/testimonial";
 
 export default function TestimonialsSection({
   title,
-  desc,
   testimonialsData,
 }: {
   title?: string;
-  desc?: string;
   testimonialsData?: TestimonialItem[];
 }) {
   const list =

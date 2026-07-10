@@ -16,7 +16,7 @@ export default async function NewsEventsSection({
   },
 }: {
   title?: string;
-  newsandeventbtn?: ButtonType;
+  newsandeventbtn?: Partial<ButtonType>;
 }) {
   const newsandeventsdata = await homeService.getNewsEvents(1, 10);
   return (

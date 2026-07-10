@@ -1,6 +1,4 @@
-import { HeroSectionVideo } from "../types";
-
-export const HeroVideo = ({ HeroSectionVideo }: HeroSectionVideo) => {
+export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
   console.log(HeroSectionVideo);
   return (
     <>
