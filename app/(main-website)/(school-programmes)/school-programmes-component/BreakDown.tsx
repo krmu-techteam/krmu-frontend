@@ -80,10 +80,10 @@ export const BreakDown = () => {
     >
       <div className="w-full flex flex-col items-center mx-auto">
         {/* Toggle Button */}
-        <div className="flex justify-center w-full  py-10 px-2 sm:px-6  bg-white">
+        <div className="flex justify-center w-full  py-10 px-2 sm:px-6  bg-white ">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center justify-between gap-2 sm:gap-6 bg-[#002045] text-white font-bold py-3 px-6 rounded-[10px] shadow-md transition-all duration-300  text-center text-sm sm:text-base md:text-[24px]"
+            className="flex items-center justify-between gap-2 sm:gap-6 bg-[#002045] text-white font-bold py-3 px-6 rounded-[10px] shadow-md transition-all duration-300  text-center text-sm sm:text-base md:text-[24px] cursor-pointer"
           >
             <span>
               Full breakdown of career roles, average salary ranges in India
@@ -119,20 +119,20 @@ export const BreakDown = () => {
               : "max-h-0 opacity-0 pointer-events-none"
           }`}
         >
-          <div className="max-w-[1500px] mx-auto">
+          <div className="relative max-w-[1500px] mx-auto">
             {/* Close Button X */}
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 sm:top-6 sm:right-6 text-gray-400 hover:text-gray-600 hover:scale-110 transition-all p-2 rounded-full hover:bg-gray-100"
-              aria-label="Close details"
+              className="absolute top-4 right-4 sm:top-0 sm:right-6 text-black transition-all p-2 rounded-full cursor-pointer"
+              aria-label="Close details "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={2}
+                strokeWidth={1}
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-[40px] h-[40px]"
               >
                 <path
                   strokeLinecap="round"
@@ -156,17 +156,17 @@ export const BreakDown = () => {
                 <thead>
                   <tr className=" text-white">
                     <th className=" pl-3 pt-3  text-center text-sm md:text-[16px] lg:text-[18px] font-semibold ">
-                      <div className="flex items-center justify-center bg-[#002045] min-h-[76px] rounded-l-[10px]">
+                      <div className="flex items-center justify-center bg-[#002045] min-h-[78px] rounded-l-[10px]">
                         Job Role <br /> After B.Tech. CSE
                       </div>
                     </th>
                     <th className="pt-3  text-center text-sm md:text-[16px] lg:text-[18px] font-semibold">
-                      <div className="flex items-center justify-center bg-[#002045] min-h-[76px]">
+                      <div className="flex items-center justify-center bg-[#002045] min-h-[78px]">
                         Average Package for Freshers in India <br /> (In INR)*
                       </div>
                     </th>
                     <th className="pr-3 pt-3  text-center text-sm md:text-[16px] lg:text-[18px] font-semibold ">
-                      <div className=" flex items-center justify-center bg-[#002045] min-h-[76px] rounded-r-[10px]">
+                      <div className=" flex items-center justify-center bg-[#002045] min-h-[78px] rounded-r-[10px]">
                         Hiring Sectors
                       </div>
                     </th>
