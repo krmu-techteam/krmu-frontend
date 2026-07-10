@@ -456,4 +456,20 @@ export const smasFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/manisha-bhaati.png",
   },
+
+   {
+    id: 115865,
+    slug: "dr-neha-singh",
+    title: {
+      rendered: "Dr. Neha Singh",
+    },
+    featured_media: 101428,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/Neha-Mam.png",
+  },
 ];
