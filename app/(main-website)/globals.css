@@ -5214,7 +5214,7 @@
 
 .vertical-line {
   width: 1px;
-  /* height: 450px; */
+  height: 80%;
   background: linear-gradient(
     to bottom,
     transparent,
@@ -5223,6 +5223,25 @@
     rgba(142, 170, 212, 0.08) 88%,
     transparent
   );
+  right: 0;
+  top: 10%;
+}
+
+@media (max-width: 768px) {
+  .vertical-line {
+    height: 1px;
+    width: 80%;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(142, 170, 212, 0.08) 12%,
+      rgba(142, 170, 212, 0.22) 50%,
+      rgba(142, 170, 212, 0.08) 88%,
+      transparent
+    );
+    left: 10%;
+    top: 110%;
+  }
 }
 
 .whatsappClass {

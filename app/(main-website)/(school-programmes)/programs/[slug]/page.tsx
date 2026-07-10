@@ -488,7 +488,15 @@ const page = async ({ params }: Props) => {
           (isMbaSlug ? (
             <LeaveWith />
           ) : slug === "b-tech-cse" ? (
-            <ResearchAndInnovation />
+            <>
+              <ResearchAndInnovation />
+              <BeyondClassroom
+                heading={beyondclassSection?.heading}
+                highlight={beyondclassSection?.highlightheading}
+                desc={beyondclassSection?.description}
+                beyondclassimages={beyondclassSection?.beyondclassroomimages}
+              />
+            </>
           ) : (
             <BeyondClassroom
               heading={beyondclassSection?.heading}

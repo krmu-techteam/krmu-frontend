@@ -127,10 +127,10 @@ const NewProgrammeScope = async ({
     >
       <div className="flex flex-col max-w-[1500px] mx-auto px-8 ">
         {/* Top Section: Image (Left) & Heading/Content (Right) */}
-        <div className="flex flex-col md:flex-row lg:flex-row  gap-8 lg:gap-12 items-center">
+        <div className="flex flex-col lg:flex-row  gap-8 lg:gap-12 items-center">
           {/* Left Column: Image */}
 
-          <div className="max-w-[45%]   relative rounded-[24px] overflow-hidden shadow-2xl border border-blue-900/30">
+          <div className="sm:max-w-full lg:max-w-[45%]   relative rounded-[24px] overflow-hidden shadow-2xl border border-blue-900/30">
             <Image
               src={`https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_635_0916216e9a.jpg`}
               width={1024}
@@ -141,7 +141,7 @@ const NewProgrammeScope = async ({
           </div>
 
           {/* Right Column: Heading & Content */}
-          <div className="  flex flex-col max-w-[51%] justify-center">
+          <div className="max-w-[95%] lg:max-w-[50%]  flex flex-col justify-center">
             <h3 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[35px] font-bold  mb-6 tracking-tight text-white text-left">
               B.Tech. CSE <br /> Programme Scope
             </h3>
@@ -195,10 +195,10 @@ const NewProgrammeScope = async ({
         </div>
 
         {/* Bottom Section: Skills Circle (Left) & Skills Checklist (Right) */}
-        <div className="flex gap-12  items-center pl-8 mt-20 md:mt-24">
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12  items-center pl-0 lg:pl-8 mt-20 md:mt-24">
           {/* Left Column: Skills Circle Badge */}
-          <div className=" min-w-[455px] flex justify-center items-center">
-            <div className="relative rounded-full w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:min-w-[455px] md:h-[455px] flex items-center justify-center ">
+          <div className=" min-w-full  lg:min-w-[455px] flex justify-center items-center">
+            <div className="relative rounded-full w-[350px] h-[350px] sm:w-[350px] sm:h-[350px] md:min-w-[455px] md:h-[455px] flex items-center justify-center ">
               {/* Outer Dashed Ring with slow rotating animation */}
               <svg
                 className="absolute inset-0 w-full h-full z-9"
