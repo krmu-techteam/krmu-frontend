@@ -85,7 +85,7 @@ export default function KRMUTimer({
   return (
     // <div className="flex flex-col md:flex-row text-center md:text-left items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-900 text-white px-4 py-2 rounded-xl shadow-md">
     <div
-      className={`flex  ${mainWebsiteTimer ? "flex-col-reverse lg:flex-row bg-[#cb000d] px-2 py-2 gap-2" : "flex-col md:flex-row bg-[#fcd404] px-4 py-2"}  text-center md:text-left items-center gap-2  text-black  rounded-xl ${!mainWebsiteTimer && "shadow-md"} `}
+      className={`flex  ${mainWebsiteTimer ? "flex-col-reverse lg:flex-row bg-[#051730] px-2 py-2 gap-2" : "flex-col md:flex-row bg-[#fcd404] px-4 py-2"}  text-center md:text-left items-center gap-2  text-black  rounded-xl ${!mainWebsiteTimer && "shadow-md"} `}
     >
       {/* <span className="text-xs uppercase tracking-wider font-semibold">
         Now or Never! Grab Your 100% Scholarship Today
@@ -96,7 +96,7 @@ export default function KRMUTimer({
       >
         Get Up to 100% Scholarship Worth ₹27 Cr + Opportunity to Fly to Europe | Apply Before It's Gone
         {mainWebsiteTimer && (
-          <span className="border-b border-white border-dotted">Apply Now</span>
+          <span className="border-b border-white border-dotted inline-block ml-2">Apply Now</span>
         )}
         {/* {mainWebsiteTimer && (
           <span className="border-b border-white border-dotted vi text-sm text-white pb-0.5 ml-2 font-semibold inline">
