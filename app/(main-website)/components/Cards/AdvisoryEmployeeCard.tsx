@@ -30,7 +30,7 @@ export const AdvisoryEmployeeCard = ({ name, imgUrl, qual, desg }: Props) => {
           width={272}
           height={295}
           alt={name}
-          className="h-full sm:h-[240px] md:h-[280px] rounded-t-[15px] relative z-10 object-contain group-hover:scale-103  duration-500 ease"
+          className="h-full sm:h-[240px] md:h-[270px] rounded-t-[15px] relative z-10 object-contain group-hover:scale-103  duration-500 ease"
           style={{
             boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
           }}
