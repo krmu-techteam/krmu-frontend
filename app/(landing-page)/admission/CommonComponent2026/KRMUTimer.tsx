@@ -92,7 +92,7 @@ export default function KRMUTimer({
       </span> */}
 
       <span
-        className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white" : "text-xs sm:text-sm"}`}
+        className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-xs sm:text-sm" : "text-xs sm:text-sm"}`}
       >
         Get Up to 100% Scholarship Worth ₹27 Cr + Opportunity to Fly to Europe | Apply Before It's Gone
         {mainWebsiteTimer && (
@@ -144,7 +144,7 @@ function TimeBox({
       className={`flex items-center gap-1 ${mainWebsiteTimer ? "bg-white tick-animation" : "bg-white"}  px-2 py-1 rounded-md`}
     >
       <span
-        className={` ${mainWebsiteTimer ? "font-medium" : "font-semibold text-black"}`}
+        className={` ${mainWebsiteTimer ? "font-medium text-black" : "font-semibold text-black"}`}
       >
         {value}
       </span>
