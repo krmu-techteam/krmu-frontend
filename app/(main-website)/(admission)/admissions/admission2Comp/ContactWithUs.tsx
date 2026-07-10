@@ -12,7 +12,7 @@ const ContactWithUs = () => {
         <div className="flex flex-wrap lg:flex-nowrap items-center gap-6 px-4 lg:px-0">
           <div className="w-full lg:w-3/12">
             <Link
-              href="tel:9311411717"
+              href="tel:8800697010"
               className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-md flex items-center break-all"
             >
               <div>
@@ -22,7 +22,7 @@ const ContactWithUs = () => {
               </div>
               <span className=" p-2.5 flex flex-wrap items-center lg:gap-2.5 text-sm font-semibold text-white">
                 <span className="font-semibold">Call Us:</span>
-                <span className="font-normal">9311411717</span>
+                <span className="font-normal">8800697010</span>
               </span>
             </Link>
           </div>

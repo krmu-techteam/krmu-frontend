@@ -32,9 +32,10 @@ const Curriculum = ({
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/syllabus_8ed0ea61db.png"
-            fill
-            className="object-cover xl:object-top 2xl:object-center"
+            src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Compress_Image_444f7b9b71.png"
+            width={1920}
+            height={1920}
+            className="object-cover xl:object-top 2xl:object-center w-full h-full"
             alt="Curriculum Background"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10" />

@@ -1,5 +1,6 @@
 import { getSchoolProgrammeData } from "@/lib/api/school-programmes";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
+
 import BeyondClassroom from "../../school-programmes-component/BeyondClassroom";
 import CareerProspects from "../../school-programmes-component/CareerProspects";
 import { ConnectWithUs } from "../../school-programmes-component/ConnectWithUs";
@@ -49,6 +50,39 @@ import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
 import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
 import { heroConfigs } from "@/components/school-programmes/programs/data/programs";
 import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
+import NewHeroSection from "@/components/school-programmes/programs/new-design-sections/components/heroSection";
+import LogoSection from "@/components/school-programmes/programs/new-design-sections/components/logoSection";
+import CareerOutcome from "@/components/school-programmes/programs/new-design-sections/components/careerOutcome";
+import MbaExists from "@/components/school-programmes/programs/new-design-sections/components/mbaExists";
+import TwoYearArc from "@/components/school-programmes/programs/new-design-sections/components/twoYearArc";
+import CareerGoal from "@/components/school-programmes/programs/new-design-sections/components/careerGoal";
+import LeaveWith from "@/components/school-programmes/programs/new-design-sections/components/leaveWith";
+import FacultyAndIndustry from "@/components/school-programmes/programs/new-design-sections/components/facultyAndIndustry";
+import ExperimentalInfra from "@/components/school-programmes/programs/new-design-sections/components/experimentalInfra";
+import Expectations from "@/components/school-programmes/programs/new-design-sections/components/expectations";
+import CareerProspectsNew from "@/components/school-programmes/programs/new-design-sections/components/careerProspects";
+import FeeFinance from "@/components/school-programmes/programs/new-design-sections/components/feeFinance";
+import HowToApply from "@/components/school-programmes/programs/new-design-sections/components/howToApply";
+import LocationNew from "@/components/school-programmes/programs/new-design-sections/components/location";
+import ThreeIndustryTracks from "@/components/school-programmes/programs/new-design-sections/components/threeIndustryTracks";
+import CommonQuestion from "@/components/school-programmes/programs/new-design-sections/components/commonQuestion";
+import OldCareerProspects from "@/components/school-programmes/programs/new-design-sections/components/oldCareerProspect";
+import {
+  getCareerGoalContent,
+  getCommonQuestionContent,
+  getContent,
+  getDigitalContent,
+  getDigitalExperimentalInfraContent,
+  getDigitalFacultyAndIndustryContent,
+  getDigitalGoalContent,
+  getExperimentalInfraContent,
+  getFacultyAndIndustryContent,
+  getIBMCommonQuestionContent,
+  getIBMContent,
+  getIBMEExperimentalInfraContent,
+  getIBMFacultyAndIndustryContent,
+  getIBMGoalContent,
+} from "@/components/school-programmes/programs/new-design-sections/lib/getContent";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -118,7 +152,7 @@ const page = async ({ params }: Props) => {
     // "bca-ai-data-science": BCAAIDStestimonialsData,
     "bba-digital-marketing": BBADigitalMarketingtestimonialsData,
     "bsc-forensic-science": BSCHonsForensicSciencetestimonialsData,
-    mba: MBAtestimonialsData,
+    // "mba": MBAtestimonialsData,
     "ba-hons-psychology": BSCHonsPhyscologytestimonialsData,
     // "bba-llb-hons": BBALLBtestimonialsData,
     // "llm": LLMtestimonialsData,
@@ -251,6 +285,11 @@ const page = async ({ params }: Props) => {
     ],
   });
 
+  const isMbaSlug =
+    slug === "mba-fintech" ||
+    slug === "mba" ||
+    slug === "mba-digital-marketing";
+
   return (
     <>
       <Script
@@ -273,31 +312,50 @@ const page = async ({ params }: Props) => {
       />
       <main className="school-prog-font temp-class">
         {/* {tags && <TagDiv tags={tags} extraClass="hidden test-class" />} */}
-        {heroSection && (
-          <ProgramHero
-            title={title || ""}
-            highlightitle={highlightTitle || ""}
-            heroSection={heroSection}
-            formId={heroSection?.formId}
-            slug={slug}
-            // allowedFormSlugs={allowedFormSlugs}
-            dreamcareerSection={dreamcareerSection}
-            logos={dreamcareerSection?.careerlogos}
-          />
-        )}
+        {heroSection &&
+          (isMbaSlug ? (
+            <NewHeroSection
+              formId={heroSection?.formId}
+              heroSection={heroSection}
+              dataContent={
+                slug === "mba-fintech"
+                  ? getContent()
+                  : slug === "mba"
+                    ? getIBMContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalContent()
+                      : null
+              }
+            />
+          ) : (
+            <ProgramHero
+              title={title || ""}
+              highlightitle={highlightTitle || ""}
+              heroSection={heroSection}
+              formId={heroSection?.formId}
+              slug={slug}
+              // allowedFormSlugs={allowedFormSlugs}
+              dreamcareerSection={dreamcareerSection}
+              logos={dreamcareerSection?.careerlogos}
+            />
+          ))}
 
-        {eligibilitySection && (
-          <Eligibility
-            elgibilities={eligibilitySection?.elgibility}
-            mobherobtn={eligibilitySection?.mobherobtn}
-            allowedFormSlugs={allowedFormSlugs}
-            slug={slug}
-            formId={heroSection?.formId}
-            heroSection={heroSection}
-            enableDownloadPros={enable_disable_download_pros}
-            prospectusBtn={programmeScopeSection?.scopebtn}
-          />
-        )}
+        {eligibilitySection &&
+          (isMbaSlug ? (
+            <LogoSection />
+          ) : (
+            <Eligibility
+              elgibilities={eligibilitySection?.elgibility}
+              mobherobtn={eligibilitySection?.mobherobtn}
+              allowedFormSlugs={allowedFormSlugs}
+              slug={slug}
+              formId={heroSection?.formId}
+              heroSection={heroSection}
+              enableDownloadPros={enable_disable_download_pros}
+              prospectusBtn={programmeScopeSection?.scopebtn}
+            />
+          ))}
+
         {!(slug in heroConfigs) && dreamcareerSection && (
           <DreamCareer
             heading={dreamcareerSection.heading}
@@ -306,25 +364,43 @@ const page = async ({ params }: Props) => {
           />
         )}
 
-        {programmeScopeSection && (
-          <ProgrammeScope
-            scopeData={programmeScopeSection}
-            heroSection={heroSection}
-            allowedFormSlugs={allowedFormSlugs}
-            slug={slug}
-          />
-        )}
-        {programmeHighlightSection && (
-          <ProgrammeHighlight
-            heading={programmeHighlightSection?.heading}
-            highlightHeading={programmeHighlightSection?.highlightheading}
-            desc={programmeHighlightSection?.subheading}
-            highlights={programmeHighlightSection?.programmehighlightcards}
-            slug={slug}
-          />
-        )}
+        {programmeScopeSection &&
+          (isMbaSlug ? (
+            <FacultyAndIndustry
+              slug={slug}
+              dataContent={
+                slug === "mba-fintech"
+                  ? getFacultyAndIndustryContent()
+                  : slug === "mba"
+                    ? getIBMFacultyAndIndustryContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalFacultyAndIndustryContent()
+                      : null
+              }
+            />
+          ) : (
+            <ProgrammeScope
+              scopeData={programmeScopeSection}
+              heroSection={heroSection}
+              allowedFormSlugs={allowedFormSlugs}
+              slug={slug}
+            />
+          ))}
 
-        {slug === "mba" && <SpecialisationsSection />}
+        {programmeHighlightSection &&
+          (isMbaSlug ? (
+            <CareerOutcome slug={slug} />
+          ) : (
+            <ProgrammeHighlight
+              heading={programmeHighlightSection?.heading}
+              highlightHeading={programmeHighlightSection?.highlightheading}
+              desc={programmeHighlightSection?.subheading}
+              highlights={programmeHighlightSection?.programmehighlightcards}
+              slug={slug}
+            />
+          ))}
+
+        {/* {slug === "mba" && <SpecialisationsSection />} */}
         {specialisationSection && (
           <Specialisation
             heading={specialisationSection?.heading}
@@ -332,109 +408,180 @@ const page = async ({ params }: Props) => {
             specialisations={specialisationSection?.specialisationcards}
           />
         )}
-        {admissionProcessSection && (
-          <AdmissionProcessComp
-            heading={admissionProcessSection?.heading}
-            highlight={admissionProcessSection?.highlightheading}
-            desc={admissionProcessSection?.description}
-            deskimg={admissionProcessSection?.desktopadmissionprocessimg}
-            admissionCards={admissionProcessSection?.admissionprocesscard}
-            admisbtn={admissionProcessSection?.admissionbtn}
-            slug={slug}
-            // formId={admissionProcessSection?.admissionFormId}
-          />
-        )}
-        {curriculumSection && (
-          <Curriculum
-            heading={curriculumSection?.heading}
-            highlight={curriculumSection?.highlightheading}
-            desc={curriculumSection?.description}
-            programStruct={curriculumSection?.years}
-            currbtn={curriculumSection?.currbtn}
-            currFormId={curriculumSection?.currFormId}
-            currFormContainerId={curriculumSection?.currContainerId}
-            isYear={curriculumSection?.only_years}
-            slug={slug}
-          />
-        )}
-        {labfacilitiesSection && (
-          <LabsFacilities
-            heading={labfacilitiesSection?.heading}
-            highlight={labfacilitiesSection?.highlightheading}
-            btn={labfacilitiesSection?.labbtn}
-            labimg={labfacilitiesSection?.labsimage}
-            labcontent={labfacilitiesSection?.labscontent}
-            labcards={labfacilitiesSection?.labcards}
-            slug={slug}
-          />
-        )}
+        {admissionProcessSection &&
+          (isMbaSlug ? (
+            <MbaExists />
+          ) : (
+            <AdmissionProcessComp
+              heading={admissionProcessSection?.heading}
+              highlight={admissionProcessSection?.highlightheading}
+              desc={admissionProcessSection?.description}
+              deskimg={admissionProcessSection?.desktopadmissionprocessimg}
+              admissionCards={admissionProcessSection?.admissionprocesscard}
+              admisbtn={admissionProcessSection?.admissionbtn}
+              slug={slug}
+              // formId={admissionProcessSection?.admissionFormId}
+            />
+          ))}
 
-        {beyondclassSection && (
-          <BeyondClassroom
-            heading={beyondclassSection?.heading}
-            highlight={beyondclassSection?.highlightheading}
-            desc={beyondclassSection?.description}
-            beyondclassimages={beyondclassSection?.beyondclassroomimages}
-          />
-        )}
-        {careerProspectsSection && (
-          <CareerProspects
-            heading={careerProspectsSection?.heading}
-            highlight={careerProspectsSection?.highlightheading}
-            desc={careerProspectsSection?.description}
-            btn={careerProspectsSection?.careerbtn}
-            careerimg={careerProspectsSection?.careerimg}
-            careercards={careerProspectsSection?.careercards}
-            slug={slug}
-            // careerFormId={careerProspectsSection?.careerFormId}
-          />
-        )}
+        {curriculumSection &&
+          (isMbaSlug ? (
+            <TwoYearArc />
+          ) : (
+            <Curriculum
+              heading={curriculumSection?.heading}
+              highlight={curriculumSection?.highlightheading}
+              desc={curriculumSection?.description}
+              programStruct={curriculumSection?.years}
+              currbtn={curriculumSection?.currbtn}
+              currFormId={curriculumSection?.currFormId}
+              currFormContainerId={curriculumSection?.currContainerId}
+              isYear={curriculumSection?.only_years}
+              slug={slug}
+            />
+          ))}
 
-        {financialAssistanceSection && (
-          <FinancialAssistance
-            heading={financialAssistanceSection?.heading}
-            highlightheading={financialAssistanceSection?.highlightheading}
-            description={financialAssistanceSection?.description}
-            point1={financialAssistanceSection?.point1}
-            point2={financialAssistanceSection?.point2}
-            point3={financialAssistanceSection?.point3}
-            point4={financialAssistanceSection?.point4}
-            point5={financialAssistanceSection?.point5}
-            point6={financialAssistanceSection?.point6}
-            point7={financialAssistanceSection?.point7}
-            logos={financialAssistanceSection?.financelogos}
-          />
-        )}
+        {labfacilitiesSection &&
+          (isMbaSlug ? (
+            <CareerGoal
+              slug={slug}
+              dataContent={
+                slug === "mba-fintech"
+                  ? getCareerGoalContent()
+                  : slug === "mba"
+                    ? getIBMGoalContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalGoalContent()
+                      : null
+              }
+            />
+          ) : (
+            <LabsFacilities
+              heading={labfacilitiesSection?.heading}
+              highlight={labfacilitiesSection?.highlightheading}
+              btn={labfacilitiesSection?.labbtn}
+              labimg={labfacilitiesSection?.labsimage}
+              labcontent={labfacilitiesSection?.labscontent}
+              labcards={labfacilitiesSection?.labcards}
+              slug={slug}
+            />
+          ))}
 
-        <ScholarshipBanner />
+        {beyondclassSection &&
+          (isMbaSlug ? (
+            <LeaveWith />
+          ) : (
+            <BeyondClassroom
+              heading={beyondclassSection?.heading}
+              highlight={beyondclassSection?.highlightheading}
+              desc={beyondclassSection?.description}
+              beyondclassimages={beyondclassSection?.beyondclassroomimages}
+            />
+          ))}
+
+        {careerProspectsSection &&
+          (isMbaSlug ? (
+            <ExperimentalInfra
+              dataContent={
+                slug === "mba-fintech"
+                  ? getExperimentalInfraContent()
+                  : slug === "mba"
+                    ? getIBMEExperimentalInfraContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalExperimentalInfraContent()
+                      : null
+              }
+            />
+          ) : (
+            <CareerProspects
+              heading={careerProspectsSection?.heading}
+              highlight={careerProspectsSection?.highlightheading}
+              desc={careerProspectsSection?.description}
+              btn={careerProspectsSection?.careerbtn}
+              careerimg={careerProspectsSection?.careerimg}
+              careercards={careerProspectsSection?.careercards}
+              slug={slug}
+              // careerFormId={careerProspectsSection?.careerFormId}
+            />
+          ))}
+
+        {financialAssistanceSection &&
+          (isMbaSlug ? (
+            <>
+              <Expectations />
+            </>
+          ) : (
+            <FinancialAssistance
+              heading={financialAssistanceSection?.heading}
+              highlightheading={financialAssistanceSection?.highlightheading}
+              description={financialAssistanceSection?.description}
+              point1={financialAssistanceSection?.point1}
+              point2={financialAssistanceSection?.point2}
+              point3={financialAssistanceSection?.point3}
+              point4={financialAssistanceSection?.point4}
+              point5={financialAssistanceSection?.point5}
+              point6={financialAssistanceSection?.point6}
+              point7={financialAssistanceSection?.point7}
+              logos={financialAssistanceSection?.financelogos}
+            />
+          ))}
+
+        {isMbaSlug ? <CareerProspectsNew slug={slug} /> : <ScholarshipBanner />}
 
         {testimonialsData && <ProgTestimonials data={testimonialsData} />}
-        {tocSection && (
-          <TableOfContent
-            heading={tocSection?.heading}
-            highlight={tocSection?.highlightheading}
-            desc={tocSection?.description}
-            tocfaqs={tocSection?.tocfaq}
-            tocimg={tocSection?.tocimg}
-            tocbtn={tocSection?.tocbtn}
-          />
+
+        {tocSection &&
+          (isMbaSlug ? (
+            <FeeFinance slug={slug} />
+          ) : (
+            <TableOfContent
+              heading={tocSection?.heading}
+              highlight={tocSection?.highlightheading}
+              desc={tocSection?.description}
+              tocfaqs={tocSection?.tocfaq}
+              tocimg={tocSection?.tocimg}
+              tocbtn={tocSection?.tocbtn}
+            />
+          ))}
+
+        {isMbaSlug ? (
+          <HowToApply formId={heroSection?.formId} heroSection={heroSection} />
+        ) : (
+          <ExplorePrograms currentSlug={slug} />
         )}
 
-        <ExplorePrograms currentSlug={slug} />
-
-        {ourLocationSection && (
-          <OurLocation
-            badgetext={ourLocationSection?.badgetext}
-            heading={ourLocationSection?.badgetext}
-            img1={ourLocationSection?.img1}
-            img2={ourLocationSection?.img2}
-          />
-        )}
+        {ourLocationSection &&
+          (isMbaSlug ? (
+            <LocationNew slug={slug} />
+          ) : (
+            <OurLocation
+              badgetext={ourLocationSection?.badgetext}
+              heading={ourLocationSection?.badgetext}
+              img1={ourLocationSection?.img1}
+              img2={ourLocationSection?.img2}
+            />
+          ))}
 
         {/* <ConnectWithUs /> */}
-        {singleSchoolProgramme?.school_category && (
-          <ActionCards schoolCat={singleSchoolProgramme.school_category} />
-        )}
+        {singleSchoolProgramme?.school_category &&
+          (isMbaSlug ? (
+            <>
+              <CommonQuestion
+                dataContent={
+                  slug === "mba-fintech"
+                    ? getCommonQuestionContent()
+                    : slug === "mba"
+                      ? getIBMCommonQuestionContent()
+                      : slug === "mba-digital-marketing"
+                        ? getCommonQuestionContent()
+                        : null
+                }
+              />
+              <ThreeIndustryTracks />
+            </>
+          ) : (
+            <ActionCards schoolCat={singleSchoolProgramme.school_category} />
+          ))}
       </main>
     </>
   );

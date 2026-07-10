@@ -6,8 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import FloatingButtons from "@/app/(main-website)/components/Footer/FloatingButtons";
 import NpfAgent from "@/app/NpfAgent";
-import LaunchpadPopup from "../LaunchpadPopup";
-import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
+// import LaunchpadPopup from "../LaunchpadPopup";
+// import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
 import { createCollegeSchema } from "@/lib/api/common";
 
 const Footer = async () => {
@@ -236,7 +236,7 @@ const Footer = async () => {
       >
         <KRMUTimer targetDate="2026-06-30T23:59:59" mainWebsiteTimer={true} />
       </Link> */}
-      <NpfAgent />
+    
       {/* <div className="fixed bottom-10 right-24">
         <a
           href="https://wa.me/8800697018?text=Hi"

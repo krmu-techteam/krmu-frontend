@@ -122,36 +122,36 @@ export const solaFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.Vagish-Mishra.jpg",
   },
-  {
-    id: 97591,
-    slug: "dr-mansi",
-    title: {
-      rendered: "Dr. Mansi Yadav",
-    },
-    featured_media: 97594,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant  Professor",
-      schools: [1152],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/03/Dr-Mansi-Yadav.png",
-  },
-  {
-    id: 93056,
-    slug: "ms-srishti-srivastava",
-    title: {
-      rendered: "Dr. Srishti Srivastava",
-    },
-    featured_media: 93060,
-    acf: {
-      "staff-qualification": "Ph.D. ",
-      staff_designation: "Assistant  Professor",
-      schools: [1152],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/03/Dr.-Srishti-Srivastava.png",
-  },
+  // {
+  //   id: 97591,
+  //   slug: "dr-mansi",
+  //   title: {
+  //     rendered: "Dr. Mansi Yadav",
+  //   },
+  //   featured_media: 97594,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant  Professor",
+  //     schools: [1152],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2025/03/Dr-Mansi-Yadav.png",
+  // },
+  // {
+  //   id: 93056,
+  //   slug: "ms-srishti-srivastava",
+  //   title: {
+  //     rendered: "Dr. Srishti Srivastava",
+  //   },
+  //   featured_media: 93060,
+  //   acf: {
+  //     "staff-qualification": "Ph.D. ",
+  //     staff_designation: "Assistant  Professor",
+  //     schools: [1152],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2025/03/Dr.-Srishti-Srivastava.png",
+  // },
   {
     id: 88911,
     slug: "dr-priya-sharma",
@@ -333,21 +333,21 @@ export const solaFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/06/Ms.-Muskan-Sethi.png",
   },
 
-  {
-    id: 43164,
-    slug: "ms-mansi-jatav",
-    title: {
-      rendered: "Ms. Mansi Jatav",
-    },
-    featured_media: 55312,
-    acf: {
-      "staff-qualification": "Ph.D. Pursuing",
-      staff_designation: "Assistant Professor",
-      schools: [1152],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Ms.-Mansi-Jatav.png",
-  },
+  // {
+  //   id: 43164,
+  //   slug: "ms-mansi-jatav",
+  //   title: {
+  //     rendered: "Ms. Mansi Jatav",
+  //   },
+  //   featured_media: 55312,
+  //   acf: {
+  //     "staff-qualification": "Ph.D. Pursuing",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1152],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Ms.-Mansi-Jatav.png",
+  // },
 
   {
     id: 10814,

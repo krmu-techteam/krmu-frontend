@@ -28,9 +28,9 @@ export default function InternationalHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-[9999999999999] bg-[#071C38] shadow-md px-5">
+    <header className="bg-[#071C38] shadow-md px-5 w-full">
       <div className="mx-auto max-w-[1664px]">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-20 items-center justify-between gap-5 lg:gap-0">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
@@ -53,13 +53,13 @@ export default function InternationalHeader() {
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="#apply-section"
-              // highlightClass="flash-border"
-              className="rounded-md bg-[#E31B23] px-6 py-2 text-sm font-semibold text-white transition hover:bg-[#c6151d]"
+            <ScrollButton
+              targetId="apply-section"
+              highlightClass="flash-border"
+              btnClass="rounded-md bg-[#E31B23] px-6 py-2 text-sm font-semibold text-white transition hover:bg-[#c6151d] cursor-pointer"
             >
               Apply Now
-            </Link>
+            </ScrollButton>
           </nav>
 
           {/* Mobile Button */}
@@ -74,8 +74,9 @@ export default function InternationalHeader() {
 
       {/* Mobile Menu */}
       <div
-        className={`overflow-hidden bg-[#071C38] transition-all duration-300 lg:hidden ${open ? "max-h-96" : "max-h-0"
-          }`}
+        className={`overflow-hidden bg-[#071C38] transition-all duration-300 lg:hidden ${
+          open ? "max-h-96" : "max-h-0"
+        }`}
       >
         <div className="space-y-2 px-5 py-4">
           {menus.map((item) => (
@@ -89,9 +90,13 @@ export default function InternationalHeader() {
             </Link>
           ))}
 
-          <Link href="#" className="mt-3 w-full rounded-md bg-[#E31B23] p-3 font-semibold text-white">
+          <ScrollButton
+            targetId="apply-section"
+            highlightClass="flash-border"
+            btnClass="mt-3 w-full rounded-md bg-[#E31B23] p-3 font-semibold text-white cursor-pointer"
+          >
             Apply Now
-          </Link>
+          </ScrollButton>
         </div>
       </div>
     </header>

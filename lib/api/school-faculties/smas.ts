@@ -168,21 +168,21 @@ export const smasFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Parakh-Basist.png",
   },
-  {
-    id: 9126,
-    slug: "ms-farheen",
-    title: {
-      rendered: "Dr. Farheen",
-    },
-    featured_media: 9127,
-    acf: {
-      "staff-qualification": "(M.Pharm, PhD) (Pharmaceutics)",
-      staff_designation: "Assistant  Professor",
-      schools: [1098],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Farheen.png",
-  },
+  // {
+  //   id: 9126,
+  //   slug: "ms-farheen",
+  //   title: {
+  //     rendered: "Dr. Farheen",
+  //   },
+  //   featured_media: 9127,
+  //   acf: {
+  //     "staff-qualification": "(M.Pharm, PhD) (Pharmaceutics)",
+  //     staff_designation: "Assistant  Professor",
+  //     schools: [1098],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Farheen.png",
+  // },
 
   // {
   //   id: 9021,
@@ -350,21 +350,21 @@ export const smasFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2023/10/Mr.-Yash-Jasoria.jpg",
   },
-  {
-    id: 113427,
-    slug: "ms-vinita",
-    title: {
-      rendered: "Ms. Vinita",
-    },
-    featured_media: 101428,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant Professor",
-      schools: [],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/01/Ms.-Vinita.png",
-  },
+  // {
+  //   id: 113427,
+  //   slug: "ms-vinita",
+  //   title: {
+  //     rendered: "Ms. Vinita",
+  //   },
+  //   featured_media: 101428,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/01/Ms.-Vinita.png",
+  // },
   {
     id: 113766,
     slug: "dr-madhuri-grover",
@@ -409,5 +409,51 @@ export const smasFaculties: SchoolFacultiesType[] = [
     },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Khushboo-Saxena-1.png",
+  },
+
+  {
+    id: 115850,
+    slug: "dr-arun-parashar",
+    title: {
+      rendered: "Dr. Arun Parashar",
+    },
+    featured_media: 101428,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor (Selection Grade)",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/Arun-Parashar-SMAS.png",
+  },
+  {
+    id: 115852,
+    slug: "dr-sonia-yadav",
+    title: {
+      rendered: "Dr. Sonia Yadav",
+    },
+    featured_media: 101428,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Associate Professor",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/Dr.-Sonia-Yadav.png",
+  },
+  {
+    id: 115857,
+    slug: "dr-manisha-bhatti",
+    title: {
+      rendered: "Dr. Manisha Bhatti",
+    },
+    featured_media: 101428,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/manisha-bhaati.png",
   },
 ];

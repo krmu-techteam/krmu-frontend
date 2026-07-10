@@ -5,7 +5,7 @@ const GlobalLearning = () => {
   const { title, subtitle, topLogos, bottomLogos } = globalLearningData;
 
   return (
-    <section className="bg-[#001328] py-10 px-5 overflow-hidden">
+    <section className="bg-[#001328] py-10 xl:py-20 px-5 overflow-hidden">
       <div className="max-w-[1427px] mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
         {/* Left Content */}
         <div className="w-full lg:w-2/5 text-white">

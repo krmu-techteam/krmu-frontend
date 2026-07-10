@@ -94,8 +94,7 @@ export default function KRMUTimer({
       <span
         className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-[10px] sm:text-sm" : "text-[12px]"}`}
       >
-        Registration Closing on July 2 | Join Sameeksha Sud LIVE | Limited Seats
-        Available
+        Get Up to 100% Scholarship Worth ₹27 Cr + Opportunity to Fly to Europe | Apply Before It's Gone
         {mainWebsiteTimer && (
           <span className="border-b border-white border-dotted">Apply Now</span>
         )}

@@ -31,7 +31,7 @@ export const CommonHeader = () => {
             Apply Now
           </button> */}
           {/* <AnimatedCounter targetDate="February 28, 2026 6:30 PM" /> */}
-          <KRMUTimer targetDate="2026-07-02T23:59:59" />
+          <KRMUTimer targetDate="2026-07-11T23:59:59" />
       
 
           <ScrollButton
