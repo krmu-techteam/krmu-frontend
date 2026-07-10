@@ -113,17 +113,17 @@ export const BreakDown = () => {
 
         {/* Collapsible Content */}
         <div
-          className={`w-full px-12 overflow-hidden transition-all duration-500 ease-in-out ${
+          className={` relative w-full px-12 overflow-hidden transition-all duration-500 ease-in-out ${
             isOpen
               ? "max-h-[2500px] opacity-100"
               : "max-h-0 opacity-0 pointer-events-none"
           }`}
         >
-          <div className="relative max-w-[1500px] mx-auto">
+          <div className=" max-w-[1500px] mx-auto">
             {/* Close Button X */}
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 sm:top-0 sm:right-6 text-black transition-all p-2 rounded-full cursor-pointer"
+              className="absolute hidden sm:block sm:top-6 sm:right-[3%] 2xl:right-[12%]  text-black transition-all p-2 rounded-full cursor-pointer"
               aria-label="Close details "
             >
               <svg
