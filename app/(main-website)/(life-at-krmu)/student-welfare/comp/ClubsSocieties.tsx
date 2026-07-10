@@ -9,7 +9,7 @@ const playfair = Playfair_Display({
 
 const ClubsSocieties = () => {
   return (
-    <section className=" flex justify-center h-[800px]  py-12 px-12 bg-cover bg-center bg-no-repeat bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1403_e55adcc5a7.jpg)]">
+    <section className=" flex justify-center h-[1000px] xl:h-[800px]  py-12 px-12 bg-cover bg-center bg-no-repeat bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1403_e55adcc5a7.jpg)]">
       {/* <Image
         src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1403_e55adcc5a7.jpg"
         alt="Students sitting together on campus lawn"

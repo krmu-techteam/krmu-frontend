@@ -1,4 +1,4 @@
-import { Playfair_Display } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -6,33 +6,44 @@ const playfair = Playfair_Display({
   style: ["italic", "normal"],
 });
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["italic", "normal"],
+});
+
 const WelfareHero = () => {
   return (
     <section className="bg-[#051630] ">
       <div
-        className="h-[300px] sm:h-[340px] md:h-[510px] lg:h-[450px] xl:h-[600px] 2xl:h-[700px] bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1407_6a699f3b68.jpg)] bg-cover bg-no-repeat"
+        className="h-[300px] sm:h-[340px] md:h-[510px] lg:h-[450px] xl:h-[600px] 2xl:h-[750px] bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1407_6a699f3b68.jpg)] bg-cover bg-no-repeat"
         style={{ backgroundPosition: "center 5%" }}
       />
 
-      <div className="max-w-[1650px] mx-auto  bg-[#051630] px-4 pb-[60px]">
+      <div className="max-w-[1650px] mx-auto  bg-[#051630] px-4 sm:px-10 pb-8 sm:pb-12">
         <div className="flex justify-center items-center text-center flex-col max-w-[1550px] mx-auto w-full text-white welfare_desg_int">
           <h1
-            className={`${playfair.className}   font-semibold leading-[1.25] text-[34px] sm:text-5xl md:text-6xl lg:text-[80px] xl:text-[104px] bg-clip-text text-transparent -mt-[36px] sm:-mt-[52px] md:-mt-[64px] lg:-mt-[90px] xl:-mt-[105px] mb-6 `}
+            className={`${playfair.className}   font-semibold leading-[1.25] text-[28px] sm:text-4xl md:text-[54px] lg:text-[75px] xl:text-[102px] bg-clip-text text-transparent -mt-[36px] sm:-mt-[52px] md:-mt-[64px] lg:-mt-[90px] xl:-mt-[105px] mb-6 `}
             style={{
               backgroundImage:
                 "linear-gradient(90deg,#FF9D00 0%,#68BCFF 50%,#FF1D21 100%)",
+              boxShadow: "0px 20px 4px 0px #00000080",
             }}
           >
             Empowering Students Beyond Classrooms.
           </h1>
 
-          <h3 className="flex flex-wrap items-center gap-y-2 text-[10px]  md:text-base lg:text-[22px] font-semibold tracking-[0.18em] uppercase mb-6">
+          <p
+            className={`${poppins.className} flex flex-wrap items-center justify-center gap-y-2 text-[10px]  md:text-base lg:text-[22px] xl:text-[31px] font-semibold tracking-[0.18em] uppercase mb-6`}
+          >
             <span className="mr-2">Student Welfare at</span>
             <span className="bg-[#0063B0] ">K.R. Mangalam </span>
             <span className="bg-[#F7000E] pl-1 "> University</span>
-          </h3>
+          </p>
 
-          <div className="space-y-4 text-sm md:text-[15px] leading-[1.8] max-w-[760px] text-white/85">
+          <div
+            className={`${poppins.className} space-y-4 text-sm md:text-[23px] font-light max-w-[1058px] text-[#CDE9FF]`}
+          >
             <p>
               The Department of Student Welfare (DSW) is committed to creating a
               supportive, inclusive, and student-friendly campus environment. It

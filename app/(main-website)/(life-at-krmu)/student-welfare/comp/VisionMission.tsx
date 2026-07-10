@@ -56,7 +56,7 @@ const VisionMission = () => {
           />
         </div>
 
-        <div className="relative z-10 grid  lg:grid-cols-[60%_40%]">
+        <div className="relative z-10 grid  lg:grid-cols-[57%_43%] lxl:grid-cols-[60%_40%]">
           <div className="mb-10">
             <h2
               className={`${playfair.className} max-w-[650px] text-[36px] font-bold leading-[1.2] text-white md:text-[64px]`}
@@ -85,12 +85,12 @@ const VisionMission = () => {
               alt="Student leader"
               width={1500}
               height={1500}
-              className="absolute w-[600px] h-[610px] right-[10%]  top-[-20%] object-cover"
+              className="absolute w-[100%]  h-[450px] bottom-0  xl:w-[600px] xl:h-[610px] xl:right-[10%]  xl:top-[-20%] object-cover"
             />
           </div>
         </div>
 
-        <div className="relative z-20  grid gap-3 md:grid-cols-2 md:gap-2 ">
+        <div className="relative z-20  grid gap-3 lg:grid-cols-2 md:gap-2 ">
           <article className="rounded-md  bg-[linear-gradient(180deg,#E7C268_0%,#FFFFFF_100%)] pb-7 text-black">
             <h3
               className={`${playfair.className}  bg-[#002b57] m-2 rounded-md px-8 py-6 text-center text-[38px] font-bold leading-none text-white`}
@@ -120,7 +120,7 @@ const VisionMission = () => {
         </div>
       </div>
 
-      <div className="mx-auto pt-12 grid w-full max-w-[1550px] gap-5 md:grid-cols-3">
+      <div className="mx-auto pt-12 grid w-full max-w-[1550px] gap-5 md:grid-cols-2 lg:grid-cols-3">
         {welfareCards.map((card) => (
           <article
             key={card.title}
@@ -131,7 +131,6 @@ const VisionMission = () => {
                 src={card.image}
                 alt={card.alt}
                 fill
-                sizes="(min-width: 1024px) 31vw, (min-width: 768px) 33vw, 100vw"
                 className="object-cover"
               />
             </div>
