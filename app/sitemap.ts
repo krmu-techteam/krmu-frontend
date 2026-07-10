@@ -79,6 +79,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/other-links/sitemap`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/course/btech-colleges-gurgaon`,
       changeFrequency: "monthly",
       priority: 0.7,

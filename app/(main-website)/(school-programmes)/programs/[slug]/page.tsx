@@ -50,6 +50,9 @@ import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
 import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
 import { heroConfigs } from "@/components/school-programmes/programs/data/programs";
 import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
+import ResearchAndInnovation from "../../school-programmes-component/ResearchAndInnovation";
+import { WhyKrmuCse } from "../../school-programmes-component/WhyKrmuCse";
+import NewProgrammeScope from "../../school-programmes-component/NewProgrammeScope";
 import NewHeroSection from "@/components/school-programmes/programs/new-design-sections/components/heroSection";
 import LogoSection from "@/components/school-programmes/programs/new-design-sections/components/logoSection";
 import CareerOutcome from "@/components/school-programmes/programs/new-design-sections/components/careerOutcome";
@@ -83,6 +86,7 @@ import {
   getIBMFacultyAndIndustryContent,
   getIBMGoalContent,
 } from "@/components/school-programmes/programs/new-design-sections/lib/getContent";
+import { ProgrammeOverview } from "../../school-programmes-component/ProgrammeOverview";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -378,6 +382,16 @@ const page = async ({ params }: Props) => {
                       : null
               }
             />
+          ) : slug === "b-tech-cse" ? (
+            <>
+              <ProgrammeOverview />
+              <NewProgrammeScope
+                scopeData={programmeScopeSection}
+                heroSection={heroSection}
+                allowedFormSlugs={allowedFormSlugs}
+                slug={slug}
+              />
+            </>
           ) : (
             <ProgrammeScope
               scopeData={programmeScopeSection}
@@ -402,11 +416,14 @@ const page = async ({ params }: Props) => {
 
         {/* {slug === "mba" && <SpecialisationsSection />} */}
         {specialisationSection && (
-          <Specialisation
-            heading={specialisationSection?.heading}
-            highlightheading={specialisationSection?.highlightheading}
-            specialisations={specialisationSection?.specialisationcards}
-          />
+          <>
+            {slug === "b-tech-cse" && <WhyKrmuCse />}
+            <Specialisation
+              heading={specialisationSection?.heading}
+              highlightheading={specialisationSection?.highlightheading}
+              specialisations={specialisationSection?.specialisationcards}
+            />
+          </>
         )}
         {admissionProcessSection &&
           (isMbaSlug ? (
@@ -470,6 +487,16 @@ const page = async ({ params }: Props) => {
         {beyondclassSection &&
           (isMbaSlug ? (
             <LeaveWith />
+          ) : slug === "b-tech-cse" ? (
+            <>
+              <ResearchAndInnovation />
+              <BeyondClassroom
+                heading={beyondclassSection?.heading}
+                highlight={beyondclassSection?.highlightheading}
+                desc={beyondclassSection?.description}
+                beyondclassimages={beyondclassSection?.beyondclassroomimages}
+              />
+            </>
           ) : (
             <BeyondClassroom
               heading={beyondclassSection?.heading}

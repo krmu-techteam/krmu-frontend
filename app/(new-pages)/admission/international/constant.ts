@@ -854,7 +854,7 @@ export const beginHubData: BeginHubSection = {
     { text: "₹60,000 Annual Fellowship" },
   ],
   mapImage: {
-    src: "/landingpage/common/map.webp",
+    src: "/international-admission/int-map.jpeg",
     alt: "Campus Location Map",
     width: 520,
     height: 300,
@@ -940,44 +940,44 @@ export type WorldClassSection = {
 export const WorldClassData: WorldClassSection = {
   heading: "World-Class Facilities & Infrastructure",
   slides: [
-    {
-      image: "/landingpage/common/infra/1.webp",
-      alt: "KRMU smart classroom / lab facility",
-    },
-    {
-      image: "/landingpage/common/infra/2.webp",
+   {
+      image: "/international-admission/infra/1.jpg",
       alt: "KRMU central library with digital resources",
     },
     {
-      image: "/landingpage/common/infra/3.webp",
+      image: "/international-admission/infra/2.jpg",
+      alt: "KRMU central library with digital resources",
+    },
+    {
+      image: "/international-admission/infra/3.jpg",
       alt: "KRMU computer and analytics lab",
     },
     {
-      image: "/landingpage/common/infra/4.webp",
+      image: "/international-admission/infra/4.jpg",
       alt: "KRMU seminar hall facility",
     },
     {
-      image: "/landingpage/common/infra/5.webp",
+      image: "/international-admission/infra/5.jpg",
       alt: "KRMU innovation and entrepreneurship space",
     },
     {
-      image: "/landingpage/common/infra/6.webp",
+      image: "/international-admission/infra/6.jpg",
       alt: "KRMU skill development facility",
     },
     {
-      image: "/landingpage/common/infra/7.webp",
+      image: "/international-admission/infra/7.jpg",
       alt: "KRMU campus infrastructure",
     },
     {
-      image: "/landingpage/common/infra/8.webp",
+      image: "/international-admission/infra/8.jpg",
       alt: "KRMU academic facility",
     },
     {
-      image: "/landingpage/common/infra/9.webp",
+      image: "/international-admission/infra/9.jpg",
       alt: "KRMU campus facility",
     },
     {
-      image: "/landingpage/common/infra/10.webp",
+      image: "/international-admission/infra/10.jpg",
       alt: "KRMU campus facility",
     },
   ],

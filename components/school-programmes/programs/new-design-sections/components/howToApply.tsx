@@ -148,14 +148,14 @@ const HowToApply = ({ formId, heroSection }: Props) => {
                 />
               )}
 
-              <span
+              {/* <span
                 className={`${poppins.className} text-xs sm:text-[16px] text-black`}
               >
                 or call an admissions counsellor –{" "}
                 <Link href={`tel:${content.cta.phoneNumber}`}>
                   +91 93114 11717
                 </Link>
-              </span>
+              </span> */}
             </div>
           </div>
         </div>
