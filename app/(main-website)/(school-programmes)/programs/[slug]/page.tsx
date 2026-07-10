@@ -87,6 +87,7 @@ import {
   getIBMGoalContent,
 } from "@/components/school-programmes/programs/new-design-sections/lib/getContent";
 import { ProgrammeOverview } from "../../school-programmes-component/ProgrammeOverview";
+import { BreakDown } from "../../school-programmes-component/BreakDown";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -531,6 +532,8 @@ const page = async ({ params }: Props) => {
               // careerFormId={careerProspectsSection?.careerFormId}
             />
           ))}
+
+        {slug === "b-tech-cse" && <BreakDown />}
 
         {financialAssistanceSection &&
           (isMbaSlug ? (
