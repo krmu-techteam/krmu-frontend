@@ -79,10 +79,10 @@ const TeamMember = () => {
           {teamMembers.map((member) => (
             <article
               key={`${member.id}`}
-              className="flex min-h-[300px] flex-col items-center justify-center rounded-md bg-[#EDE3C7] px-5 pb-5 pt-4 text-center"
+              className="flex min-h-[387px]  w-full flex-col items-center justify-center rounded-md bg-[#EDE3C7] px-5 pb-5 pt-4 text-center"
             >
               <div
-                className="relative mb-4 h-[250px] w-[250px] overflow-hidden rounded-full shadow-[0_16px_35px_rgba(15,23,42,0.08)]"
+                className="relative mb-4 h-[262px] w-[262px] overflow-hidden rounded-full shadow-[0_16px_35px_rgba(15,23,42,0.08)]"
                 style={{ background: member.ringClass }}
               >
                 <Image
@@ -93,10 +93,10 @@ const TeamMember = () => {
                 />
               </div>
 
-              <h4 className="text-[18px] font-bold leading-tight text-black">
+              <h4 className="text-[20px] font-bold leading-tight text-black">
                 {member.name}
               </h4>
-              <p className="mt-1 text-[18px] leading-tight text-black">
+              <p className="mt-1 text-[20px] leading-tight text-black">
                 {member.role}
               </p>
             </article>

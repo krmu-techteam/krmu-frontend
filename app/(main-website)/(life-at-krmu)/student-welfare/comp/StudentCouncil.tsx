@@ -152,7 +152,7 @@ const StudentCouncil = () => {
 
   return (
     <>
-      <section className={` bg-[#F0F3F9] px-8 sm:px-8 md:px-12 py-12 md:py-12`}>
+      <section className="bg-[#F0F3F9] px-4 sm:px-6 md:px-12 py-12">
         <div className="mx-auto w-full max-w-[1550px]">
           <h2
             className={`${playfair.className} mb-8 text-center text-3xl font-bold text-[#0a1d3a] md:mb-10 md:text-4xl lg:text-[42px]`}
@@ -160,18 +160,18 @@ const StudentCouncil = () => {
             Student Council
           </h2>
 
-          <div className="flex flex-col items-center gap-10 rounded-2xl border-4 border-white bg-[#EDF5FF] p-4 md:flex-row md:items-stretch md:gap-8 md:p-6 min-h-[350px]">
-            <div className="w-full flex-shrink-0 overflow-hidden rounded-2xl md:w-[440px] lg:w-[650px]">
+          <div className="flex flex-col xl:flex-row items-center gap-6 rounded-2xl border-4 border-white bg-[#EDF5FF] p-4   md:gap-8 md:p-6 shadow-sm">
+            <div className="w-full flex-shrink-0 overflow-hidden rounded-2xl h-[150px] sm:h-[300px] md:h-auto md:w-full lg:w-full xl:w-[50%]">
               <Image
-                src="/student-welfare/council.jpeg"
-                width={1000}
-                height={1000}
+                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_613_b9d03772ce.jpg"
+                width={1440}
+                height={1440}
                 alt="K.R. Mangalam University Student Council"
-                className=" h-full w-full object-fit"
+                className="h-full w-full object-cover"
               />
             </div>
 
-            <p className="self-center text-justify text-sm leading-[1.85] font-medium text-[#0a1d3a]  md:text-[16px]">
+            <p className="self-center text-justify text-sm leading-[1.85] font-medium text-[#0a1d3a] md:text-[16px]">
               The K.R. Mangalam University Student Council serves as the
               representative body of the student community, acting as a vital
               link between students and the university administration. Working
@@ -188,7 +188,7 @@ const StudentCouncil = () => {
         </div>
       </section>
 
-      <section className={` bg-[#F0F3F9] px-8 pb-10  md:px-12`}>
+      <section className="bg-[#F0F3F9] px-4 sm:px-6 md:px-12 pb-12">
         <div className="mx-auto w-full max-w-[1550px]">
           <h3
             className={`${playfair.className} mb-6 text-center text-[30px] font-bold leading-tight text-black md:text-[34px]`}
@@ -196,29 +196,27 @@ const StudentCouncil = () => {
             Student Council Members
           </h3>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-center">
             {data.slice(0, visibleCount).map((member, index) => (
               <article
                 key={`${member.name}-${member.role}`}
-                className="flex min-h-[375px] flex-col items-center   rounded-xl bg-[#EDE3C7] px-5 pb-5 pt-4 text-center"
+                className="flex min-h-[385px] flex-col items-center rounded-xl bg-[#EDE3C7] px-5 pb-5 pt-4 text-center shadow-sm w-full max-w-[300px] sm:max-w-none mx-auto hover:shadow-md transition-all duration-300"
               >
-                <div
-                  className={`relative mb-4 h-[235px] w-full overflow-hidden rounded-lg   bg-white  shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
-                >
+                <div className="relative mb-4 h-[235px] w-full overflow-hidden rounded-lg bg-white shadow-[0_16px_35px_rgba(15,23,42,0.08)]">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover  "
+                    className="object-cover"
                     priority={index < 5}
                   />
                 </div>
                 <h4
-                  className={`${playfair.className} text-[18px] font-bold leading-tight text-black`}
+                  className={`${playfair.className} text-lg font-bold leading-tight text-black`}
                 >
                   {member.name}
                 </h4>
-                <p className="mt-1 text-[18px] leading-tight text-black">
+                <p className="mt-1 text-sm md:text-[15px] font-semibold leading-tight text-gray-800">
                   {member.role}
                 </p>
               </article>
@@ -229,7 +227,7 @@ const StudentCouncil = () => {
             <div className="mt-10 flex justify-center">
               <button
                 onClick={() => setVisibleCount(data.length)}
-                className="px-6 py-2 rounded-md bg-[#051730] text-white hover:bg-gray-800 transition cursor-pointer"
+                className="px-6 py-2.5 rounded-md bg-[#051730] text-white hover:bg-gray-800 active:scale-95 shadow-sm transition cursor-pointer font-semibold text-sm"
               >
                 Load More
               </button>
@@ -238,26 +236,26 @@ const StudentCouncil = () => {
         </div>
       </section>
 
-      <section className={` bg-[#F0F3F9] px-8 sm:px-8 md:px-12 pb-12`}>
+      <section className="bg-[#F0F3F9] px-4 sm:px-6 md:px-12 pb-16">
         <div className="mx-auto w-full max-w-[1550px]">
-          <div className="flex flex-col items-center gap-10 rounded-2xl border-4 border-white bg-[#DAE9FF] p-4 md:flex-row md:items-stretch md:gap-8 md:p-8 min-h-[350px]">
-            <div className="w-full flex-shrink-0 overflow-hidden rounded-4xl md:w-[440px]  lg:w-[460px]">
+          <div className="flex flex-col items-center gap-8 rounded-2xl border-4 border-white bg-[#DAE9FF] p-4 md:flex-row md:items-stretch md:gap-8 md:p-8 shadow-sm">
+            <div className="w-full flex-shrink-0 overflow-hidden rounded-3xl h-[260px] sm:h-[340px] md:h-auto md:w-[350px] lg:w-[440px]">
               <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_608_0f98d1ae42.jpg"
                 width={1000}
                 height={1000}
                 alt="K.R. Mangalam University Student Council"
-                className=" h-full w-full object-fit"
+                className="h-full w-full object-cover"
               />
             </div>
-            <div>
+            <div className="flex flex-col justify-center">
               <h2
-                className={`${playfair.className}  text-3xl font-bold text-[#004865] mb-4 md:text-4xl lg:text-[42px]`}
+                className={`${playfair.className} text-3xl font-bold text-[#004865] mb-4 md:text-4xl lg:text-[42px]`}
               >
                 Best Student Council Member
               </h2>
 
-              <p className=" text-justify text-sm leading-[1.85] font-medium text-[#000000]  md:text-[16px]">
+              <p className="text-justify text-sm leading-[1.85] font-medium text-[#000000] md:text-[16px]">
                 Being recognized as the Best Student Council Member is truly an
                 honor and a moment of immense gratitude. This achievement is not
                 just mine, but a reflection of the constant support, guidance,
@@ -273,10 +271,10 @@ const StudentCouncil = () => {
                 towards creating a more engaging, inclusive, and vibrant campus
                 environment.
               </p>
-              <p className=" text-justify text-sm leading-[1.85] font-bold mt-4 text-[#000000]  md:text-[16px]">
+              <p className="text-justify text-sm leading-[1.85] font-bold mt-4 text-[#000000] md:text-[16px]">
                 Nirdesh Jain,
               </p>
-              <span className=" text-justify text-sm leading-[1.85]  text-[#000000]  md:text-[16px]">
+              <span className="text-justify text-sm leading-[1.85] text-[#000000] md:text-[16px]">
                 Cultural Coordinator
               </span>
             </div>

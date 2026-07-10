@@ -27,7 +27,7 @@ const WelfareHero = () => {
             style={{
               backgroundImage:
                 "linear-gradient(90deg,#FF9D00 0%,#68BCFF 50%,#FF1D21 100%)",
-              boxShadow: "0px 20px 4px 0px #00000080",
+              textShadow: "0px 20px 4px 0px #00000080",
             }}
           >
             Empowering Students Beyond Classrooms.
