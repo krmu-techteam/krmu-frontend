@@ -6,8 +6,8 @@ import {
 
 interface HomePageSchema {
   websiteSchema: string;
-  organizationSchema: string;
-  collageOrUniversitySchema: string;
+  educationalOrganizationSchema: string;
+  collegeOrUniversitySchema: string;
 }
 
 export class HomeSchemaService {
@@ -30,7 +30,7 @@ export class HomeSchemaService {
         ...this.base,
         searchPath: "https://www.krmangalam.edu.in/search?q=",
       }),
-      organizationSchema: createOrganizationSchema({
+      educationalOrganizationSchema: createOrganizationSchema({
         ...this.base,
         contactPoint: {
           telephone: "+91-8192888444",
@@ -39,7 +39,32 @@ export class HomeSchemaService {
           availableLanguage: "en",
         },
       }),
-      collageOrUniversitySchema: createCollageOrUniversitySchema(this.base),
+      collegeOrUniversitySchema: createCollageOrUniversitySchema({
+        ...this.base,
+        award: "NAAC 'A' Grade",
+        numberOfEmployees: {
+          name: "Faculty",
+          value: 700,
+        },
+        amenityFeature: [
+          {
+            name: "Campus Area",
+            value: "35+ acres",
+          },
+          {
+            name: "Total Students",
+            value: "12000+",
+          },
+          {
+            name: "Recruiting Companies",
+            value: "800+",
+          },
+          {
+            name: "Highest Package",
+            value: "56.6 LPA",
+          },
+        ],
+      }),
     };
   }
 }
