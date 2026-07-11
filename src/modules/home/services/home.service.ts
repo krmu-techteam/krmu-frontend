@@ -1,6 +1,7 @@
 import { TestimonialItem } from "@/lib/constants/testimonial";
 import { IHomeRepository, IHomeService } from "../interfaces";
 import { HomeComponentMap, HomePageComponent } from "../types";
+import { WPNewsEventsResponse } from "@/lib/types/news-events";
 
 export class HomeService implements IHomeService {
   constructor(private readonly repository: IHomeRepository) {}
@@ -18,9 +19,11 @@ export class HomeService implements IHomeService {
     );
   }
 
-  async getNewsEvents(page: number = 1, perPage: number = 10) {
-    const { getHomeNewsEvents } = await import("./index");
-    return await getHomeNewsEvents(page, perPage);
+  async getNewsEvents(
+    page: number = 1,
+    perPage: number = 10,
+  ): Promise<WPNewsEventsResponse> {
+    return await this.repository.getNewsEvents(page, perPage);
   }
 
   async getTestimonials(): Promise<TestimonialItem[]> {

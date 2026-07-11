@@ -1,5 +1,5 @@
 import { FETCH_STRAPI_URL, KRMUWordUrl } from "@/app/constant";
-import { NewsEventsPageResponse } from "../types/news-events";
+import { NewsEventsPageResponse, WPNewsEventsResponse } from "../types/news-events";
 
 export async function getNewsEvents(): Promise<NewsEventsPageResponse["data"] | null> {
   try {
@@ -78,7 +78,10 @@ export async function getAllNewsAndEventsWithMeta(
 // locale: ['en'],
 // }
 
-export async function getNewsEventsWP(page = 1, perPage = 10) {
+export async function getNewsEventsWP(
+  page = 1,
+  perPage = 10
+): Promise<WPNewsEventsResponse> {
   try {
     const res = await fetch(
       `${KRMUWordUrl}/wp-json/wp/v2/events-and-news?_fields=id,title,slug,acf,featured_media,date,modified&page=${page}&per_page=${perPage}`,

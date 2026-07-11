@@ -51,3 +51,13 @@ export interface NewsEventItem {
     event_images: number[];
   };
 }
+
+export interface WPNewsEventsResponse {
+  data: NewsEventItem[];
+  pagination: {
+    page: number;
+    perPage: number;
+    total: number;
+    totalPages: number;
+  };
+}

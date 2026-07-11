@@ -114,6 +114,36 @@ export interface ADecadeRightCol {
   counter4content: string;
 }
 
+export interface NewsEventItem {
+  id: number;
+  documentId: string;
+  title: {
+    rendered: string;
+  };
+  slug: string;
+  modified: string;
+  date: string;
+  // publishedAt: string;
+  // featured_img: StrapiMedia;
+  // newsmedia: StrapiMedia[];
+  featured_media: number;
+  acf: {
+    event_start_date: null;
+    event_venue: string;
+    event_images: number[];
+  };
+}
+
+export interface NewsEventsResponse {
+  data: NewsEventItem[];
+  pagination: {
+    page: number;
+    perPage: number;
+    total: number;
+    totalPages: number;
+  };
+}
+
 export interface ADecadeSectionComponent extends BaseComponent {
   __component: "homepage-components.a-decade-section";
   adecadeleftcol: ADecadeLeftCol;
