@@ -293,7 +293,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
   },
   // Rishika Mehta
   {
-    id: 58540,
+    id: 585402,
     slug: "ms-rishika-mehta",
     title: {
       rendered: "Ms. Rishika Mehta",
@@ -533,7 +533,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
   },
   // Mansi Kajal
   {
-    id: 58540,
+    id: 5854890,
     slug: "ms-mansi-kajal",
     title: {
       rendered: "Ms. Mansi Kajal",
