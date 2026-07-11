@@ -39,8 +39,11 @@ export default async function HomePage() {
     homeService.getTestimonials(),
   ]);
 
-  const { websiteSchema, organizationSchema, collageOrUniversitySchema } =
-    homeSchemaService.getHomePageSchemas();
+  const {
+    websiteSchema,
+    educationalOrganizationSchema,
+    collegeOrUniversitySchema,
+  } = homeSchemaService.getHomePageSchemas();
 
   // const websiteSchema = createWebsiteSchema({
   //   name: "K.R. Mangalam University",
@@ -91,12 +94,12 @@ export default async function HomePage() {
       <Script
         id="collage-university-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: collageOrUniversitySchema }}
+        dangerouslySetInnerHTML={{ __html: collegeOrUniversitySchema }}
       />
       <Script
         id="organization-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: organizationSchema }}
+        dangerouslySetInnerHTML={{ __html: educationalOrganizationSchema }}
       />
       <main>
         {heroSection && <HeroSection {...heroSection} />}
