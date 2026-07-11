@@ -18,6 +18,7 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
   const [mounted, setMounted] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState("");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [suggestions, setSuggestions] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
 
@@ -48,6 +49,7 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
         const cleanSearch = searchTerm.replace(/[\s.]/g, "").toLowerCase();
 
         const filtered = allData
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           .filter((item: any) => {
             const title = (item.title || item.heading || "").toLowerCase();
             // Clean the target title as well
@@ -139,6 +141,7 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
                   <Loader2 className="animate-spin text-white/50" size={24} />
                 </div>
               ) : suggestions.length > 0 ? (
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 suggestions.map((item: any) => {
                   const slug = item.programmeslug || item.phdslug;
                   const titleStr = item.title
@@ -182,7 +185,7 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
                 })
               ) : (
                 <div className="py-10 text-center text-white/40 text-sm tracking-wide">
-                  No results found for "{query}"
+                  No results found for {query}
                 </div>
               )}
             </div>
@@ -204,5 +207,3 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
     document.body,
   );
 };
-
-export default HeroSearch;

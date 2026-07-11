@@ -1,78 +1,85 @@
 import {
-  AboutSection,
-  HeroSection,
-  JourneySection,
   LifeAtKRMU,
   NewsEventsSection,
   PartnersSection,
-  PlacementsSection,
   ResearchSection,
   TestimonialsSection,
   VisitSection,
 } from "@/modules/home";
-import {
-  createCollageOrUniversitySchema,
-  createOrganizationSchema,
-  createWebsiteSchema,
-} from "@/lib/api/common";
 
 import Script from "next/script";
-import { homeService } from "@/modules/home/home.provider";
 import { Container } from "@/components/common/Container";
+import {
+  getHomeService,
+  HOME_COMPONENT_KEYS,
+  IHomeService,
+  homeSchemaService,
+} from "@/features/home";
+import {
+  HeroSection,
+  AboutSection,
+  JourneySection,
+  PlacementsSection,
+} from "@/presentation/home";
 
 export default async function HomePage() {
-  const heroSection = await homeService.getComponent(
-    "homepage-components.hero-section",
-  );
-  const aboutSection = await homeService.getComponent(
-    "homepage-components.a-decade-section",
-  );
-  const newsEventsSection = await homeService.getComponent(
-    "homepage-components.home-events-and-news",
-  );
-  const testimonialsSection = await homeService.getComponent(
-    "homepage-components.home-testimonials",
-  );
-  const testimonialsData = await homeService.getTestimonials();
+  const homeService: IHomeService = getHomeService();
 
-  const websiteSchema = createWebsiteSchema({
-    name: "K.R. Mangalam University",
-    alternateName: "KRMU",
-    url: "https://www.krmangalam.edu.in",
-    searchPath: "https://www.krmangalam.edu.in/search?q=",
-  });
+  const [
+    heroSection,
+    aboutSection,
+    newsEventsSection,
+    testimonialsSection,
+    testimonialsData,
+  ] = await Promise.all([
+    homeService.getComponent(HOME_COMPONENT_KEYS.HERO),
+    homeService.getComponent(HOME_COMPONENT_KEYS.ABOUT),
+    homeService.getComponent(HOME_COMPONENT_KEYS.NEWS_EVENTS),
+    homeService.getComponent(HOME_COMPONENT_KEYS.TESTIMONIALS),
+    homeService.getTestimonials(),
+  ]);
 
-  const organizationSchema = createOrganizationSchema({
-    name: "K.R. Mangalam University",
-    alternateName: "KRMU",
-    url: "https://www.krmangalam.edu.in",
-    logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
-    contactPoint: {
-      telephone: "+91-8192888444",
-      contactType: "customer service",
-      areaServed: "IN",
-      availableLanguage: "en",
-    },
-    sameAs: [
-      "https://www.facebook.com/krmuniv",
-      "https://www.instagram.com/krmuniv",
-      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-      "https://in.linkedin.com/school/krmuniv",
-    ],
-  });
+  const { websiteSchema, organizationSchema, collageOrUniversitySchema } =
+    homeSchemaService.getHomePageSchemas();
 
-  const collageOrUniversitySchema = createCollageOrUniversitySchema({
-    name: "K.R. Mangalam University",
-    alternateName: "KRMU",
-    url: "https://www.krmangalam.edu.in",
-    logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
-    sameAs: [
-      "https://www.facebook.com/krmuniv",
-      "https://www.instagram.com/krmuniv",
-      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-      "https://in.linkedin.com/school/krmuniv",
-    ],
-  });
+  // const websiteSchema = createWebsiteSchema({
+  //   name: "K.R. Mangalam University",
+  //   alternateName: "KRMU",
+  //   url: "https://www.krmangalam.edu.in",
+  //   searchPath: "https://www.krmangalam.edu.in/search?q=",
+  // });
+
+  // const organizationSchema = createOrganizationSchema({
+  //   name: "K.R. Mangalam University",
+  //   alternateName: "KRMU",
+  //   url: "https://www.krmangalam.edu.in",
+  //   logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
+  //   contactPoint: {
+  //     telephone: "+91-8192888444",
+  //     contactType: "customer service",
+  //     areaServed: "IN",
+  //     availableLanguage: "en",
+  //   },
+  //   sameAs: [
+  //     "https://www.facebook.com/krmuniv",
+  //     "https://www.instagram.com/krmuniv",
+  //     "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+  //     "https://in.linkedin.com/school/krmuniv",
+  //   ],
+  // });
+
+  // const collageOrUniversitySchema = createCollageOrUniversitySchema({
+  //   name: "K.R. Mangalam University",
+  //   alternateName: "KRMU",
+  //   url: "https://www.krmangalam.edu.in",
+  //   logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
+  //   sameAs: [
+  //     "https://www.facebook.com/krmuniv",
+  //     "https://www.instagram.com/krmuniv",
+  //     "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+  //     "https://in.linkedin.com/school/krmuniv",
+  //   ],
+  // });
 
   return (
     <>
@@ -116,6 +123,7 @@ export default async function HomePage() {
         <VisitSection />
         <Container>
           {newsEventsSection ? (
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             <NewsEventsSection {...(newsEventsSection as any)} />
           ) : (
             <NewsEventsSection />

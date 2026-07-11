@@ -6,17 +6,17 @@ import Image from "next/image";
 import { Carousel } from "@/components/common/Carousel";
 import Button from "@/components/common/Button";
 import SectionDivider from "@/components/common/SectionDivider";
+import { SectionTitle } from "@/components/common/SectionTitle";
+import ShowMoreButton from "@/components/common/ShowMoreButton";
 import {
   PLACEMENT_CARD_CONFIGS,
   PLACEMENT_STATS,
   RECRUITER_LOGOS,
   SUCCESS_STORIES,
-} from "../constants";
-import { SectionTitle } from "@/components/common/SectionTitle";
-import { PlacementStatCard, RecruiterLogoCard } from "../components/placements";
-import ShowMoreButton from "@/components/common/ShowMoreButton";
+} from "@/features/home";
+import { PlacementStatCard, RecruiterLogoCard } from "../components/placement";
 
-export default function PlacementsSection() {
+export function PlacementsSection() {
   const [showMore, setShowMore] = useState(false);
 
   return (

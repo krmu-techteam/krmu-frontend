@@ -1,13 +1,16 @@
 import Link from "next/link";
 import SectionDivider from "@/components/common/SectionDivider";
 import { StatCard } from "@/components/common/StatCard";
-import { ABOUT_STAT_BG_COLORS } from "../constants";
-import { ADecadeLeftCol, ADecadeRightCol } from "../types";
-import { getAboutStats } from "../utils";
 import { ArrowRight } from "lucide-react";
 import { SectionTitle } from "@/components/common/SectionTitle";
+import {
+  ABOUT_STAT_BG_COLORS,
+  ADecadeLeftCol,
+  ADecadeRightCol,
+} from "@/features/home";
+import { getAboutStats } from "../utils";
 
-export default function AboutSection({
+export function AboutSection({
   topContent,
   bottomContent,
 }: {

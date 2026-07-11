@@ -1,4 +1,4 @@
-import { ADecadeRightCol, HomeStatType } from "../types";
+import { ADecadeRightCol, HomeStatType } from "@/features/home";
 
 export const getAboutStats = (
   bottomContent: ADecadeRightCol,
