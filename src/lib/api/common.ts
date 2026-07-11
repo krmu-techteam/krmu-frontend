@@ -728,9 +728,27 @@ interface CollageOrUniversitySchemaProps {
   url: string;
   logo: string;
   sameAs: string[];
+  award?: string;
+  numberOfEmployees?: {
+    name: string;
+    value: number;
+  };
+  amenityFeature?: {
+    name: string;
+    value: string | number;
+  }[];
 }
 
-export const createCollageOrUniversitySchema = ({ name, alternateName, url, logo, sameAs = [] }: CollageOrUniversitySchemaProps) => {
+export const createCollageOrUniversitySchema = ({
+  name,
+  alternateName,
+  url,
+  logo,
+  sameAs = [],
+  award,
+  numberOfEmployees,
+  amenityFeature,
+}: CollageOrUniversitySchemaProps) => {
   const cleanUrl = (val: string) => val.replace(/\s+/g, "");
   const schema = {
     "@context": "https://schema.org/",
@@ -739,10 +757,23 @@ export const createCollageOrUniversitySchema = ({ name, alternateName, url, logo
     alternateName: alternateName,
     url: url,
     logo: logo,
-    sameAs: sameAs.map(cleanUrl)
-  }
+    sameAs: sameAs.map(cleanUrl),
+    award: award,
+    numberOfEmployees: numberOfEmployees
+      ? {
+          "@type": "QuantitativeValue",
+          name: numberOfEmployees.name,
+          value: numberOfEmployees.value,
+        }
+      : undefined,
+    amenityFeature: amenityFeature?.map((item) => ({
+      "@type": "LocationFeatureSpecification",
+      name: item.name,
+      value: item.value,
+    })),
+  };
   return JSON.stringify(schema);
-}
+};
 
 
 type TocFaq = {
