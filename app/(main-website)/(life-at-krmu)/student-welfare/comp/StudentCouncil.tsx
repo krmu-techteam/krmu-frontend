@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
 
@@ -147,8 +147,26 @@ const StudentCouncil = () => {
     // },
   ];
 
-  const INITIAL_COUNT = 5;
-  const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
+  const getCount = () => {
+    if (window.innerWidth <= 768) return 2;
+    if (window.innerWidth === 1024) return 3;
+    if (window.innerWidth <= 1280) return 5;
+
+    return 5;
+  };
+
+  const [visibleCount, setVisibleCount] = useState(5);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setVisibleCount(getCount());
+    };
+
+    handleResize(); // set initial value
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
@@ -196,27 +214,29 @@ const StudentCouncil = () => {
             Student Council Members
           </h3>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-center">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {data.slice(0, visibleCount).map((member, index) => (
               <article
                 key={`${member.name}-${member.role}`}
-                className="flex min-h-[385px] flex-col items-center rounded-xl bg-[#EDE3C7] px-5 pb-5 pt-4 text-center shadow-sm w-full max-w-[300px] sm:max-w-none mx-auto hover:shadow-md transition-all duration-300"
+                className="flex min-h-[375px] max-w-[325px] flex-col items-center   rounded-xl bg-[#EDE3C7] px-5 pb-5 pt-4 text-center mx-auto sm:mx-0"
               >
-                <div className="relative mb-4 h-[235px] w-full overflow-hidden rounded-lg bg-white shadow-[0_16px_35px_rgba(15,23,42,0.08)]">
+                <div
+                  className={`relative mb-4 h-[290px] lg:h-[250px] w-[300px] sm:w-full overflow-hidden rounded-lg   bg-white  shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
+                >
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover"
+                    className="object-cover  "
                     priority={index < 5}
                   />
                 </div>
                 <h4
-                  className={`${playfair.className} text-lg font-bold leading-tight text-black`}
+                  className={`${playfair.className} text-[18px] font-bold leading-tight text-black`}
                 >
                   {member.name}
                 </h4>
-                <p className="mt-1 text-sm md:text-[15px] font-semibold leading-tight text-gray-800">
+                <p className="mt-1 text-[18px] leading-tight text-black">
                   {member.role}
                 </p>
               </article>
@@ -238,12 +258,12 @@ const StudentCouncil = () => {
 
       <section className="bg-[#F0F3F9] px-4 sm:px-6 md:px-12 pb-16">
         <div className="mx-auto w-full max-w-[1550px]">
-          <div className="flex flex-col items-center gap-8 rounded-2xl border-4 border-white bg-[#DAE9FF] p-4 md:flex-row md:items-stretch md:gap-8 md:p-8 shadow-sm">
-            <div className="w-full flex-shrink-0 overflow-hidden rounded-3xl h-[260px] sm:h-[340px] md:h-auto md:w-[350px] lg:w-[440px]">
+          <div className="flex flex-col xl:flex-row items-center gap-8 rounded-2xl border-4 border-white bg-[#DAE9FF] p-4  xl:gap-8 xl:p-8 shadow-sm">
+            <div className="w-full flex-shrink-0 overflow-hidden rounded-3xl h-[300px] sm:h-[340px] md:h-auto md:w-[390px] lg:w-[440px]">
               <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_608_0f98d1ae42.jpg"
-                width={1000}
-                height={1000}
+                width={1024}
+                height={1024}
                 alt="K.R. Mangalam University Student Council"
                 className="h-full w-full object-cover"
               />

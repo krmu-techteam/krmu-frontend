@@ -13,7 +13,7 @@ const GrievenceAndCounseling = () => {
         className={` bg-[linear-gradient(179.96deg,#FFFFFF_0.04%,#C3CEDB_82.67%,#DFD1F2_99.96%)] px-8 sm:px-8 md:px-12 py-12 `}
       >
         <div className="mx-auto w-full max-w-[1550px] mb-10">
-          <div className="flex flex-col items-center gap-10 rounded-2xl  bg-[linear-gradient(104.12deg,#F3F4F6_22.1%,#CFDCFF_72.23%,#00ABCD_84.55%)] p-4 md:flex-row md:items-stretch md:gap-12 md:p-8 min-h-[350px]">
+          <div className="flex flex-col lg:flex-row items-center gap-10 rounded-2xl  bg-[linear-gradient(104.12deg,#F3F4F6_22.1%,#CFDCFF_72.23%,#00ABCD_84.55%)] p-4  md:gap-12 md:p-8 min-h-[350px]">
             <div className="p-2">
               <h2
                 className={`${playfair.className}  text-3xl font-bold text-black my-6 md:text-4xl lg:text-[35px]`}
