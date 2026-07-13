@@ -63,7 +63,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
   },
   {
     id: 115862,
-    slug: "ms-kritika-kakkar-2",
+    slug: "ms-kritika-kakkar",
     title: {
       rendered: "Ms. Kritika Kakkar",
     },
