@@ -1,0 +1,302 @@
+import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
+import { HeroSection, ProgrammeScopeType } from "@/lib/types/school-programme";
+
+import Link from "next/link";
+import CommonLeadPopup from "../../components/CommonLeadPopup";
+import Image from "next/image";
+import { Download, Check } from "lucide-react";
+import { STRAPI_URL } from "@/app/constant";
+import { Inter } from "next/font/google";
+
+type Props = {
+  scopeData: ProgrammeScopeType;
+  heroSection?: HeroSection;
+  allowedFormSlugs: string[];
+  slug: string;
+};
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+});
+
+const NewProgrammeScope = async ({
+  scopeData,
+  heroSection,
+  allowedFormSlugs,
+  slug,
+}: Props) => {
+  const getDownProsSettings = await getDownloadProspectusSetting();
+
+  // const isFormAvailable = allowedFormSlugs.includes(slug);
+  const isFormAvailable = false;
+
+  const enable_disable_download_pros =
+    getDownProsSettings?.download_prospectus_enable_disable;
+
+  // Format the heading to match the image: "B.Tech. CSE" and "Programme Scope" on two lines
+  const formatHeading = (heading: string) => {
+    if (!heading) return null;
+    const index = heading.toLowerCase().indexOf("programme scope");
+    if (index !== -1) {
+      const mainPart = heading.slice(0, index).trim();
+      const scopePart = heading.slice(index).trim();
+      return (
+        <>
+          <span className="block font-bold">{mainPart}</span>
+          <span className="block font-bold mt-1 text-white">{scopePart}</span>
+        </>
+      );
+    }
+    return <span className="block font-bold">{heading}</span>;
+  };
+
+  // Split description content into paragraphs if it has line breaks
+  const paragraphs = scopeData?.scopecontent
+    ? scopeData.scopecontent.split("\n").filter((p) => p.trim() !== "")
+    : [];
+
+  // 5 items as shown in the image
+  const skillsList = [
+    {
+      id: 1,
+      content: (
+        <span>
+          <strong className="text-white font-bold">
+            Artificial Intelligence
+          </strong>{" "}
+          and <strong className="text-white font-bold">Machine Learning</strong>{" "}
+          engineering for modern-day applications and system development.
+        </span>
+      ),
+    },
+    {
+      id: 2,
+      content: (
+        <span>
+          Cloud computing, DevOps workflows, cybersecurity awareness and{" "}
+          <strong className="text-white font-bold">
+            secure coding practices
+          </strong>{" "}
+          are embedded into the curriculum.
+        </span>
+      ),
+    },
+    {
+      id: 3,
+      content: (
+        <span>
+          Students also engage in lab work and project deliverables, which
+          formulate team-based development skills with{" "}
+          <strong className="text-white font-bold">agile methodologies</strong>{" "}
+          to stay competitive in the career.
+        </span>
+      ),
+    },
+    {
+      id: 4,
+      content: (
+        <span>
+          Analytical and problem-solving skills are{" "}
+          <strong className="text-white font-bold">sharpened</strong> through{" "}
+          <strong className="text-white font-bold">
+            competitive programming
+          </strong>{" "}
+          exposure and project-based learning, which accounts for 15% of total
+          programme credits at KRMU.
+        </span>
+      ),
+    },
+    {
+      id: 5,
+      content: (
+        <span>
+          Proficiency in multiple programming languages like C++, Java, and
+          Python with an emphasis on writing{" "}
+          <strong className="text-white font-bold">production-grade</strong>{" "}
+          code using modern development frameworks.
+        </span>
+      ),
+    },
+  ];
+
+  return (
+    <section
+      className={`${inter.className} bg-[linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),linear-gradient(180deg,#002958_0%,#001732_100%)] text-white pt-14 pb-[120px]`}
+    >
+      <div className="flex flex-col max-w-[1500px] mx-auto px-8 ">
+        {/* Top Section: Image (Left) & Heading/Content (Right) */}
+        <div className="flex flex-col lg:flex-row  gap-8 lg:gap-12 items-center">
+          {/* Left Column: Image */}
+
+          <div className="sm:max-w-full lg:max-w-[45%]   relative rounded-[24px] overflow-hidden shadow-2xl border border-blue-900/30">
+            <Image
+              src={`https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_635_0916216e9a.jpg`}
+              width={1024}
+              height={1024}
+              className="object-cover"
+              alt="B.Tech. CSE Programme Scope"
+            />
+          </div>
+
+          {/* Right Column: Heading & Content */}
+          <div className="max-w-[95%] lg:max-w-[50%]  flex flex-col justify-center">
+            <h3 className="text-3xl sm:text-4xl lg:text-[42px] xl:text-[35px] font-bold  mb-6 tracking-tight text-white text-left">
+              B.Tech. CSE <br /> Programme Scope
+            </h3>
+
+            <div className="space-y-4 text-[15px] sm:text-[16px] lg:text-[18px] font-light  text-white text-justify tracking-wide leading-6 opacity-[90%]">
+              <p>
+                The B.Tech. CSE programme prepares students to pursue careers
+                that require innovative problem-solving through computational
+                techniques. Students can build their future in some of the
+                fastest-growing careers in technology, such as software
+                engineering, artificial intelligence, cloud computing, data
+                science, cybersecurity, robotics and more.
+              </p>
+              <p>
+                In addition, students can opt for advanced or specialised
+                studies at the postgraduate and doctoral levels for teaching and
+                research-based careers in India and abroad, and even start their
+                own ventures.
+              </p>
+            </div>
+
+            {/* Optional Download Prospectus Button */}
+            {/* {scopeData?.scopebtn?.buttontext && (
+              <div className="mt-8 flex justify-start">
+                {enable_disable_download_pros ? (
+                  <CommonLeadPopup
+                    buttonText={
+                      <span className="flex items-center gap-2">
+                        <Download className="w-5 h-5" />
+                        {scopeData.scopebtn.buttontext || "Download Prospectus"}
+                      </span>
+                    }
+                    buttonClassName="inline-flex items-center gap-2 px-6 py-3 text-[16px] font-medium border border-blue-500/30 rounded-lg bg-[#081e3d]/80 text-white hover:bg-white hover:text-[#020b18] hover:border-white transition-all duration-300 shadow-lg shadow-blue-500/5"
+                    redirectUrl={scopeData?.scopebtn?.buttonlink || "#"}
+                    form_name="Download Prospectus"
+                  />
+                ) : (
+                  <Link
+                    href={scopeData?.scopebtn?.buttonlink || "#"}
+                    className="inline-flex items-center gap-2 px-6 py-3 text-[16px] font-medium border border-blue-500/30 rounded-lg bg-[#081e3d]/80 text-white hover:bg-white hover:text-[#020b18] hover:border-white transition-all duration-300 shadow-lg shadow-blue-500/5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Download className="w-5 h-5" />
+                    {scopeData?.scopebtn?.buttontext || "Download Prospectus"}
+                  </Link>
+                )}
+              </div>
+            )} */}
+          </div>
+        </div>
+
+        {/* Bottom Section: Skills Circle (Left) & Skills Checklist (Right) */}
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12  items-center pl-0 lg:pl-8 mt-20 md:mt-24">
+          {/* Left Column: Skills Circle Badge */}
+          <div className=" min-w-full  lg:min-w-[455px] flex justify-center items-center">
+            <div className="relative rounded-full w-[350px] h-[350px] sm:w-[350px] sm:h-[350px] md:min-w-[455px] md:h-[455px] flex items-center justify-center ">
+              {/* Outer Dashed Ring with slow rotating animation */}
+              <svg
+                className="absolute inset-0 w-full h-full z-9"
+                viewBox="0 0 100 100"
+                fill="none"
+              >
+                <defs>
+                  <linearGradient
+                    id="dashGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="50%"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0%" stopColor="#0073FF" stopOpacity="1" />
+                    <stop offset="20%" stopColor="#0073FF" stopOpacity="1" />
+                    <stop offset="50%" stopColor="#29A8FF" stopOpacity="1" />
+                    <stop offset="80%" stopColor="#001732" stopOpacity="0" />
+                    <stop offset="100%" stopColor="#001732" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
+
+                <circle
+                  cx="50"
+                  cy="49"
+                  r="48"
+                  fill="none"
+                  stroke="url(#dashGradient)"
+                  strokeWidth="0.2"
+                  strokeDasharray="1.8 2.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <div className="absolute inset-[5px] bg-[#031a35]  rounded-full" />
+              {/* Inner Solid Blue Ring */}
+              <div className="absolute inset-[18px] bg-[linear-gradient(180deg,#002550_0%,#000D1D_100%)] rounded-full" />
+
+              {/* Gold Compass Marker Pointing NE */}
+              <div className="absolute w-[28px] h-[28px] z-9 top-13 right-[16%]">
+                <Image
+                  src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Polygon_2_829da6039f.png"
+                  alt=""
+                  width={1024}
+                  height={1024}
+                  className="object-fit w-full h-full"
+                />
+              </div>
+
+              {/* Center Content Circle */}
+              <div
+                className={` ${inter.className} absolute inset-[24px] rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,#004698_10.58%,#001732_100%)]  flex flex-col justify-center items-center p-6 sm:p-8 text-center  z-0`}
+              >
+                <span className="text-[#E7C268] font-bold text-xs sm:text-[29px] leading-[100%]  ">
+                  Skills Developed
+                </span>
+                <h4 className="text-white font-extrabold text-lg sm:text-xl md:text-[29px] leading-[115%]  mb-4">
+                  During the B.Tech
+                  <br />
+                  CSE Programme
+                </h4>
+
+                <p className="text-xs sm:text-[18px] text-white font-light leading-[120%]  max-w-[284px]">
+                  Within the span of 4 years, students{" "}
+                  <strong className="text-white font-bold">
+                    develop technical and professional skills
+                  </strong>{" "}
+                  required by employers in the tech and engineering sectors,
+                  such as:
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Skills Checklist */}
+          <div className=" flex flex-col max-w-[780px]">
+            <div className="  ">
+              {skillsList.map((item) => (
+                <div key={item.id} className="flex flex-col text-left">
+                  <div className="flex items-center gap-4 ">
+                    <div className="flex-shrink-0 w-[44px] h-[44px] rounded bg-[#00244E]  flex items-center justify-center text-[#0073FF] shadow-md">
+                      <Check className="w-6 h-6 text-[#0073FF] stroke-[2]" />
+                    </div>
+                    <p className=" text-[14px] sm:text-[15px] md:text-[18px] font-light text-white leading-[120%] opacity-[80%]">
+                      {item.content}
+                    </p>
+                  </div>
+                  {skillsList.length !== item.id && (
+                    <div className="   h-[2px] w-full my-6 bg-[linear-gradient(90deg,#2B4058_0%,#001732_100%)]" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default NewProgrammeScope;
