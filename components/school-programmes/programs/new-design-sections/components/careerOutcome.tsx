@@ -110,7 +110,7 @@ const CareerOutcome = ({ slug }: Props) => {
                     slug === "mba-fintech"
                       ? content.sectionTwo.image
                       : slug === "mba-digital-marketing"
-                        ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1541_1_c2efd0af99.jpg"
+                        ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/a77250d02cb94882b7707fd379b48a5a_8b487e7715.jpg"
                         : slug === "mba"
                           ? "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1541_fa1c297a76.jpg"
                           : ""
