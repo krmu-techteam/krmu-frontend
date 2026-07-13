@@ -32,8 +32,8 @@ export const Hero: BscFinanceHeroContent = {
   subheading: "Four Years. Three Tracks. One Defining Career.",
   description:
     "Graduate with a degree, 12 months of paid industry experience, and a curriculum aligned to CFA, FRM & actuarial examinations",
-  countdownTargetDate: "2026-06-30T23:59:59",
-  lastDateLabel: "Last Date to apply - 30th June 2026",
+  countdownTargetDate: "2026-07-11T23:59:59",
+  lastDateLabel: "Get Up to 100% Scholarship Worth ₹27 Cr + Opportunity to Fly to Europe | Apply Before It's Gone",
   applyBtnLabel: "Apply for 2026-27 Batch",
   applyBtnHref: bscFinanceApplyHref,
   brochureBtnLabel: "Download Brochure",

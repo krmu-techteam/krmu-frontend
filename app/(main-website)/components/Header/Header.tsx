@@ -58,13 +58,13 @@ const Header = ({
           </Link>
         </div> */}
 
-        <Link
+        {/* <Link
           href="https://admissions.krmangalam.edu.in/?utm_source=Website&utm_medium=Homepage&utm_campaign=Deadline"
           target="_blank"
           className="sticky top-0 w-full bg-[#cb000d] justify-center z-30 hidden lg:flex"
         >
           <KRMUTimer targetDate="2026-06-30T23:59:59" mainWebsiteTimer={true} />
-        </Link>
+        </Link> */}
         <div
           className="px-2.5 xl:px-4"
           style={{

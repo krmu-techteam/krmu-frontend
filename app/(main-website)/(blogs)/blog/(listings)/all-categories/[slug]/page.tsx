@@ -37,7 +37,7 @@ const Page = async ({ params, searchParams }: Props) => {
       <CommonBlogLayout
         slug={slug}
         searchParams={resolvedSearchParams}
-        mainBlogClass={"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 temp-class"}
+        mainBlogClass={"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"}
       />
     </>
   );

@@ -104,7 +104,7 @@ const SchoolHero = ({
 
     "school-of-emerging-media-and-creator-economy": {
       thumbnail:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/school_of_emerging_media_and_creator_economy_d34aa4d87b.png",
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/school_of_emerging_media_and_creator_economy_f1c0436cee.png",
       ytUrl: "https://www.youtube.com/watch?v=RV4YQUNAVMA",
       bgURl:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Emerging_Media_and_Creator_Economy_1_11c030bd7f.jpg", ///schools/banners/semce-banner-2.webp
