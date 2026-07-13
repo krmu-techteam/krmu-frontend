@@ -13,7 +13,7 @@ const GrievenceAndCounseling = () => {
         className={` bg-[linear-gradient(179.96deg,#FFFFFF_0.04%,#C3CEDB_82.67%,#DFD1F2_99.96%)] px-8 sm:px-8 md:px-12 py-12 `}
       >
         <div className="mx-auto w-full max-w-[1550px] mb-10">
-          <div className="flex flex-col lg:flex-row items-center gap-10 rounded-2xl  bg-[linear-gradient(104.12deg,#F3F4F6_22.1%,#CFDCFF_72.23%,#00ABCD_84.55%)] p-4  md:gap-12 md:p-8 min-h-[350px]">
+          <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-10 rounded-2xl  bg-[linear-gradient(104.12deg,#F3F4F6_22.1%,#CFDCFF_72.23%,#00ABCD_84.55%)] p-4  md:gap-12 md:p-8 min-h-[350px]">
             <div className="p-2">
               <h2
                 className={`${playfair.className}  text-3xl font-bold text-black my-6 md:text-4xl lg:text-[35px]`}
@@ -39,16 +39,18 @@ const GrievenceAndCounseling = () => {
               </p>
             </div>
 
-            <div className="w-full flex-shrink-0 overflow-hidden rounded-2xl px-10 py-6 md:w-[440px] bg-white  lg:w-[45%]">
-              <div className="flex justify-between items-center">
+            <div className="w-full flex-shrink-0 overflow-hidden rounded-2xl px-6 xl:px-10 py-6 bg-white  lg:w-[45%]">
+              <div className="flex flex-col-reverse items-left  md:flex-row md:justify-between md:items-center">
                 <h2
                   className={`${playfair.className} text-3xl leading-[1.3] text-black mb-4 md:text-4xl lg:text-[24px]`}
                 >
                   Message from <br />{" "}
-                  <span className="font-bold">Student Success Manager</span>
+                  <span className="font-bold">
+                    Student Success <br /> Manager
+                  </span>
                 </h2>
                 <div
-                  className={`relative mb-1 h-[110px] w-[110px] overflow-hidden rounded-full  bg-[#F4F4F4] `}
+                  className={`relative mb-1 h-[130px] lg:h-[110px] w-[130px] lg:w-[110px]  overflow-hidden rounded-full  bg-[#F4F4F4] `}
                 >
                   <Image
                     src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_599_a259dc4cf4.jpg"
@@ -83,7 +85,7 @@ const GrievenceAndCounseling = () => {
         </div>
 
         <div className="mx-auto w-full max-w-[1550px]">
-          <div className="flex flex-col items-center gap-10 rounded-2xl  bg-[linear-gradient(95.12deg,#F3F4F6_0.63%,#FFE1B4_100%)] p-4 md:flex-row md:items-stretch md:gap-12 md:p-8 min-h-[350px]">
+          <div className="flex flex-col lg:flex-row items-center gap-10 rounded-2xl  bg-[linear-gradient(95.12deg,#F3F4F6_0.63%,#FFE1B4_100%)] p-4  md:p-8 min-h-[350px]">
             <div className="p-2">
               <h2
                 className={`${playfair.className}  text-3xl font-bold text-black my-6 md:text-4xl lg:text-[35px]`}
@@ -114,8 +116,8 @@ const GrievenceAndCounseling = () => {
               </p>
             </div>
 
-            <div className="w-full flex-shrink-0 overflow-hidden rounded-2xl px-10 py-6 md:w-[440px] bg-white  lg:w-[45%]">
-              <div className="flex justify-between items-center">
+            <div className="w-full flex-shrink-0 overflow-hidden rounded-2xl px-6 xl:px-10 py-6  bg-white lg:w-[45%]">
+              <div className="flex flex-col-reverse items-left  md:flex-row md:justify-between md:items-center">
                 <h2
                   className={`${playfair.className} text-3xl leading-[1.3] text-black mb-4 md:text-4xl lg:text-[24px]`}
                 >
@@ -123,7 +125,7 @@ const GrievenceAndCounseling = () => {
                   <span className="font-bold">the Counsellor</span>
                 </h2>
                 <div
-                  className={`relative mb-1 h-[110px] w-[110px] overflow-hidden rounded-full  bg-[#F4F4F4] `}
+                  className={`relative mb-1 h-[130px] lg:h-[110px] w-[130px] lg:w-[110px] overflow-hidden rounded-full  bg-[#F4F4F4] `}
                 >
                   <Image
                     src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_614_de34263b16.jpg"

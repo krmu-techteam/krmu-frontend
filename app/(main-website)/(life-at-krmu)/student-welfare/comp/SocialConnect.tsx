@@ -12,7 +12,7 @@ export const SocialConnect = () => {
     <section className="bg-[#FAF8FC] pb-16 px-6 md:px-12">
       <div className="mx-auto w-full max-w-[1550px]">
         <div className="relative overflow-hidden rounded-[24px] border-[5px] border-white bg-gradient-to-r from-[#A7ECEF] via-[#D7DDF0] to-[#FBBBBB] p-8 md:p-10 lg:p-12 shadow-sm flex flex-col lg:flex-row justify-between items-center gap-6">
-          <div className="text-left max-w-[650px] w-full">
+          <div className="text-left max-w-[550px] 2xl:max-w-[610px] w-full">
             <h3
               className={`${playfair.className} text-[26px] md:text-[34px] font-bold text-[#001732] leading-tight`}
             >
@@ -24,7 +24,7 @@ export const SocialConnect = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center lg:justify-end gap-4 w-full lg:w-auto">
+          <div className="flex flex-wrap items-center justify-center md:justify-start lg:justify-end gap-4 w-full lg:w-auto">
             {/* LinkedIn Button */}
             <Link
               href="https://www.linkedin.com/school/k.r.-mangalam-university/"
@@ -34,7 +34,7 @@ export const SocialConnect = () => {
               <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_622_0b190f920d.jpg"
                 alt="Linkedin"
-                className="w-[383px] h-[63px] rounded-[13px] object-cover transition-all duration-300 hover:scale-[1.02]"
+                className="w-[310px] md:w-[360px] h-[63px] rounded-[13px] object-fit transition-all duration-300 hover:scale-[1.02]"
                 height={1024}
                 width={1024}
               />

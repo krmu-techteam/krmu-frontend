@@ -45,7 +45,7 @@ export const EventGallery = () => {
               {eventsData.map((event) => (
                 <CarouselItem
                   key={event.id}
-                  className="basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 pl-4 md:pl-6"
+                  className="basis-full sm:basis-1/2 md:basis-2/4 lg:basis-3/9 xl:basis-1/4 pl-4 md:pl-6"
                 >
                   <Link href={event.link} className="block w-full">
                     <div className="relative h-[600px] w-full overflow-hidden rounded-[20px] flex flex-col justify-end p-6 bg-neutral-900 group shadow-md transition-all duration-300 hover:scale-[1.02] cursor-pointer">
