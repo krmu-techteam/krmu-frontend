@@ -5,7 +5,7 @@ import NavbarMenu from "./NavbarMenu";
 import Link from "next/link";
 import { Menu, X, Search } from "lucide-react";
 import { HeaderMenus } from "@/lib/types/header-menu";
-import { HeroSearch } from "@/modules/home";
+import { HeroSearch } from "@/presentation/home/components/hero";
 
 type Props = {
   navbarData: HeaderMenus[];

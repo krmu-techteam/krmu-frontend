@@ -1,12 +1,3 @@
-import {
-  LifeAtKRMU,
-  NewsEventsSection,
-  PartnersSection,
-  ResearchSection,
-  TestimonialsSection,
-  VisitSection,
-} from "@/modules/home";
-
 import Script from "next/script";
 import { Container } from "@/components/common/Container";
 import {
@@ -20,6 +11,12 @@ import {
   AboutSection,
   JourneySection,
   PlacementsSection,
+  LifeAtKRMUSection,
+  NewsEventsSection,
+  PartnersSection,
+  ResearchSection,
+  TestimonialsSection,
+  VisitSection,
 } from "@/presentation/home";
 
 export default async function HomePage() {
@@ -44,45 +41,6 @@ export default async function HomePage() {
     educationalOrganizationSchema,
     collegeOrUniversitySchema,
   } = homeSchemaService.getHomePageSchemas();
-
-  // const websiteSchema = createWebsiteSchema({
-  //   name: "K.R. Mangalam University",
-  //   alternateName: "KRMU",
-  //   url: "https://www.krmangalam.edu.in",
-  //   searchPath: "https://www.krmangalam.edu.in/search?q=",
-  // });
-
-  // const organizationSchema = createOrganizationSchema({
-  //   name: "K.R. Mangalam University",
-  //   alternateName: "KRMU",
-  //   url: "https://www.krmangalam.edu.in",
-  //   logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
-  //   contactPoint: {
-  //     telephone: "+91-8192888444",
-  //     contactType: "customer service",
-  //     areaServed: "IN",
-  //     availableLanguage: "en",
-  //   },
-  //   sameAs: [
-  //     "https://www.facebook.com/krmuniv",
-  //     "https://www.instagram.com/krmuniv",
-  //     "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-  //     "https://in.linkedin.com/school/krmuniv",
-  //   ],
-  // });
-
-  // const collageOrUniversitySchema = createCollageOrUniversitySchema({
-  //   name: "K.R. Mangalam University",
-  //   alternateName: "KRMU",
-  //   url: "https://www.krmangalam.edu.in",
-  //   logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
-  //   sameAs: [
-  //     "https://www.facebook.com/krmuniv",
-  //     "https://www.instagram.com/krmuniv",
-  //     "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-  //     "https://in.linkedin.com/school/krmuniv",
-  //   ],
-  // });
 
   return (
     <>
@@ -113,7 +71,7 @@ export default async function HomePage() {
           <JourneySection />
           <PlacementsSection />
         </Container>
-        <LifeAtKRMU />
+        <LifeAtKRMUSection />
 
         <TestimonialsSection
           {...testimonialsSection}

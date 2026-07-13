@@ -137,32 +137,12 @@ export interface JourneyVideoType {
   duration: string;
   link?: string;
 }
-export interface GalleryImageType {
-  id: number;
-  src: string;
-  alt: string;
-}
-
-export interface RecruiterLogoType {
-  name: string;
-  logo: string;
-}
-
 export interface SuccessStoryType {
   name: string;
   school: string;
   course: string;
   package: string;
   image: string;
-}
-
-export interface PlacementStatType {
-  label: string;
-  value: string;
-}
-
-export interface PlacementCardConfigType {
-  style: React.CSSProperties;
 }
 
 export interface ADecadeSectionComponent extends BaseComponent {
@@ -414,12 +394,7 @@ export interface LifeAtKRMUFeatureCardType {
   url?: string;
 }
 
-export interface HomeEventAndNewsType {
-  title: string;
-  date: string;
-  image: string;
-  link: string;
-}
+
 
 export interface ResearchStatsType {
   value: string;

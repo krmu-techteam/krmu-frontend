@@ -2,13 +2,12 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Carousel } from "@/components/common/Carousel";
-import { homeService } from "../home.provider";
-import { NewsEventItem } from "@/lib/types/news-events";
 import { ButtonType } from "@/lib/types/common";
-import { EventAndNewsCard } from "../components";
 import { SectionTitle } from "@/components/common/SectionTitle";
+import { EventAndNewsCard } from "../components/news-and-event";
+import { getHomeService, NewsEventDomain } from "@/features/home";
 
-export default async function NewsEventsSection({
+export async function NewsEventsSection({
   title = "News & Events",
   newsandeventbtn = {
     buttonlink: "/happenings/news-and-events",
@@ -18,6 +17,7 @@ export default async function NewsEventsSection({
   title?: string;
   newsandeventbtn?: Partial<ButtonType>;
 }) {
+  const homeService = getHomeService();
   const newsandeventsdata = await homeService.getNewsEvents(1, 10);
   return (
     <section className="relative w-full pt-0 pb-8 md:py-12 xl:pt-12 xl:pb-20 font-poppins">
@@ -54,7 +54,7 @@ export default async function NewsEventsSection({
           containerClassName="-ml-3"
           slideClassName="pl-1 basis-[85%] base:basis-1 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
         >
-          {newsandeventsdata?.data?.map((event: NewsEventItem, i: number) => (
+          {newsandeventsdata?.data?.map((event: NewsEventDomain, i: number) => (
             <div key={i} className="group cursor-pointer py-2">
               <EventAndNewsCard data={event} />
             </div>

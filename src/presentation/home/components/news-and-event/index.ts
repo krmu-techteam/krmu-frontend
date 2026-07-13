@@ -1,0 +1,1 @@
+export { EventAndNewsCard } from "./EventAndNewsCard";

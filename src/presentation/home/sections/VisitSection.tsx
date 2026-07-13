@@ -6,7 +6,7 @@ import Image from "next/image";
 import SectionDivider from "@/components/common/SectionDivider";
 import Link from "next/link";
 
-export default function VisitSection() {
+export function VisitSection() {
   return (
     <section className="relative w-full py-8 md:py-12 xl:py-20 overflow-hidden font-poppins">
       <div className="w-full flex flex-col lg:flex-row items-stretch gap-16">

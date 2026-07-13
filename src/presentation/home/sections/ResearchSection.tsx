@@ -3,11 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import SectionDivider from "@/components/common/SectionDivider";
-import { RESEARCH_STATS } from "../constants";
+import { RESEARCH_STATS } from "@/features/home";
 import Link from "next/link";
 import { SectionTitle } from "@/components/common/SectionTitle";
 
-export default function ResearchSection() {
+export function ResearchSection() {
   return (
     <section className="relative w-full py-8 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 overflow-hidden font-poppins">
       <div className="w-full max-w-[1285px] mx-auto xl:px-0 relative z-10">

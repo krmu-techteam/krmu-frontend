@@ -4,14 +4,14 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { Carousel } from "@/components/common/Carousel";
 import SectionDivider from "@/components/common/SectionDivider";
+import Link from "next/link";
+import { SectionTitle } from "@/components/common/SectionTitle";
 import {
   LIFE_AT_KRMU_CAROUSEL_CONFIGS,
   LIFE_AT_KRMU_GALLERY,
-} from "../constants";
-import Link from "next/link";
-import { SectionTitle } from "@/components/common/SectionTitle";
+} from "@/features/home";
 
-export default function LifeAtKRMU() {
+export function LifeAtKRMUSection() {
   return (
     <section className="relative w-full overflow-hidden py-8 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
       {/* Precision Spec Glow (Bottom Left) - Spec: Blue Institutional Soft Light */}

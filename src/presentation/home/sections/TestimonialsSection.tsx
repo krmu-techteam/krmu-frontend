@@ -5,11 +5,11 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Carousel } from "@/components/common/Carousel";
 import SectionDivider from "@/components/common/SectionDivider";
-import { TESTIMONIALS } from "../constants";
+import { TESTIMONIALS } from "@/features/home";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { TestimonialItem } from "@/lib/constants/testimonial";
 
-export default function TestimonialsSection({
+export function TestimonialsSection({
   title,
   testimonialsData,
 }: {

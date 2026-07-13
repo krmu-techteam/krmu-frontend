@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { PARTNER_UNIVERSITIES } from "../constants";
+import { PARTNER_UNIVERSITIES } from "@/features/home";
 import { Carousel } from "@/components/common/Carousel";
 import SectionDivider from "@/components/common/SectionDivider";
 import { SectionTitle } from "@/components/common/SectionTitle";
 
-export default function PartnersSection() {
+export function PartnersSection() {
   return (
     <section className="relative w-full py-8 md:py-12 xl:py-20 overflow-hidden font-poppins">
       {/* Institutional Background Glow */}

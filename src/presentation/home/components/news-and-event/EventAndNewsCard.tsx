@@ -2,30 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { getWordImageById } from "@/lib/api/common";
+import { NewsEventDomain } from "@/features/home";
 
 interface EventAndNewsCardProps {
-  data: {
-    id: number;
-    title: {
-      rendered: string;
-    };
-    date: string;
-    featured_media: number;
-    slug: string;
-    acf: {
-      event_images: number[];
-    };
-  };
+  data: NewsEventDomain;
 }
 
-const EventAndNewsCard: React.FC<EventAndNewsCardProps> = async ({ data }) => {
+export const EventAndNewsCard: React.FC<EventAndNewsCardProps> = async ({
+  data,
+}) => {
   const formattedDate = new Date(data.date).toLocaleDateString("en-US", {
     day: "2-digit",
     month: "short",
     year: "numeric",
   });
 
-  const getImgUrl = await getWordImageById(data?.featured_media);
+  const getImgUrl = await getWordImageById(data?.featuredMediaId);
 
   return (
     <div className="group cursor-pointer p-2">
@@ -34,7 +26,7 @@ const EventAndNewsCard: React.FC<EventAndNewsCardProps> = async ({ data }) => {
           {getImgUrl && (
             <Image
               src={getImgUrl}
-              alt={data.title?.rendered || ""}
+              alt={data.title || ""}
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-1000"
             />
@@ -56,12 +48,10 @@ const EventAndNewsCard: React.FC<EventAndNewsCardProps> = async ({ data }) => {
         <h3
           className="text-white font-serif text-[20px] md:text-xl font-semibold tracking-wide leading-snug group-hover:text-brand-gold transition-colors line-clamp-2"
           dangerouslySetInnerHTML={{
-            __html: data.title?.rendered || "",
+            __html: data.title || "",
           }}
         />
       </Link>
     </div>
   );
 };
-
-export default EventAndNewsCard;

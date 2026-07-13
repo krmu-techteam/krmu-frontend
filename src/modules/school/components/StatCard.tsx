@@ -1,5 +1,5 @@
 import { StatCardProps } from "@/modules/school";
-import { ABOUT_STAT_BG_COLORS } from "@/modules/home/constants";
+import { ABOUT_STAT_BG_COLORS } from "@/features/home";
 
 const StatCard = ({ title, desc, index = 0 }: StatCardProps) => {
   return (
