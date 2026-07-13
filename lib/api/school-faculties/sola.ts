@@ -413,7 +413,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
   },
   {
     id: 10427,
-    slug: "mr-deepak-kumar-2",
+    slug: "mr-deepak-kumar",
     title: {
       rendered: "Mr. Deepak Kumar",
     },
@@ -424,7 +424,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
       schools: [1152],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Deepak-Kumar.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/deepak-kumar.jpg",
   },
   {
     id: 9888,
