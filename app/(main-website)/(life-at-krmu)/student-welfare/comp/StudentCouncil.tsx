@@ -221,22 +221,23 @@ const StudentCouncil = () => {
                 className="flex min-h-[375px] max-w-[325px] flex-col items-center   rounded-xl bg-[#EDE3C7] px-5 pb-5 pt-4 text-center mx-auto sm:mx-0"
               >
                 <div
-                  className={`relative mb-4 h-[290px] lg:h-[250px] w-[300px] sm:w-full overflow-hidden rounded-lg   bg-white  shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
+                  className={`relative mb-4 h-[290px] lg:h-[250px] w-full overflow-hidden rounded-lg   bg-white  shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
                 >
                   <Image
                     src={member.image}
                     alt={member.name}
-                    fill
-                    className="object-cover  "
+                    width={1024}
+                    height={1024}
+                    className="object-cover w-full h-full  "
                     priority={index < 5}
                   />
                 </div>
                 <h4
-                  className={`${playfair.className} text-[18px] font-bold leading-tight text-black`}
+                  className={`${playfair.className} text-[20px] font-bold leading-tight text-black`}
                 >
                   {member.name}
                 </h4>
-                <p className="mt-1 text-[18px] leading-tight text-black">
+                <p className="mt-1 text-sm sm:text-[16px] leading-tight text-black">
                   {member.role}
                 </p>
               </article>
@@ -259,7 +260,7 @@ const StudentCouncil = () => {
       <section className="bg-[#F0F3F9] px-4 sm:px-6 md:px-12 pb-16">
         <div className="mx-auto w-full max-w-[1550px]">
           <div className="flex flex-col xl:flex-row items-center gap-8 rounded-2xl border-4 border-white bg-[#DAE9FF] p-4  xl:gap-8 xl:p-8 shadow-sm">
-            <div className="w-full flex-shrink-0 overflow-hidden rounded-3xl h-[300px] sm:h-[340px] md:h-auto md:w-[390px] lg:w-[440px]">
+            <div className="w-full flex-shrink-0 overflow-hidden rounded-3xl h-[350px] md:h-auto md:w-[390px] lg:w-[440px]">
               <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Nirdesh_babea75dd1.png"
                 width={1024}

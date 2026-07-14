@@ -96,7 +96,7 @@ const TeamMember = () => {
               <h4 className="text-[20px] font-bold leading-tight text-black">
                 {member.name}
               </h4>
-              <p className="mt-1 text-[20px] leading-tight text-black">
+              <p className="mt-1 text-[18px] leading-tight text-black">
                 {member.role}
               </p>
             </article>
