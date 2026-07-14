@@ -424,7 +424,7 @@ export const smasFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/Arun-Parashar-SMAS.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/arun-parashar.png",
   },
   {
     id: 115852,
