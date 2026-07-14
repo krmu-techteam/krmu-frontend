@@ -41,8 +41,9 @@ const ClubsSocieties = () => {
         </p>
 
         <Link
-          href="#tab1"
+          href="https://www.krmangalam.edu.in/clubs-and-societies/"
           className="mt-5 inline-flex h-[44px] items-center justify-center rounded-full bg-[#001732] px-7 text-[14px] font-medium text-white transition hover:bg-[#003463]"
+          target="_blank"
         >
           Read More
         </Link>

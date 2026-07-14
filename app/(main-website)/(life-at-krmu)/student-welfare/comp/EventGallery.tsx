@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 
 export const EventGallery = () => {
   return (
-    <section className="bg-[#FAF8FC] py-16 px-6 md:px-12 relative overflow-hidden">
+    <section className="bg-[#FAF8FC] py-16 pb-30 lg:pb-16 px-6 md:px-12 relative overflow-hidden">
       <div className="mx-auto w-full max-w-[1550px]">
         <h2
           className={`${playfair.className} text-center text-[32px] md:text-[41px] font-bold text-black mb-12`}
@@ -39,8 +39,13 @@ export const EventGallery = () => {
                 delay: 2000,
               }),
             ]}
-            className="w-full"
+            className="relative w-full"
           >
+            <div className="absolute right-15 -top-8 w-[50px]  h-auto">
+              <CarouselPrevious className="hidden lg:flex   w-12 h-12  bg-[#001732] hover:bg-[#002a5c] hover:text-white text-white rounded-full   z-20" />
+              <CarouselNext className="hidden lg:flex   w-12 h-12 bg-[#001732] hover:bg-[#002a5c] hover:text-white text-white rounded-full  z-20" />
+            </div>
+
             <CarouselContent className="-ml-4 md:-ml-6">
               {eventsData.map((event) => (
                 <CarouselItem
@@ -73,9 +78,10 @@ export const EventGallery = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-
-            {/* <CarouselPrevious className="bg-[#001732] hover:bg-[#002a5c] hover:text-white text-white rounded-full left-0 z-20" />
-            <CarouselNext className="bg-[#001732] hover:bg-[#002a5c] hover:text-white text-white rounded-full right-0 z-20" /> */}
+            <div className="relative w-[120px] top-10 mx-auto h-auto">
+              <CarouselPrevious className="lg:hidden   w-12 h-12  bg-[#001732] hover:bg-[#002a5c] hover:text-white text-white rounded-full   z-20" />
+              <CarouselNext className="lg:hidden   w-12 h-12 bg-[#001732] hover:bg-[#002a5c] hover:text-white text-white rounded-full  z-20" />
+            </div>
           </Carousel>
         </div>
       </div>
