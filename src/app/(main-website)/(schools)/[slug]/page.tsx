@@ -28,9 +28,9 @@ import {
 } from "../SchoolComponents/schoolData";
 import { sbasHerosLogos, smasHerosLogos, soadHerosLogos, soasHerosLogos, soedHerosLogos, soetHerosLogos, sohmctHerosLogos, solaHerosLogos, somcHerosLogos, sprsHerosLogos } from "../SchoolComponents/schoolHeroLogo";
 
-import { HeroSection , OverviewSection, AlumniSection, ExcitedNewsletterSection, AdvantagesSection, OpenSourceMentorshipSection, UniversityComparisonSection, KnowledgePartnersSection, ExcellenceSection, TestimonialsSection, DeanSection, FacultyAdvisorySection, EventAndExperienceSection, FacilitiesSection, CommenceJourneySection } from "@/modules/school";
+import { HeroSection, OverviewSection, AlumniSection, ExcitedNewsletterSection, AdvantagesSection, OpenSourceMentorshipSection, UniversityComparisonSection, KnowledgePartnersSection, ExcellenceSection, TestimonialsSection, DeanSection, FacultyAdvisorySection, EventAndExperienceSection, FacilitiesSection, CommenceJourneySection } from "@/presentation/school/sections";;
 
-import { ProgrammesExplorer } from "@/modules/programmes";
+import { ProgrammesExplorer } from "@/presentation/programmes/sections";;
 import SectionDivider from "@/components/common/SectionDivider";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 

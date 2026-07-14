@@ -3,17 +3,7 @@ import { STRAPI_URL } from "@/app/constant";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import PioneerExcellence from "@/app/(main-website)/Home/PioneerExcellence";
-import {
-  AccreditationSection,
-  GroupInstitutionsSection,
-  NextGenerationSection,
-  VisionMissionSection,
-  WhyKRMUSection,
-  AdvisoryOrDeanSection,
-  HallOfFameSection,
-  GlobalPartnershipsSection,
-  KrmuCommitteeSection,
-} from "@/modules/about";
+import { AccreditationSection, GroupInstitutionsSection, NextGenerationSection, VisionMissionSection, WhyKRMUSection, AdvisoryOrDeanSection, HallOfFameSection, GlobalPartnershipsSection, KrmuCommitteeSection } from "@/presentation/about/sections";;
 import { HeroSection } from "@/presentation/about";
 import {
   ABOUT_COMPONENT_KEYS,

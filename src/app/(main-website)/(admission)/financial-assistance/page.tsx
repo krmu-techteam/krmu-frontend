@@ -2,7 +2,8 @@
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import { getFinancialAssistanceData, HeroSection, LoanProviderSection, PointerSection } from "@/modules/admission/financial-assistance";
+import { getFinancialAssistanceData } from "@/features/admission/financial-assistance/services";
+import { HeroSection, LoanProviderSection, PointerSection } from "@/presentation/admission/financial-assistance/sections";;
 
 
 

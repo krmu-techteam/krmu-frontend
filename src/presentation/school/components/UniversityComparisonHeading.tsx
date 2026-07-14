@@ -1,0 +1,17 @@
+import { UniversityComparisonSectionProps } from "@/features/school/types";;
+
+type UniversityComparisonHeadingProps = Pick<UniversityComparisonSectionProps, 'content'>;
+
+const UniversityComparisonHeading = ({ content }: UniversityComparisonHeadingProps) => {
+  return (
+    <div className="text-center text-3xl xl:text-[45px] font-medium leading-snug font-serif mb-8 lg:mb-8 w-full lg:w-[90%] xl:w-[85%] mx-auto text-white">
+      {content &&
+        content
+          .map((block) => block.children?.map((c: any) => c.text || "").join(""))
+          .join(" ")
+          .replace(/\n/g, " ")}
+    </div>
+  );
+};
+
+export default UniversityComparisonHeading;

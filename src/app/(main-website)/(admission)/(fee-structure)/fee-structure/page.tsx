@@ -3,11 +3,7 @@ import { getFeeStructurePageData } from "@/lib/api/feestructure";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import {
-  FeeStructureSearchSection,
-  HeroSection,
-  PaymentProcedureSection,
-} from "@/modules/admission/fee-structure";
+import { FeeStructureSearchSection, HeroSection, PaymentProcedureSection } from "@/presentation/admission/fee-structure/sections";;
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("fee-structure");

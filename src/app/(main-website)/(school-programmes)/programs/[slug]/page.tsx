@@ -44,7 +44,8 @@ import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
 import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
 import { heroConfigs } from "@/components/school-programmes/programs/data/programs";
 import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
-import { AdmissionProcessSection, BeyondClassroomSection, EligibilitySection, FinancialAssistanceSection, FrequentlyAskedQuestionsSection, HeroSection, LabsFacilitieSection, ProgrammeHighlightSection, ProgrammeScopeSection, ScholarshipBannerSection, SpecialisationSection } from "@/modules/programs";
+import { AdmissionProcessSection, BeyondClassroomSection, EligibilitySection, FinancialAssistanceSection, FrequentlyAskedQuestionsSection, HeroSection, LabsFacilitieSection, ProgrammeScopeSection, ScholarshipBannerSection } from "@/presentation/programs/sections";
+import { ProgrammeHighlightSection, SpecialisationSection } from "@/presentation/programs";;
 
 // import ProgTestimonials, {
 //   TestimonialsSection,

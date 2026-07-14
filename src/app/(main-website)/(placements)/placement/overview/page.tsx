@@ -3,15 +3,7 @@ import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 
-import {
-  BridgingAcademiaSection,
-  CareerDevelopmentTeamSection,
-  ContactEnquiriesSection,
-  HeroSection,
-  HighlightSection,
-  PolicySection,
-  YourPathsuccessSection,
-} from "@/modules/placement/overview";
+import { BridgingAcademiaSection, CareerDevelopmentTeamSection, ContactEnquiriesSection, HeroSection, HighlightSection, PolicySection, YourPathsuccessSection } from "@/presentation/placement/overview/sections";;
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("placementoverview");

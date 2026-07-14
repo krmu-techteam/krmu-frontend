@@ -2,7 +2,7 @@ import { STRAPI_URL } from "@/app/constant";
 import { getPlacementHighlightData } from "@/lib/api/placement-highlight";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
-import { HeroSection, PlacementHighlightSection } from "@/modules/placement/placement-highlights";
+import { HeroSection, PlacementHighlightSection } from "@/presentation/placement/placement-highlights/sections";;
 
 
 

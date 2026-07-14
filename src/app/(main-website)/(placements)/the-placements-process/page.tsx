@@ -1,13 +1,7 @@
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import {
-  CDCProgramSection,
-  HeroSection,
-  PlacementGuidelineSection,
-  PlacementPoliciesSection,
-  PlacementPreparationSection,
-} from "@/modules/placement/the-placements-process";
+import { CDCProgramSection, HeroSection, PlacementGuidelineSection, PlacementPoliciesSection, PlacementPreparationSection } from "@/presentation/placement/the-placements-process/sections";;
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("the-placements-process");

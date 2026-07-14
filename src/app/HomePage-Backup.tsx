@@ -3,7 +3,8 @@
 // import ElevateCampus from "./(main-website)/Home/ElevateCampus";
 // import EventsAndNews from "./(main-website)/Home/EventsAndNews";
 // import GlobalPartner from "./(main-website)/Home/GlobalPartner";
-// import { AboutSection, HeroSection, JourneySection, LifeAtKRMU, NewsEventsSection, PartnersSection, PlacementsSection, ResearchSection, TestimonialsSection, VisitSection, getHomePageContent } from "@/modules/home";
+// import { AboutSection, JourneySection, LifeAtKRMU, NewsEventsSection, PartnersSection, PlacementsSection, ResearchSection, VisitSection, getHomePageContent } from "@/presentation/home";
+import { HeroSection, TestimonialsSection } from "@/presentation/home/sections";;
 // import HomeTestimonial from "./(main-website)/Home/HomeTestimonial";
 // import OurTopRecruiters from "./(main-website)/Home/OurTopRecruiters";
 // import ShapingFuture from "./(main-website)/Home/ShapingFuture";

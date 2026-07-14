@@ -3,15 +3,8 @@ import { getCorpAdvisoryTeamData } from "@/lib/api/corpadvteam";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import {
-  CareerServicesSection,
-  CDCAdvisoryBoardSection,
-  ContactSection,
-  DirectorMessageSection,
-  getCareerDevelopmentCentreContent,
-  HeroSection,
-  TeamMemberSection,
-} from "@/modules/placement/career-development-centre";
+import { CareerServicesSection, CDCAdvisoryBoardSection, ContactSection, DirectorMessageSection, HeroSection, TeamMemberSection } from "@/presentation/placement/career-development-centre/sections";
+import { getCareerDevelopmentCentreContent } from "@/features/placement/career-development-centre/services";;
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("career-development-centre");

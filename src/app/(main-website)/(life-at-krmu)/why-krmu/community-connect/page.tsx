@@ -3,10 +3,8 @@ import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import { SectionsRenderer } from "@/components/common/SectionRenderer";
-import {
-  getCommunityConnectData,
-  Sections,
-} from "@/modules/life-at-krmu/community-connect";
+import { getCommunityConnectData } from "@/features/life-at-krmu/community-connect/services";
+import { Sections } from "@/features/life-at-krmu/community-connect/config";;
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("community-connect");

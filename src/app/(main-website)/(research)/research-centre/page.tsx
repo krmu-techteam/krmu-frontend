@@ -2,10 +2,8 @@ import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import { SectionsRenderer } from "@/components/common/SectionRenderer";
-import {
-  researchCentreConfig,
-  getResearchCentreContent,
-} from "@/modules/research/research-centre";
+import { researchCentreConfig } from "@/features/research/research-centre/config";
+import { getResearchCentreContent } from "@/features/research/research-centre/services";;
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("researchcentre");

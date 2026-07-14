@@ -5,7 +5,7 @@ import { STRAPI_URL } from "@/app/constant";
 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
-import { HeroSection } from "@/modules/why-krmu/international-collaboration";
+import { HeroSection } from "@/presentation/why-krmu/international-collaboration/sections";;
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("international-collaboration");

@@ -1,9 +1,6 @@
 import { folderRouteSEO } from "@/lib/api/siteseo";
-import {
-  getHeroSectionContent,
-  HeroSection,
-  PHDRegulationCardSection,
-} from "@/modules/research/phd-regulations";
+import { getHeroSectionContent } from "@/features/research/phd-regulations/services";
+import { HeroSection, PHDRegulationCardSection } from "@/presentation/research/phd-regulations/sections";;
 
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";

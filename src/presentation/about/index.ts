@@ -1,1 +1,3 @@
-export { HeroSection } from "./HeroSection";
+export * from "./components";
+export * from "./sections";
+export * from "./HeroSection";

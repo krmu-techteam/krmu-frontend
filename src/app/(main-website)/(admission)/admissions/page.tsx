@@ -8,17 +8,8 @@ import {
   createProgFaqSchema,
 } from "@/lib/api/common";
 import Script from "next/script";
-import {
-  AdmissionProcessSection,
-  AlumniVoicesSection,
-  ContactWithUSection,
-  FeeOverviewSection,
-  FrequentlyAskedQuestionSection,
-  HeroSection,
-  LocationSection,
-  WhyKRMangalamUniversitySection,
-} from "@/modules/admission/admissions";
-import { ProgrammesExplorer } from "@/modules/programmes";
+import { AdmissionProcessSection, AlumniVoicesSection, ContactWithUSection, FeeOverviewSection, FrequentlyAskedQuestionSection, HeroSection, LocationSection, WhyKRMangalamUniversitySection } from "@/presentation/admission/admissions/sections";;
+import { ProgrammesExplorer } from "@/presentation/programmes/sections";;
 import SectionDivider from "@/components/common/SectionDivider";
 
 export async function generateMetadata(): Promise<Metadata> {

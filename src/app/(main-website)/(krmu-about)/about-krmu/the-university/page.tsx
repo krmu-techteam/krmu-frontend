@@ -8,7 +8,7 @@ import { STRAPI_URL } from "@/app/constant";
 import AccrediationLogo from "../AccrediationLogo";
 import KRMUGroupCard from "../KRMUGroupCard";
 import HallofFame from "../HallofFame";
-import { AdvisoryOrDeanSection } from "@/modules/about";
+import { AdvisoryOrDeanSection } from "@/presentation/about/sections";;
 import IndustryCollabLogos from "../IndustryCollabLogos";
 import { Eye, Target } from "lucide-react";
 

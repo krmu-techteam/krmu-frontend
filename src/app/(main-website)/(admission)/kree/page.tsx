@@ -4,7 +4,7 @@ import KREEOnlineExam from "./comp/KREEOnlineExam";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import { AdmissionHelplineSection, ApplyOnlineSection, EnrollSection, ExaminationPatternSection, ExamStructureSection, HeroSection } from "@/modules/admission/kree";
+import { AdmissionHelplineSection, ApplyOnlineSection, EnrollSection, ExaminationPatternSection, ExamStructureSection, HeroSection } from "@/presentation/admission/kree/sections";;
 
 
 export async function generateMetadata(): Promise<Metadata> {
