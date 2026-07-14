@@ -75,11 +75,8 @@ const NewProgrammeScope = async ({
       id: 2,
       content: (
         <span>
-          Cloud computing, DevOps workflows, cybersecurity awareness and{" "}
-          <strong className="text-white font-bold">
-            secure coding practices
-          </strong>{" "}
-          are embedded into the curriculum.
+          DevOps workflows, cyber security awareness, and secure coding
+          practices are embedded throughout the curriculum.
         </span>
       ),
     },
@@ -150,10 +147,10 @@ const NewProgrammeScope = async ({
               <p>
                 The B.Tech. CSE programme prepares students to pursue careers
                 that require innovative problem-solving through computational
-                techniques. Students can build their future in some of the
-                fastest-growing careers in technology, such as software
-                engineering, artificial intelligence, cloud computing, data
-                science, cybersecurity, robotics and more.
+                techniques. Students can build successful careers in some of the
+                fastest-growing fields in technology, including software
+                engineering, artificial intelligence, data science, cyber
+                security, robotics, and more.
               </p>
               <p>
                 In addition, students can opt for advanced or specialised
@@ -256,7 +253,7 @@ const NewProgrammeScope = async ({
                   Skills Developed
                 </span>
                 <h4 className="text-white font-extrabold text-lg sm:text-xl md:text-[29px] leading-[115%]  mb-4">
-                  During the B.Tech
+                  During the B.Tech.
                   <br />
                   CSE Programme
                 </h4>
