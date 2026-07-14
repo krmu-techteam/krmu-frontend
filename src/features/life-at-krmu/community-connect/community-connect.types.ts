@@ -104,3 +104,8 @@ export interface DataProps {
 export interface CommunityConnectResponse {
   data: DataProps;
 }
+
+export interface CommunityConnectDomain {
+  staticData: DataProps;
+  nssData: any | null;
+}

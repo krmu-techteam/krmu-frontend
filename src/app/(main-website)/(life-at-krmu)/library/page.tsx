@@ -2,8 +2,7 @@ import { STRAPI_URL } from "@/app/constant";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
 import { SectionsRenderer } from "@/components/common/SectionRenderer";
-import { getLibraryContent } from "@/features/life-at-krmu/library";
-import { Sections } from "@/features/life-at-krmu/library";;
+import { getLibraryService, ILibraryService, Sections } from "@/features/life-at-krmu/library";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("library");
@@ -67,10 +66,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const Page = async () => {
-  const { data } = await getLibraryContent();
+  const service: ILibraryService = getLibraryService();
+  const { libraryContent } = await service.getData();
   return (
     <>
-      <SectionsRenderer sections={Sections} data={data} />
+      <SectionsRenderer sections={Sections} data={libraryContent} />
     </>
   );
 };

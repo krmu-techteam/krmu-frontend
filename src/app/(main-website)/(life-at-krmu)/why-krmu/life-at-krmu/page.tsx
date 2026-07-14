@@ -6,6 +6,7 @@ import LifeKRMUInfra from "./comp/LifeKRMUInfra";
 import LifeKRMUDynamic from "./comp/LifeKRMUDynamic";
 import LifeKRMUPeek from "./comp/LifeKRMUPeek";
 import LifeKRMUTabs from "./comp/LifeKRMUTabs";
+import { getCampusLifeService, ICampusLifeService } from "@/features/life-at-krmu/campus-life";
 
 
 
@@ -78,7 +79,10 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const page = () => {
+const page = async () => {
+  const service: ICampusLifeService = getCampusLifeService();
+  const campusData = await service.getData();
+
   return (
     <>
       <LifeKRMUHero />

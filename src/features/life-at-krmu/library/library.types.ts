@@ -189,3 +189,5 @@ export interface DataProps {
 export interface ApiResponse {
   data: DataProps;
 }
+
+export type LibraryDomain = DataProps;

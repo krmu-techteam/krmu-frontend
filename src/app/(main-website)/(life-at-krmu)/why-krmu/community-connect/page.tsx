@@ -1,10 +1,8 @@
-import { getNSSCommunityConnectData } from "@/lib/api/community-connect";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import { SectionsRenderer } from "@/components/common/SectionRenderer";
-import { getCommunityConnectData } from "@/features/life-at-krmu/community-connect";
-import { Sections } from "@/features/life-at-krmu/community-connect";;
+import { getCommunityConnectService, ICommunityConnectService, Sections } from "@/features/life-at-krmu/community-connect";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("community-connect");
@@ -68,16 +66,15 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const page = async () => {
-  const NSSCommunityConnectData = await getNSSCommunityConnectData();
-
-  const { data } = await getCommunityConnectData();
+  const service: ICommunityConnectService = getCommunityConnectService();
+  const { staticData, nssData } = await service.getData();
 
   return (
     <>
       <SectionsRenderer
         sections={Sections}
-        data={data}
-        extraProps={{ NSSCommunityConnectData }}
+        data={staticData}
+        extraProps={{ NSSCommunityConnectData: nssData }}
       />
     </>
   );
