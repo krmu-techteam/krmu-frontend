@@ -52,18 +52,18 @@ const LeaveWith = () => {
           {content.items.map((item, idx) => (
             <div
               key={idx}
-              className={`group p-6 px-8 flex flex-col justify-start min-h-[169px] border-white/10 hover:bg-white/5 transition-all duration-300
+              className={`group p-6 px-8 flex sm:flex-col gap-4 sm:gap-0 justify-start h-full sm:min-h-[169px] border-white/10 hover:bg-white/5 transition-all duration-300
                 ${idx < 5 ? "border-b" : "border-b-0"}
                 ${idx < 3 ? "md:border-b" : "md:border-b-0"}
                 ${(idx + 1) % 3 !== 0 ? "md:border-r" : "md:border-r-0"}
               `}
             >
               {/* Icon Container */}
-              <div className="mb-4">{renderIcon(item.icon)}</div>
+              <div className="mb-0 sm:mb-4">{renderIcon(item.icon)}</div>
 
               {/* Description */}
               <p
-                className={`${fraunces.className} text-white text-[15px] sm:text-[16px] lg:text-[19px] leading-relaxed font-semibold pr-8`}
+                className={`${fraunces.className} text-white text-[15px] sm:text-[16px] lg:text-[19px] leading-relaxed font-semibold pr-4 lg:pr-8`}
               >
                 {item.desc}
               </p>

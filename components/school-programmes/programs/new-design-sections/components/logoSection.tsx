@@ -30,59 +30,61 @@ const LogoSection = () => {
           Delivered with
         </h2>
 
-        {/* Analytics Track */}
-        <Link href="/programs/mba" target="_blank">
-          <div className="flex flex-col items-center">
-            <Image
-              src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/e53feb04a9480da92d845dc256dbde8f108df463_c41f459cd1.png"
-              alt="Analytics track"
-              width={87}
-              height={33}
-              className="mb-2 "
-            />
-            <h2
-              className={`${poppins.className} text-[#0F2A4D] text-center text-[11px] sm:text-[12px] `}
-            >
-              Analytics track
-            </h2>
-          </div>
-        </Link>
+        <div className="flex items-center justify-center gap-10 md:gap-6 lg:gap-20 xl:gap-30 w-full ">
+          {/* Analytics Track */}
+          <Link href="/programs/mba" target="_blank">
+            <div className="flex flex-col justify-end h-[65px] items-center">
+              <Image
+                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/e53feb04a9480da92d845dc256dbde8f108df463_c41f459cd1.png"
+                alt="Analytics track"
+                width={87}
+                height={33}
+                className="mb-2 "
+              />
+              <h2
+                className={`${poppins.className} text-[#0F2A4D] text-center text-[11px] sm:text-[12px] `}
+              >
+                Analytics track
+              </h2>
+            </div>
+          </Link>
 
-        {/* Fintech Track */}
-        <Link href="/programs/mba-fintech" target="_blank">
-          <div className="flex flex-col items-center">
-            <Image
-              src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/cf4669f3a50b9b289d3f5edcd5e3aa0b79d7fecd_22e0e5810c.png"
-              alt="Fintech track"
-              width={40}
-              height={40}
-              className="mb-2 "
-            />
-            <h2
-              className={`${poppins.className} text-[#0F2A4D] text-center  text-[11px] sm:text-[12px]`}
-            >
-              Fintech track
-            </h2>
-          </div>
-        </Link>
+          {/* Fintech Track */}
+          <Link href="/programs/mba-fintech" target="_blank">
+            <div className="flex flex-col justify-end h-[65px] items-center">
+              <Image
+                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/cf4669f3a50b9b289d3f5edcd5e3aa0b79d7fecd_22e0e5810c.png"
+                alt="Fintech track"
+                width={40}
+                height={40}
+                className="mb-2 "
+              />
+              <h2
+                className={`${poppins.className} text-[#0F2A4D] text-center  text-[11px] sm:text-[12px]`}
+              >
+                Fintech track
+              </h2>
+            </div>
+          </Link>
 
-        {/* Digital Marketing Track */}
-        <Link href="/programs/mba-digital-marketing" target="_blank">
-          <div className="flex flex-col items-center">
-            <Image
-              src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/d7eb5760000e873ce5437f8d3690ccf3bc429826_ce226df9f6.png"
-              alt="Digital Marketing track"
-              width={68}
-              height={42}
-              className="mb-2 "
-            />
-            <h2
-              className={`${poppins.className} text-[#0F2A4D] text-center  text-[11px] sm:text-[12px]`}
-            >
-              Digital Marketing track
-            </h2>
-          </div>
-        </Link>
+          {/* Digital Marketing Track */}
+          <Link href="/programs/mba-digital-marketing" target="_blank">
+            <div className="flex flex-col justify-start max-w-[87px] md:max-w-full h-[65px] items-center">
+              <Image
+                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/d7eb5760000e873ce5437f8d3690ccf3bc429826_ce226df9f6.png"
+                alt="Digital Marketing track"
+                width={68}
+                height={42}
+                className="mb-2 "
+              />
+              <h2
+                className={`${poppins.className} text-[#0F2A4D] text-center  text-[11px] sm:text-[12px]`}
+              >
+                Digital Marketing track
+              </h2>
+            </div>
+          </Link>
+        </div>
 
         {/* Harvard Business Impact */}
         <h2

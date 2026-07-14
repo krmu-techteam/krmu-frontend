@@ -65,7 +65,10 @@ const CareerGoal = ({ slug, dataContent }: Props) => {
             </p>
           )}
         </div>
-          <p className={`${inter.className} py-3 italic text-xs text-black/60`}>*Tentative. The final course structure will be shared at the time of orientation.</p>
+        <p className={`${inter.className} py-3 italic text-xs text-black/60`}>
+          *Tentative. The final course structure will be shared at the time of
+          orientation.
+        </p>
         {/* Semester Tab Row */}
         <div className="flex flex-wrap items-center gap-2 sm:gap-3 pb-4 overflow-x-auto scrollbar-none">
           {content.semesters.map((sem, idx) => {
@@ -182,13 +185,13 @@ const CareerGoal = ({ slug, dataContent }: Props) => {
 
           {/* Right Column: Dynamic Image Banner */}
           <div className="lg:col-span-6 w-full">
-            <div className="relative w-full overflow-hidden">
+            <div className="relative max-w-[462px] max-h-[300px] sm:max-h-[445px] overflow-hidden">
               <Image
                 src={content.image}
                 alt={content.alt}
                 width={1024}
                 height={1024}
-                className="relative object-cover w-[462px] h-[445px] mx-auto"
+                className="relative object-cover w-full h-full mx-auto"
               />
             </div>
           </div>
