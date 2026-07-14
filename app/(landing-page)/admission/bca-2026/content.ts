@@ -78,27 +78,27 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/bca-2026/recruiters/mahindra.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/4-bca/accenture.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bca-2026/recruiters/accen.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/4-bca/airtel-logo.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bca-2026/recruiters/wipro.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/4-bca/mahindra.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bca-2026/recruiters/airtel.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/4-bca/samsung.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/common/samsung.svg",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/4-bca/tata-consultancy.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bca-2026/recruiters/tcslogo.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/4-bca/wipro.png",
     alt: "Recruiter Logo",
   },
 ];

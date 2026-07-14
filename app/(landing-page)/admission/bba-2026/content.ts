@@ -80,23 +80,23 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/bba-2026/test/accenture.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/1-bba/accenture.png",
     alt: "accenture Logo",
   },
   {
-    imgUrl: "/landingpage/bba-2026/test/amazon.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/1-bba/amazon.png",
     alt: "amazon Logo",
   },
   {
-    imgUrl: "/landingpage/bba-2026/test/deloitte.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/1-bba/deloitte.png",
     alt: "deloitte Logo",
   },
   {
-    imgUrl: "/landingpage/bba-2026/test/kpmg.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/1-bba/kpmg.png",
     alt: "kpmg Logo",
   },
   {
-    imgUrl: "/landingpage/bba-2026/test/pepsico.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/1-bba/pepsico.png",
     alt: "pepsico Logo",
   },
 ];

@@ -379,7 +379,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
   },
   {
     id: 9973,
-    slug: "dr-sujata-kumari-2",
+    slug: "dr-sujata-kumari",
     title: {
       rendered: "Dr. Sujata Kumari",
     },
@@ -390,7 +390,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Sujata-Kumari.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/sujata.webp",
   },
   {
     id: 9962,
