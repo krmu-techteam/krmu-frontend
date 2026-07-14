@@ -88,37 +88,37 @@ export const prominentRecruiterContent: ProminentRecruiterContent = {
 
   logos: [
     {
-      src: "/wp-content/landingpage/mba-2026/recruiters/amazon.svg",
+      src: "https://www.krmangalam.edu.in/wp-content/landingpage/images/2-mba/amazon.png",
       alt: "amazon",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/mba-2026/recruiters/deliotte.svg",
+      src: "https://www.krmangalam.edu.in/wp-content/landingpage/images/2-mba/deloitte.png",
       alt: "deliotte",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/mba-2026/recruiters/apple.svg",
+      src: "https://www.krmangalam.edu.in/wp-content/landingpage/images/2-mba/apple.png",
       alt: "Apple",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/images/tcslogo.png",
+      src: "https://www.krmangalam.edu.in/wp-content/landingpage/images/2-mba/tata-consultancy.png",
       alt: "tcs",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/images/accen.png",
+      src: "https://www.krmangalam.edu.in/wp-content/landingpage/images/2-mba/accenture.png",
       alt: "accenture",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/images/infosys.svg",
+      src: "https://www.krmangalam.edu.in/wp-content/landingpage/images/2-mba/infosys.png",
       alt: "infosys",
       width: 160,
       height: 40,

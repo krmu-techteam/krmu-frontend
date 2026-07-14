@@ -105,7 +105,7 @@ const page = () => {
       {/* <PlacementStats data={placementData} /> */}
       <ProminentRecruiter data={prominentData} />
       <AboutUs
-        title={aboutUsContent?.title}
+        title={aboutUsContent?.title} 
         description={aboutUsData?.description}
         image={aboutUsData?.image}
       />
