@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const DSWMessage = () => {
   return (
-    <section className="bg-white px-8 py-8 md:px-12 md:py-12">
+    <section className="bg-white px-4 py-4 md:px-12 md:py-12">
       <div className="mx-auto w-full max-w-[1550px] overflow-hidden rounded-md bg-[linear-gradient(165deg,#A598BF_6%,#120032_13.48%)] px-6 py-8 text-white  md:px-8 md:py-9 lg:px-9">
         <div className="grid items-start gap-7 lg:grid-cols-[190px_1fr] xl:grid-cols-[240px_1fr]">
           <div className="mx-auto h-[200px] w-[200px] rounded-full border-1 border-dashed border-[#ff9d00] p-1.5 lg:mx-0 xl:h-[220px] xl:w-[220px]">
@@ -28,18 +28,19 @@ const DSWMessage = () => {
             </div>
 
             <div className="grid gap-4 md:grid-cols-[70px_1fr] md:gap-5 xl:grid-cols-[86px_1fr]">
-              <div aria-hidden="true" className=" gap-2">
+              <div aria-hidden="true" className=" w-20  h-20   gap-2">
                 {/* <span className="block h-[46px] w-[18px] rotate-[16deg] rounded-full bg-[#2f8cff] md:h-[60px] md:w-[20px]" />
                 <span className="block h-[46px] w-[18px] rotate-[16deg] rounded-full bg-[#2f8cff] md:h-[60px] md:w-[20px]" /> */}
                 <Image
                   src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/02c7933d58ae4e40c1797d068b25250429608af5_130e06f47b.png"
                   alt="decorator"
-                  width={100}
-                  height={100}
+                  width={1024}
+                  height={1024}
+                  className="w-full h-full"
                 />
               </div>
 
-              <p className="max-w-[1030px] text-justify text-[14px] pt-10  font-medium leading-[1.65] tracking-[0.01em] text-white/95 md:text-[15px] ">
+              <p className="max-w-[1030px] text-left sm:text-justify text-[14px] pt-2 sm:pt-10  font-medium leading-[1.65] tracking-[0.01em] text-white/95 md:text-[15px] ">
                 Dear Students, Welcome to a vibrant community of learning,
                 innovation, and endless opportunities. Your university journey
                 is not just about earning a degree, but about discovering your

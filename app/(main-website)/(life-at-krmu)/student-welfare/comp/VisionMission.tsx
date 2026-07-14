@@ -45,7 +45,7 @@ const welfareCards = [
 
 const VisionMission = () => {
   return (
-    <section className="bg-white px-8 pb-12 md:px-12">
+    <section className="bg-white px-4 pb-12 md:px-12">
       <div className="relative mx-auto w-full max-w-[1550px] overflow-hidden rounded-md bg-[linear-gradient(180deg,#001732_0%,#994246_100%)] px-6 pb-8 pt-10 text-white md:px-[65px] md:pb-[60px] md:pt-[82px]">
         <div className="pointer-events-none absolute inset-x-[8%]  top-[30px]  hidden h-[500px] w-[1150px]  md:block">
           <Image
@@ -97,7 +97,7 @@ const VisionMission = () => {
             >
               Vision
             </h3>
-            <p className="px-6 pt-3 text-justify text-[18px] font-medium leading-[1.45] md:px-[50px]">
+            <p className="px-6 pt-3 text-left sm:text-justify text-[18px] font-medium leading-[1.45] md:px-[50px]">
               Student Welfare envisions comprehensive individual, academic, and
               integrated development by providing life skills and counseling
               services and thus preparing them for a diverse, enterprising, and
@@ -111,7 +111,7 @@ const VisionMission = () => {
             >
               Mission
             </h3>
-            <p className="px-6 pt-3 text-justify text-[18px] font-medium leading-[1.45] md:px-[50px]">
+            <p className="px-6 pt-3 text-left sm:text-justify text-[18px] font-medium leading-[1.45] md:px-[50px]">
               The Student Welfare Department aims to facilitate global
               leadership and personal well-being through high moral values and
               sound life skills among students.

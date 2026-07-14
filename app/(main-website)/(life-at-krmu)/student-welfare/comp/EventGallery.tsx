@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 
 export const EventGallery = () => {
   return (
-    <section className="bg-[#FAF8FC] py-16 pb-30 lg:pb-16 px-6 md:px-12 relative overflow-hidden">
+    <section className="bg-[#FAF8FC] py-12 pb-30 lg:pb-16 px-4 md:px-12 relative overflow-hidden">
       <div className="mx-auto w-full max-w-[1550px]">
         <h2
           className={`${playfair.className} text-center text-[32px] md:text-[41px] font-bold text-black mb-12`}
