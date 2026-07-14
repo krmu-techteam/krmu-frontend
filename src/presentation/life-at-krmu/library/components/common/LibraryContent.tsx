@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { LibraryContentType } from "@/features/life-at-krmu/library/types";
+import { LibraryContentType } from "@/features/life-at-krmu/library";
 
 export const LibraryContent = ({
   tagLine,

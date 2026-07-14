@@ -1,4 +1,4 @@
-import { LibraryContentProps } from "@/features/life-at-krmu/library/types";
+import { LibraryContentProps } from "@/features/life-at-krmu/library";
 import { MembershipGuidelines, MembershipHeader } from "../membership";
 
 const Membership = ({

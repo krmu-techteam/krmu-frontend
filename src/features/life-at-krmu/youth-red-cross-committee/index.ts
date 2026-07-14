@@ -1,3 +1,3 @@
-export * from "./types";
-export * from "./services";
-export * from "./config";
+export * from "./youth-red-cross-committee.config";
+export * from "./youth-red-cross-committee.services";
+export * from "./youth-red-cross-committee.types";

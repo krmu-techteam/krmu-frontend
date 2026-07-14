@@ -1,6 +1,6 @@
 import SectionDivider from "@/components/common/SectionDivider";
 import { TeamLibrarySlider } from "../components";
-import { TeamLibrarySectionProps } from "@/features/research/research-and-innovation/types";
+import { TeamLibrarySectionProps } from "@/features/research/research-and-innovation";
 
 
 

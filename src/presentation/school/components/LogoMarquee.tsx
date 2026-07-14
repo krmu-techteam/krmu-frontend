@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useMemo } from "react";
 import { STRAPI_URL } from "@/app/constant";
-import { LogoMarqueeProps } from "@/features/school/types";;
+import { LogoMarqueeProps } from "@/features/school";;
 
 
 const LogoMarquee = ({

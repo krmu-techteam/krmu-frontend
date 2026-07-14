@@ -1,5 +1,5 @@
 import { PlacementHighlightCard } from "../components";
-import { PlacementImageProps } from "@/features/placement/placement-highlights/types";
+import { PlacementImageProps } from "@/features/placement/placement-highlights";
 
 const PlacementHighlightSection = ({
   placementImgs,

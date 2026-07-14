@@ -1,5 +1,5 @@
 import React from "react";
-import { RowConfig } from "@/features/admission/scholarship/constants";
+import { RowConfig } from "@/features/admission/scholarship";
 
 interface TableConfig {
   headers?: string[];

@@ -1,5 +1,5 @@
 import { PlacementPolicyCard } from "../components";
-import { PLACEMENT_POLICIES } from "@/features/placement/the-placements-process/constants";
+import { PLACEMENT_POLICIES } from "@/features/placement/the-placements-process";
 
 const PlacementPoliciesSection = () => {
   return (

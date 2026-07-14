@@ -1,4 +1,4 @@
-import { StatCardProps } from "@/features/school/types";;
+import { StatCardProps } from "@/features/school";;
 import { ABOUT_STAT_BG_COLORS } from "@/features/home";
 
 const StatCard = ({ title, desc, index = 0 }: StatCardProps) => {

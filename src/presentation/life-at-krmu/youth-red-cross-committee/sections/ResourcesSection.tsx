@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ResourcesSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee/types";
+import { ResourcesSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee";
 
 const ResourcesSection = ({
   resourcesSection,

@@ -129,10 +129,14 @@ export interface HallFameItemDomain {
   description: string;
 }
 
+export type HALLFAME = HallFameItemDomain;
+
 export interface HallOfFameDomain {
   title: string;
   hallfame: HallFameItemDomain[];
 }
+
+export type HALLOFFAME = HallOfFameDomain;
 
 export interface VisionMissionDomain {
   visiontitle: string;

@@ -1,4 +1,4 @@
-import { PlacementPolicyCardProps } from "@/features/placement/the-placements-process/types";
+import { PlacementPolicyCardProps } from "@/features/placement/the-placements-process";
 
 const PlacementPolicyCard = ({
   title,

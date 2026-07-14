@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Popup from "@/app/(main-website)/components/Popup";
 import { ChevronDown, Download } from "lucide-react";
-import { Button } from "@/features/school/types";
+import { Button } from "@/features/school";
 
 interface Props {
   newsLetterBtns: Button[];

@@ -1,5 +1,5 @@
 import SectionDivider from "@/components/common/SectionDivider";
-import { FuturePlansSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee/types";
+import { FuturePlansSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee";
 
 const FuturePlansSection = ({
   futurePlansSection,

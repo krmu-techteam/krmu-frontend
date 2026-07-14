@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronUp } from "lucide-react";
-import { LIBRARY_SECTIONS } from "@/features/life-at-krmu/library/constants/library-sections";
+import { LIBRARY_SECTIONS } from "@/features/life-at-krmu/library/library.library-sections";
 
 type Props = {
   activeSection: number;

@@ -3,7 +3,7 @@ import { Raleway } from "next/font/google";
 import SingleBlogContent from "./SingleBlogContent";
 // import SingleBlogSidebar from "./SingleBlogSidebar";
 import SingleBlogCategorySidebar from "./SingleBlogCategorySidebar";
-import BlogCrousel from "../single-blog-comp/BlogCrousel";
+import BlogCrousel from "./BlogCrousel";
 
 // Configure font with fallbacks
 const raleway = Raleway({

@@ -1,6 +1,6 @@
 import { cache } from "react";
-import PHD_REGULATIONS_DATA from "../data/phd-regulations.json";
-import { PhdRegulationResponse } from "../types";
+import PHD_REGULATIONS_DATA from "./data/phd-regulations.json";
+import { PhdRegulationResponse } from "./phd-regulations.types";
 
 export const getHeroSectionContent = cache(
   async (): Promise<PhdRegulationResponse> =>

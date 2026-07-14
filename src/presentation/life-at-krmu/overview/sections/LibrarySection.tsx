@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LibrarySectionProps } from "@/features/life-at-krmu/overview/types";
+import { LibrarySectionProps } from "@/features/life-at-krmu/overview";
 
 const LibrarySection = ({
   librarySection,

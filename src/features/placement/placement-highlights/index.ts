@@ -1,1 +1,1 @@
-export * from "./types";
+export * from "./placement-highlights.types";

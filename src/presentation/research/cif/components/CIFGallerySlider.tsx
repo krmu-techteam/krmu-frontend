@@ -6,7 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { CIFGalleryImages } from "@/features/research/cif/types";
+import { CIFGalleryImages } from "@/features/research/cif";
 
 const CIFGallerySlider = ({images}:{images:CIFGalleryImages[]}) => {
   return (

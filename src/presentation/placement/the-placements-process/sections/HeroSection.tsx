@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { HERO_DATA } from "@/features/placement/the-placements-process/constants";
+import { HERO_DATA } from "@/features/placement/the-placements-process";
 
 const HeroSection = () => {
   return (

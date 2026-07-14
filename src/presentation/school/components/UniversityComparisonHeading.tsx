@@ -1,4 +1,4 @@
-import { UniversityComparisonSectionProps } from "@/features/school/types";;
+import { UniversityComparisonSectionProps } from "@/features/school";;
 
 type UniversityComparisonHeadingProps = Pick<UniversityComparisonSectionProps, 'content'>;
 

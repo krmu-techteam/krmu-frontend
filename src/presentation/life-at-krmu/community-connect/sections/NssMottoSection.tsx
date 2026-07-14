@@ -1,4 +1,4 @@
-import { NSSMottoSectionProps } from "@/features/life-at-krmu/community-connect/types";
+import { NSSMottoSectionProps } from "@/features/life-at-krmu/community-connect";
 
 const NssMottoSection = ({
   nssMottoSection,

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getOverviewEvents } from "@/lib/api/overviewslide";
 import Image from "next/image";
 import { NewsEventsCarousel } from "../components";
-import { StudentLifeSectionProps } from "@/features/life-at-krmu/overview/types";
+import { StudentLifeSectionProps } from "@/features/life-at-krmu/overview";
 const StudentLifeSection = async ({
   studentLifeSection,
 }: {

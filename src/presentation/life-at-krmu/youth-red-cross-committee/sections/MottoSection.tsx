@@ -1,4 +1,4 @@
-import { MottoSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee/types";
+import { MottoSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee";
 
 const MottoSection = ({
   mottoSection,

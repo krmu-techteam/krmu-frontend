@@ -1,4 +1,4 @@
-import { BookRenewalProps } from "@/features/life-at-krmu/library/types";
+import { BookRenewalProps } from "@/features/life-at-krmu/library";
 import { BookRenewalCard } from "./BookRenewalCard";
 
 interface BookRenewalListProps {

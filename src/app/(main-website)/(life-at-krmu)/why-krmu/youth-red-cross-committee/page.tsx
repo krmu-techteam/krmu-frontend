@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import { SectionsRenderer } from "@/components/common/SectionRenderer";
-import { getYouthRedCrossCommitteeData } from "@/features/life-at-krmu/youth-red-cross-committee/services";
-import { Sections } from "@/features/life-at-krmu/youth-red-cross-committee/config";;
+import { getYouthRedCrossCommitteeData } from "@/features/life-at-krmu/youth-red-cross-committee";
+import { Sections } from "@/features/life-at-krmu/youth-red-cross-committee";;
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("youth-red-cross-committee");

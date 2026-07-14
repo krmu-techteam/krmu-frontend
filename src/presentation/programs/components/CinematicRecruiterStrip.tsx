@@ -1,4 +1,4 @@
-import { CinematicRecruiterStripProps } from "@/features/programs/types";
+import { CinematicRecruiterStripProps } from "@/features/programs";
 import RecruiterCarousel from "./RecruiterCarousel";
 
 const CinematicRecruiterStrip = ({

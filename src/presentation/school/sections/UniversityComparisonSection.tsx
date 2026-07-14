@@ -1,5 +1,5 @@
 import SectionDivider from "@/components/common/SectionDivider";
-import { UniversityComparisonSectionProps } from "@/features/school/types";
+import { UniversityComparisonSectionProps } from "@/features/school";
 import { UniversityComparisonHeading, UniversityComparisonTable } from "@/presentation/school/components";;
 
 const UniversityComparisonSection = ({

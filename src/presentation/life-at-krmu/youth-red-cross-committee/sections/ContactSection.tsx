@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ContactSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee/types";
+import { ContactSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee";
 
 const ContactSection = ({
   contactSection,

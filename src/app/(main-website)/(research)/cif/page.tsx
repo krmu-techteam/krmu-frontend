@@ -2,8 +2,8 @@ import { STRAPI_URL } from "@/app/constant";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
 import { SectionsRenderer } from "@/components/common/SectionRenderer";
-import { CIFConfig } from "@/features/research/cif/config";
-import { getCIFContent } from "@/features/research/cif/services";;
+import { CIFConfig } from "@/features/research/cif";
+import { getCIFContent } from "@/features/research/cif";;
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("cif");

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Magazine as MagazineProps } from "@/features/life-at-krmu/community-connect/types";
+import { Magazine as MagazineProps } from "@/features/life-at-krmu/community-connect";
 import Link from "next/link";
 
 const Magazine = ({ magazine }: { magazine: MagazineProps }) => {

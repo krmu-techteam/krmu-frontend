@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CIFFacility } from "@/features/research/cif/types";
+import { CIFFacility } from "@/features/research/cif";
 
 const CIFFacilityList = ({
   facilities,

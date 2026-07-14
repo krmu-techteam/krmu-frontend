@@ -6,7 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { OnGoingProjectsImages } from "@/features/research/research-and-innovation/types";
+import { OnGoingProjectsImages } from "@/features/research/research-and-innovation";
 
 const OnGoingProjectSlider = ({
   images,

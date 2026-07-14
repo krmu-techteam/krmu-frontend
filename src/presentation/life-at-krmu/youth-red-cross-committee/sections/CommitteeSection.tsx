@@ -1,4 +1,4 @@
-import { CommitteeSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee/types";
+import { CommitteeSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee";
 
 const CommitteeSection = ({
   committeeSection,

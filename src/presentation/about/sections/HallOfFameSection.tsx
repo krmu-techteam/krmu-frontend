@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { HallofFame } from "../components"
-import { HALLFAME } from "@/features/about/types"
+import { HALLFAME } from "@/features/about"
 import SectionDivider from "@/components/common/SectionDivider"
 
 

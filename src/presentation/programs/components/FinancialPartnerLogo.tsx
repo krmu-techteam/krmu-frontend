@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { STRAPI_URL } from "@/app/constant";
-import { FinancialPartnerLogoProps } from "@/features/programs/types";
+import { FinancialPartnerLogoProps } from "@/features/programs";
 
  
 

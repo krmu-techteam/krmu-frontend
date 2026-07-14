@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion } from "@/components/ui/accordion";
 import { ArrowUpRight } from "lucide-react";
 import Button from "@/components/common/Button";
-import { FAQAccordionProps } from "@/features/programs/types";
+import { FAQAccordionProps } from "@/features/programs";
 import FAQAccordionItem from "./FAQAccordionItem";
 
 const FAQAccordion = ({ tocfaqs, tocbtn }: FAQAccordionProps) => {

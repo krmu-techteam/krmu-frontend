@@ -1,1 +1,1 @@
-export * from "./library-sections";
+export * from "./library.library-sections";

@@ -6,7 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { IPRImages } from "@/features/research/research-and-innovation/types";
+import { IPRImages } from "@/features/research/research-and-innovation";
 
 const IPRSlider = ({ images }: { images: IPRImages[] }) => {
   return (

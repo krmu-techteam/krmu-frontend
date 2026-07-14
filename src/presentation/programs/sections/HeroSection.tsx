@@ -1,8 +1,8 @@
  
 
-import { HERO_CONFIGS } from "@/features/programs/constants";
+import { HERO_CONFIGS } from "@/features/programs";
 import { ProgramHeroCinematic, ProgramHeroDefault } from "../components";
-import { HeroSectionProps } from "@/features/programs/types";
+import { HeroSectionProps } from "@/features/programs";
 
  
 const ProgramHero = (props: HeroSectionProps) => {

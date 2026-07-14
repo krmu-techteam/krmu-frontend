@@ -1,4 +1,4 @@
-import { HeroSectionProps } from "@/features/research/research-centre/types";
+import { HeroSectionProps } from "@/features/research/research-centre";
 
 const HeroSection = ({ heroSection }: { heroSection: HeroSectionProps }) => {
   const { title } = heroSection;

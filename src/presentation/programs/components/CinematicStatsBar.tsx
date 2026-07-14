@@ -1,5 +1,5 @@
  
-import { DreamCareerSection } from "@/features/programs/types";
+import { DreamCareerSection } from "@/features/programs";
  
 const CinematicStatsBar = ({ dreamcareerSection }: DreamCareerSection) => {
   return (

@@ -1,7 +1,7 @@
 import SectionDivider from "@/components/common/SectionDivider";
 import Image from "next/image";
 import Link from "next/link";
-import { ADMISSION_PROCESS_STEPS } from "@/features/admission/admissions/constants";
+import { ADMISSION_PROCESS_STEPS } from "@/features/admission/admissions";
 
 const AdmissionProcessSection = () => {
   return (

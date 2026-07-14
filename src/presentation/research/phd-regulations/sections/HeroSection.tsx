@@ -1,5 +1,5 @@
 import { PHDRegulationCarousel } from "../components";
-import { HeroSectionProps } from "@/features/research/phd-regulations/types";
+import { HeroSectionProps } from "@/features/research/phd-regulations";
 
 const HeroSection = ({ heroSection }: { heroSection: HeroSectionProps }) => {
   return (

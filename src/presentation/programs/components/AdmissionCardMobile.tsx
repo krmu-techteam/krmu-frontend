@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AdmisionProcessCard } from "@/features/programs/types";
+import { AdmisionProcessCard } from "@/features/programs";
 
 interface Props {
   card: AdmisionProcessCard;

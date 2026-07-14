@@ -35,3 +35,5 @@ export interface FinancialImg {
   documentId: string;
   url: string;
 }
+
+export type FinancialAssistanceDomain = FinancialAssistanceResponse["data"];

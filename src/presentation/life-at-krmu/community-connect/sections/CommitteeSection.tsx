@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CommitteeSectionProps } from "@/features/life-at-krmu/community-connect/types";
+import { CommitteeSectionProps } from "@/features/life-at-krmu/community-connect";
 
 const CommitteeSection = ({
   committeeSection,

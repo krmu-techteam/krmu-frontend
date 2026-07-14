@@ -2,7 +2,8 @@
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import { getFinancialAssistanceData } from "@/features/admission/financial-assistance/services";
+import { getFinancialAssistanceService, IFinancialAssistanceService } from "@/features/admission/financial-assistance";
+import { notFound } from "next/navigation";
 import { HeroSection, LoanProviderSection, PointerSection } from "@/presentation/admission/financial-assistance/sections";;
 
 
@@ -69,7 +70,12 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const FinancialAssistancePage = async () => {
-  const financial_assistance = await getFinancialAssistanceData();
+  const financialAssistanceService: IFinancialAssistanceService = getFinancialAssistanceService();
+  const financial_assistance = await financialAssistanceService.getFinancialAssistanceData();
+
+  if (!financial_assistance) {
+    return notFound();
+  }
 
   return (
     <>

@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import { SectionsRenderer } from "@/components/common/SectionRenderer";
-import { getLifeAtKRMUOverviewData, getOverviewContent } from "@/features/life-at-krmu/overview/services";
-import { Sections } from "@/features/life-at-krmu/overview/config";;
+import { getLifeAtKRMUOverviewData, getOverviewContent } from "@/features/life-at-krmu/overview";
+import { Sections } from "@/features/life-at-krmu/overview";;
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("life-at-krmu-overview");

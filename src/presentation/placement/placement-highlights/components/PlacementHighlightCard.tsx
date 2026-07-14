@@ -1,6 +1,6 @@
 import { STRAPI_URL } from "@/app/constant";
 import Image from "next/image";
-import { PlacementImageProps } from "@/features/placement/placement-highlights/types";
+import { PlacementImageProps } from "@/features/placement/placement-highlights";
 
 const PlacementHighlightCard = ({ img }: { img: PlacementImageProps }) => {
   return (

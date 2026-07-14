@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { BenefitsSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee/types";
+import { BenefitsSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee";
 
 const BenefitsSection = ({
   benefitsSection,

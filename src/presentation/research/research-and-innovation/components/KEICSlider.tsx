@@ -6,7 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { KEICImages } from "@/features/research/research-and-innovation/types";
+import { KEICImages } from "@/features/research/research-and-innovation";
 
 const KEICSlider = ({images}:{images: KEICImages[]}) => {
   return (

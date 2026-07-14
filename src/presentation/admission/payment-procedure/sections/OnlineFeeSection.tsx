@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FeePaymentCard, PaymentOptionItem } from "../components";
-import { OFFLINE_PAYMENT_OPTIONS, ONLINE_PAYMENT_OPTIONS } from "@/features/admission/payment-procedure/constants";
+import { OFFLINE_PAYMENT_OPTIONS, ONLINE_PAYMENT_OPTIONS } from "@/features/admission/payment-procedure";
 
 const OnlineFeeSection = () => {
   return (

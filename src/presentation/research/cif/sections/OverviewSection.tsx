@@ -1,5 +1,5 @@
 import { CIFGallerySlider } from "../components";
-import { OverviewSectionProps } from "@/features/research/cif/types";
+import { OverviewSectionProps } from "@/features/research/cif";
 
 const OverviewSection = ({
   overviewSection,

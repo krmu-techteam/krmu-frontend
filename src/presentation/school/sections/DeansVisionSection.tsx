@@ -3,7 +3,7 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { DeanSectionProps } from "@/features/school/types";;
+import { DeanSectionProps } from "@/features/school";;
 
 const DeanSection = ({
   title,

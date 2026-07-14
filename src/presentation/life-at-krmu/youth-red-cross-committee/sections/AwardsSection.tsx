@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AwardsSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee/types";
+import { AwardsSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee";
 
 const AwardsSection = ({
   awardsSection,

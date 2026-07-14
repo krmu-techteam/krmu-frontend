@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { LibraryContentProps } from "@/features/life-at-krmu/library/types";
+import { LibraryContentProps } from "@/features/life-at-krmu/library";
 import { LibraryTabContent } from "../common/LibraryTabContent";
 
 const PromptCorrection = ({

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ResearchCentreProps } from "@/features/research/research-centre/types";
+import { ResearchCentreProps } from "@/features/research/research-centre";
 
 const ResearchCenterRow = ({
   idx,

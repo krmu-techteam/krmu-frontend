@@ -1,4 +1,4 @@
-import { Achievement } from "@/features/research/cif/types";
+import { Achievement } from "@/features/research/cif";
 import Image from "next/image";
 import Link from "next/link";
 

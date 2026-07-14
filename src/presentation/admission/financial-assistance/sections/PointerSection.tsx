@@ -1,4 +1,4 @@
-import { LEFT_SECTIONS, RIGHT_SECTIONS } from "@/features/admission/financial-assistance/constants";
+import { LEFT_SECTIONS, RIGHT_SECTIONS } from "@/features/admission/financial-assistance";
 import { PointerGroup } from "../components";
 
 const PointerSection = () => {

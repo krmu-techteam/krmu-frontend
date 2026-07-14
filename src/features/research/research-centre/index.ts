@@ -1,3 +1,3 @@
-export * from "./types";
-export * from "./services";
-export * from "./config";
+export * from "./research-centre.config";
+export * from "./research-centre.services";
+export * from "./research-centre.types";

@@ -1,4 +1,4 @@
-import { getSchoolProgrammeData } from "@/lib/api/school-programmes";
+import { getProgramsService, IProgramsService } from "@/features/programs";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import BeyondClassroom from "../../school-programmes-component/BeyondClassroom";
 import CareerProspects from "../../school-programmes-component/CareerProspects";
@@ -15,13 +15,13 @@ import ExplorePrograms from "../../school-programmes-component/ExploreBTechProgr
 import { notFound } from "next/navigation";
 import ScholarshipBanner from "../../school-programmes-component/ScholarshipBanner";
 import AdmissionProcessComp from "../../school-programmes-component/AdmissionProcessComp";
-import { getPHDProgramme } from "@/lib/api/phd-programmes";
+
 import PHDProgrammes from "../PHDProgramme";
 import {
   createBreadcrumbProgSchema,
   createCourseSchema,
   createProgFaqSchema,
-  getSchoolProgrammeSEO,
+
 } from "@/lib/api/common";
 import { Metadata } from "next";
 import Script from "next/script";
@@ -58,11 +58,12 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params; // ✅ no await
 
-  const seoData = await getSchoolProgrammeSEO(slug);
-  const seoPhdData = await getPHDProgramme(slug);
+  const programsService = getProgramsService();
+  const seoData = await programsService.getSchoolProgrammeSEO(slug);
+  const seoPhdData = await programsService.getPHDProgramme(slug);
 
   // let seo = seoData?.[0]?.SEO || seoPhdData[0]?.seo; // ✅ safe access
-  const seo = seoData?.[0]?.SEO ?? seoPhdData?.[0]?.seo ?? null;
+  const seo = seoData?.[0]?.SEO ?? seoPhdData?.seo ?? null;
 
   // const phdSeo = seoPhdData[0]?.seo;
 
@@ -125,24 +126,25 @@ const page = async ({ params }: Props) => {
 
   const testimonialsData = testimonialsMap[slug];
 
-  const allSchoolProgrammeData = await getSchoolProgrammeData(slug);
-  const allSinglePHDProgramme = await getPHDProgramme(slug);
+  const programsService: IProgramsService = getProgramsService();
+  const singleSchoolProgramme = await programsService.getSchoolProgramme(slug);
+  const singlePHDProgramme = await programsService.getPHDProgramme(slug);
   const getDownProsSettings = await getDownloadProspectusSetting();
   const enable_disable_download_pros =
     getDownProsSettings?.download_prospectus_enable_disable;
-  const seoData = await getSchoolProgrammeSEO(slug);
+  const seoData = await programsService.getSchoolProgrammeSEO(slug);
   const seo = seoData?.[0]?.SEO;
   const tags = seo?.tags;
   const tagsArray = tags
     ? tags.split(",").map((tag: string) => tag.trim())
     : [];
 
-  const singleSchoolProgramme = allSchoolProgrammeData.find(
-    (programme) => programme.programmeslug === slug,
-  );
-  const singlePHDProgramme = allSinglePHDProgramme?.find(
-    (phdprogram) => phdprogram?.phdslug === slug,
-  );
+  // const singleSchoolProgramme = allSchoolProgrammeData.find(
+    // (programme) => programme.programmeslug === slug,
+  // );
+  // const singlePHDProgramme = allSinglePHDProgramme?.find(
+    // (phdprogram) => phdprogram?.phdslug === slug,
+  // );
 
   // If not found, redirect to 404 page
   // if (!singleSchoolProgramme) return notFound();
@@ -266,7 +268,7 @@ const page = async ({ params }: Props) => {
         dangerouslySetInnerHTML={{ __html: courseSchema }}
       />
       <div
-        className={`p-0 m-0 ${tagsArray.map((tag) => `tag-${tag}`).join(" ")}`}
+        className={`p-0 m-0 ${tagsArray.map((tag: string) => `tag-${tag}`).join(" ")}`}
       />
       <main className="school-prog-font temp-class">
         {/* {tags && <TagDiv tags={tags} extraClass="hidden test-class" />} */}

@@ -1,5 +1,5 @@
 import { AlumniLogoCard } from "./";
-import { AlumniLogoCarouselProps } from "@/features/school/types";;
+import { AlumniLogoCarouselProps } from "@/features/school";;
 import { Carousel } from "@/components/common/Carousel";
 
 const AlumniCarousel = ({ AluLogos }: AlumniLogoCarouselProps) => {

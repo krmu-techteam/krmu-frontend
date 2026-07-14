@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { CommitteeActivitiesSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee/types";
+import { CommitteeActivitiesSectionProps } from "@/features/life-at-krmu/youth-red-cross-committee";
 
 const CommitteeActivitiesSection = ({
   committeeActivitiesSection,

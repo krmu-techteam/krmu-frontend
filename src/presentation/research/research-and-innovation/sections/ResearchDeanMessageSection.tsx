@@ -1,5 +1,5 @@
 import SectionDivider from "@/components/common/SectionDivider";
-import { ResearchDeanMessageProps } from "@/features/research/research-and-innovation/types";
+import { ResearchDeanMessageProps } from "@/features/research/research-and-innovation";
 
 const ResearchDeanMessageSection = ({
   researchDeanMessageSection,

@@ -1,4 +1,4 @@
-import { AchievementSectionProps } from "@/features/research/cif/types";
+import { AchievementSectionProps } from "@/features/research/cif";
 import { AchievementList } from "../components";
 
 const AchievementSection = ({

@@ -1,4 +1,4 @@
-import { MemberLoanPolicy, LoanPeriod } from "@/features/life-at-krmu/library/types";
+import { MemberLoanPolicy, LoanPeriod } from "@/features/life-at-krmu/library";
 
 const MemberLoanPolicyTable = ({
   memberLoanPolicy,

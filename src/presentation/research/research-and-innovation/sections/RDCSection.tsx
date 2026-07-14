@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { RDCSectionProps } from "@/features/research/research-and-innovation/types";
+import { RDCSectionProps } from "@/features/research/research-and-innovation";
 
 const RDCSection = ({ rdcSection }: { rdcSection: RDCSectionProps }) => {
   const {

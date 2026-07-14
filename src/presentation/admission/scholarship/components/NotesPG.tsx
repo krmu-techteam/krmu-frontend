@@ -3,7 +3,7 @@ import {
   pgColumn1Notes,
   pgColumn2Notes,
   NoteItem,
-} from "@/features/admission/scholarship/constants";
+} from "@/features/admission/scholarship";
 
 const NotesPG = () => {
   const renderNote = (item: NoteItem) => (

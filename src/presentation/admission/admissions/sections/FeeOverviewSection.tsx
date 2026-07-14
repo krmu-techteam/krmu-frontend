@@ -1,7 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Wallet, Home, Truck, ShieldCheck } from "lucide-react";
 import { FeeTable } from "../components";
-import { FEE_OVERVIEW_TABS } from "@/features/admission/admissions/constants";
+import { FEE_OVERVIEW_TABS } from "@/features/admission/admissions";
 import SectionDivider from "@/components/common/SectionDivider";
 import Button from "@/components/common/Button";
 

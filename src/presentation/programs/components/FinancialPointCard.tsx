@@ -1,5 +1,5 @@
 import React from "react";
-import { FinancialPointCardProps } from "@/features/programs/types";
+import { FinancialPointCardProps } from "@/features/programs";
 
  
 

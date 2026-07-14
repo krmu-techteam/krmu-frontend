@@ -2,7 +2,7 @@
 import { ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import { WHY_KRMANGALAM_UNIVERSITY_CARDS } from "@/features/admission/admissions/constants";
+import { WHY_KRMANGALAM_UNIVERSITY_CARDS } from "@/features/admission/admissions";
 import Button from "@/components/common/Button";
 import SectionDivider from "@/components/common/SectionDivider";
 

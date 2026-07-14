@@ -1,4 +1,4 @@
-import { HeroSectionProps } from "@/features/placement/career-development-centre/types";
+import { HeroSectionProps } from "@/features/placement/career-development-centre";
 
 const HeroSection = ({title, description, backgroundImage}: HeroSectionProps) => {
   return (

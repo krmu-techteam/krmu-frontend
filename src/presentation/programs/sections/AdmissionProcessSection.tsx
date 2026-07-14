@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { AdmissionProcessSectionProps } from "@/features/programs/types";
+import { AdmissionProcessSectionProps } from "@/features/programs";
 import Button from "@/components/common/Button";
 import { AdmissionCardDesktop, AdmissionCardMobile } from "../components";
 import SectionDivider from "@/components/common/SectionDivider";

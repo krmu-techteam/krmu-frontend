@@ -1,5 +1,5 @@
 import { ResearchCenterRow } from "../components";
-import { ResearchCentersSectionProps } from "@/features/research/research-centre/types";
+import { ResearchCentersSectionProps } from "@/features/research/research-centre";
 
 const ResearchCentersSection = ({
   researchCentersSection,

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { ExcellenceCardProps } from "@/features/school/types";;
+import { ExcellenceCardProps } from "@/features/school";;
 
  
 

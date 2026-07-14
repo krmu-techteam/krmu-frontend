@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { StrapiMedia } from "@/lib/types/common";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { getTranslateXMultiplier, getCircularOffset, calculate3DCardStyles } from "@/features/programs/utils";
+import { getTranslateXMultiplier, getCircularOffset, calculate3DCardStyles } from "@/features/programs";
 
 type Props = {
   slideimages: StrapiMedia[];

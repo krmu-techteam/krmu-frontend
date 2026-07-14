@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ContactSection, RegulationCard } from "@/features/research/phd-regulations/types";
+import { ContactSection, RegulationCard } from "@/features/research/phd-regulations";
 
 const PHDRegulationCardSection = ({
   regulationCards,

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ContactEnquiriesSectionProps } from "@/features/research/research-and-innovation/types";
+import { ContactEnquiriesSectionProps } from "@/features/research/research-and-innovation";
 
 const ContactEnquiriesSection = ({ contactEnquiriesSection }: { contactEnquiriesSection: ContactEnquiriesSectionProps }) => {
   const { title, description, companyRegistrationForm, phoneNumbers, email, quickLinks } = contactEnquiriesSection;

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BenefitsSectionProps } from "@/features/life-at-krmu/community-connect/types";
+import { BenefitsSectionProps } from "@/features/life-at-krmu/community-connect";
 
 const BenefitsSection = ({
   benefitsSection,

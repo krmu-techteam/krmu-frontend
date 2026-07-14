@@ -1,6 +1,6 @@
 import SectionDivider from "@/components/common/SectionDivider";
 import { ResearchAchievementSlider } from "../components";
-import { ResearchAchievementSectionProps } from "@/features/research/research-and-innovation/types";
+import { ResearchAchievementSectionProps } from "@/features/research/research-and-innovation";
 
 const ResearchAchievementsSection = ({
   researchAchievementSection,

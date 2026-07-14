@@ -1,5 +1,5 @@
 import { StudentInterests, StudentWelfare } from "../components";
-import { WellBeingAndInterestSectionProps } from "@/features/life-at-krmu/overview/types";
+import { WellBeingAndInterestSectionProps } from "@/features/life-at-krmu/overview";
 
 const WellBeingAndInterestSection = ({
   wellBeingAndInterestSection,

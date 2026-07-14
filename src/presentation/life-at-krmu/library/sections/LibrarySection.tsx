@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { LibraryContent, LibrarySidebar } from "../components";
 
-import { LibraryContentProps } from "@/features/life-at-krmu/library/types/index";
+import { LibraryContentProps } from "@/features/life-at-krmu/library/library.types";
 
 const LibrarySection = ({
   libraryContent,

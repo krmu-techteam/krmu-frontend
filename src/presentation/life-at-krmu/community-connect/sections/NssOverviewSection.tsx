@@ -1,4 +1,4 @@
-import { NSSOverviewSectionProps } from "@/features/life-at-krmu/community-connect/types";
+import { NSSOverviewSectionProps } from "@/features/life-at-krmu/community-connect";
 
 const NssOverviewSection = ({
   nssOverviewSection,

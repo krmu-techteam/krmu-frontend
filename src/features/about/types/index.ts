@@ -1,16 +1,12 @@
- 
-
 // --------------------
 // Accreditation Section
 import { ButtonType, StrapiMedia } from "@/lib/types/common";
-
 // --------------------
 export interface Accreditation {
   id: number;
   title: string;
   accrediationlogos: StrapiMedia[];
 }
-
 // --------------------
 // KRMU Group Section
 // --------------------
@@ -21,7 +17,6 @@ export interface KRMUGroup {
   description: string;
   krmbranch: StrapiMedia[];
 }
-
 // --------------------
 // Hall of Fame Section
 // --------------------
@@ -35,7 +30,6 @@ export interface HALLOFFAME {
   title: string;
   hallfame: HALLFAME[];
 }
-
 // --------------------
 // Vision & Mission Rich Text
 // --------------------
@@ -43,27 +37,21 @@ export interface TextNode {
   type: "text";
   text: string;
 }
-
 export interface ParagraphBlock {
   type: "paragraph";
   children: TextNode[];
 }
-
 export interface ListItemBlock {
   type: "list-item";
   children: TextNode[];
 }
-
 export interface ListBlock {
   type: "list";
   format: "unordered" | "ordered";
   children: ListItemBlock[];
 }
-
-
 // --- Union Type for All Possible Content Blocks ---
 export type CardBlock = ParagraphBlock | ListBlock;
-
 // --------------------
 // VisionMission Section
 // --------------------
@@ -74,7 +62,6 @@ export interface VisionMission {
   visiondescription: ParagraphBlock[];
   missiondescription: ListBlock[];
 }
-
 // --------------------
 // International Collaboration Section
 // --------------------
@@ -84,7 +71,6 @@ export interface IntCollabButton {
   buttonlink: string;
   buttonclass: string | null;
 }
-
 export interface Internationcollaboration {
   id: number;
   title: string;
@@ -93,18 +79,15 @@ export interface Internationcollaboration {
   internationcollablogos: StrapiMedia[];
   image: StrapiMedia;
 }
-
 // --------------------
 // KRMU Committee
 // --------------------
-
 export interface KRMUCommittee {
   id: number;
   title: string;
   description: ParagraphBlock[];
   committeebtn: ButtonType;
 }
-
 // --------------------
 // AboutKRMU Main Response
 // --------------------

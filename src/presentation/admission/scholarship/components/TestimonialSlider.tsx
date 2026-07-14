@@ -6,7 +6,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";  
 import TestimonialCard from "./TestimonialCard";
-import { ScholarTestimonial } from "@/features/admission/scholarship/types";
+import { ScholarTestimonial } from "@/features/admission/scholarship";
 
 type Props = {
   data: ScholarTestimonial[];

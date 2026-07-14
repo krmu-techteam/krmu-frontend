@@ -1,5 +1,5 @@
 import SectionDivider from "@/components/common/SectionDivider";
-import { HeroSectionProps } from "@/features/placement/our-recruiter/types";
+import { HeroSectionProps } from "@/features/placement/our-recruiter";
 
 const HeroSection = ({ title, bannerImage, description }: HeroSectionProps) => {
   return (

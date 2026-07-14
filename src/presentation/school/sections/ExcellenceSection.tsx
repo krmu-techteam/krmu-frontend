@@ -1,5 +1,5 @@
  
-import { ExcellenceSectionProps } from "@/features/school/types";
+import { ExcellenceSectionProps } from "@/features/school";
 import { ExcellenceCard } from "@/presentation/school/components";;
 import SectionDivider from "@/components/common/SectionDivider";
 

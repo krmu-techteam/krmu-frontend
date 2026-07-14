@@ -1,4 +1,4 @@
-import { EligibilitySectionProps } from "@/features/life-at-krmu/community-connect/types";
+import { EligibilitySectionProps } from "@/features/life-at-krmu/community-connect";
 import { EligibilityPoint } from "../components";
 
 const EligibilitySection = ({

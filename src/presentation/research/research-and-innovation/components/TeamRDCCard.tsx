@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { TeamRDCMembers } from "@/features/research/research-and-innovation/types";
+import { TeamRDCMembers } from "@/features/research/research-and-innovation";
 
 const ReamRDCCard = ({
   name,

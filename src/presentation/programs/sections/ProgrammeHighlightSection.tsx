@@ -5,7 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ProgrammeHighlightCard } from "../components";
 import SectionDivider from "@/components/common/SectionDivider";
-import { ProgrammeHighlightSectionProps } from "@/features/programs/types";
+import { ProgrammeHighlightSectionProps } from "@/features/programs";
 
 const ProgrammeHighlight = ({
   heading,

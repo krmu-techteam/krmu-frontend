@@ -1,6 +1,6 @@
 import { Accordion } from "@/components/ui/accordion";
 import { PaymentFaqItem } from "../components";
-import { PAYMENT_FAQS } from "@/features/admission/payment-procedure/constants";
+import { PAYMENT_FAQS } from "@/features/admission/payment-procedure";
 
 const PaymentProcedureFaqSection = () => {
   return (

@@ -1,4 +1,5 @@
-import { getAdmission2PageData } from "@/lib/api/Admission/admission2";
+import { getAdmissionsService, IAdmissionsService } from "@/features/admission/admissions";
+import { notFound } from "next/navigation";
 import ContactWithUs from "./admission2Comp/ContactWithUs";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
@@ -74,10 +75,15 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const AddmissionPage= async () => {
-  const admission2Data = await getAdmission2PageData();
+  const admissionsService: IAdmissionsService = getAdmissionsService();
+  const admission2Data = await admissionsService.getAdmissionPageData();
 
-  const admTOC = admission2Data?.adm_toc;
-  const admAlumni = admission2Data?.adm2_alumni;
+  if (!admission2Data) {
+    return notFound();
+  }
+
+  const admTOC = admission2Data.adm_toc;
+  const admAlumni = admission2Data.adm2_alumni;
 
   type FAQProg = {
     ques: string;

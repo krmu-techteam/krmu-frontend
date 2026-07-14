@@ -1,4 +1,4 @@
-import { CampusLifeSectionProps } from "@/features/life-at-krmu/overview/types";
+import { CampusLifeSectionProps } from "@/features/life-at-krmu/overview";
 
 const CampusLifeSection = ({
   campusLifeSection,

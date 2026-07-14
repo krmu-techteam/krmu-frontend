@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LibraryContentProps } from "@/features/life-at-krmu/library/types";
+import { LibraryContentProps } from "@/features/life-at-krmu/library";
 
 const EBookLibrary = ({
   libraryContent,

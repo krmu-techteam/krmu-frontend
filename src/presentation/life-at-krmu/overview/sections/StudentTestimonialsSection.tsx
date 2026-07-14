@@ -1,6 +1,6 @@
 import { HearItTestimonials } from "@/lib/api/lkoverview";
 import { StudentTestimonialsCarousel } from "../components";
-import { StudentTestimonialSectionProps } from "@/features/life-at-krmu/overview/types";
+import { StudentTestimonialSectionProps } from "@/features/life-at-krmu/overview";
 
 type Props = {
   overviewData: Promise<{ hear_it_testimonials: HearItTestimonials[] }>;

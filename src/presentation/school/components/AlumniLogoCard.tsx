@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { STRAPI_URL } from "@/app/constant";
-import { AlumniLogoCardProps } from "@/features/school/types";;
+import { AlumniLogoCardProps } from "@/features/school";;
 
 const AlumniLogoCard = ({ logoUrl, altText }: AlumniLogoCardProps) => {
   return (

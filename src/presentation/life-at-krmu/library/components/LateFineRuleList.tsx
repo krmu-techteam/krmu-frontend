@@ -1,5 +1,5 @@
 import { ChevronsRight } from "lucide-react";
-import { FineRule } from "@/features/life-at-krmu/library/types";
+import { FineRule } from "@/features/life-at-krmu/library";
 
 const LateFineRuleList = ({ fineRules }: { fineRules?: FineRule[] }) => {
   if (!fineRules) return null;

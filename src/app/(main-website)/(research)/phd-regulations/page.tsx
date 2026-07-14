@@ -1,5 +1,5 @@
 import { folderRouteSEO } from "@/lib/api/siteseo";
-import { getHeroSectionContent } from "@/features/research/phd-regulations/services";
+import { getHeroSectionContent } from "@/features/research/phd-regulations";
 import { HeroSection, PHDRegulationCardSection } from "@/presentation/research/phd-regulations/sections";;
 
 import { Metadata } from "next";

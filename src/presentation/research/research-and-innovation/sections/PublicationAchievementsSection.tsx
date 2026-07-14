@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PublicationAndAchievementSectionProps } from "@/features/research/research-and-innovation/types";
+import { PublicationAndAchievementSectionProps } from "@/features/research/research-and-innovation";
 import SectionDivider from "@/components/common/SectionDivider";
 
 const PublicationAchievementsSection = ({

@@ -2,9 +2,9 @@
  
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { BcaVsBtechComparison, LabFacilitiesCarousel } from "../components";
-import { LabFacilitiesSectionProps } from "@/features/programs/types";
-import { DEFAULT_LAB_IMAGES } from "@/features/programs/constants";
-import { parseCommaSeparatedUrls } from "@/features/programs/utils";
+import { LabFacilitiesSectionProps } from "@/features/programs";
+import { DEFAULT_LAB_IMAGES } from "@/features/programs";
+import { parseCommaSeparatedUrls } from "@/features/programs";
 import SectionDivider from "@/components/common/SectionDivider";
 
 const LabsFacilitieSection = ({

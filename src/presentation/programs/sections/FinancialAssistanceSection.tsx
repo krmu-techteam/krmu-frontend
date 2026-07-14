@@ -1,5 +1,5 @@
 import React from "react";
-import { FinancialAssistanceSectionProps } from "@/features/programs/types";
+import { FinancialAssistanceSectionProps } from "@/features/programs";
 import { FinancialPointCard, FinancialPartnerLogo } from "../components";
 
 const FinancialAssistanceSection = ({

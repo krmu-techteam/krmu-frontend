@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { StudentInterestSectionProps } from "@/features/life-at-krmu/overview/types";
+import { StudentInterestSectionProps } from "@/features/life-at-krmu/overview";
 
 const StudentInterests = ({
   title,

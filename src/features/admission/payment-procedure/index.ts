@@ -1,1 +1,1 @@
-export * from "./constants";
+export * from "./payment-procedure.constants";

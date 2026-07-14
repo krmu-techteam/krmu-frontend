@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import { Phone, Mail, ArrowRight, FileText } from "lucide-react";
-import { ContactSectionProps } from "@/features/placement/career-development-centre/types";
+import { ContactSectionProps } from "@/features/placement/career-development-centre";
 import { useGSAPScrollReveal } from "@/hooks/useGSAPScrollReveal";
 import careerDevelopmentCentre from "@/features/placement/career-development-centre/data/career-development-centre.json";
 

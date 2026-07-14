@@ -1,5 +1,3 @@
-export * from "./types";
-export * from "./services";
 export * from "./about.constants";
 export * from "./about.interfaces";
 export * from "./about.mapper";

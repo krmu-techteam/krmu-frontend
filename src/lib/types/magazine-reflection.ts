@@ -1,5 +1,5 @@
-import { ListBlock, ParagraphBlock } from "../types/about";
-import { StrapiMedia } from "../types/common";
+import { ListBlock, ParagraphBlock } from "./about";
+import { StrapiMedia } from "./common";
 
 export interface MagazineCard {
   id: number;

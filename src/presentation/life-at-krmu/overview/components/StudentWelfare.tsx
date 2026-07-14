@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { StudentWelfareSectionProps } from "@/features/life-at-krmu/overview/types";
+import { StudentWelfareSectionProps } from "@/features/life-at-krmu/overview";
 
 const StudentWelfare = ({
   title,

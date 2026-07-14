@@ -1,4 +1,4 @@
-import { ObjectivesSectionProps } from "@/features/life-at-krmu/community-connect/types";
+import { ObjectivesSectionProps } from "@/features/life-at-krmu/community-connect";
 import { Magazine, ObjectivesList } from "../components";
 
 const ObjectivesSection = ({

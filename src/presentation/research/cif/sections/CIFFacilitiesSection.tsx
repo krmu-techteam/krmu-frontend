@@ -1,4 +1,4 @@
-import { CIFFacilitiesSectionProps } from "@/features/research/cif/types";
+import { CIFFacilitiesSectionProps } from "@/features/research/cif";
 import { CIFFacilityList } from "../components";
 
 const CIFFacilitiesSection = ({

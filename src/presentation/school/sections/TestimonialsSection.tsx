@@ -2,7 +2,7 @@
 import { TestimonialCard } from "@/presentation/school/components";
 import { Carousel } from "@/components/common/Carousel";
 import SectionDivider from "@/components/common/SectionDivider";
-import { TestimonialSectionProps } from "@/features/school/types";;
+import { TestimonialSectionProps } from "@/features/school";;
 
 const TestimonialsSection = ({ title, desc, testis }: TestimonialSectionProps) => {
   return (

@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Link from "next/link";
-import { ResearchHighlights } from "@/features/research/research-and-innovation/types";
+import { ResearchHighlights } from "@/features/research/research-and-innovation";
 
 const ResearchHighlightSlider = ({
   highlights,

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { KEICSlider } from "../components";
-import { KEICSectionProps } from "@/features/research/research-and-innovation/types";
+import { KEICSectionProps } from "@/features/research/research-and-innovation";
 import SectionDivider from "@/components/common/SectionDivider";
 
 const KEICSection = ({ keicSection }: { keicSection: KEICSectionProps }) => {

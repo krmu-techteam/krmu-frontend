@@ -1,4 +1,4 @@
-import { Achievement } from "@/features/research/cif/types";
+import { Achievement } from "@/features/research/cif";
 import AchievementCard from "./AchievementCard";
 
 const AchievementList = ({ achievements }: { achievements: Achievement[] }) => {

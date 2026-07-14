@@ -1,3 +1,3 @@
-export * from "./constants";
-export * from "./types";
-export * from "./services";
+export * from "./phd-regulations.constants";
+export * from "./phd-regulations.services";
+export * from "./phd-regulations.types";

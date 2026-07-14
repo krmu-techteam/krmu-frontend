@@ -2,7 +2,7 @@ import { StrapiMedia } from "@/lib/types/common";
 import { KnowledgePartnerLogos } from "@/presentation/school/components";;
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { splitTitleByFor } from "@/features/school/utils";
+import { splitTitleByFor } from "@/features/school";
 import SectionDivider from "@/components/common/SectionDivider";
 
 type Props = {

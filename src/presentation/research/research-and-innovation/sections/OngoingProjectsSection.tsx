@@ -1,6 +1,6 @@
 import SectionDivider from "@/components/common/SectionDivider";
 import { OnGoingProjectSlider } from "../components";
-import { OnGoingProjectsSectionProps } from "@/features/research/research-and-innovation/types";
+import { OnGoingProjectsSectionProps } from "@/features/research/research-and-innovation";
 
 const OnGoingProjectsSection = ({onGoingProjectsSection} : {onGoingProjectsSection : OnGoingProjectsSectionProps}) => {
     const {title, description_one, description_two, description_three, images} = onGoingProjectsSection;

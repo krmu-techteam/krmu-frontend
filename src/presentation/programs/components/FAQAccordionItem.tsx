@@ -2,7 +2,7 @@ import React from "react";
 import { AccordionItem, AccordionContent } from "@/components/ui/accordion";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { ArrowRight } from "lucide-react";
-import { FAQ } from "@/features/programs/types";
+import { FAQ } from "@/features/programs";
 
 interface Props {
   item: FAQ;

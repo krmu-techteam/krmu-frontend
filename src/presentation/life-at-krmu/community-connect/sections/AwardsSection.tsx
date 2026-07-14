@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AwardsSectionProps } from "@/features/life-at-krmu/community-connect/types";
+import { AwardsSectionProps } from "@/features/life-at-krmu/community-connect";
 
 const AwardsSection = ({
   awardsSection,

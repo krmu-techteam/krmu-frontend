@@ -1,6 +1,6 @@
 import React from "react";
-import { HERO_CONFIGS } from "@/features/programs/constants";
-import { HeroSectionProps } from "@/features/programs/types";
+import { HERO_CONFIGS } from "@/features/programs";
+import { HeroSectionProps } from "@/features/programs";
 import CinematicHeroContent from "./CinematicHeroContent";
 import CinematicStatsBar from "./CinematicStatsBar";
 import CinematicRecruiterStrip from "./CinematicRecruiterStrip";

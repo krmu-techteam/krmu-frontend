@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
-import { DirectorMessageProps } from "@/features/placement/career-development-centre/types";
+import { DirectorMessageProps } from "@/features/placement/career-development-centre";
 import { useGSAPScrollReveal } from "@/hooks/useGSAPScrollReveal";
 
 const DirectorMessageSection = ({

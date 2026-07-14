@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { CIFTeamMember } from "@/features/research/cif/types";
+import { CIFTeamMember } from "@/features/research/cif";
 
 const CIFTeamCard = ({ teamMember }: { teamMember: CIFTeamMember }) => {
   const { name, link, image, designation } = teamMember;

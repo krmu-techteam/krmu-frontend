@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { HeroSectionProps } from "@/features/research/cif/types";
+import { HeroSectionProps } from "@/features/research/cif";
 
 const HeroSection = ({ heroSection }: { heroSection: HeroSectionProps }) => {
   const { title, imageUrl } = heroSection;

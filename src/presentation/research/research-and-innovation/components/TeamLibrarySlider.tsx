@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { TeamLibrarySliders } from "@/features/research/research-and-innovation/types";
+import { TeamLibrarySliders } from "@/features/research/research-and-innovation";
 
 const TeamLibrarySlider = ({ imageUrl, content }: TeamLibrarySliders) => {
   return (

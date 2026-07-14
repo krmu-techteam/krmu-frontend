@@ -42,3 +42,19 @@ export const RIGHT_SECTIONS = [
     ],
   },
 ];
+
+export const MOCK_FINANCIAL_ASSISTANCE_DATA = {
+  id: 1,
+  documentId: "mock-financial-assistance",
+  heading: "Financial Assistance",
+  subheading: "Empowering Your Academic Journey",
+  content: "K.R. Mangalam University offers dynamic financial assistance and education loan support to facilitate higher education for meritorious and deserving students.",
+  bank_loan: {
+    id: 1,
+    bank_loan_card: [],
+  },
+  nbfc_card: {
+    id: 2,
+    nbfc_cards: [],
+  },
+};

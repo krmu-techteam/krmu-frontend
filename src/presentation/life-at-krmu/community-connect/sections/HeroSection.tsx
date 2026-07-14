@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { HeroSectionProps } from "@/features/life-at-krmu/community-connect/types";
+import { HeroSectionProps } from "@/features/life-at-krmu/community-connect";
 
 const HeroSection = ({ heroSection }: { heroSection: HeroSectionProps }) => {
   const { heading, description, descriptionTwo, imageUrl } = heroSection;

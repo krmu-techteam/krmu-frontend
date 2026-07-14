@@ -1,4 +1,4 @@
-import type { MembershipGuidelines as MembershipGuidelinesType } from "@/features/life-at-krmu/library/types";
+import type { MembershipGuidelines as MembershipGuidelinesType } from "@/features/life-at-krmu/library";
 import { MembershipGuidelineCard } from "./MembershipGuidelineCard";
 
 const MembershipGuidelines = ({

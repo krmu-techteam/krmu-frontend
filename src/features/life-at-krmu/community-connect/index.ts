@@ -1,3 +1,3 @@
-export * from "./types";
-export * from "./services";
-export * from "./config";
+export * from "./community-connect.config";
+export * from "./community-connect.services";
+export * from "./community-connect.types";

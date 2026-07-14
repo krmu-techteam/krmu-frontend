@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MembershipGuidelines } from "@/features/life-at-krmu/library/types";
+import { MembershipGuidelines } from "@/features/life-at-krmu/library";
 
 export const MembershipGuidelineCard = ({
   content,

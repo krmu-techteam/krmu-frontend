@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { IPRSlider } from "../components";
-import { IPRLegalEthicsSectionProps } from "@/features/research/research-and-innovation/types";
+import { IPRLegalEthicsSectionProps } from "@/features/research/research-and-innovation";
 import SectionDivider from "@/components/common/SectionDivider";
 
 const IPRLegalEthicsSection = ({

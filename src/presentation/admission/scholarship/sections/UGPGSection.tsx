@@ -29,7 +29,7 @@ import {
   pgCuetHeaders,
   pgAlumniRows,
   pgAlumniHeaders,
-} from "@/features/admission/scholarship/constants";
+} from "@/features/admission/scholarship";
 
 const UGPGSection = () => {
   return (

@@ -12,7 +12,7 @@ import {
 import Link from "next/link";
 import React, { useState } from "react";
 import SectionDivider from "@/components/common/SectionDivider";
-import { getTruncatedText } from "@/features/programs/utils";
+import { getTruncatedText } from "@/features/programs";
 import { EligibilityCard, EligibilityVideoLayout } from "../components";
 
 type Props = {

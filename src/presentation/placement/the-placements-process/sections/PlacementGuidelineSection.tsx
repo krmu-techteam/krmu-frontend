@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { GuidelineCard } from "../components";
-import { GUIDELINES } from "@/features/placement/the-placements-process/constants";
+import { GUIDELINES } from "@/features/placement/the-placements-process";
 
 const PlacementGuidelineSection = () => {
  

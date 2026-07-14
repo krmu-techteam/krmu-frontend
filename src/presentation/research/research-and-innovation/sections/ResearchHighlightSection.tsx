@@ -1,6 +1,6 @@
 import SectionDivider from "@/components/common/SectionDivider";
 import { ResearchHighlightSlider } from "../components";
-import { ResearchHighlightsProps } from "@/features/research/research-and-innovation/types";
+import { ResearchHighlightsProps } from "@/features/research/research-and-innovation";
 
 const ResearchHighlightSection = ({
   researchHighlightSection,

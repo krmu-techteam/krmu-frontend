@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { UpcomingEventsSectionProps } from "@/features/research/cif/types";
+import { UpcomingEventsSectionProps } from "@/features/research/cif";
 
 const UpcomingEventsSection = ({
   upcomingEventsSection,

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Carousel } from "@/components/common/Carousel";
-import { PHD_REGULATION_IMGS } from "@/features/research/phd-regulations/constants";
+import { PHD_REGULATION_IMGS } from "@/features/research/phd-regulations";
 
 const PHDRegulationCarousel = () => {
   return (

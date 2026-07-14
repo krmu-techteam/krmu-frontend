@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { DirectorMessageSectionProps } from "@/features/research/cif/types";
+import { DirectorMessageSectionProps } from "@/features/research/cif";
 
 const DirectorMessageSection = ({
   directorMessageSection,

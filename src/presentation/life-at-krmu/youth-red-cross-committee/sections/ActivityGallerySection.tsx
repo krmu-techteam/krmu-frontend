@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ActivityGallerySectionProps } from "@/features/life-at-krmu/youth-red-cross-committee/types";
+import { ActivityGallerySectionProps } from "@/features/life-at-krmu/youth-red-cross-committee";
 import SectionDivider from "@/components/common/SectionDivider";
 
 const ActivityGallerySection = ({

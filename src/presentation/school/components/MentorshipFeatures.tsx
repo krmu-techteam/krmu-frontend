@@ -1,4 +1,4 @@
-import { WHATYOU_GET_OPEN_SOURCE_MENTORSHIP } from "@/features/school/constants";
+import { WHATYOU_GET_OPEN_SOURCE_MENTORSHIP } from "@/features/school";
 
 const MentorshipFeatures = () => {
   return (

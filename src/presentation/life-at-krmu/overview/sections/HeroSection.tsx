@@ -2,7 +2,7 @@ import Video from "@/app/(main-website)/components/Videos/Video";
 
 import Image from "next/image";
 import Link from "next/link";
-import { HeroSectionProps, OverviewVideoProps } from "@/features/life-at-krmu/overview/types";
+import { HeroSectionProps, OverviewVideoProps } from "@/features/life-at-krmu/overview";
 
 type Props = {
   overviewData: Promise<OverviewVideoProps>;

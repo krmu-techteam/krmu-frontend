@@ -1,6 +1,9 @@
 import { ButtonType, StrapiMedia } from "@/lib/types/common";
-import { HeroConfig } from "../constants";
+import { HeroConfig } from "./programs.constants";
 import { ParagraphBlock } from "@/lib/types/about";
+import { Programme } from "@/lib/types/school-programme";
+import { PhDProgramme } from "@/lib/types/phd-programmes";
+
 
 export interface HeroSectionData {
   id: number;
@@ -196,3 +199,6 @@ export interface FAQAccordionProps {
   tocfaqs: TOCFAQ[];
   tocbtn?: ButtonType;
 };
+
+export type SchoolProgrammeDomain = Programme;
+export type PHDProgrammeDomain = PhDProgramme;

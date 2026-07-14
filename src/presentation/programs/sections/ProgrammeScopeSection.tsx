@@ -5,7 +5,7 @@ import { STRAPI_URL } from "@/app/constant";
 import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 import Button from "@/components/common/Button";
 import SectionDivider from "@/components/common/SectionDivider";
-import { ProgrammeScopeSectionProps } from "@/features/programs/types";
+import { ProgrammeScopeSectionProps } from "@/features/programs";
 
 const ProgrammeScopeSection = async ({
   scopeData,

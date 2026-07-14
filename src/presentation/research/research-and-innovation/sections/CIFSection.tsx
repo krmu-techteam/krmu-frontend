@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CIFSlider } from "../components";
 import SectionDivider from "@/components/common/SectionDivider";
-import { CIFSectionProps } from "@/features/research/research-and-innovation/types";
+import { CIFSectionProps } from "@/features/research/research-and-innovation";
 
 const CIFSection = ({ cifSection }: { cifSection: CIFSectionProps }) => {
   const { title, description_one, description_two, images, linkInfo } =

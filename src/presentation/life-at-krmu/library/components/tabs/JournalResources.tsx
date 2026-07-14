@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Journal, LibraryContentProps } from "@/features/life-at-krmu/library/types";
+import { Journal, LibraryContentProps } from "@/features/life-at-krmu/library";
 
 const JournalResources = ({
   libraryContent,

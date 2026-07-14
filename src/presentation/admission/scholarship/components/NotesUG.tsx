@@ -4,7 +4,7 @@ import {
   ugColumn2Notes,
   ugColumn3Notes,
   NoteItem,
-} from "@/features/admission/scholarship/constants";
+} from "@/features/admission/scholarship";
 
 const NotesUG = () => {
   const renderNote = (item: NoteItem) => (

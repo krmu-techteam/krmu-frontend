@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AcademicResourcesImages, AcademicResourcesSectionProps } from "@/features/research/research-and-innovation/types";
+import { AcademicResourcesImages, AcademicResourcesSectionProps } from "@/features/research/research-and-innovation";
 import SectionDivider from "@/components/common/SectionDivider";
 
 const AcademicResourcesSection = ({

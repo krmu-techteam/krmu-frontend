@@ -1,21 +1,21 @@
 import { getProgrammePageData } from "@/lib/api/programme";
-import ProgrammesAlumni from "../../../(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/comp/ProgrammesAlumni";
-import ProgrammesOurLocation from "../../../(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/comp/ProgrammesOurLocation";
-import ProgrammesSearch from "../../../(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/comp/ProgrammesSearch";
+import ProgrammesAlumni from "./comp/ProgrammesAlumni";
+import ProgrammesOurLocation from "./comp/ProgrammesOurLocation";
+import ProgrammesSearch from "./comp/ProgrammesSearch";
 import { STRAPI_URL } from "@/app/constant";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
 import { createBreadcrumbProgSchema } from "@/lib/api/common";
 import Script from "next/script";
-import ProgrammesHero from "../../../(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/comp/ProgrammesHero";
-import LearnByDoingSection from "../../../(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/comp/ProgrammesConnectWithUs";
-import CareerPathsSection from "../../../(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/comp/CareerPathsSection";
-import ExpertsSection from "../../../(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/comp/ExpertsSection";
-import FacultyMentorsSection from "../../../(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/comp/FacultyMentorsSection";
-import PostgraduatePortfolio from "../../../(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/comp/PostgraduatePortfolio";
-import EligibilitySection from "../../../(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/comp/EligibilitySection";
-import FAQSection from "../../../(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/comp/FAQSection";
-import MediaCTASection from "../../../(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/comp/MediaCTASection";
+import ProgrammesHero from "./comp/ProgrammesHero";
+import LearnByDoingSection from "./comp/ProgrammesConnectWithUs";
+import CareerPathsSection from "./comp/CareerPathsSection";
+import ExpertsSection from "./comp/ExpertsSection";
+import FacultyMentorsSection from "./comp/FacultyMentorsSection";
+import PostgraduatePortfolio from "./comp/PostgraduatePortfolio";
+import EligibilitySection from "./comp/EligibilitySection";
+import FAQSection from "./comp/FAQSection";
+import MediaCTASection from "./comp/MediaCTASection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("programmes");

@@ -1,5 +1,5 @@
 import { Check, X } from "lucide-react";
-import { UniversityComparisonSectionProps } from "@/features/school/types";;
+import { UniversityComparisonSectionProps } from "@/features/school";;
 
 type UniversityComparisonTableProps = Omit<UniversityComparisonSectionProps, 'content' | 'slug'>;
 

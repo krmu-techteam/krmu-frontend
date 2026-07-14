@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { HeroSectionProps } from "@/features/research/research-and-innovation/types";
+import { HeroSectionProps } from "@/features/research/research-and-innovation";
 import { CustomLink } from "../components";
 import SectionDivider from "@/components/common/SectionDivider";
 

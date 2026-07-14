@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CIFTeamCard } from "../components";
-import { CIFTeamSectionProps } from "@/features/research/cif/types";
+import { CIFTeamSectionProps } from "@/features/research/cif";
 
 const CIFTeamSection = ({
   cifTeamSection,

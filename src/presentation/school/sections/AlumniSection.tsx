@@ -1,5 +1,5 @@
 import { AlumniCarousel } from "@/presentation/school/components";
-import { AlumniSectionProps } from "@/features/school/types";;
+import { AlumniSectionProps } from "@/features/school";;
 import SectionDivider from "@/components/common/SectionDivider";
 
 const AlumniSection = ({ title, alumniLogos }: AlumniSectionProps) => {

@@ -2,7 +2,7 @@
  
 import Button from "@/components/common/Button";
 import { FAQAccordion } from "../components";
-import { FrequentlyAskedQuestionsSectionProps } from "@/features/programs/types";
+import { FrequentlyAskedQuestionsSectionProps } from "@/features/programs";
 import SectionDivider from "@/components/common/SectionDivider";
 
 const FrequentlyAskedQuestionsSection = ({

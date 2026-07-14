@@ -2,7 +2,7 @@ import { getPlacementRecruitersData } from "@/lib/api/placement";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import { getHeroSectionContent, getHighlightSectionContent } from "@/features/placement/our-recruiter/services";
+import { getHeroSectionContent, getHighlightSectionContent } from "@/features/placement/our-recruiter";
 import { HeroSection, HighlightSection, ProminentRecruitersSection } from "@/presentation/placement/our-recruiter/sections";;
 
 export async function generateMetadata(): Promise<Metadata> {

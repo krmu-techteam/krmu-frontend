@@ -1,6 +1,6 @@
 import SectionDivider from "@/components/common/SectionDivider";
 import { TeamRDCCard } from "../components";
-import { TeamRDCSectionProps } from "@/features/research/research-and-innovation/types";
+import { TeamRDCSectionProps } from "@/features/research/research-and-innovation";
 
 const TeamRDCSection = ({
   teamRdcSection,

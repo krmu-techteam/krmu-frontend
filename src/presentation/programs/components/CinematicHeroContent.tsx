@@ -1,5 +1,5 @@
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
-import { CinematicHeroSectionProps } from "@/features/programs/types";
+import { CinematicHeroSectionProps } from "@/features/programs";
 
 const CinematicHeroContent = ({
   title,

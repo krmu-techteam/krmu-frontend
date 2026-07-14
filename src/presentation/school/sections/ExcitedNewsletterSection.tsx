@@ -1,6 +1,6 @@
  
 import Link from "next/link";
-import { ExcitedNewsletterSectionProps } from "@/features/school/types";
+import { ExcitedNewsletterSectionProps } from "@/features/school";
 import { NewsletterDownloader } from "@/presentation/school/components";;
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";

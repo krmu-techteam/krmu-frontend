@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import { CircleArrowRight } from "lucide-react";
-import { TrainingPlacementSectionProps } from "@/features/placement/career-development-centre/types";
+import { TrainingPlacementSectionProps } from "@/features/placement/career-development-centre";
 import SectionDivider from "@/components/common/SectionDivider";
 import { TopServiceCard, MethodologyCard, SkillCard } from "../components";
 import { useGSAPScrollReveal } from "@/hooks/useGSAPScrollReveal";

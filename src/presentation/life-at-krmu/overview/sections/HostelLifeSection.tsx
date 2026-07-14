@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HostelLifeSectionProps } from "@/features/life-at-krmu/overview/types";
+import { HostelLifeSectionProps } from "@/features/life-at-krmu/overview";
 
 const HostelLifeSection = ({
   hostelLifeSection,

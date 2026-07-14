@@ -1,1 +1,1 @@
-export * from "./utils";
+export * from "./news-and-events.utils";

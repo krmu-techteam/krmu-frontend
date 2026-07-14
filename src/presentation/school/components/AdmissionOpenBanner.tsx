@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRightCircle, ArrowUpRight } from "lucide-react";
-import { HeroBannerProps } from "@/features/school/types";
-import { splitTitleByFor } from "@/features/school/utils";;
+import { HeroBannerProps } from "@/features/school";
+import { splitTitleByFor } from "@/features/school";;
 
 const AdmissionOpenBanner = ({ title, admBtn }: HeroBannerProps) => {
   const { boldText, normalText } = splitTitleByFor(title);

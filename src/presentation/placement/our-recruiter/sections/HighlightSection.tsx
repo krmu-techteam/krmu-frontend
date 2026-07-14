@@ -1,6 +1,6 @@
 import SectionDivider from "@/components/common/SectionDivider";
 import { StatCard } from "@/components/common/StatCard";
-import { HighlightSectionProps } from "@/features/placement/our-recruiter/types";
+import { HighlightSectionProps } from "@/features/placement/our-recruiter";
 
 const HighlightSection = ({ stats }: HighlightSectionProps) => {
   return (

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookRenewalProps } from "@/features/life-at-krmu/library/types";
+import { BookRenewalProps } from "@/features/life-at-krmu/library";
 
 export const BookRenewalCard = ({
   title,

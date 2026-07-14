@@ -1,7 +1,7 @@
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
-import { getResearchOverviewContent } from "@/features/research/research-overview/services";
+import { getResearchOverviewContent } from "@/features/research/research-overview";
 import { HeroSection, PhdStudentTestimonialSection } from "@/presentation/research/research-overview/sections";;
 
 export async function generateMetadata(): Promise<Metadata> {

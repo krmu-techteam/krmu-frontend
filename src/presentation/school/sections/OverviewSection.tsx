@@ -1,7 +1,7 @@
 
 import Image from "next/image";
-import { OVERVIEW_SECTION_IMAGES } from "@/features/school/constants";
-import { OverviewSectionProps } from "@/features/school/types";
+import { OVERVIEW_SECTION_IMAGES } from "@/features/school";
+import { OverviewSectionProps } from "@/features/school";
 import { StatCard } from "@/presentation/school/components";;
 import SectionDivider from "@/components/common/SectionDivider";
 

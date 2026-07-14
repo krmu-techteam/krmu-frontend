@@ -1,6 +1,6 @@
 import { cache } from "react";
-import data from "../data/index.json";
-import { OverviewContentProps } from "../types";
+import data from "./data/index.json";
+import { OverviewContentProps } from "./overview.types";
 import { FETCH_STRAPI_URL } from "@/app/constant";
 import { StrapiMedia } from "@/lib/types/common";
 
