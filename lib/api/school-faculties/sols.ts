@@ -74,7 +74,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/Kritika-Kakkar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/kritika.png",
   },
   // {
   //   id: 106905,
