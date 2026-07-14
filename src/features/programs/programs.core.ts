@@ -1,5 +1,9 @@
 import { createProvider } from "@/lib/core/create-provider";
-import { getSchoolProgrammeData, getSchoolProgrammeInfoByDegree, getSchoolProgrammePhdDataDegree } from "@/lib/api/school-programmes";
+import {
+  getSchoolProgrammeData,
+  getSchoolProgrammeInfoByDegree,
+  getSchoolProgrammePhdDataDegree,
+} from "@/lib/api/school-programmes";
 import { getPHDProgramme } from "@/lib/api/phd-programmes";
 import { getSchoolProgrammeSEO } from "@/lib/api/common";
 import { SchoolProgrammeDomain, PHDProgrammeDomain } from "./programs.types";
@@ -8,10 +12,18 @@ import { ProgramsMapper } from "./programs.mapper";
 // ── 1. Repository ────────────────────────────────────────
 
 class ProgramsRepository {
-  private schoolProgramDataPromise: Map<string, Promise<SchoolProgrammeDomain | undefined>> = new Map();
-  private phdProgramDataPromise: Map<string, Promise<PHDProgrammeDomain | undefined>> = new Map();
+  private schoolProgramDataPromise: Map<
+    string,
+    Promise<SchoolProgrammeDomain | undefined>
+  > = new Map();
+  private phdProgramDataPromise: Map<
+    string,
+    Promise<PHDProgrammeDomain | undefined>
+  > = new Map();
 
-  async getSchoolProgramme(slug: string): Promise<SchoolProgrammeDomain | undefined> {
+  async getSchoolProgramme(
+    slug: string,
+  ): Promise<SchoolProgrammeDomain | undefined> {
     if (!this.schoolProgramDataPromise.has(slug)) {
       this.schoolProgramDataPromise.set(
         slug,
@@ -19,13 +31,18 @@ class ProgramsRepository {
           try {
             const rawData = await getSchoolProgrammeData(slug);
             const single = rawData.find((p) => p.programmeslug === slug);
-            return single ? ProgramsMapper.toSchoolProgrammeDomain(single) : undefined;
+            return single
+              ? ProgramsMapper.toSchoolProgrammeDomain(single)
+              : undefined;
           } catch (error) {
-            console.error(`Failed to fetch school programme for slug ${slug}:`, error);
+            console.error(
+              `Failed to fetch school programme for slug ${slug}:`,
+              error,
+            );
             this.schoolProgramDataPromise.delete(slug);
             return undefined;
           }
-        })()
+        })(),
       );
     }
     return this.schoolProgramDataPromise.get(slug);
@@ -39,13 +56,18 @@ class ProgramsRepository {
           try {
             const rawData = await getPHDProgramme(slug);
             const single = rawData?.find((p) => p?.phdslug === slug);
-            return single ? ProgramsMapper.toPHDProgrammeDomain(single) : undefined;
+            return single
+              ? ProgramsMapper.toPHDProgrammeDomain(single)
+              : undefined;
           } catch (error) {
-            console.error(`Failed to fetch PHD programme for slug ${slug}:`, error);
+            console.error(
+              `Failed to fetch PHD programme for slug ${slug}:`,
+              error,
+            );
             this.phdProgramDataPromise.delete(slug);
             return undefined;
           }
-        })()
+        })(),
       );
     }
     return this.phdProgramDataPromise.get(slug);
@@ -60,7 +82,10 @@ class ProgramsRepository {
     }
   }
 
-  async getSchoolProgrammeInfoByDegree(deg: string, schoolCatName: string): Promise<any[]> {
+  async getSchoolProgrammeInfoByDegree(
+    deg: string,
+    schoolCatName: string,
+  ): Promise<any[]> {
     try {
       return await getSchoolProgrammeInfoByDegree(deg, schoolCatName);
     } catch (error) {
@@ -69,7 +94,10 @@ class ProgramsRepository {
     }
   }
 
-  async getSchoolProgrammePhdDataDegree(deg: string, schoolCatName: string): Promise<any[]> {
+  async getSchoolProgrammePhdDataDegree(
+    deg: string,
+    schoolCatName: string,
+  ): Promise<any[]> {
     try {
       return await getSchoolProgrammePhdDataDegree(deg, schoolCatName);
     } catch (error) {
@@ -85,8 +113,14 @@ export interface IProgramsService {
   getSchoolProgramme(slug: string): Promise<SchoolProgrammeDomain | undefined>;
   getPHDProgramme(slug: string): Promise<PHDProgrammeDomain | undefined>;
   getSchoolProgrammeSEO(slug: string): Promise<any>;
-  getSchoolProgrammeInfoByDegree(deg: string, schoolCatName: string): Promise<any[]>;
-  getSchoolProgrammePhdDataDegree(deg: string, schoolCatName: string): Promise<any[]>;
+  getSchoolProgrammeInfoByDegree(
+    deg: string,
+    schoolCatName: string,
+  ): Promise<any[]>;
+  getSchoolProgrammePhdDataDegree(
+    deg: string,
+    schoolCatName: string,
+  ): Promise<any[]>;
 }
 
 // ── 3. Service ───────────────────────────────────────────
@@ -94,7 +128,9 @@ export interface IProgramsService {
 class ProgramsService implements IProgramsService {
   constructor(private readonly repository: ProgramsRepository) {}
 
-  async getSchoolProgramme(slug: string): Promise<SchoolProgrammeDomain | undefined> {
+  async getSchoolProgramme(
+    slug: string,
+  ): Promise<SchoolProgrammeDomain | undefined> {
     return await this.repository.getSchoolProgramme(slug);
   }
 
@@ -106,12 +142,24 @@ class ProgramsService implements IProgramsService {
     return await this.repository.getSchoolProgrammeSEO(slug);
   }
 
-  async getSchoolProgrammeInfoByDegree(deg: string, schoolCatName: string): Promise<any[]> {
-    return await this.repository.getSchoolProgrammeInfoByDegree(deg, schoolCatName);
+  async getSchoolProgrammeInfoByDegree(
+    deg: string,
+    schoolCatName: string,
+  ): Promise<any[]> {
+    return await this.repository.getSchoolProgrammeInfoByDegree(
+      deg,
+      schoolCatName,
+    );
   }
 
-  async getSchoolProgrammePhdDataDegree(deg: string, schoolCatName: string): Promise<any[]> {
-    return await this.repository.getSchoolProgrammePhdDataDegree(deg, schoolCatName);
+  async getSchoolProgrammePhdDataDegree(
+    deg: string,
+    schoolCatName: string,
+  ): Promise<any[]> {
+    return await this.repository.getSchoolProgrammePhdDataDegree(
+      deg,
+      schoolCatName,
+    );
   }
 }
 
