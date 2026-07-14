@@ -45,7 +45,7 @@ const ThreeIndustryTracks = () => {
           {/* Primary CTA */}
           <Link
             href={content.primaryCta.link}
-            className={`${poppins.className} bg-[#DE0000] hover:bg-[#b30000] text-white font-medium text-sm sm:text-[16px] px-4 py-2 rounded-[5px] transition-all duration-300  w-full sm:w-auto text-center cursor-pointer`}
+            className={`${poppins.className} bg-[#DE0000] hover:bg-[#b30000] text-white font-bold text-sm sm:text-[16px] px-4 py-2 rounded-[5px] transition-all duration-300  w-fit sm:w-auto text-center cursor-pointer`}
           >
             {content.primaryCta.text}
           </Link>
