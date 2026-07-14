@@ -89,6 +89,7 @@ export function LifeAtKRMUSection() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-1000"
                   loading="lazy"
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent"></div>
 

@@ -718,8 +718,8 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                       {/* Content & Action */}
                       <div className="w-full xl:w-1/2 flex flex-col justify-center gap-4 pr-4">
                         <p className="text-white/80 text-[13px] font-light leading-relaxed font-poppins">
-                          Welcome to a world where education meets excitement! At
-                          K.R. Mangalam University (KRMU), we believe that
+                          Welcome to a world where education meets excitement!
+                          At K.R. Mangalam University (KRMU), we believe that
                           university life should be a perfect blend of learning,
                           growth, and fun. Our campus is not just a place to
                           study.
@@ -785,7 +785,8 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                       <div>
                         <h4 className="text-white font-bold text-[13px] mb-4 font-poppins tracking-wide">
-                          {aboutusMenu?.administration?.heading || "Administration"}
+                          {aboutusMenu?.administration?.heading ||
+                            "Administration"}
                         </h4>
                         <ul className="flex flex-col gap-3">
                           {aboutusMenu?.administration?.menulinks.map(
@@ -798,7 +799,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                   {menu.title}
                                 </Link>
                               </li>
-                            )
+                            ),
                           )}
                         </ul>
                       </div>
@@ -840,7 +841,6 @@ const NavbarMenu = ({ mainMenu }: Props) => {
             )}
         </ul>
       </div>
-
     </>
   );
 };

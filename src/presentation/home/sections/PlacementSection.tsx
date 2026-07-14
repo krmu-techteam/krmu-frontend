@@ -101,6 +101,9 @@ export function PlacementsSection() {
 
         {/* Bottom: Recruiters Grid */}
         <div className="mt-20">
+          <h3 className="text-xl md:text-2xl lg:text-[28px] font-serif font-semibold text-center text-white mb-8 tracking-wide">
+            Our Top Recruiters are Waiting for You
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {RECRUITER_LOGOS.slice(
               0,

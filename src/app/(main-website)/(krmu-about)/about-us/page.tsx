@@ -1,16 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
 import { getAboutKRMU } from "@/lib/api/about";
-import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { STRAPI_URL } from "@/app/constant";
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import PioneerExcellence from "@/app/(main-website)/Home/PioneerExcellence";
-import HallofFame from "../about-krmu/HallofFame";
-import IndustryCollabLogos from "../about-krmu/IndustryCollabLogos";
 import {
-  HeroSection,
   AccreditationSection,
   GroupInstitutionsSection,
   NextGenerationSection,
@@ -21,6 +14,12 @@ import {
   GlobalPartnershipsSection,
   KrmuCommitteeSection,
 } from "@/modules/about";
+import { HeroSection } from "@/presentation/about";
+import {
+  ABOUT_COMPONENT_KEYS,
+  getAboutService,
+  IAboutService,
+} from "@/features/about";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("the-university");
   const seo = seoData[0];
@@ -85,34 +84,48 @@ export async function generateMetadata(): Promise<Metadata> {
 const page = async () => {
   const aboutData = await getAboutKRMU();
 
-  const accrediationLogoData = aboutData?.accrediation?.accrediationlogos;
-  const KRMGRP = aboutData?.krmugroup;
-  const krmBranchData = aboutData?.krmugroup?.krmbranch;
-  const hallOfFameData = aboutData?.halloffame;
+  const aboutService: IAboutService = getAboutService();
+
+  const [
+    aboutPage,
+    accrediationSection,
+    krmGroupSection,
+    hallOfFameSection,
+    visionMissionSection,
+  ] = await Promise.all([
+    aboutService.getAboutPage(),
+    aboutService.getSection(ABOUT_COMPONENT_KEYS.ACCREDIATION),
+    aboutService.getSection(ABOUT_COMPONENT_KEYS.KRM_GROUP),
+    aboutService.getSection(ABOUT_COMPONENT_KEYS.HALL_OF_FAME),
+    aboutService.getSection(ABOUT_COMPONENT_KEYS.VISION_MISSION),
+    aboutService.getSection(ABOUT_COMPONENT_KEYS.INTERNATIONAL_COLLABORATION),
+    aboutService.getSection(ABOUT_COMPONENT_KEYS.KRMU_COMMITTEE),
+  ]);
+  console.log("visionMissionSection", visionMissionSection);
 
   return (
     <>
-      <HeroSection title={aboutData.title} subtitle={aboutData.subtitle} />
+      <HeroSection title={aboutPage.title} subtitle={aboutPage.subtitle} />
       <AccreditationSection
-        title={aboutData?.accrediation?.title}
-        logosData={accrediationLogoData}
+        title={accrediationSection?.title || ""}
+        accrediationlogos={accrediationSection?.accrediationlogos || []}
       />
       <GroupInstitutionsSection
-        title={KRMGRP?.title}
-        subtitle={KRMGRP?.subtitle}
-        description={KRMGRP?.description}
-        krmBranchData={krmBranchData}
+        title={krmGroupSection?.title || ""}
+        subtitle={krmGroupSection?.subtitle || ""}
+        description={krmGroupSection?.description || ""}
+        krmBranchData={krmGroupSection?.krmbranch || []}
       />
       <NextGenerationSection
-        thenexgentitle={aboutData?.thenexgentitle}
-        thenexgendescription={aboutData?.thenexgendescription}
+        thenexgentitle={aboutPage?.thenexgentitle}
+        thenexgendescription={aboutPage?.thenexgendescription}
       />
       <VisionMissionSection />
       <WhyKRMUSection />
       <AdvisoryOrDeanSection />
       <HallOfFameSection
-        title={hallOfFameData?.title}
-        hallfame={hallOfFameData?.hallfame}
+        title={hallOfFameSection?.title || ""}
+        hallfame={hallOfFameSection?.hallfame || []}
       />
 
       <GlobalPartnershipsSection aboutData={aboutData} />

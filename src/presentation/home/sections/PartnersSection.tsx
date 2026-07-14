@@ -32,8 +32,8 @@ export function PartnersSection() {
           className="px-12 md:px-16"
           containerClassName="items-center"
           slideClassName="basis-1/2 md:basis-1/3 lg:basis-1/5 xl:basis-1/6 pl-2 md:pl-4"
-          prevArrowClassName="left-1 md:left-2 lg:left-4 bg-brand-navy/50 border-white/10 hover:bg-brand-blue"
-          nextArrowClassName="right-1 md:right-2 lg:right-4 bg-brand-navy/50 border-white/10 hover:bg-brand-blue"
+          prevArrowClassName="left-1 md:left-2 lg:left-3 !rounded-[4px] !bg-[#2C516E] !text-[#ffffff] !border-none hover:bg-brand-blue"
+          nextArrowClassName="right-1 md:right-2 lg:right-3 !rounded-[4px] !bg-[#2C516E] !text-[#ffffff] !border-none hover:bg-brand-blue"
         >
           {PARTNER_UNIVERSITIES.map((partner, i) => (
             <div

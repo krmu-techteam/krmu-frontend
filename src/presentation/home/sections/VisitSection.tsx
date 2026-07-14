@@ -29,7 +29,7 @@ export function VisitSection() {
 
             <div className="flex flex-row items-center justify-start gap-4 md:gap-8">
               {/* Schedule Visit */}
-              <button className="flex items-center gap-4 md:gap-6 p-4 md:p-5 rounded-sm border border-white/80 group max-w-[240px] md:max-w-[280px] text-left shadow-lg h-[60px] md:h-[80px] text-white/80">
+              <button className="flex items-center gap-4 md:gap-6 p-4 md:p-5 rounded-[4px] border border-white/80 group max-w-[240px] md:max-w-[280px] text-left shadow-lg h-[60px] md:h-[80px] text-white/80">
                 <div>
                   <CalendarCheck size={26} />
                 </div>

@@ -13,11 +13,11 @@ export default function FloatingActionMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { icon: <Download size={19} />, label: "Download Brochure", href: "#" },
+    { icon: <Download size={19} />, label: "Download Brochure", href: "/under-construction" },
     { icon: <FaWhatsapp size={19} />, label: "WhatsApp", href: "https://wa.me/918800697010" },
     { icon: <FaInstagram size={19} />, label: "Instagram", href: "https://instagram.com/krmangalamuniv" },
     { icon: <FaYoutube size={19} />, label: "YouTube", href: "https://youtube.com/@KRMangalamUniversity" },
-    { icon: <MessageSquare size={19} />, label: "Live Chat", href: "#" },
+    { icon: <MessageSquare size={19} />, label: "Live Chat", href: "/under-construction" },
   ];
 
   return (

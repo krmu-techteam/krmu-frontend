@@ -1,12 +1,7 @@
+import { AboutHeroSection } from "@/features/about";
 import Image from "next/image";
 
-const HeroSection = async ({
-  title,
-  subtitle,
-}: {
-  title: string;
-  subtitle: string;
-}) => {
+export const HeroSection = async ({ title, subtitle }: AboutHeroSection) => {
   return (
     <section className="relative overflow-hidden">
       <div className="relative h-screen min-h-[650px] sm:min-h-[720px] lg:min-h-[820px] w-full">
@@ -34,4 +29,3 @@ const HeroSection = async ({
     </section>
   );
 };
-export default HeroSection;
