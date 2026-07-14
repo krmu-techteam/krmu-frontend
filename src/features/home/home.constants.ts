@@ -14,9 +14,20 @@ import {
 export const HOME_COMPONENT_KEYS = {
   HERO: "homepage-components.hero-section",
   ABOUT: "homepage-components.a-decade-section",
-  NEWS_EVENTS: "homepage-components.home-events-and-news",
+  JOURNEY: "homepage-components.yourjourney",
+  AFS: "homepage-components.afs-section",
+  RECRUITERS: "homepage-components.our-top-recruiters",
+  FEE_SCHOLAR: "homepage-components.fee-scholar",
+  WHY_KRMU: "homepage-components.whykrmu",
+  ELEVATE: "homepage-components.elevate-campus",
   TESTIMONIALS: "homepage-components.home-testimonials",
+  SHAPING: "homepage-components.shaping-future",
+  PARTNERS: "homepage-components.global-partener",
+  NEWS_EVENTS: "homepage-components.home-events-and-news",
 } as const;
+
+export type HomeComponentKey =
+  (typeof HOME_COMPONENT_KEYS)[keyof typeof HOME_COMPONENT_KEYS];
 
 export const ABOUT_STAT_BG_COLORS = [
   "#081D2D",

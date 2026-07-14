@@ -81,30 +81,15 @@ export interface CTA {
   link: string;
 }
 
-export interface TestimonialItem {
-  id: number;
-  documentId: string;
-  profilename: string;
-  profileinfo: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  profiledesignation: string;
-  profile: StrapiMedia;
-}
-
-export interface TestimonialResponse {
-  data: TestimonialItem[];
-}
-
 // ========================================================
-// Page components (Strapi dynamic zone)
+// Strapi Dynamic Zone Components (Raw)
 // ========================================================
 
 export interface HeroSectionComponent extends BaseComponent {
   __component: "homepage-components.hero-section";
   title: string;
   subtitle: string;
+  HeroSectionVideo?: StrapiMedia;
 }
 
 export interface ADecadeLeftCol {
@@ -128,21 +113,6 @@ export interface ADecadeRightCol {
   counter3content: string;
   counter4text: string;
   counter4content: string;
-}
-
-export interface JourneyVideoType {
-  id: number;
-  title: string;
-  thumbnail: string;
-  duration: string;
-  link?: string;
-}
-export interface SuccessStoryType {
-  name: string;
-  school: string;
-  course: string;
-  package: string;
-  image: string;
 }
 
 export interface ADecadeSectionComponent extends BaseComponent {
@@ -241,7 +211,7 @@ export interface HomeEventsAndNewsComponent extends BaseComponent {
 }
 
 // ========================================================
-// Union & Map
+// Union & Component Map
 // ========================================================
 
 export type HomePageComponent =
@@ -274,7 +244,7 @@ export interface HomeComponentMap {
 }
 
 // ========================================================
-// Raw API shapes (Strapi & WordPress) — never leave Repository
+// Raw API Shapes — never leave Repository
 // ========================================================
 
 export interface HomePageResponse {
@@ -289,7 +259,26 @@ export interface HomePageResponse {
   meta: Record<string, unknown>;
 }
 
-/** Raw WordPress news/event item — used only inside HomeMapper */
+// ── Testimonials ─────────────────────────────────────────
+
+export interface TestimonialItem {
+  id: number;
+  documentId: string;
+  profilename: string;
+  profileinfo: string;
+  profiledesignation: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  profile: StrapiMedia;
+}
+
+export interface TestimonialResponse {
+  data: TestimonialItem[];
+}
+
+// ── WordPress News/Events ─────────────────────────────────
+
 export interface WPNewsEventRaw {
   id: number;
   documentId: string;
@@ -316,7 +305,7 @@ export interface WPNewsEventsRawResponse {
 }
 
 // ========================================================
-// Domain models — what the rest of the app uses
+// Domain Models
 // ========================================================
 
 export interface NewsEventDomain {
@@ -344,13 +333,31 @@ export interface NewsEventsResult {
   pagination: NewsEventsPagination;
 }
 
+// ── Home Page Domain ──────────────────────────────────────
+
+export interface HomePageDomain {
+  components: HomePageComponent[];
+  testimonials: TestimonialItem[];
+}
+
 // ========================================================
-// UI-only types (components, not API)
+// UI-only types
 // ========================================================
 
-export interface HomeStatType {
-  number?: string;
-  label: string;
+export interface JourneyVideoType {
+  id: number;
+  title: string;
+  thumbnail: string;
+  duration: string;
+  link?: string;
+}
+
+export interface SuccessStoryType {
+  name: string;
+  school: string;
+  course: string;
+  package: string;
+  image: string;
 }
 
 export interface TestimonialType {
@@ -394,9 +401,12 @@ export interface LifeAtKRMUFeatureCardType {
   url?: string;
 }
 
-
-
 export interface ResearchStatsType {
   value: string;
+  label: string;
+}
+
+export interface HomeStatType {
+  number?: string;
   label: string;
 }

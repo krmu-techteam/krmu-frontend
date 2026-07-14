@@ -1,25 +1,41 @@
+/**
+ * @file features/home/home.mapper.ts
+ * Sirf transform — koi API call nahi
+ */
+
 import {
   HomePageComponent,
+  HomePageDomain,
   HomePageResponse,
   NewsEventDomain,
   NewsEventsResult,
+  TestimonialItem,
   TestimonialResponse,
   WPNewsEventRaw,
   WPNewsEventsRawResponse,
 } from "./home.types";
 
 export class HomeMapper {
-  // ── Strapi ──────────────────────────────────────────────
+  // ── Strapi Home Page ─────────────────────────────────
+
+  static toDomain(response: HomePageResponse): HomePageDomain {
+    return {
+      components: response.data.PageContent,
+      testimonials: [],
+    };
+  }
 
   static toComponentList(response: HomePageResponse): HomePageComponent[] {
     return response.data.PageContent;
   }
 
-  static toTestimonialList(response: TestimonialResponse) {
+  // ── Testimonials ─────────────────────────────────────
+
+  static toTestimonialList(response: TestimonialResponse): TestimonialItem[] {
     return response.data;
   }
 
-  // ── WordPress ──────────────────────────────────────────────
+  // ── WordPress News & Events ───────────────────────────
 
   static toNewsEventDomain(raw: WPNewsEventRaw): NewsEventDomain {
     return {

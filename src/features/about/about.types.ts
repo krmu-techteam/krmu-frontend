@@ -1,10 +1,4 @@
 import { StrapiMedia } from "@/features/home";
-
-export interface AboutHeroSection {
-  title: string;
-  subtitle: string;
-}
-
 export interface RichTextChild {
   text: string;
   type: "text";
@@ -106,6 +100,7 @@ export interface AboutPageRaw {
   krmucommittee: KRMUCommitteeRaw;
 }
 
+// Strapi wrapper
 export interface AboutPageResponse {
   data: AboutPageRaw;
   meta: Record<string, unknown>;
@@ -129,14 +124,10 @@ export interface HallFameItemDomain {
   description: string;
 }
 
-export type HALLFAME = HallFameItemDomain;
-
 export interface HallOfFameDomain {
   title: string;
   hallfame: HallFameItemDomain[];
 }
-
-export type HALLOFFAME = HallOfFameDomain;
 
 export interface VisionMissionDomain {
   visiontitle: string;
@@ -159,6 +150,8 @@ export interface KRMUCommitteeDomain {
   committeebtn: AboutButton;
 }
 
+// ── Root domain model ────────────────────────────────────
+
 export interface AboutPageDomain {
   id: number;
   documentId: string;
@@ -173,3 +166,16 @@ export interface AboutPageDomain {
   internationcollaboration: InternationalCollabDomain;
   krmucommittee: KRMUCommitteeDomain;
 }
+
+// ── Section key → type map (for getSection<K>) ──────────
+
+export interface AboutSectionMap {
+  accrediation: AccrediationDomain;
+  krmugroup: KRMGroupDomain;
+  halloffame: HallOfFameDomain;
+  visionmission: VisionMissionDomain;
+  internationcollaboration: InternationalCollabDomain;
+  krmucommittee: KRMUCommitteeDomain;
+}
+
+export type AboutSectionKey = keyof AboutSectionMap;

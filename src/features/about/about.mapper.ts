@@ -1,12 +1,13 @@
 import {
   AboutPageDomain,
-  AboutPageRaw,
   AboutPageResponse,
+  AboutPageRaw,
 } from "./about.types";
 
 export class AboutMapper {
   static toDomain(response: AboutPageResponse): AboutPageDomain {
     const raw: AboutPageRaw = response.data;
+
     return {
       id: raw.id,
       documentId: raw.documentId,
@@ -14,16 +15,19 @@ export class AboutMapper {
       subtitle: raw.subtitle,
       thenexgentitle: raw.thenexgentitle,
       thenexgendescription: raw.thenexgendescription,
+
       accrediation: {
         title: raw.accrediation.title,
         accrediationlogos: raw.accrediation.accrediationlogos,
       },
+
       krmugroup: {
         title: raw.krmugroup.title,
         subtitle: raw.krmugroup.subtitle,
         description: raw.krmugroup.description,
         krmbranch: raw.krmugroup.krmbranch,
       },
+
       halloffame: {
         title: raw.halloffame.title,
         hallfame: raw.halloffame.hallfame.map((item) => ({
@@ -32,6 +36,7 @@ export class AboutMapper {
           description: item.description,
         })),
       },
+
       visionmission: {
         visiontitle: raw.visionmission.visiontitle,
         missiontitle: raw.visionmission.missiontitle,

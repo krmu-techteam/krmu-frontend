@@ -13,13 +13,9 @@ import {
   HallOfFameSection,
   GlobalPartnershipsSection,
   KrmuCommitteeSection,
+  HeroSection,
 } from "@/presentation/about/sections";
-import { HeroSection } from "@/presentation/about";
-import {
-  ABOUT_COMPONENT_KEYS,
-  getAboutService,
-  IAboutService,
-} from "@/features/about";
+import { getAboutService, IAboutService } from "@/features/about";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("the-university");
   const seo = seoData[0];
@@ -88,32 +84,34 @@ const page = async () => {
 
   const [
     aboutPage,
-    accrediationSection,
-    krmGroupSection,
-    hallOfFameSection,
-    visionMissionSection,
+    accrediation,
+    krmugroup,
+    halloffame,
+    visionmission,
+    internationcollaboration,
+    krmucommittee,
   ] = await Promise.all([
-    aboutService.getAboutPage(),
-    aboutService.getSection(ABOUT_COMPONENT_KEYS.ACCREDIATION),
-    aboutService.getSection(ABOUT_COMPONENT_KEYS.KRM_GROUP),
-    aboutService.getSection(ABOUT_COMPONENT_KEYS.HALL_OF_FAME),
-    aboutService.getSection(ABOUT_COMPONENT_KEYS.VISION_MISSION),
-    aboutService.getSection(ABOUT_COMPONENT_KEYS.INTERNATIONAL_COLLABORATION),
-    aboutService.getSection(ABOUT_COMPONENT_KEYS.KRMU_COMMITTEE),
+    aboutService.getData(),
+    aboutService.getSection("accrediation"),
+    aboutService.getSection("krmugroup"),
+    aboutService.getSection("halloffame"),
+    aboutService.getSection("visionmission"),
+    aboutService.getSection("internationcollaboration"),
+    aboutService.getSection("krmucommittee"),
   ]);
 
   return (
     <>
       <HeroSection title={aboutPage.title} subtitle={aboutPage.subtitle} />
       <AccreditationSection
-        title={accrediationSection?.title || ""}
-        accrediationlogos={accrediationSection?.accrediationlogos || []}
+        title={accrediation?.title || ""}
+        accrediationlogos={accrediation?.accrediationlogos || []}
       />
       <GroupInstitutionsSection
-        title={krmGroupSection?.title || ""}
-        subtitle={krmGroupSection?.subtitle || ""}
-        description={krmGroupSection?.description || ""}
-        krmBranchData={krmGroupSection?.krmbranch || []}
+        title={krmugroup?.title || ""}
+        subtitle={krmugroup?.subtitle || ""}
+        description={krmugroup?.description || ""}
+        krmBranchData={krmugroup?.krmbranch || []}
       />
       <NextGenerationSection
         thenexgentitle={aboutPage?.thenexgentitle}
@@ -123,8 +121,8 @@ const page = async () => {
       <WhyKRMUSection />
       <AdvisoryOrDeanSection />
       <HallOfFameSection
-        title={hallOfFameSection?.title || ""}
-        hallfame={hallOfFameSection?.hallfame || []}
+        title={halloffame?.title || ""}
+        hallfame={halloffame?.hallfame || []}
       />
 
       <GlobalPartnershipsSection aboutData={aboutData} />

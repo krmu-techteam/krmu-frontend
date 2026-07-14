@@ -87,7 +87,7 @@ const raleway = Raleway({
 
 const page = async () => {
   const advisoryBoardService: IAdvisoryBoardService = getAdvisoryBoardService();
-  const advisoryData = await advisoryBoardService.getAdvisoryBoardData();
+  const advisoryData = await advisoryBoardService.getData();
 
   if (!advisoryData) {
     return notFound();

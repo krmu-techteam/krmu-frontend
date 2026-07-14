@@ -1,3 +1,3 @@
 export * from "./components";
 export * from "./sections";
-export * from "./HeroSection";
+export * from "./sections/HeroSection";
