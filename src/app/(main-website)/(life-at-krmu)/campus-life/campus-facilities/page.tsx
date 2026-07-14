@@ -6,14 +6,9 @@ import OurTopPriority from "../comp/OurTopPriority";
 import SeamlessConnectivity from "../comp/SeamlessConnectivity";
 import WardenHostel from "../comp/WardenHostel";
 
-
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
-
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("campus-facilities");

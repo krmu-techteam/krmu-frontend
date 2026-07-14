@@ -1,11 +1,13 @@
+import { createProvider } from "@/lib/core/create-provider";
 import { getSchoolProgrammeData, getSchoolProgrammeInfoByDegree, getSchoolProgrammePhdDataDegree } from "@/lib/api/school-programmes";
 import { getPHDProgramme } from "@/lib/api/phd-programmes";
 import { getSchoolProgrammeSEO } from "@/lib/api/common";
-import { IProgramsRepository } from "./programs.interfaces";
 import { SchoolProgrammeDomain, PHDProgrammeDomain } from "./programs.types";
 import { ProgramsMapper } from "./programs.mapper";
 
-export class ProgramsRepository implements IProgramsRepository {
+// ── 1. Repository ────────────────────────────────────────
+
+class ProgramsRepository {
   private schoolProgramDataPromise: Map<string, Promise<SchoolProgrammeDomain | undefined>> = new Map();
   private phdProgramDataPromise: Map<string, Promise<PHDProgrammeDomain | undefined>> = new Map();
 
@@ -76,3 +78,45 @@ export class ProgramsRepository implements IProgramsRepository {
     }
   }
 }
+
+// ── 2. Service Interface ─────────────────────────────────
+
+export interface IProgramsService {
+  getSchoolProgramme(slug: string): Promise<SchoolProgrammeDomain | undefined>;
+  getPHDProgramme(slug: string): Promise<PHDProgrammeDomain | undefined>;
+  getSchoolProgrammeSEO(slug: string): Promise<any>;
+  getSchoolProgrammeInfoByDegree(deg: string, schoolCatName: string): Promise<any[]>;
+  getSchoolProgrammePhdDataDegree(deg: string, schoolCatName: string): Promise<any[]>;
+}
+
+// ── 3. Service ───────────────────────────────────────────
+
+class ProgramsService implements IProgramsService {
+  constructor(private readonly repository: ProgramsRepository) {}
+
+  async getSchoolProgramme(slug: string): Promise<SchoolProgrammeDomain | undefined> {
+    return await this.repository.getSchoolProgramme(slug);
+  }
+
+  async getPHDProgramme(slug: string): Promise<PHDProgrammeDomain | undefined> {
+    return await this.repository.getPHDProgramme(slug);
+  }
+
+  async getSchoolProgrammeSEO(slug: string): Promise<any> {
+    return await this.repository.getSchoolProgrammeSEO(slug);
+  }
+
+  async getSchoolProgrammeInfoByDegree(deg: string, schoolCatName: string): Promise<any[]> {
+    return await this.repository.getSchoolProgrammeInfoByDegree(deg, schoolCatName);
+  }
+
+  async getSchoolProgrammePhdDataDegree(deg: string, schoolCatName: string): Promise<any[]> {
+    return await this.repository.getSchoolProgrammePhdDataDegree(deg, schoolCatName);
+  }
+}
+
+// ── 4. Provider (Singleton) ──────────────────────────────
+
+export const getProgramsService = createProvider<IProgramsService>(
+  () => new ProgramsService(new ProgramsRepository()),
+);
