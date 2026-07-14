@@ -26,8 +26,8 @@ const comparisonData: ComparisonRow[] = [
     typical: "100-300 companies",
   },
   {
-    parameter: "Academic support partners",
-    krmu: "IBM, Microsoft, EC-Council, ImaginXP",
+    parameter: "Curriculum",
+    krmu: "Industry-aligned and regularly updated",
     typical: "Generic AICTE syllabus",
   },
   {
@@ -42,7 +42,7 @@ const comparisonData: ComparisonRow[] = [
   },
   {
     parameter: "International exposure",
-    krmu: "Fully sponsored 2-week European summer school",
+    krmu: "*Fully sponsored 2-week European summer school",
     typical: "Rarely offered",
   },
   {
@@ -92,7 +92,7 @@ export const WhyKrmuCse = () => {
         {/* Header Section */}
         <div className="text-center mb-10 md:mb-10">
           <h2 className="text-3xl md:text-4xl lg:text-[36px] font-bold text-white leading-tight tracking-tight max-w-[707px] mx-auto mb-6">
-            Why K.R. Mangalam University for B.Tech. CSE in 2026-27?
+            Why Choose K.R. Mangalam University for B.Tech. CSE?
           </h2>
           <p className="text-white text-sm md:text-base lg:text-[18px] max-w-[1029px] mx-auto leading-relaxed font-normal mb-4">
             Pursuing a B.Tech. CSE programme is not just about earning a degree;

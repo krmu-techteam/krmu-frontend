@@ -100,7 +100,7 @@ export const ProgrammeOverview = () => {
                   and software engineering while developing specialised
                   expertise in the most in-demand domains such as AI/ML, Data
                   Science, Cyber Security, Full Stack Development, Robotics &
-                  AI, UX/UI, Cloud Computing and Semiconductor Design.
+                  AI, UX/UI.
                 </p>
 
                 <p
