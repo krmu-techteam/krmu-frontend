@@ -53,7 +53,7 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
 
           {/* Heading */}
           <h1
-            className={`${playfair.className} w-full lg:w-[95%] text-xl sm:text-2xl md:text-[32px] lg:text-[40px] xl:text-5xl  text-white mb-4 sm:mb-6 tracking-normal`}
+            className={`${playfair.className} w-full lg:w-[95%] text-xl sm:text-2xl md:text-[32px] lg:text-[40px] xl:text-[50px]  text-white mb-4 sm:mb-6 tracking-[0.5px] leading-[110%]`}
           >
             {hero.heading}
           </h1>
@@ -81,7 +81,7 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
             {formId && (
               <NpfPopup
                 formId={formId}
-                btnClass={`bg-[#DE0000] hover:bg-[#b30000] text-white font-semibold text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 shadow-lg shadow-black/30 whitespace-nowrap ${heroSection.herobtn.buttonclass || ""}`}
+                btnClass={`bg-[#DE0000] hover:bg-[#b30000] text-white font-bold text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 shadow-lg shadow-black/30 whitespace-nowrap ${heroSection.herobtn.buttonclass || ""}`}
                 btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
                 showIcon={false}
               />

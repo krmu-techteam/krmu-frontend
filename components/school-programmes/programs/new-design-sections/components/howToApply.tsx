@@ -142,7 +142,7 @@ const HowToApply = ({ formId, heroSection }: Props) => {
               {formId && (
                 <NpfPopup
                   formId={formId}
-                  btnClass={`${poppins.className} bg-[#DE0000] hover:bg-[#b30000] text-white text-sm sm:text-[19px] px-6 py-3.5 rounded-[5px] transition-all duration-300 shadow-md hover:shadow-lg font-light inline-block w-full sm:w-auto text-center cursor-pointer ${heroSection?.herobtn?.buttonclass || ""}`}
+                  btnClass={`${poppins.className} bg-[#DE0000] hover:bg-[#b30000] text-white text-sm sm:text-[19px] px-6 py-3.5 rounded-[5px] transition-all duration-300 shadow-md hover:shadow-lg font-bold inline-block w-fit sm:w-auto text-center cursor-pointer ${heroSection?.herobtn?.buttonclass || ""}`}
                   btnText={`${content.cta.buttonText}`}
                   showIcon={false}
                 />
