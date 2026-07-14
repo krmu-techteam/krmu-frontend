@@ -9,7 +9,7 @@ const playfair = Playfair_Display({
 
 export const SocialConnect = () => {
   return (
-    <section className="bg-[#FAF8FC] pb-16 px-6 md:px-12">
+    <section className="bg-[#FAF8FC] pb-16 px-4 md:px-12">
       <div className="mx-auto w-full max-w-[1550px]">
         <div className="relative overflow-hidden rounded-[24px] border-[5px] border-white bg-gradient-to-r from-[#A7ECEF] via-[#D7DDF0] to-[#FBBBBB] p-8 md:p-10 lg:p-12 shadow-sm flex flex-col lg:flex-row justify-between items-center gap-6">
           <div className="text-left max-w-[550px] 2xl:max-w-[610px] w-full">

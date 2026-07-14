@@ -14,7 +14,7 @@ const poppins = Poppins({
 
 const WelfareHero = () => {
   return (
-    <section className="bg-[#051630] pt-[108px] sm:pt-[85px] xl:pt-[115px] ">
+    <section className="bg-[#051630] pt-[108px] sm:pt-[85px] xl:pt-[115px] overflow-hidden ">
       <div
         className=" [@media(max-width:420px)]:h-[190px] h-[225px] sm:h-[340px] md:h-[510px] lg:h-[450px] xl:h-[600px] 2xl:h-[750px] bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1407_6a699f3b68.jpg)] bg-contain scale-[140%] sm:scale-none sm:bg-cover bg-no-repeat"
         style={{ backgroundPosition: "46% 10%" }}
