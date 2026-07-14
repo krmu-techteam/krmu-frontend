@@ -6,7 +6,7 @@ const teamMembers = [
     name: "Mr. Abhishek",
     role: "Event Manager",
     image:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Abhishek_1_5c3e032ed2.jpg",
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Abhishek_d1daf786ff.png",
     ringClass: "linear-gradient(180deg, #DFCC99 0%, #FFFFFF 100%)",
   },
   {
@@ -14,7 +14,7 @@ const teamMembers = [
     name: "Mr. Raj Jayswal",
     role: "Student Success Manager",
     image:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_599_a259dc4cf4.jpg",
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Raj_Jayswal_a127a8fd50.png",
     ringClass: "linear-gradient(180deg, #DFCC99 0%, #FFFFFF 100%)",
   },
   {
@@ -22,7 +22,7 @@ const teamMembers = [
     name: "Mr. Rahul Kumar Jha",
     role: "Music Teacher",
     image:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Ellipse_126_1_95cbc91157.jpg",
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mr_Rahul_Kumar_Jha_428d24073c.png",
     ringClass: "linear-gradient(180deg, #DFCC99 0%, #FFFFFF 100%)",
   },
   {
@@ -30,7 +30,7 @@ const teamMembers = [
     name: "Mr. Raj Bahadur",
     role: "Theatre & Dance Teacher",
     image:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Raj_Bahadur_1_cb326d469a.jpg",
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Raj_Bahadur_3fa5f45669.png",
     ringClass: "linear-gradient(180deg, #DFCC99 0%, #FFFFFF 100%)",
   },
   {
@@ -38,7 +38,7 @@ const teamMembers = [
     name: "Mr. Jagjeet Singh",
     role: "Sports Incharge",
     image:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Jagjeet_Singh_2_84b724d811.jpg",
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Jagjeet_Singh_af059c84a3.png",
     ringClass: "linear-gradient(180deg, #DFCC99 0%, #FFFFFF 100%)",
   },
   {
@@ -46,7 +46,7 @@ const teamMembers = [
     name: "Mr. Sunil",
     role: "Sports Coach",
     image:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Sunil_1_d32fd2a10d.jpg",
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Sunil_387f833441.png",
     ringClass: "linear-gradient(180deg, #DFCC99 0%, #FFFFFF 100%)",
   },
   {
@@ -54,7 +54,7 @@ const teamMembers = [
     name: "Ms. Pravanya Batra",
     role: "DSW Coordinator",
     image:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Pravanya_Batra_1_9b805feb5c.jpg",
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Pravanya_Batra_c676339dd4.png",
     ringClass: "linear-gradient(180deg, #D1AFBF 0%, #FFFFFF 100%)",
   },
   {
@@ -62,7 +62,7 @@ const teamMembers = [
     name: "Mr. Himanshu",
     role: "Office Assistant",
     image:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Himanshu_2_5a392b159c.jpg",
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Himanshu_ea3ebd87ea.png",
     ringClass: "linear-gradient(180deg, #DFCC99 0%, #FFFFFF 100%)",
   },
 ];

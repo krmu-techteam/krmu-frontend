@@ -27,7 +27,7 @@ export const SocialConnect = () => {
           <div className="flex flex-wrap items-center justify-center md:justify-start lg:justify-end gap-4 w-full lg:w-auto">
             {/* LinkedIn Button */}
             <Link
-              href="https://www.linkedin.com/school/k.r.-mangalam-university/"
+              href="https://www.linkedin.com/company/dean-of-student-welfare-krmu/posts/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -42,7 +42,7 @@ export const SocialConnect = () => {
 
             {/* Instagram Button */}
             <Link
-              href="https://www.instagram.com/krmangalamuniv/"
+              href="https://www.instagram.com/student_council_krmu?igsh=MTFnMXJzbmxjeXdzMg=="
               target="_blank"
               rel="noopener noreferrer"
             >

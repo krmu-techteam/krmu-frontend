@@ -22,7 +22,7 @@ const GrievenceAndCounseling = () => {
                 and Anti Ragging 
               </h2>
 
-              <p className=" text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]">
+              <p className=" text-left sm:text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]">
                 The Department of Student Welfare ensures a safe, respectful,
                 and student-friendly campus through its Student Grievance
                 Handling system. It provides students with a fair and
@@ -53,7 +53,7 @@ const GrievenceAndCounseling = () => {
                   className={`relative mb-1 h-[130px] lg:h-[110px] w-[130px] lg:w-[110px]  overflow-hidden rounded-full  bg-[#F4F4F4] `}
                 >
                   <Image
-                    src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_599_a259dc4cf4.jpg"
+                    src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Raj_Jayswal_a127a8fd50.png"
                     alt="Team Member"
                     fill
                     sizes="150px"
@@ -61,7 +61,7 @@ const GrievenceAndCounseling = () => {
                   />
                 </div>
               </div>
-              <p className=" text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[14px]">
+              <p className=" text-left sm:text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[14px]">
                 As a Student Success Manager at K.R. Mangalam University, I
                 serve as a dedicated bridge between students and the
                 institution, ensuring that every academic and non-academic
@@ -94,7 +94,7 @@ const GrievenceAndCounseling = () => {
                 Centre
               </h2>
 
-              <p className=" text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]">
+              <p className="text-left sm:text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]">
                 University life brings new opportunities, experiences, and
                 challenges. The Counselling Services at KRMU are dedicated to
                 supporting students emotional well-being, personal growth, and
@@ -128,7 +128,7 @@ const GrievenceAndCounseling = () => {
                   className={`relative mb-1 h-[130px] lg:h-[110px] w-[130px] lg:w-[110px] overflow-hidden rounded-full  bg-[#F4F4F4] `}
                 >
                   <Image
-                    src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_614_de34263b16.jpg"
+                    src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Amit_Yadav_10ac4bae2e.png"
                     alt="Team Member"
                     fill
                     sizes="150px"
@@ -136,7 +136,7 @@ const GrievenceAndCounseling = () => {
                   />
                 </div>
               </div>
-              <p className=" text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[14px]">
+              <p className="text-left sm:text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[14px]">
                 Hello Students, I have been working in the fields of counselling
                 and education since 2014. I understand that university life
                 comes with both exciting opportunities and unique challenges,

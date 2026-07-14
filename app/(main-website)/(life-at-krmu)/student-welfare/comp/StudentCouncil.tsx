@@ -189,7 +189,7 @@ const StudentCouncil = () => {
               />
             </div>
 
-            <p className="self-center text-justify text-sm leading-[1.85] font-medium text-[#0a1d3a] md:text-[16px]">
+            <p className="self-center text-left sm:text-justify text-sm leading-[1.85] font-medium text-[#0a1d3a] md:text-[16px]">
               The K.R. Mangalam University Student Council serves as the
               representative body of the student community, acting as a vital
               link between students and the university administration. Working
@@ -261,7 +261,7 @@ const StudentCouncil = () => {
           <div className="flex flex-col xl:flex-row items-center gap-8 rounded-2xl border-4 border-white bg-[#DAE9FF] p-4  xl:gap-8 xl:p-8 shadow-sm">
             <div className="w-full flex-shrink-0 overflow-hidden rounded-3xl h-[300px] sm:h-[340px] md:h-auto md:w-[390px] lg:w-[440px]">
               <Image
-                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_608_0f98d1ae42.jpg"
+                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Nirdesh_babea75dd1.png"
                 width={1024}
                 height={1024}
                 alt="K.R. Mangalam University Student Council"
