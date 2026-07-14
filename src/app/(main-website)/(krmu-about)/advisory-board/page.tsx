@@ -2,8 +2,9 @@
 // app/about/page.tsx
 import { Raleway } from "next/font/google";
 import AdvisoryBoardCard from "@/app/(main-website)/components/Cards/AdvisoryBoardCard";
-import { getAdvisoryBoard } from "@/lib/api/common";
+import { getAdvisoryBoardService, IAdvisoryBoardService } from "@/features/about/advisory-board";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { notFound } from "next/navigation";
 
 
 
@@ -85,9 +86,14 @@ const raleway = Raleway({
 });
 
 const page = async () => {
-  const advisoryData = await getAdvisoryBoard();
+  const advisoryBoardService: IAdvisoryBoardService = getAdvisoryBoardService();
+  const advisoryData = await advisoryBoardService.getAdvisoryBoardData();
 
-  const advisoryMembers = advisoryData?.advisoryboard || [];
+  if (!advisoryData) {
+    return notFound();
+  }
+
+  const advisoryMembers = advisoryData.advisoryboard || [];
 
   return (
     <>
