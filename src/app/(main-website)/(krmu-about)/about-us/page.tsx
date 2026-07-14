@@ -3,7 +3,17 @@ import { STRAPI_URL } from "@/app/constant";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import PioneerExcellence from "@/app/(main-website)/Home/PioneerExcellence";
-import { AccreditationSection, GroupInstitutionsSection, NextGenerationSection, VisionMissionSection, WhyKRMUSection, AdvisoryOrDeanSection, HallOfFameSection, GlobalPartnershipsSection, KrmuCommitteeSection } from "@/presentation/about/sections";;
+import {
+  AccreditationSection,
+  GroupInstitutionsSection,
+  NextGenerationSection,
+  VisionMissionSection,
+  WhyKRMUSection,
+  AdvisoryOrDeanSection,
+  HallOfFameSection,
+  GlobalPartnershipsSection,
+  KrmuCommitteeSection,
+} from "@/presentation/about/sections";
 import { HeroSection } from "@/presentation/about";
 import {
   ABOUT_COMPONENT_KEYS,
@@ -91,7 +101,6 @@ const page = async () => {
     aboutService.getSection(ABOUT_COMPONENT_KEYS.INTERNATIONAL_COLLABORATION),
     aboutService.getSection(ABOUT_COMPONENT_KEYS.KRMU_COMMITTEE),
   ]);
-  console.log("visionMissionSection", visionMissionSection);
 
   return (
     <>
