@@ -63,7 +63,7 @@ export const sohmctFaculties: SchoolFacultiesType[] = [
   },
   {
     id: 9236,
-    slug: "mr-virendra-singh-2",
+    slug: "mr-virendra-singh",
     title: {
       rendered: "Mr. Virendra Singh",
     },
@@ -74,6 +74,6 @@ export const sohmctFaculties: SchoolFacultiesType[] = [
       schools: [1214],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Mr.-Virendra-Singh-SOHMCT-1.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/virendra-singh.png",
   },
 ];
