@@ -85,9 +85,7 @@ export const BreakDown = () => {
             onClick={() => setIsOpen(!isOpen)}
             className="flex items-center justify-between gap-2 sm:gap-6 bg-[#002045] text-white font-bold py-3 px-6 rounded-[10px] shadow-md transition-all duration-300  text-center text-sm sm:text-base md:text-[24px] cursor-pointer"
           >
-            <span>
-              Full breakdown of career roles, average salary ranges in India
-            </span>
+            <span>Career Scope & Salary Insights</span>
             <span
               className={`flex items-center justify-center w-[40px] h-[30px] sm:w-[40px] sm:h-[40px] rounded-full ${isOpen ? "bg-[#E7C268]" : "bg-white"} text-[#002045] shadow-sm`}
             >

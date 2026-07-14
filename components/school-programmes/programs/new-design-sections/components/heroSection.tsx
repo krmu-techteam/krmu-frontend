@@ -117,9 +117,9 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
         </div>
 
         {/* Right Image Column */}
-        <div className="w-full lg:w-[50%] flex justify-center lg:justify-end mt-2 lg:mt-0 relative lg:static h-[340px] sm:h-[440px] md:h-[450px] lg:h-auto">
-          <div className="absolute hidden lg:block h-full w-[200px] sm:w-[260px] md:w-[300px] lg:w-[329px] left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-[11%] xl:right-[16.5%] 2xl:right-[24.5%] bottom-0 bg-[linear-gradient(0.98deg,#D9D9D900_1.07%,#DE000090_99.48%)]" />
-          <div className="absolute  bottom-0 lg:bottom-13 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 w-[260px] h-[312px] sm:w-[350px] sm:h-[420px] md:w-[410px] md:h-[492px] lg:w-[465px] lg:h-[565px] lg:right-[6%] xl:right-[13%] 2xl:right-[22%]">
+        <div className="w-full lg:w-[50%] flex justify-center mt-2 lg:mt-0 relative lg:static h-[340px] sm:h-[440px] md:h-[450px] lg:h-auto">
+          <div className="absolute hidden lg:block h-full w-[200px] sm:w-[260px] md:w-[300px] lg:w-[330px]  bottom-0 bg-[linear-gradient(0.98deg,#D9D9D900_1.07%,#DE000090_99.48%)]" />
+          <div className="absolute  bottom-0 lg:bottom-13  w-[260px] h-[312px] sm:w-[350px] sm:h-[420px] md:w-[410px] md:h-[492px] lg:w-[465px] lg:h-[565px] ">
             <Image
               src={hero.image}
               alt={hero.altText}

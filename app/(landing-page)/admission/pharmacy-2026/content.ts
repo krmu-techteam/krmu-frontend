@@ -79,27 +79,27 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/pharmacy-2026/recruiters/astra.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/7-pharmacy/astrazeneca.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/pharmacy-2026/recruiters/lupin.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/7-pharmacy/dr-reddys.webp",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/pharmacy-2026/recruiters/sun.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/7-pharmacy/glenmark.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/pharmacy-2026/recruiters/glenmark.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/7-pharmacy/lupin-seeklogo.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/pharmacy-2026/recruiters/drreddy.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/7-pharmacy/maxhealthcare.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/pharmacy-2026/recruiters/max.png",
+    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/7-pharmacy/sunpharma.png",
     alt: "Recruiter Logo",
   },
 ];

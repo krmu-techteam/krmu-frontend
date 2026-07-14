@@ -94,7 +94,7 @@ export default function KRMUTimer({
       <span
         className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-xs sm:text-sm" : "text-xs sm:text-sm"}`}
       >
-        Get Up to 100% Scholarship Worth ₹27 Cr + Opportunity to Fly to Europe | Apply Before It's Gone
+        Registration Closing on July 15 | Join Sonal Kaushal LIVE | Limited Seats Available
         {mainWebsiteTimer && (
           <span className="border-b border-white border-dotted inline-block ml-2">Apply Now</span>
         )}

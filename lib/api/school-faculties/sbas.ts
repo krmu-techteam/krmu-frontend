@@ -379,7 +379,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
   },
   {
     id: 9973,
-    slug: "dr-sujata-kumari-2",
+    slug: "dr-sujata-kumari",
     title: {
       rendered: "Dr. Sujata Kumari",
     },
@@ -390,7 +390,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Sujata-Kumari.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/sujata.webp",
   },
   {
     id: 9962,
@@ -424,7 +424,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
   },
   {
     id: 9956,
-    slug: "dr-mehak-ahuja-2",
+    slug: "dr-mehak-ahuja",
     title: {
       rendered: "Dr. Mehak Ahuja",
     },
@@ -435,11 +435,11 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mehak-Ahuja.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/mehak-ahuja.png",
   },
   {
     id: 9944,
-    slug: "dr-ritika-khatri-2",
+    slug: "dr-ritika-khatri",
     title: {
       rendered: "Dr. Ritika Khatri",
     },
@@ -450,7 +450,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Ritika-Khatri.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/ritika-khatri.png",
   },
   {
     id: 9883,

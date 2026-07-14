@@ -9,7 +9,7 @@ const playfair = Playfair_Display({
 
 const ClubsSocieties = () => {
   return (
-    <section className=" flex justify-center h-[1200px] md:h-[1000px] lg:h-[900px] xl:h-[800px]  py-12 px-12 bg-cover bg-center bg-no-repeat bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1403_e55adcc5a7.jpg)]">
+    <section className=" flex justify-center h-[1200px] md:h-[1000px] lg:h-[900px] xl:h-[850px] 2xl:h-[1070px]  py-12 px-12 bg-cover bg-center bg-no-repeat bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1403_e55adcc5a7.jpg)]">
       {/* <Image
         src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1403_e55adcc5a7.jpg"
         alt="Students sitting together on campus lawn"
@@ -41,8 +41,9 @@ const ClubsSocieties = () => {
         </p>
 
         <Link
-          href="#tab1"
+          href="https://www.krmangalam.edu.in/clubs-and-societies/"
           className="mt-5 inline-flex h-[44px] items-center justify-center rounded-full bg-[#001732] px-7 text-[14px] font-medium text-white transition hover:bg-[#003463]"
+          target="_blank"
         >
           Read More
         </Link>

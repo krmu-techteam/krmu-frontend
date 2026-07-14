@@ -299,8 +299,6 @@ export default async function Page({ params }: Props) {
     ],
   });
 
-
-
   return (
     <>
       {schoolSchema && (
@@ -340,6 +338,7 @@ export default async function Page({ params }: Props) {
           admBtn={school.admissionbtn}
         />
       )} */}
+
       {schoolKnowComp && (
         <SchoolInfoStatistics
           heading={schoolKnowComp?.heading}

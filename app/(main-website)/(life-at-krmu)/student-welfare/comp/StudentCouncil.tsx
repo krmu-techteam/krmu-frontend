@@ -20,16 +20,15 @@ const StudentCouncil = () => {
   const data: StudentCouncilMember[] = [
     {
       id: 1,
-      name: "Ishan Verma",
-      role: "Event Coordinator",
-      image: "/wp-content/coordinator/ishan.png",
+      name: "Yash Raj Jha",
+      role: "Club Sub Coordinator",
+      image: "/wp-content/coordinator/yashraj.png",
     },
-
     {
       id: 2,
-      name: "Somya Sharma",
-      role: "Event Sub Coordinator",
-      image: "/wp-content/coordinator/somya-sharma.png",
+      name: "Srishti Sehgal",
+      role: "Club event Content writer & Sponsorship coordinator",
+      image: "/wp-content/coordinator/srishti.png",
     },
     {
       id: 3,
@@ -39,21 +38,22 @@ const StudentCouncil = () => {
     },
     {
       id: 4,
-      name: "Anuj",
-      role: "Logistics & Operation Coordinator",
-      image: "/wp-content/coordinator/anuj.png",
+      name: "Tanvee Vashisht",
+      role: "Student Welfare Sub Coordinator",
+      image: "/wp-content/coordinator/tanvee.png",
     },
     {
       id: 5,
-      name: "Raghav Sharma",
-      role: "Club Coordinator",
-      image: "/wp-content/coordinator/raghav-s.png",
+      name: "Harshit Malik",
+      role: "Social Media ORM & Promotions Coordinator",
+      image: "/wp-content/coordinator/harshit.png",
     },
+
     {
       id: 6,
-      name: "Yash Raj Jha",
-      role: "Club Sub Coordinator",
-      image: "/wp-content/coordinator/yashraj.png",
+      name: "Ishan Verma",
+      role: "Event Coordinator",
+      image: "/wp-content/coordinator/ishan.png",
     },
     {
       id: 7,
@@ -105,15 +105,15 @@ const StudentCouncil = () => {
     },
     {
       id: 15,
-      name: "Harshit Malik",
-      role: "Social Media ORM & Promotions Coordinator",
-      image: "/wp-content/coordinator/harshit.png",
+      name: "Raghav Sharma",
+      role: "Club Coordinator",
+      image: "/wp-content/coordinator/raghav-s.png",
     },
     {
       id: 16,
-      name: "Srishti Sehgal",
-      role: "Club event Content writer & Sponsorship coordinator",
-      image: "/wp-content/coordinator/srishti.png",
+      name: "Somya Sharma",
+      role: "Event Sub Coordinator",
+      image: "/wp-content/coordinator/somya-sharma.png",
     },
     {
       id: 17,
@@ -123,9 +123,9 @@ const StudentCouncil = () => {
     },
     {
       id: 18,
-      name: "Tanvee Vashisht",
-      role: "Student Welfare Sub Coordinator",
-      image: "/wp-content/coordinator/tanvee.png",
+      name: "Anuj",
+      role: "Logistics & Operation Coordinator",
+      image: "/wp-content/coordinator/anuj.png",
     },
     {
       id: 19,
