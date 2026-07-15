@@ -13,6 +13,11 @@ export abstract class BaseRepository<TRaw, TDomain> {
     return this.dataPromise;
   }
 
+  async getSectionData<K extends keyof TDomain>(key: K): Promise<TDomain[K]> {
+    const data = await this.getData();
+    return data[key];
+  }
+
   private async fetchAndMap(): Promise<TDomain> {
     try {
       const raw = await apiRequest<TRaw>(this.query);

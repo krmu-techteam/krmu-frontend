@@ -6,17 +6,14 @@ import LifeKRMUInfra from "./comp/LifeKRMUInfra";
 import LifeKRMUDynamic from "./comp/LifeKRMUDynamic";
 import LifeKRMUPeek from "./comp/LifeKRMUPeek";
 import LifeKRMUTabs from "./comp/LifeKRMUTabs";
-import { getCampusLifeService, ICampusLifeService } from "@/features/life-at-krmu/campus-life";
-
-
-
+import {
+  getCampusLifeService,
+  ICampusLifeService,
+} from "@/features/life-at-krmu/campus-life";
 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
-
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("life-at-krmu");

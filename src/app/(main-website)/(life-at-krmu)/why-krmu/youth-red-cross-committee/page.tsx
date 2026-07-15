@@ -3,8 +3,11 @@ import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import { SectionsRenderer } from "@/components/common/SectionRenderer";
-import { getYouthRedCrossCommitteeData } from "@/features/life-at-krmu/youth-red-cross-committee";
-import { Sections } from "@/features/life-at-krmu/youth-red-cross-committee";;
+import {
+  getYouthRedCrossService,
+  IYouthRedCrossCommitteeService,
+  Sections,
+} from "@/features/life-at-krmu/youth-red-cross-committee";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("youth-red-cross-committee");
@@ -68,7 +71,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const page = async () => {
-  const { data } = await getYouthRedCrossCommitteeData();
+  const youthRedCrossService: IYouthRedCrossCommitteeService =
+    getYouthRedCrossService();
+
+  const [data] = await Promise.all([youthRedCrossService.getStaticData()]);
+
   return (
     <>
       <SectionsRenderer sections={Sections} data={data} />

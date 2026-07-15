@@ -94,6 +94,8 @@ export interface DataProps {
   contactSection: ContactSectionProps;
 }
 
+export type YouthRedCrossCommitteeDomain = DataProps;
+
 export interface YouthRedCrossCommitteeResponse {
   data: DataProps;
 }

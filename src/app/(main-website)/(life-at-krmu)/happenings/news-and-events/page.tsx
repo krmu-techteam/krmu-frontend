@@ -1,8 +1,11 @@
-import { getNewsEvents } from "@/lib/api/news-events";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import { HeroSection, NewsListingSection } from "@/presentation/life-at-krmu/news-and-events/sections";;
+import {
+  HeroSection,
+  NewsListingSection,
+} from "@/presentation/life-at-krmu/news-and-events/sections";
+import { getNewsAndEventsService } from "@/features/life-at-krmu/news-and-events";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("news-and-events");
@@ -66,15 +69,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const page = async () => {
-  const newsEventsPage = await getNewsEvents();
-  if (!newsEventsPage) return null;
+  const { main_desc, main_heading } = await getNewsAndEventsService().getData();
 
   return (
     <>
-      <HeroSection
-        title={newsEventsPage.main_heading}
-        main_desc={newsEventsPage.main_desc}
-      />
+      <HeroSection title={main_heading} main_desc={main_desc} />
       <NewsListingSection />
     </>
   );

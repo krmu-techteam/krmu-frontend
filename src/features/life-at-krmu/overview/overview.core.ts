@@ -3,7 +3,11 @@ import { BaseService } from "@/lib/core/base.service";
 import { createProvider } from "@/lib/core/create-provider";
 import { OVERVIEW_QUERY } from "./overview.queries";
 import { OverviewMapper } from "./overview.mapper";
-import { LifeAtKRMUOverviewDomain, LifeAtKRMUOverviewResponse, OverviewContentProps } from "./overview.types";
+import {
+  LifeAtKRMUOverviewDomain,
+  LifeAtKRMUOverviewResponse,
+  OverviewContentProps,
+} from "./overview.types";
 import staticData from "./data/index.json";
 
 // ── 1. Repository ────────────────────────────────────────
@@ -14,7 +18,9 @@ class OverviewRepository extends BaseRepository<
 > {
   protected readonly query = OVERVIEW_QUERY;
 
-  protected mapToDomain(raw: LifeAtKRMUOverviewResponse): LifeAtKRMUOverviewDomain {
+  protected mapToDomain(
+    raw: LifeAtKRMUOverviewResponse,
+  ): LifeAtKRMUOverviewDomain {
     return OverviewMapper.toDomain(raw);
   }
 

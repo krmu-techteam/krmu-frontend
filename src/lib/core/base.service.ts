@@ -1,5 +1,6 @@
 export interface IBaseRepository<TDomain> {
   getData(): Promise<TDomain>;
+  getSectionData<K extends keyof TDomain>(key: K): Promise<TDomain[K]>;
 }
 
 export abstract class BaseService<TDomain> {
@@ -7,5 +8,9 @@ export abstract class BaseService<TDomain> {
 
   getData(): Promise<TDomain> {
     return this.repository.getData();
+  }
+
+  getSectionData<K extends keyof TDomain>(key: K): Promise<TDomain[K]> {
+    return this.repository.getSectionData(key);
   }
 }
