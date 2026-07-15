@@ -8,7 +8,7 @@ const DSWMessage = () => {
           <div className="mx-auto h-[200px] w-[200px] rounded-full border-1 border-dashed border-[#ff9d00] p-1.5 lg:mx-0 xl:h-[220px] xl:w-[220px]">
             <div className="relative h-full w-full overflow-hidden rounded-full bg-white">
               <Image
-                src="/life-at-krmu/shweta-mam.jpg"
+                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Shweta_Bansal_26cbad141b.png"
                 alt="Prof. (Dr.) Shweta A Bansal"
                 fill
                 sizes="(min-width: 1280px) 190px, 168px"
