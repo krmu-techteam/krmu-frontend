@@ -472,4 +472,20 @@ export const smasFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/Neha-Mam.png",
   },
+  
+   {
+    id: 115879,
+    slug: "dr-s-m-kawish",
+    title: {
+      rendered: "Dr. S.M. Kawish",
+    },
+    featured_media: 101428,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Asst. Professor",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/dr-smKawish.png",
+  },
 ];
