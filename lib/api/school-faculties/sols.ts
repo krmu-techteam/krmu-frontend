@@ -286,6 +286,6 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Parveen-Bondwal.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Parveen-Bondwal-1.jpg",
   },
 ];

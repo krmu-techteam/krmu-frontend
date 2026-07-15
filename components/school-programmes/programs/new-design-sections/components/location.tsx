@@ -54,7 +54,7 @@ const Location = ({ slug }: Props) => {
 
   return (
     <section className="w-full bg-[#FDF7EB] text-[#012D52]">
-      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
+      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-14">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center justify-between">
           {/* Left Column: Heading, description & contact details */}
           <div className="w-full lg:max-w-[541px] flex flex-col">

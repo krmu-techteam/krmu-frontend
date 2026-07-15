@@ -32,7 +32,7 @@ const LeaveWith = () => {
 
   return (
     <section className="w-full  bg-[radial-gradient(40%_80%_at_15%_30%,#024178_0%,#012D52_50%,#012D52_100%)] text-white">
-      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
+      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-14">
         {/* Header */}
         <div className="mb-10 ">
           <span
