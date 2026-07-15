@@ -43,7 +43,7 @@ const CareerOutcome = ({ slug }: Props) => {
     <>
       {/* ── SECTION 1: Badge, Heading & Stats Grid ── */}
       <section className="w-full bg-[#F7F0E0]  text-[#012D52]">
-        <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
+        <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-14">
           {/* Badge */}
           <span
             className={`${inter.className} text-[#87601A] text-[10px] sm:text-[12px] lg:text-[15px] font-semibold tracking-[0.7px] uppercase block mb-3 sm:mb-4`}
@@ -94,7 +94,7 @@ const CareerOutcome = ({ slug }: Props) => {
 
       {/* ── SECTION 2: Image + Features List ── */}
       <section className="w-full bg-[#FDF7EB]  text-[#012D52]">
-        <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
+        <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-14">
           {/* Stack on mobile, side-by-side on lg+ */}
           <div className="flex flex-col lg:flex-row w-full justify-center items-end gap-4">
             {/* Left Column: Heading + Image */}

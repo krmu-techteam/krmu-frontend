@@ -1,4 +1,4 @@
-import { Playfair_Display } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,18 +7,29 @@ const playfair = Playfair_Display({
   weight: ["600", "700"],
 });
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["italic", "normal"],
+});
+
 export const SocialConnect = () => {
   return (
     <section className="bg-[#FAF8FC] pb-16 px-4 md:px-12">
       <div className="mx-auto w-full max-w-[1550px]">
-        <div className="relative overflow-hidden rounded-[24px] border-[5px] border-white bg-gradient-to-r from-[#A7ECEF] via-[#D7DDF0] to-[#FBBBBB] p-8 md:p-10 lg:p-12 shadow-sm flex flex-col lg:flex-row justify-between items-center gap-6">
+        <div
+          className="relative overflow-hidden rounded-[24px] border-[5px] border-white bg-gradient-to-r from-[#A7ECEF] via-[#D7DDF0] to-[#FBBBBB] p-8 md:p-10 lg:p-12 shadow-xl flex flex-col lg:flex-row justify-between items-center gap-6"
+          style={{ boxShadow: "0px 4px 4px 0px #00000040" }}
+        >
           <div className="text-left max-w-[550px] 2xl:max-w-[610px] w-full">
             <h3
-              className={`${playfair.className} text-[26px] md:text-[34px] font-bold text-[#001732] leading-tight`}
+              className={`${playfair.className} text-[26px] md:text-[33px] font-bold text-[#001732] leading-tight`}
             >
               Stay Connected with DSW
             </h3>
-            <p className="mt-2 text-[15px] md:text-[17px] font-medium text-neutral-800 leading-relaxed">
+            <p
+              className={`${poppins.className} mt-2 text-[15px] md:text-[21px] font-normal text-neutral-800 leading-relaxed`}
+            >
               Follow us on Instagram and LinkedIn for student updates, events,
               opportunities, and campus life highlights
             </p>
@@ -34,7 +45,7 @@ export const SocialConnect = () => {
               <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_622_0b190f920d.jpg"
                 alt="Linkedin"
-                className="w-[310px] md:w-[360px] h-[63px] rounded-[13px] object-fit transition-all duration-300 hover:scale-[1.02]"
+                className="w-full md:w-[360px] h-[60px] rounded-[13px] object-fit transition-all duration-300 hover:scale-[1.02]"
                 height={1024}
                 width={1024}
               />
@@ -49,7 +60,7 @@ export const SocialConnect = () => {
               <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_621_ebe58007c2.jpg"
                 alt="Linkedin"
-                className="w-[252px] h-[62px] rounded-[13px] object-cover transition-all duration-300 hover:scale-[1.02]"
+                className="w-full h-[60px] rounded-[13px] object-cover transition-all duration-300 hover:scale-[1.02]"
                 height={1024}
                 width={1024}
               />

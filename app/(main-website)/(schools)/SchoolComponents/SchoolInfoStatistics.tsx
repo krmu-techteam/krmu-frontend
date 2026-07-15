@@ -68,7 +68,7 @@ const SchoolInfoStatistics = ({
           />
         </div>
         <div className="w-full lg:w-1/2 xl:w-2/3 text-black">
-          {slug === "school-of-engineering-and-technology" && (
+          {/* {slug === "school-of-engineering-and-technology" && (
             <div className="flex gap-4 mb-4 items-center">
               <a
                 href="https://www.instagram.com/soet_krmu/"
@@ -107,7 +107,7 @@ const SchoolInfoStatistics = ({
                 <FaYoutube className="w-5 h-5" />
               </a>
             </div>
-          )}
+          )} */}
           <p className="text-lg sm:text-2xl font-medium mb-2.5">{subheading}</p>
           <h3 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold leading-tight mb-2.5 sm:mb-5">
             {heading}

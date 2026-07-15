@@ -1,9 +1,15 @@
 import Image from "next/image";
-import { Playfair_Display } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["600", "700"],
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["italic", "normal"],
 });
 
 const GrievenceAndCounseling = () => {
@@ -13,16 +19,18 @@ const GrievenceAndCounseling = () => {
         className={` bg-[linear-gradient(179.96deg,#FFFFFF_0.04%,#C3CEDB_82.67%,#DFD1F2_99.96%)] px-4 sm:px-4 md:px-12 py-12 `}
       >
         <div className="mx-auto w-full max-w-[1550px] mb-10">
-          <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-10 rounded-2xl  bg-[linear-gradient(104.12deg,#F3F4F6_22.1%,#CFDCFF_72.23%,#00ABCD_84.55%)] p-4  md:gap-12 md:p-8 min-h-[350px]">
-            <div className="p-2">
+          <div className="relative flex flex-col lg:flex-row  gap-4 md:gap-6 xl:gap-14 rounded-2xl  bg-[linear-gradient(104.12deg,#F3F4F6_22.1%,#CFDCFF_72.23%,#00ABCD_84.55%)] p-4 md:p-6 min-h-[350px]">
+            <div className="p-4 lg:p-8 ">
               <h2
-                className={`${playfair.className}  text-3xl font-bold text-black my-6 md:text-4xl lg:text-[35px]`}
+                className={`${playfair.className}  text-3xl font-bold text-black mb-6 md:text-4xl lg:text-[38px]`}
               >
                 Student Grievance Handling <br />
                 and Anti Ragging 
               </h2>
 
-              <p className=" text-left sm:text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]">
+              <p
+                className={`${poppins.className} text-left  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px]`}
+              >
                 The Department of Student Welfare ensures a safe, respectful,
                 and student-friendly campus through its Student Grievance
                 Handling system. It provides students with a fair and
@@ -39,18 +47,16 @@ const GrievenceAndCounseling = () => {
               </p>
             </div>
 
-            <div className="w-full flex-shrink-0 overflow-hidden rounded-2xl px-6 xl:px-10 py-6 bg-white  lg:w-[45%]">
+            <div className="w-full flex-shrink-0 overflow-hidden rounded-2xl px-6 xl:px-10 py-6 bg-white lg:h-full xl:h-auto  lg:w-[45%]">
               <div className="flex flex-col-reverse items-left  md:flex-row md:justify-between md:items-center">
                 <h2
-                  className={`${playfair.className} text-3xl leading-[1.3] text-black mb-4 md:text-4xl lg:text-[24px]`}
+                  className={`${playfair.className} w-full sm:w-[60%] mb-4 lg:mb-0 text-3xl leading-[1.3] text-black  md:text-4xl lg:text-[24px]`}
                 >
                   Message from <br />{" "}
-                  <span className="font-bold">
-                    Student Success <br /> Manager
-                  </span>
+                  <span className="font-bold">Student Success Manager</span>
                 </h2>
                 <div
-                  className={`relative mb-1 h-[130px] lg:h-[110px] w-[130px] lg:w-[110px]  overflow-hidden rounded-full  bg-[#F4F4F4] `}
+                  className={`relative mb-1 h-[130px] lg:h-[120px] w-[130px] lg:w-[120px]  overflow-hidden rounded-full  bg-[#F4F4F4] `}
                 >
                   <Image
                     src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Raj_Jayswal_a127a8fd50.png"
@@ -61,7 +67,9 @@ const GrievenceAndCounseling = () => {
                   />
                 </div>
               </div>
-              <p className=" text-left sm:text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[14px]">
+              <p
+                className={`${poppins.className} text-left sm:text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]`}
+              >
                 As a Student Success Manager at K.R. Mangalam University, I
                 serve as a dedicated bridge between students and the
                 institution, ensuring that every academic and non-academic
@@ -74,10 +82,14 @@ const GrievenceAndCounseling = () => {
                 well-being, I am committed to making every student's university
                 experience both seamless and successful. 
               </p>
-              <p className=" text-justify text-sm leading-[1.85] font-bold mt-4 text-[#000000]  md:text-[14px]">
+              <p
+                className={`${poppins.className} text-justify text-sm  font-bold mt-6 text-[#000000]  md:text-[17px]`}
+              >
                 Mr. Raj Jayswal, 
               </p>
-              <span className=" text-justify text-sm leading-[1.85]  text-[#000000]  md:text-[14px]">
+              <span
+                className={`${poppins.className} text-justify text-sm   text-[#000000]  md:text-[17px]`}
+              >
                 Student Success Manager
               </span>
             </div>
@@ -85,16 +97,18 @@ const GrievenceAndCounseling = () => {
         </div>
 
         <div className="mx-auto w-full max-w-[1550px]">
-          <div className="flex flex-col lg:flex-row items-center gap-10 rounded-2xl  bg-[linear-gradient(95.12deg,#F3F4F6_0.63%,#FFE1B4_100%)] p-4  md:p-8 min-h-[350px]">
-            <div className="p-2">
+          <div className="relative flex flex-col lg:flex-row  gap-4 rounded-2xl p-4 md:p-6 min-h-[350px] bg-[linear-gradient(95.12deg,#F3F4F6_0.63%,#FFE1B4_100%)]">
+            <div className="p-4 lg:p-8">
               <h2
-                className={`${playfair.className}  text-3xl font-bold text-black my-6 md:text-4xl lg:text-[35px]`}
+                className={`${playfair.className}  text-3xl font-bold text-black mb-6 md:text-4xl lg:text-[38px]`}
               >
                 Student Wellness & Counselling <br />
                 Centre
               </h2>
 
-              <p className="text-left sm:text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]">
+              <p
+                className={`${poppins.className} text-left  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px] opacity-[70%]`}
+              >
                 University life brings new opportunities, experiences, and
                 challenges. The Counselling Services at KRMU are dedicated to
                 supporting students emotional well-being, personal growth, and
@@ -116,16 +130,16 @@ const GrievenceAndCounseling = () => {
               </p>
             </div>
 
-            <div className="w-full flex-shrink-0 overflow-hidden rounded-2xl px-6 xl:px-10 py-6  bg-white lg:w-[45%]">
+            <div className="w-full flex-shrink-0 overflow-hidden rounded-2xl px-6 xl:px-10 py-6 bg-white lg:h-full xl:h-auto  lg:w-[45%]">
               <div className="flex flex-col-reverse items-left  md:flex-row md:justify-between md:items-center">
                 <h2
-                  className={`${playfair.className} text-3xl leading-[1.3] text-black mb-4 md:text-4xl lg:text-[24px]`}
+                  className={`${playfair.className}  w-full sm:w-[60%] mb-4 lg:mb-0 text-3xl leading-[1.3] text-black  md:text-4xl lg:text-[24px]`}
                 >
                   Message from <br />{" "}
                   <span className="font-bold">the Counsellor</span>
                 </h2>
                 <div
-                  className={`relative mb-1 h-[130px] lg:h-[110px] w-[130px] lg:w-[110px] overflow-hidden rounded-full  bg-[#F4F4F4] `}
+                  className={`relative mb-1 h-[130px] lg:h-[120px] w-[130px] lg:w-[120px]  overflow-hidden rounded-full  bg-[#F4F4F4] `}
                 >
                   <Image
                     src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Amit_Yadav_10ac4bae2e.png"
@@ -136,7 +150,9 @@ const GrievenceAndCounseling = () => {
                   />
                 </div>
               </div>
-              <p className="text-left sm:text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[14px]">
+              <p
+                className={`${poppins.className} text-left sm:text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]`}
+              >
                 Hello Students, I have been working in the fields of counselling
                 and education since 2014. I understand that university life
                 comes with both exciting opportunities and unique challenges,
@@ -154,10 +170,14 @@ const GrievenceAndCounseling = () => {
                 navigating your university journey with confidence, balance, and
                 a positive outlook.
               </p>
-              <p className=" text-justify text-sm leading-[1.85] font-bold mt-4 text-[#000000]  md:text-[14px]">
+              <p
+                className={`${poppins.className} text-justify text-sm  font-bold mt-6 text-[#000000]  md:text-[17px]`}
+              >
                 Mr. Amit Kumar Yadav,
               </p>
-              <span className=" text-justify text-sm leading-[1.85]  text-[#000000]  md:text-[14px]">
+              <span
+                className={`${poppins.className} text-justify text-sm   text-[#000000]  md:text-[17px]`}
+              >
                 Senior Counsellor
               </span>
             </div>
