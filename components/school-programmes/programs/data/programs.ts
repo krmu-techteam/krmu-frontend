@@ -185,13 +185,12 @@ export const heroConfigs: Record<string, HeroConfig> = {
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_hr_research_ffa83ec57c.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
-  "bba-hons-hons-with-research-hr-marketing-finance-international-business-travel-and-tourism-semester-abroad-programme-with-university-of-east-anglia-uea-norwich-uk":
-    {
-      ...defaultCinematicConfig,
-      bgUrl:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_international_business_research_ee08c1cf96.jpg",
-      bgPosition: "70% top",
-    } as HeroConfig,
+  "bba-hons-semester-abroad-uea-uk": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_international_business_research_ee08c1cf96.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
   "bba-marketing": {
     ...defaultCinematicConfig,
     bgUrl:
@@ -204,13 +203,12 @@ export const heroConfigs: Record<string, HeroConfig> = {
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_with_research_marketing_13b6cbab13.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
-  "bba-hr-marketing-finance-international-business-travel-and-tourism-semester-abroad-programme-with-university-of-east-anglia-uea-norwich-uk":
-    {
-      ...defaultCinematicConfig,
-      bgUrl:
-        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_hons_with_research_hr_marketing_finance_international_business_travel_and_tourism_semester_abroad_programme_with_university_of_east_anglia_uea_norwich_uk_adc22342a4.jpg",
-      bgPosition: "70% top",
-    } as HeroConfig,
+  "bba-semester-abroad-uea-uk": {
+    ...defaultCinematicConfig,
+    bgUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_hons_with_research_hr_marketing_finance_international_business_travel_and_tourism_semester_abroad_programme_with_university_of_east_anglia_uea_norwich_uk_adc22342a4.jpg",
+    bgPosition: "70% top",
+  } as HeroConfig,
   "bba-finance": {
     ...defaultCinematicConfig,
     bgUrl:
