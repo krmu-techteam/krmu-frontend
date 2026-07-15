@@ -16,6 +16,8 @@ import StudentCouncil from "./comp/StudentCouncil";
 import GrievenceAndCounseling from "./comp/GrievenceAndCounseling";
 import { EventGallery } from "./comp/EventGallery";
 import { SocialConnect } from "./comp/SocialConnect";
+import Link from "next/link";
+import { Playfair_Display } from "next/font/google";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("student-welfare");
@@ -77,6 +79,11 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["italic", "normal"],
+});
 
 const page = async () => {
   const studentWelfare = await getStudentWelfareData();
@@ -86,6 +93,27 @@ const page = async () => {
 
   return (
     <>
+      <Link
+        href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/DSW_Magazine_2026_27_8e19b9a92d.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`
+    ${playfair.className}
+    fixed bottom-10 left-4 sm:left-10 z-50
+    flex items-center justify-center
+    h-[44px] w-fit px-5
+    rounded-lg
+    bg-gradient-to-r from-[#001732] via-[#004698] to-[#DE0000]
+    text-white
+    shadow-[0_8px_20px_rgba(0,0,0,0.25)]
+    hover:scale-105
+    transition-all duration-300
+    backdrop-blur-sm
+   
+  `}
+      >
+        DSW Magazine 2025-26
+      </Link>
       <WelfareHero />
       <DSWMessage />
       {/* <AssistantDSWMessage /> */}

@@ -20,7 +20,7 @@ const WelfareHero = () => {
         style={{ backgroundPosition: "46% 10%" }}
       />
 
-      <div className="max-w-[1650px] mx-auto  bg-[linear-gradient(97.3deg,#001732_70.09%,#004698_94.32%)] px-4 sm:px-10 pb-8 sm:pb-12">
+      <div className=" mx-auto  bg-[linear-gradient(97.3deg,#001732_70.09%,#004698_100%)] px-4 sm:px-10 pb-8 sm:pb-12">
         <div className="flex justify-center items-center text-center flex-col max-w-[1550px] mx-auto w-full text-white welfare_desg_int">
           <h1
             className={`${playfair.className} font-semibold leading-[1.25] text-[28px] sm:text-4xl md:text-[54px] lg:text-[75px] xl:text-[104px] bg-clip-text text-transparent -mt-[36px] sm:-mt-[52px] md:-mt-[64px] lg:-mt-[90px] xl:-mt-[105px] mb-6 sm:mb-10`}
