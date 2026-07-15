@@ -1,4 +1,11 @@
+import { Poppins } from "next/font/google";
 import Image from "next/image";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["italic", "normal"],
+});
 
 const teamMembers = [
   {
@@ -69,9 +76,11 @@ const teamMembers = [
 
 const TeamMember = () => {
   return (
-    <section className="bg-white px-4 pb-10 pt-0 md:px-12">
+    <section
+      className={`${poppins.className} bg-white px-4 pb-10 pt-0 md:px-12`}
+    >
       <div className="mx-auto w-full max-w-[1550px]">
-        <h3 className="mb-6 text-center text-[30px] font-bold leading-tight text-black md:text-[34px]">
+        <h3 className="mb-6 text-center text-[30px] font-bold leading-tight text-black md:text-[45px]">
           Team Members
         </h3>
 
@@ -79,24 +88,24 @@ const TeamMember = () => {
           {teamMembers.map((member) => (
             <article
               key={`${member.id}`}
-              className="flex min-h-[387px]  w-full flex-col items-center justify-center rounded-md bg-[#EDE3C7] px-5 pb-5 pt-4 text-center"
+              className="flex h-full sm:min-h-[387px] max-w-[359px]  w-full flex-col items-center justify-center rounded-md bg-[#EDE3C7] px-5 pb-5 pt-4 text-center"
             >
               <div
-                className="relative mb-4 h-[262px] w-[262px] overflow-hidden rounded-full shadow-[0_16px_35px_rgba(15,23,42,0.08)]"
+                className="relative mb-6 h-[240px] sm:h-[262px] w-[240px] sm:w-[262px] overflow-hidden rounded-full shadow-[0_16px_35px_rgba(15,23,42,0.08)]"
                 style={{ background: member.ringClass }}
               >
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover p-2 rounded-full"
+                  className="object-cover p-3 rounded-full"
                 />
               </div>
 
               <h4 className="text-[20px] font-bold leading-tight text-black">
                 {member.name}
               </h4>
-              <p className="mt-1 text-[18px] leading-tight text-black">
+              <p className="mt-1 text-[20px] font-normal leading-tight text-black">
                 {member.role}
               </p>
             </article>

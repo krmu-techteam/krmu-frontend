@@ -1,9 +1,15 @@
 import Image from "next/image";
-import { Playfair_Display } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["600", "700"],
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["italic", "normal"],
 });
 
 const welfareCards = [
@@ -59,14 +65,16 @@ const VisionMission = () => {
         <div className="relative z-10 grid  lg:grid-cols-[57%_43%] lxl:grid-cols-[60%_40%]">
           <div className="mb-10">
             <h2
-              className={`${playfair.className} max-w-[650px] text-[36px] font-bold leading-[1.2] text-white md:text-[64px]`}
+              className={`${playfair.className} max-w-[650px] text-[36px] font-semibold leading-[1.2] text-white md:text-[64px]`}
             >
               Shaping Global Leaders and Well-Rounded Individuals
             </h2>
 
-            <div className="mt-5 flex max-w-[700px] gap-5">
+            <div className="mt-5 flex max-w-[750px] gap-5">
               <div className="mt-1 flex w-[6px]  shrink-0 overflow-hidden bg-[linear-gradient(180deg,#0058CC_0%,#FF9D00_100%)] rounded-full" />
-              <p className="text-justify text-[13px]    text-white/95 md:text-[18px]">
+              <p
+                className={`${poppins.className} text-justify text-[13px] font-normal text-white md:text-[18px]`}
+              >
                 At K.R. Mangalam University, we are guided by a compelling
                 vision and mission that form the cornerstone of our educational
                 ethos. Our approach is not just about imparting knowledge; it is
@@ -93,11 +101,13 @@ const VisionMission = () => {
         <div className="relative z-20  grid gap-3 lg:grid-cols-2 md:gap-2 ">
           <article className="rounded-md  bg-[linear-gradient(180deg,#E7C268_0%,#FFFFFF_100%)] pb-7 text-black">
             <h3
-              className={`${playfair.className}  bg-[#002b57] m-2 rounded-md px-8 py-6 text-center text-[38px] font-bold leading-none text-white`}
+              className={`${playfair.className}  bg-[#002045] m-2 rounded-md px-8 py-6 text-center text-[38px] font-bold leading-none text-white`}
             >
               Vision
             </h3>
-            <p className="px-6 pt-3 text-left sm:text-justify text-[18px] font-medium leading-[1.45] md:px-[50px]">
+            <p
+              className={`${poppins.className} px-6 pt-3 text-left sm:text-justify text-[18px] font-normal leading-[1.45] md:px-[50px]`}
+            >
               Student Welfare envisions comprehensive individual, academic, and
               integrated development by providing life skills and counseling
               services and thus preparing them for a diverse, enterprising, and
@@ -107,11 +117,13 @@ const VisionMission = () => {
 
           <article className="rounded-md  bg-[linear-gradient(180deg,#E7C268_0%,#FFFFFF_100%)] pb-7 text-black">
             <h3
-              className={`${playfair.className}  bg-[#002b57] m-2 rounded-md px-8 py-6 text-center text-[38px] font-bold leading-none text-white`}
+              className={`${playfair.className}  bg-[#002045] m-2 rounded-md px-8 py-6 text-center text-[38px] font-bold leading-none text-white`}
             >
               Mission
             </h3>
-            <p className="px-6 pt-3 text-left sm:text-justify text-[18px] font-medium leading-[1.45] md:px-[50px]">
+            <p
+              className={`${poppins.className} px-6 pt-3 text-left sm:text-justify text-[18px] font-normal leading-[1.45] md:px-[50px]`}
+            >
               The Student Welfare Department aims to facilitate global
               leadership and personal well-being through high moral values and
               sound life skills among students.
@@ -120,7 +132,7 @@ const VisionMission = () => {
         </div>
       </div>
 
-      <div className="mx-auto pt-12 grid w-full max-w-[1550px] gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto pt-12 grid w-full max-w-[1550px] gap-6 md:grid-cols-2 lg:grid-cols-3">
         {welfareCards.map((card) => (
           <article
             key={card.title}
@@ -137,11 +149,13 @@ const VisionMission = () => {
 
             <div className="px-3 pb-11 pt-5 md:px-4 xl:px-5">
               <h3
-                className={`${playfair.className} max-w-[440px] text-[30px] font-bold leading-[0.95] md:text-[26px] lg:text-[32px] xl:text-[40px]`}
+                className={`${playfair.className} max-w-[440px] text-[30px] font-bold leading-[0.95] md:text-[26px] lg:text-[32px] xl:text-[41px]`}
               >
                 {card.title}
               </h3>
-              <p className="mt-5 max-w-[430px] text-[14px]  leading-[1.45] md:text-[13px] lg:text-[15px] xl:text-[18px]">
+              <p
+                className={`${poppins.className} mt-5 max-w-[430px] text-[14px]  leading-[1.45] md:text-[13px] lg:text-[15px] xl:text-[18px]`}
+              >
                 {card.description}
               </p>
             </div>

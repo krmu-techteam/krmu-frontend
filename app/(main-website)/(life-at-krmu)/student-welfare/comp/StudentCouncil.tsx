@@ -2,11 +2,17 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Playfair_Display } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["600", "700"],
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["italic", "normal"],
 });
 
 type StudentCouncilMember = {
@@ -173,13 +179,13 @@ const StudentCouncil = () => {
       <section className="bg-[#F0F3F9] px-4 sm:px-6 md:px-12 py-12">
         <div className="mx-auto w-full max-w-[1550px]">
           <h2
-            className={`${playfair.className} mb-8 text-center text-3xl font-bold text-[#0a1d3a] md:mb-10 md:text-4xl lg:text-[42px]`}
+            className={`${playfair.className} mb-8 text-center text-3xl font-bold  md:mb-10 md:text-4xl lg:text-[49px]`}
           >
             Student Council
           </h2>
 
-          <div className="flex flex-col xl:flex-row items-center gap-6 rounded-2xl border-4 border-white bg-[#EDF5FF] p-4   md:gap-8 md:p-6 shadow-sm">
-            <div className="w-full flex-shrink-0 overflow-hidden rounded-2xl h-[150px] sm:h-[300px] md:h-auto md:w-full lg:w-full xl:w-[50%]">
+          <div className="flex flex-col xl:flex-row items-center gap-6 rounded-2xl border-4 border-white bg-[#EDF5FF] px-4 md:gap-10 md:px-8 py-4 sm:py-12  shadow-sm">
+            <div className="w-full flex-shrink-0 overflow-hidden rounded-3xl h-[150px] sm:h-[300px] md:h-auto md:w-full lg:w-full xl:w-[48%]">
               <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_613_b9d03772ce.jpg"
                 width={1440}
@@ -189,7 +195,9 @@ const StudentCouncil = () => {
               />
             </div>
 
-            <p className="self-center text-left sm:text-justify text-sm leading-[1.85] font-medium text-[#0a1d3a] md:text-[16px]">
+            <p
+              className={`${poppins.className} self-center text-left sm:text-justify text-sm leading-[160%]   font-normal text-[#0a1d3a] md:text-[21px]`}
+            >
               The K.R. Mangalam University Student Council serves as the
               representative body of the student community, acting as a vital
               link between students and the university administration. Working
@@ -209,16 +217,16 @@ const StudentCouncil = () => {
       <section className="bg-[#F0F3F9] px-4 sm:px-6 md:px-12 pb-12">
         <div className="mx-auto w-full max-w-[1550px]">
           <h3
-            className={`${playfair.className} mb-6 text-center text-[30px] font-bold leading-tight text-black md:text-[34px]`}
+            className={`${playfair.className} mb-6 text-center text-[30px] font-bold leading-tight text-black md:text-[49px]`}
           >
             Student Council Members
           </h3>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="grid grid-cols-1 gap-y-6 lg:gap-0 xl:gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 justify-items-center">
             {data.slice(0, visibleCount).map((member, index) => (
               <article
                 key={`${member.name}-${member.role}`}
-                className="flex min-h-[375px] max-w-[325px] flex-col items-center   rounded-xl bg-[#EDE3C7] px-5 pb-5 pt-4 text-center mx-auto sm:mx-0"
+                className="flex h-full sm:min-h-[376px] max-w-[300px] flex-col items-center   rounded-xl bg-[#EDE3C7] px-5 pb-5 pt-4 text-center mx-auto sm:mx-0"
               >
                 <div
                   className={`relative mb-4 h-[290px] lg:h-[250px] w-full overflow-hidden rounded-lg   bg-white  shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
@@ -237,7 +245,9 @@ const StudentCouncil = () => {
                 >
                   {member.name}
                 </h4>
-                <p className="mt-1 text-sm sm:text-[16px] leading-tight text-black">
+                <p
+                  className={`${poppins.className} mt-1 text-sm sm:text-[15px]  text-black`}
+                >
                   {member.role}
                 </p>
               </article>
@@ -248,7 +258,7 @@ const StudentCouncil = () => {
             <div className="mt-10 flex justify-center">
               <button
                 onClick={() => setVisibleCount(data.length)}
-                className="px-6 py-2.5 rounded-md bg-[#051730] text-white hover:bg-gray-800 active:scale-95 shadow-sm transition cursor-pointer font-semibold text-sm"
+                className={`${poppins.className} px-6 py-2.5 rounded-[10px] bg-white border-2 border-[#727272] text-black hover:bg-gray-100 active:scale-95 transition cursor-pointer font-normal text-[16px]`}
               >
                 Load More
               </button>
@@ -257,9 +267,9 @@ const StudentCouncil = () => {
         </div>
       </section>
 
-      <section className="bg-[#F0F3F9] px-4 sm:px-6 md:px-12 pb-16">
+      <section className="bg-[#F0F3F9] px-4 sm:px-6 md:px-12 pb-12">
         <div className="mx-auto w-full max-w-[1550px]">
-          <div className="flex flex-col xl:flex-row items-center gap-8 rounded-2xl border-4 border-white bg-[#DAE9FF] p-4  xl:gap-8 xl:p-8 shadow-sm">
+          <div className="flex flex-col xl:flex-row items-center gap-8 rounded-2xl border-4 border-white bg-[#DAE9FF] p-4  xl:gap-12 xl:p-12 shadow-sm">
             <div className="w-full flex-shrink-0 overflow-hidden rounded-3xl h-[350px] md:h-auto md:w-[390px] lg:w-[440px]">
               <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Nirdesh_babea75dd1.png"
@@ -271,33 +281,34 @@ const StudentCouncil = () => {
             </div>
             <div className="flex flex-col justify-center">
               <h2
-                className={`${playfair.className} text-3xl font-bold text-[#004865] mb-4 md:text-4xl lg:text-[42px]`}
+                className={`${playfair.className} text-3xl font-bold text-[#004865] mb-4 md:text-4xl lg:text-[49px]`}
               >
                 Best Student Council Member
               </h2>
-
-              <p className="text-justify text-sm leading-[1.85] font-medium text-[#000000] md:text-[16px]">
-                Being recognized as the Best Student Council Member is truly an
-                honor and a moment of immense gratitude. This achievement is not
-                just mine, but a reflection of the constant support, guidance,
-                and teamwork shared by my fellow council members and the
-                Department of Student Welfare. <br className="mb-4" />
-                My journey in the Student Council has been a learning experience
-                filled with opportunities to lead, collaborate, and contribute
-                meaningfully to the student community. It has helped me grow
-                both personally and professionally, shaping my perspective and
-                strengthening my sense of responsibility.{" "}
-                <br className="mb-4" /> I am sincerely thankful for the trust
-                placed in me, and I remain committed to continuing my efforts
-                towards creating a more engaging, inclusive, and vibrant campus
-                environment.
-              </p>
-              <p className="text-justify text-sm leading-[1.85] font-bold mt-4 text-[#000000] md:text-[16px]">
-                Nirdesh Jain,
-              </p>
-              <span className="text-justify text-sm leading-[1.85] text-[#000000] md:text-[16px]">
-                Cultural Coordinator
-              </span>
+              <div className={`${poppins.className}`}>
+                <p className="text-justify text-sm leading-[1.85] font-normal text-[#000000] md:text-[18px]">
+                  Being recognized as the Best Student Council Member is truly
+                  an honor and a moment of immense gratitude. This achievement
+                  is not just mine, but a reflection of the constant support,
+                  guidance, and teamwork shared by my fellow council members and
+                  the Department of Student Welfare. <br className="mb-4" />
+                  My journey in the Student Council has been a learning
+                  experience filled with opportunities to lead, collaborate, and
+                  contribute meaningfully to the student community. It has
+                  helped me grow both personally and professionally, shaping my
+                  perspective and strengthening my sense of responsibility.{" "}
+                  <br className="mb-4" /> I am sincerely thankful for the trust
+                  placed in me, and I remain committed to continuing my efforts
+                  towards creating a more engaging, inclusive, and vibrant
+                  campus environment.
+                </p>
+                <p className="text-justify text-sm leading-[1.85] font-bold mt-4 text-[#000000] md:text-[18px]">
+                  Nirdesh Jain,
+                </p>
+                <span className="text-justify text-sm leading-[1.85] text-[#000000] md:text-[18px]">
+                  Cultural Coordinator
+                </span>
+              </div>
             </div>
           </div>
         </div>

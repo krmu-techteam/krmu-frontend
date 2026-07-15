@@ -41,9 +41,9 @@ export const EventGallery = () => {
             ]}
             className="relative w-full"
           >
-            <div className="absolute right-15 -top-8 w-[50px]  h-auto">
-              <CarouselPrevious className="hidden lg:flex   w-12 h-12  bg-[#001732] hover:bg-[#002a5c] hover:text-white text-white rounded-full   z-20" />
-              <CarouselNext className="hidden lg:flex   w-12 h-12 bg-[#001732] hover:bg-[#002a5c] hover:text-white text-white rounded-full  z-20" />
+            <div className="absolute right-15 top-[-18px] w-[50px]  h-auto">
+              <CarouselPrevious className="hidden lg:block left-0   w-[40px] h-[40px] border-2 border-black rounded-full  z-20 chevron-icon" />
+              <CarouselNext className="hidden lg:block   w-[40px] h-[40px] border-2 border-black rounded-full  z-20 chevron-icon-1" />
             </div>
 
             <CarouselContent className="-ml-4 md:-ml-6">
@@ -79,8 +79,8 @@ export const EventGallery = () => {
               ))}
             </CarouselContent>
             <div className="relative w-[120px] top-10 mx-auto h-auto">
-              <CarouselPrevious className="lg:hidden   w-12 h-12  bg-[#001732] hover:bg-[#002a5c] hover:text-white text-white rounded-full   z-20" />
-              <CarouselNext className="lg:hidden   w-12 h-12 bg-[#001732] hover:bg-[#002a5c] hover:text-white text-white rounded-full  z-20" />
+              <CarouselPrevious className="lg:hidden w-[40px] h-[40px] border-2 border-black rounded-full  z-20 chevron-icon" />
+              <CarouselNext className="lg:hidden w-[40px] h-[40px] border-2 border-black rounded-full  z-20 chevron-icon-1" />
             </div>
           </Carousel>
         </div>

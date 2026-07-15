@@ -4773,6 +4773,28 @@
     content: url("/prev-chevron.svg") !important;
   }
 
+  .chevron-icon svg {
+    display: none;
+  }
+
+  .chevron-icon-1 svg {
+    display: none;
+  }
+
+  .chevron-icon::before {
+    content: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/arrow_left_4b9812456c.png") !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .chevron-icon-1::before {
+    content: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/arrow_right_b74bc0cff1.png") !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .timeline-slider .slick-next {
     right: 11% !important;
     z-index: 99999999999999999999999;
