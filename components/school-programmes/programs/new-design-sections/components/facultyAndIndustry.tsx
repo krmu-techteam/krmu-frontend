@@ -142,7 +142,7 @@ const FacultyAndIndustry = ({ slug, dataContent }: Props) => {
     <section className="w-full bg-[#F7F0E0] text-[#012D52]">
       {/* Top Part: Info & Grid */}
       <div className="w-full ">
-        <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
+        <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-14">
           {/* Subtitle & Title */}
           <div className="mb-6">
             <span
@@ -263,7 +263,7 @@ const FacultyAndIndustry = ({ slug, dataContent }: Props) => {
       {/* Bottom Part: Faculty slider section */}
       {cards.length > 0 && (
         <div className="w-full  bg-[#FDF7EB]">
-          <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20">
+          <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-14">
             {/* Carousel Slider */}
             <Carousel
               setApi={setApi}

@@ -23,7 +23,7 @@ const ThreeIndustryTracks = () => {
 
   return (
     <section className="w-full bg-[#012D52] bg-[radial-gradient(50%_90%_at_50%_50%,#024178_10%,#012D52_50%,#012D52_100%)] text-white text-center relative overflow-hidden">
-      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-20 flex flex-col items-center">
+      <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-14 flex flex-col items-center">
         {/* Title */}
         <h2
           className={`${fraunces.className} text-white text-3xl sm:text-4xl md:text-5xl lg:text-[38px] leading-tight mb-4 max-w-2xl`}
