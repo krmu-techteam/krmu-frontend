@@ -50,7 +50,7 @@ const ExperimentalInfra = ({ dataContent }: Props) => {
               className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-[#F7F0E0] min-h-[368px] min-w-[266px]"
             >
               {/* Upper half: Image / Placeholder */}
-              <div className="relative h-[180px] w-full bg-[#F7F0E0] flex items-center justify-center">
+              <div className="relative h-[220px] w-full bg-[#F7F0E0] flex items-center justify-center">
                 <Image
                   src={card.image}
                   alt={card.alt}
