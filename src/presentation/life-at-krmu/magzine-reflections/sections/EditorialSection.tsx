@@ -1,9 +1,8 @@
 import SectionDivider from "@/components/common/SectionDivider";
-import { ListBlock, ParagraphBlock } from "@/lib/types/about";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 type Props = {
-  content: ParagraphBlock[] | ListBlock[];
+  content: any;
 };
 
 const EditorialSection = ({ content }: Props) => {

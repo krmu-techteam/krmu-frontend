@@ -1,7 +1,9 @@
-import { BaseRepository, BaseService, createProvider } from "@/lib/core";
+import { BaseRepository } from "@/lib/core/base.repository";
+import { BaseService } from "@/lib/core/base.service";
+import { createProvider } from "@/lib/core/create-provider";
 import { ApiResponse, LibraryDomain } from "./library.types";
 import { LibraryMapper } from "./library.mapper";
-import { LIBRARY_QUERIES } from "./library.queries";
+import { LIBRARY_QUERY } from "./library.queries";
 
 // ── 1. Repository ────────────────────────────────────────
 
@@ -9,7 +11,7 @@ class LibraryRepository extends BaseRepository<
   ApiResponse,
   LibraryDomain
 > {
-  protected readonly query = LIBRARY_QUERIES.getLibrary();
+  protected readonly query = LIBRARY_QUERY;
 
   // Override getData directly since there is no actual HTTP query path yet
   async getData(): Promise<LibraryDomain> {

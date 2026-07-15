@@ -1,7 +1,7 @@
-import { AdmissionsDomain } from "./admissions.types";
+import { AdmissionsDomain, AdmissionsPageResponse } from "./admissions.types";
 
 export class AdmissionsMapper {
-  static toDomain(raw: any): AdmissionsDomain {
-    return raw;
+  static toDomain(response: AdmissionsPageResponse): AdmissionsDomain {
+    return response.data;
   }
 }

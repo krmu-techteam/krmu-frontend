@@ -1,7 +1,7 @@
-import { FinancialAssistanceDomain } from "./financial-assistance.types";
+import { FinancialAssistanceDomain, FinancialAssistancePageResponse } from "./financial-assistance.types";
 
 export class FinancialAssistanceMapper {
-  static toDomain(raw: any): FinancialAssistanceDomain {
-    return raw;
+  static toDomain(response: FinancialAssistancePageResponse): FinancialAssistanceDomain {
+    return response.data;
   }
 }

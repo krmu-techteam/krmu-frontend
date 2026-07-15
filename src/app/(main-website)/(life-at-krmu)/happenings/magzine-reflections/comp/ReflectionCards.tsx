@@ -1,4 +1,4 @@
-import { MagazineCard } from "@/lib/types/magazine-reflection";
+import { MagazineCard } from "@/features/life-at-krmu/magzine-reflections";
 import PDFCard from "./PDFCard";
 
 type Props = {

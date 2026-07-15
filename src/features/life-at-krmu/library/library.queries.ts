@@ -1,3 +1,1 @@
-export const LIBRARY_QUERIES = {
-  getLibrary: () => "",
-};
+export const LIBRARY_QUERY = "";

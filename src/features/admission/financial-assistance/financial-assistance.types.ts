@@ -8,7 +8,7 @@ export interface FinancialAssistanceResponse {
     bank_loan: BankLoan;
     nbfc_card: NBFCARDS;
   };
-  meta: Record<string, unknown>; // or MetaType if you have a defined structure
+  meta: Record<string, unknown>;
 }
 
 export interface NBFCARDS {
@@ -36,4 +36,5 @@ export interface FinancialImg {
   url: string;
 }
 
+export type FinancialAssistancePageResponse = FinancialAssistanceResponse;
 export type FinancialAssistanceDomain = FinancialAssistanceResponse["data"];

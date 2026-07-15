@@ -2,8 +2,7 @@ import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import { SectionsRenderer } from "@/components/common/SectionRenderer";
-import { getLifeAtKRMUOverviewData, getOverviewContent } from "@/features/life-at-krmu/overview";
-import { Sections } from "@/features/life-at-krmu/overview";;
+import { getOverviewService, IOverviewService, Sections } from "@/features/life-at-krmu/overview";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("life-at-krmu-overview");
@@ -67,8 +66,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const OverviewPage = async () => {
-  const overviewData = await getLifeAtKRMUOverviewData();
-  const { data } = await getOverviewContent();
+  const overviewService: IOverviewService = getOverviewService();
+  const overviewData = await overviewService.getData();
+  const { data } = await overviewService.getStaticData();
+
   return (
     <>
       <SectionsRenderer

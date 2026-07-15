@@ -113,3 +113,26 @@ interface dataProps {
 export interface OverviewContentProps {
   data: dataProps;
 }
+
+export interface HearItTestimonials {
+  id: number;
+  name: string;
+  qualification: string;
+  info: string;
+  img: StrapiMedia;
+}
+
+export interface LifeAtKRMUOverviewDomain {
+  id: number;
+  documentId: string;
+  heading: string;
+  subheading: string;
+  overview_video: StrapiMedia;
+  hear_it_testimonials: HearItTestimonials[];
+}
+
+export interface LifeAtKRMUOverviewResponse {
+  data: LifeAtKRMUOverviewDomain;
+  meta?: Record<string, unknown>;
+}
+
