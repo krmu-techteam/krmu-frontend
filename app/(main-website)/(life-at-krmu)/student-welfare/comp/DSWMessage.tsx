@@ -17,7 +17,7 @@ const DSWMessage = () => {
           <div className="mx-auto h-[200px] w-[200px] rounded-full border-1 border-dashed border-[#ff9d00] p-1.5 lg:mx-0 xl:h-[246px] xl:w-[246px]">
             <div className="relative h-full w-full overflow-hidden rounded-full bg-white">
               <Image
-                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Shweta_Bansal_26cbad141b.png"
+                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Shweta_Bansal_2_81e8834c65.png"
                 alt="Prof. (Dr.) Shweta A Bansal"
                 fill
                 className="object-cover object-top"

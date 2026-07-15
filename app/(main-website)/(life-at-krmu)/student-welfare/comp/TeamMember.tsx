@@ -29,7 +29,7 @@ const teamMembers = [
     name: "Mr. Rahul Kumar Jha",
     role: "Music Teacher",
     image:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mr_Rahul_Kumar_Jha_428d24073c.png",
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mr_Rahul_Kumar_Jha_85c6969c7c.png",
     ringClass: "linear-gradient(180deg, #DFCC99 0%, #FFFFFF 100%)",
   },
   {
