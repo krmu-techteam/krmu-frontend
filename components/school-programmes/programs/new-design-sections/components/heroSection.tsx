@@ -53,7 +53,7 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
 
           {/* Heading */}
           <h1
-            className={`${playfair.className} w-full lg:w-[95%] text-xl sm:text-2xl md:text-[32px] lg:text-[40px] xl:text-[50px]  text-white mb-4 sm:mb-6 tracking-[0.5px] leading-[110%]`}
+            className={`${playfair.className} w-full lg:w-[95%] text-[26px] sm:text-2xl md:text-[32px] lg:text-[40px] xl:text-[50px]  text-white mb-4 sm:mb-6 tracking-[0.5px] leading-[110%]`}
           >
             {hero.heading}
           </h1>
@@ -105,10 +105,10 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 w-full sm:w-[90%]">
             {hero.stats.map((stat, index) => (
               <div key={index} className="flex flex-col">
-                <span className="text-[#FFB700] text-[9px] sm:text-[10px] 2xl:text-[12px] font-semibold tracking-[0.15em] sm:tracking-[0.17em] 2xl:tracking-[0.10em] uppercase">
+                <span className="text-[#FFB700] text-[11px] sm:text-[12px] 2xl:text-[14px] font-semibold tracking-[0.15em] sm:tracking-[0.17em] 2xl:tracking-[0.10em] uppercase">
                   {stat.label}
                 </span>
-                <span className="text-white text-[13px] sm:text-[15px] 2xl:text-[17px] font-semibold mt-1">
+                <span className="text-white text-[15px] sm:text-[16px] 2xl:text-[18px] font-semibold mt-1">
                   {stat.value}
                 </span>
               </div>
@@ -147,7 +147,7 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
 
       {/* Bottom Announcement Banner */}
       <div
-        className={`${poppins.className} w-full bg-[#B08233] py-2.5 sm:py-3.5 text-center text-white text-[11px] sm:text-[14px] md:text-[16px] lg:text-[17px] tracking-wide z-10`}
+        className={`${poppins.className} w-full bg-[#B08233] py-2.5 sm:py-3.5 text-center text-white text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] tracking-wide z-10`}
       >
         <div className="max-w-[1280px] mx-auto px-4 flex flex-wrap justify-center items-center gap-1">
           <span className="font-semibold">{hero.banner.text}</span>
