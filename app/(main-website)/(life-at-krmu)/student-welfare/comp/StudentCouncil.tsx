@@ -17,6 +17,7 @@ const poppins = Poppins({
 
 type StudentCouncilMember = {
   id: number;
+  alt: string;
   name: string;
   role: string;
   image: string;
@@ -27,30 +28,35 @@ const StudentCouncil = () => {
     {
       id: 1,
       name: "Yash Raj Jha",
+      alt: "Yash Raj Jha, Club Sub Coordinator, KRMU Student Council",
       role: "Club Sub Coordinator",
       image: "/wp-content/coordinator/yashraj.png",
     },
     {
       id: 2,
       name: "Srishti Sehgal",
+      alt: "Srishti Sehgal, Club Event Content Writer & Sponsorship Coordinator, KRMU Student Council",
       role: "Club Event Content Writer & Sponsorship coordinator",
       image: "/wp-content/coordinator/srishti.png",
     },
     {
       id: 3,
       name: "Krish Agarwal",
+      alt: "Krish Agarwal, Logistics & Operations Coordinator, KRMU Student Council",
       role: "Logistics & Operation Coordinator",
       image: "/wp-content/coordinator/krish.png",
     },
     {
       id: 4,
       name: "Tanvee Vashisht",
+      alt: "Tanvee Vashisht, Student Welfare Sub Coordinator, KRMU Student Council",
       role: "Student Welfare Sub Coordinator",
       image: "/wp-content/coordinator/tanvee.png",
     },
     {
       id: 5,
       name: "Harshit Malik",
+      alt: "Harshit Malik, Social Media ORM & Promotions Coordinator, KRMU Student Council",
       role: "Social Media ORM & Promotions Coordinator",
       image: "/wp-content/coordinator/harshit.png",
     },
@@ -58,42 +64,49 @@ const StudentCouncil = () => {
     {
       id: 6,
       name: "Ishan Verma",
+      alt: "Ishan Verma, Event Coordinator, KRMU Student Council",
       role: "Event Coordinator",
       image: "/wp-content/coordinator/ishan.png",
     },
     {
       id: 7,
       name: "Ayush Tyagi",
+      alt: "Ayush Tyagi, Club Sub Coordinator, KRMU Student Council",
       role: "Club Sub Coordinator",
       image: "/wp-content/coordinator/ayush.png",
     },
     {
       id: 8,
       name: "Nirdesh Jain",
+      alt: "Nirdesh Jain, Cultural Coordinator, KRMU Student Council",
       role: "Cultural Coordinator",
       image: "/wp-content/coordinator/nirdesh.png",
     },
     {
       id: 9,
       name: "Naomi Yadav",
+      alt: "Naomi Yadav, Cultural Sub Coordinator, KRMU Student Council",
       role: "Cultural Sub Coordinator",
       image: "/wp-content/coordinator/naomi.png",
     },
     {
       id: 10,
       name: "Sahil Chauhan",
+      alt: "Sahil Chauhan, Sports Fitness Coordinator, KRMU Student Council",
       role: "Sports Fitness Coordinator",
       image: "/wp-content/coordinator/sahil-chauhan.png",
     },
     {
       id: 11,
       name: "Aditya Ranjan Tiwari",
+      alt: "Aditya Ranjan Tiwari, Sports Fitness Sub Coordinator, KRMU Student Council",
       role: "Sports Fitness Sub Coordinator",
       image: "/wp-content/coordinator/Adityaranjan.png",
     },
     {
       id: 12,
       name: "Devraj Singh",
+      alt: "Devraj Singh, Social Media Content Coordinator, KRMU Student Council",
       role: "Social Media Content Coordinator",
       image: "/wp-content/coordinator/devraj.png",
     },
@@ -101,17 +114,20 @@ const StudentCouncil = () => {
       id: 13,
       name: "Kanishk Gulati",
       role: "Social Media Posting Coordinator",
+      alt: "Kanishk Gulati, Social Media Posting Coordinator, KRMU Student Council",
       image: "/wp-content/coordinator/kanishk.png",
     },
     {
       id: 14,
       name: "Vedant srivastav",
       role: "Social Media Design & Promotions Coordinator",
+      alt: "Vedant Srivastav, Social Media Design & Promotions Coordinator, KRMU Student Council",
       image: "/wp-content/coordinator/vedant.png",
     },
     {
       id: 15,
       name: "Raghav Sharma",
+      alt: "Raghav Sharma, Club Coordinator, KRMU Student Council",
       role: "Club Coordinator",
       image: "/wp-content/coordinator/raghav-s.png",
     },
@@ -119,29 +135,34 @@ const StudentCouncil = () => {
       id: 16,
       name: "Somya Sharma",
       role: "Event Sub Coordinator",
+      alt: "Somya Sharma, Event Sub Coordinator, KRMU Student Council",
       image: "/wp-content/coordinator/somya-sharma.png",
     },
     {
       id: 17,
       name: "Ajith Reddy",
       role: "Public Relations and Outreach Coordinator",
+      alt: "Ajith Reddy, Public Relations and Outreach Coordinator, KRMU Student Council",
       image: "/wp-content/coordinator/ajith.png",
     },
     {
       id: 18,
       name: "Anuj",
+      alt: "Anuj, Logistics & Operation Coordinator, KRMU Student Council",
       role: "Logistics & Operation Coordinator",
       image: "/wp-content/coordinator/anuj.png",
     },
     {
       id: 19,
       name: "Sakshi Dubey",
+      alt: "Sakshi Dubey, Social Outreach & Extension Activities Coordinator (NSS Head), KRMU Student Council",
       role: "Social Outread & Extension Activities (NSS Head)",
       image: "/wp-content/coordinator/sakshi.png",
     },
     {
       id: 20,
       name: "Amandeep Pradhan",
+      alt: "Amandeep Pradhan, Social Media Video Editing Coordinator, KRMU Student Council",
       role: "Social Media Video Editing Coordinator",
       image: "/wp-content/coordinator/amandeep.png",
     },
@@ -190,7 +211,7 @@ const StudentCouncil = () => {
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_613_b9d03772ce.jpg"
                 width={1440}
                 height={1440}
-                alt="K.R. Mangalam University Student Council"
+                alt="K.R. Mangalam University Student Council members at a campus event"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -233,7 +254,7 @@ const StudentCouncil = () => {
                 >
                   <Image
                     src={member.image}
-                    alt={member.name}
+                    alt={member.alt}
                     width={1024}
                     height={1024}
                     className="object-cover w-full h-full  "
@@ -275,7 +296,7 @@ const StudentCouncil = () => {
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Nirdesh_babea75dd1.png"
                 width={1024}
                 height={1024}
-                alt="K.R. Mangalam University Student Council"
+                alt="Nirdesh Jain, Cultural Coordinator, Best Student Council Member, KRMU"
                 className="h-full w-full object-cover"
               />
             </div>

@@ -44,7 +44,7 @@ export const SocialConnect = () => {
             >
               <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_622_0b190f920d.jpg"
-                alt="Linkedin"
+                alt="Follow DSW KRMU on LinkedIn"
                 className="w-full md:w-[360px] h-[60px] rounded-[13px] object-fit transition-all duration-300 hover:scale-[1.02]"
                 height={1024}
                 width={1024}
@@ -59,7 +59,7 @@ export const SocialConnect = () => {
             >
               <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/image_621_ebe58007c2.jpg"
-                alt="Linkedin"
+                alt="Follow KRMU Student Council on Instagram"
                 className="w-full h-[60px] rounded-[13px] object-cover transition-all duration-300 hover:scale-[1.02]"
                 height={1024}
                 width={1024}

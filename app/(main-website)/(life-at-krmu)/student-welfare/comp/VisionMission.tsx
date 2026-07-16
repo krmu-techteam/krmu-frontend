@@ -19,7 +19,7 @@ const welfareCards = [
       "Supervise the student council’s activities, promote and advise on extracurricular activities, including sports and cultural events, ensuring active student engagement.",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1384_8b424ae885.jpg",
-    alt: "Student cultural event on campus",
+    alt: "Students performing at a cultural event, KRMU Student Council",
     bgClass:
       "bg-[linear-gradient(97.46deg,#FFDDEE_34.28%,#E9B9D2_45.2%,#E5BAD3_99.15%)]",
 
@@ -31,7 +31,7 @@ const welfareCards = [
       "Collaborate with university staff on student welfare, manage hostel amenities and canteen operations, and address student grievances to ensure a supportive campus environment.",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1385_2248d2fe13.jpg",
-    alt: "Student welfare facility",
+    alt: "Hostel and campus welfare facilities at K.R. Mangalam University",
     bgClass:
       "bg-[linear-gradient(254.84deg,#3B9598_71.16%,#287A7D_77.85%,#4D8284_101.44%)]",
     textClass: "text-white",
@@ -42,7 +42,7 @@ const welfareCards = [
       "Initiate scholarship awards for deserving students and undertake various responsibilities as directed by the Vice-Chancellor, focusing on enhancing the student experience and maintaining university standards.",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1386_556a9bf949.jpg",
-    alt: "Graduate student celebrating scholarship success",
+    alt: "KRMU student celebrating scholarship award success",
     bgClass:
       "bg-[linear-gradient(99.8deg,#7590B8_41.27%,#5674A1_57.36%,#587BAF_100%)]",
     textClass: "text-white",

@@ -14,11 +14,11 @@ const DSWMessage = () => {
     >
       <div className="mx-auto w-full max-w-[1550px] overflow-hidden rounded-md bg-[linear-gradient(165deg,#A598BF_6%,#120032_13.48%)] px-6 py-8 text-white  md:px-8 md:py-9 lg:px-9">
         <div className="grid items-start gap-7 lg:grid-cols-[190px_1fr] xl:grid-cols-[240px_1fr]">
-          <div className="mx-auto h-[200px] w-[200px] rounded-full border-1 border-dashed border-[#ff9d00] p-1.5 lg:mx-0 xl:h-[246px] xl:w-[246px]">
+          <div className="mx-auto h-[200px] w-[200px] rounded-full border-2 border-dashed border-[#ff9d00] p-1.5 lg:mx-0 xl:h-[246px] xl:w-[246px]">
             <div className="relative h-full w-full overflow-hidden rounded-full bg-white">
               <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Shweta_Bansal_2_81e8834c65.png"
-                alt="Prof. (Dr.) Shweta A Bansal"
+                alt="Prof. (Dr.) Shweta A Bansal, Dean, Department of Student Welfare, K.R. Mangalam University"
                 fill
                 className="object-cover object-top"
               />
@@ -41,7 +41,7 @@ const DSWMessage = () => {
                 <span className="block h-[46px] w-[18px] rotate-[16deg] rounded-full bg-[#2f8cff] md:h-[60px] md:w-[20px]" /> */}
                 <Image
                   src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/02c7933d58ae4e40c1797d068b25250429608af5_130e06f47b.png"
-                  alt="decorator"
+                  alt="Decorative graphic accent — Department of Student Welfare"
                   width={1024}
                   height={1024}
                   className="w-full h-full"

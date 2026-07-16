@@ -11,6 +11,7 @@ const teamMembers = [
   {
     id: "1",
     name: "Mr. Abhishek",
+    alt: "Mr. Abhishek, Event Manager, Department of Student Welfare, KRMU",
     role: "Event Manager",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Abhishek_d1daf786ff.png",
@@ -19,6 +20,7 @@ const teamMembers = [
   {
     id: "2",
     name: "Mr. Raj Jayswal",
+    alt: "Mr. Raj Jayswal, Student Success Manager, KRMU",
     role: "Student Success Manager",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Raj_Jayswal_a127a8fd50.png",
@@ -27,6 +29,7 @@ const teamMembers = [
   {
     id: "3",
     name: "Mr. Rahul Kumar Jha",
+    alt: "Mr. Rahul Kumar Jha, Music Teacher, Department of Student Welfare, KRMU",
     role: "Music Teacher",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mr_Rahul_Kumar_Jha_85c6969c7c.png",
@@ -35,6 +38,7 @@ const teamMembers = [
   {
     id: "4",
     name: "Mr. Raj Bahadur",
+    alt: "Mr. Raj Bahadur, Theatre & Dance Teacher, Department of Student Welfare, KRMU",
     role: "Theatre & Dance Teacher",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Raj_Bahadur_3fa5f45669.png",
@@ -43,6 +47,7 @@ const teamMembers = [
   {
     id: "5",
     name: "Mr. Jagjeet Singh",
+    alt: "Mr. Jagjeet Singh, Sports Incharge, Department of Student Welfare, KRMU",
     role: "Sports Incharge",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Jagjeet_Singh_af059c84a3.png",
@@ -51,6 +56,7 @@ const teamMembers = [
   {
     id: "6",
     name: "Mr. Sunil",
+    alt: "Mr. Sunil, Sports Coach, Department of Student Welfare, KRMU",
     role: "Sports Coach",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Sunil_387f833441.png",
@@ -59,6 +65,7 @@ const teamMembers = [
   {
     id: "7",
     name: "Ms. Pravanya Batra",
+    alt: "Ms. Pravanya Batra, DSW Coordinator, K.R. Mangalam University",
     role: "DSW Coordinator",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Pravanya_Batra_c676339dd4.png",
@@ -67,6 +74,7 @@ const teamMembers = [
   {
     id: "8",
     name: "Mr. Himanshu",
+    alt: "Mr. Himanshu, Office Assistant, Department of Student Welfare, KRMU",
     role: "Office Assistant",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Himanshu_ea3ebd87ea.png",
@@ -96,7 +104,7 @@ const TeamMember = () => {
               >
                 <Image
                   src={member.image}
-                  alt={member.name}
+                  alt={member.alt}
                   fill
                   className="object-cover p-3 rounded-full"
                 />
