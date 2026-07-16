@@ -29,7 +29,7 @@ const PHDRegulationCards = () => {
             <li>
               <Link
                 className="hover:text-[#2d7cc1]"
-                href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/5_R_July_Ph_D_Admission_advertisement_Details_O_2025_26_341795b69c.pdf"
+                href="https://www.krmangalam.edu.in/pdfs/6R-June-Ph.D-Admission-advertisement-Details-O-2025-26.pdf"
                 title="PhD Admission Advertisement 2025-26 | KRMU"
                 aria-label="K.R. Mangalam University PhD admission advertisement for 2025-26. Download eligibility, application details, and official notice here."
                 target="_blank"

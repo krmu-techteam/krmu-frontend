@@ -60,7 +60,7 @@ const GrievenceAndCounseling = () => {
                 >
                   <Image
                     src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Raj_Jayswal_a127a8fd50.png"
-                    alt="Team Member"
+                    alt="Mr. Raj Jayswal, Student Success Manager, KRMU"
                     fill
                     sizes="150px"
                     className="object-cover p-2 rounded-full"
@@ -143,7 +143,7 @@ const GrievenceAndCounseling = () => {
                 >
                   <Image
                     src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Amit_Yadav_10ac4bae2e.png"
-                    alt="Team Member"
+                    alt="Mr. Amit Kumar Yadav, Senior Counsellor, KRMU Student Wellness & Counselling Centre"
                     fill
                     sizes="150px"
                     className="object-cover p-2 rounded-full"

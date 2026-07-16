@@ -144,7 +144,7 @@ const CareerProspects = ({ slug }: Props) => {
 
           {/* Right Image Column */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[480px] aspect-[4/3] sm:aspect-[1/1] lg:aspect-[1/1] overflow-hidden">
+            <div className="hidden md:block relative w-full max-w-[480px] aspect-[4/3] sm:aspect-[1/1] lg:aspect-[1/1] overflow-hidden">
               <Image
                 src={
                   slug === "mba-fintech"

@@ -554,7 +554,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
     title: {
       rendered: "Ms. Neetu Chauhan",
     },
-    featured_media: 101432,
+    featured_media: 101432, 
     acf: {
       "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant Professor",

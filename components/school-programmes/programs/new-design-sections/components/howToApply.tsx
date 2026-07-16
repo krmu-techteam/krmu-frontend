@@ -80,7 +80,7 @@ const HowToApply = ({ formId, heroSection }: Props) => {
             {content.leftCards.map((card) => (
               <div
                 key={card.id}
-                className="border border-[#AEBAC5] rounded-[5px] bg-[#FDF7EB] pl-10 py-8 px-4  flex gap-5 items-start transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(188,176,147,0.12)] max-w-[500px] "
+                className="border border-[#AEBAC5] rounded-[5px] bg-[#FDF7EB] pl-10 py-8 px-4  flex gap-5 items-start transition-shadow duration-300 hover:shadow-[0_4px_25px_rgba(188,176,147,0.12)] w-full md:max-w-[500px] "
               >
                 {renderIcon(card.icon)}
                 <div>

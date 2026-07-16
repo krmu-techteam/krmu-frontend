@@ -52,7 +52,7 @@ const LeaveWith = () => {
           {content.items.map((item, idx) => (
             <div
               key={idx}
-              className={`group p-6 px-8 flex sm:flex-col gap-4 sm:gap-0 justify-start h-full sm:min-h-[169px] border-white/10 hover:bg-white/5 transition-all duration-300
+              className={`group p-6 px-8 flex md:flex-col gap-4 md:gap-0 justify-start h-full md:min-h-[169px] border-white/10 hover:bg-white/5 transition-all duration-300
                 ${idx < 5 ? "border-b" : "border-b-0"}
                 ${idx < 3 ? "md:border-b" : "md:border-b-0"}
                 ${(idx + 1) % 3 !== 0 ? "md:border-r" : "md:border-r-0"}
