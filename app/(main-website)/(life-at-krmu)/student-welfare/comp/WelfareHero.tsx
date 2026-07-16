@@ -30,7 +30,7 @@ const WelfareHero = () => {
               filter: "drop-shadow(0px 20px 2px  rgba(0,0,0,0.60))",
             }}
           >
-            Empowering Students Beyond Classrooms.
+            Empowering Students Beyond Classrooms
           </h1>
 
           <p
@@ -54,7 +54,7 @@ const WelfareHero = () => {
               supportive, inclusive, and student-friendly campus environment. It
               focuses on students&rsquo; academic, social, and personal
               well-being through cultural activities, workshops, awareness
-              programs, and student engagement initiatives.
+              programmes, and student engagement initiatives.
             </p>
             <p>
               The department also works closely with the Student Council and

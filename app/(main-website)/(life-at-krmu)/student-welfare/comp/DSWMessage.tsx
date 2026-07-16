@@ -28,7 +28,7 @@ const DSWMessage = () => {
           <div className="pt-0 text-center lg:pt-10 lg:text-left xl:pt-12 px-2">
             <div className="mb-6 md:mb-7">
               <h2 className="text-[20px] font-bold tracking-0 leading-tight md:text-[26px]">
-                Prof. (Dr.) Shweta A Bansal,
+                Prof. (Dr.) Shweta A Bansal
               </h2>
               <p className="mt-1 text-[17px] tracking-0 text-white md:text-[26px]">
                 Dean, Department of Student Welfare
@@ -49,7 +49,7 @@ const DSWMessage = () => {
               </div>
 
               <p className="max-w-[1060px] text-left sm:text-justify text-[14px] py-2 pt-2 sm:pt-10  font-normal tracking-[1%] text-white md:text-[18px] ">
-                Dear Students, Welcome to a vibrant community of learning,
+                Dear Students, welcome to a vibrant community of learning,
                 innovation, and endless opportunities. Your university journey
                 is not just about earning a degree, but about discovering your
                 potential, building resilience, and shaping values that will
