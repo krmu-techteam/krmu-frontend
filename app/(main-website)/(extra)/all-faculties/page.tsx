@@ -10,6 +10,22 @@ import { solaFaculties } from "@/lib/api/school-faculties/sola";
 import { solsFaculties } from "@/lib/api/school-faculties/sols";
 import { somcFaculties } from "@/lib/api/school-faculties/somc";
 import { sprsFaculties } from "@/lib/api/school-faculties/sprs";
+
+export async function generateMetadata() {
+  
+  return {
+    // title: siteMetaTitle || siteTitle || "K.R. Mangalam University",
+    // description: siteMetaDescription || siteTitle || "",
+    // keywords: siteKeyword || "",
+    // alternates: {
+    //   canonical: siteCanonicalUrl || "",
+    // },
+    robots: {
+      index: false,
+      follow: false,
+    },
+  };
+}
 import Image from "next/image";
 
 const page = () => {
@@ -88,7 +104,9 @@ const page = () => {
           allSchoolFacultiesLoop.map((school) => {
             return (
               <div className="py-5" key={school.id}>
-                <h3 className="text-3xl font-semibold">{school.id} :  {school.schoolName}</h3>
+                <h3 className="text-3xl font-semibold">
+                  {school.id} : {school.schoolName}
+                </h3>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5  gap-5 mt-2">
                   {school &&
                     school.allFacultiesGroup.map((item, i) => {
