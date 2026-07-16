@@ -14,7 +14,7 @@ import { sprsFaculties } from "@/lib/api/school-faculties/sprs";
 export async function generateMetadata() {
   
   return {
-    // title: siteMetaTitle || siteTitle || "K.R. Mangalam University",
+    title: "All Faculties",
     // description: siteMetaDescription || siteTitle || "",
     // keywords: siteKeyword || "",
     // alternates: {
