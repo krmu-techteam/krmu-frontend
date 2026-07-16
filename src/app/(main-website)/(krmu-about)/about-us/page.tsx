@@ -15,7 +15,7 @@ import {
   KrmuCommitteeSection,
   HeroSection,
 } from "@/presentation/about/sections";
-import { getAboutService, IAboutService } from "@/features/about";
+import { getAboutService, IAboutService } from "@/features/about/about-us";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("the-university");
   const seo = seoData[0];

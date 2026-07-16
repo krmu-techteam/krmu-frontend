@@ -1,15 +1,11 @@
-import { getLeadershipData } from "@/lib/api/leadership";
-import { Leaderships } from "./comp/Leaderships";
-
-
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
-
-
+import {
+  getLeadershipService,
+  LeadershipConfig,
+} from "@/features/about/leadership";
+import { SectionsRenderer } from "@/components/common/SectionRenderer";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("leadership");
@@ -72,14 +68,11 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+const LeadershipPage = async () => {
+  const leadershipService = getLeadershipService();
+  const [data] = await Promise.all([leadershipService.getData()]);
 
-const page = async () => {
-
-  const leadershipData = await getLeadershipData();
-  const leaderships = leadershipData?.leadership
-
-
-  return <Leaderships data={leaderships} />;
+  return <SectionsRenderer sections={LeadershipConfig} data={data} />;
 };
 
-export default page;
+export default LeadershipPage;

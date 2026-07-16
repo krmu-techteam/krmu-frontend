@@ -1,10 +1,8 @@
 import { STRAPI_URL } from "@/app/constant";
-import { getAccrediationRecognitionApprovalData } from "@/lib/api/accrediationrecogapproval";
-import Image from "next/image";
-import Link from "next/link";
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
+import { getAccreditationsService } from "@/features/about/accreditations-recognition-and-approvals";
+import { AccreditationsSection } from "@/presentation/about/accreditations-recognition-and-approvals/sections";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO(
@@ -70,65 +68,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const page = async () => {
-  const acraData = await getAccrediationRecognitionApprovalData();
-
-  const acrerecogapp = acraData?.accrediationrecogapprovals;
+  const accreditation = await getAccreditationsService().getData();
 
   return (
     <>
-      <section className="pt-40 pb-10 px-4 membership-ranking-bg">
-        <div className="max-w-[1600px] mx-auto w-full">
-          <div className="text-white mb-10 px-4 lg:px-0 text-center md:text-left">
-            <h3 className="text-2xl sm:text-4xl mb-5 lg:text-[64px] font-bold">
-              {acraData?.title}
-            </h3>
-            <p>{acraData?.description}</p>
-          </div>
-          <div className="grid grid-col-1 md:grid-cols-2  lg:grid-cols-3 gap-10">
-            {acrerecogapp &&
-              acrerecogapp.map((member) => {
-                return (
-                  <div
-                    key={member?.id}
-                    className="bg-white text-center h-[431px] flex flex-col items-center justify-center  rounded-4xl membership-ranking-card p-5"
-                  >
-                    {member?.cardurl ? (
-                      <Link href={member.cardurl} target="_blank" rel="noopener noreferrer">
-                        <Image
-                          src={`${STRAPI_URL}${member.cardimg.url}`}
-                          width={274}
-                          height={274}
-                          alt={member.cardtitle || "acu"}
-                        />
-                      </Link>
-                    ) : (
-                      <Image
-                        src={`${STRAPI_URL}${member.cardimg.url}`}
-                        width={274}
-                        height={274}
-                        alt={member.cardtitle || "acu"}
-                      />
-                    )}
-
-                    {member?.cardurl ? (
-                      <Link
-                        href={member.cardurl}
-                        target="_blank" rel="noopener noreferrer"
-                        className="font-semibold text-[22px] mt-5 max-w-[300px] w-full hover:text-[#0060aa]"
-                      >
-                        {member.cardtitle}
-                      </Link>
-                    ) : (
-                      <p className="font-semibold text-[22px] mt-5 max-w-[300px] w-full">
-                        {member.cardtitle}
-                      </p>
-                    )}
-                  </div>
-                );
-              })}
-          </div>
-        </div>
-      </section>
+      <AccreditationsSection {...accreditation} />
     </>
   );
 };

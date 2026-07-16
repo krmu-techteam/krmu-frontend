@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { HallofFame } from "../components";
-import { HallFameItemDomain } from "@/features/about";
+import { HallFameItemDomain } from "@/features/about/about-us";
 import SectionDivider from "@/components/common/SectionDivider";
 
 const HallOfFameSection = ({
