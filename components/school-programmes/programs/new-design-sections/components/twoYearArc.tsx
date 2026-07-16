@@ -53,14 +53,14 @@ const TwoYearArc = () => {
         </div>
 
         {/* Grid — 1 col mobile, 2 col sm, 5 col lg+ */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 border border-[#D0C6B1] overflow-hidden shadow-[0_4px_20px_rgba(181,142,61,0.05)]">
+        <div className="grid grid-cols-1 lg:grid-cols-5 border border-[#D0C6B1] overflow-hidden shadow-[0_4px_20px_rgba(181,142,61,0.05)] w-[95%] lg:w-full">
           {content.semesters.map((sem, idx) => {
             const isOpen = activeSemester === idx;
             return (
               <div
                 key={idx}
-                className="group flex flex-col p-4 sm:p-5 lg:p-6 bg-[#F7F0E0] hover:bg-[#012D52] transition-all duration-300
-                  border-b sm:border-r border-[#D0C6B1]
+                className="group flex flex-col p-4  sm:p-5 lg:p-6 bg-[#F7F0E0] hover:bg-[#012D52] transition-all duration-300
+                  border-b lg:border-r border-[#D0C6B1]
                   last:border-b-0
                   sm:[&:nth-child(2n)]:border-r-0
                   lg:[&:nth-child(2n)]:border-r

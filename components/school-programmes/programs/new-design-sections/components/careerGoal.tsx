@@ -185,7 +185,7 @@ const CareerGoal = ({ slug, dataContent }: Props) => {
 
           {/* Right Column: Dynamic Image Banner */}
           <div className="lg:col-span-6 w-full">
-            <div className="relative max-w-[462px] max-h-[300px] sm:max-h-[445px] overflow-hidden">
+            <div className=" mx-auto lg:mx-0 relative max-w-[462px] max-h-[300px] sm:max-h-[445px] overflow-hidden">
               <Image
                 src={content.image}
                 alt={content.alt}

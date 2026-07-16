@@ -215,7 +215,7 @@ export const sitemapData = [
           },
           {
             label: "Calls For Ph.D. Admission",
-            href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/5_R_July_Ph_D_Admission_advertisement_Details_O_2025_26_341795b69c.pdf",
+            href: "https://www.krmangalam.edu.in/pdfs/6R-June-Ph.D-Admission-advertisement-Details-O-2025-26.pdf",
           },
           {
             label: "Research And Innovation",
