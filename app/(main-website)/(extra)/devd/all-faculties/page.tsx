@@ -12,7 +12,6 @@ import { somcFaculties } from "@/lib/api/school-faculties/somc";
 import { sprsFaculties } from "@/lib/api/school-faculties/sprs";
 
 export async function generateMetadata() {
-  
   return {
     title: "All Faculties",
     // description: siteMetaDescription || siteTitle || "",
@@ -27,6 +26,7 @@ export async function generateMetadata() {
   };
 }
 import Image from "next/image";
+import Link from "next/link";
 
 const page = () => {
   const allSchoolFacultiesLoop = [
@@ -130,6 +130,13 @@ const page = () => {
                             <h4 className="text-sm">
                               {item.acf.staff_designation}
                             </h4>
+                            <Link
+                              className="text-xs my-2 font-semibold underline hover:text-blue-500"
+                              target="_blank"
+                              href={`/faculty/${item.slug}`}
+                            >
+                              View More
+                            </Link>
                           </div>
                         </div>
                       );
