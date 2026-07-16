@@ -58,7 +58,7 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
             {data?.slug && (
               <Link
                 href={`/events-and-news/${data?.slug}`}
-                className="font-medium text-lg sm:text-sm lg:text-lg leading-[1] mt-2.5 mb-4 inline-block h-[50px] temp-class"
+                className="font-medium text-lg sm:text-sm lg:text-lg leading-[1] mt-2.5 mb-4 inline-block h-[50px]"
                 target="_blank"
                 rel="noopener noreferrer"
               >

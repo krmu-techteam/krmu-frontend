@@ -83,8 +83,9 @@ const Admission2WhatMakes = () => {
               <div className="relative w-[110px] md:w-[120px] flex-shrink-0 overflow-hidden min-h-[130px] md:h-[140px] ">
                 <Image
                   src={card.image}
-                  fill
-                  className="object-contain w-full md:object-cover "
+                  width={1024}
+                  height={1024}
+                  className="object-contain w-full h-full md:object-cover "
                   alt={card.alt}
                 />
               </div>

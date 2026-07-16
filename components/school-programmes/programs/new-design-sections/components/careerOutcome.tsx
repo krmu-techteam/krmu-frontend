@@ -60,34 +60,52 @@ const CareerOutcome = ({ slug }: Props) => {
 
           {/* Stats Grid — 1 col mobile, 3 col md+ */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            {content.stats.map((stat, idx) => (
-              <div
-                key={idx}
-                className="bg-[#FDF7EB] border border-[#EADCB9] rounded-[5px] flex flex-col justify-start shadow-[0_4px_20px_rgba(181,142,61,0.05)] min-h-[180px] sm:min-h-[200px] md:min-h-[220px] transition-transform duration-300 hover:-translate-y-1"
-              >
-                <div className="relative w-full h-[3px] bg-[#7D662F] " />
-                <div className="p-5 sm:p-6 md:p-8">
-                  <div>
-                    <div className="mb-4 sm:mb-6">{renderIcon(stat.icon)}</div>
-                    <div
-                      className={`${fraunces.className} text-[#0F2A4D] text-2xl sm:text-3xl md:text-[38px] font-semibold mb-2 sm:mb-3`}
-                    >
-                      {stat.value}
+            {content.stats.map((stat, idx) => {
+              const isLast = idx === content.stats.length - 1;
+              const shouldCenterOnSm = content.stats.length % 2 === 1 && isLast;
+
+              return (
+                <div
+                  key={idx}
+                  className={`
+  bg-[#FDF7EB] border border-[#EADCB9] rounded-[5px]
+  flex flex-col justify-start
+  shadow-[0_4px_20px_rgba(181,142,61,0.05)]
+  min-h-[180px] sm:min-h-[200px] md:min-h-[220px]
+  transition-transform duration-300 hover:-translate-y-1
+  ${shouldCenterOnSm ? "sm:col-span-2 sm:max-w-[calc(50%-12px)] sm:mx-auto md:col-span-1 md:max-w-none" : ""}
+`}
+                >
+                  <div className="relative w-full h-[3px] bg-[#7D662F]" />
+
+                  <div className="p-5 sm:p-6 md:p-8">
+                    <div>
+                      <div className="mb-4 sm:mb-6">
+                        {renderIcon(stat.icon)}
+                      </div>
+
+                      <div
+                        className={`${fraunces.className} text-[#0F2A4D] text-2xl sm:text-3xl md:text-[38px] font-semibold mb-2 sm:mb-3`}
+                      >
+                        {stat.value}
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <div className="text-[#0F2A4D] font-bold text-[13px] sm:text-[14px] md:text-[16px] mb-1">
-                      {stat.label}
-                    </div>
-                    <div
-                      className={`${inter.className} font-light text-[#0F2A4D] text-[12px] sm:text-[13px] md:text-[16px] tracking-[0.06em]`}
-                    >
-                      {stat.desc}
+
+                    <div>
+                      <div className="text-[#0F2A4D] font-bold text-[13px] sm:text-[14px] md:text-[16px] mb-1">
+                        {stat.label}
+                      </div>
+
+                      <div
+                        className={`${inter.className} font-light text-[#0F2A4D] text-[12px] sm:text-[13px] md:text-[16px] tracking-[0.06em]`}
+                      >
+                        {stat.desc}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
