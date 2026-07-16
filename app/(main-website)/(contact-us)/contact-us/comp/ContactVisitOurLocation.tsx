@@ -6,7 +6,7 @@ const ContactVisitOurLocation = () => {
     <section className="py-20 px-4">
       <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row bg-[url(/contact-us/campus-bg.webp)] bg-cover bg-no-repeat bg-center   lg:h-80 items-end rounded-[16px]">
         <div className="lg:w-1/2 text-white h-full p-10">
-          <h3 className="text-3xl md:text-5xl font-semibold leading-[1.5] temp-class">
+          <h3 className="text-3xl md:text-5xl font-semibold leading-[1.5]">
             Visit Our Campus
           </h3>
           <p>

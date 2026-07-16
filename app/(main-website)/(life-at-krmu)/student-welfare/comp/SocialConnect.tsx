@@ -30,8 +30,8 @@ export const SocialConnect = () => {
             <p
               className={`${poppins.className} mt-2 text-[15px] md:text-[21px] font-normal text-neutral-800 leading-relaxed`}
             >
-              Follow us on Instagram and LinkedIn for student updates, events,
-              opportunities, and campus life highlights
+              Follow Us on Instagram and LinkedIn for Student Updates, Events,
+              Opportunities, and Campus Life Highlights
             </p>
           </div>
 

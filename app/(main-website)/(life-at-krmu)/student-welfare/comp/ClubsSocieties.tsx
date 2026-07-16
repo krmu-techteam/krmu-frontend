@@ -43,9 +43,9 @@ const ClubsSocieties = () => {
           activities. The University supports more than thirteen clubs/societies
           which are primarily run by the students. These clubs/societies offer
           students a platform to showcase their talents and acquire new traits
-          that can be learned while thinking out of the box. Various activities
-          are organized so that students can learn new skills and hone their
-          skills and hobbies.
+          that can be learned while thinking out of the box. A wide range of
+          activities are organised to help students develop new skills, nurture
+          their talents, and pursue their interests beyond the classroom.
         </p>
 
         <Link

@@ -35,7 +35,7 @@ const GrievenceAndCounseling = () => {
                 and student-friendly campus through its Student Grievance
                 Handling system. It provides students with a fair and
                 confidential platform to raise academic, administrative,
-                personal, or campus-related concerns and seek timely support.
+                personal, and campus-related concerns and seek timely support.
                 <br className="mb-4" />
                 The department promotes open communication, transparency, and
                 student well-being by addressing grievances with empathy and
@@ -85,7 +85,7 @@ const GrievenceAndCounseling = () => {
               <p
                 className={`${poppins.className} text-justify text-sm  font-bold mt-6 text-[#000000]  md:text-[17px]`}
               >
-                Mr. Raj Jayswal, 
+                Mr. Raj Jayswal
               </p>
               <span
                 className={`${poppins.className} text-justify text-sm   text-[#000000]  md:text-[17px]`}
@@ -110,8 +110,8 @@ const GrievenceAndCounseling = () => {
                 className={`${poppins.className} text-left  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px] opacity-[70%]`}
               >
                 University life brings new opportunities, experiences, and
-                challenges. The Counselling Services at KRMU are dedicated to
-                supporting students emotional well-being, personal growth, and
+                challenges. The counselling services at KRMU are dedicated to
+                supporting students' emotional well-being, personal growth, and
                 overall development. Our counsellors provide a safe,
                 confidential, and non-judgmental environment where students can
                 discuss academic stress, personal concerns, relationship issues,
@@ -160,7 +160,7 @@ const GrievenceAndCounseling = () => {
                 relationship concerns, career uncertainties, and personal
                 stress. My aim is to provide a safe, supportive, and
                 non-judgmental space where you can openly discuss your concerns
-                and find practical solutions. I specialize in helping students
+                and find practical solutions. I specialise in helping students
                 manage study pressure, improve time management skills, build
                 healthy relationships, and enhance their overall well-being. I
                 believe that every student has the potential to grow, succeed,
@@ -173,7 +173,7 @@ const GrievenceAndCounseling = () => {
               <p
                 className={`${poppins.className} text-justify text-sm  font-bold mt-6 text-[#000000]  md:text-[17px]`}
               >
-                Mr. Amit Kumar Yadav,
+                Mr. Amit Kumar Yadav
               </p>
               <span
                 className={`${poppins.className} text-justify text-sm   text-[#000000]  md:text-[17px]`}

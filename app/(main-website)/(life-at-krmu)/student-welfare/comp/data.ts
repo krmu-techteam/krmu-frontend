@@ -22,7 +22,7 @@ export const eventsData: EventItem[] = [
   },
   {
     id: 3,
-    title: "Jasmine Concert",
+    title: "SOLESTA 2026",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1488_450fef2f86.jpg",
     link: "photo-gallery/solesta-26",
@@ -57,14 +57,14 @@ export const eventsData: EventItem[] = [
   },
   {
     id: 8,
-    title: "Lits Talk",
+    title: "Lit Talks",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1493_f10d7ce00d.jpg",
     link: "/happenings/gallery-image",
   },
   {
     id: 9,
-    title: "DJ Shreya",
+    title: "DJ Night",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1494_3af75b0af6.jpg",
     link: "/photo-gallery/solesta-26",
@@ -78,14 +78,14 @@ export const eventsData: EventItem[] = [
   },
   {
     id: 11,
-    title: "Science Fista",
+    title: "Science Fiesta",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1496_7b279c5e9c.jpg",
     link: "/happenings/gallery-image",
   },
   {
     id: 12,
-    title: "Spot Light",
+    title: "Spotlight",
     image:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1497_b64d49ea54.jpg",
     link: "/happenings/gallery-image",

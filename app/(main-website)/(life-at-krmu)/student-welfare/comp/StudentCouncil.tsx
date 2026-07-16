@@ -33,7 +33,7 @@ const StudentCouncil = () => {
     {
       id: 2,
       name: "Srishti Sehgal",
-      role: "Club event Content writer & Sponsorship coordinator",
+      role: "Club Event Content Writer & Sponsorship coordinator",
       image: "/wp-content/coordinator/srishti.png",
     },
     {
@@ -88,25 +88,25 @@ const StudentCouncil = () => {
     {
       id: 11,
       name: "Aditya Ranjan Tiwari",
-      role: "Sports fitness Sub Coordinator",
+      role: "Sports Fitness Sub Coordinator",
       image: "/wp-content/coordinator/Adityaranjan.png",
     },
     {
       id: 12,
       name: "Devraj Singh",
-      role: "Social media Content Coordinator",
+      role: "Social Media Content Coordinator",
       image: "/wp-content/coordinator/devraj.png",
     },
     {
       id: 13,
       name: "Kanishk Gulati",
-      role: "Social media Posting Coordinator",
+      role: "Social Media Posting Coordinator",
       image: "/wp-content/coordinator/kanishk.png",
     },
     {
       id: 14,
       name: "Vedant srivastav",
-      role: "Social media Design & Promotions Coordinator",
+      role: "Social Media Design & Promotions Coordinator",
       image: "/wp-content/coordinator/vedant.png",
     },
     {
@@ -124,7 +124,7 @@ const StudentCouncil = () => {
     {
       id: 17,
       name: "Ajith Reddy",
-      role: "Public relations and outreach coordinator",
+      role: "Public Relations and Outreach Coordinator",
       image: "/wp-content/coordinator/ajith.png",
     },
     {
@@ -136,7 +136,7 @@ const StudentCouncil = () => {
     {
       id: 19,
       name: "Sakshi Dubey",
-      role: "Social Outread & Extension activities (NSS Head)",
+      role: "Social Outread & Extension Activities (NSS Head)",
       image: "/wp-content/coordinator/sakshi.png",
     },
     {
@@ -201,12 +201,12 @@ const StudentCouncil = () => {
               The K.R. Mangalam University Student Council serves as the
               representative body of the student community, acting as a vital
               link between students and the university administration. Working
-              under the Department of Student Welfare (DSW) the Council
-              advocates for student interests, addresses student concerns, and
-              contributes to the development of a vibrant and inclusive campus
-              environment. Through student engagement activities, the Council
-              encourages active participation, leadership, teamwork, creativity,
-              and democratic values. The Student Council strives to create a
+              under the Department of Student Welfare, the Council advocates for
+              student interests, addresses student concerns, and contributes to
+              the development of a vibrant and inclusive campus environment.
+              Through student engagement activities, the Council encourages
+              active participation, leadership, teamwork, creativity, and
+              democratic values. The Student Council strives to create a
               supportive, dynamic, and memorable university journey for all
               students.
             </p>
@@ -287,7 +287,7 @@ const StudentCouncil = () => {
               </h2>
               <div className={`${poppins.className}`}>
                 <p className="text-justify text-sm leading-[1.85] font-normal text-[#000000] md:text-[18px]">
-                  Being recognized as the Best Student Council Member is truly
+                  Being recognised as the Best Student Council Member is truly
                   an honor and a moment of immense gratitude. This achievement
                   is not just mine, but a reflection of the constant support,
                   guidance, and teamwork shared by my fellow council members and
@@ -303,7 +303,7 @@ const StudentCouncil = () => {
                   campus environment.
                 </p>
                 <p className="text-justify text-sm leading-[1.85] font-bold mt-4 text-[#000000] md:text-[18px]">
-                  Nirdesh Jain,
+                  Nirdesh Jain
                 </p>
                 <span className="text-justify text-sm leading-[1.85] text-[#000000] md:text-[18px]">
                   Cultural Coordinator
