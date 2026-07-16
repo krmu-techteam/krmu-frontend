@@ -44,8 +44,8 @@ const SingleBlogLayout = ({ content, currentSlug }: Props) => {
       <div className="max-w-[1664px] mx-auto w-full px-5 2xl:px-10 flex flex-col lg:flex-row gap-10 xl:gap-16 relative z-10 scroll-style-1">
         {/* Blog Content */}
         <div className="lg:w-3/4">
-          <SocialShare />
           <SingleBlogContent content={content} />
+          <SocialShare />
         </div>
 
         {/* Right Sidebar (NO CHANGE) */}
