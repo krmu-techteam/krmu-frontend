@@ -18,7 +18,7 @@ export const SocialConnect = () => {
     <section className="bg-[#FAF8FC] pb-16 px-4 md:px-12">
       <div className="mx-auto w-full max-w-[1550px]">
         <div
-          className="relative overflow-hidden rounded-[24px] border-[5px] border-white bg-gradient-to-r from-[#A7ECEF] via-[#D7DDF0] to-[#FBBBBB] p-8 md:p-10 lg:p-12 shadow-xl flex flex-col lg:flex-row justify-between items-center gap-6"
+          className="relative overflow-hidden rounded-[24px] border-[5px] border-white bg-gradient-to-r from-[#A7ECEF] via-[#D7DDF0] to-[#FBBBBB] p-4 md:p-10 lg:p-12 shadow-xl flex flex-col lg:flex-row justify-between items-center gap-6"
           style={{ boxShadow: "0px 4px 4px 0px #00000040" }}
         >
           <div className="text-left max-w-[550px] 2xl:max-w-[610px] w-full">

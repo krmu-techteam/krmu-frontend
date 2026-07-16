@@ -35,15 +35,24 @@ const GrievenceAndCounseling = () => {
                 and student-friendly campus through its Student Grievance
                 Handling system. It provides students with a fair and
                 confidential platform to raise academic, administrative,
-                personal, and campus-related concerns and seek timely support.
-                <br className="mb-4" />
+                personal, and campus-related concerns and seek timely support.p
+              </p>
+              <br />
+              <p
+                className={`${poppins.className} text-left  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px]`}
+              >
                 The department promotes open communication, transparency, and
                 student well-being by addressing grievances with empathy and
                 accountability. The system is primarily managed by the Student
                 Success Manager of the University.
-                <br className="mb-4" /> The university also follows a strict
-                Anti-Ragging policy and is committed to maintaining a safe,
-                inclusive, and harassment-free environment for every student.
+              </p>
+              <br />
+              <p
+                className={`${poppins.className} text-left  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px]`}
+              >
+                The university also follows a strict Anti-Ragging policy and is
+                committed to maintaining a safe, inclusive, and harassment-free
+                environment for every student.
               </p>
             </div>
 
@@ -83,7 +92,7 @@ const GrievenceAndCounseling = () => {
                 experience both seamless and successful. 
               </p>
               <p
-                className={`${poppins.className} text-justify text-sm  font-bold mt-6 text-[#000000]  md:text-[17px]`}
+                className={`${poppins.className} text-justify text-sm  font-bold mt-10 text-[#000000]  md:text-[17px]`}
               >
                 Mr. Raj Jayswal
               </p>
@@ -120,7 +129,11 @@ const GrievenceAndCounseling = () => {
                 guidance and support, we help students build resilience, enhance
                 self-awareness, develop coping strategies, and achieve a healthy
                 balance between their academic and personal lives.
-                <br className="mb-4" />
+              </p>
+              <br />
+              <p
+                className={`${poppins.className} text-left  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px] opacity-[70%]`}
+              >
                 At KRMU, we believe that seeking support is a sign of strength
                 and an important step toward personal growth. Our counselling
                 services aim to empower students to make informed decisions,
@@ -171,7 +184,7 @@ const GrievenceAndCounseling = () => {
                 a positive outlook.
               </p>
               <p
-                className={`${poppins.className} text-justify text-sm  font-bold mt-6 text-[#000000]  md:text-[17px]`}
+                className={`${poppins.className} text-justify text-sm  font-bold mt-10 text-[#000000]  md:text-[17px]`}
               >
                 Mr. Amit Kumar Yadav
               </p>

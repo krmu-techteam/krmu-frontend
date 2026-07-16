@@ -78,7 +78,7 @@ export const EventGallery = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="relative w-[120px] top-10 mx-auto h-auto">
+            <div className="relative w-[50px] sm:w-[120px] top-10 mx-auto h-auto">
               <CarouselPrevious className="lg:hidden w-[40px] h-[40px] border-2 border-black rounded-full  z-20 chevron-icon" />
               <CarouselNext className="lg:hidden w-[40px] h-[40px] border-2 border-black rounded-full  z-20 chevron-icon-1" />
             </div>

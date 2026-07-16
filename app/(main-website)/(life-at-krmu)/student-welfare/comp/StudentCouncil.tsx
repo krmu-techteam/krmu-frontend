@@ -177,7 +177,7 @@ const StudentCouncil = () => {
   const getCount = () => {
     if (window.innerWidth <= 768) return 2;
     if (window.innerWidth === 1024) return 3;
-    if (window.innerWidth <= 1280) return 5;
+    if (window.innerWidth <= 1600) return 4;
 
     return 5;
   };
@@ -243,14 +243,14 @@ const StudentCouncil = () => {
             Student Council Members
           </h3>
 
-          <div className="grid grid-cols-1 gap-y-6 lg:gap-0 xl:gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 justify-items-center">
+          <div className="flex flex-wrap gap-6 justify-center">
             {data.slice(0, visibleCount).map((member, index) => (
               <article
                 key={`${member.name}-${member.role}`}
-                className="flex h-full sm:min-h-[376px] max-w-[300px] flex-col items-center   rounded-xl bg-[#EDE3C7] px-5 pb-5 pt-4 text-center mx-auto sm:mx-0"
+                className="flex h-[376px] lg:h-[370px] w-[300px] lg:w-[280px] flex-col items-center   rounded-xl bg-[#EDE3C7] px-5 pb-5 pt-4 text-center mx-auto sm:mx-0"
               >
                 <div
-                  className={`relative mb-4 h-[290px] lg:h-[250px] w-full overflow-hidden rounded-lg   bg-white  shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
+                  className={`relative mb-4 h-[270px] lg:h-[264px] w-[270px] lg:w-[240px] overflow-hidden rounded-lg   bg-white  shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
                 >
                   <Image
                     src={member.image}
@@ -312,16 +312,21 @@ const StudentCouncil = () => {
                   an honor and a moment of immense gratitude. This achievement
                   is not just mine, but a reflection of the constant support,
                   guidance, and teamwork shared by my fellow council members and
-                  the Department of Student Welfare. <br className="mb-4" />
+                  the Department of Student Welfare.
+                </p>
+                <br />
+                <p className="text-justify text-sm leading-[1.85] font-normal text-[#000000] md:text-[18px]">
                   My journey in the Student Council has been a learning
                   experience filled with opportunities to lead, collaborate, and
                   contribute meaningfully to the student community. It has
                   helped me grow both personally and professionally, shaping my
                   perspective and strengthening my sense of responsibility.{" "}
-                  <br className="mb-4" /> I am sincerely thankful for the trust
-                  placed in me, and I remain committed to continuing my efforts
-                  towards creating a more engaging, inclusive, and vibrant
-                  campus environment.
+                </p>
+                <br />
+                <p className="text-justify text-sm leading-[1.85] font-normal text-[#000000] md:text-[18px]">
+                  I am sincerely thankful for the trust placed in me, and I
+                  remain committed to continuing my efforts towards creating a
+                  more engaging, inclusive, and vibrant campus environment.
                 </p>
                 <p className="text-justify text-sm leading-[1.85] font-bold mt-4 text-[#000000] md:text-[18px]">
                   Nirdesh Jain
