@@ -19,6 +19,8 @@ import { SocialConnect } from "./comp/SocialConnect";
 import Link from "next/link";
 import { Playfair_Display, Poppins } from "next/font/google";
 import Image from "next/image";
+import ScrollToTop from "@/app/(new-pages)/admission/international/components/ScrollToTop";
+import DownloadScrollbtn from "./comp/DownloadScrollbtn";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("student-welfare");
@@ -99,27 +101,10 @@ const page = async () => {
 
   return (
     <>
-      <div className="group fixed bottom-6 lg:bottom-10 left-6 z-[999] h-[49px] w-[309px] rounded-full bg-[#111D32CC] px-2 transition-all duration-300 hover:scale-105">
-        <Link
-          href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/DSW_Magazine_2026_27_8e19b9a92d.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${poppins.className} gradient-box flex h-full w-full items-center gap-3 text-[20px] font-semibold`}
-        >
-          <div className="flex h-[34px] w-[34px] items-center justify-center rounded-full border-2 border-[#D5A647] p-1">
-            <Image
-              src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Frame_6d39ae97d2.png"
-              alt="download arrow"
-              width={1024}
-              height={1024}
-              className="transition-transform duration-500 group-hover:[transform:rotateY(180deg)]"
-            />
-          </div>
-          DSW Magazine 2025-26
-        </Link>
-      </div>
-
+      {/* <ScrollToTop /> */}
+      <DownloadScrollbtn />
       <WelfareHero />
+
       <DSWMessage />
       {/* <AssistantDSWMessage /> */}
       <VisionMission />
