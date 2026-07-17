@@ -96,7 +96,7 @@ const TeamMember = () => {
           {teamMembers.map((member) => (
             <article
               key={`${member.id}`}
-              className="flex h-full sm:min-h-[387px] w-[310px] lg:w-[290px] xl:w-[359px]  flex-col items-center justify-center rounded-md bg-[#EDE3C7] px-5 pb-5 pt-4 text-center"
+              className="flex h-full sm:min-h-[387px] w-[310px] sm:w-[290px] lg:w-[290px] xl:w-[359px]  flex-col items-center justify-center rounded-md bg-[#EDE3C7] px-5 pb-5 pt-4 text-center"
             >
               <div
                 className="relative mb-6 h-[240px] xl:h-[262px] w-[240px] xl:w-[262px] overflow-hidden rounded-full shadow-[0_16px_35px_rgba(15,23,42,0.08)]"
@@ -113,7 +113,7 @@ const TeamMember = () => {
               <h4 className="text-[20px] font-bold leading-tight text-black">
                 {member.name}
               </h4>
-              <p className="mt-1 text-[20px] font-normal leading-tight text-black">
+              <p className="mt-1 text-sm md:text-[20px] font-normal leading-tight text-black">
                 {member.role}
               </p>
             </article>

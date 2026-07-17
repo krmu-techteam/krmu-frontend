@@ -35,7 +35,7 @@ export const SocialConnect = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center md:justify-start lg:justify-end gap-4 w-full lg:w-auto">
+          <div className="flex flex-wrap items-center justify-start lg:justify-end gap-4 w-full lg:w-auto">
             {/* LinkedIn Button */}
             <Link
               href="https://www.linkedin.com/company/dean-of-student-welfare-krmu/posts/"

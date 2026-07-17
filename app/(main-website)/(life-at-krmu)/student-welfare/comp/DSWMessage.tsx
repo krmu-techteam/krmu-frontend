@@ -20,13 +20,13 @@ const DSWMessage = () => {
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Shweta_Bansal_2_81e8834c65.png"
                 alt="Prof. (Dr.) Shweta A Bansal, Dean, Department of Student Welfare, K.R. Mangalam University"
                 fill
-                className="object-cover object-top"
+                className="object-cover "
               />
             </div>
           </div>
 
           <div className="pt-0 text-center lg:pt-10 lg:text-left xl:pt-12 px-2">
-            <div className="mb-6 md:mb-7">
+            <div className="mb-2 md:mb-7">
               <h2 className="text-[20px] font-bold tracking-0 leading-tight md:text-[26px]">
                 Prof. (Dr.) Shweta A Bansal
               </h2>
@@ -35,8 +35,11 @@ const DSWMessage = () => {
               </p>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-[70px_1fr] md:gap-5 xl:grid-cols-[86px_1fr]">
-              <div aria-hidden="true" className=" w-[78px]  h-[67px]   gap-2">
+            <div className="grid gap-0 sm:gap-4 md:grid-cols-[70px_1fr] md:gap-5 xl:grid-cols-[86px_1fr]">
+              <div
+                aria-hidden="true"
+                className="w-[50px] md:w-[78px] h-[40px]  md:h-[67px]  gap-0 sm:gap-2"
+              >
                 {/* <span className="block h-[46px] w-[18px] rotate-[16deg] rounded-full bg-[#2f8cff] md:h-[60px] md:w-[20px]" />
                 <span className="block h-[46px] w-[18px] rotate-[16deg] rounded-full bg-[#2f8cff] md:h-[60px] md:w-[20px]" /> */}
                 <Image
@@ -48,7 +51,7 @@ const DSWMessage = () => {
                 />
               </div>
 
-              <p className="max-w-[1060px] text-justify text-[14px] py-2 pt-2 sm:pt-10  font-normal tracking-[1%] text-white md:text-[18px] ">
+              <p className="max-w-[1060px] text-justify text-[14px] py-2 pt-2 sm:pt-0 md:pt-10  font-normal tracking-[1%] text-white md:text-[18px] ">
                 Dear Students, welcome to a vibrant community of learning,
                 innovation, and endless opportunities. Your university journey
                 is not just about earning a degree, but about discovering your

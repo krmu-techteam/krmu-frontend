@@ -106,7 +106,7 @@ const VisionMission = () => {
               Vision
             </h3>
             <p
-              className={`${poppins.className} px-6 pt-3 text-justify text-[18px] font-normal leading-[1.45] md:px-[50px]`}
+              className={`${poppins.className} px-6 pt-3 text-justify text-[13px] sm:text-[18px] font-normal leading-[1.45] md:px-[50px]`}
             >
               Student Welfare envisions comprehensive individual, academic, and
               integrated development by providing life skills and counselling
@@ -122,7 +122,7 @@ const VisionMission = () => {
               Mission
             </h3>
             <p
-              className={`${poppins.className} px-6 pt-3 text-justify text-[18px] font-normal leading-[1.45] md:px-[50px]`}
+              className={`${poppins.className} px-6 pt-3 text-justify text-[13px] sm:text-[18px] font-normal leading-[1.45] md:px-[50px]`}
             >
               The Student Welfare Department aims to facilitate global
               leadership and personal well-being through high moral values and

@@ -247,10 +247,10 @@ const StudentCouncil = () => {
             {data.slice(0, visibleCount).map((member, index) => (
               <article
                 key={`${member.name}-${member.role}`}
-                className="flex h-[390px] w-[300px] lg:w-[280px] flex-col items-center   rounded-xl bg-[#EDE3C7] px-5 pb-5 pt-4 text-center mx-auto sm:mx-0"
+                className="flex h-[390px] w-[300px] sm:w-[280px] lg:w-[280px] flex-col items-center   rounded-xl bg-[#EDE3C7] px-5 pb-5 pt-4 text-center mx-auto sm:mx-0"
               >
                 <div
-                  className={`relative mb-4 h-[270px] md:min-h-[270px] lg:max-h-[246px] w-[270px] lg:w-[240px] overflow-hidden rounded-lg   bg-white  shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
+                  className={`relative mb-4 h-[270px] md:min-h-[270px] lg:max-h-[246px] w-[270px] sm:w-[240px] lg:w-[240px] overflow-hidden rounded-lg   bg-white  shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
                 >
                   <Image
                     src={member.image}
@@ -291,7 +291,7 @@ const StudentCouncil = () => {
       <section className="bg-[#F0F3F9] px-4 sm:px-6 md:px-12 pb-12">
         <div className="mx-auto w-full max-w-[1550px]">
           <div className="flex flex-col xl:flex-row items-center gap-8 rounded-2xl border-4 border-white bg-[#DAE9FF] p-4  xl:gap-12 xl:p-12 shadow-sm">
-            <div className=" flex-shrink-0 overflow-hidden rounded-3xl h-fit md:h-auto w-full md:w-[440px]">
+            <div className=" flex-shrink-0 overflow-hidden rounded-3xl h-fit md:h-auto w-full sm:w-[440px]">
               <Image
                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Nirdesh_babea75dd1.png"
                 width={1024}
