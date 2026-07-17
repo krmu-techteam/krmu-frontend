@@ -88,7 +88,7 @@ const BscFinanceNavbar = ({
                 .getElementById("apply-form")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="inline-flex items-center max-lg:hidden gap-2 px-4 py-2 rounded-lg bg-white text-[#0c1830] hover:bg-white/90 text-sm font-semibold transition-all duration-200 hidden lg:block"
+            className="inline-flex cursor-pointer items-center max-lg:hidden gap-2 px-4 py-2 rounded-lg bg-white text-[#0c1830] hover:bg-white/90 text-sm font-semibold transition-all duration-200 hidden lg:block"
           >
             Apply now
           </button>
