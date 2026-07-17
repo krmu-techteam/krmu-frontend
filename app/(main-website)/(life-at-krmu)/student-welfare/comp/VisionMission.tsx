@@ -136,7 +136,7 @@ const VisionMission = () => {
         {welfareCards.map((card) => (
           <article
             key={card.title}
-            className={`${card.bgClass} ${card.textClass}w-full lg:w-[450px] xl:w-[430px] [@media(min-width:1640px)]:w-[500px] h-fit xl:h-[712px] overflow-hidden rounded-xl  p-2.5 shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
+            className={`${card.bgClass} ${card.textClass} w-full lg:w-[450px] xl:w-[430px] [@media(min-width:1640px)]:w-[500px] h-fit xl:h-[712px] overflow-hidden rounded-xl  p-2.5 shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
           >
             <div className="relative h-fit sm:h-[346px] max-w-[472] lg:max-w-full overflow-hidden rounded-xl bg-white ">
               <Image
