@@ -99,7 +99,7 @@ const page = async () => {
 
   return (
     <>
-      <div className="group fixed bottom-10 left-6 z-[999] h-[49px] w-[309px] rounded-full bg-[#111D32CC] px-2 transition-all duration-300 hover:scale-105">
+      <div className="group fixed bottom-6 lg:bottom-10 left-6 z-[999] h-[49px] w-[309px] rounded-full bg-[#111D32CC] px-2 transition-all duration-300 hover:scale-105">
         <Link
           href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/DSW_Magazine_2026_27_8e19b9a92d.pdf"
           target="_blank"

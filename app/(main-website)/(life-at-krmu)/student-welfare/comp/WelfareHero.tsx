@@ -23,7 +23,7 @@ const WelfareHero = () => {
       <div className=" mx-auto  bg-[linear-gradient(97.3deg,#001732_70.09%,#004698_100%)] px-4 sm:px-10 pb-8 sm:pb-12">
         <div className="flex justify-center items-center text-center flex-col max-w-[1550px] mx-auto w-full text-white welfare_desg_int">
           <h1
-            className={`${playfair.className} font-semibold leading-[1.25]  [@media(max-width:380px)]:text-[32px] text-[36px]  md:text-[54px] lg:text-[75px] xl:text-[104px] bg-clip-text text-transparent [@media(max-width:380px)]:-mt-[15px] -mt-[25px] sm:-mt-[52px] md:-mt-[64px] lg:-mt-[90px] xl:-mt-[105px] mb-6 sm:mb-10`}
+            className={`${playfair.className} font-semibold leading-[1.25]  [@media(max-width:380px)]:text-[32px] text-[36px] sm:text-[48px]  md:text-[54px] lg:text-[75px] xl:text-[104px] bg-clip-text text-transparent [@media(max-width:380px)]:-mt-[15px] -mt-[25px] sm:-mt-[54px] md:-mt-[64px] lg:-mt-[90px] xl:-mt-[105px] mb-6 sm:mb-10`}
             style={{
               backgroundImage:
                 "linear-gradient(90deg,#FF9D00 0%,#68BCFF 50%,#FF1D21 100%)",
