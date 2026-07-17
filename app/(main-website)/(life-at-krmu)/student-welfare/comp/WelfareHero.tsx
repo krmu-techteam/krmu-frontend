@@ -23,7 +23,7 @@ const WelfareHero = () => {
       <div className=" mx-auto  bg-[linear-gradient(97.3deg,#001732_70.09%,#004698_100%)] px-4 sm:px-10 pb-8 sm:pb-12">
         <div className="flex justify-center items-center text-center flex-col max-w-[1550px] mx-auto w-full text-white welfare_desg_int">
           <h1
-            className={`${playfair.className} font-semibold leading-[1.25] text-[28px] sm:text-4xl md:text-[54px] lg:text-[75px] xl:text-[104px] bg-clip-text text-transparent -mt-[36px] sm:-mt-[52px] md:-mt-[64px] lg:-mt-[90px] xl:-mt-[105px] mb-6 sm:mb-10`}
+            className={`${playfair.className} font-semibold leading-[1.25]  [@media(max-width:380px)]:text-[32px] text-[36px]  md:text-[54px] lg:text-[75px] xl:text-[104px] bg-clip-text text-transparent [@media(max-width:380px)]:-mt-[15px] -mt-[25px] sm:-mt-[52px] md:-mt-[64px] lg:-mt-[90px] xl:-mt-[105px] mb-6 sm:mb-10`}
             style={{
               backgroundImage:
                 "linear-gradient(90deg,#FF9D00 0%,#68BCFF 50%,#FF1D21 100%)",
@@ -34,7 +34,7 @@ const WelfareHero = () => {
           </h1>
 
           <p
-            className={`${poppins.className} flex flex-wrap items-center justify-center gap-y-2 text-[9px]  md:text-base lg:text-[22px] xl:text-[31px] font-semibold tracking-[21%] uppercase mb-6 sm:mb-10 text-white`}
+            className={`${poppins.className} flex flex-wrap items-center justify-center gap-y-2 text-[11px]  md:text-base lg:text-[22px] xl:text-[31px] font-semibold tracking-[21%] uppercase mb-6 sm:mb-10 text-white`}
           >
             <span className="mr-2">Student Welfare at</span>
             <span className="bg-[#0063B0]  tracking-normal px-1">
@@ -47,7 +47,7 @@ const WelfareHero = () => {
           </p>
 
           <div
-            className={`${poppins.className} space-y-6 text-sm md:text-[23px] font-normal max-w-[1058px] leading-[160%]  text-[#CDE9FF]`}
+            className={`${poppins.className} space-y-6 text-sm md:text-[23px] text-justify sm:text-center font-normal max-w-[1058px] leading-[160%]  text-[#CDE9FF] px-4 sm:px-0`}
           >
             <p>
               The Department of Student Welfare (DSW) is committed to creating a

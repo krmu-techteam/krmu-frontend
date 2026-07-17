@@ -15,7 +15,7 @@ const poppins = Poppins({
 
 const ClubsSocieties = () => {
   return (
-    <section className=" flex justify-center h-[1200px] md:h-[1000px] lg:h-[1070px] xl:h-[900px] 2xl:h-[1000px]  py-10 sm:py-12 px-4 sm:px-12 bg-cover bg-[55%] sm:bg-[45%] lg:bg-[25%] xl:bg-center bg-no-repeat bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1403_e55adcc5a7.jpg)]">
+    <section className=" flex justify-center h-[1200px] md:h-[1000px] lg:h-[1070px] xl:h-[1000px] 2xl:h-[1000px]  py-4 sm:py-12 px-4 sm:px-12 bg-cover bg-[55%] sm:bg-[45%] lg:bg-[25%] xl:bg-center bg-no-repeat bg-[url(https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1403_e55adcc5a7.jpg)]">
       {/* <Image
         src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1403_e55adcc5a7.jpg"
         alt="Students sitting together on campus lawn"
@@ -34,7 +34,7 @@ const ClubsSocieties = () => {
         </h2>
 
         <p
-          className={`${poppins.className} mt-3 text-[14px] font-normal leading-[1.45] md:text-[16px] lg:text-[20px]`}
+          className={`${poppins.className} mt-3 text-[14px] text-justify font-normal leading-[1.45] md:text-[16px] lg:text-[20px]`}
         >
           KRMU offers a vibrant campus life to the students and the faculty.
           From cultural events to scientific experiments, from robotic

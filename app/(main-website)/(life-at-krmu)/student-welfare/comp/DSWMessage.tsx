@@ -10,7 +10,7 @@ const poppins = Poppins({
 const DSWMessage = () => {
   return (
     <section
-      className={`${poppins.className} bg-white px-4 py-4 md:px-12 md:py-12`}
+      className={`${poppins.className} bg-white px-4 py-4 md:px-10 md:py-12`}
     >
       <div className="mx-auto w-full max-w-[1550px] overflow-hidden rounded-md bg-[linear-gradient(165deg,#A598BF_6%,#120032_13.48%)] px-6 py-8 text-white  md:px-8 md:py-9 lg:px-9">
         <div className="grid items-start gap-7 lg:grid-cols-[190px_1fr] xl:grid-cols-[240px_1fr]">
@@ -48,7 +48,7 @@ const DSWMessage = () => {
                 />
               </div>
 
-              <p className="max-w-[1060px] text-left sm:text-justify text-[14px] py-2 pt-2 sm:pt-10  font-normal tracking-[1%] text-white md:text-[18px] ">
+              <p className="max-w-[1060px] text-justify text-[14px] py-2 pt-2 sm:pt-10  font-normal tracking-[1%] text-white md:text-[18px] ">
                 Dear Students, welcome to a vibrant community of learning,
                 innovation, and endless opportunities. Your university journey
                 is not just about earning a degree, but about discovering your

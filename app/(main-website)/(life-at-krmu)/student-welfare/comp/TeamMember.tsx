@@ -85,21 +85,21 @@ const teamMembers = [
 const TeamMember = () => {
   return (
     <section
-      className={`${poppins.className} bg-white px-4 pb-10 pt-0 md:px-12`}
+      className={`${poppins.className} bg-white px-4 pb-10 pt-0 md:px-10 lg:px-12`}
     >
       <div className="mx-auto w-full max-w-[1550px]">
         <h3 className="mb-6 text-center text-[30px] font-bold leading-tight text-black md:text-[45px]">
           Team Members
         </h3>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
+        <div className="flex flex-wrap gap-6 xl:gap-8 justify-center">
           {teamMembers.map((member) => (
             <article
               key={`${member.id}`}
-              className="flex h-full sm:min-h-[387px] max-w-[359px]  w-full flex-col items-center justify-center rounded-md bg-[#EDE3C7] px-5 pb-5 pt-4 text-center"
+              className="flex h-full sm:min-h-[387px] w-[310px] lg:w-[290px] xl:w-[359px]  flex-col items-center justify-center rounded-md bg-[#EDE3C7] px-5 pb-5 pt-4 text-center"
             >
               <div
-                className="relative mb-6 h-[240px] sm:h-[262px] w-[240px] sm:w-[262px] overflow-hidden rounded-full shadow-[0_16px_35px_rgba(15,23,42,0.08)]"
+                className="relative mb-6 h-[240px] xl:h-[262px] w-[240px] xl:w-[262px] overflow-hidden rounded-full shadow-[0_16px_35px_rgba(15,23,42,0.08)]"
                 style={{ background: member.ringClass }}
               >
                 <Image
