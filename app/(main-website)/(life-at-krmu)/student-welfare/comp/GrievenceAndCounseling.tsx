@@ -20,7 +20,7 @@ const GrievenceAndCounseling = () => {
       >
         <div className="mx-auto w-full max-w-[1550px] mb-10">
           <div className="relative flex flex-col lg:flex-row  gap-4 md:gap-6 xl:gap-14 rounded-2xl  bg-[linear-gradient(104.12deg,#F3F4F6_22.1%,#CFDCFF_72.23%,#00ABCD_84.55%)] p-4 md:p-6 min-h-[350px]">
-            <div className="p-4 lg:p-8 ">
+            <div className="text-justify sm:text-left p-4 lg:p-8 ">
               <h2
                 className={`${playfair.className}  text-3xl font-bold text-black mb-6 md:text-4xl lg:text-[38px]`}
               >
@@ -29,7 +29,7 @@ const GrievenceAndCounseling = () => {
               </h2>
 
               <p
-                className={`${poppins.className} text-left  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px]`}
+                className={`${poppins.className}   text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px]`}
               >
                 The Department of Student Welfare ensures a safe, respectful,
                 and student-friendly campus through its Student Grievance
@@ -39,7 +39,7 @@ const GrievenceAndCounseling = () => {
               </p>
               <br />
               <p
-                className={`${poppins.className} text-left  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px]`}
+                className={`${poppins.className}   text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px]`}
               >
                 The department promotes open communication, transparency, and
                 student well-being by addressing grievances with empathy and
@@ -48,7 +48,7 @@ const GrievenceAndCounseling = () => {
               </p>
               <br />
               <p
-                className={`${poppins.className} text-left  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px]`}
+                className={`${poppins.className}   text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px]`}
               >
                 The university also follows a strict Anti-Ragging policy and is
                 committed to maintaining a safe, inclusive, and harassment-free
@@ -107,7 +107,7 @@ const GrievenceAndCounseling = () => {
 
         <div className="mx-auto w-full max-w-[1550px]">
           <div className="relative flex flex-col lg:flex-row  gap-4 rounded-2xl p-4 md:p-6 min-h-[350px] bg-[linear-gradient(95.12deg,#F3F4F6_0.63%,#FFE1B4_100%)]">
-            <div className="p-4 lg:p-8">
+            <div className="text-justify sm:text-left p-4 lg:p-8">
               <h2
                 className={`${playfair.className}  text-3xl font-bold text-black mb-6 md:text-4xl lg:text-[38px]`}
               >
@@ -116,7 +116,7 @@ const GrievenceAndCounseling = () => {
               </h2>
 
               <p
-                className={`${poppins.className} text-left  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px] opacity-[70%]`}
+                className={`${poppins.className}   text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px] opacity-[70%]`}
               >
                 University life brings new opportunities, experiences, and
                 challenges. The counselling services at KRMU are dedicated to
@@ -132,7 +132,7 @@ const GrievenceAndCounseling = () => {
               </p>
               <br />
               <p
-                className={`${poppins.className} text-left  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px] opacity-[70%]`}
+                className={`${poppins.className}  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px] opacity-[70%]`}
               >
                 At KRMU, we believe that seeking support is a sign of strength
                 and an important step toward personal growth. Our counselling

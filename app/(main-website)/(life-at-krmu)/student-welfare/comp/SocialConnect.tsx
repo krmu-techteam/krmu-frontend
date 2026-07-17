@@ -28,7 +28,7 @@ export const SocialConnect = () => {
               Stay Connected with DSW
             </h3>
             <p
-              className={`${poppins.className} mt-2 text-[15px] md:text-[21px] font-normal text-neutral-800 leading-relaxed`}
+              className={`${poppins.className} text-justify sm:text-left mt-2 text-[15px] md:text-[21px] font-normal text-neutral-800 leading-relaxed`}
             >
               Follow Us on Instagram and LinkedIn for Student Updates, Events,
               Opportunities, and Campus Life Highlights
