@@ -150,12 +150,12 @@ const VisionMission = () => {
 
             <div className="px-3 pb-11 pt-5 md:px-4 xl:px-5">
               <h3
-                className={`${playfair.className} max-w-[440px] text-[30px] font-bold leading-[0.95] md:text-[26px] lg:text-[32px] xl:text-[41px]`}
+                className={`${playfair.className}  max-w-[440px] text-[30px] font-bold leading-[0.95] md:text-[26px] lg:text-[32px] xl:text-[41px]`}
               >
                 {card.title}
               </h3>
               <p
-                className={`${poppins.className} mt-5 max-w-[430px] text-[14px]  leading-[1.45] md:text-[13px] lg:text-[15px] xl:text-[18px]`}
+                className={`${poppins.className} text-justify sm:text-left mt-5 max-w-[430px] text-[14px]  leading-[1.45] md:text-[13px] lg:text-[15px] xl:text-[18px]`}
               >
                 {card.description}
               </p>
