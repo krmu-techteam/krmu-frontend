@@ -36,13 +36,13 @@ export const EventGallery = () => {
             }}
             plugins={[
               Autoplay({
-                delay: 2000,
+                delay: 3000,
               }),
             ]}
             className="relative w-full"
           >
-            <div className="absolute right-15 top-[-18px] w-[50px]  h-auto">
-              <CarouselPrevious className="hidden lg:block left-0   w-[40px] h-[40px] border-2 border-black rounded-full  z-20 chevron-icon" />
+            <div className="absolute  right-15 top-[-18px] w-[00px]  h-auto">
+              <CarouselPrevious className="hidden lg:block  w-[40px] h-[40px] border-2 border-black rounded-full  z-20 chevron-icon" />
               <CarouselNext className="hidden lg:block   w-[40px] h-[40px] border-2 border-black rounded-full  z-20 chevron-icon-1" />
             </div>
 
@@ -78,7 +78,7 @@ export const EventGallery = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="relative w-[50px] sm:w-[120px] top-10 mx-auto h-auto">
+            <div className="relative w-[0px] top-10 mx-auto h-auto">
               <CarouselPrevious className="lg:hidden w-[40px] h-[40px] border-2 border-black rounded-full  z-20 chevron-icon" />
               <CarouselNext className="lg:hidden w-[40px] h-[40px] border-2 border-black rounded-full  z-20 chevron-icon-1" />
             </div>

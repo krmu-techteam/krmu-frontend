@@ -51,7 +51,7 @@ const welfareCards = [
 
 const VisionMission = () => {
   return (
-    <section className="bg-white px-4 pb-12 md:px-12">
+    <section className="bg-white px-4 pb-12 md:px-10 lg:px-12">
       <div className="relative mx-auto w-full max-w-[1550px] overflow-hidden rounded-md bg-[linear-gradient(180deg,#001732_0%,#994246_100%)] px-6 pb-8 pt-10 text-white md:px-[65px] md:pb-[60px] md:pt-[82px]">
         <div className="pointer-events-none absolute inset-x-[8%]  top-[30px]  hidden h-[500px] w-[1150px]  md:block">
           <Image
@@ -106,7 +106,7 @@ const VisionMission = () => {
               Vision
             </h3>
             <p
-              className={`${poppins.className} px-6 pt-3 text-left sm:text-justify text-[18px] font-normal leading-[1.45] md:px-[50px]`}
+              className={`${poppins.className} px-6 pt-3 text-justify text-[18px] font-normal leading-[1.45] md:px-[50px]`}
             >
               Student Welfare envisions comprehensive individual, academic, and
               integrated development by providing life skills and counselling
@@ -122,7 +122,7 @@ const VisionMission = () => {
               Mission
             </h3>
             <p
-              className={`${poppins.className} px-6 pt-3 text-left sm:text-justify text-[18px] font-normal leading-[1.45] md:px-[50px]`}
+              className={`${poppins.className} px-6 pt-3 text-justify text-[18px] font-normal leading-[1.45] md:px-[50px]`}
             >
               The Student Welfare Department aims to facilitate global
               leadership and personal well-being through high moral values and
@@ -132,18 +132,19 @@ const VisionMission = () => {
         </div>
       </div>
 
-      <div className="mx-auto pt-12 grid w-full max-w-[1550px] gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-wrap lg:flex-row justify-center pt-12 mx-auto  w-full max-w-[1550px] gap-6 ">
         {welfareCards.map((card) => (
           <article
             key={card.title}
-            className={`${card.bgClass} ${card.textClass} overflow-hidden rounded-xl  p-2.5 shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
+            className={`${card.bgClass} ${card.textClass}w-full lg:w-[450px] xl:w-[430px] [@media(min-width:1640px)]:w-[500px] h-fit xl:h-[712px] overflow-hidden rounded-xl  p-2.5 shadow-[0_16px_35px_rgba(15,23,42,0.08)]`}
           >
-            <div className="relative h-[230px] overflow-hidden rounded-xl bg-white md:h-[250px] xl:h-[285px]">
+            <div className="relative h-fit sm:h-[346px] max-w-[472] lg:max-w-full overflow-hidden rounded-xl bg-white ">
               <Image
                 src={card.image}
                 alt={card.alt}
-                fill
-                className="object-cover"
+                width={1024}
+                height={1024}
+                className=" object-contain sm:object-cover w-full h-full"
               />
             </div>
 

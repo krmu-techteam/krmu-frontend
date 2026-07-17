@@ -16,6 +16,39 @@
 
 /* Custom utility class */
 @layer utilities {
+  .gradient-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 50px;
+    color: #e7c268;
+  }
+
+  .gradient-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px; /* Border thickness */
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      #d5a647 0%,
+      #6dbbf7 46.15%,
+      #e23c4b 100%
+    );
+
+    /* Creates a hollow center */
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+  }
+
   .font-host {
     font-family: var(--font-host);
   }
@@ -4774,26 +4807,26 @@
   }
 
   .chevron-icon svg {
-    display: none;
+    width: 30px !important;
+    height: 30px !important;
   }
 
   .chevron-icon-1 svg {
-    display: none;
+    width: 36px !important;
+    height: 30px !important;
   }
 
-  .chevron-icon::before {
-    content: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/arrow_left_4b9812456c.png") !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* .chevron-icon {
+    background-image: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/arrow_left_4b9812456c.png") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
   }
 
-  .chevron-icon-1::before {
-    content: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/arrow_right_b74bc0cff1.png") !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  .chevron-icon-1 {
+    background-image: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/arrow_right_b74bc0cff1.png") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  } */
 
   .timeline-slider .slick-next {
     right: 11% !important;

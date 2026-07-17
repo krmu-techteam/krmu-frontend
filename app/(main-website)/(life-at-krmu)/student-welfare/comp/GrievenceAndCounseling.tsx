@@ -77,7 +77,7 @@ const GrievenceAndCounseling = () => {
                 </div>
               </div>
               <p
-                className={`${poppins.className} text-left sm:text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]`}
+                className={`${poppins.className} text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]`}
               >
                 As a Student Success Manager at K.R. Mangalam University, I
                 serve as a dedicated bridge between students and the
@@ -164,7 +164,7 @@ const GrievenceAndCounseling = () => {
                 </div>
               </div>
               <p
-                className={`${poppins.className} text-left sm:text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]`}
+                className={`${poppins.className} text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]`}
               >
                 Hello Students, I have been working in the fields of counselling
                 and education since 2014. I understand that university life
