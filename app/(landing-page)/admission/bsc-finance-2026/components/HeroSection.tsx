@@ -93,7 +93,7 @@ const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4 lg:justify-start justify-center mt-2">
-              <button
+              {/* <button
                 onClick={() =>
                   document
                     .getElementById("apply-form")
@@ -102,11 +102,12 @@ const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-white border border-white hover:bg-white/90 transition-all duration-200 font-bold text-[15px] leading-5 tracking-wide text-[#050a1c]"
               >
                 {hero.applyBtnLabel}
-              </button>
+              </button> */}
 
               <CommonLeadPopup
                 buttonText={hero.brochureBtnLabel}
-                buttonClassName="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-white/40 text-white hover:border-white transition-all duration-300 text-[15px] font-bold"
+                // buttonClassName="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-white/40 text-white hover:border-white transition-all duration-300 text-[15px] font-bold"
+                buttonClassName="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-white border border-white hover:bg-white/90 transition-all duration-200 font-bold text-[15px] leading-5 tracking-wide text-[#050a1c]"
                 redirectUrl={hero.brochureBtnHref}
                 form_name="BSc Finance 2026 - Brochure Download"
               />
