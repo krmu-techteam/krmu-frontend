@@ -26,11 +26,11 @@ const DSWMessage = () => {
           </div>
 
           <div className="pt-0 text-center lg:pt-10 lg:text-left xl:pt-12 px-2">
-            <div className="mb-2 md:mb-7">
-              <h2 className="text-[20px] font-bold tracking-0 leading-tight md:text-[26px]">
+            <div className="mb-6 md:mb-7">
+              <h2 className="text-[19px] font-bold tracking-0 leading-tight md:text-[26px]">
                 Prof. (Dr.) Shweta A Bansal
               </h2>
-              <p className="mt-1 text-[17px] tracking-0 text-white md:text-[26px]">
+              <p className="mt-1 text-[14px] tracking-0 text-white md:text-[26px]">
                 Dean, Department of Student Welfare
               </p>
             </div>

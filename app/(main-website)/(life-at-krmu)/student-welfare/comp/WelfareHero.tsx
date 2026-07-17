@@ -34,7 +34,7 @@ const WelfareHero = () => {
           </h1>
 
           <p
-            className={`${poppins.className} flex flex-wrap items-center justify-center gap-y-2 text-[11px]  md:text-base lg:text-[22px] xl:text-[31px] font-semibold tracking-[21%] uppercase mb-6 sm:mb-10 text-white`}
+            className={`${poppins.className} flex flex-wrap items-center justify-center gap-y-2 text-[10px]  md:text-base lg:text-[22px] xl:text-[31px] font-semibold tracking-[21%] uppercase mb-6 sm:mb-10 text-white`}
           >
             <span className="mr-2">Student Welfare at</span>
             <span className="bg-[#0063B0]  tracking-normal px-1">
