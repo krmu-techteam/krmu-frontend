@@ -150,7 +150,7 @@ export const soedFaculties: SchoolFacultiesType[] = [
       schools: [1070],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Anupam-Bansal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Dr.-Anupam.png",
   },
   {
     id: 113719,
