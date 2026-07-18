@@ -38,9 +38,9 @@ export const Leaderships = ({ data }: Props) => {
         >
           {/* LEFT CONTENT */}
           <div className="md:w-3/5">
-            <h3 className="text-4xl text-[#0060aa] font-bold">
+            <h1 className="text-4xl text-[#0060aa] font-bold">
               {selectedLeader.name}
-            </h3>
+            </h1>
 
             <h4 className="text-lg text-[#0060aa] mt-3 font-semibold">
               {selectedLeader.desg}

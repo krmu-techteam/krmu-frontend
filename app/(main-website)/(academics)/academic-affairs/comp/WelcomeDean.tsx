@@ -11,9 +11,9 @@ const WelcomeDean = () => {
       <div className="max-w-[1664px] mx-auto w-full flex gap-5 flex-col md:flex-row">
         {/* LEFT CONTENT */}
         <div className="w-full md:w-9/12 text-justify md:text-left">
-          <h2 className="text-2xl md:text-4xl font-bold mb-5">
+          <h1 className="text-2xl md:text-4xl font-bold mb-5">
             Welcome from the Dean of Academics
-          </h2>
+          </h1>
 
           <p>
             As the Dean of Academics, I am honoured to spearhead a community
