@@ -554,7 +554,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
     title: {
       rendered: "Ms. Neetu Chauhan",
     },
-    featured_media: 101432, 
+    featured_media: 101432,
     acf: {
       "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant Professor",
@@ -836,6 +836,52 @@ export const soetFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Ms.-NEHA-JHAKRA.jpeg",
   },
+  // {
+  //   id: 115623,
+  //   slug: "ms-aayushi-bansal",
+  //   title: {
+  //     rendered: "Ms. Aayushi Bansal",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "M.Sc. in Computer Science ",
+  //     staff_designation: "Teaching Assistant",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/ayushi-bansal.png",
+  // },
+
+  // {
+  //   id: 115624,
+  //   slug: "ms-anjali-pal",
+  //   title: {
+  //     rendered: "Ms. Anjali Pal",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/anjali-pal.png",
+  // },
+  // {
+  //   id: 115620,
+  //   slug: "dr-apeksha-mittal",
+  //   title: {
+  //     rendered: "Dr. Apeksha Mittal ",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr-Apeksha-SOET.png",
+  // },
 
   // {
   //   id: 114224,
@@ -849,9 +895,9 @@ export const soetFaculties: SchoolFacultiesType[] = [
   //     staff_designation: "Assistant Professor",
   //     schools: [1266],
   //   },
-  //   featured_media_url: "",
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/05/Dr.-Satinder-Pal-Singh-SOET.png",
   // },
-  //
 
   // {
   //   id: 115495,
@@ -865,7 +911,22 @@ export const soetFaculties: SchoolFacultiesType[] = [
   //     staff_designation: "Assistant Professor",
   //     schools: [1266],
   //   },
-  //   featured_media_url: "",
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Dr-Ritesh-SOET.png",
+  // },
+  // {
+  //   id: 115622,
+  //   slug: "mr-niraj-kumar",
+  //   title: {
+  //     rendered: "Mr. Niraj Kumar",
+  //   },
+  //   featured_media: 6624,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1266],
+  //   },
+  //   featured_media_url: "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Niraj-Kumar.png",
   // },
   // {
   //   id: 115624,
@@ -896,33 +957,6 @@ export const soetFaculties: SchoolFacultiesType[] = [
   //   featured_media_url: "",
   // },
   // {
-  //   id: 115622,
-  //   slug: "mr-niraj-kumar",
-  //   title: {
-  //     rendered: "Mr. Niraj Kumar",
-  //   },
-  //   featured_media: 6624,
-  //   acf: {
-  //     "staff-qualification": "Ph.D.",
-  //     staff_designation: "Assistant Professor",
-  //     schools: [1266],
-  //   },
-  //   featured_media_url: "",
-  // },
-  // {
-  //   id: 115620,
-  //   slug: "dr-apeksha-mittal",
-  //   title: {
-  //     rendered: "Dr. Apeksha Mittal ",
-  //   },
-  //   featured_media: 6624,
-  //   acf: {
-  //     "staff-qualification": "Ph.D.",
-  //     staff_designation: "Assistant Professor",
-  //     schools: [1266],
-  //   },
-  //   featured_media_url: "",
-  // },
 
   // {
   //   id: 113902,
