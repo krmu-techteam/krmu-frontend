@@ -82,15 +82,7 @@ const page = async () => {
 
   const aboutService: IAboutService = getAboutService();
 
-  const [
-    aboutPage,
-    accrediation,
-    krmugroup,
-    halloffame,
-    visionmission,
-    internationcollaboration,
-    krmucommittee,
-  ] = await Promise.all([
+  const [aboutPage, accrediation, krmugroup, halloffame] = await Promise.all([
     aboutService.getData(),
     aboutService.getSection("accrediation"),
     aboutService.getSection("krmugroup"),
