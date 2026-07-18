@@ -17,14 +17,14 @@ const DownloadScrollbtn = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 300);
+      // Show after one full screen (start of the second screen)
+      setIsVisible(window.scrollY >= window.innerHeight);
     };
+
+    toggleVisibility(); // Check on initial render
 
     window.addEventListener("scroll", toggleVisibility);
-
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-    };
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
@@ -37,33 +37,6 @@ const DownloadScrollbtn = () => {
   if (!isVisible) return null;
 
   return (
-    //     <button
-    //       onClick={scrollToTop}
-    //       aria-label="Scroll to top"
-    //       className="
-
-    //   fixed
-    //   bottom-4
-    //   lg:bottom-4
-    //   left-4
-    //   z-[999999999]
-    //   flex
-    //   h-12
-    //   w-12
-    //   items-center
-    //   justify-center
-    //   rounded-full
-    //   bg-white
-    //   text-[#001732]
-    //   shadow-lg
-    //   transition-all
-    //   duration-300
-    //   hover:scale-110
-    //   cursor-pointer
-    //   animate-bounce
-    //   scrolltoptest
-    // "
-    //     >
     <div
       onClick={scrollToTop}
       aria-label="Scroll to top"
@@ -87,7 +60,6 @@ const DownloadScrollbtn = () => {
         DSW Magazine 2025-26
       </Link>
     </div>
-    // </button>
   );
 };
 
