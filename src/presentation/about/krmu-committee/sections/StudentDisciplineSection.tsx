@@ -1,7 +1,6 @@
 import { FileText } from "lucide-react";
 import Link from "next/link";
 import { StudentDiscipline } from "@/features/about/krmu-committee";
-import SectionDivider from "@/components/common/SectionDivider";
 
 type Props = StudentDiscipline;
 
