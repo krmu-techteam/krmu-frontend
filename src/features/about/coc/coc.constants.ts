@@ -1,0 +1,62 @@
+import { CodeOfConductDomain } from "./coc.types";
+
+export const EMPTY_CODE_OF_CONDUCT: CodeOfConductDomain = {
+  id: 0,
+  documentId: "",
+  createdAt: "",
+  updatedAt: "",
+  publishedAt: "",
+
+  breadcrumb: {
+    id: 0,
+    breadcrumbtext: "",
+    backgroundimage: {
+      id: 0,
+      name: "",
+      alternativeText: null,
+      caption: null,
+      width: 0,
+      height: 0,
+      formats: {},
+      hash: "",
+      ext: "",
+      mime: "",
+      size: 0,
+      url: "",
+      previewUrl: null,
+      provider: "",
+      provider_metadata: null,
+      createdAt: "",
+      updatedAt: "",
+      publishedAt: "",
+    },
+  },
+
+  cocitems: [
+    {
+      id: 0,
+      listtext: "",
+      listlink: "",
+      listicon: {
+        id: 0,
+        name: "",
+        alternativeText: null,
+        caption: null,
+        width: 0,
+        height: 0,
+        formats: {},
+        hash: "",
+        ext: "",
+        mime: "",
+        size: 0,
+        url: "",
+        previewUrl: null,
+        provider: "",
+        provider_metadata: null,
+        createdAt: "",
+        updatedAt: "",
+        publishedAt: "",
+      },
+    },
+  ],
+};

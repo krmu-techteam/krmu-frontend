@@ -1,13 +1,17 @@
-import Hero from "./comp/Hero";
-
+import {
+  GenderSensitisationSection,
+  AntiDiscriminationSection,
+  HeroSection,
+  InternalComplaintsSection,
+  AntiRaggingSection,
+  GrievanceRedressalSection,
+  StudentDisciplineSection,
+} from "@/presentation/about/krmu-committee";
 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
-
-
+import { getCommitteeService } from "@/features/about/krmu-committee";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("krmu-committee");
@@ -70,10 +74,28 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const page = () => {
+const KrmuCommitteePage = async () => {
+  const {
+    heroSection,
+    antiDiscriminationSection,
+    genderSensitisationSection,
+    internalComplaintsSection,
+    antiRaggingSection,
+    grievanceRedressalSection,
+    studentDisciplineSection,
+  } = await getCommitteeService().getStaticData();
+
   return (
-    <Hero />
+    <div className="pt-[140px] md:pt-[6.5%]">
+      <HeroSection {...heroSection} />
+      <AntiDiscriminationSection {...antiDiscriminationSection} />
+      <GenderSensitisationSection {...genderSensitisationSection} />
+      <InternalComplaintsSection {...internalComplaintsSection} />
+      <AntiRaggingSection {...antiRaggingSection} />
+      <GrievanceRedressalSection {...grievanceRedressalSection} />
+      <StudentDisciplineSection {...studentDisciplineSection} />
+    </div>
   );
 };
 
-export default page;
+export default KrmuCommitteePage;

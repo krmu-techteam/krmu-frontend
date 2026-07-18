@@ -1,17 +1,11 @@
-import { getCoC } from "@/lib/api/coc";
-
-import Image from "next/image";
-import Link from "next/link";
-import { STRAPI_URL } from "@/app/constant";
-
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
-
-
-
-
-
+import { STRAPI_URL } from "@/app/constant";
+import {
+  HeroSection,
+  CodeOfConductSection,
+} from "@/presentation/about/coc/sections";
+import { getCodeOfConductService } from "@/features/about/coc";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("coc");
@@ -75,62 +69,17 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const page = async () => {
-  const cocData = await getCoC();
-
-  const breadcrumb = cocData.breadcrumb;
-  const imageUrl = breadcrumb?.backgroundimage?.url;
-
-  const codeofconductlists = cocData.cocitems;
+  const codeOfConduct = await getCodeOfConductService().getData();
 
   return (
-    <>
-      {breadcrumb && (
-        <section
-          className="pt-32 md:pt-[187px] pb-[94px] px-2.5"
-          style={{
-            backgroundImage: imageUrl
-              ? `url(${STRAPI_URL}${imageUrl})`
-              : undefined,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="max-w-7xl mx-auto w-full text-center">
-            <h1 className="text-2xl md:text-4xl text-white font-bold">
-              {breadcrumb.breadcrumbtext}
-            </h1>
-          </div>
-        </section>
+    <div className="min-h-screen text-white">
+      {codeOfConduct.breadcrumb && (
+        <HeroSection {...codeOfConduct.breadcrumb} />
       )}
-      <section className="p-5 md:p-10">
-        <div className="max-w-[1600px] mx-auto w-full">
-          {codeofconductlists && (
-            <ul className="lg:pl-10 my-4">
-              {codeofconductlists.map((item) => {
-                return (
-                  <li key={item.id} className="mb-2.5 hover:text-[#0060aa]">
-                    <Link
-                      href={item.listlink}
-                      className="text-xl flex tracking-[-1px]"
-                      target="_blank" rel="noopener noreferrer"
-                    >
-                      <Image
-                        src={`${STRAPI_URL}${item.listicon.url}`}
-                        alt={item.listicon.alternativeText || ""}
-                        width={21}
-                        height={22}
-                        className="mr-4 object-contain"
-                      />
-                      {item.listtext}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          )}
-        </div>
-      </section>
-    </>
+      {codeOfConduct.cocitems && (
+        <CodeOfConductSection cocitems={codeOfConduct.cocitems} />
+      )}
+    </div>
   );
 };
 

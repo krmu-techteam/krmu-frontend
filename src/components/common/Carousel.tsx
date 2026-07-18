@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import React, { useCallback, useEffect, useState } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
-import { EmblaOptionsType } from 'embla-carousel';
-import Autoplay from 'embla-carousel-autoplay';
-import AutoScroll from 'embla-carousel-auto-scroll';
-import Fade from 'embla-carousel-fade';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useCallback, useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { EmblaOptionsType } from "embla-carousel";
+import Autoplay from "embla-carousel-autoplay";
+import AutoScroll from "embla-carousel-auto-scroll";
+import Fade from "embla-carousel-fade";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface CarouselProps {
   children: React.ReactNode;
@@ -26,6 +26,7 @@ interface CarouselProps {
   activeDotClassName?: string;
   dotClassName?: string;
   fade?: boolean;
+  setApi?: (api: any) => void;
 }
 
 export const Carousel = ({
@@ -38,14 +39,15 @@ export const Carousel = ({
   stopOnInteraction = false,
   showArrows = true,
   showDots = true,
-  className = '',
-  containerClassName = '',
-  slideClassName = '',
-  prevArrowClassName = '',
-  nextArrowClassName = '',
-  activeDotClassName = '',
-  dotClassName = '',
+  className = "",
+  containerClassName = "",
+  slideClassName = "",
+  prevArrowClassName = "",
+  nextArrowClassName = "",
+  activeDotClassName = "",
+  dotClassName = "",
   fade = false,
+  setApi,
 }: CarouselProps) => {
   const plugins = React.useMemo(() => {
     const list = [];
@@ -53,13 +55,26 @@ export const Carousel = ({
       list.push(Autoplay({ delay: autoplayDelay, stopOnInteraction }));
     }
     if (autoScroll) {
-      list.push(AutoScroll({ speed: autoScrollSpeed, stopOnInteraction, stopOnMouseEnter: true }));
+      list.push(
+        AutoScroll({
+          speed: autoScrollSpeed,
+          stopOnInteraction,
+          stopOnMouseEnter: true,
+        }),
+      );
     }
     if (fade) {
       list.push(Fade());
     }
     return list;
-  }, [autoplay, autoplayDelay, autoScroll, autoScrollSpeed, stopOnInteraction, fade]);
+  }, [
+    autoplay,
+    autoplayDelay,
+    autoScroll,
+    autoScrollSpeed,
+    stopOnInteraction,
+    fade,
+  ]);
 
   const [emblaRef, emblaApi] = useEmblaCarousel(options, plugins);
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
@@ -67,9 +82,18 @@ export const Carousel = ({
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
-  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
-  const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi],
+  );
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi],
+  );
+  const scrollTo = useCallback(
+    (index: number) => emblaApi && emblaApi.scrollTo(index),
+    [emblaApi],
+  );
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -82,20 +106,25 @@ export const Carousel = ({
     if (!emblaApi) return;
     onSelect();
     setScrollSnaps(emblaApi.scrollSnapList());
-    emblaApi.on('select', onSelect);
-    emblaApi.on('reInit', onSelect);
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
   }, [emblaApi, onSelect]);
+
+  useEffect(() => {
+    if (!emblaApi || !setApi) return;
+    setApi(emblaApi);
+  }, [emblaApi, setApi]);
 
   const childrenArray = React.Children.toArray(children);
 
   return (
     <div className={`relative ${className}`}>
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="overflow-hidden py-4 -my-4" ref={emblaRef}>
         <div className={`flex ${containerClassName}`}>
           {childrenArray.map((child, index) => (
-            <div 
-              key={index} 
-              className={`min-w-0 shrink-0 grow-0 ${slideClassName || 'basis-full'}`}
+            <div
+              key={index}
+              className={`min-w-0 shrink-0 grow-0 ${slideClassName || "basis-full"}`}
               data-active={index === selectedIndex}
             >
               {child}
@@ -132,8 +161,8 @@ export const Carousel = ({
               key={index}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 index === selectedIndex
-                  ? activeDotClassName || 'bg-brand-gold w-6'
-                  : dotClassName || 'bg-slate-300 dark:bg-white/20'
+                  ? activeDotClassName || "bg-brand-gold w-6"
+                  : dotClassName || "bg-slate-300 dark:bg-white/20"
               }`}
               onClick={() => scrollTo(index)}
               aria-label={`Go to slide ${index + 1}`}

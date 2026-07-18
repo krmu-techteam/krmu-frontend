@@ -2424,7 +2424,7 @@ body:before {
   }
 
   .transparent-table table thead tr:first-child {
-    background: #53575c;
+    background: #0055a4;
     padding: 10px 20px;
   }
 
@@ -2434,12 +2434,12 @@ body:before {
   }
 
   .transparent-table table th:first-child {
-    border-radius: 70px 0px 0px 70px;
+    border-radius: 4px 0px 0px 4px;
     padding: 10px 20px;
   }
 
   .transparent-table table th:nth-child(2) {
-    border-radius: 0 70px 70px 0px;
+    border-radius: 0px 4px 4px 0px;
   }
 
   .background-transparent {

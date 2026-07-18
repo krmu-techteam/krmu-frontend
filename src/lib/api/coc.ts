@@ -8,7 +8,7 @@ export async function getCoC(): Promise<COCType["data"]> {
       next: {
         revalidate: 3600,
       },
-    }
+    },
   );
   if (!res.ok) {
     throw new Error("Failed To fetch COC Data");

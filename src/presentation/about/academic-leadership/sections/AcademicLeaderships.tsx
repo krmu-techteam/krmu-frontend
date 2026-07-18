@@ -4,18 +4,13 @@ import { useState, useEffect } from "react";
 import { Carousel } from "@/components/common/Carousel";
 import type { AcademicLeadership } from "@/features/about/academic-leadership";
 import type { CarouselApi } from "@/components/ui/carousel";
-import {
-  AcademicLeaderCard,
-  AcademicLeaderDetails,
-} from "@/presentation/about/academic-leadership/components";
+import { AcademicLeaderCard, AcademicLeaderDetails } from "../components";
 
 type Props = {
   data: AcademicLeadership[];
 };
 
-export const AcademicLeaderships = ({ data }: Props) => {
-  if (!data || data.length === 0) return null;
-
+export const AcademicLeaderships: React.FC<Props> = ({ data }: Props) => {
   const [selectedLeader, setSelectedLeader] = useState<
     AcademicLeadership | undefined
   >(data?.[0]);
@@ -48,27 +43,28 @@ export const AcademicLeaderships = ({ data }: Props) => {
     };
   }, [api, data, selectedLeader]);
 
-  if (!selectedLeader) return null;
+  if (!data || data.length === 0 || !selectedLeader) return null;
 
   return (
-    <section className="pt-[120px] pb-20 bg-transparent">
-      <div className="max-w-[1664px] mx-auto w-full px-4">
+    <section className="pt-[150px] pb-20">
+      <div className="max-w-[1530px] mx-auto w-full px-4">
         {/* ================= TOP SECTION ================= */}
         <AcademicLeaderDetails
           key={selectedLeader.id}
           leader={selectedLeader}
         />
+
         {/* ================= BOTTOM CAROUSEL ================= */}
-        <div className="mt-24 relative px-4">
+        <div className="mt-12 relative">
           <Carousel
             options={{ align: "start", loop: true }}
             autoplay={false}
             showDots={false}
             className="w-full"
-            containerClassName="-ml-2"
-            slideClassName="basis-full sm:basis-1/2 md:basis-1/4 lg:basis-1/6 px-2 cursor-pointer"
-            prevArrowClassName="!-left-4 md:!-left-6 !rounded-full !w-11 !h-11 !bg-white/10 !text-white hover:!bg-white/20 disabled:!opacity-20 !border !border-white/10 !backdrop-blur-md"
-            nextArrowClassName="!-right-4 md:!-right-6 !rounded-full !w-11 !h-11 !bg-white/10 !text-white hover:!bg-white/20 disabled:!opacity-20 !border !border-white/10 !backdrop-blur-md"
+            containerClassName="-mr-1"
+            slideClassName="basis-full sm:basis-1/2 md:basis-1/4 lg:basis-1/6 px-0 cursor-pointer"
+            prevArrowClassName="!-left-4 md:!-left-6 !border-none !rounded-[4px] !w-10 !h-10 !bg-[#0C365A] !text-white hover:!bg-[#0C365A] disabled:!opacity-20"
+            nextArrowClassName="!-right-4 md:!-right-6 !border-none !rounded-[4px] !w-10 !h-10 !bg-[#0C365A] !text-white hover:!bg-[#0C365A] disabled:!opacity-20"
             setApi={setApi}
           >
             {data.map((leader) => (

@@ -1,18 +1,8 @@
-import { getAcademicLeadershipData } from "@/lib/api/academic-leadership";
-import { AcademicLeaderships } from "./comp/AcademicLeaderships";
-
-
-
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
-
-
-
-
+import { AcademicLeaderships } from "@/presentation/about/academic-leadership";
+import { getAcademicLeadershipService } from "@/features/about/academic-leadership";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("academic-leadership");
@@ -75,15 +65,10 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+const AcademicLeadershipPage = async () => {
+  const { academicLeadership } = await getAcademicLeadershipService().getData();
 
-const page = async () => {
-  const acadLeadershipData = await getAcademicLeadershipData();
-
-
-
-  const acadLeaderships = acadLeadershipData?.academic_leadership;
-
-  return <AcademicLeaderships data={acadLeaderships} />;
+  return <AcademicLeaderships data={academicLeadership} />;
 };
 
-export default page;
+export default AcademicLeadershipPage;
