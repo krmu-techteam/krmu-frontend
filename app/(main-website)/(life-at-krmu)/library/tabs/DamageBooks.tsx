@@ -4,7 +4,7 @@ const DamageBooks = () => {
   return (
     <div className="max-w-[1664px] mx-auto w-full libtabcontent ">
       <p>Preserving Resources</p>
-      <h2>Addressing Book Damages</h2>
+      <h1>Addressing Book Damages</h1>
       <p>
         The library has set procedures for handling damaged books, where
         borrowers may be asked to replace the book or pay a binding charge. This

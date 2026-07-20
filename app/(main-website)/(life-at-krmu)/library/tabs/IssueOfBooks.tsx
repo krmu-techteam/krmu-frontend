@@ -41,7 +41,7 @@ const IssueOfBooks = () => {
   return (
     <div className="libtabcontent">
       <p>Empowering Learning</p>
-      <h2>Efficient Book Issuance System</h2>
+      <h1>Efficient Book Issuance System</h1>
       <p>
         The university’s library facilitates an online request system for book
         issuance, prioritizing convenience and time-saving. With a limit of

@@ -103,7 +103,7 @@ const ContactUsForm = () => {
     <form onSubmit={handleSubmit}>
       <div className="Reach-Out-to-Us-form">
         <div className="title">
-          <p>Reach Out to Us</p>
+          <h1>Reach Out to Us</h1>
         </div>
 
         {/* Name */}

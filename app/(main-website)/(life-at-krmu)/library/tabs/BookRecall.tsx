@@ -4,13 +4,13 @@ const BookRecall = () => {
   return (
     <div className="max-w-[1664px] mx-auto w-full libtabcontent ">
       <p>Dynamic Resource Management</p>
-      <h2>Book Recall and Reservation</h2>
+      <h1>Book Recall and Reservation</h1>
       <p>
         The library’s system for recalling issued books and reserving desired
         ones ensures optimal circulation and availability of resources. This
         dynamic approach caters to the evolving needs of the academic community.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20 gap-10 temp-class">
         <div className="w-full relative libcountcard">
           <p>
             Library may recall any issued book, any time without assigning any

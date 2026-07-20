@@ -6,7 +6,7 @@ const PromptCorrection = () => {
     <div className="max-w-[1664px] mx-auto w-full libtabcontent flex flex-col lg:flex-row items-center gap-10">
       <div className="w-full lg:w-1/2">
         <p>Ensuring Accuracy</p>
-        <h2>Prompt Correction Services</h2>
+        <h1>Prompt Correction Services</h1>
         <p>
           The library provides an online platform for users to submit
           corrections or changes in their details, ensuring that communication
