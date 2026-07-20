@@ -1,0 +1,20 @@
+export const EMPTY_INTERNATIONAL_COLLABORATION = {
+  id: 0,
+  documentId: "",
+  createdAt: "",
+  updatedAt: "",
+  publishedAt: "",
+  title: [],
+  desc: "",
+  int_collab_btn: {
+    id: 0,
+    buttontext: "",
+    buttonlink: "",
+    buttonclass: "",
+    popupFormId: "",
+    containerPopupFormId: "",
+  },
+  int_collab_hero_grid: [],
+  intcollab_card: [],
+  int_collab_full_width_card: [],
+};

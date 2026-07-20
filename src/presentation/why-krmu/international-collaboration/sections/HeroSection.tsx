@@ -1,22 +1,20 @@
-import { ParagraphBlock } from "@/lib/types/about";
-import { Button } from "@/lib/types/home";
 import CommonButton from "@/components/common/Button";
-import { INTCOLLABHEROGRID } from "@/lib/types/international-collab";
-import { BlocksRenderer } from "@strapi/blocks-react-renderer";
- 
+import { Button, HeroGridItem } from "@/types/international-collaboration.types";
+import { BlocksContent, BlocksRenderer } from "@strapi/blocks-react-renderer";
+
 import Image from "next/image";
 import { Globe } from "lucide-react";
 
 type Props = {
-  title: ParagraphBlock[];
+  title: BlocksContent;
   desc: string;
   heroBtn: Button;
-  heroGrid: INTCOLLABHEROGRID[];
+  heroGrid: HeroGridItem[];
 };
 
 const HeroSection = ({ title, desc, heroBtn, heroGrid }: Props) => {
   // Helper to bold K.R. Mangalam University in the first paragraph if present
-  const renderParagraph = (text: string, isFirst: boolean) => {
+  const renderParagraph = (text: string | null | undefined, isFirst: boolean) => {
     if (!text) return null;
     const prefix = "K.R. Mangalam University";
     if (isFirst && text.startsWith(prefix)) {
@@ -28,19 +26,19 @@ const HeroSection = ({ title, desc, heroBtn, heroGrid }: Props) => {
       );
     }
     return (
-      <p className={`text-[14px] md:text-[15px] lg:text-[16px] leading-[1.7] font-poppins font-normal ${isFirst ? 'text-white' : 'text-white/80'}`}>
+      <p
+        className={`text-[14px] md:text-[15px] lg:text-[16px] leading-[1.7] font-poppins font-normal ${isFirst ? "text-white" : "text-white/80"}`}
+      >
         {text}
       </p>
     );
   };
 
   return (
-    <section className="relative pt-20 pb-16 overflow-hidden">
-      
+    <section className="relative pt-20 pb-10 md:pb-16 overflow-hidden">
       {/* Top Split Container - Constrained card layout matching bottom section */}
-      <div className="max-w-[1530px] mx-auto w-full px-0 md:px-12 xl:px-16 2xl:px-0 relative z-10 mb-0 md:mb-16">
-        <div className="w-full relative rounded-xs overflow-hidden border border-white/[0.05]">
-          
+      <div className="max-w-[1530px] mx-auto w-full px-0 md:px-12 xl:px-16 relative z-10 mb-0 md:mb-16">
+        <div className="w-full relative rounded-xs overflow-hidden">
           {/* Background Overlays - Contained inside the rounded card (Desktop only) */}
           <div className="absolute inset-0 z-0 hidden xl:flex flex-row">
             <div className="w-1/2 h-full bg-gradient-to-b from-[#1c3850] to-[#000000]" />
@@ -50,9 +48,8 @@ const HeroSection = ({ title, desc, heroBtn, heroGrid }: Props) => {
           {/* Content Container - No padding on mobile/tablet to allow edge-to-edge column backgrounds */}
           <div className="w-full relative z-10 pt-0 xl:pt-20 px-0 xl:pl-12 xl:pr-24 pb-0">
             <div className="flex flex-col-reverse xl:flex-row items-stretch xl:items-center justify-between gap-0 xl:gap-16">
-              
               {/* Left Column: Heading and Description */}
-              <div className="w-full xl:w-1/2 flex flex-col items-start text-left px-6 sm:px-10 md:px-16 lg:px-20 xl:px-0 xl:pr-6 py-12 xl:py-12">
+              <div className="w-full xl:w-1/2 flex flex-col items-start text-left px-6 sm:px-0 xl:pr-6 pt-12">
                 <div className="text-2xl sm:text-3xl md:text-4xl xl:text-[38px] 2xl:text-[46px] font-bold leading-[1.15] mb-6 font-serif text-white tracking-tight [&_p]:m-0 xl:whitespace-nowrap">
                   <BlocksRenderer content={title} />
                 </div>
@@ -82,6 +79,7 @@ const HeroSection = ({ title, desc, heroBtn, heroGrid }: Props) => {
                       fill
                       className="object-contain"
                       priority
+                      unoptimized
                     />
                   </div>
                 </div>
@@ -94,19 +92,19 @@ const HeroSection = ({ title, desc, heroBtn, heroGrid }: Props) => {
                     fill
                     className="object-contain object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)]"
                     priority
+                    unoptimized
                   />
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Section Container */}
-      <div className="max-w-[1530px] mx-auto w-full px-0 md:px-12 xl:px-16 2xl:px-0 relative z-20">
+      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-12 xl:px-16 pt-10 sm:pt-0 relative z-20">
         {/* Banner Layout - Spans full width of the 1530px container */}
-        <div className="w-full bg-[#132737] rounded-xs overflow-hidden flex flex-col xl:flex-row items-stretch  border border-white/[0.05]">
+        <div className="w-full bg-[#132737] rounded-xs overflow-hidden flex flex-col xl:flex-row items-stretch ">
           {/* Left Column: Image */}
           <div className="w-full xl:w-1/2 relative min-h-[300px] sm:min-h-[400px] lg:min-h-[450px] xl:min-h-auto">
             <Image
@@ -119,14 +117,13 @@ const HeroSection = ({ title, desc, heroBtn, heroGrid }: Props) => {
           </div>
 
           {/* Right Column: Text Content */}
-          <div className="w-full xl:w-1/2 p-6 md:p-8 lg:p-10 xl:p-11 flex flex-col justify-center gap-4 lg:gap-5 text-left bg-[#132737] relative z-10">
+          <div className="w-full xl:w-1/2 p-6 md:p-8 lg:p-10 xl:p-11 flex flex-col justify-center gap-4 lg:gap-5 text-left bg-[#061623] relative z-10">
             {renderParagraph(heroGrid[0]?.content, true)}
             {renderParagraph(heroGrid[1]?.content, false)}
             {renderParagraph(heroGrid[2]?.content, false)}
           </div>
         </div>
       </div>
-
     </section>
   );
 };

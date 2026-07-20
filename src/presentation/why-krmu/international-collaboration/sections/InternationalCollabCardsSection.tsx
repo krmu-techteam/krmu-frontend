@@ -1,27 +1,25 @@
 import { STRAPI_URL } from "@/app/constant";
 import {
-  INTCOLLABCARD,
-  INTCOLLABFULLWIDTHCARD,
-} from "@/lib/types/international-collab";
+  CollaborationCard,
+  FullWidthCard,
+} from "@/types/international-collaboration.types";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import Image from "next/image";
 
 type Props = {
-  intCollabCard: INTCOLLABCARD[];
-  intCollabFullWidthCard: INTCOLLABFULLWIDTHCARD[];
+  intCollabCard: CollaborationCard[];
+  intCollabFullWidthCard: FullWidthCard[];
 };
 
-const InternationalCollabCards = ({
+const InternationalCollabCardsSection = ({
   intCollabCard,
   intCollabFullWidthCard,
 }: Props) => {
   return (
     <section className="relative z-10 pb-16">
-      <div className="max-w-[1530px] mx-auto w-full px-4 md:px-8 xl:px-16 2xl:px-0 relative z-10">
-        
+      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-12 xl:px-16 relative z-10">
         {/* Main List Container */}
-        <div className="w-full border-2 border-white/[0.08] rounded-xs p-6 md:p-10 lg:p-14 flex flex-col gap-10 lg:gap-12 shadow-2xl">
-          
+        <div className="w-full border-1 border-[#666666] rounded-[4px] p-6 md:p-10 lg:p-14 flex flex-col gap-10 lg:gap-12">
           {/* Card Items */}
           {intCollabCard &&
             intCollabCard.map((item) => (
@@ -55,7 +53,7 @@ const InternationalCollabCards = ({
                 className="flex flex-col md:flex-row items-center gap-6 md:gap-10 lg:gap-12 pb-10 lg:pb-12 border-b border-white/[0.08] last:border-b-0 last:pb-0"
               >
                 {/* Left: Square White Logo Box */}
-                <div className="w-[260px] h-[180px] flex-shrink-0 bg-white rounded-sm flex items-center justify-center p-6 shadow-md hover:scale-[1.02] transition-transform duration-300">
+                <div className="w-[260px] h-[180px] flex-shrink-0 bg-white rounded-[2px] flex items-center justify-center p-6 hover:scale-[1.02] transition-transform duration-300">
                   <Image
                     src={`${STRAPI_URL}${item?.int_collab_full_width_card_img?.url}`}
                     width={220}
@@ -76,11 +74,10 @@ const InternationalCollabCards = ({
                 </div>
               </div>
             ))}
-            
         </div>
       </div>
     </section>
   );
 };
 
-export default InternationalCollabCards;
+export default InternationalCollabCardsSection;

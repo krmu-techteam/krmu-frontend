@@ -1,0 +1,2 @@
+export const INTERNATIONAL_COLLABORATION_QUERY =
+  "/api/international-collaboration?fields[0]=title&fields[1]=desc&populate[int_collab_btn]=true&populate[int_collab_hero_grid]=true&populate[intcollab_card][fields][0]=int_collab_card_content&populate[intcollab_card][populate][int_collab_img]=true&populate[int_collab_full_width_card][fields][0]=int_collab_full_width_content&populate[int_collab_full_width_card][populate][int_collab_full_width_card_img]=true";
