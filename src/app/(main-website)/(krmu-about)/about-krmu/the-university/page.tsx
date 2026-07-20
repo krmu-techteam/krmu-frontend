@@ -1,5 +1,3 @@
-
-
 import Image from "next/image";
 import Link from "next/link";
 import { getAboutKRMU } from "@/lib/api/about";
@@ -8,10 +6,9 @@ import { STRAPI_URL } from "@/app/constant";
 import AccrediationLogo from "../AccrediationLogo";
 import KRMUGroupCard from "../KRMUGroupCard";
 import HallofFame from "../HallofFame";
-import { AdvisoryOrDeanSection } from "@/presentation/about/sections";;
+import { AdvisoryOrDeanSection } from "@/presentation/about/about-us";
 import IndustryCollabLogos from "../IndustryCollabLogos";
 import { Eye, Target } from "lucide-react";
-
 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
@@ -91,7 +88,7 @@ const page = async () => {
       <section className="min-h-[1px] h-full pt-44 lg:h-[600px] bg-[url(/krmabout.webp)] bg-cover bg-bottom relative overflow-hidden">
         {/* Bottom-Weighted Dark Blue Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#051630] via-[#051630]/50 to-transparent z-0" />
-        
+
         <div className="max-w-[1440px] mx-auto w-full text-white h-full flex flex-col justify-center items-center text-center px-4 relative z-10">
           <div className="max-w-6xl w-full">
             <h1 className="text-2xl md:text-3xl lg:text-5xl xl:text-8xl font-bold mb-6 drop-shadow-[0_4px_15px_rgba(0,0,0,0.6)] leading-tight whitespace-normal md:whitespace-nowrap">
@@ -108,8 +105,8 @@ const page = async () => {
         <div className="max-w-[1440px] mx-auto w-full px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#051630]">
             {aboutData?.accrediation?.title}
-          </h2> 
-          
+          </h2>
+
           <div className="w-full pt-4 md:pt-8">
             <AccrediationLogo logosData={accrediationLogoData} />
           </div>
@@ -125,7 +122,7 @@ const page = async () => {
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-[#051630] mb-6 leading-tight">
               {KRMGRP?.subtitle}
-            </h2> 
+            </h2>
             <p className="text-slate-600 text-md md:text-lg max-w-8xl mx-auto leading-relaxed">
               {KRMGRP?.description}
             </p>
@@ -155,7 +152,6 @@ const page = async () => {
       </section>
       <section className="py-16 px-4 xl:px-8 bg-white overflow-hidden">
         <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-sm shadow-xl border border-slate-100">
-          
           {/* Vision Card - Dark Academic */}
           <div className="relative group p-8 md:p-10 xl:py-16 bg-[#051630] overflow-hidden min-h-[380px] flex flex-col justify-start">
             {/* Abstract Background Decoration */}
@@ -163,10 +159,14 @@ const page = async () => {
               V
             </div>
             {/* CSS Dot Pattern */}
-            <div className="absolute inset-0 opacity-[0.07] pointer-events-none" 
-              style={{ backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`, backgroundSize: '32px 32px' }} 
+            <div
+              className="absolute inset-0 opacity-[0.07] pointer-events-none"
+              style={{
+                backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+                backgroundSize: "32px 32px",
+              }}
             />
-            
+
             {/* Content */}
             <div className="relative z-10">
               <div className="inline-flex items-center justify-center p-4 bg-white/10 backdrop-blur-xl rounded-sm mb-10 border border-white/20 shadow-xl transition-transform duration-500 group-hover:scale-110">
@@ -191,8 +191,12 @@ const page = async () => {
               M
             </div>
             {/* CSS Grid Pattern */}
-            <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
-              style={{ backgroundImage: `linear-gradient(#051630 1.5px, transparent 1.5px), linear-gradient(90deg, #051630 1.5px, transparent 1.5px)`, backgroundSize: '48px 48px' }} 
+            <div
+              className="absolute inset-0 opacity-[0.02] pointer-events-none"
+              style={{
+                backgroundImage: `linear-gradient(#051630 1.5px, transparent 1.5px), linear-gradient(90deg, #051630 1.5px, transparent 1.5px)`,
+                backgroundSize: "48px 48px",
+              }}
             />
 
             {/* Content */}
@@ -214,7 +218,6 @@ const page = async () => {
         </div>
       </section>
 
-
       <section className="py-8 sm:py-16 px-4 md:px-0 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100">
         <div className="max-w-[1440px] mx-auto w-full">
           <div className="flex flex-wrap xl:flex-nowrap w-full">
@@ -231,7 +234,7 @@ const page = async () => {
                   Successful <br /> NEP <br /> Implementation
                 </h3>
               </div>
-            </div> 
+            </div>
             <div className="w-full xl:w-1/3">
               <div className="bg-[url(/stellar.webp)] bg-cover pt-20 md:pt-40 pb-8 px-6 h-[400px] md:h-[500px] text-white flex flex-col justify-end font-semibold">
                 <h4 className="text-3xl md:text-5xl mb-5">
