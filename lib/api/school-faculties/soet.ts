@@ -844,8 +844,8 @@ export const soetFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 6624,
     acf: {
-      "staff-qualification": "M.Sc. in Computer Science ",
-      staff_designation: "Teaching Assistant",
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
       schools: [1266],
     },
     featured_media_url:
@@ -853,7 +853,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
   },
 
   {
-    id: 115624,
+    id: 115905,
     slug: "ms-anjali-pal",
     title: {
       rendered: "Ms. Anjali Pal",
@@ -865,7 +865,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
       schools: [1266],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/anjali-pal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/anjali-pal-2.png",
   },
   {
     id: 115620,
@@ -926,22 +926,9 @@ export const soetFaculties: SchoolFacultiesType[] = [
       staff_designation: "Assistant Professor",
       schools: [1266],
     },
-    featured_media_url: "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Niraj-Kumar.png",
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Niraj-Kumar.png",
   },
-  // {
-  //   id: 115624,
-  //   slug: "ms-anjali-pal",
-  //   title: {
-  //     rendered: "Ms. Anjali Pal",
-  //   },
-  //   featured_media: 6624,
-  //   acf: {
-  //     "staff-qualification": "Ph.D.",
-  //     staff_designation: "Assistant Professor",
-  //     schools: [1266],
-  //   },
-  //   featured_media_url: "",
-  // },
   // {
   //   id: 115623,
   //   slug: "ms-aayushi-bansal",
