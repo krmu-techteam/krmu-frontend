@@ -13,7 +13,7 @@ const NssMottoSection = ({
         backgroundImage: "linear-gradient(97deg,#051630 0%,#0060aa 99%)",
       }}
     >
-      <div className="max-w-[1530px] font-poppins mx-auto w-full text-white px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] font-poppins mx-auto w-full text-white px-6 md:px-8 xl:px-16">
         <div className="w-full lg:w-1/2">
           <h3 className="text-3xl md:text-5xl font-semibold mb-5 leading-[1.2]">
             {heading}

@@ -1,9 +1,12 @@
-import { BlocksRenderer, type BlocksContent } from "@strapi/blocks-react-renderer";
-import Link from "next/link";
+import {
+  BlocksRenderer,
+  type BlocksContent,
+} from "@strapi/blocks-react-renderer";
 import Image from "next/image";
 import { IndustryCollabCarousel } from "../components";
 import { StrapiMedia } from "@/lib/types/common";
 import SectionDivider from "@/components/common/SectionDivider";
+import Button from "@/components/common/Button";
 
 interface GlobalPartnershipsSectionProps {
   aboutData?: {
@@ -20,10 +23,13 @@ interface GlobalPartnershipsSectionProps {
     [key: string]: unknown;
   };
 }
-const GlobalPartnershipsSection = ({ aboutData }: GlobalPartnershipsSectionProps) => {
-    return (
-        <section className="py-0 sm:py-0 lg:py-12 xl:py-16 px-0 sm:px-10 lg:px-12 xl:px-16 bg-transparent relative">
-        <div className="max-w-[1530px] mx-auto w-full bg-gradient-to-r from-[#061623] via-[#061623] to-[#061623]/20 rounded-[4px] flex flex-col-reverse lg:flex-row items-stretch overflow-hidden">
+const GlobalPartnershipsSection = ({
+  aboutData,
+}: GlobalPartnershipsSectionProps) => {
+  return (
+    <section className="py-8 md:py-12 xl:py-20 bg-transparent relative">
+      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
+        <div className="w-full bg-[#061623]/30 rounded-[4px] flex flex-col-reverse lg:flex-row items-stretch overflow-hidden">
           <div className="w-full lg:w-[60%] text-white px-6 py-8 lg:p-10 xl:p-14 flex flex-col justify-center">
             <h3 className="heading-primary mb-6 text-center md:text-left">
               {aboutData?.internationcollaboration?.title}
@@ -37,27 +43,24 @@ const GlobalPartnershipsSection = ({ aboutData }: GlobalPartnershipsSectionProps
               aboutData?.internationcollaboration?.intcollabbtn
                 ?.buttonclass) && (
               <div className="mb-10 flex justify-center lg:justify-start">
-                <Link
+                <Button
                   href={
                     aboutData?.internationcollaboration?.intcollabbtn
                       ?.buttonlink || "#"
                   }
-                  className="relative overflow-hidden group inline-flex items-center justify-center px-8 py-3 bg-transparent border border-white/40 text-white text-[15px] transition-colors  duration-300 rounded-[3px] tracking-wider"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  className="bg-transparent text-white border-white/40 font-poppins font-medium"
                 >
-                  <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
-                  <span className="relative z-10 font-poppins font-medium">
-                    {aboutData?.internationcollaboration?.intcollabbtn
-                      ?.buttontext || "KNOW MORE"}
-                  </span>
-                </Link>
+                  {aboutData?.internationcollaboration?.intcollabbtn
+                    ?.buttontext || "KNOW MORE"}
+                </Button>
               </div>
             )}
             <div className="w-full max-w-[850px]">
               <IndustryCollabCarousel
                 indusLogos={
-                  aboutData?.internationcollaboration?.internationcollablogos || []
+                  aboutData?.internationcollaboration?.internationcollablogos ||
+                  []
                 }
               />
             </div>
@@ -72,9 +75,10 @@ const GlobalPartnershipsSection = ({ aboutData }: GlobalPartnershipsSectionProps
             />
           </div>
         </div>
-        <SectionDivider />
-      </section>
-    );
+      </div>
+      <SectionDivider />
+    </section>
+  );
 };
 
 export default GlobalPartnershipsSection;

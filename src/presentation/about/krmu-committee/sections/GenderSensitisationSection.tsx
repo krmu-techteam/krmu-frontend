@@ -14,7 +14,7 @@ const GenderSensitisationSection: React.FC<Props> = ({
 }) => {
   return (
     <section className="relative py-8 md:py-12 xl:py-20">
-      <div className="max-w-[1530px] mx-auto w-full flex gap-5 flex-col lg:flex-row px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full flex gap-5 flex-col lg:flex-row px-6 md:px-8 xl:px-16">
         <div className="w-full lg:w-1/2 flex flex-col gap-5">
           <div className="bg-[#061623] text-white rounded-[4px] p-6 md:p-10 font-poppins">
             <h5 className="text-2xl font-semibold font-serif mb-5">{title}</h5>

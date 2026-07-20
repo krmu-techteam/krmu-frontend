@@ -3,12 +3,10 @@ import Image from "next/image";
 
 const YourPathsuccessSection = () => {
   return (
-    <section className="relative z-5 py-10 lg:py-[20%] lg:bg-[url(/placements/Your-Path-to-Success-1.webp)] bg-cover bg-center px-6 md:px-7 xl:px-16">
+    <section className="relative z-5 py-10 lg:py-[20%] lg:bg-[url(/placements/Your-Path-to-Success-1.webp)] bg-cover bg-center px-6 md:px-8 xl:px-16">
       <div className="max-w-[1530px] mx-auto w-full lg:flex lg:text-white">
         <div className="lg:w-1/2">
-          <h2 className="heading-primary mb-3 lg:mb-5">
-            Your Path to Success
-          </h2>
+          <h2 className="heading-primary mb-3 lg:mb-5">Your Path to Success</h2>
           <p className="font-poppins">
             Students, who once register for a particular company, must present
             themselves on the day of the visit, failing to which they may get

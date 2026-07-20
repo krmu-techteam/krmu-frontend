@@ -88,7 +88,7 @@ const NewsAndEventsCards = () => {
 
   return (
     <section>
-      <div className="max-w-[1530px] mx-auto px-6 md:px-7 xl:px-16 w-full py-10">
+      <div className="max-w-[1530px] mx-auto px-6 md:px-8 xl:px-16 w-full py-10">
         {/* News Cards or Skeleton Loaders */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {loading

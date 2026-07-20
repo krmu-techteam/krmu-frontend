@@ -14,7 +14,7 @@ import {
   GlobalPartnershipsSection,
   KrmuCommitteeSection,
   HeroSection,
-} from "@/presentation/about/sections";
+} from "@/presentation/about/about-us";
 import { getAboutService, IAboutService } from "@/features/about/about-us";
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("the-university");

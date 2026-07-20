@@ -12,7 +12,7 @@ export default function AccreditationsSection({
 }) {
   return (
     <section className="pt-40 pb-20 min-h-screen relative overflow-hidden">
-      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-7 xl:px-16 relative z-10">
+      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16 relative z-10">
         {/* Section Header */}
         <div className="mb-12 px-4 lg:px-0 text-center md:text-left">
           <h3 className="text-3xl sm:text-5xl lg:text-[56px] font-bold text-white tracking-tight font-poppins leading-tight">

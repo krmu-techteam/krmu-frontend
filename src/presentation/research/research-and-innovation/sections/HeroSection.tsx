@@ -7,7 +7,7 @@ const HeroSection = ({ heroSection }: { heroSection: HeroSectionProps }) => {
   const { title, description, imageUrl, links } = heroSection;
   return (
     <section className="relative pt-[140px] sm:pt-32 pb-6 px-4">
-      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row gap-16 lg:mt-5 px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row gap-16 lg:mt-5 px-6 md:px-8 xl:px-16">
         <div className="lg:w-1/2">
           <h1 className="text-3xl md:text-4xl text-white md:text-[64px] md:mt-12 md:mb-8 leading-[1.2] font-semibold mb-5">
             {title}

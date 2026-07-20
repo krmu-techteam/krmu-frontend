@@ -11,7 +11,7 @@ const AwardsSection = ({
 
   return (
     <section className="py-[60px] bg-[url(/gradient-4.webp)] font-poppins bg-cover bg-no-repeat bg-center">
-      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
         <div>
           <h4 className="text-2xl mb-10 text-white font-semibold text-center">
             {heading}

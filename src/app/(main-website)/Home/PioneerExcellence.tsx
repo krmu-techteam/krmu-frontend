@@ -3,8 +3,8 @@ import TimelineCarousel from "../components/Carousels/TimelineCarousel";
 const PioneerExcellence = () => {
   return (
     <>
-      <section className="pt-8 sm:pt-10 lg:pt-12 xl:pt-16">
-        <div className="max-w-[1530px] mx-auto w-full lg:mb-16 mb-8 px-6 sm:px-10 lg:px-12 xl:px-16">
+      <section className="pt-8 sm:pt-10 lg:pt-12 xl:pt-16 overflow-hidden">
+        <div className="max-w-[1530px] mx-auto w-full lg:mb-16 mb-8 px-6 md:px-8 xl:px-16">
           <h3 className="heading-primary mb-6">
             K.R. Mangalam Group: Pioneering Excellence in Education
           </h3>
@@ -27,7 +27,7 @@ const PioneerExcellence = () => {
             excel.
           </p>
         </div>
-        <div className="max-w-[1530px] mx-auto w-full">
+        <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16 overflow-hidden">
           <TimelineCarousel />
         </div>
       </section>

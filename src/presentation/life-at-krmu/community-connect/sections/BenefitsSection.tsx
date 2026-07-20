@@ -9,7 +9,7 @@ const BenefitsSection = ({
   const { heading, imageUrl, points } = benefitsSection;
   return (
     <section className="bg-[url(/bg-gradient-2.webp)] py-[50px]">
-      <div className="max-w-[1530px] mx-auto w-full font-poppins flex flex-col lg:flex-row gap-10 px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full font-poppins flex flex-col lg:flex-row gap-10 px-6 md:px-8 xl:px-16">
         <div className="lg:w-1/2 mb-5">
           <div className="py-[30px] md:pl-[40px] md:pr-[30px] text-white border border-[#0060aa5e] bg-[#0060aa5e]  rounded-b-[20px]">
             <p className="text-2xl mt-2.5 mb-[15px]">{heading}</p>

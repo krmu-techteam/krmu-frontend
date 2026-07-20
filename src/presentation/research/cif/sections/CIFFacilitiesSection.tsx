@@ -9,7 +9,7 @@ const CIFFacilitiesSection = ({
   const { title, facilities } = cifFacilitiesSection;
   return (
     <section className="py-8 md:py-12 lg:py-20 bg-[url(/research/facbg.webp)] bg-cover bg-center">
-      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
         <h4 className="text-3xl md:text-5xl text-white font-semibold mb-5">
           {title}
         </h4>

@@ -9,7 +9,7 @@ const NextGenerationSection = ({
   thenexgendescription,
 }: NextGenerationSectionProps) => {
   return (
-    <section className="relative overflow-hidden py-8 sm:py-12 lg:py-20 px-6 sm:px-10 lg:px-12 xl:px-16">
+    <section className="relative overflow-hidden py-8 sm:py-12 lg:py-20 px-6 md:px-8 xl:px-16">
       <div className="relative z-10 max-w-5xl mx-auto text-center text-white">
         <h2 className="font-serif text-center md:text-pretty lg:text-center text-[24px] md:text-[34px]  lg:text-[42px] font-medium md:leading-[1.2] leading-[1.4] mb-6 md:mb-8 tracking-wide">
           {thenexgentitle}

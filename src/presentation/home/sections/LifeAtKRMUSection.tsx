@@ -75,7 +75,7 @@ export function LifeAtKRMUSection() {
       </div>
 
       {/* Feature Cards Grid - Premium Dark Theme */}
-      <div className="max-w-[1530px] mx-auto relative z-10 px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto relative z-10 px-6 md:px-8 xl:px-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 xl:gap-5">
           {LIFE_AT_KRMU_CAROUSEL_CONFIGS.map((card, i) => (
             <div

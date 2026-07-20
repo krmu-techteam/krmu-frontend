@@ -9,7 +9,7 @@ const CommitteeSection = ({
     committeeSection;
   return (
     <section className="py-8 md:py-12 xl:py-20 bg-[url(/bg-gradient.webp)] font-poppins">
-      <div className="max-w-[1530px] mx-auto w-full text-white px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full text-white px-6 md:px-8 xl:px-16">
         <h2 className="text-3xl md:text-5xl mb-5 font-bold">{heading}</h2>
         <p>{description}</p>
         <br />

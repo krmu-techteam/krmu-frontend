@@ -14,7 +14,7 @@ const EligibilitySection = ({
       }}
       className="py-[50px]"
     >
-      <div className="max-w-[1530px] font-poppins mx-auto w-full px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] font-poppins mx-auto w-full px-6 md:px-8 xl:px-16">
         <div className="text-center text-white font-bold">
           <h3 className="mb-5">{joinCriteria?.heading}</h3>
         </div>

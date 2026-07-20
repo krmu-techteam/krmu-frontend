@@ -16,7 +16,7 @@ const CampusLifeSection = ({
       id="lifeBeyond"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(0,160,227,0.15),transparent_50%)]" />
-      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20 px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20 px-6 md:px-8 xl:px-16">
         <div className="w-full lg:w-1/2 text-white">
           <h2 className="text-3xl md:text-[42px] text-center pr-64 md:text-left font-bold leading-tight mb-8">
             {title}

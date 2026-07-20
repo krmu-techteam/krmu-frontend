@@ -9,7 +9,7 @@ const CommitteeSection = ({
   const { heading, subHeading, imageUrl, members } = committeeSection;
   return (
     <section className="pt-[6%] pb-[9%] bg-[url(/bg-gradient.webp)]">
-      <div className="max-w-[1530px] px-6 md:px-7 xl:px-16 mx-auto w-full text-white font-poppins ">
+      <div className="max-w-[1530px] px-6 md:px-8 xl:px-16 mx-auto w-full text-white font-poppins ">
         <h2 className="text-3xl md:text-5xl mb-5 font-bold">{heading}</h2>
         <div className="flex pt-10">
           <div className="w-1/2">

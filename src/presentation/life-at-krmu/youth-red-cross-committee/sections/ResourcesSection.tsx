@@ -10,7 +10,7 @@ const ResourcesSection = ({
   const { objectiveContent, magazineContent } = resourcesSection;
   return (
     <section className="bg-[url(/bg-gradient-2.webp)] py-8 md:py-12 xl:py-20">
-      <div className="max-w-[1530px] mx-auto w-full flex font-poppins flex-col lg:flex-row gap-10 px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full flex font-poppins flex-col lg:flex-row gap-10 px-6 md:px-8 xl:px-16">
         <div className="lg:w-1/2">
           <div className="py-[20px] md:pl-[30px] md:pr-[30px] text-white border border-[#0060aa5e] bg-[#0060aa5e] min-h-[1px] h-full rounded-xs">
             <p className="text-2xl mt-2.5 mb-[15px]">

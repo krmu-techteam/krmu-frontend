@@ -10,11 +10,13 @@ interface KRMBRANCHPROP {
 
 const InstitutionGrid: React.FC<KRMBRANCHPROP> = ({ krmBranchImages }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-6 justify-center">
-      {krmBranchImages?.map((branch) => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5 lg:gap-6 justify-center">
+      {krmBranchImages?.map((branch, index) => (
         <div
           key={branch?.id}
-          className="group relative overflow-hidden rounded-[12px] cursor-pointer w-full lg:w-[230px] h-[250px] mx-auto bg-[#061623]"
+          className={`group relative overflow-hidden rounded-[12px] cursor-pointer w-full h-[250px] mx-auto bg-[#061623] ${
+            (index + 1) % 5 === 0 ? "hidden xl:block" : "block"
+          }`}
         >
           <Image
             src={`${STRAPI_URL}${branch?.url}`}

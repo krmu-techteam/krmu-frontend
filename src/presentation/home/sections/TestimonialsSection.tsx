@@ -34,7 +34,7 @@ export function TestimonialsSection({
       <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
 
       <div className="max-w-[1530px] mx-auto relative z-10">
-        <div className="px-6 md:px-7 xl:px-16">
+        <div className="px-6 md:px-8 xl:px-16">
           <SectionTitle
             title={title || "What our Learners say?"}
             className="mb-0"
@@ -52,7 +52,7 @@ export function TestimonialsSection({
           {list.map((t, index) => (
             <div
               key={t.id}
-              className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] items-center pt-8 mb-4 px-6 md:px-7 xl:px-16"
+              className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] items-center pt-8 mb-4 px-6 md:px-8 xl:px-16"
             >
               {/* Left Column - Content */}
               <div className="flex flex-col md:min-h-[400px] relative pt-4 md:pt-0">

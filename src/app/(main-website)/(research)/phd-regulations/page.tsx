@@ -1,6 +1,9 @@
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { getHeroSectionContent } from "@/features/research/phd-regulations";
-import { HeroSection, PHDRegulationCardSection } from "@/presentation/research/phd-regulations/sections";;
+import {
+  HeroSection,
+  PHDRegulationCardSection,
+} from "@/presentation/research/phd-regulations/sections";
 
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
@@ -71,7 +74,7 @@ const page = async () => {
   return (
     <>
       <section className="pt-[140px] lg:pt-[10%] md:pb-[100px]">
-        <div className="max-w-[1530px] mx-auto w-full px-6 md:px-7 xl:px-16">
+        <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
           <HeroSection heroSection={data.heroSection} />
           <PHDRegulationCardSection
             regulationCards={data.regulationCards}

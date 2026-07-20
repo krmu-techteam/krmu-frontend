@@ -11,7 +11,7 @@ const ActivityGallerySection = ({
   return (
     <>
       <section className="relative py-8 md:py-12 xl:py-20">
-        <div className="max-w-[1530px] mx-auto w-full text-white font-poppins px-6 md:px-7 xl:px-16">
+        <div className="max-w-[1530px] mx-auto w-full text-white font-poppins px-6 md:px-8 xl:px-16">
           <h4 className="text-2xl font-semibold">{heading}</h4>
           {categories?.map((category, idx) => {
             return (

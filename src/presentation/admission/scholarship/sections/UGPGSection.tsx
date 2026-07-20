@@ -66,7 +66,7 @@ const UGPGSection = () => {
               className="w-full"
               defaultValue="item-1"
             >
-              <div className="max-w-[1530px] mx-auto px-6 md:px-7 xl:px-16  ">
+              <div className="max-w-[1530px] mx-auto px-6 md:px-8 xl:px-16  ">
                 <AccordionItem value="item-1" className="mb-[30px]">
                   <AccordionTrigger
                     className="rounded-[4px] data-[state=open]:rounded-b-none py-2.5 px-[30px] text-base md:text-xl md:leading-[1.83] text-white hover:no-underline cursor-pointer ugpgacctab"
@@ -137,21 +137,33 @@ const UGPGSection = () => {
                     <p className="font-semibold text-center mb-5 text-white">
                       CUET -1 (On the basis percentage of best 4 subjects score)
                     </p>
-                    <CustomTable headers={eligibilityHeaders} rows={cuet1Rows} />
+                    <CustomTable
+                      headers={eligibilityHeaders}
+                      rows={cuet1Rows}
+                    />
 
                     <p className="font-semibold text-center my-5 text-white">
                       CUET -2 (On the basis average percentile of best 4
                       subjects)
                     </p>
-                    <CustomTable headers={eligibilityHeaders} rows={cuet2Rows} />
+                    <CustomTable
+                      headers={eligibilityHeaders}
+                      rows={cuet2Rows}
+                    />
 
-                    <p className="font-semibold text-center my-5 text-white">JEE (MAIN)</p>
+                    <p className="font-semibold text-center my-5 text-white">
+                      JEE (MAIN)
+                    </p>
                     <CustomTable headers={eligibilityHeaders} rows={jeeRows} />
 
-                    <p className="font-semibold text-center my-5 text-white">CLAT Rank</p>
+                    <p className="font-semibold text-center my-5 text-white">
+                      CLAT Rank
+                    </p>
                     <CustomTable headers={eligibilityHeaders} rows={clatRows} />
 
-                    <p className="font-semibold text-center my-5 text-white">NATA</p>
+                    <p className="font-semibold text-center my-5 text-white">
+                      NATA
+                    </p>
                     <CustomTable headers={eligibilityHeaders} rows={nataRows} />
 
                     <CustomTable
@@ -175,7 +187,7 @@ const UGPGSection = () => {
               className="w-full"
               defaultValue="item-1"
             >
-              <div className="max-w-[1530px] mx-auto px-6 md:px-7 xl:px-16">
+              <div className="max-w-[1530px] mx-auto px-6 md:px-8 xl:px-16">
                 <AccordionItem value="item-1" className="mb-[30px]">
                   <AccordionTrigger
                     className="rounded-[12px] data-[state=open]:rounded-b-none py-2.5 px-[30px] text-base md:text-2xl md:leading-[1.83] text-white hover:no-underline cursor-pointer ugpgacctab"
@@ -216,7 +228,10 @@ const UGPGSection = () => {
                       borderBottomRightRadius: "4px",
                     }}
                   >
-                    <CustomTable headers={pgNonMbaHeaders} rows={pgNonMbaRows} />
+                    <CustomTable
+                      headers={pgNonMbaHeaders}
+                      rows={pgNonMbaRows}
+                    />
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3" className="mb-[30px]">
@@ -269,7 +284,10 @@ const UGPGSection = () => {
                     }}
                   >
                     <p className="text-center font-semibold my-5">UG to PG</p>
-                    <CustomTable headers={pgAlumniHeaders} rows={pgAlumniRows} />
+                    <CustomTable
+                      headers={pgAlumniHeaders}
+                      rows={pgAlumniRows}
+                    />
                   </AccordionContent>
                 </AccordionItem>
               </div>

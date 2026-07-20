@@ -4,10 +4,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
- 
+
 import { BankLoan, NBFCARDS } from "@/lib/types/financialAssistance";
 import { LoanProviderCard } from "../components";
- 
 
 type Props = {
   bankLoansCards: BankLoan;
@@ -18,7 +17,7 @@ const LoanProviderSection = ({ bankLoansCards, nbfccardsData }: Props) => {
   return (
     <>
       <section className="my-12 px-4">
-        <div className="max-w-[1530px] px-6 md:px-7 xl:px-16 mx-auto w-full">
+        <div className="max-w-[1530px] px-6 md:px-8 xl:px-16 mx-auto w-full">
           <Accordion
             type="single"
             collapsible

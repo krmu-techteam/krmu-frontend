@@ -1,5 +1,3 @@
- 
-
 // data/scholarTestimonials.ts
 
 import { TestimonialSlider } from "../components";
@@ -184,9 +182,11 @@ export const scholarTestimonials: ScholarTestimonial[] = [
 const TestimonialSection = () => {
   return (
     <section className="py-5 lg:py-10">
-      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
         <div className="text-center">
-          <h3 className="text-2xl md:text-5xl lg:text-[64px] font-semibold  text-white mb-5">Hear From Our Students</h3>
+          <h3 className="text-2xl md:text-5xl lg:text-[64px] font-semibold  text-white mb-5">
+            Hear From Our Students
+          </h3>
           <p className="mb-10 text-white font-poppins">
             Hear from our scholarship awardees as they share how merit,
             dedication, and KRMU’s support helped them reach new heights.

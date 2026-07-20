@@ -17,7 +17,7 @@ export const Leaderships = ({ data }: Props) => {
 
   return (
     <section className="pt-[120px] pb-20">
-      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
         {/* ================= TOP SECTION ================= */}
         <LeaderDetails key={selectedLeader.id} leader={selectedLeader} />
 

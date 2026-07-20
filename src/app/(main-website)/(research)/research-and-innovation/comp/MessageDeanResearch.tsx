@@ -1,13 +1,13 @@
 const MessageDeanResearch = () => {
   return (
-    <div className="max-w-[1530px] mx-auto w-full px-6 md:px-7 xl:px-16 text-white flex flex-col lg:flex-row items-center gap-10 mt-10 lg:mt-0">
+    <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16 text-white flex flex-col lg:flex-row items-center gap-10 mt-10 lg:mt-0">
       <div className="lg:w-1/2">
         <h3 className="text-3xl md:text-[42px] font-bold mb-5">
           Message from the Dean Research
         </h3>
         <div className="  text-white leading-[2] text-justify">
           <p className="text-lg font-medium">
-              Greetings from Team Research & Development of (RDC) Cell
+            Greetings from Team Research & Development of (RDC) Cell
           </p>
           <br />
           <p className="font-poppins">
@@ -47,7 +47,7 @@ const MessageDeanResearch = () => {
             ‘Atma Nirbhar Bharat’, ‘Technology-enabled development, energy
             transition and climate action’, ‘Swachh Bharat’, ‘Ayushman Bharat’,
             ‘Atal Innovation Mission’ ‘Skill Development’
-           </span>
+          </span>
           etc.
         </p>
       </div>

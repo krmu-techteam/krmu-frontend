@@ -4,7 +4,7 @@ import { HeroSectionProps } from "@/features/research/cif";
 const HeroSection = ({ heroSection }: { heroSection: HeroSectionProps }) => {
   const { title, imageUrl } = heroSection;
   return (
-    <section className="pt-[25%] md:pt-[7%] pb-3 bg-[url(/research/cifbg.webp)] bg-no-repeat bg-cover bg-center relative before:content-[''] before:absolute before:top-0 before:lft-0 before:w-full before:h-full before:bg-[#ffffffcc] px-6 md:px-7 xl:px-16">
+    <section className="pt-[25%] md:pt-[7%] pb-3 bg-[url(/research/cifbg.webp)] bg-no-repeat bg-cover bg-center relative before:content-[''] before:absolute before:top-0 before:lft-0 before:w-full before:h-full before:bg-[#ffffffcc] px-6 md:px-8 xl:px-16">
       <div className="max-w-[1530px] mx-auto w-full md:flex items-center justify-between">
         <div className="md:w-1/3 flex justify-center md:block">
           <Image

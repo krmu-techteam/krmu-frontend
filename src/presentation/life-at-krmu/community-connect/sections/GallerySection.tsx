@@ -17,7 +17,7 @@ const GallerySection = ({ NSSCommunityConnectData }: Props) => {
   const data = NSSCommunityConnectData?.nss_connect_connect_img_grid;
   return (
     <section className="py-5">
-      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
         {data &&
           data?.map((item, i) => {
             return (

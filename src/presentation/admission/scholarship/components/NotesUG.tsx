@@ -28,7 +28,7 @@ const NotesUG = () => {
 
   return (
     <section className="bg-[url(/scholarship/notes-bg.webp)] bg-cover bg-no-repeat py-[30px] mt-10">
-      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
         <h3 className="text-5xl text-white font-semibold mb-8">Notes:</h3>
         <div className="flex flex-col lg:flex-row lg:gap-5">
           <div className="w-full lg:w-4/12 flex flex-col gap-5 justify-between">

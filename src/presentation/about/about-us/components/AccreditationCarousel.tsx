@@ -47,12 +47,12 @@ const AccreditationCarousel: React.FC<AccreditationCarouselProps> = ({
         showDots={canScroll}
         showArrows={false}
         className="w-full"
-        containerClassName="-ml-2 md:-ml-4"
-        slideClassName="pl-4 md:pl-6 basis-auto"
+        containerClassName="-ml-2 sm:-ml-4 md:-ml-6"
+        slideClassName="pl-2 sm:pl-4 md:pl-6 basis-1/2 sm:basis-auto"
       >
         {logosData?.map((logo) => (
           <div key={logo?.id} className="h-full">
-            <div className="flex items-center justify-center w-[151px] h-[135px] bg-white border border-slate-200 rounded-[4px] shadow-sm hover:shadow-md hover:border-[#00A0E3]/30 transition-all duration-300 overflow-hidden group">
+            <div className="flex items-center justify-center w-full sm:w-[151px] h-[135px] bg-white border border-slate-200 rounded-[4px] shadow-sm hover:shadow-md hover:border-[#00A0E3]/30 transition-all duration-300 overflow-hidden group">
               <Image
                 src={`${STRAPI_URL}${logo?.url}`}
                 alt={logo?.alternativeText || "Accreditation Logo"}

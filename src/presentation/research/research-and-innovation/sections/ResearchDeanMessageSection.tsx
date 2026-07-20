@@ -15,7 +15,7 @@ const ResearchDeanMessageSection = ({
     description_four,
   } = researchDeanMessageSection;
   return (
-    <section className="relative pb-8 md:pb-12 xl:pb-20 max-w-[1530px] mx-auto w-full px-6 md:px-7 xl:px-16 text-white flex flex-col lg:flex-row items-center gap-10 mt-10 lg:mt-0">
+    <section className="relative pb-8 md:pb-12 xl:pb-20 max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16 text-white flex flex-col lg:flex-row items-center gap-10 mt-10 lg:mt-0">
       <div className="lg:w-1/2">
         <h3 className="text-3xl md:text-[42px] font-bold mb-5">{title}</h3>
         <div className="  text-white leading-[2] text-justify">

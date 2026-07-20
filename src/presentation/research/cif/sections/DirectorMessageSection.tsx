@@ -8,7 +8,7 @@ const DirectorMessageSection = ({
 }) => {
   const { title, message, imageUrl, name, role } = directorMessageSection;
   return (
-    <div className="max-w-[1530px] mx-auto w-full lg:flex items-center gap-10 px-6 md:px-7 xl:px-16 pt-8 md:pt-12 xl:pt-20">
+    <div className="max-w-[1530px] mx-auto w-full lg:flex items-center gap-10 px-6 md:px-8 xl:px-16 pt-8 md:pt-12 xl:pt-20">
       <div className="lg:w-[70%] text-white">
         <h2 className="text-2xl md:text-5xl font-bold mb-5 md:mb-10">
           {title}

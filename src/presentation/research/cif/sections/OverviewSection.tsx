@@ -14,7 +14,7 @@ const OverviewSection = ({
 
   return (
     <section className="bg-[url(/research/ciintegralbg.webp)] bg-cover bg-no-repeat bg-center py-8 md:py-12 xl:py-20">
-      <div className="max-w-[1530px] mx-auto w-full text-white ciful md:flex gap-10 px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full text-white ciful md:flex gap-10 px-6 md:px-8 xl:px-16">
         <div className="md:w-3/5">
           <p className="font-poppins">{description}</p>
           <br />

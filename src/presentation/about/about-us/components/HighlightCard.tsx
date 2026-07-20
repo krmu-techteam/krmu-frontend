@@ -22,9 +22,8 @@ const HighlightCard: React.FC<HighlightCardProps> = ({
           className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
         />
       </div>
-     <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,22,35,0)_40%,rgba(6,22,35,0.2)_58%,rgba(6,22,35,0.78)_72%,#061623_90%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,22,35,0)_40%,rgba(6,22,35,0.2)_58%,rgba(6,22,35,0.78)_72%,#061623_90%)] pointer-events-none" />
       <div className="relative z-10 h-full flex flex-col justify-end p-6 sm:p-8 text-white">
-    
         {subtitle && (
           <h4 className="text-[16px] sm:text-lg font-medium text-white/90 mb-1.5">
             {subtitle}

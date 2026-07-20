@@ -172,9 +172,7 @@ const AdvisorySlide = () => {
               key={index}
               className="pl-4 md:pl-6 basis-full sm:basis-1/2 md:basis-1/4 lg:basis-1/5"
             >
-              <div
-                className="group relative flex flex-col bg-[#0b1a27] rounded-[3px] border-[1px] border-transparent hover:border-[#00A0E3] transition-all duration-300 h-full"
-              >
+              <div className="group relative flex flex-col bg-[#0b1a27] rounded-[3px] border-[1px] border-transparent hover:border-[#00A0E3] transition-all duration-300 h-full">
                 {/* Person Image */}
                 <div className="w-full h-[220px] sm:h-[260px] p-3">
                   <div className="w-full h-full relative overflow-hidden rounded-[8px]">
@@ -188,7 +186,7 @@ const AdvisorySlide = () => {
                 </div>
 
                 {/* Text Content */}
-                <div className="p-5 flex flex-col flex-grow text-left">
+                <div className="px-5 flex flex-col flex-grow text-left">
                   <h5 className="text-[18px] sm:text-[20px] font-serif font-semibold text-white leading-tight mb-3">
                     {dean.name}
                   </h5>
@@ -204,7 +202,7 @@ const AdvisorySlide = () => {
           ))}
         </CarouselContent>
       </Carousel>
-      
+
       {/* Dots Indicator */}
       <div className="flex justify-center gap-2 mt-10">
         {Array.from({ length: count }).map((_, index) => (

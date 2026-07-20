@@ -24,18 +24,19 @@ const TimelineCarousel = () => {
     // Ensure the active year is scrolled into view horizontally without jumping the page vertically
     const activeBtn = document.getElementById(`timeline-year-${currentSlide}`);
     const container = document.getElementById("timeline-nav-container");
-    
+
     if (activeBtn && container) {
       const containerRect = container.getBoundingClientRect();
       const btnRect = activeBtn.getBoundingClientRect();
-      
+
       // Calculate the offset required to center the button in the container
       const offsetLeft = activeBtn.offsetLeft;
-      const centerPos = offsetLeft - (containerRect.width / 2) + (btnRect.width / 2);
-      
+      const centerPos =
+        offsetLeft - containerRect.width / 2 + btnRect.width / 2;
+
       container.scrollTo({
         left: centerPos,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   }, [currentSlide]);
@@ -98,26 +99,26 @@ const TimelineCarousel = () => {
             return (
               <div key={index} className="px-4 outline-none">
                 <div
-                  className={`my-slide-inner px-3 relative flex flex-col h-full lg:min-h-[350px] transition-all duration-500 ${
+                  className={`my-slide-inner px-0 relative flex flex-col h-full lg:min-h-[350px] transition-all duration-500 text-center lg:text-left ${
                     isActive ? "opacity-100" : "opacity-40"
                   }`}
                 >
                   <h4
-                    className={`text-3xl px-3 sm:px-10 lg:px-12 xl:px-16 md:text-[40px] font-bold mb-2 font-poppins transition-colors duration-500 ${
+                    className={`text-3xl md:text-[40px] font-bold mb-2 font-poppins transition-colors duration-500 ${
                       isActive ? "text-white" : "text-white/60"
                     }`}
                   >
                     {item.year}
                   </h4>
                   <p
-                    className={`text-xl px-3 sm:px-10 lg:px-12 xl:px-16 md:text-[22px] mb-1 font-poppins transition-colors duration-500 ${
+                    className={`text-xl md:text-[22px] mb-1 font-poppins transition-colors duration-500 ${
                       isActive ? "text-white" : "text-white/50"
                     }`}
                   >
                     {item.title}
                   </p>
                   <p
-                    className={`text-[13px] px-3 sm:px-10 lg:px-12 xl:px-16 sm:text-[14px] mb-3 lg:mb-6 font-poppins transition-colors duration-500 ${
+                    className={`text-[13px] sm:text-[14px] mb-3 lg:mb-6 font-poppins transition-colors duration-500 ${
                       isActive ? "text-white/60" : "text-white/30"
                     }`}
                   >
@@ -144,7 +145,10 @@ const TimelineCarousel = () => {
 
       {/* Timeline Nav (Bottom) */}
       <div className="timeline-nav-bottom px-6 max-w-[1200px] mx-auto mt-2 lg:mt-8">
-        <div id="timeline-nav-container" className="flex overflow-x-auto no-scrollbar justify-start items-center space-x-6 md:space-x-8 pb-4 min-h-[80px]">
+        <div
+          id="timeline-nav-container"
+          className="flex overflow-x-auto no-scrollbar justify-start md:justify-center items-center space-x-6 md:space-x-8 pb-4 min-h-[80px]"
+        >
           {timelineData.map((item, index) => {
             const isActive = index === currentSlide;
             return (

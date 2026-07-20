@@ -15,16 +15,11 @@ const HeroSection = ({
 }: Props) => {
   const iframe = overviewvideo;
   const videoSrc = iframe?.match(/src="([^"]+)"/)?.[1];
-    const ABOUT_STAT_BG_COLORS = [
-  "#081D2D",
-  "#0D2131",
-  "#182C3C",
-  "#233747",
-];
+  const ABOUT_STAT_BG_COLORS = ["#081D2D", "#0D2131", "#182C3C", "#233747"];
 
   return (
     <div className="relative w-full pb-10">
-      <section className="relative z-5 pt-[25%] md:pt-[10%] 2xl:pt-[9%] pb-[7%] px-6 md:px-7 xl:px-16">
+      <section className="relative z-5 pt-[25%] md:pt-[10%] 2xl:pt-[9%] pb-[7%] px-6 md:px-8 xl:px-16">
         <div className="max-w-[1530px] mx-auto gap-6 bg-gradient-to-t from-[#0D3B61] via-[#124977] to-[#01192E] rounded-[3px] w-full lg:flex items-center py-8 md:py-10  px-6 md:px-7 lg:px-10">
           <div className="lg:w-1/2 text-white">
             <h3 className="text-2xl md:text-4xl font-light font-poppins lg:text-3xl my-2.5 mb-2">
@@ -48,8 +43,8 @@ const HeroSection = ({
           </div>
         </div>
       </section>
-      
-      <div className="max-w-[1530px] mx-auto w-full md:-mt-[5%] px-6 md:px-7 xl:px-16 2xl:px-0">
+
+      <div className="max-w-[1530px] mx-auto w-full md:-mt-[5%] px-6 md:px-8 xl:px-16 2xl:px-0">
         <div className="md:flex w-full gap-3 xl:gap-5">
           {overviewcounter &&
             overviewcounter.map((counter, idx) => {

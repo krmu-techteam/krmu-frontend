@@ -18,7 +18,7 @@ const IPRLegalEthicsSection = ({
   } = iprLegalEthicsSection;
   return (
     <section className="relative py-10 bg-[#051630] px-8 md:px-12 xl:py-20">
-      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row items-center gap-10 px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row items-center gap-10 px-6 md:px-8 xl:px-16">
         <div className="lg:w-1/2 text-white font-poppins">
           <h2 className="text-3xl md:text-[42px] font-semibold font-serif">
             {title}

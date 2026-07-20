@@ -8,7 +8,7 @@ const CIFSection = ({ cifSection }: { cifSection: CIFSectionProps }) => {
     cifSection;
   return (
     <section className="relative bg-[url(/research/facbg.webp)] bg-cover bg-center py-8 md:py-12 xl:py-20">
-      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row gap-10 px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row gap-10 px-6 md:px-8 xl:px-16">
         <div className="text-white lg:w-3/5">
           <h3 className="text-3xl md:text-[42px] font-semibold mb-5">
             {title}

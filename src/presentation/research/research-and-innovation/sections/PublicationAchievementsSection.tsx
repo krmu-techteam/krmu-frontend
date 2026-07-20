@@ -14,9 +14,11 @@ const PublicationAchievementsSection = ({
       className="relative pt-[30px] bg-[#393c68]"
       id="_publications-achievements"
     >
-      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row items-center px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row items-center px-6 md:px-8 xl:px-16">
         <div className="text-white lg:w-1/2">
-          <h3 className="text-3xl md:text-[42px] font-semibold mb-5">{title}</h3>
+          <h3 className="text-3xl md:text-[42px] font-semibold mb-5">
+            {title}
+          </h3>
           <p className="font-poppins">{description}</p>
           <div className="grid grid-cols-1 font-poppins sm:grid-cols-2 md:grid-cols-3">
             {statistics?.map((stat, index) => {

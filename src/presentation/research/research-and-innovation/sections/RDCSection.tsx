@@ -12,10 +12,10 @@ const RDCSection = ({ rdcSection }: { rdcSection: RDCSectionProps }) => {
   } = rdcSection;
   return (
     <>
-      <section className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row items-center px-6 md:px-7 xl:px-16 pt-8 md:pt-12 xl:pt-20">
+      <section className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row items-center px-6 md:px-8 xl:px-16 pt-8 md:pt-12 xl:pt-20">
         <div className="lg:w-[65%] text-white">
           <h2 className="text-3xl md:text-[42px] font-semibold mb-5">
-            {title} 
+            {title}
           </h2>
           <p className="font-poppins">{description_one}</p>
           <br />
@@ -23,7 +23,7 @@ const RDCSection = ({ rdcSection }: { rdcSection: RDCSectionProps }) => {
         </div>
         <div className="lg:w-[35%] flex justify-end">
           <div className="text-center bg-[#061623]">
-            <Image src={imageUrl}  width={431} height={500} alt="Seema" />
+            <Image src={imageUrl} width={431} height={500} alt="Seema" />
             <Link
               href="/dr-seema-raj"
               target="_blank"

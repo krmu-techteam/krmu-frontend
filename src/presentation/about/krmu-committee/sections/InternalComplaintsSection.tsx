@@ -16,7 +16,7 @@ const InternalComplaintsSection: React.FC<Props> = ({
 }) => {
   return (
     <section className="relative py-8 md:py-12 xl:py-20">
-      <div className="max-w-[1530px] mx-auto w-full flex gap-5 flex-col lg:flex-row px-6 md:px-7 xl:px-16">
+      <div className="max-w-[1530px] mx-auto w-full flex gap-5 flex-col lg:flex-row px-6 md:px-8 xl:px-16">
         <div className="w-full lg:w-1/2 p-6 md:p-10 bg-[#061623] text-white rounded-[4px] font-poppins">
           <h3 className="mb-5 text-2xl font-semibold font-serif">{title}</h3>
           {descriptions?.map((desc, idx) => (
@@ -56,7 +56,7 @@ const InternalComplaintsSection: React.FC<Props> = ({
           </div>
         </div>
       </div>
-      <div className="max-w-[1530px] mx-auto px-6 md:px-7 xl:px-16 w-full mt-10">
+      <div className="max-w-[1530px] mx-auto px-6 md:px-8 xl:px-16 w-full mt-10">
         <div className="bg-[#061623] rounded-[4px] p-6 md:p-10 flex flex-col lg:flex-row gap-8 lg:gap-16 font-poppins">
           <div className="lg:w-1/2 text-white">
             <h4 className="text-xl font-semibold mb-5">{helpline?.title}</h4>
