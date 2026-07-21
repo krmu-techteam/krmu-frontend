@@ -9,16 +9,20 @@ type Props = {
 };
 
 const CommonBlogList = async ({ currentPage, slug, mainBlogClass }: Props) => {
-  const blogsPerPage = 12;
+  const blogsPerPage = 9;
 
   const { blogs } = await getAllBlogsByPerPageOrCategorySlug(
     blogsPerPage,
     currentPage,
-    slug
+    slug,
   );
 
   return (
-    <div className={mainBlogClass || "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"}>
+    <div
+      className={
+        mainBlogClass || "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
+      }
+    >
       {blogs?.map((blog: MainBlogs, i: number) => (
         <CommonBlogCard
           key={blog?.id || i}

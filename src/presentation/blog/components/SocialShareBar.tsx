@@ -23,13 +23,13 @@ const SocialShareBar = ({ title, url, className = "" }: Props) => {
   const encodedTitle = encodeURIComponent(shareTitle);
 
   const buttonBaseClass =
-    "group w-7 h-7 sm:w-7.5 sm:h-7.5 rounded-full flex items-center justify-center text-white transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg active:scale-95 cursor-pointer";
+    "group w-6 h-6 sm:w-7.5 sm:h-7.5 rounded-full flex items-center justify-center text-white transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-110 hover:shadow-lg active:scale-95 cursor-pointer";
 
   return (
     <div
-      className={`flex items-center gap-2 text-white text-xs sm:text-sm font-poppins ${className}`}
+      className={`flex flex-wrap items-center gap-1.5 sm:gap-3 text-white text-xs sm:text-sm font-poppins ${className}`}
     >
-      <span className="font-light text-white/90 mr-1 text-xs sm:text-sm">
+      <span className="font-light text-white/90 mr-0.5 sm:mr-1 text-xs sm:text-sm">
         Share:
       </span>
 

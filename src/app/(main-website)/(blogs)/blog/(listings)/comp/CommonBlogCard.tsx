@@ -86,7 +86,7 @@ const CommonBlogCard = async ({
         href={`/blog/${slug}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex flex-col h-full bg-[#071726] border border-[#14283c] overflow-hidden font-poppins"
+        className="group relative flex flex-col h-full bg-[linear-gradient(180deg,#061623_0%,rgba(24,52,83,0)_100%)] border border-[#14283c] rounded-none overflow-hidden font-poppins transition-transform duration-500 ease-out transform-gpu hover:-translate-y-1"
       >
         {/* Left Vertical Gradient Border Line (Starts Halfway Down) */}
         <div
@@ -113,7 +113,7 @@ const CommonBlogCard = async ({
               src={finalImage}
               alt={title || "Blog Post"}
               fill
-              className="object-contain object-center"
+              className="object-contain object-center group-hover:scale-[1.03] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               unoptimized
             />
@@ -122,24 +122,24 @@ const CommonBlogCard = async ({
               src="/images/blog/hero/hero.jpg"
               alt="Default Blog Image"
               fill
-              className="object-contain object-center"
+              className="object-contain object-center group-hover:scale-[1.03] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
               unoptimized
             />
           )}
         </div>
 
         {/* Content Body */}
-        <div className="p-5 sm:p-6 flex flex-col flex-1 justify-between">
+        <div className="p-4 flex flex-col flex-1 justify-between">
           <div>
             {/* Category Pill */}
-            <div className="inline-block border border-white/20 text-white/90 text-xs px-3.5 py-1 rounded-full font-poppins font-light mb-3 self-start tracking-wide">
+            <div className="inline-block border border-white/20 text-white/90 text-xs px-3.5 py-1 rounded-full font-poppins font-light mb-3 self-start tracking-wide group-hover:border-[#E7C268]/40 transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
               {categoryName}
             </div>
 
             {/* Title (Golden Accent Serif typography) */}
             <h3
               dangerouslySetInnerHTML={{ __html: title }}
-              className="font-serif text-lg sm:text-xl font-bold text-[#E7C268] leading-snug mb-2.5 line-clamp-2 tracking-tight"
+              className="font-serif text-lg sm:text-xl font-bold text-[#E7C268] group-hover:text-[#f7d788] leading-snug mb-2.5 line-clamp-2 tracking-tight transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
             />
 
             {/* Clean Excerpt Paragraph (without [&hellip;]) */}
@@ -150,8 +150,8 @@ const CommonBlogCard = async ({
             )}
 
             {/* Read More Link */}
-            <span className="text-[#009bf2] text-xs sm:text-sm font-medium font-poppins inline-block mb-1">
-              Read more
+            <span className="text-[#009bf2] group-hover:text-[#38bdf8] text-xs sm:text-sm font-medium font-poppins inline-block mb-1 transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+              Read more →
             </span>
           </div>
 

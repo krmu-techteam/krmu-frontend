@@ -33,7 +33,7 @@ export default function Pagination({
 
   return (
     <div
-      className={`flex items-center justify-center gap-3 sm:gap-4 my-10 sm:my-14 font-poppins select-none ${
+      className={`flex items-center justify-center gap-3 sm:gap-4 my-10 sm:my-10 font-poppins select-none ${
         loading ? "opacity-75" : ""
       }`}
     >
@@ -41,10 +41,10 @@ export default function Pagination({
       <button
         disabled={currentPage <= 1 || loading}
         onClick={() => handlePageChange(currentPage - 1)}
-        className="w-10 h-10 rounded-[8px] bg-[#0c1e30] border border-[#1b3854] hover:bg-[#14324f] transition-all flex items-center justify-center text-white disabled:opacity-35 disabled:cursor-not-allowed shadow-sm"
+        className="w-10 h-10 bg-[#15293B] rounded-[4px] border border-[#1B3349] hover:bg-[#14324f] hover:border-[#14324f] transition-all flex items-center justify-center text-white disabled:opacity-35 disabled:cursor-not-allowed"
         aria-label="Previous Page"
       >
-        <ChevronLeft className="w-5 h-5 text-white/90" />
+        <ChevronLeft className="w-5 h-5 text-white" />
       </button>
 
       {/* Page Numbers List */}
@@ -64,13 +64,13 @@ export default function Pagination({
               onClick={() => handlePageChange(Number(num))}
               className={
                 Number(num) === currentPage
-                  ? "w-9 h-9 rounded-full bg-[#031322] border border-[#14304d] text-white font-medium text-sm flex items-center justify-center shadow-inner"
+                  ? "w-8 h-8 rounded-full bg-[#061623] text-white font-medium text-sm flex items-center justify-center shadow-inner"
                   : "text-white/80 hover:text-white font-poppins text-sm px-2.5 py-1 font-normal transition-colors cursor-pointer"
               }
             >
               {num}
             </button>
-          )
+          ),
         )}
       </div>
 
@@ -78,10 +78,10 @@ export default function Pagination({
       <button
         disabled={currentPage >= totalPages || loading}
         onClick={() => handlePageChange(currentPage + 1)}
-        className="w-10 h-10 rounded-[8px] bg-[#0c1e30] border border-[#1b3854] hover:bg-[#14324f] transition-all flex items-center justify-center text-white disabled:opacity-35 disabled:cursor-not-allowed shadow-sm"
+        className="w-10 h-10 rounded-[4px] bg-[#15293B] border border-[#1b3854] hover:bg-[#14324f] transition-all flex items-center justify-center text-white disabled:opacity-35 disabled:cursor-not-allowed shadow-sm"
         aria-label="Next Page"
       >
-        <ChevronRight className="w-5 h-5 text-white/90" />
+        <ChevronRight className="w-5 h-5 text-white" />
       </button>
     </div>
   );

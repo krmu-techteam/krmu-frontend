@@ -3,6 +3,7 @@ import Pagination from "./Pagination";
 import { Suspense } from "react";
 import { BlogCardSkeleton } from "@/app/(main-website)/components/Skeleton/BlogCardSkeleton";
 import CommonBlogList from "./CommonBlogList";
+import MostPopularBlogsSection from "./MostPopularBlogsSection";
 
 type Props = {
   searchParams: Promise<{ page?: string }>;
@@ -17,20 +18,20 @@ const CommonBlogLayout = async ({
 }: Props) => {
   const resolvedSearchParams = await searchParams;
   const currentPage = Number(resolvedSearchParams?.page) || 1;
-  const blogsPerPage = 12;
+  const blogsPerPage = 9;
 
   // ⭐ Fetch only pagination meta here
   const { totalPages } = await getAllBlogsByPerPageOrCategorySlug(
     blogsPerPage,
     currentPage,
-    slug
+    slug,
   );
 
   // Helper to generate page numbers with ellipses
   const getPageNumbers = (
     total: number,
     current: number,
-    delta: number = 2
+    delta: number = 2,
   ) => {
     const range: (number | string)[] = [];
     const rangeWithDots: (number | string)[] = [];
@@ -70,7 +71,7 @@ const CommonBlogLayout = async ({
         key={currentPage}
         fallback={
           <div className={mainBlogClass}>
-            {Array.from({ length: 12 }).map((_, i) => (
+            {Array.from({ length: 9 }).map((_, i) => (
               <BlogCardSkeleton key={i} />
             ))}
           </div>
@@ -89,6 +90,9 @@ const CommonBlogLayout = async ({
         totalPages={totalPages}
         pageNumbers={pageNumbers}
       />
+
+      {/* Most Popular Blogs Section */}
+      <MostPopularBlogsSection />
     </>
   );
 };
