@@ -151,21 +151,21 @@ export const sbasFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Vishal-SBAS.jpg",
   },
-  {
-    id: 104674,
-    slug: "dr-pooja-sindhu",
-    title: {
-      rendered: "Dr. Pooja Sindhu",
-    },
-    featured_media: 106764,
-    acf: {
-      "staff-qualification": "Ph.D. ",
-      staff_designation: "Assistant Professor",
-      schools: [787],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Pooja-Sindhu-1.png",
-  },
+  // {
+  //   id: 104674,
+  //   slug: "dr-pooja-sindhu",
+  //   title: {
+  //     rendered: "Dr. Pooja Sindhu",
+  //   },
+  //   featured_media: 106764,
+  //   acf: {
+  //     "staff-qualification": "Ph.D. ",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [787],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Pooja-Sindhu-1.png",
+  // },
   {
     id: 79849,
     slug: "ms-kritkia-singh",
@@ -392,21 +392,21 @@ export const sbasFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/sujata.webp",
   },
-  {
-    id: 9962,
-    slug: "dr-mamta-raj",
-    title: {
-      rendered: "Dr. Mamta Raj",
-    },
-    featured_media: 58922,
-    acf: {
-      "staff-qualification": "Ph.D. (Chemistry)",
-      staff_designation: "Assistant  Professor",
-      schools: [787],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mamta-Raj.png",
-  },
+  // {
+  //   id: 9962,
+  //   slug: "dr-mamta-raj",
+  //   title: {
+  //     rendered: "Dr. Mamta Raj",
+  //   },
+  //   featured_media: 58922,
+  //   acf: {
+  //     "staff-qualification": "Ph.D. (Chemistry)",
+  //     staff_designation: "Assistant  Professor",
+  //     schools: [787],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Mamta-Raj.png",
+  // },
   {
     id: 9957,
     slug: "dr-kriti",
@@ -422,21 +422,21 @@ export const sbasFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Kriti-1.png",
   },
-  {
-    id: 9956,
-    slug: "dr-mehak-ahuja",
-    title: {
-      rendered: "Dr. Mehak Ahuja",
-    },
-    featured_media: 9943,
-    acf: {
-      "staff-qualification": "Ph.D. (Chemistry)",
-      staff_designation: "Assistant  Professor",
-      schools: [787],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/mehak-ahuja.png",
-  },
+  // {
+  //   id: 9956,
+  //   slug: "dr-mehak-ahuja",
+  //   title: {
+  //     rendered: "Dr. Mehak Ahuja",
+  //   },
+  //   featured_media: 9943,
+  //   acf: {
+  //     "staff-qualification": "Ph.D. (Chemistry)",
+  //     staff_designation: "Assistant  Professor",
+  //     schools: [787],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/mehak-ahuja.png",
+  // },
   {
     id: 9944,
     slug: "dr-ritika-khatri",
