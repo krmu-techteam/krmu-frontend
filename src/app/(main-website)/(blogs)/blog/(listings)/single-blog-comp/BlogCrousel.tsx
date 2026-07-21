@@ -1,7 +1,6 @@
 import { getAllBlogsByPerPageOrCategorySlug } from "@/lib/api/blogs/main-blog";
-import { getBlogImageById } from "@/lib/api/blogs/single-blog";
 import { MainBlogs } from "@/lib/types/blogs/main-blogs";
-import BlogCarouselSlider, { BlogSlide } from "./BlogCarouselSlider";
+import BlogCarouselSlider from "./BlogCarouselSlider";
 
 type Props = {
   currentSlug?: string;
@@ -10,34 +9,15 @@ type Props = {
 const BlogCrousel = async ({ currentSlug }: Props) => {
   const { blogs } = await getAllBlogsByPerPageOrCategorySlug(11, 1);
 
-  // Resolve all image URLs in parallel server-side
-  const slides: BlogSlide[] = (
-    await Promise.all(
-      (blogs as MainBlogs[])
-        .filter((blog) => blog.slug !== currentSlug) // Filter out current blog
-        .map(async (blog) => {
-          const imgUrl = await getBlogImageById(blog.featured_media);
-          if (!imgUrl) return null;
-          return {
-            title: blog.title.rendered,
-            slug: blog.slug,
-            imgUrl,
-            date: blog.date_gmt,
-          } satisfies BlogSlide;
-        }),
-    )
-  ).filter((s): s is BlogSlide => s !== null);
+  const filteredBlogs = (blogs as MainBlogs[]).filter(
+    (blog) => blog.slug !== currentSlug,
+  );
 
-  if (!slides.length) return null;
+  if (!filteredBlogs.length) return null;
 
   return (
-    <section className="mt-6 mb-4 md:my-10 h-auto">
-      <h2 className="text-2xl md:text-3xl font-bold text-[#093475] mb-2">
-        Latest Blogs
-      </h2>
-      <div className="h-auto">
-        <BlogCarouselSlider slides={slides} />
-      </div>
+    <section className="mt-8 mb-6 md:my-12 h-auto">
+      <BlogCarouselSlider blogs={filteredBlogs} />
     </section>
   );
 };

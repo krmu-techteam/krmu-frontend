@@ -29,7 +29,7 @@ const CommonBlogCard = async ({
   slug,
   imgId,
   date,
-  categoryName = "Btech Design",
+  categoryName = "KRMU Blog",
   views = "1,32,124",
 }: Props) => {
   const imgUrl = await getBlogImageById(imgId);

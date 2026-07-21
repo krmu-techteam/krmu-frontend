@@ -58,14 +58,16 @@ const BlogPage = async ({ params }: Props) => {
 
   if (!currentSingleBlog?.title) return notFound();
 
-  // Clean empty <p> tags from content server-side
+  // Clean empty <p> tags and WordPress [&hellip;] entities from content server-side
   let cleanedContent = currentSingleBlog?.content?.rendered || "";
   if (cleanedContent) {
-    // Remove empty <p> tags (including those with only whitespace or &nbsp;)
-    cleanedContent = cleanedContent.replace(
-      /<p[^>]*>(\s|&nbsp;|<br\s*\/?>)*<\/p>/gi,
-      "",
-    );
+    cleanedContent = cleanedContent
+      .replace(/\[&hellip;\]/g, "")
+      .replace(/\[&hellip;/g, "")
+      .replace(/&hellip;/g, "")
+      .replace(/\[&#8230;\]/g, "")
+      .replace(/&#8230;/g, "")
+      .replace(/<p[^>]*>(\s|&nbsp;|<br\s*\/?>)*<\/p>/gi, "");
   }
 
   // Extract author info from _embedded to avoid extra API calls
@@ -140,6 +142,9 @@ const BlogPage = async ({ params }: Props) => {
       />
       <SingleBlogLayout
         content={cleanedContent}
+        title={currentSingleBlog?.title?.rendered}
+        date={publishedDate}
+        excerpt={currentSingleBlog?.excerpt?.rendered}
         currentSlug={currentSingleBlog?.slug}
       />
     </>
