@@ -1,30 +1,46 @@
 import { ReactNode } from "react";
 import CommonBlogRightSidebar from "./comp/CommonBlogRightSidebar";
-import CommonBlogSidebar from "./comp/CommonBlogSidebar";
-import CommonBlogHeroSection from "./comp/CommonBlogHeroSection";
+import { HeroSection } from "@/presentation/blog";
+import { getAllBlogCategories } from "@/lib/api/blogs/single-blog";
 
 type Props = {
   children: ReactNode;
 };
 
-const layout = ({ children }: Props) => {
+const HIDE_CATEGORIES: string[] = [
+  "general",
+  "medical-and-allied-science",
+  "school-of-management-and-commerce",
+  "travel-and-tourism",
+  "education",
+  "uncategorized",
+];
+
+const layout = async ({ children }: Props) => {
+  const allCategories = await getAllBlogCategories();
+
+  const categories = (allCategories || [])
+    .filter(
+      (cat) => cat?.name && !HIDE_CATEGORIES.includes(cat?.slug.toLowerCase()),
+    )
+    .map((cat, idx) => ({
+      id: cat.id || idx,
+      name: cat.name,
+      slug: cat.slug,
+    }));
+
   return (
     <>
-      <CommonBlogHeroSection />
-      <section className="py-[60px] px-4">
-        <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row gap-8">
-          {/* LEFT SIDEBAR */}
-          <aside className="w-full lg:w-1/5 order-2 lg:order-1">
-            <CommonBlogSidebar />
-          </aside>
-
-          {/* MAIN CONTENT */}
-          <main className="w-full lg:w-3/5 order-1 lg:order-2 min-h-screen">
+      <HeroSection categories={categories} />
+      <section className="py-8 sm:py-[40px]">
+        <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 flex flex-col lg:flex-row justify-between gap-6 xl:gap-8">
+          {/* MAIN BLOG CONTENT */}
+          <main className="w-full lg:flex-1 order-1 min-h-screen">
             {children}
           </main>
 
           {/* RIGHT SIDEBAR */}
-          <aside className="w-full lg:w-1/5 order-3">
+          <aside className="w-full lg:w-[330px] xl:w-[350px] flex-shrink-0 order-2">
             <CommonBlogRightSidebar />
           </aside>
         </div>

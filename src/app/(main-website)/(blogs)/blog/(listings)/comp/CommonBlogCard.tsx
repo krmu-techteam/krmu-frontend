@@ -1,6 +1,7 @@
 import { getBlogImageById } from "@/lib/api/blogs/single-blog";
 import Image from "next/image";
 import Link from "next/link";
+import { Eye, Calendar } from "lucide-react";
 
 type Props = {
   title: string;
@@ -8,11 +9,12 @@ type Props = {
   slug: string;
   imgId: number;
   date: string;
+  categoryName?: string;
+  views?: string | number;
 };
 
 export const checkImage = async (url: string | null): Promise<boolean> => {
   if (!url) return false;
-
   try {
     const res = await fetch(url, { method: "HEAD" });
     return res.ok;
@@ -21,12 +23,16 @@ export const checkImage = async (url: string | null): Promise<boolean> => {
   }
 };
 
-const CommonBlogCard = async ({ title, excerpt, slug, imgId, date }: Props) => {
+const CommonBlogCard = async ({
+  title,
+  excerpt,
+  slug,
+  imgId,
+  date,
+  categoryName = "Btech Design",
+  views = "1,32,124",
+}: Props) => {
   const imgUrl = await getBlogImageById(imgId);
-
-  // if (imgUrl) {
-  //   imgUrl = imgUrl.replace("/blog/wp-content", "/wp-content");
-  // }
 
   const finalSrc = imgUrl?.includes(
     "https://wp.krmangalam.edu.in/blog/wp-content",
@@ -49,57 +55,130 @@ const CommonBlogCard = async ({ title, excerpt, slug, imgId, date }: Props) => {
   let finalImage: string | null = null;
 
   if (await checkImage(imgUrl)) {
-    finalImage = imgUrl; // ✅ original works
+    finalImage = imgUrl;
   } else if (await checkImage(finalSrc2)) {
-    finalImage = finalSrc2; // ✅ fallback works
+    finalImage = finalSrc2;
   }
 
-  const postDate = new Date(date).toLocaleDateString("en-IN", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  });
+  // Format date like "15 July 2026"
+  const formattedDate = date
+    ? new Date(date).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      })
+    : "15 July 2026";
+
+  // Clean HTML tags AND raw WordPress [&hellip;] / &hellip; entity strings
+  const cleanExcerpt = excerpt
+    ? excerpt
+        .replace(/<[^>]*>?/gm, "")
+        .replace(/\[&hellip;\]/g, "")
+        .replace(/\[&hellip;/g, "")
+        .replace(/&hellip;/g, "")
+        .replace(/\[\.\.\.\]/g, "")
+        .trim()
+    : "The best interiors are the combination of creativity, purpose, and precision.";
 
   return (
-    <div className="w-full">
+    <div className="w-full h-full relative">
       <Link
         href={`/blog/${slug}`}
-        className="block w-full rounded-[24px]"
-        style={{ boxShadow: `0px 0px 6px 0px #c6dcfd` }}
         target="_blank"
         rel="noopener noreferrer"
+        className="relative flex flex-col h-full bg-[#071726] border border-[#14283c] overflow-hidden font-poppins"
       >
-        <div className="p-2.5" data-test={finalSrc} data-test2={imgUrl}>
-          <div className="relative">
-            <span className="absolute bottom-0 right-0 text-xs #cb000d text-white py-2.5 px-5 rounded-tl-[24px]">
-              {postDate}
-            </span>
-            {finalImage && (
-              <Image
-                src={finalImage}
-                width={426}
-                height={284}
-                alt=""
-                className="rounded-[24px] h-auto w-full"
-                sizes="(max-width: 768px) 100vw, 426px"
-              />
+        {/* Left Vertical Gradient Border Line (Starts Halfway Down) */}
+        <div
+          className="absolute left-0 top-[45%] bottom-0 w-[1px] pointer-events-none z-20"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #999999 49.04%, rgba(255, 255, 255, 0) 97.12%)",
+          }}
+        />
+
+        {/* Right Vertical Gradient Border Line (Starts Halfway Down) */}
+        <div
+          className="absolute right-0 top-[45%] bottom-0 w-[1px] pointer-events-none z-20"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #999999 49.04%, rgba(255, 255, 255, 0) 97.12%)",
+          }}
+        />
+
+        {/* Top Image Banner */}
+        <div className="relative w-full aspect-[16/9] bg-[#071726] overflow-hidden">
+          {finalImage ? (
+            <Image
+              src={finalImage}
+              alt={title || "Blog Post"}
+              fill
+              className="object-contain object-center"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              unoptimized
+            />
+          ) : (
+            <Image
+              src="/images/blog/hero/hero.jpg"
+              alt="Default Blog Image"
+              fill
+              className="object-contain object-center"
+              unoptimized
+            />
+          )}
+        </div>
+
+        {/* Content Body */}
+        <div className="p-5 sm:p-6 flex flex-col flex-1 justify-between">
+          <div>
+            {/* Category Pill */}
+            <div className="inline-block border border-white/20 text-white/90 text-xs px-3.5 py-1 rounded-full font-poppins font-light mb-3 self-start tracking-wide">
+              {categoryName}
+            </div>
+
+            {/* Title (Golden Accent Serif typography) */}
+            <h3
+              dangerouslySetInnerHTML={{ __html: title }}
+              className="font-serif text-lg sm:text-xl font-bold text-[#E7C268] leading-snug mb-2.5 line-clamp-2 tracking-tight"
+            />
+
+            {/* Clean Excerpt Paragraph (without [&hellip;]) */}
+            {cleanExcerpt && (
+              <p className="text-white/75 text-xs sm:text-sm leading-relaxed line-clamp-2 mb-3.5 font-light">
+                {cleanExcerpt}
+              </p>
             )}
+
+            {/* Read More Link */}
+            <span className="text-[#009bf2] text-xs sm:text-sm font-medium font-poppins inline-block mb-1">
+              Read more
+            </span>
           </div>
 
           <div>
+            {/* Horizontal Gradient Divider Line */}
             <div
-              dangerouslySetInnerHTML={{ __html: title }}
-              className="text-[#093475] mt-2.5 mb-[15px] text-lg font-bold leading-[1.2]"
+              className="w-full h-[1px] my-3.5"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #999999 49.04%, rgba(255, 255, 255, 0) 97.12%)",
+              }}
             />
 
-            <div
-              dangerouslySetInnerHTML={{ __html: excerpt }}
-              className="mb-5"
-            />
+            {/* Card Footer Metadata */}
+            <div className="flex items-center gap-8 text-white/80 text-xs font-poppins pt-0.5">
+              {/* Views Count */}
+              <div className="flex items-center gap-1.5">
+                <Eye className="w-4 h-4 text-white/70" />
+                <span>{views}</span>
+              </div>
 
-            <span className="text-lg font-normal text-[#093475] block">
-              Read More
-            </span>
+              {/* Date */}
+              <div className="flex items-center gap-1.5">
+                <Calendar className="w-4 h-4 text-white/70" />
+                <span>{formattedDate}</span>
+              </div>
+            </div>
           </div>
         </div>
       </Link>

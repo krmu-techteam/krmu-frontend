@@ -6,6 +6,7 @@ type Props = {
   params: Promise<{ slug: string }>;
   searchParams: Promise<{ page?: string }>;
 };
+
 // ---------------------------
 // ✅ Metadata
 // ---------------------------
@@ -17,12 +18,11 @@ export async function generateMetadata({ params }: Props) {
 
   const seo = category.yoast_head_json;
 
-
-
   if (!seo) return {};
 
   return strapiSeoToMetadata(seo);
 }
+
 const Page = async ({ params, searchParams }: Props) => {
   const resolvedParams = await params;
   const resolvedSearchParams = searchParams;
@@ -31,13 +31,10 @@ const Page = async ({ params, searchParams }: Props) => {
 
   return (
     <>
-      {/* <CommonBlogHeroSection catName={category?.name || "Category"} /> */}
-      {/* <CommonBlogHeroSection /> */}
-      {/* ✅ pass the resolved object (not Promise) */}
       <CommonBlogLayout
         slug={slug}
         searchParams={resolvedSearchParams}
-        mainBlogClass={"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"}
+        mainBlogClass={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"}
       />
     </>
   );

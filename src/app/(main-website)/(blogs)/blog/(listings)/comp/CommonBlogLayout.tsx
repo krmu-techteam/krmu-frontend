@@ -17,7 +17,7 @@ const CommonBlogLayout = async ({
 }: Props) => {
   const resolvedSearchParams = await searchParams;
   const currentPage = Number(resolvedSearchParams?.page) || 1;
-  const blogsPerPage = 6;
+  const blogsPerPage = 12;
 
   // ⭐ Fetch only pagination meta here
   const { totalPages } = await getAllBlogsByPerPageOrCategorySlug(
@@ -70,7 +70,7 @@ const CommonBlogLayout = async ({
         key={currentPage}
         fallback={
           <div className={mainBlogClass}>
-            {Array.from({ length: 6 }).map((_, i) => (
+            {Array.from({ length: 12 }).map((_, i) => (
               <BlogCardSkeleton key={i} />
             ))}
           </div>
