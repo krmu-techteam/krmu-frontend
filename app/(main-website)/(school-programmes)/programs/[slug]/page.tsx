@@ -88,6 +88,7 @@ import {
 } from "@/components/school-programmes/programs/new-design-sections/lib/getContent";
 import { ProgrammeOverview } from "../../school-programmes-component/ProgrammeOverview";
 import { BreakDown } from "../../school-programmes-component/BreakDown";
+import BTechCSERoboticsAI from "@/app/(new-pages)/b-tech-cse-robotics-ai/BTechCSERoboticsAI";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -148,6 +149,10 @@ const page = async ({ params }: Props) => {
   if (slug === "mjmc-masters-journalism-mass-communication") {
     return <JournalismAndMassCommunication />;
   }
+
+  // if (slug === "b-tech-cse-robotics-ai") {
+  //   return <BTechCSERoboticsAI />;
+  // }
 
   // ====== END BSC-HONS-FINANCE OVERRIDE ======
 
