@@ -55,6 +55,10 @@ export type BlogPostContent = {
     rendered: string;
     protected: boolean;
   };
+  excerpt?: {
+    rendered: string;
+    protected?: boolean;
+  };
   _embedded: {
     author: BlogAuthor[];
     "wp:featuredmedia"?: BlogFeaturedMedia[];
