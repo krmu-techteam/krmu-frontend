@@ -12,13 +12,14 @@ export interface MainBlogs {
     rendered: string;
   };
   featured_media: number;
-  // _embedded: {
-  //   "wp:featuredmedia"?: BlogFeaturedMedia[];
-  // };
+  _embedded?: {
+    "wp:featuredmedia"?: Array<{ source_url?: string; alt_text?: string }>;
+    "wp:term"?: Array<Array<{ id?: number; name?: string; slug?: string }>>;
+  };
   excerpt: {
     rendered: string;
   };
-  date_gmt: string
+  date_gmt: string;
 }
 
 export type BlogSEOShareImage = {

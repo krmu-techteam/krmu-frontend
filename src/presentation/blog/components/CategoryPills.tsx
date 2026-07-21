@@ -52,11 +52,13 @@ const CategoryPills = ({
 
       <div className="flex flex-wrap gap-2.5 sm:gap-3">
         {categories.map((cat) => {
+          const activeSlugLower = currentActiveSlug ? currentActiveSlug.toLowerCase() : "";
+          const catSlugLower = cat.slug ? cat.slug.toLowerCase() : "";
           const isActive =
-            Boolean(currentActiveSlug) &&
-            (currentActiveSlug.toLowerCase() === cat.slug.toLowerCase() ||
+            Boolean(activeSlugLower) &&
+            (activeSlugLower === catSlugLower ||
               (pathname
-                ? pathname.toLowerCase().endsWith(`/${cat.slug.toLowerCase()}`)
+                ? pathname.toLowerCase().endsWith(`/${catSlugLower}`)
                 : false));
 
           return (
