@@ -116,7 +116,7 @@ const MostPopularBlogsSection = async () => {
         }}
       />
 
-      <h2 className="text-xl sm:text-2xl font-bold text-white mb-5 sm:mb-6 tracking-tight">
+      <h2 className="text-xl sm:text-2xl font-medium text-white mb-5 sm:mb-6 tracking-tight">
         Most Popular blogs
       </h2>
 

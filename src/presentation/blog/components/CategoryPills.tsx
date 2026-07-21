@@ -45,14 +45,16 @@ const CategoryPills = ({
       className={`border border-[#23425B] font-poppins p-5 sm:p-6 lg:p-7 rounded-[10px] ${className}`}
     >
       {title && (
-        <h3 className="text-xl sm:text-[22px] font-bold text-white mb-4 sm:mb-5 font-poppins tracking-tight flex items-center gap-2">
+        <h3 className="text-xl sm:text-[22px] font-medium text-white mb-4 sm:mb-5 font-poppins tracking-tight flex items-center gap-2">
           {title}
         </h3>
       )}
 
       <div className="flex flex-wrap gap-2.5 sm:gap-3">
         {categories.map((cat) => {
-          const activeSlugLower = currentActiveSlug ? currentActiveSlug.toLowerCase() : "";
+          const activeSlugLower = currentActiveSlug
+            ? currentActiveSlug.toLowerCase()
+            : "";
           const catSlugLower = cat.slug ? cat.slug.toLowerCase() : "";
           const isActive =
             Boolean(activeSlugLower) &&

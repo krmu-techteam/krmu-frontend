@@ -74,7 +74,7 @@ const CommonBlogRightSidebar = async () => {
 
       {/* Widget 3: Recent Post Card */}
       <div className="bg-[#061623]  rounded-[8px] p-4 sm:p-5 text-white">
-        <h4 className="text-lg sm:text-xl font-bold text-white mb-4 tracking-tight font-poppins">
+        <h4 className="text-lg sm:text-xl font-medium text-white mb-4 tracking-tight font-poppins">
           Recent Post
         </h4>
 
