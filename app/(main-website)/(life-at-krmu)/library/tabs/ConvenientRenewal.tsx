@@ -24,7 +24,7 @@ const ConvenientRenewal = () => {
             className="libcount"
           />
         </div>
-        <div className="w-full relative libcountcard">
+        <div className="w-full relative libcountcard temp-class">
           <p>Login the Renewal Status strictly be made through Gmail only.</p>
           <Image
             src="/library/lp02.svg"
