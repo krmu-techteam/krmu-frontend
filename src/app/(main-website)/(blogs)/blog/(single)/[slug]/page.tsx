@@ -1,12 +1,12 @@
 import { yoastToMetadata } from "@/lib/constants/yoastMeta";
-import { getSingleBlogDataBySlug } from "@/lib/api/blogs/single-blog";
+import { getBlogService } from "@/features/blog";
 import { notFound } from "next/navigation";
-import SingleBlogHero from "../../(listings)/single-blog-comp/SingleBlogHero";
-import SingleBlogLayout from "../../(listings)/single-blog-comp/SingleBlogLayout";
+import { SingleBlogHero, SingleBlogLayout } from "@/presentation/blog";
 import {
   createArticleSchema,
   createBreadcrumbSchema,
   createFaqSchema,
+  createPersonSchema,
 } from "@/lib/api/common";
 import Script from "next/script";
 
@@ -22,7 +22,7 @@ type Props = {
 // -------------------------------
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const blogData = await getSingleBlogDataBySlug(slug);
+  const blogData = await getBlogService().getSingleBlogDataBySlug(slug);
 
   if (!blogData || blogData.length === 0 || !blogData[0]?.yoast_head_json) {
     return {
@@ -50,7 +50,7 @@ const BlogPage = async ({ params }: Props) => {
   const { slug } = await params;
 
   // Next.js deduplicates this fetch due to react cache() in getSingleBlogDataBySlug
-  const singleBlogData = await getSingleBlogDataBySlug(slug);
+  const singleBlogData = await getBlogService().getSingleBlogDataBySlug(slug);
 
   if (!singleBlogData || singleBlogData.length === 0) return notFound();
 
@@ -58,16 +58,14 @@ const BlogPage = async ({ params }: Props) => {
 
   if (!currentSingleBlog?.title) return notFound();
 
-  // Clean empty <p> tags and WordPress [&hellip;] entities from content server-side
+  // Clean empty <p> tags from content server-side
   let cleanedContent = currentSingleBlog?.content?.rendered || "";
   if (cleanedContent) {
-    cleanedContent = cleanedContent
-      .replace(/\[&hellip;\]/g, "")
-      .replace(/\[&hellip;/g, "")
-      .replace(/&hellip;/g, "")
-      .replace(/\[&#8230;\]/g, "")
-      .replace(/&#8230;/g, "")
-      .replace(/<p[^>]*>(\s|&nbsp;|<br\s*\/?>)*<\/p>/gi, "");
+    // Remove empty <p> tags (including those with only whitespace or &nbsp;)
+    cleanedContent = cleanedContent.replace(
+      /<p[^>]*>(\s|&nbsp;|<br\s*\/?>)*<\/p>/gi,
+      "",
+    );
   }
 
   // Extract author info from _embedded to avoid extra API calls
@@ -84,6 +82,17 @@ const BlogPage = async ({ params }: Props) => {
 
   const publishedDate = currentSingleBlog?.date;
   const blogFaqSchema = currentSingleBlog?.acf?.faqs_section;
+
+  const AuthImgUrl = await getBlogService().getBlogImageById(authorImageId);
+
+  const PersonSchemaData = {
+    name: authorName,
+    url: authorSlug
+      ? `https://krmangalam.edu.in/blog/author/${authorSlug}`
+      : "",
+    image: AuthImgUrl || "",
+  };
+  const personJsonLd = createPersonSchema(PersonSchemaData);
 
   // JSON-LD Structured Data
   const faqJsonLd = createFaqSchema(blogFaqSchema || []);
@@ -130,6 +139,12 @@ const BlogPage = async ({ params }: Props) => {
         dangerouslySetInnerHTML={{ __html: articleJsonLd }}
         strategy="afterInteractive"
       />
+      <Script
+        id="blog-person-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: personJsonLd }}
+        strategy="afterInteractive"
+      />
 
       <SingleBlogHero
         title={currentSingleBlog?.title?.rendered}
@@ -142,9 +157,6 @@ const BlogPage = async ({ params }: Props) => {
       />
       <SingleBlogLayout
         content={cleanedContent}
-        title={currentSingleBlog?.title?.rendered}
-        date={publishedDate}
-        excerpt={currentSingleBlog?.excerpt?.rendered}
         currentSlug={currentSingleBlog?.slug}
       />
     </>

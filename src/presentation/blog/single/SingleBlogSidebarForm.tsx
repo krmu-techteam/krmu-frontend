@@ -1,6 +1,6 @@
 "use client";
 
-import NoPaperFormsWidget from "../comp/NoPaperFormsWidget";
+import NoPaperFormsWidget from "../components/NoPaperFormsWidget";
 
 const SidebarBlogForm = () => {
   return (

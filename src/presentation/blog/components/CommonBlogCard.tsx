@@ -1,4 +1,4 @@
-import { getBlogImageById } from "@/lib/api/blogs/single-blog";
+import { getBlogService } from "@/features/blog";
 import Image from "next/image";
 import Link from "next/link";
 import { Eye, Calendar } from "lucide-react";
@@ -32,7 +32,7 @@ const CommonBlogCard = async ({
   categoryName = "KRMU Blog",
   views = "1,32,124",
 }: Props) => {
-  const imgUrl = await getBlogImageById(imgId);
+  const imgUrl = await getBlogService().getBlogImageById(imgId);
 
   const finalSrc = imgUrl?.includes(
     "https://wp.krmangalam.edu.in/blog/wp-content",

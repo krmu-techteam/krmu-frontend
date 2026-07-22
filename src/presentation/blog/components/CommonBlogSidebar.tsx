@@ -1,4 +1,4 @@
-import { getAllBlogCategories } from "@/lib/api/blogs/single-blog";
+import { getBlogService } from "@/features/blog";
 import { CategoryPills } from "@/presentation/blog";
 
 // ===============================
@@ -17,7 +17,7 @@ const HIDE_CATEGORIES: string[] = [
 ];
 
 const CommonBlogSidebar = async () => {
-  const allCategories = await getAllBlogCategories();
+  const allCategories = await getBlogService().getAllBlogCategories();
 
   const filteredCategories = (allCategories || []).filter(
     (cat) => cat?.name && !HIDE_CATEGORIES.includes(cat?.slug.toLowerCase())

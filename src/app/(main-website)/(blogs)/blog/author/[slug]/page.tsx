@@ -1,7 +1,6 @@
-import { getAuthInfoBySlug } from "@/lib/api/blogs/author-blog";
+import { getBlogService } from "@/features/blog";
 import AuthorHero from "../comp/AuthorHero";
 import { notFound } from "next/navigation";
-import { getBlogImageById } from "@/lib/api/blogs/single-blog";
 import AuthorPosts from "../comp/AuthorPosts";
 
 type Props = {
@@ -11,7 +10,7 @@ type Props = {
 const page = async ({ params }: Props) => {
   const { slug } = await params;
 
-  const authInfo = await getAuthInfoBySlug(slug);
+  const authInfo = await getBlogService().getAuthInfoBySlug(slug);
 
   // ✅ Correct check
   if (!authInfo || authInfo.length === 0 || slug !== authInfo[0]?.slug) {
@@ -28,7 +27,7 @@ const page = async ({ params }: Props) => {
   }
   const AuthorImgId = AuthACF?.profile_image;
 
-  const AuthImgUrl = await getBlogImageById(AuthorImgId);
+  const AuthImgUrl = await getBlogService().getBlogImageById(AuthorImgId);
   const AuthId = authData?.id;
   const AuthName = AuthACF?.profile_name;
   const AuthDesg = AuthACF?.profile_position;

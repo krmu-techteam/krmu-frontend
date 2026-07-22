@@ -1,9 +1,9 @@
-import { getAllBlogsByPerPageOrCategorySlug } from "@/lib/api/blogs/main-blog";
+import { getBlogService } from "@/features/blog";
 import Pagination from "./Pagination";
 import { Suspense } from "react";
 import { BlogCardSkeleton } from "@/app/(main-website)/components/Skeleton/BlogCardSkeleton";
 import CommonBlogList from "./CommonBlogList";
-import MostPopularBlogsSection from "./MostPopularBlogsSection";
+import MostPopularBlogsSection from "../sections/MostPopularBlogsSection";
 
 type Props = {
   searchParams: Promise<{ page?: string }>;
@@ -21,7 +21,7 @@ const CommonBlogLayout = async ({
   const blogsPerPage = 9;
 
   // ⭐ Fetch only pagination meta here
-  const { totalPages } = await getAllBlogsByPerPageOrCategorySlug(
+  const { totalPages } = await getBlogService().getAllBlogsByPerPageOrCategorySlug(
     blogsPerPage,
     currentPage,
     slug,

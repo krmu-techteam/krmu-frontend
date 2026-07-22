@@ -1,4 +1,4 @@
-import { getAllBlogsByPerPageOrCategorySlug } from "@/lib/api/blogs/main-blog";
+import { getBlogService } from "@/features/blog";
 import CommonBlogCard from "./CommonBlogCard";
 import { MainBlogs } from "@/lib/types/blogs/main-blogs";
 
@@ -11,7 +11,7 @@ type Props = {
 const CommonBlogList = async ({ currentPage, slug, mainBlogClass }: Props) => {
   const blogsPerPage = 9;
 
-  const { blogs } = await getAllBlogsByPerPageOrCategorySlug(
+  const { blogs } = await getBlogService().getAllBlogsByPerPageOrCategorySlug(
     blogsPerPage,
     currentPage,
     slug,

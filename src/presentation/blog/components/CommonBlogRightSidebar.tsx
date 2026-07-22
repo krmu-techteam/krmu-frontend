@@ -1,10 +1,10 @@
-import { getRecentPosts } from "@/lib/api/blogs/main-blog";
+import { getBlogService } from "@/features/blog";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 const CommonBlogRightSidebar = async () => {
-  const recentPosts = await getRecentPosts();
+  const recentPosts = await getBlogService().getRecentPosts();
 
   return (
     <aside className="w-full flex flex-col gap-6 font-poppins">

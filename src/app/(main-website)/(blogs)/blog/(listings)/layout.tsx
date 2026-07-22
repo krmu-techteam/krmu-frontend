@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
-import CommonBlogRightSidebar from "./comp/CommonBlogRightSidebar";
-import { HeroSection } from "@/presentation/blog";
-import { getAllBlogCategories } from "@/lib/api/blogs/single-blog";
+import { HeroSection, CommonBlogRightSidebar } from "@/presentation/blog";
+import { getBlogService } from "@/features/blog";
 
 type Props = {
   children: ReactNode;
@@ -17,7 +16,7 @@ const HIDE_CATEGORIES: string[] = [
 ];
 
 const layout = async ({ children }: Props) => {
-  const allCategories = await getAllBlogCategories();
+  const allCategories = await getBlogService().getAllBlogCategories();
 
   const categories = (allCategories || [])
     .filter(

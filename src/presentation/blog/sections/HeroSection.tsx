@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import NoPaperFormsWidget from "@/app/(main-website)/(blogs)/blog/(listings)/comp/NoPaperFormsWidget";
+import NoPaperFormsWidget from "../components/NoPaperFormsWidget";
 import { SocialShareBar, CategoryPills } from "@/presentation/blog";
 import { CategoryItem } from "@/presentation/blog/components/CategoryPills";
 

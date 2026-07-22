@@ -1,4 +1,4 @@
-import { getCategoryBySlug } from "@/lib/api/blogs/cat-blog";
+import { getBlogService } from "@/features/blog";
 import { ReactNode } from "react";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 export default async function getCategoryLayout({ params, children }: Props) {
   const { slug } = await params;
 
-  const catData = await getCategoryBySlug(slug);
+  const catData = await getBlogService().getCategoryBySlug(slug);
 
   const catName = catData?.name;
 

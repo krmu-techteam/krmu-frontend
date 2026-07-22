@@ -1,6 +1,6 @@
-import CommonBlogLayout from "../../comp/CommonBlogLayout";
-import { strapiSeoToMetadata } from "@/lib/constants/strapiMeta";
-import { getCategoryBySlug } from "@/lib/api/blogs/cat-blog";
+import { CommonBlogLayout } from "@/presentation/blog";
+import { yoastToMetadata } from "@/lib/constants/yoastMeta";
+import { getBlogService } from "@/features/blog";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -12,7 +12,7 @@ type Props = {
 // ---------------------------
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const category = await getCategoryBySlug(slug);
+  const category = await getBlogService().getCategoryBySlug(slug);
 
   if (!category) return {};
 
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props) {
 
   if (!seo) return {};
 
-  return strapiSeoToMetadata(seo);
+  return yoastToMetadata(seo, `all-categories/${slug}`);
 }
 
 const Page = async ({ params, searchParams }: Props) => {

@@ -1,5 +1,5 @@
-import { getBlogPageInfo } from "@/lib/api/blogs/main-blog";
-import CommonBlogLayout from "./comp/CommonBlogLayout";
+import { getBlogService } from "@/features/blog";
+import { CommonBlogLayout } from "@/presentation/blog";
 import { strapiSeoToMetadata } from "@/lib/constants/strapiMeta";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 // ✅ Metadata
 // ---------------------------
 export async function generateMetadata() {
-  const pageInfo = await getBlogPageInfo();
+  const pageInfo = await getBlogService().getBlogPageInfo();
   const seo = pageInfo?.blog_seo;
 
   if (!seo) return {};

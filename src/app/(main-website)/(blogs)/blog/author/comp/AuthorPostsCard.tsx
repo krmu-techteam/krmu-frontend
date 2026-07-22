@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
-import { getBlogImageByIdClientComp } from "@/lib/api/blogs/single-blog";
+import React, { useEffect, useState } from "react";
+import { getBlogService } from "@/features/blog";
 import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
 import Image from "next/image";
@@ -16,7 +16,7 @@ const AuthorPostsCard = ({ title, imgId, date, slug }: Props) => {
   const [imgUrl, setImgUrl] = useState("");
 
   useEffect(() => {
-    getBlogImageByIdClientComp(imgId).then((url) => setImgUrl(url));
+    getBlogService().getBlogImageByIdClientComp(imgId).then((url) => setImgUrl(url || ""));
   }, [imgId]);
 
   const postDate = new Date(date).toLocaleDateString("en-IN", {

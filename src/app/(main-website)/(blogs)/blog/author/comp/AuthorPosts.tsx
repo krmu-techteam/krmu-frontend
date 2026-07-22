@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState, useCallback } from "react";
-import { getPostsByAuthId } from "@/lib/api/blogs/author-blog";
+import { getBlogService } from "@/features/blog";
 import AuthorPostsCard from "./AuthorPostsCard";
 
 type Post = {
@@ -26,7 +26,7 @@ const AuthorPosts = ({ authId }: Props) => {
     async (pageNum: number) => {
       try {
         setLoading(true);
-        const data = await getPostsByAuthId(authId, pageNum);
+        const data = await getBlogService().getPostsByAuthId(authId, pageNum);
 
         if (data.length < 6) setHasMore(false);
 

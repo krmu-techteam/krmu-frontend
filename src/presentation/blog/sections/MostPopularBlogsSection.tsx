@@ -7,7 +7,7 @@ import {
   FaFacebookF,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { getRecentPosts } from "@/lib/api/blogs/main-blog";
+import { getBlogService } from "@/features/blog";
 
 type PopularPost = {
   id: number;
@@ -56,7 +56,7 @@ const MostPopularBlogsSection = async () => {
   let displayPosts: PopularPost[] = [];
 
   try {
-    const rawPosts = await getRecentPosts();
+    const rawPosts = await getBlogService().getRecentPosts();
     if (rawPosts && rawPosts.length > 0) {
       displayPosts = rawPosts.slice(0, 3).map((post: any, idx: number) => {
         const rawDate = post?.date || post?.date_gmt;
