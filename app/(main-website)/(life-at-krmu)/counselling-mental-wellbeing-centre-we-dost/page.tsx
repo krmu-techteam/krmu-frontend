@@ -71,7 +71,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const page = () => {
   return (
     <>
-      <section className="pt-[140px] lg:pt-[15%] pb-[10%] bg-[url(/infra.webp)] bg-cover bg-no-repeat bg-center common-overlay">
+      <section className="pt-[140px] lg:pt-[15%] pb-[10%] bg-[url(/infra.webp)] bg-cover bg-no-repeat bg-center common-overlay temp-class">
         <div className="max-w-[1664px] mx-auto w-full">
           <h1 className="text-3xl md:text-5xl lg:text-[64px] relative z-10 text-white font-semibold text-center px-4">
             Counselling & Mental Wellbeing Centre (We Dost)
