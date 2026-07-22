@@ -150,9 +150,9 @@ const page = async ({ params }: Props) => {
     return <JournalismAndMassCommunication />;
   }
 
-  // if (slug === "b-tech-cse-robotics-ai") {
-  //   return <BTechCSERoboticsAI />;
-  // }
+  if (slug === "b-tech-cse-robotics-ai") {
+    return <BTechCSERoboticsAI />;
+  }
 
   // ====== END BSC-HONS-FINANCE OVERRIDE ======
 

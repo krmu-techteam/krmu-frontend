@@ -1,5 +1,9 @@
 import { Poppins } from "next/font/google";
 import HeroSection from "./comps/HeroSection";
+import ConnectingEligibility from "./comps/ConnectingEligibility";
+import BtechCSERoboticsVideo from "./comps/BtechCSERoboticsVideo";
+import JensenSection from "./comps/JensenSection";
+import ProgrammeKeyFeature from "./comps/ProgrammeKeyFeature";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -10,6 +14,10 @@ const BTechCSERoboticsAI = () => {
   return (
     <div className={poppins.className}>
       <HeroSection />
+      <ConnectingEligibility />
+      <BtechCSERoboticsVideo />
+      <JensenSection />
+      <ProgrammeKeyFeature />
     </div>
   );
 };

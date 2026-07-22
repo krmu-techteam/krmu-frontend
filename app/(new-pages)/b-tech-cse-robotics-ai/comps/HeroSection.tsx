@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -10,7 +11,6 @@ const HeroSection = () => {
         alt="Ellipse"
         className="absolute -left-24 top-0"
       />
-
       <div className="max-w-[1564px] mx-auto w-full pt-44 flex font-poppins z-20 relative">
         <Image
           src="/ai-ml.svg"
@@ -57,13 +57,17 @@ const HeroSection = () => {
           <div className="flex mt-6 space-x-2.5 mb-10">
             <div className="w-1/3 flex flex-col items-center justify-center text-center text-[#001732] bg-[#A2C6D2] pt-6 pb-10 rounded-[10px]">
               <h3 className="text-[40px] font-bold">56.6 LPA</h3>
-              <h4 className="text-lg font-light leading-none">Highest Package</h4>
+              <h4 className="text-lg font-light leading-none">
+                Highest Package
+              </h4>
             </div>
-              <div className="w-1/3 flex flex-col items-center justify-center text-center text-[#001732] bg-[#B0C4CC] pt-6 pb-10 rounded-[10px]">
+            <div className="w-1/3 flex flex-col items-center justify-center text-center text-[#001732] bg-[#B0C4CC] pt-6 pb-10 rounded-[10px]">
               <h3 className="text-[40px] font-bold">800+</h3>
-              <h4 className="text-lg font-light leading-none">Campus Recruiters</h4>
+              <h4 className="text-lg font-light leading-none">
+                Campus Recruiters
+              </h4>
             </div>
-              <div className="w-1/3 flex flex-col items-center justify-center text-center text-[#001732] bg-[#CCDBE3] pt-6 pb-10 rounded-[10px]">
+            <div className="w-1/3 flex flex-col items-center justify-center text-center text-[#001732] bg-[#CCDBE3] pt-6 pb-10 rounded-[10px]">
               <h3 className="text-[40px] font-bold">100%</h3>
               <h4 className="text-lg font-light leading-none">Placement</h4>
             </div>
@@ -76,6 +80,19 @@ const HeroSection = () => {
             height={652}
             alt="Robotic Hand"
           />
+        </div>
+      </div>
+      <div className="bg-[#4987AB] w-full">
+        <div className="max-w-[1564px] mx-auto py-5 text-center text-white">
+          <p className="text-2xl tracking-wide flex items-center justify-center space-x-2.5">
+            <span className="font-semibold">August 2026 intake now open</span>{" "}
+            <span className="bg-white p-1 w-1 h-0.5 rounded-full inline-block"></span>{" "}
+            <span>Scholarships up to 100%</span>{" "}
+            <span className="bg-white p-1 w-1 h-0.5 rounded-full inline-block"></span>{" "}
+            <span className="font-light underline">
+              <Link href="#">Apply on the admissions portal</Link>
+            </span>{" "}
+          </p>
         </div>
       </div>
     </section>
