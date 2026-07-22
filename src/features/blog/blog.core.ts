@@ -252,6 +252,20 @@ class BlogRepository {
       return [];
     }
   }
+
+  async getPostsCountByAuthId(authId: number): Promise<number> {
+    try {
+      const res = await fetch(
+        `${BLOG_QUERIES.postsByAuthor(authId, 1)}&per_page=1`,
+        { next: { revalidate: 3600, tags: ["blogs"] } },
+      );
+      if (!res.ok) return 0;
+      const total = res.headers.get("X-WP-Total");
+      return total ? parseInt(total, 10) : 0;
+    } catch {
+      return 0;
+    }
+  }
 }
 
 // ── 2. Service Interface ─────────────────────────────────
@@ -273,6 +287,7 @@ export interface IBlogService {
   searchBlogs(query: string, page?: number): Promise<WPBlog[]>;
   getAuthInfoBySlug(authSlug: string): Promise<AuthorResponse>;
   getPostsByAuthId(authId: number, page?: number): Promise<PostByAuthorCard[]>;
+  getPostsCountByAuthId(authId: number): Promise<number>;
 }
 
 // ── 3. Service ───────────────────────────────────────────
@@ -334,6 +349,10 @@ class BlogService implements IBlogService {
 
   async getPostsByAuthId(authId: number, page: number = 1): Promise<PostByAuthorCard[]> {
     return await this.repository.getPostsByAuthId(authId, page);
+  }
+
+  async getPostsCountByAuthId(authId: number): Promise<number> {
+    return await this.repository.getPostsCountByAuthId(authId);
   }
 }
 

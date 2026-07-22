@@ -83,6 +83,19 @@ const BlogPage = async ({ params }: Props) => {
   const publishedDate = currentSingleBlog?.date;
   const blogFaqSchema = currentSingleBlog?.acf?.faqs_section;
 
+  const cleanExcerpt = currentSingleBlog?.excerpt?.rendered
+    ? currentSingleBlog.excerpt.rendered
+        .replace(/<[^>]*>?/gm, "")
+        .replace(/\[&hellip;\]/g, "")
+        .replace(/\[&hellip;/g, "")
+        .replace(/&hellip;/g, "")
+        .replace(/\[\.\.\.\]/g, "")
+        .trim()
+    : "The best interiors are the combination of creativity, purpose, and precision.";
+
+  const authorBio = authorData?.acf?.profile_about || "";
+  const authorLinkedin = (authorData?.acf as any)?.profile_linkedin || (authorData?.acf as any)?.linkedin || "";
+
   const AuthImgUrl = await getBlogService().getBlogImageById(authorImageId);
 
   const PersonSchemaData = {
@@ -158,6 +171,15 @@ const BlogPage = async ({ params }: Props) => {
       <SingleBlogLayout
         content={cleanedContent}
         currentSlug={currentSingleBlog?.slug}
+        authorName={authorName}
+        authorSlug={authorSlug}
+        authorDesignation={authorDesignation}
+        imgId={authorImageId}
+        date={publishedDate}
+        excerpt={cleanExcerpt}
+        title={currentSingleBlog?.title?.rendered || ""}
+        authorBio={authorBio}
+        authorLinkedin={authorLinkedin}
       />
     </>
   );

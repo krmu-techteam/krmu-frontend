@@ -19,7 +19,7 @@ export const BLOG_QUERIES = {
   media: (id: number) => `${krmBlogURL}/wp-json/wp/v2/media/${id}?_fields=guid`,
   clientMedia: (id: number) => `${krmBlogURL}/wp-json/wp/v2/media/${id}`,
   authorInfo: (slug: string) =>
-    `https://krmangalam.edu.in/blog/wp-json/wp/v2/users?slug=${slug}&_fields=id,name,slug,acf.profile_image,acf`,
+    `${krmBlogURL}/wp-json/wp/v2/users?slug=${slug}&_fields=id,name,slug,acf.profile_image,acf`,
   postsByAuthor: (authId: number, page: number) =>
     `${krmBlogURL}/wp-json/wp/v2/posts?author=${authId}&per_page=6&page=${page}&_fields=id,title,featured_media,date,slug`,
 };

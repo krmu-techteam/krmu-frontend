@@ -17,113 +17,11 @@ const SingleBlogContent = ({ content }: Props) => {
 
     const h2Elements = Array.from(doc.querySelectorAll("h2"));
 
+    // belwo cta shot apply now
 
-
-
-
-
-
-
-// belwo cta shot apply now 
-
-if (h2Elements.length >= 3) {
-
-
-const ctaHTML1 = `
+    if (h2Elements.length >= 3) {
+      const ctaHTML1 = `
 <div class="krmu-blog-cta">
-
-<style>
-
-.krmu-blog-cta{
-margin:30px 0;
-border-radius:12px;
-padding:22px;
-background:linear-gradient(92.34deg,#111D32 35.25%,#345898 98.04%);
-color:white;
-}
-
-.krmu-blog-cta-inner{
-display:flex;
-align-items:center;
-gap:18px;
-}
-
-.krmu-blog-cta-logo{
-width:90px;
-height:90px;
-}
-
-.krmu-blog-cta-text{
-flex:1;
-}
-
-.krmu-blog-cta-title{
-font-size:24px;
-font-weight:700;
-margin-bottom:6px;
-}
-
-.krmu-blog-cta-desc{
-font-size:16px;
-opacity:.9;
-}
-
-.krmu-blog-cta-actions{
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-.krmu-blog-cta-btn{
-background:#e50914;
-padding:8px 20px;
-border-radius:999px;
-color:white;
-font-weight:600;
-font-size:14px;
-text-align:center;
-display:inline-block;
-}
-
-.krmu-blog-cta-link{
-color:white;
-text-decoration:underline;
-font-size:14px;
-text-align:center;
-}
-
-/* MOBILE */
-
-@media (max-width:640px){
-
-.krmu-blog-cta-inner{
-flex-direction:column;
-align-items:flex-start;
-}
-
-.krmu-blog-cta-logo{
-width:70px;
-height:70px;
-}
-
-.krmu-blog-cta-title{
-font-size:20px;
-}
-
-.krmu-blog-cta-desc{
-font-size:14px;
-margin-bottom:10px;
-}
-
-.krmu-blog-cta-actions{
-flex-direction:row;
-align-items:center;
-gap:16px;
-}
-
-}
-
-</style>
 
 <div class="krmu-blog-cta-inner">
 
@@ -158,219 +56,267 @@ Explore Programs
 </div>
 `;
 
+      const secondHeading = h2Elements[2];
+      const wrapper1 = doc.createElement("div");
+      wrapper1.innerHTML = ctaHTML1;
 
-  const secondHeading = h2Elements[2];
-  const wrapper1 = doc.createElement("div");
-  wrapper1.innerHTML = ctaHTML1;
+      secondHeading.parentNode?.insertBefore(wrapper1, secondHeading);
+    }
 
-  secondHeading.parentNode?.insertBefore(wrapper1, secondHeading);
+    const newHeadings = h2Elements.map((el, index) => {
+      const id = `heading-${index + 1}`;
+      el.setAttribute("id", id);
+      el.classList.add("toc-target");
 
+      // Apply inline styles for heading design
 
-}
+      el.style.color = "#ffffff";
+      el.style.fontWeight = "600";
+      el.style.fontSize = "22px";
+      el.style.padding = "10px 0px";
+      el.style.borderRadius = "4px";
+      el.style.display = "block";
 
+      return {
+        id,
+        text: el.textContent?.trim() || `Heading ${index + 1}`,
+      };
+    });
 
+    setHeadings(newHeadings);
 
-const newHeadings = h2Elements.map((el, index) => {
-  const id = `heading-${index + 1}`;
-  el.setAttribute("id", id);
-  el.classList.add("toc-target");
-
-  // Apply inline styles for heading design
-  el.style.background = "#1f5fa8";
-  el.style.color = "#ffffff";
-  el.style.fontWeight = "600";
-  el.style.fontSize = "22px";
-  el.style.padding = "12px 18px";
-  el.style.borderRadius = "4px";
-  el.style.margin = "35px 0 15px 0";
-  el.style.display = "block";
-
-  return {
-    id,
-    text: el.textContent?.trim() || `Heading ${index + 1}`,
-  };
-});
-
-setHeadings(newHeadings);
-
-
-const tocHTML = `
-<div class="blog-toc">
-
-<style>
-
-.blog-toc{
-margin-bottom:30px;
-}
-
-.blog-toc-title{
-font-size:20px;
-font-weight:700;
-margin-bottom:16px;
-color:#222;
-cursor:pointer;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-
-.blog-toc-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px;
-}
-
-.blog-toc-item{
-display:flex;
-align-items:center;
-gap:10px;
-padding:10px 14px;
-border-radius:6px;
-border:1px solid #e2e2e2;
-background:#f5f6f7;
-font-size:14px;
-font-weight:500;
-color:#333;
-text-decoration:none;
-}
-
-.blog-toc-number{
-display:flex;
-align-items:center;
-justify-content:center;
-width:24px;
-height:24px;
-border-radius:50%;
-background:#e9edf2;
-color:#1f5fa8;
-font-size:12px;
-font-weight:600;
-}
-
-.blog-toc-text{
-line-height:1.2;
-}
-
-.blog-toc-item.active{
-background:#1f5fa8;
-color:white;
-border-color:#1f5fa8;
-}
-
-.blog-toc-item.active .blog-toc-number{
-background:white;
-color:#1f5fa8;
-}
-
-/* MOBILE */
-
-@media (max-width:640px){
-
-.blog-toc-grid{
-display:grid;              /* ✅ always visible */
-grid-template-columns:1fr;
-margin-top:12px;
-}
-
-
-.blog-toc-title::after{
-content:"";               /* ❌ remove arrow */
-}
-
-
-
-}
-
-</style>
-
-<h3 class="blog-toc-title">
+    const tocHTML = `
+<div class="single-blog-toc">
+<h3 class="single-blog-toc-title">
 Table of Contents
 </h3>
 
-<div class="blog-toc-grid">
-
+<div class="single-blog-toc-list">
 ${newHeadings
   .map(
     (h, i) => `
-<a href="#${h.id}" class="blog-toc-item ${i === 0 ? "active" : ""}">
-<span class="blog-toc-number">${i + 1}</span>
-<span class="blog-toc-text">${h.text}</span>
+<a href="#${h.id}" class="single-blog-toc-item">
+<span class="single-blog-toc-number">${i + 1}.</span>
+<span class="single-blog-toc-text">${h.text}</span>
 </a>
-`
+`,
   )
   .join("")}
-
 </div>
-
 </div>
 `;
 
+    if (h2Elements.length > 0) {
+      const firstHeading = h2Elements[0];
 
+      const wrapper = doc.createElement("div");
+      wrapper.innerHTML = tocHTML;
 
-if (h2Elements.length > 0) {
-  const firstHeading = h2Elements[0];
-
-  const wrapper = doc.createElement("div");
-  wrapper.innerHTML = tocHTML;
-
-  firstHeading.parentNode?.insertBefore(wrapper, firstHeading);
-}
-
-  const images = Array.from(doc.querySelectorAll("img"));
-  images.forEach((img) => {
-    const origSrc = img.getAttribute("data-orig-src");
-    const dataSrcSet = img.getAttribute("data-srcset");
-    const origSizes = img.getAttribute("data-orig-sizes");
-
-    if (origSrc) img.setAttribute("src", origSrc);
-
-    if (dataSrcSet) img.setAttribute("srcset", dataSrcSet);
-
-    if (origSizes) img.setAttribute("sizes", origSizes);
-
-    img.removeAttribute("data-orig-src");
-    img.removeAttribute("data-srcset");
-    img.removeAttribute("data-sizes");
-    img.removeAttribute("data-orig-sizes");
-
-    const className = img.getAttribute("class");
-    if (className) {
-      img.setAttribute(
-        "class",
-        className
-          .replace(/lazyload/g, "") 
-          .replace(/\s+/g, " ") 
-          .trim()
-      );
+      firstHeading.parentNode?.insertBefore(wrapper, firstHeading);
     }
 
-    const currentSrc = img.getAttribute("src");
-    if (currentSrc && currentSrc.startsWith("data:image")) {
-      img.removeAttribute("src");
-    }
-    const srcset = img.getAttribute("srcset");
-    if (srcset && srcset.startsWith("data:image")) {
-      img.removeAttribute("srcset");
-    }
-  });
+    const images = Array.from(doc.querySelectorAll("img"));
+    images.forEach((img) => {
+      const origSrc = img.getAttribute("data-orig-src");
+      const dataSrcSet = img.getAttribute("data-srcset");
+      const origSizes = img.getAttribute("data-orig-sizes");
+
+      if (origSrc) img.setAttribute("src", origSrc);
+
+      if (dataSrcSet) img.setAttribute("srcset", dataSrcSet);
+
+      if (origSizes) img.setAttribute("sizes", origSizes);
+
+      img.removeAttribute("data-orig-src");
+      img.removeAttribute("data-srcset");
+      img.removeAttribute("data-sizes");
+      img.removeAttribute("data-orig-sizes");
+
+      const className = img.getAttribute("class");
+      if (className) {
+        img.setAttribute(
+          "class",
+          className
+            .replace(/lazyload/g, "")
+            .replace(/\s+/g, " ")
+            .trim(),
+        );
+      }
+
+      const currentSrc = img.getAttribute("src");
+      if (currentSrc && currentSrc.startsWith("data:image")) {
+        img.removeAttribute("src");
+      }
+      const srcset = img.getAttribute("srcset");
+      if (srcset && srcset.startsWith("data:image")) {
+        img.removeAttribute("srcset");
+      }
+    });
 
     const tables = Array.from(doc.querySelectorAll("table"));
     tables.forEach((table) => {
+      table.className = "krmu-custom-blog-table";
+
+      const cells = Array.from(table.querySelectorAll("th, td"));
+      cells.forEach((cell) => {
+        cell.removeAttribute("align");
+
+        const style = cell.getAttribute("style") || "";
+        if (style) {
+          cell.setAttribute(
+            "style",
+            style
+              .split(";")
+              .filter((s) => !/text-align|justify-content/i.test(s))
+              .join(";"),
+          );
+        }
+
+        const cellChildren = Array.from(cell.querySelectorAll("*"));
+        cellChildren.forEach((child) => {
+          child.removeAttribute("align");
+          const childStyle = child.getAttribute("style") || "";
+          if (childStyle) {
+            child.setAttribute(
+              "style",
+              childStyle
+                .split(";")
+                .filter((s) => !/text-align|justify-content/i.test(s))
+                .join(";"),
+            );
+          }
+        });
+      });
+
       const wrapper = doc.createElement("div");
       wrapper.className = "blog-table-responsive";
       table.parentNode?.insertBefore(wrapper, table);
       wrapper.appendChild(table);
     });
 
+    // Wrap Conclusion block in container card
+    const headingsForConclusion = Array.from(doc.querySelectorAll("h2, h3"));
+    const conclusionHeading = headingsForConclusion.find(
+      (el) => el.textContent?.trim().toLowerCase() === "conclusion",
+    );
+    if (conclusionHeading) {
+      const conclusionWrapper = doc.createElement("div");
+      conclusionWrapper.className = "krmu-blog-conclusion-card";
+
+      conclusionHeading.parentNode?.insertBefore(
+        conclusionWrapper,
+        conclusionHeading,
+      );
+
+      const siblingsToWrap: Element[] = [];
+      let current: Element | null = conclusionHeading;
+      while (current) {
+        const text = current.textContent?.trim().toLowerCase() || "";
+        const isFAQHeading =
+          (current.tagName === "H2" || current.tagName === "H3") &&
+          (text.includes("faq") || text.includes("f.a.q"));
+        const isFAQContainer =
+          current.classList.contains("krmu-blog-faq-container") ||
+          current.classList.contains("schema-faq-code") ||
+          current.className.includes("faq");
+
+        if (siblingsToWrap.length > 0 && (isFAQHeading || isFAQContainer)) {
+          break;
+        }
+
+        const next: Element | null = current.nextElementSibling;
+        siblingsToWrap.push(current);
+        current = next;
+      }
+
+      siblingsToWrap.forEach((sibling) => {
+        conclusionWrapper.appendChild(sibling);
+      });
+    }
+
+    // Parse and normalize FAQ sections into dynamic accordions
+    const faqWrappers = Array.from(doc.querySelectorAll(".faq-wrapper"));
+    faqWrappers.forEach((faqWrapper) => {
+      const heading = faqWrapper.querySelector(".faq-heading, h2, h3");
+      const faqContainer = doc.createElement("div");
+      faqContainer.className = "krmu-blog-faq-container";
+
+      const cards = Array.from(faqWrapper.querySelectorAll(".faq-card"));
+      cards.forEach((card) => {
+        const questionEl = card.querySelector(".faq-question, h3, h4");
+        const answerEl = card.querySelector(".faq-answer, p, div");
+
+        if (questionEl && answerEl) {
+          const details = doc.createElement("details");
+          details.className = "krmu-blog-faq-item";
+
+          const summary = doc.createElement("summary");
+          summary.className = "krmu-blog-faq-summary";
+          summary.textContent = questionEl.textContent?.trim() || "";
+
+          const answerDiv = doc.createElement("div");
+          answerDiv.className = "krmu-blog-faq-answer";
+          answerDiv.innerHTML =
+            answerEl.innerHTML || answerEl.textContent || "";
+
+          details.appendChild(summary);
+          details.appendChild(answerDiv);
+          faqContainer.appendChild(details);
+        }
+      });
+
+      if (heading) {
+        const newHeading = doc.createElement("h2");
+        newHeading.textContent = heading.textContent;
+        newHeading.style.color = "#ffffff";
+        newHeading.style.fontWeight = "600";
+        newHeading.style.fontSize = "22px";
+        newHeading.style.padding = "10px 0px";
+        newHeading.style.display = "block";
+        faqWrapper.parentNode?.insertBefore(newHeading, faqWrapper);
+      }
+      faqWrapper.parentNode?.replaceChild(faqContainer, faqWrapper);
+    });
+
+    const yoastFaqs = Array.from(doc.querySelectorAll(".schema-faq"));
+    yoastFaqs.forEach((yoastFaq) => {
+      const faqContainer = doc.createElement("div");
+      faqContainer.className = "krmu-blog-faq-container";
+
+      const items = Array.from(
+        yoastFaq.querySelectorAll(".schema-faq-section"),
+      );
+      items.forEach((item) => {
+        const questionEl = item.querySelector(".schema-faq-question");
+        const answerEl = item.querySelector(".schema-faq-answer");
+
+        if (questionEl && answerEl) {
+          const details = doc.createElement("details");
+          details.className = "krmu-blog-faq-item";
+
+          const summary = doc.createElement("summary");
+          summary.className = "krmu-blog-faq-summary";
+          summary.textContent = questionEl.textContent?.trim() || "";
+
+          const answerDiv = doc.createElement("div");
+          answerDiv.className = "krmu-blog-faq-answer";
+          answerDiv.innerHTML =
+            answerEl.innerHTML || answerEl.textContent || "";
+
+          details.appendChild(summary);
+          details.appendChild(answerDiv);
+          faqContainer.appendChild(details);
+        }
+      });
+
+      yoastFaq.parentNode?.replaceChild(faqContainer, yoastFaq);
+    });
+
     setProcessedContent(doc.body.innerHTML);
   }, [content]);
 
   return (
-    <div
-      className="w-full"
-    >
-
-
+    <div className="w-full">
       {processedContent ? (
         <div
           className="krmu_single_blog"
@@ -384,7 +330,5 @@ if (h2Elements.length > 0) {
       )}
     </div>
   );
- 
-
 };
 export default SingleBlogContent;

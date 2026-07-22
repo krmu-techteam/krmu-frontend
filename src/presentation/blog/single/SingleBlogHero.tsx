@@ -1,9 +1,6 @@
 import Image from "next/image";
-import SingleBlogHeroAuthor from "./SingleBlogHeroAuthor";
-import SingleBlogDate from "./SingleBlogDate";
-import { Facebook, Youtube, Twitter } from "lucide-react";
+import NoPaperFormsWidget from "../components/NoPaperFormsWidget";
 import { checkImage } from "../components/CommonBlogCard";
-// import { STRAPI_URL } from "@/app/constant";
 
 type SingleBlogProps = {
   title: string;
@@ -24,13 +21,6 @@ const SingleBlogHero = async ({
   imgId,
   authorSlug,
 }: SingleBlogProps) => {
-  //   if (imgUrl) {
-  //   imgUrl = imgUrl.replace("/blog/wp-content", "/wp-content");
-  // }
-  //   if (imgUrl) {
-  //   imgUrl = imgUrl.replace("wp.krmangalam.edu.in", "krmangalam.edu.in");
-  // }
-
   const normalizedImgUrl = imgUrl
     ?.replace("/blog/wp-content", "/wp-content")
     ?.replace("wp.krmangalam.edu.in", "www.krmangalam.edu.in");
@@ -38,134 +28,116 @@ const SingleBlogHero = async ({
   let finalImage: string | null = null;
 
   if (await checkImage(imgUrl)) {
-    finalImage = imgUrl; // ✅ original works
+    finalImage = imgUrl;
   } else if (await checkImage(normalizedImgUrl)) {
-    finalImage = normalizedImgUrl; // ✅ fallback works
+    finalImage = normalizedImgUrl;
   }
 
+  // Format date like "July 15, 2026"
+  const formattedDate = date
+    ? new Date(date).toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      })
+    : "July 15, 2026";
+
   return (
-    <>
-      <section
-        className="lg:block hidden pt-[106px] pb-10 px-4 sm:px-10"
-        style={{
-          background: "#111d32",
-        }}
-      >
-        <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-start gap-[30px] lg:gap-[50px] pt-[30px] lg:pt-[50px]">
-          {/* IMAGE FIRST ON MOBILE */}
-          <div className="w-full lg:w-1/2 order-1 lg:order-2">
-            {finalImage && (
-              <Image
-                src={finalImage}
-                width={768}
-                height={432}
-                alt={title || "Blog Hero Image"}
-                className="rounded-xl w-full object-cover"
-                priority
-              />
-            )}
-          </div>
+    <section className="pt-[110px] md:pt-[155px] pb-6 md:pb-8 overflow-hidden">
+      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 relative z-10 flex flex-col gap-6 md:gap-8">
+        {/* Main Grid: Left Featured Banner + Right Admission Form */}
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-6 xl:gap-[31px] w-full">
+          {/* LEFT COLUMN: Featured Image with Overlay Badge & Accent Strip */}
+          <div className="w-full lg:flex-1 lg:max-w-[1038px] flex flex-col overflow-hidden bg-[#111d32] shadow-xl">
+            {/* Image Wrapper — aspect-ratio scales correctly on all screen sizes */}
+            <div className="relative w-full aspect-[16/9] overflow-hidden flex flex-col justify-end">
+              {finalImage ? (
+                <Image
+                  src={finalImage}
+                  alt={title || "Blog Hero Image"}
+                  fill
+                  priority
+                  className="object-cover object-center"
+                  unoptimized
+                />
+              ) : (
+                <Image
+                  src="/images/blog/hero/hero.jpg"
+                  alt="Default Blog Image"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                  unoptimized
+                />
+              )}
 
-          {/* TEXT CONTENT */}
-          <div className="w-full lg:w-1/2 order-2 lg:order-1">
-            {/* Title */}
-            <h1
-              dangerouslySetInnerHTML={{ __html: title }}
-              className="text-[26px] md:text-[42px] 2xl:text-[54px] mb-6 text-white leading-[1.25] font-semibold"
-            />
+              {/* Teal Overlay: #0E5A5C on Mobile & Tablet, clip.png on Desktop */}
+              <div className="absolute bottom-4 left-3 right-0 z-10 w-full lg:w-[65%] xl:w-[600px] min-h-[125px] md:min-h-[110px] flex items-end bg-[#0E5A5C] lg:bg-transparent">
+                {/* Clip Image (Hidden on Mobile/Tablet, Visible on Desktop) */}
+                <div className="absolute inset-0 z-0 hidden lg:block">
+                  <Image
+                    src="/images/blog/single/clip.png"
+                    alt="Clip Overlay"
+                    fill
+                    className="object-fill object-left-bottom pointer-events-none"
+                    unoptimized
+                  />
+                </div>
 
-            {/* Author */}
-            <SingleBlogHeroAuthor
-              authorName={authorName}
-              authorSlug={authorSlug}
-              desg={authorDesignation}
-              imgId={imgId}
-            />
+                {/* Text Content inside Teal Clip */}
+                <div className="relative z-10 p-4 sm:p-6 text-white flex flex-col justify-end w-full">
+                  {/* Title */}
+                  <h1
+                    className="text-lg sm:text-2xl md:text-3xl font-poppins lg:text-[28px] xl:text-[38px] font-bold text-white leading-[1.1] mb-2 tracking-tight drop-shadow-sm pr-2 sm:pr-6 lg:pr-[120px] xl:pr-[80px] break-words"
+                    dangerouslySetInnerHTML={{
+                      __html: title,
+                    }}
+                  />
 
-            {/* Date */}
-            <div className="py-[6px]">
-              <SingleBlogDate date={date} />
+                  {/* Date */}
+                  <p className="text-xs sm:text-sm text-white/90 font-poppins font-light tracking-wide">
+                    Published On: {formattedDate}
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex items-center gap-4 mt-3">
-              <a
-                href="https://www.facebook.com/krmuniv/"
-                className="text-white hover:text-blue-500 transition"
-              >
-                <Facebook size={22} />
-              </a>
-
-              <a
-                href="https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA"
-                className="text-white hover:text-red-500 transition"
-              >
-                <Youtube size={22} />
-              </a>
-
-              {/* <a href="" className="text-white hover:text-gray-300 transition">
-          <Twitter size={22} />
-        </a> */}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* MOBILE HERO */}
-      <section className="lg:hidden pt-[56px] bg-white">
-        {/* Dark Image Area */}
-        <div className="bg-[#111d32] px-4 pt-6 pb-4">
-          {finalImage && (
-            <Image
-              src={finalImage}
-              width={768}
-              height={432}
-              alt="Single Blog Title"
-              className="rounded-xl w-full object-cover"
-            />
-          )}
-
-          {/* Breadcrumb */}
-          {/* <div className="flex items-center gap-2 text-[#9FB3C8] text-[14px] mt-4">
-      <span>🏠</span>
-      <span>›</span>
-      <span className="text-[#4da3ff]">Blog</span>
-      <span>›</span>
-      <span className="truncate">Scope of Agriculture Degree</span>
-    </div> */}
-        </div>
-
-        {/* White Content Area */}
-        <div className="px-4 pt-5 pb-6">
-          {/* Title */}
-          <div
-            dangerouslySetInnerHTML={{ __html: title }}
-            className="text-[26px] font-semibold leading-[1.3] text-[#1f5fa8] mb-4"
-          />
-
-          {/* Author Row */}
-          <div className="flex items-center justify-between border-b pb-3">
-            <SingleBlogHeroAuthor
-              authorName={authorName}
-              authorSlug={authorSlug}
-              desg={authorDesignation}
-              imgId={imgId}
-            />
-
-            <div className="flex items-center gap-4">
-              <Facebook size={20} className="text-[#1f2937]" />
-              <Youtube size={20} className="text-[#1f2937]" />
-              <Twitter size={20} className="text-[#1f2937]" />
+            {/* ACCENT STRIP (50% Blue on left, 50% Red on right) - Under the Image Block */}
+            <div className="w-full flex h-[8px] mt-0 flex-shrink-0">
+              <div className="bg-[#0b4c8c] w-1/2" />
+              <div className="bg-[#e50914] w-1/2" />
             </div>
           </div>
 
-          {/* Date */}
-          <div className="pt-3">
-            <SingleBlogDate date={date} />
+          {/* RIGHT COLUMN: Admission Open Form Card */}
+          <div className="w-full lg:w-[300px] xl:w-[370px] h-auto xl:h-[563px] 2xl:h-[592px] bg-white rounded-[8px] p-3 sm:p-4 pt-3 sm:pt-4 shadow-2xl flex flex-col justify-between text-black flex-shrink-0 border border-[#d2d2d2]">
+            <div>
+              <h2 className="text-xl sm:text-[22px] font-bold text-center text-black mb-1 font-poppins tracking-tight">
+                Admission Open
+              </h2>
+
+              {/* Live NPF Admission Open Widget */}
+              <div className="w-full overflow-hidden rounded-[8px]">
+                {/* Desktop: 510px height */}
+                <div className="hidden lg:block">
+                  <NoPaperFormsWidget
+                    widgetId="0d2d6e28c86e4213b353bfe132035965"
+                    height="510px"
+                  />
+                </div>
+                {/* Mobile/Tablet: tighter height to avoid bottom white space */}
+                <div className="block lg:hidden">
+                  <NoPaperFormsWidget
+                    widgetId="0d2d6e28c86e4213b353bfe132035965"
+                    height="490px"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
