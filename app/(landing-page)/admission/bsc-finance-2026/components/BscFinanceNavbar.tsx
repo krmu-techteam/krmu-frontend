@@ -22,11 +22,11 @@ const BscFinanceNavbar = ({
 }: BscFinanceNavbarProps) => {
   return (
     <header className="absolute top-0 left-0 right-0 z-40  overflow-hidden">
-      <div className="fixed top-0 left-0 w-full z-50">
+      {/* <div className="fixed top-0 left-0 w-full z-50">
         <KRMUTimer targetDate="2026-07-22T18:59:59" />
-      </div>
-      <div className="max-w-[1300px] mx-auto md:flex items-center justify-center md:justify-between gap-4 sm:gap-6 px-4 sm:px-6  pb-4 sm:pb-6 lg:pb-8 mt-28 md:mt-20">
-      {/* <div className="max-w-[1300px] mx-auto md:flex items-center justify-center md:justify-between gap-4 sm:gap-6 px-4 sm:px-6  py-4 sm:py-6 lg:py-8"> */}
+      </div> */}
+      {/* <div className="max-w-[1300px] mx-auto md:flex items-center justify-center md:justify-between gap-4 sm:gap-6 px-4 sm:px-6  pb-4 sm:pb-6 lg:pb-8 mt-28 md:mt-20"> */}
+      <div className="max-w-[1300px] mx-auto md:flex items-center justify-center md:justify-between gap-4 sm:gap-6 px-4 sm:px-6  py-4 sm:py-6 lg:py-8">
         {/* Logo */}
         <div
           className="relative shrink-0 hidden md:block"
