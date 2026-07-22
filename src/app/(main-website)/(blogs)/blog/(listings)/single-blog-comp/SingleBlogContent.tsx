@@ -518,10 +518,7 @@ ${newHeadings
 
       if (itemsToProcess.length > 0) {
         nodesToRemove.forEach((node) => node.remove());
-        faqH2.parentNode?.insertBefore(
-          faqContainer,
-          faqH2.nextElementSibling,
-        );
+        faqH2.parentNode?.insertBefore(faqContainer, faqH2.nextElementSibling);
 
         itemsToProcess.forEach((item) => {
           const details = doc.createElement("details");
