@@ -49,6 +49,12 @@ const Eligibility = ({
   const longTitle = elgibilities[2]?.title || "";
   const isLong = longTitle.length > maxChars;
   const displayTitle = expanded ? longTitle : longTitle.slice(0, maxChars);
+  const truncateAtWord = (text: string, maxChars: number) => {
+    if (text.length <= maxChars) return text;
+
+    const truncated = text.slice(0, maxChars);
+    return truncated.slice(0, truncated.lastIndexOf(" ")) + "...";
+  };
 
   const handleApplyClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -271,12 +277,10 @@ const Eligibility = ({
 
                     <div className="flex flex-col mt-1">
                       {/* ✅ LINE CLAMP APPLIED HERE */}
-                      <p
-                        className={`text-md md:text-lg font-semibold w-full   text-black leading-tight ${
-                          expanded ? "" : "line-clamp-2"
-                        }`}
-                      >
-                        {elgibilities[2]?.title}
+                      <p className="text-md md:text-lg font-semibold w-full text-black leading-tight">
+                        {expanded
+                          ? elgibilities[2]?.title
+                          : truncateAtWord(elgibilities[2]?.title || "", 76)}
                       </p>
 
                       {/* Toggle Button */}
