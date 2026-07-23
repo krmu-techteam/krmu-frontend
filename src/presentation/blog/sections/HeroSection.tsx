@@ -55,10 +55,9 @@ const HeroSection = ({
   return (
     <section className="pt-[110px] md:pt-[155px] pb-6 md:pb-8">
       <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 relative z-10 flex flex-col gap-6 md:gap-8">
-        {/* Main Grid: Left Featured Banner + Right Admission Form */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 xl:gap-[31px] w-full">
           {/* LEFT COLUMN: FEATURED BLOG HERO BANNER */}
-          <div className="w-full lg:flex-1 lg:max-w-[1038px] h-[380px] sm:h-[480px] md:h-[520px] lg:h-[584px] relative rounded-[10px] overflow-hidden flex flex-col justify-end">
+          <div className="w-full lg:flex-1 h-[380px] sm:h-[480px] md:h-[520px] lg:h-[584px] relative rounded-[10px] overflow-hidden flex flex-col justify-end">
             {/* Background Image (Focused left 15% on mobile so girl is in frame) */}
             <Image
               src={featuredImage}
@@ -133,7 +132,7 @@ const HeroSection = ({
           </div>
 
           {/* RIGHT COLUMN: ADMISSION OPEN NPF FORM CARD */}
-          <div className="w-full lg:w-[370px] h-[520px] sm:h-[550px] lg:h-[585px] bg-white rounded-[10px] p-3 sm:p-4 pt-3 sm:pt-4 shadow-2xl flex flex-col justify-between text-black flex-shrink-0">
+          <div className="w-full lg:w-[370px] h-auto lg:h-[585px] bg-white rounded-[10px] p-3 sm:p-4 shadow-2xl flex flex-col text-black flex-shrink-0">
             <div>
               <h2 className="text-xl sm:text-[22px] font-bold text-center text-black mb-1 font-poppins tracking-tight">
                 Admission Open
@@ -141,7 +140,14 @@ const HeroSection = ({
 
               {/* Live NPF Admission Open Widget */}
               <div className="w-full overflow-hidden rounded-[8px]">
-                <NoPaperFormsWidget widgetId={formId} height="510px" />
+                {/* Desktop: 510px height */}
+                <div className="hidden lg:block">
+                  <NoPaperFormsWidget widgetId={formId} height="510px" />
+                </div>
+                {/* Mobile/Tablet: tighter height */}
+                <div className="block lg:hidden">
+                  <NoPaperFormsWidget widgetId={formId} height="490px" />
+                </div>
               </div>
             </div>
           </div>

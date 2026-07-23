@@ -34,6 +34,12 @@ const CommonBlogList = async ({ currentPage, slug, mainBlogClass }: Props) => {
           categoryName={
             blog?._embedded?.["wp:term"]?.[0]?.[0]?.name || "Btech Design"
           }
+          authorName={blog?._embedded?.author?.[0]?.name}
+          authorAvatarUrl={
+            blog?._embedded?.author?.[0]?.avatar_urls?.["48"] ||
+            blog?._embedded?.author?.[0]?.avatar_urls?.["24"]
+          }
+          authorImgId={blog?._embedded?.author?.[0]?.acf?.profile_image}
         />
       ))}
     </div>

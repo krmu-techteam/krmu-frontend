@@ -15,6 +15,13 @@ export interface MainBlogs {
   _embedded?: {
     "wp:featuredmedia"?: Array<{ source_url?: string; alt_text?: string }>;
     "wp:term"?: Array<Array<{ id?: number; name?: string; slug?: string }>>;
+    author?: Array<{
+      name?: string;
+      avatar_urls?: Record<string, string>;
+      acf?: {
+        profile_image?: number;
+      };
+    }>;
   };
   excerpt: {
     rendered: string;

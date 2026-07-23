@@ -312,6 +312,38 @@ ${newHeadings
       yoastFaq.parentNode?.replaceChild(faqContainer, yoastFaq);
     });
 
+    // --- Insert Horizontal Divider Above FAQ ---
+    const finalFaqContainers = Array.from(doc.querySelectorAll(".krmu-blog-faq-container"));
+    if (finalFaqContainers.length > 0) {
+      const firstFaqContainer = finalFaqContainers[0];
+      
+      // Determine if there is a heading right before the FAQ
+      let targetNode: Element = firstFaqContainer;
+      let prevNode = firstFaqContainer.previousElementSibling;
+      
+      while (prevNode) {
+        const text = prevNode.textContent?.trim().toLowerCase() || "";
+        const isHeading = prevNode.tagName === "H2" || prevNode.tagName === "H3";
+        const isFaqHeading = text.includes("faq") || text.includes("f.a.q") || text.includes("frequently asked");
+        
+        if (isHeading && isFaqHeading) {
+          targetNode = prevNode;
+          break;
+        }
+        
+        if (text === "") {
+          prevNode = prevNode.previousElementSibling;
+        } else {
+          break;
+        }
+      }
+      
+      const divider = doc.createElement("div");
+      divider.className = "w-full h-[1px] mt-8 mb-8 sm:mb-10";
+      divider.style.background = "linear-gradient(90deg, rgb(26, 26, 26) 0%, rgb(255, 255, 255) 48.08%, rgb(26, 26, 26) 100%)";
+      targetNode.parentNode?.insertBefore(divider, targetNode);
+    }
+
     setProcessedContent(doc.body.innerHTML);
   }, [content]);
 

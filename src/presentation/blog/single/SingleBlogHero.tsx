@@ -48,7 +48,7 @@ const SingleBlogHero = async ({
         {/* Main Grid: Left Featured Banner + Right Admission Form */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 xl:gap-[31px] w-full">
           {/* LEFT COLUMN: Featured Image with Overlay Badge & Accent Strip */}
-          <div className="w-full lg:flex-1 lg:max-w-[1038px] flex flex-col overflow-hidden bg-[#111d32] shadow-xl">
+          <div className="w-full lg:flex-1 flex flex-col overflow-hidden bg-[#111d32] shadow-xl">
             {/* Image Wrapper — aspect-ratio scales correctly on all screen sizes */}
             <div className="relative w-full aspect-[16/9] overflow-hidden flex flex-col justify-end">
               {finalImage ? (
@@ -70,36 +70,6 @@ const SingleBlogHero = async ({
                   unoptimized
                 />
               )}
-
-              {/* Teal Overlay: #0E5A5C on Mobile & Tablet, clip.png on Desktop */}
-              <div className="absolute bottom-4 left-3 right-0 z-10 w-full lg:w-[65%] xl:w-[600px] min-h-[125px] md:min-h-[110px] flex items-end bg-[#0E5A5C] lg:bg-transparent">
-                {/* Clip Image (Hidden on Mobile/Tablet, Visible on Desktop) */}
-                <div className="absolute inset-0 z-0 hidden lg:block">
-                  <Image
-                    src="/images/blog/single/clip.png"
-                    alt="Clip Overlay"
-                    fill
-                    className="object-fill object-left-bottom pointer-events-none"
-                    unoptimized
-                  />
-                </div>
-
-                {/* Text Content inside Teal Clip */}
-                <div className="relative z-10 p-4 sm:p-6 text-white flex flex-col justify-end w-full">
-                  {/* Title */}
-                  <h1
-                    className="text-lg sm:text-2xl md:text-3xl font-poppins lg:text-[28px] xl:text-[38px] font-bold text-white leading-[1.1] mb-2 tracking-tight drop-shadow-sm pr-2 sm:pr-6 lg:pr-[120px] xl:pr-[80px] break-words"
-                    dangerouslySetInnerHTML={{
-                      __html: title,
-                    }}
-                  />
-
-                  {/* Date */}
-                  <p className="text-xs sm:text-sm text-white/90 font-poppins font-light tracking-wide">
-                    Published On: {formattedDate}
-                  </p>
-                </div>
-              </div>
             </div>
 
             {/* ACCENT STRIP (50% Blue on left, 50% Red on right) - Under the Image Block */}

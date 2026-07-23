@@ -21,12 +21,15 @@ const BlogCarouselSlider = ({ children }: Props) => {
   );
 
   return (
-    <div className="relative w-full mt-12 mb-6">
+    <div className="relative w-full mt-4 mb-6">
       <Carousel
         plugins={[autoplay.current]}
         opts={{ align: "start", loop: true }}
         className="w-full h-auto"
       >
+        {/* Divider Line above Carousel Header */}
+        <div className="w-full h-[1px] mb-8 sm:mb-10 bg-[#FFFFFF]/20"></div>
+
         {/* Header containing Title and Next/Prev controls inline */}
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-[22px] font-semibold text-white font-poppins m-0">

@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useParams } from "next/navigation";
+import { usePathname, useParams, useRouter } from "next/navigation";
+import { RotateCcw } from "lucide-react";
 
 export type CategoryItem = {
   id?: number | string;
@@ -25,6 +26,8 @@ const CategoryPills = ({
   const pathname = usePathname();
   const params = useParams();
 
+  const router = useRouter();
+
   // Determine active category from prop, route params (slug), or pathname
   const paramSlug =
     typeof params?.slug === "string"
@@ -36,21 +39,69 @@ const CategoryPills = ({
   const currentActiveSlug =
     activeSlug ||
     paramSlug ||
-    (pathname ? pathname.split("/").filter(Boolean).pop() : "");
+    (pathname && pathname.includes("/all-categories/") ? pathname.split("/").filter(Boolean).pop() : "");
 
   if (!categories || categories.length === 0) return null;
 
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const val = e.target.value;
+    if (!val) {
+      router.push("/blog");
+    } else {
+      router.push(`/blog/all-categories/${val}`);
+    }
+  };
+
+  // Convert HTML entities for native select options
+  const decodeHTML = (html: string) => {
+    return html.replace(/&amp;/g, "&").replace(/&#038;/g, "&");
+  };
+
   return (
     <div
-      className={`border border-[#23425B] font-poppins p-5 sm:p-6 lg:p-7 rounded-[10px] ${className}`}
+      className={`border border-[#23425B] font-poppins p-4 sm:p-5 lg:p-7 rounded-[10px] ${className}`}
     >
-      {title && (
-        <h3 className="text-xl sm:text-[22px] font-medium text-white mb-4 sm:mb-5 font-poppins tracking-tight flex items-center gap-2">
-          {title}
-        </h3>
-      )}
+      <div className="flex items-center justify-between mb-4 sm:mb-5">
+        {title && (
+          <h3 className="text-xl sm:text-[22px] font-medium text-white font-poppins tracking-tight m-0">
+            {title}
+          </h3>
+        )}
 
-      <div className="flex flex-wrap gap-2.5 sm:gap-3">
+        {/* Reset Button (Desktop) */}
+        <Link
+          href="/blog"
+          className="hidden md:flex items-center gap-1.5 text-xs sm:text-sm text-[#E7C268] hover:text-[#f7d788] transition-colors group px-3 py-1.5 bg-[#E7C268]/10 hover:bg-[#E7C268]/20 rounded-full border border-[#E7C268]/20"
+        >
+          <RotateCcw size={14} className="group-hover:-rotate-90 transition-transform duration-300" />
+          Reset Filter
+        </Link>
+      </div>
+
+      {/* Mobile/Tablet Dropdown */}
+      <div className="block md:hidden relative w-full mb-2">
+        <select
+          value={currentActiveSlug || ""}
+          onChange={handleSelectChange}
+          className="w-full bg-[#061623] border border-white/20 text-white text-[15px] font-medium rounded-[8px] p-3.5 pr-10 focus:outline-none focus:ring-1 focus:ring-[#3b6d94] appearance-none"
+        >
+          <option value="">All Categories (Reset)</option>
+          {categories.map((cat) => (
+            <option key={cat.id || cat.slug} value={cat.slug}>
+              {decodeHTML(cat.name)}
+            </option>
+          ))}
+        </select>
+        {/* Custom Caret Icon for Select */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-white/70">
+          <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+          </svg>
+        </div>
+      </div>
+
+      {/* Desktop Pills */}
+      <div className="hidden md:flex flex-wrap gap-2.5 sm:gap-3">
         {categories.map((cat) => {
           const activeSlugLower = currentActiveSlug
             ? currentActiveSlug.toLowerCase()
