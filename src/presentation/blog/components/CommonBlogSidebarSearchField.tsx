@@ -3,7 +3,6 @@
 import { krmBlogURL } from "@/app/constant";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-// import Image from "next/image";
 
 interface WPPost {
   id: number;
@@ -33,8 +32,8 @@ const CommonBlogSidebarSearchField = () => {
     try {
       const res = await fetch(
         `${krmBlogURL}/wp-json/wp/v2/posts?search=${encodeURIComponent(
-          q
-        )}&_embed&per_page=5&_fields=id,slug,title.rendered,_embedded`
+          q,
+        )}&_embed&per_page=5&_fields=id,slug,title.rendered,_embedded`,
       );
       const data = await res.json();
       setResults(data);
@@ -52,8 +51,6 @@ const CommonBlogSidebarSearchField = () => {
     }, 500);
     return () => clearTimeout(delay);
   }, [query]);
-
-
 
   return (
     <div className="relative">
