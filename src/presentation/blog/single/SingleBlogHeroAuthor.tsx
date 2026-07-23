@@ -59,14 +59,7 @@ const SingleBlogHeroAuthor = ({
             </svg>
           </a>
         </div>
-        {/* {bio && <p className="single_blog_author_bio">{bio}</p>} */}
-        <p className="single_blog_author_bio">
-          With over six years of experience in content and copywriting, Abhinav
-          has created impactful content across a wide range of industries. From
-          blogs and websites to ad copy, social media campaigns, and long-form
-          articles, he specialises in crafting narratives that engage audiences
-          and deliver results.
-        </p>
+        {bio && <p className="single_blog_author_bio">{bio}</p>}
       </div>
     </div>
   );

@@ -17,7 +17,8 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
                 <Link
                   href={item.url}
                   className={`font-medium text-white/80 hover:text-white transition ${item.class}`}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {item.title}
                 </Link>
@@ -37,7 +38,8 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
                 <Link
                   href={item.url}
                   className={`font-medium text-white/80 hover:text-white transition ${item.menuclass}`}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {item.title}
                 </Link>

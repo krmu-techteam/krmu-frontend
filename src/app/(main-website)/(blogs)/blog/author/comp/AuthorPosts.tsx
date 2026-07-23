@@ -59,7 +59,11 @@ const AuthorPosts = ({ authId }: Props) => {
         const data = await getBlogService().getPostsByAuthId(authId, pageNum);
         if (!data || data.length < 6) setHasMore(false);
         if (data && data.length > 0) {
-          setPosts((prev) => [...prev, ...data]);
+          setPosts((prev) => {
+            const map = new Map(prev.map((p) => [p.id, p]));
+            data.forEach((p) => map.set(p.id, p));
+            return Array.from(map.values());
+          });
         }
       } catch {
         setHasMore(false);
@@ -94,7 +98,7 @@ const AuthorPosts = ({ authId }: Props) => {
           });
         }
       },
-      { rootMargin: "300px" },
+      { rootMargin: "300px", threshold: 0 },
     );
 
     observer.observe(sentinel);
@@ -121,7 +125,7 @@ const AuthorPosts = ({ authId }: Props) => {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
         {posts.map((post) => (
           <AuthorPostsCard
             key={post.id}
