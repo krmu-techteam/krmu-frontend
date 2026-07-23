@@ -243,7 +243,7 @@ ${newHeadings
 
       const cards = Array.from(faqWrapper.querySelectorAll(".faq-card"));
       const groupName = `faq-group-${Math.random().toString(36).substring(2, 9)}`;
-      
+
       cards.forEach((card, index) => {
         const questionEl = card.querySelector(".faq-question, h3, h4");
         const answerEl = card.querySelector(".faq-answer, p, div");
@@ -252,7 +252,7 @@ ${newHeadings
           const details = doc.createElement("details");
           details.className = "krmu-blog-faq-item";
           details.setAttribute("name", groupName);
-          
+
           if (index === 0) {
             details.setAttribute("open", "");
           }
@@ -294,7 +294,7 @@ ${newHeadings
         yoastFaq.querySelectorAll(".schema-faq-section"),
       );
       const groupName = `faq-group-${Math.random().toString(36).substring(2, 9)}`;
-      
+
       items.forEach((item, index) => {
         const questionEl = item.querySelector(".schema-faq-question");
         const answerEl = item.querySelector(".schema-faq-answer");
@@ -303,7 +303,7 @@ ${newHeadings
           const details = doc.createElement("details");
           details.className = "krmu-blog-faq-item";
           details.setAttribute("name", groupName);
-          
+
           if (index === 0) {
             details.setAttribute("open", "");
           }
@@ -327,34 +327,41 @@ ${newHeadings
     });
 
     // --- Insert Horizontal Divider Above FAQ ---
-    const finalFaqContainers = Array.from(doc.querySelectorAll(".krmu-blog-faq-container"));
+    const finalFaqContainers = Array.from(
+      doc.querySelectorAll(".krmu-blog-faq-container"),
+    );
     if (finalFaqContainers.length > 0) {
       const firstFaqContainer = finalFaqContainers[0];
-      
+
       // Determine if there is a heading right before the FAQ
       let targetNode: Element = firstFaqContainer;
       let prevNode = firstFaqContainer.previousElementSibling;
-      
+
       while (prevNode) {
         const text = prevNode.textContent?.trim().toLowerCase() || "";
-        const isHeading = prevNode.tagName === "H2" || prevNode.tagName === "H3";
-        const isFaqHeading = text.includes("faq") || text.includes("f.a.q") || text.includes("frequently asked");
-        
+        const isHeading =
+          prevNode.tagName === "H2" || prevNode.tagName === "H3";
+        const isFaqHeading =
+          text.includes("faq") ||
+          text.includes("f.a.q") ||
+          text.includes("frequently asked");
+
         if (isHeading && isFaqHeading) {
           targetNode = prevNode;
           break;
         }
-        
+
         if (text === "") {
           prevNode = prevNode.previousElementSibling;
         } else {
           break;
         }
       }
-      
+
       const divider = doc.createElement("div");
       divider.className = "w-full h-[1px] mt-8 mb-8 sm:mb-10";
-      divider.style.background = "linear-gradient(90deg, rgb(26, 26, 26) 0%, rgb(255, 255, 255) 48.08%, rgb(26, 26, 26) 100%)";
+      divider.style.background =
+        "linear-gradient(90deg, rgb(26, 26, 26) 0%, rgb(255, 255, 255) 48.08%, rgb(26, 26, 26) 100%)";
       targetNode.parentNode?.insertBefore(divider, targetNode);
     }
 
