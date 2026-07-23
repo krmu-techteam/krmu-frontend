@@ -54,14 +54,8 @@ const SingleBlogHeroAuthor = async ({
             <span className="author_designation">{desg}</span>
           </div>
         </div>
-        {bio ? (
-          <p className="single_blog_author_bio">{bio}</p>
-        ) : (
-          <p className="single_blog_author_bio text-white/70 italic text-sm mt-2">
-            This author has not yet added a biography.
-          </p>
-        )}
-        
+        {bio && <p className="single_blog_author_bio">{bio}</p>}
+
         {/* LinkedIn Link moved below the bio */}
         {linkedin && (
           <a
@@ -76,8 +70,7 @@ const SingleBlogHeroAuthor = async ({
             </svg>
             <span className="text-xs font-semibold">Connect on LinkedIn</span>
           </a>
-        </div>
-        {bio && <p className="single_blog_author_bio">{bio}</p>}
+        )}
       </div>
     </div>
   );
