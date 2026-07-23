@@ -82,7 +82,7 @@ const BscFinanceNavbar = ({
             form_name="BSc Finance 2026 - Brochure Download"
           />
 
-          <button
+          {/* <button
             onClick={() =>
               document
                 .getElementById("apply-form")
@@ -91,7 +91,12 @@ const BscFinanceNavbar = ({
             className="inline-flex cursor-pointer items-center max-lg:hidden gap-2 px-4 py-2 rounded-lg bg-white text-[#0c1830] hover:bg-white/90 text-sm font-semibold transition-all duration-200 hidden lg:block"
           >
             Apply now
-          </button>
+          </button> */}
+          <NpfPopup
+            formId="047a23de933bd996c4c01578fad16790"
+            btnClass="npfWidget-047a23de933bd996c4c01578fad16790 inline-flex cursor-pointer items-center max-lg:hidden gap-2 px-4 py-2 rounded-lg bg-white text-[#0c1830] hover:bg-white/90 text-sm font-semibold transition-all duration-200 hidden lg:block"
+            btnText="Apply Now"
+          />
         </div>
       </div>
     </header>
