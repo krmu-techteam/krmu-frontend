@@ -1,4 +1,4 @@
-import { getBlogService } from "@/features/blog";
+import { getBlogService, generateRealisticViews } from "@/features/blog";
 import Image from "next/image";
 import Link from "next/link";
 import { Eye, Calendar } from "lucide-react";
@@ -11,6 +11,9 @@ type Props = {
   date: string;
   categoryName?: string;
   views?: string | number;
+  authorName?: string;
+  authorAvatarUrl?: string; // Gravatar fallback
+  authorImgId?: number; // Custom ACF profile image ID
 };
 
 export const checkImage = async (url: string | null): Promise<boolean> => {
@@ -30,9 +33,17 @@ const CommonBlogCard = async ({
   imgId,
   date,
   categoryName = "KRMU Blog",
-  views = "1,32,124",
+  views,
+  authorName,
+  authorAvatarUrl,
+  authorImgId,
 }: Props) => {
   const imgUrl = await getBlogService().getBlogImageById(imgId);
+  const fetchedAuthorAvatar = authorImgId
+    ? await getBlogService().getBlogImageById(authorImgId)
+    : null;
+
+  const authorAvatar = fetchedAuthorAvatar || authorAvatarUrl;
 
   const finalSrc = imgUrl?.includes(
     "https://wp.krmangalam.edu.in/blog/wp-content",
@@ -42,6 +53,8 @@ const CommonBlogCard = async ({
         /^https:\/\/www\.krmangalam\.edu\.in/,
         "https://wp.krmangalam.edu.in/",
       ) || null;
+
+  const displayViews = views || generateRealisticViews(date, slug);
 
   const finalSrc2 = finalSrc?.includes(
     "https://wp.krmangalam.edu.in//wp-content",
@@ -166,18 +179,38 @@ const CommonBlogCard = async ({
             />
 
             {/* Card Footer Metadata */}
-            <div className="flex items-center gap-8 text-white/80 text-xs font-poppins pt-0.5">
-              {/* Views Count */}
-              <div className="flex items-center gap-1.5">
-                <Eye className="w-4 h-4 text-white/70" />
-                <span>{views}</span>
+            <div className="flex items-center justify-between text-white/80 text-xs font-poppins pt-0.5">
+              <div className="flex items-center gap-6">
+                {/* Views Count */}
+                <div className="flex items-center gap-1.5">
+                  <Eye className="w-4 h-4 text-white/70" />
+                  <span>{displayViews}</span>
+                </div>
+
+                {/* Date */}
+                <div className="flex items-center gap-1.5">
+                  <Calendar className="w-4 h-4 text-white/70" />
+                  <span>{formattedDate}</span>
+                </div>
               </div>
 
-              {/* Date */}
-              <div className="flex items-center gap-1.5">
-                <Calendar className="w-4 h-4 text-white/70" />
-                <span>{formattedDate}</span>
-              </div>
+              {/* Author Profile Avatar (Hover for Name) */}
+              {authorAvatar && (
+                <div
+                  className="flex items-center justify-center relative group/author"
+                  title={authorName || "Author"}
+                >
+                  <div className="w-[22px] h-[22px] rounded-full overflow-hidden border border-white/20 shadow-sm relative group-hover/author:border-[#E7C268]/60 transition-colors duration-300">
+                    <Image
+                      src={authorAvatar}
+                      alt={authorName || "Author Profile"}
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

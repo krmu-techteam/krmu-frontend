@@ -48,7 +48,7 @@ const SingleBlogHero = async ({
         {/* Main Grid: Left Featured Banner + Right Admission Form */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-6 xl:gap-[20px] w-full">
           {/* LEFT COLUMN: Featured Image with Overlay Badge & Accent Strip */}
-          <div className="w-full lg:flex-1 lg:max-w-[1038px] flex flex-col overflow-hidden bg-[#111d32] shadow-xl">
+          <div className="w-full lg:flex-1 flex flex-col overflow-hidden bg-[#111d32] shadow-xl">
             {/* Image Wrapper — aspect-ratio scales correctly on all screen sizes */}
             <div className="relative w-full aspect-[16/9] overflow-hidden flex flex-col justify-end">
               {finalImage ? (

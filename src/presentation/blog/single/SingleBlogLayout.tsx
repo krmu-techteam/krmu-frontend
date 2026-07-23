@@ -5,6 +5,7 @@ import SingleBlogCategorySidebar from "./SingleBlogCategorySidebar";
 import SingleBlogCarousel from "./SingleBlogCarousel";
 import SingleBlogHeroAuthor from "./SingleBlogHeroAuthor";
 import { Eye } from "lucide-react";
+import { generateRealisticViews } from "@/features/blog";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -50,12 +51,14 @@ const SingleBlogLayout = ({
     : "July 10, 2026";
 
   const shareUrl = `https://www.krmangalam.edu.in/blog/${currentSlug}`;
+  
+  const displayViews = generateRealisticViews(date, currentSlug || title);
 
   return (
     <main className={`${raleway.className} pb-8 relative z-10`}>
       <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 flex flex-col lg:flex-row justify-between gap-6 xl:gap-[31px] relative z-10 scroll-style-1">
         {/* LEFT COLUMN: Main Blog Content */}
-        <div className="w-full lg:flex-1 lg:max-w-[1038px] order-1 flex flex-col min-h-screen">
+        <div className="w-full lg:flex-1 order-1 flex flex-col min-h-screen">
           {/* Main Title */}
           <h1
             className="text-3xl md:text-4xl lg:text-[40px] xl:text-[45px] font-bold text-white leading-tight tracking-tight mb-5 font-sans"
@@ -67,12 +70,18 @@ const SingleBlogLayout = ({
             <div className="flex items-center gap-4">
               <span className="flex items-center gap-1.5">
                 <Eye size={16} className="text-[#D8D8D8]" />
-                <span className="text-white">1,32,124</span>
+                <span className="text-white">{displayViews}</span>
               </span>
               <span>
                 <span className="text-[#D8D8D8] mr-2">Published On:</span>
                 <span className="font-semibold text-white">
                   {formattedDate}
+                </span>
+              </span>
+              <span>
+                <span className="text-[#D8D8D8] mr-2">Published By:</span>
+                <span className="font-semibold text-white">
+                  {authorName}
                 </span>
               </span>
             </div>
@@ -159,7 +168,13 @@ const SingleBlogLayout = ({
           <SingleBlogContent content={content} />
 
           {/* Horizontal Divider Line */}
-          <div className="w-full h-[1px] bg-white/20 mb-8" />
+          <div
+            className="w-full h-[1px] mb-8 sm:mb-10"
+            style={{
+              background:
+                "linear-gradient(90deg, rgb(26, 26, 26) 0%, rgb(255, 255, 255) 48.08%, rgb(26, 26, 26) 100%)",
+            }}
+          ></div>
 
           {/* About the Author Card & Share Row */}
           <div className="mb-6">
@@ -252,7 +267,7 @@ const SingleBlogLayout = ({
       </div>
 
       {/* Dynamic Related Carousel aligned with same container constraints */}
-      <div className="max-w-[1530px] mx-auto w-full h-auto px-6 md:px-8 mt-12 relative z-10 scroll-style-1">
+      <div className="max-w-[1530px] mx-auto w-full h-auto px-6 md:px-8 mt-6 relative z-10 scroll-style-1">
         <SingleBlogCarousel currentSlug={currentSlug} />
       </div>
     </main>

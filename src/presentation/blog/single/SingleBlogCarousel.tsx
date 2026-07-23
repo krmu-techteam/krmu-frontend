@@ -26,6 +26,15 @@ const SingleBlogCarousel = async ({ currentSlug }: Props) => {
             slug={blog.slug}
             imgId={blog.featured_media}
             date={blog.date}
+            categoryName={
+              blog?._embedded?.["wp:term"]?.[0]?.[0]?.name || "KRMU Blog"
+            }
+            authorName={blog?._embedded?.author?.[0]?.name}
+            authorAvatarUrl={
+              blog?._embedded?.author?.[0]?.avatar_urls?.["48"] ||
+              blog?._embedded?.author?.[0]?.avatar_urls?.["24"]
+            }
+            authorImgId={blog?._embedded?.author?.[0]?.acf?.profile_image}
           />
         ))}
       </SingleBlogCarouselSlider>

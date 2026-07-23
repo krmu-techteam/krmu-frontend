@@ -6,14 +6,7 @@ type Props = {
   children: ReactNode;
 };
 
-const HIDE_CATEGORIES: string[] = [
-  "general",
-  "medical-and-allied-science",
-  "school-of-management-and-commerce",
-  "travel-and-tourism",
-  "education",
-  "uncategorized",
-];
+const HIDE_CATEGORIES: string[] = ["uncategorized"];
 
 const layout = async ({ children }: Props) => {
   const allCategories = await getBlogService().getAllBlogCategories();
