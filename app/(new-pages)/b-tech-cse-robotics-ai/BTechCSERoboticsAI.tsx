@@ -4,6 +4,7 @@ import ConnectingEligibility from "./comps/ConnectingEligibility";
 import BtechCSERoboticsVideo from "./comps/BtechCSERoboticsVideo";
 import JensenSection from "./comps/JensenSection";
 import ProgrammeKeyFeature from "./comps/ProgrammeKeyFeature";
+import AdmissionProcess from "./comps/AdmissionProcess";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -18,6 +19,7 @@ const BTechCSERoboticsAI = () => {
       <BtechCSERoboticsVideo />
       <JensenSection />
       <ProgrammeKeyFeature />
+      <AdmissionProcess />
     </div>
   );
 };
