@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BadgeCheck } from "lucide-react";
 
 type Props = {
   imgUrl: string;
@@ -10,7 +11,7 @@ type Props = {
 const AuthorHero = ({ imgUrl, AuthName, AuthDesg, AuthAbout }: Props) => {
   return (
     <div
-      className="relative w-full overflow-hidden rounded-2xl border border-white/10"
+      className="relative w-full overflow-hidden rounded-[8px] border border-white/10"
       style={{
         background:
           "linear-gradient(310.55deg, #132737 72.13%, rgba(225, 31, 35, 0.15) 96.47%)",
@@ -21,8 +22,8 @@ const AuthorHero = ({ imgUrl, AuthName, AuthDesg, AuthAbout }: Props) => {
 
       <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 p-6 sm:p-8">
         {/* Avatar */}
-        <div className="flex-shrink-0">
-          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white/20 ring-4 ring-white/10 shadow-xl">
+        <div className="flex-shrink-0 relative">
+          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white/20 ring-4 ring-white/10 relative">
             {imgUrl ? (
               <Image
                 src={imgUrl}
@@ -38,6 +39,10 @@ const AuthorHero = ({ imgUrl, AuthName, AuthDesg, AuthAbout }: Props) => {
               </div>
             )}
           </div>
+          {/* Green Verified Badge */}
+          <div className="absolute top-0 right-1 sm:top-1 sm:right-2 z-20">
+            <BadgeCheck className="w-6 h-6 sm:w-7 sm:h-7 text-white fill-green-500 drop-shadow-md" />
+          </div>
         </div>
 
         {/* Info */}
@@ -46,13 +51,6 @@ const AuthorHero = ({ imgUrl, AuthName, AuthDesg, AuthAbout }: Props) => {
             <h1 className="text-2xl sm:text-3xl font-bold text-white font-poppins tracking-tight">
               {AuthName || "Author"}
             </h1>
-            <Image
-              src="/blogs/verified.svg"
-              width={22}
-              height={22}
-              alt="Verified"
-              className="object-cover flex-shrink-0"
-            />
           </div>
 
           {AuthDesg && (
@@ -62,7 +60,7 @@ const AuthorHero = ({ imgUrl, AuthName, AuthDesg, AuthAbout }: Props) => {
           )}
 
           {AuthAbout && (
-            <p className="text-white/70 text-sm leading-relaxed font-poppins max-w-xl">
+            <p className="text-white/70 text-sm leading-relaxed font-poppins w-full">
               {AuthAbout}
             </p>
           )}

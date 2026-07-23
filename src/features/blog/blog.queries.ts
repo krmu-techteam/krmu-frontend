@@ -13,7 +13,7 @@ export const BLOG_QUERIES = {
     }
     return `${krmBlogURL}/wp-json/wp/v2/categories?per_page=100&_fields=id,name,slug,taxonomy`;
   },
-  recentPosts: () => `${krmBlogURL}/wp-json/wp/v2/posts?per_page=20`,
+  recentPosts: () => `${krmBlogURL}/wp-json/wp/v2/posts?per_page=20&_embed`,
   singleBlog: (slug: string) =>
     `${krmBlogURL}/wp-json/wp/v2/posts?slug=${slug}&_embed`,
   media: (id: number) => `${krmBlogURL}/wp-json/wp/v2/media/${id}?_fields=guid`,

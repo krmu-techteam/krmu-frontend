@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname, useParams, useRouter } from "next/navigation";
-import { RotateCcw } from "lucide-react";
+import { RotateCcw, ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 export type CategoryItem = {
   id?: number | string;
@@ -25,8 +26,9 @@ const CategoryPills = ({
 }: Props) => {
   const pathname = usePathname();
   const params = useParams();
-
   const router = useRouter();
+
+  const [isOpen, setIsOpen] = useState(false);
 
   // Determine active category from prop, route params (slug), or pathname
   const paramSlug =
@@ -39,7 +41,9 @@ const CategoryPills = ({
   const currentActiveSlug =
     activeSlug ||
     paramSlug ||
-    (pathname && pathname.includes("/all-categories/") ? pathname.split("/").filter(Boolean).pop() : "");
+    (pathname && pathname.includes("/all-categories/")
+      ? pathname.split("/").filter(Boolean).pop()
+      : "");
 
   if (!categories || categories.length === 0) return null;
 
@@ -59,21 +63,39 @@ const CategoryPills = ({
 
   return (
     <div
-      className={`border border-[#23425B] font-poppins p-4 sm:p-5 lg:p-7 rounded-[10px] ${className}`}
+      className={`border border-[#23425B] font-poppins rounded-[8px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden ${
+        isOpen ? "p-4 sm:p-5" : "p-4 sm:p-5 md:py-3 md:px-5"
+      } ${className}`}
     >
-      <div className="flex items-center justify-between mb-4 sm:mb-5">
-        {title && (
-          <h3 className="text-xl sm:text-[22px] font-medium text-white font-poppins tracking-tight m-0">
-            {title}
-          </h3>
-        )}
+      <div
+        className={`flex items-center justify-between transition-all duration-500 ${isOpen ? "mb-4 sm:mb-5" : "mb-3 md:mb-0"}`}
+      >
+        <div
+          className="flex items-center gap-2 cursor-pointer group"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {title && (
+            <h3 className="text-xl sm:text-[22px] font-medium text-white font-poppins tracking-tight m-0">
+              {title}
+            </h3>
+          )}
+          <div className="hidden md:flex p-1 rounded-full bg-white/5 group-hover:bg-white/10 transition-colors">
+            <ChevronDown
+              size={20}
+              className={`text-white transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+            />
+          </div>
+        </div>
 
         {/* Reset Button (Desktop) */}
         <Link
           href="/blog"
           className="hidden md:flex items-center gap-1.5 text-xs sm:text-sm text-[#E7C268] hover:text-[#f7d788] transition-colors group px-3 py-1.5 bg-[#E7C268]/10 hover:bg-[#E7C268]/20 rounded-full border border-[#E7C268]/20"
         >
-          <RotateCcw size={14} className="group-hover:-rotate-90 transition-transform duration-300" />
+          <RotateCcw
+            size={14}
+            className="group-hover:-rotate-90 transition-transform duration-300"
+          />
           Reset Filter
         </Link>
       </div>
@@ -101,7 +123,9 @@ const CategoryPills = ({
       </div>
 
       {/* Desktop Pills */}
-      <div className="hidden md:flex flex-wrap gap-2.5 sm:gap-3">
+      <div
+        className={`hidden md:flex flex-wrap gap-2.5 sm:gap-3 overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-[1000px] opacity-100 mt-2" : "max-h-0 opacity-0 m-0"}`}
+      >
         {categories.map((cat) => {
           const activeSlugLower = currentActiveSlug
             ? currentActiveSlug.toLowerCase()

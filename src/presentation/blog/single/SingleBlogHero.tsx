@@ -46,7 +46,7 @@ const SingleBlogHero = async ({
     <section className="pt-[110px] md:pt-[155px] pb-6 md:pb-8 overflow-hidden">
       <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 relative z-10 flex flex-col gap-6 md:gap-8">
         {/* Main Grid: Left Featured Banner + Right Admission Form */}
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-6 xl:gap-[20px] w-full">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-6 xl:gap-[31px] w-full">
           {/* LEFT COLUMN: Featured Image with Overlay Badge & Accent Strip */}
           <div className="w-full lg:flex-1 flex flex-col overflow-hidden bg-[#111d32] shadow-xl">
             {/* Image Wrapper — aspect-ratio scales correctly on all screen sizes */}
@@ -80,7 +80,7 @@ const SingleBlogHero = async ({
           </div>
 
           {/* RIGHT COLUMN: Admission Open Form Card */}
-          <div className="w-full lg:w-[300px] xl:w-[370px] h-auto xl:h-[563px] 2xl:h-[592px] bg-white rounded-[8px] p-3 sm:p-4 pt-3 sm:pt-4 shadow-2xl flex flex-col justify-between text-black flex-shrink-0 border border-[#d2d2d2]">
+          <div className="w-full lg:w-[300px] xl:w-[370px] h-auto xl:h-[563px] 2xl:h-[606px] bg-white rounded-[8px] p-3 sm:p-4 pt-3 sm:pt-4 shadow-2xl flex flex-col justify-between text-black flex-shrink-0 border border-[#d2d2d2]">
             <div>
               <h2 className="text-xl sm:text-[22px] font-bold text-center text-black mb-1 font-poppins tracking-tight">
                 Admission Open

@@ -333,10 +333,10 @@ summary.krmu-blog-faq-summary * {
     .krmu-blog-cta a
   ):not(.single-blog-toc-item),
 .krmu_single_blog li:not(.blog-toc-card li) a {
-  color: #ffffff !important;
+  color: #009bf2 !important;
   text-decoration: underline !important;
   text-underline-offset: 3px !important;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
   transition: color 0.2s ease !important;
 }
 
@@ -844,7 +844,6 @@ html {
   width: 90px !important;
   height: 90px !important;
   border-radius: 50% !important;
-  overflow: hidden !important;
   border: 2px solid rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -894,9 +893,8 @@ html {
 
 .single_blog_author_info .author_designation {
   font-size: 14px !important;
-  color: white !important;
+  color: #e7c268 !important;
   font-weight: 500 !important;
-  opacity: 0.9 !important;
 }
 
 .single_blog_author_linkedin_link {

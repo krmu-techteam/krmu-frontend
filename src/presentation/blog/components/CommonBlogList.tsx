@@ -32,7 +32,7 @@ const CommonBlogList = async ({ currentPage, slug, mainBlogClass }: Props) => {
           imgId={blog?.featured_media}
           date={blog?.date_gmt}
           categoryName={
-            blog?._embedded?.["wp:term"]?.[0]?.[0]?.name || "Btech Design"
+            blog?._embedded?.["wp:term"]?.[0]?.[0]?.name || "KRMU Blog"
           }
           authorName={blog?._embedded?.author?.[0]?.name}
           authorAvatarUrl={

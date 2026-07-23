@@ -7,7 +7,9 @@ import {
   FaFacebookF,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { getBlogService } from "@/features/blog";
+import { getBlogService, generateRealisticViews } from "@/features/blog";
+import Image from "next/image";
+import { Calendar } from "lucide-react";
 
 type PopularPost = {
   id: number;
@@ -17,6 +19,8 @@ type PopularPost = {
   date: string;
   categoryName: string;
   views: string;
+  authorName?: string;
+  authorAvatar?: string | null;
 };
 
 const DEFAULT_POPULAR_POSTS: PopularPost[] = [
@@ -91,10 +95,28 @@ const MostPopularBlogsSection = async () => {
             "The best interiors are the combination of creativity, purpose, and precision.",
           slug: post?.slug || "bdes-in-interior-design-complete-guide",
           date: formattedDate,
-          categoryName: "Btech Design",
-          views: "1,32,124",
+          categoryName: post?._embedded?.["wp:term"]?.[0]?.[0]?.name || "KRMU Blog",
+          views: generateRealisticViews(rawDate || new Date().toISOString(), post?.slug || "dummy"),
+          authorName: post?._embedded?.author?.[0]?.name || "KRMU Team",
+          authorImgId: post?._embedded?.author?.[0]?.acf?.profile_image,
+          authorAvatarUrl: post?._embedded?.author?.[0]?.avatar_urls?.["48"] || post?._embedded?.author?.[0]?.avatar_urls?.["24"]
         };
       });
+
+      // Fetch custom avatars in parallel
+      displayPosts = await Promise.all(
+        displayPosts.map(async (post: any) => {
+          let finalAvatar = post.authorAvatarUrl;
+          if (post.authorImgId) {
+            const customAvatar = await getBlogService().getBlogImageById(post.authorImgId);
+            if (customAvatar) finalAvatar = customAvatar;
+          }
+          return {
+            ...post,
+            authorAvatar: finalAvatar
+          };
+        })
+      );
     }
   } catch (error) {
     console.error("Error fetching popular blogs:", error);
@@ -156,12 +178,9 @@ const MostPopularBlogsSection = async () => {
                 }}
               />
 
-              {/* Top Header: Date on Left, Category Badge on Right */}
+              {/* Top Header: Category Badge on Right */}
               <div>
-                <div className="flex items-center justify-between gap-2 mb-4">
-                  <span className="text-white/70 text-xs italic font-poppins font-light">
-                    {post.date}
-                  </span>
+                <div className="flex justify-end mb-4">
                   <span className="inline-block bg-[#E7C268] text-[#071726] text-xs font-semibold px-3 py-1 rounded-full font-poppins group-hover:brightness-110 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
                     {post.categoryName}
                   </span>
@@ -174,9 +193,10 @@ const MostPopularBlogsSection = async () => {
                 />
 
                 {/* Excerpt */}
-                <p className="text-white/75 text-xs sm:text-sm leading-relaxed line-clamp-2 mb-3 font-light">
-                  {post.excerpt}
-                </p>
+                <p 
+                  className="text-white/75 text-xs sm:text-sm leading-relaxed line-clamp-2 mb-3 font-light"
+                  dangerouslySetInnerHTML={{ __html: post.excerpt }}
+                />
 
                 {/* Read More Link */}
                 <Link
@@ -200,77 +220,42 @@ const MostPopularBlogsSection = async () => {
                   }}
                 />
 
-                {/* Card Footer Metadata: Views & Social Share */}
+                {/* Card Footer Metadata: Views & Date on Left, Author Profile on Right */}
                 <div className="flex items-center justify-between text-white/80 text-xs font-poppins pt-0.5">
-                  {/* Views Count */}
-                  <div className="flex items-center gap-1.5">
-                    <Eye className="w-4 h-4 text-white/70" />
-                    <span className="text-white/90 font-light">
-                      {post.views}
-                    </span>
+                  {/* Meta Group: Views & Date */}
+                  <div className="flex items-center gap-4">
+                    {/* Views Count */}
+                    <div className="flex items-center gap-1.5">
+                      <Eye className="w-4 h-4 text-white/70" />
+                      <span className="text-white/90 font-light">
+                        {post.views}
+                      </span>
+                    </div>
+
+                    {/* Date */}
+                    <div className="flex items-center gap-1.5">
+                      <Calendar className="w-4 h-4 text-white/70" />
+                      <span className="text-white/90 font-light">{post.date}</span>
+                    </div>
                   </div>
 
-                  {/* Social Share Icons */}
-                  <div className="flex items-center gap-1.5 sm:gap-2">
-                    <span className="font-light text-white/75 text-xs mr-0.5">
-                      Share:
-                    </span>
-
-                    {/* Facebook */}
-                    <a
-                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Facebook Share"
-                      className="w-6 h-6 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:scale-110 transition-transform"
+                  {/* Author Profile Avatar */}
+                  {post.authorAvatar && (
+                    <div
+                      className="flex items-center justify-center relative group/author"
+                      title={post.authorName || "Author"}
                     >
-                      <FaFacebookF className="w-3 h-3 fill-current" />
-                    </a>
-
-                    {/* Instagram */}
-                    <a
-                      href="https://www.instagram.com/krmangalamuniv/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Instagram"
-                      className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center hover:scale-110 transition-transform"
-                    >
-                      <FaInstagram className="w-3 h-3 text-white" />
-                    </a>
-
-                    {/* LinkedIn */}
-                    <a
-                      href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="LinkedIn Share"
-                      className="w-6 h-6 rounded-full bg-[#0A66C2] text-white flex items-center justify-center hover:scale-110 transition-transform"
-                    >
-                      <FaLinkedinIn className="w-3 h-3 fill-current" />
-                    </a>
-
-                    {/* WhatsApp */}
-                    <a
-                      href={`https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="WhatsApp Share"
-                      className="w-6 h-6 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:scale-110 transition-transform"
-                    >
-                      <FaWhatsapp className="w-3 h-3 fill-current" />
-                    </a>
-
-                    {/* X / Twitter */}
-                    <a
-                      href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="X Twitter Share"
-                      className="w-6 h-6 rounded-full bg-black text-white border border-white/20 flex items-center justify-center hover:scale-110 transition-transform"
-                    >
-                      <FaXTwitter className="w-3 h-3 fill-current" />
-                    </a>
-                  </div>
+                      <div className="w-[22px] h-[22px] rounded-full overflow-hidden border border-white/20 shadow-sm relative group-hover/author:border-[#E7C268]/60 transition-colors duration-300">
+                        <Image
+                          src={post.authorAvatar}
+                          alt={post.authorName || "Author Profile"}
+                          fill
+                          className="object-cover"
+                          unoptimized
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

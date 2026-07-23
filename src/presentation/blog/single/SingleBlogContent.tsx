@@ -242,13 +242,20 @@ ${newHeadings
       faqContainer.className = "krmu-blog-faq-container";
 
       const cards = Array.from(faqWrapper.querySelectorAll(".faq-card"));
-      cards.forEach((card) => {
+      const groupName = `faq-group-${Math.random().toString(36).substring(2, 9)}`;
+      
+      cards.forEach((card, index) => {
         const questionEl = card.querySelector(".faq-question, h3, h4");
         const answerEl = card.querySelector(".faq-answer, p, div");
 
         if (questionEl && answerEl) {
           const details = doc.createElement("details");
           details.className = "krmu-blog-faq-item";
+          details.setAttribute("name", groupName);
+          
+          if (index === 0) {
+            details.setAttribute("open", "");
+          }
 
           const summary = doc.createElement("summary");
           summary.className = "krmu-blog-faq-summary";
@@ -286,13 +293,20 @@ ${newHeadings
       const items = Array.from(
         yoastFaq.querySelectorAll(".schema-faq-section"),
       );
-      items.forEach((item) => {
+      const groupName = `faq-group-${Math.random().toString(36).substring(2, 9)}`;
+      
+      items.forEach((item, index) => {
         const questionEl = item.querySelector(".schema-faq-question");
         const answerEl = item.querySelector(".schema-faq-answer");
 
         if (questionEl && answerEl) {
           const details = doc.createElement("details");
           details.className = "krmu-blog-faq-item";
+          details.setAttribute("name", groupName);
+          
+          if (index === 0) {
+            details.setAttribute("open", "");
+          }
 
           const summary = doc.createElement("summary");
           summary.className = "krmu-blog-faq-summary";

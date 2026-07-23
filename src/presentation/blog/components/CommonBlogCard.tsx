@@ -157,9 +157,10 @@ const CommonBlogCard = async ({
 
             {/* Clean Excerpt Paragraph (without [&hellip;]) */}
             {cleanExcerpt && (
-              <p className="text-white/75 text-xs sm:text-sm leading-relaxed line-clamp-2 mb-3.5 font-light">
-                {cleanExcerpt}
-              </p>
+              <p 
+                className="text-white/75 text-xs sm:text-sm leading-relaxed line-clamp-2 mb-3.5 font-light"
+                dangerouslySetInnerHTML={{ __html: cleanExcerpt }}
+              />
             )}
 
             {/* Read More Link */}
