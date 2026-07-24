@@ -4,7 +4,7 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <section className="bg-cover bg-no-repeat font-poppins bg-center relative">
-      <div className="w-full pt-[124px]">
+      <div className="w-full pt-[113px] md:pt-[120px] lg:pt-[119px] xl:pt-[124px]">
         <Image
           src={"/images/international-relations/hero.jpg"}
           alt="hero image"
