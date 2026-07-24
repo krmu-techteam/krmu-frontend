@@ -6,10 +6,10 @@ const OverviewTab = () => {
     <div className="max-w-[1664px] mx-auto w-full libtabcontent flex flex-col lg:flex-row items-center gap-10">
       <div className="w-full lg:w-1/2">
         <p>Library is in your Pocket, Smartphone to Smart Library</p>
-        <h2>
+        <h1>
           Library is trying to reach nearest to you, on your fingertips, just a
           click away
-        </h2>
+        </h1>
         <p>
           K.R. Mangalam University has embraced the digital era with its
           innovative approach to library services, offering a blend of

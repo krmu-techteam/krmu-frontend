@@ -10,15 +10,15 @@ export const CommonHeader = () => {
         boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
       }} 
     >
-      <div className="w-full bg-[#fcd404]">
+      {/* <div className="w-full bg-[#fcd404]">
         
-        <KRMUTimer targetDate="2026-07-18T23:59:59" />
-      </div>
+        <KRMUTimer targetDate="2026-07-22T18:59:59" />
+      </div> */}
       <div className="px-5 pt-2 flex flex-col sm:flex-row justify-between items-center gap-3">
         <div className="w-full md:w-2/6 xl:w-3/6 2xl:w-1/3 flex justify-center sm:justify-start gap-5">
           <Image
             src="/wp-content/landingpage/common/krmlogo.webp"
-            width={350}
+            width={350} 
             height={65}
             alt="MBA Landing Page Logo"
           />

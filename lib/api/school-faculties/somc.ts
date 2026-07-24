@@ -104,7 +104,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/09/Indumati-Pandey.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/09/Dr.-Indumati-Pandey-SOMC-1.jpg",
   },
 
   {
@@ -304,7 +304,22 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Sapna-Rana.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/09/Dr-Sapna-Rana-SOMC-1.jpg",
+  },
+  {
+    id: 115919,
+    slug: "dr-anil-kumar",
+    title: {
+      rendered: "Dr. Anil Kumar",
+    },
+    featured_media: 115917,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor (Senior Scale)",
+      schools: [1126],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/09/Dr.-Anil-SOMC-1.jpg",
   },
   {
     id: 10441,

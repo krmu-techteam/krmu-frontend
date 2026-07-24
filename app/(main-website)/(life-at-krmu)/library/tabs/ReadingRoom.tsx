@@ -5,7 +5,7 @@ const ReadingRoom = () => {
     <div className="libtabcontent">
       <p>Fostering Focus</p>
       <br />
-      <h2>Reading Room Facilities and Discipline</h2>
+      <h1>Reading Room Facilities and Discipline</h1>
       <p>
         The library offers a dedicated reading room with a focus on discipline
         and silence, creating an environment conducive to deep study and

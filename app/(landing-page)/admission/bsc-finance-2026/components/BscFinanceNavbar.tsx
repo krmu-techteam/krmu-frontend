@@ -22,11 +22,11 @@ const BscFinanceNavbar = ({
 }: BscFinanceNavbarProps) => {
   return (
     <header className="absolute top-0 left-0 right-0 z-40  overflow-hidden">
-      <div className="fixed top-0 left-0 w-full z-50">
-        <KRMUTimer targetDate="2026-07-18T23:59:59" />
-      </div>
-      <div className="max-w-[1300px] mx-auto md:flex items-center justify-center md:justify-between gap-4 sm:gap-6 px-4 sm:px-6  pb-4 sm:pb-6 lg:pb-8 mt-28 md:mt-20">
-      {/* <div className="max-w-[1300px] mx-auto md:flex items-center justify-center md:justify-between gap-4 sm:gap-6 px-4 sm:px-6  py-4 sm:py-6 lg:py-8"> */}
+      {/* <div className="fixed top-0 left-0 w-full z-50">
+        <KRMUTimer targetDate="2026-07-22T18:59:59" />
+      </div> */}
+      {/* <div className="max-w-[1300px] mx-auto md:flex items-center justify-center md:justify-between gap-4 sm:gap-6 px-4 sm:px-6  pb-4 sm:pb-6 lg:pb-8 mt-28 md:mt-20"> */}
+      <div className="max-w-[1300px] mx-auto md:flex items-center justify-center md:justify-between gap-4 sm:gap-6 px-4 sm:px-6  py-4 sm:py-6 lg:py-8">
         {/* Logo */}
         <div
           className="relative shrink-0 hidden md:block"
@@ -82,7 +82,7 @@ const BscFinanceNavbar = ({
             form_name="BSc Finance 2026 - Brochure Download"
           />
 
-          <button
+          {/* <button
             onClick={() =>
               document
                 .getElementById("apply-form")
@@ -91,7 +91,12 @@ const BscFinanceNavbar = ({
             className="inline-flex cursor-pointer items-center max-lg:hidden gap-2 px-4 py-2 rounded-lg bg-white text-[#0c1830] hover:bg-white/90 text-sm font-semibold transition-all duration-200 hidden lg:block"
           >
             Apply now
-          </button>
+          </button> */}
+          <NpfPopup
+            formId="047a23de933bd996c4c01578fad16790"
+            btnClass="npfWidget-047a23de933bd996c4c01578fad16790 inline-flex cursor-pointer items-center max-lg:hidden gap-2 px-4 py-2 rounded-lg bg-white text-[#0c1830] hover:bg-white/90 text-sm font-semibold transition-all duration-200 hidden lg:block"
+            btnText="Apply Now"
+          />
         </div>
       </div>
     </header>

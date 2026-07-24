@@ -30,7 +30,7 @@ const NewsEventsImageContent = async ({
 
         {slug ===
         "k-r-mangalam-university-secures-global-sustainability-impact-rating-band-601-800-in-the-sustainability-impact-ratings-2026" ? (
-          <Image src="https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/Ranking-Creative-800X600-final.jpg" width={800} height={600} alt="" />
+          <Image src="https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/News-and-events-Page.png" width={800} height={600} alt="" />
         ) : (
           imageUrls?.length > 0 && (
             <div className="w-full lg:w-1/2">

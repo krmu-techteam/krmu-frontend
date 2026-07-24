@@ -758,7 +758,8 @@
     margin-bottom: 20px;
   }
 
-  .libtabcontent h2 {
+  .libtabcontent h2,
+  .libtabcontent h1 {
     font-size: 48px;
     line-height: 1;
     font-weight: 600;
@@ -779,7 +780,7 @@
     font-weight: 600;
   }
 
-  .libcontent h4 {
+  .libcontent h4, .libcontent h1{
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -816,7 +817,8 @@
   }
 
   @media (max-width: 640px) {
-    .libtabcontent h2 {
+    .libtabcontent h2,
+    .libtabcontent h1 {
       font-size: 30px;
     }
   }

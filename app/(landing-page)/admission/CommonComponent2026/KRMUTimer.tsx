@@ -94,7 +94,7 @@ export default function KRMUTimer({
       <span
         className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-xs sm:text-sm" : "text-xs sm:text-sm"}`}
       >
-        Application Deadline Closing Soon | Seats Allotted on a First Come, First Serve Basis | Apply Now!
+        Registration Closing on July 22 | Join Ayushman Pandita LIVE | Limited Seats Available
         {mainWebsiteTimer && (
           <span className="border-b border-white border-dotted inline-block ml-2">Apply Now</span>
         )}
