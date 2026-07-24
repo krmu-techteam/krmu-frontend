@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const AdmissionSection = () => {
   return (
-    <section className="relative pt-24 pb-8 lg:pt-44 xl:pb-16">
+    <section className="relative pt-24 pb-8 lg:pt-24 xl:pb-16">
       <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
         <div className="w-full flex flex-col lg:flex-row items-end lg:h-[360px] bg-[#092032] rounded-[4px]">
           {/* Left Side: Image Overflowing */}
@@ -12,7 +12,7 @@ const AdmissionSection = () => {
               src="/images/international-relations/admission-girl.png"
               width={534}
               height={534}
-              className="w-full max-w-[400px] lg:max-w-[450px] lg:w-[534px] lg:h-[534px] object-contain -mt-24 lg:-mt-0 lg:absolute lg:top-[311px] xl:top-[268px] lg:-translate-y-1/2 lg:left-0 xl:left-8 2xl:left-[250px] z-10"
+              className="w-full max-w-[400px] lg:max-w-[450px] lg:w-[534px] lg:h-[534px] object-contain -mt-24 lg:-mt-0 lg:absolute lg:top-[230px] lg:-translate-y-1/2 lg:left-0 xl:left-24 2xl:left-72 z-10"
               alt="International Admissions"
             />
           </div>
