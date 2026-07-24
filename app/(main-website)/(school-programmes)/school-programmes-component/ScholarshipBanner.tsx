@@ -8,16 +8,21 @@ const ScholarshipBanner = () => {
         <div className="flex-1 flex flex-col sm:flex-row items-center sm:items-center text-center sm:text-left gap-5">
           {/* Left Icon: Beautiful Rounded Circle */}
           <div className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/15 shadow-inner">
-            <GraduationCap className="w-8 h-8 md:w-10 md:h-10 text-white" strokeWidth={1.5} />
+            <GraduationCap
+              className="w-8 h-8 md:w-10 md:h-10 text-white"
+              strokeWidth={1.5}
+            />
           </div>
-          
+
           {/* Content */}
           <div className="flex-1">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight">
-              Scholarship 2026
+              Scholarship 2026-27
             </h3>
             <p className="text-sm md:text-[15px] lg:text-base text-gray-200/90 max-w-3xl font-normal leading-relaxed">
-              We offer up to 100% scholarships for academic toppers, sports achievers, and students across multiple categories, ensuring that ambition, hard work, and potential always find their way forward.
+              We offer up to 100% scholarships for academic toppers, sports
+              achievers, and students across multiple categories, ensuring that
+              ambition, hard work, and potential always find their way forward.
             </p>
           </div>
         </div>

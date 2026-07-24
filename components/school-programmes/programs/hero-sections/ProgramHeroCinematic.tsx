@@ -1,4 +1,3 @@
-
 import { HeroSection } from "@/lib/types/school-programme";
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import NoPaperForm from "@/lib/constants/NoPaperForm";
@@ -34,47 +33,64 @@ const ProgramHeroCinematic = ({
   logos,
 }: Props) => {
   const config = heroConfigs[slug] || heroConfigs["bba-hr"];
- 
+
   return (
     <>
-      <section 
+      <section
         className="hero-cinematic-overlay pt-[280px] sm:pt-[320px] md:pt-[360px] lg:pt-32 xl:pt-40 pb-0 lg:pb-12 overflow-x-hidden 2xl:px-0 overflow-hidden 
         [background-position:var(--bg-pos-mobile)] sm:[background-position:var(--bg-pos-tablet)] lg:[background-position:var(--bg-pos-desktop)] 
         [background-size:var(--bg-size-mobile)] sm:[background-size:var(--bg-size-tablet)] lg:[background-size:var(--bg-size-desktop)] 
         bg-no-repeat relative before:content-[''] before:absolute before:top-0 before:left-0 
         before:h-full before:w-full before:z-0"
-        style={{ 
-          backgroundImage: `url(${config.bgUrl})`,
-          '--bg-pos-desktop': config.bgPosition || 'center center',
-          '--bg-pos-tablet': config.tabletBgPosition || '60% center',
-          '--bg-pos-mobile': config.mobileBgPosition || 'center -120px',
-          '--bg-size-desktop': config.bgSize || 'cover',
-          '--bg-size-tablet': config.tabletBgSize || 'cover',
-          '--bg-size-mobile': config.mobileBgSize || '240%',
-          '--overlay-start-desktop': `rgba(0,0,0,${config.overlayOpacity || '0.85'})`,
-          '--overlay-start-mobile': 'rgba(0,0,0,0.5)',
-          '--overlay-width': config.overlayWidth || '45%'
-        } as React.CSSProperties}
+        style={
+          {
+            backgroundImage: `url(${config.bgUrl})`,
+            "--bg-pos-desktop": config.bgPosition || "center center",
+            "--bg-pos-tablet": config.tabletBgPosition || "60% center",
+            "--bg-pos-mobile": config.mobileBgPosition || "center -120px",
+            "--bg-size-desktop": config.bgSize || "cover",
+            "--bg-size-tablet": config.tabletBgSize || "cover",
+            "--bg-size-mobile": config.mobileBgSize || "240%",
+            "--overlay-start-desktop": `rgba(0,0,0,${config.overlayOpacity || "0.85"})`,
+            "--overlay-start-mobile": "rgba(0,0,0,0.5)",
+            "--overlay-width": config.overlayWidth || "45%",
+          } as React.CSSProperties
+        }
       >
         <div className="max-w-[1800px] mx-auto w-full flex flex-col lg:flex-row lg:items-center justify-center gap-8 lg:px-10 xl:px-0 xl:gap-16 z-10 2xl:px-0">
           <div className="w-full lg:w-[60%] xl:w-1/2 relative z-10">
             <div className="xl:max-w-[700px] w-full">
               <div className="flex flex-col lg:block bg-gradient-to-t from-black/95 via-black/40 to-transparent lg:bg-none px-6 pt-14 pb-6 sm:px-6 sm:pt-20 sm:pb-8 md:px-8 lg:p-0">
                 <div className="mb-0 lg:mb-10">
-                  <h3 className={`text-white/90 lg:block hidden ${config.subtitleMaxWidth || "xl:max-w-[65%] 2xl:max-w-[70%]"} [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.subtitleSize || "text-md lg:text-[14px] xl:text-lg"} font-normal uppercase tracking-[0.05em] drop-shadow-md`}>
+                  <h3
+                    className={`text-white/90 lg:block hidden ${config.subtitleMaxWidth || "xl:max-w-[65%] 2xl:max-w-[70%]"} [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.subtitleSize || "text-md lg:text-[14px] xl:text-lg"} font-normal uppercase tracking-[0.05em] drop-shadow-md`}
+                  >
                     {heroSection?.subtitle}
                   </h3>
-                  <h1 className={`text-white ${config.titleSize} ${config.titleMaxWidth || ""} font-semibold md:font-bold mb-0 lg:mb-3 leading-[1.1] antialiased [text-shadow:0px_4px_8px_rgba(0,0,0,0.5)]`}>
+                  {slug === "ba-llb-hons" && (
+                    <p
+                      className={` text-white text-[20px]   mt-4 leading-relaxed font-semibold hidden lg:block lg:max-w-xs xl:max-w-md ${config.contentMaxWidth || "2xl:max-w-lg"}`}
+                    >
+                      {heroSection?.description}
+                    </p>
+                  )}
+                  <h1
+                    className={`text-white ${config.titleSize} ${config.titleMaxWidth || ""} font-semibold md:font-bold mb-0 lg:mb-3 leading-[1.1] antialiased [text-shadow:0px_4px_8px_rgba(0,0,0,0.5)]`}
+                  >
                     {title}{" "}
-                    <span 
+                    <span
                       className={`${config.highlightClass || "text-white/90"} [&_.highlight]:text-[#f5a623] font-semibold antialiased [text-shadow:0px_4px_8px_rgba(0,0,0,0.5)]`}
                       dangerouslySetInnerHTML={{ __html: highlightitle }}
                     />
                   </h1>
-                  <p className={`text-white/95 text-[15px] xl:text-lg [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.descSize} mb-4 leading-relaxed font-normal hidden lg:block lg:max-w-xs xl:max-w-md ${config.contentMaxWidth || "2xl:max-w-lg"}`}>
-                    {heroSection?.description}
-                  </p>
-                  
+                  {slug !== "ba-llb-hons" && (
+                    <p
+                      className={`text-white/95 text-[15px] xl:text-lg [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.descSize} mb-4 leading-relaxed font-normal hidden lg:block lg:max-w-xs xl:max-w-md ${config.contentMaxWidth || "2xl:max-w-lg"}`}
+                    >
+                      {heroSection?.description}
+                    </p>
+                  )}
+
                   {slug !== "bhmct-hotel-management" && (
                     <div className="mt-4 lg:mt-3 mb-8 xl:mt-4 flex justify-start lg:justify-start">
                       {formId && (
@@ -98,13 +114,17 @@ const ProgramHeroCinematic = ({
                       {dreamcareerSection?.highestpackagenum || "56.6 LPA"}
                     </span>
                     <span className="text-white/90 text-[11px] md:text-sm xl:text-base mt-1 font-normal whitespace-nowrap overflow-hidden text-ellipsis">
-                      {dreamcareerSection?.highestpackagetitle || "Highest Package"}
+                      {dreamcareerSection?.highestpackagetitle ||
+                        "Highest Package"}
                     </span>
                   </div>
                   <div className="flex flex-col lg:px-8 xl:pr-10 lg:pl-0 lg:border-r border-white/20 text-center lg:text-left">
-                    <span className="text-white font-semibold text-xl md:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">800+</span>
+                    <span className="text-white font-semibold text-xl md:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
+                      800+
+                    </span>
                     <span className="text-white/90 text-[11px] md:text-sm xl:text-base mt-1 font-normal whitespace-nowrap overflow-hidden text-ellipsis">
-                      {dreamcareerSection?.campusrecruitertitle || "Campus Recruiters"}
+                      {dreamcareerSection?.campusrecruitertitle ||
+                        "Campus Recruiters"}
                     </span>
                   </div>
                   <div className="flex flex-col text-center lg:text-left relative">
@@ -112,7 +132,8 @@ const ProgramHeroCinematic = ({
                       {dreamcareerSection?.placementassistnum || "100%"}
                     </span>
                     <span className="text-white/90 text-[11px] md:text-sm xl:text-base mt-1 font-normal whitespace-nowrap overflow-hidden text-ellipsis">
-                      {dreamcareerSection?.placementassisttitle || "Placement Assistance"}
+                      {dreamcareerSection?.placementassisttitle ||
+                        "Placement Assistance"}
                     </span>
                   </div>
                 </div>
@@ -145,7 +166,7 @@ const ProgramHeroCinematic = ({
               {dreamcareerSection?.heading}
             </h5>
           </div>
-          
+
           {/* Logo Container */}
           <div className="min-h-[60px] pt-4">
             <ConnectingDreamSlider logos={logos} />
@@ -154,7 +175,10 @@ const ProgramHeroCinematic = ({
       </div>
 
       {/* Mobile Form - Visible only on mobile for BBA-HR */}
-      <div id="apply-form-mobile" className="lg:hidden w-full bg-white pb-0 px-0">
+      <div
+        id="apply-form-mobile"
+        className="lg:hidden w-full bg-white pb-0 px-0"
+      >
         <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.1)] rounded-none lg:rounded-md overflow-hidden">
           <div className="heroBannerForm-header">
             <h3 className="mb-0 text-center">

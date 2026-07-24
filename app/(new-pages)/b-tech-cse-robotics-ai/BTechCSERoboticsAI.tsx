@@ -5,6 +5,10 @@ import BtechCSERoboticsVideo from "./comps/BtechCSERoboticsVideo";
 import JensenSection from "./comps/JensenSection";
 import ProgrammeKeyFeature from "./comps/ProgrammeKeyFeature";
 import AdmissionProcess from "./comps/AdmissionProcess";
+import CurriculumSyllabus from "./comps/CurriculumSyllabus";
+import LabFacilties from "./comps/LabFacilties";
+import AIOffers from "./comps/AIOffers";
+import BeyondTheClassroom from "./comps/BeyondTheClassroom";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,6 +24,10 @@ const BTechCSERoboticsAI = () => {
       <JensenSection />
       <ProgrammeKeyFeature />
       <AdmissionProcess />
+      <CurriculumSyllabus />
+      <LabFacilties />
+      <AIOffers />
+      <BeyondTheClassroom />
     </div>
   );
 };
