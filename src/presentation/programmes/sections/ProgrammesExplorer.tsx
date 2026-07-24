@@ -119,6 +119,7 @@ interface ProgrammesExplorerProps {
   content?: string;
   isProspectusPopupEnabled?: boolean;
   prospectusUrl?: string;
+  schoolOnly?: boolean;
 }
 
 const ProgrammesExplorer = ({
@@ -127,6 +128,7 @@ const ProgrammesExplorer = ({
   content,
   isProspectusPopupEnabled = false,
   prospectusUrl = "#",
+  schoolOnly = false,
 }: ProgrammesExplorerProps = {}) => {
   const [allSchools, setAllSchools] = useState<SchoolItem[]>([]);
   const [allDegrees, setAllDegrees] = useState<ProgrammeLevel[]>([]);
@@ -497,18 +499,20 @@ const ProgrammesExplorer = ({
         )}
         <div className="flex flex-col xl:flex-row gap-6 xl:gap-8 items-start">
           {/* Sidebar for Schools */}
-          <div className="w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] xl:w-[300px] shrink-0 xl:sticky xl:top-[130px] self-start xl:max-h-[calc(100vh-140px)] xl:overflow-y-auto no-scrollbar -mx-4 md:-mx-8 xl:mx-0 bg-[#061623] xl:bg-transparent py-1 xl:py-0">
-            <ProgrammesSidebar
-              activeSchoolSlug={selectedSchool}
-              onSchoolChange={(slug) => {
-                setSelectedSchool(slug);
-                setSearchQuery("");
-                setOpenSchoolDropdown(false);
-              }}
-              schoolsList={mappedSchools}
-              isLoading={isFiltersLoading}
-            />
-          </div>
+          {!schoolOnly && (
+            <div className="w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] xl:w-[300px] shrink-0 xl:sticky xl:top-[130px] self-start xl:max-h-[calc(100vh-140px)] xl:overflow-y-auto no-scrollbar -mx-4 md:-mx-8 xl:mx-0 bg-[#061623] xl:bg-transparent py-1 xl:py-0">
+              <ProgrammesSidebar
+                activeSchoolSlug={selectedSchool}
+                onSchoolChange={(slug) => {
+                  setSelectedSchool(slug);
+                  setSearchQuery("");
+                  setOpenSchoolDropdown(false);
+                }}
+                schoolsList={mappedSchools}
+                isLoading={isFiltersLoading}
+              />
+            </div>
+          )}
 
           {/* Main Content Area: Tabs + Search + Cards */}
           <div className="flex-1 w-full min-w-0 flex flex-col">
@@ -545,6 +549,7 @@ const ProgrammesExplorer = ({
                   }
                 }}
                 viewMode={viewMode}
+                schoolOnly={schoolOnly}
               />
             </div>
           </div>

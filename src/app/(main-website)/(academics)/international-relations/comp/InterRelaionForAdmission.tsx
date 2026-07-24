@@ -31,12 +31,7 @@ const InterRelaionForAdmission = () => {
           </Link>
         </div>
         <div className="w-full lg:w-1/3">
-          <Image
-            src="/adm.webp"
-            width={490}
-            height={426}
-            alt=""
-          />
+          <Image src="/adm.webp" width={490} height={426} alt="" />
         </div>
       </div>
     </section>

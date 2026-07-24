@@ -1,0 +1,9 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as RolesSection } from "./RolesSection";
+export { default as ActivitiesSection } from "./ActivitiesSection";
+export { default as WorkshopSection } from "./WorkshopSection";
+export { default as ForeignSection } from "./ForeignSection";
+export { default as GlobalSection } from "./GlobalSection";
+export { default as AdmissionSection } from "./AdmissionSection";
+export { default as StudentExchangeSection } from "./StudentExchangeSection";
+export { default as FormSection } from "./FormSection";

@@ -23,6 +23,7 @@ interface ProgrammesListProps {
   degreesList?: SidebarDegree[];
   searchQuery?: string;
   onSearchChange?: (query: string) => void;
+  schoolOnly?: boolean;
 }
 
 export default function ProgrammesList({ 
@@ -31,14 +32,15 @@ export default function ProgrammesList({
   onLoadMore, 
   showLoadMore, 
   onProgrammeClick,
-  viewMode = 'list'
+  viewMode = 'list',
+  schoolOnly = false
 }: ProgrammesListProps) {
   return (
     <div className="flex-1 w-full min-w-0 overflow-hidden relative px-6 md:px-8 lg:px-11 xl:px-0">
       {/* List Content */}
       <div className={viewMode === 'list' 
         ? "flex flex-col gap-4" 
-        : "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
+        : `grid grid-cols-1 md:grid-cols-2 ${schoolOnly ? 'xl:grid-cols-4' : 'xl:grid-cols-3'} gap-5`
       }>
         {isLoading ? (
           Array.from({ length: viewMode === 'list' ? 4 : 6 }).map((_, index) => (

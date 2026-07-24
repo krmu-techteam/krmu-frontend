@@ -14,7 +14,8 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState<number | "">("");
   const [isOpen, setIsOpen] = useState(false);
 
-  const selectedBtn = selectedIndex !== "" ? newsLetterBtns[selectedIndex] : null;
+  const selectedBtn =
+    selectedIndex !== "" ? newsLetterBtns[selectedIndex] : null;
 
   const handleDownloadClick = (e: React.MouseEvent) => {
     if (!selectedBtn?.buttonlink) {
@@ -25,12 +26,12 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (!(e.target as Element).closest('.newsletter-dropdown')) {
+      if (!(e.target as Element).closest(".newsletter-dropdown")) {
         setIsOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -42,10 +43,15 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
           className="w-full bg-[#0A131C] border border-white/20 rounded-md flex items-center justify-between text-white/90 hover:border-white/40 focus:outline-none transition-colors h-[50px] overflow-hidden"
         >
           <span className="px-5 text-[15px] font-medium whitespace-nowrap overflow-hidden text-ellipsis">
-            {selectedIndex === "" ? "Select Period" : newsLetterBtns[selectedIndex as number].buttontext}
+            {selectedIndex === ""
+              ? "Select Year"
+              : newsLetterBtns[selectedIndex as number].buttontext}
           </span>
           <div className="border-l border-white/20 w-[50px] h-full flex items-center justify-center shrink-0">
-            <ChevronDown size={18} className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
+            <ChevronDown
+              size={18}
+              className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+            />
           </div>
         </button>
 
@@ -58,10 +64,12 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
                 setIsOpen(false);
               }}
               className={`text-left px-5 py-3 text-[15px] transition-all ${
-                selectedIndex === "" ? "bg-white/10 backdrop-blur-md text-white font-medium" : "text-white/80 hover:bg-white/5 hover:text-white"
+                selectedIndex === ""
+                  ? "bg-white/10 backdrop-blur-md text-white font-medium"
+                  : "text-white/80 hover:bg-white/5 hover:text-white"
               }`}
             >
-              Select Period
+              Select Year
             </button>
             {newsLetterBtns?.map((btn, index) => (
               <button
@@ -72,7 +80,9 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
                   setIsOpen(false);
                 }}
                 className={`text-left px-5 py-3 text-[15px] transition-all ${
-                  selectedIndex === index ? "bg-white/10 backdrop-blur-md text-white font-medium" : "text-white/80 hover:bg-white/5 hover:text-white"
+                  selectedIndex === index
+                    ? "bg-white/10 backdrop-blur-md text-white font-medium"
+                    : "text-white/80 hover:bg-white/5 hover:text-white"
                 }`}
               >
                 {btn.buttontext}
@@ -87,7 +97,9 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
           buttonText={
             <div className="flex items-center gap-3 justify-center">
               <Download size={18} className="shrink-0" />
-              <span className="uppercase tracking-wide text-sm font-medium">DOWNLOAD</span>
+              <span className="uppercase tracking-wide text-sm font-medium">
+                DOWNLOAD
+              </span>
             </div>
           }
           buttonClass="border border-white/30 py-3.5 px-7 transition-all rounded-sm text-white hover:bg-white/5 w-full sm:w-auto lg:w-full xl:w-auto shrink-0 inline-block"
@@ -104,7 +116,9 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
           rel="noopener noreferrer"
         >
           <Download size={18} className="shrink-0" />
-          <span className="uppercase tracking-wide text-sm font-medium">DOWNLOAD</span>
+          <span className="uppercase tracking-wide text-sm font-medium">
+            DOWNLOAD
+          </span>
         </Link>
       )}
     </div>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useParams, useRouter } from "next/navigation";
-import { RotateCcw, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 export type CategoryItem = {
@@ -70,34 +70,37 @@ const CategoryPills = ({
       <div
         className={`flex items-center justify-between transition-all duration-500 ${isOpen ? "mb-4 sm:mb-5" : "mb-3 md:mb-0"}`}
       >
-        <div
-          className="flex items-center gap-2 cursor-pointer group"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {title && (
-            <h3 className="text-xl sm:text-[22px] font-medium text-white font-poppins tracking-tight m-0">
-              {title}
-            </h3>
-          )}
-          <div className="hidden md:flex p-1 rounded-full bg-white/5 group-hover:bg-white/10 transition-colors">
-            <ChevronDown
-              size={20}
-              className={`text-white transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-            />
+        <div className="flex items-center gap-3">
+          <div
+            className="flex items-center gap-2 cursor-pointer group"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {title && (
+              <h3 className="text-xl sm:text-[22px] font-medium text-white font-poppins tracking-tight m-0 group-hover:text-gray-200 transition-colors">
+                {title}
+              </h3>
+            )}
           </div>
+
+          {currentActiveSlug && (
+            <Link
+              href="/blog"
+              className="ml-2 hidden md:flex items-center gap-1.5 text-[16px] text-[#E7C268] hover:text-[#f7d788] transition-colors group/reset"
+            >
+              Reset Filter
+            </Link>
+          )}
         </div>
 
-        {/* Reset Button (Desktop) */}
-        <Link
-          href="/blog"
-          className="hidden md:flex items-center gap-1.5 text-xs sm:text-sm text-[#E7C268] hover:text-[#f7d788] transition-colors group px-3 py-1.5 bg-[#E7C268]/10 hover:bg-[#E7C268]/20 rounded-full border border-[#E7C268]/20"
+        <div
+          className="hidden md:flex p-1.5 rounded-full bg-white/5 hover:bg-white/10 transition-colors cursor-pointer"
+          onClick={() => setIsOpen(!isOpen)}
         >
-          <RotateCcw
-            size={14}
-            className="group-hover:-rotate-90 transition-transform duration-300"
+          <ChevronDown
+            size={20}
+            className={`text-white transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
           />
-          Reset Filter
-        </Link>
+        </div>
       </div>
 
       {/* Mobile/Tablet Dropdown */}
@@ -142,10 +145,10 @@ const CategoryPills = ({
             <Link
               key={cat.id || cat.slug}
               href={`/blog/all-categories/${cat.slug}`}
-              className={`relative group text-xs sm:text-[13px] font-medium px-4 py-2 rounded-full inline-flex items-center cursor-pointer border transition-all duration-300 ease-[cubic-bezier(0.34,1.3,0.64,1)] ${
+              className={`relative group text-xs sm:text-[13px] font-medium px-4 py-2 rounded-full inline-flex items-center cursor-pointer border transition-all duration-300 ease-in-out ${
                 isActive
-                  ? "bg-[#132737] text-white border-[#3b6d94] shadow-[0_4px_16px_rgba(35,66,91,0.6)] font-semibold ring-1 ring-[#3b6d94]/50 scale-[1.02] -translate-y-[2px]"
-                  : "bg-[#061623] hover:bg-[#132737] text-white/85 hover:text-white border-white/10 hover:border-[#356184] hover:-translate-y-[2.5px] hover:scale-[1.02] hover:shadow-[0_6px_18px_rgba(19,39,55,0.5)] active:scale-95"
+                  ? "bg-[#132737] text-white border-[#3b6d94] shadow-[0_4px_16px_rgba(35,66,91,0.6)] font-semibold ring-1 ring-[#3b6d94]/50"
+                  : "bg-[#061623] hover:bg-[#132737] text-white/85 hover:text-white border-white/10 hover:border-[#356184] hover:shadow-[0_4px_12px_rgba(19,39,55,0.5)] active:scale-[0.98]"
               }`}
             >
               {isActive && (

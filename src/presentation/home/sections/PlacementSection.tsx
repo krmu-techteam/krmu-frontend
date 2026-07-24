@@ -28,19 +28,21 @@ export function PlacementsSection() {
             <div className="w-full max-w-[360px] lg:max-w-none">
               <Carousel
                 className="w-full"
-                showArrows={false}
+                showArrows={true}
+                prevArrowClassName="!left-6 md:!left-7 !w-9 !h-9"
+                nextArrowClassName="!right-6 md:!right-8 !w-9 !h-9"
                 autoplayDelay={5000}
-                showDots={true}
+                showDots={false}
               >
                 {SUCCESS_STORIES.map((story, i) => (
                   <div key={i} className="relative group">
                     <div className="relative w-full aspect-square bg-brand-navy rounded-sm overflow-hidden">
                       <Image
                         src={story.image}
-                        alt={`${story.name} Achievement`}
+                        alt={`Student success story ${i + 1}`}
                         fill
                         sizes="(max-width: 768px) 100vw, 30vw"
-                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                        className="object-cover"
                         priority
                       />
                     </div>

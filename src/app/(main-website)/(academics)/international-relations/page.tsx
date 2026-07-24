@@ -1,19 +1,17 @@
 import { STRAPI_URL } from "@/app/constant";
-import InterRelaionForAdmission from "./comp/InterRelaionForAdmission";
-import InterRelationActivities from "./comp/InterRelationActivities";
-import InterRelationCertified from "./comp/InterRelationCertified";
-import InterRelationContent from "./comp/InterRelationContent";
-import InterRelationForeign from "./comp/InterRelationForeign";
-import InterRelationForm from "./comp/InterRelationForm";
-import InterRelationGlobal from "./comp/InterRelationGlobal";
-import InterRelationHero from "./comp/InterRelationHero";
-import InterRelationRoles from "./comp/InterRelationRoles";
-import InterRelationStudentExchange from "./comp/InterRelationStudentExchange";
-import InterRelationWorkshop from "./comp/InterRelationWorkshop";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
-
-
+import {
+  ActivitiesSection,
+  AdmissionSection,
+  ForeignSection,
+  FormSection,
+  GlobalSection,
+  HeroSection,
+  RolesSection,
+  StudentExchangeSection,
+  WorkshopSection,
+} from "@/presentation/international-relations";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("international-relations");
@@ -79,17 +77,16 @@ export async function generateMetadata(): Promise<Metadata> {
 const page = () => {
   return (
     <>
-      <InterRelationHero />
-      <InterRelationContent />
-      <InterRelationRoles />
-      <InterRelationActivities /> 
-      <InterRelationWorkshop />
+      <HeroSection />
+      <RolesSection />
+      <ActivitiesSection />
+      <WorkshopSection />
       {/* <InterRelationCertified /> */}
-      <InterRelationForeign />
-      <InterRelationGlobal />
-      <InterRelaionForAdmission />
-      <InterRelationForm />
-      <InterRelationStudentExchange />
+      <ForeignSection />
+      <GlobalSection />
+      <AdmissionSection />
+      <StudentExchangeSection />
+      <FormSection />
     </>
   );
 };

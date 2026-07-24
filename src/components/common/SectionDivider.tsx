@@ -13,10 +13,10 @@ export default function SectionDivider({
 }: SectionDividerProps) {
   return (
     <div
-      className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[2px] z-10 ${className}`}
+      className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[1px] z-10 ${className}`}
       style={{ maxWidth }}
     >
-      <div className="w-full h-full bg-[linear-gradient(90deg,#1a1a1a_0%,#ffffff_50%,#1a1a1a_100%)] opacity-25 dark:opacity-30"></div>
+      <div className="w-full h-full bg-[linear-gradient(90deg,#1A1A1A_0%,#FFFFFF_48.08%,#1A1A1A_100%)] opacity-80"></div>
     </div>
   );
 }

@@ -353,10 +353,6 @@ export interface JourneyVideoType {
 }
 
 export interface SuccessStoryType {
-  name: string;
-  school: string;
-  course: string;
-  package: string;
   image: string;
 }
 

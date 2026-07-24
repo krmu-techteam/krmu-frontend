@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { ArrowRightCircle, ArrowUpRight } from "lucide-react";
 import { HeroBannerProps } from "@/features/school";
-import { splitTitleByFor } from "@/features/school";;
+import { splitTitleByFor } from "@/features/school";
 
 const AdmissionOpenBanner = ({ title, admBtn }: HeroBannerProps) => {
   const { boldText, normalText } = splitTitleByFor(title);
 
   return (
-    <section className="w-full relative z-20 py-6 lg:py-8 px-6 md:px-8 lg:px-11 2xl:px-16">
+    <section className="w-full relative z-20 py-6 lg:py-8 px-6 md:px-8 xl:px-16">
       <div className="max-w-[1530px] mx-auto px-5 sm:px-3 py-4 sm:py-3 flex flex-col md:flex-row items-center justify-between gap-6 bg-[linear-gradient(90deg,#8B3D22_11.06%,#003763_100%)] rounded-sm">
         {/* Heading */}
         <h3 className="text-center font-poppins md:text-left text-xl xl:text-[25px] text-white">

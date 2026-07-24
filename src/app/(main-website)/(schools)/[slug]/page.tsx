@@ -267,6 +267,7 @@ export default async function Page({ params }: Props) {
           content={school?.programme_offered?.content}
           isProspectusPopupEnabled={enable_disable_download_pros}
           prospectusUrl={prospectusUrl}
+          schoolOnly={true}
         />
         <SectionDivider />
       </div>

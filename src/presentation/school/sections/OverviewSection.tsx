@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { OVERVIEW_SECTION_IMAGES } from "@/features/school";
 import { OverviewSectionProps } from "@/features/school";
-import { StatCard } from "@/presentation/school/components";;
+import { StatCard } from "@/presentation/school/components";
 import SectionDivider from "@/components/common/SectionDivider";
 
 const OverviewSection = ({
@@ -14,18 +14,25 @@ const OverviewSection = ({
 }: OverviewSectionProps) => {
   return (
     <section className="relative py-8 md:py-12 xl:py-20 px-6 md:px-8 lg:px-11 2xl:px-16">
-         <div className="grid max-w-[1530px] mx-auto md:grid-cols-3 lg:grid-cols-3 gap-5">
-            {counters &&
-              counters.map((counter, index) => {
-                return (
-                  <StatCard
-                    key={counter.id}
-                    title={counter?.countertext}
-                    desc={counter?.countercontent}
-                    index={index}
-                  />
-                );
-              })}
+          <div className="grid max-w-[1530px] mx-auto grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+            {(() => {
+              const displayCounters = [...(counters || [])];
+              if (displayCounters.length === 3) {
+                displayCounters.push({
+                  id: "alumni-base-static",
+                  countertext: "18K+",
+                  countercontent: "Alumni Worldwide",
+                });
+              }
+              return displayCounters.map((counter, index) => (
+                <StatCard
+                  key={counter.id}
+                  title={counter?.countertext}
+                  desc={counter?.countercontent}
+                  index={index}
+                />
+              ));
+            })()}
           </div>
       <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row gap-8 lg:gap-12 mt-12">
         <div className="w-full lg:w-5/12 relative h-[400px] sm:h-[500px] lg:h-[450px] shrink-0">

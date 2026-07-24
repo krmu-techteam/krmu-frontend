@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useRef, useState } from 'react';
-import { Search, LayoutGrid, List } from 'lucide-react';
-import { SidebarDegree } from './ProgrammesList';
+import React, { useRef, useState } from "react";
+import { Search, LayoutGrid, List } from "lucide-react";
+import { SidebarDegree } from "./ProgrammesList";
 
 interface ProgrammesFilterHeaderProps {
   activeDegreeSlug: string;
@@ -11,8 +11,8 @@ interface ProgrammesFilterHeaderProps {
   searchQuery: string;
   onSearchChange: (query: string) => void;
   programCount: number;
-  viewMode: 'list' | 'grid';
-  onViewModeChange: (mode: 'list' | 'grid') => void;
+  viewMode: "list" | "grid";
+  onViewModeChange: (mode: "list" | "grid") => void;
   availableDegrees?: string[];
 }
 
@@ -24,10 +24,8 @@ export default function ProgrammesFilterHeader({
   programCount,
   viewMode,
   onViewModeChange,
-  availableDegrees
+  availableDegrees,
 }: ProgrammesFilterHeaderProps) {
-
-  
   // Simple draggable scroll for tabs
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -52,19 +50,19 @@ export default function ProgrammesFilterHeader({
 
   return (
     <>
-    <div className="xl:sticky xl:top-[130px] z-[20] bg-[#061623] py-3 px-6 md:px-8 lg:px-11 xl:px-3 mb-2 rounded-none xl:rounded-sm -mx-4 md:-mx-8 xl:mx-0">
-      {/* Filters & Search Row */}
-      <div className="w-full flex flex-col xl:flex-row xl:items-center justify-between gap-4">
-        {/* Tabs */}
-        <div 
-          ref={scrollRef}
-          onMouseDown={onMouseDown}
-          onMouseLeave={onMouseLeave}
-          onMouseUp={onMouseUp}
-          onMouseMove={onMouseMove}
-          className="flex overflow-x-auto no-scrollbar items-center justify-center xl:justify-start w-full xl:flex-1 cursor-grab active:cursor-grabbing gap-6 md:gap-8"
-        >
-          {/* Commented out dynamic mapping as requested
+      <div className="xl:sticky xl:top-[130px] z-[20] bg-[#061623] py-3 px-6 md:px-8 lg:px-11 xl:px-3 mb-2 rounded-none xl:rounded-sm -mx-4 md:-mx-8 xl:mx-0">
+        {/* Filters & Search Row */}
+        <div className="w-full flex flex-col xl:flex-row xl:items-center justify-between gap-4">
+          {/* Tabs */}
+          <div
+            ref={scrollRef}
+            onMouseDown={onMouseDown}
+            onMouseLeave={onMouseLeave}
+            onMouseUp={onMouseUp}
+            onMouseMove={onMouseMove}
+            className="flex overflow-x-auto no-scrollbar items-center justify-center xl:justify-start w-full xl:flex-1 cursor-grab active:cursor-grabbing gap-6 md:gap-8"
+          >
+            {/* Commented out dynamic mapping as requested
           {degreesList.map((degree) => (
             <button
               key={degree.id}
@@ -82,73 +80,80 @@ export default function ProgrammesFilterHeader({
             </button>
           ))}
           */}
- 
-          {/* Hardcoded tabs to match design */}
-          {[
-            { name: "All", slug: "all" },
-            { name: "Undergraduate", slug: "undergraduate-programmes" },
-            { name: "Postgraduate", slug: "postgraduate-programmes" },
-            { name: "Doctoral", slug: "doctoral-programmes" },
-            { name: "Diploma", slug: "diploma-programmes" }
-          ].filter(deg => availableDegrees ? availableDegrees.includes(deg.slug) : true).map((degree) => (
-            <button
-              key={degree.slug}
-              onClick={() => onDegreeChange(degree.slug)}
-              className={`whitespace-nowrap px-2 py-1 text-center text-[14px] md:text-[15px] transition-all relative cursor-pointer ${
-                activeDegreeSlug === degree.slug 
-                  ? 'text-white font-medium' 
-                  : 'text-white/60 font-normal hover:text-white/90'
-              }`}
-            >
-              {degree.name}
-              {activeDegreeSlug === degree.slug && (
-                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white" />
-              )}
-            </button>
-          ))}
-        </div>
- 
-        {/* Search Component */}
-        <div className="relative w-full xl:w-72 shrink-0 px-4 md:px-6 lg:px-8">
-          <Search className="absolute left-7 md:left-10 top-1/2 -translate-y-1/2 text-white/40" size={16}  />
-          <input
-            type="text"
-            placeholder="Search by Program Name..."
-            value={searchQuery}
-            onChange={(e) => {
-              onSearchChange(e.target.value);
-              if (e.target.value.length > 0 && activeDegreeSlug !== 'all') {
-                onDegreeChange('all');
-              }
-            }}
-            className="w-full bg-transparent border border-white/10 rounded py-2 pl-10 pr-4 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 transition-all text-[14px] font-light"
-          />
+
+            {/* Hardcoded tabs to match design */}
+            {[
+              { name: "All", slug: "all" },
+              { name: "Undergraduate", slug: "undergraduate-programmes" },
+              { name: "Postgraduate", slug: "postgraduate-programmes" },
+              { name: "Doctoral", slug: "doctoral-programmes" },
+              { name: "Diploma", slug: "diploma-programmes" },
+            ]
+              .filter((deg) =>
+                availableDegrees ? availableDegrees.includes(deg.slug) : true,
+              )
+              .map((degree) => (
+                <button
+                  key={degree.slug}
+                  onClick={() => onDegreeChange(degree.slug)}
+                  className={`whitespace-nowrap px-4 py-[5px] text-center text-[14px] md:text-[15px] transition-all relative cursor-pointer ${
+                    activeDegreeSlug === degree.slug
+                      ? "text-white font-medium"
+                      : "text-white/60 font-normal hover:text-white/90"
+                  }`}
+                >
+                  {degree.name}
+                  {activeDegreeSlug === degree.slug && (
+                    <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white rounded-t-sm" />
+                  )}
+                </button>
+              ))}
+          </div>
+
+          {/* Search Component */}
+          <div className="relative w-full xl:w-[340px] shrink-0 px-4 md:px-6 lg:px-0">
+            <Search
+              className="absolute left-7 md:left-10 xl:left-3 top-1/2 -translate-y-1/2 text-white/40"
+              size={16}
+            />
+            <input
+              type="text"
+              placeholder="Search by Program Name..."
+              value={searchQuery}
+              onChange={(e) => {
+                onSearchChange(e.target.value);
+                if (e.target.value.length > 0 && activeDegreeSlug !== "all") {
+                  onDegreeChange("all");
+                }
+              }}
+              className="w-full bg-transparent border border-white/10 rounded py-2 pl-10 pr-4 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 transition-all text-[14px] font-light"
+            />
+          </div>
         </div>
       </div>
-    </div>
-     {/* Program Count & Toggles */}
+      {/* Program Count & Toggles */}
       <div className="flex items-center justify-between px-6 md:px-8 lg:px-11 xl:px-[2px] xl:mb-2">
         <span className="text-white/80 text-[14px] font-normal">
           {programCount} Programs Found
         </span>
-        
+
         <div className="hidden md:flex items-center gap-1 bg-white/5 p-1 rounded-sm border border-white/10">
-          <button 
-            onClick={() => onViewModeChange('list')}
-            className={`p-1.5 rounded transition-all ${viewMode === 'list' ? 'bg-[#0161B0] text-white' : 'text-white/40 hover:text-white hover:bg-white/5 cursor-pointer'}`}
+          <button
+            onClick={() => onViewModeChange("list")}
+            className={`p-1.5 rounded transition-all ${viewMode === "list" ? "bg-[#0161B0] text-white" : "text-white/40 hover:text-white hover:bg-white/5 cursor-pointer"}`}
             title="List View"
           >
             <List size={16} />
           </button>
-          <button 
-            onClick={() => onViewModeChange('grid')}
-            className={`p-1.5 rounded transition-all ${viewMode === 'grid' ? 'bg-[#0161B0] text-white' : 'text-white/40 hover:text-white hover:bg-white/5 cursor-pointer'}`}
+          <button
+            onClick={() => onViewModeChange("grid")}
+            className={`p-1.5 rounded transition-all ${viewMode === "grid" ? "bg-[#0161B0] text-white" : "text-white/40 hover:text-white hover:bg-white/5 cursor-pointer"}`}
             title="Grid View"
           >
             <LayoutGrid size={16} />
           </button>
         </div>
       </div>
-      </>
+    </>
   );
 }

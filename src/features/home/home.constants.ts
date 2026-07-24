@@ -113,32 +113,25 @@ export const RECRUITER_LOGOS: RecruiterLogoType[] = [
 
 export const SUCCESS_STORIES: SuccessStoryType[] = [
   {
-    name: "RISHAV BAKSHI",
-    school: "School of Engineering and Technology",
-    course: "BCA",
-    package: "₹56.6LPA",
-    image: "/modules/home/placements/rishav-bakshi.png",
+    image: "/images/home/placements/rishav-bakshi.png",
   },
   {
-    name: "OM MISHRA",
-    school: "School of Engineering and Technology",
-    course: "B.Tech CSE",
-    package: "₹42.0LPA",
-    image: "/modules/home/placements/om-mishra.webp",
+    image: "/images/home/placements/daksh-mehta.png",
   },
   {
-    name: "VINEET VERMA",
-    school: "School of Engineering and Technology",
-    course: "B.Tech CSE",
-    package: "₹35.0LPA",
-    image: "/modules/home/placements/vineet-verma.webp",
+    image: "/images/home/placements/shourya-tyagi.png",
   },
   {
-    name: "SHOURYA TYAGI",
-    school: "School of Management",
-    course: "MBA",
-    package: "₹28.5LPA",
-    image: "/modules/home/placements/shourya-tyagi.webp",
+    image: "/images/home/placements/vineet-verma.png",
+  },
+  {
+    image: "/images/home/placements/om-mishra.png",
+  },
+  {
+    image: "/images/home/placements/nitesh.png",
+  },
+  {
+    image: "/images/home/placements/ayush-sai.png",
   },
 ];
 
