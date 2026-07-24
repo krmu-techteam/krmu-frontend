@@ -19,7 +19,7 @@ const OverviewSection = ({
               const displayCounters = [...(counters || [])];
               if (displayCounters.length === 3) {
                 displayCounters.push({
-                  id: "alumni-base-static",
+                  id: 999999,
                   countertext: "18K+",
                   countercontent: "Alumni Worldwide",
                 });
