@@ -54,7 +54,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 43012,
     acf: {
-      "staff-qualification": "Ph.D. Persuing",
+      "staff-qualification": "Ph.D. Pursuing",
       staff_designation: "Associate Professor",
       schools: [],
     },
