@@ -18,6 +18,8 @@ export interface ProgrammeScopeData {
     id: number;
     content: ReactNode;
   }[];
+
+  note?: string;
 }
 
 export const programmeScopeData: Record<string, ProgrammeScopeData> = {
@@ -300,6 +302,448 @@ export const programmeScopeData: Record<string, ProgrammeScopeData> = {
             with the skills required to foster inclusive learning environments,
             work effectively with stakeholders, and contribute meaningfully to
             the teaching profession.
+          </span>
+        ),
+      },
+    ],
+  },
+
+  "bhmct-hotel-management": {
+    heading: (
+      <>
+        Bachelor of Hotel Management and Catering Technology (B.HMCT.) <br />{" "}
+        Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_3e8b9ecf8c.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "A Bachelor of Hotel Management and Catering Technology degree opens up a wide range of career opportunities in hotels, resorts, restaurants, airlines, cruise ships, event management companies, and catering services. Graduates can work in specialised roles such as culinary arts, food production, front office operations, housekeeping, event planning, and tourism management. With the hospitality industry growing rapidly both in India and globally, skilled professionals are in high demand, offering well-paid and prestigious career prospects. The degree also equips students with essential soft skills like leadership, communication, problem-solving, and customer service, making them industry-ready. ",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: <>During the B.HMCT. Programme</>,
+
+    skillsDescription: (
+      <span>
+        A Bachelor of Hotel Management and Catering Technology (B.HMCT.) helps
+        students develop many valuable skills, including:
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            <strong>Communication Skills</strong> – Developing effective verbal
+            and written communication for interacting with guests, colleagues,
+            and stakeholders.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            <strong>Leadership and Team Management</strong> – Learning to lead
+            teams, delegate responsibilities, and manage hospitality operations
+            efficiently.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            <strong>Problem-Solving and Decision-Making</strong> – Handling
+            guest concerns, operational challenges, and service-related issues
+            effectively.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            <strong>Business and Financial Management</strong> – Understanding
+            budgeting, cost control, revenue management, and hospitality
+            business operations.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            <strong>Interpersonal and Networking Skills</strong> – Building
+            professional relationships with guests, vendors, and industry
+            professionals.
+          </span>
+        ),
+      },
+      {
+        id: 6,
+        content: (
+          <span>
+            <strong>Cultural Awareness and Professional Etiquette</strong> –
+            Developing the ability to work with people from diverse cultural
+            backgrounds while maintaining professional conduct.
+          </span>
+        ),
+      },
+    ],
+    note: "These skills prepare graduates for diverse roles across hotels, restaurants, airlines, cruise lines, event management companies, tourism organisations, and other hospitality-related sectors.",
+  },
+
+  "bjmc-hons-research": {
+    heading: (
+      <>
+        B.A. (Hons. / Hons. with Research) Journalism & Mass Communication{" "}
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_b94d8a6f92.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "This 4-year Honours programme builds on the foundation of the 3-year BJMC, combining core media skills—content creation, video production, journalism, and social media strategy—with an additional year dedicated to advanced specialisation and research. During Years 1–3, you will develop strong practical expertise through studio work, industry projects, portfolio development, and courses aligned with the creator economy. In Year 4, the focus shifts to deeper exploration—you will pursue an advanced specialisation, conduct original research, and complete an extended industry placement. The Honours with Research pathway is designed for students who want to engage with the creator economy at a strategic level—understanding not only how content is created, but also why it resonates, how platforms shape behaviour, and what influences audience engagement. It prepares you for roles in research, consulting, strategy, and leadership within the evolving media landscape.",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: (
+      <>
+        During the B.A. (Hons. / Hons. with Research) Journalism & Mass
+        Communication Programme
+      </>
+    ),
+
+    skillsDescription: (
+      <span>
+        Over the course of 4 years, students develop journalistic, creative, and
+        technical skills required in the media and communication industry, such
+        as:
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            Strong reporting, editing, and writing skills across print,
+            broadcast, and digital journalism formats.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            Practical knowledge of media production tools, including digital
+            photography, video editing, radio programme production, and
+            television journalism.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            Understanding of media ethics, media laws, and media literacy that
+            helps students report and communicate responsibly.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            Skills in digital media marketing, advertising, and integrated
+            marketing communication for building brand and audience engagement.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            Capabilities in public relations, corporate communication, and event
+            management that support careers in strategic communication.
+          </span>
+        ),
+      },
+    ],
+  },
+
+  bjmc: {
+    heading: (
+      <>
+        B.A. (Journalism & Mass Communication)
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_aa1c192981.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "The scope of the BJMC course (Bachelor of Journalism and Mass Communication) is vast and filled with exciting opportunities across media and communication industries. Graduates can build careers in journalism, digital media, advertising, public relations, filmmaking, television, and event management, while also exploring emerging fields like content creation, digital marketing, and corporate communications. With the growing influence of social media, OTT platforms, and global news networks, the demand for skilled media professionals is higher than ever. ",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: (
+      <>During the B.A. (Journalism & Mass Communication) Programme</>
+    ),
+
+    skillsDescription: (
+      <span>
+        The three-year B.A. (Journalism & Mass Communication) degree program
+        provides students with both an educational foundation in journalistic
+        writing/reporting/editing for print, broadcast and digital platforms, as
+        well as hands-on development of the technical/on-camera skills required
+        throughout the Media Communications Industry.
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            Learning the basics of fact-finding and ethics when it comes to
+            newsgathering.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            Working in practical settings for classroom instruction on
+            video/audio editing/graphic design/multimedia storytelling utilising
+            industry-standard software/equipment.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            Training in a live-broadcast setting while working as a DJ or
+            podcaster/anchoring news with professional production control
+            rooms/radio rooms/video-audio labs.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            Learning about how to create content digitally/socially/for the
+            web/and for OTT; preparing students for the inevitable transition
+            away from traditional media towards digital-first media.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            Developing communication/public relations/corporate messaging skills
+            through coursework in advertising/pr/modern communication theory,
+            along with creating a professional portfolio of their
+            published/produced work.
+          </span>
+        ),
+      },
+    ],
+  },
+
+  "bachelor-of-design-b-des-fashion-design": {
+    heading: (
+      <>
+        B.Des. (Hons./ Hons. with Research) Fashion Design
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_1414f624c8.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "The B.Des. (Hons./ Hons. with Research) Fashion Design programme opens diverse career opportunities in the dynamic global fashion and lifestyle industry. Graduates can pursue roles as fashion designers, textile designers, costume designers, fashion illustrators, trend forecasters, fashion merchandisers, stylists, entrepreneurs, and design consultants. With the growing focus on sustainability and innovation, they can also explore careers in eco-fashion, digital fashion, and luxury brand management. The programme equips students with design thinking, technical expertise, and industry exposure, preparing them for employment with top fashion houses, retail brands, e-commerce platforms, and media, or to launch their own fashion labels and startups. ",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: (
+      <>
+        During the B.Des. (Hons. / Hons. with Research) Fashion Design Programme
+      </>
+    ),
+
+    skillsDescription: (
+      <span>
+        Within the span of 4 years, students develop the creative, technical,
+        design, and professional skills required to build successful careers in
+        the fashion industry and related creative fields, such as:
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            Develop expertise in fashion illustration, textiles, garment
+            construction, pattern making, draping, colour theory, and design
+            principles.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            Gain proficiency in apparel development, surface techniques, CAD
+            tools, digital design, and contemporary fashion technologies.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            Build hands-on experience through design studios, internships,
+            workshops, fashion shows, live projects, and portfolio development.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            Enhance skills in design research, trend analysis, innovation,
+            visual communication, and collection development.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            Understand sustainability, fashion business, branding,
+            merchandising, and global fashion practices to pursue diverse career
+            opportunities.
+          </span>
+        ),
+      },
+    ],
+  },
+
+  "barch-architecture": {
+    heading: (
+      <>
+        Bachelor of Architecture (B. Arch)
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_18bee0fcaa.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "The scope of a Bachelor of Architecture (B. Arch) is broad, offering a wide range of career opportunities across the public and private sectors. Graduates can build careers with architectural firms, construction companies, urban development authorities, real estate developers, or establish their own architectural and design practices. The programme equips students with the knowledge and skills required for roles such as architect, interior designer, urban planner, landscape architect, and sustainable design consultant. As the demand for environmentally responsible and technology-driven infrastructure continues to grow, emerging specialisations such as green architecture, digital architecture, and Building Information Modelling (BIM) are creating exciting new career prospects for architecture graduates.",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: <>During the B. Arch Programme</>,
+
+    skillsDescription: (
+      <span>
+        Within the span of 5 years, students develop the technical, creative,
+        analytical, and professional skills required for successful careers in
+        architecture and the built environment, such as:
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            Strong understanding of architectural design principles, building
+            construction, structural systems, environmental planning, and
+            spatial design, enabling the development of functional, sustainable,
+            and aesthetically compelling architectural solutions.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            Knowledge of architectural drafting, computer-aided design (CAD),
+            Building Information Modelling (BIM), 3D visualisation, building
+            services, construction technologies, and sustainable design
+            practices to create innovative and efficient built environments that
+            respond to contemporary social and environmental challenges.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            Extensive practical exposure through architectural design studios,
+            site visits, construction workshops, documentation studies, measured
+            drawings, live projects, and professional internships provides
+            hands-on experience in conceptual design, technical detailing,
+            project execution, and collaboration with multidisciplinary teams.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            Critical thinking, creative problem-solving, design innovation,
+            communication, research, and presentation skills are developed
+            through studio projects, design critiques, architectural research,
+            model making, and digital visualisation, enabling students to
+            address complex design challenges with confidence and creativity.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            Understanding of professional ethics, building regulations, project
+            management, urban planning, heritage conservation, and sustainable
+            development equips students with the skills required to manage
+            architectural projects responsibly, collaborate effectively with
+            clients and industry professionals, and contribute meaningfully to
+            the creation of resilient, inclusive, and future-ready built
+            environments.
           </span>
         ),
       },
