@@ -303,7 +303,12 @@ const page = async ({ params }: Props) => {
   const isNewSectionSlug =
     slug === "bsc-hons-agriculture" ||
     slug === "b-tech-cse" ||
-    slug === "bachelor-of-education-b-ed";
+    slug === "bachelor-of-education-b-ed" ||
+    slug === "bhmct-hotel-management" ||
+    slug === "bjmc-hons-research" ||
+    slug === "bjmc" ||
+    slug === "bachelor-of-design-b-des-fashion-design" ||
+    slug === "barch-architecture";
 
   return (
     <>

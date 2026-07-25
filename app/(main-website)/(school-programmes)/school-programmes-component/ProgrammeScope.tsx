@@ -46,7 +46,7 @@ const ProgrammeScope = async ({
             scopeData?.scopeimg?.url && (
               <div className="w-[700px] h-[467px] rounded-md overflow-hidden">
                 <Image
-                  src={`/programmes/Programme Scope.jpg`}
+                  src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
                   width={1024}
                   height={1024}
                   className=" w-full h-full object-cover "

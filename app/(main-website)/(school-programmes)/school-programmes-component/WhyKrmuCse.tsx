@@ -97,14 +97,14 @@ export const WhyKrmuCse = ({ slug }: Props) => {
       <div className="relative z-10 max-w-[1182px] mx-auto">
         {/* Header Section */}
         <div className="text-center mb-10 md:mb-10">
-          <h2 className="text-3xl md:text-4xl lg:text-[36px] font-bold text-white leading-tight tracking-tight max-w-[707px] mx-auto mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-[36px] font-bold text-white leading-tight tracking-tight max-w-[710px] mx-auto mb-6">
             {data.title}
           </h2>
           <p className="text-white text-sm md:text-base lg:text-[18px] max-w-[1029px] mx-auto leading-relaxed font-normal mb-4">
             {data.description}
           </p>
           <div className="w-full h-[1px] bg-[linear-gradient(90deg,#FFFFFF05_0%,#5383BC_52.88%,#FFFFFF05_100%)]" />
-          <p className="text-white font-bold text-sm md:text-base lg:text-[18px] max-w-2xl mt-4 mx-auto leading-snug">
+          <p className="text-white font-bold text-sm md:text-base lg:text-[18px] max-w-4xl mt-4 mx-auto leading-snug">
             {data.comparisonTitle}
           </p>
         </div>

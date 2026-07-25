@@ -1,11 +1,11 @@
-import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
+// import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import { HeroSection, ProgrammeScopeType } from "@/lib/types/school-programme";
 
-import Link from "next/link";
-import CommonLeadPopup from "../../components/CommonLeadPopup";
+// import Link from "next/link";
+// import CommonLeadPopup from "../../components/CommonLeadPopup";
 import Image from "next/image";
 import { Download, Check } from "lucide-react";
-import { STRAPI_URL } from "@/app/constant";
+// import { STRAPI_URL } from "@/app/constant";
 import { Inter } from "next/font/google";
 import { programmeScopeData } from "../programs/progdata/programmeScopeData";
 
@@ -23,106 +23,23 @@ const inter = Inter({
 });
 
 const NewProgrammeScope = async ({
-  scopeData,
-  heroSection,
-  allowedFormSlugs,
+  // scopeData,
+  // heroSection,
+  // allowedFormSlugs,
   slug,
 }: Props) => {
   const data = programmeScopeData[slug];
-  const getDownProsSettings = await getDownloadProspectusSetting();
+  // const getDownProsSettings = await getDownloadProspectusSetting();
 
   // const isFormAvailable = allowedFormSlugs.includes(slug);
-  const isFormAvailable = false;
+  // const isFormAvailable = false;
 
-  const enable_disable_download_pros =
-    getDownProsSettings?.download_prospectus_enable_disable;
-
-  // Format the heading to match the image: "B.Tech. CSE" and "Programme Scope" on two lines
-  // const formatHeading = (heading: string) => {
-  //   if (!heading) return null;
-  //   const index = heading.toLowerCase().indexOf("programme scope");
-  //   if (index !== -1) {
-  //     const mainPart = heading.slice(0, index).trim();
-  //     const scopePart = heading.slice(index).trim();
-  //     return (
-  //       <>
-  //         <span className="block font-bold">{mainPart}</span>
-  //         <span className="block font-bold mt-1 text-white">{scopePart}</span>
-  //       </>
-  //     );
-  //   }
-  //   return <span className="block font-bold">{heading}</span>;
-  // };
-
-  // Split description content into paragraphs if it has line breaks
-  // const paragraphs = scopeData?.scopecontent
-  //   ? scopeData.scopecontent.split("\n").filter((p) => p.trim() !== "")
-  //   : [];
-
-  // 5 items as shown in the image
-  // const skillsList = [
-  //   {
-  //     id: 1,
-  //     content: (
-  //       <span>
-  //         <strong className="text-white font-bold">
-  //           Artificial Intelligence
-  //         </strong>{" "}
-  //         and <strong className="text-white font-bold">Machine Learning</strong>{" "}
-  //         engineering for modern-day applications and system development.
-  //       </span>
-  //     ),
-  //   },
-  //   {
-  //     id: 2,
-  //     content: (
-  //       <span>
-  //         DevOps workflows, cyber security awareness, and secure coding
-  //         practices are embedded throughout the curriculum.
-  //       </span>
-  //     ),
-  //   },
-  //   {
-  //     id: 3,
-  //     content: (
-  //       <span>
-  //         Students also engage in lab work and project deliverables, which
-  //         formulate team-based development skills with{" "}
-  //         <strong className="text-white font-bold">agile methodologies</strong>{" "}
-  //         to stay competitive in the career.
-  //       </span>
-  //     ),
-  //   },
-  //   {
-  //     id: 4,
-  //     content: (
-  //       <span>
-  //         Analytical and problem-solving skills are{" "}
-  //         <strong className="text-white font-bold">sharpened</strong> through{" "}
-  //         <strong className="text-white font-bold">
-  //           competitive programming
-  //         </strong>{" "}
-  //         exposure and project-based learning, which accounts for 15% of total
-  //         programme credits at KRMU.
-  //       </span>
-  //     ),
-  //   },
-  //   {
-  //     id: 5,
-  //     content: (
-  //       <span>
-  //         Proficiency in multiple programming languages like C++, Java, and
-  //         Python with an emphasis on writing{" "}
-  //         <strong className="text-white font-bold">production-grade</strong>{" "}
-  //         code using modern development frameworks.
-  //       </span>
-  //     ),
-  //   },
-  // ];
+  // const enable_disable_download_pros =
+  //   getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
     <section
-      className={`${inter.className} bg-[linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),linear-gradient(180deg,#002958_0%,#001732_100%)] text-white pt-14 pb-[120px]`}
+      className={`${inter.className} bg-[linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),linear-gradient(180deg,#002958_0%,#001732_100%)] text-white pt-14 pb-[100px]`}
     >
       <div className="flex flex-col max-w-[1500px] mx-auto px-8 ">
         {/* Top Section: Image (Left) & Heading/Content (Right) */}
@@ -241,14 +158,32 @@ const NewProgrammeScope = async ({
               <div
                 className={` ${inter.className} absolute inset-[24px] rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,#004698_10.58%,#001732_100%)]  flex flex-col justify-center items-center p-6 sm:p-7 text-center  z-0`}
               >
-                <span className="text-[#E7C268] font-bold text-xs sm:text-[29px] leading-[100%]  ">
+                <span
+                  className={`text-[#E7C268] font-bold text-xs ${
+                    slug === "bjmc-hons-research" || slug === "bjmc"
+                      ? "sm:text-[25px]"
+                      : "sm:text-[29px]"
+                  } leading-[100%]  `}
+                >
                   {data.skillsTitle}
                 </span>
-                <h4 className="text-white font-extrabold text-lg sm:text-xl md:text-[29px] leading-[115%]  mb-4">
+                <h4
+                  className={`text-white font-extrabold text-lg  ${
+                    slug === "bjmc-hons-research" || slug === "bjmc"
+                      ? "sm:text-[25px]"
+                      : "sm:text-[29px]"
+                  } leading-[115%]  mb-4`}
+                >
                   {data.skillsSubtitle}
                 </h4>
 
-                <p className="text-xs sm:text-[18px] text-white font-light leading-[120%]  max-w-[284px]">
+                <p
+                  className={`text-xs  ${
+                    slug === "bjmc-hons-research" || slug === "bjmc"
+                      ? "sm:text-[15px]"
+                      : " sm:text-[18px]"
+                  } text-white font-light leading-[120%] ${slug === "bjmc" ? "max-w-[320px]" : "max-w-[280px]"}`}
+                >
                   {data.skillsDescription}
                 </p>
               </div>
@@ -273,6 +208,12 @@ const NewProgrammeScope = async ({
                   )}
                 </div>
               ))}
+
+              {data.note && (
+                <p className="mt-8 text-[14px] sm:text-[15px] md:text-[16px] font-light text-white leading-[120%] opacity-[80%]">
+                  {data.note}
+                </p>
+              )}
             </div>
           </div>
         </div>
