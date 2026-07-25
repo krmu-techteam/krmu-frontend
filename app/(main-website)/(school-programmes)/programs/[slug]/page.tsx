@@ -308,7 +308,8 @@ const page = async ({ params }: Props) => {
     slug === "bjmc-hons-research" ||
     slug === "bjmc" ||
     slug === "bachelor-of-design-b-des-fashion-design" ||
-    slug === "barch-architecture";
+    slug === "barch-architecture" ||
+    slug === "bfa-fine-arts";
 
   return (
     <>

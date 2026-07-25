@@ -47,14 +47,14 @@ export const soadFaculties: SchoolFacultiesType[] = [
   },
 
   {
-    id: 1252,
-    slug: "ar-mansha-samreen",
+    id: 115947,
+    slug: "ar-mansha-samreen-2",
     title: {
       rendered: "Ar. Mansha Samreen",
     },
     featured_media: 43012,
     acf: {
-      "staff-qualification": "-",
+      "staff-qualification": "Ph.D. Pursuing",
       staff_designation: "Associate Professor",
       schools: [],
     },
@@ -62,8 +62,8 @@ export const soadFaculties: SchoolFacultiesType[] = [
       "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Ar.-Mansha-Samreen.jpg",
   },
   {
-    id: 1251,
-    slug: "ar-praveen-gupta",
+    id: 115946,
+    slug: "ar-praveen-gupta-2",
     title: {
       rendered: "Ar. Praveen Gupta",
     },

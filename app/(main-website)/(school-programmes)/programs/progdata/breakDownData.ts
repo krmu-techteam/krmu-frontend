@@ -679,4 +679,95 @@ export const breakDownData: Record<string, BreakDownContent> = {
       "#Some of the specialised roles mentioned above may require relevant experience or postgraduate qualifications, depending on the employer.",
     ],
   },
+
+  "bfa-fine-arts": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring Bachelor of Fine Arts graduates.",
+
+    tableHeaders: {
+      role: "Job Role After Bachelor of Fine Arts (BFA)",
+      package: "Average Package for Freshers in India (INR)",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Visual Artist*",
+        package: "3 LPA–6 LPA",
+        sectors:
+          "Art Galleries, Studios, Cultural Organisations, Independent Practice",
+      },
+      {
+        role: "Graphic Designer",
+        package: "3.5 LPA–7 LPA",
+        sectors:
+          "Advertising Agencies, Branding Firms, Media Houses, Design Studios",
+      },
+      {
+        role: "Illustrator",
+        package: "3 LPA–6 LPA",
+        sectors:
+          "Publishing Houses, Advertising Agencies, Animation Studios, Digital Media Companies",
+      },
+      {
+        role: "Animator",
+        package: "4 LPA–8 LPA",
+        sectors:
+          "Animation Studios, Gaming Companies, Film & Entertainment Industry",
+      },
+      {
+        role: "Digital Artist",
+        package: "4 LPA–8 LPA",
+        sectors:
+          "Creative Agencies, Gaming Studios, Media Companies, Digital Content Platforms",
+      },
+      {
+        role: "Art Director (Entry-Level)",
+        package: "5 LPA–9 LPA",
+        sectors:
+          "Advertising Agencies, Design Consultancies, Media & Entertainment Companies",
+      },
+      {
+        role: "Photographer",
+        package: "3 LPA–7 LPA",
+        sectors:
+          "Media Houses, Fashion Industry, Creative Agencies, Independent Studios",
+      },
+      {
+        role: "Art Curator / Gallery Associate",
+        package: "3.5 LPA–6.5 LPA",
+        sectors:
+          "Art Galleries, Museums, Cultural Institutions, Auction Houses",
+      },
+      {
+        role: "Creative Designer",
+        package: "3.5 LPA–7 LPA",
+        sectors:
+          "Branding Agencies, Marketing Firms, Corporate Creative Teams, Startups",
+      },
+      {
+        role: "UI/Visual Designer",
+        package: "5 LPA–10 LPA",
+        sectors:
+          "IT Companies, Product Design Firms, UX/UI Consultancies, Technology Startups",
+      },
+      {
+        role: "Art Educator",
+        package: "3.5 LPA–6.5 LPA",
+        sectors: "Schools, Colleges, Art Institutes, Training Academies",
+      },
+      {
+        role: "Freelance Artist / Creative Entrepreneur",
+        package: "3 LPA–12+ LPA",
+        sectors:
+          "Independent Practice, Commissioned Projects, Online Marketplaces, Creative Enterprises",
+      },
+    ],
+
+    note: [
+      "Note: Salary figures are approximate and may vary depending on the candidate's skills, experience, employer, job location, and prevailing industry conditions. Entrepreneurial earnings depend on business performance and market demand.",
+    ],
+  },
 };

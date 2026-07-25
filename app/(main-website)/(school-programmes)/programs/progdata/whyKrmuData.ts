@@ -625,4 +625,76 @@ export const whyKrmuData: Record<string, WhyKrmuData> = {
     bottomDescription2:
       "Whether your goal is to build a career as an architect, urban designer, landscape architect, interior designer, project manager, architectural consultant, BIM specialist, or conservation professional, pursue higher studies and architectural research, or contribute to the creation of innovative and sustainable built environments, the B. Arch programme is designed to equip you with the creative, technical, and professional competencies required to excel in the architecture, design, and construction industry.",
   },
+
+  "bfa-fine-arts": {
+    title: "Why K.R. Mangalam University for BFA in 2026–27?",
+
+    description:
+      "Pursuing a Bachelor of Fine Arts (BFA) is more than mastering artistic techniques. It is a transformative journey of imagination, self-expression, and creative exploration. It empowers students to develop a strong artistic identity while gaining expertise in traditional and contemporary art forms, visual storytelling, digital media, aesthetic theory, and professional studio practice. Through immersive learning experiences, students cultivate the creativity, technical excellence, critical thinking, and cultural awareness required to create art that inspires, communicates, and shapes the world around them.",
+
+    comparisonTitle:
+      "A comprehensive comparison of the academic excellence, studio-based pedagogy, mentorship by practising artists, interdisciplinary learning, exhibitions, live projects, workshops, internships, digital art integration, portfolio development, research opportunities, entrepreneurial support, and career-oriented opportunities that students evaluate while choosing a Bachelor of Fine Arts (BFA) programme.",
+
+    parameterHeader: "Parameter",
+
+    krmuHeader: "K.R. Mangalam University",
+
+    typicalHeader: "Typical Private University in NCR",
+
+    comparisonData: [
+      {
+        parameter: "Highest placement package",
+        krmu: "56.6 LPA",
+        typical: "8-20 LPA",
+      },
+      {
+        parameter: "Campus recruiters",
+        krmu: "800+ companies",
+        typical: "100-300 companies",
+      },
+      {
+        parameter: "Research & creative output",
+        krmu: "600+ Scopus/WoS papers, 100+ patents",
+        typical: "Minimal or unreported",
+      },
+      {
+        parameter: "International exposure",
+        krmu: "*Fully Sponsored 2-Week European Summer School",
+        typical: "Not a standard offering",
+      },
+      {
+        parameter: "Studio & practical learning",
+        krmu: "Extensive studio-based learning, live art projects, exhibitions, workshops, portfolio development, digital art, photography, mural and installation projects, and professional internships with exposure to the creative industry",
+        typical:
+          "Limited exposure to live projects, exhibitions, industry workshops, and structured experiential learning",
+      },
+      {
+        parameter: "Mentorship",
+        krmu: "Guidance from experienced artists, designers, academicians, curators, and industry professionals",
+        typical: "Primarily faculty-based mentorship",
+      },
+      {
+        parameter: "Location advantage",
+        krmu: "Gurugram – Access to leading art galleries, design studios, advertising agencies, media houses, creative startups, museums, cultural centres, and the thriving creative industry",
+        typical:
+          "Often located in areas with comparatively limited exposure to leading art and creative organisations",
+      },
+      {
+        parameter: "Placement record",
+        krmu: "92% Placement Rate",
+        typical: "55–65% Placement Rate",
+      },
+      {
+        parameter: "Scholarship available",
+        krmu: "Up to 100% for meritorious students, sports achievers, and students across multiple categories",
+        typical: "Limited and highly competitive",
+      },
+    ],
+
+    bottomDescription1:
+      "Situated in the vibrant city of Gurugram, K.R. Mangalam University places BFA students at the heart of one of India's fastest-growing creative ecosystems. Surrounded by renowned design studios, advertising agencies, media and entertainment companies, art galleries, museums, cultural institutions, and emerging creative enterprises, students gain opportunities to engage with the professional art world through internships, exhibitions, workshops, collaborative projects, industry interactions, and portfolio-building experiences. The University's strong connections with the creative sector enable students to bridge classroom learning with contemporary artistic practice.",
+
+    bottomDescription2:
+      "The Bachelor of Fine Arts (BFA) programme is designed for aspiring artists and creative professionals who wish to transform their imagination into impactful visual expression. Whether you envision a career as a visual artist, illustrator, graphic designer, digital artist, animator, photographer, art curator, creative entrepreneur, or art educator, the programme provides a strong foundation in artistic techniques, creative thinking, digital tools, and professional practice. With an emphasis on experimentation, innovation, and industry relevance, students graduate with the knowledge, confidence, and portfolio needed to thrive in the evolving global creative landscape or pursue advanced studies in the visual arts.",
+  },
 };
