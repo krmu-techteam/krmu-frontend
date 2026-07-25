@@ -1,13 +1,13 @@
-import AcademicHero from "./comp/AcademicHero";
-import WelcomeDean from "./comp/WelcomeDean";
-import TeamBehind from "./comp/TeamBehind";
-import NEP from "./comp/NEP";
-import InnovativeTeaching from "./comp/InnovativeTeaching";
-import AcademicPolicies from "./comp/AcademicPolicies";
-import NurturingSuccess from "./comp/NurturingSuccess";
-import AcademicSlide from "./comp/AcademicSlide";
-import Assist from "./comp/Assist";
 import { STRAPI_URL } from "@/app/constant";
+import {
+  HeroSection,
+  AcademicLeadershipSection,
+  NEP2020Section,
+  TeachingInnovationSection,
+  AcademicPoliciesSection,
+  NurturingSuccessSection,
+  AcademicSupportSection,
+} from "@/presentation/static-pages/academic-affairs";
 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
@@ -76,15 +76,18 @@ export async function generateMetadata(): Promise<Metadata> {
 const page = () => {
   return (
     <>
-      <AcademicHero />
-      <WelcomeDean />
-      <TeamBehind />
-      <NEP />
-      <InnovativeTeaching />
-      <AcademicPolicies />
-      <NurturingSuccess />
+      <HeroSection />
+      <AcademicLeadershipSection />
+      <NEP2020Section />
+      <TeachingInnovationSection />
+      <AcademicPoliciesSection />
+      <NurturingSuccessSection />
+      <AcademicSupportSection />
+      {/*
+      
+   
       <AcademicSlide />
-      <Assist />
+      <Assist /> */}
     </>
   );
 };

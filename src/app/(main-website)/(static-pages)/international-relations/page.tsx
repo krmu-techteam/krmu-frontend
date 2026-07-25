@@ -11,7 +11,7 @@ import {
   RolesSection,
   StudentExchangeSection,
   WorkshopSection,
-} from "@/presentation/international-relations";
+} from "@/presentation/static-pages/international-relations";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("international-relations");
