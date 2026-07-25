@@ -1,8 +1,10 @@
+import BeyondSlider from "./BeyondSlider";
+
 const BeyondTheClassroom = () => {
   return (
-    <section>
+    <section className="py-20 px-5">
       <div className="max-w-7xl mx-auto text-center">
-        <h4 className="text-5xl font-bold text-center mb-2.5">
+        <h4 className="text-5xl font-bold text-center mb-5">
           Beyond the Classroom
         </h4>
         <p>
@@ -16,6 +18,9 @@ const BeyondTheClassroom = () => {
           ensures graduates are well-equipped to thrive in the evolving tech
           landscape.
         </p>
+      </div>
+      <div className="mt-10 h-[500px]">
+        <BeyondSlider />
       </div>
     </section>
   );

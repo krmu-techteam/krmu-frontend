@@ -31,18 +31,18 @@ const BTechCSERoboticsAI = () => {
       <AdmissionProcess />
       <AIOffers />
       <FinancialAssistance />
-      {/* <CareerProspects /> */}
-      {/* 
-      <BtechCSERoboticsVideo />
-      <LabFacilties />
-      <CurriculumSyllabus />
-      <div className="bg-[linear-gradient(180deg,#FFFFFF_1.44%,#F2E7CD_47.6%,#FFFFFF_100%)]">
-        <BeyondTheClassroom />
-        <Scholarship2026 />
-      </div>
-      <FAQ />
       <ExploreOtherProgramme />
+      <Scholarship2026 />
+      <FAQ />
+      <LabFacilties />
+      <BtechCSERoboticsVideo />
       <LookingToSecure />
+      {/* <CareerProspects /> */}
+      {/* <BeyondTheClassroom /> */}
+      <CurriculumSyllabus />
+      {/* 
+      <div className="bg-[linear-gradient(180deg,#FFFFFF_1.44%,#F2E7CD_47.6%,#FFFFFF_100%)]">
+      </div>
        */}
     </div>
   );

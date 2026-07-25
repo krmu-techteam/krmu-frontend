@@ -4,7 +4,7 @@ const CareerProspects = () => {
   return (
     <section className="">
       <div className="w-full flex">
-        <div className="bg-[url(/demo/career-prospects-bg.svg)] bg-no-repeat bg-cover  w-11/12 text-white pt-20 pb-28 relative">
+        <div className="bg-[url(/demo/career-prospects-bg.svg)] bg-no-repeat bg-cover w-11/12 text-white pt-20 pb-28 relative">
           <Image
             src="/demo/career-prospects-girl.png"
             width={450}

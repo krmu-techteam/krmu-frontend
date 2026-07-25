@@ -2,42 +2,70 @@ import Image from "next/image";
 
 const LookingToSecure = () => {
   return (
-    <section className="bg-[linear-gradient(90deg,#001732_43.27%,#B08233_100%)] pt-10 relative">
-      <div className="max-w-7xl mx-auto w-full flex items-center relative">
-        <Image src="/demo/university.png" width={680} height={474} alt="" className="absolute top-1/2 left-1/2 -translate-1/2" />
-        <Image src="/demo/no-1-university.png" width={32} height={425} alt="" className="absolute top-1/2 right-0 -translate-y-1/2" />
-        <div className="w-1/2">
-          <span className="text-black font-semibold bg-[#D9D9D9] px-2 py-1.5 inline-block rounded-full">
+    <section className="bg-[linear-gradient(90deg,#001732_43.27%,#B08233_100%)] pt-10 overflow-hidden relative">
+      <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row items-center px-4 sm:px-6 lg:px-8">
+
+        {/* Background Decorative Image */}
+        <Image
+          src="/demo/university.png"
+          width={680}
+          height={474}
+          alt=""
+          className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        />
+
+        {/* Right Badge */}
+        <Image
+          src="/demo/no-1-university.png"
+          width={32}
+          height={425}
+          alt=""
+          className="hidden xl:block absolute right-0 top-1/2 -translate-y-1/2"
+        />
+
+        {/* Left Content */}
+        <div className="w-full lg:w-1/2 text-center lg:text-left z-10 py-8 lg:py-0">
+          <span className="inline-block rounded-full bg-[#D9D9D9] px-3 py-1.5 text-xs sm:text-sm font-semibold text-black">
             Admissions 2026-27
           </span>
-          <h4 className="text-4xl font-semibold text-white mt-3 mb-5">
+
+          <h4 className="mt-4 mb-5 text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight">
             Looking to secure your future with quality education?
           </h4>
-          <span className="text-black font-semibold bg-[#2fb7d7] px-4 py-1.5 inline-block rounded-full">
+
+          <span className="inline-block rounded-full bg-[#2fb7d7] px-4 py-2 text-xs sm:text-sm font-semibold text-black">
             Step into future of learning, growth and endless opportunities
           </span>
-          <div className="space-x-5 leading-8 font-semibold text-sm mt-7 pb-10">
-            <button className="bg-[#DE0000] text-white rounded-[5px] px-5 py-1 uppercase">
+
+          <div className="mt-8 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
+            <button className="rounded-md bg-[#DE0000] px-6 py-3 text-sm font-semibold uppercase text-white transition hover:bg-red-700">
               Apply Today
             </button>
-            <button className="bg-white text-[#012959] rounded-[5px] px-5 py-1 uppercase">
+
+            <button className="rounded-md bg-white px-6 py-3 text-sm font-semibold uppercase text-[#012959] transition hover:bg-gray-100">
               Download Brochure
             </button>
           </div>
-          <Image
-            src="/demo/admission-open.svg"
-            width={648}
-            height={90}
-            alt="Admission Open"
-          />
+
+          <div className="mt-8">
+            <Image
+              src="/demo/admission-open.svg"
+              width={648}
+              height={90}
+              alt="Admission Open"
+              className="mx-auto lg:mx-0 h-auto w-full max-w-[648px]"
+            />
+          </div>
         </div>
-        <div className="w-1/2 flex justify-center">
+
+        {/* Right Image */}
+        <div className="w-full lg:w-1/2 flex justify-center z-10">
           <Image
             src="/demo/admis-girl.png"
             width={420}
             height={522}
-            alt=""
-            className=""
+            alt="Admission"
+            className="h-auto w-[240px] sm:w-[320px] md:w-[380px] lg:w-[420px]"
           />
         </div>
       </div>
