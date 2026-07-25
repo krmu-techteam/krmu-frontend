@@ -749,4 +749,97 @@ export const programmeScopeData: Record<string, ProgrammeScopeData> = {
       },
     ],
   },
+
+  "bfa-fine-arts": {
+    heading: (
+      <>
+        Bachelor of Fine Arts (BFA)
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_e452610db9.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "The scope of a BFA programme is vast and ever-evolving, offering graduates a wide array of opportunities in both traditional and modern creative industries. Bachelor of Fine Arts degree holders can build careers in graphic design, advertising, animation, digital media, photography, fine arts, art direction, and visual communication. With the rise of digital platforms and content creation, skilled artists are in high demand in fields like UX/UI design, game design, film production, and illustration. Graduates can also pursue higher education such as MFA or design specialisations, become independent artists, or even establish their own creative studios or galleries. ",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: <> During the BFA Programme</>,
+
+    skillsDescription: (
+      <span>
+        Within the span of 4 years, students develop the creative, technical,
+        conceptual, and professional skills required for successful careers in
+        fine arts and related creative fields, such as:
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            Strong foundation in artistic principles, including drawing,
+            painting, sculpture, composition, colour theory, design
+            fundamentals, visual aesthetics, and art history, enabling the
+            creation of expressive, meaningful, and visually compelling
+            artworks.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            Proficiency in various artistic techniques and media such as
+            printmaking, illustration, photography, digital art, mixed media,
+            installation art, and visual storytelling, along with familiarity
+            with contemporary tools and emerging creative technologies.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            Extensive practical exposure through studio practice, art workshops,
+            exhibitions, live projects, museum and gallery visits, field
+            studies, and internships provides hands-on experience in conceptual
+            development, experimentation, portfolio building, and professional
+            presentation of artwork.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            Critical thinking, creativity, visual communication, conceptual
+            development, research, and presentation skills are enhanced through
+            studio critiques, independent projects, collaborative assignments,
+            and art-based research, enabling students to express ideas with
+            originality and depth.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            Understanding of art practices in cultural, historical, and
+            contemporary contexts, along with knowledge of professional ethics,
+            exhibition practices, curation, and the functioning of galleries and
+            creative industries, equips students to build sustainable careers as
+            artists and creative professionals while contributing meaningfully
+            to the evolving art world.
+          </span>
+        ),
+      },
+    ],
+  },
 };

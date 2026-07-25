@@ -100,4 +100,15 @@ export const programmeOverviewData: Record<string, ProgrammeOverviewContent> = {
       "Upon completing the programme, graduates are equipped to conceptualise, design, and execute architectural projects that respond to aesthetic, functional, environmental, and societal needs. They are prepared to collaborate with clients, engineers, planners, contractors, and multidisciplinary teams while adhering to professional ethics, regulatory standards, and sustainable development principles. The programme enables graduates to pursue rewarding careers as architects, urban designers, landscape architects, interior designers, project managers, architectural consultants, conservation specialists, building information modelling (BIM) professionals, and researchers, while contributing meaningfully to the creation of sustainable, resilient, and human-centred built environments.",
     ],
   },
+
+  "bfa-fine-arts": {
+    title: "Programme Overview",
+    paragraphs: [
+      "The Bachelor of Fine Arts (BFA) programme at K.R. Mangalam University is designed to nurture creative expression, artistic skills, and conceptual thinking among aspiring artists. The programme provides a strong foundation in drawing, painting, sculpture, applied arts, art history, aesthetics, visual communication, and contemporary art practices, supported by extensive studio-based learning and hands-on creative exploration. It integrates core areas such as composition, colour theory, design principles, printmaking, illustration, digital art, photography, installation art, and research methodologies, enabling students to develop a comprehensive understanding of both traditional and modern forms of visual art.",
+
+      "Students gain practical experience through studio practice, live art projects, exhibitions, workshops, museum and gallery visits, field studies, portfolio development, and collaborative creative assignments. These experiences help them build essential skills in visual expression, conceptual development, experimentation with media, critical thinking, and professional presentation of artwork. The curriculum also emphasises contemporary art trends, interdisciplinary practices, digital creativity, art curation, cultural studies, and emerging tools and techniques, encouraging students to develop a unique artistic voice while engaging with global art practices.",
+
+      "Upon completing the programme, graduates are equipped to create original works of art that reflect aesthetic sensitivity, conceptual depth, and cultural relevance. They are prepared to work independently or collaboratively with galleries, design studios, media houses, advertising agencies, cultural institutions, and creative organisations, while upholding professional ethics and artistic integrity. The programme enables graduates to pursue rewarding careers as fine artists, illustrators, graphic designers, art educators, art directors, animators, photographers, curators, and art consultants, while contributing meaningfully to the evolving landscape of visual arts and creative industries.",
+    ],
+  },
 };

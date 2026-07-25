@@ -625,4 +625,76 @@ export const whyKrmuData: Record<string, WhyKrmuData> = {
     bottomDescription2:
       "Whether your goal is to build a career as an architect, urban designer, landscape architect, interior designer, project manager, architectural consultant, BIM specialist, or conservation professional, pursue higher studies and architectural research, or contribute to the creation of innovative and sustainable built environments, the B. Arch programme is designed to equip you with the creative, technical, and professional competencies required to excel in the architecture, design, and construction industry.",
   },
+
+  "bfa-fine-arts": {
+    title: "Why K.R. Mangalam University for BFA in 2026–27?",
+
+    description:
+      "Pursuing a Bachelor of Fine Arts (BFA) is more than mastering artistic techniques. It is a transformative journey of imagination, self-expression, and creative exploration. It empowers students to develop a strong artistic identity while gaining expertise in traditional and contemporary art forms, visual storytelling, digital media, aesthetic theory, and professional studio practice. Through immersive learning experiences, students cultivate the creativity, technical excellence, critical thinking, and cultural awareness required to create art that inspires, communicates, and shapes the world around them.",
+
+    comparisonTitle:
+      "A comprehensive comparison of the academic excellence, studio-based pedagogy, mentorship by practising artists, interdisciplinary learning, exhibitions, live projects, workshops, internships, digital art integration, portfolio development, research opportunities, entrepreneurial support, and career-oriented opportunities that students evaluate while choosing a Bachelor of Fine Arts (BFA) programme.",
+
+    parameterHeader: "Parameter",
+
+    krmuHeader: "K.R. Mangalam University",
+
+    typicalHeader: "Typical Private University in NCR",
+
+    comparisonData: [
+      {
+        parameter: "Highest placement package",
+        krmu: "56.6 LPA",
+        typical: "8-20 LPA",
+      },
+      {
+        parameter: "Campus recruiters",
+        krmu: "800+ companies",
+        typical: "100-300 companies",
+      },
+      {
+        parameter: "Research output",
+        krmu: "600+ Scopus/WoS papers, 100+ patents",
+        typical: "Minimal or unreported",
+      },
+      {
+        parameter: "International exposure",
+        krmu: "*Fully Sponsored 2-Week European Summer School",
+        typical: "Not a standard offering",
+      },
+      {
+        parameter: "Design studio & practical learning",
+        krmu: "Extensive architectural design studios, live projects, site visits, construction workshops, model making, digital design, and professional internships with exposure to real-world architectural practice",
+        typical:
+          "Limited exposure to live projects, structured site visits, and industry-integrated studio learning",
+      },
+      {
+        parameter: "Mentorship",
+        krmu: "Guidance from experienced architects, academicians, urban planners, researchers, and industry professionals",
+        typical: "Primarily faculty-based mentorship",
+      },
+      {
+        parameter: "Location advantage",
+        krmu: "Gurugram – Access to leading architectural firms, real estate developers, construction companies, urban planning agencies, design consultancies, and infrastructure projects",
+        typical:
+          "Often located in areas with comparatively limited exposure to leading architecture and construction firms",
+      },
+      {
+        parameter: "Placement record",
+        krmu: "92% Placement Rate",
+        typical: "55–65% Placement Rate",
+      },
+      {
+        parameter: "Scholarship available",
+        krmu: "Up to 100% for meritorious students, sports achievers, and students across multiple categories",
+        typical: "Limited and highly competitive",
+      },
+    ],
+
+    bottomDescription1:
+      "Located in Gurugram, KRMU offers close proximity to leading architectural firms, real estate developers, construction companies, urban planning agencies, infrastructure organisations, design consultancies, and government bodies across the Delhi-NCR region. This strategic location provides students with valuable industry exposure through professional internships, site visits, live projects, and collaborative design experiences, along with strong industry linkages with architecture firms, engineering consultancies, construction companies, urban development authorities, and multidisciplinary design organisations.",
+
+    bottomDescription2:
+      "Whether your goal is to build a career as an architect, urban designer, landscape architect, interior designer, project manager, architectural consultant, BIM specialist, or conservation professional, pursue higher studies and architectural research, or contribute to the creation of innovative and sustainable built environments, the B. Arch programme is designed to equip you with the creative, technical, and professional competencies required to excel in the architecture, design, and construction industry.",
+  },
 };
