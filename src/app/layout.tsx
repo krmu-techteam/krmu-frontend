@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
       <head>
         {/* ✅ Google Tag Manager Script */}
         {/* <Script id="gtm-head" strategy="afterInteractive">
@@ -51,7 +51,7 @@ export default function RootLayout({
         `}
         </Script> */}
       </head>
-      <body className={`${poppins.className} ${playfair.className} ${poppins.variable} ${playfair.variable} antialiased`}>
+      <body className={`${poppins.className} ${playfair.className} ${poppins.variable} ${playfair.variable} antialiased overflow-x-hidden`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MKXDVSJ9"

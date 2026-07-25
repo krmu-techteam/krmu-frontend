@@ -20,7 +20,7 @@ export async function NewsEventsSection({
   const homeService = getHomeService();
   const newsandeventsdata = await homeService.getNewsEvents(1, 10);
   return (
-    <section className="relative w-full pt-0 pb-8 md:py-12 xl:pt-12 xl:pb-20 font-poppins">
+    <section className="relative w-full overflow-hidden pt-0 pb-8 md:py-12 xl:pt-12 xl:pb-20 font-poppins">
       <div
         className="absolute -top-[100px] left-[88%] -translate-x-1/2 w-[948px] h-[948px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.05)_0%,transparent_85%)] rounded-full blur-[140px] z-0 pointer-events-none transition-opacity"
         style={{ opacity: 0.66 }}

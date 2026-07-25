@@ -14,7 +14,7 @@ export function ResearchSection() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 items-start relative xl:h-[750px]">
           {/* Left Column - Image and Stats */}
           <div className="w-full lg:w-[58%] xl:w-[925px]">
-            <div className="relative w-full aspect-video xl:aspect-auto xl:w-[925px] xl:h-[464px] rounded-[4px] overflow-hidden mb-16 border border-white/5 shadow-2xl">
+            <div className="relative w-full aspect-video xl:aspect-auto xl:w-[925px] xl:h-[464px] rounded-[4px] overflow-hidden mb-16 border border-white/5">
               <Image
                 src="/modules/home/research/researcher.jpg"
                 alt="Research at KRMU"
@@ -29,11 +29,11 @@ export function ResearchSection() {
               {RESEARCH_STATS.map((stat, i) => {
                 const borderClass =
                   i === 0
-                    ? "border-r border-b border-[#262626] pb-5 px-3 md:px-5"
+                    ? "border-r border-b border-[#3F3F3F] pb-5 px-3 md:px-5"
                     : i === 1
-                      ? "border-b border-[#262626] pb-5 px-3 md:px-5"
+                      ? "border-b border-[#3F3F3F] pb-5 px-3 md:px-5"
                       : i === 2
-                        ? "border-r border-[#262626] pt-5 px-3 md:px-5"
+                        ? "border-r border-[#3F3F3F] pt-5 px-3 md:px-5"
                         : "pt-5 px-3 md:px-5";
                 return (
                   <div
@@ -54,7 +54,7 @@ export function ResearchSection() {
 
           {/* Right Column - Floating Info Card */}
           <div className="w-full lg:w-[47%] lg:-ml-[5%] lg:mt-16 xl:absolute xl:left-[728px] xl:top-[192px] xl:w-[585px] xl:h-[557px] xl:m-0 z-20">
-            <div className="bg-brand-navy border-12 border-brand-dark p-8 xl:p-12 rounded-[4px] h-full shadow-2xl backdrop-blur-xl flex flex-col justify-center">
+            <div className="bg-brand-navy border-12 border-brand-dark p-8 xl:p-12 rounded-[4px] h-full flex flex-col justify-center">
               <p className="text-center text-white/90 text-lg tracking-wide font-normal mb-4">
                 Shaping Futures, Embracing Innovation
               </p>

@@ -30,12 +30,23 @@ export function AboutSection({
           <SectionTitle title={topContent?.adecadetitle} />
 
           <p className="max-w-5xl mx-auto text-white/70 text-base md:text-[16px] leading-relaxed mb-6 font-light font-poppins">
-            {topContent?.adecadedescription}
+            {topContent?.adecadedescription
+              ?.split("NAAC 'A' accredited")
+              .map((part, idx, arr) => (
+                <span key={idx}>
+                  {part}
+                  {idx < arr.length - 1 && (
+                    <span className="text-white font-medium ">
+                      NAAC &apos;A&apos; accredited
+                    </span>
+                  )}
+                </span>
+              ))}
           </p>
 
           <Link
             href={topContent?.button1link}
-            className="inline-flex gap-1 items-center underline text-[16px] font-light tracking-wide text-white hover:text-white/70  transition-colors duration-300"
+            className="inline-flex gap-1 items-center text-[16px] font-light tracking-wide text-white hover:text-white/70  transition-colors duration-300"
           >
             <span>
               <ArrowRight size={18} />

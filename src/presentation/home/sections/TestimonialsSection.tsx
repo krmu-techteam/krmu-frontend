@@ -28,7 +28,7 @@ export function TestimonialsSection({
       : TESTIMONIALS;
 
   return (
-    <section className="relative w-full py-8 md:py-12 xl:py-20 font-poppins max-w-[1530px] mx-auto">
+    <section className="relative w-full overflow-hidden py-8 md:py-12 xl:py-20 font-poppins max-w-[1530px] mx-auto">
       {/* Precision Spec Lines - Gradient Style */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>

@@ -16,7 +16,7 @@ const RECRUITERS = [
   "apple.png",
   "cisco.png",
   "ey.png",
-  "amazon.png"
+  "amazon.png",
 ];
 
 export default function PlacementRecruiters() {
@@ -33,9 +33,12 @@ export default function PlacementRecruiters() {
         slideClassName="pl-4 basis-1/3 md:basis-1/5 lg:basis-1/6"
       >
         {[...RECRUITERS, ...RECRUITERS].map((logo, index) => (
-          <div key={index} className="h-20 relative overflow-hidden border border-[#434343] rounded-[4px] bg-gradient-to-b from-white/[0.03] to-transparent flex items-center justify-center p-3 hover:border-white/20 transition-all duration-300 group">
+          <div
+            key={index}
+            className="h-20 relative overflow-hidden border border-[#434343] rounded-[4px] bg-transparent flex items-center justify-center p-3 hover:border-white/20 transition-all duration-300 group"
+          >
             <Image
-              src={`/modules/home/placements/recruiters/${logo}`}
+              src={`/images/home/placements/recruiters/${logo}`}
               alt={logo.split(".")[0]}
               width={110}
               height={70}

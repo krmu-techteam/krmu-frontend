@@ -22,13 +22,13 @@ export const EventAndNewsCard: React.FC<EventAndNewsCardProps> = async ({
   return (
     <div className="group cursor-pointer p-2">
       <Link href={`/events-and-news/${data.slug}`} className="block">
-        <div className="relative aspect-[3/2] rounded-sm overflow-hidden mb-6 bg-white/5">
+        <div className="relative aspect-[3/2] rounded-[4px] overflow-hidden mb-6 bg-white/5">
           {getImgUrl && (
             <Image
               src={getImgUrl}
               alt={data.title || ""}
               fill
-              className="object-cover group-hover:scale-110 transition-transform duration-1000"
+              className="object-fill group-hover:scale-105 transition-transform duration-1000"
             />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">

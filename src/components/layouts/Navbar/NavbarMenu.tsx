@@ -4,6 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { ChevronDown, ArrowUpRight, Download } from "lucide-react";
+import { Carousel } from "@/components/common/Carousel";
+import { SUCCESS_STORIES } from "@/features/home";
+import Button from "@/components/common/Button";
+import PlacementRecruiters from "./PlacementRecruiters";
 
 type Props = {
   mainMenu: HeaderMenus[];
@@ -411,89 +415,106 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                 <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
                 <div className="absolute bottom-[-10%] left-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12">
-                  {/* Left Column: Links */}
-                  <div className="col-span-4">
-                    <h2 className="text-2xl font-normal font-poppins text-white mb-6">
-                      {placementMenu?.placement?.heading}
-                    </h2>
-                    <ul className="flex flex-col gap-3">
-                      {placementMenu?.placement?.menulinks.map((menu) => (
-                        <li key={menu.id}>
-                          <Link
-                            href={menu.url || "#"}
-                            className="relative text-white/60 hover:text-white transition-all duration-300 text-[15px] font-light flex items-center group font-poppins"
-                          >
-                            {menu.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Center Column: Stats */}
-                  <div className="col-span-4 px-6">
-                    <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-sm p-8 h-[250px] flex items-center justify-center">
-                      <div className="w-full flex flex-col items-center justify-center gap-8">
-                        {placementMenu?.placementcounter.map((counter, idx) => (
-                          <React.Fragment key={counter.id}>
-                            {/* Counter Content */}
-                            <div className="text-center group">
-                              <p className="text-3xl font-normal text-white mb-1 transition-transform duration-500 group-hover:scale-110 font-poppins">
-                                {counter.countertext}
-                              </p>
-
-                              <p className="text-white/60 text-sm tracking-wide font-normal font-poppins">
-                                {counter.countercontent}
-                              </p>
-                            </div>
-
-                            {idx !==
-                              placementMenu.placementcounter.length - 1 && (
-                              <div className="w-full flex items-center justify-center">
-                                <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
-                              </div>
-                            )}
-                          </React.Fragment>
+                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 flex flex-col w-full">
+                  <div className="grid grid-cols-12 w-full gap-8">
+                    {/* Left Column: Links */}
+                    <div className="col-span-4">
+                      <h2 className="text-2xl font-normal font-poppins text-white mb-6">
+                        {placementMenu?.placement?.heading}
+                      </h2>
+                      <ul className="flex flex-col gap-3">
+                        {placementMenu?.placement?.menulinks.map((menu) => (
+                          <li key={menu.id}>
+                            <Link
+                              href={menu.url || "#"}
+                              className="relative text-white hover:text-white/80 transition-all duration-300 text-[15px] font-light flex items-center group font-poppins"
+                            >
+                              {menu.title}
+                            </Link>
+                          </li>
                         ))}
+                      </ul>
+                    </div>
+
+                    <div className="col-span-4 px-6 flex justify-center">
+                      <div className="bg-[#091926]  rounded-[4px] p-8 w-full max-w-[380px] h-[371px] flex items-center justify-center">
+                        <div className="w-full flex flex-col items-center justify-center gap-8">
+                          {placementMenu?.placementcounter.map(
+                            (counter, idx) => (
+                              <React.Fragment key={counter.id}>
+                                {/* Counter Content */}
+                                <div className="text-center group">
+                                  <p className="text-3xl font-normal text-white mb-1 transition-transform duration-500 group-hover:scale-110 font-poppins">
+                                    {counter.countertext}
+                                  </p>
+
+                                  <p className="text-white/60 text-sm tracking-wide font-normal font-poppins">
+                                    {counter.countercontent}
+                                  </p>
+                                </div>
+
+                                {idx !==
+                                  placementMenu.placementcounter.length - 1 && (
+                                  <div className="w-full flex items-center justify-center">
+                                    <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+                                  </div>
+                                )}
+                              </React.Fragment>
+                            ),
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Right Column: Image & Actions */}
+                    <div className="col-span-4 pl-6 space-y-6 flex flex-col justify-between">
+                      <div className="relative rounded-[4px] overflow-hidden group w-full max-w-[379px] h-[379px] mx-auto">
+                        <Carousel
+                          className="h-full w-full"
+                          options={{ loop: true }}
+                          autoplay={true}
+                          showArrows={false}
+                          showDots={false}
+                          containerClassName="h-full w-full"
+                          slideClassName="relative h-[379px] w-full"
+                        >
+                          {SUCCESS_STORIES.map((story, idx) => (
+                            <div
+                              key={idx}
+                              className="relative w-full h-[379px]"
+                            >
+                              <Image
+                                src={story.image}
+                                alt={`Placement Success ${idx + 1}`}
+                                fill
+                                className="object-cover opacity-90"
+                              />
+                            </div>
+                          ))}
+                        </Carousel>
+                      </div>
+
+                      <div className="flex w-full max-w-[379px] mx-auto gap-3">
+                        <Button
+                          variant="outline"
+                          href="#"
+                          className="flex-[55%] !border-[#737373] text-[11px] md:text-[11px] !h-[46px] font-poppins whitespace-nowrap !rounded-[4px] !px-2 lg:!px-4"
+                        >
+                          DOWNLOAD BROCHURE
+                        </Button>
+                        <Button
+                          variant="primary"
+                          href={applyNowButton?.url || "/apply"}
+                          icon={ArrowUpRight}
+                          iconPosition="right"
+                          className="flex-[45%] text-[11px] !rounded-[4px] md:text-[11px] !h-[46px] font-poppins whitespace-nowrap !px-2 lg:!px-4"
+                        >
+                          APPLY NOW
+                        </Button>
                       </div>
                     </div>
                   </div>
-
-                  {/* Right Column: Image & Actions */}
-                  <div className="col-span-4 pl-6 space-y-6 flex flex-col justify-between">
-                    <div className="relative rounded-sm overflow-hidden border border-white/10 group">
-                      {/* <Image
-                        src={`${STRAPI_URL}${placementMenu?.backgroundimage?.url}`}
-                        alt="Placements Highlight"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80"
-                      /> */}
-                      <Image
-                        src="/modules/home/placements/om-mishra.webp"
-                        alt="Placements Highlight"
-                        width={420}
-                        height={380}
-                        className="w-full h-auto transition-transform duration-1000 group-hover:scale-110 opacity-90"
-                      />
-                    </div>
-
-                    <div className="flex gap-4">
-                      <Link
-                        href="#"
-                        className="flex-1 bg-transparent hover:bg-white/5 border border-white/20 text-white font-medium py-3 px-4 rounded-[3px] text-[14px] flex items-center justify-center gap-2 transition-all font-poppins tracking-wide"
-                      >
-                        <Download size={14} /> Brochure
-                      </Link>
-                      <Link
-                        href={applyNowButton?.url || "/apply"}
-                        className="flex-1 bg-[#cb000d] hover:bg-[#cb000d]/80 text-white font-medium py-3 px-4 rounded-[3px] text-[14px] flex items-center justify-center gap-2 transition-all shadow-lg font-poppins tracking-wide"
-                      >
-                        Apply Now <ArrowUpRight size={14} />
-                      </Link>
-                    </div>
-                  </div>
+                  <PlacementRecruiters />
                 </div>
               </div>
             </li>
