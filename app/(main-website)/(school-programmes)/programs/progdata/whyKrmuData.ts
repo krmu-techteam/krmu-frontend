@@ -653,7 +653,7 @@ export const whyKrmuData: Record<string, WhyKrmuData> = {
         typical: "100-300 companies",
       },
       {
-        parameter: "Research output",
+        parameter: "Research & creative output",
         krmu: "600+ Scopus/WoS papers, 100+ patents",
         typical: "Minimal or unreported",
       },
@@ -663,21 +663,21 @@ export const whyKrmuData: Record<string, WhyKrmuData> = {
         typical: "Not a standard offering",
       },
       {
-        parameter: "Design studio & practical learning",
-        krmu: "Extensive architectural design studios, live projects, site visits, construction workshops, model making, digital design, and professional internships with exposure to real-world architectural practice",
+        parameter: "Studio & practical learning",
+        krmu: "Extensive studio-based learning, live art projects, exhibitions, workshops, portfolio development, digital art, photography, mural and installation projects, and professional internships with exposure to the creative industry",
         typical:
-          "Limited exposure to live projects, structured site visits, and industry-integrated studio learning",
+          "Limited exposure to live projects, exhibitions, industry workshops, and structured experiential learning",
       },
       {
         parameter: "Mentorship",
-        krmu: "Guidance from experienced architects, academicians, urban planners, researchers, and industry professionals",
+        krmu: "Guidance from experienced artists, designers, academicians, curators, and industry professionals",
         typical: "Primarily faculty-based mentorship",
       },
       {
         parameter: "Location advantage",
-        krmu: "Gurugram – Access to leading architectural firms, real estate developers, construction companies, urban planning agencies, design consultancies, and infrastructure projects",
+        krmu: "Gurugram – Access to leading art galleries, design studios, advertising agencies, media houses, creative startups, museums, cultural centres, and the thriving creative industry",
         typical:
-          "Often located in areas with comparatively limited exposure to leading architecture and construction firms",
+          "Often located in areas with comparatively limited exposure to leading art and creative organisations",
       },
       {
         parameter: "Placement record",
@@ -692,9 +692,9 @@ export const whyKrmuData: Record<string, WhyKrmuData> = {
     ],
 
     bottomDescription1:
-      "Located in Gurugram, KRMU offers close proximity to leading architectural firms, real estate developers, construction companies, urban planning agencies, infrastructure organisations, design consultancies, and government bodies across the Delhi-NCR region. This strategic location provides students with valuable industry exposure through professional internships, site visits, live projects, and collaborative design experiences, along with strong industry linkages with architecture firms, engineering consultancies, construction companies, urban development authorities, and multidisciplinary design organisations.",
+      "Situated in the vibrant city of Gurugram, K.R. Mangalam University places BFA students at the heart of one of India's fastest-growing creative ecosystems. Surrounded by renowned design studios, advertising agencies, media and entertainment companies, art galleries, museums, cultural institutions, and emerging creative enterprises, students gain opportunities to engage with the professional art world through internships, exhibitions, workshops, collaborative projects, industry interactions, and portfolio-building experiences. The University's strong connections with the creative sector enable students to bridge classroom learning with contemporary artistic practice.",
 
     bottomDescription2:
-      "Whether your goal is to build a career as an architect, urban designer, landscape architect, interior designer, project manager, architectural consultant, BIM specialist, or conservation professional, pursue higher studies and architectural research, or contribute to the creation of innovative and sustainable built environments, the B. Arch programme is designed to equip you with the creative, technical, and professional competencies required to excel in the architecture, design, and construction industry.",
+      "The Bachelor of Fine Arts (BFA) programme is designed for aspiring artists and creative professionals who wish to transform their imagination into impactful visual expression. Whether you envision a career as a visual artist, illustrator, graphic designer, digital artist, animator, photographer, art curator, creative entrepreneur, or art educator, the programme provides a strong foundation in artistic techniques, creative thinking, digital tools, and professional practice. With an emphasis on experimentation, innovation, and industry relevance, students graduate with the knowledge, confidence, and portfolio needed to thrive in the evolving global creative landscape or pursue advanced studies in the visual arts.",
   },
 };

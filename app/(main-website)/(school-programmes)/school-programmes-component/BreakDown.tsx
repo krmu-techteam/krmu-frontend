@@ -19,68 +19,6 @@ export const BreakDown = ({ slug }: Props) => {
   const data = breakDownData[slug];
 
   if (!data) return null;
-  // const rows = [
-  //   {
-  //     role: "Software Developer / SDE",
-  //     package: "4 LPA - 6 LPA",
-  //     sectors: "IT Services, IT Products, Startups",
-  //   },
-  //   {
-  //     role: "AI / ML Engineer",
-  //     package: "5 LPA - 8 LPA",
-  //     sectors: "AI Labs SaaS Deep-Tech",
-  //   },
-  //   {
-  //     role: "Data Scientist",
-  //     package: "6 LPA - 8 LPA",
-  //     sectors: "BFSI, E-commerce, Analytics",
-  //   },
-  //   {
-  //     role: "Cybersecurity Analyst",
-  //     package: "4 LPA - 5 LPA",
-  //     sectors: "Cyber, Defence, BFSI, Consulting",
-  //   },
-  //   {
-  //     role: "Full Stack Developer",
-  //     package: "4 LPA - 5 LPA",
-  //     sectors: "Startups, Product Companies",
-  //   },
-  //   {
-  //     role: "Cloud Engineer",
-  //     package: "6 LPA - 8 LPA",
-  //     sectors: "AWS, Azure, GCP Ecosystem",
-  //   },
-  //   {
-  //     role: "Data Engineer",
-  //     package: "6 LPA - 8 LPA",
-  //     sectors: "FinTech, Retail, Healthcare tech",
-  //   },
-  //   {
-  //     role: "DevOps Engineer",
-  //     package: "4 LPA - 6 LPA",
-  //     sectors: "SaaS, Enterprise IT",
-  //   },
-  //   {
-  //     role: "UX / UI Designer",
-  //     package: "4 LPA - 6 LPA",
-  //     sectors: "Product, Agencies, EdTech",
-  //   },
-  //   {
-  //     role: "IT Consultant",
-  //     package: "4 LPA - 5 LPA",
-  //     sectors: "Big 4, System Integrators",
-  //   },
-  //   {
-  //     role: "Robotics / Automation Engineer",
-  //     package: "6 LPA - 8 LPA",
-  //     sectors: "Manufacturing, Defence, R&D",
-  //   },
-  //   {
-  //     role: "Product Management Trainee (tech track)",
-  //     package: "4 LPA - 5 LPA",
-  //     sectors: "Product Companies, FinTech",
-  //   },
-  // ];
 
   return (
     <section
@@ -191,7 +129,7 @@ export const BreakDown = ({ slug }: Props) => {
                       <td className="py-4 px-6 text-center text-sm md:text-[16px]  text-black border-r-2 border-[#002045]/10">
                         {row.package}
                       </td>
-                      <td className="py-4 px-6 text-center text-sm md:text-[16px]  text-black">
+                      <td className="py-4 px-6 text-center text-sm md:text-[16px] max-w-[450px]  text-black">
                         {row.sectors}
                       </td>
                     </tr>
