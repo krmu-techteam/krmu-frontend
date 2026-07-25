@@ -406,7 +406,7 @@ const Footer = async () => {
           <div className="columns-2 gap-6 md:gap-8 lg:gap-12 text-white text-left md:grid md:grid-cols-3 lg:grid-cols-5 space-y-6 md:space-y-0">
             {/* Column 1: Programmes */}
             <div className="inline-block w-full break-inside-avoid font-poppins">
-              <h4 className="text-[16px]  font-semibold mb-1 text-white tracking-wide">
+              <h4 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]  font-semibold mb-1 text-white tracking-wide">
                 Programmes
               </h4>
               <ul className="space-y-1">
@@ -442,7 +442,7 @@ const Footer = async () => {
 
             {/* Column 2: Quick Links */}
             <div className="inline-block w-full break-inside-avoid">
-              <h4 className="text-[16px] font-semibold mb-1 text-white tracking-wide">
+              <h4 className="text-[16px] font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] mb-1 text-white tracking-wide">
                 {footerComp3?.heading?.heading || "Quick Links"}
               </h4>
               <ul className="space-y-1">
@@ -476,8 +476,8 @@ const Footer = async () => {
 
             {/* Column 3: About KRMU */}
             <div className="inline-block w-full break-inside-avoid">
-              <h4 className="text-[16px] font-semibold mb-1 text-white tracking-wide">
-                {"About KRMU"}
+              <h4 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
+                About KRMU
               </h4>
               <ul className="space-y-1">
                 {footerComp2?.footer_menu
@@ -508,7 +508,7 @@ const Footer = async () => {
 
             {/* Column 4: Student Resources */}
             <div className="inline-block w-full break-inside-avoid">
-              <h4 className="text-[16px] font-semibold mb-1 text-white tracking-wide">
+              <h4 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
                 Student Resources
               </h4>
               <ul className="space-y-1">
@@ -529,7 +529,7 @@ const Footer = async () => {
 
             {/* Column 5: Legal & Compliance */}
             <div className="inline-block w-full break-inside-avoid">
-              <h4 className="text-[16px] font-semibold mb-1 text-white tracking-wide">
+              <h4 className="text-[16px]  [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
                 Legal & Compliance
               </h4>
               <ul className="space-y-1">
