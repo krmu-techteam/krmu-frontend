@@ -45,7 +45,7 @@ const NewsCard = ({ title, slug, firstImage, publishedAt }: NewsCardProps) => {
           alt={title}
           width={370}
           height={246}
-          className="w-full rounded-t-3xl"
+          className="w-full rounded-t-3xl xl:h-[265px]"
         />
       )}
 
