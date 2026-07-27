@@ -54,7 +54,25 @@ const CommonBlogCard = async ({
         "https://wp.krmangalam.edu.in/",
       ) || null;
 
-  const displayViews = views || generateRealisticViews(date, slug);
+  const getRandomViews = (postDate: string, postSlug: string) => {
+    const pDate = new Date(postDate || Date.now());
+    const isRecent = (Date.now() - pDate.getTime()) < 60 * 24 * 60 * 60 * 1000; // 60 days
+    
+    let seed = 0;
+    for (let i = 0; i < postSlug.length; i++) {
+      seed += postSlug.charCodeAt(i);
+    }
+    // Pseudo-random between 0 and 1
+    const random = (Math.sin(seed) + 1) / 2;
+    
+    if (isRecent) {
+      return Math.floor(random * (600 - 500 + 1)) + 500;
+    } else {
+      return Math.floor(random * (2000 - 1000 + 1)) + 1000;
+    }
+  };
+
+  const displayViews = views || getRandomViews(date, slug).toLocaleString();
 
   const finalSrc2 = finalSrc?.includes(
     "https://wp.krmangalam.edu.in//wp-content",
@@ -99,7 +117,7 @@ const CommonBlogCard = async ({
         href={`/blog/${slug}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex flex-col h-full bg-[linear-gradient(180deg,#061623_0%,rgba(24,52,83,0)_100%)] border border-[#14283c] rounded-none overflow-hidden font-poppins transition-transform duration-500 ease-out transform-gpu hover:-translate-y-1"
+        className="group relative flex flex-col h-full bg-[linear-gradient(180deg,#061623_0%,rgba(24,52,83,0)_100%)] border-b border-white/14 rounded-none overflow-hidden font-poppins transition-transform duration-500 ease-out transform-gpu hover:-translate-y-1"
       >
         {/* Left Vertical Gradient Border Line (Starts Halfway Down) */}
         <div
@@ -157,7 +175,7 @@ const CommonBlogCard = async ({
 
             {/* Clean Excerpt Paragraph (without [&hellip;]) */}
             {cleanExcerpt && (
-              <p 
+              <p
                 className="text-white/75 text-xs sm:text-sm leading-relaxed line-clamp-2 mb-3.5 font-light"
                 dangerouslySetInnerHTML={{ __html: cleanExcerpt }}
               />
@@ -195,20 +213,24 @@ const CommonBlogCard = async ({
                 </div>
               </div>
 
-              {/* Author Profile Avatar (Hover for Name) */}
-              {authorAvatar && (
+              {/* Author Profile Initials (Hover for Name) */}
+              {authorName && (
                 <div
                   className="flex items-center justify-center relative group/author"
-                  title={authorName || "Author"}
+                  title={authorName}
                 >
-                  <div className="w-[22px] h-[22px] rounded-full overflow-hidden border border-white/20 shadow-sm relative group-hover/author:border-[#E7C268]/60 transition-colors duration-300">
-                    <Image
-                      src={authorAvatar}
-                      alt={authorName || "Author Profile"}
-                      fill
-                      className="object-cover"
-                      unoptimized
-                    />
+                  <div className="w-[24px] h-[24px] rounded-full overflow-hidden border border-white/20 shadow-sm relative group-hover/author:border-[#E7C268]/60 transition-colors duration-300 bg-[#0c1d2e] flex items-center justify-center text-[10px] font-medium text-white/90">
+                    <span>
+                      {(() => {
+                        const parts = authorName.trim().split(" ");
+                        if (parts.length > 1) {
+                          return (
+                            parts[0][0] + parts[parts.length - 1][0]
+                          ).toUpperCase();
+                        }
+                        return parts[0][0].toUpperCase();
+                      })()}
+                    </span>
                   </div>
                 </div>
               )}
