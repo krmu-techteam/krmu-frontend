@@ -3,13 +3,20 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import React from "react";
+import { programmeOverviewData } from "../programs/progdata/programmeOverviewData";
+
+type Props = {
+  slug: string;
+};
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
 
-export const ProgrammeOverview = () => {
+export const ProgrammeOverview = ({ slug }: Props) => {
+  const data = programmeOverviewData[slug];
+  // console.log("data", data);
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   const toggleExpand = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -68,7 +75,7 @@ export const ProgrammeOverview = () => {
           {/* Content */}
           <div className="relative z-10 flex flex-col items-start w-full">
             <h2 className="text-white font-bold text-2xl sm:text-3xl md:text-[30px] mb-4">
-              Programme Overview
+              {data?.title}
             </h2>
 
             <div
@@ -81,56 +88,30 @@ export const ProgrammeOverview = () => {
                   isExpanded ? "opacity-100" : "opacity-95"
                 }`}
               >
-                <p className="mb-4">
-                  The B.Tech. in Computer Science and Engineering programme at
-                  K.R. Mangalam University is designed to provide students with
-                  theoretical knowledge and practical applications of core CS
-                  and engineering concepts.
-                </p>
-
-                <p
-                  className={`mb-4 transition-all duration-500 ${
-                    isExpanded
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-2"
-                  }`}
-                >
-                  Students build a strong foundation in data structures,
-                  algorithms, operating systems, computer networks, databases,
-                  and software engineering while developing specialised
-                  expertise in the most in-demand domains such as AI/ML, Data
-                  Science, Cyber Security, Full Stack Development, Robotics &
-                  AI, UX/UI.
-                </p>
-
-                <p
-                  className={`mb-4 transition-all duration-500 delay-75 ${
-                    isExpanded
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-2"
-                  }`}
-                >
-                  All B.Tech. programmes are offered in academic partnership
-                  with industry leaders such as IBM, Microsoft, EC-Council, and
-                  ImaginXP, depending on the chosen specialisation. These
-                  collaborations equip students with industry-relevant skills,
-                  practical exposure, and the expertise needed to tackle
-                  real-world challenges and build successful engineering
-                  careers.
-                </p>
-
-                <p
-                  className={`transition-all duration-500 delay-150 ${
-                    isExpanded
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-2"
-                  }`}
-                >
-                  After completing the programme, students work in
-                  multidisciplinary teams, solve engineering challenges, and
-                  design solutions independently in corporate development
-                  environments.
-                </p>
+                {data?.paragraphs.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className={`${
+                      index !== data.paragraphs.length - 1 ? "mb-4" : ""
+                    } ${
+                      index === 0
+                        ? ""
+                        : `transition-all duration-500 ${
+                            index === 2
+                              ? "delay-75"
+                              : index === 3
+                                ? "delay-150"
+                                : ""
+                          } ${
+                            isExpanded
+                              ? "opacity-100 translate-y-0"
+                              : "opacity-0 translate-y-2"
+                          }`
+                    }`}
+                  >
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </div>
 

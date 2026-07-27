@@ -2,77 +2,83 @@
 
 import React from "react";
 import { Inter } from "next/font/google";
+import { whyKrmuData } from "../programs/progdata/whyKrmuData";
+
+type Props = {
+  slug: string;
+};
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
 
-interface ComparisonRow {
-  parameter: string;
-  krmu: string;
-  typical: string;
-}
+// interface ComparisonRow {
+//   parameter: string;
+//   krmu: string;
+//   typical: string;
+// }
 
-const comparisonData: ComparisonRow[] = [
-  {
-    parameter: "Highest placement package",
-    krmu: "56.6 LPA",
-    typical: "8-20 LPA",
-  },
-  {
-    parameter: "Campus recruiters",
-    krmu: "800+ companies",
-    typical: "100-300 companies",
-  },
-  {
-    parameter: "Curriculum",
-    krmu: "Industry-aligned and regularly updated",
-    typical: "Generic AICTE syllabus",
-  },
-  {
-    parameter: "Research output",
-    krmu: "600+ Scopus/WoS papers, 100+ patents",
-    typical: "Minimal or unreported",
-  },
-  {
-    parameter: "Project-based credits",
-    krmu: "15% of total credits",
-    typical: "None or Typically 5-8%",
-  },
-  {
-    parameter: "International exposure",
-    krmu: "*Fully sponsored 2-week European summer school",
-    typical: "Rarely offered",
-  },
-  {
-    parameter: "Competitive programming lab",
-    krmu: "Dedicated facility for product-company preparation",
-    typical: "Not a standard offering",
-  },
-  {
-    parameter: "Mentorship",
-    krmu: "CTOs & startup founders as regular mentors",
-    typical: "Faculty-only mentorship",
-  },
-  {
-    parameter: "Industry certifications included",
-    krmu: "Microsoft Azure AI, GCP Ecosystem, EC-Council CEH- AI pathways",
-    typical: "Rarely included in the curriculum",
-  },
-  {
-    parameter: "Location",
-    krmu: "Sohna Road, Gurugram (near India's second largest IT hub)",
-    typical: "Varies, often suburban or Tier-2",
-  },
-  {
-    parameter: "Scholarship available",
-    krmu: "Up to 100% for toppers and sports achievers",
-    typical: "Limited, highly competitive",
-  },
-];
+// const comparisonData: ComparisonRow[] = [
+//   {
+//     parameter: "Highest placement package",
+//     krmu: "56.6 LPA",
+//     typical: "8-20 LPA",
+//   },
+//   {
+//     parameter: "Campus recruiters",
+//     krmu: "800+ companies",
+//     typical: "100-300 companies",
+//   },
+//   {
+//     parameter: "Curriculum",
+//     krmu: "Industry-aligned and regularly updated",
+//     typical: "Generic AICTE syllabus",
+//   },
+//   {
+//     parameter: "Research output",
+//     krmu: "600+ Scopus/WoS papers, 100+ patents",
+//     typical: "Minimal or unreported",
+//   },
+//   {
+//     parameter: "Project-based credits",
+//     krmu: "15% of total credits",
+//     typical: "None or Typically 5-8%",
+//   },
+//   {
+//     parameter: "International exposure",
+//     krmu: "*Fully sponsored 2-week European summer school",
+//     typical: "Rarely offered",
+//   },
+//   {
+//     parameter: "Competitive programming lab",
+//     krmu: "Dedicated facility for product-company preparation",
+//     typical: "Not a standard offering",
+//   },
+//   {
+//     parameter: "Mentorship",
+//     krmu: "CTOs & startup founders as regular mentors",
+//     typical: "Faculty-only mentorship",
+//   },
+//   {
+//     parameter: "Industry certifications included",
+//     krmu: "Microsoft Azure AI, GCP Ecosystem, EC-Council CEH- AI pathways",
+//     typical: "Rarely included in the curriculum",
+//   },
+//   {
+//     parameter: "Location",
+//     krmu: "Sohna Road, Gurugram (near India's second largest IT hub)",
+//     typical: "Varies, often suburban or Tier-2",
+//   },
+//   {
+//     parameter: "Scholarship available",
+//     krmu: "Up to 100% for toppers and sports achievers",
+//     typical: "Limited, highly competitive",
+//   },
+// ];
 
-export const WhyKrmuCse = () => {
+export const WhyKrmuCse = ({ slug }: Props) => {
+  const data = whyKrmuData[slug];
   return (
     <section
       className={`${inter.className} relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden`}
@@ -91,20 +97,15 @@ export const WhyKrmuCse = () => {
       <div className="relative z-10 max-w-[1182px] mx-auto">
         {/* Header Section */}
         <div className="text-center mb-10 md:mb-10">
-          <h2 className="text-3xl md:text-4xl lg:text-[36px] font-bold text-white leading-tight tracking-tight max-w-[707px] mx-auto mb-6">
-            Why Choose K.R. Mangalam University for B.Tech. CSE?
+          <h2 className="text-3xl md:text-4xl lg:text-[36px] font-bold text-white leading-tight tracking-tight max-w-[710px] mx-auto mb-6">
+            {data.title}
           </h2>
           <p className="text-white text-sm md:text-base lg:text-[18px] max-w-[1029px] mx-auto leading-relaxed font-normal mb-4">
-            Pursuing a B.Tech. CSE programme is not just about earning a degree;
-            it is about building technical and professional skills with industry
-            exposure and practical experience, which are essential for the
-            highly competitive job market.
+            {data.description}
           </p>
           <div className="w-full h-[1px] bg-[linear-gradient(90deg,#FFFFFF05_0%,#5383BC_52.88%,#FFFFFF05_100%)]" />
-          <p className="text-white font-bold text-sm md:text-base lg:text-[18px] max-w-2xl mt-4 mx-auto leading-snug">
-            A comparison of key academic, industry, and career-focused
-            parameters that students consider while selecting a B.Tech CSE
-            programme.
+          <p className="text-white font-bold text-sm md:text-base lg:text-[18px] max-w-4xl mt-4 mx-auto leading-snug">
+            {data.comparisonTitle}
           </p>
         </div>
 
@@ -125,26 +126,26 @@ export const WhyKrmuCse = () => {
                     {/* Parameter Header */}
                     <th className=" text-left pl-2 bg-[linear-gradient(90deg,#E6F0F4_15%,#F4F4F4_100%)] text-[#001834] font-bold text-base md:text-[18px] ">
                       <div className="pl-3 py-3 bg-white h-[51px]">
-                        Parameter
+                        {data.parameterHeader}
                       </div>
                     </th>
 
                     {/* KRMU Highlighted Header */}
                     <th className="text-left py-3 px-5 text-[#E7C268] font-bold text-base md:text-[18px] bg-[#001732] rounded-t-[10px]">
-                      K.R. Mangalam University
+                      {data.krmuHeader}
                     </th>
 
                     {/* Typical University Header */}
                     <th className="text-left pr-2 bg-[linear-gradient(90deg,#E6F0F4_15%,#F4F4F4_100%)] text-[#001732] font-bold text-base md:text-[18px]">
                       <div className="pl-5 py-3 h-[51px] bg-white">
-                        Typical Private University in NCR
+                        {data.typicalHeader}
                       </div>
                     </th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  {comparisonData.map((row, index) => {
+                  {data.comparisonData.map((row, index) => {
                     // const isLastRow = index === comparisonData.length - 1;
                     const isEven = index % 2 === 0;
                     const rowBgClass = isEven ? "" : "bg-white";
@@ -190,20 +191,10 @@ export const WhyKrmuCse = () => {
             {/* Bottom Information Box */}
             <div className="p-6 md:px-13 md:py-8  bg-[linear-gradient(90deg,#F8FBFF_0%,#FFEDED_100%)]  text-center">
               <p className="text-[#000000] text-sm md:text-[16px] mb-4 ">
-                Located in Gurgaon, KRMU offers close proximity to corporate IT
-                and business hubs in Gurugram such as DLF Cyber City, DLF Cyber
-                Park, International Tech Park (Sec 59), Candor Tech Space and
-                Vatika Business Park. This accessibility provides students with
-                greater internship and networking opportunities and offers
-                smooth hiring pipelines with Google, Microsoft, IBM, and
-                hundreds of multinational tech companies.
+                {data.bottomDescription1}
               </p>
               <p className="text-[#000000] text-sm md:text-[16px] ">
-                Whether your goal is securing a placement with leading
-                technology companies, pursuing higher studies, contributing to
-                research, or building a startup, the B.Tech. programmes are
-                designed to help you develop the skills and experience required
-                to achieve it.
+                {data.bottomDescription2}
               </p>
             </div>
           </div>
