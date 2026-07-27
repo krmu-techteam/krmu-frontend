@@ -31,7 +31,7 @@ const INNOVATIONS = [
 
 const TeachingInnovationSection = () => {
   return (
-    <section className="relative py-8 md:py-12 xl:py-20 px-4">
+    <section className="relative py-8 md:py-12 xl:py-20">
       <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16 flex flex-col items-center">
         <h3 className="heading-primary text-center mb-4">
           Innovative Teaching and Curriculum Design

@@ -33,7 +33,7 @@ const NEP_FEATURES = [
 
 const NEP2020Section = () => {
   return (
-    <section className="relative py-8 md:py-12 xl:py-20 bg-transparent px-4">
+    <section className="relative py-8 md:py-12 xl:py-20 bg-transparent">
       <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16 flex flex-col items-center">
         <h3 className="heading-primary text-center mb-4">
           Aligning with National Education Policy (NEP – 2020)

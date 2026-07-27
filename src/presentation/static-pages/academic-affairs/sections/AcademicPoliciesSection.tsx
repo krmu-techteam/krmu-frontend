@@ -46,7 +46,7 @@ const AcademicPoliciesSection = () => {
         <h3 className="heading-primary text-center mb-4">
           Academic Policies and Procedures
         </h3>
-        <p className="text-center text-[16px] text-gray-300 font-poppins max-w-3xl mb-16">
+        <p className="text-center text-[16px] text-gray-300 font-poppins max-w-3xl mb-8 lg:mb-16">
           Our academic policies and procedures are crafted to uphold academic
           integrity and excellence, ensuring a fair and supportive environment.
         </p>
@@ -64,7 +64,7 @@ const AcademicPoliciesSection = () => {
           <div className="absolute top-0 bottom-0 left-1/2 w-[1px] bg-gradient-to-b from-transparent via-[#999999] to-transparent opacity-20 hidden md:block lg:hidden" />
 
           {POLICIES.map((policy, index) => (
-            <div key={index} className="flex flex-col p-8 md:p-10">
+            <div key={index} className="flex flex-col p-6 md:p-10">
               <div className="mb-6 w-[56px] h-[56px] relative">
                 <Image
                   src={policy.icon}
@@ -73,7 +73,7 @@ const AcademicPoliciesSection = () => {
                   className="object-contain"
                 />
               </div>
-              <h4 className="text-[24px] font-poppins font-medium text-white mb-4 leading-snug">
+              <h4 className="text-[18px] lg:text-[24px] font-poppins font-medium text-white mb-1 lg:mb-4 leading-snug">
                 {policy.title}
               </h4>
               <p className="text-[14px] text-white/90 leading-[1.7] font-poppins">

@@ -7,14 +7,14 @@ const NurturingSuccessSection = () => {
       <div className="max-w-[1530px] mx-auto w-full relative mt-12 md:mt-20 px-6 md:px-8 xl:px-16">
         {/* The Card Background and Overflow Hidden Layer */}
         <div
-          className="w-full min-h-[365px] rounded-[8px] relative overflow-hidden flex items-center"
+          className="w-full min-h-[365px] rounded-[8px] relative overflow-hidden flex items-start md:items-center"
           style={{
             background:
-              "linear-gradient(90deg, #000000 0%, rgba(84, 0, 0, 0.5) 100%)",
+              "linear-gradient(135deg, #000000 0%, rgba(84, 0, 0, 0.7) 100%)",
           }}
         >
           {/* Rainbow Image inside card to be clipped by border-radius */}
-          <div className="absolute right-[-10%] md:right-0 lg:right-[4%] bottom-[-15%] md:bottom-[-20%] w-[300px] md:w-[400px] lg:w-[450px] aspect-square pointer-events-none opacity-90 z-0">
+          <div className="absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-0 xl:right-[4%] bottom-[-15%] md:bottom-[-20%] w-[360px] md:w-[400px] xl:w-[450px] aspect-square pointer-events-none z-0">
             <Image
               src="/images/academic-affairs/academic-policies/rainbow.png"
               alt=""
@@ -24,8 +24,8 @@ const NurturingSuccessSection = () => {
           </div>
 
           {/* Left Text Content */}
-          <div className="w-full lg:w-2/3 p-8 md:p-12 xl:p-16 text-white z-10 font-poppins relative">
-            <h3 className="heading-primary !text-[40px] mb-6 !text-left">
+          <div className="w-full md:w-[55%] mb-10 lg:w-2/3 p-6 pb-[280px] md:p-8 xl:p-16 text-white z-10 font-poppins relative">
+            <h3 className="heading-primary !text-[26px] md:!text-[30px] lg:!text-[40px] mb-4 md:mb-6 !text-left">
               Nurturing Success Beyond the Classroom
             </h3>
             <p className="text-[15px] md:text-[16px] text-gray-300 mb-8 leading-[1.7] max-w-2xl">
@@ -58,7 +58,7 @@ const NurturingSuccessSection = () => {
         </div>
 
         {/* Girl Image overlapping at the top right, outside the overflow-hidden layer */}
-        <div className="absolute right-0 lg:right-[9.2%] bottom-0 w-[220px] md:w-[320px] lg:w-[380px] h-[130%] pointer-events-none z-20">
+        <div className="absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto right-19 lg:right-7 xl:right-[9.2%] bottom-0 w-[240px] md:w-[280px] lg:w-[380px] h-[300px] md:h-[115%] lg:h-[130%] pointer-events-none z-20">
           <Image
             src="/images/academic-affairs/academic-policies/girl.png"
             alt="Student"

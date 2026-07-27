@@ -20,13 +20,13 @@ const AcademicSupportSection = () => {
             }}
           />
           {/* Inner Content Area */}
-          <div className="w-full h-full bg-transparent flex flex-col md:flex-row items-center justify-between p-8 md:p-12 lg:p-16 gap-12 lg:gap-8 relative z-10">
+          <div className="w-full h-full bg-transparent flex flex-col md:flex-row items-center justify-between p-8 lg:p-12 xl:p-16 gap-6 lg:gap-8 relative z-10">
             {/* Left Content */}
             <div className="md:w-1/2 w-full flex flex-col justify-center">
-              <h3 className="heading-primary !text-[36px] !font-medium mb-4 !text-left">
+              <h3 className="heading-primary !text-[28px] lg:!text-[36px] !font-medium mb-4 !text-left">
                 We’re Here to Assist
               </h3>
-              <p className="text-[15px] md:text-[16px] text-gray-300 font-poppins max-w-sm">
+              <p className="text-[15px] lg:text-[16px] text-gray-300 font-poppins max-w-sm">
                 For more information or assistance, reach out to the Academic
                 Affairs office
               </p>
@@ -34,7 +34,7 @@ const AcademicSupportSection = () => {
 
             {/* Right Content */}
             <div className="md:w-1/2 w-full flex flex-col justify-center items-start lg:items-center">
-              <ul className="flex flex-col gap-6 text-[15px] md:text-[16px] text-gray-300 font-poppins">
+              <ul className="flex flex-col gap-6 text-[14px] lg:text-[16px] text-gray-300 font-poppins">
                 <li className="flex items-center gap-4">
                   <Mail
                     size={24}
