@@ -133,23 +133,27 @@ export type BeyondSlideType = {
 
 export const beyondSlides: BeyondSlideType[] = [
   {
-    img_url: "/demo/slide-1.png",
+    img_url: "/demo/1.png",
     alt: "Slide 1",
   },
   {
-    img_url: "/demo/slide-1.png",
+    img_url: "/demo/2.png",
     alt: "Slide 2",
   },
   {
-    img_url: "/demo/slide-1.png",
+    img_url: "/demo/3.png",
     alt: "Slide 3",
   },
   {
-    img_url: "/demo/slide-1.png",
+    img_url: "/demo/4.png",
     alt: "Slide 4",
   },
   {
-    img_url: "/demo/slide-1.png",
+    img_url: "/demo/5.png",
+    alt: "Slide 5",
+  },
+  {
+    img_url: "/demo/6.png",
     alt: "Slide 5",
   },
 ];
@@ -159,13 +163,25 @@ export const faqData = [
     category: "General",
     faqs: [
       {
-        question: "What are the admission office hours at KRMU?",
+        question: "Does K.R. Mangalam University offer Diploma courses?",
         answer:
-          "The admission office is open Monday to Saturday from 9:00 AM to 5:00 PM.",
+          "Yes, K.R. Mangalam University offers diploma courses to cater to diverse interests and career aspirations. We currently have a Diploma in Pharmacy programme structured to provide practical and theoretical knowledge.",
       },
       {
-        question: "Where is K.R. Mangalam University located?",
-        answer: "K.R. Mangalam University is located in Gurugram, Haryana.",
+        question: "What are the admission office hours at KRMU?",
+        answer: "The office is open from 9:00 AM to 4:00 PM",
+      },
+      {
+        question: "Where can I apply for UG, PG, Ph.D. or Diploma programmes?",
+        answer: "You can visit https://admissions.krmangalam.edu.in/ to apply for any of our programmes.",
+      },
+      {
+        question: "Are guest lectures or workshops part of the course?",
+        answer: "Yes, frequent expert sessions, industry talks, and technical workshops are organised.",
+      },
+      {
+        question: "Is there a hostel facility on campus?",
+        answer: "Yes, the university offers on-campus residential facilities with separate hostels for boys and girls, equipped with all essential amenities and round-the-clock security.",
       },
     ],
   },
@@ -173,29 +189,49 @@ export const faqData = [
     category: "Programme",
     faqs: [
       {
-        question: "Does KRMU offer diploma programmes?",
+        question: "What are the subjects in B.Tech. Robotics and AI?",
         answer:
-          "Yes, K.R. Mangalam University offers Diploma in Pharmacy and other programmes designed with industry-focused curriculum.",
+          "Core subjects include: Programming in Python, C++, Java, Design & Analysis of Algorithms, Engineering Physics/Chemistry, Design Thinking & Prototyping, Arithmetic & Reasoning, Modern Software Engineering, Robot Kinematics & Dynamics, System Design Embedded/Autonomous,",
       },
       {
-        question: "Are internships included in programmes?",
+        question: "Is coding mandatory in this programme?",
         answer:
-          "Yes, most programmes include internships, live projects and industry exposure.",
-      },
-    ],
-  },
-  {
-    category: "Admissions",
-    faqs: [
-      {
-        question: "How can I apply?",
-        answer:
-          "You can apply online through the university admission portal or visit the campus admission office.",
+          "Yes. Coding is a fundamental skill to be taught in Robotics and AI. The programmes consist of around 40% coding in Python, C++ & Java.",
       },
       {
-        question: "Is there an entrance exam?",
+        question: "What skills will I learn in this programme?",
         answer:
-          "Some programmes require entrance exams while others are merit-based.",
+          "You gain expertise in programming, AI algorithms, computer vision, systems engineering, automation engineering, etc, which positions you as a reliable asset in the robotics and AI space.",
+      },
+         {
+        question: "Is B.Tech. AI & Robotics difficult?",
+        answer:
+          "Moderately. B.Tech. CSE in Robotics and AI includes subjects such as Maths, Programming, and Engineering concepts, which makes it moderately difficult compared to general specialisations.",
+      },
+        {
+        question: "How is Robotics & AI different from B.Tech. AI/ML?",
+        answer:
+          "The robotics and AI programme focuses on hardware-software integration, control systems, kinematics (the geometry of motion), and sensor fusion (Lidar, Radar, Cameras). On the other hand, AI/ML focuses more on Pattern recognition, predictive modelling, large-scale data processing, and neural network architecture.",
+      },
+        {
+        question: "What robots and hardware will I work with during the programme?",
+        answer:
+          "During the programme, you will generally work with a range of robotic systems and related hardware components in a practical learning environment. The focus is on gaining hands-on experience with intelligent machines, embedded systems, control mechanisms, and integrated hardware–software setups.",
+      },
+        {
+        question: "Are internships included with this programme?",
+        answer:
+          "Yes, internships, externships and industry training are an integral part of programmes offered by KRMU.",
+      },
+        {
+        question: "What are the job opportunities after B.Tech. in Robotics & AI?",
+        answer:
+          "This programme opens doors for many career options in positions such as: Robotics Engineer, Computer Vision Engineer, AI Software Engineer, Embedded AI Developer, Control Systems Engineer, RPA/Automation Engineer and AI Research Scientist, etc.",
+      },
+        {
+        question: "Is robotics and AI a good career for the future?",
+        answer:
+          "Absolutely. Robotics and AI are in high demand due to the rise of automation, smart technologies like AI, and Industry 4.0, allowing students to build an impactful, high-paying career.",
       },
     ],
   },
@@ -203,13 +239,48 @@ export const faqData = [
     category: "Fees",
     faqs: [
       {
-        question: "Can I pay fees in installments?",
-        answer: "Yes, installment options are available for eligible students.",
+        question: "What is the fees of Ph.D. programmes at KRMU?",
+        answer:
+          "The fees for all Ph.D. programmes is ₹1,30,000 at K.R. Mangalam University.",
       },
       {
-        question: "Are scholarships available?",
+        question: "Does K.R. Mangalam University offer any scholarships?",
         answer:
-          "Yes, merit-based and category-based scholarships are available.",
+          "Yes, we offer up to 100% scholarships based on merit, quota, and academic performance to deserving students.",
+      },
+      {
+        question: "Can I take an education loan to finance my education fees?",
+        answer:
+          "Yes! We have partnered with several banks and financial institutions like IDFC Bank, Axis Bank, ICICI Bank, Propelled, and GrayQuest to offer great loan options to our students.",
+      },
+      {
+        question: "Is there an EMI or instalment payment option for the fees?",
+        answer:
+          "Many universities offer fee payment in instalments or partner with financial institutions for education loans.",
+      },
+    ],
+  },
+  {
+    category: "Admissions",
+    faqs: [
+      {
+        question: "Does K.R. Mangalam University have an entrance exam?",
+        answer: "The University has formed its own entrance exam K.R. Mangalam Entrance Exam (KREE).",
+      },
+      {
+        question: "What are the Admission Office hours?",
+        answer:
+          "The office is open from 9:00 AM to 4:00 PM.",
+      },
+      {
+        question: "What is the admission procedure at KRMU?",
+        answer:
+          "To apply at KRMU, you must visit our admission page, fill the registration form, appear for KREE (entrance test), and finally attend the faculty led interview to secure your admission.",
+      },
+      {
+        question: "What is the application fee for admission at K.R. Mangalam University?",
+        answer:
+          "An application fee of ₹1,000 must be submitted during the application process.",
       },
     ],
   },

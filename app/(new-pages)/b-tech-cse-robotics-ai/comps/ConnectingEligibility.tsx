@@ -9,7 +9,7 @@ const ConnectingEligibility = () => {
         <div className="w-full xl:w-2/5">
           <div className="flex flex-col sm:flex-row gap-4">
             {/* Duration */}
-            <div className="flex-1 bg-white rounded-[10px] p-5 lg:p-7 flex items-center gap-4">
+            <div className="bg-white rounded-[10px] p-5 lg:p-7 flex items-center gap-4">
               <Calendar className="shrink-0" />
 
               <div className="text-sm">
@@ -19,7 +19,7 @@ const ConnectingEligibility = () => {
             </div>
 
             {/* Fee */}
-            <div className="flex-[1.4] bg-white rounded-[10px] p-5 lg:p-7 flex items-center gap-4">
+            <div className="bg-white rounded-[10px] p-5 lg:p-7 flex items-center gap-4">
               <IndianRupee className="shrink-0" />
 
               <div className="text-sm">

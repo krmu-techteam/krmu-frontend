@@ -38,7 +38,7 @@ const ExploreOtherProgramme = () => {
               B.Tech. CSE (UX/UI)with Academic Support of ImaginXP
             </div>
           </div>
-          <Link href="#" className="underline inline-block mt-2 sm:mt-4">
+          <Link href="/programmes?school=soet" target="_blank" className="underline inline-block mt-2 sm:mt-4">
             Explore More
           </Link>
         </div>

@@ -1,3 +1,5 @@
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+
 const steps = [
   {
     step: "Step 1",
@@ -82,9 +84,15 @@ const AdmissionProcess = () => {
         </div>
 
         <div className="text-center">
-          <button className="bg-[#DE0000] hover:bg-[#c70000] transition-colors rounded-[5px] px-6 py-3 text-sm md:text-base uppercase font-semibold">
+          {/* <button className="">
             Enroll Now
-          </button>
+          </button> */}
+          <NpfPopup
+                formId={`31c1452015d32698095f833b3e7eb9c5`}
+                btnClass={`bg-[#DE0000] hover:bg-[#c70000] transition-colors rounded-[5px] px-6 py-3 text-sm md:text-base uppercase font-semibold inline-block npfWidget-31c1452015d32698095f833b3e7eb9c5`}
+                btnText="Apply Now"
+                showIcon={false}
+              />
         </div>
       </div>
     </section>

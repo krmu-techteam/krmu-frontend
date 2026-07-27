@@ -1,4 +1,7 @@
 import Image from "next/image";
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
+
 
 const LookingToSecure = () => {
   return (
@@ -38,13 +41,25 @@ const LookingToSecure = () => {
           </span>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
-            <button className="rounded-md bg-[#DE0000] px-6 py-3 text-sm font-semibold uppercase text-white transition hover:bg-red-700">
+            {/* <button className="">
               Apply Today
             </button>
 
-            <button className="rounded-md bg-white px-6 py-3 text-sm font-semibold uppercase text-[#012959] transition hover:bg-gray-100">
+            <button className="">
               Download Brochure
-            </button>
+            </button> */}
+             <NpfPopup
+                formId={`31c1452015d32698095f833b3e7eb9c5`}
+                btnClass={`rounded-md bg-[#DE0000] px-6 py-3 text-sm font-semibold uppercase text-white transition hover:bg-red-700 npfWidget-31c1452015d32698095f833b3e7eb9c5`}
+                btnText="Apply Now"
+                showIcon={false}
+              />
+                 <CommonLeadPopup
+                      buttonText='Download Prospectus'
+                      buttonClassName="rounded-md bg-white px-6 py-3 text-sm font-semibold uppercase text-[#012959] transition hover:bg-gray-100"
+                      redirectUrl="https://www.krmangalam.edu.in/pdfs/programme-brochure/btech-cse-new.pdf"
+                      form_name="Download Prospectus"
+                    />
           </div>
 
           <div className="mt-8">
