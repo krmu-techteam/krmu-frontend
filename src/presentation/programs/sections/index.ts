@@ -1,7 +1,10 @@
 export { default as HeroSection } from "./HeroSection";
 export { default as EligibilitySection } from "./EligibilitySection";
+export { default as ProgrammeOverviewSection } from "./ProgrammeOverviewSection";
 export { default as ProgrammeScopeSection } from "./ProgrammeScopeSection";
+export { default as NewProgrammeScopeSection } from "./NewProgrammeScopeSection";
 export { default as ProgrammeHighlightSection } from "./ProgrammeHighlightSection";
+export { default as WhyKRMUSection } from "./WhyKRMUSection";
 export { default as SpecialisationSection } from "./SpecialisationSection";
 export { default as AdmissionProcessSection } from "./AdmissionProcessSection";
 export { default as LabsFacilitieSection } from "./LabsFacilitieSection";
@@ -9,3 +12,5 @@ export { default as BeyondClassroomSection } from "./BeyondClassroomSection";
 export { default as FinancialAssistanceSection } from "./FinancialAssistanceSection";
 export { default as ScholarshipBannerSection } from "./ScholarshipBannerSection";
 export { default as FrequentlyAskedQuestionsSection } from "./FrequentlyAskedQuestionsSection";
+export { default as ResearchAndInnovationSection } from "./ResearchAndInnovationSection";
+export { default as BreakDownSection } from "./BreakDownSection";

@@ -12,9 +12,9 @@ type Props = {
 
 export const AdvisoryCard = ({ name, imgUrl, qual, desg }: Props) => {
   return (
-    <div className="overflow-hidden rounded-t-xl bg-[#061623]/50 transition-all duration-300 ease-in-out group flex flex-col font-poppins">
+    <div className="overflow-hidden bg-[#061623]/50 transition-all duration-300 ease-in-out group flex flex-col font-poppins w-full h-full">
       {/* IMAGE SECTION */}
-      <div className="bg-transparent  relative  w-full overflow-hidden flex items-end justify-center">
+      <div className="bg-transparent relative w-full overflow-hidden flex items-end justify-center">
         <div className="absolute inset-0 flex items-center justify-center p-6">
           <Image
             src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/KRMU_Logo_white_3_33a6547c3f.png"
@@ -30,7 +30,7 @@ export const AdvisoryCard = ({ name, imgUrl, qual, desg }: Props) => {
           width={272}
           height={295}
           alt={name}
-          className="h-[120px] sm:w-full sm:h-full rounded-t-[15px] relative z-10 object-contain group-hover:scale-103  duration-500 ease"
+          className="h-[120px] sm:w-full sm:h-full relative z-10 object-contain group-hover:scale-[1.03] duration-500 ease"
         />
       </div>
       {/* DETAILS */}
@@ -47,7 +47,7 @@ export const AdvisoryCard = ({ name, imgUrl, qual, desg }: Props) => {
         />
 
         <h6
-          className="text-[10px] sm:text-xs font-bold text-white tracking-wide"
+          className="text-[13px] font-semibold text-white tracking-wide"
           dangerouslySetInnerHTML={{
             __html: qual,
           }}

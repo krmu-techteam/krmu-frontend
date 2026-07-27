@@ -4,7 +4,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ProgrammeHighlightCard } from "../components";
-import SectionDivider from "@/components/common/SectionDivider";
 import { ProgrammeHighlightSectionProps } from "@/features/programs";
 
 const ProgrammeHighlight = ({
@@ -15,7 +14,7 @@ const ProgrammeHighlight = ({
 }: ProgrammeHighlightSectionProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
-      align: "start", 
+      align: "start",
       loop: true,
       slidesToScroll: 1,
       breakpoints: {
@@ -50,8 +49,8 @@ const ProgrammeHighlight = ({
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative z-10 py-8 md:p-6 lg:p-10 xl:py-20">
-      <div className="max-w-[1440px] mx-auto w-full px-4 md:px-0 lg:px-4 2xl:px-0">
+    <section className="relative z-10 py-8 md:py-12 xl:py-20">
+      <div className="max-w-[1530px] w-full mx-auto px-6 md:px-8 xl:px-16">
         <div className="text-center mb-2 md:mb-6">
           <h2 className="heading-primary mb-2 md:mb-3">
             {heading} {highlightHeading}
@@ -63,19 +62,19 @@ const ProgrammeHighlight = ({
 
         <div className="relative group/slider">
           {/* Slider Controls */}
-          <div className="absolute top-1/2 -left-3 md:-left-4 lg:-left-0 -translate-y-1/2 z-10">
+          <div className="absolute top-1/2 -left-3 md:-left-4 lg:left-[-45px] -translate-y-1/2 z-10">
             <button
               onClick={scrollPrev}
-              className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#061623] hover:bg-[#061623] hover:text-white transition-all duration-300 border border-gray-100/20 cursor-pointer hover:scale-110 active:scale-95"
+              className="w-10 h-10 rounded-[4px] bg-[#0161B0] flex items-center justify-center text-white hover:bg-[#0161B0]/90 hover:text-white transition-all duration-300 cursor-pointer"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
           </div>
-          <div className="absolute top-1/2 -right-3 md:-right-4 -translate-y-1/2 z-10">
+          <div className="absolute top-1/2 -right-3 md:-right-[45px] -translate-y-1/2 z-10">
             <button
               onClick={scrollNext}
-              className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[#061623] hover:bg-[#061623] hover:text-white transition-all duration-300 border border-gray-100/20 cursor-pointer hover:scale-110 active:scale-95"
+              className="w-10 h-10 rounded-[4px] bg-[#0161B0] flex items-center justify-center text-white hover:bg-[#0161B0]/90 hover:text-white transition-all duration-300 cursor-pointer"
               aria-label="Next slide"
             >
               <ChevronRight className="w-6 h-6" />
@@ -104,7 +103,6 @@ const ProgrammeHighlight = ({
           {/* Mobile Dots or Navigation could go here if needed */}{" "}
         </div>
       </div>
-      <SectionDivider />
     </section>
   );
 };

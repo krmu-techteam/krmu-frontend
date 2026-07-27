@@ -1,27 +1,17 @@
 import { getProgramsService, IProgramsService } from "@/features/programs";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
-import BeyondClassroom from "../../school-programmes-component/BeyondClassroom";
 import CareerProspects from "../../school-programmes-component/CareerProspects";
 import Curriculum from "../../school-programmes-component/Curriculum";
 import DreamCareer from "../../school-programmes-component/DreamCareer";
-import FinancialAssistance from "../../school-programmes-component/FinancialAssistance";
-import LabsFacilities from "../../school-programmes-component/LabsFacilities";
 import OurLocation from "../../school-programmes-component/OurLocation";
-import ProgrammeHighlight from "../../school-programmes-component/ProgrammeHighlight";
-import ProgrammeScope from "../../school-programmes-component/ProgrammeScope";
-import Specialisation from "../../school-programmes-component/Specialisation";
-import TableOfContent from "../../school-programmes-component/TableOfContent";
 import ExplorePrograms from "../../school-programmes-component/ExploreBTechPrograms";
 import { notFound } from "next/navigation";
-import ScholarshipBanner from "../../school-programmes-component/ScholarshipBanner";
-import AdmissionProcessComp from "../../school-programmes-component/AdmissionProcessComp";
 
 import PHDProgrammes from "../PHDProgramme";
 import {
   createBreadcrumbProgSchema,
   createCourseSchema,
   createProgFaqSchema,
-
 } from "@/lib/api/common";
 import { Metadata } from "next";
 import Script from "next/script";
@@ -37,15 +27,32 @@ import SpecialisationsSection from "../prog-comp/SpecialisationsSection";
 import { BSCHonsForensicSciencetestimonialsData } from "../progdata/sbas";
 import { BSCHonsPhyscologytestimonialsData } from "../progdata/sola";
 
-
 // ====== BSC-FINANCE-2026 LANDING PAGE IMPORTS ======
 import BscFinance2026Page from "@/app/(landing-page)/admission/bsc-finance-2026/page";
 import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
 import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
 import { heroConfigs } from "@/components/school-programmes/programs/data/programs";
 import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
-import { AdmissionProcessSection, BeyondClassroomSection, EligibilitySection, FinancialAssistanceSection, FrequentlyAskedQuestionsSection, HeroSection, LabsFacilitieSection, ProgrammeScopeSection, ScholarshipBannerSection } from "@/presentation/programs/sections";
-import { ProgrammeHighlightSection, SpecialisationSection } from "@/presentation/programs";;
+import {
+  AdmissionProcessSection,
+  BeyondClassroomSection,
+  BreakDownSection,
+  EligibilitySection,
+  FinancialAssistanceSection,
+  FrequentlyAskedQuestionsSection,
+  HeroSection,
+  LabsFacilitieSection,
+  NewProgrammeScopeSection,
+  ProgrammeOverviewSection,
+  ProgrammeScopeSection,
+  ResearchAndInnovationSection,
+  ScholarshipBannerSection,
+  WhyKRMUSection,
+} from "@/presentation/programs/sections";
+import {
+  ProgrammeHighlightSection,
+  SpecialisationSection,
+} from "@/presentation/programs";
 
 // import ProgTestimonials, {
 //   TestimonialsSection,
@@ -140,10 +147,10 @@ const page = async ({ params }: Props) => {
     : [];
 
   // const singleSchoolProgramme = allSchoolProgrammeData.find(
-    // (programme) => programme.programmeslug === slug,
+  // (programme) => programme.programmeslug === slug,
   // );
   // const singlePHDProgramme = allSinglePHDProgramme?.find(
-    // (phdprogram) => phdprogram?.phdslug === slug,
+  // (phdprogram) => phdprogram?.phdslug === slug,
   // );
 
   // If not found, redirect to 404 page
@@ -250,6 +257,17 @@ const page = async ({ params }: Props) => {
     ],
   });
 
+  const isNewSectionSlug =
+    slug === "bsc-hons-agriculture" ||
+    slug === "b-tech-cse" ||
+    slug === "bachelor-of-education-b-ed" ||
+    slug === "bhmct-hotel-management" ||
+    slug === "bjmc-hons-research" ||
+    slug === "bjmc" ||
+    slug === "bachelor-of-design-b-des-fashion-design" ||
+    slug === "barch-architecture" ||
+    slug === "bfa-fine-arts";
+
   return (
     <>
       <Script
@@ -305,14 +323,35 @@ const page = async ({ params }: Props) => {
           />
         )}
 
-        {programmeScopeSection && (
+        {}
+
+        {/* {programmeScopeSection && (
           <ProgrammeScopeSection
             scopeData={programmeScopeSection}
             heroSection={heroSection}
             allowedFormSlugs={allowedFormSlugs}
             slug={slug}
           />
-        )}
+        )} */}
+        {programmeScopeSection &&
+          (isNewSectionSlug ? (
+            <>
+              <ProgrammeOverviewSection />
+              <NewProgrammeScopeSection
+                scopeData={programmeScopeSection}
+                heroSection={heroSection}
+                allowedFormSlugs={allowedFormSlugs}
+                slug={slug}
+              />
+            </>
+          ) : (
+            <ProgrammeScopeSection
+              scopeData={programmeScopeSection}
+              heroSection={heroSection}
+              allowedFormSlugs={allowedFormSlugs}
+              slug={slug}
+            />
+          ))}
         {programmeHighlightSection && (
           <ProgrammeHighlightSection
             heading={programmeHighlightSection?.heading}
@@ -322,6 +361,7 @@ const page = async ({ params }: Props) => {
             slug={slug}
           />
         )}
+        {slug === "b-tech-cse" && <WhyKRMUSection />}
 
         {slug === "mba" && <SpecialisationsSection />}
         {specialisationSection && (
@@ -366,7 +406,7 @@ const page = async ({ params }: Props) => {
             slug={slug}
           />
         )}
-
+        {slug === "b-tech-cse" && <ResearchAndInnovationSection />}
         {beyondclassSection && (
           <BeyondClassroomSection
             heading={beyondclassSection?.heading}
@@ -387,6 +427,7 @@ const page = async ({ params }: Props) => {
             // careerFormId={careerProspectsSection?.careerFormId}
           />
         )}
+        {slug === "b-tech-cse" && <BreakDownSection />}
 
         {financialAssistanceSection && (
           <FinancialAssistanceSection

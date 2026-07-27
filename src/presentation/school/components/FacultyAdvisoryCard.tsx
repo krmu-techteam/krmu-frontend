@@ -96,73 +96,18 @@ export const FacultyAdvisoryCard = ({
   const isLoading = facultyContent === null;
 
   return (
-    <div className="overflow-hidden rounded-t-xl bg-[#061623]/50 transition-all duration-300 ease-in-out  group flex flex-col font-poppins">
+    <div className="overflow-hidden bg-[#061623] transition-all duration-300 ease-in-out group flex flex-col font-poppins h-full w-full">
       {/* IMAGE SECTION */}
-      <Link
-        href={`/faculty/${slug}`}
-        className="relative flex h-[240px] sm:h-[280px] w-full items-end justify-center overflow-hidden bg-transparent"
-      >
-        {/* BG LOGO */}
-        <div className="absolute inset-0 flex items-center justify-center p-6">
-          <Image
-            src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/KRMU_Logo_white_3_33a6547c3f.png"
-            width={290}
-            height={299}
-            alt="KRMU Logo"
-            className="object-contain opacity-95"
-          />
-        </div>
-
-        {/* FACULTY IMAGE */}
-        <Image
-          src={imgURL}
-          width={272}
-          height={295}
-          alt={name}
-          priority={false}
-          className="relative z-10 h-[240px] -mb-2 sm:h-full sm:w-full rounded-t-[15px] object-contain transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-          
-        />
-      </Link>
-
-      {/* CONTENT */}
-      <div className="flex flex-col flex-1 bg-[#061623]">
-        {/* DETAILS */}
-        <div className="min-h-[105px] border-b border-[#ddd] p-1.5 sm:p-5 flex-1">
-          <Link
-            href={`/faculty/${slug}`}
-            target="_blank"
-            className="inline-block text-white font-bold leading-snug text-base"
-          >
-            {name}
-          </Link>
-
-          <h5
-            className="py-1 uppercase text-white text-xs"
-            dangerouslySetInnerHTML={{
-              __html: desg,
-            }}
-          />
-
-          <h6
-            className="font-bold text-white text-xs"
-            dangerouslySetInnerHTML={{
-              __html: qual,
-            }}
-          />
-        </div>
-
-        {/* SOCIAL ICONS */}
-        <div className="flex h-16 items-center justify-center mt-auto">
+      <div className="relative flex h-[240px] sm:h-[280px] w-full items-end justify-center overflow-hidden bg-[#ffffff]">
+        {/* SOCIAL ICONS (Floating Top Right) */}
+        <div className="absolute top-3 right-3 z-30">
           {isLoading ? (
-            // LOADING
-            <div className="flex items-center gap-3">
-              <Skeleton className="h-9 w-9 rounded-md" />
-              <Skeleton className="h-9 w-9 rounded-md" />
+            <div className="flex items-center gap-2">
+              <Skeleton className="h-7 w-7 rounded bg-gray-300" />
+              <Skeleton className="h-7 w-7 rounded bg-gray-300" />
             </div>
           ) : socialItems.length > 0 ? (
-            // ICONS
-            <ul className="flex h-14 items-center justify-center gap-3 px-4 sm:h-16 sm:py-2">
+            <ul className="flex items-center gap-1.5">
               {socialItems.map((item, index) => {
                 const isLinkedin = item.type === "linkedin";
 
@@ -172,31 +117,68 @@ export const FacultyAdvisoryCard = ({
                       href={isLinkedin ? item.value : `mailto:${item.value}`}
                       target={isLinkedin ? "_blank" : undefined}
                       rel={isLinkedin ? "noopener noreferrer" : undefined}
-                      className={`flex items-center justify-center rounded-md p-1.5 transition-opacity hover:opacity-90 ${
-                        isLinkedin ? "bg-[#0077b5]" : "bg-white/30"
+                      className={`flex items-center justify-center rounded p-1.5 transition-opacity hover:opacity-90 ${
+                        isLinkedin ? "bg-[#0077b5]" : "bg-[#001732]"
                       }`}
                     >
                       {isLinkedin ? (
                         <Image
                           src="/linkedin.svg"
-                          width={20}
-                          height={20}
+                          width={14}
+                          height={14}
                           alt="LinkedIn"
-                          className="h-5 w-5"
+                          className="h-4 w-4"
                         />
                       ) : (
-                        <Mail size={20} color="#fff" />
+                        <Mail size={16} color="#fff" strokeWidth={2} />
                       )}
                     </Link>
                   </li>
                 );
               })}
             </ul>
-          ) : (
-            // EMPTY SPACE
-            <div className="h-9" />
-          )}
+          ) : null}
         </div>
+
+        {/* FACULTY IMAGE */}
+        <Link
+          href={`/faculty/${slug}`}
+          className="w-full h-full flex items-end justify-center"
+        >
+          <Image
+            src={imgURL}
+            width={272}
+            height={295}
+            alt={name}
+            priority={false}
+            className="relative z-10 h-full w-full object-contain object-bottom transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+          />
+        </Link>
+      </div>
+
+      {/* CONTENT */}
+      <div className="flex flex-col flex-1 p-5 bg-[#061623]">
+        <Link
+          href={`/faculty/${slug}`}
+          target="_blank"
+          className="inline-block text-white font-bold leading-snug text-[16px] sm:text-[18px] mb-1.5"
+        >
+          {name}
+        </Link>
+
+        <h5
+          className="uppercase text-[#09b] text-[12px] sm:text-[13px] font-medium leading-relaxed mb-1.5"
+          dangerouslySetInnerHTML={{
+            __html: desg,
+          }}
+        />
+
+        <h6
+          className="font-semibold text-white text-[14px] sm:text-[13px] leading-snug"
+          dangerouslySetInnerHTML={{
+            __html: qual,
+          }}
+        />
       </div>
     </div>
   );

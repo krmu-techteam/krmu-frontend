@@ -11,9 +11,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
-import SectionDivider from "@/components/common/SectionDivider";
 import { getTruncatedText } from "@/features/programs";
 import { EligibilityCard, EligibilityVideoLayout } from "../components";
+import SectionDivider from "@/components/common/SectionDivider";
 
 type Props = {
   elgibilities: EligibilityItem[];
@@ -38,7 +38,11 @@ const EligibilitySection = ({
 }: Props) => {
   const [expanded, setExpanded] = useState(false);
 
-  const { isLong, displayTitle } = getTruncatedText(elgibilities[2]?.title || "", expanded, 50);
+  const { isLong, displayTitle } = getTruncatedText(
+    elgibilities[2]?.title || "",
+    expanded,
+    50,
+  );
 
   const handleApplyClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -54,12 +58,23 @@ const EligibilitySection = ({
 
   const isFormAvailable = allowedFormSlugs.includes(slug);
 
+  const isNewSectionSlug =
+    slug === "bsc-hons-agriculture" ||
+    slug === "b-tech-cse" ||
+    slug === "bachelor-of-education-b-ed" ||
+    slug === "bhmct-hotel-management" ||
+    slug === "bjmc-hons-research" ||
+    slug === "bjmc" ||
+    slug === "bachelor-of-design-b-des-fashion-design" ||
+    slug === "barch-architecture" ||
+    slug === "bfa-fine-arts";
+
   return (
     <>
       <section
-        className={`pb-8 md:pb-6 pt-0 lg:pb-10 xl:pb-20 px-4 lg:px-16 2xl:px-0 relative z-10 border-gray-100`}
+        className={`pb-8 md:pb-6 pt-0 lg:pb-10 xl:pb-20  relative z-10 border-gray-100`}
       >
-        <div className={`max-w-[1440px] w-full mx-auto`}>
+        <div className={`max-w-[1530px] w-full mx-auto px-6 md:px-8 xl:px-16`}>
           {heroSection?.imgvideo === "Video" ? (
             <EligibilityVideoLayout
               elgibilities={elgibilities}

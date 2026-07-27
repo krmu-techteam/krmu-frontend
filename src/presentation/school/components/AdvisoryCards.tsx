@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { AdvisoryCard } from "./AdvisoryCard";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -59,94 +59,66 @@ const AdvisoryCards = ({ schoolCat }: Props) => {
       faculty.faculty_type?.toLowerCase() === "both",
   );
 
-  const handleLoadMore = () => {
+  const observerTarget = useRef<HTMLDivElement>(null);
+
+  const handleLoadMore = useCallback(() => {
+    if (loadingMore || visibleCount >= advisoryFaculties.length) return;
     setLoadingMore(true);
     setTimeout(() => {
-      setVisibleCount((prev) => Math.min(prev + itemsPerLoad, advisoryFaculties.length));
+      setVisibleCount((prev) =>
+        Math.min(prev + itemsPerLoad, advisoryFaculties.length),
+      );
       setLoadingMore(false);
-    }, 800); // simulate skeleton loading for 800ms
-  };
+    }, 400); // short simulated loading
+  }, [loadingMore, visibleCount, advisoryFaculties.length, itemsPerLoad]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          handleLoadMore();
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    if (observerTarget.current) {
+      observer.observe(observerTarget.current);
+    }
+
+    return () => observer.disconnect();
+  }, [handleLoadMore]);
 
   const visibleFaculties = advisoryFaculties.slice(0, visibleCount);
 
-  // Initial loading state or empty state with skeletons
-  if (loading && faculties.length === 0) {
-    return (
-      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5">
-        {Array.from({ length: itemsPerLoad }).map((_, idx) => (
-          <div
-            key={idx}
-            className="overflow-hidden rounded-t-xl bg-white/5 border border-white/10 flex flex-col w-full font-poppins"
-          >
-            {/* IMAGE SECTION */}
-            <div className="relative h-[120px] sm:h-[295px] w-full bg-white/10 flex items-center justify-center">
-              <Skeleton className="w-12 h-12 rounded-full bg-white/5" />
-            </div>
-            {/* DETAILS */}
-            <div className="p-1.5 sm:p-5 space-y-2.5">
-              <Skeleton className="h-4 sm:h-5 w-3/4 bg-white/15" />
-              <Skeleton className="h-3 sm:h-4 w-1/2 bg-white/10" />
-              <Skeleton className="h-3 sm:h-4 w-2/3 bg-white/10" />
-            </div>
-          </div>
-        ))}
-      </div>
-    );
-  }
-
   return (
-    <div className="font-poppins">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5">
+    <div className="font-poppins mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8">
         {visibleFaculties.length > 0 ? (
           visibleFaculties.map((faculty) => (
-            <AdvisoryCard
+            <div
               key={faculty?.id}
-              name={faculty?.faculty_name}
-              imgUrl={faculty?.faculty_img?.url}
-              qual={faculty?.faculty_qualification}
-              desg={faculty?.faculty_card_desg}
-              slug={faculty?.facultyslug}
-            />
+              className="w-full flex justify-center h-full"
+            >
+              <AdvisoryCard
+                name={faculty?.faculty_name}
+                imgUrl={faculty?.faculty_img?.url}
+                qual={faculty?.faculty_qualification}
+                desg={faculty?.faculty_card_desg}
+                slug={faculty?.facultyslug}
+              />
+            </div>
           ))
-        ) : (
+        ) : !loading ? (
           <div className="col-span-full text-center text-gray-500 py-10">
             No advisory members found.
           </div>
-        )}
+        ) : null}
       </div>
 
-      {/* Skeletons showing when loadingMore is true */}
-      {loadingMore && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5 w-full px-4 md:px-0 mt-5">
-          {Array.from({ length: Math.min(itemsPerLoad, advisoryFaculties.length - visibleCount) }).map((_, idx) => (
-            <div
-              key={idx}
-              className="overflow-hidden rounded-t-xl bg-white/5 border border-white/10 flex flex-col w-full font-poppins"
-            >
-              {/* IMAGE SECTION */}
-              <div className="relative h-[120px] sm:h-[295px] w-full bg-white/10 flex items-center justify-center">
-                <Skeleton className="w-12 h-12 rounded-full bg-white/5" />
-              </div>
-              {/* DETAILS */}
-              <div className="p-1.5 sm:p-5 space-y-2.5">
-                <Skeleton className="h-4 sm:h-5 w-3/4 bg-white/15" />
-                <Skeleton className="h-3 sm:h-4 w-1/2 bg-white/10" />
-                <Skeleton className="h-3 sm:h-4 w-2/3 bg-white/10" />
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
+      {/* Scroll Trigger Target */}
       {!loadingMore && visibleCount < advisoryFaculties.length && (
-        <div className="pt-10 flex justify-center">
-          <button
-            onClick={handleLoadMore}
-            className="text-white font-medium cursor-pointer transition-all hover:underline text-lg bg-transparent border-none outline-none"
-          >
-            Show More
-          </button>
-        </div>
+        <div ref={observerTarget} className="h-10 w-full" />
       )}
     </div>
   );

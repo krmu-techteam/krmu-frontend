@@ -30,7 +30,7 @@ const Specialisation = ({
   // Staging / Testing Image Overrides to avoid hitting live Strapi for test data
   const getSpecialisationImage = (title: string, currentUrl: string) => {
     const lowerTitle = title.toLowerCase();
-    
+
     if (lowerTitle.includes("robotics")) {
       return "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_computer_science_and_engineering_robotics_and_ai_b9b24da4a4.jpeg";
     }
@@ -50,17 +50,19 @@ const Specialisation = ({
       return "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_computer_science_and_engineering_ux_ui_00fecef876.jpeg";
     }
 
-    return currentUrl ? `${STRAPI_URL}${currentUrl}` : "/programmes/specialisation.webp";
+    return currentUrl
+      ? `${STRAPI_URL}${currentUrl}`
+      : "/programmes/specialisation.webp";
   };
 
   const isSlider = specialisations && specialisations.length > 4;
 
   return (
-    <section className="relative z-10 prog-global-padding py-8 md:p-6 lg:px-10 lg:py-10 xl:py-16 px-4 xl:px-16 2xl:px-0">
-      <div className="max-w-[1440px] mx-auto w-full">
+    <section className="relative z-10 py-8 md:py-12 xl:py-20">
+      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
         <div className="common-prog-container mb-2 md:mb-6">
           <h2 className="heading-primary mb-2 md:mb-3">
-            {heading} {highlightheading} 
+            {heading} {highlightheading}
           </h2>
         </div>
 
@@ -72,7 +74,7 @@ const Specialisation = ({
                 {specialisations.map((specialisation) => {
                   const displayImage = getSpecialisationImage(
                     specialisation?.title || "",
-                    specialisation?.specialisationimg?.url || ""
+                    specialisation?.specialisationimg?.url || "",
                   );
 
                   return (
@@ -90,7 +92,7 @@ const Specialisation = ({
                           unoptimized
                         />
                       </div>
-                      
+
                       {/* Title */}
                       <div className="px-2 pt-4 w-full">
                         <a
@@ -128,7 +130,7 @@ const Specialisation = ({
                   {specialisations.map((specialisation, i) => {
                     const displayImage = getSpecialisationImage(
                       specialisation?.title || "",
-                      specialisation?.specialisationimg?.url || ""
+                      specialisation?.specialisationimg?.url || "",
                     );
 
                     return (
@@ -136,9 +138,7 @@ const Specialisation = ({
                         key={specialisation?.id || i}
                         className="pl-4 sm:pl-4 lg:pl-6 xl:pl-6 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 flex"
                       >
-                        <div
-                          className="relative flex flex-col group h-full w-full cursor-pointer"
-                        >
+                        <div className="relative flex flex-col group h-full w-full cursor-pointer">
                           {/* Image Container */}
                           <div className="relative w-full aspect-[12/10] rounded-md overflow-hidden bg-white/5">
                             <Image
@@ -149,7 +149,7 @@ const Specialisation = ({
                               unoptimized
                             />
                           </div>
-                          
+
                           {/* Title */}
                           <div className="px-2 pt-4 w-full">
                             <a
@@ -172,14 +172,14 @@ const Specialisation = ({
                 {/* Left/Right Navigation Arrows */}
                 <button
                   onClick={() => api?.scrollPrev()}
-                  className="absolute left-2 md:-left-6 top-1/2 -translate-y-1/2 z-20 bg-white shadow-lg flex items-center justify-center text-[#061623] hover:bg-[#061623] hover:text-white transition-all duration-300 border border-gray-100/20 cursor-pointer hover:scale-110 active:scale-95 rounded-full w-12 h-12"
+                  className="absolute left-2 md:-left-13 top-1/2 -translate-y-1/2 z-20 bg-[#0161B0] hobver:bg-[#0161B0]/80 flex items-center justify-center text-white transition-all duration-300 cursor-pointer rounded-[4px] w-10 h-10"
                   aria-label="Previous slide"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button
                   onClick={() => api?.scrollNext()}
-                  className="absolute right-2 md:-right-6 top-1/2 -translate-y-1/2 z-20 bg-white shadow-lg flex items-center justify-center text-[#061623] hover:bg-[#061623] hover:text-white transition-all duration-300 border border-gray-100/20 cursor-pointer hover:scale-110 active:scale-95 rounded-full w-12 h-12"
+                  className="absolute right-2 md:-right-13 top-1/2 -translate-y-1/2 z-20 bg-[#0161B0] hobver:bg-[#0161B0]/80 flex items-center justify-center text-white transition-all duration-300 cursor-pointer rounded-[4px] w-10 h-10"
                   aria-label="Next slide"
                 >
                   <ChevronRight className="w-6 h-6" />

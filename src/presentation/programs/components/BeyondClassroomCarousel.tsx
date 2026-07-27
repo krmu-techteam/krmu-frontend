@@ -3,7 +3,11 @@ import React, { useState, useEffect, useRef } from "react";
 import { StrapiMedia } from "@/lib/types/common";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { getTranslateXMultiplier, getCircularOffset, calculate3DCardStyles } from "@/features/programs";
+import {
+  getTranslateXMultiplier,
+  getCircularOffset,
+  calculate3DCardStyles,
+} from "@/features/programs";
 
 type Props = {
   slideimages: StrapiMedia[];
@@ -23,7 +27,7 @@ const BeyondClassroomCarousel = ({ slideimages }: Props) => {
     const handleResize = () => {
       setTranslateXMultiplier(getTranslateXMultiplier(window.innerWidth));
     };
-    
+
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -77,7 +81,7 @@ const BeyondClassroomCarousel = ({ slideimages }: Props) => {
   return (
     <section className="pt-6 overflow-hidden flex flex-col items-center select-none w-full max-w-[1530px] mx-auto px-4 md:px-6 lg:px-10 xl:px-16">
       {/* 3D Coverflow Viewport Container */}
-      <div 
+      <div
         className="relative w-full h-[220px] sm:h-[320px] md:h-[360px] lg:h-[400px] flex items-center justify-center [transform-style:preserve-3d] [perspective:1200px]"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
@@ -96,7 +100,7 @@ const BeyondClassroomCarousel = ({ slideimages }: Props) => {
                 setActiveIndex(i);
                 resetAutoplay();
               }}
-              className={`absolute w-[280px] sm:w-[440px] md:w-[500px] lg:w-[560px] h-[160px] sm:h-[260px] md:h-[300px] lg:h-[340px] rounded-3xl overflow-hidden shadow-2xl border border-white/10 hover:border-[#0055A4]/40 transition-[transform,opacity,border-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] [backface-visibility:hidden] [transform-style:preserve-3d] will-change-[transform,opacity] cursor-pointer group`}
+              className={`absolute w-[280px] sm:w-[440px] md:w-[500px] lg:w-[560px] h-[160px] sm:h-[260px] md:h-[300px] lg:h-[340px] rounded-[12px] overflow-hidden transition-[transform,opacity,border-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] [backface-visibility:hidden] [transform-style:preserve-3d] will-change-[transform,opacity] cursor-pointer group`}
             >
               {/* Slide Image */}
               <Image
@@ -108,10 +112,10 @@ const BeyondClassroomCarousel = ({ slideimages }: Props) => {
               />
 
               {/* Cover Gradient Overlay */}
-              <div 
-                className={`absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              <div
+                className={`absolute inset-0 transition-opacity duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                   isActive ? "opacity-75 group-hover:opacity-90" : "opacity-95"
-                }`} 
+                }`}
               />
             </div>
           );
@@ -125,7 +129,7 @@ const BeyondClassroomCarousel = ({ slideimages }: Props) => {
             handlePrev();
             resetAutoplay();
           }}
-          className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:border-[#0055A4]/40 hover:bg-[#0055A4]/10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300"
+          className="w-10 h-10 rounded-[4px] cursor-pointer bg-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300"
           aria-label="Previous"
         >
           <ChevronLeft size={20} />
@@ -155,7 +159,7 @@ const BeyondClassroomCarousel = ({ slideimages }: Props) => {
             handleNext();
             resetAutoplay();
           }}
-          className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:border-[#0055A4]/40 hover:bg-[#0055A4]/10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300"
+          className="w-10 h-10 rounded-[4px] cursor-pointer bg-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300"
           aria-label="Next"
         >
           <ChevronRight size={20} />

@@ -20,8 +20,8 @@ const ProgrammeScopeSection = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="relative z-10 py-8 md:p-6 lg:p-10 xl:py-20">
-      <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center gap-6 xl:gap-10 px-4 md:px-0 lg:px-6 2xl:px-0">
+    <section className="relative z-10 py-8 md:py-12 xl:py-20">
+      <div className="max-w-[1530px] w-full mx-auto flex flex-col sm:flex-row items-center gap-6 xl:gap-10 px-6 md:px-8 xl:px-16">
         {/* Left column: Image */}
         <div className="w-full sm:w-1/2">
           {heroSection?.imgvideo === "Video" && isFormAvailable ? (

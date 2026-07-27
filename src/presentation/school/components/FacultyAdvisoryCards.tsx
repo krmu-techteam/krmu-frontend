@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -85,9 +85,7 @@ const facultyMap: Record<SchoolCategory, Faculty[]> = {
 
 // ---------- Component ----------
 const FacultyAdvisoryCards = ({ schoolCat }: Props) => {
-  if (!isSchoolCategory(schoolCat)) return null;
-
-  const facDatas = facultyMap[schoolCat];
+  const facDatas = facultyMap[schoolCat as SchoolCategory] || [];
 
   const [itemsPerLoad, setItemsPerLoad] = useState(5);
   const [visibleCount, setVisibleCount] = useState(5);
@@ -106,26 +104,43 @@ const FacultyAdvisoryCards = ({ schoolCat }: Props) => {
     return () => window.removeEventListener("resize", updateItems);
   }, []);
 
-  if (!facDatas.length) return null;
+  const observerTarget = useRef<HTMLDivElement>(null);
 
-  const handleLoadMore = () => {
+  const handleLoadMore = useCallback(() => {
+    if (loadingMore || visibleCount >= facDatas.length) return;
     setLoadingMore(true);
     setTimeout(() => {
       setVisibleCount((prev) => Math.min(prev + itemsPerLoad, facDatas.length));
       setLoadingMore(false);
     }, 800); // simulate skeleton loading for 800ms
-  };
+  }, [loadingMore, visibleCount, facDatas.length, itemsPerLoad]);
 
-  const visibleFaculties = facDatas.slice(0, visibleCount);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          handleLoadMore();
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    if (observerTarget.current) {
+      observer.observe(observerTarget.current);
+    }
+
+    return () => observer.disconnect();
+  }, [handleLoadMore]);
+
+  const visibleFaculties = facDatas?.slice(0, visibleCount) || [];
+
+  if (!facDatas || !facDatas.length) return null;
 
   return (
-    <div className="font-poppins">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5">
+    <div className="font-poppins mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8">
         {visibleFaculties.map((faculty) => (
-          <div
-            key={faculty.id}
-            className="w-full flex justify-center"
-          >
+          <div key={faculty.id} className="w-full flex justify-center h-full">
             <FacultyAdvisoryCard
               name={faculty.title?.rendered ?? ""}
               imgURL={faculty.featured_media_url ?? ""}
@@ -135,45 +150,41 @@ const FacultyAdvisoryCards = ({ schoolCat }: Props) => {
             />
           </div>
         ))}
-      </div>
 
-      {/* Skeletons showing when loadingMore is true */}
-      {loadingMore && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5  gap-5">
-          {Array.from({ length: Math.min(itemsPerLoad, facDatas.length - visibleCount) }).map((_, idx) => (
+        {/* Skeletons showing when loadingMore is true */}
+        {loadingMore &&
+          Array.from({
+            length: Math.min(itemsPerLoad, facDatas.length - visibleCount),
+          }).map((_, idx) => (
             <div
-              key={idx}
-              className="overflow-hidden rounded-t-xl bg-white/5 border border-white/10 flex flex-col w-full font-poppins"
+              key={`skeleton-${idx}`}
+              className="w-full flex justify-center h-full"
             >
-              {/* IMAGE SECTION */}
-              <div className="relative h-[240px] sm:h-[280px] w-full bg-white/10 flex items-center justify-center">
-                <Skeleton className="w-16 h-16 rounded-full bg-white/5" />
-              </div>
-              {/* DETAILS */}
-              <div className="min-h-[105px] border-b border-white/10 p-1.5 sm:p-5 flex-1 space-y-3.5">
-                <Skeleton className="h-5 w-3/4 bg-white/15" />
-                <Skeleton className="h-4 w-1/2 bg-white/10" />
-                <Skeleton className="h-4 w-2/3 bg-white/10" />
-              </div>
-              {/* SOCIAL ICONS */}
-              <div className="flex h-16 items-center justify-center mt-auto gap-3">
-                <Skeleton className="h-9 w-9 rounded-md bg-white/10" />
-                <Skeleton className="h-9 w-9 rounded-md bg-white/10" />
+              <div className="overflow-hidden bg-[#001732] flex flex-col w-full h-full font-poppins">
+                {/* IMAGE SECTION */}
+                <div className="relative flex h-[240px] sm:h-[280px] w-full items-center justify-center overflow-hidden bg-[#ffffff]">
+                  {/* SOCIAL ICONS SKELETON */}
+                  <div className="absolute top-3 right-3 z-30 flex items-center gap-1.5">
+                    <Skeleton className="h-7 w-7 rounded bg-gray-300" />
+                    <Skeleton className="h-7 w-7 rounded bg-gray-300" />
+                  </div>
+                  <Skeleton className="w-24 h-24 rounded-full bg-gray-300" />
+                </div>
+
+                {/* CONTENT SECTION */}
+                <div className="flex flex-col flex-1 p-5 sm:p-6 bg-[#001732] gap-3">
+                  <Skeleton className="h-5 w-3/4 bg-white/10" />
+                  <Skeleton className="h-4 w-1/2 bg-[#009bf2]/40" />
+                  <Skeleton className="h-4 w-2/3 bg-white/10" />
+                </div>
               </div>
             </div>
           ))}
-        </div>
-      )}
+      </div>
 
+      {/* Scroll Trigger Target */}
       {!loadingMore && visibleCount < facDatas.length && (
-        <div className="flex justify-center py-10">
-          <button
-            onClick={handleLoadMore}
-            className="text-white font-medium cursor-pointer transition-all hover:underline text-lg bg-transparent border-none outline-none"
-          >
-            Show More
-          </button>
-        </div>
+        <div ref={observerTarget} className="h-10 w-full" />
       )}
     </div>
   );
