@@ -6,7 +6,11 @@ const nextConfig: NextConfig = {
   // basePath: "/blog",
   // assetPrefix: "https://krmangalam.netlify.app",
   poweredByHeader: false,
+  experimental: {
+    optimizePackageImports: ["lucide-react", "react-icons"],
+  },
   images: {
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "http",

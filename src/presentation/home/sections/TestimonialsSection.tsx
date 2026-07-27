@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -63,7 +61,6 @@ export function TestimonialsSection({
                     width={130}
                     height={100}
                     className="w-16 md:w-[100px] h-auto brightness-0 invert opacity-70"
-                    unoptimized
                   />
                 </div>
 

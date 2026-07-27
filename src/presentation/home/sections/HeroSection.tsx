@@ -4,14 +4,19 @@ import React, { useState, useEffect } from "react";
 import { Search, Download } from "lucide-react";
 import Button from "@/components/common/Button";
 
+import dynamic from "next/dynamic";
 import {
   HeroNav,
-  HeroSearch,
   HeroVideo,
   HeroContent,
   HeroVirtualTour,
 } from "../components/hero";
 import { HeroSectionComponent } from "@/features/home";
+
+const HeroSearch = dynamic(
+  () => import("../components/hero/HeroSearch").then((mod) => mod.HeroSearch),
+  { ssr: false }
+);
 
 export const HeroSection = ({ title, subtitle }: HeroSectionComponent) => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);

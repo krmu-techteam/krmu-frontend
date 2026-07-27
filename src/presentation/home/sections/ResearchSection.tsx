@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import SectionDivider from "@/components/common/SectionDivider";
@@ -21,7 +19,7 @@ export function ResearchSection() {
                 fill
                 sizes="(max-width: 768px) 100vw, 60vw"
                 className="object-cover"
-                priority
+                loading="lazy"
               />
             </div>
 

@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { PARTNER_UNIVERSITIES } from "@/features/home";
 import { Carousel } from "@/components/common/Carousel";

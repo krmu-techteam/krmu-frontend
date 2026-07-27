@@ -1,5 +1,3 @@
-"use client";
-
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { Carousel } from "@/components/common/Carousel";
@@ -66,7 +64,6 @@ export function LifeAtKRMUSection() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 500px"
-                  unoptimized
                 />
               </div>
             </div>
@@ -89,7 +86,6 @@ export function LifeAtKRMUSection() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-1000"
                   loading="lazy"
-                  unoptimized
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent"></div>
 

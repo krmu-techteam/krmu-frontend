@@ -1,3 +1,5 @@
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
 import Script from "next/script";
 import { Container } from "@/components/common/Container";
 import {
@@ -6,18 +8,48 @@ import {
   IHomeService,
   homeSchemaService,
 } from "@/features/home";
-import {
-  HeroSection,
-  AboutSection,
-  JourneySection,
-  PlacementsSection,
-  LifeAtKRMUSection,
-  NewsEventsSection,
-  PartnersSection,
-  ResearchSection,
-  TestimonialsSection,
-  VisitSection,
-} from "@/presentation/home";
+import { HeroSection, AboutSection } from "@/presentation/home";
+
+const JourneySection = dynamic(() =>
+  import("@/presentation/home/sections/JourneySection").then(
+    (m) => m.JourneySection,
+  ),
+);
+const PlacementsSection = dynamic(() =>
+  import("@/presentation/home/sections/PlacementSection").then(
+    (m) => m.PlacementsSection,
+  ),
+);
+const LifeAtKRMUSection = dynamic(() =>
+  import("@/presentation/home/sections/LifeAtKRMUSection").then(
+    (m) => m.LifeAtKRMUSection,
+  ),
+);
+const TestimonialsSection = dynamic(() =>
+  import("@/presentation/home/sections/TestimonialsSection").then(
+    (m) => m.TestimonialsSection,
+  ),
+);
+const ResearchSection = dynamic(() =>
+  import("@/presentation/home/sections/ResearchSection").then(
+    (m) => m.ResearchSection,
+  ),
+);
+const PartnersSection = dynamic(() =>
+  import("@/presentation/home/sections/PartnersSection").then(
+    (m) => m.PartnersSection,
+  ),
+);
+const VisitSection = dynamic(() =>
+  import("@/presentation/home/sections/VisitSection").then(
+    (m) => m.VisitSection,
+  ),
+);
+const NewsEventsSection = dynamic(() =>
+  import("@/presentation/home/sections/NewsEventsSection").then(
+    (m) => m.NewsEventsSection,
+  ),
+);
 
 export default async function HomePage() {
   const homeService: IHomeService = getHomeService();
@@ -68,27 +100,46 @@ export default async function HomePage() {
               bottomContent={aboutSection.adecaderightcol}
             />
           )}
-          <JourneySection />
-          <PlacementsSection />
+          <Suspense fallback={<div className="min-h-[400px]" />}>
+            <JourneySection />
+          </Suspense>
+          <Suspense fallback={<div className="min-h-[400px]" />}>
+            <PlacementsSection />
+          </Suspense>
         </Container>
-        <LifeAtKRMUSection />
+        <Suspense fallback={<div className="min-h-[400px]" />}>
+          <LifeAtKRMUSection />
+        </Suspense>
 
-        <TestimonialsSection
-          {...testimonialsSection}
-          testimonialsData={testimonialsData}
-        />
+        <Suspense fallback={<div className="min-h-[400px]" />}>
+          <TestimonialsSection
+            {...testimonialsSection}
+            testimonialsData={testimonialsData}
+          />
+        </Suspense>
+
         <Container>
-          <ResearchSection />
-          <PartnersSection />
+          <Suspense fallback={<div className="min-h-[400px]" />}>
+            <ResearchSection />
+          </Suspense>
+          <Suspense fallback={<div className="min-h-[400px]" />}>
+            <PartnersSection />
+          </Suspense>
         </Container>
-        <VisitSection />
+
+        <Suspense fallback={<div className="min-h-[400px]" />}>
+          <VisitSection />
+        </Suspense>
+
         <Container>
-          {newsEventsSection ? (
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            <NewsEventsSection {...(newsEventsSection as any)} />
-          ) : (
-            <NewsEventsSection />
-          )}
+          <Suspense fallback={<div className="min-h-[400px]" />}>
+            {newsEventsSection ? (
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              <NewsEventsSection {...(newsEventsSection as any)} />
+            ) : (
+              <NewsEventsSection />
+            )}
+          </Suspense>
         </Container>
       </main>
     </>
