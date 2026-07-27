@@ -6,36 +6,41 @@ import React, { useEffect, useRef, useState } from "react";
 export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
   console.log(HeroSectionVideo);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMounted, setIsMounted] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
+    const checkDesktop = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+    return () => window.removeEventListener("resize", checkDesktop);
   }, []);
 
   useEffect(() => {
-    if (isMounted && videoRef.current) {
+    if (isDesktop && videoRef.current) {
       videoRef.current.play().catch(() => {});
     }
-  }, [isMounted]);
+  }, [isDesktop]);
 
   return (
     <>
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="none"
-        className="absolute top-0 left-0 w-full h-full object-cover object-center z-0"
-      >
-        {isMounted && (
-          <>
-            <source src="/modules/home/hero/krmu-video.mp4" type="video/mp4" />
-            <source src="/hero-bg.mp4" type="video/mp4" />
-          </>
-        )}
-      </video>
+      {isDesktop ? (
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="absolute top-0 left-0 w-full h-full object-cover object-center z-0"
+        >
+          <source src="/modules/home/hero/krmu-video.mp4" type="video/mp4" />
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
+      ) : (
+        <div className="absolute top-0 left-0 w-full h-full bg-[#0B1221] z-0" />
+      )}
 
       {/* Gradients and Overlays */}
       <div className="absolute top-0 left-0 w-full h-full bg-brand-dark/35 z-10 transition-colors group-hover/hero:bg-brand-dark/25 duration-700"></div>

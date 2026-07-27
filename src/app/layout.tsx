@@ -46,7 +46,7 @@ export default function RootLayout({
         />
         <link rel="dns-prefetch" href="https://wp.krmangalam.edu.in" />
       </head>
-      <body className={`${poppins.className} ${playfair.className} ${poppins.variable} ${playfair.variable} antialiased overflow-x-hidden`}>
+      <body className={`${poppins.variable} ${playfair.variable} ${poppins.className} antialiased overflow-x-hidden`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MKXDVSJ9"
