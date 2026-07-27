@@ -129,7 +129,7 @@ export const BreakDown = ({ slug }: Props) => {
                       <td className="py-4 px-6 text-center text-sm md:text-[16px]  text-black border-r-2 border-[#002045]/10">
                         {row.package}
                       </td>
-                      <td className="py-4 px-6 text-center text-sm md:text-[16px] max-w-[450px]  text-black">
+                      <td className="py-4 px-6 text-center text-sm md:text-[16px] max-w-[350px]  text-black">
                         {row.sectors}
                       </td>
                     </tr>

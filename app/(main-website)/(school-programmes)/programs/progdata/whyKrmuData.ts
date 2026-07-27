@@ -14,7 +14,7 @@ export interface WhyKrmuData {
   krmuHeader: string;
   typicalHeader: string;
   comparisonData: ComparisonRow[];
-  bottomDescription1: string;
+  bottomDescription1?: string;
   bottomDescription2?: string;
 }
 
@@ -696,5 +696,192 @@ export const whyKrmuData: Record<string, WhyKrmuData> = {
 
     bottomDescription2:
       "The Bachelor of Fine Arts (BFA) programme is designed for aspiring artists and creative professionals who wish to transform their imagination into impactful visual expression. Whether you envision a career as a visual artist, illustrator, graphic designer, digital artist, animator, photographer, art curator, creative entrepreneur, or art educator, the programme provides a strong foundation in artistic techniques, creative thinking, digital tools, and professional practice. With an emphasis on experimentation, innovation, and industry relevance, students graduate with the knowledge, confidence, and portfolio needed to thrive in the evolving global creative landscape or pursue advanced studies in the visual arts.",
+  },
+
+  "ba-hons-political-science": {
+    title:
+      "Why K.R. Mangalam University for B.A. (Hons.) Political Science 2026–27?",
+
+    description:
+      "Choosing the right university is essential for students who aspire to build careers in governance, public policy, civil services, international relations, media, or research. While many universities offer a B.A. (Hons.) Political Science programme, students should compare aspects such as curriculum, faculty expertise, practical exposure, research opportunities, industry interaction, and placement support before making a decision.",
+
+    comparisonTitle:
+      "K.R. Mangalam University (KRMU), Gurugram, offers a career-orientated B.A. (Hons.) Political Science programme that blends academic learning with practical experiences. Through research projects, seminars, experiential learning, and dedicated career support, students develop the knowledge and skills required to excel in both public and private sectors.",
+
+    parameterHeader: "Parameter",
+
+    krmuHeader: "K.R. Mangalam University",
+
+    typicalHeader: "Typical Private University",
+
+    comparisonData: [
+      {
+        parameter: "Highest placement package",
+        krmu: "56.6 LPA",
+        typical: "8-20 LPA",
+      },
+      {
+        parameter: "Campus recruiters",
+        krmu: "800+ companies",
+        typical: "100-300 companies",
+      },
+      {
+        parameter: "Curriculum",
+        krmu: "Well-designed curriculum covering governance, public policy, political theory, and international relations",
+        typical:
+          "Primarily theory-focused curriculum with limited interdisciplinary exposure",
+      },
+      {
+        parameter: "Practical Learning",
+        krmu: "Case studies, policy discussions, debates, simulations, field visits, and experiential learning",
+        typical:
+          "Classroom lectures with comparatively fewer practical activities",
+      },
+      {
+        parameter: "Research Opportunities",
+        krmu: "Research projects, seminars, conferences, and interdisciplinary learning",
+        typical: "Limited research exposure beyond coursework",
+      },
+      {
+        parameter: "Faculty",
+        krmu: "Experienced academicians and subject experts providing academic and career mentorship",
+        typical:
+          "Mostly academic teaching with comparatively less practical exposure",
+      },
+      {
+        parameter: "Skill Development",
+        krmu: "Focus on leadership, policy analysis, critical thinking, communication, research, and public speaking",
+        typical:
+          "Greater emphasis on theoretical knowledge than professional skills",
+      },
+      {
+        parameter: "Industry & Expert Interaction",
+        krmu: "Guest lectures, workshops, expert sessions, and interaction with policymakers and professionals",
+        typical: "Industry and expert interaction varies across institutions",
+      },
+      {
+        parameter: "Internship Opportunities",
+        krmu: "Exposure to internships, field projects, NGOs, public policy organisations, and research institutions",
+        typical:
+          "Internship opportunities may be limited or independently arranged by students",
+      },
+      {
+        parameter: "Placement Support",
+        krmu: "Committed Career Development Centre (CDC) offering internships, career counselling, resume building, mock interviews, and placement assistance",
+        typical:
+          "Placement support varies and often focuses mainly on final-year recruitment",
+      },
+      {
+        parameter: "Infrastructure",
+        krmu: "Modern classrooms, digital library, research resources, and collaborative learning environment",
+        typical:
+          "Standard infrastructure with facilities differing across universities",
+      },
+      {
+        parameter: "Higher Education & Competitive Exam Support",
+        krmu: "Encourages preparation for postgraduate studies, research careers, UPSC, State PSCs, UGC NET, and other competitive examinations",
+        typical:
+          "Limited structured guidance for higher education and competitive exam preparation",
+      },
+    ],
+
+    bottomDescription1:
+      "A doctoral programme should provide more than research guidance—it should create an ecosystem where scholars can innovate, publish quality research, collaborate with experts, and develop solutions to real-world business challenges. A university that supports both academic excellence and industry engagement helps scholars maximise the value of their doctoral journey.",
+
+    bottomDescription2:
+      "For aspiring researchers seeking experienced mentorship, a robust research environment, interdisciplinary collaboration, publication support, and dedicated career guidance through its Career Development Centre (CDC), K.R. Mangalam University's Ph.D. in Management offers a strong platform for academic excellence and professional growth in the 2026–27 academic session.",
+  },
+
+  "b-a-hons-hons-with-research-psychology": {
+    title:
+      "Why K.R. Mangalam University for a B.A. (Hons./ Hons. with Research) Psychology 2026–27?",
+
+    description:
+      "Selecting the right university plays a crucial role in shaping a successful career in psychology. While many universities offer a B.A. (Hons./Hons. with Research) psychology programme, students should compare aspects such as curriculum, research opportunities, practical exposure, faculty expertise, laboratory facilities, internships, and placement support to make an informed decision.",
+
+    comparisonTitle:
+      "K.R. Mangalam University (KRMU), Gurugram, has designed its programme to blend academic excellence with experiential learning. Along with a strong theoretical foundation, students gain practical exposure, research experience, and industry interaction, preparing them for careers in psychology, mental health, research, human resources, education, and allied sectors.",
+
+    parameterHeader: "Parameter",
+
+    krmuHeader: "K.R. Mangalam University (KRMU)",
+
+    typicalHeader: "Typical Private University",
+
+    comparisonData: [
+      {
+        parameter: "Highest placement package",
+        krmu: "56.6 LPA",
+        typical: "8–20 LPA",
+      },
+      {
+        parameter: "Campus recruiters",
+        krmu: "800+ companies",
+        typical: "100–300 companies",
+      },
+      {
+        parameter: "Curriculum",
+        krmu: "NEP-aligned, industry-focused curriculum, including the Hons. with Research pathway",
+        typical:
+          "Primarily theory-based curriculum with limited research integration",
+      },
+      {
+        parameter: "Research Opportunities",
+        krmu: "Dissertations, conferences, seminars, independent research projects, and interdisciplinary research",
+        typical:
+          "Opportunities for research are typically restricted to assignments in the classroom.",
+      },
+      {
+        parameter: "Practical Learning",
+        krmu: "Case studies, fieldwork, workshops, psychological evaluations, psychology labs, and hands-on learning",
+        typical:
+          "Exposure to the real world varies and is frequently focused on the classroom.",
+      },
+      {
+        parameter: "Faculty",
+        krmu: "Mentorship in academia and research is offered by seasoned academics and business people.",
+        typical:
+          "Academic faculty make up the majority, with relatively little involvement with industry",
+      },
+      {
+        parameter: "Psychology Laboratories",
+        krmu: "Psychology labs that are well-equipped for testing, evaluation, and hands-on instruction",
+        typical: "Depending on the organization, basic laboratory facilities",
+      },
+      {
+        parameter: "Internships & Field Exposure",
+        krmu: "Opportunities for internships with educational institutions, non-governmental organisations, medical facilities, counselling centers, and businesses",
+        typical:
+          "Opportunities for internships may be restricted or set up by students on their own",
+      },
+      {
+        parameter: "Skill Development",
+        krmu: "A focus on research, behavioural analysis, communication, critical thinking, emotional intelligence, and counselling skills",
+        typical:
+          "Theoretical knowledge is the main focus, with employability skills receiving relatively less attention",
+      },
+      {
+        parameter: "Industry Interaction",
+        krmu: "Workshops, expert discussions, guest lectures, and interactions with psychologists",
+        typical: "Institutions have different levels of industry participation",
+      },
+      {
+        parameter: "Placement Support",
+        krmu: "Dedicated Career Development Center (CDC) providing career advice, mock interviews, resume preparation, internships, and placement support",
+        typical:
+          "Placement assistance varies by university and typically concentrates on final-year recruitment",
+      },
+      {
+        parameter: "Infrastructure",
+        krmu: "Collaborative learning areas, psychology labs, digital libraries, and contemporary classrooms",
+        typical: "Typical academic facilities with a range of amenities",
+      },
+      {
+        parameter: "Higher Education Preparation",
+        krmu: "Strong emphasis on academic careers, research, dissertation writing, postgraduate preparation, and competitive exams",
+        typical:
+          "Insufficiently established guidelines for planning and research in higher education",
+      },
+    ],
   },
 };

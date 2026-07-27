@@ -111,4 +111,30 @@ export const programmeOverviewData: Record<string, ProgrammeOverviewContent> = {
       "Upon completing the programme, graduates are equipped to create original works of art that reflect aesthetic sensitivity, conceptual depth, and cultural relevance. They are prepared to work independently or collaboratively with galleries, design studios, media houses, advertising agencies, cultural institutions, and creative organisations, while upholding professional ethics and artistic integrity. The programme enables graduates to pursue rewarding careers as fine artists, illustrators, graphic designers, art educators, art directors, animators, photographers, curators, and art consultants, while contributing meaningfully to the evolving landscape of visual arts and creative industries.",
     ],
   },
+
+  "ba-hons-political-science": {
+    title: "Programme Overview",
+    paragraphs: [
+      "A B.A. (Hons.) Political Science is an ideal undergraduate programme for students who are interested in understanding political systems, governance, public policies, international relations, and the functioning of democratic institutions. As governments, global organisations, and public institutions continue to address complex economic, social, and environmental challenges, the demand for graduates with strong analytical, research, and policy-making skills is steadily increasing. The programme equips students with a comprehensive understanding of political theory while enabling them to analyse contemporary national and international issues from multiple perspectives.",
+
+      "The curriculum covers diverse subjects such as political theory, Indian government and politics, comparative politics, international relations, public administration, political sociology, public policy, constitutional law, and global governance. Through classroom discussions, case studies, research projects, debates, and field-based learning, students develop the ability to evaluate public policies, understand governance structures, and examine political developments critically.",
+
+      "In addition to academic knowledge, the programme helps students build highly transferable skills such as critical thinking, research, communication, leadership, negotiation, public speaking, policy analysis, and problem-solving. These competencies are valued across government organisations, civil services, public policy institutions, international organisations, media, political consulting, think tanks, NGOs, research organisations, corporate affairs, and public relations.",
+
+      "A B.A. (Hons.) Political Science also serves as a strong foundation for higher education and competitive examinations. Graduates can pursue postgraduate studies in political science, public administration, international relations, public policy, law, development studies, or related disciplines. The programme is particularly beneficial for students aspiring to build careers in civil services, diplomacy, policymaking, governance, academia, journalism, political consulting, and social development. For students who wish to understand how governments function, influence public policy, and contribute to society through leadership and informed decision-making, a B.A. (Hons.) Political Science offers a rewarding academic and professional pathway.",
+    ],
+  },
+
+  "b-a-hons-hons-with-research-psychology": {
+    title: "Programme Overview",
+    paragraphs: [
+      "A B.A. (Hons./Hons. with Research) Psychology is an excellent programme for students who want to understand human behaviour, emotions, cognition, and mental processes through both scientific study and practical application. As awareness of mental health and emotional well-being continues to grow, psychology has emerged as one of the most sought-after disciplines, creating opportunities across healthcare, education, corporate organisations, social services, research, and public policy. The programme provides students with a strong foundation in psychological theories while helping them develop the practical skills needed to address real-world behavioural and mental health challenges.",
+
+      "The curriculum covers diverse areas such as cognitive psychology, developmental psychology, counselling psychology, social psychology, organisational behaviour, abnormal psychology, psychological assessment, and research methodology. Students gain hands-on experience through practical sessions, case studies, projects, internships, and research activities, enabling them to apply psychological principles in clinical, educational, organisational, and community settings.",
+
+      "The Hons. with Research pathway offers additional opportunities for students who wish to pursue advanced academic or research careers. It places greater emphasis on independent research, data analysis, psychological investigations, and dissertation work, helping students develop advanced analytical and research competencies. This pathway is particularly beneficial for those planning to pursue postgraduate studies, doctoral programmes, or careers in research, academia, policy analysis, and evidence-based psychological practice.",
+
+      "In addition to subject knowledge, the programme develops highly transferable skills such as critical thinking, communication, emotional intelligence, empathy, research, ethical decision-making, and problem-solving. These skills are valuable across numerous industries, including human resources, counselling, healthcare, education, marketing, corporate training, behavioural consulting, customer experience, and public administration.",
+    ],
+  },
 };
