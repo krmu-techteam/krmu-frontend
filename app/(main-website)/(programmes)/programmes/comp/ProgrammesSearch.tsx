@@ -621,7 +621,7 @@ const ProgrammesSearch = () => {
                       {/* )} */}
                     </div>
                     {progNewLine.includes(slug) && (
-                      <div className="text-white text-xs items-center mt-3 px-4 z-10000">
+                      <div className="text-white text-xs items-center mt-3 px-4 z-10">
                         3-Year Lateral Entry option also available for eligible
                         students
                       </div>
