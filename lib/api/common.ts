@@ -678,21 +678,23 @@ export const createWebsiteSchema = ({
   return JSON.stringify(schema);
 };
 
-interface ContactPoint {
-  telephone: string;
-  contactType: string;
-  contactOption?: string;
-  areaServed?: string;
-  availableLanguage?: string;
-}
-
 interface OrganizationSchemaProps {
   name: string;
   alternateName?: string;
   url: string;
   logo: string;
+  description?: string;
+  telephone?: string;
+  email?: string;
+  foundingDate?: string;
+  address?: {
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
   sameAs?: string[];
-  contactPoint?: ContactPoint;
 }
 
 export const createOrganizationSchema = ({
@@ -700,33 +702,126 @@ export const createOrganizationSchema = ({
   alternateName,
   url,
   logo,
-  contactPoint,
+  description,
+  telephone,
+  email,
+  foundingDate,
+  address,
   sameAs = [],
 }: OrganizationSchemaProps) => {
   const cleanUrl = (val: string) => val.replace(/\s+/g, "");
 
-  const schema = {
-    "@context": "https://schema.org/",
-    "@type": "EducationalOrganization",
-    name,
-    alternateName,
-    url: cleanUrl(url),
-    logo: cleanUrl(logo),
-    contactPoint: contactPoint
-      ? {
-          "@type": "ContactPoint",
-          telephone: contactPoint.telephone,
-          contactType: contactPoint.contactType,
-          contactOption: contactPoint.contactOption || "TollFree",
-          areaServed: contactPoint.areaServed || "IN",
-          availableLanguage: contactPoint.availableLanguage || "en",
-        }
-      : undefined,
-    sameAs: sameAs.map(cleanUrl),
-  };
-
-  return JSON.stringify(schema, null, 2);
+  return JSON.stringify(
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "@id": `${cleanUrl(url)}#educationalorganization`,
+      name,
+      alternateName,
+      url: cleanUrl(url),
+      logo: cleanUrl(logo),
+      description,
+      address: address && {
+        "@type": "PostalAddress",
+        streetAddress: address.streetAddress,
+        addressLocality: address.addressLocality,
+        addressRegion: address.addressRegion,
+        postalCode: address.postalCode,
+        addressCountry: address.addressCountry,
+      },
+      telephone,
+      email,
+      sameAs: sameAs.map(cleanUrl),
+      foundingDate,
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Academic Programmes",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Course",
+              name: "Undergraduate Programmes",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Course",
+              name: "Postgraduate Programmes",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Course",
+              name: "Ph.D. Programmes",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Course",
+              name: "Diploma Programmes",
+            },
+          },
+        ],
+      },
+    },
+    null,
+    2
+  );
 };
+
+// interface ContactPoint {
+//   telephone: string;
+//   contactType: string;
+//   contactOption?: string;
+//   areaServed?: string;
+//   availableLanguage?: string;
+// }
+
+// interface OrganizationSchemaProps {
+//   name: string;
+//   alternateName?: string;
+//   url: string;
+//   logo: string;
+//   sameAs?: string[];
+//   contactPoint?: ContactPoint;
+// }
+
+// export const createOrganizationSchema = ({
+//   name,
+//   alternateName,
+//   url,
+//   logo,
+//   contactPoint,
+//   sameAs = [],
+// }: OrganizationSchemaProps) => {
+//   const cleanUrl = (val: string) => val.replace(/\s+/g, "");
+
+//   const schema = {
+//     "@context": "https://schema.org/",
+//     "@type": "EducationalOrganization",
+//     name,
+//     alternateName,
+//     url: cleanUrl(url),
+//     logo: cleanUrl(logo),
+//     contactPoint: contactPoint
+//       ? {
+//           "@type": "ContactPoint",
+//           telephone: contactPoint.telephone,
+//           contactType: contactPoint.contactType,
+//           contactOption: contactPoint.contactOption || "TollFree",
+//           areaServed: contactPoint.areaServed || "IN",
+//           availableLanguage: contactPoint.availableLanguage || "en",
+//         }
+//       : undefined,
+//     sameAs: sameAs.map(cleanUrl),
+//   };
+
+//   return JSON.stringify(schema, null, 2);
+// };
 
 interface CollageOrUniversitySchemaProps {
   name: string;
