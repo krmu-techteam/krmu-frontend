@@ -57,7 +57,7 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         {children}
-        <img
+        {/* <img
           src="https://geo.flowblinq.com/api/t/krmangalam-edu-in-uhLBq5"
           width="1"
           height="1"
@@ -71,7 +71,7 @@ export default function RootLayout({
         <Script
           src="https://geo.flowblinq.com/api/t/krmangalam-edu-in-uhLBq5"
           strategy="afterInteractive"
-        />
+        /> */}
       </body>
     </html>
   );
