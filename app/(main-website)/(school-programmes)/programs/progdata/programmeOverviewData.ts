@@ -137,4 +137,17 @@ export const programmeOverviewData: Record<string, ProgrammeOverviewContent> = {
       "In addition to subject knowledge, the programme develops highly transferable skills such as critical thinking, communication, emotional intelligence, empathy, research, ethical decision-making, and problem-solving. These skills are valuable across numerous industries, including human resources, counselling, healthcare, education, marketing, corporate training, behavioural consulting, customer experience, and public administration.",
     ],
   },
+
+  "ba-hons-hons-economics-research": {
+    title: "Programme Overview",
+    paragraphs: [
+      "A B.A. (Hons. / Hons. with Research) Economics is much more than a study of markets, money, and policies. It equips students with the ability to understand how economic decisions shape businesses, governments, and society. By combining theoretical concepts with practical applications, the programme helps students develop analytical thinking, problem-solving abilities, and quantitative skills that are highly valued across industries.",
+
+      "As economies become increasingly data-driven and interconnected, the demand for professionals who can interpret economic trends, analyse data, and make informed decisions continues to grow. This programme prepares students to address real-world challenges through subjects such as microeconomics, macroeconomics, econometrics, public finance, and international economics. Students pursuing the Hons. with Research pathway also gain valuable research experience, enabling them to conduct independent studies and build a strong academic foundation for higher education.",
+
+      "The versatility of an economics degree makes it relevant across a wide range of sectors, including banking, finance, consulting, public policy, government, research, business analytics, international organisations, and corporate strategy. Beyond technical knowledge, the programme also enhances communication, critical thinking, and decision-making skills, enabling graduates to adapt to the changing demands of the global economy. ",
+
+      "For students seeking a career that combines analytical reasoning with practical impact, a B.A. (Hons. / Hons. with Research) Economics provides a strong platform for long-term academic and professional growth.",
+    ],
+  },
 };

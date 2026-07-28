@@ -884,4 +884,91 @@ export const whyKrmuData: Record<string, WhyKrmuData> = {
       },
     ],
   },
+
+  "ba-hons-hons-economics-research": {
+    title:
+      "Why K.R. Mangalam University for a B.A. (Hons. / Hons. with Research) Economics 2026–27?",
+
+    description:
+      "Selecting the right university is about much more than earning a degree. Students should look for an institution that combines academic excellence with practical exposure, research opportunities, experienced faculty, and strong career support. These factors play a significant role in shaping both their university experience and future career prospects.",
+
+    comparisonTitle:
+      "K.R. Mangalam University has designed its B.A. (Hons. / Hons. with Research) Economics programme to blend economic theory with practical applications. The curriculum includes modern analytical tools, research opportunities, experiential learning, internships, and industry interactions, helping students develop the skills required in today's data-driven economy.",
+
+    parameterHeader: "Parameter",
+
+    krmuHeader: "K.R. Mangalam University",
+
+    typicalHeader: "Typical Private University",
+
+    comparisonData: [
+      {
+        parameter: "Highest placement package",
+        krmu: "56.6 LPA",
+        typical: "8–20 LPA",
+      },
+      {
+        parameter: "Campus recruiters",
+        krmu: "800+ companies",
+        typical: "100–300 companies",
+      },
+      {
+        parameter: "Programme Structure",
+        krmu: "Offers B.A. (Hons. / Hons. with Research) Economics aligned with the NEP framework.",
+        typical: "Usually offers a standard B.A. (Hons.) economics programme.",
+      },
+      {
+        parameter: "Curriculum",
+        krmu: "Blends economic theory with practical applications, policy analysis, and quantitative learning.",
+        typical:
+          "Primarily focuses on theoretical concepts with comparatively less practical exposure.",
+      },
+      {
+        parameter: "Research Opportunities",
+        krmu: "Provides research-orientated learning through the Hons. with Research pathway, projects, and dissertation work.",
+        typical:
+          "Research opportunities may be limited or mainly available at postgraduate levels.",
+      },
+      {
+        parameter: "Analytical Tools",
+        krmu: "Exposure to analytical tools and data analysis software used in economics and finance.",
+        typical:
+          "Basic exposure to analytical software may vary across institutions.",
+      },
+      {
+        parameter: "Practical Learning",
+        krmu: "Includes internships, industry projects, workshops, seminars, and experiential learning.",
+        typical:
+          "Practical exposure depends on departmental initiatives and collaborations.",
+      },
+      {
+        parameter: "Faculty",
+        krmu: "Experienced faculty with academic and industry exposure, offering mentoring and research guidance.",
+        typical:
+          "Faculty expertise and mentoring opportunities vary between institutions.",
+      },
+      {
+        parameter: "Skill Development",
+        krmu: "Focuses on analytical thinking, quantitative analysis, research, communication, and decision-making skills.",
+        typical: "Greater emphasis on classroom-based theoretical learning.",
+      },
+      {
+        parameter: "Industry Interaction",
+        krmu: "Regular guest lectures, seminars, workshops, internships, and interactions with industry professionals.",
+        typical:
+          "Industry engagement varies depending on institutional collaborations.",
+      },
+      {
+        parameter: "Career Opportunities",
+        krmu: "Prepares students for careers in finance, consulting, banking, research, public policy, business analytics, and higher studies.",
+        typical:
+          "Career opportunities largely depend on the curriculum and institutional support.",
+      },
+    ],
+    bottomDescription1:
+      "K.R. Mangalam University's programme is suitable for students who want to build a strong foundation in economics while also developing practical, analytical, and research skills. Its emphasis on technology-enabled learning, industry exposure, and experiential education helps students prepare for careers in finance, consulting, policy research, business analytics, and government sectors.",
+
+    bottomDescription2:
+      "Ultimately, the right university depends on a student's career aspirations, preferred learning style, and academic interests. Before making a decision, students should compare curriculum design, faculty expertise, research opportunities, internships, placement support, campus facilities, and overall learning environment to determine which institution best aligns with their long-term goals.",
+  },
 };

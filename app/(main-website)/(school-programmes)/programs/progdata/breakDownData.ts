@@ -909,4 +909,69 @@ export const breakDownData: Record<string, BreakDownContent> = {
       "Note: The aforementioned compensation estimates are only estimates and could change based on a number of variables, including the candidate's credentials, experience, job role, employer, region, and sector.",
     ],
   },
+
+  "ba-hons-hons-economics-research": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.A. (Hons. / Hons. with Research) Economics graduates.",
+
+    tableHeaders: {
+      role: "Career Roles",
+      package: "Average Salary Range (India)",
+      sectors: "Top Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Economist",
+        package: "₹6–12 LPA",
+        sectors:
+          "Government Departments, Economic Think Tanks, International Organisations, Research Institutions",
+      },
+      {
+        role: "Policy Analyst",
+        package: "₹5–10 LPA",
+        sectors:
+          "Government Bodies, Public Policy Institutes, NGOs, International Organisations",
+      },
+      {
+        role: "Investment Analyst",
+        package: "₹5–12 LPA",
+        sectors: "Asset Management Companies, Mutual Funds, Investment Banks",
+      },
+      {
+        role: "Banking Professional",
+        package: "₹4–9 LPA",
+        sectors: "Public Sector Banks, Private Banks, NBFCs, FinTech Companies",
+      },
+      {
+        role: "Market Research Analyst",
+        package: "₹4–8 LPA",
+        sectors:
+          "Market Research Firms, FMCG, Consumer Goods, Advertising Agencies",
+      },
+      {
+        role: "Risk Analyst",
+        package: "₹6–12 LPA",
+        sectors: "Banks, Insurance Companies, FinTech, Consulting Firms",
+      },
+      {
+        role: "Consultant",
+        package: "₹6–15 LPA",
+        sectors:
+          "Management Consulting, Strategy Consulting, Financial Advisory ",
+      },
+      {
+        role: "Public Sector Officer*",
+        package: "₹6–12 LPA",
+        sectors:
+          "RBI, SEBI, NABARD, Government Ministries, Public Sector Undertakings",
+      },
+    ],
+
+    note: [
+      "Note: Salary figures are approximate and may vary depending on experience, skills, employer, location, additional certifications, and postgraduate qualifications. *Public sector roles generally require candidates to qualify through competitive examinations.",
+    ],
+  },
 };
