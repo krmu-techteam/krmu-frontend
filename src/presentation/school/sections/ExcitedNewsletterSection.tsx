@@ -1,12 +1,10 @@
- 
 import Link from "next/link";
 import { ExcitedNewsletterSectionProps } from "@/features/school";
-import { NewsletterDownloader } from "@/presentation/school/components";;
+import { NewsletterDownloader } from "@/presentation/school/components";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 import { Download } from "lucide-react";
 import SectionDivider from "@/components/common/SectionDivider";
-
 
 const ExcitedNewsletterSection = async ({
   excitedHeading,
@@ -22,8 +20,8 @@ const ExcitedNewsletterSection = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="py-12 xl:py-20 bg-transparent relative z-10 font-poppins px-6 md:px-8 lg:px-11 2xl:px-16">
-      <div className="max-w-[1530px] mx-auto  grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+    <section className="py-12 xl:py-20 bg-transparent relative z-10 font-poppins">
+      <div className="max-w-[1530px] mx-auto px-6 md:px-8 lg:px-12  grid grid-cols-1 lg:grid-cols-2 gap-6  lg:gap-8 items-stretch">
         {/* LEFT SIDE CARD */}
         <div className="bg-[#0B1521] rounded-md border border-white/5 p-8 xl:p-12 text-left text-white flex flex-col justify-center">
           <h4 className="text-3xl xl:text-[40px] leading-tight mb-3 font-serif">
@@ -44,7 +42,9 @@ const ExcitedNewsletterSection = async ({
                       buttonText={
                         <div className="flex items-center gap-3">
                           <Download size={18} className="shrink-0" />
-                          <span className="uppercase tracking-wide text-sm font-medium">{btn?.buttontext || "DOWNLOAD PROSPECTUS"}</span>
+                          <span className="uppercase tracking-wide text-sm font-medium">
+                            {btn?.buttontext || "DOWNLOAD PROSPECTUS"}
+                          </span>
                         </div>
                       }
                       buttonClassName="border border-white/30 w-full sm:w-fit py-3.5 px-7 transition duration-300 rounded-sm inline-block cursor-pointer text-white hover:bg-white/5"
@@ -62,7 +62,9 @@ const ExcitedNewsletterSection = async ({
                       rel="noopener noreferrer"
                     >
                       <Download size={18} className="shrink-0" />
-                      <span className="uppercase tracking-wide text-sm font-medium">{btn.buttontext || "DOWNLOAD PROSPECTUS"}</span>
+                      <span className="uppercase tracking-wide text-sm font-medium">
+                        {btn.buttontext || "DOWNLOAD PROSPECTUS"}
+                      </span>
                     </Link>
                   );
                 }

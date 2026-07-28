@@ -1,13 +1,16 @@
- 
 import { TestimonialCard } from "@/presentation/school/components";
 import { Carousel } from "@/components/common/Carousel";
 import SectionDivider from "@/components/common/SectionDivider";
-import { TestimonialSectionProps } from "@/features/school";;
+import { TestimonialSectionProps } from "@/features/school";
 
-const TestimonialsSection = ({ title, desc, testis }: TestimonialSectionProps) => {
+const TestimonialsSection = ({
+  title,
+  desc,
+  testis,
+}: TestimonialSectionProps) => {
   return (
-    <section className="py-12 xl:py-20 px-6 md:px-8 lg:px-11 2xl:px-16 font-poppins relative overflow-hidden bg-transparent">
-      <div className="max-w-[1530px] mx-auto w-full relative z-10">
+    <section className="py-12 xl:py-20 font-poppins relative overflow-hidden bg-transparent">
+      <div className="max-w-[1530px] mx-auto w-full relative z-10 px-6 md:px-8 lg:px-12">
         <div className="mb-12 max-w-4xl">
           <h4 className="text-white text-3xl md:text-5xl font-bold mb-4 font-serif">
             {title}
@@ -28,15 +31,16 @@ const TestimonialsSection = ({ title, desc, testis }: TestimonialSectionProps) =
             containerClassName="-ml-6"
             slideClassName="pl-6 md:basis-1/2"
           >
-            {testis && testis.map((testimonial) => (
-              <TestimonialCard
-                key={testimonial.id}
-                name={testimonial?.name}
-                edu={testimonial?.education}
-                desc={testimonial?.info}
-                img={testimonial?.userimg}
-              />
-            ))}
+            {testis &&
+              testis.map((testimonial) => (
+                <TestimonialCard
+                  key={testimonial.id}
+                  name={testimonial?.name}
+                  edu={testimonial?.education}
+                  desc={testimonial?.info}
+                  img={testimonial?.userimg}
+                />
+              ))}
           </Carousel>
         </div>
       </div>

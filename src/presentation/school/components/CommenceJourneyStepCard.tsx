@@ -17,37 +17,45 @@ type StepCardProps = {
 export function CommenceJourneyStepCard({ step, isActive }: StepCardProps) {
   return (
     <div
-      className={`flex items-center gap-5 p-3 xl:p-5 rounded-sm border transition-all duration-300 ${
+      className={`w-full max-w-[408px] min-h-[100px] h-[100px] px-5 py-3 rounded-[6px] border transition-all duration-300 flex items-center gap-4 ${
         isActive
-          ? "border-[#00a2ff]/60 "
-          : "border-[#4c4c4c] "
+          ? "border-[#0091FF] bg-[#0A1622]/60 shadow-[0_0_20px_rgba(0,145,255,0.15)]"
+          : "border-[#4C4C4C] bg-[#0A1622]/30 backdrop-blur-sm"
       }`}
     >
       <div
-        className={`w-10 h-10 md:w-12 md:h-12 rounded-full border flex items-center justify-center font-bold text-base md:text-xl transition-all duration-300 shrink-0 ${
+        className={`w-11 h-11 rounded-full border flex items-center justify-center font-bold text-lg transition-all duration-300 shrink-0 ${
           isActive
-            ? "border-[#00a2ff] text-[#00a2ff] "
-            : "border-[#4c4c4c] text-[#4c4c4c] "
+            ? "border-[#0091FF] bg-[#0091FF]/20 text-[#0091FF]"
+            : "border-[#4C4C4C] text-[#4C4C4C]"
         }`}
       >
         {step.number}
       </div>
-      <div className="flex-1">
-        <h4 className={`font-poppins font-medium text-md xl:text-lg leading-snug ${isActive ? "text-[#00a2ff]" : "text-white"}`}>
+      <div className="flex-1 min-w-0">
+        <h4
+          className={`font-poppins font-semibold text-[15px] leading-tight ${
+            isActive ? "text-[#0091FF]" : "text-white"
+          }`}
+        >
           {step.title}{" "}
           {step.linkUrl && (
             <Link
               href={step.linkUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#00a2ff] hover:underline"
+              className="text-[#0091FF] underline block sm:inline font-normal"
             >
               {step.linkText}
             </Link>
           )}
         </h4>
         {step.desc && (
-          <p className={`font-poppins font-normal text-xs md:text-sm mt-1 leading-relaxed ${isActive ? "text-[#00a2ff]" : "text-white"}`}>
+          <p
+            className={`font-poppins font-light text-[13px] leading-snug mt-1 ${
+              isActive ? "text-[#0091FF]/90" : "text-white/70"
+            }`}
+          >
             {step.desc}
           </p>
         )}

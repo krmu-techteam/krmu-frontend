@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { OVERVIEW_SECTION_IMAGES } from "@/features/school";
 import { OverviewSectionProps } from "@/features/school";
@@ -13,28 +12,28 @@ const OverviewSection = ({
   slug,
 }: OverviewSectionProps) => {
   return (
-    <section className="relative py-8 md:py-12 xl:py-20 px-6 md:px-8 lg:px-11 2xl:px-16">
-          <div className="grid max-w-[1530px] mx-auto grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-            {(() => {
-              const displayCounters = [...(counters || [])];
-              if (displayCounters.length === 3) {
-                displayCounters.push({
-                  id: 999999,
-                  countertext: "18K+",
-                  countercontent: "Alumni Worldwide",
-                });
-              }
-              return displayCounters.map((counter, index) => (
-                <StatCard
-                  key={counter.id}
-                  title={counter?.countertext}
-                  desc={counter?.countercontent}
-                  index={index}
-                />
-              ));
-            })()}
-          </div>
-      <div className="max-w-[1530px] mx-auto w-full flex flex-col lg:flex-row gap-8 lg:gap-12 mt-12">
+    <section className="relative py-8 md:py-12 xl:py-20">
+      <div className="grid max-w-[1530px] mx-auto grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 px-6 md:px-8 lg:px-12">
+        {(() => {
+          const displayCounters = [...(counters || [])];
+          if (displayCounters.length === 3) {
+            displayCounters.push({
+              id: 999999,
+              countertext: "18K+",
+              countercontent: "Alumni Worldwide",
+            });
+          }
+          return displayCounters.map((counter, index) => (
+            <StatCard
+              key={counter.id}
+              title={counter?.countertext}
+              desc={counter?.countercontent}
+              index={index}
+            />
+          ));
+        })()}
+      </div>
+      <div className="max-w-[1530px] mx-auto px-6 md:px-8 lg:px-12 w-full flex flex-col lg:flex-row gap-8 lg:gap-12 mt-12">
         <div className="w-full lg:w-5/12 relative h-[400px] sm:h-[500px] lg:h-[450px] shrink-0">
           <Image
             src={OVERVIEW_SECTION_IMAGES[slug] || "/info.webp"}

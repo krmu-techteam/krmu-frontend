@@ -5,12 +5,19 @@ import Image from "next/image";
 
 type Props = {
   heading: string;
-  desc: string;
+  desc?: string;
   subtitle: string;
   advimg: StrapiMedia;
   advcards: CardWithImage[];
   school_advantage: string;
 };
+
+const LOCAL_ADVANTAGE_ICONS = [
+  "/images/school/advantages/book.png",
+  "/images/school/advantages/home.png",
+  "/images/school/advantages/badge.png",
+  "/images/school/advantages/handshake.png",
+];
 
 const AdvantagesSection = ({
   heading,
@@ -19,74 +26,90 @@ const AdvantagesSection = ({
   advcards,
   school_advantage,
 }: Props) => {
+  // const imgSrc = advimg?.url
+  //   ? `${STRAPI_URL}${advimg.url}`
+  //   : "/images/school/advantages/advantages.jpg";
+  const imgSrc = "/images/school/advantages/advantages.jpg";
+
   return (
-    <section className="py-12 xl:py-20 bg-transparent relative z-10 font-poppins text-white px-6 md:px-8 lg:px-11 2xl:px-16">
-      <div className="max-w-[1530px] mx-auto w-full">
-        <div className="flex flex-col xl:flex-row gap-14 xl:gap-20 items-start">
-          
-          {/* Left Column: Content + Grid */}
-          <div className="w-full xl:w-[65%] flex flex-col order-2 xl:order-1">
-            {/* Heading */}
-            <h2 className="text-3xl md:text-[45px] leading-tight mb-6 font-serif">
+    <section className="py-12 xl:py-20 bg-transparent relative z-10 font-poppins text-white">
+      <div className="max-w-[1530px] mx-auto w-full relative px-4 md:px-8 lg:px-12">
+        {/* Top Section: Image on Left + Title & Description on Right */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start pb-8">
+          {/* Left: Image Card (Width: 464px, Height: 600px, Rounded: 10px) */}
+          <div className="w-full lg:w-[464px] shrink-0 relative h-[480px] sm:h-[540px] lg:h-[600px] ml-2 lg:ml-5 rounded-[11px] overflow-hidden group z-10">
+            <Image
+              src={imgSrc}
+              alt={heading || "Advantage"}
+              fill
+              sizes="(max-width: 1024px) 100vw, 464px"
+              className="object-contain object-center"
+              priority
+            />
+          </div>
+
+          {/* Right: Heading & Description */}
+          <div className="flex-1 flex flex-col justify-center gap-4 lg:pl-2 pt-2">
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-normal font-serif text-white leading-tight">
               {heading} {subtitle}
             </h2>
-            
-            {/* Description */}
+
             {school_advantage && (
               <div
                 dangerouslySetInnerHTML={{
                   __html: school_advantage,
                 }}
-                className="text-base md:text-[17px] leading-relaxed text-white/80 mb-14 max-w-[95%]"
+                className="text-sm md:text-base leading-relaxed text-white/80 font-light font-poppins"
               />
             )}
+          </div>
+        </div>
 
-            {/* 2x2 Advantages Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-12">
-              {advcards &&
-                advcards.map((advcard) => (
-                  <div key={advcard?.id} className="flex items-start gap-5">
-                    <div className="shrink-0 pt-1 w-12 h-12 flex items-center justify-center">
-                      {advcard?.cardimg?.url && (
+        {/* Bottom Section: Gradient Advantage Cards Banner overlapping top image */}
+        {advcards && advcards.length > 0 && (
+          <div
+            className="w-full min-h-[178px] rounded-[10px] p-6 md:p-8 lg:px-10 lg:py-8 relative z-20 -mt-32 sm:-mt-40 lg:-mt-56 transition-all duration-500"
+            style={{
+              background:
+                "linear-gradient(93.79deg, #061623 68.33%, #E7C268 101.64%)",
+            }}
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-start">
+              {advcards.map((advcard, index) => {
+                const iconSrc = advcard?.cardimg?.url
+                  ? `${STRAPI_URL}${advcard.cardimg.url}`
+                  : LOCAL_ADVANTAGE_ICONS[index % LOCAL_ADVANTAGE_ICONS.length];
+
+                return (
+                  <div
+                    key={advcard?.id || index}
+                    className="flex items-start gap-4"
+                  >
+                    {iconSrc && (
+                      <div className="shrink-0 w-10 h-10 lg:w-11 lg:h-11 flex items-center justify-center pt-0.5">
                         <Image
-                          src={`${STRAPI_URL}${advcard.cardimg.url}`}
-                          width={48}
-                          height={48}
+                          src={iconSrc}
+                          width={44}
+                          height={44}
                           alt={advcard?.title || "Icon"}
-                          className="w-full h-full object-contain filter brightness-0 invert opacity-90"
+                          className="w-full h-full object-contain filter brightness-0 invert"
                         />
-                      )}
-                    </div>
+                      </div>
+                    )}
                     <div className="flex flex-col">
-                      <h6 className="text-[17px] font-semibold text-white/95 mb-2 leading-snug">
+                      <h3 className="text-sm lg:text-[15px] font-bold text-white leading-snug font-poppins">
                         {advcard?.title}
-                      </h6>
-                      <p className="text-[14.5px] text-white/60 leading-relaxed">
+                      </h3>
+                      <p className="text-xs lg:text-[13px] text-white/75 font-light leading-relaxed font-poppins mt-1">
                         {advcard?.cardcontent}
                       </p>
                     </div>
                   </div>
-                ))}
+                );
+              })}
             </div>
           </div>
-
-          {/* Right Column: Image */}
-          {advimg?.url && (
-            <div className="w-full xl:w-[35%] shrink-0 flex justify-center xl:justify-end order-1 xl:order-2">
-              <div className="relative w-full rounded-sm overflow-hidden flex items-center justify-center bg-[#0B1521]">
-                <Image
-                  src={`${STRAPI_URL}${advimg.url}`}
-                  width={advimg.width || 800}
-                  height={advimg.height || 1000}
-                  className="w-full h-auto max-h-[600px] object-contain px-6 pt-6"
-                  alt="School Advantage"
-                  unoptimized
-                />
-              </div>
-            </div>
-          )}
-          
-        </div>
+        )}
       </div>
       <SectionDivider />
     </section>
