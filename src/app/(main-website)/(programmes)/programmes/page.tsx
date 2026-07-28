@@ -2,15 +2,16 @@ import { getProgrammePageData } from "@/lib/api/programme";
 import ProgrammesAlumni from "./comp/ProgrammesAlumni";
 import ProgrammesConnectWithUs from "./comp/ProgrammesConnectWithUs";
 import ProgrammesOurLocation from "./comp/ProgrammesOurLocation";
-import ProgrammesSearch from "./comp/ProgrammesSearch";
 import { STRAPI_URL } from "@/app/constant";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { Metadata } from "next";
 import { createBreadcrumbProgSchema } from "@/lib/api/common";
 import Script from "next/script";
-import ProgrammesHero from "./comp/ProgrammesHero";
 import { Suspense } from "react";
-import { HeroSection, ProgrammesExplorer } from "@/presentation/programmes/sections";;
+import {
+  HeroSection,
+  ProgrammesExplorer,
+} from "@/presentation/programmes/sections";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("programmes");

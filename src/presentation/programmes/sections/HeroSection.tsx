@@ -16,16 +16,31 @@ const HeroSection = () => {
             className="w-full h-auto object-contain rounded-[4px] block"
           />
 
+          {/* Gradient Overlay: Dark on left, fading out smoothly by 50% */}
+          <div
+            className="absolute inset-0 pointer-events-none z-5"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.45) 25%, rgba(0, 0, 0, 0) 50%)",
+            }}
+          />
+
           {/* Hero Overlay Content */}
           <div className="absolute inset-0 z-10 w-full md:w-1/2 px-6 py-4 sm:py-8 md:pl-8 lg:pl-16 flex flex-col justify-center text-center md:text-left">
             <span className="text-white/80 text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.2em] font-light font-poppins block">
               Academics
             </span>
-            <div className="space-y-1 sm:space-y-2 md:space-y-4 mb-2 sm:mb-4">
+            <div className="space-y-1 sm:space-y-2 md:space-y-4 mb-2 sm:mb-2">
               <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold text-white font-serif leading-tight">
                 Programs
               </h1>
-              <div className="w-32 sm:w-52 lg:w-90 h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent md:from-white/40 md:via-white/20 md:to-transparent mx-auto md:ml-0" />
+              <div
+                className="w-full max-w-[511px] h-[1px] mx-auto md:ml-0 my-2 sm:my-3"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #1A1A1A 0%, #FFFFFF 0.01%, #1A1A1A 100%)",
+                }}
+              />
             </div>
             <p className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg font-light font-poppins max-w-lg leading-relaxed mx-auto md:ml-0 hidden sm:block">
               Transform your Life with the Right Programme
