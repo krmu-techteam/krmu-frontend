@@ -77,7 +77,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
   );
 
   // Prepare Overview links ensuring "Research And Innovation" is present
-  const rawOverviewLinks = aboutusMenu?.overview?.menulinks
+  const rawOverviewLinks: any[] = aboutusMenu?.overview?.menulinks
     ? [...aboutusMenu.overview.menulinks]
     : [
         { id: 1, title: "About KRMU", url: "/about-us" },
@@ -112,8 +112,8 @@ const NavbarMenu = ({ mainMenu }: Props) => {
     const awardsIndex = rawOverviewLinks.findIndex((link: any) =>
       link.title?.toLowerCase().includes("awards"),
     );
-    const researchItem = {
-      id: "research-and-innovation",
+    const researchItem: any = {
+      id: 999,
       title: "Research And Innovation",
       url: "/research-overview",
     };
