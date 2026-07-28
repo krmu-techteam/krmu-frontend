@@ -59,7 +59,7 @@
         #e8e7e2 0%,
         #d6c9dd 58.17%,
         #c9cedd 99.04%
-      );
+      ) !important;
     }
     .curr-card-container-3 {
       background-image: none;
@@ -68,7 +68,7 @@
         #e8e7e2 0%,
         #ddddc9 58.17%,
         #c9cedd 99.04%
-      );
+      ) !important;
     }
     .curr-card-container-4 {
       background-image: none;
@@ -77,7 +77,7 @@
         #e8e7e2 0%,
         #bcd1da 58.17%,
         #c9cedd 99.04%
-      );
+      ) !important;
     }
   }
   .curr-card-container-2 {

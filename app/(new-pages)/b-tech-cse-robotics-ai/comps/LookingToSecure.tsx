@@ -2,12 +2,10 @@ import Image from "next/image";
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 
-
 const LookingToSecure = () => {
   return (
     <section className="bg-[linear-gradient(90deg,#001732_43.27%,#B08233_100%)] pt-10 overflow-hidden relative">
-      <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row items-center px-4 sm:px-6 lg:px-8">
-
+      <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row px-4 sm:px-6 lg:px-8">
         {/* Background Decorative Image */}
         <Image
           src="/demo/university.png"
@@ -27,44 +25,45 @@ const LookingToSecure = () => {
         />
 
         {/* Left Content */}
-        <div className="w-full lg:w-1/2 text-center lg:text-left z-10 py-8 lg:py-0">
-          <span className="inline-block rounded-full bg-[#D9D9D9] px-3 py-1.5 text-xs sm:text-sm font-semibold text-black">
-            Admissions 2026-27
-          </span>
+        <div className="w-full lg:w-1/2 text-center lg:text-left z-10 pt-8 lg:pt-0 pb-10 lg:flex flex-col justify-between">
+          <div>
+            <span className="inline-block rounded-full bg-[#7a8490] px-3 py-1.5 text-xs sm:text-sm font-semibold text-black">
+              Admissions 2026-27
+            </span>
 
-          <h4 className="mt-4 mb-5 text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight">
-            Looking to secure your future with quality education?
-          </h4>
+            <h4 className="mt-4 mb-5 text-3xl sm:text-4xl lg:text-[34px] font-semibold text-white leading-tight">
+              Looking to secure your future with quality education?
+            </h4>
 
-          <span className="inline-block rounded-full bg-[#2fb7d7] px-4 py-2 text-xs sm:text-sm font-semibold text-black">
-            Step into future of learning, growth and endless opportunities
-          </span>
+            <span className="inline-block rounded-full bg-[#2fb7d7] px-4 py-2 text-xs sm:text-sm font-semibold text-black">
+              Step into future of learning, growth and endless opportunities
+            </span>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
-            {/* <button className="">
+            <div className="mt-8 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-2">
+              {/* <button className="">
               Apply Today
             </button>
 
             <button className="">
               Download Brochure
             </button> */}
-             <NpfPopup
+              <NpfPopup
                 formId={`31c1452015d32698095f833b3e7eb9c5`}
                 btnClass={`rounded-md bg-[#DE0000] px-6 py-3 text-sm font-semibold uppercase text-white transition hover:bg-red-700 npfWidget-31c1452015d32698095f833b3e7eb9c5`}
                 btnText="Apply Now"
                 showIcon={false}
               />
-                 <CommonLeadPopup
-                      buttonText='Download Prospectus'
-                      buttonClassName="rounded-md bg-white px-6 py-3 text-sm font-semibold uppercase text-[#012959] transition hover:bg-gray-100"
-                      redirectUrl="https://www.krmangalam.edu.in/pdfs/programme-brochure/btech-cse-new.pdf"
-                      form_name="Download Prospectus"
-                    />
+              <CommonLeadPopup
+                buttonText="Download Prospectus"
+                buttonClassName="rounded-md bg-white px-6 py-3 text-sm font-semibold uppercase text-[#012959] transition hover:bg-gray-100"
+                redirectUrl="https://www.krmangalam.edu.in/pdfs/programme-brochure/btech-cse-new.pdf"
+                form_name="Download Prospectus"
+              />
+            </div>
           </div>
-
           <div className="mt-8">
             <Image
-              src="/demo/admission-open.svg"
+              src="/demo/admission-open.png"
               width={648}
               height={90}
               alt="Admission Open"
@@ -80,7 +79,7 @@ const LookingToSecure = () => {
             width={420}
             height={522}
             alt="Admission"
-            className="h-auto w-[240px] sm:w-[320px] md:w-[380px] lg:w-[420px]"
+            className="h-auto w-[240px] sm:w-[320px] md:w-[380px] lg:w-[450px]"
           />
         </div>
       </div>

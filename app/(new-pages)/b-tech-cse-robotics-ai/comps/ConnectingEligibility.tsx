@@ -7,7 +7,7 @@ const ConnectingEligibility = () => {
       <div className="max-w-6xl mx-auto flex flex-col xl:flex-row gap-2">
         {/* Left Side */}
         <div className="w-full xl:w-2/5">
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row justify-center xl:justify-start gap-4">
             {/* Duration */}
             <div className="bg-white rounded-[10px] p-5 lg:p-7 lg:px-10 flex items-center gap-4">
               <Calendar className="shrink-0" />

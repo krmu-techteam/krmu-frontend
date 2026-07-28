@@ -58,7 +58,7 @@ const CometoLifeSlide = () => {
                     className={`w-full rounded-2xl object-cover object-top transition-all duration-500 ${
                       isActive
                         ? "h-[426px] w-[581px]"
-                        : "h-[295px] w-[382px]"
+                        : "h-[350px] w-[382px]"
                     }`}
                   />
                 </div>

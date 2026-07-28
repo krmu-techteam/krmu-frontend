@@ -64,9 +64,9 @@ const AdmissionProcess = () => {
           {steps.map((item) => (
             <div
               key={item.step}
-              className={`${item.gradient} rounded-[5px] p-5 min-h-[220px] flex flex-col justify-around`}
+              className={`${item.gradient} rounded-[5px] p-5 min-h-[220px] flex flex-col md:justify-around`}
             >
-              <div className="mb-6">
+              <div className="mb-3 md:mb-6">
                 <h5 className="text-sm uppercase tracking-wide">
                   {item.step}
                 </h5>

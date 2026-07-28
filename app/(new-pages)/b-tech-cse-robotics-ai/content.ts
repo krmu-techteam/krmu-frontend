@@ -30,12 +30,6 @@ export const curriculumData = [
         ],
       },
     ],
-    OeVac: [
-      {
-        text: "Open Elective & Value Added Course",
-        link: "",
-      },
-    ],
   },
 
   // 2nd Year
@@ -78,6 +72,12 @@ export const curriculumData = [
     year: "3rd Year",
     bgImage: "url(/demo/year-3.png)",
     // image: "/demo/year3-bg.png",
+    OeVac: [
+      {
+        text: "Open Elective & Value Added Course",
+        link: "https://www.krmangalam.edu.in/pdfs/Open-Electives-and-Value-Added-Courses.pdf",
+      },
+    ],
     semesters: [
       {
         title: "Semester 5",
@@ -125,6 +125,12 @@ export const curriculumData = [
       {
         title: "Semester 8",
         subjects: ["Capstone Project II / Internship"],
+      },
+    ],
+        OeVac: [
+      {
+        text: "Open Elective & Value Added Course",
+        link: "https://www.krmangalam.edu.in/pdfs/Open-Electives-and-Value-Added-Courses.pdf",
       },
     ],
   },

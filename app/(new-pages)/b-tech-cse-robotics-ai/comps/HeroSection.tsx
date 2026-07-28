@@ -13,7 +13,7 @@ const HeroSection = () => {
         alt="Ellipse"
         className="absolute -left-24 top-0"
       />
-      <div className="max-w-[1564px] mx-auto w-full pt-[120px] sm:pt-44 flex flex-col xl:flex-row font-poppins z-20 relative px-5 2xl:px-0">
+      <div className="max-w-[1564px] mx-auto w-full pt-[120px] sm:pt-44 flex flex-col xl:flex-row font-poppins z-20 relative px-5">
         <Image
           src="/ai-ml.svg"
           width={920}
@@ -30,12 +30,12 @@ const HeroSection = () => {
                       text-4xl
                       sm:text-5xl
                       xl:text-[55px]
-                      2xl:text-[2xl]
+                      2xl:text-7xl
                       leading-[1.2]
                       xl:max-w-[800px]
                       font-bold
-                      mb-2.5
-                      my-2.5
+                      pb-2.5
+                      py-2.5
                       bg-[linear-gradient(89.96deg,_#001732_0.03%,_#004698_78.3%)]
                       bg-clip-text
                       text-transparent

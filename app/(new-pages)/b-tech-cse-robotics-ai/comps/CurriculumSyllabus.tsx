@@ -5,7 +5,7 @@ import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 
 const CurriculumSyllabus = () => {
   return (
-    <section className="py-12 md:py-20">
+    <section className="py-12">
       <div className="max-w-7xl mx-auto px-5">
         <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#001732] leading-tight mb-2.5">
           Curriculum & Syllabus
@@ -30,7 +30,7 @@ const CurriculumSyllabus = () => {
                 }}
               >
                 <div
-                  className={`pb-8 pl-4 pt-4 pr-4 md:pr-10 min-h-[280px] sm:min-h-[320px] md:min-h-[354px] flex flex-col md:flex-row gap-5 bg-white bg-no-repeat bg-cover bg-center border-[3px] border-[#b9c6d5] rounded-[14px] relative overflow-hidden shadow-[0_10px_30px_-15px_rgba(0,23,50,0.35)] curr-card-container curr-card-container-${index + 1}`}
+                  className={`pb-8 pl-4 pt-4 pr-4 md:pr-10 min-h-[280px] sm:min-h-[320px] md:min-h-[354px] flex flex-col md:flex-row gap-5 bg-white bg-no-repeat bg-cover bg-center border-[3px] border-[#b9c6d5] rounded-[14px] relative overflow-hidden curr-card-container curr-card-container-${index + 1}`}
                   // style={{
                   //   backgroundImage: item.bgImage,
                   //   backgroundSize: "cover",
@@ -76,19 +76,24 @@ const CurriculumSyllabus = () => {
                         );
                       })}
                     </div>
-                    {item.OeVac &&
-                      item.OeVac.map((vacItem, i) => (
-                        <CommonLeadPopup
-                          buttonText={
-                            vacItem.text || "Open Elective & Value Added Course"
-                          }
-                          buttonClassName="text-base text-[#F85F00] leading-tight font-semibold"
-                          redirectUrl={vacItem.link}
-                          form_name={
-                            vacItem.text || "Open Elective & Value Added Course"
-                          }
-                        />
-                      ))}
+                    <div className="mt-5">
+                      {item.OeVac &&
+                        item.OeVac.map((vacItem, i) => (
+                          <CommonLeadPopup
+                            key={i}
+                            buttonText={
+                              vacItem.text ||
+                              "Open Elective & Value Added Course"
+                            }
+                            buttonClassName="text-base text-[#F85F00] leading-tight font-semibold"
+                            redirectUrl={vacItem.link}
+                            form_name={
+                              vacItem.text ||
+                              "Open Elective & Value Added Course"
+                            }
+                          />
+                        ))}
+                    </div>
                   </div>
                 </div>
               </div>
