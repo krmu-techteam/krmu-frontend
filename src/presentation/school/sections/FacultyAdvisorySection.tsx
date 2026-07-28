@@ -26,7 +26,7 @@ const FacultyAdvisorySection = ({ schoolCat, fac_adv }: Props) => {
               __html:
                 fac_adv?.fac_title || `Faculty At ${schoolCat.toUpperCase()}`,
             }}
-            className="text-3xl xl:text-[42px] text-left px-4 md:px-0 font-bold text-white mb-6 xl:mb-8 font-poppins"
+            className="heading-primary mb-4 md:mb-8"
           />
           <FacultyAdvisoryCards schoolCat={schoolCat} />
         </div>
@@ -34,9 +34,7 @@ const FacultyAdvisorySection = ({ schoolCat, fac_adv }: Props) => {
         {/* Advisory List (if applicable) */}
         {isBoth && (
           <div>
-            <div className="text-3xl md:text-[42px] text-left px-4 md:px-0 font-bold text-white mb-8 font-poppins">
-              Advisory Board
-            </div>
+            <div className="heading-primary mb-4 md:mb-8">Advisory Board</div>
             <AdvisoryCards schoolCat={schoolCat} />
           </div>
         )}

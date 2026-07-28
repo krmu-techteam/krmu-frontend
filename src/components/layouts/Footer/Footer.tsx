@@ -390,278 +390,292 @@ const Footer = async () => {
   );
 
   return (
-    <footer className="relative w-full overflow-hidden font-poppins tracking-tight">
-      <BicolorDivider />
+    <footer
+      className="relative w-full overflow-hidden font-poppins tracking-tight bg-cover bg-no-repeat bg-center"
+      style={{ backgroundImage: "url('/modules/home/footer/footer-bg.png')" }}
+    >
+      {/* Dark Black Overlay */}
+      <div className="absolute inset-0 bg-black/75 transition-opacity"></div>
 
-      {/* Main Footer Body (Top Section) */}
-      <div
-        className="relative py-8 md:py-16 lg:py-20 bg-cover bg-no-repeat bg-center"
-        style={{ backgroundImage: "url('/modules/home/footer/footer-bg.png')" }}
-      >
-        {/* Dark Overlay */}
-        {/* <div className="absolute inset-0 bg-brand-dark/70 transition-opacity"></div> */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/55 transition-opacity"></div>
+      <div className="relative z-10">
+        <BicolorDivider />
 
-        <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-11 xl:px-16 relative z-10">
-          <div className="columns-2 gap-6 md:gap-8 lg:gap-12 text-white text-left md:grid md:grid-cols-3 lg:grid-cols-5 space-y-6 md:space-y-0">
-            {/* Column 1: Programmes */}
-            <div className="inline-block w-full break-inside-avoid font-poppins">
-              <h4 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]  font-semibold mb-1 text-white tracking-wide">
-                Programmes
-              </h4>
-              <ul className="space-y-1">
-                {footerLinks.programmes.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      target={link.target}
-                      rel={link.rel}
-                      className="text-white/80 hover:text-white transition-all duration-300 text-[15px] inline-block [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+        {/* Main Footer Body (Top Section) */}
+        <div className="py-8 md:py-16 lg:py-20">
+          <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-11 xl:px-16">
+            <div className="columns-2 gap-6 md:gap-8 lg:gap-12 text-white text-left md:grid md:grid-cols-3 lg:grid-cols-5 space-y-6 md:space-y-0">
+              {/* Column 1: Programmes */}
+              <div className="inline-block w-full break-inside-avoid font-poppins">
+                <h4 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]  font-semibold mb-1 text-white tracking-wide">
+                  Programmes
+                </h4>
+                <ul className="space-y-1">
+                  {footerLinks.programmes.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        target={link.target}
+                        rel={link.rel}
+                        className="text-white/80 hover:text-white transition-all duration-300 text-[15px] inline-block [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
 
-              <Button
-                href="#"
-                className="mt-6 !border-[2px] !border-white !text-white !px-1 !text-[14px]"
-              >
-                Download Handbook
-              </Button>
-              <Image
-                src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/footer_logos_d944bc560c.svg"
-                width={560}
-                height={160}
-                alt="Accreditation Logos"
-                className="w-auto h-auto max-w-[280px] mt-6"
-                unoptimized
-              />
-            </div>
-
-            {/* Column 2: Quick Links */}
-            <div className="inline-block w-full break-inside-avoid">
-              <h4 className="text-[16px] font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] mb-1 text-white tracking-wide">
-                {footerComp3?.heading?.heading || "Quick Links"}
-              </h4>
-              <ul className="space-y-1">
-                {footerComp3?.footer_menu
-                  ? footerComp3.footer_menu.map((menu) => (
-                      <li key={menu.id}>
-                        <Link
-                          href={menu.url || "#"}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
-                        >
-                          {menu.title}
-                        </Link>
-                      </li>
-                    ))
-                  : footerLinks.quickLinks.map((link) => (
-                      <li key={link.name}>
-                        <Link
-                          href={link.href}
-                          target={link.target}
-                          rel={link.rel}
-                          className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
-                        >
-                          {link.name}
-                        </Link>
-                      </li>
-                    ))}
-              </ul>
-            </div>
-
-            {/* Column 3: About KRMU */}
-            <div className="inline-block w-full break-inside-avoid">
-              <h4 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
-                About KRMU
-              </h4>
-              <ul className="space-y-1">
-                {footerComp2?.footer_menu
-                  ? footerComp2.footer_menu.map((menu) => (
-                      <li key={menu.id}>
-                        <Link
-                          href={menu.url || "#"}
-                          className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
-                        >
-                          {menu.title}
-                        </Link>
-                      </li>
-                    ))
-                  : footerLinks.aboutKRMU.map((link) => (
-                      <li key={link.name}>
-                        <Link
-                          href={link.href}
-                          target={link.target}
-                          rel={link.rel}
-                          className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
-                        >
-                          {link.name}
-                        </Link>
-                      </li>
-                    ))}
-              </ul>
-            </div>
-
-            {/* Column 4: Student Resources */}
-            <div className="inline-block w-full break-inside-avoid">
-              <h4 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
-                Student Resources
-              </h4>
-              <ul className="space-y-1">
-                {footerLinks.studentResources.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      target={link.target}
-                      rel={link.rel}
-                      className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Column 5: Legal & Compliance */}
-            <div className="inline-block w-full break-inside-avoid">
-              <h4 className="text-[16px]  [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
-                Legal & Compliance
-              </h4>
-              <ul className="space-y-1">
-                {footerLinks.legal.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      target={link.target}
-                      rel={link.rel}
-                      className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/campus-life/virtual-tour"
-                target="_blank"
-                className="relative group mt-5 block"
-              >
-                <div className="relative w-36 h-16">
-                  <Image
-                    src="/modules/home/footer/virtual-tour.png"
-                    alt="360 Virtual Tour"
-                    fill
-                    sizes="144px"
-                    className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-700"
-                  />
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Footer Section with Brand Dark Background */}
-      <div className="bg-brand-navy pt-7">
-        <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-11 xl:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12 text-center md:text-left text-white items-start">
-            {/* Helpline Section */}
-            <div className="flex flex-col h-full justify-between min-h-[90px] lg:min-h-[112px]">
-              <div>
-                <h5 className="text-md font-semibold mb-1 text-white">
-                  General Helpline No
-                </h5>
-                <p className="text-white/70 text-md font-light block mb-4 hover:text-white transition-colors">
-                  01148884888, 8800697010 – 15,
-                  <br />
-                  8192888444
-                </p>
-              </div>
-            </div>
-
-            {/* Email Section */}
-            <div>
-              <h5 className="text-md font-semibold text-white">Email</h5>
-              {emailItem ? (
-                <div
-                  className="text-white/70 text-md font-light block mb-4 hover:text-white transition-colors"
-                  dangerouslySetInnerHTML={{ __html: emailItem.footer_info }}
-                />
-              ) : (
-                <a
-                  href="mailto:welcome@krmangalam.edu.in"
-                  className="text-white/70 text-md font-light block mb-4 hover:text-white transition-colors"
+                <Button
+                  href="#"
+                  className="mt-6 !border-[2px] !border-white !text-white !px-1 !text-[14px]"
                 >
-                  welcome@krmangalam.edu.in
-                </a>
-              )}
-
-              {/* Social Icons */}
-              <div className="flex justify-center md:justify-start gap-4 mt-4">
-                {footerComp4?.footer_social_icons?.map((comp4) => (
-                  <Link
-                    key={comp4?.id}
-                    href={comp4?.footer_url || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/30 hover:text-white transition-all duration-300 transform hover:-translate-y-1 block relative w-5 h-5"
-                  >
-                    <Image
-                      src={`${STRAPI_URL}${comp4?.footer_icon?.url}`}
-                      alt={comp4?.footer_icon?.alternativeText || "Social Icon"}
-                      fill
-                      className="object-contain filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity"
-                    />
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Address Section */}
-            <div>
-              <h5 className="text-md font-semibold text-white">Get in Touch</h5>
-              {addressItem ? (
-                <div
-                  className="text-white/70 text-md font-light leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: addressItem.footer_info }}
+                  Download Handbook
+                </Button>
+                <Image
+                  src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/footer_logos_d944bc560c.svg"
+                  width={560}
+                  height={160}
+                  alt="Accreditation Logos"
+                  className="w-auto h-auto max-w-[280px] mt-6"
+                  unoptimized
                 />
-              ) : (
-                <p className="text-white/70 text-md font-light leading-relaxed">
-                  Sohna Road, Gurugram,
-                  <br />
-                  Haryana – 122103
-                </p>
-              )}
-            </div>
+              </div>
 
-            <div className="flex justify-center md:justify-end text-md gap-4">
-              <Link
-                href="/under-construction"
-                className="text-white/90 hover:text-white transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <span className="text-white/10">|</span>
-              <Link
-                href="/under-construction"
-                className="text-white/90 hover:text-white transition-colors"
-              >
-                Terms & Conditions
-              </Link>
+              {/* Column 2: Quick Links */}
+              <div className="inline-block w-full break-inside-avoid">
+                <h4 className="text-[16px] font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] mb-1 text-white tracking-wide">
+                  {footerComp3?.heading?.heading || "Quick Links"}
+                </h4>
+                <ul className="space-y-1">
+                  {footerComp3?.footer_menu
+                    ? footerComp3.footer_menu.map((menu) => (
+                        <li key={menu.id}>
+                          <Link
+                            href={menu.url || "#"}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
+                          >
+                            {menu.title}
+                          </Link>
+                        </li>
+                      ))
+                    : footerLinks.quickLinks.map((link) => (
+                        <li key={link.name}>
+                          <Link
+                            href={link.href}
+                            target={link.target}
+                            rel={link.rel}
+                            className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
+                          >
+                            {link.name}
+                          </Link>
+                        </li>
+                      ))}
+                </ul>
+              </div>
+
+              {/* Column 3: About KRMU */}
+              <div className="inline-block w-full break-inside-avoid">
+                <h4 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
+                  About KRMU
+                </h4>
+                <ul className="space-y-1">
+                  {footerComp2?.footer_menu
+                    ? footerComp2.footer_menu.map((menu) => (
+                        <li key={menu.id}>
+                          <Link
+                            href={menu.url || "#"}
+                            className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
+                          >
+                            {menu.title}
+                          </Link>
+                        </li>
+                      ))
+                    : footerLinks.aboutKRMU.map((link) => (
+                        <li key={link.name}>
+                          <Link
+                            href={link.href}
+                            target={link.target}
+                            rel={link.rel}
+                            className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
+                          >
+                            {link.name}
+                          </Link>
+                        </li>
+                      ))}
+                </ul>
+              </div>
+
+              {/* Column 4: Student Resources */}
+              <div className="inline-block w-full break-inside-avoid">
+                <h4 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
+                  Student Resources
+                </h4>
+                <ul className="space-y-1">
+                  {footerLinks.studentResources.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        target={link.target}
+                        rel={link.rel}
+                        className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Column 5: Legal & Compliance */}
+              <div className="inline-block w-full break-inside-avoid">
+                <h4 className="text-[16px]  [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
+                  Legal & Compliance
+                </h4>
+                <ul className="space-y-1">
+                  {footerLinks.legal.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        href={link.href}
+                        target={link.target}
+                        rel={link.rel}
+                        className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/campus-life/virtual-tour"
+                  target="_blank"
+                  className="relative group mt-5 block"
+                >
+                  <div className="relative w-36 h-16">
+                    <Image
+                      src="/modules/home/footer/virtual-tour.png"
+                      alt="360 Virtual Tour"
+                      fill
+                      sizes="144px"
+                      className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                    />
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="w-full border-t border-white/20">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-white/90 text-[16px]   py-3">
-            <p className="text-center">
-              Copyrights © 2026 All Rights Reserved by KR Mangalam University.
-            </p>
+        {/* Middle Divider Line (Above Helpline/Contact Section) */}
+        <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-11 xl:px-16">
+          <div className="w-full border-t border-white/30 mb-6 lg:mb-8" />
+        </div>
+
+        {/* Bottom Footer Section */}
+        <div>
+          <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-11 xl:px-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12 text-center md:text-left text-white items-start">
+              {/* Helpline Section */}
+              <div className="flex flex-col h-full justify-between min-h-[90px] lg:min-h-[112px]">
+                <div>
+                  <h5 className="text-md font-semibold mb-1 text-white">
+                    General Helpline No
+                  </h5>
+                  <p className="text-white/70 text-md font-light block mb-4 hover:text-white transition-colors">
+                    01148884888, 8800697010 – 15,
+                    <br />
+                    8192888444
+                  </p>
+                </div>
+              </div>
+
+              {/* Email Section */}
+              <div>
+                <h5 className="text-md font-semibold text-white">Email</h5>
+                {emailItem ? (
+                  <div
+                    className="text-white/70 text-md font-light block mb-4 hover:text-white transition-colors"
+                    dangerouslySetInnerHTML={{ __html: emailItem.footer_info }}
+                  />
+                ) : (
+                  <a
+                    href="mailto:welcome@krmangalam.edu.in"
+                    className="text-white/70 text-md font-light block mb-4 hover:text-white transition-colors"
+                  >
+                    welcome@krmangalam.edu.in
+                  </a>
+                )}
+
+                {/* Social Icons */}
+                <div className="flex justify-center md:justify-start gap-4 mt-4">
+                  {footerComp4?.footer_social_icons?.map((comp4) => (
+                    <Link
+                      key={comp4?.id}
+                      href={comp4?.footer_url || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/30 hover:text-white transition-all duration-300 transform hover:-translate-y-1 block relative w-5 h-5"
+                    >
+                      <Image
+                        src={`${STRAPI_URL}${comp4?.footer_icon?.url}`}
+                        alt={
+                          comp4?.footer_icon?.alternativeText || "Social Icon"
+                        }
+                        fill
+                        className="object-contain filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity"
+                      />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Address Section */}
+              <div>
+                <h5 className="text-md font-semibold text-white">
+                  Get in Touch
+                </h5>
+                {addressItem ? (
+                  <div
+                    className="text-white/70 text-md font-light leading-relaxed"
+                    dangerouslySetInnerHTML={{
+                      __html: addressItem.footer_info,
+                    }}
+                  />
+                ) : (
+                  <p className="text-white/70 text-md font-light leading-relaxed">
+                    Sohna Road, Gurugram,
+                    <br />
+                    Haryana – 122103
+                  </p>
+                )}
+              </div>
+
+              <div className="flex justify-center md:justify-end text-md gap-4">
+                <Link
+                  href="/under-construction"
+                  className="text-white/90 hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+                <span className="text-white/10">|</span>
+                <Link
+                  href="/under-construction"
+                  className="text-white/90 hover:text-white transition-colors"
+                >
+                  Terms & Conditions
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Divider Line (Above Copyright) */}
+          <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-11 xl:px-16">
+            <div className="w-full border-t border-white/30 mb-4" />
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-white/90 text-[16px] pb-4">
+              <p className="text-center">
+                Copyrights © 2026 All Rights Reserved by KR Mangalam University.
+              </p>
+            </div>
           </div>
         </div>
       </div>

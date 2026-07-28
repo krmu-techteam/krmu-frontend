@@ -33,17 +33,18 @@ const OverviewSection = ({
           ));
         })()}
       </div>
-      <div className="max-w-[1530px] mx-auto px-6 md:px-8 lg:px-12 w-full flex flex-col lg:flex-row gap-8 lg:gap-12 mt-12">
-        <div className="w-full lg:w-5/12 relative h-[400px] sm:h-[500px] lg:h-[450px] shrink-0">
+      <div className="max-w-[1530px] mx-auto px-6 md:px-8 lg:px-12 w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mt-12">
+        <div className="w-full lg:w-4/12 shrink-0">
           <Image
             src={OVERVIEW_SECTION_IMAGES[slug] || "/info.webp"}
-            fill
+            width={600}
+            height={600}
             alt={heading || "Overview"}
-            className="object-cover object-top lg:object-cover rounded-sm shadow-2xl"
+            className="w-full h-auto object-cover rounded-[4px]"
             unoptimized
           />
         </div>
-        <div className="w-full lg:w-7/12 flex flex-col justify-center text-white">
+        <div className="w-full lg:w-8/12 flex flex-col justify-center text-white">
           <p className="text-sm md:text-base font-medium text-[#cda55d] mb-2 sm:mb-3 font-poppins">
             {subheading}
           </p>
