@@ -1019,4 +1019,105 @@ export const programmeScopeData: Record<string, ProgrammeScopeData> = {
       },
     ],
   },
+
+  "ba-hons-hons-economics-research": {
+    heading: (
+      <>
+        B.A. (Hons. / Hons. with Research) Economics
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_dc59ab7319.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "The B.A. (Hons. / Hons. with Research) Economics programme offers a wide and versatile scope, preparing students for diverse career paths and advanced academic pursuits in an increasingly data-driven and policy-oriented global economy. The programme builds strong foundations in economic theory, quantitative techniques, research methodology, and real-world economic applications. Graduates develop the ability to analyze markets, public policies, financial systems, and socio-economic issues at national and global levels. The Honours with Research track further enhances analytical depth, critical thinking, and independent research skills, making students well-prepared for higher studies and research-intensive roles.",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: (
+      <>During the B.A. (Hons. / Hons. with Research) Economics</>
+    ),
+
+    skillsDescription: (
+      <span>
+        During a B.A. (Hons. / Hons. with Research) Economics, students develop
+        a wide range of academic, analytical, and professional skills that
+        prepare them for careers across various industries. Some of the key
+        skills include:
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            <strong>Analytical Thinking:</strong> Evaluating complex problems
+            and making informed, evidence-based decisions.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            <strong>Quantitative Skills:</strong> Using mathematics, statistics,
+            and econometrics to analyse economic and financial data.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            <strong>Research Skills:</strong> Conducting independent research,
+            collecting data, and preparing research reports and projects.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            <strong>Data Interpretation:</strong> Analysing datasets,
+            identifying trends, and drawing meaningful insights for
+            decision-making.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            <strong>Critical Thinking:</strong> Assessing economic policies,
+            market behaviour, and global economic developments from multiple
+            perspectives.
+          </span>
+        ),
+      },
+      {
+        id: 6,
+        content: (
+          <span>
+            <strong>Problem-Solving:</strong> Developing practical solutions to
+            business, financial, and economic challenges.
+          </span>
+        ),
+      },
+      {
+        id: 7,
+        content: (
+          <span>
+            <strong>Communication Skills:</strong> Presenting ideas clearly
+            through reports, presentations, debates, and discussions.
+          </span>
+        ),
+      },
+    ],
+  },
 };
