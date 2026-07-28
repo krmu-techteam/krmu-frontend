@@ -150,9 +150,9 @@ const page = async ({ params }: Props) => {
     return <JournalismAndMassCommunication />;
   }
 
-  // if (slug === "b-tech-cse-robotics-ai") {
-  //   return <BTechCSERoboticsAI />;
-  // }
+  if (slug === "b-tech-cse-robotics-ai") {
+    return <BTechCSERoboticsAI />;
+  }
 
   // ====== END BSC-HONS-FINANCE OVERRIDE ======
 
@@ -309,7 +309,9 @@ const page = async ({ params }: Props) => {
     slug === "bjmc" ||
     slug === "bachelor-of-design-b-des-fashion-design" ||
     slug === "barch-architecture" ||
-    slug === "bfa-fine-arts";
+    slug === "bfa-fine-arts" ||
+    slug === "ba-hons-political-science" ||
+    slug === "b-a-hons-hons-with-research-psychology";
 
   return (
     <>

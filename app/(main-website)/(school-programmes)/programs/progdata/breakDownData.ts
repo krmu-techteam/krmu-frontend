@@ -770,4 +770,143 @@ export const breakDownData: Record<string, BreakDownContent> = {
       "Note: Salary figures are approximate and may vary depending on the candidate's skills, experience, employer, job location, and prevailing industry conditions. Entrepreneurial earnings depend on business performance and market demand.",
     ],
   },
+
+  "ba-hons-political-science": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.A. (Hons.) Political Science graduates.",
+
+    tableHeaders: {
+      role: "Career Roles",
+      package: "Average Salary (India)",
+      sectors: "Top Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Policy Analyst",
+        package: "₹5–10 LPA",
+        sectors:
+          "Public Policy Think Tanks, Government Bodies, Research Organisations",
+      },
+      {
+        role: "Political Research Associate",
+        package: "₹4–8 LPA",
+        sectors: "Research Institutes, Political Consulting Firms, Think Tanks",
+      },
+      {
+        role: "Public Relations Executive",
+        package: "₹4–8 LPA",
+        sectors: "Corporate Organisations, PR Agencies, Government Departments",
+      },
+      {
+        role: "Legislative Assistant",
+        package: "₹5–9 LPA",
+        sectors:
+          "Parliament, Legislative Assemblies, Policy Research Organisations",
+      },
+      {
+        role: "International Relations Executive",
+        package: "₹5–10 LPA",
+        sectors:
+          "International Organisations, Embassies, NGOs, Multinational Organisations",
+      },
+      {
+        role: "Journalist / Political Correspondent",
+        package: "₹4–9 LPA",
+        sectors: "News Channels, Newspapers, Digital Media Organisations",
+      },
+      {
+        role: "NGO Programme Coordinator",
+        package: "₹4–8 LPA",
+        sectors: "NGOs, Non-profit Organisations, Development Agencies",
+      },
+      {
+        role: "Public Administration Executive",
+        package: "₹4–8 LPA",
+        sectors:
+          "Government Departments, Public Sector Undertakings, Administrative Bodies",
+      },
+      {
+        role: "Corporate Affairs Executive",
+        package: "₹5–10 LPA",
+        sectors: "Corporate Houses, Regulatory Affairs, Industry Associations",
+      },
+      {
+        role: "Election & Campaign Analyst",
+        package: "₹5–12 LPA",
+        sectors:
+          "Political Consulting Firms, Election Management Agencies, Research Organisations",
+      },
+      {
+        role: "Social Research Associate",
+        package: "₹4–8 LPA",
+        sectors:
+          "Universities, Research Institutes, Social Research Organisations",
+      },
+    ],
+
+    note: [
+      "Note: The salary figures mentioned above are approximate and may vary depending on factors such as qualifications, skills, work experience, employer, job location, and industry.",
+    ],
+  },
+
+  "b-a-hons-hons-with-research-psychology": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.A. (Hons./ Hons. with Research) Psychology graduates.",
+
+    tableHeaders: {
+      role: "Career Roles",
+      package: "Average Salary (India)",
+      sectors: "Top Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Recruitment Specialist",
+        package: "₹4–8 LPA",
+        sectors: "Recruitment Agencies, Corporate HR, Staffing Firms",
+      },
+      {
+        role: "Market Research Analyst",
+        package: "₹4–9 LPA",
+        sectors: "Market Research Firms, FMCG Companies, Advertising Agencies",
+      },
+      {
+        role: "Research Assistant",
+        package: "₹4–7 LPA",
+        sectors: "Universities, Research Institutes, Healthcare Organisations",
+      },
+      {
+        role: "Child Development Specialist",
+        package: "₹4–8 LPA",
+        sectors: "Child Development Centres, Schools, NGOs, Hospitals",
+      },
+      {
+        role: "Customer Experience (CX) Specialist",
+        package: "₹4–9 LPA",
+        sectors:
+          "IT Companies, E-commerce, BFSI, Hospitality, Service Industry",
+      },
+      {
+        role: "Mental Health Support Professional",
+        package: "₹4–8 LPA",
+        sectors:
+          "Mental Health Clinics, Rehabilitation Centres, NGOs, Healthcare Organisations",
+      },
+      {
+        role: "Social Worker / Community Development Officer",
+        package: "₹3–7 LPA",
+        sectors:
+          "NGOs, Government Organisations, Community Development Agencies",
+      },
+    ],
+
+    note: [
+      "Note: The aforementioned compensation estimates are only estimates and could change based on a number of variables, including the candidate's credentials, experience, job role, employer, region, and sector.",
+    ],
+  },
 };

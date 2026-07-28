@@ -16,6 +16,105 @@
 
 /* Custom utility class */
 @layer utilities {
+  @media (min-width: 1440px) {
+    .cp-main-container {
+      left: -144px;
+    }
+  }
+  .curr-card-container-1 {
+    background-image: url("/demo/year-1.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  .curr-card-container-2 {
+    background-image: url("/demo/year-2.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  .curr-card-container-3 {
+    background-image: url("/demo/year-3.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  .curr-card-container-4 {
+    background-image: url("/demo/year-4.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 1100px) {
+    .curr-card-container-1 {
+      background-image: none;
+      background: linear-gradient(
+        90deg,
+        #e8e7e2 0%,
+        #bcd1da 58.17%,
+        #c9cedd 99.04%
+      );
+    }
+
+    .curr-card-container-2 {
+      background-image: none;
+      background: linear-gradient(
+        90deg,
+        #e8e7e2 0%,
+        #d6c9dd 58.17%,
+        #c9cedd 99.04%
+      );
+    }
+    .curr-card-container-3 {
+      background-image: none;
+      background: linear-gradient(
+        90deg,
+        #e8e7e2 0%,
+        #ddddc9 58.17%,
+        #c9cedd 99.04%
+      );
+    }
+    .curr-card-container-4 {
+      background-image: none;
+      background: linear-gradient(
+        90deg,
+        #e8e7e2 0%,
+        #bcd1da 58.17%,
+        #c9cedd 99.04%
+      );
+    }
+  }
+  .curr-card-container-2 {
+    background: url("/demo/year-2.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  .curr-card-container-3 {
+    background: url("/demo/year-3.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  .curr-card-container-4 {
+    background: url("/demo/year-4.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 1664px) {
+    .cp-container-2 {
+      padding-left: 120px;
+    }
+  }
+  @media (max-width: 1280px) {
+    .cp-main-container {
+      background: linear-gradient(180deg, #001b3b 0%, #002f67 100%);
+    }
+  }
+
   .gradient-box {
     display: flex;
     align-items: center;
@@ -780,7 +879,8 @@
     font-weight: 600;
   }
 
-  .libcontent h4, .libcontent h1{
+  .libcontent h4,
+  .libcontent h1 {
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 20px;

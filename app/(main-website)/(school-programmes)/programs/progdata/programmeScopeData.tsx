@@ -842,4 +842,181 @@ export const programmeScopeData: Record<string, ProgrammeScopeData> = {
       },
     ],
   },
+
+  "ba-hons-political-science": {
+    heading: (
+      <>
+        B.A. (Hons.) Political Science
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_e6814987bd.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "The B.A. (Hons.) Political Science programme provides students with a strong foundation in political theory, governance, international relations, and public policy, while fostering critical thinking, analytical skills, and effective communication. Graduates are well-prepared for diverse career paths, including government and civil services, diplomacy, research and academia, media and journalism, policy advocacy, and corporate roles such as political risk analysis and consultancy. The programme also lays the groundwork for advanced studies in Political Science, Public Policy, International Relations, Law, and other interdisciplinary fields, enabling students to make a meaningful impact in both national and global arenas. ",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: <> During the B.A. (Hons.) Political Science</>,
+
+    skillsDescription: (
+      <span>
+        A B.A. (Hons.) Political Science programme equips students with the
+        analytical, research, leadership, and communication skills required to
+        understand political systems, governance, public policy, and global
+        affairs. These competencies prepare graduates for careers in government,
+        public administration, international organisations, media, research,
+        law, public policy, and corporate sectors.
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            <strong>Political & Policy Analysis:</strong> Develop the ability to
+            analyse political systems, public policies, governance models, and
+            contemporary political issues from national and global perspectives.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            <strong>Research Skills:</strong> Learn qualitative and quantitative
+            research methods, data interpretation, report writing, and policy
+            research through projects and case studies.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            <strong>Critical Thinking & Problem-Solving:</strong> Evaluate
+            political developments, identify societal challenges, and propose
+            evidence-based solutions using analytical reasoning.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            <strong>Communication & Public Speaking:</strong> Strengthen written
+            and verbal communication skills through debates, presentations,
+            discussions, and policy briefs.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            <strong>Leadership & Decision-Making:</strong> Build leadership
+            qualities, strategic thinking, negotiation, and decision-making
+            abilities essential for public administration and organisational
+            roles.
+          </span>
+        ),
+      },
+    ],
+  },
+
+  "b-a-hons-hons-with-research-psychology": {
+    heading: (
+      <>
+        B.A. (Hons./ Hons. with Research) Psychology
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_3598ba31d0.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "The B.A. (Hons./ Hons. with Research) Psychology offers vast and diverse career opportunities in today’s evolving world. Graduates can pursue careers in counselling, clinical psychology, organisational behaviour, human resource management, education, rehabilitation, mental health services, and social work. With growing awareness of mental health, opportunities in hospitals, NGOs, schools, corporate wellness programmes, and government organisations are steadily expanding. Additionally, the degree opens global pathways for students aspiring to work in counselling, behavioural therapy, forensic psychology, sports psychology, and industrial psychology. With mental health professionals being in high demand worldwide, psychology graduates have opportunities to make a lasting social and professional impact both in India and abroad.",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: (
+      <> During the B.A. (Hons./ Hons. with Research) Psychology</>
+    ),
+
+    skillsDescription: (
+      <span>
+        A B.A. (Hons./Hons. with Research) Psychology programme equips students
+        with a strong foundation in psychological science while developing
+        advanced research, analytical, and interpersonal skills. Through
+        classroom learning, practical training, internships, and research
+        projects, students gain the competencies required for careers in mental
+        health, education, human resources, research, corporate organisations,
+        and allied fields.
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            Psychological Assessment Skills: Learn the fundamentals of
+            psychological testing, behavioural observation, psychometric
+            assessment, and interpretation of human behaviour.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            Research & Scientific Inquiry: Develop expertise in research
+            methodology, experimental design, data collection, statistical
+            analysis, and academic writing through independent research
+            projects.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            Critical Thinking & Problem-Solving: Build the ability to evaluate
+            psychological theories, analyse behavioural patterns, and develop
+            evidence-based solutions to real-world challenges.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            Counselling & Interpersonal Skills: Strengthen active listening,
+            empathy, rapport building, and communication skills essential for
+            working with individuals and groups.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            Behavioural Analysis: Gain the ability to understand cognitive,
+            emotional, developmental, and social aspects of human behaviour
+            across different settings.
+          </span>
+        ),
+      },
+    ],
+  },
 };

@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 
 const HeroSection = () => {
   return (
@@ -10,8 +13,7 @@ const HeroSection = () => {
         alt="Ellipse"
         className="absolute -left-24 top-0"
       />
-
-      <div className="max-w-[1564px] mx-auto w-full pt-44 flex font-poppins z-20 relative">
+      <div className="max-w-[1564px] mx-auto w-full pt-[120px] sm:pt-44 flex flex-col xl:flex-row font-poppins z-20 relative px-5 2xl:px-0">
         <Image
           src="/ai-ml.svg"
           width={920}
@@ -19,15 +21,17 @@ const HeroSection = () => {
           alt="AI ML"
           className="absolute bottom-0 right-[5%]"
         />
-        <div className="w-1/2 z-20 relative">
+        <div className="w-full xl:w-1/2 z-20 relative">
           <p className="text-base font-bold">
             Engineer Intelligent Robots for an AI-Driven World
           </p>
           <h1
             className="
-                      text-7xl
+                      text-4xl
+                      sm:text-5xl
+                      md:text-7xl
                       leading-[1.2]
-                      max-w-[800px]
+                      xl:max-w-[800px]
                       font-bold
                       mb-2.5
                       my-2.5
@@ -38,38 +42,54 @@ const HeroSection = () => {
           >
             B.Tech. CSE (Robotics &amp; Artificial Intelligence)
           </h1>
-          <h2 className="text-xl mb-1.5 max-w-[480px]">
+          <h2 className="text-xl mb-1.5 xl:max-w-[480px]">
             with Academic Support of IBM & Powered by Microsoft Certifications
           </h2>
-          <p className="text-sm max-w-[510px] leading-5">
+          <p className="text-sm xl:max-w-[510px] leading-5">
             Graduate with expertise in robot design, computer vision, machine
             learning, and AI-powered autonomous systems, strengthened by
             IBM-backed industry certifications and Microsoft credentials.
           </p>
-          <div className="space-x-5 leading-8 font-semibold text-sm mt-7">
-            <button className="bg-[#DE0000] text-white rounded-[5px] px-5 py-1 uppercase">
+          <div className="space-y-3 space-x-3 sm:space-x-5 leading-8 font-semibold text-sm mt-7">
+              <NpfPopup
+                formId={`31c1452015d32698095f833b3e7eb9c5`}
+                btnClass={`bg-[#DE0000] text-white rounded-[5px] px-5 py-1 uppercase inline-block npfWidget-31c1452015d32698095f833b3e7eb9c5`}
+                btnText="Apply Now"
+                showIcon={false}
+              />
+                 <CommonLeadPopup
+                      buttonText='Download Prospectus'
+                      buttonClassName="bg-white text-black rounded-[5px] px-5 py-1 uppercase"
+                      redirectUrl="https://www.krmangalam.edu.in/pdfs/programme-brochure/btech-cse-new.pdf"
+                      form_name="Download Prospectus"
+                    />
+            {/* <button className="bg-[#DE0000] text-white rounded-[5px] px-5 py-1 uppercase">
               Apply Now
-            </button>
-            <button className="bg-white text-[#012959] rounded-[5px] px-5 py-1 uppercase">
+            </button> */}
+            {/* <button className="bg-white text-[#012959] rounded-[5px] px-5 py-1 uppercase">
               Download Prospectus
-            </button>
+            </button> */}
           </div>
-          <div className="flex mt-6 space-x-2.5 mb-10">
-            <div className="w-1/3 flex flex-col items-center justify-center text-center text-[#001732] bg-[#A2C6D2] pt-6 pb-10 rounded-[10px]">
+          <div className="flex flex-col md:flex-row mt-6 gap-5 md:gap-2.5 mb-10">
+            <div className="w-full md:w-1/3 flex flex-col items-center justify-center text-center text-[#001732] bg-[#A2C6D2] pt-6 pb-10 rounded-[10px]">
               <h3 className="text-[40px] font-bold">56.6 LPA</h3>
-              <h4 className="text-lg font-light leading-none">Highest Package</h4>
+              <h4 className="text-lg font-light leading-none">
+                Highest Package
+              </h4>
             </div>
-              <div className="w-1/3 flex flex-col items-center justify-center text-center text-[#001732] bg-[#B0C4CC] pt-6 pb-10 rounded-[10px]">
+            <div className="w-full md:w-1/3 flex flex-col items-center justify-center text-center text-[#001732] bg-[#B0C4CC] pt-6 pb-10 rounded-[10px]">
               <h3 className="text-[40px] font-bold">800+</h3>
-              <h4 className="text-lg font-light leading-none">Campus Recruiters</h4>
+              <h4 className="text-lg font-light leading-none">
+                Campus Recruiters
+              </h4>
             </div>
-              <div className="w-1/3 flex flex-col items-center justify-center text-center text-[#001732] bg-[#CCDBE3] pt-6 pb-10 rounded-[10px]">
+            <div className="w-full md:w-1/3 flex flex-col items-center justify-center text-center text-[#001732] bg-[#CCDBE3] pt-6 pb-10 rounded-[10px]">
               <h3 className="text-[40px] font-bold">100%</h3>
               <h4 className="text-lg font-light leading-none">Placement</h4>
             </div>
           </div>
         </div>
-        <div className="w-1/2 flex justify-center z-20 relative">
+        <div className="w-full xl:w-1/2 flex justify-center z-20 relative">
           <Image
             src="/robotic-hand.png"
             width={537}
@@ -78,6 +98,30 @@ const HeroSection = () => {
           />
         </div>
       </div>
+      <div className="bg-[#4987AB] w-full">
+  <div className="max-w-[1564px] mx-auto px-5 py-4">
+    <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-4 text-center text-white">
+      <span className="text-base lg:text-2xl font-semibold">
+        August 2026 intake now open
+      </span>
+
+      <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
+
+      <span className="text-base lg:text-2xl">
+        Scholarships up to 100%
+      </span>
+
+      <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
+
+      <Link
+        href="#"
+        className="text-base lg:text-2xl underline font-light hover:opacity-80 transition"
+      >
+        Apply on the admissions portal
+      </Link>
+    </div>
+  </div>
+</div>
     </section>
   );
 };

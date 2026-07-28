@@ -160,7 +160,10 @@ const NewProgrammeScope = async ({
               >
                 <span
                   className={`text-[#E7C268] font-bold text-xs ${
-                    slug === "bjmc-hons-research" || slug === "bjmc"
+                    slug === "bjmc-hons-research" ||
+                    slug === "bjmc" ||
+                    slug === "ba-hons-political-science" ||
+                    slug === "b-a-hons-hons-with-research-psychology"
                       ? "sm:text-[25px]"
                       : "sm:text-[29px]"
                   } leading-[100%]  `}
@@ -169,7 +172,10 @@ const NewProgrammeScope = async ({
                 </span>
                 <h4
                   className={`text-white font-extrabold text-lg  ${
-                    slug === "bjmc-hons-research" || slug === "bjmc"
+                    slug === "bjmc-hons-research" ||
+                    slug === "bjmc" ||
+                    slug === "ba-hons-political-science" ||
+                    slug === "b-a-hons-hons-with-research-psychology"
                       ? "sm:text-[25px]"
                       : "sm:text-[29px]"
                   } leading-[115%]  mb-4`}
@@ -179,10 +185,19 @@ const NewProgrammeScope = async ({
 
                 <p
                   className={`text-xs  ${
-                    slug === "bjmc-hons-research" || slug === "bjmc"
+                    slug === "bjmc-hons-research" ||
+                    slug === "bjmc" ||
+                    slug === "ba-hons-political-science" ||
+                    slug === "b-a-hons-hons-with-research-psychology"
                       ? "sm:text-[15px]"
                       : " sm:text-[18px]"
-                  } text-white font-light leading-[120%] ${slug === "bjmc" ? "max-w-[320px]" : "max-w-[280px]"}`}
+                  } text-white font-light leading-[120%] ${
+                    slug === "bjmc" ||
+                    slug === "ba-hons-political-science" ||
+                    slug === "b-a-hons-hons-with-research-psychology"
+                      ? "max-w-[310px]"
+                      : "max-w-[300px]"
+                  }`}
                 >
                   {data.skillsDescription}
                 </p>
