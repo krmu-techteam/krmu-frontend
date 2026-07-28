@@ -22,9 +22,9 @@ export function PlacementsSection() {
   return (
     <section className="relative w-full overflow-hidden py-8 md:py-12 xl:py-20 font-poppins">
       <div className="relative z-10">
-        <div className="flex flex-col lg:flex-row items-start gap-8 xl:gap-10  md:px-0">
+        <div className="flex flex-col lg:flex-row items-center gap-8 xl:gap-10 md:px-0">
           {/* Left: Success Card Carousel (30% Width) */}
-          <div className="w-full lg:w-[30%] flex flex-col items-center lg:items-start order-2 lg:order-1">
+          <div className="w-full lg:w-[40%] flex flex-col items-center lg:items-start order-2 lg:order-1">
             <div className="w-full max-w-[360px] lg:max-w-none">
               <Carousel
                 className="w-full"
@@ -36,7 +36,7 @@ export function PlacementsSection() {
               >
                 {SUCCESS_STORIES.map((story, i) => (
                   <div key={i} className="relative group">
-                    <div className="relative w-full aspect-square bg-brand-navy rounded-sm overflow-hidden">
+                    <div className="relative w-full aspect-square">
                       <Image
                         src={story.image}
                         alt={`Student success story ${i + 1}`}
@@ -53,7 +53,7 @@ export function PlacementsSection() {
           </div>
 
           {/* Right: Content & Stats (70% Width) */}
-          <div className="w-full lg:w-[70%] text-left order-1 lg:order-2">
+          <div className="w-full lg:w-[60%] text-left order-1 lg:order-2">
             <SectionTitle
               title="Explore the"
               highlight="Top Global recruiters"
