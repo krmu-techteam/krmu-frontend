@@ -455,13 +455,15 @@ const ProgrammesExplorer = ({
   });
 
   return (
-    <section className="w-full px-0 xl:px-16 font-poppins">
-      <div className="mx-auto max-w-[1530px]">
+    <section className=" font-poppins">
+      <div className="mx-auto max-w-[1530px] w-full px-6 md:px-8 xl:px-10">
         {(title || content) && (
           <div className="px-6 lg:px-3 xl:px-0">
             <div className="flex-1">
               {title && (
-                <h2 className="heading-primary text-center md:text-left mb-3 md:mb-4">{title}</h2>
+                <h2 className="heading-primary text-center md:text-left mb-3 md:mb-4">
+                  {title}
+                </h2>
               )}
             </div>
             <div className="mb-8 md:mb-8 flex flex-col md:flex-row gap-6  items-start lg:items-center justify-between">
@@ -481,7 +483,6 @@ const ProgrammesExplorer = ({
                   buttonClassName="flex mx-auto md:mx-0 items-center gap-2 px-5 py-2.5 border border-white/20 text-white/90 text-[15px] font-medium rounded-sm hover:bg-white/5 transition-all whitespace-nowrap shrink-0"
                   redirectUrl={prospectusUrl}
                   form_name="Download Prospectus"
-                  
                 />
               ) : (
                 <Link
