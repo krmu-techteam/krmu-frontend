@@ -76,6 +76,69 @@ const NavbarMenu = ({ mainMenu }: Props) => {
     (component) => component.__component === "temp-menus.about-us-menu",
   );
 
+  // Prepare Overview links ensuring "Research And Innovation" is present
+  const rawOverviewLinks = aboutusMenu?.overview?.menulinks
+    ? [...aboutusMenu.overview.menulinks]
+    : [
+        { id: 1, title: "About KRMU", url: "/about-us" },
+        { id: 2, title: "Leadership", url: "/leadership" },
+        {
+          id: 3,
+          title: "Awards and Achievements",
+          url: "/awards-and-achievements",
+        },
+        { id: 4, title: "Research And Innovation", url: "/research-overview" },
+        {
+          id: 5,
+          title: "Accreditations, Recognition and Approvals",
+          url: "/accreditations-recognition-and-approvals",
+        },
+        {
+          id: 6,
+          title: "Membership and Ranking",
+          url: "/membership-and-rankings",
+        },
+        {
+          id: 7,
+          title: "Mandatory Disclosures",
+          url: "/mandatory-disclosures",
+        },
+      ];
+
+  const hasResearch = rawOverviewLinks.some((link: any) =>
+    link.title?.toLowerCase().includes("research"),
+  );
+  if (!hasResearch) {
+    const awardsIndex = rawOverviewLinks.findIndex((link: any) =>
+      link.title?.toLowerCase().includes("awards"),
+    );
+    const researchItem = {
+      id: "research-and-innovation",
+      title: "Research And Innovation",
+      url: "/research-overview",
+    };
+    if (awardsIndex !== -1) {
+      rawOverviewLinks.splice(awardsIndex + 1, 0, researchItem);
+    } else {
+      rawOverviewLinks.push(researchItem);
+    }
+  }
+
+  const aboutUsOthersLinks = [
+    { id: "oth-1", title: "Alumni", url: "https://alumni.krmangalam.edu.in/" },
+    {
+      id: "oth-2",
+      title: "Foundry",
+      url: "https://foundry.krmangalam.edu.in/",
+    },
+    { id: "oth-3", title: "LMS", url: "https://lms.krmangalam.edu.in/" },
+    {
+      id: "oth-4",
+      title: "ERP",
+      url: "https://krmu.icloudems.com/corecampus/index.php",
+    },
+  ];
+
   return (
     <>
       <div
@@ -740,66 +803,64 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                 <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
                 <div className="absolute bottom-[-10%] left-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
-                  {/* Left Column: Image, Text, Buttons, Stats */}
-                  <div className="col-span-8 flex flex-col gap-6">
-                    <h2 className="text-2xl font-normal font-poppins text-white leading-tight">
+                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-8 lg:gap-12">
+                  {/* Left Column: Single column stack (Image -> Text -> Buttons -> Stats) */}
+                  <div className="col-span-4 flex flex-col gap-4">
+                    <h2 className="text-[28px] font-normal font-poppins text-white leading-tight">
                       {aboutusMenu?.title}
                     </h2>
 
-                    <div className="flex flex-col xl:flex-row gap-6 items-stretch">
-                      {/* Image */}
-                      {aboutusMenu?.backgroundimage?.url && (
-                        <div className="relative w-full xl:w-1/2 rounded-[4px] overflow-hidden border border-white/10 group aspect-video shadow-lg">
-                          <Image
-                            src={`${STRAPI_URL}${aboutusMenu?.backgroundimage?.url}`}
-                            alt="About KRMU"
-                            fill
-                            sizes="(max-width: 1024px) 100vw, 400px"
-                            className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                            priority
-                          />
-                        </div>
-                      )}
+                    {/* Image */}
+                    <div className="relative w-full rounded-[4px] overflow-hidden border border-white/10 group aspect-video">
+                      <Image
+                        src="/images/header/menu/about-us/about-menu.jpg"
+                        alt="About KRMU"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 400px"
+                        className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                        priority
+                      />
+                    </div>
 
-                      {/* Content & Action */}
-                      <div className="w-full xl:w-1/2 flex flex-col justify-center gap-4 pr-4">
-                        <p className="text-white/80 text-[13px] font-light leading-relaxed font-poppins">
-                          Welcome to a world where education meets excitement!
-                          At K.R. Mangalam University (KRMU), we believe that
-                          university life should be a perfect blend of learning,
-                          growth, and fun. Our campus is not just a place to
-                          study.
-                        </p>
+                    {/* Content Paragraph */}
+                    <p className="text-white/90 text-[14px] font-light font-poppins text-left">
+                      Welcome to a world where education meets excitement! At
+                      K.R. Mangalam University (KRMU), we believe that
+                      university life should be a perfect blend of learning,
+                      growth, and fun. Our campus is not just a place to study.
+                    </p>
 
-                        <div className="flex gap-3 mt-2">
-                          <Link
-                            href="#"
-                            className="flex-1 bg-transparent border border-white/20 hover:bg-white/5 text-white/90 font-medium py-2.5 px-4 rounded-[3px] text-[11px] tracking-wider flex items-center justify-center gap-1.5 transition-all uppercase font-poppins"
-                          >
-                            Download Brochure
-                          </Link>
-                          <Link
-                            href={applyNowButton?.url || "/apply"}
-                            className="flex-1 bg-[#cb000d] hover:bg-[#cb000d]/80 text-white font-semibold py-2.5 px-4 rounded-[3px] text-[13px] tracking-wider flex items-center justify-center gap-1.5 transition-all uppercase shadow-lg font-poppins"
-                          >
-                            Apply Now <ArrowUpRight size={14} />
-                          </Link>
-                        </div>
-                      </div>
+                    {/* Action Buttons */}
+                    <div className="flex gap-3">
+                      <Button
+                        variant="outline"
+                        href="#"
+                        className="flex-1 text-[11px] !border-[#737373] md:text-[11px] !h-[42px] font-poppins whitespace-nowrap !rounded-[4px] !px-3"
+                      >
+                        DOWNLOAD BROCHURE
+                      </Button>
+                      <Button
+                        variant="primary"
+                        href={applyNowButton?.url || "/apply"}
+                        icon={ArrowUpRight}
+                        iconPosition="right"
+                        className="flex-1 text-[11px] md:text-[11px] !h-[42px] font-poppins whitespace-nowrap !rounded-[4px] !px-3"
+                      >
+                        APPLY NOW
+                      </Button>
                     </div>
 
                     {/* Stats Boxes */}
-                    <div className="grid grid-cols-2 gap-4 mt-2">
+                    <div className="grid grid-cols-2 gap-4 mt-1">
                       {aboutusMenu?.aboutuscounter.map((counter: any) => (
                         <div
                           key={counter.id}
-                          className="bg-[#0b1622] border border-white/5 rounded-[4px] px-6 py-5 flex flex-col justify-center items-center text-center transition-all duration-500"
+                          className="bg-[#062035] rounded-[4px] px-6 py-4 flex flex-col justify-center items-center text-center transition-all duration-500"
                         >
-                          <span className="text-[20px] font-bold text-white mb-1 font-poppins">
+                          <span className="text-[22px] font-semibold text-white mb-1 font-poppins">
                             {counter.countertext}
                           </span>
-                          <span className="text-[11px] text-white/50 leading-tight font-light font-poppins">
+                          <span className="text-[12px] text-white/90 font-light font-poppins">
                             {counter.countercontent}
                           </span>
                         </div>
@@ -807,21 +868,30 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     </div>
                   </div>
 
-                  {/* Right Column: Links */}
-                  <div className="col-span-4 border-l border-white/10 pl-8 lg:pl-10 flex flex-col">
-                    <div className="space-y-8 mt-2">
+                  {/* Right Column: Links (Overview, Administration, Discover More, Others) */}
+                  <div className="col-span-8 border-l border-white/10 pl-6 lg:pl-10 flex flex-col">
+                    <div className="grid grid-cols-4 gap-4 lg:gap-6 mt-2">
+                      {/* Overview */}
                       <div>
-                        <h4 className="text-white font-bold text-[13px] mb-4 font-poppins tracking-wide">
+                        <h4 className="text-white font-semibold text-[16px] mb-4 font-poppins tracking-wide">
                           {aboutusMenu?.overview?.heading || "Overview"}
                         </h4>
-                        <ul className="flex flex-col gap-3">
-                          {aboutusMenu?.overview?.menulinks.map((menu: any) => (
+                        <ul className="flex flex-col gap-2.5">
+                          {rawOverviewLinks.map((menu: any) => (
                             <li key={menu.id}>
                               <Link
                                 href={menu.url || "#"}
-                                className="text-white/70 hover:text-white transition-colors text-[13px] font-light font-poppins"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                className="text-white/70 hover:text-white transition-colors text-[15px] font-light font-poppins"
+                                target={
+                                  menu.url?.startsWith("http")
+                                    ? "_blank"
+                                    : undefined
+                                }
+                                rel={
+                                  menu.url?.startsWith("http")
+                                    ? "noopener noreferrer"
+                                    : undefined
+                                }
                               >
                                 {menu.title}
                               </Link>
@@ -830,24 +900,97 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         </ul>
                       </div>
 
+                      {/* Administration */}
                       <div>
-                        <h4 className="text-white font-bold text-[13px] mb-4 font-poppins tracking-wide">
+                        <h4 className="text-white font-semibold text-[16px] mb-4 font-poppins tracking-wide">
                           {aboutusMenu?.administration?.heading ||
                             "Administration"}
                         </h4>
-                        <ul className="flex flex-col gap-3">
-                          {aboutusMenu?.administration?.menulinks.map(
+                        <ul className="flex flex-col gap-2.5">
+                          {aboutusMenu?.administration?.menulinks?.map(
                             (menu: any) => (
                               <li key={menu.id}>
                                 <Link
                                   href={menu.url || "#"}
-                                  className="text-white/70 hover:text-white transition-colors text-[13px] font-light font-poppins"
+                                  className="text-white/70 hover:text-white transition-colors text-[15px] font-light font-poppins"
+                                  target={
+                                    menu.url?.startsWith("http")
+                                      ? "_blank"
+                                      : undefined
+                                  }
+                                  rel={
+                                    menu.url?.startsWith("http")
+                                      ? "noopener noreferrer"
+                                      : undefined
+                                  }
                                 >
                                   {menu.title}
                                 </Link>
                               </li>
                             ),
                           )}
+                        </ul>
+                      </div>
+
+                      {/* Discover More */}
+                      {academicMenu?.discovermenu && (
+                        <div>
+                          <h4 className="text-white font-semibold text-[16px] mb-4 font-poppins tracking-wide">
+                            {academicMenu.discovermenu.heading}
+                          </h4>
+                          <ul className="flex flex-col gap-2.5">
+                            {academicMenu.discovermenu.menulinks?.map(
+                              (menu: any) => (
+                                <li key={menu.id}>
+                                  <Link
+                                    href={menu.url || "#"}
+                                    className="text-white/70 hover:text-white transition-colors text-[15px] font-light font-poppins"
+                                    target={
+                                      menu.url?.startsWith("http")
+                                        ? "_blank"
+                                        : undefined
+                                    }
+                                    rel={
+                                      menu.url?.startsWith("http")
+                                        ? "noopener noreferrer"
+                                        : undefined
+                                    }
+                                  >
+                                    {menu.title}
+                                  </Link>
+                                </li>
+                              ),
+                            )}
+                          </ul>
+                        </div>
+                      )}
+
+                      {/* Others */}
+                      <div>
+                        <h4 className="text-white font-semibold text-[16px] mb-4 font-poppins tracking-wide">
+                          Others
+                        </h4>
+                        <ul className="flex flex-col gap-2.5">
+                          {aboutUsOthersLinks.map((menu) => (
+                            <li key={menu.id}>
+                              <Link
+                                href={menu.url}
+                                className="text-white/70 hover:text-white transition-colors text-[15px] font-light font-poppins"
+                                target={
+                                  menu.url.startsWith("http")
+                                    ? "_blank"
+                                    : undefined
+                                }
+                                rel={
+                                  menu.url.startsWith("http")
+                                    ? "noopener noreferrer"
+                                    : undefined
+                                }
+                              >
+                                {menu.title}
+                              </Link>
+                            </li>
+                          ))}
                         </ul>
                       </div>
                     </div>

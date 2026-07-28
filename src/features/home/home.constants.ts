@@ -127,9 +127,9 @@ export const SUCCESS_STORIES: SuccessStoryType[] = [
   {
     image: "/images/home/placements/om-mishra.png",
   },
-  // {
-  //   image: "/images/home/placements/nitesh.png",
-  // },
+  {
+    image: "/images/home/placements/nitesh.png",
+  },
   {
     image: "/images/home/placements/naman-pune.png",
   },
