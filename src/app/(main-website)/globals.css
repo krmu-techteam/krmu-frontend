@@ -2645,6 +2645,13 @@ body:before {
     display: flex;
   }
 
+  .nav-menu-hidden .krmsubmenu-container {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
   .krmsubmenu-img-container::before {
     content: "";
     position: absolute;

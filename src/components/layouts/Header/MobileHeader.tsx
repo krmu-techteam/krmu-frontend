@@ -97,7 +97,14 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
               ? "translate-x-0 menu-opened delay-0"
               : "-translate-x-full delay-500"
           }`}
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            const target = e.target as HTMLElement;
+            if (target.closest("a")) {
+              onClose();
+              setActiveSubMenu(null);
+            }
+          }}
         >
           {/* Drawer Header */}
           <div

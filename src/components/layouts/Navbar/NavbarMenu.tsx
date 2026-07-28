@@ -2,7 +2,8 @@ import { STRAPI_URL } from "@/app/constant";
 import { HeaderMenus } from "@/lib/types/header-menu";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { ChevronDown, ArrowUpRight, Download } from "lucide-react";
 import { Carousel } from "@/components/common/Carousel";
 import { SUCCESS_STORIES } from "@/features/home";
@@ -14,6 +15,27 @@ type Props = {
 };
 
 const NavbarMenu = ({ mainMenu }: Props) => {
+  const [isNavHidden, setIsNavHidden] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsNavHidden(false);
+  }, [pathname]);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.closest("a")) {
+      setIsNavHidden(true);
+      if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+      }
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsNavHidden(false);
+  };
+
   const academicMenu = mainMenu.find(
     (component) => component.__component === "temp-menus.academic-menu",
   );
@@ -56,7 +78,11 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
   return (
     <>
-      <div className="hidden xl:block">
+      <div
+        className={`hidden xl:block ${isNavHidden ? "nav-menu-hidden pointer-events-none" : ""}`}
+        onClick={handleNavClick}
+        onMouseLeave={handleMouseLeave}
+      >
         <ul className="flex items-center xl:gap-3 2xl:gap-6">
           {/* Academics */}
           {academicMenu && (

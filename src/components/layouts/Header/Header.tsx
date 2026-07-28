@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Navbar from "../Navbar/Navbar";
 import Topbar from "./Topbar";
 import { TOPBARITEMS, TOPBARSOCIALLInks } from "@/lib/types/HeaderType";
@@ -23,9 +24,13 @@ const Header = ({
 }: TOPBARPROPS) => {
   const [showTopbar, setShowTopbar] = useState(false);
   const [showMobileMenu, setMobileMenu] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     setMobileMenu(false);
+  }, [pathname]);
+
+  useEffect(() => {
     const handler = () => {
       if (window.scrollY >= 150) setShowTopbar(true);
       if (window.scrollY < 150) setShowTopbar(false);
