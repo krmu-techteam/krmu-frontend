@@ -19,7 +19,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-10">
+    <section className="pb-10">
       <div className="max-w-7xl mx-auto w-full px-5">
         <h4 className="text-3xl xl:text-5xl font-bold text-center">
           Any Question? We're Here To Help!

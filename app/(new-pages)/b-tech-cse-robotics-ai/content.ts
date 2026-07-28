@@ -72,6 +72,12 @@ export const curriculumData = [
     year: "3rd Year",
     bgImage: "url(/demo/year-3.png)",
     // image: "/demo/year3-bg.png",
+    OeVac: [
+      {
+        text: "Open Elective & Value Added Course",
+        link: "https://www.krmangalam.edu.in/pdfs/Open-Electives-and-Value-Added-Courses.pdf",
+      },
+    ],
     semesters: [
       {
         title: "Semester 5",
@@ -119,6 +125,12 @@ export const curriculumData = [
       {
         title: "Semester 8",
         subjects: ["Capstone Project II / Internship"],
+      },
+    ],
+        OeVac: [
+      {
+        text: "Open Elective & Value Added Course",
+        link: "https://www.krmangalam.edu.in/pdfs/Open-Electives-and-Value-Added-Courses.pdf",
       },
     ],
   },
@@ -173,15 +185,18 @@ export const faqData = [
       },
       {
         question: "Where can I apply for UG, PG, Ph.D. or Diploma programmes?",
-        answer: "You can visit https://admissions.krmangalam.edu.in/ to apply for any of our programmes.",
+        answer:
+          "You can visit https://admissions.krmangalam.edu.in/ to apply for any of our programmes.",
       },
       {
         question: "Are guest lectures or workshops part of the course?",
-        answer: "Yes, frequent expert sessions, industry talks, and technical workshops are organised.",
+        answer:
+          "Yes, frequent expert sessions, industry talks, and technical workshops are organised.",
       },
       {
         question: "Is there a hostel facility on campus?",
-        answer: "Yes, the university offers on-campus residential facilities with separate hostels for boys and girls, equipped with all essential amenities and round-the-clock security.",
+        answer:
+          "Yes, the university offers on-campus residential facilities with separate hostels for boys and girls, equipped with all essential amenities and round-the-clock security.",
       },
     ],
   },
@@ -203,32 +218,34 @@ export const faqData = [
         answer:
           "You gain expertise in programming, AI algorithms, computer vision, systems engineering, automation engineering, etc, which positions you as a reliable asset in the robotics and AI space.",
       },
-         {
+      {
         question: "Is B.Tech. AI & Robotics difficult?",
         answer:
           "Moderately. B.Tech. CSE in Robotics and AI includes subjects such as Maths, Programming, and Engineering concepts, which makes it moderately difficult compared to general specialisations.",
       },
-        {
+      {
         question: "How is Robotics & AI different from B.Tech. AI/ML?",
         answer:
           "The robotics and AI programme focuses on hardware-software integration, control systems, kinematics (the geometry of motion), and sensor fusion (Lidar, Radar, Cameras). On the other hand, AI/ML focuses more on Pattern recognition, predictive modelling, large-scale data processing, and neural network architecture.",
       },
-        {
-        question: "What robots and hardware will I work with during the programme?",
+      {
+        question:
+          "What robots and hardware will I work with during the programme?",
         answer:
           "During the programme, you will generally work with a range of robotic systems and related hardware components in a practical learning environment. The focus is on gaining hands-on experience with intelligent machines, embedded systems, control mechanisms, and integrated hardware–software setups.",
       },
-        {
+      {
         question: "Are internships included with this programme?",
         answer:
           "Yes, internships, externships and industry training are an integral part of programmes offered by KRMU.",
       },
-        {
-        question: "What are the job opportunities after B.Tech. in Robotics & AI?",
+      {
+        question:
+          "What are the job opportunities after B.Tech. in Robotics & AI?",
         answer:
           "This programme opens doors for many career options in positions such as: Robotics Engineer, Computer Vision Engineer, AI Software Engineer, Embedded AI Developer, Control Systems Engineer, RPA/Automation Engineer and AI Research Scientist, etc.",
       },
-        {
+      {
         question: "Is robotics and AI a good career for the future?",
         answer:
           "Absolutely. Robotics and AI are in high demand due to the rise of automation, smart technologies like AI, and Industry 4.0, allowing students to build an impactful, high-paying career.",
@@ -265,12 +282,12 @@ export const faqData = [
     faqs: [
       {
         question: "Does K.R. Mangalam University have an entrance exam?",
-        answer: "The University has formed its own entrance exam K.R. Mangalam Entrance Exam (KREE).",
+        answer:
+          "The University has formed its own entrance exam K.R. Mangalam Entrance Exam (KREE).",
       },
       {
         question: "What are the Admission Office hours?",
-        answer:
-          "The office is open from 9:00 AM to 4:00 PM.",
+        answer: "The office is open from 9:00 AM to 4:00 PM.",
       },
       {
         question: "What is the admission procedure at KRMU?",
@@ -278,7 +295,8 @@ export const faqData = [
           "To apply at KRMU, you must visit our admission page, fill the registration form, appear for KREE (entrance test), and finally attend the faculty led interview to secure your admission.",
       },
       {
-        question: "What is the application fee for admission at K.R. Mangalam University?",
+        question:
+          "What is the application fee for admission at K.R. Mangalam University?",
         answer:
           "An application fee of ₹1,000 must be submitted during the application process.",
       },

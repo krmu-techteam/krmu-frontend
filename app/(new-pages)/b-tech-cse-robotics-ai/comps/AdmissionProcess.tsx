@@ -52,11 +52,11 @@ const AdmissionProcess = () => {
   return (
     <section className="bg-[url('/demo/admission-process.jpg')] bg-cover bg-center bg-no-repeat py-12 md:py-16 lg:py-20 px-5">
       <div className="max-w-7xl mx-auto text-white">
-        <h3 className="text-3xl md:text-4xl lg:text-[46px] font-bold leading-tight">
+        <h3 className="text-3xl md:text-4xl lg:text-[46px] font-bold leading-none">
           Admission Process
         </h3>
 
-        <p className="mt-2 text-base md:text-lg lg:text-xl">
+        <p className="text-base md:text-lg lg:text-xl">
           Commence your Journey in just 6 simple steps
         </p>
 
@@ -64,9 +64,9 @@ const AdmissionProcess = () => {
           {steps.map((item) => (
             <div
               key={item.step}
-              className={`${item.gradient} rounded-[5px] p-5 min-h-[220px] flex flex-col`}
+              className={`${item.gradient} rounded-[5px] p-5 min-h-[220px] flex flex-col md:justify-around`}
             >
-              <div className="mb-6">
+              <div className="mb-3 md:mb-6">
                 <h5 className="text-sm uppercase tracking-wide">
                   {item.step}
                 </h5>
@@ -90,7 +90,7 @@ const AdmissionProcess = () => {
           <NpfPopup
                 formId={`31c1452015d32698095f833b3e7eb9c5`}
                 btnClass={`bg-[#DE0000] hover:bg-[#c70000] transition-colors rounded-[5px] px-6 py-3 text-sm md:text-base uppercase font-semibold inline-block npfWidget-31c1452015d32698095f833b3e7eb9c5`}
-                btnText="Apply Now"
+                btnText="Enroll Now"
                 showIcon={false}
               />
         </div>
