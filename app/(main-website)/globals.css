@@ -21,29 +21,24 @@
       left: -144px;
     }
   }
+
+  .curr-card-container {
+    background-size: cover !important;
+    background-position: right !important;
+    background-repeat: no-repeat !important;
+  }
+
   .curr-card-container-1 {
     background-image: url("/demo/year-1.png");
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
   }
   .curr-card-container-2 {
     background-image: url("/demo/year-2.png");
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
   }
   .curr-card-container-3 {
     background-image: url("/demo/year-3.png");
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
   }
   .curr-card-container-4 {
     background-image: url("/demo/year-4.png");
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
   }
 
   @media (max-width: 1100px) {

@@ -29,7 +29,8 @@ const HeroSection = () => {
             className="
                       text-4xl
                       sm:text-5xl
-                      md:text-7xl
+                      xl:text-[55px]
+                      2xl:text-[2xl]
                       leading-[1.2]
                       xl:max-w-[800px]
                       font-bold
@@ -42,7 +43,7 @@ const HeroSection = () => {
           >
             B.Tech. CSE (Robotics &amp; Artificial Intelligence)
           </h1>
-          <h2 className="text-xl mb-1.5 xl:max-w-[480px]">
+          <h2 className="text-[22px] mb-1.5 xl:max-w-[480px]">
             with Academic Support of IBM & Powered by Microsoft Certifications
           </h2>
           <p className="text-sm xl:max-w-[510px] leading-5">
@@ -50,7 +51,7 @@ const HeroSection = () => {
             learning, and AI-powered autonomous systems, strengthened by
             IBM-backed industry certifications and Microsoft credentials.
           </p>
-          <div className="space-y-3 space-x-3 sm:space-x-5 leading-8 font-semibold text-sm mt-7">
+          <div className="space-y-3 space-x-2 leading-8 font-semibold text-sm mt-7">
               <NpfPopup
                 formId={`31c1452015d32698095f833b3e7eb9c5`}
                 btnClass={`bg-[#DE0000] text-white rounded-[5px] px-5 py-1 uppercase inline-block npfWidget-31c1452015d32698095f833b3e7eb9c5`}
@@ -100,14 +101,14 @@ const HeroSection = () => {
       </div>
       <div className="bg-[#4987AB] w-full">
   <div className="max-w-[1564px] mx-auto px-5 py-4">
-    <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-4 text-center text-white">
-      <span className="text-base lg:text-2xl font-semibold">
+    <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-4 text-center text-white text-base lg:text-xl">
+      <span className="font-semibold">
         August 2026 intake now open
       </span>
 
       <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
 
-      <span className="text-base lg:text-2xl">
+      <span>
         Scholarships up to 100%
       </span>
 
@@ -115,7 +116,7 @@ const HeroSection = () => {
 
       <Link
         href="#"
-        className="text-base lg:text-2xl underline font-light hover:opacity-80 transition"
+        className="underline font-light hover:opacity-80 transition"
       >
         Apply on the admissions portal
       </Link>

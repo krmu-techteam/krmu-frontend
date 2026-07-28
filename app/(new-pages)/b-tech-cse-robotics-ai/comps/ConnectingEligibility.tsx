@@ -4,12 +4,12 @@ import Image from "next/image";
 const ConnectingEligibility = () => {
   return (
     <section className="bg-[#E8EEF4] py-12 lg:py-20 px-4 md:px-6">
-      <div className="max-w-[1126px] mx-auto flex flex-col xl:flex-row gap-8">
+      <div className="max-w-6xl mx-auto flex flex-col xl:flex-row gap-2">
         {/* Left Side */}
         <div className="w-full xl:w-2/5">
           <div className="flex flex-col sm:flex-row gap-4">
             {/* Duration */}
-            <div className="bg-white rounded-[10px] p-5 lg:p-7 flex items-center gap-4">
+            <div className="bg-white rounded-[10px] p-5 lg:p-7 lg:px-10 flex items-center gap-4">
               <Calendar className="shrink-0" />
 
               <div className="text-sm">
@@ -38,67 +38,69 @@ const ConnectingEligibility = () => {
 
         {/* Right Side */}
         <div className="w-full xl:w-3/5">
-          <div className="flex flex-wrap justify-center xl:justify-between gap-3">
-            <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
-              <Image
-                src="/demo/gm.png"
-                width={66}
-                height={69}
-                alt="GM"
-                className="object-contain"
-              />
+          <div className="max-w-[635px] mx-auto">
+            <div className="flex flex-wrap justify-center gap-2">
+              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
+                <Image
+                  src="/demo/gm.png"
+                  width={66}
+                  height={69}
+                  alt="GM"
+                  className="object-contain"
+                />
+              </div>
+
+              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
+                <Image
+                  src="/demo/toshiba.png"
+                  width={100}
+                  height={19}
+                  alt="Toshiba"
+                  className="object-contain"
+                />
+              </div>
+
+              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
+                <Image
+                  src="/demo/mahindra.png"
+                  width={79}
+                  height={47}
+                  alt="Mahindra"
+                  className="object-contain"
+                />
+              </div>
+
+              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
+                <Image
+                  src="/demo/wipro.png"
+                  width={84}
+                  height={31}
+                  alt="Wipro"
+                  className="object-contain"
+                />
+              </div>
+
+              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
+                <Image
+                  src="/demo/systique.png"
+                  width={54}
+                  height={68}
+                  alt="Systique"
+                  className="object-contain"
+                />
+              </div>
             </div>
 
-            <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
-              <Image
-                src="/demo/toshiba.png"
-                width={100}
-                height={19}
-                alt="Toshiba"
-                className="object-contain"
-              />
+            {/* Divider */}
+            <div className="flex items-center gap-3 mt-5">
+              <div className="flex-1 h-px bg-[#d1d6dc]" />
+
+              <h2 className="text-xs sm:text-sm font-semibold text-[#0b2343] whitespace-nowrap text-center">
+                Connecting Talent to Dream Careers
+              </h2>
+
+              <div className="flex-1 h-px bg-[#d1d6dc]" />
             </div>
-
-            <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
-              <Image
-                src="/demo/mahindra.png"
-                width={79}
-                height={47}
-                alt="Mahindra"
-                className="object-contain"
-              />
-            </div>
-
-            <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
-              <Image
-                src="/demo/wipro.png"
-                width={84}
-                height={31}
-                alt="Wipro"
-                className="object-contain"
-              />
-            </div>
-
-            <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
-              <Image
-                src="/demo/systique.png"
-                width={54}
-                height={68}
-                alt="Systique"
-                className="object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Divider */}
-          <div className="flex items-center gap-3 mt-5">
-            <div className="flex-1 h-px bg-[#d1d6dc]" />
-
-            <h2 className="text-xs sm:text-sm font-semibold text-[#0b2343] whitespace-nowrap text-center">
-              Connecting Talent to Dream Careers
-            </h2>
-
-            <div className="flex-1 h-px bg-[#d1d6dc]" />
           </div>
         </div>
       </div>

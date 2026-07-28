@@ -3,10 +3,10 @@ import Image from "next/image";
 const JensenSection = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-[url(/demo/jensen-bg.jpg)] bg-cover bg-center bg-no-repeat px-5">
-      <div className="max-w-[1126px] mx-auto flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
+      <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
         {/* Text */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <h3 className="relative text-2xl md:text-3xl lg:text-[32px] font-light text-white leading-snug">
+          <h3 className="relative text-2xl md:text-3xl lg:text-[32px] font-medium text-white leading-snug">
             <Image
               src="/demo/double-quote.svg"
               width={32}

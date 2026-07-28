@@ -42,7 +42,7 @@ const features = [
 const ProgrammeKeyFeature = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20">
-      <div className="max-w-[1275px] mx-auto px-5">
+      <div className="max-w-6xl mx-auto px-5">
         <h2 className="text-[#001732] text-3xl sm:text-4xl lg:text-[52px] font-extrabold leading-tight mb-8 lg:mb-12">
           Programme Key Features
         </h2>
@@ -75,11 +75,11 @@ const ProgrammeKeyFeature = () => {
 
               {/* Content */}
               <div className="flex-1 text-center sm:text-left">
-                <h3 className="text-[#001732] text-xl sm:text-[22px] font-bold leading-snug mb-2">
+                <h3 className="text-[#001732] text-base font-bold leading-snug mb-1">
                   {feature.title}
                 </h3>
 
-                <p className="text-[#23354D] text-base lg:text-lg leading-7 lg:leading-[30px]">
+                <p className="text-[#23354D] text-base leading-7 lg:leading-snug">
                   {feature.description}
                 </p>
               </div>
