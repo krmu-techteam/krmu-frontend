@@ -61,7 +61,7 @@ const CommenceJourneySection = ({
   ];
 
   return (
-    <section className="relative w-full pt-12 xl:pt-20 overflow-hidden font-poppins">
+    <section className="relative w-full pt-12 xl:pt-20 pb-0 overflow-hidden font-poppins">
       {/* Background radial spec glow */}
       <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.05)_0%,transparent_70%)] rounded-full blur-[80px] z-0 pointer-events-none opacity-50"></div>
 
@@ -77,25 +77,25 @@ const CommenceJourneySection = ({
         </div>
 
         {/* Desktop 3-Column Staggered Grid */}
-        <div className="hidden lg:grid grid-cols-12 gap-4 xl:gap-6 items-center max-w-[1440px] px-6 md:px-8 xl:px-12 mx-auto">
-          {/* Left Column: Steps 1, 3, 5 (Moved UP independently) */}
+        <div className="hidden lg:grid grid-cols-12 gap-4 xl:gap-6 items-center max-w-[1530px] px-6 md:px-8 xl:px-12 mx-auto">
+          {/* Left Column: Steps 1, 3, 5 */}
           <div className="col-span-4 flex flex-col gap-6 xl:gap-8 items-end z-20 -translate-y-20 xl:-translate-y-32">
             {/* Step 1: Shifted right (forehead level) */}
-            <div className="transform translate-x-12 xl:translate-x-16">
+            <div className="transform translate-x-12 xl:translate-x-20">
               <CommenceJourneyStepCard
                 step={steps[0]}
                 isActive={0 === activeStep}
               />
             </div>
             {/* Step 3: Shifted left */}
-            <div className="transform -translate-x-4 xl:-translate-x-6">
+            <div className="transform -translate-x-4 xl:translate-x-6">
               <CommenceJourneyStepCard
                 step={steps[2]}
                 isActive={2 === activeStep}
               />
             </div>
             {/* Step 5: Shifted further left */}
-            <div className="transform -translate-x-12 xl:-translate-x-16">
+            <div className="transform -translate-x-12 xl:-translate-x-6">
               <CommenceJourneyStepCard
                 step={steps[4]}
                 isActive={4 === activeStep}
@@ -103,7 +103,7 @@ const CommenceJourneySection = ({
             </div>
           </div>
 
-          {/* Center Column: Girl Image with BG (Grounded position) */}
+          {/* Center Column: Girl Image with BG */}
           <div className="col-span-4 flex justify-center relative z-10">
             <div className="relative w-full max-w-[546px] h-[671px] flex items-end justify-center">
               {/* Background shape (width: 643px, height: 349px, opacity: 0.7) */}
@@ -136,7 +136,7 @@ const CommenceJourneySection = ({
                   href={btn.btn_link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute bottom-6 right-4 sm:right-8 z-30 px-5 py-2.5 bg-[#E32626] text-white font-poppins font-bold text-xs rounded-[4px] shadow-lg hover:bg-red-700 transition-all flex items-center gap-1.5 uppercase"
+                  className="absolute bottom-8 right-4 sm:-right-12 z-30 px-5 py-2.5 bg-[#CB000D] text-white font-poppins font-medium text-xs rounded-[2px]  hover:bg-[#CB000D]/80 transition-all flex items-center gap-1.5 uppercase"
                 >
                   {btn.btn_text || "APPLY NOW"}{" "}
                   <span className="text-xs">↗</span>
@@ -145,24 +145,24 @@ const CommenceJourneySection = ({
             </div>
           </div>
 
-          {/* Right Column: Steps 2, 4, 6 (Moved UP independently) */}
+          {/* Right Column: Steps 2, 4, 6 */}
           <div className="col-span-4 flex flex-col gap-6 xl:gap-8 items-start z-20 -translate-y-20 xl:-translate-y-32">
             {/* Step 2: Shifted left (forehead level) */}
-            <div className="transform -translate-x-12 xl:-translate-x-16">
+            <div className="transform -translate-x-12 xl:-translate-x-20">
               <CommenceJourneyStepCard
                 step={steps[1]}
                 isActive={1 === activeStep}
               />
             </div>
             {/* Step 4: Shifted right */}
-            <div className="transform translate-x-4 xl:translate-x-6">
+            <div className="transform translate-x-4 xl:-translate-x-8">
               <CommenceJourneyStepCard
                 step={steps[3]}
                 isActive={3 === activeStep}
               />
             </div>
             {/* Step 6: Shifted further right */}
-            <div className="transform translate-x-12 xl:translate-x-16">
+            <div className="transform translate-x-12 xl:translate-x-6">
               <CommenceJourneyStepCard
                 step={steps[5]}
                 isActive={5 === activeStep}

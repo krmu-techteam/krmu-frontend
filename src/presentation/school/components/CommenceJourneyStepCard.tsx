@@ -17,14 +17,12 @@ type StepCardProps = {
 export function CommenceJourneyStepCard({ step, isActive }: StepCardProps) {
   return (
     <div
-      className={`w-full max-w-[408px] min-h-[100px] h-[100px] px-5 py-3 rounded-[6px] border transition-all duration-300 flex items-center gap-4 ${
-        isActive
-          ? "border-[#0091FF] bg-[#0A1622]/60 shadow-[0_0_20px_rgba(0,145,255,0.15)]"
-          : "border-[#4C4C4C] bg-[#0A1622]/30 backdrop-blur-sm"
+      className={`w-full max-w-[408px] min-h-[90px] h-[90px] px-5 py-3 rounded-[6px] border transition-all duration-300 flex items-center gap-4 ${
+        isActive ? "border-[#0091FF]" : "border-[#4C4C4C]"
       }`}
     >
       <div
-        className={`w-11 h-11 rounded-full border flex items-center justify-center font-bold text-lg transition-all duration-300 shrink-0 ${
+        className={`w-[59px] h-[59px] rounded-full border flex items-center justify-center font-bold text-[36px] transition-all duration-300 shrink-0 ${
           isActive
             ? "border-[#0091FF] bg-[#0091FF]/20 text-[#0091FF]"
             : "border-[#4C4C4C] text-[#4C4C4C]"
@@ -44,7 +42,7 @@ export function CommenceJourneyStepCard({ step, isActive }: StepCardProps) {
               href={step.linkUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#0091FF] underline block sm:inline font-normal"
+              className="block sm:inline font-normal"
             >
               {step.linkText}
             </Link>
@@ -84,17 +82,21 @@ export function CommenceJourneyMobileStepCard({
   isActive = false,
 }: MobileStepProps) {
   return (
-    <div className={`w-full p-5 rounded-md transition-all duration-300 border mb-2 ${
-      isActive 
-        ? "border-[#00a2ff]/60 bg-[#00a2ff]/5" 
-        : "border-white/10 bg-transparent"
-    }`}>
+    <div
+      className={`w-full p-5 rounded-md transition-all duration-300 border mb-2 ${
+        isActive
+          ? "border-[#00a2ff]/60 bg-[#00a2ff]/5"
+          : "border-white/10 bg-transparent"
+      }`}
+    >
       <span
         className={`p-4 flex items-center justify-center w-[60px] h-[60px] rounded-full mb-5 transition-all duration-300 ${
           isActive ? "bg-[#00a2ff]/20" : "bg-[#001732]"
         }`}
         style={{
-          boxShadow: isActive ? "0px 5px 25px rgba(0, 162, 255, 0.4)" : shadowColor,
+          boxShadow: isActive
+            ? "0px 5px 25px rgba(0, 162, 255, 0.4)"
+            : shadowColor,
         }}
       >
         <Image
@@ -105,12 +107,23 @@ export function CommenceJourneyMobileStepCard({
           className={iconSrc.includes("start01") ? "p-1.5" : ""}
         />
       </span>
-      <p className={`text-lg font-semibold transition-all duration-300 ${isActive ? "text-[#00a2ff]" : "text-white"}`}>{title}</p>
+      <p
+        className={`text-lg font-semibold transition-all duration-300 ${isActive ? "text-[#00a2ff]" : "text-white"}`}
+      >
+        {title}
+      </p>
       {desc ? (
-        <p className={`transition-all duration-300 ${isActive ? "text-[#00a2ff]/80" : "text-white/70"}`}>{desc}</p>
+        <p
+          className={`transition-all duration-300 ${isActive ? "text-[#00a2ff]/80" : "text-white/70"}`}
+        >
+          {desc}
+        </p>
       ) : (
-        linkUrl && linkText && (
-          <p className={`transition-all duration-300 ${isActive ? "text-[#00a2ff]/80" : "text-white/70"}`}>
+        linkUrl &&
+        linkText && (
+          <p
+            className={`transition-all duration-300 ${isActive ? "text-[#00a2ff]/80" : "text-white/70"}`}
+          >
             At{" "}
             <Link
               href={linkUrl}

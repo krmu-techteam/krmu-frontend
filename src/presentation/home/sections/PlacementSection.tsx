@@ -20,40 +20,66 @@ export function PlacementsSection() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <section className="relative w-full overflow-hidden py-8 md:py-12 xl:py-20 font-poppins">
+    <section className="relative w-full py-8 md:py-12 xl:py-20 font-poppins">
       <div className="relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 xl:gap-10 md:px-0">
-          {/* Left: Success Card Carousel (30% Width) */}
-          <div className="w-full lg:w-[40%] flex flex-col items-center lg:items-start order-2 lg:order-1">
-            <div className="w-full max-w-[360px] lg:max-w-none">
-              <Carousel
-                className="w-full"
-                showArrows={true}
-                prevArrowClassName="!left-6 md:!left-7 !w-9 !h-9"
-                nextArrowClassName="!right-6 md:!right-8 !w-9 !h-9"
-                autoplayDelay={5000}
-                showDots={false}
-              >
-                {SUCCESS_STORIES.map((story, i) => (
-                  <div key={i} className="relative group">
-                    <div className="relative w-full aspect-square">
-                      <Image
-                        src={story.image}
-                        alt={`Student success story ${i + 1}`}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 30vw"
-                        className="object-cover"
-                        loading="lazy"
-                      />
+          {/* Left: Success Card Carousel with Background Shade (45% Width) */}
+          <div className="w-full lg:w-[45%] flex flex-col items-center lg:items-start order-2 lg:order-1 relative">
+            <div className="relative w-full max-w-[540px] lg:max-w-[600px] xl:max-w-[650px]">
+              {/* Background Shade Image */}
+              <div className="absolute -inset-8 sm:-inset-12 lg:-inset-16 z-0 pointer-events-none flex items-center justify-center">
+                <Image
+                  src="/images/home/placements/shade.png"
+                  alt="Background Shade"
+                  fill
+                  className="w-full h-full object-contain opacity-95 scale-110 sm:scale-125"
+                  priority
+                />
+              </div>
+
+              {/* Card Container */}
+              <div className="relative z-10 w-full">
+                <Carousel
+                  className="w-full"
+                  showArrows={true}
+                  prevArrowClassName="!left-6 md:!left-12 !w-9 !h-9"
+                  nextArrowClassName="!right-6 md:!right-12 !w-9 !h-9"
+                  autoplayDelay={5000}
+                  showDots={false}
+                >
+                  {/* Testing with placement card images (Holding store data for now) */}
+                  {[
+                    { image: "/images/home/placements/daksh.png" },
+                    { image: "/images/home/placements/daksh.png" },
+                    { image: "/images/home/placements/daksh.png" },
+                    { image: "/images/home/placements/daksh.png" },
+                    { image: "/images/home/placements/daksh.png" },
+                    { image: "/images/home/placements/daksh.png" },
+                    { image: "/images/home/placements/daksh.png" },
+                    { image: "/images/home/placements/daksh.png" },
+                    { image: "/images/home/placements/daksh.png" },
+                    { image: "/images/home/placements/daksh.png" },
+                  ].map((story, i) => (
+                    <div key={i} className="relative group">
+                      <div className="relative w-full aspect-square">
+                        <Image
+                          src={story.image}
+                          alt={`Student success story testing ${i + 1}`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 45vw"
+                          className="object-contain scale-120"
+                          priority={i === 0}
+                        />
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </Carousel>
+                  ))}
+                </Carousel>
+              </div>
             </div>
           </div>
 
-          {/* Right: Content & Stats (70% Width) */}
-          <div className="w-full lg:w-[60%] text-left order-1 lg:order-2">
+          {/* Right: Content & Stats (55% Width) */}
+          <div className="w-full lg:w-[55%] text-left order-1 lg:order-2">
             <SectionTitle
               title="Explore the"
               highlight="Top Global recruiters"
