@@ -87,24 +87,51 @@ export default async function HomePage() {
     searchPath: "https://www.krmangalam.edu.in/search?q=",
   });
 
+
   const organizationSchema = createOrganizationSchema({
-    name: "K.R. Mangalam University",
-    alternateName: "KRMU",
-    url: "https://www.krmangalam.edu.in",
-    logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
-    contactPoint: {
-      telephone: "+91-8192888444",
-      contactType: "customer service",
-      areaServed: "IN",
-      availableLanguage: "en",
-    },
-    sameAs: [
-      "https://www.facebook.com/krmuniv",
-      "https://www.instagram.com/krmuniv",
-      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-      "https://in.linkedin.com/school/krmuniv",
-    ],
-  });
+  name: "K.R. Mangalam University",
+  alternateName: "KRMU",
+  url: "https://www.krmangalam.edu.in/",
+  logo: "https://www.krmangalam.edu.in/KRMU-Logo-NAAC.webp", // Use the actual logo URL
+  description:
+    "K.R. Mangalam University is a private university located in Gurugram, Haryana, India. Established in 2013, the university offers undergraduate, postgraduate, doctoral and diploma programmes across multiple disciplines.",
+  telephone: "+91-8800697010",
+  email: "welcome@krmangalam.edu.in",
+  foundingDate: "2013",
+  address: {
+    streetAddress: "Sohna Road",
+    addressLocality: "Gurugram",
+    addressRegion: "Haryana",
+    postalCode: "122103",
+    addressCountry: "IN",
+  },
+  sameAs: [
+    "https://www.linkedin.com/school/k-r-mangalam-university/",
+    "https://www.facebook.com/krmangalamuniversity/",
+    "https://www.instagram.com/krmangalamuniversity/",
+    "https://www.youtube.com/@krmangalamuniversity",
+    "https://en.wikipedia.org/wiki/K.R._Mangalam_University",
+  ],
+});
+
+  // const organizationSchema = createOrganizationSchema({
+  //   name: "K.R. Mangalam University",
+  //   alternateName: "KRMU",
+  //   url: "https://www.krmangalam.edu.in",
+  //   logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
+  //   contactPoint: {
+  //     telephone: "+91-8192888444",
+  //     contactType: "customer service",
+  //     areaServed: "IN",
+  //     availableLanguage: "en",
+  //   },
+  //   sameAs: [
+  //     "https://www.facebook.com/krmuniv",
+  //     "https://www.instagram.com/krmuniv",
+  //     "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+  //     "https://in.linkedin.com/school/krmuniv",
+  //   ],
+  // });
 
   const collegeUniversitySchema = commonCollegeUniversitySchema({
     name: "K.R. Mangalam University",
@@ -141,7 +168,7 @@ export default async function HomePage() {
       "https://in.linkedin.com/school/krmuniv",
     ],
   });
-
+// console.log('organizationSchema', organizationSchema);
   return (
     <>
       <Script
