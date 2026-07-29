@@ -65,7 +65,7 @@ const HeroSection = () => {
           </p>
           <h1
             className="
-                      text-4xl
+                      text-3xl
                       sm:text-5xl
                       xl:text-[55px]
                       2xl:text-[68px]
@@ -80,8 +80,7 @@ const HeroSection = () => {
                       text-transparent
                     "
           >
-            B.Tech. CSE <br className="hidden sm:block" /> (Robotics &amp;
-            Artificial Intelligence)
+            B.Tech. CSE <br /> (Robotics &amp; Artificial Intelligence)
           </h1>
           <h2 className="text-lg sm:text-[22px] mb-1.5 xl:max-w-[480px]">
             with Academic Support of IBM & Powered by Microsoft Certifications
