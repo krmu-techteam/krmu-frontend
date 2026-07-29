@@ -3,7 +3,7 @@ import Image from "next/image";
 const CareerProspects = () => {
   return (
     // <section className="px-5 relative bg-[linear-gradient(180deg,#001B3B_0%,#002F67_100%)] bg-contain">
-    <section className="px-5 relative cp-main-container">
+    <section className="px-5 relative cp-main-container xl:mt-10">
       {/* Blue Shape */}
       <Image
         src="/demo/career-prospects-girl.png"

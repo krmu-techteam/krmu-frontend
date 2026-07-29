@@ -14,7 +14,7 @@ const BtechCSERoboticsVideo = () => {
 
   return (
     <section className="py-16">
-      <div className="max-w-6xl mx-auto w-full relative rounded-lg overflow-hidden">
+      <div className="max-w-6xl mx-auto w-full relative overflow-hidden">
         {!playVideo ? (
           <>
             <Image

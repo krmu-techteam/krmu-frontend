@@ -43,7 +43,7 @@ const ProgrammeKeyFeature = () => {
   return (
     <section className="py-12 md:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto px-5">
-        <h2 className="text-[#001732] text-3xl sm:text-4xl lg:text-[52px] font-extrabold leading-tight mb-8 lg:mb-12">
+        <h2 className="text-3xl md:text-4xl lg:text-[46px] font-bold leading-none mb-8 lg:mb-8">
           Programme Key Features
         </h2>
 
@@ -59,6 +59,8 @@ const ProgrammeKeyFeature = () => {
                 py-6 lg:py-8
                 px-0 md:px-4
                 border-b border-[#E5E8EB]
+                last:border-b-0
+                md:[&:nth-last-child(-n+2)]:border-b-0
                 ${index % 2 === 0 ? "md:pr-10" : "md:pl-10"}
               `}
             >

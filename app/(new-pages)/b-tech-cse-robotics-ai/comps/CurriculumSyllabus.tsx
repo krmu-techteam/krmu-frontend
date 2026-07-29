@@ -39,7 +39,7 @@ const CurriculumSyllabus = () => {
                   // }}
                 >
                   <div className="shrink-0">
-                    <div className="text-[#0B376E] bg-white leading-tight text-center flex justify-center items-center rounded-[10px] font-bold text-lg md:text-[22px] w-16 h-16 md:w-20 md:h-20">
+                    <div className="text-[#0B376E] bg-[#f3f3f1] leading-tight text-center flex justify-center items-center rounded-[10px] font-bold text-lg md:text-[22px] w-16 h-16 md:w-20 md:h-20">
                       {item.year}
                     </div>
                   </div>
@@ -52,7 +52,7 @@ const CurriculumSyllabus = () => {
                             <h4 className="text-lg md:text-[22px] font-bold text-[#001732] leading-snug">
                               {sem.title}
                             </h4>
-                            <ul className="mt-1 text-sm leading-6 md:leading-7">
+                            <ul className="mt-1 text-sm leading-relaxed space-y-1">
                               {sem.subjects.map((sub, j) => {
                                 return (
                                   <li
