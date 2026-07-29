@@ -150,4 +150,41 @@ export const programmeOverviewData: Record<string, ProgrammeOverviewContent> = {
       "For students seeking a career that combines analytical reasoning with practical impact, a B.A. (Hons. / Hons. with Research) Economics provides a strong platform for long-term academic and professional growth.",
     ],
   },
+
+  "ba-hons-psychology": {
+    title: "Programme Overview",
+    paragraphs: [
+      "A B.A. (Hons.) Psychology is an ideal programme for students who are interested in understanding human behaviour, emotions, cognition, and mental processes. As awareness of mental health and emotional well-being continues to grow worldwide, the demand for trained psychology professionals has increased significantly across healthcare, education, corporate organisations, social services, and research. The programme provides students with a scientific understanding of human behaviour while developing practical skills in observation, communication, research, and psychological assessment.",
+
+      "The curriculum blends theoretical knowledge with practical application, enabling students to explore diverse areas such as cognitive psychology, developmental psychology, abnormal psychology, counselling, organisational behaviour, social psychology, and psychological research methods. Through case studies, projects, internships, and practical training, students learn how psychological principles can be applied to solve real-life challenges in personal, educational, clinical, and workplace settings.",
+
+      "A B.A. (Hons.) Psychology also equips students with highly transferable skills such as critical thinking, empathy, problem-solving, active listening, emotional intelligence, and ethical decision-making. These competencies are valued not only in psychology-related professions but also in human resources, marketing, education, customer experience, public relations, social work, and organisational development.",
+
+      "The programme opens doors to a wide range of career opportunities, including counselling, clinical support, behavioural research, human resource management, education, rehabilitation services, mental health organisations, NGOs, and corporate wellness. It also serves as a strong foundation for higher studies such as M.A./M.Sc. psychology, clinical psychology, counselling psychology, industrial-organisational psychology, social work, or allied healthcare disciplines. For students passionate about understanding people and making a meaningful impact on society, a B.A. (Hons.) Psychology offers both professional growth and the opportunity to contribute to individual and community well-being.",
+    ],
+  },
+
+  "ba-hons-english-research": {
+    title: "Programme Overview",
+    paragraphs: [
+      "A B.A. (Hons. / Hons. with Research) English is much more than a degree in literature. It equips students with strong communication, analytical, research, and creative thinking skills that are highly valued across industries. The programme enables students to understand language, culture, history, and society while developing the ability to interpret complex ideas and express them effectively.",
+
+      "In today's knowledge-driven economy, organisations seek professionals who can think critically, communicate persuasively, conduct research, and create engaging content. This programme helps students build these competencies through the study of literature, linguistics, creative writing, cultural studies, and literary theory.",
+
+      "The Hons. with Research pathway further strengthens students' academic profile by providing advanced research training, independent projects, and exposure to research methodologies. This makes graduates well-prepared for higher education, doctoral studies, and research-orientated careers while also enhancing their employability in fields such as publishing, journalism, media, public relations, education, digital marketing, corporate communication, content strategy, and the creative industries.",
+
+      "Overall, a B.A. (Hons. / Hons. with Research) English develops intellectually versatile professionals who possess the creativity, adaptability, and communication skills needed to succeed in a wide range of careers in today's rapidly evolving professional landscape.",
+    ],
+  },
+
+  "bachelor-of-physiotherapy-bpt": {
+    title: "Programme Overview",
+    paragraphs: [
+      "The Bachelor of Physiotherapy programme at K.R. Mangalam University is meticulously designed to provide students with a strong foundation in physiotherapy sciences, human anatomy, and rehabilitation techniques, complemented by extensive clinical training. The programme integrates core subjects such as anatomy, physiology, biomechanics, exercise therapy, electrotherapy, pathology, pharmacology, orthopaedics, neurology, cardiopulmonary physiotherapy, and community-based rehabilitation, enabling students to develop a comprehensive understanding of physical health, movement, and functional recovery.",
+
+      "Students gain hands-on clinical experience through supervised internships, laboratory sessions, hospital postings, and rehabilitation centres, where they learn patient assessment, therapeutic exercises, pain management, manual therapy, and evidence-based physiotherapy practices. The curriculum also emphasises preventive healthcare, sports rehabilitation, geriatric care, paediatric physiotherapy, and the use of modern rehabilitation technologies.",
+
+      "Upon completing the programme, graduates are equipped to assess, diagnose, and manage a wide range of musculoskeletal, neurological, cardiopulmonary, and sports-related conditions. They are prepared to work collaboratively with multidisciplinary healthcare teams and pursue rewarding careers in hospitals, rehabilitation centres, sports organisations, wellness clinics, community healthcare, research, and private practice while contributing to the promotion of holistic health and improved quality of life.",
+    ],
+  },
 };

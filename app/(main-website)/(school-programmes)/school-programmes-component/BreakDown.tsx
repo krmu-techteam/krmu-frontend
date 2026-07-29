@@ -139,11 +139,13 @@ export const BreakDown = ({ slug }: Props) => {
             </div>
 
             {/* Note Footer */}
-            <div className="w-full bg-[linear-gradient(90deg,#001834_0%,#00479A_100%)] text-white text-center py-3.5 px-6 rounded-lg text-xs sm:text-[16px] font-semibold  shadow-sm mt-6">
-              {data.note.map((item, index) => (
-                <p key={index}>{item}</p>
-              ))}
-            </div>
+            {data.note && (
+              <div className="w-full bg-[linear-gradient(90deg,#001834_0%,#00479A_100%)] text-white text-center py-3.5 px-6 rounded-lg text-xs sm:text-[16px] font-semibold  shadow-sm mt-6">
+                {data.note.map((item, index) => (
+                  <p key={index}>{item}</p>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

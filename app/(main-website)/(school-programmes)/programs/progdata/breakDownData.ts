@@ -16,7 +16,7 @@ export interface BreakDownContent {
 
   rows: CareerRow[];
 
-  note: string[];
+  note?: string[];
 }
 
 export const breakDownData: Record<string, BreakDownContent> = {
@@ -972,6 +972,218 @@ export const breakDownData: Record<string, BreakDownContent> = {
 
     note: [
       "Note: Salary figures are approximate and may vary depending on experience, skills, employer, location, additional certifications, and postgraduate qualifications. *Public sector roles generally require candidates to qualify through competitive examinations.",
+    ],
+  },
+
+  "ba-hons-psychology": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.A. (Hons.) Psychology graduates.",
+
+    tableHeaders: {
+      role: "Career Roles",
+      package: "Average Salary (India)",
+      sectors: "Top Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Human Resource Executive",
+        package: "₹4–8 LPA",
+        sectors: "Corporate Companies, MNCs, Start-ups, HR Consultancies",
+      },
+      {
+        role: "Organisational Behaviour Analyst",
+        package: "₹5–10 LPA",
+        sectors: "Corporate Organisations, Consulting Firms, HR Departments",
+      },
+      {
+        role: "Recruitment Specialist",
+        package: "₹4–8 LPA",
+        sectors: "Recruitment Agencies, Corporate HR, Staffing Firms",
+      },
+      {
+        role: "Market Research Analyst",
+        package: "₹4–9 LPA",
+        sectors: "Market Research Firms, FMCG Companies, Advertising Agencies",
+      },
+      {
+        role: "Social Worker / Community Development Officer",
+        package: "₹3–7 LPA",
+        sectors: "NGOs, Government Organisations, International Organisations",
+      },
+      {
+        role: "Research Assistant",
+        package: "₹4–7 LPA",
+        sectors: "Universities, Research Institutes, Healthcare Organisations",
+      },
+      {
+        role: "Child Development Specialist",
+        package: "₹4–8 LPA",
+        sectors: "Child Development Centres, Schools, NGOs, Hospitals",
+      },
+      {
+        role: "Customer Experience (CX) Specialist",
+        package: "₹4–9 LPA",
+        sectors: "IT Companies, E-commerce, BFSI, Service Industry",
+      },
+    ],
+
+    note: [
+      "Note: The salary figures mentioned above are approximate and may vary depending on factors such as the candidate's qualifications, skills, work experience, job role, employer, location, and industry.",
+    ],
+  },
+
+  "ba-hons-english-research": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.A. (Hons. / Hons. with Research) English graduates.",
+
+    tableHeaders: {
+      role: "Career Roles",
+      package: "Average Salary (India)",
+      sectors: "Top Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Content Writer",
+        package: "₹3–6 LPA",
+        sectors:
+          "Digital Marketing Agencies, Media Houses, EdTech Companies, Startups",
+      },
+      {
+        role: "Copywriter",
+        package: "₹4–8 LPA",
+        sectors: "Advertising Agencies, Branding Firms, Marketing Companies",
+      },
+      {
+        role: "Editor",
+        package: "₹4–9 LPA",
+        sectors: "Publishing Houses, Newspapers, Magazines, Digital Media",
+      },
+      {
+        role: "Technical Writer",
+        package: "₹5–10 LPA",
+        sectors: "IT Companies, Software Firms, Manufacturing, Healthcare",
+      },
+      {
+        role: "Journalist",
+        package: "₹3–8 LPA",
+        sectors: "Newspapers, Television Channels, Digital News Platforms",
+      },
+      {
+        role: "Public Relations (PR) Executive",
+        package: "₹4–8 LPA",
+        sectors:
+          "PR Agencies, Corporate Communications, Government Organisations",
+      },
+      {
+        role: "Corporate Communications Executive",
+        package: "₹5–10 LPA",
+        sectors: "MNCs, Corporate Houses, BFSI, FMCG Companies",
+      },
+      {
+        role: "Social Media Manager",
+        package: "₹4–9 LPA",
+        sectors:
+          "Digital Marketing Agencies, E-commerce Companies, Media Organisations",
+      },
+      {
+        role: "Teacher / School Educator",
+        package: "₹3–7 LPA",
+        sectors: "Schools, Educational Institutions, Coaching Centres",
+      },
+    ],
+  },
+
+  "bachelor-of-physiotherapy-bpt": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring Bachelor of Physiotherapy graduates.",
+
+    tableHeaders: {
+      role: "Job Role After Bachelor of Physiotherapy (BPT)",
+      package: "Average Package for Freshers in India (INR)*",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Clinical Physiotherapist",
+        package: "3 LPA–5 LPA",
+        sectors: "Multi-speciality Hospitals, Private Hospitals, Clinics",
+      },
+      {
+        role: "Sports Physiotherapist",
+        package: "3.5 LPA–6 LPA",
+        sectors:
+          "Sports Academies, Sports Teams, Fitness & Sports Medicine Centres",
+      },
+      {
+        role: "Orthopaedic Physiotherapist",
+        package: "3 LPA–5.5 LPA",
+        sectors:
+          "Orthopaedic Hospitals, Trauma Centres, Rehabilitation Clinics",
+      },
+      {
+        role: "Neurological Physiotherapist",
+        package: "3.5 LPA–6 LPA",
+        sectors: "Neuro Rehabilitation Centres, Hospitals, Speciality Clinics",
+      },
+      {
+        role: "Paediatric Physiotherapist",
+        package: "3 LPA–5.5 LPA",
+        sectors:
+          "Children's Hospitals, Paediatric Clinics, Rehabilitation Centres",
+      },
+      {
+        role: "Geriatric Physiotherapist",
+        package: "3 LPA–5 LPA",
+        sectors: "Senior Care Centres, Hospitals, Home Healthcare Services",
+      },
+      {
+        role: "Rehabilitation Therapist",
+        package: "3.5 LPA–6 LPA",
+        sectors:
+          "Rehabilitation Centres, NGOs, Community Healthcare Organisations",
+      },
+      {
+        role: "ICU & Cardiorespiratory Physiotherapist",
+        package: "3.5 LPA–6.5 LPA",
+        sectors:
+          "Hospitals, Critical Care Units, Cardiac & Pulmonary Rehabilitation Centres",
+      },
+      {
+        role: "Home Care Physiotherapist",
+        package: "3 LPA–6 LPA",
+        sectors:
+          "Home Healthcare Providers, Private Practice, Healthcare Agencies",
+      },
+      {
+        role: "Occupational Health Physiotherapist",
+        package: "4 LPA–7 LPA",
+        sectors:
+          "Corporate Healthcare, Industrial Health Centres, Manufacturing Companies",
+      },
+      {
+        role: "Research Associate / Clinical Research Assistant",
+        package: "3.5 LPA–6 LPA",
+        sectors:
+          "Medical Colleges, Research Institutes, Healthcare R&D Organisations",
+      },
+      {
+        role: "Physiotherapy Consultant / Private Practitioner",
+        package: "4 LPA–8 LPA",
+        sectors: "Private Clinics, Wellness Centres, Self-employed Practice",
+      },
+    ],
+
+    note: [
+      "* Note: The salary ranges mentioned above are indicative averages for fresh graduates in India and are compiled from various publicly available sources. Actual compensation may vary depending on the employer, job location, candidate skills, and market conditions.",
     ],
   },
 };

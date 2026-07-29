@@ -29,6 +29,13 @@ const NewProgrammeScope = async ({
   slug,
 }: Props) => {
   const data = programmeScopeData[slug];
+
+  const checkingSlug =
+    slug === "bjmc-hons-research" ||
+    slug === "bjmc" ||
+    slug === "ba-hons-political-science" ||
+    slug === "b-a-hons-hons-with-research-psychology" ||
+    slug === "ba-hons-psychology";
   // const getDownProsSettings = await getDownloadProspectusSetting();
 
   // const isFormAvailable = allowedFormSlugs.includes(slug);
@@ -160,24 +167,14 @@ const NewProgrammeScope = async ({
               >
                 <span
                   className={`text-[#E7C268] font-bold text-xs ${
-                    slug === "bjmc-hons-research" ||
-                    slug === "bjmc" ||
-                    slug === "ba-hons-political-science" ||
-                    slug === "b-a-hons-hons-with-research-psychology"
-                      ? "sm:text-[25px]"
-                      : "sm:text-[29px]"
+                    checkingSlug ? "sm:text-[25px]" : "sm:text-[29px]"
                   } leading-[100%]  `}
                 >
                   {data.skillsTitle}
                 </span>
                 <h4
                   className={`text-white font-extrabold text-lg  ${
-                    slug === "bjmc-hons-research" ||
-                    slug === "bjmc" ||
-                    slug === "ba-hons-political-science" ||
-                    slug === "b-a-hons-hons-with-research-psychology"
-                      ? "sm:text-[25px]"
-                      : "sm:text-[29px]"
+                    checkingSlug ? "sm:text-[25px]" : "sm:text-[29px]"
                   } leading-[115%]  mb-4`}
                 >
                   {data.skillsSubtitle}
@@ -185,12 +182,7 @@ const NewProgrammeScope = async ({
 
                 <p
                   className={`text-xs  ${
-                    slug === "bjmc-hons-research" ||
-                    slug === "bjmc" ||
-                    slug === "ba-hons-political-science" ||
-                    slug === "b-a-hons-hons-with-research-psychology"
-                      ? "sm:text-[15px]"
-                      : " sm:text-[18px]"
+                    checkingSlug ? "sm:text-[15px]" : " sm:text-[18px]"
                   } text-white font-light leading-[120%] ${
                     slug === "bjmc" ||
                     slug === "ba-hons-political-science" ||
