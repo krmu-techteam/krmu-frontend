@@ -1186,4 +1186,165 @@ export const breakDownData: Record<string, BreakDownContent> = {
       "* Note: The salary ranges mentioned above are indicative averages for fresh graduates in India and are compiled from various publicly available sources. Actual compensation may vary depending on the employer, job location, candidate skills, and market conditions.",
     ],
   },
+
+  "bba-llb-hons": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a breakdown of career roles, indicative salary ranges for freshers in India, and the sectors actively hiring BBA LL.B. (Hons.) graduates.",
+
+    tableHeaders: {
+      role: "Job Role After BBA LL.B. (Hons.)",
+      package: "Average Package for Freshers in India (INR)*",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Lawyer / Advocate",
+        package: "3.5 LPA–6 LPA",
+        sectors: "Law Firms, Litigation Chambers, Courts",
+      },
+      {
+        role: "Legal Consultant",
+        package: "4 LPA–7 LPA",
+        sectors: "Corporate Houses, Consultancies, MNCs",
+      },
+      {
+        role: "Corporate Lawyer",
+        package: "5 LPA–9 LPA",
+        sectors: "Law Firms, Corporate Legal Departments",
+      },
+      {
+        role: "Compliance Officer",
+        package: "4 LPA–7 LPA",
+        sectors: "Banks, NBFCs, Corporate Houses",
+      },
+      {
+        role: "Legal Researcher",
+        package: "3 LPA–5 LPA",
+        sectors: "Law Firms, Think Tanks, Judicial Bodies",
+      },
+      {
+        role: "Business Development Manager",
+        package: "4 LPA–7 LPA",
+        sectors: "Corporate Houses, Consulting Firms",
+      },
+      {
+        role: "Policy Analyst",
+        package: "3.5 LPA–6 LPA",
+        sectors: "Government Bodies, Think Tanks, NGOs",
+      },
+      {
+        role: "Judicial Clerk",
+        package: "3 LPA–5 LPA",
+        sectors: "Courts, Judge's Chambers",
+      },
+      {
+        role: "HR & Employment Law Advisor",
+        package: "3.5 LPA–6 LPA",
+        sectors: "Corporate HR Departments, MNCs",
+      },
+      {
+        role: "Contract Manager",
+        package: "4 LPA–6.5 LPA",
+        sectors: "Corporate Houses, Real Estate, IT Firms",
+      },
+    ],
+
+    note: [
+      "* Note: The salary ranges mentioned above are indicative averages for fresh graduates in India and are compiled from various publicly available sources. Actual compensation may vary depending on the employer, job location, candidate skills, and market conditions.",
+    ],
+  },
+
+  "btech-cse-in-data-science": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.Tech. CSE Data Science graduates.",
+
+    tableHeaders: {
+      role: "Job Role After B.Tech. CSE (Data Science)",
+      package: "Average Package for Freshers in India (INR)",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Data Scientist",
+        package: "₹6 LPA–12 LPA",
+        sectors:
+          "IT Companies, MNCs, Consulting Firms, BFSI, Healthcare, E-commerce",
+      },
+      {
+        role: "Data Analyst",
+        package: "₹4.5 LPA–8 LPA",
+        sectors:
+          "IT Services, Banking, Retail, Healthcare, Analytics Companies",
+      },
+      {
+        role: "Machine Learning Engineer",
+        package: "₹6 LPA–12 LPA",
+        sectors:
+          "AI Companies, Technology Firms, Product-Based Companies, Startups",
+      },
+      {
+        role: "Business Intelligence (BI) Analyst",
+        package: "₹5 LPA–9 LPA",
+        sectors:
+          "Consulting Firms, BFSI, Retail, Manufacturing, Enterprise Organisations",
+      },
+      {
+        role: "Big Data Engineer",
+        package: "₹6 LPA–11 LPA",
+        sectors:
+          "Technology Companies, Cloud Service Providers, Data Engineering Firms",
+      },
+      {
+        role: "AI Engineer",
+        package: "₹6 LPA–12 LPA",
+        sectors:
+          "Artificial Intelligence Companies, Product-Based Firms, Healthcare, FinTech",
+      },
+      {
+        role: "Data Engineer",
+        package: "₹5.5 LPA–10 LPA",
+        sectors:
+          "IT Companies, Cloud Service Providers, MNCs, Enterprise Organisations",
+      },
+      {
+        role: "Business Analyst",
+        package: "₹5 LPA–9 LPA",
+        sectors: "Consulting Companies, BFSI, E-commerce, Technology Firms",
+      },
+      {
+        role: "Data Visualization Specialist",
+        package: "₹5 LPA–8.5 LPA",
+        sectors:
+          "Analytics Firms, Consulting Companies, Media, Retail, Enterprise Organisations",
+      },
+      {
+        role: "AI & Data Science Consultant",
+        package: "₹6 LPA–12 LPA",
+        sectors:
+          "Consulting Firms, Technology Companies, Digital Transformation Organisations, MNCs",
+      },
+      {
+        role: "Research Associate (AI & Data Science)",
+        package: "₹5 LPA–9 LPA",
+        sectors:
+          "Research Organisations, R&D Centres, Universities, Technology Companies",
+      },
+      {
+        role: "Data Science Entrepreneur / AI Consultant",
+        package: "₹5 LPA–20+ LPA",
+        sectors:
+          "AI & Analytics Startups, Technology Consulting Firms, Data Science Companies, Own Enterprise",
+      },
+    ],
+
+    note: [
+      "Note: The salary ranges are indicative averages for fresh graduates in India and may vary depending on the employer, location, candidate skills, internship experience, and market conditions.",
+    ],
+  },
 };

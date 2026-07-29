@@ -1375,4 +1375,174 @@ export const programmeScopeData: Record<string, ProgrammeScopeData> = {
       },
     ],
   },
+
+  "bba-llb-hons": {
+    heading: (
+      <>
+        BBA LL.B. (Hons.)
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_a74cdc69f2.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "The BBA LL.B. (Hons.) programme offers vast career opportunities by combining business knowledge with legal expertise. Graduates can work as corporate lawyers, legal advisors, compliance officers, or pursue litigation, civil services, and judiciary exams. The programme also opens doors to higher studies like LL.M., MBA, or specialisations in international business law, intellectual property rights, and public policy. It equips students with the skills needed to thrive in law firms, corporate houses, consultancies, and government bodies.",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: <>During the BBA LL.B. (Hons.) Programme</>,
+
+    skillsDescription: (
+      <span>
+        The BBA LL.B. (Hons.) degree is a five-year program that has both a
+        solid base in business management and a well-rounded legal education.
+        This will provide students with the analytical and advocacy skills
+        needed in both the legal profession and the corporate world.
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            A solid grounding in all the main business functions, including
+            Finance, Marketing, and Management, plus an introduction to the core
+            legal principles.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            Legal argumentation and case presentation skills will be developed
+            through a modern courtroom-style moot court setup.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            Skills relating to drafting legal documents, reviewing contracts,
+            advising clients, etc., will also be developed through
+            simulation-based coursework.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            Students have access to specialised areas of law, i.e. Criminal Law,
+            Corporate Law, Constitutional Law, and Intellectual Property Rights.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            Guest sessions will be held by industry-experienced faculty members,
+            retired judges, and senior lawyers sharing their real-world legal
+            experience.
+          </span>
+        ),
+      },
+    ],
+  },
+
+  "btech-cse-in-data-science": {
+    heading: (
+      <>
+        B.Tech. CSE (Data Science) with Academic Support of IBM
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_b6f3f82a5a.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "B.Tech. CSE (Data Science) offers immense career potential in today’s data-driven world. With the rising demand for data experts across industries like finance, healthcare, e-commerce, and IT, graduates can explore roles such as data analyst, machine learning engineer, and AI developer. The programme equips students with cutting-edge skills to extract insights, predict trends, and build smart solutions—making them valuable assets in the digital economy.",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: <>During the B.Tech. CSE (Data Science) Programme</>,
+
+    skillsDescription: (
+      <span>
+        Within the span of four years, students develop the technical,
+        analytical, problem-solving, and professional competencies required to
+        build successful careers in data science, artificial intelligence,
+        analytics, and the global technology industry, such as:
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            Develop expertise in statistical analysis, machine learning, data
+            mining, big data analytics, predictive modelling, data
+            visualisation, and business intelligence.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            Gain proficiency in data preprocessing, exploratory data analysis,
+            deep learning, natural language processing, computer vision,
+            cloud-based analytics, databases, and industry-standard data science
+            tools and frameworks.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            Build practical experience through data science laboratories,
+            analytics competitions, hackathons, internships, industry projects,
+            and capstone projects focused on solving real-world data-driven
+            challenges.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            Enhance skills in data modelling, feature engineering, algorithm
+            optimisation, model evaluation, analytical reasoning, project
+            management, teamwork, professional communication, and presentation
+            of analytical insights.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            Understand data governance, data privacy, AI ethics, responsible
+            data practices, innovation, entrepreneurship, and industry standards
+            to pursue careers in data science, machine learning, business
+            analytics, artificial intelligence, and related technology domains.
+          </span>
+        ),
+      },
+    ],
+  },
 };
