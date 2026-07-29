@@ -571,7 +571,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/10/Dr.-Chandra-Mohan.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/10/Chandra-Mohan.png",
   },
   {
     id: 113724,

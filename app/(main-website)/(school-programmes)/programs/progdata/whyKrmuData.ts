@@ -971,4 +971,266 @@ export const whyKrmuData: Record<string, WhyKrmuData> = {
     bottomDescription2:
       "Ultimately, the right university depends on a student's career aspirations, preferred learning style, and academic interests. Before making a decision, students should compare curriculum design, faculty expertise, research opportunities, internships, placement support, campus facilities, and overall learning environment to determine which institution best aligns with their long-term goals.",
   },
+
+  "ba-hons-psychology": {
+    title:
+      "Why K.R. Mangalam University for a B.A. (Hons.) Psychology 2026–27?",
+
+    description:
+      "Choosing the right university is essential for building a successful career in psychology. While many institutions offer a B.A. (Hons.) psychology programme, students should compare factors such as curriculum, practical exposure, faculty expertise, research opportunities, laboratory facilities, internships, and placement support rather than focusing only on the degree.",
+
+    comparisonTitle:
+      "K.R. Mangalam University (KRMU), Gurugram, has designed its B.A. (Hons.) Psychology programme to combine academic learning with practical application. Through experiential learning, industry exposure, and career-focused training, the university prepares students for careers in mental health, human resources, research, counselling, education, and allied fields.",
+
+    parameterHeader: "Parameter",
+
+    krmuHeader: "K.R. Mangalam University (KRMU)",
+
+    typicalHeader: "Typical Private University",
+
+    comparisonData: [
+      {
+        parameter: "Highest placement package",
+        krmu: "56.6 LPA",
+        typical: "8–20 LPA",
+      },
+      {
+        parameter: "Campus recruiters",
+        krmu: "800+ companies",
+        typical: "100–300 companies",
+      },
+      {
+        parameter: "Curriculum",
+        krmu: "Industry-oriented curriculum aligned with NEP and emerging trends in psychology",
+        typical:
+          "Primarily theory-focused curriculum with limited practical exposure",
+      },
+      {
+        parameter: "Practical Learning",
+        krmu: "Case studies, field visits, workshops, projects, and experiential learning",
+        typical: "Practical exposure is often limited to classroom activities",
+      },
+      {
+        parameter: "Psychology Labs",
+        krmu: "Well-equipped psychology laboratories for experiments and psychological assessments",
+        typical: "Basic laboratory facilities that vary across institutions",
+      },
+      {
+        parameter: "Faculty",
+        krmu: "Experienced academicians and industry experts providing mentorship and career guidance",
+        typical:
+          "Mostly academic faculty with comparatively less industry interaction",
+      },
+      {
+        parameter: "Research Opportunities",
+        krmu: "Research projects, seminars, conferences, and interdisciplinary learning",
+        typical: "Limited research exposure beyond coursework",
+      },
+      {
+        parameter: "Internships & Field Exposure",
+        krmu: "Opportunities for internships and exposure to schools, NGOs, healthcare, and corporate environments",
+        typical: "Internship opportunities may be limited or student-driven",
+      },
+      {
+        parameter: "Skill Development",
+        krmu: "Focus on counselling skills, communication, research, behavioural analysis, emotional intelligence, and critical thinking",
+        typical:
+          "Greater emphasis on theoretical concepts than employability skills",
+      },
+      {
+        parameter: "Industry Interaction",
+        krmu: "Guest lectures, workshops, expert sessions, and interactions with psychology professionals",
+        typical: "Industry engagement varies depending on the institution",
+      },
+      {
+        parameter: "Placement Support",
+        krmu: "Dedicated Career Development Centre (CDC) offering internships, resume building, career counselling, mock interviews, and placement assistance",
+        typical:
+          "Placement support generally focuses on final-year recruitment and varies across colleges",
+      },
+      {
+        parameter: "Infrastructure",
+        krmu: "Modern classrooms, psychology labs, digital library, and collaborative learning environment",
+        typical:
+          "Standard infrastructure with facilities differing from one institution to another",
+      },
+      {
+        parameter: "Higher Education Support",
+        krmu: "Guidance for postgraduate studies, research careers, competitive examinations, and professional certifications",
+        typical:
+          "Limited structured guidance for higher education and career planning",
+      },
+    ],
+    bottomDescription1:
+      "A strong psychology programme should help students understand human behaviour while developing practical, research, and professional skills that employers value. Choosing a university that balances classroom learning with experiential training can significantly enhance career readiness.",
+
+    bottomDescription2:
+      "For students seeking quality education, practical exposure, experienced faculty, modern learning facilities, and dedicated placement support through its Career Development Centre (CDC), K.R. Mangalam University's B.A. (Hons.) Psychology programme offers a strong foundation for both higher studies and diverse professional careers.",
+  },
+
+  "ba-hons-english-research": {
+    title:
+      "Why K.R. Mangalam University for a B.A. (Hons. / Hons. with Research) English 2026–27?",
+
+    description:
+      "Selecting the right university for a B.A. (Hons. / Hons. with Research) English is about much more than studying literature. Students should look for a programme that develops communication, critical thinking, research capabilities, creativity, and practical skills that are relevant to today's job market. A university that combines academic learning with industry exposure and career support can prepare students for diverse opportunities in publishing, media, education, corporate communication, digital marketing, public relations, and research.",
+
+    comparisonTitle:
+      "Among the private universities in Delhi NCR, K.R. Mangalam University (KRMU) offers a career-orientated B.A. (Hons / Hons with Research) English programme designed to provide academic excellence alongside practical exposure. The table below highlights how KRMU compares with a typical private university.",
+
+    parameterHeader: "Parameter",
+
+    krmuHeader: "K.R. Mangalam University (KRMU)",
+
+    typicalHeader: "Typical Private University",
+
+    comparisonData: [
+      {
+        parameter: "Highest placement package",
+        krmu: "56.6 LPA",
+        typical: "8–20 LPA",
+      },
+      {
+        parameter: "Campus recruiters",
+        krmu: "800+ companies",
+        typical: "100–300 companies",
+      },
+      {
+        parameter: "Curriculum",
+        krmu: "NEP-aligned, industry-orientated curriculum with literature, linguistics, creative writing, cultural studies, and research components.",
+        typical:
+          "Primarily theory-based curriculum with limited interdisciplinary exposure.",
+      },
+      {
+        parameter: "Research Opportunities",
+        krmu: "Offers the Hons. with Research pathway, enabling students to undertake research projects and strengthen their academic profile.",
+        typical:
+          "Research opportunities may be limited or offered only at the postgraduate level.",
+      },
+      {
+        parameter: "Interdisciplinary Learning",
+        krmu: "Students can explore multidisciplinary learning through electives and interdisciplinary courses.",
+        typical: "Interdisciplinary learning options are often limited.",
+      },
+      {
+        parameter: "Practical Learning",
+        krmu: "Workshops, literary festivals, seminars, creative writing activities, internships, and project-based learning.",
+        typical:
+          "Greater emphasis on classroom teaching than experiential learning.",
+      },
+      {
+        parameter: "Faculty Expertise",
+        krmu: "Learn from experienced academicians, researchers, and industry professionals.",
+        typical: "Faculty expertise varies across institutions.",
+      },
+      {
+        parameter: "Industry Exposure",
+        krmu: "Guest lectures, expert sessions, internships, industry interactions, and collaborative learning opportunities.",
+        typical: "Industry exposure may be occasional or programme-dependent.",
+      },
+      {
+        parameter: "Global Exposure",
+        krmu: "Opportunities for international academic collaborations, exchange programmes, and global learning initiatives.",
+        typical: "International exposure is generally limited.",
+      },
+      {
+        parameter: "Infrastructure",
+        krmu: "Modern classrooms, a digital library, advanced learning resources, and a technology-enabled campus.",
+        typical:
+          "Standard academic infrastructure with fewer specialised learning resources.",
+      },
+      {
+        parameter: "Placement Support",
+        krmu: "Dedicated Career Development Centre (CDC) offering internships, career counselling, resume building, mock interviews, skill development, and placement assistance.",
+        typical: "Placement support varies depending on the institution.",
+      },
+      {
+        parameter: "Career Readiness",
+        krmu: "Focus on communication skills, research, leadership, professional development, and employability alongside academics.",
+        typical:
+          "Career preparation may not be integrated throughout the programme.",
+      },
+      {
+        parameter: "Industry Network",
+        krmu: "Supported by an extensive recruiter network across multiple industries through university placement initiatives.",
+        typical: "Recruiter network generally varies across institutions.",
+      },
+    ],
+    bottomDescription1:
+      "Choosing a university is a long-term investment in both academic and professional growth. While rankings and infrastructure are important, students should also evaluate the curriculum, research opportunities, faculty expertise, practical exposure, industry connections, and placement support before making a decision.",
+
+    bottomDescription2:
+      "For students seeking a B.A. (Hons. / Hons. with Research) English programme that combines academic depth with research, experiential learning, and career development, K.R. Mangalam University offers a comprehensive learning environment. With its industry-orientated approach, dedicated Career Development Centre (CDC), and emphasis on holistic development, the university prepares students for successful careers as well as higher education and research opportunities.",
+  },
+
+  "bachelor-of-physiotherapy-bpt": {
+    title: "Why K.R. Mangalam University for BPT in 2026–27?",
+
+    description:
+      "Pursuing a Bachelor of Physiotherapy is not just about earning a degree; it is about developing a strong foundation in medical sciences, mastering evidence-based rehabilitation techniques, and acquiring the clinical skills needed to improve patients' mobility, function, and quality of life across diverse healthcare settings.",
+
+    comparisonTitle:
+      "A comparison of key academic, clinical training, hands-on learning, hospital exposure, research opportunities, and career-focused parameters that students consider while selecting a Bachelor of Physiotherapy (BPT) programme.",
+
+    parameterHeader: "Parameter",
+
+    krmuHeader: "K.R. Mangalam University",
+
+    typicalHeader: "Typical Private University in NCR",
+
+    comparisonData: [
+      {
+        parameter: "Highest placement package",
+        krmu: "56.6 LPA",
+        typical: "8–20 LPA",
+      },
+      {
+        parameter: "Campus recruiters",
+        krmu: "800+ companies",
+        typical: "100–300 companies",
+      },
+      {
+        parameter: "Research output",
+        krmu: "600+ Scopus/WoS papers, 100+ patents",
+        typical: "Minimal or unreported",
+      },
+      {
+        parameter: "International exposure",
+        krmu: "*Fully sponsored 2-week European summer school",
+        typical: "Not a standard offering",
+      },
+      {
+        parameter: "Clinical training & hands-on exposure",
+        krmu: "Extensive clinical training through hospital postings, simulation labs, rehabilitation centres, and community health programmes",
+        typical:
+          "Limited access to structured clinical exposure and multidisciplinary rehabilitation training",
+      },
+      {
+        parameter: "Mentorship",
+        krmu: "Guidance from experienced physiotherapists, healthcare professionals, rehabilitation specialists, researchers, and industry experts",
+        typical: "Primarily faculty-based mentorship",
+      },
+      {
+        parameter: "Location advantage",
+        krmu: "Gurugram – Access to Multi-speciality Hospitals, Rehabilitation Centres, Sports Medicine Clinics & Healthcare Networks",
+        typical:
+          "Often located in areas with comparatively limited healthcare industry exposure",
+      },
+      {
+        parameter: "Placement record",
+        krmu: "92% Placement Rate",
+        typical: "55–65% Placement Rate",
+      },
+      {
+        parameter: "Scholarship available",
+        krmu: "Up to 100% for meritorious students, sports achievers & students across multiple categories",
+        typical: "Limited and highly competitive",
+      },
+    ],
+    bottomDescription1:
+      "Located in Gurugram, KRMU offers close proximity to leading multi-speciality hospitals, rehabilitation centres, sports medicine clinics, healthcare institutions, and corporate healthcare networks across the Delhi-NCR region. This strategic location provides students with valuable clinical internships, hands-on patient exposure, and professional networking opportunities, along with strong industry linkages with hospitals, physiotherapy and rehabilitation centres, sports organisations, wellness clinics, and community healthcare providers.",
+
+    bottomDescription2:
+      "Whether your goal is to build a career in clinical physiotherapy, sports rehabilitation, neurological and orthopaedic rehabilitation, paediatric or geriatric care, pursue higher studies and research, or establish your own physiotherapy practice, the BPT programme is designed to equip you with the scientific knowledge, evidence-based clinical skills, and practical training required to excel in the healthcare sector.",
+  },
 };
