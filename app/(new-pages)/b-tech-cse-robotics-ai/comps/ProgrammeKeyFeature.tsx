@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const features = [
   {
-    icon: "/demo/handson.svg",
+    icon: "/demo/internship.png",
     title: "Hands-On Learning with Real-World Exposure",
     description:
       "15% of the total credits are earned through internships and hands-on projects.",
   },
   {
-    icon: "/demo/makerspace.png",
+    icon: "/demo/round-table.png",
     title: "MakerSpace: Build from Day One",
     description:
       "Replacing outdated workshop classes, students now take a hands-on “MakerSpace” course with...",
@@ -20,19 +20,19 @@ const features = [
       "KRMU has partnered with IBM, a global leader in AI and enterprise technology.",
   },
   {
-    icon: "/demo/unmatched.png",
+    icon: "/demo/workspace.png",
     title: "Unmatched Industry Experience",
     description:
       "The university has tie-ups with over 800 recruiters and industry giants to offer Internship.",
   },
   {
-    icon: "/demo/labs.png",
+    icon: "/demo/lab.png",
     title: "Cutting-Edge Labs & Equipment",
     description:
       "Futuristic Engineering Kitchen and Research Units equipped with advanced labs like the IoT Lab, Robotics & Automation Lab, and Advanced iOS Lab.",
   },
   {
-    icon: "/demo/intelligent.png",
+    icon: "/demo/robot.png",
     title: "Build Intelligent Robots, Shape the Future",
     description:
       "The B.Tech. CSE (Robotics & Artificial Intelligence) program equips students with the knowledge and practical skills to design, develop, and deploy intelligent robotic systems.",

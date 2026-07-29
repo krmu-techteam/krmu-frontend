@@ -55,7 +55,7 @@ const CareerProspects = () => {
       <div className="w-full flex max-w-[1100px] mx-auto flex-col xl:flex-row cp-container-2">
         <div className="w-full  text-white py-8 sm:pb-20 xl:pb-28 robot-ai-cp-container relative">
           <div className="">
-            <h3 className="text-3xl md:text-[46px] font-bold leading-none mb-5 sm:mb-10">
+            <h3 className="text-3xl md:text-[46px] font-bold leading-none mb-5 sm:mb-10 xl:mt-10">
               Career Prospects
             </h3>
             <div className="xl:max-w-[850px] w-full flex flex-col lg:flex-row gap-5">

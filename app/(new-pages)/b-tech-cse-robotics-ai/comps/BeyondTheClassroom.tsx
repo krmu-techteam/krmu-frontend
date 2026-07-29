@@ -2,7 +2,7 @@ import BeyondSlider from "./BeyondSlider";
 
 const BeyondTheClassroom = () => {
   return (
-    <section className="py-10 px-5">
+    <section className="pb-8 sm:py-10 px-5">
       <div className="max-w-7xl mx-auto text-center">
         <h4 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-center mb-5">
           Beyond the Classroom
