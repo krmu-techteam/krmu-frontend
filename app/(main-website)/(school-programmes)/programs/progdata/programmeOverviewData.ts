@@ -187,4 +187,26 @@ export const programmeOverviewData: Record<string, ProgrammeOverviewContent> = {
       "Upon completing the programme, graduates are equipped to assess, diagnose, and manage a wide range of musculoskeletal, neurological, cardiopulmonary, and sports-related conditions. They are prepared to work collaboratively with multidisciplinary healthcare teams and pursue rewarding careers in hospitals, rehabilitation centres, sports organisations, wellness clinics, community healthcare, research, and private practice while contributing to the promotion of holistic health and improved quality of life.",
     ],
   },
+
+  "bba-llb-hons": {
+    title: "Programme Overview",
+    paragraphs: [
+      "BBA LL.B. (Hons.) from K.R. Mangalam University is a 5-year undergraduate programme designed to provide students with a strong foundation in business administration and is legally approved by the Bar Council of India (BCI).  The programme covers basic and advanced level subjects like contracts, constitutional law, corporate law, criminal law and intellectual property rights, along with the main core subjects in the field of management, including finance, marketing and organisational behaviour.",
+
+      "During the programme, students gain practical experience via the methods of moot court exercises, legal drafting, and client counselling simulations based upon real-world experiences of both courtroom and corporate environments.",
+
+      "Upon completing the 5-year course program, the student can opt for various professional opportunities like corporate lawyer, legal consultant, compliance officer, business development specialist, policy analyst, etc. and also pursue higher education like LL.M, MBA, specialisation in international business law and public policy.",
+    ],
+  },
+
+  "btech-cse-in-data-science": {
+    title: "Programme Overview",
+    paragraphs: [
+      "The B.Tech. Computer Science and Engineering (Data Science) programme at K.R. Mangalam University is designed to develop graduates with a strong foundation in computer science principles alongside specialised expertise in data science, analytics, and intelligent computing. The programme equips students with computational thinking, programming proficiency, software engineering knowledge, and data-driven problem-solving skills required to analyse complex datasets, derive meaningful insights, and support informed decision-making across diverse domains. It provides comprehensive knowledge of programming, data structures, algorithms, databases, operating systems, computer networks, software engineering, and mathematics, while offering focused learning in statistical modelling, machine learning, data mining, big data analytics, data visualisation, predictive analytics, data engineering, business intelligence, cloud-based data processing, and responsible data management through industry-oriented education and experiential learning.",
+
+      "The curriculum incorporates contemporary domains such as deep learning, artificial intelligence, natural language processing, computer vision, recommender systems, big data ecosystems, cloud analytics, data governance, data ethics, research methodologies, innovation, and entrepreneurship, enabling students to understand the complete data science lifecycle of collecting, processing, analysing, interpreting, visualising, and deploying data-driven solutions for real-world challenges. Practical learning is reinforced through advanced data science laboratories, analytics competitions, industry-driven projects, workshops, internships, research activities, and capstone projects. These experiences enable students to strengthen their expertise in data exploration, model development, algorithm optimisation, data visualisation, analytical reasoning, collaborative problem-solving, teamwork, and professional communication while gaining proficiency in industry-standard data science platforms, programming frameworks, and analytical technologies.",
+
+      "Upon successful completion of the programme, graduates are prepared to analyse, design, develop, deploy, and manage data-driven systems that address emerging technological, industrial, and societal challenges. They are equipped to pursue careers in data science, machine learning engineering, business analytics, artificial intelligence, big data engineering, data engineering, research and development, cloud analytics, technology organisations, research institutions, and entrepreneurial ventures while upholding professional ethics, data privacy, regulatory compliance, and responsible use of data-driven technologies. The programme empowers graduates to contribute meaningfully to the evolving digital economy through innovation, analytical competence, technical excellence, and a commitment to lifelong learning.",
+    ],
+  },
 };

@@ -1233,4 +1233,146 @@ export const whyKrmuData: Record<string, WhyKrmuData> = {
     bottomDescription2:
       "Whether your goal is to build a career in clinical physiotherapy, sports rehabilitation, neurological and orthopaedic rehabilitation, paediatric or geriatric care, pursue higher studies and research, or establish your own physiotherapy practice, the BPT programme is designed to equip you with the scientific knowledge, evidence-based clinical skills, and practical training required to excel in the healthcare sector.",
   },
+
+  "bba-llb-hons": {
+    title: "Why K.R. Mangalam University for BBA LL.B. (Hons.) in 2026–27?",
+
+    description:
+      "Pursuing a BBA LL.B. (Hons.) degree is not simply about acquiring a law degree. It can also help students to develop the business-related and courtroom skills necessary to achieve success in any number of different types of careers in corporate law, litigation, and public policy.",
+
+    comparisonTitle:
+      "The primary focus of the comparison of these parameters of interest to students when making their selection of a BBA LL.B. Programme is:",
+
+    parameterHeader: "Parameter",
+
+    krmuHeader: "K.R. Mangalam University",
+
+    typicalHeader: "Typical Private University in NCR",
+
+    comparisonData: [
+      {
+        parameter: "Highest placement package",
+        krmu: "56.6 LPA",
+        typical: "8–20 LPA",
+      },
+      {
+        parameter: "Campus recruiters",
+        krmu: "800+ companies",
+        typical: "100–300 companies",
+      },
+      {
+        parameter: "Placement assistance",
+        krmu: "100% Placement Assistance",
+        typical: "Limited or partial support",
+      },
+      {
+        parameter: "Curriculum approval",
+        krmu: "Bar Council of India (BCI) Approved Curriculum",
+        typical: "Varies; not always BCI-aligned",
+      },
+      {
+        parameter: "Practical training",
+        krmu: "Moot courts, legal drafting, and client counselling simulations",
+        typical: "Largely classroom/theory-based",
+      },
+      {
+        parameter: "Mentorship",
+        krmu: "Guidance from retired judges, senior lawyers, and industry practitioners",
+        typical: "Primarily faculty-based mentorship",
+      },
+      {
+        parameter: "Location advantage",
+        krmu: "Gurugram – Access to Corporate Legal Hubs, Law Firms & MNCs in Delhi-NCR",
+        typical: "Often located away from major legal/corporate hubs",
+      },
+      {
+        parameter: "Specialisations offered",
+        krmu: "Criminal Law, Corporate Law, Constitutional Law, Intellectual Property Rights, and more",
+        typical: "Limited specialisation options",
+      },
+      {
+        parameter: "Scholarship available",
+        krmu: "Up to 100% for meritorious students, sports achievers & students across multiple categories",
+        typical: "Limited and highly competitive",
+      },
+    ],
+    bottomDescription1:
+      "A significant component of this programme is that graduate students are eligible for 100% placement assistance in various legal organisations, including private law firms, corporate legal departments, multi-national corporations, and government agencies located in the Delhi/NCR region. Additionally, the programme is designed to offer each student regular internship opportunities with courts, law firms, and corporate legal teams to network with professionals in the legal field before their graduation.",
+  },
+
+  "btech-cse-in-data-science": {
+    title:
+      "Why Choose K.R. Mangalam University for B.Tech. CSE (Data Science)?",
+
+    description:
+      "KRMU’s B.Tech. CSE (Data Science) with Academic Support of IBM programme is designed for students who aspire to harness the power of data, artificial intelligence, and advanced analytics to solve real-world problems and drive innovation in a data-driven digital economy.The programme integrates a strong foundation in computer science with specialised knowledge in data science, enabling students to develop expertise in statistical analysis, machine learning, data mining, big data analytics, data engineering, business intelligence, predictive modelling, data visualisation, and artificial intelligence. Through an industry-oriented curriculum, experiential learning, expert mentoring, and exposure to modern analytical tools and intelligent technologies, students strengthen their technical competence and industry readiness. Practical learning through advanced data science laboratories, internships, live industry projects, analytics competitions, and capstone projects enables students to gain the hands-on experience and analytical skills required to collect, process, analyse, interpret, and deploy data-driven solutions for complex business and societal challenges.",
+
+    comparisonTitle:
+      "Students exploring B.Tech. CSE (Data Science) programmes often evaluate factors such as a future-ready curriculum, advanced data science laboratories, experienced faculty, experiential learning opportunities, industry collaborations, internships, live projects, analytics competitions, innovation and entrepreneurship support, exposure to emerging technologies, placement opportunities, and an academic environment that nurtures analytical thinking, ethical use of data, technical excellence, problem-solving abilities, collaboration, creativity, and lifelong learning.",
+
+    parameterHeader: "Parameter",
+
+    krmuHeader: "K.R. Mangalam University",
+
+    typicalHeader: "Typical Private University in NCR",
+
+    comparisonData: [
+      {
+        parameter: "Highest placement package",
+        krmu: "56.6 LPA",
+        typical: "8–20 LPA",
+      },
+      {
+        parameter: "Campus recruiters",
+        krmu: "800+ companies",
+        typical: "100–300 companies",
+      },
+      {
+        parameter: "Research & innovation",
+        krmu: "600+ Scopus/WoS publications, 100+ patents, research in data science, artificial intelligence, machine learning, big data analytics, business intelligence, cloud computing, data engineering, intelligent systems, and interdisciplinary computing research",
+        typical:
+          "Limited research ecosystem with fewer publications, patents, and opportunities in data science, artificial intelligence, big data, analytics, and emerging computing technologies",
+      },
+      {
+        parameter: "International exposure",
+        krmu: "*Fully Sponsored 2-Week European Summer School",
+        typical:
+          "International exposure is generally not included as a standard programme component",
+      },
+      {
+        parameter: "Data Science laboratories & experiential learning",
+        krmu: "Advanced data science laboratories, AI and machine learning projects, analytics competitions, hackathons, live industry projects, internships, cloud-based data analytics, and capstone projects",
+        typical:
+          "Limited access to specialised data science laboratories, AI platforms, analytics tools, industry-led projects, and experiential learning opportunities",
+      },
+      {
+        parameter: "Industry mentorship",
+        krmu: "Learning under experienced data scientists, AI specialists, machine learning engineers, analytics professionals, cloud experts, entrepreneurs, academicians, and industry leaders through workshops, masterclasses, and live mentoring",
+        typical:
+          "Primarily classroom-based learning with limited interaction with data science professionals, AI experts, analytics leaders, and the technology industry",
+      },
+      {
+        parameter: "Location advantage",
+        krmu: "Gurugram – Close to leading technology companies, AI and data science firms, global enterprises, multinational corporations, consulting organisations, fintech companies, startups, analytics centres, and innovation hubs",
+        typical:
+          "Often located in regions with comparatively fewer opportunities for regular interaction with the data science, AI, analytics, and technology industry",
+      },
+      {
+        parameter: "Placement record",
+        krmu: "92% Placement Rate",
+        typical: "55–65% Placement Rate",
+      },
+      {
+        parameter: "Scholarships",
+        krmu: "Up to 100% scholarships for meritorious students, sports achievers, and multiple other categories",
+        typical:
+          "Limited scholarships with fewer eligibility categories and higher competition",
+      },
+    ],
+    bottomDescription1:
+      "Situated in Gurugram, a leading centre for technology, innovation, artificial intelligence, analytics, startups, and global enterprises, K.R. Mangalam University’s B.Tech. CSE (Data Science) programme provides students with valuable exposure to renowned technology companies, AI and data science firms, research organisations, analytics centres, and industry professionals. Through industry interactions, live data-driven projects, internships, analytics competitions, workshops, hackathons, innovation challenges, research initiatives, and expert-led seminars, students gain practical experience and develop the technical expertise required to solve complex business and societal problems using data-driven approaches and intelligent technologies.",
+
+    bottomDescription2:
+      "The programme prepares skilled data science professionals and future technology leaders by integrating a strong computer science foundation with advanced data science principles and analytical techniques. Through hands-on learning in statistical analysis, machine learning, big data analytics, data engineering, predictive modelling, data visualisation, artificial intelligence, cloud-based analytics, and business intelligence, students develop the analytical capabilities, technical proficiency, and professional competencies required to extract meaningful insights from data, build intelligent solutions, optimise decision-making, and drive innovation while pursuing rewarding careers in the global data science, artificial intelligence, and technology industry.",
+  },
 };

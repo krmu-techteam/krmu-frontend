@@ -1,13 +1,14 @@
-// import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
+import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 import { HeroSection, ProgrammeScopeType } from "@/lib/types/school-programme";
 
 // import Link from "next/link";
-// import CommonLeadPopup from "../../components/CommonLeadPopup";
+import CommonLeadPopup from "../../components/CommonLeadPopup";
 import Image from "next/image";
 import { Download, Check } from "lucide-react";
 // import { STRAPI_URL } from "@/app/constant";
 import { Inter } from "next/font/google";
 import { programmeScopeData } from "../programs/progdata/programmeScopeData";
+import Link from "next/link";
 
 type Props = {
   scopeData: ProgrammeScopeType;
@@ -23,12 +24,15 @@ const inter = Inter({
 });
 
 const NewProgrammeScope = async ({
-  // scopeData,
+  scopeData,
   // heroSection,
   // allowedFormSlugs,
   slug,
 }: Props) => {
+  const getDownProsSettings = await getDownloadProspectusSetting();
   const data = programmeScopeData[slug];
+  const enable_disable_download_pros =
+    getDownProsSettings?.download_prospectus_enable_disable;
 
   const checkingSlug =
     slug === "bjmc-hons-research" ||
