@@ -50,9 +50,9 @@ const steps = [
 
 const AdmissionProcess = () => {
   return (
-    <section className="bg-[url('/demo/admission-process.jpg')] bg-cover bg-center bg-no-repeat py-12 md:py-16 lg:py-20 px-5">
+    <section className="bg-[url('/demo/admission-process.jpg')] bg-cover bg-center bg-no-repeat py-8 sm:py-12 md:py-16 lg:py-20 px-5">
       <div className="max-w-7xl mx-auto text-white">
-        <h3 className="text-3xl md:text-4xl lg:text-[46px] font-bold leading-none">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[46px] font-bold leading-none">
           Admission Process
         </h3>
 
@@ -64,9 +64,9 @@ const AdmissionProcess = () => {
           {steps.map((item) => (
             <div
               key={item.step}
-              className={`${item.gradient} rounded-[5px] p-5 min-h-[220px] flex flex-col`}
+              className={`${item.gradient} rounded-[5px] p-5 sm:min-h-[220px] flex flex-col`}
             >
-              <div className="mb-3 md:mb-5 h-20">
+              <div className="sm:mb-3 md:mb-5 sm:h-20">
                 <h5 className="text-sm uppercase tracking-wide">
                   {item.step}
                 </h5>

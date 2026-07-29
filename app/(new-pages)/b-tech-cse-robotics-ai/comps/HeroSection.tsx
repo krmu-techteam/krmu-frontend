@@ -6,22 +6,60 @@ import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 const HeroSection = () => {
   return (
     <section className="bg-[linear-gradient(90deg,#BDCBCF_-1.04%,#BCD5E2_101.28%)] relative overflow-hidden">
-      <Image
-        src="/ellipse.svg"
-        width={639}
-        height={639}
-        alt="Ellipse"
-        className="absolute -left-24 top-0"
-      />
-      <div className="max-w-[1564px] mx-auto w-full pt-[120px] sm:pt-44 flex flex-col xl:flex-row font-poppins z-20 relative px-5">
+      <div className="relative w-full xl:hidden pt-[120px]">
+        <div className="relative w-full flex flex-col items-center">
+          <Image
+            src="/ai-ml.svg"
+            width={920}
+            height={494}
+            alt="AI ML"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2"
+          />
+          <Image
+            src="/robotic-hand.png"
+            width={537}
+            height={652}
+            alt="Robotic Hand"
+            className="z-20 relative"
+          />
+        </div>
+        <div className="bg-[#4987AB] w-full xl:hidden z-20 relative">
+          <div className="max-w-[1564px] mx-auto px-5 py-4">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-4 text-center text-white text-base lg:text-xl">
+              <span className="font-semibold">August 2026 intake now open</span>
+
+              <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
+
+              <span>Scholarships up to 100%</span>
+
+              <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
+
+              <Link
+                href="#"
+                className="underline font-light hover:opacity-80 transition"
+              >
+                Apply on the admissions portal
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="max-w-[1564px] mx-auto w-full pt-10 xl:pt-44 flex flex-col-reverse xl:flex-row font-poppins z-20 relative px-5">
+        <Image
+          src="/ellipse.svg"
+          width={639}
+          height={639}
+          alt="Ellipse"
+          className="absolute -left-24 top-0 sm:left-[-154px] sm:top-[-75px] xl:-left-24 xl:top-0 rounded-full"
+        />
         <Image
           src="/ai-ml.svg"
           width={920}
           height={494}
           alt="AI ML"
-          className="absolute bottom-0 right-[5%]"
+          className="absolute bottom-0 right-[5%] hidden xl:block"
         />
-        <div className="w-full xl:w-1/2 z-20 relative">
+        <div className="w-full xl:w-1/2 z-20 relative xl:pl-12 2xl:pl-0">
           <p className="text-base font-bold">
             Engineer Intelligent Robots for an AI-Driven World
           </p>
@@ -29,10 +67,10 @@ const HeroSection = () => {
             className="
                       text-4xl
                       sm:text-5xl
-                      xl:text-[55px]
-                      2xl:text-7xl
+                      md:text-[68px]
                       leading-[1.2]
-                      xl:max-w-[800px]
+                      xl:max-w-[600px]
+                      2xl:max-w-[900px]
                       font-bold
                       pb-2.5
                       py-2.5
@@ -41,29 +79,30 @@ const HeroSection = () => {
                       text-transparent
                     "
           >
-            B.Tech. CSE (Robotics &amp; Artificial Intelligence)
+            B.Tech. CSE <br className="hidden sm:block" /> (Robotics &amp;
+            Artificial Intelligence)
           </h1>
-          <h2 className="text-[22px] mb-1.5 xl:max-w-[480px]">
+          <h2 className="text-lg sm:text-[22px] mb-1.5 xl:max-w-[480px]">
             with Academic Support of IBM & Powered by Microsoft Certifications
           </h2>
-          <p className="text-sm xl:max-w-[510px] leading-5">
+          <p className="text-sm xl:max-w-[510px] leading-5 text-justify sm:text-left">
             Graduate with expertise in robot design, computer vision, machine
             learning, and AI-powered autonomous systems, strengthened by
             IBM-backed industry certifications and Microsoft credentials.
           </p>
           <div className="space-y-3 space-x-2 leading-8 font-semibold text-sm mt-7">
-              <NpfPopup
-                formId={`31c1452015d32698095f833b3e7eb9c5`}
-                btnClass={`bg-[#DE0000] text-white rounded-[5px] px-5 py-1 uppercase inline-block npfWidget-31c1452015d32698095f833b3e7eb9c5`}
-                btnText="Apply Now"
-                showIcon={false}
-              />
-                 <CommonLeadPopup
-                      buttonText='Download Prospectus'
-                      buttonClassName="bg-white text-black rounded-[5px] px-5 py-1 uppercase"
-                      redirectUrl="https://www.krmangalam.edu.in/pdfs/programme-brochure/btech-cse-new.pdf"
-                      form_name="Download Prospectus"
-                    />
+            <NpfPopup
+              formId={`31c1452015d32698095f833b3e7eb9c5`}
+              btnClass={`bg-[#DE0000] text-white rounded-[5px] px-5 py-1 uppercase inline-block npfWidget-31c1452015d32698095f833b3e7eb9c5`}
+              btnText="Apply Now"
+              showIcon={false}
+            />
+            <CommonLeadPopup
+              buttonText="Download Prospectus"
+              buttonClassName="bg-white text-black rounded-[5px] px-5 py-1 uppercase"
+              redirectUrl="https://www.krmangalam.edu.in/pdfs/programme-brochure/btech-cse-new.pdf"
+              form_name="Download Prospectus"
+            />
             {/* <button className="bg-[#DE0000] text-white rounded-[5px] px-5 py-1 uppercase">
               Apply Now
             </button> */}
@@ -90,7 +129,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-full xl:w-1/2 flex justify-center z-20 relative">
+        <div className="w-full xl:w-1/2 justify-center z-20 relative hidden xl:flex">
           <Image
             src="/robotic-hand.png"
             width={537}
@@ -99,30 +138,26 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="bg-[#4987AB] w-full">
-  <div className="max-w-[1564px] mx-auto px-5 py-4">
-    <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-4 text-center text-white text-base lg:text-xl">
-      <span className="font-semibold">
-        August 2026 intake now open
-      </span>
+      <div className="bg-[#4987AB] w-full hidden xl:block">
+        <div className="max-w-[1564px] mx-auto px-5 py-4">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-4 text-center text-white text-base lg:text-xl">
+            <span className="font-semibold">August 2026 intake now open</span>
 
-      <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
+            <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
 
-      <span>
-        Scholarships up to 100%
-      </span>
+            <span>Scholarships up to 100%</span>
 
-      <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
+            <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
 
-      <Link
-        href="#"
-        className="underline font-light hover:opacity-80 transition"
-      >
-        Apply on the admissions portal
-      </Link>
-    </div>
-  </div>
-</div>
+            <Link
+              href="#"
+              className="underline font-light hover:opacity-80 transition"
+            >
+              Apply on the admissions portal
+            </Link>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

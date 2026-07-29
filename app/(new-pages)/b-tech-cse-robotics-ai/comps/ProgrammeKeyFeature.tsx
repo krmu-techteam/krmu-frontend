@@ -41,9 +41,9 @@ const features = [
 
 const ProgrammeKeyFeature = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto px-5">
-        <h2 className="text-3xl md:text-4xl lg:text-[46px] font-bold leading-none mb-8 lg:mb-8">
+        <h2 className="text-3xl md:text-4xl lg:text-[46px] font-bold leading-tight sm:leading-none mb-2 sm:mb-8 text-center sm:text-left">
           Programme Key Features
         </h2>
 
@@ -56,7 +56,7 @@ const ProgrammeKeyFeature = () => {
               key={index}
               className={`
                 flex flex-col sm:flex-row gap-5 sm:gap-6
-                py-6 lg:py-8
+                py-4 sm:py-6 lg:py-8
                 px-0 md:px-4
                 border-b border-[#E5E8EB]
                 last:border-b-0
@@ -68,10 +68,10 @@ const ProgrammeKeyFeature = () => {
               <div className="flex-shrink-0 flex justify-center sm:justify-start">
                 <Image
                   src={feature.icon}
-                  width={72}
-                  height={72}
+                  width={55}
+                  height={55}
                   alt={feature.title}
-                  className="w-14 h-14 sm:w-16 sm:h-16 lg:w-[72px] lg:h-[72px] object-contain"
+                  className="w-14 h-14 sm:w-16 sm:h-16 lg:w-[55px] lg:h-[55px] object-contain"
                 />
               </div>
 
@@ -81,7 +81,7 @@ const ProgrammeKeyFeature = () => {
                   {feature.title}
                 </h3>
 
-                <p className="text-[#23354D] text-base leading-7 lg:leading-snug">
+                <p className="text-[#23354D] text-sm sm:text-base leading-tight sm:leading-7 lg:leading-snug">
                   {feature.description}
                 </p>
               </div>

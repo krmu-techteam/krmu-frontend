@@ -13,7 +13,7 @@ const BtechCSERoboticsVideo = () => {
   const [playVideo, setPlayVideo] = useState(false);
 
   return (
-    <section className="py-16">
+    <section className="sm:py-16">
       <div className="max-w-6xl mx-auto w-full relative overflow-hidden">
         {!playVideo ? (
           <>
@@ -35,11 +35,12 @@ const BtechCSERoboticsVideo = () => {
                 width={68}
                 height={68}
                 alt="Play"
+                className="w-10 h-10 sm:w-[68px] sm:h-[68px]"
               />
             </button>
 
             <p
-              className={`${robotoCondensed.className} text-xl font-semibold max-w-[620px] text-white absolute bottom-4 left-1/2 -translate-x-1/2 bg-[rgba(9,51,105,0.4)] rounded px-3 py-2 text-center leading-tight w-[90%]`}
+              className={`${robotoCondensed.className} text-xs sm:text-xl font-semibold max-w-[620px] text-white absolute bottom-4 left-1/2 -translate-x-1/2 bg-[rgba(9,51,105,0.4)] rounded px-3 py-2 text-center leading-tight w-[90%]`}
             >
               Inside KRMU's Robotics Lab | Student Innovations, Projects &
               Future Tech

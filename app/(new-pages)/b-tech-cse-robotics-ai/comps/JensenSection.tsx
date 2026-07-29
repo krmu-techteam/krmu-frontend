@@ -2,17 +2,17 @@ import Image from "next/image";
 
 const JensenSection = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-[url(/demo/jensen-bg.jpg)] bg-cover bg-center bg-no-repeat px-5">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-[url(/demo/jensen-bg.jpg)] bg-cover bg-center bg-no-repeat px-5">
       <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
         {/* Text */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <h3 className="relative text-2xl md:text-3xl lg:text-[32px] font-medium text-white leading-snug">
+          <h3 className="relative text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-medium text-white leading-snug">
             <Image
               src="/demo/double-quote.svg"
               width={32}
               height={32}
               alt=""
-              className="absolute -top-8 left-1/2 -translate-x-1/2 lg:left-0 lg:-translate-x-0 lg:-top-10"
+              className="absolute -top-9 sm:-top-8 left-1/2 -translate-x-1/2 lg:left-0 lg:-translate-x-0 lg:-top-10"
             />
 
             Humanoid robotics is going to potentially be one of the largest
@@ -39,7 +39,7 @@ const JensenSection = () => {
             width={342}
             height={342}
             alt="Jensen Huang"
-            className="w-64 sm:w-72 md:w-80 lg:w-[342px] h-auto object-contain"
+            className="w-60 sm:w-72 md:w-80 lg:w-[342px] h-auto object-contain"
           />
         </div>
       </div>

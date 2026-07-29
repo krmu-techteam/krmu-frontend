@@ -41,9 +41,9 @@ const offers = [
 
 const AIOffers = () => {
   return (
-    <section className="py-12 md:py-16 lg:pt-20 lg:pb-5 px-5">
+    <section className="py-8 sm:py-12 md:py-16 lg:pt-20 lg:pb-5 px-5">
       <div className="max-w-7xl mx-auto">
-        <h3 className="max-w-[780px] text-3xl md:text-4xl lg:text-[32px] font-bold leading-tight">
+        <h3 className="max-w-[780px] text-center sm:text-left text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold leading-tight">
           Here's everything KRMU's B.Tech. CSE Robotics and AI programme has to
           offer:
         </h3>
@@ -74,7 +74,7 @@ const AIOffers = () => {
                     {offer.title}
                   </h4>
 
-                  <p className="text-base md:text-lg leading-7 text-[#23354D]">
+                  <p className="text-sm sm:text-base md:text-lg leading-tight text-[#23354D] text-justify sm:text-center">
                     {offer.description}
                   </p>
                 </div>

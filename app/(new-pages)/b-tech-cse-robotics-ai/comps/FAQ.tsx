@@ -19,9 +19,9 @@ const FAQ = () => {
   };
 
   return (
-    <section className="pb-10">
+    <section className="py-8 sm:py-12 md:py-16 lg:pt-20 lg:pb-10">
       <div className="max-w-7xl mx-auto w-full px-5">
-        <h4 className="text-3xl xl:text-5xl font-bold text-center">
+        <h4 className="text-2xl sm:text-3xl xl:text-5xl font-bold text-center">
           Any Question? We're Here To Help!
         </h4>
 
@@ -35,7 +35,7 @@ const FAQ = () => {
           </strong>
         </p>
 
-        <div className="flex flex-col lg:flex-row my-12 lg:my-20 max-w-5xl mx-auto gap-8 lg:gap-10">
+        <div className="flex flex-col lg:flex-row mt-5 sm:my-12 lg:my-20 max-w-5xl mx-auto gap-8 lg:gap-10">
           {/* Left Tabs */}
           <div className="w-full lg:w-[20%]">
             <ul className="text-[#001732] space-y-3">

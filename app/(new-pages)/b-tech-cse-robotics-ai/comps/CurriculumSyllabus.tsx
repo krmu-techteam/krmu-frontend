@@ -5,9 +5,9 @@ import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 
 const CurriculumSyllabus = () => {
   return (
-    <section className="py-12">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-5">
-        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#001732] leading-tight mb-2.5">
+        <h3 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#001732] leading-tight mb-2.5 text-center sm:text-left">
           Curriculum & Syllabus
         </h3>
         <Link href="#" className="flex items-end gap-2 w-fit">
@@ -22,7 +22,7 @@ const CurriculumSyllabus = () => {
             return (
               <div
                 key={index}
-                className="mb-5 lg:sticky"
+                className="mb-8 lg:sticky"
                 style={{
                   // top: `${96 + index * 24}px`, // staggered offset = "peeking" stack effect
                   top: "96px", // staggered offset = "peeking" stack effect

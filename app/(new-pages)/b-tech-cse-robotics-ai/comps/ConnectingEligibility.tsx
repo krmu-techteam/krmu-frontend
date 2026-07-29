@@ -31,16 +31,18 @@ const ConnectingEligibility = () => {
 
           <p className="mt-5 text-sm text-center xl:text-left leading-6">
             <strong>Eligibility:</strong> 50% marks in 10+2 examination with
-            Physics & Maths. <i className="font-medium">3-Year Lateral Entry option also available for
-            eligible students.</i>
+            Physics & Maths.{" "}
+            <i className="font-medium">
+              3-Year Lateral Entry option also available for eligible students.
+            </i>
           </p>
         </div>
 
         {/* Right Side */}
         <div className="w-full xl:w-3/5">
-          <div className="max-w-[635px] mx-auto">
+          <div className="max-w-[635px] mx-auto flex gap-5 flex-col-reverse sm:block">
             <div className="flex flex-wrap justify-center gap-2">
-              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
+              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[calc(33.333%-6px)] sm:w-[120px] flex items-center justify-center">
                 <Image
                   src="/demo/gm.png"
                   width={66}
@@ -50,7 +52,7 @@ const ConnectingEligibility = () => {
                 />
               </div>
 
-              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
+              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[calc(33.333%-6px)] sm:w-[120px] flex items-center justify-center">
                 <Image
                   src="/demo/toshiba.png"
                   width={100}
@@ -60,7 +62,7 @@ const ConnectingEligibility = () => {
                 />
               </div>
 
-              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
+              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[calc(33.333%-6px)] sm:w-[120px] flex items-center justify-center">
                 <Image
                   src="/demo/mahindra.png"
                   width={79}
@@ -70,7 +72,7 @@ const ConnectingEligibility = () => {
                 />
               </div>
 
-              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
+              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[calc(33.333%-6px)] sm:w-[120px] flex items-center justify-center">
                 <Image
                   src="/demo/wipro.png"
                   width={84}
@@ -80,7 +82,7 @@ const ConnectingEligibility = () => {
                 />
               </div>
 
-              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[120px] flex items-center justify-center">
+              <div className="bg-white rounded-[10px] border border-[#A1B9C4] h-24 w-[calc(33.333%-6px)] sm:w-[120px] flex items-center justify-center">
                 <Image
                   src="/demo/systique.png"
                   width={54}
