@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import HeroMarquee from "../../CommonComponent2026/HeroMarquee";
 // import CountdownTimer from "./CountdownTimer";
@@ -10,6 +11,7 @@ import {
   StatCard,
 } from "../contentype";
 import NoPaperFormsWidget from "../../CommonComponent2026/NoPaperFormsWidget";
+import { Play, PlayCircle } from "lucide-react";
 
 interface HeroSectionProps {
   hero: BscFinanceHeroContent;
@@ -18,6 +20,25 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  // Extract YouTube ID
+  const getVideoId = (url?: string) => {
+    if (!url) return "";
+    const regExp = /(?:youtube\.com\/.*v=|youtu\.be\/)([^&]+)/;
+    const match = url.match(regExp);
+    return match ? match[1] : "";
+  };
+
+  const videoId = getVideoId(hero.videoUrl);
+
+  useEffect(() => {
+    document.body.style.overflow = isVideoOpen ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isVideoOpen]);
+
   return (
     <>
       {/* Hero — full viewport */}
@@ -36,7 +57,7 @@ const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
         <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[rgba(5,10,28,0.7)] via-[rgba(5,10,28,0.5)] to-[rgba(5,10,28,0.3)]" />
 
         <div className="relative z-[2] max-w-[1300px] mx-auto w-full px-4 sm:px-6 pt-48 sm:pt-40 pb-10 sm:pb-16 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-12">
-                {/* <div className="relative z-[2] max-w-[1300px] mx-auto w-full px-4 sm:px-6 pt-24 sm:pt-24 pb-10 sm:pb-16 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-12"> */}
+          {/* <div className="relative z-[2] max-w-[1300px] mx-auto w-full px-4 sm:px-6 pt-24 sm:pt-24 pb-10 sm:pb-16 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-12"> */}
           {/* LEFT — text content & stats */}
           <div className="w-full lg:w-[58%] flex flex-col gap-4 sm:gap-6 text-white lg:text-left text-center">
             <div className="flex flex-col gap-3 sm:gap-4">
@@ -111,6 +132,16 @@ const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
                 redirectUrl={hero.brochureBtnHref}
                 form_name="BSc Finance 2026 - Brochure Download"
               />
+
+              {hero.videoUrl && (
+                <button
+                  onClick={() => setIsVideoOpen(true)}
+                  className="inline-flex items-center gap-2 bg-transparent text-white hover:text-white/80 transition-colors duration-200 font-normal text-[13px] leading-5  cursor-pointer"
+                >
+                  <PlayCircle size={35} strokeWidth={1.2} />
+                  <span>Watch Video</span>
+                </button>
+              )}
             </div>
           </div>
 
@@ -131,6 +162,52 @@ const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
 
       {/* Red marquee — uses existing CommonComponent2026/HeroMarquee */}
       <HeroMarquee data={marqueeData} />
+
+      {/* Video Modal */}
+      {isVideoOpen && videoId && (
+        <div
+          onClick={() => setIsVideoOpen(false)}
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/75 p-4 md:p-10 cursor-pointer backdrop-blur-md"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-7xl aspect-video shadow-2xl overflow-hidden rounded-2xl bg-black cursor-auto"
+          >
+            {/* Close */}
+            <button
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute top-3 right-3 z-[10000] text-white/80 hover:text-white flex items-center justify-center transition-all duration-300 hover:rotate-90 hover:scale-110 cursor-pointer"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 6L6 18M6 6L18 18"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            {/* Video */}
+            <div className="w-full h-full bg-black">
+              <iframe
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+                title="YouTube video"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
