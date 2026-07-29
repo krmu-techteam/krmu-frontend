@@ -31,8 +31,8 @@ const ConnectingEligibility = () => {
 
           <p className="mt-5 text-sm text-center xl:text-left leading-6">
             <strong>Eligibility:</strong> 50% marks in 10+2 examination with
-            Physics & Maths. 3-Year Lateral Entry option also available for
-            eligible students.
+            Physics & Maths. <i className="font-medium">3-Year Lateral Entry option also available for
+            eligible students.</i>
           </p>
         </div>
 

@@ -33,7 +33,7 @@ const BTechCSERoboticsAI = () => {
       <CurriculumSyllabus />
       <LabFacilties />
       <AIOffers />
-      <div className="bg-[url(/demo/grad-bg.svg)] bg-bottom bg-cover bg-no-repeat">
+      <div className="bg-[linear-gradient(180deg,#FFFFFF_1.44%,#F2E7CD_47.6%,#FFFFFF_100%)]">
         <BeyondTheClassroom />
         <CareerProspects />
         <FinancialAssistance />

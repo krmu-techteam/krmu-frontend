@@ -19,7 +19,7 @@ const BeyondTheClassroom = () => {
           landscape.
         </p>
       </div>
-      <div className="mt-10 h-[500px]">
+      <div className="mt-10 h-fit">
         <BeyondSlider />
       </div>
     </section>

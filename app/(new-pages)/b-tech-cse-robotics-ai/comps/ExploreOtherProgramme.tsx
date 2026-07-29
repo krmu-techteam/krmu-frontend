@@ -12,8 +12,8 @@ const ExploreOtherProgramme = () => {
           alt=""
           className="absolute bottom-0 right-0 left-1/2 xl:left-[48%] -translate-x-1/2 lg:-translate-x-px"
         />
-        <div className="w-full lg:w-1/2 text-white p-5 md:py-10 md:pl-14 md:pr-10">
-          <h4 className="text-3xl sm:text-[40px] font-bold leading-tight text-[#00A1FF] mb-5 sm:mb-0">
+        <div className="w-full lg:w-1/2 text-white p-5 md:py-10 md:pl-14 md:pr-0">
+          <h4 className="text-3xl sm:text-[40px] font-bold leading-tight text-[#00A1FF] mb-5 sm:mb-2">
             Explore <br className="hidden lg:block" /> Other Programmes
           </h4>
           <p>

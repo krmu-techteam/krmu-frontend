@@ -16,7 +16,7 @@ const FinancialAssistance = () => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
         {/* Left Content */}
         <div className="w-full lg:w-1/2 text-[#001732]">
-          <h4 className="text-3xl md:text-4xl lg:text-[46px] font-bold leading-tight mb-5">
+          <h4 className="text-3xl md:text-4xl lg:text-[46px] font-bold leading-tight">
             Financial Assistance
           </h4>
 

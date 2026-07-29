@@ -38,15 +38,15 @@ const FAQ = () => {
         <div className="flex flex-col lg:flex-row my-12 lg:my-20 max-w-5xl mx-auto gap-8 lg:gap-10">
           {/* Left Tabs */}
           <div className="w-full lg:w-[20%]">
-            <ul className="text-[#001732] space-y-3 font-semibold">
+            <ul className="text-[#001732] space-y-3">
               {faqData.map((item, index) => (
                 <li
                   key={item.category}
                   onClick={() => handleTabChange(index)}
                   className={`py-2 px-4 cursor-pointer transition-all duration-300 ${
                     activeTab === index
-                      ? "bg-[linear-gradient(90deg,#D5F1F1_0%,#FBFBFB_100%)]"
-                      : "bg-[linear-gradient(90deg,#EDEDED_0%,#FBFBFB_100%)]"
+                      ? "bg-[linear-gradient(90deg,#D5F1F1_0%,#FBFBFB_100%)] font-bold"
+                      : "bg-[linear-gradient(90deg,#EDEDED_0%,#FBFBFB_100%)] font-medium"
                   }`}
                 >
                   {item.category}
