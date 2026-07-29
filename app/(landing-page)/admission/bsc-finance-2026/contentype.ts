@@ -200,6 +200,7 @@ export type BscFinanceHeroContent = {
   brochureBtnLabel: string;
   brochureBtnHref: string;
   lpclName: string; // CSS class for MainSection background
+  videoUrl?: string; // Optional YouTube video link
 };
 
 // Single recruiter item

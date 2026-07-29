@@ -33,12 +33,14 @@ export const Hero: BscFinanceHeroContent = {
   description:
     "Graduate with a degree, 12 months of paid industry experience, and a curriculum aligned to CFA, FRM & actuarial examinations",
   countdownTargetDate: "2026-07-11T23:59:59",
-  lastDateLabel: "Get Up to 100% Scholarship Worth ₹27 Cr + Opportunity to Fly to Europe | Apply Before It's Gone",
+  lastDateLabel:
+    "Get Up to 100% Scholarship Worth ₹27 Cr + Opportunity to Fly to Europe | Apply Before It's Gone",
   applyBtnLabel: "Apply for 2026-27 Batch",
   applyBtnHref: bscFinanceApplyHref,
   brochureBtnLabel: "Download Brochure",
   brochureBtnHref: bscFinanceBrochureHref,
   lpclName: "",
+  videoUrl: "https://www.youtube.com/watch?v=kZyb2vSv-dM",
 };
 
 export const heroNavLinks: NavLink[] = [
