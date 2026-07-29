@@ -12,21 +12,21 @@ const banks = [
 
 const FinancialAssistance = () => {
   return (
-    <section className="py-12 md:py-16 lg:py-20 px-5">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-5">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
         {/* Left Content */}
         <div className="w-full lg:w-1/2 text-[#001732]">
-          <h4 className="text-3xl md:text-4xl lg:text-[46px] font-bold leading-tight">
+          <h4 className="text-2xl md:text-4xl lg:text-[46px] font-bold leading-tight mb-2">
             Financial Assistance
           </h4>
 
-          <p className="text-base md:text-lg leading-7">
+          <p className="text-sm sm:text-base md:text-lg leading-relaxed sm:leading-7 text-justify sm:text-left">
             K.R. Mangalam University has collaborated with leading banks to
             offer convenient Education Loan options, making it easier for
             students to finance their academic aspirations.
           </p>
 
-          <ul className="mt-6 space-y-4 text-sm md:text-base">
+          <ul className="mt-2 sm:mt-6 space-y-1 sm:space-y-3 text-sm md:text-base">
             {[
               "Quick & Instant Disbursal",
               "Includes tuition fees, books cost, hostel fees, and airfare",

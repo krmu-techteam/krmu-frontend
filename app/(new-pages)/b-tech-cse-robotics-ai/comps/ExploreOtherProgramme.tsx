@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ExploreOtherProgramme = () => {
   return (
-    <section className="py-16 px-5">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-5">
       <div className="max-w-7xl mx-auto w-full bg-[url(/demo/exploreprog.svg)] bg-center bg-no-repeat bg-cover flex flex-col lg:flex-row rounded-[10px] relative">
         <Image
           src="/demo/explore-prog-girl.png"
@@ -13,10 +13,10 @@ const ExploreOtherProgramme = () => {
           className="absolute bottom-0 right-0 left-1/2 xl:left-[48%] -translate-x-1/2 lg:-translate-x-px"
         />
         <div className="w-full lg:w-1/2 text-white p-5 md:py-10 md:pl-14 md:pr-0">
-          <h4 className="text-3xl sm:text-[40px] font-bold leading-tight text-[#00A1FF] mb-5 sm:mb-2">
+          <h4 className="text-2xl sm:text-3xl sm:text-[40px] font-bold leading-tight text-[#00A1FF] mb-5 sm:mb-2">
             Explore <br className="hidden lg:block" /> Other Programmes
           </h4>
-          <p>
+          <p className="text-sm sm:text-base text-justify sm:text-left">
             Discover other programmes that open doors to exciting career
             opportunities and future growth. Choose from a wide range of
             industry-oriented courses designed to help you build a successful

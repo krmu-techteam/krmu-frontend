@@ -15,7 +15,7 @@ const Scholarship2026 = () => {
           </p>
           <Link
             href="#"
-            className="text-black font-bold bg-white px-5 py-2 rounded-[5px]"
+            className="text-black font-semibold bg-white px-5 py-2 rounded-[5px]"
           >
             Explore
           </Link>
