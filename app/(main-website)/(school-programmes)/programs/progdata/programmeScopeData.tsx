@@ -1120,4 +1120,259 @@ export const programmeScopeData: Record<string, ProgrammeScopeData> = {
       },
     ],
   },
+
+  "ba-hons-psychology": {
+    heading: (
+      <>
+        B.A. (Hons.) Psychology
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_4207798623.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "The BA Hons psychology programme offers diverse career and academic opportunities in fields like mental health, education, human resources, and social work. Graduates can pursue higher studies such as MA Psychology, MSW, or specialised diplomas to become counsellors, psychologists, or researchers. With growing awareness around mental well-being, the demand for psychology professionals is increasing across sectors like healthcare, corporate wellness, NGOs, and government services making it a promising and impactful career path.",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: <> During the B.A. (Hons.) Psychology</>,
+
+    skillsDescription: (
+      <span>
+        A <strong> B.A. (Hons.) Psychology</strong> programme helps students
+        develop a strong combination of scientific, analytical, interpersonal,
+        and professional skills. These competencies prepare graduates for
+        careers in mental health, education, human resources, research,
+        corporate organisations, and social services.
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            <strong>Psychological Assessment Skills:</strong> Learn the
+            fundamentals of psychological testing, observation, behavioural
+            assessment, and interpreting human behaviour.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            <strong>Critical Thinking & Problem-Solving:</strong> Develop the
+            ability to analyse psychological issues, evaluate evidence, and
+            propose effective solutions to real-world challenges.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            <strong>Research & Data Analysis:</strong> Gain expertise in
+            research methodologies, survey design, data collection, statistical
+            analysis, and report writing.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            <strong>Communication & Active Listening:</strong> Strengthen verbal
+            and written communication skills while learning to listen
+            empathetically and interact effectively with individuals and groups.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            <strong>Counselling & Interpersonal Skills:</strong> Build the
+            interpersonal skills required to understand emotions, provide
+            guidance, and establish meaningful professional relationships.
+          </span>
+        ),
+      },
+    ],
+  },
+
+  "ba-hons-english-research": {
+    heading: (
+      <>
+        B.A. (Hons. / Hons. with Research) English
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_e017ebcac3.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "A B.A. (Hons./ Hons. with Research) in English offers diverse career opportunities across creative, academic, and professional fields. Graduates can pursue roles in content writing, editing, publishing, journalism, advertising, public relations, digital media, and corporate communications. With strong analytical and communication skills, they are also valued in fields like civil services, teaching, and training. Higher studies options include M.A. in English, Comparative Literature, Linguistics, Journalism, Mass Communication, or MBA, opening doors to specialised careers. Those opting for research can build careers in academia, cultural studies, literary criticism, or linguistics research.",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: <>During the B.A. (Hons. / Hons. with Research) English</>,
+
+    skillsDescription: (
+      <span>
+        AA B.A. (Hons. / Hons. with Research) English programme equips students
+        with a blend of literary, analytical, creative, and professional skills
+        that are valuable across industries. Throughout the programme, students
+        develop:
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            Advanced Communication Skills: Express ideas clearly and effectively
+            through written, verbal, and interpersonal communication.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            Critical Thinking and Analytical Skills: Interpret literary texts,
+            evaluate arguments, and analyse social, cultural, and historical
+            contexts.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            Creative Writing Skills: Develop expertise in storytelling,
+            scriptwriting, poetry, fiction, blogging, and other forms of
+            creative expression.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            Research and Academic Writing: Learn research methodologies,
+            academic writing, citation techniques, and independent research
+            skills.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            Editing and Proofreading: Strengthen grammar, language accuracy,
+            editing techniques, and attention to detail.
+          </span>
+        ),
+      },
+    ],
+  },
+
+  "bachelor-of-physiotherapy-bpt": {
+    heading: (
+      <>
+        Bachelor of Physiotherapy (BPT)
+        <br /> Programme Scope
+      </>
+    ),
+    image:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Scope_image_7e1ae2469b.jpg",
+    alt: "scope image",
+    description: [
+      {
+        id: 1,
+        content:
+          "A Bachelor of Physiotherapy (BPT) provides students with opportunities to pursue higher education and specialise in various areas of physiotherapy. Graduates are also eligible to pursue postgraduate programmes in fields such as Hospital Administration, Business Management, Public Health Management, and other allied disciplines. As physiotherapists, they play a vital role in improving people's quality of life by restoring mobility, managing pain, preventing injuries, and promoting overall health and well-being. The programme also offers extensive clinical training, internships, and community outreach activities, enabling students to gain valuable hands-on experience and develop the practical skills required for a successful professional career.  ",
+      },
+    ],
+    skillsTitle: "Skills Developed",
+
+    skillsSubtitle: <>During the BPT Programme</>,
+
+    skillsDescription: (
+      <span>
+        Within the span of 5 years, students develop scientific, clinical, and
+        patient-care skills required in the healthcare and rehabilitation
+        sectors, such as:
+      </span>
+    ),
+
+    skillsList: [
+      {
+        id: 1,
+        content: (
+          <span>
+            Strong understanding of human anatomy, physiology, biomechanics, and
+            kinesiology, enabling effective assessment and management of
+            movement-related disorders.
+          </span>
+        ),
+      },
+      {
+        id: 2,
+        content: (
+          <span>
+            Knowledge of modern physiotherapy techniques, including manual
+            therapy, therapeutic exercise, electrotherapy, rehabilitation
+            protocols, and evidence-based clinical practices for improving
+            patient outcomes.
+          </span>
+        ),
+      },
+      {
+        id: 3,
+        content: (
+          <span>
+            Extensive clinical training through hospital postings,
+            rehabilitation centres, and supervised practical sessions provides
+            hands-on experience in assessing, diagnosing, and treating patients
+            across various medical conditions.
+          </span>
+        ),
+      },
+      {
+        id: 4,
+        content: (
+          <span>
+            Critical thinking, clinical reasoning, and problem-solving skills
+            are developed through patient case studies, treatment planning,
+            functional assessments, and rehabilitation programme design tailored
+            to individual patient needs.
+          </span>
+        ),
+      },
+      {
+        id: 5,
+        content: (
+          <span>
+            Understanding of healthcare ethics, patient communication,
+            interdisciplinary teamwork, and rehabilitation management equips
+            students with professional, leadership, and patient-centred care
+            skills essential for successful careers in physiotherapy and allied
+            healthcare settings.
+          </span>
+        ),
+      },
+    ],
+  },
 };
