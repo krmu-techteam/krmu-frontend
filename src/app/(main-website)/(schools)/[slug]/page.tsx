@@ -28,7 +28,7 @@ import {
 } from "../SchoolComponents/schoolData";
 import { sbasHerosLogos, smasHerosLogos, soadHerosLogos, soasHerosLogos, soedHerosLogos, soetHerosLogos, sohmctHerosLogos, solaHerosLogos, somcHerosLogos, sprsHerosLogos } from "../SchoolComponents/schoolHeroLogo";
 
-import { HeroSection, OverviewSection, AlumniSection, ExcitedNewsletterSection, AdvantagesSection, OpenSourceMentorshipSection, UniversityComparisonSection, KnowledgePartnersSection, ExcellenceSection, TestimonialsSection, DeanSection, FacultyAdvisorySection, EventAndExperienceSection, FacilitiesSection, CommenceJourneySection } from "@/presentation/school/sections";;
+import { HeroSection, OverviewSection, AlumniSection, ExcitedNewsletterSection, AdvantagesSection, OpenSourceMentorshipSection, UniversityComparisonSection, KnowledgePartnersSection, TestimonialsSection, DeanSection, FacultyAdvisorySection, EventAndExperienceSection, FacilitiesSection, CommenceJourneySection } from "@/presentation/school/sections";
 
 import { ProgrammesExplorer } from "@/presentation/programmes/sections";;
 import SectionDivider from "@/components/common/SectionDivider";
@@ -336,14 +336,6 @@ export default async function Page({ params }: Props) {
         <KnowledgePartnersSection
           title={school?.knowledgetitle}
           logos={school?.knowledgepartenerlogos}
-        />
-      )}
-      {school?.coetitle1 && (
-        <ExcellenceSection
-          title1={school?.coetitle1}
-          title2={school?.coetitle2}
-          btn1={school?.coebtn1}
-          btn2={school?.coebtn2}
         />
       )}
       {school?.tetimonialtitle && (
