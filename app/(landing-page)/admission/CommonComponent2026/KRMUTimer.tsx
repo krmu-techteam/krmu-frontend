@@ -94,7 +94,7 @@ export default function KRMUTimer({
       <span
         className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-xs sm:text-sm" : "text-xs sm:text-sm"}`}
       >
-        Registration Closing on July 29 | Join Manika Vishwakarma LIVE | Limited Seats Available
+        Final Admission Deadline: 31 July
         {mainWebsiteTimer && (
           <span className="border-b border-white border-dotted inline-block ml-2">Apply Now</span>
         )}
