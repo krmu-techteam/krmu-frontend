@@ -12,7 +12,7 @@ const JensenSection = () => {
               width={32}
               height={32}
               alt=""
-              className="absolute -top-9 sm:-top-8 left-1/2 -translate-x-1/2 lg:left-0 lg:-translate-x-0 lg:-top-10"
+              className="absolute -top-10 sm:-top-8 left-1/2 -translate-x-1/2 lg:left-0 lg:-translate-x-0 lg:-top-10"
             />
 
             Humanoid robotics is going to potentially be one of the largest
@@ -33,13 +33,13 @@ const JensenSection = () => {
         </div>
 
         {/* Image */}
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mb-2 sm:mb-0">
           <Image
             src="/demo/jensen.png"
             width={342}
             height={342}
             alt="Jensen Huang"
-            className="w-60 sm:w-72 md:w-80 lg:w-[342px] h-auto object-contain"
+            className="w-48 sm:w-72 md:w-80 lg:w-[342px] h-auto object-contain"
           />
         </div>
       </div>

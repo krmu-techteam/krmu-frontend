@@ -20,12 +20,12 @@ const HeroSection = () => {
             width={537}
             height={652}
             alt="Robotic Hand"
-            className="z-20 relative"
+            className="z-20 relative w-[220px] sm:w-full"
           />
         </div>
         <div className="bg-[#4987AB] w-full xl:hidden z-20 relative">
-          <div className="max-w-[1564px] mx-auto px-5 py-4">
-            <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-2 sm:gap-4 text-center text-white text-base lg:text-xl">
+          <div className="max-w-[1564px] mx-auto px-5 py-2 sm:py-4">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-1 sm:gap-4 text-center text-white text-base lg:text-xl">
               <span className="font-semibold">August 2026 intake now open</span>
 
               <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
@@ -67,7 +67,8 @@ const HeroSection = () => {
             className="
                       text-4xl
                       sm:text-5xl
-                      md:text-[68px]
+                      xl:text-[55px]
+                      2xl:text-[68px]
                       leading-[1.2]
                       xl:max-w-[600px]
                       2xl:max-w-[900px]
@@ -93,13 +94,13 @@ const HeroSection = () => {
           <div className="space-y-3 space-x-2 leading-8 font-semibold text-sm mt-7">
             <NpfPopup
               formId={`31c1452015d32698095f833b3e7eb9c5`}
-              btnClass={`bg-[#DE0000] text-white rounded-[5px] px-5 py-1 uppercase inline-block npfWidget-31c1452015d32698095f833b3e7eb9c5`}
+              btnClass={`bg-[#DE0000] text-white rounded-[5px] px-5 py-1 uppercase inline-block npfWidget-31c1452015d32698095f833b3e7eb9c5 w-full sm:w-fit`}
               btnText="Apply Now"
               showIcon={false}
             />
             <CommonLeadPopup
               buttonText="Download Prospectus"
-              buttonClassName="bg-white text-black rounded-[5px] px-5 py-1 uppercase"
+              buttonClassName="bg-white text-black rounded-[5px] px-5 py-1 uppercase w-full sm:w-fit"
               redirectUrl="https://www.krmangalam.edu.in/pdfs/programme-brochure/btech-cse-new.pdf"
               form_name="Download Prospectus"
             />

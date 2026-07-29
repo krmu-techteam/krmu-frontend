@@ -42,9 +42,6 @@ const BTechCSERoboticsAI = () => {
       <FAQ />
       <ExploreOtherProgramme />
       <LookingToSecure />
-      {/* 
-      
-       */}
     </div>
   );
 };

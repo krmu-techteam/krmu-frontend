@@ -4,7 +4,7 @@ import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 
 const LookingToSecure = () => {
   return (
-    <section className="bg-[linear-gradient(90deg,#001732_43.27%,#B08233_100%)] pt-8 lg:pt-10 overflow-hidden relative">
+    <section className="bg-[linear-gradient(180deg,#001732_66.27%,#B08233_80%)] sm:bg-[linear-gradient(90deg,#001732_43.27%,#B08233_100%)] pt-8 lg:pt-10 overflow-hidden relative">
       <div className="relative max-w-7xl mx-auto flex flex-col lg:flex-row px-4 sm:px-6 lg:px-8">
         {/* Background Decorative Image */}
         <Image
@@ -49,13 +49,13 @@ const LookingToSecure = () => {
             </button> */}
               <NpfPopup
                 formId={`31c1452015d32698095f833b3e7eb9c5`}
-                btnClass={`rounded-md bg-[#DE0000] px-6 py-3 text-sm font-bold uppercase text-white transition hover:bg-red-700 npfWidget-31c1452015d32698095f833b3e7eb9c5`}
+                btnClass={`w-full sm:w-fit rounded-md bg-[#DE0000] px-6 py-3 text-sm font-bold uppercase text-white transition hover:bg-red-700 npfWidget-31c1452015d32698095f833b3e7eb9c5`}
                 btnText="Apply Now"
                 showIcon={false}
               />
               <CommonLeadPopup
                 buttonText="Download Prospectus"
-                buttonClassName="rounded-md bg-white px-6 py-3 text-sm font-bold uppercase text-[#012959] transition hover:bg-gray-100"
+                buttonClassName="rounded-md bg-white px-6 py-3 text-sm font-bold uppercase text-[#012959] transition hover:bg-gray-100 w-full sm:w-fit"
                 redirectUrl="https://www.krmangalam.edu.in/pdfs/programme-brochure/btech-cse-new.pdf"
                 form_name="Download Prospectus"
               />
