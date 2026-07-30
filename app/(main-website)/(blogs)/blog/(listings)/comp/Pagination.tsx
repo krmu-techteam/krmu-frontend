@@ -1,11 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
-import {
-  usePathname,
-  useRouter,
-  useSearchParams,
-} from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 type Props = {
   currentPage: number;
@@ -19,47 +16,24 @@ export default function Pagination({
   pageNumbers,
 }: Props) {
   const [loading, setLoading] = useState(false);
-
   const router = useRouter();
-  const pathname = usePathname();
   const searchParams = useSearchParams();
 
   const handlePageChange = (page: number) => {
-    if (loading) return;
-
-    if (page < 1 || page > totalPages) return;
-
-    if (page === currentPage) return;
+    if (loading) return; // ⭐ prevent multiple clicks
 
     setLoading(true);
-
-    const params = new URLSearchParams(searchParams.toString());
-
-    if (page === 1) {
-      params.delete("page");
-    } else {
-      params.set("page", String(page));
-    }
-
-    const query = params.toString();
-
-    router.push(query ? `${pathname}?${query}` : pathname);
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    router.push(`?page=${page}`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
     setLoading(false);
-  }, [currentPage]);
+  }, [searchParams]);
 
-  const btnBase =
-    "px-3 py-1 border rounded transition";
+  const btnBase = "px-3 py-1 border rounded transition";
 
-  const disabledStyle =
-    "opacity-50 pointer-events-none cursor-not-allowed";
+  const disabledStyle = "opacity-50 pointer-events-none cursor-not-allowed";
 
   return (
     <div
@@ -67,14 +41,11 @@ export default function Pagination({
         loading ? "opacity-70" : ""
       }`}
     >
-      {/* Previous */}
+      {/* Prev */}
       {currentPage > 1 && (
         <button
-          type="button"
           disabled={loading}
-          onClick={() =>
-            handlePageChange(currentPage - 1)
-          }
+          onClick={() => handlePageChange(currentPage - 1)}
           className={`${btnBase} hover:bg-gray-100 ${
             loading ? disabledStyle : ""
           }`}
@@ -83,52 +54,33 @@ export default function Pagination({
         </button>
       )}
 
-      {/* Page Numbers */}
-      {pageNumbers.map((num, idx) => {
-        if (num === "…") {
-          return (
-            <span
-              key={`ellipsis-${idx}`}
-              className="px-3 py-1"
-            >
-              …
-            </span>
-          );
-        }
-
-        const pageNumber = Number(num);
-
-        return (
+      {/* Numbers */}
+      {pageNumbers.map((num, idx) =>
+        num === "…" ? (
+          <span key={idx} className="px-3 py-1">
+            …
+          </span>
+        ) : (
           <button
-            type="button"
-            key={pageNumber}
-            disabled={
-              loading || pageNumber === currentPage
-            }
-            onClick={() =>
-              handlePageChange(pageNumber)
-            }
+            key={idx}
+            disabled={loading}
+            onClick={() => handlePageChange(Number(num))}
             className={`${btnBase} ${
-              pageNumber === currentPage
-                ? "bg-[#cb000d] text-white border-[#cb000d]"
+              num === currentPage
+                ? "#cb000d text-black border-red-600"
                 : "bg-white text-black hover:bg-gray-100"
-            } ${
-              loading ? disabledStyle : ""
-            }`}
+            } ${loading ? disabledStyle : ""}`}
           >
-            {pageNumber}
+            {num}
           </button>
-        );
-      })}
+        ),
+      )}
 
       {/* Next */}
       {currentPage < totalPages && (
         <button
-          type="button"
           disabled={loading}
-          onClick={() =>
-            handlePageChange(currentPage + 1)
-          }
+          onClick={() => handlePageChange(currentPage + 1)}
           className={`${btnBase} hover:bg-gray-100 ${
             loading ? disabledStyle : ""
           }`}
@@ -136,6 +88,16 @@ export default function Pagination({
           Next &gt;
         </button>
       )}
+
+      {/* Loader */}
+      {/* {loading && (
+        <Image
+          src="/preloader/preloader.gif"
+          width={18}
+          height={18}
+          alt="Preloader"
+        />
+      )} */}
     </div>
   );
 }

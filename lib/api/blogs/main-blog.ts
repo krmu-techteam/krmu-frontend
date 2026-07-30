@@ -11,170 +11,49 @@ export async function getAllBlogsByPerPageOrCategorySlug(
   categorySlug?: string
 ) {
   try {
-    // Make sure page is always valid
-    const currentPage =
-      Number.isInteger(page) && page > 0 ? page : 1;
-
     const params = new URLSearchParams({
       per_page: String(num_of_blogs),
-      page: String(currentPage),
-      _fields:
-        "id,slug,title,featured_media,content,excerpt,date_gmt",
+      page: String(page),
+      _fields: "id,slug,title,featured_media,content,excerpt,date_gmt",
     });
 
     let categoryId: number | null = null;
 
-    // Get category ID
+    // 🟢 Fetch category ID only if slug exists
     if (categorySlug) {
       const catRes = await fetch(
-        `${krmBlogURL}/wp-json/wp/v2/categories?slug=${encodeURIComponent(
-          categorySlug
-        )}`,
-        {
-          next: {
-            revalidate: 3600,
-            tags: ["blogs"],
-          },
-        }
+        `${krmBlogURL}/wp-json/wp/v2/categories?slug=${categorySlug}`,
+        { next: { revalidate: 3600, tags: ["blogs"] } }
       );
 
-      if (!catRes.ok) {
-        console.error(
-          "Category API failed:",
-          catRes.status,
-          catRes.statusText
-        );
-
-        return {
-          blogs: [],
-          totalPages: 0,
-        };
+      if (catRes.ok) {
+        const cats = await catRes.json();
+        if (cats?.length) categoryId = cats[0].id;
       }
 
-      const cats = await catRes.json();
-
-      if (!Array.isArray(cats) || cats.length === 0) {
-        return {
-          blogs: [],
-          totalPages: 0,
-        };
-      }
-
-      categoryId = Number(cats[0]?.id) || null;
-
-      if (!categoryId) {
-        return {
-          blogs: [],
-          totalPages: 0,
-        };
-      }
-
-      params.set("categories", String(categoryId));
+      // ❗ Invalid slug → return empty result instantly (faster)
+      if (!categoryId) return { blogs: [], totalPages: 0 };
     }
 
-    const finalURL =
-      `${krmBlogURL}/wp-json/wp/v2/posts?${params.toString()}`;
+    // If category found, add filter
+    if (categoryId) params.append("categories", String(categoryId));
 
-    const res = await fetch(finalURL, {
-      next: {
-        revalidate: 3600,
-        tags: ["blogs"],
-      },
-    });
+    // 🔥 Optimized single fetch call
+    const finalURL = `${krmBlogURL}/wp-json/wp/v2/posts?${params.toString()}`;
 
-    // Handle WordPress error response safely
-    if (!res.ok) {
-      const errorText = await res.text();
+    const res = await fetch(finalURL, { next: { revalidate: 3600, tags: ["blogs"] } });
 
-      console.error("WordPress posts API failed:", {
-        status: res.status,
-        statusText: res.statusText,
-        page: currentPage,
-        url: finalURL,
-        response: errorText,
-      });
+    if (!res.ok) throw new Error("Failed to fetch blogs");
 
-      return {
-        blogs: [],
-        totalPages: 0,
-      };
-    }
+    const totalPages = Number(res.headers.get("X-WP-TotalPages")) || 1;
+    const blogs = await res.json();
 
-    const data = await res.json();
-
-    // Make sure WordPress actually returned an array
-    const blogs = Array.isArray(data) ? data : [];
-
-    const totalPagesHeader =
-      res.headers.get("X-WP-TotalPages");
-
-    const totalPages = Number(totalPagesHeader) || 1;
-
-    return {
-      blogs,
-      totalPages,
-    };
+    return { blogs, totalPages };
   } catch (error) {
-    console.error(
-      "getAllBlogsByPerPageOrCategorySlug error:",
-      error
-    );
-
-    return {
-      blogs: [],
-      totalPages: 0,
-    };
+    console.error("Blog fetch error:", error);
+    return { blogs: [], totalPages: 0 };
   }
 }
-// export async function getAllBlogsByPerPageOrCategorySlug(
-//   num_of_blogs: number = 6,
-//   page: number = 1,
-//   categorySlug?: string
-// ) {
-//   try {
-//     const params = new URLSearchParams({
-//       per_page: String(num_of_blogs),
-//       page: String(page),
-//       _fields: "id,slug,title,featured_media,content,excerpt,date_gmt",
-//     });
-
-//     let categoryId: number | null = null;
-
-//     // 🟢 Fetch category ID only if slug exists
-//     if (categorySlug) {
-//       const catRes = await fetch(
-//         `${krmBlogURL}/wp-json/wp/v2/categories?slug=${categorySlug}`,
-//         { next: { revalidate: 3600, tags: ["blogs"] } }
-//       );
-
-//       if (catRes.ok) {
-//         const cats = await catRes.json();
-//         if (cats?.length) categoryId = cats[0].id;
-//       }
-
-//       // ❗ Invalid slug → return empty result instantly (faster)
-//       if (!categoryId) return { blogs: [], totalPages: 0 };
-//     }
-
-//     // If category found, add filter
-//     if (categoryId) params.append("categories", String(categoryId));
-
-//     // 🔥 Optimized single fetch call
-//     const finalURL = `${krmBlogURL}/wp-json/wp/v2/posts?${params.toString()}`;
-
-//     const res = await fetch(finalURL, { next: { revalidate: 3600, tags: ["blogs"] } });
-
-//     if (!res.ok) throw new Error("Failed to fetch blogs");
-
-//     const totalPages = Number(res.headers.get("X-WP-TotalPages")) || 1;
-//     const blogs = await res.json();
-
-//     return { blogs, totalPages };
-//   } catch (error) {
-//     console.error("Blog fetch error:", error);
-//     return { blogs: [], totalPages: 0 };
-//   }
-// }
 
 export async function getRecentPosts() {
   try {
