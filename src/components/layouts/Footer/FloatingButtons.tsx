@@ -1,87 +1,92 @@
 "use client";
 
-import React from 'react';
-import { Phone } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
-import { usePathname } from 'next/navigation';
+import React from "react";
+import { Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function FloatingButtons() {
-  const pathname = usePathname();
-
   return (
     <>
       {/* Desktop Version: Premium Side-floating Contact Panel */}
-      <div className="hidden lg:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col gap-2 z-[9999] font-poppins">
+      <div className="hidden lg:flex fixed right-0 top-1/2 -translate-y-1/2 flex-col gap-1 z-[9999] font-poppins w-[40px] items-end">
         {/* Call Button */}
         <a
           href="tel:+911242867700"
-          className="!bg-[#0060a9] hover:!bg-[#005090] !text-white w-[40px] h-[40px] flex items-center justify-center transition-all duration-300 shadow-lg rounded-l-sm border-l border-y border-white/10 group relative"
+          className="!bg-[#0060a9] hover:!bg-[#005090] !text-white w-[40px] h-[40px] min-w-[40px] max-w-[40px] p-0 box-border flex items-center justify-center transition-all duration-300 rounded-l-[2px] group relative shrink-0"
           title="Call Us"
         >
           <Phone size={22} className="!text-white" />
-          <span className="absolute right-full mr-2 !bg-[#0060a9] !text-white text-[12px] font-medium py-1.5 px-3 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
+          <span className="absolute right-full mr-2 !bg-[#0060a9] !text-white text-[13px] font-medium py-1.5 px-3 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
             Call Us: +91 124 2867700
           </span>
         </a>
-        
+
         {/* Admission Enquiry Button */}
         <button
-          className="!bg-[#e31e24] hover:!bg-[#c31a1e] !text-white w-[40px] h-[180px] flex items-center justify-center transition-all duration-300 shadow-lg rounded-l-sm border-l border-y border-white/10 group relative cursor-pointer"
+          className="!bg-[#e31e24] hover:!bg-[#c31a1e] !text-white w-[40px] h-[180px] min-w-[40px] max-w-[40px] p-0 box-border flex items-center justify-center transition-all duration-300 rounded-l-[2px] group relative cursor-pointer shrink-0 border-none outline-none overflow-hidden"
           onClick={() => {
-             const form = document.getElementById('admission-form') || document.querySelector('form') || document.querySelector('[id*="enquire"]') || document.querySelector('[id*="admission"]');
-             if (form) {
-               form.scrollIntoView({ behavior: 'smooth' });
-             }
+            const form =
+              document.getElementById("admission-form") ||
+              document.querySelector("form") ||
+              document.querySelector('[id*="enquire"]') ||
+              document.querySelector('[id*="admission"]');
+            if (form) {
+              form.scrollIntoView({ behavior: "smooth" });
+            }
           }}
         >
-          <span className="[writing-mode:vertical-lr] rotate-180 font-bold uppercase tracking-widest text-[13px] whitespace-nowrap leading-none flex items-center justify-center transition-all">
+          <span className="[writing-mode:vertical-lr] rotate-180 font-medium tracking-wide text-[13px] whitespace-nowrap leading-none flex items-center justify-center transition-all">
             Admission Enquiry
           </span>
         </button>
-        
+
         {/* WhatsApp Button */}
         <a
           href="https://wa.me/918800697010"
           target="_blank"
           rel="noopener noreferrer"
-          className="!bg-[#25D366] hover:!bg-[#20bd5a] !text-white w-[40px] h-[40px] flex items-center justify-center transition-all duration-300 shadow-lg rounded-l-sm border-l border-y border-white/10 group relative"
+          className="!bg-[#25D366] hover:!bg-[#20bd5a] !text-white w-[40px] h-[40px] min-w-[40px] max-w-[40px] p-0 box-border flex items-center justify-center transition-all duration-300 rounded-l-[2px] group relative shrink-0"
           title="WhatsApp Us"
         >
-          <FaWhatsapp size={26} className="!text-white" />
-          <span className="absolute right-full mr-2 !bg-[#25D366] !text-white text-[12px] font-medium py-1.5 px-3 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
+          <FaWhatsapp size={22} className="!text-white" />
+          <span className="absolute right-full mr-2 !bg-[#25D366] !text-white text-[13px] font-medium py-1.5 px-3 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
             Chat on WhatsApp
           </span>
         </a>
       </div>
 
       {/* Mobile Version: Sticky bottom bar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[9999] flex shadow-[0_-4px_12px_rgba(0,0,0,0.2)]">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[9999] flex w-full shadow-[0_-4px_12px_rgba(0,0,0,0.2)]">
         <a
           href="tel:+911242867700"
-          className="flex-1 !bg-[#0060a9] !text-white py-3.5 px-2 text-center text-[13px] font-semibold uppercase tracking-wider border-r border-white/20 active:bg-[#005090] flex items-center justify-center gap-2"
+          className="w-1/3 flex-1 basis-0 !bg-[#0060a9] !text-white py-3.5 px-1 text-center text-[13px] font-semibold uppercase tracking-wider border-r border-white/20 active:bg-[#005090] flex items-center justify-center gap-1.5 box-border"
         >
-          <Phone size={15} className="!text-white" />
-          Call Us
+          <Phone size={15} className="!text-white shrink-0" />
+          <span className="truncate">Call Us</span>
         </a>
         <button
           onClick={() => {
-             const form = document.getElementById('admission-form') || document.querySelector('form') || document.querySelector('[id*="enquire"]') || document.querySelector('[id*="admission"]');
-             if (form) {
-               form.scrollIntoView({ behavior: 'smooth' });
-             }
+            const form =
+              document.getElementById("admission-form") ||
+              document.querySelector("form") ||
+              document.querySelector('[id*="enquire"]') ||
+              document.querySelector('[id*="admission"]');
+            if (form) {
+              form.scrollIntoView({ behavior: "smooth" });
+            }
           }}
-          className="flex-1 !bg-[#e31e24] !text-white py-3.5 px-2 text-center text-[13px] font-semibold uppercase tracking-wider border-r border-white/20 active:bg-[#c31a1e]"
+          className="w-1/3 flex-1 basis-0 !bg-[#e31e24] !text-white py-3.5 px-1 text-center text-[13px] font-semibold uppercase tracking-wider border-r border-white/20 active:bg-[#c31a1e] box-border border-y-0 border-l-0 outline-none cursor-pointer"
         >
-          Enquire Now
+          <span className="truncate">Enquire Now</span>
         </button>
         <a
           href="https://wa.me/918800697010"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 !bg-[#25D366] !text-white py-3.5 px-2 text-center text-[13px] font-semibold uppercase tracking-wider active:bg-[#20bd5a] flex items-center justify-center gap-2"
+          className="w-1/3 flex-1 basis-0 !bg-[#25D366] !text-white py-3.5 px-1 text-center text-[13px] font-semibold uppercase tracking-wider active:bg-[#20bd5a] flex items-center justify-center gap-1.5 box-border"
         >
-          <FaWhatsapp size={17} className="!text-white" />
-          WhatsApp
+          <FaWhatsapp size={17} className="!text-white shrink-0" />
+          <span className="truncate">WhatsApp</span>
         </a>
       </div>
     </>
