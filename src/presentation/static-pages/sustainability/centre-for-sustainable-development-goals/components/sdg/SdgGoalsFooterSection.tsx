@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface GoalTile {
   id: number;
@@ -15,103 +16,103 @@ const goalTiles: GoalTile[] = [
     id: 1,
     src: "/images/sustainability/goals/g1.jpg",
     alt: "No Poverty",
-    link: "https://www.krmangalam.edu.in/sdg-1-no-poverty/",
+    link: "/sdg-1-no-poverty",
   },
   {
     id: 2,
     src: "/images/sustainability/goals/g2.jpg",
     alt: "Zero Hunger",
-    link: "https://www.krmangalam.edu.in/sdg-2-zero-hunger/",
+    link: "/sdg-2-zero-hunger",
   },
   {
     id: 3,
     src: "/images/sustainability/goals/g3.jpg",
     alt: "Good Health and Well-Being",
-    link: "https://www.krmangalam.edu.in/sdg-3-good-health-and-well-being/",
+    link: "/sdg-3-good-health-and-well-being",
   },
   {
     id: 4,
     src: "/images/sustainability/goals/g4.jpg",
     alt: "Quality Education",
-    link: "https://www.krmangalam.edu.in/sdg-4-quality-education/",
+    link: "/sdg-4-quality-education",
   },
   {
     id: 5,
     src: "/images/sustainability/goals/g5.jpg",
     alt: "Gender Equality",
-    link: "https://www.krmangalam.edu.in/sdg-5-gender-equality/",
+    link: "/sdg-5-gender-equality",
   },
   {
     id: 6,
     src: "/images/sustainability/goals/g6.jpg",
     alt: "Clean Water and Sanitation",
-    link: "https://www.krmangalam.edu.in/sdg-6-clean-water-and-sanitation/",
+    link: "/sdg-6-clean-water-and-sanitation",
   },
   {
     id: 7,
     src: "/images/sustainability/goals/g7.jpg",
     alt: "Affordable and Clean Energy",
-    link: "https://www.krmangalam.edu.in/sdg-7-affordable-and-clean-energy/",
+    link: "/sdg-7-affordable-and-clean-energy",
   },
   {
     id: 8,
     src: "/images/sustainability/goals/g8.jpg",
     alt: "Decent Work and Economic Growth",
-    link: "https://www.krmangalam.edu.in/sdg-8-decent-work-and-economic-growth/",
+    link: "/sdg-8-decent-work-and-economic-growth",
   },
   {
     id: 9,
     src: "/images/sustainability/goals/g9.jpg",
     alt: "Industry, Innovation and Infrastructure",
-    link: "https://www.krmangalam.edu.in/sdg-9-industry-innovation-and-infrastructure/",
+    link: "/sdg-9-industry-innovation-and-infrastructure",
   },
   {
     id: 10,
     src: "/images/sustainability/goals/g10.jpg",
     alt: "Reduced Inequalities",
-    link: "https://www.krmangalam.edu.in/sdg-10-reduced-inequalities/",
+    link: "/sdg-10-reduced-inequalities",
   },
   {
     id: 11,
     src: "/images/sustainability/goals/g11.jpg",
     alt: "Sustainable Cities and Communities",
-    link: "https://www.krmangalam.edu.in/sdg-11-sustainable-cities-and-communities/",
+    link: "/sdg-11-sustainable-cities-and-communities",
   },
   {
     id: 12,
     src: "/images/sustainability/goals/g12.jpg",
     alt: "Responsible Consumption and Production",
-    link: "https://www.krmangalam.edu.in/sdg-12-responsible-consumption-and-production/",
+    link: "/sdg-12-responsible-consumption-and-production",
   },
   {
     id: 13,
     src: "/images/sustainability/goals/g13.jpg",
     alt: "Climate Action",
-    link: "https://www.krmangalam.edu.in/sdg-13-climate-action/",
+    link: "/sdg-13-climate-action",
   },
   {
     id: 14,
     src: "/images/sustainability/goals/g14.jpg",
     alt: "Life Below Water",
-    link: "https://www.krmangalam.edu.in/sdg-14-life-below-water/",
+    link: "/sdg-14-life-below-water",
   },
   {
     id: 15,
     src: "/images/sustainability/goals/g15.jpg",
     alt: "Life On Land",
-    link: "https://www.krmangalam.edu.in/sdg-15-life-on-land/",
+    link: "/sdg-15-life-on-land",
   },
   {
     id: 16,
     src: "/images/sustainability/goals/g16.jpg",
     alt: "Peace, Justice and Strong Institutions",
-    link: "https://www.krmangalam.edu.in/sdg-16-peace-justice-and-strong-institutions/",
+    link: "/sdg-16-peace-justice-and-strong-institutions",
   },
   {
     id: 17,
     src: "/images/sustainability/goals/g17.jpg",
     alt: "Partnerships for the Goals",
-    link: "https://www.krmangalam.edu.in/sdg-17-partnerships-for-the-goals/",
+    link: "/sdg-17-partnerships-for-the-goals",
   },
   {
     id: 18,
@@ -140,7 +141,7 @@ const SdgGoalsFooterSection: React.FC = () => {
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
           {goalTiles.map((tile) => {
             const TileContent = (
-              <div className="relative aspect-square w-full  group hover:scale-[1.01] hover:opacity-95 transition-all duration-200">
+              <div className="relative aspect-square w-full group hover:scale-[1.01] hover:opacity-95 transition-all duration-200">
                 <Image
                   src={tile.src}
                   alt={tile.alt}
@@ -151,17 +152,30 @@ const SdgGoalsFooterSection: React.FC = () => {
               </div>
             );
 
-            return tile.link ? (
-              <a
-                key={tile.id}
-                href={tile.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full cursor-pointer"
-              >
-                {TileContent}
-              </a>
-            ) : (
+            if (tile.link) {
+              const isInternal = tile.link.startsWith("/");
+              return isInternal ? (
+                <Link
+                  key={tile.id}
+                  href={tile.link}
+                  className="block w-full cursor-pointer"
+                >
+                  {TileContent}
+                </Link>
+              ) : (
+                <a
+                  key={tile.id}
+                  href={tile.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full cursor-pointer"
+                >
+                  {TileContent}
+                </a>
+              );
+            }
+
+            return (
               <div key={tile.id} className="block w-full">
                 {TileContent}
               </div>
