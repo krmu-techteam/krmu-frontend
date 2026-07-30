@@ -136,7 +136,7 @@ const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
               {hero.videoUrl && (
                 <button
                   onClick={() => setIsVideoOpen(true)}
-                  className="inline-flex items-center gap-2 bg-transparent text-white hover:text-white/80 transition-colors duration-200 font-normal text-[13px] leading-5  cursor-pointer"
+                  className="inline-flex items-center gap-2 bg-transparent font-semibold text-white hover:text-white/80 transition-colors duration-200 text-[13px] leading-5  cursor-pointer"
                 >
                   <PlayCircle size={35} strokeWidth={1.2} />
                   <span>Watch Video</span>
