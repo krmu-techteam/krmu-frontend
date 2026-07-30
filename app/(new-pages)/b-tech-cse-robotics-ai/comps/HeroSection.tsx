@@ -20,7 +20,7 @@ const HeroSection = () => {
             width={537}
             height={652}
             alt="Robotic Hand"
-            className="z-20 relative w-[220px] sm:w-full"
+            className="z-20 relative w-[220px] sm:w-[450px]"
           />
         </div>
         <div className="bg-[#4987AB] w-full xl:hidden z-20 relative">
