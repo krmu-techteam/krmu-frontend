@@ -70,7 +70,7 @@ const AIOffers = () => {
               {/* Content */}
               <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:p-8 lg:p-10 text-center">
                 <div className="max-w-[520px]">
-                  <h4 className="text-xl font-bold mb-1">
+                  <h4 className="text-xl font-bold mb-2.5 sm:mb-1.5 xl:mb-2 leading-none">
                     {offer.title}
                   </h4>
 
