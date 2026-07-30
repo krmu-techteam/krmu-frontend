@@ -39,7 +39,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -72,7 +72,6 @@ export const Counters: CounterItem[] = [
     subtitle: "Placement Record",
   },
 ];
-
 
 // import { ProgrammeCardItem } from "@/types/programme";
 
@@ -129,8 +128,6 @@ export const programmeContent = {
     },
   ],
 };
-
-
 
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
@@ -585,7 +582,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   description: "",
   image: {
     src: "/landingpage/btech-2026/student-at-krmu/Collage.webp",
-    alt: "Life as a PhD Scholar at KR Mangalam",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
@@ -679,12 +676,11 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
 export const eligibilityTerms = [
   {
-    description: "Passed 12th with minimum 50% aggregate marks."
+    description: "Passed 12th with minimum 50% aggregate marks.",
   },
   {
-    description: "Admission based on merit and personal interview."
+    description: "Admission based on merit and personal interview.",
   },
 ];

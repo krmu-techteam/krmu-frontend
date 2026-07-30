@@ -162,7 +162,7 @@ const ContactUsForm = () => {
             />
             <span>
               I agree to receive information from{" "}
-              <strong>KR Mangalam University</strong>
+              <strong>K.R. Mangalam University</strong>
             </span>
           </label>
           {errors.agree && (

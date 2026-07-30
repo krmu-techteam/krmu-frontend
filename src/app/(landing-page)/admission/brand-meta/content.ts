@@ -41,7 +41,7 @@ export const Hero: HeroContent = {
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
     "50+ Industry Collaborations",
-      "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -762,7 +762,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   description: "",
   image: {
     src: "/landingpage/common/test44.jpeg",
-    alt: "Life as a PhD Scholar at KR Mangalam",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
@@ -782,8 +782,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
 export const faqSectionData: FAQSectionData = {
   eyebrow: "(FAQs)",
   heading: "Frequently Asked Questions",
-  description:
-    "",
+  description: "",
   faqs: [
     {
       id: "item-1",

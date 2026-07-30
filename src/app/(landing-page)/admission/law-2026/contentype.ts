@@ -48,7 +48,7 @@ export type SectionCTA = {
 
 // Main Industry Experts section type
 export type IndustryExpertsSection = {
-  eyebrow: string; // "Why KR Mangalam PhD?"
+  eyebrow: string; // "Why K.R. Mangalam PhD?"
   heading: string; // "Learn From <br /> Industry Experts"
   description: string;
   cta: SectionCTA;
@@ -230,7 +230,6 @@ export type HeroMarqueeSection = {
   bgColor?: string; // optional (default red)
   speedClass?: string; // tailwind animation class
 };
-
 
 export type ProgrammeCardItem = {
   id: string;

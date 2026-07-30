@@ -693,7 +693,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   description: "",
   image: {
     src: "/landingpage/common/collage.webp",
-    alt: "Life as a PhD Scholar at KR Mangalam",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
@@ -762,12 +762,10 @@ export const comeToLifeData: ComeToLifeSection = {
   ],
 };
 
-
 export const programmeContent = {
   badge: "5 Specialisations",
   title: "KRMU’s M.A. Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -835,6 +833,6 @@ export const programmeContent = {
 
 export const eligibilityTerms = [
   {
-    description: "** Subject to Approval"
+    description: "** Subject to Approval",
   },
 ];

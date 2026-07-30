@@ -451,7 +451,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   description: "",
   image: {
     src: "/landingpage/common/collage.webp",
-    alt: "Life as a PhD Scholar at KR Mangalam",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
@@ -541,13 +541,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "3 Specialisations",
   title: "KRMU’s Law Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -583,7 +580,7 @@ export const programmeContent = {
       fees: "175000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
-      eligibility: "Passed Bachelor's with 50% aggregate marks."
+      eligibility: "Passed Bachelor's with 50% aggregate marks.",
     },
   ],
 };

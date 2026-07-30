@@ -191,8 +191,8 @@ const Hero = () => {
                 Gender Sensitisation & Safety Committee
               </h5>
               <p>
-                A Committee on Gender Sensitisation at KR Mangalam university is
-                a crucial committee which aims to bring extremely gender
+                A Committee on Gender Sensitisation at K.R. Mangalam university
+                is a crucial committee which aims to bring extremely gender
                 equitable and gender sensitive academic space and follows zero
                 tolerance to sexual harassment towards women. The committee is
                 responsible for developing and implementing policies and

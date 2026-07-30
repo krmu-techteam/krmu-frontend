@@ -36,7 +36,7 @@ export const HeroContent = ({
             className="tracking-tight hover:underline"
             style={{ textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}
           >
-            Explore KR Mangalam
+            Explore K.R. Mangalam
           </span>
         </Link>
       </div>

@@ -42,7 +42,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -407,7 +407,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   description: "",
   image: {
     src: "/landingpage/common/test44.jpeg",
-    alt: "Life as a PhD Scholar at KR Mangalam",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
@@ -511,13 +511,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "4 Specialisations",
   title: "KRMU’s Pharma Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -543,7 +540,6 @@ export const programmeContent = {
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.**",
-
     },
     {
       id: "3",
@@ -556,7 +552,6 @@ export const programmeContent = {
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.***",
-
     },
     {
       id: "4",
@@ -569,21 +564,21 @@ export const programmeContent = {
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed Bachelor's with 55% aggregate marks.***",
-
     },
   ],
 };
 
-
 export const eligibilityTerms = [
   {
-    description: "*Eligibility: Candidate must have passed in any of the following examinations with Physics, Chemistry and Biology/Mathematics:Intermediate examination in Science; the first year of the three-year degree course in Science;  10+2 examination (academic stream) in Science from a recognised Board; Pre-degree examination; Any other qualification approved by the Pharmacy Council of India as equivalent to any of the above examinations."
+    description:
+      "*Eligibility: Candidate must have passed in any of the following examinations with Physics, Chemistry and Biology/Mathematics:Intermediate examination in Science; the first year of the three-year degree course in Science;  10+2 examination (academic stream) in Science from a recognised Board; Pre-degree examination; Any other qualification approved by the Pharmacy Council of India as equivalent to any of the above examinations.",
   },
   {
-    description: "**Eligibility: Candidate must have passed 10+2 examinations from any recognised board/ university with Physics, Chemistry, Biology/ Maths as mandatory courses and with minimum 50% aggregate marks. Candidates must have attained the age of 17 years or more on 31st December of the applying year. The age shall be determined as per the entry in the Matriculation/Secondary school or its equivalent examination certificate."
+    description:
+      "**Eligibility: Candidate must have passed 10+2 examinations from any recognised board/ university with Physics, Chemistry, Biology/ Maths as mandatory courses and with minimum 50% aggregate marks. Candidates must have attained the age of 17 years or more on 31st December of the applying year. The age shall be determined as per the entry in the Matriculation/Secondary school or its equivalent examination certificate.",
   },
   {
-    description: "***Eligibility: Candidate should pass in the following examinations: B. Pharmacy degree examination of an Indian university established by law in India from an institution approved by the Pharmacy Council of India (PCI) and has scored not less than 55% of the maximum marks (aggregate of 4 years of B.Pharmacy). Every student selected for admission to post graduate pharmacy program in any PCI-approved institution should have obtained registration with the State Pharmacy Council or should obtain the same within one month from the date of his/her admission, failing which the admission of the candidate shall be cancelled."
+    description:
+      "***Eligibility: Candidate should pass in the following examinations: B. Pharmacy degree examination of an Indian university established by law in India from an institution approved by the Pharmacy Council of India (PCI) and has scored not less than 55% of the maximum marks (aggregate of 4 years of B.Pharmacy). Every student selected for admission to post graduate pharmacy program in any PCI-approved institution should have obtained registration with the State Pharmacy Council or should obtain the same within one month from the date of his/her admission, failing which the admission of the candidate shall be cancelled.",
   },
 ];
-

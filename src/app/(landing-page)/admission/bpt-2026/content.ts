@@ -41,7 +41,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -359,7 +359,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   description: "",
   image: {
     src: "/landingpage/common/test44.jpeg",
-    alt: "Life as a PhD Scholar at KR Mangalam",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
@@ -448,13 +448,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "Healing in Every Move",
   title: "KRMU’s BPT Programme",
-  subtitle:
-    "Our Programme Comprise of Industry-relevant Curriculum",
+  subtitle: "Our Programme Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -472,9 +469,9 @@ export const programmeContent = {
   ],
 };
 
-
 export const eligibilityTerms = [
   {
-    description: "*Eligibility: Candidates must have passed 10+2 or equivalent from an recognised board/university in any stream with Physics, Chemistry, Biology with a minimum of 50% aggregate marks."
+    description:
+      "*Eligibility: Candidates must have passed 10+2 or equivalent from an recognised board/university in any stream with Physics, Chemistry, Biology with a minimum of 50% aggregate marks.",
   },
 ];

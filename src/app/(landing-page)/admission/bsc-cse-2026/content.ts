@@ -40,7 +40,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -410,7 +410,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   description: "",
   image: {
     src: "/landingpage/bsc-cse-2026/student-at-krmu/Collage.webp",
-    alt: "Life as a PhD Scholar at KR Mangalam",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
@@ -492,14 +492,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
-
 export const programmeContent = {
   badge: "3 Specialisations",
   title: "KRMU’s B.Sc. - CSE Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -541,9 +537,9 @@ export const programmeContent = {
   ],
 };
 
-
 export const eligibilityTerms = [
   {
-    description: "*Eligibility: Passed 10+2 or equivalent from any recognised board/university in any stream with Mathematics/ Statistics/Computer Science/Information Science as one subject with minimum 50% aggregate marks."
+    description:
+      "*Eligibility: Passed 10+2 or equivalent from any recognised board/university in any stream with Mathematics/ Statistics/Computer Science/Information Science as one subject with minimum 50% aggregate marks.",
   },
 ];

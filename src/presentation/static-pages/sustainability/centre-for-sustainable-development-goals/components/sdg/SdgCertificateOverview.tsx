@@ -31,15 +31,16 @@ const SdgCertificateOverview: React.FC = () => {
           climate change, access to justice, and partnerships goals, among
           others. The aim of the SDGs is to collaborate and mobilise efforts
           towards these challenges, and, as an establishment of higher education
-          institution, KR Mangalam University is committed to the accomplishment
-          of the target through effective teaching and collaborative learning.
-          Cultivating the principle of ‘Lets Rise Together, the initiatives of
-          this establishment is important to achieve the Sustainable
-          Development Goals as they function as incubators of recent concepts
-          and solutions to problems, we have a tendency to face together. As an
-          institution we are committed to the promotion of knowledge society, we
-          have engaged with all the “17 Goals” in varied capacities of
-          understanding and knowledge translation.
+          institution, K.R. Mangalam University is committed to the
+          accomplishment of the target through effective teaching and
+          collaborative learning. Cultivating the principle of ‘Lets Rise
+          Together, the initiatives of this establishment is important to
+          achieve the Sustainable Development Goals as they function as
+          incubators of recent concepts and solutions to problems, we have a
+          tendency to face together. As an institution we are committed to the
+          promotion of knowledge society, we have engaged with all the “17
+          Goals” in varied capacities of understanding and knowledge
+          translation.
         </p>
 
         <div
@@ -67,8 +68,8 @@ const SdgCertificateOverview: React.FC = () => {
               elevates the university to become a force behind the Sustainable
               Development Goals (SDGs) because education, research, and
               innovation remain connected to the needs of the world. In order to
-              reinforce this, K.R. Mangalam University has integrated the SDGs on
-              the governance, pedagogical and research approaches of the
+              reinforce this, K.R. Mangalam University has integrated the SDGs
+              on the governance, pedagogical and research approaches of the
               University. The management of sustainability on campus is
               considered as one of the priorities, and the university is
               considered as a socially responsible institution. By using

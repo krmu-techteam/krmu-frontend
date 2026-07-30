@@ -9,8 +9,8 @@ const Committee = () => {
           <div className="w-full lg:w-1/2 text-white">
             <h3 className="text-2xl mb-5 font-semibold">Committee:</h3>
             <p>
-              The Youth Red Cross (YRC) unit at KR Mangalam University (KRMU) is
-              essential in fostering a sense of social responsibility and
+              The Youth Red Cross (YRC) unit at K.R. Mangalam University (KRMU)
+              is essential in fostering a sense of social responsibility and
               humanitarian values among students through various community
               service initiatives. One key activity involved participating in a
               TB awareness survey in Lakhuwas village, under the supervision of
@@ -31,7 +31,12 @@ const Committee = () => {
             </p>
           </div>
           <div className="w-full lg:w-1/2">
-            <Image src="/life-at-krmu/committee.png" width={714} height={427} alt="" />
+            <Image
+              src="/life-at-krmu/committee.png"
+              width={714}
+              height={427}
+              alt=""
+            />
           </div>
         </div>
       </section>

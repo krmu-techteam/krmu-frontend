@@ -673,7 +673,8 @@ const Footer = async () => {
             <div className="w-full border-t border-white/30 mb-4" />
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-white/90 text-[16px] pb-4">
               <p className="text-center">
-                Copyrights © 2026 All Rights Reserved by KR Mangalam University.
+                Copyrights © 2026 All Rights Reserved by K.R. Mangalam
+                University.
               </p>
             </div>
           </div>

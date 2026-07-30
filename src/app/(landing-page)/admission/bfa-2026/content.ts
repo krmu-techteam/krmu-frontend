@@ -42,7 +42,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -359,7 +359,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   description: "",
   image: {
     src: "/landingpage/bfa-2026/student-at-krmu/Collage.webp",
-    alt: "Life as a PhD Scholar at KR Mangalam",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
@@ -444,12 +444,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
 export const programmeContent = {
   badge: "From vision to canvas",
   title: "KRMU’s BFA Programme",
-  subtitle:
-    "Our Programme Comprise of Industry-relevant Curriculum",
+  subtitle: "Our Programme Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {

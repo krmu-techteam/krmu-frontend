@@ -383,7 +383,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   description: "",
   image: {
     src: "/landingpage/common/test44.jpeg",
-    alt: "Life as a PhD Scholar at KR Mangalam",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
@@ -413,7 +413,8 @@ export const faqSectionData: FAQSectionData = {
     },
     {
       id: "item-2",
-      question: "What skills will one develop in a Emerging Media & Creator Economy programme?",
+      question:
+        "What skills will one develop in a Emerging Media & Creator Economy programme?",
       answer: `One will cultivate skills related to news reporting, content creation, video production, digital marketing, and public relations.`,
     },
     {

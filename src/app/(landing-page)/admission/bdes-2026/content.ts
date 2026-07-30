@@ -43,7 +43,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -147,7 +147,7 @@ export const whyKRM: WhyKRMSection = {
 };
 
 export const industryExperts: IndustryExpertsSection = {
-  eyebrow: "Why KR Mangalam PhD?",
+  eyebrow: "Why K.R. Mangalam PhD?",
   heading: `Learn From <br /> Industry Experts`,
   description: `KRMU partners with major organisations to provide <br /> industry-specific training.`,
   cta: {
@@ -449,7 +449,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   description: "",
   image: {
     src: "/landingpage/common/collage.webp",
-    alt: "Life as a PhD Scholar at KR Mangalam",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
@@ -562,13 +562,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "5 Specialisations",
   title: "KRMU’s Design Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -625,17 +622,14 @@ export const programmeContent = {
       fees: "200000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
-      eligibility: "A qualifying degree in Design/ Fine Arts or in any stream with 50% aggregate marks.",
+      eligibility:
+        "A qualifying degree in Design/ Fine Arts or in any stream with 50% aggregate marks.",
     },
   ],
 };
 
 export const eligibilityTerms = [
   {
-    description: "** Subject to Approval"
+    description: "** Subject to Approval",
   },
 ];
-
-
-
-

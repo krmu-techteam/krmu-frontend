@@ -42,7 +42,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -135,7 +135,7 @@ export const whyKRM: WhyKRMSection = {
 };
 
 export const industryExperts: IndustryExpertsSection = {
-  eyebrow: "Why KR Mangalam PhD?",
+  eyebrow: "Why K.R. Mangalam PhD?",
   heading: `Learn from <br /> Leaders @ KRMU!
 `,
   description: `K.R. Mangalam University takes pride in collaborating with industry leaders and skill professionals who offer unparalleled hands-on learning experiences to students.`,
@@ -225,8 +225,7 @@ export const specialisationData: SpecialisationSection = {
       ],
     },
     {
-      imgUrl:
-        "/wp-content/images/fs-prog-1.webp",
+      imgUrl: "/wp-content/images/fs-prog-1.webp",
       title: `Integrated / Dual Degree B.Sc.– M.Sc. (Forensic Science)`,
       // desc: `The programme at K.R. Mangalam University aims to develop critical thinking, observation, analytical skills, and attention to detail, which are essential for forensic professionals. Graduates of this course can pursue careers as forensic analysts, crime scene investigators, laboratory technicians, or research assistants. They may also opt for higher studies such as M.Sc. in Forensic Science, Criminology, or related fields.`,
       desc: ``,
@@ -248,9 +247,8 @@ export const specialisationData: SpecialisationSection = {
         // },
       ],
     },
-        {
-      imgUrl:
-        "/wp-content/images/master_in_forensic_science.webp",
+    {
+      imgUrl: "/wp-content/images/master_in_forensic_science.webp",
       title: `M.Sc. Forensic Science`,
       // desc: `The programme at K.R. Mangalam University aims to develop critical thinking, observation, analytical skills, and attention to detail, which are essential for forensic professionals. Graduates of this course can pursue careers as forensic analysts, crime scene investigators, laboratory technicians, or research assistants. They may also opt for higher studies such as M.Sc. in Forensic Science, Criminology, or related fields.`,
       desc: ``,
@@ -436,7 +434,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   description: "",
   image: {
     src: "/landingpage/bsc-forensic-science-2026/student-at-krmu/Collage.webp",
-    alt: "Life as a PhD Scholar at KR Mangalam",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
@@ -535,13 +533,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "2 Specialisations",
   title: "KRMU’s Forensic Science Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -568,7 +563,7 @@ export const programmeContent = {
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.*",
     },
-        {
+    {
       id: "3",
       tag: "Integrated Forensics",
       title: "Integrated/Dual Degree B.Sc.-M.Sc. (Forensic Science)",
@@ -583,10 +578,9 @@ export const programmeContent = {
   ],
 };
 
-
 export const eligibilityTerms = [
   {
-    description: "*Eligibility: Passed the 10+2 or equivalent examination from any recognised board/ University in Science (Physics/Chemistry/Biology/Mathematics) with minimum 50% aggregate marks."
+    description:
+      "*Eligibility: Passed the 10+2 or equivalent examination from any recognised board/ University in Science (Physics/Chemistry/Biology/Mathematics) with minimum 50% aggregate marks.",
   },
 ];
-

@@ -4,9 +4,9 @@ export type HeroContent = {
   desc: string;
   heroBg: string;
   // middleImg: "/landingpage/law-2026/law.webp",
-  middleImg: string,
-  mobileImg: string,
-  lpclName: string,
+  middleImg: string;
+  mobileImg: string;
+  lpclName: string;
 };
 
 // Counter card type
@@ -49,7 +49,7 @@ export type SectionCTA = {
 
 // Main Industry Experts section type
 export type IndustryExpertsSection = {
-  eyebrow: string; // "Why KR Mangalam PhD?"
+  eyebrow: string; // "Why K.R. Mangalam PhD?"
   heading: string; // "Learn From <br /> Industry Experts"
   description: string;
   cta: SectionCTA;

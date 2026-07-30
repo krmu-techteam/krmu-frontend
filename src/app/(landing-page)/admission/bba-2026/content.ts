@@ -479,7 +479,7 @@ export const specialisationData: SpecialisationSection = {
         // },
       ],
     },
-     {
+    {
       imgUrl:
         "/landingpage/bba-2026/programs/bba-hons-logistics-safexpress.jpg",
       title: `BBA (Entrepreneurship) with academic support of GCEC Global Foundation`,
@@ -612,7 +612,6 @@ export const specialisationData: SpecialisationSection = {
         // },
       ],
     },
-   
   ],
 };
 
@@ -787,7 +786,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
   description: "",
   image: {
     src: "/landingpage/common/collage.webp",
-    alt: "Life as a PhD Scholar at KR Mangalam",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
   },
   facilities: [
     // { id: 1, title: "24/7 security and medical facilities" },
@@ -894,13 +893,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "24 Specialisations",
   title: "KRMU’s BBA Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -1049,7 +1045,8 @@ export const programmeContent = {
     {
       id: "14",
       tag: "EY",
-      title: "BBA (Hons. / Hons. with  Research) Business Intelligence & Analytics",
+      title:
+        "BBA (Hons. / Hons. with  Research) Business Intelligence & Analytics",
       subtitle: "",
       desc: "Blends data analytics with strategic decision-making, building technical skills and preparing students for data leadership.",
       duration: "4 Years",
@@ -1093,7 +1090,8 @@ export const programmeContent = {
     {
       id: "18",
       tag: "Grant Thornton",
-      title: "BBA (Hons. / Hons. with Research) International Accounting and Finance (ACCA – UK)",
+      title:
+        "BBA (Hons. / Hons. with Research) International Accounting and Finance (ACCA – UK)",
       subtitle: "",
       desc: "ACCA-aligned curriculum focusing on financial reporting and global finance standards.",
       duration: "4 Years",
@@ -1115,7 +1113,8 @@ export const programmeContent = {
     {
       id: "20",
       tag: "Safexpress",
-      title: "BBA (Hons. / Hons. with Research) Logistics and Supply Chain Management",
+      title:
+        "BBA (Hons. / Hons. with Research) Logistics and Supply Chain Management",
       subtitle: "",
       desc: "Teaches how global supply chains operate and their critical role in modern business success.",
       duration: "4 Years",
@@ -1146,10 +1145,11 @@ export const programmeContent = {
       ctaLink: "#apply-form",
       eligibility: "To be updated",
     },
-     {
+    {
       id: "23",
       tag: "",
-      title: "BBA (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK*",
+      title:
+        "BBA (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK*",
       subtitle: "",
       desc: "Gain global exposure through an international semester, along with core business fundamentals in your chosen specialisation.",
       duration: "3 Years",
@@ -1158,10 +1158,11 @@ export const programmeContent = {
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.",
     },
-     {
+    {
       id: "24",
       tag: "",
-      title: "BBA (Hons./ Hons with Research) (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK*",
+      title:
+        "BBA (Hons./ Hons with Research) (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK*",
       subtitle: "",
       desc: "Advanced domain knowledge with international academic exposure, research orientation, and global business perspectives.",
       duration: "4 Years",
@@ -1173,12 +1174,12 @@ export const programmeContent = {
   ],
 };
 
-
 export const eligibilityTerms = [
   {
-    description: "** Subject to Approval"
+    description: "** Subject to Approval",
   },
   {
-    description: "*In addition to the regular programme fee at KRMU, students opting for the Semester Abroad will be required to pay an additional tuition fee of GBP 6500 for the semester at UEA."
+    description:
+      "*In addition to the regular programme fee at KRMU, students opting for the Semester Abroad will be required to pay an additional tuition fee of GBP 6500 for the semester at UEA.",
   },
 ];

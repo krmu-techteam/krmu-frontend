@@ -4,9 +4,9 @@ const MembersghipTab = () => {
   return (
     <div className="max-w-[1664px] mx-auto w-full libtabcontent ">
       <p>Seamless Access to Knowledge:</p>
-      <h2>Simplified Library Membership at KR Mangalam University</h2>
+      <h2>Simplified Library Membership at K.R. Mangalam University</h2>
       <p>
-        KR Mangalam University’s library membership process is streamlined for
+        K.R. Mangalam University’s library membership process is streamlined for
         ease and efficiency. Students and staff are required to fill out an
         online form just once, after which a membership ID is sent via SMS. This
         digital approach ensures quick and hassle-free access to a wealth of
