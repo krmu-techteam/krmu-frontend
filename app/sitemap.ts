@@ -13,7 +13,7 @@ import { origUrl } from "./constant";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = origUrl;
 
-  // const blogs = await getAllBlogs();
+  const blogs = await getAllBlogs();
   const newsevents = await getAllNewsEvents();
   const faculties = await getAllFaculties();
   const schools = await getAllSchools();
@@ -21,7 +21,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const phdProgrammes = await getAllSchoolPhdProgrammes();
   const photoGalleries = await getAllPhotoGalleries();
 
-
+  const blogUrls: MetadataRoute.Sitemap = blogs.map((blog) => ({
+    url: `${baseUrl}/blog/${blog.slug}`,
+    lastModified: new Date(blog.modified),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
   const newsEventsUrls: MetadataRoute.Sitemap = newsevents.map((newsevent) => ({
     url: `${baseUrl}/events-and-news/${newsevent.slug}`,
     lastModified: new Date(newsevent.modified),
@@ -433,7 +438,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     //   changeFrequency: "monthly",
     //   priority: 0.7,
     // },
-    // ...blogUrls,
+    ...blogUrls,
     ...schoolUrls,
     ...programmeUrls,
     ...photoGalleriesUrls,
