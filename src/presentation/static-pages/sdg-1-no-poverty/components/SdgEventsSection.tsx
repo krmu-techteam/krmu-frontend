@@ -14,15 +14,14 @@ const eventItems: EventItem[] = [
   {
     id: "event-1",
     title: "Local Start-Up Assistance",
-    image:
-      "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/kathputli.jpg",
+    image: "/images/sustainability/sdg-1-no-poverty/a1.jpg",
     pdfUrl:
       "https://www.krmangalam.edu.in/pdfs/sdg/policy-on-no-poverty/supporting-sustainable-livelihoods-through-education-and-cultural-entrepreneurship.pdf",
   },
   {
     id: "event-2",
     title: "Report on Training & Capacity Building Activities",
-    image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/DST.jpg",
+    image: "/images/sustainability/sdg-1-no-poverty/a2.jpg",
     pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-1/Report-1.pdf",
   },
 ];
@@ -36,30 +35,38 @@ export const SdgEventsSection: React.FC = () => {
           Events And Activities
         </h2>
 
-        {/* 2 Event Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Event Cards Grid with exact Figma specs */}
+        <div className="flex flex-wrap gap-3">
           {eventItems.map((item) => (
             <a
               key={item.id}
               href={item.pdfUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-[#081a28] border border-[#0D7377]/40 hover:border-[#00BAC2] rounded-[10px] overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+              className="group block w-[274px] h-[329px] overflow-hidden p-[4px] shadow-lg transition-all duration-300 shrink-0 cursor-pointer"
+              style={{
+                border: "1px solid",
+                borderImageSource:
+                  "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #173452 100%)",
+                borderImageSlice: 1,
+                background:
+                  "linear-gradient(180deg, #061623 0%, rgba(24, 52, 83, 0) 100%)",
+              }}
             >
-              {/* Image Box */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#0a1824]">
+              {/* Image Box: 264px x 251px */}
+              <div className="relative w-[264px] h-[251px] overflow-hidden bg-[#0a1824] shrink-0">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                  sizes="264px"
                 />
               </div>
 
               {/* Title Bar */}
-              <div className="p-4 sm:p-5 bg-[#071724]">
-                <h3 className="text-base sm:text-lg font-serif font-medium text-[#d8c397] group-hover:text-[#00BAC2] transition-colors leading-snug">
+              <div className="px-2 py-2 flex items-start grow">
+                <h3 className="text-[16px] font-serif font-medium text-[#E7C268] group-hover:text-[#E7C268]/90 transition-colors leading-snug">
                   {item.title}
                 </h3>
               </div>

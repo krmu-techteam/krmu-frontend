@@ -7,11 +7,11 @@ import {
   SdgContentSection,
   SdgEventsSection,
 } from "../components";
-import SdgGoalsFooterSection from "@/presentation/static-pages/sustainability/centre-for-sustainable-development-goals/components/sdg/SdgGoalsFooterSection";
+import SdgPageLayout from "@/presentation/static-pages/sustainability/centre-for-sustainable-development-goals/components/sdg/SdgPageLayout";
 
 export const Sdg1NoPovertySection: React.FC = () => {
   return (
-    <main className="min-h-screen text-white">
+    <SdgPageLayout>
       {/* 1. Hero Banner */}
       <SdgHeroSection
         title="No Poverty"
@@ -24,22 +24,12 @@ export const Sdg1NoPovertySection: React.FC = () => {
       <SdgContentSection />
 
       {/* Section Divider Line */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 my-4">
+      <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 my-8 h-[1px]">
         <SectionDivider />
       </div>
 
       {/* 3. Events & Activities Section */}
       <SdgEventsSection />
-
-      {/* Section Divider Line */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 my-4">
-        <SectionDivider />
-      </div>
-
-      {/* 4. Bottom 18 SDG Goals Footer Grid */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 pb-16">
-        <SdgGoalsFooterSection />
-      </div>
-    </main>
+    </SdgPageLayout>
   );
 };
