@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Sdg1NoPovertySection } from "@/presentation/static-pages/sdg-1-no-poverty";
+import { Sdg1NoPovertySection } from "@/presentation/static-pages/sustainability/sdg-1-no-poverty";
 
 export const metadata: Metadata = {
   title: "SDG-1: No Poverty | K.R. Mangalam University",

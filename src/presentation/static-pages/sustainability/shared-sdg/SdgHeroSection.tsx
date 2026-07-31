@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 
-interface SdgHeroSectionProps {
+export interface SdgHeroSectionProps {
   title: string;
   subtitle: string;
   heroImage: string;
@@ -20,13 +20,13 @@ export const SdgHeroSection: React.FC<SdgHeroSectionProps> = ({
 }) => {
   return (
     <div className="w-full">
-      {/* 1. Clear Top Hero Banner (Clean image, no overlay, no gradient, no text over image) */}
-      <div className="w-full relative aspect-[16/6] sm:aspect-[16/4.5] md:aspect-[16/3.5] lg:aspect-[16/3] max-h-[360px] overflow-hidden">
+      {/* 1. Clear Top Hero Banner */}
+      <div className="w-full relative h-[260px] sm:h-[360px] md:h-[440px] lg:h-[500px] max-h-[550px] overflow-hidden">
         <Image
           src={heroImage}
           alt={title}
           fill
-          className="object-contain object-center"
+          className="object-cover object-center"
           priority
         />
       </div>
