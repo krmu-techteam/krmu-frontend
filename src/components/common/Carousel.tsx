@@ -91,7 +91,15 @@ export const Carousel = ({
     [emblaApi],
   );
   const scrollTo = useCallback(
-    (index: number) => emblaApi && emblaApi.scrollTo(index),
+    (index: number) => {
+      if (!emblaApi) return;
+      emblaApi.scrollTo(index, true);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const autoplay = (emblaApi.plugins() as any).autoplay;
+      if (autoplay && typeof autoplay.reset === "function") {
+        autoplay.reset();
+      }
+    },
     [emblaApi],
   );
 
@@ -120,11 +128,19 @@ export const Carousel = ({
   return (
     <div className={`relative ${className}`}>
       <div className="overflow-hidden py-4 -my-4" ref={emblaRef}>
-        <div className={`flex ${containerClassName}`}>
+        <div
+          className={`${
+            fade ? "grid grid-cols-1 grid-rows-1 w-full" : "flex"
+          } ${containerClassName}`}
+        >
           {childrenArray.map((child, index) => (
             <div
               key={index}
-              className={`min-w-0 shrink-0 grow-0 ${slideClassName || "basis-full"}`}
+              className={`min-w-0 shrink-0 grow-0 ${
+                fade
+                  ? "col-start-1 row-start-1 w-full"
+                  : slideClassName || "basis-full"
+              }`}
               data-active={index === selectedIndex}
             >
               {child}
