@@ -119,7 +119,7 @@ const withProgramCard = <P extends object>(
         {/* hover:bg-[#0a41a1]
         hover:shadow-[0_3px_10px_rgb(0,0,0,0.2)] */}
         <div
-          className={`absolute ${glowClass} h-[320px] w-[320px] rounded-full bg-gradient-to-br from-[#001732] via-[#59122E] to-[#63174C] blur-[30px] opacity-80`}
+          className={`absolute ${glowClass} h-[320px] w-[320px] rounded-full bg-gradient-to-br from-[#001732] via-[#59122E] to-[#63174C] blur-[30px] opacity-65`}
         ></div>
         <WrappedComponent {...props} />
         <Link

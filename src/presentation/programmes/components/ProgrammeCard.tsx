@@ -21,32 +21,43 @@ interface ProgrammeCardProps {
   viewMode?: 'grid' | 'list';
   index?: number;
   totalCards?: number;
+  cardsPerRow?: number;
   onFeeClick: () => void;
 }
 
-export default function ProgrammeCard({ program, viewMode = 'list', index = 0, totalCards = 1, onFeeClick }: ProgrammeCardProps) {
+export default function ProgrammeCard({ 
+  program, 
+  viewMode = 'list', 
+  index = 0, 
+  totalCards = 1, 
+  cardsPerRow = 3,
+  onFeeClick 
+}: ProgrammeCardProps) {
   const isGrid = viewMode === 'grid';
 
-  const cardsPerRow = 3;
   const rowIndex = Math.floor(index / cardsPerRow);
   const positionInRow = index % cardsPerRow;
-  const remainingCards = totalCards - rowIndex * cardsPerRow;
+
+  const isLastRow = rowIndex === Math.floor((totalCards - 1) / cardsPerRow);
+  const cardsInThisRow = isLastRow
+    ? (totalCards % cardsPerRow === 0 ? cardsPerRow : totalCards % cardsPerRow)
+    : cardsPerRow;
+
   let glowClass = "absolute right-[-133px] -bottom-[201px]"; // default for list mode
 
   if (isGrid) {
-    const isLastRow = rowIndex === Math.floor((totalCards - 1) / cardsPerRow);
-
-    if (remainingCards === 3 && isLastRow) {
-      if (positionInRow === 0) glowClass = "absolute left-[-237px] -bottom-[183px]";
-      else if (positionInRow === 1) glowClass = "absolute left-[48%] -translate-x-1/2 -bottom-[240px]";
-      else glowClass = "absolute right-[-133px] -bottom-[201px]";
-    } else if (remainingCards === 2 && isLastRow) {
-      if (positionInRow === 0) glowClass = "absolute left-[-237px] -bottom-[183px]";
-      else glowClass = "absolute right-[-133px] -bottom-[171px]";
+    if (cardsInThisRow === 1) {
+      // Single card in row (mobile / single) -> Center
+      glowClass = "absolute left-[50%] -translate-x-1/2 -bottom-[240px]";
+    } else if (positionInRow === 0) {
+      // First card in row -> Left
+      glowClass = "absolute left-[-237px] -bottom-[183px]";
+    } else if (positionInRow === cardsInThisRow - 1) {
+      // Last card in row -> Right
+      glowClass = "absolute right-[-133px] -bottom-[201px]";
     } else {
-      if (positionInRow === 0) glowClass = "absolute left-[-237px] -bottom-[183px]";
-      else if (positionInRow === 1) glowClass = "absolute left-[48%] -translate-x-1/2 -bottom-[240px]";
-      else glowClass = "absolute right-[-133px] -bottom-[201px]";
+      // Middle cards in row -> Center
+      glowClass = "absolute left-[48%] -translate-x-1/2 -bottom-[240px]";
     }
   }
 
@@ -108,16 +119,16 @@ export default function ProgrammeCard({ program, viewMode = 'list', index = 0, t
   return (
     <div className={`group cursor-pointer bg-[#061623] rounded-sm border border-white/5 relative transition-all duration-500 ease-in-out hover:border-white/20 hover:bg-[#061623]/30 hover:shadow-lg flex overflow-hidden flex-col p-5 md:p-6 h-full`}>
       {/* Background Glow */}
-      <div className={`${glowClass} h-[320px] w-[320px] rounded-full bg-gradient-to-br from-[#061623] via-[#59122E] to-[#63174C] blur-[30px] opacity-80 pointer-events-none z-0`} />
+      <div className={`${glowClass} max-md:left-1/2 max-md:-translate-x-1/2 max-md:right-auto h-[320px] w-[320px] rounded-full bg-gradient-to-br from-[#061623] via-[#59122E] to-[#63174C] blur-[30px] opacity-65 pointer-events-none z-0`} />
       
       {/* Left Content Area */}
-      <div className={`relative z-10 flex flex-col pr-0 mb-6 flex-1`}>
+      <div className={`relative z-10 flex flex-col pr-5 mb-6 flex-1`}>
         <Link href={program.isZenith ? program.slug : `/programs/${program.slug}`} target="_blank" className="block text-white text-base md:text-[18px] leading-snug group-hover:text-white transition-colors z-20">
           <h3 dangerouslySetInnerHTML={{ __html: program.title }} />
         </Link>
         <Link 
           href={program.isZenith ? program.slug : `/programs/${program.slug}`} 
-          className="absolute right-0 top-0"
+          className="absolute right-0 top-0.5 z-20"
         >
           <ArrowUpRight size={20} className="text-white transform group-hover:translate-x-[1px] group-hover:-translate-y-[1px] transition-transform duration-300" />
         </Link>
@@ -165,6 +176,13 @@ export default function ProgrammeCard({ program, viewMode = 'list', index = 0, t
           </Link>
         )}
       </div>
+
+      {/* Lateral Entry Banner */}
+      {program.isNewLines && (
+        <div className="relative z-10 w-full text-white text-[11px] md:text-xs text-center mt-3 font-normal leading-tight">
+          3-Year Lateral Entry option also available for eligible students
+        </div>
+      )}
     </div>
   );
 }

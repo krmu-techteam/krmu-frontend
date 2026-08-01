@@ -65,6 +65,7 @@ export default function ProgrammesList({
               viewMode={viewMode} 
               index={index}
               totalCards={programmes.length}
+              cardsPerRow={schoolOnly ? 4 : 3}
               onFeeClick={() => onProgrammeClick(program.id)}
             />
           ))
