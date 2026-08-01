@@ -820,6 +820,14 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         className="object-cover transition-transform duration-1000 group-hover:scale-105"
                         priority
                       />
+
+                      {/* Top Right Counter Overlay */}
+                      <div className="absolute top-3 right-3 z-10 bg-[#062035]/90 rounded-[2px] px-2.5 py-2.5 flex flex-col justify-center items-center text-center">
+                        <span className="text-[18px] font-medium text-white font-poppins leading-none">
+                          {aboutusMenu?.aboutuscounter?.[0]?.countertext ||
+                            "13+"}
+                        </span>
+                      </div>
                     </div>
 
                     {/* Content Paragraph */}
@@ -849,23 +857,6 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         APPLY NOW
                       </Button>
                     </div>
-
-                    {/* Stats Boxes */}
-                    <div className="grid grid-cols-2 gap-4 mt-1">
-                      {aboutusMenu?.aboutuscounter.map((counter: any) => (
-                        <div
-                          key={counter.id}
-                          className="bg-[#062035] rounded-[4px] px-6 py-4 flex flex-col justify-center items-center text-center transition-all duration-500"
-                        >
-                          <span className="text-[22px] font-semibold text-white mb-1 font-poppins">
-                            {counter.countertext}
-                          </span>
-                          <span className="text-[12px] text-white/90 font-light font-poppins">
-                            {counter.countercontent}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
                   </div>
 
                   {/* Right Column: Links (Overview, Administration, Discover More, Others) */}
@@ -873,9 +864,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     <div className="grid grid-cols-4 gap-4 lg:gap-6 mt-2">
                       {/* Overview */}
                       <div>
-                        <h4 className="text-white font-semibold text-[16px] mb-4 font-poppins tracking-wide">
+                        <h3 className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
                           {aboutusMenu?.overview?.heading || "Overview"}
-                        </h4>
+                        </h3>
                         <ul className="flex flex-col gap-2.5">
                           {rawOverviewLinks.map((menu: any) => (
                             <li key={menu.id}>
@@ -902,10 +893,10 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                       {/* Administration */}
                       <div>
-                        <h4 className="text-white font-semibold text-[16px] mb-4 font-poppins tracking-wide">
+                        <h3 className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
                           {aboutusMenu?.administration?.heading ||
                             "Administration"}
-                        </h4>
+                        </h3>
                         <ul className="flex flex-col gap-2.5">
                           {aboutusMenu?.administration?.menulinks?.map(
                             (menu: any) => (
@@ -935,9 +926,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                       {/* Discover More */}
                       {academicMenu?.discovermenu && (
                         <div>
-                          <h4 className="text-white font-semibold text-[16px] mb-4 font-poppins tracking-wide">
+                          <h3 className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
                             {academicMenu.discovermenu.heading}
-                          </h4>
+                          </h3>
                           <ul className="flex flex-col gap-2.5">
                             {academicMenu.discovermenu.menulinks?.map(
                               (menu: any) => (
@@ -967,9 +958,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                       {/* Others */}
                       <div>
-                        <h4 className="text-white font-semibold text-[16px] mb-4 font-poppins tracking-wide">
+                        <h3 className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
                           Others
-                        </h4>
+                        </h3>
                         <ul className="flex flex-col gap-2.5">
                           {aboutUsOthersLinks.map((menu) => (
                             <li key={menu.id}>
