@@ -78,37 +78,38 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/3-bcom/aditya-birla-group.png", 
+    imgUrl: "/landing-page/bcom-2026/abg.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/3-bcom/byjus.webp",
+    imgUrl: "/landing-page/bcom-2026/by.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/3-bcom/dabur.jpg",
+    imgUrl: "/landing-page/bcom-2026/deca.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/3-bcom/decathlon.png",
+    imgUrl: "/landing-page/bcom-2026/dr.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/3-bcom/hcl.png",
+    imgUrl: "/landing-page/bcom-2026/hcl.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/3-bcom/hindustan-unilever-limited.png",
+    imgUrl: "/landing-page/bcom-2026/hultd.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/3-bcom/icici-bank.png",
+    imgUrl: "/landing-page/bcom-2026/icici.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/3-bcom/kpmg.png",
+    imgUrl: "/landing-page/bcom-2026/kpmg.png", 
     alt: "Recruiter Logo",
   },
+ 
 ];
 
 export const whyKRM: WhyKRMSection = {
