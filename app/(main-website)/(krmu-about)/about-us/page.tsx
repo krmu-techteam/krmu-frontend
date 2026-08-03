@@ -13,6 +13,11 @@ import { Eye, Target } from "lucide-react";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import PioneerExcellence from "@/app/(main-website)/Home/PioneerExcellence";
+import {
+  createAboutPageSchema,
+  createBreadcrumbSchema,
+} from "@/lib/api/common";
+import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("the-university");
@@ -83,8 +88,41 @@ const page = async () => {
   const krmBranchData = aboutData?.krmugroup?.krmbranch;
   const hallOfFameData = aboutData?.halloffame;
 
+  const aboutPageSchema = createAboutPageSchema({
+    name: "About us | K.R. Mangalam University",
+    url: "https://www.krmangalam.edu.in/about-us",
+    description:
+      "Learn about the history, vision, mission, leadership, and academic excellence of K.R. Mangalam University.",
+    mainEntityName: "K.R. Mangalam University",
+    mainEntityUrl: "https://www.krmangalam.edu.in/",
+  });
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    {
+      name: "Home",
+      url: "https://www.krmangalam.edu.in/",
+    },
+    {
+      name: "About us",
+      url: "https://www.krmangalam.edu.in/about-us",
+    },
+  ]);
   return (
     <>
+      {aboutPageSchema && (
+        <Script
+          id="about-page-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: aboutPageSchema }}
+        />
+      )}
+      {breadcrumbSchema && (
+        <Script
+          id="breadcrumb-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+        />
+      )}
       <section className="min-h-[1px] h-full pt-44 lg:h-[600px] bg-[url(/krmabout.webp)] bg-cover bg-bottom relative overflow-hidden">
         {/* Bottom-Weighted Dark Blue Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#051630] via-[#051630]/50 to-transparent z-0" />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import {
   Carousel,
@@ -21,12 +21,26 @@ export const Leaderships = ({ data }: Props) => {
 
   const [selectedLeader, setSelectedLeader] = useState<Leadership>(data[0]);
   const [expanded, setExpanded] = useState(false);
+  const [showReadMore, setShowReadMore] = useState(false);
 
-  // reset read-more when leader changes
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  // Reset when leader changes
   const handleSelectLeader = (leader: Leadership) => {
     setSelectedLeader(leader);
     setExpanded(false);
   };
+
+  // Check whether content exceeds collapsed height
+  useEffect(() => {
+    if (!contentRef.current) return;
+
+    const timer = setTimeout(() => {
+      setShowReadMore(contentRef.current!.scrollHeight > 150);
+    }, 0);
+
+    return () => clearTimeout(timer);
+  }, [selectedLeader]);
 
   return (
     <section className="pt-[120px] pb-20 bg-white">
@@ -46,11 +60,11 @@ export const Leaderships = ({ data }: Props) => {
               {selectedLeader.desg}
             </h4>
 
-            {selectedLeader?.content && (
+            {selectedLeader.content && (
               <div className="relative mt-5">
-                {/* CONTENT */}
                 <div
-                  className={`prose max-w-none transition-all duration-300 overflow-hidden ${
+                  ref={contentRef}
+                  className={`prose max-w-none overflow-hidden transition-all duration-300 ${
                     expanded ? "max-h-[2000px]" : "max-h-[150px]"
                   }`}
                   dangerouslySetInnerHTML={{
@@ -58,29 +72,31 @@ export const Leaderships = ({ data }: Props) => {
                   }}
                 />
 
-                {/* FADE OVERLAY (only when collapsed) */}
-                {!expanded && (
+                {/* Fade overlay */}
+                {showReadMore && !expanded && (
                   <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent pointer-events-none" />
                 )}
 
-                {/* READ MORE / LESS */}
-                <button
-                  onClick={() => setExpanded((prev) => !prev)}
-                  className="mt-4 text-[#0060aa] font-semibold hover:underline"
-                >
-                  {expanded ? "Read less" : "Read more"}
-                </button>
+                {/* Read More / Less */}
+                {showReadMore && (
+                  <button
+                    onClick={() => setExpanded((prev) => !prev)}
+                    className="mt-4 text-[#0060aa] font-semibold hover:underline"
+                  >
+                    {expanded ? "Read less" : "Read more"}
+                  </button>
+                )}
               </div>
             )}
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="hidden sm:block md:w-2/5 flex justify-center min-h-[368px] h-full relative">
+          <div className="hidden sm:flex md:w-2/5 justify-center min-h-[368px] relative">
             <Image
               src={`${STRAPI_URL}${selectedLeader.leadership_img?.url}`}
               fill
               alt={selectedLeader.name}
-              className="object-contain hidden sm:block z-10"
+              className="object-contain"
             />
           </div>
         </div>
@@ -103,13 +119,13 @@ export const Leaderships = ({ data }: Props) => {
                         isActive ? "border-[#0060aa]" : "border-gray-200"
                       }`}
                     >
-                      <div className="min-h-[295px] h-full relative overflow-hidden">
+                      <div className="relative min-h-[295px] overflow-hidden">
                         <Image
                           src={`${STRAPI_URL}${leader.leadership_img?.url}`}
                           fill
                           alt={leader.name}
                           unoptimized
-                          className={`z-10 transition-all duration-300 hover:scale-105`}
+                          className="object-cover transition-transform duration-300 hover:scale-105"
                         />
                       </div>
 

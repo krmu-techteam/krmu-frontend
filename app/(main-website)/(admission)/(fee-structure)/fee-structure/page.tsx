@@ -5,12 +5,11 @@ import FeeStructureSaarc from "./FeeStructureSaarc";
 import { getFeeStructurePageData } from "@/lib/api/feestructure";
 import FeeStructureSearch from "./FeeStructureSearch";
 
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
+import { createBreadcrumbSchema, createWebPageSchema } from "@/lib/api/common";
+import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("fee-structure");
@@ -52,13 +51,13 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "K.R. Mangalam University",
       images: shareImageUrl
         ? [
-          {
-            url: shareImageUrl,
-            width: 1200,
-            height: 630,
-            alt: seo?.title || "K.R. Mangalam University",
-          },
-        ]
+            {
+              url: shareImageUrl,
+              width: 1200,
+              height: 630,
+              alt: seo?.title || "K.R. Mangalam University",
+            },
+          ]
         : [],
       type: "website",
     },
@@ -76,6 +75,25 @@ export async function generateMetadata(): Promise<Metadata> {
 const page = async () => {
   const feeStructure = await getFeeStructurePageData();
 
+  const webPageSchema = createWebPageSchema({
+    name: "Fee structure | K.R. Mangalam University",
+    url: "https://www.krmangalam.edu.in/fee-structure",
+    description:
+      "Explore the latest K.R. Mangalam University fee structure for undergraduate, postgraduate, diploma, and doctoral programmes.",
+    aboutName: "K.R. Mangalam University",
+    aboutUrl: "https://www.krmangalam.edu.in/",
+  });
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+  {
+    name: "Home",
+    url: "https://www.krmangalam.edu.in/",
+  },
+  {
+    name: "Fee structure",
+    url: "https://www.krmangalam.edu.in/fee-structure",
+  },
+]);
 
   // API response → fee_structure_tab array
   const feeStructTab = feeStructure?.fee_structure_tab;
@@ -84,6 +102,21 @@ const page = async () => {
 
   return (
     <>
+      {webPageSchema && (
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: webPageSchema }}
+        />
+      )}
+      {breadcrumbSchema && (
+        <Script
+          id="breadcrumb-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+        />
+      )}
+
       <FeeStructureHero feeStructHero={feeStructHero} />
       <FeeStructureSearch />
       <FeeStructureTable feeStructTab={feeStructTab} />
