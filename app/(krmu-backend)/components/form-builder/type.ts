@@ -1,6 +1,6 @@
 export type FieldType = "text";
 
-export interface BaseField {
+export interface BaseFieldConfig {
   type: FieldType;
   name: string;
   label: string;
@@ -9,8 +9,8 @@ export interface BaseField {
   required?: boolean;
 }
 
-export interface TextField extends BaseField {
-  type: FieldType;
+export interface TextFieldConfig extends BaseFieldConfig {
+  type: "text";
 }
 
-export type FormField = TextField;
+export type FieldConfig = TextFieldConfig;
