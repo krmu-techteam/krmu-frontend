@@ -2,22 +2,22 @@ import Image from "next/image";
 import ScrollButton from "../../CommonComponent2026/ScrollButton";
 import KRMUTimer from "../../CommonComponent2026/KRMUTimer";
 
-export const CommonHeader = () => {
+const PhdHeaderNavbar = () => {
   return (
     <header
       className="pb-2 bg-white sticky top-0 z-[100000]"
       style={{
         boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-      }} 
+      }}
     >
       <div className="w-full bg-[#fcd404]">
-        <KRMUTimer targetDate="2026-07-08T23:59:59" />
+        <KRMUTimer targetDate="2026-08-03T23:59:59" />
       </div>
       <div className="px-5 pt-2 flex flex-col sm:flex-row justify-between items-center gap-3">
         <div className="w-full md:w-2/6 xl:w-3/6 2xl:w-1/3 flex justify-center sm:justify-start gap-5">
           <Image
             src="/wp-content/landingpage/common/krmlogo.webp"
-            width={350} 
+            width={350}
             height={65}
             alt="MBA Landing Page Logo"
           />
@@ -34,8 +34,6 @@ export const CommonHeader = () => {
             Apply Now
           </button> */}
           {/* <AnimatedCounter targetDate="February 28, 2026 6:30 PM" /> */}
-        
-      
 
           <ScrollButton
             targetId="apply-section"
@@ -49,3 +47,5 @@ export const CommonHeader = () => {
     </header>
   );
 };
+
+export default PhdHeaderNavbar;

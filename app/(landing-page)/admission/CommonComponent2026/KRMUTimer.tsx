@@ -94,7 +94,7 @@ export default function KRMUTimer({
       <span
         className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-xs sm:text-sm" : "text-xs sm:text-sm"}`}
       >
-        Final Admission Deadline: 31 July
+        Hurry! Ph.D. Application Deadline Ends Tonight | Don't Miss Your Chance to Begin Your Research Journey
         {mainWebsiteTimer && (
           <span className="border-b border-white border-dotted inline-block ml-2">Apply Now</span>
         )}
