@@ -16,7 +16,7 @@ export default async function getCategoryLayout({ params, children }: Props) {
   return (
     <>
       <h3
-        className="text-3xl underline font-semibold mb-5"
+        className="text-3xl underline font-semibold mb-5 temp-class"
         dangerouslySetInnerHTML={{
           __html: catName,
         }}
