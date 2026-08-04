@@ -235,7 +235,7 @@ const Footer = async () => {
         target="_blank"
         className="fixed bottom-0 left-0 w-full bg-[#cb000d] flex justify-center z-30"
       >
-        <KRMUTimer targetDate="2026-07-31T23:59:59" mainWebsiteTimer={true} />
+        <KRMUTimer targetDate="2026-08-05T17:59:59" mainWebsiteTimer={true} />
       </Link>
     
       {/* <div className="fixed bottom-10 right-24">
