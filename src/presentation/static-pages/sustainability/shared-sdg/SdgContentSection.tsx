@@ -33,8 +33,8 @@ export const SdgContentSection: React.FC<SdgContentSectionProps> = ({
   accentColor = "#E5243B",
 }) => {
   return (
-    <section className="w-full text-white pt-4 pb-12 sm:pb-16 px-4 sm:px-6 md:px-10">
-      <div className="max-w-[1440px] mx-auto space-y-3.5">
+    <section className="w-full text-white pt-4 pb-12 sm:pb-16">
+      <div className="max-w-[1440px] mx-auto space-y-3.5 px-4 sm:px-6 md:px-10">
         {/* Title */}
         <h2 className="text-xl sm:text-2xl md:text-[22px] font-semibold text-white tracking-tight">
           SDG-{goalNumber}: {title}
@@ -42,7 +42,7 @@ export const SdgContentSection: React.FC<SdgContentSectionProps> = ({
 
         {/* Content & SDG Tile Card Container */}
         <div className="flex flex-col lg:flex-row gap-6 md:gap-8 items-start justify-between">
-          {/* Left Column: Text Content & Policy Link */}
+          {/* Left Column: Text Content & Policy Links */}
           <div className="flex-1 space-y-5">
             <div className="space-y-4 text-gray-300 text-sm sm:text-[16px] leading-relaxed font-poppins font-normal text-justify">
               {paragraphs.map((p, idx) => (
@@ -50,7 +50,7 @@ export const SdgContentSection: React.FC<SdgContentSectionProps> = ({
               ))}
             </div>
 
-            {/* Action Buttons */}
+            {/* Action Buttons inside Left Column */}
             {leftButtons && leftButtons.length > 0 ? (
               <div className="pt-2 flex flex-wrap gap-3">
                 {leftButtons.map((btn, i) => (
@@ -61,9 +61,11 @@ export const SdgContentSection: React.FC<SdgContentSectionProps> = ({
                     variant="outline"
                     icon={Download}
                     iconPosition="left"
-                    className="!w-auto !inline-flex border border-white/30 hover:border-white bg-[#0c1e2c]/50 hover:bg-white/10 text-white font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 h-auto !capitalize transition-colors"
+                    className="!w-auto !inline-flex border border-white/20 hover:border-white/60 bg-[#0c1e2c]/50 hover:bg-white/10 text-white font-medium text-sm sm:text-base rounded-[4px] px-5 py-3 min-h-[45px] !h-auto !normal-case tracking-normal transition-colors text-left"
                   >
-                    {btn.text}
+                    <span className="whitespace-normal leading-snug">
+                      {btn.text}
+                    </span>
                   </Button>
                 ))}
               </div>
@@ -75,9 +77,11 @@ export const SdgContentSection: React.FC<SdgContentSectionProps> = ({
                   variant="outline"
                   icon={Download}
                   iconPosition="left"
-                  className="!w-auto !inline-flex border border-white/30 hover:border-white bg-[#0c1e2c]/50 hover:bg-white/10 text-white font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 h-auto !capitalize transition-colors"
+                  className="!w-auto !inline-flex border border-white/20 hover:border-white/60 bg-[#0c1e2c]/50 hover:bg-white/10 text-white font-medium text-sm sm:text-base rounded-[4px] px-5 py-3 min-h-[45px] !h-auto !normal-case tracking-normal transition-colors text-left"
                 >
-                  {leftButtonText}
+                  <span className="whitespace-normal leading-snug">
+                    {leftButtonText}
+                  </span>
                 </Button>
               </div>
             ) : null}

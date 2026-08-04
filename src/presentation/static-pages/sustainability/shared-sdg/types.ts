@@ -10,6 +10,28 @@ export interface SdgActionButton {
   url: string;
 }
 
+export interface SdgAuditItem {
+  title: string;
+  url: string;
+}
+
+export interface SdgAuditGroup {
+  mainAudits?: SdgAuditItem[];
+  gridAudits?: SdgAuditItem[];
+  isoCertificates?: SdgAuditItem[];
+}
+
+export interface SdgAwardItem {
+  title?: string;
+  image: string;
+}
+
+export interface SdgEventGroup {
+  title: string;
+  events?: SdgEventItem[];
+  audits?: SdgAuditItem[];
+}
+
 export interface SdgDetailPageData {
   goalNumber: number | string;
   title: string;
@@ -26,4 +48,7 @@ export interface SdgDetailPageData {
   accentColor?: string;
   eventsTitle?: string;
   events?: SdgEventItem[];
+  eventGroups?: SdgEventGroup[];
+  audits?: SdgAuditGroup;
+  awards?: SdgAwardItem[];
 }

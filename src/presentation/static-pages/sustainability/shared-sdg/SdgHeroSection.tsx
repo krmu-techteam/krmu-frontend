@@ -32,7 +32,7 @@ export const SdgHeroSection: React.FC<SdgHeroSectionProps> = ({
       </div>
 
       {/* 2. Header Content Section below image */}
-      <div className="max-w-[1440px] mx-auto pt-8 pb-4 sm:pt-10 sm:pb-6 px-10 2xl:px-0">
+      <div className="max-w-[1440px] mx-auto pt-8 pb-4 sm:pt-10 px-4 sm:pb-6 md:px-10">
         <div className="relative flex items-center justify-center">
           {/* Back Button on Left */}
           <div className="absolute left-0 top-1/2 -translate-y-1/2">

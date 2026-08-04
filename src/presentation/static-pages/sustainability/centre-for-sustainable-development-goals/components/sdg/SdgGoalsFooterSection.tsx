@@ -186,7 +186,7 @@ const SdgGoalsFooterSection: React.FC = () => {
 
       {/* 2. KRMU Sustainability Group Photo Card */}
       <div className="w-full flex justify-center">
-        <div className="w-full rounded-[14px] sm:rounded-[10px] overflow-hidden">
+        <div className="w-full rounded-[4px] sm:rounded-[px] overflow-hidden">
           <Image
             src="/images/sustainability/goals/group.jpg"
             alt="KRMU Sustainability Team Group Photo"

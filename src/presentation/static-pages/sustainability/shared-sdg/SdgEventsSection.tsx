@@ -58,8 +58,8 @@ export const SdgEventsSection: React.FC<SdgEventsSectionProps> = ({
   const displayedEvents = events.slice(0, visibleCount);
 
   return (
-    <section className="w-full text-white py-8 sm:py-12 px-4 sm:px-6 md:px-10">
-      <div className="max-w-[1440px] mx-auto space-y-8 sm:space-y-8">
+    <section className="w-full text-white py-8 sm:py-12 ">
+      <div className="max-w-[1440px] mx-auto space-y-8 sm:space-y-8 px-4 sm:px-6 md:px-10">
         {/* Header Title */}
         <div className="flex items-center justify-between">
           <h2 className="text-2xl sm:text-3xl font-semibold md:text-[28px] font-serif text-white tracking-tight">
