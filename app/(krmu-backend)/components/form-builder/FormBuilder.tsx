@@ -1,28 +1,33 @@
 "use client";
 
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { DefaultValues, useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, UseFormReturn } from "react-hook-form";
 
-import { FieldConfig } from "./types";
+import { FieldRenderer } from "./FieldRenderer";
+import { FormField } from "./types";
 
-interface FormBuilderProps {
-  fields: FieldConfig[];
-  schema: z.ZodObject<z.ZodRawShape>;
-  defaultValues: DefaultValues<Record<string, any>>;
-  onSubmit: (data: Record<string, any>) => void;
+interface FormBuilderProps<T extends FieldValues> {
+  form: UseFormReturn<T>;
+  fields: FormField[];
+  onSubmit: SubmitHandler<T>;
 }
 
-export function FormBuilder({
+export function FormBuilder<T extends FieldValues>({
+  form,
   fields,
-  schema,
-  defaultValues,
   onSubmit,
-}: FormBuilderProps) {
-  const form = useForm({
-    resolver: zodResolver(schema),
-    defaultValues,
-  });
+}: FormBuilderProps<T>) {
+  return (
+    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      {fields.map((field) => (
+        <FieldRenderer key={field.name} control={form.control} field={field} />
+      ))}
 
-  return <div>Form Builder</div>;
+      <button
+        type="submit"
+        className="rounded-md bg-blue-600 px-4 py-2 text-white"
+      >
+        Save
+      </button>
+    </form>
+  );
 }

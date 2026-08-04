@@ -1,7 +1,4 @@
-export type FieldType = "text";
-
-export interface BaseFieldConfig {
-  type: FieldType;
+export interface BaseField {
   name: string;
   label: string;
   placeholder?: string;
@@ -9,8 +6,8 @@ export interface BaseFieldConfig {
   required?: boolean;
 }
 
-export interface TextFieldConfig extends BaseFieldConfig {
+export interface TextField extends BaseField {
   type: "text";
 }
 
-export type FieldConfig = TextFieldConfig;
+export type FormField = TextField;

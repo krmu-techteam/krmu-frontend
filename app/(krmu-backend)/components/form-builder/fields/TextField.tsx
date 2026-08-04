@@ -1,45 +1,29 @@
-import { Control, FieldValues, Path } from "react-hook-form";
-import { TextFieldConfig } from "../types";
-import {
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+import { ControllerRenderProps, FieldValues, Path } from "react-hook-form";
 
-interface TextFieldProps<T extends FieldValues> {
-  control: Control<T>;
-  field: TextFieldConfig;
+interface Props<T extends FieldValues> {
+  label: string;
+  placeholder?: string;
+  error?: string;
+  field: ControllerRenderProps<T, Path<T>>;
 }
 
 export function TextField<T extends FieldValues>({
-  control,
+  label,
+  placeholder,
+  error,
   field,
-}: TextFieldProps<T>) {
+}: Props<T>) {
   return (
-    <FormField
-      control={control}
-      name={field.name as Path<T>}
-      render={({ field: formField }) => (
-        <FormItem>
-          <FormLabel>
-            {field.label}
-            {field.required && <span className="text-destructive ml-1">*</span>}
-          </FormLabel>
+    <div className="space-y-2">
+      <label className="text-sm font-medium">{label}</label>
 
-          <FormControl>
-            <Input
-              {...formField}
-              placeholder={field.placeholder}
-              disabled={field.disabled}
-            />
-          </FormControl>
+      <input
+        {...field}
+        placeholder={placeholder}
+        className="w-full rounded-lg border px-4 py-3"
+      />
 
-          <FormMessage />
-        </FormItem>
-      )}
-    ></FormField>
+      {error && <p className="text-sm text-red-500">{error}</p>}
+    </div>
   );
 }

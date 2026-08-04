@@ -1,6 +1,5 @@
-// forms/faculty/defaultValues.ts
+import { FacultyForm } from "./schema";
 
-export const facultyDefaultValues = {
+export const facultyDefaultValues: FacultyForm = {
   name: "",
-  slug: "",
 };
