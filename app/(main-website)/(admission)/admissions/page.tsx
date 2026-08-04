@@ -10,9 +10,13 @@ import Admission2Hero from "./admission2Comp/Admission2Hero";
 import Admission2Fee from "./admission2Comp/Admission2Fee";
 
 import { Metadata } from "next";
-import { folderRouteSEO } from "@/lib/api/siteseo"; 
+import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import { createBreadcrumbProgSchema, createHowToSchema, createProgFaqSchema } from "@/lib/api/common";
+import {
+  createBreadcrumbProgSchema,
+  createHowToSchema,
+  createProgFaqSchema,
+} from "@/lib/api/common";
 import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -31,6 +35,37 @@ export async function generateMetadata(): Promise<Metadata> {
       robots: {
         index: true,
         follow: true,
+      },
+      alternates: {
+        canonical: "https://www.krmangalam.edu.in/admissions",
+      },
+      // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
+      openGraph: {
+        title: "K.R. Mangalam University",
+        description: "",
+        url: "https://www.krmangalam.edu.in/admissions",
+        siteName: "K.R. Mangalam University",
+        images: {
+          url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/fav_457c1acb7e.png",
+          width: 1200,
+          height: 630,
+          alt: "K.R. Mangalam University",
+        },
+
+        type: "website",
+      },
+
+      // ✅ Twitter Card
+      twitter: {
+        card: "summary_large_image",
+        title: "K.R. Mangalam University",
+        description: "",
+        images: {
+          url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/fav_457c1acb7e.png",
+          width: 1200,
+          height: 630,
+          alt: "K.R. Mangalam University",
+        },
       },
     };
   }
@@ -55,13 +90,13 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "K.R. Mangalam University",
       images: shareImageUrl
         ? [
-          {
-            url: shareImageUrl,
-            width: 1200,
-            height: 630,
-            alt: seo?.title || "K.R. Mangalam University",
-          },
-        ]
+            {
+              url: shareImageUrl,
+              width: 1200,
+              height: 630,
+              alt: seo?.title || "K.R. Mangalam University",
+            },
+          ]
         : [],
       type: "website",
     },
@@ -78,8 +113,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const page = async () => {
   const admission2Data = await getAdmission2PageData();
-
-  
 
   const admTOC = admission2Data?.adm_toc;
   const admAlumni = admission2Data?.adm2_alumni;
@@ -98,9 +131,6 @@ const page = async () => {
     })),
   );
 
-
-
-
   const singleProgFAQLD = createProgFaqSchema(allFaqs);
 
   const breadcrumbItems = [
@@ -109,41 +139,37 @@ const page = async () => {
   ];
   const breadcrumbSchema = createBreadcrumbProgSchema(breadcrumbItems);
 
-
-
   const howToSchema = createHowToSchema({
-  name: "Admission Process at K.R. Mangalam University",
-  description:
-    "Complete your admission to K.R. Mangalam University in just 6 simple steps.",
-  steps: [
-    {
-      name: "Start Your Application",
-      text: "Begin your application online at admissions.krmangalam.edu.in",
-    },
-    {
-      name: "Payment",
-      text: "Pay the required application fee of ₹1,000.",
-    },
-    {
-      name: "Entrance Test",
-      text: "Appear for the K.R. Mangalam University Entrance Exam.",
-    },
-    {
-      name: "Personal Interview",
-      text: "Attend a Faculty-Led Personal Interview.",
-    },
-    {
-      name: "Admission Offer",
-      text: "Receive the offer letter after a successful personal interview.",
-    },
-    {
-      name: "Get Enrolled",
-      text: "Embark on your journey with K.R. Mangalam University.",
-    },
-  ],
-});
-
-
+    name: "Admission Process at K.R. Mangalam University",
+    description:
+      "Complete your admission to K.R. Mangalam University in just 6 simple steps.",
+    steps: [
+      {
+        name: "Start Your Application",
+        text: "Begin your application online at admissions.krmangalam.edu.in",
+      },
+      {
+        name: "Payment",
+        text: "Pay the required application fee of ₹1,000.",
+      },
+      {
+        name: "Entrance Test",
+        text: "Appear for the K.R. Mangalam University Entrance Exam.",
+      },
+      {
+        name: "Personal Interview",
+        text: "Attend a Faculty-Led Personal Interview.",
+      },
+      {
+        name: "Admission Offer",
+        text: "Receive the offer letter after a successful personal interview.",
+      },
+      {
+        name: "Get Enrolled",
+        text: "Embark on your journey with K.R. Mangalam University.",
+      },
+    ],
+  });
 
   return (
     <>

@@ -28,6 +28,37 @@ export async function generateMetadata(): Promise<Metadata> {
         index: true,
         follow: true,
       },
+      alternates: {
+        canonical: "https://www.krmangalam.edu.in/fee-structure",
+      },
+      // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
+      openGraph: {
+        title: "K.R. Mangalam University",
+        description: "",
+        url: "https://www.krmangalam.edu.in/fee-structure",
+        siteName: "K.R. Mangalam University",
+        images: {
+          url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/fav_457c1acb7e.png",
+          width: 1200,
+          height: 630,
+          alt: "K.R. Mangalam University",
+        },
+
+        type: "website",
+      },
+
+      // ✅ Twitter Card
+      twitter: {
+        card: "summary_large_image",
+        title: "K.R. Mangalam University",
+        description: "",
+        images: {
+          url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/fav_457c1acb7e.png",
+          width: 1200,
+          height: 630,
+          alt: "K.R. Mangalam University",
+        },
+      },
     };
   }
 
@@ -85,15 +116,15 @@ const page = async () => {
   });
 
   const breadcrumbSchema = createBreadcrumbSchema([
-  {
-    name: "Home",
-    url: "https://www.krmangalam.edu.in/",
-  },
-  {
-    name: "Fee structure",
-    url: "https://www.krmangalam.edu.in/fee-structure",
-  },
-]);
+    {
+      name: "Home",
+      url: "https://www.krmangalam.edu.in/",
+    },
+    {
+      name: "Fee structure",
+      url: "https://www.krmangalam.edu.in/fee-structure",
+    },
+  ]);
 
   // API response → fee_structure_tab array
   const feeStructTab = feeStructure?.fee_structure_tab;
