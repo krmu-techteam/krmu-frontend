@@ -90,7 +90,7 @@ const page = async () => {
 
   const placementOverviewSchema = createPlacementOverviewSchema({
     name: "Placements Overview | K.R. Mangalam University",
-    url: "https://www.krmangalam.edu.in/placement/overview",
+    url: "https://www.krmangalam.edu.in/placement",
     description:
       "Explore placement statistics, recruiters, salary packages, internships, and career support at K.R. Mangalam University.",
     websiteName: "K.R. Mangalam University",
@@ -104,7 +104,7 @@ const page = async () => {
     },
     {
       name: "Placement overview",
-      url: "https://www.krmangalam.edu.in/placement/overview",
+      url: "https://www.krmangalam.edu.in/placement",
     },
   ]);
 
