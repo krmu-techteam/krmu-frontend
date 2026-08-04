@@ -82,11 +82,11 @@ export const WhyChooseSection: React.FC = () => {
 
       <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-[1440px] pb-20">
         {/* Top Action Navigation Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-8">
+        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 mb-8">
           {navButtons.map((buttonText, index) => (
             <button
               key={index}
-              className="min-w-[217px] px-6 h-[48px] lg:h-[60px] flex items-center justify-center  text-[#000000] font-bold text-[16px] border-2 border-[#000000] rounded-[4px] lg:rounded-[10px]  cursor-pointer"
+              className="w-[310px] max-w-full sm:w-auto sm:min-w-[217px] px-4 sm:px-6 h-[48px] lg:h-[60px] flex items-center justify-center text-[#000000] font-bold text-[14px] sm:text-[16px] border-2 border-[#000000] rounded-[4px] lg:rounded-[10px] cursor-pointer"
             >
               <span className="text-center whitespace-nowrap">
                 {buttonText}
@@ -150,19 +150,19 @@ export const WhyChooseSection: React.FC = () => {
             </h3>
           </div>
 
-          {/* 8 Key Feature Cards Grid (Increased Horizontal Left/Right Gap: gap-x-6 lg:gap-x-8) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 gap-y-6 w-full mx-auto justify-between mb-0">
+          {/* 8 Key Feature Cards Grid (2 cols mobile & tablet, 4 cols desktop) */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full mx-auto justify-between mb-0">
             {featureCards.map((card, index) => (
               <div
                 key={index}
-                className="w-full min-h-[145px] rounded-[4px] lg:rounded-[10px] p-3 flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-1 cursor-pointer"
+                className="w-full min-h-[135px] sm:min-h-[145px] rounded-[4px] lg:rounded-[10px] p-2.5 sm:p-3 flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-1 cursor-pointer"
                 style={{
                   background: card.gradient,
                 }}
               >
-                {/* Figma Spec: 88px x 88px circle background, 72px x 72px icon image inside */}
+                {/* Circle background with icon image inside */}
                 <div
-                  className="w-[88px] h-[88px] rounded-full flex items-center justify-center mb-2 relative shrink-0"
+                  className="w-[68px] sm:w-[88px] h-[68px] sm:h-[88px] rounded-full flex items-center justify-center mb-1.5 sm:mb-2 relative shrink-0"
                   style={{
                     background: "rgba(255, 255, 255, 0.44)",
                   }}
@@ -172,10 +172,10 @@ export const WhyChooseSection: React.FC = () => {
                     alt={card.title}
                     width={72}
                     height={72}
-                    className="object-contain w-[72px] h-[72px] p-[6px]"
+                    className="object-contain w-[52px] sm:w-[72px] h-[52px] sm:h-[72px] p-[4px] sm:p-[6px]"
                   />
                 </div>
-                <h4 className="text-slate-900 text-[16px] font-normal">
+                <h4 className="text-slate-900 text-[13px] sm:text-[16px] font-semibold sm:font-normal leading-tight">
                   {card.title}
                 </h4>
               </div>
