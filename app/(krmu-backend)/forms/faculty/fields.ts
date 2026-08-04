@@ -1,6 +1,6 @@
-import { FormField } from "../../components/form-builder/type";
+import { FieldConfig } from "../../components/form-builder/types";
 
-export const contactFields: FormField[] = [
+export const facultyFields: FieldConfig[] = [
   {
     type: "text",
     name: "name",

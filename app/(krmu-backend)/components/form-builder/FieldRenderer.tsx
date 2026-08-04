@@ -1,11 +1,11 @@
 import { Control, FieldValues } from "react-hook-form";
 
 import { fieldRegistry } from "./fieldRegistry";
-import { FormField } from "@/components/ui/form";
+import { FieldConfig } from "./types";
 
 interface FieldRendererProps<T extends FieldValues> {
   control: Control<T>;
-  field: FormField;
+  field: FieldConfig;
 }
 
 export function FieldRenderer<T extends FieldValues>({

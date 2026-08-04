@@ -1,5 +1,5 @@
 import { Control, FieldValues, Path } from "react-hook-form";
-import { TextFieldConfig } from "../type";
+import { TextFieldConfig } from "../types";
 import {
   FormControl,
   FormField,
