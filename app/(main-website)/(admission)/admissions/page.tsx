@@ -36,9 +36,9 @@ export async function generateMetadata(): Promise<Metadata> {
         index: true,
         follow: true,
       },
-      alternates: {
-        canonical: "https://www.krmangalam.edu.in/admissions",
-      },
+       alternates: {
+      canonical: "https://www.krmangalam.edu.in/admissions",
+    },
       // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
       openGraph: {
         title: "K.R. Mangalam University",

@@ -22,16 +22,16 @@ export async function generateMetadata(): Promise<Metadata> {
     : undefined;
 
   // ✅ Fallback if SEO is missing
-  if (!seo) {
-    return {
-      title: "K.R. Mangalam University",
-      description: "",
-      robots: {
-        index: true,
-        follow: true,
-      },
-    };
-  }
+  // if (!seo) {
+  //   return {
+  //     title: "K.R. Mangalam University",
+  //     description: "",
+  //     robots: {
+  //       index: true,
+  //       follow: true,
+  //     },
+  //   };
+  // }
 
   return {
     title: seo?.title || "K.R. Mangalam University",
