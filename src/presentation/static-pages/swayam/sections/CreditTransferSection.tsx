@@ -15,12 +15,12 @@ const policyData: PolicyRow[] = [
 
 export const CreditTransferSection: React.FC = () => {
   return (
-    <section className="w-full bg-[#F1F1F1] py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="w-full bg-[#F1F1F1] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="container mx-auto max-w-[1260px]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
-          {/* Left/Center Column: Title, Table & Note */}
-          <div className="lg:col-span-8 flex flex-col items-center lg:items-end">
-            <div className="w-full max-w-[620px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-4 items-center">
+          {/* Left Column: Title, Table & Note */}
+          <div className="col-span-12 lg:col-span-8 flex flex-col items-center lg:items-end justify-center w-full">
+            <div className="w-full max-w-[500px] lg:ml-auto lg:translate-x-6 xl:translate-x-10">
               {/* Title directly above the Table */}
               <h2 className="text-slate-900 text-3xl sm:text-4xl xl:text-[42px] font-bold text-center mb-6 w-full tracking-tight">
                 Credit Transfer Policy
@@ -72,8 +72,8 @@ export const CreditTransferSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Lightbulb Graphic balb.png */}
-          <div className="lg:col-span-4 flex justify-center lg:justify-end items-center">
+          {/* Right Column: Lightbulb Graphic (Hidden on Mobile & Tablet, Displayed on Desktop) */}
+          <div className="hidden lg:flex lg:col-span-4 justify-end items-center w-fit ml-auto">
             <div className="relative w-[332px] max-w-full h-[483px] shrink-0">
               <Image
                 src="/swayam/balb.png"

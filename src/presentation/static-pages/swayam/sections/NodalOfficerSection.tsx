@@ -53,11 +53,10 @@ export const NodalOfficerSection: React.FC = () => {
           {/* Contact Details Block */}
           <div className="space-y-0.5 text-white/90 text-sm sm:text-[16px] pt-1">
             <p>
-              <span className="font-semibold text-white">Phone:</span>{" "}
-              +91-8448390215
+              <span className=" text-white">Phone:</span> +91-8448390215
             </p>
             <p className="break-all sm:break-normal">
-              <span className="font-semibold text-white">Email:</span>{" "}
+              <span className=" text-white">Email:</span>{" "}
               swayam-uno-0700@krmangalam.edu.in
             </p>
           </div>

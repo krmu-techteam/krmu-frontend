@@ -2,42 +2,25 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-[#09152b] min-h-auto lg:min-h-[550px] pt-8 sm:pt-12 md:pt-16 lg:pt-24 pb-0 lg:pb-0 text-white flex flex-col items-center">
-      {/* Background Pattern Layer using /swayam/a.png */}
+    <section className="relative w-full overflow-hidden bg-[#001732] min-h-auto lg:min-h-[620px] pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-0 text-white flex flex-col items-center justify-center">
+      {/* Background Pattern Layer using /swayam/swayam-hero-bg.png */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-90"
+        className="absolute inset-0 pointer-events-none no-repeat"
         style={{
-          backgroundImage: "url('/swayam/a.png')",
-          backgroundRepeat: "repeat",
-          backgroundSize: "600px auto",
+          backgroundImage: "url('/swayam/swayam-hero-bg.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
           backgroundPosition: "top left",
         }}
       />
 
-      {/* Subtle Overlay for text readability */}
-      <div className="absolute inset-0 bg-[#071224]/60 pointer-events-none" />
-
       {/* Main Container */}
-      <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 xl:px-20 max-w-[1440px] w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-4 xl:gap-1 items-center">
-          {/* Girl Image Column (FIRST on mobile/tablet, SECOND on desktop) */}
-          <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end items-end relative mt-2 sm:mt-4 lg:mt-0 px-4 sm:px-6 lg:px-0">
-            <div className="relative w-[280px] sm:w-[360px] md:w-[420px] lg:w-[400px] xl:w-[495px] xl:max-w-[495px] h-[340px] sm:h-[440px] md:h-[520px] lg:h-[500px] xl:h-[718px]">
-              <Image
-                src="/swayam/swayam-hero-girl.png"
-                alt="SWAYAM Learner"
-                fill
-                sizes="(max-width: 1024px) 100vw, 495px"
-                className="object-contain object-bottom drop-shadow-2xl"
-                priority
-              />
-            </div>
-          </div>
-
-          {/* Text Content Column: 100% full width edge-to-edge on mobile/tablet */}
-          <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col items-start space-y-5 sm:space-y-6 lg:space-y-8 bg-[#071224] lg:bg-transparent -mx-4 sm:-mx-6 lg:mx-0 px-6 sm:px-10 lg:px-0 py-8 lg:py-0 w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-full">
+      <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-[1520px] w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-6 items-center">
+          {/* Text Content Column: Centered below navbar header */}
+          <div className="order-2 lg:order-1 lg:col-span-7 xl:col-span-8 flex flex-col items-start space-y-5 sm:space-y-6 lg:space-y-7 bg-[#071224] lg:bg-transparent -mx-4 sm:-mx-6 lg:mx-0 px-6 sm:px-10 lg:px-0 py-6 lg:py-4 w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-full">
             {/* SWAYAM Logo Badge Container */}
-            <div className="w-[150px] sm:w-[187px] h-[65px] sm:h-[80px] bg-white rounded-[4px] lg:rounded-[10px] flex items-center justify-center p-2 shadow-md">
+            <div className="w-[150px] sm:w-[187px] h-[65px] sm:h-[80px] bg-white rounded-[4px] lg:rounded-[10px] flex items-center justify-center p-0">
               <Image
                 src="/swayam/swayam-logo.png"
                 alt="SWAYAM Logo"
@@ -49,7 +32,7 @@ const HeroSection = () => {
             </div>
 
             {/* Main Text Description */}
-            <p className="text-white text-base sm:text-[18px] lg:text-[18px] xl:text-[25px] font-medium tracking-normal max-w-6xl leading-relaxed md:leading-[1.5]">
+            <p className="text-white text-base sm:text-[18px] lg:text-[21px] xl:text-[25px] font-semibold tracking-normal w-full max-w-full leading-relaxed md:leading-[1.5]">
               SWAYAM (Study Webs of Active Learning for Young Aspiring Minds) is
               the Government of India&apos;s national online learning platform
               developed by the Ministry of Education. It provides high-quality
@@ -68,6 +51,20 @@ const HeroSection = () => {
               >
                 Visit SWAYAM
               </a>
+            </div>
+          </div>
+
+          {/* Girl Image Column: Anchored flush to bottom while centered in layout */}
+          <div className="order-1 lg:order-2 lg:col-span-5 xl:col-span-4 flex justify-center lg:justify-end items-end relative mt-0 px-4 sm:px-6 lg:px-0 w-full lg:w-fit lg:ml-auto">
+            <div className="relative w-[280px] sm:w-[360px] md:w-[420px] lg:w-[440px] xl:w-[495px] xl:max-w-[495px] h-[360px] sm:h-[460px] md:h-[540px] lg:h-[580px] xl:h-[718px]">
+              <Image
+                src="/swayam/swayam-hero-girl.png"
+                alt="SWAYAM Learner"
+                fill
+                sizes="(max-width: 1024px) 100vw, 495px"
+                className="object-contain object-bottom drop-shadow-2xl"
+                priority
+              />
             </div>
           </div>
         </div>

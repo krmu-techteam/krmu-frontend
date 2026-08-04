@@ -74,16 +74,19 @@ export const WhyChooseSection: React.FC = () => {
         className="absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/swayam/uni-back.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "top",
         }}
       />
 
-      <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-[1440px] pb-16">
+      <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-[1440px] pb-20">
         {/* Top Action Navigation Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-8">
           {navButtons.map((buttonText, index) => (
             <button
               key={index}
-              className="min-w-[217px] px-6 h-[48px] lg:h-[60px] flex items-center justify-center bg-white/40  text-[#000000] font-bold text-[16px] border-2 border-[#000000] rounded-[4px] lg:rounded-[10px] hover:bg-white/80 transition-colors duration-200 cursor-pointer"
+              className="min-w-[217px] px-6 h-[48px] lg:h-[60px] flex items-center justify-center  text-[#000000] font-bold text-[16px] border-2 border-[#000000] rounded-[4px] lg:rounded-[10px]  cursor-pointer"
             >
               <span className="text-center whitespace-nowrap">
                 {buttonText}
@@ -125,7 +128,7 @@ export const WhyChooseSection: React.FC = () => {
                 {bulletPoints.map((point, idx) => (
                   <li key={idx} className="flex items-start space-x-3">
                     <CheckCircle2 className="w-[24px] h-[24px] text-white shrink-0 mt-0.5" />
-                    <span className="text-white/95 text-[16px] md:text-[18px] xl:text-[22px] font-semibold">
+                    <span className="text-white text-[16px] md:text-[18px] xl:text-[22px] font-semibold">
                       {point}
                     </span>
                   </li>
@@ -172,7 +175,7 @@ export const WhyChooseSection: React.FC = () => {
                     className="object-contain w-[72px] h-[72px] p-[6px]"
                   />
                 </div>
-                <h4 className="text-slate-900 text-[16px] font-bold leading-tight">
+                <h4 className="text-slate-900 text-[16px] font-normal">
                   {card.title}
                 </h4>
               </div>

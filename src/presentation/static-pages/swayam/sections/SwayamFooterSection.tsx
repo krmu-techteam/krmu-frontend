@@ -4,9 +4,9 @@ import Image from "next/image";
 export const SwayamFooterSection: React.FC = () => {
   return (
     <footer className="w-full bg-white py-10 lg:py-12 px-4 overflow-hidden border-t border-gray-100">
-      <div className="container mx-auto max-w-[1260px] flex flex-col items-center justify-center space-y-8">
+      <div className="container mx-auto max-w-[1260px] flex flex-col items-center justify-center space-y-4">
         {/* Partner Logos Banner (footer-logo.png) */}
-        <div className="relative w-full max-w-[780px] h-[70px] sm:h-[90px] md:h-[100px]">
+        <div className="relative w-full max-w-[650px] h-[70px] sm:h-[90px] md:h-[100px]">
           <Image
             src="/swayam/footer-logo.png"
             alt="KRMU SWAYAM Ministry of Education Partner Logos"
@@ -18,7 +18,7 @@ export const SwayamFooterSection: React.FC = () => {
 
         {/* Footer Navigation & Copyright Text */}
         <div className="text-center">
-          <p className="text-[#000000] text-[16px] font-medium tracking-wide">
+          <p className="text-[#000000] text-[15px] font-medium tracking-wide">
             <a
               href="#useful-links"
               className="hover:underline transition-all duration-200"
