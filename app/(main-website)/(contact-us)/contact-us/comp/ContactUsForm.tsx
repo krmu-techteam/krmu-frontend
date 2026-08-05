@@ -127,8 +127,8 @@ const ContactUsForm = () => {
         name: "",
         email: "",
         phone: "",
-        programme: "",
-        message: "",
+        // programme: "",
+        // message: "",
         agree: false,
       });
     } catch {
