@@ -8,7 +8,7 @@ interface FieldRendererProps<T extends FieldValues> {
 }
 
 export function FieldRenderer<T extends FieldValues>({
-  control,
+  control,   
   field,
 }: FieldRendererProps<T>) {
   const Component = fieldRegistry[field.type];

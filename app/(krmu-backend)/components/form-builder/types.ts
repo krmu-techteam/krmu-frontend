@@ -1,4 +1,4 @@
-export interface BaseField {
+export interface BaseFieldConfig {
   name: string;
   label: string;
   placeholder?: string;
@@ -6,8 +6,21 @@ export interface BaseField {
   required?: boolean;
 }
 
-export interface TextField extends BaseField {
+export interface SelectOption {
+  label: string;
+  value: string;
+}
+export interface TextFieldConfig extends BaseFieldConfig {
   type: "text";
 }
 
-export type FormField = TextField;
+export interface TextareaFieldConfig extends BaseFieldConfig {
+  type: "textarea";
+}
+
+export interface SelectFieldConfig extends BaseFieldConfig {
+  type: "select";
+  options: SelectOption[];
+}
+
+export type FormField = TextFieldConfig | TextareaFieldConfig;
