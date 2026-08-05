@@ -15,7 +15,7 @@ const FinanceAssistancePointer = () => {
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
                 <span>
-                  Loan coverage for course fees, hostel/transporation fees and
+                  Loan coverage for course fees, hostel/transportation fees and
                   other educational expenses.
                 </span>
               </li>

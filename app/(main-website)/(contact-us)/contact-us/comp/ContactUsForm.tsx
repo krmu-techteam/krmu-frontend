@@ -7,6 +7,8 @@ type Errors = {
   name?: string;
   email?: string;
   phone?: string;
+  programme?: string;
+  message?: string;
   agree?: string;
 };
 
@@ -15,6 +17,8 @@ const ContactUsForm = () => {
     name: "",
     email: "",
     phone: "",
+    programme: "",
+    message: "",
     agree: false,
   });
 
@@ -24,16 +28,36 @@ const ContactUsForm = () => {
   const [error, setError] = useState("");
 
   // ---------------- CHANGE HANDLER ----------------
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const target = e.target;
+    const { name, value } = target;
 
-    setForm((prev) => ({
+    if (target instanceof HTMLInputElement && target.type === "checkbox") {
+      setForm((prev) => ({
+        ...prev,
+        [name]: target.checked,
+      }));
+    } else if (name === "phone") {
+      // Only allow digits and limit to 10
+      const numeric = value.replace(/\D/g, "").slice(0, 10);
+
+      setForm((prev) => ({
+        ...prev,
+        phone: numeric,
+      }));
+    } else {
+      setForm((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
+
+    setErrors((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: undefined,
     }));
-
-    // Clear error on change
-    setErrors((prev) => ({ ...prev, [name]: undefined }));
   };
 
   // ---------------- VALIDATION ----------------
@@ -56,17 +80,27 @@ const ContactUsForm = () => {
       newErrors.phone = "Enter a valid 10-digit mobile number";
     }
 
+    // if (!form.programme.trim()) {
+    //   newErrors.programme = "Programme of Interest is required";
+    // }
+
+    if (!form.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+
     if (!form.agree) {
       newErrors.agree = "You must agree before submitting";
     }
 
     setErrors(newErrors);
+
     return Object.keys(newErrors).length === 0;
   };
 
   // ---------------- SUBMIT ----------------
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     setSuccess("");
     setError("");
 
@@ -77,7 +111,9 @@ const ContactUsForm = () => {
     try {
       const res = await fetch(`${FETCH_STRAPI_URL}/api/contact-forms`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
           data: form,
         }),
@@ -85,11 +121,14 @@ const ContactUsForm = () => {
 
       if (!res.ok) throw new Error("Failed");
 
-      setSuccess("Thank you! Your application has been submitted.");
+      setSuccess("Thank you! Your enquiry has been submitted.");
+
       setForm({
         name: "",
         email: "",
         phone: "",
+        programme: "",
+        message: "",
         agree: false,
       });
     } catch {
@@ -100,7 +139,7 @@ const ContactUsForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} noValidate>
       <div className="Reach-Out-to-Us-form">
         <div className="title">
           <h1>Reach Out to Us</h1>
@@ -108,14 +147,20 @@ const ContactUsForm = () => {
 
         {/* Name */}
         <div className="field name">
-          <label className="field_label">Name:</label>
+          <label htmlFor="name" className="field_label">
+            Name:
+          </label>
+
           <input
+            id="name"
             type="text"
             name="name"
             value={form.name}
             onChange={handleChange}
             className="field_text"
+            autoComplete="name"
           />
+
           {errors.name && (
             <p className="text-red-600 text-sm mt-1">{errors.name}</p>
           )}
@@ -123,14 +168,20 @@ const ContactUsForm = () => {
 
         {/* Email */}
         <div className="field email">
-          <label className="field_label">E-Mail ID:</label>
+          <label htmlFor="email" className="field_label">
+            E-Mail ID:
+          </label>
+
           <input
+            id="email"
             type="email"
             name="email"
             value={form.email}
             onChange={handleChange}
             className="field_email"
+            autoComplete="email"
           />
+
           {errors.email && (
             <p className="text-red-600 text-sm mt-1">{errors.email}</p>
           )}
@@ -138,35 +189,93 @@ const ContactUsForm = () => {
 
         {/* Phone */}
         <div className="field phone">
-          <label className="field_label">Mobile Number:</label>
+          <label htmlFor="phone" className="field_label">
+            Mobile Number:
+          </label>
+
           <input
+            id="phone"
             type="tel"
             name="phone"
             value={form.phone}
             onChange={handleChange}
             className="field_phone"
+            inputMode="numeric"
+            pattern="[0-9]{10}"
+            maxLength={10}
+            autoComplete="tel"
           />
+
           {errors.phone && (
             <p className="text-red-600 text-sm mt-1">{errors.phone}</p>
           )}
         </div>
 
+        {/* Programme */}
+        {/* <div className="field programme">
+          <label htmlFor="programme" className="field_label">
+            Programme of Interest:
+          </label>
+
+          <input
+            id="programme"
+            type="text"
+            name="programme"
+            value={form.programme}
+            onChange={handleChange}
+            className="field_text"
+          />
+
+          {errors.programme && (
+            <p className="text-red-600 text-sm mt-1">
+              {errors.programme}
+            </p>
+          )}
+        </div> */}
+
+        {/* Message */}
+        {/* <div className="field message">
+          <label htmlFor="message" className="field_label">
+            Message:
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows={4}
+            value={form.message}
+            onChange={handleChange}
+            className="field_text"
+          />
+
+          {errors.message && (
+            <p className="text-red-600 text-sm mt-1">
+              {errors.message}
+            </p>
+          )}
+        </div> */}
+
         {/* Checkbox */}
         <div className="field checkbox">
-          <label className="flex gap-2 items-start">
+          <div className="flex gap-2 items-start">
             <input
+              id="agree"
               type="checkbox"
               name="agree"
               checked={form.agree}
               onChange={handleChange}
             />
-            <span>
+
+            <label htmlFor="agree">
               I agree to receive information from{" "}
-              <strong>KR Mangalam University</strong>
-            </span>
-          </label>
+              <strong>KR Mangalam University</strong>.
+            </label>
+          </div>
+
           {errors.agree && (
-            <p className="text-red-600 text-sm mt-1">{errors.agree}</p>
+            <p className="text-red-600 text-sm mt-1">
+              {errors.agree}
+            </p>
           )}
         </div>
 
@@ -180,13 +289,19 @@ const ContactUsForm = () => {
             {loading && (
               <span className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
             )}
+
             {loading ? "Submitting..." : "Submit"}
           </button>
         </div>
 
-        {/* Messages */}
-        {success && <p className="text-green-600 pt-3">{success}</p>}
-        {error && <p className="text-red-600 pt-3">{error}</p>}
+        {/* Success/Error */}
+        {success && (
+          <p className="text-green-600 pt-3">{success}</p>
+        )}
+
+        {error && (
+          <p className="text-red-600 pt-3">{error}</p>
+        )}
       </div>
     </form>
   );
