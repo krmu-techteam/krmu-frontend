@@ -23,4 +23,4 @@ export interface SelectFieldConfig extends BaseFieldConfig {
   options: SelectOption[];
 }
 
-export type FormField = TextFieldConfig | TextareaFieldConfig;
+export type FormField = TextFieldConfig | TextareaFieldConfig | SelectFieldConfig;
