@@ -17,8 +17,8 @@ const ContactUsForm = () => {
     name: "",
     email: "",
     phone: "",
-    programme: "",
-    message: "",
+    // programme: "",
+    // message: "",
     agree: false,
   });
 
@@ -84,9 +84,9 @@ const ContactUsForm = () => {
     //   newErrors.programme = "Programme of Interest is required";
     // }
 
-    if (!form.message.trim()) {
-      newErrors.message = "Message is required";
-    }
+    // if (!form.message.trim()) {
+    //   newErrors.message = "Message is required";
+    // }
 
     if (!form.agree) {
       newErrors.agree = "You must agree before submitting";
