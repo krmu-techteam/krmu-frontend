@@ -8,6 +8,7 @@ import { facultyDefaultValues } from "./defaultValues";
 import { facultyFields } from "./fields";
 import { createFaculty } from "./api";
 import { FormBuilder } from "../../components/form-builder/FormBuilder";
+import { objectToFormData } from "../../components/utils/formData";
 
 export default function FacultyFormComponent() {
   const form = useForm<FacultyForm>({
@@ -17,15 +18,14 @@ export default function FacultyFormComponent() {
   });
 
   const onSubmit = async (data: FacultyForm) => {
-    try {
-      const response = await createFaculty(data);
+    const formData = objectToFormData(data);
 
-      console.log("Success", response);
-
-    //   form.reset();
-    } catch (error) {
-      console.error("Failed", error);
+    for (const [key, value] of formData.entries()) {
+      console.log(key, value);
     }
+
+    const res = await createFaculty(formData);
+    console.log("res");
   };
 
   return <FormBuilder form={form} fields={facultyFields} onSubmit={onSubmit} />;

@@ -8,22 +8,51 @@ interface FieldRendererProps<T extends FieldValues> {
 }
 
 export function FieldRenderer<T extends FieldValues>({
-  control,   
+  control,
   field,
 }: FieldRendererProps<T>) {
-  const Component = fieldRegistry[field.type];
   return (
     <Controller
       name={field.name as Path<T>}
       control={control}
-      render={({ field: formField, fieldState }) => (
-        <Component
-          field={formField}
-          label={field.label}
-          placeholder={field.placeholder}
-          error={fieldState.error?.message}
-        />
-      )}
+      render={({ field: formField, fieldState }) => {
+        if (field.type === "image") {
+          const Component = fieldRegistry.image;
+
+          return (
+            <Component
+              field={formField}
+              label={field.label}
+              error={fieldState.error?.message}
+              accept={field.accept}
+            />
+          );
+        }
+        if (field.type === "select") {
+          const Component = fieldRegistry.select;
+
+          return (
+            <Component
+              field={formField}
+              label={field.label}
+              placeholder={field.placeholder}
+              error={fieldState.error?.message}
+              options={field.options}
+            />
+          );
+        }
+
+        const Component = fieldRegistry[field.type];
+
+        return (
+          <Component
+            field={formField}
+            label={field.label}
+            placeholder={field.placeholder}
+            error={fieldState.error?.message}
+          />
+        );
+      }}
     />
   );
 }

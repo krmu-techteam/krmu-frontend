@@ -16,9 +16,6 @@ export function FormBuilder<T extends FieldValues>({
   fields,
   onSubmit,
 }: FormBuilderProps<T>) {
-
-  console.log('fields', fields);
-
   return (
     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
       {fields.map((field) => (

@@ -2,7 +2,8 @@ import { z } from "zod";
 
 export const facultySchema = z.object({
   name: z.string().trim().min(3, "Faculty name is required").max(255),
-
+  // school: z.string().trim().min(1, "School is required").max(255),
+  image: z.instanceof(File).optional().nullable(),
   // slug: z
   //   .string()
   //   .trim()
