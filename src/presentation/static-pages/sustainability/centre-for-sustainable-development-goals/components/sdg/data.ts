@@ -738,6 +738,7 @@ export const codeOfConductData = {
 };
 
 export const bestPracticesData = {
+  mainTitle: "Best Practices",
   reports: [
     {
       label: "BEST-PRACTICE-I",
@@ -751,6 +752,7 @@ export const bestPracticesData = {
 };
 
 export const institutionalDistinctivenessData = {
+  mainTitle: "Institutional Distinctiveness",
   reports: [
     {
       label: "Institutional-Distinctiveness",
@@ -760,6 +762,7 @@ export const institutionalDistinctivenessData = {
 };
 
 export const goodGovernanceData = {
+  mainTitle: "Good Governance",
   reports: [
     {
       label: "Good Governance",
@@ -769,6 +772,7 @@ export const goodGovernanceData = {
 };
 
 export const socialImpactData = {
+  mainTitle: "Social Impact",
   reports: [
     {
       label: "Social Impact",
@@ -778,6 +782,7 @@ export const socialImpactData = {
 };
 
 export const environmentSustainabilityData = {
+  mainTitle: "Environment Sustainability Report",
   reports: [
     {
       label: "Environment sustainability Report",
@@ -787,6 +792,7 @@ export const environmentSustainabilityData = {
 };
 
 export const campusHealthData = {
+  mainTitle: "Campus Health Wellness and Well Being Ecosystem",
   reports: [
     {
       label: "Campus Health Wellness and Well Being Ecosystem",
