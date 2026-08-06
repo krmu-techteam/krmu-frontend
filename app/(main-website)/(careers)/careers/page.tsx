@@ -102,7 +102,7 @@ const page = async () => {
         <CareerHeroSection />
         <CareerCurrentOpeningSection />
         {/* Keka Job Listings */}
-        <section className="container py-16 max-w-[1665px] mx-auto w-full">
+        <section className="container pt-10 max-w-[1665px] mx-auto w-full">
           <div id="khembedjobs" />
         </section>
         <CareerJobListings />
