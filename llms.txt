@@ -1,111 +1,63 @@
 # K.R. Mangalam University
 
-> K.R. Mangalam University is a private university in Gurugram that offers multidisciplinary undergraduate and postgraduate programmes for students preparing for careers, research, and professional study.
+> K.R. Mangalam University (KRMU) is a NAAC 'A'-accredited, UGC-recognised private university in Gurugram, Haryana, established in 2013. It offers 100+ multidisciplinary undergraduate, postgraduate, and doctoral programmes across 12 schools, with a placement record of 800+ recruiters and a highest package of 56.6 LPA.
 
-## About
+Key facts: 13+ years of educational experience, 35-acre urban campus on Sohna Road, 700+ faculty, 18,000+ alumni worldwide, 100+ research labs, 4,000+ research publications, 250+ patents granted, â‚¹16Cr+ in research and consultancy grants.
 
-K.R. Mangalam University is a NAAC 'A' accredited and top-ranked university in Gurugram. The homepage describes it as a place where “We Shape Futures” and highlights a decade of educational excellence, innovation, research, and intellectual curiosity.
+## Schools & Programmes
+- [All Programmes](https://www.krmangalam.edu.in/programmes): Full catalog of UG, PG, and doctoral programmes across all schools.
+- [School of Engineering & Technology](https://www.krmangalam.edu.in/school-of-engineering-and-technology): B.Tech/M.Tech in CSE, Mechanical, Civil, Electronics & Communication, and allied branches.
+- [School of Management & Commerce](https://www.krmangalam.edu.in/school-of-management-and-commerce): BBA, MBA, B.Com, and related management/commerce programmes.
+- [School of Legal Studies](https://www.krmangalam.edu.in/school-of-legal-studies): BA LLB, BBA LLB, and LLM programmes.
+- [School of Medical & Allied Sciences](https://www.krmangalam.edu.in/school-of-medical-and-allied-sciences): B.Pharm, M.Pharm, D.Pharm, and allied health science programmes.
+- [School of Physiotherapy and Rehabilitation Sciences](https://www.krmangalam.edu.in/school-of-physiotherapy-and-rehabilitation-sciences): BPT, MPT, and rehabilitation science programmes.
+- [School of Liberal Arts](https://www.krmangalam.edu.in/school-of-liberal-arts): Psychology, English, Journalism & Mass Communication, and humanities programmes.
+- [School of Architecture & Design](https://www.krmangalam.edu.in/school-of-architecture-design): B.Arch and design programmes.
+- [School of Basic & Applied Sciences](https://www.krmangalam.edu.in/school-of-basic-and-applied-sciences): B.Sc./M.Sc. in Physics, Chemistry, Mathematics, Forensic Science, and Cyber Security.
+- [School of Emerging Media & Creator Economy](https://www.krmangalam.edu.in/school-of-emerging-media-and-creator-economy): Programmes in digital media, content creation, and the creator economy.
+- [School of Hotel Management & Catering Technology](https://www.krmangalam.edu.in/school-of-hotel-management-and-catering-technology): BHMCT and hospitality management programmes.
+- [School of Education](https://www.krmangalam.edu.in/school-of-education): B.Ed and teacher-training programmes.
+- [School of Agricultural Sciences](https://www.krmangalam.edu.in/school-of-agriculutural-sciences): B.Sc. (Hons.) Agriculture and allied programmes.
+- [Zenith School of AI](https://zenithschool.ai/): KRMU's dedicated school for Artificial Intelligence education.
 
-The university says it offers 100+ multidisciplinary programmes and has welcomed 800+ companies for placement. It also states 18K+ alumni worldwide and 13+ years of educational experience, positioning the institution as a large higher-education provider for ambitious learners.
+## Admissions
+- [Admissions Overview](https://www.krmangalam.edu.in/admissions): Eligibility, process, and intake details for 2026.
+- [International Admission](https://www.krmangalam.edu.in/international-admission): Admission process for international students.
+- [Ph.D. Admission](https://www.krmangalam.edu.in/admission/phd-admission): Doctoral admission process and regulations.
+- [KREE (Entrance Exam)](https://www.krmangalam.edu.in/kree): KRMU's own entrance examination for admission.
+- [Fee Structure](https://www.krmangalam.edu.in/fee-structure): Programme-wise fee details.
+- [Scholarships](https://www.krmangalam.edu.in/admission/scholarship): Merit and need-based scholarship schemes.
+- [Admission FAQs](https://www.krmangalam.edu.in/admission/faq): Common questions on admissions.
+- [Apply Now](https://admissions.krmangalam.edu.in/): Online application portal.
 
-Its public content focuses on helping students choose the right degree, understand admissions, and explore career paths after 12th, graduation, or entrance exams. The blog and FAQ content show strong coverage across engineering, law, management, design, science, architecture, pharmacy, education, journalism, and related fields.
+## Placements
+- [Placements Overview](https://www.krmangalam.edu.in/placement/overview): Placement statistics and process.
+- [Prominent Recruiters](https://www.krmangalam.edu.in/placement/our-recruiter): List of companies that recruit from KRMU.
+- [Career Development Centre](https://www.krmangalam.edu.in/career-development-centre): Training and placement support cell.
+- [Placement Highlights](https://www.krmangalam.edu.in/placement-highlights): Year-wise placement records and highest packages.
 
-## Products/Services
+## Research
+- [Research & Innovation](https://www.krmangalam.edu.in/research-and-innovation): R&D Cell overview, labs, and grants.
+- [Ph.D. Programmes](https://www.krmangalam.edu.in/phd-regulations): Doctoral programme regulations.
+- [Research Centre](https://www.krmangalam.edu.in/research-centre): Dedicated research centre details.
+- [Foundry (Innovation & Entrepreneurship)](https://foundry.krmangalam.edu.in): KRMU's incubation and entrepreneurship cell.
 
-- **Multidisciplinary Programmes** — The university offers 100+ programmes across multiple academic areas.
-- **Undergraduate and Postgraduate Courses** — Degree options for students after 12th and after graduation.
-- **Placement Support** — The site highlights 800+ companies visited for placement.
-- **Open Source Mentorship Programme** — A 6-month preparation cycle under the School of Engineering and Technology for students interested in open source work.
-- **University Student Handbook 2025** — A handbook resource for enrolled students.
-- **Admissions Guidance** — Admission-related information is available through the website and FAQ pages.
-- **Career Guides Blog** — Articles that explain course choices, eligibility, scope, and career options.
+## About & Campus Life
+- [About KRMU](https://www.krmangalam.edu.in/about-krmu/the-university): University history, mission, and vision.
+- [Leadership](https://www.krmangalam.edu.in/leadership): Chairman, Chancellor, Vice-Chancellor, and leadership team.
+- [Accreditations, Recognition and Approvals](https://www.krmangalam.edu.in/accreditations-recognition-and-approvals): NAAC, UGC, AIU, and other approvals.
+- [Campus Facilities](https://www.krmangalam.edu.in/krmu-campus-facilities): Infrastructure, hostels, labs, and sports facilities.
+- [Hostels](https://www.krmangalam.edu.in/hostel): On-campus residential facilities.
+- [Clubs & Societies](https://www.krmangalam.edu.in/clubs-and-societies): Student clubs and extracurricular communities.
+- [News & Events](https://www.krmangalam.edu.in/happenings/news-and-events): Latest university news and events.
+- [Library](https://www.krmangalam.edu.in/library): Campus library resources.
+- [360Â° Virtual Tour](https://www.krmangalam.edu.in/campus-life/virtual-tour): Interactive virtual campus tour.
 
-## FAQ
-
-Frequently asked questions are available at:
-- https://www.krmangalam.edu.in/blog/gsoc
-- https://www.krmangalam.edu.in/blog/which-degree-is-best-for-future
-- https://www.krmangalam.edu.in/blog/msc-forensic-science-eligibility
-- https://www.krmangalam.edu.in/blog/bba-in-digital-marketing-subjects
-- https://www.krmangalam.edu.in/blog/top-design-colleges-in-gurugram
-- https://www.krmangalam.edu.in/blog/mba-digital-marketing-admission
-- https://www.krmangalam.edu.in/blog/bsc-hons-physics-colleges-in-india
-- https://www.krmangalam.edu.in/blog/career-options-after-12th-science
-- https://www.krmangalam.edu.in/blog/best-b-tech-colleges-in-gurgaon
-- https://www.krmangalam.edu.in/blog/bsc-hons-forensic-science-colleges
-- https://www.krmangalam.edu.in/blog/architecture-courses-after-12th
-- https://www.krmangalam.edu.in/blog/does-cuet-have-negative-marking
-- https://www.krmangalam.edu.in/blog/best-law-colleges-in-india
-- https://www.krmangalam.edu.in/blog/degree-courses-after-12th
-- https://www.krmangalam.edu.in/blog/medical-courses-after-12th
-- https://www.krmangalam.edu.in/blog/career-guidance-after-12th
-- https://www.krmangalam.edu.in/blog/best-university-in-delhi-ncr
-- https://www.krmangalam.edu.in/blog/best-data-science-courses
-- https://www.krmangalam.edu.in/blog/courses-after-12th-biology
-- https://www.krmangalam.edu.in/blog/bachelor-of-arts-course-list
-- https://www.krmangalam.edu.in/blog/architecture-degree-course
-- https://www.krmangalam.edu.in/blog/how-to-become-a-journalist
-- https://www.krmangalam.edu.in/blog/law-colleges-in-gurugram
-- https://www.krmangalam.edu.in/blog/ba-english-honors
-- https://www.krmangalam.edu.in/blog/economics-degree
-- https://www.krmangalam.edu.in/blog/agriculture-industry
-- https://www.krmangalam.edu.in/blog/ug-and-pg-courses
-- https://www.krmangalam.edu.in/blog/cuet-ug-exam-pattern
-- https://www.krmangalam.edu.in/blog/campus-placement
-- https://www.krmangalam.edu.in/blog/pcm-career-options
-- https://www.krmangalam.edu.in/blog/jee-main-session-2
-- https://www.krmangalam.edu.in/blog/m-pharm-admission
-- https://www.krmangalam.edu.in/blog/agriculture-degree
-- https://www.krmangalam.edu.in/blog/b-pharm-admission
-- https://www.krmangalam.edu.in/blog/b-ed-course-admissions
-- https://www.krmangalam.edu.in/blog/after-jee-main-what-next
-- https://www.krmangalam.edu.in/blog/ugc-approved-university
-- https://www.krmangalam.edu.in/blog/d-pharm-course-subjects
-- https://www.krmangalam.edu.in/blog/llb-course-admissions
-- https://www.krmangalam.edu.in/blog/bca-course-after-12th
-- https://www.krmangalam.edu.in/blog/jee-main-result-2026
-- https://www.krmangalam.edu.in/blog/m-pharm-pharmacology
-- https://www.krmangalam.edu.in/blog/mentorship-programme
-- https://www.krmangalam.edu.in/blog/jee-main-2026-result
-- https://www.krmangalam.edu.in/blog/cuet-pg-study-plan-2026
-- https://www.krmangalam.edu.in/blog/bca-cyber-security-admissions
-- https://www.krmangalam.edu.in/blog/top-bca-colleges-in-gurugram
-- https://www.krmangalam.edu.in/blog/bba-course-details-after-12th
-- https://www.krmangalam.edu.in/blog/what-to-do-after-nata-result
-- https://www.krmangalam.edu.in/blog/ba-economics-job-opportunities
-- https://www.krmangalam.edu.in/blog/after-neet-which-course-is-best
-- https://www.krmangalam.edu.in/blog/journalism-courses-after-12th
-- https://www.krmangalam.edu.in/blog/robotics-engineering-colleges
-- https://www.krmangalam.edu.in/blog/science-stream-career-options
-- https://www.krmangalam.edu.in/blog/bsc-forensic-science-admission
-- https://www.krmangalam.edu.in/blog/supply-chain-management-books
-- https://www.krmangalam.edu.in/blog/b-com-subjects
-- https://www.krmangalam.edu.in/blog/b-el-ed-course
-- https://www.krmangalam.edu.in/blog/nata-exam
-- https://www.krmangalam.edu.in/blog/legal-studies
-- https://www.krmangalam.edu.in/blog/mca-course
-- https://www.krmangalam.edu.in/blog/b-arch-admission
-- https://www.krmangalam.edu.in/blog/ba-llb-admission
-- https://www.krmangalam.edu.in/admission/faq
-- https://www.krmangalam.edu.in/blog/top-engineering-colleges-in-gurgaon
-- https://www.krmangalam.edu.in/blog/btech-robotics-ai-vs-btech-cse-ai-ml
-- https://www.krmangalam.edu.in/blog/b-tech-cse-robotics-and-ai-course-admission
-- https://www.krmangalam.edu.in/blog/role-of-artificial-intelligence-in-education
-- https://www.krmangalam.edu.in/blog/after-12th-which-course-is-best-for-future
-- https://www.krmangalam.edu.in/blog/entrepreneurship-development-programme
-- https://www.krmangalam.edu.in/blog/what-to-do-after-ctet-qualification
-- https://www.krmangalam.edu.in/blog/best-physiotherapy-colleges-in-india
-- https://www.krmangalam.edu.in/blog/difference-between-ba-llb-and-ba-llb-hons
-- https://www.krmangalam.edu.in/blog/best-ma-in-english-college-in-gurugram
-
-## Key Concepts
-
-**NAAC 'A' accreditation:** is a quality accreditation mentioned on the university homepage. It matters to prospective students because it signals institutional recognition and academic standards.
-
-**Multidisciplinary programmes:** is the university’s term for its 100+ academic offerings across different fields. It matters to students because it gives them more options when choosing a course aligned with their goals.
-
-**Placement support:** is the career assistance implied by the homepage claim that 800+ companies visited for placement. It matters to students because employer access is a major factor in course and university selection.
-
-**Open Source Mentorship Programme:** is a 6-month preparation cycle under the School of Engineering and Technology. It matters to engineering students because it helps them build exposure to real-world open source projects.
-
-**GSoC:** is Google Summer of Code, a programme that funds developers to contribute to real open source software projects. It matters to engineering students because the site
+## Optional
+- [Sitemap](https://www.krmangalam.edu.in/other-links/sitemap): Full site sitemap.
+- [Blog](https://www.krmangalam.edu.in/blog): University blog covering academics, careers, and campus life.
+- [Careers at KRMU](https://www.krmangalam.edu.in/careers): Faculty and staff job openings.
+- [Contact Us](https://www.krmangalam.edu.in/contact-us): Contact details and campus address (Sohna Road, Gurugram, Haryana - 122103).
+- [Mandatory Disclosures](https://www.krmangalam.edu.in/mandatory-disclosures): Regulatory disclosures required by UGC/AICTE.
+- [Alumni](https://alumni.krmangalam.edu.in): Alumni network portal.
+- [LMS](https://lms.krmangalam.edu.in): Learning management system for enrolled students.
