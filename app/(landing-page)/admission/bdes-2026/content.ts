@@ -80,39 +80,39 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/5-bdes/zynga.png",
+    imgUrl: "/landing-page/bdes-2026/zynga.png",
     alt: "Zynga Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/5-bdes/hplab.png",
+    imgUrl: "/landing-page/bdes-2026/hp-labs.png",
     alt: "HPLabs Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/5-bdes/greenply-seeklogo.png",
+    imgUrl: "/landing-page/bdes-2026/greenply.png",
     alt: "Greenply Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/5-bdes/splashlearn.png",
+    imgUrl: "/landing-page/bdes-2026/splashlearn.png",
     alt: "Splash Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/5-bdes/myntra.png",
+    imgUrl: "/landing-page/bdes-2026/myntra.png",
     alt: "Myntra Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/5-bdes/congnizant.png",
+    imgUrl: "/landing-page/bdes-2026/cognizant.png",
     alt: "Cognizant Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/5-bdes/zara.png",
+    imgUrl: "/landing-page/bdes-2026/zara.png",
     alt: "ZARA Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/5-bdes/lifestyle-seeklogo.png",
+    imgUrl: "/landing-page/bdes-2026/lifestyle.png",
     alt: "Lifestyle Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/5-bdes/ubisoft.png",
+    imgUrl: "/landing-page/bdes-2026/ubisoft.png",
     alt: "Ubisoft Logo",
   },
 ];

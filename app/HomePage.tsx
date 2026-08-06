@@ -19,7 +19,6 @@ import {
 } from "@/lib/api/common";
 // import YourJourney from "./(main-website)/Home/YourJourney";
 // import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
-
 import Script from "next/script";
 
 export default async function HomePage() {

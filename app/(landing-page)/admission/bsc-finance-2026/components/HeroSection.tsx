@@ -56,8 +56,8 @@ const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
         {/* Dark gradient overlay — left heavier, right lighter for image visibility */}
         <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[rgba(5,10,28,0.7)] via-[rgba(5,10,28,0.5)] to-[rgba(5,10,28,0.3)]" />
 
-        <div className="relative z-[2] max-w-[1300px] mx-auto w-full px-4 sm:px-6 pt-48 sm:pt-40 pb-10 sm:pb-16 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-12">
-          {/* <div className="relative z-[2] max-w-[1300px] mx-auto w-full px-4 sm:px-6 pt-24 sm:pt-24 pb-10 sm:pb-16 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-12"> */}
+        {/* <div className="relative z-[2] max-w-[1300px] mx-auto w-full px-4 sm:px-6 pt-48 sm:pt-40 pb-10 sm:pb-16 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-12"> */}
+          <div className="relative z-[2] max-w-[1300px] mx-auto w-full px-4 sm:px-6 pt-24 sm:pt-24 pb-10 sm:pb-16 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-12">
           {/* LEFT — text content & stats */}
           <div className="w-full lg:w-[58%] flex flex-col gap-4 sm:gap-6 text-white lg:text-left text-center">
             <div className="flex flex-col gap-3 sm:gap-4">
@@ -136,7 +136,7 @@ const HeroSection = ({ hero, statCards, marqueeData }: HeroSectionProps) => {
               {hero.videoUrl && (
                 <button
                   onClick={() => setIsVideoOpen(true)}
-                  className="inline-flex items-center gap-2 bg-transparent text-white hover:text-white/80 transition-colors duration-200 font-normal text-[13px] leading-5  cursor-pointer"
+                  className="inline-flex items-center gap-2 bg-transparent font-semibold text-white hover:text-white/80 transition-colors duration-200 text-[13px] leading-5  cursor-pointer"
                 >
                   <PlayCircle size={35} strokeWidth={1.2} />
                   <span>Watch Video</span>

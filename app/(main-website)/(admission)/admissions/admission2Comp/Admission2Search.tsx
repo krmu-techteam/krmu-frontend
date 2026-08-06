@@ -775,16 +775,13 @@ const Admission2Search = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mt-8">
             <Link
-              href={`${
+              href={
                 isZenithPopup
                   ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026"
                   : slugValue
                     ? `/programs/${slugValue}`
-                    : ""
-              }`}
-              className="bg-[#0161b0] text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-[#014d8c] transition-colors shadow-lg shadow-blue-900/20"
-              target="_blank"
-              rel="noopener noreferrer"
+                    : "#"
+              }
             >
               Know More
             </Link>

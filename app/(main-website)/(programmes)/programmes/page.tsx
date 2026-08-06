@@ -48,16 +48,13 @@ export async function generateMetadata(): Promise<Metadata> {
       description: seo?.metaDescription || "",
       url: seo?.canonicalUrl || "",
       siteName: "K.R. Mangalam University",
-      images: shareImageUrl
-        ? [
-            {
-              url: shareImageUrl,
-              width: 1200,
-              height: 630,
-              alt: seo?.title || "K.R. Mangalam University",
-            },
-          ]
-        : [],
+      images: {
+        url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/fav_457c1acb7e.png",
+        width: 1200,
+        height: 630,
+        alt: seo?.title || "K.R. Mangalam University",
+      },
+
       type: "website",
     },
 
@@ -66,7 +63,12 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: seo?.title || "K.R. Mangalam University",
       description: seo?.metaDescription || "",
-      images: shareImageUrl ? [shareImageUrl] : [],
+      images: {
+        url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/fav_457c1acb7e.png",
+        width: 1200,
+        height: 630,
+        alt: seo?.title || "K.R. Mangalam University",
+      },
     },
   };
 }

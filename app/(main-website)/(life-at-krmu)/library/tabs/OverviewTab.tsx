@@ -11,11 +11,11 @@ const OverviewTab = () => {
           click away
         </h1>
         <p>
-          K.R. Mangalam University has embraced the digital era with its
-          innovative approach to library services, offering a blend of
-          traditional and modern resources. This analysis delves into the
-          various aspects of their library services as presented on their
-          webpage.
+          K.R. Mangalam University's library combines traditional academic
+          resources with modern digital technologies to support teaching,
+          learning, and research. It provides students and faculty with access
+          to a wide range of print and electronic resources in a dynamic
+          learning environment.
         </p>
         <div className="flex flex-col lg:flex-row gap-5">
           <div className="p-5 bg-[#051630] text-white w-full lg:w-1/2 rounded-[10px]">
@@ -23,7 +23,8 @@ const OverviewTab = () => {
             <p className="mb-5">Use your Roll No or Employee ID to Login</p>
             <Link
               href="https://bit.ly/3CEDfs8"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
               className="py-[11px] px-[23px] text-sm rounded-[4px] text-white bg-[#cb000d] hover:text-[#051630] hover:cursor-pointer"
             >
               Click Here
@@ -34,7 +35,8 @@ const OverviewTab = () => {
             <p className="mb-5">Use your Roll No or Employee ID to Login</p>
             <Link
               href="http://172.16.16.25:4444/"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
               className="py-[11px] px-[23px] text-sm rounded-[4px] text-white bg-[#cb000d] hover:text-[#051630] hover:cursor-pointer"
             >
               Click Here

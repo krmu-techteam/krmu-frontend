@@ -95,7 +95,7 @@ const SportEventsAndTournament = () => {
             </div>
             <div className="p-8 md:p-10 flex flex-col flex-grow">
               <ReadMoreText 
-                text="K.R. Mangalam University goes beyond intercolljegiate sports events with its own internal competition, “SPORTURA.” Exclusive to KRMU students, SPORTURA is a vibrant Inter-School sports event that annually attracts over 1000 participants from a wide range of schools. Here, students have the opportunity to showcase their sporting prowess in Cricket, Football, Basketball, Volleyball, Tennis, Badminton, Chess etc. SPORTURA serves as a testament to the university’s commitment to providing avenues for students to excel not just academically but also athletically"
+                text="K.R. Mangalam University goes beyond inter college sports events with its own internal competition, “SPORTURA.” Exclusive to KRMU students, SPORTURA is a vibrant Inter-School sports event that annually attracts over 1000 participants from a wide range of schools. Here, students have the opportunity to showcase their sporting prowess in Cricket, Football, Basketball, Volleyball, Tennis, Badminton, Chess etc. SPORTURA serves as a testament to the university’s commitment to providing avenues for students to excel not just academically but also athletically"
                 limit={220}
               />
             </div>
