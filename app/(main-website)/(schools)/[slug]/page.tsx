@@ -60,6 +60,7 @@ import {
 } from "../SchoolComponents/schoolHeroLogo";
 import {
   commonCollegeUniversitySchema,
+  createBreadcrumbSchema,
   createProgrammeItemListSchema,
 } from "@/lib/api/common";
 
@@ -256,6 +257,17 @@ export default async function Page({ params }: Props) {
 
   const programmes = [...getAllProgrammes];
 
+  const breadcrumbSchema = createBreadcrumbSchema([
+    {
+      name: "Home",
+      url: "https://www.krmangalam.edu.in/",
+    },
+    {
+      name: "School",
+      url: `https://www.krmangalam.edu.in/${school.urlslug}`,
+    },
+  ]);
+
   const schoolSchema = createProgrammeItemListSchema({
     name: `Programmes Offered - ${school.schoolname}`,
     description: `List of undergraduate, postgraduate and doctoral programmes offered by ${school.schoolname} at K.R. Mangalam University.`,
@@ -318,6 +330,13 @@ export default async function Page({ params }: Props) {
           __html: JSON.stringify(collegeUniversitySchema),
         }}
       />
+      {breadcrumbSchema && (
+        <Script
+          id="breadcrumb-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+        />
+      )}
       <SchoolHero
         herobanner={school?.schoolherobanner}
         title={school.schoolname}
