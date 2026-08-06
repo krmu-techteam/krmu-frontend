@@ -16,6 +16,7 @@ export interface SdgAuditItem {
 }
 
 export interface SdgAuditGroup {
+  title?: string;
   mainAudits?: SdgAuditItem[];
   gridAudits?: SdgAuditItem[];
   isoCertificates?: SdgAuditItem[];

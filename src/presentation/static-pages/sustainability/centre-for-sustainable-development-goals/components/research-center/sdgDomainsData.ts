@@ -109,7 +109,6 @@ export const sdgClusters: ClusterData[] = [
         items: [
           "Policy briefs and research inputs shared with government agencies and civil society organisations",
           "Strategic partnerships and MoUs with social sector organisations",
-          "Strategic partnerships and MoUs with social sector organisations",
         ],
       },
     ],

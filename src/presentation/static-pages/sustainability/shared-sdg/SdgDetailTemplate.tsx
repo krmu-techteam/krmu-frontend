@@ -53,15 +53,15 @@ export const SdgDetailTemplate: React.FC<SdgDetailTemplateProps> = ({
 
       {/* 3b. Additional Custom Event / Category Groups */}
       {data.eventGroups &&
-        data.eventGroups.map((group, idx) => (
+        data.eventGroups.filter(Boolean).map((group, idx) => (
           <React.Fragment key={idx}>
             <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 my-8 h-[1px]">
               <SectionDivider />
             </div>
-            {group.events && group.events.length > 0 && (
+            {group?.events && group.events.length > 0 && (
               <SdgEventsSection title={group.title} events={group.events} />
             )}
-            {group.audits && group.audits.length > 0 && (
+            {group?.audits && group.audits.length > 0 && (
               <SdgAuditsSection
                 audits={{
                   title:
