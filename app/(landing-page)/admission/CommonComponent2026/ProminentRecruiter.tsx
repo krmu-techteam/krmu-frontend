@@ -27,14 +27,14 @@ const ProminentRecruiter = ({ recruiters }: Props) => {
               {[...recruiters, ...recruiters].map((rec, i) => (
                 <div
                   key={i}
-                  className="prominentrecruitShadow flex items-center justify-center h-[100px] px-6 py-4 bg-white w-fit"
+                  className="prominentrecruitShadow flex items-center justify-center h-[120px] max-w-[230px] w-fit px-4 py-2 bg-white overflow-hidden"
                 >
                   <Image
                     src={rec.imgUrl}
                     alt={rec.alt}
-                    width={500} // large intrinsic width for better quality
-                    height={100}
-                    className="h-[100px] w-auto object-contain"
+                    width={1000}
+                    height={500}
+                    className="h-[100px] w-auto max-w-[200px] object-contain"
                   />
                 </div>
               ))}
