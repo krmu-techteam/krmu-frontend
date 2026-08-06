@@ -44,24 +44,24 @@ export const facultyFields: FormField[] = [
   //   label: "Designation",
   //   placeholder: "Enter your designation",
   // },
-  // {
-  //   type: "select",
-  //   name: "department",
-  //   label: "Department",
-  //   placeholder: "Choose Department",
-  //   options: [
-  //     {
-  //       label: "Engineering",
-  //       value: "engineering",
-  //     },
-  //     {
-  //       label: "Management",
-  //       value: "management",
-  //     },
-  //     {
-  //       label: "Law",
-  //       value: "law",
-  //     },
-  //   ],
-  // },
+  {
+    type: "select",
+    name: "school_category_id",
+    label: "School Name",
+    placeholder: "Choose School",
+    options: [
+      {
+        label: "Engineering",
+        value: 22,
+      },
+      {
+        label: "Management",
+        value: 56,
+      },
+      {
+        label: "Law",
+        value: 66,
+      },
+    ],
+  },
 ];

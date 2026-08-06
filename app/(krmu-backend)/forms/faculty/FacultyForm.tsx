@@ -20,12 +20,8 @@ export default function FacultyFormComponent() {
   const onSubmit = async (data: FacultyForm) => {
     const formData = objectToFormData(data);
 
-    for (const [key, value] of formData.entries()) {
-      console.log(key, value);
-    }
-
     const res = await createFaculty(formData);
-    console.log("res");
+    console.log("res", res);
   };
 
   return <FormBuilder form={form} fields={facultyFields} onSubmit={onSubmit} />;
