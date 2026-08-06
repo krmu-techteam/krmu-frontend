@@ -1189,3 +1189,39 @@ export const createPlacementOverviewSchema = ({
 
   return JSON.stringify(schema);
 };
+
+
+
+// lib/schema/videoSchema.ts
+
+export interface VideoSchemaProps {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  duration: string; // ISO 8601 format (e.g. PT3M45S)
+  embedUrl: string;
+  contentUrl: string;
+}
+
+export function createVideoSchema({
+  name,
+  description,
+  thumbnailUrl,
+  uploadDate,
+  duration,
+  embedUrl,
+  contentUrl,
+}: VideoSchemaProps) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name,
+    description,
+    thumbnailUrl: [thumbnailUrl],
+    uploadDate,
+    duration,
+    embedUrl,
+    contentUrl,
+  };
+}

@@ -92,7 +92,7 @@ const SchoolCommenceJourney = ({
               />
             </span>
             <p className="text-lg text-black font-semibold">
-              Take an entrance test
+              Take the entrance test
             </p>
             <p>K.R. Mangalam University Entrance Examination (KREE)</p>
           </div>
@@ -111,7 +111,7 @@ const SchoolCommenceJourney = ({
               />
             </span>
             <p className="text-lg text-black font-semibold">
-              Appear for interaction
+              Appear for interview
             </p>
             <p>Attend our Faculty-Led Interview.</p>
           </div>
@@ -157,7 +157,8 @@ const SchoolCommenceJourney = ({
       </div>
       <Image
         // src={"/schools/yourjourney.webp"}
-        src={`${STRAPI_URL}${imgUrl}`}
+        // src={`${STRAPI_URL}${imgUrl}`}
+        src="/white-adm.png"
         width={1921}
         height={689}
         alt={heading}

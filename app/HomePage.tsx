@@ -15,6 +15,7 @@ import YourJourney2 from "./(main-website)/Home/homeComp/YourJourney2";
 import {
   commonCollegeUniversitySchema,
   createOrganizationSchema,
+  createVideoSchema,
   createWebsiteSchema,
 } from "@/lib/api/common";
 // import YourJourney from "./(main-website)/Home/YourJourney";
@@ -86,32 +87,31 @@ export default async function HomePage() {
     searchPath: "https://www.krmangalam.edu.in/search?q=",
   });
 
-
   const organizationSchema = createOrganizationSchema({
-  name: "K.R. Mangalam University",
-  alternateName: "KRMU",
-  url: "https://www.krmangalam.edu.in/",
-  logo: "https://www.krmangalam.edu.in/KRMU-Logo-NAAC.webp", // Use the actual logo URL
-  description:
-    "K.R. Mangalam University is a private university located in Gurugram, Haryana, India. Established in 2013, the university offers undergraduate, postgraduate, doctoral and diploma programmes across multiple disciplines.",
-  telephone: "+91-8800697010",
-  email: "welcome@krmangalam.edu.in",
-  foundingDate: "2013",
-  address: {
-    streetAddress: "Sohna Road",
-    addressLocality: "Gurugram",
-    addressRegion: "Haryana",
-    postalCode: "122103",
-    addressCountry: "IN",
-  },
-  sameAs: [
-    "https://www.linkedin.com/school/k-r-mangalam-university/",
-    "https://www.facebook.com/krmangalamuniversity/",
-    "https://www.instagram.com/krmangalamuniversity/",
-    "https://www.youtube.com/@krmangalamuniversity",
-    "https://en.wikipedia.org/wiki/K.R._Mangalam_University",
-  ],
-});
+    name: "K.R. Mangalam University",
+    alternateName: "KRMU",
+    url: "https://www.krmangalam.edu.in/",
+    logo: "https://www.krmangalam.edu.in/KRMU-Logo-NAAC.webp", // Use the actual logo URL
+    description:
+      "K.R. Mangalam University is a private university located in Gurugram, Haryana, India. Established in 2013, the university offers undergraduate, postgraduate, doctoral and diploma programmes across multiple disciplines.",
+    telephone: "+91-8800697010",
+    email: "welcome@krmangalam.edu.in",
+    foundingDate: "2013",
+    address: {
+      streetAddress: "Sohna Road",
+      addressLocality: "Gurugram",
+      addressRegion: "Haryana",
+      postalCode: "122103",
+      addressCountry: "IN",
+    },
+    sameAs: [
+      "https://www.linkedin.com/school/k-r-mangalam-university/",
+      "https://www.facebook.com/krmangalamuniversity/",
+      "https://www.instagram.com/krmangalamuniversity/",
+      "https://www.youtube.com/@krmangalamuniversity",
+      "https://en.wikipedia.org/wiki/K.R._Mangalam_University",
+    ],
+  });
 
   // const organizationSchema = createOrganizationSchema({
   //   name: "K.R. Mangalam University",
@@ -167,7 +167,19 @@ export default async function HomePage() {
       "https://in.linkedin.com/school/krmuniv",
     ],
   });
-// console.log('organizationSchema', organizationSchema);
+  // console.log('organizationSchema', organizationSchema);
+
+  // const videoSchema = createVideoSchema({
+  //   name: "K.R. Mangalam University Campus Tour & Overview",
+  //   description:
+  //     "Explore the state-of-the-art campus, labs, and student life at K.R. Mangalam University, Gurugram.",
+  //   thumbnailUrl:
+  //     "https://www.krmangalam.edu.in/assets/images/video-thumbnail.jpg",
+  //   uploadDate: "2024-01-15T08:00:00+05:30",
+  //   duration: "PT3M45S",
+  //   embedUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+  //   contentUrl: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
+  // });
   return (
     <>
       <Script

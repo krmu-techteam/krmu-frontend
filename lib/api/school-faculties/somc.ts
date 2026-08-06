@@ -166,7 +166,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
       schools: [1126],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/03/Mansi-Yadav.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/03/mansi-yadav-1.png",
   },
   {
     id: 88470,
