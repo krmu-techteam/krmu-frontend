@@ -123,13 +123,13 @@ const page = async () => {
           __html: JSON.stringify(faqSchema),
         }}
       />
-      <Script
-        id="faq-breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
-      />
+      {breadcrumbSchema && (
+        <Script
+          id="breadcrumb-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+        />
+      )}
       <div>
         <FAQ />
       </div>
