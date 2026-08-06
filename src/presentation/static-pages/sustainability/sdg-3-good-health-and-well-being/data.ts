@@ -4,8 +4,7 @@ export const sdg3Data: SdgDetailPageData = {
   goalNumber: 3,
   title: "Good Health and Well Being",
   subtitle: "Creating a Culture of Kindness and Concern",
-  heroImage:
-    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Good_Health_and_Wellness_29e1bd31c7.jpg",
+  heroImage: "/images/sustainability/sdg/good-health-and-well-being.jpg",
   backLink: "/centre-for-sustainable-development-goals-2",
   paragraphs: [
     "The United Nations Sustainable Development Goal 3 (SDG 3) emphasizes ensuring healthy lives and promoting well-being for all at all ages. While global progress continues, disparities in access to healthcare and wellness opportunities remain a challenge. K.R. Mangalam University, situated in the scenic Aravalli foothills of Gurugram, stands as a multidisciplinary institution deeply committed to advancing the objectives of SDG 3. The University's lush, eco-friendly campus provides a conducive environment for holistic growth and well-being. Through its dedicated academic units—such as the School of Medical and Allied Sciences, School of Physiotherapy and Rehabilitation Sciences, School of Basic and Applied Sciences and School of Liberal Arts—K. R. Mangalam University fosters education, research, and innovation in the domains of public health, clinical and allied health sciences, biomedical research, mental health and well-being, physical rehabilitation, and holistic wellness practices. Through interdisciplinary learning, community outreach, and evidence-based research initiatives, the University actively contributes to the realization of Sustainable Development Goal 3: Good Health and Well-being, ensuring that health and wellness remain integral to its academic and social mission.",

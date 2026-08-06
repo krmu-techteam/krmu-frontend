@@ -4,8 +4,8 @@ export const sdg17Data: SdgDetailPageData = {
   goalNumber: 17,
   title: "Partnerships for the Goals",
   subtitle: "Partnership for better future",
-  heroImage:
-    "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/59b346fded7b75b3cb053769322b600a.jpeg",
+  heroImage: "/images/sustainability/sdg/partnerships-for-the-goals.jpg",
+  backLink: "/centre-for-sustainable-development-goals-2",
   paragraphs: [
     "K.R. Mangalam University advances Sustainable Development Goal 17 by forging strategic, cross-sectoral partnerships that amplify research, teaching, community outreach and applied solutions. The University collaborates with national and international academic institutions, industry partners, governmental bodies and civil society organizations to promote knowledge exchange, resource mobilization and joint action for sustainable development. Through Memoranda of Understanding (MoUs), joint research projects, academic exchanges, conferences and value-based programmes, KRMU cultivates platforms that bring together diverse stakeholders to tackle complex societal challenges. Flagship activities including multidisciplinary conferences, peace and value-education programmes, community adoption and environment drives translate partnerships into measurable outcomes such as internships, skill-building opportunities, community interventions and policy-facing research. KRMU’s documented MoUs and collaborations cover a spectrum of activities: academic exchanges (international and national), industry skilling and incubation, community engagement and NGO partnerships, forensic and professional certificate programmes, and sports and cultural collaborations. Collectively these partnerships align with SDG-17 targets reinforcing global cooperation, technology and capacity-building linkages and multi-stakeholder partnerships for implementation. The University’s continued emphasis on evidence-backed partnerships ensures that collaborative activity is auditable and reportable enabling KRMU to map partnerships to specific SDG targets and report progress in institutional SDG frameworks.",
   ],
@@ -359,8 +359,7 @@ export const sdg17Data: SdgDetailPageData = {
         },
         {
           id: "event-17-ext-12",
-          title:
-            "Frontline Defense – Anti-Terrorism Awareness by Army Officer",
+          title: "Frontline Defense – Anti-Terrorism Awareness by Army Officer",
           image:
             "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/events-sdg-17-12.jpeg",
           pdfUrl:
@@ -1156,8 +1155,7 @@ export const sdg17Data: SdgDetailPageData = {
         },
         {
           id: "event-17-alumni-4",
-          title:
-            "Session on Alumni Talk on Career Advancement Opportunities",
+          title: "Session on Alumni Talk on Career Advancement Opportunities",
           image:
             "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/Almni-sdg-17-4-scaled.jpeg",
           pdfUrl:
@@ -1174,8 +1172,7 @@ export const sdg17Data: SdgDetailPageData = {
         },
         {
           id: "event-17-alumni-6",
-          title:
-            "Alumni Connect: Creator Economy Entrepreneurship",
+          title: "Alumni Connect: Creator Economy Entrepreneurship",
           image:
             "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/Almni-sdg-17-6-scaled.jpg",
           pdfUrl:
@@ -1183,8 +1180,7 @@ export const sdg17Data: SdgDetailPageData = {
         },
         {
           id: "event-17-alumni-7",
-          title:
-            "Alumni Interaction Session (General Title)",
+          title: "Alumni Interaction Session (General Title)",
           image:
             "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/Almni-sdg-17-7.jpeg",
           pdfUrl:
@@ -1223,8 +1219,7 @@ export const sdg17Data: SdgDetailPageData = {
         },
         {
           id: "event-17-displaced-3",
-          title:
-            "HEALTH PLUS MONITORING WELLNESS IN OUR NEIGHBOURHOOD",
+          title: "HEALTH PLUS MONITORING WELLNESS IN OUR NEIGHBOURHOOD",
           image:
             "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/3.-Health-Plus-Monitoring-Wellness-in-our-Neighbourhood.png",
           pdfUrl:

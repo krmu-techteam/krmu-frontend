@@ -73,36 +73,36 @@ const SdgResearchDomains: React.FC = () => {
       {/* 3. Modal Dialog for Cluster Detail */}
       <AnimatePresence>
         {selectedCluster && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
             {/* Modal Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
               className="fixed inset-0 bg-black/70"
               onClick={() => setSelectedCluster(null)}
             />
 
-            {/* Light Modal Window (exact specs: bg #FFFFFF, snapshot card #F7F3E8, header #0D7377) */}
+            {/* Light Modal Window */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-[1200px] bg-white text-black rounded-[10px] p-6 sm:p-8 z-50 max-h-[90vh] overflow-y-auto custom-scrollbar my-auto"
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="relative w-full max-w-[1200px] bg-white text-black rounded-[12px] p-5 sm:p-8 z-50 max-h-[90vh] overflow-y-auto custom-scrollbar my-auto shadow-2xl"
             >
               {/* Top-Right Close Icon Button */}
               <button
                 onClick={() => setSelectedCluster(null)}
-                className="absolute top-6 right-6 text-black/70 hover:text-black p-1 transition-colors cursor-pointer"
+                className="sticky top-0 right-0 float-right -mt-1 -mr-1 sm:-mt-2 sm:-mr-2 z-50 p-1 text-[#1A1A1A]/70 hover:text-[#1A1A1A] transition-colors cursor-pointer"
                 aria-label="Close modal"
               >
-                <X className="w-7 h-7" />
+                <X className="w-6 h-6 sm:w-7 sm:h-7" />
               </button>
 
               {/* Main Heading & Description */}
-              <div className="pr-8 mb-6">
+              <div className="pr-10 mb-6 clear-left">
                 <h2 className="text-2xl sm:text-[32px] font-bold text-[#1A1A1A] font-sans leading-tight mb-2">
                   {selectedCluster.heading}
                 </h2>

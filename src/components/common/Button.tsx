@@ -49,6 +49,25 @@ export const Button = ({
     </>
   );
 
+  const isExternalOrPdf =
+    href.startsWith("http://") ||
+    href.startsWith("https://") ||
+    href.toLowerCase().includes(".pdf");
+
+  if (isExternalOrPdf) {
+    return (
+      <a
+        href={href}
+        onClick={onClick}
+        target={target || "_blank"}
+        rel="noopener noreferrer"
+        className={`${baseStyles} ${variants[variant]} ${className}`}
+      >
+        {content}
+      </a>
+    );
+  }
+
   return (
     <Link
       href={href}

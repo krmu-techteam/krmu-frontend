@@ -65,6 +65,9 @@ const SDGSection = () => {
         setTimeout(() => {
           scrollToPanel(id);
         }, 150);
+        setTimeout(() => {
+          scrollToPanel(id);
+        }, 450);
       }
       return isOpening ? id : null;
     });

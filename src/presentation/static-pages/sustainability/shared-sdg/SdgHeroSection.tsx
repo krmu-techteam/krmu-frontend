@@ -19,20 +19,21 @@ export const SdgHeroSection: React.FC<SdgHeroSectionProps> = ({
   backLink = "/centre-for-sustainable-development-goals-2",
 }) => {
   return (
-    <div className="w-full">
+    <div className="w-full pt-[80px] sm:pt-[90px] md:pt-[100px]">
       {/* 1. Clear Top Hero Banner */}
-      <div className="w-full relative h-[260px] sm:h-[360px] md:h-[440px] lg:h-[500px] max-h-[550px] overflow-hidden">
+      <div className="w-full relative overflow-hidden flex items-center justify-center">
         <Image
           src={heroImage}
           alt={title}
-          fill
-          className="object-cover object-center"
+          width={1920}
+          height={500}
+          className="w-full h-auto object-contain object-center max-h-[500px]"
           priority
         />
       </div>
 
       {/* 2. Header Content Section below image */}
-      <div className="max-w-[1440px] mx-auto pt-8 pb-4 sm:pt-10 px-4 sm:pb-6 md:px-10">
+      <div className="max-w-[1440px] mx-auto pt-3 pb-3 sm:pt-4 px-4 sm:pb-4 md:px-10">
         <div className="relative flex items-center justify-center">
           {/* Back Button on Left */}
           <div className="absolute left-0 top-1/2 -translate-y-1/2">

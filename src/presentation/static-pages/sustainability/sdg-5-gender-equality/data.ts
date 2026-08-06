@@ -5,7 +5,7 @@ export const sdg5Data: SdgDetailPageData = {
   title: "Gender Equality",
   subtitle:
     "Unbounded possibilities, equal opportunities, and empowered minds.",
-  heroImage: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/R.png",
+  heroImage: "/images/sustainability/sdg/gender-equality.jpg",
   backLink: "/centre-for-sustainable-development-goals-2",
   paragraphs: [
     "Promoting gender equality and empowering women at all educational, research, and professional development levels is a priority for K.R. Mangalam University. In order to promote leadership and creativity, the university encourages female students to take part in skill-development workshops, start-up incubation, and entrepreneurship programs. Along with planning seminars, workshops, and awareness campaigns addressing workplace rights, gender equality, and the prevention of gender-based violence, it also supports research on gender studies, social inclusion, and women’s empowerment. Women in business, STEM, and other professions are supported by targeted exchange programs, mentorship, and scholarships. A safe, fair, and harassment-free campus environment is also guaranteed by groups like the Equal Opportunity Cell and the Internal Complaints Committee (ICC). K.R. Mangalam University actively advances the goals of SDG 5 at the institutional and societal levels by empowering women and minimizing gender disparities through these initiatives.",

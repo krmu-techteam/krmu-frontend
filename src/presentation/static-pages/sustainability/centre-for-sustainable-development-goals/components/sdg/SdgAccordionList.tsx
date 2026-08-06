@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ChevronDown, Download, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "@/components/common/Button";
 import ResearchCenterSection from "../../sections/ResearchCenterSection";
@@ -169,6 +169,25 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                     {trigger.id === "sustain-panel-1" ? (
                       /* Research Center on Sustainability Section */
                       <ResearchCenterSection />
+                    ) : trigger.id === "sustain-panel-14" ? (
+                      /* SDG Annual Report Detailed Layout */
+                      <div className="pt-2 pb-2 text-left">
+                        <div className="flex flex-wrap gap-4 pt-2">
+                          {trigger.reports?.map((report, idx) => (
+                            <Button
+                              key={idx}
+                              href={report.url}
+                              target="_blank"
+                              variant="outline"
+                              icon={Download}
+                              iconPosition="left"
+                              className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
+                            >
+                              <span>{report.label}</span>
+                            </Button>
+                          ))}
+                        </div>
+                      </div>
                     ) : trigger.id === "sustain-panel-3" ? (
                       /* Energy Conservation Measures Detailed Layout */
                       <div className="pt-2 pb-2 text-left space-y-6">
@@ -226,8 +245,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                                 href={report.url}
                                 target="_blank"
                                 variant="outline"
-                                icon={ArrowRight}
-                                iconPosition="right"
+                                icon={Download}
+                                iconPosition="left"
                                 className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                               >
                                 <span>{report.label}</span>
@@ -247,8 +266,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                                   href={report.url}
                                   target="_blank"
                                   variant="outline"
-                                  icon={ArrowRight}
-                                  iconPosition="right"
+                                  icon={Download}
+                                  iconPosition="left"
                                   className="!w-full max-w-[370px] sm:!w-[370px] whitespace-nowrap justify-between border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-5 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                                 >
                                   <span>{report.label}</span>
@@ -266,8 +285,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                                   href={report.url}
                                   target="_blank"
                                   variant="outline"
-                                  icon={ArrowRight}
-                                  iconPosition="right"
+                                  icon={Download}
+                                  iconPosition="left"
                                   className="!w-full max-w-[370px] sm:!w-[370px] whitespace-nowrap justify-between border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-5 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                                 >
                                   <span>{report.label}</span>
@@ -283,8 +302,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                             href="https://krmangalam.edu.in/pdfs/sustainable/solar-write-up.pdf"
                             target="_blank"
                             variant="outline"
-                            icon={ArrowRight}
-                            iconPosition="right"
+                            icon={Download}
+                            iconPosition="left"
                             className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                           >
                             <span>Solar Energy</span>
@@ -301,8 +320,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                               href="https://krmangalam.edu.in/pdfs/sustainable/led-conservation.pdf"
                               target="_blank"
                               variant="outline"
-                              icon={ArrowRight}
-                              iconPosition="right"
+                              icon={Download}
+                              iconPosition="left"
                               className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                             >
                               <span>LED Conservation</span>
@@ -320,8 +339,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                               href="https://krmangalam.edu.in/pdfs/sustainable/d-sensor.pdf"
                               target="_blank"
                               variant="outline"
-                              icon={ArrowRight}
-                              iconPosition="right"
+                              icon={Download}
+                              iconPosition="left"
                               className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                             >
                               <span>D. Sensor</span>
@@ -331,22 +350,27 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                       </div>
                     ) : trigger.id === "sustain-panel-4" ? (
                       /* Waste Management Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
+                      <div className="pt-2 pb-2 text-left space-y-8">
                         {wasteManagementData.sections.map((section, idx) => (
-                          <div key={idx} className="space-y-2">
-                            <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
+                          <div key={idx} className="space-y-4">
+                            <h2 className="text-2xl sm:text-3xl lg:text-[29px] font-serif font-bold text-white tracking-tight leading-tight">
                               {section.title}
                             </h2>
-                            <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-                              {section.description}
-                            </p>
+                            <div className="w-full border border-[#0D7377] rounded-[12px] p-6 sm:p-8 bg-transparent space-y-4">
+                              <p className="text-white text-sm sm:text-[16px] font-normal leading-[24px]">
+                                {section.description}
+                              </p>
+                            </div>
                           </div>
                         ))}
 
                         {/* Waste Management Image Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-4">
                           {wasteManagementData.images.map((imgItem, idx) => (
-                            <div key={idx} className="flex flex-col items-center">
+                            <div
+                              key={idx}
+                              className="flex flex-col items-center"
+                            >
                               <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-[8px] border border-white/10 bg-white/5 p-1.5 transition-all duration-300 hover:border-white/30">
                                 <div className="relative h-full w-full overflow-hidden rounded-[6px]">
                                   <img
@@ -367,22 +391,27 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                       </div>
                     ) : trigger.id === "sustain-panel-5" ? (
                       /* Water Conservation Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
+                      <div className="pt-2 pb-2 text-left space-y-8">
                         {waterConservationData.sections.map((section, idx) => (
-                          <div key={idx} className="space-y-2">
-                            <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
+                          <div key={idx} className="space-y-4">
+                            <h2 className="text-2xl sm:text-3xl lg:text-[29px] font-serif font-bold text-white tracking-tight leading-tight">
                               {section.title}
                             </h2>
-                            <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-                              {section.description}
-                            </p>
+                            <div className="w-full border border-[#0D7377] rounded-[12px] p-6 sm:p-8 bg-transparent space-y-4">
+                              <p className="text-white text-sm sm:text-[16px] font-normal leading-[24px]">
+                                {section.description}
+                              </p>
+                            </div>
                           </div>
                         ))}
 
                         {/* Water Conservation Image Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-4">
                           {waterConservationData.images.map((imgItem, idx) => (
-                            <div key={idx} className="flex flex-col items-center">
+                            <div
+                              key={idx}
+                              className="flex flex-col items-center"
+                            >
                               <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-[8px] border border-white/10 bg-white/5 p-1.5 transition-all duration-300 hover:border-white/30">
                                 <div className="relative h-full w-full overflow-hidden rounded-[6px]">
                                   <img
@@ -403,40 +432,48 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                       </div>
                     ) : trigger.id === "sustain-panel-6" ? (
                       /* Green Campus Initiatives Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
+                      <div className="pt-2 pb-2 text-left space-y-8">
                         {/* Main Title & Overview */}
-                        <div className="space-y-3">
-                          <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
+                        <div className="space-y-4">
+                          <h2 className="text-2xl sm:text-3xl lg:text-[29px] font-serif font-bold text-white tracking-tight leading-tight">
                             {greenCampusData.mainTitle}
                           </h2>
-                          {greenCampusData.overviewParagraphs.map(
-                            (paragraph, idx) => (
-                              <p
-                                key={idx}
-                                className="text-white/80 text-sm sm:text-base leading-relaxed"
-                              >
-                                {paragraph}
-                              </p>
-                            ),
-                          )}
+                          <div className="w-full border border-[#0D7377] rounded-[12px] p-6 sm:p-8 bg-transparent space-y-4">
+                            {greenCampusData.overviewParagraphs.map(
+                              (paragraph, idx) => (
+                                <p
+                                  key={idx}
+                                  className={
+                                    paragraph.includes("Following initiatives")
+                                      ? "text-[#00BAC2] italic font-medium text-sm sm:text-[16px] pt-2"
+                                      : "text-white text-sm sm:text-[16px] font-normal leading-[24px]"
+                                  }
+                                >
+                                  {paragraph}
+                                </p>
+                              ),
+                            )}
+                          </div>
                         </div>
 
                         {/* Initiatives Sections */}
                         {greenCampusData.sections.map((section, idx) => (
-                          <div key={idx} className="space-y-2">
-                            <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
+                          <div key={idx} className="space-y-4">
+                            <h2 className="text-2xl sm:text-3xl lg:text-[29px] font-serif font-bold text-white tracking-tight leading-tight">
                               {section.title}
                             </h2>
-                            <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-                              {section.description}
-                            </p>
-                            {section.listItems && (
-                              <ul className="list-disc list-inside text-white/80 text-sm sm:text-base leading-relaxed pt-1 space-y-1 pl-2">
-                                {section.listItems.map((item, itemIdx) => (
-                                  <li key={itemIdx}>{item}</li>
-                                ))}
-                              </ul>
-                            )}
+                            <div className="w-full border border-[#0D7377] rounded-[12px] p-6 sm:p-8 bg-transparent space-y-4">
+                              <p className="text-white text-sm sm:text-[16px] font-normal leading-[24px]">
+                                {section.description}
+                              </p>
+                              {section.listItems && (
+                                <ul className="list-disc list-outside text-white text-sm sm:text-[16px] font-normal leading-[24px] pt-1 space-y-2.5 pl-5">
+                                  {section.listItems.map((item, itemIdx) => (
+                                    <li key={itemIdx}>{item}</li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
                           </div>
                         ))}
 
@@ -472,8 +509,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                               href={greenCampusData.policyButton.url}
                               target="_blank"
                               variant="outline"
-                              icon={ArrowRight}
-                              iconPosition="right"
+                              icon={Download}
+                              iconPosition="left"
                               className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                             >
                               <span>{greenCampusData.policyButton.label}</span>
@@ -483,17 +520,21 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                       </div>
                     ) : trigger.id === "sustain-panel-13" ? (
                       /* Eco Friendly Transport Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
+                      <div className="pt-2 pb-2 text-left space-y-8">
                         {/* Policy Meta Header */}
-                        <div className="rounded-[8px] bg-white/5 border border-white/10 p-4 space-y-1 text-sm sm:text-base text-white/90">
-                          <p className="font-semibold text-white">
+                        <div className="space-y-1 text-sm sm:text-base text-white/90">
+                          <p className="font-bold text-white text-base sm:text-lg font-sans">
                             {ecoFriendlyTransportData.header.handbook}
                           </p>
-                          <p>{ecoFriendlyTransportData.header.section}</p>
-                          <p>{ecoFriendlyTransportData.header.policyTitle}</p>
-                          <p className="text-white/70 text-sm pt-1">
+                          <p className="text-white text-sm sm:text-[16px]">
+                            {ecoFriendlyTransportData.header.section}
+                          </p>
+                          <p className="text-white text-sm sm:text-[16px]">
+                            {ecoFriendlyTransportData.header.policyTitle}
+                          </p>
+                          <p className="text-white/80 text-sm pt-1">
                             {ecoFriendlyTransportData.header.effectiveFrom} |{" "}
-                            <strong className="text-white/90">
+                            <strong className="text-white">
                               {ecoFriendlyTransportData.header.reviewCycle}
                             </strong>
                           </p>
@@ -502,64 +543,70 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                         {/* Policy Sections */}
                         {ecoFriendlyTransportData.sections.map(
                           (section, idx) => (
-                            <div key={idx} className="space-y-3">
-                              <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
+                            <div key={idx} className="space-y-4">
+                              <h2 className="text-2xl sm:text-3xl lg:text-[29px] font-serif font-bold text-white tracking-tight leading-tight">
                                 {section.title}
                               </h2>
-                              {section.description && (
-                                <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-                                  {section.description}
-                                </p>
-                              )}
-                              {section.listItems && (
-                                <ul className="list-disc list-inside text-white/80 text-sm sm:text-base leading-relaxed space-y-1 pl-2">
-                                  {section.listItems.map((item, itemIdx) => (
-                                    <li key={itemIdx}>{item}</li>
-                                  ))}
-                                </ul>
-                              )}
-                              {section.subsections && (
-                                <div className="space-y-4 pt-1 pl-2">
-                                  {section.subsections.map((sub, subIdx) => (
-                                    <div key={subIdx} className="space-y-2">
-                                      <h3 className="text-lg sm:text-xl font-semibold text-white">
-                                        {sub.subTitle}
-                                      </h3>
-                                      <ul className="list-disc list-inside text-white/80 text-sm sm:text-base leading-relaxed space-y-1 pl-2">
-                                        {sub.listItems.map((item, itemIdx) => (
-                                          <li key={itemIdx}>{item}</li>
-                                        ))}
-                                      </ul>
-                                    </div>
-                                  ))}
-                                </div>
-                              )}
+                              <div className="w-full border border-[#0D7377] rounded-[12px] p-6 sm:p-8 bg-transparent space-y-4">
+                                {section.description && (
+                                  <p className="text-white text-sm sm:text-[16px] font-normal leading-[24px]">
+                                    {section.description}
+                                  </p>
+                                )}
+                                {section.listItems && (
+                                  <ul className="list-disc list-outside text-white text-sm sm:text-[16px] font-normal leading-[24px] space-y-2.5 pl-5">
+                                    {section.listItems.map((item, itemIdx) => (
+                                      <li key={itemIdx}>{item}</li>
+                                    ))}
+                                  </ul>
+                                )}
+                                {section.subsections && (
+                                  <div className="space-y-4 pt-1">
+                                    {section.subsections.map((sub, subIdx) => (
+                                      <div key={subIdx} className="space-y-2">
+                                        <h3 className="font-bold text-white text-[16px] font-sans">
+                                          {sub.subTitle}
+                                        </h3>
+                                        <ul className="list-disc list-outside text-white text-sm sm:text-[16px] font-normal leading-[24px] space-y-2.5 pl-5">
+                                          {sub.listItems.map(
+                                            (item, itemIdx) => (
+                                              <li key={itemIdx}>{item}</li>
+                                            ),
+                                          )}
+                                        </ul>
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
                             </div>
                           ),
                         )}
 
                         {/* Document Control Summary */}
-                        <div className="rounded-[8px] bg-white/5 border border-white/10 p-4 space-y-2">
-                          <h3 className="text-lg font-semibold text-white">
+                        <div className="space-y-4">
+                          <h2 className="text-2xl sm:text-3xl lg:text-[29px] font-serif font-bold text-white tracking-tight leading-tight">
                             {ecoFriendlyTransportData.documentControl.title}
-                          </h3>
-                          <p className="text-sm text-white/80">
-                            <span className="font-semibold text-white">
-                              Version:
-                            </span>{" "}
-                            {ecoFriendlyTransportData.documentControl.version}{" "}
-                            |{" "}
-                            <span className="font-semibold text-white">
-                              Date:
-                            </span>{" "}
-                            {ecoFriendlyTransportData.documentControl.date}
-                          </p>
-                          <p className="text-sm text-white/80 leading-relaxed">
-                            {
-                              ecoFriendlyTransportData.documentControl
-                                .description
-                            }
-                          </p>
+                          </h2>
+                          <div className="w-full border border-[#0D7377] rounded-[12px] p-6 sm:p-8 bg-transparent space-y-3">
+                            <p className="text-sm text-white/90">
+                              <span className="font-bold text-white">
+                                Version:
+                              </span>{" "}
+                              {ecoFriendlyTransportData.documentControl.version}{" "}
+                              |{" "}
+                              <span className="font-bold text-white">
+                                Date:
+                              </span>{" "}
+                              {ecoFriendlyTransportData.documentControl.date}
+                            </p>
+                            <p className="text-white text-sm sm:text-[16px] font-normal leading-[24px]">
+                              {
+                                ecoFriendlyTransportData.documentControl
+                                  .description
+                              }
+                            </p>
+                          </div>
                         </div>
 
                         {/* Image Grid */}
@@ -586,40 +633,44 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                       </div>
                     ) : trigger.id === "sustain-panel-7" ? (
                       /* Barrier Free Environment Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
+                      <div className="pt-2 pb-2 text-left space-y-8">
                         {/* Main Title & Overview */}
-                        <div className="space-y-3">
-                          <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
+                        <div className="space-y-4">
+                          <h2 className="text-2xl sm:text-3xl lg:text-[29px] font-serif font-bold text-white tracking-tight leading-tight">
                             {barrierFreeData.mainTitle}
                           </h2>
-                          <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-                            {barrierFreeData.mainDescription}
-                          </p>
+                          <div className="w-full border border-[#0D7377] rounded-[12px] p-6 sm:p-8 bg-transparent space-y-4">
+                            <p className="text-white text-sm sm:text-[16px] font-normal leading-[24px]">
+                              {barrierFreeData.mainDescription}
+                            </p>
+                          </div>
                         </div>
 
                         {/* Accessibility Sections */}
                         {barrierFreeData.sections.map((section, idx) => (
-                          <div key={idx} className="space-y-3">
-                            <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
+                          <div key={idx} className="space-y-4">
+                            <h2 className="text-2xl sm:text-3xl lg:text-[29px] font-serif font-bold text-white tracking-tight leading-tight">
                               {section.title}
                             </h2>
-                            {section.description && (
-                              <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-                                {section.description}
-                              </p>
-                            )}
-                            {section.items && (
-                              <ul className="list-disc list-inside text-white/80 text-sm sm:text-base leading-relaxed space-y-2 pl-2">
-                                {section.items.map((item, itemIdx) => (
-                                  <li key={itemIdx}>
-                                    <strong className="text-white font-medium">
-                                      {item.label}:{" "}
-                                    </strong>
-                                    <span>{item.text}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
+                            <div className="w-full border border-[#0D7377] rounded-[12px] p-6 sm:p-8 bg-transparent space-y-4">
+                              {section.description && (
+                                <p className="text-white text-sm sm:text-[16px] font-normal leading-[24px]">
+                                  {section.description}
+                                </p>
+                              )}
+                              {section.items && (
+                                <ul className="list-disc list-outside text-white text-sm sm:text-[16px] font-normal leading-[24px] space-y-2.5 pl-5">
+                                  {section.items.map((item, itemIdx) => (
+                                    <li key={itemIdx}>
+                                      <strong className="text-white font-bold">
+                                        {item.label}:{" "}
+                                      </strong>
+                                      <span>{item.text}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
                           </div>
                         ))}
 
@@ -650,21 +701,23 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                       </div>
                     ) : trigger.id === "sustain-panel-8" ? (
                       /* Social Responsibility and Harmony Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
+                      <div className="pt-2 pb-2 text-left space-y-8">
                         <div className="space-y-4">
-                          <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
+                          <h2 className="text-2xl sm:text-3xl lg:text-[29px] font-serif font-bold text-white tracking-tight leading-tight">
                             {socialResponsibilityData.mainTitle}
                           </h2>
-                          {socialResponsibilityData.paragraphs.map(
-                            (paragraph, idx) => (
-                              <p
-                                key={idx}
-                                className="text-white/80 text-sm sm:text-base leading-relaxed"
-                              >
-                                {paragraph}
-                              </p>
-                            ),
-                          )}
+                          <div className="w-full border border-[#0D7377] rounded-[12px] p-6 sm:p-8 bg-transparent space-y-4">
+                            {socialResponsibilityData.paragraphs.map(
+                              (paragraph, idx) => (
+                                <p
+                                  key={idx}
+                                  className="text-white text-sm sm:text-[16px] font-normal leading-[24px]"
+                                >
+                                  {paragraph}
+                                </p>
+                              ),
+                            )}
+                          </div>
                         </div>
 
                         {/* Report PDF Link Button */}
@@ -674,8 +727,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                               href={socialResponsibilityData.reportButton.url}
                               target="_blank"
                               variant="outline"
-                              icon={ArrowRight}
-                              iconPosition="right"
+                              icon={Download}
+                              iconPosition="left"
                               className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                             >
                               <span>
@@ -693,43 +746,44 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                         </h2>
                         <div className="space-y-4 pt-2">
                           <div className="flex flex-wrap gap-4">
-                            {codeOfConductData.reports.slice(0, 2).map((report, idx) => (
-                              <Button
-                                key={idx}
-                                href={report.url}
-                                target="_blank"
-                                variant="outline"
-                                icon={ArrowRight}
-                                iconPosition="right"
-                                className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
-                              >
-                                <span>{report.label}</span>
-                              </Button>
-                            ))}
+                            {codeOfConductData.reports
+                              .slice(0, 2)
+                              .map((report, idx) => (
+                                <Button
+                                  key={idx}
+                                  href={report.url}
+                                  target="_blank"
+                                  variant="outline"
+                                  icon={Download}
+                                  iconPosition="left"
+                                  className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
+                                >
+                                  <span>{report.label}</span>
+                                </Button>
+                              ))}
                           </div>
                           <div className="flex flex-wrap gap-4">
-                            {codeOfConductData.reports.slice(2, 4).map((report, idx) => (
-                              <Button
-                                key={idx + 2}
-                                href={report.url}
-                                target="_blank"
-                                variant="outline"
-                                icon={ArrowRight}
-                                iconPosition="right"
-                                className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
-                              >
-                                <span>{report.label}</span>
-                              </Button>
-                            ))}
+                            {codeOfConductData.reports
+                              .slice(2, 4)
+                              .map((report, idx) => (
+                                <Button
+                                  key={idx + 2}
+                                  href={report.url}
+                                  target="_blank"
+                                  variant="outline"
+                                  icon={Download}
+                                  iconPosition="left"
+                                  className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
+                                >
+                                  <span>{report.label}</span>
+                                </Button>
+                              ))}
                           </div>
                         </div>
                       </div>
                     ) : trigger.id === "sustain-panel-10" ? (
                       /* Best Practices Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
-                        <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
-                          {bestPracticesData.mainTitle}
-                        </h2>
+                      <div className="pt-2 pb-2 text-left">
                         <div className="flex flex-wrap gap-4 pt-2">
                           {bestPracticesData.reports.map((report, idx) => (
                             <Button
@@ -737,8 +791,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                               href={report.url}
                               target="_blank"
                               variant="outline"
-                              icon={ArrowRight}
-                              iconPosition="right"
+                              icon={Download}
+                              iconPosition="left"
                               className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                             >
                               <span>{report.label}</span>
@@ -748,32 +802,28 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                       </div>
                     ) : trigger.id === "sustain-panel-11" ? (
                       /* Institutional Distinctiveness Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
-                        <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
-                          {institutionalDistinctivenessData.mainTitle}
-                        </h2>
+                      <div className="pt-2 pb-2 text-left">
                         <div className="flex flex-wrap gap-4 pt-2">
-                          {institutionalDistinctivenessData.reports.map((report, idx) => (
-                            <Button
-                              key={idx}
-                              href={report.url}
-                              target="_blank"
-                              variant="outline"
-                              icon={ArrowRight}
-                              iconPosition="right"
-                              className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
-                            >
-                              <span>{report.label}</span>
-                            </Button>
-                          ))}
+                          {institutionalDistinctivenessData.reports.map(
+                            (report, idx) => (
+                              <Button
+                                key={idx}
+                                href={report.url}
+                                target="_blank"
+                                variant="outline"
+                                icon={Download}
+                                iconPosition="left"
+                                className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
+                              >
+                                <span>{report.label}</span>
+                              </Button>
+                            ),
+                          )}
                         </div>
                       </div>
                     ) : trigger.id === "sustain-panel-15a" ? (
                       /* Good Governance Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
-                        <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
-                          {goodGovernanceData.mainTitle}
-                        </h2>
+                      <div className="pt-2 pb-2 text-left">
                         <div className="flex flex-wrap gap-4 pt-2">
                           {goodGovernanceData.reports.map((report, idx) => (
                             <Button
@@ -781,8 +831,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                               href={report.url}
                               target="_blank"
                               variant="outline"
-                              icon={ArrowRight}
-                              iconPosition="right"
+                              icon={Download}
+                              iconPosition="left"
                               className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                             >
                               <span>{report.label}</span>
@@ -792,10 +842,7 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                       </div>
                     ) : trigger.id === "sustain-panel-16a" ? (
                       /* Social Impact Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
-                        <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
-                          {socialImpactData.mainTitle}
-                        </h2>
+                      <div className="pt-2 pb-2 text-left">
                         <div className="flex flex-wrap gap-4 pt-2">
                           {socialImpactData.reports.map((report, idx) => (
                             <Button
@@ -803,8 +850,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                               href={report.url}
                               target="_blank"
                               variant="outline"
-                              icon={ArrowRight}
-                              iconPosition="right"
+                              icon={Download}
+                              iconPosition="left"
                               className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                             >
                               <span>{report.label}</span>
@@ -814,10 +861,7 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                       </div>
                     ) : trigger.id === "sustain-panel-17a" ? (
                       /* Environment Sustainability Report Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
-                        <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
-                          {environmentSustainabilityData.mainTitle}
-                        </h2>
+                      <div className="pt-2 pb-2 text-left">
                         <div className="flex flex-wrap gap-4 pt-2">
                           {environmentSustainabilityData.reports.map(
                             (report, idx) => (
@@ -826,8 +870,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                                 href={report.url}
                                 target="_blank"
                                 variant="outline"
-                                icon={ArrowRight}
-                                iconPosition="right"
+                                icon={Download}
+                                iconPosition="left"
                                 className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                               >
                                 <span>{report.label}</span>
@@ -838,10 +882,7 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                       </div>
                     ) : trigger.id === "sustain-panel-18a" ? (
                       /* Campus Health Wellness and Well Being Ecosystem Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
-                        <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
-                          {campusHealthData.mainTitle}
-                        </h2>
+                      <div className="pt-2 pb-2 text-left">
                         <div className="flex flex-wrap gap-4 pt-2">
                           {campusHealthData.reports.map((report, idx) => (
                             <Button
@@ -849,8 +890,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                               href={report.url}
                               target="_blank"
                               variant="outline"
-                              icon={ArrowRight}
-                              iconPosition="right"
+                              icon={Download}
+                              iconPosition="left"
                               className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                             >
                               <span>{report.label}</span>
@@ -860,26 +901,28 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                       </div>
                     ) : trigger.id === "sustain-panel-19a" ? (
                       /* Knowledge Exchange Detailed Layout */
-                      <div className="pt-2 pb-2 text-left space-y-6">
+                      <div className="pt-2 pb-2 text-left space-y-8">
                         <div className="space-y-4">
-                          <h2 className="text-2xl sm:text-3xl md:text-[27px] font-normal text-white mb-2">
+                          <h2 className="text-2xl sm:text-3xl lg:text-[29px] font-serif font-bold text-white tracking-tight leading-tight">
                             {knowledgeExchangeData.mainTitle}
                           </h2>
-                          {knowledgeExchangeData.paragraphs.map(
-                            (paragraph, idx) => (
-                              <p
-                                key={idx}
-                                className="text-white/80 text-sm sm:text-base leading-relaxed"
-                              >
-                                {paragraph}
-                              </p>
-                            ),
-                          )}
+                          <div className="w-full border border-[#0D7377] rounded-[12px] p-6 sm:p-8 bg-transparent space-y-4">
+                            {knowledgeExchangeData.paragraphs.map(
+                              (paragraph, idx) => (
+                                <p
+                                  key={idx}
+                                  className="text-white text-sm sm:text-[16px] font-normal leading-[24px]"
+                                >
+                                  {paragraph}
+                                </p>
+                              ),
+                            )}
+                          </div>
                         </div>
 
                         {/* Sub section title */}
                         {knowledgeExchangeData.sectionTitle && (
-                          <h2 className="text-xl sm:text-2xl font-semibold text-white pt-4 mb-3">
+                          <h2 className="text-2xl sm:text-3xl lg:text-[29px] font-serif font-bold text-white tracking-tight leading-tight pt-2">
                             {knowledgeExchangeData.sectionTitle}
                           </h2>
                         )}
@@ -892,8 +935,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                               href={report.url}
                               target="_blank"
                               variant="outline"
-                              icon={ArrowRight}
-                              iconPosition="right"
+                              icon={Download}
+                              iconPosition="left"
                               className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                             >
                               <span>{report.label}</span>
@@ -913,8 +956,8 @@ const SdgAccordionList: React.FC<SdgAccordionListProps> = ({
                                 href={report.url}
                                 target="_blank"
                                 variant="outline"
-                                icon={ArrowRight}
-                                iconPosition="right"
+                                icon={Download}
+                                iconPosition="left"
                                 className="!w-auto !inline-flex border !capitalize bg-white/5 hover:border-white/70 text-white hover:text-black font-medium text-sm sm:text-base rounded-[4px] px-6 py-3 min-h-[45px] transition-all duration-300 shadow-md group"
                               >
                                 <span>{report.label}</span>

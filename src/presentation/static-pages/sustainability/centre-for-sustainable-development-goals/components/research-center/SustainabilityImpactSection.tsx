@@ -6,10 +6,19 @@ const SustainabilityImpactSection: React.FC = () => {
   const openSdgReportTab = () => {
     const element = document.getElementById("sustain-panel-14");
     if (element) {
-      const button = element.querySelector("button");
+      const button = element.querySelector<HTMLButtonElement>("button");
       if (button) {
         button.click();
       }
+      setTimeout(() => {
+        const headerOffset = 140;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }, 150);
     }
   };
 

@@ -5,7 +5,7 @@ export const sdg12Data: SdgDetailPageData = {
   title: "Responsible Consumption and Production",
   subtitle: "Responsible Consumption — The Future Depends on It.",
   heroImage:
-    "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/Screenshot-2025-11-11-152416.png",
+    "/images/sustainability/sdg/responsible-consumption-and-production.jpg",
   backLink: "/centre-for-sustainable-development-goals-2",
   paragraphs: [
     "K.R. Mangalam University is deeply committed to advancing the United Nations Sustainable Development Goal 12 – Responsible Consumption and Production – through research, campus operations, policy frameworks, and community engagement. The University integrates sustainability principles across its academic and administrative systems, ensuring that responsible production, ethical sourcing, and resource efficiency form the foundation of its institutional culture. Guided by the Sustainable Environment and Green Campus Policy (2024), KRMU has implemented a comprehensive set of measures encompassing waste reduction, energy conservation, water reuse, and sustainable procurement. These efforts are reinforced by interdisciplinary research on circular economy models, eco-innovation, and clean technologies, demonstrating both academic excellence and practical application. Through continuous audits, vendor partnerships, and community-based awareness initiatives, the University strives to minimise its ecological footprint, foster behavioural transformation, and contribute meaningfully to a sustainable and inclusive future.",

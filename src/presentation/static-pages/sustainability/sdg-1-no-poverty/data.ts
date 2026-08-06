@@ -4,7 +4,7 @@ export const sdg1Data: SdgDetailPageData = {
   goalNumber: 1,
   title: "No Poverty",
   subtitle: "Fight poverty with K.R. Mangalam University.",
-  heroImage: "/images/sustainability/no-poverty.jpg",
+  heroImage: "/images/sustainability/sdg/no-poverty.jpg",
   backLink: "/centre-for-sustainable-development-goals-2",
   paragraphs: [
     "With a strong commitment to SDG Goal 1: No Poverty, K.R. Mangalam University (KRMU) works to establish an inclusive academic environment that empowers students from all socioeconomic backgrounds. Financial limitations never prevent access to high-quality education, in keeping with the University’s mission to promote employability and entrepreneurship through a futuristic curriculum, instill lifelong learning, and integrate global needs through collaboration.",

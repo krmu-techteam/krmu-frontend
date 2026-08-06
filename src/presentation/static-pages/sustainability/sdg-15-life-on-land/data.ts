@@ -5,8 +5,8 @@ export const sdg15Data: SdgDetailPageData = {
   title: "Life on Land",
   subtitle:
     " Conserve the environment, save lives, and rebuild our planet for coming generations.",
-  heroImage:
-    "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/sdg15-hero-65b2687385e1a.jpg",
+  heroImage: "/images/sustainability/sdg/life-on-land.jpg",
+  backLink: "/centre-for-sustainable-development-goals-2",
   paragraphs: [
     "In keeping with its mission to support employability, entrepreneurship, and creative thinking, K.R. Mangalam University actively supports sustainable practices and environmental stewardship throughout its campus and academic initiatives, thereby contributing to SDG Goal 15: Life on Land. With an emphasis on ecosystem protection, sustainable land management, and biodiversity conservation, the university incorporates ecological awareness into its forward-thinking curriculum, preparing students to become responsible global citizens and environmental innovators. Students participate in practical projects like afforestation drives, habitat restoration, and community-based conservation programs through innovative pedagogy and state-of-the-art technology. These initiatives foster an entrepreneurial spirit and impart practical skills while addressing environmental issues. The university supports research that addresses pressing ecological issues to promote lifelong learning and outcomes-based education that emphasizes the actual impacts on ecosystems. Faculty and students can coordinate regional conservation efforts with global sustainability goals through collaborative programs with leading universities, research facilities, businesses, and professional associations. These partnerships facilitate the exchange of knowledge and innovative approaches for biodiversity preservation. The next generation of leaders will be prepared to protect terrestrial ecosystems and create sustainable socioeconomic opportunities by means of student-led projects, workshops, and awareness campaigns, all of which are highly valued at K.R. Mangalam University.",
   ],

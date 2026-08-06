@@ -3,12 +3,17 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface GoalTile {
   id: number;
   src: string;
   alt: string;
   link?: string;
+}
+
+interface SdgGoalsFooterSectionProps {
+  showGroupPhoto?: boolean;
 }
 
 const goalTiles: GoalTile[] = [
@@ -121,7 +126,17 @@ const goalTiles: GoalTile[] = [
   },
 ];
 
-const SdgGoalsFooterSection: React.FC = () => {
+const SdgGoalsFooterSection: React.FC<SdgGoalsFooterSectionProps> = ({
+  showGroupPhoto,
+}) => {
+  const pathname = usePathname();
+
+  // Show group photo ONLY on main CSDG page (/centre-for-sustainable-development-goals-2) unless explicitly overridden
+  const displayPhoto =
+    showGroupPhoto !== undefined
+      ? showGroupPhoto
+      : Boolean(pathname?.includes("centre-for-sustainable-development-goals"));
+
   return (
     <div className="w-full mt-16 md:mt-16 space-y-12 md:space-y-16">
       {/* 1. Header Title & 18 Goal Grid */}
@@ -184,19 +199,21 @@ const SdgGoalsFooterSection: React.FC = () => {
         </div>
       </div>
 
-      {/* 2. KRMU Sustainability Group Photo Card */}
-      <div className="w-full flex justify-center">
-        <div className="w-full rounded-[4px] sm:rounded-[px] overflow-hidden">
-          <Image
-            src="/images/sustainability/goals/group.jpg"
-            alt="KRMU Sustainability Team Group Photo"
-            width={1280}
-            height={600}
-            className="w-full h-auto object-contain object-center rounded-[10px]"
-            priority
-          />
+      {/* 2. KRMU Sustainability Group Photo Card - Rendered ONLY on CSDG main page */}
+      {displayPhoto && (
+        <div className="w-full flex justify-center">
+          <div className="w-full rounded-[4px] overflow-hidden">
+            <Image
+              src="/images/sustainability/goals/group.jpg"
+              alt="KRMU Sustainability Team Group Photo"
+              width={1280}
+              height={600}
+              className="w-full h-auto object-contain object-center rounded-[10px]"
+              priority
+            />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

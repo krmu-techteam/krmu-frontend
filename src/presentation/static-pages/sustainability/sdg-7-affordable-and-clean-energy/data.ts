@@ -5,8 +5,7 @@ export const sdg7Data: SdgDetailPageData = {
   title: "Affordable and Clean Energy",
   subtitle:
     "“Everyone’s Access to Inexpensive, Dependable, and Sustainable Energy”",
-  heroImage:
-    "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/Screenshot-2025-11-11-145105.png",
+  heroImage: "/images/sustainability/sdg/affordable-and-clean-energy.jpg",
   backLink: "/centre-for-sustainable-development-goals-2",
   paragraphs: [
     "K.R. Mangalam University is deeply committed to implementing affordable and clean energy through a comprehensive institutional strategy that integrates renewable energy adoption, energy efficiency enhancement, carbon reduction, and community engagement. Recognising that clean and affordable energy is central to climate action and sustainable growth, the University has aligned its operational practices, research priorities, partnerships, and outreach initiatives to support India’s transition to a low-carbon and energy-secure future.",

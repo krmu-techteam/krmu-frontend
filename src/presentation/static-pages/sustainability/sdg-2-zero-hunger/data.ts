@@ -4,8 +4,7 @@ export const sdg2Data: SdgDetailPageData = {
   goalNumber: 2,
   title: "Zero Hunger",
   subtitle: "Improving lives and promoting growth begin with ending hunger.",
-  heroImage:
-    "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/OIP.webp",
+  heroImage: "/images/sustainability/sdg/zero-hunger.jpg",
   backLink: "/centre-for-sustainable-development-goals-2",
   paragraphs: [
     "In order to advance sustainable food systems, food security, and nutrition awareness, K.R. Mangalam University actively aligns its initiatives with SDG Goal 2: Zero Hunger. Academic and community programs that inspire students to create creative Agri-based start-ups, food technology solutions, and sustainability-driven businesses that tackle the problems of hunger and malnutrition in society are a reflection of the university’s mission to promote employability and entrepreneurship through futuristic curricula and progressive pedagogy. In order to advance sustainable food systems, food security, and nutrition awareness, K.R. Mangalam University actively aligns its initiatives with SDG Goal 2: Zero Hunger. Academic and community programs that inspire students to create creative agri-based start-ups, food technology solutions, and sustainability-driven businesses that tackle the problems of hunger and malnutrition in society are a reflection of the university’s mission to promote employability and entrepreneurship through futuristic curricula and progressive pedagogy.",

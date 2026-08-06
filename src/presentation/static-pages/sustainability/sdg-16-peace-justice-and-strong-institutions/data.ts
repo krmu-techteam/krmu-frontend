@@ -5,7 +5,8 @@ export const sdg16Data: SdgDetailPageData = {
   title: "Peace, Justice, and Strong Institutions",
   subtitle: "Peace for all, justice for everyone.",
   heroImage:
-    "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/Screenshot-2025-11-11-152819.png",
+    "/images/sustainability/sdg/peace-ustice-and-strong-institutions.jpg",
+  backLink: "/centre-for-sustainable-development-goals-2",
   paragraphs: [
     "The university’s mission to promote employability and entrepreneurship through a forward-thinking curriculum and progressive pedagogy with state-of-the-art technology is reflected in its integration of the values of justice, inclusivity, and institutional accountability into its academic and administrative framework. KRMU gives students the tools they need to become responsible leaders who can contribute to just and peaceful societies by integrating the values of integrity, fairness, and conflict resolution into its curriculum and student engagement initiatives. In order to promote solutions that improve institutional effectiveness and social equity, the university fosters critical inquiry into social, legal, and governance challenges through engaging research, outcomes-based education, and creative thinking. By incorporating global perspectives and collaborative programs with top universities, research centers, industries, and professional associations, KRMU further expands its influence internationally. This allows faculty and students to share best practices in governance, policy-making, and institutional development. To ensure that graduates are prepared to make a significant contribution to the creation of inclusive, resilient, and peaceful institutions locally, nationally, and internationally, workshops, seminars, and community engagement programs also emphasize human rights, the rule of law, and democratic values.",
   ],

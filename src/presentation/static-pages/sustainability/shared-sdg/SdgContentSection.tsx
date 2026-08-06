@@ -2,10 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
-import { Download } from "lucide-react";
+import { Download, ArrowRight } from "lucide-react";
 import Button from "@/components/common/Button";
 
 import { SdgActionButton } from "./types";
+
+const isPdfUrl = (url?: string) => Boolean(url?.toLowerCase().includes(".pdf"));
 
 export interface SdgContentSectionProps {
   goalNumber: number | string;
@@ -53,36 +55,44 @@ export const SdgContentSection: React.FC<SdgContentSectionProps> = ({
             {/* Action Buttons inside Left Column */}
             {leftButtons && leftButtons.length > 0 ? (
               <div className="pt-2 flex flex-wrap gap-3">
-                {leftButtons.map((btn, i) => (
-                  <Button
-                    key={i}
-                    href={btn.url}
-                    target="_blank"
-                    variant="outline"
-                    icon={Download}
-                    iconPosition="left"
-                    className="!w-auto !inline-flex border border-white/20 hover:border-white/60 bg-[#0c1e2c]/50 hover:bg-white/10 text-white font-medium text-sm sm:text-base rounded-[4px] px-5 py-3 min-h-[45px] !h-auto !normal-case tracking-normal transition-colors text-left"
-                  >
-                    <span className="whitespace-normal leading-snug">
-                      {btn.text}
-                    </span>
-                  </Button>
-                ))}
+                {leftButtons.map((btn, i) => {
+                  const isPdf = isPdfUrl(btn.url);
+                  return (
+                    <Button
+                      key={i}
+                      href={btn.url}
+                      target="_blank"
+                      variant="outline"
+                      icon={isPdf ? Download : ArrowRight}
+                      iconPosition={isPdf ? "left" : "right"}
+                      className="!w-auto !inline-flex border border-white/20 hover:border-white/60 bg-[#0c1e2c]/50 hover:bg-white/10 text-white font-medium text-sm sm:text-base rounded-[4px] px-5 py-3 min-h-[45px] !h-auto !normal-case tracking-normal transition-colors text-left"
+                    >
+                      <span className="whitespace-normal leading-snug">
+                        {btn.text}
+                      </span>
+                    </Button>
+                  );
+                })}
               </div>
             ) : leftButtonUrl ? (
               <div className="pt-2">
-                <Button
-                  href={leftButtonUrl}
-                  target="_blank"
-                  variant="outline"
-                  icon={Download}
-                  iconPosition="left"
-                  className="!w-auto !inline-flex border border-white/20 hover:border-white/60 bg-[#0c1e2c]/50 hover:bg-white/10 text-white font-medium text-sm sm:text-base rounded-[4px] px-5 py-3 min-h-[45px] !h-auto !normal-case tracking-normal transition-colors text-left"
-                >
-                  <span className="whitespace-normal leading-snug">
-                    {leftButtonText}
-                  </span>
-                </Button>
+                {(() => {
+                  const isPdf = isPdfUrl(leftButtonUrl);
+                  return (
+                    <Button
+                      href={leftButtonUrl}
+                      target="_blank"
+                      variant="outline"
+                      icon={isPdf ? Download : ArrowRight}
+                      iconPosition={isPdf ? "left" : "right"}
+                      className="!w-auto !inline-flex border border-white/20 hover:border-white/60 bg-[#0c1e2c]/50 hover:bg-white/10 text-white font-medium text-sm sm:text-base rounded-[4px] px-5 py-3 min-h-[45px] !h-auto !normal-case tracking-normal transition-colors text-left"
+                    >
+                      <span className="whitespace-normal leading-snug">
+                        {leftButtonText}
+                      </span>
+                    </Button>
+                  );
+                })()}
               </div>
             ) : null}
           </div>
@@ -111,16 +121,21 @@ export const SdgContentSection: React.FC<SdgContentSectionProps> = ({
               {/* Bottom Report Link Bar */}
               {sdgReportUrl && (
                 <div className="w-full pt-1 grow flex">
-                  <Button
-                    href={sdgReportUrl}
-                    target="_blank"
-                    variant="outline"
-                    icon={Download}
-                    iconPosition="left"
-                    className="!w-full sm:!w-full h-full !border-none bg-[#0a1824]/30 hover:bg-white/10 text-white font-medium text-sm sm:text-[15px] rounded-none py-2.5 !capitalize border-t border-white/20 flex items-center justify-center"
-                  >
-                    {sdgReportText}
-                  </Button>
+                  {(() => {
+                    const isPdf = isPdfUrl(sdgReportUrl);
+                    return (
+                      <Button
+                        href={sdgReportUrl}
+                        target="_blank"
+                        variant="outline"
+                        icon={isPdf ? Download : ArrowRight}
+                        iconPosition={isPdf ? "left" : "right"}
+                        className="!w-full sm:!w-full h-full !border-none bg-[#0a1824]/30 hover:bg-white/10 text-white font-medium text-sm sm:text-[15px] rounded-none py-2.5 !capitalize border-t border-white/20 flex items-center justify-center"
+                      >
+                        {sdgReportText}
+                      </Button>
+                    );
+                  })()}
                 </div>
               )}
             </div>

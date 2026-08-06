@@ -4,8 +4,8 @@ export const sdg14Data: SdgDetailPageData = {
   goalNumber: 14,
   title: "Life Below Water",
   subtitle: "For a sustainable future, safeguard our oceans now.",
-  heroImage:
-    "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/rsz_imagebank_indianocean_gabybarathieu_02-900x423-1.jpg",
+  heroImage: "/images/sustainability/sdg/life-below-water.jpg",
+  backLink: "/centre-for-sustainable-development-goals-2",
   paragraphs: [
     "By integrating marine science, aquatic resource management, and environmental sustainability modules into its futuristic curriculum, the university enables students to acquire skills that address real-world oceanic and coastal challenges, thereby aligning this goal with its mission of fostering employability and entrepreneurship. Students participate in practical research projects like monitoring water quality, researching marine biodiversity, and investigating sustainable aquaculture practices through innovative technology and progressive pedagogy, which fosters a strong sense of lifelong learning and creative thinking. The university also places a strong emphasis on joint research programs with world-renowned universities, professional associations, and research centers. These partnerships enable students to take part in international conferences, workshops, and joint research projects that address issues like overfishing, marine pollution, and the effects of climate change on aquatic ecosystems. K.R. Mangalam University links local action with global marine conservation needs by combining outcomes-based education with environmental stewardship. This integration not only prepares students to contribute to the sustainable management of marine resources but also to develop entrepreneurial solutions, such as eco-friendly aquaculture ventures and sustainable fisheries practices.",
   ],
