@@ -98,12 +98,9 @@ export default async function Page() {
       <CareerCurrentOpeningSection />
 
       {/* Keka Job Listings */}
-      <div className="max-w-[1664px] mx-auto w-full">
-
-      <section className="container py-16">
+      <section className="container py-16 max-w-[1665px] mx-auto w-full">
         <div id="khembedjobs" />
       </section>
-      </div>
 
       <CareerSubmitResume openings={openings} />
     </>
