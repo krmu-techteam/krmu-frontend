@@ -288,4 +288,19 @@ export const solsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Parveen-Bondwal-1.jpg",
   },
+  {
+    id: 115956,
+    slug: "dr-akansha-pandey",
+    title: {
+      rendered: "Dr. Akansha Pandey",
+    },
+    featured_media: 1024,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1043],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/08/akansha-pandey.png",
+  },
 ];
