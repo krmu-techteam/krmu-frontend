@@ -275,41 +275,41 @@ export default async function Page({ params }: Props) {
     programmes,
   });
 
-  const collegeUniversitySchema = commonCollegeUniversitySchema({
-    name: "K.R. Mangalam University",
-    alternateName: "KRMU",
-    url: "https://www.krmangalam.edu.in",
-    logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
-    award: "NAAC 'A' Grade",
-    numberOfEmployees: {
-      name: "Faculty",
-      value: 700,
-    },
-    amenityFeature: [
-      {
-        name: "Campus Area",
-        value: "35+ acres",
-      },
-      {
-        name: "Total Students",
-        value: "12000+",
-      },
-      {
-        name: "Recruiting Companies",
-        value: "800+",
-      },
-      {
-        name: "Highest Package",
-        value: "56.6 LPA",
-      },
-    ],
-    sameAs: [
-      "https://www.facebook.com/krmuniv",
-      "https://www.instagram.com/krmuniv",
-      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-      "https://in.linkedin.com/school/krmuniv",
-    ],
-  });
+  // const collegeUniversitySchema = commonCollegeUniversitySchema({
+  //   name: "K.R. Mangalam University",
+  //   alternateName: "KRMU",
+  //   url: "https://www.krmangalam.edu.in",
+  //   logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
+  //   award: "NAAC 'A' Grade",
+  //   numberOfEmployees: {
+  //     name: "Faculty",
+  //     value: 700,
+  //   },
+  //   amenityFeature: [
+  //     {
+  //       name: "Campus Area",
+  //       value: "35+ acres",
+  //     },
+  //     {
+  //       name: "Total Students",
+  //       value: "12000+",
+  //     },
+  //     {
+  //       name: "Recruiting Companies",
+  //       value: "800+",
+  //     },
+  //     {
+  //       name: "Highest Package",
+  //       value: "56.6 LPA",
+  //     },
+  //   ],
+  //   sameAs: [
+  //     "https://www.facebook.com/krmuniv",
+  //     "https://www.instagram.com/krmuniv",
+  //     "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+  //     "https://in.linkedin.com/school/krmuniv",
+  //   ],
+  // });
 
   return (
     <>
@@ -323,13 +323,13 @@ export default async function Page({ params }: Props) {
         />
       )}
 
-      <Script
+      {/* <Script
         id="college-university-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(collegeUniversitySchema),
         }}
-      />
+      /> */}
       {breadcrumbSchema && (
         <Script
           id="breadcrumb-schema"
