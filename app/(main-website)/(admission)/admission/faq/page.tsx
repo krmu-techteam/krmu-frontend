@@ -109,7 +109,7 @@ const page = async () => {
       url: "https://www.krmangalam.edu.in/",
     },
     {
-      name: "Fee structure",
+      name: "FAQ",
       url: "http://localhost:3000/admission/faq",
     },
   ]);
