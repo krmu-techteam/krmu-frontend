@@ -3,6 +3,16 @@
 import React from "react";
 
 const SustainabilityImpactSection: React.FC = () => {
+  const openSdgReportTab = () => {
+    const element = document.getElementById("sustain-panel-14");
+    if (element) {
+      const button = element.querySelector("button");
+      if (button) {
+        button.click();
+      }
+    }
+  };
+
   return (
     <div className="w-full text-white font-poppins space-y-10 sm:space-y-12 pt-4">
       {/* 1. Sustainability Research Impact Measurement */}
@@ -12,11 +22,11 @@ const SustainabilityImpactSection: React.FC = () => {
         </h2>
 
         <div className="w-full border border-[#0D7377] rounded-[12px] p-6 sm:p-8 bg-transparent space-y-4">
-          <h3 className="font-bold text-white  text-[16px] font-sans">
+          <h3 className="font-bold text-white text-[16px] font-sans">
             Sustainability Research Impact
           </h3>
 
-          <p className="text-white text-sm sm:text-[16px]  font-normal leading-[24px]">
+          <p className="text-white text-sm sm:text-[16px] font-normal leading-[24px]">
             K.R. Mangalam University adopts an outcome-driven approach to
             sustainability research, focusing on translating academic knowledge
             into practical solutions that support environmental protection,
@@ -41,7 +51,16 @@ const SustainabilityImpactSection: React.FC = () => {
           </p>
 
           <div className="text-[#00BAC2] italic font-medium text-sm sm:text-[16px] pt-2">
-            Operational Sustainability Performance
+            For detailed research performance indicators and impact metrics,
+            please refer to the{" "}
+            <button
+              type="button"
+              onClick={openSdgReportTab}
+              className="underline font-semibold hover:text-[#E7C268] cursor-pointer transition-colors"
+            >
+              SDG Annual Report section
+            </button>
+            .
           </div>
         </div>
       </section>
@@ -78,7 +97,15 @@ const SustainabilityImpactSection: React.FC = () => {
 
           <div className="text-[#00BAC2] italic font-medium text-sm sm:text-[16px] pt-2">
             For detailed research performance indicators and impact metrics,
-            please refer to the Sustainability Reports section.
+            please refer to the{" "}
+            <button
+              type="button"
+              onClick={openSdgReportTab}
+              className="underline font-semibold hover:text-[#E7C268] cursor-pointer transition-colors"
+            >
+              SDG Annual Report section
+            </button>
+            .
           </div>
         </div>
       </section>
@@ -144,8 +171,15 @@ const SustainabilityImpactSection: React.FC = () => {
 
           <div className="text-[#00BAC2] italic font-medium text-sm sm:text-[16px] pt-2">
             Detailed sustainability policies, governance frameworks, and
-            performance reports are available in the Sustainability Reports
-            section.
+            performance reports are available in the{" "}
+            <button
+              type="button"
+              onClick={openSdgReportTab}
+              className="underline font-semibold hover:text-[#E7C268] cursor-pointer transition-colors"
+            >
+              SDG Annual Report section
+            </button>
+            .
           </div>
         </div>
       </section>

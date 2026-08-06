@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   FloatingReportsButton,
   ReportsDrawer,
@@ -44,19 +44,45 @@ const SDGSection = () => {
     };
   }, []);
 
+  const scrollToPanel = useCallback((id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 140; // Generous offset ensuring top navbar never cuts off accordion headers
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  }, []);
+
   const toggleAccordion = (id: string) => {
-    setOpenAccordion((prev) => (prev === id ? null : id));
+    setOpenAccordion((prev) => {
+      const isOpening = prev !== id;
+      if (isOpening) {
+        setTimeout(() => {
+          scrollToPanel(id);
+        }, 150);
+      }
+      return isOpening ? id : null;
+    });
   };
 
   const handleSelectDrawerTab = (id: string) => {
     setOpenAccordion(id);
     setIsDrawerOpen(false);
+
+    // Initial smooth scroll as drawer closes
     setTimeout(() => {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }, 100);
+      scrollToPanel(id);
+    }, 150);
+
+    // Re-adjust scroll position after accordion expansion animation completes
+    setTimeout(() => {
+      scrollToPanel(id);
+    }, 450);
   };
 
   return (
