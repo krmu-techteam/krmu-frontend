@@ -80,39 +80,39 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landing-page/logos/zynga.png",
+    imgUrl: "/landing-page/bdes-2026/zynga.png",
     alt: "Zynga Logo",
   },
   {
-    imgUrl: "/landing-page/logos/hp-labs.png",
+    imgUrl: "/landing-page/bdes-2026/hp-labs.png",
     alt: "HPLabs Logo",
   },
   {
-    imgUrl: "/landing-page/logos/greenply.png",
+    imgUrl: "/landing-page/bdes-2026/greenply.png",
     alt: "Greenply Logo",
   },
   {
-    imgUrl: "/landing-page/logos/splashlearn.png",
+    imgUrl: "/landing-page/bdes-2026/splashlearn.png",
     alt: "Splash Logo",
   },
   {
-    imgUrl: "/landing-page/logos/myntra.png",
+    imgUrl: "/landing-page/bdes-2026/myntra.png",
     alt: "Myntra Logo",
   },
   {
-    imgUrl: "/landing-page/logos/cognizant.png",
+    imgUrl: "/landing-page/bdes-2026/cognizant.png",
     alt: "Cognizant Logo",
   },
   {
-    imgUrl: "/landing-page/logos/zara.png",
+    imgUrl: "/landing-page/bdes-2026/zara.png",
     alt: "ZARA Logo",
   },
   {
-    imgUrl: "/landing-page/logos/lifestyle.png",
+    imgUrl: "/landing-page/bdes-2026/lifestyle.png",
     alt: "Lifestyle Logo",
   },
   {
-    imgUrl: "/landing-page/logos/ubisoft.png",
+    imgUrl: "/landing-page/bdes-2026/ubisoft.png",
     alt: "Ubisoft Logo",
   },
 ];
