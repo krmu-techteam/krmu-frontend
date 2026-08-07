@@ -1,12 +1,11 @@
 import Image from "next/image";
 import { PARTNER_UNIVERSITIES } from "@/features/home";
 import { Carousel } from "@/components/common/Carousel";
-import SectionDivider from "@/components/common/SectionDivider";
 import { SectionTitle } from "@/components/common/SectionTitle";
 
 export function PartnersSection() {
   return (
-    <section className="relative w-full py-8 md:py-12 xl:py-20 overflow-hidden font-poppins">
+    <section className="relative w-full pt-8 md:pt-12 xl:pt-20 overflow-hidden font-poppins">
       {/* Institutional Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.05)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none"></div>
 
@@ -49,7 +48,6 @@ export function PartnersSection() {
           ))}
         </Carousel>
       </div>
-      <SectionDivider />
     </section>
   );
 }

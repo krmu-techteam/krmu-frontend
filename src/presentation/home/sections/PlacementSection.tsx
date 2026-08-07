@@ -47,24 +47,12 @@ export function PlacementsSection() {
                   autoplayDelay={5000}
                   showDots={false}
                 >
-                  {/* Testing with placement card images (Holding store data for now) */}
-                  {[
-                    { image: "/images/home/placements/daksh.png" },
-                    { image: "/images/home/placements/daksh.png" },
-                    { image: "/images/home/placements/daksh.png" },
-                    { image: "/images/home/placements/daksh.png" },
-                    { image: "/images/home/placements/daksh.png" },
-                    { image: "/images/home/placements/daksh.png" },
-                    { image: "/images/home/placements/daksh.png" },
-                    { image: "/images/home/placements/daksh.png" },
-                    { image: "/images/home/placements/daksh.png" },
-                    { image: "/images/home/placements/daksh.png" },
-                  ].map((story, i) => (
+                  {SUCCESS_STORIES.map((story, i) => (
                     <div key={i} className="relative group">
                       <div className="relative w-full aspect-square">
                         <Image
                           src={story.image}
-                          alt={`Student success story testing ${i + 1}`}
+                          alt={`Student success story ${i + 1}`}
                           fill
                           sizes="(max-width: 768px) 100vw, 45vw"
                           className="object-contain scale-120"

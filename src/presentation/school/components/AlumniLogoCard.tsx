@@ -4,7 +4,7 @@ import { AlumniLogoCardProps } from "@/features/school";
 
 const AlumniLogoCard = ({ logoUrl, altText }: AlumniLogoCardProps) => {
   return (
-    <div className="p-2 md:p-3 flex items-center border border-gray-500/50  justify-center rounded-sm bg-white bg-cover bg-center w-full">
+    <div className="p-2 md:p-3 flex items-center border border-gray-500/50  justify-center rounded-[4px] bg-white bg-cover bg-center w-full">
       <Image
         src={`${STRAPI_URL}${logoUrl}`}
         width={150}

@@ -41,10 +41,6 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
       ) : (
         <div className="absolute top-0 left-0 w-full h-full bg-[#0B1221] z-0" />
       )}
-
-      {/* Gradients and Overlays */}
-      <div className="absolute top-0 left-0 w-full h-full bg-brand-dark/35 z-10 transition-colors group-hover/hero:bg-brand-dark/25 duration-700"></div>
-      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-linear-to-t from-brand-dark via-brand-dark/40 to-transparent z-10"></div>
     </>
   );
 };

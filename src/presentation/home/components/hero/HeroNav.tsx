@@ -16,7 +16,7 @@ export const HeroNav = () => {
         <Link
           key={link.name}
           href={link.href}
-          className="shrink-0 whitespace-nowrap hover:text-secondary font-normal transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-secondary after:transition-all hover:after:w-full"
+          className="shrink-0 whitespace-nowrap hover:text-secondary font-medium transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-secondary after:transition-all hover:after:w-full"
         >
           {link.name}
         </Link>

@@ -30,10 +30,10 @@ export type HomeComponentKey =
   (typeof HOME_COMPONENT_KEYS)[keyof typeof HOME_COMPONENT_KEYS];
 
 export const ABOUT_STAT_BG_COLORS = [
-  "#081D2D",
-  "#0D2131",
-  "#182C3C",
-  "#233747",
+  "#0C263A",
+  "#0C2C3A",
+  "#0C2F3A",
+  "#0F2C42",
 ];
 
 export const JOURNEY_VIDEOS: JourneyVideoType[] = [
@@ -112,30 +112,14 @@ export const RECRUITER_LOGOS: RecruiterLogoType[] = [
 ];
 
 export const SUCCESS_STORIES: SuccessStoryType[] = [
-  {
-    image: "/images/home/placements/rishav-bakshi.png",
-  },
-  {
-    image: "/images/home/placements/daksh-mehta.png",
-  },
-  {
-    image: "/images/home/placements/shourya-tyagi.png",
-  },
-  {
-    image: "/images/home/placements/vineet-verma.png",
-  },
-  {
-    image: "/images/home/placements/om-mishra.png",
-  },
-  {
-    image: "/images/home/placements/nitesh.png",
-  },
-  {
-    image: "/images/home/placements/naman-pune.png",
-  },
-  {
-    image: "/images/home/placements/ayush-sai.png",
-  },
+  { image: "/images/home/placements/01-rishav-bakshi.png" },
+  { image: "/images/home/placements/02-daksh-mehta.png" },
+  { image: "/images/home/placements/03-vineet-verma.png" },
+  { image: "/images/home/placements/04-shaurya-tyagi.png" },
+  { image: "/images/home/placements/05-naman-pune.png" },
+  { image: "/images/home/placements/06-nitesh.png" },
+  { image: "/images/home/placements/07-naman-pune.png" },
+  { image: "/images/home/placements/08-ayush-sai.png" },
 ];
 
 export const PLACEMENT_STATS: PlacementStatType[] = [

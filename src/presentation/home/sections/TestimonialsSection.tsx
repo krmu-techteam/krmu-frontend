@@ -1,6 +1,8 @@
-import React from "react";
-import { ArrowRight } from "lucide-react";
+"use client";
+
+import React, { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Carousel } from "@/components/common/Carousel";
 import SectionDivider from "@/components/common/SectionDivider";
 import { SectionTitle } from "@/components/common/SectionTitle";
@@ -57,7 +59,7 @@ const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: 6,
     name: "Namrata Muralidharan",
-    role: "BCA (AI & DS) 2024-26 batch",
+    role: "BCA (AI & DS) 2024–26 batch",
     quote:
       "My journey at K.R. Mangalam University, pursuing BCA in Artificial Intelligence & Data Science, has been a transformative blend of knowledge, innovation, and hands-on learning. The program has helped me turn curiosity into technical expertise through real-world projects and emerging technologies. With supportive faculty and an industry-focused environment, KRMU has empowered me to think beyond conventional boundaries and confidently shape my future in the world of technology.",
     image: "/images/home/testimonials/namrata-6.png",
@@ -111,95 +113,148 @@ export function TestimonialsSection({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   testimonialsData?: any[];
 }) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [emblaApi, setEmblaApi] = useState<any>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCurrentIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
+
+  const handlePrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const handleNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   return (
     <section className="relative w-full overflow-hidden py-8 md:py-12 xl:py-20 font-poppins max-w-[1530px] mx-auto">
-      {/* Precision Spec Lines - Gradient Style */}
-      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
-      <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
+      {/* Precision Spec Lines */}
+      <div className="absolute top-0 left-0 w-full h-px bg-[linear-gradient(90deg,#1A1A1A_0%,#FFFFFF_48.08%,#1A1A1A_100%)]"></div>
+      <div className="absolute bottom-0 left-0 w-full h-px bg-[linear-gradient(90deg,#1A1A1A_0%,#FFFFFF_48.08%,#1A1A1A_100%)]"></div>
 
-      <div className="max-w-[1530px] mx-auto relative z-10">
-        <div className="px-6 md:px-8 xl:px-16">
-          <SectionTitle
-            title={title || "What our Learners say?"}
-            className="mb-0"
-          />
-        </div>
+      <div className="max-w-[1530px] mx-auto relative z-10 px-6 md:px-8 xl:px-16">
+        <SectionTitle
+          title={title || "What our Learners say?"}
+          className="mb-8"
+        />
 
-        <Carousel
-          showArrows={false}
-          autoplayDelay={6000}
-          fade={true}
-          options={{ loop: true, duration: 20 }}
-          className="relative lg:pb-2 [&>div:last-child]:lg:absolute [&>div:last-child]:lg:bottom-8 [&>div:last-child]:lg:right-16 [&>div:last-child]:lg:w-[520px] [&>div:last-child]:lg:justify-center"
-          activeDotClassName="bg-brand-gold w-2"
-        >
-          {TESTIMONIALS_DATA.map((t, index) => (
-            <div
-              key={t.id}
-              className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] items-center min-h-[460px] md:min-h-[490px] lg:min-h-[510px] pt-8 pb-3 lg:pb-4 px-6 md:px-8 xl:px-16"
-            >
-              {/* Left Column - Content */}
-              <div className="flex flex-col min-h-[440px] md:min-h-[480px] lg:min-h-[510px] justify-between relative pt-4 md:pt-0">
-                <div>
-                  <div className="absolute -top-6 -left-2 md:-top-6 md:-left-8 pointer-events-none z-0">
-                    <Image
-                      src="/modules/home/testimonial/quote.png"
-                      alt="Quote Icon"
-                      width={130}
-                      height={100}
-                      className="w-16 md:w-[100px] h-auto brightness-0 invert opacity-70"
-                    />
-                  </div>
-
-                  <div className="relative h-auto mb-6 w-full z-10 pt-4 md:pt-6">
-                    <p className="text-lg md:text-xl tracking-tight text-justify lg:text-[28px] text-white font-serif font-medium md:leading-[36px] opacity-90">
-                      {t.quote}
-                    </p>
-                  </div>
-
-                  <div className="w-16 h-1 bg-brand-gold mb-6"></div>
-
-                  <div className="mb-6 md:mb-8">
-                    <h4 className="text-white font-poppins font-semibold text-base md:text-[18px] leading-tight mb-1">
-                      {t.name}
-                    </h4>
-                    <p className="text-white/60 font-poppins font-normal text-sm md:text-[14px]">
-                      {t.role}
-                    </p>
-                  </div>
-                </div>
-
-                <button className="flex items-center gap-3 text-white hover:text-brand-gold transition-colors group cursor-pointer w-fit mb-0 lg:mb-0">
-                  <div className="w-6 h-6 rounded-full border border-white flex items-center justify-center group-hover:border-brand-gold group-hover:bg-brand-gold/10 transition-all">
-                    <ArrowRight
-                      size={14}
-                      className="group-hover:translate-x-0.5 transition-transform"
-                    />
-                  </div>
-                  <span className="font-poppins font-medium text-xs md:text-[15px] tracking-wide">
-                    View All Testimonials
-                  </span>
-                </button>
-              </div>
-
-              {/* Right Column - Image Card */}
-              <div className="relative flex justify-center lg:justify-end pt-4 md:pt-0">
-                <div className="relative rounded-[4px] w-full max-w-[520px] aspect-square">
+        {/* Content Container (Card Background Removed) */}
+        <div className="relative w-full py-2">
+          <Carousel
+            showArrows={false}
+            showDots={false}
+            autoplayDelay={6000}
+            fade={true}
+            options={{ loop: true, watchDrag: false, duration: 20 }}
+            setApi={setEmblaApi}
+            className="w-full"
+          >
+            {TESTIMONIALS_DATA.map((t, index) => (
+              <div
+                key={t.id}
+                className="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-8 min-h-[340px] md:min-h-[320px] lg:min-h-[300px] w-full"
+              >
+                {/* Left Side: Student Photo */}
+                <div className="w-full lg:w-[260px] xl:w-[300px] shrink-0 relative aspect-square sm:aspect-[4/4.5] lg:aspect-auto rounded-[16px] overflow-hidden">
                   <Image
                     src={t.image}
                     alt={t.name}
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover rounded-[4px]"
+                    sizes="(max-width: 1024px) 100vw, 300px"
+                    className="object-cover rounded-[16px]"
                     priority={index === 0}
                   />
-                  {/* Subtle glass overlay frame */}
-                  <div className="absolute inset-0 pointer-events-none"></div>
+                </div>
+
+                {/* Center Vertical Divider Line (Desktop) */}
+                <div className="hidden lg:block w-[1px] self-stretch my-1 bg-[linear-gradient(180deg,#1A1A1A_0%,#FFFFFF_48.08%,#1A1A1A_100%)] shrink-0"></div>
+
+                {/* Right Side: Content Area */}
+                <div className="flex-1 flex flex-col justify-between relative z-10 pt-2 lg:pt-0 w-full min-w-0">
+                  <div className="relative pt-2 md:pt-4">
+                    {/* Background Top-Left Large Quote Icon */}
+                    <div className="absolute -top-1 -left-2 md:-top-2 md:-left-4 pointer-events-none z-0 opacity-35">
+                      <Image
+                        src="/modules/home/testimonial/quote.png"
+                        alt="Quote Icon"
+                        width={120}
+                        height={96}
+                        className="w-14 md:w-20 lg:w-24 h-auto object-contain brightness-0 invert"
+                      />
+                    </div>
+
+                    {/* Quote Paragraph - Fixed min-height to prevent layout jump */}
+                    <div className="min-h-[140px] sm:min-h-[150px] md:min-h-[160px] flex items-center">
+                      <p className="text-white/90 text-sm md:text-base lg:text-[18px] leading-relaxed font-light font-poppins relative z-10 pr-2 lg:pr-12">
+                        {t.quote}
+                      </p>
+                    </div>
+
+                    {/* Short Accent Line */}
+                    <div className="w-10 h-[2px] bg-brand-gold my-4 rounded-full opacity-80 relative z-10"></div>
+                  </div>
+
+                  {/* Author Details */}
+                  <div className="mt-2 relative z-10">
+                    <h4 className="text-brand-gold font-poppins font-bold text-base md:text-lg lg:text-xl leading-tight">
+                      {t.name}
+                    </h4>
+                    <p className="text-white/70 font-poppins text-xs md:text-sm font-light mt-1 mb-4">
+                      {t.role}
+                    </p>
+
+                    {/* View All Testimonials button */}
+                    <button className="flex items-center mt-8 gap-3 text-white hover:text-brand-gold transition-colors group cursor-pointer w-fit">
+                      <div className="w-6 h-6 rounded-full border border-white flex items-center justify-center group-hover:border-brand-gold group-hover:bg-brand-gold/10 transition-all">
+                        <ArrowRight size={14} />
+                      </div>
+                      <span className="font-poppins font-medium text-xs md:text-[15px] tracking-wide">
+                        View All Testimonials
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Carousel>
+            ))}
+          </Carousel>
+
+          {/* Navigation Controls (Bottom Right) */}
+          <div className="flex items-center justify-end gap-3 mt-4 relative z-30">
+            <button
+              type="button"
+              onClick={handlePrev}
+              className="w-9 h-9 md:w-10 md:h-10 rounded-[4px] border border-brand-gold/40 flex items-center justify-center text-white hover:border-brand-gold hover:bg-brand-gold/10 transition-all cursor-pointer shrink-0 z-30"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            <span className="w-[70px] text-center text-white/90 text-sm md:text-base font-mono tracking-wider font-medium select-none whitespace-nowrap">
+              {String(currentIndex + 1).padStart(2, "0")} /{" "}
+              {String(TESTIMONIALS_DATA.length).padStart(2, "0")}
+            </span>
+
+            <button
+              type="button"
+              onClick={handleNext}
+              className="w-9 h-9 md:w-10 md:h-10 rounded-[4px] border border-brand-gold/40 flex items-center justify-center text-white hover:border-brand-gold hover:bg-brand-gold/10 transition-all cursor-pointer shrink-0 z-30"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        </div>
       </div>
       <SectionDivider />
     </section>
