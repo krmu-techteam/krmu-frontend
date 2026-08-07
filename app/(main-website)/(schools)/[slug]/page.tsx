@@ -60,11 +60,15 @@ import {
 } from "../SchoolComponents/schoolHeroLogo";
 import {
   commonCollegeUniversitySchema,
+  createBreadcrumbSchema,
   createProgrammeItemListSchema,
+  createWebPageSchema,
 } from "@/lib/api/common";
 
 import Script from "next/script";
 import { allProgrammes } from "./allProgrammesList";
+import { url } from "inspector";
+import { SeoData } from "@/app/(landing-page)/admission/all-course-2026/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -256,6 +260,17 @@ export default async function Page({ params }: Props) {
 
   const programmes = [...getAllProgrammes];
 
+  const breadcrumbSchema = createBreadcrumbSchema([
+    {
+      name: "Home",
+      url: "https://www.krmangalam.edu.in/",
+    },
+    {
+      name: "School",
+      url: `https://www.krmangalam.edu.in/${school.urlslug}`,
+    },
+  ]);
+
   const schoolSchema = createProgrammeItemListSchema({
     name: `Programmes Offered - ${school.schoolname}`,
     description: `List of undergraduate, postgraduate and doctoral programmes offered by ${school.schoolname} at K.R. Mangalam University.`,
@@ -263,40 +278,48 @@ export default async function Page({ params }: Props) {
     programmes,
   });
 
-  const collegeUniversitySchema = commonCollegeUniversitySchema({
-    name: "K.R. Mangalam University",
-    alternateName: "KRMU",
-    url: "https://www.krmangalam.edu.in",
-    logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
-    award: "NAAC 'A' Grade",
-    numberOfEmployees: {
-      name: "Faculty",
-      value: 700,
-    },
-    amenityFeature: [
-      {
-        name: "Campus Area",
-        value: "35+ acres",
-      },
-      {
-        name: "Total Students",
-        value: "12000+",
-      },
-      {
-        name: "Recruiting Companies",
-        value: "800+",
-      },
-      {
-        name: "Highest Package",
-        value: "56.6 LPA",
-      },
-    ],
-    sameAs: [
-      "https://www.facebook.com/krmuniv",
-      "https://www.instagram.com/krmuniv",
-      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-      "https://in.linkedin.com/school/krmuniv",
-    ],
+  // const collegeUniversitySchema = commonCollegeUniversitySchema({
+  //   name: "K.R. Mangalam University",
+  //   alternateName: "KRMU",
+  //   url: "https://www.krmangalam.edu.in",
+  //   logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
+  //   award: "NAAC 'A' Grade",
+  //   numberOfEmployees: {
+  //     name: "Faculty",
+  //     value: 700,
+  //   },
+  //   amenityFeature: [
+  //     {
+  //       name: "Campus Area",
+  //       value: "35+ acres",
+  //     },
+  //     {
+  //       name: "Total Students",
+  //       value: "12000+",
+  //     },
+  //     {
+  //       name: "Recruiting Companies",
+  //       value: "800+",
+  //     },
+  //     {
+  //       name: "Highest Package",
+  //       value: "56.6 LPA",
+  //     },
+  //   ],
+  //   sameAs: [
+  //     "https://www.facebook.com/krmuniv",
+  //     "https://www.instagram.com/krmuniv",
+  //     "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+  //     "https://in.linkedin.com/school/krmuniv",
+  //   ],
+  // });
+
+  const webPageSchema = createWebPageSchema({
+    name: `${school.schoolname} | K.R. Mangalam University`,
+    url: `https://www.krmangalam.edu.in/${school.urlslug}`,
+    description: SeoData.description,
+    aboutName: school.schoolname,
+    aboutUrl: "https://www.krmangalam.edu.in/",
   });
 
   return (
@@ -310,14 +333,30 @@ export default async function Page({ params }: Props) {
           }}
         />
       )}
+      {webPageSchema && (
+        <Script
+          id="school-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: webPageSchema,
+          }}
+        />
+      )}
 
-      <Script
+      {/* <Script
         id="college-university-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(collegeUniversitySchema),
         }}
-      />
+      /> */}
+      {breadcrumbSchema && (
+        <Script
+          id="breadcrumb-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+        />
+      )}
       <SchoolHero
         herobanner={school?.schoolherobanner}
         title={school.schoolname}

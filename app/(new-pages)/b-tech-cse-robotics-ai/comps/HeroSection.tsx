@@ -5,7 +5,7 @@ import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[linear-gradient(90deg,#BDCBCF_-1.04%,#BCD5E2_101.28%)] relative overflow-hidden">
+    <section className="bg-[linear-gradient(90deg,#BDCBCF_-1.04%,#BCD5E2_101.28%)] relative overflow-hidden" id="apply-form-mobile">
       <div className="relative w-full xl:hidden pt-[120px]">
         <div className="relative w-full flex flex-col items-center">
           <Image
@@ -35,7 +35,7 @@ const HeroSection = () => {
               <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
 
               <Link
-                href="#"
+                href="#apply-form-mobile"
                 className="underline font-light hover:opacity-80 transition"
               >
                 Apply on the admissions portal
@@ -150,7 +150,7 @@ const HeroSection = () => {
             <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
 
             <Link
-              href="#"
+              href="#apply-form-mobile"
               className="underline font-light hover:opacity-80 transition"
             >
               Apply on the admissions portal

@@ -15,6 +15,7 @@ import YourJourney2 from "./(main-website)/Home/homeComp/YourJourney2";
 import {
   commonCollegeUniversitySchema,
   createOrganizationSchema,
+  createVideoSchema,
   createWebsiteSchema,
 } from "@/lib/api/common";
 // import YourJourney from "./(main-website)/Home/YourJourney";
@@ -86,32 +87,31 @@ export default async function HomePage() {
     searchPath: "https://www.krmangalam.edu.in/search?q=",
   });
 
-
   const organizationSchema = createOrganizationSchema({
-  name: "K.R. Mangalam University",
-  alternateName: "KRMU",
-  url: "https://www.krmangalam.edu.in/",
-  logo: "https://www.krmangalam.edu.in/KRMU-Logo-NAAC.webp", // Use the actual logo URL
-  description:
-    "K.R. Mangalam University is a private university located in Gurugram, Haryana, India. Established in 2013, the university offers undergraduate, postgraduate, doctoral and diploma programmes across multiple disciplines.",
-  telephone: "+91-8800697010",
-  email: "welcome@krmangalam.edu.in",
-  foundingDate: "2013",
-  address: {
-    streetAddress: "Sohna Road",
-    addressLocality: "Gurugram",
-    addressRegion: "Haryana",
-    postalCode: "122103",
-    addressCountry: "IN",
-  },
-  sameAs: [
-    "https://www.linkedin.com/school/k-r-mangalam-university/",
-    "https://www.facebook.com/krmangalamuniversity/",
-    "https://www.instagram.com/krmangalamuniversity/",
-    "https://www.youtube.com/@krmangalamuniversity",
-    "https://en.wikipedia.org/wiki/K.R._Mangalam_University",
-  ],
-});
+    name: "K.R. Mangalam University",
+    alternateName: "KRMU",
+    url: "https://www.krmangalam.edu.in/",
+    logo: "https://www.krmangalam.edu.in/KRMU-Logo-NAAC.webp", // Use the actual logo URL
+    description:
+      "K.R. Mangalam University is a private university located in Gurugram, Haryana, India. Established in 2013, the university offers undergraduate, postgraduate, doctoral and diploma programmes across multiple disciplines.",
+    telephone: "+91-8800697010",
+    email: "welcome@krmangalam.edu.in",
+    foundingDate: "2013",
+    address: {
+      streetAddress: "Sohna Road",
+      addressLocality: "Gurugram",
+      addressRegion: "Haryana",
+      postalCode: "122103",
+      addressCountry: "IN",
+    },
+    sameAs: [
+      "https://www.linkedin.com/school/k-r-mangalam-university/",
+      "https://www.facebook.com/krmangalamuniversity/",
+      "https://www.instagram.com/krmangalamuniversity/",
+      "https://www.youtube.com/@krmangalamuniversity",
+      "https://en.wikipedia.org/wiki/K.R._Mangalam_University",
+    ],
+  });
 
   // const organizationSchema = createOrganizationSchema({
   //   name: "K.R. Mangalam University",
@@ -167,7 +167,18 @@ export default async function HomePage() {
       "https://in.linkedin.com/school/krmuniv",
     ],
   });
-// console.log('organizationSchema', organizationSchema);
+  // console.log('organizationSchema', organizationSchema);
+const videoSchema = createVideoSchema({
+  name: "K.R. Mangalam University | Top Private University in Gurugram",
+  description:
+    "Join KRMU, Gurugram's top NAAC A accredited university. 100+ programmes, 800+ recruiters & 56.6 LPA highest package. Admissions 2026 Open. Apply Now!",
+  thumbnailUrl: "https://www.krmangalam.edu.in/images/thumb.png",
+  uploadDate: "2024-01-15T08:00:00+05:30",
+  duration: "PT42S",
+  embedUrl: "https://www.krmangalam.edu.in/",
+  contentUrl:
+    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/krm_bg_hero_e316d4159a.mp4",
+});
   return (
     <>
       <Script
@@ -180,6 +191,11 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: collageOrUniversitySchema }}
       /> */}
+      <Script
+        id="video-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: videoSchema }}
+      />
       <Script
         id="organization-schema"
         type="application/ld+json"
