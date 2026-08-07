@@ -62,6 +62,7 @@ import {
   commonCollegeUniversitySchema,
   createBreadcrumbSchema,
   createProgrammeItemListSchema,
+  createSchoolPageSchema,
   createWebPageSchema,
 } from "@/lib/api/common";
 
@@ -314,7 +315,7 @@ export default async function Page({ params }: Props) {
   //   ],
   // });
 
-  const webPageSchema = createWebPageSchema({
+  const schoolPageSchema = createSchoolPageSchema({
     name: `${school.schoolname} | K.R. Mangalam University`,
     url: `https://www.krmangalam.edu.in/${school.urlslug}`,
     description: SeoData.description,
@@ -333,12 +334,12 @@ export default async function Page({ params }: Props) {
           }}
         />
       )}
-      {webPageSchema && (
+      {schoolPageSchema && (
         <Script
           id="school-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: webPageSchema,
+            __html: schoolPageSchema,
           }}
         />
       )}
