@@ -5,7 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const ContactUsRegionalOffice = () => {
   return (
-    <section className="py-[60px] px-4 bg-[url(/contact-us/contactus-gradient.webp)] bg-cover bg-no-repeat bg-center">
+    <section className="py-[60px] px-4 bg-[url(/contact-us/contactus-gradient.webp)] bg-cover bg-no-repeat bg-center temp-class">
       <div className="max-w-[1664px] mx-auto w-full text-white">
         <h3 className="text-3xl md:text-5xl font-semibold mb-5">KRMU Regional Office</h3>
       </div>
