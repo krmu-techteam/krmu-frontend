@@ -8,7 +8,7 @@ export interface BaseFieldConfig {
 
 export interface SelectOption {
   label: string;
-  value: string | number;
+  value: number;
 }
 export interface TextFieldConfig extends BaseFieldConfig {
   type: "text";
