@@ -1,4 +1,3 @@
-import SectionDivider from "@/components/common/SectionDivider";
 import { PlacementCounter } from "@/lib/types/placements/placements-overview";
 
 type Props = {
@@ -7,6 +6,7 @@ type Props = {
   overviewvideo: string;
   overviewcounter: PlacementCounter[];
 };
+
 const HeroSection = ({
   title,
   subtitle,
@@ -15,62 +15,63 @@ const HeroSection = ({
 }: Props) => {
   const iframe = overviewvideo;
   const videoSrc = iframe?.match(/src="([^"]+)"/)?.[1];
-  const ABOUT_STAT_BG_COLORS = ["#081D2D", "#0D2131", "#182C3C", "#233747"];
 
   return (
-    <div className="relative w-full pb-10">
-      <section className="relative z-5 pt-[25%] md:pt-[10%] 2xl:pt-[9%] pb-[7%] px-6 md:px-8 xl:px-16">
-        <div className="max-w-[1530px] mx-auto gap-6 bg-gradient-to-t from-[#0D3B61] via-[#124977] to-[#01192E] rounded-[3px] w-full lg:flex items-center py-8 md:py-10  px-6 md:px-7 lg:px-10">
-          <div className="lg:w-1/2 text-white">
-            <h3 className="text-2xl md:text-4xl font-light font-poppins lg:text-3xl my-2.5 mb-2">
+    <div className="relative w-full">
+      {/* Full-width Gradient Hero Section */}
+      <section
+        style={{
+          background:
+            "linear-gradient(108.76deg, #061623 37.33%, #00345F 92.03%)",
+        }}
+        className="relative z-5 pt-[120px] md:pt-[180px] pb-12 md:pb-16 px-6 md:px-8 xl:px-16 min-h-[544px] flex items-center"
+      >
+        <div className="max-w-[1530px] mx-auto gap-8 md:gap-12 w-full lg:flex items-center justify-between">
+          {/* Left Column: Subtitle, Title & Stat Cards */}
+          <div className="lg:w-1/2 text-white flex flex-col justify-center">
+            {/* Subtitle: Poppins Regular 26px */}
+            <h3 className="font-poppins font-normal text-[20px] sm:text-[24px] lg:text-[26px] text-white/90 leading-[100%] tracking-normal mb-3">
               {subtitle}
             </h3>
-            <h1 className="text-2xl md:text-[44px] lg:text-5xl font-bold my-2.5 leading-[1.2]">
+
+            {/* Title: Poppins SemiBold 46px */}
+            <h1 className="font-poppins font-semibold text-[32px] sm:text-[40px] lg:text-[46px] text-white leading-[115%] tracking-normal mb-8">
               {title}
             </h1>
+
+            {/* 3 Inline Stat Cards: 189x118px, border #E7C268, rounded 10px */}
+            {overviewcounter && overviewcounter.length > 0 && (
+              <div className="flex flex-wrap gap-4 mt-2">
+                {overviewcounter.slice(0, 3).map((counter) => (
+                  <div
+                    key={counter?.id}
+                    className="w-[189px] h-[118px] rounded-[10px] border border-[#E7C268] bg-transparent p-3 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-[#071d2e]/70 shrink-0"
+                  >
+                    <div className="text-xl sm:text-2xl lg:text-[25px] font-bold text-brand-gold font-poppins leading-tight">
+                      {counter?.title}
+                    </div>
+                    <div className="text-white text-[18px] font-poppins font-normal leading-snug mt-1.5 capitalize">
+                      {counter?.subtitle}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-          {/* <div
-            dangerouslySetInnerHTML={{
-              __html: overviewvideo,
-            }}
-            className="lg:w-1/2"
-          /> */}
-          <div className="lg:w-1/2 ">
-            <iframe
-              className="aspect-video rounded-md w-full"
-              src={videoSrc}
-            ></iframe>
+
+          {/* Right Column: Embedded Video */}
+          <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
+            <div className="w-full max-w-[680px]">
+              <iframe
+                className="w-full aspect-video"
+                src={videoSrc}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
-
-      <div className="max-w-[1530px] mx-auto w-full md:-mt-[5%] px-6 md:px-8 xl:px-16 2xl:px-0">
-        <div className="md:flex w-full gap-3 xl:gap-5">
-          {overviewcounter &&
-            overviewcounter.map((counter, idx) => {
-              return (
-                <div
-                  key={counter?.id}
-                  style={{
-                    backgroundColor:
-                      ABOUT_STAT_BG_COLORS[idx % ABOUT_STAT_BG_COLORS.length],
-                  }}
-                  className={`md:w-1/3 group relative overflow-hidden py-10 px-8 border border-white/5 shadow-xl hover:border-brand-gold/30 hover:shadow-2xl hover:shadow-brand-gold/10 hover:-translate-y-1 transition-all duration-500 ease-out cursor-default text-start min-h-[120px] xl:min-h-[140px] flex flex-col justify-center ${counter?.classname || ""}`}
-                >
-                  <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
-
-                  <div className="text-3xl md:text-4xl font-light text-brand-gold mb-2 leading-none relative z-10 transition-colors duration-500 ease-out font-poppins">
-                    {counter?.title}
-                  </div>
-                  <div className="text-white/80 text-[14px] 2xl:text-[16px] capitalize tracking-wide font-light leading-tight relative z-10 transition-colors font-poppins">
-                    {counter?.subtitle}
-                  </div>
-                </div>
-              );
-            })}
-        </div>
-      </div>
-      <SectionDivider />
     </div>
   );
 };

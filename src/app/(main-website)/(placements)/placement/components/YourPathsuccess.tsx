@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const YourPathsuccess = () => {
   return (
-    <section className="py-10 lg:py-[20%] lg:bg-[url(/placements/Your-Path-to-Success-1.webp)] bg-cover bg-center px-4">
+    <section className="py-10 lg:py-[20%] lg:bg-[url(/images/placement/bg-placement-highlight.jpg)] bg-cover bg-center px-4">
       <div className="max-w-[1664px] mx-auto w-full lg:flex lg:text-white">
         <div className="lg:w-1/4">
           <h2 className="text-[26px] lg:text-5xl font-semibold mb-3 lg:mb-5">
