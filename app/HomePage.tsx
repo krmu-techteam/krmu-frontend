@@ -168,18 +168,17 @@ export default async function HomePage() {
     ],
   });
   // console.log('organizationSchema', organizationSchema);
-
-  // const videoSchema = createVideoSchema({
-  //   name: "K.R. Mangalam University Campus Tour & Overview",
-  //   description:
-  //     "Explore the state-of-the-art campus, labs, and student life at K.R. Mangalam University, Gurugram.",
-  //   thumbnailUrl:
-  //     "https://www.krmangalam.edu.in/assets/images/video-thumbnail.jpg",
-  //   uploadDate: "2024-01-15T08:00:00+05:30",
-  //   duration: "PT3M45S",
-  //   embedUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-  //   contentUrl: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
-  // });
+const videoSchema = createVideoSchema({
+  name: "K.R. Mangalam University | Top Private University in Gurugram",
+  description:
+    "Join KRMU, Gurugram's top NAAC A accredited university. 100+ programmes, 800+ recruiters & 56.6 LPA highest package. Admissions 2026 Open. Apply Now!",
+  thumbnailUrl: "https://www.krmangalam.edu.in/images/thumb.png",
+  uploadDate: "2024-01-15T08:00:00+05:30",
+  duration: "PT42S",
+  embedUrl: "https://www.krmangalam.edu.in/",
+  contentUrl:
+    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/krm_bg_hero_e316d4159a.mp4",
+});
   return (
     <>
       <Script
@@ -192,6 +191,11 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: collageOrUniversitySchema }}
       /> */}
+      <Script
+        id="video-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: videoSchema }}
+      />
       <Script
         id="organization-schema"
         type="application/ld+json"

@@ -1145,7 +1145,7 @@ export const createAboutPageSchema = ({
 }: AboutPageSchemaProps) => {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
+    "@type": "WebPage",
     name,
     url,
     description,
@@ -1190,8 +1190,6 @@ export const createPlacementOverviewSchema = ({
   return JSON.stringify(schema);
 };
 
-
-
 // lib/schema/videoSchema.ts
 
 export interface VideoSchemaProps {
@@ -1213,15 +1211,17 @@ export function createVideoSchema({
   embedUrl,
   contentUrl,
 }: VideoSchemaProps) {
-  return {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     name,
     description,
-    thumbnailUrl: [thumbnailUrl],
+    thumbnailUrl,
     uploadDate,
     duration,
     embedUrl,
     contentUrl,
   };
+
+  return JSON.stringify(schema);
 }
