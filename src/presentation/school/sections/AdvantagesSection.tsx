@@ -50,7 +50,7 @@ const AdvantagesSection = ({
 
           {/* Right: Heading & Description */}
           <div className="flex-1 flex flex-col justify-center gap-4 lg:pl-2 pt-2">
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-normal font-serif text-white leading-tight">
+            <h2 className="heading-primary">
               {heading} {subtitle}
             </h2>
 
