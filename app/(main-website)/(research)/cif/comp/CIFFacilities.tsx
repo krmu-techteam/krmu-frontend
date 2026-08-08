@@ -59,7 +59,7 @@ const CIFFacilities = () => {
               className="text-white text-base font-semibold"
               target="_blank" rel="noopener noreferrer"
             >
-              Muffle Furnance
+              Muffle Furnace
             </Link>
           </div>
         </div>

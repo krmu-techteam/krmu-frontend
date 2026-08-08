@@ -19,11 +19,11 @@ const ResearchInnovationHeroSection = () => {
             shaping future innovations. Our research spans diverse domains,
             blending traditional disciplines with cutting-edge studies in AI,
             materials science, and social welfare. We offer an environment that
-            nurtures creativity, encourages interdisciplinary collaboration, an
+            nurtures creativity, encourages interdisciplinary collaboration, and
             fosters a global perspective in addressing the challenges of our
             times.
           </p>
-          {/* <Link
+          {/* <Link 
             href="/PDF"
             className="bg-[#e31e24] leading-[1.5] py-2.5 px-5 inline-block rounded-[4px] text-xl text-white md:leading-2.5 blink-effect"
           >
