@@ -32,6 +32,7 @@ export const NoIndexEventsSlugs = [
   // "collaboration-with-the-department-of-justice",
   "career-counseling-session-on-higher-education",
   "campus-quest-season-2-2",
+  "campus-quest-season-2",
   // "event-on-colors-of-change-inspiring-minds-sharing-smiles",
   // "visit-to-constitution-club-of-india-national-summit",
   "declamation-contest-on-drug-abuse",
