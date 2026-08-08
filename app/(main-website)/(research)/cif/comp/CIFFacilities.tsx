@@ -53,7 +53,7 @@ const CIFFacilities = () => {
               LCR Meter
             </Link>
           </div>
-          <div className="bg-[url(/research/cardbg-1.webp)] bg-no-repeat bg-cover rounded-[40px] flex items-center justify-center text-center p-5 min-h-[121px]">
+          <div className="bg-[url(/research/cardbg-1.webp)] bg-no-repeat bg-cover rounded-[40px] flex items-center justify-center text-center p-5 min-h-[121px] temp-class">
             <Link
               href="/muffle-furnance"
               className="text-white text-base font-semibold"
