@@ -315,6 +315,14 @@ export default async function Page({ params }: Props) {
   //   ],
   // });
 
+  const webPageSchema = createWebPageSchema({
+    name: "Fee structure | K.R. Mangalam University",
+    url: `https://www.krmangalam.edu.in/${school.urlslug}`,
+    description: SeoData.description,
+    aboutName: school.schoolname,
+    aboutUrl: "https://www.krmangalam.edu.in/",
+  });
+
   const schoolPageSchema = createSchoolPageSchema({
     name: `${school.schoolname} | K.R. Mangalam University`,
     url: `https://www.krmangalam.edu.in/${school.urlslug}`,
@@ -322,7 +330,7 @@ export default async function Page({ params }: Props) {
     aboutName: school.schoolname,
     aboutUrl: "https://www.krmangalam.edu.in/",
   });
-
+  console.log("webPageSchema", webPageSchema);
   return (
     <>
       {schoolSchema && (
@@ -332,6 +340,13 @@ export default async function Page({ params }: Props) {
           dangerouslySetInnerHTML={{
             __html: schoolSchema,
           }}
+        />
+      )}
+      {webPageSchema && (
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: webPageSchema }}
         />
       )}
       {schoolPageSchema && (
