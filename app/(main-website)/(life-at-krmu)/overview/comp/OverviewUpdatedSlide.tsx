@@ -56,7 +56,7 @@ const OverviewUpdatedSlide = ({ data }: Props) => {
                       {item?.title}
                     </h4>
 
-                    <div className="line-clamp-2 flex-grow mb-4">
+                    <div className="line-clamp-2 mb-4">
                       <BlocksRenderer content={item.content} />
                     </div>
 
