@@ -1,5 +1,3 @@
-// src/features/faculty/types.ts
-
 export interface Faculty {
   id: number;
   name: string;
@@ -14,4 +12,23 @@ export interface FacultyResponse {
   success: boolean;
   message: string;
   data: Faculty;
+}
+
+export interface FacultyListResponse {
+  success: boolean;
+  message: string;
+  data: Faculty[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
+}
+
+export interface FacultyQueryParams {
+  page?: number;
+  limit?: number;
+  search?: string;
+  school_category_id?: number;
 }

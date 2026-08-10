@@ -7,9 +7,9 @@ export const createFacultySchema = z.object({
 
   designation: z.string().min(2, "Designation is required").max(150),
 
-  qualification: z.string().max(500).optional().or(z.literal("")),
+  qualifications: z.string().max(500).optional().or(z.literal("")),
 
-  description: z.string().optional().or(z.literal("")),
+  // description: z.string().optional().or(z.literal("")),
 
   school_category_id: z.number().int().positive().optional(),
 

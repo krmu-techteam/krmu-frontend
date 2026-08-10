@@ -1,12 +1,16 @@
-// src/features/faculty/api.ts
-
-import { API } from "../../lib/api/endpoints";
 import { createResource } from "../../services/create-resource";
+import { API } from "../../lib/api/endpoints";
 import { CreateFacultyDto, UpdateFacultyDto } from "./schema";
-import { FacultyResponse } from "./type";
+import {
+  FacultyListResponse,
+  FacultyQueryParams,
+  FacultyResponse,
+} from "./type";
 
 export const facultyApi = createResource<
   FacultyResponse,
-  CreateFacultyDto | FormData,
-  UpdateFacultyDto | FormData
+  CreateFacultyDto,
+  UpdateFacultyDto,
+  FacultyListResponse,
+  FacultyQueryParams
 >(API.FACULTY);

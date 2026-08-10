@@ -1,14 +1,26 @@
 "use client";
 
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { facultyApi } from "../api";
-import { CreateFacultyDto } from "../type";
-
+import { CreateFacultyDto } from "../schema";
+import { toast } from "sonner";
+import { facultyKeys } from "../query-keys";
 
 export function useCreateFaculty() {
-  return useMutation({
-    mutationFn: (data: CreateFacultyDto | FormData) =>
-      facultyApi.create(data),
+  const queryClient = useQueryClient();
 
+  return useMutation({
+    mutationFn: (data: CreateFacultyDto) => facultyApi.create(data),
+
+    onSuccess: (response) => {
+      (toast.success(response.data.message || "Faculty Create Successfully"),
+        queryClient.invalidateQueries({
+          queryKey: facultyKeys.all,
+        }));
+    },
+    onError: (error) => {
+      console.error("Create faculty error:", error);
+      toast.error("Failed to create faculty");
+    },
   });
 }

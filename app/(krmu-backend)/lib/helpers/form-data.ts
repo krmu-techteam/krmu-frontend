@@ -1,9 +1,15 @@
 function isFile(value: unknown): value is File {
-  return value instanceof File;
+  return (
+    typeof File !== "undefined" &&
+    value instanceof File
+  );
 }
 
 function isBlob(value: unknown): value is Blob {
-  return value instanceof Blob;
+  return (
+    typeof Blob !== "undefined" &&
+    value instanceof Blob
+  );
 }
 
 function isDate(value: unknown): value is Date {
@@ -31,20 +37,29 @@ function appendToFormData(
 
   if (Array.isArray(value)) {
     value.forEach((item, index) => {
-      appendToFormData(formData, item, `${key}[${index}]`);
+      appendToFormData(
+        formData,
+        item,
+        `${key}[${index}]`
+      );
     });
 
     return;
   }
 
-  if (typeof value === "object") {
-    Object.entries(value).forEach(([childKey, childValue]) => {
-      appendToFormData(
-        formData,
-        childValue,
-        `${key}[${childKey}]`
-      );
-    });
+  if (
+    typeof value === "object" &&
+    value !== null
+  ) {
+    Object.entries(value).forEach(
+      ([childKey, childValue]) => {
+        appendToFormData(
+          formData,
+          childValue,
+          `${key}[${childKey}]`
+        );
+      }
+    );
 
     return;
   }
@@ -52,7 +67,9 @@ function appendToFormData(
   formData.append(key, String(value));
 }
 
-export function toFormData<T extends Record<string, unknown>>(data: T) {
+export function toFormData(
+  data: Record<string, unknown>
+): FormData {
   const formData = new FormData();
 
   Object.entries(data).forEach(([key, value]) => {

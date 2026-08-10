@@ -1,3 +1,5 @@
+// src/services/resource.service.ts
+
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 import { http } from "../lib/api/http";
 
@@ -5,6 +7,8 @@ export class ResourceService<
   TResponse = unknown,
   TCreate = unknown,
   TUpdate = TCreate,
+  TList = TResponse,
+  TParams extends object = object,
 > {
   constructor(protected endpoint: string) {}
 
@@ -16,10 +20,10 @@ export class ResourceService<
   }
 
   findAll(
-    params?: Record<string, unknown>,
+    params?: TParams,
     config?: AxiosRequestConfig,
-  ): Promise<AxiosResponse<TResponse>> {
-    return http.get<TResponse>(this.endpoint, {
+  ): Promise<AxiosResponse<TList>> {
+    return http.get<TList>(this.endpoint, {
       ...config,
       params,
     });

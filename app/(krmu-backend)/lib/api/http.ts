@@ -35,11 +35,16 @@ class HttpClient {
     return api.request<T>(config);
   }
 
-  get<T>(url: string, config?: AxiosRequestConfig) {
+  get<T, TParams extends object = object>(
+    url: string,
+    config?: AxiosRequestConfig,
+    params?: TParams,
+  ) {
     return this.request<T>({
       method: "GET",
       url,
       ...config,
+      params,
     });
   }
 
