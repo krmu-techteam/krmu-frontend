@@ -2,7 +2,8 @@
 
 import { API } from "../../lib/api/endpoints";
 import { createResource } from "../../services/create-resource";
-import { CreateFacultyDto, FacultyResponse, UpdateFacultyDto } from "./type";
+import { CreateFacultyDto, UpdateFacultyDto } from "./schema";
+import { FacultyResponse } from "./type";
 
 export const facultyApi = createResource<
   FacultyResponse,

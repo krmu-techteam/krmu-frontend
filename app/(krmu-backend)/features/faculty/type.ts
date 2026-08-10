@@ -1,22 +1,13 @@
 // src/features/faculty/types.ts
 
-export interface CreateFacultyDto {
-  name: string;
-  image?: File | null;
-  school_category_id?: number;
-}
-
-export interface UpdateFacultyDto {
-  name: string;
-  image?: File | null;
-  school_category_id?: number;
-}
-
 export interface Faculty {
   id: number;
   name: string;
-  image: string | null;
+  designation: string;
+  qualification: string | null;
+  description: string | null;
   school_category_id: number | null;
+  image: string | null;
 }
 
 export interface FacultyResponse {

@@ -37,7 +37,7 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
           return (
             <li
               key={item.id}
-              className="first:bg-[#001732] first:transition-all  first:relative first:overflow-hidden group  first:rounded-[5px] first:px-2 first:py-[2px]"
+              // className="first:bg-[#001732] first:transition-all  first:relative first:overflow-hidden group  first:rounded-[5px] first:px-2 first:py-[2px]"
             >
               {topbarmenu.indexOf(item) === 0 && (
                 <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
