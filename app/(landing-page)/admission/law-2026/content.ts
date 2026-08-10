@@ -77,43 +77,43 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/9-law/accenture.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/law-2026/accenture.png",
     alt: "Accenture Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/9-law/azb-partners.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/law-2026/azb.png",
     alt: "azb-partners Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/9-law/desai-diwanji.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/law-2026/dw.png",
     alt: "desai-diwanji Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/9-law/karat.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/law-2026/karat.png",
     alt: "karat Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/9-law/kpmg.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/law-2026/kpmg.png",
     alt: "kpmg Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/9-law/pahuja.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/law-2026/pa.png",
     alt: "pahuja Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/9-law/pulastya-legal.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/law-2026/pl.png",
     alt: "pulastya-legal Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/9-law/sr-associates.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/law-2026/sr.png",
     alt: "sr-associates Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/9-law/trilegal_logo.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/law-2026/trilegal.png",
     alt: "trilegal_logo Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/9-law/vrankers.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/law-2026/vranker.png",
     alt: "vrankers Logo",
   },
 ];

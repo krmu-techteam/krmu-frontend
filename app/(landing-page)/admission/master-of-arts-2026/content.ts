@@ -90,32 +90,32 @@ export const prominentRecruiterContent: ProminentRecruiterContent = {
 
   logos: [
     {
-      src: "/wp-content/landingpage/master-of-arts-2026/recruiters/hdfc-logo.png",
-      alt: "Accenture",
+      src: "https://krmangalam.edu.in/images/landingpage/master-of-arts-2026/hdfc.png",
+      alt: "HDFC",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/master-of-arts-2026/recruiters/vidushi.png",
-      alt: "Accenture",
+      src: "https://krmangalam.edu.in/images/landingpage/master-of-arts-2026/vidushi.png",
+      alt: "Vidushi",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/master-of-arts-2026/recruiters/cryptomize.png",
-      alt: "Accenture",
+      src: "https://krmangalam.edu.in/images/landingpage/master-of-arts-2026/cryptomize.png",
+      alt: "Cryptomize",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/master-of-arts-2026/recruiters/medanta.jpg",
-      alt: "Accenture",
+      src: "https://krmangalam.edu.in/images/landingpage/master-of-arts-2026/medanta.png",
+      alt: "Medanta",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/master-of-arts-2026/recruiters/zynga.webp",
-      alt: "Accenture",
+      src: "https://krmangalam.edu.in/images/landingpage/master-of-arts-2026/zynga.png",
+      alt: "Zynga",
       width: 160,
       height: 40,
     },

@@ -79,35 +79,33 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/lifestyle.png",
+    imgUrl:
+      "https://krmangalam.edu.in/images/landingpage/bachelor-of-arts-2026/raymond.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/raymond.png",
+    imgUrl:
+      "https://krmangalam.edu.in/images/landingpage/bachelor-of-arts-2026/hdfc.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/hdfc.png",
+    imgUrl:
+      "https://krmangalam.edu.in/images/landingpage/bachelor-of-arts-2026/accenture.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/accen.png",
+    imgUrl:
+      "https://krmangalam.edu.in/images/landingpage/bachelor-of-arts-2026/wow-spaces.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/wow.png",
+    imgUrl:
+      "https://krmangalam.edu.in/images/landingpage/bachelor-of-arts-2026/lifestyle.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/label.png",
-    alt: "Recruiter Logo",
-  },
-  {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/lifestyle.png",
-    alt: "Recruiter Logo",
-  },
-  {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/kamalini.png",
+    imgUrl:
+      "https://krmangalam.edu.in/images/landingpage/bachelor-of-arts-2026/kamalini.png",
     alt: "Recruiter Logo",
   },
 ];
