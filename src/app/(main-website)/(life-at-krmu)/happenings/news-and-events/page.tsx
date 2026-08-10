@@ -75,7 +75,6 @@ const page = async () => {
   return (
     <>
       <HeroSection title={main_heading} main_desc={main_desc} />
-      <FeaturedBannerSection />
       <NewsListingSection />
     </>
   );

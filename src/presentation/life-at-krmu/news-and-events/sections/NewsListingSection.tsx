@@ -4,14 +4,32 @@ import { useEffect, useState } from "react";
 import { getNewsEventsWP } from "@/lib/api/news-events";
 import { NewsEventItem } from "@/lib/types/news-events";
 import { NewsCard, NewsCardSkeleton } from "../components";
+import { FeaturedBannerSkeleton } from "../components/NewsCardSkeleton";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
+import FeaturedBannerSection from "./FeaturedBannerSection";
 
 const NewsListingSection = () => {
   const [news, setNews] = useState<NewsEventItem[]>([]);
+  const [featuredItem, setFeaturedItem] = useState<NewsEventItem | null>(null);
   const [page, setPage] = useState(1);
   const [pageSize] = useState(12);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    async function fetchFeatured() {
+      try {
+        const res = await getNewsEventsWP(1, 1);
+        if (res.data && res.data.length > 0) {
+          setFeaturedItem(res.data[0]);
+        }
+      } catch (err) {
+        console.error("Failed to fetch featured news:", err);
+      }
+    }
+    fetchFeatured();
+  }, []);
 
   useEffect(() => {
     async function fetchNews() {
@@ -30,7 +48,21 @@ const NewsListingSection = () => {
 
   return (
     <section>
-      <div className="max-w-[1530px] mx-auto px-4 md:px-10 w-full pb-8 md:pb-12">
+      <div className="max-w-[1530px] mx-auto px-4 md:px-10 w-full pt-4 md:pt-8 lg:pt-8 pb-8 md:pb-12">
+        {/* Featured Banner (Permanently Visible) */}
+        {!featuredItem ? (
+          <FeaturedBannerSkeleton />
+        ) : (
+          <div className="mt-4 md:mt-6 mb-8 md:mb-12">
+            <FeaturedBannerSection
+              title={featuredItem.title.rendered}
+              slug={featuredItem.slug}
+              publishedAt={featuredItem.date}
+              firstImage={featuredItem.featured_media}
+            />
+          </div>
+        )}
+
         {/* News Cards or Skeleton Loaders */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {loading
