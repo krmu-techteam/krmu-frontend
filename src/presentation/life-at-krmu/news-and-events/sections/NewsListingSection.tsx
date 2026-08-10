@@ -66,10 +66,13 @@ const NewsListingSection = () => {
         {/* News Cards or Skeleton Loaders */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {loading
-            ? Array.from({ length: pageSize }).map((_, i) => (
-                <NewsCardSkeleton key={i} />
-              ))
-            : news.map((item, i) => (
+            ? Array.from({ length: pageSize - (page === 1 ? 1 : 0) }).map(
+                (_, i) => <NewsCardSkeleton key={i} />,
+              )
+            : (page === 1 && featuredItem
+                ? news.filter((item) => item.slug !== featuredItem.slug)
+                : news
+              ).map((item, i) => (
                 <NewsCard
                   key={i}
                   title={item.title.rendered}
