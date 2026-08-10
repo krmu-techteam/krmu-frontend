@@ -38,7 +38,7 @@ const EventsAndExperienceCard = ({
           <BlocksRenderer content={content}  />
         </div>
         <Link
-          href={`events-and-news/${slug}`}
+          href={`/events-and-news/${slug}`}
           className="text-sm mt-4 inline-block underline"
         >
           Read More
