@@ -31,44 +31,47 @@ const NewsCard = ({ title, slug, firstImage, publishedAt }: NewsCardProps) => {
     fetchImage();
   }, [firstImage]);
 
-  const formattedDate = new Date(publishedAt).toLocaleDateString("en-US", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
+  const formattedDate = publishedAt
+    ? new Date(publishedAt).toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+      })
+    : "";
 
   return (
-    <div className="group cursor-pointer transform-gpu backface-hidden">
-      <Link href={`/events-and-news/${slug}`} className="block">
-        <div className="relative aspect-[3/2] rounded-sm overflow-hidden mb-4 bg-white/5 transform-gpu backface-hidden">
-          {imageUrl && (
-            <Image
-              src={imageUrl}
-              alt={title}
-              fill
-              className="object-cover group-hover:scale-110 transition-transform duration-1000 transform-gpu backface-hidden"
+    <div className="h-full">
+      <Link
+        href={`/events-and-news/${slug}`}
+        className="block h-full w-full group border border-[#294861] rounded-[10px] flex flex-col justify-between"
+      >
+        <div>
+          <div className="relative aspect-[16/10] w-full rounded-[8px] border border-[#294861] overflow-hidden mb-3.5 bg-white/5">
+            {imageUrl ? (
+              <Image
+                src={imageUrl}
+                alt={title || "News Image"}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            ) : (
+              <div className="w-full h-full bg-[#294861]" />
+            )}
+          </div>
+
+          <div className="p-3.5">
+            {formattedDate && (
+              <p className="text-[#E7C268] text-xs sm:text-sm font-medium mb-2 font-poppins">
+                Published On: {formattedDate}
+              </p>
+            )}
+
+            <h3
+              className="text-white font-poppins text-base sm:text-[18px] md:text-[20px] font-normal leading-snug line-clamp-2 group-hover:text-[#E7C268] transition-colors"
+              dangerouslySetInnerHTML={{ __html: title || "" }}
             />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
-            <span className="text-white text-[12px] font-normal font-poppins flex items-center gap-2 transform transform-gpu translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 backface-hidden">
-              Read Full Story{" "}
-              <ArrowUpRight size={14} className="text-brand-gold" />
-            </span>
           </div>
         </div>
-      </Link>
-
-      <p className="text-white/90 text-[16px] font-poppins font-normal mb-1 antialiased">
-        Published On: {formattedDate}
-      </p>
-
-      <Link href={`/events-and-news/${slug}`} className="block">
-        <h3
-          className="text-white font-serif md:text-[18px] text-base leading-snug group-hover:text-brand-gold transition-colors line-clamp-2 antialiased"
-          dangerouslySetInnerHTML={{
-            __html: title,
-          }}
-        />
       </Link>
     </div>
   );

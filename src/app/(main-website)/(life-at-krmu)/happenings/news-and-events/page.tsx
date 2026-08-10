@@ -3,6 +3,7 @@ import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import {
   HeroSection,
+  FeaturedBannerSection,
   NewsListingSection,
 } from "@/presentation/life-at-krmu/news-and-events/sections";
 import { getNewsAndEventsService } from "@/features/life-at-krmu/news-and-events";
@@ -74,6 +75,7 @@ const page = async () => {
   return (
     <>
       <HeroSection title={main_heading} main_desc={main_desc} />
+      <FeaturedBannerSection />
       <NewsListingSection />
     </>
   );
