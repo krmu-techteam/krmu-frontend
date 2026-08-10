@@ -1,5 +1,7 @@
 import React from "react";
 import HostelHero from "./comp/HostelHero";
+import HostelKeyFeatures from "./comp/HostelKeyFeatures";
+import HostelFacilitiesCard from "./comp/HostelFacilitiesCard";
 import HostelFacilities from "./comp/HostelFacilities";
 import HostelWarden from "./comp/HostelWarden";
 
@@ -77,6 +79,8 @@ const page = () => {
   return (
     <>
       <HostelHero />
+      <HostelKeyFeatures />
+      <HostelFacilitiesCard />
       <HostelFacilities />
       <HostelWarden />
     </>
