@@ -17,17 +17,23 @@ export function FormBuilder<T extends FieldValues>({
   onSubmit,
 }: FormBuilderProps<T>) {
   return (
-    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-      {fields.map((field) => (
-        <FieldRenderer key={field.name} control={form.control} field={field} />
-      ))}
+    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 p-5">
+      <div className="max-w-6xl mx-auto space-y-2">
+        {fields.map((field) => (
+          <FieldRenderer
+            key={field.name}
+            control={form.control}
+            field={field}
+          />
+        ))}
 
-      <button
-        type="submit"
-        className="rounded-md bg-blue-600 px-4 py-2 text-white"
-      >
-        Save
-      </button>
+        <button
+          type="submit"
+          className="rounded-md bg-blue-600 px-4 py-2 text-white"
+        >
+          Save
+        </button>
+      </div>
     </form>
   );
 }

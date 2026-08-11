@@ -9,11 +9,32 @@ export const facultyFields: FormField[] = [
     required: true,
   },
   {
-    type: "image",
-    name: "image",
-    label: "Faculty Image",
-    accept: "image/*",
+    type: "text",
+    name: "qualifications",
+    label: "Staff Qualifications",
+    placeholder: "Enter Qualifications",
+    required: false,
   },
+  {
+    type: "text",
+    name: "designation",
+    label: "Staff Designation",
+    placeholder: "Enter Designation",
+    required: false,
+  },
+  {
+    type: "text",
+    name: "emails",
+    label: "Email",
+    placeholder: "Enter Email",
+    required: false,
+  },
+  // {
+  //   type: "image",
+  //   name: "image",
+  //   label: "Faculty Image",
+  //   accept: "image/*",
+  // },
   // {
   //   type: "text",
   //   name: "linkedin_profiles",
@@ -44,24 +65,24 @@ export const facultyFields: FormField[] = [
   //   label: "Designation",
   //   placeholder: "Enter your designation",
   // },
-  {
-    type: "select",
-    name: "school_category_id",
-    label: "School Name",
-    placeholder: "Choose School",
-    options: [
-      {
-        label: "Engineering",
-        value: 22,
-      },
-      {
-        label: "Management",
-        value: 56,
-      },
-      {
-        label: "Law",
-        value: 66,
-      },
-    ],
-  },
+  // {
+  //   type: "select",
+  //   name: "school_category_id",
+  //   label: "School Name",
+  //   placeholder: "Choose School",
+  //   options: [
+  //     {
+  //       label: "Engineering",
+  //       value: 22,
+  //     },
+  //     {
+  //       label: "Management",
+  //       value: 56,
+  //     },
+  //     {
+  //       label: "Law",
+  //       value: 66,
+  //     },
+  //   ],
+  // },
 ];

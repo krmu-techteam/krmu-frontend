@@ -18,7 +18,7 @@ export function TextareaField<T extends FieldValues>({
       <label className="text-sm font-medium">{label}</label>
 
       <textarea
-        {...field}
+        {...field} 
         placeholder={placeholder}
         rows={5}
         className="w-full rounded-lg border px-4 py-3 resize-none"
