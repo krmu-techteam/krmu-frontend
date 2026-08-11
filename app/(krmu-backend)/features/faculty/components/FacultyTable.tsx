@@ -77,9 +77,9 @@ export default function FacultyTable() {
 
               <p className="text-sm">{faculty.designation}</p>
 
-              {faculty.qualification && (
+              {faculty.school_category_id && (
                 <p className="text-sm text-muted-foreground">
-                  {faculty.qualification}
+                  {faculty.qualifications}
                 </p>
               )}
             </div>

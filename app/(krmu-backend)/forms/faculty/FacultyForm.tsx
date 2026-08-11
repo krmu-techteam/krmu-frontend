@@ -54,13 +54,13 @@ export default function FacultyForm() {
           onChange={(event) => {
             const file = event.target.files?.[0] ?? null;
 
-            setValue("image", file, {
+            setValue("image_url", file, {
               shouldValidate: true,
             });
           }}
         />
 
-        {errors.image && <p>{errors.image.message}</p>}
+        {errors.image_url && <p>{errors.image_url.message}</p>}
       </div>
       <div>
         <label htmlFor="designation">Designation</label>
@@ -76,12 +76,12 @@ export default function FacultyForm() {
 
       {/* Qualification */}
       <div>
-        <label htmlFor="qualification">Qualification</label>
+        <label htmlFor="qualifications">Qualification</label>
 
         <input
           id="qualifications"
           {...register("qualifications")}
-          placeholder="Enter qualification"
+          placeholder="Enter qualifications"
         />
 
         {errors.qualifications && <p>{errors.qualifications.message}</p>}

@@ -2,10 +2,10 @@ export interface Faculty {
   id: number;
   name: string;
   designation: string;
-  qualification: string | null;
+  qualifications: string | null;
   description: string | null;
   school_category_id: number | null;
-  image: string | null;
+  image_url: string | null;
 }
 
 export interface FacultyResponse {
