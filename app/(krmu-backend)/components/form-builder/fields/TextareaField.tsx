@@ -1,3 +1,4 @@
+import { Textarea } from "@/components/ui/textarea";
 import { ControllerRenderProps, FieldValues, Path } from "react-hook-form";
 
 interface Props<T extends FieldValues> {
@@ -17,11 +18,11 @@ export function TextareaField<T extends FieldValues>({
     <div className="space-y-2">
       <label className="text-sm font-medium">{label}</label>
 
-      <textarea
-        {...field} 
+      <Textarea
+        {...field}
         placeholder={placeholder}
-        rows={5}
-        className="w-full rounded-lg border px-4 py-3 resize-none"
+        rows={12}
+        className="w-full rounded-lg border border-black/20 px-4 py-3"
       />
 
       {error && <p className="text-sm text-red-500">{error}</p>}

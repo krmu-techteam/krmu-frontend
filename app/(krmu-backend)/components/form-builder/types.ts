@@ -8,7 +8,7 @@ export interface BaseFieldConfig {
 
 export interface SelectOption {
   label: string;
-  value: number;
+  value: string | number;
 }
 export interface TextFieldConfig extends BaseFieldConfig {
   type: "text";
@@ -17,9 +17,11 @@ export interface TextFieldConfig extends BaseFieldConfig {
 export interface TextareaFieldConfig extends BaseFieldConfig {
   type: "textarea";
 }
-export interface TinyMCEFieldConfig extends BaseFieldConfig {
-  type: "tinymce";
+
+export interface TextEditorFieldConfig extends BaseFieldConfig {
+  type: "texteditor";
 }
+
 export interface ImageFieldConfig extends BaseFieldConfig {
   type: "image";
   accept?: string; // image/*, .png,.jpg, etc.
@@ -35,5 +37,5 @@ export type FormField =
   | TextFieldConfig
   | TextareaFieldConfig
   | ImageFieldConfig
+  | TextEditorFieldConfig
   | SelectFieldConfig;
-// | TinyMCEFieldConfig;

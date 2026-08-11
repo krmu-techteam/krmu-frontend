@@ -8,6 +8,19 @@ export const facultyFields: FormField[] = [
     placeholder: "Enter your name",
     required: true,
   },
+  // {
+  //   type: "image",
+  //   name: "image",
+  //   label: "Faculty Image",
+  //   accept: "image/*",
+  // },
+  // {
+  //   type: "text",
+  //   name: "sort_order",
+  //   label: "Number",
+  //   placeholder: "Enter Number",
+  //   required: true,
+  // },
   {
     type: "text",
     name: "qualifications",
@@ -29,60 +42,76 @@ export const facultyFields: FormField[] = [
     placeholder: "Enter Email",
     required: false,
   },
-  // {
-  //   type: "image",
-  //   name: "image",
-  //   label: "Faculty Image",
-  //   accept: "image/*",
-  // },
-  // {
-  //   type: "text",
-  //   name: "linkedin_profiles",
-  //   label: "LinkedIn Profiles",
-  //   placeholder: "Enter your LinkedIn profiles",
-  // },
-  // {
-  //   type: "text",
-  //   name: "interest_areas",
-  //   label: "Interest Areas",
-  //   placeholder: "Enter your interest areas",
-  // },
-  // {
-  //   type: "textarea",
-  //   name: "description",
-  //   label: "Description",
-  //   placeholder: "Enter a description",
-  // },
-  // {
-  //   type: "text",
-  //   name: "qualifications",
-  //   label: "Qualifications",
-  //   placeholder: "Enter your qualifications",
-  // },
-  // {
-  //   type: "text",
-  //   name: "designation",
-  //   label: "Designation",
-  //   placeholder: "Enter your designation",
-  // },
-  // {
-  //   type: "select",
-  //   name: "school_category_id",
-  //   label: "School Name",
-  //   placeholder: "Choose School",
-  //   options: [
-  //     {
-  //       label: "Engineering",
-  //       value: 22,
-  //     },
-  //     {
-  //       label: "Management",
-  //       value: 56,
-  //     },
-  //     {
-  //       label: "Law",
-  //       value: 66,
-  //     },
-  //   ],
-  // },
+  {
+    type: "text",
+    name: "linkedin_profiles",
+    label: "Linkedin Profile",
+    placeholder: "Enter Linkedin Profile",
+    required: false,
+  },
+  {
+    type: "text",
+    name: "interest_areas",
+    label: "Interest areas",
+    placeholder: "Enter Interest Areas",
+    required: false,
+  },
+  {
+    type: "texteditor",
+    name: "profile",
+    label: "Profile",
+    placeholder: "Enter Profile",
+  },
+  {
+    type: "texteditor",
+    name: "education",
+    label: "Education",
+    placeholder: "Enter Education",
+  },
+  {
+    type: "texteditor",
+    name: "experience",
+    label: "Experience",
+    placeholder: "Enter Experience",
+  },
+  {
+    type: "texteditor",
+    name: "research",
+    label: "Research",
+    placeholder: "Enter Research",
+  },
+  {
+    type: "texteditor",
+    name: "project_achievements",
+    label: "Project Achievements",
+    placeholder: "Enter Project Achievements",
+  },
+  {
+    type: "texteditor",
+    name: "conferences",
+    label: "Conferences",
+    placeholder: "Enter Conferences",
+  },
+  {
+    type: "texteditor",
+    name: "publications",
+    label: "Publications",
+    placeholder: "Enter Publications",
+  },
+  {
+    type: "select",
+    name: "status",
+    label: "Status",
+    placeholder: "Choose Status",
+    options: [
+      {
+        label: "Published",
+        value: "published",
+      },
+      {
+        label: "Draft",
+        value: "draft",
+      },
+    ],
+  },
 ];

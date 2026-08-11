@@ -2,7 +2,7 @@ import { ControllerRenderProps, FieldValues, Path } from "react-hook-form";
 
 interface Option {
   label: string;
-  value: number;
+  value: number | string;
 }
 
 interface Props<T extends FieldValues> {

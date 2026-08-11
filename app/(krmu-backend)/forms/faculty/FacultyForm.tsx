@@ -17,17 +17,27 @@ export default function FacultyForm() {
     resolver: zodResolver(createFacultySchema),
     defaultValues: {
       name: "",
+      // sort_order: "",
       qualifications: "",
       designation: "",
       emails: "",
+      linkedin_profiles: "",
+      interest_areas: "",
+      profile: "",
+      education: "",
+      experience: "",
+      research: "",
+      project_achievements: "",
+      conferences: "",
+      publications: "",
+      // image: null,
+      status: "published",
     },
   });
 
   const onSubmit = (data: CreateFacultyDto) => {
     console.log("data", data);
-    mutation.mutate({
-      ...data,
-    });
+    mutation.mutate(data);
   };
 
   return <FormBuilder form={form} fields={facultyFields} onSubmit={onSubmit} />;
