@@ -18,7 +18,7 @@ const ProgrammeHighlightCard = ({ title, desc, highlightimg }: Props) => {
             fill
             src={`${STRAPI_URL}${highlightimg?.url}`}
             alt={highlightimg?.alternativeText || title}
-            className="object-cover group-hover:scale-110 transition-transform duration-700"
+            className="object-s group-hover:scale-110 transition-transform duration-700"
             unoptimized
           />
         ) : (
@@ -26,12 +26,12 @@ const ProgrammeHighlightCard = ({ title, desc, highlightimg }: Props) => {
             No Image
           </div>
         )}
-        
+
         {/* Default Bottom Gradient & Title (Hidden on hover) */}
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#061623]/80 to-transparent p-4 transition-opacity duration-300 group-hover:opacity-0">
-           <h5 className="text-white font-poppins text-md md:text-[17px] font-medium text-center leading-tight">
-             {title}
-           </h5>
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#000000]/80 to-transparent p-4 transition-opacity duration-300 group-hover:opacity-0">
+          <h5 className="text-white font-poppins text-md md:text-[17px] font-medium text-center leading-tight">
+            {title}
+          </h5>
         </div>
 
         {/* Black Light Overlay on Hover */}

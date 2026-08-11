@@ -3,7 +3,6 @@ import { BcaVsBtechComparison, LabFacilitiesCarousel } from "../components";
 import { LabFacilitiesSectionProps } from "@/features/programs";
 import { DEFAULT_LAB_IMAGES } from "@/features/programs";
 import { parseCommaSeparatedUrls } from "@/features/programs";
-import SectionDivider from "@/components/common/SectionDivider";
 
 const LabsFacilitieSection = ({
   heading,
@@ -43,7 +42,6 @@ const LabsFacilitieSection = ({
         <div className="max-w-[1320px] mx-auto w-full mt-0 md:mt-10">
           {slug === "bca-ai-data-science" && <BcaVsBtechComparison />}
         </div>
-        <SectionDivider />
       </section>
     </>
   );

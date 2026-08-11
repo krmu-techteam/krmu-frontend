@@ -1,0 +1,76 @@
+<svg viewBox="0 0 380 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="capPlate_public" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7A746B" />
+      <stop offset="100%" stop-color="#524C44" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Golden Line Art -->
+  <g opacity="0.75">
+    <line x1="10" y1="75" x2="45" y2="75" stroke="#E5A823" stroke-width="1" stroke-dasharray="2 3" />
+    <polygon points="48,75 51,72 54,75 51,78" fill="#E5A823" />
+    <line x1="57" y1="75" x2="90" y2="75" stroke="#E5A823" stroke-width="1" stroke-dasharray="2 3" />
+    <path d="M 65 75 Q 85 65 110 50 T 145 42 T 175 45" stroke="#E5A823" stroke-width="1" stroke-dasharray="2 3" fill="none" />
+    <circle cx="20" cy="75" r="1.5" fill="#E5A823" />
+    <circle cx="75" cy="68" r="1.2" fill="#E5A823" />
+    <circle cx="105" cy="52" r="1.5" fill="#E5A823" />
+    <circle cx="130" cy="43" r="1.2" fill="#E5A823" />
+    <path d="M 335 30 L 337 32 L 335 34 L 333 32 Z" fill="#E5A823" />
+    <circle cx="345" cy="25" r="1.2" fill="#E5A823" />
+    <circle cx="350" cy="42" r="1.5" fill="#E5A823" />
+  </g>
+
+  <g transform="translate(10, 0)">
+    <!-- Bottom Book -->
+    <g transform="translate(160, 64)">
+      <path d="M 0 3 C 0 1 3 0 6 0 L 12 0 L 12 24 L 6 24 C 3 24 0 22 0 19 Z" fill="#FAF7F0" stroke="#5A5447" stroke-width="1.4" />
+      <path d="M 6 0 L 142 0 L 134 4 L 4 4 Z" fill="#FAF7F0" stroke="#5A5447" stroke-width="1.4" />
+      <path d="M 6 24 L 142 24 C 144 24 146 26 146 28 L 6 28 Z" fill="#EDE6D8" stroke="#5A5447" stroke-width="1.4" />
+      <path d="M 8 4 L 140 4 L 140 24 L 8 24 Z" fill="#FFFDF8" stroke="#5A5447" stroke-width="1.2" />
+      <path d="M 140 4 L 144 0 L 144 20 L 140 24 Z" fill="#EDE6D8" stroke="#5A5447" stroke-width="1" />
+      <line x1="12" y1="9" x2="136" y2="9" stroke="#B8B0A0" stroke-width="0.8" />
+      <line x1="12" y1="14" x2="136" y2="14" stroke="#D0C8B8" stroke-width="0.7" stroke-dasharray="5 2" />
+      <line x1="12" y1="19" x2="136" y2="19" stroke="#D0C8B8" stroke-width="0.7" stroke-dasharray="7 3" />
+    </g>
+
+    <!-- Top Book -->
+    <g transform="translate(170, 40)">
+      <path d="M 0 3 C 0 1 3 0 6 0 L 12 0 L 12 24 L 6 24 C 3 24 0 22 0 19 Z" fill="#F7F3E9" stroke="#5A5447" stroke-width="1.4" />
+      <path d="M 6 0 L 128 0 L 120 4 L 4 4 Z" fill="#FAF7F0" stroke="#5A5447" stroke-width="1.4" />
+      <path d="M 6 24 L 128 24 C 130 24 132 26 132 28 L 6 28 Z" fill="#EDE6D8" stroke="#5A5447" stroke-width="1.4" />
+      <path d="M 8 4 L 126 4 L 126 24 L 8 24 Z" fill="#FFFDF8" stroke="#5A5447" stroke-width="1.2" />
+      <path d="M 126 4 L 130 0 L 130 20 L 126 24 Z" fill="#EDE6D8" stroke="#5A5447" stroke-width="1" />
+      <line x1="12" y1="9" x2="122" y2="9" stroke="#B8B0A0" stroke-width="0.8" />
+      <line x1="12" y1="14" x2="122" y2="14" stroke="#D0C8B8" stroke-width="0.7" stroke-dasharray="5 2" />
+      <line x1="12" y1="19" x2="122" y2="19" stroke="#D0C8B8" stroke-width="0.7" stroke-dasharray="7 3" />
+    </g>
+
+    <!-- Diploma Scroll -->
+    <g transform="translate(125, 52) rotate(-6)">
+      <path d="M 10 5 L 95 5 C 99 5 102 10 102 16 C 102 22 99 27 95 27 L 10 27 Z" fill="#FFFDF8" stroke="#5A5447" stroke-width="1.5" stroke-linejoin="round" />
+      <ellipse cx="10" cy="16" rx="5" ry="11" fill="#F4EFE6" stroke="#5A5447" stroke-width="1.5" />
+      <ellipse cx="9" cy="16" rx="3" ry="8" fill="#E6DFC6" />
+      <path d="M 10 8 C 7 11 7 20 10 24" stroke="#5A5447" stroke-width="1" fill="none" />
+      <ellipse cx="95" cy="16" rx="5" ry="11" fill="#FFFDF8" stroke="#5A5447" stroke-width="1.5" />
+      <rect x="44" y="4" width="13" height="23" fill="#E5A823" stroke="#5A5447" stroke-width="1.2" />
+      <ellipse cx="50.5" cy="15.5" r="3.5" fill="#E5A823" stroke="#5A5447" stroke-width="1" />
+      <path d="M 47 18 C 43 26 35 37 31 44 L 39 41 L 45 46 C 46 37 47 27 48 19 Z" fill="#E5A823" stroke="#5A5447" stroke-width="1.2" />
+      <path d="M 53 18 C 56 26 62 36 69 43 L 63 40 L 56 45 C 55 37 54 27 53 19 Z" fill="#E5A823" stroke="#5A5447" stroke-width="1.2" />
+    </g>
+
+    <!-- Graduation Cap -->
+    <g transform="translate(176, 4)">
+      <path d="M 28 22 Q 55 28 82 22 L 82 28 Q 55 35 28 28 Z" fill="#4A463F" stroke="#302D29" stroke-width="1.5" />
+      <polygon points="55,2 108,14 55,26 2,14" fill="url(#capPlate_public)" stroke="#302D29" stroke-width="1.8" stroke-linejoin="round" />
+      <polygon points="55,5 100,14 55,23 10,14" fill="#5E584E" opacity="0.6" />
+      <ellipse cx="55" cy="14" rx="3.5" ry="2" fill="#E5A823" stroke="#302D29" stroke-width="1" />
+      <path d="M 55 14 C 45 18 24 22 18 36" fill="none" stroke="#E5A823" stroke-width="2" stroke-linecap="round" />
+      <rect x="14" y="35" width="8" height="2.5" rx="0.8" fill="#C48A14" stroke="#302D29" stroke-width="0.8" />
+      <path d="M 13 38 L 23 38 L 25 54 L 11 54 Z" fill="#E5A823" stroke="#302D29" stroke-width="1.2" />
+      <line x1="15" y1="39" x2="14" y2="53" stroke="#C48A14" stroke-width="0.8" />
+      <line x1="18" y1="39" x2="18" y2="53" stroke="#FFF0BD" stroke-width="0.8" />
+      <line x1="21" y1="39" x2="22" y2="53" stroke="#C48A14" stroke-width="0.8" />
+    </g>
+  </g>
+</svg>

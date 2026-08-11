@@ -16,11 +16,11 @@ const DeanSection = ({
 }: DeanSectionProps) => {
   return (
     <section className="pt-12 xl:pt-20  bg-transparent font-poppins relative overflow-hidden">
-      <div className="max-w-[1530px] mx-auto w-full relative z-10 px-6 md:px-8 lg:px-12">
+      <div className="max-w-[1440px] mx-auto w-full relative z-10 px-6 md:px-8 lg:px-12">
         <div className="flex flex-col lg:flex-row gap-12 md:gap-10 2xl:gap-12">
           {/* Left Column: Image and Details */}
           <div className="w-full lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left shrink-0">
-            <div className="bg-white w-full rounded-sm overflow-hidden mb-6 flex justify-center items-center shadow-xl">
+            <div className="bg-white w-full rounded-[4px] overflow-hidden mb-6 flex justify-center items-center shadow-xl">
               <Image
                 src={`${STRAPI_URL}${deanImgUrl}`}
                 width={358}

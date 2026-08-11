@@ -25,7 +25,7 @@ const CinematicForm = ({ formId, isMobile = false }: CinematicFormProps) => {
   }
 
   return (
-    <div className="hidden lg:flex w-full lg:w-[40%] xl:w-2/5 xl:pl-20 justify-center lg:justify-end">
+    <div id="apply-form" className="hidden lg:flex w-full lg:w-[40%] xl:w-2/5 xl:pl-20 justify-center lg:justify-end">
       <div className="heroBannerForm__form w-full max-w-md mx-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
         <div className="heroBannerForm-header">
           <h3 className="mb-0">

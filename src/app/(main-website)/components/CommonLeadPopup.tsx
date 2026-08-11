@@ -94,10 +94,10 @@ const CommonLeadPopup = ({
       {/* Modal — portalled to document.body so it escapes all parent stacking contexts */}
       {open &&
         createPortal(
-          <div className="fixed inset-0 z-[99999] bg-black/80 backdrop-blur-sm flex items-center justify-center px-4 transition-all duration-300">
-            <div className="bg-[#001732] w-full max-w-[500px] rounded-[8px] border border-white/10 shadow-2xl relative overflow-hidden">
+          <div className="fixed inset-0 z-[99999] bg-black/60 flex items-center justify-center px-4 transition-all duration-300">
+            <div className="bg-[#323232] w-full max-w-[500px] rounded-[0px] relative overflow-hidden">
               {/* Decorative Glow */}
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#CB000D] rounded-full blur-[80px] opacity-20 pointer-events-none"></div>
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#E7C268] rounded-full blur-[80px] opacity-20 pointer-events-none"></div>
 
               {/* Close */}
               <button
@@ -115,12 +115,15 @@ const CommonLeadPopup = ({
               </div>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="p-6 space-y-5 relative z-10">
+              <form
+                onSubmit={handleSubmit}
+                className="p-6 space-y-5 relative z-10"
+              >
                 <input
                   name="name"
                   required
                   placeholder="Your Name*"
-                  className="w-full h-[45px] px-4 rounded-[4px] bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-[#0055A4]/50 focus:ring-1 focus:ring-[#0055A4]/50 transition-all text-[14px] font-poppins"
+                  className="w-full h-[45px] px-4 rounded-[2px] bg-white/5 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[#E7C268] focus:ring-1 focus:ring-[#E7C268] transition-all text-[14px] font-poppins"
                 />
 
                 <input
@@ -128,7 +131,7 @@ const CommonLeadPopup = ({
                   type="email"
                   required
                   placeholder="Email Address*"
-                  className="w-full h-[45px] px-4 rounded-[4px] bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-[#0055A4]/50 focus:ring-1 focus:ring-[#0055A4]/50 transition-all text-[14px] font-poppins"
+                  className="w-full h-[45px] px-4 rounded-[2px] bg-white/5 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[#E7C268] focus:ring-1 focus:ring-[#E7C268] transition-all text-[14px] font-poppins"
                 />
 
                 <input
@@ -139,27 +142,30 @@ const CommonLeadPopup = ({
                   inputMode="numeric"
                   pattern="[6-9]{1}[0-9]{9}"
                   title="Enter a valid 10-digit Indian mobile number"
-                  className="w-full h-[45px] px-4 rounded-[4px] bg-white/5 border border-white/10 text-white placeholder:text-white/40 focus:outline-none focus:border-[#0055A4]/50 focus:ring-1 focus:ring-[#0055A4]/50 transition-all text-[14px] font-poppins"
+                  className="w-full h-[45px] px-4 rounded-[2px] bg-white/5 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[#E7C268] focus:ring-1 focus:ring-[#E7C268] transition-all text-[14px] font-poppins"
                 />
 
-                <label className="flex items-start gap-3 text-[13px] text-white/60 cursor-pointer group font-poppins">
+                <label className="flex items-start gap-3 text-[13px] text-white/70 cursor-pointer group font-poppins">
                   <input
                     type="checkbox"
                     required
-                    className="mt-0.5 w-4 h-4 rounded-[3px] border-white/20 bg-transparent checked:bg-[#0055A4] checked:border-[#0055A4] transition-all cursor-pointer accent-[#0055A4]"
+                    className="mt-0.5 w-4 h-4 rounded-[2px] border-white/20 bg-transparent checked:bg-[#E7C268] checked:border-[#E7C268] transition-all cursor-pointer accent-[#E7C268]"
                     defaultChecked
                   />
-                  <span className="leading-snug group-hover:text-white/80 transition-colors">
-                    I agree to receive information about my enquiry by signing up at K.R. Mangalam University.
+                  <span className="leading-snug group-hover:text-white/90 transition-colors">
+                    I agree to receive information about my enquiry by signing
+                    up at K.R. Mangalam University.
                   </span>
                 </label>
 
-                {error && <p className="text-[#CB000D] text-sm font-medium">{error}</p>}
+                {error && (
+                  <p className="text-[#CB000D] text-sm font-medium">{error}</p>
+                )}
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full h-[45px] bg-[#0055A4] hover:bg-[#0055A4]/90 text-white rounded-[4px] font-medium tracking-wide uppercase text-[14px] transition-all cursor-pointer mt-2 font-poppins"
+                  className="w-full h-[45px] bg-[#E7C268] hover:bg-[#d8b054] rounded-[2px] text-[#000000] font-bold tracking-wide uppercase text-[14px] transition-all cursor-pointer mt-2 font-poppins"
                 >
                   {loading ? "Please wait..." : "DOWNLOAD"}
                 </button>

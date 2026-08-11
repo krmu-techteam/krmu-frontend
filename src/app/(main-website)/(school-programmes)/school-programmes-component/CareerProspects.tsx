@@ -35,8 +35,14 @@ const CareerProspects = ({
   ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi],
+  );
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi],
+  );
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -67,41 +73,42 @@ const CareerProspects = ({
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-4 w-full flex flex-col items-center">
         {/* Header Section */}
-        <div className="max-w-4xl w-full text-center mb-4">
+        <div className="max-w-6xl w-full text-center mb-4">
           <h3 className="text-2xl font-serif md:text-[36px] xl:text-[42px] font-bold text-[#0B1C30] mb-3 md:mb-2">
             {heading} {highlight}
           </h3>
-          <p className="text-[#061623] font-poppins text-shadow-xs md:text-shadow-none text-md xl:text-lg mx-auto max-w-full leading-relaxed md:leading-[1.36]">
+          <p className="text-[#061623] font-poppins text-shadow-xs md:text-shadow-none text-md xl:text-[18px] mx-auto max-w-full leading-relaxed md:leading-[1.36]">
             {desc}
           </p>
         </div>
 
         {/* Action Button */}
-        {slug !== "bhmct-hotel-management" && (btn?.buttonclass || btn?.buttonlink) && (
-          <div className="mb-6">
-            <Button
-              variant="primary"
-              href={btn?.buttonlink || "#"}
-              className={btn?.buttonclass || ""}
-            >
-              {btn?.buttontext}
-            </Button>
-          </div>
-        )}
+        {slug !== "bhmct-hotel-management" &&
+          (btn?.buttonclass || btn?.buttonlink) && (
+            <div className="mb-6">
+              <Button
+                variant="primary"
+                href={btn?.buttonlink || "#"}
+                className={btn?.buttonclass || ""}
+              >
+                {btn?.buttontext}
+              </Button>
+            </div>
+          )}
 
         <div className="relative w-full mx-auto">
           {/* Carousel Wrapper (Text Only) */}
           <div className="w-full relative max-w-lg mx-auto">
             <button
               onClick={scrollPrev}
-              className="absolute -left-3 md:-left-20 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-md shadow-lg text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-white/40 cursor-pointer hover:scale-110 active:scale-95"
+              className="absolute -left-3 md:-left-12 top-1/3 -translate-y-1/2 z-30 w-10 h-10 md:w-10 md:h-10 flex items-center justify-center rounded-[4px] bg-white hover:bg-white/80 text-[#051630] transition-all duration-300  cursor-pointer"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
 
             <button
               onClick={scrollNext}
-              className="absolute -right-3 md:-right-20 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-md shadow-lg text-[#051630] hover:bg-[#051630] hover:text-white transition-all duration-300 border border-white/40 cursor-pointer hover:scale-110 active:scale-95"
+              className="absolute -right-3 md:-right-12 top-1/3 -translate-y-1/2 z-30 w-10 h-10 md:w-10 md:h-10 flex items-center justify-center rounded-[4px] bg-white hover:bg-white/80 text-[#051630] transition-all duration-300 cursor-pointer"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -112,10 +119,14 @@ const CareerProspects = ({
                   <div key={card?.id} className="flex-[0_0_100%] min-w-0">
                     <div className="bg-white/90 backdrop-blur-md rounded-sm md:rounded-2xl pt-4 md:pt-6 pb-0 flex flex-col items-center lg:max-w-[457px] xl:max-w-[457px] 2xl:max-w-[457px] min-h-[350px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[418px] 2xl:min-h-[418px] w-full mx-auto relative transition-all duration-1000 border border-white/40 mb-10 md:mb-20 xl:mb-12 2xl:mb-24 shadow-xl hover:shadow-2xl overflow-hidden">
                       <div className="text-center z-20 relative px-6">
-                        <h4 className={`font-poppins font-bold text-xl md:text-2xl mb-1 text-[#061623] tracking-tight transition-all duration-1000 delay-100 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+                        <h4
+                          className={`font-poppins font-bold text-xl md:text-2xl mb-1 text-[#061623] tracking-tight transition-all duration-1000 delay-100 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+                        >
                           {card?.title}
                         </h4>
-                        <p className={`text-[#061623]/90 text-md md:text-[17px] max-w-sm mx-auto leading-relaxed md:leading-[1.36] font-normal transition-all font-poppins duration-1000 delay-300 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+                        <p
+                          className={`text-[#061623]/90 text-md md:text-[17px] max-w-sm mx-auto leading-relaxed md:leading-[1.36] font-normal transition-all font-poppins duration-1000 delay-300 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+                        >
                           {card?.description}
                         </p>
                       </div>

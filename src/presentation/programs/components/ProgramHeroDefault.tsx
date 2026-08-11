@@ -259,7 +259,7 @@ const ProgramHeroDefault = ({
               />
             </div>
           ) : (
-            <div id="apply-form-mobile" className="heroBannerForm__form w-full max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
+            <div id="apply-form" className="heroBannerForm__form w-full max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
               <div className="heroBannerForm-header">
                 <h3 className="mb-0">
                   <strong>

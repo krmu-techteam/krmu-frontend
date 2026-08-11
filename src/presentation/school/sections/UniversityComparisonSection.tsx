@@ -14,7 +14,7 @@ const UniversityComparisonSection = ({
 }: UniversityComparisonSectionProps) => {
   return (
     <section className="py-12 xl:py-20 bg-transparent font-poppins relative z-10">
-      <div className="max-w-[1530px] mx-auto px-6 md:px-8 lg:px-12 w-full flex flex-col items-center">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-12 w-full flex flex-col items-center">
         {/* Heading Component */}
         <UniversityComparisonHeading content={content} />
 

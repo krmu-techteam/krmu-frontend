@@ -28,7 +28,7 @@ const DEFAULT_COE = [
 const KnowledgePartnersSection = ({ title, logos }: Props) => {
   return (
     <section className="relative py-12 xl:py-20 font-poppins">
-      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-12">
+      <div className="max-w-[1440px] mx-auto w-full px-6 md:px-8 lg:px-12">
         {/* Title */}
         <h2 className="text-center text-white font-serif text-3xl sm:text-4xl md:text-[44px] font-bold mb-8 sm:mb-12 tracking-tight">
           {title || "Knowledge Partners"}
@@ -47,7 +47,7 @@ const KnowledgePartnersSection = ({ title, logos }: Props) => {
               href={coe.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-[4px] overflow-hidden flex flex-col group cursor-pointer shadow-lg transition-all duration-300"
+              className="rounded-[4px] overflow-hidden flex flex-col group cursor-pointer transition-all duration-300"
             >
               {/* Separate Image Container - Full width, auto height */}
               <div className="w-full relative overflow-hidden rounded-t-[4px]">
@@ -62,7 +62,7 @@ const KnowledgePartnersSection = ({ title, logos }: Props) => {
               </div>
 
               {/* Separate Gradient Background Bar overlapping 1px to prevent white gaps */}
-              <div className="bg-gradient-to-r from-[#061623] to-[#05345B] hover:opacity-95 transition-opacity p-5 sm:px-7 sm:py-5 flex items-center justify-between -mt-1 relative z-10 rounded-b-[4px]">
+              <div className="bg-gradient-to-r from-[#061623] to-[#05345B] hover:opacity-95 transition-opacity p-5 sm:px-7 sm:py-3 flex items-center justify-between -mt-1 relative z-10 rounded-b-[4px]">
                 <div>
                   <p className="text-gray-300 text-sm sm:text-base font-normal">
                     {coe.subtitle}

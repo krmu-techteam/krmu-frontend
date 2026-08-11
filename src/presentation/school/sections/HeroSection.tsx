@@ -1,16 +1,17 @@
 import { STRAPI_URL } from "@/app/constant";
-import {  SchoolHeroBanner, StrapiMedia } from "@/lib/types/common";
+import { SchoolHeroBanner, StrapiMedia } from "@/lib/types/common";
 import { Button } from "@/lib/types/home";
 import Link from "next/link";
 import Image from "next/image";
 import YoutubeVideoSection from "@/app/(main-website)/(schools)/SchoolComponents/schoolglobalcomponent/YoutubeVideoSection";
 import { Download } from "lucide-react";
-import { AdmissionOpenBanner } from "@/presentation/school/components";;
+import { AdmissionOpenBanner } from "@/presentation/school/components";
 import SchoolHeroSlider from "@/app/(main-website)/(school-programmes)/school-programmes-component/SchoolHeroSlider";
 
 type Props = {
   title: string;
-  subheading: string;  heroBtns: Button[];
+  subheading: string;
+  heroBtns: Button[];
   videoFmt: string;
   iframeContent: string;
   videoLink: string;
@@ -210,9 +211,7 @@ const HeroSection = ({
             />
           )}
         </div>
-        <div
-          className="h-full w-1/2 opacity-40 bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0.6)61.25%,rgba(102,102,102,0)100.31%)] absolute inset-0 z-10"
-        ></div>
+        <div className="h-full w-1/2 opacity-40 bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0.6)61.25%,rgba(102,102,102,0)100.31%)] absolute inset-0 z-10"></div>
         <div className="xl:px-11 2xl:px-16">
           {/* <div className="hidden sm:block">
             {herobanner?.url && (
@@ -242,7 +241,7 @@ const HeroSection = ({
                       <Link
                         key={btn.id}
                         href={btn.buttonlink}
-                        className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#001732] ${
+                        className={`text-white w-full sm:w-fit flex justify-center items-center px-5 py-2  border rounded-md gap-4 font-semibold bg-[#061623] ${
                           btn.buttonclass || ""
                         }`}
                       >
@@ -281,7 +280,7 @@ const HeroSection = ({
                   )}
                 </div>
                 <div
-                  className={`bg-[#001732] ${slug === "school-of-legal-studies" ? "xl:-translate-y-[60px]" : ""}  xl:bg-transparent p-5 xl:p-0 z-20 relative  ${notCutoutBg ? "-mt-10" : "-mt-28 sm:mt-0"}`}
+                  className={`bg-[#061623] ${slug === "school-of-legal-studies" ? "xl:-translate-y-[60px]" : ""}  xl:bg-transparent p-5 xl:p-0 z-20 relative  ${notCutoutBg ? "-mt-10" : "-mt-28 sm:mt-0"}`}
                 >
                   <p className="text-sm font-poppins lg:text-lg 2xl:text-2xl font-normal sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
                     {subheading}
@@ -304,7 +303,7 @@ const HeroSection = ({
                           key={btn.id} /* Rectangle 970 */
                           href={btn.buttonlink || "#"}
                           // text-white w-full md:text-xl sm:w-fit flex justify-center items-center max-w-[220px] sm:max-w-none p-2.5 sm:px-6 sm:py-3.5 rounded-lg gap-4 font-semibold bg-[#001732] border-2 border-[#0189ae] transition-all
-                          className={`  text-white w-full md:text-xl sm:w-fit flex justify-center items-center max-w-[220px] sm:max-w-none p-2.5 sm:px-6 sm:py-3.5 rounded-sm gap-4 font-medium bg-[#001732] border-2 border-[#0189ae] transition-all  relative overflow-hidden group ${btn.buttonclass || ""}`}
+                          className={`  text-white w-full md:text-xl sm:w-fit flex justify-center items-center max-w-[220px] sm:max-w-none p-2.5 sm:px-6 sm:py-3.5 rounded-sm gap-4 font-medium bg-[#061623] border-2 border-[#0189ae] transition-all  relative overflow-hidden group ${btn.buttonclass || ""}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -333,7 +332,7 @@ const HeroSection = ({
                   </video>
                   ) : null} */}
               {videoUrl && (
-                <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end px-5  sm:pb-0 sm:px-0 bg-[#001732] xl:bg-transparent">
+                <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end px-5  sm:pb-0 sm:px-0 bg-[#061623] xl:bg-transparent">
                   <div className="w-full max-w-[520px] 2xl:max-w-[680px] border-6 border-[#b7e2f3] rounded-3xl">
                     <YoutubeVideoSection
                       thumbnail={thumbnail}
@@ -345,7 +344,7 @@ const HeroSection = ({
             </div>
           )}
         </div>
-        <div className="relative z-20 w-full bg-[#001732] xl:bg-transparent xl:mt-20">
+        <div className="relative z-20 w-full bg-[#061623] xl:bg-transparent xl:mt-20">
           <AdmissionOpenBanner title={admTitle} admBtn={admBtn} />
         </div>
       </section>

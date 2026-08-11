@@ -8,7 +8,7 @@ import {
 const OpenSourceMentorshipSection = () => {
   return (
     <section className="relative py-10 sm:py-12 xl:py-20 text-white font-poppins">
-      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-12 relative">
+      <div className="max-w-[1440px] mx-auto w-full px-6 md:px-8 lg:px-12 relative">
         {/* Outer card */}
         <div className="relative rounded-sm">
           {/* Gradient Border Mask */}

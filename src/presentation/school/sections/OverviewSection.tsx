@@ -13,7 +13,7 @@ const OverviewSection = ({
 }: OverviewSectionProps) => {
   return (
     <section className="relative py-8 md:py-12 xl:py-20">
-      <div className="grid max-w-[1530px] mx-auto grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 px-6 md:px-8 lg:px-12">
+      <div className="grid max-w-[1440px] mx-auto grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 px-6 md:px-8 xl:px-12">
         {(() => {
           const displayCounters = [...(counters || [])];
           if (displayCounters.length === 3) {
@@ -33,7 +33,7 @@ const OverviewSection = ({
           ));
         })()}
       </div>
-      <div className="max-w-[1530px] mx-auto px-6 md:px-8 lg:px-12 w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mt-12">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-8 xl:px-12 w-full flex flex-col lg:flex-row items-center gap-8 xl:gap-12 mt-12">
         <div className="w-full lg:w-4/12 shrink-0">
           <Image
             src={OVERVIEW_SECTION_IMAGES[slug] || "/info.webp"}
@@ -45,17 +45,15 @@ const OverviewSection = ({
           />
         </div>
         <div className="w-full lg:w-8/12 flex flex-col justify-center text-white">
-          <p className="text-sm md:text-base font-medium text-[#cda55d] mb-2 sm:mb-3 font-poppins">
+          <p className="text-[14px] xl:text-base font-medium text-[#cda55d] mb-2 xl:mb-3 font-poppins">
             {subheading}
           </p>
-          <h3 className="text-3xl sm:text-4xl md:text-[42px] font-serif font-bold leading-[1.2] mb-4 sm:mb-6 tracking-tight">
-            {heading}
-          </h3>
+          <h3 className="heading-primary mb-4 xl:mb-6">{heading}</h3>
           <div
             dangerouslySetInnerHTML={{
               __html: desc,
             }}
-            className="text-white/70 text-base md:text-[16px] leading-relaxed font-light font-poppins [&>p]:mb-4 last:[&>p]:mb-0"
+            className="text-white/70 text-[15px] xl:text-[16px] leading-relaxed font-light font-poppins [&>p]:mb-4 last:[&>p]:mb-0"
           />
         </div>
       </div>

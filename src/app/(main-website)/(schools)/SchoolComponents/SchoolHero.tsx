@@ -346,7 +346,7 @@ const SchoolHero = ({
                   </video>
                   ) : null} */}
               {videoUrl && (
-                <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end px-5 pb-5 sm:pb-0 sm:px-0 bg-[#001732] xl:bg-transparent">
+                <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end px-5 pb-5 sm:pb-0 sm:px-0 bg-[#001732]   xl:bg-transparent p-5 xl:p-0 z-20 relative  -mt-28 sm:mt-0 xl:bg-transparent">
                   <div className="w-full max-w-[520px] 2xl:max-w-[680px] border-6 border-[#b7e2f3] rounded-3xl">
                     <YoutubeVideoSection
                       thumbnail={thumbnail}

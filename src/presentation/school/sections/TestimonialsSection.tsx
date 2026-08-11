@@ -10,7 +10,7 @@ const TestimonialsSection = ({
 }: TestimonialSectionProps) => {
   return (
     <section className="py-12 xl:py-20 font-poppins relative overflow-hidden bg-transparent">
-      <div className="max-w-[1530px] mx-auto w-full relative z-10 px-6 md:px-8 lg:px-12">
+      <div className="max-w-[1440px] mx-auto w-full relative z-10 px-6 md:px-8 lg:px-12">
         <div className="mb-10 max-w-5xl">
           <h4 className="heading-primary mb-4">{title}</h4>
           <p className="text-gray-300 text-[16px]">{desc}</p>

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import ProgrammeCard, { ProgrammeCardData } from './ProgrammeCard';
-import { Skeleton } from '@/components/ui/skeleton';
+import React from "react";
+import ProgrammeCard, { ProgrammeCardData } from "./ProgrammeCard";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export interface SidebarDegree {
   id: string | number;
@@ -16,7 +16,7 @@ interface ProgrammesListProps {
   onLoadMore: () => void;
   showLoadMore: boolean;
   onProgrammeClick: (programId: number | string) => void;
-  viewMode?: 'list' | 'grid';
+  viewMode?: "list" | "grid";
   // Kept for prop compatibility though not used directly here anymore
   activeDegreeSlug?: string;
   onDegreeChange?: (slug: string) => void;
@@ -26,43 +26,57 @@ interface ProgrammesListProps {
   schoolOnly?: boolean;
 }
 
-export default function ProgrammesList({ 
-  programmes, 
+export default function ProgrammesList({
+  programmes,
   isLoading = false,
-  onLoadMore, 
-  showLoadMore, 
+  onLoadMore,
+  showLoadMore,
   onProgrammeClick,
-  viewMode = 'list',
-  schoolOnly = false
+  viewMode = "list",
+  schoolOnly = false,
 }: ProgrammesListProps) {
   return (
-    <div className="flex-1 w-full min-w-0 overflow-hidden relative px-6 md:px-8 lg:px-11 xl:px-0">
+    <div className="flex-1 w-full min-w-0 overflow-hidden relative px-6 md:px-8 lg:px-0 xl:px-0">
       {/* List Content */}
-      <div className={viewMode === 'list' 
-        ? "flex flex-col gap-4" 
-        : `grid grid-cols-1 md:grid-cols-2 ${schoolOnly ? 'xl:grid-cols-4' : 'xl:grid-cols-3'} gap-5`
-      }>
+      <div
+        className={
+          viewMode === "list"
+            ? "flex flex-col gap-4"
+            : `grid grid-cols-1 md:grid-cols-2 ${schoolOnly ? "xl:grid-cols-4" : "xl:grid-cols-3"} gap-5`
+        }
+      >
         {isLoading ? (
-          Array.from({ length: viewMode === 'list' ? 4 : 6 }).map((_, index) => (
-            <div key={index} className={`flex flex-col gap-4 border border-white/10 rounded-sm p-5 md:p-6 ${viewMode === 'list' ? 'h-[160px]' : 'h-[240px]'}`}>
-              <div className="flex justify-between items-start">
-                <div className="space-y-3 w-full">
-                  <Skeleton className="h-6 w-3/4 bg-white/5" />
-                  <Skeleton className="h-4 w-1/2 bg-white/5" />
+          Array.from({ length: viewMode === "list" ? 4 : 6 }).map(
+            (_, index) => (
+              <div
+                key={index}
+                className={`flex flex-col gap-4 border border-white/10 rounded-sm p-5 md:p-6 ${viewMode === "list" ? "h-[160px]" : "h-[240px]"}`}
+              >
+                <div className="flex justify-between items-start">
+                  <div className="space-y-3 w-full">
+                    <Skeleton className="h-6 w-3/4 bg-white/5" />
+                    <Skeleton className="h-4 w-1/2 bg-white/5" />
+                  </div>
+                </div>
+                <div
+                  className={`flex gap-3 mt-auto ${viewMode === "list" ? "justify-end w-full" : "w-full"}`}
+                >
+                  <Skeleton
+                    className={`h-9 bg-white/5 ${viewMode === "list" ? "w-32" : "flex-1"}`}
+                  />
+                  <Skeleton
+                    className={`h-9 bg-white/5 ${viewMode === "list" ? "w-32" : "flex-1"}`}
+                  />
                 </div>
               </div>
-              <div className={`flex gap-3 mt-auto ${viewMode === 'list' ? 'justify-end w-full' : 'w-full'}`}>
-                <Skeleton className={`h-9 bg-white/5 ${viewMode === 'list' ? 'w-32' : 'flex-1'}`} />
-                <Skeleton className={`h-9 bg-white/5 ${viewMode === 'list' ? 'w-32' : 'flex-1'}`} />
-              </div>
-            </div>
-          ))
+            ),
+          )
         ) : programmes.length > 0 ? (
           programmes.map((program, index) => (
-            <ProgrammeCard 
-              key={program.id} 
-              program={program} 
-              viewMode={viewMode} 
+            <ProgrammeCard
+              key={program.id}
+              program={program}
+              viewMode={viewMode}
               index={index}
               totalCards={programmes.length}
               cardsPerRow={schoolOnly ? 4 : 3}

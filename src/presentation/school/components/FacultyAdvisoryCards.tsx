@@ -138,7 +138,7 @@ const FacultyAdvisoryCards = ({ schoolCat }: Props) => {
 
   return (
     <div className="font-poppins mb-10">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4">
         {visibleFaculties.map((faculty) => (
           <div key={faculty.id} className="w-full flex justify-center h-full">
             <FacultyAdvisoryCard

@@ -1,61 +1,62 @@
-import { GraduationCap, ArrowUpRight } from "lucide-react";
-import Button from "@/components/common/Button";
+import React from "react";
+import Image from "next/image";
+import SectionDivider from "@/components/common/SectionDivider";
 
 const ScholarshipBannerSection = () => {
   return (
-    <section className="w-full bg-[#1e2f42]/95 border-t border-b border-white/[0.08] py-12 md:py-16 px-4 md:px-8 xl:px-16 2xl:px-0 relative z-10 overflow-hidden backdrop-blur-2xl">
-      
-      {/* Soft Blue Center Glow Behind the Glass Band */}
-      <div 
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] rounded-full blur-[160px] pointer-events-none opacity-80" 
-        style={{ 
-          background: "radial-gradient(circle, rgba(0,85,164,0.25) 0%, rgba(0,85,164,0.08) 50%, transparent 75%)" 
-        }}
-      />
-
-      <div className="max-w-[1440px] mx-auto w-full relative z-10">
-        <div className="relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
-          
-          {/* Left Content Area */}
-          <div className="flex-1 flex flex-col sm:flex-row items-center sm:items-center text-center sm:text-left gap-6">
-            {/* Left Icon: Beautiful Rounded Circle */}
-            <div className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-[#0055A4] flex items-center justify-center shrink-0 border border-white/10 shadow-[0_4px_12px_rgba(0,85,164,0.3)]">
-              <GraduationCap className="w-8 h-8 md:w-10 md:h-10 text-white" strokeWidth={1.5} />
-            </div>
-
-            {/* Title and Description */}
-            <div className="flex-1">
-              <h3 className="heading-primary mb-2">
-                Scholarship <span className="text-[#0055A4]">2026</span>
-              </h3>
-              <p className="text-sm md:text-base text-white/80 max-w-4xl font-poppins font-normal leading-relaxed">
-                We offer up to 100% scholarships for academic toppers, sports achievers, and students across multiple categories, ensuring that ambition, hard work, and potential always find their way forward.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Action Button - One UI Style Pill */}
-          <div className="shrink-0 w-full sm:w-auto lg:w-auto mt-2 lg:mt-0 text-center">
-            <Button
+    <section className="relative w-full py-10 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-[1200px] mx-auto">
+      {/* Dark Navy Card Container (1217px max-width, 329px min-height, #0B1823 background) */}
+      <div className="relative w-full bg-[#0B1823] rounded-[4px] lg:rounded-[6px] min-h-[329px] flex items-center p-6 sm:p-10 lg:px-14 lg:py-8 overflow-visible">
+        {/* Left Content Area */}
+        <div className="w-full lg:max-w-[580px] z-10 py-2">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-[38px] lg:text-[42px] font-medium text-white tracking-tight leading-tight">
+            Scholarship 2026
+          </h2>
+          <p className="font-poppins text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl mt-4">
+            We offer up to 100% scholarships for academic toppers, sports
+            achievers, and students across multiple categories, ensuring that
+            ambition, hard work, and potential always find their way forward.
+          </p>
+          <div className="mt-6">
+            <a
               href="/admission/scholarship"
               target="_blank"
-              variant="primary"
-              icon={ArrowUpRight}
-              iconPosition="right"
-              className="!bg-[#0055A4] hover:!bg-[#0055A4]/90 !shadow-[0_4px_16px_rgba(0,85,164,0.35)] transition-all duration-300 w-full sm:w-auto text-center font-medium font-poppins"
+              rel="noopener noreferrer"
+              className="font-poppins text-xs sm:text-sm font-medium text-white underline underline-offset-4 hover:text-[#E5C268] transition-colors inline-block"
             >
               Explore
-            </Button>
+            </a>
+          </div>
+        </div>
+
+        {/* Right Image Graphic Area (Overflowing Top out of 329px Card) */}
+        <div className="hidden md:block absolute bottom-0 right-4 lg:right-10 w-[380px] lg:w-[440px] h-[329px] overflow-visible pointer-events-none">
+          {/* Semi-circular gradient background arch at bottom */}
+          <div className="absolute bottom-0 right-0 w-[320px] lg:w-[370px] h-[170px] lg:h-[195px] z-0">
+            <Image
+              src="/images/programs/s-bg.png"
+              alt="Scholarship Gradient Background"
+              fill
+              className="object-contain object-bottom"
+              priority
+            />
           </div>
 
+          {/* Graduate Student cutout extending ~120px ABOVE the 329px card */}
+          <div className="absolute bottom-0 right-4 lg:right-8 z-10 w-[290px] lg:w-[330px] h-[410px] lg:h-[450px]">
+            <Image
+              src="/images/programs/s-girl.png"
+              alt="Graduate Student"
+              fill
+              className="object-contain object-bottom"
+              priority
+            />
+          </div>
         </div>
       </div>
+      <SectionDivider />
     </section>
   );
 };
 
 export default ScholarshipBannerSection;
-
-
-
-

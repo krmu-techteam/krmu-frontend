@@ -50,7 +50,7 @@ export default function ProgrammesFilterHeader({
 
   return (
     <>
-      <div className="xl:sticky xl:top-[130px] z-[20] bg-[#061623] py-3 px-6 md:px-8 lg:px-11 xl:px-3 mb-2 rounded-none xl:rounded-sm -mx-4 md:-mx-8 xl:mx-0">
+      <div className="xl:sticky xl:top-[130px] z-[20] bg-[#061623] py-3 px-6 md:px-8 lg:px-8 xl:px-3 mb-2 rounded-none xl:rounded-[4px] -mx-4 md:-mx-8 xl:mx-0">
         {/* Filters & Search Row */}
         <div className="w-full flex flex-col xl:flex-row xl:items-center justify-between gap-4">
           {/* Tabs */}
@@ -111,9 +111,9 @@ export default function ProgrammesFilterHeader({
           </div>
 
           {/* Search Component */}
-          <div className="relative w-full xl:w-[340px] shrink-0 px-4 md:px-6 lg:px-0">
+          <div className="relative w-full xl:w-[340px] shrink-0">
             <Search
-              className="absolute left-7 md:left-10 xl:left-3 top-1/2 -translate-y-1/2 text-white/40"
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none z-10"
               size={16}
             />
             <input
@@ -126,28 +126,28 @@ export default function ProgrammesFilterHeader({
                   onDegreeChange("all");
                 }
               }}
-              className="w-full bg-transparent border border-white/10 rounded py-2 pl-10 pr-4 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 transition-all text-[14px] font-light"
+              className="w-full bg-transparent border border-white/10 rounded-[4px] py-2 pl-9 pr-4 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 transition-all text-[14px] font-light"
             />
           </div>
         </div>
       </div>
       {/* Program Count & Toggles */}
-      <div className="flex items-center justify-between px-6 md:px-8 lg:px-11 xl:px-[2px] xl:mb-2">
+      <div className="flex items-center justify-between px-6 md:px-8 lg:px-0 xl:px-[2px] xl:mb-2">
         <span className="text-white/80 text-[14px] font-normal">
           {programCount} Programs Found
         </span>
 
-        <div className="hidden md:flex items-center gap-1 bg-white/5 p-1 rounded-sm border border-white/10">
+        <div className="hidden md:flex items-center gap-1 bg-transparent p-1 rounded-[4px] border border-[#000000]/40">
           <button
             onClick={() => onViewModeChange("list")}
-            className={`p-1.5 rounded transition-all ${viewMode === "list" ? "bg-[#0161B0] text-white" : "text-white/40 hover:text-white hover:bg-white/5 cursor-pointer"}`}
+            className={`p-1.5 rounded-[4px] transition-all ${viewMode === "list" ? "bg-[#000000] text-white" : "text-white hover:text-white hover:bg-white/5 cursor-pointer"}`}
             title="List View"
           >
             <List size={16} />
           </button>
           <button
             onClick={() => onViewModeChange("grid")}
-            className={`p-1.5 rounded transition-all ${viewMode === "grid" ? "bg-[#0161B0] text-white" : "text-white/40 hover:text-white hover:bg-white/5 cursor-pointer"}`}
+            className={`p-1.5 rounded-[4px] transition-all ${viewMode === "grid" ? "bg-[#000000] text-white" : "text-white/40 hover:text-white hover:bg-white/5 cursor-pointer"}`}
             title="Grid View"
           >
             <LayoutGrid size={16} />

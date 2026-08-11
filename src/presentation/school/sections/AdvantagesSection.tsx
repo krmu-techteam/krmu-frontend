@@ -33,7 +33,7 @@ const AdvantagesSection = ({
 
   return (
     <section className="py-12 xl:py-20 bg-transparent relative z-10 font-poppins text-white">
-      <div className="max-w-[1530px] mx-auto w-full relative px-4 md:px-8 lg:px-12">
+      <div className="max-w-[1440px] mx-auto w-full relative px-4 md:px-8 lg:px-12">
         {/* Top Section: Image on Left + Title & Description on Right */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start pb-8">
           {/* Left: Image Card (Width: 464px, Height: 600px, Rounded: 10px) */}

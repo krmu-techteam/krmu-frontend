@@ -21,7 +21,7 @@ const ExcitedNewsletterSection = async ({
 
   return (
     <section className="py-12 xl:py-20 bg-transparent relative z-10 font-poppins">
-      <div className="max-w-[1530px] mx-auto px-6 md:px-8 lg:px-12  grid grid-cols-1 lg:grid-cols-2 gap-6  lg:gap-8 items-stretch">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-12  grid grid-cols-1 lg:grid-cols-2 gap-6  lg:gap-8 items-stretch">
         {/* LEFT SIDE CARD */}
         <div className="bg-[#0B1521] rounded-md border border-white/5 p-8 xl:p-12 text-left text-white flex flex-col justify-center">
           <h4 className="text-3xl xl:text-[40px] leading-tight mb-3 font-serif">

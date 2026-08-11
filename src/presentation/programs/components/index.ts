@@ -17,4 +17,6 @@ export { default as FinancialPointCard } from "./FinancialPointCard";
 export { default as FinancialPartnerLogo } from "./FinancialPartnerLogo";
 export { default as FAQAccordion } from "./FAQAccordion";
 export { default as FAQAccordionItem } from "./FAQAccordionItem";
+export { default as ScholarshipIllustration } from "./ScholarshipIllustration";
+
 

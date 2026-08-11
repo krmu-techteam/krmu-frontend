@@ -12,11 +12,9 @@ type Props = {
 
 const FacilitiesSection = ({ fac_slides }: Props) => {
   return (
-    <section className="relative w-full py-6 xl:py-14 overflow-hidden font-poppins">
+    <section className="relative w-full pb-6 xl:pb-14 pt-10  xl:pt-20 overflow-hidden font-poppins">
       {/* Precision Spec Glow (Bottom Left) */}
-      <div 
-        className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none opacity-40 transition-opacity"
-      ></div>
+      <div className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none opacity-40 transition-opacity"></div>
 
       <div className="w-full max-w-[1530px] mx-auto relative z-10 text-center mb-12 px-6">
         <h2 className="font-serif font-bold text-[32px] xl:text-[49px] leading-[1.2] text-white antialiased tracking-wide">
@@ -25,7 +23,7 @@ const FacilitiesSection = ({ fac_slides }: Props) => {
       </div>
 
       <div className="relative w-full mb-8 px-4 md:px-0">
-        <Carousel 
+        <Carousel
           autoScroll={true}
           autoScrollSpeed={1}
           showArrows={true}
@@ -33,10 +31,13 @@ const FacilitiesSection = ({ fac_slides }: Props) => {
           className="w-full"
           containerClassName="gap-0"
           slideClassName="basis-full md:basis-[720px] group"
-          options={{ loop: true, align: 'center' }}
+          options={{ loop: true, align: "center" }}
         >
           {fac_slides.map((slide) => (
-            <div key={slide.id} className="relative aspect-[16/9] overflow-hidden grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-data-[active=true]:grayscale-0 group-data-[active=true]:opacity-100 transition-all duration-700 ease-in-out border-r border-white/5 mx-0">
+            <div
+              key={slide.id}
+              className="relative aspect-[16/9] overflow-hidden grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-data-[active=true]:grayscale-0 group-data-[active=true]:opacity-100 transition-all duration-700 ease-in-out border-r border-white/5 mx-0"
+            >
               {slide?.facility_img?.url && (
                 <Image
                   src={`${STRAPI_URL}${slide.facility_img.url}`}

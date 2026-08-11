@@ -18,7 +18,7 @@ const FacultyAdvisorySection = ({ schoolCat, fac_adv }: Props) => {
 
   return (
     <section className="relative py-12 xl:py-16  bg-transparent font-poppins">
-      <div className="max-w-[1530px] mx-auto w-full  px-6 md:px-8 lg:px-12">
+      <div className="max-w-[1440px] mx-auto w-full  px-6 md:px-8 lg:px-12">
         {/* Faculty List */}
         <div>
           <div

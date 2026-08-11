@@ -1,9 +1,6 @@
- 
- 
 import Button from "@/components/common/Button";
 import { FAQAccordion } from "../components";
 import { FrequentlyAskedQuestionsSectionProps } from "@/features/programs";
-import SectionDivider from "@/components/common/SectionDivider";
 
 const FrequentlyAskedQuestionsSection = ({
   heading,
@@ -23,9 +20,11 @@ const FrequentlyAskedQuestionsSection = ({
                 <h3 className="heading-primary mb-3 lg:mb-4 text-white">
                   {heading} {highlight}
                 </h3>
-                <p className="text-sm md:text-base font-poppins font-normal text-white/65 max-w-3xl mx-auto leading-relaxed">{desc}</p>
+                <p className="text-sm md:text-base font-poppins font-normal text-white/65 max-w-3xl mx-auto leading-relaxed">
+                  {desc}
+                </p>
               </div>
-              
+
               {/* Tabs and Accordions block */}
               <div className="relative p-0 lg:p-0 overflow-hidden rounded-xl md:rounded-none">
                 <div className="relative z-10 w-full">
@@ -48,12 +47,9 @@ const FrequentlyAskedQuestionsSection = ({
             </div>
           </div>
         </div>
-        <SectionDivider />
       </section>
     </>
   );
 };
 
 export default FrequentlyAskedQuestionsSection;
-
-
