@@ -230,11 +230,11 @@ export function TestimonialsSection({
           </Carousel>
 
           {/* Navigation Controls (Bottom Right) */}
-          <div className="flex items-center justify-end gap-3 mt-4 relative z-30">
+          <div className="flex items-center justify-end gap-2 mt-4 relative z-30">
             <button
               type="button"
               onClick={handlePrev}
-              className="w-9 h-9 md:w-10 md:h-10 rounded-[4px] border border-brand-gold/40 flex items-center justify-center text-white hover:border-brand-gold hover:bg-brand-gold/10 transition-all cursor-pointer shrink-0 z-30"
+              className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center text-white transition-all cursor-pointer shrink-0 z-30"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={20} />
@@ -248,7 +248,7 @@ export function TestimonialsSection({
             <button
               type="button"
               onClick={handleNext}
-              className="w-9 h-9 md:w-10 md:h-10 rounded-[4px] border border-brand-gold/40 flex items-center justify-center text-white hover:border-brand-gold hover:bg-brand-gold/10 transition-all cursor-pointer shrink-0 z-30"
+              className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center text-white transition-all cursor-pointer shrink-0 z-30"
               aria-label="Next testimonial"
             >
               <ChevronRight size={20} />

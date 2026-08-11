@@ -61,16 +61,13 @@ export function VisitSection() {
 
         {/* Right Column - Full Width Image */}
         <div className="w-full lg:w-[55%] h-[450px] md:h-[550px] lg:h-auto relative">
-          <div className="absolute inset-0 lg:rounded-l-md overflow-hidden shadow-2xl border-l border-t border-b border-white/10 group">
+          <div className="absolute inset-0 lg:rounded-l-[10px] overflow-hidden group">
             <Image
               src="/modules/home/visit/campus-visit.jpg"
               alt="KRMU Campus Facade"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-1000"
             />
-            {/* Dark Gradient Overlay for better contrast */}
-            <div className="absolute inset-0 bg-linear-to-r from-brand-dark/40 via-transparent to-transparent"></div>
-            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"></div>
           </div>
         </div>
       </div>
