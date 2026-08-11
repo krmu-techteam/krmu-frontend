@@ -94,9 +94,11 @@ export default function KRMUTimer({
       <span
         className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-xs sm:text-sm" : "text-xs sm:text-sm"}`}
       >
-        Registration Closing on August 05 | Join Aman Gupta LIVE | Limited Seats Available
+        Admission Deadline Alert! Apply by 13 August
         {mainWebsiteTimer && (
-          <span className="border-b border-white border-dotted inline-block ml-2">Apply Now</span>
+          <span className="border-b border-white border-dotted inline-block ml-2">
+            Apply Now
+          </span>
         )}
         {/* {mainWebsiteTimer && (
           <span className="border-b border-white border-dotted vi text-sm text-white pb-0.5 ml-2 font-semibold inline">
