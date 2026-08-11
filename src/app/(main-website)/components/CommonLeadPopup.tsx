@@ -9,6 +9,7 @@ type Props = {
   buttonClassName?: string;
   redirectUrl: string;
   form_name: string;
+  shadowGradient?: boolean;
 };
 
 const CommonLeadPopup = ({
@@ -16,6 +17,7 @@ const CommonLeadPopup = ({
   buttonClassName,
   redirectUrl,
   form_name,
+  shadowGradient,
 }: Props) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
