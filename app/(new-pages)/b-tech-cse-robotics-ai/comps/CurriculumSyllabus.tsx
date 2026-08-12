@@ -10,12 +10,16 @@ const CurriculumSyllabus = () => {
         <h3 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#001732] leading-tight mb-2.5 text-center sm:text-left">
           Curriculum & Syllabus
         </h3>
-        <Link href="#" className="flex items-end gap-2 w-fit">
+        <span className="flex items-end gap-2 w-fit">
           <ArrowDownToLine className="shrink-0" />
-          <span className="underline font-bold inline-block leading-none">
-            Download Programme Handbook
-          </span>
-        </Link>
+          {/* <span className="">Download Programme Handbook</span> */}
+          <CommonLeadPopup
+            buttonText="Download Programme Handbook"
+            buttonClassName="underline font-bold inline-block leading-none"
+            redirectUrl="https://www.krmangalam.edu.in/pdfs/programme-brochure/btech-cse-new.pdf"
+            form_name="Download Programme Handbook"
+          />
+        </span>
 
         <div className="mt-8 relative">
           {curriculumData.map((item, index) => {
