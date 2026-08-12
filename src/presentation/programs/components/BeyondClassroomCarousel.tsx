@@ -9,14 +9,14 @@ import {
   calculate3DCardStyles,
 } from "@/features/programs";
 
-const DEFAULT_EVENT_IMAGES: StrapiMedia[] = [
+const DEFAULT_EVENT_IMAGES = [
   { id: 1, url: "/images/courses/events/event 1.jpg", alternativeText: "Event 1" },
   { id: 2, url: "/images/courses/events/event 2.jpg", alternativeText: "Event 2" },
   { id: 3, url: "/images/courses/events/event 3.jpg", alternativeText: "Event 3" },
   { id: 4, url: "/images/courses/events/event 4.jpg", alternativeText: "Event 4" },
   { id: 5, url: "/images/courses/events/event 5.jpg", alternativeText: "Event 5" },
   { id: 6, url: "/images/courses/events/event 6.jpg", alternativeText: "Event 6" },
-];
+] as unknown as StrapiMedia[];
 
 type Props = {
   slideimages?: StrapiMedia[];
@@ -117,7 +117,7 @@ const BeyondClassroomCarousel = ({ slideimages }: Props) => {
             >
               {/* Slide Image */}
               <Image
-                src={rec.url}
+                src={rec.url || ""}
                 alt={rec.alternativeText || `Gallery image ${i + 1}`}
                 fill
                 className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"

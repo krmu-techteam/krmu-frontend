@@ -5,14 +5,14 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-const DEFAULT_EVENT_IMAGES: StrapiMedia[] = [
+const DEFAULT_EVENT_IMAGES = [
   { id: 1, url: "/images/courses/events/event 1.jpg", alternativeText: "Event 1" },
   { id: 2, url: "/images/courses/events/event 2.jpg", alternativeText: "Event 2" },
   { id: 3, url: "/images/courses/events/event 3.jpg", alternativeText: "Event 3" },
   { id: 4, url: "/images/courses/events/event 4.jpg", alternativeText: "Event 4" },
   { id: 5, url: "/images/courses/events/event 5.jpg", alternativeText: "Event 5" },
   { id: 6, url: "/images/courses/events/event 6.jpg", alternativeText: "Event 6" },
-];
+] as unknown as StrapiMedia[];
 
 type Props = {
   slideimages?: StrapiMedia[];
@@ -66,7 +66,7 @@ const BeyondClassroomSlider = ({ slideimages }: Props) => {
               >
                 <div className="rounded-[4px] overflow-hidden shadow-2xl h-full">
                   <Image
-                    src={rec.url}
+                    src={rec.url || ""}
                     alt={rec.alternativeText || ``}
                     width={500}
                     height={366}

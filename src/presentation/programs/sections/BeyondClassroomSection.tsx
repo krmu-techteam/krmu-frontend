@@ -4,7 +4,7 @@ type Props = {
   heading: string;
   highlight: string;
   desc: string;
-  beyondclassimages: StrapiMedia[];
+  beyondclassimages?: StrapiMedia[];
 };
 const BeyondClassroomSection = ({
   heading,
