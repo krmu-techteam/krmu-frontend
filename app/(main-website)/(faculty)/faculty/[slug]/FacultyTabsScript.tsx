@@ -18,7 +18,7 @@ export default function FacultyTabsScript() {
           t.parentElement?.classList.remove("active");
           t.setAttribute("aria-selected", "false");
         });
-
+ 
         // Hide all panes
         tabPanes.forEach((pane) => {
           pane.classList.remove("active", "in");
