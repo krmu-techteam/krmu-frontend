@@ -17,7 +17,7 @@ const NewsEventsImageContent = async ({
   );
 
   return (
-    <section className="py-12 px-4 temp-class">
+    <section className="py-12 px-4">
       <div className={`max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row ${slug === 'k-r-mangalam-university-secures-global-sustainability-impact-rating-band-601-800-in-the-sustainability-impact-ratings-2026' && 'items-center gap-5'}`}>
         <div
           className={`${imageUrls?.length > 0 ? "w-full lg:w-1/2" : "w-full"}`}
