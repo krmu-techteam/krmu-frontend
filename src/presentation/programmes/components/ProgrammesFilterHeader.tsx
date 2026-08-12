@@ -137,17 +137,17 @@ export default function ProgrammesFilterHeader({
           {programCount} Programs Found
         </span>
 
-        <div className="hidden md:flex items-center gap-1 bg-transparent p-1 rounded-[4px] border border-[#000000]/40">
+        <div className="hidden md:flex items-center gap-1 bg-transparent p-1 rounded-[4px] border border-[#949494]/40">
           <button
             onClick={() => onViewModeChange("list")}
-            className={`p-1.5 rounded-[4px] transition-all ${viewMode === "list" ? "bg-[#000000] text-white" : "text-white hover:text-white hover:bg-white/5 cursor-pointer"}`}
+            className={`p-1.5 rounded-[4px] transition-all ${viewMode === "list" ? "bg-[#03486b] text-white" : "text-white hover:text-white hover:bg-white/5 cursor-pointer"}`}
             title="List View"
           >
             <List size={16} />
           </button>
           <button
             onClick={() => onViewModeChange("grid")}
-            className={`p-1.5 rounded-[4px] transition-all ${viewMode === "grid" ? "bg-[#000000] text-white" : "text-white/40 hover:text-white hover:bg-white/5 cursor-pointer"}`}
+            className={`p-1.5 rounded-[4px] transition-all ${viewMode === "grid" ? "bg-[#03486b] text-white" : "text-white/40 hover:text-white hover:bg-white/5 cursor-pointer"}`}
             title="Grid View"
           >
             <LayoutGrid size={16} />

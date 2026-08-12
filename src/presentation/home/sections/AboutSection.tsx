@@ -19,7 +19,7 @@ export function AboutSection({
 }) {
   const aboutStats = getAboutStats(bottomContent);
   return (
-    <section className="relative w-full overflow-hidden py-8 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
+    <section className="relative w-full py-10 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none"></div>
       <div className="relative z-10">
         <div className="max-w-5xl mx-auto relative mb-6 md:mb-8 xl:mb-12">
@@ -29,7 +29,7 @@ export function AboutSection({
 
           <SectionTitle title={topContent?.adecadetitle} />
 
-          <p className="max-w-5xl mx-auto text-white/70 text-base md:text-[16px] leading-relaxed mb-6 font-light font-poppins">
+          <p className="max-w-5xl mx-auto text-white/70 text-[15px] md:text-[16px] text-justify md:text-center  md:leading-relaxed mb-6 font-light font-poppins">
             {topContent?.adecadedescription
               ?.split("NAAC 'A' accredited")
               .map((part, idx, arr) => (
@@ -45,8 +45,8 @@ export function AboutSection({
           </p>
 
           <Link
-            href={topContent?.button1link}
-            className="inline-flex gap-1 items-center text-[16px] font-light tracking-wide text-white hover:text-white/70  transition-colors duration-300"
+            href="/about-us"
+            className="inline-flex gap-1 underline items-center text-[16px] font-light tracking-wide text-white hover:text-white/70  transition-colors duration-300"
           >
             <span>
               <ArrowRight size={18} />

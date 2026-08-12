@@ -8,7 +8,7 @@ export default async function HeroSection({
   subtitle: string;
 }) {
   return (
-    <section className="relative overflow-hidden pt-10 lg:pt-0">
+    <section className="relative pt-10 lg:pt-0">
       <div className="relative h-screen min-h-[650px] sm:min-h-[720px] lg:min-h-[820px] w-full">
         <Image
           src="/images/about-us/hero/about-hero.jpg"

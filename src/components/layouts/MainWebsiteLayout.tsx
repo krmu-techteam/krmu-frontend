@@ -9,19 +9,18 @@ export default function MainWebsiteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div className="w-full max-w-full overflow-x-hidden relative">
       <div id="main-header">
         <HeaderWrapper />
       </div>
       <NoPaperFormProvider />
-      <div>
+      <div className="w-full max-w-full overflow-x-hidden">
         {children}
-       
       </div>
       <div id="main-footer">
         {/* <FloatingActionMenu /> */}
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

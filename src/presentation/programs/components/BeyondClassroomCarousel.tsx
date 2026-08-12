@@ -9,18 +9,31 @@ import {
   calculate3DCardStyles,
 } from "@/features/programs";
 
+const DEFAULT_EVENT_IMAGES: StrapiMedia[] = [
+  { id: 1, url: "/images/courses/events/event 1.jpg", alternativeText: "Event 1" },
+  { id: 2, url: "/images/courses/events/event 2.jpg", alternativeText: "Event 2" },
+  { id: 3, url: "/images/courses/events/event 3.jpg", alternativeText: "Event 3" },
+  { id: 4, url: "/images/courses/events/event 4.jpg", alternativeText: "Event 4" },
+  { id: 5, url: "/images/courses/events/event 5.jpg", alternativeText: "Event 5" },
+  { id: 6, url: "/images/courses/events/event 6.jpg", alternativeText: "Event 6" },
+];
+
 type Props = {
-  slideimages: StrapiMedia[];
+  slideimages?: StrapiMedia[];
 };
 
 const BeyondClassroomCarousel = ({ slideimages }: Props) => {
+  const imagesToDisplay =
+    slideimages && slideimages.length > 0
+      ? slideimages
+      : DEFAULT_EVENT_IMAGES;
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [translateXMultiplier, setTranslateXMultiplier] = useState(160);
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
-  const total = slideimages.length;
+  const total = imagesToDisplay.length;
 
   // Track responsive screen widths safely to prevent hydration mismatches
   useEffect(() => {
@@ -87,7 +100,7 @@ const BeyondClassroomCarousel = ({ slideimages }: Props) => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        {slideimages.map((rec, i) => {
+        {imagesToDisplay.map((rec, i) => {
           const offset = getCircularOffset(i, activeIndex, total);
           const isActive = offset === 0;
           const cardStyle = calculate3DCardStyles(offset, translateXMultiplier);
@@ -100,7 +113,7 @@ const BeyondClassroomCarousel = ({ slideimages }: Props) => {
                 setActiveIndex(i);
                 resetAutoplay();
               }}
-              className={`absolute w-[280px] sm:w-[440px] md:w-[500px] lg:w-[560px] h-[160px] sm:h-[260px] md:h-[300px] lg:h-[340px] rounded-[12px] overflow-hidden transition-[transform,opacity,border-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] [backface-visibility:hidden] [transform-style:preserve-3d] will-change-[transform,opacity] cursor-pointer group`}
+              className={`absolute w-[280px] sm:w-[440px] md:w-[500px] lg:w-[560px] h-[160px] sm:h-[260px] md:h-[300px] lg:h-[340px] rounded-[4px] overflow-hidden transition-[transform,opacity,border-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] [backface-visibility:hidden] [transform-style:preserve-3d] will-change-[transform,opacity] cursor-pointer group`}
             >
               {/* Slide Image */}
               <Image

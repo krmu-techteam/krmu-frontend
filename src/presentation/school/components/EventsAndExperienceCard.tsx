@@ -19,7 +19,7 @@ const EventsAndExperienceCard = ({
   featured_img_url,
 }: Props) => {
   return (
-    <div className="group cursor-pointer p-2">
+    <div className="group cursor-pointer">
       <Link href={`/events-and-news/${slug}`} className="block">
         <div className="relative aspect-[3/2] rounded-sm overflow-hidden mb-6 bg-white/5">
           {featured_img_url && (
@@ -32,7 +32,8 @@ const EventsAndExperienceCard = ({
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
             <span className="text-white text-[12px] font-normal tracking-wide flex items-center gap-2 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-              Read Full Story <ArrowUpRight size={14} className="text-brand-gold" />
+              Read Full Story{" "}
+              <ArrowUpRight size={14} className="text-brand-gold" />
             </span>
           </div>
         </div>

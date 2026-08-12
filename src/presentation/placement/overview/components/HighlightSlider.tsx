@@ -11,7 +11,7 @@ export default function ProgramHighlightSlider() {
       <div className="absolute -inset-8 sm:-inset-12 z-0 pointer-events-none flex items-center justify-center">
         <Image
           src="/images/home/placements/shade.png"
-          alt="Background Shade"
+          alt=""
           fill
           className="w-full h-full object-contain opacity-95 scale-120"
           priority

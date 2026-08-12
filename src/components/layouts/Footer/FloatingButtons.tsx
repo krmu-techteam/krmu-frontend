@@ -56,10 +56,10 @@ export default function FloatingButtons() {
       </div>
 
       {/* Mobile Version: Sticky bottom bar */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[9999] flex w-full shadow-[0_-4px_12px_rgba(0,0,0,0.2)]">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[9999] grid grid-cols-3 w-full border-none outline-none overflow-hidden">
         <a
           href="tel:+911242867700"
-          className="w-1/3 flex-1 basis-0 !bg-[#0060a9] !text-white py-3.5 px-1 text-center text-[13px] font-semibold uppercase tracking-wider border-r border-white/20 active:bg-[#005090] flex items-center justify-center gap-1.5 box-border"
+          className="!bg-[#0060a9] font-poppins !text-white py-3.5 px-1 text-center text-[14px] font-normal tracking-wide active:bg-[#005090] flex items-center justify-center gap-1.5 border-0 outline-none select-none"
         >
           <Phone size={15} className="!text-white shrink-0" />
           <span className="truncate">Call Us</span>
@@ -75,7 +75,7 @@ export default function FloatingButtons() {
               form.scrollIntoView({ behavior: "smooth" });
             }
           }}
-          className="w-1/3 flex-1 basis-0 !bg-[#e31e24] !text-white py-3.5 px-1 text-center text-[13px] font-semibold uppercase tracking-wider border-r border-white/20 active:bg-[#c31a1e] box-border border-y-0 border-l-0 outline-none cursor-pointer"
+          className="!bg-[#e31e24] font-poppins !text-white py-3.5 px-1 text-center text-[14px] font-normal tracking-wide active:bg-[#c31a1e] cursor-pointer border-0 outline-none select-none"
         >
           <span className="truncate">Enquire Now</span>
         </button>
@@ -83,7 +83,7 @@ export default function FloatingButtons() {
           href="https://wa.me/918800697010"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-1/3 flex-1 basis-0 !bg-[#25D366] !text-white py-3.5 px-1 text-center text-[13px] font-semibold uppercase tracking-wider active:bg-[#20bd5a] flex items-center justify-center gap-1.5 box-border"
+          className="!bg-[#25D366] !text-white py-3.5 px-1 text-center text-[14px] font-normal tracking-wide active:bg-[#20bd5a] flex items-center justify-center gap-1.5 border-0 outline-none select-none"
         >
           <FaWhatsapp size={17} className="!text-white shrink-0" />
           <span className="truncate">WhatsApp</span>

@@ -91,7 +91,7 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: educationalOrganizationSchema }}
       />
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         {heroSection && <HeroSection {...heroSection} />}
         <Container>
           {aboutSection && (

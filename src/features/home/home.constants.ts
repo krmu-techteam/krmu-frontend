@@ -204,7 +204,7 @@ export const LIFE_AT_KRMU_CAROUSEL_CONFIGS: LifeAtKRMUFeatureCardType[] = [
     label: "Facilities",
     bg: "/modules/home/life/event2.jpg",
     accent: "Experience.",
-    url: "/campus-life/campus-facilities",
+    url: "/krmu-campus-facilities",
   },
   {
     title: "Connect.\nCreate.\nCelebrate.",

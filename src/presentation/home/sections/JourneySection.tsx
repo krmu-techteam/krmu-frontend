@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Download, ArrowUpRight, Play, X } from "lucide-react";
+import { ArrowUpRight, Play, X, ArrowDownToLine } from "lucide-react";
 import { FiYoutube } from "react-icons/fi";
 import Button from "@/components/common/Button";
 import SectionDivider from "@/components/common/SectionDivider";
@@ -15,14 +15,14 @@ export function JourneySection() {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   return (
-    <section className="relative w-full overflow-hidden py-8 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
+    <section className="relative w-full py-10 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none"></div>
 
       <div className="relative z-10">
         <div className="max-w-5xl mx-auto mb-10 xl:mb-12">
           <SectionTitle title="Your Journey to Excellence Begins Here" />
 
-          <p className="max-w-5xl mx-auto text-white/70 text-base md:text-[16px] leading-relaxed mb-8 xl:mb-10 font-light font-poppins">
+          <p className="max-w-5xl mx-auto text-justify md:text-center text-white/80 text-[16px] md:leading-relaxed mb-8 xl:mb-10 font-light font-poppins">
             Our multidisciplinary approach to education ensures students receive
             a well-rounded experience, blending theoretical knowledge with
             real-world applications. As the leading university in Gurugram, we
@@ -37,15 +37,16 @@ export function JourneySection() {
               icon={ArrowUpRight}
               iconPosition="left"
               iconClassName="rotate-45 group-hover:rotate-0 transition-transform"
+              className="!text-white !border-white !hover:border-white/80 !w-fit"
             >
               Explore Programs
             </Button>
 
             <CommonLeadPopup
-              buttonClassName="w-full sm:w-auto flex items-center justify-center h-[45px] rounded-[4px] font-normal transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide relative overflow-hidden group px-6 border border-white/20 text-white hover:border-white/40"
+              buttonClassName="w-fit flex items-center justify-center h-[45px] rounded-[4px] font-normal transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide relative overflow-hidden group px-6 border border-white text-white hover:border-white/80"
               buttonText={
                 <div className="flex items-center gap-2">
-                  <Download
+                  <ArrowDownToLine
                     size={18}
                     className="group-hover:translate-y-0.5 transition-transform"
                   />
@@ -57,7 +58,7 @@ export function JourneySection() {
             />
             <Link
               href="https://admissions.krmangalam.edu.in/?utm_source=website&utm_medium=Homepage&utm_campaign=journey-section&_gl=1*rfukfk*_ga*MTk4NDQwNDY4LjE3Nzc4NzU5MzU.*_ga_VJJK572TGN*czE3Nzc4NzU5MzUkbzEkZzEkdDE3Nzc4NzYwNDEkajYwJGwwJGgw"
-              className="w-full sm:w-auto flex items-center justify-center gap-2 h-[45px] rounded-[4px] font-normal transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide relative overflow-hidden group px-6 bg-[#CB000D] text-white hover:bg-[#CB000D]/80 shadow-lg"
+              className="w-fit flex items-center justify-center gap-2 h-[45px] rounded-[4px] font-normal transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide relative overflow-hidden group px-6 bg-[#CB000D] text-white hover:bg-[#CB000D]/80 shadow-lg"
               target="_blank"
             >
               <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
@@ -107,7 +108,7 @@ export function JourneySection() {
             variant="outline"
             target="_blank"
             icon={FiYoutube}
-            className="h-auto py-3 px-6 text-[12px] tracking-[0.2em] border-white/20"
+            className="h-auto py-3 px-6 text-[12px] tracking-[0.2em] !border-white !hover:border-white/80 !w-fit"
             iconClassName="group-hover:scale-110 transition-transform"
           >
             Watch More
@@ -126,7 +127,7 @@ export function JourneySection() {
           >
             <X size={24} />
           </button>
-          <div className="w-full max-w-5xl aspect-video bg-black rounded-lg overflow-hidden shadow-2xl border border-white/10 relative">
+          <div className="w-full max-w-5xl aspect-video bg-black rounded-lg border border-white/10 relative">
             <iframe
               className="w-full h-full absolute inset-0"
               src={(() => {

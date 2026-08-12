@@ -1,6 +1,5 @@
 import { StrapiMedia } from "@/lib/types/common";
 import { AccreditationCarousel } from "../components";
-import SectionDivider from "@/components/common/SectionDivider";
 
 const AccreditationSection = ({
   title,
@@ -19,7 +18,6 @@ const AccreditationSection = ({
           <AccreditationCarousel logosData={accrediationlogos} />
         </div>
       </div>
-      <SectionDivider className="!top-0 !bottom-auto" />
     </section>
   );
 };

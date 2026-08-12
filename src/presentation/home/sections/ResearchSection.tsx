@@ -7,12 +7,12 @@ import { SectionTitle } from "@/components/common/SectionTitle";
 
 export function ResearchSection() {
   return (
-    <section className="relative w-full py-8 px-6 md:px-11 xl:px-0 md:py-12 xl:py-20 font-poppins">
+    <section className="relative w-full py-10 md:py-12 xl:py-20 font-poppins">
       <div className="w-full max-w-[1530px] mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 items-start relative xl:h-[750px]">
           {/* Left Column - Image and Stats */}
           <div className="w-full lg:w-[58%] xl:w-[925px]">
-            <div className="relative w-full aspect-video xl:aspect-auto xl:w-[925px] xl:h-[464px] rounded-[4px] overflow-hidden mb-16 border border-white/5">
+            <div className="hidden lg:block relative w-full aspect-video xl:aspect-auto xl:w-[925px] xl:h-[464px] rounded-[4px] overflow-hidden mb-16 border border-white/5">
               <Image
                 src="/modules/home/research/researcher.jpg"
                 alt="Research at KRMU"

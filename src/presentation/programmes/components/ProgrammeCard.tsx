@@ -71,7 +71,7 @@ export default function ProgrammeCard({
   if (!isGrid) {
     return (
       <div
-        className={`group cursor-pointer bg-[#000000]/30 rounded-[4px] relative transition duration-300 hover:border-white/20  flex flex-col md:flex-row justify-between md:items-center p-5 md:p-6`}
+        className={`group cursor-pointer rounded-[4px] relative border border-[#383838] hover:border-white/20  transition duration-300 flex flex-col md:flex-row justify-between md:items-center p-5 md:p-6`}
       >
         {/* Left Content Area */}
         <div className={`flex flex-col pr-0 md:pr-8 flex-1`}>
@@ -85,18 +85,23 @@ export default function ProgrammeCard({
             />
           </Link>
 
-          <div className="flex flex-col space-y-1.5 mt-4">
-            <div className="text-[14px] text-white/60">
-              Duration:{" "}
-              <span className="text-white/80">{program.duration}</span>
+          <div className="flex flex-col space-y-1.5 mt-2">
+            <div className="text-[14px] text-white">
+              Duration: <span className="text-white">{program.duration}</span>
             </div>
-            <div className="text-[14px] text-white/60">
+            <div className="text-[14px] text-white">
               Fees:{" "}
-              <span className="text-white/80">
+              <span className="text-white">
                 Rs. {program.fees}
                 {program.slug === "bhmct-hotel-management" ? " (2025-26)" : ""}
               </span>
             </div>
+            {/* Lateral Entry Banner */}
+            {program.isNewLines && (
+              <div className="text-[#949494] text-[10px] md:text-xs pt-1">
+                3-Year Lateral Entry option also available for eligible students
+              </div>
+            )}
           </div>
         </div>
 
@@ -106,7 +111,7 @@ export default function ProgrammeCard({
         >
           <button
             onClick={onFeeClick}
-            className={`flex items-center justify-center px-3 md:px-4 py-2 border border-white/20 rounded text-[12px] md:text-[14px] text-white tracking-wide hover:bg-white/5 transition-colors cursor-pointer flex-1 md:flex-none md:justify-between`}
+            className={`flex items-center justify-center px-3 md:px-4 py-2 border border-white rounded text-[12px] md:text-[14px] text-white tracking-wide hover:bg-white/5 transition-colors cursor-pointer flex-1 md:flex-none md:justify-between`}
           >
             <span>EXPLORE</span>
             <ArrowRightCircle size={16} strokeWidth={2} className="ml-2" />
@@ -123,13 +128,6 @@ export default function ProgrammeCard({
             </Link>
           )}
         </div>
-
-        {/* Lateral Entry Banner */}
-        {program.isNewLines && (
-          <div className="absolute bottom-0 left-0 w-full text-[#fff] text-[10px] md:text-xs items-center px-4 py-1.5 text-center">
-            3-Year Lateral Entry option also available for eligible students
-          </div>
-        )}
       </div>
     );
   }

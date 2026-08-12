@@ -106,9 +106,9 @@ export const Carousel = ({
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
-    setPrevBtnEnabled(emblaApi.canScrollPrev());
-    setNextBtnEnabled(emblaApi.canScrollNext());
-  }, [emblaApi]);
+    setPrevBtnEnabled(Boolean(options?.loop || emblaApi.canScrollPrev()));
+    setNextBtnEnabled(Boolean(options?.loop || emblaApi.canScrollNext()));
+  }, [emblaApi, options?.loop]);
 
   useEffect(() => {
     if (!emblaApi) return;

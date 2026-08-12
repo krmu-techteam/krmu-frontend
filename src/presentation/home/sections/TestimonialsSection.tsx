@@ -138,15 +138,12 @@ export function TestimonialsSection({
   }, [emblaApi]);
 
   return (
-    <section className="relative w-full overflow-hidden py-8 md:py-12 xl:py-20 font-poppins max-w-[1530px] mx-auto">
-      {/* Precision Spec Lines */}
-      <div className="absolute top-0 left-0 w-full h-px bg-[linear-gradient(90deg,#1A1A1A_0%,#FFFFFF_48.08%,#1A1A1A_100%)]"></div>
-      <div className="absolute bottom-0 left-0 w-full h-px bg-[linear-gradient(90deg,#1A1A1A_0%,#FFFFFF_48.08%,#1A1A1A_100%)]"></div>
+    <section className="relative w-full overflow-hidden py-10 md:py-12 xl:py-20 font-poppins max-w-[1530px] mx-auto">
 
       <div className="max-w-[1530px] mx-auto relative z-10 px-6 md:px-8 xl:px-16">
         <SectionTitle
           title={title || "What our Learners say?"}
-          className="mb-8"
+          className="mb-6 md:mb-8 text-center md:text-left"
         />
 
         {/* Content Container (Card Background Removed) */}
@@ -184,7 +181,7 @@ export function TestimonialsSection({
                 <div className="flex-1 flex flex-col justify-between relative z-10 pt-2 lg:pt-0 w-full min-w-0">
                   <div className="relative pt-2 md:pt-4">
                     {/* Background Top-Left Large Quote Icon */}
-                    <div className="absolute -top-1 -left-2 md:-top-2 md:-left-4 pointer-events-none z-0 opacity-35">
+                    <div className="absolute -top-1 left-0 md:-top-2 md:-left-4 pointer-events-none z-0 opacity-35">
                       <Image
                         src="/modules/home/testimonial/quote.png"
                         alt="Quote Icon"
@@ -195,18 +192,18 @@ export function TestimonialsSection({
                     </div>
 
                     {/* Quote Paragraph - Fixed min-height to prevent layout jump */}
-                    <div className="min-h-[140px] sm:min-h-[150px] md:min-h-[160px] flex items-center">
-                      <p className="text-white/90 text-sm md:text-base lg:text-[18px] leading-relaxed font-light font-poppins relative z-10 pr-2 lg:pr-12">
+                    <div className="min-h-[140px] sm:min-h-[150px] md:min-h-[160px] flex items-center justify-center md:justify-start">
+                      <p className="text-white/90 text-sm md:text-[16px] xl:text-[18px] leading-relaxed font-light font-poppins relative z-10 text-justify md:text-left pr-0 md:pr-2 lg:pr-12">
                         {t.quote}
                       </p>
                     </div>
 
                     {/* Short Accent Line */}
-                    <div className="w-10 h-[2px] bg-brand-gold my-4 rounded-full opacity-80 relative z-10"></div>
+                    <div className="w-10 h-[2px] bg-brand-gold my-4 rounded-full opacity-80 relative z-10 mx-auto md:mx-0"></div>
                   </div>
 
                   {/* Author Details */}
-                  <div className="mt-2 relative z-10">
+                  <div className="mt-2 relative z-10 text-center md:text-left">
                     <h4 className="text-brand-gold font-poppins font-bold text-base md:text-lg lg:text-xl leading-tight">
                       {t.name}
                     </h4>
@@ -215,7 +212,7 @@ export function TestimonialsSection({
                     </p>
 
                     {/* View All Testimonials button */}
-                    <button className="flex items-center mt-8 gap-3 text-white hover:text-brand-gold transition-colors group cursor-pointer w-fit">
+                    <button className="flex items-center mt-8 gap-3 text-white hover:text-brand-gold transition-colors group cursor-pointer w-fit mx-auto md:mx-0">
                       <div className="w-6 h-6 rounded-full border border-white flex items-center justify-center group-hover:border-brand-gold group-hover:bg-brand-gold/10 transition-all">
                         <ArrowRight size={14} />
                       </div>
@@ -230,7 +227,7 @@ export function TestimonialsSection({
           </Carousel>
 
           {/* Navigation Controls (Bottom Right) */}
-          <div className="flex items-center justify-end gap-2 mt-4 relative z-30">
+          <div className="flex items-center justify-center md:justify-end gap-2 mt-4 relative z-30">
             <button
               type="button"
               onClick={handlePrev}
