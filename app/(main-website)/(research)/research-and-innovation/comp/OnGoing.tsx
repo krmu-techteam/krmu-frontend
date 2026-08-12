@@ -24,14 +24,14 @@ const OnGoing = () => {
             Ongoing Projects and <br /> Collaborations
           </h2>
           <p>
-            Our University takes pride in actively promoting research endeavors
+            Our university takes pride in actively promoting research endeavors
             among both faculty and students. At K. R. Mangalam University, we
             have successfully secured substantial research funding from esteemed
             sources, including government bodies and corporate houses. Notably,
             our institution has achieved significant milestones by securing
-            projects exceeding 4 Crores from renowned entities such as DST,
-            DST-FICCI, DST-SEED, ICSSR and various corporate houses. Apart from
-            research funding more that 2 Cr consultancy projects were also in
+            projects exceeding 4 crores from renowned entities such as DST,
+            DST-FICCI, DST-SEED, ICSSR, and various corporate houses. Apart from
+            research funding, more than 2 crores consultancy projects were also in
             record.
           </p>
           <br />

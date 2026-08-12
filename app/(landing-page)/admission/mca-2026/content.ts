@@ -90,25 +90,25 @@ export const prominentRecruiterContent: ProminentRecruiterContent = {
 
   logos: [
     {
-      src: "/wp-content/landingpage/mca-2026/recruiters/infosys.png",
+      src: "https://krmangalam.edu.in/images/landingpage/mca-2026/infosys.png",
       alt: "Accenture",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/mca-2026/recruiters/genpact.png",
+      src: "https://krmangalam.edu.in/images/landingpage/mca-2026/genpact.png",
       alt: "Accenture",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/mca-2026/recruiters/accenture.png",
+      src: "https://krmangalam.edu.in/images/landingpage/mca-2026/accenture.png",
       alt: "Accenture",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/mca-2026/recruiters/tcs.png",
+      src: "https://krmangalam.edu.in/images/landingpage/mca-2026/tcs.png",
       alt: "Accenture",
       width: 160,
       height: 40,

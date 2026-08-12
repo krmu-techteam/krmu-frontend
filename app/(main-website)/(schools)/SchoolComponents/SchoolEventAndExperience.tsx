@@ -25,7 +25,7 @@ const SchoolEventAndExperience = ({ title, desc, btn, eventsexp }: Props) => {
           {(btn?.buttonclass || btn?.buttonlink) && (
             <Link
               href={btn?.buttonlink}
-              className="text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white mt-10 "
+              className="text-black flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-white mt-10 temp-class"
               target="_blank"
               rel="noopener noreferrer"
             >

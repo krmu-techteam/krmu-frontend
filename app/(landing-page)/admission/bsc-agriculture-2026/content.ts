@@ -80,27 +80,27 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/bsc-agriculture-2026/recruiters/cargill.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-agriculture-2026/cargill.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-agriculture-2026/recruiters/cnh.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-agriculture-2026/cnh-industrial.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-agriculture-2026/recruiters/john.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-agriculture-2026/john-deere.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-agriculture-2026/recruiters/zyndex.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-agriculture-2026/zydex.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-agriculture-2026/recruiters/syngeta.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-agriculture-2026/syngenta.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-agriculture-2026/recruiters/mahyco.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-agriculture-2026/mahyco.png",
     alt: "Recruiter Logo",
   },
 ];

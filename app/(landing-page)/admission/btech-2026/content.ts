@@ -77,27 +77,27 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/6-btech/accenture.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/btech-2026/accenture.png",
     alt: "Accenture Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/6-btech/amazon.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/btech-2026/amazon.png",
     alt: "Amazon Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/6-btech/apple.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/btech-2026/apple.png",
     alt: "Apple Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/6-btech/deloitte.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/btech-2026/deloitte.png",
     alt: "Deloitte Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/6-btech/icici-bank.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/btech-2026/icici.png",
     alt: "ICICI Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/6-btech/infosys.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/btech-2026/infosys.png",
     alt: "Infosys Logo",
   },
 ];

@@ -168,17 +168,27 @@ export default async function HomePage() {
     ],
   });
   // console.log('organizationSchema', organizationSchema);
-const videoSchema = createVideoSchema({
-  name: "K.R. Mangalam University | Top Private University in Gurugram",
-  description:
-    "Join KRMU, Gurugram's top NAAC A accredited university. 100+ programmes, 800+ recruiters & 56.6 LPA highest package. Admissions 2026 Open. Apply Now!",
-  thumbnailUrl: "https://www.krmangalam.edu.in/images/thumb.png",
-  uploadDate: "2024-01-15T08:00:00+05:30",
-  duration: "PT42S",
-  embedUrl: "https://www.krmangalam.edu.in/",
-  contentUrl:
-    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/krm_bg_hero_e316d4159a.mp4",
-});
+  const videoSchema = createVideoSchema({
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: "K.R. Mangalam University | Top Private University in Gurugram",
+    description:
+      "Explore K.R. Mangalam University, a NAAC A accredited university in Gurugram offering 100+ programmes with industry-focused education, career opportunities, and placement support.",
+    thumbnailUrl: ["https://www.krmangalam.edu.in/images/thumb.png"],
+    uploadDate: "2024-01-15T08:00:00+05:30",
+    duration: "PT42S",
+    contentUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/krm_bg_hero_e316d4159a.mp4",
+    embedUrl: "https://www.krmangalam.edu.in/",
+    publisher: {
+      "@type": "Organization",
+      name: "K.R. Mangalam University",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.krmangalam.edu.in/images/logo.png",
+      },
+    },
+  });
   return (
     <>
       <Script

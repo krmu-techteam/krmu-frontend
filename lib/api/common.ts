@@ -1159,6 +1159,38 @@ export const createAboutPageSchema = ({
   return JSON.stringify(schema);
 };
 
+
+export interface SchoolPageSchemaProps {
+  name: string;
+  url: string;
+  description: string;
+  aboutName: string;
+  aboutUrl: string;
+}
+
+export const createSchoolPageSchema = ({
+  name,
+  url,
+  description,
+  aboutName,
+  aboutUrl,
+}: SchoolPageSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    url,
+    description,
+    about: {
+      "@type": "CollegeOrUniversity",
+      name: aboutName,
+      url: aboutUrl,
+    },
+  };
+
+  return JSON.stringify(schema);
+};
+
 type PlacementOverviewSchemaProps = {
   name: string;
   url: string;
@@ -1193,13 +1225,23 @@ export const createPlacementOverviewSchema = ({
 // lib/schema/videoSchema.ts
 
 export interface VideoSchemaProps {
+  "@context": string;
+  "@type": string;
   name: string;
   description: string;
-  thumbnailUrl: string;
+  thumbnailUrl: string[];
   uploadDate: string;
   duration: string; // ISO 8601 format (e.g. PT3M45S)
   embedUrl: string;
   contentUrl: string;
+  publisher: {
+    "@type": string;
+    name: string;
+    logo: {
+      "@type": string;
+      url: string;
+    };
+  };
 }
 
 export function createVideoSchema({
@@ -1216,7 +1258,7 @@ export function createVideoSchema({
     "@type": "VideoObject",
     name,
     description,
-    thumbnailUrl,
+    thumbnailUrl: [thumbnailUrl],
     uploadDate,
     duration,
     embedUrl,

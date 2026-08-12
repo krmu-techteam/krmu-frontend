@@ -79,27 +79,27 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/bsc-forensic-science-2026/recruiters/aimil.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-forensic-science-2026/aimil.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-forensic-science-2026/recruiters/itc.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-forensic-science-2026/itc.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-forensic-science-2026/recruiters/ecs.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-forensic-science-2026/esc.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-forensic-science-2026/recruiters/wf.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-forensic-science-2026/wf.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-forensic-science-2026/recruiters/medanta.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-forensic-science-2026/medanta.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-forensic-science-2026/recruiters/fortis.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-forensic-science-2026/fortis.png",
     alt: "Recruiter Logo",
   },
 ];

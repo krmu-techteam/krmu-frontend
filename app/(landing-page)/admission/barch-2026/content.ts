@@ -77,27 +77,27 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/barch-2026/recruiters/lodha.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/barch-2026/lodha.png",
     alt: "Lodha Logo",
   },
   {
-    imgUrl: "/landingpage/barch-2026/recruiters/mace.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/barch-2026/mace.png",
     alt: "Mace Logo",
   },
   {
-    imgUrl: "/landingpage/barch-2026/recruiters/sp.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/barch-2026/sp.png",
     alt: "SP Logo",
   },
   {
-    imgUrl: "/landingpage/barch-2026/recruiters/aecom.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/barch-2026/aecom.png",
     alt: "AECOM Logo",
   },
   {
-    imgUrl: "/landingpage/barch-2026/recruiters/dsa.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/barch-2026/dsa.png",
     alt: "DSA Logo",
   },
   {
-    imgUrl: "/landingpage/barch-2026/recruiters/gmr.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/barch-2026/gaar.png",
     alt: "GMR Logo",
   },
 ];

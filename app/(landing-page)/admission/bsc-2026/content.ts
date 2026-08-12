@@ -78,39 +78,39 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/bsc-2026/recruiters/aimil.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-2026/aimil.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-2026/recruiters/itc.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-2026/ecs.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-2026/recruiters/ecs.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-2026/fortis.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-2026/recruiters/fortis.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-2026/ibm.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-2026/recruiters/medanta.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-2026/isro.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/common/isro.svg",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-2026/itc.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-2026/recruiters/drdo.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-2026/isro.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-2026/recruiters/ibm.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-2026/ibm.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-2026/recruiters/tcs.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bsc-2026/tcs.png",
     alt: "Recruiter Logo",
   },
 ];
