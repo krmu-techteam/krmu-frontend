@@ -5,8 +5,8 @@ export const HeroNav = () => {
   const links = [
     { name: "Admissions", href: "/admissions" },
     { name: "Programmes", href: "/programmes" },
-    { name: "Placements", href: "/placements" },
-    { name: "Research", href: "/research" },
+    { name: "Placements", href: "/placement/overview" },
+    { name: "Research", href: "/research-and-innovation" },
     { name: "About Us", href: "/about-us" },
   ];
 
