@@ -14,6 +14,7 @@ interface ProgrammesFilterHeaderProps {
   viewMode: "list" | "grid";
   onViewModeChange: (mode: "list" | "grid") => void;
   availableDegrees?: string[];
+  schoolOnly?: boolean;
 }
 
 export default function ProgrammesFilterHeader({
@@ -25,6 +26,7 @@ export default function ProgrammesFilterHeader({
   viewMode,
   onViewModeChange,
   availableDegrees,
+  schoolOnly = false,
 }: ProgrammesFilterHeaderProps) {
   // Simple draggable scroll for tabs
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -49,7 +51,13 @@ export default function ProgrammesFilterHeader({
   };
 
   return (
-    <div className="sticky top-[160px] md:top-[170px] xl:top-[145px] z-[35] bg-[#061623] py-3 px-4 md:px-6 xl:px-3 mb-4 rounded-none xl:rounded-[4px] -mx-4 sm:-mx-6 md:-mx-8 xl:mx-0">
+    <div
+      className={`sticky ${
+        schoolOnly
+          ? "top-[100px] sm:top-[110px] md:top-[120px]"
+          : "top-[155px] sm:top-[165px] md:top-[175px]"
+      } xl:top-[145px] z-[35] bg-[#061623] py-3 px-4 md:px-6 xl:px-3 mb-4 rounded-none xl:rounded-[4px] -mx-4 sm:-mx-6 md:-mx-8 xl:mx-0`}
+    >
       {/* Filters & Search Row */}
       <div className="w-full flex flex-col xl:flex-row xl:items-center justify-between gap-4">
         {/* Tabs */}
@@ -112,7 +120,7 @@ export default function ProgrammesFilterHeader({
       </div>
 
       {/* Program Count & Toggles */}
-      <div className="flex items-center justify-between pt-3 mt-3 border-t border-white/5">
+      <div className="hidden md:flex items-center justify-between pt-3 mt-3 border-t border-white/5">
         <span className="text-white/80 text-[14px] font-normal">
           {programCount} Programs Found
         </span>

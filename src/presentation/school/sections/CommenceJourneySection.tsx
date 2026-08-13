@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
 import { STRAPI_URL } from "@/app/constant";
 import { common_btn } from "@/lib/types/common";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "@/components/common/Button";
 import {
   CommenceJourneyStepCard,
   CommenceJourneyMobileStepCard,
@@ -61,7 +63,7 @@ const CommenceJourneySection = ({
   ];
 
   return (
-    <section className="relative w-full pt-12 xl:pt-20 pb-0 overflow-hidden font-poppins">
+    <section className="relative w-full pt-10 sm:pt-12 xl:pt-20 pb-10 sm:pb-12 lg:pb-0 overflow-hidden font-poppins">
       {/* Background radial spec glow */}
       <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.05)_0%,transparent_70%)] rounded-full blur-[80px] z-0 pointer-events-none opacity-50"></div>
 
@@ -132,15 +134,18 @@ const CommenceJourneySection = ({
 
               {/* Apply Now Overlay Button */}
               {btn?.btn_link && (
-                <Link
-                  href={btn.btn_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute bottom-20 right-4 sm:-right-20 z-30 px-5 py-2.5 bg-[#CB000D] text-white font-poppins font-medium text-xs rounded-[2px]  hover:bg-[#CB000D]/80 transition-all flex items-center gap-1.5 uppercase"
-                >
-                  {btn.btn_text || "APPLY NOW"}{" "}
-                  <span className="text-xs">↗</span>
-                </Link>
+                <div className="absolute bottom-20 right-4 sm:-right-20 z-30">
+                  <Button
+                    variant="primary"
+                    href={btn.btn_link}
+                    icon={ArrowUpRight}
+                    iconPosition="right"
+                    target="_blank"
+                    className="!px-5 !py-2.5 !h-auto !text-xs !w-auto !rounded-[2px]"
+                  >
+                    {btn.btn_text || "APPLY NOW"}
+                  </Button>
+                </div>
               )}
             </div>
           </div>
@@ -173,7 +178,7 @@ const CommenceJourneySection = ({
 
         {/* Mobile View Layout */}
         <div className="lg:hidden px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <CommenceJourneyMobileStepCard
               title="Start your Application"
               linkText="admissions.krmangalam.edu.in"
@@ -208,19 +213,18 @@ const CommenceJourneySection = ({
             />
           </div>
 
-          <div className="flex justify-center mt-5">
+          <div className="flex justify-center mt-6 mb-2">
             {btn?.btn_link && (
-              <Link
-                href={btn?.btn_link || "#"}
-                className={`py-2.5 px-8 bg-[#cb000d] font-bold rounded-sm inline-block text-white transition-all relative overflow-hidden group ${
-                  btn?.btn_class || ""
-                }`}
+              <Button
+                variant="primary"
+                href={btn.btn_link}
+                icon={ArrowUpRight}
+                iconPosition="right"
                 target="_blank"
-                rel="noopener noreferrer"
+                className="!w-auto !h-[45px] !px-8"
               >
-                <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
-                {btn?.btn_text || "APPLY NOW"}
-              </Link>
+                {btn.btn_text || "APPLY NOW"}
+              </Button>
             )}
           </div>
         </div>

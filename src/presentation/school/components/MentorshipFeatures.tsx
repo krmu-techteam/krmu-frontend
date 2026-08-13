@@ -8,11 +8,11 @@ const MentorshipFeatures = () => {
       </h3>
 
       {/* Row 1 — 1 col mobile / 3 cols sm+ */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-4 sm:mb-6">
         {WHATYOU_GET_OPEN_SOURCE_MENTORSHIP.slice(0, 3).map((item, idx) => (
           <div
             key={idx}
-            className="flex flex-col font-poppins items-center justify-center rounded-sm px-3 py-3 text-center text-white/85 text-base sm:text-[17px] leading-relaxed"
+            className="flex flex-col font-poppins items-center justify-center rounded-[4px] px-3 py-3 text-center text-white/85 text-[15px] sm:text-[17px] leading-relaxed"
             style={{ border: "2px solid #4da6ff" }}
           >
             {item.split("\n").map((line, i) => (
@@ -26,11 +26,11 @@ const MentorshipFeatures = () => {
       </div>
 
       {/* Row 2 — 1 col mobile / 2 cols sm+ */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
         {WHATYOU_GET_OPEN_SOURCE_MENTORSHIP.slice(3).map((item, idx) => (
           <div
             key={idx}
-            className="flex flex-col font-poppins items-center justify-center rounded-sm px-3 py-3 text-center text-white/85 text-base sm:text-lg leading-relaxed"
+            className="flex flex-col font-poppins items-center justify-center rounded-[4px] px-3 py-3 text-center text-white/85 text-[15px] sm:text-lg leading-relaxed"
             style={{ border: "2px solid #4da6ff" }}
           >
             {item}

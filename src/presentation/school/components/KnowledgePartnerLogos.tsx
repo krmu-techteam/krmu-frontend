@@ -47,7 +47,7 @@ const KnowledgePartnerLogos = ({ logos = [], speed = 50 }: Props) => {
     // 6 or fewer logos: centered single-row flex layout without wrapping
     return (
       <div className="max-w-[1530px] mx-auto w-full py-2">
-        <div className="flex flex-nowrap items-center justify-center gap-2.5 sm:gap-3 lg:gap-4 xl:gap-5 overflow-x-auto no-scrollbar">
+        <div className="flex flex-nowrap items-center justify-center gap-4 lg:gap-5 overflow-x-auto no-scrollbar">
           {logos.map((logo, index) => (
             <div
               key={`${logo?.id || index}-${index}`}
@@ -72,7 +72,7 @@ const KnowledgePartnerLogos = ({ logos = [], speed = 50 }: Props) => {
   return (
     <div className="relative w-full max-w-[1530px] mx-auto overflow-hidden py-2">
       <div
-        className="flex items-center w-max gap-4 sm:gap-6 animate-marquee hover:[animation-play-state:paused]"
+        className="flex items-center w-max gap-4 lg:gap-6 animate-marquee hover:[animation-play-state:paused]"
         style={{
           animationDuration: `${speed}s`,
         }}

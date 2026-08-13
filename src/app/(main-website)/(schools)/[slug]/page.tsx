@@ -1,4 +1,3 @@
- 
 import { notFound } from "next/navigation";
 import {
   getEventsAndExperiencesBySchoolCat,
@@ -26,11 +25,37 @@ import {
   somcLogos,
   sprsLogos,
 } from "../SchoolComponents/schoolData";
-import { sbasHerosLogos, smasHerosLogos, soadHerosLogos, soasHerosLogos, soedHerosLogos, soetHerosLogos, sohmctHerosLogos, solaHerosLogos, somcHerosLogos, sprsHerosLogos } from "../SchoolComponents/schoolHeroLogo";
+import {
+  sbasHerosLogos,
+  smasHerosLogos,
+  soadHerosLogos,
+  soasHerosLogos,
+  soedHerosLogos,
+  soetHerosLogos,
+  sohmctHerosLogos,
+  solaHerosLogos,
+  somcHerosLogos,
+  sprsHerosLogos,
+} from "../SchoolComponents/schoolHeroLogo";
 
-import { HeroSection, OverviewSection, AlumniSection, ExcitedNewsletterSection, AdvantagesSection, OpenSourceMentorshipSection, UniversityComparisonSection, KnowledgePartnersSection, TestimonialsSection, DeanSection, FacultyAdvisorySection, EventAndExperienceSection, FacilitiesSection, CommenceJourneySection } from "@/presentation/school/sections";
+import {
+  HeroSection,
+  OverviewSection,
+  AlumniSection,
+  ExcitedNewsletterSection,
+  AdvantagesSection,
+  OpenSourceMentorshipSection,
+  UniversityComparisonSection,
+  KnowledgePartnersSection,
+  TestimonialsSection,
+  DeanSection,
+  FacultyAdvisorySection,
+  EventAndExperienceSection,
+  FacilitiesSection,
+  CommenceJourneySection,
+} from "@/presentation/school/sections";
 
-import { ProgrammesExplorer } from "@/presentation/programmes/sections";;
+import { ProgrammesExplorer } from "@/presentation/programmes/sections";
 import SectionDivider from "@/components/common/SectionDivider";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 
@@ -197,7 +222,8 @@ export default async function Page({ params }: Props) {
   const isPage = custPage[0];
 
   const getDownProsSettings = await getDownloadProspectusSetting();
-  const enable_disable_download_pros = getDownProsSettings?.download_prospectus_enable_disable;
+  const enable_disable_download_pros =
+    getDownProsSettings?.download_prospectus_enable_disable;
 
   const school = allSchools.find((school) => school.urlslug === slug);
   const prospectusUrl = school?.excitedbtns?.[0]?.buttonlink || "#";
@@ -260,9 +286,9 @@ export default async function Page({ params }: Props) {
           alumniLogos={schoolsLogosData}
         />
       )}
-      <div className="relative pt-8 md:pt-12 xl:pt-20 pb-5 md:pb-12 xl:pb-20">
-        <ProgrammesExplorer 
-          initialSchoolSlug={school?.school_category?.slug} 
+      <div className="relative pt-10 md:pt-12 xl:pt-20 pb-5 md:pb-12 xl:pb-20">
+        <ProgrammesExplorer
+          initialSchoolSlug={school?.school_category?.slug}
           title={school?.programme_offered?.title}
           content={school?.programme_offered?.content}
           isProspectusPopupEnabled={enable_disable_download_pros}

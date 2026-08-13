@@ -12,7 +12,7 @@ type Props = {
 
 export const AdvisoryCard = ({ name, imgUrl, qual, desg }: Props) => {
   return (
-    <div className="overflow-hidden bg-[#061623] transition-all duration-300 ease-in-out group flex flex-col font-poppins w-full h-full">
+    <div className="overflow-hidden bg-[#061623] transition-all duration-300 ease-in-out group flex flex-col font-poppins w-full h-full rounded-[4px]">
       {/* IMAGE SECTION */}
       <div className="relative w-full h-[240px] sm:h-[280px] overflow-hidden flex items-end justify-center">
         <div className="absolute inset-0 flex items-center justify-center p-6">
@@ -34,20 +34,22 @@ export const AdvisoryCard = ({ name, imgUrl, qual, desg }: Props) => {
         />
       </div>
       {/* DETAILS */}
-      <div className="p-1.5 sm:p-5 bg-[#061623] flex-1 flex flex-col">
-        <h4 className="text-[11px] sm:text-base font-bold text-white inline-block leading-snug">
-          {name}
-        </h4>
+      <div className="p-4 sm:p-5 bg-[#061623] flex-1 flex flex-col justify-between">
+        <div>
+          <h4 className="text-[15px] sm:text-base font-bold text-white leading-snug">
+            {name}
+          </h4>
 
-        <h5
-          className="text-[12px] uppercase text-white py-1 tracking-wide"
-          dangerouslySetInnerHTML={{
-            __html: desg,
-          }}
-        />
+          <h5
+            className="text-[12px] uppercase text-white/90 py-1 tracking-wide"
+            dangerouslySetInnerHTML={{
+              __html: desg,
+            }}
+          />
+        </div>
 
         <h6
-          className="text-[13px] font-semibold text-white tracking-wide"
+          className="text-[13px] font-medium text-white/80 tracking-wide mt-1"
           dangerouslySetInnerHTML={{
             __html: qual,
           }}

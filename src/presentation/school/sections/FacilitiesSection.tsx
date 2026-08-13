@@ -16,13 +16,13 @@ const FacilitiesSection = ({ fac_slides }: Props) => {
       {/* Precision Spec Glow (Bottom Left) */}
       <div className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none opacity-40 transition-opacity"></div>
 
-      <div className="w-full max-w-[1530px] mx-auto relative z-10 text-center mb-12 px-6">
+      <div className="w-full max-w-[1530px] mx-auto relative z-10 text-center mb-8 md:mb-12 px-6">
         <h2 className="font-serif font-bold text-[32px] xl:text-[49px] leading-[1.2] text-white antialiased tracking-wide">
           Facilities
         </h2>
       </div>
 
-      <div className="relative w-full mb-8 px-4 md:px-0">
+      <div className="relative w-full mb-8">
         <Carousel
           autoScroll={true}
           autoScrollSpeed={1}
@@ -32,6 +32,8 @@ const FacilitiesSection = ({ fac_slides }: Props) => {
           containerClassName="gap-0"
           slideClassName="basis-full md:basis-[720px] group"
           options={{ loop: true, align: "center" }}
+          nextArrowClassName="!rounded-[4px] !bg-[#1A4575] !border-none"
+          prevArrowClassName="!rounded-[4px] !bg-[#1A4575] !border-none"
         >
           {fac_slides.map((slide) => (
             <div

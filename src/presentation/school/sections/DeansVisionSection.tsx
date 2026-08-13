@@ -15,9 +15,9 @@ const DeanSection = ({
   deanImgUrl,
 }: DeanSectionProps) => {
   return (
-    <section className="pt-12 xl:pt-20  bg-transparent font-poppins relative overflow-hidden">
-      <div className="max-w-[1440px] mx-auto w-full relative z-10 px-6 md:px-8 lg:px-12">
-        <div className="flex flex-col lg:flex-row gap-12 md:gap-10 2xl:gap-12">
+    <section className="pt-10 md:pt-12 xl:pt-20  bg-transparent font-poppins relative overflow-hidden">
+      <div className="max-w-[1440px] mx-auto w-full relative z-10 px-4 md:px-8 lg:px-12">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-10 2xl:gap-12">
           {/* Left Column: Image and Details */}
           <div className="w-full lg:w-[30%] flex flex-col items-center lg:items-start text-center lg:text-left shrink-0">
             <div className="bg-white w-full rounded-[4px] overflow-hidden mb-6 flex justify-center items-center shadow-xl">
@@ -31,10 +31,10 @@ const DeanSection = ({
             </div>
             <div className="text-white w-full">
               <h4 className="text-2xl font-bold mb-1 font-serif">{deanName}</h4>
-              <p className="text-sm text-gray-300 mb-1 hover:text-white transition-colors">
+              <p className="text-sm text-white/90 mb-1 hover:text-white transition-colors">
                 <Link href={`mailto:${deanEmail}`}>{deanEmail}</Link>
               </p>
-              <p className="text-sm text-gray-400 font-medium">{desg}</p>
+              <p className="text-sm text-white/80 font-medium">{desg}</p>
             </div>
           </div>
 

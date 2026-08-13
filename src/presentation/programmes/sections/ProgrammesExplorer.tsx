@@ -480,7 +480,7 @@ const ProgrammesExplorer = ({
             </div>
             <div className="mb-8 md:mb-8 flex flex-col md:flex-row gap-6  items-start lg:items-center justify-between">
               {content && (
-                <p className="text-white/70 text-center md:text-left text-base md:text-md max-w-[1100px]">
+                <p className="text-white/90 text-justify md:text-left text-[15px] md:text-md max-w-[1100px]">
                   {content}
                 </p>
               )}
@@ -536,6 +536,7 @@ const ProgrammesExplorer = ({
               viewMode={viewMode}
               onViewModeChange={setViewMode}
               availableDegrees={availableDegrees}
+              schoolOnly={schoolOnly}
             />
             <div className="flex-1 mt-4 xl:mt-0">
               <ProgrammesList

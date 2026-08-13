@@ -7,7 +7,7 @@ const MentorshipProgrammeInfo = () => {
           Mentorship Programme
         </span>
       </h2>
-      <p className="text-white/75 font-poppins text-base text-[17px] xl:text-[18px] leading-relaxed">
+      <p className="text-white/90 text-justify sm:text-left font-poppins text-[15px] sm:text-[17px] xl:text-[18px] leading-relaxed">
         The School of Engineering and Technology (SOET) runs a focused Open
         Source Mentorship Programme, driven by our faculties, to prepare
         students for global, stipend-based opportunities like{" "}

@@ -14,21 +14,19 @@ type Props = {
 
 const EventAndExperienceSection = ({ title, desc, btn, eventsexp }: Props) => {
   return (
-    <section className="relative w-full py-6 xl:py-14  overflow-hidden font-poppins">
+    <section className="relative w-full pb-6 pt-10 xl:py-14  overflow-hidden font-poppins">
       {/* Background radial gradient */}
       <div
         className="absolute -top-[100px] left-[88%] -translate-x-1/2 w-[948px] h-[948px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.05)_0%,transparent_85%)] rounded-full blur-[140px] z-0 pointer-events-none transition-opacity"
         style={{ opacity: 0.66 }}
       ></div>
 
-      <div className="w-full max-w-[1440px] mx-auto relative z-10 px-6 md:px-8 lg:px-12">
-        <h2 className="text-3xl md:text-[45px] font-serif font-bold text-white leading-tight mb-4">
-          {title}
-        </h2>
+      <div className="w-full max-w-[1440px] mx-auto relative z-10 px-4 md:px-8 lg:px-12">
+        <h2 className="heading-primary mb-4">{title}</h2>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
           <div className="max-w-6xl">
             {desc && (
-              <p className="text-white/70 text-sm md:text-md font-normal leading-relaxed tracking-wide">
+              <p className="text-white/70 text-justify sm:text-left text-sm md:text-md font-normal leading-relaxed tracking-wide">
                 {desc}
               </p>
             )}

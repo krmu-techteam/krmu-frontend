@@ -40,7 +40,7 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="w-full bg-[#0A131C] border border-white/20 rounded-md flex items-center justify-between text-white/90 hover:border-white/40 focus:outline-none transition-colors h-[50px] overflow-hidden"
+          className="w-full border border-white/20 rounded-[4px] flex items-center justify-between text-white/90 hover:border-white/40 focus:outline-none transition-colors h-[50px] overflow-hidden"
         >
           <span className="px-5 text-[15px] font-medium whitespace-nowrap overflow-hidden text-ellipsis">
             {selectedIndex === ""
@@ -56,7 +56,7 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
         </button>
 
         {isOpen && (
-          <div className="absolute top-[calc(100%+4px)] left-0 w-full bg-[#08121C] border border-white/20 rounded-md overflow-hidden shadow-2xl flex flex-col z-50">
+          <div className="absolute top-[calc(100%+4px)] left-0 w-full bg-[#08121C] border border-white/20 rounded-[4px] overflow-hidden flex flex-col z-50">
             <button
               type="button"
               onClick={() => {
@@ -65,7 +65,7 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
               }}
               className={`text-left px-5 py-3 text-[15px] transition-all ${
                 selectedIndex === ""
-                  ? "bg-white/10 backdrop-blur-md text-white font-medium"
+                  ? "bg-white/10  text-white font-medium"
                   : "text-white/80 hover:bg-white/5 hover:text-white"
               }`}
             >
@@ -111,7 +111,7 @@ const NewsletterDownloader = ({ newsLetterBtns }: Props) => {
         <Link
           href={selectedBtn?.buttonlink || "#"}
           onClick={handleDownloadClick}
-          className="border border-white/30 py-3.5 px-7 transition-all rounded-sm flex items-center justify-center gap-3 text-white hover:bg-white/5 w-full sm:w-auto lg:w-full xl:w-auto shrink-0"
+          className="border border-white/30 py-3 md:py-3.5 px-3 md:px-7 transition-all !rounded-[4px] flex items-center justify-center gap-3 text-white hover:bg-white/5 w-full sm:w-auto lg:w-full xl:w-auto shrink-0"
           target={selectedBtn?.buttonlink ? "_blank" : "_self"}
           rel="noopener noreferrer"
         >

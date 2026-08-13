@@ -32,12 +32,12 @@ const AdvantagesSection = ({
   const imgSrc = "/images/school/advantages/advantages.jpg";
 
   return (
-    <section className="py-12 xl:py-20 bg-transparent relative z-10 font-poppins text-white">
+    <section className="py-10 md:py-12 xl:py-20 bg-transparent relative z-10 font-poppins text-white">
       <div className="max-w-[1440px] mx-auto w-full relative px-4 md:px-8 lg:px-12">
         {/* Top Section: Image on Left + Title & Description on Right */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start pb-8">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start pb-2 lg:pb-8">
           {/* Left: Image Card (Width: 464px, Height: 600px, Rounded: 10px) */}
-          <div className="w-full lg:w-[464px] shrink-0 relative h-[480px] sm:h-[540px] lg:h-[600px] ml-2 lg:ml-5 rounded-[11px] overflow-hidden group z-10">
+          <div className="hidden lg:block lg:w-[464px] shrink-0 relative h-[480px] sm:h-[540px] lg:h-[600px] ml-2 lg:ml-5 rounded-[11px] overflow-hidden group z-10">
             <Image
               src={imgSrc}
               alt={heading || "Advantage"}
@@ -50,7 +50,7 @@ const AdvantagesSection = ({
 
           {/* Right: Heading & Description */}
           <div className="flex-1 flex flex-col justify-center gap-4 lg:pl-2 pt-2">
-            <h2 className="heading-primary">
+            <h2 className="heading-primary md:text-left text-center">
               {heading} {subtitle}
             </h2>
 
@@ -59,16 +59,16 @@ const AdvantagesSection = ({
                 dangerouslySetInnerHTML={{
                   __html: school_advantage,
                 }}
-                className="text-sm md:text-base leading-relaxed text-white/80 font-light font-poppins"
+                className="text-[15px] text-justify sm:text-left md:text-base leading-relaxed text-white/90 font-light font-poppins"
               />
             )}
           </div>
         </div>
 
-        {/* Bottom Section: Gradient Advantage Cards Banner overlapping top image */}
+        {/* Bottom Section: Gradient Advantage Cards Banner overlapping top image on desktop */}
         {advcards && advcards.length > 0 && (
           <div
-            className="w-full min-h-[178px] rounded-[10px] p-6 md:p-8 lg:px-10 lg:py-8 relative z-20 -mt-32 sm:-mt-40 lg:-mt-56 transition-all duration-500"
+            className="w-full min-h-[178px] rounded-[4px] sm:rounded-[10px] p-6 md:p-8 lg:px-10 lg:py-8 relative z-20 mt-6 lg:-mt-56 transition-all duration-500"
             style={{
               background:
                 "linear-gradient(93.79deg, #061623 68.33%, #E7C268 101.64%)",
@@ -100,7 +100,7 @@ const AdvantagesSection = ({
                       <h3 className="text-sm lg:text-[15px] font-bold text-white leading-snug font-poppins">
                         {advcard?.title}
                       </h3>
-                      <p className="text-xs lg:text-[13px] text-white/75 font-light leading-relaxed font-poppins mt-1">
+                      <p className="text-[13px] lg:text-[13px] text-white/90 font-light leading-relaxed font-poppins mt-1">
                         {advcard?.cardcontent}
                       </p>
                     </div>

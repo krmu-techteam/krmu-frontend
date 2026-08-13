@@ -28,19 +28,19 @@ const DEFAULT_COE = [
 const KnowledgePartnersSection = ({ title, logos }: Props) => {
   return (
     <section className="relative py-12 xl:py-20 font-poppins">
-      <div className="max-w-[1440px] mx-auto w-full px-6 md:px-8 lg:px-12">
+      <div className="">
         {/* Title */}
-        <h2 className="text-center text-white font-serif text-3xl sm:text-4xl md:text-[44px] font-bold mb-8 sm:mb-12 tracking-tight">
+        <h2 className="text-center text-white font-serif text-3xl sm:text-4xl md:text-[44px] font-bold mb-6 lg:mb-12 tracking-tight">
           {title || "Knowledge Partners"}
         </h2>
 
         {/* Top: Logos Row */}
-        <div className="mb-10 sm:mb-12">
+        <div className="max-w-[1440px] mx-auto w-full lg:px-12 mb-8 lg:mb-12">
           <KnowledgePartnerLogos logos={logos} />
         </div>
 
         {/* Bottom: 2 Cards Side-by-Side */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 max-w-[1440px] mx-auto w-full px-4 md:px-8 lg:px-12">
           {DEFAULT_COE.map((coe, idx) => (
             <Link
               key={idx}
@@ -67,7 +67,7 @@ const KnowledgePartnersSection = ({ title, logos }: Props) => {
                   <p className="text-gray-300 text-sm sm:text-base font-normal">
                     {coe.subtitle}
                   </p>
-                  <h3 className="text-white text-lg sm:text-xl font-medium tracking-wide mt-0.5">
+                  <h3 className="text-white text-[16px] lg:text-xl font-medium tracking-wide mt-0.5">
                     {coe.title}
                   </h3>
                 </div>

@@ -78,64 +78,72 @@ export function CommenceJourneyMobileStepCard({
   iconSrc,
   linkText,
   linkUrl,
-  shadowColor = "0px 5px 20px rgb(29 66 197 / 38%)",
+  shadowColor = "0px 4px 12px rgba(29, 66, 197, 0.15)",
   isActive = false,
 }: MobileStepProps) {
   return (
     <div
-      className={`w-full p-5 rounded-md transition-all duration-300 border mb-2 ${
-        isActive
-          ? "border-[#00a2ff]/60 bg-[#00a2ff]/5"
-          : "border-white/10 bg-transparent"
+      className={`w-full p-3.5 sm:p-4 rounded-[3px] transition-all duration-300 flex items-center gap-3.5 sm:gap-4 ${
+        isActive ? " bg-[#00a2ff]/10" : " bg-[#000000]/30"
       }`}
     >
       <span
-        className={`p-4 flex items-center justify-center w-[60px] h-[60px] rounded-full mb-5 transition-all duration-300 ${
-          isActive ? "bg-[#00a2ff]/20" : "bg-[#001732]"
+        className={`flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full shrink-0 transition-all duration-300 ${
+          isActive ? "bg-[#00a2ff]/20" : "bg-[#000000]/60"
         }`}
         style={{
           boxShadow: isActive
-            ? "0px 5px 25px rgba(0, 162, 255, 0.4)"
+            ? "0px 4px 15px rgba(0, 162, 255, 0.25)"
             : shadowColor,
         }}
       >
         <Image
           src={iconSrc}
-          width={30}
-          height={30}
+          width={22}
+          height={22}
           alt={title}
-          className={iconSrc.includes("start01") ? "p-1.5" : ""}
+          className={iconSrc.includes("start01") ? "p-0.5" : ""}
         />
       </span>
-      <p
-        className={`text-lg font-semibold transition-all duration-300 ${isActive ? "text-[#00a2ff]" : "text-white"}`}
-      >
-        {title}
-      </p>
-      {desc ? (
+
+      <div className="flex-1 min-w-0">
         <p
-          className={`transition-all duration-300 ${isActive ? "text-[#00a2ff]/80" : "text-white/70"}`}
+          className={`text-[14px] sm:text-[15px] font-semibold leading-snug transition-all duration-300 ${
+            isActive ? "text-[#00a2ff]" : "text-white"
+          }`}
         >
-          {desc}
+          {title}
         </p>
-      ) : (
-        linkUrl &&
-        linkText && (
+
+        {desc ? (
           <p
-            className={`transition-all duration-300 ${isActive ? "text-[#00a2ff]/80" : "text-white/70"}`}
+            className={`text-[12px] sm:text-[13px] leading-relaxed mt-0.5 font-light transition-all duration-300 ${
+              isActive ? "text-[#00a2ff]/90" : "text-white/90"
+            }`}
           >
-            At{" "}
-            <Link
-              href={linkUrl}
-              className="underline text-[#00a2ff]"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {linkText}
-            </Link>
+            {desc}
           </p>
-        )
-      )}
+        ) : (
+          linkUrl &&
+          linkText && (
+            <p
+              className={`text-[12px] sm:text-[13px] leading-relaxed mt-0.5 font-light transition-all duration-300 ${
+                isActive ? "text-[#00a2ff]/90" : "text-white/90"
+              }`}
+            >
+              At{" "}
+              <Link
+                href={linkUrl}
+                className="underline text-[#00a2ff] font-medium"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {linkText}
+              </Link>
+            </p>
+          )
+        )}
+      </div>
     </div>
   );
 }

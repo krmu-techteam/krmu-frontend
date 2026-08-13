@@ -45,11 +45,11 @@ export default function FloatingButtons() {
           href="https://wa.me/918800697010"
           target="_blank"
           rel="noopener noreferrer"
-          className="!bg-[#25D366] hover:!bg-[#20bd5a] !text-white w-[40px] h-[40px] min-w-[40px] max-w-[40px] p-0 box-border flex items-center justify-center transition-all duration-300 rounded-l-[2px] group relative shrink-0"
+          className="!bg-[#075e54] hover:!bg-[#075e54] !text-white w-[40px] h-[40px] min-w-[40px] max-w-[40px] p-0 box-border flex items-center justify-center transition-all duration-300 rounded-l-[2px] group relative shrink-0"
           title="WhatsApp Us"
         >
           <FaWhatsapp size={22} className="!text-white" />
-          <span className="absolute right-full mr-2 !bg-[#25D366] !text-white text-[13px] font-medium py-1.5 px-3 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
+          <span className="absolute right-full mr-2 !bg-[#075e54] !text-white text-[13px] font-medium py-1.5 px-3 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-md">
             Chat on WhatsApp
           </span>
         </a>

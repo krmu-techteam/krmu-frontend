@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const MentorshipAchievementCard = () => {
   return (
-    <div className="flex flex-col sm:flex-row rounded-sm overflow-hidden h-full border border-blue-900/40 shadow-xl">
+    <div className="flex flex-col sm:flex-row rounded-[4px] overflow-hidden h-full border border-blue-900/40">
       <div className="relative overflow-hidden w-full sm:w-[42%] min-h-[300px] sm:min-h-full">
         <Image
           src="/schools/jayant-parashar.jpg"
