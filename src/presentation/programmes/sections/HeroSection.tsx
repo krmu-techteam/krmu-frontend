@@ -4,7 +4,7 @@ import Link from "next/link";
 const HeroSection = () => {
   return (
     <section className="relative w-full overflow-hidden pt-32 pb-8 md:pt-40 md:pb-10  font-poppins">
-      <div className="mx-auto max-w-[1536px] px-6 md:px-8 lg:px-10">
+      <div className="mx-auto max-w-[1440px] w-full px-6 md:px-8 xl:px-12">
         <div className="w-full rounded-[6px] relative z-10 overflow-hidden bg-[#07141E]">
           {/* Background Image - natural aspect ratio, no white corners */}
           <Image

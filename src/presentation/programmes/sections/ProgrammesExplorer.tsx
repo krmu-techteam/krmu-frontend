@@ -147,6 +147,18 @@ const ProgrammesExplorer = ({
 
   const schoolRef = useRef<HTMLDivElement | null>(null);
   const degreeRef = useRef<HTMLDivElement | null>(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollToSection = () => {
+    if (sectionRef.current) {
+      const yOffset = -140;
+      const y =
+        sectionRef.current.getBoundingClientRect().top +
+        window.pageYOffset +
+        yOffset;
+      window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+    }
+  };
 
   const [programmes, setProgrammes] = useState<ProgrammeItem[]>([]);
   const [showLoadMore, setShowLoadMore] = useState(true);
@@ -498,16 +510,17 @@ const ProgrammesExplorer = ({
             </div>
           </div>
         )}
-        <div className="flex flex-col xl:flex-row gap-6 xl:gap-8 items-start">
+        <div ref={sectionRef} className="flex flex-col xl:flex-row gap-6 xl:gap-8 items-start">
           {/* Sidebar for Schools */}
           {!schoolOnly && (
-            <div className="w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] xl:w-[300px] shrink-0 xl:sticky xl:top-[130px] self-start xl:max-h-[calc(100vh-140px)] xl:overflow-y-auto no-scrollbar -mx-4 md:-mx-8 xl:mx-0 bg-[#061623] xl:bg-transparent py-1 xl:py-0">
+            <div className="w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] xl:w-[300px] shrink-0 sticky top-[130px] md:top-[140px] xl:top-[145px] z-30 self-start xl:max-h-[calc(100vh-160px)] xl:overflow-y-auto no-scrollbar -mx-4 md:-mx-8 xl:mx-0 bg-[#061623] xl:bg-transparent py-1 xl:py-0">
               <ProgrammesSidebar
                 activeSchoolSlug={selectedSchool}
                 onSchoolChange={(slug) => {
                   setSelectedSchool(slug);
                   setSearchQuery("");
                   setOpenSchoolDropdown(false);
+                  scrollToSection();
                 }}
                 schoolsList={mappedSchools}
                 isLoading={isFiltersLoading}
@@ -523,6 +536,7 @@ const ProgrammesExplorer = ({
                 setSelectedDegree(slug);
                 setSearchQuery("");
                 setOpenDegreeDropdown(false);
+                scrollToSection();
               }}
               degreesList={mappedDegrees}
               searchQuery={searchQuery}

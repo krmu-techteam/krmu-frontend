@@ -49,7 +49,7 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
   );
 
   const programmesLinks = navbarData.find(
-    (component) => component.title === "Programmes",
+    (component) => component.title?.toLowerCase() === "programmes",
   );
   const careersLinks = navbarData.find(
     (component) => component.title === "Careers",
@@ -155,29 +155,30 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                   </button>
                 )}
 
-                {programmesLinks &&
-                  programmesLinks.__component === "menu.menu-links" && (
-                    <Link
-                      href={programmesLinks.url || "#"}
-                      onClick={onClose}
-                      className="flex items-center pl-4 pr-6 py-2 justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 text-white/90 group stagger-item"
-                      style={{ "--stagger-idx": 3 } as React.CSSProperties}
-                    >
-                      <div className="flex items-center gap-3">
-                        <Layers
-                          size={20}
-                          strokeWidth={1.5}
-                          className="text-white/40 group-hover:text-[#cb000d] transition-colors"
-                        />
-                        {programmesLinks.title}
-                      </div>
-                      <ChevronDown
-                        size={18}
-                        strokeWidth={1.5}
-                        className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all"
-                      />
-                    </Link>
-                  )}
+                <Link
+                  href={
+                    programmesLinks && "url" in programmesLinks && programmesLinks.url && programmesLinks.url !== "#"
+                      ? programmesLinks.url
+                      : "/programmes"
+                  }
+                  onClick={onClose}
+                  className="flex items-center pl-4 pr-6 py-2 justify-between hover:text-[#cb000d] transition-colors border-b border-white/5 text-white/90 group stagger-item"
+                  style={{ "--stagger-idx": 3 } as React.CSSProperties}
+                >
+                  <div className="flex items-center gap-3">
+                    <Layers
+                      size={20}
+                      strokeWidth={1.5}
+                      className="text-white/40 group-hover:text-[#cb000d] transition-colors"
+                    />
+                    {programmesLinks?.title || "Programmes"}
+                  </div>
+                  <ChevronDown
+                    size={18}
+                    strokeWidth={1.5}
+                    className="-rotate-90 opacity-50 group-hover:opacity-100 group-hover:text-[#cb000d] transition-all"
+                  />
+                </Link>
 
                 {admissionMenu && (
                   <button

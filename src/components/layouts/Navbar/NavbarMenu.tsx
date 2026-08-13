@@ -41,7 +41,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
   );
 
   const programmesLinks = mainMenu.find(
-    (component) => component.title === "Programmes",
+    (component) => component.title?.toLowerCase() === "programmes",
   );
   const careersLinks = mainMenu.find(
     (component) => component.title === "Careers",
@@ -334,19 +334,20 @@ const NavbarMenu = ({ mainMenu }: Props) => {
           )}
 
           {/* Programmes */}
-          {programmesLinks &&
-            programmesLinks.__component === "menu.menu-links" && (
-              <li>
-                <Link
-                  className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px]  min-h-[64px] ${
-                    programmesLinks?.menuclass || ""
-                  }`}
-                  href={programmesLinks.url}
-                >
-                  <span>{programmesLinks.title}</span>
-                </Link>
-              </li>
-            )}
+          <li>
+            <Link
+              className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] ${
+                (programmesLinks && "menuclass" in programmesLinks && programmesLinks.menuclass) || ""
+              }`}
+              href={
+                programmesLinks && "url" in programmesLinks && programmesLinks.url && programmesLinks.url !== "#"
+                  ? programmesLinks.url
+                  : "/programmes"
+              }
+            >
+              <span>{programmesLinks?.title || "Programmes"}</span>
+            </Link>
+          </li>
 
           {/* Admissions */}
           {admissionMenu && (

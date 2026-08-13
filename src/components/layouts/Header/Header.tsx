@@ -49,7 +49,7 @@ const Header = ({
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-40">
+      <header className="fixed top-0 left-0 w-full z-50">
         <BicolorDivider />
         {/* <div className="flex flex-col md:flex-row bg-[#e31e24]">
           <div className="w-full md:w-[80%] 2xl:w-[90%]">

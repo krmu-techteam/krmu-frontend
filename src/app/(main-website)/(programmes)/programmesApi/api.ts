@@ -3,32 +3,42 @@
 import { FETCH_STRAPI_URL } from "@/app/constant";
 
 export async function getAllSchoolsInfo() {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/schools?fields[0]=schoolname&populate[school_category][fields][0]=name&populate[school_category][fields][1]=slug`,
-    {
-      next: {
-        revalidate: 3600,
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/schools?fields[0]=schoolname&populate[school_category][fields][0]=name&populate[school_category][fields][1]=slug`,
+      {
+        next: {
+          revalidate: 3600,
+        },
       },
-    },
-  );
+    );
 
-  if (!res.ok) throw new Error("Failed to fetch School Info");
-  const json: AllSchoolsResponse = await res.json();
-  return json.data;
+    if (!res.ok) return [];
+    const json: AllSchoolsResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Failed to fetch School Info:", error);
+    return [];
+  }
 }
 export async function getAllDegreeInfo() {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/degrees?sort[0]=name:desc&fields[0]=name&fields[1]=slug`,
-    {
-      next: {
-        revalidate: 3600,
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/degrees?sort[0]=name:desc&fields[0]=name&fields[1]=slug`,
+      {
+        next: {
+          revalidate: 3600,
+        },
       },
-    },
-  );
+    );
 
-  if (!res.ok) throw new Error("Failed to fetch Degree Info");
-  const json: DegreeResponse = await res.json();
-  return json.data;
+    if (!res.ok) return [];
+    const json: DegreeResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("Failed to fetch Degree Info:", error);
+    return [];
+  }
 }
 
 // Root response

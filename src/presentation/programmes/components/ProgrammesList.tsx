@@ -50,7 +50,7 @@ export default function ProgrammesList({
             (_, index) => (
               <div
                 key={index}
-                className={`flex flex-col gap-4 border border-white/10 rounded-sm p-5 md:p-6 ${viewMode === "list" ? "h-[160px]" : "h-[240px]"}`}
+                className={`flex flex-col gap-4 border border-white/10 rounded-[4px] p-5 md:p-6 ${viewMode === "list" ? "h-[160px]" : "h-[240px]"}`}
               >
                 <div className="flex justify-between items-start">
                   <div className="space-y-3 w-full">

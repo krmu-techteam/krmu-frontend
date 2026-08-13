@@ -2,22 +2,26 @@ import { FETCH_STRAPI_URL } from "@/app/constant";
 import { ProgrammePageDataResponse } from "../types/programme";
 
 export async function getProgrammePageData(): Promise<
-  ProgrammePageDataResponse["data"]
+  ProgrammePageDataResponse["data"] | null
 > {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/programme?populate[alumni][populate]=*`,
-    {
-      next: {
-        revalidate: 3600,
-      },
-    }
-  );
+  try {
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/programme?populate[alumni][populate]=*`,
+      {
+        next: {
+          revalidate: 3600,
+        },
+      }
+    );
 
-  if (!res.ok) throw new Error("Failed to fetch ProgrammePageData");
+    if (!res.ok) return null;
 
-  // Type the JSON explicitly
-  const json: ProgrammePageDataResponse = await res.json();
-  return json.data;
+    const json: ProgrammePageDataResponse = await res.json();
+    return json.data;
+  } catch (error) {
+    console.error("ProgrammePageData fetch error:", error);
+    return null;
+  }
 }
 
 // {

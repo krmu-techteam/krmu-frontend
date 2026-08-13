@@ -4,7 +4,7 @@ import Link from "next/link";
 const ProgrammesConnectWithUs = () => {
   return (
     <section className="pb-8 md:pb-12 xl:pb-20">
-      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-10">
+      <div className="mx-auto max-w-[1440px] w-full px-6 md:px-8 xl:px-12">
         <h3 className="heading-primary mb-5">Connect With Us</h3>
         <div className="flex flex-wrap md:flex-nowrap items-center gap-5">
           <div className="w-full md:w-3/12">
