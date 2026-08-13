@@ -151,6 +151,13 @@ const YRCMagazines = () => {
               >
                 2024-2025
               </Link>
+              <Link
+                href="https://www.krmangalam.edu.in/pdfs/yrc.pdf"
+                target="_blank" rel="noopener noreferrer"
+                className="common-btn-4"
+              >
+                2025-2026
+              </Link>
             </div>
             <Image
               src="/life-at-krmu/hv.webp"
