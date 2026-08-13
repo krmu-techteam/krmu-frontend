@@ -468,7 +468,7 @@ const ProgrammesExplorer = ({
 
   return (
     <section className=" font-poppins">
-      <div className="mx-auto max-w-[1440px] w-full px-4 sm:px-6 md:px-8 xl:px-8">
+      <div className="mx-auto max-w-[1440px] w-full px-4 sm:px-6 md:px-8 xl:px-12">
         {(title || content) && (
           <div className="px-0 lg:px-0 xl:px-0">
             <div className="flex-1">

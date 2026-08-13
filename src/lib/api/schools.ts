@@ -11,9 +11,9 @@ export async function getSchoolPage(): Promise<SchoolsResponse["data"]> {
     `${FETCH_STRAPI_URL}/api/schools?populate[school_category][populate]=*&populate[schoolcomps][populate]=*&populate[schoolherobanner]=true&populate[admissionbtn]=true&populate[herobutton]=true&populate[excitedbtns]=true&populate[excitedbg]=true&populate[newsletterbg]=true&populate[newsletterbtns]=true&populate[advantagimg]=true&populate[alumnilogo]=true&populate[advantageCards][populate][fields][0]=title&populate[advantageCards][populate][fields][1]=cardcontent&populate[advantageCards][populate][fields][2]=cardclass&populate[advantageCards][populate][cardimg]=true&populate[collabcards][populate]=*&populate[listitem1][populate][listsitems]=true&populate[listitem2][populate][listsitems]=true&populate[listitem3][populate][listsitems]=true&populate[coebtn1]=true&populate[coebtn2]=true&populate[knowledgepartenerlogos]=true&populate[testimonials][populate]=*&populate[eventsbtn][populate]=*&populate[facility_slide][populate]=*&populate[video_comp][populate]=*&populate[programme_offered][fields][0]=title&populate[programme_offered][fields][1]=content&populate[studentachievementsbtn][populate]=*&populate[commence_journey][populate]=*&populate[school_advantage][populate]=*&populate[fac_adv]=true&populate[fields][0]=deanvisionsubtitle&populate[deanimg][populate]=*`,
     {
       next: {
-        revalidate: 21600,
+        revalidate: 3600,
       },
-    }
+    },
   );
   if (!res.ok) throw new Error("Failed To Fetch AboutKRMU Data");
 
@@ -82,7 +82,7 @@ export async function getSchoolPage(): Promise<SchoolsResponse["data"]> {
 //      fields: ['title', 'content']
 //     },
 //     studentachievementsbtn: {
-//       populate: '*' 
+//       populate: '*'
 //     },
 //  commence_journey: {
 //      populate: '*'
@@ -103,7 +103,7 @@ export async function getEventsAndExperiencesBySchoolCat(cat: string = "SOET") {
       next: {
         revalidate: 3600,
       },
-    }
+    },
   );
   if (!res.ok) throw new Error("Failed to fetch industry connect page data");
   const json: SCHOOLEVENTSANDEXPRESPONSE = await res.json();
@@ -131,7 +131,7 @@ export async function getEventsAndExperiencesBySchoolCat(cat: string = "SOET") {
 // }
 
 export async function getFacultyByCat(
-  cat: string = "SOET"
+  cat: string = "SOET",
 ): Promise<FacultyResponse["data"]> {
   const res = await fetch(
     `${FETCH_STRAPI_URL}/api/faculties?sort[0]=order_num:asc&filters[school_categories][name][$eq]=${cat}&populate[faculty_img]=true&fields[0]=faculty_name&fields[1]=facultyslug&fields[2]=faculty_card_desg&fields[3]=faculty_qualification&fields[4]=faculty_type&pagination[pageSize]=60&pagination[page]=1`,
@@ -139,7 +139,7 @@ export async function getFacultyByCat(
       next: {
         revalidate: 3600,
       },
-    }
+    },
   );
   if (!res.ok) throw new Error("Failed to fetch industry connect page data");
   const json: FacultyResponse = await res.json();
@@ -182,7 +182,7 @@ export async function getFacultyByCat(
 // }
 
 export async function getSingleFacultyBySlug(
-  slug: string = "ankita-samuel-pt-1"
+  slug: string = "ankita-samuel-pt-1",
 ): Promise<SingleFacultyResponse["data"]> {
   const res = await fetch(
     `${FETCH_STRAPI_URL}/api/faculties?filters[facultyslug][$eq]=${slug}&fields[0]=faculty_name&fields[1]=faculty_designation&fields[2]=facultyslug&populate[faculty_img][fields][0]=url&populate[faculty_interest_areas][fields][0]=fac_int_content&populate[faculty_social_links][fields][0]=listtext&populate[faculty_social_links][fields][1]=listlink&populate[faculty_social_links][populate][listicon][fields][0]=url&populate[faculty_tab_content][populate][faculty_tab][fields][0]=tabname&populate[faculty_tab_content][populate][faculty_tab][fields][1]=tabcontent`,
@@ -190,7 +190,7 @@ export async function getSingleFacultyBySlug(
       next: {
         revalidate: 3600,
       },
-    }
+    },
   );
   if (!res.ok) throw new Error("Failed to fetch industry connect page data");
   const json: SingleFacultyResponse = await res.json();
@@ -230,7 +230,7 @@ export async function getSingleFacultyBySlug(
 // }
 
 export async function getSchoolInfoForFacultyBySlug(
-  slug: string = "school-of-agriculutural-sciences"
+  slug: string = "school-of-agriculutural-sciences",
 ) {
   const url = `https://krmangalam.edu.in/wp-json/wp/v2/schools?slug=${slug}&_fields=id,school_faculty`;
 
@@ -248,7 +248,7 @@ export async function getSchoolInfoForFacultyBySlug(
 export async function getWordSchoolFaculty(
   wordFacultyId: number,
   page: number = 1,
-  perPage: number = 4
+  perPage: number = 4,
 ) {
   const url = `https://krmangalam.edu.in/wp-json/wp/v2/faculty?school_faculty=${wordFacultyId}&_fields=id,title,acf,featured_media,slug&per_page=${perPage}&page=${page}`;
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 const HeroSection = () => {
   return (
     <section className="relative w-full overflow-hidden pt-28 sm:pt-[120px] lg:pt-38   lg:pb-8 font-poppins">
-      <div className="mx-auto max-w-[1440px] w-full lg:px-8 xl:px-8">
+      <div className="mx-auto max-w-[1440px] w-full lg:px-8 xl:px-12">
         <div className="w-full rounded-[0px] lg:rounded-[6px] relative z-10 overflow-hidden bg-[#07141E]">
           {/* Background Image Container */}
           <div className="relative w-full">

@@ -225,7 +225,12 @@ export default async function Page({ params }: Props) {
   const enable_disable_download_pros =
     getDownProsSettings?.download_prospectus_enable_disable;
 
-  const school = allSchools.find((school) => school.urlslug === slug);
+  const school = allSchools?.find(
+    (s) =>
+      s.urlslug === slug ||
+      s.urlslug?.trim() === slug?.trim() ||
+      s.wordschoolslug === slug
+  );
   const prospectusUrl = school?.excitedbtns?.[0]?.buttonlink || "#";
   if (isPage?.is_custom_page === "custom_page") {
     return <CustomPage slug={isPage?.slug || ""} />;
