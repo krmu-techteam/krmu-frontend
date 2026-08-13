@@ -3,7 +3,7 @@ import Image from "next/image";
 const ProgrammesOurLocation = () => {
   return (
     <section className="py-8 md:py-12 xl:py-20">
-      <div className="mx-auto max-w-[1440px] w-full px-6 md:px-8 xl:px-12 sm:flex gap-3 md:gap-6 text-center sm:text-left">
+      <div className="mx-auto max-w-[1440px] w-full px-4 md:px-8 xl:px-12 sm:flex gap-3 md:gap-6 text-center sm:text-left">
         <div className="sm:w-5/12">
           <Image
             src="/programmes/cyber-city.webp"

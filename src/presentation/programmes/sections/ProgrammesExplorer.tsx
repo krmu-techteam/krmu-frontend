@@ -468,9 +468,9 @@ const ProgrammesExplorer = ({
 
   return (
     <section className=" font-poppins">
-      <div className="mx-auto max-w-[1440px] w-full px-6 md:px-8 xl:px-12">
+      <div className="mx-auto max-w-[1440px] w-full px-4 sm:px-6 md:px-8 xl:px-8">
         {(title || content) && (
-          <div className="px-6 lg:px-0 xl:px-0">
+          <div className="px-0 lg:px-0 xl:px-0">
             <div className="flex-1">
               {title && (
                 <h2 className="heading-primary text-center md:text-left mb-3 md:mb-4">
@@ -484,19 +484,7 @@ const ProgrammesExplorer = ({
                   {content}
                 </p>
               )}
-              {isProspectusPopupEnabled ? (
-                <CommonLeadPopup
-                  buttonText={
-                    <div className="flex items-center gap-2">
-                      <Download size={18} />
-                      <span>Download Prospectus</span>
-                    </div>
-                  }
-                  buttonClassName="flex mx-auto md:mx-0 items-center gap-2 px-5 py-2.5 border border-white/20 text-white/90 text-[15px] font-medium rounded-sm hover:bg-white/5 transition-all whitespace-nowrap shrink-0"
-                  redirectUrl={prospectusUrl}
-                  form_name="Download Prospectus"
-                />
-              ) : (
+              {isProspectusPopupEnabled && prospectusUrl && (
                 <Link
                   href={prospectusUrl}
                   className="flex items-center gap-2 px-5 py-2.5 border border-white/20 text-white/90 text-[15px] font-medium rounded-sm hover:bg-white/5 transition-all whitespace-nowrap shrink-0"
@@ -510,10 +498,13 @@ const ProgrammesExplorer = ({
             </div>
           </div>
         )}
-        <div ref={sectionRef} className="flex flex-col xl:flex-row gap-6 xl:gap-8 items-start">
+        <div
+          ref={sectionRef}
+          className="flex flex-col xl:flex-row gap-6 xl:gap-8 items-start"
+        >
           {/* Sidebar for Schools */}
           {!schoolOnly && (
-            <div className="w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] xl:w-[300px] shrink-0 sticky top-[130px] md:top-[140px] xl:top-[145px] z-30 self-start xl:max-h-[calc(100vh-160px)] xl:overflow-y-auto no-scrollbar -mx-4 md:-mx-8 xl:mx-0 bg-[#061623] xl:bg-transparent py-1 xl:py-0">
+            <div className="w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] md:w-[calc(100%+4rem)] xl:w-[300px] shrink-0 sticky top-[110px] md:top-[120px] xl:top-[145px] z-40 self-start xl:max-h-[calc(100vh-160px)] xl:overflow-y-auto no-scrollbar -mx-4 sm:-mx-6 md:-mx-8 xl:mx-0 bg-[#061623] xl:bg-transparent py-1 xl:py-0">
               <ProgrammesSidebar
                 activeSchoolSlug={selectedSchool}
                 onSchoolChange={(slug) => {

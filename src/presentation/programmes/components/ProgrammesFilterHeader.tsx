@@ -49,7 +49,7 @@ export default function ProgrammesFilterHeader({
   };
 
   return (
-    <div className="sticky top-[130px] md:top-[140px] xl:top-[145px] z-[35] bg-[#061623] py-3 px-4 md:px-6 xl:px-3 mb-4 rounded-none xl:rounded-[4px] -mx-4 md:-mx-8 xl:mx-0">
+    <div className="sticky top-[160px] md:top-[170px] xl:top-[145px] z-[35] bg-[#061623] py-3 px-4 md:px-6 xl:px-3 mb-4 rounded-none xl:rounded-[4px] -mx-4 sm:-mx-6 md:-mx-8 xl:mx-0">
       {/* Filters & Search Row */}
       <div className="w-full flex flex-col xl:flex-row xl:items-center justify-between gap-4">
         {/* Tabs */}
@@ -59,7 +59,7 @@ export default function ProgrammesFilterHeader({
           onMouseLeave={onMouseLeave}
           onMouseUp={onMouseUp}
           onMouseMove={onMouseMove}
-          className="flex overflow-x-auto no-scrollbar items-center justify-center xl:justify-start w-full xl:flex-1 cursor-grab active:cursor-grabbing gap-6 md:gap-8"
+          className="flex overflow-x-auto no-scrollbar items-center justify-start w-full xl:flex-1 cursor-grab active:cursor-grabbing gap-4 sm:gap-6 md:gap-8"
         >
           {/* Hardcoded tabs to match design */}
           {[

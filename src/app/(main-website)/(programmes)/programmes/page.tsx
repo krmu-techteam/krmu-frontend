@@ -1,5 +1,4 @@
 import { getProgrammePageData } from "@/lib/api/programme";
-import ProgrammesAlumni from "./comp/ProgrammesAlumni";
 import ProgrammesConnectWithUs from "./comp/ProgrammesConnectWithUs";
 import ProgrammesOurLocation from "./comp/ProgrammesOurLocation";
 import { STRAPI_URL } from "@/app/constant";
@@ -9,6 +8,7 @@ import { createBreadcrumbProgSchema } from "@/lib/api/common";
 import Script from "next/script";
 import { Suspense } from "react";
 import {
+  AlumniSection,
   HeroSection,
   ProgrammesExplorer,
 } from "@/presentation/programmes/sections";
@@ -97,7 +97,7 @@ const page = async () => {
         {/* <ProgrammesSearch /> */}
         <ProgrammesExplorer />
       </Suspense>
-      <ProgrammesAlumni alumniData={programmeAlumnis} />
+      <AlumniSection alumniData={programmeAlumnis} />
       <ProgrammesOurLocation />
       <ProgrammesConnectWithUs />
     </>

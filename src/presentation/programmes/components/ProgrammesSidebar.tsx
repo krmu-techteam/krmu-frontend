@@ -60,7 +60,7 @@ export default function ProgrammesSidebar({
       onMouseMove={onMouseMove}
       className="overflow-x-auto xl:overflow-y-auto no-scrollbar cursor-grab active:cursor-grabbing w-full xl:w-[320px] shrink-0"
     >
-      <div className="flex flex-row xl:flex-col px-6 lg:px-7 xl:px-0 py-1 min-w-max xl:min-w-0 bg-transparent xl:bg-[#061623] rounded-none xl:rounded-[4px]">
+      <div className="flex flex-row xl:flex-col px-4 sm:px-6 md:px-8 xl:px-0 py-1 min-w-max xl:min-w-0 bg-transparent xl:bg-[#061623] rounded-none xl:rounded-[4px]">
         {isLoading
           ? Array.from({ length: 8 }).map((_, i) => (
               <div

@@ -36,7 +36,7 @@ export default function ProgrammesList({
   schoolOnly = false,
 }: ProgrammesListProps) {
   return (
-    <div className="flex-1 w-full min-w-0 overflow-hidden relative px-6 md:px-8 lg:px-0 xl:px-0">
+    <div className="flex-1 w-full min-w-0 overflow-hidden relative px-0 md:px-0 lg:px-0 xl:px-0">
       {/* List Content */}
       <div
         className={

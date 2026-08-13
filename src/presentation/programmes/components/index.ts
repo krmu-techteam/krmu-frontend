@@ -5,3 +5,4 @@ export { default as ProgrammesList } from "./ProgrammesList";
 export * from "./ProgrammesList";
 export { default as ProgrammesSidebar } from "./ProgrammesSidebar";
 export * from "./ProgrammesSidebar";
+export { AlumniSlider } from "./AlumniSlider";
