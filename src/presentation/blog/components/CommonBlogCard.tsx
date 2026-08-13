@@ -54,25 +54,7 @@ const CommonBlogCard = async ({
         "https://wp.krmangalam.edu.in/",
       ) || null;
 
-  const getRandomViews = (postDate: string, postSlug: string) => {
-    const pDate = new Date(postDate || Date.now());
-    const isRecent = (Date.now() - pDate.getTime()) < 60 * 24 * 60 * 60 * 1000; // 60 days
-    
-    let seed = 0;
-    for (let i = 0; i < postSlug.length; i++) {
-      seed += postSlug.charCodeAt(i);
-    }
-    // Pseudo-random between 0 and 1
-    const random = (Math.sin(seed) + 1) / 2;
-    
-    if (isRecent) {
-      return Math.floor(random * (600 - 500 + 1)) + 500;
-    } else {
-      return Math.floor(random * (2000 - 1000 + 1)) + 1000;
-    }
-  };
-
-  const displayViews = views || getRandomViews(date, slug).toLocaleString();
+  const displayViews = views || generateRealisticViews(date, slug || title);
 
   const finalSrc2 = finalSrc?.includes(
     "https://wp.krmangalam.edu.in//wp-content",

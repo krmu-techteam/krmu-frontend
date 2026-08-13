@@ -51,7 +51,7 @@ const SingleBlogLayout = ({
     : "July 10, 2026";
 
   const shareUrl = `https://www.krmangalam.edu.in/blog/${currentSlug}`;
-  
+
   const displayViews = generateRealisticViews(date, currentSlug || title);
 
   return (
@@ -80,9 +80,7 @@ const SingleBlogLayout = ({
               </span>
               <span>
                 <span className="text-[#D8D8D8] mr-2">Published By:</span>
-                <span className="font-semibold text-white">
-                  {authorName}
-                </span>
+                <span className="font-semibold text-white">{authorName}</span>
               </span>
             </div>
 

@@ -95,11 +95,17 @@ const MostPopularBlogsSection = async () => {
             "The best interiors are the combination of creativity, purpose, and precision.",
           slug: post?.slug || "bdes-in-interior-design-complete-guide",
           date: formattedDate,
-          categoryName: post?._embedded?.["wp:term"]?.[0]?.[0]?.name || "KRMU Blog",
-          views: generateRealisticViews(rawDate || new Date().toISOString(), post?.slug || "dummy"),
+          categoryName:
+            post?._embedded?.["wp:term"]?.[0]?.[0]?.name || "KRMU Blog",
+          views: generateRealisticViews(
+            rawDate || new Date().toISOString(),
+            post?.slug || "dummy",
+          ),
           authorName: post?._embedded?.author?.[0]?.name || "KRMU Team",
           authorImgId: post?._embedded?.author?.[0]?.acf?.profile_image,
-          authorAvatarUrl: post?._embedded?.author?.[0]?.avatar_urls?.["48"] || post?._embedded?.author?.[0]?.avatar_urls?.["24"]
+          authorAvatarUrl:
+            post?._embedded?.author?.[0]?.avatar_urls?.["48"] ||
+            post?._embedded?.author?.[0]?.avatar_urls?.["24"],
         };
       });
 
@@ -108,14 +114,16 @@ const MostPopularBlogsSection = async () => {
         displayPosts.map(async (post: any) => {
           let finalAvatar = post.authorAvatarUrl;
           if (post.authorImgId) {
-            const customAvatar = await getBlogService().getBlogImageById(post.authorImgId);
+            const customAvatar = await getBlogService().getBlogImageById(
+              post.authorImgId,
+            );
             if (customAvatar) finalAvatar = customAvatar;
           }
           return {
             ...post,
-            authorAvatar: finalAvatar
+            authorAvatar: finalAvatar,
           };
-        })
+        }),
       );
     }
   } catch (error) {
@@ -193,7 +201,7 @@ const MostPopularBlogsSection = async () => {
                 />
 
                 {/* Excerpt */}
-                <p 
+                <p
                   className="text-white/75 text-xs sm:text-sm leading-relaxed line-clamp-2 mb-3 font-light"
                   dangerouslySetInnerHTML={{ __html: post.excerpt }}
                 />
@@ -235,7 +243,9 @@ const MostPopularBlogsSection = async () => {
                     {/* Date */}
                     <div className="flex items-center gap-1.5">
                       <Calendar className="w-4 h-4 text-white/70" />
-                      <span className="text-white/90 font-light">{post.date}</span>
+                      <span className="text-white/90 font-light">
+                        {post.date}
+                      </span>
                     </div>
                   </div>
 

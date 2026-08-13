@@ -362,40 +362,27 @@ export const getBlogService = createProvider<IBlogService>(
   () => new BlogService(new BlogRepository()),
 );
 export function generateRealisticViews(dateString: string, identifier: string | number): string {
-  if (!dateString || !identifier) return "1,420";
+  if (!dateString || !identifier) return "594";
   
-  // Pseudo-random seed from identifier (e.g. slug or id)
-  const seed = String(identifier).split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  const strId = String(identifier);
+  let seed = 0;
+  for (let i = 0; i < strId.length; i++) {
+    seed += strId.charCodeAt(i);
+  }
   
   const pubDate = new Date(dateString);
-  // Ensure we don't crash on invalid dates
-  if (isNaN(pubDate.getTime())) return "1,420";
+  const isValidDate = !isNaN(pubDate.getTime());
+  const pDate = isValidDate ? pubDate : new Date();
   
-  const now = new Date();
-  const diffTime = Math.max(0, now.getTime() - pubDate.getTime());
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  const isRecent = (Date.now() - pDate.getTime()) < 60 * 24 * 60 * 60 * 1000; // 60 days
+  const random = (Math.sin(seed) + 1) / 2;
   
-  // Maximum days to consider for "oldest" posts (e.g. 2 years)
-  const maxDays = 730; 
-  const normalizedDays = Math.min(diffDays, maxDays);
-  
-  // Newer posts (diffDays close to 0) get higher base views (up to 2600)
-  // Older posts (diffDays close to 730) get lower base views (down to 1000)
-  const baseViews = 1000 + ((maxDays - normalizedDays) / maxDays) * 1600;
-  
-  // Add pseudo-random noise (-200 to +300) based on seed
-  const noise = (seed % 500) - 200;
-  
-  let finalViews = Math.floor(baseViews + noise);
-  
-  // Strict clamp between 1000 and 3000
-  if (finalViews < 1000) {
-    finalViews = 1000 + (seed % 500);
-  }
-  if (finalViews > 3000) {
-    finalViews = 3000 - (seed % 200);
+  let val: number;
+  if (isRecent) {
+    val = Math.floor(random * (600 - 500 + 1)) + 500;
+  } else {
+    val = Math.floor(random * (2000 - 1000 + 1)) + 1000;
   }
   
-  // Format as string (e.g. 1,425)
-  return finalViews.toLocaleString("en-IN");
+  return val.toLocaleString("en-IN");
 }
