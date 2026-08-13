@@ -5,10 +5,10 @@ import { ProgrammeAlumniData } from "@/lib/types/programme";
 import { AlumniSliderCard } from "./AlumniSliderCard";
 
 type Props = {
-  alumniData: ProgrammeAlumniData[];
+  alumniData?: ProgrammeAlumniData[];
 };
 
-export const AlumniSlider = ({ alumniData }: Props) => {
+export const AlumniSlider = ({ alumniData = [] }: Props) => {
   return (
     <div className="w-full relative">
       <Carousel

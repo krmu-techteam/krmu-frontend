@@ -3,10 +3,12 @@ import SectionDivider from "@/components/common/SectionDivider";
 import { AlumniSlider } from "../components";
 
 type Props = {
-  alumniData: ProgrammeAlumniData[];
+  alumniData?: ProgrammeAlumniData[];
 };
 
-const AlumniSection = ({ alumniData }: Props) => {
+const AlumniSection = ({ alumniData = [] }: Props) => {
+  if (!alumniData || alumniData.length === 0) return null;
+
   return (
     <section className="relative py-8 md:py-12 xl:py-20">
       <div className="mx-auto max-w-[1440px] w-full px-6 md:px-8 text-center">

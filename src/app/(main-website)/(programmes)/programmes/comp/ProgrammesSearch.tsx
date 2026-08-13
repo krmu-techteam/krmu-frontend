@@ -4,8 +4,6 @@ import {
   ArrowRight,
   Calendar,
   ChevronDown,
-  ChevronRight,
-  CircleArrowRight,
   IndianRupee,
   Search,
   X,
@@ -521,7 +519,7 @@ const ProgrammesSearch = () => {
                           __html:
                             ("title" in item ? item.title : item.heading) +
                             ("highlightitle" in item
-                              ? ` ${item.highlightitle ? item.highlightitle : ''}`
+                              ? ` ${item.highlightitle ? item.highlightitle : ""}`
                               : ""),
                         }}
                       />
