@@ -154,7 +154,7 @@ const YRCMagazines = () => {
               <Link
                 href="https://www.krmangalam.edu.in/pdfs/yrc.pdf"
                 target="_blank" rel="noopener noreferrer"
-                className="common-btn-4"
+                className="common-btn-4 temp-class"
               >
                 2025-2026
               </Link>
