@@ -9,6 +9,7 @@ import {
 import "./internationalAdmission.css";
 import InternationalHeader from "./components/InternationalHeader";
 import Header from "./components/Header";
+import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
 
 const hostGrotesk = Host_Grotesk({
   subsets: ["latin"],
@@ -63,9 +64,12 @@ export default function InternationalAdmissionLayout({
       className={`${hostGrotesk.variable} ${fraunces.variable} ${inter.variable} ${bigShouldersDisplay.variable} ${poppins.variable} ${robotoCondensed.variable}`}
     >
       <body className="antialiased">
+           <div className="w-full bg-[#fcd404]">
+        <KRMUTimer targetDate="2026-08-14T23:59:59" />
+      </div>
         <Header />
         {children}
       </body>
     </html>
   );
-}
+} 
