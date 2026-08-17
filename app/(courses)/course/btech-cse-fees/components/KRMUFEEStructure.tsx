@@ -98,7 +98,7 @@ const KRMUFEEStructure = () => {
                 </td>
               </tr>
 
-              <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] ">
+              {/* <tr className="bg-[#fafbfc] hover:bg-[#f0f7ff] ">
                 <td className="p-[18px_25px]">B.Tech. Cloud Computing**</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
                 <td className="p-[18px_25px]">₹1,35,000</td>
@@ -116,7 +116,7 @@ const KRMUFEEStructure = () => {
                 <td className="p-[18px_25px] font-bold text-[#01316b]">
                   ₹2,70,000
                 </td>
-              </tr>
+              </tr> */}
             </tbody>
           </table>
         </div>

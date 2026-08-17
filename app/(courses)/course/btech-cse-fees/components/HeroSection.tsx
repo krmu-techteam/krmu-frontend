@@ -37,7 +37,7 @@ const HeroSection = () => {
           <div className="text-white hidden sm:flex flex-wrap gap-2 sm:justify-center md:justify-start text-sm">
             <span>100% Placement Support</span>
             <span>|</span>
-            <span>9 Engineering Specialisations</span>
+            <span>7 Engineering Specialisations</span>
             <span>|</span>
             <span>₹56.6 LPA Highest Package</span>
           </div>

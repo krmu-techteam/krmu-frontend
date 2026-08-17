@@ -58,7 +58,7 @@ export const heroCourseMarqueeData: HeroCourseMarqueeSection = {
     "700+ Educators ",
     "100+ UG & PG Programmes ",
     "12K+ Students ",
-    "28+ Acres Campus ",
+    "35+ Acres Campus  ",
     "₹56.6 LPA Highest Package ",
     "₹27 Cr Scholarships ",
     "800+ Recruiters ",
@@ -119,20 +119,20 @@ export const quickComparisonTableData = [
     partner: "ImaginXP",
     career: "UI/UX Designer, Product Designer, Experience Strategist",
   },
-  {
-    name: "B.Tech. Cloud Computing**",
-    learn:
-      "Architect scalable cloud solutions with skills in cloud security, AI integration, and infrastructure",
-    partner: "Microsoft Certifications",
-    career: "Cloud Engineer, DevOps Engineer, Solutions Architect",
-  },
-  {
-    name: "B.Tech. Semiconductor Design**",
-    learn:
-      "Innovate at the hardware level with chip design, VLSI systems, and next-gen electronics",
-    partner: "—",
-    career: "VLSI Engineer, Chip Designer, Hardware Specialist",
-  },
+  // {
+  //   name: "B.Tech. Cloud Computing**",
+  //   learn:
+  //     "Architect scalable cloud solutions with skills in cloud security, AI integration, and infrastructure",
+  //   partner: "Microsoft Certifications",
+  //   career: "Cloud Engineer, DevOps Engineer, Solutions Architect",
+  // },
+  // {
+  //   name: "B.Tech. Semiconductor Design**",
+  //   learn:
+  //     "Innovate at the hardware level with chip design, VLSI systems, and next-gen electronics",
+  //   partner: "—",
+  //   career: "VLSI Engineer, Chip Designer, Hardware Specialist",
+  // },
 ];
 
 export const worldFaciltiesCourseData: CourseComeToLifeSection = {
