@@ -117,6 +117,8 @@ export const NoIndexEventsSlugs = [
   // "industrial-visit-to-smartivity-labs-pvt-ltd",
   // "mou-signing-ceremony-with-nek-mission-foundation",
   "interactive-session-with-chinese-diplomats",
+  "industry-immersion-session",
+  "a-visit-to-the-people-s-republic-of-china",
   // "constitutional-awareness-symposium",
   "delhi-times-fashion-week",
   // "extension-activity-on-effect-of-electronic-devices",

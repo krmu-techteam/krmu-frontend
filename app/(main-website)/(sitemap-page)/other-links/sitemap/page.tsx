@@ -1,6 +1,21 @@
 import Link from "next/link";
 import { sitemapData } from "./constant";
 
+export async function generateMetadata() {
+  return {
+    title: "Website Sitemap | K.R. Mangalam University Gurugram",
+    description:
+      "Browse the complete sitemap of K.R. Mangalam University to easily find courses, academic departments, research hubs, admissions details, and administrative links.",
+    alternates: {
+      canonical: "https://www.krmangalam.edu.in/other-links/sitemap",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
+
 export default function Page() {
   return (
     <main className="min-h-screen bg-[#f7f7f7]">
@@ -51,9 +66,7 @@ export default function Page() {
                           >
                             <span className="mt-[7px] h-2 w-2 flex-shrink-0 rounded-full bg-[#0B2343] group-hover:bg-red-600" />
 
-                            <span className="leading-6">
-                              {link.label}
-                            </span>
+                            <span className="leading-6">{link.label}</span>
                           </Link>
                         </li>
                       ))}
