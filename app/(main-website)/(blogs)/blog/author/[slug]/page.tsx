@@ -40,6 +40,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       index: true,
       follow: true,
     },
+    alternates: {
+      canonical: seo.canonicalUrl || "#",
+    },
     openGraph: {
       title: seo.title || "K.R. Mangalam University",
       description: seo.metaDescription || "",
