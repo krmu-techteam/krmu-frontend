@@ -74,7 +74,7 @@ const EligibilitySection = ({
       <section
         className={`pb-8 md:pb-6 pt-0 lg:pb-10 xl:pb-20  relative z-10 border-gray-100`}
       >
-        <div className={`max-w-[1530px] w-full mx-auto px-6 md:px-8 xl:px-16`}>
+        <div className={`max-w-[1530px] w-full mx-auto px-4 md:px-8 xl:px-16`}>
           {heroSection?.imgvideo === "Video" ? (
             <EligibilityVideoLayout
               elgibilities={elgibilities}
