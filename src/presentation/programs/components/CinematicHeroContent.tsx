@@ -10,24 +10,24 @@ const CinematicHeroContent = ({
   config,
 }: CinematicHeroSectionProps) => {
   return (
-    <div className="flex flex-col lg:block bg-gradient-to-t from-black/95 via-black/40 to-transparent lg:bg-none px-6 pt-14 pb-6 sm:px-6 sm:pt-20 sm:pb-8 md:px-8 lg:p-0">
+    <div className="flex flex-col lg:block bg-gradient-to-t from-black/90 via-black/45 to-transparent lg:bg-none px-4 pt-16 pb-0 sm:px-6 sm:pt-20 sm:pb-8 md:px-8 lg:p-0 antialiased [text-rendering:optimizeLegibility] [-webkit-font-smoothing:antialiased] [-moz-osx-font-smoothing:grayscale]">
       <div className="mb-0 lg:mb-10">
         <h3
-          className={`text-white/90 lg:block hidden ${config.subtitleMaxWidth || "xl:max-w-[65%] 2xl:max-w-[70%]"} [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.subtitleSize || "text-md lg:text-[14px] xl:text-lg"} font-normal uppercase tracking-[0.05em] drop-shadow-md`}
+          className={`text-white/90 lg:block font-poppins hidden ${config.subtitleMaxWidth || "xl:max-w-[65%] 2xl:max-w-[70%]"} ${config.subtitleSize || "text-md lg:text-[14px] xl:text-lg"} font-normal uppercase tracking-[0.08em] antialiased`}
         >
           {heroSection?.subtitle}
         </h3>
         <h1
-          className={`text-white ${config.titleSize} ${config.titleMaxWidth || ""} font-semibold md:font-bold mb-0 lg:mb-3 leading-[1.1] antialiased [text-shadow:0px_4px_8px_rgba(0,0,0,0.5)]`}
+          className={`text-white ${config.titleSize} ${config.titleMaxWidth || ""} font-bold font-serif md:font-bold mb-0 lg:mb-3  leading-[1.42] lg:leading-[1.1] antialiased`}
         >
           {title}{" "}
           <span
-            className={`${config.highlightClass || "text-white/90"} [&_.highlight]:text-[#f5a623] font-semibold antialiased [text-shadow:0px_4px_8px_rgba(0,0,0,0.5)]`}
+            className={`${config.highlightClass || "text-white/90"} [&_.highlight]:text-[#f5a623] lg:leading-[1.1] font-bold antialiased`}
             dangerouslySetInnerHTML={{ __html: highlightitle }}
           />
         </h1>
         <p
-          className={`text-white/95 text-[15px] xl:text-lg [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.descSize} mb-4 leading-relaxed font-normal hidden lg:block lg:max-w-xs xl:max-w-md ${config.contentMaxWidth || "2xl:max-w-lg"}`}
+          className={`text-white/90 font-poppins text-[16px] xl:text-lg  ${config.descSize} mb-4 leading-relaxed font-normal hidden lg:block lg:max-w-xs xl:max-w-md ${config.contentMaxWidth || "2xl:max-w-lg"} antialiased tracking-[-0.005em]`}
         >
           {heroSection?.description}
         </p>
@@ -37,7 +37,7 @@ const CinematicHeroContent = ({
             {formId && (
               <NpfPopup
                 formId={formId}
-                btnClass={`progherobtn px-6 py-2 lg:py-2 lg:px-8 md:py-[8px] md:px-6 text-sm md:text-[14px] lg:text-lg ${heroSection.herobtn.buttonclass || ""} rounded-md shadow-xl transition-all`}
+                btnClass={`progherobtn px-6 py-2 lg:py-2 lg:px-8 md:py-[6px] md:px-6 font-poppins text-sm md:text-[14px] lg:text-[16px] ${heroSection.herobtn.buttonclass || ""} rounded-[4px] transition-all`}
                 btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
                 showIcon={false}
               />

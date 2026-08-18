@@ -53,7 +53,7 @@ const RecruiterCarousel = ({ logos }: RecruiterCarouselProps) => {
         {logos.map((logo) => (
           <div
             key={logo.id}
-            className="w-28 h-18 sm:w-32 sm:h-20 md:w-36 md:h-22 flex items-center justify-center bg-white border border-gray-100 shadow-sm rounded-md p-2.5 sm:p-3 md:p-4 flex-shrink-0 transition-transform duration-300 hover:scale-[1.02]"
+            className="w-28 h-18 sm:w-32 sm:h-20 md:w-42 md:h-24 flex items-center justify-center bg-white border border-gray-100 rounded-[4px] p-1 flex-shrink-0"
           >
             <Image
               src={`${STRAPI_URL}${logo?.url}`}

@@ -31,10 +31,10 @@ const defaultCinematicConfig: Partial<HeroConfig> = {
   subtitleMaxWidth: "lg:max-w-[80%] 2xl:max-w-full",
   subtitleSize: "",
   titleSize: "text-[24px] lg:text-3xl xl:text-[42px] 2xl:text-[52px]",
-  descSize: "2xl:text-lg",
+  descSize: "2xl:text-[17px]",
   contentMaxWidth: "2xl:max-w-lg",
   highlightClass:
-    "block text-white text-[18px] xl:text-[30px] 2xl:text-[35px] mt-2 md:mt-3 leading-[1.26]",
+    "block text-white text-[18px] xl:text-[30px] 2xl:text-[35px] mt-2 md:mt-3 leading-[1.42]",
 };
 
 export const HERO_CONFIGS: Record<string, HeroConfig> = {

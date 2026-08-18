@@ -14,7 +14,7 @@ const AdmissionProcessSection = ({
   slug,
 }: AdmissionProcessSectionProps) => {
   return (
-    <section className="relative z-10 prog-global-padding py-8 md:p-6 lg:py-10 xl:py-20 px-4 lg:px-16 2xl:px-0">
+    <section className="relative z-10 prog-global-padding py-10 md:p-6 lg:py-10 xl:py-20 px-4 lg:px-16 2xl:px-0">
       <div className="common-prog-container">
         <h2 className="heading-primary mb-3">
           {heading} {highlight}

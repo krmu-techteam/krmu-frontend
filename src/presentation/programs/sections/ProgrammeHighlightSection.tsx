@@ -5,6 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ProgrammeHighlightCard } from "../components";
 import { ProgrammeHighlightSectionProps } from "@/features/programs";
+import SectionDivider from "@/components/common/SectionDivider";
 
 const ProgrammeHighlight = ({
   heading,
@@ -49,10 +50,10 @@ const ProgrammeHighlight = ({
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative z-10 py-8 md:py-12 xl:py-20">
-      <div className="max-w-[1530px] w-full mx-auto px-6 md:px-8 xl:px-16">
-        <div className="text-center mb-2 md:mb-6">
-          <h2 className="heading-primary mb-2 md:mb-3">
+    <section className="relative z-10 py-10 md:py-12 xl:py-20">
+      <div className="max-w-[1530px] w-full mx-auto px-4 md:px-8 xl:px-16">
+        <div className="text-center mb-5 md:mb-6">
+          <h2 className="heading-primary mb-4 md:mb-3">
             {heading} {highlightHeading}
           </h2>
           <p className="text-white/90 font-poppins text-md md:text-md max-w-3xl mx-auto font-normal">
@@ -103,6 +104,7 @@ const ProgrammeHighlight = ({
           {/* Mobile Dots or Navigation could go here if needed */}{" "}
         </div>
       </div>
+      <SectionDivider />
     </section>
   );
 };

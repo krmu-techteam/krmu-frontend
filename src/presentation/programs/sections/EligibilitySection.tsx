@@ -72,7 +72,7 @@ const EligibilitySection = ({
   return (
     <>
       <section
-        className={`pb-8 md:pb-6 pt-0 lg:pb-10 xl:pb-20  relative z-10 border-gray-100`}
+        className={`pb-10 pt-0 lg:pb-10 xl:pb-20  relative z-10 border-gray-100`}
       >
         <div className={`max-w-[1530px] w-full mx-auto px-4 md:px-8 xl:px-16`}>
           {heroSection?.imgvideo === "Video" ? (
@@ -91,7 +91,7 @@ const EligibilitySection = ({
                 icon={Calendar}
                 subtitle={elgibilities[0]?.subtitle || "Duration"}
                 title={elgibilities[0]?.title}
-                bgColor="#081D2D"
+                bgColor="#132737"
               />
 
               {/* Card 2: Fee */}
@@ -99,7 +99,7 @@ const EligibilitySection = ({
                 icon={IndianRupee}
                 subtitle={elgibilities[1]?.subtitle || "Program Fee / Year"}
                 title={elgibilities[1]?.title}
-                bgColor="#0D2131"
+                bgColor="#0C2C3A"
               />
 
               {/* Card 3: Requirements */}
@@ -107,7 +107,7 @@ const EligibilitySection = ({
                 icon={LaptopMinimalCheck}
                 subtitle={elgibilities[2]?.subtitle || "Eligibility"}
                 title={elgibilities[2]?.title}
-                bgColor="#182C3C"
+                bgColor="#0C2F3A"
                 isRequirements={true}
                 expanded={expanded}
                 onToggleExpand={() => setExpanded(!expanded)}
