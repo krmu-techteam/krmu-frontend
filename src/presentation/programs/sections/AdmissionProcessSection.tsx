@@ -54,13 +54,12 @@ const AdmissionProcessSection = ({
             icon={ArrowRight}
             iconPosition="right"
             target="_blank"
-            className="w-full sm:w-auto"
+            className="w-fit px-8"
           >
             {admisbtn.buttontext}
           </Button>
         )}
-      </div>
-      <SectionDivider />
+      </div> 
     </section>
   );
 };

@@ -26,8 +26,9 @@ export const Button = ({
   onClick,
   target,
 }: ButtonProps) => {
+  const widthStyle = className.includes("w-") ? "" : "w-full sm:w-auto";
   const baseStyles =
-    "w-full sm:w-auto flex items-center justify-center gap-2 h-[45px] rounded-[3px] font-normal transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide relative overflow-hidden group px-6";
+    `${widthStyle} flex items-center justify-center gap-2 h-[45px] rounded-[3px] font-normal transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide relative overflow-hidden group px-6`;
 
   const variants = {
     primary:
