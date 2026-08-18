@@ -136,23 +136,6 @@ const ProgramHeroCinematic = ({
         </div>
       </section>
 
-      {/* Recruiter Strip outside section for clean white background */}
-      <div className="w-full bg-white pt-16 py-8 pb-8 md:py-6 border-t border-gray-100">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-10 2xl:px-0 relative">
-          {/* Centered Heading Badge */}
-          <div className="absolute -top-[48px] md:-top-[62px] left-1/2 -translate-x-1/2 bg-gray-50 md:bg-white px-6 py-2 rounded-t-sm flex items-center justify-center ">
-            <h5 className="text-[#333] text-[14px] sm:text-[18px] font-semibold whitespace-nowrap">
-              {dreamcareerSection?.heading}
-            </h5>
-          </div>
-          
-          {/* Logo Container */}
-          <div className="min-h-[60px] pt-4">
-            <ConnectingDreamSlider logos={logos} />
-          </div>
-        </div>
-      </div>
-
       {/* Mobile Form - Visible only on mobile for BBA-HR */}
       <div id="apply-form-mobile" className="lg:hidden w-full bg-white pb-0 px-0">
         <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.1)] rounded-none lg:rounded-md overflow-hidden">
@@ -166,6 +149,23 @@ const ProgramHeroCinematic = ({
           </div>
           <div className="p-1">
             <NoPaperForm formId={formId} height="500px" />
+          </div>
+        </div>
+      </div>
+
+      {/* Recruiter Strip outside section for clean white background */}
+      <div className="w-full bg-white pt-16 py-8 pb-8 md:py-6 border-t border-gray-100">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-10 2xl:px-0 relative">
+          {/* Centered Heading Badge */}
+          <div className="absolute -top-[48px] md:-top-[62px] left-1/2 -translate-x-1/2 bg-gray-50 md:bg-white px-6 py-2 rounded-t-sm flex items-center justify-center ">
+            <h5 className="text-[#333] text-[14px] sm:text-[18px] font-semibold whitespace-nowrap">
+              {dreamcareerSection?.heading}
+            </h5>
+          </div>
+          
+          {/* Logo Container */}
+          <div className="min-h-[60px] pt-4">
+            <ConnectingDreamSlider logos={logos} />
           </div>
         </div>
       </div>

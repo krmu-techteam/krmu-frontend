@@ -62,14 +62,14 @@ const ProgramHeroCinematic = ({
         </div>
       </section>
 
-      {/* Recruiter Strip Component */}
+      {/* Mobile Form Component (Placed above recruiter strip on mobile) */}
+      <CinematicForm formId={formId} isMobile={true} />
+
+      {/* Recruiter Strip Component (Connecting Talent to Dream Careers) */}
       <CinematicRecruiterStrip
         dreamcareerSection={dreamcareerSection}
         logos={logos}
       />
-
-      {/* Mobile Form Component */}
-      <CinematicForm formId={formId} isMobile={true} />
       {/* <SectionDivider /> */}
     </div>
   );

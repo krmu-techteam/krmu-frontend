@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { RecruiterCarouselProps } from "@/features/programs";
 
- 
+
 const RecruiterCarousel = ({ logos }: RecruiterCarouselProps) => {
   const [isSlider, setIsSlider] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -49,11 +49,11 @@ const RecruiterCarousel = ({ logos }: RecruiterCarouselProps) => {
 
   if (!isSlider) {
     return (
-      <div className="w-full flex flex-row flex-nowrap justify-center items-center gap-x-4 lg:gap-x-6">
+      <div className="w-full flex flex-row flex-nowrap justify-center items-center gap-3 sm:gap-4 lg:gap-x-6 overflow-x-auto">
         {logos.map((logo) => (
           <div
             key={logo.id}
-            className="w-20 h-20 sm:w-24 sm:h-24 md:w-40 md:h-24 flex items-center justify-center bg-white border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] rounded-sm p-3 sm:p-4 flex-shrink-0 transition-transform duration-300 hover:scale-[1.02]"
+            className="w-24 h-16 sm:w-28 sm:h-20 md:w-32 md:h-24 flex items-center justify-center bg-white rounded-[4px] p-2.5 sm:p-3 md:p-4 flex-shrink-0 transition-transform duration-300 hover:scale-[1.02]"
           >
             <Image
               src={`${STRAPI_URL}${logo?.url}`}
@@ -72,11 +72,11 @@ const RecruiterCarousel = ({ logos }: RecruiterCarouselProps) => {
   return (
     <div className="w-full overflow-hidden relative">
       {/* Universal Slider (Marquee) */}
-      <div className="flex animate-marquee whitespace-nowrap gap-4 py-2">
+      <div className="flex animate-marquee whitespace-nowrap gap-3 sm:gap-4 py-2">
         {logos?.concat(logos).concat(logos).map((logo, index) => (
           <div
             key={`${logo.id}-${index}`}
-            className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center bg-white border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] rounded-md p-3 sm:p-4 flex-shrink-0 transition-transform duration-300 hover:scale-105 customCarousel"
+            className="w-32 h-16 sm:w-32 sm:h-16 md:w-36 md:h-20 flex items-center justify-center bg-white rounded-[1px] md:rounded-[4px] p-1 flex-shrink-0 transition-transform duration-300 hover:scale-105 customCarousel"
           >
             <Image
               src={`${STRAPI_URL}${logo?.url}`}

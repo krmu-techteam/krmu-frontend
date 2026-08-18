@@ -5,18 +5,20 @@ const CinematicRecruiterStrip = ({
   dreamcareerSection,
   logos,
 }: CinematicRecruiterStripProps) => {
+  if (!logos || logos.length === 0) return null;
+
   return (
-    <div className="w-full pt-16 py-8 pb-16 md:pt-20 ">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-10 2xl:px-0 relative">
+    <div className="w-full pt-10 pb-10 lg:pt-16 md:pb-16 relative">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-10 2xl:px-0 relative flex flex-col items-center">
         {/* Centered Heading Badge */}
-        <div className="absolute -top-1 md:-top-[119px] left-1/2 -translate-x-1/2 bg-[#152635]/85 backdrop-blur-md border-t border-white/10 px-6 py-1.5 rounded-t-sm shadow-lg flex items-center justify-center z-20">
-          <h5 className="text-white font-poppins text-[14px] sm:text-[17px] font-normal whitespace-nowrap">
-            {dreamcareerSection?.heading}
+        <div className="mb-4 md:mb-0 md:absolute lg:-top-[105px] md:left-1/2 md:-translate-x-1/2 bg-[#152635]/90 px-5 sm:px-6 py-1.5 sm:py-2 rounded-[4px] md:rounded-t-sm md:rounded-b-none shadow-lg flex items-center justify-center z-20">
+          <h5 className="text-white font-poppins text-[13px] sm:text-[15px] md:text-[17px] font-medium whitespace-nowrap">
+            {dreamcareerSection?.heading || "Connecting Talent to Dream Careers"}
           </h5>
         </div>
 
         {/* Logo Container */}
-        <div className="min-h-[60px]">
+        <div className="w-full min-h-[60px]">
           <RecruiterCarousel logos={logos} />
         </div>
       </div>
