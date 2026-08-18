@@ -42,7 +42,8 @@ import FAQSection2 from "../CommonComponent2026/FAQSection2";
 import ProgrammeSection from "../CommonComponent2026/ProgrammeSection";
 import EligibilityTerms from "../commonComponent/EligibilityTerms";
 import StickyMobileBar from "../commonComponent/StickyMobileBar";
-import SchoolOpenSourceMentorship from "@/app/(main-website)/(schools)/SchoolComponents/SchoolDesign2/SchoolOpenSourceMentorship";
+import { OpenSourceMentorshipSection } from "@/presentation/school/sections";
+
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -118,7 +119,7 @@ const page = () => {
       /> */}
       {/* <IndustryExperts data={industryexpert} /> */}
       {/* <Specialisation data={specialise} /> */}
-      <SchoolOpenSourceMentorship />
+      <OpenSourceMentorshipSection />
       <ProgrammeSection {...programmeContent} />
       <Opportunity data={opport} />
       {/* <FeeStructureTable /> */}

@@ -1,4 +1,4 @@
-import StudentAchievementCard from "@/app/(main-website)/(schools)/SchoolComponents/schoolglobalcomponent/StudentAchievementCard";
+import StudentAchievementCard from "./StudentAchievementCard";
 import { StudentAchievement } from "@/lib/types/common";
 
 type Props = {

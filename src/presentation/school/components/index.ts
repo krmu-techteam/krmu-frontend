@@ -17,3 +17,5 @@ export { default as FacultyAdvisoryCards } from "./FacultyAdvisoryCards";
 export { default as AdvisoryCards } from "./AdvisoryCards";
 export { default as EventsAndExperiencesCards } from "./EventsAndExperiencesCards"; 
 export { CommenceJourneyStepCard, CommenceJourneyMobileStepCard } from "./CommenceJourneyStepCard";
+export { default as YoutubeVideoSection } from "./YoutubeVideoSection";
+

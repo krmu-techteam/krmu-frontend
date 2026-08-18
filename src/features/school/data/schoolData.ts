@@ -1,4 +1,4 @@
-export const soetHerosLogos = [
+export const soetLogos = [
   {
     id: 1,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_703_0a830c4fe7.png",
@@ -14,11 +14,6 @@ export const soetHerosLogos = [
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_701_54243f1690.png",
     alternativeText: "Wipro",
   },
-  // {
-  //   id: 4,
-  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/airtel_logo_png_79a3301511.png",
-  //   alternativeText: "Airtel",
-  // },
   {
     id: 5,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_704_322587e296.png",
@@ -29,9 +24,34 @@ export const soetHerosLogos = [
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_702_bf06081d42.png",
     alternativeText: "Tata Consultancy",
   },
+  {
+    id: 7,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_726_225dcc0a67.png",
+    alternativeText: "Deloitte",
+  },
+  {
+    id: 8,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Apple_127ee571ae.png",
+    alternativeText: "Apple",
+  },
+  {
+    id: 9,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_730_6314d96092.png",
+    alternativeText: "Amazon",
+  },
+  {
+    id: 10,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_725_86f74b8606.png",
+    alternativeText: "Accenture",
+  },
+  {
+    id: 10,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Infosys_c369f2a20f.png",
+    alternativeText: "Infosys",
+  },
 ];
 
-export const sprsHerosLogos = [
+export const sprsLogos = [
   {
     id: 1,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_750_71274a38ff.png",
@@ -69,7 +89,7 @@ export const sprsHerosLogos = [
   },
 ];
 
-export const somcHerosLogos = [
+export const somcLogos = [
   {
     id: 1,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_733_444db7e18b.png",
@@ -102,7 +122,7 @@ export const somcHerosLogos = [
   },
 ];
 
-export const solsHerosLogos = [
+export const solsLogos = [
   {
     id: 1,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Knowledge_Steez_cd7da9a636.png",
@@ -130,7 +150,7 @@ export const solsHerosLogos = [
   },
 ];
 
-export const smasHerosLogos = [
+export const smasLogos = [
   {
     id: 1,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_743_8b3efb0f2b.png",
@@ -158,7 +178,7 @@ export const smasHerosLogos = [
   },
 ];
 
-export const solaHerosLogos = [
+export const solaLogos = [
   {
     id: 1,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/HDFC_bank_78c692844c.png",
@@ -186,12 +206,7 @@ export const solaHerosLogos = [
   },
 ];
 
-export const soadHerosLogos = [
-  // {
-  //   id: 1,
-  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_760_09ec9862d4.png",
-  //   alternativeText: "Ubisoft",
-  // },
+export const soadLogos = [
   {
     id: 2,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_761_5ad51143d1.png",
@@ -214,7 +229,7 @@ export const soadHerosLogos = [
   },
 ];
 
-export const sbasHerosLogos = [
+export const sbasLogos = [
   {
     id: 1,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_724_9489a6a172.png",
@@ -230,63 +245,47 @@ export const sbasHerosLogos = [
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_726_225dcc0a67.png",
     alternativeText: "Deliotte",
   },
-  // {
-  //   id: 4,
-  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ECS_2_6b633be17c.png",
-  //   alternativeText: "ECS",
-  // },
   {
     id: 5,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_727_14658e69e2.png",
     alternativeText: "Quest",
   },
-  // {
-  //   id: 6,
-  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Orion_39ea1118ec.png",
-  //   alternativeText: "Orion Group Logo",
-  // },
-
-  // {
-  //   id: 7,
-  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_762_7ddad40b12.png",
-  //   alternativeText: "Pyramid Logo",
-  // },
+  {
+    id: 6,
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Orion_39ea1118ec.png",
+    alternativeText: "Orion Group Logo",
+  },
 ];
 
-export const semceHerosLogos = [
+export const semceLogos = [
   {
     id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_772_5a3a471551.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dainik_Bhaskar_ecb6231598.png",
     alternativeText: "Dainik Bhaskar",
   },
   {
     id: 2,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_770_f535e3429a.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/The_Indian_Expres_1599805ad8.png",
     alternativeText: "The Indian Express",
   },
   {
     id: 3,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_774_a8e4d3dd30.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Zeenews_5977faf4e2.png",
     alternativeText: "Zee News",
   },
   {
     id: 4,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_771_0eee6c5e1b.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dainik_Jagran_logo_7002fb0179.png",
     alternativeText: "Dainik Jagran",
   },
   {
     id: 5,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_773_5ca2f322b2.png",
+    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/the_times_of_india_c9d7645b1a.png",
     alternativeText: "TOI",
   },
 ];
 
-export const sohmctHerosLogos = [
-  // {
-  //   id: 1,
-  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Hyatt_e7afc75696.png",
-  //   alternativeText: "Dainik Bhaskar",
-  // },
+export const sohmctLogos = [
   {
     id: 2,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_692_a6e25d5a9a.png",
@@ -334,10 +333,9 @@ export const sohmctHerosLogos = [
   },
 ];
 
-
-export const soedHerosLogos = [
+export const soedLogos = [
   {
-    id: 1, 
+    id: 1,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/whitehatjr_a7c7bdc566.png",
     alternativeText: "White Hat Jr",
   },
@@ -366,19 +364,14 @@ export const soedHerosLogos = [
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/jei_39c5f5a573.png",
     alternativeText: "JEI",
   },
-    {
+  {
     id: 7,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/meritnation_a9206459ea.png",
     alternativeText: "Meritnation",
   },
 ];
 
-export const soasHerosLogos = [
-  // {
-  //   id: 1,
-  //   url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_717_8308279f07.png",
-  //   alternativeText: "John Deere",
-  // },
+export const soasLogos = [
   {
     id: 2,
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_722_11e527caf1.png",

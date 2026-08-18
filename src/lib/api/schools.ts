@@ -230,19 +230,44 @@ export async function getSingleFacultyBySlug(
 // }
 
 export async function getSchoolInfoForFacultyBySlug(
-  slug: string = "school-of-agriculutural-sciences",
+  slug: string = "school-of-agricultural-sciences",
 ) {
-  const url = `https://krmangalam.edu.in/wp-json/wp/v2/schools?slug=${slug}&_fields=id,school_faculty`;
+  try {
+    const url = `https://krmangalam.edu.in/wp-json/wp/v2/schools?slug=${slug}&_fields=id,school_faculty`;
 
-  const res = await fetch(url, {
-    next: {
-      revalidate: 3600,
-    },
-  });
+    const res = await fetch(url, {
+      next: {
+        revalidate: 3600,
+      },
+    });
 
-  if (!res.ok) throw new Error("Failed to fetch school info");
-  const json = await res.json();
-  return json;
+    if (res.ok) {
+      const json = await res.json();
+      if (Array.isArray(json) && json.length > 0) return json;
+    }
+
+    const fallbackSlug =
+      slug === "school-of-agriculutural-sciences"
+        ? "school-of-agricultural-sciences"
+        : slug === "school-of-agricultural-sciences"
+        ? "school-of-agriculutural-sciences"
+        : null;
+
+    if (fallbackSlug) {
+      const fallbackUrl = `https://krmangalam.edu.in/wp-json/wp/v2/schools?slug=${fallbackSlug}&_fields=id,school_faculty`;
+      const fallbackRes = await fetch(fallbackUrl, {
+        next: { revalidate: 3600 },
+      });
+      if (fallbackRes.ok) {
+        return await fallbackRes.json();
+      }
+    }
+
+    return [];
+  } catch (err) {
+    console.error("getSchoolInfoForFacultyBySlug error:", err);
+    return [];
+  }
 }
 
 export async function getWordSchoolFaculty(

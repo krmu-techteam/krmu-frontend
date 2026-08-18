@@ -1,5 +1,6 @@
 import { STRAPI_URL } from "@/app/constant";
 import SectionDivider from "@/components/common/SectionDivider";
+import { ADVANTAGES_SECTION_IMAGES } from "@/features/school";
 import { CardWithImage, StrapiMedia } from "@/lib/types/common";
 import Image from "next/image";
 
@@ -10,6 +11,7 @@ type Props = {
   advimg: StrapiMedia;
   advcards: CardWithImage[];
   school_advantage: string;
+  slug?: string;
 };
 
 const LOCAL_ADVANTAGE_ICONS = [
@@ -25,11 +27,12 @@ const AdvantagesSection = ({
   advimg,
   advcards,
   school_advantage,
+  slug,
 }: Props) => {
-  // const imgSrc = advimg?.url
-  //   ? `${STRAPI_URL}${advimg.url}`
-  //   : "/images/school/advantages/advantages.jpg";
-  const imgSrc = "/images/school/advantages/advantages.jpg";
+  const imgSrc =
+    (slug && ADVANTAGES_SECTION_IMAGES[slug]) ||
+    (advimg?.url ? `${STRAPI_URL}${advimg.url}` : "/images/school/advantages/advantages.jpg");
+
 
   return (
     <section className="py-10 md:py-12 xl:py-20 bg-transparent relative z-10 font-poppins text-white">

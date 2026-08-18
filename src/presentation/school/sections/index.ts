@@ -12,5 +12,8 @@ export { default as FacultyAdvisorySection } from "./FacultyAdvisorySection";
 export { default as EventAndExperienceSection } from "./EventAndExperienceSection";
 export { default as FacilitiesSection } from "./FacilitiesSection";
 export { default as CommenceJourneySection } from "./CommenceJourneySection";
+export { default as ExcellenceSection } from "./ExcellenceSection";
+export { default as IndustryVideoSection } from "./IndustryVideoSection";
+
 
 

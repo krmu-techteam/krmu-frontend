@@ -17,8 +17,25 @@ export const OVERVIEW_SECTION_IMAGES: Record<string, string> = {
   // 'school-of-emerging-media-and-creator-economy': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sjmc_info_4152524039.webp',
   'school-of-hotel-management-and-catering-technology': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/shmct_info_902ba1a177.webp',
   'school-of-agriculutural-sciences': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soas_info_fc180558e4.webp',
+  'school-of-agricultural-sciences': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soas_info_fc180558e4.webp',
   'school-of-education': 'https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/soed_info_bc9daec6fd.webp'
 
+};
+
+export const ADVANTAGES_SECTION_IMAGES: Record<string, string> = {
+  "school-of-engineering-and-technology": "/images/school/advantages/advantages.jpg",
+  "school-of-management-and-commerce": "/images/school/advantages/girls/somc.png",
+  "school-of-legal-studies": "/images/school/advantages/girls/sols.png",
+  "school-of-medical-and-allied-sciences": "/images/school/advantages/girls/smas.png",
+  "school-of-physiotherapy-and-rehabilitation-sciences": "/images/school/advantages/girls/sprs.png",
+  "school-of-liberal-arts": "/images/school/advantages/girls/sola.png",
+  "school-of-architecture-design": "/images/school/advantages/girls/soad.png",
+  "school-of-basic-and-applied-sciences": "/images/school/advantages/girls/sbas.png",
+  "school-of-emerging-media-and-creator-economy": "/images/school/advantages/girls/semce.png",
+  "school-of-hotel-management-and-catering-technology": "/images/school/advantages/girls/sohmct.png",
+  "school-of-agriculutural-sciences": "/images/school/advantages/girls/soas.png",
+  "school-of-agricultural-sciences": "/images/school/advantages/girls/soas.png",
+  "school-of-education": "/images/school/advantages/girls/soed.png",
 };
 
 export const WHATYOU_GET_OPEN_SOURCE_MENTORSHIP = [
@@ -27,4 +44,4 @@ export const WHATYOU_GET_OPEN_SOURCE_MENTORSHIP = [
   "Hands-on contributions\n(Git, PRs, real repositories)",
   "6-month structured preparation with continuous support from the Technical Training Team",
   "Corporate-like work environment with daily progress tracking, real development workflows, and mentorship by past selected contributors.",
-];
+];

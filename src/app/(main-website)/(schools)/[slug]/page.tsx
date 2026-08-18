@@ -4,7 +4,6 @@ import {
   getSchoolPage,
 } from "@/lib/api/schools";
 import { Metadata } from "next";
-import SchoolIndustyVideo from "../SchoolComponents/SchoolIndustyVideo";
 import { checkCustomPage } from "@/lib/constants/page";
 import CustomPage from "@/app/(main-website)/(page)/CustomPage";
 import { STRAPI_URL } from "@/app/constant";
@@ -24,9 +23,8 @@ import {
   solsLogos,
   somcLogos,
   sprsLogos,
-} from "../SchoolComponents/schoolData";
-import {
   sbasHerosLogos,
+  semceHerosLogos,
   smasHerosLogos,
   soadHerosLogos,
   soasHerosLogos,
@@ -34,9 +32,10 @@ import {
   soetHerosLogos,
   sohmctHerosLogos,
   solaHerosLogos,
+  solsHerosLogos,
   somcHerosLogos,
   sprsHerosLogos,
-} from "../SchoolComponents/schoolHeroLogo";
+} from "@/features/school";
 
 import {
   HeroSection,
@@ -50,6 +49,7 @@ import {
   TestimonialsSection,
   DeanSection,
   FacultyAdvisorySection,
+  IndustryVideoSection,
   EventAndExperienceSection,
   FacilitiesSection,
   CommenceJourneySection,
@@ -94,6 +94,7 @@ const schoolsImageMap: Record<string, any> = {
   "school-of-hotel-management-and-catering-technology": sohmctLogos,
   "school-of-education": soedLogos,
   "school-of-agriculutural-sciences": soasLogos,
+  "school-of-agricultural-sciences": soasLogos,
 };
 const schoolsHeroLogosMap: Record<string, any> = {
   "school-of-engineering-and-technology": soetHerosLogos,
@@ -108,12 +109,23 @@ const schoolsHeroLogosMap: Record<string, any> = {
   "school-of-hotel-management-and-catering-technology": sohmctHerosLogos,
   "school-of-education": soedHerosLogos,
   "school-of-agriculutural-sciences": soasHerosLogos,
+  "school-of-agricultural-sciences": soasHerosLogos,
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params; // ✅ no await
 
-  const seoData = await getSchoolSEO(slug);
+  const normalizedSlug =
+    slug === "school-of-agriculutural-sciences"
+      ? "school-of-agricultural-sciences"
+      : slug === "school-of-agricultural-sciences"
+      ? "school-of-agriculutural-sciences"
+      : slug;
+
+  let seoData = await getSchoolSEO(slug);
+  if (!seoData || seoData.length === 0) {
+    seoData = await getSchoolSEO(normalizedSlug);
+  }
   const customSEO = await folderRouteSEO(slug);
 
   const custPage = await checkCustomPage(slug);
@@ -225,11 +237,22 @@ export default async function Page({ params }: Props) {
   const enable_disable_download_pros =
     getDownProsSettings?.download_prospectus_enable_disable;
 
+  const normalizedSlug =
+    slug === "school-of-agriculutural-sciences"
+      ? "school-of-agricultural-sciences"
+      : slug === "school-of-agricultural-sciences"
+      ? "school-of-agriculutural-sciences"
+      : slug;
+
   const school = allSchools?.find(
     (s) =>
       s.urlslug === slug ||
       s.urlslug?.trim() === slug?.trim() ||
-      s.wordschoolslug === slug
+      s.urlslug === normalizedSlug ||
+      s.wordschoolslug === slug ||
+      s.wordschoolslug === normalizedSlug ||
+      (slug === "school-of-agriculutural-sciences" && s.urlslug === "school-of-agricultural-sciences") ||
+      (slug === "school-of-agricultural-sciences" && s.urlslug === "school-of-agriculutural-sciences")
   );
   const prospectusUrl = school?.excitedbtns?.[0]?.buttonlink || "#";
   if (isPage?.is_custom_page === "custom_page") {
@@ -251,8 +274,14 @@ export default async function Page({ params }: Props) {
   const degreeName = school?.degree?.name;
   const schoolCategoryName = school?.school_category?.name;
   // const WordSchoolslug = school?.wordschoolslug;
-  const schoolsLogosData = schoolsImageMap[slug];
-  const schoolsHerosLogosData = schoolsHeroLogosMap[slug];
+  const schoolsLogosData =
+    schoolsImageMap[slug] ||
+    schoolsImageMap[school?.urlslug] ||
+    schoolsImageMap[normalizedSlug];
+  const schoolsHerosLogosData =
+    schoolsHeroLogosMap[slug] ||
+    schoolsHeroLogosMap[school?.urlslug] ||
+    schoolsHeroLogosMap[normalizedSlug];
 
   return (
     <>
@@ -340,6 +369,7 @@ export default async function Page({ params }: Props) {
           advimg={school?.advantagimg}
           advcards={school?.advantageCards}
           school_advantage={school?.school_advantage?.advantage_content}
+          slug={slug}
         />
       )}
       {slug === "school-of-engineering-and-technology" && (
@@ -395,7 +425,7 @@ export default async function Page({ params }: Props) {
         />
       )}
       {school?.video_comp && (
-        <SchoolIndustyVideo
+        <IndustryVideoSection
           heading={school?.video_comp?.heading}
           videoCards={school?.video_comp?.video_iframe_fields}
         />
