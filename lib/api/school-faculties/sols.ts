@@ -54,7 +54,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 10187,
     acf: {
-      "staff-qualification": "Ph.D. (UGCNET)",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Professor, Chairperson COE SDG",
       schools: [],
     },
@@ -130,7 +130,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 55332,
     acf: {
-      "staff-qualification": "LL.M.",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant Professor",
       schools: [],
     },
@@ -145,7 +145,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 17535,
     acf: {
-      "staff-qualification": "LL.M.",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant Professor",
       schools: [],
     },
@@ -262,7 +262,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
     id: 113872,
     slug: "niharika",
     title: {
-      rendered: "Niharika",
+      rendered: "Dr. Niharika",
     },
     featured_media: 1024,
     acf: {
@@ -281,7 +281,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 1024,
     acf: {
-      "staff-qualification": "B.A.LL.B, LL.M, Ph.D.",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant Professor",
       schools: [1043],
     },
