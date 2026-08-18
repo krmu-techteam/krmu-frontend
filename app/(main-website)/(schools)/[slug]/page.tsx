@@ -106,6 +106,7 @@ const schoolsImageMap: Record<string, any> = {
   "school-of-hotel-management-and-catering-technology": sohmctLogos,
   "school-of-education": soedLogos,
   "school-of-agriculutural-sciences": soasLogos,
+  "school-of-agricultural-sciences": soasLogos,
 };
 const schoolsHeroLogosMap: Record<string, any> = {
   "school-of-engineering-and-technology": soetHerosLogos,
@@ -120,12 +121,21 @@ const schoolsHeroLogosMap: Record<string, any> = {
   "school-of-hotel-management-and-catering-technology": sohmctHerosLogos,
   "school-of-education": soedHerosLogos,
   "school-of-agriculutural-sciences": soasHerosLogos,
+  "school-of-agricultural-sciences": soasHerosLogos,
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params; // ✅ no await
 
-  const seoData = await getSchoolSEO(slug);
+  const seoSlug =
+    slug === "school-of-agriculutural-sciences"
+      ? "school-of-agricultural-sciences"
+      : slug;
+
+  let seoData = await getSchoolSEO(slug);
+  if (!seoData || seoData.length === 0) {
+    seoData = await getSchoolSEO(seoSlug);
+  }
   const customSEO = await folderRouteSEO(slug);
 
   const custPage = await checkCustomPage(slug);
@@ -233,7 +243,14 @@ export default async function Page({ params }: Props) {
   const custPage = await checkCustomPage(slug);
   const isPage = custPage[0];
 
-  const school = allSchools.find((school) => school.urlslug === slug);
+  const school = allSchools.find(
+    (school) =>
+      school.urlslug === slug ||
+      (slug === "school-of-agriculutural-sciences" &&
+        school.urlslug === "school-of-agricultural-sciences") ||
+      (slug === "school-of-agricultural-sciences" &&
+        school.urlslug === "school-of-agriculutural-sciences"),
+  );
   if (isPage?.is_custom_page === "custom_page") {
     return <CustomPage slug={isPage?.slug || ""} />;
   }
@@ -241,23 +258,43 @@ export default async function Page({ params }: Props) {
   // If not found, redirect to 404 page
   if (!school) return notFound();
 
-  const schoolKnowComp = school.schoolcomps.find(
-    (component) => component.__component === "schoolcomponent.knowledge",
+  const schoolKnowComp = school?.schoolcomps?.find(
+    (component) => component?.__component === "schoolcomponent.knowledge",
   );
 
   const schoolCat = school?.school_category?.name;
 
-  const schoolEventsAndExperience =
-    await getEventsAndExperiencesBySchoolCat(schoolCat);
+  const schoolEventsAndExperience = schoolCat
+    ? (await getEventsAndExperiencesBySchoolCat(schoolCat)) || []
+    : [];
 
   const degreeName = school?.degree?.name;
   const schoolCategoryName = school?.school_category?.name;
   // const WordSchoolslug = school?.wordschoolslug;
-  const schoolsLogosData = schoolsImageMap[slug];
-  const schoolsHerosLogosData = schoolsHeroLogosMap[slug];
+  const schoolsLogosData =
+    schoolsImageMap[slug] ||
+    schoolsImageMap[
+      slug === "school-of-agriculutural-sciences"
+        ? "school-of-agricultural-sciences"
+        : "school-of-agriculutural-sciences"
+    ];
+  const schoolsHerosLogosData =
+    schoolsHeroLogosMap[slug] ||
+    schoolsHeroLogosMap[
+      slug === "school-of-agriculutural-sciences"
+        ? "school-of-agricultural-sciences"
+        : "school-of-agriculutural-sciences"
+    ];
 
   const getAllProgrammes =
-    allProgrammes.find((prog) => prog.slug === slug)?.links ?? [];
+    allProgrammes.find(
+      (prog) =>
+        prog.slug === slug ||
+        (slug === "school-of-agriculutural-sciences" &&
+          prog.slug === "school-of-agricultural-sciences") ||
+        (slug === "school-of-agricultural-sciences" &&
+          prog.slug === "school-of-agriculutural-sciences"),
+    )?.links ?? [];
 
   const programmes = [...getAllProgrammes];
 

@@ -102,6 +102,17 @@ const SchoolHero = ({
       notCutoutBg: true,
     },
 
+    "school-of-agricultural-sciences": {
+      thumbnail: "",
+      ytUrl: "",
+      bgURl:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Agricultural_Sciences_c8932590b0.jpg",
+      middleImg: "",
+      mobileBgImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Agricultural_Sciences_233167137a.png",
+      notCutoutBg: true,
+    },
+
     "school-of-emerging-media-and-creator-economy": {
       thumbnail:
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/school_of_emerging_media_and_creator_economy_f1c0436cee.png",
