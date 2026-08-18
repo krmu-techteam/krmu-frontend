@@ -11,56 +11,105 @@ import type { MetadataRoute } from "next";
 import { origUrl } from "./constant";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = origUrl;
+  const baseUrl = origUrl || "https://www.krmangalam.edu.in";
 
-  const blogs = await getAllBlogs();
-  const newsevents = await getAllNewsEvents();
-  const faculties = await getAllFaculties();
-  const schools = await getAllSchools();
-  const programmes = await getAllSchoolProgrammes();
-  const phdProgrammes = await getAllSchoolPhdProgrammes();
-  const photoGalleries = await getAllPhotoGalleries();
+  let blogUrls: MetadataRoute.Sitemap = [];
+  let newsEventsUrls: MetadataRoute.Sitemap = [];
+  let facultiesUrls: MetadataRoute.Sitemap = [];
+  let schoolUrls: MetadataRoute.Sitemap = [];
+  let programmeUrls: MetadataRoute.Sitemap = [];
+  let phdProgrammeUrls: MetadataRoute.Sitemap = [];
+  let photoGalleriesUrls: MetadataRoute.Sitemap = [];
 
-  const blogUrls: MetadataRoute.Sitemap = blogs.map((blog) => ({
-    url: `${baseUrl}/blog/${blog.slug}`,
-    lastModified: new Date(blog.modified),
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
-  const newsEventsUrls: MetadataRoute.Sitemap = newsevents.map((newsevent) => ({
-    url: `${baseUrl}/events-and-news/${newsevent.slug}`,
-    lastModified: new Date(newsevent.modified),
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
-  const facultiesUrls: MetadataRoute.Sitemap = faculties.map((faculty) => ({
-    url: `${baseUrl}/faculty/${faculty.slug}`,
-    lastModified: new Date(faculty.modified),
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
+  try {
+    const [
+      blogs,
+      newsevents,
+      faculties,
+      schools,
+      programmes,
+      phdProgrammes,
+      photoGalleries,
+    ] = await Promise.all([
+      getAllBlogs().catch(() => []),
+      getAllNewsEvents().catch(() => []),
+      getAllFaculties().catch(() => []),
+      getAllSchools().catch(() => []),
+      getAllSchoolProgrammes().catch(() => []),
+      getAllSchoolPhdProgrammes().catch(() => []),
+      getAllPhotoGalleries().catch(() => []),
+    ]);
 
-  const schoolUrls: MetadataRoute.Sitemap = schools.map((school) => ({
-    url: `${baseUrl}/${school.urlslug}`,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
+    blogUrls = (blogs || [])
+      .filter((blog) => blog?.slug)
+      .map((blog) => {
+        const date = blog.modified ? new Date(blog.modified) : undefined;
+        return {
+          url: `${baseUrl}/blog/${blog.slug}`,
+          ...(date && !isNaN(date.getTime()) ? { lastModified: date } : {}),
+          changeFrequency: "weekly",
+          priority: 0.8,
+        };
+      });
 
-  const programmeUrls: MetadataRoute.Sitemap = programmes.map((p) => ({
-    url: `${baseUrl}/programs/${p.programmeslug}`,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
-  const phdProgrammeUrls: MetadataRoute.Sitemap = phdProgrammes.map((p) => ({
-    url: `${baseUrl}/programs/${p.phdslug}`,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
-  const photoGalleriesUrls: MetadataRoute.Sitemap = photoGalleries.map((p) => ({
-    url: `${baseUrl}/photo-gallery/${p.slug}`,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
+    newsEventsUrls = (newsevents || [])
+      .filter((newsevent) => newsevent?.slug)
+      .map((newsevent) => {
+        const date = newsevent.modified ? new Date(newsevent.modified) : undefined;
+        return {
+          url: `${baseUrl}/events-and-news/${newsevent.slug}`,
+          ...(date && !isNaN(date.getTime()) ? { lastModified: date } : {}),
+          changeFrequency: "weekly",
+          priority: 0.8,
+        };
+      });
+
+    facultiesUrls = (faculties || [])
+      .filter((faculty) => faculty?.slug)
+      .map((faculty) => {
+        const date = faculty.modified ? new Date(faculty.modified) : undefined;
+        return {
+          url: `${baseUrl}/faculty/${faculty.slug}`,
+          ...(date && !isNaN(date.getTime()) ? { lastModified: date } : {}),
+          changeFrequency: "weekly",
+          priority: 0.8,
+        };
+      });
+
+    schoolUrls = (schools || [])
+      .filter((school) => school?.urlslug)
+      .map((school) => ({
+        url: `${baseUrl}/${school.urlslug}`,
+        changeFrequency: "monthly",
+        priority: 0.7,
+      }));
+
+    programmeUrls = (programmes || [])
+      .filter((p) => p?.programmeslug)
+      .map((p) => ({
+        url: `${baseUrl}/programs/${p.programmeslug}`,
+        changeFrequency: "monthly",
+        priority: 0.7,
+      }));
+
+    phdProgrammeUrls = (phdProgrammes || [])
+      .filter((p) => p?.phdslug)
+      .map((p) => ({
+        url: `${baseUrl}/programs/${p.phdslug}`,
+        changeFrequency: "monthly",
+        priority: 0.7,
+      }));
+
+    photoGalleriesUrls = (photoGalleries || [])
+      .filter((p) => p?.slug)
+      .map((p) => ({
+        url: `${baseUrl}/photo-gallery/${p.slug}`,
+        changeFrequency: "monthly",
+        priority: 0.7,
+      }));
+  } catch (error) {
+    console.error("Sitemap generation error:", error);
+  }
 
   return [
     {
