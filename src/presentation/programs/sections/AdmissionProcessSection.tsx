@@ -14,12 +14,12 @@ const AdmissionProcessSection = ({
   slug,
 }: AdmissionProcessSectionProps) => {
   return (
-    <section className="relative z-10 prog-global-padding py-10 md:p-6 lg:py-10 xl:py-20 px-4 lg:px-16 2xl:px-0">
+    <section className="relative z-10 prog-global-padding font-poppins py-10 lg:py-16 xl:py-20 px-4 md:px-8 2xl:px-0">
       <div className="common-prog-container">
-        <h2 className="heading-primary mb-3">
+        <h2 className="heading-primary mb-5">
           {heading} {highlight}
         </h2>
-        <p className="text-white/90 text-md font-poppins mb-5 md:mb-10">
+        <p className="text-white/90 text-md font-poppins mb-8 md:mb-10">
           {desc}
         </p>
       </div>

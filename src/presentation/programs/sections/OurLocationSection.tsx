@@ -6,7 +6,7 @@ import { OurLocationSectionProps } from "@/features/programs";
 
 const OurLocationSection = ({ badgetext, img1, img2 }: OurLocationSectionProps) => {
   return (
-    <section className="relative z-4 py-8 md:p-6 lg:py-10 xl:py-20 px-4 lg:px-16 2xl:px-0 bg-[#051730]/10 sm:px-6">
+    <section className="relative z-4 py-10 md:py-10 lg:py-10 xl:py-20 px-4 md:px-8 lg:px-16 2xl:px-0 sm:px-6">
       <div className="max-w-[1440px] mx-auto w-full p-4 md:p-6 lg:p-10 xl:p-12 bg-[#000000]/30 rounded-md sm:flex gap-3 md:gap-4 lg:gap-10 xl:gap-12 text-center sm:text-left">
         <div className="sm:w-5/12">
           <Image
@@ -21,7 +21,7 @@ const OurLocationSection = ({ badgetext, img1, img2 }: OurLocationSectionProps) 
           <span className="py-2.5 font-normal rounded-md font-poppins text-slate-100 text-sm tracking-wider inline-block">
             {badgetext}
           </span>
-          <h3 className="text-slate-100 text-[22px] font-poppins lg:text-[25px] font-medium mb-4">
+          <h3 className="text-slate-100 text-[20px] font-poppins lg:text-[25px] font-medium mb-4">
             Learn at One of India’s Biggest Business Hubs, Gurgaon
           </h3>
 

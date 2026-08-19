@@ -40,19 +40,19 @@ export const ActionCards = ({ schoolCat }: Props) => {
   };
 
   return (
-    <section className="relative py-10 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-10 lg:py-20 px-4 sm:px-8 lg:px-8 overflow-hidden">
       <div className="relative z-10 max-w-[1300px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-3 lg:gap-6 items-stretch">
           {/* Card 1: Apply Now */}
           <div
             onClick={handleApplyClick}
-            className="bg-[#CAE2F0] rounded-[5px] p-6 sm:p-7 h-[253px] flex flex-col justify-between items-start text-left w-full cursor-pointer hover:shadow-md transition-all duration-300"
+            className="bg-[#CAE2F0] rounded-[4px] md:rounded-[5px] p-5 md:p-4 lg:p-6 xl:p-7 min-h-[220px] md:min-h-[260px] lg:min-h-[253px] h-full flex flex-col justify-between items-start text-left w-full cursor-pointer hover:shadow-md transition-all duration-300"
           >
             <div>
-              <h3 className="font-serif text-3xl sm:text-[42px] font-bold text-[#000000] tracking-tight leading-tight mb-3">
+              <h3 className="font-serif text-[26px] sm:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-[#000000] tracking-tight leading-tight mb-2 sm:mb-3">
                 Apply Now
               </h3>
-              <p className="text-sm sm:text-[14px] text-[#000000] font-poppins leading-relaxed">
+              <p className="text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[14px] text-[#000000]/90 font-poppins leading-relaxed">
                 Login to your application page to start your application and
                 reserve your place in the class of 2026.
               </p>
@@ -60,38 +60,38 @@ export const ActionCards = ({ schoolCat }: Props) => {
             <button
               type="button"
               onClick={handleApplyClick}
-              className="inline-flex items-center font-poppins justify-center px-6 py-2.5 bg-white text-[#000000] text-sm font-semibold rounded-[4px] hover:bg-white/90 transition-all duration-200 cursor-pointer"
+              className="mt-3 md:mt-3 lg:mt-4 inline-flex items-center font-poppins justify-center px-4 md:px-6 lg:px-6 py-2 md:py-2 lg:py-2.5 bg-white text-[#000000] text-xs sm:text-sm font-semibold rounded-[4px] hover:bg-white/90 transition-all duration-200 cursor-pointer"
             >
               Apply Now
             </button>
           </div>
 
           {/* Card 2: Connect */}
-          <div className="bg-[#E7C268] rounded-[5px] p-6 sm:p-7 h-[253px] flex flex-col justify-between items-start text-left w-full">
+          <div className="bg-[#E7C268] rounded-[4px] md:rounded-[5px] p-5 md:p-4 lg:p-6 xl:p-7 min-h-[220px] md:min-h-[260px] lg:min-h-[253px] h-full flex flex-col justify-between items-start text-left w-full hover:shadow-md transition-all duration-300">
             <div>
-              <h3 className="font-serif text-3xl sm:text-[42px] font-bold text-[#000000] tracking-tight leading-tight mb-3">
+              <h3 className="font-serif text-[26px] sm:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-[#000000] tracking-tight leading-tight mb-2 sm:mb-3">
                 Connect
               </h3>
-              <p className="text-sm sm:text-[14px] text-[#000000] font-poppins leading-relaxed">
+              <p className="text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[14px] text-[#000000]/90 font-poppins leading-relaxed">
                 If you would like to speak to an admission counselor please
                 connect with us.
               </p>
             </div>
             <a
               href="tel:9311411717"
-              className="inline-flex items-center font-poppins justify-center px-6 py-2.5 bg-white text-[#000000] text-sm font-semibold rounded-[4px] hover:bg-white/90 transition-all duration-200"
+              className="mt-3 md:mt-3 lg:mt-4 inline-flex items-center font-poppins justify-center px-4 md:px-6 lg:px-6 py-2 md:py-2 lg:py-2.5 bg-white text-[#000000] text-xs sm:text-sm font-semibold rounded-[4px] hover:bg-white/90 transition-all duration-200"
             >
               Talk Now
             </a>
           </div>
 
           {/* Card 3: Brochure */}
-          <div className="bg-white rounded-[5px] p-6 sm:p-7 h-[253px] flex flex-col justify-between items-start text-left w-full">
+          <div className="bg-white rounded-[4px] md:rounded-[5px] p-5 md:p-4 lg:p-6 xl:p-7 min-h-[220px] md:min-h-[260px] lg:min-h-[253px] h-full flex flex-col justify-between items-start text-left w-full hover:shadow-md transition-all duration-300">
             <div>
-              <h3 className="font-serif text-3xl sm:text-[42px] font-bold text-[#000000] tracking-tight leading-tight mb-3">
+              <h3 className="font-serif text-[26px] sm:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-[#000000] tracking-tight leading-tight mb-2 sm:mb-3">
                 Brochure
               </h3>
-              <p className="text-sm sm:text-[14px] text-[#000000] font-poppins leading-relaxed">
+              <p className="text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[14px] text-[#000000]/90 font-poppins leading-relaxed">
                 Download our latest prospectus for a detailed look at our
                 program offerings.
               </p>
@@ -100,7 +100,7 @@ export const ActionCards = ({ schoolCat }: Props) => {
               href={brochureLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center font-poppins justify-center px-6 py-2.5 bg-[#CAE2F0] text-[#000000] text-sm font-semibold rounded-[4px] hover:bg-[#CAE2F0]/80 transition-all duration-200"
+              className="mt-3 md:mt-3 lg:mt-4 inline-flex items-center font-poppins justify-center px-4 md:px-6 lg:px-6 py-2 md:py-2 lg:py-2.5 bg-[#CAE2F0] text-[#000000] text-xs sm:text-sm font-semibold rounded-[4px] hover:bg-[#CAE2F0]/80 transition-all duration-200"
             >
               Download Now
             </a>

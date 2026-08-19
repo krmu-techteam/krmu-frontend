@@ -20,7 +20,7 @@ const ProgrammeScopeSection = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="relative z-10 py-10 md:py-12 xl:py-20">
+    <section className="relative z-10 py-10 lg:py-16 xl:py-20">
       <div className="max-w-[1530px] w-full mx-auto flex flex-col lg:flex-row items-center gap-6 xl:gap-10 px-4 md:px-8 xl:px-16">
         {/* Left column: Image (Hidden on Mobile & Tablet, Visible on Desktop) */}
         <div className="hidden lg:block w-full lg:w-1/2">
@@ -54,7 +54,7 @@ const ProgrammeScopeSection = async ({
           <h3 className="heading-primary text-center lg:text-left mb-5 xl:mb-3 2xl:mb-5">
             {scopeData?.scopeheading}
           </h3>
-          <p className="text-md sm:text-[14px] md:text-[14px] lg:text-[15px] xl:text-[17px] 2xl:text-[18px] text-justify lg:text-left leading-relaxed font-poppins lg:leading-[1.7] opacity-90 mb-0 sm:mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto lg:mx-0">
+          <p className="text-md sm:text-[14px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-[18px] text-justify lg:text-left leading-relaxed font-poppins lg:leading-[1.7] opacity-90 mb-0 sm:mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto lg:mx-0">
             {scopeData?.scopecontent}
           </p>
 

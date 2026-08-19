@@ -12,7 +12,7 @@ const FAQAccordionItem = ({ item }: Props) => {
   return (
     <AccordionItem
       value={`item-${item.id}`}
-      className="border border-[#0055A4] px-6 py-4 rounded-sm transition-all duration-300 shadow-md group last:border-b"
+      className="border border-[#0055A4] p-3 md:px-6 md:py-4 rounded-sm transition-all duration-300 group last:border-b"
     >
       <AccordionPrimitive.Header className="flex w-full">
         <AccordionPrimitive.Trigger className="flex flex-1 items-start gap-4 text-left py-1 text-white hover:no-underline transition-all duration-200 group focus-visible:outline-none">

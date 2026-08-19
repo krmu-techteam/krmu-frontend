@@ -24,7 +24,7 @@ export const EligibilityVideoLayout = ({
   handleApplyClick,
 }: EligibilityVideoLayoutProps) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-8 lg:gap-4 xl:gap-10 rounded-[4px] md:rounded-md p-0 sm:px-0 lg:px-0 xl:px-0 2xl:px-0 items-stretch">
+    <div className="flex flex-col lg:flex-row gap-8 xl:gap-10 rounded-[4px] md:rounded-md items-stretch">
       {/* Left Column: Media (Video only for this layout) */}
       <div className="w-full lg:w-1/2 h-[220px] sm:h-[300px] lg:h-auto lg:min-h-[380px] relative  overflow-hidden group">
         <div className="w-full h-full relative">
@@ -97,6 +97,7 @@ export const EligibilityVideoLayout = ({
               variant="outline"
               icon={Download}
               target="_blank"
+               className="!px-4"
             >
               {prospectusBtn?.buttontext || "Download Prospectus"}
             </Button>
@@ -108,6 +109,7 @@ export const EligibilityVideoLayout = ({
               variant="primary"
               icon={ArrowUpRight}
               iconPosition="right"
+              className="!px-4"
             >
               Apply Now
             </Button>

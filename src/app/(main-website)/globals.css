@@ -2738,91 +2738,148 @@ body:before {
     content: "06";
   }
 
+  .admis_proc_btn_grid_items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+  }
+
   .admis_proc_btn_content {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    padding: 20px 0px;
-    text-align: center;
+    align-items: flex-start;
+    padding: 14px 4px 14px 10px;
+    text-align: left;
+    width: 100%;
   }
 
   .admis_proc_btn_content .btn_text {
-    font-size: 17px;
-    max-width: 190px;
-    border-radius: 50px;
+    font-size: 13.5px;
     width: 100%;
-    padding-bottom: 10px;
-    font-weight: 500;
+    max-width: 155px;
+    padding-bottom: 6px;
+    font-weight: 600;
     color: #fff;
-  }
-  .admis_proc_btn_grid_item:nth-child(1) .admis_proc_btn_content .btn_text {
-    margin-left: -15px;
-  }
-  .admis_proc_btn_grid_item:nth-child(2) .admis_proc_btn_content .btn_text {
-    margin-left: -19px;
-  }
-
-  .admis_proc_btn_grid_item:nth-child(3) .admis_proc_btn_content .btn_text {
-    margin-left: -40px;
-  }
-
-  .admis_proc_btn_grid_item:nth-child(4) .admis_proc_btn_content .btn_text {
-    margin-left: -43px;
-  }
-
-  .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content .btn_text {
-    margin-left: -48px;
-  }
-
-  .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content .btn_text {
-    margin-left: -55px;
+    line-height: 1.25;
+    text-align: left;
   }
 
   .admis_proc_btn_grid_item .admis_proc_btn_content .admis_btn_below_text {
-    max-width: 180px;
     width: 100%;
-    font-size: 13px;
-    margin-top: -6px;
+    max-width: 155px;
+    font-size: 10.5px;
     font-weight: 400;
     color: #e9ecef;
-    line-height: 1.5;
+    line-height: 1.35;
+    text-align: left;
+    word-break: normal;
+    overflow-wrap: break-word;
+    padding: 0;
   }
 
-  .admis_proc_btn_grid_item:nth-child(1)
-    .admis_proc_btn_content
-    .admis_btn_below_text {
-    margin-left: -20px;
+  /* Micro-alignments to match slanted ribbons 01-06 in /admisison-steps.png */
+  .admis_proc_btn_grid_item:nth-child(1) .admis_proc_btn_content {
+    transform: translateX(-12px);
+  }
+  .admis_proc_btn_grid_item:nth-child(2) .admis_proc_btn_content {
+    transform: translateX(-19px);
+  }
+  .admis_proc_btn_grid_item:nth-child(3) .admis_proc_btn_content {
+    transform: translateX(-36px);
+  }
+  .admis_proc_btn_grid_item:nth-child(4) .admis_proc_btn_content {
+    transform: translateX(-42px);
+  }
+  .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content {
+    transform: translateX(-52px);
+  }
+  .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content {
+    transform: translateX(-54px);
   }
 
-  .admis_proc_btn_grid_item:nth-child(2)
-    .admis_proc_btn_content
-    .admis_btn_below_text {
-    margin-left: -15px;
+  /* XL (1280px+) */
+  @media (min-width: 1280px) {
+    .admis_proc_btn_content {
+      align-items: flex-start;
+      padding: 18px 4px 18px 14px;
+      text-align: left;
+    }
+
+    .admis_proc_btn_content .btn_text {
+      font-size: 15.5px;
+      max-width: 175px;
+      padding-bottom: 8px;
+      text-align: left;
+    }
+
+    .admis_proc_btn_grid_item .admis_proc_btn_content .admis_btn_below_text {
+      max-width: 175px;
+      font-size: 12px;
+      line-height: 1.45;
+      text-align: left;
+    }
+
+    .admis_proc_btn_grid_item:nth-child(1) .admis_proc_btn_content {
+      transform: translateX(-13px);
+    }
+    .admis_proc_btn_grid_item:nth-child(2) .admis_proc_btn_content {
+      transform: translateX(-28px);
+    }
+    .admis_proc_btn_grid_item:nth-child(3) .admis_proc_btn_content {
+      transform: translateX(-38px);
+    }
+    .admis_proc_btn_grid_item:nth-child(4) .admis_proc_btn_content {
+      transform: translateX(-48px);
+    }
+    .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content {
+      transform: translateX(-58px);
+    }
+    .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content {
+      transform: translateX(-68px);
+    }
   }
 
-  .admis_proc_btn_grid_item:nth-child(3)
-    .admis_proc_btn_content
-    .admis_btn_below_text {
-    margin-left: -35px;
-  }
+  /* 2XL (1536px+) */
+  /* @media (min-width: 1536px) {
+    .admis_proc_btn_content {
+      align-items: flex-start;
+      padding: 22px 4px 22px 16px;
+      text-align: left;
+    }
 
-  .admis_proc_btn_grid_item:nth-child(4)
-    .admis_proc_btn_content
-    .admis_btn_below_text {
-    margin-left: -35px;
-  }
+    .admis_proc_btn_content .btn_text {
+      font-size: 17px;
+      max-width: 190px;
+      padding-bottom: 10px;
+      text-align: left;
+    }
 
-  .admis_proc_btn_grid_item:nth-child(5)
-    .admis_proc_btn_content
-    .admis_btn_below_text {
-    margin-left: -40px;
-  }
+    .admis_proc_btn_grid_item .admis_proc_btn_content .admis_btn_below_text {
+      max-width: 185px;
+      font-size: 13px;
+      line-height: 1.5;
+      text-align: left;
+    }
 
-  .admis_proc_btn_grid_item:nth-child(6)
-    .admis_proc_btn_content
-    .admis_btn_below_text {
-    margin-left: -44px;
-  }
+    .admis_proc_btn_grid_item:nth-child(1) .admis_proc_btn_content {
+      transform: translateX(8px);
+    }
+    .admis_proc_btn_grid_item:nth-child(2) .admis_proc_btn_content {
+      transform: translateX(4px);
+    }
+    .admis_proc_btn_grid_item:nth-child(3) .admis_proc_btn_content {
+      transform: translateX(0px);
+    }
+    .admis_proc_btn_grid_item:nth-child(4) .admis_proc_btn_content {
+      transform: translateX(-4px);
+    }
+    .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content {
+      transform: translateX(-8px);
+    }
+    .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content {
+      transform: translateX(-10px);
+    }
+  } */
 
   .prog-global-padding {
     padding-top: 50px;

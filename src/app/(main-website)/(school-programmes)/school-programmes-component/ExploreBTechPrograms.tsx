@@ -126,16 +126,13 @@ export default async function ExplorePrograms({
             <div className="w-full flex justify-end mt-4">
               <Link 
                 href={`/programmes?school=${schoolCategorySlug || ""}`}
-                className="inline-flex items-center gap-3 text-white/90 hover:text-white transition-all duration-300 group font-poppins font-normal text-[13px] sm:text-[14px] tracking-widest uppercase cursor-pointer"
+                className="inline-flex items-center gap-2 text-white/90 hover:text-white transition-all duration-300 group font-poppins font-normal text-[13px] sm:text-[14px] tracking-widest uppercase cursor-pointer"
               >
                 <span className="relative py-1">
                   Explore More
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full" />
                 </span>
-                <span className="relative flex items-center justify-center w-8 h-8 rounded-full border border-white/20 group-hover:border-white group-hover:bg-white/10 transition-all duration-300 overflow-hidden">
-                  <ArrowRight className="w-4 h-4 text-white transition-transform duration-300 group-hover:translate-x-8 absolute" />
-                  <ArrowRight className="w-4 h-4 text-white transition-transform duration-300 -translate-x-8 group-hover:translate-x-0 absolute" />
-                </span>
+                <ArrowRight className="w-4 h-4 text-white transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
 

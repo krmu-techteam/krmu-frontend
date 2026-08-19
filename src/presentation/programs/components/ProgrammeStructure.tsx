@@ -263,7 +263,7 @@ const ProgrammeStructure = ({
                             </span>
                           </div>
                         }
-                        buttonClassName={`px-3 h-12 md:h-14 md:px-6 rounded-[2px] md:rounded-md transition-all duration-300 flex items-center justify-center w-auto
+                        buttonClassName={`px-3 h-12 md:h-14 md:px-6 rounded-[2px] lg:rounded-[4px] transition-all duration-300 flex items-center justify-center w-auto
                         ${
                           isDark
                             ? "bg-[#000000] text-white hover:bg-[#0a264a]"

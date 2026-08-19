@@ -13,10 +13,10 @@ const AdmissionCardMobile = ({ card }: Props) => {
   if (isLink) {
     return (
       <div
-        className="w-full text-center px-4 py-4 rounded-[4px] bg-gradient-to-b from-white/[0.14] via-black/15 to-black/25 flex flex-col items-center justify-center min-h-[100px] transition-all antialiased [text-rendering:optimizeLegibility] [-webkit-font-smoothing:antialiased] [-moz-osx-font-smoothing:grayscale]"
+        className="w-full text-center px-4 py-4 rounded-[2px] bg-[#061623]/30 flex flex-col items-center justify-center min-h-[100px] transition-all antialiased [text-rendering:optimizeLegibility] [-webkit-font-smoothing:antialiased] [-moz-osx-font-smoothing:grayscale]"
       >
         {card?.mobcounting && (
-          <span className="text-[11px] font-bold tracking-widest uppercase text-[#f5a623] bg-[#f5a623]/15 border border-[#f5a623]/25 px-3 py-0.5 rounded-full mb-2 font-poppins">
+          <span className="text-[11px] font-bold tracking-widest uppercase text-white bg-white/15 border border-white/25 px-3 py-0.5 rounded-full mb-2 font-poppins">
             STEP {card.mobcounting}
           </span>
         )}
@@ -39,10 +39,10 @@ const AdmissionCardMobile = ({ card }: Props) => {
 
   return (
     <div
-      className="w-full text-center px-4 py-4 rounded-[4px] bg-gradient-to-b from-white/[0.14] via-black/15 to-black/25 flex flex-col items-center justify-center min-h-[100px] transition-all antialiased [text-rendering:optimizeLegibility] [-webkit-font-smoothing:antialiased] [-moz-osx-font-smoothing:grayscale]"
+      className="w-full text-center px-4 py-4 rounded-[2px] bg-[#061623]/30 flex flex-col items-center justify-center min-h-[100px] transition-all antialiased [text-rendering:optimizeLegibility] [-webkit-font-smoothing:antialiased] [-moz-osx-font-smoothing:grayscale]"
     >
       {card?.mobcounting && (
-        <span className="text-[11px] font-bold tracking-widest uppercase text-[#f5a623] bg-[#f5a623]/15 border border-[#f5a623]/25 px-3 py-0.5 rounded-full mb-2 font-poppins">
+        <span className="text-[11px] font-bold tracking-widest uppercase text-white bg-white/15 border border-white/25 px-3 py-0.5 rounded-full mb-2 font-poppins">
           STEP {card.mobcounting}
         </span>
       )}

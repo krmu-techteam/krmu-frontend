@@ -59,7 +59,7 @@ export default async function ExploreProgramsSection({
         }}
       />
 
-      <div className="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-16 2xl:px-0 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-16 2xl:px-0 relative z-10">
         <div className="relative flex flex-col lg:flex-row gap-8 lg:gap-6 xl:gap-16 items-stretch">
           {/* Absolute Left Column: Student Banner */}
           <div className="hidden lg:flex absolute lg:-left-10 2xl:left-0 top-0 bottom-0 w-[40%] xl:w-[35%] justify-center items-end pointer-events-none">
@@ -79,12 +79,12 @@ export default async function ExploreProgramsSection({
           <div className="hidden lg:block lg:w-[40%] xl:w-[35%] pointer-events-none" />
 
           {/* Right Column: Content & Grid */}
-          <div className="w-full lg:w-[60%] xl:w-[65%] flex flex-col justify-center py-8 md:py-6 lg:py-24 xl:py-28">
+          <div className="w-full lg:w-[60%] xl:w-[65%] flex flex-col justify-center py-10 lg:py-24 xl:py-28">
             <div className="text-left lg:mb-4 2xl:mb-6">
-              <h2 className="heading-primary mb-2 [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]">
+              <h2 className="heading-primary !text-[28px] md:text-[42px] text-center md:text-left mb-5 md:[text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]">
                 Explore Other Programmes
               </h2>
-              <p className="text-[#d1cce5] font-poppins font-normal leading-relaxed text-center md:text-left [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] max-w-3xl text-[15px] md:text-[15px] xl:text-[17px] 2xl:text-[18px] mb-4 sm:mb-4 lg:mb-0">
+              <p className="text-white text-justify font-poppins font-normal leading-relaxed md:text-left md:[text-shadow:0px_4px_4px_rgba(0,0,0,0.25)] max-w-3xl text-[16px] md:text-[15px] xl:text-[17px] 2xl:text-[18px] mb-4 sm:mb-4 lg:mb-0">
                 Discover other programmes that open doors to exciting career
                 opportunities and future growth. Choose from a wide range of
                 industry-oriented courses designed to help you build a successful
@@ -103,20 +103,20 @@ export default async function ExploreProgramsSection({
                   {/* Container for content and arrow */}
                   <div className="relative w-full h-full flex flex-col justify-center min-h-[86px]">
                     {/* Top Right Arrow Icon */}
-                    <div className="absolute top-0 right-0 text-gray-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-500 ease-out">
+                    <div className="absolute top-0 right-0 text-white group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-500 ease-out">
                       <ArrowUpRight className="w-5 h-5" />
                     </div>
 
                     <div className="pr-4 xl:pr-6 2xl:pr-8 flex flex-col justify-center h-full">
                       <span
-                        className="text-white text-[15px] md:text-[12.5px] xl:text-[16px] 2xl:text-[17px] font-normal leading-snug font-poppins tracking-wide group-hover:text-white/95 transition-colors duration-500 ease-out [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
+                        className="text-white text-[18px] xl:text-[16px] 2xl:text-[17px] font-normal leading-snug font-poppins tracking-wide group-hover:text-white/95 transition-colors duration-500 ease-out [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
                         dangerouslySetInnerHTML={{
                           __html: prog.title,
                         }}
                       />
                       {prog.highlightitle && (
                         <span
-                          className="text-[#a59ebf] font-poppins font-normal text-[13px] sm:text-[14px] leading-snug mt-1.5 group-hover:text-white/80 transition-colors duration-500 ease-out [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
+                          className="text-white/80 font-poppins font-normal text-[13px] sm:text-[14px] leading-snug mt-1.5 group-hover:text-white/80 transition-colors duration-500 ease-out [text-shadow:0px_4px_4px_rgba(0,0,0,0.25)]"
                           dangerouslySetInnerHTML={{
                             __html: prog.highlightitle,
                           }}
@@ -132,16 +132,13 @@ export default async function ExploreProgramsSection({
             <div className="w-full flex justify-end mt-4">
               <Link
                 href={`/programmes?school=${schoolCategorySlug || ""}`}
-                className="inline-flex items-center gap-3 text-white/90 hover:text-white transition-all duration-300 group font-poppins font-normal text-[13px] sm:text-[14px] tracking-widest uppercase cursor-pointer"
+                className="inline-flex items-center gap-2 text-white hover:text-white transition-all duration-300 group font-poppins font-normal text-[14px] uppercase cursor-pointer"
               >
                 <span className="relative py-1">
                   Explore More
                   <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full" />
                 </span>
-                <span className="relative flex items-center justify-center w-8 h-8 rounded-full border border-white/20 group-hover:border-white group-hover:bg-white/10 transition-all duration-300 overflow-hidden">
-                  <ArrowRight className="w-4 h-4 text-white transition-transform duration-300 group-hover:translate-x-8 absolute" />
-                  <ArrowRight className="w-4 h-4 text-white transition-transform duration-300 -translate-x-8 group-hover:translate-x-0 absolute" />
-                </span>
+                <ArrowRight className="w-5 h-5 text-white transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>

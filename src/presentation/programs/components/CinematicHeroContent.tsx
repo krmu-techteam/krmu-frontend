@@ -27,13 +27,13 @@ const CinematicHeroContent = ({
           />
         </h1>
         <p
-          className={`text-white/90 font-poppins text-[16px] xl:text-lg  ${config.descSize} mb-4 leading-relaxed font-normal hidden lg:block lg:max-w-xs xl:max-w-md ${config.contentMaxWidth || "2xl:max-w-lg"} antialiased tracking-[-0.005em]`}
+          className={`text-white/90 font-poppins text-[16px] xl:text-lg  ${config.descSize} mb-4 leading-relaxed font-normal hidden lg:block lg:max-w-lg lg:text-shadow-xs xl:text-shadow-none xl:max-w-md ${config.contentMaxWidth || "2xl:max-w-lg"} antialiased tracking-[-0.005em]`}
         >
           {heroSection?.description}
         </p>
 
         {slug !== "bhmct-hotel-management" && (
-          <div className="mt-4 lg:mt-3 mb-8 xl:mt-4 flex justify-start lg:justify-start">
+          <div className="mt-4 lg:mt-3 mb-8 md:mb-0 xl:mt-4 flex justify-start lg:justify-start">
             {formId && (
               <NpfPopup
                 formId={formId}

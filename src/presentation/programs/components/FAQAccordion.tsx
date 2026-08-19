@@ -28,15 +28,15 @@ const FAQAccordion = ({ tocfaqs, tocbtn }: FAQAccordionProps) => {
       defaultValue={tocfaqs?.[0]?.tocpoint.toLowerCase() ?? ""}
       className="flex flex-col w-full"
     >
-      {/* Tab bar header layout: Tabs + CTA Button in a dark card container */}
-      <div className="flex flex-row justify-between items-center bg-[#071321] border border-white/5 rounded-sm p-2 md:p-3 mb-8 w-full gap-4">
-        <TabsList className="flex flex-row overflow-x-auto h-auto bg-transparent justify-start no-scrollbar rounded-none p-0 gap-6 md:gap-10">
+      {/* Tab bar header layout: Full width edge-to-edge on mobile/tablet, contained on desktop */}
+      <div className="-mx-4 md:-mx-8 lg:mx-0 flex flex-row justify-between items-center bg-[#071321] border-y lg:border border-white/5 rounded-none lg:rounded-[4px] px-4 md:px-8 lg:px-3 py-2 md:py-3 mb-6 md:mb-8 gap-4">
+        <TabsList className="flex flex-row overflow-x-auto h-auto bg-transparent justify-start no-scrollbar rounded-none p-0 gap-4 sm:gap-6 md:gap-10 w-full lg:w-auto">
           {tocfaqs.map((section) => (
             <TabsTrigger
               key={section.id}
               value={section.tocpoint.toLowerCase()}
-              className="relative text-sm md:text-base font-poppins font-medium cursor-pointer px-3 py-2.5 rounded-none
-                 text-white/60 
+              className="relative text-sm md:text-base font-poppins font-medium cursor-pointer px-1 sm:px-2 md:px-3 py-2.5 rounded-none
+                 text-white 
                  data-[state=active]:text-white
                  data-[state=active]:bg-transparent
                  data-[state=active]:shadow-none
@@ -48,19 +48,21 @@ const FAQAccordion = ({ tocfaqs, tocbtn }: FAQAccordionProps) => {
           ))}
         </TabsList>
 
-        {/* Action Button (on the right of tabs) */}
+        {/* Action Button (Desktop only on right of tabs) */}
         {(tocbtn?.buttonclass || tocbtn?.buttonlink) && (
-          <Button
-            href={tocbtn?.buttonlink || "#"}
-            onClick={handleApplyClick}
-            target="_blank"
-            variant="primary"
-            icon={ArrowUpRight}
-            iconPosition="right"
-            className={`!bg-[#CB000D] hover:!bg-[#CB000D]/90 text-white font-bold !text-xs uppercase tracking-wider !h-auto !py-2.5 !px-6 transition-all duration-300 shrink-0 font-poppins ${tocbtn?.buttonclass || ""}`}
-          >
-            APPLY NOW
-          </Button>
+          <div className="hidden lg:flex shrink-0">
+            <Button
+              href={tocbtn?.buttonlink || "#"}
+              onClick={handleApplyClick}
+              target="_blank"
+              variant="primary"
+              icon={ArrowUpRight}
+              iconPosition="right"
+              className={`!bg-[#CB000D] hover:!bg-[#CB000D]/90 text-white font-bold !text-xs uppercase tracking-wider !h-auto !py-2.5 !px-6 transition-all duration-300 font-poppins ${tocbtn?.buttonclass || ""}`}
+            >
+              APPLY NOW
+            </Button>
+          </div>
         )}
       </div>
 

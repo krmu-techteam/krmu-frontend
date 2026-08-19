@@ -61,11 +61,11 @@ const CareerProspectsSection = ({
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-4 w-full flex flex-col items-center">
         {/* Header Section */}
-        <div className="max-w-6xl w-full text-center mb-4">
-          <h3 className="text-[28px] font-serif md:text-[36px] xl:text-[42px] font-bold text-[#0B1C30] mb-3 md:mb-2">
+        <div className="md:max-w-[855px] w-full text-center mb-4">
+          <h3 className="text-[28px] font-serif md:text-[36px] lg:text-[38px] xl:text-[42px] font-bold text-[#0B1C30] mb-3 md:mb-2">
             {heading} {highlight}
           </h3>
-          <p className="text-[#061623] text-justify font-poppins text-shadow-xs md:text-shadow-none text-md xl:text-[18px] mx-auto max-w-full leading-relaxed md:leading-[1.36]">
+          <p className="text-[#061623] text-justify md:text-center font-poppins text-shadow-xs md:text-shadow-none text-md xl:text-[18px] mx-auto max-w-full leading-relaxed md:leading-[1.36]">
             {desc}
           </p>
         </div>

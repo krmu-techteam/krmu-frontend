@@ -7,7 +7,7 @@ import { FinancialPartnerLogoProps } from "@/features/programs";
 
 const FinancialPartnerLogo = ({ logo }: FinancialPartnerLogoProps) => {
   return (
-    <div className="flex items-center justify-center border border-gray-200 p-4 rounded-sm bg-white hover:border-[#0a41a1] transition-all duration-300 group h-24">
+    <div className="flex items-center justify-center border border-gray-200 p-2 rounded-[4px] bg-white hover:border-[#0a41a1] transition-all duration-300 group h-20 xl:h-24">
       <Image
         src={`${STRAPI_URL}${logo?.url}`}
         width={126}

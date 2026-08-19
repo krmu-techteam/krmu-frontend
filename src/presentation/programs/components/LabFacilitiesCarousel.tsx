@@ -22,7 +22,7 @@ const LabFacilitiesCarousel = ({ labcards, images }: Props) => {
         showArrows={false}
         showDots={true}
         containerClassName="-ml-4 sm:-ml-4 lg:-ml-6 xl:-ml-6 2xl:-ml-6 px-0 my-5 flex items-stretch"
-        slideClassName="pl-4 sm:pl-4 lg:pl-6 xl:pl-8 2xl:pl-8 basis-full sm:basis-1/3 xl:basis-1/3 2xl:basis-1/4 flex"
+        slideClassName="pl-4 sm:pl-4 lg:pl-6 xl:pl-8 2xl:pl-8 basis-full md:basis-1/2 xl:basis-1/3 2xl:basis-1/4 flex"
         activeDotClassName="bg-[#0055A4] w-6 h-2"
         dotClassName="bg-gray-400 w-2 h-2"
       >
@@ -32,7 +32,7 @@ const LabFacilitiesCarousel = ({ labcards, images }: Props) => {
             return (
               <div
                 key={i}
-                className="relative group rounded-sm overflow-hidden bg-gradient-to-b from-[#0055A4]/15 via-[#0055A4]/05 to-[#000000]/40 hover:from-[#0055A4]/25 hover:via-[#0055A4]/10 hover:to-[#000000]/60 transition-all duration-500 ease-out flex flex-col w-full h-full cursor-default hover:-translate-y-1.5 hover:shadow-[0_15px_35px_-10px_rgba(0,85,164,0.15)]"
+                className="relative group rounded-[4px] overflow-hidden bg-gradient-to-b from-[#0055A4]/15 via-[#0055A4]/05 to-[#000000]/40 hover:from-[#0055A4]/25 hover:via-[#0055A4]/10 hover:to-[#000000]/60 transition-all duration-500 ease-out flex flex-col w-full h-full cursor-default hover:-translate-y-1.5 hover:shadow-[0_15px_35px_-10px_rgba(0,85,164,0.15)]"
               >
                 {/* Top Glowing Bar */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-[3px] bg-gradient-to-r from-transparent via-[#0055A4] to-transparent group-hover:w-full transition-all duration-500 ease-out z-10" />

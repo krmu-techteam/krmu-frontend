@@ -14,13 +14,13 @@ const AdmissionCardDesktop = ({ card }: Props) => {
     return (
       <Link
         href={`https://${card?.description}`}
-        className="admis_proc_btn_grid_item"
+        className="admis_proc_btn_grid_item text-left"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className="admis_proc_btn_content">
-          <button className="btn_text font-poppins">{card?.title}</button>
-          <p className="admis_btn_below_text">
+        <div className="admis_proc_btn_content text-left items-start">
+          <button className="btn_text font-poppins text-left cursor-pointer">{card?.title}</button>
+          <p className="admis_btn_below_text font-poppins break-words text-left">
             {card?.description}
           </p>
         </div>
@@ -29,10 +29,10 @@ const AdmissionCardDesktop = ({ card }: Props) => {
   }
 
   return (
-    <div className="admis_proc_btn_grid_item">
-      <div className="admis_proc_btn_content">
-        <button className="btn_text font-poppins">{card?.title}</button>
-        <p className="admis_btn_below_text font-poppins">
+    <div className="admis_proc_btn_grid_item text-left">
+      <div className="admis_proc_btn_content text-left items-start">
+        <button className="btn_text font-poppins text-left">{card?.title}</button>
+        <p className="admis_btn_below_text font-poppins break-words text-left">
           {card?.description}
         </p>
       </div>
