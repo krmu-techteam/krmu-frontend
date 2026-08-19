@@ -619,7 +619,7 @@ const Admission2Search = () => {
                     </div>
                     {progNewLine.includes(slug) && (
                       <div className="text-white text-xs items-center mt-3 px-4 z-999">
-                        3-Year Lateral Entry option also available for eligible
+                        3-Year Lateral Entry option is also available for eligible
                         students
                       </div>
                     )}
