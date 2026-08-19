@@ -80,7 +80,7 @@ const page = async ({ params }: Props) => {
   return (
     <section>
       <div
-        className="max-w-[820px] mx-auto w-full mb-5 clear-both relative"
+        className="max-w-[820px] mx-auto w-full mb-5 clear-both relative temp-class"
         style={{
           boxShadow: `0 0 1px 0 rgba(0, 0, 0, .08), 0 2px 2px 0 rgba(0, 0, 0, .16)`,
         }}
