@@ -19,10 +19,7 @@ type Props = {
 };
 
 const BeyondClassroomSlider = ({ slideimages }: Props) => {
-  const imagesToDisplay =
-    slideimages && slideimages.length > 0
-      ? slideimages
-      : DEFAULT_EVENT_IMAGES;
+  const imagesToDisplay = DEFAULT_EVENT_IMAGES;
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,

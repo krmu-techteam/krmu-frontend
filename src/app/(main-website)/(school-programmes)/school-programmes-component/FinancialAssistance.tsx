@@ -38,7 +38,7 @@ const FinancialAssistance = ({
           <h2 className="heading-primary mb-2 2xl:mb-4">
             {heading}{" "}{highlightheading} 
           </h2>
-          <p className="text-lg md:text-[17px] font-poppins text-white/90 px-36 text-center md:mb-4">{description}</p>
+          <p className="text-[15px] sm:text-[16px] text-justify md:text-[17px] font-poppins text-white/90 px-0 sm:px-0 md:px-12 lg:px-24 xl:px-36 md:mb-4">{description}</p>
         </div>
 
         {/* Points Layout */}

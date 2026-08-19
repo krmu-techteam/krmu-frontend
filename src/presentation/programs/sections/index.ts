@@ -14,3 +14,8 @@ export { default as ScholarshipBannerSection } from "./ScholarshipBannerSection"
 export { default as FrequentlyAskedQuestionsSection } from "./FrequentlyAskedQuestionsSection";
 export { default as ResearchAndInnovationSection } from "./ResearchAndInnovationSection";
 export { default as BreakDownSection } from "./BreakDownSection";
+export { default as CareerProspectsSection } from "./CareerProspectsSection";
+export { default as CurriculumSection } from "./CurriculumSection";
+export { default as DreamCareerSection } from "./DreamCareerSection";
+export { default as OurLocationSection } from "./OurLocationSection";
+export { default as ExploreProgramsSection } from "./ExploreProgramsSection";

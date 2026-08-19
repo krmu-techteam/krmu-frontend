@@ -22,10 +22,10 @@ const FinancialAssistanceSection = ({
       <div className="max-w-[1440px] mx-auto w-full">
         {/* Header Title and Description */}
         <div className="common-prog-container !max-w-7xl">
-          <h2 className="heading-primary mb-2 2xl:mb-4">
+          <h2 className="heading-primary mb-5 2xl:mb-4">
             {heading}{" "}{highlightheading} 
           </h2>
-          <p className="text-lg md:text-[17px] font-poppins text-white/90 px-36 text-center md:mb-4">
+          <p className="text-[15px] sm:text-[16px] text-justify md:text-[17px] font-poppins text-white/90 px-0 sm:px-0 md:px-12 lg:px-24 xl:px-36 md:text-justify md:mb-4">
             {description}
           </p>
         </div>

@@ -8,21 +8,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
-import { ButtonType } from "@/lib/types/common";
-import { Year } from "@/lib/types/school-programme";
-import CommonLeadPopup from "../../components/CommonLeadPopup";
+import { ProgrammeStructureProps } from "@/features/programs";
+import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 import { Download, CircleArrowRight } from "lucide-react";
-
-type Props = {
-  programStruct: Year[];
-  currbtn: ButtonType;
-  currFormId: string;
-  currFormContainerId: string;
-  isYear: boolean;
-  heading?: string;
-  highlight?: string;
-  slug?: string;
-};
 
 const ProgrammeStructure = ({
   programStruct,
@@ -30,7 +18,7 @@ const ProgrammeStructure = ({
   heading,
   highlight,
   slug,
-}: Props) => {
+}: ProgrammeStructureProps) => {
   const [activeYear, setActiveYear] = useState(
     programStruct[0]?.year.toLowerCase().replace(/\s+/g, "") || "",
   );
@@ -51,10 +39,6 @@ const ProgrammeStructure = ({
     };
     fetchSettings();
   }, []);
-
-  const enable_disable_handbook = settings?.programme_handbook_enable_disable;
-  const enable_disable_open_elective = settings?.open_elective_enable_disable;
-  const enable_disable_minor = settings?.minor_enable_disable;
 
   return (
     <div className="w-full antialiased">
@@ -77,26 +61,7 @@ const ProgrammeStructure = ({
         </div>
 
         <div className="relative w-full">
-          {/* Programme Handbook Button - Responsive layout to prevent overlaying tabs */}
-          {/* {currbtn?.buttonlink && (
-            <div className="relative xl:absolute xl:right-0 xl:top-0 2xl:right-72 z-20 mb-6 xl:mb-0 w-full xl:w-auto flex justify-center xl:justify-start">
-              <CommonLeadPopup
-                buttonText={
-                  <span className="flex items-center gap-3">
-                    <Download className="w-5 h-5" />
-                    <span className="uppercase tracking-widest font-semibold text-[11px] md:text-xs">
-                      {currbtn?.buttontext}
-                    </span>
-                  </span>
-                }
-                buttonClassName="px-6 py-4 bg-[#051730] text-white rounded-sm md:rounded-md shadow-xl hover:bg-[#0a264a] transition-all duration-300 border border-[#051730]/10 flex items-center justify-center min-w-[200px]"
-                redirectUrl={currbtn?.buttonlink || "#"}
-                form_name="Programme Handbook"
-              />
-            </div>
-          )} */}
-
-          {/* Main Content Area - Clean stack without card boundaries to match image */}
+          {/* Main Content Area */}
           <div
             className={` ${slug === "bachelor-of-physiotherapy-bpt" || slug === "barch-architecture" || slug === "ba-llb-hons" || slug === "bba-llb-hons" || slug === "integrated-bba-mba" || slug === "dual-degree-bsc-mscforensic-science" ? "md:max-w-[70%] lg:max-w-lg xl:max-w-2xl" : "xl:max-w-lg 2xl:max-w-xl"} flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10`}
           >
@@ -121,7 +86,7 @@ const ProgrammeStructure = ({
             )}
             <div className="flex-grow flex flex-col">
               {/* Year Tabs */}
-              <div className="flex w-full font-poppins overflow-x-auto  no-scrollbar rounded-[4px] md:rounded-md">
+              <div className="flex w-full font-poppins overflow-x-auto no-scrollbar rounded-[4px] md:rounded-md">
                 {programStruct.map((year) => {
                   const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                   const isYearActive = activeYear === yearValue;
@@ -153,7 +118,7 @@ const ProgrammeStructure = ({
                 })}
               </div>
 
-              {/* Semester Tabs - Transparent with White Text as per screenshot */}
+              {/* Semester Tabs */}
               <div className="flex w-full font-poppins border-white bg-transparent overflow-x-auto no-scrollbar">
                 {programStruct
                   .find(
@@ -185,8 +150,8 @@ const ProgrammeStructure = ({
                   })}
               </div>
 
-              {/* Subjects List - Transparent Glass Area as per screenshot */}
-              <div className="flex-grow py-6 h-[auto]  bg-transparent no-scrollbar">
+              {/* Subjects List */}
+              <div className="flex-grow py-6 h-[auto] bg-transparent no-scrollbar">
                 {programStruct.map((year) => {
                   const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                   if (activeYear !== yearValue) return null;
@@ -269,7 +234,7 @@ const ProgrammeStructure = ({
                 })}
               </div>
 
-              {/* Action Buttons Container - Glassy Bottom - Responsive Stack for Mobile */}
+              {/* Action Buttons Container */}
               <div className="py-8 font-poppins bg-transparent min-h-[100px] flex flex-row items-center md:justify-start justify-center gap-4 md:gap-4 overflow-x-auto no-scrollbar w-full">
                 {programStruct
                   .find(

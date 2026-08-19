@@ -44,4 +44,167 @@ export const WHATYOU_GET_OPEN_SOURCE_MENTORSHIP = [
   "Hands-on contributions\n(Git, PRs, real repositories)",
   "6-month structured preparation with continuous support from the Technical Training Team",
   "Corporate-like work environment with daily progress tracking, real development workflows, and mentorship by past selected contributors.",
-];
+];
+
+export type CoeItem = {
+  subtitle: string;
+  title: string;
+  imgUrl: string;
+  link: string;
+};
+
+export const SCHOOL_COE_MAP: Record<string, CoeItem[]> = {
+  "school-of-engineering-and-technology": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "B.Tech CSE",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/b-tech-cse",
+    },
+    {
+      subtitle: "Centre of Excellence in",
+      title: "BCA",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bca-ai-data-science",
+    },
+  ],
+  "school-of-management-and-commerce": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "BBA",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bba",
+    },
+    {
+      subtitle: "Centre of Excellence in",
+      title: "BBA-MBA Integrated",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/integrated-bba-mba",
+    },
+  ],
+  "school-of-legal-studies": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "BBA LLB (Hons.)",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bba-llb-hons",
+    },
+    {
+      subtitle: "Centre of Excellence in",
+      title: "LLB",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/llb-hons",
+    },
+  ],
+  "school-of-medical-and-allied-sciences": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "B.Pharm",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bpharma",
+    },
+    {
+      subtitle: "Centre of Excellence in",
+      title: "M.Pharm. (Master of Pharmacy) - Pharmaceutics",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/m-pharm-pharmaceutics",
+    },
+  ],
+  "school-of-physiotherapy-and-rehabilitation-sciences": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "BPT (Bachelor of Physiotherapy)",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bachelor-of-physiotherapy-bpt",
+    },
+  ],
+  "school-of-liberal-arts": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "BA Economics (Hons.)",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/ba-hons-economics-research",
+    },
+    {
+      subtitle: "Centre of Excellence in",
+      title: "B.A. (Hons.) Psychology",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/b-a-hons-hons-with-research-psychology",
+    },
+  ],
+  "school-of-architecture-design": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "B.Arch",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/barch-architecture",
+    },
+    {
+      subtitle: "Centre of Excellence in",
+      title: "B.Des (Interior/Fashion Design)",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bdes-interior-design",
+    },
+  ],
+  "school-of-basic-and-applied-sciences": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "B.Sc. Forensic Science",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bsc-forensic-science",
+    },
+    {
+      subtitle: "Centre of Excellence in",
+      title: "Integrated / Dual Degree B.Sc. - M.Sc. (Forensic Science)",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/integrated-bsc-msc-forensic",
+    },
+  ],
+  "school-of-emerging-media-and-creator-economy": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "BJMC (Journalism & Mass Comm)",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bjmc",
+    },
+  ],
+  "school-of-hotel-management-and-catering-technology": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "Bachelor of Hotel Management and Catering Technology (B.HMCT.)",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bhmct-hotel-management",
+    },
+  ],
+  "school-of-education": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "B.Ed.",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bachelor-of-education-b-ed",
+    },
+    {
+      subtitle: "Centre of Excellence in",
+      title: "B.El.Ed.",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bachelor-elementary-education-b-el-ed",
+    },
+  ],
+  "school-of-agricultural-sciences": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "B.Sc. (Hons.) Agriculture",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bsc-hons-agriculture",
+    },
+  ],
+  "school-of-agriculutural-sciences": [
+    {
+      subtitle: "Centre of Excellence in",
+      title: "B.Sc. (Hons.) Agriculture",
+      imgUrl: "/modules/school/knowledge-partner.jpg",
+      link: "/programs/bsc-hons-agriculture",
+    },
+  ],
+};
+

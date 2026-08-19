@@ -21,9 +21,9 @@ const ProgrammeScopeSection = async ({
 
   return (
     <section className="relative z-10 py-10 md:py-12 xl:py-20">
-      <div className="max-w-[1530px] w-full mx-auto flex flex-col sm:flex-row items-center gap-6 xl:gap-10 px-4 md:px-8 xl:px-16">
-        {/* Left column: Image */}
-        <div className="w-full sm:w-1/2">
+      <div className="max-w-[1530px] w-full mx-auto flex flex-col lg:flex-row items-center gap-6 xl:gap-10 px-4 md:px-8 xl:px-16">
+        {/* Left column: Image (Hidden on Mobile & Tablet, Visible on Desktop) */}
+        <div className="hidden lg:block w-full lg:w-1/2">
           {heroSection?.imgvideo === "Video" && isFormAvailable ? (
             <div className="relative aspect-[16/10] sm:aspect-[4/4] lg:aspect-[4/3] xl:aspect-[5/3] w-full rounded-[4px] ld:rounded-md overflow-hidden">
               <div
@@ -50,16 +50,16 @@ const ProgrammeScopeSection = async ({
         </div>
 
         {/* Right column: Content */}
-        <div className="w-full sm:w-1/2 sm:text-left text-justify text-white">
-          <h3 className="heading-primary text-center md:text-left mb-5 xl:mb-3 2xl:mb-5">
+        <div className="w-full lg:w-1/2 lg:text-left text-justify text-white">
+          <h3 className="heading-primary text-center lg:text-left mb-5 xl:mb-3 2xl:mb-5">
             {scopeData?.scopeheading}
           </h3>
-          <p className="text-md sm:text-[14px] md:text-[14px] lg:text-[15px] xl:text-[17px] 2xl:text-[18px] text-justify md:text-center sm:text-left leading-relaxed font-poppins sm:leading-[1.7] opacity-90 mb-0 sm:mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto sm:mx-0">
+          <p className="text-md sm:text-[14px] md:text-[14px] lg:text-[15px] xl:text-[17px] 2xl:text-[18px] text-justify lg:text-left leading-relaxed font-poppins lg:leading-[1.7] opacity-90 mb-0 sm:mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto lg:mx-0">
             {scopeData?.scopecontent}
           </p>
 
           {scopeData?.scopebtn?.buttontext && (
-            <div className="flex items-center justify-center sm:justify-start mt-5 md:mt-0 w-fit mx-auto">
+            <div className="flex items-center justify-center lg:justify-start mt-5 md:mt-0 w-fit mx-auto lg:mx-0">
               {enable_disable_download_pros ? (
                 <CommonLeadPopup
                   buttonText={

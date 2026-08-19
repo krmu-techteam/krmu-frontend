@@ -18,5 +18,7 @@ export { default as FinancialPartnerLogo } from "./FinancialPartnerLogo";
 export { default as FAQAccordion } from "./FAQAccordion";
 export { default as FAQAccordionItem } from "./FAQAccordionItem";
 export { default as ScholarshipIllustration } from "./ScholarshipIllustration";
+export { default as ProgrammeStructure } from "./ProgrammeStructure";
+export { default as HoverCard } from "./HoverCard";
 
 

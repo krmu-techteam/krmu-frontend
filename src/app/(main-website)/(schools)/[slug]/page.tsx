@@ -397,6 +397,7 @@ export default async function Page({ params }: Props) {
         <KnowledgePartnersSection
           title={school?.knowledgetitle}
           logos={school?.knowledgepartenerlogos}
+          slug={slug}
         />
       )}
       {school?.tetimonialtitle && (

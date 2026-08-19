@@ -1,7 +1,7 @@
 import { ButtonType, StrapiMedia } from "@/lib/types/common";
 import { HeroConfig } from "./programs.constants";
 import { ParagraphBlock } from "@/lib/types/about";
-import { Programme } from "@/lib/types/school-programme";
+import { Programme, CareerCard, Year } from "@/lib/types/school-programme";
 import { PhDProgramme } from "@/lib/types/phd-programmes";
 
 
@@ -199,6 +199,69 @@ export interface FAQAccordionProps {
   tocfaqs: TOCFAQ[];
   tocbtn?: ButtonType;
 };
+
+// Career Prospects Section
+export interface CareerProspectsSectionProps {
+  heading: string;
+  highlight: string;
+  desc: string;
+  btn: ButtonType;
+  careerimg: StrapiMedia;
+  careercards: CareerCard[];
+  slug?: string;
+}
+
+// Curriculum & Programme Structure
+export interface ProgrammeStructureProps {
+  programStruct: Year[];
+  currbtn: ButtonType;
+  currFormId?: string;
+  currFormContainerId?: string;
+  isYear?: boolean;
+  heading?: string;
+  highlight?: string;
+  slug?: string;
+}
+
+export interface CurriculumSectionProps {
+  heading: string;
+  highlight: string;
+  desc?: string;
+  programStruct: Year[];
+  currbtn: ButtonType;
+  currFormId?: string;
+  currFormContainerId?: string;
+  isYear?: boolean;
+  slug?: string;
+}
+
+// Dream Career Section
+export interface DreamCareerSectionProps {
+  heading: string;
+  description?: string;
+  logos: StrapiMedia[];
+}
+
+// Our Location Section
+export interface OurLocationSectionProps {
+  badgetext: string;
+  heading?: string;
+  img1: StrapiMedia;
+  img2: StrapiMedia;
+}
+
+// Explore Programs Section
+export interface ExploreProgramsSectionProps {
+  currentSlug: string;
+}
+
+// Hover Card Props
+export interface HoverCardProps {
+  href: string;
+  className?: string;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+}
 
 export type SchoolProgrammeDomain = Programme;
 export type PHDProgrammeDomain = PhDProgramme;

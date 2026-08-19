@@ -1,10 +1,5 @@
 import { getProgramsService, IProgramsService } from "@/features/programs";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
-import CareerProspects from "../../school-programmes-component/CareerProspects";
-import Curriculum from "../../school-programmes-component/Curriculum";
-import DreamCareer from "../../school-programmes-component/DreamCareer";
-import OurLocation from "../../school-programmes-component/OurLocation";
-import ExplorePrograms from "../../school-programmes-component/ExploreBTechPrograms";
 import { notFound } from "next/navigation";
 
 import PHDProgrammes from "../PHDProgramme";
@@ -37,12 +32,17 @@ import {
   AdmissionProcessSection,
   BeyondClassroomSection,
   BreakDownSection,
+  CareerProspectsSection,
+  CurriculumSection,
+  DreamCareerSection,
   EligibilitySection,
+  ExploreProgramsSection,
   FinancialAssistanceSection,
   FrequentlyAskedQuestionsSection,
   HeroSection,
   LabsFacilitieSection,
   NewProgrammeScopeSection,
+  OurLocationSection,
   ProgrammeOverviewSection,
   ProgrammeScopeSection,
   ResearchAndInnovationSection,
@@ -316,7 +316,7 @@ const page = async ({ params }: Props) => {
           />
         )}
         {!(slug in heroConfigs) && dreamcareerSection && (
-          <DreamCareer
+          <DreamCareerSection
             heading={dreamcareerSection.heading}
             description={dreamcareerSection.description}
             logos={dreamcareerSection?.careerlogos}
@@ -384,7 +384,7 @@ const page = async ({ params }: Props) => {
           />
         )}
         {curriculumSection && (
-          <Curriculum
+          <CurriculumSection
             heading={curriculumSection?.heading}
             highlight={curriculumSection?.highlightheading}
             desc={curriculumSection?.description}
@@ -393,6 +393,7 @@ const page = async ({ params }: Props) => {
             currFormId={curriculumSection?.currFormId}
             currFormContainerId={curriculumSection?.currContainerId}
             isYear={curriculumSection?.only_years}
+            slug={slug}
           />
         )}
         {labfacilitiesSection && (
@@ -416,7 +417,7 @@ const page = async ({ params }: Props) => {
           />
         )}
         {careerProspectsSection && (
-          <CareerProspects
+          <CareerProspectsSection
             heading={careerProspectsSection?.heading}
             highlight={careerProspectsSection?.highlightheading}
             desc={careerProspectsSection?.description}
@@ -459,10 +460,10 @@ const page = async ({ params }: Props) => {
           />
         )}
 
-        <ExplorePrograms currentSlug={slug} />
+        <ExploreProgramsSection currentSlug={slug} />
 
         {ourLocationSection && (
-          <OurLocation
+          <OurLocationSection
             badgetext={ourLocationSection?.badgetext}
             heading={ourLocationSection?.badgetext}
             img1={ourLocationSection?.img1}

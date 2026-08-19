@@ -1,26 +1,14 @@
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
-import { ButtonType, StrapiMedia } from "@/lib/types/common";
-import { CareerCard } from "@/lib/types/school-programme";
+import { CareerProspectsSectionProps } from "@/features/programs";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
 import Button from "@/components/common/Button";
 
-type Props = {
-  heading: string;
-  highlight: string;
-  desc: string;
-  btn: ButtonType;
-  careerimg: StrapiMedia;
-  careercards: CareerCard[];
-  slug?: string;
-};
-
-const CareerProspects = ({
+const CareerProspectsSection = ({
   heading,
   highlight,
   desc,
@@ -28,7 +16,7 @@ const CareerProspects = ({
   careerimg,
   careercards,
   slug,
-}: Props) => {
+}: CareerProspectsSectionProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 60 }, [
     Autoplay({ delay: 4000, stopOnInteraction: false }),
     Fade(),
@@ -150,4 +138,4 @@ const CareerProspects = ({
   );
 };
 
-export default CareerProspects;
+export default CareerProspectsSection;

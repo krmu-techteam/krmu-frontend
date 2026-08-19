@@ -22,11 +22,8 @@ type Props = {
   slideimages?: StrapiMedia[];
 };
 
-const BeyondClassroomCarousel = ({ slideimages }: Props) => {
-  const imagesToDisplay =
-    slideimages && slideimages.length > 0
-      ? slideimages
-      : DEFAULT_EVENT_IMAGES;
+const BeyondClassroomCarousel = ({}: Props = {}) => {
+  const imagesToDisplay = DEFAULT_EVENT_IMAGES;
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
@@ -66,7 +63,7 @@ const BeyondClassroomCarousel = ({ slideimages }: Props) => {
     };
   }, [total]);
 
-  if (!slideimages || total === 0) return null;
+  if (total === 0) return null;
 
   // Touch Swipe Handlers for mobile
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -113,7 +110,7 @@ const BeyondClassroomCarousel = ({ slideimages }: Props) => {
                 setActiveIndex(i);
                 resetAutoplay();
               }}
-              className={`absolute w-[280px] sm:w-[440px] md:w-[500px] lg:w-[560px] h-[160px] sm:h-[260px] md:h-[300px] lg:h-[340px] rounded-[4px] overflow-hidden transition-[transform,opacity,border-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] [backface-visibility:hidden] [transform-style:preserve-3d] will-change-[transform,opacity] cursor-pointer group`}
+              className={`absolute w-[280px] sm:w-[440px] md:w-[500px] lg:w-[560px] h-[160px] sm:h-[260px] md:h-[300px] lg:h-[340px] rounded-[2px] md:rounded-[4px] overflow-hidden transition-[transform,opacity,border-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] [backface-visibility:hidden] [transform-style:preserve-3d] will-change-[transform,opacity] cursor-pointer group`}
             >
               {/* Slide Image */}
               <Image
@@ -150,7 +147,7 @@ const BeyondClassroomCarousel = ({ slideimages }: Props) => {
 
         {/* Progress indicators */}
         <div className="flex items-center gap-2">
-          {slideimages.map((_, i) => (
+          {imagesToDisplay.map((_, i) => (
             <button
               key={i}
               onClick={() => {
