@@ -1,0 +1,9 @@
+.next
+node_modules
+build
+dist
+public
+.vscode
+*.tsbuildinfo
+package-lock.json
+.env*
