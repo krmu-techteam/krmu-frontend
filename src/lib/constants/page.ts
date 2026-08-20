@@ -4,33 +4,45 @@ import { StrapiMedia } from "../types/common";
 export async function getCustomPageData(
   slug: string = "",
 ): Promise<CustomPageResponse["data"]> {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/pages?filters[slug][$eq]=${slug}&populate[fields][0]=title&populate[fields][1]=maincontent2&populate[fields][2]=custom_page_css&populate[fields][3]=custom_page_js&populate[fields][4]=is_custom_page&populate[seo][populate]=*`,
-    {
-      next: {
-        revalidate: 120,
+  try {
+    const cleanSlug = decodeURIComponent(slug).trim().toLowerCase().replace(/\/$/, "");
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/pages?filters[slug][$eq]=${encodeURIComponent(cleanSlug)}&populate[fields][0]=title&populate[fields][1]=maincontent2&populate[fields][2]=custom_page_css&populate[fields][3]=custom_page_js&populate[fields][4]=is_custom_page&populate[seo][populate]=*`,
+      {
+        next: {
+          revalidate: 120,
+        },
       },
-    },
-  );
-  if (!res.ok) throw new Error("Failed to fetch Custom page data");
-  const json = await res.json();
-  return json.data;
+    );
+    if (!res.ok) return [];
+    const json = await res.json();
+    return json.data || [];
+  } catch (err) {
+    console.error("getCustomPageData error:", err);
+    return [];
+  }
 }
 
 export async function checkCustomPage(
   slug: string = "",
 ): Promise<IsCustomPageResponse["data"]> {
-  const res = await fetch(
-    `${FETCH_STRAPI_URL}/api/pages?filters[slug][$eq]=${slug}&fields[0]=is_custom_page&fields[1]=slug`,
-    {
-      next: {
-        revalidate: 300,
+  try {
+    const cleanSlug = decodeURIComponent(slug).trim().toLowerCase().replace(/\/$/, "");
+    const res = await fetch(
+      `${FETCH_STRAPI_URL}/api/pages?filters[slug][$eq]=${encodeURIComponent(cleanSlug)}&fields[0]=is_custom_page&fields[1]=slug`,
+      {
+        next: {
+          revalidate: 300,
+        },
       },
-    },
-  );
-  if (!res.ok) throw new Error("Failed to fetch is Custom page data");
-  const json = await res.json();
-  return json.data;
+    );
+    if (!res.ok) return [];
+    const json = await res.json();
+    return json.data || [];
+  } catch (err) {
+    console.error("checkCustomPage error:", err);
+    return [];
+  }
 }
 export type IsCustomPageResponse = {
   data: isCustPage[];

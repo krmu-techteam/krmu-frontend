@@ -177,6 +177,17 @@ const HeroSection = ({
         "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_jpg_555205c827.jpeg",
       notCutoutBg: false,
     },
+    "school-of-medical-allied-sciences": {
+      thumbnail: "",
+      ytUrl: "",
+      bgURl:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_jpg_1_8fc7057c8c.jpeg",
+      middleImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_f6083aef6e.png",
+      mobileBgImg:
+        "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/School_of_Medical_and_Allied_Sciences_jpg_555205c827.jpeg",
+      notCutoutBg: false,
+    },
     "school-of-legal-studies": {
       thumbnail: "",
       ytUrl: "",
@@ -190,6 +201,18 @@ const HeroSection = ({
     },
   };
 
+  const cleanSlug = decodeURIComponent(slug || "").trim().toLowerCase().replace(/\/$/, "");
+  const normalizedSlug =
+    cleanSlug === "school-of-agriculutural-sciences"
+      ? "school-of-agricultural-sciences"
+      : cleanSlug === "school-of-agricultural-sciences"
+      ? "school-of-agriculutural-sciences"
+      : cleanSlug === "school-of-medical-allied-sciences"
+      ? "school-of-medical-and-allied-sciences"
+      : cleanSlug === "school-of-medical-and-allied-sciences"
+      ? "school-of-medical-allied-sciences"
+      : cleanSlug;
+
   const {
     ytUrl: videoUrl = "",
     thumbnail = "",
@@ -197,7 +220,9 @@ const HeroSection = ({
     middleImg: middleimg = "",
     mobileBgImg = "",
     notCutoutBg = false,
-  } = schoolBgMedia[slug as keyof typeof schoolBgMedia] || {};
+  } = schoolBgMedia[cleanSlug as keyof typeof schoolBgMedia] ||
+    schoolBgMedia[normalizedSlug as keyof typeof schoolBgMedia] ||
+    {};
 
   const schoolBanners = Object.keys(schoolBgMedia);
 

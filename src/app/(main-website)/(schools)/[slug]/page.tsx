@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import {
   getEventsAndExperiencesBySchoolCat,
+  getSchoolBySlug,
   getSchoolPage,
 } from "@/lib/api/schools";
 import { Metadata } from "next";
@@ -83,55 +84,53 @@ const noIndexQSSust = [
 
 const schoolsImageMap: Record<string, any> = {
   "school-of-engineering-and-technology": soetLogos,
+  "school-of-engineering-technology": soetLogos,
   "school-of-physiotherapy-and-rehabilitation-sciences": sprsLogos,
   "school-of-management-and-commerce": somcLogos,
+  "school-of-management-commerce": somcLogos,
   "school-of-legal-studies": solsLogos,
   "school-of-medical-and-allied-sciences": smasLogos,
+  "school-of-medical-allied-sciences": smasLogos,
   "school-of-liberal-arts": solaLogos,
   "school-of-architecture-design": soadLogos,
   "school-of-basic-and-applied-sciences": sbasLogos,
   "school-of-emerging-media-and-creator-economy": semceLogos,
+  "school-of-journalism-and-mass-communication": semceLogos,
   "school-of-hotel-management-and-catering-technology": sohmctLogos,
+  "school-of-hotel-management-catering-technology": sohmctLogos,
   "school-of-education": soedLogos,
   "school-of-agriculutural-sciences": soasLogos,
   "school-of-agricultural-sciences": soasLogos,
 };
 const schoolsHeroLogosMap: Record<string, any> = {
   "school-of-engineering-and-technology": soetHerosLogos,
+  "school-of-engineering-technology": soetHerosLogos,
   "school-of-physiotherapy-and-rehabilitation-sciences": sprsHerosLogos,
   "school-of-management-and-commerce": somcHerosLogos,
-  // "school-of-legal-studies": solsHerosLogos,
+  "school-of-management-commerce": somcHerosLogos,
   "school-of-medical-and-allied-sciences": smasHerosLogos,
+  "school-of-medical-allied-sciences": smasHerosLogos,
   "school-of-liberal-arts": solaHerosLogos,
   "school-of-architecture-design": soadHerosLogos,
   "school-of-basic-and-applied-sciences": sbasHerosLogos,
-  // "school-of-emerging-media-and-creator-economy": semceHerosLogos,
+  "school-of-emerging-media-and-creator-economy": semceHerosLogos,
+  "school-of-journalism-and-mass-communication": semceHerosLogos,
   "school-of-hotel-management-and-catering-technology": sohmctHerosLogos,
+  "school-of-hotel-management-catering-technology": sohmctHerosLogos,
   "school-of-education": soedHerosLogos,
   "school-of-agriculutural-sciences": soasHerosLogos,
   "school-of-agricultural-sciences": soasHerosLogos,
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params; // ✅ no await
-
-  const normalizedSlug =
-    slug === "school-of-agriculutural-sciences"
-      ? "school-of-agricultural-sciences"
-      : slug === "school-of-agricultural-sciences"
-      ? "school-of-agriculutural-sciences"
-      : slug;
-
-  let seoData = await getSchoolSEO(slug);
-  if (!seoData || seoData.length === 0) {
-    seoData = await getSchoolSEO(normalizedSlug);
-  }
-  const customSEO = await folderRouteSEO(slug);
+  const { slug: rawSlug } = await params;
+  const slug = typeof rawSlug === "string" ? decodeURIComponent(rawSlug).trim().toLowerCase().replace(/\/$/, "") : "";
 
   const custPage = await checkCustomPage(slug);
   const isPage = custPage[0];
 
   if (isPage?.is_custom_page === "custom_page") {
+    const customSEO = await folderRouteSEO(slug);
     const seo = customSEO[0];
 
     const isQsSustain = noIndexQSSust.includes(slug);
@@ -179,6 +178,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     };
   } else {
+    const seoData = await getSchoolSEO(slug);
     const seo = seoData[0]?.school_seo;
     const shareImageUrl = seo?.shareImage?.url
       ? `${STRAPI_URL}${seo?.shareImage?.url}`
@@ -226,62 +226,47 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: Props) {
-  const { slug } = await params; // ✅ await params
+  const { slug: rawSlug } = await params;
+  const slug = typeof rawSlug === "string" ? decodeURIComponent(rawSlug).trim().toLowerCase().replace(/\/$/, "") : "";
 
-  const allSchools = await getSchoolPage();
-
+  // 1. Check if it's a custom page first
   const custPage = await checkCustomPage(slug);
   const isPage = custPage[0];
+
+  if (isPage?.is_custom_page === "custom_page") {
+    return <CustomPage slug={isPage?.slug || slug} />;
+  }
+
+  // 2. Fetch the school directly and reliably
+  const school = await getSchoolBySlug(slug);
+
+  // If not found, redirect to 404 page
+  if (!school) return notFound();
 
   const getDownProsSettings = await getDownloadProspectusSetting();
   const enable_disable_download_pros =
     getDownProsSettings?.download_prospectus_enable_disable;
 
-  const normalizedSlug =
-    slug === "school-of-agriculutural-sciences"
-      ? "school-of-agricultural-sciences"
-      : slug === "school-of-agricultural-sciences"
-      ? "school-of-agriculutural-sciences"
-      : slug;
-
-  const school = allSchools?.find(
-    (s) =>
-      s.urlslug === slug ||
-      s.urlslug?.trim() === slug?.trim() ||
-      s.urlslug === normalizedSlug ||
-      s.wordschoolslug === slug ||
-      s.wordschoolslug === normalizedSlug ||
-      (slug === "school-of-agriculutural-sciences" && s.urlslug === "school-of-agricultural-sciences") ||
-      (slug === "school-of-agricultural-sciences" && s.urlslug === "school-of-agriculutural-sciences")
-  );
   const prospectusUrl = school?.excitedbtns?.[0]?.buttonlink || "#";
-  if (isPage?.is_custom_page === "custom_page") {
-    return <CustomPage slug={isPage?.slug || ""} />;
-  }
 
-  // If not found, redirect to 404 page
-  if (!school) return notFound();
-
-  const schoolKnowComp = school.schoolcomps.find(
+  const schoolKnowComp = school.schoolcomps?.find(
     (component) => component.__component === "schoolcomponent.knowledge",
   );
 
   const schoolCat = school?.school_category?.name;
 
-  const schoolEventsAndExperience =
-    await getEventsAndExperiencesBySchoolCat(schoolCat);
+  const schoolEventsAndExperience = schoolCat
+    ? await getEventsAndExperiencesBySchoolCat(schoolCat)
+    : [];
 
-  const degreeName = school?.degree?.name;
-  const schoolCategoryName = school?.school_category?.name;
-  // const WordSchoolslug = school?.wordschoolslug;
   const schoolsLogosData =
     schoolsImageMap[slug] ||
     schoolsImageMap[school?.urlslug] ||
-    schoolsImageMap[normalizedSlug];
+    schoolsImageMap[school?.wordschoolslug];
   const schoolsHerosLogosData =
     schoolsHeroLogosMap[slug] ||
     schoolsHeroLogosMap[school?.urlslug] ||
-    schoolsHeroLogosMap[normalizedSlug];
+    schoolsHeroLogosMap[school?.wordschoolslug];
 
   return (
     <>

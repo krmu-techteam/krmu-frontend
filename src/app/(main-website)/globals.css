@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@config "../../../tailwind.config.ts";
 @import "tw-animate-css";
 @import "../../presentation/blog/blog.css";
 
@@ -14,6 +15,10 @@
 }
 
 @theme {
+  --font-inter: var(--font-inter), "Inter", sans-serif;
+  --font-fraunces: var(--font-fraunces), "Fraunces", serif;
+  --font-poppins: var(--font-poppins), "Poppins", sans-serif;
+  --font-playfair: var(--font-serif), "Playfair Display", serif;
   --university-red: red;
   --university-blue: #00f;
   --university-white: #fff;
@@ -21,6 +26,19 @@
   --bg-hover-1: #034272;
   --color-university-red: var(--university-red);
   --color-university-blue: var(--university-blue);
+}
+
+@utility font-inter {
+  font-family: var(--font-inter), "Inter", sans-serif;
+}
+@utility font-fraunces {
+  font-family: var(--font-fraunces), "Fraunces", serif;
+}
+@utility font-poppins {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+}
+@utility font-playfair {
+  font-family: var(--font-serif), "Playfair Display", serif;
 }
 
 :root {

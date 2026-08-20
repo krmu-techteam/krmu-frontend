@@ -54,27 +54,53 @@ import {
   SpecialisationSection,
 } from "@/presentation/programs";
 
-// import ProgTestimonials, {
-//   TestimonialsSection,
-// } from "../prog-comp/ProgTestimonials";
+// ====== NEW MBA DESIGN IMPORTS ======
+import {
+  MbaHeroSection,
+  MbaLogoSection,
+  MbaFacultyAndIndustrySection,
+  MbaCareerOutcomeSection,
+  MbaExistsSection,
+  MbaTwoYearArcSection,
+  MbaCareerGoalSection,
+  MbaLeaveWithSection,
+  MbaExperimentalInfraSection,
+  MbaExpectationsSection,
+  MbaCareerProspectsSection,
+  MbaFeeFinanceSection,
+  MbaHowToApplySection,
+  MbaLocationSection,
+  MbaCommonQuestionSection,
+  MbaThreeIndustryTracksSection,
+  getContent,
+  getIBMContent,
+  getDigitalContent,
+  getFacultyAndIndustryContent,
+  getIBMFacultyAndIndustryContent,
+  getDigitalFacultyAndIndustryContent,
+  getCareerGoalContent,
+  getIBMGoalContent,
+  getDigitalGoalContent,
+  getExperimentalInfraContent,
+  getIBMEExperimentalInfraContent,
+  getDigitalExperimentalInfraContent,
+  getCommonQuestionContent,
+  getIBMCommonQuestionContent,
+} from "@/presentation/programs/new/mba";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params; // ✅ no await
+  const { slug } = await params;
 
   const programsService = getProgramsService();
   const seoData = await programsService.getSchoolProgrammeSEO(slug);
   const seoPhdData = await programsService.getPHDProgramme(slug);
 
-  // let seo = seoData?.[0]?.SEO || seoPhdData[0]?.seo; // ✅ safe access
   const seo = seoData?.[0]?.SEO ?? seoPhdData?.seo ?? null;
 
-  // const phdSeo = seoPhdData[0]?.seo;
-
-  // ✅ Fallback if SEO is missing
   if (!seo) {
     return {
       title: "K.R. Mangalam University",
@@ -86,7 +112,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  // ✅ SEO exists
   return {
     title: seo.metaTitle || "K.R. Mangalam University",
     description:
@@ -96,26 +121,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: seo.canonical || "",
     },
     robots: {
-      index: true, // false → index
+      index: true,
       follow: true,
     },
   };
 }
 
 const page = async ({ params }: Props) => {
-  const { slug } = await params; // ✅ await params
+  const { slug } = await params;
 
   // ====== BSC-HONS-FINANCE: Show admission landing page content instead ======
-  // Original programs/bsc-hons-finance content is commented out for this slug.
-  // The admission/bsc-finance-2026 landing page is rendered here instead.
   if (slug === "bsc-hons-finance") {
     return <BscFinance2026Page />;
   }
   if (slug === "mjmc-masters-journalism-mass-communication") {
     return <JournalismAndMassCommunication />;
   }
-
-  // ====== END BSC-HONS-FINANCE OVERRIDE ======
 
   const testimonialsMap: Record<string, any> = {
     "ba-llb-hons": BALLBtestimonialsData,
@@ -125,12 +146,9 @@ const page = async ({ params }: Props) => {
     "bsc-forensic-science": BSCHonsForensicSciencetestimonialsData,
     mba: MBAtestimonialsData,
     "ba-hons-psychology": BSCHonsPhyscologytestimonialsData,
-    // "bba-llb-hons": BBALLBtestimonialsData,
-    // "llm": LLMtestimonialsData,
   };
 
   const allowedFormSlugs = ["b-tech-cse"];
-
   const testimonialsData = testimonialsMap[slug];
 
   const programsService: IProgramsService = getProgramsService();
@@ -146,17 +164,6 @@ const page = async ({ params }: Props) => {
     ? tags.split(",").map((tag: string) => tag.trim())
     : [];
 
-  // const singleSchoolProgramme = allSchoolProgrammeData.find(
-  // (programme) => programme.programmeslug === slug,
-  // );
-  // const singlePHDProgramme = allSinglePHDProgramme?.find(
-  // (phdprogram) => phdprogram?.phdslug === slug,
-  // );
-
-  // If not found, redirect to 404 page
-  // if (!singleSchoolProgramme) return notFound();
-
-  // Return 404 if either is missing
   if (!singleSchoolProgramme && !singlePHDProgramme) {
     return notFound();
   }
@@ -206,7 +213,7 @@ const page = async ({ params }: Props) => {
       id: item.id,
       ques: item.ques,
       ans: item.ans,
-      tocpoint: section.tocpoint, // optional, keep category info
+      tocpoint: section.tocpoint,
     })),
   );
 
@@ -257,6 +264,11 @@ const page = async ({ params }: Props) => {
     ],
   });
 
+  const isMbaSlug =
+    slug === "mba-fintech" ||
+    slug === "mba" ||
+    slug === "mba-digital-marketing";
+
   const isNewSectionSlug =
     slug === "bsc-hons-agriculture" ||
     slug === "b-tech-cse" ||
@@ -266,7 +278,15 @@ const page = async ({ params }: Props) => {
     slug === "bjmc" ||
     slug === "bachelor-of-design-b-des-fashion-design" ||
     slug === "barch-architecture" ||
-    slug === "bfa-fine-arts";
+    slug === "bfa-fine-arts" ||
+    slug === "ba-hons-political-science" ||
+    slug === "b-a-hons-hons-with-research-psychology" ||
+    slug === "ba-hons-economics-research" ||
+    slug === "ba-hons-psychology" ||
+    slug === "ba-hons-english-research" ||
+    slug === "bachelor-of-physiotherapy-bpt" ||
+    slug === "bba-llb-hons" ||
+    slug === "btech-cse-in-data-science";
 
   return (
     <>
@@ -289,33 +309,50 @@ const page = async ({ params }: Props) => {
         className={`p-0 m-0 ${tagsArray.map((tag: string) => `tag-${tag}`).join(" ")}`}
       />
       <main className="school-prog-font temp-class">
-        {/* {tags && <TagDiv tags={tags} extraClass="hidden test-class" />} */}
-        {heroSection && (
-          <HeroSection
-            title={title || ""}
-            highlightitle={highlightTitle || ""}
-            heroSection={heroSection}
-            formId={heroSection?.formId}
-            slug={slug}
-            // allowedFormSlugs={allowedFormSlugs}
-            dreamcareerSection={dreamcareerSection}
-            logos={dreamcareerSection?.careerlogos}
-          />
-        )}
+        {heroSection &&
+          (isMbaSlug ? (
+            <MbaHeroSection
+              formId={heroSection?.formId}
+              heroSection={heroSection}
+              dataContent={
+                slug === "mba-fintech"
+                  ? getContent()
+                  : slug === "mba"
+                    ? getIBMContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalContent()
+                      : null
+              }
+            />
+          ) : (
+            <HeroSection
+              title={title || ""}
+              highlightitle={highlightTitle || ""}
+              heroSection={heroSection}
+              formId={heroSection?.formId}
+              slug={slug}
+              dreamcareerSection={dreamcareerSection}
+              logos={dreamcareerSection?.careerlogos}
+            />
+          ))}
 
-        {eligibilitySection && (
-          <EligibilitySection
-            elgibilities={eligibilitySection?.elgibility}
-            mobherobtn={eligibilitySection?.mobherobtn}
-            allowedFormSlugs={allowedFormSlugs}
-            slug={slug}
-            formId={heroSection?.formId}
-            heroSection={heroSection}
-            enableDownloadPros={enable_disable_download_pros}
-            prospectusBtn={programmeScopeSection?.scopebtn}
-          />
-        )}
-        {!(slug in heroConfigs) && dreamcareerSection && (
+        {eligibilitySection &&
+          (isMbaSlug ? (
+            <MbaLogoSection />
+          ) : (
+            <EligibilitySection
+              elgibilities={eligibilitySection?.elgibility}
+              mobherobtn={eligibilitySection?.mobherobtn}
+              allowedFormSlugs={allowedFormSlugs}
+              slug={slug}
+              formId={heroSection?.formId}
+              heroSection={heroSection}
+              enableDownloadPros={enable_disable_download_pros}
+              prospectusBtn={programmeScopeSection?.scopebtn}
+            />
+          ))}
+
+        {!isMbaSlug && !(slug in heroConfigs) && dreamcareerSection && (
           <DreamCareerSection
             heading={dreamcareerSection.heading}
             description={dreamcareerSection.description}
@@ -323,18 +360,21 @@ const page = async ({ params }: Props) => {
           />
         )}
 
-        {}
-
-        {/* {programmeScopeSection && (
-          <ProgrammeScopeSection
-            scopeData={programmeScopeSection}
-            heroSection={heroSection}
-            allowedFormSlugs={allowedFormSlugs}
-            slug={slug}
-          />
-        )} */}
         {programmeScopeSection &&
-          (isNewSectionSlug ? (
+          (isMbaSlug ? (
+            <MbaFacultyAndIndustrySection
+              slug={slug}
+              dataContent={
+                slug === "mba-fintech"
+                  ? getFacultyAndIndustryContent()
+                  : slug === "mba"
+                    ? getIBMFacultyAndIndustryContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalFacultyAndIndustryContent()
+                      : null
+              }
+            />
+          ) : isNewSectionSlug ? (
             <>
               <ProgrammeOverviewSection />
               <NewProgrammeScopeSection
@@ -352,129 +392,214 @@ const page = async ({ params }: Props) => {
               slug={slug}
             />
           ))}
-        {programmeHighlightSection && (
-          <ProgrammeHighlightSection
-            heading={programmeHighlightSection?.heading}
-            highlightHeading={programmeHighlightSection?.highlightheading}
-            desc={programmeHighlightSection?.subheading}
-            highlights={programmeHighlightSection?.programmehighlightcards}
-            slug={slug}
-          />
-        )}
+
+        {programmeHighlightSection &&
+          (isMbaSlug ? (
+            <MbaCareerOutcomeSection slug={slug} />
+          ) : (
+            <ProgrammeHighlightSection
+              heading={programmeHighlightSection?.heading}
+              highlightHeading={programmeHighlightSection?.highlightheading}
+              desc={programmeHighlightSection?.subheading}
+              highlights={programmeHighlightSection?.programmehighlightcards}
+              slug={slug}
+            />
+          ))}
+
         {slug === "b-tech-cse" && <WhyKRMUSection />}
 
-        {slug === "mba" && <SpecialisationsSection />}
-        {specialisationSection && (
+        {/* Specialisations for non-MBA */}
+        {!isMbaSlug && specialisationSection && (
           <SpecialisationSection
             heading={specialisationSection?.heading}
             highlightheading={specialisationSection?.highlightheading}
             specialisations={specialisationSection?.specialisationcards}
           />
         )}
-        {admissionProcessSection && (
-          <AdmissionProcessSection
-            heading={admissionProcessSection?.heading}
-            highlight={admissionProcessSection?.highlightheading}
-            desc={admissionProcessSection?.description}
-            deskimg={admissionProcessSection?.desktopadmissionprocessimg}
-            admissionCards={admissionProcessSection?.admissionprocesscard}
-            admisbtn={admissionProcessSection?.admissionbtn}
-            slug={slug}
-            // formId={admissionProcessSection?.admissionFormId}
-          />
-        )}
-        {curriculumSection && (
-          <CurriculumSection
-            heading={curriculumSection?.heading}
-            highlight={curriculumSection?.highlightheading}
-            desc={curriculumSection?.description}
-            programStruct={curriculumSection?.years}
-            currbtn={curriculumSection?.currbtn}
-            currFormId={curriculumSection?.currFormId}
-            currFormContainerId={curriculumSection?.currContainerId}
-            isYear={curriculumSection?.only_years}
-            slug={slug}
-          />
-        )}
-        {labfacilitiesSection && (
-          <LabsFacilitieSection
-            heading={labfacilitiesSection?.heading}
-            highlight={labfacilitiesSection?.highlightheading}
-            btn={labfacilitiesSection?.labbtn}
-            labimg={labfacilitiesSection?.labsimage}
-            labcontent={labfacilitiesSection?.labscontent}
-            labcards={labfacilitiesSection?.labcards}
-            slug={slug}
-          />
-        )}
+
+        {admissionProcessSection &&
+          (isMbaSlug ? (
+            <MbaExistsSection />
+          ) : (
+            <AdmissionProcessSection
+              heading={admissionProcessSection?.heading}
+              highlight={admissionProcessSection?.highlightheading}
+              desc={admissionProcessSection?.description}
+              deskimg={admissionProcessSection?.desktopadmissionprocessimg}
+              admissionCards={admissionProcessSection?.admissionprocesscard}
+              admisbtn={admissionProcessSection?.admissionbtn}
+              slug={slug}
+            />
+          ))}
+
+        {curriculumSection &&
+          (isMbaSlug ? (
+            <MbaTwoYearArcSection />
+          ) : (
+            <CurriculumSection
+              heading={curriculumSection?.heading}
+              highlight={curriculumSection?.highlightheading}
+              desc={curriculumSection?.description}
+              programStruct={curriculumSection?.years}
+              currbtn={curriculumSection?.currbtn}
+              currFormId={curriculumSection?.currFormId}
+              currFormContainerId={curriculumSection?.currContainerId}
+              isYear={curriculumSection?.only_years}
+              slug={slug}
+            />
+          ))}
+
+        {labfacilitiesSection &&
+          (isMbaSlug ? (
+            <MbaCareerGoalSection
+              slug={slug}
+              dataContent={
+                slug === "mba-fintech"
+                  ? getCareerGoalContent()
+                  : slug === "mba"
+                    ? getIBMGoalContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalGoalContent()
+                      : null
+              }
+            />
+          ) : (
+            <LabsFacilitieSection
+              heading={labfacilitiesSection?.heading}
+              highlight={labfacilitiesSection?.highlightheading}
+              btn={labfacilitiesSection?.labbtn}
+              labimg={labfacilitiesSection?.labsimage}
+              labcontent={labfacilitiesSection?.labscontent}
+              labcards={labfacilitiesSection?.labcards}
+              slug={slug}
+            />
+          ))}
+
         {slug === "b-tech-cse" && <ResearchAndInnovationSection />}
-        {beyondclassSection && (
-          <BeyondClassroomSection
-            heading={beyondclassSection?.heading}
-            highlight={beyondclassSection?.highlightheading}
-            desc={beyondclassSection?.description}
-            beyondclassimages={beyondclassSection?.beyondclassroomimages}
-          />
-        )}
-        {careerProspectsSection && (
-          <CareerProspectsSection
-            heading={careerProspectsSection?.heading}
-            highlight={careerProspectsSection?.highlightheading}
-            desc={careerProspectsSection?.description}
-            btn={careerProspectsSection?.careerbtn}
-            careerimg={careerProspectsSection?.careerimg}
-            careercards={careerProspectsSection?.careercards}
-            slug={slug}
-            // careerFormId={careerProspectsSection?.careerFormId}
-          />
-        )}
+
+        {beyondclassSection &&
+          (isMbaSlug ? (
+            <MbaLeaveWithSection />
+          ) : (
+            <BeyondClassroomSection
+              heading={beyondclassSection?.heading}
+              highlight={beyondclassSection?.highlightheading}
+              desc={beyondclassSection?.description}
+              beyondclassimages={beyondclassSection?.beyondclassroomimages}
+            />
+          ))}
+
+        {careerProspectsSection &&
+          (isMbaSlug ? (
+            <MbaExperimentalInfraSection
+              dataContent={
+                slug === "mba-fintech"
+                  ? getExperimentalInfraContent()
+                  : slug === "mba"
+                    ? getIBMEExperimentalInfraContent()
+                    : slug === "mba-digital-marketing"
+                      ? getDigitalExperimentalInfraContent()
+                      : null
+              }
+            />
+          ) : (
+            <CareerProspectsSection
+              heading={careerProspectsSection?.heading}
+              highlight={careerProspectsSection?.highlightheading}
+              desc={careerProspectsSection?.description}
+              btn={careerProspectsSection?.careerbtn}
+              careerimg={careerProspectsSection?.careerimg}
+              careercards={careerProspectsSection?.careercards}
+              slug={slug}
+            />
+          ))}
+
         {slug === "b-tech-cse" && <BreakDownSection />}
 
-        {financialAssistanceSection && (
-          <FinancialAssistanceSection
-            heading={financialAssistanceSection?.heading}
-            highlightheading={financialAssistanceSection?.highlightheading}
-            description={financialAssistanceSection?.description}
-            point1={financialAssistanceSection?.point1}
-            point2={financialAssistanceSection?.point2}
-            point3={financialAssistanceSection?.point3}
-            point4={financialAssistanceSection?.point4}
-            point5={financialAssistanceSection?.point5}
-            point6={financialAssistanceSection?.point6}
-            point7={financialAssistanceSection?.point7}
-            logos={financialAssistanceSection?.financelogos}
-          />
+        {financialAssistanceSection &&
+          (isMbaSlug ? (
+            <MbaExpectationsSection />
+          ) : (
+            <FinancialAssistanceSection
+              heading={financialAssistanceSection?.heading}
+              highlightheading={financialAssistanceSection?.highlightheading}
+              description={financialAssistanceSection?.description}
+              point1={financialAssistanceSection?.point1}
+              point2={financialAssistanceSection?.point2}
+              point3={financialAssistanceSection?.point3}
+              point4={financialAssistanceSection?.point4}
+              point5={financialAssistanceSection?.point5}
+              point6={financialAssistanceSection?.point6}
+              point7={financialAssistanceSection?.point7}
+              logos={financialAssistanceSection?.financelogos}
+            />
+          ))}
+
+        {isMbaSlug ? (
+          <MbaCareerProspectsSection slug={slug} />
+        ) : (
+          <ScholarshipBannerSection />
         )}
 
-        <ScholarshipBannerSection />
-
-        {testimonialsData && <ProgTestimonials data={testimonialsData} />}
-        {tocSection && (
-          <FrequentlyAskedQuestionsSection
-            heading={tocSection?.heading}
-            highlight={tocSection?.highlightheading}
-            desc={tocSection?.description}
-            tocfaqs={tocSection?.tocfaq}
-            tocimg={tocSection?.tocimg}
-            tocbtn={tocSection?.tocbtn}
-          />
+        {!isMbaSlug && testimonialsData && (
+          <ProgTestimonials data={testimonialsData} />
         )}
 
-        <ExploreProgramsSection currentSlug={slug} />
+        {tocSection &&
+          (isMbaSlug ? (
+            <MbaFeeFinanceSection slug={slug} />
+          ) : (
+            <FrequentlyAskedQuestionsSection
+              heading={tocSection?.heading}
+              highlight={tocSection?.highlightheading}
+              desc={tocSection?.description}
+              tocfaqs={tocSection?.tocfaq}
+              tocimg={tocSection?.tocimg}
+              tocbtn={tocSection?.tocbtn}
+            />
+          ))}
 
-        {ourLocationSection && (
-          <OurLocationSection
-            badgetext={ourLocationSection?.badgetext}
-            heading={ourLocationSection?.badgetext}
-            img1={ourLocationSection?.img1}
-            img2={ourLocationSection?.img2}
+        {isMbaSlug ? (
+          <MbaHowToApplySection
+            formId={heroSection?.formId}
+            heroSection={heroSection}
           />
+        ) : (
+          <ExploreProgramsSection currentSlug={slug} />
         )}
+
+        {ourLocationSection &&
+          (isMbaSlug ? (
+            <MbaLocationSection slug={slug} />
+          ) : (
+            <OurLocationSection
+              badgetext={ourLocationSection?.badgetext}
+              heading={ourLocationSection?.badgetext}
+              img1={ourLocationSection?.img1}
+              img2={ourLocationSection?.img2}
+            />
+          ))}
 
         {/* <ConnectWithUs /> */}
-        {singleSchoolProgramme?.school_category && (
-          <ActionCards schoolCat={singleSchoolProgramme.school_category} />
-        )}
+        {singleSchoolProgramme?.school_category &&
+          (isMbaSlug ? (
+            <>
+              <MbaCommonQuestionSection
+                dataContent={
+                  slug === "mba-fintech"
+                    ? getCommonQuestionContent()
+                    : slug === "mba"
+                      ? getIBMCommonQuestionContent()
+                      : slug === "mba-digital-marketing"
+                        ? getCommonQuestionContent()
+                        : null
+                }
+              />
+              <MbaThreeIndustryTracksSection />
+            </>
+          ) : (
+            <ActionCards schoolCat={singleSchoolProgramme.school_category} />
+          ))}
       </main>
     </>
   );

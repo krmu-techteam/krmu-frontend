@@ -42,24 +42,69 @@ export type HomepageSeoResponse = {
 //////////////////////////////////////////////////////////////////////////////
 
 export async function getSchoolSEO(
-  slug: string
+  rawSlug: string
 ): Promise<SchoolSEOResponse["data"]> {
-  try {
-    const res = await fetch(
-      `${FETCH_STRAPI_URL}/api/schools?filters[urlslug][$eq]=${slug}&fields[0]=schoolname&populate[school_seo][populate][shareImage][fields][0]=url`,
-      {
-        next: {
-          revalidate: 3600,
-        },
-      }
-    );
-    if (!res.ok) throw new Error("Failed to fetch School SEO");
-    const json: SchoolSEOResponse = await res.json();
-    return json.data;
-  } catch (error) {
-    console.error("School SEO fetch error:", error);
-    return [];
+  if (!rawSlug) return [];
+  const slug = decodeURIComponent(rawSlug).trim().toLowerCase().replace(/\/$/, "");
+  const slugsToTry = [slug];
+
+  const aliases: Record<string, string> = {
+    "school-of-agriculutural-sciences": "school-of-agricultural-sciences",
+    "school-of-agricultural-sciences": "school-of-agriculutural-sciences",
+    "school-of-medical-allied-sciences": "school-of-medical-and-allied-sciences",
+    "school-of-medical-and-allied-sciences": "school-of-medical-allied-sciences",
+    "school-of-engineering-technology": "school-of-engineering-and-technology",
+    "school-of-management-commerce": "school-of-management-and-commerce",
+    "school-of-hotel-management-catering-technology": "school-of-hotel-management-and-catering-technology",
+  };
+
+  if (aliases[slug] && !slugsToTry.includes(aliases[slug])) {
+    slugsToTry.push(aliases[slug]);
   }
+
+  for (const s of slugsToTry) {
+    try {
+      const res = await fetch(
+        `${FETCH_STRAPI_URL}/api/schools?filters[urlslug][$eq]=${encodeURIComponent(s)}&fields[0]=schoolname&populate[school_seo][populate][shareImage][fields][0]=url`,
+        {
+          next: {
+            revalidate: 3600,
+          },
+        }
+      );
+      if (res.ok) {
+        const json: SchoolSEOResponse = await res.json();
+        if (Array.isArray(json.data) && json.data.length > 0) {
+          return json.data;
+        }
+      }
+    } catch (error) {
+      console.error(`School SEO fetch error for urlslug ${s}:`, error);
+    }
+  }
+
+  for (const s of slugsToTry) {
+    try {
+      const res = await fetch(
+        `${FETCH_STRAPI_URL}/api/schools?filters[wordschoolslug][$eq]=${encodeURIComponent(s)}&fields[0]=schoolname&populate[school_seo][populate][shareImage][fields][0]=url`,
+        {
+          next: {
+            revalidate: 3600,
+          },
+        }
+      );
+      if (res.ok) {
+        const json: SchoolSEOResponse = await res.json();
+        if (Array.isArray(json.data) && json.data.length > 0) {
+          return json.data;
+        }
+      }
+    } catch (error) {
+      console.error(`School SEO fetch error for wordschoolslug ${s}:`, error);
+    }
+  }
+
+  return [];
 }
 
 export interface SchoolSEOResponse {
