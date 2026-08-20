@@ -92,7 +92,7 @@ export default function KRMUTimer({
       </span> */}
 
       <span
-        className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-xs sm:text-sm" : "text-xs sm:text-sm"}`}
+        className={`tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-xs sm:text-sm" : "text-xs sm:text-sm"}`}
       >
         Don’t Miss Ankur Warikoo & Akasa Singh at KRMU Orientation | Admissions
         Closing Soon | {!mainWebsiteTimer && "Apply Now"}
