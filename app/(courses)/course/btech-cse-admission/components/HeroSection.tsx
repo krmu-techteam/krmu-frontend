@@ -22,7 +22,7 @@ const HeroSection = () => {
               Est. 2013
             </span>
           </div>
-          <h3 className="text-white text-center sm:text-left font-semibold mb-3 leading-[1.5] text-3xl  lg:text-5xl 2xl:text-[46px]">
+          <h1 className="text-white text-center sm:text-left font-semibold mb-3 leading-[1.5] text-3xl  lg:text-5xl 2xl:text-[46px]">
             B.Tech. CSE
             <br />
             ADMISSIONS 2026
@@ -30,7 +30,7 @@ const HeroSection = () => {
             IN DELHI NCR
             <br />
             ARE NOW OPEN!
-          </h3>
+          </h1>
           <p className="text-white mb-6 hidden sm:block">
             Build your future with KRMU's industry-aligned curriculum, hands-on
             training, advanced facilities, and dedicated placement assistance
