@@ -45,11 +45,11 @@ const Admission2Slide = ({ item }: Props) => {
       <div className="w-1/2 sm:w-3/5">
         <div className="mb-4">
           <p
-            className={`text-xs sm:text-base ${
+            className={`text-xs sm:text-base italic ${
               isExpanded ? "" : "line-clamp-5"
             }`}
           >
-            {item?.content}
+            "{item?.content}"
           </p>
 
           <button
@@ -67,7 +67,7 @@ const Admission2Slide = ({ item }: Props) => {
             <span>{item?.qualification}</span>
           </div>
 
-          <div>
+          {/* <div>
             {item?.review_img?.url && (
               <Image
                 src={`${STRAPI_URL}${item?.review_img.url}`}
@@ -76,7 +76,7 @@ const Admission2Slide = ({ item }: Props) => {
                 alt="Star"
               />
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
