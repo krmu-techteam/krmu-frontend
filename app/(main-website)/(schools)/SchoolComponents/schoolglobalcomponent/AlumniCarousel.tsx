@@ -12,7 +12,7 @@ const AlumniCarousel = ({ AluLogos }: Props) => {
   const repeatedLogos = [...AluLogos, ...AluLogos];
 
   return (
-    <div className="alumni-carousel temp-class">
+    <div className="alumni-carousel">
       <div className="alumni-carousel__track">
         {repeatedLogos.map((logo, index) => (
           <div className="alumni-carousel__item my-5" key={`${logo.id}-${index}`}>
