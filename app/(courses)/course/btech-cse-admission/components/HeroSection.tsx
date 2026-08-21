@@ -22,7 +22,7 @@ const HeroSection = () => {
               Est. 2013
             </span>
           </div>
-          <h1 className="text-white text-center sm:text-left font-semibold mb-3 leading-[1.5] text-3xl  lg:text-5xl 2xl:text-[46px]">
+          <h1 className="text-white text-center sm:text-left font-semibold mb-3 leading-[1.5] text-3xl  lg:text-5xl 2xl:text-[46px] temp-class">
             B.Tech. CSE
             <br />
             ADMISSIONS 2026
