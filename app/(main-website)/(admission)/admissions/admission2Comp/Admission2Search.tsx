@@ -310,6 +310,7 @@ const Admission2Search = () => {
     return orderA - orderB;
   });
 
+  const subjectToApprovalSchools = ["somc", "smas"];
   return (
     <section>
       <div>
@@ -619,8 +620,8 @@ const Admission2Search = () => {
                     </div>
                     {progNewLine.includes(slug) && (
                       <div className="text-white text-xs items-center mt-3 px-4 z-999">
-                        3-Year Lateral Entry option is also available for eligible
-                        students
+                        3-Year Lateral Entry option is also available for
+                        eligible students
                       </div>
                     )}
                   </div>
@@ -629,6 +630,9 @@ const Admission2Search = () => {
             )}
           </div>
 
+          {subjectToApprovalSchools.includes(selectedSchool) && (
+            <p className="mt-10 text-right">**Subject to Approval</p>
+          )}
           {showLoadMore && (
             <div className="pt-4 md:pt-12 flex items-center justify-center">
               <button
