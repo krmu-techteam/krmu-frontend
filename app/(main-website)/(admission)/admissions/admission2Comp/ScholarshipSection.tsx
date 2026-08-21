@@ -14,7 +14,7 @@ const ScholarshipSection = () => {
             Your achievements deserve recognition at K.R. Mangalam University
           </h2>
 
-          <p className="text-white/90 mb-4 leading-relaxed">
+          <p className="text-white/90 mb-4 leading-relaxed temp-class">
             Whether in academics, sports, cultural excellence, or other
             distinguished accomplishments, KRMU values your hard work and
             rewards merit across diverse fields. We are committed to supporting
