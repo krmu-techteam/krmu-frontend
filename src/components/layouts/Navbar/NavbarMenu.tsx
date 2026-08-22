@@ -9,6 +9,8 @@ import { Carousel } from "@/components/common/Carousel";
 import { SUCCESS_STORIES } from "@/features/home";
 import Button from "@/components/common/Button";
 import PlacementRecruiters from "./PlacementRecruiters";
+import { formatInternalLink, isExternalUrl } from "@/lib/utils";
+
 
 type Props = {
   mainMenu: HeaderMenus[];
@@ -290,7 +292,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                           return (
                             <li key={school.id}>
                               <Link
-                                href={school.url || "#"}
+                                href={formatInternalLink(school.url) || "#"}
                                 className={`font-poppins relative transition-all duration-300 text-[15px] font-light flex items-center group ${
                                   isZenith
                                     ? "text-[#3b82f6] hover:text-[#3b82f6]/80 font-normal"
@@ -375,17 +377,21 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                             {admissionMenu?.enrollnow?.heading}
                           </h3>
                           <ul className="flex flex-col gap-1">
-                            {admissionMenu?.enrollnow?.menulinks.map((menu) => (
-                              <li key={menu.id}>
-                                <Link
-                                  href={menu.url || "#"}
-                                  className="font-poppins font-light text-white/70 hover:text-white transition-colors duration-200 text-[15px] py-1 flex items-center"
-                                  target="_blank"
-                                >
-                                  <span>{menu.title}</span>
-                                </Link>
-                              </li>
-                            ))}
+                            {admissionMenu?.enrollnow?.menulinks.map((menu) => {
+                              const href = formatInternalLink(menu.url) || "#";
+                              const ext = isExternalUrl(menu.url);
+                              return (
+                                <li key={menu.id}>
+                                  <Link
+                                    href={href}
+                                    className="font-poppins font-light text-white/70 hover:text-white transition-colors duration-200 text-[15px] py-1 flex items-center"
+                                    target={ext ? "_blank" : undefined}
+                                  >
+                                    <span>{menu.title}</span>
+                                  </Link>
+                                </li>
+                              );
+                            })}
                           </ul>
                         </div>
                       )}
@@ -398,16 +404,21 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                           </h3>
                           <ul className="flex flex-col gap-1">
                             {admissionMenu?.scholarships?.menulinks.map(
-                              (menu) => (
-                                <li key={menu.id}>
-                                  <Link
-                                    href={menu.url || "#"}
-                                    className="font-poppins font-light text-white/70 hover:text-white transition-colors duration-200 text-[15px] py-1 flex items-center"
-                                  >
-                                    <span>{menu.title}</span>
-                                  </Link>
-                                </li>
-                              ),
+                              (menu) => {
+                                const href = formatInternalLink(menu.url) || "#";
+                                const ext = isExternalUrl(menu.url);
+                                return (
+                                  <li key={menu.id}>
+                                    <Link
+                                      href={href}
+                                      className="font-poppins font-light text-white/70 hover:text-white transition-colors duration-200 text-[15px] py-1 flex items-center"
+                                      target={ext ? "_blank" : undefined}
+                                    >
+                                      <span>{menu.title}</span>
+                                    </Link>
+                                  </li>
+                                );
+                              },
                             )}
                           </ul>
                         </div>
@@ -516,7 +527,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         {placementMenu?.placement?.menulinks.map((menu) => (
                           <li key={menu.id}>
                             <Link
-                              href={menu.url || "#"}
+                              href={formatInternalLink(menu.url) || "#"}
                               className="relative text-white hover:text-white/80 transition-all duration-300 text-[15px] font-light flex items-center group font-poppins"
                             >
                               {menu.title}
@@ -635,7 +646,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         return (
                           <li key={menu.id}>
                             <Link
-                              href={menu.url || "#"}
+                              href={formatInternalLink(menu.url) || "#"}
                               className={
                                 isHighlighted
                                   ? "font-poppins text-[#3C7ED4] hover:text-[#3C7ED4]/80 underline transition-all duration-200 text-[15px] font-normal tracking-wide block mt-6"
@@ -766,7 +777,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                       ].map((link) => (
                         <Link
                           key={link.id}
-                          href={link.url || "#"}
+                          href={formatInternalLink(link.url) || "#"}
                           className="flex items-center justify-center py-3 px-3 border border-white/10 bg-transparent text-center text-[12px] xl:text-[13px] font-normal tracking-wide text-white/80 hover:text-white hover:bg-white/5 hover:border-white/30 transition-all duration-300 min-h-[46px] font-poppins rounded-[3px]"
                         >
                           {link.title}

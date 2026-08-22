@@ -1,5 +1,9 @@
 export * from "./centre-for-sustainable-development-goals";
 export * from "./shared-sdg";
+export * from "./shared-policies";
+export * as PoliciesOnNoPoverty from "./policies-on-no-poverty";
+export * as PoliciesOnGoodHealthAndWellBeing from "./policies-on-good-health-and-well-being";
+export * as MouOnGoodHealthAndWellBeing from "./mou-on-good-health-and-well-being";
 export * as Sdg1NoPoverty from "./sdg-1-no-poverty";
 export * as Sdg2ZeroHunger from "./sdg-2-zero-hunger";
 export * as Sdg3GoodHealthAndWellBeing from "./sdg-3-good-health-and-well-being";
@@ -11,5 +15,3 @@ export * as Sdg8DecentWorkAndEconomicGrowth from "./sdg-8-decent-work-and-econom
 export * as Sdg9IndustryInnovationAndInfrastructure from "./sdg-9-industry-innovation-and-infrastructure";
 export * as Sdg10ReducedInequalities from "./sdg-10-reduced-inequalities";
 export * as Sdg11SustainableCitiesAndCommunities from "./sdg-11-sustainable-cities-and-communities";
-
-

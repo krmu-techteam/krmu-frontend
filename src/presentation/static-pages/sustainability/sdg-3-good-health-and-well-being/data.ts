@@ -12,11 +12,11 @@ export const sdg3Data: SdgDetailPageData = {
   leftButtons: [
     {
       text: "Policies on Good Health and Well Being",
-      url: "https://www.krmangalam.edu.in/policies-on-good-health-and-well-being/",
+      url: "/policies-on-good-health-and-well-being",
     },
     {
       text: "MoU ON Good Health and Well Being",
-      url: "https://www.krmangalam.edu.in/mou-on-good-health-and-well-being/",
+      url: "/mou-on-good-health-and-well-being",
     },
     {
       text: "We Dost-Counselling and Wellbeing Initiative",

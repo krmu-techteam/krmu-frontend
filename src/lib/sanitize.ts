@@ -1,7 +1,8 @@
 import DOMPurify from "isomorphic-dompurify";
+import { transformInternalLinksInHtml } from "./utils";
 
 export function sanitizeHTML(html: string) {
-  return DOMPurify.sanitize(html, {
+  const sanitized = DOMPurify.sanitize(html, {
     ADD_TAGS: ["iframe"],
     ADD_ATTR: [
       "allow",
@@ -12,4 +13,5 @@ export function sanitizeHTML(html: string) {
       "title",
     ],
   });
-}
+  return transformInternalLinksInHtml(sanitized);
+}

@@ -281,6 +281,8 @@ import FloatingButtons from "./FloatingButtons";
 import NpfAgent from "@/app/NpfAgent";
 import BicolorDivider from "../Navbar/BicolorDivider";
 import Button from "@/components/common/Button";
+import { formatInternalLink, isExternalUrl } from "@/lib/utils";
+
 
 type FooterLink = {
   name: string;
@@ -447,22 +449,26 @@ const Footer = async () => {
                 </h4>
                 <ul className="space-y-1">
                   {footerComp3?.footer_menu
-                    ? footerComp3.footer_menu.map((menu) => (
-                        <li key={menu.id}>
-                          <Link
-                            href={menu.url || "#"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
-                          >
-                            {menu.title}
-                          </Link>
-                        </li>
-                      ))
+                    ? footerComp3.footer_menu.map((menu) => {
+                        const href = formatInternalLink(menu.url) || "#";
+                        const external = isExternalUrl(menu.url);
+                        return (
+                          <li key={menu.id}>
+                            <Link
+                              href={href}
+                              target={external ? "_blank" : undefined}
+                              rel={external ? "noopener noreferrer" : undefined}
+                              className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
+                            >
+                              {menu.title}
+                            </Link>
+                          </li>
+                        );
+                      })
                     : footerLinks.quickLinks.map((link) => (
                         <li key={link.name}>
                           <Link
-                            href={link.href}
+                            href={formatInternalLink(link.href)}
                             target={link.target}
                             rel={link.rel}
                             className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
@@ -481,20 +487,26 @@ const Footer = async () => {
                 </h4>
                 <ul className="space-y-1">
                   {footerComp2?.footer_menu
-                    ? footerComp2.footer_menu.map((menu) => (
-                        <li key={menu.id}>
-                          <Link
-                            href={menu.url || "#"}
-                            className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
-                          >
-                            {menu.title}
-                          </Link>
-                        </li>
-                      ))
+                    ? footerComp2.footer_menu.map((menu) => {
+                        const href = formatInternalLink(menu.url) || "#";
+                        const external = isExternalUrl(menu.url);
+                        return (
+                          <li key={menu.id}>
+                            <Link
+                              href={href}
+                              target={external ? "_blank" : undefined}
+                              rel={external ? "noopener noreferrer" : undefined}
+                              className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
+                            >
+                              {menu.title}
+                            </Link>
+                          </li>
+                        );
+                      })
                     : footerLinks.aboutKRMU.map((link) => (
                         <li key={link.name}>
                           <Link
-                            href={link.href}
+                            href={formatInternalLink(link.href)}
                             target={link.target}
                             rel={link.rel}
                             className="text-white/80 [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] hover:text-white transition-all duration-300 text-[15px] inline-block relative pb-0.5 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-current hover:after:w-full after:transition-all after:duration-300 ease-in-out"
@@ -504,6 +516,7 @@ const Footer = async () => {
                         </li>
                       ))}
                 </ul>
+
               </div>
 
               {/* Column 4: Student Resources */}

@@ -1,4 +1,5 @@
 import { TOPBARITEMS } from "@/lib/types/HeaderType";
+import { formatInternalLink, isExternalUrl } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 
@@ -10,15 +11,19 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
   return (
     <ul className="flex flex-wrap gap-4 items-center justify-center font-poppins text-[14px]">
       {topbarmenu?.map((item) => {
+        const rawUrl = item.url;
+        const formattedUrl = formatInternalLink(rawUrl);
+        const external = isExternalUrl(rawUrl);
+
         if (item.__component === "menu.menu-button") {
           return (
             <li key={item.id}>
-              {item.url ? (
+              {rawUrl ? (
                 <Link
-                  href={item.url}
+                  href={formattedUrl}
                   className={`font-medium text-white/80 hover:text-white transition ${item.class}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
                 >
                   {item.title}
                 </Link>
@@ -34,12 +39,12 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
         if (item.__component === "menu.menu-links") {
           return (
             <li key={item.id}>
-              {item.url ? (
+              {rawUrl ? (
                 <Link
-                  href={item.url}
+                  href={formattedUrl}
                   className={`font-medium text-white/80 hover:text-white transition ${item.menuclass}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
                 >
                   {item.title}
                 </Link>
@@ -59,3 +64,4 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
 };
 
 export default TopbarMenu;
+

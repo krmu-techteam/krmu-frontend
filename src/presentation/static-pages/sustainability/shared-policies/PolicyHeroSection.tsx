@@ -5,22 +5,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 
-export interface SdgHeroSectionProps {
+export interface PolicyHeroSectionProps {
   title: string;
-  subtitle: string;
   heroImage: string;
   backLink?: string;
 }
 
-export const SdgHeroSection: React.FC<SdgHeroSectionProps> = ({
+export const PolicyHeroSection: React.FC<PolicyHeroSectionProps> = ({
   title,
-  subtitle,
   heroImage,
   backLink = "/centre-for-sustainable-development-goals-2",
 }) => {
   return (
     <div className="w-full pt-[80px] sm:pt-[90px] md:pt-[100px]">
-      {/* 1. Clear Top Hero Banner */}
+      {/* 1. Hero Banner Image */}
       <div className="w-full relative overflow-hidden flex items-center justify-center">
         <Image
           src={heroImage}
@@ -32,28 +30,27 @@ export const SdgHeroSection: React.FC<SdgHeroSectionProps> = ({
         />
       </div>
 
-      {/* 2. Header Content Section below image */}
-      <div className="max-w-[1440px] mx-auto pt-4 pb-3 sm:pt-6 px-4 sm:pb-4 md:px-10">
+      {/* 2. Header Content with Back Button */}
+      <div className="max-w-[1440px] mx-auto py-4 sm:py-6 px-4 md:px-10">
         <div className="relative flex flex-col items-center justify-center">
-          {/* Back Button on Left (Aligned to Title Row) */}
-          <div className="absolute left-0 top-0 sm:top-1 flex items-center">
-            <Link
-              href={backLink}
-              className="inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-[4px] border border-[#80C6FF] bg-transparent text-white hover:bg-white/10 transition-all duration-200 shrink-0"
-              title="Back"
-            >
-              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#80C6FF]" />
-            </Link>
-          </div>
+          {/* Back Button on Left (Aligned with Title Row) */}
+          {backLink && (
+            <div className="absolute left-0 top-0 sm:top-1 flex items-center">
+              <Link
+                href={backLink}
+                className="inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-[4px] border border-[#80C6FF] bg-transparent text-white hover:bg-white/10 transition-all duration-200 shrink-0"
+                title="Back"
+              >
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#80C6FF]" />
+              </Link>
+            </div>
+          )}
 
-          {/* Centered Title & Subtitle */}
+          {/* Centered Title */}
           <div className="text-center px-12 sm:px-16">
             <h1 className="text-2xl sm:text-4xl md:text-[55px] font-serif text-white font-semibold tracking-tight leading-tight">
               {title}
             </h1>
-            <p className="text-sm sm:text-[22px] text-white/90 font-poppins mt-2.5 font-light">
-              {subtitle}
-            </p>
           </div>
         </div>
       </div>
@@ -61,4 +58,4 @@ export const SdgHeroSection: React.FC<SdgHeroSectionProps> = ({
   );
 };
 
-export default SdgHeroSection;
+export default PolicyHeroSection;

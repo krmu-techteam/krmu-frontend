@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Link from "next/link";
 import { LucideIcon } from "lucide-react";
 import { IconType } from "react-icons";
+import { formatInternalLink } from "@/lib/utils";
 
 interface ButtonProps {
   variant?: "primary" | "outline";
@@ -50,15 +51,17 @@ export const Button = ({
     </>
   );
 
+  const formattedHref = formatInternalLink(href);
+
   const isExternalOrPdf =
-    href.startsWith("http://") ||
-    href.startsWith("https://") ||
-    href.toLowerCase().includes(".pdf");
+    formattedHref.startsWith("http://") ||
+    formattedHref.startsWith("https://") ||
+    formattedHref.toLowerCase().includes(".pdf");
 
   if (isExternalOrPdf) {
     return (
       <a
-        href={href}
+        href={formattedHref}
         onClick={onClick}
         target={target || "_blank"}
         rel="noopener noreferrer"
@@ -71,7 +74,7 @@ export const Button = ({
 
   return (
     <Link
-      href={href}
+      href={formattedHref}
       onClick={onClick}
       target={target}
       className={`${baseStyles} ${variants[variant]} ${className}`}
@@ -82,3 +85,4 @@ export const Button = ({
 };
 
 export default Button;
+
