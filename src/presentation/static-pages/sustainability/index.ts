@@ -16,3 +16,5 @@ export * as Sdg9IndustryInnovationAndInfrastructure from "./sdg-9-industry-innov
 export * as Sdg10ReducedInequalities from "./sdg-10-reduced-inequalities";
 export * as Sdg11SustainableCitiesAndCommunities from "./sdg-11-sustainable-cities-and-communities";
 export * as CounsellingMentalWellbeingCentreWeDost from "./counselling-mental-wellbeing-centre-we-dost";
+export * as PoliciesOnQualityEducation from "./policies-on-quality-education";
+
