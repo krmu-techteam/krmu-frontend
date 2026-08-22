@@ -632,7 +632,7 @@ export const sitemapData = [
           },
           {
             label: "Ph.D. in Management",
-            href: "https://www.krmangalam.edu.in/programs/phd-managements",
+            href: "https://www.krmangalam.edu.in/programs/phd-management",
           },
           {
             label: "Ph.D. in Commerce",
