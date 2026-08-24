@@ -3,181 +3,216 @@
 import { FETCH_STRAPI_URL } from "@/app/constant";
 import { useState, FormEvent, ReactNode } from "react";
 import { createPortal } from "react-dom";
+import { X, User, Mail, Phone } from "lucide-react";
 
 type Props = {
-  buttonText: ReactNode;
-  buttonClassName?: string;
-  redirectUrl: string;
-  form_name: string;
-  shadowGradient?: boolean;
+    buttonText: ReactNode;
+    buttonClassName?: string;
+    redirectUrl: string;
+    form_name: string;
+    shadowGradient?: boolean;
 };
 
 const CommonLeadPopup = ({
-  buttonText,
-  buttonClassName,
-  redirectUrl,
-  form_name,
-  shadowGradient,
+    buttonText,
+    buttonClassName,
+    redirectUrl,
+    form_name,
 }: Props) => {
-  const [open, setOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+    const [open, setOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setError("");
-    setLoading(true);
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setError("");
+        setLoading(true);
 
-    const form = e.currentTarget;
-    const data = new FormData(form);
+        const form = e.currentTarget;
+        const data = new FormData(form);
 
-    const name = data.get("name")?.toString().trim();
-    const email = data.get("email")?.toString().trim();
-    const mobile = data.get("mobile")?.toString().trim();
+        const name = data.get("name")?.toString().trim();
+        const email = data.get("email")?.toString().trim();
+        const mobile = data.get("mobile")?.toString().trim();
 
-    const indianMobileRegex = /^[6-9]\d{9}$/;
+        const indianMobileRegex = /^[6-9]\d{9}$/;
 
-    if (!mobile || !indianMobileRegex.test(mobile)) {
-      setError("Please enter a valid 10-digit Indian mobile number.");
-      setLoading(false);
-      return;
-    }
+        if (!mobile || !indianMobileRegex.test(mobile)) {
+            setError("Please enter a valid 10-digit Indian mobile number.");
+            setLoading(false);
+            return;
+        }
 
-    const payload = {
-      name,
-      email,
-      mobile,
-      form_name,
-      page_url: window.location.href,
+        const payload = {
+            name,
+            email,
+            mobile,
+            form_name,
+            page_url: window.location.href,
+        };
+
+        try {
+            /* 1️⃣ SAVE TO STRAPI */
+            await fetch(`${FETCH_STRAPI_URL}/api/prospect-leads`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ data: payload }),
+            });
+
+            /* 2️⃣ SEND TO NOPAPERFORMS */
+            const npfRes = await fetch("/api/send-to-npf", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+            });
+
+            const npfResult = await npfRes.json();
+            console.log("NPF response:", npfResult);
+        } catch (err) {
+            console.error("Submission failed:", err);
+        } finally {
+            setLoading(false);
+            setOpen(false);
+            form.reset();
+
+            window.open(redirectUrl, "_blank");
+        }
     };
 
-    try {
-      /* 1️⃣ SAVE TO STRAPI */
-      await fetch(`${FETCH_STRAPI_URL}/api/prospect-leads`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ data: payload }),
-      });
+    return (
+        <>
+            {/* Trigger Button */}
+            <button
+                onClick={() => setOpen(true)}
+                className={`relative overflow-hidden group ${buttonClassName} cursor-pointer`}
+            >
+                <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
+                {buttonText}
+            </button>
 
-      /* 2️⃣ SEND TO NOPAPERFORMS */
-      const npfRes = await fetch("/api/send-to-npf", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+            {/* Modal — portalled to document.body */}
+            {open &&
+                createPortal(
+                    <div className="fixed inset-0 z-[99999] bg-black/40  flex items-center justify-center px-4 transition-all duration-300">
+                        <div className="bg-white border border-gray-100 w-full max-w-[460px] rounded-[2px] overflow-hidden shadow-2xl animate-in fade-in zoom-in-95 duration-200 font-poppins">
+                            {/* Header */}
+                            <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between bg-white">
+                                <h3 className="text-gray-900 text-base md:text-lg font-poppins font-semibold tracking-tight">
+                                    {form_name}
+                                </h3>
+                                <button
+                                    onClick={() => setOpen(false)}
+                                    className="text-gray-400 hover:text-gray-700 transition-colors cursor-pointer p-1"
+                                    title="Close"
+                                >
+                                    <X size={20} strokeWidth={1.5} />
+                                </button>
+                            </div>
 
-      const npfResult = await npfRes.json();
+                            {/* Form */}
+                            <form
+                                onSubmit={handleSubmit}
+                                className="p-6 space-y-5 font-poppins"
+                            >
+                                <div>
+                                    <label className="block text-[11px] text-gray-500 font-poppins mb-1 font-medium uppercase tracking-wider">
+                                        Full Name*
+                                    </label>
+                                    <div className="relative group flex items-center border-b border-gray-200 pb-0.5">
+                                        <User
+                                            size={18}
+                                            className="text-gray-400 group-focus-within:text-[#061623] transition-colors duration-300 shrink-0 mr-2.5"
+                                            strokeWidth={1.5}
+                                        />
+                                        <input
+                                            name="name"
+                                            required
+                                            placeholder="Enter your full name"
+                                            className="w-full h-[40px] bg-transparent border-none text-gray-900 placeholder:text-gray-400 placeholder:font-normal focus:outline-none focus:ring-0 text-[14px] font-poppins font-normal"
+                                        />
+                                        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#061623] scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 ease-out origin-left pointer-events-none" />
+                                    </div>
+                                </div>
 
-      // Optional: log success/error message
-      console.log("NPF response:", npfResult);
-    } catch (err) {
-      console.error("Submission failed:", err);
-    } finally {
-      /* ✅ ALWAYS REDIRECT (SUCCESS OR ERROR) */
-      setLoading(false);
-      setOpen(false);
-      form.reset();
+                                <div>
+                                    <label className="block text-[11px] text-gray-500 font-poppins mb-1 font-medium uppercase tracking-wider">
+                                        Email Address*
+                                    </label>
+                                    <div className="relative group flex items-center border-b border-gray-200 pb-0.5">
+                                        <Mail
+                                            size={18}
+                                            className="text-gray-400 group-focus-within:text-[#061623] transition-colors duration-300 shrink-0 mr-2.5"
+                                            strokeWidth={1.5}
+                                        />
+                                        <input
+                                            name="email"
+                                            type="email"
+                                            required
+                                            placeholder="Enter your email address"
+                                            className="w-full h-[40px] bg-transparent border-none text-gray-900 placeholder:text-gray-400 placeholder:font-normal focus:outline-none focus:ring-0 text-[14px] font-poppins font-normal"
+                                        />
+                                        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#061623] scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 ease-out origin-left pointer-events-none" />
+                                    </div>
+                                </div>
 
-      window.open(redirectUrl, "_blank");
-    }
-  };
+                                <div>
+                                    <label className="block text-[11px] text-gray-500 font-poppins mb-1 font-medium uppercase tracking-wider">
+                                        Mobile Number*
+                                    </label>
+                                    <div className="relative group flex items-center border-b border-gray-200 pb-0.5">
+                                        <Phone
+                                            size={18}
+                                            className="text-gray-400 group-focus-within:text-[#061623] transition-colors duration-300 shrink-0 mr-2.5"
+                                            strokeWidth={1.5}
+                                        />
+                                        <input
+                                            name="mobile"
+                                            required
+                                            placeholder="10-digit mobile number"
+                                            maxLength={10}
+                                            inputMode="numeric"
+                                            pattern="[6-9]{1}[0-9]{9}"
+                                            title="Enter a valid 10-digit Indian mobile number"
+                                            className="w-full h-[40px] bg-transparent border-none text-gray-900 placeholder:text-gray-400 placeholder:font-normal focus:outline-none focus:ring-0 text-[14px] font-poppins font-normal"
+                                        />
+                                        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#061623] scale-x-0 group-focus-within:scale-x-100 transition-transform duration-300 ease-out origin-left pointer-events-none" />
+                                    </div>
+                                </div>
 
-  return (
-    <>
-      {/* Trigger Button */}
-      <button
-        onClick={() => setOpen(true)}
-        className={`relative overflow-hidden group ${buttonClassName} cursor-pointer`}
-      >
-        <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
-        {buttonText}
-      </button>
+                                <label className="flex items-start gap-3 text-xs text-gray-600 cursor-pointer pt-1 font-poppins">
+                                    <input
+                                        type="checkbox"
+                                        required
+                                        className="mt-0.5 w-4 h-4 rounded-[2px] border-gray-300 bg-white checked:bg-[#061623] checked:border-[#061623] transition-all cursor-pointer accent-[#061623]"
+                                        defaultChecked
+                                    />
+                                    <span className="leading-relaxed font-medium text-[#061623] font-poppins">
+                                        I agree to receive information about my
+                                        enquiry by signing up at K.R. Mangalam
+                                        University.
+                                    </span>
+                                </label>
 
-      {/* Modal — portalled to document.body so it escapes all parent stacking contexts */}
-      {open &&
-        createPortal(
-          <div className="fixed inset-0 z-[99999] bg-black/60 flex items-center justify-center px-4 transition-all duration-300">
-            <div className="bg-[#323232] w-full max-w-[500px] rounded-[0px] relative overflow-hidden">
-              {/* Decorative Glow */}
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#E7C268] rounded-full blur-[80px] opacity-20 pointer-events-none"></div>
+                                {error && (
+                                    <p className="text-red-600 text-xs font-medium font-poppins">
+                                        {error}
+                                    </p>
+                                )}
 
-              {/* Close */}
-              <button
-                onClick={() => setOpen(false)}
-                className="absolute top-4 right-4 w-8 h-8 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full cursor-pointer flex items-center justify-center text-white/60 hover:text-white transition-colors z-10"
-              >
-                ✕
-              </button>
-
-              {/* Header */}
-              <div className="border-b font-poppins border-white/10 bg-white/[0.02] py-5 px-6">
-                <h3 className="text-white text-xl font-medium tracking-wide">
-                  {form_name}
-                </h3>
-              </div>
-
-              {/* Form */}
-              <form
-                onSubmit={handleSubmit}
-                className="p-6 space-y-5 relative z-10"
-              >
-                <input
-                  name="name"
-                  required
-                  placeholder="Your Name*"
-                  className="w-full h-[45px] px-4 rounded-[2px] bg-white/5 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[#E7C268] focus:ring-1 focus:ring-[#E7C268] transition-all text-[14px] font-poppins"
-                />
-
-                <input
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="Email Address*"
-                  className="w-full h-[45px] px-4 rounded-[2px] bg-white/5 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[#E7C268] focus:ring-1 focus:ring-[#E7C268] transition-all text-[14px] font-poppins"
-                />
-
-                <input
-                  name="mobile"
-                  required
-                  placeholder="Enter Mobile Number*"
-                  maxLength={10}
-                  inputMode="numeric"
-                  pattern="[6-9]{1}[0-9]{9}"
-                  title="Enter a valid 10-digit Indian mobile number"
-                  className="w-full h-[45px] px-4 rounded-[2px] bg-white/5 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-[#E7C268] focus:ring-1 focus:ring-[#E7C268] transition-all text-[14px] font-poppins"
-                />
-
-                <label className="flex items-start gap-3 text-[13px] text-white/70 cursor-pointer group font-poppins">
-                  <input
-                    type="checkbox"
-                    required
-                    className="mt-0.5 w-4 h-4 rounded-[2px] border-white/20 bg-transparent checked:bg-[#E7C268] checked:border-[#E7C268] transition-all cursor-pointer accent-[#E7C268]"
-                    defaultChecked
-                  />
-                  <span className="leading-snug group-hover:text-white/90 transition-colors">
-                    I agree to receive information about my enquiry by signing
-                    up at K.R. Mangalam University.
-                  </span>
-                </label>
-
-                {error && (
-                  <p className="text-[#CB000D] text-sm font-medium">{error}</p>
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="w-full h-[45px] bg-[#061623] hover:bg-[#0c2438] active:scale-[0.99] text-white font-poppins font-bold text-sm tracking-wider uppercase rounded-[2px] cursor-pointer transition-all duration-200 shadow-md mt-2 flex items-center justify-center"
+                                >
+                                    {loading ? "Please wait..." : "DOWNLOAD"}
+                                </button>
+                            </form>
+                        </div>
+                    </div>,
+                    document.body
                 )}
-
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full h-[45px] bg-[#E7C268] hover:bg-[#d8b054] rounded-[2px] text-[#000000] font-bold tracking-wide uppercase text-[14px] transition-all cursor-pointer mt-2 font-poppins"
-                >
-                  {loading ? "Please wait..." : "DOWNLOAD"}
-                </button>
-              </form>
-            </div>
-          </div>,
-          document.body,
-        )}
-    </>
-  );
+        </>
+    );
 };
 
 export default CommonLeadPopup;
