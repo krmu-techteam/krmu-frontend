@@ -237,6 +237,21 @@ export const soadLogos = [
     url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Group_759_96dca5fa11.png",
     alternativeText: "Zynga",
   },
+  {
+    id: 5,
+    url: "https://www.krmangalam.edu.in/images/logos/dlf-ltd.svg",
+    alternativeText: "DLF",
+  },
+  {
+    id: 5,
+    url: "https://www.krmangalam.edu.in/images/logos/larsen.svg",
+    alternativeText: "Larsen & Tourbo",
+  },
+  {
+    id: 5,
+    url: "https://www.krmangalam.edu.in/images/logos/shapoorji.svg",
+    alternativeText: "shapoorji",
+  },
 ];
 
 export const sbasLogos = [

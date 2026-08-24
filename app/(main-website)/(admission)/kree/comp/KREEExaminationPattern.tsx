@@ -3,10 +3,10 @@ const KREEExaminationPattern = () => {
     <section className="py-[4%] px-4">
       <div className="max-w-[1664px] mx-auto w-full">
         <h4 className="text-xl md:text-5xl font-semibold text-center">
-          KREE Examination Pattern
+          KREE Pattern
         </h4>
         <p className="text-center mt-2.5 mb-5">
-          The sections constituting the KREE Examinations are:
+          The KREE consists of the following sections:
         </p>
         <div className="table-1 kree-toggles1">
           <table>
@@ -14,7 +14,7 @@ const KREEExaminationPattern = () => {
               <tr>
                 <td>
                   <ul>
-                    <li>Arithmetic &amp; Logical Reasoning;</li>
+                    <li>Arithmetic &amp; Logical Reasoning</li>
                   </ul>
                 </td>
                 <td>
