@@ -85,7 +85,7 @@ const SDGSection = () => {
     };
 
     return (
-        <section className="w-full text-white font-poppins py-12 md:py-16 overflow-hidden relative">
+        <section className="w-full text-white font-poppins py-10 md:py-12 xl:py-16 overflow-hidden relative">
             {/* Floating Left REPORTS Button */}
             <FloatingReportsButton
                 show={showFloatingButton}
@@ -101,7 +101,7 @@ const SDGSection = () => {
             />
 
             {/* Main Container */}
-            <div className="max-w-[1380px] 2xl:max-w-[1530px] mx-auto px-4 md:px-6 lg:px-16 relative">
+            <div className="max-w-[1380px] 2xl:max-w-[1530px] mx-auto px-4 md:px-6 lg:px-10 xl:px-16 relative">
                 {/* Top Section: 6 SDG Badge Cards + Certificate & Text */}
                 <div className="mb-12">
                     <SdgBadgeGrid />
