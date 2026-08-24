@@ -13,7 +13,7 @@ const ResearchInnovationHeroSection = () => {
             Join us at K.R. Mangalam University, where our research ambitions
             shape the future, and our pursuit of knowledge creates a lasting
             impact. At the heart of K.R. Mangalam University lies a profound
-            commitment to research excellence. Our scholarly endeavors are not
+            commitment to research excellence. Our scholarly endeavours are not
             just about advancing academic knowledge; they are about solving
             real-world problems, contributing to societal development, and
             shaping future innovations. Our research spans diverse domains,
@@ -33,21 +33,24 @@ const ResearchInnovationHeroSection = () => {
             <Link
               href="/PDF"
               className="bg-[#cb000d] leading-[1.5] py-2.5 px-5 inline-block rounded-[4px] text-xl text-white md:leading-2.5 blink-effect"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Policies
             </Link>
             <Link
               href="/PDF/publications"
               className="bg-[#cb000d] leading-[1.5] py-2.5 px-5 inline-block rounded-[4px] text-xl text-white md:leading-2.5 blink-effect"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Publications
             </Link>
             <Link
               href="/PDF/conferences"
               className="bg-[#cb000d] leading-[1.5] py-2.5 px-5 inline-block rounded-[4px] text-xl text-white md:leading-2.5 blink-effect"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Conferences
             </Link>

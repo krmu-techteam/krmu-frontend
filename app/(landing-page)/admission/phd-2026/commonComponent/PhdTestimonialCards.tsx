@@ -37,7 +37,7 @@ const PhdTestimonialCards = () => {
                 The dedication, innovative approach, and academic support of the
                 faculty played a pivotal role in my successful PhD journey and
                 subsequent growth in publications and career advancement. I
-                sincerely credit KRMU for shaping my academic path and enabling
+                sincerely credit KRMU with shaping my academic path and enabling
                 me to reach the highest levels of professional achievement.”
               </p>
               <div className="flex gap-5 items-center">

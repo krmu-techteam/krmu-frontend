@@ -10,19 +10,20 @@ const CIF = () => {
             Central Instrumentation Facility (CIF)
           </h2>
           <p>
-            K.R. Mangalam University boasts many specialised research
+            K.R. Mangalam University boasts several specialised research
             laboratories, each equipped with modern technology to support a wide
-            array of academic and scientific inquiries. Our labs cater to
+            range of academic and scientific research. Our laboratories cater to
             diverse disciplines, enabling groundbreaking research and
             innovation.
           </p>
           <br />
           <p>
             At the heart of our research infrastructure is the Central
-            Instrumentation Facility (CIF). This premier facility is a resource
-            hub for our researchers, providing access to high-end instruments
-            for advanced experimental and analytical work. Key instruments
-            available at CIF include HPLC, UV-VIS spectrophotometer.
+            Instrumentation Facility (CIF). This premier facility serves as a
+            resource hub for our researchers, providing access to high-end
+            instruments for advanced experimental and analytical work. Key
+            instruments available at the CIF include HPLC and UV-VIS
+            spectrophotometers.
           </p>
         </div>
         <div className="lg:w-2/5">

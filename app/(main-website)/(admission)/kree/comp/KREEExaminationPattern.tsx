@@ -31,7 +31,7 @@ const KREEExaminationPattern = () => {
                 </td>
                 <td>
                   <ul>
-                    <li>And some programme-specific questions</li>
+                    <li>Questions Specific to the Chosen Programme</li>
                   </ul>
                 </td>
               </tr>
