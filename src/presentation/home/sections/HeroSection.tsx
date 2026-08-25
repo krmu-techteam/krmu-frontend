@@ -40,15 +40,15 @@ export const HeroSection = ({ title, subtitle }: HeroSectionComponent) => {
     return (
         <div className="w-full pt-[110px] md:pt-[120px] lg:pt-[135px] transition-colors font-poppins overflow-x-hidden">
             {/* Video Section with Rounded Corners */}
-            <section className="relative w-full aspect-video lg:aspect-auto lg:h-[78vh] lg:min-h-[400px] px-3 md:px-4 lg:px-7 pt-4 md:pt-4">
-                <div className="relative w-full h-full rounded-[4px] overflow-hidden group/hero bg-[#0B1221]">
+            <section className="relative w-full aspect-video lg:aspect-auto lg:h-[78vh] lg:min-h-[400px] px-0 md:px-4 lg:px-7 pt-0 md:pt-4">
+                <div className="relative w-full h-full rounded-none md:rounded-[4px] overflow-hidden group/hero bg-[#0B1221]">
                     <HeroVideo />
                     <HeroContent title={title} subtitle={subtitle} />
                     <HeroVirtualTour />
                 </div>
             </section>
 
-            <div className="w-full bg-linear-to-t from-[#0B1221] via-[#0B1221] to-transparent pt-3 pb-6 md:pb-2 px-0 lg:px-6 xl:px-16 flex flex-col lg:flex-row justify-between items-center gap-3 sm:gap-4 lg:gap-4 xl:gap-6 relative z-20 lg:mt-0 transition-all font-poppins text-white shadow-2xl">
+            <div className="w-full bg-linear-to-t from-[#0B1221] via-[#0B1221] to-transparent pt-0 md:pt-4 pb-6 md:pb-2 px-0 lg:px-6 xl:px-16 flex flex-col lg:flex-row justify-between items-center gap-3 sm:gap-4 lg:gap-4 xl:gap-6 relative z-20 lg:mt-0 transition-all font-poppins text-white shadow-2xl">
                 <div className="relative w-full lg:w-auto h-10 md:h-14 flex items-center">
                     {/* Left/Right fade on mobile */}
                     <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#0B1221] to-transparent z-10 pointer-events-none lg:hidden" />
