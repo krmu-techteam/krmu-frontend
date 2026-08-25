@@ -15,10 +15,10 @@ const HostelSecurity = () => {
         24×7 Hostel Security
       </h4>
       <p>
-        Considering the large number of students, security measures like
-        biometric, surveillance cameras and a large team of 24 x 7 security
-        personnel have been put in place for the security of both boys and
-        girls, to ensure the safety and well-being of all the hostel residents.
+        Considering the large number of students, security measures such as
+        biometric access systems, surveillance cameras, and a dedicated team of
+        24×7 security personnel have been put in place to ensure the safety and
+        well-being of all hostel residents.
       </p>
       <div className="mt-5">
         <CommonSlide data={HostelSlides} />

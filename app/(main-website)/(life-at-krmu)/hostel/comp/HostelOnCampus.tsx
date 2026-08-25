@@ -16,9 +16,7 @@ const HostelOnCampus = () => {
         Prime On-Campus Location
       </h4>
       <p>
-        The university hostel is conveniently located within the university
-        campus, making it handy for students to attend classes, use campus
-        facilities, and engage in campus activities.
+        The university's hostels are conveniently located within the university campus, making it convenient for students to attend classes, access campus facilities, and participate in campus activities.
       </p>
       <div className="mt-5">
         <CommonSlide data={HostelSlides} />

@@ -1,4 +1,3 @@
-
 import CommonSlide from "./CommonSlide";
 
 const HostelWellFurnished = () => {
@@ -17,12 +16,12 @@ const HostelWellFurnished = () => {
   return (
     <div className="sm:mt-5">
       <h4 className="text-3xl md:text-4xl leding-[2] font-semibold my-5">
-        Well Furnished Rooms
+        Well-Furnished Rooms
       </h4>
       <p>
-        Each hostel set is typically designed to accommodate four students
-        having four single beds, along with the desks, chairs, storage space and
-        twin sharing amenity facilities.
+        Each hostel room is typically designed to accommodate four students and
+        is equipped with four single beds, desks, chairs, and adequate storage
+        space, along with shared bathroom facilities.
       </p>
       <div className="mt-5">
         <CommonSlide data={HostelSlides} />
