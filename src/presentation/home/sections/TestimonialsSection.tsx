@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Carousel } from "@/components/common/Carousel";
 import SectionDivider from "@/components/common/SectionDivider";
 import { SectionTitle } from "@/components/common/SectionTitle";
@@ -99,10 +99,9 @@ export function TestimonialsSection({
     title,
 }: {
     title?: string;
-     
+
     testimonialsData?: any[];
 }) {
-     
     const [emblaApi, setEmblaApi] = useState<any>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -200,14 +199,14 @@ export function TestimonialsSection({
                                         </p>
 
                                         {/* View All Testimonials button */}
-                                        <button className="flex items-center mt-8 gap-3 text-white hover:text-brand-gold transition-colors group cursor-pointer w-fit mx-auto md:mx-0">
+                                        {/* <button className="flex items-center mt-8 gap-3 text-white hover:text-brand-gold transition-colors group cursor-pointer w-fit mx-auto md:mx-0">
                                             <div className="w-6 h-6 rounded-full border border-white flex items-center justify-center group-hover:border-brand-gold group-hover:bg-brand-gold/10 transition-all">
                                                 <ArrowRight size={14} />
                                             </div>
                                             <span className="font-poppins font-medium text-xs md:text-[15px] tracking-wide">
                                                 View All Testimonials
                                             </span>
-                                        </button>
+                                        </button> */}
                                     </div>
                                 </div>
                             </div>
@@ -215,7 +214,7 @@ export function TestimonialsSection({
                     </Carousel>
 
                     {/* Navigation Controls (Bottom Right) */}
-                    <div className="flex items-center justify-center md:justify-end gap-2 mt-4 relative z-30">
+                    <div className="flex items-center justify-center gap-2 mt-4 relative z-30">
                         <button
                             type="button"
                             onClick={handlePrev}
