@@ -2,7 +2,7 @@
 
 import { STRAPI_URL } from "@/app/constant";
 import { ProgrammeAlumniData } from "@/lib/types/programme";
-import Image from "next/image";
+import Image from "next/image"; 
 import { useState } from "react";
 
 type Props = {

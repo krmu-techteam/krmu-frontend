@@ -46,6 +46,7 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
               alt={data.title?.rendered || ""}
               width={466}
               height={312}
+              unoptimized
               className="w-full rounded-t-3xl object-cover md:h-[342px]"
             />
           )}
