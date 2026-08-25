@@ -6,92 +6,96 @@ import Link from "next/link";
 import { SectionTitle } from "@/components/common/SectionTitle";
 
 export function ResearchSection() {
-  return (
-    <section className="relative w-full py-10 md:py-12 xl:py-20 font-poppins">
-      <div className="w-full max-w-[1530px] mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 items-start relative xl:h-[750px]">
-          {/* Left Column - Image and Stats */}
-          <div className="w-full lg:w-[58%] xl:w-[925px]">
-            <div className="hidden lg:block relative w-full aspect-video xl:aspect-auto xl:w-[925px] xl:h-[464px] rounded-[4px] overflow-hidden mb-16 border border-white/5">
-              <Image
-                src="/modules/home/research/researcher.jpg"
-                alt="Research at KRMU"
-                fill
-                sizes="(max-width: 768px) 100vw, 60vw"
-                className="object-cover"
-                loading="lazy"
-              />
+    return (
+        <section className="relative w-full py-10 md:py-12 xl:py-20 font-poppins">
+            <div className="w-full max-w-[1530px] mx-auto relative z-10">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 items-start relative xl:h-[750px]">
+                    {/* Left Column - Image and Stats */}
+                    <div className="w-full lg:w-[58%] xl:w-[925px]">
+                        <div className="hidden lg:block relative w-full aspect-video xl:aspect-auto xl:w-[925px] xl:h-[464px] rounded-[4px] overflow-hidden mb-16">
+                            <Image
+                                src="/images/home/research/research-girl.jpeg"
+                                alt="Research at KRMU"
+                                fill
+                                sizes="(max-width: 768px) 100vw, 60vw"
+                                className="object-cover"
+                                loading="lazy"
+                            />
+                        </div>
+
+                        <div className="grid grid-cols-2 max-w-2xl xl:max-w-[600px] xl:mx-16">
+                            {RESEARCH_STATS.map((stat, i) => {
+                                const borderClass =
+                                    i === 0
+                                        ? "border-r border-b border-[#3F3F3F] pb-3 md:pb-5 px-1 md:px-3 md:px-5"
+                                        : i === 1
+                                          ? "border-b border-[#3F3F3F] pb-3 md:pb-5 px-1 md:px-3 md:px-5"
+                                          : i === 2
+                                            ? "border-r border-[#3F3F3F] pt-3 md:pt-5 px-1 md:px-3 md:px-5"
+                                            : "pt-3 md:pt-5 px-1 md:px-3 md:px-5";
+                                return (
+                                    <div
+                                        key={i}
+                                        className={`flex flex-col justify-center items-center ${borderClass}`}
+                                    >
+                                        <span className="text-brand-gold text-3xl md:text-3xl font-normal mb-2 text-center">
+                                            {stat.value}
+                                        </span>
+                                        <p className="text-white/70 text-[12px] xl:text-[15px] leading-snug whitespace-pre-line text-center">
+                                            {stat.label}
+                                        </p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+
+                    {/* Right Column - Floating Info Card */}
+                    <div className="w-full lg:w-[47%] lg:-ml-[5%] lg:mt-16 xl:absolute xl:left-[728px] xl:top-[192px] xl:w-[585px] xl:h-[557px] xl:m-0 z-20">
+                        <div className="bg-brand-navy border-12 border-brand-dark p-8 xl:p-12 rounded-[4px] h-full flex flex-col justify-center items-center text-center">
+                            <p className="text-center text-white/90 text-lg tracking-wide font-normal mb-4">
+                                Shaping Futures, Embracing Innovation
+                            </p>
+                            <SectionTitle
+                                title="Engage in Leading-Edge Research"
+                                className="leading-tight text-center mb-0"
+                            />
+                            <div className="mx-auto mt-3 mb-4 md:mb-8 h-2 w-10 rounded-md bg-[#5EA0D5] shrink-0 block"></div>
+
+                            <p className="text-white/90 text-base md:text-md text-center mb-6 font-light">
+                                K.R. Mangalam University thrives on innovation,
+                                bringing together a dedicated faculty and over
+                                5000 students across various disciplines. Our
+                                research is driven by a commitment to the United
+                                Nations’ Sustainable Development Goals, aiming
+                                for global impact and research excellence.
+                            </p>
+
+                            <div className="flex flex-col gap-6 justify-center items-center">
+                                <Link
+                                    href="/research-and-innovation"
+                                    target="_blank"
+                                >
+                                    <button className="bg-brand-research-button hover:bg-brand-research-button/80 text-white px-16 py-2.5 rounded-[3px] font-medium transition-all w-fit flex items-center gap-2 group cursor-pointer">
+                                        Research
+                                    </button>
+                                </Link>
+
+                                <Link
+                                    href="https://foundry.krmangalam.edu.in/"
+                                    target="_blank"
+                                    className="text-white/90 underline underline-offset-4 decoration-text-white/90 hover:decoration-text-white/90 transition-all text-sm font-medium w-fit"
+                                >
+                                    Innovation and Entrepreneurship
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div className="grid grid-cols-2 max-w-2xl xl:max-w-[600px] xl:mx-16">
-              {RESEARCH_STATS.map((stat, i) => {
-                const borderClass =
-                  i === 0
-                    ? "border-r border-b border-[#3F3F3F] pb-5 px-3 md:px-5"
-                    : i === 1
-                      ? "border-b border-[#3F3F3F] pb-5 px-3 md:px-5"
-                      : i === 2
-                        ? "border-r border-[#3F3F3F] pt-5 px-3 md:px-5"
-                        : "pt-5 px-3 md:px-5";
-                return (
-                  <div
-                    key={i}
-                    className={`flex flex-col justify-center items-center ${borderClass}`}
-                  >
-                    <span className="text-brand-gold text-2xl md:text-3xl font-normal mb-2 text-center">
-                      {stat.value}
-                    </span>
-                    <p className="text-white/70 text-sm xl:text-[15px] leading-snug whitespace-pre-line text-center">
-                      {stat.label}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Right Column - Floating Info Card */}
-          <div className="w-full lg:w-[47%] lg:-ml-[5%] lg:mt-16 xl:absolute xl:left-[728px] xl:top-[192px] xl:w-[585px] xl:h-[557px] xl:m-0 z-20">
-            <div className="bg-brand-navy border-12 border-brand-dark p-8 xl:p-12 rounded-[4px] h-full flex flex-col justify-center">
-              <p className="text-center text-white/90 text-lg tracking-wide font-normal mb-4">
-                Shaping Futures, Embracing Innovation
-              </p>
-              <SectionTitle
-                title="Engage in Leading-Edge Research"
-                className="leading-tight text-center mb-0"
-              />
-              <div className="mx-auto mb-8 h-2 w-7 rounded-md bg-white/70 block"></div>
-
-              <p className="text-white/70 text-base md:text-md text-center mb-6 font-light">
-                K.R. Mangalam University thrives on innovation, bringing
-                together a dedicated faculty and over 5000 students across
-                various disciplines. Our research is driven by a commitment to
-                the United Nations’ Sustainable Development Goals, aiming for
-                global impact and research excellence.
-              </p>
-
-              <div className="flex flex-col gap-6 justify-center items-center">
-                <Link href="/research-and-innovation" target="_blank">
-                  <button className="bg-brand-research-button hover:bg-brand-research-button/80 text-white px-16 py-2.5 rounded-[3px] font-medium transition-all w-fit flex items-center gap-2 group cursor-pointer">
-                    Research
-                  </button>
-                </Link>
-
-                <Link
-                  href="https://foundry.krmangalam.edu.in/"
-                  target="_blank"
-                  className="text-white/90 underline underline-offset-4 decoration-text-white/90 hover:decoration-text-white/90 transition-all text-sm font-medium w-fit"
-                >
-                  Innovation and Entrepreneurship
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Section Divider */}
-      <SectionDivider />
-    </section>
-  );
+            {/* Bottom Section Divider */}
+            <SectionDivider />
+        </section>
+    );
 }

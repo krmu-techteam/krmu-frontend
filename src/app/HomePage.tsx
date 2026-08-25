@@ -125,10 +125,11 @@ export default async function HomePage() {
                     <Suspense fallback={<div className="min-h-[400px]" />}>
                         <ResearchSection />
                     </Suspense>
-                    <Suspense fallback={<div className="min-h-[400px]" />}>
-                        <PartnersSection />
-                    </Suspense>
                 </Container>
+
+                <Suspense fallback={<div className="min-h-[400px]" />}>
+                    <PartnersSection />
+                </Suspense>
 
                 <Suspense fallback={<div className="min-h-[400px]" />}>
                     <VisitSection />
@@ -137,7 +138,6 @@ export default async function HomePage() {
                 <Container>
                     <Suspense fallback={<div className="min-h-[400px]" />}>
                         {newsEventsSection ? (
-                             
                             <NewsEventsSection
                                 {...(newsEventsSection as any)}
                             />

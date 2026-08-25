@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
- 
 export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
     console.log(HeroSectionVideo);
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -41,7 +40,7 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
                 />
             </video>
             {/* Subtle Left Black Gradient Overlay for Mobile & Tablet Readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-[1] pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-[1] pointer-events-none lg:hidden" />
         </div>
     );
 };

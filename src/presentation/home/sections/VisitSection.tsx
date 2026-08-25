@@ -1,12 +1,12 @@
 import React from "react";
 import { CalendarCheck } from "lucide-react";
 import Image from "next/image";
-import SectionDivider from "@/components/common/SectionDivider";
 import Link from "next/link";
+import SectionDivider from "@/components/common/SectionDivider";
 
 export function VisitSection() {
     return (
-        <section className="relative w-full py-10 md:py-12 xl:py-20 overflow-hidden font-poppins">
+        <section className="relative w-full py-0 md:py-12 xl:py-20 overflow-hidden font-poppins">
             <div className="relative w-full flex flex-col lg:flex-row items-stretch gap-6 xl:gap-16">
                 {/* Background Image Overlay on Tablet & Mobile Only */}
                 <div className="absolute inset-0 lg:hidden z-0 overflow-hidden">
@@ -86,7 +86,9 @@ export function VisitSection() {
                     </div>
                 </div>
             </div>
-            <SectionDivider />
+            <div className="hidden md:block">
+                <SectionDivider />
+            </div>
         </section>
     );
 }

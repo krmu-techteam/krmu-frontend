@@ -412,7 +412,7 @@ const Footer = async () => {
 
                 {/* Main Footer Body (Top Section) */}
                 <div className="py-8 md:py-16 lg:py-20">
-                    <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-11 xl:px-16">
+                    <div className="max-w-[1530px] mx-auto w-full px-4 md:px-8 lg:px-11 xl:px-16">
                         <div className="columns-2 gap-6 md:gap-8 lg:gap-12 text-white text-left md:grid md:grid-cols-3 lg:grid-cols-5 space-y-6 md:space-y-0">
                             {/* Column 1: Programmes */}
                             <div className="inline-block w-full break-inside-avoid font-poppins">
@@ -435,8 +435,8 @@ const Footer = async () => {
                                 </ul>
 
                                 <Button
-                                    href="#"
-                                    className="mt-6 !border-[2px] !border-white !text-white !px-1 !text-[14px]"
+                                    href="https://www.krmangalam.edu.in/pdfs/handbooks/University-Student-Handbook-2025.pdf"
+                                    className="mt-6 !border-[2px] !border-white !font-semibold !text-white !px-1 !text-[11.5px] md:!text-[14px]"
                                 >
                                     Download Handbook
                                 </Button>
@@ -622,13 +622,13 @@ const Footer = async () => {
                 </div>
 
                 {/* Middle Divider Line (Above Helpline/Contact Section) */}
-                <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-11 xl:px-16">
+                <div className="max-w-[1530px] mx-auto w-full px-4 md:px-8 lg:px-11 xl:px-16">
                     <div className="w-full border-t border-white/30 mb-6 lg:mb-8" />
                 </div>
 
                 {/* Bottom Footer Section */}
                 <div>
-                    <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-11 xl:px-16">
+                    <div className="max-w-[1530px] mx-auto w-full px-4 md:px-8 lg:px-11 xl:px-16">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12 text-center md:text-left text-white items-start">
                             {/* Helpline Section */}
                             <div className="flex flex-col h-full justify-between min-h-[90px] lg:min-h-[112px]">
@@ -732,7 +732,7 @@ const Footer = async () => {
                     </div>
 
                     {/* Bottom Divider Line (Above Copyright) */}
-                    <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 lg:px-11 xl:px-16">
+                    <div className="max-w-[1530px] mx-auto w-full px-4 md:px-8 lg:px-11 xl:px-16">
                         <div className="w-full border-t border-white/30 mb-4" />
                         <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-white/90 text-[16px] pb-4">
                             <p className="text-center">
