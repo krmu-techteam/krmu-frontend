@@ -68,7 +68,7 @@ export const HeroSection = ({ title, subtitle }: HeroSectionComponent) => {
 
                 <span className="w-full lg:w-auto flex justify-center px-6 lg:px-0 shrink-0">
                     <Button
-                        href="https://www.krmangalam.edu.in/pdfs/handbooks/University-Student-Handbook-2025.pdf"
+                        href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
                         variant="outline"
                         icon={ArrowDownToLine}
                         iconPosition="left"

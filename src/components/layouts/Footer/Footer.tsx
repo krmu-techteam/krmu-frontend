@@ -435,8 +435,8 @@ const Footer = async () => {
                                 </ul>
 
                                 <Button
-                                    href="https://www.krmangalam.edu.in/pdfs/handbooks/University-Student-Handbook-2025.pdf"
-                                    className="mt-6 !border-[2px] !border-white !font-semibold !text-white !px-1 !text-[11.5px] md:!text-[14px]"
+                                    href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
+                                    className="mt-6 !border-[2px] !border-white !font-semibold !text-white !px-1 !text-[11.5px] md:!text-[14px] hidden md:inline-flex"
                                 >
                                     Download Handbook
                                 </Button>
@@ -445,7 +445,7 @@ const Footer = async () => {
                                     width={560}
                                     height={160}
                                     alt="Accreditation Logos"
-                                    className="w-auto h-auto max-w-[280px] mt-6"
+                                    className="w-auto h-auto max-w-[280px] mt-6 hidden md:block"
                                     unoptimized
                                 />
                             </div>
@@ -503,6 +503,35 @@ const Footer = async () => {
                                               </li>
                                           ))}
                                 </ul>
+                                <Button
+                                    href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
+                                    className="mt-6 !border-[2px] !border-white !font-semibold !text-white !px-2.5 !text-[11px] xs:!text-[12px] whitespace-nowrap inline-flex md:hidden"
+                                >
+                                    Download Handbook
+                                </Button>
+                                <Image
+                                    src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/footer_logos_d944bc560c.svg"
+                                    width={560}
+                                    height={160}
+                                    alt="Accreditation Logos"
+                                    className="w-auto h-auto max-w-[170px] xs:max-w-[220px] mt-6 block md:hidden"
+                                    unoptimized
+                                />
+                                <Link
+                                    href="/campus-life/virtual-tour"
+                                    target="_blank"
+                                    className="relative group mt-4 block md:hidden"
+                                >
+                                    <div className="relative w-36 h-16">
+                                        <Image
+                                            src="/modules/home/footer/virtual-tour.png"
+                                            alt="360 Virtual Tour"
+                                            fill
+                                            sizes="144px"
+                                            className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                                        />
+                                    </div>
+                                </Link>
                             </div>
 
                             {/* Column 3: About KRMU */}
@@ -604,7 +633,7 @@ const Footer = async () => {
                                 <Link
                                     href="/campus-life/virtual-tour"
                                     target="_blank"
-                                    className="relative group mt-5 block"
+                                    className="relative group mt-5 hidden md:block"
                                 >
                                     <div className="relative w-36 h-16">
                                         <Image
@@ -629,16 +658,16 @@ const Footer = async () => {
                 {/* Bottom Footer Section */}
                 <div>
                     <div className="max-w-[1530px] mx-auto w-full px-4 md:px-8 lg:px-11 xl:px-16">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12 text-center md:text-left text-white items-start">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12 text-left text-white items-start">
                             {/* Helpline Section */}
-                            <div className="flex flex-col h-full justify-between min-h-[90px] lg:min-h-[112px]">
+                            <div className="flex flex-col h-full justify-between min-h-0 md:min-h-[90px] lg:min-h-[112px]">
                                 <div>
                                     <h5 className="text-md font-semibold mb-1 text-white">
                                         General Helpline No
                                     </h5>
-                                    <p className="text-white/70 text-md font-light block mb-4 hover:text-white transition-colors">
+                                    <p className="text-white/70 text-[16px] font-light block mb-0 md:mb-4 hover:text-white transition-colors">
                                         01148884888, 8800697010 – 15,
-                                        <br />
+                                        <br className="hidden md:block" />
                                         8192888444
                                     </p>
                                 </div>
@@ -666,7 +695,7 @@ const Footer = async () => {
                                 )}
 
                                 {/* Social Icons */}
-                                <div className="flex justify-center md:justify-start gap-4 mt-4">
+                                <div className="flex justify-start gap-4 mt-4">
                                     {footerComp4?.footer_social_icons?.map(
                                         (comp4) => (
                                             <Link
@@ -674,7 +703,7 @@ const Footer = async () => {
                                                 href={comp4?.footer_url || "#"}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-white/30 hover:text-white transition-all duration-300 transform hover:-translate-y-1 block relative w-5 h-5"
+                                                className="text-white/30 hover:text-white transition-all duration-300 transform hover:-translate-y-1 block relative w-6 h-6 md:w-5 md:h-5"
                                             >
                                                 <Image
                                                     src={`${STRAPI_URL}${comp4?.footer_icon?.url}`}
@@ -713,7 +742,7 @@ const Footer = async () => {
                                 )}
                             </div>
 
-                            <div className="flex justify-center md:justify-end text-md gap-4">
+                            <div className="flex justify-start md:justify-end text-md gap-4 mb-4 md:mb-0">
                                 <Link
                                     href="/under-construction"
                                     className="text-white/90 hover:text-white transition-colors"
