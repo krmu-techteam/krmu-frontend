@@ -10,7 +10,7 @@ import HeroSection from "./components/HeroSection";
 import HowWeCompare from "./components/HowWeCompare";
 import InternationalExposure from "./components/InternationalExposure";
 import KRMUFEEStructure from "./components/KRMUFEEStructure";
-import LocationSection from "./components/LocationSection";
+import LocationSection from "./components/LocationSection"; 
 import PlacementOverview from "./components/PlacementOverview";
 import PlacementStrategy from "./components/PlacementStrategy";
 import PreFooterCTA from "./components/PreFooterCTA";

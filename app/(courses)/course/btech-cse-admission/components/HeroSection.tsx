@@ -24,11 +24,11 @@ const HeroSection = () => {
           </div>
           <h1 className="text-white text-center sm:text-left font-semibold mb-3 leading-[1.5] text-3xl  lg:text-5xl 2xl:text-[46px]">
             B.Tech. CSE
-            <br />
+            <br />{" "}
             ADMISSIONS 2026
-            <br />
+            <br />{" "}
             IN DELHI NCR
-            <br />
+            <br />{" "}
             ARE NOW OPEN!
           </h1>
           <p className="text-white mb-6 hidden sm:block">
