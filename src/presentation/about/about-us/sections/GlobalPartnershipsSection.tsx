@@ -27,8 +27,8 @@ const GlobalPartnershipsSection = ({
     aboutData,
 }: GlobalPartnershipsSectionProps) => {
     return (
-        <section className="py-8 md:py-12 xl:py-20 bg-transparent relative">
-            <div className="max-w-[1440px] mx-auto w-full px-6 md:px-8 xl:px-16">
+        <section className="py-10 md:py-12 xl:py-20 bg-transparent relative">
+            <div className="max-w-[1440px] mx-auto w-full px-4 md:px-8 xl:px-16">
                 <div className="w-full bg-[#061623]/30 rounded-[4px] flex flex-col-reverse lg:flex-row items-stretch overflow-hidden">
                     <div className="w-full lg:w-[60%] text-white px-6 py-8 lg:p-10 xl:p-14 flex flex-col justify-center">
                         <h3 className="heading-primary mb-6 text-center md:text-left">

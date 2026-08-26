@@ -16,15 +16,15 @@ const GroupInstitutionsSection = ({
     krmBranchData,
 }: GroupInstitutionsSectionProps) => {
     return (
-        <section className="relative py-8 md:py-12 xl:py-20 overflow-hidden">
+        <section className="relative py-10 md:py-12 xl:py-20 overflow-hidden">
             <SectionDivider className="!top-0 !bottom-auto" />
-            <div className="relative z-10 max-w-[1440px] mx-auto w-full px-6 md:px-8 xl:px-16">
+            <div className="relative z-10 max-w-[1440px] mx-auto w-full px-4 md:px-8 xl:px-16">
                 <div className="text-center max-w-[1200px] mx-auto mb-10 lg:mb-14">
                     <h3 className="heading-primary mb-6">{title}</h3>
-                    <h4 className="text-white text-[16px] text-center font-poppins font-semibold leading-[1] mb-5 tracking-normal">
+                    <h4 className="text-white text-[16px] text-center font-poppins font-semibold leading-relaxed mb-5 tracking-normal">
                         {subtitle}
                     </h4>
-                    <p className="text-white/85 text-center font-poppins text-[16px] font-normal  tracking-normal">
+                    <p className="text-white/85  text-justify md:text-center font-poppins text-[16px] font-normal  tracking-normal">
                         {description}
                     </p>
                 </div>

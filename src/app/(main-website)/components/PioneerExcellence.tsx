@@ -3,12 +3,12 @@ import TimelineCarousel from "./Carousels/TimelineCarousel";
 const PioneerExcellence = () => {
     return (
         <>
-            <section className="pt-8 sm:pt-10 lg:pt-12 xl:pt-16 overflow-hidden">
-                <div className="max-w-[1440px] mx-auto w-full lg:mb-16 mb-8 px-6 md:px-8 xl:px-16">
+            <section className="pt-10 sm:pt-10 lg:pt-12 xl:pt-16 overflow-hidden">
+                <div className="max-w-[1440px] mx-auto w-full lg:mb-16 mb-8 px-4 md:px-8 xl:px-16">
                     <h3 className="heading-primary mb-6">
                         K.R. Mangalam Group: Pioneering Excellence in Education
                     </h3>
-                    <p className="text-[14px] sm:text-[16px] leading-relaxed text-white/80 mb-6 font-poppins">
+                    <p className="text-[15px] text-justify md:text-left sm:text-[16px] leading-relaxed text-white/90 mb-6 font-poppins">
                         The K.R. Mangalam legacy, encompassing a distinguished
                         group of educational institutions including schools and
                         the university is a testament to our enduring commitment
@@ -19,7 +19,7 @@ const PioneerExcellence = () => {
                         umbrella has been a milestone in our quest for
                         educational excellence.
                     </p>
-                    <p className="text-[14px] sm:text-[16px] leading-relaxed text-white/80 font-poppins">
+                    <p className="text-[15px] text-justify md:text-left sm:text-[16px] leading-relaxed text-white/90 font-poppins">
                         Throughout our history, the K.R. Mangalam Group has been
                         at the forefront of educational innovation, constantly
                         evolving to meet the needs of a changing world. Our
@@ -28,7 +28,7 @@ const PioneerExcellence = () => {
                         students are encouraged to explore, innovate, and excel.
                     </p>
                 </div>
-                <div className="max-w-[1440px] mx-auto w-full px-6 md:px-8 xl:px-16 overflow-hidden">
+                <div className="max-w-[1440px] mx-auto w-full px-4 md:px-8 xl:px-16 overflow-hidden">
                     <TimelineCarousel />
                 </div>
             </section>

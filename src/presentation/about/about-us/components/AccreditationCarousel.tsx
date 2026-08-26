@@ -54,7 +54,7 @@ const AccreditationCarousel: React.FC<AccreditationCarouselProps> = ({
             >
                 {logosData?.map((logo) => (
                     <div key={logo?.id} className="h-full">
-                        <div className="flex items-center justify-center w-full sm:w-[140px] h-[135px] bg-white border border-slate-200 rounded-[4px] hover:border-[#00A0E3]/30 transition-all duration-300 overflow-hidden group">
+                        <div className="flex items-center justify-center w-full sm:w-[140px] h-[100px] md:h-[135px] bg-white border border-slate-200 rounded-[4px] hover:border-[#00A0E3]/30 transition-all duration-300 overflow-hidden group">
                             <Image
                                 src={`${STRAPI_URL}${logo?.url}`}
                                 alt={

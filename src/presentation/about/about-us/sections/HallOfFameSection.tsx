@@ -11,8 +11,8 @@ const HallOfFameSection = ({
     hallfame: HallFameItemDomain[];
 }) => {
     return (
-        <section className="py-8 sm:py-10 md:py-12 xl:py-20 relative">
-            <div className="max-w-[1440px] mx-auto w-full text-center px-6 md:px-8 xl:px-16 ">
+        <section className="py-10 sm:py-10 md:py-12 xl:py-20 relative">
+            <div className="max-w-[1440px] mx-auto w-full text-center px-4 md:px-8 xl:px-16 ">
                 <h3 className="heading-primary mb-8 lg:mb-12">
                     {title || "Our Hall of Fame"}
                 </h3>

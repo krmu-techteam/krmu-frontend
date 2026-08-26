@@ -23,8 +23,8 @@ interface KrmuCommitteeSectionProps {
 
 const KrmuCommitteeSection = ({ aboutData }: KrmuCommitteeSectionProps) => {
     return (
-        <section className="py-8 sm:py-10 md:py-12 xl:py-20 relative">
-            <div className="max-w-[1440px] mx-auto w-full relative flex flex-col lg:block px-6 md:px-8 xl:px-16">
+        <section className="py-10 sm:py-10 md:py-12 xl:py-20 relative">
+            <div className="max-w-[1440px] mx-auto w-full relative flex flex-col lg:block px-4 md:px-8 xl:px-16">
                 {/* Main Background Image Container */}
                 <div className="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[600px] xl:h-[760px] relative overflow-hidden">
                     <Image
