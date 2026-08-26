@@ -56,13 +56,13 @@ export default function FloatingButtons() {
             </div>
 
             {/* Mobile Version: Sticky bottom bar */}
-            <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[9999] grid grid-cols-3 w-full border-none outline-none overflow-hidden">
+            <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[9999] grid grid-cols-3 w-full border-none outline-none overflow-hidden font-poppins">
                 <a
                     href="tel:+911242867700"
-                    className="!bg-[#0060a9] font-poppins !text-white py-2.5 px-1 text-center text-[12px] sm:text-[13px] font-medium tracking-wide active:bg-[#005090] flex items-center justify-center gap-1 border-0 outline-none select-none"
+                    className="!bg-[#0060a9] !text-white py-2.5 px-0.5 text-center text-[11px] xs:text-[12px] sm:text-[13px] font-medium tracking-tight active:bg-[#005090] flex items-center justify-center gap-1 border-0 outline-none select-none"
                 >
-                    <Phone size={14} className="!text-white shrink-0" />
-                    <span className="truncate">Call Us</span>
+                    <Phone size={13} className="!text-white shrink-0" />
+                    <span className="whitespace-nowrap">Call Us</span>
                 </a>
                 <button
                     onClick={() => {
@@ -75,18 +75,18 @@ export default function FloatingButtons() {
                             form.scrollIntoView({ behavior: "smooth" });
                         }
                     }}
-                    className="!bg-[#e31e24] font-poppins !text-white py-2.5 px-1 text-center text-[12px] sm:text-[13px] font-medium tracking-wide active:bg-[#c31a1e] cursor-pointer border-0 outline-none select-none flex items-center justify-center"
+                    className="!bg-[#e31e24] !text-white py-2.5 px-0.5 text-center text-[10.5px] xs:text-[11.5px] sm:text-[13px] font-semibold tracking-tight active:bg-[#c31a1e] cursor-pointer border-0 outline-none select-none flex items-center justify-center"
                 >
-                    <span className="truncate">Admission Enquiry</span>
+                    <span className="whitespace-nowrap">Admission Enquiry</span>
                 </button>
                 <a
                     href="https://wa.me/918800697010"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="!bg-[#27AB00] !text-white py-2.5 px-1 text-center text-[12px] sm:text-[13px] font-medium tracking-wide active:bg-[#27AB00] flex items-center justify-center gap-1 border-0 outline-none select-none"
+                    className="!bg-[#27AB00] !text-white py-2.5 px-0.5 text-center text-[11px] xs:text-[12px] sm:text-[13px] font-medium tracking-tight active:bg-[#27AB00] flex items-center justify-center gap-1 border-0 outline-none select-none"
                 >
-                    <FaWhatsapp size={15} className="!text-white shrink-0" />
-                    <span className="truncate">WhatsApp</span>
+                    <FaWhatsapp size={14} className="!text-white shrink-0" />
+                    <span className="whitespace-nowrap">WhatsApp</span>
                 </a>
             </div>
         </>
