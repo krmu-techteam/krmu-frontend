@@ -111,16 +111,16 @@ const DeansCarousel = () => {
 
     return (
         <div className="space-y-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                 {deans.slice(0, visibleCount).map((dean, index) => (
                     <div
                         key={index}
-                        className={`group relative flex-col h-full ${
+                        className={`group relative flex-col h-full w-full max-w-[280px] sm:max-w-none mx-auto ${
                             (index + 1) % 5 === 0 ? "hidden xl:flex" : "flex"
                         }`}
                     >
                         {/* Person Image */}
-                        <div className="w-full h-[220px] sm:h-[260px] relative overflow-hidden bg-white">
+                        <div className="w-full h-[280px] sm:h-[260px] relative overflow-hidden rounded-[4px]">
                             <Image
                                 src={dean.img}
                                 alt={dean.name}

@@ -47,28 +47,28 @@ const AdvisoryCarousel = () => {
 
     return (
         <div className="space-y-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 {DEANS.slice(0, visibleCount).map((dean, index) => (
                     <div
                         key={index}
-                        className={`group relative flex-col bg-[#061623] border-[1px] border-transparent hover:border-[#007DE3] transition-all duration-300 h-full overflow-hidden ${
+                        className={`group relative flex-col bg-[#061623] hover:border-[#007DE3] transition-all duration-300 h-full overflow-hidden rounded-t-[17px] w-full max-w-[280px] sm:max-w-none mx-auto ${
                             (index + 1) % 5 === 0 ? "hidden xl:flex" : "flex"
                         }`}
                     >
                         {/* Person Image */}
-                        <div className="w-full h-[240px] sm:h-[260px] p-4">
-                            <div className="w-full h-full relative overflow-hidden rounded-[4px]">
+                        <div className="w-full h-[280px] sm:h-[260px]">
+                            <div className="w-full h-full relative overflow-hidden rounded-t-[17px]">
                                 <Image
                                     src={dean.img}
                                     alt={dean.name}
                                     fill
-                                    className="object-fill"
+                                    className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
                         </div>
 
                         {/* Text Content */}
-                        <div className="px-5 pb-5 flex flex-col flex-grow text-left">
+                        <div className="px-5 pt-4 pb-5 flex flex-col flex-grow text-left">
                             <h5
                                 className="text-[18px] sm:text-[20px] font-serif font-semibold text-white leading-tight mb-3"
                                 title={dean.name}
@@ -76,7 +76,7 @@ const AdvisoryCarousel = () => {
                                 {dean.name}
                             </h5>
                             <p
-                                className="text-[13px] font-poppins sm:text-[14px] line-clamp-4 text-white/90 font-normal leading-[1.4] mb-2"
+                                className="text-[13px] sm:text-[14px] font-poppins line-clamp-4 text-white/90 font-normal leading-[1.4] mb-2"
                                 title={dean.role}
                             >
                                 {dean.role}
