@@ -24,7 +24,7 @@ const GroupInstitutionsSection = ({
                     <h4 className="text-white text-[16px] text-center font-poppins font-semibold leading-relaxed mb-5 tracking-normal">
                         {subtitle}
                     </h4>
-                    <p className="text-white/85  text-justify md:text-center font-poppins text-[16px] font-normal  tracking-normal">
+                    <p className="text-white/85  text-justify lg:text-center font-poppins text-[16px] font-normal  tracking-normal">
                         {description}
                     </p>
                 </div>

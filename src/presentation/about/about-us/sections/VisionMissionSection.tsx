@@ -6,7 +6,7 @@ import { MissionGrid } from "../components";
 const VisionMissionSection = () => {
     return (
         <section className="relative overflow-hidden max-w-[1440px] mx-auto py-10 md:py-12 xl:py-20 px-4 md:px-8 xl:px-16">
-            <div className="relative z-10 border-2 border-[#315F84] rounded-[8px] p-2 text-center md:text-left sm:p-10 lg:p-14">
+            <div className="relative z-10 border-2 border-[#315F84] rounded-[8px] p-4 text-center md:text-left sm:p-10 lg:p-14">
                 <h2 className="heading-primary mb-6 mt-3 md:mt-0 2xl:mb-8">
                     Our Vision & Mission
                 </h2>

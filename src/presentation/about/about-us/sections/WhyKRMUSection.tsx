@@ -3,7 +3,7 @@ import { HighlightsGrid } from "../components";
 
 const WhyKRMUSection = () => {
     return (
-        <section className="relative py-8 sm:py-10 lg:py-12 xl:py-20">
+        <section className="relative py-10 sm:py-10 lg:py-12 xl:py-20">
             <div className="max-w-[1440px] mx-auto px-4 md:px-8 xl:px-16">
                 {/* Heading */}
                 <div className="text-center text-white mb-6 md:mb-8">

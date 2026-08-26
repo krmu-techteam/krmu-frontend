@@ -47,28 +47,26 @@ const AdvisoryCarousel = () => {
 
     return (
         <div className="space-y-10">
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 {DEANS.slice(0, visibleCount).map((dean, index) => (
                     <div
                         key={index}
-                        className={`group relative flex-col bg-[#061623] hover:border-[#007DE3] transition-all duration-300 h-full overflow-hidden rounded-t-[17px] w-full max-w-[280px] sm:max-w-none mx-auto ${
+                        className={`group relative flex-col bg-[#061623] hover:border-[#007DE3] transition-all duration-300 h-full overflow-hidden p-3 sm:p-4 w-full max-w-[280px] sm:max-w-none mx-auto ${
                             (index + 1) % 5 === 0 ? "hidden xl:flex" : "flex"
                         }`}
                     >
                         {/* Person Image */}
-                        <div className="w-full h-[280px] sm:h-[260px]">
-                            <div className="w-full h-full relative overflow-hidden rounded-t-[17px]">
-                                <Image
-                                    src={dean.img}
-                                    alt={dean.name}
-                                    fill
-                                    className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
-                                />
-                            </div>
+                        <div className="w-full h-[220px] sm:h-[250px] relative overflow-hidden rounded-[12px] mb-3 bg-[#04101A]/50 flex items-center justify-center">
+                            <Image
+                                src={dean.img}
+                                alt={dean.name}
+                                fill
+                                className="object-fill sm:object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                            />
                         </div>
 
                         {/* Text Content */}
-                        <div className="px-5 pt-4 pb-5 flex flex-col flex-grow text-left">
+                        <div className="px-1 pb-1 flex flex-col flex-grow text-left">
                             <h5
                                 className="text-[18px] sm:text-[20px] font-serif font-semibold text-white leading-tight mb-3"
                                 title={dean.name}
