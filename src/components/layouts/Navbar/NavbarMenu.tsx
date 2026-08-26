@@ -1021,7 +1021,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                                     {/* Right Column: Featured Image */}
                                     <div className="col-span-6 pl-4 flex flex-col justify-center h-full">
-                                        <div className="relative rounded-[4px] overflow-hidden border border-white/10 w-full aspect-[16/10] shadow-2xl">
+                                        <div className="relative rounded-[4px] overflow-hidden w-full aspect-[16/10]">
                                             <Image
                                                 src="/modules/header/campus/campus.png"
                                                 alt="Campus Life"
