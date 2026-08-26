@@ -94,7 +94,7 @@ const page = () => {
 
   return (
     <section>
-      <div className="pt-36 pb-20 bg-[#001732] text-white text-center temp-class">
+      <div className="pt-36 pb-20 bg-[#001732] text-white text-center">
         <h1 className="text-5xl font-semibold">ALL Faculties</h1>
       </div>
 
