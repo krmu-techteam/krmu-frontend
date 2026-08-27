@@ -392,7 +392,7 @@ export const allProgrammes = [
       },
       {
         name: "Integrated / Dual Degree B.Sc. - M.Sc. (Forensic Science)",
-        url: "https://www.krmangalam.edu.in/programs/dual-degree-bsc-mscforensic-science",
+        url: "https://www.krmangalam.edu.in/programs/dual-degree-bsc-msc-forensic-science",
       },
       {
         name: "M.Sc. (Part Time)",

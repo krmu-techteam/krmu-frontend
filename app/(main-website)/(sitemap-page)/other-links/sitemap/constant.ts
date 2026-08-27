@@ -792,7 +792,7 @@ export const sitemapData = [
           },
           {
             label: "Integrated / Dual Degree B.Sc. - M.Sc. (Forensic Science)",
-            href: "https://www.krmangalam.edu.in/programs/dual-degree-bsc-mscforensic-science",
+            href: "https://www.krmangalam.edu.in/programs/dual-degree-bsc-msc-forensic-science",
           },
           {
             label: "M.Sc. (Part Time)",
