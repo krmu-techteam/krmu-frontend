@@ -56,7 +56,7 @@ export const sitemapData = [
           },
           {
             label: "School Of Agricultural Sciences",
-            href: "https://www.krmangalam.edu.in/school-of-agriculutural-sciences",
+            href: "https://www.krmangalam.edu.in/school-of-agricultural-sciences",
           },
         ],
       },
@@ -65,7 +65,7 @@ export const sitemapData = [
         links: [
           {
             label: "Academic Calendar",
-            href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/revised_academic_calendar_for_academic_session_2025_26_1_0944c313cb.pdf",
+            href: "https://www.krmangalam.edu.in/pdfs/Notification-of-Academic-Calendar-for-Students-Academic-Sessio-1.pdf",
           },
           {
             label: "Academic Affairs",
@@ -581,12 +581,12 @@ export const sitemapData = [
           {
             label:
               "BBA (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK",
-            href: "https://www.krmangalam.edu.in/programs/bba-hr-marketing-finance-international-business-travel-and-tourism-semester-abroad-programme-with-university-of-east-anglia-uea-norwich-uk",
+            href: "https://www.krmangalam.edu.in/programs/bba-semester-abroad-uea-uk",
           },
           {
             label:
               "BBA (Hons./ Hons. with Research) (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK",
-            href: "https://www.krmangalam.edu.in/programs/bba-hons-hons-with-research-hr-marketing-finance-international-business-travel-and-tourism-semester-abroad-programme-with-university-of-east-anglia-uea-norwich-uk",
+            href: "https://www.krmangalam.edu.in/programs/bba-hons-semester-abroad-uea-uk",     
           },
           {
             label: "B.Com. (Hons.)",
