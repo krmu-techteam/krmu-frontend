@@ -192,7 +192,7 @@ export const sitemapData = [
           },
           {
             label: "KRMU Placement Portal",
-            href: "https://www.krmangalam.edu.in/placement-highlights",
+            href: "https://krm.mylineupx.com/jobs",
           },
         ],
       },
