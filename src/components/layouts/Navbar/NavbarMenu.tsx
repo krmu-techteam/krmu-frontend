@@ -165,10 +165,6 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
                             </div>
                             <div className="absolute left-0 right-0 w-full top-full bg-[#04101A] pt-[52px] pb-10 md:pt-[60px] md:pb-12 overflow-hidden mt-[-12px] krmsubmenu-container z-50">
-                                {/* Decorative background circles */}
-                                <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
-                                <div className="absolute bottom-[-10%] left-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
-
                                 <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
                                     {/* Left: Program Level */}
                                     <div className="col-span-12 lg:col-span-7">
@@ -398,10 +394,6 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
                             </div>
                             <div className="absolute left-0 right-0 w-full top-full bg-[#04101A] pt-[52px] pb-10 md:pt-[60px] md:pb-12 overflow-hidden mt-[-12px] krmsubmenu-container z-50">
-                                {/* Decorative background effects */}
-                                <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
-                                <div className="absolute bottom-[-10%] left-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
-
                                 <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
                                     {/* Left Section: Link Columns */}
                                     <div className="col-span-12 lg:col-span-7">
@@ -608,9 +600,6 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
                             </div>
                             <div className="absolute left-0 right-0 w-full top-full bg-[#04101A] pt-[60px] pb-14 md:pt-[70px] md:pb-16 overflow-hidden mt-[-12px] krmsubmenu-container z-50">
-                                <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
-                                <div className="absolute bottom-[-10%] left-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
-
                                 <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 flex flex-col w-full">
                                     <div className="grid grid-cols-12 w-full gap-8">
                                         {/* Left Column: Links */}
@@ -761,9 +750,6 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
                             </div>
                             <div className="absolute left-0 right-0 w-full top-full bg-[#04101A] pt-[52px] pb-10 md:pt-[60px] md:pb-12 overflow-hidden mt-[-12px] krmsubmenu-container z-50">
-                                <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
-                                <div className="absolute bottom-[-10%] left-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
-
                                 <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
                                     {/* Left Column: Links */}
                                     <div className="col-span-12 lg:col-span-3">
@@ -916,9 +902,6 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
                             </div>
                             <div className="absolute left-0 right-0 w-full top-full bg-[#04101A] pt-[52px] pb-10 md:pt-[60px] md:pb-12 overflow-hidden mt-[-12px] krmsubmenu-container z-50">
-                                <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
-                                <div className="absolute bottom-[-10%] left-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
-
                                 <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-8 lg:gap-12">
                                     {/* Left Column: Link Lists */}
                                     <div className="col-span-6 flex flex-col gap-6">
@@ -1045,9 +1028,6 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
                             </div>
                             <div className="absolute left-0 right-0 w-full top-full bg-[#04101A] pt-[52px] pb-10 md:pt-[60px] md:pb-12 overflow-hidden mt-[-12px] krmsubmenu-container z-50">
-                                <div className="absolute top-[-10%] right-[10%] w-[500px] h-[500px] bg-[#cb000d]/5 rounded-full blur-[120px] pointer-events-none" />
-                                <div className="absolute bottom-[-10%] left-[10%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
-
                                 <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-8 lg:gap-12">
                                     {/* Left Column: Single column stack (Image -> Text -> Buttons -> Stats) */}
                                     <div className="col-span-4 flex flex-col gap-4">
