@@ -46,21 +46,21 @@ export const solsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/inderpreet-kaur-saggu.png",
   },
-  {
-    id: 10206,
-    slug: "dr-shobhna-jeet",
-    title: {
-      rendered: "Prof (Dr.) Shobhna Jeet",
-    },
-    featured_media: 10187,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Professor, Chairperson COE SDG",
-      schools: [],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Shobhna-Jeet.png",
-  },
+  // {
+  //   id: 10206,
+  //   slug: "dr-shobhna-jeet",
+  //   title: {
+  //     rendered: "Prof (Dr.) Shobhna Jeet",
+  //   },
+  //   featured_media: 10187,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Professor, Chairperson COE SDG",
+  //     schools: [],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Shobhna-Jeet.png",
+  // },
   {
     id: 115862,
     slug: "ms-kritika-kakkar",
