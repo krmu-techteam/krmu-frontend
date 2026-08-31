@@ -87,15 +87,15 @@ const NewHeroSection = ({ formId, dataContent, heroSection }: Props) => {
               />
             )}
 
-            {/* {secondaryButton && (
+            {hero.button[1] && (
               <CommonLeadPopup
-                buttonText={secondaryButton.title}
+                buttonText={hero.button[1].title}
                 buttonClassName="border border-white hover:border-white hover:bg-white/10 text-white font-medium text-[13px] sm:text-[14px] px-6 sm:px-8 py-2.5 sm:py-3 rounded-[2px] transition-all duration-300 text-center whitespace-nowrap"
-                redirectUrl={secondaryButton.link || "#"}
+                redirectUrl={hero.button[1].link || "#"}
                 form_name="Programme Brochure"
                 shadowGradient={false}
               />
-            )} */}
+            )}
           </div>
 
           {/* Divider */}

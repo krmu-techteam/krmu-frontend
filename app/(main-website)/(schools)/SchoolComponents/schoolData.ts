@@ -296,29 +296,35 @@ export const sbasLogos = [
 export const semceLogos = [
   {
     id: 1,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dainik_Bhaskar_ecb6231598.png",
-    alternativeText: "Dainik Bhaskar",
+    url: "https://www.krmangalam.edu.in/images/logos/abp.svg",
+    alternativeText: "ABP News",
   },
   {
     id: 2,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/The_Indian_Expres_1599805ad8.png",
-    alternativeText: "The Indian Express",
+    url: "https://www.krmangalam.edu.in/images/logos/dainik-bhaskar.svg",
+    alternativeText: "Dainik Bhaskar",
   },
   {
     id: 3,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Zeenews_5977faf4e2.png",
-    alternativeText: "Zee News",
+    url: "https://www.krmangalam.edu.in/images/logos/network18.svg",
+    alternativeText: "Network 18",
   },
   {
     id: 4,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Dainik_Jagran_logo_7002fb0179.png",
-    alternativeText: "Dainik Jagran",
+    url: "https://www.krmangalam.edu.in/images/logos/outlook.svg",
+    alternativeText: "Outlook",
   },
   {
     id: 5,
-    url: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/the_times_of_india_c9d7645b1a.png",
-    alternativeText: "TOI",
+    url: "https://www.krmangalam.edu.in/images/logos/theindianexpress.svg",
+    alternativeText: "The Indian Express",
   },
+  {
+    id: 6,
+    url: "https://www.krmangalam.edu.in/images/logos/zeenews.svg",
+    alternativeText: "Zee News",
+  },
+
 ];
 
 export const sohmctLogos = [
