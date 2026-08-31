@@ -55,7 +55,7 @@ export const smasFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 8828,
     acf: {
-      "staff-qualification": "Ph.D",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Associate Professor",
       schools: [1098],
     },
@@ -267,7 +267,7 @@ export const smasFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 8961,
     acf: {
-      "staff-qualification": "Ph.D (pursuing)",
+      "staff-qualification": "Ph.D. (pursuing)",
       staff_designation: "Assistant  Professor",
       schools: [1098],
     },
@@ -297,7 +297,7 @@ export const smasFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 8943,
     acf: {
-      "staff-qualification": "M.Pharm, Ph.D. (Pharmaceutical sciences)",
+      "staff-qualification": "Ph.D.",
       staff_designation: " Assistant Professor",
       schools: [1098],
     },
@@ -312,7 +312,7 @@ export const smasFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 8860,
     acf: {
-      "staff-qualification": "Ph.D",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Associate Professor",
       schools: [1098],
     },

@@ -80,7 +80,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
     id: 106818,
     slug: "dr-saba-rashid",
     title: {
-      rendered: "Dr Saba Rashid",
+      rendered: "Dr. Saba Rashid",
     },
     featured_media: 106820,
     acf: {

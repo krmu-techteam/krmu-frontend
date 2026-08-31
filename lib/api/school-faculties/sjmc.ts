@@ -151,21 +151,21 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://www.krmangalam.edu.in/images/faculty/dr-neha-arora.jpg",
   },
-  {
-    id: 116235,
-    slug: "ms-navya-singh",
-    title: {
-      rendered: "Ms. Navya Singh",
-    },
-    featured_media: 116233,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant  Professor",
-      schools: [1009],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/08/Ms-navya-Singh.jpg",
-  },
+  // {
+  //   id: 116235,
+  //   slug: "ms-navya-singh",
+  //   title: {
+  //     rendered: "Ms. Navya Singh",
+  //   },
+  //   featured_media: 116233,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant  Professor",
+  //     schools: [1009],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/08/Ms-navya-Singh.jpg",
+  // },
 
   // {
   //   id: 66802,
