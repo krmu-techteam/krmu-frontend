@@ -448,7 +448,7 @@ export const sitemapData = [
           {
             label:
               "BCA (AI & Data Science) with Academic Support of IBM & Powered by Microsoft Certifications",
-            href: "https://www.krmangalam.edu.in/programs/bsc-hons-data-science",
+            href: "https://www.krmangalam.edu.in/programs/bca-ai-data-science",
           },
           {
             label:
