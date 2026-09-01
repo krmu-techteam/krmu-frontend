@@ -5,11 +5,9 @@ import { SchoolHeroBanner, StrapiMedia } from "@/lib/types/common";
 import { Button } from "@/lib/types/home";
 import Link from "next/link";
 import Image from "next/image";
-import {
-    AdmissionOpenBanner,
-    YoutubeVideoSection,
-} from "@/presentation/school/components";
-import { Download } from "lucide-react";
+import { YoutubeVideoSection } from "@/presentation/school/components";
+import { Download, ArrowRightCircle, ArrowUpRight } from "lucide-react";
+import { splitTitleByFor } from "@/features/school";
 import SchoolHeroSlider from "@/app/(main-website)/(school-programmes)/school-programmes-component/SchoolHeroSlider";
 
 type Props = {
@@ -230,13 +228,17 @@ const HeroSection = ({
 
     const mobileBg = mobileBgImg || desktopBg;
 
+    const { boldText, normalText } = splitTitleByFor(
+        admTitle || "Admissions Open for 2026-27"
+    );
+
     return (
         <>
             <section
                 className={`relative overflow-hidden ${
                     fullWidth
                         ? "lg:py-[20%] lg:pb-0 pt-[300px] pb-5"
-                        : `${notCutoutBg ? "pt-[45px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : `pt-[100px] sm:pt-[140px] lg:pt-[280px] xl:pt-[180px] 2xl:pt-[280px] ${slug === "school-of-legal-studies" ? "2xl:pt-[400px]" : ""} `} schoolBanner`
+                        : `${notCutoutBg ? "pt-[110px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : `pt-[110px] sm:pt-[140px] lg:pt-[280px] xl:pt-[180px] 2xl:pt-[280px] ${slug === "school-of-legal-studies" ? "2xl:pt-[400px]" : ""} `} schoolBanner`
                 } bg-cover bg-no-repeat bg-center`}
                 style={
                     {
@@ -255,7 +257,7 @@ const HeroSection = ({
                             width={640}
                             height={640}
                             alt=""
-                            className={`${notCutoutBg ? "h-full" : "h-[400px]"} w-full object-cover`}
+                            className={`${notCutoutBg ? "h-full" : "h-[400px]"} w-full object-cover object-top`}
                         />
                     </div>
                 )}
@@ -273,7 +275,14 @@ const HeroSection = ({
                         />
                     )}
                 </div>
-                <div className="h-full w-1/2 opacity-40 bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0.6)61.25%,rgba(102,102,102,0)100.31%)] absolute inset-0 z-10 pointer-events-none"></div>
+                <div
+                    className="hidden xl:block absolute left-0 top-0 w-full xl:w-[703px] h-full z-10 pointer-events-none"
+                    style={{
+                        background:
+                            "linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.75) 45%, rgba(0, 0, 0, 0.35) 75%, rgba(0, 0, 0, 0) 100%)",
+                        opacity: 1,
+                    }}
+                ></div>
                 <div className="xl:px-8 2xl:px-16">
                     {fullWidth ? (
                         <div className="max-w-[1664px] mx-auto w-full px-5 relative z-20 sm:px-4">
@@ -375,13 +384,13 @@ const HeroSection = ({
                                     )}
                                 </div>
                                 <div
-                                    className={`bg-[#061623] ${slug === "school-of-legal-studies" ? "2xl:-translate-y-[60px]" : ""} xl:bg-transparent p-5 xl:p-0 z-20 relative ${notCutoutBg ? "-mt-10" : `${slug === "school-of-physiotherapy-and-rehabilitation-sciences" ? "-mt-28 sm:mt-0" : ""}`}`}
+                                    className={`bg-[#061623] ${slug === "school-of-legal-studies" ? "2xl:-translate-y-[60px]" : ""} xl:bg-transparent p-5 xl:p-0 z-20 relative ${notCutoutBg ? "-mt-10" : ""}`}
                                 >
-                                    <p className="text-sm lg:text-lg 2xl:text-2xl font-normal sm:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
+                                    <p className="text-[14px] tracking-wider lg:text-lg 2xl:text-2xl font-normal mb-2 md:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
                                         {subheading}
                                     </p>
                                     <h1
-                                        className={`text-2xl md:text-4xl xl:text-6xl text-shadow-lg leading-[1.2] font-bold ${
+                                        className={`text-[24px] tracking-wide font-serif md:text-4xl xl:text-6xl leading-[1.2] font-bold ${
                                             slug ===
                                                 "school-of-emerging-media-and-creator-economy" ||
                                             slug ===
@@ -395,7 +404,7 @@ const HeroSection = ({
                                     >
                                         {title}
                                     </h1>
-                                    <div className="flex flex-col items-center justify-center gap-3.5 sm:gap-5 mt-5 sm:my-4 relative z-30">
+                                    <div className="flex flex-col items-center justify-center gap-3.5 sm:gap-5 mt-4 md:mt-5 sm:my-4 relative z-30">
                                         {heroBtns?.map((btn) => {
                                             const isExplore =
                                                 btn?.buttontext ===
@@ -441,7 +450,7 @@ const HeroSection = ({
                                                     key={btn.id}
                                                     href={linkUrl}
                                                     onClick={handleBtnClick}
-                                                    className="text-white underline font-bold text-xl cursor-pointer relative z-30"
+                                                    className="text-white underline font-medium text-xl cursor-pointer relative z-30"
                                                 >
                                                     {btn.buttontext}
                                                 </Link>
@@ -449,7 +458,7 @@ const HeroSection = ({
                                                 <Link
                                                     key={btn.id}
                                                     href={linkUrl}
-                                                    className={`text-white w-full md:text-xl sm:w-fit flex justify-center items-center max-w-[220px] sm:max-w-none p-2.5 sm:px-6 sm:py-3.5 rounded-lg gap-4 font-semibold bg-[#061623] border-2 border-[#0189ae] transition-all relative overflow-hidden group cursor-pointer z-30 ${btn.buttonclass || ""}`}
+                                                    className={`text-white w-full md:text-xl sm:w-fit flex justify-center items-center max-w-[220px] sm:max-w-none p-2.5 sm:px-6 sm:py-3.5 rounded-[8px] gap-4 font-medium bg-[#061623] border-2 border-[#0189ae] transition-all relative overflow-hidden group cursor-pointer z-30 ${btn.buttonclass || ""}`}
                                                     target={
                                                         isExternal
                                                             ? "_blank"
@@ -481,7 +490,7 @@ const HeroSection = ({
                             </div>
                             {videoUrl && (
                                 <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end px-5 pb-5 sm:pb-0 sm:px-0 bg-[#061623] xl:bg-transparent">
-                                    <div className="w-full max-w-[520px] 2xl:max-w-[680px] border-6 border-[#b7e2f3] rounded-3xl">
+                                    <div className="w-full max-w-[500px] 2xl:max-w-[620px] border-3 border-[#b7e2f3] rounded-[8px] overflow-hidden">
                                         <YoutubeVideoSection
                                             thumbnail={thumbnail}
                                             ytUrl={videoUrl}
@@ -493,7 +502,53 @@ const HeroSection = ({
                     )}
                 </div>
                 <div className="relative z-20 w-full xl:mt-20">
-                    <AdmissionOpenBanner title={admTitle} admBtn={admBtn} />
+                    <section className="w-full bg-[#061623] lg:bg-transparent relative z-20 py-6 lg:py-8 px-6 md:px-8 xl:px-16">
+                        <div className="max-w-[1440px] mx-auto px-3 sm:px-3 py-4 sm:py-3 flex flex-col md:flex-row items-center justify-between gap-6 bg-[linear-gradient(90deg,#8B3D22_11.06%,#003763_100%)] rounded-sm">
+                            {/* Heading */}
+                            <h3 className="text-center font-poppins md:text-left text-xl xl:text-[25px] text-white">
+                                <span className="font-semibold">
+                                    {boldText}
+                                </span>
+                                {normalText && (
+                                    <span className="font-normal">
+                                        {normalText}
+                                    </span>
+                                )}
+                            </h3>
+
+                            {/* Buttons */}
+                            <div className="flex flex-col sm:flex-row items-center gap-4">
+                                <Link
+                                    href="/programmes"
+                                    className="inline-flex font-poppins items-center justify-center border border-white/60 px-5 py-2.5 text-md font-medium text-white rounded-sm whitespace-nowrap hover:bg-white/10 transition-colors"
+                                >
+                                    <ArrowRightCircle
+                                        className="w-5 h-5 mr-2"
+                                        strokeWidth={1.5}
+                                    />
+                                    Explore Programmes
+                                </Link>
+
+                                {(admBtn?.buttonlink ||
+                                    admBtn?.buttonclass ||
+                                    admBtn?.buttontext) && (
+                                    <Link
+                                        href={admBtn?.buttonlink || "#"}
+                                        className={`inline-flex w-full sm:w-auto items-center justify-center border border-[#CB000D] bg-[#CB000D] hover:bg-[#CB000D] px-6 py-2.5 text-md font-medium font-poppins text-white rounded-sm whitespace-nowrap transition-all relative overflow-hidden group ${admBtn?.buttonclass || ""}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
+                                        {admBtn?.buttontext || "APPLY NOW"}
+                                        <ArrowUpRight
+                                            className="w-4 h-4 ml-2"
+                                            strokeWidth={2.5}
+                                        />
+                                    </Link>
+                                )}
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </section>
         </>

@@ -1,4 +1,3 @@
-export { default as AdmissionOpenBanner } from "./AdmissionOpenBanner";
 export { default as LogoMarquee } from "./LogoMarquee";
 export { default as StatCard } from "./StatCard";
 export { default as AlumniCarousel } from "./AlumniLogoCarousel";
@@ -7,15 +6,17 @@ export { default as NewsletterDownloader } from "./NewsletterDownloader";
 export { default as MentorshipAchievementCard } from "./MentorshipAchievementCard";
 export { default as MentorshipProgrammeInfo } from "./MentorshipProgrammeInfo";
 export { default as MentorshipFeatures } from "./MentorshipFeatures";
-export { default as UniversityComparisonTable } from './UniversityComparisonTable';
-export { default as UniversityComparisonHeading } from './UniversityComparisonHeading';
+export { default as UniversityComparisonTable } from "./UniversityComparisonTable";
+export { default as UniversityComparisonHeading } from "./UniversityComparisonHeading";
 export { default as KnowledgePartnerLogos } from "./KnowledgePartnerLogos";
 export { default as ExcellenceCard } from "./ExcellenceCard";
 export { default as TestimonialsCard } from "./TestimonialsCard";
 export { default as TestimonialCard } from "./TestimonialCard";
 export { default as FacultyAdvisoryCards } from "./FacultyAdvisoryCards";
 export { default as AdvisoryCards } from "./AdvisoryCards";
-export { default as EventsAndExperiencesCards } from "./EventsAndExperiencesCards"; 
-export { CommenceJourneyStepCard, CommenceJourneyMobileStepCard } from "./CommenceJourneyStepCard";
+export { default as EventsAndExperiencesCards } from "./EventsAndExperiencesCards";
+export {
+    CommenceJourneyStepCard,
+    CommenceJourneyMobileStepCard,
+} from "./CommenceJourneyStepCard";
 export { default as YoutubeVideoSection } from "./YoutubeVideoSection";
-
