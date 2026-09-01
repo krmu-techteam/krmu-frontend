@@ -495,7 +495,7 @@ const HeroSection = ({
                             {/* Buttons */}
                             <div className="flex flex-col sm:flex-row items-center gap-4">
                                 <Link
-                                    href="/programmes"
+                                    href="#programmes"
                                     className="inline-flex font-poppins items-center justify-center border border-white/60 px-5 py-2.5 text-md font-medium text-white rounded-sm whitespace-nowrap hover:bg-white/10 transition-colors"
                                 >
                                     <ArrowRightCircle

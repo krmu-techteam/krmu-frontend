@@ -337,20 +337,75 @@ const ProgrammesExplorer = ({
                     return;
                 }
                 if (query.length > 0) {
-                    // SEARCH MODE — all results, no slice
-                    if (degreeRefValue.current === "doctoral-programmes") {
-                        const res = await searchPhdProgrammes("", 1, limit);
-                        const allData = res.data || [];
-                        newData = allData.filter((item) =>
-                            normalize(item.heading).includes(normalize(query))
-                        );
+                    // SEARCH MODE — scoped to active school if selected/schoolOnly
+                    let sourceData: ProgrammeItem[] = [];
+
+                    if (
+                        schoolOnly ||
+                        (schoolRefValue.current &&
+                            schoolRefValue.current !== "all")
+                    ) {
+                        if (degreeRefValue.current === "doctoral-programmes") {
+                            const res =
+                                await getAllSchoolPhdProgrammeByCatPaginated(
+                                    schoolRefValue.current,
+                                    1,
+                                    limit
+                                );
+                            sourceData = res?.data || [];
+                        } else if (degreeRefValue.current === "all") {
+                            const [progRes, phdRes] = await Promise.all([
+                                getAllSchoolProgrammeByDegOrCatPaginated(
+                                    "all",
+                                    schoolRefValue.current,
+                                    1,
+                                    limit
+                                ),
+                                getAllSchoolPhdProgrammeByCatPaginated(
+                                    schoolRefValue.current,
+                                    1,
+                                    limit
+                                ),
+                            ]);
+                            sourceData = [
+                                ...(progRes?.data || []),
+                                ...(phdRes?.data || []),
+                            ];
+                        } else {
+                            const res =
+                                await getAllSchoolProgrammeByDegOrCatPaginated(
+                                    degreeRefValue.current,
+                                    schoolRefValue.current,
+                                    1,
+                                    limit
+                                );
+                            sourceData = res?.data || [];
+                        }
                     } else {
-                        const res = await searchSchoolProgrammes("", 1, limit);
-                        const allData = res.data || [];
-                        newData = allData.filter((item) =>
-                            normalize(item.title).includes(normalize(query))
-                        );
+                        if (degreeRefValue.current === "doctoral-programmes") {
+                            const res = await searchPhdProgrammes("", 1, limit);
+                            sourceData = res.data || [];
+                        } else {
+                            const res = await searchSchoolProgrammes(
+                                "",
+                                1,
+                                limit
+                            );
+                            sourceData = res.data || [];
+                        }
                     }
+
+                    const normQuery = normalize(query);
+                    newData = sourceData.filter((item) => {
+                        const titleStr =
+                            "title" in item
+                                ? (item.title || "") +
+                                  ((item as any).highlightitle
+                                      ? ` ${(item as any).highlightitle}`
+                                      : "")
+                                : item.heading || "";
+                        return normalize(titleStr).includes(normQuery);
+                    });
 
                     setShowLoadMore(false); // no button in search
                 } else {
@@ -493,7 +548,11 @@ const ProgrammesExplorer = ({
     });
 
     return (
-        <section className=" font-poppins">
+        <section
+            id="programmes"
+            ref={sectionRef}
+            className="font-poppins scroll-mt-28 sm:scroll-mt-32"
+        >
             <div className="mx-auto max-w-[1440px] w-full px-4 sm:px-6 md:px-8 xl:px-12">
                 {(title || content) && (
                     <div className="px-0 lg:px-0 xl:px-0">
@@ -524,11 +583,7 @@ const ProgrammesExplorer = ({
                         </div>
                     </div>
                 )}
-                <div
-                    id="programmes"
-                    ref={sectionRef}
-                    className="flex flex-col xl:flex-row gap-6 xl:gap-8 items-start"
-                >
+                <div className="flex flex-col xl:flex-row gap-6 xl:gap-8 items-start">
                     {/* Sidebar for Schools */}
                     {!schoolOnly && (
                         <div className="w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] md:w-[calc(100%+4rem)] xl:w-[300px] shrink-0 sticky top-[95px] sm:top-[100px] md:top-[115px] xl:top-[115px] z-40 self-start xl:max-h-[calc(100vh-135px)] xl:overflow-y-auto no-scrollbar -mx-4 sm:-mx-6 md:-mx-8 xl:mx-0 bg-[#061623] xl:bg-transparent py-1 xl:py-0">
