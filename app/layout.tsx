@@ -34,7 +34,7 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-MKXDVSJ9');
           `}
         </Script>
-        <Script
+        {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-VJJK572TGN"
           strategy="afterInteractive"
         />
@@ -45,7 +45,7 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-VJJK572TGN');
         `}
-        </Script>
+        </Script> */}
       </head>
       <body className={`${montserrat.className} antialiased`}>
         <noscript>
