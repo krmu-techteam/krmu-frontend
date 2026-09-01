@@ -91,109 +91,147 @@ export const SCHOOL_COE_MAP: Record<string, CoeItem[]> = {
         {
             subtitle: "Centre of Excellence in",
             title: "B.Tech CSE",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/soet-1.jpg",
             link: "/programs/b-tech-cse",
         },
         {
             subtitle: "Centre of Excellence in",
             title: "BCA",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/soet-2.jpg",
+            link: "/programs/bca-ai-data-science",
+        },
+    ],
+    "school-of-engineering-technology": [
+        {
+            subtitle: "Centre of Excellence in",
+            title: "B.Tech CSE",
+            imgUrl: "/images/school/knowledge-partner/soet-1.jpg",
+            link: "/programs/b-tech-cse",
+        },
+        {
+            subtitle: "Centre of Excellence in",
+            title: "BCA",
+            imgUrl: "/images/school/knowledge-partner/soet-2.jpg",
             link: "/programs/bca-ai-data-science",
         },
     ],
     "school-of-management-and-commerce": [
         {
             title: "BBA",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/somc-1.jpg",
             link: "/programs/bba",
         },
         {
             title: "BBA-MBA Integrated",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/somc-2.jpg",
+            link: "/programs/integrated-bba-mba",
+        },
+    ],
+    "school-of-management-commerce": [
+        {
+            title: "BBA",
+            imgUrl: "/images/school/knowledge-partner/somc-1.jpg",
+            link: "/programs/bba",
+        },
+        {
+            title: "BBA-MBA Integrated",
+            imgUrl: "/images/school/knowledge-partner/somc-2.jpg",
             link: "/programs/integrated-bba-mba",
         },
     ],
     "school-of-legal-studies": [
         {
             title: "BBA LLB (Hons.)",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/sols-1.jpg",
             link: "/programs/bba-llb-hons",
         },
         {
             title: "LLB",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/sols-2.jpg",
             link: "/programs/llb-hons",
         },
     ],
     "school-of-medical-and-allied-sciences": [
         {
             title: "B.Pharm",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/smas-1.jpg",
             link: "/programs/bpharma",
         },
         {
             title: "M.Pharm. (Master of Pharmacy) - Pharmaceutics",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/smas-2.jpg",
             link: "/programs/m-pharm-pharmaceutics",
         },
     ],
     "school-of-medical-allied-sciences": [
         {
             title: "B.Pharm",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/smas-1.jpg",
             link: "/programs/bpharma",
         },
         {
             title: "M.Pharm. (Master of Pharmacy) - Pharmaceutics",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/smas-2.jpg",
             link: "/programs/m-pharm-pharmaceutics",
+        },
+    ],
+    "school-of-physiotherapy-and-rehabilitation-sciences": [
+        {
+            title: "BPT",
+            imgUrl: "/images/school/knowledge-partner/sprs-1.jpg",
+            link: "/programs/bpt",
+        },
+        {
+            title: "MPT",
+            imgUrl: "/images/school/knowledge-partner/sprs-2.jpg",
+            link: "/programs/mpt",
         },
     ],
     "school-of-liberal-arts": [
         {
             title: "BA Economics (Hons.)",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/soad-1.jpg",
             link: "/programs/ba-hons-economics-research",
         },
         {
             title: "B.A. (Hons.) Psychology",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/soad-2.jpg",
             link: "/programs/b-a-hons-hons-with-research-psychology",
         },
     ],
     "school-of-architecture-design": [
         {
             title: "B.Arch",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/soad-1.jpg",
             link: "/programs/barch-architecture",
         },
         {
             title: "B.Des (Interior/Fashion Design)",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/soad-2.jpg",
             link: "/programs/bdes-interior-design",
         },
     ],
     "school-of-basic-and-applied-sciences": [
         {
             title: "B.Sc. Forensic Science",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/sbas-1.jpg",
             link: "/programs/bsc-forensic-science",
         },
         {
             title: "Integrated / Dual Degree B.Sc. - M.Sc. (Forensic Science)",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/sbas-2.jpg",
             link: "/programs/integrated-bsc-msc-forensic",
         },
     ],
     "school-of-education": [
         {
             title: "B.Ed.",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/soed-1.jpg",
             link: "/programs/bachelor-of-education-b-ed",
         },
         {
             title: "B.El.Ed.",
-            imgUrl: "/modules/school/knowledge-partner.jpg",
+            imgUrl: "/images/school/knowledge-partner/soed-2.jpg",
             link: "/programs/bachelor-elementary-education-b-el-ed",
         },
     ],

@@ -7,12 +7,12 @@ const HeroSection = () => {
     const [expanded, setExpanded] = useState(false);
 
     return (
-        <section className="bg-[#07141E] w-full pt-[170px] pb-12 text-white">
-            <div className="max-w-[1530px] mx-auto px-4 md:px-8 xl:px-16 w-full flex gap-10 flex-col lg:flex-row items-center lg:items-start justify-between">
+        <section className="bg-[#07141E] w-full pt-[112px] md:pt-[170px] pb-12 text-white">
+            <div className="max-w-[1530px] mx-auto px-0 md:px-8 xl:px-16 w-full flex gap-8 lg:gap-10 flex-col lg:flex-row items-center lg:items-start justify-between">
                 {/* LEFT CONTENT */}
-                <div className="w-full lg:w-[calc(100%-400px)] flex flex-col">
+                <div className="w-full px-4 md:px-0 lg:w-[calc(100%-400px)] flex flex-col order-2 lg:order-1">
                     <div className="mb-8">
-                        <h1 className="text-[64px] font-serif font-semibold leading-none mb-6">
+                        <h1 className="text-[38px] md:text-[64px] font-serif font-semibold leading-none mb-6">
                             Academic Affairs
                         </h1>
                         <div
@@ -24,11 +24,11 @@ const HeroSection = () => {
                         ></div>
                     </div>
 
-                    <h2 className="text-3xl md:text-[40px] font-serif font-semibold mb-6">
+                    <h2 className="text-[28px] md:text-[40px] font-serif font-semibold mb-4 md:mb-6">
                         Welcome from the Dean of Academics
                     </h2>
 
-                    <div className="flex flex-col gap-2 text-[16px] text-gray-300 font-poppins">
+                    <div className="flex flex-col text-justify md:text-left gap-2 text-[15px] md:text-[16px] text-white/90 font-poppins">
                         <p>
                             As the Dean of Academics, I am honoured to spearhead
                             a community that thrives on intellectual curiosity,
@@ -102,7 +102,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* RIGHT CARD */}
-                <div className="w-[319px] min-w-[319px] h-[440px] rounded-[8px] bg-[#031829] flex flex-col items-center justify-center p-6 shrink-0 mt-8 lg:mt-0">
+                <div className="w-full lg:w-[319px] min-w-[319px] h-[440px] rounded-[8px] bg-[#031829] flex flex-col items-center justify-center p-6 shrink-0 order-1 lg:order-2 mb-6 lg:mb-0">
                     <div className="w-[240px] h-[240px] rounded-full overflow-hidden mb-6">
                         <Image
                             src="/academics/tania.webp"
@@ -113,10 +113,10 @@ const HeroSection = () => {
                         />
                     </div>
                     <div className="text-center font-poppins">
-                        <h3 className="text-[16px]  font-semibold text-white mb-1">
+                        <h3 className="md:text-[16px] text-[18px] font-semibold text-white mb-1">
                             Prof. Varuna Tyagi
                         </h3>
-                        <p className="text-[15px] font-light text-white/80">
+                        <p className="md:text-[15px] text-[16px] font-light text-white/90">
                             Dean Academic Affairs
                         </p>
                     </div>

@@ -456,6 +456,7 @@ export default async function Page({ params }: Props) {
                     heading={school?.commence_journey?.heading}
                     imgUrl={school?.commence_journey?.commence_img?.url}
                     btn={school?.commence_journey?.commence_btn}
+                    admBtn={school?.admissionbtn}
                 />
             )}
         </>

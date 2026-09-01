@@ -13,6 +13,41 @@ type Props = {
     slug?: string;
 };
 
+const getCoeImage = (slug?: string, index?: number, fallbackUrl?: string) => {
+    if (
+        fallbackUrl &&
+        !fallbackUrl.includes("modules/school/knowledge-partner")
+    ) {
+        return fallbackUrl;
+    }
+    const idx = (index || 0) + 1;
+    if (!slug)
+        return fallbackUrl || "/images/school/knowledge-partner/soet-1.jpg";
+
+    if (slug.includes("engineering"))
+        return `/images/school/knowledge-partner/soet-${idx}.jpg`;
+    if (slug.includes("management") || slug.includes("commerce"))
+        return `/images/school/knowledge-partner/somc-${idx}.jpg`;
+    if (slug.includes("legal") || slug.includes("law"))
+        return `/images/school/knowledge-partner/sols-${idx}.jpg`;
+    if (slug.includes("medical") || slug.includes("pharmacy"))
+        return `/images/school/knowledge-partner/smas-${idx}.jpg`;
+    if (slug.includes("physiotherapy"))
+        return `/images/school/knowledge-partner/sprs-${idx}.jpg`;
+    if (
+        slug.includes("architecture") ||
+        slug.includes("design") ||
+        slug.includes("liberal")
+    )
+        return `/images/school/knowledge-partner/soad-${idx}.jpg`;
+    if (slug.includes("basic") || slug.includes("applied"))
+        return `/images/school/knowledge-partner/sbas-${idx}.jpg`;
+    if (slug.includes("education"))
+        return `/images/school/knowledge-partner/soed-${idx}.jpg`;
+
+    return fallbackUrl || `/images/school/knowledge-partner/soet-${idx}.jpg`;
+};
+
 const KnowledgePartnersSection = ({ title, logos, slug }: Props) => {
     const coeList = (slug && SCHOOL_COE_MAP[slug]) || [];
 
@@ -65,7 +100,7 @@ const KnowledgePartnersSection = ({ title, logos, slug }: Props) => {
                                 {/* Separate Image Container - Full width, auto height */}
                                 <div className="w-full relative overflow-hidden rounded-t-[4px]">
                                     <Image
-                                        src={coe.imgUrl}
+                                        src={getCoeImage(slug, idx, coe.imgUrl)}
                                         alt={coe.title}
                                         width={602}
                                         height={360}
