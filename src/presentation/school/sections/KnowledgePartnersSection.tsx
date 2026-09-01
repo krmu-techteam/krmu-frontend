@@ -34,11 +34,9 @@ const getCoeImage = (slug?: string, index?: number, fallbackUrl?: string) => {
         return `/images/school/knowledge-partner/smas-${idx}.jpg`;
     if (slug.includes("physiotherapy"))
         return `/images/school/knowledge-partner/sprs-${idx}.jpg`;
-    if (
-        slug.includes("architecture") ||
-        slug.includes("design") ||
-        slug.includes("liberal")
-    )
+    if (slug.includes("liberal"))
+        return `/images/school/knowledge-partner/sola-${idx}.jpg`;
+    if (slug.includes("architecture") || slug.includes("design"))
         return `/images/school/knowledge-partner/soad-${idx}.jpg`;
     if (slug.includes("basic") || slug.includes("applied"))
         return `/images/school/knowledge-partner/sbas-${idx}.jpg`;
@@ -62,21 +60,15 @@ const KnowledgePartnersSection = ({ title, logos, slug }: Props) => {
                 {/* Top: Logos Row */}
                 <div
                     className={`max-w-[1440px] mx-auto w-full lg:px-12 ${
-                        coeList && coeList.length > 0 ? "mb-8 lg:mb-12" : "mb-0"
+                        coeList && coeList.length > 1 ? "mb-8 lg:mb-12" : "mb-0"
                     }`}
                 >
                     <KnowledgePartnerLogos logos={logos} />
                 </div>
 
-                {/* Bottom Cards: Centered if single, 2-col Grid if multiple (only if exists) */}
-                {coeList && coeList.length > 0 && (
-                    <div
-                        className={
-                            coeList.length === 1
-                                ? "flex justify-center max-w-[1440px] mx-auto w-full px-4 md:px-8 lg:px-12"
-                                : "grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 max-w-[1440px] mx-auto w-full px-4 md:px-8 lg:px-12"
-                        }
-                    >
+                {/* Bottom Cards: 2-col Grid if multiple cards exist */}
+                {coeList && coeList.length > 1 && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 max-w-[1440px] mx-auto w-full px-4 md:px-8 lg:px-12">
                         {coeList.map((coe, idx) => (
                             <Link
                                 key={idx}

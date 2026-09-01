@@ -181,21 +181,16 @@ export const SCHOOL_COE_MAP: Record<string, CoeItem[]> = {
             imgUrl: "/images/school/knowledge-partner/sprs-1.jpg",
             link: "/programs/bpt",
         },
-        {
-            title: "MPT",
-            imgUrl: "/images/school/knowledge-partner/sprs-2.jpg",
-            link: "/programs/mpt",
-        },
     ],
     "school-of-liberal-arts": [
         {
             title: "BA Economics (Hons.)",
-            imgUrl: "/images/school/knowledge-partner/soad-1.jpg",
+            imgUrl: "/images/school/knowledge-partner/sola-1.jpg",
             link: "/programs/ba-hons-economics-research",
         },
         {
             title: "B.A. (Hons.) Psychology",
-            imgUrl: "/images/school/knowledge-partner/soad-2.jpg",
+            imgUrl: "/images/school/knowledge-partner/sola-2.jpg",
             link: "/programs/b-a-hons-hons-with-research-psychology",
         },
     ],
