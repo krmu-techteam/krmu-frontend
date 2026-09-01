@@ -41,7 +41,7 @@ const YRCHero = () => {
               Red Cross Society’s symbol, the Red Cross, on a white background,
               is a globally recognized emblem of protection and aid. It
               represents hope, care, and support in times of crisis, much like
-              the Roth
+              the Rath
             </strong>{" "}
             wheel of the Konark Sun Temple, which symbolizes the continuous
             cycle of life and the unending spirit of service.

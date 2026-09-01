@@ -487,7 +487,7 @@ const Hero = () => {
                 className="py-[13px] px-[29px] text-base text-white bg-[#0060aa] rounded-[4px] w-fit leading-[1] font-medium flex gap-2.5 items-center"
               >
                 <FileText color="#fff" />
-                Sexual Harrasment of Women at Work Place 2013
+                Sexual Harassment of Women at Work Place 2013
               </Link>
             </div>
           </div>
