@@ -9,15 +9,15 @@ const CDCHeroSection = () => {
               Career Development Center
             </h1>
             <p>
-              The Career Development Center at K.R. Mangalam University is
+              The Career Development Center (CDC) at K.R. Mangalam University is
               dedicated to empowering students with the skills, guidance, and
-              opportunities needed to excel in today’s competitive job market.
+              opportunities needed to excel in today's competitive job market.
               We bridge the gap between academia and industry by offering
-              holistic career support throughout a student’s academic journey.
-              The Career Development Center regularly arranges corporate visits,
-              industrial tours, or interactions with professionals to expose
-              students to the corporate culture. This helps them understand the
-              expectations and dynamics of a corporate environment.
+              holistic career support throughout a student's academic journey.
+              The CDC regularly arranges corporate visits, industrial tours, and
+              interactions with professionals to expose students to the
+              corporate culture. This helps them understand the expectations and
+              dynamics of a corporate environment.
             </p>
           </div>
           <div className="w-full xl:w-1/4"></div>

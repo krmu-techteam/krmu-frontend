@@ -5,7 +5,7 @@ const CDCTrainingPlacement = () => {
     <>
       <section className="px-4">
         <div className="max-w-[1664px] mx-auto w-full">
-          <p className="text-xl my-10 text-center md:text-left z-100 relative">
+          <p className="text-xl my-10 text-center md:text-left z-10 relative">
             <strong>
               The Career Development Center at KRMU offers training and
               placement assistance to students through various initiatives
@@ -25,7 +25,7 @@ const CDCTrainingPlacement = () => {
             {/* <CDCCard /> */}
           </div>
 
-          <div className="my-5 cdccard-ul z-100 relative">
+          <div className="my-5 cdccard-ul z-10 relative">
             <h3 className="text-3xl sm:text-4xl font-semibold text-center md:text-left">
               Career Training Modules & Methodology
             </h3>
@@ -33,7 +33,7 @@ const CDCTrainingPlacement = () => {
             <ul>
               <li>Quantitative Aptitude and Logical Reasoning</li>
               <li>
-                Soft Skills (Body Language, Professional Grooming & Etiquettes)
+                Soft Skills (Body Language, Professional Grooming & Etiquette)
               </li>
               <li>VARC (Verbal Ability and Reading Comprehension)</li>
             </ul>
@@ -44,17 +44,17 @@ const CDCTrainingPlacement = () => {
               />
               <CDCCard
                 heading="Training Overview"
-                content={`<ul> <li>Courses Embedded in Curriculum</li> <li>Boot Camps</li> <li>Profile Based Trainings</li> <li>Company Specific Trainings</li> </ul>`}
+                content={`<ul> <li>Courses Embedded in Curriculum</li> <li>Boot Camps</li> <li>Profile-Based Training</li> <li>Company-Specific Training</li> </ul>`}
               />
               <CDCCard
                 heading="Training Support"
-                content={`<ul> <li>Company Specific Curriculum</li> <li>Using Standardised curriculum training is provided to students to cover all aspects of placement</li> <li>Students engage in GD &amp; Mock Interviews as part of their preparation for placement</li> <li>Boot Camp</li> <li>CDC conducts intensive training before the placement starts</li> </ul>`}
+                content={`<ul> <li>Company-Specific Curriculum</li> <li>Standardised curriculum training is provided to students to cover all aspects of placement</li> <li>Students engage in GD & Mock Interviews as part of their preparation for placement</li> <li>Boot Camps</li> <li>CCDC conducts intensive training before the placement starts</li> </ul>`}
               />
               {/* 
               <CDCCard /> */}
             </div>
           </div>
-          <div className="my-10 cdccard-ul z-100 relative">
+          <div className="my-10 cdccard-ul z-10 relative">
             <h3 className="text-3xl sm:text-4xl font-semibold text-center md:text-left">
               Skill-Building Opportunities at a Glance
             </h3>

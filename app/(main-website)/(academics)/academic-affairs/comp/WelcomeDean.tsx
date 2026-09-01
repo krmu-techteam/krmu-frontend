@@ -24,21 +24,21 @@ const WelcomeDean = () => {
           <br />
 
           <p>
-            Our academic programs are designed to cultivate critical thinking,
+            Our academic programmes are designed to cultivate critical thinking,
             creativity, and a passion for lifelong learning. Here at K.R.
             Mangalam University we take pride in offering a diverse range of
             disciplines that empower students to explore their interests and
             pursue their academic and professional aspirations.
           </p>
           <br />
-               <p>
-              I encourage everyone to actively engage in the vibrant academic
-              community that surrounds us. Our faculty members are dedicated to
-              fostering an environment that encourages dialogue, collaboration,
-              and innovative thinking. I request you all to make the most of your
-              academic journey by seeking out opportunities for research,
-              internships, and participation in extracurricular activities.
-            </p>
+          <p>
+            I encourage everyone to actively engage in the vibrant academic
+            community that surrounds us. Our faculty members are dedicated to
+            fostering an environment that encourages dialogue, collaboration,
+            and innovative thinking. I request you all to make the most of your
+            academic journey by seeking out opportunities for research,
+            internships, and participation in extracurricular activities.
+          </p>
 
           {/* EXPANDABLE CONTENT */}
           <div
@@ -46,16 +46,14 @@ const WelcomeDean = () => {
               expanded ? "max-h-[2000px] mt-4" : "max-h-0"
             }`}
           >
-       
-
             <br />
 
             <p>
               This website serves as a valuable resource for accessing
               information about our academic programs, faculty profiles,
-              research initiatives, and upcoming events. I invite you to
-              explore the various sections and discover the wealth of
-              opportunities that await you.
+              research initiatives, and upcoming events. I invite you to explore
+              the various sections and discover the wealth of opportunities that
+              await you.
             </p>
 
             <br />
@@ -63,8 +61,8 @@ const WelcomeDean = () => {
             <p>
               The Dean of Academics’ office is here to support you in your
               academic endeavours. If you have any questions, concerns, or if
-              there’s anything we can assist you with, please feel free to
-              reach out. We are committed to providing a nurturing academic
+              there’s anything we can assist you with, please feel free to reach
+              out. We are committed to providing a nurturing academic
               environment that fosters growth, learning, and success.
             </p>
           </div>

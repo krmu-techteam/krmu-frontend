@@ -5,7 +5,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     id: 108495,
     slug: "prof-shravan-kumar",
     title: {
-      rendered: "Prof Shravan Kumar",
+      rendered: "Prof. Shravan Kumar",
     },
     featured_media: 108496,
     acf: {
@@ -24,7 +24,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 108496,
     acf: {
-      "staff-qualification": "Ph.D.in Psychology",
+      "staff-qualification": "Ph.D. in Psychology",
       staff_designation: "Assistant Professor",
       schools: [1152],
     },
@@ -39,7 +39,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 55388,
     acf: {
-      "staff-qualification": "Ph.D in Economics",
+      "staff-qualification": "Ph.D. in Economics",
       staff_designation: "Professor",
       schools: [1152],
     },
@@ -80,7 +80,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     id: 108929,
     slug: "ms-krishanu-singh",
     title: {
-      rendered: "Ms. Krishanu Singh",
+      rendered: "Dr. Krishanu Singh",
     },
     featured_media: 108930,
     acf: {
@@ -372,7 +372,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 10797,
     acf: {
-      "staff-qualification": " Ph.D in Chinese Language",
+      "staff-qualification": " Ph.D. in Chinese Language",
       staff_designation: "Assistant  Professor",
       schools: [1152],
     },
@@ -404,7 +404,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 10689,
     acf: {
-      "staff-qualification": "Ph.D (English)",
+      "staff-qualification": "Ph.D. (English)",
       staff_designation: "Assistant  Professor",
       schools: [1152, 1126],
     },
@@ -419,7 +419,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 10414,
     acf: {
-      "staff-qualification": "Ph.D (Pursuing)",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant  Professor",
       schools: [1152],
     },
@@ -434,7 +434,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 9889,
     acf: {
-      "staff-qualification": "Ph.D in English",
+      "staff-qualification": "Ph.D. in English",
       staff_designation: "Assistant  Professor",
       schools: [1152],
     },
@@ -449,7 +449,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 9176,
     acf: {
-      "staff-qualification": "Ph.D (Pursuing)",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant  Professor",
       schools: [1152],
     },
@@ -494,7 +494,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 1022,
     acf: {
-      "staff-qualification": "Ph.D  in English",
+      "staff-qualification": "Ph.D.  in English",
       staff_designation: "Assistant Professor",
       schools: [1009, 1152],
     },
@@ -509,7 +509,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 1022,
     acf: {
-      "staff-qualification": "Ph.D",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant Professor",
       schools: [1009, 1152],
     },
@@ -524,7 +524,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 1022,
     acf: {
-      "staff-qualification": "Ph.D",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant Professor",
       schools: [1009, 1152],
     },
@@ -539,7 +539,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 1022,
     acf: {
-      "staff-qualification": "Ph.D",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant Professor",
       schools: [1009, 1152],
     },

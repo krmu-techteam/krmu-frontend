@@ -18,7 +18,7 @@ const AcademicImgURL = [
   { imageUrl: "slide-8.webp" },
   //   { imageUrl: "slide-9.webp" },
   { imageUrl: "slide-10.webp" },
-  { imageUrl: "slide-11.webp" },
+  // { imageUrl: "slide-11.webp" },
 ];
 
 const AcademicSlide = () => {

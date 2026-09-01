@@ -343,7 +343,7 @@ export const pathwaySection: PathwaySectionData = {
 };
 
 export const semesterSection: SemesterSectionData = {
-  headingLine1: "220 credits.",
+  headingLine1: "176 credits.",
   headingLine2: "8 semesters.",
   headingLine3: "Every one counts.",
   semesters: [

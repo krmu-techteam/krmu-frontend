@@ -29,8 +29,9 @@ const AcademicPolicies = () => {
                 <strong>Code of Academic Integrity</strong>
               </p>
               <p>
-                Our commitment to integrity is paramount. We have clear
-                guidelines and consequences for academic misconduct.
+                Our commitment to academic integrity is unwavering, supported by
+                clear guidelines and appropriate consequences for academic
+                misconduct.
               </p>
             </div>
           </div>
@@ -48,8 +49,8 @@ const AcademicPolicies = () => {
                 <strong>Grading System</strong>
               </p>
               <p>
-                Our transparent grading system is detailed in our grading
-                policy, outlining the criteria for assessments and exams.
+                Our transparent grading system is guided by a clear grading
+                policy that outlines assessment and examination criteria.
               </p>
             </div>
           </div>
@@ -67,8 +68,9 @@ const AcademicPolicies = () => {
                 <strong>Attendance and Participation</strong>
               </p>
               <p>
-                Attendance and active participation are key. Our policy outlines
-                the requirements and their impact on grades.
+                Attendance and active participation are essential to academic
+                success. Our policy clearly outlines attendance requirements and
+                their impact on grades.
               </p>
             </div>
           </div>
@@ -83,12 +85,12 @@ const AcademicPolicies = () => {
             </div>
             <div className="text-white text-center">
               <p className="text-[13px] my-2.5">
-                <strong>Course Enrolment and Withdrawal</strong>
+                <strong>Programme Enrolment and Withdrawal</strong>
               </p>
               <p>
-                For information on enrolling in or withdrawing from courses,
-                including deadlines and procedures, refer to our enrolment
-                policy.
+                For information on programme enrolment and withdrawal, including
+                applicable deadlines and procedures, please refer to our
+                enrolment policy.
               </p>
             </div>
           </div>
@@ -107,8 +109,9 @@ const AcademicPolicies = () => {
                 <strong>Grievance Redressal</strong>
               </p>
               <p>
-                We offer a fair mechanism for academic grievances. Students can
-                find the process and contact information here.
+                We provide a fair and transparent mechanism for addressing
+                academic grievances. Students can access the process and
+                relevant contact information here.
               </p>
             </div>
           </div>
@@ -126,8 +129,8 @@ const AcademicPolicies = () => {
                 <strong>Academic Advising</strong>
               </p>
               <p>
-                Advisors are available to guide students in academic and career
-                planning.
+                Our advisors support students with personalised guidance for
+                academic and career planning.
               </p>
             </div>
           </div>

@@ -20,7 +20,7 @@ const NurturingSuccess = () => {
             <li className="flex items-center gap-3">
               <Check size={15} strokeWidth={5} />{" "}
               <span>
-                Tutoring, mentoring, and psychological counselling services
+                Tutoring, mentoring, and psychological counselling services.
               </span>
             </li>
           </ul>

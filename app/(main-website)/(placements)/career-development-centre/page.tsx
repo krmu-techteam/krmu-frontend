@@ -14,7 +14,7 @@ import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
  
-
+ 
 
 
 export async function generateMetadata(): Promise<Metadata> {
