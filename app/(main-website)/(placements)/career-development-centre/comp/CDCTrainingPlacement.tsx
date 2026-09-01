@@ -62,27 +62,27 @@ const CDCTrainingPlacement = () => {
             <ul>
               <li>Quantitative Aptitude and Logical Reasoning</li>
               <li>
-                Soft Skills (Body Language, Professional Grooming & Etiquettes)
+                Soft Skills (Body Language, Professional Grooming & Etiquette)
               </li>
               <li>VARC (Verbal Ability and Reading Comprehension)</li>
             </ul>
             <div className="grid grid-cols-1  md:grid=cols-2 lg:grid-cols-4 my-5 gap-10">
               <CDCCard
-                heading="Credit Based Courses"
-                content={`<p>The curriculum includes audit-based courses covering various subjects.</p>`}
+                heading="Credit-Based Courses"
+                content={`<p>The curriculum includes credit-based courses covering various subjects.</p>`}
               />
               <CDCCard
-                heading="Value Added Skills"
-                content={`<p>Students develop valuable skills through workshops and boot camps, including Full Stack Development workshops, AIML training, and IoT skills.</p>`}
+                heading="Value-Added Skills"
+                content={`<p>Students develop valuable skills through workshops and boot camps, including workshops in Full Stack Development, AI/ML, and IoT.</p>`}
               />
               <CDCCard
-                heading="Placement Supports"
+                heading="Placement Support"
                 content={`<p>The university provides comprehensive placement support to students.</p>`}
               />
 
               <CDCCard
                 heading="Skilling Partners"
-                content={`<p>Collaborations with top industry partners like AD Consultants Pvt Ltd., Mang ERP Ltd., JK Cements, ICT (Ultratech group) enhance students skill.</p>`}
+                content={`<p>Collaborations with top industry partners like AD Consultants Pvt. Ltd., Mang ERP Ltd., JK Cements, ICT (Ultratech Group) enhance students' skills.</p>`}
               />
             </div>
           </div>

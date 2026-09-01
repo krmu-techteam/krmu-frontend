@@ -22,10 +22,11 @@ const CDCAdvisoryBoard = async () => {
                       width={268}
                       height={268}
                       alt=""
+                      className="min-h-[268px] min-w-[268px] max-h-[268px] max-w-[268px] rounded-full object-cover"
                     />
                   </div>
                   <div>
-                    <h4 className="font-semibold">{item?.name}</h4>
+                    <h4 className="font-semibold mt-5">{item?.name}</h4>
                     <div
                       dangerouslySetInnerHTML={{
                         __html: item?.corp_adv_info,
