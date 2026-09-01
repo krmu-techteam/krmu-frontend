@@ -232,13 +232,20 @@ const HeroSection = ({
         admTitle || "Admissions Open for 2026-27"
     );
 
+    const activeSlug = cleanSlug.replace(/^\/+|\/+$/g, "");
+    const isReducedPtSchool =
+        activeSlug === "school-of-emerging-media-and-creator-economy" ||
+        activeSlug.includes(
+            "school-of-hotel-management-and-catering-technology"
+        );
+
     return (
         <>
             <section
                 className={`relative overflow-hidden ${
                     fullWidth
                         ? "lg:py-[20%] lg:pb-0 pt-[300px] pb-5"
-                        : `${notCutoutBg ? "pt-[110px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : `pt-[110px] sm:pt-[140px] lg:pt-[280px] xl:pt-[180px] 2xl:pt-[280px] ${slug === "school-of-legal-studies" ? "2xl:pt-[400px]" : ""} `} schoolBanner`
+                        : `${notCutoutBg ? "pt-[110px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : `pt-[110px] sm:pt-[140px] lg:pt-[280px] xl:pt-[310px] 2xl:pt-[320px] ${activeSlug.includes("legal-studies") ? "2xl:pt-[500px]" : ""} ${isReducedPtSchool ? "xl:!pt-[280px]" : ""} `} schoolBanner`
                 } bg-cover bg-no-repeat bg-center`}
                 style={
                     {
@@ -262,7 +269,7 @@ const HeroSection = ({
                     </div>
                 )}
                 <div
-                    className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-architecture-design" ? "lg:left-[51%]" : ""} ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[50px] left-[52%]" : ""} ${slug === "school-of-hotel-management-and-catering-technology" ? "bottom-[10px]" : ""}`}
+                    className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-architecture-design" ? "lg:left-[51%]" : ""} ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[50px] left-[52%]" : ""} ${slug === "school-of-hotel-management-and-catering-technology" ? "bottom-[50px]" : ""}`}
                 >
                     {videoUrl && middleimg && (
                         <Image
@@ -270,7 +277,7 @@ const HeroSection = ({
                             width={492}
                             height={700}
                             alt={title || ""}
-                            className={`object-contain ${slug === "school-of-architecture-design" ? "w-[450px]" : ""} z-10 relative`}
+                            className={`object-contain max-h-[85vh] 2xl:max-h-[700px] ${slug === "school-of-architecture-design" ? "w-[450px]" : ""} z-10 relative`}
                             priority
                         />
                     )}
@@ -369,8 +376,8 @@ const HeroSection = ({
                             </div>
                         </div>
                     ) : (
-                        <div className="max-w-[1850px] mx-auto w-full xl:flex items-center justify-between p-0 relative z-20">
-                            <div className="text-center text-white w-full xl:w-1/2 xl:pr-0">
+                        <div className="max-w-[1440px] mx-auto w-full xl:flex items-center justify-between p-0 relative z-20">
+                            <div className="text-center xl:text-left text-white w-full xl:w-1/2 xl:pr-0">
                                 <div className="xl:hidden flex justify-center">
                                     {middleimg && (
                                         <Image
@@ -386,101 +393,70 @@ const HeroSection = ({
                                 <div
                                     className={`bg-[#061623] ${slug === "school-of-legal-studies" ? "2xl:-translate-y-[60px]" : ""} xl:bg-transparent p-5 xl:p-0 z-20 relative ${notCutoutBg ? "-mt-10" : ""}`}
                                 >
-                                    <p className="text-[14px] tracking-wider lg:text-lg 2xl:text-2xl font-normal mb-2 md:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
+                                    <p className="text-[14px] tracking-wider lg:text-lg xl:text-lg 2xl:text-lg font-normal mb-2 md:mb-2.5 text-shadow-[2px_2px_5px_rgba(0,0,0,0.5)] uppercase">
                                         {subheading}
                                     </p>
                                     <h1
-                                        className={`text-[24px] tracking-wide font-serif md:text-4xl xl:text-6xl leading-[1.2] font-bold ${
+                                        className={`text-[24px] tracking-wide font-serif md:text-4xl xl:text-5xl 2xl:text-5xl leading-[1.4] xl:leading-[1.2] font-bold xl:max-w-[580px] xl:mx-0 ${
                                             slug ===
                                                 "school-of-emerging-media-and-creator-economy" ||
                                             slug ===
                                                 "school-of-hotel-management-and-catering-technology"
-                                                ? "max-w-[705px] mx-auto"
+                                                ? "max-w-[705px] xl:mx-0"
                                                 : ""
                                         }
-                    ${slug === "school-of-liberal-arts" ? "max-w-[580px] mx-auto" : ""}    
-                    ${slug === "school-of-architecture-design" ? "max-w-[750px] mx-auto" : ""}    
+                    ${slug === "school-of-liberal-arts" ? "max-w-[580px] xl:mx-0" : ""}    
+                    ${slug === "school-of-architecture-design" ? "max-w-[750px] xl:mx-0" : ""}    
                     `}
                                     >
                                         {title}
                                     </h1>
-                                    <div className="flex flex-col items-center justify-center gap-3.5 sm:gap-5 mt-4 md:mt-5 sm:my-4 relative z-30">
-                                        {heroBtns?.map((btn) => {
-                                            const isExplore =
-                                                btn?.buttontext ===
-                                                "Explore Programmes";
-                                            const linkUrl =
-                                                btn?.buttonlink ||
-                                                (isExplore
-                                                    ? "#programmes"
-                                                    : "#");
-                                            const isExternal =
-                                                linkUrl.startsWith("http://") ||
-                                                linkUrl.startsWith("https://");
+                                    <div className="flex flex-col items-center xl:items-start justify-center xl:justify-start gap-3.5 sm:gap-5 mt-4 md:mt-5 sm:my-4 relative z-30">
+                                        {heroBtns
+                                            ?.filter(
+                                                (btn) =>
+                                                    btn?.buttontext !==
+                                                    "Explore Programmes"
+                                            )
+                                            ?.map((btn) => {
+                                                const linkUrl =
+                                                    btn?.buttonlink || "#";
+                                                const isExternal =
+                                                    linkUrl.startsWith(
+                                                        "http://"
+                                                    ) ||
+                                                    linkUrl.startsWith(
+                                                        "https://"
+                                                    );
 
-                                            const handleBtnClick = (
-                                                e: React.MouseEvent<HTMLAnchorElement>
-                                            ) => {
-                                                if (
-                                                    isExplore ||
-                                                    linkUrl === "#programmes"
-                                                ) {
-                                                    const el =
-                                                        document.getElementById(
-                                                            "programmes"
-                                                        );
-                                                    if (el) {
-                                                        e.preventDefault();
-                                                        const yOffset = -115;
-                                                        const y =
-                                                            el.getBoundingClientRect()
-                                                                .top +
-                                                            window.pageYOffset +
-                                                            yOffset;
-                                                        window.scrollTo({
-                                                            top: Math.max(0, y),
-                                                            behavior: "smooth",
-                                                        });
-                                                    }
-                                                }
-                                            };
-
-                                            return isExplore ? (
-                                                <Link
-                                                    key={btn.id}
-                                                    href={linkUrl}
-                                                    onClick={handleBtnClick}
-                                                    className="text-white underline font-medium text-xl cursor-pointer relative z-30"
-                                                >
-                                                    {btn.buttontext}
-                                                </Link>
-                                            ) : (
-                                                <Link
-                                                    key={btn.id}
-                                                    href={linkUrl}
-                                                    className={`text-white w-full md:text-xl sm:w-fit flex justify-center items-center max-w-[220px] sm:max-w-none p-2.5 sm:px-6 sm:py-3.5 rounded-[8px] gap-4 font-medium bg-[#061623] border-2 border-[#0189ae] transition-all relative overflow-hidden group cursor-pointer z-30 ${btn.buttonclass || ""}`}
-                                                    target={
-                                                        isExternal
-                                                            ? "_blank"
-                                                            : undefined
-                                                    }
-                                                    rel={
-                                                        isExternal
-                                                            ? "noopener noreferrer"
-                                                            : undefined
-                                                    }
-                                                >
-                                                    <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
-                                                    <Download color="#fff" />{" "}
-                                                    {btn.buttontext}
-                                                </Link>
-                                            );
-                                        })}
+                                                return (
+                                                    <Link
+                                                        key={btn.id}
+                                                        href={linkUrl}
+                                                        className="flex items-center gap-2.5 text-white hover:text-[#0189ae] font-medium text-base sm:text-lg transition-colors relative z-30 group cursor-pointer"
+                                                        target={
+                                                            isExternal
+                                                                ? "_blank"
+                                                                : undefined
+                                                        }
+                                                        rel={
+                                                            isExternal
+                                                                ? "noopener noreferrer"
+                                                                : undefined
+                                                        }
+                                                    >
+                                                        <Download className="w-5 h-5 text-white group-hover:text-[#0189ae] transition-colors" />
+                                                        <span>
+                                                            {btn.buttontext}
+                                                        </span>
+                                                    </Link>
+                                                );
+                                            })}
                                     </div>
 
                                     {Array.isArray(alumniLogos) &&
                                         alumniLogos.length > 0 && (
-                                            <div className="hidden xl:block max-w-[450px] mx-auto my-2.5 sm:mt-10 p-3 rounded-[10px] alumniHeaderCarousel brightness-0 invert">
+                                            <div className="hidden xl:block max-w-[450px] xl:mx-0 my-2.5 sm:mt-10 p-3 rounded-[10px] alumniHeaderCarousel brightness-0 invert">
                                                 <SchoolHeroSlider
                                                     logos={alumniLogos}
                                                 />
@@ -490,7 +466,7 @@ const HeroSection = ({
                             </div>
                             {videoUrl && (
                                 <div className="w-full xl:w-1/2 xl:ml-20 xl:pl-20 flex justify-center xl:justify-end px-5 pb-5 sm:pb-0 sm:px-0 bg-[#061623] xl:bg-transparent">
-                                    <div className="w-full max-w-[500px] 2xl:max-w-[620px] border-3 border-[#b7e2f3] rounded-[8px] overflow-hidden">
+                                    <div className="w-full max-w-[500px] xl:max-w-[520px] border-3 border-[#b7e2f3] rounded-[8px] overflow-hidden">
                                         <YoutubeVideoSection
                                             thumbnail={thumbnail}
                                             ytUrl={videoUrl}
@@ -502,7 +478,7 @@ const HeroSection = ({
                     )}
                 </div>
                 <div className="relative z-20 w-full xl:mt-20">
-                    <section className="w-full bg-[#061623] lg:bg-transparent relative z-20 py-6 lg:py-8 px-6 md:px-8 xl:px-16">
+                    <section className="w-full bg-[#061623] lg:bg-transparent relative z-20 py-6 lg:py-8 px-6 md:px-8 xl:px-10">
                         <div className="max-w-[1440px] mx-auto px-3 sm:px-3 py-4 sm:py-3 flex flex-col md:flex-row items-center justify-between gap-6 bg-[linear-gradient(90deg,#8B3D22_11.06%,#003763_100%)] rounded-sm">
                             {/* Heading */}
                             <h3 className="text-center font-poppins md:text-left text-xl xl:text-[25px] text-white">
