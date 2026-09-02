@@ -416,9 +416,9 @@ const Footer = async () => {
                         <div className="columns-2 gap-6 md:gap-8 lg:gap-12 text-white text-left md:grid md:grid-cols-3 lg:grid-cols-5 space-y-6 md:space-y-0">
                             {/* Column 1: Programmes */}
                             <div className="inline-block w-full break-inside-avoid font-poppins">
-                                <h4 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]  font-semibold mb-1 text-white tracking-wide">
+                                <h3 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)]  font-semibold mb-1 text-white tracking-wide">
                                     Programmes
-                                </h4>
+                                </h3>
                                 <ul className="space-y-1">
                                     {footerLinks.programmes.map((link) => (
                                         <li key={link.name}>
@@ -452,10 +452,10 @@ const Footer = async () => {
 
                             {/* Column 2: Quick Links */}
                             <div className="inline-block w-full break-inside-avoid">
-                                <h4 className="text-[16px] font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] mb-1 text-white tracking-wide">
+                                <h3 className="text-[16px] font-semibold [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] mb-1 text-white tracking-wide">
                                     {footerComp3?.heading?.heading ||
                                         "Quick Links"}
-                                </h4>
+                                </h3>
                                 <ul className="space-y-1">
                                     {footerComp3?.footer_menu
                                         ? footerComp3.footer_menu.map(
@@ -536,9 +536,9 @@ const Footer = async () => {
 
                             {/* Column 3: About KRMU */}
                             <div className="inline-block w-full break-inside-avoid">
-                                <h4 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
+                                <h3 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
                                     About KRMU
-                                </h4>
+                                </h3>
                                 <ul className="space-y-1">
                                     {footerComp2?.footer_menu
                                         ? footerComp2.footer_menu.map(
@@ -590,9 +590,9 @@ const Footer = async () => {
 
                             {/* Column 4: Student Resources */}
                             <div className="inline-block w-full break-inside-avoid">
-                                <h4 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
+                                <h3 className="text-[16px] [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
                                     Student Resources
-                                </h4>
+                                </h3>
                                 <ul className="space-y-1">
                                     {footerLinks.studentResources.map(
                                         (link) => (
@@ -613,9 +613,9 @@ const Footer = async () => {
 
                             {/* Column 5: Legal & Compliance */}
                             <div className="inline-block w-full break-inside-avoid">
-                                <h4 className="text-[16px]  [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
+                                <h3 className="text-[16px]  [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] font-semibold mb-1 text-white tracking-wide">
                                     Legal & Compliance
-                                </h4>
+                                </h3>
                                 <ul className="space-y-1">
                                     {footerLinks.legal.map((link) => (
                                         <li key={link.name}>
@@ -662,9 +662,9 @@ const Footer = async () => {
                             {/* Helpline Section */}
                             <div className="flex flex-col h-full justify-between min-h-0 md:min-h-[90px] lg:min-h-[112px]">
                                 <div>
-                                    <h5 className="text-md font-semibold mb-1 text-white">
+                                    <h4 className="text-md font-semibold mb-1 text-white">
                                         General Helpline No
-                                    </h5>
+                                    </h4>
                                     <p className="text-white/70 text-[16px] font-light block mb-0 md:mb-4 hover:text-white transition-colors">
                                         01148884888, 8800697010 – 15,
                                         <br className="hidden md:block" />
@@ -675,9 +675,9 @@ const Footer = async () => {
 
                             {/* Email Section */}
                             <div>
-                                <h5 className="text-md font-semibold text-white">
+                                <h4 className="text-md font-semibold text-white">
                                     Email
-                                </h5>
+                                </h4>
                                 {emailItem ? (
                                     <div
                                         className="text-white/70 text-md font-light block mb-4 hover:text-white transition-colors"
@@ -723,9 +723,9 @@ const Footer = async () => {
 
                             {/* Address Section */}
                             <div>
-                                <h5 className="text-md font-semibold text-white">
+                                <h4 className="text-md font-semibold text-white">
                                     Get in Touch
-                                </h5>
+                                </h4>
                                 {addressItem ? (
                                     <div
                                         className="text-white/70 text-md font-light leading-relaxed"

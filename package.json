@@ -11,7 +11,8 @@
         "format": "prettier --write .",
         "format:check": "prettier --check .",
         "prepare": "husky",
-        "lint-staged": "lint-staged"
+        "lint-staged": "lint-staged",
+        "tunnel": "npx cloudflared tunnel --url http://127.0.0.1:3000"
     },
     "lint-staged": {
         "**/*.{js,jsx,ts,tsx}": [

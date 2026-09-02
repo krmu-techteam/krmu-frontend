@@ -759,9 +759,9 @@ const ProgrammesExplorer = ({
                                                 />
                                             </div>
                                             <div className="flex flex-col gap-1">
-                                                <h4 className="font-medium text-white text-base">
+                                                <h3 className="font-medium text-white text-base">
                                                     Class 12th with PCM
-                                                </h4>
+                                                </h3>
                                                 <p className="text-white/60 text-sm">
                                                     Physics, Chemistry,
                                                     Mathematics as core
@@ -778,9 +778,9 @@ const ProgrammesExplorer = ({
                                                 />
                                             </div>
                                             <div className="flex flex-col gap-1">
-                                                <h4 className="font-medium text-white text-base">
+                                                <h3 className="font-medium text-white text-base">
                                                     Minimum 60% in Class 12th
-                                                </h4>
+                                                </h3>
                                                 <p className="text-white/60 text-sm">
                                                     Or equivalent CGPA from a
                                                     recognized board.

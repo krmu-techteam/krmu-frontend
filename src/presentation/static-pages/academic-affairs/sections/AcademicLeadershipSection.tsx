@@ -5,9 +5,9 @@ const AcademicLeadershipSection = () => {
     return (
         <section className="relative py-8 md:py-12 xl:py-20">
             <div className="max-w-[1530px] mx-auto w-full text-white px-4 md:px-8 xl:px-16">
-                <h3 className="heading-primary mb-4 text-center">
+                <h2 className="heading-primary mb-4 text-center">
                     Team Behind Academic Affairs
-                </h3>
+                </h2>
                 <p className="text-center text-base md:text-lg text-white/90 font-poppins mb-6 md:mb-12">
                     Meet the Pillars of Our Educational Endeavours
                 </p>
