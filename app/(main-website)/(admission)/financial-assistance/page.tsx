@@ -78,7 +78,7 @@ const page = async () => {
       <FinanceAssistanceHero
         heading={financialAssistanceData?.heading}
         subheading={financialAssistanceData?.subheading}
-        content={financialAssistanceData?.content}
+        content={financialAssistanceData?.content} 
       />
       <BankNbfc
         bankLoansCards={financialAssistanceData?.bank_loan}

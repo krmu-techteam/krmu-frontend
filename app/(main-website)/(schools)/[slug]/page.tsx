@@ -367,7 +367,7 @@ export default async function Page({ params }: Props) {
     aboutName: school.schoolname,
     aboutUrl: "https://www.krmangalam.edu.in/",
   });
-  console.log("webPageSchema", webPageSchema);
+
   return (
     <>
       {schoolSchema && (

@@ -41,6 +41,17 @@ export const FAQ = () => {
   return (
     <>
       {/* Hero Section with Diagonal Lines */}
+        {/* {
+          "question": "Does K.R. Mangalam University have an entrance exam for admission?",
+          "answer": "Yes, the University conducts its own entrance exam - K.R. Mangalam Entrance Exam (KREE). "
+        },  {
+          "question": "How do I apply and what documents are needed?",
+          "answer": "Apply online and attach the scanned copies of your qualifying exam documents. Selection is based on the entrance exam KREE, faculty-led interview, and document verification. Start your application here."
+        },
+              {
+          "question": "How much is the application fee?",
+          "answer": "The application fee is Rs 1000."
+        }, */}
       <section className="bg-[url(/admission/faq-bg.webp)] bg-bottom lg:bg-cover bg-no-repeat px-4">
         <div className="max-w-[1664px] pt-[140px] pb-20 lg:py-[10%] mx-auto w-full text-white mx-15">
           <h1 className="text-[34px] md:text-4xl lg:text-8xl font-semibold my-5 lg:my-10 ">

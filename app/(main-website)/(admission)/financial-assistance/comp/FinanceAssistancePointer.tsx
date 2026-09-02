@@ -15,64 +15,70 @@ const FinanceAssistancePointer = () => {
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
                 <span>
-                  Loan coverage for course fees, hostel/transportation fees and
-                  other educational expenses.
+                 Comprehensive loan coverage for course fees, hostel and transportation costs, and other educational expenses
+
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Nominal Documentation and minimal TAT.</span>
+                <span>Minimal documentation with a fast turnaround time (TAT)</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Liberating parents from burden.</span>
+                <span>Eases the financial burden on parents</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Tax benefits.</span>
+                <span>Tax benefits under applicable education loan provisions</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Tie-ups with 8 leading Banks & NBFCs</span>
+                <span>Tie-ups with 8 leading banks and NBFCs for wider loan options</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Quick Eligibility</span>
+                <span>Quick and hassle-free eligibility check</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Competitive rate of interests</span>
+                <span>Competitive interest rates tailored to student needs</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Quick and transparent loan processing</span>
+                <span>Fast, transparent loan processing with no hidden charges</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Loan disbursement within 7 days</span>
+                <span>Loan disbursement within 7 days of approval</span>
               </li>
               <li className="flex items-center gap-2.5">
+                <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
+                  <Check color="#ffffff" strokeWidth={3} size={25} />
+                </span>
+                <span>Zero joining fees</span>
+              </li>
+              {/* <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
                 <span>No joining fees</span>
-              </li>
+              </li> */}
             </ul>
             <h3 className="text-3xl sm:text-4xl font-bold my-8">
               Application process
@@ -83,20 +89,20 @@ const FinanceAssistancePointer = () => {
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
                 <span>
-                  Click on Apply now to initiate the loan application process
+                  Click "Apply Now" to begin your loan application
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Complete the application form and check eligibility</span>
+                <span>Fill out the application form and check your eligibility</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Provide necessary documentation</span>
+                <span>Submit the required documents to complete verification</span>
               </li>
             </ul>
           </div>
@@ -109,13 +115,13 @@ const FinanceAssistancePointer = () => {
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Indian nationals</span>
+                <span>Applicant must be an Indian national</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Submit an application at KRMU</span>
+                <span>Student must be enrolled or seeking admission at KRMU</span>
               </li>
             </ul>
             <h3 className="text-3xl sm:text-4xl font-bold my-8">
@@ -126,25 +132,25 @@ const FinanceAssistancePointer = () => {
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Offer Letter</span>
+                <span>KRMU admission/offer letter </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Payment slip for registration</span>
+                <span>Registration fee payment slip</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Students documentation</span>
+                <span>Student's KYC documents (ID proof, address proof, etc.)</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <span className="w-8 h-8 bg-[#051630] flex items-center justify-center rounded-full">
                   <Check color="#ffffff" strokeWidth={3} size={25} />
                 </span>
-                <span>Parent/ guarantor documentation</span>
+                <span>Parent/guarantor KYC documents </span>
               </li>
             </ul>
           </div>

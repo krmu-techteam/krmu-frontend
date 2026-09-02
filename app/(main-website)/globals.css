@@ -16,7 +16,7 @@
 
 /* Custom utility class */
 @layer utilities {
-  .kh-footer{
+  .kh-footer {
     display: none !important;
   }
   .gradient-box {
@@ -783,7 +783,8 @@
     font-weight: 600;
   }
 
-  .libcontent h4, .libcontent h1{
+  .libcontent h4,
+  .libcontent h1 {
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -1367,9 +1368,7 @@
     background-color: white;
   }
 
-  .modern-fee-table table thead tr th,
-  .modern-fee-table table tr:first-child td {
-    background-color: #065084 !important;
+  .modern-fee-table table thead tr th {
     color: white !important;
     font-weight: 500;
     padding: 12px 15px !important;
@@ -1377,6 +1376,32 @@
     font-size: 16px;
     border: 1px solid #065084 !important;
     white-space: normal;
+  }
+  .modern-fee-table table tr:first-child td {
+    color: white;
+    font-weight: 500;
+    padding: 12px 15px !important;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid #065084;
+    white-space: normal;
+  }
+  .modern-fee-table table tr:first-child td {
+    background-color: #065084;
+  }
+  .modern-fee-table .other_table tbody tr:first-child td {
+    background: #fff !important;
+    color: #424242;
+    vertical-align: top;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .modern-fee-table .other_table tbody tr:first-child td:nth-child(2) {
+    text-align: right;
+    color: #065084;
+    white-space: nowrap;
+    font-weight: 600;
   }
 
   .modern-fee-table table tbody tr td {
