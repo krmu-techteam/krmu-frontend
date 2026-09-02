@@ -47,9 +47,9 @@ export function VisitSection() {
                                     <CalendarCheck className="text-[22px] xl:text-[26px]" />
                                 </div>
                                 <div>
-                                    <h4 className="text-white/80 group-hover:text-white font-medium text-[14px] xl:text-[17px] leading-relaxed xl:leading-tight transition-colors">
+                                    <h3 className="text-white/80 group-hover:text-white font-medium text-[14px] xl:text-[17px] leading-relaxed xl:leading-tight transition-colors">
                                         Schedule your visit to KRMU Campus
-                                    </h4>
+                                    </h3>
                                 </div>
                             </Link>
 

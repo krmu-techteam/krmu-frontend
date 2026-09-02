@@ -11,6 +11,9 @@ import { STRAPI_URL } from "@/app/constant";
 import { getSchoolSEO } from "@/lib/api/website-seo";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 
+import { getProgrammesBySchoolCategory } from "@/lib/api/school-programmes";
+import { resolveSchoolSchemaConfig } from "@/features/school/schemas/schoolSchemaGenerator";
+
 import {
     sbasLogos,
     semceLogos,
@@ -36,6 +39,7 @@ import {
     solsHerosLogos,
     somcHerosLogos,
     sprsHerosLogos,
+    SchoolSchemaScripts,
 } from "@/features/school";
 
 import {
@@ -186,15 +190,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     } else {
         const seoData = await getSchoolSEO(slug);
         const seo = seoData[0]?.school_seo;
+        const fallbackConfig = resolveSchoolSchemaConfig(slug);
+
+        const title =
+            seo?.metaTitle ||
+            fallbackConfig.metaTitle ||
+            `${fallbackConfig.schoolName} | K.R. Mangalam University`;
+        const description = seo?.metaDescription || fallbackConfig.description;
+        const canonical =
+            seo?.canonical ||
+            `https://www.krmangalam.edu.in/${fallbackConfig.urlSlug}`;
+
         const shareImageUrl = seo?.shareImage?.url
             ? `${STRAPI_URL}${seo?.shareImage?.url}`
             : undefined;
+
         return {
-            title: seo?.metaTitle || "K.R. Mangalam University",
-            description: seo?.metaDescription || "",
+            title: title,
+            description: description,
             keywords: seo?.metaKeyword || "",
             alternates: {
-                canonical: seo?.canonical || "",
+                canonical: canonical,
             },
             robots: {
                 index: true,
@@ -203,9 +219,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
             // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
             openGraph: {
-                title: seo?.metaTitle || "K.R. Mangalam University",
-                description: seo?.metaDescription || "",
-                url: seo?.canonical || "",
+                title: title,
+                description: description,
+                url: canonical,
                 siteName: "K.R. Mangalam University",
                 images: shareImageUrl
                     ? [
@@ -213,7 +229,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                               url: shareImageUrl,
                               width: 1200,
                               height: 630,
-                              alt: seo?.metaTitle || "K.R. Mangalam University",
+                              alt: title,
                           },
                       ]
                     : [],
@@ -223,8 +239,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             // ✅ Twitter Card
             twitter: {
                 card: "summary_large_image",
-                title: seo?.metaTitle || "K.R. Mangalam University",
-                description: seo?.metaDescription || "",
+                title: title,
+                description: description,
                 images: shareImageUrl ? [shareImageUrl] : [],
             },
         };
@@ -271,6 +287,13 @@ export default async function Page({ params }: Props) {
         ? await getEventsAndExperiencesBySchoolCat(schoolCat)
         : [];
 
+    const dynamicProgrammes = schoolCat
+        ? await getProgrammesBySchoolCategory(
+              schoolCat,
+              school?.school_category?.slug
+          )
+        : [];
+
     const schoolsLogosData =
         schoolsImageMap[slug] ||
         schoolsImageMap[school?.urlslug] ||
@@ -282,6 +305,11 @@ export default async function Page({ params }: Props) {
 
     return (
         <>
+            <SchoolSchemaScripts
+                slug={slug}
+                school={school}
+                dynamicProgrammes={dynamicProgrammes}
+            />
             <HeroSection
                 herobanner={school?.schoolherobanner}
                 title={school.schoolname}

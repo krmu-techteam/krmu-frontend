@@ -191,9 +191,9 @@ export function TestimonialsSection({
 
                                     {/* Author Details */}
                                     <div className="mt-2 relative z-10 text-center md:text-left">
-                                        <h4 className="text-brand-gold font-poppins font-bold text-base md:text-lg lg:text-xl leading-tight">
+                                        <h3 className="text-brand-gold font-poppins font-bold text-base md:text-lg lg:text-xl leading-tight">
                                             {t.name}
-                                        </h4>
+                                        </h3>
                                         <p className="text-white/70 font-poppins text-xs md:text-sm font-light mt-1 mb-4">
                                             {t.role}
                                         </p>

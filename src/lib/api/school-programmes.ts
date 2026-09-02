@@ -1,30 +1,107 @@
-import { FETCH_STRAPI_URL } from "@/app/constant";
+import { SchoolProgrammeItem } from "@/features/school/schemas/schoolSchemaData";
 import {
-  SchoolPhDProgrammeResponse,
-  SCHOOLPROGRAMMECARDINFORESPONSE,
-  SchoolProgrammeResponse,
+    SchoolPhDProgrammeResponse,
+    SCHOOLPROGRAMMECARDINFORESPONSE,
+    SchoolProgrammeResponse,
 } from "../types/school-programme";
+import { FETCH_STRAPI_URL } from "@/app/constant";
+
+export async function getProgrammesBySchoolCategory(
+    schoolCatName: string,
+    schoolCatSlug?: string
+): Promise<SchoolProgrammeItem[]> {
+    if (!schoolCatName) return [];
+    const items: SchoolProgrammeItem[] = [];
+
+    try {
+        // 1. Fetch regular UG/PG programmes
+        const res1 = await fetch(
+            `${FETCH_STRAPI_URL}/api/school-programmes?sort[0]=order_num:asc&filters[school_category][name][$eq]=${encodeURIComponent(schoolCatName)}&fields[0]=title&fields[1]=programmeslug&pagination[page]=1&pagination[pageSize]=100`,
+            {
+                next: {
+                    revalidate: 43200,
+                },
+            }
+        );
+        if (res1.ok) {
+            const json1 = await res1.json();
+            if (Array.isArray(json1.data)) {
+                json1.data.forEach((p: any) => {
+                    const title = (p.title || p.attributes?.title || "").trim();
+                    const slug = (
+                        p.programmeslug ||
+                        p.attributes?.programmeslug ||
+                        ""
+                    ).trim();
+                    if (title && slug) {
+                        items.push({
+                            name: title,
+                            url: `https://www.krmangalam.edu.in/programs/${slug}`,
+                        });
+                    }
+                });
+            }
+        }
+
+        // 2. Fetch PhD programmes
+        const catSlug = (schoolCatSlug || schoolCatName).toLowerCase().trim();
+        const res2 = await fetch(
+            `${FETCH_STRAPI_URL}/api/phd-single-programmes?filters[school_category][slug][$eq]=${encodeURIComponent(catSlug)}&fields[0]=heading&fields[1]=phdslug&pagination[page]=1&pagination[pageSize]=100`,
+            {
+                next: {
+                    revalidate: 43200,
+                },
+            }
+        );
+        if (res2.ok) {
+            const json2 = await res2.json();
+            if (Array.isArray(json2.data)) {
+                json2.data.forEach((p: any) => {
+                    const heading = (
+                        p.heading ||
+                        p.attributes?.heading ||
+                        ""
+                    ).trim();
+                    const phdslug = (
+                        p.phdslug ||
+                        p.attributes?.phdslug ||
+                        ""
+                    ).trim();
+                    if (heading && phdslug) {
+                        items.push({
+                            name: heading,
+                            url: `https://www.krmangalam.edu.in/phd-programmes/${phdslug}`,
+                        });
+                    }
+                });
+            }
+        }
+    } catch (err) {
+        console.error("Error fetching programmes by school category:", err);
+    }
+    return items;
+}
 
 export async function getSchoolProgrammeData(
-  slug?: string,
+    slug?: string
 ): Promise<SchoolProgrammeResponse["data"]> {
-  let urlcode = "";
-  if (slug) {
-    urlcode = `filters[programmeslug][$eq]=${slug}&`;
-  }
-  const res = await fetch(
-    // `${FETCH_STRAPI_URL}/api/school-programmes?${urlcode}&populate[herosection][populate][herobtn][populate]=*&populate[herosection][populate][heroimg][populate]=*&populate[programmeeligibility][populate]=*&populate[programmescope][populate]=*&populate[programmehighlight][populate][programmehighlightcards][populate]=*&populate[specialisation][populate][specialisationcards][populate]=*&populate[admissionprocess][populate][admissionbtn][populate]=*&populate[admissionprocess][populate][admissionprocesscard][populate]=*&populate[admissionprocess][populate][desktopadmissionprocessimg][populate]=*&populate[curriculum][populate][currbtn][populate]=*&populate[curriculum][populate][years][populate][semester][populate][subjects][populate]=*&populate[curriculum][populate][years][populate][semester][populate][pdfbtns][populate]=*&populate[labsfacilities][populate]=*&populate[beyondclassroom][populate]=*&populate[career][populate]=*&populate[dreamcareer][populate]=*&populate[financialassistance][populate]=*&populate[toc][populate][tocfaq][populate]=*&populate[toc][populate][tocimg][populate]=*&populate[toc][populate][tocbtn][populate]=*&populate[ourlocation][populate]=*`,
-    // `${FETCH_STRAPI_URL}/api/school-programmes?${urlcode}populate[herosection][populate][herobtn][populate]=*&populate[herosection][populate][heroimg][populate]=*&populate[programmeeligibility][populate]=*&populate[programmescope][populate]=*&populate[programmehighlight][populate][programmehighlightcards][populate]=*&populate[specialisation][populate][specialisationcards][populate]=*&populate[admissionprocess][populate][admissionbtn][populate]=*&populate[admissionprocess][populate][admissionprocesscard][populate]=*&populate[admissionprocess][populate][desktopadmissionprocessimg][populate]=*&populate[curriculum][populate][currbtn][populate]=*&populate[curriculum][populate][years][populate][semester][populate][subjects][populate][course_name][populate]=*&populate[curriculum][populate][years][populate][semester][populate][pdfbtns][populate]=*&populate[labsfacilities][populate]=*&populate[beyondclassroom][populate]=*&populate[career][populate]=*&populate[dreamcareer][populate]=*&populate[financialassistance][populate]=*&populate[toc][populate][tocfaq][populate]=*&populate[toc][populate][tocimg][populate]=*&populate[toc][populate][tocbtn][populate]=*&populate[ourlocation][populate]=*`,
-    `${FETCH_STRAPI_URL}/api/school-programmes?${urlcode}populate[herosection][populate][herobtn][populate]=*&populate[herosection][populate][heroimg][populate]=*&populate[programmeeligibility][populate]=*&populate[programmescope][populate]=*&populate[programmehighlight][populate][programmehighlightcards][populate]=*&populate[specialisation][populate][specialisationcards][populate]=*&populate[admissionprocess][populate][admissionbtn][populate]=*&populate[admissionprocess][populate][admissionprocesscard][populate]=*&populate[admissionprocess][populate][desktopadmissionprocessimg][populate]=*&populate[curriculum][populate][currbtn][populate]=*&populate[curriculum][populate][years][populate][semester][populate][subjects][populate][course_name][populate]=*&populate[curriculum][populate][years][populate][semester][populate][pdfbtns][populate]=*&populate[labsfacilities][populate]=*&populate[beyondclassroom][populate]=*&populate[career][populate]=*&populate[dreamcareer][populate]=*&populate[financialassistance][populate]=*&populate[toc][populate][tocfaq][populate]=*&populate[toc][populate][tocimg][populate]=*&populate[toc][populate][tocbtn][populate]=*&populate[ourlocation][populate]=*&populate[school_category][fields][0]=id&populate[school_category][fields][1]=name&populate[school_category][fields][2]=slug`,
-    {
-      next: {
-        revalidate: 3600,
-      },
-    },
-  );
-  if (!res.ok) throw new Error("Failed to fetch School Programme Data");
-  const json: SchoolProgrammeResponse = await res.json();
-  return json.data;
+    let urlcode = "";
+    if (slug) {
+        urlcode = `filters[programmeslug][$eq]=${slug}&`;
+    }
+    const res = await fetch(
+        // `${FETCH_STRAPI_URL}/api/school-programmes?${urlcode}&populate[herosection][populate][herobtn][populate]=*&populate[herosection][populate][heroimg][populate]=*&populate[programmeeligibility][populate]=*&populate[programmescope][populate]=*&populate[programmehighlight][populate][programmehighlightcards][populate]=*&populate[specialisation][populate][specialisationcards][populate]=*&populate[admissionprocess][populate][admissionbtn][populate]=*&populate[admissionprocess][populate][admissionprocesscard][populate]=*&populate[admissionprocess][populate][desktopadmissionprocessimg][populate]=*&populate[curriculum][populate][currbtn][populate]=*&populate[curriculum][populate][years][populate][semester][populate][subjects][populate]=*&populate[curriculum][populate][years][populate][semester][populate][pdfbtns][populate]=*&populate[labsfacilities][populate]=*&populate[beyondclassroom][populate]=*&populate[career][populate]=*&populate[dreamcareer][populate]=*&populate[financialassistance][populate]=*&populate[toc][populate][tocfaq][populate]=*&populate[toc][populate][tocimg][populate]=*&populate[toc][populate][tocbtn][populate]=*&populate[ourlocation][populate]=*`,
+        // `${FETCH_STRAPI_URL}/api/school-programmes?${urlcode}populate[herosection][populate][herobtn][populate]=*&populate[herosection][populate][heroimg][populate]=*&populate[programmeeligibility][populate]=*&populate[programmescope][populate]=*&populate[programmehighlight][populate][programmehighlightcards][populate]=*&populate[specialisation][populate][specialisationcards][populate]=*&populate[admissionprocess][populate][admissionbtn][populate]=*&populate[admissionprocess][populate][admissionprocesscard][populate]=*&populate[admissionprocess][populate][desktopadmissionprocessimg][populate]=*&populate[curriculum][populate][currbtn][populate]=*&populate[curriculum][populate][years][populate][semester][populate][subjects][populate][course_name][populate]=*&populate[curriculum][populate][years][populate][semester][populate][pdfbtns][populate]=*&populate[labsfacilities][populate]=*&populate[beyondclassroom][populate]=*&populate[career][populate]=*&populate[dreamcareer][populate]=*&populate[financialassistance][populate]=*&populate[toc][populate][tocfaq][populate]=*&populate[toc][populate][tocimg][populate]=*&populate[toc][populate][tocbtn][populate]=*&populate[ourlocation][populate]=*`,
+        `${FETCH_STRAPI_URL}/api/school-programmes?${urlcode}populate[herosection][populate][herobtn][populate]=*&populate[herosection][populate][heroimg][populate]=*&populate[programmeeligibility][populate]=*&populate[programmescope][populate]=*&populate[programmehighlight][populate][programmehighlightcards][populate]=*&populate[specialisation][populate][specialisationcards][populate]=*&populate[admissionprocess][populate][admissionbtn][populate]=*&populate[admissionprocess][populate][admissionprocesscard][populate]=*&populate[admissionprocess][populate][desktopadmissionprocessimg][populate]=*&populate[curriculum][populate][currbtn][populate]=*&populate[curriculum][populate][years][populate][semester][populate][subjects][populate][course_name][populate]=*&populate[curriculum][populate][years][populate][semester][populate][pdfbtns][populate]=*&populate[labsfacilities][populate]=*&populate[beyondclassroom][populate]=*&populate[career][populate]=*&populate[dreamcareer][populate]=*&populate[financialassistance][populate]=*&populate[toc][populate][tocfaq][populate]=*&populate[toc][populate][tocimg][populate]=*&populate[toc][populate][tocbtn][populate]=*&populate[ourlocation][populate]=*&populate[school_category][fields][0]=id&populate[school_category][fields][1]=name&populate[school_category][fields][2]=slug`,
+        {
+            next: {
+                revalidate: 3600,
+            },
+        }
+    );
+    if (!res.ok) throw new Error("Failed to fetch School Programme Data");
+    const json: SchoolProgrammeResponse = await res.json();
+    return json.data;
 }
 
 // {
@@ -100,39 +177,39 @@ export async function getSchoolProgrammeData(
 // }
 
 export async function getSchoolProgrammeInfoByDegree(
-  deg: string = "Undergraduate Programmes",
-  schoolCatName: string,
+    deg: string = "Undergraduate Programmes",
+    schoolCatName: string
 ): Promise<SCHOOLPROGRAMMECARDINFORESPONSE["data"]> {
-  const res = await fetch(
-    // `${FETCH_STRAPI_URL}/api/school-programmes?filters[degrees][name][$eq]=${deg}&filters[school_categories][name][$eq]=${schoolCatName}&fields[0]=title&fields[1]=programmeslug&populate[criteria][fields][0]=Duration&populate[criteria][fields][1]=eligibility_criteria&populate[criteria][fields][2]=semester_i&populate[criteria][fields][3]=semester_ii&populate[criteria][fields][4]=programme_fee_per_year&populate[criteria][fields][5]=eligibility_utm_links&populate[criteria][populate][degree][fields][0]=name&populate[criteria][populate][degree][fields][1]=slug&pagination[pageSize]=50&pagination[page]=1&sort[0]=id:asc`,
-    `${FETCH_STRAPI_URL}/api/school-programmes?sort[0]=order_num:asc&filters[degree][name][$eq]=${deg}&filters[school_category][name][$eq]=${schoolCatName}&fields[0]=title&fields[1]=programmeslug&fields[2]=highlightitle&populate[criteria][fields][0]=Duration&populate[criteria][fields][1]=eligibility_criteria&populate[criteria][fields][2]=semester_i&populate[criteria][fields][3]=semester_ii&populate[criteria][fields][4]=programme_fee_per_year&populate[criteria][fields][5]=eligibility_utm_links&pagination[page]=1&pagination[pageSize]=50`,
-    {
-      next: {
-        revalidate: 43200,
-      },
-    },
-  );
-  if (!res.ok) throw new Error("Failed to school Programme Info");
-  const json: SCHOOLPROGRAMMECARDINFORESPONSE = await res.json();
-  return json.data;
+    const res = await fetch(
+        // `${FETCH_STRAPI_URL}/api/school-programmes?filters[degrees][name][$eq]=${deg}&filters[school_categories][name][$eq]=${schoolCatName}&fields[0]=title&fields[1]=programmeslug&populate[criteria][fields][0]=Duration&populate[criteria][fields][1]=eligibility_criteria&populate[criteria][fields][2]=semester_i&populate[criteria][fields][3]=semester_ii&populate[criteria][fields][4]=programme_fee_per_year&populate[criteria][fields][5]=eligibility_utm_links&populate[criteria][populate][degree][fields][0]=name&populate[criteria][populate][degree][fields][1]=slug&pagination[pageSize]=50&pagination[page]=1&sort[0]=id:asc`,
+        `${FETCH_STRAPI_URL}/api/school-programmes?sort[0]=order_num:asc&filters[degree][name][$eq]=${deg}&filters[school_category][name][$eq]=${schoolCatName}&fields[0]=title&fields[1]=programmeslug&fields[2]=highlightitle&populate[criteria][fields][0]=Duration&populate[criteria][fields][1]=eligibility_criteria&populate[criteria][fields][2]=semester_i&populate[criteria][fields][3]=semester_ii&populate[criteria][fields][4]=programme_fee_per_year&populate[criteria][fields][5]=eligibility_utm_links&pagination[page]=1&pagination[pageSize]=50`,
+        {
+            next: {
+                revalidate: 43200,
+            },
+        }
+    );
+    if (!res.ok) throw new Error("Failed to school Programme Info");
+    const json: SCHOOLPROGRAMMECARDINFORESPONSE = await res.json();
+    return json.data;
 }
 
 export async function getSchoolProgrammePhdDataDegree(
-  deg: string = "Doctoral Programme",
-  schoolCatName: string,
+    deg: string = "Doctoral Programme",
+    schoolCatName: string
 ): Promise<SchoolPhDProgrammeResponse["data"]> {
-  const res = await fetch(
-    // `${FETCH_STRAPI_URL}/api/school-programmes?filters[degrees][name][$eq]=${deg}&filters[school_categories][name][$eq]=${schoolCatName}&fields[0]=title&fields[1]=programmeslug&populate[criteria][fields][0]=Duration&populate[criteria][fields][1]=eligibility_criteria&populate[criteria][fields][2]=semester_i&populate[criteria][fields][3]=semester_ii&populate[criteria][fields][4]=programme_fee_per_year&populate[criteria][fields][5]=eligibility_utm_links&populate[criteria][populate][degree][fields][0]=name&populate[criteria][populate][degree][fields][1]=slug&pagination[pageSize]=50&pagination[page]=1&sort[0]=id:asc`,
-    `${FETCH_STRAPI_URL}/api/phd-single-programmes?filters[degree][$eq]=${deg}&filters[school_category][name][$eq]=${schoolCatName}&field[0]=title&field[1]=phdslug&field[2]=degree&populate[school_category][fields][0]=name&populate[school_category][fields][1]=slug&populate[criteria][populate]=*`,
-    {
-      next: {
-        revalidate: 28800,
-      },
-    },
-  );
-  if (!res.ok) throw new Error("Failed to school PHD Programme Info");
-  const json: SchoolPhDProgrammeResponse = await res.json();
-  return json.data;
+    const res = await fetch(
+        // `${FETCH_STRAPI_URL}/api/school-programmes?filters[degrees][name][$eq]=${deg}&filters[school_categories][name][$eq]=${schoolCatName}&fields[0]=title&fields[1]=programmeslug&populate[criteria][fields][0]=Duration&populate[criteria][fields][1]=eligibility_criteria&populate[criteria][fields][2]=semester_i&populate[criteria][fields][3]=semester_ii&populate[criteria][fields][4]=programme_fee_per_year&populate[criteria][fields][5]=eligibility_utm_links&populate[criteria][populate][degree][fields][0]=name&populate[criteria][populate][degree][fields][1]=slug&pagination[pageSize]=50&pagination[page]=1&sort[0]=id:asc`,
+        `${FETCH_STRAPI_URL}/api/phd-single-programmes?filters[degree][$eq]=${deg}&filters[school_category][name][$eq]=${schoolCatName}&field[0]=title&field[1]=phdslug&field[2]=degree&populate[school_category][fields][0]=name&populate[school_category][fields][1]=slug&populate[criteria][populate]=*`,
+        {
+            next: {
+                revalidate: 28800,
+            },
+        }
+    );
+    if (!res.ok) throw new Error("Failed to school PHD Programme Info");
+    const json: SchoolPhDProgrammeResponse = await res.json();
+    return json.data;
 }
 
 // {

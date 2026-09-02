@@ -89,7 +89,7 @@ export function LifeAtKRMUSection() {
                                 <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent"></div>
 
                                 <div className="relative p-5 md:p-6 xl:p-8">
-                                    <h4 className="text-white font-poppins font-light text-[28px] xl:text-[42px] leading-[32px] xl:leading-[47px] mb-2 md:mb-4 whitespace-pre-line group-hover:text-brand-gold transition-colors">
+                                    <h3 className="text-white font-poppins font-light text-[28px] xl:text-[42px] leading-[32px] xl:leading-[47px] mb-2 md:mb-4 whitespace-pre-line group-hover:text-brand-gold transition-colors">
                                         {card.title
                                             .split("\n")
                                             .map((line, idx) => (
@@ -105,7 +105,7 @@ export function LifeAtKRMUSection() {
                                                     {idx !== 2 ? "\n" : ""}
                                                 </span>
                                             ))}
-                                    </h4>
+                                    </h3>
                                 </div>
                             </div>
                             <Link
