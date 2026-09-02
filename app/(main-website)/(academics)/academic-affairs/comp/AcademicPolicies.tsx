@@ -118,7 +118,7 @@ const AcademicPolicies = () => {
           <div className="p-5 bg-[url(/academics/card-bg-1.webp)] bg-no-repeat bg-cover bg-center rounded-[20px]">
             <div className="flex items-center justify-center">
               <Image
-                src="/academics/card-6.webp"
+                src="/academics/academic.png"
                 width={197}
                 height={135}
                 alt=""
