@@ -85,7 +85,10 @@ const CommenceJourneySection = ({
     ];
 
     return (
-        <section className="relative w-full pt-10 sm:pt-12 xl:pt-20 pb-10 sm:pb-12 lg:pb-0 overflow-hidden font-poppins">
+        <section
+            id="admission-process"
+            className="relative w-full pt-10 sm:pt-12 xl:pt-20 pb-10 sm:pb-12 lg:pb-0 overflow-hidden font-poppins scroll-mt-28"
+        >
             {/* Background radial spec glow */}
             <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.05)_0%,transparent_70%)] rounded-full blur-[80px] z-0 pointer-events-none opacity-50"></div>
 

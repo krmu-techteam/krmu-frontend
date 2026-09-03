@@ -553,7 +553,7 @@ const ProgrammesExplorer = ({
             ref={sectionRef}
             className="font-poppins scroll-mt-28 sm:scroll-mt-32"
         >
-            <div className="mx-auto max-w-[1440px] w-full px-4 sm:px-6 md:px-8 xl:px-12">
+            <div className="mx-auto max-w-[1440px] w-full px-4 sm:px-6 md:px-6">
                 {(title || content) && (
                     <div className="px-0 lg:px-0 xl:px-0">
                         <div className="flex-1">

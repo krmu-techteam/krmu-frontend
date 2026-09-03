@@ -4,264 +4,263 @@ import { ParagraphBlock } from "@/lib/types/about";
 import { Programme, CareerCard, Year } from "@/lib/types/school-programme";
 import { PhDProgramme } from "@/lib/types/phd-programmes";
 
-
 export interface HeroSectionData {
-  id: number;
-  subtitle: string;
-  description: string;
-  herobtn: ButtonType;
-  heroimg: StrapiMedia;
-  imgvideo: string;
-  videofield: string;
-  formField: string;
-  formId: string;
+    id: number;
+    subtitle: string;
+    description: string;
+    herobtn: ButtonType;
+    heroimg: StrapiMedia;
+    imgvideo: string;
+    videofield: string;
+    formField: string;
+    formId: string;
 }
 
 export interface HeroSectionProps {
-  title: string;
-  highlightitle: string;
-  heroSection: HeroSectionData;
-  formId?: string;
-  slug: string;
-  dreamcareerSection?: {
-    highestpackagenum: string;
-    highestpackagetitle: string;
-    campusrecruitersnum: string;
-    campusrecruitertitle: string;
-    placementassistnum: string;
-    placementassisttitle: string;
-    heading: string;
-  };
-  logos?: StrapiMedia[];
+    title: string;
+    highlightitle: string;
+    heroSection: HeroSectionData;
+    formId?: string;
+    slug: string;
+    dreamcareerSection?: {
+        highestpackagenum: string;
+        highestpackagetitle: string;
+        campusrecruitersnum: string;
+        campusrecruitertitle: string;
+        placementassistnum: string;
+        placementassisttitle: string;
+        heading: string;
+    };
+    logos?: StrapiMedia[];
 }
 
 export interface DreamCareerSection {
-  dreamcareerSection?: {
-    highestpackagenum: string;
-    highestpackagetitle: string;
-    campusrecruitersnum: string;
-    campusrecruitertitle: string;
-    placementassistnum: string;
-    placementassisttitle: string;
-    heading: string;
-  };
-};
+    dreamcareerSection?: {
+        highestpackagenum: string;
+        highestpackagetitle: string;
+        campusrecruitersnum: string;
+        campusrecruitertitle: string;
+        placementassistnum: string;
+        placementassisttitle: string;
+        heading: string;
+    };
+}
 
 export interface CinematicRecruiterStripProps {
-  dreamcareerSection?: {
-    heading: string;
-  };
-  logos?: StrapiMedia[];
-};
+    dreamcareerSection?: {
+        heading: string;
+    };
+    logos?: StrapiMedia[];
+}
 
-export interface CinematicHeroSectionProps{
-  title: string;
-  highlightitle: string;
-  heroSection: HeroSectionData;
-  formId?: string;
-  slug: string;
-  config: HeroConfig;
-};
+export interface CinematicHeroSectionProps {
+    title: string;
+    highlightitle: string;
+    heroSection: HeroSectionData;
+    formId?: string;
+    slug: string;
+    config: HeroConfig;
+}
 
 export interface CinematicFormProps {
-  formId?: string;
-  isMobile?: boolean;
-};
+    formId?: string;
+    isMobile?: boolean;
+}
 
 export interface RecruiterCarouselProps {
-  logos: StrapiMedia[] | undefined;
-  showNumberOfSlides?: string;
-};
-
+    logos: StrapiMedia[] | undefined;
+    showNumberOfSlides?: string;
+}
 
 // Programs Scope
 export interface ProgrammeScopeType {
-  id: number;
-  scopeheading: string;
-  scopecontent: string;
-  scopeimg: StrapiMedia;
-  scopebtn: ButtonType;
-  scopeFormId: string;
-  scopeContainerId: string;
+    id: number;
+    scopeheading: string;
+    scopecontent: string;
+    scopeimg: StrapiMedia;
+    scopebtn: ButtonType;
+    scopeFormId: string;
+    scopeContainerId: string;
 }
 export interface ProgrammeHeroSection {
-  id: number;
-  subtitle: string;
-  description: string;
-  herobtn: ButtonType;
-  heroimg: StrapiMedia;
-  imgvideo: string;
-  videofield: string;
-  formField: string;
-  formId: string;
+    id: number;
+    subtitle: string;
+    description: string;
+    herobtn: ButtonType;
+    heroimg: StrapiMedia;
+    imgvideo: string;
+    videofield: string;
+    formField: string;
+    formId: string;
 }
 export interface ProgrammeScopeSectionProps {
-  scopeData: ProgrammeScopeType;
-  heroSection?: ProgrammeHeroSection;
-  allowedFormSlugs: string[];
-  slug: string;
-};
+    scopeData: ProgrammeScopeType;
+    heroSection?: ProgrammeHeroSection;
+    allowedFormSlugs: string[];
+    slug: string;
+}
 
 // Programme Highlight Section
 export interface HiglightCard {
-  id: number;
-  title: string;
-  subtitle: string;
-  highlightimage: StrapiMedia;
+    id: number;
+    title: string;
+    subtitle: string;
+    highlightimage: StrapiMedia;
 }
 
 export interface ProgrammeHighlightSectionProps {
-  heading: string;
-  highlightHeading: string;
-  desc: string;
-  highlights: HiglightCard[];
-  slug?: string;
-};
+    heading: string;
+    highlightHeading: string;
+    desc: string;
+    highlights: HiglightCard[];
+    slug?: string;
+}
 
 // Admission Process Section
 export interface AdmisionProcessCard {
-  id: number;
-  title: string;
-  description: string;
-  mobcounting: string;
-  link: string;
+    id: number;
+    title: string;
+    description: string;
+    mobcounting: string;
+    link: string;
 }
 
 export interface AdmissionProcessSectionProps {
-  heading: string;
-  highlight: string;
-  desc: string;
-  deskimg: StrapiMedia;
-  admissionCards: AdmisionProcessCard[];
-  admisbtn: ButtonType;
-  slug?: string;
-};
+    heading: string;
+    highlight: string;
+    desc: string;
+    deskimg: StrapiMedia;
+    admissionCards: AdmisionProcessCard[];
+    admisbtn: ButtonType;
+    slug?: string;
+    formId?: string;
+}
 
 // Lab Facilities Section
 export interface LabCard {
-  id: number;
-  title: string;
-  description: string;
+    id: number;
+    title: string;
+    description: string;
 }
 export interface LabFacilitiesSectionProps {
-  heading: string;
-  highlight: string;
-  btn: ButtonType;
-  labimg: StrapiMedia;
-  labcontent: ParagraphBlock[];
-  labcards: LabCard[];
-  slug: string;
-};
+    heading: string;
+    highlight: string;
+    btn: ButtonType;
+    labimg: StrapiMedia;
+    labcontent: ParagraphBlock[];
+    labcards: LabCard[];
+    slug: string;
+}
 
 // Financial Assistance Section
 export interface FinancialPartnerLogoProps {
-  logo: StrapiMedia;
+    logo: StrapiMedia;
 }
 export interface FinancialPointCardProps {
-  point: string;
-  className?: string;
+    point: string;
+    className?: string;
 }
 export interface FinancialAssistanceSectionProps {
-  heading: string;
-  highlightheading: string;
-  description: string;
-  point1: string;
-  point2: string;
-  point3: string;
-  point4: string;
-  point5: string;
-  point6: string;
-  point7: string;
-  logos: StrapiMedia[];
+    heading: string;
+    highlightheading: string;
+    description: string;
+    point1: string;
+    point2: string;
+    point3: string;
+    point4: string;
+    point5: string;
+    point6: string;
+    point7: string;
+    logos: StrapiMedia[];
 }
 
 // Frequently Asked Questions Section
 export interface FAQ {
-  id: number;
-  ques: string;
-  ans: string;
+    id: number;
+    ques: string;
+    ans: string;
 }
 export interface TOCFAQ {
-  id: number;
-  tocpoint: string;
-  faq: FAQ[];
+    id: number;
+    tocpoint: string;
+    faq: FAQ[];
 }
 export interface FrequentlyAskedQuestionsSectionProps {
-  heading: string;
-  highlight: string;
-  desc: string;
-  tocfaqs: TOCFAQ[];
-  tocimg: StrapiMedia;
-  tocbtn: ButtonType;
-};
+    heading: string;
+    highlight: string;
+    desc: string;
+    tocfaqs: TOCFAQ[];
+    tocimg: StrapiMedia;
+    tocbtn: ButtonType;
+}
 
 export interface FAQAccordionProps {
-  tocfaqs: TOCFAQ[];
-  tocbtn?: ButtonType;
-};
+    tocfaqs: TOCFAQ[];
+    tocbtn?: ButtonType;
+}
 
 // Career Prospects Section
 export interface CareerProspectsSectionProps {
-  heading: string;
-  highlight: string;
-  desc: string;
-  btn: ButtonType;
-  careerimg: StrapiMedia;
-  careercards: CareerCard[];
-  slug?: string;
+    heading: string;
+    highlight: string;
+    desc: string;
+    btn: ButtonType;
+    careerimg: StrapiMedia;
+    careercards: CareerCard[];
+    slug?: string;
 }
 
 // Curriculum & Programme Structure
 export interface ProgrammeStructureProps {
-  programStruct: Year[];
-  currbtn: ButtonType;
-  currFormId?: string;
-  currFormContainerId?: string;
-  isYear?: boolean;
-  heading?: string;
-  highlight?: string;
-  slug?: string;
+    programStruct: Year[];
+    currbtn: ButtonType;
+    currFormId?: string;
+    currFormContainerId?: string;
+    isYear?: boolean;
+    heading?: string;
+    highlight?: string;
+    slug?: string;
 }
 
 export interface CurriculumSectionProps {
-  heading: string;
-  highlight: string;
-  desc?: string;
-  programStruct: Year[];
-  currbtn: ButtonType;
-  currFormId?: string;
-  currFormContainerId?: string;
-  isYear?: boolean;
-  slug?: string;
+    heading: string;
+    highlight: string;
+    desc?: string;
+    programStruct: Year[];
+    currbtn: ButtonType;
+    currFormId?: string;
+    currFormContainerId?: string;
+    isYear?: boolean;
+    slug?: string;
 }
 
 // Dream Career Section
 export interface DreamCareerSectionProps {
-  heading: string;
-  description?: string;
-  logos: StrapiMedia[];
+    heading: string;
+    description?: string;
+    logos: StrapiMedia[];
 }
 
 // Our Location Section
 export interface OurLocationSectionProps {
-  badgetext: string;
-  heading?: string;
-  img1: StrapiMedia;
-  img2: StrapiMedia;
+    badgetext: string;
+    heading?: string;
+    img1: StrapiMedia;
+    img2: StrapiMedia;
 }
 
 // Explore Programs Section
 export interface ExploreProgramsSectionProps {
-  currentSlug: string;
+    currentSlug: string;
 }
 
 // Hover Card Props
 export interface HoverCardProps {
-  href: string;
-  className?: string;
-  style?: React.CSSProperties;
-  children: React.ReactNode;
+    href: string;
+    className?: string;
+    style?: React.CSSProperties;
+    children: React.ReactNode;
 }
 
 export type SchoolProgrammeDomain = Programme;
-export type PHDProgrammeDomain = PhDProgramme;
+export type PHDProgrammeDomain = PhDProgramme;

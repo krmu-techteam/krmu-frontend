@@ -20,3 +20,4 @@ export {
     CommenceJourneyMobileStepCard,
 } from "./CommenceJourneyStepCard";
 export { default as YoutubeVideoSection } from "./YoutubeVideoSection";
+export { default as SchoolSubNav } from "./SchoolSubNav";

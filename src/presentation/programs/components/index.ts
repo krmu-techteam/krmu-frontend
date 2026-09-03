@@ -10,7 +10,6 @@ export { default as EligibilityVideoLayout } from "./EligibilityVideoLayout";
 export { default as ProgrammeHighlightCard } from "./ProgrammeHighlightCard";
 export { default as AdmissionCardDesktop } from "./AdmissionCardDesktop";
 export { default as AdmissionCardMobile } from "./AdmissionCardMobile";
-export { default as BcaVsBtechComparison } from "./BcaVsBtechComparison";
 export { default as LabFacilitiesCarousel } from "./LabFacilitiesCarousel";
 export { default as BeyondClassroomCarousel } from "./BeyondClassroomCarousel";
 export { default as FinancialPointCard } from "./FinancialPointCard";
@@ -20,5 +19,3 @@ export { default as FAQAccordionItem } from "./FAQAccordionItem";
 export { default as ScholarshipIllustration } from "./ScholarshipIllustration";
 export { default as ProgrammeStructure } from "./ProgrammeStructure";
 export { default as HoverCard } from "./HoverCard";
-
-

@@ -5,7 +5,10 @@ import { SchoolHeroBanner, StrapiMedia } from "@/lib/types/common";
 import { Button } from "@/lib/types/home";
 import Link from "next/link";
 import Image from "next/image";
-import { YoutubeVideoSection } from "@/presentation/school/components";
+import {
+    YoutubeVideoSection,
+    SchoolSubNav,
+} from "@/presentation/school/components";
 import { Download, ArrowRightCircle, ArrowUpRight } from "lucide-react";
 import { splitTitleByFor } from "@/features/school";
 import SchoolHeroSlider from "@/app/(main-website)/(school-programmes)/school-programmes-component/SchoolHeroSlider";

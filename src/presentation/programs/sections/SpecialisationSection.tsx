@@ -61,7 +61,10 @@ const Specialisation = ({
     const isSlider = specialisations && specialisations.length > 4;
 
     return (
-        <section className="relative z-10 py-8 md:py-12 xl:py-20">
+        <section
+            id="specializations"
+            className="relative z-10 py-8 md:py-12 xl:py-20 scroll-mt-28"
+        >
             <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
                 <div className="common-prog-container mb-2 md:mb-6">
                     <h2 className="heading-primary mb-2 md:mb-3">

@@ -2806,7 +2806,8 @@ body:before {
     .admis_proc_btn_grid_item .admis_proc_btn_content .admis_btn_below_text {
         width: 100%;
         max-width: 155px;
-        font-size: 10.5px;
+        font-size: 11px !important;
+        font-family: poppins;
         font-weight: 400;
         color: #e9ecef;
         line-height: 1.35;
@@ -2837,6 +2838,7 @@ body:before {
     }
 
     /* XL (1280px+) */
+
     @media (min-width: 1280px) {
         .admis_proc_btn_content {
             align-items: flex-start;
@@ -2855,7 +2857,7 @@ body:before {
             .admis_proc_btn_content
             .admis_btn_below_text {
             max-width: 175px;
-            font-size: 12px;
+            font-size: 11px;
             line-height: 1.45;
             text-align: left;
         }

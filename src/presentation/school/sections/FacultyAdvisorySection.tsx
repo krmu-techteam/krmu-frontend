@@ -20,7 +20,10 @@ const FacultyAdvisorySection = ({ schoolCat, fac_adv }: Props) => {
     const cleanTitle = rawTitle.replace(/^<p>(.*)<\/p>$/i, "$1");
 
     return (
-        <section className="relative pb-1 pt-10 md:pt-12 md:pb-4 xl:pt-16 xl:pb-10  bg-transparent font-poppins">
+        <section
+            id="faculty"
+            className="relative pb-1 pt-10 md:pt-12 md:pb-4 xl:pt-16 xl:pb-10  bg-transparent font-poppins scroll-mt-28"
+        >
             <div className="max-w-[1440px] mx-auto w-full  px-4 md:px-8 lg:px-12">
                 {/* Faculty List */}
                 <div>

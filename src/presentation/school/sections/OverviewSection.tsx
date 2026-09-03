@@ -12,7 +12,10 @@ const OverviewSection = ({
     slug,
 }: OverviewSectionProps) => {
     return (
-        <section className="relative py-10 md:py-12 xl:py-20">
+        <section
+            id="overview"
+            className="relative py-10 md:py-12 xl:py-20 scroll-mt-28"
+        >
             <div className="grid max-w-[1440px] mx-auto grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 px-4 md:px-8 xl:px-12">
                 {(() => {
                     const displayCounters = [...(counters || [])];

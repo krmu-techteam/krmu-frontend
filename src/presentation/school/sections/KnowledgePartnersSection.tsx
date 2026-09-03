@@ -50,7 +50,10 @@ const KnowledgePartnersSection = ({ title, logos, slug }: Props) => {
     const coeList = (slug && SCHOOL_COE_MAP[slug]) || [];
 
     return (
-        <section className="relative py-12 xl:py-20 font-poppins">
+        <section
+            id="knowledge-partners"
+            className="relative py-12 xl:py-20 font-poppins scroll-mt-28"
+        >
             <div className="">
                 {/* Title */}
                 <h2 className="text-center text-white font-serif text-3xl sm:text-4xl md:text-[44px] font-bold mb-6 lg:mb-12 tracking-tight">

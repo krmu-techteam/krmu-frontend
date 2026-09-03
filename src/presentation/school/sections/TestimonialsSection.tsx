@@ -9,7 +9,10 @@ const TestimonialsSection = ({
     testis,
 }: TestimonialSectionProps) => {
     return (
-        <section className="py-12 xl:py-20 font-poppins relative overflow-hidden bg-transparent">
+        <section
+            id="testimonials"
+            className="py-12 xl:py-20 font-poppins relative overflow-hidden bg-transparent scroll-mt-28"
+        >
             <div className="max-w-[1440px] mx-auto w-full relative z-10 px-4 md:px-8 lg:px-12">
                 <div className="mb-10 max-w-5xl">
                     <h2 className="heading-primary mb-4">{title}</h2>

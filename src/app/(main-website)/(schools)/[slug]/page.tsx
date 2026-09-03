@@ -61,6 +61,7 @@ import {
 } from "@/presentation/school/sections";
 
 import { ProgrammesExplorer } from "@/presentation/programmes/sections";
+import { SchoolSubNav } from "@/presentation/school/components";
 import SectionDivider from "@/components/common/SectionDivider";
 import { getDownloadProspectusSetting } from "@/lib/api/global-setting";
 
@@ -324,6 +325,7 @@ export default async function Page({ params }: Props) {
                 admBtn={school.admissionbtn}
                 slug={slug}
             />
+            <SchoolSubNav slug={slug} />
             {/* {school.admissionsessiontitle && (
         <SchoolAdmissionOpen
           title={school.admissionsessiontitle}
@@ -458,10 +460,12 @@ export default async function Page({ params }: Props) {
                     videoCards={school?.video_comp?.video_iframe_fields}
                 />
             )}
-            {school?.eventstitle && (
+            {(school?.eventstitle ||
+                (Array.isArray(schoolEventsAndExperience) &&
+                    schoolEventsAndExperience.length > 0)) && (
                 <EventAndExperienceSection
-                    title={school?.eventstitle}
-                    desc={school?.eventsdesc}
+                    title={school?.eventstitle || "Events & Experiences"}
+                    desc={school?.eventsdesc || ""}
                     btn={school?.eventsbtn}
                     eventsexp={schoolEventsAndExperience}
                 />
