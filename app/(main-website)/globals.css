@@ -1413,7 +1413,7 @@
     vertical-align: top;
   }
 
-  .modern-fee-table table tr td:last-child {
+  .modern-fee-table table tr:not(:first-child) td:last-child {
     text-align: right;
     font-weight: 600;
     color: #065084;
