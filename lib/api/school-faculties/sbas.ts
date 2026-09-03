@@ -16,21 +16,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2023/01/Prof.-Meena-Bhandari-1.png",
   },
-  {
-    id: 113742,
-    slug: "dr-arush-sharma",
-    title: {
-      rendered: "Dr. Arush Sharma",
-    },
-    featured_media: 903,
-    acf: {
-      "staff-qualification": "Ph.D. (Chemistry)",
-      staff_designation: "Associate Professor (Research)",
-      schools: [],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Arush-Sharma.jpg",
-  },
+ 
   {
     id: 910,
     slug: "dr-pawan-kumar",
@@ -55,7 +41,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
     featured_media: 9824,
     acf: {
       "staff-qualification": "Ph.D. (Physics)",
-      staff_designation: "Associate Professor",
+      staff_designation: "Professor",
       schools: [787],
     },
     featured_media_url:
@@ -70,11 +56,41 @@ export const sbasFaculties: SchoolFacultiesType[] = [
     featured_media: 101942,
     acf: {
       "staff-qualification": "Ph.D. (Chemistry)",
-      staff_designation: "Associate Professor",
+      staff_designation: "Professor",
       schools: [787],
     },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2023/10/Dr.-Seema-Raj-1.png",
+  },
+ {
+    id: 10068,
+    slug: "dilraj-preet-kaur",
+    title: {
+      rendered: "Dr. Dilraj Preet Kaur",
+    },
+    featured_media: 10001,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Associate Dean(Academic Affairs) & Professor ",
+      schools: [787],
+    },
+    featured_media_url:
+      "https://www.krmangalam.edu.in/images/dr-dilraj-preet-kaur.jpeg",
+  },
+  {
+    id: 113742,
+    slug: "dr-arush-sharma",
+    title: {
+      rendered: "Dr. Arush Sharma",
+    },
+    featured_media: 903,
+    acf: {
+      "staff-qualification": "Ph.D. (Chemistry)",
+      staff_designation: "Associate Professor (Research)",
+      schools: [],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Arush-Sharma.jpg",
   },
   {
     id: 106818,
@@ -271,22 +287,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Dr.-Mohabbat-Ali.png",
   },
-  {
-    id: 10068,
-    slug: "dilraj-preet-kaur",
-    title: {
-      rendered: "Dr. Dilraj Preet Kaur",
-    },
-    featured_media: 10001,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation:
-        "Associate Dean(Academic Affairs) & Associate Professor ",
-      schools: [787],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Dilraj-Preet-Kaur.png",
-  },
+
   {
     id: 9994,
     slug: "ms-sapna",
