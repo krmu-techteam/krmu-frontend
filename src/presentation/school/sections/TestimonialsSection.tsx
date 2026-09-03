@@ -16,7 +16,7 @@ const TestimonialsSection = ({
             <div className="max-w-[1440px] mx-auto w-full relative z-10 px-4 md:px-8 lg:px-12">
                 <div className="mb-10 max-w-5xl">
                     <h2 className="heading-primary mb-4">{title}</h2>
-                    <p className="text-gray-300 text-justify text-[15px] lg:text-[16px]">
+                    <p className="text-white/90 text-justify text-[15px] lg:text-[16px]">
                         {desc}
                     </p>
                 </div>

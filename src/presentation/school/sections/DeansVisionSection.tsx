@@ -57,7 +57,7 @@ const DeanSection = ({
                             </h3>
                         )}
 
-                        <div className="text-md  text-gray-300 text-justify md:text-left leading-relaxed space-y-2">
+                        <div className="text-md  text-white/90 text-justify md:text-left leading-relaxed space-y-2">
                             {desc && <BlocksRenderer content={desc} />}
                         </div>
                     </div>

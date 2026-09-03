@@ -427,6 +427,10 @@ export default async function Page({ params }: Props) {
                     title={school?.knowledgetitle}
                     logos={school?.knowledgepartenerlogos}
                     slug={slug}
+                    coetitle1={school?.coetitle1}
+                    coetitle2={school?.coetitle2}
+                    coebtn1={school?.coebtn1}
+                    coebtn2={school?.coebtn2}
                 />
             )}
             {school?.tetimonialtitle && (

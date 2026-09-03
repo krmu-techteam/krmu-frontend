@@ -168,9 +168,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
                                     {/* Left: Program Level */}
                                     <div className="col-span-12 lg:col-span-7">
-                                        <h2 className="text-2xl font-normal font-poppins text-white mb-6">
+                                        <div className="text-2xl font-normal font-poppins text-white mb-6">
                                             Program Level
-                                        </h2>
+                                        </div>
 
                                         <div className="grid grid-cols-2 gap-5">
                                             {/* Undergraduate */}
@@ -292,9 +292,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                     {/* Right: Schools */}
                                     <div className="col-span-12 lg:col-span-5 flex flex-col justify-between">
                                         <div>
-                                            <h2 className="text-2xl font-normal font-poppins text-white mb-6">
+                                            <div className="text-2xl font-normal font-poppins text-white mb-6">
                                                 Schools
-                                            </h2>
+                                            </div>
 
                                             <ul className="flex flex-col gap-3 overflow-hidden">
                                                 {academicMenu?.academicmenu?.menulinks.map(
@@ -397,20 +397,20 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
                                     {/* Left Section: Link Columns */}
                                     <div className="col-span-12 lg:col-span-7">
-                                        <h2 className="text-2xl font-normal font-poppins text-white mb-6">
+                                        <div className="text-2xl font-normal font-poppins text-white mb-6">
                                             {admissionMenu?.title}
-                                        </h2>
+                                        </div>
                                         <div className="grid grid-cols-2 gap-8">
                                             {/* Enrolment */}
                                             {admissionMenu?.enrollnow && (
                                                 <div>
-                                                    <h3 className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
+                                                    <div className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
                                                         {
                                                             admissionMenu
                                                                 ?.enrollnow
                                                                 ?.heading
                                                         }
-                                                    </h3>
+                                                    </div>
                                                     <ul className="flex flex-col gap-1">
                                                         {admissionMenu?.enrollnow?.menulinks.map(
                                                             (menu) => {
@@ -456,13 +456,13 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             {/* Scholarships */}
                                             {admissionMenu?.scholarships && (
                                                 <div>
-                                                    <h3 className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
+                                                    <div className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
                                                         {
                                                             admissionMenu
                                                                 ?.scholarships
                                                                 ?.heading
                                                         }
-                                                    </h3>
+                                                    </div>
                                                     <ul className="flex flex-col gap-1">
                                                         {admissionMenu?.scholarships?.menulinks.map(
                                                             (menu) => {
@@ -604,12 +604,12 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                     <div className="grid grid-cols-12 w-full gap-8">
                                         {/* Left Column: Links */}
                                         <div className="col-span-3">
-                                            <h2 className="text-2xl font-normal font-poppins text-white mb-6">
+                                            <div className="text-2xl font-normal font-poppins text-white mb-6">
                                                 {
                                                     placementMenu?.placement
                                                         ?.heading
                                                 }
-                                            </h2>
+                                            </div>
                                             <ul className="flex flex-col gap-3">
                                                 {placementMenu?.placement?.menulinks.map(
                                                     (menu) => (
@@ -753,9 +753,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
                                     {/* Left Column: Links */}
                                     <div className="col-span-12 lg:col-span-3">
-                                        <h2 className="text-2xl font-normal font-poppins text-white mb-6">
+                                        <div className="text-2xl font-normal font-poppins text-white mb-6">
                                             {researchMenu?.research?.heading}
-                                        </h2>
+                                        </div>
                                         <ul className="flex flex-col gap-1">
                                             {researchMenu?.research?.menulinks.map(
                                                 (menu) => {
@@ -905,9 +905,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-8 lg:gap-12">
                                     {/* Left Column: Link Lists */}
                                     <div className="col-span-6 flex flex-col gap-6">
-                                        <h2 className="text-2xl font-normal font-poppins text-white leading-tight">
+                                        <div className="text-2xl font-normal font-poppins text-white leading-tight">
                                             {lifeatkrmuMenu?.title}
-                                        </h2>
+                                        </div>
 
                                         <div className="grid grid-cols-2 gap-8">
                                             {/* Section 1 */}
@@ -1031,9 +1031,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-8 lg:gap-12">
                                     {/* Left Column: Single column stack (Image -> Text -> Buttons -> Stats) */}
                                     <div className="col-span-4 flex flex-col gap-4">
-                                        <h2 className="text-[28px] font-normal font-poppins text-white leading-tight">
+                                        <div className="text-[28px] font-normal font-poppins text-white leading-tight">
                                             {aboutusMenu?.title}
-                                        </h2>
+                                        </div>
 
                                         {/* Image */}
                                         <div className="relative w-full rounded-[4px] overflow-hidden border border-white/10 group aspect-video">
@@ -1047,11 +1047,17 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             />
 
                                             {/* Top Right Counter Overlay */}
-                                            <div className="absolute top-3 right-3 z-10 bg-[#062035]/90 rounded-[2px] px-2.5 py-2.5 flex flex-col justify-center items-center text-center">
-                                                <span className="text-[18px] font-medium text-white font-poppins leading-none">
+                                            <div className="absolute top-3 right-3 z-10 bg-[#062035] rounded-[3px] px-3 py-1.5 flex items-center justify-center gap-1.5 text-center shadow-lg">
+                                                <span className="text-[15px] font-medium text-white font-poppins leading-none">
                                                     {aboutusMenu
                                                         ?.aboutuscounter?.[0]
                                                         ?.countertext || "13+"}
+                                                </span>
+                                                <span className="text-[13px] font-medium text-white font-poppins leading-none">
+                                                    {aboutusMenu
+                                                        ?.aboutuscounter?.[0]
+                                                        ?.countercontent ||
+                                                        "Schools"}
                                                 </span>
                                             </div>
                                         </div>
@@ -1068,25 +1074,27 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         </p>
 
                                         {/* Action Buttons */}
-                                        <div className="flex gap-3">
+                                        <div className="flex gap-3 mt-auto">
                                             <CommonLeadPopup
-                                                buttonClassName="flex-1 border border-[#737373] hover:border-white text-white text-[11px] md:text-[11px] h-[42px] font-poppins whitespace-nowrap rounded-[4px] px-3 flex items-center justify-center uppercase transition-all cursor-pointer"
+                                                buttonClassName="flex-[1.3] border border-[#737373] hover:border-white text-white text-[13px] md:text-[13.5px] h-[46px] font-poppins font-medium whitespace-nowrap rounded-[4px] px-3.5 flex items-center justify-center uppercase transition-all cursor-pointer"
                                                 buttonText="DOWNLOAD PROSPECTUS"
                                                 redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
                                                 form_name="Download Prospectus"
                                             />
-                                            <Button
-                                                variant="primary"
-                                                href={
-                                                    applyNowButton?.url ||
-                                                    "/apply"
+                                            <CommonLeadPopup
+                                                buttonClassName="flex-1 bg-[#CB000D] hover:bg-[#a3000a] text-white text-[13px] md:text-[13.5px] h-[46px] font-poppins font-medium whitespace-nowrap rounded-[4px] px-4 flex items-center justify-center uppercase transition-all cursor-pointer gap-1.5"
+                                                buttonText={
+                                                    <>
+                                                        <span>APPLY NOW</span>
+                                                        <ArrowUpRight className="w-4 h-4" />
+                                                    </>
                                                 }
-                                                icon={ArrowUpRight}
-                                                iconPosition="right"
-                                                className="flex-1 text-[11px] md:text-[11px] !h-[42px] font-poppins whitespace-nowrap !rounded-[4px] !px-3"
-                                            >
-                                                APPLY NOW
-                                            </Button>
+                                                redirectUrl={
+                                                    applyNowButton?.url ||
+                                                    "https://admissions.krmangalam.edu.in"
+                                                }
+                                                form_name="Apply Now"
+                                            />
                                         </div>
                                     </div>
 
@@ -1095,10 +1103,10 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         <div className="grid grid-cols-4 gap-4 lg:gap-6 mt-2">
                                             {/* Overview */}
                                             <div>
-                                                <h3 className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
+                                                <div className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
                                                     {aboutusMenu?.overview
                                                         ?.heading || "Overview"}
-                                                </h3>
+                                                </div>
                                                 <ul className="flex flex-col gap-2.5">
                                                     {rawOverviewLinks.map(
                                                         (menu: any) => (
@@ -1134,11 +1142,11 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                                             {/* Administration */}
                                             <div>
-                                                <h3 className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
+                                                <div className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
                                                     {aboutusMenu?.administration
                                                         ?.heading ||
                                                         "Administration"}
-                                                </h3>
+                                                </div>
                                                 <ul className="flex flex-col gap-2.5">
                                                     {aboutusMenu?.administration?.menulinks?.map(
                                                         (menu: any) => (
@@ -1175,13 +1183,13 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             {/* Discover More */}
                                             {academicMenu?.discovermenu && (
                                                 <div>
-                                                    <h3 className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
+                                                    <div className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
                                                         {
                                                             academicMenu
                                                                 .discovermenu
                                                                 .heading
                                                         }
-                                                    </h3>
+                                                    </div>
                                                     <ul className="flex flex-col gap-2.5">
                                                         {academicMenu.discovermenu.menulinks?.map(
                                                             (menu: any) => (
@@ -1224,9 +1232,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                                             {/* Others */}
                                             <div>
-                                                <h3 className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
+                                                <div className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
                                                     Others
-                                                </h3>
+                                                </div>
                                                 <ul className="flex flex-col gap-2.5">
                                                     {aboutUsOthersLinks.map(
                                                         (menu) => (

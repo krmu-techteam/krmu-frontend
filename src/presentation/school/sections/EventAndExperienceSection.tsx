@@ -29,7 +29,7 @@ const EventAndExperienceSection = ({ title, desc, btn, eventsexp }: Props) => {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
                     <div className="max-w-6xl">
                         {desc && (
-                            <p className="text-white/70 text-justify sm:text-left text-sm md:text-md font-normal leading-relaxed tracking-wide">
+                            <p className="text-white/90 text-justify sm:text-left text-sm md:text-md font-normal leading-relaxed tracking-wide">
                                 {desc}
                             </p>
                         )}
@@ -40,7 +40,7 @@ const EventAndExperienceSection = ({ title, desc, btn, eventsexp }: Props) => {
                             btn?.buttontext) && (
                             <Link
                                 href={btn?.buttonlink || "#"}
-                                className="flex cursor-pointer items-center gap-2 text-white/80 hover:text-white transition-colors text-sm font-medium group"
+                                className="flex cursor-pointer items-center gap-2 text-white/90 hover:text-white transition-colors text-sm font-medium group"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

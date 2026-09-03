@@ -489,16 +489,15 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                             <div className="flex flex-col gap-6">
                                 <div className="bg-white/[0.03] border border-white/5 rounded-lg overflow-hidden shadow-sm">
                                     <div className="px-5 py-3 border-b border-white/10 bg-[#0060A9]/10">
-                                        <h3 className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
+                                        <div className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
                                             {
                                                 academicMenu?.academicmenu
                                                     ?.heading
                                             }
-                                        </h3>
+                                        </div>
                                     </div>
                                     <div className="flex flex-col text-white/80">
                                         {academicMenu?.academicmenu?.menulinks.map(
-                                             
                                             (school: any, index: number) => (
                                                 <Link
                                                     key={school.id}
@@ -530,16 +529,15 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
 
                                 <div className="bg-white/[0.03] border border-white/5 rounded-lg overflow-hidden shadow-sm">
                                     <div className="px-5 py-3 border-b border-white/10 bg-[#0060A9]/10">
-                                        <h3 className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
+                                        <div className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
                                             {
                                                 academicMenu?.discovermenu
                                                     ?.heading
                                             }
-                                        </h3>
+                                        </div>
                                     </div>
                                     <div className="flex flex-col text-white/80">
                                         {academicMenu?.discovermenu?.menulinks.map(
-                                             
                                             (link: any, index: number) => (
                                                 <Link
                                                     key={link.id}
@@ -605,16 +603,15 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                                 {admissionMenu?.enrollnow && (
                                     <div className="bg-white/[0.03] border border-white/5 rounded-lg overflow-hidden shadow-sm">
                                         <div className="px-5 py-3 border-b border-white/10 bg-[#0060A9]/10">
-                                            <h3 className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
+                                            <div className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
                                                 {
                                                     admissionMenu?.enrollnow
                                                         ?.heading
                                                 }
-                                            </h3>
+                                            </div>
                                         </div>
                                         <div className="flex flex-col text-white/80">
                                             {admissionMenu?.enrollnow?.menulinks.map(
-                                                 
                                                 (link: any, index: number) => (
                                                     <Link
                                                         key={link.id}
@@ -649,16 +646,15 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                                 {admissionMenu?.scholarships && (
                                     <div className="bg-white/[0.03] border border-white/5 rounded-lg overflow-hidden shadow-sm">
                                         <div className="px-5 py-3 border-b border-white/10 bg-[#0060A9]/10">
-                                            <h3 className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
+                                            <div className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
                                                 {
                                                     admissionMenu?.scholarships
                                                         ?.heading
                                                 }
-                                            </h3>
+                                            </div>
                                         </div>
                                         <div className="flex flex-col text-white/80">
                                             {admissionMenu?.scholarships?.menulinks.map(
-                                                 
                                                 (link: any, index: number) => (
                                                     <Link
                                                         key={link.id}
@@ -693,16 +689,15 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                                 {admissionMenu?.visitus && (
                                     <div className="bg-white/[0.03] border border-white/5 rounded-lg overflow-hidden shadow-sm">
                                         <div className="px-5 py-3 border-b border-white/10 bg-[#0060A9]/10">
-                                            <h3 className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
+                                            <div className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
                                                 {
                                                     admissionMenu?.visitus
                                                         ?.heading
                                                 }
-                                            </h3>
+                                            </div>
                                         </div>
                                         <div className="flex flex-col text-white/80">
                                             {admissionMenu?.visitus?.menulinks.map(
-                                                 
                                                 (link: any, index: number) => (
                                                     <Link
                                                         key={link.id}
@@ -767,7 +762,6 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                                 <div className="bg-white/[0.03] border border-white/5 rounded-lg overflow-hidden shadow-sm">
                                     <div className="flex flex-col text-white/80">
                                         {placementMenu?.placement?.menulinks.map(
-                                             
                                             (link: any, index: number) => (
                                                 <Link
                                                     key={link.id}
@@ -841,7 +835,6 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                                 <div className="bg-white/[0.03] border border-white/5 rounded-lg overflow-hidden shadow-sm">
                                     <div className="flex flex-col text-white/80">
                                         {researchMenu?.research?.menulinks.map(
-                                             
                                             (link: any, index: number) => (
                                                 <Link
                                                     key={link.id}
@@ -897,7 +890,6 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                                             ?.menulinks || []),
                                         ...(lifeatkrmuMenu?.lfeatkrmu2
                                             ?.menulinks || []),
-                                         
                                     ].map(
                                         (
                                             link: any,
@@ -938,13 +930,12 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                             <div className="flex flex-col gap-6">
                                 <div className="bg-white/[0.03] border border-white/5 rounded-lg overflow-hidden shadow-sm">
                                     <div className="px-5 py-3 border-b border-white/10 bg-[#0060A9]/10">
-                                        <h3 className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
+                                        <div className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
                                             {aboutusMenu?.overview?.heading}
-                                        </h3>
+                                        </div>
                                     </div>
                                     <div className="flex flex-col text-white/80">
                                         {aboutusMenu?.overview?.menulinks.map(
-                                             
                                             (link: any, index: number) => (
                                                 <Link
                                                     key={link.id}
@@ -975,16 +966,15 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
 
                                 <div className="bg-white/[0.03] border border-white/5 rounded-lg overflow-hidden shadow-sm">
                                     <div className="px-5 py-3 border-b border-white/10 bg-[#0060A9]/10">
-                                        <h3 className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
+                                        <div className="text-[#0060A9] font-poppins text-xs uppercase tracking-widest font-semibold">
                                             {
                                                 aboutusMenu?.administration
                                                     ?.heading
                                             }
-                                        </h3>
+                                        </div>
                                     </div>
                                     <div className="flex flex-col text-white/80">
                                         {aboutusMenu?.administration?.menulinks.map(
-                                             
                                             (link: any, index: number) => (
                                                 <Link
                                                     key={link.id}
@@ -1015,7 +1005,7 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                                 </div>
 
                                 <div className="grid grid-cols-2 gap-4 mt-2">
-                                    { }
+                                    {}
                                     {aboutusMenu?.aboutuscounter.map(
                                         (counter: any) => (
                                             <StatItem
@@ -1071,9 +1061,9 @@ function SubMenuView({
 
             <div className="flex flex-col p-6 overflow-y-auto gap-8 flex-1">
                 <div>
-                    <h3 className="text-lg font-poppins font-medium text-white mb-6 border-l-2 border-[#0060A9] pl-3">
+                    <div className="text-lg font-poppins font-medium text-white mb-6 border-l-2 border-[#0060A9] pl-3">
                         {title}
-                    </h3>
+                    </div>
                     <div className="mb-6">{children}</div>
                     {footer && (
                         <div className="mt-8 pt-8 border-t  border-white/5">

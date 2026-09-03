@@ -436,7 +436,7 @@ const HeroSection = ({
                                                     <Link
                                                         key={btn.id}
                                                         href={linkUrl}
-                                                        className="flex items-center gap-2.5 text-white hover:text-[#0189ae] font-medium text-base sm:text-lg transition-colors relative z-30 group cursor-pointer"
+                                                        className="flex items-center gap-2.5 text-white hover:text-white/80 font-medium text-base sm:text-lg transition-colors relative z-30 group cursor-pointer"
                                                         target={
                                                             isExternal
                                                                 ? "_blank"
@@ -448,7 +448,7 @@ const HeroSection = ({
                                                                 : undefined
                                                         }
                                                     >
-                                                        <Download className="w-5 h-5 text-white group-hover:text-[#0189ae] transition-colors" />
+                                                        <Download className="w-5 h-5 text-white group-hover:text-white/80 transition-colors" />
                                                         <span>
                                                             {btn.buttontext}
                                                         </span>
@@ -482,7 +482,7 @@ const HeroSection = ({
                 </div>
                 <div className="relative z-20 w-full xl:mt-20">
                     <section className="w-full bg-[#061623] lg:bg-transparent relative z-20 py-6 lg:py-8 px-6 md:px-8 xl:px-10">
-                        <div className="max-w-[1440px] mx-auto px-3 sm:px-3 py-4 sm:py-3 flex flex-col md:flex-row items-center justify-between gap-6 bg-[linear-gradient(90deg,#8B3D22_11.06%,#003763_100%)] rounded-sm">
+                        <div className="max-w-[1440px] mx-auto px-3 sm:px-3 py-4 sm:py-3 flex flex-col md:flex-row items-center justify-between gap-6 bg-[linear-gradient(90deg,#8B3D22_11.06%,#003763_100%)] rounded-[4px]">
                             {/* Heading */}
                             <h2 className="text-center font-poppins md:text-left text-xl xl:text-[25px] text-white">
                                 <span className="font-semibold">
@@ -499,7 +499,7 @@ const HeroSection = ({
                             <div className="flex flex-col sm:flex-row items-center gap-4">
                                 <Link
                                     href="#programmes"
-                                    className="inline-flex font-poppins items-center justify-center border border-white/60 px-5 py-2.5 text-md font-medium text-white rounded-sm whitespace-nowrap hover:bg-white/10 transition-colors"
+                                    className="inline-flex font-poppins items-center justify-center border border-white/60 px-5 py-2.5 text-md font-medium text-white rounded-[4px] whitespace-nowrap hover:bg-white/10 transition-colors"
                                 >
                                     <ArrowRightCircle
                                         className="w-5 h-5 mr-2"
@@ -513,7 +513,7 @@ const HeroSection = ({
                                     admBtn?.buttontext) && (
                                     <Link
                                         href={admBtn?.buttonlink || "#"}
-                                        className={`inline-flex w-full sm:w-auto items-center justify-center border border-[#CB000D] bg-[#CB000D] hover:bg-[#CB000D] px-6 py-2.5 text-md font-medium font-poppins text-white rounded-sm whitespace-nowrap transition-all relative overflow-hidden group ${admBtn?.buttonclass || ""}`}
+                                        className={`inline-flex w-full sm:w-auto items-center justify-center border border-[#CB000D] bg-[#CB000D] hover:bg-[#CB000D] px-6 py-2.5 text-md font-medium font-poppins text-white rounded-[4px] whitespace-nowrap transition-all relative overflow-hidden group ${admBtn?.buttonclass || ""}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >

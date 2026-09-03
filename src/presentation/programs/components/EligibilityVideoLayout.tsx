@@ -24,9 +24,9 @@ export const EligibilityVideoLayout = ({
     handleApplyClick,
 }: EligibilityVideoLayoutProps) => {
     return (
-        <div className="flex flex-col lg:flex-row gap-8 xl:gap-10 rounded-[4px] md:rounded-md items-stretch">
+        <div className="flex flex-col xl:flex-row gap-6 xl:gap-10 rounded-[4px] md:rounded-md items-stretch">
             {/* Left Column: Media (Video only for this layout) */}
-            <div className="w-full lg:w-1/2 h-[220px] sm:h-[300px] lg:h-auto lg:min-h-[380px] relative  overflow-hidden group">
+            <div className="w-full xl:w-1/2 aspect-video relative rounded-[4px] md:rounded-md overflow-hidden group">
                 <div className="w-full h-full relative">
                     <YoutubePopup
                         videoUrl={
@@ -37,14 +37,16 @@ export const EligibilityVideoLayout = ({
                             heroSection?.herobtn?.buttonlink ||
                             "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
                         }
-                        ytClassName="w-full h-full absolute inset-0 object-cover"
-                        playIcon={true}
+                        ytClassName="w-full h-full absolute inset-0"
+                        imgClassName="object-cover object-center"
+                        inline={true}
+                        playIcon={false}
                     />
                 </div>
             </div>
 
             {/* Right Column: Content */}
-            <div className="w-full bg-[#061623] rounded-[4px] md:rounded-md p-5 lg:p-5 xl:p-6 2xl:p-8 lg:w-1/2 flex flex-col justify-between">
+            <div className="w-full bg-[#061623] rounded-[4px] md:rounded-md p-5 sm:p-6 xl:p-6 2xl:p-8 xl:w-1/2 flex flex-col justify-between">
                 <div>
                     <div className="grid grid-cols-2 mb-4 divide-x divide-gray-200">
                         <div className="flex flex-col items-start text-left pr-4">

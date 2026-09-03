@@ -69,8 +69,8 @@ const zenithProgrammes: ZenithProgrammeItem[] = [
 ];
 
 const schoolOrderMap: Record<string, number> = {
-    "School of Engineering & Technology": 1,
-    "Zenith School of AI": 2,
+    "Zenith School of AI": 1,
+    "School of Engineering & Technology": 2,
     "School of Management and Commerce": 3,
     "School of Legal Studies": 4,
     "School of Medical & Allied Sciences": 5,
@@ -572,7 +572,7 @@ const ProgrammesExplorer = ({
                             {isProspectusPopupEnabled && prospectusUrl && (
                                 <Link
                                     href={prospectusUrl}
-                                    className="flex items-center gap-2 px-5 py-2.5 border border-white/20 text-white/90 text-[15px] font-medium rounded-sm hover:bg-white/5 transition-all whitespace-nowrap shrink-0"
+                                    className="flex items-center gap-2 px-5 py-2.5 border border-white/90 text-white/90 text-[15px] font-medium !rounded-[4px] hover:bg-white/5 transition-all whitespace-nowrap shrink-0"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

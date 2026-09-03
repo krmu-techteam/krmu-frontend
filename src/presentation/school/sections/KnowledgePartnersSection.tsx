@@ -1,125 +1,119 @@
 import { StrapiMedia } from "@/lib/types/common";
 import { KnowledgePartnerLogos } from "@/presentation/school/components";
-import Image from "next/image";
+import SectionDivider from "@/components/common/SectionDivider";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import SectionDivider from "@/components/common/SectionDivider";
-
-import { SCHOOL_COE_MAP } from "@/features/school";
 
 type Props = {
     title: string;
     logos: StrapiMedia[];
     slug?: string;
+    coetitle1?: string;
+    coetitle2?: string;
+    coebtn1?: any;
+    coebtn2?: any;
 };
 
-const getCoeImage = (slug?: string, index?: number, fallbackUrl?: string) => {
-    if (
-        fallbackUrl &&
-        !fallbackUrl.includes("modules/school/knowledge-partner")
-    ) {
-        return fallbackUrl;
-    }
-    const idx = (index || 0) + 1;
-    if (!slug)
-        return fallbackUrl || "/images/school/knowledge-partner/soet-1.jpg";
+const KnowledgePartnersSection = ({
+    title,
+    logos,
+    slug,
+    coetitle1,
+    coetitle2,
+    coebtn1,
+    coebtn2,
+}: Props) => {
+    const isSoet =
+        slug === "school-of-engineering-and-technology" ||
+        slug === "school-of-engineering-technology";
 
-    if (slug.includes("engineering"))
-        return `/images/school/knowledge-partner/soet-${idx}.jpg`;
-    if (slug.includes("management") || slug.includes("commerce"))
-        return `/images/school/knowledge-partner/somc-${idx}.jpg`;
-    if (slug.includes("legal") || slug.includes("law"))
-        return `/images/school/knowledge-partner/sols-${idx}.jpg`;
-    if (slug.includes("medical") || slug.includes("pharmacy"))
-        return `/images/school/knowledge-partner/smas-${idx}.jpg`;
-    if (slug.includes("physiotherapy"))
-        return `/images/school/knowledge-partner/sprs-${idx}.jpg`;
-    if (slug.includes("liberal"))
-        return `/images/school/knowledge-partner/sola-${idx}.jpg`;
-    if (slug.includes("architecture") || slug.includes("design"))
-        return `/images/school/knowledge-partner/soad-${idx}.jpg`;
-    if (slug.includes("basic") || slug.includes("applied"))
-        return `/images/school/knowledge-partner/sbas-${idx}.jpg`;
-    if (slug.includes("education"))
-        return `/images/school/knowledge-partner/soed-${idx}.jpg`;
+    const card1Title =
+        coetitle1 ||
+        (isSoet ? "Centre of Excellence in Robotics and Automation" : "");
+    const card2Title =
+        coetitle2 ||
+        (isSoet ? "Centre of Excellence- Artificial Intelligence" : "");
 
-    return fallbackUrl || `/images/school/knowledge-partner/soet-${idx}.jpg`;
-};
+    const card1BtnText =
+        coebtn1?.buttontext ||
+        coetitle1 ||
+        (isSoet ? "Centre of Excellence in Robotics and Automation" : "");
+    const card1BtnLink = coebtn1?.buttonlink || "/programs/b-tech-cse";
 
-const KnowledgePartnersSection = ({ title, logos, slug }: Props) => {
-    const coeList = (slug && SCHOOL_COE_MAP[slug]) || [];
+    const card2BtnText =
+        coebtn2?.buttontext ||
+        coetitle2 ||
+        (isSoet ? "Centre of Excellence- Artificial Intelligence" : "");
+    const card2BtnLink = coebtn2?.buttonlink || "/programs/bca-ai-data-science";
+
+    const hasCoeCards = Boolean(card1Title || card2Title);
 
     return (
         <section
             id="knowledge-partners"
             className="relative py-12 xl:py-20 font-poppins scroll-mt-28"
         >
-            <div className="">
+            <div>
                 {/* Title */}
                 <h2 className="text-center text-white font-serif text-3xl sm:text-4xl md:text-[44px] font-bold mb-6 lg:mb-12 tracking-tight">
                     {title || "Knowledge Partners"}
                 </h2>
 
-                {/* Top: Logos Row */}
+                {/* Logos Row */}
                 <div
                     className={`max-w-[1440px] mx-auto w-full lg:px-12 ${
-                        coeList && coeList.length > 1 ? "mb-8 lg:mb-12" : "mb-0"
+                        hasCoeCards ? "mb-8 lg:mb-12" : ""
                     }`}
                 >
                     <KnowledgePartnerLogos logos={logos} />
                 </div>
 
-                {/* Bottom Cards: 2-col Grid if multiple cards exist */}
-                {coeList && coeList.length > 1 && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 max-w-[1440px] mx-auto w-full px-4 md:px-8 lg:px-12">
-                        {coeList.map((coe, idx) => (
-                            <Link
-                                key={idx}
-                                href={coe.link}
-                                target={
-                                    coe.link.startsWith("http")
-                                        ? "_blank"
-                                        : undefined
-                                }
-                                rel={
-                                    coe.link.startsWith("http")
-                                        ? "noopener noreferrer"
-                                        : undefined
-                                }
-                                className={`rounded-[4px] overflow-hidden flex flex-col group cursor-pointer transition-all duration-300 ${
-                                    coeList.length === 1
-                                        ? "w-full max-w-[620px]"
-                                        : "w-full"
-                                }`}
-                            >
-                                {/* Separate Image Container - Full width, auto height */}
-                                <div className="w-full relative overflow-hidden rounded-t-[4px]">
-                                    <Image
-                                        src={getCoeImage(slug, idx, coe.imgUrl)}
-                                        alt={coe.title}
-                                        width={602}
-                                        height={360}
-                                        className="w-full h-auto object-cover block"
-                                        unoptimized
-                                    />
+                {/* COE Dark Blue Gradient Cards (No photo images) */}
+                {hasCoeCards && (
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-[1440px] mx-auto w-full px-4 md:px-8 lg:px-12">
+                        {card1Title && (
+                            <div className="group font-poppins bg-gradient-to-r from-[#061623] to-[#05345B] border-3 border-[#1a3353] rounded-[8px] p-6 xl:p-10 flex flex-col justify-between items-center text-center transition-all duration-300">
+                                <div className="flex-1 flex items-center justify-center mb-8">
+                                    <div className="text-white text-xl sm:text-2xl xl:text-3xl font-medium leading-relaxed">
+                                        {card1Title}
+                                    </div>
                                 </div>
 
-                                {/* Separate Gradient Background Bar overlapping 1px to prevent white gaps */}
-                                <div className="bg-gradient-to-r from-[#061623] to-[#05345B] hover:opacity-95 transition-opacity p-5 sm:px-7 sm:py-3 flex items-center justify-between -mt-1 relative z-10 rounded-b-[4px]">
-                                    <div>
-                                        {coe.subtitle && (
-                                            <p className="text-gray-300 text-sm sm:text-base font-normal">
-                                                {coe.subtitle}
-                                            </p>
-                                        )}
-                                        <h3 className="text-white text-[16px] lg:text-xl font-medium tracking-wide mt-0.5">
-                                            {coe.title}
-                                        </h3>
+                                {card1BtnText && (
+                                    <Link
+                                        href={card1BtnLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-sm xl:text-base py-3 px-6 text-white rounded-[4px] border border-white/80 hover:border-white hover:bg-white/10 transition-all relative overflow-hidden group"
+                                    >
+                                        <span>{card1BtnText}</span>
+                                        <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0" />
+                                    </Link>
+                                )}
+                            </div>
+                        )}
+
+                        {card2Title && (
+                            <div className="group font-poppins bg-gradient-to-l from-[#061623] to-[#05345B] border-3 border-[#1a3353] rounded-[8px] p-6 xl:p-10 flex flex-col justify-between items-center text-center transition-all duration-300">
+                                <div className="flex-1 flex items-center justify-center mb-8">
+                                    <div className="text-white text-xl sm:text-2xl xl:text-3xl font-medium leading-relaxed">
+                                        {card2Title}
                                     </div>
-                                    <ArrowUpRight className="text-white w-6 h-6 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0 ml-4" />
                                 </div>
-                            </Link>
-                        ))}
+
+                                {card2BtnText && (
+                                    <Link
+                                        href={card2BtnLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-sm xl:text-base py-3 px-6 text-white rounded-[4px] border border-white/80 hover:border-white hover:bg-white/10 transition-all relative overflow-hidden group"
+                                    >
+                                        <span>{card2BtnText}</span>
+                                        <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0" />
+                                    </Link>
+                                )}
+                            </div>
+                        )}
                     </div>
                 )}
             </div>
