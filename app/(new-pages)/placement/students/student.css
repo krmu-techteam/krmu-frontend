@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-newsreader: var(--font-newsreader-next);
+}

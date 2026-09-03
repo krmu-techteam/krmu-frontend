@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Newsreader } from "next/font/google";
 import "./(main-website)/globals.css";
 import Script from "next/script";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
+});
+
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
