@@ -33,7 +33,7 @@ const ScholarUGPG = () => {
           </TabsList>
           <TabsContent value="undergraduate">
             <h3 className="text-2xl sm:text-5xl lg:text-[64px] font-medium text-center mt-[50px] mb-[30px]">
-              Under Graduate (UG) Programme
+              Undergraduate (UG) Programme
             </h3>
 
             <Accordion
@@ -132,7 +132,7 @@ const ScholarUGPG = () => {
                       <table>
                         <thead>
                           <tr>
-                            <th>Category</th>
+                            <th>Remarks</th>
                             <th>Scholarship</th>
                             <th>Remarks</th>
                           </tr>
@@ -140,21 +140,21 @@ const ScholarUGPG = () => {
                         <tbody>
                           <tr>
                             <td>
-                              Shero Scholarship (For Female Students) )
+                              Shero Scholarship (For Female Students)
                               (Applicable only on the Programme Fee for Semester
                               1 only)
                             </td>
                             <td>10%</td>
                             <td>
                               For Female students securing 70% and above in
-                              Class XII (To be paid in 2 equal instalments-1st
-                              instalment will be paid upfront post documents
+                              Class XII (To be paid in 2 equal installments: 1st
+                              installment will be paid upfront post document
                               verification and the amount of scholarship will be
                               deducted from the semester fee at the time of
-                              registration. 2nd instalment will be paid by
-                              cheque in 2nd Semester, if the student fulfils all
-                              the criteria listed under Note: 8) given below the
-                              table.)
+                              registration. 2nd installment will be paid by
+                              cheque in the 2nd Semester, if the student fulfils
+                              all the criteria listed under Note: 8) given below
+                              the table.)
                             </td>
                           </tr>
                           <tr>
@@ -170,13 +170,13 @@ const ScholarUGPG = () => {
                             <td>15%</td>
                             <td>
                               For students who have passed the 12th standard
-                              from K.R.Mangalam group of schools or KRMU
+                              from K.R. Mangalam group of schools or KRMU
                               Graduates opting to pursue another Undergraduate
                               (UG) programme
                             </td>
                           </tr>
                           <tr>
-                            <td>Defense Scholarship</td>
+                            <td>Defence Scholarship</td>
                             <td>15%</td>
                             <td>For children of Defence Personnel</td>
                           </tr>
@@ -193,16 +193,16 @@ const ScholarUGPG = () => {
                               <b>Sports Quota</b> - Represented India in Olympic
                               Games, Asian Games, World University, World Games,
                               World Championships, World Cups, Commonwealth
-                              Games, Asian Meets, Test Matches in Cricket.
-                              Commonwealth Championships, Asian Championship.
+                              Games, Asian Meets, Test Matches in Cricket,
+                              Commonwealth Championships, Asian Championship,
                               Asia Cup, SAF Games, Davis Games, Wimbledon
-                              Championship, US French, Australian Open Tennis
-                              Championship, Thomas Cup, Uber Cup, ALL England
-                              Badminton Tournament and International Athletic
-                              Permit Meet and any other International
-                              Tournament/ Championship, Games and Sports
-                              approved by IOA (Indian Olympic Association) and
-                              Govt. of India recognized Sports Federations.
+                              Championship, US Open, French Open, Australian
+                              Open Tennis Championship, Thomas Cup, Uber Cup,
+                              All England Badminton Tournament and International
+                              Athletic Permit Meet and any other International
+                              Tournament/Championship, Games and Sports approved
+                              by IOA (Indian Olympic Association) and Govt. of
+                              India recognised Sports Federations.
                             </td>
                             <td>100%</td>
                             <td>Position and Participation</td>
@@ -230,8 +230,8 @@ const ScholarUGPG = () => {
                           </tr>
                           <tr>
                             <td rowSpan={4}>
-                              <b>Sports Quota </b>– Junior National / Zone wise
-                              university / Ranji
+                              <b>Sports Quota </b>– Junior National / Zone Wise
+                              University / Ranji
                               <br />
                               Trophy
                             </td>
@@ -254,7 +254,7 @@ const ScholarUGPG = () => {
                             <td rowSpan={4}>
                               <b>Sports Quota</b> – National Women Championship
                               / Rural Championship /<br />
-                              School National (SGFI)/ level
+                              School National (SGFI)
                             </td>
                             <td>75%</td>
                             <td>1st position</td>
@@ -273,10 +273,10 @@ const ScholarUGPG = () => {
                           </tr>
                           <tr>
                             <td rowSpan={4}>
-                              <b>Sports Quota</b> – K.V.S National / C.B.S.E
+                              <b>Sports Quota</b> – K.V.S National / CBSE
                               National / Navodaya
                               <br />
-                              National / Sanik School National / All India
+                              National / Sainik School National / All India
                               Public School National
                             </td>
                             <td>25%</td>
@@ -315,8 +315,8 @@ const ScholarUGPG = () => {
                           </tr>
                           <tr>
                             <td rowSpan={4}>
-                              <b>Sports Quota</b> – C.B.S.E Cluster / K.V.S. /
-                              Navodaya / Sanik /<br />
+                              <b>Sports Quota</b> – CBSE Cluster / K.V.S. /
+                              Navodaya / Sainik /<br />
                               Zonal / District / State Women Festival
                             </td>
                             <td>25%</td>
@@ -335,33 +335,34 @@ const ScholarUGPG = () => {
                             <td>Participation</td>
                           </tr>
                           <tr>
-                            <th colSpan={3}>Remark</th>
+                            <th colSpan={3}>Note</th>
                           </tr>
                           <tr>
                             <td colSpan={3}>
                               <ol>
                                 <li>
-                                  For 100% Scholarship -To be paid in 3
-                                  instalment-1st instalment (25%) will be paid
-                                  upfront post documents verification and the
-                                  amount of scholarship will be deducted from
-                                  the semester fee at the time of registration.
-                                  2nd instalment (50%) and 3rd instalment (25%)
-                                  will be paid by cheque in 2nd Semester and 3rd
-                                  Semester respectively, if the student fulfills
-                                  all the criteria listed under Note : 7) given
-                                  below the table.
+                                  For 100% Scholarship - To be paid in 3
+                                  installments: 1st installment (25%) will be
+                                  paid upfront post document verification and
+                                  the amount of scholarship will be deducted
+                                  from the semester fee at the time of
+                                  registration. 2nd installment (50%) and 3rd
+                                  installment (25%) will be paid by cheque in
+                                  the 2nd Semester and 3rd Semester
+                                  respectively, if the student fulfils all the
+                                  criteria listed under Note: 7) given below the
+                                  table.
                                 </li>
                                 <li>
                                   For 75%/ 50%/ 25%/ 10% Scholarship - To be
-                                  paid in 2 equal instalments-1st instalment
-                                  will be paid upfront post documents
+                                  paid in 2 equal installments: 1st installment
+                                  will be paid upfront post document
                                   verification and the amount of scholarship
                                   will be deducted from the semester fee at the
-                                  time of registration. 2nd instalment will be
-                                  paid by cheque in 2nd Semester, if the student
-                                  fulfils all the criteria listed under Note: 7)
-                                  given below the table.
+                                  time of registration. 2nd installment will be
+                                  paid by cheque in the 2nd Semester, if the
+                                  student fulfils all the criteria listed under
+                                  Note: 7) given below the table.
                                 </li>
                               </ol>
                             </td>
@@ -391,7 +392,8 @@ const ScholarUGPG = () => {
                     }}
                   >
                     <p className="font-semibold text-center mb-5">
-                      CUET -1 (On the basis of percentage of best 4 subjects score)
+                      CUET-1 (On the basis of percentage of best 4 subjects
+                      score)
                     </p>
                     <div className="overflow-x-auto">
                       <table>
@@ -403,7 +405,7 @@ const ScholarUGPG = () => {
                         </thead>
                         <tbody>
                           <tr>
-                            <td>90% &amp; above</td> <td>100%</td>
+                            <td>90% and above</td> <td>100%</td>
                           </tr>
                           <tr>
                             <td>75% to less than 90%</td> <td>50%</td>
@@ -422,7 +424,7 @@ const ScholarUGPG = () => {
                     </div>
 
                     <p className="font-semibold text-center my-5">
-                      CUET -2 (On the basis of average percentile of best 4
+                      CUET-2 (On the basis of average percentile of best 4
                       subjects)
                     </p>
                     <div className="overflow-x-auto">
@@ -434,18 +436,24 @@ const ScholarUGPG = () => {
                         </thead>
                         <tbody>
                           <tr>
-                            <td>95 percentile and above</td> <td>100%</td>
+                            <td>95th percentile and above</td> <td>100%</td>
                           </tr>
                           <tr>
-                            <td>85 percentile to less than 95 percentile</td>
+                            <td>
+                              85th percentile to less than 95th percentile
+                            </td>
                             <td>35%</td>
                           </tr>
                           <tr>
-                            <td>70 percentile to less than 85 percentile</td>
+                            <td>
+                              70th percentile to less than 85th percentile
+                            </td>
                             <td>25%</td>
                           </tr>
                           <tr>
-                            <td>50 percentile to less than 70 percentile</td>
+                            <td>
+                              50th percentile to less than 70th percentile
+                            </td>
                             <td>10%</td>
                           </tr>
                         </tbody>
@@ -510,7 +518,7 @@ const ScholarUGPG = () => {
                         </thead>
                         <tbody>
                           <tr>
-                            <td>130.01 & above</td> <td>100%</td>
+                            <td>130.01 and above</td> <td>100%</td>
                           </tr>
                           <tr>
                             <td>110.01 to 130</td> <td>35%</td>
@@ -525,34 +533,34 @@ const ScholarUGPG = () => {
                       <table className="mt-5">
                         <thead>
                           <tr>
-                            <th colSpan={3}>Remark</th>
+                            <th colSpan={3}>Note</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td colSpan={3}>
-                              1. For 100% Scholarship -To be paid in 3
-                              instalment-1st instalment (25%) will be paid
-                              upfront post documents verification and the amount
+                              1. For 100% Scholarship - To be paid in 3
+                              installments: 1st installment (25%) will be paid
+                              upfront post document verification and the amount
                               of scholarship will be deducted from the semester
-                              fee at the time of registration. 2nd instalment
-                              (50%) and 3rd instalment (25%) will be paid by
-                              cheque in 2nd Semester and 3rd Semester
-                              respectively, if the student fulfills all the
-                              criteria listed under Note : 7) given below the
+                              fee at the time of registration. 2nd installment
+                              (50%) and 3rd installment (25%) will be paid by
+                              cheque in the 2nd Semester and 3rd Semester
+                              respectively, if the student fulfils all the
+                              criteria listed under Note: 7) given below the
                               table.
                             </td>
                           </tr>
                           <tr>
                             <td>
                               2. For 75%/ 50%/ 25%/ 10% Scholarship - To be paid
-                              in 2 equal instalments-1st instalment will be paid
-                              upfront post documents verification and the amount
-                              of scholarship will be deducted from the semester
-                              fee at the time of registration. 2nd instalment
-                              will be paid by cheque in 2nd Semester, if the
-                              student fulfils all the criteria listed under
-                              Note: 7) given below the table.
+                              in 2 equal installments: 1st installment will be
+                              paid upfront post document verification and the
+                              amount of scholarship will be deducted from the
+                              semester fee at the time of registration. 2nd
+                              installment will be paid by cheque in the 2nd
+                              Semester, if the student fulfils all the criteria
+                              listed under Note: 7) given below the table.
                             </td>
                           </tr>
                         </tbody>
@@ -566,7 +574,7 @@ const ScholarUGPG = () => {
           </TabsContent>
           <TabsContent value="postgraduate">
             <h3 className="text-2xl sm:text-5xl lg:text-[64px] font-medium text-center mt-[50px] mb-[30px]">
-              Post Graduate (PG) Programmes
+              Postgraduate (PG) Programmes
             </h3>
             <Accordion
               type="single"
@@ -582,7 +590,7 @@ const ScholarUGPG = () => {
                       background: `linear-gradient(18deg,#0060aa 14.28%,#051630 118.99%)`,
                     }}
                   >
-                    PG (MBA) on basis of Graduations Score
+                    PG (MBA) on Basis of Graduations Score
                   </AccordionTrigger>
                   <AccordionContent
                     className="pt-[30px] px-5 pb-[15px] ugpgtable"
@@ -606,15 +614,15 @@ const ScholarUGPG = () => {
                             <td>95% and above</td> <td>100%</td>
                             <td>
                               <div>
-                                To be paid in 3 instalment-1st instalment (25%)
-                                will be paid upfront post documents verification
-                                and the amount of scholarship will be deducted
-                                from the semester fee at the time of
-                                registration. 2nd instalment (50%) and 3rd
-                                instalment (25%) will be paid by cheque in 2nd
-                                Semester and 3rd Semester respectively, if the
-                                student fulfills all the criteria listed under
-                                Note : 2) given below the table.
+                                To be paid in 3 installments: 1st installment
+                                (25%) will be paid upfront post document
+                                verification and the amount of scholarship will
+                                be deducted from the semester fee at the time of
+                                registration. 2nd installment (50%) and 3rd
+                                installment (25%) will be paid by cheque in the
+                                2nd Semester and 3rd Semester respectively, if
+                                the student fulfils all the criteria listed
+                                under Note: 2) given below the table.
                               </div>
                             </td>
                           </tr>
@@ -623,14 +631,14 @@ const ScholarUGPG = () => {
                             <td id="undergraduate">35%</td>
                             <td rowSpan={2}>
                               <div>
-                                To be paid in 2 equal instalments-1st instalment
-                                will be paid upfront post documents verification
-                                and the amount of scholarship will be deducted
-                                from the semester fee at the time of
+                                To be paid in 2 equal installments: 1st
+                                installment will be paid upfront post document
+                                verification and the amount of scholarship will
+                                be deducted from the semester fee at the time of
                                 registration. 2nd instalment will be paid by
-                                cheque in 2nd Semester, if the student fulfils
-                                all the criteria listed under Note: 2) given
-                                below the table.
+                                cheque in the 2nd Semester, if the student
+                                fulfils all the criteria listed under Note: 2)
+                                given below the table.
                               </div>
                             </td>
                           </tr>
@@ -705,7 +713,7 @@ const ScholarUGPG = () => {
                       background: `linear-gradient(18deg,#0060aa 14.28%,#051630 118.99%)`,
                     }}
                   >
-                    On the basis of Entrance Examination
+                    On the Basis of Entrance Examination
                   </AccordionTrigger>
                   <AccordionContent
                     className="pt-[30px] px-5 pb-[15px] ugpgtable"
@@ -729,34 +737,36 @@ const ScholarUGPG = () => {
                         </thead>
                         <tbody>
                           <tr>
-                            <td>95.01 percentile and above</td> <td>100%</td>
+                            <td>95.01th percentile and above</td> <td>100%</td>
                             <td>
-                              To be paid in 3 instalment-1st instalment (25%)
-                              will be paid upfront post documents verification
-                              and the amount of scholarship will be deducted
-                              from the semester fee at the time of registration.
-                              2nd instalment (50%) and 3rd instalment (25%) will
-                              be paid by cheque in 2nd Semester and 3rd Semester
-                              respectively, if the student fulfills all the
-                              criteria listed under Note : 2) given below the
-                              table.
+                              To be paid in 3 installments: 1st installment
+                              (25%) will be paid upfront post document
+                              verification and the amount of scholarship will be
+                              deducted from the semester fee at the time of
+                              registration. 2nd installment (50%) and 3rd
+                              installment (25%) will be paid by cheque in the
+                              2nd Semester and 3rd Semester respectively, if the
+                              student fulfils all the criteria listed under
+                              Note: 2) given below the table.
                             </td>
                           </tr>
                           <tr>
-                            <td>85.01 percentile to 95 percentile</td>{" "}
+                            <td>85.01th percentile to 95th percentile</td>{" "}
                             <td>35%</td>
                             <td rowSpan={2}>
-                              To be paid in 2 equal instalments-1st instalment
-                              will be paid upfront post documents verification
-                              and the amount of scholarship will be deducted
-                              from the semester fee at the time of registration.
-                              2nd instalment will be paid by cheque in 2nd
-                              Semester, if the student fulfils all the criteria
-                              listed under Note: 2) given below the table.
+                              To be paid in 2 equal installments: 1st
+                              installment will be paid upfront post document
+                              verification and the amount of scholarship will be
+                              deducted from the semester fee at the time of
+                              registration. 2nd installment will be paid by
+                              cheque in the 2nd Semester, if the student fulfils
+                              all the criteria listed under Note: 2) given below
+                              the table.
                             </td>
                           </tr>
                           <tr>
-                            <td>75 percentile to 85 percentile</td> <td>25%</td>
+                            <td>75th percentile to 85th percentile</td>{" "}
+                            <td>25%</td>
                           </tr>
                         </tbody>
                       </table>
@@ -778,14 +788,14 @@ const ScholarUGPG = () => {
                             <td rowSpan={2}>
                               1. Applicable for students who attempted CUET
                               <br />
-                              2. To be paid in 2 equal instalments-1st
-                              instalment will be paid upfront post documents
+                              2. To be paid in 2 equal installments: 1st
+                              installment will be paid upfront post document
                               verification and the amount of scholarship will be
                               deducted from the semester fee at the time of
-                              registration. 2nd instalment will be paid by
-                              cheque in 2nd Semester, if the student fulfils all
-                              the criteria listed under Note: 2) given below the
-                              table.
+                              registration. 2nd installment will be paid by
+                              cheque in the 2nd Semester, if the student fulfils
+                              all the criteria listed under Note: 2) given below
+                              the table.
                             </td>
                           </tr>
                           <tr>
@@ -830,20 +840,21 @@ const ScholarUGPG = () => {
                           <tr>
                             <td>
                               KRMU Undergraduate Programme student seeking
-                              admission in Post Graduate Programme
+                              admission in Postgraduate Programme
                             </td>
                             <td>10%</td>
                             <td>
                               Alumni Scholarship to be paid in two equal
                               instalments:
                               <br />
-                              To be paid in 2 equal instalments-1st instalment
-                              will be paid upfront post documents verification
-                              and the amount of scholarship will be deducted
-                              from the semester fee at the time of registration.
-                              2nd instalment will be paid by cheque in 2nd
-                              Semester, if the student fulfils all the criteria
-                              listed under Note: 2) given below the table.
+                              Alumni Scholarship to be paid in 2 equal
+                              instalments: 1st installment will be paid upfront
+                              post document verification and the amount of
+                              scholarship will be deducted from the semester fee
+                              at the time of registration. 2nd installment will
+                              be paid by cheque in the 2nd Semester, if the
+                              student fulfils all the criteria listed under
+                              Note: 2) given below the table.
                             </td>
                           </tr>
                         </tbody>

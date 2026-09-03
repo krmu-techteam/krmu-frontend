@@ -23,13 +23,13 @@ const YRCHero = () => {
           <p>
             The{" "}
             <strong>
-              Red Cross Society’s motto, “Promoting Health, Serving Humanity ,”
-              emphasizes humanitarian values, encouraging individuals to
-              prioritize the well-being of others above personal interests. The
+              Red Cross Society’s motto, “Promoting Health, Serving Humanity,”
+              emphasises humanitarian values, encouraging individuals to
+              prioritise the well-being of others above personal interests. The
               society
             </strong>{" "}
             provides students with opportunities to enhance their personalities
-            and develop leadership and organizational skills while serving
+            and develop leadership and organisational skills while serving
             society. The Red Cross Society aims to nurture compassion and social
             responsibility through initiatives such as healthcare camps, blood
             donation drives, and awareness campaigns.
@@ -39,11 +39,11 @@ const YRCHero = () => {
             The{" "}
             <strong>
               Red Cross Society’s symbol, the Red Cross, on a white background,
-              is a globally recognized emblem of protection and aid. It
+              is a globally recognised emblem of protection and aid. It
               represents hope, care, and support in times of crisis, much like
               the Rath
             </strong>{" "}
-            wheel of the Konark Sun Temple, which symbolizes the continuous
+            wheel of the Konark Sun Temple, which symbolises the continuous
             cycle of life and the unending spirit of service.
           </p>
         </div>
