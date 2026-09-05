@@ -14,7 +14,7 @@ export function ResearchSection() {
                     <div className="w-full lg:w-[58%] xl:w-[925px]">
                         <div className="hidden lg:block relative w-full aspect-video xl:aspect-auto xl:w-[925px] xl:h-[464px] rounded-[4px] overflow-hidden mb-16">
                             <Image
-                                src="/images/home/research/research-girl.jpeg"
+                                src="/images/home/research/research-girl.webp"
                                 alt="Research at KRMU"
                                 fill
                                 sizes="(max-width: 768px) 100vw, 60vw"

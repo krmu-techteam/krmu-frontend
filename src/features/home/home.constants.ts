@@ -111,14 +111,14 @@ export const RECRUITER_LOGOS: RecruiterLogoType[] = [
 ];
 
 export const SUCCESS_STORIES: SuccessStoryType[] = [
-    { image: "/images/home/placements/01-rishav-bakshi.png" },
-    { image: "/images/home/placements/02-daksh-mehta.png" },
-    { image: "/images/home/placements/03-vineet-verma.png" },
-    { image: "/images/home/placements/04-shaurya-tyagi.png" },
-    { image: "/images/home/placements/05-naman-pune.png" },
-    { image: "/images/home/placements/06-nitesh.png" },
-    { image: "/images/home/placements/07-naman-pune.png" },
-    { image: "/images/home/placements/08-ayush-sai.png" },
+    { image: "/images/home/placements/01-rishav-bakshi.webp" },
+    { image: "/images/home/placements/02-daksh-mehta.webp" },
+    { image: "/images/home/placements/03-vineet-verma.webp" },
+    { image: "/images/home/placements/04-shaurya-tyagi.webp" },
+    { image: "/images/home/placements/05-naman-pune.webp" },
+    { image: "/images/home/placements/06-nitesh.webp" },
+    { image: "/images/home/placements/07-naman-pune.webp" },
+    { image: "/images/home/placements/08-ayush-sai.webp" },
 ];
 
 export const PLACEMENT_STATS: PlacementStatType[] = [
@@ -156,36 +156,36 @@ export const PLACEMENT_CARD_CONFIGS: PlacementCardConfigType[] = [
 ];
 
 export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
-    { id: 1, src: "/images/home/whykrmu/whykrmu-1.jpg", alt: "Why KRMU 1" },
-    { id: 2, src: "/images/home/whykrmu/whykrmu-2.jpg", alt: "Why KRMU 2" },
-    { id: 3, src: "/images/home/whykrmu/whykrmu-3.jpg", alt: "Why KRMU 3" },
-    { id: 4, src: "/images/home/whykrmu/whykrmu-4.jpg", alt: "Why KRMU 4" },
-    { id: 5, src: "/images/home/whykrmu/whykrmu-5.jpg", alt: "Why KRMU 5" },
-    { id: 6, src: "/images/home/whykrmu/whykrmu-6.jpg", alt: "Why KRMU 6" },
-    { id: 7, src: "/images/home/whykrmu/whykrmu-7.jpg", alt: "Why KRMU 7" },
-    { id: 8, src: "/images/home/whykrmu/whykrmu-8.jpg", alt: "Why KRMU 8" },
-    { id: 9, src: "/images/home/whykrmu/whykrmu-9.jpg", alt: "Why KRMU 9" },
+    { id: 1, src: "/images/home/whykrmu/whykrmu-1.webp", alt: "Why KRMU 1" },
+    { id: 2, src: "/images/home/whykrmu/whykrmu-2.webp", alt: "Why KRMU 2" },
+    { id: 3, src: "/images/home/whykrmu/whykrmu-3.webp", alt: "Why KRMU 3" },
+    { id: 4, src: "/images/home/whykrmu/whykrmu-4.webp", alt: "Why KRMU 4" },
+    { id: 5, src: "/images/home/whykrmu/whykrmu-5.webp", alt: "Why KRMU 5" },
+    { id: 6, src: "/images/home/whykrmu/whykrmu-6.webp", alt: "Why KRMU 6" },
+    { id: 7, src: "/images/home/whykrmu/whykrmu-7.webp", alt: "Why KRMU 7" },
+    { id: 8, src: "/images/home/whykrmu/whykrmu-8.webp", alt: "Why KRMU 8" },
+    { id: 9, src: "/images/home/whykrmu/whykrmu-9.webp", alt: "Why KRMU 9" },
 ];
 
 export const LIFE_AT_KRMU_CAROUSEL_CONFIGS: LifeAtKRMUFeatureCardType[] = [
     {
         title: "Energy.\nExcitement.\nExcellence.",
         label: "Events",
-        bg: "/modules/home/life/event1.png",
+        bg: "/modules/home/life/event1.webp",
         accent: "Excitement.",
         url: "/happenings/news-and-events",
     },
     {
         title: "Explore.\nExperience.\nExcel.",
         label: "Facilities",
-        bg: "/modules/home/life/event2.jpg",
+        bg: "/modules/home/life/event2.webp",
         accent: "Experience.",
         url: "/krmu-campus-facilities",
     },
     {
         title: "Connect.\nCreate.\nCelebrate.",
         label: "Clubs & Societies",
-        bg: "/modules/home/life/event3.jpg",
+        bg: "/modules/home/life/event3.webp",
         accent: "Create.",
         url: "/clubs-and-societies",
     },
@@ -282,27 +282,27 @@ export const TESTIMONIALS: TestimonialType[] = [
         name: "Veeresh Tarnal",
         role: "MBA",
         quote: "KRMU has been a turning point in my academic journey. The curriculum is practical, industry-focused, and taught by faculty who genuinely care about our growth.",
-        image: "/modules/home/testimonial/t1.png",
+        image: "/modules/home/testimonial/t1.webp",
     },
     {
         id: 2,
         name: "Ananya Sharma",
         role: "B.Tech CSE",
         quote: "The technical infrastructure and the research-driven environment at KRMU are exceptional. I was able to work on cutting-edge AI projects that prepared me for the tech industry.",
-        image: "/modules/home/testimonial/t1.png",
+        image: "/modules/home/testimonial/t1.webp",
     },
     {
         id: 3,
         name: "Rahul Mehta",
         role: "Law",
         quote: "The moot court sessions and the guidance from experienced legal professionals gave me a real-world perspective on law that goes beyond textbooks.",
-        image: "/modules/home/testimonial/t1.png",
+        image: "/modules/home/testimonial/t1.webp",
     },
     {
         id: 4,
         name: "Shreya Singh",
         role: "B.Des Fashion",
         quote: "The creative freedom and industry exposure I got at KRMU helped me launch my own label. The workshops and fashion shows were invaluable learning experiences.",
-        image: "/modules/home/testimonial/t1.png",
+        image: "/modules/home/testimonial/t1.webp",
     },
 ];

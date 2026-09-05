@@ -61,12 +61,14 @@ export default async function HomePage() {
         newsEventsSection,
         testimonialsSection,
         testimonialsData,
+        newsEventsData,
     ] = await Promise.all([
         homeService.getComponent(HOME_COMPONENT_KEYS.HERO),
         homeService.getComponent(HOME_COMPONENT_KEYS.ABOUT),
         homeService.getComponent(HOME_COMPONENT_KEYS.NEWS_EVENTS),
         homeService.getComponent(HOME_COMPONENT_KEYS.TESTIMONIALS),
         homeService.getTestimonials(),
+        homeService.getNewsEvents(1, 10),
     ]);
 
     const {
@@ -140,9 +142,10 @@ export default async function HomePage() {
                         {newsEventsSection ? (
                             <NewsEventsSection
                                 {...(newsEventsSection as any)}
+                                eventsData={newsEventsData}
                             />
                         ) : (
-                            <NewsEventsSection />
+                            <NewsEventsSection eventsData={newsEventsData} />
                         )}
                     </Suspense>
                 </Container>

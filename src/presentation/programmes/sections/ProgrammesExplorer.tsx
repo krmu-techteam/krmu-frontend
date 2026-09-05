@@ -671,7 +671,7 @@ const ProgrammesExplorer = ({
                         <div
                             className="absolute inset-0 opacity-[0.03]"
                             style={{
-                                background: "url('/bg-noise.png') repeat",
+                                background: "url('/bg-noise.webp') repeat",
                                 backgroundSize: "50px",
                             }}
                         ></div>

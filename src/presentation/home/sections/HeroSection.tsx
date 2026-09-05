@@ -13,12 +13,15 @@ import {
 } from "../components/hero";
 import { HeroSectionComponent } from "@/features/home";
 
-const HeroSearch = dynamic(
-    () => import("../components/hero/HeroSearch").then((mod) => mod.HeroSearch),
-    { ssr: false }
+const HeroSearch = dynamic(() =>
+    import("../components/hero/HeroSearch").then((mod) => mod.HeroSearch)
 );
 
-export const HeroSection = ({ title, subtitle }: HeroSectionComponent) => {
+export const HeroSection = ({
+    title,
+    subtitle,
+    HeroSectionVideo,
+}: HeroSectionComponent) => {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     useEffect(() => {
@@ -42,7 +45,7 @@ export const HeroSection = ({ title, subtitle }: HeroSectionComponent) => {
             {/* Video Section with Rounded Corners */}
             <section className="relative w-full aspect-video lg:aspect-auto lg:h-[78vh] lg:min-h-[400px] px-0 md:px-4 lg:px-7 pt-0 md:pt-4">
                 <div className="relative w-full h-full rounded-none md:rounded-[4px] overflow-hidden group/hero bg-[#0B1221]">
-                    <HeroVideo />
+                    <HeroVideo HeroSectionVideo={HeroSectionVideo} />
                     <HeroContent title={title} subtitle={subtitle} />
                     <HeroVirtualTour />
                 </div>
@@ -80,10 +83,12 @@ export const HeroSection = ({ title, subtitle }: HeroSectionComponent) => {
                 </span>
             </div>
 
-            <HeroSearch
-                isOpen={isSearchOpen}
-                onClose={() => setIsSearchOpen(false)}
-            />
+            {isSearchOpen && (
+                <HeroSearch
+                    isOpen={isSearchOpen}
+                    onClose={() => setIsSearchOpen(false)}
+                />
+            )}
         </div>
     );
 };

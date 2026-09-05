@@ -29,11 +29,10 @@ export function PlacementsSection() {
                             {/* Background Shade Image */}
                             <div className="absolute -inset-8 sm:-inset-12 lg:-inset-16 z-0 pointer-events-none flex items-center justify-center">
                                 <Image
-                                    src="/images/home/placements/shade.png"
+                                    src="/images/home/placements/shade.webp"
                                     alt=""
                                     fill
                                     className="w-full h-full object-contain opacity-95 scale-110 sm:scale-125"
-                                    priority
                                 />
                             </div>
 
@@ -56,7 +55,6 @@ export function PlacementsSection() {
                                                     fill
                                                     sizes="(max-width: 768px) 100vw, 45vw"
                                                     className="object-contain scale-120"
-                                                    priority={i === 0}
                                                 />
                                             </div>
                                         </div>

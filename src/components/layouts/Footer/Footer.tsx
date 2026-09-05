@@ -368,8 +368,10 @@ const footerLinks: Record<string, FooterLink[]> = {
 };
 
 const Footer = async () => {
-    const footerData = await getFooter();
-    const footerAssets = await getPageAssets();
+    const [footerData, footerAssets] = await Promise.all([
+        getFooter(),
+        getPageAssets(),
+    ]);
 
     const { js_in_footer } = footerAssets || {};
 
@@ -401,7 +403,7 @@ const Footer = async () => {
         <footer
             className="relative w-full overflow-hidden font-poppins tracking-tight bg-cover bg-no-repeat bg-center"
             style={{
-                backgroundImage: "url('/modules/home/footer/footer-bg.png')",
+                backgroundImage: "url('/modules/home/footer/footer-bg.webp')",
             }}
         >
             {/* Dark Black Overlay */}

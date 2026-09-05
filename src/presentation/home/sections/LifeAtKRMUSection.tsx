@@ -63,6 +63,8 @@ export function LifeAtKRMUSection() {
                             <img
                                 src={img.src}
                                 alt={img.alt}
+                                loading="lazy"
+                                decoding="async"
                                 className="h-full w-auto object-contain block"
                             />
                         </div>

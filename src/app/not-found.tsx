@@ -5,9 +5,11 @@ import Link from "next/link";
 import { Home, ArrowRight } from "lucide-react";
 
 export default function NotFound() {
-  return (
-    <>
-      <style dangerouslySetInnerHTML={{ __html: `
+    return (
+        <>
+            <style
+                dangerouslySetInnerHTML={{
+                    __html: `
         /* Hide all layout headers, footers, chatbots, popup forms, widgets and external scripts */
         header, 
         footer, 
@@ -30,7 +32,7 @@ export default function NotFound() {
         /* Ensure normal overflow and set dark base with noise */
         body {
           overflow: auto !important;
-          background: #132737 url('/bg-noise.png') !important;
+          background: #132737 url('/bg-noise.webp') !important;
           background-repeat: repeat !important;
           background-size: 50px !important;
           position: relative !important;
@@ -107,53 +109,55 @@ export default function NotFound() {
           background: rgba(255, 255, 255, 0.1);
           transform: translateY(-2px);
         }
-      `}} />
-      <div className="relative flex flex-col items-center justify-center min-h-screen gradient-bg px-4 py-12 overflow-hidden select-none">
-        {/* Content Centered Directly on Page */}
-        <div className="relative z-10 flex flex-col items-center text-center max-w-xl">
-          {/* Brand Logo */}
-          <div className="mb-10 transform hover:scale-[1.02] transition-transform duration-300">
-            <Image
-              src="/krmu.png"
-              width={256}
-              height={64}
-              alt="K.R. Mangalam University Logo"
-              className="object-contain"
-              priority
-              unoptimized
+      `,
+                }}
             />
-          </div>
+            <div className="relative flex flex-col items-center justify-center min-h-screen gradient-bg px-4 py-12 overflow-hidden select-none">
+                {/* Content Centered Directly on Page */}
+                <div className="relative z-10 flex flex-col items-center text-center max-w-xl">
+                    {/* Brand Logo */}
+                    <div className="mb-10 transform hover:scale-[1.02] transition-transform duration-300">
+                        <Image
+                            src="/krmu.webp"
+                            width={256}
+                            height={64}
+                            alt="K.R. Mangalam University Logo"
+                            className="object-contain"
+                            priority
+                        />
+                    </div>
 
-          {/* Large Floating 404 Title */}
-          <div className="animated-404 mb-6">404</div>
+                    {/* Large Floating 404 Title */}
+                    <div className="animated-404 mb-6">404</div>
 
-          {/* Messages */}
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white tracking-tight leading-tight">
-            Oops! Page Not Found
-          </h2>
-          <p className="text-gray-300 mb-10 text-lg md:text-xl max-w-md leading-relaxed">
-            The page you are looking for might have been moved, renamed, or is temporarily unavailable.
-          </p>
+                    {/* Messages */}
+                    <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-white tracking-tight leading-tight">
+                        Oops! Page Not Found
+                    </h2>
+                    <p className="text-gray-300 mb-10 text-lg md:text-xl max-w-md leading-relaxed">
+                        The page you are looking for might have been moved,
+                        renamed, or is temporarily unavailable.
+                    </p>
 
-          {/* Actions */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full px-6 sm:px-0">
-            <Link
-              href="/"
-              className="w-full sm:w-auto px-8 py-3.5 text-white font-semibold rounded-full btn-brand-primary flex items-center justify-center gap-2"
-            >
-              <Home className="w-5 h-5" strokeWidth={2.5} />
-              Go Back Home
-            </Link>
-            <Link
-              href="/programmes"
-              className="w-full sm:w-auto px-8 py-3.5 font-semibold rounded-full btn-brand-secondary flex items-center justify-center gap-2"
-            >
-              Explore Programs
-              <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
-            </Link>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+                    {/* Actions */}
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full px-6 sm:px-0">
+                        <Link
+                            href="/"
+                            className="w-full sm:w-auto px-8 py-3.5 text-white font-semibold rounded-full btn-brand-primary flex items-center justify-center gap-2"
+                        >
+                            <Home className="w-5 h-5" strokeWidth={2.5} />
+                            Go Back Home
+                        </Link>
+                        <Link
+                            href="/programmes"
+                            className="w-full sm:w-auto px-8 py-3.5 font-semibold rounded-full btn-brand-secondary flex items-center justify-center gap-2"
+                        >
+                            Explore Programs
+                            <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 }

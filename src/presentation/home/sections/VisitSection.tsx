@@ -11,7 +11,7 @@ export function VisitSection() {
                 {/* Background Image Overlay on Tablet & Mobile Only */}
                 <div className="absolute inset-0 lg:hidden z-0 overflow-hidden">
                     <Image
-                        src="/modules/home/visit/campus-visit.jpg"
+                        src="/modules/home/visit/campus-visit.webp"
                         alt="KRMU Campus Facade"
                         fill
                         className="object-cover"
@@ -65,7 +65,6 @@ export function VisitSection() {
                                         alt="360 Virtual Tour"
                                         fill
                                         sizes="96px"
-                                        priority
                                         className="object-contain"
                                     />
                                 </div>
@@ -78,7 +77,7 @@ export function VisitSection() {
                 <div className="hidden lg:block lg:w-[55%] lg:h-auto relative">
                     <div className="absolute inset-0 lg:rounded-l-[10px] overflow-hidden group">
                         <Image
-                            src="/modules/home/visit/campus-visit.jpg"
+                            src="/modules/home/visit/campus-visit.webp"
                             alt="KRMU Campus Facade"
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-1000"

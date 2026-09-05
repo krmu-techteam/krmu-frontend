@@ -6,7 +6,11 @@ import { ButtonType } from "@/lib/types/common";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import SectionDivider from "@/components/common/SectionDivider";
 import { EventAndNewsCard } from "../components/news-and-event";
-import { getHomeService, NewsEventDomain } from "@/features/home";
+import {
+    getHomeService,
+    NewsEventDomain,
+    NewsEventsResult,
+} from "@/features/home";
 
 export async function NewsEventsSection({
     title = "News & Events",
@@ -14,12 +18,15 @@ export async function NewsEventsSection({
         buttonlink: "/happenings/news-and-events",
         buttontext: "Explore All",
     },
+    eventsData,
 }: {
     title?: string;
     newsandeventbtn?: Partial<ButtonType>;
+    eventsData?: NewsEventsResult;
 }) {
     const homeService = getHomeService();
-    const newsandeventsdata = await homeService.getNewsEvents(1, 10);
+    const newsandeventsdata =
+        eventsData ?? (await homeService.getNewsEvents(1, 10));
     return (
         <section className="relative w-full overflow-hidden pt-10 pb-10 md:py-12 xl:pt-12 xl:pb-20 font-poppins">
             <div className="w-full max-w-[1530px] mx-auto relative z-10">

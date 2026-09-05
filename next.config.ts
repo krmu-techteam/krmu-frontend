@@ -6,12 +6,22 @@ const nextConfig: NextConfig = {
     // basePath: "/blog",
     // assetPrefix: "https://krmangalam.netlify.app",
     poweredByHeader: false,
+    compress: true,
     allowedDevOrigins: ["*.trycloudflare.com", "*.loca.lt"],
     experimental: {
-        optimizePackageImports: ["lucide-react", "react-icons"],
+        optimizePackageImports: [
+            "lucide-react",
+            "react-icons",
+            "framer-motion",
+            "@radix-ui/react-accordion",
+            "@radix-ui/react-tabs",
+            "@radix-ui/react-select",
+            "@radix-ui/react-slot",
+        ],
     },
     images: {
         formats: ["image/avif", "image/webp"],
+        minimumCacheTTL: 86400,
         deviceSizes: [360, 640, 750, 828, 1080, 1200, 1920],
         imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
         remotePatterns: [
@@ -50,6 +60,33 @@ const nextConfig: NextConfig = {
     },
     async headers() {
         return [
+            {
+                source: "/_next/static/:path*",
+                headers: [
+                    {
+                        key: "Cache-Control",
+                        value: "public, max-age=31536000, immutable",
+                    },
+                ],
+            },
+            {
+                source: "/images/:path*",
+                headers: [
+                    {
+                        key: "Cache-Control",
+                        value: "public, max-age=86400, stale-while-revalidate=604800",
+                    },
+                ],
+            },
+            {
+                source: "/modules/:path*",
+                headers: [
+                    {
+                        key: "Cache-Control",
+                        value: "public, max-age=86400, stale-while-revalidate=604800",
+                    },
+                ],
+            },
             {
                 source: "/(.*)",
                 headers: [

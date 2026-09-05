@@ -34,6 +34,7 @@ const fraunces = Fraunces({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700"],
     display: "swap",
+    preload: false,
     variable: "--font-fraunces",
 });
 
@@ -41,6 +42,7 @@ const sofiaSansCondensed = Sofia_Sans_Condensed({
     subsets: ["latin"],
     weight: ["300", "400", "500", "600", "700", "800", "900"],
     display: "swap",
+    preload: false,
     variable: "--font-sofia-sans-condensed",
 });
 
@@ -48,6 +50,7 @@ const faustina = Faustina({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700", "800"],
     display: "swap",
+    preload: false,
     variable: "--font-faustina",
 });
 
