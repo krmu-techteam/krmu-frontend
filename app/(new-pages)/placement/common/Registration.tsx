@@ -19,7 +19,7 @@ const Registration = () => {
           <h4 className="text-base text-[#7A1F2B] font-medium tracking-widest leading-snug">
             Eligibility
           </h4>
-          <ul className="[&>*]:border-t [&>*]:border-[]">
+          <ul className="">
             <li className="flex items-start gap-2">
               <Minus />
               <span>Final year students with zero active backlogs.</span>
