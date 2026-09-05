@@ -55,6 +55,7 @@ import {
 } from "@/presentation/programs";
 import ProgramSubNav from "@/presentation/programs/components/ProgramSubNav";
 import CinematicRecruiterStrip from "@/presentation/programs/components/CinematicRecruiterStrip";
+import { programmeScopeData } from "@/presentation/programs/constants/programme-scope.constants";
 
 // ====== NEW MBA DESIGN IMPORTS ======
 import {
@@ -273,24 +274,7 @@ const page = async ({ params }: Props) => {
         slug === "mba" ||
         slug === "mba-digital-marketing";
 
-    const isNewSectionSlug =
-        slug === "bsc-hons-agriculture" ||
-        slug === "b-tech-cse" ||
-        slug === "bachelor-of-education-b-ed" ||
-        slug === "bhmct-hotel-management" ||
-        slug === "bjmc-hons-research" ||
-        slug === "bjmc" ||
-        slug === "bachelor-of-design-b-des-fashion-design" ||
-        slug === "barch-architecture" ||
-        slug === "bfa-fine-arts" ||
-        slug === "ba-hons-political-science" ||
-        slug === "b-a-hons-hons-with-research-psychology" ||
-        slug === "ba-hons-economics-research" ||
-        slug === "ba-hons-psychology" ||
-        slug === "ba-hons-english-research" ||
-        slug === "bachelor-of-physiotherapy-bpt" ||
-        slug === "bba-llb-hons" ||
-        slug === "btech-cse-in-data-science";
+    const hasCustomProgrammeScope = slug in programmeScopeData;
 
     return (
         <>
@@ -387,9 +371,11 @@ const page = async ({ params }: Props) => {
                                         : null
                             }
                         />
-                    ) : isNewSectionSlug ? (
+                    ) : hasCustomProgrammeScope ? (
                         <>
-                            <ProgrammeOverviewSection />
+                            {slug === "b-tech-cse" && (
+                                <ProgrammeOverviewSection />
+                            )}
                             <NewProgrammeScopeSection
                                 scopeData={programmeScopeSection}
                                 heroSection={heroSection}

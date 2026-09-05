@@ -29,6 +29,7 @@ const ProgrammeScopeSection = async ({
     slug,
 }: Props) => {
     const data = programmeScopeData[slug];
+    if (!data) return null;
     // const getDownProsSettings = await getDownloadProspectusSetting();
 
     // const isFormAvailable = allowedFormSlugs.includes(slug);
