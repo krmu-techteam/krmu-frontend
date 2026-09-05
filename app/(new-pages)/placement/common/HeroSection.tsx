@@ -9,7 +9,7 @@ const newsreader = Newsreader({
 const HeroSection = () => {
   return (
     <section>
-      <div className="container mx-auto max-w-[1287px] border-b border-[#ccc] px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-16 xl:py-20">
+      <div className="container mx-auto max-w-[1287px] border-b border-[#ccc] py-10  md:py-14 lg:py-16 xl:py-20">
         <div className="flex flex-col items-center justify-between gap-10 md:flex-row md:gap-8 lg:gap-12">
           {/* Content */}
           <div className="w-full md:w-1/2">
