@@ -25,7 +25,7 @@ const LabsFacilitieSection = ({
                 <div className="max-w-[1530px] mx-auto w-full px-4 md:px-8 xl:px-16">
                     <div className="w-full labFac_container text-center">
                         <div className="common-prog-container !max-w-4xl mx-auto">
-                            <h3 className="heading-primary mb-3 md:mb-4">
+                            <h3 className="heading-primary mb-6 md:mb-4">
                                 {heading} {highlight}
                             </h3>
                             <div className="text-white font-poppins text-justify text-[16px] md:text-[17px] lg:text-center leading-relaxed tracking-normal">
