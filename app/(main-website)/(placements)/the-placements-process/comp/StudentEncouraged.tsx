@@ -5,8 +5,8 @@ const StudentEncouraged = () => {
     <>
       <section className="py-[60px] pb-10 px-[30px]">
         <div className="max-w-[1664px] mx-auto w-full flex">
-          <div className="lg:w-1/2">
-            <p className="text-lg">
+          <div className="lg:w-1/2 text-lg">
+            <p>
               Students are encouraged to research the company profile online
               before deciding to participate in any recruitment process. If
               interested, they must apply online through the Career Development
