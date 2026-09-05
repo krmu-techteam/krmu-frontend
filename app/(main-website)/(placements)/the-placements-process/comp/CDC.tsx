@@ -10,7 +10,7 @@ const CDC = () => {
             Communication Skills Training
           </h4>
           <p className="mb-5">
-            Enhance students’ collaborative skills through communication modules
+            Enhance students' collaborative skills through communication modules
             covering verbal and non-verbal aspects, focusing on English
             proficiency, communication styles, nuances, and social/professional
             interactions.
@@ -20,7 +20,7 @@ const CDC = () => {
           </div>
           <p>
             Aptitude training is a special kind of coaching that helps to boost
-            a candidate’s cognitive abilities, personality, attitude, and
+            a candidate's cognitive abilities, personality, attitude, and
             knowledge.
           </p>
           <div className="my-2.5">
@@ -46,7 +46,7 @@ const CDC = () => {
           </p>
           <div className="my-2.5">
             <h4 className="my-2.5 font-semibold text-xl">
-              Value Added Courses
+              Value-Added Courses
             </h4>
           </div>
           <p>
@@ -57,14 +57,14 @@ const CDC = () => {
           </p>
           <div className="my-2.5">
             <h4 className="my-2.5 font-semibold text-xl">
-              Nptel (National Programme On Technology Enhanced Learning)
+              NPTEL (National Programme on Technology Enhanced Learning)
             </h4>
           </div>
           <p>
-            The University provides the infrastructure and Lab assistance to
+            The University provides the infrastructure and lab assistance to
             students to enable them to pursue the courses in an uninterrupted
-            manner. The Faculties offer their unwavering support and guidance
-            for the successful completion of the courses.
+            manner. The faculty offer their unwavering support and guidance for
+            the successful completion of the courses.
           </p>
           <div className="my-2.5">
             <h4 className="my-2.5 font-semibold text-xl">
@@ -73,8 +73,8 @@ const CDC = () => {
           </div>
           <p>
             The entrepreneurship cell fosters entrepreneurial spirit and
-            innovation among students through camps, development programs, skill
-            training, “face-to-face” sessions, and supporting innovative
+            innovation among students through camps, development programmes,
+            skill training, "face-to-face" sessions, and support for innovative
             projects for product development.
           </p>
         </div>
@@ -92,10 +92,11 @@ const CDC = () => {
             <h4 className="my-2.5 font-semibold text-xl">Career Counselling</h4>
           </div>
           <p>
-            Industry Collaborations: We collaborate with industry partners to
-            offer valuable internships, placements, and collaborations,
-            providing students with exposure to real-world challenges and
-            emerging trends.
+            Our dedicated counselling team helps students identify the right
+            career path based on their strengths, interests, and industry
+            trends. Through one-on-one sessions and structured guidance, we
+            support students in setting realistic career goals and making
+            informed decisions about their professional journey.
           </p>
           <div className="my-2.5">
             <h4 className="my-2.5 font-semibold text-xl">
@@ -114,17 +115,18 @@ const CDC = () => {
           </div>
           <p>
             Our mentorship programmes provide tailored guidance from experienced
-            professionals, helping you navigate the corporate world effectively.
+            professionals, helping students navigate the corporate world
+            effectively.
           </p>
           <div className="my-2.5">
             <h4 className="my-2.5 font-semibold text-xl">
-              Career Counseling Services
+              Career Counselling Services
             </h4>
           </div>
           <p>
-            Our career counselling offers personalized support at every stage,
-            aiding with resume writing, interview prep, and career planning for
-            your success.
+            Our career counselling offers personalised support at every stage,
+            aiding with resume writing, interview prep, and career planning to
+            help students succeed.
           </p>
           <div className="my-2.5">
             <h4 className="my-2.5 font-semibold text-xl">
@@ -132,7 +134,7 @@ const CDC = () => {
             </h4>
           </div>
           <p>
-            Workshops focus on technical skills relevant to students’ fields,
+            Workshops focus on technical skills relevant to students' fields,
             covering programming languages, software tools, data analysis, and
             industry-specific technologies.
           </p>
@@ -152,10 +154,11 @@ const CDC = () => {
             </h4>
           </div>
           <p>
-            Industry Collaborations: We collaborate with industry partners to
-            offer valuable internships, placements, and collaborations,
-            providing students with exposure to real-world challenges and
-            emerging trends.
+            We help students craft compelling resumes that effectively showcase
+            their skills, achievements, and experience to potential employers.
+            Through mock interviews, feedback sessions, and practical tips, we
+            train students to present themselves confidently and perform well in
+            real recruitment interviews.
           </p>
         </div>
       </div>

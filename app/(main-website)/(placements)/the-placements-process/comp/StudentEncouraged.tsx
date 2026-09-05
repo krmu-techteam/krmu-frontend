@@ -31,7 +31,7 @@ const StudentEncouraged = () => {
         </div>
         <div className="max-w-[1664px] mx-auto w-full -mt-[15%] hidden lg:block">
           <Image
-            src="/programmes/placementprocessbannermidpic.webp"
+            src="https://www.krmangalam.edu.in/images/placementprocessbannermidpic-1.png"
             width={1554}
             height={724}
             alt="student encouraged"

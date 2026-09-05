@@ -19,10 +19,10 @@ const OurRecruitersHeroSection = () => {
               </p>
               <p>
                 Each year, renowned companies across sectors such as IT,
-                Finance, Consulting, Education, Media, Healthcare, Legal, and
-                more visit our campus to hire skilled and job-ready graduates.
-                These organisations value the innovation, adaptability, and work
-                ethics our students bring to the workplace.
+                Finance, Consulting, Education, Media, Healthcare, Law, and more
+                visit our campus to hire skilled and job-ready graduates. These
+                organisations value the innovation, adaptability, and work ethic
+                our students bring to the workplace.
               </p>
               <p>
                 From global corporations to emerging startups, our recruiters
