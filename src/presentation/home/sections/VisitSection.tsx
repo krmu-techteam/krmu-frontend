@@ -14,6 +14,7 @@ export function VisitSection() {
                         src="/modules/home/visit/campus-visit.webp"
                         alt="KRMU Campus Facade"
                         fill
+                        sizes="100vw"
                         className="object-cover"
                     />
                     <div className="absolute inset-0 bg-black/75 z-10" />
@@ -80,6 +81,7 @@ export function VisitSection() {
                             src="/modules/home/visit/campus-visit.webp"
                             alt="KRMU Campus Facade"
                             fill
+                            sizes="(max-width: 1024px) 100vw, 55vw"
                             className="object-cover group-hover:scale-105 transition-transform duration-1000"
                         />
                     </div>

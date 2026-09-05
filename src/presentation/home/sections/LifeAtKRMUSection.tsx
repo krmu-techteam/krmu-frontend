@@ -52,6 +52,7 @@ export function LifeAtKRMUSection() {
                     containerClassName="-ml-0"
                     slideClassName="basis-auto shrink-0 px-0 group"
                     options={{ loop: true, align: "center" }}
+                    activeNeighbors={1}
                     prevArrowClassName="!left-4 md:!left-8 2xl:!left-[calc((100vw-1440px)/2+2rem)] z-30 !rounded-[3px] !border-[#CB000D] !border-2 !bg-[#CB000D]"
                     nextArrowClassName="!right-4 md:!right-8 2xl:!right-[calc((100vw-1440px)/2+2rem)] z-30 !rounded-[3px] !border-[#CB000D] !border-2 !bg-[#CB000D]"
                 >
@@ -60,12 +61,14 @@ export function LifeAtKRMUSection() {
                             key={img.id}
                             className="h-[280px] sm:h-[350px] md:h-[420px] w-auto shrink-0 relative overflow-hidden grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-data-[active=true]:grayscale-0 group-data-[active=true]:opacity-100 transition-all duration-700 ease-in-out"
                         >
-                            <img
+                            <Image
                                 src={img.src}
                                 alt={img.alt}
-                                loading="lazy"
-                                decoding="async"
+                                width={600}
+                                height={420}
+                                sizes="(max-width: 768px) 280px, 420px"
                                 className="h-full w-auto object-contain block"
+                                loading="lazy"
                             />
                         </div>
                     ))}
@@ -85,6 +88,7 @@ export function LifeAtKRMUSection() {
                                     src={card.bg}
                                     alt={card.label}
                                     fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="object-cover group-hover:scale-105 transition-transform duration-1000"
                                     loading="lazy"
                                 />

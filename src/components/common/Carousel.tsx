@@ -27,6 +27,7 @@ interface CarouselProps {
     dotClassName?: string;
     fade?: boolean;
     setApi?: (api: any) => void;
+    activeNeighbors?: number;
 }
 
 export const Carousel = ({
@@ -48,6 +49,7 @@ export const Carousel = ({
     dotClassName = "",
     fade = false,
     setApi,
+    activeNeighbors = 0,
 }: CarouselProps) => {
     const isAutoPlayActive = autoplay && !autoScroll;
 
@@ -91,12 +93,12 @@ export const Carousel = ({
     const scrollPrev = useCallback(() => {
         if (!emblaApi) return;
         emblaApi.scrollPrev();
-         
+
         const autoScrollPlugin = (emblaApi.plugins() as any).autoScroll;
         if (autoScrollPlugin && typeof autoScrollPlugin.stop === "function") {
             autoScrollPlugin.stop();
         }
-         
+
         const autoplayPlugin = (emblaApi.plugins() as any).autoplay;
         if (autoplayPlugin && typeof autoplayPlugin.reset === "function") {
             autoplayPlugin.reset();
@@ -106,12 +108,12 @@ export const Carousel = ({
     const scrollNext = useCallback(() => {
         if (!emblaApi) return;
         emblaApi.scrollNext();
-         
+
         const autoScrollPlugin = (emblaApi.plugins() as any).autoScroll;
         if (autoScrollPlugin && typeof autoScrollPlugin.stop === "function") {
             autoScrollPlugin.stop();
         }
-         
+
         const autoplayPlugin = (emblaApi.plugins() as any).autoplay;
         if (autoplayPlugin && typeof autoplayPlugin.reset === "function") {
             autoplayPlugin.reset();
@@ -121,7 +123,7 @@ export const Carousel = ({
         (index: number) => {
             if (!emblaApi) return;
             emblaApi.scrollTo(index, true);
-             
+
             const autoplay = (emblaApi.plugins() as any).autoplay;
             if (autoplay && typeof autoplay.reset === "function") {
                 autoplay.reset();
@@ -143,7 +145,17 @@ export const Carousel = ({
         setScrollSnaps(emblaApi.scrollSnapList());
         emblaApi.on("select", onSelect);
         emblaApi.on("reInit", onSelect);
-    }, [emblaApi, onSelect]);
+        if (autoScroll) {
+            emblaApi.on("scroll", onSelect);
+        }
+        return () => {
+            emblaApi.off("select", onSelect);
+            emblaApi.off("reInit", onSelect);
+            if (autoScroll) {
+                emblaApi.off("scroll", onSelect);
+            }
+        };
+    }, [emblaApi, onSelect, autoScroll]);
 
     useEffect(() => {
         if (!emblaApi || !setApi) return;
@@ -151,6 +163,25 @@ export const Carousel = ({
     }, [emblaApi, setApi]);
 
     const childrenArray = React.Children.toArray(children);
+
+    const isSlideActive = useCallback(
+        (index: number, total: number) => {
+            if (activeNeighbors > 0 && total > 0) {
+                for (
+                    let offset = -activeNeighbors;
+                    offset <= activeNeighbors;
+                    offset++
+                ) {
+                    if ((selectedIndex + offset + total) % total === index) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            return index === selectedIndex;
+        },
+        [selectedIndex, activeNeighbors]
+    );
 
     return (
         <div className={`relative ${className}`}>
@@ -168,7 +199,10 @@ export const Carousel = ({
                                     ? "col-start-1 row-start-1 w-full"
                                     : slideClassName || "basis-full"
                             }`}
-                            data-active={index === selectedIndex}
+                            data-active={isSlideActive(
+                                index,
+                                childrenArray.length
+                            )}
                         >
                             {child}
                         </div>

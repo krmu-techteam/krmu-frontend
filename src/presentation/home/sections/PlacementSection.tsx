@@ -32,6 +32,7 @@ export function PlacementsSection() {
                                     src="/images/home/placements/shade.webp"
                                     alt=""
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 650px"
                                     className="w-full h-full object-contain opacity-95 scale-110 sm:scale-125"
                                 />
                             </div>

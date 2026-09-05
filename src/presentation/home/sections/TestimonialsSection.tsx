@@ -157,7 +157,7 @@ export function TestimonialsSection({
                                         fill
                                         sizes="(max-width: 1024px) 100vw, 300px"
                                         className="object-cover rounded-[16px]"
-                                        priority={index === 0}
+                                        loading="lazy"
                                     />
                                 </div>
 
