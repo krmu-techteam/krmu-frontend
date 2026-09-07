@@ -26,7 +26,7 @@ export function JourneySection() {
                         Our multidisciplinary approach to education ensures
                         students receive a well-rounded experience, blending
                         theoretical knowledge with real-world applications. As
-                        the leading university in Gurugram, we commit to
+                        the leading university in Gurugram, we are committed to
                         providing students with the necessary skills and
                         knowledge to thrive in the ever-changing world.
                     </p>
@@ -40,7 +40,7 @@ export function JourneySection() {
                             iconClassName="rotate-45 group-hover:rotate-0 transition-transform"
                             className="!text-white !border-white !hover:border-white/80 !w-[240px] !text-[13px] md:!text-[14px] !px-3"
                         >
-                            Explore Programs
+                            Explore Programmes
                         </Button>
 
                         <CommonLeadPopup

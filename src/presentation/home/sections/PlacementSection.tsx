@@ -69,18 +69,22 @@ export function PlacementsSection() {
                     <div className="w-full lg:w-[55%] text-left order-2 lg:order-2">
                         <SectionTitle
                             title="Explore the"
-                            highlight="Top Global recruiters"
-                            subtitle="who choose KRMU talent"
+                            highlight="Top Global Recruiters"
+                            subtitle="Who Choose KRMU Talent"
                             variant="highlight"
                         />
-                        <p className="max-w-2xl text-justify md:text-left text-white/70 text-[15px] md:text-[16px] font-poppins leading-relaxed mb-6 font-light font-poppins">
-                            KRMU offers top placements with{" "}
+                        <p className="max-w-2xl text-justify md:text-left text-white/70 text-[15px] md:text-[16px] font-poppins leading-relaxed mb-6 font-light">
+                            KRMU takes pride in its outstanding placement
+                            record, with one of our students securing the{" "}
                             <span className="font-semibold text-white">
-                                packages of up to ₹3 Crore
-                            </span>
-                            , featuring recruiters like Google, Amazon,
-                            Microsoft, and Adobe, along with career-focused
-                            training.
+                                highest package of ₹56.6 LPA
+                            </span>{" "}
+                            — a testament to the strength of our
+                            industry-focused curriculum. With top recruiters
+                            like Google, Amazon, Microsoft, and Adobe on campus,
+                            coupled with dedicated career-focused training, our
+                            students are well-prepared to excel in today&apos;s
+                            competitive job market.
                         </p>
 
                         {/* Stats Grid - Discrete Cards */}
@@ -127,7 +131,7 @@ export function PlacementsSection() {
                 {/* Bottom: Recruiters Grid */}
                 <div className="mt-8 md:mt-16 lg:mt-20">
                     <h3 className="text-xl md:text-2xl lg:text-[28px] font-serif font-semibold text-center text-white mb-4 md:mb-8 tracking-wide">
-                        Our Top Recruiters are Waiting for You
+                        Trusted by Leading Global Recruiters
                     </h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4">
                         {RECRUITER_LOGOS.slice(
