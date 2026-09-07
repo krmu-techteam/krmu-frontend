@@ -1,10 +1,19 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
-const footerNavLinks = [
+interface FooterNavLink {
+    label: string;
+    href?: string;
+    external?: boolean;
+    modalType?: "mentors" | "faq";
+}
+
+const footerNavLinks: FooterNavLink[] = [
     { label: "Visit SWAYAM", href: "https://swayam.gov.in/", external: true },
-    { label: "SWAYAM Mentor List", href: "#mentors" },
-    { label: "FAQ", href: "#faq" },
+    { label: "SWAYAM Mentor List", modalType: "mentors" },
+    { label: "FAQ", modalType: "faq" },
     {
         label: "SWAYAM Sop",
         href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ugc_swayam_framework_6ce1e5ccaa.pdf",
@@ -88,21 +97,38 @@ export const NodalOfficerSection: React.FC = () => {
             {/* Navigation Links Bar directly below Nodal Officer Section */}
             <div className="w-full bg-[#FFFDF9] pt-6 sm:pt-7 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-[1260px] mx-auto border-b border-[#CCCCCC] pb-6 sm:pb-7 flex flex-wrap items-center justify-center gap-5 sm:gap-8 lg:gap-12">
-                    {footerNavLinks.map((link, idx) => (
-                        <a
-                            key={idx}
-                            href={link.href}
-                            target={link.external ? "_blank" : undefined}
-                            rel={
-                                link.external
-                                    ? "noopener noreferrer"
-                                    : undefined
-                            }
-                            className="text-[#1F2937] hover:text-[#CB000D] font-poppins font-medium text-sm sm:text-[15px] transition-colors duration-200 whitespace-nowrap cursor-pointer"
-                        >
-                            {link.label}
-                        </a>
-                    ))}
+                    {footerNavLinks.map((link, idx) =>
+                        link.modalType ? (
+                            <button
+                                key={idx}
+                                type="button"
+                                onClick={() => {
+                                    window.dispatchEvent(
+                                        new CustomEvent("open-swayam-modal", {
+                                            detail: link.modalType,
+                                        })
+                                    );
+                                }}
+                                className="text-[#1F2937] hover:text-[#CB000D] font-poppins font-medium text-sm sm:text-[15px] transition-colors duration-200 whitespace-nowrap cursor-pointer"
+                            >
+                                {link.label}
+                            </button>
+                        ) : (
+                            <a
+                                key={idx}
+                                href={link.href}
+                                target={link.external ? "_blank" : undefined}
+                                rel={
+                                    link.external
+                                        ? "noopener noreferrer"
+                                        : undefined
+                                }
+                                className="text-[#1F2937] hover:text-[#CB000D] font-poppins font-medium text-sm sm:text-[15px] transition-colors duration-200 whitespace-nowrap cursor-pointer"
+                            >
+                                {link.label}
+                            </a>
+                        )
+                    )}
                 </div>
             </div>
         </>

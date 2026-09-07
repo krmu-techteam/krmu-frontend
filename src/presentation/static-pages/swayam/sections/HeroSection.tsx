@@ -51,18 +51,60 @@ const HeroSection: React.FC = () => {
     const videoContainerRef = useRef<HTMLDivElement>(null);
     const iframeRef = useRef<HTMLIFrameElement>(null);
 
+    const clearHash = () => {
+        if (typeof window !== "undefined" && window.location.hash) {
+            window.history.replaceState(
+                null,
+                "",
+                window.location.pathname + window.location.search
+            );
+        }
+    };
+
+    const closeTutorialModal = () => {
+        setIsTutorialModalOpen(false);
+        clearHash();
+    };
+
+    const closeMentorsModal = () => {
+        setIsMentorsModalOpen(false);
+        clearHash();
+    };
+
+    const closeFaqModal = () => {
+        setIsFaqModalOpen(false);
+        clearHash();
+    };
+
     useEffect(() => {
         const handleHash = () => {
             if (window.location.hash === "#mentors") {
                 setIsMentorsModalOpen(true);
-            }
-            if (window.location.hash === "#faq") {
+                clearHash();
+            } else if (window.location.hash === "#faq") {
                 setIsFaqModalOpen(true);
+                clearHash();
             }
         };
         handleHash();
         window.addEventListener("hashchange", handleHash);
-        return () => window.removeEventListener("hashchange", handleHash);
+
+        const handleCustomOpen = (e: Event) => {
+            const customEvent = e as CustomEvent<string>;
+            if (customEvent.detail === "mentors") {
+                setIsMentorsModalOpen(true);
+            } else if (customEvent.detail === "faq") {
+                setIsFaqModalOpen(true);
+            } else if (customEvent.detail === "tutorial") {
+                setIsTutorialModalOpen(true);
+            }
+        };
+        window.addEventListener("open-swayam-modal", handleCustomOpen);
+
+        return () => {
+            window.removeEventListener("hashchange", handleHash);
+            window.removeEventListener("open-swayam-modal", handleCustomOpen);
+        };
     }, []);
 
     const sendYoutubeCommand = (func: string, args: any = "") => {
@@ -169,7 +211,7 @@ const HeroSection: React.FC = () => {
                                 alt="SWAYAM - Free Online Education | Ministry of Education"
                                 width={383}
                                 height={80}
-                                unoptimized
+
                                 className="w-full h-auto object-contain object-left"
                                 priority
                             />
@@ -298,7 +340,7 @@ const HeroSection: React.FC = () => {
             {isTutorialModalOpen && (
                 <div
                     className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-3 sm:p-5 overflow-y-auto"
-                    onClick={() => setIsTutorialModalOpen(false)}
+                    onClick={closeTutorialModal}
                 >
                     <div
                         className="bg-white border border-gray-200 rounded-[8px] max-w-[960px] w-full p-4 sm:p-6 relative my-auto text-[#1F2937] flex flex-col shadow-none"
@@ -311,7 +353,7 @@ const HeroSection: React.FC = () => {
                             </h3>
                             <button
                                 type="button"
-                                onClick={() => setIsTutorialModalOpen(false)}
+                                onClick={closeTutorialModal}
                                 className="w-8 h-8 rounded border border-gray-200 hover:border-gray-300 hover:bg-gray-100 text-gray-500 hover:text-gray-900 flex items-center justify-center transition-colors cursor-pointer"
                                 aria-label="Close"
                             >
@@ -601,7 +643,7 @@ const HeroSection: React.FC = () => {
             {isMentorsModalOpen && (
                 <div
                     className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-3 sm:p-5 overflow-y-auto"
-                    onClick={() => setIsMentorsModalOpen(false)}
+                    onClick={closeMentorsModal}
                 >
                     <div
                         className="bg-white border border-gray-200 rounded-[8px] max-w-[960px] w-full p-4 sm:p-6 relative my-auto text-[#1F2937] flex flex-col shadow-none"
@@ -614,7 +656,7 @@ const HeroSection: React.FC = () => {
                             </h3>
                             <button
                                 type="button"
-                                onClick={() => setIsMentorsModalOpen(false)}
+                                onClick={closeMentorsModal}
                                 className="w-8 h-8 rounded border border-gray-200 hover:border-gray-300 hover:bg-gray-100 text-gray-500 hover:text-gray-900 flex items-center justify-center transition-colors cursor-pointer"
                                 aria-label="Close"
                             >
@@ -650,8 +692,15 @@ const HeroSection: React.FC = () => {
                                             <td className="py-3 px-4 text-center text-gray-600 whitespace-nowrap">
                                                 {mentor.sNo}
                                             </td>
-                                            <td className="py-3 px-4 font-medium text-[#111827] whitespace-nowrap">
-                                                {mentor.name}
+                                            <td className="py-3 px-4 whitespace-nowrap">
+                                                <div className="font-semibold text-[#111827]">
+                                                    {mentor.name}
+                                                </div>
+                                                {mentor.title && (
+                                                    <div className="text-xs text-gray-500 font-normal mt-0.5">
+                                                        {mentor.title}
+                                                    </div>
+                                                )}
                                             </td>
                                             <td className="py-3 px-4 text-gray-700 whitespace-nowrap">
                                                 {mentor.designation}
@@ -672,7 +721,7 @@ const HeroSection: React.FC = () => {
             {isFaqModalOpen && (
                 <div
                     className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-3 sm:p-5 overflow-y-auto"
-                    onClick={() => setIsFaqModalOpen(false)}
+                    onClick={closeFaqModal}
                 >
                     <div
                         className="bg-white border border-gray-200 rounded-[8px] max-w-[960px] w-full p-4 sm:p-6 relative my-auto text-[#1F2937] flex flex-col shadow-none"
@@ -685,7 +734,7 @@ const HeroSection: React.FC = () => {
                             </h3>
                             <button
                                 type="button"
-                                onClick={() => setIsFaqModalOpen(false)}
+                                onClick={closeFaqModal}
                                 className="w-8 h-8 rounded border border-gray-200 hover:border-gray-300 hover:bg-gray-100 text-gray-500 hover:text-gray-900 flex items-center justify-center transition-colors cursor-pointer"
                                 aria-label="Close"
                             >

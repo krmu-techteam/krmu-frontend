@@ -45,7 +45,6 @@ export const WhyChooseSection: React.FC = () => {
                                 src="/swayam/why-girl.jpg"
                                 alt="Why Choose SWAYAM Student"
                                 fill
-                                unoptimized
                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 360px"
                                 className="object-cover object-center"
                                 priority

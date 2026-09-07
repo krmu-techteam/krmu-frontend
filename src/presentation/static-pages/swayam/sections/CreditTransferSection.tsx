@@ -1,6 +1,15 @@
+"use client";
+
 import React from "react";
 
-const actionButtons = [
+interface ActionButton {
+    label: string;
+    href?: string;
+    external?: boolean;
+    modalType?: "mentors";
+}
+
+const actionButtons: ActionButton[] = [
     {
         label: "SWAYAM SOP",
         href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ugc_swayam_framework_6ce1e5ccaa.pdf",
@@ -11,7 +20,7 @@ const actionButtons = [
         href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/nomination_of_swayam_nodal_officer_257cba7217.pdf",
         external: true,
     },
-    { label: "SWAYAM Mentors", href: "#mentors" },
+    { label: "SWAYAM Mentors", modalType: "mentors" },
     {
         label: "SWAYAM Advisory Committee",
         href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/constitution_of_swayam_advisory_committee_for_the_academic_year_9a82fdfe8f.pdf",
@@ -77,19 +86,38 @@ export const CreditTransferSection: React.FC = () => {
             {/* Action Buttons Bar directly below section */}
             <div className="w-full bg-[#FFFDF9] py-8 sm:py-10 px-4 sm:px-8 border-b border-gray-200">
                 <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:gap-5">
-                    {actionButtons.map((btn, idx) => (
-                        <a
-                            key={idx}
-                            href={btn.href}
-                            target={btn.external ? "_blank" : undefined}
-                            rel={
-                                btn.external ? "noopener noreferrer" : undefined
-                            }
-                            className="px-5 sm:px-6 py-2.5 sm:py-3 bg-white border border-[#000000] rounded-[6px] text-[#000000] font-bold text-sm sm:text-[15px] shadow-xs hover:bg-[#000000] hover:text-white transition-all duration-200 whitespace-nowrap cursor-pointer"
-                        >
-                            {btn.label}
-                        </a>
-                    ))}
+                    {actionButtons.map((btn, idx) =>
+                        btn.modalType ? (
+                            <button
+                                key={idx}
+                                type="button"
+                                onClick={() => {
+                                    window.dispatchEvent(
+                                        new CustomEvent("open-swayam-modal", {
+                                            detail: btn.modalType,
+                                        })
+                                    );
+                                }}
+                                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-white border border-[#000000] rounded-[6px] text-[#000000] font-bold text-sm sm:text-[15px] shadow-xs hover:bg-[#000000] hover:text-white transition-all duration-200 whitespace-nowrap cursor-pointer"
+                            >
+                                {btn.label}
+                            </button>
+                        ) : (
+                            <a
+                                key={idx}
+                                href={btn.href}
+                                target={btn.external ? "_blank" : undefined}
+                                rel={
+                                    btn.external
+                                        ? "noopener noreferrer"
+                                        : undefined
+                                }
+                                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-white border border-[#000000] rounded-[6px] text-[#000000] font-bold text-sm sm:text-[15px] shadow-xs hover:bg-[#000000] hover:text-white transition-all duration-200 whitespace-nowrap cursor-pointer"
+                            >
+                                {btn.label}
+                            </a>
+                        )
+                    )}
                 </div>
             </div>
         </>

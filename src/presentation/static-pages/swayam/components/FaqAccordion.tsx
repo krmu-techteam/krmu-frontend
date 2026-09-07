@@ -29,17 +29,8 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
             className={`w-full flex flex-col gap-4 text-[#1F2937] ${className}`}
         >
             {/* Header info */}
-            <div className="flex items-center justify-between text-xs text-gray-500 pb-2 border-b border-gray-200 shrink-0">
+            <div className="flex items-center justify-between text-xs text-gray-500 shrink-0">
                 <span>Total: {swayamFaqList.length} Questions</span>
-                {openId !== null && (
-                    <button
-                        type="button"
-                        onClick={() => setOpenId(null)}
-                        className="hover:text-black font-medium transition-colors cursor-pointer"
-                    >
-                        Close All
-                    </button>
-                )}
             </div>
 
             {/* Accordion List Container */}
@@ -67,7 +58,7 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
                                 aria-expanded={isOpen}
                             >
                                 <span className="text-sm sm:text-[15px] font-semibold text-[#111827] leading-snug">
-                                    Question {item.questionNumber}: {item.title}
+                                    {item.title}
                                 </span>
                                 <span className="shrink-0 text-gray-500 ml-2">
                                     {isOpen ? (
