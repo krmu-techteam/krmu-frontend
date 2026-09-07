@@ -1,92 +1,99 @@
 import React from "react";
-import Image from "next/image";
 
-interface PolicyRow {
-  duration: string;
-  credit: string;
-}
-
-const policyData: PolicyRow[] = [
-  { duration: "4 Weeks", credit: "1 Credit" },
-  { duration: "6 Weeks", credit: "2 Credits" },
-  { duration: "8 Weeks", credit: "3 Credits" },
-  { duration: "12 Weeks", credit: "4 Credits" },
+const actionButtons = [
+    {
+        label: "SWAYAM SOP",
+        href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ugc_swayam_framework_6ce1e5ccaa.pdf",
+        external: true,
+    },
+    {
+        label: "SWAYAM Nodal Officer",
+        href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/nomination_of_swayam_nodal_officer_257cba7217.pdf",
+        external: true,
+    },
+    { label: "SWAYAM Mentors", href: "#mentors" },
+    {
+        label: "SWAYAM Advisory Committee",
+        href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/constitution_of_swayam_advisory_committee_for_the_academic_year_9a82fdfe8f.pdf",
+        external: true,
+    },
+    {
+        label: "Approval for adopting Mooc",
+        href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/official_letter_for_swayam_moocs_adoption_4a435df6c1.pdf",
+        external: true,
+    },
 ];
 
 export const CreditTransferSection: React.FC = () => {
-  return (
-    <section className="w-full bg-[#F1F1F1] py-12 sm:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="container mx-auto max-w-[1260px]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-4 items-center">
-          {/* Left Column: Title, Table & Note */}
-          <div className="col-span-12 lg:col-span-8 flex flex-col items-center lg:items-end justify-center w-full">
-            <div className="w-full max-w-[500px] lg:ml-auto lg:translate-x-6 xl:translate-x-10">
-              {/* Title directly above the Table */}
-              <h2 className="text-slate-900 text-3xl sm:text-4xl xl:text-[42px] font-bold text-center mb-6 w-full tracking-tight">
-                Credit Transfer Policy
-              </h2>
+    return (
+        <>
+            <section
+                className="relative w-full bg-cover bg-top bg-no-repeat min-h-[560px] sm:min-h-[640px] lg:h-[835px] flex items-end justify-center px-0 pb-0 overflow-hidden"
+                style={{
+                    backgroundImage: "url('/swayam/uni-bg.jpg')",
+                }}
+            >
+                {/* Background overlay */}
+                <div className="absolute inset-0 bg-black/10 pointer-events-none" />
 
-              {/* Table Container */}
-              <div className="w-full overflow-hidden">
-                {/* Header with White Vertical Divider Line */}
-                <div className="grid grid-cols-2 bg-white text-center font-semibold text-[#000000] text-[16px]">
-                  <div className="py-4 px-6 border-r border-gray-200">
-                    Course Duration
-                  </div>
-                  <div className="py-4 px-6">University Credit</div>
-                </div>
+                {/* Main White Translucent Bar: Full Width edge-to-edge, h-[368px], opacity 0.88, background #FFFFFF */}
+                <div
+                    className="relative z-10 w-full min-h-[300px] lg:h-[368px] shadow-2xl py-8 sm:py-10 lg:py-12 flex flex-col justify-center overflow-hidden"
+                    style={{
+                        backgroundColor: "rgba(255, 255, 255, 0.88)",
+                    }}
+                >
+                    <div className="w-full max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-16 xl:px-20">
+                        <div className="max-w-[1060px]">
+                            {/* Heading: About K.R Mangalam University */}
+                            <h2 className="text-[#000000] font-poppins text-2xl sm:text-3xl lg:text-[34px] tracking-normal mb-4 sm:mb-6 leading-tight">
+                                <span className="font-medium">About </span>
+                                <span className="font-bold">
+                                    K.R Mangalam University
+                                </span>
+                            </h2>
 
-                {/* Table Rows Mapped Dynamically from policyData Array */}
-                {policyData.map((row, index) => {
-                  const isLast = index === policyData.length - 1;
-                  return (
-                    <div
-                      key={index}
-                      className="grid grid-cols-2 text-center text-[#000000] font-semibold text-[16px]"
-                    >
-                      <div
-                        className={`bg-[#CDAB5A] py-3.5 px-4 border-r border-white/40 ${
-                          !isLast ? "border-b" : ""
-                        }`}
-                      >
-                        {row.duration}
-                      </div>
-                      <div
-                        className={`bg-[#CD975A] py-3.5 px-4 ${
-                          !isLast ? "border-b border-white/40" : ""
-                        }`}
-                      >
-                        {row.credit}
-                      </div>
+                            {/* Description Text */}
+                            <p className="text-[#000000] font-poppins text-[15px] sm:text-[17px] lg:text-[18px] xl:text-[18.5px] font-normal leading-[1.75] sm:leading-[1.8] lg:leading-[1.85]">
+                                K.R Mangalam University has allowed credit
+                                transfer from SWAYAM, enabling students to
+                                integrate online courses into their academic
+                                programs. A maximum of 40% of the total courses
+                                in a particular program per semester can be
+                                taken through the SWAYAM platform, providing
+                                students with extra learning opportunities
+                                without contributing to credit requirements.
+                                This initiative aligns with K.R Mangalam
+                                University’s commitment to flexible and
+                                technology-driven education, allowing students
+                                to enhance their knowledge through high-quality
+                                online resources
+                            </p>
+                        </div>
                     </div>
-                  );
-                })}
-              </div>
+                </div>
+            </section>
 
-              {/* Note Text below Table */}
-              <p className="text-slate-900 text-sm sm:text-base mt-6 text-left leading-relaxed">
-                <span className="font-bold">Note:</span> Credit transfer shall
-                be governed by the University Academic Council approval and
-                applicable UGC Regulations.
-              </p>
+            {/* Action Buttons Bar directly below section */}
+            <div className="w-full bg-[#FFFDF9] py-8 sm:py-10 px-4 sm:px-8 border-b border-gray-200">
+                <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:gap-5">
+                    {actionButtons.map((btn, idx) => (
+                        <a
+                            key={idx}
+                            href={btn.href}
+                            target={btn.external ? "_blank" : undefined}
+                            rel={
+                                btn.external ? "noopener noreferrer" : undefined
+                            }
+                            className="px-5 sm:px-6 py-2.5 sm:py-3 bg-white border border-[#000000] rounded-[6px] text-[#000000] font-bold text-sm sm:text-[15px] shadow-xs hover:bg-[#000000] hover:text-white transition-all duration-200 whitespace-nowrap cursor-pointer"
+                        >
+                            {btn.label}
+                        </a>
+                    ))}
+                </div>
             </div>
-          </div>
-
-          {/* Right Column: Lightbulb Graphic (Hidden on Mobile & Tablet, Displayed on Desktop) */}
-          <div className="hidden lg:flex lg:col-span-4 justify-end items-center w-fit ml-auto">
-            <div className="relative w-[332px] max-w-full h-[483px] shrink-0">
-              <Image
-                src="/swayam/balb.png"
-                alt="Credit Transfer Lightbulb Graphic"
-                fill
-                className="object-contain object-right"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+        </>
+    );
 };
 
 export default CreditTransferSection;
