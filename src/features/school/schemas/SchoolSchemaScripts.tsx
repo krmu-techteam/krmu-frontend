@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { SchoolProgrammeItem } from "./schoolSchemaData";
 import {
     CMSMinimalSchoolData,
@@ -23,15 +24,18 @@ export function SchoolSchemaScripts({
 
     return (
         <>
-            <script
+            <Script
+                id={`school-itemlist-schema-${slug}`}
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: itemListJson }}
             />
-            <script
+            <Script
+                id={`school-webpage-schema-${slug}`}
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: webPageJson }}
             />
-            <script
+            <Script
+                id={`school-breadcrumb-schema-${slug}`}
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: breadcrumbJson }}
             />

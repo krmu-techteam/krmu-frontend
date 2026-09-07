@@ -65,7 +65,7 @@ export function ResearchSection() {
                             <p className="text-white/90 text-base md:text-md text-center mb-6 font-light">
                                 K.R. Mangalam University thrives on innovation,
                                 bringing together a dedicated faculty and over
-                                5000 students across various disciplines. Our
+                                5,000 students across various disciplines. Our
                                 research is driven by a commitment to the United
                                 Nations’ Sustainable Development Goals, aiming
                                 for global impact and research excellence.

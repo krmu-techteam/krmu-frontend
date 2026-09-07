@@ -19,77 +19,77 @@ const TESTIMONIALS_DATA: Testimonial[] = [
     {
         id: 1,
         name: "Krish Agarwal",
-        role: "B Tech CSE AI/ML 2023-27 batch",
-        quote: "Success is never built alone, and my journey at K.R. Mangalam University is a testament to that. The university empowered me to push my limits, transforming curiosity into innovation and ambition into achievements. From winning 7+ hackathons and total 10+ of tech events to gaining valuable industry exposure through internships, every milestone reflects the strong foundation, guidance, and opportunities KRMU provided me. I will always be grateful to K.R. Mangalam University for inspiring me to dream bigger, achieve more, and become the professional I aspire to be.",
+        role: "B.Tech. CSE (AI & ML), Batch 2023–27",
+        quote: "Success is never built alone, and my journey at K.R. Mangalam University is a testament to that. The university empowered me to push my limits, transforming curiosity into innovation and ambition into achievements. From winning 7+ hackathons and participating in a total of 10+ tech events to gaining valuable industry exposure through internships, every milestone reflects the strong foundation, guidance, and opportunities KRMU provided me. I will always be grateful to K.R. Mangalam University for inspiring me to dream bigger, achieve more, and become the professional I aspire to be.",
         image: "/images/home/testimonials/krish-agarwal-1.webp",
     },
     {
         id: 2,
         name: "Naman Punn",
-        role: "B Tech CSE 2022-2026 batch",
-        quote: "The B.tech cse programme at K.R. Mangalam University goes beyond academics by encouraging innovation, collaboration, and practical learning. From coding challenges and technical events to industry exposure and real world projects, students gain the confidence and skills required to succeed in todays competitive technology landscape. The overall learning environment inspires continuous growth and excellence.",
+        role: "B.Tech. CSE, Batch 2022–26",
+        quote: "The B.Tech. CSE programme at K.R. Mangalam University goes beyond academics by encouraging innovation, collaboration, and practical learning. From coding challenges and technical events to industry exposure and real-world projects, students gain the confidence and skills required to succeed in today's competitive technology landscape. The overall learning environment inspires continuous growth and excellence.",
         image: "/images/home/testimonials/naman-punn-2.webp",
     },
     {
         id: 3,
         name: "Anu Sharma",
-        role: "BCA AI & DS",
-        quote: "My experience at K.R. Mangalam University has been a memorable learning journey. The BCA program gave me a strong foundation in programming and problem-solving, while the supportive faculty and practical learning opportunities helped me grow both technically and personally. I'm thankful for the skills and experiences I gained during my time here",
+        role: "BCA (AI & DS)",
+        quote: "My experience at K.R. Mangalam University has been a memorable learning journey. The BCA programme gave me a strong foundation in programming and problem-solving, while the supportive faculty and practical learning opportunities helped me grow both technically and personally. I'm thankful for the skills and experiences I gained during my time here.",
         image: "/images/home/testimonials/anu-sharma-3.webp",
     },
     {
         id: 4,
         name: "Somya Sharma",
-        role: "B.Tech CSE AIML 2023-27 batch",
+        role: "B.Tech. CSE (AI & ML), Batch 2023–27",
         quote: "My journey at K.R. Mangalam University has been truly transformative, providing me with a strong foundation in Artificial Intelligence, Machine Learning, and Computer Science. Through hands-on projects, internships, hackathons, and continuous guidance from experienced faculty, I gained practical exposure that strengthened my technical and problem-solving skills. The University’s industry-oriented curriculum and supportive learning environment have prepared me to confidently pursue a career in AI-driven technologies while inspiring me to innovate and contribute meaningfully to the tech industry.",
         image: "/images/home/testimonials/somya-sharma-4.webp",
     },
     {
         id: 5,
         name: "Upadhyayula Nijaagna",
-        role: "B.Tech CSE AIML 2023-27 batch",
-        quote: "K.R. Mangalam University has provided me with an environment where learning goes beyond the classroom. Through the B.Tech CSE (Al & ML) programme I gained technical knowledge, practical experience and the confidence to keep learning and adapting in the fast changing world of technology. The curriculum also offered exposure to diverse domains helping me develop a broader perspective of other domains. I am grateful for this enriching journey.",
+        role: "B.Tech. CSE (AI & ML), Batch 2023–27",
+        quote: "K.R. Mangalam University has provided me with an environment where learning goes beyond the classroom. Through the B.Tech CSE (AI & ML) programme, I gained technical knowledge, practical experience, and the confidence to keep learning and adapting in the fast changing world of technology. The curriculum also offered exposure to diverse domains, helping me develop a broader perspective. I am grateful for this enriching journey.",
         image: "/images/home/testimonials/upadhyayula-nijaagna-5.webp",
     },
     {
         id: 6,
         name: "Namrata Muralidharan",
-        role: "BCA (AI & DS) 2024–26 batch",
+        role: "BCA (AI & DS), Batch 2024–26",
         quote: "My journey at K.R. Mangalam University, pursuing BCA in Artificial Intelligence & Data Science, has been a transformative blend of knowledge, innovation, and hands-on learning. The program has helped me turn curiosity into technical expertise through real-world projects and emerging technologies. With supportive faculty and an industry-focused environment, KRMU has empowered me to think beyond conventional boundaries and confidently shape my future in the world of technology.",
         image: "/images/home/testimonials/namrata-6.webp",
     },
     {
         id: 7,
         name: "Dhruv Gupta",
-        role: "BCA (AI & DS) 2024-26 batch",
-        quote: "I came into K.R. Mangalam University unsure of my direction. The BCA AI & Data Science curriculum, backed by faculty mentors who genuinely invested in my growth, gave me both a technical foundation and the confidence to pursue AI seriously. Maintaining a Dean's List track record across semesters, and the platform the university gave me to showcase my efforts across classrooms, events, and international opportunities, made every bit of that effort worth it.",
+        role: "BCA (AI & DS), Batch 2024–26",
+        quote: "I came into K.R. Mangalam University unsure of my direction — I'm leaving with a track record I'm proud of. The BCA AI & Data Science curriculum, backed by faculty mentors who genuinely invested in my growth, gave me both a strong technical foundation and the confidence to pursue AI seriously. I maintained a spot on the Dean's List across every semester, represented KRMU in international opportunities, and consistently showcased my work across classrooms and industry events. Every milestone along the way is proof that the effort paid off.",
         image: "/images/home/testimonials/dhruv-gupta-7.webp",
     },
     {
         id: 8,
         name: "Rakesh G",
-        role: "BCA (AI & DS) 2024-26 batch",
-        quote: "My journey at K.R. Mangalam University has been an enriching experience that has strengthened both my technical knowledge and professional confidence. The BCA (AI & Data Science) programme provided me with practical exposure through projects, internships, and industry-oriented learning. The continuous guidance from faculty members has helped me develop problemsolving skills and prepared me for a successful career in technology.",
+        role: "BCA (AI & DS), Batch 2024–26",
+        quote: "My journey at K.R. Mangalam University has been an enriching experience that has strengthened both my technical knowledge and professional confidence. The BCA (AI & Data Science) programme provided me with practical exposure through projects, internships, and industry-oriented learning. The continuous guidance from faculty members has helped me develop problem-solving skills and prepared me for a successful career in technology.",
         image: "/images/home/testimonials/rakesh-8.webp",
     },
     {
         id: 9,
         name: "Khushi",
-        role: "B. Tech CSE (AI & ML) 2023-2027 batch",
-        quote: "The university played an important role in shaping my learning journey. The B.Tech CSE (AI & ML) programme offered the right balance of academic rigor and practical exposure, enabling me to build a solid technical foundation and an industry-oriented mindset. The diverse learning opportunities and encouraging environment have prepared me to embrace new challenges with confidence. I sincerely appreciate the support and experiences that made this journey memorable.",
+        role: "B.Tech. CSE (AI & ML), Batch 2023–27",
+        quote: "The university played an important role in shaping my learning journey. The B.Tech CSE (AI & ML) programme offered the right balance of academic rigour and practical exposure, enabling me to build a solid technical foundation and an industry-oriented mindset. The diverse learning opportunities and encouraging environment have prepared me to embrace new challenges with confidence. I sincerely appreciate the support and experiences that made this journey memorable.",
         image: "/images/home/testimonials/khushi-9.webp",
     },
     {
         id: 10,
-        name: "UTSAV RATAN",
-        role: "Btech CSE 2024-2028 Batch",
+        name: "Utsav Ratan",
+        role: "B.Tech. CSE, Batch 2024–28",
         quote: "I’m Utsav Ratan, and choosing B.Tech at K.R. Mangalam University has been one of the best decisions for my academic and personal growth. The university provides excellent faculty, practical learning opportunities, modern infrastructure, and a supportive environment that encourages innovation and skill development. Every experience here has strengthened my confidence and prepared me for future challenges. I’m proud to be a part of the K.R. Mangalam University family.",
         image: "/images/home/testimonials/utsav-ratan-10.webp",
     },
     {
         id: 11,
         name: "Mrinal Prakash",
-        role: "Btech CSE 2024-2028 Batch",
+        role: "B.Tech. CSE, Batch 2024–28",
         quote: "K.R. Mangalam University gave me more than a degree — it gave me room to build. Leading GeekRoom KRMU as Chapter President and running things day-to-day as MD & Vice Chairperson at eOzka taught me more than any classroom could. I stayed consistent with LeetCode (Mrinalprakash9) to keep my fundamentals sharp, and my GitHub (MRINALPRAKASHFSD) has every project to show for it.",
         image: "/images/home/testimonials/mrinal-prakash-11.webp",
     },
@@ -129,7 +129,11 @@ export function TestimonialsSection({
         <section className="relative w-full overflow-hidden py-10 md:py-12 xl:py-20 font-poppins max-w-[1530px] mx-auto">
             <div className="max-w-[1530px] mx-auto relative z-10 px-4 md:px-8 xl:px-16">
                 <SectionTitle
-                    title={title || "What our Learners say?"}
+                    title={
+                        title?.split(" ").slice(1).join(" ") ||
+                        title ||
+                        "Testimonials"
+                    }
                     className="mb-6 md:mb-8 text-center md:text-left"
                 />
 
@@ -180,7 +184,7 @@ export function TestimonialsSection({
 
                                         {/* Quote Paragraph - Fixed min-height to prevent layout jump */}
                                         <div className="min-h-[140px] sm:min-h-[150px] md:min-h-[160px] flex items-center justify-center md:justify-start">
-                                            <p className="text-white/90 text-sm md:text-[16px] xl:text-[18px] leading-relaxed font-light font-poppins relative z-10 text-justify md:text-left pr-0 md:pr-2 lg:pr-12">
+                                            <p className="italic text-white/90 text-sm md:text-[16px] xl:text-[18px] leading-relaxed font-light font-poppins relative z-10 text-justify md:text-left pr-0 md:pr-2 lg:pr-12">
                                                 {t.quote}
                                             </p>
                                         </div>

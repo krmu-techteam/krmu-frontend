@@ -301,7 +301,7 @@ const footerLinks: Record<string, FooterLink[]> = {
             href: "/programmes?degree=postgraduate-programmes",
         },
         {
-            name: "PhD Programmes",
+            name: "Ph.D. Programmes",
             href: "/programmes?degree=doctoral-programmes",
         },
         {

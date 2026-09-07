@@ -193,7 +193,7 @@ export const LIFE_AT_KRMU_CAROUSEL_CONFIGS: LifeAtKRMUFeatureCardType[] = [
 
 export const RESEARCH_STATS: ResearchStatsType[] = [
     { value: "100+", label: "High-End Teaching\nand Research Labs" },
-    { value: "4000+", label: "No. of Research\nPublications" },
+    { value: "4,000+", label: "No. of Research\nPublications" },
     {
         value: "16Cr+",
         label: "Research and consultancy\ngrants to the university",
