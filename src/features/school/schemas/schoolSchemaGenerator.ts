@@ -5,6 +5,11 @@ import {
     SchoolProgrammeItem,
     SchoolSchemaInfo,
 } from "./schoolSchemaData";
+import {
+    createBreadcrumbSchema,
+    createProgrammeItemListSchema,
+    createSchoolPageSchema,
+} from "@/lib/api/common";
 
 export type CMSMinimalSchoolData = Partial<School> | null | undefined;
 
@@ -88,60 +93,41 @@ export function generateSchoolSchemas(
     );
     const fullUrl = `https://www.krmangalam.edu.in/${schoolInfo.urlSlug}`;
 
-    const itemListSchema = {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
+    const itemListJson = createProgrammeItemListSchema({
         name: `Programmes Offered - ${schoolInfo.schoolName}`,
         description: `List of undergraduate, postgraduate and doctoral programmes offered by ${schoolInfo.schoolName} at K.R. Mangalam University.`,
         url: fullUrl,
-        itemListElement: schoolInfo.programmes.map(
-            (prog: SchoolProgrammeItem, index: number) => ({
-                "@type": "ListItem",
-                position: index + 1,
-                name: prog.name,
-                url: prog.url,
-            })
-        ),
-    };
+        programmes: schoolInfo.programmes.map((prog: SchoolProgrammeItem) => ({
+            name: prog.name,
+            url: prog.url,
+        })),
+    });
 
-    const webPageSchema = {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
+    const webPageJson = createSchoolPageSchema({
         name:
             schoolInfo.metaTitle ||
             `${schoolInfo.schoolName} | K.R. Mangalam University`,
         url: fullUrl,
         description: schoolInfo.description,
-        about: {
-            "@type": "CollegeOrUniversity",
-            name: schoolInfo.schoolName,
+        aboutName: schoolInfo.schoolName,
+        aboutUrl: "https://www.krmangalam.edu.in/",
+    });
+
+    const breadcrumbJson = createBreadcrumbSchema([
+        {
+            name: "Home",
             url: "https://www.krmangalam.edu.in/",
         },
-    };
-
-    const breadcrumbSchema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-            {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://www.krmangalam.edu.in/",
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
-                name: schoolInfo.schoolName,
-                item: fullUrl,
-            },
-        ],
-    };
+        {
+            name: schoolInfo.schoolName,
+            url: fullUrl,
+        },
+    ]);
 
     return {
-        itemListJson: JSON.stringify(itemListSchema, null, 2),
-        webPageJson: JSON.stringify(webPageSchema, null, 2),
-        breadcrumbJson: JSON.stringify(breadcrumbSchema, null, 2),
+        itemListJson,
+        webPageJson,
+        breadcrumbJson,
         schoolInfo,
     };
 }

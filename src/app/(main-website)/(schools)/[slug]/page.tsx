@@ -10,9 +10,13 @@ import CustomPage from "@/app/(main-website)/(page)/CustomPage";
 import { STRAPI_URL } from "@/app/constant";
 import { getSchoolSEO } from "@/lib/api/website-seo";
 import { folderRouteSEO } from "@/lib/api/siteseo";
+import Script from "next/script";
 
 import { getProgrammesBySchoolCategory } from "@/lib/api/school-programmes";
-import { resolveSchoolSchemaConfig } from "@/features/school/schemas/schoolSchemaGenerator";
+import {
+    generateSchoolSchemas,
+    resolveSchoolSchemaConfig,
+} from "@/features/school/schemas/schoolSchemaGenerator";
 
 import {
     sbasLogos,
@@ -40,6 +44,7 @@ import {
     somcHerosLogos,
     sprsHerosLogos,
     SchoolSchemaScripts,
+    SchoolSchemaSync,
 } from "@/features/school";
 
 import {
@@ -304,12 +309,34 @@ export default async function Page({ params }: Props) {
         schoolsHeroLogosMap[school?.urlslug] ||
         schoolsHeroLogosMap[school?.wordschoolslug];
 
+    const { itemListJson, webPageJson, breadcrumbJson } = generateSchoolSchemas(
+        slug,
+        school,
+        dynamicProgrammes
+    );
+
     return (
         <>
-            <SchoolSchemaScripts
+            <Script
+                id="school-itemlist-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: itemListJson }}
+            />
+            <Script
+                id="school-webpage-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: webPageJson }}
+            />
+            <Script
+                id="school-breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: breadcrumbJson }}
+            />
+            <SchoolSchemaSync
                 slug={slug}
-                school={school}
-                dynamicProgrammes={dynamicProgrammes}
+                itemListJson={itemListJson}
+                webPageJson={webPageJson}
+                breadcrumbJson={breadcrumbJson}
             />
             <HeroSection
                 herobanner={school?.schoolherobanner}
