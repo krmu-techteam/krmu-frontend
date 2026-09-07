@@ -150,9 +150,9 @@ const page = async ({ params }: Props) => {
     return <JournalismAndMassCommunication />;
   }
 
-  if (slug === "b-tech-cse-robotics-ai") {
-    return <BTechCSERoboticsAI />;
-  }
+  // if (slug === "b-tech-cse-robotics-ai") {
+  //   return <BTechCSERoboticsAI />;
+  // }
 
   // ====== END BSC-HONS-FINANCE OVERRIDE ======
 
@@ -205,7 +205,7 @@ const page = async ({ params }: Props) => {
   const heroSection = singleSchoolProgramme?.herosection;
   const eligibilitySection = singleSchoolProgramme?.programmeeligibility;
   const programmeScopeSection = singleSchoolProgramme?.programmescope;
-  const programmeHighlightSection = singleSchoolProgramme?.programmehighlight; 
+  const programmeHighlightSection = singleSchoolProgramme?.programmehighlight;
   const specialisationSection = singleSchoolProgramme?.specialisation;
   const admissionProcessSection = singleSchoolProgramme?.admissionprocess;
   const curriculumSection = singleSchoolProgramme?.curriculum;
