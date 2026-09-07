@@ -18,7 +18,7 @@ export function LifeAtKRMUSection() {
             <div className="container mx-auto px-0 md:px-12 relative z-10 text-center mb-6 md:mb-8 lg:mb-12">
                 <SectionTitle title="Why KRMU?" />
                 <p className="font-poppins font-[275] text-[24px] md:text-[42px] leading-[1.2] md:leading-[30px] tracking-normal text-white mb-6">
-                    A closer look at Life at KRMU
+                    A Closer Look at Life@KRMU
                 </p>
                 <p className="max-w-[340px] sm:max-w-[380px] md:max-w-7xl text-justify mx-auto text-white/80 text-sm md:text-[16px] leading-[1.6] md:leading-[30px] font-normal md:text-center">
                     At K.R. Mangalam University, life goes be yond the
