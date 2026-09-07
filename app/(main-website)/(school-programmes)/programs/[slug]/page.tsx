@@ -150,9 +150,9 @@ const page = async ({ params }: Props) => {
     return <JournalismAndMassCommunication />;
   }
 
-  // if (slug === "b-tech-cse-robotics-ai") {
-  //   return <BTechCSERoboticsAI />;
-  // }
+  if (slug === "b-tech-cse-robotics-ai") {
+    return <BTechCSERoboticsAI />;
+  }
 
   // ====== END BSC-HONS-FINANCE OVERRIDE ======
 
@@ -300,6 +300,25 @@ const page = async ({ params }: Props) => {
     slug === "mba" ||
     slug === "mba-digital-marketing";
 
+  const isNewSectionSlug =
+    slug === "bsc-hons-agriculture" ||
+    slug === "b-tech-cse" ||
+    slug === "bachelor-of-education-b-ed" ||
+    slug === "bhmct-hotel-management" ||
+    slug === "bjmc-hons-research" ||
+    slug === "bjmc" ||
+    slug === "bachelor-of-design-b-des-fashion-design" ||
+    slug === "barch-architecture" ||
+    slug === "bfa-fine-arts" ||
+    slug === "ba-hons-political-science" ||
+    slug === "b-a-hons-hons-with-research-psychology" ||
+    slug === "ba-hons-hons-economics-research" ||
+    slug === "ba-hons-psychology" ||
+    slug === "ba-hons-english-research" ||
+    slug === "bachelor-of-physiotherapy-bpt" ||
+    slug === "bba-llb-hons" ||
+    slug === "btech-cse-in-data-science";
+
   return (
     <>
       <Script
@@ -349,7 +368,6 @@ const page = async ({ params }: Props) => {
               logos={dreamcareerSection?.careerlogos}
             />
           ))}
-
         {eligibilitySection &&
           (isMbaSlug ? (
             <LogoSection />
@@ -365,7 +383,6 @@ const page = async ({ params }: Props) => {
               prospectusBtn={programmeScopeSection?.scopebtn}
             />
           ))}
-
         {!(slug in heroConfigs) && dreamcareerSection && (
           <DreamCareer
             heading={dreamcareerSection.heading}
@@ -373,7 +390,6 @@ const page = async ({ params }: Props) => {
             logos={dreamcareerSection?.careerlogos}
           />
         )}
-
         {programmeScopeSection &&
           (isMbaSlug ? (
             <FacultyAndIndustry
@@ -388,9 +404,9 @@ const page = async ({ params }: Props) => {
                       : null
               }
             />
-          ) : slug === "b-tech-cse" ? (
+          ) : isNewSectionSlug ? (
             <>
-              <ProgrammeOverview />
+              <ProgrammeOverview slug={slug} />
               <NewProgrammeScope
                 scopeData={programmeScopeSection}
                 heroSection={heroSection}
@@ -406,7 +422,6 @@ const page = async ({ params }: Props) => {
               slug={slug}
             />
           ))}
-
         {programmeHighlightSection &&
           (isMbaSlug ? (
             <CareerOutcome slug={slug} />
@@ -419,18 +434,21 @@ const page = async ({ params }: Props) => {
               slug={slug}
             />
           ))}
-
         {/* {slug === "mba" && <SpecialisationsSection />} */}
-        {specialisationSection && (
+        {isNewSectionSlug ? (
+          <WhyKrmuCse slug={slug} />
+        ) : (
           <>
-            {slug === "b-tech-cse" && <WhyKrmuCse />}
-            <Specialisation
-              heading={specialisationSection?.heading}
-              highlightheading={specialisationSection?.highlightheading}
-              specialisations={specialisationSection?.specialisationcards}
-            />
+            {specialisationSection && (
+              <Specialisation
+                heading={specialisationSection?.heading}
+                highlightheading={specialisationSection?.highlightheading}
+                specialisations={specialisationSection?.specialisationcards}
+              />
+            )}
           </>
         )}
+
         {admissionProcessSection &&
           (isMbaSlug ? (
             <MbaExists />
@@ -446,7 +464,6 @@ const page = async ({ params }: Props) => {
               // formId={admissionProcessSection?.admissionFormId}
             />
           ))}
-
         {curriculumSection &&
           (isMbaSlug ? (
             <TwoYearArc />
@@ -463,7 +480,6 @@ const page = async ({ params }: Props) => {
               slug={slug}
             />
           ))}
-
         {labfacilitiesSection &&
           (isMbaSlug ? (
             <CareerGoal
@@ -489,13 +505,12 @@ const page = async ({ params }: Props) => {
               slug={slug}
             />
           ))}
-
         {beyondclassSection &&
           (isMbaSlug ? (
             <LeaveWith />
           ) : slug === "b-tech-cse" ? (
             <>
-              <ResearchAndInnovation />
+              <ResearchAndInnovation slug={slug} />
               <BeyondClassroom
                 heading={beyondclassSection?.heading}
                 highlight={beyondclassSection?.highlightheading}
@@ -511,7 +526,6 @@ const page = async ({ params }: Props) => {
               beyondclassimages={beyondclassSection?.beyondclassroomimages}
             />
           ))}
-
         {careerProspectsSection &&
           (isMbaSlug ? (
             <ExperimentalInfra
@@ -537,9 +551,7 @@ const page = async ({ params }: Props) => {
               // careerFormId={careerProspectsSection?.careerFormId}
             />
           ))}
-
-        {slug === "b-tech-cse" && <BreakDown />}
-
+        {isNewSectionSlug && <BreakDown slug={slug} />}
         {financialAssistanceSection &&
           (isMbaSlug ? (
             <>
@@ -560,11 +572,8 @@ const page = async ({ params }: Props) => {
               logos={financialAssistanceSection?.financelogos}
             />
           ))}
-
         {isMbaSlug ? <CareerProspectsNew slug={slug} /> : <ScholarshipBanner />}
-
         {testimonialsData && <ProgTestimonials data={testimonialsData} />}
-
         {tocSection &&
           (isMbaSlug ? (
             <FeeFinance slug={slug} />
@@ -578,13 +587,11 @@ const page = async ({ params }: Props) => {
               tocbtn={tocSection?.tocbtn}
             />
           ))}
-
         {isMbaSlug ? (
           <HowToApply formId={heroSection?.formId} heroSection={heroSection} />
         ) : (
           <ExplorePrograms currentSlug={slug} />
         )}
-
         {ourLocationSection &&
           (isMbaSlug ? (
             <LocationNew slug={slug} />
@@ -596,7 +603,6 @@ const page = async ({ params }: Props) => {
               img2={ourLocationSection?.img2}
             />
           ))}
-
         {/* <ConnectWithUs /> */}
         {singleSchoolProgramme?.school_category &&
           (isMbaSlug ? (

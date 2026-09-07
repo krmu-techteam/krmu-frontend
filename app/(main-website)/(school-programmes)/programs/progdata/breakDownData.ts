@@ -1,0 +1,1350 @@
+export interface CareerRow {
+  role: string;
+  package: string;
+  sectors: string;
+}
+
+export interface BreakDownContent {
+  buttonTitle: string;
+  heading: string;
+
+  tableHeaders: {
+    role: string;
+    package: string;
+    sectors: string;
+  };
+
+  rows: CareerRow[];
+
+  note?: string[];
+}
+
+export const breakDownData: Record<string, BreakDownContent> = {
+  "b-tech-cse": {
+    buttonTitle: "Career Scope & Salary Insights",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.Tech. CSE graduates.",
+
+    tableHeaders: {
+      role: "Job Role\nAfter B.Tech. CSE",
+      package: "Average Package for Freshers in India\n(In INR)*",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Software Developer / SDE",
+        package: "4 LPA - 6 LPA",
+        sectors: "IT Services, IT Products, Startups",
+      },
+      {
+        role: "AI / ML Engineer",
+        package: "5 LPA - 8 LPA",
+        sectors: "AI Labs, SaaS, Deep-Tech",
+      },
+      {
+        role: "Data Scientist",
+        package: "6 LPA - 8 LPA",
+        sectors: "BFSI, E-commerce, Analytics",
+      },
+      {
+        role: "Cybersecurity Analyst",
+        package: "4 LPA - 5 LPA",
+        sectors: "Cyber Security, Defence, BFSI",
+      },
+      {
+        role: "Full Stack Developer",
+        package: "4 LPA - 5 LPA",
+        sectors: "Startups, Product Companies",
+      },
+      {
+        role: "Cloud Engineer",
+        package: "6 LPA - 8 LPA",
+        sectors: "AWS, Azure, GCP Ecosystem",
+      },
+      {
+        role: "Data Engineer",
+        package: "6 LPA - 8 LPA",
+        sectors: "FinTech, Retail, Healthcare Tech",
+      },
+      {
+        role: "DevOps Engineer",
+        package: "4 LPA - 6 LPA",
+        sectors: "SaaS, Enterprise IT",
+      },
+      {
+        role: "UX / UI Designer",
+        package: "4 LPA - 6 LPA",
+        sectors: "Product, Agencies, EdTech",
+      },
+      {
+        role: "IT Consultant",
+        package: "4 LPA - 5 LPA",
+        sectors: "Big 4, System Integrators",
+      },
+      {
+        role: "Robotics / Automation Engineer",
+        package: "6 LPA - 8 LPA",
+        sectors: "Manufacturing, Defence, R&D",
+      },
+      {
+        role: "Product Management Trainee",
+        package: "4 LPA - 5 LPA",
+        sectors: "Product Companies, FinTech",
+      },
+    ],
+
+    note: [
+      "*Note: The packages mentioned above are sourced from various public sources on the internet and may vary.",
+    ],
+  },
+
+  "bsc-hons-agriculture": {
+    buttonTitle: "Career Scope & Salary Insights",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.Sc. (Hons.) Agriculture graduates.",
+
+    tableHeaders: {
+      role: "Job Role After B.Sc. (Hons.) Agriculture",
+      package: "Average Package for Freshers in India\n(In INR)*",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Agriculture Officer",
+        package: "3 LPA–5 LPA",
+        sectors: "Government Departments, Agri Boards, Banks",
+      },
+      {
+        role: "Agronomist",
+        package: "3 LPA–5.5 LPA",
+        sectors: "Agri-input Companies, Research Organisations, Plantations",
+      },
+      {
+        role: "Agricultural Extension Officer",
+        package: "3 LPA–4.5 LPA",
+        sectors: "Government Schemes, NGOs, Rural Development Organisations",
+      },
+      {
+        role: "Seed Production Officer",
+        package: "3.5 LPA–5 LPA",
+        sectors: "Seed Companies, Agri-input Firms",
+      },
+      {
+        role: "Quality Assurance Executive",
+        package: "3 LPA–5 LPA",
+        sectors: "Food Processing, Agri-export, FMCG",
+      },
+      {
+        role: "Soil & Crop Specialist",
+        package: "3.5 LPA–5.5 LPA",
+        sectors: "Fertiliser Companies, Agri-tech, Research Institutes",
+      },
+      {
+        role: "Horticulture Officer",
+        package: "3 LPA–5 LPA",
+        sectors: "Horticulture Departments, Nurseries, Agri Enterprises",
+      },
+      {
+        role: "Farm Manager",
+        package: "3 LPA–6 LPA",
+        sectors: "Commercial Farms, Plantations, Agri Businesses",
+      },
+      {
+        role: "Agricultural Sales & Marketing Executive",
+        package: "3 LPA–6 LPA",
+        sectors: "Agrochemical, Fertiliser, Seed & Farm Equipment Companies",
+      },
+      {
+        role: "Research Associate / Field Research Assistant",
+        package: "3.5 LPA–5.5 LPA",
+        sectors: "ICAR Institutes, Universities, R&D Organisations",
+      },
+      {
+        role: "Food Safety & Quality Executive",
+        package: "3.5 LPA–6 LPA",
+        sectors: "Food Processing, Dairy, FMCG Companies",
+      },
+      {
+        role: "Agri-Tech Associate",
+        package: "4 LPA–7 LPA",
+        sectors: "Agri-Tech Startups, Precision Agriculture, Digital Farming",
+      },
+    ],
+
+    note: [
+      "* Note: The salary ranges mentioned above are indicative averages for fresh graduates in India and are compiled from various publicly available sources. Actual compensation may vary depending on the employer, job location, candidate skills, and market conditions.",
+    ],
+  },
+
+  "bachelor-of-education-b-ed": {
+    buttonTitle: "Career Scope & Salary Insights",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring Bachelor of Education graduates.",
+
+    tableHeaders: {
+      role: "Job Role After Bachelor of Education (B.Ed.)",
+      package: "Average Package for Freshers in India\n(In INR)*",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Primary School Teacher (PRT)",
+        package: "2.5 LPA–4.5 LPA",
+        sectors: "Public & Private Schools, International Schools",
+      },
+      {
+        role: "Trained Graduate Teacher (TGT)**",
+        package: "3 LPA–6 LPA",
+        sectors: "CBSE, ICSE, State Board & Private Schools",
+      },
+      {
+        role: "Post Graduate Teacher (PGT)**",
+        package: "4 LPA–7 LPA",
+        sectors: "Senior Secondary Schools, International Schools",
+      },
+      {
+        role: "Pre-Primary / Kindergarten Teacher",
+        package: "2.5 LPA–4 LPA",
+        sectors: "Preschools, Kindergartens, Early Childhood Education Centres",
+      },
+      {
+        role: "Special Education Teacher***",
+        package: "3 LPA–5.5 LPA",
+        sectors:
+          "Special Schools, Inclusive Schools, NGOs, Rehabilitation Centres",
+      },
+      {
+        role: "Academic Coordinator",
+        package: "4 LPA–7 LPA",
+        sectors: "Schools, Educational Institutions, School Chain",
+      },
+      {
+        role: "Curriculum Developer",
+        package: "4 LPA–8 LPA",
+        sectors:
+          "EdTech Companies, Publishing Houses, Educational Organisations",
+      },
+      {
+        role: "Education Counsellor",
+        package: "3 LPA–6 LPA",
+        sectors: "Schools, Colleges, Career Counselling Organisations",
+      },
+      {
+        role: "Instructional Designer",
+        package: "4 LPA–8 LPA",
+        sectors:
+          "EdTech Companies, Corporate Learning & Training Organisations",
+      },
+      {
+        role: "Educational Content Developer",
+        package: "3.5 LPA–7 LPA",
+        sectors:
+          "EdTech Platforms, Publishing Companies, Digital Learning Organisations",
+      },
+      {
+        role: "Teacher Trainer",
+        package: "4 LPA–8 LPA",
+        sectors: "Teacher Training Institutes, NGOs, Educational Organisations",
+      },
+      {
+        role: "Education Consultant",
+        package: "4 LPA–8 LPA",
+        sectors:
+          "Schools, Education Consulting Firms, Government & Private Education Projects",
+      },
+    ],
+
+    note: [
+      "* Salaries are indicative and may vary based on the employer, location, qualifications, teaching subject, and relevant experience.",
+      "** Eligibility for TGT and PGT positions depends on the candidate's undergraduate/postgraduate subject specialisation and meeting the recruitment criteria prescribed by the respective school boards or authorities.",
+      "*** Special Education roles may require additional qualifications or certifications as prescribed by the relevant regulatory authorities.",
+    ],
+  },
+
+  "bhmct-hotel-management": {
+    buttonTitle: "Career Scope & Salary Insights",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring Bachelor of Hotel Management and Catering Technology (B.HMCT.) graduates.",
+
+    tableHeaders: {
+      role: "Career Roles",
+      package: "Average Salary (India)",
+      sectors: "Top Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Hotel Manager",
+        package: "₹4–8 LPA",
+        sectors: "Hotels, Resorts, Hospitality Chains",
+      },
+      {
+        role: "Front Office Manager",
+        package: "₹3.5–7 LPA",
+        sectors: "Hotels, Resorts, Business Hotels",
+      },
+      {
+        role: "Food & Beverage Manager",
+        package: "₹5–10 LPA",
+        sectors: "Hotels, Restaurants, Luxury Resorts",
+      },
+      {
+        role: "Executive Chef",
+        package: "₹6–12 LPA",
+        sectors: "Hotels, Restaurants, Cruise Lines",
+      },
+      {
+        role: "Restaurant Manager",
+        package: "₹4–8 LPA",
+        sectors: "Restaurants, Café Chains, Fine Dining",
+      },
+      {
+        role: "Catering Manager",
+        package: "₹4–9 LPA",
+        sectors: "Catering Companies, Airlines, Corporate Catering",
+      },
+      {
+        role: "Housekeeping Manager",
+        package: "₹4–8 LPA",
+        sectors: "Hotels, Resorts, Hospitals",
+      },
+      {
+        role: "Event Manager",
+        package: "₹5–10 LPA",
+        sectors: "Event Management Companies, Hotels, Convention Centres",
+      },
+      {
+        role: "Hospitality Executive",
+        package: "₹3–6 LPA",
+        sectors: "Hotels, Resorts, Travel & Tourism Companies",
+      },
+      {
+        role: "Cruise Hospitality Professional",
+        package: "₹6–15 LPA",
+        sectors: "International Cruise Lines",
+      },
+      {
+        role: "Airline Catering & Hospitality Executive",
+        package: "₹4–8 LPA",
+        sectors: "Airlines, Airport Hospitality, Aviation Catering",
+      },
+      {
+        role: "Hospitality Entrepreneur",
+        package: "Earnings vary",
+        sectors: "Self-Employment, Hospitality Start-up",
+      },
+    ],
+
+    note: [
+      "Note: The salary ranges mentioned above are approximate estimates compiled from industry reports and career portals. Actual compensation depends on factors such as employer, location, experience, skills, and job responsibilities.",
+    ],
+  },
+
+  "bjmc-hons-research": {
+    buttonTitle: "Career Scope After BJMC (Hons. / Hons. with Research)",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring BJMC graduates.",
+
+    tableHeaders: {
+      role: "Job Role After BJMC (Hons. / Hons. with Research)",
+      package: "Average Package for Freshers in India (INR)*",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Journalist / Reporter",
+        package: "3 LPA–5 LPA",
+        sectors: "News Channels, Newspapers, Digital News Platforms",
+      },
+      {
+        role: "Sub-Editor / Copy Editor",
+        package: "3 LPA–5 LPA",
+        sectors: "Print Media, Digital Publications, News Agencies",
+      },
+      {
+        role: "Digital Media Strategist",
+        package: "3.5 LPA–6 LPA",
+        sectors: "Digital Marketing Agencies, Brands, Media Houses",
+      },
+      {
+        role: "Content Creator / Writer",
+        package: "3 LPA–5.5 LPA",
+        sectors: "OTT Platforms, Content Studios, Social Media Agencies",
+      },
+      {
+        role: "Public Relations Specialist",
+        package: "3 LPA–5.5 LPA",
+        sectors: "PR Agencies, Corporate Communications, Consultancies",
+      },
+      {
+        role: "Radio Jockey (RJ)",
+        package: "3 LPA–5 LPA",
+        sectors: "Radio Networks, Podcast Studios, Broadcast Media",
+      },
+      {
+        role: "Video Editor / Producer",
+        package: "3 LPA–5.5 LPA",
+        sectors: "TV Networks, Production Houses, OTT Platforms",
+      },
+      {
+        role: "Social Media Manager",
+        package: "3 LPA–5.5 LPA",
+        sectors: "Brands, Advertising Agencies, Media Companies",
+      },
+      {
+        role: "Advertising Executive",
+        package: "3 LPA–6 LPA",
+        sectors: "Advertising Agencies, Brand Marketing Teams",
+      },
+      {
+        role: "News Anchor",
+        package: "3.5 LPA–6 LPA",
+        sectors: "Television News Channels, Digital News Platforms",
+      },
+      {
+        role: "Event Manager",
+        package: "3 LPA–6 LPA",
+        sectors: "Event Management Companies, Corporate Communications",
+      },
+      {
+        role: "Media Researcher",
+        package: "3 LPA–5 LPA",
+        sectors: "Research Organisations, Media Houses, Think Tanks",
+      },
+    ],
+
+    note: [
+      "* Note: The salary ranges mentioned above are indicative averages for fresh graduates in India and are compiled from various publicly available sources. Actual compensation may vary depending on the employer, job location, candidate skills, and market conditions.",
+    ],
+  },
+
+  bjmc: {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a breakdown of career roles, indicative salary ranges for freshers in India, and the sectors actively hiring B.A. (JMC) graduates.",
+
+    tableHeaders: {
+      role: "Job Role After B.A. (JMC)",
+      package: "Average Package for Freshers in India (INR)*",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Journalist / Reporter",
+        package: "3 LPA–5 LPA",
+        sectors: "Newspapers, News Websites, Media Houses",
+      },
+      {
+        role: "News Anchor / TV Correspondent",
+        package: "4 LPA–6 LPA",
+        sectors: "TV News Channels, Broadcast Media",
+      },
+      {
+        role: "Radio Jockey (RJ) / Video Jockey (VJ)",
+        package: "2.5 LPA–5 LPA",
+        sectors: "Radio Stations, OTT Platforms, YouTube Channels",
+      },
+      {
+        role: "Digital Content Creator",
+        package: "2.5 LPA–4.5 LPA",
+        sectors: "Digital Media Platforms, OTT, Social Media Agencies",
+      },
+      {
+        role: "Public Relations Executive",
+        package: "3.5 LPA–6 LPA",
+        sectors: "PR Agencies, Corporate Communication Departments",
+      },
+      {
+        role: "Advertising Executive / Copywriter",
+        package: "3 LPA–5 LPA",
+        sectors: "Advertising Agencies, Brand & Creative Studios",
+      },
+      {
+        role: "Social Media Manager",
+        package: "3 LPA–7 LPA",
+        sectors: "Digital Marketing Firms, Corporate Brands",
+      },
+      {
+        role: "Editor / Sub-Editor",
+        package: "3 LPA–4.5 LPA",
+        sectors: "Newspapers, Magazines, Digital News Portals",
+      },
+      {
+        role: "Event Manager",
+        package: "3 LPA–5 LPA",
+        sectors: "Event Management Companies, Media Houses",
+      },
+      {
+        role: "Corporate Communication Executive",
+        package: "3.5 LPA–6 LPA",
+        sectors: "Corporate Houses, MNCs, Government Communication Cells",
+      },
+    ],
+
+    note: [
+      "* Note: The salary ranges mentioned above are indicative averages for fresh graduates in India and are compiled from various publicly available sources. Actual compensation may vary depending on the employer, job location, candidate skills, and market conditions.",
+    ],
+  },
+
+  "bachelor-of-design-b-des-fashion-design": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a breakdown of career roles, indicative salary ranges for freshers in India, and the sectors actively hiring B.Des. (Hons. / Hons. with Research) Fashion Design graduates.",
+
+    tableHeaders: {
+      role: "Job Role After B.Des. (Hons. / Hons. with Research) Fashion Design",
+      package: "Average Package for Freshers in India (INR)*",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Fashion Designer",
+        package: "₹4 LPA–8 LPA",
+        sectors:
+          "Fashion Brands, Apparel Manufacturers, Design Houses, Luxury Labels",
+      },
+      {
+        role: "Fashion Stylist",
+        package: "₹4 LPA–8 LPA",
+        sectors:
+          "Fashion Magazines, Celebrity Styling, Media Houses, E-commerce Brands",
+      },
+      {
+        role: "Costume Designer",
+        package: "₹5 LPA–10 LPA",
+        sectors:
+          "Film & Television Industry, OTT Platforms, Theatre Productions, Entertainment Companies",
+      },
+      {
+        role: "Fashion Illustrator",
+        package: "₹3.5 LPA–6.5 LPA",
+        sectors:
+          "Fashion Houses, Design Studios, Publishing Companies, Freelance Practice",
+      },
+      {
+        role: "Fashion Merchandiser",
+        package: "₹5 LPA–9 LPA",
+        sectors: "Apparel Brands, Retail Chains, Buying Houses, Export Houses",
+      },
+      {
+        role: "Textile Designer",
+        package: "₹4 LPA–8 LPA",
+        sectors:
+          "Textile Manufacturers, Home Furnishing Brands, Fashion Companies, Export Units",
+      },
+      {
+        role: "Fashion Buyer",
+        package: "₹5 LPA–9 LPA",
+        sectors:
+          "Retail Brands, Luxury Fashion Houses, E-commerce Companies, Buying Offices",
+      },
+      {
+        role: "Apparel Production Manager (Entry-Level)",
+        package: "₹4.5 LPA–8 LPA",
+        sectors:
+          "Garment Manufacturing Units, Export Houses, Apparel Production Companies",
+      },
+      {
+        role: "Visual Merchandiser",
+        package: "₹4 LPA–7.5 LPA",
+        sectors:
+          "Fashion Retail Chains, Luxury Stores, Lifestyle Brands, Department Stores",
+      },
+      {
+        role: "Fashion Consultant",
+        package: "₹4 LPA–8 LPA",
+        sectors:
+          "Fashion Brands, Image Consulting Firms, Personal Styling Agencies, Retail Companies",
+      },
+      {
+        role: "Entrepreneur / Fashion Label Founder",
+        package: "₹4 LPA–15+ LPA",
+        sectors:
+          "Own Fashion Label, Boutique, Sustainable Fashion Brand, E-commerce Business",
+      },
+      {
+        role: "Fashion Entrepreneur / Freelance Designer",
+        package: "₹4 LPA–12+ LPA",
+        sectors:
+          "Independent Design Practice, Custom Couture, Online Fashion Platforms, Design Consultancy",
+      },
+    ],
+
+    note: [
+      "Note: Salary figures are approximate and may vary depending on the candidate's skills, experience, employer, job location, and prevailing industry conditions. Entrepreneurial earnings depend on business performance and market demand.",
+    ],
+  },
+
+  "barch-architecture": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a breakdown of career roles, indicative salary ranges for freshers in India, and the sectors actively hiring Bachelor of Architecture (B.Arch.) graduates.",
+
+    tableHeaders: {
+      role: "Job Role After Bachelor of Architecture (B.Arch.)",
+      package: "Average Package for Freshers in India (INR)*",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Architect*",
+        package: "₹3.5 LPA–7 LPA",
+        sectors:
+          "Architectural Firms, Design Consultancies, Real Estate Developers",
+      },
+      {
+        role: "Junior Architect",
+        package: "₹3 LPA–6 LPA",
+        sectors: "Architecture & Planning Firms, Construction Companies",
+      },
+      {
+        role: "Urban Designer",
+        package: "₹4 LPA–8 LPA",
+        sectors:
+          "Urban Planning Firms, Smart City Projects, Government Agencies",
+      },
+      {
+        role: "Interior Designer",
+        package: "₹3 LPA–6 LPA",
+        sectors:
+          "Interior Design Studios, Architecture Firms, Real Estate Companies",
+      },
+      {
+        role: "Landscape Architect",
+        package: "₹4 LPA–7 LPA",
+        sectors:
+          "Landscape Design Firms, Urban Development Organisations, Government Projects",
+      },
+      {
+        role: "Architectural Designer",
+        package: "₹3.5 LPA–6.5 LPA",
+        sectors:
+          "Architecture Studios, Design Consultancies, Infrastructure Companies",
+      },
+      {
+        role: "BIM Specialist",
+        package: "₹5 LPA–9 LPA",
+        sectors:
+          "Architecture, Engineering & Construction (AEC) Firms, Infrastructure Companies",
+      },
+      {
+        role: "Project Coordinator",
+        package: "₹4 LPA–7 LPA",
+        sectors:
+          "Construction Companies, Real Estate Developers, Project Management Consultancies",
+      },
+      {
+        role: "Architectural Visualiser",
+        package: "₹3.5 LPA–7 LPA",
+        sectors:
+          "Architectural Firms, 3D Visualisation Studios, Design Agencies",
+      },
+      {
+        role: "Conservation Architect",
+        package: "₹4 LPA–7 LPA",
+        sectors:
+          "Heritage Conservation Organisations, Government Bodies, Architectural Consultancies",
+      },
+      {
+        role: "Building Consultant",
+        package: "₹4 LPA–8 LPA",
+        sectors:
+          "Construction Firms, Engineering Consultancies, Building Services Companies",
+      },
+      {
+        role: "Design Research Associate",
+        package: "₹4 LPA–7 LPA",
+        sectors:
+          "Research Organisations, Academic Institutions, Architecture & Urban Planning Think Tanks",
+      },
+    ],
+
+    note: [
+      "* To practise independently as an architect in India, graduates must register with the Council of Architecture (CoA) as per applicable regulations.",
+      "#Some of the specialised roles mentioned above may require relevant experience or postgraduate qualifications, depending on the employer.",
+    ],
+  },
+
+  "bfa-fine-arts": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring Bachelor of Fine Arts graduates.",
+
+    tableHeaders: {
+      role: "Job Role After Bachelor of Fine Arts (BFA)",
+      package: "Average Package for Freshers in India (INR)",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Visual Artist*",
+        package: "3 LPA–6 LPA",
+        sectors:
+          "Art Galleries, Studios, Cultural Organisations, Independent Practice",
+      },
+      {
+        role: "Graphic Designer",
+        package: "3.5 LPA–7 LPA",
+        sectors:
+          "Advertising Agencies, Branding Firms, Media Houses, Design Studios",
+      },
+      {
+        role: "Illustrator",
+        package: "3 LPA–6 LPA",
+        sectors:
+          "Publishing Houses, Advertising Agencies, Animation Studios, Digital Media Companies",
+      },
+      {
+        role: "Animator",
+        package: "4 LPA–8 LPA",
+        sectors:
+          "Animation Studios, Gaming Companies, Film & Entertainment Industry",
+      },
+      {
+        role: "Digital Artist",
+        package: "4 LPA–8 LPA",
+        sectors:
+          "Creative Agencies, Gaming Studios, Media Companies, Digital Content Platforms",
+      },
+      {
+        role: "Art Director (Entry-Level)",
+        package: "5 LPA–9 LPA",
+        sectors:
+          "Advertising Agencies, Design Consultancies, Media & Entertainment Companies",
+      },
+      {
+        role: "Photographer",
+        package: "3 LPA–7 LPA",
+        sectors:
+          "Media Houses, Fashion Industry, Creative Agencies, Independent Studios",
+      },
+      {
+        role: "Art Curator / Gallery Associate",
+        package: "3.5 LPA–6.5 LPA",
+        sectors:
+          "Art Galleries, Museums, Cultural Institutions, Auction Houses",
+      },
+      {
+        role: "Creative Designer",
+        package: "3.5 LPA–7 LPA",
+        sectors:
+          "Branding Agencies, Marketing Firms, Corporate Creative Teams, Startups",
+      },
+      {
+        role: "UI/Visual Designer",
+        package: "5 LPA–10 LPA",
+        sectors:
+          "IT Companies, Product Design Firms, UX/UI Consultancies, Technology Startups",
+      },
+      {
+        role: "Art Educator",
+        package: "3.5 LPA–6.5 LPA",
+        sectors: "Schools, Colleges, Art Institutes, Training Academies",
+      },
+      {
+        role: "Freelance Artist / Creative Entrepreneur",
+        package: "3 LPA–12+ LPA",
+        sectors:
+          "Independent Practice, Commissioned Projects, Online Marketplaces, Creative Enterprises",
+      },
+    ],
+
+    note: [
+      "Note: Salary figures are approximate and may vary depending on the candidate's skills, experience, employer, job location, and prevailing industry conditions. Entrepreneurial earnings depend on business performance and market demand.",
+    ],
+  },
+
+  "ba-hons-political-science": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.A. (Hons.) Political Science graduates.",
+
+    tableHeaders: {
+      role: "Career Roles",
+      package: "Average Salary (India)",
+      sectors: "Top Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Policy Analyst",
+        package: "₹5–10 LPA",
+        sectors:
+          "Public Policy Think Tanks, Government Bodies, Research Organisations",
+      },
+      {
+        role: "Political Research Associate",
+        package: "₹4–8 LPA",
+        sectors: "Research Institutes, Political Consulting Firms, Think Tanks",
+      },
+      {
+        role: "Public Relations Executive",
+        package: "₹4–8 LPA",
+        sectors: "Corporate Organisations, PR Agencies, Government Departments",
+      },
+      {
+        role: "Legislative Assistant",
+        package: "₹5–9 LPA",
+        sectors:
+          "Parliament, Legislative Assemblies, Policy Research Organisations",
+      },
+      {
+        role: "International Relations Executive",
+        package: "₹5–10 LPA",
+        sectors:
+          "International Organisations, Embassies, NGOs, Multinational Organisations",
+      },
+      {
+        role: "Journalist / Political Correspondent",
+        package: "₹4–9 LPA",
+        sectors: "News Channels, Newspapers, Digital Media Organisations",
+      },
+      {
+        role: "NGO Programme Coordinator",
+        package: "₹4–8 LPA",
+        sectors: "NGOs, Non-profit Organisations, Development Agencies",
+      },
+      {
+        role: "Public Administration Executive",
+        package: "₹4–8 LPA",
+        sectors:
+          "Government Departments, Public Sector Undertakings, Administrative Bodies",
+      },
+      {
+        role: "Corporate Affairs Executive",
+        package: "₹5–10 LPA",
+        sectors: "Corporate Houses, Regulatory Affairs, Industry Associations",
+      },
+      {
+        role: "Election & Campaign Analyst",
+        package: "₹5–12 LPA",
+        sectors:
+          "Political Consulting Firms, Election Management Agencies, Research Organisations",
+      },
+      {
+        role: "Social Research Associate",
+        package: "₹4–8 LPA",
+        sectors:
+          "Universities, Research Institutes, Social Research Organisations",
+      },
+    ],
+
+    note: [
+      "Note: The salary figures mentioned above are approximate and may vary depending on factors such as qualifications, skills, work experience, employer, job location, and industry.",
+    ],
+  },
+
+  "b-a-hons-hons-with-research-psychology": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.A. (Hons./ Hons. with Research) Psychology graduates.",
+
+    tableHeaders: {
+      role: "Career Roles",
+      package: "Average Salary (India)",
+      sectors: "Top Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Recruitment Specialist",
+        package: "₹4–8 LPA",
+        sectors: "Recruitment Agencies, Corporate HR, Staffing Firms",
+      },
+      {
+        role: "Market Research Analyst",
+        package: "₹4–9 LPA",
+        sectors: "Market Research Firms, FMCG Companies, Advertising Agencies",
+      },
+      {
+        role: "Research Assistant",
+        package: "₹4–7 LPA",
+        sectors: "Universities, Research Institutes, Healthcare Organisations",
+      },
+      {
+        role: "Child Development Specialist",
+        package: "₹4–8 LPA",
+        sectors: "Child Development Centres, Schools, NGOs, Hospitals",
+      },
+      {
+        role: "Customer Experience (CX) Specialist",
+        package: "₹4–9 LPA",
+        sectors:
+          "IT Companies, E-commerce, BFSI, Hospitality, Service Industry",
+      },
+      {
+        role: "Mental Health Support Professional",
+        package: "₹4–8 LPA",
+        sectors:
+          "Mental Health Clinics, Rehabilitation Centres, NGOs, Healthcare Organisations",
+      },
+      {
+        role: "Social Worker / Community Development Officer",
+        package: "₹3–7 LPA",
+        sectors:
+          "NGOs, Government Organisations, Community Development Agencies",
+      },
+    ],
+
+    note: [
+      "Note: The aforementioned compensation estimates are only estimates and could change based on a number of variables, including the candidate's credentials, experience, job role, employer, region, and sector.",
+    ],
+  },
+
+  "ba-hons-hons-economics-research": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.A. (Hons. / Hons. with Research) Economics graduates.",
+
+    tableHeaders: {
+      role: "Career Roles",
+      package: "Average Salary Range (India)",
+      sectors: "Top Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Economist",
+        package: "₹6–12 LPA",
+        sectors:
+          "Government Departments, Economic Think Tanks, International Organisations, Research Institutions",
+      },
+      {
+        role: "Policy Analyst",
+        package: "₹5–10 LPA",
+        sectors:
+          "Government Bodies, Public Policy Institutes, NGOs, International Organisations",
+      },
+      {
+        role: "Investment Analyst",
+        package: "₹5–12 LPA",
+        sectors: "Asset Management Companies, Mutual Funds, Investment Banks",
+      },
+      {
+        role: "Banking Professional",
+        package: "₹4–9 LPA",
+        sectors: "Public Sector Banks, Private Banks, NBFCs, FinTech Companies",
+      },
+      {
+        role: "Market Research Analyst",
+        package: "₹4–8 LPA",
+        sectors:
+          "Market Research Firms, FMCG, Consumer Goods, Advertising Agencies",
+      },
+      {
+        role: "Risk Analyst",
+        package: "₹6–12 LPA",
+        sectors: "Banks, Insurance Companies, FinTech, Consulting Firms",
+      },
+      {
+        role: "Consultant",
+        package: "₹6–15 LPA",
+        sectors:
+          "Management Consulting, Strategy Consulting, Financial Advisory ",
+      },
+      {
+        role: "Public Sector Officer*",
+        package: "₹6–12 LPA",
+        sectors:
+          "RBI, SEBI, NABARD, Government Ministries, Public Sector Undertakings",
+      },
+    ],
+
+    note: [
+      "Note: Salary figures are approximate and may vary depending on experience, skills, employer, location, additional certifications, and postgraduate qualifications. *Public sector roles generally require candidates to qualify through competitive examinations.",
+    ],
+  },
+
+  "ba-hons-psychology": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.A. (Hons.) Psychology graduates.",
+
+    tableHeaders: {
+      role: "Career Roles",
+      package: "Average Salary (India)",
+      sectors: "Top Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Human Resource Executive",
+        package: "₹4–8 LPA",
+        sectors: "Corporate Companies, MNCs, Start-ups, HR Consultancies",
+      },
+      {
+        role: "Organisational Behaviour Analyst",
+        package: "₹5–10 LPA",
+        sectors: "Corporate Organisations, Consulting Firms, HR Departments",
+      },
+      {
+        role: "Recruitment Specialist",
+        package: "₹4–8 LPA",
+        sectors: "Recruitment Agencies, Corporate HR, Staffing Firms",
+      },
+      {
+        role: "Market Research Analyst",
+        package: "₹4–9 LPA",
+        sectors: "Market Research Firms, FMCG Companies, Advertising Agencies",
+      },
+      {
+        role: "Social Worker / Community Development Officer",
+        package: "₹3–7 LPA",
+        sectors: "NGOs, Government Organisations, International Organisations",
+      },
+      {
+        role: "Research Assistant",
+        package: "₹4–7 LPA",
+        sectors: "Universities, Research Institutes, Healthcare Organisations",
+      },
+      {
+        role: "Child Development Specialist",
+        package: "₹4–8 LPA",
+        sectors: "Child Development Centres, Schools, NGOs, Hospitals",
+      },
+      {
+        role: "Customer Experience (CX) Specialist",
+        package: "₹4–9 LPA",
+        sectors: "IT Companies, E-commerce, BFSI, Service Industry",
+      },
+    ],
+
+    note: [
+      "Note: The salary figures mentioned above are approximate and may vary depending on factors such as the candidate's qualifications, skills, work experience, job role, employer, location, and industry.",
+    ],
+  },
+
+  "ba-hons-english-research": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.A. (Hons. / Hons. with Research) English graduates.",
+
+    tableHeaders: {
+      role: "Career Roles",
+      package: "Average Salary (India)",
+      sectors: "Top Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Content Writer",
+        package: "₹3–6 LPA",
+        sectors:
+          "Digital Marketing Agencies, Media Houses, EdTech Companies, Startups",
+      },
+      {
+        role: "Copywriter",
+        package: "₹4–8 LPA",
+        sectors: "Advertising Agencies, Branding Firms, Marketing Companies",
+      },
+      {
+        role: "Editor",
+        package: "₹4–9 LPA",
+        sectors: "Publishing Houses, Newspapers, Magazines, Digital Media",
+      },
+      {
+        role: "Technical Writer",
+        package: "₹5–10 LPA",
+        sectors: "IT Companies, Software Firms, Manufacturing, Healthcare",
+      },
+      {
+        role: "Journalist",
+        package: "₹3–8 LPA",
+        sectors: "Newspapers, Television Channels, Digital News Platforms",
+      },
+      {
+        role: "Public Relations (PR) Executive",
+        package: "₹4–8 LPA",
+        sectors:
+          "PR Agencies, Corporate Communications, Government Organisations",
+      },
+      {
+        role: "Corporate Communications Executive",
+        package: "₹5–10 LPA",
+        sectors: "MNCs, Corporate Houses, BFSI, FMCG Companies",
+      },
+      {
+        role: "Social Media Manager",
+        package: "₹4–9 LPA",
+        sectors:
+          "Digital Marketing Agencies, E-commerce Companies, Media Organisations",
+      },
+      {
+        role: "Teacher / School Educator",
+        package: "₹3–7 LPA",
+        sectors: "Schools, Educational Institutions, Coaching Centres",
+      },
+    ],
+  },
+
+  "bachelor-of-physiotherapy-bpt": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring Bachelor of Physiotherapy graduates.",
+
+    tableHeaders: {
+      role: "Job Role After Bachelor of Physiotherapy (BPT)",
+      package: "Average Package for Freshers in India (INR)*",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Clinical Physiotherapist",
+        package: "3 LPA–5 LPA",
+        sectors: "Multi-speciality Hospitals, Private Hospitals, Clinics",
+      },
+      {
+        role: "Sports Physiotherapist",
+        package: "3.5 LPA–6 LPA",
+        sectors:
+          "Sports Academies, Sports Teams, Fitness & Sports Medicine Centres",
+      },
+      {
+        role: "Orthopaedic Physiotherapist",
+        package: "3 LPA–5.5 LPA",
+        sectors:
+          "Orthopaedic Hospitals, Trauma Centres, Rehabilitation Clinics",
+      },
+      {
+        role: "Neurological Physiotherapist",
+        package: "3.5 LPA–6 LPA",
+        sectors: "Neuro Rehabilitation Centres, Hospitals, Speciality Clinics",
+      },
+      {
+        role: "Paediatric Physiotherapist",
+        package: "3 LPA–5.5 LPA",
+        sectors:
+          "Children's Hospitals, Paediatric Clinics, Rehabilitation Centres",
+      },
+      {
+        role: "Geriatric Physiotherapist",
+        package: "3 LPA–5 LPA",
+        sectors: "Senior Care Centres, Hospitals, Home Healthcare Services",
+      },
+      {
+        role: "Rehabilitation Therapist",
+        package: "3.5 LPA–6 LPA",
+        sectors:
+          "Rehabilitation Centres, NGOs, Community Healthcare Organisations",
+      },
+      {
+        role: "ICU & Cardiorespiratory Physiotherapist",
+        package: "3.5 LPA–6.5 LPA",
+        sectors:
+          "Hospitals, Critical Care Units, Cardiac & Pulmonary Rehabilitation Centres",
+      },
+      {
+        role: "Home Care Physiotherapist",
+        package: "3 LPA–6 LPA",
+        sectors:
+          "Home Healthcare Providers, Private Practice, Healthcare Agencies",
+      },
+      {
+        role: "Occupational Health Physiotherapist",
+        package: "4 LPA–7 LPA",
+        sectors:
+          "Corporate Healthcare, Industrial Health Centres, Manufacturing Companies",
+      },
+      {
+        role: "Research Associate / Clinical Research Assistant",
+        package: "3.5 LPA–6 LPA",
+        sectors:
+          "Medical Colleges, Research Institutes, Healthcare R&D Organisations",
+      },
+      {
+        role: "Physiotherapy Consultant / Private Practitioner",
+        package: "4 LPA–8 LPA",
+        sectors: "Private Clinics, Wellness Centres, Self-employed Practice",
+      },
+    ],
+
+    note: [
+      "* Note: The salary ranges mentioned above are indicative averages for fresh graduates in India and are compiled from various publicly available sources. Actual compensation may vary depending on the employer, job location, candidate skills, and market conditions.",
+    ],
+  },
+
+  "bba-llb-hons": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a breakdown of career roles, indicative salary ranges for freshers in India, and the sectors actively hiring BBA LL.B. (Hons.) graduates.",
+
+    tableHeaders: {
+      role: "Job Role After BBA LL.B. (Hons.)",
+      package: "Average Package for Freshers in India (INR)*",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Lawyer / Advocate",
+        package: "3.5 LPA–6 LPA",
+        sectors: "Law Firms, Litigation Chambers, Courts",
+      },
+      {
+        role: "Legal Consultant",
+        package: "4 LPA–7 LPA",
+        sectors: "Corporate Houses, Consultancies, MNCs",
+      },
+      {
+        role: "Corporate Lawyer",
+        package: "5 LPA–9 LPA",
+        sectors: "Law Firms, Corporate Legal Departments",
+      },
+      {
+        role: "Compliance Officer",
+        package: "4 LPA–7 LPA",
+        sectors: "Banks, NBFCs, Corporate Houses",
+      },
+      {
+        role: "Legal Researcher",
+        package: "3 LPA–5 LPA",
+        sectors: "Law Firms, Think Tanks, Judicial Bodies",
+      },
+      {
+        role: "Business Development Manager",
+        package: "4 LPA–7 LPA",
+        sectors: "Corporate Houses, Consulting Firms",
+      },
+      {
+        role: "Policy Analyst",
+        package: "3.5 LPA–6 LPA",
+        sectors: "Government Bodies, Think Tanks, NGOs",
+      },
+      {
+        role: "Judicial Clerk",
+        package: "3 LPA–5 LPA",
+        sectors: "Courts, Judge's Chambers",
+      },
+      {
+        role: "HR & Employment Law Advisor",
+        package: "3.5 LPA–6 LPA",
+        sectors: "Corporate HR Departments, MNCs",
+      },
+      {
+        role: "Contract Manager",
+        package: "4 LPA–6.5 LPA",
+        sectors: "Corporate Houses, Real Estate, IT Firms",
+      },
+    ],
+
+    note: [
+      "* Note: The salary ranges mentioned above are indicative averages for fresh graduates in India and are compiled from various publicly available sources. Actual compensation may vary depending on the employer, job location, candidate skills, and market conditions.",
+    ],
+  },
+
+  "btech-cse-in-data-science": {
+    buttonTitle: "Career Prospects",
+
+    heading:
+      "Below is a full breakdown of career roles, average salary ranges in India, and the sectors actively hiring B.Tech. CSE Data Science graduates.",
+
+    tableHeaders: {
+      role: "Job Role After B.Tech. CSE (Data Science)",
+      package: "Average Package for Freshers in India (INR)",
+      sectors: "Hiring Sectors",
+    },
+
+    rows: [
+      {
+        role: "Data Scientist",
+        package: "₹6 LPA–12 LPA",
+        sectors:
+          "IT Companies, MNCs, Consulting Firms, BFSI, Healthcare, E-commerce",
+      },
+      {
+        role: "Data Analyst",
+        package: "₹4.5 LPA–8 LPA",
+        sectors:
+          "IT Services, Banking, Retail, Healthcare, Analytics Companies",
+      },
+      {
+        role: "Machine Learning Engineer",
+        package: "₹6 LPA–12 LPA",
+        sectors:
+          "AI Companies, Technology Firms, Product-Based Companies, Startups",
+      },
+      {
+        role: "Business Intelligence (BI) Analyst",
+        package: "₹5 LPA–9 LPA",
+        sectors:
+          "Consulting Firms, BFSI, Retail, Manufacturing, Enterprise Organisations",
+      },
+      {
+        role: "Big Data Engineer",
+        package: "₹6 LPA–11 LPA",
+        sectors:
+          "Technology Companies, Cloud Service Providers, Data Engineering Firms",
+      },
+      {
+        role: "AI Engineer",
+        package: "₹6 LPA–12 LPA",
+        sectors:
+          "Artificial Intelligence Companies, Product-Based Firms, Healthcare, FinTech",
+      },
+      {
+        role: "Data Engineer",
+        package: "₹5.5 LPA–10 LPA",
+        sectors:
+          "IT Companies, Cloud Service Providers, MNCs, Enterprise Organisations",
+      },
+      {
+        role: "Business Analyst",
+        package: "₹5 LPA–9 LPA",
+        sectors: "Consulting Companies, BFSI, E-commerce, Technology Firms",
+      },
+      {
+        role: "Data Visualization Specialist",
+        package: "₹5 LPA–8.5 LPA",
+        sectors:
+          "Analytics Firms, Consulting Companies, Media, Retail, Enterprise Organisations",
+      },
+      {
+        role: "AI & Data Science Consultant",
+        package: "₹6 LPA–12 LPA",
+        sectors:
+          "Consulting Firms, Technology Companies, Digital Transformation Organisations, MNCs",
+      },
+      {
+        role: "Research Associate (AI & Data Science)",
+        package: "₹5 LPA–9 LPA",
+        sectors:
+          "Research Organisations, R&D Centres, Universities, Technology Companies",
+      },
+      {
+        role: "Data Science Entrepreneur / AI Consultant",
+        package: "₹5 LPA–20+ LPA",
+        sectors:
+          "AI & Analytics Startups, Technology Consulting Firms, Data Science Companies, Own Enterprise",
+      },
+    ],
+
+    note: [
+      "Note: The salary ranges are indicative averages for fresh graduates in India and may vary depending on the employer, location, candidate skills, internship experience, and market conditions.",
+    ],
+  },
+};
