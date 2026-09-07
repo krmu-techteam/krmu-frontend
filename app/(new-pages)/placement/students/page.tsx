@@ -1,12 +1,12 @@
-import CorporateAdvisoryBoard from "../common/CorporateAdvisoryBoard";
-import DriveCalendar from "../common/DriveCalendar";
-import HeroSection from "../common/HeroSection";
-import MeetCDCTeam from "../common/MeetCDCTeam";
-import PolicyConduct from "../common/PolicyConduct";
-import QuickEnquiry from "../common/QuickEnquiry";
-import Registration from "../common/Registration";
-import SelectionProcess from "../common/SelectionProcess";
-import Trainers from "../common/Trainers";
+import CorporateAdvisoryBoard from "../common/student/CorporateAdvisoryBoard";
+import DriveCalendar from "../common/student/DriveCalendar";
+import HeroSection from "../common/student/HeroSection";
+import MeetCDCTeam from "../common/student/MeetCDCTeam";
+import PolicyConduct from "../common/student/PolicyConduct";
+import QuickEnquiry from "../common/student/QuickEnquiry";
+import Registration from "../common/student/Registration";
+import SelectionProcess from "../common/student/SelectionProcess";
+import Trainers from "../common/student/Trainers";
 
 const page = () => {
   return (

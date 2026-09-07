@@ -1,44 +1,53 @@
 import { Mail, Phone } from "lucide-react";
+import Link from "next/link";
 
 const QuickEnquiry = () => {
   return (
-    <section className="px-2">
-      <div className="bg-[#192f49] px-6 py-10 md:px-12 lg:px-[78px] lg:py-[86px]">
-        <div className="mx-auto flex max-w-[1100px] flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-          
-          {/* Title */}
-          <h2 className="text-4xl font-semibold leading-none text-white md:text-[36px]">
+    <section className="bg-[#0D2948] font-poppins">
+      <div className="max-w-6xl mx-auto px-5 xl:px-0 py-10 md:py-12">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          {/* Heading */}
+          <h2 className="text-white text-3xl md:text-4xl font-semibold">
             Quick Enquiry
           </h2>
 
           {/* Contact Details */}
-          <div className="flex flex-col gap-4 text-[14px] text-[#e2e4e7]">
-            <a
-              href="tel:01188084888"
-              className="flex items-center gap-4 transition-opacity hover:opacity-80"
-            >
-              <Phone size={19} strokeWidth={1.7} />
-              <span>01188084888, 8800697010</span>
-            </a>
+          <div className="flex flex-col gap-4 text-white">
+            {/* Phone */}
+            <div className="flex items-center gap-4">
+              <Phone size={19} strokeWidth={1.5} className="shrink-0" />
 
-            <a
-              href="mailto:welcome@krmangalam.edu.in"
-              className="flex items-center gap-4 transition-opacity hover:opacity-80"
-            >
-              <Mail size={20} strokeWidth={1.7} />
-              <span>welcome@krmangalam.edu.in</span>
-            </a>
+              <span className="text-sm">01148884888, 8800697010</span>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-center gap-4">
+              <Mail size={19} strokeWidth={1.5} className="shrink-0" />
+
+              <span className="text-sm">welcome@krmangalam.edu.in</span>
+            </div>
           </div>
 
-          {/* Button */}
-          <button className="rounded-full bg-[#17619a] px-7 py-3 text-[15px] font-medium tracking-[0.03em] text-white transition hover:bg-[#1d70ae]">
-            Corporate &amp; Recruiter Connect
-          </button>
+          {/* CTA */}
+          <Link
+            href="#"
+            className="
+              bg-[#fbf8f3]
+              text-[#001836]
+              px-6
+              py-3
+              text-sm
+              font-medium
+              whitespace-nowrap
+              transition-transform
+              duration-300
+              hover:scale-105
+            "
+          >
+            Corporate & Recruiter Connect
+          </Link>
         </div>
       </div>
-
-      {/* Bottom dark line */}
-      <div className="h-[6px] bg-[#10243a]" />
     </section>
   );
 };

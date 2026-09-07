@@ -9,7 +9,7 @@
   --font-poppins: var(--font-family-poppins);
   --font-roboto-condensed: var(--font-family-roboto-condensed);
 }
-.font-host {
+.font-host { 
   font-family: var(--font-host);
 }
 .font-fraunces {
