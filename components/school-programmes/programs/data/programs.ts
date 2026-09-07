@@ -588,7 +588,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_forensic_science_98222ef944.jpg",
     bgPosition: "70% top",
   } as HeroConfig,
-  "dual-degree-bsc-mscforensic-science": {
+  "dual-degree-bsc-msc-forensic-science": {
     ...defaultCinematicConfig,
     bgUrl:
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/dual_degree_bsc_mscforensic_science_3030baec59.jpg",

@@ -16,10 +16,7 @@
           "question": "What are the eligibility criteria for admission?",
           "answer": "Eligibility varies by programme. Generally, undergraduate programmes require completion of Class 12, while postgraduate programmes require a relevant bachelor’s degree with a minimum of 50% marks in aggregate."
         },
-        {
-          "question": "Does K.R. Mangalam University have an entrance exam for admission?",
-          "answer": "Yes, the University conducts its own entrance exam - K.R. Mangalam Entrance Exam (KREE). "
-        },
+      
         {
           "question": "Can I apply for multiple programmes?",
           "answer": "Yes, you can apply for more than one programme, subject to meeting the eligibility criteria. "
@@ -30,7 +27,7 @@
         },
         {
           "question": "What is the application fee for admission at KRMU?",
-          "answer": "The application fee is Rs 1,000 which can be paid during the application process. "
+          "answer": "The application fee is Rs. 1,000, which can be paid during the application process."
         },
         {
           "question": "When does the admission process begin? ",
@@ -42,14 +39,14 @@
         },
         {
           "question": "Is there a counselling process? ",
-          "answer": "Yes, the university conducts dedicated counselling and interaction rounds prior to admissions, offering students personalised guidance on programme selection, career pathways, and the overall academic experience. ."
+          "answer": "Yes, the university conducts dedicated counselling and interaction rounds prior to admissions, offering students personalised guidance on programme selection, career pathways, and the overall academic experience."
         },
         {
           "question": "How will I know if selected?",
-          "answer": "You will receive confirmation via email or admission portal."
+          "answer": "You will receive confirmation via email or the admission portal."
         },
         {
-          "question": "When can I apply for UG, PG, and PhD programmes?",
+          "question": "When can I apply for UG, PG, and Ph.D. programmes?",
           "answer": "Applications are open now! Apply online at: https://admissions.krmangalam.edu.in/."
         },
         {
@@ -62,16 +59,10 @@
         },
         {
           "question": "Does KRMU accept lateral entry students?",
-          "answer": "Yes! Learn more about the eligibility criteria for lateral entry here."
+          "answer": "Yes! KRMU offers lateral entry into several programmes. Visit our admission page to learn more about the eligibility and admission process."
         },
-        {
-          "question": "How much is the application fee?",
-          "answer": "The application fee is Rs 1000."
-        },
-        {
-          "question": "How do I apply and what documents are needed?",
-          "answer": "Apply online and attach the scanned copies of your qualifying exam documents. Selection is based on the entrance exam KREE, faculty-led interview, and document verification. Start your application here."
-        },
+  
+      
         {
           "question": "Are there any diploma courses available at the university?",
           "answer": "Yes, K.R. Mangalam University offers diploma courses to cater to diverse interests and career aspirations. We currently have a Diploma in Pharmacy programme structured to provide practical and theoretical knowledge, ensuring students are well-prepared for their respective fields."
@@ -82,7 +73,7 @@
         },
         {
           "question": "Does KRMU offer sports quota admissions and scholarships?",
-          "answer": "Yes! We offer both. Learn more about our scholarship policy and sports quota admissions [Click here]  (if applicable)."
+          "answer": "Yes! We offer both. Learn more about our scholarship policy and sports quota admissions on the admission and scholarship pages, respectively."
         },
         {
           "question": "What are the Admission Office hours?",
@@ -94,11 +85,11 @@
         },
         {
           "question": "Can I get a loan to finance my education?",
-          "answer": "Yes! We partner with several banks and financial institutions like IDFC Bank, Axis Bank, ICICI Bank, Propelled, and GrayQuest to provide loan options for our students. Click here to know more."
+          "answer": "Yes! We partner with several banks and financial institutions like IDFC Bank, Axis Bank, ICICI Bank, Propelled, GrayQuest and others to provide loan options for our students. Visit the Financial Assistance page for detailed information on this."
         },
         {
           "question": "Does KRMU accept AICEE scores for admission?",
-          "answer": "Yes, K.R. Mangalam University accepts the AICEE (All India Combined Entrance Examination) Counseling Process for admission into various UG and PG programmes."
+          "answer": "Yes, K.R. Mangalam University accepts the AICEE scores for admission into various UG and PG programmes."
         }
       ]
     },
@@ -142,7 +133,7 @@
         },
         {
           "question": "Are guest lectures and workshops part of the course?",
-          "answer": "Yes, the KRMU organises frequent expert sessions, industry talks, and technical workshops."
+          "answer": "Yes, KRMU organises frequent expert sessions, industry talks, and technical workshops."
         },
         {
           "question": "Are online courses available at K.R. Mangalam University?",
@@ -158,11 +149,11 @@
       "faqs": [
         {
           "question": "What is the fee structure?",
-          "answer": "Fees vary depending on the programme. Detailed fee structures are available on KRMU’s website's Admission page."
+          "answer": "Fees vary depending on the programme. Detailed fee structures are available on the Admission page of the KRMU website."
         },
         {
           "question": "Are scholarships available?",
-          "answer": "Yes, the university offers merit-based and need-based scholarships up to 27 crore."
+          "answer": "Yes, the university offers a wide range of merit-based, need-based, and category-specific scholarships, with a total scholarship pool of up to ₹27 crore. "
         },
         {
           "question": "How can I apply for a scholarship?",
@@ -186,11 +177,11 @@
         },
         {
           "question": "Does the fee include hostel, transport, and other facilities?",
-          "answer": "No, the mentioned fee covers tuition only. Charges for hostel, transport, and other facilities are separate and are not included in the tuition fee."
+          "answer": "No, the mentioned fee covers tuition only. Charges for hostel, transport, and other facilities are separate. "
         },
         {
           "question": "Who all are eligible for scholarships?",
-          "answer": "K.R. Mangalam University offers scholarships for:\n■ SUPER ACHIEVERS\n■ ALUMNI (K.R. MANGALAM SCHOOLS)\n■ SPORTS ACHIEVERS\n■ CUET/ JEE/ CAT/ MAT & other Competitive Exams’ SCORES\n■ CHILDREN OF DEFENCE PERSONNEL\n■ FACULTY/ STAFF MEMBER CONCESSION\n■ SHERO FOR FEMALE STUDENTS"
+          "answer": "K.R. Mangalam University offers scholarships for:\n■ SUPER ACHIEVERS\n■ ALUMNI (K.R. MANGALAM SCHOOLS)\n■ SPORTS ACHIEVERS\n■ CUET/JEE/CAT/MAT and other Competitive Exam Scores\n■ CHILDREN OF DEFENCE PERSONNEL\n■ FACULTY/STAFF MEMBER CONCESSION\n■ SHERO FOR FEMALE STUDENTS"
         },
         {
           "question": "Do international students have a different fee structure?",
@@ -210,7 +201,7 @@
         },
         {
           "question": "What companies visit for placements?",
-          "answer": "Every year, top companies from various industries participate in campus placements."
+          "answer": "Every year, top companies across industries visit the University for campus placements. Over 800 top recruiters have participated in the placement drives to date.  "
         },
         {
           "question": "Are internships mandatory?",
@@ -218,7 +209,7 @@
         },
         {
           "question": "What is the average placement package?",
-          "answer": "The average placement package at KRMU is Rs 7.5 LPA."
+          "answer": "The average placement package at KRMU is Rs. 7.5 LPA."
         },
         {
           "question": "Are students trained for placements?",
@@ -238,7 +229,7 @@
         },
         {
           "question": "What’s the highest package offered at the university?",
-          "answer": "The highest package offered at KRMU is Rs 56.6 LPA."
+          "answer": "The highest package offered at KRMU is Rs. 56.6 LPA."
         },
         {
           "question": "What is the internship stipend range?",
@@ -258,7 +249,7 @@
         },
         {
           "question": "What facilities are available on campus?",
-          "answer": "The campus is equipped with a wide range of modern facilities, including well-stocked libraries, advanced laboratories, garden, messes, gym, sports grounds and courts, common rooms, and multiple cafeterias to support a comfortable and enriching student experience."
+          "answer": "The campus is equipped with a wide range of modern facilities, including well-stocked libraries, advanced laboratories, gardens, messes, gyms, sports grounds and courts, common rooms, and multiple cafeterias to support a comfortable and enriching student experience."
         },
         {
           "question": "Are there student clubs and societies?",
@@ -270,7 +261,7 @@
         },
         {
           "question": "Are sports facilities available?",
-          "answer": "Yes, the university encourages sports and fitness activities."
+          "answer": "Yes, KRMU offers multiple sports facilities for indoor games like chess, snooker, table tennis, carrom board, etc., and grounds and courts for outdoor sports like basketball, cricket, football, sprints, and lawn tennis, among others. "
         },
         {
           "question": "Is transportation provided?",
@@ -322,11 +313,11 @@
         },
         {
           "question": "Are supplementary exams conducted?",
-          "answer": "Yes, supplementary exams conducted for students who need to reappear."
+          "answer": "Yes, supplementary exams are conducted for students who need to reappear."
         },
         {
           "question": "What is the attendance requirement?",
-          "answer": "Students must meet minimum attendance criteria."
+          "answer": "Students must maintain a minimum attendance of 75%."
         },
         {
           "question": "Are practical exams included?",
@@ -374,7 +365,7 @@
         },
         {
           "question": "Is there an alumni portal?",
-          "answer": "Yes, a platform exists for alumni engagement."
+          "answer": "Yes, we have a portal for alumni engagement."
         },
         {
           "question": "How can alumni contribute to the university’s growth?",

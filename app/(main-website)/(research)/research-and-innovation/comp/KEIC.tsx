@@ -10,17 +10,17 @@ const KEIC = () => {
         </div>
         <div className="text-white lg:w-3/5">
           <h2 className="text-3xl md:text-[44px] font-semibold mb-5 leading-[1.2]">
-            K.R. Mangalam Entrepreneurship <br /> and Innovation Center (KEIC)
+            K.R. Mangalam Entrepreneurship <br /> and Innovation Centre (KEIC)
           </h2>
           <p>
             KEIC is the cornerstone of our innovation ecosystem. This dynamic
-            center offers an incubation program to nurture start-ups, a
+            centre offers an incubation programme to nurture start-ups, a
             state-of-the-art maker lab for prototyping and creative exploration,
-            and coworking spaces that encourage collaborative ventures. The
-            center is also home to our pioneering BBA in Entrepreneurship
-            program, developed in collaboration with the GCEC Global Foundation
-            [https://www.gcecglobal.com], preparing the next generation of
-            entrepreneurial leaders.
+            and co-working spaces that encourage collaborative ventures. The
+            centre is also home to our pioneering BBA in Entrepreneurship
+            programme, developed in collaboration with the GCEC Global
+            Foundation, preparing the next generation of entrepreneurial
+            leaders.
           </p>
           <Link href="/keic" className="blink-effect common-btn-3 mt-5">
             Know More

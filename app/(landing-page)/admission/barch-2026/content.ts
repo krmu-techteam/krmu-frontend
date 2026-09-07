@@ -204,7 +204,7 @@ export const opportunityData: OpportunitySection = {
   },
   heading: "Learn From Industry Experts",
   highlight: "Opportunity That Transforms",
-  cta: {
+  cta: { 
     label: "Apply for B.Arch. 2026-27",
     href: "#",
   },

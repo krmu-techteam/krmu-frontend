@@ -57,7 +57,7 @@ const BscFinance2026Page = () => {
       <CampusFacultyImages />
       <AdmissionsSection />
       <SixStepsSection data={sixStepsSection} />
-      <FeesSection />
+      <FeesSection /> 
       <FaqSection data={faqSection} />
       <FooterSection />
       <StickyMobileBar

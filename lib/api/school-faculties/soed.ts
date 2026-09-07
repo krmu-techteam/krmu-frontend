@@ -1,21 +1,21 @@
 import { SchoolFacultiesType } from "@/lib/types/common";
 
 export const soedFaculties: SchoolFacultiesType[] = [
-  {
-    id: 1074,
-    slug: "dr-tania-gupta",
-    title: {
-      rendered: "Dr. Tania Gupta",
-    },
-    featured_media: 9333,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Professor & Dean",
-      schools: [1070, 1152],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Tania-Gupta-2.png",
-  },
+  // {
+  //   id: 1074,
+  //   slug: "dr-tania-gupta",
+  //   title: {
+  //     rendered: "Dr. Tania Gupta",
+  //   },
+  //   featured_media: 9333,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Professor & Dean",
+  //     schools: [1070, 1152],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Tania-Gupta-2.png",
+  // },
   {
     id: 1083,
     slug: "dr-anshul-saluja",

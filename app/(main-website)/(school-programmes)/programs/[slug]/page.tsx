@@ -205,7 +205,7 @@ const page = async ({ params }: Props) => {
   const heroSection = singleSchoolProgramme?.herosection;
   const eligibilitySection = singleSchoolProgramme?.programmeeligibility;
   const programmeScopeSection = singleSchoolProgramme?.programmescope;
-  const programmeHighlightSection = singleSchoolProgramme?.programmehighlight;
+  const programmeHighlightSection = singleSchoolProgramme?.programmehighlight; 
   const specialisationSection = singleSchoolProgramme?.specialisation;
   const admissionProcessSection = singleSchoolProgramme?.admissionprocess;
   const curriculumSection = singleSchoolProgramme?.curriculum;

@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Newsreader } from "next/font/google";
 import "./(main-website)/globals.css";
 import Script from "next/script";
 
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
+});
+
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +40,7 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-MKXDVSJ9');
           `}
         </Script>
-        <Script
+        {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-VJJK572TGN"
           strategy="afterInteractive"
         />
@@ -45,7 +51,7 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('config', 'G-VJJK572TGN');
         `}
-        </Script>
+        </Script> */}
       </head>
       <body className={`${montserrat.className} antialiased`}>
         <noscript>

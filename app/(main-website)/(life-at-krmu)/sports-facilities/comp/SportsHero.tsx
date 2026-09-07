@@ -4,12 +4,13 @@ const SportsHero = () => {
       {/* Premium subtle blue vignette overlay */}
       <div className="absolute inset-0 bg-[#051630]/30 backdrop-blur-[0.5px]" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#051630]/70 via-transparent to-[#051630]/20" />
-      
+
       <div className="relative max-w-[1440px] mx-auto w-full text-white text-center">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 drop-shadow-2xl leading-[1.1]">
-          Sports Facilities at <br className="hidden sm:block" /> K.R. Mangalam University
+          Sports Facilities at <br className="hidden sm:block" /> K.R. Mangalam
+          University
         </h1>
-        
+
         <h2 className="text-sm sm:text-base md:text-lg opacity-95 max-w-3xl mx-auto drop-shadow-xl leading-relaxed">
           Ignite Your Passion for Sports: Dive into Our World-Class Sports
           Facilities at K.R. Mangalam University

@@ -49,7 +49,7 @@ const BankNbfc = ({ bankLoansCards, nbfccardsData }: Props) => {
             </AccordionItem>
             <AccordionItem value="item-2">
               <AccordionTrigger className="bg-[#051630] text-white py-5 px-10 rounded-none text-xl font-semibold cursor-pointer hover:no-underline bankloanaccpanel">
-                NBFC’s
+                NBFCs
               </AccordionTrigger>
               <AccordionContent className="flex flex-col gap-4 text-balance">
                 <div className="lg:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">

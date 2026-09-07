@@ -309,8 +309,8 @@ const StudentCouncil = () => {
               <div className={`${poppins.className}`}>
                 <p className="text-justify text-sm leading-[1.85] font-normal text-[#000000] md:text-[18px]">
                   Being recognised as the Best Student Council Member is truly
-                  an honor and a moment of immense gratitude. This achievement
-                  is not just mine, but a reflection of the constant support,
+                  an honour and a moment of immense gratitude. This achievement
+                  is not just mine but a reflection of the constant support,
                   guidance, and teamwork shared by my fellow council members and
                   the Department of Student Welfare.
                 </p>
@@ -320,7 +320,7 @@ const StudentCouncil = () => {
                   experience filled with opportunities to lead, collaborate, and
                   contribute meaningfully to the student community. It has
                   helped me grow both personally and professionally, shaping my
-                  perspective and strengthening my sense of responsibility.{" "}
+                  perspective and strengthening my sense of responsibility.
                 </p>
                 <br />
                 <p className="text-justify text-sm leading-[1.85] font-normal text-[#000000] md:text-[18px]">

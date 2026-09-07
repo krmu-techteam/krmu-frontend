@@ -26,7 +26,7 @@ const PHDRegulationCards = () => {
                 className="absolute right-0 lg:-right-[70px] -top-8 md:top-0"
               />
             </li>
-            <li>
+            {/* <li>
               <Link
                 className="hover:text-[#2d7cc1]"
                 href="https://www.krmangalam.edu.in/pdfs/6R-June-Ph.D-Admission-advertisement-Details-O-2025-26.pdf"
@@ -37,13 +37,13 @@ const PHDRegulationCards = () => {
               >
                 <strong>Odd Semester 2026-27</strong>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className="hover:text-[#2d7cc1]"
-                href="https://krmangalam.edu.in/pdfs/5R-Ph-D-Admission-advertisement-Details-E-2025-26.pdf"
+                href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1_R_September26_Ph_D_Admission_advertisement_Details_E26_27_7e79af246e.pdf"
               >
-                <strong>Even Semester 2025-26</strong>
+                <strong>Even Semester 2026-27</strong>
               </Link>
             </li>
             {/* <li>

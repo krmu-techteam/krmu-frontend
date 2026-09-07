@@ -28,10 +28,11 @@ const HostelSport = () => {
         Sports & Recreation Facilities
       </h4>
       <p>
-        Students can play indoor games like Pool, Table Tennis, Badminton,
-        Chess, Carrom Board and Foosball and outdoor games like Basketball,
-        Football, Cricket, Volleyball, Pickleball and lawn Tennis. KRMU also has
-        a gym for health fitness and exercise.
+        Students can enjoy indoor games such as pool, table tennis, badminton,
+        chess, carrom, and foosball, as well as outdoor sports such as
+        basketball, football, cricket, volleyball, pickleball, and lawn tennis.
+        KRMU also has a gym that supports students’ health, fitness, and
+        exercise needs.
       </p>
       <div className="mt-5">
         <CommonSlide data={HostelSlides} />

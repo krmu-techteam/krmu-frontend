@@ -72,7 +72,7 @@ const FeeStructureSearch = () => {
           </div>
           <input
             type="text"
-            placeholder="Search for a program (e.g. B.Tech, MBA)"
+            placeholder="Search for a programme (e.g. B.Tech., MBA)"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="w-full h-14 pl-16 pr-8 text-[17px] text-gray-800 bg-white border-2 border-gray-100 rounded-sm focus:border-[#0062aa] transition-all duration-300 outline-none placeholder:text-gray-400 font-medium shadow-sm"

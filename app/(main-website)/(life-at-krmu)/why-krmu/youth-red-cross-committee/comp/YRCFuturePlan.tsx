@@ -10,10 +10,10 @@ const YRCFuturePlan = () => {
             <li>Building a First Aid Club on campus.</li>
             <li>Starting a student volunteer helpline for emergencies.</li>
             <li>
-              Expanding our outreach to nearby villages with health and hygiene
-              programs.
+              Expanding our outreach to nearby villages with health and hygiene{" "}
+              <strong>programmes.</strong>
             </li>
-            <li>Organizing youth leadership camps</li>
+            <li>Organising youth leadership camps.</li>
           </ol>
         </div>
       </section>

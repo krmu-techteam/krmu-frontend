@@ -24,8 +24,7 @@ const GrievenceAndCounseling = () => {
               <h2
                 className={`${playfair.className}  text-3xl font-bold text-black mb-6 md:text-4xl lg:text-[38px]`}
               >
-                Student Grievance Handling <br />
-                and Anti Ragging 
+                Student Grievance Handling <br /> and Anti-Ragging
               </h2>
 
               <p
@@ -35,7 +34,7 @@ const GrievenceAndCounseling = () => {
                 and student-friendly campus through its Student Grievance
                 Handling system. It provides students with a fair and
                 confidential platform to raise academic, administrative,
-                personal, and campus-related concerns and seek timely support.p
+                personal, and campus-related concerns and seek timely support.
               </p>
               <br />
               <p
@@ -50,7 +49,7 @@ const GrievenceAndCounseling = () => {
               <p
                 className={`${poppins.className}   text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px]`}
               >
-                The university also follows a strict Anti-Ragging policy and is
+                The university also follows a strict anti-ragging policy and is
                 committed to maintaining a safe, inclusive, and harassment-free
                 environment for every student.
               </p>
@@ -82,14 +81,15 @@ const GrievenceAndCounseling = () => {
                 As a Student Success Manager at K.R. Mangalam University, I
                 serve as a dedicated bridge between students and the
                 institution, ensuring that every academic and non-academic
-                grievance is resolved with high satisfaction. My mission is to
-                streamline the student journey, transforming challenges into
-                opportunities for growth. Beyond problem-solving, I collaborate
-                closely with the Dean of Student Welfare Council, empowering
-                student leaders through expert-led workshops and high-impact
-                resources. By fostering professional excellence and personal
-                well-being, I am committed to making every student's university
-                experience both seamless and successful. 
+                grievance is addressed with a high level of satisfaction. My
+                mission is to streamline the student journey, transforming
+                challenges into opportunities for growth. Beyond
+                problem-solving, I collaborate closely with the Dean of the
+                Student Welfare Council, empowering student leaders through
+                expert-led workshops and high-impact resources. By fostering
+                professional excellence and personal well-being, I am committed
+                to making every student’s university experience both seamless
+                and successful.
               </p>
               <p
                 className={`${poppins.className} text-justify text-sm  font-bold mt-10 text-[#000000]  md:text-[17px]`}
@@ -122,7 +122,7 @@ const GrievenceAndCounseling = () => {
                 challenges. The counselling services at KRMU are dedicated to
                 supporting students' emotional well-being, personal growth, and
                 overall development. Our counsellors provide a safe,
-                confidential, and non-judgmental environment where students can
+                confidential, and non-judgemental environment where students can
                 discuss academic stress, personal concerns, relationship issues,
                 time management challenges, and other difficulties they may
                 encounter during their university journey. Through professional
@@ -135,7 +135,7 @@ const GrievenceAndCounseling = () => {
                 className={`${poppins.className}  text-sm leading-[1.75] font-normal text-[#000000]  md:text-[18px] opacity-[70%]`}
               >
                 At KRMU, we believe that seeking support is a sign of strength
-                and an important step toward personal growth. Our counselling
+                and an important step towards personal growth. Our counselling
                 services aim to empower students to make informed decisions,
                 improve communication and interpersonal skills, strengthen
                 emotional well-being, and develop confidence in overcoming
@@ -166,18 +166,27 @@ const GrievenceAndCounseling = () => {
               <p
                 className={`${poppins.className} text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]`}
               >
-                Hello Students, I have been working in the fields of counselling
-                and education since 2014. I understand that university life
-                comes with both exciting opportunities and unique challenges,
-                including academic pressure, time management issues,
-                relationship concerns, career uncertainties, and personal
-                stress. My aim is to provide a safe, supportive, and
-                non-judgmental space where you can openly discuss your concerns
-                and find practical solutions. I specialise in helping students
-                manage study pressure, improve time management skills, build
-                healthy relationships, and enhance their overall well-being. I
-                believe that every student has the potential to grow, succeed,
-                and overcome challenges with the right guidance and support.
+                Hello Students, <br />I have been working in the fields of
+                counselling and education since 2014. I understand that
+                university life comes with both exciting opportunities and
+                unique challenges, including academic pressure, time management
+                issues, relationship concerns, career uncertainties, and
+                personal stress. My aim is to provide a safe, supportive, and
+                non-judgemental space where you can openly discuss your concerns
+                and find practical solutions.
+              </p>
+              <p
+                className={`${poppins.className} text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]`}
+              >
+                I specialise in helping students manage study pressure, improve
+                time management skills, build healthy relationships, and enhance
+                their overall well-being. I believe that every student has the
+                potential to grow, succeed, and overcome challenges with the
+                right guidance and support.
+              </p>
+              <p
+                className={`${poppins.className} text-justify text-sm leading-[1.85] font-normal text-[#000000]  md:text-[16px]`}
+              >
                 Whether you are facing academic difficulties, personal concerns,
                 or simply need someone to talk to, I am here to support you in
                 navigating your university journey with confidence, balance, and

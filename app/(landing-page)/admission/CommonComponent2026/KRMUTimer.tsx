@@ -94,8 +94,7 @@ export default function KRMUTimer({
       <span
         className={`tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-xs sm:text-sm" : "text-xs sm:text-sm"}`}
       >
-        Don’t Miss Ankur Warikoo & Akasa Singh at KRMU Orientation | Admissions
-        Closing Soon | {!mainWebsiteTimer && "Apply Now"}
+       Last Chance to Apply - Admissions Close on 31 August! | {!mainWebsiteTimer && "Apply Now"}
         {mainWebsiteTimer && (
           <span className="border-b border-white border-dotted inline-block ml-2">
             Apply Now

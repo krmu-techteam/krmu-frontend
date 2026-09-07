@@ -4,7 +4,7 @@ import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import Link from "next/link";
 
 const portfolioItems = [
-  "Long foarm feature stories, investigations and explainers",
+  "Long form feature stories, investigations and explainers",
   "Short films, OTT pilots and documentary projects",
   "Multimedia news packages for web, TV and mobile",
   "Audio series, podcasts and radio shows",

@@ -21,9 +21,9 @@ const HostelStore = () => {
         </h4>
         <p>
           The on-campus hostel store offers easy access to daily essentials,
-          snacks, beverages, and personal care items ensuring students can meet
-          their everyday needs with ease, enhancing the comfort of campus
-          living.
+          snacks, beverages, and personal care items, ensuring that students can
+          meet their everyday needs with ease and enhancing the comfort of
+          campus living.
         </p>
       </div>
       <div className="w-full mt-5">

@@ -8,7 +8,7 @@ const YRCMagazines = () => {
         <div className="lg:w-1/2 mb-5">
           <div className="py-[30px] px-4 md:pl-[40px] md:pr-[30px] text-white border border-[#0060aa5e] bg-[#0060aa5e] mx-4 md:mx-8 min-h-[1px] h-full rounded-b-[20px]">
             <p className="text-2xl mt-2.5 mb-[15px]">
-              The broad objectives of the Youth Red Cross Committee are to:
+         The broad objectives of the Youth Red Cross Committee are to:
             </p>
             <ul className="mt-2.5">
               <li className="flex items-start gap-3 py-2.5">
@@ -19,8 +19,7 @@ const YRCMagazines = () => {
                   alt=""
                 />{" "}
                 <span>
-                  Promote selfless service and humanitarian values through
-                  community interconnectedness.
+             Promote selfless service and humanitarian values through community interconnectedness.
                 </span>
               </li>
               <li className="flex items-start gap-3 py-2.5">
@@ -31,8 +30,7 @@ const YRCMagazines = () => {
                   alt=""
                 />{" "}
                 <span>
-                  Identify and resolve health and social challenges with
-                  sustainable solutions.
+               Identify and resolve health and social challenges with sustainable solutions.
                 </span>
               </li>
               <li className="flex items-start gap-3 py-2.5">
@@ -43,8 +41,7 @@ const YRCMagazines = () => {
                   alt=""
                 />{" "}
                 <span>
-                  Encourage social responsibility and active societal
-                  participation.
+                Encourage social responsibility and active societal participation.
                 </span>
               </li>
               <li className="flex items-start gap-3 py-2.5">
@@ -55,8 +52,7 @@ const YRCMagazines = () => {
                   alt=""
                 />{" "}
                 <span>
-                  Apply innovative expertise to tackle individual and community
-                  challenges.
+                Apply innovative expertise to tackle individual and community challenges.
                 </span>
               </li>
               <li className="flex items-start gap-3 py-2.5">
@@ -67,8 +63,7 @@ const YRCMagazines = () => {
                   alt=""
                 />{" "}
                 <span>
-                  Foster teamwork, cooperation, and shared responsibilities in
-                  group settings.
+               Foster teamwork, cooperation, and shared responsibilities in group settings.
                 </span>
               </li>
               <li className="flex items-start gap-3 py-2.5">
@@ -79,8 +74,7 @@ const YRCMagazines = () => {
                   alt=""
                 />{" "}
                 <span>
-                  Mobilize community participation through inclusive
-                  initiatives.
+             Mobilise community participation through inclusive initiatives.
                 </span>
               </li>
               <li className="flex items-start gap-3 py-2.5">
@@ -90,7 +84,7 @@ const YRCMagazines = () => {
                   height={26}
                   alt=""
                 />{" "}
-                <span>Gain skills in mobilizing community participation.</span>
+                <span>Gain skills in mobilising community participation.</span>
               </li>
               <li className="flex items-start gap-3 py-2.5">
                 <Image
@@ -100,20 +94,7 @@ const YRCMagazines = () => {
                   alt=""
                 />{" "}
                 <span>
-                  Develop leadership, decision-making skills, and a democratic
-                  attitude.
-                </span>
-              </li>
-              <li className="flex items-start gap-3 py-2.5">
-                <Image
-                  src="/white-location-arrow.svg"
-                  width={22}
-                  height={26}
-                  alt=""
-                />{" "}
-                <span>
-                  Prepare individuals to respond effectively to emergencies and
-                  disasters.
+                 Develop leadership and decision-making skills and a democratic attitude.
                 </span>
               </li>
               <li className="flex items-start gap-3 py-2.5">
@@ -124,8 +105,18 @@ const YRCMagazines = () => {
                   alt=""
                 />{" "}
                 <span>
-                  Promote peace, harmony, and integration across cultural and
-                  social boundaries.
+                  Prepare individuals to respond effectively to emergencies and disasters.
+                </span>
+              </li>
+              <li className="flex items-start gap-3 py-2.5">
+                <Image
+                  src="/white-location-arrow.svg"
+                  width={22}
+                  height={26}
+                  alt=""
+                />{" "}
+                <span>
+               Promote peace, harmony, and integration across cultural and social boundaries.
                 </span>
               </li>
             </ul>

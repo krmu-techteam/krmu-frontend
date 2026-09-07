@@ -205,7 +205,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 49901,
     acf: {
-      "staff-qualification": "PhD in Architecture",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant Professor",
       schools: [787],
     },
@@ -265,7 +265,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 101926,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant Professor",
       schools: [787],
     },

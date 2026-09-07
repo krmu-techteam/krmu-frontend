@@ -9,8 +9,8 @@ const KREESection = () => {
             KREE Sections
           </h3>
           <p className="text-white mb-5">
-            Below-mentioned are the two sections candidates <br />
-            are required to attempt.
+            Candidates are required to attempt the <br />
+            following two sections.
           </p>
           <div
             className="p-5 lg:min-h-[170px] lg:max-h-[170px] rounded-[22px] flex flex-col lg:flex-row items-center gap-5 mb-5"
@@ -26,7 +26,7 @@ const KREESection = () => {
               <p>
                 <strong>Online Exam:</strong>
               </p>
-              <p>Exam Duration 1 Hour</p>
+              <p>Exam Duration - 1 Hour</p>
             </div>
           </div>
           <div
@@ -44,9 +44,9 @@ const KREESection = () => {
                 <strong>Faculty Interaction:</strong>
               </p>
               <p className="leading-[2]">
-                Assessment & evaluation of communication skills, problem–solving
-                aptitude, collaborative strength, technical & course specific
-                knowledge.
+                Assessment & evaluation of communication skills, problem-solving
+                aptitude, collaborative strength, and technical &
+                course-specific knowledge.
               </p>
             </div>
           </div>

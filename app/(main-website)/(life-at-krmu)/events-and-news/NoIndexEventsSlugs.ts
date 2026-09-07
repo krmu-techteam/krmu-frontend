@@ -63,7 +63,7 @@ export const NoIndexEventsSlugs = [
   // "guest-lecture-on-youth-mental-health-issues",
   // "session-on-gender-equity-beyond-the-boundary",
   "workshop-on-empowering-research-excellence",
-  "awareness-session-on-cancer-prevention-and-healthy-lifestyles",
+  // "awareness-session-on-cancer-prevention-and-healthy-lifestyles",
   // "collaboration-with-the-department-of-justice",
   // "career-counseling-session-on-higher-education",
   "campus-quest-season-2-2",
@@ -119,6 +119,7 @@ export const NoIndexEventsSlugs = [
   "interactive-session-with-chinese-diplomats",
   "industry-immersion-session",
   "a-visit-to-the-people-s-republic-of-china",
+
   // "constitutional-awareness-symposium",
   "delhi-times-fashion-week",
   // "extension-activity-on-effect-of-electronic-devices",

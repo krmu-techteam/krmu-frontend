@@ -279,7 +279,7 @@ export const opportunityData: OpportunitySection = {
     src: "/landingpage/common/test2.png",
     alt: "Industry Expert",
     width: 300,
-    height: 400,
+    height: 400, 
   },
   heading: "Learn From Industry Experts",
   highlight: "Opportunity That Transforms",
