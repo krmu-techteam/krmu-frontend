@@ -13,7 +13,6 @@ type Props = {
 };
 
 export const Leaderships = ({ data }: Props) => {
-     
     const [modalEmblaApi, setModalEmblaApi] = useState<any>(null);
     const [selectedLeader, setSelectedLeader] = useState<Leadership | null>(
         null
@@ -23,7 +22,6 @@ export const Leaderships = ({ data }: Props) => {
     const [canScrollPrev, setCanScrollPrev] = useState(false);
     const [canScrollNext, setCanScrollNext] = useState(false);
 
-     
     const onSelect = useCallback((api: any) => {
         if (!api) return;
         setCanScrollPrev(api.canScrollPrev());
@@ -53,7 +51,7 @@ export const Leaderships = ({ data }: Props) => {
     return (
         <div className="w-full font-poppins text-white min-h-screen">
             {/* ================= HERO BANNER SECTION ================= */}
-            <div className="relative w-full overflow-hidden pt-4 sm:pt-6 md:pt-10 lg:pt-28">
+            <div className="relative w-full overflow-hidden pt-28">
                 <Image
                     src="/images/leadership/leadership-hero.jpg"
                     alt="Leadership Hero"
