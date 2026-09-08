@@ -55,7 +55,7 @@ export async function NewsEventsSection({
 }) {
     const homeService = getHomeService();
     const newsandeventsdata =
-        eventsData ?? (await homeService.getNewsEvents(1, 10));
+        eventsData ?? (await homeService.getNewsEvents(1, 20));
 
     // Parallel fetch images for dynamic items from WordPress API
     const processedNews = await Promise.all(
@@ -75,7 +75,7 @@ export async function NewsEventsSection({
         })
     );
 
-    // Latest 5 news items for the Center Slider
+    // Latest 5 news items for the Center Slider (0 to 5)
     const centerSlides = processedNews.slice(0, 5).map((item) => ({
         id: item.id,
         image: item.imageUrl,
@@ -84,11 +84,11 @@ export async function NewsEventsSection({
         link: `/events-and-news/${item.slug}`,
     }));
 
-    // Next 3 latest news events for the Left Column
+    // Next 10 news items starting AFTER the center 5 for the Left Column (5 to 15)
     const leftNewsItems =
         processedNews.length > 5
-            ? processedNews.slice(5, 8)
-            : processedNews.slice(1, 4);
+            ? processedNews.slice(5, 15)
+            : processedNews.slice(0, 10);
 
     return (
         <section className="relative w-full overflow-hidden py-12 md:py-16 xl:py-20 font-poppins">
@@ -124,48 +124,50 @@ export async function NewsEventsSection({
 
                 {/* 3-Column Magazine Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 xl:gap-10 items-start">
-                    {/* LEFT COLUMN: Latest News List (3 items) */}
-                    <div className="md:col-span-1 lg:col-span-3 flex flex-col justify-between h-full order-2 lg:order-1">
-                        {leftNewsItems.map((item, idx) => (
-                            <div key={item.id} className="flex flex-col">
-                                <Link
-                                    href={`/events-and-news/${item.slug}`}
-                                    className="flex items-center gap-3.5 sm:gap-4 group cursor-pointer"
-                                >
-                                    <div className="relative w-[92px] h-[105px] sm:w-[102px] sm:h-[114px] shrink-0 rounded-[4px] overflow-hidden bg-white/5 shadow-sm">
-                                        <Image
-                                            src={item.imageUrl}
-                                            alt={item.title}
-                                            fill
-                                            sizes="120px"
-                                            className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                        />
-                                    </div>
-                                    <div className="flex-1 min-w-0 flex flex-col justify-center">
-                                        <p className="text-white/60 text-[11px] sm:text-[12px] font-poppins mb-1">
-                                            Published On:
-                                            <br />
-                                            <span className="text-white/70">
-                                                {item.date}
-                                            </span>
-                                        </p>
-                                        <h4
-                                            className="text-white font-serif font-semibold text-[14px] sm:text-[15px] leading-[1.3] line-clamp-2 group-hover:text-brand-gold transition-colors mt-0.5"
-                                            dangerouslySetInnerHTML={{
-                                                __html: item.title,
-                                            }}
-                                        />
-                                        <p className="text-[#E5A831] text-[10.5px] sm:text-[11px] font-poppins font-medium mt-2 tracking-wide">
-                                            K. R. Mangalam University
-                                        </p>
-                                    </div>
-                                </Link>
+                    {/* LEFT COLUMN: Latest News List (Up to 10 items with vertical scroll) */}
+                    <div className="md:col-span-1 lg:col-span-3 order-2 lg:order-1">
+                        <div className="max-h-[500px] lg:max-h-[540px] xl:max-h-[560px] overflow-y-auto pr-2 sm:pr-3 news-custom-scrollbar flex flex-col">
+                            {leftNewsItems.map((item, idx) => (
+                                <div key={item.id} className="flex flex-col">
+                                    <Link
+                                        href={`/events-and-news/${item.slug}`}
+                                        className="flex items-center gap-3.5 sm:gap-4 group cursor-pointer py-1"
+                                    >
+                                        <div className="relative w-[90px] h-[100px] sm:w-[96px] sm:h-[108px] shrink-0 rounded-[2px] overflow-hidden bg-white/5 ">
+                                            <Image
+                                                src={item.imageUrl}
+                                                alt={item.title}
+                                                fill
+                                                sizes="120px"
+                                                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                            />
+                                        </div>
+                                        <div className="flex-1 min-w-0 flex flex-col justify-center">
+                                            <p className="text-white/60 text-[11px] sm:text-[12px] font-poppins mb-1">
+                                                Published On:
+                                                <br />
+                                                <span className="text-white/70">
+                                                    {item.date}
+                                                </span>
+                                            </p>
+                                            <h4
+                                                className="text-white font-serif font-semibold text-[13.5px] sm:text-[14.5px] leading-[1.3] line-clamp-2 group-hover:text-brand-gold transition-colors mt-0.5"
+                                                dangerouslySetInnerHTML={{
+                                                    __html: item.title,
+                                                }}
+                                            />
+                                            <p className="text-[#E5A831] text-[10.5px] sm:text-[11px] font-poppins font-medium mt-1.5 tracking-wide">
+                                                K. R. Mangalam University
+                                            </p>
+                                        </div>
+                                    </Link>
 
-                                {idx < leftNewsItems.length - 1 && (
-                                    <div className="w-full h-[1px] bg-white/10 my-4 sm:my-5" />
-                                )}
-                            </div>
-                        ))}
+                                    {idx < leftNewsItems.length - 1 && (
+                                        <div className="w-full h-[1px] bg-white/10 my-3 sm:my-3.5" />
+                                    )}
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                     {/* CENTER COLUMN: Latest 5 News Slider */}
@@ -179,7 +181,7 @@ export async function NewsEventsSection({
                             <Link
                                 key={card.id}
                                 href={card.link}
-                                className="bg-white rounded-[8px] overflow-hidden flex flex-col group cursor-pointer shadow-lg transition-transform duration-300 hover:-translate-y-1 block"
+                                className="bg-white rounded-[2px] overflow-hidden flex flex-col group cursor-pointer transition-transform duration-300 hover:-translate-y-1 block"
                             >
                                 <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-900">
                                     <Image
@@ -228,3 +230,5 @@ export async function NewsEventsSection({
         </section>
     );
 }
+
+export { NewsEventsSkeleton } from "../components/news-and-event";

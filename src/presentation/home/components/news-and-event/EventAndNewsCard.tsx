@@ -22,7 +22,7 @@ export const EventAndNewsCard: React.FC<EventAndNewsCardProps> = async ({
     return (
         <div className="group cursor-pointer">
             <Link href={`/events-and-news/${data.slug}`} className="block">
-                <div className="relative aspect-[3/2] rounded-[4px] overflow-hidden mb-6 bg-white/5">
+                <div className="relative aspect-[3/2] rounded-[2px] overflow-hidden mb-6 bg-white/5">
                     {getImgUrl && (
                         <Image
                             src={getImgUrl}

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export interface NewsSlideItem {
     id: number | string;
@@ -32,6 +33,18 @@ export function CenterNewsSlider({ slides }: CenterNewsSliderProps) {
 
     const currentSlide = slides[activeSlide] || slides[0];
 
+    const handlePrev = (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    };
+
+    const handleNext = (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setActiveSlide((prev) => (prev + 1) % slides.length);
+    };
+
     return (
         <div
             className="flex flex-col w-full h-full"
@@ -39,7 +52,7 @@ export function CenterNewsSlider({ slides }: CenterNewsSliderProps) {
             onMouseLeave={() => setIsPaused(false)}
         >
             {/* Slide Image Box */}
-            <div className="relative aspect-[16/10] w-full rounded-[8px] overflow-hidden bg-white/5 shadow-xl">
+            <div className="relative aspect-[16/10] w-full rounded-[2px] overflow-hidden bg-white/5  group/slide">
                 {slides.map((slide, idx) => (
                     <Link
                         key={slide.id || idx}
@@ -61,6 +74,22 @@ export function CenterNewsSlider({ slides }: CenterNewsSliderProps) {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
                     </Link>
                 ))}
+
+                {/* Left & Right Navigation Overlay Arrows (Red + Rounded 2px) */}
+                <button
+                    onClick={handlePrev}
+                    aria-label="Previous slide"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-[2px] bg-[#CB000D] hover:bg-[#b0000b] text-white flex items-center justify-center transition-all cursor-pointer hover:scale-105 active:scale-95"
+                >
+                    <ChevronLeft className="w-5 h-5 text-white" />
+                </button>
+                <button
+                    onClick={handleNext}
+                    aria-label="Next slide"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-[2px] bg-[#CB000D] hover:bg-[#b0000b] text-white flex items-center justify-center transition-all cursor-pointer hover:scale-105 active:scale-95"
+                >
+                    <ChevronRight className="w-5 h-5 text-white" />
+                </button>
             </div>
 
             {/* Slide Metadata & Title */}

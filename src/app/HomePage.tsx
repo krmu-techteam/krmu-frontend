@@ -46,10 +46,16 @@ const VisitSection = dynamic(() =>
         (m) => m.VisitSection
     )
 );
-const NewsEventsSection = dynamic(() =>
-    import("@/presentation/home/sections/NewsEventsSection").then(
-        (m) => m.NewsEventsSection
-    )
+import { NewsEventsSkeleton } from "@/presentation/home/components/news-and-event";
+
+const NewsEventsSection = dynamic(
+    () =>
+        import("@/presentation/home/sections/NewsEventsSection").then(
+            (m) => m.NewsEventsSection
+        ),
+    {
+        loading: () => <NewsEventsSkeleton />,
+    }
 );
 
 export default async function HomePage() {
@@ -68,7 +74,7 @@ export default async function HomePage() {
         homeService.getComponent(HOME_COMPONENT_KEYS.NEWS_EVENTS),
         homeService.getComponent(HOME_COMPONENT_KEYS.TESTIMONIALS),
         homeService.getTestimonials(),
-        homeService.getNewsEvents(1, 10),
+        homeService.getNewsEvents(1, 20),
     ]);
 
     const {
@@ -138,7 +144,7 @@ export default async function HomePage() {
                 </Suspense>
 
                 <Container>
-                    <Suspense fallback={<div className="min-h-[400px]" />}>
+                    <Suspense fallback={<NewsEventsSkeleton />}>
                         {newsEventsSection ? (
                             <NewsEventsSection
                                 {...(newsEventsSection as any)}

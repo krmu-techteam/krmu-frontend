@@ -4850,3 +4850,27 @@ body:before {
 .krmu-marquee-reverse:hover {
     animation-play-state: paused !important;
 }
+
+/* Custom scrollbar for news left list */
+.news-custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
+
+.news-custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.news-custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.news-custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+}
+
+.news-custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(229, 168, 49, 0.6);
+}
