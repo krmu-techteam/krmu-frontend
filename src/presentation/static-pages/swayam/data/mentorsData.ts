@@ -37,10 +37,10 @@ export const swayamMentorsList: SwayamMentor[] = [
     },
     {
         sNo: 5,
-        name: "Ms. Aditi Agarwal",
+        name: "Dr. Neha Arora",
         title: "Assistant Professor, SEMCE",
         designation: "SWAYAM Mentor (SEMCE)",
-        phoneNo: "-",
+        phoneNo: "9541394959",
     },
     {
         sNo: 6,

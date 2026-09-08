@@ -15,11 +15,6 @@ const footerNavLinks: FooterNavLink[] = [
   { label: "SWAYAM Mentor List", modalType: "mentors" },
   { label: "FAQ", modalType: "faq" },
   {
-    label: "SWAYAM Sop",
-    href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ugc_swayam_framework_6ce1e5ccaa.pdf",
-    external: true,
-  },
-  {
     label: "Advisory Committee",
     href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/constitution_of_swayam_advisory_committee_for_the_academic_year_9a82fdfe8f.pdf",
     external: true,
@@ -30,12 +25,13 @@ export const NodalOfficerSection: React.FC = () => {
   return (
     <>
       <section
-        id="nodal-officer"
+        id="contact"
         style={{
           scrollMarginTop: "140px",
         }}
-        className="w-full min-h-auto bg-[#051730] md:h-[495px] py-10 md:py-0 px-4 sm:px-6 lg:px-8 overflow-hidden flex items-center justify-center scroll-mt-28 md:scroll-mt-36 font-poppins"
+        className="relative w-full min-h-auto bg-[#051730] md:h-[495px] py-10 md:py-0 px-4 sm:px-6 lg:px-8 overflow-hidden flex items-center justify-center scroll-mt-28 md:scroll-mt-36 font-poppins"
       >
+        <span id="nodal-officer" className="absolute -top-36 invisible" />
         <div className="container mx-auto max-w-[1260px] flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 lg:gap-14">
           {/* Left Column: University Logo */}
           <div className="shrink-0">

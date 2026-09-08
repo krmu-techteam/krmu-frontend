@@ -6,30 +6,28 @@ interface ActionButton {
   label: string;
   href?: string;
   external?: boolean;
-  modalType?: "mentors";
+  modalType?: "mentors" | "notices";
 }
 
 const actionButtons: ActionButton[] = [
-  {
-    label: "SWAYAM SOP",
-    href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ugc_swayam_framework_6ce1e5ccaa.pdf",
-    external: true,
-  },
   {
     label: "SWAYAM Nodal Officer",
     href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/nomination_of_swayam_nodal_officer_257cba7217.pdf",
     external: true,
   },
-  { label: "SWAYAM Mentors", modalType: "mentors" },
   {
     label: "SWAYAM Advisory Committee",
     href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/constitution_of_swayam_advisory_committee_for_the_academic_year_9a82fdfe8f.pdf",
     external: true,
   },
   {
-    label: "Approval for adopting Mooc",
+    label: "Approval for adoption of SWAYAM Framework (UGC Regulation,2021)",
     href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/official_letter_for_swayam_moocs_adoption_4a435df6c1.pdf",
     external: true,
+  },
+  {
+    label: "Notices and Circulars",
+    modalType: "notices",
   },
 ];
 
