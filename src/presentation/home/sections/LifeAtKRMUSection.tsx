@@ -32,7 +32,7 @@ export function LifeAtKRMUSection() {
                 </p>
                 <Link
                     href={"/happenings/news-and-events"}
-                    className="inline-flex gap-1 underline items-center  text-[16px] font-light tracking-wide text-white hover:text-white/70  transition-colors duration-300 mt-6"
+                    className="inline-flex gap-1 items-center  text-[16px] font-light tracking-wide text-white hover:text-white/70  transition-colors duration-300 mt-6"
                 >
                     <span>
                         <ArrowRight size={18} />

@@ -217,30 +217,40 @@ export function TestimonialsSection({
                         ))}
                     </Carousel>
 
-                    {/* Navigation Controls (Bottom Right) */}
-                    <div className="flex items-center justify-center gap-2 mt-4 relative z-30">
-                        <button
-                            type="button"
-                            onClick={handlePrev}
-                            className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center text-white transition-all cursor-pointer shrink-0 z-30"
-                            aria-label="Previous testimonial"
-                        >
-                            <ChevronLeft size={20} />
-                        </button>
+                    {/* Navigation Controls */}
+                    <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-8 w-full mt-4">
+                        {/* Spacer matching photo and divider on desktop */}
+                        <div className="hidden lg:block w-[260px] xl:w-[300px] shrink-0" />
+                        <div className="hidden lg:block w-[1px] shrink-0" />
 
-                        <span className="w-[70px] text-center text-white/90 text-sm md:text-base font-mono tracking-wider font-medium select-none whitespace-nowrap">
-                            {String(currentIndex + 1).padStart(2, "0")} /{" "}
-                            {String(TESTIMONIALS_DATA.length).padStart(2, "0")}
-                        </span>
+                        {/* Controls aligned with the author details / name */}
+                        <div className="flex-1 flex items-center justify-center md:justify-start gap-2 relative z-30 md:-ml-2.5">
+                            <button
+                                type="button"
+                                onClick={handlePrev}
+                                className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center text-white transition-all cursor-pointer shrink-0 z-30"
+                                aria-label="Previous testimonial"
+                            >
+                                <ChevronLeft size={20} />
+                            </button>
 
-                        <button
-                            type="button"
-                            onClick={handleNext}
-                            className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center text-white transition-all cursor-pointer shrink-0 z-30"
-                            aria-label="Next testimonial"
-                        >
-                            <ChevronRight size={20} />
-                        </button>
+                            <span className="w-[70px] text-center text-white/90 text-sm md:text-base font-mono tracking-wider font-medium select-none whitespace-nowrap">
+                                {String(currentIndex + 1).padStart(2, "0")} /{" "}
+                                {String(TESTIMONIALS_DATA.length).padStart(
+                                    2,
+                                    "0"
+                                )}
+                            </span>
+
+                            <button
+                                type="button"
+                                onClick={handleNext}
+                                className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center text-white transition-all cursor-pointer shrink-0 z-30"
+                                aria-label="Next testimonial"
+                            >
+                                <ChevronRight size={20} />
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

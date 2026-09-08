@@ -38,13 +38,13 @@ export function JourneySection() {
                             icon={ArrowUpRight}
                             iconPosition="left"
                             iconClassName="rotate-45 group-hover:rotate-0 transition-transform"
-                            className="!text-white !border-white !hover:border-white/80 !w-[240px] !text-[13px] md:!text-[14px] !px-3"
+                            className="!text-white !border-white !hover:border-white/80 !w-fit !text-[13px] md:!text-[14px] !px-4"
                         >
                             Explore Programmes
                         </Button>
 
                         <CommonLeadPopup
-                            buttonClassName="w-[240px] flex items-center justify-center h-[45px] rounded-[4px] font-normal transition-all duration-300 ease-in-out uppercase text-[13px] md:text-[14px] leading-none tracking-wide relative overflow-hidden group px-2 border border-white text-white hover:border-white/80"
+                            buttonClassName="w-fit flex items-center justify-center h-[45px] rounded-[4px] font-normal transition-all duration-300 ease-in-out uppercase text-[13px] md:text-[14px] leading-none tracking-wide relative overflow-hidden group px-4 border border-white text-white hover:border-white/80"
                             buttonText={
                                 <div className="flex items-center gap-1.5">
                                     <ArrowDownToLine
@@ -59,7 +59,7 @@ export function JourneySection() {
                         />
                         <Link
                             href="https://admissions.krmangalam.edu.in/?utm_source=website&utm_medium=Homepage&utm_campaign=journey-section&_gl=1*rfukfk*_ga*MTk4NDQwNDY4LjE3Nzc4NzU5MzU.*_ga_VJJK572TGN*czE3Nzc4NzU5MzUkbzEkZzEkdDE3Nzc4NzYwNDEkajYwJGwwJGgw"
-                            className="w-[240px] flex items-center justify-center gap-1.5 h-[45px] rounded-[4px] font-normal transition-all duration-300 ease-in-out uppercase text-[13px] md:text-[14px] leading-none tracking-wide relative overflow-hidden group px-3 bg-[#CB000D] text-white hover:bg-[#CB000D]/80 shadow-lg"
+                            className="w-fit flex items-center justify-center gap-1.5 h-[45px] rounded-[4px] font-normal transition-all duration-300 ease-in-out uppercase text-[13px] md:text-[14px] leading-none tracking-wide relative overflow-hidden group px-4 bg-[#CB000D] text-white hover:bg-[#CB000D]/80 "
                             target="_blank"
                         >
                             <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
@@ -109,7 +109,7 @@ export function JourneySection() {
                         variant="outline"
                         target="_blank"
                         icon={FiYoutube}
-                        className="h-auto py-3 px-6 text-[12px] tracking-[0.2em] !border-white !hover:border-white/80 !w-fit"
+                        className="h-auto py-3 !px-4 text-[12px] tracking-[0.2em] !border-white !hover:border-white/80 !w-fit"
                         iconClassName="group-hover:scale-110 transition-transform"
                     >
                         Watch More

@@ -75,10 +75,9 @@ export function ResearchSection() {
                                 <Link
                                     href="/research-and-innovation"
                                     target="_blank"
+                                    className="bg-brand-research-button hover:bg-brand-research-button/80 text-white px-4 py-2.5 rounded-[3px] w-fit font-medium transition-all flex items-center justify-center gap-2 group cursor-pointer"
                                 >
-                                    <button className="bg-brand-research-button hover:bg-brand-research-button/80 text-white px-16 py-2.5 rounded-[3px] font-medium transition-all w-fit flex items-center gap-2 group cursor-pointer">
-                                        Research
-                                    </button>
+                                    Research
                                 </Link>
 
                                 <Link

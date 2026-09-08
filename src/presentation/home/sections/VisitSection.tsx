@@ -42,7 +42,7 @@ export function VisitSection() {
                             {/* Schedule Visit */}
                             <Link
                                 href="/campus-tour"
-                                className="flex items-center gap-4 xl:gap-6 p-3 xl:p-5 rounded-[4px] border border-white group max-w-[240px] xl:max-w-[280px] text-left h-[70px] xl:h-[80px] text-white hover:bg-white/10 transition-colors"
+                                className="flex items-center gap-4 xl:gap-6 p-3 xl:p-5 rounded-[4px] border border-white group max-w-[240px] xl:max-w-[280px] text-left h-[70px] text-white hover:bg-white/10 transition-colors"
                             >
                                 <div>
                                     <CalendarCheck className="text-[22px] xl:text-[26px]" />

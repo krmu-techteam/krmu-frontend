@@ -104,14 +104,14 @@ export function PlacementsSection() {
                             <Button
                                 href="/placement-highlights"
                                 variant="outline"
-                                className="!border-white !hover:border-white/80 !w-[240px] !text-[13px] md:!text-[14px] !px-3"
+                                className="!border-white !hover:border-white/80 !w-fit !text-[13px] md:!text-[14px] !px-4"
                             >
                                 Placement Records
                             </Button>
                             <Button
                                 href="/placement/our-recruiter"
                                 variant="outline"
-                                className="!border-white !hover:border-white/80 !w-[240px] !text-[13px] md:!text-[14px] !px-3"
+                                className="!border-white !hover:border-white/80 !w-fit !text-[13px] md:!text-[14px] !px-4"
                             >
                                 Our Recruiters
                             </Button>
@@ -120,7 +120,7 @@ export function PlacementsSection() {
                                 variant="primary"
                                 icon={ArrowUpRight}
                                 iconPosition="right"
-                                className="!w-[240px] !text-[13px] md:!text-[14px] !px-3"
+                                className="!w-fit !text-[13px] md:!text-[14px] !px-4"
                             >
                                 Apply Now
                             </Button>
