@@ -1,6 +1,8 @@
+"use client";
+
+import { useMemo } from "react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import { Carousel } from "@/components/common/Carousel";
 import SectionDivider from "@/components/common/SectionDivider";
 import Link from "next/link";
 import { SectionTitle } from "@/components/common/SectionTitle";
@@ -10,6 +12,21 @@ import {
 } from "@/features/home";
 
 export function LifeAtKRMUSection() {
+    // Row 1 starts from index 0 (Images 1, 2, 3...)
+    const row1 = LIFE_AT_KRMU_GALLERY;
+    // Row 2 starts from index 3 (Images 4, 5, 6...) matching the reference layout
+    const row2 = useMemo(
+        () => [
+            ...LIFE_AT_KRMU_GALLERY.slice(3),
+            ...LIFE_AT_KRMU_GALLERY.slice(0, 3),
+        ],
+        []
+    );
+
+    // Tripled sets for mathematically seamless infinite marquee on all screen sizes
+    const row1Items = useMemo(() => [...row1, ...row1, ...row1], [row1]);
+    const row2Items = useMemo(() => [...row2, ...row2, ...row2], [row2]);
+
     return (
         <section className="relative w-full overflow-hidden py-10 md:py-12 xl:py-20 font-poppins">
             {/* Precision Spec Glow (Bottom Left) - Spec: Blue Institutional Soft Light */}
@@ -41,38 +58,91 @@ export function LifeAtKRMUSection() {
                 </Link>
             </div>
 
-            {/* Image Gallery Belt - Using Unified Carousel */}
-            <div className="relative w-full mb-16 md:mb-20">
-                <Carousel
-                    autoScroll={true}
-                    autoScrollSpeed={1}
-                    showArrows={true}
-                    showDots={false}
-                    className="w-full"
-                    containerClassName="-ml-0"
-                    slideClassName="basis-auto shrink-0 px-0 group"
-                    options={{ loop: true, align: "center" }}
-                    activeNeighbors={1}
-                    prevArrowClassName="!left-4 md:!left-8 2xl:!left-[calc((100vw-1440px)/2+2rem)] z-30 !rounded-[3px] !border-[#CB000D] !border-2 !bg-[#CB000D]"
-                    nextArrowClassName="!right-4 md:!right-8 2xl:!right-[calc((100vw-1440px)/2+2rem)] z-30 !rounded-[3px] !border-[#CB000D] !border-2 !bg-[#CB000D]"
-                >
-                    {LIFE_AT_KRMU_GALLERY.map((img) => (
+            {/* 2-Row Dual-Direction Marquee Image Stream (LPU Spotlight Style - Seamless Zero Gap) */}
+            <div className="relative w-full mb-16 md:mb-20 overflow-hidden flex flex-col select-none">
+                {/* Top Row: Moves Right to Left */}
+                <div className="flex w-max krmu-marquee-top">
+                    {row1Items.map((img, index) => (
                         <div
-                            key={img.id}
-                            className="h-[280px] sm:h-[350px] md:h-[420px] w-auto shrink-0 relative overflow-hidden grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-data-[active=true]:grayscale-0 group-data-[active=true]:opacity-100 transition-all duration-700 ease-in-out"
+                            key={`top-${img.id}-${index}`}
+                            className="group relative shrink-0 w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-[180px] sm:h-[240px] md:h-[290px] lg:h-[330px] overflow-hidden cursor-pointer bg-[#0A1017]"
                         >
+                            {/* Card Image */}
                             <Image
                                 src={img.src}
                                 alt={img.alt}
-                                width={600}
-                                height={420}
-                                sizes="(max-width: 768px) 280px, 420px"
-                                className="h-full w-auto object-contain block"
+                                fill
+                                sizes="(max-width: 768px) 380px, 520px"
+                                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"
                                 loading="lazy"
                             />
+
+                            {/* Default subtle resting bottom gradient */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none" />
+
+                            {/* LPU-style Interactive Hover Content Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/80 to-black/35 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out flex flex-col justify-end p-4 sm:p-5 md:p-6 text-left pointer-events-none">
+                                <div className="transform translate-y-3 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                                    {img.category && (
+                                        <span className="inline-block px-2.5 py-0.5 mb-1.5 md:mb-2 text-[10px] md:text-[11px] font-semibold tracking-wider uppercase text-brand-gold bg-brand-gold/15 border border-brand-gold/30 rounded-[3px]">
+                                            {img.category}
+                                        </span>
+                                    )}
+                                    <h4 className="text-white text-sm sm:text-base md:text-lg font-semibold font-poppins leading-snug mb-1">
+                                        {img.title || img.alt}
+                                    </h4>
+                                    {img.description && (
+                                        <p className="text-white/80 text-[11px] sm:text-xs md:text-[13px] line-clamp-2 leading-relaxed font-light">
+                                            {img.description}
+                                        </p>
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     ))}
-                </Carousel>
+                </div>
+
+                {/* Bottom Row: Moves Left to Right (RTL / Reverse) */}
+                <div className="flex w-max krmu-marquee-bottom">
+                    {row2Items.map((img, index) => (
+                        <div
+                            key={`bottom-${img.id}-${index}`}
+                            className="group relative shrink-0 w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-[180px] sm:h-[240px] md:h-[290px] lg:h-[330px] overflow-hidden cursor-pointer bg-[#0A1017]"
+                        >
+                            {/* Card Image */}
+                            <Image
+                                src={img.src}
+                                alt={img.alt}
+                                fill
+                                sizes="(max-width: 768px) 380px, 520px"
+                                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"
+                                loading="lazy"
+                            />
+
+                            {/* Default subtle resting bottom gradient */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none" />
+
+                            {/* LPU-style Interactive Hover Content Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/80 to-black/35 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out flex flex-col justify-end p-4 sm:p-5 md:p-6 text-left pointer-events-none">
+                                <div className="transform translate-y-3 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                                    {img.category && (
+                                        <span className="inline-block px-2.5 py-0.5 mb-1.5 md:mb-2 text-[10px] md:text-[11px] font-semibold tracking-wider uppercase text-brand-gold bg-brand-gold/15 border border-brand-gold/30 rounded-[3px]">
+                                            {img.category}
+                                        </span>
+                                    )}
+                                    <h4 className="text-white text-sm sm:text-base md:text-lg font-semibold font-poppins leading-snug mb-1">
+                                        {img.title || img.alt}
+                                    </h4>
+                                    {img.description && (
+                                        <p className="text-white/80 text-[11px] sm:text-xs md:text-[13px] line-clamp-2 leading-relaxed font-light">
+                                            {img.description}
+                                        </p>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
             {/* Feature Cards Grid - Premium Dark Theme */}

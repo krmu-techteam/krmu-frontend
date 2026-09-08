@@ -4804,3 +4804,49 @@ body:before {
 .heading-primary {
     @apply text-3xl md:text-4xl xl:text-[42px] font-serif font-bold text-white leading-[1.2] tracking-tight;
 }
+
+/* Life at KRMU Dual Marquee Streams */
+@keyframes krmuMarqueeLeft {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-33.333333%, 0, 0);
+    }
+}
+
+@keyframes krmuMarqueeRight {
+    0% {
+        transform: translate3d(-33.333333%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.krmu-marquee-top {
+    display: flex !important;
+    width: max-content !important;
+    animation: krmuMarqueeLeft 45s linear infinite !important;
+    will-change: transform;
+}
+
+.krmu-marquee-bottom {
+    display: flex !important;
+    width: max-content !important;
+    animation: krmuMarqueeRight 48s linear infinite !important;
+    will-change: transform;
+}
+
+.krmu-marquee-reverse {
+    display: flex !important;
+    width: max-content !important;
+    animation: krmuMarqueeRight 48s linear infinite !important;
+    will-change: transform;
+}
+
+.krmu-marquee-top:hover,
+.krmu-marquee-bottom:hover,
+.krmu-marquee-reverse:hover {
+    animation-play-state: paused !important;
+}

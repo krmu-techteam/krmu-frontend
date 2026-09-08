@@ -156,15 +156,87 @@ export const PLACEMENT_CARD_CONFIGS: PlacementCardConfigType[] = [
 ];
 
 export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
-    { id: 1, src: "/images/home/whykrmu/whykrmu-1.webp", alt: "Why KRMU 1" },
-    { id: 2, src: "/images/home/whykrmu/whykrmu-2.webp", alt: "Why KRMU 2" },
-    { id: 3, src: "/images/home/whykrmu/whykrmu-3.webp", alt: "Why KRMU 3" },
-    { id: 4, src: "/images/home/whykrmu/whykrmu-4.webp", alt: "Why KRMU 4" },
-    { id: 5, src: "/images/home/whykrmu/whykrmu-5.webp", alt: "Why KRMU 5" },
-    { id: 6, src: "/images/home/whykrmu/whykrmu-6.webp", alt: "Why KRMU 6" },
-    { id: 7, src: "/images/home/whykrmu/whykrmu-7.webp", alt: "Why KRMU 7" },
-    { id: 8, src: "/images/home/whykrmu/whykrmu-8.webp", alt: "Why KRMU 8" },
-    { id: 9, src: "/images/home/whykrmu/whykrmu-9.webp", alt: "Why KRMU 9" },
+    {
+        id: 1,
+        src: "/images/home/whykrmu/whykrmu-1.webp",
+        alt: "Aarambh Orientation & Convocation",
+        category: "Campus Events",
+        title: "Embracing New Horizons",
+        description:
+            "Prestigious academic ceremonies and orientation welcoming dynamic future leaders.",
+    },
+    {
+        id: 2,
+        src: "/images/home/whykrmu/whykrmu-2.webp",
+        alt: "Robotics & Innovation Lab",
+        category: "Tech & Innovation",
+        title: "Robotics & AI Labs",
+        description:
+            "Hands-on engineering with quadruped robotics, drone tech, and modern automation.",
+    },
+    {
+        id: 3,
+        src: "/images/home/whykrmu/whykrmu-3.webp",
+        alt: "Vibrant Campus Life",
+        category: "Student Life",
+        title: "Campus Connections",
+        description:
+            "Collaborative learning, outdoor brainstorming, and lifelong camaraderie on campus.",
+    },
+    {
+        id: 4,
+        src: "/images/home/whykrmu/whykrmu-4.webp",
+        alt: "Akasa Live Concert",
+        category: "Cultural Fest",
+        title: "Akasa Live at KRMU",
+        description:
+            "Electrifying musical evenings and high-octane cultural fests celebrating student youth.",
+    },
+    {
+        id: 5,
+        src: "/images/home/whykrmu/whykrmu-5.webp",
+        alt: "Jasleen Royal Concert",
+        category: "Celebrity Nights",
+        title: "Jasleen Royal Musical Night",
+        description:
+            "Unforgettable celebrity musical performances echoing across the grand university grounds.",
+    },
+    {
+        id: 6,
+        src: "/images/home/whykrmu/whykrmu-6.webp",
+        alt: "DJ Olly Ras Electronic Night",
+        category: "Youth Festival",
+        title: "DJ Olly Ras Live Beats",
+        description:
+            "Pulsating music, world-class soundstages, and thrilling campus festival vibes.",
+    },
+    {
+        id: 7,
+        src: "/images/home/whykrmu/whykrmu-7.webp",
+        alt: "Sports & Athletics",
+        category: "Sports Arena",
+        title: "Championship Athletics",
+        description:
+            "Expansive sporting arenas, team spirit, and competitive inter-university championships.",
+    },
+    {
+        id: 8,
+        src: "/images/home/whykrmu/whykrmu-8.webp",
+        alt: "Creative Arts & Design",
+        category: "Creative Arts",
+        title: "Studio & Design Hubs",
+        description:
+            "Expressive fine arts, architectural ateliers, and creative design showcases.",
+    },
+    {
+        id: 9,
+        src: "/images/home/whykrmu/whykrmu-9.webp",
+        alt: "Global Conclave",
+        category: "Global Engagement",
+        title: "Global Conclaves & Summits",
+        description:
+            "International partnerships and masterclasses with industry visionaries.",
+    },
 ];
 
 export const LIFE_AT_KRMU_CAROUSEL_CONFIGS: LifeAtKRMUFeatureCardType[] = [
