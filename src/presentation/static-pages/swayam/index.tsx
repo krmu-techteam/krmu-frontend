@@ -11,7 +11,7 @@ import {
 
 const SwayamStaticPage: React.FC = () => {
     return (
-        <main className="w-full min-h-screen">
+        <main className="w-full min-h-screen font-poppins">
             <HeroSection />
             <WhyChooseSection />
             <CreditTransferSection />

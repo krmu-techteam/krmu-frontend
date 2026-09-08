@@ -6,7 +6,7 @@ export const SwayamFooterSection: React.FC = () => {
         <footer
             id="contact"
             style={{ scrollMarginTop: "140px" }}
-            className="w-full bg-white py-10 lg:py-12 px-4 overflow-hidden scroll-mt-28 md:scroll-mt-36"
+            className="w-full bg-white py-10 lg:py-12 px-4 overflow-hidden scroll-mt-28 md:scroll-mt-36 font-poppins"
         >
             <div className="container mx-auto max-w-[1260px] flex flex-col items-center justify-center space-y-4">
                 {/* Partner Logos Banner (footer-logo.png) */}

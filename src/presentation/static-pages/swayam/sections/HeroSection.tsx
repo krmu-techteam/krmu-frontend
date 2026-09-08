@@ -178,7 +178,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden pt-20 sm:pt-24 md:pt-17">
+    <section className="relative w-full overflow-hidden pt-20 sm:pt-24 md:pt-17 font-poppins">
       {/* Hero Main Background Banner */}
       <div
         className="relative w-full bg-cover bg-no-repeat bg-[center_right] lg:bg-center min-h-[580px] sm:min-h-[640px] lg:min-h-[767px] flex items-stretch"
@@ -190,7 +190,7 @@ const HeroSection: React.FC = () => {
         <div className="relative z-10 w-full max-w-[1600px] mx-auto px-0 lg:px-[65px] flex items-stretch">
           {/* Glassmorphic Gradient Card: Flush to top edge (h-full) and flush to bottom */}
           <div
-            className="w-full max-w-none lg:max-w-[561px] lg:w-[561px] h-full min-h-[580px] sm:min-h-[640px] lg:min-h-[767px] p-6 sm:p-8 lg:p-11 flex flex-col justify-between shadow-2xl backdrop-blur-[1px]"
+            className="w-full max-w-none lg:max-w-[561px] lg:w-[561px] h-full min-h-[580px] sm:min-h-[640px] lg:min-h-[767px] p-6 sm:p-8 lg:p-11 flex flex-col justify-center gap-6 sm:gap-7 lg:gap-8"
             style={{
               background:
                 "linear-gradient(180deg, #FFFFFF 75.48%, #001732 100%)",
@@ -198,7 +198,7 @@ const HeroSection: React.FC = () => {
             }}
           >
             {/* Top: Dual Logo (SWAYAM + Ministry of Education) */}
-            <div className="w-[300px] sm:w-[360px] lg:w-[383px] max-w-full h-auto pt-2">
+            <div className="w-[300px] sm:w-[360px] lg:w-[383px] max-w-full h-auto">
               <Image
                 src="/swayam/swayamor-ministry.png"
                 alt="SWAYAM - Free Online Education | Ministry of Education"
@@ -210,8 +210,8 @@ const HeroSection: React.FC = () => {
             </div>
 
             {/* Middle: Description Text */}
-            <div className="my-auto py-6">
-              <p className="text-[#000000] text-[15px] sm:text-[17px] lg:text-[18px] font-semibold leading-[1.65] lg:leading-[1.7] tracking-normal">
+            <div>
+              <p className="text-[#000000] text-[15px] font-poppins sm:text-[16px] lg:text-[17px] font-bold leading-[1.65] lg:leading-[1.7] tracking-normal">
                 SWAYAM (Study Webs of Active Learning for Young Aspiring Minds)
                 is the Government of India&apos;s national online learning
                 platform developed by the Ministry of Education. It provides
@@ -223,12 +223,12 @@ const HeroSection: React.FC = () => {
             </div>
 
             {/* Bottom: Visit SWAYAM Button */}
-            <div className="pb-4">
+            <div>
               <a
                 href="https://swayam.gov.in/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-[170px] sm:w-[190px] h-[48px] sm:h-[52px] bg-[#CB000D] hover:bg-[#b0000b] text-white text-[16px] sm:text-[17px] font-bold rounded-[8px] shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer"
+                className="inline-flex items-center justify-center w-[170px] sm:w-[190px] h-[48px] bg-[#CB000D] hover:bg-[#b0000b] text-white text-[16px] font-semibold rounded-[2px] transition-all duration-200 cursor-pointer"
               >
                 Visit SWAYAM
               </a>
@@ -287,7 +287,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Navigation Tabs Bar */}
-      <div className="w-full bg-[#FFFDF9] py-4 sm:py-5 px-4 sm:px-8">
+      <div className="w-full bg-transparent py-4 sm:py-5 px-4 sm:px-8">
         <div className="max-w-[1520px] mx-auto flex flex-wrap items-center justify-center gap-2.5 sm:gap-4">
           {navTabs.map((tab, idx) =>
             tab.modalType ? (
@@ -322,22 +322,22 @@ const HeroSection: React.FC = () => {
       {/* Video Tutorials Modal - Simple Clean White (Left Video, Right List) */}
       {isTutorialModalOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-3 sm:p-5 overflow-y-auto"
+          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-3 sm:p-5 overflow-y-auto font-poppins"
           onClick={closeTutorialModal}
         >
           <div
-            className="bg-white border border-gray-200 rounded-[8px] max-w-[960px] w-full p-4 sm:p-6 relative my-auto text-[#1F2937] flex flex-col "
+            className="bg-white rounded-[2px] max-w-[960px] w-full p-4 sm:p-6 relative my-auto text-[#1F2937] flex flex-col "
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="flex items-center justify-between pb-3 mb-4 border-b border-gray-200">
+            <div className="flex items-center justify-between pb-3 mb-4">
               <h3 className="text-lg sm:text-xl font-bold font-poppins text-[#111827]">
                 Video Tutorials
               </h3>
               <button
                 type="button"
                 onClick={closeTutorialModal}
-                className="w-8 h-8 rounded border border-gray-200 hover:border-gray-300 hover:bg-gray-100 text-gray-500 hover:text-gray-900 flex items-center justify-center transition-colors cursor-pointer"
+                className="w-8 h-8  hover:bg-gray-100 text-gray-500 hover:text-gray-900 flex items-center justify-center transition-colors cursor-pointer"
                 aria-label="Close"
               >
                 <X className="w-4 h-4" />
@@ -351,7 +351,7 @@ const HeroSection: React.FC = () => {
                 {/* Video Frame Container (Fullscreen-capable) */}
                 <div
                   ref={videoContainerRef}
-                  className={`relative w-full aspect-video rounded-t-[6px] overflow-hidden border border-gray-200 bg-black ${
+                  className={`relative w-full aspect-video overflow-hidden  bg-black ${
                     isFullscreen
                       ? "!fixed !inset-0 !z-[100] !w-screen !h-screen !aspect-auto !rounded-none !border-0 flex items-center justify-center bg-black"
                       : ""
@@ -376,38 +376,38 @@ const HeroSection: React.FC = () => {
 
                   {/* Enroll Placeholder */}
                   {activeTutorialId === "enroll" && (
-                    <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-[#F9FAFB]">
-                      <div className="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center mb-2">
+                    <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-[#F8FAFC]">
+                      <div className="w-12 h-12 rounded-full bg-[#001732] text-white flex items-center justify-center mb-3 shadow-sm">
                         <Play className="w-5 h-5 fill-white translate-x-0.5" />
                       </div>
-                      <span className="inline-block px-2.5 py-0.5 bg-gray-100 text-gray-700 border border-gray-200 text-xs font-semibold rounded">
-                        Attached in Mail
-                      </span>
+                      <p className="text-sm sm:text-base font-bold text-[#001732] max-w-md">
+                        How to Enroll in your Swayam Course
+                      </p>
                     </div>
                   )}
 
                   {/* Profile Placeholder */}
                   {activeTutorialId === "profile" && (
-                    <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-[#F9FAFB]">
-                      <div className="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center mb-2">
+                    <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-[#F8FAFC]">
+                      <div className="w-12 h-12 rounded-full bg-[#001732] text-white flex items-center justify-center mb-3 shadow-sm">
                         <Play className="w-5 h-5 fill-white translate-x-0.5" />
                       </div>
-                      <span className="inline-block px-2.5 py-0.5 bg-gray-100 text-gray-700 border border-gray-200 text-xs font-semibold rounded">
-                        Attached in Mail
-                      </span>
+                      <p className="text-sm sm:text-base font-bold text-[#001732] max-w-md">
+                        How to Update your Profile
+                      </p>
                     </div>
                   )}
                 </div>
 
                 {/* Video Custom Controls Bar - Clean, White, No Shadows */}
                 {activeTutorialId === "abc-id" && (
-                  <div className="flex items-center justify-between px-3 py-2 bg-gray-50 border-x border-b border-gray-200 rounded-b-[6px] text-gray-700 relative select-none">
+                  <div className="flex items-center justify-between px-3 py-2 bg-[#F8FAFC] border-t border-[#E2E8F0] text-[#0F172A] relative select-none rounded-b-[2px]">
                     {/* Left: Play/Pause & Mute/Unmute */}
                     <div className="flex items-center gap-2">
                       <button
                         type="button"
                         onClick={togglePlay}
-                        className="px-2.5 py-1 rounded border border-gray-200 bg-white hover:bg-gray-100 text-gray-700 transition-colors flex items-center gap-1.5 text-xs font-medium cursor-pointer"
+                        className="px-2.5 py-1 rounded-[2px] border border-[#CBD5E1] bg-white hover:border-[#001732] hover:bg-gray-50 text-[#0F172A] transition-colors flex items-center gap-1.5 text-xs font-semibold cursor-pointer"
                         title={isPlaying ? "Pause" : "Play"}
                       >
                         {isPlaying ? (
@@ -421,13 +421,13 @@ const HeroSection: React.FC = () => {
                       <button
                         type="button"
                         onClick={toggleMute}
-                        className="px-2.5 py-1 rounded border border-gray-200 bg-white hover:bg-gray-100 text-gray-700 transition-colors flex items-center gap-1.5 text-xs font-medium cursor-pointer"
+                        className="px-2.5 py-1 rounded-[2px] border border-[#CBD5E1] bg-white hover:border-[#001732] hover:bg-gray-50 text-[#0F172A] transition-colors flex items-center gap-1.5 text-xs font-semibold cursor-pointer"
                         title={isMuted ? "Unmute" : "Mute"}
                       >
                         {isMuted ? (
-                          <VolumeX className="w-3.5 h-3.5 text-gray-700" />
+                          <VolumeX className="w-3.5 h-3.5 text-[#0F172A]" />
                         ) : (
-                          <Volume2 className="w-3.5 h-3.5 text-gray-700" />
+                          <Volume2 className="w-3.5 h-3.5 text-[#0F172A]" />
                         )}
                         <span>{isMuted ? "Unmute" : "Mute"}</span>
                       </button>
@@ -440,10 +440,10 @@ const HeroSection: React.FC = () => {
                         <button
                           type="button"
                           onClick={() => setIsSettingsOpen(!isSettingsOpen)}
-                          className={`px-2.5 py-1 rounded border transition-colors flex items-center gap-1.5 text-xs font-medium cursor-pointer ${
+                          className={`px-2.5 py-1 rounded-[2px] border transition-colors flex items-center gap-1.5 text-xs font-semibold cursor-pointer ${
                             isSettingsOpen
-                              ? "bg-gray-200 border-gray-300 text-gray-900"
-                              : "bg-white border-gray-200 hover:bg-gray-100 text-gray-700"
+                              ? "bg-[#001732] border-[#001732] text-white"
+                              : "bg-white border-[#CBD5E1] hover:border-[#001732] hover:bg-gray-50 text-[#0F172A]"
                           }`}
                           title="Playback Settings"
                         >
@@ -457,8 +457,8 @@ const HeroSection: React.FC = () => {
 
                         {/* Settings Dropdown Menu */}
                         {isSettingsOpen && (
-                          <div className="absolute right-0 bottom-full mb-1.5 w-36 bg-white border border-gray-200 rounded-[6px] py-1 shadow-none z-30">
-                            <div className="px-2.5 py-1 text-[10px] font-bold text-gray-400 uppercase tracking-wider border-b border-gray-100">
+                          <div className="absolute right-0 bottom-full mb-1.5 w-36 bg-white border border-[#CBD5E1] rounded-[2px] py-1 shadow-md z-30">
+                            <div className="px-2.5 py-1 text-[10px] font-bold text-gray-500 uppercase tracking-wider border-b border-gray-100">
                               Playback Speed
                             </div>
                             {[0.75, 1, 1.25, 1.5, 2].map((rate) => (
@@ -468,15 +468,15 @@ const HeroSection: React.FC = () => {
                                 onClick={() => changePlaybackRate(rate)}
                                 className={`w-full text-left px-2.5 py-1.5 text-xs transition-colors flex items-center justify-between cursor-pointer ${
                                   playbackRate === rate
-                                    ? "bg-gray-100 text-gray-900 font-bold"
-                                    : "text-gray-700 hover:bg-gray-100"
+                                    ? "bg-[#001732] text-white font-bold"
+                                    : "text-[#0F172A] hover:bg-gray-100 font-medium"
                                 }`}
                               >
                                 <span>
                                   {rate === 1 ? "Normal (1x)" : `${rate}x`}
                                 </span>
                                 {playbackRate === rate && (
-                                  <span className="w-1.5 h-1.5 rounded-full bg-gray-900" />
+                                  <span className="w-1.5 h-1.5 rounded-full bg-white" />
                                 )}
                               </button>
                             ))}
@@ -488,7 +488,7 @@ const HeroSection: React.FC = () => {
                       <button
                         type="button"
                         onClick={toggleFullscreen}
-                        className="px-2.5 py-1 rounded border border-gray-200 bg-white hover:bg-gray-100 text-gray-700 transition-colors flex items-center gap-1.5 text-xs font-medium cursor-pointer"
+                        className="px-2.5 py-1 rounded-[2px] border border-[#CBD5E1] bg-white hover:border-[#001732] hover:bg-gray-50 text-[#0F172A] transition-colors flex items-center gap-1.5 text-xs font-semibold cursor-pointer"
                         title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
                       >
                         {isFullscreen ? (
@@ -503,75 +503,102 @@ const HeroSection: React.FC = () => {
                 )}
               </div>
 
-              {/* Right: Video List (Consistent border-2 on all states to prevent jump) */}
+              {/* Right: Video Playlist */}
               <div className="md:col-span-5 lg:col-span-4 flex flex-col gap-2.5">
                 {/* Video 1 */}
                 <button
                   type="button"
                   onClick={() => handleTutorialSelect("enroll")}
-                  className={`text-left p-3 rounded-[6px] border-2 transition-colors cursor-pointer ${
+                  className={`w-full text-left p-3.5 rounded-[2px] border transition-colors cursor-pointer flex items-center gap-3 group ${
                     activeTutorialId === "enroll"
-                      ? "border-gray-900 bg-gray-50"
-                      : "border-gray-200 bg-white hover:border-gray-300"
+                      ? "border-[#001732] bg-[#001732] text-white shadow-sm"
+                      : "border-[#E2E8F0] bg-[#F8FAFC] hover:bg-[#EEF2F6] text-[#1E293B]"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-[11px] font-semibold text-gray-500">
-                      Video 1
-                    </span>
-                    <span className="text-[10px] text-gray-600 font-medium">
-                      Attached in Mail
-                    </span>
+                  <div
+                    className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-colors ${
+                      activeTutorialId === "enroll"
+                        ? "border-white bg-white text-[#001732] shadow-sm"
+                        : "border-[#CBD5E1] bg-white text-[#64748B] group-hover:bg-[#001732] group-hover:text-white group-hover:border-[#001732]"
+                    }`}
+                  >
+                    <Play className="w-3.5 h-3.5 fill-current translate-x-0.5" />
                   </div>
-                  <p className="text-xs sm:text-sm font-semibold text-[#111827] line-clamp-2">
-                    How to Enroll in your Swayam Course
-                  </p>
+                  <div className="flex-1 min-w-0">
+                    <p
+                      className={`text-xs sm:text-[13px] leading-snug line-clamp-2 font-semibold transition-colors ${
+                        activeTutorialId === "enroll"
+                          ? "text-white"
+                          : "text-[#1E293B] group-hover:text-[#001732]"
+                      }`}
+                    >
+                      How to Enroll in your Swayam Course
+                    </p>
+                  </div>
                 </button>
 
                 {/* Video 2 */}
                 <button
                   type="button"
                   onClick={() => handleTutorialSelect("profile")}
-                  className={`text-left p-3 rounded-[6px] border-2 transition-colors cursor-pointer ${
+                  className={`w-full text-left p-3.5 rounded-[2px] border transition-colors cursor-pointer flex items-center gap-3 group ${
                     activeTutorialId === "profile"
-                      ? "border-gray-900 bg-gray-50"
-                      : "border-gray-200 bg-white hover:border-gray-300"
+                      ? "border-[#001732] bg-[#001732] text-white shadow-sm"
+                      : "border-[#E2E8F0] bg-[#F8FAFC] hover:bg-[#EEF2F6] text-[#1E293B]"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-[11px] font-semibold text-gray-500">
-                      Video 2
-                    </span>
-                    <span className="text-[10px] text-gray-600 font-medium">
-                      Attached in Mail
-                    </span>
+                  <div
+                    className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-colors ${
+                      activeTutorialId === "profile"
+                        ? "border-white bg-white text-[#001732] shadow-sm"
+                        : "border-[#CBD5E1] bg-white text-[#64748B] group-hover:bg-[#001732] group-hover:text-white group-hover:border-[#001732]"
+                    }`}
+                  >
+                    <Play className="w-3.5 h-3.5 fill-current translate-x-0.5" />
                   </div>
-                  <p className="text-xs sm:text-sm font-semibold text-[#111827] line-clamp-2">
-                    How to Update your Profile
-                  </p>
+                  <div className="flex-1 min-w-0">
+                    <p
+                      className={`text-xs sm:text-[13px] leading-snug line-clamp-2 font-semibold transition-colors ${
+                        activeTutorialId === "profile"
+                          ? "text-white"
+                          : "text-[#1E293B] group-hover:text-[#001732]"
+                      }`}
+                    >
+                      How to Update your Profile
+                    </p>
+                  </div>
                 </button>
 
                 {/* Video 3 */}
                 <button
                   type="button"
                   onClick={() => handleTutorialSelect("abc-id")}
-                  className={`text-left p-3 rounded-[6px] border-2 transition-colors cursor-pointer ${
+                  className={`w-full text-left p-3.5 rounded-[2px] border transition-colors cursor-pointer flex items-center gap-3 group ${
                     activeTutorialId === "abc-id"
-                      ? "border-gray-900 bg-gray-50"
-                      : "border-gray-200 bg-white hover:border-gray-300"
+                      ? "border-[#001732] bg-[#001732] text-white shadow-sm"
+                      : "border-[#E2E8F0] bg-[#F8FAFC] hover:bg-[#EEF2F6] text-[#1E293B]"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-[11px] font-semibold text-gray-500">
-                      Video 3
-                    </span>
-                    <span className="text-[10px] text-gray-600 font-medium">
-                      YouTube Video
-                    </span>
+                  <div
+                    className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-colors ${
+                      activeTutorialId === "abc-id"
+                        ? "border-white bg-white text-[#001732] shadow-sm"
+                        : "border-[#CBD5E1] bg-white text-[#64748B] group-hover:bg-[#001732] group-hover:text-white group-hover:border-[#001732]"
+                    }`}
+                  >
+                    <Play className="w-3.5 h-3.5 fill-current translate-x-0.5" />
                   </div>
-                  <p className="text-xs sm:text-sm font-semibold text-[#111827] line-clamp-2">
-                    How to create your ABC ID
-                  </p>
+                  <div className="flex-1 min-w-0">
+                    <p
+                      className={`text-xs sm:text-[13px] leading-snug line-clamp-2 font-semibold transition-colors ${
+                        activeTutorialId === "abc-id"
+                          ? "text-white"
+                          : "text-[#1E293B] group-hover:text-[#001732]"
+                      }`}
+                    >
+                      How to create your ABC ID
+                    </p>
+                  </div>
                 </button>
               </div>
             </div>
@@ -582,7 +609,7 @@ const HeroSection: React.FC = () => {
       {/* SWAYAM Mentor List Modal - Simple Clean White (No Shadows) */}
       {isMentorsModalOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-3 sm:p-5 overflow-y-auto"
+          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-3 sm:p-5 overflow-y-auto font-poppins"
           onClick={closeMentorsModal}
         >
           <div
@@ -660,7 +687,7 @@ const HeroSection: React.FC = () => {
       {/* SWAYAM FAQ Modal - Simple Clean White Accordion */}
       {isFaqModalOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-3 sm:p-5 overflow-y-auto"
+          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-3 sm:p-5 overflow-y-auto font-poppins"
           onClick={closeFaqModal}
         >
           <div
