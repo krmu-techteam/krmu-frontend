@@ -22,7 +22,7 @@ const Navbar = ({ navbarData, handleMobileMenu, showMobilebar }: Props) => {
                 <Link href="/">
                     <div className="relative h-14 md:h-16 w-52 md:w-60 lg:w-68 xl:w-76 flex items-center">
                         <Image
-                            src="/krmu.webp"
+                            src="/university-logo.webp"
                             alt="K.R. Mangalam University"
                             width={304}
                             height={57}

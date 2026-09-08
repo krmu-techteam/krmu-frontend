@@ -18,16 +18,49 @@ type Props = {
 
 const NavbarMenu = ({ mainMenu }: Props) => {
     const [isNavHidden, setIsNavHidden] = useState(false);
+    const [activeMenu, setActiveMenu] = useState<string | null>(null);
+    const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
     const pathname = usePathname();
 
     useEffect(() => {
         setIsNavHidden(false);
+        setActiveMenu(null);
     }, [pathname]);
+
+    useEffect(() => {
+        return () => {
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+        };
+    }, []);
+
+    const handleMenuEnter = (menuKey: string) => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+            timeoutRef.current = null;
+        }
+        setIsNavHidden(false);
+        setActiveMenu(menuKey);
+    };
+
+    const handleMenuLeave = () => {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+        timeoutRef.current = setTimeout(() => {
+            setActiveMenu(null);
+        }, 250);
+    };
 
     const handleNavClick = (e: React.MouseEvent<HTMLDivElement>) => {
         const target = e.target as HTMLElement;
         if (target.closest("a")) {
             setIsNavHidden(true);
+            setActiveMenu(null);
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
             if (document.activeElement instanceof HTMLElement) {
                 document.activeElement.blur();
             }
@@ -35,7 +68,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
     };
 
     const handleMouseLeave = () => {
-        setIsNavHidden(false);
+        handleMenuLeave();
     };
 
     const academicMenu = mainMenu.find(
@@ -159,13 +192,27 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                 <ul className="flex items-center xl:gap-3 2xl:gap-6">
                     {/* Academics */}
                     {academicMenu && (
-                        <li className="krm-sub-menu-has-children">
-                            <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer">
+                        <li
+                            className={`krm-sub-menu-has-children ${activeMenu === "academics" ? "is-active" : ""}`}
+                            onMouseEnter={() => handleMenuEnter("academics")}
+                            onMouseLeave={handleMenuLeave}
+                        >
+                            <div
+                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer ${activeMenu === "academics" ? "text-white" : ""}`}
+                            >
                                 <span>{academicMenu?.title}</span>
-                                <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
+                                <ChevronDown
+                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "academics" ? "rotate-180 opacity-100" : ""}`}
+                                />
                             </div>
-                            <div className="absolute left-0 right-0 w-full top-full bg-[#04101A] pt-[52px] pb-10 md:pt-[60px] md:pb-12 overflow-hidden mt-[-12px] krmsubmenu-container z-50">
-                                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
+                            <div
+                                className="absolute left-0 right-0 mx-auto w-full max-w-[1440px] top-full bg-[#04101A] pt-8 pb-10 md:pt-10 md:pb-12 overflow-hidden krmsubmenu-container z-50 shadow-2xl"
+                                onMouseEnter={() =>
+                                    handleMenuEnter("academics")
+                                }
+                                onMouseLeave={handleMenuLeave}
+                            >
+                                <div className="mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
                                     {/* Left: Program Level */}
                                     <div className="col-span-12 lg:col-span-7">
                                         <div className="text-2xl font-normal font-poppins text-white mb-6">
@@ -176,7 +223,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             {/* Undergraduate */}
                                             <Link
                                                 href="/programmes?degree=undergraduate-programmes"
-                                                className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[3px] border border-white/10 shadow-lg block bg-[#0b1622]"
+                                                className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[1px] block"
                                             >
                                                 <Image
                                                     src="/modules/header/academics/undergraduate.jpg"
@@ -185,7 +232,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                     sizes="(max-width: 1024px) 100vw, 400px"
                                                     className="object-cover transition-all duration-700 ease-in-out group-hover:scale-103 opacity-90 group-hover:opacity-100"
                                                 />
-                                                <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#0a1520]/90 rounded-[3px] text-center transition-all duration-500 ease-in-out group-hover:border-[#3C7ED4]/50 group-hover:bg-[#071624]">
+                                                <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#061623] rounded-[2px] text-center transition-all duration-500 ease-in-out group-hover:bg-[#061623]">
                                                     <span className="text-sm font-light text-white font-poppins">
                                                         Undergraduate Programmes
                                                     </span>
@@ -195,7 +242,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             {/* Postgraduate */}
                                             <Link
                                                 href="/programmes?degree=postgraduate-programmes"
-                                                className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[3px] border border-white/10 shadow-lg block bg-[#0b1622]"
+                                                className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[1px]  block bg-[#0b1622]"
                                             >
                                                 <Image
                                                     src="/modules/header/academics/postgraduate.png"
@@ -204,7 +251,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                     sizes="(max-width: 1024px) 100vw, 400px"
                                                     className="object-cover transition-all duration-700 ease-in-out group-hover:scale-103 opacity-90 group-hover:opacity-100"
                                                 />
-                                                <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#0a1520]/90 rounded-[3px] text-center transition-all duration-500 ease-in-out group-hover:border-[#3C7ED4]/50 group-hover:bg-[#071624]">
+                                                <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#061623] rounded-[2px] text-center transition-all duration-500 ease-in-out ">
                                                     <span className="text-sm font-light text-white font-poppins">
                                                         Postgraduate Programmes
                                                     </span>
@@ -214,7 +261,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             {/* Doctoral */}
                                             <Link
                                                 href="/programmes?degree=doctoral-programmes"
-                                                className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[3px] border border-white/10 shadow-lg block bg-[#0b1622]"
+                                                className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[1px]  block bg-[#0b1622]"
                                             >
                                                 <Image
                                                     src="/modules/header/academics/doctoral.jpg"
@@ -223,7 +270,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                     sizes="(max-width: 1024px) 100vw, 400px"
                                                     className="object-cover transition-all duration-700 ease-in-out group-hover:scale-103 opacity-90 group-hover:opacity-100"
                                                 />
-                                                <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#0a1520]/90  rounded-[3px] text-center transition-all duration-500 ease-in-out group-hover:border-[#3C7ED4]/50 group-hover:bg-[#071624]">
+                                                <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#061623] rounded-[2px] text-center transition-all duration-500 ease-in-out ">
                                                     <span className="text-sm font-light text-white font-poppins">
                                                         Doctoral Programmes
                                                     </span>
@@ -233,7 +280,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             {/* Diploma */}
                                             <Link
                                                 href="/programmes?degree=diploma-programmes"
-                                                className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[3px] border border-white/10 shadow-lg block bg-[#0b1622]"
+                                                className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[1px]  block bg-[#0b1622]"
                                             >
                                                 <Image
                                                     src="/modules/header/academics/diploma.jpg"
@@ -242,7 +289,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                     sizes="(max-width: 1024px) 100vw, 400px"
                                                     className="object-cover transition-all duration-700 ease-in-out group-hover:scale-103 opacity-90 group-hover:opacity-100"
                                                 />
-                                                <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#0a1520]/90  rounded-[3px] text-center transition-all duration-500 ease-in-out group-hover:border-[#3C7ED4]/50 group-hover:bg-[#071624]">
+                                                <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#061623] rounded-[2px] text-center transition-all duration-500 ease-in-out ">
                                                     <span className="text-sm font-light text-white font-poppins">
                                                         Diploma Programmes
                                                     </span>
@@ -253,13 +300,13 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         {/* Academics Counters */}
                                         <div className="grid grid-cols-2 gap-5 mt-6">
                                             {academicMenu?.acadcounter &&
-                                            academicMenu.acadcounter.length >
-                                                0 ? (
+                                                academicMenu.acadcounter
+                                                    .length > 0 &&
                                                 academicMenu.acadcounter.map(
                                                     (counter) => (
                                                         <div
                                                             key={counter.id}
-                                                            className="relative overflow-hidden group flex items-center justify-center h-[72px] border border-[#3C7ED4] bg-[#071624] rounded-[3px] text-center transition-all duration-300 hover:bg-[#0c1e30] hover:border-[#3C7ED4]/80"
+                                                            className="relative overflow-hidden group flex items-center justify-center h-[69px] border border-[#3C7ED4] rounded-[2px] text-center transition-all duration-300 hover:bg-[#061623] hover:border-[#3C7ED4]/80"
                                                         >
                                                             <p className="text-lg font-light font-poppins text-white tracking-wide">
                                                                 {
@@ -271,21 +318,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                             </p>
                                                         </div>
                                                     )
-                                                )
-                                            ) : (
-                                                <>
-                                                    <div className="relative overflow-hidden group flex items-center justify-center h-[72px] border border-[#3C7ED4] bg-[#071624] rounded-[3px] text-center transition-all duration-300 hover:bg-[#0c1e30] hover:border-[#3C7ED4]/80">
-                                                        <p className="text-lg font-light font-poppins text-white tracking-wide">
-                                                            11 Schools
-                                                        </p>
-                                                    </div>
-                                                    <div className="relative overflow-hidden group flex items-center justify-center h-[72px] border border-[#3C7ED4]/30 bg-[#071624] rounded-[3px] text-center transition-all duration-300 hover:bg-[#0c1e30] hover:border-[#3C7ED4]/80">
-                                                        <p className="text-lg font-light font-poppins text-white tracking-wide">
-                                                            700+ Faculties
-                                                        </p>
-                                                    </div>
-                                                </>
-                                            )}
+                                                )}
                                         </div>
                                     </div>
 
@@ -316,7 +349,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                                     className={`font-poppins relative transition-all duration-300 text-[15px] font-light flex items-center group ${
                                                                         isZenith
                                                                             ? "text-[#3b82f6] hover:text-[#3b82f6]/80 font-normal"
-                                                                            : "text-white/60 hover:text-white"
+                                                                            : "text-white/80 hover:text-white"
                                                                     }`}
                                                                 >
                                                                     <span
@@ -340,20 +373,26 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         </div>
 
                                         {/* Handbook and Brochure Buttons */}
-                                        <div className="grid grid-cols-2 gap-4 mt-8">
+                                        <div className="flex flex-wrap items-center gap-4 mt-8">
                                             <Link
                                                 href="https://www.krmangalam.edu.in/disclosure2018-2023/Organizational-Policies/Policy-of-Code-of-Conduct.pdf"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="border border-white/20 hover:border-white/40 bg-[#071624]/50 text-white font-poppins font-normal py-3 px-5 rounded-[3px] text-[14px] flex items-center justify-center gap-1.5 transition-all hover:bg-white/5 text-center tracking-wide"
+                                                className="relative overflow-hidden group w-fit border border-[#fff]/90 hover:border-white bg-[#071624]/50 text-white/90 hover:text-white font-poppins font-normal py-3 px-4 hover:bg-white/5 rounded-[2px] text-[14px] flex items-center justify-center gap-1.5 transition-all duration-300  text-center tracking-wide whitespace-nowrap active:scale-[0.98] cursor-pointer"
                                             >
-                                                University Student Handbook
+                                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
+                                                <span className="relative z-10">
+                                                    University Student Handbook
+                                                </span>
                                             </Link>
                                             <Link
                                                 href="#"
-                                                className="border border-white/20 hover:border-white/40 bg-[#071624]/50 text-white font-poppins font-normal py-3 px-5 rounded-[3px] text-[14px] flex items-center justify-center gap-1.5 transition-all hover:bg-white/5 text-center tracking-wide"
+                                                className="relative hover:bg-white/5 overflow-hidden group w-fit border border-[#fff]/90 hover:border-white bg-[#071624]/50 text-white/90 hover:text-white font-poppins font-normal py-3 px-4 rounded-[2px] text-[14px] flex items-center justify-center gap-1.5 transition-all duration-300  text-center tracking-wide whitespace-nowrap active:scale-[0.98] cursor-pointer"
                                             >
-                                                Download Brochure
+                                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
+                                                <span className="relative z-10">
+                                                    Download Brochure
+                                                </span>
                                             </Link>
                                         </div>
                                     </div>
@@ -363,7 +402,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     )}
 
                     {/* Programmes */}
-                    <li>
+                    <li onMouseEnter={() => handleMenuEnter("")}>
                         <Link
                             className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] ${
                                 (programmesLinks &&
@@ -388,15 +427,29 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                     {/* Admissions */}
                     {admissionMenu && (
-                        <li className="krm-sub-menu-has-children">
-                            <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer">
+                        <li
+                            className={`krm-sub-menu-has-children ${activeMenu === "admissions" ? "is-active" : ""}`}
+                            onMouseEnter={() => handleMenuEnter("admissions")}
+                            onMouseLeave={handleMenuLeave}
+                        >
+                            <div
+                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer ${activeMenu === "admissions" ? "text-white" : ""}`}
+                            >
                                 <span>{admissionMenu?.title}</span>
-                                <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
+                                <ChevronDown
+                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "admissions" ? "rotate-180 opacity-100" : ""}`}
+                                />
                             </div>
-                            <div className="absolute left-0 right-0 w-full top-full bg-[#04101A] pt-[52px] pb-10 md:pt-[60px] md:pb-12 overflow-hidden mt-[-12px] krmsubmenu-container z-50">
-                                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
+                            <div
+                                className="absolute left-0 right-0 mx-auto w-full max-w-[1440px] top-full bg-[#04101A] pt-8 pb-10 md:pt-10 md:pb-12 overflow-hidden krmsubmenu-container z-50"
+                                onMouseEnter={() =>
+                                    handleMenuEnter("admissions")
+                                }
+                                onMouseLeave={handleMenuLeave}
+                            >
+                                <div className="mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
                                     {/* Left Section: Link Columns */}
-                                    <div className="col-span-12 lg:col-span-7">
+                                    <div className="col-span-12 lg:col-span-8">
                                         <div className="text-2xl font-normal font-poppins text-white mb-6">
                                             {admissionMenu?.title}
                                         </div>
@@ -404,7 +457,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             {/* Enrolment */}
                                             {admissionMenu?.enrollnow && (
                                                 <div>
-                                                    <div className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
+                                                    <div className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[1px]">
                                                         {
                                                             admissionMenu
                                                                 ?.enrollnow
@@ -432,7 +485,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                                             href={
                                                                                 href
                                                                             }
-                                                                            className="font-poppins font-light text-white/70 hover:text-white transition-colors duration-200 text-[15px] py-1 flex items-center"
+                                                                            className="font-poppins font-light text-white/80 hover:text-white transition-colors duration-200 text-[15px] py-1 flex items-center"
                                                                             target={
                                                                                 ext
                                                                                     ? "_blank"
@@ -456,7 +509,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             {/* Scholarships */}
                                             {admissionMenu?.scholarships && (
                                                 <div>
-                                                    <div className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
+                                                    <div className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[1px]">
                                                         {
                                                             admissionMenu
                                                                 ?.scholarships
@@ -484,7 +537,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                                             href={
                                                                                 href
                                                                             }
-                                                                            className="font-poppins font-light text-white/70 hover:text-white transition-colors duration-200 text-[15px] py-1 flex items-center"
+                                                                            className="font-poppins font-light text-white/80 hover:text-white transition-colors duration-200 text-[15px] py-1 flex items-center"
                                                                             target={
                                                                                 ext
                                                                                     ? "_blank"
@@ -507,27 +560,20 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         </div>
                                     </div>
 
-                                    <div className="col-span-12 lg:col-span-5 lg:pl-6 flex flex-col justify-between">
+                                    <div className="col-span-12 lg:col-span-4 lg:pl-6 flex flex-col justify-between">
                                         <div>
-                                            <div className="relative group mb-6 rounded-sm overflow-hidden border border-white/10 shadow-lg">
-                                                {/* <Image
-                          src={`${STRAPI_URL}${admissionMenu?.backgroundimage?.url}`}
-                          alt="Admissions Campus"
-                          fill
-                          sizes="(max-width: 1024px) 100vw, 400px"
-                          className="object-contain transition-transform duration-1000 group-hover:scale-105 opacity-90"
-                        /> */}
+                                            <div className="relative group mb-6 w-[400px] max-w-full h-[250px] rounded-[4px] overflow-hidden">
                                                 <Image
                                                     src="/modules/header/admissions/campus.png"
                                                     alt="Admissions Campus"
-                                                    width={3154}
-                                                    height={2066}
-                                                    className="w-full h-auto transition-transform duration-1000 group-hover:scale-105 opacity-90"
+                                                    width={400}
+                                                    height={250}
+                                                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                                                 />
                                             </div>
 
                                             {/* Location & Contact Info */}
-                                            <div className="space-y-2 text-white/70 font-poppins font-light text-[14px] leading-relaxed mb-6">
+                                            <div className="space-y-2 text-white/80 font-poppins font-light text-[14px] leading-relaxed mb-6">
                                                 <p className="tracking-wide">
                                                     Sohna Road, Gurugram,
                                                     Haryana - 122103
@@ -548,9 +594,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         </div>
 
                                         {/* Action Buttons */}
-                                        <div className="grid grid-cols-2 gap-4">
+                                        <div className="flex items-center gap-3">
                                             <CommonLeadPopup
-                                                buttonClassName="border border-[#3C7ED4]/50 hover:border-[#3C7ED4] bg-[#071624]/60 hover:bg-[#0c1e30] text-white font-poppins font-normal py-3 px-4 rounded-[3px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center uppercase cursor-pointer"
+                                                buttonClassName="border w-fit border-[#3C7ED4]/50 hover:border-[#3C7ED4] bg-[#071624]/60 hover:bg-[#0c1e30] text-white font-poppins font-normal py-3 px-4 rounded-[2px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center uppercase cursor-pointer whitespace-nowrap"
                                                 buttonText="DOWNLOAD PROSPECTUS"
                                                 redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
                                                 form_name="Download Prospectus"
@@ -560,7 +606,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                     applyNowButton?.url ||
                                                     "/apply"
                                                 }
-                                                className="group bg-[#cb000d] hover:bg-[#cb000d]/90 text-white font-poppins font-normal py-3 px-5 rounded-[3px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center shadow-lg"
+                                                className="group w-fit bg-[#cb000d] hover:bg-[#cb000d]/90 text-white font-poppins font-normal py-3 px-5 rounded-[2px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center whitespace-nowrap"
                                             >
                                                 <span>APPLY NOW</span>
                                                 <ArrowUpRight
@@ -578,7 +624,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     {/* Zenith */}
                     {zenithLinks &&
                         zenithLinks.__component === "menu.menu-links" && (
-                            <li>
+                            <li onMouseEnter={() => handleMenuEnter("")}>
                                 <Link
                                     className={`font-poppins font-semibold tracking-wide text-[#ff0010] hover:text-[#ff0010]/85 transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] ${
                                         zenithLinks?.menuclass || ""
@@ -594,44 +640,125 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                     {/* Placements */}
                     {placementMenu && (
-                        <li className="krm-sub-menu-has-children">
-                            <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer">
+                        <li
+                            className={`krm-sub-menu-has-children ${activeMenu === "placements" ? "is-active" : ""}`}
+                            onMouseEnter={() => handleMenuEnter("placements")}
+                            onMouseLeave={handleMenuLeave}
+                        >
+                            <div
+                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer ${activeMenu === "placements" ? "text-white" : ""}`}
+                            >
                                 <span>{placementMenu?.title}</span>
-                                <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
+                                <ChevronDown
+                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "placements" ? "rotate-180 opacity-100" : ""}`}
+                                />
                             </div>
-                            <div className="absolute left-0 right-0 w-full top-full bg-[#04101A] pt-[60px] pb-14 md:pt-[70px] md:pb-16 overflow-hidden mt-[-12px] krmsubmenu-container z-50">
-                                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 flex flex-col w-full">
+                            <div
+                                className="absolute left-0 right-0 mx-auto w-full max-w-[1440px] top-full bg-[#04101A] pt-8 pb-10 md:pt-10 md:pb-12 overflow-hidden krmsubmenu-container z-50 shadow-2xl"
+                                onMouseEnter={() =>
+                                    handleMenuEnter("placements")
+                                }
+                                onMouseLeave={handleMenuLeave}
+                            >
+                                <div className="mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-16 relative z-10 flex flex-col w-full">
                                     <div className="grid grid-cols-12 w-full gap-8">
                                         {/* Left Column: Links */}
-                                        <div className="col-span-3">
-                                            <div className="text-2xl font-normal font-poppins text-white mb-6">
-                                                {
-                                                    placementMenu?.placement
-                                                        ?.heading
-                                                }
+                                        <div className="col-span-4 flex flex-col justify-between">
+                                            <div>
+                                                <div className="text-2xl font-normal font-poppins text-white mb-6">
+                                                    {
+                                                        placementMenu?.placement
+                                                            ?.heading
+                                                    }
+                                                </div>
+                                                <ul className="flex flex-col gap-3">
+                                                    {placementMenu?.placement?.menulinks
+                                                        ?.filter(
+                                                            (menu) =>
+                                                                !menu.title
+                                                                    .toLowerCase()
+                                                                    .includes(
+                                                                        "portal"
+                                                                    )
+                                                        )
+                                                        .map((menu) => (
+                                                            <li key={menu.id}>
+                                                                <Link
+                                                                    href={
+                                                                        formatInternalLink(
+                                                                            menu.url
+                                                                        ) || "#"
+                                                                    }
+                                                                    className="relative text-white/80 hover:text-white transition-all duration-300 text-[15px] font-light flex items-center group font-poppins"
+                                                                >
+                                                                    {menu.title}
+                                                                </Link>
+                                                            </li>
+                                                        ))}
+
+                                                    {placementMenu?.placement?.menulinks
+                                                        ?.filter((menu) =>
+                                                            menu.title
+                                                                .toLowerCase()
+                                                                .includes(
+                                                                    "portal"
+                                                                )
+                                                        )
+                                                        .map((menu) => (
+                                                            <li key={menu.id}>
+                                                                <Link
+                                                                    href={
+                                                                        formatInternalLink(
+                                                                            menu.url
+                                                                        ) || "#"
+                                                                    }
+                                                                    target={
+                                                                        isExternalUrl(
+                                                                            menu.url
+                                                                        )
+                                                                            ? "_blank"
+                                                                            : undefined
+                                                                    }
+                                                                    rel={
+                                                                        isExternalUrl(
+                                                                            menu.url
+                                                                        )
+                                                                            ? "noopener noreferrer"
+                                                                            : undefined
+                                                                    }
+                                                                    className="font-poppins text-[#008CFF] hover:text-[#008CFF]/80 transition-all duration-200 text-[15px] font-normal tracking-wide block mt-2"
+                                                                >
+                                                                    {menu.title}
+                                                                </Link>
+                                                            </li>
+                                                        ))}
+                                                </ul>
                                             </div>
-                                            <ul className="flex flex-col gap-3">
-                                                {placementMenu?.placement?.menulinks.map(
-                                                    (menu) => (
-                                                        <li key={menu.id}>
-                                                            <Link
-                                                                href={
-                                                                    formatInternalLink(
-                                                                        menu.url
-                                                                    ) || "#"
-                                                                }
-                                                                className="relative text-white hover:text-white/80 transition-all duration-300 text-[15px] font-light flex items-center group font-poppins"
-                                                            >
-                                                                {menu.title}
-                                                            </Link>
-                                                        </li>
-                                                    )
-                                                )}
-                                            </ul>
+
+                                            <div className="flex flex-wrap items-center gap-3 mt-6">
+                                                <CommonLeadPopup
+                                                    buttonClassName="w-fit border border-[#fff]/80 hover:border-white text-white font-poppins font-normal text-[12px] md:text-[13px] leading-none tracking-wide whitespace-nowrap rounded-[2px] px-3 lg:px-4 h-[42px] flex items-center justify-center uppercase transition-all duration-300 ease-in-out cursor-pointer"
+                                                    buttonText="DOWNLOAD PROSPECTUS"
+                                                    redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
+                                                    form_name="Download Prospectus"
+                                                />
+                                                <Button
+                                                    variant="primary"
+                                                    href={
+                                                        applyNowButton?.url ||
+                                                        "/apply"
+                                                    }
+                                                    icon={ArrowUpRight}
+                                                    iconPosition="right"
+                                                    className="!w-fit text-[12px] md:!text-[13px] !rounded-[2px] !h-[42px] font-poppins whitespace-nowrap !px-3 lg:!px-4"
+                                                >
+                                                    APPLY NOW
+                                                </Button>
+                                            </div>
                                         </div>
 
-                                        <div className="col-span-4 px-6 flex justify-center items-stretch">
-                                            <div className="bg-[#091926] rounded-[4px] p-8 w-full max-w-[440px] h-full flex items-center justify-center">
+                                        <div className="col-span-4 px-6 flex justify-center">
+                                            <div className="bg-[#091926] rounded-[4px] p-8 w-full max-w-[380px] h-[379px] flex items-center justify-center">
                                                 <div className="w-full flex flex-col items-center justify-center gap-8">
                                                     {placementMenu?.placementcounter.map(
                                                         (counter, idx) => (
@@ -669,35 +796,37 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             </div>
                                         </div>
 
-                                        {/* Right Column: Image & Actions */}
-                                        <div className="col-span-5 pl-6 space-y-6 flex flex-col justify-between h-full">
-                                            <div className="relative group w-full max-w-[440px] h-[440px] mx-auto">
-                                                {/* Background Shade Image */}
-                                                <div className="absolute -inset-10 z-0 pointer-events-none flex items-center justify-center">
+                                        {/* Right Column: Carousel */}
+                                        <div className="col-span-4 pl-2 lg:pl-4 flex flex-col justify-center -mt-8 xl:-mt-10">
+                                            <div className="relative group w-full max-w-[420px] h-[410px] mx-auto">
+                                                {/* White Ambient Shade behind Student Card */}
+                                                <div className="absolute -inset-8 sm:-inset-10 translate-y-6 z-0 pointer-events-none flex items-center justify-center">
                                                     <Image
-                                                        src="/images/home/placements/shade.png"
+                                                        src="/images/home/placements/shade.webp"
                                                         alt=""
                                                         fill
-                                                        className="w-full h-full object-contain opacity-90 scale-125"
+                                                        className="w-full h-full object-contain scale-125"
                                                         priority
                                                     />
                                                 </div>
 
-                                                <div className="relative z-10 w-full h-full">
+                                                <div className="relative z-10 w-full h-[410px] rounded-[2px] overflow-hidden">
                                                     <Carousel
                                                         className="h-full w-full"
                                                         options={{ loop: true }}
+                                                        fade={true}
                                                         autoplay={true}
+                                                        autoplayDelay={3500}
                                                         showArrows={false}
                                                         showDots={false}
-                                                        containerClassName="h-full w-full"
-                                                        slideClassName="relative h-[440px] w-full"
+                                                        containerClassName="h-[410px] w-full"
+                                                        slideClassName="relative h-[410px] w-full"
                                                     >
                                                         {SUCCESS_STORIES.map(
                                                             (story, idx) => (
                                                                 <div
                                                                     key={idx}
-                                                                    className="relative w-full h-[440px]"
+                                                                    className="relative w-full h-[410px] transition-opacity duration-700 flex items-center justify-center"
                                                                 >
                                                                     <Image
                                                                         src={
@@ -705,34 +834,18 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                                         }
                                                                         alt={`Placement Success ${idx + 1}`}
                                                                         fill
-                                                                        className="object-contain scale-120"
+                                                                        sizes="420px"
+                                                                        className="w-full h-full object-contain scale-110"
+                                                                        priority={
+                                                                            idx ===
+                                                                            0
+                                                                        }
                                                                     />
                                                                 </div>
                                                             )
                                                         )}
                                                     </Carousel>
                                                 </div>
-                                            </div>
-
-                                            <div className="flex w-full max-w-[440px] mx-auto gap-3">
-                                                <CommonLeadPopup
-                                                    buttonClassName="flex-[55%] border border-[#fff]/80 hover:border-white text-white font-poppins font-normal text-[12px] md:text-[14px] leading-none tracking-wide whitespace-nowrap rounded-[4px] px-2 lg:px-4 h-[46px] flex items-center justify-center uppercase transition-all duration-300 ease-in-out cursor-pointer"
-                                                    buttonText="DOWNLOAD PROSPECTUS"
-                                                    redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
-                                                    form_name="Download Prospectus"
-                                                />
-                                                <Button
-                                                    variant="primary"
-                                                    href={
-                                                        applyNowButton?.url ||
-                                                        "/apply"
-                                                    }
-                                                    icon={ArrowUpRight}
-                                                    iconPosition="right"
-                                                    className="flex-[45%] text-[11px] !rounded-[4px] md:text-[11px] !h-[46px] font-poppins whitespace-nowrap !px-2 lg:!px-4"
-                                                >
-                                                    APPLY NOW
-                                                </Button>
                                             </div>
                                         </div>
                                     </div>
@@ -744,31 +857,50 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                     {/* Research */}
                     {researchMenu && (
-                        <li className="krm-sub-menu-has-children">
-                            <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer">
+                        <li
+                            className={`krm-sub-menu-has-children ${activeMenu === "research" ? "is-active" : ""}`}
+                            onMouseEnter={() => handleMenuEnter("research")}
+                            onMouseLeave={handleMenuLeave}
+                        >
+                            <div
+                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer ${activeMenu === "research" ? "text-white" : ""}`}
+                            >
                                 <span>{researchMenu?.title}</span>
-                                <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
+                                <ChevronDown
+                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "research" ? "rotate-180 opacity-100" : ""}`}
+                                />
                             </div>
-                            <div className="absolute left-0 right-0 w-full top-full bg-[#04101A] pt-[52px] pb-10 md:pt-[60px] md:pb-12 overflow-hidden mt-[-12px] krmsubmenu-container z-50">
-                                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
+                            <div
+                                className="absolute left-0 right-0 mx-auto w-full max-w-[1440px] top-full bg-[#04101A] pt-8 pb-10 md:pt-10 md:pb-12 overflow-hidden krmsubmenu-container z-50 shadow-2xl"
+                                onMouseEnter={() => handleMenuEnter("research")}
+                                onMouseLeave={handleMenuLeave}
+                            >
+                                <div className="mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-16 relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
                                     {/* Left Column: Links */}
-                                    <div className="col-span-12 lg:col-span-3">
-                                        <div className="text-2xl font-normal font-poppins text-white mb-6">
-                                            {researchMenu?.research?.heading}
-                                        </div>
-                                        <ul className="flex flex-col gap-1">
-                                            {researchMenu?.research?.menulinks.map(
-                                                (menu) => {
-                                                    const isHighlighted =
-                                                        menu.title
-                                                            .toLowerCase()
-                                                            .includes("call") ||
-                                                        menu.title
-                                                            .toLowerCase()
-                                                            .includes(
-                                                                "admission"
-                                                            );
-                                                    return (
+                                    <div className="w-full lg:w-[25%] lg:min-w-fit flex flex-col justify-between">
+                                        <div>
+                                            <div className="text-2xl font-normal font-poppins text-white mb-6">
+                                                {
+                                                    researchMenu?.research
+                                                        ?.heading
+                                                }
+                                            </div>
+                                            <ul className="flex flex-col gap-1">
+                                                {researchMenu?.research?.menulinks
+                                                    ?.filter(
+                                                        (menu) =>
+                                                            !menu.title
+                                                                .toLowerCase()
+                                                                .includes(
+                                                                    "call"
+                                                                ) &&
+                                                            !menu.title
+                                                                .toLowerCase()
+                                                                .includes(
+                                                                    "admission"
+                                                                )
+                                                    )
+                                                    .map((menu) => (
                                                         <li key={menu.id}>
                                                             <Link
                                                                 href={
@@ -776,72 +908,47 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                                         menu.url
                                                                     ) || "#"
                                                                 }
-                                                                className={
-                                                                    isHighlighted
-                                                                        ? "font-poppins text-[#3C7ED4] hover:text-[#3C7ED4]/80 underline transition-all duration-200 text-[15px] font-normal tracking-wide block mt-6"
-                                                                        : "font-poppins text-white/70 hover:text-white transition-all duration-200 text-[15px] font-light tracking-wide block py-1"
-                                                                }
+                                                                className="font-poppins text-white/80 hover:text-white transition-all duration-200 text-[15px] font-light tracking-wide block py-1"
                                                             >
                                                                 {menu.title}
                                                             </Link>
                                                         </li>
-                                                    );
-                                                }
-                                            )}
-                                        </ul>
-                                    </div>
+                                                    ))}
 
-                                    {/* Center Column: Stats */}
-                                    <div className="col-span-12 lg:col-span-4">
-                                        <div className="bg-[#0b1c28]/45 border border-white/5 rounded-sm p-4 flex flex-col justify-center gap-3 h-full shadow-xl">
-                                            {researchMenu?.researchcounter?.map(
-                                                (counter, idx) => (
-                                                    <React.Fragment
-                                                        key={counter.id}
-                                                    >
-                                                        {idx > 0 && (
-                                                            <div className="h-px w-[80%] bg-white/10 mx-auto my-2" />
-                                                        )}
-                                                        <div className="text-center">
-                                                            <p className="text-[34px] font-poppins font-normal text-white mb-1">
-                                                                {
-                                                                    counter.countertext
+                                                {researchMenu?.research?.menulinks
+                                                    ?.filter(
+                                                        (menu) =>
+                                                            menu.title
+                                                                .toLowerCase()
+                                                                .includes(
+                                                                    "call"
+                                                                ) ||
+                                                            menu.title
+                                                                .toLowerCase()
+                                                                .includes(
+                                                                    "admission"
+                                                                )
+                                                    )
+                                                    .map((menu) => (
+                                                        <li key={menu.id}>
+                                                            <Link
+                                                                href={
+                                                                    formatInternalLink(
+                                                                        menu.url
+                                                                    ) || "#"
                                                                 }
-                                                            </p>
-                                                            <p className="text-white/70 text-[14px] leading-relaxed font-poppins font-light px-4">
-                                                                {
-                                                                    counter.countercontent
-                                                                }
-                                                            </p>
-                                                        </div>
-                                                    </React.Fragment>
-                                                )
-                                            )}
-                                        </div>
-                                    </div>
-
-                                    {/* Right Column: Image & Actions */}
-                                    <div className="col-span-12 lg:col-span-5 flex flex-col justify-between">
-                                        <div className="relative group mb-6 rounded-sm overflow-hidden border border-white/10 shadow-lg">
-                                            {/* <Image
-                        src={researchMenu?.backgroundimage?.url ? `${STRAPI_URL}${researchMenu.backgroundimage.url}` : "/menu-4.webp"}
-                        alt="Research Highlight"
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 400px"
-                        className="object-contain transition-transform duration-1000 group-hover:scale-105 opacity-90"
-                      /> */}
-                                            <Image
-                                                src="/modules/header/research/research-lab.png"
-                                                alt="Research Highlight"
-                                                width={3098}
-                                                height={2066}
-                                                className="w-full h-auto transition-transform duration-1000 group-hover:scale-105 opacity-90"
-                                            />
+                                                                className="font-poppins text-[#008CFF] hover:text-[#008CFF]/80  transition-all duration-200 text-[15px] font-normal tracking-wide block mt-4"
+                                                            >
+                                                                {menu.title}
+                                                            </Link>
+                                                        </li>
+                                                    ))}
+                                            </ul>
                                         </div>
 
-                                        <div className="flex w-full gap-4 mt-6">
+                                        <div className="flex flex-wrap items-center gap-3 mt-6">
                                             <CommonLeadPopup
-                                                buttonClassName="group flex-[3] border border-white/20 hover:border-white/40 bg-transparent hover:bg-white/5 text-white font-poppins font-normal py-3 px-5 rounded-[3px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center uppercase cursor-pointer"
+                                                buttonClassName="group w-fit border border-white/90 hover:border-white bg-transparent hover:bg-white/5 text-white/90 hover:text-white font-poppins font-normal py-3 px-4 rounded-[2px] text-[12px] md:text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center uppercase cursor-pointer whitespace-nowrap"
                                                 buttonText={
                                                     <div className="flex items-center justify-center gap-1.5">
                                                         <span>
@@ -861,7 +968,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                     applyNowButton?.url ||
                                                     "/apply"
                                                 }
-                                                className="group flex-[2] bg-[#cb000d] hover:bg-[#cb000d]/90 text-white font-poppins font-normal py-3 px-5 rounded-[3px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center shadow-lg uppercase"
+                                                className="group w-fit bg-[#cb000d] hover:bg-[#cb000d]/90 text-white font-poppins font-normal py-3 px-4 rounded-[2px] text-[12px] md:text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center shadow-lg uppercase whitespace-nowrap"
                                             >
                                                 <span>APPLY NOW</span>
                                                 <ArrowUpRight
@@ -869,6 +976,48 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                     className="transition-transform duration-300 ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                                 />
                                             </Link>
+                                        </div>
+                                    </div>
+
+                                    {/* Center Column: Stats */}
+                                    <div className="w-full lg:w-[25%]">
+                                        <div className="bg-[#091926] rounded-[2px] p-4 flex flex-col justify-center gap-3 h-full">
+                                            {researchMenu?.researchcounter?.map(
+                                                (counter, idx) => (
+                                                    <React.Fragment
+                                                        key={counter.id}
+                                                    >
+                                                        {idx > 0 && (
+                                                            <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+                                                        )}
+                                                        <div className="text-center">
+                                                            <p className="text-[34px] font-poppins font-normal text-white mb-1">
+                                                                {
+                                                                    counter.countertext
+                                                                }
+                                                            </p>
+                                                            <p className="text-white/80 text-[14px] leading-relaxed font-poppins font-light px-4">
+                                                                {
+                                                                    counter.countercontent
+                                                                }
+                                                            </p>
+                                                        </div>
+                                                    </React.Fragment>
+                                                )
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    {/* Right Column: Image */}
+                                    <div className="w-full lg:w-[40%] h-full">
+                                        <div className="relative group rounded-[2px] overflow-hidden w-full h-full min-h-[360px]">
+                                            <Image
+                                                src="/modules/header/research/research-lab.png"
+                                                alt="Research Highlight"
+                                                fill
+                                                sizes="(max-width: 1024px) 100vw, 450px"
+                                                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-90"
+                                            />
                                         </div>
                                     </div>
                                 </div>
@@ -880,7 +1029,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     {sustainabilityLinks &&
                         sustainabilityLinks.__component ===
                             "menu.menu-links" && (
-                            <li>
+                            <li onMouseEnter={() => handleMenuEnter("")}>
                                 <Link
                                     className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] ${
                                         sustainabilityLinks?.menuclass || ""
@@ -896,13 +1045,27 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                     {/* Life at KRMU */}
                     {lifeatkrmuMenu && (
-                        <li className="krm-sub-menu-has-children">
-                            <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px]  min-h-[64px] cursor-pointer">
+                        <li
+                            className={`krm-sub-menu-has-children ${activeMenu === "lifeatkrmu" ? "is-active" : ""}`}
+                            onMouseEnter={() => handleMenuEnter("lifeatkrmu")}
+                            onMouseLeave={handleMenuLeave}
+                        >
+                            <div
+                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px]  min-h-[64px] cursor-pointer ${activeMenu === "lifeatkrmu" ? "text-white" : ""}`}
+                            >
                                 <span>{lifeatkrmuMenu?.title}</span>
-                                <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
+                                <ChevronDown
+                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "lifeatkrmu" ? "rotate-180 opacity-100" : ""}`}
+                                />
                             </div>
-                            <div className="absolute left-0 right-0 w-full top-full bg-[#04101A] pt-[52px] pb-10 md:pt-[60px] md:pb-12 overflow-hidden mt-[-12px] krmsubmenu-container z-50">
-                                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-8 lg:gap-12">
+                            <div
+                                className="absolute left-0 right-0 mx-auto w-full max-w-[1440px] top-full bg-[#04101A] pt-8 pb-10 md:pt-10 md:pb-12 overflow-hidden krmsubmenu-container z-50 shadow-2xl"
+                                onMouseEnter={() =>
+                                    handleMenuEnter("lifeatkrmu")
+                                }
+                                onMouseLeave={handleMenuLeave}
+                            >
+                                <div className="mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-8 lg:gap-12">
                                     {/* Left Column: Link Lists */}
                                     <div className="col-span-6 flex flex-col gap-6">
                                         <div className="text-2xl font-normal font-poppins text-white leading-tight">
@@ -1004,7 +1167,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                                     {/* Right Column: Featured Image */}
                                     <div className="col-span-6 pl-4 flex flex-col justify-center h-full">
-                                        <div className="relative rounded-[4px] overflow-hidden w-full aspect-[16/10]">
+                                        <div className="relative rounded-[2px] overflow-hidden w-full aspect-[16/10]">
                                             <Image
                                                 src="/modules/header/campus/campus.png"
                                                 alt="Campus Life"
@@ -1022,13 +1185,25 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                     {/* About Us */}
                     {aboutusMenu && (
-                        <li className="krm-sub-menu-has-children">
-                            <div className="font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer">
+                        <li
+                            className={`krm-sub-menu-has-children ${activeMenu === "aboutus" ? "is-active" : ""}`}
+                            onMouseEnter={() => handleMenuEnter("aboutus")}
+                            onMouseLeave={handleMenuLeave}
+                        >
+                            <div
+                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer ${activeMenu === "aboutus" ? "text-white" : ""}`}
+                            >
                                 <span>{aboutusMenu?.title}</span>
-                                <ChevronDown className="w-4 h-4 opacity-70 transition-transform duration-300" />
+                                <ChevronDown
+                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "aboutus" ? "rotate-180 opacity-100" : ""}`}
+                                />
                             </div>
-                            <div className="absolute left-0 right-0 w-full top-full bg-[#04101A] pt-[52px] pb-10 md:pt-[60px] md:pb-12 overflow-hidden mt-[-12px] krmsubmenu-container z-50">
-                                <div className="mx-auto max-w-screen-2xl px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-8 lg:gap-12">
+                            <div
+                                className="absolute left-0 right-0 mx-auto w-full max-w-[1440px] top-full bg-[#04101A] pt-8 pb-10 md:pt-10 md:pb-12 overflow-hidden krmsubmenu-container z-50 shadow-2xl"
+                                onMouseEnter={() => handleMenuEnter("aboutus")}
+                                onMouseLeave={handleMenuLeave}
+                            >
+                                <div className="mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-8 lg:gap-12">
                                     {/* Left Column: Single column stack (Image -> Text -> Buttons -> Stats) */}
                                     <div className="col-span-4 flex flex-col gap-4">
                                         <div className="text-[28px] font-normal font-poppins text-white leading-tight">
@@ -1036,7 +1211,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         </div>
 
                                         {/* Image */}
-                                        <div className="relative w-full rounded-[4px] overflow-hidden border border-white/10 group aspect-video">
+                                        <div className="relative w-full rounded-[2px] overflow-hidden group aspect-video">
                                             <Image
                                                 src="/images/header/menu/about-us/about-menu.jpg"
                                                 alt="About KRMU"
@@ -1063,7 +1238,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         </div>
 
                                         {/* Content Paragraph */}
-                                        <p className="text-white/90 text-[14px] font-light font-poppins text-left">
+                                        <p className="text-white text-[13.5px] font-light font-poppins text-left">
                                             Welcome to a world where education
                                             meets excitement! At K.R. Mangalam
                                             University (KRMU), we believe that
@@ -1074,15 +1249,15 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         </p>
 
                                         {/* Action Buttons */}
-                                        <div className="flex gap-3 mt-auto">
+                                        <div className="flex flex-wrap items-center gap-3 mt-auto">
                                             <CommonLeadPopup
-                                                buttonClassName="flex-[1.3] border border-[#737373] hover:border-white text-white text-[13px] md:text-[13.5px] h-[46px] font-poppins font-medium whitespace-nowrap rounded-[4px] px-3.5 flex items-center justify-center uppercase transition-all cursor-pointer"
+                                                buttonClassName="w-fit border border-white/90 hover:border-white text-white text-[13px] md:text-[13.5px] h-[42px] font-poppins font-medium whitespace-nowrap rounded-[2px] px-4 flex items-center justify-center uppercase transition-all cursor-pointer"
                                                 buttonText="DOWNLOAD PROSPECTUS"
                                                 redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
                                                 form_name="Download Prospectus"
                                             />
                                             <CommonLeadPopup
-                                                buttonClassName="flex-1 bg-[#CB000D] hover:bg-[#a3000a] text-white text-[13px] md:text-[13.5px] h-[46px] font-poppins font-medium whitespace-nowrap rounded-[4px] px-4 flex items-center justify-center uppercase transition-all cursor-pointer gap-1.5"
+                                                buttonClassName="w-fit bg-[#CB000D] hover:bg-[#a3000a] text-white text-[13px] md:text-[13.5px] h-[42px] font-poppins font-medium whitespace-nowrap rounded-[2px] px-4 flex items-center justify-center uppercase transition-all cursor-pointer gap-1.5"
                                                 buttonText={
                                                     <>
                                                         <span>APPLY NOW</span>
@@ -1116,7 +1291,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                                         menu.url ||
                                                                         "#"
                                                                     }
-                                                                    className="text-white/70 hover:text-white transition-colors text-[15px] font-light font-poppins"
+                                                                    className="text-white/80 hover:text-white transition-colors text-[15px] font-light font-poppins"
                                                                     target={
                                                                         menu.url?.startsWith(
                                                                             "http"
@@ -1156,7 +1331,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                                         menu.url ||
                                                                         "#"
                                                                     }
-                                                                    className="text-white/70 hover:text-white transition-colors text-[15px] font-light font-poppins"
+                                                                    className="text-white/80 hover:text-white transition-colors text-[15px] font-light font-poppins"
                                                                     target={
                                                                         menu.url?.startsWith(
                                                                             "http"
@@ -1203,7 +1378,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                                             menu.url ||
                                                                             "#"
                                                                         }
-                                                                        className="text-white/70 hover:text-white transition-colors text-[15px] font-light font-poppins"
+                                                                        className="text-white/80 hover:text-white transition-colors text-[15px] font-light font-poppins"
                                                                         target={
                                                                             menu.url?.startsWith(
                                                                                 "http"
@@ -1243,7 +1418,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                                     href={
                                                                         menu.url
                                                                     }
-                                                                    className="text-white/70 hover:text-white transition-colors text-[15px] font-light font-poppins"
+                                                                    className="text-white/80 hover:text-white transition-colors text-[15px] font-light font-poppins"
                                                                     target={
                                                                         menu.url.startsWith(
                                                                             "http"
@@ -1276,7 +1451,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     {/* Careers */}
                     {careersLinks &&
                         careersLinks.__component === "menu.menu-links" && (
-                            <li>
+                            <li onMouseEnter={() => handleMenuEnter("")}>
                                 <Link
                                     className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[13px] 2xl:text-[15px] min-h-[64px] ${
                                         careersLinks?.menuclass || ""

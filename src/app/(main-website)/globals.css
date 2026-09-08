@@ -2675,17 +2675,47 @@ body:before {
     .krmsubmenu-container {
         opacity: 0;
         visibility: hidden;
-        overflow: hidden;
+        pointer-events: none;
+        transform: translateY(-4px);
+        transition:
+            opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition-delay: 150ms;
     }
 
-    .krm-sub-menu-has-children:hover .krmsubmenu-container {
-        transition: calc(300 * 1ms) cubic-bezier(0.42, 0.01, 0.58, 1);
+    /* Invisible hover bridge between navbar and mega menu */
+    .krmsubmenu-container::after {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 0;
+        right: 0;
+        height: 30px;
+        background: transparent;
+        pointer-events: auto;
+        z-index: 10;
+    }
+
+    .krm-sub-menu-has-children:hover .krmsubmenu-container,
+    .krm-sub-menu-has-children.is-active .krmsubmenu-container {
         visibility: visible;
         opacity: 1;
         z-index: 999999998;
         pointer-events: auto;
         transform: translateY(0);
-        display: flex;
+        transition-delay: 0s;
+    }
+
+    .krm-sub-menu-has-children:hover > div:first-child,
+    .krm-sub-menu-has-children.is-active > div:first-child {
+        color: #ffffff;
+    }
+
+    .krm-sub-menu-has-children:hover > div:first-child svg,
+    .krm-sub-menu-has-children.is-active > div:first-child svg {
+        transform: rotate(180deg);
+        opacity: 1;
     }
 
     .nav-menu-hidden .krmsubmenu-container {
