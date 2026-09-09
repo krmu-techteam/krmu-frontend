@@ -126,6 +126,16 @@ const nextConfig: NextConfig = {
                 destination: "/about-krmu/the-university",
                 permanent: true,
             },
+            {
+                source: "/placement/overview",
+                destination: "/placement",
+                permanent: true,
+            },
+            {
+                source: "/placements",
+                destination: "/placement",
+                permanent: true,
+            },
         ];
     },
     async rewrites() {

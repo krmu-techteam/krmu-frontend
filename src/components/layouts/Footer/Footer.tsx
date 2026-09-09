@@ -313,7 +313,7 @@ const footerLinks: Record<string, FooterLink[]> = {
         { name: "Admissions", href: "/admissions" },
         { name: "Fees", href: "/fee-structure" },
         { name: "Scholarships", href: "/admission/scholarship" },
-        { name: "Placements", href: "/placement/overview" },
+        { name: "Placements", href: "/placement" },
         { name: "Contact Us", href: "/contact-us" },
     ],
     aboutKRMU: [
