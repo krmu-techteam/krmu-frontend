@@ -12,6 +12,15 @@
   --color-university-red: var(--university-red);
   --color-university-blue: var(--university-blue);
   --font-host: var(--font-host-grotesk);
+  --font-poppins: var(--font-poppins), "Poppins", sans-serif;
+}
+
+@utility font-poppins {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), "Poppins", sans-serif !important;
 }
 
 /* Custom utility class */

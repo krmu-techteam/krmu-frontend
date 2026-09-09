@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Newsreader } from "next/font/google";
+import { Montserrat, Poppins } from "next/font/google";
 import "./(main-website)/globals.css";
 import Script from "next/script";
 
@@ -8,10 +8,11 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
-
-const newsreader = Newsreader({
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -53,7 +54,7 @@ export default function RootLayout({
         `}
         </Script> */}
       </head>
-      <body className={`${montserrat.className} antialiased`}>
+      <body className={`${montserrat.className} ${poppins.variable} antialiased`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MKXDVSJ9"
