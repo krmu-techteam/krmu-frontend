@@ -29,11 +29,12 @@ const defaultCinematicConfig: Partial<HeroConfig> = {
     titleMaxWidth: "lg:max-w-[80%] 2xl:max-w-full",
     subtitleMaxWidth: "lg:max-w-[80%] 2xl:max-w-full",
     subtitleSize: "",
-    titleSize: "text-[30px] md:text-[30px] xl:text-[42px] 2xl:text-[52px]",
+    titleSize:
+        "text-[24px] md:text-[30px] lg:text-3xl xl:text-[42px] 2xl:text-5xl",
     descSize: "2xl:text-[17px]",
     contentMaxWidth: "2xl:max-w-lg",
     highlightClass:
-        "block text-white text-[24px] md:text-[30px] lg:text-[24px] xl:text-[30px] 2xl:text-[35px] mt-2 md:mt-3 leading-[1.3]",
+        "block text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[26px] 2xl:text-[30px] mt-2 md:mt-3 leading-[1.3]",
 };
 
 export const HERO_CONFIGS: Record<string, HeroConfig> = {
@@ -49,7 +50,7 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
         overlayWidth: "45%",
         subtitleSize: "sm:text-base mb-1",
         titleSize:
-            "text-[30px] md:text-[30px] lg:text-3xl xl:text-[42px] 2xl:text-[52px]",
+            "text-[24px] md:text-[30px] lg:text-3xl xl:text-[42px] 2xl:text-5xl",
         descSize: "xl:text-[15px] 2xl:text-lg ",
         contentMaxWidth: "2xl:max-w-lg",
     },
@@ -58,7 +59,7 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
         bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_cse_82febea33b.jpg",
         overlayWidth: "50%",
         titleSize:
-            "text-[30px] md:text-[30px] lg:text-3xl xl:text-[42px] 2xl:text-5xl",
+            "text-[24px] md:text-[30px] lg:text-3xl xl:text-[42px] 2xl:text-5xl",
         mobileBgPosition: "60% top",
     } as HeroConfig,
 

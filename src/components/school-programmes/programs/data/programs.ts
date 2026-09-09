@@ -33,7 +33,7 @@ const defaultCinematicConfig: Partial<HeroConfig> = {
     descSize: "2xl:text-lg",
     contentMaxWidth: "2xl:max-w-lg",
     highlightClass:
-        "block text-white text-[18px] xl:text-[30px] 2xl:text-[35px] mt-2 md:mt-3 leading-[1.26]",
+        "block text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[26px] 2xl:text-[30px] mt-2 md:mt-3 leading-[1.26]",
 };
 
 export const heroConfigs: Record<string, HeroConfig> = {

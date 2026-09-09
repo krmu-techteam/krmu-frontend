@@ -303,10 +303,10 @@ body:before {
     .heroBannerForm__form {
         background: #fff;
         width: 100%;
-        border-radius: 10px;
-        padding-top: 40px;
-
-        height: 583px;
+        border-radius: 2px !important;
+        padding-top: 20px;
+        padding-bottom: 12px;
+        height: auto;
         position: relative;
     }
 
@@ -3618,7 +3618,7 @@ body:before {
         padding: 13px 30px;
         line-height: 1;
         border: 1px solid #cb000d;
-        border-radius: 4px !important;
+        border-radius: 2px !important;
         outline: none;
         font-size: 18px;
         display: flex;
@@ -3636,7 +3636,7 @@ body:before {
         padding: 13px 30px;
         line-height: 1;
         border: 1px solid #cb000d;
-        border-radius: 4px !important;
+        border-radius: 2px !important;
         outline: none;
         font-size: 18px;
         display: flex;

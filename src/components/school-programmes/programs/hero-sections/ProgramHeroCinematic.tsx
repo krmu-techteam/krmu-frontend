@@ -140,7 +140,7 @@ const ProgramHeroCinematic = ({
                     </div>
 
                     <div className="hidden lg:flex w-full lg:w-[40%] xl:w-2/5 xl:pl-20 justify-center lg:justify-end">
-                        <div className="heroBannerForm__form w-full max-w-md mx-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
+                        <div className="heroBannerForm__form w-full max-w-md mx-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[4px] !pt-5 !pb-3 !h-auto overflow-hidden">
                             <div className="heroBannerForm-header">
                                 <div
                                     className="mb-0 font-bold !text-[28px] lg:text-lg inline-block w-full text-center"
@@ -166,7 +166,7 @@ const ProgramHeroCinematic = ({
                 id="apply-form-mobile"
                 className="lg:hidden w-full bg-white pb-0 px-0"
             >
-                <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.1)] rounded-none lg:rounded-md overflow-hidden">
+                <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.1)] rounded-[4px] !pt-4 !pb-3 !h-auto overflow-hidden">
                     <div className="heroBannerForm-header">
                         <div
                             className="mb-0 text-center font-bold text-[22px] lg:text-lg inline-block w-full"

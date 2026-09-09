@@ -18,7 +18,7 @@ const CinematicHeroContent = ({
                     {heroSection?.subtitle}
                 </h3>
                 <h1
-                    className={`text-white !text-[24px] md:text-[30px] ${config.titleSize || "lg:text-3xl xl:text-[42px] 2xl:text-5xl"} ${config.titleMaxWidth || ""} font-bold font-serif md:font-bold mb-0 lg:mb-3 leading-[1.25] md:leading-[1.25] lg:leading-[1.1] antialiased`}
+                    className={`text-white text-[24px] md:text-[30px] lg:text-3xl xl:text-[42px] 2xl:text-5xl ${config.titleMaxWidth || ""} font-bold font-serif md:font-bold mb-0 lg:mb-3 leading-[1.25] md:leading-[1.25] lg:leading-[1.1] antialiased`}
                 >
                     {title}{" "}
                     <span
@@ -37,7 +37,7 @@ const CinematicHeroContent = ({
                         {formId && (
                             <NpfPopup
                                 formId={formId}
-                                btnClass={`progherobtn px-6 py-2 lg:py-2 lg:px-8 md:py-[6px] md:px-6 font-poppins text-sm md:text-[14px] lg:text-[16px] ${heroSection.herobtn.buttonclass || ""} rounded-[4px] transition-all`}
+                                btnClass={`progherobtn px-6 py-2 lg:py-2 lg:px-8 md:py-[6px] md:px-6 font-poppins text-sm md:text-[14px] lg:text-[16px] ${heroSection.herobtn.buttonclass || ""} rounded-[2px] transition-all`}
                                 btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
                                 showIcon={false}
                             />
