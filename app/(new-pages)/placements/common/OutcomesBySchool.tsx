@@ -1,5 +1,5 @@
-import { outcomesSchools } from "../main/constant";
-import SchoolOutcomeCard from "./SchoolOutcomeCard";
+import { outcomesSchools } from "../constant";
+import SchoolOutcomeCard from "./cards/SchoolOutcomeCard";
 
 import {
   Carousel,

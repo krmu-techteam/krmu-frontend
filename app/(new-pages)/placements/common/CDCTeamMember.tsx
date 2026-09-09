@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CDCTeamMemberData } from "../main/constant";
+import { CDCTeamMemberData } from "../constant";
 
 
 interface CDCTeamMemberProps {

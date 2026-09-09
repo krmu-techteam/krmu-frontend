@@ -5,7 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { interviewSuccessStories } from "../main/constant";
+import { interviewSuccessStories } from "../constant";
 import InterviewSuccessStoryCard from "./InterviewSuccessStoryCard";
 
 const InterviewSuccessStories = () => {

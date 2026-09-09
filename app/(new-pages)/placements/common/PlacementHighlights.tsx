@@ -1,4 +1,4 @@
-import { stats } from "../main/constant";
+import { stats } from "../constant";
 
 const PlacementHighlights = () => {
   return (

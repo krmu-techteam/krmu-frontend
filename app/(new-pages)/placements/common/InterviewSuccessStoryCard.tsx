@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { InterviewSuccessStory } from "../main/constant";
+import { InterviewSuccessStory } from "../constant";
 
 interface InterviewSuccessStoryCardProps {
   story: InterviewSuccessStory;

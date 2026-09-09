@@ -26,26 +26,74 @@ export const outcomesSchools = [
   {
     code: "SOET",
     schoolName: "School of Engineering & Technology",
-    placementRate: "85%",
+    placementRate: 85,
     medianCtc: "9.20 LPA",
   },
   {
     code: "SOMC",
     schoolName: "School of Management & Commerce",
-    placementRate: "95%",
+    placementRate: 95,
     medianCtc: "8.50 LPA",
   },
   {
     code: "SOLS",
     schoolName: "School of Legal Studies",
-    placementRate: "91%",
+    placementRate: 91,
     medianCtc: "5.50 LPA",
   },
   {
-    code: "SOLS",
-    schoolName: "School of Legal Studies",
-    placementRate: "91%",
+    code: "SOLA",
+    schoolName: "School of Liberal Arts",
+    placementRate: 85,
+    medianCtc: "7.10 LPA",
+  },
+  {
+    code: "SOED",
+    schoolName: "School of Education",
+    placementRate: 84,
     medianCtc: "5.50 LPA",
+  },
+  {
+    code: "SBAS",
+    schoolName: "School of Basic & Applied Sciences",
+    placementRate: 82,
+    medianCtc: "6.20 LPA",
+  },
+  {
+    code: "SEMCE",
+    schoolName: "School of Emerging Media and Creator Economy",
+    placementRate: 94,
+    medianCtc: "6.70 LPA",
+  },
+  {
+    code: "SMAS",
+    schoolName: "School of Medical & Allied Sciences",
+    placementRate: 85,
+    medianCtc: "5.20 LPA",
+  },
+  {
+    code: "SOAD",
+    schoolName: "School of Architecture & Design",
+    placementRate: 86,
+    medianCtc: "6.30 LPA",
+  },
+  {
+    code: "SOAS",
+    schoolName: "School of Agricultural Sciences",
+    placementRate: 86,
+    medianCtc: "5.40 LPA",
+  },
+  {
+    code: "SOHMCT",
+    schoolName: "School of Hotel Management & Catering Technology",
+    placementRate: 83,
+    medianCtc: "5.60 LPA",
+  },
+  {
+    code: "SPRS",
+    schoolName: "School of Physiotherapy and Rehabilitation Sciences",
+    placementRate: 84,
+    medianCtc: "5.90 LPA",
   },
 ];
 
@@ -196,7 +244,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     designation: "Director | Career Development Centre",
     email: "director.cdc@krmangalam.edu.in",
   },
-    {
+  {
     id: 1,
     image: "/placements/main/rishabh.png",
     imageAlt: "Dr. Vibha Thakur",
@@ -204,7 +252,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     designation: "Director | Career Development Centre",
     email: "director.cdc@krmangalam.edu.in",
   },
-    {
+  {
     id: 1,
     image: "/placements/main/rishabh.png",
     imageAlt: "Dr. Vibha Thakur",
@@ -212,7 +260,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     designation: "Director | Career Development Centre",
     email: "director.cdc@krmangalam.edu.in",
   },
-    {
+  {
     id: 1,
     image: "/placements/main/rishabh.png",
     imageAlt: "Dr. Vibha Thakur",
@@ -220,7 +268,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     designation: "Director | Career Development Centre",
     email: "director.cdc@krmangalam.edu.in",
   },
-    {
+  {
     id: 1,
     image: "/placements/main/rishabh.png",
     imageAlt: "Dr. Vibha Thakur",
@@ -228,7 +276,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     designation: "Director | Career Development Centre",
     email: "director.cdc@krmangalam.edu.in",
   },
-    {
+  {
     id: 1,
     image: "/placements/main/rishabh.png",
     imageAlt: "Dr. Vibha Thakur",
@@ -236,32 +284,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     designation: "Director | Career Development Centre",
     email: "director.cdc@krmangalam.edu.in",
   },
-    {
-    id: 1,
-    image: "/placements/main/rishabh.png",
-    imageAlt: "Dr. Vibha Thakur",
-    name: "Dr. Vibha Thakur",
-    designation: "Director | Career Development Centre",
-    email: "director.cdc@krmangalam.edu.in",
-  },
-
-    {
-    id: 1,
-    image: "/placements/main/rishabh.png",
-    imageAlt: "Dr. Vibha Thakur",
-    name: "Dr. Vibha Thakur",
-    designation: "Director | Career Development Centre",
-    email: "director.cdc@krmangalam.edu.in",
-  },
-    {
-    id: 1,
-    image: "/placements/main/rishabh.png",
-    imageAlt: "Dr. Vibha Thakur",
-    name: "Dr. Vibha Thakur",
-    designation: "Director | Career Development Centre",
-    email: "director.cdc@krmangalam.edu.in",
-  },
-    {
+  {
     id: 1,
     image: "/placements/main/rishabh.png",
     imageAlt: "Dr. Vibha Thakur",
@@ -270,4 +293,28 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     email: "director.cdc@krmangalam.edu.in",
   },
 
+  {
+    id: 1,
+    image: "/placements/main/rishabh.png",
+    imageAlt: "Dr. Vibha Thakur",
+    name: "Dr. Vibha Thakur",
+    designation: "Director | Career Development Centre",
+    email: "director.cdc@krmangalam.edu.in",
+  },
+  {
+    id: 1,
+    image: "/placements/main/rishabh.png",
+    imageAlt: "Dr. Vibha Thakur",
+    name: "Dr. Vibha Thakur",
+    designation: "Director | Career Development Centre",
+    email: "director.cdc@krmangalam.edu.in",
+  },
+  {
+    id: 1,
+    image: "/placements/main/rishabh.png",
+    imageAlt: "Dr. Vibha Thakur",
+    name: "Dr. Vibha Thakur",
+    designation: "Director | Career Development Centre",
+    email: "director.cdc@krmangalam.edu.in",
+  },
 ];

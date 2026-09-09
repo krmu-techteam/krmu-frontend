@@ -10,7 +10,10 @@ import YourPathsuccess from "./components/YourPathsuccess";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import { createBreadcrumbSchema, createPlacementOverviewSchema } from "@/lib/api/common";
+import {
+  createBreadcrumbSchema,
+  createPlacementOverviewSchema,
+} from "@/lib/api/common";
 import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
