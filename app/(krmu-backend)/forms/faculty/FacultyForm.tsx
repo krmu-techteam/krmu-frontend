@@ -19,7 +19,7 @@ export default function FacultyForm() {
       name: "",
       // sort_order: "",
       qualifications: "",
-      designation: "",
+      designation: "", 
       emails: "",
       linkedin_profiles: "",
       interest_areas: "",

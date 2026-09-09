@@ -70,7 +70,7 @@ export const createFacultySchema = z.object({
     .optional()
     .or(z.literal("")),
 
-  conferences: z
+  conferences: z 
     .string()
     .max(5000, "Conferences must not exceed 5000 characters")
     .optional()
