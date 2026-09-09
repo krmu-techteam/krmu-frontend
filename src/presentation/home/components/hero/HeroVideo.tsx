@@ -25,8 +25,7 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
                 loop
                 muted
                 playsInline
-                preload="metadata"
-                poster="/modules/home/hero/hero-poster.webp"
+                preload="auto"
                 className="absolute top-0 left-0 w-full h-full object-contain scale-[1.07] lg:scale-100 lg:object-fill lg:scale-y-[1.0634] z-0"
             >
                 <source src={videoSrc} type="video/mp4" />

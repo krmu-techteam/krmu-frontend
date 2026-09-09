@@ -52,7 +52,7 @@ export function ResearchSection() {
 
                     {/* Right Column - Floating Info Card */}
                     <div className="w-full lg:w-[47%] lg:-ml-[5%] lg:mt-16 xl:absolute xl:left-[728px] xl:top-[192px] xl:w-[585px] xl:h-[557px] xl:m-0 z-20">
-                        <div className="bg-brand-navy border-12 border-brand-dark p-8 xl:p-12 rounded-[4px] h-full flex flex-col justify-center items-center text-center">
+                        <div className="bg-brand-navy border-12 border-brand-dark p-4 md:p-8 xl:p-12 rounded-[4px] h-full flex flex-col justify-center items-center text-center">
                             <p className="text-center text-white/90 text-lg tracking-wide font-normal mb-4">
                                 Shaping Futures, Embracing Innovation
                             </p>
@@ -60,9 +60,9 @@ export function ResearchSection() {
                                 title="Engage in Leading-Edge Research"
                                 className="leading-tight text-center mb-0"
                             />
-                            <div className="mx-auto mt-3 mb-4 md:mb-8 h-2 w-10 rounded-md bg-[#5EA0D5] shrink-0 block"></div>
+                            <div className="mx-auto mt-3 mb-4 md:mb-8 h-2 w-10 rounded-[4px] bg-[#5EA0D5] shrink-0 block"></div>
 
-                            <p className="text-white/90 text-base md:text-md text-center mb-6 font-light">
+                            <p className="text-white/90 text-[14px] md:text-md text-center mb-6 font-light">
                                 K.R. Mangalam University thrives on innovation,
                                 bringing together a dedicated faculty and over
                                 5,000 students across various disciplines. Our
