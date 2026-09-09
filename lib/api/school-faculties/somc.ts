@@ -330,7 +330,7 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media: 73436,
     acf: {
       "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant  Professor",
+      staff_designation: "Assistant Professor (Senior Scale) ",
       schools: [1126],
     },
     featured_media_url:
