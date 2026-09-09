@@ -43,12 +43,12 @@ const ProgrammeScopeSection = async ({
             id="about-program"
             className={`bg-[linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2)),linear-gradient(180deg,#061623_0%,#001732_100%)] text-white py-8 md:py-12 xl:py-20 font-poppins scroll-mt-28`}
         >
-            <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16 flex flex-col">
+            <div className="max-w-[1530px] mx-auto w-full px-4 md:px-8 xl:px-16 flex flex-col">
                 {/* Top Section: Image (Left) & Heading/Content (Right) */}
                 <div className="flex flex-col lg:flex-row  gap-8 lg:gap-12 items-center">
                     {/* Left Column: Image */}
 
-                    <div className="sm:max-w-full lg:max-w-[45%]   relative rounded-[15px] overflow-hidden">
+                    <div className="sm:max-w-full lg:max-w-[45%]   relative rounded-[8px] lg:rounded-[15px] overflow-hidden">
                         <Image
                             src={data.image}
                             width={1024}

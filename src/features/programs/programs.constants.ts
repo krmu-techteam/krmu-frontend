@@ -29,11 +29,11 @@ const defaultCinematicConfig: Partial<HeroConfig> = {
     titleMaxWidth: "lg:max-w-[80%] 2xl:max-w-full",
     subtitleMaxWidth: "lg:max-w-[80%] 2xl:max-w-full",
     subtitleSize: "",
-    titleSize: "text-[24px] md:text-[36px] xl:text-[42px] 2xl:text-[52px]",
+    titleSize: "text-[30px] md:text-[30px] xl:text-[42px] 2xl:text-[52px]",
     descSize: "2xl:text-[17px]",
     contentMaxWidth: "2xl:max-w-lg",
     highlightClass:
-        "block text-white text-[18px] md:text-[22px] lg:text-[24px] xl:text-[30px] 2xl:text-[35px] mt-2 md:mt-3 leading-[1.42]",
+        "block text-white text-[24px] md:text-[30px] lg:text-[24px] xl:text-[30px] 2xl:text-[35px] mt-2 md:mt-3 leading-[1.3]",
 };
 
 export const HERO_CONFIGS: Record<string, HeroConfig> = {
@@ -48,7 +48,8 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
         overlayOpacity: "0.85",
         overlayWidth: "45%",
         subtitleSize: "sm:text-base mb-1",
-        titleSize: "text-[24px] lg:text-3xl xl:text-[42px] 2xl:text-[52px]",
+        titleSize:
+            "text-[30px] md:text-[30px] lg:text-3xl xl:text-[42px] 2xl:text-[52px]",
         descSize: "xl:text-[15px] 2xl:text-lg ",
         contentMaxWidth: "2xl:max-w-lg",
     },
@@ -56,7 +57,8 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
         ...defaultCinematicConfig,
         bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_cse_82febea33b.jpg",
         overlayWidth: "50%",
-        titleSize: "lg:text-3xl xl:text-[42px] 2xl:text-5xl",
+        titleSize:
+            "text-[30px] md:text-[30px] lg:text-3xl xl:text-[42px] 2xl:text-5xl",
         mobileBgPosition: "60% top",
     } as HeroConfig,
 
@@ -409,6 +411,26 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
     "ba-hons-political-science": {
         ...defaultCinematicConfig,
         bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ba_hons_political_science_21b55797c1.jpg",
+        bgPosition: "70% top",
+    } as HeroConfig,
+    "bsc-hons-data-science": {
+        ...defaultCinematicConfig,
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_data_science_1e64ebac01.png",
+        bgPosition: "70% top",
+    } as HeroConfig,
+    "bba-hons-hons-with-research-analytics": {
+        ...defaultCinematicConfig,
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_hons_with_research_analytics_ce846fabe7.png",
+        bgPosition: "70% top",
+    } as HeroConfig,
+    "bba-semester-abroad-uea-uk": {
+        ...defaultCinematicConfig,
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_hons_semester_abroad_uea_uk_742928d2ff.jpg",
+        bgPosition: "70% top",
+    } as HeroConfig,
+    "bba-hons-semester-abroad-uea-uk": {
+        ...defaultCinematicConfig,
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_semester_abroad_uea_uk_9887b4f0b6.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
 };

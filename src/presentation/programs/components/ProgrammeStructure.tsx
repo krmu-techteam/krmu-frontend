@@ -63,7 +63,7 @@ const ProgrammeStructure = ({
                 <div className="relative w-full">
                     {/* Main Content Area */}
                     <div
-                        className={` ${slug === "bachelor-of-physiotherapy-bpt" || slug === "barch-architecture" || slug === "ba-llb-hons" || slug === "bba-llb-hons" || slug === "integrated-bba-mba" || slug === "dual-degree-bsc-mscforensic-science" ? "md:max-w-[70%] lg:max-w-lg xl:max-w-2xl" : "xl:max-w-lg 2xl:max-w-xl"} flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10`}
+                        className={` ${slug === "bachelor-of-physiotherapy-bpt" || slug === "barch-architecture" || slug === "ba-llb-hons" || slug === "bba-llb-hons" || slug === "integrated-bba-mba" || slug === "dual-degree-bsc-mscforensic-science" ? "md:max-w-[70%] lg:max-w-lg xl:max-w-2xl" : "xl:max-w-lg 2xl:max-w-xl"} flex flex-col min-h-0 xl:min-h-[720px] mb-8 md:mb-12 pb-2 md:pb-8 xl:pb-0 transition-all duration-300 relative z-10`}
                     >
                         {/* Left Navigation & Content Area */}
                         {currbtn?.buttonlink && (
@@ -86,7 +86,7 @@ const ProgrammeStructure = ({
                         )}
                         <div className="flex-grow flex flex-col">
                             {/* Year Tabs */}
-                            <div className="flex w-full font-poppins overflow-x-auto no-scrollbar rounded-[4px] md:rounded-md">
+                            <div className="flex w-full font-poppins overflow-x-auto no-scrollbar rounded-[1px] md:rounded-md">
                                 {programStruct.map((year) => {
                                     const yearValue = year.year
                                         .toLowerCase()
@@ -108,7 +108,7 @@ const ProgrammeStructure = ({
                                                     );
                                                 }
                                             }}
-                                            className={`flex-1 px-4 py-4 text-sm lg:text-[16px] 2xl:text-lg font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
+                                            className={`flex-1 px-4 py-3 md:py-4 text-sm lg:text-[16px] 2xl:text-lg font-semibold  transition-all duration-300 whitespace-nowrap
                       ${
                           isYearActive
                               ? "bg-[#061623] text-white"
@@ -146,15 +146,25 @@ const ProgrammeStructure = ({
                                                 onClick={() =>
                                                     setActiveSemester(semValue)
                                                 }
-                                                className={`flex-1 px-6 py-4 text-xl font-normal text-shadow-[0.5px_0.5px_1px_black] transition-all cursor-pointer duration-300 relative whitespace-nowrap
+                                                className={`flex-1 px-6 py-3 md:py-4 text-[17px] md:text-xl font-normal  transition-all cursor-pointer duration-300 relative whitespace-nowrap
                       ${isSemActive ? "text-white" : "text-white hover:text-white"}
                     `}
                                             >
                                                 {sem.semestername}
                                                 <div
-                                                    className={`absolute bottom-0 left-0 w-full h-1 transition-all duration-300
-                        ${isSemActive ? "bg-[#061623]" : "bg-white"}
-                      `}
+                                                    className={`absolute bottom-0 left-0 w-full h-1 transition-all duration-300 ${
+                                                        !isSemActive
+                                                            ? "bg-white"
+                                                            : ""
+                                                    }`}
+                                                    style={
+                                                        isSemActive
+                                                            ? {
+                                                                  background:
+                                                                      "linear-gradient(90deg, #0055a4 0%, #CB000D 100%)",
+                                                              }
+                                                            : undefined
+                                                    }
                                                 />
                                             </button>
                                         );
@@ -273,8 +283,8 @@ const ProgrammeStructure = ({
                             </div>
 
                             {/* Action Buttons Container */}
-                            <div className="py-8 font-poppins bg-transparent min-h-[100px] flex flex-row items-center md:justify-start justify-center gap-2 md:gap-4 xl:gap-4 overflow-x-auto no-scrollbar w-full">
-                                {programStruct
+                            {(() => {
+                                const currentPdfBtns = programStruct
                                     .find(
                                         (y) =>
                                             y.year
@@ -288,42 +298,57 @@ const ProgrammeStructure = ({
                                                 .toLowerCase()
                                                 .replace(/\s+/g, "") ===
                                             activeSemester
-                                    )
-                                    ?.pdfbtns?.map((btn) => {
-                                        const text =
-                                            btn?.buttontext?.toLowerCase() ||
-                                            "";
-                                        const isDark =
-                                            text.includes("minor") ||
-                                            text.includes("handbook");
+                                    )?.pdfbtns;
 
-                                        return (
-                                            <CommonLeadPopup
-                                                key={btn?.id}
-                                                buttonText={
-                                                    <div className="flex items-center gap-1 md:gap-2 xl:gap-3">
-                                                        <Download className="w-4 h-4 md:w-5 md:h-5 hidden md:block" />
-                                                        <span className="font-semibold tracking-tight text-[11px] md:text-lg whitespace-nowrap">
-                                                            {btn?.buttontext}
-                                                        </span>
-                                                    </div>
-                                                }
-                                                buttonClassName={`px-3 h-10 md:h-12 xl:h-14 md:px-6 rounded-[2px] lg:rounded-[4px] transition-all duration-300 flex items-center justify-center w-auto
+                                if (
+                                    !currentPdfBtns ||
+                                    currentPdfBtns.length === 0
+                                ) {
+                                    return null;
+                                }
+
+                                return (
+                                    <div className="pt-4 pb-2 md:py-6 xl:py-8 font-poppins bg-transparent flex flex-row items-center md:justify-start justify-center gap-2 md:gap-4 xl:gap-4 overflow-x-auto no-scrollbar w-full">
+                                        {currentPdfBtns.map((btn) => {
+                                            const text =
+                                                btn?.buttontext?.toLowerCase() ||
+                                                "";
+                                            const isDark =
+                                                text.includes("minor") ||
+                                                text.includes("handbook");
+
+                                            return (
+                                                <CommonLeadPopup
+                                                    key={btn?.id}
+                                                    buttonText={
+                                                        <div className="flex items-center gap-1 md:gap-2 xl:gap-3">
+                                                            <Download className="w-4 h-4 md:w-5 md:h-5 hidden md:block" />
+                                                            <span className="font-semibold tracking-tight text-[11px] md:text-lg whitespace-nowrap">
+                                                                {
+                                                                    btn?.buttontext
+                                                                }
+                                                            </span>
+                                                        </div>
+                                                    }
+                                                    buttonClassName={`px-3 h-10 md:h-12 xl:h-14 md:px-6 rounded-[2px] lg:rounded-[4px] transition-all duration-300 flex items-center justify-center w-auto
                         ${
                             isDark
                                 ? "bg-[#000000] text-white hover:bg-[#0a264a]"
                                 : "bg-white text-black hover:bg-gray-100"
                         }`}
-                                                redirectUrl={
-                                                    btn?.buttonlink || "#"
-                                                }
-                                                form_name={
-                                                    btn?.buttontext || "Action"
-                                                }
-                                            />
-                                        );
-                                    })}
-                            </div>
+                                                    redirectUrl={
+                                                        btn?.buttonlink || "#"
+                                                    }
+                                                    form_name={
+                                                        btn?.buttontext ||
+                                                        "Action"
+                                                    }
+                                                />
+                                            );
+                                        })}
+                                    </div>
+                                );
+                            })()}
                         </div>
                     </div>
                 </div>

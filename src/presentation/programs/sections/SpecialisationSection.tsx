@@ -65,7 +65,7 @@ const Specialisation = ({
             id="specializations"
             className="relative z-10 py-8 md:py-12 xl:py-20 scroll-mt-28"
         >
-            <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
+            <div className="max-w-[1530px] mx-auto w-full px-4 md:px-8 xl:px-16">
                 <div className="common-prog-container mb-2 md:mb-6">
                     <h2 className="heading-primary mb-2 md:mb-3">
                         {heading} {highlightheading}
@@ -131,7 +131,7 @@ const Specialisation = ({
                                     }),
                                 ]}
                                 setApi={setApi}
-                                className="w-full relative px-4 md:px-0"
+                                className="w-full relative"
                             >
                                 <CarouselContent className="-ml-4 sm:-ml-4 lg:-ml-6 xl:-ml-6 px-0 my-5 flex items-stretch">
                                     {specialisations.map(
@@ -194,14 +194,14 @@ const Specialisation = ({
                                 {/* Left/Right Navigation Arrows */}
                                 <button
                                     onClick={() => api?.scrollPrev()}
-                                    className="absolute left-2 md:-left-13 top-1/2 -translate-y-1/2 z-20 bg-[#0161B0] hobver:bg-[#0161B0]/80 flex items-center justify-center text-white transition-all duration-300 cursor-pointer rounded-[4px] w-10 h-10"
+                                    className="absolute left-3 md:-left-13 top-1/2 -translate-y-1/2 z-20 bg-[#0161B0] hobver:bg-[#0161B0]/80 flex items-center justify-center text-white transition-all duration-300 cursor-pointer rounded-[2px] w-10 h-10"
                                     aria-label="Previous slide"
                                 >
                                     <ChevronLeft className="w-6 h-6" />
                                 </button>
                                 <button
                                     onClick={() => api?.scrollNext()}
-                                    className="absolute right-2 md:-right-13 top-1/2 -translate-y-1/2 z-20 bg-[#0161B0] hobver:bg-[#0161B0]/80 flex items-center justify-center text-white transition-all duration-300 cursor-pointer rounded-[4px] w-10 h-10"
+                                    className="absolute right-3 md:-right-13 top-1/2 -translate-y-1/2 z-20 bg-[#0161B0] hobver:bg-[#0161B0]/80 flex items-center justify-center text-white transition-all duration-300 cursor-pointer rounded-[2px] w-10 h-10"
                                     aria-label="Next slide"
                                 >
                                     <ChevronRight className="w-6 h-6" />

@@ -106,7 +106,7 @@ const ProgramHeroCinematic = ({
                             <div className="w-full bg-[#001631] lg:bg-transparent py-8 md:py-6 lg:py-0 mt-0 lg:mt-10 relative z-10">
                                 <div className="grid grid-cols-3 gap-2 lg:flex lg:flex-nowrap items-center lg:gap-x-10">
                                     <div className="flex flex-col lg:pr-8 xl:pr-10 lg:border-r border-white/20 text-center lg:text-left">
-                                        <span className="text-white font-semibold text-xl md:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
+                                        <span className="text-white font-semibold text-[18px] md:text-2xl xl:text-3xl leading-none tracking-tight whitespace-nowrap">
                                             {dreamcareerSection?.highestpackagenum ||
                                                 "56.6 LPA"}
                                         </span>
@@ -142,14 +142,18 @@ const ProgramHeroCinematic = ({
                     <div className="hidden lg:flex w-full lg:w-[40%] xl:w-2/5 xl:pl-20 justify-center lg:justify-end">
                         <div className="heroBannerForm__form w-full max-w-md mx-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
                             <div className="heroBannerForm-header">
-                                <h3 className="mb-0">
-                                    <strong>
-                                        Apply Today for{" "}
-                                        <span className="uppercase">
-                                            K.R. Mangalam University
-                                        </span>
-                                    </strong>
-                                </h3>
+                                <div
+                                    className="mb-0 font-bold !text-[28px] lg:text-lg inline-block w-full text-center"
+                                    style={{
+                                        backgroundImage:
+                                            "linear-gradient(90deg, #0055a4 0%, #CB000D 100%)",
+                                        WebkitBackgroundClip: "text",
+                                        WebkitTextFillColor: "transparent",
+                                    }}
+                                >
+                                    Apply Today for <br /> K.R. Mangalam
+                                    University
+                                </div>
                             </div>
                             <NoPaperForm formId={formId} height="500px" />
                         </div>
@@ -164,14 +168,17 @@ const ProgramHeroCinematic = ({
             >
                 <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.1)] rounded-none lg:rounded-md overflow-hidden">
                     <div className="heroBannerForm-header">
-                        <h3 className="mb-0 text-center">
-                            <strong>
-                                Apply Today for{" "}
-                                <span className="uppercase">
-                                    K.R. Mangalam University
-                                </span>
-                            </strong>
-                        </h3>
+                        <div
+                            className="mb-0 text-center font-bold text-[22px] lg:text-lg inline-block w-full"
+                            style={{
+                                backgroundImage:
+                                    "linear-gradient(90deg, #0055a4 0%, #CB000D 100%)",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent",
+                            }}
+                        >
+                            Apply Today for <br /> K.R. Mangalam University
+                        </div>
                     </div>
                     <div className="p-1">
                         <NoPaperForm formId={formId} height="500px" />

@@ -40,6 +40,7 @@ export default function ProgramSubNav() {
     const [visibleNavItems, setVisibleNavItems] = useState<ResolvedNavItem[]>(
         []
     );
+    const [headerHeight, setHeaderHeight] = useState<number>(80);
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -71,16 +72,18 @@ export default function ProgramSubNav() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const headerHeight =
-                window.innerWidth >= 1280
-                    ? 124
-                    : window.innerWidth >= 640
-                      ? 115
-                      : 110;
+            const headerEl = document.querySelector("header");
+            const currentHeaderHeight = headerEl
+                ? Math.round(headerEl.getBoundingClientRect().height)
+                : window.innerWidth >= 1280
+                  ? 88
+                  : 80;
+
+            setHeaderHeight(currentHeaderHeight);
 
             if (containerRef.current) {
                 const rect = containerRef.current.getBoundingClientRect();
-                if (rect.top <= headerHeight) {
+                if (rect.top <= currentHeaderHeight) {
                     setIsSticky(true);
                 } else {
                     setIsSticky(false);
@@ -102,7 +105,7 @@ export default function ProgramSubNav() {
                           }));
 
             // Scroll spy logic to highlight current visible section
-            const spyThreshold = window.innerWidth >= 1280 ? 210 : 175;
+            const spyThreshold = currentHeaderHeight + 70;
             for (let i = currentItems.length - 1; i >= 0; i--) {
                 const el = document.getElementById(currentItems[i].targetId);
                 if (el) {
@@ -134,11 +137,7 @@ export default function ProgramSubNav() {
         const element = document.getElementById(targetId);
         if (element) {
             const totalStickyHeight =
-                window.innerWidth >= 1280
-                    ? 185
-                    : window.innerWidth >= 640
-                      ? 160
-                      : 155;
+                headerHeight + (containerRef.current?.offsetHeight || 52);
             const y =
                 element.getBoundingClientRect().top +
                 window.pageYOffset -
@@ -165,14 +164,15 @@ export default function ProgramSubNav() {
     return (
         <div
             ref={containerRef}
-            className="w-full min-h-[58px] lg:min-h-[68px] relative"
+            className="w-full min-h-[52px] lg:min-h-[58px] relative"
         >
             <div
                 className={`${
                     isSticky
-                        ? "fixed top-[110px] md:top-[115px] xl:top-[124px] left-0 w-full z-[36] bg-[#003560]"
+                        ? "fixed left-0 w-full z-[36] bg-[#003560] shadow-md transition-[top] duration-150"
                         : "relative w-full bg-[#003560] z-[36]"
                 }`}
+                style={isSticky ? { top: `${headerHeight}px` } : undefined}
             >
                 <div className="max-w-[1530px] mx-auto min-h-[52px] px-4 md:px-8 xl:px-16 flex items-center justify-between overflow-x-auto no-scrollbar py-2">
                     <nav className="flex items-center justify-between w-full min-w-max gap-8 lg:gap-6 xl:gap-8">

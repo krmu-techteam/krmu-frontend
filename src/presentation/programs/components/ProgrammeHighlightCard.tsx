@@ -12,7 +12,7 @@ const ProgrammeHighlightCard = ({ title, desc, highlightimg }: Props) => {
     return (
         <div className="group rounded-md shadow-sm hover:shadow-xl transition-all duration-500 h-[340px] flex flex-col mx-2 relative overflow-hidden">
             {/* Image Container */}
-            <div className="relative h-full w-full overflow-hidden rounded-md z-0">
+            <div className="relative h-full w-full overflow-hidden rounded-[4px] z-0">
                 {highlightimg?.url ? (
                     <Image
                         fill

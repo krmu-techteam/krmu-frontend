@@ -19,12 +19,13 @@ const CurriculumSection = ({
             className="relative overflow-hidden bg-[linear-gradient(to_bottom_right,#f1f5ff,#061623,#eef4ff)] scroll-mt-28"
         >
             {/* Background Image with Overlay */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                 <Image
                     src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Compress_Image_444f7b9b71.png"
                     width={1920}
                     height={1920}
-                    className="object-cover xl:object-top 2xl:object-center w-full h-full"
+                    priority
+                    className="object-cover object-top w-full h-[1200px] md:h-[1400px] xl:h-full xl:object-top 2xl:object-center pointer-events-none"
                     alt="Curriculum Background"
                 />
                 {/* Subtle black overlay on mobile and tablet screens */}

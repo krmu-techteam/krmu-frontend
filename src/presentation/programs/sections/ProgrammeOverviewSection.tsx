@@ -7,7 +7,7 @@ const ProgrammeOverviewSection = () => {
             id="about-program"
             className={`w-full bg-transparent py-8 md:py-12 xl:py-20 scroll-mt-28`}
         >
-            <div className="max-w-[1530px] mx-auto px-8 md:px-8 xl:px-16">
+            <div className="max-w-[1530px] mx-auto px-4 md:px-8 xl:px-16">
                 <div
                     className="relative overflow-hidden rounded-[15px] py-10 px-6 sm:px-10 z-10 flex flex-col justify-center text-left"
                     style={{

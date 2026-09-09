@@ -6,18 +6,21 @@ const CinematicForm = ({ formId, isMobile = false }: CinematicFormProps) => {
         return (
             <div
                 id="apply-form-mobile"
-                className="lg:hidden w-full bg-white pb-0 px-0"
+                className="lg:hidden w-full bg-[#061623] pb-6 lg:pb-0 px-4 lg:px-0"
             >
-                <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.1)] rounded-none lg:rounded-md overflow-hidden">
+                <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto rounded-[2px] lg:rounded-md overflow-hidden">
                     <div className="heroBannerForm-header">
-                        <h2 className="mb-0 text-center text-lg font-bold">
-                            <strong>
-                                Apply Today for{" "}
-                                <span className="uppercase">
-                                    K.R. Mangalam University
-                                </span>
-                            </strong>
-                        </h2>
+                        <div
+                            className="mb-0 text-center font-bold font-poppins !text-[22px] lg:text-lg inline-block w-full"
+                            style={{
+                                backgroundImage:
+                                    "linear-gradient(90deg, #0055a4 0%, #CB000D 100%)",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent",
+                            }}
+                        >
+                            Apply Today for <br /> K.R. Mangalam University
+                        </div>
                     </div>
                     <div className="p-1">
                         <NoPaperForm formId={formId} height="500px" />
@@ -34,14 +37,17 @@ const CinematicForm = ({ formId, isMobile = false }: CinematicFormProps) => {
         >
             <div className="heroBannerForm__form w-full max-w-md mx-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md">
                 <div className="heroBannerForm-header">
-                    <h2 className="mb-0 text-lg font-bold">
-                        <strong>
-                            Apply Today for{" "}
-                            <span className="uppercase">
-                                K.R. Mangalam University
-                            </span>
-                        </strong>
-                    </h2>
+                    <div
+                        className="mb-0 text-center font-bold font-poppins !text-[28px] lg:text-lg inline-block w-full"
+                        style={{
+                            backgroundImage:
+                                "linear-gradient(90deg, #0055a4 0%, #CB000D 100%)",
+                            WebkitBackgroundClip: "text",
+                            WebkitTextFillColor: "transparent",
+                        }}
+                    >
+                        Apply Today for <br /> K.R. Mangalam University
+                    </div>
                 </div>
                 <NoPaperForm formId={formId} height="500px" />
             </div>

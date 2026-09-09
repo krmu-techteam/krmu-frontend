@@ -336,6 +336,17 @@ body:before {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
+    /* NoPaperForms Submit Button - Rounded 2px for tablet and mobile */
+    @media (max-width: 1024px) {
+        #registerBtn,
+        .btn-register,
+        .btn-npf,
+        .button-holder button,
+        .button-holder #registerBtn {
+            border-radius: 2px !important;
+        }
+    }
+
     .prog_scope > div > iframe {
         width: 100% !important;
         height: 500px !important;
