@@ -6,10 +6,10 @@ const YRCCommittee = () => {
           YOUTH RED CROSS COMMITTEE @ KRMU, GURUGRAM
         </h2>
         <p>
-          The Youth Red Cross (YRC) programs are a vital part of the strategic
-          vision of the Indian Red Cross Society. These programs recognize and
+          The Youth Red Cross (YRC) programmes are a vital part of the strategic
+          vision of the Indian Red Cross Society. These programmes recognise and
           harness young people’s diverse and significant roles as innovators,
-          cultural ambassadors, peer educators, community mobilizers, or
+          cultural ambassadors, peer educators, community mobilisers, or
           advocates for change. Youth Red Cross members are seen as catalysts
           for change, working tirelessly to support vulnerable communities. When
           collaborating with older generations, they bring fresh ideas and
@@ -30,22 +30,30 @@ const YRCCommittee = () => {
           <li>Community service</li>
           <li>
             Promoting national and international friendship and understanding
-            through the global network of the Red Cross.
+            through the global network of the Red Cross
           </li>
         </ul>
         <br />
         <p>
           At K.R. Mangalam University, the Youth Red Cross has been established
           to inspire young students with a passion for serving society. The
-          primary goal is to instill in them the core values of the Red Cross,
+          primary goal is to instil in them the core values of the Red Cross,
           fostering a spirit of selfless service and volunteerism. By training
           zealous young students in the fundamental principles of the Red Cross,
-          the program ensures that they remain resilient and motivated to serve
-          vulnerable communities locally and globally. YRC at K.R Mangalam
-          University carries out its social mission under the framework of the
-          seven fundamental principles of the Red Cross: Humanity, Impartiality,
-          Neutrality, Independence, Voluntary Service, Unity, and Universality.
+          the programme ensures that they remain resilient and motivated to
+          serve vulnerable communities locally and globally. YRC at K.R.
+          Mangalam University carries out its social mission under the framework
+          of the seven fundamental principles of the Red Cross:
         </p>
+        <ul className="list-disc pl-10 my-2.5">
+          <li>Humanity</li>
+          <li>Impartiality</li>
+          <li>Neutrality</li>
+          <li>Independence</li>
+          <li>Voluntary Service</li>
+          <li>Unity</li>
+          <li>Universality</li>
+        </ul>
       </div>
     </section>
   );

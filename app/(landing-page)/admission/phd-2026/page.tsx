@@ -14,7 +14,6 @@ import PhdWhyphd from "./commonComponent/PhdWhyphd";
 import { SeoData } from "./seo";
 import StickyMobileBar from "../commonComponent/StickyMobileBar";
 
-
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: SeoData.title,
@@ -54,10 +53,11 @@ const page = async () => {
       <PhdSuperComputer />
       <PhdWelcomeUniversity />
       <PhdAwardsAchievements />
+
       <PhdWhatsHappening />
       <PhdGlobal />
       <PhdStudentTestimonials />
-      <StickyMobileBar phoneNumber="+919311411717"/>
+      <StickyMobileBar phoneNumber="+919311411717" />
     </>
   );
 };

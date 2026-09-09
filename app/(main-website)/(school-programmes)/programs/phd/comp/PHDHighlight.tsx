@@ -93,7 +93,7 @@ const PHDHighlight = ({ heading, highlightheading, btn, imgUrl }: Props) => {
                 />
               </span>
               <p className="text-lg text-white font-semibold">
-                Take an entrance test
+                Take the entrance test
               </p>
               <p className="text-white">
                 K.R. Mangalam University Entrance Examination (KREE)
@@ -114,7 +114,7 @@ const PHDHighlight = ({ heading, highlightheading, btn, imgUrl }: Props) => {
                 />
               </span>
               <p className="text-lg text-white font-semibold">
-                Appear for interaction
+                Appear for interview
               </p>
               <p className="text-white">Attend our Faculty-Led Interview.</p>
             </div>
@@ -163,9 +163,10 @@ const PHDHighlight = ({ heading, highlightheading, btn, imgUrl }: Props) => {
         </div>
         {imgUrl && (
           <Image
-            src={
-              imgUrl ? `${STRAPI_URL}${imgUrl}` : "/Commence-Your-Journey.webp"
-            }
+            // src={
+            //   imgUrl ? `${STRAPI_URL}${imgUrl}` : "/Commence-Your-Journey.webp"
+            // }
+            src="/adm-process.webp"
             width={1921}
             height={689}
             alt="Your journey"

@@ -17,7 +17,7 @@ const BridgingAcademia = () => {
             Benefit from our strong ties with leading corporations and startups.
             Our partnerships not only bring in expert speakers but also open
             doors for internships and real-world projects, giving you a
-            competitive edge.”
+            competitive edge.
           </p>
           <PlacementOverviewAccordion />
         </div>

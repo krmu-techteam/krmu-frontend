@@ -78,19 +78,19 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/8-bachelor-of-physiotherapy/asian.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/bpt-2026/asian.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/8-bachelor-of-physiotherapy/max.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/bpt-2026/max.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/8-bachelor-of-physiotherapy/medanta.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/bpt-2026/medanta.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/8-bachelor-of-physiotherapy/sarvodaya.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/bpt-2026/sarvodaya.png",
     alt: "Recruiter Logo",
   },
 ];

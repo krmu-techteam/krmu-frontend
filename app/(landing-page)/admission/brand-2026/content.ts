@@ -78,32 +78,32 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/wp-content/landingpage/common/ibm.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/ibm.png",
     alt: "Recruiter Logo",
   },
 
   {
-    imgUrl: "/wp-content/landingpage/brand-2026/recruiters/accenture.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/accenture.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/brand-2026/recruiters/apple.svg",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/apple.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/brand-2026/recruiters/amazon.webp",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/amazon.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/brand-2026/recruiters/deliotte.svg",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/deloitte.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/brand-2026/recruiters/icici.svg",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/icici.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/brand-2026/recruiters/infosys.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/infosys.png",
     alt: "Recruiter Logo",
   },
 ];

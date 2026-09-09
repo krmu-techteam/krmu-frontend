@@ -36,16 +36,16 @@ const ClubsSocieties = () => {
         <p
           className={`${poppins.className} mt-3 text-[14px] text-justify font-normal leading-[1.45] md:text-[16px] lg:text-[20px]`}
         >
-          KRMU offers a vibrant campus life to the students and the faculty.
-          From cultural events to scientific experiments, from robotic
-          developments to artistic strokes, apprentices at KRMU keep their
-          enthusiasm high and deliver impeccable participation in all
-          activities. The University supports more than thirteen clubs/societies
-          which are primarily run by the students. These clubs/societies offer
-          students a platform to showcase their talents and acquire new traits
-          that can be learned while thinking out of the box. A wide range of
-          activities are organised to help students develop new skills, nurture
-          their talents, and pursue their interests beyond the classroom.
+          KRMU offers a vibrant campus life to students and faculty. From
+          cultural events to scientific experiments, from robotic developments
+          to artistic pursuits, students at KRMU maintain their enthusiasm and
+          actively participate in a wide range of activities. The university
+          supports more than thirteen clubs and societies, which are primarily
+          run by students. These clubs and societies offer students a platform
+          to showcase their talents and develop new skills while encouraging
+          creative and out-of-the-box thinking. A wide range of activities is
+          organised to help students develop new skills, nurture their talents,
+          and pursue their interests beyond the classroom.
         </p>
 
         <Link

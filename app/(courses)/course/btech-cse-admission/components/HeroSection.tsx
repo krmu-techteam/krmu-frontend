@@ -22,15 +22,15 @@ const HeroSection = () => {
               Est. 2013
             </span>
           </div>
-          <h3 className="text-white text-center sm:text-left font-semibold mb-3 leading-[1.5] text-3xl  lg:text-5xl 2xl:text-[46px]">
+          <h1 className="text-white text-center sm:text-left font-semibold mb-3 leading-[1.5] text-3xl  lg:text-5xl 2xl:text-[46px]">
             B.Tech. CSE
-            <br />
+            <br />{" "}
             ADMISSIONS 2026
-            <br />
+            <br />{" "}
             IN DELHI NCR
-            <br />
+            <br />{" "}
             ARE NOW OPEN!
-          </h3>
+          </h1>
           <p className="text-white mb-6 hidden sm:block">
             Build your future with KRMU's industry-aligned curriculum, hands-on
             training, advanced facilities, and dedicated placement assistance
@@ -39,7 +39,7 @@ const HeroSection = () => {
           <div className="text-white hidden sm:flex flex-wrap gap-2 sm:justify-center md:justify-start text-sm">
             <span>100% Placement Support</span>
             <span>|</span>
-            <span>9 Engineering Specialisations</span>
+            <span>7 Engineering Specialisations</span>
             <span>|</span>
             <span>₹56.6 LPA Highest Package</span>
           </div>

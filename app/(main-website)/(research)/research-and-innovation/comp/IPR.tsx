@@ -20,20 +20,20 @@ const IPR = () => {
           <br />
           <p>
             Intellectual Property (IP) plays a significant role in providing a
-            competitive edge to an organization. The intangible assets of an
-            organization – such as knowhow, inventions, brands, designs and
-            other creative and innovative products are, in present times, more
+            competitive edge to an organisation. The intangible assets of an
+            organisation – such as know-how, inventions, brands, designs, and
+            other creative and innovative products – are, in present times, more
             valuable than its physical assets.
           </p>
           <br />
           <p>
-            With this backdrop, Intellectual Property Rights (IPR) cell seeks to
-            provide guidance to academic and non-academic staff, students,
-            scholars, and outside agencies alike on the practices and rules of
-            the University regarding IPR and related obligations (which include
-            the nature of IP, its ownership, exploitation, technology-transfer,
-            and confidentiality requirements). With the initiative to fulfil the
-            commitment of the University towards promoting academic freedom and
+            With this backdrop, the Intellectual Property Rights (IPR) Cell
+            seeks to provide guidance to academic and non-academic staff,
+            students, scholars, and external agencies alike on the practices and
+            rules of the University regarding IPR and related obligations, which
+            include the nature of IP, its ownership, exploitation, technology
+            transfer, and confidentiality requirements. This initiative fulfils
+            the university's commitment to promoting academic freedom and
             providing a conducive environment for research and development.
           </p>
           <Link

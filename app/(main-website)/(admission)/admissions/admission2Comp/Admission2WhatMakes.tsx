@@ -6,9 +6,9 @@ import { useState } from "react";
 
 const cards = [
   {
-    title: "State of the Art Infrastructure",
+    title: "State-of-the-Art Infrastructure",
     description:
-      "Modern Labs, Well-Equipped Library, Smart Classrooms, 35+ Acres of Lush Green Campus, Artistic & Modern Infrastructure",
+      "Modern Labs, Well-Equipped Library, Smart Classrooms, 35+ Acres of Lush Green Campus, and Artistic & Modern Infrastructure",
     image: "/admission2/sai.png",
     alt: "Infrastructure",
   },
@@ -22,22 +22,22 @@ const cards = [
   {
     title: "Multidisciplinary Approach",
     description:
-      "Specially Curated Programmes for Holistic Learning, Theory Blended with Practical Learning, Experienced Mentors, Industry Relevant Curriculum",
+      "Specially Curated Programmes for Holistic Learning, Theory Blended with Practical Learning, Experienced Mentors, and Industry Relevant Curriculum",
     image: "/admission2/ma.png",
     alt: "Approach",
   },
   {
     title: "Campus Life",
     description:
-      "A sprawling, eco-friendly campus inspiring creativity, State-of-the-art sports facilities, fitness centres, and recreational zones, On-campus dining options with a variety of cuisines to suit every taste",
+      "A Sprawling, Eco-Friendly Campus Inspiring Creativity, State-of-the-Art Sports Facilities, Fitness Centres, and Recreational Zones, On-Campus Dining Options with a Variety of Cuisines to Suit Every Taste",
     image: "/admission2/cl.png",
     alt: "Campus Life",
   },
   {
     title: "Placements and Career Support",
     description:
-      "Over 800 On-Campus Recruiters, 100% Placement Assistance, Placement Interview Training, Internship Opportunities",
-    image: "/wp-content/images/pc-support.png",
+      "Over 800 On-Campus Recruiters, 100% Placement Assistance, Placement Interview Training, and Internship Opportunities",
+    image: "https://www.krmangalam.edu.in/images/admission/placements-and-career-support.jpeg",
     alt: "Placements",
   },
 ];
@@ -52,14 +52,13 @@ const Admission2WhatMakes = () => {
       <div className="max-w-[1440px] mx-auto w-full md:px-48">
         <h3 className="mb-5 text-2xl md:text-[40px] font-bold text-black text-center leading-[1.2]">
           What Makes K.R. Mangalam <br className="hidden md:block" /> University
-          The Best?
+          the Best?
         </h3>
         <p className="font-medium text-center text-gray-600 max-w-4xl mx-auto">
-          K.R. Mangalam University has established itself as the pinnacle of
-          excellence fostering innovation and personal growth in students. By
-          offering a learning environment that nurtures creativity, leadership,
-          critical thinking, and other valuable skills essential to excel in
-          this ever-evolving world.
+          K.R. Mangalam University has established itself as a pinnacle of
+          excellence, innovation, and personal growth. Its learning environment
+          nurtures creativity, leadership, critical thinking, and other valuable
+          skills essential for excelling in this ever-evolving world.
         </p>
       </div>
       <div className="flex items-center justify-center pt-5">

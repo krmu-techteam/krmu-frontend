@@ -9,9 +9,12 @@ const YourPathsuccess = () => {
             Your Path to Success
           </h2>
           <p>
-            Students, who once register for a particular company, must present
-            themselves on the day of the visit, failing to which they may get
-            blacklisted for the next two recruitments
+            Students who register for a recruitment drive are expected to attend
+            the selection process on the scheduled date. If they are unable to
+            attend, they should inform the Placement Cell in advance.
+            Unexplained absence may affect their eligibility to participate in
+            the next two recruitment drives, in accordance with the Placement
+            Cell's policy.
           </p>
         </div>
         <div className="lg:w-3/4">

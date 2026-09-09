@@ -79,23 +79,23 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/sjmc-2026/recruiters/dainik-bhasker.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/semce-2026/dainik-bhaskar.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/sjmc-2026/recruiters/zeenews.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/semce-2026/zee-news.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/sjmc-2026/recruiters/dd-1.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/semce-2026/dd.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/sjmc-2026/recruiters/outlook.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/semce-2026/outlook.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/sjmc-2026/recruiters/indian-express.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/semce-2026/the-indian-express.png",
     alt: "Recruiter Logo",
   },
 ];

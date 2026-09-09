@@ -108,10 +108,9 @@ const VisionMission = () => {
             <p
               className={`${poppins.className} px-6 pt-3 text-justify text-[13px] sm:text-[18px] font-normal leading-[1.45] md:px-[50px]`}
             >
-              Student Welfare envisions comprehensive individual, academic, and
-              integrated development by providing life skills and counselling
-              services and thus preparing them for a diverse, enterprising, and
-              global society.
+              Student Welfare envisions the holistic development of students by
+              providing life skills and counselling services, thereby preparing
+              them for a diverse, enterprising, and global society.
             </p>
           </article>
 

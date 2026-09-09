@@ -29,17 +29,18 @@ const TeamBehind = () => {
             </div>
             <div className="w-full lg:w-3/5 text-white text-justify md:text-left">
               <p>
-                Dean of Academics: Prof. Varuna Tyagi, MBA and PhD in Psychology
-                with more than 22 years of teaching, academic administration,
-                and training experience. A visionary in Organisation Behaviour,
-                spearheads University academic strategies with a focus on
-                inclusivity and global relevance. She is highly skilled and
-                accomplished training professional with extensive knowledge of
-                design, development, delivery, and evaluation of wide range of
-                training activities. She plays a multifaceted role that requires
-                a combination of leadership, vision, and a deep commitment to
-                academic excellence. By overseeing curriculum development,
-                managing faculty, and engaging with the broader community.
+                Dean of Academics: Prof. Varuna Tyagi, MBA and Ph.D. in
+                Psychology, with more than 22 years of teaching, academic
+                administration, and training experience. A visionary in
+                Organisation Behaviour, spearheads University academic
+                strategies with a focus on inclusivity and global relevance. She
+                is a highly skilled and accomplished training professional with
+                extensive knowledge of design, development, delivery, and
+                evaluation of a wide range of training activities. She plays a
+                multifaceted role that requires a combination of leadership,
+                vision, and a deep commitment to academic excellence by
+                overseeing curriculum development, managing faculty, and
+                engaging with the broader community.
               </p>
             </div>
           </div>
@@ -52,7 +53,7 @@ const TeamBehind = () => {
             <p>
               <strong>Faculty Coordinators:</strong> Our dedicated coordinators,
               experts in their respective fields, ensure the effective delivery
-              of our diverse academic programs.
+              of our diverse academic programmes.
             </p>
           </div>
         </div>

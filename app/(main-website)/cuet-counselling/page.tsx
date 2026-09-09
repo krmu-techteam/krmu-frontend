@@ -1,5 +1,19 @@
 import Image from "next/image";
-import React from "react";
+
+export async function generateMetadata() {
+  return {
+    title: "CUET Counselling: Register & Apply | K.R. Mangalam University",
+    description:
+      "Apply for undergraduate admissions at K.R. Mangalam University through CUET scores. Register for CUET counselling, explore eligible UG courses & secure your seat.",
+    alternates: {
+      canonical: "https://www.krmangalam.edu.in/cuet-counselling",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 const page = () => {
   return (

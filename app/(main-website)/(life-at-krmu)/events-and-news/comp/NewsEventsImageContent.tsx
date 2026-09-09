@@ -42,6 +42,7 @@ const NewsEventsImageContent = async ({
                     width={381}
                     height={305}
                     alt=""
+                    unoptimized
                     className="w-full h-full object-cover"
                   />
                 ))}

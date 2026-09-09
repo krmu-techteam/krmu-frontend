@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* @theme {
+  --font-newsreader: "Newsreader", serif;
+  --font-poppins: "Poppins", sans-serif;
+} */
+
+@theme {
+  --font-poppins: var(--font-family-poppins);
+  --font-newsreader: var(--font-family-newsreader);
+}
+.font-newsreader {
+  font-family: var(--font-newsreader);
+}
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+@keyframes logo-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-logo-scroll {
+  animation: logo-scroll 15s linear infinite;
+}

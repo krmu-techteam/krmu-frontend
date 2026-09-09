@@ -25,8 +25,8 @@ const AuthorHero = ({ imgUrl, AuthName, AuthDesg, AuthAbout }: Props) => {
 
         <div>
           <div>
-            <h3 className="text-base text-white mt-1.5 mb-[5px] font-semibold flex items-center gap-1">
-              {AuthName}{" "}
+            <h1 className="text-base text-white mt-1.5 mb-[5px] font-semibold flex items-center gap-1">
+              Articles by {AuthName}{" "}
               <Image
                 src="/blogs/verified.svg"
                 width={19}
@@ -34,7 +34,7 @@ const AuthorHero = ({ imgUrl, AuthName, AuthDesg, AuthAbout }: Props) => {
                 alt="verified icon"
                 className="objec-cover"
               />
-            </h3>
+            </h1>
             <p className="text-white text-sm leading-[21.12px]">{AuthDesg}</p>
           </div>
         </div>

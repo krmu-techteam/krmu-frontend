@@ -9,10 +9,10 @@ const SportsIntro = () => {
           </h3>
           <p className="text-base sm:text-md lg:text-lg text-gray-700 leading-relaxed text-pretty">
             K.R. Mangalam University provides cutting-edge facilities aimed at
-            nurturing not just academic excellence but also physical fitness and
-            sportsmanship among its student body. With sprawling campuses
-            equipped with numerous playgrounds and indoor courts, the University
-            creates an environment conducive to holistic development.
+            nurturing not only academic excellence but also physical fitness and
+            sportsmanship among its students. With a sprawling campus equipped
+            with numerous playgrounds and indoor courts, the university creates
+            an environment conducive to holistic development.
           </p>
         </div>
 

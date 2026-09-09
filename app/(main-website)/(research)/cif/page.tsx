@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
         follow: true,
       },
     };
-  }
+  } 
 
   return {
     title: seo?.title || "K.R. Mangalam University",

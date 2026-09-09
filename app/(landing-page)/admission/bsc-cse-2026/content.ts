@@ -77,28 +77,34 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/10-bsc-cse/accenture.png",
-    alt: "Recruiter Logo",
+    imgUrl:
+      "https://www.krmangalam.edu.in/images/landingpage/bsc-cse-2026/accenture.png",
+    alt: "Accenture Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/10-bsc-cse/airtel-logo.png",
-    alt: "Recruiter Logo",
+    imgUrl:
+      "https://www.krmangalam.edu.in/images/landingpage/bsc-cse-2026/airtel.png",
+    alt: "Airtel Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/10-bsc-cse/mahindra.png",
-    alt: "Recruiter Logo",
+    imgUrl:
+      "https://www.krmangalam.edu.in/images/landingpage/bsc-cse-2026/mahindra.png",
+    alt: "Mahindra Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/10-bsc-cse/samsung.png",
-    alt: "Recruiter Logo",
+    imgUrl:
+      "https://www.krmangalam.edu.in/images/landingpage/bsc-cse-2026/samsung.png",
+    alt: "Samsung Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/10-bsc-cse/tata-consultancy.png",
-    alt: "Recruiter Logo",
+    imgUrl:
+      "https://www.krmangalam.edu.in/images/landingpage/bsc-cse-2026/tcs.png",
+    alt: "TCS Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/10-bsc-cse/wipro.png",
-    alt: "Recruiter Logo",
+    imgUrl:
+      "https://www.krmangalam.edu.in/images/landingpage/bsc-cse-2026/wipro.png",
+    alt: "Wipro Logo",
   },
 ];
 export const whyKRM: WhyKRMSection = {

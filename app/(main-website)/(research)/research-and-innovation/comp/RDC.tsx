@@ -12,7 +12,7 @@ const RDC = () => {
           <p>
             The Research and Development Cell, led by the esteemed Dean of
             Research, is the fulcrum of our research activities. With dedicated
-            Associate and Assistant Deans, the RDC oversees diverse research
+            associate and assistant deans, the RDC oversees diverse research
             initiatives, promoting interdisciplinary studies and innovative
             research methodologies. The cell plays a pivotal role in advancing
             our research agenda, fostering academic partnerships, and enhancing
@@ -20,24 +20,34 @@ const RDC = () => {
           </p>
           <br />
           <p>
-            K R Mangalam University maintains its own comprehensive data
-            repository encompassing all its publications, spanning journal
-            articles, patents, books, and book chapters. Faculty members
-            responsible for these publications personally upload their details
-            onto our research application. Moreover, the application also
-            facilitates the submission of reimbursement requests for conference
-            registrations, fees for workshops, seminars, and memberships.
-            Additionally, it serves as a platform for managing in-house
-            conferences and both applied and granted projects.
+            K.R. Mangalam University maintains its comprehensive data repository
+            encompassing all its publications, spanning journal articles,
+            patents, books, and book chapters. Faculty members responsible for
+            these publications personally upload their details to our research
+            application. Moreover, the application also facilitates the
+            submission of reimbursement requests for conference registrations,
+            fees for workshops and seminars, and memberships. Additionally, it
+            serves as a platform for managing in-house conferences and both
+            applied and granted projects.
           </p>
         </div>
         <div className="lg:w-1/2 flex justify-center">
-            <div className="text-center">
-
-            <Image src="/research/seema.webp" width={431} height={537} alt="Seema" />
-            <Link href="/dr-seema-raj" target="_blank" rel="noopener noreferrer" className="text-white mt-1.5"><strong>Dr. Seema Raj</strong> | Dean Research</Link>
-            </div>
-            
+          <div className="text-center">
+            <Image
+              src="/research/seema.webp"
+              width={431}
+              height={537}
+              alt="Seema"
+            />
+            <Link
+              href="/dr-seema-raj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white mt-1.5"
+            >
+              <strong>Dr. Seema Raj</strong> | Dean Research
+            </Link>
+          </div>
         </div>
       </div>
     </>

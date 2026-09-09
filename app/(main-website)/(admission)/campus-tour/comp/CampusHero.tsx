@@ -11,7 +11,7 @@ const CampusHero = () => {
             <span className="text-[#cb000d]">Campus Tour</span> Today!
           </h1>
           <p>
-            At K.R Mangalam University, we believe that the first step towards
+            At K.R. Mangalam University, we believe that the first step towards
             an exceptional educational journey begins with exploration. That’s
             why we invite you to schedule an exclusive campus tour and discover
             the extraordinary environment we’ve crafted for you.
@@ -26,11 +26,11 @@ const CampusHero = () => {
         <div className="lg:w-1/3 text-white md:pt-[50px] md:px-[35px] md:pb-[35px]">
           <Image src="/campus/search.webp" width={44} height={46} alt="" />
           <h4 className="text-2xl font-semibold mt-5">
-            Personalized Exploration
+            Personalised Exploration
           </h4>
           <p>
             Our campus tours go beyond standard visits; they’re tailored
-            journeys that resonate with your interests and aspirations
+            journeys that resonate with your interests and aspirations.
           </p>
         </div>
         <div className="lg:w-1/3 text-white md:pt-[50px] md:px-[35px] md:pb-[35px]">
@@ -50,7 +50,7 @@ const CampusHero = () => {
             Feel the Campus Vibrancy
           </h4>
           <p>
-            Immerse yourself in the dynamic campus ambiance, providing a genuine
+            Immerse yourself in the dynamic campus ambience, providing a genuine
             taste of campus life.
           </p>
         </div>

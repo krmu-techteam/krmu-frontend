@@ -12,10 +12,116 @@
   --color-university-red: var(--university-red);
   --color-university-blue: var(--university-blue);
   --font-host: var(--font-host-grotesk);
+  --font-poppins: var(--font-poppins), "Poppins", sans-serif;
+}
+
+@utility font-poppins {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), "Poppins", sans-serif !important;
 }
 
 /* Custom utility class */
 @layer utilities {
+  @media (min-width: 1440px) {
+    .cp-main-container {
+      left: -144px;
+    }
+  }
+
+  .curr-card-container {
+    background-size: cover !important;
+    background-position: right !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .curr-card-container-1 {
+    background-image: url("/demo/year-1.png");
+  }
+  .curr-card-container-2 {
+    background-image: url("/demo/year-2.png");
+  }
+  .curr-card-container-3 {
+    background-image: url("/demo/year-3.png");
+  }
+  .curr-card-container-4 {
+    background-image: url("/demo/year-4.png");
+  }
+
+  @media (max-width: 1100px) {
+    .curr-card-container-1 {
+      background-image: none;
+      background: linear-gradient(
+        90deg,
+        #e8e7e2 0%,
+        #bcd1da 58.17%,
+        #c9cedd 99.04%
+      );
+    }
+
+    .curr-card-container-2 {
+      background-image: none;
+      background: linear-gradient(
+        90deg,
+        #e8e7e2 0%,
+        #d6c9dd 58.17%,
+        #c9cedd 99.04%
+      ) !important;
+    }
+    .curr-card-container-3 {
+      background-image: none;
+      background: linear-gradient(
+        90deg,
+        #e8e7e2 0%,
+        #ddddc9 58.17%,
+        #c9cedd 99.04%
+      ) !important;
+    }
+    .curr-card-container-4 {
+      background-image: none;
+      background: linear-gradient(
+        90deg,
+        #e8e7e2 0%,
+        #bcd1da 58.17%,
+        #c9cedd 99.04%
+      ) !important;
+    }
+  }
+  .curr-card-container-2 {
+    background: url("/demo/year-2.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  .curr-card-container-3 {
+    background: url("/demo/year-3.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  .curr-card-container-4 {
+    background: url("/demo/year-4.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 1664px) {
+    .cp-container-2 {
+      padding-left: 120px;
+    }
+  }
+  @media (max-width: 1280px) {
+    .cp-main-container {
+      background: linear-gradient(180deg, #001b3b 0%, #002f67 100%);
+    }
+  }
+
+  .kh-footer {
+    display: none !important;
+  }
   .gradient-box {
     display: flex;
     align-items: center;
@@ -780,7 +886,8 @@
     font-weight: 600;
   }
 
-  .libcontent h4, .libcontent h1{
+  .libcontent h4,
+  .libcontent h1 {
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -1364,9 +1471,7 @@
     background-color: white;
   }
 
-  .modern-fee-table table thead tr th,
-  .modern-fee-table table tr:first-child td {
-    background-color: #065084 !important;
+  .modern-fee-table table thead tr th {
     color: white !important;
     font-weight: 500;
     padding: 12px 15px !important;
@@ -1374,6 +1479,32 @@
     font-size: 16px;
     border: 1px solid #065084 !important;
     white-space: normal;
+  }
+  .modern-fee-table table tr:first-child td {
+    color: white;
+    font-weight: 500;
+    padding: 12px 15px !important;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid #065084;
+    white-space: normal;
+  }
+  .modern-fee-table table tr:first-child td {
+    background-color: #065084;
+  }
+  .modern-fee-table .other_table tbody tr:first-child td {
+    background: #fff !important;
+    color: #424242;
+    vertical-align: top;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .modern-fee-table .other_table tbody tr:first-child td:nth-child(2) {
+    text-align: right;
+    color: #065084;
+    white-space: nowrap;
+    font-weight: 600;
   }
 
   .modern-fee-table table tbody tr td {
@@ -1385,7 +1516,7 @@
     vertical-align: top;
   }
 
-  .modern-fee-table table tr td:last-child {
+  .modern-fee-table table tr:not(:first-child) td:last-child {
     text-align: right;
     font-weight: 600;
     color: #065084;

@@ -42,10 +42,10 @@ domains.`,
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Whats_App_Image_2026_01_05_at_11_27_36_AM_81b54c957e.jpeg",
     heading: "Faridabad Management Association",
     pointer: [
-      `To establish a collborative relationship for enhancinf leadership capacities of students
-nd faculty`,
-      `To jointly organize high impact events like leasership talks, workshops, HR meets, FDP's.`,
-      `To activate students chapters through membership of the students to nuture students.`,
+      `To establish a collaborative relationship for enhancing leadership capacities of students
+and faculty`,
+      `To jointly organize high impact events like leadership talks, workshops, HR meets, FDP's.`,
+      `To activate students chapters through membership of the students to nurture students.`,
     ],
   },
   {
@@ -53,7 +53,7 @@ nd faculty`,
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Whats_App_Image_2026_01_05_at_11_28_51_AM_b53e788493.jpeg",
     heading: "Onevarsity",
     pointer: [
-      `Effective collaboration with Onevarsity is a interv alia engagement in providing Unified
+      `Effective collaboration with Onevarsity is a inter alia engagement in providing Unified
 Academic solutions, Placement & Guest faculty ,other services to university`,
       `Integrate industry-aligned courses, certifications, and experiential learning modules
 delivered through Onevarsity.`,
@@ -67,8 +67,8 @@ technology-enabled engagement`,
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/xebia_1_scaled_a3d0cd5d05.webp",
     heading: "Xebia",
     pointer: [
-      `Xebia and KR Managalam University collaborates to design and develop industry-
-pecific course content and modules in high-demand areas.`,
+      `Xebia and KR Mangalam University collaborates to design and develop industry-
+specific course content and modules in high-demand areas.`,
       `Launching B.Tech or certification programs with specializations in fields like Data Science
 & Machine Learning, Al, DevOps, Cloud Engineering, Full Stack Development, and
 Cybersecurity.`,
@@ -81,9 +81,9 @@ industry projects.`,
       "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/imagin_xp_2_24fb26164b.webp",
     heading: "ImaginXP",
     pointer: [
-      `To engage with KR Managalam University to bridge the industry-academia gap.`,
+      `To engage with KR Mangalam University to bridge the industry-academia gap.`,
       `To make students are exposed to the latest software and products, will invite top
-faculties/industry experts for guest leactures.`,
+faculties/industry experts for guest lectures.`,
     ],
   },
   {

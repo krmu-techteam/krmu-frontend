@@ -16,6 +16,8 @@ interface GlobalLogosProps {
 }
 
 const HomeGlobalCarousel = ({ logos }: GlobalLogosProps) => {
+  const isLoading = !logos || logos.length === 0;
+
   return (
     <>
       <Carousel
@@ -31,7 +33,19 @@ const HomeGlobalCarousel = ({ logos }: GlobalLogosProps) => {
         className="px-10"
       >
         <CarouselContent className="-ml-4 py-6">
-          {logos &&
+          {isLoading &&
+            Array.from({ length: 6 }).map((_, i) => (
+              <CarouselItem
+                key={`logo-skeleton-${i}`}
+                className="basis-1/2 md:basis-1/4 lg:basis-1/4 xl:basis-1/3 pl-4"
+              >
+                <div className="relative bg-white border border-gray-200 shadow-sm rounded-xl p-3 sm:p-3 h-[90px] sm:h-[110px] flex items-center justify-center">
+                  <div className="w-full h-full rounded-lg bg-gray-200 animate-pulse" />
+                </div>
+              </CarouselItem>
+            ))}
+
+          {!isLoading &&
             logos.map((logo) => {
               return (
                 <CarouselItem

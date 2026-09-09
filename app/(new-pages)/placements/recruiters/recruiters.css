@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* @theme {
+  --font-newsreader: "Newsreader", serif;
+  --font-poppins: "Poppins", sans-serif;
+} */
+
+@theme {
+  --font-poppins: var(--font-family-poppins);
+  --font-newsreader: var(--font-family-newsreader);
+}
+.font-newsreader {
+  font-family: var(--font-newsreader);
+}
+.font-poppins {
+  font-family: var(--font-poppins);
+}

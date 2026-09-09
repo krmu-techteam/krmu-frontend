@@ -769,7 +769,7 @@ export const createOrganizationSchema = ({
       },
     },
     null,
-    2
+    2,
   );
 };
 
@@ -1040,9 +1040,6 @@ export function createCollegeSchema() {
   };
 }
 
-
-
-
 type QuantitativeValue = {
   name: string;
   value: number | string;
@@ -1098,4 +1095,175 @@ export function commonCollegeUniversitySchema({
     }),
     ...(sameAs.length > 0 && { sameAs }),
   };
+}
+
+type WebPageSchemaProps = {
+  name: string;
+  url: string;
+  description: string;
+  aboutName: string;
+  aboutUrl: string;
+};
+
+export const createWebPageSchema = ({
+  name,
+  url,
+  description,
+  aboutName,
+  aboutUrl,
+}: WebPageSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    url,
+    description,
+    about: {
+      "@type": "CollegeOrUniversity",
+      name: aboutName,
+      url: aboutUrl,
+    },
+  };
+
+  return JSON.stringify(schema);
+};
+
+type AboutPageSchemaProps = {
+  name: string;
+  url: string;
+  description: string;
+  mainEntityName: string;
+  mainEntityUrl: string;
+};
+
+export const createAboutPageSchema = ({
+  name,
+  url,
+  description,
+  mainEntityName,
+  mainEntityUrl,
+}: AboutPageSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    url,
+    description,
+    mainEntity: {
+      "@type": "CollegeOrUniversity",
+      name: mainEntityName,
+      url: mainEntityUrl,
+    },
+  };
+
+  return JSON.stringify(schema);
+};
+
+
+export interface SchoolPageSchemaProps {
+  name: string;
+  url: string;
+  description: string;
+  aboutName: string;
+  aboutUrl: string;
+}
+
+export const createSchoolPageSchema = ({
+  name,
+  url,
+  description,
+  aboutName,
+  aboutUrl,
+}: SchoolPageSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    url,
+    description,
+    about: {
+      "@type": "CollegeOrUniversity",
+      name: aboutName,
+      url: aboutUrl,
+    },
+  };
+
+  return JSON.stringify(schema);
+};
+
+type PlacementOverviewSchemaProps = {
+  name: string;
+  url: string;
+  description: string;
+  websiteName: string;
+  websiteUrl: string;
+};
+
+export const createPlacementOverviewSchema = ({
+  name,
+  url,
+  description,
+  websiteName,
+  websiteUrl,
+}: PlacementOverviewSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    url,
+    description,
+    isPartOf: {
+      "@type": "WebSite",
+      name: websiteName,
+      url: websiteUrl,
+    },
+  };
+
+  return JSON.stringify(schema);
+};
+
+// lib/schema/videoSchema.ts
+
+export interface VideoSchemaProps {
+  "@context": string;
+  "@type": string;
+  name: string;
+  description: string;
+  thumbnailUrl: string[];
+  uploadDate: string;
+  duration: string; // ISO 8601 format (e.g. PT3M45S)
+  embedUrl: string;
+  contentUrl: string;
+  publisher: {
+    "@type": string;
+    name: string;
+    logo: {
+      "@type": string;
+      url: string;
+    };
+  };
+}
+
+export function createVideoSchema({
+  name,
+  description,
+  thumbnailUrl,
+  uploadDate,
+  duration,
+  embedUrl,
+  contentUrl,
+}: VideoSchemaProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name,
+    description,
+    thumbnailUrl: [thumbnailUrl],
+    uploadDate,
+    duration,
+    embedUrl,
+    contentUrl,
+  };
+
+  return JSON.stringify(schema);
 }

@@ -78,31 +78,31 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/beld-2026/recruiters/simpilearn.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/beld-2026/simplilearn.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/beld-2026/recruiters/merit.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/beld-2026/meritnation.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/beld-2026/recruiters/chegg.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/beld-2026/chegg.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/beld-2026/recruiters/dps.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/beld-2026/dps.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/beld-2026/recruiters/whj.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/beld-2026/whitehat-jr.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/beld-2026/recruiters/toppr.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/beld-2026/toppr.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/beld-2026/recruiters/vedantu.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/beld-2026/vedantu.png",
     alt: "Recruiter Logo",
   },
 ];

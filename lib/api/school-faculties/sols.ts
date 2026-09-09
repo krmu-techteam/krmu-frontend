@@ -46,21 +46,21 @@ export const solsFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/inderpreet-kaur-saggu.png",
   },
-  {
-    id: 10206,
-    slug: "dr-shobhna-jeet",
-    title: {
-      rendered: "Prof (Dr.) Shobhna Jeet",
-    },
-    featured_media: 10187,
-    acf: {
-      "staff-qualification": "Ph.D. (UGCNET)",
-      staff_designation: "Professor, Chairperson COE SDG",
-      schools: [],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Shobhna-Jeet.png",
-  },
+  // {
+  //   id: 10206,
+  //   slug: "dr-shobhna-jeet",
+  //   title: {
+  //     rendered: "Prof (Dr.) Shobhna Jeet",
+  //   },
+  //   featured_media: 10187,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Professor, Chairperson COE SDG",
+  //     schools: [],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Shobhna-Jeet.png",
+  // },
   {
     id: 115862,
     slug: "ms-kritika-kakkar",
@@ -130,7 +130,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 55332,
     acf: {
-      "staff-qualification": "LL.M.",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant Professor",
       schools: [],
     },
@@ -145,7 +145,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 17535,
     acf: {
-      "staff-qualification": "LL.M.",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant Professor",
       schools: [],
     },
@@ -262,7 +262,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
     id: 113872,
     slug: "niharika",
     title: {
-      rendered: "Niharika",
+      rendered: "Dr. Niharika",
     },
     featured_media: 1024,
     acf: {
@@ -281,11 +281,26 @@ export const solsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 1024,
     acf: {
-      "staff-qualification": "B.A.LL.B, LL.M, Ph.D.",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant Professor",
       schools: [1043],
     },
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Parveen-Bondwal-1.jpg",
+  },
+  {
+    id: 115956,
+    slug: "dr-akansha-pandey",
+    title: {
+      rendered: "Dr. Akansha Pandey",
+    },
+    featured_media: 1024,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1043],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/08/akansha-pandey.png",
   },
 ];

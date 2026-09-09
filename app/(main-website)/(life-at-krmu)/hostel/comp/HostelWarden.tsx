@@ -7,11 +7,11 @@ const HostelWarden = () => {
             Connect with the Warden
           </h4>
           <p>
-            The super friendly and responsible wardens at our hostels ensure
-            that decorum is maintained inside the hostel premises. Moreover, the
-            wardens also plan and host recreational activities and events to
-            keep the entertainment going and help your child make the most out
-            of their hostel life.
+            The friendly and responsible wardens at our hostels ensure that
+            discipline and decorum are maintained within the hostel premises.
+            Moreover, the wardens organise recreational activities and events to
+            create an engaging living environment and help students make the
+            most of their hostel experience.
           </p>
 
           <h5 className="text-2xl my-5 text-center font-semibold">

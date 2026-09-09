@@ -8,17 +8,17 @@ const CDCCOntact = () => {
       <div className="max-w-[1664px] mx-auto lg:flex">
         <div className="lg:w-1/2 text-[#3d5fa5]">
           <h2 className="leading-[1.2] text-[45px] font-semibold mb-5">
-            Contact and Inquiries
+            Contact and Enquiries
           </h2>
           <p className="mb-5">
             For any queries related to placements, internship opportunities, or
             industry collaborations, please reach out to our dedicated Career
-            Development Centre. We are here to assist students, recruiters, and
+            Development Center. We are here to assist students, recruiters, and
             industry partners in building successful career pathways and
             fostering meaningful connections.
           </p>
           <p className="mb-10">
-            Company Registration Form
+            Company Registration Form{" "}
             <Link
               href="https://tinyurl.com/krmu-2025"
               className="text-blue-700"

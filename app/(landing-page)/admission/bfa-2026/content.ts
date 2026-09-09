@@ -79,15 +79,15 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/bfa-2026/recruiters/persistent.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bfa-2026/persistent.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bfa-2026/recruiters/zynga.webp",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bfa-2026/zynga.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bfa-2026/recruiters/splash.webp",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/bfa-2026/splashlearn.png",
     alt: "Recruiter Logo",
   },
 ];

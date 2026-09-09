@@ -54,7 +54,9 @@ const YRCBenefits = () => {
                   height={26}
                   alt=""
                 />{" "}
-                <span>Participation in national and state-level programs.</span>
+                <span>
+                  Participation in national and state-level programmes.
+                </span>
               </li>
               <li className="flex items-start gap-3 py-2.5">
                 <Image

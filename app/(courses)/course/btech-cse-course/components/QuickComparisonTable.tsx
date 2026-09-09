@@ -27,7 +27,7 @@ export default function QuickComparisonTable() {
         </tbody>
       </table>
 
-      <p className="my-4 text-xs text-right">**Subject to Approval</p>
+      {/* <p className="my-4 text-xs text-right">**Subject to Approval</p> */}
     </div>
   );
 }

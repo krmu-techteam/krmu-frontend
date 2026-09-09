@@ -33,10 +33,11 @@ const YRCAward = () => {
             </div>
             <div>
               <p>
-                First Prize Trophy and Certificate awarded to Ms Prakriti from
-                K.R. Mangalam University, Gurugram, for securing 1st position in
-                the Extempore Speech Competition at the State Level Youth Red
-                Cross Training Camp for Girls, held in Vrindavan.
+                The first prize trophy and certificate were awarded to Ms
+                Prakriti from K.R. Mangalam University, Gurugram, for securing
+                1st position in the Extempore Speech Competition at the State
+                Level Youth Red Cross Training Camp for Girls, held in
+                Vrindavan.
               </p>
             </div>
           </div>

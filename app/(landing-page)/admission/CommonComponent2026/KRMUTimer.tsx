@@ -92,11 +92,13 @@ export default function KRMUTimer({
       </span> */}
 
       <span
-        className={`capitalize tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-xs sm:text-sm" : "text-xs sm:text-sm"}`}
+        className={`tracking-wider font-extrabold ${mainWebsiteTimer ? "text-white text-xs sm:text-sm" : "text-xs sm:text-sm"}`}
       >
-        Final Admission Deadline: 31 July
+       Last Chance to Apply - Admissions Close on 31 August! | {!mainWebsiteTimer && "Apply Now"}
         {mainWebsiteTimer && (
-          <span className="border-b border-white border-dotted inline-block ml-2">Apply Now</span>
+          <span className="border-b border-white border-dotted inline-block ml-2">
+            Apply Now
+          </span>
         )}
         {/* {mainWebsiteTimer && (
           <span className="border-b border-white border-dotted vi text-sm text-white pb-0.5 ml-2 font-semibold inline">

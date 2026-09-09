@@ -51,12 +51,12 @@ const OverviewUpdatedSlide = ({ data }: Props) => {
                     unoptimized
                   />
 
-                  <div className="text-white mt-5 flex flex-col flex-grow items-center text-center">
+                  <div className="text-white mt-5 flex flex-col flex-grow items-center text-center temp-class">
                     <h4 className="text-xl font-semibold mb-6 line-clamp-2">
                       {item?.title}
                     </h4>
 
-                    <div className="line-clamp-2 flex-grow mb-4">
+                    <div className="line-clamp-2 mb-4">
                       <BlocksRenderer content={item.content} />
                     </div>
 

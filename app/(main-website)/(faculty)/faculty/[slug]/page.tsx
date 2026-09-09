@@ -21,7 +21,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { createPersonSchema, getWordImageById } from "@/lib/api/common";
+import {
+  createBreadcrumbSchema,
+  createPersonSchema,
+  getWordImageById,
+} from "@/lib/api/common";
 import { Metadata } from "next";
 import { origUrl } from "@/app/constant";
 import Script from "next/script";
@@ -238,6 +242,17 @@ const page = async ({ params }: Props) => {
     url: slug ? `https://krmangalam.edu.in/faculty/${slug}` : "",
   };
 
+  const breadcrumbSchema = createBreadcrumbSchema([
+    {
+      name: "Home",
+      url: "https://www.krmangalam.edu.in/",
+    },
+    {
+      name: "Faculty Page",
+      url: `https://krmangalam.edu.in/faculty/${slug}`,
+    },
+  ]);
+
   const personJsonLd = createPersonSchema(personFacultySchema);
 
   return (
@@ -248,6 +263,13 @@ const page = async ({ params }: Props) => {
         dangerouslySetInnerHTML={{ __html: personJsonLd }}
         strategy="afterInteractive"
       />
+         {breadcrumbSchema && (
+        <Script
+          id="breadcrumb-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+        />
+      )}
       <section className="faculty_container h-full w-full">
         {/* Hero Section */}
         <div className="relative bg-[#0a1d3a] overflow-hidden h-[550px]">

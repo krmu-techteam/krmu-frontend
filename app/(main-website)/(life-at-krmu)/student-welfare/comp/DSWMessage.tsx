@@ -52,14 +52,14 @@ const DSWMessage = () => {
               </div>
 
               <p className="max-w-[1060px] text-justify text-[14px] py-2 pt-2 sm:pt-0 md:pt-10  font-normal tracking-[1%] text-white md:text-[18px] ">
-                Dear Students, welcome to a vibrant community of learning,
-                innovation, and endless opportunities. Your university journey
-                is not just about earning a degree, but about discovering your
-                potential, building resilience, and shaping values that will
-                guide you throughout life. At the Department of Student Welfare,
-                we are committed to fostering your holistic
-                growth&mdash;academic, personal, cultural, emotional, and
-                social&mdash;through a supportive and inspiring campus
+                Dear Students, <br />
+                Welcome to a vibrant community of learning, innovation, and
+                endless opportunities. Your university journey is not just about
+                earning a degree but about discovering your potential, building
+                resilience, and shaping values that will guide you throughout
+                life. At the Department of Student Welfare, we are committed to
+                fostering your holistic growth—academic, personal, cultural,
+                emotional, and social—through a supportive and inspiring campus
                 environment. We encourage you to actively participate in
                 academics, leadership initiatives, co-curricular activities, and
                 community engagement, as every experience will help you grow

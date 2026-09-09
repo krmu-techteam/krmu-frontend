@@ -5,8 +5,8 @@ const StudentEncouraged = () => {
     <>
       <section className="py-[60px] pb-10 px-[30px]">
         <div className="max-w-[1664px] mx-auto w-full flex">
-          <div className="lg:w-1/2">
-            <p className="text-lg">
+          <div className="lg:w-1/2 text-lg">
+            <p>
               Students are encouraged to research the company profile online
               before deciding to participate in any recruitment process. If
               interested, they must apply online through the Career Development
@@ -31,7 +31,7 @@ const StudentEncouraged = () => {
         </div>
         <div className="max-w-[1664px] mx-auto w-full -mt-[15%] hidden lg:block">
           <Image
-            src="/programmes/placementprocessbannermidpic.webp"
+            src="https://www.krmangalam.edu.in/images/placementprocessbannermidpic-1.png"
             width={1554}
             height={724}
             alt="student encouraged"

@@ -34,6 +34,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: currentPhotoGalleryURL,
     },
+    robots: {
+      index: seo?.index !== false,
+      follow: seo?.index !== false,
+    },
   };
 }
 

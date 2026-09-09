@@ -38,16 +38,16 @@ const Admission2Hero = () => {
       <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row items-center gap-6 ">
         <div className="lg:hidden w-full z-10 pb-10 flex flex-col items-center text-center">
           <h1 className="text-[#0060aa] leading-[1.1] font-bold text-3xl md:text-5xl mb-2 ">
-            Step Into A Successful <br />
-            Future With
+            Step Into a Successful <br />
+            Future with
           </h1>
           <h2 className="text-[#0060aa] text-4xl md:text-5xl font-extrabold mb-5 ">
             K.R. Mangalam <br />
             University
           </h2>
           <p className="text-black w-full text-[14px] md:text-[20px] mb-8 font-medium  opacity-95">
-            Dive into a world of diverse programmes curated to guide <br /> you
-            on your successful journey
+            Dive Into a World of Diverse Programmes Curated to Guide <br /> You
+            on Your Successful Journey
           </p>
           <Link
             href="https://admissions.krmangalam.edu.in/"
@@ -60,12 +60,12 @@ const Admission2Hero = () => {
         </div>
         <div className="hidden lg:block lg:w-1/2">
           <h1 className="text-[#0060aa] leading-[1.2] font-semibold text-[60px] mb-2 ">
-            Step Into A Successful Future With K.R. Mangalam University
+            Step Into a Successful Future with K.R. Mangalam University
           </h1>
 
           <p className="font-semibold text-black mt-6 mb-4 ">
-            Dive into a world of diverse programmes curated to guide you on your
-            successful journey
+            Dive Into a World of Diverse Programmes Curated to Guide You on Your
+            Successful Journey
           </p>
 
           {formId && (

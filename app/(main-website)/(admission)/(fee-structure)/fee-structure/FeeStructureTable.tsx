@@ -31,15 +31,16 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
                 {tab.tab_heading}
               </TabsTrigger>
             ))}
-               <CommonLeadPopup
-            buttonText={"Download Fee Structure"}
-            buttonClassName="w-full max-w-[320px] py-2.5 px-8 bg-white font-semibold transition-all duration-300 text-sm sm:text-base rounded-md inline-block cursor-pointer text-[#6a7282] hover:text-white hover:border hover:border-white hover:bg-[#0062aa] border border-[#e5e7eb] feeStruct_btn"
-            redirectUrl={"https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Fee_Structure_2026_27_da98af3037.pdf"}
-            form_name="Download Fee Structure"
-            shadowGradient={false}
-          />
+            <CommonLeadPopup
+              buttonText={"Download Fee Structure"}
+              buttonClassName="w-full max-w-[320px] py-2.5 px-8 bg-white font-semibold transition-all duration-300 text-sm sm:text-base rounded-md inline-block cursor-pointer text-[#6a7282] hover:text-white hover:border hover:border-white hover:bg-[#0062aa] border border-[#e5e7eb] feeStruct_btn"
+              redirectUrl={
+                "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Fee_Structure_2026_27_da98af3037.pdf"
+              }
+              form_name="Download Fee Structure"
+              shadowGradient={false}
+            />
           </TabsList>
-       
         </div>
 
         {/* ------------------ DYNAMIC TAB CONTENT ------------------ */}
@@ -176,7 +177,7 @@ const FacultySection = ({ options }: { options: any[] }) => {
                 </div>
 
                 <div
-                  className="overflow-x-auto modern-fee-table scrollbar-thin scrollbar-thumb-gray-200"
+                  className={`overflow-x-auto modern-fee-table scrollbar-thin scrollbar-thumb-gray-200`}
                   dangerouslySetInnerHTML={{ __html: acc.panel_content }}
                 />
                 <div>

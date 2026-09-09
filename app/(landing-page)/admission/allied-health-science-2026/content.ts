@@ -78,35 +78,35 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/astra.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/astrazeneca.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/lupin.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/lupin.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/sun.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/sun.png",
+    alt: "Recruiter Logo",
+  },
+  { 
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/glenmark.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/glenmark.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/dr-reddy.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/drreddy.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/zydus.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/zydus.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/genzyme.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/genzyme.png",
-    alt: "Recruiter Logo",
-  },
-  {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/max.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/max.png",
     alt: "Recruiter Logo",
   },
 ];

@@ -18,7 +18,7 @@ const KREEApplyOnline = ({ appl_btn }: Props) => {
           <h3 className="font-semibold text-3xl  md:text-5xl leading-[1.5]">
             APPLY ONLINE
           </h3>
-          <p className="mb-5">Apply Online through our website</p>
+          <p className="mb-5">Apply Online Through Our Website</p>
           {appl_btn && appl_btn?.btn_link ? (
             <Link
               href={appl_btn?.btn_link}

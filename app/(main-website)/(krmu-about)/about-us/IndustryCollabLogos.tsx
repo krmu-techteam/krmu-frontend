@@ -37,7 +37,7 @@ const IndustryCollabLogos = ({ indusLogos }: IndustryCollabLogosProps) => {
                     src={`${STRAPI_URL}${logo?.url}`}
                     width={201}
                     height={115}
-                    alt={logo?.alternativeText || "Industry Colloboration Logo"}
+                    alt={logo?.alternativeText || "Industry Collaboration Logo"}
                   />
                 </CarouselItem>
               );

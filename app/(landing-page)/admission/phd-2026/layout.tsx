@@ -5,6 +5,7 @@ import "./phd2026.css";
 // import PhdHeader from "./commonComponent/PhdHeader";
 import { CommonHeader } from "../commonComponent/header/CommonHeader";
 import CommonFooter from "../commonComponent/footer/CommonFooter";
+import PhdHeaderNavbar from "../commonComponent/header/PhdHeaderNavbar";
 // import { Button } from "@/components/ui/button";
 
 const inter = Inter({
@@ -21,7 +22,7 @@ export default function PhdLandingPageLayout({
     <html lang="en">
       <head></head>
       <body className={`${inter.className} antialiased`}>
-        <CommonHeader />
+        <PhdHeaderNavbar />
         {children}
         <CommonFooter />
       </body>

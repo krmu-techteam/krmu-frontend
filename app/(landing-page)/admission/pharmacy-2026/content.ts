@@ -79,27 +79,27 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/7-pharmacy/astrazeneca.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/pharmacy-2026/astrazeneca.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/7-pharmacy/dr-reddys.webp",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/pharmacy-2026/drreddy.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/7-pharmacy/glenmark.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/pharmacy-2026/glenmark.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/7-pharmacy/lupin-seeklogo.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/pharmacy-2026/lupin.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/7-pharmacy/maxhealthcare.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/pharmacy-2026/max.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "https://www.krmangalam.edu.in/wp-content/landingpage/images/7-pharmacy/sunpharma.png",
+    imgUrl: "https://www.krmangalam.edu.in/images/landingpage/pharmacy-2026/sun.png",
     alt: "Recruiter Logo",
   },
 ];

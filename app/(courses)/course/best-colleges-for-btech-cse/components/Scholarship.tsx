@@ -62,7 +62,7 @@ const Scholarship = () => {
                 Super Achievers
               </h6>
               <p className="text-[12px] text-[#64748b]">
-                Based on Class 12 & UG Scoress
+                Based on Class 12 & UG Scores
               </p>
             </div>
           </div>
@@ -77,7 +77,7 @@ const Scholarship = () => {
                 Women Candidates
               </h6>
               <p className="text-[12px] text-[#64748b]">
-                (Shero) Scholarship Program
+                (Shero) Scholarship Programme
               </p>
             </div>
           </div>
