@@ -1843,7 +1843,7 @@ body:before {
     /* Complete Single Faculty Style */
 
     .faculty_container {
-        padding-top: 200px;
+        padding-top: 0px;
     }
 
     .faculty_main_content_container > .fusion-fullwidth > .fusion-builder-row {
@@ -1890,13 +1890,11 @@ body:before {
     }
 
     .faculty_main_content_container .tab-content .tab-pane {
-        color: #fff;
+        color: #374151;
     }
 
     .faculty_main_content_container .fusion-column-wrapper .nav > ul.nav-tabs {
-        /* display: flex;
-    justify-content: space-between; */
-        border-bottom: 1px solid #fff;
+        border-bottom: 2px solid #e5e7eb;
     }
 
     .faculty_main_content_container .fusion-column-wrapper .nav ul.nav-tabs li {
@@ -1923,12 +1921,8 @@ body:before {
         .nav
         ul.nav-tabs
         li.active {
-        background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.2) 0%,
-            rgba(255, 255, 255, 0.12) 100%
-        );
-        border-radius: 10px;
+        background: #061623;
+        border-radius: 8px;
     }
 
     .faculty_main_content_container
@@ -1938,9 +1932,9 @@ body:before {
         li
         a.tab-link
         .fusion-tab-heading {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 1.2;
-        color: #fff;
+        color: #4b5563;
         font-weight: 600;
         text-align: center;
     }
@@ -1965,6 +1959,62 @@ body:before {
 
     .faculty_main_content_container .tab-content .tab-pane.active.in {
         display: block;
+    }
+    .faculty-tab-content,
+    .faculty-tab-content * {
+        color: #ffffff !important;
+    }
+    .faculty-tab-content ul {
+        list-style-type: disc !important;
+        padding-left: 24px !important;
+        margin: 12px 0 !important;
+    }
+    .faculty-tab-content ul li {
+        margin-bottom: 8px !important;
+        line-height: 1.65 !important;
+        color: #ffffff !important;
+    }
+    .faculty-tab-content ul li::marker {
+        color: #ffffff !important;
+    }
+    .faculty-tab-content ol {
+        list-style-type: decimal !important;
+        padding-left: 24px !important;
+        margin: 12px 0 !important;
+    }
+    .faculty-tab-content ol li {
+        margin-bottom: 8px !important;
+        line-height: 1.65 !important;
+        color: #ffffff !important;
+    }
+    .faculty-tab-content ol li::marker {
+        color: #ffffff !important;
+    }
+    .faculty-tab-content p {
+        margin-bottom: 12px !important;
+        color: #ffffff !important;
+        line-height: 1.65 !important;
+    }
+    .faculty-tab-content strong,
+    .faculty-tab-content b {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+    }
+    .faculty-tab-content a {
+        color: #60a5fa !important;
+        text-decoration: underline !important;
+    }
+    .faculty-tab-content table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        margin: 16px 0 !important;
+        color: #ffffff !important;
+    }
+    .faculty-tab-content th,
+    .faculty-tab-content td {
+        padding: 8px 12px !important;
+        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        color: #ffffff !important;
     }
 
     @media (max-width: 1400px) {
@@ -2035,7 +2085,7 @@ body:before {
         }
 
         .faculty_container {
-            padding-top: 140px;
+            padding-top: 0px;
         }
 
         .faculty_main_content_container .tab-content .tab-pane {
