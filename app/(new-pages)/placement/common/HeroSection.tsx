@@ -46,7 +46,7 @@ const HeroSection = () => {
             width={522}
             height={625}
           />
-        </div>
+        </div>    
       </div>
     </section>
   );
