@@ -8,9 +8,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className=" antialiased">
-        <QueryProvider>{children}</QueryProvider>
-        <Toaster position="top-right" richColors />
+      <body className="antialiased">
+        <QueryProvider>
+          {children}
+        </QueryProvider>
+
+        <Toaster
+          position="top-right"
+          richColors
+        />
       </body>
     </html>
   );

@@ -26,4 +26,28 @@ export const cdcTeamFields: FormField[] = [
     label: "CDC Team Image",
     accept: "image/*",
   },
+  {
+    type: "text",
+    name: "sort_order",
+    label: "Number",
+    placeholder: "Enter Number",
+    required: true,
+  },
+
+  {
+    type: "select",
+    name: "status",
+    label: "Status",
+    placeholder: "Choose Status",
+    options: [
+      {
+        label: "Published",
+        value: "published",
+      },
+      {
+        label: "Draft",
+        value: "draft",
+      },
+    ],
+  },
 ];

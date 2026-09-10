@@ -2,7 +2,11 @@
 
 import { ResourceService } from "./resource.service";
 
-export function createResource<
+export function 
+
+
+
+createResource<
   TResponse,
   TCreate = unknown,
   TUpdate = TCreate,

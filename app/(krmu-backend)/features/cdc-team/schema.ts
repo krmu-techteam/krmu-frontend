@@ -16,10 +16,10 @@ export const createCdcTeamSchema = z.object({
   image: z.instanceof(File).nullable().optional(),
 
   sort_order: z
-    .number()
-    .int()
-    .min(0, "Sort order cannot be negative")
+    .string()
+    .regex(/^\d+$/, "Sort order must be a non-negative integer")
     .optional(),
+  status: z.enum(["published", "draft"]).optional(),
 });
 
 export type CreateCdcTeamDto = z.infer<typeof createCdcTeamSchema>;

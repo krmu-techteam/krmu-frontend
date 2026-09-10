@@ -23,22 +23,26 @@ export default function CdcTeamForm() {
       name: "",
       designation: "",
       email: "",
-      // image: "",
+      sort_order: "",
+      status: "published",
     },
   });
 
-  // const onSubmit = (data: CreateCdcTeamDto) => {
-  //   console.log("CDC Team data:", data);
-
-  //   // mutation.mutate(data);
-  // };
   const onSubmit = (data: CreateCdcTeamDto) => {
-    console.log("✅ SUBMIT SUCCESS:", data);
+    console.log("CDC Team data:", data);
+    mutation.mutate(data);
   };
 
   const onInvalid = (errors: any) => {
     console.log("❌ VALIDATION ERRORS:", errors);
   };
 
-  return <FormBuilder form={form} fields={cdcTeamFields} onSubmit={onSubmit} onInvalid={onInvalid} />;
+  return (
+    <FormBuilder
+      form={form}
+      fields={cdcTeamFields}
+      onSubmit={onSubmit}
+      onInvalid={onInvalid}
+    />
+  );
 }

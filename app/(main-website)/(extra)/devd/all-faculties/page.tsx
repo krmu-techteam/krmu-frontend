@@ -113,7 +113,7 @@ const page = () => {
                       return (
                         <div
                           key={i}
-                          className="overflow-hidden  border border-gray-200 bg-white shadow-sm transition hover:shadow-lg temp-class"
+                          className="overflow-hidden  border border-gray-200 bg-white shadow-sm transition hover:shadow-lg"
                         >
                           <Image
                             src={item.featured_media_url}
