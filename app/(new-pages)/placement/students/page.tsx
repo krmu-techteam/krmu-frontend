@@ -1,22 +1,22 @@
-import CorporateAdvisoryBoard from "../common/CorporateAdvisoryBoard";
-import DriveCalendar from "../common/DriveCalendar";
-import HeroSection from "../common/HeroSection";
-import MeetCDCTeam from "../common/MeetCDCTeam";
-import PolicyConduct from "../common/PolicyConduct";
 import QuickEnquiry from "../common/QuickEnquiry";
-import Registration from "../common/Registration";
-import SelectionProcess from "../common/SelectionProcess";
-import Trainers from "../common/Trainers";
+import CorporateAdvisoryBoard from "../common/student/CorporateAdvisoryBoard";
+import DriveCalendar from "../common/student/DriveCalendar";
+import Registration from "../common/student/Registration";
+import SelectionProcess from "../common/student/SelectionProcess";
+import Trainers from "../trainers/common/Trainers";
+import CDCTeam from "./common/CDCTeam";
+import PolicyConduct from "./common/PolicyConduct";
+import StudentHeroSection from "./common/StudentHeroSection";
 
 const page = () => {
   return (
-    <main className="bg-[#fbf8f3]">
-      <HeroSection />
+    <main className="bg-[#fbf8f3] font-poppins">
+      <StudentHeroSection />
       <Registration />
       <DriveCalendar />
       <SelectionProcess />
       <PolicyConduct />
-      <MeetCDCTeam />
+      <CDCTeam />
       <Trainers />
       <CorporateAdvisoryBoard />
       <QuickEnquiry />
@@ -25,4 +25,3 @@ const page = () => {
 };
 
 export default page;
- 

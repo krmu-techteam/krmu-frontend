@@ -1,86 +1,71 @@
-"use client";
-
-import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const teamMembers = [
-  {
-    name: "Dr. Vibha Thakur",
-    designation: "Director - Career Development Centre",
-    email: "director.cdc@krmangalam.edu.in",
-    image: "/images/team/vibha-thakur.jpg",
-  },
-  {
-    name: "Jharna Jagtiani",
-    designation: "Senior Manager",
-    email: "jharna.vijay.jagtiani@krmangalam.edu.in",
-    image: "/images/team/jharna-jagtiani.jpg",
-  },
-  {
-    name: "Charu Gola",
-    designation: "Assistant Manager- CDC",
-    email: "charu.gola@krmangalam.edu.in",
-    image: "/images/team/charu-gola.jpg",
-  },
-  {
-    name: "Sreejita Saha",
-    designation: "Assistant- Career Development Centre",
-    email: "sreejita.saha@krmangalam.edu.in",
-    image: "/images/team/sreejita-saha.jpg",
-  },
-];
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { cdcTeamMembers } from "../main/constant";
+import CDCTeamMember from "./CDCTeamMember";
 
 const MeetCDCTeam = () => {
   return (
-    <section className="overflow-hidden bg-[#f8f5f0] py-12 md:py-14">
-      <div className="mx-auto max-w-[1160px] px-5 md:px-8">
+    <section className="px-5 lg:px-0 pb-10 md:pb-20">
+      <div className="mx-auto w-full max-w-6xl font-poppins">
         {/* Heading */}
-        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
-          <h2 className="font-newsreader text-[38px] leading-none text-[#172a42] sm:text-[44px] md:text-[48px]">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-8">
+          <h5 className="text-4xl md:text-5xl font-semibold text-[#001836] md:mb-5 font-newsreader">
             Meet the CDC team
-          </h2>
+          </h5>
 
-          <p className="text-sm text-[#3f464d]">
+          <p className="text-sm sm:text-base">
             Guiding students from enrollment to employment.
           </p>
         </div>
 
-        {/* Team */}
-        <div className="relative mt-12">
-          {/* Cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-9">
-            {teamMembers.map((member) => (
-              <div key={member.name}>
-                {/* Image */}
-                <div className="relative aspect-[0.97/1] overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+        {/* Team Carousel */}
+        <div className="relative mt-8">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {cdcTeamMembers.map((member, i) => (
+                <CarouselItem
+                  key={i}
+                  className="basis-full pl-4 sm:basis-1/2 md:basis-1/3 xl:basis-1/4"
+                >
+                  <CDCTeamMember member={member} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
 
-                {/* Content */}
-                <div className="pt-4">
-                  <h3 className="font-newsreader text-[19px] font-semibold text-[#20262c]">
-                    {member.name}
-                  </h3>
+            {/* Navigation */}
 
-                  <p className="mt-1 text-[11px] text-[#3e4349]">
-                    {member.designation}
-                  </p>
+            <CarouselPrevious
+              className="
+                    
+                    h-9 w-9
+                    bg-black text-white
+                    hover:bg-black/80
+                    left-0
+                    xl:-left-10
+                  "
+            />
 
-                  <a
-                    href={`mailto:${member.email}`}
-                    className="mt-1.5 block text-[11px] text-[#3e4349] hover:underline"
-                  >
-                    {member.email}
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
+            <CarouselNext
+              className="
+                    h-9 w-9
+                    bg-black text-white
+                    hover:bg-black/80
+                    right-0
+                    xl:-right-10
+                  "
+            />
+          </Carousel>
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@ import ContactUsForm from "./ContactUsForm";
 
 const ContactUsHero = () => {
   return (
-    <section className="pt-[140px] md:pt-[15%] pb-[5%] px-5 bg-[url(/contact-us/contact-us-bg.webp)] bg-cover bg-no-repeat bg-center">
+    <section className="pt-[140px] md:pt-[15%] pb-[5%] px-5 bg-[url(/contact-us/contact-us-bg.webp)] bg-cover bg-no-repeat bg-center temp-class">
       <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row gap-5 md:gap-16 items-end">
         <div className="lg:w-2/5">
           <div>

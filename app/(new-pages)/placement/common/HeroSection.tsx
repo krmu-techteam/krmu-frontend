@@ -1,52 +1,52 @@
-import { Newsreader } from "next/font/google";
 import Image from "next/image";
-
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section>
-      <div className="container mx-auto max-w-[1287px] border-b border-[#ccc] py-10  md:py-14 lg:py-16 xl:py-20">
-        <div className="flex flex-col items-center justify-between gap-10 md:flex-row md:gap-8 lg:gap-12">
-          {/* Content */}
-          <div className="w-full md:w-1/2">
-            <p className="mb-3 text-sm font-medium uppercase tracking-wider text-[#7A1F2B] sm:text-base">
-              For Students
-            </p>
-
-            <h1
-              className={`${newsreader.className} mb-5 text-4xl font-semibold leading-[1.15] sm:text-5xl md:text-[48px] lg:text-6xl lg:leading-[70px]`}
+    <section className="relative pt-28 xl:pt-40 bg-[url('/placements/main/pl-hero-bg-image.webp')] bg-cover bg-left-top">
+      {/* <Image
+        src=""
+        alt="Hero Background"
+        fill
+        className="object-cover object-left w-full"
+        priority 
+      /> */}
+      <div className="max-w-6xl mx-auto w-full z-10 relative flex flex-col md:flex-row items-center lg:items-start px-5 xl:px-0 gap-5 sm:gap-0">
+        <div className="w-full md:w-1/2 font-poppins">
+          <h3 className="text-base font-medium tracking-[0.4em] uppercase text-[#8d5552] mb-1.5">
+            Placement
+          </h3>
+          <h1 className="text-4xl lg:text-6xl font-semibold text-[#001836] mb-2 md:mb-6 md:max-w-sm font-newsreader">
+            Your Career Starts Here. 92% placed.
+          </h1>
+          <p className="text-xl md:max-w-[468px] mb-6">
+            Verifiable data, exceptional outcomes. Discover why top global
+            recruiters consistently choose our graduates for leadership roles.
+          </p>
+          <div className="space-x-2 space-y-2">
+            <Link
+              href="#"
+              className="bg-[#001836] border border-[#001836] text-white py-3 px-5 shadow-[0px_6px_16px_rgba(0,23,51,0.25)] inline-block"
             >
-              Comprehensive <br className="hidden lg:block" />
-              placement guidelines, <br className="hidden lg:block" />
-              schedules and policies.
-            </h1>
-
-            <p className="mb-7 text-base leading-relaxed sm:text-lg md:mb-8 lg:mb-10 lg:text-xl">
-              For the current academic year. Review all requirements before
-              portal access.
-            </p>
-
-            <button className="w-full max-w-[224px] bg-[#001836] px-6 py-3 text-base text-white transition duration-300 hover:bg-[#002957] sm:px-10 sm:text-lg">
-              Book your slot
-            </button>
-          </div>
-
-          {/* Image */}
-          <div className="w-full md:w-1/2">
-            <Image
-              src="/test/img-1.jpg"
-              alt="Hero Image"
-              width={606}
-              height={387}
-              className="h-auto w-full"
-              priority
-            />
+              View Detailed Report
+            </Link>
+            <Link
+              href="#"
+              className="border border-[#001836] text-[#001732] bg-white xl:bg-transparent py-3 px-5 inline-block"
+            >
+              Partner with Us
+            </Link>
           </div>
         </div>
+        <div className="w-full md:w-1/2 flex justify-center">
+          <Image
+            src="/placements/main/pl-hero-girl.webp"
+            alt="Hero Girl"
+            className="object-contain w-[320px] sm:w-fit"
+            width={522}
+            height={625}
+          />
+        </div>    
       </div>
     </section>
   );
