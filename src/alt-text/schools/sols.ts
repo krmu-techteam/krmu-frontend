@@ -42,20 +42,25 @@ export const solsAltConfig: SchoolAltConfig = {
     },
 
     knowledgePartners: {
-        "Knowledge Partner Logo":
-            "SOLS knowledge partner logo — needs actual partner name",
+        "Pahuja Law Academy":
+            "SOLS knowledge partner - Pahuja Law Academy logo",
+        "Knowledge Steez": "SOLS knowledge partner - Knowledge Steez logo",
+        "Vrankers Judiciary":
+            "SOLS knowledge partner - Vrankers Judiciary logo",
+        "Pulastya Legal":
+            "SOLS knowledge partner - Pulastya Legal Advocates and Legal Consultants logo",
+        "Karat Law Academy": "SOLS knowledge partner - Karat Law Academy logo",
+        "Knowledge Partner Logo": "SOLS knowledge partner logo",
         Group_489_a95518f87f:
-            "SOLS knowledge partner logo 1 — needs actual partner name",
-        Group_490_55f81433d8:
-            "SOLS knowledge partner logo 2 — needs actual partner name",
+            "SOLS knowledge partner - Pahuja Law Academy logo",
+        Group_490_55f81433d8: "SOLS knowledge partner - Knowledge Steez logo",
         Group_489_1_b3adf79477:
-            "SOLS knowledge partner logo 3 — needs actual partner name",
+            "SOLS knowledge partner - Pahuja Law Academy logo",
         Group_488_1_77f6fd1425:
-            "SOLS knowledge partner logo 4 — needs actual partner name",
+            "SOLS knowledge partner - Vrankers Judiciary logo",
         Group_492_89cf898eea:
-            "SOLS knowledge partner logo 5 — needs actual partner name",
-        Group_491_9797007f91:
-            "SOLS knowledge partner logo 6 — needs actual partner name",
+            "SOLS knowledge partner - Pulastya Legal Advocates and Legal Consultants logo",
+        Group_491_9797007f91: "SOLS knowledge partner - Karat Law Academy logo",
     },
 
     testimonials: {
@@ -199,17 +204,17 @@ export const solsAltConfig: SchoolAltConfig = {
 
         // Knowledge Partner Logos
         "Group_489_a95518f87f.webp":
-            "SOLS knowledge partner logo 1 — needs actual partner name",
+            "SOLS knowledge partner - Pahuja Law Academy logo",
         "Group_490_55f81433d8.webp":
-            "SOLS knowledge partner logo 2 — needs actual partner name",
+            "SOLS knowledge partner - Knowledge Steez logo",
         "Group_489_1_b3adf79477.webp":
-            "SOLS knowledge partner logo 3 — needs actual partner name",
+            "SOLS knowledge partner - Pahuja Law Academy logo",
         "Group_488_1_77f6fd1425.webp":
-            "SOLS knowledge partner logo 4 — needs actual partner name",
+            "SOLS knowledge partner - Vrankers Judiciary logo",
         "Group_492_89cf898eea.webp":
-            "SOLS knowledge partner logo 5 — needs actual partner name",
+            "SOLS knowledge partner - Pulastya Legal Advocates and Legal Consultants logo",
         "Group_491_9797007f91.webp":
-            "SOLS knowledge partner logo 6 — needs actual partner name",
+            "SOLS knowledge partner - Karat Law Academy logo",
 
         // Dean & Faculty Photos
         "Prof_Dr_Kaveri_Sharma_e110458c11.png":

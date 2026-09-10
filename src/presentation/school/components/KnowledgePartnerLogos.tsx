@@ -14,6 +14,28 @@ type Props = {
 const KnowledgePartnerLogos = ({ logos = [], speed = 50, slug }: Props) => {
     const [isMarquee, setIsMarquee] = useState(false);
 
+    const cleanLogos = useMemo(() => {
+        if (!logos || !logos.length) return [];
+        const seen = new Set<string>();
+        return logos.filter((logo) => {
+            const alt = resolveKnowledgePartnerAlt(
+                slug,
+                logo?.url || logo?.alternativeText,
+                logo?.alternativeText || "Knowledge Partner Logo"
+            );
+            const isGeneric =
+                !alt ||
+                alt.toLowerCase() === "knowledge partner logo" ||
+                alt.toLowerCase().includes("needs actual partner name");
+            const key = isGeneric ? logo?.url : alt;
+            if (key && seen.has(key)) {
+                return false;
+            }
+            if (key) seen.add(key);
+            return true;
+        });
+    }, [logos, slug]);
+
     useEffect(() => {
         const handleResize = () => {
             const width = window.innerWidth;
@@ -27,30 +49,30 @@ const KnowledgePartnerLogos = ({ logos = [], speed = 50, slug }: Props) => {
             } else {
                 threshold = 6;
             }
-            setIsMarquee(logos.length > threshold);
+            setIsMarquee(cleanLogos.length > threshold);
         };
 
         handleResize();
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
-    }, [logos.length]);
+    }, [cleanLogos.length]);
 
     const displayLogos = useMemo(() => {
-        if (!logos || !logos.length) return [];
+        if (!cleanLogos || !cleanLogos.length) return [];
         if (isMarquee) {
-            return [...logos, ...logos, ...logos];
+            return [...cleanLogos, ...cleanLogos, ...cleanLogos];
         }
-        return logos;
-    }, [logos, isMarquee]);
+        return cleanLogos;
+    }, [cleanLogos, isMarquee]);
 
-    if (!logos || !logos.length) return null;
+    if (!cleanLogos || !cleanLogos.length) return null;
 
     if (!isMarquee) {
         // 6 or fewer logos: centered single-row flex layout without wrapping
         return (
             <div className="max-w-[1530px] mx-auto w-full py-2">
                 <div className="flex flex-nowrap items-center justify-center gap-4 lg:gap-5 overflow-x-auto no-scrollbar">
-                    {logos.map((logo, index) => (
+                    {cleanLogos.map((logo, index) => (
                         <div
                             key={`${logo?.id || index}-${index}`}
                             className="bg-white rounded-[4px] p-1.5 sm:p-2 flex justify-center items-center shadow-md w-[140px] sm:w-[165px] md:w-[180px] lg:w-[190px] xl:w-[206px] 2xl:w-[210px] h-[90px] sm:h-[105px] xl:h-[110px] shrink-0 transition-transform duration-300 hover:scale-[1.02]"
