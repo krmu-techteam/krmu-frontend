@@ -1,6 +1,7 @@
 import { STRAPI_URL } from "@/app/constant";
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
+import { resolveFacultyAlt } from "@/alt-text";
 
 type Props = {
     name: string;
@@ -8,9 +9,16 @@ type Props = {
     qual: string;
     desg: string;
     slug: string;
+    schoolCat?: string;
 };
 
-export const AdvisoryCard = ({ name, imgUrl, qual, desg }: Props) => {
+export const AdvisoryCard = ({
+    name,
+    imgUrl,
+    qual,
+    desg,
+    schoolCat,
+}: Props) => {
     return (
         <div className="overflow-hidden bg-[#061623] transition-all duration-300 ease-in-out group flex flex-col font-poppins w-full h-full rounded-[4px]">
             {/* IMAGE SECTION */}
@@ -29,7 +37,7 @@ export const AdvisoryCard = ({ name, imgUrl, qual, desg }: Props) => {
                     src={`${STRAPI_URL}${imgUrl}`}
                     width={272}
                     height={295}
-                    alt={name}
+                    alt={resolveFacultyAlt(schoolCat, name || imgUrl, name)}
                     className="h-full w-full relative z-10 object-contain object-bottom group-hover:scale-[1.03] duration-500 ease"
                 />
             </div>

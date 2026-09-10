@@ -7,6 +7,7 @@ const TestimonialsSection = ({
     title,
     desc,
     testis,
+    slug,
 }: TestimonialSectionProps) => {
     return (
         <section
@@ -42,6 +43,7 @@ const TestimonialsSection = ({
                                     edu={testimonial?.education}
                                     desc={testimonial?.info}
                                     img={testimonial?.userimg}
+                                    slug={slug}
                                 />
                             ))}
                     </Carousel>

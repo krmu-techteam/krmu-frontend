@@ -3,6 +3,7 @@ import SectionDivider from "@/components/common/SectionDivider";
 import { ADVANTAGES_SECTION_IMAGES } from "@/features/school";
 import { CardWithImage, StrapiMedia } from "@/lib/types/common";
 import Image from "next/image";
+import { resolveAdvantageAlt, getSchoolAlt } from "@/alt-text";
 
 type Props = {
     heading: string;
@@ -47,7 +48,12 @@ const AdvantagesSection = ({
                     <div className="hidden lg:block lg:w-[464px] shrink-0 relative h-[480px] sm:h-[540px] lg:h-[600px] ml-2 lg:ml-5 rounded-[11px] overflow-hidden group z-10">
                         <Image
                             src={imgSrc}
-                            alt={heading || "Advantage"}
+                            alt={getSchoolAlt(
+                                slug,
+                                "advantage",
+                                "mainImage",
+                                heading || "Advantage"
+                            )}
                             fill
                             sizes="(max-width: 1024px) 100vw, 464px"
                             className="object-contain object-center"
@@ -100,9 +106,11 @@ const AdvantagesSection = ({
                                                     src={iconSrc}
                                                     width={44}
                                                     height={44}
-                                                    alt={
+                                                    alt={resolveAdvantageAlt(
+                                                        slug,
+                                                        advcard?.title,
                                                         advcard?.title || "Icon"
-                                                    }
+                                                    )}
                                                     className="w-full h-full object-contain filter brightness-0 invert"
                                                 />
                                             </div>

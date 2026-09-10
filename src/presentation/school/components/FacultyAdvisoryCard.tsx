@@ -8,12 +8,15 @@ import * as cheerio from "cheerio";
 import { Mail } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 
+import { resolveFacultyAlt } from "@/alt-text";
+
 type Props = {
     name: string;
     desg: string;
     slug: string;
     qual: string;
     imgURL: string;
+    schoolCat?: string;
 };
 
 type SocialItem = {
@@ -27,6 +30,7 @@ export const FacultyAdvisoryCard = ({
     slug,
     qual,
     imgURL,
+    schoolCat,
 }: Props) => {
     const [facultyContent, setFacultyContent] = useState<string | null>(null);
 
@@ -167,7 +171,7 @@ export const FacultyAdvisoryCard = ({
                         src={imgURL}
                         width={272}
                         height={295}
-                        alt={name}
+                        alt={resolveFacultyAlt(schoolCat, name || imgURL, name)}
                         priority={false}
                         className="relative z-10 h-full w-full object-contain object-bottom transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                     />

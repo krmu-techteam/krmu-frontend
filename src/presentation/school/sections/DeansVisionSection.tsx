@@ -4,6 +4,7 @@ import { Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { DeanSectionProps } from "@/features/school";
+import { resolveDeanAlt } from "@/alt-text";
 
 const DeanSection = ({
     title,
@@ -13,7 +14,9 @@ const DeanSection = ({
     desg,
     desc,
     deanImgUrl,
+    slug,
 }: DeanSectionProps) => {
+    const finalAlt = resolveDeanAlt(slug, deanName || deanImgUrl, deanName);
     return (
         <section className="pt-10 md:pt-12 xl:pt-20  bg-transparent font-poppins relative overflow-hidden">
             <div className="max-w-[1440px] mx-auto w-full relative z-10 px-4 md:px-8 lg:px-12">
@@ -25,7 +28,7 @@ const DeanSection = ({
                                 src={`${STRAPI_URL}${deanImgUrl}`}
                                 width={358}
                                 height={465}
-                                alt={deanName}
+                                alt={finalAlt}
                                 className="w-full h-auto object-contain -scale-x-100"
                             />
                         </div>

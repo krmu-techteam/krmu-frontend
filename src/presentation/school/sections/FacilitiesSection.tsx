@@ -5,12 +5,14 @@ import { Carousel } from "@/components/common/Carousel";
 import { FacilitySlide } from "@/lib/types/schools";
 import { STRAPI_URL } from "@/app/constant";
 import SectionDivider from "@/components/common/SectionDivider";
+import { resolveFacilityAlt } from "@/alt-text";
 
 type Props = {
     fac_slides: FacilitySlide[];
+    slug?: string;
 };
 
-const FacilitiesSection = ({ fac_slides }: Props) => {
+const FacilitiesSection = ({ fac_slides, slug }: Props) => {
     return (
         <section className="relative w-full pb-6 xl:pb-14 pt-10  xl:pt-20 overflow-hidden font-poppins">
             {/* Precision Spec Glow (Bottom Left) */}
@@ -43,7 +45,11 @@ const FacilitiesSection = ({ fac_slides }: Props) => {
                             {slide?.facility_img?.url && (
                                 <Image
                                     src={`${STRAPI_URL}${slide.facility_img.url}`}
-                                    alt={slide.title || ""}
+                                    alt={resolveFacilityAlt(
+                                        slug,
+                                        slide?.facility_img?.url || slide.title,
+                                        slide.title || "Campus Facility"
+                                    )}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-1000"
                                     sizes="(max-width: 768px) 100vw, 720px"

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { resolveJourneyStepAlt } from "@/alt-text";
 
 type Step = {
     number: number;
@@ -70,6 +71,7 @@ type MobileStepProps = {
     linkUrl?: string;
     shadowColor?: string;
     isActive?: boolean;
+    slug?: string;
 };
 
 export function CommenceJourneyMobileStepCard({
@@ -80,6 +82,7 @@ export function CommenceJourneyMobileStepCard({
     linkUrl,
     shadowColor = "0px 4px 12px rgba(29, 66, 197, 0.15)",
     isActive = false,
+    slug,
 }: MobileStepProps) {
     return (
         <div
@@ -101,7 +104,7 @@ export function CommenceJourneyMobileStepCard({
                     src={iconSrc}
                     width={22}
                     height={22}
-                    alt={title}
+                    alt={resolveJourneyStepAlt(slug, title || iconSrc, title)}
                     className={iconSrc.includes("start01") ? "p-0.5" : ""}
                 />
             </span>

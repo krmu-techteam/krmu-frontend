@@ -5,6 +5,8 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 import { LuX } from "react-icons/lu";
 
+import { resolveVideoThumbnailAlt, resolvePlayIconAlt } from "@/alt-text";
+
 type Props = {
     videoUrl: string;
     thumbnail?: string;
@@ -13,6 +15,9 @@ type Props = {
     imgClassName?: string;
     playIcon?: boolean;
     inline?: boolean;
+    slug?: string;
+    thumbnailAlt?: string;
+    playIconAlt?: string;
 };
 
 export default function YoutubePopup({
@@ -23,6 +28,9 @@ export default function YoutubePopup({
     imgClassName,
     playIcon,
     inline = false,
+    slug,
+    thumbnailAlt,
+    playIconAlt,
 }: Props) {
     const [open, setOpen] = useState(false);
     const [isPlayingInline, setIsPlayingInline] = useState(false);
@@ -118,7 +126,10 @@ export default function YoutubePopup({
             >
                 <Image
                     src={thumbnailUrl}
-                    alt={title}
+                    alt={
+                        thumbnailAlt ||
+                        resolveVideoThumbnailAlt(slug, thumbnailUrl, title)
+                    }
                     width={800}
                     height={450}
                     className={`w-full h-full rounded-md ${imgClassName || "object-cover"}`}
@@ -130,7 +141,10 @@ export default function YoutubePopup({
                             <Image
                                 fill
                                 src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/play_icon_colorful_6ca9565f28.svg"
-                                alt="playicon"
+                                alt={
+                                    playIconAlt ||
+                                    resolvePlayIconAlt(slug, "playicon")
+                                }
                             />
                         </div>
                     </div>

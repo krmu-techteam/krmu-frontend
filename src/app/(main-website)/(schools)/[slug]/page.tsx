@@ -372,6 +372,7 @@ export default async function Page({ params }: Props) {
                 <AlumniSection
                     title={school?.alumnititle}
                     alumniLogos={schoolsLogosData}
+                    slug={slug}
                 />
             )}
             <div className="relative pt-10 md:pt-12 xl:pt-20 pb-5 md:pb-12 xl:pb-20">
@@ -465,6 +466,7 @@ export default async function Page({ params }: Props) {
                     title={school?.tetimonialtitle}
                     desc={school?.testimonialdesc}
                     testis={school?.testimonials}
+                    slug={slug}
                 />
             )}
             {school?.showdeaninfo && (
@@ -476,6 +478,7 @@ export default async function Page({ params }: Props) {
                     subtitle={school?.deanvisionsubtitle}
                     desc={school?.deancontent}
                     deanImgUrl={school?.deanimg?.url}
+                    slug={slug}
                 />
             )}
             {school?.fac_adv && (
@@ -509,7 +512,10 @@ export default async function Page({ params }: Props) {
         />
       )} */}
             {school?.facility_slide && (
-                <FacilitiesSection fac_slides={school?.facility_slide} />
+                <FacilitiesSection
+                    fac_slides={school?.facility_slide}
+                    slug={slug}
+                />
             )}
             {school?.commence_journey && (
                 <CommenceJourneySection
@@ -520,6 +526,7 @@ export default async function Page({ params }: Props) {
                     imgUrl={school?.commence_journey?.commence_img?.url}
                     btn={school?.commence_journey?.commence_btn}
                     admBtn={school?.admissionbtn}
+                    slug={slug}
                 />
             )}
         </>

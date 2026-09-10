@@ -3,6 +3,7 @@ import { OVERVIEW_SECTION_IMAGES } from "@/features/school";
 import { OverviewSectionProps } from "@/features/school";
 import { StatCard } from "@/presentation/school/components";
 import SectionDivider from "@/components/common/SectionDivider";
+import { resolveProgrammeIntroAlt } from "@/alt-text";
 
 const OverviewSection = ({
     heading,
@@ -42,7 +43,10 @@ const OverviewSection = ({
                         src={OVERVIEW_SECTION_IMAGES[slug] || "/info.webp"}
                         width={600}
                         height={600}
-                        alt={heading || "Overview"}
+                        alt={resolveProgrammeIntroAlt(
+                            slug,
+                            heading || "Overview"
+                        )}
                         className="w-full h-auto object-cover rounded-[2px] sm:rounded-[4px]"
                         unoptimized
                     />

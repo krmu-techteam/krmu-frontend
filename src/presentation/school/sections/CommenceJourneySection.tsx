@@ -11,6 +11,7 @@ import {
     CommenceJourneyStepCard,
     CommenceJourneyMobileStepCard,
 } from "@/presentation/school/components";
+import { resolveJourneyStepAlt } from "@/alt-text";
 
 type Props = {
     highlight_heading: string;
@@ -21,6 +22,7 @@ type Props = {
         buttonlink?: string;
         buttontext?: string;
     };
+    slug?: string;
 };
 
 const CommenceJourneySection = ({
@@ -29,6 +31,7 @@ const CommenceJourneySection = ({
     imgUrl,
     btn,
     admBtn,
+    slug,
 }: Props) => {
     const [activeStep] = useState(5); // Static active step at index 5 (Step 6)
 
@@ -149,7 +152,11 @@ const CommenceJourneySection = ({
                             <div className="relative z-10 w-[600px] max-w-[600px] h-[720px]">
                                 <Image
                                     src="/images/school/commence-journey/girl.png"
-                                    alt="Commence Journey Student"
+                                    alt={resolveJourneyStepAlt(
+                                        slug,
+                                        "banner",
+                                        "6-step admission journey banner at KRMU School of Legal Studies"
+                                    )}
                                     width={600}
                                     height={720}
                                     className="object-contain object-bottom w-full h-full scale-115 lg:scale-135 2xl:scale-125 origin-bottom"
@@ -207,32 +214,38 @@ const CommenceJourneySection = ({
                             linkText="admissions.krmangalam.edu.in"
                             linkUrl="https://admissions.krmangalam.edu.in/"
                             iconSrc="/schools/start01.svg"
+                            slug={slug}
                         />
                         <CommenceJourneyMobileStepCard
                             title="Complete payment and submit"
                             desc="Pay the required Application Fee"
                             iconSrc="/schools/card.svg"
+                            slug={slug}
                         />
                         <CommenceJourneyMobileStepCard
                             title="Take an entrance test"
                             desc="K.R. Mangalam University Entrance Examination (KREE)"
                             iconSrc="/schools/doc.svg"
+                            slug={slug}
                         />
                         <CommenceJourneyMobileStepCard
                             title="Appear for interaction"
                             desc="Attend our Faculty-Led Interview."
                             iconSrc="/schools/communications.svg"
+                            slug={slug}
                         />
                         <CommenceJourneyMobileStepCard
                             title="Get the admission offer"
                             desc="You will receive the offer letter after the successful interaction"
                             iconSrc="/schools/business-people.svg"
+                            slug={slug}
                         />
                         <CommenceJourneyMobileStepCard
                             title="Get Enrolled"
                             desc="Be prepared to embark on your journey"
                             iconSrc="/schools/like.svg"
                             isActive={true}
+                            slug={slug}
                         />
                     </div>
 

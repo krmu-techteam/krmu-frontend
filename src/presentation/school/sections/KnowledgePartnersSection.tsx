@@ -65,7 +65,7 @@ const KnowledgePartnersSection = ({
                         hasCoeCards ? "mb-8 lg:mb-12" : ""
                     }`}
                 >
-                    <KnowledgePartnerLogos logos={logos} />
+                    <KnowledgePartnerLogos logos={logos} slug={slug} />
                 </div>
 
                 {/* COE Dark Blue Gradient Cards (No photo images) */}

@@ -1,15 +1,18 @@
 import { STRAPI_URL } from "@/app/constant";
 import { StrapiMedia } from "@/lib/types/common";
 import Image from "next/image";
+import { resolveTestimonialAlt } from "@/alt-text";
 
 type Props = {
     name: string;
     edu: string;
     desc: string;
     img: StrapiMedia;
+    slug?: string;
 };
 
-export default function TestimonialCard({ name, edu, desc, img }: Props) {
+export default function TestimonialCard({ name, edu, desc, img, slug }: Props) {
+    const finalAlt = resolveTestimonialAlt(slug, name || img?.url, name);
     return (
         <div className=" border-3 border-[#003560] rounded-[15px] p-4 md:p-6 sm:p-8 h-full flex flex-col xl:flex-row gap-6">
             <div className="shrink-0">
@@ -19,7 +22,7 @@ export default function TestimonialCard({ name, edu, desc, img }: Props) {
                             src={`${STRAPI_URL}${img?.url}`}
                             fill
                             className="object-contain"
-                            alt={name}
+                            alt={finalAlt}
                         />
                     )}
                 </div>

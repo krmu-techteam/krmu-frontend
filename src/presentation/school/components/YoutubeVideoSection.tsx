@@ -5,9 +5,10 @@ import YoutubePopup from "@/app/(main-website)/(school-programmes)/school-progra
 type Props = {
     thumbnail: string;
     ytUrl: string;
+    slug?: string;
 };
 
-export default function YoutubeVideoSection({ thumbnail, ytUrl }: Props) {
+export default function YoutubeVideoSection({ thumbnail, ytUrl, slug }: Props) {
     return (
         <section className="w-full">
             <div className="w-full">
@@ -18,6 +19,7 @@ export default function YoutubeVideoSection({ thumbnail, ytUrl }: Props) {
                     imgClassName="object-cover scale-[1.01]"
                     inline={true}
                     playIcon={true}
+                    slug={slug}
                 />
             </div>
         </section>

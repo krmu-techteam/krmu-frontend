@@ -12,6 +12,7 @@ import {
 import { Download, ArrowRightCircle, ArrowUpRight } from "lucide-react";
 import { splitTitleByFor } from "@/features/school";
 import SchoolHeroSlider from "@/app/(main-website)/(school-programmes)/school-programmes-component/SchoolHeroSlider";
+import { resolveHeroAlt } from "@/alt-text";
 
 type Props = {
     title: string;
@@ -266,7 +267,10 @@ const HeroSection = ({
                             src={mobileBgImg}
                             width={640}
                             height={640}
-                            alt=""
+                            alt={resolveHeroAlt(
+                                slug,
+                                title || "School Hero Banner"
+                            )}
                             className={`${notCutoutBg ? "h-full" : "h-[400px]"} w-full object-cover object-top`}
                         />
                     </div>
@@ -279,7 +283,10 @@ const HeroSection = ({
                             src={middleimg}
                             width={492}
                             height={700}
-                            alt={title || ""}
+                            alt={resolveHeroAlt(
+                                slug,
+                                title || "School Hero Banner"
+                            )}
                             className={`object-contain max-h-[85vh] 2xl:max-h-[700px] ${slug === "school-of-architecture-design" ? "w-[450px]" : ""} z-10 relative`}
                             priority
                         />
@@ -387,7 +394,10 @@ const HeroSection = ({
                                             src={middleimg}
                                             width={600}
                                             height={600}
-                                            alt={title || ""}
+                                            alt={resolveHeroAlt(
+                                                slug,
+                                                title || "School Hero Banner"
+                                            )}
                                             className="object-contain z-10 w-[200px] md:h-[400px] xl:h-full sm:w-full relative"
                                             priority
                                         />
@@ -473,6 +483,7 @@ const HeroSection = ({
                                         <YoutubeVideoSection
                                             thumbnail={thumbnail}
                                             ytUrl={videoUrl}
+                                            slug={slug}
                                         />
                                     </div>
                                 </div>
