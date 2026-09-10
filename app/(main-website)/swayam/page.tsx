@@ -1,4 +1,7 @@
 import SwayamStaticPage from "@/src/presentation/static-pages/swayam";
+import NotFound from "../not-found";
+
+const isLive = false;
 
 export const metadata = {
   title: "SWAYAM - K.R. Mangalam University",
@@ -7,6 +10,10 @@ export const metadata = {
 };
 
 const SwayamPage = () => {
+  if (!isLive) {
+    NotFound();
+  }
+
   return <SwayamStaticPage />;
 };
 
