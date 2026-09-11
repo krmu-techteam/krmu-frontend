@@ -4888,21 +4888,21 @@ body:before {
 .krmu-marquee-top {
     display: flex !important;
     width: max-content !important;
-    animation: krmuMarqueeLeft 45s linear infinite !important;
+    animation: krmuMarqueeLeft 120s linear infinite !important;
     will-change: transform;
 }
 
 .krmu-marquee-bottom {
     display: flex !important;
     width: max-content !important;
-    animation: krmuMarqueeRight 48s linear infinite !important;
+    animation: krmuMarqueeRight 130s linear infinite !important;
     will-change: transform;
 }
 
 .krmu-marquee-reverse {
     display: flex !important;
     width: max-content !important;
-    animation: krmuMarqueeRight 48s linear infinite !important;
+    animation: krmuMarqueeRight 80s linear infinite !important;
     will-change: transform;
 }
 

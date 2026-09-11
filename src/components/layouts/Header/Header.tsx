@@ -31,11 +31,19 @@ const Header = ({
     }, [pathname]);
 
     useEffect(() => {
+        let ticking = false;
         const handler = () => {
-            if (window.scrollY > 40) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const scrollY = window.scrollY;
+                    if (scrollY > 40) {
+                        setIsScrolled(true);
+                    } else if (scrollY < 10) {
+                        setIsScrolled(false);
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
         };
         window.addEventListener("scroll", handler, { passive: true });
@@ -67,18 +75,24 @@ const Header = ({
             Register Now
           </Link>
         </div> */}
-                <div className="transition-all duration-300 backdrop-blur-md shadow-sm bg-[#061623]">
+                <div className="backdrop-blur-md shadow-sm bg-[#061623] transition-[background-color,box-shadow] duration-300">
                     <div
-                        className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                            isScrolled
-                                ? "max-h-0 opacity-0 -translate-y-2 pointer-events-none"
-                                : "max-h-16 opacity-100 translate-y-0"
-                        }`}
+                        style={{
+                            display: "grid",
+                            gridTemplateRows: isScrolled ? "0fr" : "1fr",
+                            opacity: isScrolled ? 0 : 1,
+                            transition:
+                                "grid-template-rows 450ms cubic-bezier(0.16, 1, 0.3, 1), opacity 350ms cubic-bezier(0.16, 1, 0.3, 1)",
+                            pointerEvents: isScrolled ? "none" : "auto",
+                            willChange: "grid-template-rows, opacity",
+                        }}
                     >
-                        <Topbar
-                            topbarmenu={topbarmenu}
-                            sociallinks={topbarsociallinks}
-                        />
+                        <div className="overflow-hidden min-h-0">
+                            <Topbar
+                                topbarmenu={topbarmenu}
+                                sociallinks={topbarsociallinks}
+                            />
+                        </div>
                     </div>
                     <Navbar
                         handleMobileMenu={handleMobileMenu}
