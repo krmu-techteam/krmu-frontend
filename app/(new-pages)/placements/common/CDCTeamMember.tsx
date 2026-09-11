@@ -1,38 +1,48 @@
+import { CDCTeamMember as CDCMember } from "@/app/(krmu-backend)/lib/api/cdc-team/cdc-team.types";
 import Image from "next/image";
 import Link from "next/link";
-import { CDCTeamMemberData } from "../constant";
-
 
 interface CDCTeamMemberProps {
-  member: CDCTeamMemberData;
+  member: CDCMember;
 }
 
+const FALLBACK_IMAGE = "/images/placeholder-person.jpg";
+
 const CDCTeamMember = ({ member }: CDCTeamMemberProps) => {
+  const imageSrc = member.image?.trim() || FALLBACK_IMAGE;
+  const name = member.name?.trim() || "CDC Team Member";
+  const designation = member.designation?.trim();
+  const email = member.email?.trim();
+
   return (
-    <div className="font-poppins">
-      <Image
-        src={member.image}
-        alt={member.imageAlt}
-        width={264}
-        height={264}
-        className="h-auto w-full max-w-[264px] object-cover"
-      />
+    <article className="font-poppins">
+      <div className="relative aspect-square w-full max-w-[264px] overflow-hidden rounded-md bg-gray-100">
+        <Image
+          src={imageSrc}
+          alt={`${name}${designation ? ` - ${designation}` : ""}`}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1280px) 33vw, 264px"
+          className="object-cover"
+        />
+      </div>
 
       <div className="mt-5 text-sm">
         <h5 className="font-newsreader text-[22px] font-semibold leading-tight">
-          {member.name}
+          {name}
         </h5>
 
-        <h6 className="mt-1">{member.designation}</h6>
+        {designation && <h6 className="mt-1">{designation}</h6>}
 
-        <Link
-          href={`mailto:${member.email}`}
-          className="break-all hover:underline"
-        >
-          {member.email}
-        </Link>
+        {email && (
+          <Link
+            href={`mailto:${email}`}
+            className="block break-all hover:underline"
+          >
+            {email}
+          </Link>
+        )}
       </div>
-    </div>
+    </article>
   );
 };
 

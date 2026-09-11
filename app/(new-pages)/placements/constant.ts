@@ -229,7 +229,7 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
 export interface CDCTeamMemberData {
   id: number;
   image: string;
-  imageAlt: string;
+  imageAlt?: string;
   name: string;
   designation: string;
   email: string;

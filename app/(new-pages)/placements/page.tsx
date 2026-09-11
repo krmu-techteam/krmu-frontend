@@ -20,7 +20,7 @@ const page = () => {
       <OurTopRecruiter />
       <InterviewSuccessStories />
       <PlacementResources />
-      <MeetCDCTeam />
+      <MeetCDCTeam /> 
       <QuickEnquiry />
     </main>
   );

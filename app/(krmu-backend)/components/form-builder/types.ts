@@ -33,9 +33,14 @@ export interface SelectFieldConfig extends BaseFieldConfig {
   options: SelectOption[];
 }
 
+export interface DateFieldConfig extends BaseFieldConfig {
+  type: "date";
+}
+
 export type FormField =
   | TextFieldConfig
   | TextareaFieldConfig
   | ImageFieldConfig
   | TextEditorFieldConfig
+  | DateFieldConfig
   | SelectFieldConfig;

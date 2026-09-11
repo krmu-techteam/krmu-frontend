@@ -1,4 +1,5 @@
 export const API = {
   FACULTY: "/faculty",
-  CDCTEAM: '/cdc-team'
+  CDCTEAM: "/cdc-team",
+  DRIVECALENDAR: "/drive-calendar",
 } as const;
