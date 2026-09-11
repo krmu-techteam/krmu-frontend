@@ -17,7 +17,7 @@ export default function CdcTeamForm() {
   const mutation = useCreateCdcTeam();
 
   const form = useForm<CreateCdcTeamDto>({
-    resolver: zodResolver(createCdcTeamSchema),
+    resolver: zodResolver(createCdcTeamSchema), 
 
     defaultValues: {
       name: "",

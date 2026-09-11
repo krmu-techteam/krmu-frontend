@@ -18,7 +18,7 @@ const driveRecords: DriveRecord[] = [
   {
     id: 1,
     company: "Cloud Certitude Pvt Ltd",
-    schools: "SOET",
+    schools: "SOET", 
     mode: "Virtual",
     role: "Salesforce Trainee",
     package: "4 LPA CTC",

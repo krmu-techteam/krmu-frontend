@@ -49,6 +49,7 @@ export const createDriveCalendarSchema = z.object({
   selected: z
     .string()
     .regex(/^\d+$/, "Selected students must be a non-negative integer")
+    .or(z.literal(""))
     .optional(),
 
   status: z.enum(["published", "draft"]).optional(),

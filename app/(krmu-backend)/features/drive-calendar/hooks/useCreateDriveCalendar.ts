@@ -17,7 +17,7 @@ export function useCreateDriveCalendar() {
       (toast.success(response.data.message || "CDC Team Create Successfully"),
         queryClient.invalidateQueries({
           queryKey: driveCalendarKeys.all,
-        }));
+        })); 
     },
     onError: (error) => {
       console.error("Create faculty error:", error);

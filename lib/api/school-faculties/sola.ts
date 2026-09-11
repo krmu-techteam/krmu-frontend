@@ -465,7 +465,7 @@ export const solaFaculties: SchoolFacultiesType[] = [
     featured_media: 1160,
     acf: {
       "staff-qualification": "Ph. D. (Linguistics)",
-      staff_designation: "Assistant Professor",
+      staff_designation: "Assistant Professor (Senior Scale) & Research Communication Officer",
       schools: [1152],
     },
     featured_media_url:

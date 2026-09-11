@@ -477,7 +477,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
     featured_media: 9192,
     acf: {
       "staff-qualification": "Ph.D. (Mathematics)",
-      staff_designation: "Assistant  Professor",
+      staff_designation: "Assistant  Professor", 
       schools: [787],
     },
     featured_media_url:

@@ -16,7 +16,7 @@ const page = () => {
       <PlacementHighlights />
       <OutcomesBySchool />
       <InterviewReady />
-      <StudentSuccessStories />
+      <StudentSuccessStories /> 
       <OurTopRecruiter />
       <InterviewSuccessStories />
       <PlacementResources />
