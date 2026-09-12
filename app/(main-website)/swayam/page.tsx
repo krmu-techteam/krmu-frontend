@@ -1,7 +1,6 @@
-import { notFound } from "next/navigation";
 import SwayamStaticPage from "@/src/presentation/static-pages/swayam";
+import NotFound from "../not-found";
 
-// Set to true to make the page live
 const isLive = false;
 
 export const metadata = {
@@ -12,7 +11,7 @@ export const metadata = {
 
 const SwayamPage = () => {
   if (!isLive) {
-    notFound();
+    NotFound();
   }
 
   return <SwayamStaticPage />;
