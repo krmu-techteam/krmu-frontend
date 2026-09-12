@@ -16,7 +16,7 @@ const MeetCDCTeam = () => {
   const { data: teamMembers = [], isLoading, isError, error } = useCDCTeam();
 
   const hasMembers = teamMembers.length > 0;
- 
+  
   return (
     <section className="px-5 pb-10 lg:px-0 md:pb-20">
       <div className="mx-auto w-full max-w-6xl font-poppins">

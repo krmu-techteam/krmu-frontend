@@ -22,3 +22,10 @@ export interface DriveCalendar {
 export interface DriveCalendarResponse {
   data: DriveCalendar[];
 }
+
+export interface DriveCalendarParams {
+  page?: number;
+  limit?: number;
+  search?: string;
+  status?: "published" | "draft";
+}
