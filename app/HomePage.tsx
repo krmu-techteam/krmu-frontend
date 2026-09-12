@@ -237,7 +237,7 @@ export default async function HomePage() {
         )}
 
         {/* Gradient Separator */}
-        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent temp-class"></div>
 
         <YourJourney2 />
         {/* {yourJourneyData && (

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 interface TrainerCardProps {
   id?: number;
@@ -7,13 +6,14 @@ interface TrainerCardProps {
   name: string;
   designation: string;
   profileUrl: string;
+  onViewProfile?: () => void;
 }
 
 const TrainerCard = ({
   image,
   name,
   designation,
-  profileUrl,
+  onViewProfile,
 }: TrainerCardProps) => {
   return (
     <article className="min-w-0">
@@ -56,8 +56,9 @@ const TrainerCard = ({
           {designation}
         </p>
 
-        <Link
-          href={profileUrl}
+        <button
+          type="button"
+          onClick={onViewProfile}
           className="
             mt-2
             inline-block
@@ -72,7 +73,7 @@ const TrainerCard = ({
           "
         >
           View Profile
-        </Link>
+        </button>
       </div>
     </article>
   );

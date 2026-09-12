@@ -21,7 +21,7 @@ const teamMembers = [
     designation: "Assistant Manager- CDC",
     email: "charu.gola@krmangalam.edu.in",
     image: "/images/team/charu-gola.jpg",
-  },
+  }, 
   {
     name: "Sreejita Saha",
     designation: "Assistant- Career Development Centre",

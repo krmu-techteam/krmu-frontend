@@ -20,7 +20,7 @@ export default function FacultyTable() {
     search: debouncedSearch || undefined,
   });
 
-  if (isPending) {
+  if (isPending) { 
     return <DataTableSkeleton rows={5} />;
   }
 

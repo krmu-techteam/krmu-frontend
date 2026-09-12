@@ -20,7 +20,7 @@ const CDCTeam = () => {
     isError,
   } = useCDCTeam();
 
-  /**
+  /** 
    * Loading State
    */
   if (isLoading) {

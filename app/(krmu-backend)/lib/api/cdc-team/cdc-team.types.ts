@@ -4,8 +4,8 @@ export interface CDCTeamMember {
   designation: string;
   email: string;
   image: string;
-  sort_order: number;
-  status: string;
+  sort_order?: number;
+  status?: string;
 }
 
 export interface CDCTeamResponse {

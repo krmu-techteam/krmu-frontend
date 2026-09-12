@@ -59,7 +59,7 @@ const InterviewSuccessStoryCard = ({
             <Image
               src={companyLogo}
               alt={companyName || "Company"}
-              width={40}
+              width={150}
               height={44}
               className="h-11 w-auto object-contain object-left"
             />
