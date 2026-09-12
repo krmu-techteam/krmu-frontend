@@ -2,6 +2,12 @@ import RDCCard from "../../research-overview/RDCCard";
 
 const rdcTeamData = [
   {
+    name: "Dr. Pradeep Kumar Varshney",
+    desg: "Dean Research",
+    facultyUrl: "/faculty/dr-pawan-kumar",
+    facImgUrl: "/images/pradeep_kumar-removebg.png",
+  },
+  {
     name: "Prof. (Dr.) Pawan Kumar (PhD)",
     desg: "Associate Dean Research",
     facultyUrl: "/faculty/dr-pawan-kumar",
@@ -9,7 +15,7 @@ const rdcTeamData = [
   },
   {
     name: "Dr. Seema Raj (M.Phil, PhD)",
-    desg: "Dean Research",
+    desg: "Deputy Dean Research",
     facultyUrl: "/faculty/dr-seema-raj",
     facImgUrl: "/teamrdc/seema.png",
   },
