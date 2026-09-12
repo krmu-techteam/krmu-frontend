@@ -12,7 +12,7 @@ import ResearchAchievements from "./comp/ResearchAchievements";
 import ResearchHighlight from "./comp/ResearchHighlight";
 import ResearchInnovationHeroSection from "./comp/ResearchInnovationHeroSection";
 import TeamLibrary from "./comp/TeamLibrary";
-import TeamRDC from "./comp/TeamRDC";
+import TeamRDC from "./comp/TeamRDC"; 
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
 

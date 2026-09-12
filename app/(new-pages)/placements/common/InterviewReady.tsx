@@ -18,7 +18,7 @@ const InterviewReady = () => {
           <h2 className="font-newsreader text-3xl font-semibold leading-tight text-[#001836] sm:text-4xl md:text-5xl">
             How KRMU Gets you Interview Ready?
           </h2>
-        </div>
+        </div> 
 
         {/* Video */}
         <div className="relative w-full overflow-hidden">
@@ -52,7 +52,7 @@ const InterviewReady = () => {
             <div className="relative aspect-video w-full">
               <iframe
                 className="absolute inset-0 h-full w-full"
-                src="https://www.youtube.com/embed/iLzhza28QnM?autoplay=1&rel=0"
+                src="https://www.youtube.com/embed/NhArKFwk75U?si=PUJ0nLOtSHD0w8_e"
                 title="Inside KRMU's Robotics Lab"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen

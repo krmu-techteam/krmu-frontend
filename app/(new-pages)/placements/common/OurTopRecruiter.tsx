@@ -4,8 +4,11 @@ import Link from "next/link";
 import { ourTopRecruitersLogos } from "../constant";
 
 const OurTopRecruiter = () => {
+  // Duplicate logos for seamless infinite loop
+  const logos = [...ourTopRecruitersLogos, ...ourTopRecruitersLogos];
+
   return (
-    <section className="px-5 xl:px-0 pb-10 md:pb-20">
+    <section className="px-5 pb-10 md:pb-20 xl:px-0">
       <div className="mx-auto w-full max-w-6xl">
         {/* Header */}
         <div className="flex flex-col gap-6 lg:grid lg:grid-cols-[1fr_1.3fr_auto] lg:items-center lg:gap-8">
@@ -55,66 +58,54 @@ const OurTopRecruiter = () => {
           </div>
         </div>
 
-        {/* Recruiter Logos */}
-        <div
-          className="
-            mt-8
-            grid
-            grid-cols-2
-            border-l
-            border-t
-            border-[#ccc]
-
-            sm:mt-10
-            sm:grid-cols-3
-
-            md:grid-cols-4
-
-            lg:grid-cols-6
-          "
-        >
-          {ourTopRecruitersLogos?.map((logo, index) => (
-            <div
-              key={`${logo.alt}-${index}`}
-              className="
-                flex
-                min-h-[85px]
-                items-center
-                justify-center
-                border-b
-                border-r
-                border-[#ccc]
-                px-3
-                py-5
-
-                sm:min-h-[100px]
-                sm:px-5
-
-                md:px-6
-
-                lg:min-h-[110px]
-                lg:px-7
-                xl:px-8
-              "
-            >
-              <Image
-                src={logo.imageUrl}
-                alt={logo.alt}
-                width={logo.width}
-                height={logo.height}
+        {/* Infinite Logo Carousel */}
+        <div className="relative mt-8 overflow-hidden sm:mt-10">
+          <div className="recruiter-marquee flex w-max">
+            {logos.map((logo, index) => (
+              <div
+                key={`${logo.alt}-${index}`}
                 className="
-                  h-auto
-                  max-h-10
-                  w-auto
-                  max-w-[90%]
-                  object-contain
+                  flex
+                  h-[85px]
+                  w-[50vw]
+                  shrink-0
+                  items-center
+                  justify-center
+                  border-y
+                  border-r
+                  border-[#ccc]
+                  px-6
 
-                  sm:max-h-12
-                  md:max-h-14
+                  sm:h-[100px]
+                  sm:w-[33.333vw]
+                  sm:px-8
+
+                  md:w-[25vw]
+
+                  lg:h-[110px]
+                  lg:w-[16.6667vw]
+                  lg:px-10
                 "
-              />
-            </div>
-          ))}
+              >
+                <Image
+                  src={logo.imageUrl}
+                  alt={logo.alt}
+                  width={logo.width}
+                  height={logo.height}
+                  className="
+                    h-auto
+                    max-h-10
+                    w-auto
+                    max-w-[90%]
+                    object-contain
+
+                    sm:max-h-12
+                    md:max-h-14
+                  "
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Divider */}

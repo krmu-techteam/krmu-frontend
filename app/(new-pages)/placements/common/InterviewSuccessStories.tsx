@@ -23,8 +23,8 @@ const InterviewSuccessStories = () => {
         </div>
         <div className="relative mt-10">
           <Carousel
-            opts={{
-              align: "start",
+            opts={{ 
+              align: "start", 
               loop: true,
             }}
             className="w-full relative"

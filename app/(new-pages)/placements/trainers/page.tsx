@@ -15,9 +15,9 @@ const page = () => {
       <PlacementHighlights />
       <TrainingJourney />
       <TrainingModules />
-      <TrainingMatrix />
+      <TrainingMatrix /> 
       <BootcampStats />
-      <Trainers />
+      <Trainers /> 
       <SkilledPartners />
       <CareerAccelerationCTA />
     </main>

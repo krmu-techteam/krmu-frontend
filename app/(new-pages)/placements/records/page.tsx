@@ -16,7 +16,7 @@ const page = () => {
       <SchoolWiseCohort />
       <HiringTrendsAndReports />
       <Definitions />
-      <PlacementRecords /> 
+      <PlacementRecords />  
       <QuickEnquiry />
     </main>
   );

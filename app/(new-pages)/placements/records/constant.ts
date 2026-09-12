@@ -52,8 +52,74 @@ export const Recordslogos: RecordLogo[] = [
 
 export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
   {
+    code: "SPRS",
+    schoolName: "School of Physiotherapy and Rehabilitation Sciences",
+    eligible: 3,
+    placed: 3,
+    placementRate: "100%",
+    maxCtc: "34 LPA",
+    avgCtc: "10.50 LPA",
+    medianCtc: "9.20 LPA",
+    recordlogos: Recordslogos,
+  },
+  {
+    code: "SMAS",
+    schoolName: "School of Medical and Allied Sciences",
+    eligible: 127,
+    placed: 89,
+    placementRate: "70%",
+    maxCtc: "34 LPA",
+    avgCtc: "10.50 LPA",
+    medianCtc: "9.20 LPA",
+    recordlogos: Recordslogos,
+  },
+  {
+    code: "SOMC",
+    schoolName: "School of Management and Commerce",
+    eligible: 321,
+    placed: 266,
+    placementRate: "83%",
+    maxCtc: "34 LPA",
+    avgCtc: "10.50 LPA",
+    medianCtc: "9.20 LPA",
+    recordlogos: Recordslogos,
+  },
+  {
+    code: "SOLS",
+    schoolName: "School of Legal Studies",
+    eligible: 93,
+    placed: 65,
+    placementRate: "70%",
+    maxCtc: "34 LPA",
+    avgCtc: "10.50 LPA",
+    medianCtc: "9.20 LPA",
+    recordlogos: Recordslogos,
+  },
+  {
+    code: "SJMC",
+    schoolName: "School of Jurnalism and Mass Communication",
+    eligible: 18,
+    placed: 17,
+    placementRate: "94%",
+    maxCtc: "34 LPA",
+    avgCtc: "10.50 LPA",
+    medianCtc: "9.20 LPA",
+    recordlogos: Recordslogos,
+  },
+  {
+    code: "SOHS",
+    schoolName: "School of Humanities",
+    eligible: 135,
+    placed: 120,
+    placementRate: "89%",
+    maxCtc: "34 LPA",
+    avgCtc: "10.50 LPA",
+    medianCtc: "9.20 LPA",
+    recordlogos: Recordslogos,
+  },
+  {
     code: "SOET",
-    schoolName: "School of Engineering & Technology",
+    schoolName: "School of Engineering and Technology",
     eligible: 225,
     placed: 192,
     placementRate: "85%",
@@ -63,14 +129,47 @@ export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
     recordlogos: Recordslogos,
   },
   {
-    code: "SOMC",
-    schoolName: "School of Management",
-    eligible: 180,
-    placed: 153,
-    placementRate: "85%",
-    maxCtc: "28 LPA",
-    avgCtc: "9.80 LPA",
-    medianCtc: "8.50 LPA",
+    code: "SOET",
+    schoolName: "School of Education (SOED)",
+    eligible: 29,
+    placed: 22,
+    placementRate: "76%",
+    maxCtc: "34 LPA",
+    avgCtc: "10.50 LPA",
+    medianCtc: "9.20 LPA",
+    recordlogos: Recordslogos,
+  },
+  {
+    code: "SBAS",
+    schoolName: "School of Basic and Applied Sciences",
+    eligible: 29,
+    placed: 21,
+    placementRate: "72%",
+    maxCtc: "34 LPA",
+    avgCtc: "10.50 LPA",
+    medianCtc: "9.20 LPA",
+    recordlogos: Recordslogos,
+  },
+  {
+    code: "SOAD",
+    schoolName: "School of Architecture and Design",
+    eligible: 21,
+    placed: 14,
+    placementRate: "67%",
+    maxCtc: "34 LPA",
+    avgCtc: "10.50 LPA",
+    medianCtc: "9.20 LPA",
+    recordlogos: Recordslogos,
+  },
+  {
+    code: "SOAS",
+    schoolName: "School of Agricultural Sciences",
+    eligible: 14,
+    placed: 7,
+    placementRate: "50%",
+    maxCtc: "34 LPA",
+    avgCtc: "10.50 LPA",
+    medianCtc: "9.20 LPA",
     recordlogos: Recordslogos,
   },
 ];
@@ -138,9 +237,9 @@ export interface Definition {
 
 export const DefinitionsData: Definition[] = [
   {
-    title: "Academic year",
+    title: "Academic year ",
     description:
-      "Labelled by year of graduation. 2025–26 means students graduating in 2026.",
+      "Labelled by year of graduation. 2025-26 means students graduating in 2026. ",
   },
   {
     title: "Eligible student",
@@ -153,13 +252,46 @@ export const DefinitionsData: Definition[] = [
       "A student holding at least one written offer for a role commencing after graduation. Counted once, however many offers they hold.",
   },
   {
-    title: "Placement rate",
+    title: "Placement percentage ",
     description:
-      "The percentage of eligible students who received at least one placement offer.",
+      "Placed ÷ eligible × 100. Never calculated against total enrolment. ",
+  },
+  {
+    title: "Median CTC",
+    description:
+      "The middle value of all accepted offers for the cohort in question.",
+  },
+  {
+    title: "Highest CTC",
+    description:
+      "The single highest accepted offer, published with the programme and school, and flagged where international.",
+  },
+  {
+    title: "Recruiter",
+    description:
+      "A company that made at least one offer in the year in question. A company that visited, presented or registered but made no offer is not a recruiter for this purpose. ",
+  },
+  {
+    title: "Pre-placement offer ",
+    description:
+      "An offer arising from an internship, counted separately and also included in placed totals. ",
+  },
+  {
+    title: "Internship ",
+    description:
+      "Counted and reported separately. Never combined into placement figures.  ",
+  },
+  {
+    title: "Student trained",
+    description:
+      "A unique student who has completed a training module. Attendances are counted separately and are not interchangeable. ",
+  },
+  {
+    title: "Placement assistance",
+    description:
+      "The support the University provides. Distinct from placement, and the only claim that may be made at 100%. ",
   },
 ];
-
-
 
 export interface PlacementRecord {
   id: number;

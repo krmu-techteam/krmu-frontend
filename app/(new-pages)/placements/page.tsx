@@ -8,19 +8,20 @@ import PlacementHighlights from "./common/PlacementHighlights";
 import PlacementResources from "./common/PlacementResources";
 import QuickEnquiry from "./common/QuickEnquiry";
 import { StudentSuccessStories } from "./common/StudentSuccessStories";
+import { cdcTeamMembers } from "./constant";
 
 const page = () => {
   return (
-    <main className="bg-[#fbf8f3]">
+    <main className="bg-[#fbf8f3]"> 
       <HeroSection />
       <PlacementHighlights />
       <OutcomesBySchool />
       <InterviewReady />
-      <StudentSuccessStories />
-      <OurTopRecruiter />
+      <StudentSuccessStories /> 
+      <OurTopRecruiter /> 
       <InterviewSuccessStories />
       <PlacementResources />
-      <MeetCDCTeam />
+      <MeetCDCTeam teamMembers={cdcTeamMembers} />  
       <QuickEnquiry />
     </main>
   );

@@ -12,7 +12,7 @@ const SchoolWiseCohort = () => {
   return (
     <section className="px-5 xl:px-0 pb-10 sm:pb-14 md:pb-20">
       <div className="max-w-6xl mx-auto w-full">
-        {/* Heading */}
+        {/* Heading */} 
         <div className="mb-6 sm:mb-8 md:mb-10">
           <h2 className="text-3xl sm:text-4xl md:text-5xl leading-tight font-semibold text-[#001836] font-newsreader">
             Outcomes by school
@@ -22,7 +22,7 @@ const SchoolWiseCohort = () => {
         <div className="relative">
           <Carousel
             opts={{
-              align: "start",
+              align: "start", 
               loop: true,
             }}
             className="w-full"

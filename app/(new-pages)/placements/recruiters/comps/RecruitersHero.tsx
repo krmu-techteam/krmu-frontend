@@ -26,8 +26,9 @@ const RecruitersHero = () => {
           </Link>
 
           <Link
-            href="#"
+            href="https://www.krmangalam.edu.in/pdfs/placement-brochure.pdf"
             className="inline-flex min-h-12 w-full max-w-[220px] items-center justify-center bg-white px-2 py-3 text-sm font-medium text-black transition-colors hover:bg-gray-100 sm:max-w-[187px]"
+            target="_blank"
           >
             Download brochure
           </Link>

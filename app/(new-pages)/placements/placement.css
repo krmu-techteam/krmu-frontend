@@ -16,3 +16,17 @@
 .font-poppins {
   font-family: var(--font-poppins);
 }
+
+@keyframes recruiter-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.recruiter-marquee {
+  animation: recruiter-marquee 60s linear infinite;
+}
