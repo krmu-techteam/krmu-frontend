@@ -6,7 +6,7 @@ const OnGoing = () => {
       imgUrl: "/ongoing/item-1.webp",
     },
     {
-      imgUrl: "/ongoing/item-2.webp",
+      imgUrl: " /images/ongoing-projects-and-collaborations.jpg",
     },
     {
       imgUrl: "/ongoing/item-3.jpg",
