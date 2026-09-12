@@ -6,10 +6,10 @@ const OnGoing = () => {
       imgUrl: "/ongoing/item-1.webp",
     },
     {
-      imgUrl: " /images/ongoing-projects-and-collaborations.jpg",
-    },
+      imgUrl: "/images/ongoing-projects-and-collaborations.jpg",
+    }, 
     {
-      imgUrl: "/ongoing/item-3.jpg",
+      imgUrl: "/images/ongoing-projects-and-collaborations-2.jpg",
     },
   ];
 
