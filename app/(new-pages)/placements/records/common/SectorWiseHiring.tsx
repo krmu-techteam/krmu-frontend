@@ -12,11 +12,11 @@ interface SectorWiseHiringProps {
 const SectorWiseHiring = ({ sectors }: SectorWiseHiringProps) => {
   return (
     <div className="w-full">
-      <h4 className="text-xs sm:text-sm md:text-base text-[#7A1F2B] tracking-[0.25em] sm:tracking-[0.3em] uppercase mb-6 sm:mb-8">
+      <h4 className="text-xs sm:text-sm md:text-base text-[#7A1F2B] tracking-[4px] uppercase mb-6 sm:mb-8">
         Sector wise hiring
       </h4>
 
-      <ul>
+      <ul className="h-full">
         {sectors.map((sector) => (
           <li
             key={sector.name}

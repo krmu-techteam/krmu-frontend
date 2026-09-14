@@ -3,7 +3,7 @@ import { stats } from "../constant";
 const PlacementHighlights = () => {
   return (
     <section className="md:border-b md:border-[#ccc] mb-10 md:mb-20">
-      <div className="max-w-6xl mx-auto w-full">
+      <div className="max-w-7xl mx-auto w-full">
         <ul
           className="
             flex flex-wrap justify-center items-center

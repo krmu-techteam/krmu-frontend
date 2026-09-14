@@ -12,19 +12,17 @@ import { cdcTeamMembers } from "./constant";
 
 const page = () => {
   return (
-    <main className="bg-[#fbf8f3]"> 
-      {/* <HeroSection />
-      */}
-      <PlacementHighlights /> 
+    <main className="bg-[#fbf8f3]">
+      <HeroSection />
+      <PlacementHighlights />
       <OutcomesBySchool />
-      <StudentSuccessStories /> 
-      {/* 
+      <StudentSuccessStories />
+      <OurTopRecruiter />
       <InterviewReady />
-      <OurTopRecruiter /> 
       <InterviewSuccessStories />
       <PlacementResources />
-      <MeetCDCTeam teamMembers={cdcTeamMembers} />  
-      <QuickEnquiry /> */}
+      <MeetCDCTeam teamMembers={cdcTeamMembers} />
+      <QuickEnquiry />
     </main>
   );
 };

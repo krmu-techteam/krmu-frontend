@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-28 xl:pt-40 bg-[url('/placements/main/pl-hero-bg-image.webp')] bg-cover bg-left-top">
+    <section className="relative pt-28 xl:pt-32 bg-[url('/placements/main/pl-hero-bg-image.webp')] bg-cover bg-left-top">
       {/* <Image
         src=""
         alt="Hero Background"
@@ -11,7 +11,7 @@ const HeroSection = () => {
         className="object-cover object-left w-full"
         priority 
       /> */}
-      <div className="max-w-6xl mx-auto w-full z-10 relative flex flex-col md:flex-row items-center lg:items-start px-5 xl:px-0 gap-5 sm:gap-0">
+      <div className="max-w-7xl mx-auto w-full z-10 relative flex flex-col md:flex-row items-center lg:items-start px-5 xl:px-0 gap-5 sm:gap-0">
         <div className="w-full md:w-1/2 font-poppins pt-5">
           <h3 className="text-base font-medium tracking-[7px] uppercase text-[#8d5552] mb-1.5">
             Placement
@@ -42,7 +42,7 @@ const HeroSection = () => {
           <Image
             src="/placements/main/pl-hero-girl.webp"
             alt="Hero Girl"
-            className="object-contain w-[320px] sm:w-[522px]"
+            className="object-contain"
             width={522}
             height={625}
           />

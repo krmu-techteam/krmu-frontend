@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/carousel";
 
 import CDCTeamMember from "./CDCTeamMember";
-import { cdcTeamMembers } from "../constant"; 
+import { cdcTeamMembers } from "../constant";
 
 interface MeetCDCTeamProps {
   teamMembers: typeof cdcTeamMembers;
@@ -20,14 +20,14 @@ const MeetCDCTeam = ({ teamMembers }: MeetCDCTeamProps) => {
 
   return (
     <section className="px-5 pb-10 md:pb-20 lg:px-0">
-      <div className="mx-auto w-full max-w-6xl font-poppins">
+      <div className="mx-auto w-full max-w-7xl font-poppins">
         {/* Heading */}
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-8">
           <h5 className="font-newsreader text-4xl font-semibold text-[#001836] md:mb-5 md:text-5xl">
             Meet the CDC team
           </h5>
 
-          <p className="text-sm sm:text-base">
+          <p className="text-sm text-[#383838]">
             Guiding students from enrollment to employment.
           </p>
         </div>
@@ -69,15 +69,14 @@ const MeetCDCTeam = ({ teamMembers }: MeetCDCTeamProps) => {
               </CarouselContent>
 
               {/* Navigation */}
-              {teamMembers.length > 4 && ( 
+              {teamMembers.length > 4 && (
                 <>
                   <CarouselPrevious
                     className="
                       left-0
                       h-9 w-9
                       bg-black text-white
-                      hover:bg-black/80
-                      xl:-left-10
+                      xl:-left-14
                     "
                   />
 
@@ -86,8 +85,8 @@ const MeetCDCTeam = ({ teamMembers }: MeetCDCTeamProps) => {
                       right-0
                       h-9 w-9
                       bg-black text-white
-                      hover:bg-black/80
-                      xl:-right-10
+                      
+                      xl:-right-14
                     "
                   />
                 </>

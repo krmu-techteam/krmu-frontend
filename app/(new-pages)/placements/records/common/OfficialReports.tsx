@@ -14,23 +14,15 @@ interface OfficialReportsProps {
 const OfficialReports = ({ reports }: OfficialReportsProps) => {
   return (
     <div className="w-full">
-      <h2 className="text-xs sm:text-sm tracking-[0.25em] sm:tracking-[0.35em] uppercase text-[#7A1F2B] mb-6 sm:mb-8 md:mb-10">
+      <h2 className="text-xs sm:text-sm tracking-[4px] uppercase text-[#7A1F2B] mb-6 sm:mb-8 md:mb-10">
         Official Reports
       </h2>
 
-      <div>
+      <div className="">
         {reports.map((report) => (
           <div
             key={report.year}
-            className="
-              flex flex-col sm:flex-row
-              sm:items-center
-              justify-between
-              gap-4
-              border-b border-[#d8d8d8]
-              py-6 sm:py-8 md:py-10
-              first:pt-0
-            "
+            className="flex justify-between border-b border-[#ccc] first:py-10 not-first:py-12"
           >
             <h3 className="font-newsreader text-2xl sm:text-3xl text-[#12233F] font-normal">
               {report.title}

@@ -19,13 +19,13 @@ const placementResources: PlacementResource[] = [
   },
   {
     id: 2,
-    number: "02", 
+    number: "02",
     title: "Training programs",
     description: "Pre-placement modules, mock interviews and skill labs.",
     link: "/placements/trainers",
   },
   {
-    id: 3, 
+    id: 3,
     number: "03",
     title: "Student resources",
     description: "Resume builders, alumni network access and career guides.",
@@ -43,15 +43,17 @@ const placementResources: PlacementResource[] = [
 const PlacementResources = () => {
   return (
     <section className="pb-10 md:pb-20">
-      <div className="max-w-6xl mx-auto w-full font-poppins">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t bordert-t-[#777] border-b border-b-[#ddd]">
+      <div className="max-w-7xl mx-auto w-full font-poppins">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t bordert-t-[#777] border-b border-b-[#ddd] ">
           {placementResources.map((resource) => (
             <article
               key={resource.id}
               className="
                 min-h-[250px]
                 md:min-h-[300px]
-                p-6
+                py-11
+                not-first:sm:px-6
+                px-6
                 flex flex-col
                 border-b sm:border-b-0
                 border-[#ddd]
@@ -60,17 +62,17 @@ const PlacementResources = () => {
               "
             >
               {/* Number */}
-              <span className="text-[#7A1F2B] text-base mb-5">
+              <span className="text-[#7A1F2B] text-xl mb-5">
                 {resource.number}
               </span>
 
               {/* Title */}
-              <h3 className="text-[#001836] text-2xl font-semibold leading-tight font-newsreader">
+              <h3 className="text-[#001836] text-3xl font-semibold leading-tight font-newsreader">
                 {resource.title}
               </h3>
 
               {/* Description */}
-              <p className="text-[#333] text-sm leading-relaxed mt-4 max-w-[260px]">
+              <p className="text-[#383838] text-sm leading-relaxed mt-4 max-w-[260px]">
                 {resource.description}
               </p>
 

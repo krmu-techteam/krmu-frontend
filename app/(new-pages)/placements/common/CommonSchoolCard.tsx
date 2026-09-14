@@ -19,14 +19,14 @@ const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
   } = school;
 
   return (
-    <div className="w-full h-full border border-[#ccc] bg-white p-4 sm:p-5 md:p-6 font-poppins">
+    <div className="w-full h-full border border-[#ccc] bg-white p-4 sm:p-5 md:p-6">
       {/* Header */}
       <div className="min-h-[78px] sm:min-h-[88px] md:min-h-[96px]">
-        <h5 className="mb-2 text-[9px] sm:text-[10px] md:text-xs tracking-[0.25em] sm:tracking-[0.3em] md:tracking-[0.4em] uppercase text-[#7A1F2B]">
+        <h5 className="mb-[18px] text-[9px] sm:text-[10px] md:text-xs tracking-[1px] uppercase text-[#7A1F2B]">
           {code}
         </h5>
 
-        <h3 className="font-newsreader text-xl sm:text-2xl md:text-[26px] lg:text-[30px] font-medium leading-tight">
+        <h3 className="font-newsreader text-xl sm:text-2xl md:text-2xl font-medium leading-tight text-[#00225C]">
           {schoolName}
         </h3>
       </div>
@@ -34,31 +34,31 @@ const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
       {/* Placement Stats */}
       <div className="py-6 sm:py-7 md:py-8 border-t border-[#ccc] mt-6 sm:mt-7 md:mt-8 flex">
         <div className="flex flex-col w-1/3 min-w-0">
-          <span className="text-3xl sm:text-4xl font-newsreader leading-none">
+          <span className="text-3xl sm:text-[34px] font-newsreader font-medium leading-none">
             {eligible}
           </span>
 
-          <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#12233F] tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase">
+          <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#888f9c] font-light tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase">
             Eligible
           </span>
         </div>
 
         <div className="flex flex-col w-1/3 min-w-0">
-          <span className="text-3xl sm:text-4xl font-newsreader leading-none">
+          <span className="text-3xl sm:text-[34px] font-newsreader font-medium leading-none">
             {placed}
           </span>
 
-          <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#12233F] tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase">
+          <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#888f9c] font-light tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase">
             Placed
           </span>
         </div>
 
         <div className="flex flex-col w-1/3 min-w-0">
-          <span className="text-3xl sm:text-4xl font-newsreader leading-none text-[#7A1F2B]">
+          <span className="text-3xl sm:text-[34px] font-newsreader font-medium leading-none text-[#7A1F2B]">
             {placementRate}
           </span>
 
-          <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#12233F] tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase">
+          <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#888f9c] font-light tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase">
             Rate
           </span>
         </div>
@@ -67,31 +67,31 @@ const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
       {/* CTC Stats */}
       <div className="py-6 sm:py-7 md:py-8 border-t border-[#ccc] flex gap-2.5">
         <div className="flex flex-col w-1/3 min-w-0">
-          <span className="text-base sm:text-lg md:text-xl font-semibold font-newsreader leading-none truncate">
+          <span className="text-base sm:text-lg md:text-xl font-medium leading-none truncate">
             {maxCtc}
           </span>
 
-          <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#12233F] tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] uppercase">
+          <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#888f9c] font-light tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] uppercase">
             Max CTC
           </span>
         </div>
 
         <div className="flex flex-col w-1/3 min-w-0">
-          <span className="text-base sm:text-lg md:text-xl font-semibold font-newsreader leading-none truncate">
+          <span className="text-base sm:text-lg md:text-xl font-medium leading-none truncate">
             {avgCtc}
           </span>
 
-          <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#12233F] tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] uppercase">
+          <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#888f9c] font-light tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] uppercase">
             Avg CTC
           </span>
         </div>
 
         <div className="flex flex-col w-1/3 min-w-0">
-          <span className="text-base sm:text-lg md:text-xl font-semibold font-newsreader leading-none text-[#7A1F2B] truncate">
+          <span className="text-base sm:text-lg md:text-xl font-medium leading-none text-[#7A1F2B] truncate">
             {medianCtc}
           </span>
 
-          <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#12233F] tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] uppercase">
+          <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#888f9c] font-light tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] uppercase">
             Median CTC
           </span>
         </div>

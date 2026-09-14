@@ -45,7 +45,7 @@ const RDC = () => {
               rel="noopener noreferrer"
               className="text-white mt-1.5"
             >
-              <strong>Dr. Seema Raj</strong> | Dean Research
+              <strong>Dr. Seema Raj</strong> | Deputy Dean Research
             </Link>
           </div>
         </div>

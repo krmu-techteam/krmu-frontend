@@ -89,7 +89,7 @@ const AcademicResources = () => {
         </div>
         <div className="py-10 flex justify-center">
           <Link
-            href="https://library.krmangalam.edu.in/user?_gl=1*1i62dbw*_gcl_au*MTk0MzAxMjY5Mi4xNzY1MTcwMjg4#/home"
+            href="https://library.krmangalam.edu.in"
             className="common-btn-3"
           >
             Know More

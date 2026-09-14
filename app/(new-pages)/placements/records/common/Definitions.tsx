@@ -9,11 +9,11 @@ const Definitions = () => {
 
   const visibleDefinitions = showAll
     ? DefinitionsData
-    : DefinitionsData.slice(0, 6);
+    : DefinitionsData.slice(0, 3);
 
   return (
-    <section className="px-5 py-10 sm:py-14 md:py-20 xl:px-0">
-      <div className="mx-auto w-full max-w-6xl">
+    <section className="px-5 xl:px-0 pb-10 xl:pb-20">
+      <div className="mx-auto w-full max-w-7xl">
         {/* Heading */}
         <div className="max-w-3xl">
           <h3 className="font-newsreader text-4xl leading-tight text-[#001836] sm:text-5xl md:text-[55px]">
@@ -45,7 +45,7 @@ const Definitions = () => {
         </div>
 
         {/* View All */}
-        {DefinitionsData.length > 6 && (
+        {DefinitionsData.length > 3 && (
           <div className="mt-8 flex justify-center sm:mt-10 md:mt-12">
             <button
               type="button"

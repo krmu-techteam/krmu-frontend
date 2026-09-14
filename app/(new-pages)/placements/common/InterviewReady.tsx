@@ -8,10 +8,10 @@ const InterviewReady = () => {
 
   return (
     <section className="px-5 xl:px-0 pb-10 md:pb-20 mt-5">
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-7xl">
         {/* Heading */}
         <div className="mb-5 text-center">
-          <h3 className="mb-1.5 text-[10px] font-medium uppercase tracking-[0.3em] text-[#8d5552] sm:text-xs sm:tracking-[0.4em]">
+          <h3 className="mb-1.5 text-[10px] font-medium uppercase tracking-[2px] text-[#8d5552] sm:text-xs sm:tracking-[2px]">
             Interview
           </h3>
 

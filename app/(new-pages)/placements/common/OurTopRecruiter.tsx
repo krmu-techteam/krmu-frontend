@@ -2,19 +2,22 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ourTopRecruitersLogos } from "../constant";
+import Divider from "./Divider";
+import { div } from "framer-motion/client";
+import { LuGoal } from "react-icons/lu";
 
 const OurTopRecruiter = () => {
   // Duplicate logos for seamless infinite loop
-  const logos = [...ourTopRecruitersLogos, ...ourTopRecruitersLogos];
+  // const logos = [...ourTopRecruitersLogos, ...ourTopRecruitersLogos];
 
   return (
     <section className="px-5 pb-10 md:pb-20 xl:px-0">
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-7xl">
         {/* Header */}
         <div className="flex flex-col gap-6 lg:grid lg:grid-cols-[1fr_1.3fr_auto] lg:items-center lg:gap-8">
           {/* Title */}
           <div>
-            <h2 className="font-newsreader text-4xl font-semibold leading-[1.05] text-[#001836] sm:text-5xl md:text-[52px] lg:text-[54px]">
+            <h2 className="font-newsreader text-4xl font-bold leading-[1.05] text-[#001836] sm:text-5xl md:text-[52px] lg:text-5xl">
               Our top
               <br />
               recruiters
@@ -32,7 +35,7 @@ const OurTopRecruiter = () => {
           {/* Link */}
           <div className="lg:justify-self-end">
             <Link
-              href="#"
+              href="/placement/our-recruiter"
               className="
                 inline-flex
                 items-center
@@ -49,19 +52,15 @@ const OurTopRecruiter = () => {
               "
             >
               View all Recruiter
-              <ArrowRight
-                size={17}
-                strokeWidth={1.5}
-                className="shrink-0"
-              />
+              <ArrowRight size={17} strokeWidth={1.5} className="shrink-0" />
             </Link>
           </div>
         </div>
 
         {/* Infinite Logo Carousel */}
         <div className="relative mt-8 overflow-hidden sm:mt-10">
-          <div className="recruiter-marquee flex w-max">
-            {logos.map((logo, index) => (
+          <div className="grid grid-cols-6">
+            {/* {ourTopRecruitersLogos.map((logo, index) => (
               <div
                 key={`${logo.alt}-${index}`}
                 className="
@@ -71,8 +70,7 @@ const OurTopRecruiter = () => {
                   shrink-0
                   items-center
                   justify-center
-                  border-y
-                  border-r
+                  border
                   border-[#ccc]
                   px-6
 
@@ -104,12 +102,25 @@ const OurTopRecruiter = () => {
                   "
                 />
               </div>
-            ))}
+            ))} */}
+            {ourTopRecruitersLogos &&
+              ourTopRecruitersLogos.map((logo, index) => {
+                return (
+                  <div key={index} className="border border-[#ccc] flex items-center justify-center p-5">
+                    <Image
+                      src={logo.imageUrl}
+                      alt={logo.alt || ""}
+                      width={logo.width}
+                      height={logo.height}
+                    />
+                  </div>
+                );
+              })}
           </div>
         </div>
 
         {/* Divider */}
-        <hr className="mt-10 border-0 border-t border-[#545454] sm:mt-14 md:mt-16 lg:mt-20" />
+        <Divider />
       </div>
     </section>
   );

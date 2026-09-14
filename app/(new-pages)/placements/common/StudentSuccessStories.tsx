@@ -1,3 +1,4 @@
+import Divider from "./Divider";
 import StudentSuccessStoryCard, {
   StudentSuccessStory,
 } from "./StudentSuccessStoryCard";
@@ -66,7 +67,7 @@ const studentStories: StudentSuccessStory[] = [
     name: "Upadhyayula Nijaagna",
     batch: "B.Tech. CSE (AI & ML), Batch 2023–27",
     placementLink: "#",
-  }, 
+  },
 
   {
     id: 6,
@@ -103,7 +104,7 @@ const studentStories: StudentSuccessStory[] = [
     batch: "BCA (AI & DS), Batch 2024–26",
     placementLink: "#",
   },
-    {
+  {
     id: 9,
     image: "/placements/main/success-girl.jpg",
     imageAlt: "Khushi",
@@ -114,17 +115,18 @@ const studentStories: StudentSuccessStory[] = [
     batch: "B.Tech. CSE (AI & ML), Batch 2023–27",
     placementLink: "#",
   },
-      {
+  {
     id: 10,
     image: "/placements/main/success-girl.jpg",
     imageAlt: "Utsav Ratan",
     category: "Student Success Story",
     quote:
       "I’m Utsav Ratan, and choosing B.Tech at K.R. Mangalam University has been one of the best decisions for my academic and personal growth. The university provides excellent faculty, practical learning opportunities, modern infrastructure, and a supportive environment that encourages innovation and skill development. Every experience here has strengthened my confidence and prepared me for future challenges. I’m proud to be a part of the K.R. Mangalam University family.",
-    name: "Utsav Ratan", 
+    name: "Utsav Ratan",
     batch: "B.Tech. CSE, Batch 2024–28",
     placementLink: "#",
-  },    {
+  },
+  {
     id: 11,
     image: "/placements/main/success-girl.jpg",
     imageAlt: "Mrinal Prakash",
@@ -146,8 +148,8 @@ export const StudentSuccessStories = () => {
             align: "start",
             loop: true,
           }}
-          className="w-full" 
-        > 
+          className="w-full"
+        >
           <CarouselContent>
             {studentStories.map((story) => (
               <CarouselItem key={story.id} className="basis-full pl-5">
@@ -160,7 +162,7 @@ export const StudentSuccessStories = () => {
           <div className="mt-5 flex w-full">
             {/* Left navigation area */}
             <div className="flex w-full justify-center md:w-[45%] sm:justify-center">
-              <div className="relative flex h-10 w-20 items-center justify-between">
+              <div className="relative -top-10 flex h-10 w-20 items-center justify-between">
                 <CarouselPrevious
                   className="
                     relative left-0 top-0
@@ -169,7 +171,6 @@ export const StudentSuccessStories = () => {
                     border-0
                     bg-black
                     text-white
-                    hover:bg-black/80
                   "
                 />
 
@@ -181,7 +182,6 @@ export const StudentSuccessStories = () => {
                     border-0
                     bg-black
                     text-white
-                    hover:bg-black/80
                   "
                 />
               </div>
@@ -191,6 +191,7 @@ export const StudentSuccessStories = () => {
             <div className="hidden md:w-[55%] sm:block" />
           </div>
         </Carousel>
+        <Divider />
       </div>
     </section>
   );

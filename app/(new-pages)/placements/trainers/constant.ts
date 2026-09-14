@@ -428,7 +428,7 @@ export const trainers: Trainer[] = [
     id: 1,
     name: "Jyoti",
     designation: "Lead Employability & Coaching​",
-    image: "https://www.krmangalam.edu.in/images/trainers/jyoti.jpg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/jyoti.jpg",
     profileUrl: "#",
     description: `Jyoti Bhatia is an accomplished HR Leader, Talent
 Acquisition and HRBP Specialist with 10 years of
@@ -450,7 +450,7 @@ Workshop.​`,
     id: 2,
     name: "Rohit Agarwal​",
     designation: "Lead Sr. Aptitude Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/trainers/rohit-agarwal.jpeg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/rohit-agarwal.jpg",
     profileUrl: "#",
     description: `Rohit Agarwal is a Senior Aptitude Trainer and Team
 Lead – Aptitude at KR Mangalam University,
@@ -469,7 +469,7 @@ Engineering.​​`,
     id: 3,
     name: "Vijay Purohit​",
     designation: "Lead Sr. Soft Skills Trainer​",
-    image: "https://www.krmangalam.edu.in/images/trainers/vijay-purohit.jpg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/vijay-purohit.jpg",
     profileUrl: "#",
     description: `Vijay Purohit is a Senior Soft Skills Trainer,
 Learning & Development Specialist, and
@@ -490,7 +490,7 @@ Reliance, and other leading organizations.​​`,
     id: 4,
     name: "Ankit Verma",
     designation: "Soft Skills Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/trainers/ankit.jpg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/ankit-verma.jpg",
     profileUrl: "#",
     description: `Ankit Verma is a Language and Communication Skills
 Trainer with 10+ years of experience in English
@@ -511,7 +511,7 @@ Conflict Management.​​​`,
     id: 5,
     name: "Vikas Singh",
     designation: "Sr. Aptitude Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/trainers/vikas-singh.jpg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/vikas-singh.jpg",
     profileUrl: "#",
     description: `Vikas Singh is a highly accomplished
 Aptitude Trainer with 10+ years of experience,
@@ -532,7 +532,7 @@ Delhi, Career Leader, and Bharat IAS.​`,
     id: 6,
     name: "Sonam Yadav​",
     designation: "Soft Skills Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/trainers/sonam-yadav.jpg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/sonam-yadav.jpg",
     profileUrl: "#",
     description: `Sonam Yadav is a Certified Soft Skills and
 Corporate Trainer with 10+ years of experience in
@@ -552,7 +552,7 @@ Engineering.​​`,
     id: 7,
     name: "Charu Dudeja​",
     designation: "Soft Skills Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/trainers/charu-dudeja.jpg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/charu-dudeja.jpg",
     profileUrl: "#",
     description: `Charu Dudeja is a dynamic Soft Skills Trainer at
 KR Mangalam University with 10+ years of
@@ -572,7 +572,7 @@ required for professional success.​​​`,
     id: 8,
     name: "Pradeep​",
     designation: "Soft Skills Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/trainers/pradeep.jpg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/pradeep.jpg",
     profileUrl: "#",
     description: `Pradeep Rai is a Soft Skills, English Language
 Trainer and Communication Specialist with 6+
@@ -596,7 +596,7 @@ and Best Facilitation.​​​​`,
     id: 9,
     name: "Seerat Yaseen Bhat​",
     designation: "Aptitude Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/trainers/seerat-yaseen-bhat.jpg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/seerat-yaseen-bhat.jpg",
     profileUrl: "#",
     description: `Seerat Yaseen Bhat is a Results-driven Aptitude
 Trainer and Campus Recruitment Training
@@ -617,7 +617,7 @@ data-driven training.​​​​​`,
     id: 10,
     name: "Pradyumn Singh​​",
     designation: "Aptitude Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/trainers/pradyumn-singh.jpg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/pradyumn-singh.jpg",
     profileUrl: "#",
     description: `A results-driven Aptitude, Logical Reasoning, and
 Placement Readiness Trainer with 4+ years of
@@ -638,7 +638,7 @@ campus recruitment processes.​​`,
     id: 11,
     name: "Deepak",
     designation: "Soft Skills Trainer​​​",
-    image: "https://www.krmangalam.edu.in/images/trainers/deepak.jpg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/deepak.jpg",
     profileUrl: "#",
     description: `Deepak is an experienced Soft Skills and
 English Language Trainer with 10+ years of
@@ -661,7 +661,7 @@ Completion.​​​`,
     id: 12,
     name: "Arvind Singh​",
     designation: "Soft Skills Trainer​​​",
-    image: "https://www.krmangalam.edu.in/images/trainers/arvind.jpg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/arvind-singh.jpg",
     profileUrl: "#",
     description: `Arvind Singh is an English Language and Soft
 Skills Trainer with 7+ years of experience in
@@ -682,7 +682,7 @@ Associate.​​​​`,
     id: 13,
     name: "Deepak Kumar​",
     designation: "Aptitude Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/trainers/deepak-kumar.jpg",
+    image: "https://www.krmangalam.edu.in/images/placements/trainers/deepak-kumar.jpg",
     profileUrl: "#",
     description: `Deepak Kumar is a dynamic Aptitude Training
 Professional and Master Trainer with 9+ years of

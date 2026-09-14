@@ -11,9 +11,9 @@ import InterviewSuccessStoryCard from "./InterviewSuccessStoryCard";
 const InterviewSuccessStories = () => {
   return (
     <section className="pb-10 md:pb-20 px-5 xl:px-0">
-      <div className="max-w-6xl mx-auto w-full font-poppins">
+      <div className="max-w-7xl mx-auto w-full font-poppins">
         <div className="">
-          <h5 className="text-[#7A1F2B] text-xs tracking-[0.2em] mb-2.5 uppercase">
+          <h5 className="text-[#7A1F2B] text-xs tracking-[2px] mb-2.5 uppercase">
             Interview
           </h5>
 
@@ -33,7 +33,7 @@ const InterviewSuccessStories = () => {
               {interviewSuccessStories.map((story, i) => (
                 <CarouselItem
                   key={i}
-                  className="pl-5 basis-full md:basis-1/2 lg:basis-1/3"
+                  className="pl-5 basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
                 >
                   <InterviewSuccessStoryCard key={story.id} story={story} />
                 </CarouselItem>

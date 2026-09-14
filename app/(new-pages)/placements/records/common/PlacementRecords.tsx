@@ -163,7 +163,7 @@ const PlacementRecords = () => {
 
   return (
     <section className="px-5 xl:px-0 py-10 sm:py-14 md:py-20">
-      <div className="max-w-6xl mx-auto w-full">
+      <div className="max-w-7xl mx-auto w-full">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 md:gap-5 mb-6 md:mb-8">
@@ -171,7 +171,7 @@ const PlacementRecords = () => {
             Placement Records
           </h2>
 
-          <span className="text-[10px] sm:text-xs md:text-sm tracking-[0.15em] md:tracking-[0.2em] uppercase text-[#12233F]">
+          <span className="text-[10px] sm:text-xs md:text-sm tracking-[2px] uppercase text-[#12233F]">
             Detailed log of individual accepted offers
           </span>
         </div>
@@ -282,7 +282,7 @@ const PlacementRecords = () => {
                     {record.student_name || "-"}
                   </h3>
 
-                  <p className="text-[10px] sm:text-xs md:text-sm leading-relaxed text-[#667085] max-w-sm">
+                  <p className="text-[10px] sm:text-xs md:text-sm leading-relaxed text-[#667085]">
                     {record.program || "-"}
                   </p>
                 </div>

@@ -16,13 +16,13 @@ const CDCTeamMember = ({ member }: CDCTeamMemberProps) => {
 
   return (
     <article className="font-poppins">
-      <div className="relative aspect-square w-full max-w-[264px] overflow-hidden rounded-md bg-gray-100">
+      <div className="relative aspect-square w-full max-w-[264px] overflow-hidden bg-gray-100">
         <Image
           src={imageSrc}
           alt={`${name}${designation ? ` - ${designation}` : ""}`}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1280px) 33vw, 264px"
-          className="object-cover"
+          width={250}
+          height={256}
+          className="w-full h-full"
         />
       </div>
 
@@ -31,12 +31,12 @@ const CDCTeamMember = ({ member }: CDCTeamMemberProps) => {
           {name}
         </h5>
 
-        {designation && <h6 className="mt-1">{designation}</h6>}
+        {designation && <h6 className="mt-1 text-xs mb-1">{designation}</h6>}
 
         {email && (
           <Link
             href={`mailto:${email}`}
-            className="block break-all hover:underline"
+            className="block break-all hover:underline text-xs"
           >
             {email}
           </Link>

@@ -132,55 +132,55 @@ export const ourTopRecruitersLogos: RecruiterLogo[] = [
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/rkclick.webp",
     alt: "RK Click",
-    width: 126,
+    width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/ibm.webp",
     alt: "IBM",
-    width: 126,
+    width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/xebia.webp",
     alt: "xebia",
-    width: 126,
+    width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/aecc.webp",
     alt: "aecc",
-    width: 126,
+    width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/systique.webp",
     alt: "systique",
-    width: 126,
+    width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/medanta.webp",
     alt: "Medanta",
-    width: 126,
+    width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/samatrix.webp",
     alt: "samatrix",
-    width: 126,
+    width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/ec-council.webp",
-    alt: "samatrix",
-    width: 126,
+    alt: "EC Council",
+    width: 250,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/deep.webp",
     alt: "deep",
-    width: 126,
+    width: 200,
     height: 76,
   },
   {
@@ -193,7 +193,7 @@ export const ourTopRecruitersLogos: RecruiterLogo[] = [
     imageUrl:
       "https://www.krmangalam.edu.in/images/recuiters/grant-thorton.webp",
     alt: "grant-thorton",
-    width: 126,
+    width: 200,
     height: 76,
   },
   {
@@ -202,81 +202,81 @@ export const ourTopRecruitersLogos: RecruiterLogo[] = [
     width: 126,
     height: 76,
   },
-  {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/apple.webp",
-    alt: "apple",
-    width: 126,
-    height: 76,
-  },
-  {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/google.webp",
-    alt: "google",
-    width: 126,
-    height: 76,
-  },
-  {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/icsi.webp",
-    alt: "icsi",
-    width: 126,
-    height: 76,
-  },
-  {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/odour.webp",
-    alt: "odour",
-    width: 126,
-    height: 76,
-  },
-  {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/wisdom.webp",
-    alt: "wisdom",
-    width: 126,
-    height: 76,
-  },
-  {
-    imageUrl:
-      "https://www.krmangalam.edu.in/images/recuiters/ignite-minds.webp",
-    alt: "ignite-minds",
-    width: 126,
-    height: 76,
-  },
-  {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/gcec.webp",
-    alt: "gcec",
-    width: 126,
-    height: 76,
-  },
-  {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/pranab.webp",
-    alt: "pranab",
-    width: 126,
-    height: 76,
-  },
-  {
-    imageUrl:
-      "https://www.krmangalam.edu.in/images/recuiters/aditya-birla.webp",
-    alt: "aditya-birla",
-    width: 126,
-    height: 76,
-  },
-  {
-    imageUrl:
-      "https://www.krmangalam.edu.in/images/recuiters/politechnika.webp",
-    alt: "politechnika",
-    width: 126,
-    height: 76,
-  },
-  {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/mieg.webp",
-    alt: "mieg",
-    width: 126,
-    height: 76,
-  },
-  {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/suai.webp",
-    alt: "suai",
-    width: 126,
-    height: 76,
-  },
+  // {
+  //   imageUrl: "https://www.krmangalam.edu.in/images/recuiters/apple.webp",
+  //   alt: "apple",
+  //   width: 126,
+  //   height: 76,
+  // },
+  // {
+  //   imageUrl: "https://www.krmangalam.edu.in/images/recuiters/google.webp",
+  //   alt: "google",
+  //   width: 126,
+  //   height: 76,
+  // },
+  // {
+  //   imageUrl: "https://www.krmangalam.edu.in/images/recuiters/icsi.webp",
+  //   alt: "icsi",
+  //   width: 126,
+  //   height: 76,
+  // },
+  // {
+  //   imageUrl: "https://www.krmangalam.edu.in/images/recuiters/odour.webp",
+  //   alt: "odour",
+  //   width: 126,
+  //   height: 76,
+  // },
+  // {
+  //   imageUrl: "https://www.krmangalam.edu.in/images/recuiters/wisdom.webp",
+  //   alt: "wisdom",
+  //   width: 126,
+  //   height: 76,
+  // },
+  // {
+  //   imageUrl:
+  //     "https://www.krmangalam.edu.in/images/recuiters/ignite-minds.webp",
+  //   alt: "ignite-minds",
+  //   width: 126,
+  //   height: 76,
+  // },
+  // {
+  //   imageUrl: "https://www.krmangalam.edu.in/images/recuiters/gcec.webp",
+  //   alt: "gcec",
+  //   width: 126,
+  //   height: 76,
+  // },
+  // {
+  //   imageUrl: "https://www.krmangalam.edu.in/images/recuiters/pranab.webp",
+  //   alt: "pranab",
+  //   width: 126,
+  //   height: 76,
+  // },
+  // {
+  //   imageUrl:
+  //     "https://www.krmangalam.edu.in/images/recuiters/aditya-birla.webp",
+  //   alt: "aditya-birla",
+  //   width: 126,
+  //   height: 76,
+  // },
+  // {
+  //   imageUrl:
+  //     "https://www.krmangalam.edu.in/images/recuiters/politechnika.webp",
+  //   alt: "politechnika",
+  //   width: 126,
+  //   height: 76,
+  // },
+  // {
+  //   imageUrl: "https://www.krmangalam.edu.in/images/recuiters/mieg.webp",
+  //   alt: "mieg",
+  //   width: 126,
+  //   height: 76,
+  // },
+  // {
+  //   imageUrl: "https://www.krmangalam.edu.in/images/recuiters/suai.webp",
+  //   alt: "suai",
+  //   width: 126,
+  //   height: 76,
+  // },
 ];
 
 export interface InterviewSuccessStory {
@@ -306,9 +306,9 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
   {
     id: 2,
     image: "https://www.krmangalam.edu.in/images/success-stories/daksh-mehta.jpg",
-    imageAlt: "DAKSH MEHTA",
+    imageAlt: "Daksh Mehta",
     course: "B.Tech. CSE",
-    name: "DAKSH MEHTA",
+    name: "Daksh Mehta",
     school: "School of Engineering and Technology",
     package: "36 LPA",
     companyLogo: "https://krmangalam.edu.in/images/logos/logo-unias-india.jpeg",
@@ -317,23 +317,23 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
   {
     id: 3,
     image: "https://www.krmangalam.edu.in/images/success-stories/veneet-verma.jpg",
-    imageAlt: "VINEET VERMA",
+    imageAlt: "Vineet Verma",
     course: "B.Tech. CSE",
-    name: "VINEET VERMA",
+    name: "Vineet Verma",
     school: "School of Engineering and Technology",
     package: "34 LPA",
-    companyLogo: "https://krmangalam.edu.in/images/logos/autodesk.svg",
+    companyLogo: "https://krmangalam.edu.in/images/logos/autodesk-logo.svg",
     companyName: "Autodesk",
   },
   {
     id: 4,
     image: "https://www.krmangalam.edu.in/images/success-stories/shourya.jpg",
-    imageAlt: "SHOURYA TYAGI",
+    imageAlt: "Shourya Tyagi",
     course: "B.Tech. CSE",
-    name: "SHOURYA TYAGI",
+    name: "Shourya Tyagi",
     school: "School of Engineering and Technology",
     package: "34 LPA",
-    companyLogo: "https://krmangalam.edu.in/images/logos/autodesk.svg",
+    companyLogo: "https://krmangalam.edu.in/images/logos/autodesk-logo.svg",
     companyName: "Autodesk",
   },
   {
@@ -350,9 +350,9 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
   {
     id: 5,
     image: "https://www.krmangalam.edu.in/images/success-stories/nitesh.jpg",
-    imageAlt: "NITESH",
+    imageAlt: "Nitesh",
     course: "MCA",
-    name: "NITESH",
+    name: "Nitesh",
     school: "School of Engineering and Technology",
     package: "12 LPA",
     companyLogo: "https://krmangalam.edu.in/images/logos/akal-logo.png",
@@ -394,7 +394,7 @@ export interface CDCTeamMemberData {
 export const cdcTeamMembers: CDCTeamMemberData[] = [
   {
     id: 1,
-    image: "https://krmangalam.edu.in/images/cdc-team/dr-vibha-thakur.jpg",
+    image: "https://krmangalam.edu.in/images/placements/cdc-team/dr-vibha-thakur.jpg",
     imageAlt: "Dr. Vibha Thakur",
     name: "Dr. Vibha Thakur",
     designation: "Director | Career Development Centre",
@@ -402,7 +402,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   },
   {
     id: 2,
-    image: "https://krmangalam.edu.in/images/cdc-team/jharna-jagtiani.jpg",
+    image: "https://krmangalam.edu.in/images/placements/cdc-team/jharna-jagtiani.jpg",
     imageAlt: "Jharna Jagtiani",
     name: "Jharna Jagtiani",
     designation: "Senior Manager",
@@ -410,7 +410,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   },
   {
     id: 3,
-    image: "https://krmangalam.edu.in/images/cdc-team/charu-gola.jpg",
+    image: "https://krmangalam.edu.in/images/placements/cdc-team/charu-gola.jpg",
     imageAlt: "Charu Gola",
     name: "Charu Gola",
     designation: "Assistant Manager- CDC",
@@ -418,7 +418,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   },
   {
     id: 4,
-    image: "https://krmangalam.edu.in/images/cdc-team/sreejita-saha.jpg",
+    image: "https://krmangalam.edu.in/images/placements/cdc-team/sreejita-saha.jpg",
     imageAlt: "Sreejita Saha",
     name: "Sreejita Saha",
     designation: "Manager- Career Development Centre",
@@ -426,7 +426,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   },
   {
     id: 5,
-    image: "https://krmangalam.edu.in/images/cdc-team/dhaval-bhaskar.jpg",
+    image: "https://krmangalam.edu.in/images/placements/cdc-team/dhaval-bhaskar.jpg",
     imageAlt: "Dhaval Bhaskar",
     name: "Dhaval Bhaskar",
     designation: "Sr. Placement Manager",
@@ -435,7 +435,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
 
   {
     id: 6,
-    image: "https://krmangalam.edu.in/images/cdc-team/vanshita-jain.jpg",
+    image: "https://krmangalam.edu.in/images/placements/cdc-team/vanshita-jain.jpg",
     imageAlt: "Vanshita Jain",
     name: "Vanshita Jain",
     designation: "Internship Manager",

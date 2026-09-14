@@ -20,7 +20,7 @@ const InterviewSuccessStoryCard = ({
   } = story;
 
   return (
-    <div className="border border-[#ccc] bg-white p-5 h-full">
+    <div className="border border-[#ccc] bg-[#fefcfa] p-5 h-full">
       <div>
         <Image
           src={image}
@@ -31,18 +31,18 @@ const InterviewSuccessStoryCard = ({
         />
 
         <div className="py-5 border-b border-[#ccc]">
-          <h5 className="text-sm text-[#7A1F2B] uppercase tracking-[0.4em]">
+          <h5 className="text-sm text-[#7A1F2B] uppercase tracking-[3px]">
             {course}
           </h5>
 
-          <h4 className="text-[26px] font-semibold font-newsreader">{name}</h4>
+          <h4 className="text-[26px] font-semibold font-newsreader capitalize">{name}</h4>
 
           <h6 className="text-xs">{school}</h6>
         </div>
 
         <div className="flex justify-between gap-5 mt-5">
           <div className="flex flex-col">
-            <span className="text-[#7A1F2B] tracking-[0.2em] text-xs uppercase">
+            <span className="text-[#7A1F2B] tracking-[0.2em] text-xs mb-1 inline-block">
               Package
             </span>
 
@@ -52,16 +52,16 @@ const InterviewSuccessStoryCard = ({
           </div>
 
           <div className="flex flex-col">
-            <span className="text-[#7A1F2B] tracking-[0.2em] text-xs uppercase">
+            <span className="text-[#7A1F2B] tracking-[0.2em] text-xs mb-1 inline-block">
               Selected By
             </span>
 
             <Image
               src={companyLogo}
               alt={companyName || "Company"}
-              width={150}
-              height={44}
-              className="h-11 w-auto object-contain object-left"
+              width={200}
+              height={200}
+              className="h-8 w-11 object-contain"
             />
           </div>
         </div>
