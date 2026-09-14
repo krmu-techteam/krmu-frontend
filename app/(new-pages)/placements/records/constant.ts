@@ -166,7 +166,7 @@ export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
     schoolName: "School of Agricultural Sciences",
     eligible: 14,
     placed: 7,
-    placementRate: "50%",
+    placementRate: "86%",
     maxCtc: "34 LPA",
     avgCtc: "10.50 LPA",
     medianCtc: "9.20 LPA",
