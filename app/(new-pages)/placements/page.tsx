@@ -13,11 +13,13 @@ import { cdcTeamMembers } from "./constant";
 const page = () => {
   return (
     <main className="bg-[#fbf8f3]"> 
-      <HeroSection />
-      {/* <PlacementHighlights />
+      {/* <HeroSection />
+      */}
+      <PlacementHighlights /> 
       <OutcomesBySchool />
-      <InterviewReady />
       <StudentSuccessStories /> 
+      {/* 
+      <InterviewReady />
       <OurTopRecruiter /> 
       <InterviewSuccessStories />
       <PlacementResources />

@@ -27,7 +27,7 @@ const StudentSuccessStoryCard = ({
 }: StudentSuccessStoryCardProps) => {
   return (
     <article className="flex flex-col md:flex-row gap-6 lg:gap-10">
-      {/* Image */}
+      {/* Image */} 
       <div className="w-full md:w-[45%] shrink-0">
         <Image
           src={image}
@@ -55,7 +55,7 @@ const StudentSuccessStoryCard = ({
           <div className="flex flex-col">
             <span className="font-semibold text-sm sm:text-base">{name}</span>
 
-            <span className="text-[9px] sm:text-xs tracking-[0.25em] sm:tracking-[0.4em] mt-1">
+            <span className="text-[9px] sm:text-xs tracking-[0.25em] sm:tracking-[4px] mt-1">
               {batch}
             </span>
           </div>

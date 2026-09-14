@@ -140,7 +140,7 @@ const studentStories: StudentSuccessStory[] = [
 export const StudentSuccessStories = () => {
   return (
     <section className="px-5 xl:px-0 pb-10 md:pb-20">
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-7xl">
         <Carousel
           opts={{
             align: "start",

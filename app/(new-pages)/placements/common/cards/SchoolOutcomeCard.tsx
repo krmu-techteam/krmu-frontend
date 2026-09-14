@@ -14,25 +14,25 @@ const SchoolOutcomeCard = ({
   medianCtc,
 }: SchoolOutcomeCardProps) => {
   return (
-    <div className="w-full border border-[#ccc] bg-white p-4 sm:p-5 font-poppins min-h-[335px] flex flex-col justify-around">
+    <div className="w-full border border-[#ccc] bg-white p-4 sm:px-[18px] sm:pt-5 sm:pb-[27px]  font-poppins min-h-[335px] flex flex-col">
       {/* Header */}
       <div className="min-h-[90px] sm:min-h-[96px]">
         <h5 className="mb-2 text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.4em] uppercase text-[#7A1F2B]">
           {code}
         </h5>
 
-        <h3 className="font-newsreader text-xl sm:text-2xl xl:text-[30px] font-medium leading-tight">
+        <h3 className="font-newsreader text-xl sm:text-2xl xl:text-3xl font-medium leading-9">
           {schoolName}
         </h3>
       </div>
 
-      <hr className="mb-5 mt-0 xl:mt-7  border-[#ccc]" />
+      <hr className="mb-11 mt-0 xl:mt-9  border-[#ccc]" />
 
       {/* Stats */}
       <div className="flex items-end justify-between gap-4">
         {/* Placement */}
         <div className="flex min-w-0 flex-col">
-          <span className="font-newsreader text-3xl sm:text-[36px] md:text-[40px] font-medium leading-tight text-[#00225C]">
+          <span className="font-newsreader text-3xl sm:text-[36px] md:text-[40px] font-medium leading-none text-[#00225C]">
             {placementRate}%
           </span>
 
@@ -43,7 +43,7 @@ const SchoolOutcomeCard = ({
 
         {/* Median CTC */}
         <div className="flex shrink-0 flex-col text-right sm:text-center">
-          <span className="font-newsreader text-2xl sm:text-3xl font-medium leading-tight text-[#00225C]">
+          <span className="font-newsreader text-2xl font-medium leading-none text-[#00225C]">
             {medianCtc}
           </span>
 
@@ -52,7 +52,7 @@ const SchoolOutcomeCard = ({
           </span>
         </div>
       </div>
-      <div className="my-4">
+      <div className="mt-[30px]">
         <Slider
           value={[placementRate]}
           max={100}

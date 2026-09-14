@@ -12,9 +12,9 @@ import {
 const OutcomesBySchool = () => {
   return (
     <section className="px-5 xl:px-0 pb-10 md:pb-20">
-      <div className="max-w-6xl mx-auto w-full">
+      <div className="max-w-7xl mx-auto w-full">
         <div>
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#001836] mb-5 font-newsreader">
+          <h2 className="text-4xl md:text-5xl font-semibold text-[#001836] mb-[38px] font-newsreader">
             Outcomes by school
           </h2>
         </div>
@@ -26,7 +26,7 @@ const OutcomesBySchool = () => {
             }}
             className="w-full relative"
           >
-            <div className="absolute z-10 right-10 -top-5 w-[100px] hidden md:block">
+            <div className="absolute z-10 right-0 -top-12 w-[100px] hidden md:block">
               <CarouselPrevious className="left-0 bg-black text-white w-10 h-10" />
               <CarouselNext className="right-0 bg-black text-white w-10 h-10" />
             </div>
