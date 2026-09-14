@@ -4,7 +4,7 @@ const rdcTeamData = [
   {
     name: "Dr. Pradeep Kumar Varshney",
     desg: "Dean Research",
-    facultyUrl: "/faculty/dr-pawan-kumar",
+    facultyUrl: "#",
     facImgUrl: "/images/pradeep_kumar-removebg.png",
   },
   {
