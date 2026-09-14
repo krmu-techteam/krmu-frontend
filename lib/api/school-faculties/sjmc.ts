@@ -75,7 +75,7 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://www.krmangalam.edu.in/images/faculty/dr-neha-arora.jpg",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/08/Dr-Neha-Arora-1.jpg",
   },
   {
     id: 115349,
