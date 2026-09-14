@@ -14,7 +14,7 @@ const page = () => {
   return (
     <main className="bg-[#fbf8f3]"> 
       <HeroSection />
-      <PlacementHighlights />
+      {/* <PlacementHighlights />
       <OutcomesBySchool />
       <InterviewReady />
       <StudentSuccessStories /> 
@@ -22,7 +22,7 @@ const page = () => {
       <InterviewSuccessStories />
       <PlacementResources />
       <MeetCDCTeam teamMembers={cdcTeamMembers} />  
-      <QuickEnquiry />
+      <QuickEnquiry /> */}
     </main>
   );
 };

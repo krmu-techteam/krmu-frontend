@@ -12,14 +12,14 @@ const HeroSection = () => {
         priority 
       /> */}
       <div className="max-w-6xl mx-auto w-full z-10 relative flex flex-col md:flex-row items-center lg:items-start px-5 xl:px-0 gap-5 sm:gap-0">
-        <div className="w-full md:w-1/2 font-poppins">
+        <div className="w-full md:w-1/2 font-poppins pt-5">
           <h3 className="text-base font-medium tracking-[0.4em] uppercase text-[#8d5552] mb-1.5">
             Placement
           </h3>
-          <h1 className="text-4xl lg:text-6xl font-semibold text-[#001836] mb-2 md:mb-6 md:max-w-sm font-newsreader">
+          <h1 className="text-4xl lg:text-[68px] font-bold text-[#001836] mb-2 md:mb-6 md:max-w-sm font-newsreader">
             Your Career Starts Here. 92% placed.
           </h1>
-          <p className="text-xl md:max-w-[468px] mb-6">
+          <p className="text-xl md:max-w-[468px] mb-6 text-[#43474F]">
             Verifiable data, exceptional outcomes. Discover why top global
             recruiters consistently choose our graduates for leadership roles.
           </p>
@@ -42,7 +42,7 @@ const HeroSection = () => {
           <Image
             src="/placements/main/pl-hero-girl.webp"
             alt="Hero Girl"
-            className="object-contain w-[320px] sm:w-fit"
+            className="object-contain w-[320px] sm:w-[522px]"
             width={522}
             height={625}
           />
