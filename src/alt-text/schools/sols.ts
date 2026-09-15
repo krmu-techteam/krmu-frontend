@@ -208,10 +208,8 @@ export const solsAltConfig: SchoolAltConfig = {
         "Group_490_55f81433d8.webp":
             "SOLS knowledge partner - Knowledge Steez logo",
         "Group_489_1_b3adf79477.webp":
-            "SOLS knowledge partner - Pahuja Law Academy logo",
-        "Group_488_1_77f6fd1425.webp":
             "SOLS knowledge partner - Vrankers Judiciary logo",
-        "Group_492_89cf898eea.webp":
+        "Group_488_1_77f6fd1425.webp":
             "SOLS knowledge partner - Pulastya Legal Advocates and Legal Consultants logo",
         "Group_491_9797007f91.webp":
             "SOLS knowledge partner - Karat Law Academy logo",

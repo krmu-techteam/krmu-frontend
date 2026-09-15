@@ -64,17 +64,40 @@ export const soetAltConfig: SchoolAltConfig = {
     },
 
     knowledgePartners: {
+        "Knowledge Partner Logo 1": "KRMU Knowledge Partner - EduSkills logo",
+        EduSkills: "KRMU Knowledge Partner - EduSkills logo",
+        "Knowledge Partner Logo 2":
+            "KRMU Knowledge Partner - Bosch India Foundation logo",
+        "Bosch India Foundation":
+            "KRMU Knowledge Partner - Bosch India Foundation logo",
+        "Knowledge Partner Logo 3": "KRMU Knowledge Partner - Universitas logo",
+        Universitas: "KRMU Knowledge Partner - Universitas logo",
+        "Knowledge Partner Logo 4": "KRMU Knowledge Partner - ICT Academy logo",
+        "ICT Academy": "KRMU Knowledge Partner - ICT Academy logo",
+        "Knowledge Partner Logo 5":
+            "KRMU Knowledge Partner - Namangan Engineering-Construction Institute logo",
+        "Namangan Engineering-Construction Institute":
+            "KRMU Knowledge Partner - Namangan Engineering-Construction Institute logo",
+        "ImaginXP Logo":
+            "ImaginXP – KRMU SOET knowledge partner for UX/UI design",
+        ImaginXP: "ImaginXP – KRMU SOET knowledge partner for UX/UI design",
+        "Network Bulls Logo":
+            "Network Bulls – KRMU SOET knowledge partner for networking certifications",
+        "Network Bulls":
+            "Network Bulls – KRMU SOET knowledge partner for networking certifications",
+        "Princeton Review Logo":
+            "Princeton Review – KRMU SOET knowledge partner",
+        "Princeton Review": "Princeton Review – KRMU SOET knowledge partner",
+        "Enviro Logo": "Enviro – KRMU SOET knowledge partner",
+        Enviro: "Enviro – KRMU SOET knowledge partner",
+        "SRM Logo": "SRM – KRMU SOET knowledge partner",
+        SRM: "SRM – KRMU SOET knowledge partner",
+        "QSD Logo": "QSD – KRMU SOET knowledge partner",
+        QSD: "QSD – KRMU SOET knowledge partner",
         IBM: "IBM – KRMU School of Engineering & Technology knowledge partner",
         "EC-Council": "EC-Council – KRMU SOET knowledge partner",
         Samatrix: "Samatrix – KRMU SOET knowledge partner",
         Xebia: "Xebia – KRMU SOET knowledge partner",
-        ImaginXP: "ImaginXP – KRMU SOET knowledge partner for UX/UI design",
-        "Network Bulls":
-            "Network Bulls – KRMU SOET knowledge partner for networking certifications",
-        "Princeton Review": "Princeton Review – KRMU SOET knowledge partner",
-        Enviro: "Enviro – KRMU SOET knowledge partner",
-        SRM: "SRM – KRMU SOET knowledge partner",
-        QSD: "QSD – KRMU SOET knowledge partner",
         "Knowledge Partner Logo":
             "Industry knowledge partner logo – KRMU School of Engineering & Technology",
     },
@@ -217,13 +240,15 @@ export const soetAltConfig: SchoolAltConfig = {
             "Jayant Parashar, B.Tech. CSE student, KRMU – Google Summer of Code 2026 mentee",
         "1773422694704_886721c56d.png":
             "Google Summer of Code (GSoC) 2026 – KRMU Open Source Mentorship Programme",
-        "Frame_282_b65707e5f6.webp":
-            "IBM – KRMU School of Engineering & Technology knowledge partner",
-        "Frame_281_85ab6c79fb.webp": "EC-Council – KRMU SOET knowledge partner",
-        "Frame_280_699a71da8f.webp": "Samatrix – KRMU SOET knowledge partner",
-        "Frame_283_6f971e6347.webp": "Xebia – KRMU SOET knowledge partner",
+        "Frame_282_b65707e5f6.webp": "KRMU Knowledge Partner - EduSkills logo",
+        "Frame_281_85ab6c79fb.webp":
+            "KRMU Knowledge Partner - Bosch India Foundation logo",
+        "Frame_280_699a71da8f.webp":
+            "KRMU Knowledge Partner - Universitas logo",
+        "Frame_283_6f971e6347.webp":
+            "KRMU Knowledge Partner - ICT Academy logo",
         "Frame_284_34eeb2ef9a.webp":
-            "Industry knowledge partner logo – KRMU School of Engineering & Technology",
+            "KRMU Knowledge Partner - Namangan Engineering-Construction Institute logo",
         "imaginxp_b86c90459c.webp":
             "ImaginXP – KRMU SOET knowledge partner for UX/UI design",
         "networkbulls_ab801a900f.webp":
