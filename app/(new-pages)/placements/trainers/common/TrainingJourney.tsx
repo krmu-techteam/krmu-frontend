@@ -1,3 +1,4 @@
+import Divider from "../../common/Divider";
 import { trainingYears } from "../constant";
 
 const TrainingJourney = () => {
@@ -64,10 +65,11 @@ const TrainingJourney = () => {
               key={item.year}
               className={`
                 flex min-h-[220px] flex-col
-                bg-white
+                 bg-[#fefcfa]
                 px-5 py-6
-                sm:min-h-[240px] sm:px-6 sm:py-7
-                lg:min-h-[260px]
+                sm:min-h-[240px] sm:px-6 sm:pt-7
+                sm:pb-14
+                lg:min-h-[300px]
 
                 border-[#d8d5d0]
 
@@ -83,6 +85,7 @@ const TrainingJourney = () => {
                 lg:border-b-0
                 lg:border-r
                 lg:last:border-r-0
+               
               `}
             >
               <div
@@ -90,7 +93,7 @@ const TrainingJourney = () => {
                   font-newsreader
                   text-2xl font-medium
                   leading-none
-                  text-[#001836]
+                  text-black
                   sm:text-[30px]
                   md:text-[32px]
                 "
@@ -104,7 +107,7 @@ const TrainingJourney = () => {
                   font-newsreader
                   text-2xl font-medium
                   leading-tight
-                  text-[#001836]
+                  text-black
                   sm:text-[28px]
                   md:text-[32px]
                 "
@@ -118,7 +121,7 @@ const TrainingJourney = () => {
                   max-w-[280px]
                   font-poppins
                   text-sm leading-6
-                  text-[#444]
+                  text-[#3C3C3C]
                   sm:mt-4
                   sm:text-base
                   sm:leading-[1.45]
@@ -129,6 +132,7 @@ const TrainingJourney = () => {
             </div>
           ))}
         </div>
+        <Divider />
       </div>
     </section>
   );

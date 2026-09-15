@@ -5,15 +5,17 @@ import HowToRecruit from "./comps/HowToRecruit";
 import PastRecruiters from "./comps/PastRecruiters";
 import RecruitersHero from "./comps/RecruitersHero";
 import SchoolsAndGraduatingTalent from "./comps/SchoolsAndGraduatingTalent";
+import TalentByDomain from "./comps/TalentByDomain";
 
 const page = () => {
   return (
     <main className="bg-[#fbf8f3] font-poppins">
       <RecruitersHero />
-      <SchoolsAndGraduatingTalent />
+      <TalentByDomain />
+      {/* <SchoolsAndGraduatingTalent /> */}
       <DriveCalendar />
       <HowToRecruit />
-      <PastRecruiters />
+      <PastRecruiters /> 
       <DirectorMessage />
       <CorporateAdvisoryBoard />
     </main>

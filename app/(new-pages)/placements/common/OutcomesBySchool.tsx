@@ -15,7 +15,7 @@ const OutcomesBySchool = () => {
       <div className="max-w-7xl mx-auto w-full">
         <div>
           <h2 className="text-4xl md:text-5xl font-semibold text-[#001836] mb-[38px] font-newsreader">
-            Outcomes by school
+            School-Wise Placement Outcomes
           </h2>
         </div>
         <div className="relative">

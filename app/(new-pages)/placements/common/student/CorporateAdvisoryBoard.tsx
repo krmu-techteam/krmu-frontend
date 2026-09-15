@@ -4,32 +4,37 @@ const advisoryBoard = [
   {
     name: "ASHISH KUMAR",
     designation: "Designation- Manager",
+    alt: "Ashish Kumar, Corporate Advisory Board",
     company: "Tata Consultancy Services",
-    image: "/images/advisory-board/ashish-kumar.jpg",
+    image: "/images/placements/cab/ashish-kumar.jpg",
   },
   {
     name: "PRADEEP RAI",
+    alt: "Pradeep Rai, Corporate Advisory Board",
     designation: "Designation- Senior Advocate",
     company: "Supreme Court of India",
-    image: "/images/advisory-board/pradeep-rai.jpg",
+    image: "/images/placements/cab/pradeep-rai.jpg",
   },
   {
     name: "PAWAN DUGGAL",
+    alt: "Pawan Duggal, Corporate Advisory Board",
     designation: "Designation- Advocate",
     company: "Supreme Court of India",
-    image: "/images/advisory-board/pawan-duggal.jpg",
+    image: "/images/placements/cab/pawan-duggal.jpg",
   },
   {
     name: "RUCHIKA VOHRA",
+    alt: "Ruchika Vohra, Corporate Advisory Board",
     designation: "Designation- MANAGER- TALENT ACQUISITION",
     company: "BLUSMART",
-    image: "/images/advisory-board/ruchika-vohra.jpg",
+    image: "/images/placements/cab/ruchika-vohra.jpg",
   },
   {
     name: "PUNIT SHARMA",
+    alt: "Punit Sharma, Corporate Advisory Board",
     designation: "Designation- CHRO",
     company: "PROCMART",
-    image: "/images/advisory-board/punit-sharma.jpg",
+    image: "/images/placements/cab/punit-sharma.jpg",
   },
 ];
 
@@ -109,10 +114,7 @@ const CorporateAdvisoryBoard = () => {
           "
         >
           {advisoryBoard.map((member) => (
-            <article
-              key={member.name}
-              className="min-w-0"
-            >
+            <article key={member.name} className="min-w-0">
               {/* Image */}
               <div
                 className="
@@ -125,7 +127,7 @@ const CorporateAdvisoryBoard = () => {
               >
                 <Image
                   src={member.image}
-                  alt={member.name}
+                  alt={member.alt || ""}
                   fill
                   sizes="
                     (max-width: 639px) 100vw,

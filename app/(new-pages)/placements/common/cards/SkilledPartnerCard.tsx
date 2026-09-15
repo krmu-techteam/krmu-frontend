@@ -23,10 +23,11 @@ const SkilledPartnerCard = ({ partner }: SkilledPartnerCardProps) => {
         md:min-h-[245px]
         lg:min-h-[260px]
         lg:px-6 lg:py-6
+        space-y-2
       "
     >
       {/* Logo */}
-      <div className="flex h-9 items-center sm:h-10">
+      <div className="flex h-9 items-center sm:h-10 ">
         <img
           src={partner.logo}
           alt={`${partner.companyType} logo`}
@@ -35,7 +36,8 @@ const SkilledPartnerCard = ({ partner }: SkilledPartnerCardProps) => {
             max-w-[85px]
             object-contain
             sm:max-h-9
-            sm:max-w-[95px]
+            sm:max-w-[150px]
+            
           "
         />
       </div>
@@ -48,7 +50,7 @@ const SkilledPartnerCard = ({ partner }: SkilledPartnerCardProps) => {
           text-2xl font-semibold
           leading-tight
           text-[#111]
-          sm:text-[26px]
+          sm:text-xl
         "
       >
         {partner.companyType}

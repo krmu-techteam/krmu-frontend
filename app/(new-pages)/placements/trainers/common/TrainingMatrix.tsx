@@ -15,7 +15,7 @@ const TrainingMatrix = () => {
     const previousIndex =
       currentIndex === 0 ? trainingMatrix.length - 1 : currentIndex - 1;
 
-    setActiveSchool(trainingMatrix[previousIndex]);
+    setActiveSchool(trainingMatrix[previousIndex]); 
   };
 
   const handleNext = () => {
@@ -53,8 +53,7 @@ const TrainingMatrix = () => {
               text-[#555]
               sm:text-sm
               md:text-base
-              lg:text-lg
-              lg:tracking-[0.16em]
+              lg:tracking-[2px]
             "
           >
             By school, program & semester

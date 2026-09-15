@@ -33,28 +33,27 @@ const TrainersHeroSection = () => {
               lg:pb-16
           "
           >
-            <h3
+            <p
               className="
                 mb-3
-                text-xs font-medium uppercase tracking-[0.3em]
+                text-xs font-medium uppercase 
                 text-[#E7C268]
                 sm:text-sm
                 md:mb-5
-                md:text-base
-                md:tracking-[0.4em]
+                md:text-lg
               "
             >
               Placement Training
-            </h3>
+            </p>
 
             <h1
               className="
                 mb-4
-                font-newsreader font-semibold
+                font-newsreader font-bold
                 text-3xl leading-tight
                 sm:text-4xl
                 md:mb-5 md:text-5xl
-                lg:text-6xl
+                lg:text-[65px]
               "
             >
               Your Career Starts Here. 92% placed.
@@ -118,7 +117,7 @@ const TrainersHeroSection = () => {
             {/* Girl */}
             <Image
               src="/placements/trainers/trainers-hero-girl.webp"
-              alt="Placement training student"
+              alt="KRMU student — placement training programme"
               width={522}
               height={625}
               priority

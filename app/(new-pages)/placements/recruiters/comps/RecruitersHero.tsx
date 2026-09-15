@@ -4,7 +4,7 @@ const RecruitersHero = () => {
   return (
     <section className="bg-[url(/placements/recruiters/rec-hero-bg.webp)] bg-cover bg-center bg-no-repeat px-5 pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-36 md:pb-24 xl:px-0 xl:pt-40 xl:pb-28">
       <div className="mx-auto w-full max-w-3xl text-center text-white">
-        <h3 className="text-xs font-medium uppercase tracking-[0.25em] text-[#E7C268] sm:text-sm sm:tracking-[0.35em] md:text-base md:tracking-[0.4em]">
+        <h3 className="text-xs font-medium uppercase text-[#E7C268] sm:text-sm  md:text-base tracking-[4px]">
           For Recruiters
         </h3>
 
@@ -20,14 +20,14 @@ const RecruitersHero = () => {
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-3">
           <Link
             href="#"
-            className="inline-flex min-h-12 w-full max-w-[220px] items-center justify-center bg-[#de0000] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#c80000] sm:max-w-[187px]"
+            className="inline-flex min-h-12 w-full max-w-[220px] items-center justify-center bg-[#de0000] px-6 py-3 text-lg font-medium text-white transition-colors hover:bg-[#c80000] sm:max-w-[187px]"
           >
             Register here
           </Link>
 
           <Link
             href="https://www.krmangalam.edu.in/pdfs/placement-brochure.pdf"
-            className="inline-flex min-h-12 w-full max-w-[220px] items-center justify-center bg-white px-2 py-3 text-sm font-medium text-black transition-colors hover:bg-gray-100 sm:max-w-[187px]"
+            className="inline-flex min-h-12 w-full max-w-[220px] items-center justify-center bg-white px-2 py-3 text-lg font-medium text-black transition-colors hover:bg-gray-100 sm:max-w-[220px]"
             target="_blank"
           >
             Download brochure

@@ -10,10 +10,10 @@ const TrainingModules = () => {
             className="
               font-poppins
               text-xs font-medium uppercase
-              tracking-[0.25em]
+              tracking-[4px]
               text-[#8d5552]
               sm:text-sm
-              md:text-base md:tracking-[0.35em]
+              md:text-base
             "
           >
             What We Offer
@@ -22,9 +22,8 @@ const TrainingModules = () => {
           <h2
             className="
               mt-2
-              max-w-[900px]
               font-newsreader
-              text-3xl font-medium
+              text-3xl
               leading-[1.15]
               text-[#001836]
               sm:text-4xl
@@ -67,7 +66,7 @@ const TrainingModules = () => {
                 flex min-h-[230px]
                 flex-col
                 border border-[#d8d5d0]
-                bg-[#fdfbf8]
+                bg-[#fefcfa]
                 p-5
                 sm:min-h-[245px] sm:p-6
                 md:min-h-[260px]

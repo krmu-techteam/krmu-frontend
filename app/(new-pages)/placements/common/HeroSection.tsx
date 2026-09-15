@@ -13,11 +13,11 @@ const HeroSection = () => {
       /> */}
       <div className="max-w-7xl mx-auto w-full z-10 relative flex flex-col md:flex-row items-center lg:items-start px-5 xl:px-0 gap-5 sm:gap-0">
         <div className="w-full md:w-1/2 font-poppins pt-5">
-          <h3 className="text-base font-medium tracking-[7px] uppercase text-[#8d5552] mb-1.5">
+          <p className="text-base font-medium tracking-[7px] uppercase text-[#8d5552] mb-1.5">
             Placement
-          </h3>
-          <h1 className="text-4xl lg:text-[68px] font-bold text-[#001836] mb-2 md:mb-6 md:max-w-sm font-newsreader">
-            Your Career Starts Here. 92% placed.
+          </p>
+          <h1 className="text-4xl lg:text-[68px] font-bold text-[#001836] mb-2 md:mb-6 md:max-w-xl font-newsreader">
+            Your Career Starts Here. 92% Placement Rate.
           </h1>
           <p className="text-xl md:max-w-[468px] mb-6 text-[#43474F]">
             Verifiable data, exceptional outcomes. Discover why top global
@@ -41,12 +41,12 @@ const HeroSection = () => {
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
             src="/placements/main/pl-hero-girl.webp"
-            alt="Hero Girl"
+            alt="K.R. Mangalam University placement student"
             className="object-contain"
             width={522}
             height={625}
           />
-        </div>    
+        </div>
       </div>
     </section>
   );

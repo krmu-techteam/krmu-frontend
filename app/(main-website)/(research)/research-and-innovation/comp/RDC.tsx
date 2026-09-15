@@ -33,20 +33,15 @@ const RDC = () => {
         </div>
         <div className="lg:w-1/2 flex justify-center">
           <div className="text-center">
-            <Image
-              src="/research/seema.webp"
-              width={431}
-              height={537}
-              alt="Seema"
-            />
-            <Link
-              href="/dr-seema-raj"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Image src="/images/pradeep.png" width={431} height={537} alt="Seema" />
+            <div
+              // href="/dr-seema-raj"
+              // target="_blank"
+              // rel="noopener noreferrer"
               className="text-white mt-1.5"
             >
-              <strong>Dr. Seema Raj</strong> | Deputy Dean Research
-            </Link>
+              <strong>Dr. Pradeep Kumar Varshney</strong> | Dean Research
+            </div>
           </div>
         </div>
       </div>

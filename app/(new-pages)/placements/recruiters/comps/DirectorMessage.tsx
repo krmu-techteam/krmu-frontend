@@ -7,10 +7,13 @@ interface DirectorMessageProps {
   designation: string;
   email: string;
   phone: string;
+  alt: string;
 }
 
 const directorMessage: DirectorMessageProps = {
-  image: "/images/director/dr-vibha-thakur.jpg",
+  image:
+    "https://krmangalam.edu.in/images/placements/cdc-team/dr-vibha-thakur.jpg",
+  alt: "Dr. Vibha Thakur, Director, Career Development Center",
   quote:
     '"As Director of the Career Development Center, it is my privilege to extend a warm welcome. We are deeply committed to preparing industry-ready graduates equipped with the skills to thrive in an ever-evolving corporate landscape – through bootcamps, profile-based training and company-specific programs. On behalf of K.R. Mangalam University, I invite you to discover a talented, ambitious and dynamic pool of young professionals ready to make a difference in your organisation."',
   name: "Dr. Vibha Thakur",
@@ -58,7 +61,7 @@ const DirectorMessage = () => {
             >
               <Image
                 src={directorMessage.image}
-                alt={directorMessage.name}
+                alt={directorMessage.alt || ""}
                 fill
                 sizes="
                   (max-width: 639px) 180px,

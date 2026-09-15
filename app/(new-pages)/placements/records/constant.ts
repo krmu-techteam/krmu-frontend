@@ -167,9 +167,9 @@ export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
     eligible: 14,
     placed: 7,
     placementRate: "86%",
-    maxCtc: "34 LPA",
-    avgCtc: "10.50 LPA",
-    medianCtc: "9.20 LPA",
+    maxCtc: "6.50 LPA",
+    avgCtc: "5.90 LPA",
+    medianCtc: "5.60 LPA", 
     recordlogos: Recordslogos,
   },
 ];

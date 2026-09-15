@@ -44,7 +44,7 @@ const StudentSuccessStoryCard = ({
           {category}
         </h5>
 
-        <p className="text-xl sm:text-2xl xl:text-3xl font-medium font-newsreader leading-[1.2]">
+        <p className="text-xl sm:text-2xl xl:text-3xl font-medium font-newsreader leading-[1.2] italic">
           “{quote}”
         </p>
 

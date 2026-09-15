@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Divider from "../../common/Divider";
 
 interface RecruitmentStep {
   id: number;
@@ -43,14 +44,12 @@ const recruitmentSteps: RecruitmentStep[] = [
   {
     id: 6,
     title: "Online/offline aptitude test",
-    description:
-      "Eligible students appear for the aptitude/assessment test.",
+    description: "Eligible students appear for the aptitude/assessment test.",
   },
   {
     id: 7,
     title: "Group discussion",
-    description:
-      "Shortlisted students participate in the group discussion.",
+    description: "Shortlisted students participate in the group discussion.",
   },
   {
     id: 8,
@@ -61,8 +60,7 @@ const recruitmentSteps: RecruitmentStep[] = [
   {
     id: 9,
     title: "Result announcement",
-    description:
-      "Final results are announced to the selected students.",
+    description: "Final results are announced to the selected students.",
   },
   {
     id: 10,
@@ -107,55 +105,57 @@ const recruiterBenefits: RecruiterBenefit[] = [
 
 const HowToRecruit = () => {
   return (
-    <section className="bg-[#f8f6f2] px-5 py-12 sm:px-8 sm:py-16 md:px-10 lg:py-20 xl:px-0">
+    <section className="px-5  sm:px-8  md:px-10  xl:px-0">
       <div className="mx-auto w-full max-w-7xl">
-        {/* Header */}
-        <div className="mb-10 sm:mb-12 lg:mb-16">
-          <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.25em] text-[#9a2b34] sm:text-[11px] sm:tracking-[0.3em]">
-            For Recruiters
-          </p>
+        <Divider />
+        <div className="pt-12 sm:pt-16 lg:pt-20">
+          {/* Header */}
+          <div className="mb-10 sm:mb-12 lg:mb-16 pb-12">
+            <p className="mb-3 text-[10px] font-medium uppercase text-[#9a2b34] sm:text-[11px]  tracking-[4px]">
+              For Recruiters
+            </p>
 
-          <h2 className="font-newsreader text-[36px] leading-[0.98] tracking-[-0.025em] text-[#06264b] sm:text-[44px] md:text-[48px] lg:text-[50px]">
-            How to recruit at KRMU
-          </h2>
+            <h2 className="font-newsreader text-[36px] leading-[0.98] tracking-[-0.025em] text-[#06264b] sm:text-[44px] md:text-[48px] lg:text-[55px]">
+              How to recruit at KRMU
+            </h2>
 
-          <p className="mt-3 max-w-xl text-sm leading-6 text-[#3f3d3b] sm:text-base sm:leading-7">
-            Partner with us. Build your team. Shape the future.
-          </p>
-        </div>
-
-        {/* Recruitment Process */}
-        <div className="space-y-12 sm:space-y-14 lg:space-y-16">
-          {/* First 5 */}
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-5 lg:gap-0">
-            {recruitmentSteps.slice(0, 5).map((step, index) => (
-              <RecruitmentStepCard
-                key={step.id}
-                step={step}
-                showConnector={index !== 4}
-              />
-            ))}
+            <p className="mt-3 max-w-xl text-sm leading-6 text-[#3F3F3F] sm:text-base sm:leading-7">
+              Partner with us. Build your team. Shape the future.
+            </p>
           </div>
 
-          {/* Second 5 */}
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-5 lg:gap-0">
-            {recruitmentSteps.slice(5, 10).map((step, index) => (
-              <RecruitmentStepCard
-                key={step.id}
-                step={step}
-                showConnector={index !== 4}
-              />
-            ))}
-          </div>
-        </div>
+          {/* Recruitment Process */}
+          <div className="space-y-12 sm:space-y-14 lg:space-y-16">
+            {/* First 5 */}
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-5 lg:gap-0">
+              {recruitmentSteps.slice(0, 5).map((step, index) => (
+                <RecruitmentStepCard
+                  key={step.id}
+                  step={step}
+                  showConnector={index !== 4}
+                />
+              ))}
+            </div>
 
-        {/* Benefits */}
-        <div className="mt-12 grid grid-cols-1 overflow-hidden border border-[#d5d3cf] sm:grid-cols-2 lg:mt-16 lg:grid-cols-6">
-          {recruiterBenefits.map((benefit, index) => (
-            <div
-              key={benefit.eyebrow}
-              className={`
-                min-h-[115px] p-5 sm:p-6 lg:min-h-[125px]
+            {/* Second 5 */}
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-5 lg:gap-0">
+              {recruitmentSteps.slice(5, 10).map((step, index) => (
+                <RecruitmentStepCard
+                  key={step.id}
+                  step={step}
+                  showConnector={index !== 4}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Benefits */}
+          <div className="mt-12 grid grid-cols-1 overflow-hidden border border-[#d5d3cf] sm:grid-cols-2 lg:mt-16 lg:grid-cols-6 xl:flex">
+            {recruiterBenefits.map((benefit, index) => (
+              <div
+                key={benefit.eyebrow}
+                className={`
+                min-h-[115px] p-5 sm:p-6 lg:min-h-[125px] xl:first:w-4/12
                 ${index === 0 ? "bg-[#092845] text-white" : "bg-[#faf9f6]"}
                 ${
                   index !== recruiterBenefits.length - 1
@@ -168,32 +168,35 @@ const HowToRecruit = () => {
                     : ""
                 }
               `}
-            >
-              <p
-                className={`text-[9px] font-medium uppercase tracking-[0.16em] sm:text-[10px] ${
-                  index === 0 ? "text-white/75" : "text-[#982c35]"
-                }`}
               >
-                {benefit.eyebrow}
-              </p>
-
-              {benefit.title && (
-                <h3
-                  className={`mt-3 font-newsreader text-[18px] leading-[1.08] sm:text-[19px] ${
-                    index === 0 ? "text-white" : "text-[#162b46]"
+                <p
+                  className={`text-[9px] font-medium uppercase tracking-[0.16em] sm:text-[10px] ${
+                    index === 0 ? "text-white/75" : "text-[#982c35]"
                   }`}
                 >
-                  {benefit.title}
-                </h3>
-              )}
-
-              {benefit.description && (
-                <p className="mt-3 text-[11px] leading-[1.45] text-[#55524f] sm:text-xs">
-                  {benefit.description}
+                  {benefit.eyebrow}
                 </p>
-              )}
-            </div>
-          ))}
+
+                {benefit.title && (
+                  <h3
+                    className={`mt-3 font-newsreader text-[18px] leading-[1.08]  ${
+                      index === 0
+                        ? "text-white sm:text-[28px]"
+                        : "text-[#7A1F2B] sm:text-sm"
+                    }`}
+                  >
+                    {benefit.title}
+                  </h3>
+                )}
+
+                {benefit.description && (
+                  <p className="mt-3 text-[11px] leading-[1.45] text-[#4D4D4D] sm:text-base">
+                    {benefit.description}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -214,7 +217,7 @@ const RecruitmentStepCard = ({
       {/* Number */}
       <div className="relative z-10 flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-full border border-[#d3d2ce] bg-[#f8f6f2] sm:h-[76px] sm:w-[76px] lg:h-[86px] lg:w-[86px]">
         <div className="flex h-[36px] w-[36px] items-center justify-center rounded-full bg-[#06264b] sm:h-[40px] sm:w-[40px] lg:h-[42px] lg:w-[42px]">
-          <span className="font-newsreader text-xs font-medium text-white sm:text-[13px]">
+          <span className="font-newsreader text-xs font-medium text-white sm:text-[15px]">
             {String(step.id).padStart(2, "0")}
           </span>
         </div>
@@ -232,11 +235,11 @@ const RecruitmentStepCard = ({
 
       {/* Content */}
       <div className="ml-5 max-w-[260px] pb-2 sm:ml-0 sm:max-w-[190px] sm:pt-4 lg:mt-3 lg:max-w-[185px] lg:pt-0">
-        <h3 className="font-newsreader text-[17px] leading-[1.1] text-[#08274c] sm:text-[16px]">
+        <h3 className="font-newsreader text-[17px] leading-[1.1] text-[#08274c] sm:text-[22px] font-medium">
           {step.title}
         </h3>
 
-        <p className="mt-3 text-[12px] leading-[1.5] text-[#3f3d3a] sm:mt-4">
+        <p className="mt-3 text-[15px] leading-[1.5] text-[#3f3d3a] sm:mt-4">
           {step.description}
         </p>
       </div>

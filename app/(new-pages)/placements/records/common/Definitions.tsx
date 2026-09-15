@@ -3,6 +3,7 @@
 import { ArrowRight, ArrowUp } from "lucide-react";
 import { useState } from "react";
 import { DefinitionsData } from "../constant";
+import Divider from "../../common/Divider";
 
 const Definitions = () => {
   const [showAll, setShowAll] = useState(false);
@@ -12,7 +13,7 @@ const Definitions = () => {
     : DefinitionsData.slice(0, 3);
 
   return (
-    <section className="px-5 xl:px-0 pb-10 xl:pb-20">
+    <section className="px-5 xl:px-0">
       <div className="mx-auto w-full max-w-7xl">
         {/* Heading */}
         <div className="max-w-3xl">
@@ -75,6 +76,7 @@ const Definitions = () => {
             </button>
           </div>
         )}
+        <Divider />
       </div>
     </section>
   );

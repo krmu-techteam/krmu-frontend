@@ -1,7 +1,7 @@
 export const stats = [
   {
     value: "12K+",
-    label: "Students Placed",
+    label: "Students",
   },
   {
     value: "56.6 LPA",
@@ -131,55 +131,55 @@ export interface RecruiterLogo {
 export const ourTopRecruitersLogos: RecruiterLogo[] = [
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/rkclick.webp",
-    alt: "RK Click",
+    alt: "RK Click logo",
     width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/ibm.webp",
-    alt: "IBM",
+    alt: "IBM logo",
     width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/xebia.webp",
-    alt: "xebia",
+    alt: "Xebia logo",
     width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/aecc.webp",
-    alt: "aecc",
+    alt: "AECC logo",
     width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/systique.webp",
-    alt: "systique",
+    alt: "Systique logo",
     width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/medanta.webp",
-    alt: "Medanta",
+    alt: "Medanta logo",
     width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/samatrix.webp",
-    alt: "samatrix",
+    alt: "Samatrix logo",
     width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/ec-council.webp",
-    alt: "EC Council",
+    alt: "EC-Council logo (file: ec-council.webp)",
     width: 250,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/deep.webp",
-    alt: "deep",
+    alt: "Deep (company) logo",
     width: 200,
     height: 76,
   },
@@ -192,13 +192,13 @@ export const ourTopRecruitersLogos: RecruiterLogo[] = [
   {
     imageUrl:
       "https://www.krmangalam.edu.in/images/recuiters/grant-thorton.webp",
-    alt: "grant-thorton",
+    alt: "Grant Thornton logo",
     width: 200,
     height: 76,
   },
   {
     imageUrl: "https://www.krmangalam.edu.in/images/recuiters/cesim.webp",
-    alt: "cesim",
+    alt: "Cesim logo  ",
     width: 126,
     height: 76,
   },
@@ -301,7 +301,7 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
     school: "School of Engineering and Technology",
     package: "56.6 LPA",
     companyLogo: "/placements/main/ferrari.png",
-    companyName: "Ferrari",
+    companyName: "Ferrari (recruiter) logo",
   },
   {
     id: 2,
@@ -312,7 +312,7 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
     school: "School of Engineering and Technology",
     package: "36 LPA",
     companyLogo: "https://krmangalam.edu.in/images/logos/logo-unias-india.jpeg",
-    companyName: "Unias",
+    companyName: "Unias (recruiter) logo",
   },
   {
     id: 3,
@@ -323,7 +323,7 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
     school: "School of Engineering and Technology",
     package: "34 LPA",
     companyLogo: "https://krmangalam.edu.in/images/logos/autodesk-logo.svg",
-    companyName: "Autodesk",
+    companyName: "Autodesk logo (Vineet card)",
   },
   {
     id: 4,
@@ -334,7 +334,7 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
     school: "School of Engineering and Technology",
     package: "34 LPA",
     companyLogo: "https://krmangalam.edu.in/images/logos/autodesk-logo.svg",
-    companyName: "Autodesk",
+    companyName: "Autodesk logo (Shourya card)",
   },
   {
     id: 5,
@@ -345,7 +345,7 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
     school: "School of Engineering and Technology",
     package: "24 LPA",
     companyLogo: "https://krmangalam.edu.in/images/logos/cmo.png",
-    companyName: "Como",
+    companyName: "Como (recruiter) logo",
   }, 
   {
     id: 5,
@@ -356,18 +356,18 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
     school: "School of Engineering and Technology",
     package: "12 LPA",
     companyLogo: "https://krmangalam.edu.in/images/logos/akal-logo.png",
-    companyName: "AKAL",
+    companyName: "AKAL (recruiter) logo",
   },
   {
     id: 6,
     image: "https://www.krmangalam.edu.in/images/success-stories/naman-pune.jpg",
-    imageAlt: "Naman Pune",
+    imageAlt: "Naman Punn",
     course: "B.Tech. CSE",
-    name: "Naman Pune",
+    name: "Naman Punn",
     school: "School of Engineering and Technology",
     package: "10.6 LPA",
     companyLogo: "https://krmangalam.edu.in/images/logos/hsc-logo-1.png",
-    companyName: "Systique",
+    companyName: "Systique logo",
   },
   {
     id: 6,
@@ -378,7 +378,7 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
     school: "School of Engineering and Technology",
     package: "10.6 LPA",
     companyLogo: "https://krmangalam.edu.in/images/logos/hsc-logo-1.png",
-    companyName: "Systique",
+    companyName: "Systique logo",
   },
 ];
 
@@ -395,7 +395,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   {
     id: 1,
     image: "https://krmangalam.edu.in/images/placements/cdc-team/dr-vibha-thakur.jpg",
-    imageAlt: "Dr. Vibha Thakur",
+    imageAlt: "Dr. Vibha Thakur - Director | Career Development Centre",
     name: "Dr. Vibha Thakur",
     designation: "Director | Career Development Centre",
     email: "director.cdc@krmangalam.edu.in",
@@ -403,7 +403,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   {
     id: 2,
     image: "https://krmangalam.edu.in/images/placements/cdc-team/jharna-jagtiani.jpg",
-    imageAlt: "Jharna Jagtiani",
+    imageAlt: "Jharna Jagtiani - Senior Manager",
     name: "Jharna Jagtiani",
     designation: "Senior Manager",
     email: "jharnavijay.jagtiani@krmangalam.edu.in",
@@ -411,7 +411,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   {
     id: 3,
     image: "https://krmangalam.edu.in/images/placements/cdc-team/charu-gola.jpg",
-    imageAlt: "Charu Gola",
+    imageAlt: "Charu Gola - Assistant Manager- CDC",
     name: "Charu Gola",
     designation: "Assistant Manager- CDC",
     email: "charu.gola@krmangalam.edu.in",
@@ -419,7 +419,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   {
     id: 4,
     image: "https://krmangalam.edu.in/images/placements/cdc-team/sreejita-saha.jpg",
-    imageAlt: "Sreejita Saha",
+    imageAlt: "Sreejita Saha - Manager- Career Development Centre",
     name: "Sreejita Saha",
     designation: "Manager- Career Development Centre",
     email: "sreejita.saha@krmangalam.edu.in",
@@ -427,7 +427,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   {
     id: 5,
     image: "https://krmangalam.edu.in/images/placements/cdc-team/dhaval-bhaskar.jpg",
-    imageAlt: "Dhaval Bhaskar",
+    imageAlt: "Dhaval Bhaskar - Sr. Placement Manager",
     name: "Dhaval Bhaskar",
     designation: "Sr. Placement Manager",
     email: "dhaval.bhaskar@krmangalam.edu.in",
@@ -436,7 +436,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   {
     id: 6,
     image: "https://krmangalam.edu.in/images/placements/cdc-team/vanshita-jain.jpg",
-    imageAlt: "Vanshita Jain",
+    imageAlt: "Vanshita Jain - Internship Manager",
     name: "Vanshita Jain",
     designation: "Internship Manager",
     email: "vanshita.jain@krmangalam.edu.in",

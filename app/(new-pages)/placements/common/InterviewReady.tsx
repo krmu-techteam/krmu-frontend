@@ -16,7 +16,7 @@ const InterviewReady = () => {
           </h3>
 
           <h2 className="font-newsreader text-3xl font-semibold leading-tight text-[#001836] sm:text-4xl md:text-5xl">
-            How KRMU Gets you Interview Ready?
+            How KRMU Gets You Interview Ready
           </h2>
         </div> 
 
@@ -28,7 +28,7 @@ const InterviewReady = () => {
                 src="/placements/main/interview.webp"
                 width={1126}
                 height={605}
-                alt="Video Thumbnail"
+                alt="How KRMU prepares students for placement interviews"
                 className="block h-auto w-full object-cover"
                 priority
               />
@@ -43,7 +43,7 @@ const InterviewReady = () => {
                   src="/demo/play-icon.svg"
                   width={68}
                   height={68}
-                  alt="Play"
+                  alt="Play video"
                   className="h-10 w-10 sm:h-14 sm:w-14 md:h-[68px] md:w-[68px]"
                 />
               </button>

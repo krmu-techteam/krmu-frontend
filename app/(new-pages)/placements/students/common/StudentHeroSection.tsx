@@ -38,7 +38,7 @@ const StudentHeroSection = () => {
         <div className="w-full md:w-1/2">
           <Image
             src="/placements/students/stud-hero.jpg"
-            alt="Placement records"
+            alt="KRMU student placement guidelines and registration"
             width={544}
             height={385}
             priority

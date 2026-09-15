@@ -44,7 +44,7 @@ const DriveCalendar = () => {
   const [records, setRecords] = useState<DriveRecord[]>([]);
 
   const [search, setSearch] = useState("");
-
+ 
   const [page, setPage] = useState(1);
 
   const [limit] = useState(10);
@@ -209,7 +209,7 @@ const DriveCalendar = () => {
             Drive calendar
           </h2>
 
-          <div className="flex items-center gap-3 font-poppins text-[10px] font-medium uppercase tracking-[0.18em] text-[#001836] sm:text-xs">
+          <div className="flex items-center gap-3 font-poppins text-[10px] font-medium uppercase tracking-[0.18em] text-[#12233F] sm:text-xs">
 
             <button
               type="button"

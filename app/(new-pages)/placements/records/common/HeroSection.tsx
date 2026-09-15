@@ -6,9 +6,9 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-8 md:gap-10 lg:gap-14">
         {/* Content */}
         <div className="w-full md:w-1/2">
-          <h3 className="text-xs sm:text-sm md:text-base font-medium tracking-[4px] uppercase text-[#8d5552] mb-3">
+          <p className="text-xs sm:text-sm md:text-base font-medium tracking-[4px] uppercase text-[#8d5552] mb-3">
             Placement Records
-          </h3>
+          </p>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[68px]  font-semibold text-[#001836] mb-2 md:mb-5 font-newsreader">
             Every offer, every number, verifiable.

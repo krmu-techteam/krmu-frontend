@@ -13,30 +13,30 @@ const placementResources: PlacementResource[] = [
   {
     id: 1,
     number: "01",
-    title: "Placement records",
+    title: "Placement Records",
     description: "Year-by-year statistics and company-wise breakdown.",
     link: "/placements/records",
   },
   {
     id: 2,
     number: "02",
-    title: "Training programs",
+    title: "Training Programmes",
     description: "Pre-placement modules, mock interviews and skill labs.",
     link: "/placements/trainers",
   },
   {
     id: 3,
     number: "03",
-    title: "Student resources",
+    title: "Student Resources",
     description: "Resume builders, alumni network access and career guides.",
     link: "/placements/students",
   },
   {
     id: 4,
     number: "04",
-    title: "Partner with us",
+    title: "Partner with Us",
     description: "Hire top talent. Schedule campus drives and internships.",
-    link: "/",
+    link: "/placements/recruiters",
   },
 ];
 

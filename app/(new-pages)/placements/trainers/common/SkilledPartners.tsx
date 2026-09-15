@@ -17,7 +17,7 @@ const SkilledPartners = () => {
       <div className="mx-auto w-full max-w-7xl">
         <Carousel
           opts={{
-            align: "start",
+            align: "start", 
             loop: true,
           }}
           className="w-full"

@@ -6,12 +6,14 @@ interface TrainerCardProps {
   name: string;
   designation: string;
   profileUrl: string;
+  alt: string;
   onViewProfile?: () => void;
 }
 
 const TrainerCard = ({
   image,
   name,
+  alt,
   designation,
   onViewProfile,
 }: TrainerCardProps) => {
@@ -21,7 +23,7 @@ const TrainerCard = ({
       <div className="relative aspect-[0.92] w-full overflow-hidden bg-[#eee]">
         <Image
           src={image}
-          alt={name}
+          alt={alt || ""}
           fill
           sizes="(max-width: 639px) 85vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 16.66vw"
           className="object-cover transition-transform duration-300 hover:scale-105"

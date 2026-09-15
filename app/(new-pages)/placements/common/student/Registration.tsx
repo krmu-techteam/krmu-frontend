@@ -18,7 +18,7 @@ const Registration = () => {
         </h2>
 
         {/* Main Content */}
-        <div className="flex flex-col gap-10 md:gap-12 lg:flex-row lg:items-start lg:gap-14 xl:gap-20">
+        <div className="flex flex-col gap-10 md:gap-12 lg:flex-row lg:items-start lg:gap-14 xl:gap-16">
           {/* Left Column */}
           <div className="w-full lg:w-1/3">
             {/* Eligibility */}
@@ -68,10 +68,10 @@ const Registration = () => {
                   Updated resume (PDF), semester marksheets, ID proof.
                 </p>
 
-                <label className="flex min-h-12 w-full cursor-pointer items-center justify-center rounded-none border border-[#ccc] bg-white px-4 py-3 text-sm font-medium transition hover:bg-[#fefcfa] sm:min-h-14 sm:text-base">
+                {/* <label className="flex min-h-12 w-full cursor-pointer items-center justify-center rounded-none border border-[#ccc] bg-white px-4 py-3 text-sm font-medium transition hover:bg-[#fefcfa] sm:min-h-14 sm:text-base">
                   <span>Upload documents</span>
                   <input type="file" className="sr-only" accept=".pdf" />
-                </label>
+                </label> */}
               </div>
             </div>
           </div>

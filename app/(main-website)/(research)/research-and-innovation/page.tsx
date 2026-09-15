@@ -93,7 +93,7 @@ const page = () => {
       <OnGoing />
       <ResearchHighlight />
       <ResearchAchievements />
-      <PublicationAchievements />
+      <PublicationAchievements /> 
       <section className="py-[50px] px-4 bg-[url(/research/acadbg.webp)] bg-cover">
         <AcademicResources />
         <TeamLibrary />

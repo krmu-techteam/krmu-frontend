@@ -18,9 +18,9 @@ const OurTopRecruiter = () => {
           {/* Title */}
           <div>
             <h2 className="font-newsreader text-4xl font-bold leading-[1.05] text-[#001836] sm:text-5xl md:text-[52px] lg:text-5xl">
-              Our top
+              Our Top
               <br />
-              recruiters
+              Recruiters
             </h2>
           </div>
 
@@ -51,7 +51,7 @@ const OurTopRecruiter = () => {
                 sm:text-sm
               "
             >
-              View all Recruiter
+              View all Recruiters
               <ArrowRight size={17} strokeWidth={1.5} className="shrink-0" />
             </Link>
           </div>
@@ -106,7 +106,10 @@ const OurTopRecruiter = () => {
             {ourTopRecruitersLogos &&
               ourTopRecruitersLogos.map((logo, index) => {
                 return (
-                  <div key={index} className="border border-[#ccc] flex items-center justify-center p-5">
+                  <div
+                    key={index}
+                    className="border border-[#ccc] flex items-center justify-center p-5"
+                  >
                     <Image
                       src={logo.imageUrl}
                       alt={logo.alt || ""}

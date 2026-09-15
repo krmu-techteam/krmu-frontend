@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 import {
@@ -36,7 +37,6 @@ const Trainers = () => {
         "
       >
         <div className="mx-auto w-full max-w-7xl">
-
           {/* Header */}
           <div
             className="
@@ -204,7 +204,6 @@ const Trainers = () => {
             "
             onClick={(event) => event.stopPropagation()}
           >
-
             {/* Close */}
             <button
               type="button"
@@ -214,7 +213,7 @@ const Trainers = () => {
                 absolute
                 right-4
                 top-4
-                z-10
+                z-20
                 flex
                 h-9
                 w-9
@@ -228,21 +227,32 @@ const Trainers = () => {
                 hover:text-white
               "
             >
-              <X className="size-5" strokeWidth={1.5} />
+              <X
+                className="size-5"
+                strokeWidth={1.5}
+              />
             </button>
 
             {/* Content */}
             <div className="grid md:grid-cols-[0.9fr_1.35fr]">
-
               {/* Image */}
-              <div className="relative min-h-[350px] bg-[#eee] sm:min-h-[450px] md:min-h-[600px]">
-                {/* {<Image
+              <div
+                className="
+                  relative
+                  min-h-[350px]
+                  overflow-hidden
+                  bg-[#eee]
+                  sm:min-h-[450px]
+                  md:min-h-[600px]
+                "
+              >
+                <Image
                   src={selectedTrainer.image}
                   alt={selectedTrainer.name}
                   fill
                   sizes="(max-width: 767px) 100vw, 40vw"
                   className="object-cover"
-                />} */}
+                />
 
                 {/* Name overlay */}
                 <div
@@ -251,7 +261,8 @@ const Trainers = () => {
                     bottom-0
                     left-0
                     right-0
-                    bg-[#287694]
+                    z-10
+                    bg-[#051730]
                     px-6
                     py-4
                     text-center
@@ -311,7 +322,6 @@ const Trainers = () => {
                   {selectedTrainer.description}
                 </p>
               </div>
-
             </div>
           </div>
         </div>

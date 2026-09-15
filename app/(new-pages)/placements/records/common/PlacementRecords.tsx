@@ -185,14 +185,14 @@ const PlacementRecords = () => {
             placeholder="Search Company or role..."
             className="
               w-full
-              h-12 sm:h-14 md:h-16
               border border-[#d8d8d8]
-              bg-white
-              px-4 sm:px-5
-              text-xs sm:text-sm
+              bg-[#fefcfa]
+              py-7
+              px-4 sm:px-[30px]
+              text-base
               text-[#12233F]
               outline-none
-              placeholder:text-[#777]
+              placeholder:text-black
               focus:border-[#12233F]
               transition-colors
             "

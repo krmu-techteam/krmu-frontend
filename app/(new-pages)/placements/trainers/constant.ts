@@ -139,37 +139,35 @@ export interface TrainingSchool {
 }
 
 export const trainingMatrix: TrainingSchool[] = [
+  // SOET
   {
     code: "SOET",
     name: "School of Engineering & Technology",
     programs: [
       {
-        name: "BTECH / BCA / BSC",
+        name: "Btech/BCA/Bsc",
         semesters: [
           {
             semester: "SEM 3",
             modules: [
-              "Verbal Ability (45 Hrs)",
-              "Comprehensive Placement Prep. Program (30 Hrs)",
+              "Verbal Ability (45 Hours)",
+              "Comprehensive Placement Preparation Program (30 Hours)",
             ],
           },
           {
             semester: "SEM 4",
             modules: [
-              "Communication & PD (45 Hrs)",
-              "Open Elective – Competitive Aptitude (45 Hrs)",
+              "Communication & PD (45 Hours)",
+              "Open Elective (Competitive Aptitude) (45 Hours)",
             ],
           },
           {
             semester: "SEM 5",
-            modules: ["Arithmetic & Reasoning Skills (45 Hrs)"],
+            modules: ["Arithmetic & Reasoning skills (45 Hours)"],
           },
           {
             semester: "SEM 6",
-            modules: [
-              "Communication & PD (45 Hrs)",
-              "Open Elective – Competitive Aptitude (45 Hrs)",
-            ],
+            modules: ["Arithmetic & Reasoning skills  (30 Hours)"],
           },
         ],
       },
@@ -178,15 +176,15 @@ export const trainingMatrix: TrainingSchool[] = [
         semesters: [
           {
             semester: "SEM 1",
-            modules: ["Verbal Ability (45 Hrs)"],
+            modules: ["Verbal Ability (45 Hours)"],
           },
           {
             semester: "SEM 2",
-            modules: ["Communication & PD (45 Hrs)"],
+            modules: ["Communication & PD (45 Hours)"],
           },
           {
             semester: "SEM 3",
-            modules: ["Arithmetic & Reasoning Skills (45 Hrs)"],
+            modules: ["Arithmetic & Reasoning skills (45 Hours)"],
           },
         ],
       },
@@ -202,15 +200,34 @@ export const trainingMatrix: TrainingSchool[] = [
         semesters: [
           {
             semester: "SEM 3",
-            modules: ["Verbal Ability (45 Hrs)"],
+            modules: [
+              "Verbal Ability (45 Hours)",
+              "Comprehensive Placement Preparation Program (30 Hours)",
+            ],
           },
           {
             semester: "SEM 4",
-            modules: ["Communication & PD (45 Hrs)"],
+            modules: [
+              "Arithmetic & Reasoning skills (45 Hours)",
+              "Open Elective (Competitive Aptitude) (45 Hours)",
+            ],
           },
           {
             semester: "SEM 5",
-            modules: ["Arithmetic & Reasoning Skills (45 Hrs)"],
+            modules: ["Communication & PD  (45 Hours)"],
+          },
+        ],
+      },
+      {
+        name: "BBA MBA Integrated",
+        semesters: [
+          {
+            semester: "SEM 7",
+            modules: ["Employment Skills (VAC)  (30 Hours)"],
+          },
+          {
+            semester: "SEM 8",
+            modules: ["Employment Skills (VAC) (30 Hours)"],
           },
         ],
       },
@@ -222,35 +239,60 @@ export const trainingMatrix: TrainingSchool[] = [
     name: "School of Media & Arts",
     programs: [
       {
-        name: "UG PROGRAMS",
+        name: "B Pharma",
         semesters: [
           {
             semester: "SEM 3",
-            modules: ["Communication Skills (45 Hrs)"],
+            modules: ["Self Awareness  (30 Hours)"],
           },
           {
             semester: "SEM 4",
-            modules: ["Placement Preparation (45 Hrs)"],
+            modules: ["Open Elective (Competitive Aptitude)  (45 Hours)"],
+          },
+        ],
+      },
+      {
+        name: "D Pharma",
+        semesters: [
+          {
+            semester: "SEM 4",
+            modules: ["Open Elective (Competitive Aptitude)  (45 Hours)"],
+          },
+        ],
+      },
+      {
+        name: "M Pharma",
+        semesters: [
+          {
+            semester: "SEM 4",
+            modules: ["Open Elective (Competitive Aptitude)  (45 Hours)"],
           },
         ],
       },
     ],
   },
-
+  // SBAS
   {
     code: "SBAS",
     name: "School of Basic & Applied Sciences",
     programs: [
       {
-        name: "UG PROGRAMS",
+        name: "B Sc / Msc",
         semesters: [
           {
             semester: "SEM 3",
-            modules: ["Verbal Ability (45 Hrs)"],
+            modules: ["Self Awareness  (30 Hours)"],
           },
           {
             semester: "SEM 4",
-            modules: ["Quantitative Aptitude (45 Hrs)"],
+            modules: [
+              "Communication & PD (45 Hours)",
+              "Open Elective (Competitive Aptitude) (45 Hours)",
+            ],
+          },
+          {
+            semester: "SEM 5",
+            modules: ["Arithmetic and Reasoning Skills-III (45 Hours)"],
           },
         ],
       },
@@ -259,18 +301,25 @@ export const trainingMatrix: TrainingSchool[] = [
 
   {
     code: "SEMCE",
-    name: "School of Mechanical & Civil Engineering",
+    name: "School of Emerging Media and Creator Economy",
     programs: [
       {
-        name: "BTECH",
+        name: "BJMC",
         semesters: [
           {
-            semester: "SEM 3",
-            modules: ["Technical Communication (45 Hrs)"],
+            semester: "SEM 2",
+            modules: ["Self Awareness  (30 Hours)"],
           },
           {
             semester: "SEM 4",
-            modules: ["Aptitude & Reasoning (45 Hrs)"],
+            modules: [
+              "Communication & PD (45 Hours)",
+              "Open Elective (Competitive Aptitude) (45 Hours)",
+            ],
+          },
+          {
+            semester: "SEM 5",
+            modules: ["Arithmetic and Reasoning Skills-III (45 Hours)"],
           },
         ],
       },
@@ -282,11 +331,26 @@ export const trainingMatrix: TrainingSchool[] = [
     name: "School of Architecture & Design",
     programs: [
       {
-        name: "UG PROGRAMS",
+        name: "B.Des.",
         semesters: [
           {
+            semester: "SEM 1",
+            modules: ["Design Communication (30 Hours)"],
+          },
+          {
             semester: "SEM 3",
-            modules: ["Communication Skills (45 Hrs)"],
+            modules: ["Personal Development with CDC (30 Hours)"],
+          },
+          {
+            semester: "SEM 4",
+            modules: [
+              "Communication & PD (45 Hours)",
+              "Open Elective (Competitive Aptitude) (45 Hours)",
+            ],
+          },
+          {
+            semester: "SEM 5",
+            modules: ["NEW AGE LIFE SKILLS- III (45 Hours)"],
           },
         ],
       },
@@ -298,27 +362,63 @@ export const trainingMatrix: TrainingSchool[] = [
     name: "School of Liberal Arts",
     programs: [
       {
-        name: "UG PROGRAMS",
+        name: "BA All",
         semesters: [
           {
             semester: "SEM 3",
-            modules: ["Professional Communication (45 Hrs)"],
+            modules: ["Self Awareness  (30 Hours)"],
+          },
+          {
+            semester: "SEM 4",
+            modules: [
+              "Communication & PD (45 Hours)",
+              "Open Elective (Competitive Aptitude) (45 Hours)",
+            ],
+          },
+          {
+            semester: "SEM 5",
+            modules: ["Arithmetic and Reasoning Skills-III (45 Hours)"],
           },
         ],
       },
     ],
   },
-
+  // SOLS
   {
     code: "SOLS",
     name: "School of Law",
     programs: [
       {
-        name: "LAW PROGRAMS",
+        name: "BA LLB",
         semesters: [
           {
+            semester: "SEM 2",
+            modules: ["Self Awareness  (30 Hours)"],
+          },
+          {
             semester: "SEM 3",
-            modules: ["Interview Preparation (45 Hrs)"],
+            modules: ["Verbal Ability (45 Hours)"],
+          },
+          {
+            semester: "SEM 4",
+            modules: ["Open Elective (Competitive Aptitude)  (45 Hours)"],
+          },
+        ],
+      },
+      {
+        name: "BBA LLB",
+        semesters: [
+          {
+            semester: "SEM 2",
+            modules: ["Self Awareness  (30 Hours)"],
+          },
+          {
+            semester: "SEM 3",
+            modules: ["Verbal Ability (45 Hours)"],
+          },
+          {
+            semester: "SEM 4",
+            modules: ["Open Elective (Competitive Aptitude)  (45 Hours)"],
           },
         ],
       },
@@ -330,11 +430,19 @@ export const trainingMatrix: TrainingSchool[] = [
     name: "School of Allied Sciences",
     programs: [
       {
-        name: "UG PROGRAMS",
+        name: "B Sc Agri",
         semesters: [
           {
-            semester: "SEM 3",
-            modules: ["Verbal Ability (45 Hrs)"],
+            semester: "SEM 1",
+            modules: ["Communication Skills (45 Hours)"],
+          },
+          {
+            semester: "SEM 2",
+            modules: ["Personality Development (30 Hours)"],
+          },
+          {
+            semester: "SEM 4",
+            modules: ["Open Elective (Competitive Aptitude)  (45 Hours)"],
           },
         ],
       },
@@ -343,14 +451,25 @@ export const trainingMatrix: TrainingSchool[] = [
 
   {
     code: "SOHMCT",
-    name: "School of Hospitality Management",
+    name: "School of Hotel Management & Catering Technology",
     programs: [
       {
-        name: "UG PROGRAMS",
+        name: "BHMCT",
         semesters: [
           {
-            semester: "SEM 3",
-            modules: ["Communication & PD (45 Hrs)"],
+            semester: "SEM 2",
+            modules: ["Verbal Ability (45 Hours)"],
+          },
+          {
+            semester: "SEM 4",
+            modules: [
+              "Communication & PD (45 Hours)",
+              "Open Elective (Competitive Aptitude) (45 Hours)",
+            ],
+          },
+          {
+            semester: "SEM 5",
+            modules: ["Arithmetic and Reasoning Skills-III (45 Hours)"],
           },
         ],
       },
@@ -362,11 +481,11 @@ export const trainingMatrix: TrainingSchool[] = [
     name: "School of Education",
     programs: [
       {
-        name: "EDUCATION PROGRAMS",
+        name: "",
         semesters: [
           {
-            semester: "SEM 3",
-            modules: ["Professional Skills (45 Hrs)"],
+            semester: "SEM 4",
+            modules: ["Open Elective (Competitive Aptitude)  (45 Hours)"],
           },
         ],
       },
@@ -375,14 +494,14 @@ export const trainingMatrix: TrainingSchool[] = [
 
   {
     code: "SPRS",
-    name: "School of Pharmacy & Research Sciences",
+    name: "School of Physiotherapy and Rehabilitation Sciences",
     programs: [
       {
-        name: "UG PROGRAMS",
+        name: "",
         semesters: [
           {
-            semester: "SEM 3",
-            modules: ["Career Readiness (45 Hrs)"],
+            semester: "SEM 4",
+            modules: ["Open Elective (Competitive Aptitude)  (45 Hours)"],
           },
         ],
       },
@@ -421,12 +540,14 @@ export interface Trainer {
   image: string;
   profileUrl: string;
   description: string;
+  alt: string;
 }
 
 export const trainers: Trainer[] = [
   {
     id: 1,
     name: "Jyoti",
+    alt: "Jyoti, Lead Employability & Coaching",
     designation: "Lead Employability & Coaching​",
     image: "https://www.krmangalam.edu.in/images/placements/trainers/jyoti.jpg",
     profileUrl: "#",
@@ -450,7 +571,9 @@ Workshop.​`,
     id: 2,
     name: "Rohit Agarwal​",
     designation: "Lead Sr. Aptitude Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/placements/trainers/rohit-agarwal.jpg",
+    alt: "Rohit Agarwal, Lead Sr. Aptitude Trainer",
+    image:
+      "https://www.krmangalam.edu.in/images/placements/trainers/rohit.jpeg",
     profileUrl: "#",
     description: `Rohit Agarwal is a Senior Aptitude Trainer and Team
 Lead – Aptitude at KR Mangalam University,
@@ -469,7 +592,9 @@ Engineering.​​`,
     id: 3,
     name: "Vijay Purohit​",
     designation: "Lead Sr. Soft Skills Trainer​",
-    image: "https://www.krmangalam.edu.in/images/placements/trainers/vijay-purohit.jpg",
+    alt: "Vijay Purohit, Lead Sr. Soft Skills Trainer",
+    image:
+      "https://www.krmangalam.edu.in/images/placements/trainers/vijay-purohit.jpg",
     profileUrl: "#",
     description: `Vijay Purohit is a Senior Soft Skills Trainer,
 Learning & Development Specialist, and
@@ -490,7 +615,9 @@ Reliance, and other leading organizations.​​`,
     id: 4,
     name: "Ankit Verma",
     designation: "Soft Skills Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/placements/trainers/ankit-verma.jpg",
+    alt: "Ankit Verma, Soft Skills Trainer",
+    image:
+      "https://www.krmangalam.edu.in/images/placements/trainers/ankit-verma.jpg",
     profileUrl: "#",
     description: `Ankit Verma is a Language and Communication Skills
 Trainer with 10+ years of experience in English
@@ -511,7 +638,9 @@ Conflict Management.​​​`,
     id: 5,
     name: "Vikas Singh",
     designation: "Sr. Aptitude Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/placements/trainers/vikas-singh.jpg",
+    alt: "Vikas Singh, Sr. Aptitude Trainer",
+    image:
+      "https://www.krmangalam.edu.in/images/placements/trainers/vikas-singh.jpg",
     profileUrl: "#",
     description: `Vikas Singh is a highly accomplished
 Aptitude Trainer with 10+ years of experience,
@@ -531,8 +660,10 @@ Delhi, Career Leader, and Bharat IAS.​`,
   {
     id: 6,
     name: "Sonam Yadav​",
+    alt: "Sonam Yadav, Soft Skills Trainer",
     designation: "Soft Skills Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/placements/trainers/sonam-yadav.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/placements/trainers/sonam-yadav.jpg",
     profileUrl: "#",
     description: `Sonam Yadav is a Certified Soft Skills and
 Corporate Trainer with 10+ years of experience in
@@ -551,8 +682,10 @@ Engineering.​​`,
   {
     id: 7,
     name: "Charu Dudeja​",
+    alt: "Charu Dudeja, Soft Skills Trainer",
     designation: "Soft Skills Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/placements/trainers/charu-dudeja.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/placements/trainers/charu-dudeja.jpg",
     profileUrl: "#",
     description: `Charu Dudeja is a dynamic Soft Skills Trainer at
 KR Mangalam University with 10+ years of
@@ -571,8 +704,10 @@ required for professional success.​​​`,
   {
     id: 8,
     name: "Pradeep​",
+    alt: "Pradeep, Soft Skills Trainer",
     designation: "Soft Skills Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/placements/trainers/pradeep.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/placements/trainers/pradeep.jpg",
     profileUrl: "#",
     description: `Pradeep Rai is a Soft Skills, English Language
 Trainer and Communication Specialist with 6+
@@ -596,7 +731,9 @@ and Best Facilitation.​​​​`,
     id: 9,
     name: "Seerat Yaseen Bhat​",
     designation: "Aptitude Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/placements/trainers/seerat-yaseen-bhat.jpg",
+    alt: "Seerat Yaseen Bhat, Aptitude Trainer",
+    image:
+      "https://www.krmangalam.edu.in/images/placements/trainers/seerat-yaseen-bhat.jpg",
     profileUrl: "#",
     description: `Seerat Yaseen Bhat is a Results-driven Aptitude
 Trainer and Campus Recruitment Training
@@ -617,7 +754,9 @@ data-driven training.​​​​​`,
     id: 10,
     name: "Pradyumn Singh​​",
     designation: "Aptitude Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/placements/trainers/pradyumn-singh.jpg",
+    alt: "Pradyumn Singh, Aptitude Trainer",
+    image:
+      "https://www.krmangalam.edu.in/images/placements/trainers/pradyumn-singh.jpg",
     profileUrl: "#",
     description: `A results-driven Aptitude, Logical Reasoning, and
 Placement Readiness Trainer with 4+ years of
@@ -638,7 +777,9 @@ campus recruitment processes.​​`,
     id: 11,
     name: "Deepak",
     designation: "Soft Skills Trainer​​​",
-    image: "https://www.krmangalam.edu.in/images/placements/trainers/deepak.jpg",
+    alt: "Deepak, Soft Skills Trainer",
+    image:
+      "https://www.krmangalam.edu.in/images/placements/trainers/deepak.jpg",
     profileUrl: "#",
     description: `Deepak is an experienced Soft Skills and
 English Language Trainer with 10+ years of
@@ -661,7 +802,9 @@ Completion.​​​`,
     id: 12,
     name: "Arvind Singh​",
     designation: "Soft Skills Trainer​​​",
-    image: "https://www.krmangalam.edu.in/images/placements/trainers/arvind-singh.jpg",
+    alt: "Arvind Singh, Soft Skills Trainer",
+    image:
+      "https://www.krmangalam.edu.in/images/placements/trainers/arvind.jpeg",
     profileUrl: "#",
     description: `Arvind Singh is an English Language and Soft
 Skills Trainer with 7+ years of experience in
@@ -682,7 +825,9 @@ Associate.​​​​`,
     id: 13,
     name: "Deepak Kumar​",
     designation: "Aptitude Trainer​​",
-    image: "https://www.krmangalam.edu.in/images/placements/trainers/deepak-kumar.jpg",
+    alt: "Deepak Kumar, Aptitude Trainer",
+    image:
+      "https://www.krmangalam.edu.in/images/placements/trainers/deepak-kumar.jpg",
     profileUrl: "#",
     description: `Deepak Kumar is a dynamic Aptitude Training
 Professional and Master Trainer with 9+ years of
@@ -705,7 +850,7 @@ export const cdcTeamMembers = [
   {
     id: 1,
     name: "Dr. Amit Sharma",
-    designation: "Director, Career Development Centre", 
+    designation: "Director, Career Development Centre",
     description: "Helping students build successful careers.",
     image: "/images/cdc/amit-sharma.jpg",
   },
@@ -730,50 +875,50 @@ export interface SkilledPartner {
 export const skilledPartners: SkilledPartner[] = [
   {
     id: 1,
-    logo: "/placements/partners/ibm.webp",
-    companyType: "IT Services",
-    hiring: "Hiring: 14",
-    job: "Jobs: Associate Software Engineer",
-    duration: "2019-20 – Till now",
+    logo: "/images/indus-logo.jpeg",
+    companyType: "THE INDUS GROUP CO. ",
+    hiring: "Hiring: 60",
+    job: "Jobs: SALES & OPERATIONS, MARKETING",
+    duration: "08-04-2026 – 10-04-2026",
   },
   {
     id: 2,
-    logo: "/placements/partners/ibm.webp",
-    companyType: "IT Services",
-    hiring: "Hiring: 14",
-    job: "Jobs: Associate Software Engineer",
-    duration: "2019-20 – Till now",
+    logo: "/images/logos/ethara-ai.jpg",
+    companyType: "Ethara.AI",
+    hiring: "Hiring: 20",
+    job: "Jobs: LLM  Intern- AI",
+    duration: "03-02-2026 - 07-02-2026",
   },
   {
     id: 3,
-    logo: "/placements/partners/ibm.webp",
-    companyType: "IT Services",
-    hiring: "Hiring: 14",
-    job: "Jobs: Associate Software Engineer",
-    duration: "2019-20 – Till now",
+    logo: "/images/logos/aim.png",
+    companyType: "Accrual Intelligence Manuals Group",
+    hiring: "Hiring: 20",
+    job: "Jobs: Marketing (CORE) Marketing + Finance Marketing + HR",
+    duration: "19-01-2026 – 22-01-2026",
   },
   {
     id: 4,
-    logo: "/placements/partners/ibm.webp",
-    companyType: "IT Services",
-    hiring: "Hiring: 14",
-    job: "Jobs: Associate Software Engineer",
-    duration: "2019-20 – Till now",
+    logo: "/images/logos/muthoot.webp",
+    companyType: "Muthoot Finance",
+    hiring: "Hiring: 10",
+    job: "Jobs: Junior Relationship Executive and Insurance executive",
+    duration: "10-01-2026 – 04-02-2026",
   },
   {
     id: 5,
-    logo: "/placements/partners/ibm.webp",
-    companyType: "IT Services",
-    hiring: "Hiring: 12",
-    job: "Jobs: Software Engineer",
-    duration: "2020-21 – Till now",
+    logo: "/images/logos/zielhoch.png",
+    companyType: "Zielhoch",
+    hiring: "Hiring: 14",
+    job: "Jobs: Intern- Marketing/ HR/ finance",
+    duration: "23-05-2025 – 24-05-2025",
   },
   {
     id: 6,
-    logo: "/placements/partners/ibm.webp",
-    companyType: "IT Services",
-    hiring: "Hiring: 10",
-    job: "Jobs: Developer",
-    duration: "2021-22 – Till now",
+    logo: "/images/logos/globiva.png",
+    companyType: "Globiva Services Pvt. Ltd.",
+    hiring: "Hiring: 2",
+    job: "Jobs: Business Development Executive Graphic Designer",
+    duration: "18-11-2025 – 19-11-2025",
   },
 ];
