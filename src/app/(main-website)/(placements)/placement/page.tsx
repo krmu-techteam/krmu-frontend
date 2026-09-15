@@ -13,6 +13,34 @@ import {
     YourPathsuccessSection,
 } from "@/presentation/placement/overview/sections";
 
+const PLACEMENT_DESCRIPTION =
+    "Explore K.R. Mangalam University placements with 800+ recruiters, internships, career training, and placement assistance to build successful careers.";
+const PLACEMENT_CANONICAL = "https://www.krmangalam.edu.in/placement";
+const DEFAULT_SHARE_IMG =
+    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/fav_457c1acb7e.png";
+
+const DEFAULT_HERO = {
+    title: "100% Placement Assistance with 800+ Top Recruiters",
+    subtitle: "Embark on Your Professional Journey",
+    overviewvideo:
+        '<iframe width="560" height="315" src="https://www.youtube.com/embed/f3hA3WhmYN8" title="YouTube video player" allowfullscreen></iframe>',
+    overviewcounter: [
+        { id: 1, title: "56.6 LPA", subtitle: "Highest Package" },
+        { id: 2, title: "800+", subtitle: "Campus Recruiters" },
+        { id: 3, title: "18K+", subtitle: "Alumni Base" },
+    ],
+};
+
+const DEFAULT_HIGHLIGHT = {
+    heading: "Placement Highlights",
+    placementhighlights: [],
+    highlightbtn: {
+        id: 1,
+        buttontext: "Know More",
+        buttonlink: "/placement-highlights",
+    },
+};
+
 export async function generateMetadata(): Promise<Metadata> {
     let seoData = await folderRouteSEO("placement");
     if (!seoData || !seoData.length) {
@@ -20,30 +48,20 @@ export async function generateMetadata(): Promise<Metadata> {
     }
     const seo = seoData?.[0];
 
+    const title = seo?.title || "Placements - K.R. Mangalam University";
+    const canonical = seo?.canonicalUrl || PLACEMENT_CANONICAL;
     const shareImageUrl = seo?.shareImg?.url
         ? `${STRAPI_URL}${seo?.shareImg?.url}`
-        : undefined;
-
-    // ✅ Fallback if SEO is missing
-    if (!seo) {
-        return {
-            title: "Placements - K.R. Mangalam University",
-            description:
-                "Explore career opportunities, recruiters, and placement records at K.R. Mangalam University.",
-            robots: {
-                index: true,
-                follow: true,
-            },
-        };
-    }
+        : DEFAULT_SHARE_IMG;
 
     return {
-        title: seo?.title || "Placements - K.R. Mangalam University",
-        description: seo?.metaDescription || "",
-        keywords: seo?.keyword || "",
+        title,
+        description: PLACEMENT_DESCRIPTION,
+        keywords:
+            seo?.keyword ||
+            "Placements, K.R. Mangalam University, Campus Placement, Recruiters, Highest Package, Career Development Centre",
         alternates: {
-            canonical:
-                seo?.canonicalUrl || "https://www.krmangalam.edu.in/placement",
+            canonical,
         },
         robots: {
             index: true,
@@ -52,65 +70,66 @@ export async function generateMetadata(): Promise<Metadata> {
 
         // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
         openGraph: {
-            title: seo?.title || "Placements - K.R. Mangalam University",
-            description: seo?.metaDescription || "",
-            url: seo?.canonicalUrl || "https://www.krmangalam.edu.in/placement",
+            title,
+            description: PLACEMENT_DESCRIPTION,
+            url: canonical,
             siteName: "K.R. Mangalam University",
-            images: shareImageUrl
-                ? [
-                      {
-                          url: shareImageUrl,
-                          width: 1200,
-                          height: 630,
-                          alt: seo?.title || "K.R. Mangalam University",
-                      },
-                  ]
-                : [],
+            locale: "en_IN",
+            images: [
+                {
+                    url: shareImageUrl,
+                    width: 1200,
+                    height: 630,
+                    alt: title,
+                },
+            ],
             type: "website",
         },
 
         // ✅ Twitter Card
         twitter: {
             card: "summary_large_image",
-            title: seo?.title || "Placements - K.R. Mangalam University",
-            description: seo?.metaDescription || "",
-            images: shareImageUrl ? [shareImageUrl] : [],
+            title,
+            description: PLACEMENT_DESCRIPTION,
+            images: [shareImageUrl],
         },
     };
 }
 
 const page = async () => {
-    const placementOverview = await getPlacementOverview();
+    let placementOverview = null;
+    try {
+        placementOverview = await getPlacementOverview();
+    } catch {
+        // Fallback to static defaults
+    }
 
-    const overviewHero = placementOverview?.placementsoverviewcontainer?.find(
-        (component) =>
-            component?.__component === "placement-overview.placement-hero"
-    );
+    const overviewHero =
+        placementOverview?.placementsoverviewcontainer?.find(
+            (component) =>
+                component?.__component === "placement-overview.placement-hero"
+        ) || DEFAULT_HERO;
 
     const overviewHightlight =
         placementOverview?.placementsoverviewcontainer?.find(
             (component) =>
                 component?.__component ===
                 "placement-overview.placement-highlight"
-        );
+        ) || DEFAULT_HIGHLIGHT;
 
     return (
         <>
-            {overviewHero && (
-                <HeroSection
-                    title={overviewHero?.title}
-                    subtitle={overviewHero?.subtitle}
-                    overviewvideo={overviewHero?.overviewvideo}
-                    overviewcounter={overviewHero?.overviewcounter}
-                />
-            )}
-            {overviewHightlight && (
-                <HighlightSection
-                    heading={overviewHightlight?.heading}
-                    slideImages={overviewHightlight?.placementhighlights}
-                    btn={overviewHightlight?.highlightbtn}
-                />
-            )}
+            <HeroSection
+                title={overviewHero?.title}
+                subtitle={overviewHero?.subtitle}
+                overviewvideo={overviewHero?.overviewvideo}
+                overviewcounter={overviewHero?.overviewcounter}
+            />
+            <HighlightSection
+                heading={overviewHightlight?.heading}
+                slideImages={overviewHightlight?.placementhighlights}
+                btn={overviewHightlight?.highlightbtn}
+            />
             <YourPathsuccessSection />
             <BridgingAcademiaSection />
             <PolicySection />
