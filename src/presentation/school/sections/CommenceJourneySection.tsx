@@ -63,22 +63,22 @@ const CommenceJourneySection = ({
         {
             number: 2,
             title: "Complete Payment & Submit",
-            desc: "Pay the required application Fee.",
+            desc: "Pay the required application fee and submit the form.",
         },
         {
             number: 3,
-            title: "Take the entrance",
+            title: "Take the Entrance Exam",
             desc: "K.R. Mangalam University Entrance Examination (KREE).",
         },
         {
             number: 4,
-            title: "Appear for Interaction",
+            title: "Appear for Interview",
             desc: "Attend our Faculty-Led Interview.",
         },
         {
             number: 5,
             title: "Get the Admission Offer",
-            desc: "You will receive the offer letter after the successful interaction.",
+            desc: "You will receive the offer letter after the successful interview.",
         },
         {
             number: 6,

@@ -34,7 +34,7 @@ export const solsAltConfig: SchoolAltConfig = {
         cards: {
             "Dynamic Curriculum":
                 "Dynamic, industry-aligned curriculum at KRMU School of Legal Studies",
-            "Learn From The Best":
+            "Learn From the Best":
                 "Mentorship by acclaimed academicians and specialists at KRMU SOLS",
             "Specialised Research Centres":
                 "Specialised research centres for Victimology, Human Rights and SDGs at KRMU SOLS",

@@ -44,7 +44,7 @@ export const soasAltConfig: SchoolAltConfig = {
                 "Dynamic curriculum designed in consultation with specialist practitioners at KRMU SOAS",
             "Pragmatic Learning Experience":
                 "Realistic hands-on agricultural training at KRMU SOAS",
-            "Learn From The Best":
+            "Learn From the Best":
                 "Mentoring by acclaimed academicians and top industry experts at KRMU SOAS",
             "Industry Exposure":
                 "Industry exposure ensuring career readiness in agriculture at KRMU SOAS",

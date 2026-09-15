@@ -12,12 +12,57 @@ type Props = {
     featured_img_url: string;
 };
 
+const LOWERCASE_EXCEPTIONS = new Set([
+    "a",
+    "an",
+    "on",
+    "the",
+    "in",
+    "by",
+    "for",
+    "from",
+    "and",
+    "at",
+]);
+
+export function formatCardTitle(title: string): string {
+    if (!title) return "";
+    const formatted = title.replace(
+        /\b[a-zA-Z]+(?:'[a-zA-Z]+)?\b/g,
+        (word, offset, fullStr) => {
+            const lower = word.toLowerCase();
+
+            // First word of the title
+            const isFirstWord =
+                offset === 0 || !/[a-zA-Z]/.test(fullStr.slice(0, offset));
+            // First word after delimiters like ": ", "- ", "– "
+            const isAfterDelimiter =
+                offset > 1 && /[:\-–—]\s*$/.test(fullStr.slice(0, offset));
+
+            if (
+                !isFirstWord &&
+                !isAfterDelimiter &&
+                LOWERCASE_EXCEPTIONS.has(lower)
+            ) {
+                return lower;
+            }
+
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }
+    );
+
+    // Keep 'o' lowercase in 'MoU'
+    return formatted.replace(/\bMOU\b/gi, "MoU");
+}
+
 const EventsAndExperienceCard = ({
     title,
     content,
     slug,
     featured_img_url,
 }: Props) => {
+    const displayTitle = formatCardTitle(title);
+
     return (
         <div className="group cursor-pointer">
             <Link href={`/events-and-news/${slug}`} className="block">
@@ -25,7 +70,7 @@ const EventsAndExperienceCard = ({
                     {featured_img_url && (
                         <Image
                             src={`${STRAPI_URL}${featured_img_url}`}
-                            alt={title || ""}
+                            alt={displayTitle || ""}
                             fill
                             className="object-cover group-hover:scale-110 transition-transform duration-1000"
                         />
@@ -46,7 +91,7 @@ const EventsAndExperienceCard = ({
                 <h3
                     className="text-white font-serif text-lg md:text-xl font-medium leading-snug group-hover:text-brand-gold transition-colors line-clamp-2"
                     dangerouslySetInnerHTML={{
-                        __html: title || "",
+                        __html: displayTitle || "",
                     }}
                 />
             </Link>

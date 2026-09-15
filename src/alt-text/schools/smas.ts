@@ -50,8 +50,8 @@ export const smasAltConfig: SchoolAltConfig = {
                 "Dynamic Curriculum icon – industry-designed syllabus at SMAS KRMU",
             "Pragmatic Learning Experience":
                 "Pragmatic Learning Experience icon – hands-on training at SMAS KRMU",
-            "Learn From The Best":
-                "Learn From The Best icon – expert faculty insights at SMAS K.R. Mangalam University",
+            "Learn From the Best":
+                "Learn From the Best icon – expert faculty insights at SMAS K.R. Mangalam University",
             "Webinars With Experts":
                 "Webinars With Experts icon – industry interaction sessions at SMAS KRMU",
         },
@@ -246,7 +246,7 @@ export const smasAltConfig: SchoolAltConfig = {
         "museum_393a6929f8.svg":
             "Pragmatic Learning Experience icon – hands-on training at SMAS KRMU",
         "best_04578f9acb.svg":
-            "Learn From The Best icon – expert faculty insights at SMAS K.R. Mangalam University",
+            "Learn From the Best icon – expert faculty insights at SMAS K.R. Mangalam University",
         "industry_96fea0fea0.svg":
             "Webinars With Experts icon – industry interaction sessions at SMAS KRMU",
 

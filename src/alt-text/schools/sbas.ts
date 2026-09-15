@@ -48,7 +48,7 @@ export const sbasAltConfig: SchoolAltConfig = {
                 "Dynamic curriculum designed with top practitioners at KRMU SBAS",
             "Pragmatic Learning Experience":
                 "Realistic hands-on scientific training at KRMU SBAS",
-            "Learn From The Best":
+            "Learn From the Best":
                 "Advanced knowledge and insights from experts at KRMU SBAS",
             "Webinars With Experts":
                 "Webinars with top science specialists at KRMU SBAS",

@@ -25,7 +25,7 @@ const EventAndExperienceSection = ({ title, desc, btn, eventsexp }: Props) => {
             ></div>
 
             <div className="w-full max-w-[1440px] mx-auto relative z-10 px-4 md:px-8 lg:px-12">
-                <h2 className="heading-primary mb-4">{title}</h2>
+                <h2 className="heading-primary mb-4">Events and Experiences</h2>
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
                     <div className="max-w-6xl">
                         {desc && (

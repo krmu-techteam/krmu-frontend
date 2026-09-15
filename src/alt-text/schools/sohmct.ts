@@ -57,7 +57,7 @@ export const sohmctAltConfig: SchoolAltConfig = {
                 "Dynamic curriculum designed with top experts at KRMU SOHMCT",
             "Pragmatic Learning Experience":
                 "Advanced hands-on hospitality training at KRMU SOHMCT",
-            "Learn From The Best":
+            "Learn From the Best":
                 "Mentoring by acclaimed academicians and industry insiders at KRMU SOHMCT",
             "Webinars & Conferences":
                 "Webinars and conferences with hospitality industry experts at KRMU SOHMCT",

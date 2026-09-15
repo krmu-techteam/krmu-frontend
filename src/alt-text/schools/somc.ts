@@ -40,7 +40,7 @@ export const somcAltConfig: SchoolAltConfig = {
                 "Dynamic, industry-aligned curriculum at KRMU School of Management and Commerce",
             "Pragmatic Learning Experience":
                 "Hands-on pragmatic learning experience at KRMU SOMC",
-            "Learn From The Best":
+            "Learn From the Best":
                 "Mentorship by top business leaders and academicians at KRMU SOMC",
             "Webinars With Entrepreneurs":
                 "Webinars with entrepreneurs at KRMU School of Management and Commerce",

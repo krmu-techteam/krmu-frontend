@@ -41,7 +41,7 @@ export const soadAltConfig: SchoolAltConfig = {
                 "Dynamic curriculum designed with industry insiders at KRMU SOAD",
             "Practical Learning Experience":
                 "Realistic hands-on training at KRMU School of Architecture & Design",
-            "Learn From The Best": "Learn From The Best",
+            "Learn From the Best": "Learn From the Best",
             "Industry Exposure":
                 "Industry exposure ensuring career readiness at KRMU SOAD",
         },

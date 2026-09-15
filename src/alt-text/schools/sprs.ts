@@ -39,9 +39,9 @@ export const sprsAltConfig: SchoolAltConfig = {
         cards: {
             "Standardised Curriculum":
                 "Competency-based curriculum as prescribed by NCAHP at KRMU SPRS",
-            "Learn from the Best":
+            "Learn From the Best":
                 "Advanced knowledge and insights from healthcare experts at KRMU SPRS",
-            "Learn From The Best":
+            "Learn From the Best":
                 "Advanced knowledge and insights from healthcare experts at KRMU SPRS",
             "Pragmatic Learning Experience":
                 "Realistic scientific practice for hands-on learning at KRMU SPRS",

@@ -30,7 +30,7 @@ export const semceAltConfig: SchoolAltConfig = {
                 "Dynamic curriculum designed with industry insiders at KRMU SEMCE",
             "Pragmatic Learning Experience":
                 "Realistic hands-on training at KRMU School of Emerging Media and Creator Economy",
-            "Learn From The Best":
+            "Learn From the Best":
                 "Guidance from acclaimed academicians and journalists at KRMU SEMCE",
             "Industry Exposure":
                 "Industry exposure preparing students for careers in journalism and mass communication at KRMU SEMCE",

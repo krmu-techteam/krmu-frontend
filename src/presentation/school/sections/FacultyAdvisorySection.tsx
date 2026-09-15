@@ -27,12 +27,9 @@ const FacultyAdvisorySection = ({ schoolCat, fac_adv }: Props) => {
             <div className="max-w-[1440px] mx-auto w-full  px-4 md:px-8 lg:px-12">
                 {/* Faculty List */}
                 <div>
-                    <h2
-                        dangerouslySetInnerHTML={{
-                            __html: cleanTitle,
-                        }}
-                        className="heading-primary mb-4 md:mb-8"
-                    />
+                    <h2 className="heading-primary mb-4 md:mb-8">
+                        Faculty at SOET
+                    </h2>
                     <FacultyAdvisoryCards schoolCat={schoolCat} />
                 </div>
 

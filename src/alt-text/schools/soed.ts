@@ -39,7 +39,7 @@ export const soedAltConfig: SchoolAltConfig = {
                 "Dynamic curriculum designed with top professionals at KRMU SOED",
             "Pragmatic Learning Experience":
                 "Realistic hands-on teacher training at KRMU SOED",
-            "Learn From The Best":
+            "Learn From the Best":
                 "Mentoring by dedicated practitioners and industry insiders at KRMU SOED",
             "Webinars With Experts":
                 "Webinars with top educationists at KRMU SOED",

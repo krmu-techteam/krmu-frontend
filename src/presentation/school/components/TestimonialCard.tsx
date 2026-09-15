@@ -29,14 +29,14 @@ export default function TestimonialCard({ name, edu, desc, img, slug }: Props) {
             </div>
             <div className="flex flex-col gap-2">
                 <div>
-                    <h3 className="text-white text-lg sm:text-[16px] font-bold">
+                    <h3 className="text-white italic text-lg sm:text-[16px] font-bold">
                         {name}
                     </h3>
-                    <p className="text-white/90 text-sm sm:text-[16px]">
+                    <p className="text-white/90 italic text-sm sm:text-[16px]">
                         {edu}
                     </p>
                 </div>
-                <p className="text-white/90 text-justify text-sm sm:text-[16px] mt-2 leading-relaxed">
+                <p className="text-white/90 italic text-justify text-sm sm:text-[16px] mt-2 leading-relaxed">
                     {desc}
                 </p>
             </div>

@@ -49,7 +49,7 @@ export const soetAltConfig: SchoolAltConfig = {
                 "Dynamic, industry-aligned curriculum at KRMU School of Engineering & Technology",
             "Pragmatic Learning Experience":
                 "Hands-on pragmatic learning experience at KRMU SOET",
-            "Learn From The Best":
+            "Learn From the Best":
                 "Mentorship by top academicians and industry experts at KRMU SOET",
             "Industry Exposure":
                 "Industry exposure and career readiness at KRMU School of Engineering & Technology",
