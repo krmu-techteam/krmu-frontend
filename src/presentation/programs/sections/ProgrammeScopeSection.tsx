@@ -54,9 +54,9 @@ const ProgrammeScopeSection = async ({
 
                 {/* Right column: Content */}
                 <div className="w-full lg:w-1/2 lg:text-left text-justify text-white">
-                    <h3 className="heading-primary text-center lg:text-left mb-5 xl:mb-3 2xl:mb-5">
+                    <h2 className="heading-primary text-center lg:text-left mb-5 xl:mb-3 2xl:mb-5">
                         {scopeData?.scopeheading}
-                    </h3>
+                    </h2>
                     <p className="text-md sm:text-[14px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-[18px] text-justify lg:text-left leading-relaxed font-poppins lg:leading-[1.7] opacity-90 mb-0 sm:mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto lg:mx-0">
                         {scopeData?.scopecontent}
                     </p>

@@ -10,7 +10,7 @@ const CinematicForm = ({ formId, isMobile = false }: CinematicFormProps) => {
             >
                 <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto rounded-[4px] !pt-4 !pb-3 !h-auto overflow-hidden">
                     <div className="heroBannerForm-header">
-                        <div
+                        <p
                             className="mb-0 text-center font-bold font-poppins !text-[22px] lg:text-lg inline-block w-full"
                             style={{
                                 backgroundImage:
@@ -20,7 +20,7 @@ const CinematicForm = ({ formId, isMobile = false }: CinematicFormProps) => {
                             }}
                         >
                             Apply Today for <br /> K.R. Mangalam University
-                        </div>
+                        </p>
                     </div>
                     <div className="p-1">
                         <NoPaperForm formId={formId} height="500px" />
@@ -37,7 +37,7 @@ const CinematicForm = ({ formId, isMobile = false }: CinematicFormProps) => {
         >
             <div className="heroBannerForm__form w-full max-w-md mx-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[4px] !pt-5 !pb-3 !h-auto overflow-hidden">
                 <div className="heroBannerForm-header">
-                    <div
+                    <p
                         className="mb-0 text-center font-bold font-poppins !text-[28px] lg:text-lg inline-block w-full"
                         style={{
                             backgroundImage:
@@ -47,7 +47,7 @@ const CinematicForm = ({ formId, isMobile = false }: CinematicFormProps) => {
                         }}
                     >
                         Apply Today for <br /> K.R. Mangalam University
-                    </div>
+                    </p>
                 </div>
                 <NoPaperForm formId={formId} height="500px" />
             </div>

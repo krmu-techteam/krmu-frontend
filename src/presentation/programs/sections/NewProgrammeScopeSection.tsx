@@ -60,7 +60,7 @@ const ProgrammeScopeSection = async ({
 
                     {/* Right Column: Heading & Content */}
                     <div className="max-w-[95%] font-serif lg:max-w-[50%]  flex flex-col justify-center">
-                        <h3 className="heading-primary mb-6">{data.heading}</h3>
+                        <h2 className="heading-primary mb-6">{data.heading}</h2>
 
                         <div className="space-y-4 font-poppins text-[15px] sm:text-[16px] font-light  text-white text-justify tracking-wide leading-6 opacity-[90%]">
                             {data.description.map((item) => (
@@ -159,7 +159,7 @@ const ProgrammeScopeSection = async ({
                                 >
                                     {data.skillsTitle}
                                 </span>
-                                <h4
+                                <h3
                                     className={`text-white font-extrabold text-[16px]  ${
                                         slug === "bjmc-hons-research" ||
                                         slug === "bjmc"
@@ -168,7 +168,7 @@ const ProgrammeScopeSection = async ({
                                     } leading-[1.2]  mb-4`}
                                 >
                                     {data.skillsSubtitle}
-                                </h4>
+                                </h3>
 
                                 <p
                                     className={`text-xs  ${

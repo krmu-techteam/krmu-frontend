@@ -9,38 +9,41 @@ import { LabCard } from "@/lib/types/school-programme";
 import BcaVsBtechTable from "../programs/prog-comp/BcaVsBtechTable";
 
 type Props = {
-  heading: string;
-  highlight: string;
-  btn: ButtonType;
-  labimg: StrapiMedia;
-  labcontent: ParagraphBlock[];
-  labcards: LabCard[];
-  slug: string;
+    heading: string;
+    highlight: string;
+    btn: ButtonType;
+    labimg: StrapiMedia;
+    labcontent: ParagraphBlock[];
+    labcards: LabCard[];
+    slug: string;
 };
 
 const LabsFacilities = ({
-  heading,
-  highlight,
-  btn,
-  labimg,
-  labcontent,
-  labcards,
-  slug,
+    heading,
+    highlight,
+    btn,
+    labimg,
+    labcontent,
+    labcards,
+    slug,
 }: Props) => {
-  // Map dynamic images from btn?.containerPopupFormId if available, otherwise use defaults
-  const labStagingImages = btn?.containerPopupFormId 
-    ? btn?.containerPopupFormId.split(',').map(url => url.trim()).filter(url => url !== "")
-    : [
-    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/technology_8b0b4c04a3.png",
-    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/artificial_intelligence_0117b8b3e9.png",
-    "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/social_2e5de5b706.png",
-  ];
+    // Map dynamic images from btn?.containerPopupFormId if available, otherwise use defaults
+    const labStagingImages = btn?.containerPopupFormId
+        ? btn?.containerPopupFormId
+              .split(",")
+              .map((url) => url.trim())
+              .filter((url) => url !== "")
+        : [
+              "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/technology_8b0b4c04a3.png",
+              "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/artificial_intelligence_0117b8b3e9.png",
+              "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/social_2e5de5b706.png",
+          ];
 
-  return (
-    <>
-      <section className="py-8 md:py-6 lg:pt-10 lg:pb-0 xl:pt-12 xl:pb-4 2xl:pt-16 2xl:pb-8 px-4 md:px-6 lg:px-10 2xl:px-0">
-        <div className="max-w-[1440px] mx-auto w-full">
-          {/* <div className="w-1/2 hidden lg:block">
+    return (
+        <>
+            <section className="py-8 md:py-6 lg:pt-10 lg:pb-0 xl:pt-12 xl:pb-4 2xl:pt-16 2xl:pb-8 px-4 md:px-6 lg:px-10 2xl:px-0">
+                <div className="max-w-[1440px] mx-auto w-full">
+                    {/* <div className="w-1/2 hidden lg:block">
             {labimg?.url && (
               <Image
                 src={`${STRAPI_URL}${labimg?.url}`}
@@ -51,22 +54,24 @@ const LabsFacilities = ({
               />
             )}
           </div> */}
-          <div className="w-full labFac_container text-center">
-            <div className="common-prog-container !max-w-4xl mx-auto">
-              <h3 className="text-2xl md:text-[42px] font-semibold md:font-bold text-gray-900 leading-tight tracking-tight mb-3 md:mb-4">
-                {heading} {highlight}
-              </h3>
-              <div
-                className="sub-heading text-md md:text-xl text-black text-pretty -mb-4 leading-relaxed tracking-normal">
-                <BlocksRenderer content={labcontent} />
-              </div>
-            </div>
+                    <div className="w-full labFac_container text-center">
+                        <div className="common-prog-container !max-w-4xl mx-auto">
+                            <h2 className="text-2xl md:text-[42px] font-semibold md:font-bold text-gray-900 leading-tight tracking-tight mb-3 md:mb-4">
+                                {heading} {highlight}
+                            </h2>
+                            <div className="sub-heading text-md md:text-xl text-black text-pretty -mb-4 leading-relaxed tracking-normal">
+                                <BlocksRenderer content={labcontent} />
+                            </div>
+                        </div>
 
-            <div>
-               <LabFacilitiesSlider labcards={labcards} images={labStagingImages} />
-            </div>
+                        <div>
+                            <LabFacilitiesSlider
+                                labcards={labcards}
+                                images={labStagingImages}
+                            />
+                        </div>
 
-            {/* <div className="flex items-center justify-center">
+                        {/* <div className="flex items-center justify-center">
                {(btn?.buttonclass || btn?.buttonlink) && (
                 <Link
                   href={btn?.buttonlink}
@@ -76,15 +81,14 @@ const LabsFacilities = ({
                 </Link>
               )}
             </div> */}
-            
-          </div>
-        </div>
-        <div className="max-w-[1320px] mx-auto w-full mt-0 md:mt-10">
-          {slug === "bca-ai-data-science" && <BcaVsBtechTable />}
-        </div>
-      </section>
-    </>
-  );
+                    </div>
+                </div>
+                <div className="max-w-[1320px] mx-auto w-full mt-0 md:mt-10">
+                    {slug === "bca-ai-data-science" && <BcaVsBtechTable />}
+                </div>
+            </section>
+        </>
+    );
 };
 
 export default LabsFacilities;

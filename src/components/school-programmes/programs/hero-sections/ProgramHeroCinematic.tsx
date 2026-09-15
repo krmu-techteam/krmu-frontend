@@ -65,11 +65,11 @@ const ProgramHeroCinematic = ({
                         <div className="xl:max-w-[700px] w-full">
                             <div className="flex flex-col lg:block bg-gradient-to-t from-black/95 via-black/40 to-transparent lg:bg-none px-6 pt-14 pb-6 sm:px-6 sm:pt-20 sm:pb-8 md:px-8 lg:p-0">
                                 <div className="mb-0 lg:mb-10">
-                                    <h3
+                                    <p
                                         className={`text-white/90 lg:block hidden ${config.subtitleMaxWidth || "xl:max-w-[65%] 2xl:max-w-[70%]"} [text-shadow:0px_4px_4px_rgba(0,0,0,0.6)] ${config.subtitleSize || "text-md lg:text-[14px] xl:text-lg"} font-normal uppercase tracking-[0.05em] drop-shadow-md`}
                                     >
                                         {heroSection?.subtitle}
-                                    </h3>
+                                    </p>
                                     <h1
                                         className={`text-white ${config.titleSize} ${config.titleMaxWidth || ""} font-semibold md:font-bold mb-0 lg:mb-3 leading-[1.1] antialiased [text-shadow:0px_4px_8px_rgba(0,0,0,0.5)]`}
                                     >
@@ -142,7 +142,7 @@ const ProgramHeroCinematic = ({
                     <div className="hidden lg:flex w-full lg:w-[40%] xl:w-2/5 xl:pl-20 justify-center lg:justify-end">
                         <div className="heroBannerForm__form w-full max-w-md mx-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[4px] !pt-5 !pb-3 !h-auto overflow-hidden">
                             <div className="heroBannerForm-header">
-                                <div
+                                <p
                                     className="mb-0 font-bold !text-[28px] lg:text-lg inline-block w-full text-center"
                                     style={{
                                         backgroundImage:
@@ -153,7 +153,7 @@ const ProgramHeroCinematic = ({
                                 >
                                     Apply Today for <br /> K.R. Mangalam
                                     University
-                                </div>
+                                </p>
                             </div>
                             <NoPaperForm formId={formId} height="500px" />
                         </div>
@@ -168,7 +168,7 @@ const ProgramHeroCinematic = ({
             >
                 <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.1)] rounded-[4px] !pt-4 !pb-3 !h-auto overflow-hidden">
                     <div className="heroBannerForm-header">
-                        <div
+                        <p
                             className="mb-0 text-center font-bold text-[22px] lg:text-lg inline-block w-full"
                             style={{
                                 backgroundImage:
@@ -178,7 +178,7 @@ const ProgramHeroCinematic = ({
                             }}
                         >
                             Apply Today for <br /> K.R. Mangalam University
-                        </div>
+                        </p>
                     </div>
                     <div className="p-1">
                         <NoPaperForm formId={formId} height="500px" />

@@ -61,19 +61,17 @@ const ProgrammeStructure = ({
             <div className="container mx-auto relative">
                 {/* Section Header */}
                 <div className="relative mb-12">
-                    {(heading || highlight) && (
-                        <div
-                            className="w-full py-4 xl:py-4 2xl:py-6 mb-6"
-                            style={{
-                                background:
-                                    "linear-gradient(90deg, rgba(0, 23, 50, 0) 0%, #001732 49.04%, rgba(0, 23, 50, 0) 95.67%)",
-                            }}
-                        >
-                            <h2 className="text-[28px] font-serif md:text-3xl lg:text-[40px] font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
-                                {heading} {highlight}
-                            </h2>
-                        </div>
-                    )}
+                    <div
+                        className="w-full py-4 xl:py-4 2xl:py-6 mb-6"
+                        style={{
+                            background:
+                                "linear-gradient(90deg, rgba(0, 23, 50, 0) 0%, #001732 49.04%, rgba(0, 23, 50, 0) 95.67%)",
+                        }}
+                    >
+                        <h2 className="text-[28px] font-serif md:text-3xl lg:text-[40px] font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
+                            {heading || "Curriculum & Syllabus"} {highlight}
+                        </h2>
+                    </div>
                 </div>
 
                 <div className="relative w-full">
@@ -150,7 +148,9 @@ const ProgrammeStructure = ({
                               : "text-[#061623] bg-[#EAEAEA] hover:bg-[#DEDEDE]"
                       } cursor-pointer`}
                                         >
-                                            {year.year}
+                                            <h3 className="m-0 text-inherit font-inherit text-sm lg:text-[16px] 2xl:text-lg font-semibold uppercase tracking-widest inline-block">
+                                                {year.year}
+                                            </h3>
                                         </button>
                                     );
                                 })}
@@ -185,7 +185,9 @@ const ProgrammeStructure = ({
                       ${isSemActive ? "text-white" : "text-white hover:text-white"}
                     `}
                                             >
-                                                {sem.semestername}
+                                                <h4 className="m-0 text-inherit font-inherit text-xl font-normal inline-block">
+                                                    {sem.semestername}
+                                                </h4>
                                                 <div
                                                     className={`absolute bottom-0 left-0 w-full h-1 transition-all duration-300 ${
                                                         !isSemActive

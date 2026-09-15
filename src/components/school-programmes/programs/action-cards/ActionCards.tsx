@@ -3,112 +3,112 @@ import React from "react";
 import { SchoolCategoryType } from "@/lib/types/school-programme";
 
 type Props = {
-  schoolCat: SchoolCategoryType;
+    schoolCat: SchoolCategoryType;
 };
 
 export const ActionCards = ({ schoolCat }: Props) => {
-  const brochureLinks: Record<string, string> = {
-    soet: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOET_Print2_2174445457.pdf",
-    somc: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOMC_a992b7ec7f.pdf",
-    sols: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOLS_Print_399f0d11d3.pdf",
-    smas: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SMAS_Print_ec7f43f883.pdf",
-    sprs: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SPRS_Print_3_17f374576b.pdf",
-    sola: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOLA_Print2_d64c6893cd.pdf",
-    soad: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOAD_Print_bede034fe7.pdf",
-    sbas: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SBAS_Print_e7613fb246.pdf",
-    semce:
-      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SJMC_Print2_dadeaa8143.pdf",
-    soed: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOED_Print2_ea2b3a76ee.pdf",
-    soas: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOAS_Print_d94bbd699d.pdf",
-  };
+    const brochureLinks: Record<string, string> = {
+        soet: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOET_Print2_2174445457.pdf",
+        somc: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOMC_a992b7ec7f.pdf",
+        sols: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOLS_Print_399f0d11d3.pdf",
+        smas: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SMAS_Print_ec7f43f883.pdf",
+        sprs: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SPRS_Print_3_17f374576b.pdf",
+        sola: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOLA_Print2_d64c6893cd.pdf",
+        soad: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOAD_Print_bede034fe7.pdf",
+        sbas: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SBAS_Print_e7613fb246.pdf",
+        semce: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SJMC_Print2_dadeaa8143.pdf",
+        soed: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOED_Print2_ea2b3a76ee.pdf",
+        soas: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/SOAS_Print_d94bbd699d.pdf",
+    };
 
-  const brochureLink = brochureLinks[schoolCat?.slug] || "#";
+    const brochureLink = brochureLinks[schoolCat?.slug] || "#";
 
-  const handleApplyClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const formElement =
-      document.getElementById("apply-form") ||
-      document.getElementById("hero-form") ||
-      document.getElementById("apply-form-mobile") ||
-      document.querySelector(".heroBannerForm__form");
+    const handleApplyClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        const formElement =
+            document.getElementById("apply-form") ||
+            document.getElementById("hero-form") ||
+            document.getElementById("apply-form-mobile") ||
+            document.querySelector(".heroBannerForm__form");
 
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: "smooth", block: "center" });
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    };
 
-  return (
-    <section className="relative py-10 lg:py-20 px-4 sm:px-8 lg:px-8 overflow-hidden">
-      <div className="relative z-10 max-w-[1300px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-3 lg:gap-6 items-stretch">
-          {/* Card 1: Apply Now */}
-          <div
-            onClick={handleApplyClick}
-            className="bg-[#CAE2F0] rounded-[4px] md:rounded-[5px] p-5 md:p-4 lg:p-6 xl:p-7 min-h-[220px] md:min-h-[260px] lg:min-h-[253px] h-full flex flex-col justify-between items-start text-left w-full cursor-pointer hover:shadow-md transition-all duration-300"
-          >
-            <div>
-              <h3 className="font-serif text-[26px] sm:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-[#000000] tracking-tight leading-tight mb-2 sm:mb-3">
-                Apply Now
-              </h3>
-              <p className="text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[14px] text-[#000000]/90 font-poppins leading-relaxed">
-                Login to your application page to start your application and
-                reserve your place in the class of 2026.
-              </p>
+    return (
+        <section className="relative py-10 lg:py-20 px-4 sm:px-8 lg:px-8 overflow-hidden">
+            <div className="relative z-10 max-w-[1300px] mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-3 lg:gap-6 items-stretch">
+                    {/* Card 1: Apply Now */}
+                    <div
+                        onClick={handleApplyClick}
+                        className="bg-[#CAE2F0] rounded-[4px] md:rounded-[5px] p-5 md:p-4 lg:p-6 xl:p-7 min-h-[220px] md:min-h-[260px] lg:min-h-[253px] h-full flex flex-col justify-between items-start text-left w-full cursor-pointer hover:shadow-md transition-all duration-300"
+                    >
+                        <div>
+                            <p className="font-serif text-[26px] sm:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-[#000000] tracking-tight leading-tight mb-2 sm:mb-3">
+                                Apply Now
+                            </p>
+                            <p className="text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[14px] text-[#000000]/90 font-poppins leading-relaxed">
+                                Login to your application page to start your
+                                application and reserve your place in the class
+                                of 2026.
+                            </p>
+                        </div>
+                        <button
+                            type="button"
+                            onClick={handleApplyClick}
+                            className="mt-3 md:mt-3 lg:mt-4 inline-flex items-center font-poppins justify-center px-4 md:px-6 lg:px-6 py-2 md:py-2 lg:py-2.5 bg-white text-[#000000] text-xs sm:text-sm font-semibold rounded-[4px] hover:bg-white/90 transition-all duration-200 cursor-pointer"
+                        >
+                            Apply Now
+                        </button>
+                    </div>
+
+                    {/* Card 2: Connect */}
+                    <div className="bg-[#E7C268] rounded-[4px] md:rounded-[5px] p-5 md:p-4 lg:p-6 xl:p-7 min-h-[220px] md:min-h-[260px] lg:min-h-[253px] h-full flex flex-col justify-between items-start text-left w-full hover:shadow-md transition-all duration-300">
+                        <div>
+                            <p className="font-serif text-[26px] sm:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-[#000000] tracking-tight leading-tight mb-2 sm:mb-3">
+                                Connect
+                            </p>
+                            <p className="text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[14px] text-[#000000]/90 font-poppins leading-relaxed">
+                                If you would like to speak to an admission
+                                counselor please connect with us.
+                            </p>
+                        </div>
+                        <a
+                            href="tel:9311411717"
+                            className="mt-3 md:mt-3 lg:mt-4 inline-flex items-center font-poppins justify-center px-4 md:px-6 lg:px-6 py-2 md:py-2 lg:py-2.5 bg-white text-[#000000] text-xs sm:text-sm font-semibold rounded-[4px] hover:bg-white/90 transition-all duration-200"
+                        >
+                            Talk Now
+                        </a>
+                    </div>
+
+                    {/* Card 3: Brochure */}
+                    <div className="bg-white rounded-[4px] md:rounded-[5px] p-5 md:p-4 lg:p-6 xl:p-7 min-h-[220px] md:min-h-[260px] lg:min-h-[253px] h-full flex flex-col justify-between items-start text-left w-full hover:shadow-md transition-all duration-300">
+                        <div>
+                            <p className="font-serif text-[26px] sm:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-[#000000] tracking-tight leading-tight mb-2 sm:mb-3">
+                                Brochure
+                            </p>
+                            <p className="text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[14px] text-[#000000]/90 font-poppins leading-relaxed">
+                                Download our latest prospectus for a detailed
+                                look at our program offerings.
+                            </p>
+                        </div>
+                        <a
+                            href={brochureLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-3 md:mt-3 lg:mt-4 inline-flex items-center font-poppins justify-center px-4 md:px-6 lg:px-6 py-2 md:py-2 lg:py-2.5 bg-[#CAE2F0] text-[#000000] text-xs sm:text-sm font-semibold rounded-[4px] hover:bg-[#CAE2F0]/80 transition-all duration-200"
+                        >
+                            Download Now
+                        </a>
+                    </div>
+                </div>
             </div>
-            <button
-              type="button"
-              onClick={handleApplyClick}
-              className="mt-3 md:mt-3 lg:mt-4 inline-flex items-center font-poppins justify-center px-4 md:px-6 lg:px-6 py-2 md:py-2 lg:py-2.5 bg-white text-[#000000] text-xs sm:text-sm font-semibold rounded-[4px] hover:bg-white/90 transition-all duration-200 cursor-pointer"
-            >
-              Apply Now
-            </button>
-          </div>
-
-          {/* Card 2: Connect */}
-          <div className="bg-[#E7C268] rounded-[4px] md:rounded-[5px] p-5 md:p-4 lg:p-6 xl:p-7 min-h-[220px] md:min-h-[260px] lg:min-h-[253px] h-full flex flex-col justify-between items-start text-left w-full hover:shadow-md transition-all duration-300">
-            <div>
-              <h3 className="font-serif text-[26px] sm:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-[#000000] tracking-tight leading-tight mb-2 sm:mb-3">
-                Connect
-              </h3>
-              <p className="text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[14px] text-[#000000]/90 font-poppins leading-relaxed">
-                If you would like to speak to an admission counselor please
-                connect with us.
-              </p>
-            </div>
-            <a
-              href="tel:9311411717"
-              className="mt-3 md:mt-3 lg:mt-4 inline-flex items-center font-poppins justify-center px-4 md:px-6 lg:px-6 py-2 md:py-2 lg:py-2.5 bg-white text-[#000000] text-xs sm:text-sm font-semibold rounded-[4px] hover:bg-white/90 transition-all duration-200"
-            >
-              Talk Now
-            </a>
-          </div>
-
-          {/* Card 3: Brochure */}
-          <div className="bg-white rounded-[4px] md:rounded-[5px] p-5 md:p-4 lg:p-6 xl:p-7 min-h-[220px] md:min-h-[260px] lg:min-h-[253px] h-full flex flex-col justify-between items-start text-left w-full hover:shadow-md transition-all duration-300">
-            <div>
-              <h3 className="font-serif text-[26px] sm:text-[30px] lg:text-[34px] xl:text-[40px] font-bold text-[#000000] tracking-tight leading-tight mb-2 sm:mb-3">
-                Brochure
-              </h3>
-              <p className="text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[14px] text-[#000000]/90 font-poppins leading-relaxed">
-                Download our latest prospectus for a detailed look at our
-                program offerings.
-              </p>
-            </div>
-            <a
-              href={brochureLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 md:mt-3 lg:mt-4 inline-flex items-center font-poppins justify-center px-4 md:px-6 lg:px-6 py-2 md:py-2 lg:py-2.5 bg-[#CAE2F0] text-[#000000] text-xs sm:text-sm font-semibold rounded-[4px] hover:bg-[#CAE2F0]/80 transition-all duration-200"
-            >
-              Download Now
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default ActionCards;

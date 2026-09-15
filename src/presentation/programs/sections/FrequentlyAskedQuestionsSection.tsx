@@ -39,9 +39,9 @@ const FrequentlyAskedQuestionsSection = ({
                         <div className="mx-auto xl:max-w-[1200px] 2xl:max-w-7xl px-4 md:px-8 lg:px-10">
                             {/* Header block */}
                             <div className="text-center mb-8 md:mb-8">
-                                <h3 className="heading-primary mb-5 lg:mb-4 text-white">
+                                <h2 className="heading-primary mb-5 lg:mb-4 text-white">
                                     {heading} {highlight}
-                                </h3>
+                                </h2>
                                 <p className="text-[15px] mb-5 md:text-base font-poppins font-normal text-white/90 max-w-3xl mx-auto leading-relaxed">
                                     {desc}
                                 </p>

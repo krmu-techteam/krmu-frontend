@@ -65,9 +65,9 @@ const CareerProspectsSection = ({
             <div className="relative z-10 max-w-[1440px] mx-auto px-4 w-full flex flex-col items-center">
                 {/* Header Section */}
                 <div className="md:max-w-[855px] w-full text-center mb-4">
-                    <h3 className="text-[28px] font-serif md:text-[36px] lg:text-[38px] xl:text-[42px] font-bold text-[#0B1C30] mb-3 md:mb-2">
+                    <h2 className="text-[28px] font-serif md:text-[36px] lg:text-[38px] xl:text-[42px] font-bold text-[#0B1C30] mb-3 md:mb-2">
                         {heading} {highlight}
-                    </h3>
+                    </h2>
                     <p className="text-[#061623] text-justify md:text-center font-poppins text-shadow-xs md:text-shadow-none text-md xl:text-[18px] mx-auto max-w-full leading-relaxed md:leading-[1.36]">
                         {desc}
                     </p>
@@ -113,11 +113,11 @@ const CareerProspectsSection = ({
                                     >
                                         <div className="bg-gradient-to-b from-white via-white/85 to-transparent rounded-[2px] md:rounded-2xl pt-2.5 sm:pt-4 md:pt-6 px-3 sm:px-4 md:px-6 pb-0 flex flex-col items-center lg:max-w-[457px] xl:max-w-[457px] 2xl:max-w-[457px] min-h-[380px] sm:min-h-[390px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[418px] 2xl:min-h-[418px] w-full mx-auto relative transition-all duration-1000 mb-6 sm:mb-10 md:mb-20 xl:mb-12 2xl:mb-24 shadow-xl hover:shadow-2xl overflow-hidden">
                                             <div className="text-center z-20 relative px-1 sm:px-4 md:px-6">
-                                                <h4
+                                                <h3
                                                     className={`font-serif font-bold text-[22px] sm:text-xl md:text-2xl mb-1 sm:mb-1 text-[#061623] transition-all duration-1000 delay-100 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
                                                 >
                                                     {card?.title}
-                                                </h4>
+                                                </h3>
                                                 <p
                                                     className={`text-[#061623]/90 text-[13.5px] sm:text-[15px] md:text-[17px] max-w-sm mx-auto leading-snug sm:leading-relaxed md:leading-[1.36] font-normal transition-all font-poppins duration-1000 delay-300 ${selectedIndex === index ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
                                                 >

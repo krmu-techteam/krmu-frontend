@@ -138,11 +138,11 @@ const BreakDownSection = () => {
 
                         {/* Header Text */}
                         <div className="flex justify-center items-center my-8 px-0 sm:px-12">
-                            <h3 className="text-center text-[white] text-lg sm:text-lg md:text-[24px] font-medium leading-[1.4] max-w-4xl">
+                            <p className="text-center text-[white] text-lg sm:text-lg md:text-[24px] font-medium leading-[1.4] max-w-4xl">
                                 Below is a full breakdown of career roles,
                                 average salary ranges in India, and the sectors
                                 actively hiring B.Tech. CSE graduates.
-                            </h3>
+                            </p>
                         </div>
 
                         {/* Table Container with Horizontal Scroll support */}

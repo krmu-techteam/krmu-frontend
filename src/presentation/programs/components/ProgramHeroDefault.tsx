@@ -280,9 +280,9 @@ const ProgramHeroDefault = ({
                             className="heroBannerForm__form w-full max-w-md mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md"
                         >
                             <div className="heroBannerForm-header">
-                                <div className="mb-0 text-center font-bold font-poppins !text-[28px] lg:text-lg">
+                                <p className="mb-0 text-center font-bold font-poppins !text-[28px] lg:text-lg">
                                     Apply Today for K.R. Mangalam University
-                                </div>
+                                </p>
                             </div>
                             <NoPaperForm formId={formId} height="600px" />
                         </div>

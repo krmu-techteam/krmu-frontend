@@ -54,9 +54,9 @@ const LabFacilitiesCarousel = ({ labcards, images }: Props) => {
 
                                 {/* Content */}
                                 <div className="px-5 py-4 flex-1 flex flex-col items-center text-center">
-                                    <h4 className="font-semibold font-poppins text-[16px] md:text-[19px] mb-3 text-white group-hover:text-blue-400 transition-colors duration-300 leading-tight">
+                                    <h3 className="font-semibold font-poppins text-[16px] md:text-[19px] mb-3 text-white group-hover:text-blue-400 transition-colors duration-300 leading-tight">
                                         {item.title}
-                                    </h4>
+                                    </h3>
                                     <p className="text-sm text-white/90 font-poppins text-[14px] md:text-[15px] leading-relaxed group-hover:text-white/90 transition-colors duration-300">
                                         {item?.description}
                                     </p>

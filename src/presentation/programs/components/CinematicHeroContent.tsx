@@ -12,11 +12,11 @@ const CinematicHeroContent = ({
     return (
         <div className="flex flex-col lg:block bg-gradient-to-t from-black/90 via-black/45 to-transparent lg:bg-none px-4 pt-16 pb-0 sm:px-6 sm:pt-20 sm:pb-8 md:px-8 lg:p-0 antialiased [text-rendering:optimizeLegibility] [-webkit-font-smoothing:antialiased] [-moz-osx-font-smoothing:grayscale]">
             <div className="mb-0 lg:mb-10">
-                <h3
+                <p
                     className={`text-white/90 lg:block font-poppins hidden ${config.subtitleMaxWidth || "xl:max-w-[65%] 2xl:max-w-[70%]"} ${config.subtitleSize || "text-md lg:text-[14px] xl:text-lg"} font-normal uppercase tracking-[0.08em] antialiased`}
                 >
                     {heroSection?.subtitle}
-                </h3>
+                </p>
                 <h1
                     className={`text-white text-[24px] md:text-[30px] lg:text-3xl xl:text-[42px] 2xl:text-5xl ${config.titleMaxWidth || ""} font-bold font-serif md:font-bold mb-0 lg:mb-3 leading-[1.25] md:leading-[1.25] lg:leading-[1.1] antialiased`}
                 >
