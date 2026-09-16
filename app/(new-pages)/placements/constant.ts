@@ -294,7 +294,8 @@ export interface InterviewSuccessStory {
 export const interviewSuccessStories: InterviewSuccessStory[] = [
   {
     id: 1,
-    image: "https://www.krmangalam.edu.in/images/success-stories/rishb-bakshi.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/success-stories/rishb-bakshi.jpg",
     imageAlt: "Rishab Bakshi",
     course: "BCA",
     name: "Rishab Bakshi",
@@ -305,7 +306,8 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
   },
   {
     id: 2,
-    image: "https://www.krmangalam.edu.in/images/success-stories/daksh-mehta.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/success-stories/daksh-mehta.jpg",
     imageAlt: "Daksh Mehta",
     course: "B.Tech. CSE",
     name: "Daksh Mehta",
@@ -316,7 +318,8 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
   },
   {
     id: 3,
-    image: "https://www.krmangalam.edu.in/images/success-stories/veneet-verma.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/success-stories/veneet-verma.jpg",
     imageAlt: "Vineet Verma",
     course: "B.Tech. CSE",
     name: "Vineet Verma",
@@ -346,7 +349,7 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
     package: "24 LPA",
     companyLogo: "https://krmangalam.edu.in/images/logos/cmo.png",
     companyName: "Como (recruiter) logo",
-  }, 
+  },
   {
     id: 5,
     image: "https://www.krmangalam.edu.in/images/success-stories/nitesh.jpg",
@@ -360,7 +363,8 @@ export const interviewSuccessStories: InterviewSuccessStory[] = [
   },
   {
     id: 6,
-    image: "https://www.krmangalam.edu.in/images/success-stories/naman-pune.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/success-stories/naman-pune.jpg",
     imageAlt: "Naman Punn",
     course: "B.Tech. CSE",
     name: "Naman Punn",
@@ -394,7 +398,8 @@ export interface CDCTeamMemberData {
 export const cdcTeamMembers: CDCTeamMemberData[] = [
   {
     id: 1,
-    image: "https://krmangalam.edu.in/images/placements/cdc-team/dr-vibha-thakur.jpg",
+    image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/dr-vibha-thakur.jpg",
     imageAlt: "Dr. Vibha Thakur - Director | Career Development Centre",
     name: "Dr. Vibha Thakur",
     designation: "Director | Career Development Centre",
@@ -402,7 +407,8 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   },
   {
     id: 2,
-    image: "https://krmangalam.edu.in/images/placements/cdc-team/jharna-jagtiani.jpg",
+    image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/jharna-jagtiani.jpg",
     imageAlt: "Jharna Jagtiani - Senior Manager",
     name: "Jharna Jagtiani",
     designation: "Senior Manager",
@@ -410,7 +416,8 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   },
   {
     id: 3,
-    image: "https://krmangalam.edu.in/images/placements/cdc-team/charu-gola.jpg",
+    image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/charu-gola.jpg",
     imageAlt: "Charu Gola - Assistant Manager- CDC",
     name: "Charu Gola",
     designation: "Assistant Manager- CDC",
@@ -418,7 +425,8 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   },
   {
     id: 4,
-    image: "https://krmangalam.edu.in/images/placements/cdc-team/sreejita-saha.jpg",
+    image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/sreejita-saha.jpg",
     imageAlt: "Sreejita Saha - Manager- Career Development Centre",
     name: "Sreejita Saha",
     designation: "Manager- Career Development Centre",
@@ -426,7 +434,8 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   },
   {
     id: 5,
-    image: "https://krmangalam.edu.in/images/placements/cdc-team/dhaval-bhaskar.jpg",
+    image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/dhaval-bhaskar.jpg",
     imageAlt: "Dhaval Bhaskar - Sr. Placement Manager",
     name: "Dhaval Bhaskar",
     designation: "Sr. Placement Manager",
@@ -435,10 +444,90 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
 
   {
     id: 6,
-    image: "https://krmangalam.edu.in/images/placements/cdc-team/vanshita-jain.jpg",
+    image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/vanshita-jain.jpg",
     imageAlt: "Vanshita Jain - Internship Manager",
     name: "Vanshita Jain",
     designation: "Internship Manager",
     email: "vanshita.jain@krmangalam.edu.in",
   },
 ];
+
+export interface PersonSchemaData {
+  name: string;
+  jobTitle?: string;
+  email?: string;
+  image?: string;
+  url?: string;
+  description?: string;
+
+  worksFor?: {
+    name: string;
+    url?: string;
+    type?: "Organization" | "CollegeOrUniversity";
+  };
+
+  alumniOf?: {
+    name: string;
+    url?: string;
+    type?: "Organization" | "CollegeOrUniversity";
+  };
+}
+
+export function createPersonGraphSchema(
+  ...peopleGroups: PersonSchemaData[][]
+) {
+  const people = peopleGroups.flat();
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": people.map((person) => ({
+      "@type": "Person",
+      name: person.name,
+
+      ...(person.jobTitle && {
+        jobTitle: person.jobTitle,
+      }),
+
+      ...(person.description && {
+        description: person.description,
+      }),
+
+      ...(person.worksFor && {
+        worksFor: {
+          "@type": person.worksFor.type ?? "Organization",
+          name: person.worksFor.name,
+          ...(person.worksFor.url && {
+            url: person.worksFor.url,
+          }),
+        },
+      }),
+
+      ...(person.alumniOf && {
+        alumniOf: {
+          "@type": person.alumniOf.type ?? "CollegeOrUniversity",
+          name: person.alumniOf.name,
+          ...(person.alumniOf.url && {
+            url: person.alumniOf.url,
+          }),
+        },
+      }),
+
+      ...(person.email && {
+        email: person.email.startsWith("mailto:")
+          ? person.email
+          : `mailto:${person.email}`,
+      }),
+
+      ...(person.image && {
+        image: person.image,
+      }),
+
+      ...(person.url && {
+        url: person.url,
+      }),
+    })),
+  };
+
+  return JSON.stringify(schema);
+}

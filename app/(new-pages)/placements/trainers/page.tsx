@@ -1,3 +1,7 @@
+import {
+  createBreadcrumbProgSchema,
+  createWebPageSchema,
+} from "@/lib/api/common";
 import BootcampStats from "./common/BootcampStats";
 import CareerAccelerationCTA from "./common/CareerAccelerationCTA";
 import PlacementHighlights from "./common/PlacementHighlights";
@@ -7,6 +11,9 @@ import TrainersHeroSection from "./common/TrainersHeroSection";
 import TrainingJourney from "./common/TrainingJourney";
 import TrainingMatrix from "./common/TrainingMatrix";
 import TrainingModules from "./common/TrainingModules";
+import Script from "next/script";
+import { trainers } from "./constant";
+import { createPersonGraphSchema } from "../constant";
 
 export async function generateMetadata() {
   return {
@@ -50,7 +57,7 @@ export async function generateMetadata() {
     // Twitter / X
     twitter: {
       card: "summary_large_image",
- 
+
       title: "KRMU Placement Trainers & Career Development Team",
 
       description:
@@ -61,19 +68,70 @@ export async function generateMetadata() {
   };
 }
 
+const breadcrumbSchema = createBreadcrumbProgSchema([
+  { name: "Home", url: "https://www.krmangalam.edu.in/" },
+  {
+    name: "Placement",
+    url: "https://www.krmangalam.edu.in/placement/trainers",
+  },
+  {
+    name: "KRMU Placement Trainers & Career Development Team",
+    url: "https://www.krmangalam.edu.in/placement/trainers",
+  },
+]);
+
+const webPageSchema = createWebPageSchema({
+  name: "KRMU Placement Trainers & Career Development Team",
+  url: "https://www.krmangalam.edu.in/placement/trainers",
+  description:
+    "Meet KRMU placement trainers who guide students with career preparation, skill development, interview training, and placement support for successful careers.",
+  aboutName: "KRMU Placement Trainers & Career Development Team",
+  aboutUrl: "https://www.krmangalam.edu.in/placement/trainers",
+});
+const personSchema = createPersonGraphSchema(
+  trainers.map((trainer) => ({
+    name: trainer.name,
+    jobTitle: trainer.designation,
+    image: `https://www.krmangalam.edu.in${trainer.image}`,
+
+    worksFor: {
+      name: "K.R. Mangalam University",
+      url: "https://www.krmangalam.edu.in/",
+      type: "CollegeOrUniversity",
+    },
+  })),
+);
+
 const page = () => {
   return (
-    <main className="bg-[#fbf8f3] font-poppins">
-      <TrainersHeroSection />
-      <PlacementHighlights />
-      <TrainingJourney />
-      <TrainingModules />
-      <TrainingMatrix />
-      <BootcampStats />
-      <Trainers />
-      <SkilledPartners />
-      <CareerAccelerationCTA />
-    </main>
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+      />
+      <Script
+        id="webpage-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: webPageSchema }}
+      />
+      <Script
+        id="personSchema-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: personSchema }}
+      />
+      <main className="bg-[#fbf8f3] font-poppins">
+        <TrainersHeroSection />
+        <PlacementHighlights />
+        <TrainingJourney />
+        <TrainingModules />
+        <TrainingMatrix />
+        <BootcampStats />
+        <Trainers />
+        <SkilledPartners />
+        <CareerAccelerationCTA />
+      </main>
+    </>
   );
 };
 

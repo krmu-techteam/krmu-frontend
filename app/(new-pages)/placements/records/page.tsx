@@ -1,3 +1,7 @@
+import {
+  createBreadcrumbProgSchema,
+  createWebPageSchema,
+} from "@/lib/api/common";
 import QuickEnquiry from "../common/QuickEnquiry";
 import AveragePackageGrowth from "./common/AveragePackageGrowth";
 import Definitions from "./common/Definitions";
@@ -6,6 +10,7 @@ import HiringTrendsAndReports from "./common/HiringTrendsAndReports";
 import PlacementRecords from "./common/PlacementRecords";
 import SchoolWiseCohort from "./common/SchoolWiseCohort";
 import SystemWideTrend from "./common/SystemWideTrend";
+import Script from "next/script";
 
 export async function generateMetadata() {
   return {
@@ -58,20 +63,50 @@ export async function generateMetadata() {
       images: ["https://www.krmangalam.edu.in/images/krmu-naac-logo.webp"],
     },
   };
-} 
+}
+
+const breadcrumbSchema = createBreadcrumbProgSchema([
+  { name: "Home", url: "https://www.krmangalam.edu.in/" },
+  { name: "Placement", url: "https://www.krmangalam.edu.in/placement" },
+  {
+    name: "K.R. Mangalam University Placement Records & Statistics",
+    url: "https://www.krmangalam.edu.in/placement/records",
+  },
+]);
+
+const webPageSchema = createWebPageSchema({
+  name: "K.R. Mangalam University Placement Records & Statistics",
+  url: "https://www.krmangalam.edu.in/placement/records",
+  description:
+    "Explore KRMU placement records, salary packages, top recruiters, and placement statistics showcasing career opportunities for K.R. Mangalam University students.",
+  aboutName: "K.R. Mangalam University Placement Records & Statistics",
+  aboutUrl: "https://www.krmangalam.edu.in/placement/records",
+});
 
 const page = () => {
   return (
-    <main className="bg-[#fbf8f3] font-poppins">
-      <HeroSection />
-      <SystemWideTrend />
-      <AveragePackageGrowth />
-      <SchoolWiseCohort />
-      <HiringTrendsAndReports />
-      <Definitions />
-      <PlacementRecords />
-      <QuickEnquiry />
-    </main>
+    <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+      />
+      <Script
+        id="webpage-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: webPageSchema }}
+      />
+      <main className="bg-[#fbf8f3] font-poppins">
+        <HeroSection />
+        <SystemWideTrend />
+        <AveragePackageGrowth />
+        <SchoolWiseCohort />
+        <HiringTrendsAndReports />
+        <Definitions />
+        <PlacementRecords />
+        <QuickEnquiry />
+      </main>
+    </>
   );
 };
 

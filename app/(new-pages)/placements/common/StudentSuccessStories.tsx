@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const studentStories: StudentSuccessStory[] = [
+export const studentStories: StudentSuccessStory[] = [
   {
     id: 1,
     image: "/images/placements/success-stories/krish-agarwal.jpg",
