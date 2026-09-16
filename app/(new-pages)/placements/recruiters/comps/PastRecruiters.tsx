@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const API_URL =
-  "http://local.krm-ai.com/get-past-recruiters.php";
+  "https://forms.krmangalam.ac.in/back-desk/get-past-recruiters.php";
 
 const INITIAL_RECORDS = 10;
 
 interface Recruiter {
   id: number;
-  company: string | null;
+  company: string | null; 
   role: string | null;
   hiring: number | null;
   sector: string | null;
