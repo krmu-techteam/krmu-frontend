@@ -1318,8 +1318,9 @@ export const recruiterLogoMap: Record<string, string> = {
 export function resolveProgramRecruiterAlt(
     name?: string | null,
     filenameOrUrl?: string | null,
-    fallback: string = ""
+    fallback?: string | null
 ): string {
+    const rawFallback = fallback || "";
     const raw = (filenameOrUrl || "").trim().split("?")[0];
     const filename = raw.split("/").pop() || raw;
     const lower = (name || filename).toLowerCase();
@@ -1361,7 +1362,7 @@ export function resolveProgramRecruiterAlt(
     if (lower.includes("rsa")) return "RSA Security recruiter partner logo";
     if (lower.includes("olx")) return "OLX recruiter partner logo";
 
-    if (fallback && fallback !== "Career Logo") return fallback;
+    if (rawFallback && rawFallback !== "Career Logo") return rawFallback;
     return `${name || filename.replace(/[-_]/g, " ").replace(/\.[^/.]+$/, "")} recruiter partner logo`;
 }
 
