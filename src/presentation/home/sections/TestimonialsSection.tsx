@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Carousel } from "@/components/common/Carousel";
 import SectionDivider from "@/components/common/SectionDivider";
 import { SectionTitle } from "@/components/common/SectionTitle";
+import { resolveHomeTestimonialAlt } from "@/alt-text";
 
 interface Testimonial {
     id: number;
@@ -157,7 +158,10 @@ export function TestimonialsSection({
                                 <div className="w-full lg:w-[260px] xl:w-[300px] shrink-0 relative aspect-square sm:aspect-[4/4.5] lg:aspect-auto rounded-[16px] overflow-hidden">
                                     <Image
                                         src={t.image}
-                                        alt={t.name}
+                                        alt={resolveHomeTestimonialAlt(
+                                            t.name,
+                                            `${t.name}, ${t.role} student testimonial at KRMU`
+                                        )}
                                         fill
                                         sizes="(max-width: 1024px) 100vw, 300px"
                                         className="object-cover rounded-[16px]"

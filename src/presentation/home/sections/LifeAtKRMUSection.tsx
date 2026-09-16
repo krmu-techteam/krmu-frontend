@@ -10,6 +10,11 @@ import {
     LIFE_AT_KRMU_CAROUSEL_CONFIGS,
     LIFE_AT_KRMU_GALLERY,
 } from "@/features/home";
+import {
+    resolveHomeEventAlt,
+    resolveHomeFacilityAlt,
+    resolveHomeClubAlt,
+} from "@/alt-text";
 
 export function LifeAtKRMUSection() {
     // Row 1 starts from index 0 (Images 1, 2, 3...)
@@ -35,7 +40,10 @@ export function LifeAtKRMUSection() {
             {/* Card Image */}
             <Image
                 src={img.src}
-                alt={img.alt}
+                alt={resolveHomeEventAlt(
+                    img.title || img.alt || img.src,
+                    img.alt
+                )}
                 fill
                 sizes="(max-width: 768px) 380px, 520px"
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"
@@ -143,58 +151,78 @@ export function LifeAtKRMUSection() {
             {/* Feature Cards Grid - Premium Dark Theme */}
             <div className="max-w-[1530px] mx-auto relative z-10 px-4 md:px-8 xl:px-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 xl:gap-5">
-                    {LIFE_AT_KRMU_CAROUSEL_CONFIGS.map((card, i) => (
-                        <div
-                            key={i}
-                            className="group flex flex-col rounded-[4px] overflow-hidden bg-[#0A1017]"
-                        >
-                            <div className="relative aspect-4/5 w-full flex flex-col justify-end overflow-hidden">
-                                <Image
-                                    src={card.bg}
-                                    alt={card.label}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    className="object-cover group-hover:scale-105 transition-transform duration-1000"
-                                    loading="lazy"
-                                />
-                                <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent"></div>
+                    {LIFE_AT_KRMU_CAROUSEL_CONFIGS.map((card, i) => {
+                        const cardAlt = card.label
+                            .toLowerCase()
+                            .includes("facilit")
+                            ? resolveHomeFacilityAlt(
+                                  "Facilities",
+                                  "State-of-the-art infrastructure and facilities at K.R. Mangalam University"
+                              )
+                            : card.label.toLowerCase().includes("club") ||
+                                card.label.toLowerCase().includes("societ")
+                              ? resolveHomeClubAlt(
+                                    "Clubs & Societies",
+                                    "KRMU student club/society activity"
+                                )
+                              : resolveHomeEventAlt(
+                                    card.label,
+                                    `Campus event at KRMU — ${card.label}`
+                                );
 
-                                <div className="relative p-5 md:p-6 xl:p-8">
-                                    <h3 className="text-white font-poppins font-light text-[28px] xl:text-[42px] leading-[32px] xl:leading-[47px] mb-2 md:mb-4 whitespace-pre-line group-hover:text-brand-gold transition-colors">
-                                        {card.title
-                                            .split("\n")
-                                            .map((line, idx) => (
-                                                <span
-                                                    key={idx}
-                                                    className={
-                                                        line === card.accent
-                                                            ? "text-brand-gold"
-                                                            : ""
-                                                    }
-                                                >
-                                                    {line}
-                                                    {idx !== 2 ? "\n" : ""}
-                                                </span>
-                                            ))}
-                                    </h3>
-                                </div>
-                            </div>
-                            <Link
-                                href={card.url || "#"}
-                                className="block w-full transition-colors duration-300"
+                        return (
+                            <div
+                                key={i}
+                                className="group flex flex-col rounded-[4px] overflow-hidden bg-[#0A1017]"
                             >
-                                <div className="flex items-center justify-between px-8 py-5">
-                                    <span className="text-white font-poppins font-medium text-xl md:text-[24px] leading-tight group-hover:text-brand-gold transition-colors">
-                                        {card.label}
-                                    </span>
-                                    <ArrowUpRight
-                                        size={20}
-                                        className="text-white group-hover:text-brand-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300"
+                                <div className="relative aspect-4/5 w-full flex flex-col justify-end overflow-hidden">
+                                    <Image
+                                        src={card.bg}
+                                        alt={cardAlt}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="object-cover group-hover:scale-105 transition-transform duration-1000"
+                                        loading="lazy"
                                     />
+                                    <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent"></div>
+
+                                    <div className="relative p-5 md:p-6 xl:p-8">
+                                        <h3 className="text-white font-poppins font-light text-[28px] xl:text-[42px] leading-[32px] xl:leading-[47px] mb-2 md:mb-4 whitespace-pre-line group-hover:text-brand-gold transition-colors">
+                                            {card.title
+                                                .split("\n")
+                                                .map((line, idx) => (
+                                                    <span
+                                                        key={idx}
+                                                        className={
+                                                            line === card.accent
+                                                                ? "text-brand-gold"
+                                                                : ""
+                                                        }
+                                                    >
+                                                        {line}
+                                                        {idx !== 2 ? "\n" : ""}
+                                                    </span>
+                                                ))}
+                                        </h3>
+                                    </div>
                                 </div>
-                            </Link>
-                        </div>
-                    ))}
+                                <Link
+                                    href={card.url || "#"}
+                                    className="block w-full transition-colors duration-300"
+                                >
+                                    <div className="flex items-center justify-between px-8 py-5">
+                                        <span className="text-white font-poppins font-medium text-xl md:text-[24px] leading-tight group-hover:text-brand-gold transition-colors">
+                                            {card.label}
+                                        </span>
+                                        <ArrowUpRight
+                                            size={20}
+                                            className="text-white group-hover:text-brand-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300"
+                                        />
+                                    </div>
+                                </Link>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
             <SectionDivider />

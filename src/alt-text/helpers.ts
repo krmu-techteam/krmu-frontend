@@ -11,6 +11,7 @@ import { semceAltConfig } from "./schools/semce";
 import { soadAltConfig } from "./schools/soad";
 import { sbasAltConfig } from "./schools/sbas";
 import { solaAltConfig } from "./schools/sola";
+import { homeAltConfig } from "./home/homeAltConfig";
 
 export const allSchoolConfigs: SchoolAltConfig[] = [
     soetAltConfig,
@@ -175,6 +176,24 @@ export function resolveAlumniAlt(
         }
     }
 
+    if (homeAltConfig.urlMap) {
+        for (const [urlPart, alt] of Object.entries(homeAltConfig.urlMap)) {
+            if (brandNameOrUrl.includes(urlPart)) return alt;
+        }
+    }
+
+    if (homeAltConfig.recruiters) {
+        const lower = brandNameOrUrl.toLowerCase();
+        for (const [brand, alt] of Object.entries(homeAltConfig.recruiters)) {
+            if (
+                lower.includes(brand.toLowerCase()) ||
+                brand.toLowerCase().includes(lower)
+            ) {
+                return alt;
+            }
+        }
+    }
+
     return fallback;
 }
 
@@ -287,6 +306,24 @@ export function resolveTestimonialAlt(
                 ) {
                     return alt;
                 }
+            }
+        }
+    }
+
+    if (homeAltConfig.urlMap) {
+        for (const [urlPart, alt] of Object.entries(homeAltConfig.urlMap)) {
+            if (studentNameOrUrl.includes(urlPart)) return alt;
+        }
+    }
+
+    if (homeAltConfig.testimonials) {
+        const lower = studentNameOrUrl.toLowerCase();
+        for (const [name, alt] of Object.entries(homeAltConfig.testimonials)) {
+            if (
+                lower.includes(name.toLowerCase()) ||
+                name.toLowerCase().includes(lower)
+            ) {
+                return alt;
             }
         }
     }

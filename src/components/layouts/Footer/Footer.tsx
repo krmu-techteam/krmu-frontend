@@ -282,6 +282,7 @@ import NpfAgent from "@/app/NpfAgent";
 import BicolorDivider from "../Navbar/BicolorDivider";
 import Button from "@/components/common/Button";
 import { formatInternalLink, isExternalUrl } from "@/lib/utils";
+import { resolveHomeFooterAlt } from "@/alt-text";
 
 type FooterLink = {
     name: string;
@@ -446,7 +447,10 @@ const Footer = async () => {
                                     src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/footer_logos_d944bc560c.svg"
                                     width={560}
                                     height={160}
-                                    alt="Accreditation Logos"
+                                    alt={resolveHomeFooterAlt(
+                                        "footer_logos_d944bc560c.svg",
+                                        "NAAC and accreditation logos for K.R. Mangalam University"
+                                    )}
                                     className="w-auto h-auto max-w-[280px] mt-6 hidden md:block"
                                     unoptimized
                                 />
@@ -515,7 +519,10 @@ const Footer = async () => {
                                     src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/footer_logos_d944bc560c.svg"
                                     width={560}
                                     height={160}
-                                    alt="Accreditation Logos"
+                                    alt={resolveHomeFooterAlt(
+                                        "footer_logos_d944bc560c.svg",
+                                        "NAAC and accreditation logos for K.R. Mangalam University"
+                                    )}
                                     className="w-auto h-auto max-w-[170px] xs:max-w-[220px] mt-6 block md:hidden"
                                     unoptimized
                                 />
@@ -709,11 +716,12 @@ const Footer = async () => {
                                             >
                                                 <Image
                                                     src={`${STRAPI_URL}${comp4?.footer_icon?.url}`}
-                                                    alt={
+                                                    alt={resolveHomeFooterAlt(
+                                                        comp4?.footer_icon?.url,
                                                         comp4?.footer_icon
                                                             ?.alternativeText ||
-                                                        "Social Icon"
-                                                    }
+                                                            "Social Icon"
+                                                    )}
                                                     fill
                                                     className="object-contain filter brightness-0 invert opacity-60 hover:opacity-100 transition-opacity"
                                                 />

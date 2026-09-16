@@ -3,6 +3,7 @@ import { PARTNER_UNIVERSITIES } from "@/features/home";
 import { Carousel } from "@/components/common/Carousel";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import SectionDivider from "@/components/common/SectionDivider";
+import { resolveHomePartnerAlt } from "@/alt-text";
 
 export function PartnersSection() {
     return (
@@ -44,7 +45,11 @@ export function PartnersSection() {
                         >
                             <Image
                                 src={partner.logo}
-                                alt={partner.name}
+                                alt={resolveHomePartnerAlt(
+                                    partner.name,
+                                    partner.logo,
+                                    `${partner.name} — KRMU global partner university`
+                                )}
                                 width={200}
                                 height={90}
                                 className="h-full w-auto object-contain max-h-full"

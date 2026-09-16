@@ -4,6 +4,7 @@ import SectionDivider from "@/components/common/SectionDivider";
 import { RESEARCH_STATS } from "@/features/home";
 import Link from "next/link";
 import { SectionTitle } from "@/components/common/SectionTitle";
+import { resolveHomeResearchAlt } from "@/alt-text";
 
 export function ResearchSection() {
     return (
@@ -15,7 +16,10 @@ export function ResearchSection() {
                         <div className="hidden lg:block relative w-full aspect-video xl:aspect-auto xl:w-[925px] xl:h-[464px] rounded-[4px] overflow-hidden mb-16">
                             <Image
                                 src="/images/home/research/research-girl.webp"
-                                alt="Research at KRMU"
+                                alt={resolveHomeResearchAlt(
+                                    "/images/home/research/research-girl.webp",
+                                    "Leading-edge research and innovation at K.R. Mangalam University"
+                                )}
                                 fill
                                 sizes="(max-width: 768px) 100vw, 60vw"
                                 className="object-cover"

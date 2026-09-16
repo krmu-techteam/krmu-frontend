@@ -26,6 +26,8 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
                 muted
                 playsInline
                 preload="auto"
+                title="KR Mangalam university video"
+                aria-label="KR Mangalam university video"
                 className="absolute top-0 left-0 w-full h-full object-contain scale-[1.07] lg:scale-100 lg:object-fill lg:scale-y-[1.0634] z-0"
             >
                 <source src={videoSrc} type="video/mp4" />
@@ -35,6 +37,8 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
                         type="video/mp4"
                     />
                 )}
+                Your browser does not support the video tag. KR Mangalam
+                university video
             </video>
             {/* Subtle Left Black Gradient Overlay for Mobile & Tablet Readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-[1] pointer-events-none lg:hidden" />

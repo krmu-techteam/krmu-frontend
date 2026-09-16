@@ -42,3 +42,8 @@ next-env.d.ts
 readme.txt
 # Local Netlify folder
 .netlify
+
+# playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
