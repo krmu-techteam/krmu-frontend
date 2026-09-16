@@ -12,7 +12,7 @@ const StudentHeroSection = () => {
           </h3>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-semibold text-[#001836] mb-2 md:mb-5 font-newsreader">
-            Comprehensive placement guidelines, schedules and policies.
+            Comprehensive placement guidelines, schedules and policies. 
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl leading-6 sm:leading-7 md:leading-8 mb-5">

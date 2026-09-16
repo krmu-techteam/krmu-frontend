@@ -10,7 +10,7 @@ const INITIAL_RECORDS = 10;
 
 interface Recruiter {
   id: number;
-  company: string | null; 
+  company: string | null;
   role: string | null;
   hiring: number | null;
   sector: string | null;
@@ -41,451 +41,259 @@ interface FilterResponse {
   };
 }
 
-
 // ==================================================
 // MAIN COMPONENT
 // ==================================================
 
 const PastRecruiters = () => {
+  const [recruiters, setRecruiters] = useState<Recruiter[]>([]);
 
-  const [recruiters, setRecruiters] =
-    useState<Recruiter[]>([]);
+  const [company, setCompany] = useState("all");
 
-  const [company, setCompany] =
-    useState("all");
+  const [year, setYear] = useState("all");
 
-  const [year, setYear] =
-    useState("all");
+  const [companies, setCompanies] = useState<string[]>([]);
 
-  const [companies, setCompanies] =
-    useState<string[]>([]);
+  const [years, setYears] = useState<string[]>([]);
 
-  const [years, setYears] =
-    useState<string[]>([]);
+  const [page, setPage] = useState(1);
 
-  const [page, setPage] =
-    useState(1);
+  const [pagination, setPagination] = useState<Pagination | null>(null);
 
-  const [pagination, setPagination] =
-    useState<Pagination | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  const [loading, setLoading] =
-    useState(true);
-
-  const [error, setError] =
-    useState("");
-
+  const [error, setError] = useState("");
 
   // ==================================================
   // GET FILTER OPTIONS
   // ==================================================
 
   useEffect(() => {
-
     const fetchFilters = async () => {
-
       try {
-
-        const response = await fetch(
-          `${API_URL}?filter_options=1`,
-          {
-            method: "GET",
-            cache: "no-store",
-          }
-        );
+        const response = await fetch(`${API_URL}?filter_options=1`, {
+          method: "GET",
+          cache: "no-store",
+        });
 
         if (!response.ok) {
-          throw new Error(
-            "Failed to load filters"
-          );
+          throw new Error("Failed to load filters");
         }
 
-        const result: FilterResponse =
-          await response.json();
+        const result: FilterResponse = await response.json();
 
         if (!result.success) {
-          throw new Error(
-            "Failed to load filters"
-          );
+          throw new Error("Failed to load filters");
         }
 
-        setCompanies(
-          result.filters?.companies || []
-        );
+        setCompanies(result.filters?.companies || []);
 
-        setYears(
-          result.filters?.years || []
-        );
-
+        setYears(result.filters?.years || []);
       } catch (error) {
-
-        console.error(
-          "Filter error:",
-          error
-        );
-
+        console.error("Filter error:", error);
       }
     };
 
-
     fetchFilters();
-
   }, []);
-
 
   // ==================================================
   // GET RECRUITERS
   // ==================================================
 
   useEffect(() => {
-
     const fetchRecruiters = async () => {
-
       try {
-
         setLoading(true);
 
         setError("");
 
-        const params =
-          new URLSearchParams();
+        const params = new URLSearchParams();
 
-        params.set(
-          "page",
-          String(page)
-        );
+        params.set("page", String(page));
 
-        params.set(
-          "limit",
-          String(INITIAL_RECORDS)
-        );
-
+        params.set("limit", String(INITIAL_RECORDS));
 
         // Company
 
-        if (
-          company !== "all"
-        ) {
-
-          params.set(
-            "company",
-            company
-          );
-
+        if (company !== "all") {
+          params.set("company", company);
         }
-
 
         // Year
 
-        if (
-          year !== "all"
-        ) {
-
-          params.set(
-            "year",
-            year
-          );
-
+        if (year !== "all") {
+          params.set("year", year);
         }
 
-
-        const response =
-          await fetch(
-            `${API_URL}?${params.toString()}`,
-            {
-              method: "GET",
-              cache: "no-store",
-            }
-          );
-
+        const response = await fetch(`${API_URL}?${params.toString()}`, {
+          method: "GET",
+          cache: "no-store",
+        });
 
         if (!response.ok) {
-
-          throw new Error(
-            "Failed to fetch recruiters"
-          );
-
+          throw new Error("Failed to fetch recruiters");
         }
 
-
-        const result: ApiResponse =
-          await response.json();
-
+        const result: ApiResponse = await response.json();
 
         if (!result.success) {
-
-          throw new Error(
-            result.message ||
-              "Failed to fetch recruiters"
-          );
-
+          throw new Error(result.message || "Failed to fetch recruiters");
         }
 
+        setRecruiters(result.data || []);
 
-        setRecruiters(
-          result.data || []
-        );
-
-        setPagination(
-          result.pagination
-        );
-
+        setPagination(result.pagination);
       } catch (error) {
+        console.error("Recruiters API error:", error);
 
-        console.error(
-          "Recruiters API error:",
-          error
-        );
-
-        setError(
-          "Unable to load past recruiters. Please try again."
-        );
+        setError("Unable to load past recruiters. Please try again.");
 
         setRecruiters([]);
 
         setPagination(null);
-
       } finally {
-
         setLoading(false);
-
       }
-
     };
 
-
     fetchRecruiters();
-
-  }, [
-    page,
-    company,
-    year,
-  ]);
-
+  }, [page, company, year]);
 
   // ==================================================
   // COMPANY CHANGE
   // ==================================================
 
-  const handleCompanyChange = (
-    value: string
-  ) => {
-
+  const handleCompanyChange = (value: string) => {
     setCompany(value);
 
     setPage(1);
-
   };
-
 
   // ==================================================
   // YEAR CHANGE
   // ==================================================
 
-  const handleYearChange = (
-    value: string
-  ) => {
-
+  const handleYearChange = (value: string) => {
     setYear(value);
 
     setPage(1);
-
   };
 
-
   return (
-    <section className="bg-[#f8f6f2] px-5 py-12 sm:px-8 sm:py-16 md:px-10 lg:py-20 xl:px-0">
-
+    <section className="px-5 py-12 sm:px-8 sm:py-16 md:px-10 lg:py-20 xl:px-0">
       <div className="mx-auto w-full max-w-7xl">
-
-
         {/* ========================================= */}
         {/* HEADER */}
         {/* ========================================= */}
 
         <div className="mb-8 flex flex-col gap-6 lg:mb-7 lg:flex-row lg:items-center lg:justify-between">
-
           <div>
-
             <h2 className="font-newsreader text-[36px] leading-none tracking-[-0.025em] text-[#06264b] sm:text-[44px] md:text-[48px]">
               Past recruiters
             </h2>
-
           </div>
-
 
           {/* ========================================= */}
           {/* FILTERS */}
           {/* ========================================= */}
 
           <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2 lg:w-[500px] xl:w-[520px]">
-
             <FilterSelect
               value={company}
-              onChange={
-                handleCompanyChange
-              }
+              onChange={handleCompanyChange}
               placeholder="Search Company"
               options={companies}
             />
 
-
             <FilterSelect
               value={year}
-              onChange={
-                handleYearChange
-              }
+              onChange={handleYearChange}
               placeholder="Search Year"
               options={years}
             />
-
           </div>
-
         </div>
-
 
         {/* ========================================= */}
         {/* TABLE */}
         {/* ========================================= */}
 
         <div className="border-t border-[#373737]">
-
-
           {/* ========================================= */}
           {/* DESKTOP HEADER */}
           {/* ========================================= */}
 
           <div className="hidden grid-cols-[2fr_1.15fr_1.45fr_1.2fr] border-b border-[#d7d5d1] py-3.5 md:grid">
+            <TableHeading>Company</TableHeading>
 
-            <TableHeading>
-              Company
-            </TableHeading>
+            <TableHeading>Role</TableHeading>
 
-            <TableHeading>
-              Role
-            </TableHeading>
+            <TableHeading>Hiring</TableHeading>
 
-            <TableHeading>
-              Hiring
-            </TableHeading>
-
-            <TableHeading>
-              Sector
-            </TableHeading>
-
+            <TableHeading>Sector</TableHeading>
           </div>
-
 
           {/* ========================================= */}
           {/* LOADING */}
           {/* ========================================= */}
 
           {loading && (
-
             <>
               {Array.from({
                 length: 5,
               }).map((_, index) => (
-
-                <RecruiterSkeleton
-                  key={index}
-                />
-
+                <RecruiterSkeleton key={index} />
               ))}
             </>
-
           )}
-
 
           {/* ========================================= */}
           {/* ERROR */}
           {/* ========================================= */}
 
-          {!loading &&
-            error && (
-
-              <div className="px-4 py-12 text-center text-sm text-red-500">
-
-                {error}
-
-              </div>
-
-            )}
-
+          {!loading && error && (
+            <div className="px-4 py-12 text-center text-sm text-red-500">
+              {error}
+            </div>
+          )}
 
           {/* ========================================= */}
           {/* RECORDS */}
           {/* ========================================= */}
 
-          {!loading &&
-            !error &&
-            recruiters.length > 0 && (
-
-              <div>
-
-                {recruiters.map(
-                  (recruiter) => (
-
-                    <RecruiterRow
-                      key={recruiter.id}
-                      recruiter={recruiter}
-                    />
-
-                  )
-                )}
-
-              </div>
-
-            )}
-
+          {!loading && !error && recruiters.length > 0 && (
+            <div>
+              {recruiters.map((recruiter) => (
+                <RecruiterRow key={recruiter.id} recruiter={recruiter} />
+              ))}
+            </div>
+          )}
 
           {/* ========================================= */}
           {/* NO RECORDS */}
           {/* ========================================= */}
 
-          {!loading &&
-            !error &&
-            recruiters.length === 0 && (
-
-              <div className="px-4 py-12 text-center text-sm text-[#666]">
-
-                No recruiters found.
-
-              </div>
-
-            )}
-
+          {!loading && !error && recruiters.length === 0 && (
+            <div className="px-4 py-12 text-center text-sm text-[#666]">
+              No recruiters found.
+            </div>
+          )}
         </div>
-
 
         {/* ========================================= */}
         {/* PAGINATION */}
         {/* ========================================= */}
 
-        {!loading &&
-          !error &&
-          pagination &&
-          pagination.totalPages > 1 && (
+        {!loading && !error && pagination && pagination.totalPages > 1 && (
+          <div className="mt-7 flex items-center justify-center gap-3 sm:mt-8">
+            {/* Previous */}
 
-            <div className="mt-7 flex items-center justify-center gap-3 sm:mt-8">
-
-
-              {/* Previous */}
-
-              <button
-                type="button"
-                disabled={
-                  !pagination.hasPreviousPage
-                }
-                onClick={() =>
-                  setPage((prev) =>
-                    Math.max(
-                      1,
-                      prev - 1
-                    )
-                  )
-                }
-                className="
+            <button
+              type="button"
+              disabled={!pagination.hasPreviousPage}
+              onClick={() => setPage((prev) => Math.max(1, prev - 1))}
+              className="
                   border
                   border-[#d8d8d8]
                   px-4
@@ -497,35 +305,25 @@ const PastRecruiters = () => {
                   hover:text-white
                   disabled:cursor-not-allowed
                   disabled:opacity-40
+                  cursor-pointer
                 "
-              >
-                Previous
-              </button>
+            >
+              Previous
+            </button>
 
+            {/* Page */}
 
-              {/* Page */}
+            <span className="text-sm text-[#667085]">
+              {pagination.page} / {pagination.totalPages}
+            </span>
 
-              <span className="text-sm text-[#667085]">
-                {pagination.page}{" "}
-                /{" "}
-                {pagination.totalPages}
-              </span>
+            {/* Next */}
 
-
-              {/* Next */}
-
-              <button
-                type="button"
-                disabled={
-                  !pagination.hasNextPage
-                }
-                onClick={() =>
-                  setPage(
-                    (prev) =>
-                      prev + 1
-                  )
-                }
-                className="
+            <button
+              type="button"
+              disabled={!pagination.hasNextPage}
+              onClick={() => setPage((prev) => prev + 1)}
+              className="
                   border
                   border-[#d8d8d8]
                   px-4
@@ -537,21 +335,17 @@ const PastRecruiters = () => {
                   hover:text-white
                   disabled:cursor-not-allowed
                   disabled:opacity-40
+                  cursor-pointer
                 "
-              >
-                Next
-              </button>
-
-            </div>
-
-          )}
-
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
-
     </section>
   );
 };
-
 
 // ==================================================
 // FILTER SELECT
@@ -559,9 +353,7 @@ const PastRecruiters = () => {
 
 interface FilterSelectProps {
   value: string;
-  onChange: (
-    value: string
-  ) => void;
+  onChange: (value: string) => void;
   placeholder: string;
   options: string[];
 }
@@ -572,18 +364,11 @@ const FilterSelect = ({
   placeholder,
   options,
 }: FilterSelectProps) => {
-
   return (
-
     <div className="relative w-full">
-
       <select
         value={value}
-        onChange={(e) =>
-          onChange(
-            e.target.value
-          )
-        }
+        onChange={(e) => onChange(e.target.value)}
         className="
           h-14
           w-full
@@ -603,27 +388,14 @@ const FilterSelect = ({
           sm:text-[14px]
         "
       >
+        <option value="all">{placeholder}</option>
 
-        <option value="all">
-          {placeholder}
-        </option>
-
-
-        {options.map(
-          (option) => (
-
-            <option
-              key={option}
-              value={option}
-            >
-              {option}
-            </option>
-
-          )
-        )}
-
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
       </select>
-
 
       <ChevronDown
         size={18}
@@ -638,34 +410,21 @@ const FilterSelect = ({
           sm:right-5
         "
       />
-
     </div>
-
   );
 };
-
 
 // ==================================================
 // TABLE HEADING
 // ==================================================
 
-const TableHeading = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
-
+const TableHeading = ({ children }: { children: React.ReactNode }) => {
   return (
-
-    <div className="text-[10px] font-medium uppercase tracking-[0.25em] text-[#222] lg:text-[11px] lg:tracking-[0.28em]">
-
+    <div className="text-base font-medium uppercase  text-black tracking-[4px]">
       {children}
-
     </div>
-
   );
 };
-
 
 // ==================================================
 // RECRUITER ROW
@@ -675,12 +434,8 @@ interface RecruiterRowProps {
   recruiter: Recruiter;
 }
 
-const RecruiterRow = ({
-  recruiter,
-}: RecruiterRowProps) => {
-
+const RecruiterRow = ({ recruiter }: RecruiterRowProps) => {
   return (
-
     <div
       className="
         border-b
@@ -693,88 +448,67 @@ const RecruiterRow = ({
         md:py-[19px]
       "
     >
-
-
       {/* Company */}
 
       <div className="mb-4 md:mb-0">
-
         <span className="mb-1.5 block text-[9px] font-medium uppercase tracking-[0.18em] text-[#999] md:hidden">
           Company
         </span>
 
-        <p className="font-newsreader text-[19px] leading-tight text-[#171717] sm:text-[20px] md:text-[19px]">
+        <p className="font-newsreader text-[19px] leading-tight text-[#171717] sm:text-[20px] md:text-2xl">
           {recruiter.company || "-"}
         </p>
-
       </div>
-
 
       {/* Mobile Details */}
 
       <div className="grid grid-cols-2 gap-x-6 gap-y-4 md:contents">
-
-
         {/* Role */}
 
         <div>
-
           <span className="mb-1.5 block text-[9px] font-medium uppercase tracking-[0.18em] text-[#999] md:hidden">
             Role
           </span>
 
-          <p className="text-[12px] leading-5 text-[#292929] sm:text-[13px] md:text-[12px]">
+          <p className="text-[12px] leading-5 text-[#292929] sm:text-[13px] md:text-sm">
             {recruiter.role || "-"}
           </p>
-
         </div>
-
 
         {/* Hiring */}
 
         <div>
-
           <span className="mb-1.5 block text-[9px] font-medium uppercase tracking-[0.18em] text-[#999] md:hidden">
             Hiring
           </span>
 
-          <p className="text-[12px] leading-5 text-[#292929] sm:text-[13px] md:text-[12px]">
+          <p className="text-sm leading-5 text-[#292929] sm:text-[13px] md:text-sm">
             {recruiter.hiring ?? 0}
           </p>
-
         </div>
-
 
         {/* Sector */}
 
         <div className="col-span-2 md:col-span-1">
-
-          <span className="mb-1.5 block text-[9px] font-medium uppercase tracking-[0.18em] text-[#999] md:hidden">
-            Sector
+          <span className="mb-1.5 block text-sm font-medium uppercase tracking-[0.18em] text-[#999] md:hidden">
+            Internship/Placement/PPO
           </span>
 
           <p className="text-[12px] leading-5 text-[#292929] sm:text-[13px] md:text-[12px]">
             {recruiter.sector || "-"}
           </p>
-
         </div>
-
       </div>
-
     </div>
-
   );
 };
-
 
 // ==================================================
 // SKELETON
 // ==================================================
 
 const RecruiterSkeleton = () => {
-
   return (
-
     <div
       className="
         animate-pulse
@@ -788,38 +522,23 @@ const RecruiterSkeleton = () => {
         md:py-[19px]
       "
     >
-
       <div className="mb-4 md:mb-0">
-
         <div className="h-5 w-48 bg-[#e2e0dc]" />
-
       </div>
 
-
       <div className="mb-4 md:mb-0">
-
         <div className="h-4 w-32 bg-[#e2e0dc]" />
-
       </div>
-
 
       <div className="mb-4 md:mb-0">
-
         <div className="h-4 w-16 bg-[#e2e0dc]" />
-
       </div>
-
 
       <div>
-
         <div className="h-4 w-28 bg-[#e2e0dc]" />
-
       </div>
-
     </div>
-
   );
 };
-
 
 export default PastRecruiters;

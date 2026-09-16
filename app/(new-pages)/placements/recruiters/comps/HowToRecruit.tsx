@@ -108,9 +108,9 @@ const HowToRecruit = () => {
     <section className="px-5  sm:px-8  md:px-10  xl:px-0">
       <div className="mx-auto w-full max-w-7xl">
         <Divider />
-        <div className="pt-12 sm:pt-16 lg:pt-20">
+        <div className="py-12 sm:py-16 lg:py-20">
           {/* Header */}
-          <div className="mb-10 sm:mb-12 lg:mb-16 pb-12">
+          <div className="pb-12">
             <p className="mb-3 text-[10px] font-medium uppercase text-[#9a2b34] sm:text-[11px]  tracking-[4px]">
               For Recruiters
             </p>

@@ -11,6 +11,7 @@ import RecruitersHero from "./comps/RecruitersHero";
 import SchoolsAndGraduatingTalent from "./comps/SchoolsAndGraduatingTalent";
 import TalentByDomain from "./comps/TalentByDomain";
 import Script from "next/script";
+import Divider from "../common/Divider";
 
 const breadcrumbSchema = createBreadcrumbProgSchema([
   { name: "Home", url: "https://www.krmangalam.edu.in/" },
@@ -49,13 +50,25 @@ const page = () => {
       <main className="bg-[#fbf8f3] font-poppins">
         <RecruitersHero />
         <TalentByDomain />
-        {/* <SchoolsAndGraduatingTalent /> */}
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <DriveCalendar />
         <HowToRecruit />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <PastRecruiters />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <DirectorMessage />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <CorporateAdvisoryBoard />
       </main>
+      {/* <SchoolsAndGraduatingTalent /> */}
     </>
   );
 };

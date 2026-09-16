@@ -30,8 +30,7 @@ const talentData: TalentItem[] = [
   {
     domain: "Design",
     students: 48,
-    skills:
-      "UI/UX, Figma, Adobe Suite, Product Design — live client studios",
+    skills: "UI/UX, Figma, Adobe Suite, Product Design — live client studios",
   },
   {
     domain: "Journalism & Media",
@@ -42,8 +41,7 @@ const talentData: TalentItem[] = [
   {
     domain: "Agriculture",
     students: 21,
-    skills:
-      "Precision Farming, Agri-Tech, Soil Science — field & lab training",
+    skills: "Precision Farming, Agri-Tech, Soil Science — field & lab training",
   },
   {
     domain: "Allied Health Sciences",
@@ -60,8 +58,7 @@ const talentData: TalentItem[] = [
   {
     domain: "Architecture",
     students: 17,
-    skills:
-      "AutoCAD, Revit, Sustainable Design — live studio projects",
+    skills: "AutoCAD, Revit, Sustainable Design — live studio projects",
   },
   {
     domain: "Liberal Arts",
@@ -82,7 +79,7 @@ const talentData: TalentItem[] = [
 
 const TalentByDomain = () => {
   return (
-    <section className="bg-[#faf8f4] px-5 pt-10 sm:px-8 md:pt-14 lg:px-10 xl:px-0">
+    <section className="bg-[#faf8f4] px-5 py-10 sm:px-8 md:py-14 xl:py-20 lg:px-10 xl:px-0">
       <div className="mx-auto w-full max-w-7xl">
         {/* Header */}
         <div className="mb-10 flex items-start justify-between gap-6 md:mb-12">
@@ -200,7 +197,6 @@ const TalentByDomain = () => {
             </div>
           ))}
         </div>
-        <Divider />
       </div>
     </section>
   );

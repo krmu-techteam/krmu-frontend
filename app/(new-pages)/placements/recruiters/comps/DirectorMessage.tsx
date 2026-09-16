@@ -24,12 +24,12 @@ const directorMessage: DirectorMessageProps = {
 
 const DirectorMessage = () => {
   return (
-    <section className="bg-[#f8f6f2] px-5 py-12 sm:px-8 sm:py-16 lg:px-10 lg:py-20 xl:px-0">
+    <section className="px-5 py-12 sm:px-8 sm:py-16 lg:px-10 lg:py-20 xl:px-0">
       <div
         className="
           mx-auto w-full max-w-7xl
           border border-[#d7d5d1]
-          bg-[#faf9f6]
+          bg-[#fefcfa]
           p-5
           sm:p-7
           md:p-8
@@ -103,7 +103,7 @@ const DirectorMessage = () => {
                 {directorMessage.name}
               </h3>
 
-              <p className="mt-1 font-newsreader text-[12px] text-[#222] sm:text-[13px]">
+              <p className="mt-1 font-newsreader text-[12px] text-[#222] sm:text-[26px]">
                 {directorMessage.designation}
               </p>
 

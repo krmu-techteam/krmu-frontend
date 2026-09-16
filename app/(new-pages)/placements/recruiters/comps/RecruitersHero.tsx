@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const RecruitersHero = () => {
   return (
-    <section className="bg-[url(/placements/recruiters/rec-hero-bg.webp)] bg-cover bg-center bg-no-repeat px-5 pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-36 md:pb-24 xl:px-0 xl:pt-40 xl:pb-28">
+    <section className="bg-[url(/placements/recruiters/rec-hero-bg.webp)] bg-cover bg-center bg-no-repeat px-5 xl:px-0 pt-28 xl:pt-40 pb-12">
       <div className="mx-auto w-full max-w-3xl text-center text-white">
         <h3 className="text-xs font-medium uppercase text-[#E7C268] sm:text-sm  md:text-base tracking-[4px]">
           For Recruiters
