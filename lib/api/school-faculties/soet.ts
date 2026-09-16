@@ -540,7 +540,7 @@ export const soetFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 106777,
     acf: {
-      "staff-qualification": "Ph.D. CSE",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant  Professor",
       schools: [1126, 1266],
     },
