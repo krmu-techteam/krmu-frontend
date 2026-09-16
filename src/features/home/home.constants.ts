@@ -335,7 +335,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
         src: "/images/home/whykrmu/celebrity/aarambh-2026-1.jpg",
         alt: "Aarambh cultural night celebrations at K.R. Mangalam University",
         category: "Cultural Fest",
-        title: "Aarambh 2026 1",
+        title: "Aarambh 2026",
         description:
             "Exciting cultural performances, student bands, and memories celebrating life at KRMU.",
     },
