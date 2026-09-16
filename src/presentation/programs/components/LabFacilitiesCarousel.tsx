@@ -3,13 +3,15 @@
 import Image from "next/image";
 import { LabCard } from "@/lib/types/school-programme";
 import { Carousel } from "@/components/common/Carousel";
+import { resolveSoetProgramAlt } from "@/alt-text/programs/soet";
 
 type Props = {
     labcards: LabCard[];
     images: string[];
+    slug?: string;
 };
 
-const LabFacilitiesCarousel = ({ labcards, images }: Props) => {
+const LabFacilitiesCarousel = ({ labcards, images, slug }: Props) => {
     return (
         <div>
             <Carousel
@@ -29,6 +31,11 @@ const LabFacilitiesCarousel = ({ labcards, images }: Props) => {
                 {labcards &&
                     labcards.map((item, i) => {
                         const labImage = images[i % images.length];
+                        const altText = resolveSoetProgramAlt(
+                            slug,
+                            labImage || item.title,
+                            item.title
+                        );
                         return (
                             <div
                                 key={i}
@@ -46,7 +53,7 @@ const LabFacilitiesCarousel = ({ labcards, images }: Props) => {
                                     <Image
                                         fill
                                         src={labImage}
-                                        alt={item.title}
+                                        alt={altText}
                                         className="object-contain font-poppins px-10 pt-8 pb-2 transition-transform duration-500 ease-out group-hover:-translate-y-1"
                                         unoptimized
                                     />

@@ -1,14 +1,16 @@
 import { STRAPI_URL } from "@/app/constant";
 import { StrapiMedia } from "@/lib/types/common";
 import Image from "next/image";
+import { resolveSoetProgramAlt } from "@/alt-text/programs/soet";
 
 type Props = {
     title: string;
     desc?: string;
     highlightimg: StrapiMedia;
+    slug?: string;
 };
 
-const ProgrammeHighlightCard = ({ title, desc, highlightimg }: Props) => {
+const ProgrammeHighlightCard = ({ title, desc, highlightimg, slug }: Props) => {
     return (
         <div className="group rounded-md shadow-sm hover:shadow-xl transition-all duration-500 h-[340px] flex flex-col mx-2 relative overflow-hidden">
             {/* Image Container */}
@@ -17,7 +19,11 @@ const ProgrammeHighlightCard = ({ title, desc, highlightimg }: Props) => {
                     <Image
                         fill
                         src={`${STRAPI_URL}${highlightimg?.url}`}
-                        alt={highlightimg?.alternativeText || title}
+                        alt={resolveSoetProgramAlt(
+                            slug,
+                            highlightimg?.url || title,
+                            highlightimg?.alternativeText || title
+                        )}
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                         unoptimized
                     />

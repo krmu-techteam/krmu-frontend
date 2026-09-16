@@ -13,3 +13,4 @@ export * from "./schools/soed";
 export * from "./schools/soas";
 export * from "./schools/sola";
 export * from "./home";
+export * from "./programs";

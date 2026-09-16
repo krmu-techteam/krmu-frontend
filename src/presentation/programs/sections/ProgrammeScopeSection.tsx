@@ -6,10 +6,12 @@ import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 import Button from "@/components/common/Button";
 import SectionDivider from "@/components/common/SectionDivider";
 import { ProgrammeScopeSectionProps } from "@/features/programs";
+import { resolveSoetProgramAlt } from "@/alt-text/programs/soet";
 
 const ProgrammeScopeSection = async ({
     scopeData,
     heroSection,
+    slug,
 }: ProgrammeScopeSectionProps) => {
     const getDownProsSettings = await getDownloadProspectusSetting();
 
@@ -44,7 +46,13 @@ const ProgrammeScopeSection = async ({
                                     width={scopeData?.scopeimg?.width || 800}
                                     height={scopeData?.scopeimg?.height || 500}
                                     className="w-full h-auto object-contain rounded-[4px] ld:rounded-md"
-                                    alt="scope image"
+                                    alt={resolveSoetProgramAlt(
+                                        slug,
+                                        scopeData?.scopeimg?.url ||
+                                            scopeData?.scopeheading,
+                                        scopeData?.scopeimg?.alternativeText ||
+                                            "scope image"
+                                    )}
                                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 720px"
                                 />
                             </div>

@@ -5,12 +5,14 @@ type Props = {
     highlight: string;
     desc: string;
     beyondclassimages?: StrapiMedia[];
+    slug?: string;
 };
 const BeyondClassroomSection = ({
     heading,
     highlight,
     desc,
     beyondclassimages,
+    slug,
 }: Props) => {
     return (
         <section
@@ -27,7 +29,10 @@ const BeyondClassroomSection = ({
                     </p>
                 </div>
             </div>
-            <BeyondClassroomCarousel />
+            <BeyondClassroomCarousel
+                slideimages={beyondclassimages}
+                slug={slug}
+            />
         </section>
     );
 };

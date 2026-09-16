@@ -14,7 +14,8 @@ const FinancialAssistanceSection = ({
     point6,
     point7,
     logos,
-}: FinancialAssistanceSectionProps) => {
+    slug,
+}: FinancialAssistanceSectionProps & { slug?: string }) => {
     const points = [
         point1,
         point2,
@@ -74,6 +75,7 @@ const FinancialAssistanceSection = ({
                                 <FinancialPartnerLogo
                                     key={logo?.id}
                                     logo={logo}
+                                    slug={slug}
                                 />
                             ))}
                     </div>

@@ -421,6 +421,7 @@ const page = async ({ params }: Props) => {
                         specialisations={
                             specialisationSection?.specialisationcards
                         }
+                        slug={slug}
                     />
                 )}
 
@@ -504,6 +505,7 @@ const page = async ({ params }: Props) => {
                             beyondclassimages={
                                 beyondclassSection?.beyondclassroomimages
                             }
+                            slug={slug}
                         />
                     ))}
 
@@ -554,6 +556,7 @@ const page = async ({ params }: Props) => {
                             point6={financialAssistanceSection?.point6}
                             point7={financialAssistanceSection?.point7}
                             logos={financialAssistanceSection?.financelogos}
+                            slug={slug}
                         />
                     ))}
 
@@ -595,6 +598,7 @@ const page = async ({ params }: Props) => {
                             heading={ourLocationSection?.badgetext}
                             img1={ourLocationSection?.img1}
                             img2={ourLocationSection?.img2}
+                            slug={slug}
                         />
                     ))}
 

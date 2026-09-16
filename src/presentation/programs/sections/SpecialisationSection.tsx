@@ -13,17 +13,20 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import SectionDivider from "@/components/common/SectionDivider";
+import { resolveSoetProgramAlt } from "@/alt-text/programs/soet";
 
 type Props = {
     heading: string;
     highlightheading: string;
     specialisations: SpecialisationCard[];
+    slug?: string;
 };
 
 const Specialisation = ({
     heading,
     highlightheading,
     specialisations,
+    slug,
 }: Props) => {
     const [api, setApi] = useState<CarouselApi>();
 
@@ -94,7 +97,13 @@ const Specialisation = ({
                                                 <Image
                                                     fill
                                                     src={displayImage}
-                                                    alt={specialisation?.title}
+                                                    alt={resolveSoetProgramAlt(
+                                                        slug,
+                                                        displayImage ||
+                                                            specialisation?.title,
+                                                        specialisation?.title ||
+                                                            "Specialisation"
+                                                    )}
                                                     className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
                                                     unoptimized
                                                 />
@@ -159,9 +168,13 @@ const Specialisation = ({
                                                                 src={
                                                                     displayImage
                                                                 }
-                                                                alt={
-                                                                    specialisation?.title
-                                                                }
+                                                                alt={resolveSoetProgramAlt(
+                                                                    slug,
+                                                                    displayImage ||
+                                                                        specialisation?.title,
+                                                                    specialisation?.title ||
+                                                                        "Specialisation"
+                                                                )}
                                                                 className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
                                                                 unoptimized
                                                             />

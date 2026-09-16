@@ -11,6 +11,7 @@ const ProgrammeHighlight = ({
     highlightHeading,
     desc,
     highlights,
+    slug,
 }: ProgrammeHighlightSectionProps) => {
     const [emblaRef, emblaApi] = useEmblaCarousel(
         {
@@ -98,6 +99,7 @@ const ProgrammeHighlight = ({
                                         title={highlight?.title}
                                         desc={highlight?.subtitle}
                                         highlightimg={highlight?.highlightimage}
+                                        slug={slug}
                                     />
                                 </div>
                             ))}

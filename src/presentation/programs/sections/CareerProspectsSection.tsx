@@ -7,6 +7,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
 import Button from "@/components/common/Button";
+import { resolveSoetProgramAlt } from "@/alt-text/programs/soet";
 
 const CareerProspectsSection = ({
     heading,
@@ -55,7 +56,11 @@ const CareerProspectsSection = ({
                     src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/university_bg_374a0a0fef.png"
                     fill
                     className="object-cover"
-                    alt="University Background"
+                    alt={resolveSoetProgramAlt(
+                        slug,
+                        "university_bg_374a0a0fef.png",
+                        "University Background"
+                    )}
                     priority
                 />
                 {/* Light Overlay to enhance readability */}
@@ -136,7 +141,11 @@ const CareerProspectsSection = ({
                         src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/group_img_32f982771f.png"
                         fill
                         className="-mb-10 object-contain md:translate-y-[20%] lg:translate-y-[42%] xl:translate-y-[33%] 2xl:translate-y-[30%] transform scale-[1.25] lg:scale-[1.2] xl:scale-[1] translate-x-[4px] translate-y-[135px] sm:translate-y-[140px] md:translate-y-[120px]"
-                        alt="Career Prospects Students"
+                        alt={resolveSoetProgramAlt(
+                            slug,
+                            "group_img_32f982771f.png",
+                            "Career Prospects Students"
+                        )}
                     />
                 </div>
             </div>

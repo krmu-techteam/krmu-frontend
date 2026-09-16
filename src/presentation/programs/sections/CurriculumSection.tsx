@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { CurriculumSectionProps } from "@/features/programs";
 import { ProgrammeStructure } from "../components";
+import { resolveSoetProgramAlt } from "@/alt-text/programs/soet";
 
 const CurriculumSection = ({
     heading,
@@ -26,7 +27,11 @@ const CurriculumSection = ({
                     height={1920}
                     priority
                     className="object-cover object-top w-full h-[1200px] md:h-[1400px] xl:h-full xl:object-top 2xl:object-center pointer-events-none"
-                    alt="Curriculum Background"
+                    alt={resolveSoetProgramAlt(
+                        slug,
+                        "Compress_Image_444f7b9b71.png",
+                        "Curriculum Background"
+                    )}
                 />
                 {/* Subtle black overlay on mobile and tablet screens */}
                 <div className="absolute inset-0 bg-black/40 lg:bg-transparent z-10 pointer-events-none" />

@@ -10,6 +10,7 @@ const LabsFacilitieSection = ({
     btn,
     labcontent,
     labcards,
+    slug,
 }: LabFacilitiesSectionProps) => {
     const labStagingImages = parseCommaSeparatedUrls(
         btn?.containerPopupFormId,
@@ -37,6 +38,7 @@ const LabsFacilitieSection = ({
                             <LabFacilitiesCarousel
                                 labcards={labcards}
                                 images={labStagingImages}
+                                slug={slug}
                             />
                         </div>
                     </div>

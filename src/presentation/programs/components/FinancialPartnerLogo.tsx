@@ -2,21 +2,28 @@ import React from "react";
 import Image from "next/image";
 import { STRAPI_URL } from "@/app/constant";
 import { FinancialPartnerLogoProps } from "@/features/programs";
+import { resolveSoetProgramAlt } from "@/alt-text/programs/soet";
 
- 
+interface Props extends FinancialPartnerLogoProps {
+    slug?: string;
+}
 
-const FinancialPartnerLogo = ({ logo }: FinancialPartnerLogoProps) => {
-  return (
-    <div className="flex items-center justify-center border border-gray-200 p-2 rounded-[4px] bg-white hover:border-[#0a41a1] transition-all duration-300 group h-20 xl:h-24">
-      <Image
-        src={`${STRAPI_URL}${logo?.url}`}
-        width={126}
-        height={41}
-        alt={logo?.alternativeText || "Financial Assistance Logo"}
-        className="transition-all duration-300 pointer-events-none object-contain group-hover:scale-105"
-      />
-    </div>
-  );
+const FinancialPartnerLogo = ({ logo, slug }: Props) => {
+    return (
+        <div className="flex items-center justify-center border border-gray-200 p-2 rounded-[4px] bg-white hover:border-[#0a41a1] transition-all duration-300 group h-20 xl:h-24">
+            <Image
+                src={`${STRAPI_URL}${logo?.url}`}
+                width={126}
+                height={41}
+                alt={resolveSoetProgramAlt(
+                    slug,
+                    logo?.url,
+                    logo?.alternativeText || "Financial Assistance Logo"
+                )}
+                className="transition-all duration-300 pointer-events-none object-contain group-hover:scale-105"
+            />
+        </div>
+    );
 };
 
 export default FinancialPartnerLogo;

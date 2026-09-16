@@ -4,179 +4,218 @@ import { StrapiMedia } from "@/lib/types/common";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
-  getTranslateXMultiplier,
-  getCircularOffset,
-  calculate3DCardStyles,
+    getTranslateXMultiplier,
+    getCircularOffset,
+    calculate3DCardStyles,
 } from "@/features/programs";
+import { resolveSoetProgramAlt } from "@/alt-text/programs/soet";
 
 const DEFAULT_EVENT_IMAGES = [
-  { id: 1, url: "/images/courses/events/event 1.jpg", alternativeText: "Event 1" },
-  { id: 2, url: "/images/courses/events/event 2.jpg", alternativeText: "Event 2" },
-  { id: 3, url: "/images/courses/events/event 3.jpg", alternativeText: "Event 3" },
-  { id: 4, url: "/images/courses/events/event 4.jpg", alternativeText: "Event 4" },
-  { id: 5, url: "/images/courses/events/event 5.jpg", alternativeText: "Event 5" },
-  { id: 6, url: "/images/courses/events/event 6.jpg", alternativeText: "Event 6" },
+    {
+        id: 1,
+        url: "/images/courses/events/event 1.jpg",
+        alternativeText: "Event 1",
+    },
+    {
+        id: 2,
+        url: "/images/courses/events/event 2.jpg",
+        alternativeText: "Event 2",
+    },
+    {
+        id: 3,
+        url: "/images/courses/events/event 3.jpg",
+        alternativeText: "Event 3",
+    },
+    {
+        id: 4,
+        url: "/images/courses/events/event 4.jpg",
+        alternativeText: "Event 4",
+    },
+    {
+        id: 5,
+        url: "/images/courses/events/event 5.jpg",
+        alternativeText: "Event 5",
+    },
+    {
+        id: 6,
+        url: "/images/courses/events/event 6.jpg",
+        alternativeText: "Event 6",
+    },
 ] as unknown as StrapiMedia[];
 
 type Props = {
-  slideimages?: StrapiMedia[];
+    slideimages?: StrapiMedia[];
+    slug?: string;
 };
 
-const BeyondClassroomCarousel = ({}: Props = {}) => {
-  const imagesToDisplay = DEFAULT_EVENT_IMAGES;
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState<number | null>(null);
-  const [touchEnd, setTouchEnd] = useState<number | null>(null);
-  const [translateXMultiplier, setTranslateXMultiplier] = useState(160);
-  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
+const BeyondClassroomCarousel = ({ slideimages, slug }: Props = {}) => {
+    const imagesToDisplay =
+        slideimages && slideimages.length > 0
+            ? slideimages
+            : DEFAULT_EVENT_IMAGES;
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+    const [translateXMultiplier, setTranslateXMultiplier] = useState(160);
+    const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
-  const total = imagesToDisplay.length;
+    const total = imagesToDisplay.length;
 
-  // Track responsive screen widths safely to prevent hydration mismatches
-  useEffect(() => {
-    const handleResize = () => {
-      setTranslateXMultiplier(getTranslateXMultiplier(window.innerWidth));
+    // Track responsive screen widths safely to prevent hydration mismatches
+    useEffect(() => {
+        const handleResize = () => {
+            setTranslateXMultiplier(getTranslateXMultiplier(window.innerWidth));
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const handleNext = () => {
+        setActiveIndex((prev) => (prev + 1) % total);
     };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % total);
-  };
-
-  const handlePrev = () => {
-    setActiveIndex((prev) => (prev - 1 + total) % total);
-  };
-
-  const resetAutoplay = () => {
-    if (autoplayRef.current) clearInterval(autoplayRef.current);
-    autoplayRef.current = setInterval(handleNext, 4500);
-  };
-
-  useEffect(() => {
-    autoplayRef.current = setInterval(handleNext, 4500);
-    return () => {
-      if (autoplayRef.current) clearInterval(autoplayRef.current);
+    const handlePrev = () => {
+        setActiveIndex((prev) => (prev - 1 + total) % total);
     };
-  }, [total]);
 
-  if (total === 0) return null;
+    const resetAutoplay = () => {
+        if (autoplayRef.current) clearInterval(autoplayRef.current);
+        autoplayRef.current = setInterval(handleNext, 4500);
+    };
 
-  // Touch Swipe Handlers for mobile
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientX);
-    resetAutoplay();
-  };
+    useEffect(() => {
+        autoplayRef.current = setInterval(handleNext, 4500);
+        return () => {
+            if (autoplayRef.current) clearInterval(autoplayRef.current);
+        };
+    }, [total]);
 
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
+    if (total === 0) return null;
 
-  const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
+    // Touch Swipe Handlers for mobile
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchStart(e.targetTouches[0].clientX);
+        resetAutoplay();
+    };
 
-    if (isLeftSwipe) handleNext();
-    if (isRightSwipe) handlePrev();
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
 
-    setTouchStart(null);
-    setTouchEnd(null);
-  };
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > 50;
+        const isRightSwipe = distance < -50;
 
-  return (
-    <section className="pt-6 overflow-hidden flex flex-col items-center select-none w-full max-w-[1530px] mx-auto px-4 md:px-6 lg:px-10 xl:px-16">
-      {/* 3D Coverflow Viewport Container */}
-      <div
-        className="relative w-full h-[220px] sm:h-[320px] md:h-[360px] lg:h-[400px] flex items-center justify-center [transform-style:preserve-3d] [perspective:1200px]"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
-        {imagesToDisplay.map((rec, i) => {
-          const offset = getCircularOffset(i, activeIndex, total);
-          const isActive = offset === 0;
-          const cardStyle = calculate3DCardStyles(offset, translateXMultiplier);
+        if (isLeftSwipe) handleNext();
+        if (isRightSwipe) handlePrev();
 
-          return (
+        setTouchStart(null);
+        setTouchEnd(null);
+    };
+
+    return (
+        <section className="pt-6 overflow-hidden flex flex-col items-center select-none w-full max-w-[1530px] mx-auto px-4 md:px-6 lg:px-10 xl:px-16">
+            {/* 3D Coverflow Viewport Container */}
             <div
-              key={rec.id || i}
-              style={cardStyle}
-              onClick={() => {
-                setActiveIndex(i);
-                resetAutoplay();
-              }}
-              className={`absolute w-[280px] sm:w-[440px] md:w-[500px] lg:w-[560px] h-[160px] sm:h-[260px] md:h-[300px] lg:h-[340px] rounded-[2px] md:rounded-[4px] overflow-hidden transition-[transform,opacity,border-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] [backface-visibility:hidden] [transform-style:preserve-3d] will-change-[transform,opacity] cursor-pointer group`}
+                className="relative w-full h-[220px] sm:h-[320px] md:h-[360px] lg:h-[400px] flex items-center justify-center [transform-style:preserve-3d] [perspective:1200px]"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
             >
-              {/* Slide Image */}
-              <Image
-                src={rec.url || ""}
-                alt={rec.alternativeText || `Gallery image ${i + 1}`}
-                fill
-                className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-                unoptimized
-              />
+                {imagesToDisplay.map((rec, i) => {
+                    const offset = getCircularOffset(i, activeIndex, total);
+                    const isActive = offset === 0;
+                    const cardStyle = calculate3DCardStyles(
+                        offset,
+                        translateXMultiplier
+                    );
 
-              {/* Cover Gradient Overlay */}
-              <div
-                className={`absolute inset-0 transition-opacity duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                  isActive ? "opacity-75 group-hover:opacity-90" : "opacity-95"
-                }`}
-              />
+                    return (
+                        <div
+                            key={rec.id || i}
+                            style={cardStyle}
+                            onClick={() => {
+                                setActiveIndex(i);
+                                resetAutoplay();
+                            }}
+                            className={`absolute w-[280px] sm:w-[440px] md:w-[500px] lg:w-[560px] h-[160px] sm:h-[260px] md:h-[300px] lg:h-[340px] rounded-[2px] md:rounded-[4px] overflow-hidden transition-[transform,opacity,border-color] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] [backface-visibility:hidden] [transform-style:preserve-3d] will-change-[transform,opacity] cursor-pointer group`}
+                        >
+                            {/* Slide Image */}
+                            <Image
+                                src={rec.url || ""}
+                                alt={resolveSoetProgramAlt(
+                                    slug,
+                                    rec.url,
+                                    rec.alternativeText ||
+                                        `Gallery image ${i + 1}`
+                                )}
+                                fill
+                                className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                                unoptimized
+                            />
+
+                            {/* Cover Gradient Overlay */}
+                            <div
+                                className={`absolute inset-0 transition-opacity duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                                    isActive
+                                        ? "opacity-75 group-hover:opacity-90"
+                                        : "opacity-95"
+                                }`}
+                            />
+                        </div>
+                    );
+                })}
             </div>
-          );
-        })}
-      </div>
 
-      {/* Navigation and Dots controls */}
-      <div className="flex items-center justify-center gap-6 z-20 w-full">
-        <button
-          onClick={() => {
-            handlePrev();
-            resetAutoplay();
-          }}
-          className="w-10 h-10 rounded-[4px] cursor-pointer bg-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300"
-          aria-label="Previous"
-        >
-          <ChevronLeft size={20} />
-        </button>
+            {/* Navigation and Dots controls */}
+            <div className="flex items-center justify-center gap-6 z-20 w-full">
+                <button
+                    onClick={() => {
+                        handlePrev();
+                        resetAutoplay();
+                    }}
+                    className="w-10 h-10 rounded-[4px] cursor-pointer bg-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300"
+                    aria-label="Previous"
+                >
+                    <ChevronLeft size={20} />
+                </button>
 
-        {/* Progress indicators */}
-        <div className="flex items-center gap-2">
-          {imagesToDisplay.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => {
-                setActiveIndex(i);
-                resetAutoplay();
-              }}
-              className={`h-2 rounded-full transition-all duration-500 ${
-                i === activeIndex
-                  ? "w-6 bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]"
-                  : "w-2 bg-white/30 hover:bg-white/50"
-              }`}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
-        </div>
+                {/* Progress indicators */}
+                <div className="flex items-center gap-2">
+                    {imagesToDisplay.map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => {
+                                setActiveIndex(i);
+                                resetAutoplay();
+                            }}
+                            className={`h-2 rounded-full transition-all duration-500 ${
+                                i === activeIndex
+                                    ? "w-6 bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+                                    : "w-2 bg-white/30 hover:bg-white/50"
+                            }`}
+                            aria-label={`Go to slide ${i + 1}`}
+                        />
+                    ))}
+                </div>
 
-        <button
-          onClick={() => {
-            handleNext();
-            resetAutoplay();
-          }}
-          className="w-10 h-10 rounded-[4px] cursor-pointer bg-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300"
-          aria-label="Next"
-        >
-          <ChevronRight size={20} />
-        </button>
-      </div>
-    </section>
-  );
+                <button
+                    onClick={() => {
+                        handleNext();
+                        resetAutoplay();
+                    }}
+                    className="w-10 h-10 rounded-[4px] cursor-pointer bg-white/10 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300"
+                    aria-label="Next"
+                >
+                    <ChevronRight size={20} />
+                </button>
+            </div>
+        </section>
+    );
 };
 
 export default BeyondClassroomCarousel;

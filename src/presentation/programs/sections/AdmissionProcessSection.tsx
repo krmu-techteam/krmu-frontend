@@ -3,6 +3,7 @@ import { AdmissionProcessSectionProps } from "@/features/programs";
 import { AdmissionCardDesktop, AdmissionCardMobile } from "../components";
 import SectionDivider from "@/components/common/SectionDivider";
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+import { resolveSoetProgramAlt } from "@/alt-text/programs/soet";
 
 const AdmissionProcessSection = ({
     heading,
@@ -31,7 +32,11 @@ const AdmissionProcessSection = ({
                     src="/admisison-steps.png"
                     width={1296}
                     height={170}
-                    alt="Admission Process"
+                    alt={resolveSoetProgramAlt(
+                        slug,
+                        "admis_proc_9cef37bb90.webp",
+                        "KRMU admission process"
+                    )}
                     className="w-full h-auto"
                 />
                 <div className="admis_proc_btn_grid_items">
