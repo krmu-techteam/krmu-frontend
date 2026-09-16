@@ -26,7 +26,7 @@ export interface SoetCourseSections {
 
 export type SoetSchoolConfig = Record<string, SoetCourseSections>;
 
-export const soetAltConfig: SoetSchoolConfig = {
+export const soetProgramsAltConfig: SoetSchoolConfig = {
     // =========================================================================
     // Course: Btech CSE (slug: b-tech-cse)
     // =========================================================================
@@ -1280,7 +1280,7 @@ export const soetAltConfig: SoetSchoolConfig = {
     },
 };
 
-export const soetProgramsAltConfig = soetAltConfig;
+const soetAltConfig = soetProgramsAltConfig;
 
 /**
  * Master Recruiter Logos Map across SOET & KRMU programmes.
