@@ -25,9 +25,14 @@ const DEFAULT_HERO = {
     overviewvideo:
         '<iframe width="560" height="315" src="https://www.youtube.com/embed/f3hA3WhmYN8" title="YouTube video player" allowfullscreen></iframe>',
     overviewcounter: [
-        { id: 1, title: "56.6 LPA", subtitle: "Highest Package" },
-        { id: 2, title: "800+", subtitle: "Campus Recruiters" },
-        { id: 3, title: "18K+", subtitle: "Alumni Base" },
+        {
+            id: 1,
+            title: "56.6 LPA",
+            subtitle: "Highest Package",
+            classname: "",
+        },
+        { id: 2, title: "800+", subtitle: "Campus Recruiters", classname: "" },
+        { id: 3, title: "18K+", subtitle: "Alumni Base", classname: "" },
     ],
 };
 
@@ -38,6 +43,7 @@ const DEFAULT_HIGHLIGHT = {
         id: 1,
         buttontext: "Know More",
         buttonlink: "/placement-highlights",
+        buttonclass: "",
     },
 };
 
