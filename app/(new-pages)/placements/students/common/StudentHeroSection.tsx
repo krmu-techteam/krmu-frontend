@@ -20,7 +20,7 @@ const StudentHeroSection = () => {
             access.
           </p>
           <Link
-            href="#"
+            href="https://calendly.com/training-cdc-krmangalam/new-meeting"
             className="
                   inline-flex w-full max-w-[224px]
                   items-center justify-center
@@ -29,6 +29,7 @@ const StudentHeroSection = () => {
                   transition-opacity hover:opacity-90
                   sm:py-4
                 "
+            target="_blank"
           >
             Book your slot
           </Link>

@@ -25,13 +25,14 @@ const HeroSection = () => {
           </p>
           <div className="space-x-2 space-y-2">
             <Link
-              href="#"
+              href="/placements/students/#drive_calendar_scroll"
               className="bg-[#001836] border border-[#001836] text-white py-3 px-5 shadow-[0px_6px_16px_rgba(0,23,51,0.25)] inline-block"
             >
               View Detailed Report
             </Link>
             <Link
-              href="#"
+              href="https://calendly.com/training-cdc-krmangalam/new-meeting"
+              target="_blank"
               className="border border-[#001836] text-[#001732] bg-white xl:bg-transparent py-3 px-5 inline-block"
             >
               Partner with Us

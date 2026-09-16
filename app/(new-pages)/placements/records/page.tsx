@@ -58,7 +58,7 @@ export async function generateMetadata() {
       images: ["https://www.krmangalam.edu.in/images/krmu-naac-logo.webp"],
     },
   };
-}
+} 
 
 const page = () => {
   return (

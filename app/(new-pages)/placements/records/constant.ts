@@ -6,6 +6,7 @@ export interface RecordLogo {
 }
 
 export interface SchoolWiseSummaryItem {
+  id: number;
   code: string;
   schoolName: string;
   eligible: number;
@@ -16,6 +17,317 @@ export interface SchoolWiseSummaryItem {
   medianCtc: string;
   recordlogos: RecordLogo[];
 }
+
+export const SOETLogos: RecordLogo[] = [
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soet/paisa-bazaar.png",
+    width: 104,
+    height: 24,
+    alt: "Paisa Bazaar",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soet/quinix.png",
+    width: 104,
+    height: 24,
+    alt: "Quinix",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soet/iris-waves.png",
+    width: 104,
+    height: 24,
+    alt: "IRIS Waves",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soet/invision-acres.png",
+    width: 104,
+    height: 24,
+    alt: "Invision Acres",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soet/ericsson.png",
+    width: 104,
+    height: 24,
+    alt: "Ericsson",
+  },
+];
+export const SOMCLogos: RecordLogo[] = [
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/somc/hdfc-bank.png",
+    width: 104,
+    height: 24,
+    alt: "HDFC Bank",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/somc/red-bull.png",
+    width: 104,
+    height: 24,
+    alt: "Red Bull",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/somc/sports-dunia.png",
+    width: 104,
+    height: 24,
+    alt: "Sport Dunia",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/somc/tech-mahindra.png",
+    width: 104,
+    height: 24,
+    alt: "Tech Mahindra",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/somc/tem-technologies.png",
+    width: 104,
+    height: 24,
+    alt: "TEM Technologies",
+  },
+];
+
+export const SOLSLogos: RecordLogo[] = [
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sols/air-works.png",
+    width: 104,
+    height: 24,
+    alt: "Air Works",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sols/fahad.png",
+    width: 104,
+    height: 24,
+    alt: "Fahad AL Tamimi",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sols/gaur-associates.png",
+    width: 104,
+    height: 24,
+    alt: "Gaur & Associates",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sols/lawctopus.png",
+    width: 104,
+    height: 24,
+    alt: "Lawctopus",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sols/tech-mahindra.png",
+    width: 104,
+    height: 24,
+    alt: "Tech Mahindra",
+  },
+];
+
+export const SPRSLogos: RecordLogo[] = [
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sprs/max-healthcare.png",
+    width: 104,
+    height: 24,
+    alt: "Max HealthCare",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sprs/re-walk.png",
+    width: 104,
+    height: 24,
+    alt: "Re-Walk",
+  },
+];
+export const SMASLogos: RecordLogo[] = [
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/smas/alembic.png",
+    width: 104,
+    height: 24,
+    alt: "Alembic",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/smas/cardiomac.png",
+    width: 104,
+    height: 24,
+    alt: "Cardiomac",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/smas/cureton.png",
+    width: 104,
+    height: 24,
+    alt: "Cureton",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/smas/quampetence.png",
+    width: 104,
+    height: 24,
+    alt: "Quampetence",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/smas/tata-1mg.png",
+    width: 104,
+    height: 24,
+    alt: "TATA 1mg",
+  },
+];
+
+export const SEMCELogos: RecordLogo[] = [
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/semce/avira.png",
+    width: 104,
+    height: 24,
+    alt: "Avira",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/semce/creative-lane.png",
+    width: 104,
+    height: 24,
+    alt: "Creative Lane",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/semce/himtas-biotech.png",
+    width: 104,
+    height: 24,
+    alt: "Himtas Biotech",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/semce/scenezone.png",
+    width: 104,
+    height: 24,
+    alt: "Scenezone",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/semce/zmedia.png",
+    width: 104,
+    height: 24,
+    alt: "ZMedia",
+  },
+];
+
+export const SOLALogos: RecordLogo[] = [
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sola/atraski.png",
+    width: 104,
+    height: 24,
+    alt: "Atraski",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sola/cross-learning.png",
+    width: 104,
+    height: 24,
+    alt: "Cross Learning",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sola/hexahealth.png",
+    width: 104,
+    height: 24,
+    alt: "Hexahealth",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sola/indsource-international.png",
+    width: 104,
+    height: 24,
+    alt: "Indsource International",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sola/nuform-social.png",
+    width: 104,
+    height: 24,
+    alt: "Nuform Social",
+  },
+];
+export const SOEDLogos: RecordLogo[] = [
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soed/lancer.png",
+    width: 104,
+    height: 24,
+    alt: "Lancer",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soed/iea.png",
+    width: 104,
+    height: 24,
+    alt: "Institute for Educational Advancement",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soed/adda247.png",
+    width: 104,
+    height: 24,
+    alt: "Adda247",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soed/lotus.png",
+    width: 104,
+    height: 24,
+    alt: "Lotus Petal Foundation",
+  },
+];
+
+export const SBASLogos: RecordLogo[] = [
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sbas/alembic.png",
+    width: 104,
+    height: 24,
+    alt: "Alemic",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sbas/pregrad.png",
+    width: 104,
+    height: 24,
+    alt: "Pregrad",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sbas/top-crew-aviation.png",
+    width: 104,
+    height: 24,
+    alt: "Top Crew Aviation",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sbas/tutorx.png",
+    width: 104,
+    height: 24,
+    alt: "Tutorx",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/sbas/youniq-minds.png",
+    width: 104,
+    height: 24,
+    alt: "Youniq Minds",
+  },
+];
+
+export const SOASLogos: RecordLogo[] = [
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soas/md-biocoals.png",
+    width: 104,
+    height: 24,
+    alt: "MD Biocoals (P) LTD",
+  },
+];
+export const SOADLogos: RecordLogo[] = [
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soad/a.png",
+    width: 104,
+    height: 24,
+    alt: "A",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soad/desi-drapes.png",
+    width: 104,
+    height: 24,
+    alt: "Desi Drapes",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soad/essentia.png",
+    width: 104,
+    height: 24,
+    alt: "Essentia",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soad/saltstayz.png",
+    width: 104,
+    height: 24,
+    alt: "SALTSTAYZ",
+  },
+  {
+    url: "https://www.krmangalam.edu.in/images/placements/schools/soad/vari.png",
+    width: 104,
+    height: 24,
+    alt: "VARI Jaipur",
+  },
+];
 
 export const Recordslogos: RecordLogo[] = [
   {
@@ -52,6 +364,7 @@ export const Recordslogos: RecordLogo[] = [
 
 export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
   {
+    id: 1,
     code: "SPRS",
     schoolName: "School of Physiotherapy and Rehabilitation Sciences",
     eligible: 3,
@@ -60,20 +373,22 @@ export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
     maxCtc: "7 LPA",
     avgCtc: "6.20 LPA",
     medianCtc: "5.90 LPA",
-    recordlogos: Recordslogos,
+    recordlogos: SPRSLogos,
   },
   {
+    id: 2,
     code: "SMAS",
     schoolName: "School of Medical and Allied Sciences",
     eligible: 127,
     placed: 89,
-    placementRate:  "85%", 
+    placementRate: "85%",
     maxCtc: "7 LPA",
     avgCtc: "5.60 LPA",
     medianCtc: "5.20 LPA",
-    recordlogos: Recordslogos,
+    recordlogos: SMASLogos,
   },
   {
+    id: 3,
     code: "SOMC",
     schoolName: "School of Management and Commerce",
     eligible: 321,
@@ -82,9 +397,10 @@ export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
     maxCtc: "20 LPA",
     avgCtc: "9.80 LPA",
     medianCtc: "8.50 LPA",
-    recordlogos: Recordslogos,
+    recordlogos: SOMCLogos,
   },
   {
+    id: 4,
     code: "SOLS",
     schoolName: "School of Legal Studies",
     eligible: 93,
@@ -93,9 +409,10 @@ export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
     maxCtc: "12 LPA",
     avgCtc: "5.80 LPA",
     medianCtc: "5.50 LPA",
-    recordlogos: Recordslogos,
+    recordlogos: SOLSLogos,
   },
   {
+    id: 5,
     code: "SJMC",
     schoolName: "School of Journalism and Mass Communication",
     eligible: 18,
@@ -104,9 +421,10 @@ export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
     maxCtc: "12 LPA",
     avgCtc: "7.20 LPA",
     medianCtc: "6.70 LPA",
-    recordlogos: Recordslogos,
+    recordlogos: SEMCELogos,
   },
   {
+    id: 6,
     code: "SOLA",
     schoolName: "School of Liberal Arts",
     eligible: 135,
@@ -115,9 +433,10 @@ export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
     maxCtc: "14 LPA",
     avgCtc: "7.80 LPA",
     medianCtc: "7.10 LPA",
-    recordlogos: Recordslogos,
+    recordlogos: SOLALogos,
   },
   {
+    id: 7,
     code: "SOET",
     schoolName: "School of Engineering and Technology",
     eligible: 225,
@@ -126,20 +445,22 @@ export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
     maxCtc: "34 LPA",
     avgCtc: "10.50 LPA",
     medianCtc: "9.20 LPA",
-    recordlogos: Recordslogos,
+    recordlogos: SOETLogos,
   },
   {
-    code: "SOET",
-    schoolName: "School of Education (SOED)",
+    id: 9,
+    code: "SOED",
+    schoolName: "School of Education",
     eligible: 29,
     placed: 22,
     placementRate: "76%",
     maxCtc: "34 LPA",
     avgCtc: "10.50 LPA",
     medianCtc: "9.20 LPA",
-    recordlogos: Recordslogos,
+    recordlogos: SOEDLogos,
   },
   {
+    id: 10,
     code: "SBAS",
     schoolName: "School of Basic and Applied Sciences",
     eligible: 29,
@@ -148,9 +469,10 @@ export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
     maxCtc: "10 LPA",
     avgCtc: "10.50 LPA",
     medianCtc: "9.20 LPA",
-    recordlogos: Recordslogos,
+    recordlogos: SBASLogos,
   },
   {
+    id: 11,
     code: "SOAD",
     schoolName: "School of Architecture and Design",
     eligible: 21,
@@ -159,9 +481,10 @@ export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
     maxCtc: "9 LPA",
     avgCtc: "6.80 LPA",
     medianCtc: "6.30 LPA",
-    recordlogos: Recordslogos,
+    recordlogos: SOADLogos,
   },
   {
+    id: 12,
     code: "SOAS",
     schoolName: "School of Agricultural Sciences",
     eligible: 14,
@@ -169,8 +492,8 @@ export const SchoolWiseSummary: SchoolWiseSummaryItem[] = [
     placementRate: "86%",
     maxCtc: "6.50 LPA",
     avgCtc: "5.90 LPA",
-    medianCtc: "5.60 LPA", 
-    recordlogos: Recordslogos,
+    medianCtc: "5.60 LPA",
+    recordlogos: SOASLogos,
   },
 ];
 

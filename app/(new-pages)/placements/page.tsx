@@ -64,7 +64,7 @@ export async function generateMetadata() {
 }
 
 const page = () => {
-  return (
+  return ( 
     <main className="bg-[#fbf8f3]">
       <HeroSection />
       <PlacementHighlights />

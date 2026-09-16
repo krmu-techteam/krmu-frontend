@@ -13,7 +13,7 @@ const TrainersHeroSection = () => {
         "
       >
         <div
-          className="
+          className=" 
             relative z-10 mx-auto flex w-full max-w-7xl
             flex-col items-center
             gap-8
@@ -75,7 +75,7 @@ const TrainersHeroSection = () => {
 
             <div className="flex justify-center md:justify-start">
               <Link
-                href="#"
+                href="https://calendly.com/training-cdc-krmangalam/new-meeting"
                 className="
                   inline-flex w-full max-w-[224px]
                   items-center justify-center
@@ -84,6 +84,7 @@ const TrainersHeroSection = () => {
                   transition-opacity hover:opacity-90
                   sm:py-4
                 "
+                target="_blank"
               >
                 Book your slot
               </Link>

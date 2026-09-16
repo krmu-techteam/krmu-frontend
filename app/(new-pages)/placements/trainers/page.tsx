@@ -50,7 +50,7 @@ export async function generateMetadata() {
     // Twitter / X
     twitter: {
       card: "summary_large_image",
-
+ 
       title: "KRMU Placement Trainers & Career Development Team",
 
       description:

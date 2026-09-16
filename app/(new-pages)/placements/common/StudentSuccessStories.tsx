@@ -153,7 +153,7 @@ export const StudentSuccessStories = () => {
           <CarouselContent>
             {studentStories.map((story) => (
               <CarouselItem key={story.id} className="basis-full pl-5">
-                <StudentSuccessStoryCard {...story} /> 
+                <StudentSuccessStoryCard {...story} />  
               </CarouselItem>
             ))}
           </CarouselContent>

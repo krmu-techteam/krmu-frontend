@@ -5,6 +5,10 @@ interface CommonSchoolCardProps {
   school: SchoolWiseSummaryItem;
 }
 
+// Below this count, logos are shown once (no scroll/duplication).
+// Tweak based on how many logos comfortably fit in the card width.
+const MIN_LOGOS_FOR_MARQUEE = 3;
+
 const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
   const {
     code,
@@ -17,6 +21,11 @@ const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
     medianCtc,
     recordlogos,
   } = school;
+
+  const shouldScroll = recordlogos.length > MIN_LOGOS_FOR_MARQUEE;
+  const displayLogos = shouldScroll
+    ? [...recordlogos, ...recordlogos]
+    : recordlogos;
 
   return (
     <div className="w-full h-full border border-[#ccc] bg-white p-4 sm:p-5 md:p-6">
@@ -37,7 +46,6 @@ const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
           <span className="text-3xl sm:text-[34px] font-newsreader font-medium leading-none">
             {eligible}
           </span>
-
           <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#888f9c] font-light tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase">
             Eligible
           </span>
@@ -47,7 +55,6 @@ const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
           <span className="text-3xl sm:text-[34px] font-newsreader font-medium leading-none">
             {placed}
           </span>
-
           <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#888f9c] font-light tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase">
             Placed
           </span>
@@ -57,7 +64,6 @@ const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
           <span className="text-3xl sm:text-[34px] font-newsreader font-medium leading-none text-[#7A1F2B]">
             {placementRate}
           </span>
-
           <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#888f9c] font-light tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.3em] uppercase">
             Rate
           </span>
@@ -70,7 +76,6 @@ const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
           <span className="text-base sm:text-lg md:text-xl font-medium leading-none truncate">
             {maxCtc}
           </span>
-
           <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#888f9c] font-light tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] uppercase">
             Max CTC
           </span>
@@ -80,7 +85,6 @@ const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
           <span className="text-base sm:text-lg md:text-xl font-medium leading-none truncate">
             {avgCtc}
           </span>
-
           <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#888f9c] font-light tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] uppercase">
             Avg CTC
           </span>
@@ -90,7 +94,6 @@ const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
           <span className="text-base sm:text-lg md:text-xl font-medium leading-none text-[#7A1F2B] truncate">
             {medianCtc}
           </span>
-
           <span className="mt-1 text-[9px] sm:text-[10px] md:text-xs text-[#888f9c] font-light tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.3em] uppercase">
             Median CTC
           </span>
@@ -99,8 +102,12 @@ const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
 
       {/* Recruiter Logos */}
       <div className="overflow-hidden pt-1">
-        <div className="flex w-max animate-logo-scroll items-center gap-6 sm:gap-8">
-          {[...recordlogos, ...recordlogos].map((logo, index) => (
+        <div
+          className={`flex items-center gap-6 sm:gap-8 ${
+            shouldScroll ? "w-max animate-logo-scroll" : "flex-wrap"
+          }`}
+        >
+          {displayLogos.map((logo, index) => (
             <Image
               key={`${logo.alt}-${index}`}
               src={logo.url}

@@ -1,5 +1,6 @@
 import { Newsreader } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -30,9 +31,13 @@ const HeroSection = () => {
               portal access.
             </p>
 
-            <button className="w-full max-w-[224px] bg-[#001836] px-6 py-3 text-base text-white transition duration-300 hover:bg-[#002957] sm:px-10 sm:text-lg">
+            <Link
+              href="https://calendly.com/training-cdc-krmangalam/new-meeting"
+              className="w-full max-w-[224px] bg-[#001836] px-6 py-3 text-base text-white transition duration-300 hover:bg-[#002957] sm:px-10 sm:text-lg"
+              target="_blank"
+           >
               Book your slot
-            </button>
+            </Link>
           </div>
 
           {/* Image */}
