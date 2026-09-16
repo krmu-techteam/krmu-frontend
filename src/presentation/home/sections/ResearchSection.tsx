@@ -5,24 +5,26 @@ import { RESEARCH_STATS } from "@/features/home";
 import Link from "next/link";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { resolveHomeResearchAlt } from "@/alt-text";
+import { ArrowUpRight } from "lucide-react";
 
 export function ResearchSection() {
     return (
         <section className="relative w-full py-10 md:py-12 xl:py-20 font-poppins">
-            <div className="w-full max-w-[1530px] mx-auto relative z-10">
-                <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 items-start relative xl:h-[750px]">
+            <div className="w-full max-w-[1530px] mx-auto relative z-10 px-4 sm:px-6 md:px-8 xl:px-0">
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 items-start relative xl:min-h-[760px]">
                     {/* Left Column - Image and Stats */}
                     <div className="w-full lg:w-[58%] xl:w-[925px]">
-                        <div className="hidden lg:block relative w-full aspect-video xl:aspect-auto xl:w-[925px] xl:h-[464px] rounded-[4px] overflow-hidden mb-16">
+                        <div className="relative w-full xl:w-[925px] rounded-[4px] overflow-hidden mb-8 md:mb-12 xl:mb-14">
                             <Image
-                                src="/images/home/research/research-girl.webp"
+                                src="/images/home/research/research-girl.jpeg"
                                 alt={resolveHomeResearchAlt(
-                                    "/images/home/research/research-girl.webp",
+                                    "/images/home/research/research-girl.jpeg",
                                     "Leading-edge research and innovation at K.R. Mangalam University"
                                 )}
-                                fill
-                                sizes="(max-width: 768px) 100vw, 60vw"
-                                className="object-cover"
+                                width={925}
+                                height={518}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 58vw, 925px"
+                                className="w-full h-auto object-cover rounded-[4px]"
                                 loading="lazy"
                             />
                         </div>
@@ -55,7 +57,7 @@ export function ResearchSection() {
                     </div>
 
                     {/* Right Column - Floating Info Card */}
-                    <div className="w-full lg:w-[47%] lg:-ml-[5%] lg:mt-16 xl:absolute xl:left-[728px] xl:top-[192px] xl:w-[585px] xl:h-[557px] xl:m-0 z-20">
+                    <div className="w-full lg:w-[47%] lg:-ml-[5%] lg:mt-8 xl:absolute xl:left-[728px] xl:top-[180px] xl:w-[585px] xl:h-[557px] xl:m-0 z-20">
                         <div className="bg-brand-navy border-12 border-brand-dark p-4 md:p-8 xl:p-12 rounded-[4px] h-full flex flex-col justify-center items-center text-center">
                             <p className="text-center text-white/90 text-lg tracking-wide font-normal mb-4">
                                 Shaping Futures, Embracing Innovation
@@ -79,9 +81,13 @@ export function ResearchSection() {
                                 <Link
                                     href="/research-and-innovation"
                                     target="_blank"
-                                    className="bg-brand-research-button hover:bg-brand-research-button/80 text-white px-4 py-2.5 rounded-[3px] w-fit font-medium transition-all flex items-center justify-center gap-2 group cursor-pointer"
+                                    className="bg-brand-research-button hover:bg-brand-research-button/80 text-white px-5 py-2.5 rounded-[3px] w-fit font-medium transition-all flex items-center justify-center gap-2 group cursor-pointer shadow-sm"
                                 >
-                                    Research
+                                    <span>Research</span>
+                                    <ArrowUpRight
+                                        size={18}
+                                        className="text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
+                                    />
                                 </Link>
 
                                 <Link

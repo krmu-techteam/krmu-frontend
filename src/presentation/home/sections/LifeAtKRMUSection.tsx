@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { useMemo, useRef, useEffect } from "react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import SectionDivider from "@/components/common/SectionDivider";
 import Link from "next/link";
@@ -22,6 +22,114 @@ export function LifeAtKRMUSection() {
     // Tripled sets for mathematically seamless infinite marquee on all screen sizes
     const row1Items = useMemo(() => [...row1, ...row1, ...row1], [row1]);
     const row2Items = useMemo(() => [...row2, ...row2, ...row2], [row2]);
+
+    const bottomSliderRef = useRef<HTMLDivElement>(null);
+    const isHoveredRef = useRef(false);
+    const isManualScrollingRef = useRef(false);
+    const manualScrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    // Continuous smooth movement + loop for bottom celebrity slider
+    useEffect(() => {
+        const slider = bottomSliderRef.current;
+        if (!slider) return;
+
+        // Set initial scroll position to the middle set for seamless bidirectional scroll
+        const updateInitialPosition = () => {
+            if (slider && slider.scrollWidth > 0) {
+                const singleSetWidth = slider.scrollWidth / 3;
+                if (slider.scrollLeft === 0) {
+                    slider.scrollLeft = singleSetWidth;
+                }
+            }
+        };
+
+        const initTimer = setTimeout(updateInitialPosition, 50);
+
+        let animationFrameId: number;
+        // 0.8px per frame ≈ 48px/s, smooth continuous movement
+        const speed = 0.8;
+
+        const step = () => {
+            if (
+                !isHoveredRef.current &&
+                !isManualScrollingRef.current &&
+                slider &&
+                slider.scrollWidth > 0
+            ) {
+                const singleSetWidth = slider.scrollWidth / 3;
+                // Reverse / RTL direction (same as original marquee)
+                slider.scrollLeft -= speed;
+
+                if (slider.scrollLeft <= 0) {
+                    slider.scrollLeft += singleSetWidth;
+                } else if (slider.scrollLeft >= singleSetWidth * 2) {
+                    slider.scrollLeft -= singleSetWidth;
+                }
+            }
+            animationFrameId = requestAnimationFrame(step);
+        };
+
+        animationFrameId = requestAnimationFrame(step);
+
+        const handleResize = () => {
+            if (!slider || slider.scrollWidth === 0) return;
+            const singleSetWidth = slider.scrollWidth / 3;
+            if (
+                slider.scrollLeft < singleSetWidth * 0.3 ||
+                slider.scrollLeft > singleSetWidth * 2.2
+            ) {
+                slider.scrollLeft = singleSetWidth;
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            clearTimeout(initTimer);
+            cancelAnimationFrame(animationFrameId);
+            window.removeEventListener("resize", handleResize);
+            if (manualScrollTimeoutRef.current) {
+                clearTimeout(manualScrollTimeoutRef.current);
+            }
+        };
+    }, [row2Items]);
+
+    const handleBottomScroll = (direction: "left" | "right") => {
+        const slider = bottomSliderRef.current;
+        if (!slider) return;
+
+        isManualScrollingRef.current = true;
+        if (manualScrollTimeoutRef.current) {
+            clearTimeout(manualScrollTimeoutRef.current);
+        }
+
+        const singleSetWidth = slider.scrollWidth / 3;
+
+        // Ensure safe wrapping before scrolling
+        if (direction === "left" && slider.scrollLeft < singleSetWidth * 0.4) {
+            slider.scrollLeft += singleSetWidth;
+        } else if (
+            direction === "right" &&
+            slider.scrollLeft > singleSetWidth * 1.8
+        ) {
+            slider.scrollLeft -= singleSetWidth;
+        }
+
+        // Get responsive card width
+        const firstCard = slider.firstElementChild as HTMLElement;
+        const cardWidth = firstCard ? firstCard.offsetWidth : 460;
+        const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
+
+        slider.scrollBy({
+            left: scrollAmount,
+            behavior: "smooth",
+        });
+
+        // Resume auto-scroll after manual smooth scroll completes
+        manualScrollTimeoutRef.current = setTimeout(() => {
+            isManualScrollingRef.current = false;
+        }, 800);
+    };
 
     const renderCard = (img: (typeof LIFE_AT_KRMU_GALLERY)[0], key: string) => (
         <div
@@ -72,14 +180,14 @@ export function LifeAtKRMUSection() {
                     A Closer Look at Life@KRMU
                 </p>
                 <p className="max-w-[340px] sm:max-w-[380px] md:max-w-7xl text-justify mx-auto text-white/80 text-sm md:text-[16px] leading-[1.6] md:leading-[30px] font-normal md:text-center">
-                    At K.R. Mangalam University, life goes be yond the
-                    classroom. Our campus is a thriving hub of academic
-                    excellence, cultural diversity, and vibrant student life. We
-                    encourage students to explore their passion by making them
-                    participate in various cultural events, sports, and
-                    community services. We believe in creating a friendly and
-                    positive environment where students can learn, grow, and
-                    build lasting relationships that shape their futures.
+                    At K.R. Mangalam University, life goes beyond the classroom.
+                    Our campus is a thriving hub of academic excellence,
+                    cultural diversity, and vibrant student life. We encourage
+                    students to explore their passion by making them participate
+                    in various cultural events, sports, and community services.
+                    We believe in creating a friendly and positive environment
+                    where students can learn, grow, and build lasting
+                    relationships that shape their futures.
                 </p>
                 {/* 3 Action Buttons (Events, Facilities, Clubs & Societies) */}
                 <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-6 md:mt-8">
@@ -134,11 +242,46 @@ export function LifeAtKRMUSection() {
                     )}
                 </div>
 
-                {/* Bottom Row: Moves Left to Right (RTL / Reverse) */}
-                <div className="flex w-max krmu-marquee-bottom">
-                    {row2Items.map((img, index) =>
-                        renderCard(img, `bottom-${img.id}-${index}`)
-                    )}
+                {/* Bottom Row Container with Red Navigation Arrows */}
+                <div
+                    className="relative w-full overflow-hidden group/bottom-slider"
+                    onMouseEnter={() => (isHoveredRef.current = true)}
+                    onMouseLeave={() => (isHoveredRef.current = false)}
+                    onTouchStart={() => (isHoveredRef.current = true)}
+                    onTouchEnd={() => (isHoveredRef.current = false)}
+                >
+                    {/* Centered 1440px Container for Navigation Arrows */}
+                    <div className="pointer-events-none absolute inset-0 z-30 flex items-center justify-between max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 w-full">
+                        {/* Left Red Arrow Button */}
+                        <button
+                            type="button"
+                            onClick={() => handleBottomScroll("left")}
+                            aria-label="Previous celebrity slide"
+                            className="pointer-events-auto w-9 h-9 rounded-[2px] bg-[#CB000D] hover:bg-[#b0000b] active:bg-[#900009] text-white flex items-center justify-center transition-all duration-200 cursor-pointer hover:scale-110 active:scale-95"
+                        >
+                            <ChevronLeft className="w-5 h-5 text-white drop-shadow" />
+                        </button>
+
+                        {/* Right Red Arrow Button */}
+                        <button
+                            type="button"
+                            onClick={() => handleBottomScroll("right")}
+                            aria-label="Next celebrity slide"
+                            className="pointer-events-auto w-9 h-9 rounded-[2px] bg-[#CB000D] hover:bg-[#b0000b] active:bg-[#900009] text-white flex items-center justify-center transition-all duration-200 cursor-pointer hover:scale-110 active:scale-95"
+                        >
+                            <ChevronRight className="w-5 h-5 text-white drop-shadow" />
+                        </button>
+                    </div>
+
+                    {/* Bottom Slider Track */}
+                    <div
+                        ref={bottomSliderRef}
+                        className="flex w-full overflow-x-auto scrollbar-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden select-none"
+                    >
+                        {row2Items.map((img, index) =>
+                            renderCard(img, `bottom-${img.id}-${index}`)
+                        )}
+                    </div>
                 </div>
             </div>
 
