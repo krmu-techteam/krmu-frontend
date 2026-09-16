@@ -158,84 +158,186 @@ export const PLACEMENT_CARD_CONFIGS: PlacementCardConfigType[] = [
 export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
     {
         id: 1,
-        src: "/images/home/whykrmu/whykrmu-1.webp",
-        alt: "Aarambh Orientation & Convocation",
-        category: "Campus Events",
-        title: "Embracing New Horizons",
+        src: "/images/home/whykrmu/1.jpg",
+        alt: "Students enjoying recreation and sports at K.R. Mangalam University indoor gaming lounge",
+        category: "Sports & Recreation",
+        title: "Campus Recreation Hub",
         description:
-            "Prestigious academic ceremonies and orientation welcoming dynamic future leaders.",
+            "Vibrant recreational lounge with pool, indoor games, and social relaxation zones.",
     },
     {
         id: 2,
-        src: "/images/home/whykrmu/whykrmu-2.webp",
-        alt: "Robotics & Innovation Lab",
-        category: "Tech & Innovation",
+        src: "/images/home/whykrmu/2.jpg",
+        alt: "Students working with quadruped robotics in KRMU advanced robotics lab",
+        category: "Tech & Robotics",
         title: "Robotics & AI Labs",
         description:
-            "Hands-on engineering with quadruped robotics, drone tech, and modern automation.",
+            "Hands-on engineering with quadruped robotics, automation systems, and innovative student projects.",
     },
     {
         id: 3,
-        src: "/images/home/whykrmu/whykrmu-3.webp",
-        alt: "Vibrant Campus Life",
-        category: "Student Life",
-        title: "Campus Connections",
+        src: "/images/home/whykrmu/3.jpg",
+        alt: "Diverse students engaging in campus life and peer learning at KRMU",
+        category: "Campus Life",
+        title: "Vibrant Student Community",
         description:
             "Collaborative learning, outdoor brainstorming, and lifelong camaraderie on campus.",
     },
     {
         id: 4,
-        src: "/images/home/whykrmu/whykrmu-4.webp",
-        alt: "Akasa Live Concert",
-        category: "Cultural Fest",
-        title: "Akasa Live at KRMU",
+        src: "/images/home/whykrmu/4.jpg",
+        alt: "Journalism student reporting from the KRMU School of Journalism and Mass Communication studio",
+        category: "Media & Broadcasting",
+        title: "SJMC Media Studio",
         description:
-            "Electrifying musical evenings and high-octane cultural fests celebrating student youth.",
+            "Professional broadcasting equipment, news reporting suites, and multi-camera television studios.",
     },
     {
         id: 5,
-        src: "/images/home/whykrmu/whykrmu-5.webp",
-        alt: "Jasleen Royal Concert",
-        category: "Celebrity Nights",
-        title: "Jasleen Royal Musical Night",
+        src: "/images/home/whykrmu/5.jpg",
+        alt: "Student researching in the modern KRMU central library",
+        category: "Academic Excellence",
+        title: "Central Knowledge Hub",
         description:
-            "Unforgettable celebrity musical performances echoing across the grand university grounds.",
+            "Extensive digital and print collections fostering in-depth academic inquiry and focused study.",
     },
     {
         id: 6,
-        src: "/images/home/whykrmu/whykrmu-6.webp",
-        alt: "DJ Olly Ras Electronic Night",
-        category: "Youth Festival",
-        title: "DJ Olly Ras Live Beats",
+        src: "/images/home/whykrmu/6.jpg",
+        alt: "Ankur Warikoo being felicitated during Aarambh orientation program at K.R. Mangalam University",
+        category: "Leadership Sessions",
+        title: "Ankur Warikoo at Aarambh",
         description:
-            "Pulsating music, world-class soundstages, and thrilling campus festival vibes.",
+            "Mentorship and motivational sessions with eminent entrepreneurs, founders, and industry trailblazers.",
     },
     {
         id: 7,
-        src: "/images/home/whykrmu/whykrmu-7.webp",
-        alt: "Sports & Athletics",
-        category: "Sports Arena",
-        title: "Championship Athletics",
+        src: "/images/home/whykrmu/7.jpg",
+        alt: "Dignitaries and leadership at K.R. Mangalam University 7th Convocation ceremony",
+        category: "Convocation",
+        title: "Annual Convocation Ceremony",
         description:
-            "Expansive sporting arenas, team spirit, and competitive inter-university championships.",
+            "Grand academic celebrations conferring degrees and felicitating visionary graduates and dignitaries.",
     },
     {
         id: 8,
-        src: "/images/home/whykrmu/whykrmu-8.webp",
-        alt: "Creative Arts & Design",
-        category: "Creative Arts",
-        title: "Studio & Design Hubs",
+        src: "/images/home/whykrmu/8.jpg",
+        alt: "Faculty and guests receiving honors at KRMU IDEAS 3.0 annual festival",
+        category: "Annual Fest",
+        title: "IDEAS 3.0 Annual Fest",
         description:
-            "Expressive fine arts, architectural ateliers, and creative design showcases.",
+            "Celebration of student innovation, intellectual ideation, and interdisciplinary collaboration.",
     },
     {
         id: 9,
-        src: "/images/home/whykrmu/whykrmu-9.webp",
-        alt: "Global Conclave",
-        category: "Global Engagement",
-        title: "Global Conclaves & Summits",
+        src: "/images/home/whykrmu/9.jpg",
+        alt: "Fashion models presenting designer collection at KRMU fashion show",
+        category: "Fashion & Design",
+        title: "Bello Globe Life Runway",
         description:
-            "International partnerships and masterclasses with industry visionaries.",
+            "High-fashion runway presentations showcasing the creative couture of student designers.",
+    },
+    {
+        id: 10,
+        src: "/images/home/whykrmu/10.jpg",
+        alt: "Academic convocation honors and award ceremony at K.R. Mangalam University",
+        category: "Academic Honors",
+        title: "Academic Excellence Honors",
+        description:
+            "Honoring outstanding academic accomplishments, university medals, and distinguished guests.",
+    },
+];
+
+export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
+    {
+        id: 101,
+        src: "/images/home/whykrmu/celebrity/padma-shri-kangana-ranaut-at-krmu.jpg",
+        alt: "Padma Shri Kangana Ranaut at K.R. Mangalam University special session",
+        category: "Celebrity Interaction",
+        title: "Padma Shri Kangana Ranaut at KRMU",
+        description:
+            "Inspiring interactive masterclass with Padma Shri awardee actor Kangana Ranaut on campus.",
+    },
+    {
+        id: 102,
+        src: "/images/home/whykrmu/celebrity/naved.jpg",
+        alt: "RJ Naved interacting with students at K.R. Mangalam University guest session",
+        category: "Celebrity Guest",
+        title: "Naved",
+        description:
+            "Celebrity radio host RJ Naved energizing students with humor and interactive wisdom.",
+    },
+    {
+        id: 103,
+        src: "/images/home/whykrmu/celebrity/shukhi.jpg",
+        alt: "Singer Sukh-E performing live at K.R. Mangalam University campus event",
+        category: "Star Night",
+        title: "Shukhi",
+        description:
+            "High-energy musical performance by singer & music producer Sukh-E on the main stage.",
+    },
+    {
+        id: 104,
+        src: "/images/home/whykrmu/celebrity/edm-night-2025.jpg",
+        alt: "EDM Night concert and electronic music festival at K.R. Mangalam University",
+        category: "Music Festival",
+        title: "EDM Night 2025",
+        description:
+            "Electric beats, dazzling light shows, and unforgettable youth festival celebrations.",
+    },
+    {
+        id: 105,
+        src: "/images/home/whykrmu/celebrity/aarambh-2025.jpg",
+        alt: "Aarambh 2025 annual cultural fest celebration at K.R. Mangalam University",
+        category: "Annual Fest",
+        title: "Aarambh 2025",
+        description:
+            "KRMU's grand flagship cultural festival celebrating student creativity, arts, and music.",
+    },
+    {
+        id: 106,
+        src: "/images/home/whykrmu/celebrity/solesta-26.jpg",
+        alt: "SOLESTA inter-college cultural and tech festival at K.R. Mangalam University",
+        category: "Cultural Extravaganza",
+        title: "Solesta 26",
+        description:
+            "Inter-college cultural showcase bringing together talent from institutions across India.",
+    },
+    {
+        id: 107,
+        src: "/images/home/whykrmu/celebrity/freshers-2025.jpg",
+        alt: "Freshers party and welcome celebration for new students at K.R. Mangalam University",
+        category: "Student Life",
+        title: "Freshers 2025",
+        description:
+            "Warmly welcoming the newest generation of innovators to the dynamic KRMU family.",
+    },
+    {
+        id: 108,
+        src: "/images/home/whykrmu/celebrity/aarambh-2026.jpg",
+        alt: "Aarambh 2026 youth festival at K.R. Mangalam University",
+        category: "Campus Celebrations",
+        title: "Aarambh 2026",
+        description:
+            "Spectacular live performances, dance competitions, and runway presentations.",
+    },
+    {
+        id: 109,
+        src: "/images/home/whykrmu/celebrity/edude-fiesta-2023.jpg",
+        alt: "Edude Fiesta carnival and celebrations at K.R. Mangalam University",
+        category: "Campus Carnival",
+        title: "Edude Fiesta 2023",
+        description:
+            "Lively campus carnival filled with games, culinary stalls, and vibrant youth celebrations.",
+    },
+    {
+        id: 110,
+        src: "/images/home/whykrmu/celebrity/aarambh-2026-1.jpg",
+        alt: "Aarambh cultural night celebrations at K.R. Mangalam University",
+        category: "Cultural Fest",
+        title: "Aarambh 2026 1",
+        description:
+            "Exciting cultural performances, student bands, and memories celebrating life at KRMU.",
     },
 ];
 

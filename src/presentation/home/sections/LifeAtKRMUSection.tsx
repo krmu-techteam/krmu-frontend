@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import SectionDivider from "@/components/common/SectionDivider";
 import Link from "next/link";
@@ -9,24 +9,15 @@ import { SectionTitle } from "@/components/common/SectionTitle";
 import {
     LIFE_AT_KRMU_CAROUSEL_CONFIGS,
     LIFE_AT_KRMU_GALLERY,
+    LIFE_AT_KRMU_CELEBRITY_GALLERY,
 } from "@/features/home";
-import {
-    resolveHomeEventAlt,
-    resolveHomeFacilityAlt,
-    resolveHomeClubAlt,
-} from "@/alt-text";
+import { resolveHomeEventAlt } from "@/alt-text";
 
 export function LifeAtKRMUSection() {
-    // Row 1 starts from index 0 (Images 1, 2, 3...)
+    // Row 1 (Top Slider): Campus Life, Labs & Academics (/images/home/whykrmu)
     const row1 = LIFE_AT_KRMU_GALLERY;
-    // Row 2 starts from index 3 (Images 4, 5, 6...) matching the staggered layout
-    const row2 = useMemo(
-        () => [
-            ...LIFE_AT_KRMU_GALLERY.slice(3),
-            ...LIFE_AT_KRMU_GALLERY.slice(0, 3),
-        ],
-        []
-    );
+    // Row 2 (Bottom Slider): Celebrities, Concerts & Fests (/images/home/whykrmu/celebrity)
+    const row2 = LIFE_AT_KRMU_CELEBRITY_GALLERY;
 
     // Tripled sets for mathematically seamless infinite marquee on all screen sizes
     const row1Items = useMemo(() => [...row1, ...row1, ...row1], [row1]);
@@ -35,7 +26,7 @@ export function LifeAtKRMUSection() {
     const renderCard = (img: (typeof LIFE_AT_KRMU_GALLERY)[0], key: string) => (
         <div
             key={key}
-            className="group relative shrink-0 w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-[180px] sm:h-[240px] md:h-[290px] lg:h-[330px] overflow-hidden cursor-pointer bg-[#0A1017]"
+            className="group relative shrink-0 w-[280px] sm:w-[380px] md:w-[460px] lg:w-[520px] h-[180px] sm:h-[240px] md:h-[290px] lg:h-[330px] overflow-hidden cursor-pointer bg-[#0A1017] select-none"
         >
             {/* Card Image */}
             <Image
@@ -46,28 +37,27 @@ export function LifeAtKRMUSection() {
                 )}
                 fill
                 sizes="(max-width: 768px) 380px, 520px"
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"
+                className="object-cover object-center group-hover:scale-[1.04] transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] pointer-events-none will-change-transform"
                 loading="lazy"
             />
 
-            {/* Default subtle resting bottom gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none" />
+            {/* Subtle bottom gradient vignette (Smooth height and opacity expansion) */}
+            <div className="absolute inset-x-0 bottom-0 h-[55%] group-hover:h-[65%] bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none z-10 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" />
 
-            {/* Interactive Hover Content Overlay (Black Gradient) */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/80 to-black/35 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out flex flex-col justify-end p-4 sm:p-5 md:p-6 text-left pointer-events-none z-20">
-                <div className="transform translate-y-3 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                    {img.category && (
-                        <span className="inline-block px-2.5 py-0.5 mb-1.5 md:mb-2 text-[10px] md:text-[11px] font-semibold tracking-wider uppercase text-brand-gold bg-brand-gold/15 border border-brand-gold/30 rounded-[3px]">
-                            {img.category}
-                        </span>
-                    )}
-                    <h4 className="text-white text-sm sm:text-base md:text-[22px] font-semibold font-serif leading-snug mb-1">
+            {/* Bottom Content Area */}
+            <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 md:p-6 text-left pointer-events-none z-20 flex flex-col justify-end">
+                <div className="transform transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
+                    <h4 className="text-white text-sm sm:text-base md:text-[20px] lg:text-[22px] font-semibold font-serif leading-snug mb-0.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                         {img.title || img.alt}
                     </h4>
                     {img.description && (
-                        <p className="text-white/80 text-[11px] sm:text-xs md:text-[13px] line-clamp-2 leading-relaxed font-light">
-                            {img.description}
-                        </p>
+                        <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
+                            <div className="overflow-hidden">
+                                <p className="text-white/90 text-[11px] sm:text-xs md:text-[13px] line-clamp-2 leading-relaxed font-light drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)] pt-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out">
+                                    {img.description}
+                                </p>
+                            </div>
+                        </div>
                     )}
                 </div>
             </div>
@@ -76,9 +66,6 @@ export function LifeAtKRMUSection() {
 
     return (
         <section className="relative w-full overflow-hidden py-10 md:py-12 xl:py-20 font-poppins">
-            {/* Precision Spec Glow (Bottom Left) - Spec: Blue Institutional Soft Light */}
-            <div className="absolute bottom-[-20%] left-[-10%] w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,rgba(0,162,255,0.08)_0%,transparent_70%)] rounded-full blur-[100px] z-0 pointer-events-none opacity-40 transition-opacity"></div>
-
             <div className="container mx-auto px-0 md:px-12 relative z-10 text-center mb-6 md:mb-8 lg:mb-12">
                 <SectionTitle title="Why KRMU?" />
                 <p className="font-poppins font-[275] text-[24px] md:text-[42px] leading-[1.2] md:leading-[30px] tracking-normal text-white mb-6">
@@ -94,19 +81,26 @@ export function LifeAtKRMUSection() {
                     positive environment where students can learn, grow, and
                     build lasting relationships that shape their futures.
                 </p>
-                <Link
-                    href={"/happenings/news-and-events"}
-                    className="inline-flex gap-1 items-center  text-[16px] font-light tracking-wide text-white hover:text-white/70  transition-colors duration-300 mt-6"
-                >
-                    <span>
-                        <ArrowRight size={18} />
-                    </span>
-                    <span>Learn More</span>
-                </Link>
+                {/* 3 Action Buttons (Events, Facilities, Clubs & Societies) */}
+                <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-6 md:mt-8">
+                    {LIFE_AT_KRMU_CAROUSEL_CONFIGS.map((item, idx) => (
+                        <Link
+                            key={idx}
+                            href={item.url || "#"}
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[3px] border border-white hover:border-white/90 bg-white/2 hover:bg-white/5 text-white hover:text-white/90 text-[14px] md:text-[15px] font-medium tracking-wide transition-all duration-300 group shadow-sm"
+                        >
+                            <span>{item.label}</span>
+                            <ArrowUpRight
+                                size={17}
+                                className="text-white group-hover:text-white/90 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
+                            />
+                        </Link>
+                    ))}
+                </div>
             </div>
 
             {/* 2-Row Dual-Direction Marquee Image Stream (Single Stream with Left/Right Grayscale Vignette) */}
-            <div className="relative w-full mb-16 md:mb-20 overflow-hidden flex flex-col select-none">
+            <div className="relative w-full mb-8 md:mb-12 overflow-hidden flex flex-col select-none">
                 {/* Left Side Subtle Gray Edge Overlay */}
                 <div
                     className="pointer-events-none absolute left-0 top-0 bottom-0 z-20 w-[14%] sm:w-[16%] md:w-[18%] lg:w-[20%]"
@@ -148,7 +142,8 @@ export function LifeAtKRMUSection() {
                 </div>
             </div>
 
-            {/* Feature Cards Grid - Premium Dark Theme */}
+            {/* Feature Cards Grid - Hidden for now as requested */}
+            {/*
             <div className="max-w-[1530px] mx-auto relative z-10 px-4 md:px-8 xl:px-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 xl:gap-5">
                     {LIFE_AT_KRMU_CAROUSEL_CONFIGS.map((card, i) => {
@@ -225,6 +220,7 @@ export function LifeAtKRMUSection() {
                     })}
                 </div>
             </div>
+            */}
             <SectionDivider />
         </section>
     );

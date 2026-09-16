@@ -41,6 +41,62 @@ export const homeAltConfig: HomeAltConfig = {
         "Event 6": "Campus event 6 at KRMU",
         "Nora Fatehi": "Campus event — Nora Fatehi at KRMU",
         "DJ Night": "Campus event — DJ Night at KRMU",
+        "Kangana Ranaut":
+            "Padma Shri Kangana Ranaut at K.R. Mangalam University special session",
+        "Padma Shri Kangana Ranaut at KRMU":
+            "Padma Shri Kangana Ranaut at K.R. Mangalam University special session",
+        "RJ Naved":
+            "RJ Naved interacting with students at K.R. Mangalam University guest session",
+        Naved: "RJ Naved interacting with students at K.R. Mangalam University guest session",
+        "Sukh-E":
+            "Singer Sukh-E performing live at K.R. Mangalam University campus event",
+        Shukhi: "Singer Sukh-E performing live at K.R. Mangalam University campus event",
+        "EDM Night":
+            "EDM Night concert and electronic music festival at K.R. Mangalam University",
+        "EDM Night 2025":
+            "EDM Night concert and electronic music festival at K.R. Mangalam University",
+        Aarambh:
+            "Aarambh annual cultural fest celebration at K.R. Mangalam University",
+        "Aarambh 2025":
+            "Aarambh 2025 annual cultural fest celebration at K.R. Mangalam University",
+        "Aarambh 2026":
+            "Aarambh 2026 youth festival at K.R. Mangalam University",
+        "Aarambh 2026 1":
+            "Aarambh cultural night celebrations at K.R. Mangalam University",
+        SOLESTA:
+            "SOLESTA inter-college cultural and tech festival at K.R. Mangalam University",
+        "Solesta 26":
+            "SOLESTA inter-college cultural and tech festival at K.R. Mangalam University",
+        Freshers:
+            "Freshers party and welcome celebration for new students at K.R. Mangalam University",
+        "Freshers 2025":
+            "Freshers party and welcome celebration for new students at K.R. Mangalam University",
+        "Edude Fiesta":
+            "Edude Fiesta carnival and celebrations at K.R. Mangalam University",
+        "Edude Fiesta 2023":
+            "Edude Fiesta carnival and celebrations at K.R. Mangalam University",
+
+        // Life@KRMU Top Slider (1.jpg to 10.jpg) Titles
+        "Campus Recreation Hub":
+            "Students enjoying recreation and sports at K.R. Mangalam University indoor gaming lounge",
+        "Robotics & AI Labs":
+            "Students working with quadruped robotics in KRMU advanced robotics lab",
+        "Vibrant Student Community":
+            "Diverse students engaging in campus life and peer learning at KRMU",
+        "SJMC Media Studio":
+            "Journalism student reporting from the KRMU School of Journalism and Mass Communication studio",
+        "Central Knowledge Hub":
+            "Student researching in the modern KRMU central library",
+        "Ankur Warikoo at Aarambh":
+            "Ankur Warikoo being felicitated during Aarambh orientation program at K.R. Mangalam University",
+        "Annual Convocation Ceremony":
+            "Dignitaries and leadership at K.R. Mangalam University 7th Convocation ceremony",
+        "IDEAS 3.0 Annual Fest":
+            "Faculty and guests receiving honors at KRMU IDEAS 3.0 annual festival",
+        "Bello Globe Life Runway":
+            "Fashion models presenting designer collection at KRMU fashion show",
+        "Academic Excellence Honors":
+            "Academic convocation honors and award ceremony at K.R. Mangalam University",
     },
 
     facilities: {
@@ -306,5 +362,48 @@ export const homeAltConfig: HomeAltConfig = {
             "Utsav Ratan, B.Tech CSE student testimonial at KRMU",
         "mrinal-prakash-11.webp":
             "Mrinal Prakash, B.Tech CSE student testimonial at KRMU",
+
+        // Life@KRMU Why KRMU Celebrity & Star Events Slider (small case renamed)
+        "padma-shri-kangana-ranaut-at-krmu.jpg":
+            "Padma Shri Kangana Ranaut at K.R. Mangalam University special session",
+        "naved.jpg":
+            "RJ Naved interacting with students at K.R. Mangalam University guest session",
+        "shukhi.jpg":
+            "Singer Sukh-E performing live at K.R. Mangalam University campus event",
+        "edm-night-2025.jpg":
+            "EDM Night concert and electronic music festival at K.R. Mangalam University",
+        "aarambh-2025.jpg":
+            "Aarambh 2025 annual cultural fest celebration at K.R. Mangalam University",
+        "aarambh-2026.jpg":
+            "Aarambh 2026 youth festival at K.R. Mangalam University",
+        "aarambh-2026-1.jpg":
+            "Aarambh cultural night celebrations at K.R. Mangalam University",
+        "solesta-26.jpg":
+            "SOLESTA inter-college cultural and tech festival at K.R. Mangalam University",
+        "freshers-2025.jpg":
+            "Freshers party and welcome celebration for new students at K.R. Mangalam University",
+        "edude-fiesta-2023.jpg":
+            "Edude Fiesta carnival and celebrations at K.R. Mangalam University",
+
+        // Life@KRMU Top Slider (1.jpg to 10.jpg in whykrmu)
+        "1.jpg":
+            "Students enjoying recreation and sports at K.R. Mangalam University indoor gaming lounge",
+        "2.jpg":
+            "Students working with quadruped robotics in KRMU advanced robotics lab",
+        "3.jpg":
+            "Diverse students engaging in campus life and peer learning at KRMU",
+        "4.jpg":
+            "Journalism student reporting from the KRMU School of Journalism and Mass Communication studio",
+        "5.jpg": "Student researching in the modern KRMU central library",
+        "6.jpg":
+            "Ankur Warikoo being felicitated during Aarambh orientation program at K.R. Mangalam University",
+        "7.jpg":
+            "Dignitaries and leadership at K.R. Mangalam University 7th Convocation ceremony",
+        "8.jpg":
+            "Faculty and guests receiving honors at KRMU IDEAS 3.0 annual festival",
+        "9.jpg":
+            "Fashion models presenting designer collection at KRMU fashion show",
+        "10.jpg":
+            "Academic convocation honors and award ceremony at K.R. Mangalam University",
     },
 };
