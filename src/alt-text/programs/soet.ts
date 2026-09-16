@@ -1739,8 +1739,8 @@ export const soetProgramsUrlMap: Record<string, string> = {
  * Matches by course slug, section category, element title, and filename.
  */
 export function resolveSoetProgramAlt(
-    slug: string | undefined,
-    keyOrUrl: string | undefined,
+    slug: string | null | undefined,
+    keyOrUrl: string | null | undefined,
     fallback: string = ""
 ): string {
     if (!keyOrUrl) return fallback;
