@@ -371,7 +371,7 @@ export function LifeAtKRMUSection() {
 
                 {/* Top Row Container with Red Navigation Arrows */}
                 <div
-                    className="relative w-full overflow-hidden group/top-slider mb-3 md:mb-4"
+                    className="relative w-full overflow-hidden group/top-slider"
                     onMouseEnter={() => (isTopHoveredRef.current = true)}
                     onMouseLeave={() => (isTopHoveredRef.current = false)}
                     onTouchStart={() => (isTopHoveredRef.current = true)}
@@ -453,7 +453,6 @@ export function LifeAtKRMUSection() {
                     </div>
                 </div>
             </div>
-            <SectionDivider />
         </section>
     );
 }

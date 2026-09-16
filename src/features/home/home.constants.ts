@@ -210,24 +210,7 @@ export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
         description:
             "Mentorship and motivational sessions with eminent entrepreneurs, founders, and industry trailblazers.",
     },
-    {
-        id: 7,
-        src: "/images/home/whykrmu/7.jpg",
-        alt: "Dignitaries and leadership at K.R. Mangalam University 7th Convocation ceremony",
-        category: "Convocation",
-        title: "Annual Convocation Ceremony",
-        description:
-            "Grand academic celebrations conferring degrees and felicitating visionary graduates and dignitaries.",
-    },
-    {
-        id: 8,
-        src: "/images/home/whykrmu/8.jpg",
-        alt: "Faculty and guests receiving honors at KRMU IDEAS 3.0 annual festival",
-        category: "Annual Fest",
-        title: "IDEAS 3.0 Annual Fest",
-        description:
-            "Celebration of student innovation, intellectual ideation, and interdisciplinary collaboration.",
-    },
+
     {
         id: 9,
         src: "/images/home/whykrmu/9.jpg",
@@ -236,15 +219,6 @@ export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
         title: "Bello Globe Life Runway",
         description:
             "High-fashion runway presentations showcasing the creative couture of student designers.",
-    },
-    {
-        id: 10,
-        src: "/images/home/whykrmu/10.jpg",
-        alt: "Academic convocation honors and award ceremony at K.R. Mangalam University",
-        category: "Academic Honors",
-        title: "Academic Excellence Honors",
-        description:
-            "Honoring outstanding academic accomplishments, university medals, and distinguished guests.",
     },
 ];
 

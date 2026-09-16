@@ -170,14 +170,17 @@ export function TestimonialsSection({
                     onTouchStart={handleTouchStart}
                     onTouchEnd={handleTouchEnd}
                 >
-                    <div className="w-full min-h-[360px] md:min-h-[330px] lg:min-h-[310px]">
+                    <div className="w-full min-h-[520px] sm:min-h-[460px] md:min-h-[380px] lg:min-h-[340px] xl:min-h-[320px]">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={t.id}
-                                initial={{ opacity: 0, y: 6 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -6 }}
-                                transition={{ duration: 0.35, ease: "easeOut" }}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{
+                                    duration: 0.2,
+                                    ease: "easeInOut",
+                                }}
                                 className="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-8 w-full"
                             >
                                 {/* Left Side: Student Photo (Clickable to switch) */}
@@ -218,7 +221,7 @@ export function TestimonialsSection({
                                         </div>
 
                                         {/* Quote Paragraph - Fixed min-height to prevent layout jump */}
-                                        <div className="min-h-[140px] sm:min-h-[150px] md:min-h-[160px] flex items-center justify-center md:justify-start">
+                                        <div className="min-h-[220px] sm:min-h-[190px] md:min-h-[170px] flex items-center justify-center md:justify-start">
                                             <p className="italic text-white/90 text-sm md:text-[16px] xl:text-[18px] leading-relaxed font-light font-poppins relative z-10 text-justify md:text-left pr-0 md:pr-2 lg:pr-12">
                                                 {t.quote}
                                             </p>
@@ -243,18 +246,22 @@ export function TestimonialsSection({
                     </div>
 
                     {/* Student Thumbnail Avatars Row (Click any photo to view testimonial) */}
-                    <div className="w-full flex items-center justify-start sm:justify-center gap-2.5 sm:gap-3 md:gap-8 mt-8 md:mt-10 overflow-x-auto py-3 px-2 no-scrollbar">
+                    <div className="w-full flex items-center justify-start sm:justify-center gap-3 sm:gap-4 mt-8 md:mt-10 overflow-x-auto py-4 px-2 min-h-[96px] sm:min-h-[104px] md:min-h-[112px] no-scrollbar">
                         {TESTIMONIALS_DATA.map((item, idx) => {
                             const isActive = currentIndex === idx;
                             return (
                                 <button
                                     key={item.id}
                                     type="button"
-                                    onClick={() => handleSelectPerson(idx)}
-                                    className={`relative shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full overflow-hidden transition-all duration-300 cursor-pointer ${
+                                    onMouseDown={(e) => e.preventDefault()}
+                                    onClick={(e) => {
+                                        e.currentTarget.blur();
+                                        handleSelectPerson(idx);
+                                    }}
+                                    className={`relative shrink-0 rounded-full overflow-hidden transition-all duration-300 cursor-pointer ${
                                         isActive
-                                            ? "ring-2 ring-brand-gold scale-110 opacity-100"
-                                            : "opacity-40 hover:opacity-90 ring-2 ring-brand-gold/20 hover:scale-105"
+                                            ? "w-16 h-16 sm:w-[72px] sm:h-[72px] md:w-20 md:h-20 ring-[2.5px] ring-brand-gold opacity-100 z-10 shadow-xl"
+                                            : "w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 opacity-40 hover:opacity-90 ring-2 ring-brand-gold/20 hover:scale-105"
                                     }`}
                                     aria-label={`View ${item.name}'s testimonial`}
                                     title={`${item.name} - ${item.role}`}
@@ -263,7 +270,8 @@ export function TestimonialsSection({
                                         src={item.image}
                                         alt={item.name}
                                         fill
-                                        sizes="(max-width: 768px) 56px, 64px"
+                                        sizes="200px"
+                                        quality={95}
                                         className="object-cover"
                                     />
                                 </button>

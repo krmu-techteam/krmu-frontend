@@ -20,6 +20,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
     const [isNavHidden, setIsNavHidden] = useState(false);
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+    const hideTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -28,9 +29,25 @@ const NavbarMenu = ({ mainMenu }: Props) => {
     }, [pathname]);
 
     useEffect(() => {
+        const handleFocusOrVisible = () => {
+            setIsNavHidden(false);
+            setActiveMenu(null);
+        };
+
+        window.addEventListener("focus", handleFocusOrVisible);
+        document.addEventListener("visibilitychange", handleFocusOrVisible);
+
         return () => {
+            window.removeEventListener("focus", handleFocusOrVisible);
+            document.removeEventListener(
+                "visibilitychange",
+                handleFocusOrVisible
+            );
             if (timeoutRef.current) {
                 clearTimeout(timeoutRef.current);
+            }
+            if (hideTimeoutRef.current) {
+                clearTimeout(hideTimeoutRef.current);
             }
         };
     }, []);
@@ -39,6 +56,10 @@ const NavbarMenu = ({ mainMenu }: Props) => {
         if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
             timeoutRef.current = null;
+        }
+        if (hideTimeoutRef.current) {
+            clearTimeout(hideTimeoutRef.current);
+            hideTimeoutRef.current = null;
         }
         setIsNavHidden(false);
         setActiveMenu(menuKey);
@@ -55,8 +76,15 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
     const handleNavClick = (e: React.MouseEvent<HTMLDivElement>) => {
         const target = e.target as HTMLElement;
-        if (target.closest("a")) {
-            setIsNavHidden(true);
+        const link = target.closest("a");
+        if (link) {
+            const isNewTab =
+                link.target === "_blank" ||
+                e.ctrlKey ||
+                e.metaKey ||
+                e.button === 1 ||
+                e.shiftKey;
+
             setActiveMenu(null);
             if (timeoutRef.current) {
                 clearTimeout(timeoutRef.current);
@@ -64,6 +92,19 @@ const NavbarMenu = ({ mainMenu }: Props) => {
             if (document.activeElement instanceof HTMLElement) {
                 document.activeElement.blur();
             }
+
+            if (isNewTab) {
+                setIsNavHidden(false);
+                return;
+            }
+
+            setIsNavHidden(true);
+            if (hideTimeoutRef.current) {
+                clearTimeout(hideTimeoutRef.current);
+            }
+            hideTimeoutRef.current = setTimeout(() => {
+                setIsNavHidden(false);
+            }, 800);
         }
     };
 
@@ -185,8 +226,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
     return (
         <>
             <div
-                className={`hidden xl:block ${isNavHidden ? "nav-menu-hidden pointer-events-none" : ""}`}
+                className={`hidden xl:block ${isNavHidden ? "nav-menu-hidden" : ""}`}
                 onClick={handleNavClick}
+                onMouseEnter={() => setIsNavHidden(false)}
                 onMouseLeave={handleMouseLeave}
             >
                 <ul className="flex items-center xl:gap-3 2xl:gap-6">
