@@ -29,9 +29,9 @@ export default function Studentslayout({
           <HeaderWrapper />
         </div>
         {children}
-        <div id="main-footer">
+        {/* <div id="main-footer">
           <Footer />
-        </div>
+        </div> */}
       </body>
     </html>
   );
