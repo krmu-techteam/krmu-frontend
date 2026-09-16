@@ -14,9 +14,15 @@ const UniversityComparisonTable = ({
     return (
         <div className="w-full border border-[#00559B] rounded-[15px] py-4 md:py-4 xl:py-7">
             {/* Table Header Row (Desktop View) */}
-            <div className="hidden lg:grid grid-cols-3 gap-6 pb-5 border-b border-[#00559B] px-6 lg:px-8 xl:px-14 lg:mb-10">
-                <div className="col-span-3 text-center text-lg md:text-xl font-bold text-white">
+            <div className="hidden lg:grid grid-cols-3 gap-6 items-center pb-5 border-b border-[#00559B] px-6 lg:px-8 xl:px-14 lg:mb-6">
+                <div className="text-lg md:text-xl font-bold text-white text-center">
                     Parameters
+                </div>
+                <div className="text-lg md:text-xl font-bold text-white text-center">
+                    {list2?.listheading || "Traditional College"}
+                </div>
+                <div className="text-lg md:text-xl font-bold text-white text-center">
+                    {list3?.listheading || "SOET"}
                 </div>
             </div>
 

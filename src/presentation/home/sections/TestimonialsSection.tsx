@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Carousel } from "@/components/common/Carousel";
+import { motion, AnimatePresence } from "framer-motion";
 import SectionDivider from "@/components/common/SectionDivider";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { resolveHomeTestimonialAlt } from "@/alt-text";
@@ -100,34 +99,59 @@ export function TestimonialsSection({
     title,
 }: {
     title?: string;
-
     testimonialsData?: any[];
 }) {
-    const [emblaApi, setEmblaApi] = useState<any>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
-
-    const onSelect = useCallback(() => {
-        if (!emblaApi) return;
-        setCurrentIndex(emblaApi.selectedScrollSnap());
-    }, [emblaApi]);
-
-    useEffect(() => {
-        if (!emblaApi) return;
-        onSelect();
-        emblaApi.on("select", onSelect);
-        emblaApi.on("reInit", onSelect);
-    }, [emblaApi, onSelect]);
-
-    const handlePrev = useCallback(() => {
-        if (emblaApi) emblaApi.scrollPrev();
-    }, [emblaApi]);
+    const [isHovered, setIsHovered] = useState(false);
+    const touchStartX = useRef<number | null>(null);
 
     const handleNext = useCallback(() => {
-        if (emblaApi) emblaApi.scrollNext();
-    }, [emblaApi]);
+        setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS_DATA.length);
+    }, []);
+
+    const handlePrev = useCallback(() => {
+        setCurrentIndex(
+            (prev) =>
+                (prev - 1 + TESTIMONIALS_DATA.length) % TESTIMONIALS_DATA.length
+        );
+    }, []);
+
+    const handleSelectPerson = useCallback((index: number) => {
+        setCurrentIndex(index);
+    }, []);
+
+    // Autoplay: changes slide every 6 seconds, pauses on mouse hover
+    useEffect(() => {
+        if (isHovered) return;
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS_DATA.length);
+        }, 6000);
+        return () => clearInterval(timer);
+    }, [isHovered, currentIndex]);
+
+    // Touch swipe support on mobile
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        if (touchStartX.current === null) return;
+        const touchEndX = e.changedTouches[0].clientX;
+        const diff = touchStartX.current - touchEndX;
+        if (Math.abs(diff) > 40) {
+            if (diff > 0) {
+                handleNext();
+            } else {
+                handlePrev();
+            }
+        }
+        touchStartX.current = null;
+    };
+
+    const t = TESTIMONIALS_DATA[currentIndex];
 
     return (
-        <section className="relative w-full overflow-hidden py-10 md:py-12 xl:py-20 font-poppins max-w-[1530px] mx-auto">
+        <section className="relative w-full overflow-hidden pb-10 md:pb-12 xl:pb-20 font-poppins max-w-[1530px] mx-auto md:pt-8">
             <div className="max-w-[1530px] mx-auto relative z-10 px-4 md:px-8 xl:px-16">
                 <SectionTitle
                     title={
@@ -138,24 +162,30 @@ export function TestimonialsSection({
                     className="mb-6 md:mb-8 text-center md:text-left"
                 />
 
-                {/* Content Container (Card Background Removed) */}
-                <div className="relative w-full py-2">
-                    <Carousel
-                        showArrows={false}
-                        showDots={false}
-                        autoplayDelay={6000}
-                        fade={true}
-                        options={{ loop: true, watchDrag: false, duration: 20 }}
-                        setApi={setEmblaApi}
-                        className="w-full"
-                    >
-                        {TESTIMONIALS_DATA.map((t, index) => (
-                            <div
+                {/* Content Container with Pause-on-Hover and Touch-Swipe */}
+                <div
+                    className="relative w-full py-2"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                >
+                    <div className="w-full min-h-[360px] md:min-h-[330px] lg:min-h-[310px]">
+                        <AnimatePresence mode="wait">
+                            <motion.div
                                 key={t.id}
-                                className="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-8 min-h-[340px] md:min-h-[320px] lg:min-h-[300px] w-full"
+                                initial={{ opacity: 0, y: 6 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -6 }}
+                                transition={{ duration: 0.35, ease: "easeOut" }}
+                                className="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-8 w-full"
                             >
-                                {/* Left Side: Student Photo */}
-                                <div className="w-full lg:w-[260px] xl:w-[300px] shrink-0 relative aspect-square sm:aspect-[4/4.5] lg:aspect-auto rounded-[16px] overflow-hidden">
+                                {/* Left Side: Student Photo (Clickable to switch) */}
+                                <div
+                                    onClick={handleNext}
+                                    className="w-full lg:w-[260px] xl:w-[300px] shrink-0 relative aspect-square sm:aspect-[4/4.5] lg:aspect-auto rounded-[16px] overflow-hidden cursor-pointer group select-none"
+                                    title="Click to view next testimonial"
+                                >
                                     <Image
                                         src={t.image}
                                         alt={resolveHomeTestimonialAlt(
@@ -164,9 +194,10 @@ export function TestimonialsSection({
                                         )}
                                         fill
                                         sizes="(max-width: 1024px) 100vw, 300px"
-                                        className="object-cover rounded-[16px]"
-                                        loading="lazy"
+                                        className="object-cover rounded-[16px] transition-transform duration-500 group-hover:scale-105"
+                                        priority
                                     />
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 pointer-events-none rounded-[16px]" />
                                 </div>
 
                                 {/* Center Vertical Divider Line (Desktop) */}
@@ -205,56 +236,39 @@ export function TestimonialsSection({
                                         <p className="text-white/70 font-poppins text-xs md:text-sm font-light mt-1 mb-4">
                                             {t.role}
                                         </p>
-
-                                        {/* View All Testimonials button */}
-                                        {/* <button className="flex items-center mt-8 gap-3 text-white hover:text-brand-gold transition-colors group cursor-pointer w-fit mx-auto md:mx-0">
-                                            <div className="w-6 h-6 rounded-full border border-white flex items-center justify-center group-hover:border-brand-gold group-hover:bg-brand-gold/10 transition-all">
-                                                <ArrowRight size={14} />
-                                            </div>
-                                            <span className="font-poppins font-medium text-xs md:text-[15px] tracking-wide">
-                                                View All Testimonials
-                                            </span>
-                                        </button> */}
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </Carousel>
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
 
-                    {/* Navigation Controls */}
-                    <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-8 w-full mt-4">
-                        {/* Spacer matching photo and divider on desktop */}
-                        <div className="hidden lg:block w-[260px] xl:w-[300px] shrink-0" />
-                        <div className="hidden lg:block w-[1px] shrink-0" />
-
-                        {/* Controls aligned with the author details / name */}
-                        <div className="flex-1 flex items-center justify-center md:justify-start gap-2 relative z-30 md:-ml-2.5">
-                            <button
-                                type="button"
-                                onClick={handlePrev}
-                                className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center text-white transition-all cursor-pointer shrink-0 z-30"
-                                aria-label="Previous testimonial"
-                            >
-                                <ChevronLeft size={20} />
-                            </button>
-
-                            <span className="w-[70px] text-center text-white/90 text-sm md:text-base font-mono tracking-wider font-medium select-none whitespace-nowrap">
-                                {String(currentIndex + 1).padStart(2, "0")} /{" "}
-                                {String(TESTIMONIALS_DATA.length).padStart(
-                                    2,
-                                    "0"
-                                )}
-                            </span>
-
-                            <button
-                                type="button"
-                                onClick={handleNext}
-                                className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center text-white transition-all cursor-pointer shrink-0 z-30"
-                                aria-label="Next testimonial"
-                            >
-                                <ChevronRight size={20} />
-                            </button>
-                        </div>
+                    {/* Student Thumbnail Avatars Row (Click any photo to view testimonial) */}
+                    <div className="w-full flex items-center justify-start sm:justify-center gap-2.5 sm:gap-3 md:gap-8 mt-8 md:mt-10 overflow-x-auto py-3 px-2 no-scrollbar">
+                        {TESTIMONIALS_DATA.map((item, idx) => {
+                            const isActive = currentIndex === idx;
+                            return (
+                                <button
+                                    key={item.id}
+                                    type="button"
+                                    onClick={() => handleSelectPerson(idx)}
+                                    className={`relative shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full overflow-hidden transition-all duration-300 cursor-pointer ${
+                                        isActive
+                                            ? "ring-2 ring-brand-gold scale-110 opacity-100"
+                                            : "opacity-40 hover:opacity-90 ring-2 ring-brand-gold/20 hover:scale-105"
+                                    }`}
+                                    aria-label={`View ${item.name}'s testimonial`}
+                                    title={`${item.name} - ${item.role}`}
+                                >
+                                    <Image
+                                        src={item.image}
+                                        alt={item.name}
+                                        fill
+                                        sizes="(max-width: 768px) 56px, 64px"
+                                        className="object-cover"
+                                    />
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

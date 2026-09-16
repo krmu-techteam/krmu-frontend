@@ -4915,23 +4915,23 @@ body:before {
 /* Custom scrollbar for news left list */
 .news-custom-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.2);
 }
 
 .news-custom-scrollbar::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
 }
 
 .news-custom-scrollbar::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
 }
 
 .news-custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 9999px;
 }
 
 .news-custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgba(229, 168, 49, 0.6);
+    background: rgba(255, 255, 255, 0.8);
 }

@@ -1,7 +1,13 @@
 "use client";
 
 import { useMemo, useRef, useEffect } from "react";
-import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+    CalendarDays,
+    Building2,
+    Users,
+    ChevronLeft,
+    ChevronRight,
+} from "lucide-react";
 import Image from "next/image";
 import SectionDivider from "@/components/common/SectionDivider";
 import Link from "next/link";
@@ -13,6 +19,35 @@ import {
 } from "@/features/home";
 import { resolveHomeEventAlt } from "@/alt-text";
 
+const getActionIcon = (label: string) => {
+    const normalized = label.toLowerCase();
+    if (normalized.includes("event")) {
+        return (
+            <CalendarDays
+                size={17}
+                className="text-white group-hover:text-white/90 transition-all duration-300 shrink-0"
+            />
+        );
+    }
+    if (normalized.includes("facilit")) {
+        return (
+            <Building2
+                size={17}
+                className="text-white group-hover:text-white/90 transition-all duration-300 shrink-0"
+            />
+        );
+    }
+    if (normalized.includes("club") || normalized.includes("societ")) {
+        return (
+            <Users
+                size={17}
+                className="text-white group-hover:text-white/90 transition-all duration-300 shrink-0"
+            />
+        );
+    }
+    return null;
+};
+
 export function LifeAtKRMUSection() {
     // Row 1 (Top Slider): Campus Life, Labs & Academics (/images/home/whykrmu)
     const row1 = LIFE_AT_KRMU_GALLERY;
@@ -23,10 +58,112 @@ export function LifeAtKRMUSection() {
     const row1Items = useMemo(() => [...row1, ...row1, ...row1], [row1]);
     const row2Items = useMemo(() => [...row2, ...row2, ...row2], [row2]);
 
+    const topSliderRef = useRef<HTMLDivElement>(null);
+    const isTopHoveredRef = useRef(false);
+    const isTopManualScrollingRef = useRef(false);
+    const manualTopScrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
     const bottomSliderRef = useRef<HTMLDivElement>(null);
     const isHoveredRef = useRef(false);
     const isManualScrollingRef = useRef(false);
     const manualScrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    // Continuous smooth movement + loop for top slider
+    useEffect(() => {
+        const slider = topSliderRef.current;
+        if (!slider) return;
+
+        const updateInitialPosition = () => {
+            if (slider && slider.scrollWidth > 0) {
+                const singleSetWidth = slider.scrollWidth / 3;
+                if (slider.scrollLeft === 0) {
+                    slider.scrollLeft = singleSetWidth;
+                }
+            }
+        };
+
+        const initTimer = setTimeout(updateInitialPosition, 50);
+
+        let animationFrameId: number;
+        const speed = 0.8;
+
+        const step = () => {
+            if (
+                !isTopHoveredRef.current &&
+                !isTopManualScrollingRef.current &&
+                slider &&
+                slider.scrollWidth > 0
+            ) {
+                const singleSetWidth = slider.scrollWidth / 3;
+                slider.scrollLeft += speed;
+
+                if (slider.scrollLeft >= singleSetWidth * 2) {
+                    slider.scrollLeft -= singleSetWidth;
+                } else if (slider.scrollLeft <= 0) {
+                    slider.scrollLeft += singleSetWidth;
+                }
+            }
+            animationFrameId = requestAnimationFrame(step);
+        };
+
+        animationFrameId = requestAnimationFrame(step);
+
+        const handleResize = () => {
+            if (!slider || slider.scrollWidth === 0) return;
+            const singleSetWidth = slider.scrollWidth / 3;
+            if (
+                slider.scrollLeft < singleSetWidth * 0.3 ||
+                slider.scrollLeft > singleSetWidth * 2.2
+            ) {
+                slider.scrollLeft = singleSetWidth;
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            clearTimeout(initTimer);
+            cancelAnimationFrame(animationFrameId);
+            window.removeEventListener("resize", handleResize);
+            if (manualTopScrollTimeoutRef.current) {
+                clearTimeout(manualTopScrollTimeoutRef.current);
+            }
+        };
+    }, [row1Items]);
+
+    const handleTopScroll = (direction: "left" | "right") => {
+        const slider = topSliderRef.current;
+        if (!slider) return;
+
+        isTopManualScrollingRef.current = true;
+        if (manualTopScrollTimeoutRef.current) {
+            clearTimeout(manualTopScrollTimeoutRef.current);
+        }
+
+        const singleSetWidth = slider.scrollWidth / 3;
+
+        if (direction === "left" && slider.scrollLeft < singleSetWidth * 0.4) {
+            slider.scrollLeft += singleSetWidth;
+        } else if (
+            direction === "right" &&
+            slider.scrollLeft > singleSetWidth * 1.8
+        ) {
+            slider.scrollLeft -= singleSetWidth;
+        }
+
+        const firstCard = slider.firstElementChild as HTMLElement;
+        const cardWidth = firstCard ? firstCard.offsetWidth : 460;
+        const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
+
+        slider.scrollBy({
+            left: scrollAmount,
+            behavior: "smooth",
+        });
+
+        manualTopScrollTimeoutRef.current = setTimeout(() => {
+            isTopManualScrollingRef.current = false;
+        }, 800);
+    };
 
     // Continuous smooth movement + loop for bottom celebrity slider
     useEffect(() => {
@@ -173,7 +310,7 @@ export function LifeAtKRMUSection() {
     );
 
     return (
-        <section className="relative w-full overflow-hidden py-10 md:py-12 xl:py-20 font-poppins">
+        <section className="relative w-full overflow-hidden pt-10 md:pt-12 xl:pt-20 font-poppins">
             <div className="container mx-auto px-0 md:px-12 relative z-10 text-center mb-6 md:mb-8 lg:mb-12">
                 <SectionTitle title="Why KRMU?" />
                 <p className="font-poppins font-[275] text-[24px] md:text-[42px] leading-[1.2] md:leading-[30px] tracking-normal text-white mb-6">
@@ -195,13 +332,10 @@ export function LifeAtKRMUSection() {
                         <Link
                             key={idx}
                             href={item.url || "#"}
-                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[3px] border border-white hover:border-white/90 bg-white/2 hover:bg-white/5 text-white hover:text-white/90 text-[14px] md:text-[15px] font-medium tracking-wide transition-all duration-300 group shadow-sm"
+                            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-[3px] border border-white hover:border-white/90 bg-white/2 hover:bg-white/5 text-white hover:text-white/90 text-[14px] md:text-[15px] font-medium tracking-wide transition-all duration-300 group shadow-sm"
                         >
+                            {getActionIcon(item.label)}
                             <span>{item.label}</span>
-                            <ArrowUpRight
-                                size={17}
-                                className="text-white group-hover:text-white/90 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
-                            />
                         </Link>
                     ))}
                 </div>
@@ -235,11 +369,46 @@ export function LifeAtKRMUSection() {
                     }}
                 />
 
-                {/* Top Row: Moves Right to Left */}
-                <div className="flex w-max krmu-marquee-top">
-                    {row1Items.map((img, index) =>
-                        renderCard(img, `top-${img.id}-${index}`)
-                    )}
+                {/* Top Row Container with Red Navigation Arrows */}
+                <div
+                    className="relative w-full overflow-hidden group/top-slider mb-3 md:mb-4"
+                    onMouseEnter={() => (isTopHoveredRef.current = true)}
+                    onMouseLeave={() => (isTopHoveredRef.current = false)}
+                    onTouchStart={() => (isTopHoveredRef.current = true)}
+                    onTouchEnd={() => (isTopHoveredRef.current = false)}
+                >
+                    {/* Centered 1440px Container for Navigation Arrows */}
+                    <div className="pointer-events-none absolute inset-0 z-30 flex items-center justify-between max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 w-full">
+                        {/* Left Red Arrow Button */}
+                        <button
+                            type="button"
+                            onClick={() => handleTopScroll("left")}
+                            aria-label="Previous campus slide"
+                            className="pointer-events-auto w-9 h-9 rounded-[2px] bg-[#CB000D] hover:bg-[#b0000b] active:bg-[#900009] text-white flex items-center justify-center transition-all duration-200 cursor-pointer hover:scale-110 active:scale-95"
+                        >
+                            <ChevronLeft className="w-5 h-5 text-white drop-shadow" />
+                        </button>
+
+                        {/* Right Red Arrow Button */}
+                        <button
+                            type="button"
+                            onClick={() => handleTopScroll("right")}
+                            aria-label="Next campus slide"
+                            className="pointer-events-auto w-9 h-9 rounded-[2px] bg-[#CB000D] hover:bg-[#b0000b] active:bg-[#900009] text-white flex items-center justify-center transition-all duration-200 cursor-pointer hover:scale-110 active:scale-95"
+                        >
+                            <ChevronRight className="w-5 h-5 text-white drop-shadow" />
+                        </button>
+                    </div>
+
+                    {/* Top Slider Track */}
+                    <div
+                        ref={topSliderRef}
+                        className="flex w-full overflow-x-auto scrollbar-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden select-none"
+                    >
+                        {row1Items.map((img, index) =>
+                            renderCard(img, `top-${img.id}-${index}`)
+                        )}
+                    </div>
                 </div>
 
                 {/* Bottom Row Container with Red Navigation Arrows */}
@@ -284,86 +453,6 @@ export function LifeAtKRMUSection() {
                     </div>
                 </div>
             </div>
-
-            {/* Feature Cards Grid - Hidden for now as requested */}
-            {/*
-            <div className="max-w-[1530px] mx-auto relative z-10 px-4 md:px-8 xl:px-16">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 xl:gap-5">
-                    {LIFE_AT_KRMU_CAROUSEL_CONFIGS.map((card, i) => {
-                        const cardAlt = card.label
-                            .toLowerCase()
-                            .includes("facilit")
-                            ? resolveHomeFacilityAlt(
-                                  "Facilities",
-                                  "State-of-the-art infrastructure and facilities at K.R. Mangalam University"
-                              )
-                            : card.label.toLowerCase().includes("club") ||
-                                card.label.toLowerCase().includes("societ")
-                              ? resolveHomeClubAlt(
-                                    "Clubs & Societies",
-                                    "KRMU student club/society activity"
-                                )
-                              : resolveHomeEventAlt(
-                                    card.label,
-                                    `Campus event at KRMU — ${card.label}`
-                                );
-
-                        return (
-                            <div
-                                key={i}
-                                className="group flex flex-col rounded-[4px] overflow-hidden bg-[#0A1017]"
-                            >
-                                <div className="relative aspect-4/5 w-full flex flex-col justify-end overflow-hidden">
-                                    <Image
-                                        src={card.bg}
-                                        alt={cardAlt}
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                        className="object-cover group-hover:scale-105 transition-transform duration-1000"
-                                        loading="lazy"
-                                    />
-                                    <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent"></div>
-
-                                    <div className="relative p-5 md:p-6 xl:p-8">
-                                        <h3 className="text-white font-poppins font-light text-[28px] xl:text-[42px] leading-[32px] xl:leading-[47px] mb-2 md:mb-4 whitespace-pre-line group-hover:text-brand-gold transition-colors">
-                                            {card.title
-                                                .split("\n")
-                                                .map((line, idx) => (
-                                                    <span
-                                                        key={idx}
-                                                        className={
-                                                            line === card.accent
-                                                                ? "text-brand-gold"
-                                                                : ""
-                                                        }
-                                                    >
-                                                        {line}
-                                                        {idx !== 2 ? "\n" : ""}
-                                                    </span>
-                                                ))}
-                                        </h3>
-                                    </div>
-                                </div>
-                                <Link
-                                    href={card.url || "#"}
-                                    className="block w-full transition-colors duration-300"
-                                >
-                                    <div className="flex items-center justify-between px-8 py-5">
-                                        <span className="text-white font-poppins font-medium text-xl md:text-[24px] leading-tight group-hover:text-brand-gold transition-colors">
-                                            {card.label}
-                                        </span>
-                                        <ArrowUpRight
-                                            size={20}
-                                            className="text-white group-hover:text-brand-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300"
-                                        />
-                                    </div>
-                                </Link>
-                            </div>
-                        );
-                    })}
-                </div>
-            </div>
-            */}
             <SectionDivider />
         </section>
     );
