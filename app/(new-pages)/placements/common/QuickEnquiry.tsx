@@ -30,7 +30,7 @@ const QuickEnquiry = () => {
 
           {/* CTA */}
           <Link
-            href="https://calendly.com/training-cdc-krmangalam/new-meeting"
+            href="#"
             target="_blank"
             className="text-[#0C2441] bg-[#FBF8F3] text-lg inline-flex items-center justify-center px-6 py-3.5 font-medium font-sans font-medium"
           >

@@ -15,7 +15,7 @@ const TrainingMatrix = () => {
     const previousIndex =
       currentIndex === 0 ? trainingMatrix.length - 1 : currentIndex - 1;
 
-    setActiveSchool(trainingMatrix[previousIndex]); 
+    setActiveSchool(trainingMatrix[previousIndex]);
   };
 
   const handleNext = () => {
@@ -26,7 +26,7 @@ const TrainingMatrix = () => {
   };
 
   return (
-    <section className="bg-[#fdfaf5] px-5 pb-10 xl:pb-20 xl:px-0">
+    <section className="bg-[#fdfaf5] px-5 py-10 xl:py-20 xl:px-0">
       <div className="mx-auto w-full max-w-7xl">
         {/* Header */}
         <div className="flex flex-col gap-3 sm:gap-4 md:flex-row md:items-end md:justify-between">
@@ -94,6 +94,7 @@ const TrainingMatrix = () => {
                   sm:tracking-[0.15em]
                   md:text-base
                   lg:text-lg
+                  cursor-pointer
 
                   ${
                     isActive
@@ -168,6 +169,7 @@ const TrainingMatrix = () => {
                 transition-colors
                 hover:bg-white hover:text-[#0d2948]
                 sm:h-9 sm:w-9
+                 cursor-pointer
               "
             >
               <ChevronLeft
@@ -182,6 +184,7 @@ const TrainingMatrix = () => {
               onClick={handleNext}
               aria-label="Next school"
               className="
+               cursor-pointer
                 flex h-8 w-8
                 items-center justify-center
                 border border-white/60
@@ -285,7 +288,7 @@ const TrainingMatrix = () => {
                         text-[10px]
                         leading-[1.5]
                         text-[#222]
-                        sm:text-[11px]
+                        sm:text-sm
                       "
                     >
                       {semester.modules.map((module, moduleIndex) => (
@@ -311,7 +314,7 @@ const TrainingMatrix = () => {
               text-[10px]
               leading-5
               text-[#222]
-              sm:text-xs
+              sm:text-sm
             "
           >
             Each card marks a semester carrying a scheduled training module.

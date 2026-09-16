@@ -2,7 +2,7 @@ import Divider from "../../common/Divider";
 
 const AveragePackageGrowth = () => {
   return (
-    <section className="px-5 xl:px-0">
+    <section className="px-5 xl:px-0 py-10 sm:py-12 md:py-20">
       <div className="max-w-7xl mx-auto w-full ">
         <div className="flex items-end gap-3 sm:gap-5">
           {/* 2023-24 */}
@@ -44,7 +44,6 @@ const AveragePackageGrowth = () => {
             </span>
           </div>
         </div>
-        <Divider />
       </div>
     </section>
   );

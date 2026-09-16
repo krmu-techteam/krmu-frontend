@@ -9,7 +9,7 @@ const newsreader = Newsreader({
 const Registration = () => {
   return (
     <section>
-      <div className="container mx-auto w-full max-w-[1287px] border-b border-[#ccc] px-5 py-10 sm:py-12 md:py-14 lg:py-16 xl:px-0 xl:py-20">
+      <div className="container mx-auto w-full max-w-[1287px]  px-5 py-10 sm:py-12 md:py-14 lg:py-16 xl:px-0 xl:py-20">
         {/* Heading */}
         <h2
           className={`${newsreader.className} mb-8 text-4xl font-medium leading-[1.15] sm:text-5xl md:mb-10 md:text-[48px] lg:text-6xl lg:leading-[70px]`}
@@ -18,9 +18,9 @@ const Registration = () => {
         </h2>
 
         {/* Main Content */}
-        <div className="flex flex-col gap-10 md:gap-12 lg:flex-row lg:items-start lg:gap-14 xl:gap-16">
+        <div className="flex flex-col gap-10 md:gap-12 lg:flex-row lg:items-start lg:gap-14 xl:gap-20">
           {/* Left Column */}
-          <div className="w-full lg:w-1/3">
+          <div className="w-full lg:w-1/2">
             {/* Eligibility */}
             <div>
               <h4 className="text-sm font-medium uppercase leading-snug tracking-[0.18em] text-[#7A1F2B] sm:text-base">
@@ -77,7 +77,7 @@ const Registration = () => {
           </div>
 
           {/* Right Column */}
-          <div className="w-full lg:w-2/3">
+          <div className="w-full lg:w-1/2">
             <div className="w-full bg-[#fefcfa] p-6 sm:p-8 md:p-10 lg:p-10 xl:p-12">
               <h4 className="mb-8 text-sm font-medium uppercase leading-snug tracking-[0.18em] text-[#7A1F2B] sm:mb-10 sm:text-base">
                 Timeline & requirements

@@ -13,7 +13,7 @@ import SkilledPartnerCard from "../../common/cards/SkilledPartnerCard";
 
 const SkilledPartners = () => {
   return (
-    <section className="bg-[#fdfaf5] px-5 pb-10 xl:pb-20 xl:px-0">
+    <section className="bg-[#fdfaf5] px-5 py-10 xl:py-20 xl:px-0">
       <div className="mx-auto w-full max-w-7xl">
         <Carousel
           opts={{

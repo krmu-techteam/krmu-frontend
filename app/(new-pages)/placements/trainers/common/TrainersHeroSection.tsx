@@ -10,16 +10,17 @@ const TrainersHeroSection = () => {
           bg-[url('/placements/trainers/trainers-hero-bg.jpg')]
           bg-cover bg-left-top
           pt-28 sm:pt-32 lg:pt-40
+          bg-black
         "
       >
         <div
           className=" 
             relative z-10 mx-auto flex w-full max-w-7xl
-            flex-col items-center
+            flex-col items-center 
             gap-8
             px-5
             sm:gap-10
-            md:flex-row md:items-end md:gap-6
+            md:flex-row  md:gap-6
             lg:gap-10
             xl:px-0
           "
@@ -56,7 +57,7 @@ const TrainersHeroSection = () => {
                 lg:text-[65px]
               "
             >
-              Your Career Starts Here. 92% placed.
+              Build skills that get you hired.
             </h1>
 
             <p
@@ -68,22 +69,16 @@ const TrainersHeroSection = () => {
                 md:mx-0
               "
             >
-              Industry-aligned training in communication, professional
-              presence and workplace readiness — mapped across every school,
-              program and semester.
+              Industry-aligned training in communication, professional presence
+              and workplace readiness — mapped across every school, program and
+              semester.
             </p>
 
             <div className="flex justify-center md:justify-start">
               <Link
                 href="https://calendly.com/training-cdc-krmangalam/new-meeting"
                 className="
-                  inline-flex w-full max-w-[224px]
-                  items-center justify-center
-                  bg-white px-5 py-3.5
-                  text-sm font-medium text-black
-                  transition-opacity hover:opacity-90
-                  sm:py-4
-                "
+                  bg-white text-black px-14 py-3 font-medium text-lg"
                 target="_blank"
               >
                 Book your slot

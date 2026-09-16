@@ -18,11 +18,8 @@ const policyItems = [
 
 const PolicyConduct = () => {
   return (
-    <section className="bg-[#fdfaf5] px-5 py-12 sm:py-16 md:py-20 lg:py-24 xl:px-0">
+    <section className="px-5 py-12 sm:py-16 xl:py-20 xl:px-0">
       <div className="mx-auto w-full max-w-7xl">
-        {/* Top Border */}
-        <div className="mb-10 border-t border-[#d8d5d0] sm:mb-12 md:mb-16 lg:mb-20" />
-
         {/* Header */}
         <div className="mb-8 sm:mb-10 md:mb-12">
           <span
@@ -120,18 +117,6 @@ const PolicyConduct = () => {
             </article>
           ))}
         </div>
-
-        {/* Bottom Border */}
-        <div
-          className="
-            mt-10
-            border-b
-            border-[#d8d5d0]
-            sm:mt-12
-            md:mt-16
-            lg:mt-20
-          "
-        />
       </div>
     </section>
   );

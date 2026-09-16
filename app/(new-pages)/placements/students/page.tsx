@@ -21,6 +21,7 @@ import Script from "next/script";
 import { studentStories } from "../common/StudentSuccessStories";
 import { trainers } from "../trainers/constant";
 import { advisoryBoardData } from "@/lib/constants/advisory-board-data";
+import Divider from "../common/Divider";
 
 export async function generateMetadata() {
   return {
@@ -151,14 +152,38 @@ const page = () => {
       />
       <main className="bg-[#fbf8f3] font-poppins">
         <StudentHeroSection />
+        <div className="max-w-7xl">
+          <Divider borderColor="#ccc" />
+        </div>
         <Registration />
+        <div className="max-w-7xl mx-auto">
+          <Divider borderColor="#ccc" />
+        </div>
         <DriveCalendar />
+        <div className="max-w-7xl">
+          <Divider borderColor="#ccc" />
+        </div>
         <SelectionProcess />
+        <div className="max-w-7xl">
+          <Divider borderColor="#ccc" />
+        </div>
         <PolicyConduct />
+        <div className="max-w-7xl">
+          <Divider borderColor="#ccc" />
+        </div>
         {/* <CDCTeam /> */}
         <MeetCDCTeam teamMembers={cdcTeamMembers} />
+        <div className="max-w-7xl">
+          <Divider borderColor="#ccc" />
+        </div>
         <Trainers />
+        <div className="max-w-7xl">
+          <Divider borderColor="#ccc" />
+        </div>
         <CorporateAdvisoryBoard />
+        <div className="max-w-7xl">
+          <Divider borderColor="#ccc" />
+        </div>
         <QuickEnquiry />
       </main>
     </>

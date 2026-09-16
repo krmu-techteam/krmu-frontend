@@ -154,7 +154,10 @@ const DriveCalendar = () => {
   };
 
   return (
-    <section className="px-5 py-12 sm:py-16 md:py-20 lg:py-24 xl:px-0" id="drive_calendar_scroll">
+    <section
+      className="px-5 py-12 sm:py-16 xl:py-20 xl:px-0"
+      id="drive_calendar_scroll"
+    >
       <div className="mx-auto w-full max-w-7xl">
         {/* =====================================================
             HEADER
@@ -276,18 +279,25 @@ const DriveCalendar = () => {
               records.map((record) => (
                 <div
                   key={record.id}
+                  // grid-cols-[minmax(150px,1.6fr)_minmax(80px,.8fr)_minmax(150px,1.3fr)_minmax(90px,.8fr)_minmax(140px,1.15fr)_minmax(75px,.6fr)]
                   className="
-                      grid
-                      grid-cols-[minmax(150px,1.6fr)_minmax(80px,.8fr)_minmax(150px,1.3fr)_minmax(90px,.8fr)_minmax(140px,1.15fr)_minmax(75px,.6fr)]
-                      items-start
-                      gap-4
-                      border-b
-                      border-[#d8d5d0]
-                      py-6
-                      lg:gap-6
-                      lg:py-7
-                      xl:gap-8
-                    "
+                    grid
+                    grid-cols-1
+                    sm:grid-cols-2
+                    md:grid-cols-3
+                    lg:grid-cols-4
+                    xl:grid-cols-6
+                    items-start
+                    gap-4
+                    border-b
+                    border-[#d8d5d0]
+                    py-6
+                    sm:gap-5
+                    sm:py-6
+                    lg:gap-6
+                    lg:py-7
+                    xl:gap-8
+                  "
                 >
                   {/* Company */}
 
@@ -339,7 +349,7 @@ const DriveCalendar = () => {
 
                   <div className="min-w-0 text-right">
                     <span className="font-poppins text-xs font-semibold text-[#111] lg:text-sm">
-                      {record.status || "-"}
+                      {record.engagement_type || "-"}
                     </span>
                   </div>
                 </div>
@@ -543,19 +553,7 @@ const DriveCalendar = () => {
           <Link
             href="https://calendly.com/training-cdc-krmangalam/new-meeting"
             className="
-              w-full
-              max-w-[220px]
-              bg-[#001836]
-              px-8
-              py-3.5
-              font-poppins
-              text-sm
-              font-medium
-              text-white
-              text-center inline-block
-              transition-colors
-              hover:bg-[#0d2948]
-              sm:py-4
+           bg-[#001836] text-white px-14 py-3 font-medium text-lg shadow-[0px_6px_16px_rgba(0,23,51,0.25)] inline-block
             "
             target="_blank"
           >

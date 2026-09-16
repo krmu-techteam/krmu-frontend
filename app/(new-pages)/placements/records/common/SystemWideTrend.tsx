@@ -23,7 +23,6 @@ const SystemWideTrend = () => {
             </p>
           </div>
         </div>
-        <Divider />
       </div>
     </section>
   );

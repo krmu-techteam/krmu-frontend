@@ -7,10 +7,11 @@ import {
 } from "@/components/ui/carousel";
 import { interviewSuccessStories } from "../constant";
 import InterviewSuccessStoryCard from "./InterviewSuccessStoryCard";
+import Divider from "./Divider";
 
 const InterviewSuccessStories = () => {
   return (
-    <section className="pb-10 md:pb-20 px-5 xl:px-0">
+    <section className="py-10 md:py-20 px-5 xl:px-0">
       <div className="max-w-7xl mx-auto w-full font-poppins">
         <div className="">
           <h5 className="text-[#7A1F2B] text-xs tracking-[2px] mb-2.5 uppercase">
@@ -23,8 +24,8 @@ const InterviewSuccessStories = () => {
         </div>
         <div className="relative mt-10">
           <Carousel
-            opts={{ 
-              align: "start", 
+            opts={{
+              align: "start",
               loop: true,
             }}
             className="w-full relative"

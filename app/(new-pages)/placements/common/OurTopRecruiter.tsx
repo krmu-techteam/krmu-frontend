@@ -58,58 +58,15 @@ const OurTopRecruiter = () => {
         </div>
 
         {/* Infinite Logo Carousel */}
-        <div className="relative mt-8 overflow-hidden sm:mt-10">
-          <div className="grid grid-cols-6">
-            {/* {ourTopRecruitersLogos.map((logo, index) => (
-              <div
-                key={`${logo.alt}-${index}`}
-                className="
-                  flex
-                  h-[85px]
-                  w-[50vw]
-                  shrink-0
-                  items-center
-                  justify-center
-                  border
-                  border-[#ccc]
-                  px-6
-
-                  sm:h-[100px]
-                  sm:w-[33.333vw]
-                  sm:px-8
-
-                  md:w-[25vw]
-
-                  lg:h-[110px]
-                  lg:w-[16.6667vw]
-                  lg:px-10
-                "
-              >
-                <Image
-                  src={logo.imageUrl}
-                  alt={logo.alt}
-                  width={logo.width}
-                  height={logo.height}
-                  className="
-                    h-auto
-                    max-h-10
-                    w-auto
-                    max-w-[90%]
-                    object-contain
-
-                    sm:max-h-12
-                    md:max-h-14
-                  "
-                />
-              </div>
-            ))} */}
+        <div className="relative mt-8 overflow-hidden">
+          <div className="grid grid-cols-6 border border-[#ccc]">
             {ourTopRecruitersLogos &&
               ourTopRecruitersLogos.map((logo, index) => {
                 return (
                   <div
                     key={index}
-                    className="border border-[#ccc] flex items-center justify-center p-5"
-                  >
+                    className="flex items-center justify-center p-5 border border-[#ccc]"
+                  > 
                     <Image
                       src={logo.imageUrl}
                       alt={logo.alt || ""}
@@ -121,9 +78,6 @@ const OurTopRecruiter = () => {
               })}
           </div>
         </div>
-
-        {/* Divider */}
-        <Divider />
       </div>
     </section>
   );

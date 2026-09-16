@@ -7,7 +7,7 @@ const InterviewReady = () => {
   const [playVideo, setPlayVideo] = useState(false);
 
   return (
-    <section className="px-5 xl:px-0 pb-10 md:pb-20 mt-5">
+    <section className="px-5 xl:px-0 py-10 md:py-20">
       <div className="mx-auto w-full max-w-7xl">
         {/* Heading */}
         <div className="mb-5 text-center">
@@ -18,7 +18,7 @@ const InterviewReady = () => {
           <h2 className="font-newsreader text-3xl font-semibold leading-tight text-[#001836] sm:text-4xl md:text-5xl">
             How KRMU Gets You Interview Ready
           </h2>
-        </div> 
+        </div>
 
         {/* Video */}
         <div className="relative w-full overflow-hidden">

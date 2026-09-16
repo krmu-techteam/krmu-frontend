@@ -44,7 +44,7 @@ const PlacementResources = () => {
   return (
     <section className="pb-10 md:pb-20">
       <div className="max-w-7xl mx-auto w-full font-poppins">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t bordert-t-[#777] border-b border-b-[#ddd] ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t bordert-t-[#545454] border-b border-b-[#ddd] ">
           {placementResources.map((resource) => (
             <article
               key={resource.id}
@@ -56,7 +56,7 @@ const PlacementResources = () => {
                 px-6
                 flex flex-col
                 border-b sm:border-b-0
-                border-[#ddd]
+                border-[#ccc]
                 lg:border-r
                 lg:last:border-r-0
               "
@@ -77,7 +77,7 @@ const PlacementResources = () => {
               </p>
 
               {/* Link */}
-              <div className="mt-5 md:mt-auto md:pt-8">
+              <div className="mt-5 md:mt-auto md:pt-10">
                 <Link
                   href={resource.link}
                   className="

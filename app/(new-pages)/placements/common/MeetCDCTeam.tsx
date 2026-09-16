@@ -19,7 +19,7 @@ const MeetCDCTeam = ({ teamMembers }: MeetCDCTeamProps) => {
   const hasMembers = teamMembers.length > 0;
 
   return (
-    <section className="px-5 pb-10 md:pb-20 lg:px-0">
+    <section className="px-5 py-10 md:py-20 lg:px-0">
       <div className="mx-auto w-full max-w-7xl font-poppins">
         {/* Heading */}
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-8">

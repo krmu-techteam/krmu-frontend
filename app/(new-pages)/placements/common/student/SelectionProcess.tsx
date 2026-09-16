@@ -2,26 +2,22 @@ const selectionStages = [
   {
     number: "01",
     title: "Pre-placement Talk",
-    description:
-      "Company overview, role expectations and the process ahead.",
+    description: "Company overview, role expectations and the process ahead.",
   },
   {
     number: "02",
     title: "Written Test",
-    description:
-      "Aptitude, technical and domain-specific screening rounds.",
+    description: "Aptitude, technical and domain-specific screening rounds.",
   },
   {
     number: "03",
     title: "Group Discussion",
-    description:
-      "Communication and reasoning assessed in a group setting.",
+    description: "Communication and reasoning assessed in a group setting.",
   },
   {
     number: "04",
     title: "Interview",
-    description:
-      "Technical and HR rounds — what to prepare and expect.",
+    description: "Technical and HR rounds — what to prepare and expect.",
   },
 ];
 
@@ -42,7 +38,7 @@ const supportItems = [
 
 const SelectionProcess = () => {
   return (
-    <section className="bg-[#fdfaf5] px-5 py-12 sm:py-16 md:py-20 lg:py-24 xl:px-0">
+    <section className="bg-[#fdfaf5] px-5 py-10 sm:py-16 xl:py-20 xl:px-0">
       <div className="mx-auto w-full max-w-7xl">
         {/* ================= HEADER ================= */}
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
@@ -188,7 +184,7 @@ const SelectionProcess = () => {
                         leading-tight
                         text-[#111]
                         sm:text-2xl
-                        md:text-[25px]
+                        md:text-3xl
                       "
                     >
                       {stage.title}
@@ -202,7 +198,7 @@ const SelectionProcess = () => {
                         text-xs
                         leading-[1.5]
                         text-[#222]
-                        sm:text-sm
+                        sm:text-lg
                         md:mx-auto
                       "
                     >
@@ -246,11 +242,12 @@ const SelectionProcess = () => {
               className="
                 font-poppins
                 text-[9px]
-                font-medium
+                
                 uppercase
                 tracking-[0.16em]
                 text-white/80
-                sm:text-[10px]
+                sm:text-base
+                mb-1.5 inline-block
               "
             >
               Support
@@ -298,7 +295,7 @@ const SelectionProcess = () => {
                   uppercase
                   tracking-[0.16em]
                   text-[#7A1F2B]
-                  sm:text-[10px]
+                  sm:text-xs
                 "
               >
                 {item.label}
@@ -311,7 +308,7 @@ const SelectionProcess = () => {
                   font-poppins
                   text-xs
                   leading-5
-                  text-[#444]
+                  text-[#4D4D4D]
                   sm:text-sm
                   md:text-base
                 "

@@ -37,7 +37,8 @@ interface ApiResponse {
   message?: string;
 }
 
-const INITIAL_RECORDS = 7;
+const INITIAL_RECORDS = 10;
+const VIEW_ALL_LIMIT = 1000;
 
 const PlacementRecords = () => {
   const [records, setRecords] = useState<PlacementRecord[]>([]);
@@ -84,13 +85,10 @@ const PlacementRecords = () => {
           params.set("search", debouncedSearch.trim());
         }
 
-        const response = await fetch(
-          `${API_URL}?${params.toString()}`,
-          {
-            method: "GET",
-            cache: "no-store",
-          },
-        );
+        const response = await fetch(`${API_URL}?${params.toString()}`, {
+          method: "GET",
+          cache: "no-store",
+        });
 
         if (!response.ok) {
           throw new Error("Failed to fetch placement records");
@@ -109,9 +107,7 @@ const PlacementRecords = () => {
       } catch (err) {
         console.error(err);
 
-        setError(
-          "Unable to load placement records. Please try again.",
-        );
+        setError("Unable to load placement records. Please try again.");
 
         setRecords([]);
         setPagination(null);
@@ -127,9 +123,7 @@ const PlacementRecords = () => {
   // SEARCH
   // ==========================
 
-  const handleSearch = (
-    event: React.ChangeEvent<HTMLInputElement>,
-  ) => {
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value);
 
     // Always go back to first page when searching
@@ -146,26 +140,28 @@ const PlacementRecords = () => {
   const handleViewAll = () => {
     if (limit === INITIAL_RECORDS) {
       setPage(1);
-      setLimit(100);
+      setLimit(VIEW_ALL_LIMIT);
     } else {
       setPage(1);
       setLimit(INITIAL_RECORDS);
     }
   };
 
-  const showViewAll =
-    pagination && pagination.total > INITIAL_RECORDS;
+  const showViewAll = pagination && pagination.total > INITIAL_RECORDS;
 
-  const isShowingAll =
-    limit === 100 ||
-    (pagination &&
-      pagination.total <= limit);
+  const isShowingAll = limit !== INITIAL_RECORDS;
+
+  // ==========================
+  // RENDER
+  // ==========================
 
   return (
     <section className="px-5 xl:px-0 py-10 sm:py-14 md:py-20">
       <div className="max-w-7xl mx-auto w-full">
+        {/* ==========================
+            HEADER
+        ========================== */}
 
-        {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 md:gap-5 mb-6 md:mb-8">
           <h2 className="font-newsreader text-4xl sm:text-5xl md:text-[55px] leading-tight text-[#001836]">
             Placement Records
@@ -176,7 +172,10 @@ const PlacementRecords = () => {
           </span>
         </div>
 
-        {/* Search */}
+        {/* ==========================
+            SEARCH
+        ========================== */}
+
         <div className="relative mb-2">
           <input
             type="text"
@@ -199,10 +198,29 @@ const PlacementRecords = () => {
           />
         </div>
 
-        {/* Records */}
-        <div className="border-t border-[#555]">
+        {/* ==========================
+            RECORDS CONTAINER
+        ========================== */}
 
-          {/* Loading */}
+        <div
+          className={`
+    border-t border-[#555]
+    ${
+      isShowingAll
+        ? `
+          max-h-[500px]
+          overflow-y-auto
+          placement-records-scroll
+          pr-8
+        `
+        : ""
+    }
+  `}
+        >
+          {/* ==========================
+              LOADING
+          ========================== */}
+
           {loading && (
             <>
               {Array.from({ length: 5 }).map((_, index) => (
@@ -221,26 +239,26 @@ const PlacementRecords = () => {
                     md:py-4
                   "
                 >
-                  {/* Student */}
+                  {/* Student Skeleton */}
                   <div className="col-span-2 md:col-span-1">
                     <div className="h-6 w-40 bg-gray-200 animate-pulse mb-2" />
 
                     <div className="h-4 w-56 bg-gray-200 animate-pulse" />
                   </div>
 
-                  {/* Role */}
+                  {/* Role Skeleton */}
                   <div className="flex flex-col justify-center">
                     <div className="h-3 w-20 bg-gray-200 animate-pulse mb-2" />
 
                     <div className="h-4 w-28 bg-gray-200 animate-pulse" />
                   </div>
 
-                  {/* CTC */}
+                  {/* CTC Skeleton */}
                   <div className="flex flex-col justify-center">
                     <div className="h-4 w-20 bg-gray-200 animate-pulse" />
                   </div>
 
-                  {/* Company */}
+                  {/* Company Skeleton */}
                   <div className="col-span-2 md:col-span-1 flex flex-col justify-center md:items-end">
                     <div className="h-4 w-32 bg-gray-200 animate-pulse" />
                   </div>
@@ -249,14 +267,20 @@ const PlacementRecords = () => {
             </>
           )}
 
-          {/* Error */}
+          {/* ==========================
+              ERROR
+          ========================== */}
+
           {!loading && error && (
             <div className="py-10 sm:py-12 text-center text-xs sm:text-sm text-red-500">
               {error}
             </div>
           )}
 
-          {/* Records */}
+          {/* ==========================
+              RECORDS
+          ========================== */}
+
           {!loading &&
             !error &&
             records.map((record) => (
@@ -275,8 +299,10 @@ const PlacementRecords = () => {
                   md:py-4
                 "
               >
+                {/* ==========================
+                    STUDENT
+                ========================== */}
 
-                {/* Student */}
                 <div className="col-span-2 md:col-span-1">
                   <h3 className="font-newsreader text-xl sm:text-2xl md:text-2xl leading-tight text-[#12233F] mb-1">
                     {record.student_name || "-"}
@@ -287,7 +313,10 @@ const PlacementRecords = () => {
                   </p>
                 </div>
 
-                {/* Role */}
+                {/* ==========================
+                    ROLE
+                ========================== */}
+
                 <div className="flex flex-col justify-center">
                   <span className="text-[9px] sm:text-[10px] md:text-sm tracking-[0.15em] sm:tracking-[0.2em] uppercase text-[#7A1F2B] mb-1">
                     {record.offer_type || "-"}
@@ -298,7 +327,10 @@ const PlacementRecords = () => {
                   </span>
                 </div>
 
-                {/* CTC */}
+                {/* ==========================
+                    CTC
+                ========================== */}
+
                 <div className="flex flex-col justify-center">
                   <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em] text-[#667085] md:hidden mb-1">
                     CTC
@@ -309,7 +341,10 @@ const PlacementRecords = () => {
                   </span>
                 </div>
 
-                {/* Company */}
+                {/* ==========================
+                    COMPANY
+                ========================== */}
+
                 <div className="col-span-2 md:col-span-1 flex flex-col justify-center md:items-end">
                   <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em] text-[#667085] md:hidden mb-1">
                     Company
@@ -319,34 +354,36 @@ const PlacementRecords = () => {
                     {record.company || "-"}
                   </span>
                 </div>
-
               </div>
             ))}
 
-          {/* No Results */}
-          {!loading &&
-            !error &&
-            records.length === 0 && (
-              <div className="py-10 sm:py-12 text-center text-xs sm:text-sm text-[#667085]">
-                No placement records found.
-              </div>
-            )}
+          {/* ==========================
+              NO RESULTS
+          ========================== */}
+
+          {!loading && !error && records.length === 0 && (
+            <div className="py-10 sm:py-12 text-center text-xs sm:text-sm text-[#667085]">
+              No placement records found.
+            </div>
+          )}
         </div>
 
-        {/* Pagination */}
+        {/* ==========================
+            PAGINATION
+        ========================== */}
+
         {!loading &&
           !error &&
           pagination &&
           pagination.totalPages > 1 &&
           limit === INITIAL_RECORDS && (
             <div className="flex justify-center items-center gap-3 mt-7 sm:mt-8">
+              {/* Previous */}
 
               <button
                 type="button"
                 disabled={!pagination.hasPreviousPage}
-                onClick={() =>
-                  setPage((prev) => Math.max(1, prev - 1))
-                }
+                onClick={() => setPage((prev) => Math.max(1, prev - 1))}
                 className="
                   border border-[#d8d8d8]
                   px-4 py-2
@@ -362,16 +399,18 @@ const PlacementRecords = () => {
                 Previous
               </button>
 
+              {/* Page */}
+
               <span className="text-sm text-[#667085]">
                 {pagination.page} / {pagination.totalPages}
               </span>
 
+              {/* Next */}
+
               <button
                 type="button"
                 disabled={!pagination.hasNextPage}
-                onClick={() =>
-                  setPage((prev) => prev + 1)
-                }
+                onClick={() => setPage((prev) => prev + 1)}
                 className="
                   border border-[#d8d8d8]
                   px-4 py-2
@@ -386,19 +425,19 @@ const PlacementRecords = () => {
               >
                 Next
               </button>
-
             </div>
           )}
 
-        {/* View All */}
-        {!loading &&
-          !error &&
-          showViewAll && (
-            <div className="flex justify-center mt-7 sm:mt-8">
-              <button
-                type="button"
-                onClick={handleViewAll}
-                className="
+        {/* ==========================
+            VIEW ALL / SHOW LESS
+        ========================== */}
+
+        {!loading && !error && showViewAll && (
+          <div className="flex justify-center mt-7 sm:mt-8">
+            <button
+              type="button"
+              onClick={handleViewAll}
+              className="
                   border border-[#d8d8d8]
                   px-5 sm:px-6
                   py-2.5 sm:py-3
@@ -408,17 +447,13 @@ const PlacementRecords = () => {
                   hover:text-white
                   transition-colors
                 "
-              >
-                {isShowingAll
-                  ? "Show less"
-                  : "View all Records"}
-              </button>
-            </div>
-          )}
-
+            >
+              {isShowingAll ? "Show less" : "View all Records"}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
 };
-
 export default PlacementRecords;

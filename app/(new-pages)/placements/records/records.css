@@ -29,3 +29,37 @@
 .animate-logo-scroll {
   animation: logo-scroll 15s linear infinite;
 }
+/* ================================
+   Placement Records Scroll Design
+================================ */
+
+.placement-records-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #12233f #eeeeee;
+
+  /* Smooth scrolling */
+  scroll-behavior: smooth;
+
+  /* Keep content from touching scrollbar */
+  padding-right: 4px;
+}
+
+/* Chrome / Edge / Safari */
+.placement-records-scroll::-webkit-scrollbar {
+  width: 7px;
+}
+
+.placement-records-scroll::-webkit-scrollbar-track {
+  background: #eeeeee;
+  border-radius: 999px;
+}
+
+.placement-records-scroll::-webkit-scrollbar-thumb {
+  background: #12233f;
+  border-radius: 999px;
+  border: 1px solid #eeeeee;
+}
+
+.placement-records-scroll::-webkit-scrollbar-thumb:hover {
+  background: #7a1f2b;
+}

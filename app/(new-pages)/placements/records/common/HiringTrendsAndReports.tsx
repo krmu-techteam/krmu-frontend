@@ -9,10 +9,8 @@ const HiringTrendsAndReports = () => {
       <div className="max-w-7xl mx-auto w-full ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14 lg:gap-16">
           <SectorWiseHiring sectors={hiringSectors} />
-
           <OfficialReports reports={reports} />
         </div>
-        <Divider />
       </div>
     </section>
   );

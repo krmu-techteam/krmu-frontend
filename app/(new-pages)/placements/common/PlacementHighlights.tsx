@@ -27,7 +27,8 @@ const PlacementHighlights = () => {
                 flex flex-col items-center justify-center
                 p-5
                 xl:py-10
-                px-2
+                first:xl:pl-0
+                not-first:xl:px-2
              
               "
             >
@@ -39,7 +40,7 @@ const PlacementHighlights = () => {
                 {stat.value}
               </strong>
 
-              <span className="text-xs uppercase tracking-wider text-[#333] text-center mt-2 font-poppins">
+              <span className="text-base uppercase tracking-wider text-[#333] text-center mt-2 font-poppins">
                 {stat.label}
               </span>
             </li>

@@ -14,7 +14,7 @@ const PlacementHighlights = () => {
                 px-3 py-5
                 text-center
                 sm:min-h-[140px]
-                sm:px-4
+                
                 md:min-h-[148px]
 
                 /* Mobile: vertical divider between columns */
@@ -39,7 +39,7 @@ const PlacementHighlights = () => {
                 className="
                   font-newsreader
                   text-[28px]
-                  font-semibold
+                  font-bold
                   leading-none
                   text-[#001836]
                   sm:text-[36px]
@@ -64,7 +64,7 @@ const PlacementHighlights = () => {
                   sm:text-xs
                   md:text-sm
                   lg:text-base
-                  lg:tracking-[0.14em]
+                  lg:tracking-[1.4px]
                 "
               >
                 {stat.label}

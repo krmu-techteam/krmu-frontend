@@ -2,7 +2,7 @@ import { trainingModules } from "../constant";
 
 const TrainingModules = () => {
   return (
-    <section className="bg-[#fdfaf5] px-5 xl:px-0 pb-10 xl:pb-20">
+    <section className="bg-[#fdfaf5] px-5 xl:px-0 py-10 xl:py-20">
       <div className="mx-auto w-full max-w-7xl">
         {/* Header */}
         <div className="mb-8 sm:mb-10 md:mb-12">

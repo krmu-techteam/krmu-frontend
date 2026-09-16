@@ -27,8 +27,22 @@ const OutcomesBySchool = () => {
             className="w-full relative"
           >
             <div className="absolute z-10 right-0 -top-12 w-[100px] hidden md:block">
-              <CarouselPrevious className="left-0 bg-black text-white w-10 h-10" />
-              <CarouselNext className="right-0 bg-black text-white w-10 h-10" />
+              <CarouselPrevious className="left-0 text-white w-10 h-10 cursor-pointer rounded-full
+                    bg-black
+                    text-white
+                    border-0
+                    shadow-none
+                    hover:bg-black/80
+                    hover:text-white
+                    disabled:opacity-40" />
+              <CarouselNext className="right-0 w-10 h-10 cursor-pointer rounded-full
+                    bg-black
+                    text-white
+                    border-0
+                    shadow-none
+                    hover:bg-black/80
+                    hover:text-white
+                    disabled:opacity-40" />
             </div>
             <CarouselContent className="-ml-5">
               {outcomesSchools.map((school, i) => (
@@ -47,8 +61,8 @@ const OutcomesBySchool = () => {
             </CarouselContent>
             <div className="flex md:hidden items-center justify-center mt-10">
               <div className="absolute z-10  w-[100px]">
-                <CarouselPrevious className="left-0 bg-black text-white w-10 h-10" />
-                <CarouselNext className="right-0 bg-black text-white w-10 h-10" />
+                <CarouselPrevious className="left-0 bg-black text-white w-10 h-10 cursor-pointer" />
+                <CarouselNext className="right-0 bg-black text-white w-10 h-10 cursor-pointer" />
               </div>
             </div>
           </Carousel>

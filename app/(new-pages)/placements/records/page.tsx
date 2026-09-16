@@ -7,10 +7,11 @@ import AveragePackageGrowth from "./common/AveragePackageGrowth";
 import Definitions from "./common/Definitions";
 import HeroSection from "./common/HeroSection";
 import HiringTrendsAndReports from "./common/HiringTrendsAndReports";
-import PlacementRecords from "./common/PlacementRecords";
 import SchoolWiseCohort from "./common/SchoolWiseCohort";
 import SystemWideTrend from "./common/SystemWideTrend";
 import Script from "next/script";
+import Divider from "../common/Divider";
+import PlacementRecords from "./common/PlacementRecords";
 
 export async function generateMetadata() {
   return {
@@ -99,10 +100,25 @@ const page = () => {
       <main className="bg-[#fbf8f3] font-poppins">
         <HeroSection />
         <SystemWideTrend />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <AveragePackageGrowth />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <SchoolWiseCohort />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div> 
         <HiringTrendsAndReports />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <Definitions />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <PlacementRecords />
         <QuickEnquiry />
       </main>

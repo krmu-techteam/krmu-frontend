@@ -16,7 +16,7 @@ const SchoolWiseCohort = () => {
   const hasSlider = SchoolWiseSummary.length > 3;
 
   return (
-    <section className="px-5 xl:px-0 pt-10 sm:pt-14 md:pt-20">
+    <section className="px-5 xl:px-0 py-10 sm:py-14 md:py-20">
       <div className="max-w-7xl mx-auto w-full">
         {/* =========================
             HEADING
@@ -183,11 +183,6 @@ const SchoolWiseCohort = () => {
             </Carousel>
           </div>
         )}
-
-        {/* =========================
-            DIVIDER
-        ========================= */}
-        <Divider />
       </div>
     </section>
   );

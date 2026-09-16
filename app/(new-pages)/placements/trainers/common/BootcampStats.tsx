@@ -2,7 +2,7 @@ import { bootcampStats } from "../constant";
 
 const BootcampStats = () => {
   return (
-    <section className="bg-[#fdfaf5] px-5 pb-10 xl:pb-20 xl:px-0">
+    <section className="bg-[#fdfaf5] px-5 py-10 xl:py-20 xl:px-0">
       <div className="mx-auto w-full max-w-7xl">
         {/* Heading */}
         <div className="mb-6 sm:mb-8">
@@ -79,7 +79,7 @@ const BootcampStats = () => {
               <div
                 className="
                   font-newsreader
-                  text-3xl font-semibold
+                  text-3xl font-bold
                   leading-none
                   text-[#001836]
                   sm:text-4xl

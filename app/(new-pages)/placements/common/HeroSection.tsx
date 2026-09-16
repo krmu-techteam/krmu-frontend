@@ -9,10 +9,10 @@ const HeroSection = () => {
         alt="Hero Background"
         fill
         className="object-cover object-left w-full"
-        priority 
+        priority  
       /> */}
       <div className="max-w-7xl mx-auto w-full z-10 relative flex flex-col md:flex-row items-center lg:items-start px-5 xl:px-0 gap-5 sm:gap-0">
-        <div className="w-full md:w-1/2 font-poppins pt-5">
+        <div className="w-full md:w-1/2 font-poppins pt-20">
           <p className="text-base font-medium tracking-[7px] uppercase text-[#8d5552] mb-1.5">
             Placement
           </p>

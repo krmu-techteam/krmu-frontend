@@ -16,14 +16,12 @@ import { trainers, Trainer } from "../constant";
 import TrainerCard from "../../common/cards/TrainerCard";
 
 const Trainers = () => {
-  const [selectedTrainer, setSelectedTrainer] =
-    useState<Trainer | null>(null);
+  const [selectedTrainer, setSelectedTrainer] = useState<Trainer | null>(null);
 
   return (
     <>
       <section
         className="
-          bg-[#fdfaf5]
           px-5
           pb-10
           pt-10
@@ -103,9 +101,7 @@ const Trainers = () => {
                   >
                     <TrainerCard
                       {...trainer}
-                      onViewProfile={() =>
-                        setSelectedTrainer(trainer)
-                      }
+                      onViewProfile={() => setSelectedTrainer(trainer)}
                     />
                   </CarouselItem>
                 ))}
@@ -132,10 +128,7 @@ const Trainers = () => {
                   xl:left-[-32px]
                 "
               >
-                <ChevronLeft
-                  className="size-4"
-                  strokeWidth={1.5}
-                />
+                <ChevronLeft className="size-4" strokeWidth={1.5} />
               </CarouselPrevious>
 
               {/* Next */}
@@ -159,16 +152,10 @@ const Trainers = () => {
                   xl:right-[-32px]
                 "
               >
-                <ChevronRight
-                  className="size-4"
-                  strokeWidth={1.5}
-                />
+                <ChevronRight className="size-4" strokeWidth={1.5} />
               </CarouselNext>
             </Carousel>
           </div>
-
-          {/* Bottom Border */}
-          <div className="mt-8 border-b border-[#d8d5d0] sm:mt-10 md:mt-12" />
         </div>
       </section>
 
@@ -227,10 +214,7 @@ const Trainers = () => {
                 hover:text-white
               "
             >
-              <X
-                className="size-5"
-                strokeWidth={1.5}
-              />
+              <X className="size-5" strokeWidth={1.5} />
             </button>
 
             {/* Content */}

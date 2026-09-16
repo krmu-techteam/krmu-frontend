@@ -1,11 +1,16 @@
-import React from "react";
+type Props = {
+  borderColor?: string;
+  className?: string;
+};
 
-const Divider = () => {
+const Divider = ({ borderColor = "#545454", className = "" }: Props) => {
   return (
-    <>
-      {/* Divider */}
-      <hr className="mt-10 border-0 border-t border-[#ccc] sm:mt-14 md:mt-16 lg:mt-20" />{" "}
-    </>
+    <hr
+      className={`border-0 border-t ${className}`}
+      style={{
+        borderTopColor: borderColor,
+      }}
+    />
   );
 };
 

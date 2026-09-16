@@ -14,6 +14,7 @@ import TrainingModules from "./common/TrainingModules";
 import Script from "next/script";
 import { trainers } from "./constant";
 import { createPersonGraphSchema } from "../constant";
+import Divider from "../common/Divider";
 
 export async function generateMetadata() {
   return {
@@ -124,10 +125,25 @@ const page = () => {
         <TrainersHeroSection />
         <PlacementHighlights />
         <TrainingJourney />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <TrainingModules />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <TrainingMatrix />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <BootcampStats />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <Trainers />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <SkilledPartners />
         <CareerAccelerationCTA />
       </main>

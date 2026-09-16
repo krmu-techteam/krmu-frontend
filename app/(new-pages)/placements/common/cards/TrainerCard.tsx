@@ -72,6 +72,7 @@ const TrainerCard = ({
             transition-colors
             hover:text-[#001836]
             sm:text-sm
+            cursor-pointer
           "
         >
           View Profile

@@ -10,7 +10,7 @@ const HeroSection = () => {
             Placement Records
           </p>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[68px]  font-semibold text-[#001836] mb-2 md:mb-5 font-newsreader">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[68px]  font-bold text-[#001836] mb-2 md:mb-5 font-newsreader">
             Every offer, every number, verifiable.
           </h1>
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const StudentHeroSection = () => {
   return (
-    <section className="relative pt-24 sm:pt-28 md:pt-32 xl:pt-40 px-5">
+    <section className="relative pt-24 sm:pt-28 md:pt-32 xl:pt-40 px-5 pb-10 xl:pb-20">
       <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-8 md:gap-10 lg:gap-14">
         {/* Content */}
         <div className="w-full md:w-1/2">
@@ -22,13 +22,7 @@ const StudentHeroSection = () => {
           <Link
             href="https://calendly.com/training-cdc-krmangalam/new-meeting"
             className="
-                  inline-flex w-full max-w-[224px]
-                  items-center justify-center
-                  bg-[#001836] px-5 py-3.5
-                  text-sm font-medium text-white
-                  transition-opacity hover:opacity-90
-                  sm:py-4
-                "
+                bg-[#001836] text-white px-14 py-3 font-medium text-lg shadow-[0px_6px_16px_rgba(0,23,51,0.25)] inline-block"
             target="_blank"
           >
             Book your slot

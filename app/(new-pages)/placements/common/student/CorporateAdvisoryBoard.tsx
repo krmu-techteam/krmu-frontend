@@ -42,7 +42,6 @@ const CorporateAdvisoryBoard = () => {
   return (
     <section
       className="
-        bg-[#f7f4ef]
         px-5
         py-10
         sm:py-12

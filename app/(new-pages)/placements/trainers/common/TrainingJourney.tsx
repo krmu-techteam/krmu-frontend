@@ -132,7 +132,6 @@ const TrainingJourney = () => {
             </div>
           ))}
         </div>
-        <Divider />
       </div>
     </section>
   );

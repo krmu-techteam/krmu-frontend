@@ -21,6 +21,7 @@ import {
   interviewSuccessStories,
 } from "./constant";
 import Script from "next/script";
+import Divider from "./common/Divider";
 
 export async function generateMetadata() {
   return {
@@ -157,7 +158,13 @@ const page = () => {
         <OutcomesBySchool />
         <StudentSuccessStories />
         <OurTopRecruiter />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <InterviewReady />
+        <div className="max-w-7xl mx-auto">
+          <Divider />
+        </div>
         <InterviewSuccessStories />
         <PlacementResources />
         <MeetCDCTeam teamMembers={cdcTeamMembers} />

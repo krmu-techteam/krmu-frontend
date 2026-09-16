@@ -13,7 +13,7 @@ const Definitions = () => {
     : DefinitionsData.slice(0, 3);
 
   return (
-    <section className="px-5 xl:px-0">
+    <section className="px-5 xl:px-0 py-10 sm:py-14 md:py-20">
       <div className="mx-auto w-full max-w-7xl">
         {/* Heading */}
         <div className="max-w-3xl">
@@ -76,7 +76,6 @@ const Definitions = () => {
             </button>
           </div>
         )}
-        <Divider />
       </div>
     </section>
   );
