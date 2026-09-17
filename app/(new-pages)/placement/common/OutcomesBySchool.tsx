@@ -1,0 +1,75 @@
+import { outcomesSchools } from "../constant";
+import SchoolOutcomeCard from "./cards/SchoolOutcomeCard";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+const OutcomesBySchool = () => {
+  return (
+    <section className="px-5 xl:px-0 pb-10 md:pb-20">
+      <div className="max-w-7xl mx-auto w-full">
+        <div>
+          <h2 className="text-4xl md:text-5xl font-semibold text-[#001836] mb-[38px] font-newsreader">
+            School-Wise Placement Outcomes
+          </h2>
+        </div>
+        <div className="relative">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full relative"
+          >
+            <div className="absolute z-10 right-0 -top-12 w-[100px] hidden md:block">
+              <CarouselPrevious className="left-0 text-white w-10 h-10 cursor-pointer rounded-full
+                    bg-black
+                    border-0
+                    shadow-none
+                    hover:bg-black/80
+                    hover:text-white
+                    disabled:opacity-40" />
+              <CarouselNext className="right-0 w-10 h-10 rounded-full
+                    bg-black
+                    text-white
+                    border-0
+                    shadow-none
+                    hover:bg-black/80
+                    hover:text-white
+                    cursor-pointer
+                    disabled:opacity-40" />
+            </div>
+            <CarouselContent className="-ml-5">
+              {outcomesSchools.map((school, i) => (
+                <CarouselItem
+                  key={i}
+                  className="pl-5 basis-full md:basis-1/2 lg:basis-1/3"
+                >
+                  <SchoolOutcomeCard
+                    code={school.code}
+                    schoolName={school.schoolName}
+                    placementRate={school.placementRate}
+                    medianCtc={school.medianCtc}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex md:hidden items-center justify-center mt-10">
+              <div className="absolute z-10  w-[100px]">
+                <CarouselPrevious className="left-0 bg-black text-white w-10 h-10 cursor-pointer" />
+                <CarouselNext className="right-0 bg-black text-white w-10 h-10 cursor-pointer" />
+              </div>
+            </div>
+          </Carousel>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default OutcomesBySchool;
