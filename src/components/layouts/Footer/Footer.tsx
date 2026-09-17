@@ -439,21 +439,10 @@ const Footer = async () => {
 
                                 <Button
                                     href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
-                                    className="mt-6 !border-[2px] !border-white !font-semibold !text-white !px-1 !text-[11.5px] md:!text-[14px] hidden md:inline-flex"
+                                    className="mt-6 !border-[2px] !border-white !font-semibold !text-white px-4 lg:!px-2   xl:!px-4 !text-[10px] xl:!text-[14px] hidden md:inline-flex"
                                 >
                                     Download Handbook
                                 </Button>
-                                <Image
-                                    src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/footer_logos_d944bc560c.svg"
-                                    width={560}
-                                    height={160}
-                                    alt={resolveHomeFooterAlt(
-                                        "footer_logos_d944bc560c.svg",
-                                        "NAAC and accreditation logos for K.R. Mangalam University"
-                                    )}
-                                    className="w-auto h-auto max-w-[280px] mt-6 hidden md:block"
-                                    unoptimized
-                                />
                             </div>
 
                             {/* Column 2: Quick Links */}
@@ -753,19 +742,17 @@ const Footer = async () => {
                             </div>
 
                             <div className="flex justify-start md:justify-end text-md gap-4 mb-4 md:mb-0">
-                                <Link
-                                    href="/under-construction"
-                                    className="text-white/90 hover:text-white transition-colors"
-                                >
-                                    Privacy Policy
-                                </Link>
-                                <span className="text-white/10">|</span>
-                                <Link
-                                    href="/under-construction"
-                                    className="text-white/90 hover:text-white transition-colors"
-                                >
-                                    Terms & Conditions
-                                </Link>
+                                <Image
+                                    src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/footer_logos_d944bc560c.svg"
+                                    width={560}
+                                    height={160}
+                                    alt={resolveHomeFooterAlt(
+                                        "footer_logos_d944bc560c.svg",
+                                        "NAAC and accreditation logos for K.R. Mangalam University"
+                                    )}
+                                    className="w-auto h-auto max-w-[280px] hidden md:block"
+                                    unoptimized
+                                />
                             </div>
                         </div>
                     </div>
