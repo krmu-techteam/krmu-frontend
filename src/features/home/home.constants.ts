@@ -53,7 +53,7 @@ export const JOURNEY_VIDEOS: JourneyVideoType[] = [
     },
     {
         id: 3,
-        title: "Big Move! EY India Partners with K. R. Mangalam University",
+        title: "Big Move! EY India Partners with K.R. Mangalam University",
         thumbnail: "/modules/home/journey/j3.png",
         duration: "2:35",
         link: "https://www.youtube.com/watch?v=PtA6I56Zuyc",

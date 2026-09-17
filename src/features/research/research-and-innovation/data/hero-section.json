@@ -1,339 +1,339 @@
 {
-  "data": {
-    "heroSection": {
-      "title": "Innovating for a Better Tomorrow",
-      "description": "Join us at K.R. Mangalam University, where our research ambitions shape the future, and our pursuit of knowledge creates a lasting impact. At the heart of K.R. Mangalam University lies a profound commitment to research excellence. Our scholarly endeavors are not just about advancing academic knowledge; they are about solving real-world problems, contributing to societal development, and shaping future innovations. Our research spans diverse domains, blending traditional disciplines with cutting-edge studies in AI, materials science, and social welfare. We offer an environment that nurtures creativity, encourages interdisciplinary collaboration, an fosters a global perspective in addressing the challenges of our times.",
-      "imageUrl": "/research/hero.webp",
-      "links": [
-        {
-          "label": "Policies",
-          "url": "/PDF"
+    "data": {
+        "heroSection": {
+            "title": "Innovating for a Better Tomorrow",
+            "description": "Join us at K.R. Mangalam University, where our research ambitions shape the future, and our pursuit of knowledge creates a lasting impact. At the heart of K.R. Mangalam University lies a profound commitment to research excellence. Our scholarly endeavors are not just about advancing academic knowledge; they are about solving real-world problems, contributing to societal development, and shaping future innovations. Our research spans diverse domains, blending traditional disciplines with cutting-edge studies in AI, materials science, and social welfare. We offer an environment that nurtures creativity, encourages interdisciplinary collaboration, an fosters a global perspective in addressing the challenges of our times.",
+            "imageUrl": "/research/hero.webp",
+            "links": [
+                {
+                    "label": "Policies",
+                    "url": "/PDF"
+                },
+                {
+                    "label": "Publications",
+                    "url": "/PDF/publications"
+                },
+                {
+                    "label": "Conferences",
+                    "url": "/PDF/conferences"
+                }
+            ]
         },
-        {
-          "label": "Publications",
-          "url": "/PDF/publications"
+        "rdcSection": {
+            "title": "Research and Development Cell (RDC)",
+            "description_one": "The Research and Development Cell, led by the esteemed Dean of Research, is the fulcrum of our research activities. With dedicated Associate and Assistant Deans, the RDC oversees diverse research initiatives, promoting interdisciplinary studies and innovative research methodologies. The cell plays a pivotal role in advancing our research agenda, fostering academic partnerships, and enhancing the university’s research profile on the global stage.",
+            "description_two": "K.R. Mangalam University maintains its own comprehensive data repository encompassing all its publications, spanning journal articles, patents, books, and book chapters. Faculty members responsible for these publications personally upload their details onto our research application. Moreover, the application also facilitates the submission of reimbursement requests for conference registrations, fees for workshops, seminars, and memberships. Additionally, it serves as a platform for managing in-house conferences and both applied and granted projects.",
+            "imageUrl": "/research/seema.webp",
+            "deanInfo": {
+                "name": "Dr. Seema Raj",
+                "designation": "Dean Research"
+            }
         },
-        {
-          "label": "Conferences",
-          "url": "/PDF/conferences"
+        "researchDeanMessageSection": {
+            "title": "Message from the Dean Research",
+            "subTitle": "Greetings from Team Research & Development of (RDC) Cell",
+            "description_one": "In recent past, there is a marked change in global environment where the capacity to innovate and commercialize new high-tech products has taken the shape of a distributed global network. Sensing this pulse, India has recognized the strategic and economic importance of competitiveness and knowledge economy. India strives to be ‘Vishwaguru’ and to be placed in top three Economic leaders of World. Knowledge and only knowledge through innovations in every walk of life can be the sole path to achieve this Goal.",
+            "description_two": "Research, Development and Innovation have become integral part of the journey towards it. It is high time that apart from Public Funded R&D Institutes, Industries, Institutes of National Importance and all other Higher Education Institutes come forward to take the challenge and contribute significantly for development of Society as a whole.",
+            "description_three": "We are also looking forward to have very active collaboration with top ranking Academic Institutions and Industries to have outcome based projects. We encourage our Faculty members to have Consultancy projects and Collaborative Projects. We maintain high standards of Integrity and Ethics and comply with ethical codes of research.",
+            "description_four": "KRMU envisages to align its R&D endevours in line with Nation’s aspirations such as ‘Atma Nirbhar Bharat’, ‘Technology-enabled development, energy transition and climate action’, ‘Swachh Bharat’, ‘Ayushman Bharat’, ‘Atal Innovation Mission’ ‘Skill Development’ etc."
+        },
+        "teamRdcSection": {
+            "title": "Team RDC",
+            "teamRDCMembers": [
+                {
+                    "name": "Prof. (Dr.) Pawan Kumar (PhD)",
+                    "designation": "Associate Dean Research",
+                    "facultyUrl": "/faculty/dr-pawan-kumar",
+                    "facultyImageUrl": "/teamrdc/pawan.webp"
+                },
+                {
+                    "name": "Dr. Seema Raj (M.Phil, PhD)",
+                    "designation": "Dean Research",
+                    "facultyUrl": "/faculty/dr-seema-raj",
+                    "facultyImageUrl": "/teamrdc/seema.png"
+                },
+                {
+                    "name": "Dr. Surendra Kumar Yadav (PhD)",
+                    "designation": "Associate Dean PhD Programme",
+                    "facultyUrl": "/faculty/dr-surendra",
+                    "facultyImageUrl": "/teamrdc/surendra.webp"
+                },
+                {
+                    "name": "Dr. Prabhakar Bhandari (PhD)",
+                    "designation": "Research Finance Officer",
+                    "facultyUrl": "/faculty/dr-prabhakar",
+                    "facultyImageUrl": "/teamrdc/prabhakar.webp"
+                },
+                {
+                    "name": "Dr. Shivani Wadhwa (PhD)",
+                    "designation": "Research Communication Officer",
+                    "facultyUrl": "/faculty/dr-shivani-wadhwa",
+                    "facultyImageUrl": "/teamrdc/wadhwa.png"
+                },
+                {
+                    "name": "Aman Vishwakarma",
+                    "designation": "MIS Executive",
+                    "facultyUrl": "",
+                    "facultyImageUrl": "/teamrdc/aman.png"
+                }
+            ]
+        },
+        "cifSection": {
+            "title": "Central Instrumentation Facility (CIF)",
+            "description_one": "K.R. Mangalam University boasts many specialised research laboratories, each equipped with modern technology to support a wide array of academic and scientific inquiries. Our labs cater to diverse disciplines, enabling groundbreaking research and innovation.",
+            "description_two": "At the heart of our research infrastructure is the Central Instrumentation Facility (CIF). This premier facility is a resource hub for our researchers, providing access to high-end instruments for advanced experimental and analytical work. Key instruments available at CIF include HPLC, UV-VIS spectrophotometer.",
+            "images": [
+                {
+                    "url": "/cif/item-1.webp"
+                },
+                {
+                    "url": "/cif/item-2.webp"
+                },
+                {
+                    "url": "/cif/item-3.webp"
+                },
+                {
+                    "url": "/cif/item-4.webp"
+                }
+            ],
+            "linkInfo": {
+                "label": "Know More",
+                "url": "/cif"
+            }
+        },
+        "keicSection": {
+            "title": "K.R. Mangalam Entrepreneurship and Innovation Center (KEIC)",
+            "description": "KEIC is the cornerstone of our innovation ecosystem. This dynamic center offers an incubation program to nurture start-ups, a state-of-the-art maker lab for prototyping and creative exploration, and coworking spaces that encourage collaborative ventures. The center is also home to our pioneering BBA in Entrepreneurship program, developed in collaboration with the GCEC Global Foundation [https://www.gcecglobal.com], preparing the next generation of entrepreneurial leaders.",
+            "images": [
+                {
+                    "url": "/keic/keic-1.webp"
+                },
+                {
+                    "url": "/keic/keic-2.webp"
+                },
+                {
+                    "url": "/keic/keic-3.webp"
+                },
+                {
+                    "url": "/keic/keic-4.webp"
+                }
+            ],
+            "linkInfo": {
+                "label": "Know More",
+                "url": "/keic"
+            }
+        },
+        "iprLegalEthicsSection": {
+            "title": "IPR, Legal & Ethical Matters Cell",
+            "description_one": "Intellectual property rights are crucial in fostering innovation, creativity, and economic growth. They provide creators and innovators with the assurance that their efforts will be protected, encouraging them to invest in research and development and bring their ideas to the market.",
+            "description_two": "Intellectual Property (IP) plays a significant role in providing a competitive edge to an organization. The intangible assets of an organization – such as knowhow, inventions, brands, designs and other creative and innovative products are, in present times, more valuable than its physical assets.",
+            "description_three": "With this backdrop, Intellectual Property Rights (IPR) cell seeks to provide guidance to academic and non-academic staff, students, scholars, and outside agencies alike on the practices and rules of the University regarding IPR and related obligations (which include the nature of IP, its ownership, exploitation, technology-transfer, and confidentiality requirements). With the initiative to fulfil the commitment of the University towards promoting academic freedom and providing a conducive environment for research and development.",
+            "linkInfo": {
+                "label": "Know More",
+                "url": "/ipr"
+            },
+            "images": [
+                {
+                    "url": "/ipr/item-1.jpg"
+                },
+                {
+                    "url": "/ipr/item-2.jpg"
+                },
+                {
+                    "url": "/ipr/item-3.jpg"
+                }
+            ]
+        },
+        "onGoingProjectsSection": {
+            "title": "Ongoing Projects and Collaborations",
+            "description_one": "Our University takes pride in actively promoting research endeavors among both faculty and students. At K.R. Mangalam University, we have successfully secured substantial research funding from esteemed sources, including government bodies and corporate houses. Notably, our institution has achieved significant milestones by securing projects exceeding 4 Crores from renowned entities such as DST, DST-FICCI, DST-SEED, ICSSR and various corporate houses. Apart from research funding more that 2 Cr consultancy projects were also in record.",
+            "description_two": "Join us on a journey of academic discovery and contribute to thecutting-edge research landscape at K.R. Mangalam University!",
+            "description_three": "We are engaged in numerous pioneering research projects, many in collaboration with industry leaders, government bodies, and international institutions. These projects not only contribute to academic knowledge but also have tangible impacts on communities and industries.",
+            "images": [
+                {
+                    "url": "/ongoing/item-1.webp"
+                },
+                {
+                    "url": "/ongoing/item-2.webp"
+                },
+                {
+                    "url": "/ongoing/item-3.jpg"
+                }
+            ]
+        },
+        "researchHighlightSection": {
+            "title": "Research Highlights",
+            "highlights": [
+                {
+                    "imageUrl": "/research-innovation/highlight-1.png",
+                    "link": "https://www.sciencedirect.com/science/article/pii/S1110866525000179",
+                    "content": "ADVANCED SEGMENTATION METHOD FOR INTEGRATING MULTI-OMICS DATA FOR EARLY CANCER DETECTION"
+                },
+                {
+                    "imageUrl": "/research-innovation/highlight2.png",
+                    "link": "https://www.sciencedirect.com/science/article/abs/pii/S1386142525000368",
+                    "content": "INVESTIGATION INTO THE VIBRATIONAL CHARACTERISTICS OF MONOLAYERED RUDDLESDEN-POPPER COMPOUNDS (SR, BA)2HFO4"
+                },
+                {
+                    "imageUrl": "/research-innovation/highlight-3.png",
+                    "link": "https://www.sciencedirect.com/science/article/pii/S2352012425000207",
+                    "content": "UTILIZATION OF NUMERICAL AND MACHINE LEARNING TO PREDICT THE MONOTONIC COMPRESSIVE RESPONSE OF SQUARE DOUBLE-SKIN TUBULAR COLUMNS (SDSTC)"
+                },
+                {
+                    "imageUrl": "/research-innovation/highlight-4.png",
+                    "link": "https://doi.org/10.1007/s11831-025-10253-4",
+                    "content": "ADVANCING PULMONARY INFECTION DIAGNOSIS: A COMPREHENSIVE REVIEW OF DEEP LEARNING APPROACHES IN RADIOLOGICAL DATA ANALYSIS"
+                }
+            ]
+        },
+        "researchAchievementSection": {
+            "title": "Research Achievements",
+            "achievements": [
+                {
+                    "name": "Dr. Saroj Verma",
+                    "designation": "Associate Professor",
+                    "school": "School of Medical and Allied Sciences",
+                    "imageUrl": "/research-achievement/saroj.png",
+                    "certificateUrl": "/research-achievement/saroj-cert.jpeg",
+                    "content": "WHO report titled “Pathogens Prioritization: A Scientific Framework for Epidemic and Pandemic Research Preparedness.” This comprehensive report involved the teamwork of more than 200 scientists from 50 countries, evaluating 1,652 pathogens across 28 virus families and one core group of bacteria. The published report provides a structured method for ranking pathogens based on their probability of causing epidemics or pandemics. This framework will aid researchers and policymakers in allocating resources effectively for preparedness and response. By identifying high-risk pathogens, the framework aims to guide research efforts towards preventing, detecting, and controlling future outbreaks."
+                },
+                {
+                    "name": "Dr. Rishi Ranjan Kumar",
+                    "designation": "Associate Professor",
+                    "school": "School of Basic & Applied Sciences",
+                    "imageUrl": "/research-achievement/rishi.jpeg",
+                    "certificateUrl": "/research-achievement/rishi-cert.png",
+                    "content": "WHO report titled “Pathogens Prioritization: A Scientific Framework for Epidemic and Pandemic Research Preparedness.” This comprehensive report involved the teamwork of more than 200 scientists from 50 countries, evaluating 1,652 pathogens across 28 virus families and one core group of bacteria. The published report provides a structured method for ranking pathogens based on their probability of causing epidemics or pandemics. This framework will aid researchers and policymakers in allocating resources effectively for preparedness and response. By identifying high-risk pathogens, the framework aims to guide research efforts towards preventing, detecting, and controlling future outbreaks."
+                }
+            ]
+        },
+        "publicationAndAchievementSection": {
+            "title": "Publications and Achievements",
+            "description": "K.R. Mangalam University has made significant scholarly contributions, evidenced by over 4000 publications and a Scopus h-index of 4000 and Citation Index of KRMU= 7.9. This record reflects the depth and impact of our research. Furthermore, our commitment to innovation is demonstrated by our repository of over a hundred patents, spanning diverse disciplines and showcasing the practical application of our research. Opportunities for Researchers and Students.",
+            "imageUrl": "/research/hand.webp",
+            "statistics": [
+                {
+                    "label": "Publications",
+                    "value": "4000+"
+                },
+                {
+                    "label": "CITATION INDEX",
+                    "value": "7.9"
+                },
+                {
+                    "label": "H INDEX",
+                    "value": "53"
+                }
+            ]
+        },
+        "academicResourcesSection": {
+            "title": "Academic Resources",
+            "subTitle": "CENTRAL LIBRARY",
+            "description_one": "K.R. Mangalam University Library denoted as Central Library which has spreaded over 15683 sq. ft. and have a collection of 45,000 books, 2500 reference books, 380 journals, e-journals databases, 1200 dissertations/ reports, 100+ theses & more than 400 law reports & Supreme Court cases etc. Library invested so far more than 1.5 crore of rupees on books & other resources. It is ever inflating day by day, year by year.",
+            "description_two": "Presently, it subscribes to over number of databases, e-resources like, Supreme Court Cases (SCC online), Manupatra online, J-Gate database; and is member of DELNET, NDLI, Shodh Sindhu, Shodh Ganga, Shodh Shuddhi, Shodh Chakra, IRINS etc. All the services provided by the INFLIBNET/ UGC/ Ministry of Education, Govt. of India for the benefit of our intellectual communities i.e. students and faculty members and providing 24×7 services through its Digital Library platform.",
+            "description_three": "The Library alienated into many sections for its smooth functioning & services like, Acquisition Section, Technical Section, Processing Section, Circulation Section, Periodical Section, Reference Section, Digital Section, Research Section, IKS Section (Indian Knowledge System), Competitive Examinations Preparation Section, & Maintenance Section.",
+            "description_four": "K.R. Mangalam University Library is having a main Central Library besides many other Departmental Libraries, e.g. School of Architecture Library, School of Medical & Allied Sciences Library, School of Physiotherapy & Rehabilitation Sciences Library, School of Legal Studies Library, School of Education Library, School of Agricultural Sciences Library, School of Management & Commerce Library, School of Humanities Library, School of Basic & Applied Science Library, School of Journalism & Mass Communication Library, and School of Engineering Library.",
+            "images": [
+                {
+                    "url": "/academicResources/item-1.webp"
+                },
+                {
+                    "url": "/academicResources/item-2.webp"
+                },
+                {
+                    "url": "/academicResources/item-3.webp"
+                }
+            ],
+            "linkInfo": {
+                "label": "Know More",
+                "url": "https://library.krmangalam.edu.in/user?_gl=1*1i62dbw*_gcl_au*MTk0MzAxMjY5Mi4xNzY1MTcwMjg4#/home"
+            }
+        },
+        "teamLibrarySection": {
+            "title": "Team Library",
+            "teamLibrarySliders": [
+                {
+                    "imageUrl": "/library/Hela.jpg",
+                    "content": "<h5>Dr. Helaluddin (Ph.D.)</h5><ul><li>University Librarian</li><li>University Nodal Officer to IRINS/UGC</li><li>University Coordinator for Ph.D. Thesis to INFLIBNET/UGC</li><li>University Coordinator for Anti-Plagiarism Checking</li></ul>"
+                },
+                {
+                    "imageUrl": "/library/shaida.jpg",
+                    "content": "<h5>Mr. Shaida Husain</h5><ul><li>Assistant Librarian</li></ul>"
+                },
+                {
+                    "imageUrl": "/library/akhilesh.jpg",
+                    "content": "<h5>Mr. Akhilesh Kumar Singh</h5><ul><li>Professional Assistant</li></ul>"
+                },
+                {
+                    "imageUrl": "/library/manmohan.jpg",
+                    "content": "<h5>Mr. Manmohan Das</h5><ul><li>Professional Assistant</li></ul>"
+                },
+                {
+                    "imageUrl": "/library/kapil.jpg",
+                    "content": "<h5>Mr. Kapil Dev</h5><ul><li>Library Assistant</li></ul>"
+                }
+            ]
+        },
+        "contactEnquiriesSection": {
+            "title": "Contact and Inquiries",
+            "description": "For further information or to get involved with our research endeavours, please contact our research department:",
+            "companyRegistrationForm": {
+                "label": "Company Registration Form",
+                "url": "https://tinyurl.com/krmu-2025",
+                "linkText": "Link"
+            },
+            "phoneNumbers": {
+                "label": "Phone Numbers",
+                "numbers": [
+                    {
+                        "number": "9289143055",
+                        "formatted": "(+91)-9289-1430-55",
+                        "link": "tel:+919289143055"
+                    },
+                    {
+                        "number": "8800697009",
+                        "formatted": "(+91)-8800-6970-09",
+                        "link": "tel:+918800697009"
+                    }
+                ]
+            },
+            "email": {
+                "label": "Email",
+                "email": "rdc@krmangalam.edu.in",
+                "mailTo": "mailto:rdc@krmangalam.edu.in"
+            },
+            "quickLinks": {
+                "links": [
+                    {
+                        "label": "DST",
+                        "url": "https://dst.gov.in/call-for-proposals"
+                    },
+                    {
+                        "label": "DBT",
+                        "url": "https://dbtindia.gov.in/whats-new/call-for-proposals"
+                    },
+                    {
+                        "label": "ICMR",
+                        "url": "https://main.icmr.nic.in/call%20for%20proposals"
+                    },
+                    {
+                        "label": "BIRAC",
+                        "url": "https://www.birac.nic.in/"
+                    },
+                    {
+                        "label": "ICSSR",
+                        "url": "https://icssr.org/"
+                    },
+                    {
+                        "label": "WHO",
+                        "url": "https://www.who.int/"
+                    },
+                    {
+                        "label": "CSIR",
+                        "url": "https://www.csir.res.in/"
+                    }
+                ]
+            }
         }
-      ]
-    },
-    "rdcSection": {
-      "title": "Research and Development Cell (RDC)",
-      "description_one": "The Research and Development Cell, led by the esteemed Dean of Research, is the fulcrum of our research activities. With dedicated Associate and Assistant Deans, the RDC oversees diverse research initiatives, promoting interdisciplinary studies and innovative research methodologies. The cell plays a pivotal role in advancing our research agenda, fostering academic partnerships, and enhancing the university’s research profile on the global stage.",
-      "description_two": "K.R. Mangalam University maintains its own comprehensive data repository encompassing all its publications, spanning journal articles, patents, books, and book chapters. Faculty members responsible for these publications personally upload their details onto our research application. Moreover, the application also facilitates the submission of reimbursement requests for conference registrations, fees for workshops, seminars, and memberships. Additionally, it serves as a platform for managing in-house conferences and both applied and granted projects.",
-      "imageUrl": "/research/seema.webp",
-      "deanInfo": {
-        "name": "Dr. Seema Raj",
-        "designation": "Dean Research"
-      }
-    },
-    "researchDeanMessageSection": {
-      "title": "Message from the Dean Research",
-      "subTitle": "Greetings from Team Research & Development of (RDC) Cell",
-      "description_one": "In recent past, there is a marked change in global environment where the capacity to innovate and commercialize new high-tech products has taken the shape of a distributed global network. Sensing this pulse, India has recognized the strategic and economic importance of competitiveness and knowledge economy. India strives to be ‘Vishwaguru’ and to be placed in top three Economic leaders of World. Knowledge and only knowledge through innovations in every walk of life can be the sole path to achieve this Goal.",
-      "description_two": "Research, Development and Innovation have become integral part of the journey towards it. It is high time that apart from Public Funded R&D Institutes, Industries, Institutes of National Importance and all other Higher Education Institutes come forward to take the challenge and contribute significantly for development of Society as a whole.",
-      "description_three": "We are also looking forward to have very active collaboration with top ranking Academic Institutions and Industries to have outcome based projects. We encourage our Faculty members to have Consultancy projects and Collaborative Projects. We maintain high standards of Integrity and Ethics and comply with ethical codes of research.",
-      "description_four": "KRMU envisages to align its R&D endevours in line with Nation’s aspirations such as ‘Atma Nirbhar Bharat’, ‘Technology-enabled development, energy transition and climate action’, ‘Swachh Bharat’, ‘Ayushman Bharat’, ‘Atal Innovation Mission’ ‘Skill Development’ etc."
-    },
-    "teamRdcSection": {
-      "title": "Team RDC",
-      "teamRDCMembers": [
-        {
-          "name": "Prof. (Dr.) Pawan Kumar (PhD)",
-          "designation": "Associate Dean Research",
-          "facultyUrl": "/faculty/dr-pawan-kumar",
-          "facultyImageUrl": "/teamrdc/pawan.webp"
-        },
-        {
-          "name": "Dr. Seema Raj (M.Phil, PhD)",
-          "designation": "Dean Research",
-          "facultyUrl": "/faculty/dr-seema-raj",
-          "facultyImageUrl": "/teamrdc/seema.png"
-        },
-        {
-          "name": "Dr. Surendra Kumar Yadav (PhD)",
-          "designation": "Associate Dean PhD Programme",
-          "facultyUrl": "/faculty/dr-surendra",
-          "facultyImageUrl": "/teamrdc/surendra.webp"
-        },
-        {
-          "name": "Dr. Prabhakar Bhandari (PhD)",
-          "designation": "Research Finance Officer",
-          "facultyUrl": "/faculty/dr-prabhakar",
-          "facultyImageUrl": "/teamrdc/prabhakar.webp"
-        },
-        {
-          "name": "Dr. Shivani Wadhwa (PhD)",
-          "designation": "Research Communication Officer",
-          "facultyUrl": "/faculty/dr-shivani-wadhwa",
-          "facultyImageUrl": "/teamrdc/wadhwa.png"
-        },
-        {
-          "name": "Aman Vishwakarma",
-          "designation": "MIS Executive",
-          "facultyUrl": "",
-          "facultyImageUrl": "/teamrdc/aman.png"
-        }
-      ]
-    },
-    "cifSection": {
-      "title": "Central Instrumentation Facility (CIF)",
-      "description_one": "K.R. Mangalam University boasts many specialised research laboratories, each equipped with modern technology to support a wide array of academic and scientific inquiries. Our labs cater to diverse disciplines, enabling groundbreaking research and innovation.",
-      "description_two": "At the heart of our research infrastructure is the Central Instrumentation Facility (CIF). This premier facility is a resource hub for our researchers, providing access to high-end instruments for advanced experimental and analytical work. Key instruments available at CIF include HPLC, UV-VIS spectrophotometer.",
-      "images": [
-        {
-          "url": "/cif/item-1.webp"
-        },
-        {
-          "url": "/cif/item-2.webp"
-        },
-        {
-          "url": "/cif/item-3.webp"
-        },
-        {
-          "url": "/cif/item-4.webp"
-        }
-      ],
-      "linkInfo": {
-        "label": "Know More",
-        "url": "/cif"
-      }
-    },
-    "keicSection": {
-      "title": "K.R. Mangalam Entrepreneurship and Innovation Center (KEIC)",
-      "description": "KEIC is the cornerstone of our innovation ecosystem. This dynamic center offers an incubation program to nurture start-ups, a state-of-the-art maker lab for prototyping and creative exploration, and coworking spaces that encourage collaborative ventures. The center is also home to our pioneering BBA in Entrepreneurship program, developed in collaboration with the GCEC Global Foundation [https://www.gcecglobal.com], preparing the next generation of entrepreneurial leaders.",
-      "images": [
-        {
-          "url": "/keic/keic-1.webp"
-        },
-        {
-          "url": "/keic/keic-2.webp"
-        },
-        {
-          "url": "/keic/keic-3.webp"
-        },
-        {
-          "url": "/keic/keic-4.webp"
-        }
-      ],
-      "linkInfo": {
-        "label": "Know More",
-        "url": "/keic"
-      }
-    },
-    "iprLegalEthicsSection": {
-      "title": "IPR, Legal & Ethical Matters Cell",
-      "description_one": "Intellectual property rights are crucial in fostering innovation, creativity, and economic growth. They provide creators and innovators with the assurance that their efforts will be protected, encouraging them to invest in research and development and bring their ideas to the market.",
-      "description_two": "Intellectual Property (IP) plays a significant role in providing a competitive edge to an organization. The intangible assets of an organization – such as knowhow, inventions, brands, designs and other creative and innovative products are, in present times, more valuable than its physical assets.",
-      "description_three": "With this backdrop, Intellectual Property Rights (IPR) cell seeks to provide guidance to academic and non-academic staff, students, scholars, and outside agencies alike on the practices and rules of the University regarding IPR and related obligations (which include the nature of IP, its ownership, exploitation, technology-transfer, and confidentiality requirements). With the initiative to fulfil the commitment of the University towards promoting academic freedom and providing a conducive environment for research and development.",
-      "linkInfo": {
-        "label": "Know More",
-        "url": "/ipr"
-      },
-      "images": [
-        {
-          "url": "/ipr/item-1.jpg"
-        },
-        {
-          "url": "/ipr/item-2.jpg"
-        },
-        {
-          "url": "/ipr/item-3.jpg"
-        }
-      ]
-    },
-    "onGoingProjectsSection": {
-      "title": "Ongoing Projects and Collaborations",
-      "description_one": "Our University takes pride in actively promoting research endeavors among both faculty and students. At K. R. Mangalam University, we have successfully secured substantial research funding from esteemed sources, including government bodies and corporate houses. Notably, our institution has achieved significant milestones by securing projects exceeding 4 Crores from renowned entities such as DST, DST-FICCI, DST-SEED, ICSSR and various corporate houses. Apart from research funding more that 2 Cr consultancy projects were also in record.",
-      "description_two": "Join us on a journey of academic discovery and contribute to thecutting-edge research landscape at K.R. Mangalam University!",
-      "description_three": "We are engaged in numerous pioneering research projects, many in collaboration with industry leaders, government bodies, and international institutions. These projects not only contribute to academic knowledge but also have tangible impacts on communities and industries.",
-      "images": [
-        {
-          "url": "/ongoing/item-1.webp"
-        },
-        {
-          "url": "/ongoing/item-2.webp"
-        },
-        {
-          "url": "/ongoing/item-3.jpg"
-        }
-      ]
-    },
-    "researchHighlightSection": {
-      "title": "Research Highlights",
-      "highlights": [
-        {
-          "imageUrl": "/research-innovation/highlight-1.png",
-          "link": "https://www.sciencedirect.com/science/article/pii/S1110866525000179",
-          "content": "ADVANCED SEGMENTATION METHOD FOR INTEGRATING MULTI-OMICS DATA FOR EARLY CANCER DETECTION"
-        },
-        {
-          "imageUrl": "/research-innovation/highlight2.png",
-          "link": "https://www.sciencedirect.com/science/article/abs/pii/S1386142525000368",
-          "content": "INVESTIGATION INTO THE VIBRATIONAL CHARACTERISTICS OF MONOLAYERED RUDDLESDEN-POPPER COMPOUNDS (SR, BA)2HFO4"
-        },
-        {
-          "imageUrl": "/research-innovation/highlight-3.png",
-          "link": "https://www.sciencedirect.com/science/article/pii/S2352012425000207",
-          "content": "UTILIZATION OF NUMERICAL AND MACHINE LEARNING TO PREDICT THE MONOTONIC COMPRESSIVE RESPONSE OF SQUARE DOUBLE-SKIN TUBULAR COLUMNS (SDSTC)"
-        },
-        {
-          "imageUrl": "/research-innovation/highlight-4.png",
-          "link": "https://doi.org/10.1007/s11831-025-10253-4",
-          "content": "ADVANCING PULMONARY INFECTION DIAGNOSIS: A COMPREHENSIVE REVIEW OF DEEP LEARNING APPROACHES IN RADIOLOGICAL DATA ANALYSIS"
-        }
-      ]
-    },
-    "researchAchievementSection": {
-      "title": "Research Achievements",
-      "achievements": [
-        {
-          "name": "Dr. Saroj Verma",
-          "designation": "Associate Professor",
-          "school": "School of Medical and Allied Sciences",
-          "imageUrl": "/research-achievement/saroj.png",
-          "certificateUrl": "/research-achievement/saroj-cert.jpeg",
-          "content": "WHO report titled “Pathogens Prioritization: A Scientific Framework for Epidemic and Pandemic Research Preparedness.” This comprehensive report involved the teamwork of more than 200 scientists from 50 countries, evaluating 1,652 pathogens across 28 virus families and one core group of bacteria. The published report provides a structured method for ranking pathogens based on their probability of causing epidemics or pandemics. This framework will aid researchers and policymakers in allocating resources effectively for preparedness and response. By identifying high-risk pathogens, the framework aims to guide research efforts towards preventing, detecting, and controlling future outbreaks."
-        },
-        {
-          "name": "Dr. Rishi Ranjan Kumar",
-          "designation": "Associate Professor",
-          "school": "School of Basic & Applied Sciences",
-          "imageUrl": "/research-achievement/rishi.jpeg",
-          "certificateUrl": "/research-achievement/rishi-cert.png",
-          "content": "WHO report titled “Pathogens Prioritization: A Scientific Framework for Epidemic and Pandemic Research Preparedness.” This comprehensive report involved the teamwork of more than 200 scientists from 50 countries, evaluating 1,652 pathogens across 28 virus families and one core group of bacteria. The published report provides a structured method for ranking pathogens based on their probability of causing epidemics or pandemics. This framework will aid researchers and policymakers in allocating resources effectively for preparedness and response. By identifying high-risk pathogens, the framework aims to guide research efforts towards preventing, detecting, and controlling future outbreaks."
-        }
-      ]
-    },
-    "publicationAndAchievementSection": {
-      "title": "Publications and Achievements",
-      "description": "K.R. Mangalam University has made significant scholarly contributions, evidenced by over 4000 publications and a Scopus h-index of 4000 and Citation Index of KRMU= 7.9. This record reflects the depth and impact of our research. Furthermore, our commitment to innovation is demonstrated by our repository of over a hundred patents, spanning diverse disciplines and showcasing the practical application of our research. Opportunities for Researchers and Students.",
-      "imageUrl": "/research/hand.webp",
-      "statistics": [
-        {
-          "label": "Publications",
-          "value": "4000+"
-        },
-        {
-          "label": "CITATION INDEX",
-          "value": "7.9"
-        },
-        {
-          "label": "H INDEX",
-          "value": "53"
-        }
-      ]
-    },
-    "academicResourcesSection": {
-      "title": "Academic Resources",
-      "subTitle": "CENTRAL LIBRARY",
-      "description_one": "K.R. Mangalam University Library denoted as Central Library which has spreaded over 15683 sq. ft. and have a collection of 45,000 books, 2500 reference books, 380 journals, e-journals databases, 1200 dissertations/ reports, 100+ theses & more than 400 law reports & Supreme Court cases etc. Library invested so far more than 1.5 crore of rupees on books & other resources. It is ever inflating day by day, year by year.",
-      "description_two": "Presently, it subscribes to over number of databases, e-resources like, Supreme Court Cases (SCC online), Manupatra online, J-Gate database; and is member of DELNET, NDLI, Shodh Sindhu, Shodh Ganga, Shodh Shuddhi, Shodh Chakra, IRINS etc. All the services provided by the INFLIBNET/ UGC/ Ministry of Education, Govt. of India for the benefit of our intellectual communities i.e. students and faculty members and providing 24×7 services through its Digital Library platform.",
-      "description_three": "The Library alienated into many sections for its smooth functioning & services like, Acquisition Section, Technical Section, Processing Section, Circulation Section, Periodical Section, Reference Section, Digital Section, Research Section, IKS Section (Indian Knowledge System), Competitive Examinations Preparation Section, & Maintenance Section.",
-      "description_four": "K.R. Mangalam University Library is having a main Central Library besides many other Departmental Libraries, e.g. School of Architecture Library, School of Medical & Allied Sciences Library, School of Physiotherapy & Rehabilitation Sciences Library, School of Legal Studies Library, School of Education Library, School of Agricultural Sciences Library, School of Management & Commerce Library, School of Humanities Library, School of Basic & Applied Science Library, School of Journalism & Mass Communication Library, and School of Engineering Library.",
-      "images": [
-        {
-          "url": "/academicResources/item-1.webp"
-        },
-        {
-          "url": "/academicResources/item-2.webp"
-        },
-        {
-          "url": "/academicResources/item-3.webp"
-        }
-      ],
-      "linkInfo": {
-        "label": "Know More",
-        "url": "https://library.krmangalam.edu.in/user?_gl=1*1i62dbw*_gcl_au*MTk0MzAxMjY5Mi4xNzY1MTcwMjg4#/home"
-      }
-    },
-    "teamLibrarySection": {
-      "title": "Team Library",
-      "teamLibrarySliders": [
-        {
-          "imageUrl": "/library/Hela.jpg",
-          "content": "<h5>Dr. Helaluddin (Ph.D.)</h5><ul><li>University Librarian</li><li>University Nodal Officer to IRINS/UGC</li><li>University Coordinator for Ph.D. Thesis to INFLIBNET/UGC</li><li>University Coordinator for Anti-Plagiarism Checking</li></ul>"
-        },
-        {
-          "imageUrl": "/library/shaida.jpg",
-          "content": "<h5>Mr. Shaida Husain</h5><ul><li>Assistant Librarian</li></ul>"
-        },
-        {
-          "imageUrl": "/library/akhilesh.jpg",
-          "content": "<h5>Mr. Akhilesh Kumar Singh</h5><ul><li>Professional Assistant</li></ul>"
-        },
-        {
-          "imageUrl": "/library/manmohan.jpg",
-          "content": "<h5>Mr. Manmohan Das</h5><ul><li>Professional Assistant</li></ul>"
-        },
-        {
-          "imageUrl": "/library/kapil.jpg",
-          "content": "<h5>Mr. Kapil Dev</h5><ul><li>Library Assistant</li></ul>"
-        }
-      ]
-    },
-    "contactEnquiriesSection": {
-      "title": "Contact and Inquiries",
-      "description": "For further information or to get involved with our research endeavours, please contact our research department:",
-      "companyRegistrationForm": {
-        "label": "Company Registration Form",
-        "url": "https://tinyurl.com/krmu-2025",
-        "linkText": "Link"
-      },
-      "phoneNumbers": {
-        "label": "Phone Numbers",
-        "numbers": [
-          {
-            "number": "9289143055",
-            "formatted": "(+91)-9289-1430-55",
-            "link": "tel:+919289143055"
-          },
-          {
-            "number": "8800697009",
-            "formatted": "(+91)-8800-6970-09",
-            "link": "tel:+918800697009"
-          }
-        ]
-      },
-      "email": {
-        "label": "Email",
-        "email": "rdc@krmangalam.edu.in",
-        "mailTo": "mailto:rdc@krmangalam.edu.in"
-      },
-      "quickLinks": {
-        "links": [
-          {
-            "label": "DST",
-            "url": "https://dst.gov.in/call-for-proposals"
-          },
-          {
-            "label": "DBT",
-            "url": "https://dbtindia.gov.in/whats-new/call-for-proposals"
-          },
-          {
-            "label": "ICMR",
-            "url": "https://main.icmr.nic.in/call%20for%20proposals"
-          },
-          {
-            "label": "BIRAC",
-            "url": "https://www.birac.nic.in/"
-          },
-          {
-            "label": "ICSSR",
-            "url": "https://icssr.org/"
-          },
-          {
-            "label": "WHO",
-            "url": "https://www.who.int/"
-          },
-          {
-            "label": "CSIR",
-            "url": "https://www.csir.res.in/"
-          }
-        ]
-      }
     }
-  }
 }

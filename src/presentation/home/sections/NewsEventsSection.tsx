@@ -157,7 +157,7 @@ export async function NewsEventsSection({
                                                 }}
                                             />
                                             <p className="text-[#E5A831] text-[10.5px] sm:text-[11px] font-poppins font-medium mt-1.5 tracking-wide">
-                                                K. R. Mangalam University
+                                                K.R. Mangalam University
                                             </p>
                                         </div>
                                     </Link>

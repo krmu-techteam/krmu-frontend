@@ -8,8 +8,15 @@ import {
     LockKeyholeOpen,
 } from "lucide-react";
 import { PiWarningCircleFill } from "react-icons/pi";
+import { redirect } from "next/navigation";
+
+const isLive = false;
 
 const page = () => {
+    if (!isLive) {
+        // home page
+        return redirect("/");
+    }
     return (
         <div className="w-full bg-[#f8f8f6]">
             {/* CUET Hero Banner Section */}
