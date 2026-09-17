@@ -22,7 +22,7 @@ const TestimonialCard = ({ image, name, course, content }: Props) => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="w-[323px] min-w-[323px] max-w-[323px] h-[505px] bg-white rounded-[10px] shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-gray-100/90 hover:shadow-[0_12px_36px_rgba(0,0,0,0.12)] transition-shadow flex flex-col overflow-hidden relative font-poppins text-left select-none">
+        <div className="w-[323px] min-w-[323px] max-w-[323px] h-[505px] bg-white rounded-[10px] shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden relative font-poppins text-left select-none">
             {/* Dark navy header block */}
             <div className="h-[120px] w-full bg-[#061623] shrink-0" />
 
@@ -61,7 +61,7 @@ const TestimonialCard = ({ image, name, course, content }: Props) => {
             <div className="px-6 pb-6 pt-2 text-left mt-auto">
                 <Dialog open={open} onOpenChange={setOpen}>
                     <DialogTrigger asChild>
-                        <button className="text-sm font-semibold text-[#0161b0] hover:text-blue-800 underline cursor-pointer">
+                        <button className="text-sm font-semibold text-[#061623] hover:text-[#061623]/90 underline cursor-pointer">
                             Read More
                         </button>
                     </DialogTrigger>

@@ -89,91 +89,88 @@ const TestimonialSection = () => {
     const [api, setApi] = useState<CarouselApi>();
 
     return (
-        <section className="bg-white pt-12 pb-10 sm:pt-16 sm:pb-14 lg:pt-20 lg:pb-16 relative overflow-hidden font-poppins">
-            {/* Split Background Container */}
-            <div className="w-full relative">
-                {/* Left Portrait Girl Image on desktop */}
-                <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-[480px] xl:w-[580px] 2xl:w-[650px] z-0 overflow-hidden">
-                    <Image
-                        src="/images/scholarship/girl.jpg"
-                        alt="Hear From Our Students"
-                        fill
-                        priority
-                        className="object-cover object-top"
-                    />
+        <section className="bg-white relative overflow-hidden font-poppins">
+            {/* Left Portrait Girl Image on desktop - spans full height from top to bottom of section */}
+            <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-[480px] xl:w-[580px] 2xl:w-[650px] z-0 overflow-hidden">
+                <Image
+                    src="/images/scholarship/girl.jpg"
+                    alt="Hear From Our Students"
+                    fill
+                    priority
+                    className="object-cover object-top"
+                />
+            </div>
+
+            {/* Content Container */}
+            <div className="relative z-10 w-full pt-10 sm:pt-14 lg:pt-16 pb-6 sm:pb-8">
+                {/* Header on White Background */}
+                <div className="px-6 md:px-8 lg:ml-[520px] xl:ml-[620px] 2xl:ml-[690px] max-w-[850px] mb-6 lg:mb-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] font-bold text-black tracking-tight leading-tight">
+                        Hear From Our Students
+                    </h2>
+                    <p className="text-sm sm:text-base text-gray-700 mt-2 leading-relaxed">
+                        Hear from our scholarship awardees as they share how
+                        merit, dedication, and KRMU’s support helped them reach
+                        new heights.
+                    </p>
                 </div>
 
-                {/* Content Container */}
-                <div className="relative z-10 w-full">
-                    {/* Header on White Background */}
-                    <div className="px-6 md:px-8 lg:ml-[520px] xl:ml-[620px] 2xl:ml-[690px] max-w-[850px] mb-8 lg:mb-10">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[44px] font-bold text-black tracking-tight leading-tight">
-                            Hear From Our Students
-                        </h2>
-                        <p className="text-sm sm:text-base text-gray-700 mt-2.5 leading-relaxed">
-                            Hear from our scholarship awardees as they share how
-                            merit, dedication, and KRMU’s support helped them
-                            reach new heights.
-                        </p>
+                {/* Mobile/Tablet Girl Image */}
+                <div className="block lg:hidden px-6 mb-8 max-w-[600px] mx-auto">
+                    <div className="w-full h-[420px] sm:h-[500px] relative rounded-2xl overflow-hidden shadow-sm">
+                        <Image
+                            src="/images/scholarship/girl.jpg"
+                            alt="Hear From Our Students"
+                            fill
+                            className="object-cover object-top"
+                        />
                     </div>
+                </div>
 
-                    {/* Mobile/Tablet Girl Image */}
-                    <div className="block lg:hidden px-6 mb-8 max-w-[600px] mx-auto">
-                        <div className="w-full h-[420px] sm:h-[500px] relative rounded-2xl overflow-hidden shadow-sm">
-                            <Image
-                                src="/images/scholarship/girl.jpg"
-                                alt="Hear From Our Students"
-                                fill
-                                className="object-cover object-top"
-                            />
-                        </div>
-                    </div>
+                {/* Cards Carousel (overlaps left image slightly on desktop) */}
+                <div className="w-full lg:ml-[380px] xl:ml-[460px] 2xl:ml-[520px] pl-6 lg:pl-0">
+                    <Carousel
+                        setApi={setApi}
+                        opts={{
+                            align: "start",
+                            loop: true,
+                        }}
+                        className="w-full"
+                    >
+                        <CarouselContent className="-ml-6 py-2">
+                            {scholarTestimonials.map((item) => (
+                                <CarouselItem
+                                    key={item.id}
+                                    className="pl-6 basis-auto shrink-0"
+                                >
+                                    <TestimonialCard
+                                        image={item.image}
+                                        name={item.name}
+                                        course={item.course}
+                                        content={item.content}
+                                    />
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                    </Carousel>
+                </div>
 
-                    {/* Cards Carousel (overlaps left image slightly on desktop) */}
-                    <div className="w-full lg:ml-[380px] xl:ml-[460px] 2xl:ml-[520px] pl-6 lg:pl-0">
-                        <Carousel
-                            setApi={setApi}
-                            opts={{
-                                align: "start",
-                                loop: true,
-                            }}
-                            className="w-full"
-                        >
-                            <CarouselContent className="-ml-6 py-4">
-                                {scholarTestimonials.map((item) => (
-                                    <CarouselItem
-                                        key={item.id}
-                                        className="pl-6 basis-auto shrink-0"
-                                    >
-                                        <TestimonialCard
-                                            image={item.image}
-                                            name={item.name}
-                                            course={item.course}
-                                            content={item.content}
-                                        />
-                                    </CarouselItem>
-                                ))}
-                            </CarouselContent>
-                        </Carousel>
-                    </div>
-
-                    {/* Navigation Buttons */}
-                    <div className="flex items-center gap-3 px-6 lg:ml-[520px] xl:ml-[620px] 2xl:ml-[690px] mt-8 mb-4">
-                        <button
-                            onClick={() => api?.scrollPrev()}
-                            className="w-10 h-10 rounded-full bg-[#061623] hover:bg-[#001732] text-white flex items-center justify-center cursor-pointer shadow-sm transition-all active:scale-95"
-                            aria-label="Previous testimonials"
-                        >
-                            <ChevronLeft className="w-5 h-5" />
-                        </button>
-                        <button
-                            onClick={() => api?.scrollNext()}
-                            className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-black flex items-center justify-center cursor-pointer shadow-sm transition-all active:scale-95"
-                            aria-label="Next testimonials"
-                        >
-                            <ChevronRight className="w-5 h-5" />
-                        </button>
-                    </div>
+                {/* Navigation Buttons */}
+                <div className="flex items-center gap-3 px-6 lg:ml-[520px] xl:ml-[620px] 2xl:ml-[690px] mt-6">
+                    <button
+                        onClick={() => api?.scrollPrev()}
+                        className="w-10 h-10 rounded-full bg-[#061623] hover:bg-[#001732] text-white flex items-center justify-center cursor-pointer shadow-sm transition-all active:scale-95"
+                        aria-label="Previous testimonials"
+                    >
+                        <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button
+                        onClick={() => api?.scrollNext()}
+                        className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-black flex items-center justify-center cursor-pointer shadow-sm transition-all active:scale-95"
+                        aria-label="Next testimonials"
+                    >
+                        <ChevronRight className="w-5 h-5" />
+                    </button>
                 </div>
             </div>
         </section>
