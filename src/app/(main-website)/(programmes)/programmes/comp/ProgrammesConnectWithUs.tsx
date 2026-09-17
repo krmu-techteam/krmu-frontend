@@ -54,9 +54,8 @@ const ProgrammesConnectWithUs = () => {
                             <span className=" p-1.5 flex font-poppins items-center gap-2.5 text-sm font-medium text-white">
                                 <span className=""></span>
                                 <span>
-                                    Address: K.R. Mangalam University, Sohna -
-                                    Gurgaon Road, Sohna, Sohna Rural, Gurugram,
-                                    Haryana 122103
+                                    Address: K.R. Mangalam University, Sohna
+                                    Road, Gurugram, Haryana - 122103
                                 </span>
                             </span>
                         </Link>
