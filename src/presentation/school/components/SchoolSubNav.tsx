@@ -41,7 +41,7 @@ export default function SchoolSubNav({ slug }: SchoolSubNavProps) {
         { label: "Knowledge Partners", targetId: "knowledge-partners" },
         { label: "Testimonials", targetId: "testimonials" },
         { label: "Faculty", targetId: "faculty" },
-        { label: "Event List", targetId: "events" },
+        { label: "Events", targetId: "events" },
     ];
 
     const [activeId, setActiveId] = useState<string>("overview");

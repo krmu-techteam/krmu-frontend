@@ -1,7 +1,7 @@
 import { STRAPI_URL } from "@/app/constant";
 import { ProgrammeAlumniData } from "@/lib/types/programme";
 import Image from "next/image";
-import { FaQuoteLeft, FaStar } from "react-icons/fa";
+import { FaQuoteLeft, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 type Props = {
     item: ProgrammeAlumniData;
@@ -31,13 +31,19 @@ export const AlumniSliderCard = ({ item }: Props) => {
                     <span className="text-[#0055A4] text-sm font-medium tracking-wide">
                         {item?.qualification}
                     </span>
-                    <div className="flex items-center justify-center gap-1 text-[#FFB800] mt-2">
-                        {[...Array(5)].map((_, i) => (
-                            <FaStar
-                                key={i}
-                                className="w-3.5 h-3.5 fill-[#FFB800]"
-                            />
-                        ))}
+                    <div className="flex items-center justify-center gap-1.5 text-[#FFB800] mt-2">
+                        <div className="flex items-center gap-0.5">
+                            {[...Array(4)].map((_, i) => (
+                                <FaStar
+                                    key={i}
+                                    className="w-3.5 h-3.5 fill-[#FFB800]"
+                                />
+                            ))}
+                            <FaStarHalfAlt className="w-3.5 h-3.5 fill-[#FFB800]" />
+                        </div>
+                        <span className="text-white text-xs font-semibold ml-0.5">
+                            4.8
+                        </span>
                     </div>
                 </div>
             </div>
@@ -60,14 +66,20 @@ export const AlumniSliderCard = ({ item }: Props) => {
                             {item?.qualification}
                         </span>
                     </div>
-                    {/* 5-Star Rating */}
-                    <div className="flex items-center gap-1 text-[#FFB800] shrink-0 ml-4">
-                        {[...Array(5)].map((_, i) => (
-                            <FaStar
-                                key={i}
-                                className="w-4 h-4 fill-[#FFB800]"
-                            />
-                        ))}
+                    {/* 4.8 Star Rating */}
+                    <div className="flex items-center gap-1.5 shrink-0 ml-4">
+                        <div className="flex items-center gap-0.5 text-[#FFB800]">
+                            {[...Array(4)].map((_, i) => (
+                                <FaStar
+                                    key={i}
+                                    className="w-4 h-4 fill-[#FFB800]"
+                                />
+                            ))}
+                            <FaStarHalfAlt className="w-4 h-4 fill-[#FFB800]" />
+                        </div>
+                        <span className="text-white text-sm font-semibold ml-0.5">
+                            4.8
+                        </span>
                     </div>
                 </div>
             </div>

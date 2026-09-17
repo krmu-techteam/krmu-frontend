@@ -101,6 +101,12 @@ export interface Programme {
     title: string;
     programmeslug: string;
     criteria: Criteria;
+    degree?: {
+        id?: number;
+        documentId?: string;
+        name?: string;
+        slug?: string;
+    };
 }
 
 export interface PhdProgramme {
@@ -112,6 +118,80 @@ export interface PhdProgramme {
 }
 
 export type ProgrammeItem = Programme | PhdProgramme;
+
+const DEGREE_RANK_MAP: Record<string, number> = {
+    "undergraduate-programmes": 1,
+    "postgraduate-programmes": 2,
+    "doctoral-programmes": 3,
+    "diploma-programmes": 4,
+};
+
+function getProgrammeDegreeRank(item: ProgrammeItem): number {
+    if ("phdslug" in item || "heading" in item) {
+        return 3;
+    }
+
+    const degSlug = (item as any)?.degree?.slug?.toLowerCase();
+    if (degSlug && DEGREE_RANK_MAP[degSlug]) {
+        return DEGREE_RANK_MAP[degSlug];
+    }
+
+    const titleOrSlug = (
+        ("title" in item ? item.title : "") +
+        " " +
+        ("programmeslug" in item ? item.programmeslug : "")
+    ).toLowerCase();
+
+    if (
+        titleOrSlug.includes("ph.d") ||
+        titleOrSlug.includes("phd") ||
+        titleOrSlug.includes("doctoral")
+    ) {
+        return 3;
+    }
+    if (
+        titleOrSlug.includes("diploma") ||
+        titleOrSlug.includes("d.pharm") ||
+        titleOrSlug.includes("dpharm")
+    ) {
+        return 4;
+    }
+    if (
+        titleOrSlug.includes("master") ||
+        titleOrSlug.includes("mba") ||
+        titleOrSlug.includes("m.tech") ||
+        titleOrSlug.includes("mtech") ||
+        titleOrSlug.includes("mca") ||
+        titleOrSlug.includes("m.sc") ||
+        titleOrSlug.includes("msc") ||
+        titleOrSlug.includes("m.pharm") ||
+        titleOrSlug.includes("mpharm") ||
+        titleOrSlug.includes("ll.m") ||
+        titleOrSlug.includes("llm") ||
+        titleOrSlug.includes("m.des") ||
+        titleOrSlug.includes("mdes") ||
+        titleOrSlug.includes("m.arch") ||
+        titleOrSlug.includes("march") ||
+        titleOrSlug.includes("m.com") ||
+        titleOrSlug.includes("mcom") ||
+        titleOrSlug.includes("m.ed") ||
+        titleOrSlug.includes("med") ||
+        titleOrSlug.includes("m.a") ||
+        titleOrSlug.includes("postgraduate")
+    ) {
+        return 2;
+    }
+
+    return 1;
+}
+
+export function sortProgrammesByDegreeSequence(
+    items: ProgrammeItem[]
+): ProgrammeItem[] {
+    return [...items].sort(
+        (a, b) => getProgrammeDegreeRank(a) - getProgrammeDegreeRank(b)
+    );
+}
 
 interface ProgrammesExplorerProps {
     initialSchoolSlug?: string;
@@ -367,10 +447,10 @@ const ProgrammesExplorer = ({
                                     limit
                                 ),
                             ]);
-                            sourceData = [
+                            sourceData = sortProgrammesByDegreeSequence([
                                 ...(progRes?.data || []),
                                 ...(phdRes?.data || []),
-                            ];
+                            ]);
                         } else {
                             const res =
                                 await getAllSchoolProgrammeByDegOrCatPaginated(
@@ -396,7 +476,7 @@ const ProgrammesExplorer = ({
                     }
 
                     const normQuery = normalize(query);
-                    newData = sourceData.filter((item) => {
+                    const filteredData = sourceData.filter((item) => {
                         const titleStr =
                             "title" in item
                                 ? (item.title || "") +
@@ -406,6 +486,7 @@ const ProgrammesExplorer = ({
                                 : item.heading || "";
                         return normalize(titleStr).includes(normQuery);
                     });
+                    newData = sortProgrammesByDegreeSequence(filteredData);
 
                     setShowLoadMore(false); // no button in search
                 } else {
@@ -432,10 +513,10 @@ const ProgrammesExplorer = ({
                                 limit
                             ),
                         ]);
-                        newData = [
+                        newData = sortProgrammesByDegreeSequence([
                             ...(progRes?.data || []),
                             ...(phdRes?.data || []),
-                        ];
+                        ]);
                     } else {
                         const res =
                             await getAllSchoolProgrammeByDegOrCatPaginated(
@@ -450,7 +531,11 @@ const ProgrammesExplorer = ({
                     setShowLoadMore(false);
                 }
 
-                setProgrammes(newData);
+                setProgrammes(
+                    degreeRefValue.current === "all"
+                        ? sortProgrammesByDegreeSequence(newData)
+                        : newData
+                );
             } finally {
                 setIsLoading(false);
             }

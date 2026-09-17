@@ -3,280 +3,293 @@
 import { FETCH_STRAPI_URL } from "@/app/constant";
 
 export async function getAllSchoolsInfo() {
-  try {
-    const res = await fetch(
-      `${FETCH_STRAPI_URL}/api/schools?fields[0]=schoolname&populate[school_category][fields][0]=name&populate[school_category][fields][1]=slug`,
-      {
-        next: {
-          revalidate: 3600,
-        },
-      },
-    );
+    try {
+        const res = await fetch(
+            `${FETCH_STRAPI_URL}/api/schools?fields[0]=schoolname&populate[school_category][fields][0]=name&populate[school_category][fields][1]=slug`,
+            {
+                next: {
+                    revalidate: 3600,
+                },
+            }
+        );
 
-    if (!res.ok) return [];
-    const json: AllSchoolsResponse = await res.json();
-    return json.data;
-  } catch (error) {
-    console.error("Failed to fetch School Info:", error);
-    return [];
-  }
+        if (!res.ok) return [];
+        const json: AllSchoolsResponse = await res.json();
+        return json.data;
+    } catch (error) {
+        console.error("Failed to fetch School Info:", error);
+        return [];
+    }
 }
 export async function getAllDegreeInfo() {
-  try {
-    const res = await fetch(
-      `${FETCH_STRAPI_URL}/api/degrees?sort[0]=name:desc&fields[0]=name&fields[1]=slug`,
-      {
-        next: {
-          revalidate: 3600,
-        },
-      },
-    );
+    try {
+        const res = await fetch(
+            `${FETCH_STRAPI_URL}/api/degrees?sort[0]=name:desc&fields[0]=name&fields[1]=slug`,
+            {
+                next: {
+                    revalidate: 3600,
+                },
+            }
+        );
 
-    if (!res.ok) return [];
-    const json: DegreeResponse = await res.json();
-    return json.data;
-  } catch (error) {
-    console.error("Failed to fetch Degree Info:", error);
-    return [];
-  }
+        if (!res.ok) return [];
+        const json: DegreeResponse = await res.json();
+        return json.data;
+    } catch (error) {
+        console.error("Failed to fetch Degree Info:", error);
+        return [];
+    }
 }
 
 // Root response
 export interface AllSchoolsResponse {
-  data: SchoolItem[];
-  meta: Meta;
+    data: SchoolItem[];
+    meta: Meta;
 }
 
 // Each school item
 export interface SchoolItem {
-  id: number;
-  documentId: string;
-  schoolname: string;
-  school_category: SchoolCategory;
+    id: number;
+    documentId: string;
+    schoolname: string;
+    school_category: SchoolCategory;
 }
 
 // Nested category
 export interface SchoolCategory {
-  id: number;
-  documentId: string;
-  name: string;
-  slug: string;
+    id: number;
+    documentId: string;
+    name: string;
+    slug: string;
 }
 
 // Meta & pagination
 export interface Meta {
-  pagination: Pagination;
+    pagination: Pagination;
 }
 
 export interface Pagination {
-  page: number;
-  pageSize: number;
-  pageCount: number;
-  total: number;
+    page: number;
+    pageSize: number;
+    pageCount: number;
+    total: number;
 }
 
 ///////////////////////// Degree Response
 
 export interface DegreeResponse {
-  data: ProgrammeLevel[];
-  meta: Meta;
+    data: ProgrammeLevel[];
+    meta: Meta;
 }
 
 export interface ProgrammeLevel {
-  id: number;
-  documentId: string;
-  name: string;
-  slug: string;
+    id: number;
+    documentId: string;
+    name: string;
+    slug: string;
 }
 
 export interface Meta {
-  pagination: Pagination;
+    pagination: Pagination;
 }
 
 export interface Pagination {
-  page: number;
-  pageSize: number;
-  pageCount: number;
-  total: number;
+    page: number;
+    pageSize: number;
+    pageCount: number;
+    total: number;
 }
 
 ///////////////////////////////////////////////////////
 // Get School Programme info
 
 export interface Criteria {
-  id: number;
-  eligibility_criteria: string;
-  Duration: string;
-  semester_i: string;
-  semester_ii: string;
-  programme_fee_per_year: string;
-  eligibility_utm_links: string;
-  programme_offered_number: string;
+    id: number;
+    eligibility_criteria: string;
+    Duration: string;
+    semester_i: string;
+    semester_ii: string;
+    programme_fee_per_year: string;
+    eligibility_utm_links: string;
+    programme_offered_number: string;
 }
 
 export interface Programme {
-  id: number;
-  documentId: string;
-  title: string;
-  highlightitle: string;
-  programmeslug: string;
-  criteria: Criteria;
+    id: number;
+    documentId: string;
+    title: string;
+    highlightitle: string;
+    programmeslug: string;
+    criteria: Criteria;
+    degree?: {
+        id?: number;
+        documentId?: string;
+        name?: string;
+        slug?: string;
+    };
 }
 
 export interface Pagination {
-  page: number;
-  pageSize: number;
-  pageCount: number;
-  total: number;
+    page: number;
+    pageSize: number;
+    pageCount: number;
+    total: number;
 }
 
 export interface ProgrammesResponse {
-  data: Programme[];
-  meta: {
-    pagination: Pagination;
-  };
+    data: Programme[];
+    meta: {
+        pagination: Pagination;
+    };
 }
 
 export async function getAllSchoolProgrammeByDegOrCatPaginated(
-  deg: string = "undergraduate-programmes",
-  cat: string = "soet",
-  page: number = 1,
-  pageSize: number = 6,
+    deg: string = "undergraduate-programmes",
+    cat: string = "soet",
+    page: number = 1,
+    pageSize: number = 6
 ): Promise<ProgrammesResponse> {
-  let url = `${FETCH_STRAPI_URL}/api/school-programmes?sort[0]=order_num:asc`;
-  
-  if (deg !== "all") {
-    url += `&filters[degree][slug][$eq]=${deg}`;
-  }
-  
-  url += `&filters[school_category][slug][$eq]=${cat}` +
-    `&fields[0]=title` +
-    `&fields[2]=highlightitle` +
-    `&fields[1]=programmeslug` +
-    `&populate[criteria][populate]=*` +
-    `&pagination[page]=${page}` +
-    `&pagination[pageSize]=${pageSize}`;
+    const sortParam =
+        deg === "all"
+            ? "sort[0]=degree.slug:desc&sort[1]=order_num:asc"
+            : "sort[0]=order_num:asc";
+    let url = `${FETCH_STRAPI_URL}/api/school-programmes?${sortParam}`;
 
-  const res = await fetch(url, {
-    next: { revalidate: 3600 },
-  });
+    if (deg !== "all") {
+        url += `&filters[degree][slug][$eq]=${deg}`;
+    }
 
-  if (!res.ok) throw new Error("Failed to fetch programmes");
+    url +=
+        `&filters[school_category][slug][$eq]=${cat}` +
+        `&fields[0]=title` +
+        `&fields[2]=highlightitle` +
+        `&fields[1]=programmeslug` +
+        `&populate[criteria][populate]=*` +
+        `&populate[degree][fields][0]=slug` +
+        `&populate[degree][fields][1]=name` +
+        `&pagination[page]=${page}` +
+        `&pagination[pageSize]=${pageSize}`;
 
-  return res.json();
+    const res = await fetch(url, {
+        next: { revalidate: 3600 },
+    });
+
+    if (!res.ok) throw new Error("Failed to fetch programmes");
+
+    return res.json();
 }
 
 ///////////////////////////////////////////// PHD Programmes
 export interface PhdCriteria {
-  id: number;
-  eligibility_criteria: string;
-  Duration: string;
-  semester_i: string;
-  semester_ii: string;
-  programme_fee_per_year: string;
-  eligibility_utm_links: string;
-  programme_offered_number: string;
+    id: number;
+    eligibility_criteria: string;
+    Duration: string;
+    semester_i: string;
+    semester_ii: string;
+    programme_fee_per_year: string;
+    eligibility_utm_links: string;
+    programme_offered_number: string;
 }
 
 export interface PhdProgramme {
-  id: number;
-  documentId: string;
-  phdslug: string;
-  heading: string;
-  criteria: PhdCriteria;
+    id: number;
+    documentId: string;
+    phdslug: string;
+    heading: string;
+    criteria: PhdCriteria;
 }
 
 export interface PhdPagination {
-  page: number;
-  pageSize: number;
-  pageCount: number;
-  total: number;
+    page: number;
+    pageSize: number;
+    pageCount: number;
+    total: number;
 }
 
 export interface PhdProgrammesResponse {
-  data: PhdProgramme[];
-  meta: {
-    pagination: PhdPagination;
-  };
+    data: PhdProgramme[];
+    meta: {
+        pagination: PhdPagination;
+    };
 }
 
 export async function getAllSchoolPhdProgrammeByCatPaginated(
-  cat: string = "soet",
-  page: number = 1,
-  pageSize: number = 6,
+    cat: string = "soet",
+    page: number = 1,
+    pageSize: number = 6
 ): Promise<PhdProgrammesResponse> {
-  const url =
-    `${FETCH_STRAPI_URL}/api/phd-single-programmes` +
-    `?filters[school_category][slug][$eq]=${cat}` +
-    `&fields[0]=phdslug` +
-    `&fields[1]=heading` +
-    `&populate[criteria][populate]=*` +
-    `&pagination[page]=${page}` +
-    `&pagination[pageSize]=${pageSize}`;
+    const url =
+        `${FETCH_STRAPI_URL}/api/phd-single-programmes` +
+        `?filters[school_category][slug][$eq]=${cat}` +
+        `&fields[0]=phdslug` +
+        `&fields[1]=heading` +
+        `&populate[criteria][populate]=*` +
+        `&pagination[page]=${page}` +
+        `&pagination[pageSize]=${pageSize}`;
 
-  const res = await fetch(url, {
-    next: { revalidate: 3600 },
-  });
+    const res = await fetch(url, {
+        next: { revalidate: 3600 },
+    });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch PhD programmes");
-  }
+    if (!res.ok) {
+        throw new Error("Failed to fetch PhD programmes");
+    }
 
-  return res.json();
+    return res.json();
 }
 
 ///////////////// search query
 
 export async function searchSchoolProgrammes(
-  searchQuery: string = "",
-  page: number = 1,
-  pageSize: number = 6,
+    searchQuery: string = "",
+    page: number = 1,
+    pageSize: number = 6
 ): Promise<ProgrammesResponse> {
-  // Start query string
-  const queryParams = new URLSearchParams({
-    "fields[0]": "title",
-    "fields[1]": "programmeslug",
-    "populate[criteria][populate]": "*",
-    "pagination[page]": page.toString(),
-    "pagination[pageSize]": "1000",
-  });
+    // Start query string
+    const queryParams = new URLSearchParams({
+        "fields[0]": "title",
+        "fields[1]": "programmeslug",
+        "populate[criteria][populate]": "*",
+        "pagination[page]": page.toString(),
+        "pagination[pageSize]": "1000",
+    });
 
-  if (searchQuery) {
-    queryParams.append("filters[title][$containsi]", searchQuery);
-  }
+    if (searchQuery) {
+        queryParams.append("filters[title][$containsi]", searchQuery);
+    }
 
-  const url = `${FETCH_STRAPI_URL}/api/school-programmes?${queryParams.toString()}`;
+    const url = `${FETCH_STRAPI_URL}/api/school-programmes?${queryParams.toString()}`;
 
-  const res = await fetch(url, { next: { revalidate: 3600 } });
-  if (!res.ok) throw new Error("Failed to fetch school programmes");
+    const res = await fetch(url, { next: { revalidate: 3600 } });
+    if (!res.ok) throw new Error("Failed to fetch school programmes");
 
-  return res.json();
+    return res.json();
 }
 
 export async function searchPhdProgrammes(
-  searchQuery: string = "",
-  page: number = 1,
-  pageSize: number = 6,
+    searchQuery: string = "",
+    page: number = 1,
+    pageSize: number = 6
 ): Promise<PhdProgrammesResponse> {
-  // Build query parameters safely
-  const queryParams = new URLSearchParams({
-    "fields[0]": "heading",
-    "fields[1]": "phdslug",
-    "populate[criteria][populate]": "*",
-    "pagination[page]": page.toString(),
-    "pagination[pageSize]": "1000",
-  });
+    // Build query parameters safely
+    const queryParams = new URLSearchParams({
+        "fields[0]": "heading",
+        "fields[1]": "phdslug",
+        "populate[criteria][populate]": "*",
+        "pagination[page]": page.toString(),
+        "pagination[pageSize]": "1000",
+    });
 
-  if (searchQuery) {
-    queryParams.append("filters[heading][$containsi]", searchQuery);
-  }
+    if (searchQuery) {
+        queryParams.append("filters[heading][$containsi]", searchQuery);
+    }
 
-  const url = `${FETCH_STRAPI_URL}/api/phd-single-programmes?${queryParams.toString()}`;
+    const url = `${FETCH_STRAPI_URL}/api/phd-single-programmes?${queryParams.toString()}`;
 
-  const res = await fetch(url, { next: { revalidate: 3600 } });
-  if (!res.ok) throw new Error("Failed to fetch PhD programmes");
+    const res = await fetch(url, { next: { revalidate: 3600 } });
+    if (!res.ok) throw new Error("Failed to fetch PhD programmes");
 
-  return res.json();
+    return res.json();
 }
 
 // /api/school-programmes?filters[title][$contains]=B.Tech.&populate[criteria][populate]=*&fields[0]=title&fields[1]=programmeslug&pagination[pageSize]=6&pagination[page]=1
