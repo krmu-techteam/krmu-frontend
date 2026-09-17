@@ -1,45 +1,76 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import {
-  pgColumn1Notes,
-  pgColumn2Notes,
-  NoteItem,
+    pgColumn1Notes,
+    pgColumn2Notes,
+    NoteItem,
 } from "@/features/admission/scholarship";
 
 const NotesPG = () => {
-  const renderNote = (item: NoteItem) => (
-    <div key={item.id} className="flex gap-5">
-      <span className="rounded-full py-[3px] px-2 border border-white text-white w-[25px] h-[28px] flex items-center justify-center shrink-0">
-        {item.id}
-      </span>
-      <span className="text-white font-semibold text-base notesul">
-        {item.text}
-        {item.list && item.listType === "ul" && (
-          <ul className="font-normal">
-            {item.list.map((sub, idx) => (
-              <li key={idx}>{sub}</li>
-            ))}
-          </ul>
-        )}
-        {item.extra}
-      </span>
-    </div>
-  );
+    const [showAll, setShowAll] = useState(false);
 
-  return (
-    <section className="bg-[url(/scholarship/notes-bg.webp)] bg-cover bg-no-repeat py-[30px] mt-10">
-      <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16">
-        <h3 className="text-5xl text-white font-semibold mb-10">Notes:</h3>
-        <div className="flex flex-col lg:flex-row gap-5">
-          <div className="lg:w-1/2 flex flex-col gap-5">
-            {pgColumn1Notes.map(renderNote)}
-          </div>
-          <div className="lg:w-1/2 flex flex-col gap-5">
-            {pgColumn2Notes.map(renderNote)}
-          </div>
+    // Combine all notes
+    const allNotes: NoteItem[] = [...pgColumn1Notes, ...pgColumn2Notes];
+
+    const displayedNotes = showAll ? allNotes : allNotes.slice(0, 5);
+
+    return (
+        <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 xl:px-16 my-10">
+            <div
+                className="p-6 sm:p-8 md:p-10 bg-transparent"
+                style={{
+                    border: "4px solid transparent",
+                    background:
+                        "linear-gradient(white, white) padding-box, linear-gradient(180deg, #011833 0%, #DE0000 100%) border-box",
+                    borderRadius: "10px",
+                }}
+            >
+                <h3 className="text-2xl sm:text-3xl font-bold text-black mb-6">
+                    Notes:
+                </h3>
+                <div className="flex flex-col gap-4">
+                    {displayedNotes.map((item) => (
+                        <div key={item.id} className="flex items-start gap-3.5">
+                            <span className="w-5 h-5 rounded-full border border-black/80 flex items-center justify-center shrink-0 mt-0.5">
+                                <svg
+                                    className="w-3 h-3 text-black"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2.5"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <path d="M5 12h14" />
+                                    <path d="M12 5l7 7-7 7" />
+                                </svg>
+                            </span>
+                            <div className="text-sm sm:text-base font-normal text-black leading-relaxed">
+                                {item.text}
+                                {item.list && (
+                                    <ul className="list-disc pl-5 my-2 text-sm text-black/90">
+                                        {item.list.map((sub, idx) => (
+                                            <li key={idx}>{sub}</li>
+                                        ))}
+                                    </ul>
+                                )}
+                                {item.extra}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {allNotes.length > 5 && (
+                    <button
+                        onClick={() => setShowAll(!showAll)}
+                        className="mt-8 px-5 py-2 rounded-lg border border-gray-300 text-sm font-semibold text-black hover:bg-gray-50 flex items-center gap-2 transition-colors cursor-pointer"
+                    >
+                        {showAll ? "View Less" : "View All"} <span>&rarr;</span>
+                    </button>
+                )}
+            </div>
         </div>
-      </div>
-    </section>
-  );
+    );
 };
 
 export default NotesPG;

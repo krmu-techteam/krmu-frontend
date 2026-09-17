@@ -1628,18 +1628,23 @@ body:before {
 
     .ugpgtable table {
         width: 100%;
+        border-collapse: collapse;
+        border: none !important;
     }
 
     .ugpgtable table tr th {
-        padding: 20px;
-        color: #fff;
-        background: #051630;
-        font-size: 16px;
+        padding: 16px 20px;
+        color: #000 !important;
+        background: #e8eef6 !important;
+        font-size: 15px;
+        font-weight: 700;
         text-align: left;
+        border: none !important;
+        border-bottom: 0px solid #e5e7eb !important;
     }
 
     .ugpgtable div table thead tr th:first-child {
-        width: 20%;
+        width: 25%;
     }
 
     .ugpgtable div table thead tr td ol,
@@ -1649,28 +1654,37 @@ body:before {
     }
 
     .ugpgtable table tr thead tr th:first-child {
-        width: 40%;
-        border-top-left-radius: 8px;
+        width: 35%;
+        border-top-left-radius: 4px;
     }
 
     .ugpgtable table tr th:last-child {
-        border-top-right-radius: 8px;
+        border-top-right-radius: 4px;
     }
 
     .ugpgtable table tr td {
-        padding: 10px 20px;
-        font-size: 16px;
-        font-weight: 500;
+        padding: 16px 20px;
+        font-size: 15px;
+        font-weight: 400;
         vertical-align: top;
+        color: #1a1a1a !important;
+        background: #fff !important;
+        border: none !important;
+        border-bottom: 0px solid #f0f0f0 !important;
     }
 
     .ugpgtable table,
     .ugpgtable table th,
     .ugpgtable table td {
-        border: 1px solid #000 !important;
+        border-left: none !important;
+        border-right: none !important;
+        border-top: none !important;
         border-collapse: collapse;
-        padding: 8px;
-        color: #f2f2f2;
+        color: #1a1a1a;
+    }
+
+    .ugpgtable table tr:last-child td {
+        border-bottom: none !important;
     }
 
     .ugpgacctab svg {
