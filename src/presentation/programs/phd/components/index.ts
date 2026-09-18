@@ -1,0 +1,14 @@
+export { default as PHDHeroSection } from "./PHDHeroSection";
+export { default as PHDSubNav } from "./PHDSubNav";
+export { default as PHDOverview } from "./PHDOverview";
+export { default as PHDScholar } from "./PHDScholar";
+export { default as PHDCareer } from "./PHDCareer";
+export { default as PHDOutcome } from "./PHDOutcome";
+export { default as PHDAdmission } from "./PHDAdmission";
+export { default as PHDTestimonialsAcc } from "./PHDTestimonialsAcc";
+export { default as PHDConnectingDream } from "./PHDConnectingDream";
+export { default as PHDHighlight } from "./PHDHighlight";
+export { default as PHDProgrammeHighlight } from "./PHDProgrammeHighlight";
+export { default as PHDPursue } from "./PHDPursue";
+export { default as PHDSlide } from "./PHDSlide";
+export { default as PHDTestimonial } from "./PHDTestimonial";
