@@ -39,7 +39,7 @@ const SkilledPartners = () => {
             </h2>
 
             {/* Navigation */}
-            <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+            <div className="flex shrink-0 items-center gap-1.5">
               <CarouselPrevious
                 className="
                   static m-0

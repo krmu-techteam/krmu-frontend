@@ -162,7 +162,7 @@ export const StudentSuccessStories = () => {
           <div className="mt-5 flex w-full">
             {/* Left navigation area */}
             <div className="flex w-full justify-center md:w-[45%] sm:justify-center">
-              <div className="relative -top-10 flex h-10 w-20 items-center justify-between">
+              <div className="relative -top-10 flex h-10 w-20 items-center justify-between gap-1.5">
                 <CarouselPrevious
                   className="
                     relative left-0 top-0
@@ -175,6 +175,7 @@ export const StudentSuccessStories = () => {
                      hover:bg-black/80
                     hover:text-white
                     disabled:opacity-40
+                    
                   "
                 />
 

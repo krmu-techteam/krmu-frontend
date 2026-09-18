@@ -375,7 +375,7 @@ export default function RecruiterRegistration() {
       // =====================================================
 
       const response = await fetch(
-        "https://forms.krmangalam.ac.in/back-desk/recruiter-registration.php",
+      "https://forms.krmangalam.ac.in/back-desk/recruiter-registration.php",
         {
           method: "POST",
           body: formData,

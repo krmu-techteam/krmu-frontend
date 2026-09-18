@@ -26,9 +26,10 @@ const OutcomesBySchool = () => {
             }}
             className="w-full relative"
           >
-            <div className="absolute z-10 right-0 -top-12 w-[100px] hidden md:block">
+            <div className="absolute z-10 right-0 -top-12 w-[100px] hidden md:flex items-center gap-1.5">
               <CarouselPrevious className="left-0 text-white w-10 h-10 cursor-pointer rounded-full
                     bg-black
+                    relative
                     border-0
                     shadow-none
                     hover:bg-black/80
@@ -36,6 +37,7 @@ const OutcomesBySchool = () => {
                     disabled:opacity-40" />
               <CarouselNext className="right-0 w-10 h-10 rounded-full
                     bg-black
+                    relative
                     text-white
                     border-0
                     shadow-none

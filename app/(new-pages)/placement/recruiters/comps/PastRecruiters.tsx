@@ -229,9 +229,9 @@ const PastRecruiters = () => {
 
             <TableHeading>Role</TableHeading>
 
-            <TableHeading>Hiring</TableHeading>
+            <TableHeading classprops="text-center">Hiring</TableHeading>
 
-            <TableHeading>Sector</TableHeading>
+            <TableHeading> </TableHeading>
           </div>
 
           {/* ========================================= */}
@@ -417,10 +417,17 @@ const FilterSelect = ({
 // ==================================================
 // TABLE HEADING
 // ==================================================
-
-const TableHeading = ({ children }: { children: React.ReactNode }) => {
+const TableHeading = ({
+  children,
+  classprops,
+}: {
+  children: React.ReactNode;
+  classprops?: string;
+}) => {
   return (
-    <div className="text-base font-medium uppercase  text-black tracking-[4px]">
+    <div
+      className={`text-base font-medium uppercase text-black tracking-[4px] ${classprops ?? ""}`}
+    >
       {children}
     </div>
   );
@@ -482,7 +489,7 @@ const RecruiterRow = ({ recruiter }: RecruiterRowProps) => {
             Hiring
           </span>
 
-          <p className="text-sm leading-5 text-[#292929] sm:text-[13px] md:text-sm">
+          <p className="text-sm leading-5 text-[#292929] sm:text-[13px] md:text-sm text-center">
             {recruiter.hiring ?? 0}
           </p>
         </div>
@@ -494,7 +501,7 @@ const RecruiterRow = ({ recruiter }: RecruiterRowProps) => {
             Internship/Placement/PPO
           </span>
 
-          <p className="text-[12px] leading-5 text-[#292929] sm:text-[13px] md:text-[12px]">
+          <p className="text-[12px] leading-5 text-[#292929] sm:text-[13px] md:text-[12px] text-center">
             {recruiter.sector || "-"}
           </p>
         </div>

@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -35,12 +35,11 @@ const TrainersHeroSection = () => {
               lg:pb-16
           "
           >
-            
             <Link
               href="/placement"
               className="inline-flex items-center gap-2 text-sm text-white transition-transform duration-300 hover:translate-x-1"
             >
-              Back <ArrowRight size={16} strokeWidth={1.5} />
+              <ArrowLeft size={16} strokeWidth={1.5} /> Back to Placement
             </Link>
             <p
               className="

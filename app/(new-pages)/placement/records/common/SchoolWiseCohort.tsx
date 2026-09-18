@@ -71,7 +71,7 @@ const SchoolWiseCohort = () => {
               {/* =========================
                   DESKTOP ARROWS
               ========================= */}
-              <div className="absolute right-0 -top-16 z-30 hidden md:flex items-center gap-3">
+              <div className="absolute right-0 -top-16 z-30 hidden md:flex items-center gap-1.5">
                 <CarouselPrevious
                   className="
                     static

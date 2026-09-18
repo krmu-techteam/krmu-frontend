@@ -1,4 +1,6 @@
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -6,6 +8,12 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-8 md:gap-10 lg:gap-14">
         {/* Content */}
         <div className="w-full md:w-1/2">
+          <Link
+            href="/placement"
+            className="inline-flex items-center gap-2 text-sm text-[#33] transition-transform duration-300 hover:translate-x-1"
+          >
+            <ArrowLeft size={16} strokeWidth={1.5} /> Back to Placement
+          </Link>
           <p className="text-xs sm:text-sm md:text-base font-medium tracking-[4px] uppercase text-[#8d5552] mb-3">
             Placement Records
           </p>

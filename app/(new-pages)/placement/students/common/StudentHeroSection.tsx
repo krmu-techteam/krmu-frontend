@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,7 +12,7 @@ const StudentHeroSection = () => {
               href="/placement"
               className="inline-flex items-center gap-2 text-sm text-[#33] transition-transform duration-300 hover:translate-x-1"
             >
-              Back <ArrowRight size={16} strokeWidth={1.5} />
+              <ArrowLeft size={16} strokeWidth={1.5} /> Back to Placement
             </Link>
           <h3 className="text-xs sm:text-sm md:text-base font-medium tracking-[0.25em] sm:tracking-[0.35em] md:tracking-[0.4em] uppercase text-[#8d5552] mb-3">
             For Students
