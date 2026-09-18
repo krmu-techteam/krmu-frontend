@@ -43,7 +43,10 @@ const PHDProgrammes = ({ phdData, slug }: Props) => {
 
             {/* OVERVIEW SECTION (#overview) */}
             {phdData?.phdoverview && (
-                <PHDOverview overviewData={phdData.phdoverview} />
+                <PHDOverview
+                    overviewData={phdData.phdoverview}
+                    eligibilityCriteria={phdData.eligibility_criteria}
+                />
             )}
 
             {/* SCHOLAR CATEGORIES SECTION (#scholar-categories) */}

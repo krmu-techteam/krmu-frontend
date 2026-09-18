@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import NoPaperForm from "@/lib/constants/NoPaperForm";
 import {
@@ -43,8 +43,6 @@ export default function PHDHeroSection({
     logoSlide = [],
     formId = "b8a1d46829929a0a7c19f4fc185e7d45",
 }: PHDHeroSectionProps) {
-    const [showFullEligibility, setShowFullEligibility] = useState(false);
-
     // Parse Duration (Mockup: DURATION -> Min. 3 Years -> Full research term)
     const durationValue =
         duration?.countercontent && duration.countercontent.trim().length > 0
@@ -64,15 +62,6 @@ export default function PHDHeroSection({
             .replace(/\/-\s*$/, "");
     }
     const feeSubtitle = "Programme fee";
-
-    // Parse Eligibility (Show real data from API)
-    const eligibilityValue = "PG DEGREE";
-    const rawEligibilityContent =
-        eligibleCriteria?.countercontent?.trim() || "";
-    const isLongEligibility = rawEligibilityContent.length > 100;
-    const truncatedEligibility = isLongEligibility
-        ? `${rawEligibilityContent.slice(0, 100).trim()}...`
-        : rawEligibilityContent;
 
     const schoolName = schoolCategory?.name || "SOET";
 
@@ -157,29 +146,29 @@ export default function PHDHeroSection({
                         )}
                     </div>
 
-                    {/* GRADUATE GIRL IMAGE (Positioned flush on divider line, overlapping form with z-30) */}
-                    <div className="relative lg:absolute lg:right-2 xl:-right-8 2xl:-right-12 bottom-0 lg:bottom-[138px] xl:bottom-[144px] z-30 pointer-events-none flex justify-center mt-6 lg:mt-0">
-                        <div className="relative w-[280px] h-[290px] sm:w-[350px] sm:h-[370px] lg:w-[430px] lg:h-[420px] xl:w-[490px] xl:h-[480px]">
+                    {/* GRADUATE GIRL IMAGE (Starts flush from bottom: 0, overlapping form with z-30) */}
+                    <div className="relative lg:absolute lg:right-0 xl:-right-6 2xl:-right-10 bottom-0 z-30 pointer-events-none flex justify-center mt-6 lg:mt-0">
+                        <div className="relative w-[340px] h-[380px] sm:w-[420px] sm:h-[470px] lg:w-[490px] lg:h-[550px] xl:w-[580px] xl:h-[620px]">
                             <Image
                                 src="/images/phd/girl.png"
                                 alt="PhD Graduate Celebrating"
                                 fill
                                 priority
                                 className="object-contain object-bottom"
-                                sizes="(max-width: 640px) 280px, (max-width: 1024px) 350px, (max-width: 1280px) 430px, 490px"
+                                sizes="(max-width: 640px) 340px, (max-width: 1024px) 420px, (max-width: 1280px) 490px, 580px"
                             />
                         </div>
                     </div>
 
-                    {/* BOTTOM STATS & DIVIDER (Matching design: width: 892px; opacity: 0.3; border: 1px solid #8FC1DE) */}
+                    {/* BOTTOM STATS & DIVIDER (DURATION & FEE / YEAR) */}
                     <div className="relative z-10 w-full mt-8 lg:mt-auto pt-4">
                         {/* Divider Line */}
-                        <div className="w-full max-w-[925px] h-[2px] bg-[#8FC1DE] opacity-30 mb-5" />
+                        <div className="w-full max-w-[460px] lg:max-w-[480px] h-[1.5px] bg-[#8FC1DE] opacity-30 mb-5" />
 
-                        {/* 3 Columns Stats Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-[190px_200px_1fr] lg:grid-cols-[200px_220px_1fr] gap-5 sm:gap-0 max-w-[920px]">
+                        {/* 2 Columns Stats Grid */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-0 max-w-[460px] lg:max-w-[480px]">
                             {/* Column 1: DURATION */}
-                            <div className="pr-2 sm:pr-8">
+                            <div className="pr-2 sm:pr-6">
                                 <p className="text-[#8FC1DE] uppercase text-[11px] sm:text-[12px] font-normal tracking-wider mb-1">
                                     DURATION
                                 </p>
@@ -192,7 +181,7 @@ export default function PHDHeroSection({
                             </div>
 
                             {/* Column 2: FEE / YEAR */}
-                            <div className="sm:border-l sm:border-[#8FC1DE]/30 sm:pl-5 lg:pl-8 pr-2 sm:pr-4 pt-3 sm:pt-0 border-t border-[#8FC1DE]/15 sm:border-t-0">
+                            <div className="sm:border-l sm:border-[#8FC1DE]/30 sm:pl-6 lg:pl-8 pr-2 sm:pr-4 pt-3 sm:pt-0 border-t border-[#8FC1DE]/15 sm:border-t-0">
                                 <p className="text-[#8FC1DE] uppercase text-[11px] sm:text-[12px] font-normal tracking-wider mb-1">
                                     FEE / YEAR
                                 </p>
@@ -201,36 +190,6 @@ export default function PHDHeroSection({
                                 </p>
                                 <p className="text-[#8FC1DE] text-[13px] leading-snug">
                                     {feeSubtitle}
-                                </p>
-                            </div>
-
-                            {/* Column 3: ELIGIBILITY */}
-                            <div className="sm:border-l sm:border-[#8FC1DE]/30 sm:pl-5 lg:pl-8 pt-3 sm:pt-0 border-t border-[#8FC1DE]/15 sm:border-t-0">
-                                <p className="text-[#8FC1DE] uppercase text-[11px] sm:text-[12px] font-normal tracking-wider mb-1">
-                                    ELIGIBILITY
-                                </p>
-                                <p className="text-white font-bold text-[19px] sm:text-[21px] lg:text-[23px] leading-tight mb-1">
-                                    {eligibilityValue}
-                                </p>
-                                <p className="text-[#8FC1DE] text-[13px] leading-snug">
-                                    {showFullEligibility
-                                        ? rawEligibilityContent
-                                        : truncatedEligibility}
-                                    {isLongEligibility && (
-                                        <button
-                                            type="button"
-                                            onClick={() =>
-                                                setShowFullEligibility(
-                                                    !showFullEligibility
-                                                )
-                                            }
-                                            className="ml-1 text-[#8FC1DE] underline cursor-pointer inline text-[12px] hover:text-white"
-                                        >
-                                            {showFullEligibility
-                                                ? "less"
-                                                : "more"}
-                                        </button>
-                                    )}
                                 </p>
                             </div>
                         </div>

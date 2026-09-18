@@ -27,7 +27,9 @@ export default function PHDSubNav() {
             const headerEl = document.querySelector("header");
             const currentHeaderHeight = headerEl
                 ? Math.round(headerEl.getBoundingClientRect().height)
-                : 80;
+                : window.innerWidth >= 1280
+                  ? 88
+                  : 80;
 
             setHeaderHeight(currentHeaderHeight);
 
@@ -40,13 +42,13 @@ export default function PHDSubNav() {
                 }
             }
 
-            // Find which section is currently active
-            const scrollPos = window.scrollY + currentHeaderHeight + 100;
+            // Scroll spy logic to highlight current visible section
+            const spyThreshold = currentHeaderHeight + 70;
             for (let i = navItems.length - 1; i >= 0; i--) {
                 const el = document.getElementById(navItems[i].targetId);
                 if (el) {
-                    const top = el.getBoundingClientRect().top + window.scrollY;
-                    if (scrollPos >= top) {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= spyThreshold) {
                         setActiveId(navItems[i].targetId);
                         break;
                     }
@@ -54,45 +56,50 @@ export default function PHDSubNav() {
             }
         };
 
-        window.addEventListener("scroll", handleScroll, { passive: true });
         handleScroll();
+        const t1 = setTimeout(handleScroll, 100);
+        const t2 = setTimeout(handleScroll, 400);
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        window.addEventListener("resize", handleScroll, { passive: true });
 
         return () => {
+            clearTimeout(t1);
+            clearTimeout(t2);
             window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleScroll);
         };
     }, []);
 
     const scrollToSection = (e: React.MouseEvent, targetId: string) => {
         e.preventDefault();
+        setActiveId(targetId);
         const element = document.getElementById(targetId);
         if (element) {
-            const headerEl = document.querySelector("header");
-            const offset = headerEl
-                ? headerEl.getBoundingClientRect().height + 65
-                : 140;
+            const subNavH = containerRef.current
+                ? containerRef.current.offsetHeight
+                : 61;
+            const totalStickyHeight = headerHeight + subNavH;
             const top =
-                element.getBoundingClientRect().top + window.scrollY - offset;
+                element.getBoundingClientRect().top +
+                window.pageYOffset -
+                totalStickyHeight +
+                5;
             window.scrollTo({
                 top: Math.max(0, top),
                 behavior: "smooth",
             });
-            setActiveId(targetId);
         }
     };
 
     return (
-        <>
-            {/* Placeholder to prevent layout jump when sticky */}
-            {isSticky && <div className="h-[61px] w-full" />}
-
+        <div ref={containerRef} className="w-full min-h-[61px] relative">
             <nav
-                ref={containerRef}
                 style={{
                     backgroundColor: "#D6D1C7",
                     top: isSticky ? `${headerHeight}px` : "auto",
                 }}
-                className={`w-full z-40 transition-shadow duration-200 border-b border-black/5 ${
-                    isSticky ? "fixed left-0 shadow-md" : "relative"
+                className={`w-full z-40 transition-[top] duration-150 ${
+                    isSticky ? "fixed left-0" : "relative"
                 }`}
             >
                 <div className="max-w-[1440px] mx-auto h-[61px] px-4 sm:px-6 lg:px-8 flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar">
@@ -106,16 +113,16 @@ export default function PHDSubNav() {
                                         onClick={(e) =>
                                             scrollToSection(e, item.targetId)
                                         }
-                                        className={`text-[14px] sm:text-[15px] font-medium transition-all duration-200 cursor-pointer relative py-2 ${
-                                            isActive
-                                                ? "text-[#14233D] font-bold"
-                                                : "text-[#14233D]/80 hover:text-[#14233D]"
-                                        }`}
+                                        className="group relative inline-block text-[14px] sm:text-[16px] font-semibold text-[#14233D] cursor-pointer py-[2px] transition-colors duration-200"
                                     >
                                         {item.label}
-                                        {isActive && (
-                                            <span className="absolute bottom-0 left-0 w-full h-[2.5px] bg-[#14233D] rounded-full" />
-                                        )}
+                                        <span
+                                            className={`absolute bottom-0 left-0 h-[2px] bg-[#14233D] rounded-full transition-all duration-300 ease-in-out ${
+                                                isActive
+                                                    ? "w-full opacity-100"
+                                                    : "w-0 opacity-0 group-hover:w-full group-hover:opacity-100"
+                                            }`}
+                                        />
                                     </a>
                                 </li>
                             );
@@ -123,6 +130,6 @@ export default function PHDSubNav() {
                     </ul>
                 </div>
             </nav>
-        </>
+        </div>
     );
 }
