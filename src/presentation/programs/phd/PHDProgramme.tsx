@@ -10,7 +10,6 @@ import {
     PHDAdmission,
     PHDTestimonialsAcc,
     PHDConnectingDream,
-    PHDHighlight,
     PHDProgrammeHighlight,
     PHDPursue,
 } from "./components";
@@ -110,7 +109,7 @@ const PHDProgrammes = ({ phdData, slug }: Props) => {
             )}
 
             {/* COMMENCE JOURNEY */}
-            {phdData?.commence_journey && (
+            {/* {phdData?.commence_journey && (
                 <PHDHighlight
                     heading={phdData.commence_journey.heading}
                     highlightheading={
@@ -119,7 +118,7 @@ const PHDProgrammes = ({ phdData, slug }: Props) => {
                     btn={phdData.commence_journey.commence_btn}
                     imgUrl={phdData.commence_journey.bgimg?.url}
                 />
-            )}
+            )} */}
         </div>
     );
 };

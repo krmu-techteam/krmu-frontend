@@ -26,14 +26,14 @@ const PHDProgrammeHighlight = ({ highlightContent }: Props) => {
         >
             <div className="max-w-[1440px] mx-auto w-full">
                 {/* DARK CARD CONTAINER (#14233D) */}
-                <div className="bg-[#14233D] rounded-[20px] sm:rounded-[24px] overflow-hidden flex flex-col lg:flex-row items-stretch shadow-[0px_10px_30px_rgba(20,35,61,0.15)]">
+                <div className="bg-[#14233D] rounded-[10px] overflow-hidden flex flex-col lg:flex-row items-stretch">
                     {/* LEFT SIDE IMAGE (width: 420, full height flush) */}
                     <div className="w-full lg:w-[420px] min-h-[260px] sm:min-h-[300px] lg:min-h-[340px] self-stretch relative shrink-0">
                         <Image
                             src="/images/phd/workmens.jpg"
                             alt="Program Highlight"
                             fill
-                            className="object-cover object-center"
+                            className="object-cover object-[72%_center]"
                             sizes="(max-width: 1024px) 100vw, 420px"
                         />
                     </div>
@@ -55,7 +55,7 @@ const PHDProgrammeHighlight = ({ highlightContent }: Props) => {
                             </h3>
 
                             {/* PARAGRAPHS */}
-                            <div className="text-[#CBD5E1] text-[13px] sm:text-[14px] leading-relaxed font-normal">
+                            <div className="text-[#CBD5E1] text-[13px] sm:text-[14px] leading-relaxed font-normal [&_p:empty]:hidden [&_p:has(br:only-child)]:hidden">
                                 {highlightContent?.phdcontent && (
                                     <BlocksRenderer
                                         content={highlightContent.phdcontent}
