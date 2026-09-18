@@ -162,7 +162,7 @@ const page = () => {
           <Divider />
         </div> 
         <InterviewReady />
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto"> 
           <Divider /> 
         </div>
         <InterviewSuccessStories />

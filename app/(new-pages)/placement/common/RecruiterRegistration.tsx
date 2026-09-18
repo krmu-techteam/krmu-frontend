@@ -1,6 +1,7 @@
 "use client";
 
-import { FileText, X } from "lucide-react";
+import { ArrowLeft, FileText, X } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import {
   FieldErrors,
@@ -80,8 +81,7 @@ const driveModeOptions = ["On-campus", "Virtual", "Hybrid"];
 
 const phoneRegex = /^[6-9]\d{9}$/;
 
-const urlRegex =
-  /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/.*)?$/i;
+const urlRegex = /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/.*)?$/i;
 
 const inputClass =
   "h-[35px] w-full border bg-white px-2.5 text-[12px] text-[#111] outline-none transition focus:border-[#092542]";
@@ -110,7 +110,7 @@ export default function RecruiterRegistration() {
       companyType: "",
       gstNumber: "",
       companyBrochure: null,
-    //   companyLogo: "",
+      //   companyLogo: "",
 
       fullName: "",
       designation: "",
@@ -194,188 +194,102 @@ export default function RecruiterRegistration() {
       // COMPANY DETAILS
       // =====================================================
 
-      formData.append(
-        "companyName",
-        data.companyName.trim(),
-      );
+      formData.append("companyName", data.companyName.trim());
 
-      formData.append(
-        "industry",
-        data.industry,
-      );
+      formData.append("industry", data.industry);
 
-      formData.append(
-        "companyWebsite",
-        data.companyWebsite.trim(),
-      );
+      formData.append("companyWebsite", data.companyWebsite.trim());
 
-      formData.append(
-        "companyAddress",
-        data.companyAddress.trim(),
-      );
+      formData.append("companyAddress", data.companyAddress.trim());
 
-      formData.append(
-        "companyType",
-        data.companyType,
-      );
+      formData.append("companyType", data.companyType);
 
-      formData.append(
-        "gstNumber",
-        data.gstNumber.trim(),
-      );
+      formData.append("gstNumber", data.gstNumber.trim());
 
       // =====================================================
       // RECRUITER
       // =====================================================
 
-      formData.append(
-        "fullName",
-        data.fullName.trim(),
-      );
+      formData.append("fullName", data.fullName.trim());
 
-      formData.append(
-        "designation",
-        data.designation.trim(),
-      );
+      formData.append("designation", data.designation.trim());
 
-      formData.append(
-        "officialEmail",
-        data.officialEmail.trim(),
-      );
+      formData.append("officialEmail", data.officialEmail.trim());
 
-      formData.append(
-        "mobileNumber",
-        data.mobileNumber.trim(),
-      );
+      formData.append("mobileNumber", data.mobileNumber.trim());
 
-      formData.append(
-        "alternateContact",
-        data.alternateContact.trim(),
-      );
+      formData.append("alternateContact", data.alternateContact.trim());
 
-      formData.append(
-        "linkedinProfile",
-        data.linkedinProfile.trim(),
-      );
+      formData.append("linkedinProfile", data.linkedinProfile.trim());
 
       // =====================================================
       // HIRING REQUIREMENT
       // =====================================================
 
-      formData.append(
-        "jobTitle",
-        data.jobTitle.trim(),
-      );
+      formData.append("jobTitle", data.jobTitle.trim());
 
-      formData.append(
-        "natureOfHiring",
-        data.natureOfHiring,
-      );
+      formData.append("natureOfHiring", data.natureOfHiring);
 
-      formData.append(
-        "programmes",
-        data.programmes.trim(),
-      );
+      formData.append("programmes", data.programmes.trim());
 
-      formData.append(
-        "vacancies",
-        data.vacancies.trim(),
-      );
+      formData.append("vacancies", data.vacancies.trim());
 
-      formData.append(
-        "ctc",
-        data.ctc.trim(),
-      );
+      formData.append("ctc", data.ctc.trim());
 
-      formData.append(
-        "minimumEligibility",
-        data.minimumEligibility.trim(),
-      );
+      formData.append("minimumEligibility", data.minimumEligibility.trim());
 
-      formData.append(
-        "jobLocation",
-        data.jobLocation.trim(),
-      );
+      formData.append("jobLocation", data.jobLocation.trim());
 
-      formData.append(
-        "preferredDriveDate",
-        data.preferredDriveDate,
-      );
+      formData.append("preferredDriveDate", data.preferredDriveDate);
 
-      formData.append(
-        "modeOfDrive",
-        data.modeOfDrive,
-      );
+      formData.append("modeOfDrive", data.modeOfDrive);
 
-      formData.append(
-        "selectionProcess",
-        data.selectionProcess.trim(),
-      );
+      formData.append("selectionProcess", data.selectionProcess.trim());
 
-      formData.append(
-        "jobDescription",
-        data.jobDescription.trim(),
-      );
+      formData.append("jobDescription", data.jobDescription.trim());
 
       // =====================================================
       // COMPANY BROCHURE
       // =====================================================
 
-      const brochure =
-        data.companyBrochure?.[0];
+      const brochure = data.companyBrochure?.[0];
 
       if (brochure instanceof File) {
-        formData.append(
-          "companyBrochure",
-          brochure,
-        );
+        formData.append("companyBrochure", brochure);
       }
 
       // =====================================================
       // COMPANY LOGO
       // =====================================================
 
-      const logo =
-        data.companyLogo?.[0];
+      const logo = data.companyLogo?.[0];
 
       if (logo instanceof File) {
-        formData.append(
-          "companyLogo",
-          logo,
-        );
+        formData.append("companyLogo", logo);
       }
 
       // =====================================================
       // DEBUG FORM DATA
       // =====================================================
 
-      console.log(
-        "========== FORM DATA ==========",
-      );
+      console.log("========== FORM DATA ==========");
 
       for (const [key, value] of formData.entries()) {
         if (value instanceof File) {
-          console.log(
-            key,
-            value.name,
-            value.type,
-            value.size,
-          );
+          console.log(key, value.name, value.type, value.size);
         } else {
           console.log(key, value);
         }
       }
 
-      console.log(
-        "===============================",
-      );
+      console.log("===============================");
 
       // =====================================================
       // API REQUEST
       // =====================================================
 
       const response = await fetch(
-      "https://forms.krmangalam.ac.in/back-desk/recruiter-registration.php",
+        "https://forms.krmangalam.ac.in/back-desk/recruiter-registration.php",
         {
           method: "POST",
           body: formData,
@@ -386,33 +300,17 @@ export default function RecruiterRegistration() {
       // SAFE RESPONSE HANDLING
       // =====================================================
 
-      const responseText =
-        await response.text();
+      const responseText = await response.text();
 
-      console.log(
-        "========== API RESPONSE ==========",
-      );
+      console.log("========== API RESPONSE ==========");
 
-      console.log(
-        "Status:",
-        response.status,
-      );
+      console.log("Status:", response.status);
 
-      console.log(
-        "Content-Type:",
-        response.headers.get(
-          "content-type",
-        ),
-      );
+      console.log("Content-Type:", response.headers.get("content-type"));
 
-      console.log(
-        "Response:",
-        responseText,
-      );
+      console.log("Response:", responseText);
 
-      console.log(
-        "==================================",
-      );
+      console.log("==================================");
 
       // Empty response
 
@@ -429,14 +327,9 @@ export default function RecruiterRegistration() {
       };
 
       try {
-        result = JSON.parse(
-          responseText,
-        );
+        result = JSON.parse(responseText);
       } catch (jsonError) {
-        console.error(
-          "JSON parse error:",
-          jsonError,
-        );
+        console.error("JSON parse error:", jsonError);
 
         throw new Error(
           "Server returned an invalid response. Please try again.",
@@ -447,46 +340,30 @@ export default function RecruiterRegistration() {
       // API ERROR
       // =====================================================
 
-      if (
-        !response.ok ||
-        !result.success
-      ) {
-        throw new Error(
-          result.message ||
-            "Unable to submit registration",
-        );
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Unable to submit registration");
       }
 
       // =====================================================
       // SUCCESS
       // =====================================================
 
-      toast.success(
-        "Registration submitted successfully",
-        {
-          description:
-            "Thank you for registering for the Campus Placement Drive 2026–27.",
-        },
-      );
+      toast.success("Registration submitted successfully", {
+        description:
+          "Thank you for registering for the Campus Placement Drive 2026–27.",
+      });
 
       // Optional reset after successful submission
       // reset();
-
     } catch (error) {
-      console.error(
-        "Recruiter registration error:",
-        error,
-      );
+      console.error("Recruiter registration error:", error);
 
-      toast.error(
-        "Submission failed",
-        {
-          description:
-            error instanceof Error
-              ? error.message
-              : "Something went wrong. Please try again.",
-        },
-      );
+      toast.error("Submission failed", {
+        description:
+          error instanceof Error
+            ? error.message
+            : "Something went wrong. Please try again.",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -494,14 +371,18 @@ export default function RecruiterRegistration() {
 
   return (
     <main className="min-h-screen bg-[#eeeeec]">
-
       {/* =====================================================
           HERO
       ====================================================== */}
 
-      <section className="bg-[#eef4fb] pb-20 pt-28 font-poppins xl:pb-24 xl:pt-40">
+      <section className="bg-[#eef4fb] pb-20 pt-28 font-poppins xl:pb-24 xl:pt-48">
         <div className="mx-auto max-w-[920px] px-4 text-center">
-
+          <Link
+            href="/placement"
+            className="inline-flex items-center gap-2 text-sm text-[#33] transition-transform duration-300 hover:translate-x-1"
+          >
+            <ArrowLeft size={16} strokeWidth={1.5} /> Back to Placement
+          </Link>
           <h1 className="font-newsreader text-[34px] leading-tight text-[#001b3a] sm:text-[55px]">
             Recruiter Registration
           </h1>
@@ -509,33 +390,25 @@ export default function RecruiterRegistration() {
           <p className="mt-1 text-[15px] text-black sm:text-2xl">
             Campus Placement Drive 2026–27
           </p>
-
         </div>
       </section>
-
 
       {/* =====================================================
           MAIN
       ====================================================== */}
 
       <section className="bg-[#faf8f4] px-4 pb-20 pt-10">
-
         <div className="mx-auto max-w-7xl">
-
           {/* =================================================
               TABS
           ================================================== */}
 
           <div className="mb-10 flex justify-center">
-
             <div className="flex">
-
               <button
                 type="button"
-                onClick={() =>
-                  setActiveStep(1)
-                }
-                className={`px-5 py-2 text-base transition-colors sm:text-2xl ${
+                onClick={() => setActiveStep(1)}
+                className={`px-5 py-2 text-base transition-colors sm:text-xl ${
                   activeStep === 1
                     ? "bg-[#092542] text-white"
                     : "bg-white text-[#222]"
@@ -551,7 +424,7 @@ export default function RecruiterRegistration() {
                     goToHiringRequirement();
                   }
                 }}
-                className={`px-4 py-2 text-base transition-colors sm:text-2xl ${
+                className={`px-4 py-2 text-base transition-colors sm:text-xl ${
                   activeStep === 2
                     ? "bg-[#092542] text-white"
                     : "bg-white text-[#222]"
@@ -559,236 +432,149 @@ export default function RecruiterRegistration() {
               >
                 Hiring requirement
               </button>
-
             </div>
-
           </div>
-
 
           {/* =================================================
               FORM
           ================================================== */}
 
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            noValidate
-          >
-
+          <form onSubmit={handleSubmit(onSubmit)} noValidate>
             {/* =================================================
                 STEP 1
             ================================================== */}
 
             {activeStep === 1 && (
-
               <div className="border border-[#d8d8d8] bg-[#fefcfa] p-4 sm:p-5">
-
                 {/* BASIC DETAILS */}
 
-                <h2 className="mb-5 text-base font-semibold">
-                  Basic Details
-                </h2>
+                <h2 className="mb-5 text-base font-semibold">Basic Details</h2>
 
                 <div className="grid grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-3">
-
                   {/* COMPANY NAME */}
 
                   <FormField
                     label="Company / organization name"
                     required
-                    error={
-                      errors.companyName?.message
-                    }
+                    error={errors.companyName?.message}
                   >
                     <input
-                      {...register(
-                        "companyName",
-                        {
-                          required:
-                            "Company name is required",
+                      {...register("companyName", {
+                        required: "Company name is required",
 
-                          validate: (value) =>
-                            value.trim()
-                              .length >= 2 ||
-                            "Company name must be at least 2 characters",
-                        },
-                      )}
-                      className={getInputClass(
-                        !!errors.companyName,
-                      )}
+                        validate: (value) =>
+                          value.trim().length >= 2 ||
+                          "Company name must be at least 2 characters",
+                      })}
+                      className={getInputClass(!!errors.companyName)}
                     />
                   </FormField>
-
 
                   {/* INDUSTRY */}
 
                   <FormField
                     label="Industry / sector"
                     required
-                    error={
-                      errors.industry?.message
-                    }
+                    error={errors.industry?.message}
                   >
                     <select
-                      {...register(
-                        "industry",
-                        {
-                          required:
-                            "Industry is required",
-                        },
-                      )}
-                      className={getSelectClass(
-                        !!errors.industry,
-                      )}
+                      {...register("industry", {
+                        required: "Industry is required",
+                      })}
+                      className={getSelectClass(!!errors.industry)}
                     >
-                      <option value="">
-                        Select industry
-                      </option>
+                      <option value="">Select industry</option>
 
-                      {industryOptions.map(
-                        (option) => (
-                          <option
-                            key={option}
-                            value={option}
-                          >
-                            {option}
-                          </option>
-                        ),
-                      )}
+                      {industryOptions.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
                     </select>
                   </FormField>
-
 
                   {/* WEBSITE */}
 
                   <FormField
                     label="Company website"
-                    error={
-                      errors.companyWebsite?.message
-                    }
+                    error={errors.companyWebsite?.message}
                   >
                     <input
                       type="url"
                       placeholder="https://example.com"
-                      {...register(
-                        "companyWebsite",
-                        {
-                          validate: (
-                            value,
-                          ) => {
-                            if (!value)
-                              return true;
+                      {...register("companyWebsite", {
+                        validate: (value) => {
+                          if (!value) return true;
 
-                            return (
-                              urlRegex.test(
-                                value,
-                              ) ||
-                              "Please enter a valid website URL"
-                            );
-                          },
+                          return (
+                            urlRegex.test(value) ||
+                            "Please enter a valid website URL"
+                          );
                         },
-                      )}
-                      className={getInputClass(
-                        !!errors.companyWebsite,
-                      )}
+                      })}
+                      className={getInputClass(!!errors.companyWebsite)}
                     />
                   </FormField>
-
 
                   {/* ADDRESS */}
 
                   <FormField
                     label="Company Address/Location"
                     required
-                    error={
-                      errors.companyAddress?.message
-                    }
+                    error={errors.companyAddress?.message}
                   >
                     <input
-                      {...register(
-                        "companyAddress",
-                        {
-                          required:
-                            "Company address is required",
+                      {...register("companyAddress", {
+                        required: "Company address is required",
 
-                          validate: (value) =>
-                            value.trim()
-                              .length >= 5 ||
-                            "Please enter a valid company address",
-                        },
-                      )}
-                      className={getInputClass(
-                        !!errors.companyAddress,
-                      )}
+                        validate: (value) =>
+                          value.trim().length >= 5 ||
+                          "Please enter a valid company address",
+                      })}
+                      className={getInputClass(!!errors.companyAddress)}
                     />
                   </FormField>
-
 
                   {/* COMPANY TYPE */}
 
                   <FormField
                     label="Company Type"
-                    error={
-                      errors.companyType?.message
-                    }
+                    error={errors.companyType?.message}
                   >
                     <select
-                      {...register(
-                        "companyType",
-                      )}
-                      className={getSelectClass(
-                        !!errors.companyType,
-                      )}
+                      {...register("companyType")}
+                      className={getSelectClass(!!errors.companyType)}
                     >
-                      <option value="">
-                        Select company type
-                      </option>
+                      <option value="">Select company type</option>
 
-                      {companyTypeOptions.map(
-                        (option) => (
-                          <option
-                            key={option}
-                            value={option}
-                          >
-                            {option}
-                          </option>
-                        ),
-                      )}
+                      {companyTypeOptions.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
                     </select>
                   </FormField>
-
 
                   {/* GST */}
 
                   <FormField
                     label="GST/Registration Number"
-                    error={
-                      errors.gstNumber?.message
-                    }
+                    error={errors.gstNumber?.message}
                   >
                     <input
-                      {...register(
-                        "gstNumber",
-                        {
-                          validate: (
-                            value,
-                          ) => {
-                            if (!value)
-                              return true;
+                      {...register("gstNumber", {
+                        validate: (value) => {
+                          if (!value) return true;
 
-                            return (
-                              value.trim()
-                                .length >= 5 ||
-                              "Please enter a valid registration number"
-                            );
-                          },
+                          return (
+                            value.trim().length >= 5 ||
+                            "Please enter a valid registration number"
+                          );
                         },
-                      )}
-                      className={getInputClass(
-                        !!errors.gstNumber,
-                      )}
+                      })}
+                      className={getInputClass(!!errors.gstNumber)}
                     />
                   </FormField>
-
 
                   {/* BROCHURE */}
 
@@ -796,12 +582,8 @@ export default function RecruiterRegistration() {
                     label="Company brochure / JD upload"
                     register={register}
                     name="companyBrochure"
-                    error={
-                      errors.companyBrochure
-                        ?.message
-                    }
+                    error={errors.companyBrochure?.message}
                   />
-
 
                   {/* LOGO */}
 
@@ -809,14 +591,9 @@ export default function RecruiterRegistration() {
                     label="Company logo upload"
                     register={register}
                     name="companyLogo"
-                    error={
-                      errors.companyLogo
-                        ?.message
-                    }
+                    error={errors.companyLogo?.message}
                   />
-
                 </div>
-
 
                 {/* =================================================
                     RECRUITER
@@ -827,553 +604,382 @@ export default function RecruiterRegistration() {
                 </h2>
 
                 <div className="grid grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-3">
-
                   {/* FULL NAME */}
 
                   <FormField
                     label="Full name"
                     required
-                    error={
-                      errors.fullName?.message
-                    }
+                    error={errors.fullName?.message}
                   >
                     <input
-                      {...register(
-                        "fullName",
-                        {
-                          required:
-                            "Full name is required",
+                      {...register("fullName", {
+                        required: "Full name is required",
 
-                          validate: (value) =>
-                            value.trim()
-                              .length >= 2 ||
-                            "Please enter a valid name",
-                        },
-                      )}
-                      className={getInputClass(
-                        !!errors.fullName,
-                      )}
+                        validate: (value) =>
+                          value.trim().length >= 2 ||
+                          "Please enter a valid name",
+                      })}
+                      className={getInputClass(!!errors.fullName)}
                     />
                   </FormField>
-
 
                   {/* DESIGNATION */}
 
                   <FormField
                     label="Designation"
                     required
-                    error={
-                      errors.designation?.message
-                    }
+                    error={errors.designation?.message}
                   >
                     <input
-                      {...register(
-                        "designation",
-                        {
-                          required:
-                            "Designation is required",
-                        },
-                      )}
-                      className={getInputClass(
-                        !!errors.designation,
-                      )}
+                      {...register("designation", {
+                        required: "Designation is required",
+                      })}
+                      className={getInputClass(!!errors.designation)}
                     />
                   </FormField>
-
 
                   {/* EMAIL */}
 
                   <FormField
                     label="Official email ID"
                     required
-                    error={
-                      errors.officialEmail?.message
-                    }
+                    error={errors.officialEmail?.message}
                   >
                     <input
                       type="email"
-                      {...register(
-                        "officialEmail",
-                        {
-                          required:
-                            "Official email is required",
+                      {...register("officialEmail", {
+                        required: "Official email is required",
 
-                          pattern: {
-                            value:
-                              /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                            message:
-                              "Please enter a valid email address",
-                          },
+                        pattern: {
+                          value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                          message: "Please enter a valid email address",
                         },
-                      )}
-                      className={getInputClass(
-                        !!errors.officialEmail,
-                      )}
+                      })}
+                      className={getInputClass(!!errors.officialEmail)}
                     />
                   </FormField>
-
 
                   {/* MOBILE */}
 
                   <FormField
                     label="Mobile number"
                     required
-                    error={
-                      errors.mobileNumber?.message
-                    }
+                    error={errors.mobileNumber?.message}
                   >
                     <input
                       type="tel"
                       maxLength={10}
                       inputMode="numeric"
-                      {...register(
-                        "mobileNumber",
-                        {
-                          required:
-                            "Mobile number is required",
+                      {...register("mobileNumber", {
+                        required: "Mobile number is required",
+                        validate: (value) => {
+                          if (!/^\d+$/.test(value)) {
+                            return "Only numbers are allowed";
+                          }
 
-                          pattern: {
-                            value:
-                              phoneRegex,
-                            message:
-                              "Please enter a valid 10-digit mobile number",
-                          },
+                          if (value.length !== 10) {
+                            return "Mobile number must be exactly 10 digits";
+                          }
+
+                          // if (!/^[6-9]/.test(value)) {
+                          //   return "Mobile number must start with 6, 7, 8 or 9";
+                          // }
+
+                          return true;
                         },
-                      )}
-                      className={getInputClass(
-                        !!errors.mobileNumber,
-                      )}
+                      })}
+                      onInput={(e) => {
+                        e.currentTarget.value = e.currentTarget.value
+                          .replace(/\D/g, "")
+                          .slice(0, 10);
+                      }}
+                      className={getInputClass(!!errors.mobileNumber)}
                     />
                   </FormField>
-
 
                   {/* ALTERNATE */}
 
                   <FormField
                     label="Alternate contact number"
-                    error={
-                      errors.alternateContact
-                        ?.message
-                    }
+                    error={errors.alternateContact?.message}
                   >
                     <input
                       type="tel"
                       maxLength={10}
                       inputMode="numeric"
-                      {...register(
-                        "alternateContact",
-                        {
-                          validate: (
-                            value,
-                          ) => {
-                            if (!value)
-                              return true;
+                      {...register("alternateContact", {
+                        validate: (value) => {
+                          if (!value) return true;
 
-                            return (
-                              phoneRegex.test(
-                                value,
-                              ) ||
-                              "Please enter a valid 10-digit mobile number"
-                            );
-                          },
+                          if (!/^\d+$/.test(value)) {
+                            return "Only numbers are allowed";
+                          }
+
+                          if (value.length !== 10) {
+                            return "Mobile number must be exactly 10 digits";
+                          }
+
+                          // if (!/^[6-9]/.test(value)) {
+                          //   return "Mobile number must start with 6, 7, 8 or 9";
+                          // }
+
+                          return true;
                         },
-                      )}
-                      className={getInputClass(
-                        !!errors.alternateContact,
-                      )}
+                      })}
+                      onInput={(e) => {
+                        e.currentTarget.value = e.currentTarget.value
+                          .replace(/\D/g, "")
+                          .slice(0, 10);
+                      }}
+                      className={getInputClass(!!errors.alternateContact)}
                     />
                   </FormField>
-
 
                   {/* LINKEDIN */}
 
                   <FormField
                     label="LinkedIn profile"
-                    error={
-                      errors.linkedinProfile
-                        ?.message
-                    }
+                    error={errors.linkedinProfile?.message}
                   >
                     <input
                       placeholder="https://linkedin.com/in/..."
-                      {...register(
-                        "linkedinProfile",
-                        {
-                          validate: (
-                            value,
-                          ) => {
-                            if (!value)
-                              return true;
+                      {...register("linkedinProfile", {
+                        validate: (value) => {
+                          if (!value) return true;
 
-                            return (
-                              value
-                                .toLowerCase()
-                                .includes(
-                                  "linkedin.com",
-                                ) ||
-                              "Please enter a valid LinkedIn profile URL"
-                            );
-                          },
+                          return (
+                            value.toLowerCase().includes("linkedin.com") ||
+                            "Please enter a valid LinkedIn profile URL"
+                          );
                         },
-                      )}
-                      className={getInputClass(
-                        !!errors.linkedinProfile,
-                      )}
+                      })}
+                      className={getInputClass(!!errors.linkedinProfile)}
                     />
                   </FormField>
-
                 </div>
-
 
                 {/* =================================================
                     STEP 1 BUTTON
                 ================================================== */}
 
                 <div className="mt-8 flex justify-end">
-
                   <button
                     type="button"
-                    onClick={
-                      goToHiringRequirement
-                    }
+                    onClick={goToHiringRequirement}
                     className="bg-[#ed0000] px-10 py-3 text-sm text-white transition hover:bg-[#c90000]"
                   >
                     Next
                   </button>
-
                 </div>
-
               </div>
             )}
-
 
             {/* =================================================
                 STEP 2
             ================================================== */}
 
             {activeStep === 2 && (
-
               <div className="border border-[#d8d8d8] bg-[#fefcfa] p-4 sm:p-5">
-
                 <h2 className="mb-5 text-base font-semibold">
                   What the drive is looking for?
                 </h2>
 
                 <div className="grid grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-3">
-
                   {/* JOB TITLE */}
 
                   <FormField
                     label="Job title / profile offered"
                     required
-                    error={
-                      errors.jobTitle?.message
-                    }
+                    error={errors.jobTitle?.message}
                   >
                     <input
-                      {...register(
-                        "jobTitle",
-                        {
-                          required:
-                            "Job title is required",
-                        },
-                      )}
-                      className={getInputClass(
-                        !!errors.jobTitle,
-                      )}
+                      {...register("jobTitle", {
+                        required: "Job title is required",
+                      })}
+                      className={getInputClass(!!errors.jobTitle)}
                     />
                   </FormField>
-
 
                   {/* NATURE OF HIRING */}
 
                   <FormField
                     label="Nature of hiring"
                     required
-                    error={
-                      errors.natureOfHiring?.message
-                    }
+                    error={errors.natureOfHiring?.message}
                   >
                     <select
-                      {...register(
-                        "natureOfHiring",
-                        {
-                          required:
-                            "Nature of hiring is required",
-                        },
-                      )}
-                      className={getSelectClass(
-                        !!errors.natureOfHiring,
-                      )}
+                      {...register("natureOfHiring", {
+                        required: "Nature of hiring is required",
+                      })}
+                      className={getSelectClass(!!errors.natureOfHiring)}
                     >
-                      <option value="">
-                        Select hiring type
-                      </option>
+                      <option value="">Select hiring type</option>
 
-                      {hiringOptions.map(
-                        (option) => (
-                          <option
-                            key={option}
-                            value={option}
-                          >
-                            {option}
-                          </option>
-                        ),
-                      )}
+                      {hiringOptions.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
                     </select>
                   </FormField>
-
 
                   {/* PROGRAMMES */}
 
                   <div className="md:col-span-3">
-
                     <FormField
                       label="Programmes / schools eligible"
                       required
-                      error={
-                        errors.programmes?.message
-                      }
+                      error={errors.programmes?.message}
                     >
                       <input
-                        {...register(
-                          "programmes",
-                          {
-                            required:
-                              "Programmes / schools are required",
-                          },
-                        )}
-                        className={getInputClass(
-                          !!errors.programmes,
-                        )}
+                        {...register("programmes", {
+                          required: "Programmes / schools are required",
+                        })}
+                        className={getInputClass(!!errors.programmes)}
                       />
                     </FormField>
-
                   </div>
-
 
                   {/* VACANCIES */}
 
                   <FormField
                     label="Number of vacancies"
                     required
-                    error={
-                      errors.vacancies?.message
-                    }
+                    error={errors.vacancies?.message}
                   >
                     <input
                       type="number"
                       min={1}
-                      {...register(
-                        "vacancies",
-                        {
-                          required:
-                            "Number of vacancies is required",
+                      {...register("vacancies", {
+                        required: "Number of vacancies is required",
 
-                          validate: (
-                            value,
-                          ) => {
-                            const number =
-                              Number(value);
+                        validate: (value) => {
+                          const number = Number(value);
 
-                            if (
-                              !Number.isInteger(
-                                number,
-                              ) ||
-                              number < 1
-                            ) {
-                              return "Vacancies must be at least 1";
-                            }
+                          if (!Number.isInteger(number) || number < 1) {
+                            return "Vacancies must be at least 1";
+                          }
 
-                            return true;
-                          },
+                          return true;
                         },
-                      )}
-                      className={getInputClass(
-                        !!errors.vacancies,
-                      )}
+                      })}
+                      className={getInputClass(!!errors.vacancies)}
                     />
                   </FormField>
-
 
                   {/* CTC */}
 
                   <FormField
                     label="CTC / stipend offered"
                     required
-                    error={
-                      errors.ctc?.message
-                    }
+                    error={errors.ctc?.message}
                   >
                     <input
                       {...register("ctc", {
-                        required:
-                          "CTC / stipend is required",
+                        required: "CTC / stipend is required",
                       })}
-                      className={getInputClass(
-                        !!errors.ctc,
-                      )}
+                      className={getInputClass(!!errors.ctc)}
                     />
                   </FormField>
-
 
                   {/* ELIGIBILITY */}
 
                   <FormField
                     label="Minimum eligibility (CGPA / %)"
-                    error={
-                      errors.minimumEligibility
-                        ?.message
-                    }
+                    error={errors.minimumEligibility?.message}
                   >
                     <input
-                      {...register(
-                        "minimumEligibility",
-                      )}
-                      className={getInputClass(
-                        !!errors.minimumEligibility,
-                      )}
+                      {...register("minimumEligibility")}
+                      className={getInputClass(!!errors.minimumEligibility)}
                     />
                   </FormField>
-
 
                   {/* LOCATION */}
 
                   <FormField
                     label="Job location(s)"
                     required
-                    error={
-                      errors.jobLocation?.message
-                    }
+                    error={errors.jobLocation?.message}
                   >
                     <input
-                      {...register(
-                        "jobLocation",
-                        {
-                          required:
-                            "Job location is required",
-                        },
-                      )}
-                      className={getInputClass(
-                        !!errors.jobLocation,
-                      )}
+                      {...register("jobLocation", {
+                        required: "Job location is required",
+                      })}
+                      className={getInputClass(!!errors.jobLocation)}
                     />
                   </FormField>
-
 
                   {/* DATE */}
 
                   <FormField
                     label="Preferred drive date"
-                    error={
-                      errors.preferredDriveDate
-                        ?.message
-                    }
+                    error={errors.preferredDriveDate?.message}
                   >
                     <input
                       type="date"
-                      {...register(
-                        "preferredDriveDate",
-                      )}
-                      className={getInputClass(
-                        !!errors.preferredDriveDate,
-                      )}
+                      {...register("preferredDriveDate")}
+                      className={getInputClass(!!errors.preferredDriveDate)}
                     />
                   </FormField>
-
 
                   {/* MODE */}
 
                   <FormField
                     label="Mode of drive"
-                    error={
-                      errors.modeOfDrive?.message
-                    }
+                    error={errors.modeOfDrive?.message}
                   >
                     <select
-                      {...register(
-                        "modeOfDrive",
-                      )}
-                      className={getSelectClass(
-                        !!errors.modeOfDrive,
-                      )}
+                      {...register("modeOfDrive")}
+                      className={getSelectClass(!!errors.modeOfDrive)}
                     >
-                      <option value="">
-                        Select mode
-                      </option>
+                      <option value="">Select mode</option>
 
-                      {driveModeOptions.map(
-                        (option) => (
-                          <option
-                            key={option}
-                            value={option}
-                          >
-                            {option}
-                          </option>
-                        ),
-                      )}
+                      {driveModeOptions.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
                     </select>
                   </FormField>
-
 
                   {/* SELECTION PROCESS */}
 
                   <FormField
                     label="Selection process"
-                    error={
-                      errors.selectionProcess
-                        ?.message
-                    }
+                    error={errors.selectionProcess?.message}
                   >
                     <input
-                      {...register(
-                        "selectionProcess",
-                      )}
-                      className={getInputClass(
-                        !!errors.selectionProcess,
-                      )}
+                      {...register("selectionProcess")}
+                      className={getInputClass(!!errors.selectionProcess)}
                     />
                   </FormField>
-
 
                   {/* JOB DESCRIPTION */}
 
                   <div className="md:col-span-3">
-
                     <FormField
                       label="Job description / additional requirements"
-                      error={
-                        errors.jobDescription
-                          ?.message
-                      }
+                      error={errors.jobDescription?.message}
                     >
                       <textarea
-                        {...register(
-                          "jobDescription",
-                        )}
+                        {...register("jobDescription")}
                         rows={4}
                         className={`${getInputClass(
                           !!errors.jobDescription,
                         )} h-auto resize-none py-2`}
                       />
                     </FormField>
-
                   </div>
-
                 </div>
-
 
                 {/* =================================================
                     STEP 2 BUTTONS
                 ================================================== */}
 
                 <div className="mt-8 flex items-center justify-between">
-
                   <button
                     type="button"
-                    onClick={
-                      goToCompanyDetails
-                    }
+                    onClick={goToCompanyDetails}
                     className="bg-[#f1f1f1] px-6 py-3 text-sm font-medium text-[#092542] transition hover:bg-[#e5e5e5]"
                   >
                     Back
@@ -1384,26 +990,17 @@ export default function RecruiterRegistration() {
                     disabled={isSubmitting}
                     className="bg-[#ed0000] px-10 py-3 text-sm text-white transition hover:bg-[#c90000] disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {isSubmitting
-                      ? "Sending..."
-                      : "Send"}
+                    {isSubmitting ? "Sending..." : "Send"}
                   </button>
-
                 </div>
-
               </div>
             )}
-
           </form>
-
         </div>
-
       </section>
-
     </main>
   );
 }
-
 
 // =========================================================
 // FORM FIELD
@@ -1417,24 +1014,13 @@ type FormFieldProps = {
   children: React.ReactNode;
 };
 
-function FormField({
-  label,
-  required,
-  hint,
-  error,
-  children,
-}: FormFieldProps) {
+function FormField({ label, required, hint, error, children }: FormFieldProps) {
   return (
     <div className="min-w-0">
-
       <label className="mb-1.5 block text-base leading-tight text-[#111]">
         {label}
 
-        {required && (
-          <span className="text-red-600">
-            {" *"}
-          </span>
-        )}
+        {required && <span className="text-red-600">{" *"}</span>}
       </label>
 
       {children}
@@ -1446,15 +1032,11 @@ function FormField({
       )}
 
       {error && (
-        <p className="mt-1 text-[10px] leading-tight text-red-600">
-          {error}
-        </p>
+        <p className="mt-1 text-[10px] leading-tight text-red-600">{error}</p>
       )}
-
     </div>
   );
 }
-
 
 // =========================================================
 // FILE FIELD
@@ -1465,19 +1047,12 @@ type FileFieldProps = {
 
   register: UseFormRegister<RecruiterFormData>;
 
-  name:
-    | "companyBrochure"
-    | "companyLogo";
+  name: "companyBrochure" | "companyLogo";
 
   error?: string;
 };
 
-function FileField({
-  label,
-  register,
-  name,
-  error,
-}: FileFieldProps) {
+function FileField({ label, register, name, error }: FileFieldProps) {
   const [preview, setPreview] = useState<string | null>(null);
   const [fileName, setFileName] = useState<string>("");
 
@@ -1499,11 +1074,7 @@ function FileField({
 
       // LOGO
       if (name === "companyLogo") {
-        const allowedTypes = [
-          "image/jpeg",
-          "image/png",
-          "image/webp",
-        ];
+        const allowedTypes = ["image/jpeg", "image/png", "image/webp"];
 
         if (!allowedTypes.includes(file.type)) {
           return "Only JPG, PNG or WEBP images are allowed";
@@ -1531,9 +1102,7 @@ function FileField({
   // FILE CHANGE
   // =====================================================
 
-  const handleFileChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-  ) => {
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
 
     if (!file) {
@@ -1545,10 +1114,7 @@ function FileField({
     setFileName(file.name);
 
     // Logo preview
-    if (
-      name === "companyLogo" &&
-      file.type.startsWith("image/")
-    ) {
+    if (name === "companyLogo" && file.type.startsWith("image/")) {
       const objectUrl = URL.createObjectURL(file);
 
       setPreview(objectUrl);
@@ -1583,23 +1149,17 @@ function FileField({
     }
   };
 
-  const fileInputRef =
-    useRef<HTMLInputElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <FormField
-      label={label}
-      error={error}
-    >
+    <FormField label={label} error={error}>
       {/* =================================================
           FILE INPUT
       ================================================== */}
 
       <div
         className={`relative h-[35px] border bg-white ${
-          error
-            ? "border-red-500"
-            : "border-[#d9d9d9]"
+          error ? "border-red-500" : "border-[#d9d9d9]"
         }`}
       >
         <input
@@ -1642,7 +1202,6 @@ function FileField({
 
       {fileName && (
         <div className="mt-2 flex items-center gap-3">
-
           {/* LOGO PREVIEW */}
 
           {name === "companyLogo" && preview ? (
@@ -1657,20 +1216,14 @@ function FileField({
             /* BROCHURE */
 
             <div className="flex h-12 w-12 items-center justify-center border border-[#d9d9d9] bg-white">
-              <FileText
-                size={22}
-                className="text-[#092542]"
-              />
+              <FileText size={22} className="text-[#092542]" />
             </div>
           )}
 
           {/* FILE NAME */}
 
           <div className="min-w-0 flex-1">
-            <p
-              className="truncate text-[11px] text-[#222]"
-              title={fileName}
-            >
+            <p className="truncate text-[11px] text-[#222]" title={fileName}>
               {fileName}
             </p>
 
@@ -1691,39 +1244,28 @@ function FileField({
           >
             <X size={13} />
           </button>
-
         </div>
       )}
     </FormField>
   );
 }
 
-
 // =========================================================
 // INPUT CLASS
 // =========================================================
 
-function getInputClass(
-  hasError: boolean,
-) {
+function getInputClass(hasError: boolean) {
   return `${inputClass} ${
-    hasError
-      ? "border-red-500 focus:border-red-500"
-      : "border-[#d9d9d9]"
+    hasError ? "border-red-500 focus:border-red-500" : "border-[#d9d9d9]"
   }`;
 }
-
 
 // =========================================================
 // SELECT CLASS
 // =========================================================
 
-function getSelectClass(
-  hasError: boolean,
-) {
+function getSelectClass(hasError: boolean) {
   return `${selectClass} ${
-    hasError
-      ? "border-red-500 focus:border-red-500"
-      : "border-[#d9d9d9]"
+    hasError ? "border-red-500 focus:border-red-500" : "border-[#d9d9d9]"
   }`;
 }

@@ -41,7 +41,7 @@ const HeroSection = () => {
         </div>
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
-            src="/placements/main/pl-hero-girl.webp"
+            src="https://www.krmangalam.edu.in/images/placement-hero-girl.png"
             alt="K.R. Mangalam University placement student"
             className="object-contain"
             width={522}

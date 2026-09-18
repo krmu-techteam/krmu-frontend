@@ -208,7 +208,7 @@ const PlacementRecords = () => {
     ${
       isShowingAll
         ? `
-          max-h-[500px]
+          max-h-[921px]
           overflow-y-auto
           placement-records-scroll
           pr-8

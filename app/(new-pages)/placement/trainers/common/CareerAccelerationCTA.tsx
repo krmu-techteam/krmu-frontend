@@ -64,7 +64,7 @@ const CareerAccelerationCTA = () => {
             "
           >
             <Link
-              href="/placement/registration"
+              href="https://calendly.com/training-cdc-krmangalam/new-meeting"
               className="
                 inline-flex
                 w-full
@@ -77,7 +77,7 @@ const CareerAccelerationCTA = () => {
                 text-sm font-medium
                 leading-5
                 text-white
-                transition-colors
+                transition-colors 
                 hover:bg-[#d90000]
                 sm:w-auto
                 sm:px-6
@@ -87,6 +87,7 @@ const CareerAccelerationCTA = () => {
                 md:text-lg
                 lg:text-xl
               "
+              target="_blank"
             >
               Book your Individual Session
             </Link>

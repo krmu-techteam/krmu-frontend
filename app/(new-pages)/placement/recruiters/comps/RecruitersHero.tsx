@@ -1,9 +1,16 @@
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 const RecruitersHero = () => {
   return (
     <section className="bg-[url(/placements/recruiters/rec-hero-bg.webp)] bg-cover bg-center bg-no-repeat px-5 xl:px-0 pt-28 xl:pt-40 pb-12">
       <div className="mx-auto w-full max-w-3xl text-center text-white">
+        <Link
+          href="/placement"
+          className="inline-flex items-center gap-2 text-sm text-[#33] transition-transform duration-300 hover:translate-x-1"
+        >
+          <ArrowLeft size={16} strokeWidth={1.5} /> Back to Placement
+        </Link>
         <h3 className="text-xs font-medium uppercase text-[#E7C268] sm:text-sm  md:text-base tracking-[4px]">
           For Recruiters
         </h3>
