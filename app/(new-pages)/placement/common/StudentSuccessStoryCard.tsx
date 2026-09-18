@@ -61,11 +61,11 @@ const StudentSuccessStoryCard = ({
           </div>
 
           <Link
-            href={placementLink}
+            href="/placement/records/#placement-records-scroll"
             className="text-[#001836] underline inline-flex items-center gap-1 text-xs sm:text-sm w-fit whitespace-nowrap transition-transform duration-300 hover:translate-x-1"
           >
             View All Placements
-            <ArrowRight size={16} className="sm:w-[18px] sm:h-[18px]" />
+            <ArrowRight size={16} className="sm:w-[18px] sm:h-[18px]" /> 
           </Link>
         </div>
       </div>

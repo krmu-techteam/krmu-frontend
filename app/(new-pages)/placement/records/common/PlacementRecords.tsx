@@ -156,7 +156,7 @@ const PlacementRecords = () => {
   // ==========================
 
   return (
-    <section className="px-5 xl:px-0 py-10 sm:py-14 md:py-20">
+    <section className="px-5 xl:px-0 py-10 sm:py-14 md:py-20" id="placement-records-scroll">
       <div className="max-w-7xl mx-auto w-full">
         {/* ==========================
             HEADER
