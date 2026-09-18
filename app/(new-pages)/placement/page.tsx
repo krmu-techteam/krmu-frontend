@@ -157,7 +157,7 @@ const page = () => {
         <PlacementHighlights />
         <OutcomesBySchool />
         <StudentSuccessStories />
-        <OurTopRecruiter />
+        <OurTopRecruiter /> 
         <div className="max-w-7xl mx-auto">
           <Divider />
         </div> 

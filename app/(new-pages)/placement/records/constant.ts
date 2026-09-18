@@ -539,17 +539,17 @@ export const OfficialReports: OfficialReport[] = [
   {
     year: 2026,
     title: "2026 Final Report",
-    pdfUrl: "/placements/reports/2026-final-report.pdf",
+    pdfUrl: "http://krmangalam.edu.in/pdfs/placements/cdc-annual-report-2025–26.pdf",
   },
   {
     year: 2025,
     title: "2025 Final Report",
-    pdfUrl: "/placements/reports/2025-final-report.pdf",
+    pdfUrl: "http://krmangalam.edu.in/pdfs/placements/cdc-annual-report-2024-25",
   },
   {
     year: 2024,
     title: "2024 Final Report",
-    pdfUrl: "/placements/reports/2024-final-report.pdf",
+    pdfUrl: "http://krmangalam.edu.in/pdfs/placements/cdc-annual-report-2023-24.pdf",
   },
 ];
 

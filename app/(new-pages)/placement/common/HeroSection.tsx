@@ -8,7 +8,7 @@ const HeroSection = () => {
         src=""
         alt="Hero Background"
         fill
-        className="object-cover object-left w-full"
+        className="object-cover object-left w-full" 
         priority  
       /> */}
       <div className="max-w-7xl mx-auto w-full z-10 relative flex flex-col md:flex-row items-center lg:items-start px-5 xl:px-0 gap-5 sm:gap-0">
