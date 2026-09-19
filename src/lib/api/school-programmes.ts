@@ -76,6 +76,66 @@ export async function getProgrammesBySchoolCategory(
                 });
             }
         }
+
+        const isSmas =
+            (schoolCatSlug && schoolCatSlug.toLowerCase().includes("smas")) ||
+            (schoolCatName && schoolCatName.toLowerCase().includes("medical"));
+
+        if (isSmas) {
+            const SMAS_ORDER = [
+                "dpharm",
+                "bpharma",
+                "bpharm-lateral-entry",
+                "bachelor-of-emergency-medical-technologist",
+                "bachelor-of-respiratory-technology",
+                "b-sc-hons-cardiovascular-technology-with-academic-industry-support-of-emversity",
+                "m-pharm-pharmaceutics",
+                "m-pharm-pharmacology",
+                "phd-pharmaceutical-sciences",
+            ];
+
+            const getRank = (name: string, url: string) => {
+                const s = url.toLowerCase();
+                const t = name.toLowerCase();
+                for (let i = 0; i < SMAS_ORDER.length; i++) {
+                    if (s.includes(SMAS_ORDER[i])) return i + 1;
+                }
+                if (s.includes("dpharm") || t.includes("d.pharm")) return 1;
+                if (
+                    s.includes("bpharma") ||
+                    (t.includes("b.pharm") && !t.includes("lateral"))
+                )
+                    return 2;
+                if (s.includes("lateral") || t.includes("lateral")) return 3;
+                if (
+                    s.includes("emergency") ||
+                    t.includes("emergency") ||
+                    t.includes("b.emt")
+                )
+                    return 4;
+                if (
+                    s.includes("respiratory") ||
+                    t.includes("respiratory") ||
+                    t.includes("b.rt")
+                )
+                    return 5;
+                if (
+                    s.includes("cardiovascular") ||
+                    t.includes("cardiovascular")
+                )
+                    return 6;
+                if (s.includes("pharmaceutics") || t.includes("pharmaceutics"))
+                    return 7;
+                if (s.includes("pharmacology") || t.includes("pharmacology"))
+                    return 8;
+                if (s.includes("phd") || t.includes("ph.d")) return 9;
+                return 100;
+            };
+
+            items.sort(
+                (a, b) => getRank(a.name, a.url) - getRank(b.name, b.url)
+            );
+        }
     } catch (err) {
         console.error("Error fetching programmes by school category:", err);
     }

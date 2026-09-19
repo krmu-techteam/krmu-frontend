@@ -185,9 +185,99 @@ function getProgrammeDegreeRank(item: ProgrammeItem): number {
     return 1;
 }
 
+const SMAS_ORDER_SLUGS = [
+    "dpharm",
+    "bpharma",
+    "bpharm-lateral-entry",
+    "bachelor-of-emergency-medical-technologist",
+    "bachelor-of-respiratory-technology",
+    "b-sc-hons-cardiovascular-technology-with-academic-industry-support-of-emversity",
+    "m-pharm-pharmaceutics",
+    "m-pharm-pharmacology",
+    "phd-pharmaceutical-sciences",
+];
+
+export function isSmasSchool(schoolSlug?: string | null): boolean {
+    if (!schoolSlug) return false;
+    const s = schoolSlug.toLowerCase().trim();
+    return (
+        s === "smas" ||
+        s === "school-of-medical-and-allied-sciences" ||
+        s === "school-of-medical-allied-sciences" ||
+        s.includes("medical")
+    );
+}
+
+export function getSmasProgrammeRank(item: ProgrammeItem): number {
+    const slug = (
+        ("programmeslug" in item ? item.programmeslug : item.phdslug) || ""
+    )
+        .toLowerCase()
+        .trim();
+    const title = (("title" in item ? item.title : item.heading) || "")
+        .toLowerCase()
+        .trim();
+
+    const idx = SMAS_ORDER_SLUGS.indexOf(slug);
+    if (idx !== -1) return idx + 1;
+
+    // Fallback matching by title / slug keywords
+    if (slug.includes("dpharm") || title.includes("d.pharm")) return 1;
+    if (
+        slug === "bpharma" ||
+        (title.includes("b.pharm") && !title.includes("lateral"))
+    )
+        return 2;
+    if (slug.includes("lateral") || title.includes("lateral")) return 3;
+    if (
+        slug.includes("emergency-medical") ||
+        title.includes("emergency medical") ||
+        title.includes("b.emt")
+    )
+        return 4;
+    if (
+        slug.includes("respiratory") ||
+        title.includes("respiratory") ||
+        title.includes("b.rt")
+    )
+        return 5;
+    if (slug.includes("cardiovascular") || title.includes("cardiovascular"))
+        return 6;
+    if (slug.includes("pharmaceutics") || title.includes("pharmaceutics"))
+        return 7;
+    if (slug.includes("pharmacology") || title.includes("pharmacology"))
+        return 8;
+    if (slug.includes("phd") || title.includes("ph.d")) return 9;
+
+    return 100;
+}
+
 export function sortProgrammesByDegreeSequence(
-    items: ProgrammeItem[]
+    items: ProgrammeItem[],
+    schoolSlug?: string
 ): ProgrammeItem[] {
+    const isSmas =
+        isSmasSchool(schoolSlug) ||
+        (items.length > 0 &&
+            items.some((it) => {
+                const s = (
+                    ("programmeslug" in it ? it.programmeslug : it.phdslug) ||
+                    ""
+                ).toLowerCase();
+                return (
+                    s === "dpharm" ||
+                    s === "bpharma" ||
+                    s === "bpharm-lateral-entry" ||
+                    s.includes("cardiovascular")
+                );
+            }));
+
+    if (isSmas) {
+        return [...items].sort(
+            (a, b) => getSmasProgrammeRank(a) - getSmasProgrammeRank(b)
+        );
+    }
+
     return [...items].sort(
         (a, b) => getProgrammeDegreeRank(a) - getProgrammeDegreeRank(b)
     );
@@ -447,10 +537,13 @@ const ProgrammesExplorer = ({
                                     limit
                                 ),
                             ]);
-                            sourceData = sortProgrammesByDegreeSequence([
-                                ...(progRes?.data || []),
-                                ...(phdRes?.data || []),
-                            ]);
+                            sourceData = sortProgrammesByDegreeSequence(
+                                [
+                                    ...(progRes?.data || []),
+                                    ...(phdRes?.data || []),
+                                ],
+                                schoolRefValue.current
+                            );
                         } else {
                             const res =
                                 await getAllSchoolProgrammeByDegOrCatPaginated(
@@ -486,7 +579,10 @@ const ProgrammesExplorer = ({
                                 : item.heading || "";
                         return normalize(titleStr).includes(normQuery);
                     });
-                    newData = sortProgrammesByDegreeSequence(filteredData);
+                    newData = sortProgrammesByDegreeSequence(
+                        filteredData,
+                        schoolRefValue.current
+                    );
 
                     setShowLoadMore(false); // no button in search
                 } else {
@@ -513,10 +609,10 @@ const ProgrammesExplorer = ({
                                 limit
                             ),
                         ]);
-                        newData = sortProgrammesByDegreeSequence([
-                            ...(progRes?.data || []),
-                            ...(phdRes?.data || []),
-                        ]);
+                        newData = sortProgrammesByDegreeSequence(
+                            [...(progRes?.data || []), ...(phdRes?.data || [])],
+                            schoolRefValue.current
+                        );
                     } else {
                         const res =
                             await getAllSchoolProgrammeByDegOrCatPaginated(
@@ -532,8 +628,12 @@ const ProgrammesExplorer = ({
                 }
 
                 setProgrammes(
-                    degreeRefValue.current === "all"
-                        ? sortProgrammesByDegreeSequence(newData)
+                    degreeRefValue.current === "all" ||
+                        isSmasSchool(schoolRefValue.current)
+                        ? sortProgrammesByDegreeSequence(
+                              newData,
+                              schoolRefValue.current
+                          )
                         : newData
                 );
             } finally {
