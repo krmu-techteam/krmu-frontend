@@ -16,7 +16,7 @@ const CDCTeamMember = ({ member }: CDCTeamMemberProps) => {
 
   return (
     <article className="font-poppins">
-      <div className="relative aspect-square w-full max-w-[264px] overflow-hidden bg-gray-100">
+      <div className="relative aspect-square w-full md:max-w-[264px] overflow-hidden bg-gray-100">
         <Image
           src={imageSrc}
           alt={`${name}${designation ? ` - ${designation}` : ""}`}

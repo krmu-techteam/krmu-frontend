@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-28 xl:pt-32 bg-[url('/placements/main/pl-hero-bg-image.webp')] bg-cover bg-left-top">
+    <section className="relative pt-8 md:pt-28 xl:pt-32 bg-[url('/placements/main/pl-hero-bg-image.webp')] bg-cover bg-left-top">
       {/* <Image
         src=""
         alt="Hero Background"

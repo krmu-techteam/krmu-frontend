@@ -16,7 +16,7 @@ import {
   StudentSuccessStories,
 } from "./common/StudentSuccessStories";
 import {
-  cdcTeamMembers,
+  cdcTeamMembers, 
   createPersonGraphSchema,
   interviewSuccessStories,
 } from "./constant";

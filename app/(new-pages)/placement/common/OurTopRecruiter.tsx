@@ -59,23 +59,21 @@ const OurTopRecruiter = () => {
 
         {/* Infinite Logo Carousel */}
         <div className="relative mt-8 overflow-hidden">
-          <div className="grid grid-cols-6 border border-[#ccc]">
-            {ourTopRecruitersLogos &&
-              ourTopRecruitersLogos.map((logo, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="flex items-center justify-center p-5 border border-[#ccc]"
-                  > 
-                    <Image
-                      src={logo.imageUrl}
-                      alt={logo.alt || ""}
-                      width={logo.width}
-                      height={logo.height}
-                    />
-                  </div>
-                );
-              })}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 border border-[#ccc]">
+            {ourTopRecruitersLogos?.map((logo, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center p-4 sm:p-5 md:p-6 border border-[#ccc] min-h-[100px] sm:min-h-[120px] md:min-h-[140px]"
+              >
+                <Image
+                  src={logo.imageUrl}
+                  alt={logo.alt || ""}
+                  width={logo.width}
+                  height={logo.height}
+                  className="max-w-full h-auto object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

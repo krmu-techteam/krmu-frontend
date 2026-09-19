@@ -23,7 +23,7 @@ export async function generateMetadata() {
     alternates: {
       canonical: "https://krmangalam.edu.in/placements/records",
     },
-    robots: {
+    robots: { 
       index: true,
       follow: true,
     },

@@ -82,7 +82,7 @@ const TalentByDomain = () => {
     <section className="bg-[#faf8f4] px-5 py-10 sm:px-8 md:py-14 xl:py-20 lg:px-10 xl:px-0">
       <div className="mx-auto w-full max-w-7xl">
         {/* Header */}
-        <div className="mb-10 flex items-start justify-between gap-6 md:mb-12">
+        <div className="mb-10 flex items-start flex-col xl:flex-row justify-between gap-2 sm:gap-6 md:mb-12">
           <h2
             className="
               font-serif
