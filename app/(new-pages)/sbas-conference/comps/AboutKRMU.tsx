@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutKRMU = () => {
   return (
-    <section>
+    <section id="about-krmu">
       <div className="max-w-6xl mx-auto px-5 xl:px-0 pb-14 sm:pb-16 md:pb-20 flex flex-col xl:flex-row items-center gap-10 md:gap-12 xl:gap-16 text-[#44504A]">
         {/* Image */}
         <div className="w-full xl:w-[42%]">

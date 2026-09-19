@@ -1,6 +1,6 @@
 const CallForPapers = () => {
   return (
-    <section className="bg-[#ede9dd] py-14 sm:py-16 md:py-20 xl:py-24 px-5 sm:px-6 md:px-10 xl:px-0">
+    <section className="bg-[#ede9dd] py-14 sm:py-16 md:py-20 xl:py-24 px-5 sm:px-6 md:px-10 xl:px-0" id="callOfAbstract">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-10 sm:mb-12">

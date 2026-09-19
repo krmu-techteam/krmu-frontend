@@ -23,7 +23,7 @@ const CommitteeMemberCard = ({
           alt={name}
           className="w-full h-auto aspect-square object-cover rounded-sm"
         />
-      </div>
+      </div> 
 
       <div className="space-y-1.5 sm:space-y-2">
         <h4 className="font-lora text-sm font-bold text-[#1C2822] leading-snug">

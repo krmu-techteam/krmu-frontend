@@ -85,153 +85,235 @@ export const committeeMembers = [
     name: "Prof. Dinesh Singh",
     designation: "Chancellor, KRMU",
     role: "CHIEF PATRON",
-    image: "/test/dinesh.webp",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/dinesh.webp",
   },
   {
     name: "Shri Abhishek Gupta",
     designation: "Pro-Chancellor, KRMU",
     role: "PATRON",
-    image: "/test/abhishek.webp",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/abhishek.jpg",
   },
   {
     name: "Shri Rohit Gupta",
     designation: "Director, KRMU",
     role: "PATRON",
-    image: "/test/rohit.webp",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/rohit.jpg",
   },
   {
     name: "Prof. Anil Kumar Saini",
     designation: "Vice Chancellor, KRMU",
     role: "CO-PATRON",
-    image: "/test/anil.webp",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/anil.jpg",
   },
   {
     name: "Prof. Darshan Pandey",
     designation: "Principal, Rajdhani College, University of Delhi",
     role: "CO-PATRON",
-    image: "/test/darshan.webp",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/darshan.jpg",
   },
   {
     name: "Prof. Shantanu Bhattacharya",
     designation: "Director, KRMU",
     role: "CO-PATRON",
-    image: "/test/shantanu.webp",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/shantanu.jpg",
   },
 ];
 
 export const organizingCommittee = [
   {
     name: "Prof. (Dr.) Meena Bhandari",
-    role: "ORGANIZING HEAD",
+    role: "Organizing Head",
     designation: "Dean-SBAS",
     university: "K.R. Mangalam University",
-    image: "/test/meena.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/meena.jpg",
   },
   {
     name: "Dr. Chandra Mohan",
-    role: "CONVENOR-CUM-ORGANIZING SECRETARY",
-    designation: "Associate Professor-SBAS",
+    role: "Convenor-cum-Organizing Secretary",
+    designation: "Associate Professor- SBAS",
     university: "K.R. Mangalam University",
-    image: "/test/chandra-mohan.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/chandra-mohan.jpg",
   },
   {
     name: "Dr. Rishi Ranjan Kumar",
-    role: "CONVENOR",
-    designation: "Assistant Professor-SBAS",
+    role: "Convenor",
+    designation: "Assistant Professor- SBAS",
     university: "K.R. Mangalam University",
-    image: "/test/rishi-ranjan.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/rishi.jpg",
   },
   {
     name: "Dr. Suman Singh",
-    role: "CO-CONVENOR",
+    role: "Co-Convenor",
     designation: "Scientist-F & Co-ordinator",
     university: "CSIR-CSIO, Chandigarh",
-    image: "/test/suman-singh.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/suman.jpg",
   },
   {
     name: "Dr. Deepak Yadav",
-    role: "CO-CONVENOR",
-    designation: "Assistant Professor, University",
-    university: "of Delhi",
-    image: "/test/deepak-yadav.jpg",
+    role: "Co-Convenor",
+    designation: "Assistant Professor",
+    university: "Rajdhani College, University of Delhi",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/deepak.jpg",
   },
   {
     name: "Dr. Neeraj Kumari",
-    role: "CO-CONVENOR",
-    designation: "Assistant Professor-SBAS",
+    role: "Co-Convenor",
+    designation: "Assistant Professor- SBAS",
     university: "K.R. Mangalam University",
-    image: "/test/neeraj-kumari.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/neeraj.jpg",
   },
   {
     name: "Prof. (Dr.) Rajesh Kumar",
-    role: "CONFERENCE CHAIR",
+    role: "Conference Chair",
     designation: "Dean, Faculty of Scientific",
-    university: "Skills DESU, New Delhi",
-    image: "/test/rajesh-kumar.jpg",
+    university: "Skills DSEU, New Delhi",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/rajesh.jpg",
   },
   {
     name: "Mr. Narinder Singh Jassal",
-    role: "CONFERENCE CO-CHAIR",
+    role: "Conference Co-Chair",
     designation: "Scientist-G & Head, BDG",
     university: "CSIR-CSIO, Chandigarh",
-    image: "/test/narinder-singh.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/narinder.jpg",
   },
   {
     name: "Dr. Anand Prakash",
-    role: "CONFERENCE CO-CHAIR",
+    role: "Conference Co-Chair",
     designation: "Teacher-in-charge, Chemistry",
     university: "Rajdhani College, University of Delhi",
-    image: "/test/anand-prakash.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/anand.jpg",
   },
 ];
 
 export const editorialCommittee = [
   {
     name: "Dr. Pratibha Sharma",
-    role: "EDITORIAL COMMITTEE HEAD",
+    role: "Editorial Committee Head",
     designation: "Assistant Professor- SBAS",
     university: "K.R. Mangalam University",
-    image: "/test/pratibha.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/pratibha.jpg",
   },
   {
-    name: "Dr. XYZ",
-    role: "EDITORIAL COMMITTEE MEMBER",
+    name: "Dr. Prakash Kumar Pathak",
+    role: "Technical Program Committee Head",
     designation: "Assistant Professor- SBAS",
     university: "K.R. Mangalam University",
-    image: "/test/member-2.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/prakash.jpg",
   },
   {
-    name: "Dr. ABC",
-    role: "EDITORIAL COMMITTEE MEMBER",
+    name: "Dr. Pooja Bansal",
+    role: "Registration Committee Head",
     designation: "Assistant Professor- SBAS",
     university: "K.R. Mangalam University",
-    image: "/test/member-3.jpg",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/pooja-bansal.jpg",
   },
 ];
 
 export const committees = [
   {
-    title: "Registration Committee",
-    href: "#",
+    title: "Registration Committee:",
+    members: [
+      "Dr. Rajni Gautam, Assistant Professor, SBAS, K.R. Mangalam University, Gurugram",
+      "Dr. Kriti, Assistant Professor, SBAS, K.R. Mangalam University, Gurugram",
+      "Dr. Divyanshi Mangla, Assistant Professor, SBAS, K.R. Mangalam University, Gurugram",
+      "Dr. Vicky Kapoor, Assistant Professor, SBAS, K.R. Mangalam University, Gurugram",
+      "Dr. Arun Yadav, Assistant Professor, SBAS, K.R. Mangalam University, Gurugram",
+    ],
   },
+
   {
     title: "Technical Program Committee",
-    href: "#",
+    members: [
+      "Dr. Komal Yadav, Associate Professor, SBAS, K.R. Mangalam University, Gurugram",
+      "Dr. Sunil Kumar, Assistant Professor, SMAS, K.R. Mangalam University, Gurugram",
+      "Dr. Sujata Kumari, Assistant Professor, SBAS, K.R. Mangalam University, Gurugram",
+      "Dr. Sourabh Singh, Assistant Professor, SBAS, K.R. Mangalam University, Gurugram",
+      "Dr. Kritika Singh, Assistant Professor, SBAS, K.R. Mangalam University, Gurugram",
+    ],
   },
   {
-    title: "Editorial Committee",
-    href: "#",
+    title: "Editorial Committee:",
+    members: [
+      "Prof. Kumud Kant Awasthi, Research Track Faculty, K.R. Mangalam University, Gurugram",
+      "Prof. Garima Awasthi, Research Track Faculty, K.R. Mangalam University, Gurugram",
+      "Dr. Vijay Kumar Sharma, Assistant Professor, SOMC, K.R. Mangalam University, Gurugram",
+      "Dr. Mahipal Singh Sankhla, Research Track Faculty, K.R. Mangalam University, Gurugram",
+      "Dr. Gourav Gupta, Research Track Faculty, K.R. Mangalam University, Gurugram",
+      "Dr. Arush Sharma, Research Track Faculty, K.R. Mangalam University, Gurugram",
+    ],
   },
   {
-    title: "Invited Speakers",
-    href: "#",
+    title: "Invited Speaker:",
+    members: [
+      "Prof. Ling Yin, Dean, College of Modern Agriculture, Weifang Institute of Technology, China",
+      "Dr. Poonam Oberoi, Research Center in Managerial Intelligence and Innovation, La Rochelle, France",
+      "Prof. Saber Mohamed Abd-Allah, Beni-Suef University, Egypt",
+      "Prof. Govind Gupta, Chief Scientist, CSIR-NPL, New Delhi",
+      "Dr. Baban Kumar Bansod, Scientist-G and Head AMI, CSIR-CSIO, Chandigarh",
+      "Dr. Himanshu Ojha, Scientist F, INMAS, DRDO Delhi, India",
+      "Prof. Ajay Kumar Mishra, University of the Western Cape, South Africa",
+    ],
   },
   {
-    title: "Keynote Speakers",
-    href: "#",
+    title: "Keynote Speaker:",
+    members: [
+      "Dr. Sapana Jadoun, Universidad de Tarapaca, Chile",
+      "Prof. Sabu Thomas, Vice Chancellor, Mahatma Gandhi University, Kottayam, Kerla",
+      "Dr. Jai Prakash, Dy. Director General, National Institute of Solar Energy (NISE), Gurugram",
+      "Prof S. K. Singh, Vice-Chancellor, Rajasthan Technical University, Kota, India",
+      "Dr. Jai Prakash, Dy. Director General, National Institute of Solar Energy (NISE), Gurugram",
+      "Dr. Sandeep Kumar Lal, Principal Scientist, ICAR-IARI, New Delhi, India",
+    ],
   },
   {
-    title: "Advisory Committee",
-    href: "#",
+    title: "Advisory Committee:",
+    members: [
+      "Dr. Maguy Abi Jaoude Kahwaji, Associate Professor, Khalifa University, UK",
+      "Dr. Ajeet Kaushik, Florida Polytechnic University, Florida",
+      "Dr. Rajendra S. Varma, Federal University of Sao Carlos, Brazil",
+      "Prof. Mustanser Hussain, New Jersey Institute of Technology, USA",
+      "Dr. Shinichi Komaba, Tokyo University of Science, Japan",
+      "Prof S. K. Singh, Vice-Chancellor Rajasthan Technical University, Kota, India",
+      "Prof. Poonam. Miranda House, New Delhi, India",
+      "Dr. O. P. Dhankaher, University of Massachusetts, USA",
+      "Dr. Vinay Jha, Tribhuvan University, Nepal",
+      "Dr. Barnabe Mari, Polytechnic University of Valencia, Spain",
+      "Shri Arvind Kumar, Director CFEES, New Delhi",
+      "Prof. O. P. Agarwal, Maharshi Dayanand University, Rohtak",
+      "Prof. Virender Sharma, Texas A & M University, Texas, USA",
+      "Prof. K. K. Bhasin, Punjab University, Chandigarh",
+      "Dr. Avtar Singh, University of South Florida, Florida, USA",
+    ],
+  },
+  {
+    title: "Tentative List of Authors/ Contributors:",
+    members: [
+      "Dr Shaheed, Northumbria University, Newcastle, UK",
+      "Dr Swarna Shikha, Scientist, System Biosciences, USA ",
+      "Dr Meenakhs Gussain, Postdoctoral fellow, Fudan University, Shanghai",
+      "Dr Karim Khan, Research Associate Professor, Shenzhen University, Guangdong, China",
+      "Dr Chingakham Chinglenthioba, National University of Singapore",
+      "Dr Sudesh Kumar, NCERT, Delhi",
+      "Dr Ashish Chalana, Sharda University, Noida",
+      "Dr Mozhgan Afshari, Assistant Professor, Isalmic Azad University, Tehran, Iran",
+    ],
   },
 ];

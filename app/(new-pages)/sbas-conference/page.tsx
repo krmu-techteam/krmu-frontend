@@ -18,7 +18,7 @@ const page = () => {
       <HeroSection />
       <ConferenceMenu />
       <AboutTheConference />
-      <AboutKRMU />
+      <AboutKRMU /> 
       <ConferenceTracks />
       <Timeline />
       <CallForPapers />

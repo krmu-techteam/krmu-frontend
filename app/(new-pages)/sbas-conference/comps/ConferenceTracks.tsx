@@ -2,7 +2,7 @@ import { researchAreas } from "../constant";
 
 const ConferenceTracks = () => {
   return (
-    <section className="bg-[#19241F] py-14 sm:py-16 md:py-20 xl:py-24 px-5 sm:px-6 md:px-10 xl:px-16">
+    <section className="bg-[#19241F] py-14 sm:py-16 md:py-20 xl:py-24 px-5 sm:px-6 md:px-10 xl:px-16" id="conf-tracks">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center space-y-3 mb-10 sm:mb-12">
@@ -31,7 +31,7 @@ const ConferenceTracks = () => {
 
               {/* Content */}
               <div className="flex-1 min-w-0 space-y-2">
-                <h4 className="text-white text-base sm:text-lg leading-snug">
+                <h4 className="text-white text-base sm:text-lg leading-snug font-bold font-lora">
                   {area.title}
                 </h4>
 

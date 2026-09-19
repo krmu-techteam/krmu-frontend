@@ -1,6 +1,6 @@
 const RegistrationFee = () => {
   return (
-    <section className="py-14 sm:py-16 md:py-20 xl:py-24 px-5 sm:px-6 md:px-10 xl:px-0">
+    <section className="py-14 sm:py-16 md:py-20 xl:py-24 px-5 sm:px-6 md:px-10 xl:px-0" id="reg-fees">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center space-y-3 mb-8 sm:mb-10 md:mb-12">
@@ -22,7 +22,7 @@ const RegistrationFee = () => {
         <div className="overflow-x-auto rounded-xl border-2 border-[#d1c9b8]">
           <table className="w-full min-w-[650px] border-collapse">
             <thead>
-              <tr className="bg-[#19241f] text-white">
+              <tr className="bg-[#19241F] text-white">
                 <th className="px-4 sm:px-6 py-3.5 sm:py-4 text-left text-xs sm:text-sm font-semibold whitespace-nowrap">
                   CATEGORY
                 </th>

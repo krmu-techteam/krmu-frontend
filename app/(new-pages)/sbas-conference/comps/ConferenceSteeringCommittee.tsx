@@ -3,7 +3,7 @@ import CommitteeMemberCard from "./cards/CommitteeMemberCard";
 
 const ConferenceSteeringCommittee = () => {
   return (
-    <section className="bg-[#ede9dd] pt-14 sm:pt-16 md:pt-20 xl:pt-24 pb-8 sm:pb-10 px-5 sm:px-6 md:px-10 xl:px-0">
+    <section className="bg-[#ede9dd] pt-14 sm:pt-16 md:pt-20 xl:pt-24 pb-8 sm:pb-10 px-5 sm:px-6 md:px-10 xl:px-0" id="steering-committee">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center space-y-3 mb-8 sm:mb-10 md:mb-12">

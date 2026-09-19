@@ -8,33 +8,33 @@ type confMenusType = {
 export const confMenus: confMenusType[] = [
   {
     label: "About",
-    link: "#",
+    link: "/sbas-conference/#about-krmu",
   },
   {
     label: "Tracks",
-    link: "#",
+    link: "/sbas-conference/#conf-tracks",
   },
   {
     label: "Dates",
-    link: "#",
+    link: "/sbas-conference/#timeline-scroll",
   },
   {
     label: "Call for Abstracts",
-    link: "#",
+    link: "/sbas-conference/#callOfAbstract",
   },
   {
     label: "Fees",
-    link: "#",
+    link: "/sbas-conference/#reg-fees",
   },
   {
     label: "Committee",
-    link: "#",
+    link: "/sbas-conference/#steering-committee",
   },
 ];
 
 const ConferenceMenu = () => {
   return (
-    <nav className="bg-[#19241F] px-5 py-4 sm:py-5">
+    <nav className="bg-[#19241F] px-5 py-4 sm:py-5 sticky top-[76px]">
       <ul
         className="
           max-w-[484px] mx-auto

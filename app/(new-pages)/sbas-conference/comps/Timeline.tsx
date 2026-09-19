@@ -2,7 +2,7 @@ import { timelineData } from "../constant";
 
 const Timeline = () => {
   return (
-    <section>
+    <section id="timeline-scroll">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 md:px-10 xl:px-0 py-14 sm:py-16 md:py-20 xl:py-24">
         {/* Heading */}
         <div className="space-y-3 mb-8 sm:mb-10 text-center">
@@ -22,7 +22,7 @@ const Timeline = () => {
               key={`${item.month}-${item.date}-${index}`}
               className="bg-white rounded-xl overflow-hidden border-2 border-[#D1C9B8]"
             >
-              <div className="bg-black py-2 px-4">
+              <div className="bg-[#19241F] py-2 px-4">
                 <h6 className="text-white text-[11px] font-bold tracking-[1px]">
                   {item.month}
                 </h6>

@@ -23,7 +23,7 @@ const ConferenceSteeringCommitteeCard2 = ({
           width={151}
           height={119}
           alt={member.name}
-          className="w-full h-auto aspect-[151/119] object-cover rounded-sm"
+          className="w-full h-auto aspect-[151/119] object-contain rounded-sm"
         />
       </div>
 
