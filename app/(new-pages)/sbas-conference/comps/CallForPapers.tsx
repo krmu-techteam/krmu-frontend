@@ -17,7 +17,7 @@ const CallForPapers = () => {
         <div className="flex flex-col xl:flex-row gap-6 md:gap-8 mb-10 sm:mb-12">
           {/* Call for Abstracts */}
           <div className="w-full xl:w-1/2">
-            <div className="pt-6 px-5 sm:px-6 md:px-7 pb-7 bg-white rounded-[10px] border-t-3 border-[#c3a342] min-h-0 xl:min-h-[292px]">
+            <div className="pt-6 px-5 sm:px-6 md:px-7 pb-7 bg-white rounded-[10px] border-t-3 border-[#c3a342] min-h-0 xl:min-h-[305px]">
               <h5 className="font-bold font-lora text-lg text-[#1C2822] mb-3">
                 Call for Abstracts
               </h5>
@@ -60,7 +60,7 @@ const CallForPapers = () => {
 
           {/* Call for Papers */}
           <div className="w-full xl:w-1/2">
-            <div className="pt-6 px-5 sm:px-6 md:px-7 pb-7 bg-white rounded-[10px] border-t-3 border-[#2f5745] min-h-0 xl:min-h-[292px]">
+            <div className="pt-6 px-5 sm:px-6 md:px-7 pb-7 bg-white rounded-[10px] border-t-3 border-[#2f5745] min-h-0 xl:min-h-[305px]">
               <h5 className="font-bold font-lora text-lg text-[#1C2822] mb-3">
                 Call for Papers
               </h5>
