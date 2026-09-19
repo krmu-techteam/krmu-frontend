@@ -20,9 +20,9 @@ export const AdvisoryCard = ({
     schoolCat,
 }: Props) => {
     return (
-        <div className="overflow-hidden bg-[#061623] transition-all duration-300 ease-in-out group flex flex-col font-poppins w-full h-full rounded-[4px]">
+        <div className="overflow-hidden bg-[#061623] transition-all duration-300 ease-in-out group flex flex-col font-poppins w-full h-full ">
             {/* IMAGE SECTION */}
-            <div className="relative w-full h-[240px] sm:h-[280px] overflow-hidden flex items-end justify-center">
+            <div className="relative bg-white w-full h-[240px] sm:h-[280px] overflow-hidden flex items-end justify-center">
                 <div className="absolute inset-0 flex items-center justify-center p-6">
                     <Image
                         src="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/KRMU_Logo_white_3_33a6547c3f.png"
