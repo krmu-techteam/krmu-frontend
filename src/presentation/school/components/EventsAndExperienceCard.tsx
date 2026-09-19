@@ -52,7 +52,37 @@ export function formatCardTitle(title: string): string {
     );
 
     // Keep 'o' lowercase in 'MoU'
-    return formatted.replace(/\bMOU\b/gi, "MoU");
+    let result = formatted.replace(/\bMOU\b/gi, "MoU");
+
+    // Format 'Pvt' as 'Pvt.' and 'Ltd' / 'Ldt' as 'Ltd.'
+    result = result.replace(/\bPvt\b\.?/gi, "Pvt.");
+    result = result.replace(/\b(?:Ltd|Ldt)\b\.?/gi, "Ltd.");
+    result = result.replace(/Pvt\.\s*Ltd\./gi, "Pvt. Ltd.");
+
+    return result;
+}
+
+export function formatBlocksContent(
+    content: ParagraphBlock[]
+): ParagraphBlock[] {
+    if (!content || !Array.isArray(content)) return content;
+    return content.map((block) => {
+        if (!block || !Array.isArray(block.children)) return block;
+        return {
+            ...block,
+            children: block.children.map((child: any) => {
+                if (child && typeof child.text === "string") {
+                    let text = child.text;
+                    text = text.replace(/\bMOU\b/gi, "MoU");
+                    text = text.replace(/\bPvt\b\.?/gi, "Pvt.");
+                    text = text.replace(/\b(?:Ltd|Ldt)\b\.?/gi, "Ltd.");
+                    text = text.replace(/Pvt\.\s*Ltd\./gi, "Pvt. Ltd.");
+                    return { ...child, text };
+                }
+                return child;
+            }),
+        };
+    });
 }
 
 const EventsAndExperienceCard = ({
@@ -62,11 +92,12 @@ const EventsAndExperienceCard = ({
     featured_img_url,
 }: Props) => {
     const displayTitle = formatCardTitle(title);
+    const displayContent = formatBlocksContent(content);
 
     return (
-        <div className="group cursor-pointer">
+        <div className="group cursor-pointer flex flex-col h-full w-full">
             <Link href={`/events-and-news/${slug}`} className="block">
-                <div className="relative aspect-[3/2] rounded-sm overflow-hidden mb-6 bg-white/5">
+                <div className="relative aspect-[3/2] rounded-sm overflow-hidden mb-5 bg-white/5">
                     {featured_img_url && (
                         <Image
                             src={`${STRAPI_URL}${featured_img_url}`}
@@ -87,20 +118,22 @@ const EventsAndExperienceCard = ({
                 </div>
             </Link>
 
-            <Link href={`/events-and-news/${slug}`} className="block">
-                <h3
-                    className="text-white font-serif text-lg md:text-xl font-medium leading-snug group-hover:text-brand-gold transition-colors line-clamp-2"
-                    dangerouslySetInnerHTML={{
-                        __html: displayTitle || "",
-                    }}
-                />
-            </Link>
+            <div className="flex-1 flex flex-col justify-start">
+                <Link href={`/events-and-news/${slug}`} className="block">
+                    <h3
+                        className="text-white font-serif text-lg md:text-xl font-medium leading-snug group-hover:text-brand-gold transition-colors line-clamp-2 min-h-[3.25rem] md:min-h-[3.5rem]"
+                        dangerouslySetInnerHTML={{
+                            __html: displayTitle || "",
+                        }}
+                    />
+                </Link>
 
-            {content && (
-                <div className="text-white/80 text-sm mt-2 font-poppins font-normal leading-relaxed tracking-wide line-clamp-2">
-                    <BlocksRenderer content={content} />
-                </div>
-            )}
+                {displayContent && (
+                    <div className="text-white/80 text-sm mt-2 font-poppins font-normal leading-relaxed tracking-wide line-clamp-2">
+                        <BlocksRenderer content={displayContent} />
+                    </div>
+                )}
+            </div>
         </div>
     );
 };
