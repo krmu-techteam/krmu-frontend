@@ -79,3 +79,159 @@ export const timelineData = [
     title: "Last date of registration",
   },
 ];
+
+export const committeeMembers = [
+  {
+    name: "Prof. Dinesh Singh",
+    designation: "Chancellor, KRMU",
+    role: "CHIEF PATRON",
+    image: "/test/dinesh.webp",
+  },
+  {
+    name: "Shri Abhishek Gupta",
+    designation: "Pro-Chancellor, KRMU",
+    role: "PATRON",
+    image: "/test/abhishek.webp",
+  },
+  {
+    name: "Shri Rohit Gupta",
+    designation: "Director, KRMU",
+    role: "PATRON",
+    image: "/test/rohit.webp",
+  },
+  {
+    name: "Prof. Anil Kumar Saini",
+    designation: "Vice Chancellor, KRMU",
+    role: "CO-PATRON",
+    image: "/test/anil.webp",
+  },
+  {
+    name: "Prof. Darshan Pandey",
+    designation: "Principal, Rajdhani College, University of Delhi",
+    role: "CO-PATRON",
+    image: "/test/darshan.webp",
+  },
+  {
+    name: "Prof. Shantanu Bhattacharya",
+    designation: "Director, KRMU",
+    role: "CO-PATRON",
+    image: "/test/shantanu.webp",
+  },
+];
+
+export const organizingCommittee = [
+  {
+    name: "Prof. (Dr.) Meena Bhandari",
+    role: "ORGANIZING HEAD",
+    designation: "Dean-SBAS",
+    university: "K.R. Mangalam University",
+    image: "/test/meena.jpg",
+  },
+  {
+    name: "Dr. Chandra Mohan",
+    role: "CONVENOR-CUM-ORGANIZING SECRETARY",
+    designation: "Associate Professor-SBAS",
+    university: "K.R. Mangalam University",
+    image: "/test/chandra-mohan.jpg",
+  },
+  {
+    name: "Dr. Rishi Ranjan Kumar",
+    role: "CONVENOR",
+    designation: "Assistant Professor-SBAS",
+    university: "K.R. Mangalam University",
+    image: "/test/rishi-ranjan.jpg",
+  },
+  {
+    name: "Dr. Suman Singh",
+    role: "CO-CONVENOR",
+    designation: "Scientist-F & Co-ordinator",
+    university: "CSIR-CSIO, Chandigarh",
+    image: "/test/suman-singh.jpg",
+  },
+  {
+    name: "Dr. Deepak Yadav",
+    role: "CO-CONVENOR",
+    designation: "Assistant Professor, University",
+    university: "of Delhi",
+    image: "/test/deepak-yadav.jpg",
+  },
+  {
+    name: "Dr. Neeraj Kumari",
+    role: "CO-CONVENOR",
+    designation: "Assistant Professor-SBAS",
+    university: "K.R. Mangalam University",
+    image: "/test/neeraj-kumari.jpg",
+  },
+  {
+    name: "Prof. (Dr.) Rajesh Kumar",
+    role: "CONFERENCE CHAIR",
+    designation: "Dean, Faculty of Scientific",
+    university: "Skills DESU, New Delhi",
+    image: "/test/rajesh-kumar.jpg",
+  },
+  {
+    name: "Mr. Narinder Singh Jassal",
+    role: "CONFERENCE CO-CHAIR",
+    designation: "Scientist-G & Head, BDG",
+    university: "CSIR-CSIO, Chandigarh",
+    image: "/test/narinder-singh.jpg",
+  },
+  {
+    name: "Dr. Anand Prakash",
+    role: "CONFERENCE CO-CHAIR",
+    designation: "Teacher-in-charge, Chemistry",
+    university: "Rajdhani College, University of Delhi",
+    image: "/test/anand-prakash.jpg",
+  },
+];
+
+export const editorialCommittee = [
+  {
+    name: "Dr. Pratibha Sharma",
+    role: "EDITORIAL COMMITTEE HEAD",
+    designation: "Assistant Professor- SBAS",
+    university: "K.R. Mangalam University",
+    image: "/test/pratibha.jpg",
+  },
+  {
+    name: "Dr. XYZ",
+    role: "EDITORIAL COMMITTEE MEMBER",
+    designation: "Assistant Professor- SBAS",
+    university: "K.R. Mangalam University",
+    image: "/test/member-2.jpg",
+  },
+  {
+    name: "Dr. ABC",
+    role: "EDITORIAL COMMITTEE MEMBER",
+    designation: "Assistant Professor- SBAS",
+    university: "K.R. Mangalam University",
+    image: "/test/member-3.jpg",
+  },
+];
+
+export const committees = [
+  {
+    title: "Registration Committee",
+    href: "#",
+  },
+  {
+    title: "Technical Program Committee",
+    href: "#",
+  },
+  {
+    title: "Editorial Committee",
+    href: "#",
+  },
+  {
+    title: "Invited Speakers",
+    href: "#",
+  },
+  {
+    title: "Keynote Speakers",
+    href: "#",
+  },
+  {
+    title: "Advisory Committee",
+    href: "#",
+  },
+];

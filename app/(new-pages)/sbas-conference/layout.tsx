@@ -4,7 +4,6 @@ import "./sbasconference.css";
 import HeaderWrapper from "@/app/(main-website)/components/Header/HeaderWrapper";
 import Footer from "@/app/(main-website)/components/Footer/Footer";
 import { Toaster } from "@/components/ui/sonner";
-
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -34,6 +33,9 @@ export default function SBASCOnferenceLayout({
         {children}
 
         <Toaster position="top-right" richColors closeButton />
+        <div id="main-footer">
+          <Footer />
+        </div>
       </body>
     </html>
   );
