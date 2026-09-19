@@ -18,7 +18,7 @@ const AboutKRMU = () => {
         {/* Content */}
         <div className="w-full xl:w-[58%] space-y-4">
           <p className="text-[#A9812F] text-xs font-bold tracking-[1.5px]">
-            ABOUT THE CONFERENCE
+          ABOUT K.R. MANGALAM UNIVERSITY
           </p>
 
           <h2 className="text-2xl sm:text-3xl font-lora font-bold text-[#1C2822] leading-tight">
