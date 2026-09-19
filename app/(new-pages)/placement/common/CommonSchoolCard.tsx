@@ -128,6 +128,6 @@ const CommonSchoolCard = ({ school }: CommonSchoolCardProps) => {
       </div>
     </div>
   );
-};
+}; 
 
 export default CommonSchoolCard;

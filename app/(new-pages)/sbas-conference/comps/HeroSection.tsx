@@ -21,8 +21,9 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <Link
-              href="#"
+              href="https://forms.gle/dBtKCMT7oikpDK9WA"
               className="bg-[#C3A342] text-black rounded-md py-3.5 px-[22px] font-semibold text-center"
+              target="_blank"
             >
               Submit an Abstract
             </Link>
