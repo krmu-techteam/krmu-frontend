@@ -3,8 +3,6 @@ import "./placement.css";
 
 import HeaderWrapper from "@/app/(main-website)/components/Header/HeaderWrapper";
 import Footer from "@/app/(main-website)/components/Footer/Footer";
-import QueryProvider from "@/app/(krmu-backend)/providers/QueryProvider";
-
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,22 +24,17 @@ export default function PlacementLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${poppins.variable} ${newsreader.variable}`}
-    >
+    <html lang="en" className={`${poppins.variable} ${newsreader.variable}`}>
       <body className="antialiased">
-        <QueryProvider>
-          <div id="main-header">
-            <HeaderWrapper />
-          </div>
+        <div id="main-header">
+          <HeaderWrapper />
+        </div>
 
-          {children}
+        {children}
 
-          <div id="main-footer">
-            <Footer />
-          </div>
-        </QueryProvider>
+        <div id="main-footer">
+          <Footer />
+        </div>
       </body>
     </html>
   );
