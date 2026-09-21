@@ -1,14 +1,12 @@
 import { getAllBlogsByPerPageOrCategorySlug } from "@/lib/api/blogs/main-blog";
 import Pagination from "./Pagination";
+import { Suspense } from "react";
+import { BlogCardSkeleton } from "@/app/(main-website)/components/Skeleton/BlogCardSkeleton";
 import CommonBlogList from "./CommonBlogList";
 
 type Props = {
-  searchParams: Promise<{
-    page?: string;
-  }>;
-
+  searchParams: Promise<{ page?: string }>;
   slug?: string;
-
   mainBlogClass: string;
 };
 
@@ -17,97 +15,80 @@ const CommonBlogLayout = async ({
   slug,
   mainBlogClass,
 }: Props) => {
-  // ------------------------------------
-  // Resolve search params
-  // ------------------------------------
   const resolvedSearchParams = await searchParams;
-
-  // ------------------------------------
-  // Current page
-  // ------------------------------------
-  const currentPage =
-    Number(resolvedSearchParams?.page) || 1;
-
+  const currentPage = Number(resolvedSearchParams?.page) || 1;
   const blogsPerPage = 6;
 
-  // ------------------------------------
-  // Fetch blogs + pagination together
-  // ------------------------------------
-  const { blogs, totalPages } =
-    await getAllBlogsByPerPageOrCategorySlug(
-      blogsPerPage,
-      currentPage,
-      slug
-    );
+  // ⭐ Fetch only pagination meta here
+  const { totalPages } = await getAllBlogsByPerPageOrCategorySlug(
+    blogsPerPage,
+    currentPage,
+    slug
+  );
 
-  // ------------------------------------
-  // Generate pagination numbers
-  // ------------------------------------
+  // Helper to generate page numbers with ellipses
   const getPageNumbers = (
     total: number,
     current: number,
     delta: number = 2
-  ): (number | string)[] => {
+  ) => {
     const range: (number | string)[] = [];
     const rangeWithDots: (number | string)[] = [];
-
-    let last: number | undefined;
+    let l: number | undefined;
 
     for (let i = 1; i <= total; i++) {
       if (
         i === 1 ||
         i === total ||
-        (i >= current - delta &&
-          i <= current + delta)
+        (i >= current - delta && i <= current + delta)
       ) {
         range.push(i);
       }
     }
 
-    for (const item of range) {
-      const numberItem = Number(item);
-
-      if (last !== undefined) {
-        if (numberItem - last === 2) {
-          rangeWithDots.push(last + 1);
-        } else if (numberItem - last !== 1) {
+    for (const i of range) {
+      if (l) {
+        if (Number(i) - l === 2) {
+          rangeWithDots.push(l + 1);
+        } else if (Number(i) - l !== 1) {
           rangeWithDots.push("…");
         }
       }
-
-      rangeWithDots.push(item);
-
-      last = numberItem;
+      rangeWithDots.push(i);
+      l = Number(i);
     }
 
     return rangeWithDots;
   };
 
-  const pageNumbers = getPageNumbers(
-    totalPages,
-    currentPage
-  );
+  const pageNumbers = getPageNumbers(totalPages, currentPage);
 
   return (
     <>
-      {/* --------------------------------
-          Blog List
-      -------------------------------- */}
-      <CommonBlogList
-        blogs={blogs}
-        mainBlogClass={mainBlogClass}
-      />
-
-      {/* --------------------------------
-          Pagination
-      -------------------------------- */}
-      {totalPages > 1 && (
-        <Pagination
+      {/* ⭐ Suspense handles skeleton on pagination */}
+      <Suspense
+        key={currentPage}
+        fallback={
+          <div className={mainBlogClass}>
+            {Array.from({ length: 6 }).map((_, i) => (
+              <BlogCardSkeleton key={i} />
+            ))}
+          </div>
+        }
+      >
+        <CommonBlogList
           currentPage={currentPage}
-          totalPages={totalPages}
-          pageNumbers={pageNumbers}
+          slug={slug}
+          mainBlogClass={mainBlogClass}
         />
-      )}
+      </Suspense>
+
+      {/* Pagination */}
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        pageNumbers={pageNumbers}
+      />
     </>
   );
 };
