@@ -12,10 +12,7 @@
         "format:check": "prettier --check .",
         "prepare": "husky",
         "lint-staged": "lint-staged",
-        "tunnel": "npx cloudflared tunnel --url http://127.0.0.1:3000",
-        "test:e2e": "playwright test",
-        "test:e2e:ui": "playwright test --ui",
-        "test:e2e:report": "playwright show-report"
+        "tunnel": "npx cloudflared tunnel --url http://127.0.0.1:3000"
     },
     "lint-staged": {
         "**/*.{js,jsx,ts,tsx}": [
@@ -59,7 +56,6 @@
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3",
-        "@playwright/test": "^1.63.0",
         "@tailwindcss/postcss": "^4",
         "@types/node": "^20",
         "@types/react": "^19",
