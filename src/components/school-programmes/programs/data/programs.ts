@@ -341,11 +341,6 @@ export const heroConfigs: Record<string, HeroConfig> = {
         bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/phd_law_215b11ace2.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
-    bpharma: {
-        ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bpharma_3b6b74ba3b.jpg",
-        bgPosition: "70% top",
-    } as HeroConfig,
     "bpharm-lateral-entry": {
         ...defaultCinematicConfig,
         bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bpharm_lateral_entry_314ac91d0f.jpg",
@@ -409,6 +404,11 @@ export const heroConfigs: Record<string, HeroConfig> = {
     "ba-hons-political-science": {
         ...defaultCinematicConfig,
         bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ba_hons_political_science_21b55797c1.jpg",
+        bgPosition: "70% top",
+    } as HeroConfig,
+    dpharm: {
+        ...defaultCinematicConfig,
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sss_e9aa19c79c.png",
         bgPosition: "70% top",
     } as HeroConfig,
 };

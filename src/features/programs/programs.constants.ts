@@ -434,6 +434,11 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
         bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bba_semester_abroad_uea_uk_9887b4f0b6.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
+    dpharm: {
+        ...defaultCinematicConfig,
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/sss_e9aa19c79c.png",
+        bgPosition: "70% top",
+    } as HeroConfig,
 };
 
 export const DEFAULT_LAB_IMAGES = [
