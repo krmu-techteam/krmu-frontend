@@ -14,19 +14,18 @@ const layout = ({ children }: Props) => {
       <section className="py-[60px] px-4">
         <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row gap-8">
           {/* LEFT SIDEBAR */}
-          {/* <aside className="w-full lg:w-1/5 order-2 lg:order-1">
+          <aside className="w-full lg:w-1/5 order-2 lg:order-1">
             <CommonBlogSidebar />
-          </aside> */}
-            <h1>test</h1>
+          </aside>
           {/* MAIN CONTENT */}
           <main className="w-full lg:w-3/5 order-1 lg:order-2 min-h-screen">
             {children}
           </main>
 
           {/* RIGHT SIDEBAR */}
-          {/* <aside className="w-full lg:w-1/5 order-3">
+          <aside className="w-full lg:w-1/5 order-3">
             <CommonBlogRightSidebar />
-          </aside> */}
+          </aside>
         </div>
       </section>
     </>
