@@ -1,12 +1,14 @@
 import { getAllBlogsByPerPageOrCategorySlug } from "@/lib/api/blogs/main-blog";
 import Pagination from "./Pagination";
-import { Suspense } from "react";
-import { BlogCardSkeleton } from "@/app/(main-website)/components/Skeleton/BlogCardSkeleton";
 import CommonBlogList from "./CommonBlogList";
 
 type Props = {
-  searchParams: Promise<{ page?: string }>;
+  searchParams: Promise<{
+    page?: string;
+  }>;
+
   slug?: string;
+
   mainBlogClass: string;
 };
 
@@ -15,80 +17,97 @@ const CommonBlogLayout = async ({
   slug,
   mainBlogClass,
 }: Props) => {
+  // ------------------------------------
+  // Resolve search params
+  // ------------------------------------
   const resolvedSearchParams = await searchParams;
-  const currentPage = Number(resolvedSearchParams?.page) || 1;
+
+  // ------------------------------------
+  // Current page
+  // ------------------------------------
+  const currentPage =
+    Number(resolvedSearchParams?.page) || 1;
+
   const blogsPerPage = 6;
 
-  // ⭐ Fetch only pagination meta here
-  const { totalPages } = await getAllBlogsByPerPageOrCategorySlug(
-    blogsPerPage,
-    currentPage,
-    slug
-  );
+  // ------------------------------------
+  // Fetch blogs + pagination together
+  // ------------------------------------
+  const { blogs, totalPages } =
+    await getAllBlogsByPerPageOrCategorySlug(
+      blogsPerPage,
+      currentPage,
+      slug
+    );
 
-  // Helper to generate page numbers with ellipses
+  // ------------------------------------
+  // Generate pagination numbers
+  // ------------------------------------
   const getPageNumbers = (
     total: number,
     current: number,
     delta: number = 2
-  ) => {
+  ): (number | string)[] => {
     const range: (number | string)[] = [];
     const rangeWithDots: (number | string)[] = [];
-    let l: number | undefined;
+
+    let last: number | undefined;
 
     for (let i = 1; i <= total; i++) {
       if (
         i === 1 ||
         i === total ||
-        (i >= current - delta && i <= current + delta)
+        (i >= current - delta &&
+          i <= current + delta)
       ) {
         range.push(i);
       }
     }
 
-    for (const i of range) {
-      if (l) {
-        if (Number(i) - l === 2) {
-          rangeWithDots.push(l + 1);
-        } else if (Number(i) - l !== 1) {
+    for (const item of range) {
+      const numberItem = Number(item);
+
+      if (last !== undefined) {
+        if (numberItem - last === 2) {
+          rangeWithDots.push(last + 1);
+        } else if (numberItem - last !== 1) {
           rangeWithDots.push("…");
         }
       }
-      rangeWithDots.push(i);
-      l = Number(i);
+
+      rangeWithDots.push(item);
+
+      last = numberItem;
     }
 
     return rangeWithDots;
   };
 
-  const pageNumbers = getPageNumbers(totalPages, currentPage);
+  const pageNumbers = getPageNumbers(
+    totalPages,
+    currentPage
+  );
 
   return (
     <>
-      {/* ⭐ Suspense handles skeleton on pagination */}
-      <Suspense
-        key={currentPage}
-        fallback={
-          <div className={mainBlogClass}>
-            {Array.from({ length: 6 }).map((_, i) => (
-              <BlogCardSkeleton key={i} />
-            ))}
-          </div>
-        }
-      >
-        <CommonBlogList
-          currentPage={currentPage}
-          slug={slug}
-          mainBlogClass={mainBlogClass}
-        />
-      </Suspense>
-
-      {/* Pagination */}
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        pageNumbers={pageNumbers}
+      {/* --------------------------------
+          Blog List
+      -------------------------------- */}
+      <CommonBlogList
+        blogs={blogs}
+        mainBlogClass={mainBlogClass}
       />
+
+      {/* --------------------------------
+          Pagination
+      -------------------------------- */}
+      {totalPages > 1 && (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          pageNumbers={pageNumbers}
+        />
+      )}
     </>
   );
 };

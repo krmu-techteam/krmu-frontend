@@ -1,27 +1,20 @@
-import { getAllBlogsByPerPageOrCategorySlug } from "@/lib/api/blogs/main-blog";
 import CommonBlogCard from "./CommonBlogCard";
 import { MainBlogs } from "@/lib/types/blogs/main-blogs";
 
 type Props = {
-  currentPage: number;
-  slug?: string;
+  blogs: MainBlogs[];
   mainBlogClass: string;
 };
 
-const CommonBlogList = async ({ currentPage, slug, mainBlogClass }: Props) => {
-  const blogsPerPage = 6;
-
-  const { blogs } = await getAllBlogsByPerPageOrCategorySlug(
-    blogsPerPage,
-    currentPage,
-    slug
-  );
-
+const CommonBlogList = ({
+  blogs,
+  mainBlogClass,
+}: Props) => {
   return (
-    <div className={mainBlogClass || ""}>
-      {blogs?.map((blog: MainBlogs, i: number) => (
+    <div className={mainBlogClass}>
+      {blogs?.map((blog: MainBlogs) => (
         <CommonBlogCard
-          key={i}
+          key={blog.id}
           title={blog?.title?.rendered}
           excerpt={blog?.excerpt?.rendered}
           slug={blog?.slug}
