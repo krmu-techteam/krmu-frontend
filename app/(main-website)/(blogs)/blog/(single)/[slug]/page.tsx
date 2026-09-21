@@ -1,5 +1,8 @@
 import { yoastToMetadata } from "@/lib/constants/yoastMeta";
-import { getSingleBlogDataBySlug } from "@/lib/api/blogs/single-blog";
+import {
+  getBlogImageById,
+  getSingleBlogDataBySlug,
+} from "@/lib/api/blogs/single-blog";
 import { notFound } from "next/navigation";
 import SingleBlogHero from "../../(listings)/single-blog-comp/SingleBlogHero";
 import SingleBlogLayout from "../../(listings)/single-blog-comp/SingleBlogLayout";
@@ -7,6 +10,7 @@ import {
   createArticleSchema,
   createBreadcrumbSchema,
   createFaqSchema,
+  createPersonSchema,
 } from "@/lib/api/common";
 import Script from "next/script";
 
@@ -83,6 +87,17 @@ const BlogPage = async ({ params }: Props) => {
   const publishedDate = currentSingleBlog?.date;
   const blogFaqSchema = currentSingleBlog?.acf?.faqs_section;
 
+  const AuthImgUrl = await getBlogImageById(authorImageId);
+
+  const PersonSchemaData = {
+    name: authorName,
+    url: authorSlug
+      ? `https://krmangalam.edu.in/blog/author/${authorSlug}`
+      : "",
+    image: AuthImgUrl || "",
+  };
+  const personJsonLd = createPersonSchema(PersonSchemaData);
+
   // JSON-LD Structured Data
   const faqJsonLd = createFaqSchema(blogFaqSchema || []);
   const breadcrumbSchema = createBreadcrumbSchema([
@@ -126,6 +141,12 @@ const BlogPage = async ({ params }: Props) => {
         id="blog-article-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: articleJsonLd }}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="blog-person-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: personJsonLd }}
         strategy="afterInteractive"
       />
 

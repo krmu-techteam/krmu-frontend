@@ -61,21 +61,25 @@ export async function getAllFaculties() {
   let page = 1;
   const perPage = 100;
 
-  while (true) {
-    const res = await fetch(
-      // `https://krmangalam.edu.in/wp-json/wp/v2/posts?_fields=slug,modified&per_page=${perPage}&page=${page}`,
-      `${KRMUWordUrl}/wp-json/wp/v2/faculty?_fields=slug,modified&page=${page}&per_page=${perPage}`,
-      { next: { revalidate: 3600 } }
-    );
+  try {
+    while (true) {
+      const res = await fetch(
+        // `https://krmangalam.edu.in/wp-json/wp/v2/posts?_fields=slug,modified&per_page=${perPage}&page=${page}`,
+        `${KRMUWordUrl}/wp-json/wp/v2/faculty?_fields=slug,modified&page=${page}&per_page=${perPage}`,
+        { next: { revalidate: 3600 } }
+      );
 
-    if (!res.ok) break;
+      if (!res.ok) break;
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (!data.length) break;
+      if (!data.length) break;
 
-    allFaculties = [...allFaculties, ...data];
-    page++;
+      allFaculties = [...allFaculties, ...data];
+      page++;
+    }
+  } catch (error) {
+    console.error("Error fetching all faculties for SEO:", error);
   }
 
   return allFaculties;

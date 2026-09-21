@@ -43,7 +43,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -80,39 +80,39 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/bdes-2026/recruiters/zynga.webp",
+    imgUrl: "/landing-page/bdes-2026/zynga.png",
     alt: "Zynga Logo",
   },
   {
-    imgUrl: "/landingpage/bdes-2026/recruiters/hplabs.png",
+    imgUrl: "/landing-page/bdes-2026/hp-labs.png",
     alt: "HPLabs Logo",
   },
   {
-    imgUrl: "/landingpage/bdes-2026/recruiters/greenply.png",
+    imgUrl: "/landing-page/bdes-2026/greenply.png",
     alt: "Greenply Logo",
   },
   {
-    imgUrl: "/landingpage/bdes-2026/recruiters/splash.webp",
+    imgUrl: "/landing-page/bdes-2026/splashlearn.png",
     alt: "Splash Logo",
   },
   {
-    imgUrl: "/landingpage/bdes-2026/recruiters/myntra-logo.png",
+    imgUrl: "/landing-page/bdes-2026/myntra.png",
     alt: "Myntra Logo",
   },
   {
-    imgUrl: "/landingpage/bdes-2026/recruiters/cognizant.png",
+    imgUrl: "/landing-page/bdes-2026/cognizant.png",
     alt: "Cognizant Logo",
   },
   {
-    imgUrl: "/landingpage/bdes-2026/recruiters/zara.webp",
+    imgUrl: "/landing-page/bdes-2026/zara.png",
     alt: "ZARA Logo",
   },
   {
-    imgUrl: "/landingpage/bdes-2026/recruiters/lifestyle.png",
+    imgUrl: "/landing-page/bdes-2026/lifestyle.png",
     alt: "Lifestyle Logo",
   },
   {
-    imgUrl: "/landingpage/bdes-2026/recruiters/ubisoft.png",
+    imgUrl: "/landing-page/bdes-2026/ubisoft.png",
     alt: "Ubisoft Logo",
   },
 ];
@@ -279,7 +279,7 @@ export const opportunityData: OpportunitySection = {
     src: "/landingpage/common/test2.png",
     alt: "Industry Expert",
     width: 300,
-    height: 400,
+    height: 400, 
   },
   heading: "Learn From Industry Experts",
   highlight: "Opportunity That Transforms",
@@ -562,13 +562,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "5 Specialisations",
   title: "KRMU’s Design Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -615,27 +612,23 @@ export const programmeContent = {
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
-    {
-      id: "5",
-      tag: "",
-      title: "M. Design (Interior Design)**",
-      subtitle: "",
-      desc: "Hone skills in spatial planning, aesthetics, sustainable design, 3D visualisation, and innovative interior solutions.",
-      duration: "2 Years",
-      fees: "200000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "A qualifying degree in Design/ Fine Arts or in any stream with 50% aggregate marks.",
-    },
+    // {
+    //   id: "5",
+    //   tag: "",
+    //   title: "M. Design (Interior Design)**",
+    //   subtitle: "",
+    //   desc: "Hone skills in spatial planning, aesthetics, sustainable design, 3D visualisation, and innovative interior solutions.",
+    //   duration: "2 Years",
+    //   fees: "200000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "A qualifying degree in Design/ Fine Arts or in any stream with 50% aggregate marks.",
+    // },
   ],
 };
 
 export const eligibilityTerms = [
-  {
-    description: "** Subject to Approval"
-  },
+  // {
+  //   description: "** Subject to Approval",
+  // },
 ];
-
-
-
-

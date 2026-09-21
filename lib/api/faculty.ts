@@ -23,22 +23,29 @@ export type FacultyACF = {
   schools: number[];
 };
 
-export async function getFacultyBySlug(slug: string = "") {
+export async function getFacultyBySlug(
+  slug: string = "",
+  options?: { forceReload?: boolean },
+) {
+  if (!slug) return [] as SingleFacultyResponse;
+
+  const fetchOptions: RequestInit = {
+    next: { revalidate: 3600 },
+  };
+
+  if (options?.forceReload) {
+    fetchOptions.cache = "no-store";
+  }
+
   const res = await fetch(
     `${KRMUWordUrl}/wp-json/wp/v2/faculty?slug=${slug}&_fields=content,slug,title,id,yoast_head_json,featured_media,acf`,
-    {
-      next: { revalidate: 3600 },
-    }
+    fetchOptions,
   );
-  if (!res.ok) throw new Error("Failed to fetch Faculty");
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch Faculty");
+  }
 
   const json: SingleFacultyResponse = await res.json();
   return json;
 }
-
-
-
-
-
-
-

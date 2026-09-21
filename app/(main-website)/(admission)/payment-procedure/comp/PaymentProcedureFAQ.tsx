@@ -28,7 +28,7 @@ const PaymentProcedureFAQ = () => {
               <AccordionContent className="flex flex-col gap-4 text-balance p-5 mb-5 text-base">
                 <p>
                   If the amount has been deducted from your account, it will be
-                  refunded within 2–3 business days. If not received please mail
+                  refunded within 2–3 business days. If not received, please mail
                   us at <Link href="mailto:accounts@krmangalam.edu.in">accounts@krmangalam.edu.in</Link>
                 </p>
               </AccordionContent>
@@ -39,9 +39,7 @@ const PaymentProcedureFAQ = () => {
               </AccordionTrigger>
               <AccordionContent className="flex flex-col gap-4 text-balance p-5 mb-5 text-base">
                 <p>
-                  For 1st Semester, students may login to the Collexo and can
-                  check the status in his/her account. For 2nd Semester onwards
-                  you can visit this link- <Link href="https://krmu.icloudems.com/" target="_blank" rel="noopener noreferrer">https://krmu.icloudems.com/</Link>
+                 For the 1st Semester, students may log in to Collexo and check their status in their account. From the 2nd Semester onwards, students can visit this link: .  <Link href="https://krmu.icloudems.com/" target="_blank" rel="noopener noreferrer">https://krmu.icloudems.com/</Link>
                 </p>
               </AccordionContent>
             </AccordionItem>

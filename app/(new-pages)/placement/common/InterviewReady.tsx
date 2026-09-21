@@ -1,0 +1,68 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+
+const InterviewReady = () => {
+  const [playVideo, setPlayVideo] = useState(false);
+
+  return (
+    <section className="px-5 xl:px-0 py-10 md:py-20">
+      <div className="mx-auto w-full max-w-7xl">
+        {/* Heading */}
+        <div className="mb-5 text-center">
+          <h3 className="mb-1.5 text-[10px] font-medium uppercase tracking-[2px] text-[#8d5552] sm:text-xs sm:tracking-[2px]">
+            Interview
+          </h3>
+
+          <h2 className="font-newsreader text-3xl font-semibold leading-tight text-[#001836] sm:text-4xl md:text-5xl">
+            How KRMU Gets You Interview Ready
+          </h2>
+        </div>
+
+        {/* Video */}
+        <div className="relative w-full overflow-hidden">
+          {!playVideo ? (
+            <>
+              <Image
+                src="/placements/main/interview.webp"
+                width={1126}
+                height={605}
+                alt="How KRMU prepares students for placement interviews"
+                className="block h-auto w-full object-cover"
+                priority
+              />
+
+              <button
+                type="button"
+                onClick={() => setPlayVideo(true)}
+                className="absolute inset-0 flex items-center justify-center"
+                aria-label="Play Video"
+              >
+                <Image
+                  src="/demo/play-icon.svg"
+                  width={68}
+                  height={68}
+                  alt="Play video"
+                  className="h-10 w-10 sm:h-14 sm:w-14 md:h-[68px] md:w-[68px] cursor-pointer"
+                />
+              </button>
+            </>
+          ) : (
+            <div className="relative aspect-video w-full">
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src="https://www.youtube.com/embed/NhArKFwk75U?si=PUJ0nLOtSHD0w8_e"
+                title="Inside KRMU's Robotics Lab"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default InterviewReady;

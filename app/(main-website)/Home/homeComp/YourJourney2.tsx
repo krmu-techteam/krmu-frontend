@@ -6,7 +6,7 @@ import CommonLeadPopup from "../../components/CommonLeadPopup";
 const YourJourney2 = () => {
   return (
     <section className="pb-10 xl:pb-20 sm:px-5 xl:px-0">
-      <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full px-5 xl:px-0 ">
+      <div className="xl:max-w-7xl 2xl:max-w-[1664px] mx-auto w-full px-5 xl:px-0 mt-10 sm:mt-20 ">
         <div className="max-w-7xl mx-auto w-full text-center">
           <p className="font-weight-500 text-xs sm:text-sm uppercase tracking-wide sm:tracking-[1px] mb-3">
             Elevate Your Campus Life
@@ -93,7 +93,7 @@ const YourJourney2 = () => {
           />
           <Link
             href="https://admissions.krmangalam.edu.in/?utm_source=website&utm_medium=Homepage&utm_campaign=journey-section&_gl=1*rfukfk*_ga*MTk4NDQwNDY4LjE3Nzc4NzU5MzU.*_ga_VJJK572TGN*czE3Nzc4NzU5MzUkbzEkZzEkdDE3Nzc4NzYwNDEkajYwJGwwJGgw"
-            className="flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-[#d03f46] text-white border-1 border-transparent hover:bg-[#d03f46] shadow-lg px-6 hover:bg-[#d03f30] mb-2.5"
+            className="flex items-center justify-center gap-2 h-14 rounded-md font-medium transition-all  text-[14px] md:text-base leading-none tracking-wide relative overflow-hidden group px-6 bg-[#cb000d] text-white border-1 border-transparent hover:bg-[#cb000d] shadow-lg px-6 hover:bg-[#cb000d] mb-2.5"
             target="_blank"
           >
             <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>

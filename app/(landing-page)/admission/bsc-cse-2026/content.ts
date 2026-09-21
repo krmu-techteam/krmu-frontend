@@ -24,7 +24,7 @@ export const Hero: HeroContent = {
       <span class="hidden sm:block">
       ADMISSIONS <br />
       OPEN FOR <br />
-      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-bold">
+      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-[70px] xl:text-8xl font-bold">
       B.Sc. CSE 
       </span>
       <br />
@@ -40,7 +40,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -77,28 +77,34 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/bsc-cse-2026/recruiters/mahindra.png",
-    alt: "Recruiter Logo",
+    imgUrl:
+      "https://www.krmangalam.edu.in/images/landingpage/bsc-cse-2026/accenture.png",
+    alt: "Accenture Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-cse-2026/recruiters/accen.png",
-    alt: "Recruiter Logo",
+    imgUrl:
+      "https://www.krmangalam.edu.in/images/landingpage/bsc-cse-2026/airtel.png",
+    alt: "Airtel Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-cse-2026/recruiters/wipro.png",
-    alt: "Recruiter Logo",
+    imgUrl:
+      "https://www.krmangalam.edu.in/images/landingpage/bsc-cse-2026/mahindra.png",
+    alt: "Mahindra Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-cse-2026/recruiters/airtel.png",
-    alt: "Recruiter Logo",
+    imgUrl:
+      "https://www.krmangalam.edu.in/images/landingpage/bsc-cse-2026/samsung.png",
+    alt: "Samsung Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/common/samsung.svg",
-    alt: "Recruiter Logo",
+    imgUrl:
+      "https://www.krmangalam.edu.in/images/landingpage/bsc-cse-2026/tcs.png",
+    alt: "TCS Logo",
   },
   {
-    imgUrl: "/landingpage/bsc-cse-2026/recruiters/tcslogo.png",
-    alt: "Recruiter Logo",
+    imgUrl:
+      "https://www.krmangalam.edu.in/images/landingpage/bsc-cse-2026/wipro.png",
+    alt: "Wipro Logo",
   },
 ];
 export const whyKRM: WhyKRMSection = {
@@ -492,14 +498,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
-
 export const programmeContent = {
   badge: "3 Specialisations",
   title: "KRMU’s B.Sc. - CSE Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -541,9 +543,9 @@ export const programmeContent = {
   ],
 };
 
-
 export const eligibilityTerms = [
   {
-    description: "*Eligibility: Passed 10+2 or equivalent from any recognised board/university in any stream with Mathematics/ Statistics/Computer Science/Information Science as one subject with minimum 50% aggregate marks."
+    description:
+      "*Eligibility: Passed 10+2 or equivalent from any recognised board/university in any stream with Mathematics/ Statistics/Computer Science/Information Science as one subject with minimum 50% aggregate marks.",
   },
 ];

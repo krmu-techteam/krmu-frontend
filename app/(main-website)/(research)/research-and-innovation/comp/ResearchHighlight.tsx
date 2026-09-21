@@ -31,7 +31,7 @@ const ResearchHighlight = () => {
   return (
     <section className="bg-[url(/research/gradient-1.webp)] bg-cover bg-no-repeat py-8 px-4" id="_res-highlights">
       <div className="text-white max-w-[1664px] mx-auto w-full">
-        <h3 className="text-3xl md:text-5xl font-semibold">Research Highlights</h3>
+        <h2 className="text-3xl md:text-5xl font-semibold">Research Highlights</h2>
 
         <div className="w-full mt-10">
           <PASlide slide={rhSlide} />

@@ -44,6 +44,32 @@ import {
   somcLogos,
   sprsLogos,
 } from "../SchoolComponents/schoolData";
+import {
+  sbasHerosLogos,
+  semceHerosLogos,
+  smasHerosLogos,
+  soadHerosLogos,
+  soasHerosLogos,
+  soedHerosLogos,
+  soetHerosLogos,
+  sohmctHerosLogos,
+  solaHerosLogos,
+  solsHerosLogos,
+  somcHerosLogos,
+  sprsHerosLogos,
+} from "../SchoolComponents/schoolHeroLogo";
+import {
+  commonCollegeUniversitySchema,
+  createBreadcrumbSchema,
+  createProgrammeItemListSchema,
+  createSchoolPageSchema,
+  createWebPageSchema,
+} from "@/lib/api/common";
+
+import Script from "next/script";
+import { allProgrammes } from "./allProgrammesList";
+import { url } from "inspector";
+import { SeoData } from "@/app/(landing-page)/admission/all-course-2026/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -76,16 +102,40 @@ const schoolsImageMap: Record<string, any> = {
   "school-of-liberal-arts": solaLogos,
   "school-of-architecture-design": soadLogos,
   "school-of-basic-and-applied-sciences": sbasLogos,
-  "school-of-journalism-and-mass-communication": semceLogos,
+  "school-of-emerging-media-and-creator-economy": semceLogos,
   "school-of-hotel-management-and-catering-technology": sohmctLogos,
   "school-of-education": soedLogos,
   "school-of-agriculutural-sciences": soasLogos,
+  "school-of-agricultural-sciences": soasLogos,
+};
+const schoolsHeroLogosMap: Record<string, any> = {
+  "school-of-engineering-and-technology": soetHerosLogos,
+  "school-of-physiotherapy-and-rehabilitation-sciences": sprsHerosLogos,
+  "school-of-management-and-commerce": somcHerosLogos,
+  // "school-of-legal-studies": solsHerosLogos,
+  "school-of-medical-and-allied-sciences": smasHerosLogos,
+  "school-of-liberal-arts": solaHerosLogos,
+  "school-of-architecture-design": soadHerosLogos,
+  "school-of-basic-and-applied-sciences": sbasHerosLogos,
+  // "school-of-emerging-media-and-creator-economy": semceHerosLogos,
+  "school-of-hotel-management-and-catering-technology": sohmctHerosLogos,
+  "school-of-education": soedHerosLogos,
+  "school-of-agriculutural-sciences": soasHerosLogos,
+  "school-of-agricultural-sciences": soasHerosLogos,
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params; // ✅ no await
 
-  const seoData = await getSchoolSEO(slug);
+  const seoSlug =
+    slug === "school-of-agriculutural-sciences"
+      ? "school-of-agricultural-sciences"
+      : slug;
+
+  let seoData = await getSchoolSEO(slug);
+  if (!seoData || seoData.length === 0) {
+    seoData = await getSchoolSEO(seoSlug);
+  }
   const customSEO = await folderRouteSEO(slug);
 
   const custPage = await checkCustomPage(slug);
@@ -193,7 +243,14 @@ export default async function Page({ params }: Props) {
   const custPage = await checkCustomPage(slug);
   const isPage = custPage[0];
 
-  const school = allSchools.find((school) => school.urlslug === slug);
+  const school = allSchools.find(
+    (school) =>
+      school.urlslug === slug ||
+      (slug === "school-of-agriculutural-sciences" &&
+        school.urlslug === "school-of-agricultural-sciences") ||
+      (slug === "school-of-agricultural-sciences" &&
+        school.urlslug === "school-of-agriculutural-sciences"),
+  );
   if (isPage?.is_custom_page === "custom_page") {
     return <CustomPage slug={isPage?.slug || ""} />;
   }
@@ -201,22 +258,158 @@ export default async function Page({ params }: Props) {
   // If not found, redirect to 404 page
   if (!school) return notFound();
 
-  const schoolKnowComp = school.schoolcomps.find(
-    (component) => component.__component === "schoolcomponent.knowledge",
+  const schoolKnowComp = school?.schoolcomps?.find(
+    (component) => component?.__component === "schoolcomponent.knowledge",
   );
 
   const schoolCat = school?.school_category?.name;
 
-  const schoolEventsAndExperience =
-    await getEventsAndExperiencesBySchoolCat(schoolCat);
+  const schoolEventsAndExperience = schoolCat
+    ? (await getEventsAndExperiencesBySchoolCat(schoolCat)) || []
+    : [];
 
   const degreeName = school?.degree?.name;
   const schoolCategoryName = school?.school_category?.name;
   // const WordSchoolslug = school?.wordschoolslug;
-  const schoolsLogosData = schoolsImageMap[slug];
+  const schoolsLogosData =
+    schoolsImageMap[slug] ||
+    schoolsImageMap[
+      slug === "school-of-agriculutural-sciences"
+        ? "school-of-agricultural-sciences"
+        : "school-of-agriculutural-sciences"
+    ];
+  const schoolsHerosLogosData =
+    schoolsHeroLogosMap[slug] ||
+    schoolsHeroLogosMap[
+      slug === "school-of-agriculutural-sciences"
+        ? "school-of-agricultural-sciences"
+        : "school-of-agriculutural-sciences"
+    ];
+
+  const getAllProgrammes =
+    allProgrammes.find(
+      (prog) =>
+        prog.slug === slug ||
+        (slug === "school-of-agriculutural-sciences" &&
+          prog.slug === "school-of-agricultural-sciences") ||
+        (slug === "school-of-agricultural-sciences" &&
+          prog.slug === "school-of-agriculutural-sciences"),
+    )?.links ?? [];
+
+  const programmes = [...getAllProgrammes];
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    {
+      name: "Home",
+      url: "https://www.krmangalam.edu.in/",
+    },
+    {
+      name: "School",
+      url: `https://www.krmangalam.edu.in/${school.urlslug}`,
+    },
+  ]);
+
+  const schoolSchema = createProgrammeItemListSchema({
+    name: `Programmes Offered - ${school.schoolname}`,
+    description: `List of undergraduate, postgraduate and doctoral programmes offered by ${school.schoolname} at K.R. Mangalam University.`,
+    url: `https://www.krmangalam.edu.in/${school.urlslug}`,
+    programmes,
+  });
+
+  // const collegeUniversitySchema = commonCollegeUniversitySchema({
+  //   name: "K.R. Mangalam University",
+  //   alternateName: "KRMU",
+  //   url: "https://www.krmangalam.edu.in",
+  //   logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
+  //   award: "NAAC 'A' Grade",
+  //   numberOfEmployees: {
+  //     name: "Faculty",
+  //     value: 700,
+  //   },
+  //   amenityFeature: [
+  //     {
+  //       name: "Campus Area",
+  //       value: "35+ acres",
+  //     },
+  //     {
+  //       name: "Total Students",
+  //       value: "12000+",
+  //     },
+  //     {
+  //       name: "Recruiting Companies",
+  //       value: "800+",
+  //     },
+  //     {
+  //       name: "Highest Package",
+  //       value: "56.6 LPA",
+  //     },
+  //   ],
+  //   sameAs: [
+  //     "https://www.facebook.com/krmuniv",
+  //     "https://www.instagram.com/krmuniv",
+  //     "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+  //     "https://in.linkedin.com/school/krmuniv",
+  //   ],
+  // });
+
+  const webPageSchema = createWebPageSchema({
+    name: "Fee structure | K.R. Mangalam University",
+    url: `https://www.krmangalam.edu.in/${school.urlslug}`,
+    description: SeoData.description,
+    aboutName: school.schoolname,
+    aboutUrl: "https://www.krmangalam.edu.in/",
+  });
+
+  const schoolPageSchema = createSchoolPageSchema({
+    name: `${school.schoolname} | K.R. Mangalam University`,
+    url: `https://www.krmangalam.edu.in/${school.urlslug}`,
+    description: SeoData.description,
+    aboutName: school.schoolname,
+    aboutUrl: "https://www.krmangalam.edu.in/",
+  });
 
   return (
     <>
+      {schoolSchema && (
+        <Script
+          id="school-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: schoolSchema,
+          }}
+        />
+      )}
+      {webPageSchema && (
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: webPageSchema }}
+        />
+      )}
+      {schoolPageSchema && (
+        <Script
+          id="school-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: schoolPageSchema,
+          }}
+        />
+      )}
+
+      {/* <Script
+        id="college-university-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(collegeUniversitySchema),
+        }}
+      /> */}
+      {breadcrumbSchema && (
+        <Script
+          id="breadcrumb-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+        />
+      )}
       <SchoolHero
         herobanner={school?.schoolherobanner}
         title={school.schoolname}
@@ -226,7 +419,7 @@ export default async function Page({ params }: Props) {
         iframeContent={school.iframe}
         videoLink={school.videolink}
         fullWidth={school?.fullwidthhero}
-        alumniLogos={schoolsLogosData}
+        alumniLogos={schoolsHerosLogosData}
         admTitle={school.admissionsessiontitle}
         admBtn={school.admissionbtn}
         slug={slug}
@@ -237,6 +430,7 @@ export default async function Page({ params }: Props) {
           admBtn={school.admissionbtn}
         />
       )} */}
+
       {schoolKnowComp && (
         <SchoolInfoStatistics
           heading={schoolKnowComp?.heading}
@@ -311,6 +505,7 @@ export default async function Page({ params }: Props) {
           list1={school?.listitem1?.listsitems}
           list2={school?.listitem2}
           list3={school?.listitem3}
+          slug={slug}
         />
       )}
       {school?.knowledgetitle && (

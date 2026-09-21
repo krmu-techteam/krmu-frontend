@@ -8,9 +8,9 @@ const InnovativeTeaching = () => {
           Innovative Teaching and Curriculum Design
         </h3>
         <p className="mb-5">
-          At KRMU, we are dedicated to continuously innovating our teaching
-          approaches and curriculum design to provide an education that not only
-          informs but transforms.
+          At KRMU, we continually innovate our teaching and curriculum to
+          deliver an education that goes beyond informing to inspire, empower,
+          and transform.
         </p>
         <div>
           <ul className="lg:grid grid-cols-2 grid-rows-3 gap-x-10">
@@ -20,9 +20,9 @@ const InnovativeTeaching = () => {
               </div>
               <span>
                 <strong>Embracing Innovation:</strong> Our academic approach is
-                centred around pioneering teaching methods and a dynamic
-                curriculum. We regularly update our programs to include the
-                latest academic research and industry insights.
+                centred on innovative teaching methods and a dynamic curriculum,
+                regularly updated with the latest academic research, emerging
+                trends, and industry insights.
               </span>
             </li>
             <li className="flex gap-3  py-1.5">
@@ -30,10 +30,10 @@ const InnovativeTeaching = () => {
                 <Check size={22} strokeWidth={3} />{" "}
               </div>
               <span>
-                <strong>Interdisciplinary Learning:</strong> We encourage an
-                interdisciplinary approach in our curriculum,preparing students
-                for the complexities of the modern world by integrating
-                knowledge across different disciplines.
+                <strong>Interdisciplinary Learning:</strong> We foster
+                interdisciplinary learning by integrating knowledge across
+                disciplines, equipping students to navigate the complexities of
+                a rapidly evolving world.
               </span>
             </li>
             <li className="flex gap-3  py-1.5">
@@ -42,8 +42,9 @@ const InnovativeTeaching = () => {
               </div>
               <span>
                 <strong>Technology Integration: </strong> Advanced technology is
-                a key component in our teaching,enhancing the learning
-                experience with digital tools and virtual labs.
+                integral to our teaching approach, enriching the learning
+                experience through digital tools, virtual labs, and innovative
+                learning platforms.
               </span>
             </li>
             <li className="flex gap-3  py-1.5">
@@ -52,8 +53,9 @@ const InnovativeTeaching = () => {
               </div>
               <span>
                 <strong>Experiential Learning: </strong> Hands-on experience is
-                vital in our courses, with practical projects, internships, and
-                fieldwork linking academic theories to real-world applications
+                integral to our programmes, with practical projects,
+                internships, and fieldwork connecting academic theory with
+                real-world applications.
               </span>
             </li>
             <li className="flex gap-3  py-1.5">
@@ -61,10 +63,9 @@ const InnovativeTeaching = () => {
                 <Check size={22} strokeWidth={3} />{" "}
               </div>
               <span>
-                <strong>Responsive Curriculum: </strong> We ensure that our
-                curriculum remains relevant and by regularly incorporating
-                feedback from students and stakeholders and adapting to emerging
-                industry trends
+                <strong>Relevant Curriculum: </strong> We keep our curriculum
+                relevant by regularly incorporating feedback from students and
+                stakeholders while adapting to emerging industry trends.
               </span>
             </li>
           </ul>

@@ -1,4 +1,5 @@
 "use client";
+import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FeeStructureTab } from "@/lib/types/feestructure";
 import { ChevronDown } from "lucide-react";
@@ -18,7 +19,7 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
       >
         {/* ------------------ MODERN SEGMENTED TABS ------------------ */}
         <div className="flex justify-center mb-10 md:mb-16">
-          <TabsList className="h-auto flex bg-gray-100 p-1 w-full max-w-2xl rounded-sm border border-gray-200 shadow-sm gap-1">
+          <TabsList className="h-auto flex flex-col md:flex-row bg-gray-100 p-1 w-full max-w-4xl rounded-sm border border-gray-200 shadow-sm gap-1">
             {feeStructTab.map((tab) => (
               <TabsTrigger
                 key={tab.id}
@@ -30,31 +31,42 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
                 {tab.tab_heading}
               </TabsTrigger>
             ))}
+            <CommonLeadPopup
+              buttonText={"Download Fee Structure"}
+              buttonClassName="w-full max-w-[320px] py-2.5 px-8 bg-white font-semibold transition-all duration-300 text-sm sm:text-base rounded-md inline-block cursor-pointer text-[#6a7282] hover:text-white hover:border hover:border-white hover:bg-[#0062aa] border border-[#e5e7eb] feeStruct_btn"
+              redirectUrl={
+                "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Fee_Structure_2026_27_da98af3037.pdf"
+              }
+              form_name="Download Fee Structure"
+              shadowGradient={false}
+            />
           </TabsList>
         </div>
 
         {/* ------------------ DYNAMIC TAB CONTENT ------------------ */}
-        {feeStructTab.map((tab) => (
-          <TabsContent
-            key={tab.id}
-            value={tab.id.toString()}
-            className="w-full max-w-[1600px] mx-auto outline-none"
-          >
-            <FacultySection options={tab.fee_structure_acc || []} />
-            {tab.tab_heading === "Fee Structure for Indian Students" && (
-              <div>
-                <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
-                  ** Subject to Approval
-                </p>
-                <p className="text-right text-sm mr-2 mt-1 text-muted-foreground">
-                  *In addition to the regular programme fee at KRMU, students
-                  will be required to pay an additional tuition fee of GBP 6500
-                  for the semester at UEA
-                </p>
-              </div>
-            )}
-          </TabsContent>
-        ))}
+        {feeStructTab.map((tab) => {
+          // console.log("Rendering content for tab:", tab.tab_heading);
+          return (
+            <TabsContent
+              key={tab.id}
+              value={tab.id.toString()}
+              className="w-full max-w-[1600px] mx-auto outline-none"
+            >
+              <FacultySection options={tab.fee_structure_acc || []} />
+              {tab.tab_heading === "Fee Structure for Indian Students" && (
+                <div>
+                  <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
+                    ** Subject to Approval
+                  </p>
+                  <p className="text-right text-sm mr-2 mt-1 text-muted-foreground">
+                    The programme fee payable in subsequent years may increase
+                    up to 10% per annum
+                  </p>
+                </div>
+              )}
+            </TabsContent>
+          );
+        })}
       </Tabs>
 
       {/* <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
@@ -165,9 +177,12 @@ const FacultySection = ({ options }: { options: any[] }) => {
                 </div>
 
                 <div
-                  className="overflow-x-auto modern-fee-table scrollbar-thin scrollbar-thumb-gray-200"
+                  className={`overflow-x-auto modern-fee-table scrollbar-thin scrollbar-thumb-gray-200`}
                   dangerouslySetInnerHTML={{ __html: acc.panel_content }}
                 />
+                <div>
+                  <p></p>
+                </div>
               </TabsContent>
             ))}
           </div>

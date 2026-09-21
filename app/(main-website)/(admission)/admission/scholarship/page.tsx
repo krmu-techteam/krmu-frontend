@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
     ? `${STRAPI_URL}${seo?.shareImg?.url}`
     : undefined;
 
-  // ✅ Fallback if SEO is missing
+  // ✅ Fallback if SEO is missing 
   if (!seo) {
     return {
       title: "K.R. Mangalam University",

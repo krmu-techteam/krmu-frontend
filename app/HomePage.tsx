@@ -13,13 +13,13 @@ import YourJourney2 from "./(main-website)/Home/homeComp/YourJourney2";
 // import YourJourney from "./(main-website)/Home/YourJourney";
 // import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
 import {
-  createCollageOrUniversitySchema,
+  commonCollegeUniversitySchema,
   createOrganizationSchema,
+  createVideoSchema,
   createWebsiteSchema,
 } from "@/lib/api/common";
 // import YourJourney from "./(main-website)/Home/YourJourney";
 // import MobElevateCampus from "./(main-website)/Home/MobElevateCampus";
-
 import Script from "next/script";
 
 export default async function HomePage() {
@@ -90,27 +90,76 @@ export default async function HomePage() {
   const organizationSchema = createOrganizationSchema({
     name: "K.R. Mangalam University",
     alternateName: "KRMU",
-    url: "https://www.krmangalam.edu.in",
-    logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
-    contactPoint: {
-      telephone: "+91-8192888444",
-      contactType: "customer service",
-      areaServed: "IN",
-      availableLanguage: "en",
+    url: "https://www.krmangalam.edu.in/",
+    logo: "https://www.krmangalam.edu.in/KRMU-Logo-NAAC.webp", // Use the actual logo URL
+    description:
+      "K.R. Mangalam University is a private university located in Gurugram, Haryana, India. Established in 2013, the university offers undergraduate, postgraduate, doctoral and diploma programmes across multiple disciplines.",
+    telephone: "+91-8800697010",
+    email: "welcome@krmangalam.edu.in",
+    foundingDate: "2013",
+    address: {
+      streetAddress: "Sohna Road",
+      addressLocality: "Gurugram",
+      addressRegion: "Haryana",
+      postalCode: "122103",
+      addressCountry: "IN",
     },
     sameAs: [
-      "https://www.facebook.com/krmuniv",
-      "https://www.instagram.com/krmuniv",
-      "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
-      "https://in.linkedin.com/school/krmuniv",
+      "https://www.linkedin.com/school/k-r-mangalam-university/",
+      "https://www.facebook.com/krmangalamuniversity/",
+      "https://www.instagram.com/krmangalamuniversity/",
+      "https://www.youtube.com/@krmangalamuniversity",
+      "https://en.wikipedia.org/wiki/K.R._Mangalam_University",
     ],
   });
 
-  const collageOrUniversitySchema = createCollageOrUniversitySchema({
+  // const organizationSchema = createOrganizationSchema({
+  //   name: "K.R. Mangalam University",
+  //   alternateName: "KRMU",
+  //   url: "https://www.krmangalam.edu.in",
+  //   logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
+  //   contactPoint: {
+  //     telephone: "+91-8192888444",
+  //     contactType: "customer service",
+  //     areaServed: "IN",
+  //     availableLanguage: "en",
+  //   },
+  //   sameAs: [
+  //     "https://www.facebook.com/krmuniv",
+  //     "https://www.instagram.com/krmuniv",
+  //     "https://www.youtube.com/channel/UCrlCJyhEISXJU1SGYFcFmjA",
+  //     "https://in.linkedin.com/school/krmuniv",
+  //   ],
+  // });
+
+  const collegeUniversitySchema = commonCollegeUniversitySchema({
     name: "K.R. Mangalam University",
     alternateName: "KRMU",
     url: "https://www.krmangalam.edu.in",
     logo: "https://www.krmangalam.edu.in/_next/image?url=%2FKRMU-Logo-NAAC.webp&w=384&q=75",
+    award: "NAAC 'A' Grade",
+    numberOfEmployees: {
+      name: "Faculty",
+      value: 700,
+    },
+    amenityFeature: [
+      {
+        name: "Campus Area",
+        value: "35+ acres",
+      },
+      {
+        name: "Total Students",
+        value: "12000+",
+      },
+      {
+        name: "Recruiting Companies",
+        value: "800+",
+      },
+      {
+        name: "Highest Package",
+        value: "56.6 LPA",
+      },
+    ],
     sameAs: [
       "https://www.facebook.com/krmuniv",
       "https://www.instagram.com/krmuniv",
@@ -118,7 +167,28 @@ export default async function HomePage() {
       "https://in.linkedin.com/school/krmuniv",
     ],
   });
-
+  // console.log('organizationSchema', organizationSchema);
+  const videoSchema = createVideoSchema({
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: "K.R. Mangalam University | Top Private University in Gurugram",
+    description:
+      "Explore K.R. Mangalam University, a NAAC A accredited university in Gurugram offering 100+ programmes with industry-focused education, career opportunities, and placement support.",
+    thumbnailUrl: ["https://www.krmangalam.edu.in/images/thumb.png"],
+    uploadDate: "2024-01-15T08:00:00+05:30",
+    duration: "PT42S",
+    contentUrl:
+      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/krm_bg_hero_e316d4159a.mp4",
+    embedUrl: "https://www.krmangalam.edu.in/",
+    publisher: {
+      "@type": "Organization",
+      name: "K.R. Mangalam University",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.krmangalam.edu.in/images/logo.png",
+      },
+    },
+  });
   return (
     <>
       <Script
@@ -126,15 +196,28 @@ export default async function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: websiteSchema }}
       />
-      <Script
+      {/* <Script
         id="collage-university-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: collageOrUniversitySchema }}
+      /> */}
+      <Script
+        id="video-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: videoSchema }}
       />
       <Script
         id="organization-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: organizationSchema }}
+      />
+
+      <Script
+        id="college-university-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(collegeUniversitySchema),
+        }}
       />
 
       {hero && (
@@ -152,6 +235,10 @@ export default async function HomePage() {
             rightContent={aDecadeData?.adecaderightcol}
           />
         )}
+
+        {/* Gradient Separator */}
+        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+
         <YourJourney2 />
         {/* {yourJourneyData && (
           <YourJourney
@@ -235,6 +322,9 @@ export default async function HomePage() {
             shapingCounters={shapingFutureData?.shapingCounter}
           />
         )}
+        {/* Gradient Separator */}
+        <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+
         {globalPartenerData && (
           <GlobalPartner
             title={globalPartenerData?.title}

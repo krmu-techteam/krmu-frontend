@@ -18,7 +18,7 @@ const CareerSubmitResume = ({ openings }: Props) => {
           </h3>
           <p>No problem, if you think you would be a great fit for KRMU,</p>
           <p>we would still like your resume.</p>
-          {openings?.opening_btn?.btn_link && (
+          {/* {openings?.opening_btn?.btn_link && (
             <Link
               href={openings?.opening_btn?.btn_link || "#"}
               className="flex items-center bg-white text-black py-[13px] px-[29px] w-fit gap-2.5 text-sm rounded-sm mt-5 font-medium"
@@ -26,7 +26,7 @@ const CareerSubmitResume = ({ openings }: Props) => {
             >
               <span>Submit your Resume</span> <MoveRight />
             </Link>
-          )}
+          )} */}
         </div>
         <div className="md:w-1/2 h-full relative">
           <div className="md:absolute bottom-2.5 right-0">

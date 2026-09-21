@@ -42,7 +42,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -79,35 +79,33 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/lifestyle.png",
+    imgUrl:
+      "https://krmangalam.edu.in/images/landingpage/bachelor-of-arts-2026/raymond.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/raymond.png",
+    imgUrl:
+      "https://krmangalam.edu.in/images/landingpage/bachelor-of-arts-2026/hdfc.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/hdfc.png",
+    imgUrl:
+      "https://krmangalam.edu.in/images/landingpage/bachelor-of-arts-2026/accenture.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/accen.png",
+    imgUrl:
+      "https://krmangalam.edu.in/images/landingpage/bachelor-of-arts-2026/wow-spaces.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/wow.png",
+    imgUrl:
+      "https://krmangalam.edu.in/images/landingpage/bachelor-of-arts-2026/lifestyle.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/label.png",
-    alt: "Recruiter Logo",
-  },
-  {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/lifestyle.png",
-    alt: "Recruiter Logo",
-  },
-  {
-    imgUrl: "/landingpage/bachelor-of-arts-2026/recruiters/kamalini.png",
+    imgUrl:
+      "https://krmangalam.edu.in/images/landingpage/bachelor-of-arts-2026/kamalini.png",
     alt: "Recruiter Logo",
   },
 ];
@@ -628,12 +626,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
 export const programmeContent = {
   badge: "11 Specialisations",
   title: "KRMU’s B.A. Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -748,24 +744,23 @@ export const programmeContent = {
       ctaLink: "#apply-form",
       eligibility: "Passed 12th with 50% aggregate marks.",
     },
-    {
-      id: "11",
-      tag: "",
-      title: "B.A. (Hons. / Hons. with  Research) Liberal Arts",
-      subtitle: "",
-      desc: "An interdisciplinary undergraduate degree focused on broad-based learning across the humanities, social sciences, and creative disciplines.",
-      duration: "4 Years",
-      fees: "150000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "Passed 12th with 50% aggregate marks.",
-    },
+    // {
+    //   id: "11",
+    //   tag: "",
+    //   title: "B.A. (Hons. / Hons. with  Research) Liberal Arts",
+    //   subtitle: "",
+    //   desc: "An interdisciplinary undergraduate degree focused on broad-based learning across the humanities, social sciences, and creative disciplines.",
+    //   duration: "4 Years",
+    //   fees: "150000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "Passed 12th with 50% aggregate marks.",
+    // },
   ],
 };
 
-
 export const eligibilityTerms = [
-  {
-    description: "** Subject to Approval"
-  },
+  // {
+  //   description: "** Subject to Approval",
+  // },
 ];

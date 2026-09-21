@@ -79,9 +79,9 @@ const page = async () => {
       <section className="pt-40 pb-10 px-4 membership-ranking-bg">
         <div className="max-w-[1600px] mx-auto w-full">
           <div className="text-white mb-10 px-4 lg:px-0 text-center md:text-left">
-            <h3 className="text-2xl sm:text-4xl mb-5 lg:text-[64px] font-bold">
+            <h1 className="text-2xl sm:text-4xl mb-5 lg:text-[64px] font-bold">
               {acraData?.title}
-            </h3>
+            </h1>
             <p>{acraData?.description}</p>
           </div>
           <div className="grid grid-col-1 md:grid-cols-2  lg:grid-cols-3 gap-10">

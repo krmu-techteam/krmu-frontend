@@ -1,0 +1,85 @@
+import Image from "next/image";
+
+interface TrainerCardProps {
+  id?: number;
+  image: string;
+  name: string;
+  designation: string;
+  profileUrl: string;
+  alt: string;
+  onViewProfile?: () => void;
+}
+
+const TrainerCard = ({
+  image,
+  name,
+  alt,
+  designation,
+  onViewProfile,
+}: TrainerCardProps) => {
+  return (
+    <article className="min-w-0">
+      {/* Image */}
+      <div className="relative aspect-[0.92] w-full overflow-hidden bg-[#eee]">
+        <Image
+          src={image}
+          alt={alt || ""}
+          fill
+          sizes="(max-width: 639px) 85vw, (max-width: 767px) 50vw, (max-width: 1023px) 33vw, 16.66vw"
+          className="object-cover transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="pt-2.5 sm:pt-3">
+        <h3
+          className="
+            font-poppins
+            text-sm
+            font-semibold
+            leading-tight
+            text-[#111]
+            sm:text-base
+          "
+        >
+          {name}
+        </h3>
+
+        <p
+          className="
+            mt-1
+            font-poppins
+            text-xs
+            leading-[1.4]
+            text-[#333]
+            sm:text-sm
+          "
+        >
+          {designation}
+        </p>
+
+        <button
+          type="button"
+          onClick={onViewProfile}
+          className="
+            mt-2
+            inline-block
+            font-poppins
+            text-xs
+            text-[#a36b1f]
+            underline
+            underline-offset-2
+            transition-colors
+            hover:text-[#001836]
+            sm:text-sm
+            cursor-pointer
+          "
+        >
+          View Profile
+        </button>
+      </div>
+    </article>
+  );
+};
+
+export default TrainerCard;

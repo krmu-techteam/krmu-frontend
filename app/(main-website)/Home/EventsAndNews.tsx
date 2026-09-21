@@ -27,12 +27,12 @@ const EventsAndNews = async ({
             }}
           />
 
-          <div className="grid gap-5 lg:gap-10 grid-cols-1 md:grid-cols-3  lg:grid-cols-3 lg:px-0 mt-5 lg:mt-0 ">
+          <div className="grid gap-5 lg:gap-10  lg:grid-cols-3  xl:grid-cols-3 lg:px-0 mt-5 lg:mt-0 ">
             {newsandeventsdata?.data?.map((item: NewsEventItem, i: number) => (
               <HomeNewsEventsCard key={i} data={item} />
             ))}
           </div>
-          <div className="flex justify-center py-4">
+          <div className="flex justify-center pt-6 sm:pt-12">
             {(newsandeventbtn?.buttonlink || newsandeventbtn?.buttonclass) && (
               <Link
                 href={newsandeventbtn?.buttonlink}

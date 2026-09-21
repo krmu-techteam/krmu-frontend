@@ -8,7 +8,7 @@ const Feedback = () => {
           Your valuable suggestion may be useful for improvement of Library
           Services.
         </p>
-        <h2>Therefore you are requested to fill & submit true data.</h2>
+        <h1>Therefore you are requested to fill & submit true data.</h1>
       </div>
       <div className="w-full lg:w-1/2">
         <Image

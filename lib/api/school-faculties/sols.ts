@@ -14,7 +14,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Prof-Dr.-Kaveri-Sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/11/Kaveri-Sharma.png",
   },
   // {
   //   id: 113912,
@@ -44,38 +44,53 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Inderpreet-Kaur-Saggu.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/inderpreet-kaur-saggu.png",
   },
+  // {
+  //   id: 10206,
+  //   slug: "dr-shobhna-jeet",
+  //   title: {
+  //     rendered: "Prof (Dr.) Shobhna Jeet",
+  //   },
+  //   featured_media: 10187,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Professor, Chairperson COE SDG",
+  //     schools: [],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Shobhna-Jeet.png",
+  // },
   {
-    id: 10206,
-    slug: "dr-shobhna-jeet",
+    id: 115862,
+    slug: "ms-kritika-kakkar",
     title: {
-      rendered: "Prof (Dr.) Shobhna Jeet",
+      rendered: "Ms. Kritika Kakkar",
     },
-    featured_media: 10187,
+    featured_media: 115862,
     acf: {
-      "staff-qualification": "Ph.D. (UGCNET)",
-      staff_designation: "Professor, Chairperson COE SDG",
-      schools: [],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Prof-Dr.-Shobhna-Jeet.png",
-  },
-  {
-    id: 106905,
-    slug: "dr-tijender-kumar-singh",
-    title: {
-      rendered: "Dr. Tijender Kumar Singh",
-    },
-    featured_media: 106906,
-    acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant Professor",
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Tijender-Kumar-Singh.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/07/kritika.png",
   },
+  // {
+  //   id: 106905,
+  //   slug: "dr-tijender-kumar-singh",
+  //   title: {
+  //     rendered: "Dr. Tijender Kumar Singh",
+  //   },
+  //   featured_media: 106906,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Tijender-Kumar-Singh.jpg",
+  // },
 
   {
     id: 57750,
@@ -90,7 +105,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Kriti-Singh.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Kriti-Singh.png",
   },
   {
     id: 53020,
@@ -105,7 +120,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Mr.-Anurag-Sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/07/Anurag-Sharma-SOLS.jpg",
   },
   {
     id: 40864,
@@ -115,12 +130,12 @@ export const solsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 55332,
     acf: {
-      "staff-qualification": "LL.M.",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant Professor",
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Ms.-Parul.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Parul.png",
   },
   {
     id: 17522,
@@ -130,12 +145,12 @@ export const solsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 17535,
     acf: {
-      "staff-qualification": "LL.M.",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant Professor",
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Aarti-Lamba.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Aarti-Lamba.png",
   },
   // {
   //   id: 10406,
@@ -165,7 +180,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Ms.-Sadhana-Nirban.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Sadhana-Nirban.png",
   },
   {
     id: 10297,
@@ -180,7 +195,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Mr.-Prashant-Panwar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Mr.-Prashant-Panwar.jpg",
   },
   {
     id: 10294,
@@ -195,7 +210,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Megha-Garg.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Shobhna-Jeet-1.png",
   },
 
   {
@@ -211,7 +226,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Mr.-Thomas-Monteiro.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Mr.-Thomas-Monteiro.jpg",
   },
   {
     id: 113713,
@@ -226,7 +241,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Arti-Sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Arti-Sharma.png",
   },
   {
     id: 113717,
@@ -241,13 +256,13 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Neha-Sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Neha-Sharma.png",
   },
   {
     id: 113872,
     slug: "niharika",
     title: {
-      rendered: "Niharika",
+      rendered: "Dr. Niharika",
     },
     featured_media: 1024,
     acf: {
@@ -256,7 +271,7 @@ export const solsFaculties: SchoolFacultiesType[] = [
       schools: [1043],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Niharika.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Niharika.png",
   },
   {
     id: 113888,
@@ -266,11 +281,26 @@ export const solsFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 1024,
     acf: {
-      "staff-qualification": "B.A.LL.B, LL.M, Ph.D.",
+      "staff-qualification": "Ph.D.",
       staff_designation: "Assistant Professor",
       schools: [1043],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Dr.-Parveen-Bondwal.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Parveen-Bondwal-1.jpg",
+  },
+  {
+    id: 115956,
+    slug: "dr-akansha-pandey",
+    title: {
+      rendered: "Dr. Akansha Pandey",
+    },
+    featured_media: 1024,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant Professor",
+      schools: [1043],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/08/akansha-pandey.png",
   },
 ];

@@ -1,34 +1,54 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @layer utilities {
+  @media (max-width: 767px) {
+    body {
+      padding-bottom: 56px;
+    }
+  }
   .flash-border .heroBannerForm__form {
     border: 1px solid red;
     border-radius: 15px;
   }
 
   .MainSection {
-    background-image: url("/wp-content/landingpage/barch-2026/barch.webp") !important;
+    background-image: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_Arch_82ccfb24db.jpg") !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 1023.98px) {
     .MainSection {
       background-image: none !important;
-      background-color: #1f0b07;
+      background-color: #010101;
     }
     .MainSection .container-1 {
-      background-image: url("/wp-content/landingpage/barch-2026/barch-mob.webp") !important;
+      background-image: url("https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Mobile_Banner_B_Arch_8744c4a2c0.jpg") !important;
       background-size: cover;
       background-position: center;
       height: 498px;
+      /* display: flex;
+      align-items: end;
+      justify-content: center; */
+    }
+  }
+
+  @media (min-width: 0px) and (max-width: 767px) {
+    .MainSection .container-1 {
       display: flex;
       align-items: end;
       justify-content: center;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1023.98px) {
+    .MainSection .container-1 {
+      height: 800px;
+      max-width: 800px;
     }
   }
   .whyBgStyle {

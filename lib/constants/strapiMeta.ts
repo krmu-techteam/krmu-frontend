@@ -29,7 +29,7 @@ export function strapiSeoToMetadata(seo: BlogSEO): Metadata {
 
   return {
     title,
-    description: seo.metaDescription ?? "",
+    description: seo.metaDescription ?? seo.description ?? "",
     keywords: seo.metaKeyword ?? "",
 
     alternates: {

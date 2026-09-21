@@ -90,32 +90,32 @@ export const prominentRecruiterContent: ProminentRecruiterContent = {
 
   logos: [
     {
-      src: "/wp-content/landingpage/master-of-arts-2026/recruiters/hdfc-logo.png",
-      alt: "Accenture",
+      src: "https://krmangalam.edu.in/images/landingpage/master-of-arts-2026/hdfc.png",
+      alt: "HDFC",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/master-of-arts-2026/recruiters/vidushi.png",
-      alt: "Accenture",
+      src: "https://krmangalam.edu.in/images/landingpage/master-of-arts-2026/vidushi.png",
+      alt: "Vidushi",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/master-of-arts-2026/recruiters/cryptomize.png",
-      alt: "Accenture",
+      src: "https://krmangalam.edu.in/images/landingpage/master-of-arts-2026/cryptomize.png",
+      alt: "Cryptomize",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/master-of-arts-2026/recruiters/medanta.jpg",
-      alt: "Accenture",
+      src: "https://krmangalam.edu.in/images/landingpage/master-of-arts-2026/medanta.png",
+      alt: "Medanta",
       width: 160,
       height: 40,
     },
     {
-      src: "/wp-content/landingpage/master-of-arts-2026/recruiters/zynga.webp",
-      alt: "Accenture",
+      src: "https://krmangalam.edu.in/images/landingpage/master-of-arts-2026/zynga.png",
+      alt: "Zynga",
       width: 160,
       height: 40,
     },
@@ -762,50 +762,48 @@ export const comeToLifeData: ComeToLifeSection = {
   ],
 };
 
-
 export const programmeContent = {
   badge: "5 Specialisations",
   title: "KRMU’s M.A. Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
-    {
-      id: "1",
-      tag: "English Studies",
-      title: "M.A. English",
-      subtitle: "",
-      desc: "Develops skills in literature and theory, preparing students for academia, media, and publishing careers.",
-      duration: "2 Years",
-      fees: "120000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "Passed Bachelor's with 50% aggregate marks.",
-    },
-    {
-      id: "2",
-      tag: "Economic Analysis",
-      title: "M.A. Economics",
-      subtitle: "",
-      desc: "Builds foundations in theory, analysis, and policy, developing skills for careers in research, banking, and analytics.",
-      duration: "2 Years",
-      fees: "120000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "Passed Bachelor's with 50% aggregate marks.",
-    },
-    {
-      id: "3",
-      tag: "Political Insights",
-      title: "M.A. Political Science**",
-      subtitle: "",
-      desc: "Gain expertise in political theory, governance, and public policy, developing skills for administration and academia careers.",
-      duration: "2 Years",
-      fees: "125000",
-      ctaText: "Apply Now !",
-      ctaLink: "#apply-form",
-      eligibility: "Passed Bachelor's with 50% aggregate marks.",
-    },
+    // {
+    //   id: "1",
+    //   tag: "English Studies",
+    //   title: "M.A. English",
+    //   subtitle: "",
+    //   desc: "Develops skills in literature and theory, preparing students for academia, media, and publishing careers.",
+    //   duration: "2 Years",
+    //   fees: "120000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "Passed Bachelor's with 50% aggregate marks.",
+    // },
+    // {
+    //   id: "2",
+    //   tag: "Economic Analysis",
+    //   title: "M.A. Economics",
+    //   subtitle: "",
+    //   desc: "Builds foundations in theory, analysis, and policy, developing skills for careers in research, banking, and analytics.",
+    //   duration: "2 Years",
+    //   fees: "120000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "Passed Bachelor's with 50% aggregate marks.",
+    // },
+    // {
+    //   id: "3",
+    //   tag: "Political Insights",
+    //   title: "M.A. Political Science**",
+    //   subtitle: "",
+    //   desc: "Gain expertise in political theory, governance, and public policy, developing skills for administration and academia careers.",
+    //   duration: "2 Years",
+    //   fees: "125000",
+    //   ctaText: "Apply Now !",
+    //   ctaLink: "#apply-form",
+    //   eligibility: "Passed Bachelor's with 50% aggregate marks.",
+    // },
     {
       id: "4",
       tag: "Applied Psychology",
@@ -834,7 +832,7 @@ export const programmeContent = {
 };
 
 export const eligibilityTerms = [
-  {
-    description: "** Subject to Approval"
-  },
+  // {
+  //   description: "** Subject to Approval",
+  // },
 ];

@@ -46,7 +46,8 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
               alt={data.title?.rendered || ""}
               width={466}
               height={312}
-              className="w-full rounded-t-3xl object-fill"
+              unoptimized
+              className="w-full rounded-t-3xl object-cover md:h-[342px]"
             />
           )}
         </Link>
@@ -66,6 +67,7 @@ const HomeNewsEventsCard: React.FC<HomeNewsEventsCardProps> = async ({
                   dangerouslySetInnerHTML={{
                     __html: data.title?.rendered || "",
                   }}
+                  className="line-clamp-3 leading-tight"
                 />
               </Link>
             )}

@@ -35,7 +35,7 @@ const TestimonialCard = ({ name, edu, desc, img }: Props) => {
           <p>{edu}</p>
         </div>
       </div>
-      <div className="text-base sm:text-lg p-5 bg-white rounded-b-[25px] border-b border-x min-h-[300px] border-[#e2e2e2]">
+      <div className="text-base sm:text-lg p-5 bg-white rounded-b-[25px] border-b border-x min-h-[361px] border-[#e2e2e2]">
         <p>{desc}</p>
       </div>
     </div>

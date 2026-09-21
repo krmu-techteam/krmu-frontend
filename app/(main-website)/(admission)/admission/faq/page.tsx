@@ -8,6 +8,7 @@ import { STRAPI_URL } from "@/app/constant";
 import { FAQ } from "./comp/Faq";
 import faqCategories from "./faqData/faqD.json";
 import Script from "next/script";
+import { createBreadcrumbSchema } from "@/lib/api/common";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("faq");
@@ -102,6 +103,17 @@ const page = async () => {
   // const faqData = await getFaqsData();
   const faqSchema = generateCourseFaqSchemaa(faqCategories.mainEntity);
 
+  const breadcrumbSchema = createBreadcrumbSchema([
+    {
+      name: "Home",
+      url: "https://www.krmangalam.edu.in/",
+    },
+    {
+      name: "FAQ",
+      url: "http://localhost:3000/admission/faq",
+    },
+  ]);
+
   return (
     <>
       <Script
@@ -111,6 +123,13 @@ const page = async () => {
           __html: JSON.stringify(faqSchema),
         }}
       />
+      {breadcrumbSchema && (
+        <Script
+          id="breadcrumb-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+        />
+      )}
       <div>
         <FAQ />
       </div>

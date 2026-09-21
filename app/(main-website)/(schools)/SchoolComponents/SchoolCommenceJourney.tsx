@@ -28,7 +28,7 @@ const SchoolCommenceJourney = ({
       </div>
       <div className="lg:hidden px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-3">
-          <div className="w-full p-2.5 md:p-5 bg-[url(/schools/1.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
+          <div className="w-full p-5 rounded-sm bg-[url(/schools/1.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom border border-gray-200 mb-5">
             <span
               className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
@@ -40,6 +40,7 @@ const SchoolCommenceJourney = ({
                 width={30}
                 height={30}
                 alt="Start your application"
+                className="p-1.5"
               />
             </span>
             <p className="text-lg text-black font-semibold">
@@ -47,12 +48,17 @@ const SchoolCommenceJourney = ({
             </p>
             <p>
               At{" "}
-              <Link href="https://admissions.krmangalam.edu.in/" className="underline" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://admissions.krmangalam.edu.in/"
+                className="underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 admissions.krmangalam.edu.in
               </Link>{" "}
             </p>
           </div>
-          <div className="w-full p-2.5 md:p-5 bg-[url(/schools/2.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
+          <div className="w-full p-5 rounded-sm bg-[url(/schools/2.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom border border-gray-200 mb-5">
             <span
               className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
@@ -71,7 +77,7 @@ const SchoolCommenceJourney = ({
             </p>
             <p>Pay the required Application Fee</p>
           </div>
-          <div className="w-full p-2.5 md:p-5 bg-[url(/schools/3.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
+          <div className="w-full p-5 rounded-sm bg-[url(/schools/3.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom border border-gray-200 mb-5">
             <span
               className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
@@ -86,11 +92,11 @@ const SchoolCommenceJourney = ({
               />
             </span>
             <p className="text-lg text-black font-semibold">
-              Take an entrance test
+              Take the entrance test
             </p>
             <p>K.R. Mangalam University Entrance Examination (KREE)</p>
           </div>
-          <div className="w-full p-2.5 md:p-5 bg-[url(/schools/4.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
+          <div className="w-full p-5 rounded-sm bg-[url(/schools/4.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom border border-gray-200 mb-5">
             <span
               className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
@@ -105,11 +111,11 @@ const SchoolCommenceJourney = ({
               />
             </span>
             <p className="text-lg text-black font-semibold">
-              Appear for interaction
+              Appear for interview
             </p>
             <p>Attend our Faculty-Led Interview.</p>
           </div>
-          <div className="w-full p-2.5 md:p-5 bg-[url(/schools/5.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
+          <div className="w-full p-5 rounded-sm bg-[url(/schools/5.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom border border-gray-200 mb-5">
             <span
               className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
@@ -130,7 +136,7 @@ const SchoolCommenceJourney = ({
               You will receive the offer letter after the successful interaction
             </p>
           </div>
-          <div className="w-full p-2.5 md:p-5 bg-[url(/schools/6.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom">
+          <div className="w-full p-5 rounded-sm bg-[url(/schools/6.png)] bg-no-repeat bg-size-[10%] bg-transparent bg-right-bottom border border-gray-200 mb-5">
             <span
               className="p-4 flex items-center justify-center w-[60px] h-[60px] bg-[#001732] rounded-full mb-5"
               style={{
@@ -151,7 +157,8 @@ const SchoolCommenceJourney = ({
       </div>
       <Image
         // src={"/schools/yourjourney.webp"}
-        src={`${STRAPI_URL}${imgUrl}`}
+        // src={`${STRAPI_URL}${imgUrl}`}
+        src="/white-adm.png"
         width={1921}
         height={689}
         alt={heading}
@@ -161,11 +168,13 @@ const SchoolCommenceJourney = ({
         {btn?.btn_link && (
           <Link
             href={btn?.btn_link || "#"}
-            className={`py-2.5 px-8 bg-[#cb000d] font-bold rounded-sm inline-block text-white ${
+            className={`py-2.5 px-8 bg-[#cb000d] font-bold rounded-sm inline-block text-white transition-all  relative overflow-hidden group ${
               btn?.btn_class || ""
             }`}
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
           >
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
             {btn?.btn_text || ""}
           </Link>
         )}

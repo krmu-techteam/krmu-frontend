@@ -117,7 +117,6 @@ div[id*="npfPopup"] .close {
     max-height: 80vh !important;
   }
 
-
   .npfW_close,
   .npf_wgts_close,
   div[id*="npfPopup"] span[style*="cursor"],
@@ -227,7 +226,9 @@ div[id*="npfPopup"] .close {
 
 .placement-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
   border-color: #cbd5e1;
 }
 

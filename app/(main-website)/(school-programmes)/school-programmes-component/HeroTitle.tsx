@@ -20,7 +20,7 @@ export default function HeroTitle({ title, highlightitle }: any) {
 
       const styles = getComputedStyle(el);
       const lineHeight = parseFloat(styles.lineHeight);
-      
+
       if (!isNaN(lineHeight) && el.scrollHeight > lineHeight * 3.1) {
         el.classList.add("xl:text-[36px]");
         el.classList.remove("xl:text-[45px]");
@@ -28,7 +28,7 @@ export default function HeroTitle({ title, highlightitle }: any) {
     };
 
     adjustFontSize();
-    
+
     window.addEventListener("resize", adjustFontSize);
     return () => window.removeEventListener("resize", adjustFontSize);
   }, [title, highlightitle]);
@@ -40,7 +40,11 @@ export default function HeroTitle({ title, highlightitle }: any) {
         isLong ? "xl:text-[36px]" : "xl:text-[45px]"
       }`}
     >
-      {title} <span className="text-[#e61f21]">{highlightitle}</span>
+      <span dangerouslySetInnerHTML={{ __html: title }} />{" "}
+      <span
+        className="text-[#e61f21]"
+        dangerouslySetInnerHTML={{ __html: highlightitle }}
+      />
     </h1>
   );
 }

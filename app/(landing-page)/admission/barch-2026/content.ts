@@ -24,7 +24,7 @@ export const Hero: HeroContent = {
       </span> Admissions Open 2026–27</span>
       <span class="hidden sm:block">ADMISSIONS <br />
       OPEN FOR <br />
-      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold">
+      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-bold">
        Bachelor <br /> of  Architecture
       </span>
       <br />
@@ -40,7 +40,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -77,27 +77,27 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/barch-2026/recruiters/lodha.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/barch-2026/lodha.png",
     alt: "Lodha Logo",
   },
   {
-    imgUrl: "/landingpage/barch-2026/recruiters/mace.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/barch-2026/mace.png",
     alt: "Mace Logo",
   },
   {
-    imgUrl: "/landingpage/barch-2026/recruiters/sp.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/barch-2026/sp.png",
     alt: "SP Logo",
   },
   {
-    imgUrl: "/landingpage/barch-2026/recruiters/aecom.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/barch-2026/aecom.png",
     alt: "AECOM Logo",
   },
   {
-    imgUrl: "/landingpage/barch-2026/recruiters/dsa.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/barch-2026/dsa.png",
     alt: "DSA Logo",
   },
   {
-    imgUrl: "/landingpage/barch-2026/recruiters/gmr.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/barch-2026/gaar.png",
     alt: "GMR Logo",
   },
 ];
@@ -204,7 +204,7 @@ export const opportunityData: OpportunitySection = {
   },
   heading: "Learn From Industry Experts",
   highlight: "Opportunity That Transforms",
-  cta: {
+  cta: { 
     label: "Apply for B.Arch. 2026-27",
     href: "#",
   },
@@ -445,12 +445,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
 export const programmeContent = {
   badge: "Build Beyond Boundaries",
   title: "KRMU’s B.Arch. Programme",
-  subtitle:
-    "Our Programme Comprise of Industry-relevant Curriculum",
+  subtitle: "Our Programme Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -468,10 +466,9 @@ export const programmeContent = {
   ],
 };
 
-
-
 export const eligibilityTerms = [
   {
-    description: "*Eligibility: Candidates must have passed the 10+2 or equivalent examination with Physics and Mathematics as compulsory subjects, along with one of the following: Chemistry, Biology, a Technical Vocational subject, Computer Science, Information Technology, Informatics Practices, Engineering Graphics, or Business Studies, with at least 45% aggregate marks. Alternatively, candidates may have passed the 10+3 Diploma Examination with Mathematics as a compulsory subject and at least 45% aggregate marks."
+    description:
+      "*Eligibility: Candidates must have passed the 10+2 or equivalent examination with Physics and Mathematics as compulsory subjects, along with one of the following: Chemistry, Biology, a Technical Vocational subject, Computer Science, Information Technology, Informatics Practices, Engineering Graphics, or Business Studies, with at least 45% aggregate marks. Alternatively, candidates may have passed the 10+3 Diploma Examination with Mathematics as a compulsory subject and at least 45% aggregate marks.",
   },
 ];

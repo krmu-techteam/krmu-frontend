@@ -9,12 +9,14 @@ const PlacementRate = () => {
             Why KRMU?
           </span>
           <h2 className="text-2xl md:text-[33px] mb-4 font-bold">
-           92% Placement Rate @ KRMU: Possible? <br />
-           Here’s How We Do It!
+            92% Placement Rate @ KRMU: Possible? <br />
+            Here’s How We Do It!
           </h2>
           <p className="text-[#4b5563] text-lg">
-At KRMU, we don’t just focus on conceptual clarity but career-readiness as well. Our multifaceted approach ensures you are well-prepared for the professional world. Here's how we make it happen!
-
+            At KRMU, we don’t just focus on conceptual clarity but
+            career-readiness as well. Our multifaceted approach ensures you are
+            well-prepared for the professional world. Here's how we make it
+            happen!
           </p>
         </div>
         <div className="grid gap-6">
@@ -22,13 +24,14 @@ At KRMU, we don’t just focus on conceptual clarity but career-readiness as wel
             className="flex flex-col lg:flex-row overflow-hidden bg-white shadow-[0_10px_15px_-3px_rgb(0_0_0/0.1),0_4px_6px_-4px_rgb(0_0_0/_0.1)] rounded-2xl transition-all 
             duration-[250ms] ease-out sm:col-span-2 md:col-span-3"
           >
-            <div className="flex-[1] lg:flex-[0_0_45%] aspect-auto">
+            <div className="flex-[1] lg:flex-[0_0_55%]  aspect-auto">
               <Image
                 src="/wp-content/images/placement-route.webp"
                 alt="KRMU moot court in session"
                 width="600"
                 height="400"
-                className="w-full h-full aspect-video overflow-hidden flex-[0_0_45%] object-cover"
+                className="w-[100%] h-full aspect-video overflow-hidden  object-cover "
+                style={{ objectPosition: "90% center" }}
               />
             </div>
             <div className="p-6 flex-1 flex flex-col justify-center">
@@ -52,8 +55,9 @@ At KRMU, we don’t just focus on conceptual clarity but career-readiness as wel
                 Conceptual Clarity Meets Practical Precision
               </h3>
               <p className="text-[#4b5563] leading-[1.7]">
-We are the proponents of the ‘practice leads to perfection’ philosophy. Our programmes are meticulously designed to provide you with hands-on experience from day one.
-
+                We are the proponents of the ‘practice leads to perfection’
+                philosophy. Our programmes are meticulously designed to provide
+                you with hands-on experience from day one.
               </p>
               <ul className="flex flex-col gap-2 mt-4 text-base">
                 <li className="relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-[#002d73] before:rounded-full pl-5 text-[#374151]">
@@ -85,11 +89,12 @@ We are the proponents of the ‘practice leads to perfection’ philosophy. Our 
               </svg>
             </div>
             <h3 className="mb-3 font-bold text-2xl text-gray-900">
-             Located in Gurugram: India’s Corporate Hub
+              Located in Gurugram: India’s Corporate Hub
             </h3>
             <p className="text-gray-600">
-Situated at the centre of India’s corporate landscape, where leading industry figures are located, KRMU provides an unparalleled network of experts and recruiters.
-
+              Situated at the centre of India’s corporate landscape, where
+              leading industry figures are located, KRMU provides an
+              unparalleled network of experts and recruiters.
             </p>
           </div>
           <div className="p-6 rounded-2xl bg-[#f9fafb] transition-all duration-[250ms] ease-out hover:bg-white hover:shadow-[0_10px_15px_-3px_rgb(0_0_0/0.1),0_4px_6px_-4px_rgb(0_0_0/0.1)]">
@@ -109,11 +114,12 @@ Situated at the centre of India’s corporate landscape, where leading industry 
               </svg>
             </div>
             <h3 className="mb-3 font-bold text-2xl text-gray-900">
-             Expert Faculty Brings Expertise to the Class
+              Expert Faculty Brings Expertise to the Class
             </h3>
             <p className="text-gray-600">
-             From industry veterans to renowned scholars, our distinguished & dedicated faculty members bring invaluable real-world insights and experience to every class.
-
+              From industry veterans to renowned scholars, our distinguished &
+              dedicated faculty members bring invaluable real-world insights and
+              experience to every class.
             </p>
           </div>
           <div className="p-6 rounded-2xl bg-[#f9fafb] transition-all duration-[250ms] ease-out hover:bg-white hover:shadow-[0_10px_15px_-3px_rgb(0_0_0/0.1),0_4px_6px_-4px_rgb(0_0_0/0.1)]">
@@ -136,8 +142,9 @@ Situated at the centre of India’s corporate landscape, where leading industry 
               Updated Curriculum Made by Top Leaders
             </h3>
             <p className="text-gray-600">
-KRMU collaborates with the top industry leaders to ensure the course curriculum is aligned with the evolving market demands and employer expectations.
-
+              KRMU collaborates with the top industry leaders to ensure the
+              course curriculum is aligned with the evolving market demands and
+              employer expectations.
             </p>
           </div>
         </div>

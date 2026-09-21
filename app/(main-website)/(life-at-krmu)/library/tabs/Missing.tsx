@@ -4,7 +4,7 @@ const Missing = () => {
   return (
     <div className="max-w-[1664px] mx-auto w-full libtabcontent ">
       <p>Responsibility and Replacement</p>
-      <h2>Handling Lost Books</h2>
+      <h1>Handling Lost Books</h1>
       <p>
         The library has set procedures for handling damaged books, where
         borrowers may be asked to replace the book or pay a binding charge. This

@@ -36,7 +36,6 @@ const admissionSteps = [
 ];
 
 const EligibilitySection = ({ heroSection }: { heroSection: any }) => {
-  console.log("heroSection", heroSection.herobtn.buttontext);
   return (
     <section className="w-full bg-[#f3f0f4] pb-10 sm:pb-12 lg:pb-16">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
@@ -131,7 +130,7 @@ const EligibilitySection = ({ heroSection }: { heroSection: any }) => {
               </p>
 
               <h3 className="text-[#FFFFFF] text-[30px] md:text-[42px] font-semibold leading-tight">
-                ₹1,20,000 /-
+                ₹1,10,000 /-
               </h3>
 
               <p className="text-[#FFFFFF] text-[11px] md:text-sm mt-1 leading-5">

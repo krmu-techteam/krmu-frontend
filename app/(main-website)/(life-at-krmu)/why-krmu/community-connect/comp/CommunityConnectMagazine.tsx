@@ -128,18 +128,28 @@ const CommunityConnectMagazine = () => {
             </h3>
             <div className="flex flex-col sm:flex-row gap-5  mb-[30px]">
               <Link
-                href="https://krmangalam.edu.in/pdfs/legancy-of-service-final.pdf"
-                target="_blank" rel="noopener noreferrer"
+                href="https://www.krmangalam.edu.in/pdfs/NSS_MAGAZINE_2025-26.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="common-btn-4"
               >
-                2023-2024
+                2025-26
               </Link>
               <Link
                 href="https://krmangalam.edu.in/pdfs/nss_2024oct-dec-000.pdf"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="common-btn-4"
               >
-                2024-2025
+                2024-25
+              </Link>
+              <Link
+                href="https://krmangalam.edu.in/pdfs/legancy-of-service-final.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="common-btn-4"
+              >
+                2023-24
               </Link>
             </div>
             <Image

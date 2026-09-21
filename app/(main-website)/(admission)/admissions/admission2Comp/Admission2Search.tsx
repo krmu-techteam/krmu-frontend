@@ -199,22 +199,53 @@ const Admission2Search = () => {
         return;
       }
       if (query.length > 0) {
-        // SEARCH MODE
-        if (degreeRefValue.current === "doctoral-programmes") {
-          const res = await searchPhdProgrammes("", 1, 1000);
-          const allData = res.data || [];
-          newData = allData.filter((item) =>
-            normalize(item.heading).includes(normalize(query)),
-          );
-        } else {
-          const res = await searchSchoolProgrammes("", 1, 1000);
-          const allData = res.data || [];
-          newData = allData.filter((item) =>
-            normalize(item.title).includes(normalize(query)),
-          );
-        }
+        // SEARCH MODE — search across UG, PG and PhD programmes together
+        const [schoolRes, phdRes] = await Promise.all([
+          searchSchoolProgrammes("", 1, 1000),
+          searchPhdProgrammes("", 1, 1000),
+        ]);
+        const normalizedQuery = normalize(query);
+        const filteredPhd = (phdRes.data || []).filter((item) =>
+          normalize(item.heading).includes(normalizedQuery),
+        );
+        const filteredSchool = (schoolRes.data || []).filter((item) =>
+          normalize(item.title).includes(normalizedQuery),
+        );
+        // PhD records take priority; drop school-programme rows whose
+        // normalized title collides with a PhD heading (stale duplicates).
+        const phdTitles = new Set(
+          filteredPhd.map((item) => normalize(item.heading)),
+        );
+        const schoolDeduped = filteredSchool.filter(
+          (item) => !phdTitles.has(normalize(item.title)),
+        );
 
-        setShowLoadMore(false); // no button in search
+        // Rank matches: whole-word match (e.g. "MA " in "MA English") > prefix
+        // match on normalized title > generic substring match.
+        const rawQuery = query.toLowerCase().replace(/\./g, "").trim();
+        const escapedQuery = rawQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const wordRe = new RegExp(`(^|\\s)${escapedQuery}(\\s|$)`);
+        const rankMatch = (title: string): number => {
+          const lowered = title.toLowerCase().replace(/\./g, "");
+          if (wordRe.test(lowered)) return 0;
+          if (normalize(title).startsWith(normalizedQuery)) return 1;
+          return 2;
+        };
+
+        const combined = [...filteredPhd, ...schoolDeduped];
+        newData = combined
+          .map((item, idx) => ({
+            item,
+            rank: rankMatch(
+              "title" in item ? item.title : (item as PhdProgramme).heading,
+            ),
+            idx,
+          }))
+          .sort((a, b) => a.rank - b.rank || a.idx - b.idx)
+          .map(({ item }) => item);
+
+        const hasMore = newData.length > 4;
+        setShowLoadMore(!loadAll && hasMore);
       } else {
         // DROPDOWN MODE
         if (degreeRefValue.current === "doctoral-programmes") {
@@ -279,6 +310,7 @@ const Admission2Search = () => {
     return orderA - orderB;
   });
 
+  const subjectToApprovalSchools = ["somc", "smas"];
   return (
     <section>
       <div>
@@ -490,13 +522,34 @@ const Admission2Search = () => {
           overflow-hidden
           relative`}
                   >
+                    {" "}
+                    {/* <Link href={`/programs/${slug}`} target="_blank">
+                      <h6 className="block w-full text-white">
+                        {"title" in item ? item.title : item.heading}
+                      </h6>
+                    </Link> */}
                     <div
                       className={`absolute ${glowClass} h-[320px] w-[320px] rounded-full bg-gradient-to-br from-[#001732] via-[#59122E] to-[#63174C] blur-[30px] opacity-80`}
                     ></div>
-                    <Link href={`/programs/${slug}`} target="_blank">
-                      <h6 className="block w-full text-white text-base pr-10 z-20">
-                        {"title" in item ? item.title : item.heading}
-                      </h6>
+                    <Link
+                      href={
+                        slug.includes("zenithschool.ai")
+                          ? slug
+                          : `/programs/${slug}`
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <h6
+                        className="block w-full text-white"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            ("title" in item ? item.title : item.heading) +
+                            ("highlightitle" in item
+                              ? ` ${item.highlightitle ? item.highlightitle : ""}`
+                              : ""),
+                        }}
+                      />
                     </Link>
                     <div className="flex flex-col sm:flex-row border-y border-[rgba(255,255,255,0.2)] sm:gap-5 z-20">
                       <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
@@ -536,7 +589,7 @@ const Admission2Search = () => {
                           setIsPopupOpen(true);
                           setSlug(slug);
                         }}
-                        className="bg-white cursor-pointer w-full text-sm text-[#0161B0] border border-[#999999] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 sm:w-1/2"
+                        className="bg-white cursor-pointer w-full text-sm text-[#001732] border border-[#999999] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 sm:w-1/2"
                       >
                         Fee Structure
                       </button>
@@ -566,9 +619,9 @@ const Admission2Search = () => {
                       {/* )} */}
                     </div>
                     {progNewLine.includes(slug) && (
-                      <div className="text-white text-xs items-center mt-3 px-4">
-                        3-Year Lateral Entry option also available for eligible
-                        students
+                      <div className="text-white text-xs items-center mt-3 px-4 z-999">
+                        3-Year Lateral Entry option is also available for
+                        eligible students
                       </div>
                     )}
                   </div>
@@ -577,11 +630,14 @@ const Admission2Search = () => {
             )}
           </div>
 
+          {subjectToApprovalSchools.includes(selectedSchool) && (
+            <p className="mt-10 text-right">**Subject to Approval</p>
+          )}
           {showLoadMore && (
             <div className="pt-4 md:pt-12 flex items-center justify-center">
               <button
                 onClick={() => fetchProgrammes(false, searchQuery, true)}
-                className="text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-[#034272] cursor-pointer"
+                className="text-white flex justify-center items-center px-5 py-1.5 rounded-md gap-4 font-semibold bg-[#001732] cursor-pointer"
                 // style={{ boxShadow: "rgba(0,0,0,0.35) 0px 5px 15px" }}
               >
                 <span>View All Programmes</span>
@@ -723,10 +779,13 @@ const Admission2Search = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mt-8">
             <Link
-              href={`${isZenithPopup ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026" : `/programs/${slugValue}`}`}
-              className="bg-[#0161b0] text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-[#014d8c] transition-colors shadow-lg shadow-blue-900/20"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={
+                isZenithPopup
+                  ? "https://zenithschool.ai/?utm_source=KRMU&utm_medium=krmu_website&utm_campaign=Zenith_Admission_2026"
+                  : slugValue
+                    ? `/programs/${slugValue}`
+                    : "#"
+              }
             >
               Know More
             </Link>
@@ -734,7 +793,7 @@ const Admission2Search = () => {
               selectedProgramme?.criteria?.eligibility_utm_links && (
                 <Link
                   href={selectedProgramme.criteria.eligibility_utm_links}
-                  className="#cb000d text-white text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
+                  className="text-[#cb000d] text-center px-8 py-3.5 font-bold rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-900/20"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

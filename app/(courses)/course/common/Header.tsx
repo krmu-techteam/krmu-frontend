@@ -29,7 +29,7 @@ export default function Header() {
       <header
         className={`transition-all duration-300 ${
           isSticky
-            ? "fixed top-0 left-0 w-full z-100000 bg-white shadow-md"
+            ? "fixed top-0 left-0 w-full z-[100000] bg-white shadow-md"
             : ""
         }`}
       >

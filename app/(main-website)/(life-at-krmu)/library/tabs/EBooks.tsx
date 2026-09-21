@@ -3,7 +3,7 @@ import Link from "next/link";
 const EBooks = () => {
   return (
     <div className="libcontent">
-      <h4>E-Books</h4>
+      <h1>E-Books</h1>
       <h3>Branch Wise E-Books</h3>
       <div className="libtable">
         <table>

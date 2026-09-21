@@ -4,7 +4,7 @@ const ConvenientRenewal = () => {
   return (
     <div className="max-w-[1664px] mx-auto w-full libtabcontent ">
       <p>Stay Updated</p>
-      <h2>Convenient Renewal Status Checks</h2>
+      <h1>Convenient Renewal Status Checks</h1>
       <p>
         Users can easily check their renewal status online, including due dates
         and membership status. This feature adds transparency and convenience,
@@ -24,7 +24,7 @@ const ConvenientRenewal = () => {
             className="libcount"
           />
         </div>
-        <div className="w-full relative libcountcard">
+        <div className="w-full relative libcountcard temp-class">
           <p>Login the Renewal Status strictly be made through Gmail only.</p>
           <Image
             src="/library/lp02.svg"

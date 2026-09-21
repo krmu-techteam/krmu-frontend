@@ -4,18 +4,10 @@ import CareerHeroSection from "./comp/CareerHeroSection";
 import CareerJobListings from "./comp/CareerJobListings";
 import CareerSubmitResume from "./comp/CareerSubmitResume";
 
-
-
-
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-
-
-
-
-
-
+import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("careers");
@@ -85,10 +77,37 @@ const page = async () => {
 
   return (
     <>
-      <CareerHeroSection />
-      <CareerCurrentOpeningSection />
-      <CareerJobListings />
-      <CareerSubmitResume openings={openings} />
+      <main className="overflow-hidden">
+        <Script
+          id="keka-config"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.khConfig = {
+              identifier: "88fbde14-f9d3-4b37-ba20-301992a3e8ea",
+              domain: "https://krmu.keka.com/careers/",
+              targetContainer: "#khembedjobs"
+            };
+          `,
+          }}
+        />
+
+        {/* Keka Jobs Script */}
+        <Script
+          id="keka-script"
+          src="https://krmu.keka.com/careers/api/embedjobs/js/88fbde14-f9d3-4b37-ba20-301992a3e8ea"
+          strategy="afterInteractive"
+        />
+
+        <CareerHeroSection />
+        <CareerCurrentOpeningSection />
+        {/* Keka Job Listings */}
+        <section className="container pt-10 max-w-[1665px] mx-auto w-full">
+          <div id="khembedjobs" />
+        </section>
+        <CareerJobListings />
+        <CareerSubmitResume openings={openings} />
+      </main>
     </>
   );
 };

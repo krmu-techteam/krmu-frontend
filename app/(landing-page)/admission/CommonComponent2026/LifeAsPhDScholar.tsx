@@ -2,13 +2,12 @@ import Image from "next/image";
 import { Home } from "lucide-react";
 import { LifeAsPhDScholarSection } from "../law-2026/contentype";
 
-
 type Props = {
   data: LifeAsPhDScholarSection;
 };
 
 const LifeAsPhDScholar = ({ data }: Props) => {
-  return ( 
+  return (
     <section className="pt-5 sm:py-1 md:pt-10 bg-gray-50">
       <div className="px-4">
         {/* Header */}
@@ -23,12 +22,12 @@ const LifeAsPhDScholar = ({ data }: Props) => {
         </div>
 
         {/* Image */}
-        <div className="relative w-full h-[100px] sm:h-[360px] md:h-[450px] xl:h-[600px] overflow-hidden mb-12 rounded-xl">
+        <div className="relative w-full h-[150px] sm:h-[250px] md:h-[250px] lg:h-[400px] xl:h-[600px] overflow-hidden mb-12 ">
           <Image
             src="/wp-content/landingpage/common/Collage-img.webp"
             fill
             alt="Life @ KRMU"
-            className="w-full  object-contain sm:object-cover"
+            className="w-full  object-contain  rounded-xl"
             priority
           />
         </div>

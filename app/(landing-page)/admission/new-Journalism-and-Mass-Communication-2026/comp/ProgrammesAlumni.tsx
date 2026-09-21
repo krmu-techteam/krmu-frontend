@@ -53,7 +53,7 @@ const ProgrammesAlumni = ({ heroSection }: Props) => {
     },
     {
       label: "Fees",
-      value: "₹1,20,000 per year*",
+      value: "₹1,10,000 per year*",
     },
   ];
 

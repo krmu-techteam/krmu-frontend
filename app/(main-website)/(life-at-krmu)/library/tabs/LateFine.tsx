@@ -5,7 +5,7 @@ const LateFine = () => {
     <div className="libtabcontent">
       <p>Maintaining Accountability</p>
       <br />
-      <h2>Structured Late Fine System</h2>
+      <h1>Structured Late Fine System</h1>
       <p>
         The library implements a clear late fine policy to ensure the timely
         return of books. The fine structure is designed to maintain discipline

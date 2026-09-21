@@ -143,7 +143,7 @@ K.R. Mangalam University offers industry-aligned programmes, practical learning,
 
 <div class="krmu-blog-cta-actions">
 
-<a href="https://admissions.krmangalam.edu.in/?utm_source=website&utm_medium=Homepage&utm_campaign=header&_gl=1*1iwmm9u*_gcl_au*MTczMTQ5NTcxOC4xNzczODk2NjIz*_ga*ODAwNDY0ODEyLjE3NzM4OTQ2NzY.*_ga_VJJK572TGN*czE3NzQyNjcyNTYkbzE2JGcwJHQxNzc0MjY3MjU2JGo2MCRsMCRoMA.." class="krmu-blog-cta-btn">
+<a href="https://admissions.krmangalam.edu.in/?utm_source=blog&utm_medium=mid_content_cta&utm_campaign=admissions_2026" class="krmu-blog-cta-btn">
 Apply Now
 </a>
 

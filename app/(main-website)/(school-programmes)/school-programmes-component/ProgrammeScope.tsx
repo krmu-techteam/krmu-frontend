@@ -29,45 +29,40 @@ const ProgrammeScope = async ({
     getDownProsSettings?.download_prospectus_enable_disable;
 
   return (
-    <section className="bg-[#051730] py-8 xl:py-12 2xl:py-16">
-      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-5 xl:gap-12 2xl:gap-16 px-4 sm:px-6 lg:px-10 2xl:px-0">
+    <section className="bg-[#051730] py-8 md:p-6 lg:p-10 xl:py-12 2xl:py-16">
+      <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center gap-6 xl:gap-8 2xl:gap-10 px-4 md:px-0 lg:px-0 2xl:px-0">
         {/* Left column: Image */}
-        <div className="w-full md:w-1/2">
-          <div className="relative aspect-[16/10] sm:aspect-video md:aspect-[5/3] w-full rounded-md overflow-hidden ">
-            {heroSection?.imgvideo === "Video" && isFormAvailable ? (
+        <div className="w-full sm:w-1/2">
+          {heroSection?.imgvideo === "Video" && isFormAvailable ? (
+            <div className="relative aspect-[16/10] sm:aspect-[4/4] lg:aspect-[4/3] xl:aspect-[5/3] w-full rounded-md overflow-hidden">
               <div
                 className="w-full h-full"
                 dangerouslySetInnerHTML={{
                   __html: heroSection?.videofield || "",
                 }}
               />
-            ) : (
-              scopeData?.scopeimg?.url && (
+            </div>
+          ) : (
+            scopeData?.scopeimg?.url && (
+              <div className="w-[700px] h-[467px] rounded-md overflow-hidden">
                 <Image
-                  fill
                   src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
-                  className="object-cover rounded-md"
+                  width={1024}
+                  height={1024}
+                  className=" w-full h-full object-cover "
                   alt="scope image"
                 />
-              )
-            )}
-            {/* {scopeData?.scopeimg?.url && (
-                <Image
-                  fill
-                  src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
-                  className="object-cover z-10"
-                  alt="scope image"
-                />
-              )} */}
-          </div>
+              </div>
+            )
+          )}
         </div>
 
         {/* Right column: Content */}
-        <div className="w-full md:w-1/2 md:text-left text-justify text-white">
-          <h3 className="text-xl text-center md:text-left sm:text-3xl xl:text-[40px] 2xl:text-[50px] font-bold leading-tight mb-2 xl:mb-3 2xl:mb-5">
+        <div className="w-full sm:w-1/2 sm:text-left text-justify text-white">
+          <h3 className="text-2xl text-center sm:text-left sm:text-2xl md:text-[28px] lg:text-[32px] xl:text-[40px] 2xl:text-[50px] font-semibold md:font-bold leading-tight mb-3 xl:mb-3 2xl:mb-5">
             {scopeData?.scopeheading}
           </h3>
-          <p className="text-[15px] text-center md:text-left xl:text-[17px] 2xl:text-xl leading-relaxed md:leading-[1.7] opacity-90 mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto md:mx-0">
+          <p className="text-md sm:text-[14px] md:text-[14px] lg:text-[15px] xl:text-[17px] 2xl:text-xl text-center sm:text-left leading-relaxed sm:leading-[1.7] opacity-90 mb-0 sm:mb-4 xl:mb-5 2xl:mb-8 max-w-3xl mx-auto sm:mx-0">
             {scopeData?.scopecontent}
           </p>
 
@@ -87,7 +82,7 @@ const ProgrammeScope = async ({
 
           {scopeData?.scopebtn?.buttontext &&
             (enable_disable_download_pros ? (
-              <div className="flex items-center justify-center md:justify-start">
+              <div className="flex items-center justify-center sm:justify-start">
                 <CommonLeadPopup
                   buttonText={
                     <span className="flex items-center gap-2">
@@ -95,7 +90,7 @@ const ProgrammeScope = async ({
                       {scopeData.scopebtn.buttontext || "Download Prospectus"}
                     </span>
                   }
-                  buttonClassName="inline-block px-6 py-2 md:py-2.5 text-md md:text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
+                  buttonClassName="inline-block px-6 py-2 md:py-2 xl:py-2.5 text-md md:text-[18px] font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#051730] transition-all duration-300"
                   redirectUrl={scopeData?.scopebtn?.buttonlink || "#"}
                   form_name="Download Prospectus"
                 />
@@ -103,7 +98,7 @@ const ProgrammeScope = async ({
             ) : (
               <Link
                 href={scopeData?.scopebtn?.buttonlink || "#"}
-                className="inline-block px-6 py-2.5 text-[18px]  font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#0a41a1] transition-all duration-300"
+                className="inline-block px-6 py-2.5 text-[18px]  font-medium border-2 border-white rounded-md hover:bg-white hover:text-[#051730] transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >

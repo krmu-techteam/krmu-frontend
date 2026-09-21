@@ -109,7 +109,7 @@ const FacultyLoop = ({ WordSchoolslug }: Props) => {
 
       {/* SHOW BUTTON ONLY IF MORE PAGES */}
       {page < totalPages && (
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center my-8">
           <Button
             onClick={handleLoadMore}
             disabled={loading}

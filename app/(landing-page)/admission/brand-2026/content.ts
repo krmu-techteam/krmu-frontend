@@ -25,7 +25,7 @@ export const Hero: HeroContent = {
       <span class="hidden sm:block">
       ADMISSIONS <br />
       OPEN FOR <br />
-      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-bold">
+      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-[60px] xl:text-8xl font-bold">
        UG & PG
       </span>
       <br />
@@ -41,7 +41,7 @@ export const Hero: HeroContent = {
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
     "50+ Industry Collaborations",
-      "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -78,32 +78,32 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/wp-content/landingpage/common/ibm.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/ibm.png",
     alt: "Recruiter Logo",
   },
 
   {
-    imgUrl: "/wp-content/landingpage/brand-2026/recruiters/accenture.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/accenture.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/brand-2026/recruiters/apple.svg",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/apple.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/brand-2026/recruiters/amazon.webp",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/amazon.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/brand-2026/recruiters/deliotte.svg",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/deloitte.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/brand-2026/recruiters/icici.svg",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/icici.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/brand-2026/recruiters/infosys.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/brand-2026/infosys.png",
     alt: "Recruiter Logo",
   },
 ];
@@ -782,8 +782,7 @@ export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
 export const faqSectionData: FAQSectionData = {
   eyebrow: "(FAQs)",
   heading: "Frequently Asked Questions",
-  description:
-    "",
+  description: "",
   faqs: [
     {
       id: "item-1",

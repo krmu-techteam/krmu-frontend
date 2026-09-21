@@ -15,12 +15,13 @@ const HostelFacilities = () => {
               Hostel Facilities at K.R. Mangalam University
             </h3>
             <p>
-              The university offers separate on-campus housing options for
-              female and male students. Gayatri Hostel accommodates female
-              students, while Vivekanand Hostel provides residence for male
-              students. The university hostel would likely be a relatively large
-              and comprehensive residential facility designed to accommodate
-              many students. Some details of the hostel are mentioned below:
+              K.R. Mangalam University offers separate on-campus hostels for
+              boys and girls, providing a safe, comfortable, and
+              student-friendly living environment. Equipped with well-furnished
+              rooms, hygienic dining facilities, 24×7 security, Wi-Fi
+              connectivity, and recreational amenities, the hostels are designed
+              to ensure a balanced lifestyle that supports both academic success
+              and personal well-being.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-center md:text-left">

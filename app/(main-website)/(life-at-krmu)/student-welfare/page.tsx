@@ -7,16 +7,20 @@ import VisionMission from "./comp/VisionMission";
 import WelfareHero from "./comp/WelfareHero";
 import WelfareImage from "./comp/WelfareImage";
 import TabScroll from "./comp/TabScroll";
-
-
+import ClubsSocieties from "./comp/ClubsSocieties";
 
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import StudentCouncil from "./comp/StudentCouncil";
-
-
-
+import GrievenceAndCounseling from "./comp/GrievenceAndCounseling";
+import { EventGallery } from "./comp/EventGallery";
+import { SocialConnect } from "./comp/SocialConnect";
+import Link from "next/link";
+import { Playfair_Display, Poppins } from "next/font/google";
+import Image from "next/image";
+import ScrollToTop from "@/app/(new-pages)/admission/international/components/ScrollToTop";
+import DownloadScrollbtn from "./comp/DownloadScrollbtn";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("student-welfare");
@@ -78,6 +82,16 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  style: ["italic", "normal"],
+});
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["italic", "normal"],
+});
 
 const page = async () => {
   const studentWelfare = await getStudentWelfareData();
@@ -87,15 +101,23 @@ const page = async () => {
 
   return (
     <>
+      {/* <ScrollToTop /> */}
+      <DownloadScrollbtn />
       <WelfareHero />
+
       <DSWMessage />
-      <AssistantDSWMessage />
+      {/* <AssistantDSWMessage /> */}
       <VisionMission />
       <TeamMember />
+      <ClubsSocieties />
       <StudentCouncil />
+      <GrievenceAndCounseling />
+
       {/* <WelfareImage /> */}
-      <TabScroll />
-      {photoGallery && <PhotoGallery photoGallery={photoGallery} />}
+      {/* <TabScroll /> */}
+      {photoGallery && <EventGallery />}
+      <SocialConnect />
+      {/* {photoGallery && <PhotoGallery photoGallery={photoGallery} />} */}
     </>
   );
 };

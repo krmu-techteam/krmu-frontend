@@ -47,23 +47,23 @@ export const soadFaculties: SchoolFacultiesType[] = [
   },
 
   {
-    id: 1252,
-    slug: "ar-mansha-samreen",
+    id: 115947,
+    slug: "ar-mansha-samreen-2",
     title: {
       rendered: "Ar. Mansha Samreen",
     },
     featured_media: 43012,
     acf: {
-      "staff-qualification": "-",
+      "staff-qualification": "Ph.D. Pursuing",
       staff_designation: "Associate Professor",
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Ar.-Mansha-Samreen.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Ar.-Mansha-Samreen.jpg",
   },
   {
-    id: 1251,
-    slug: "ar-praveen-gupta",
+    id: 115946,
+    slug: "ar-praveen-gupta-2",
     title: {
       rendered: "Ar. Praveen Gupta",
     },
@@ -74,7 +74,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Ar.-Praveen-Gupta.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Ar.-Praveen-Gupta-SOAD-1.jpg",
   },
   {
     id: 108925,
@@ -104,7 +104,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/08/Mr.-Deepanshu-Sharma.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/08/Mr.-Deepanshu-Sharma.jpg",
   },
   {
     id: 107430,
@@ -134,7 +134,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Mr.-Tanuj-Kr.-Biswas.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Mr.-Tanuj-Kr.-Biswas.jpg",
   },
   {
     id: 106792,
@@ -164,7 +164,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Ar.-Mehak-Arora.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/Ar.-Mehak-Arora.jpg",
   },
 
   {
@@ -180,7 +180,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Mr.-Indrajeet-Kumar.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/08/Mr.-Indrajeet-Kumar.jpg",
   },
   {
     id: 51399,
@@ -195,7 +195,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/06/Ms.-Versha-Verma-1.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/06/Ms.-Versha-Verma.jpg",
   },
   {
     id: 43145,
@@ -205,7 +205,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 49901,
     acf: {
-      "staff-qualification": "PhD in Architecture",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant Professor",
       schools: [787],
     },
@@ -225,7 +225,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/06/Ar.-Gulnaz-1.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/06/Ar.-Gulnaz.jpg",
   },
   {
     id: 46288,
@@ -240,7 +240,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/06/Ms.-Ritika-Mittal-1.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/06/Ms.-Ritika-Mittal.jpg",
   },
   {
     id: 46267,
@@ -255,7 +255,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/06/Ar.-Akanksha-Singh-1.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/06/Ar.-Akanksha-Singh.jpg",
   },
   {
     id: 43174,
@@ -265,12 +265,12 @@ export const soadFaculties: SchoolFacultiesType[] = [
     },
     featured_media: 101926,
     acf: {
-      "staff-qualification": "Ph.D.",
+      "staff-qualification": "Ph.D. (Pursuing)",
       staff_designation: "Assistant Professor",
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Ms.-Tulika-Pahwa.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Ms.-Tulika-Pahwa.jpg",
   },
   {
     id: 113804,
@@ -300,7 +300,7 @@ export const soadFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/03/Dr.-Sagar-Paruthi.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/03/Dr.-Sagar-Paruthi-SOAD-1.jpg",
   },
   // {
   //   id: 43169,

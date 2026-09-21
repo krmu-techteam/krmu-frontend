@@ -1,0 +1,55 @@
+import { ArrowLeft } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+
+const StudentHeroSection = () => {
+  return (
+    <section className="relative pt-24 sm:pt-28 md:pt-32 xl:pt-40 px-5 pb-10 xl:pb-20">
+      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-8 md:gap-10 lg:gap-14">
+        {/* Content */}
+        <div className="w-full md:w-1/2">
+         <Link
+              href="/placement"
+              className="inline-flex items-center gap-2 text-sm text-[#33] transition-transform duration-300 hover:translate-x-1"
+            >
+              <ArrowLeft size={16} strokeWidth={1.5} /> Back to Placement
+            </Link>
+          <h3 className="text-xs sm:text-sm md:text-base font-medium tracking-[0.25em] sm:tracking-[0.35em] md:tracking-[0.4em] uppercase text-[#8d5552] mb-3">
+            For Students
+          </h3>
+
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-semibold text-[#001836] mb-2 md:mb-5 font-newsreader">
+            Comprehensive placement guidelines, schedules and policies. 
+          </h1>
+
+          <p className="text-base sm:text-lg md:text-xl leading-6 sm:leading-7 md:leading-8 mb-5">
+            For the current academic year. Review all requirements before portal
+            access.
+          </p>
+          <Link
+            href="https://calendly.com/training-cdc-krmangalam/new-meeting"
+            className="
+                bg-[#001836] text-white px-14 py-3 font-medium text-lg shadow-[0px_6px_16px_rgba(0,23,51,0.25)] inline-block"
+            target="_blank"
+          >
+            Book your slot
+          </Link>
+        </div>
+
+        {/* Image */}
+        <div className="w-full md:w-1/2">
+          <Image
+            src="/placements/students/stud-hero.jpg"
+            alt="KRMU student placement guidelines and registration"
+            width={544}
+            height={385}
+            priority
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default StudentHeroSection;

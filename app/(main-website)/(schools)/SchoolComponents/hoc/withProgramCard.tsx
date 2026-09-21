@@ -32,7 +32,7 @@ interface WithProgramCardProps {
   handleMouseEnter: (id: number) => void;
   index: number;
   totalCards: number;
-  progNewLine: string[]
+  progNewLine: string[];
 }
 
 const withProgramCard = <P extends object>(
@@ -95,7 +95,9 @@ const withProgramCard = <P extends object>(
         onFocus={() => handleMouseEnter(prog.id)}
         className={`
           ${
-            programs[deg.value]?.length > 3 ? "" : "xl:max-w-[392px] min-h-[258px]"
+            programs[deg.value]?.length > 3
+              ? ""
+              : "xl:max-w-[392px] min-h-[258px]"
           }
           w-full
           rounded-xl

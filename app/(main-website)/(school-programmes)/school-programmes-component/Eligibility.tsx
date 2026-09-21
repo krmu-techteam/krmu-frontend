@@ -14,10 +14,12 @@ import {
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import NpfPopup from "../../components/NpfPopup";
+import CommonLeadPopup from "../../components/CommonLeadPopup";
 import NoPaperForm from "@/lib/constants/NoPaperForm";
 import YoutubePopup from "./YoutubePopup";
 import Image from "next/image";
 import { STRAPI_URL } from "@/app/constant";
+import { div } from "framer-motion/client";
 
 type Props = {
   elgibilities: EligibilityItem[];
@@ -26,6 +28,8 @@ type Props = {
   allowedFormSlugs: string[];
   slug: string;
   heroSection?: HeroSection;
+  enableDownloadPros?: boolean;
+  prospectusBtn?: ButtonType;
 };
 
 const Eligibility = ({
@@ -35,19 +39,53 @@ const Eligibility = ({
   allowedFormSlugs,
   heroSection,
   slug,
+  enableDownloadPros,
+  prospectusBtn,
 }: Props) => {
   const [expanded, setExpanded] = useState(false);
   // const btnRef = useRef<HTMLButtonElement>(null);
 
-  // limit characters for h2
-  const maxChars = 50;
+  const maxChars = 74; // limit characters for h2
   const longTitle = elgibilities[2]?.title || "";
   const isLong = longTitle.length > maxChars;
   const displayTitle = expanded ? longTitle : longTitle.slice(0, maxChars);
+  const truncateAtWord = (text: string, maxChars: number) => {
+    if (text.length <= maxChars) return text;
+
+    const truncated = text.slice(0, maxChars);
+    return truncated.slice(0, truncated.lastIndexOf(" ")) + "...";
+  };
+
+  const handleApplyClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const visibleForm = Array.from(
+      document.querySelectorAll(".heroBannerForm__form"),
+    ).find((el) => el.getBoundingClientRect().height > 0);
+    if (visibleForm) {
+      visibleForm.scrollIntoView({ behavior: "smooth", block: "center" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   const isFormAvailable = allowedFormSlugs.includes(slug);
   const iframe = heroSection?.videofield;
   const videoSrc = iframe?.match(/src="([^"]+)"/)?.[1];
+
+  const progNewLine = [
+    "b-tech-cse",
+    "btech-cse-ai-ml",
+    "btech-full-stack-development",
+    "btech-cse-ui-ux",
+    "btech-cse-cyber-security",
+    "btech-cse-in-data-science",
+    "b-tech-cse-robotics-ai",
+  ];
+
+  const progSubLine = [
+    "btech-cse-cloud-computing",
+    "b-tech-computer-science-and-engineering-semiconductor-design",
+  ];
 
   // useEffect(() => {
   //   if (!formId || !btnRef.current) return;
@@ -74,19 +112,25 @@ const Eligibility = ({
   return (
     <>
       <section
-        className={`bg-[#eff4ff] py-8 md:py-12 px-4 lg:px-10 2xl:px-0 relative z-10 border-gray-100`}
+        className={`bg-[#eff4ff] py-8 md:p-6 lg:py-10 xl:py-12 px-4 lg:px-10 2xl:px-0 relative z-10 border-gray-100`}
       >
         <div className={`max-w-[1440px] w-full mx-auto`}>
           {/* {slug === "bba-hr" && heroSection?.imgvideo === "Video" ? ( */}
-         
-          {(slug === "bba-hr" || slug === "btech-cse-ai-ml" || slug === "b-tech-cse") && heroSection?.imgvideo === "Video" ? (
-            <div className="flex flex-col lg:flex-row gap-6 lg:gap-6 2xl:gap-8 rounded-md p-0 sm:px-4 xl:px-0 2xl:px-0 items-stretch">
+
+          {heroSection?.imgvideo === "Video" ? (
+            <div className="flex flex-col lg:flex-row gap-4 lg:gap-4 2xl:gap-8 rounded-md p-0 sm:px-0 lg:px-0 xl:px-0 2xl:px-0 items-stretch">
               {/* Left Column: Media (Video only for this layout) */}
-              <div className="w-full lg:w-1/2 h-[280px] sm:h-[350px] lg:h-auto lg:min-h-[450px] relative  overflow-hidden group shadow-xs">
+              <div className="w-full lg:w-1/2 h-[220px] sm:h-[300px] lg:h-auto lg:min-h-[380px] relative  overflow-hidden group shadow-xs">
                 <div className="w-full h-full relative">
                   <YoutubePopup
-                    videoUrl={heroSection?.videofield || "https://www.youtube.com/watch?v=tIfNUgSn2dw"}
-                    thumbnail={heroSection?.herobtn?.buttonlink || "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"}
+                    videoUrl={
+                      heroSection?.videofield ||
+                      "https://www.youtube.com/watch?v=tIfNUgSn2dw"
+                    }
+                    thumbnail={
+                      heroSection?.herobtn?.buttonlink ||
+                      "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Thumbnail_51b749248c.png"
+                    }
                     ytClassName="w-full h-full absolute inset-0 object-cover"
                     playIcon={true}
                   />
@@ -94,9 +138,9 @@ const Eligibility = ({
               </div>
 
               {/* Right Column: Content */}
-              <div className="w-full bg-white rounded-md p-6 md:p-8 2xl:p-10 lg:w-1/2 flex flex-col justify-between shadow-xs">
+              <div className="w-full bg-white rounded-md p-5 lg:p-5 xl:p-6 2xl:p-8 lg:w-1/2 flex flex-col justify-between shadow-xs">
                 <div>
-                  <div className="grid grid-cols-2 mb-6 divide-x divide-gray-200">
+                  <div className="grid grid-cols-2 mb-4 divide-x divide-gray-200">
                     <div className="flex flex-col items-start text-left pr-4">
                       <span className="font-poppins text-[12px] md:text-[14px] font-normal leading-tight md:leading-[24px] text-gray-600 uppercase tracking-normal mb-1">
                         {elgibilities[0]?.subtitle || "Duration"}
@@ -115,31 +159,64 @@ const Eligibility = ({
                     </div>
                   </div>
 
-                  <div className="border-t border-gray-100 pt-4 mb-4 text-left">
+                  <div className="border-t border-gray-100 pt-3 mb-3 text-left">
                     <span className="font-poppins text-[14px] font-normal leading-[24px] text-gray-600 uppercase tracking-normal">
                       {elgibilities[2]?.subtitle || "Eligibility"}
                     </span>
                     <div className="text-sm md:text-[16px] leading-relaxed text-gray-700 font-medium">
                       {elgibilities[2]?.title}
                     </div>
+                    {progNewLine.includes(slug) && (
+                      <span className="font-poppins text-[14px] font-normal leading-[24px] text-gray-600 uppercase tracking-normal mt-3 block">
+                        3-Year Lateral Entry option also available for eligible
+                        students
+                      </span>
+                    )}
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 mt-auto">
-                  <button className="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-3 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-md hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group">
-                    <Download size={20} className="group-hover:-translate-y-1 transition-transform" />
-                    Download Prospectus
-                  </button>
+                  {enableDownloadPros ? (
+                    <CommonLeadPopup
+                      buttonText={
+                        <span className="flex items-center gap-3 justify-center">
+                          <Download
+                            size={20}
+                            className="group-hover:-translate-y-1 transition-transform"
+                          />
+                          {prospectusBtn?.buttontext || "Download Prospectus"}
+                        </span>
+                      }
+                      buttonClassName="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 lg:px-2 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-2.5 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-md hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group"
+                      redirectUrl={prospectusBtn?.buttonlink || "#"}
+                      form_name="Download Prospectus"
+                    />
+                  ) : (
+                    <Link
+                      href={prospectusBtn?.buttonlink || "#"}
+                      className="w-full sm:w-auto flex items-center justify-center gap-3 py-2 px-6 lg:px-2 xl:px-4 2xl:px-8 xl:py-2.5 2xl:py-2.5 border-[1.5px] border-gray-900 text-gray-900 font-medium rounded-md hover:bg-gray-50 transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap group"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Download
+                        size={20}
+                        className="group-hover:-translate-y-1 transition-transform"
+                      />
+                      {prospectusBtn?.buttontext || "Download Prospectus"}
+                    </Link>
+                  )}
                   {formId ? (
                     <a
                       href="#apply-form-mobile"
-                      className="w-full sm:w-auto flex items-center justify-center gap-2 py-2 px-6 md:px-12 xl:px-12 2xl:px-16 xl:py-2.5 2xl:py-3 bg-[#cb000d] text-white border border-[#cb000d] font-medium rounded-md shadow-lg hover:bg-[#b0000a] transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap"
+                      onClick={handleApplyClick}
+                      className="w-full sm:w-auto flex items-center justify-center gap-2 py-2 px-6 lg:px-9 xl:px-12 2xl:px-16 xl:py-2.5 2xl:py-2.5 bg-[#cb000d] text-white border border-[#cb000d] font-medium rounded-md shadow-lg hover:bg-[#b0000a] transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap"
                     >
                       Apply Now
                     </a>
                   ) : (
                     <Link
-                      href="#"
+                      href="#apply-form-mobile"
+                      onClick={handleApplyClick}
                       className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 md:px-12 xl:px-12 2xl:px-16 xl:py-2.5 2xl:py-3 bg-[#cb000d] border border-[#cb000d] text-white font-medium rounded-md shadow-lg hover:bg-[#b0000a] transition-all text-sm md:text-lg tracking-wide cursor-pointer whitespace-nowrap"
                     >
                       Apply Now
@@ -149,59 +226,88 @@ const Eligibility = ({
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
-              <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
-                <Calendar size={32} color="#0a41a1" className="flex-shrink-0" />
-                <div className="flex flex-col">
-                  <p className="text-md font-medium text-gray-500 capitalize leading-tight tracking-wide">
-                    {elgibilities[0]?.subtitle}
-                  </p>
-                  <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
-                    {elgibilities[0]?.title}
-                  </p>
-                </div>
-              </div>
-              <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
-                <IndianRupee
-                  size={32}
-                  color="#0a41a1"
-                  className="flex-shrink-0"
-                />
-                <div className="flex flex-col">
-                  <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
-                    {elgibilities[1]?.subtitle}
-                  </p>
-                  <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
-                    {elgibilities[1]?.title}
-                  </p>
-                </div>
-              </div>
-              <div className="bg-white border border-gray-300 rounded-md px-6 py-4 flex items-start gap-5">
-                <LaptopMinimalCheck
-                  size={32}
-                  color="#0a41a1"
-                  className="flex-shrink-0"
-                />
-                <div className="flex flex-col">
-                  <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
-                    {elgibilities[2]?.subtitle}
-                  </p>
-                  <div className="flex flex-col mt-1">
-                    <p className="text-md md:text-lg font-semibold text-black leading-tight">
-                      {displayTitle}
-                      {isLong && !expanded && " "}
+            <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4 xl:gap-8 w-full">
+                {/* Card 1 */}
+                <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
+                  <Calendar
+                    size={32}
+                    color="#0a41a1"
+                    className="flex-shrink-0"
+                  />
+                  <div className="flex flex-col">
+                    <p className="text-md font-medium text-gray-500 capitalize leading-tight tracking-wide">
+                      {elgibilities[0]?.subtitle}
                     </p>
-                    {isLong && (
+                    <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
+                      {elgibilities[0]?.title}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 2 */}
+                <div className="bg-white border border-gray-300 rounded-md p-6 flex items-start gap-5">
+                  <IndianRupee
+                    size={32}
+                    color="#0a41a1"
+                    className="flex-shrink-0"
+                  />
+                  <div className="flex flex-col">
+                    <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
+                      {elgibilities[1]?.subtitle}
+                    </p>
+                    <p className="text-md md:text-lg font-semibold text-black leading-tight mt-1">
+                      {elgibilities[1]?.title}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 3 (UPDATED) */}
+                <div className="bg-white border border-gray-300 rounded-md px-6 py-4 flex items-start gap-5">
+                  <LaptopMinimalCheck
+                    size={32}
+                    color="#0a41a1"
+                    className="flex-shrink-0"
+                  />
+
+                  <div className="flex flex-col">
+                    <p className="text-md font-medium text-gray-500 leading-tight tracking-wide">
+                      {elgibilities[2]?.subtitle}
+                    </p>
+
+                    <div className="flex flex-col mt-1">
+                      {/* ✅ LINE CLAMP APPLIED HERE */}
+                      <p className="text-md md:text-lg font-semibold w-full text-black leading-tight">
+                        {expanded
+                          ? elgibilities[2]?.title
+                          : truncateAtWord(elgibilities[2]?.title || "", 76)}
+                      </p>
+
+                      {/* Toggle Button */}
                       <button
                         onClick={() => setExpanded(!expanded)}
                         className="text-xs text-[#0060aa] font-bold mt-1 text-left"
                       >
                         {expanded ? "Read Less" : "Read More"}
                       </button>
-                    )}
+                    </div>
                   </div>
                 </div>
               </div>
+              {progNewLine.includes(slug) && (
+                <div className="relative w-full">
+                  <p className="font-poppins text-[14px]  text-right font-normal leading-[24px] text-gray-600 uppercase tracking-normal mt-3 block">
+                    3-Year Lateral Entry option also available for eligible
+                    students
+                  </p>
+                </div>
+              )}
+
+              {progSubLine.includes(slug) && (
+                <p className="font-poppins text-[14px]  text-right font-normal leading-[24px] text-gray-600 uppercase tracking-normal mt-3 block">
+                  **Subject to Approval
+                </p>
+              )}
             </div>
           )}
           {/* {slug === "b-tech-cse" ? (

@@ -23,7 +23,8 @@ const FeeStructurePaymentProc = () => {
             <Link
               href="/payment-procedure"
               className="text-[#af406a] hover:text-[#0060aa]"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Read More
             </Link>
@@ -64,7 +65,7 @@ const FeeStructurePaymentProc = () => {
                   <p>
                     {` Our refund policy is designed to be fair and considerate of
                     students’ circumstances. For detailed information, please
-                    visit our [Refund Policy] page.`}
+                    visit our Refund Policy page.`}
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -78,9 +79,10 @@ const FeeStructurePaymentProc = () => {
                 <AccordionContent className="flex flex-col gap-4 leading-[1.2] pt-2.5 px-[25px] pb-[25px] text-base">
                   <p>
                     Listed fees cover the majority of your academic costs.
-                    However, some programs may have specific fees for materials,
-                    field trips, or special equipment. Detailed information can
-                    be found in the program-specific fee breakdown.
+                    However, some programmes may have specific fees for
+                    materials, field trips, or special equipment. Detailed
+                    information can be found in the program-specific fee
+                    breakdown.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -93,10 +95,11 @@ const FeeStructurePaymentProc = () => {
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col gap-4 leading-[1.2] pt-2.5 px-[25px] pb-[25px] text-base">
                   <p>
-                    Financial aid applications are open to all eligible
-                    students. For more information on how to apply, eligibility
-                    criteria, and deadlines, please visit our [Financial Aid]
-                    page.
+                    To apply for financial aid, visit our Financial Assistance
+                    and Scholarship page, where you can review the eligibility
+                    criteria, complete the application, and check important
+                    deadlines. Our team is also available to guide you through
+                    the process if you have any questions.
                   </p>
                 </AccordionContent>
               </AccordionItem>

@@ -17,9 +17,8 @@ const TableOfContentTab = ({ tocfaqs }: Props) => {
       defaultValue={tocfaqs?.[0]?.tocpoint.toLowerCase() ?? ""}
       className="flex flex-col w-full"
     >
-      
       {/* Tab list: Horizontal Top Navigation */}
-      <TabsList className="flex flex-row overflow-x-auto w-full h-auto bg-transparent border-b border-gray-200 justify-start md:justify-center no-scrollbar mb-8 gap-8 md:gap-16 rounded-none p-0">
+      <TabsList className="flex flex-row overflow-x-auto w-full h-auto bg-transparent border-b border-gray-200 justify-start md:justify-center no-scrollbar sm:mb-4 lg:mb-8 gap-8 md:gap-16 rounded-none p-0">
         {tocfaqs.map((section) => (
           <TabsTrigger
             key={section.id}
@@ -57,11 +56,16 @@ const TableOfContentTab = ({ tocfaqs }: Props) => {
                   value={`item-${item.id}`}
                   className="border border-gray-200 px-4 py-2 rounded-md last:border-b"
                 >
-                  <AccordionTrigger className="text-sm md:text-xl cursor-pointer text-black font-semibold text-left py-3 hover:text-[#0a41a1] transition-colors">
+                  <AccordionTrigger className="text-sm md:text-xl cursor-pointer text-black font-semibold text-left py-3 hover:text-[#051730] hover:no-underline transition-colors">
                     {item.ques}
                   </AccordionTrigger>
-                  <AccordionContent className="flex flex-col gap-4 text-balance text-gray-700 leading-relaxed pb-6 text-sm md:text-lg">
-                    <p>{item.ans}</p>
+                  <AccordionContent className="flex flex-col gap-4 text-gray-700 leading-relaxed pb-6 text-sm md:text-lg">
+                    <p
+                    className="school_faq"
+                      dangerouslySetInnerHTML={{
+                        __html: item.ans,
+                      }}
+                    />
                   </AccordionContent>
                 </AccordionItem>
               ))}

@@ -11,7 +11,7 @@ const ProgrammesConnectWithUs = () => {
         <div className="flex flex-wrap md:flex-nowrap items-center gap-6">
           <div className="w-full md:w-3/12">
             <Link
-              href="tel:9311411717"
+              href="tel:8800697010"
               className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-sm flex items-center break-all"
             >
               <div>
@@ -21,7 +21,7 @@ const ProgrammesConnectWithUs = () => {
               </div>
               <span className=" p-2.5 flex flex-wrap items-center lg:gap-2.5 text-sm font-medium text-white">
                 <span className="">Call Us:</span>
-                <span>9311411717</span>
+                <span>8800697010</span>
               </span>
             </Link>
           </div>
@@ -45,7 +45,8 @@ const ProgrammesConnectWithUs = () => {
             <Link
               href="https://maps.app.goo.gl/UbKoco3Af9VZQvPv5"
               className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-sm flex items-center"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <div>
                 <div className="w-[50px] h-[50px] bg-[#cb000d] flex items-center justify-center rounded-full">
@@ -55,8 +56,8 @@ const ProgrammesConnectWithUs = () => {
               <span className=" p-1.5 flex items-center gap-2.5 text-sm font-medium text-white">
                 <span className=""></span>
                 <span>
-                  Address: K.R. Mangalam University, Sohna - Gurgaon Road,
-                  Sohna, Sohna Rural, Gurugram, Haryana 122103
+                  Address: K.R. Mangalam University, Sohna Road, Gurugram,
+                  Haryana - 122103
                 </span>
               </span>
             </Link>

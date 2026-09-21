@@ -78,41 +78,38 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/bcom-2026/recruiters/byjus.png",
+    imgUrl: "/landing-page/bcom-2026/abg.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bcom-2026/recruiters/hcl.png",
+    imgUrl: "/landing-page/bcom-2026/by.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bcom-2026/recruiters/kpmg.png",
+    imgUrl: "/landing-page/bcom-2026/deca.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bcom-2026/recruiters/hul.png",
+    imgUrl: "/landing-page/bcom-2026/dr.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/common/decathalon.svg",
+    imgUrl: "/landing-page/bcom-2026/hcl.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/common/icici.svg",
+    imgUrl: "/landing-page/bcom-2026/hultd.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/wp-content/landingpage/common/abg.png",
+    imgUrl: "/landing-page/bcom-2026/icici.png", 
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/bcom-2026/recruiters/wipro.png",
+    imgUrl: "/landing-page/bcom-2026/kpmg.png", 
     alt: "Recruiter Logo",
   },
-  {
-    imgUrl: "/landingpage/bcom-2026/recruiters/dabur.png",
-    alt: "Recruiter Logo",
-  },
+ 
 ];
 
 export const whyKRM: WhyKRMSection = {

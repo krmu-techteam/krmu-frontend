@@ -10,7 +10,7 @@ const PedaClassroom = ({ heading, desc }: Props) => {
         <h2 className="mt-2.5 mb-[15px] text-2xl md:text-4xl text-center sm:text-left font-semibold">
           {heading}
         </h2>
-        <p className="text-[#051630] leading-[1] font-semibold text-2xl">
+        <p className="text-[#051630] leading-[1] font-semibold text-lg">
           {desc}
         </p>
       </div>

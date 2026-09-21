@@ -12,7 +12,7 @@ const PhdAwardsAchievements = () => {
       }}
     >
       <div className="max-w-[1300px] mx-auto w-full z-10 relative">
-        <h3 className="text-white text-center font-semibold text-5xl mb-10">
+        <h3 className="text-white text-center font-semibold text-3xl md:text-5xl mb-10">
           Accreditation and Awards
         </h3>
         {/* <div className="w-full md:w-2/5">

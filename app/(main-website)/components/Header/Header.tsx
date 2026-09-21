@@ -8,6 +8,7 @@ import { HeaderMenus } from "@/lib/types/header-menu";
 import MainHeaderMarquee from "./MainHeaderMarquee";
 import { heroMarqueeData } from "./HeaderMaruqueeData";
 import Link from "next/link";
+import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
 
 type TOPBARPROPS = {
   topbarmenu: TOPBARITEMS[];
@@ -43,7 +44,7 @@ const Header = ({
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-[999]">
+      <header className="fixed top-0 left-0 w-full z-40">
         {/* <div className="flex flex-col md:flex-row bg-[#e31e24]">
           <div className="w-full md:w-[80%] 2xl:w-[90%]">
             <MainHeaderMarquee data={marqueeData} />
@@ -56,12 +57,21 @@ const Header = ({
             Register Now
           </Link>
         </div> */}
+
+        {/* <Link
+          href="https://admissions.krmangalam.edu.in/?utm_source=Website&utm_medium=Homepage&utm_campaign=Deadline"
+          target="_blank"
+          className="sticky top-0 w-full bg-[#cb000d] justify-center z-30 hidden lg:flex"
+        >
+          <KRMUTimer targetDate="2026-06-30T23:59:59" mainWebsiteTimer={true} />
+        </Link> */}
         <div
           className="px-2.5 xl:px-4"
           style={{
-            background: showTopbar
-              ? "#051730" // when scrolled down
-              : "rgba(137, 137, 137, 0.7)", // default
+            background:
+              showMobileMenu || showTopbar
+                ? "#051730" // when scrolled down or mobile menu is open
+                : "rgba(137, 137, 137, 0.7)", // default
           }}
         >
           {showTopbar ? (

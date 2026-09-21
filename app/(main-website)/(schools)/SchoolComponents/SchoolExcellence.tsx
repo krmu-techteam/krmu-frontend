@@ -13,37 +13,39 @@ const SchoolExcellence = ({ title1, title2, btn1, btn2 }: Props) => {
     <section className="relative py-10 sm:py-20 px-4 bg-gradient-to-r from-[#071c33] via-[#0a3a63] to-[#071c33] overflow-hidden">
       <div className="max-w-[1664px] mx-auto w-full grid lg:grid-cols-2 gap-8">
         {/* Card 1 */}
-        <div className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 text-center transition duration-300 hover:scale-[1.03] hover:shadow-2xl">
-          <h4 className="text-white text-2xl sm:text-4xl mb-6 font-semibold leading-tight">
+        <div className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-5 sm:p-8 text-center transition duration-300 hover:scale-[1.03] hover:shadow-2xl">
+          <h4 className="text-white text-lg sm:text-2xl md:text-4xl mb-6 font-semibold leading-tight">
             {title1}
           </h4>
 
           {(btn1?.buttonlink || btn1?.buttonclass) && (
             <Link
               href={btn1?.buttonlink}
-              className={`inline-block py-3.5 px-8 text-white rounded-lg border border-white ${btn1?.buttonclass}`}
+              className={`inline-block text-sm sm:text-base py-3.5 px-3.5 sm:px-8 text-white rounded-lg border border-white transition-all  relative overflow-hidden group ${btn1?.buttonclass || ""}`}
               target="_blank"
               rel="noopener noreferrer"
             >
+              <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
               {btn1?.buttontext}
             </Link>
           )}
         </div>
 
         {/* Card 2 */}
-        <div className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 text-center transition duration-300 hover:scale-[1.03] hover:shadow-2xl">
-          <h4 className="text-white text-2xl sm:text-4xl mb-6 font-semibold leading-tight">
+        <div className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-5 sm:p-8 text-center transition duration-300 hover:scale-[1.03] hover:shadow-2xl">
+          <h4 className="text-white text-lg sm:text-2xl md:text-4xl mb-6 font-semibold leading-tight">
             {title2}
           </h4>
 
           {(btn2?.buttonlink || btn2?.buttonclass) && (
             <Link
               href={btn2?.buttonlink}
-              className={`inline-block py-3.5 px-8 text-white rounded-lg border border-white  ${btn2?.buttonclass}`}
+              className={`inline-block text-sm sm:text-base py-3.5 px-3.5 sm:px-8 text-white rounded-lg border border-white transition-all  relative overflow-hidden group  ${btn2?.buttonclass || ""}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {btn2?.buttontext}ss
+              <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
+              {btn2?.buttontext}
             </Link>
           )}
         </div>

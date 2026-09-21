@@ -30,6 +30,7 @@ type Props = {
   isYear: boolean;
   heading?: string;
   highlight?: string;
+  slug?: string;
 };
 
 const ProgrammeStructure = ({
@@ -40,6 +41,7 @@ const ProgrammeStructure = ({
   isYear,
   heading,
   highlight,
+  slug,
 }: Props) => {
   const [activeYear, setActiveYear] = useState(
     programStruct[0]?.year.toLowerCase().replace(/\s+/g, "") || "",
@@ -79,7 +81,7 @@ const ProgrammeStructure = ({
                   "linear-gradient(90deg, rgba(0, 23, 50, 0) 0%, #001732 49.04%, rgba(0, 23, 50, 0) 95.67%)",
               }}
             >
-              <h2 className="text-2xl md:text-3xl lg:text-[40px] font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
+              <h2 className="text-2xl md:text-3xl lg:text-[40px] font-semibold md:font-bold text-white leading-tight tracking-tight text-center drop-shadow-sm">
                 {heading} {highlight}
               </h2>
             </div>
@@ -87,9 +89,9 @@ const ProgrammeStructure = ({
         </div>
 
         <div className="relative w-full">
-          {/* Programme Handbook Button - Positioned absolute to align with card top */}
-          {currbtn?.buttonlink && (
-            <div className="absolute xl:right-0 xl:top-0 2xl:right-72 z-20">
+          {/* Programme Handbook Button - Responsive layout to prevent overlaying tabs */}
+          {/* {currbtn?.buttonlink && (
+            <div className="relative xl:absolute xl:right-0 xl:top-0 2xl:right-72 z-20 mb-6 xl:mb-0 w-full xl:w-auto flex justify-center xl:justify-start">
               <CommonLeadPopup
                 buttonText={
                   <span className="flex items-center gap-3">
@@ -99,19 +101,39 @@ const ProgrammeStructure = ({
                     </span>
                   </span>
                 }
-                buttonClassName="px-6 py-4 bg-[#051730] text-white rounded-sm shadow-xl hover:bg-[#0a264a] transition-all duration-300 border border-[#051730]/10 flex items-center justify-center min-w-[200px]"
+                buttonClassName="px-6 py-4 bg-[#051730] text-white rounded-sm md:rounded-md shadow-xl hover:bg-[#0a264a] transition-all duration-300 border border-[#051730]/10 flex items-center justify-center min-w-[200px]"
                 redirectUrl={currbtn?.buttonlink || "#"}
                 form_name="Programme Handbook"
               />
             </div>
-          )}
+          )} */}
 
           {/* Main Content Area - Clean stack without card boundaries to match image */}
-          <div className="xl:max-w-lg 2xl:max-w-xl flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10">
+          <div
+            className={` ${slug === "bachelor-of-physiotherapy-bpt" || slug === "barch-architecture" || slug === "ba-llb-hons" || slug === "bba-llb-hons" || slug === "integrated-bba-mba" || slug === "dual-degree-bsc-msc-forensic-science" ? "md:max-w-[70%] lg:max-w-lg xl:max-w-2xl" : "xl:max-w-lg 2xl:max-w-xl"} flex flex-col min-h-[720px] mb-0 md:mb-12 relative z-10`}
+          >
             {/* Left Navigation & Content Area */}
+            {currbtn?.buttonlink && (
+              <div className="mb-5 sm:mb-3 w-full xl:w-auto flex justify-start">
+                <CommonLeadPopup
+                  buttonText={
+                    <span className="flex items-center gap-3 underline underline-offset-8">
+                      <Download className="w-5 h-5" />
+                      <span className="uppercase tracking-widest font-semibold text-sm md:text-lg underline">
+                        {currbtn?.buttontext}
+                      </span>
+                    </span>
+                  }
+                  buttonClassName="text-white flex items-center justify-center min-w-[200px]"
+                  redirectUrl={currbtn?.buttonlink || "#"}
+                  form_name="Programme Handbook"
+                  shadowGradient={false}
+                />
+              </div>
+            )}
             <div className="flex-grow flex flex-col">
               {/* Year Tabs */}
-              <div className="flex w-full overflow-x-auto no-scrollbar rounded-xs">
+              <div className="flex w-full  overflow-x-auto  no-scrollbar rounded-sm md:rounded-md">
                 {programStruct.map((year) => {
                   const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                   const isYearActive = activeYear === yearValue;
@@ -130,7 +152,7 @@ const ProgrammeStructure = ({
                           );
                         }
                       }}
-                      className={`flex-1 px-4 md:px-8 py-4 text-sm lg:text-[16px] 2xl:text-lg font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
+                      className={`flex-1 px-4 py-4 text-sm lg:text-[16px] 2xl:text-lg font-semibold uppercase tracking-widest transition-all duration-300 whitespace-nowrap
                       ${
                         isYearActive
                           ? "bg-[#051730] text-white"
@@ -176,7 +198,7 @@ const ProgrammeStructure = ({
               </div>
 
               {/* Subjects List - Transparent Glass Area as per screenshot */}
-              <div className="flex-grow py-6 overflow-y-auto min-h-[400px] max-h-[400px] bg-transparent no-scrollbar">
+              <div className="flex-grow py-6 h-[auto]  bg-transparent no-scrollbar">
                 {programStruct.map((year) => {
                   const yearValue = year.year.toLowerCase().replace(/\s+/g, "");
                   if (activeYear !== yearValue) return null;
@@ -215,7 +237,7 @@ const ProgrammeStructure = ({
                                           value="content"
                                           className="border-none"
                                         >
-                                          <AccordionTrigger className="py-2 hover:no-underline group">
+                                          <AccordionTrigger className="accordianSVG py-2 hover:no-underline group">
                                             <div className="flex items-center gap-4 text-left">
                                               <CircleArrowRight
                                                 size={22}
@@ -260,7 +282,7 @@ const ProgrammeStructure = ({
               </div>
 
               {/* Action Buttons Container - Glassy Bottom - Responsive Stack for Mobile */}
-              <div className="py-8 bg-transparent min-h-[100px] flex flex-col md:flex-row items-center justify-center gap-4">
+              <div className="py-8 bg-transparent min-h-[100px] flex flex-row items-center md:justify-start justify-center gap-4 md:gap-4 overflow-x-auto no-scrollbar w-full">
                 {programStruct
                   .find(
                     (y) =>
@@ -283,12 +305,12 @@ const ProgrammeStructure = ({
                         buttonText={
                           <div className="flex items-center gap-2 md:gap-3">
                             <Download className="w-4 h-4 md:w-5 md:h-5" />
-                            <span className="font-semibold tracking-tight text-sm md:text-lg whitespace-nowrap">
+                            <span className="font-semibold tracking-tight text-[13px] md:text-lg whitespace-nowrap">
                               {btn?.buttontext}
                             </span>
                           </div>
                         }
-                        buttonClassName={`px-3 py-3 md:px-6 rounded-xs transition-all duration-300 flex items-center justify-center w-full md:w-auto shadow-lg
+                        buttonClassName={`px-3 h-12 md:h-14 md:px-6 rounded-sm md:rounded-md transition-all duration-300 flex items-center justify-center w-auto shadow-lg
                         ${
                           isDark
                             ? "bg-[#001732] text-white hover:bg-[#0a264a]"

@@ -1,0 +1,40 @@
+{
+  "expectations": {
+    "badge": "EXPECTATIONS",
+    "title": "Expectations and Outcomes.",
+    "sections": [
+      {
+        "id": "ask-of-you",
+        "title": "What we ask of you?",
+        "subtitle": "Work hard and learn to do quality work",
+        "items": [
+          "A commitment to put in hard work.",
+          "An open mind and an active body, ready to push your own physical and mental boundaries to gain real experience.",
+          "Zero sloppiness in your actions and outputs."
+        ]
+      },
+      {
+        "id": "will-become",
+        "title": "What will you become?",
+        "subtitle": "An individual recognized as a capable leader with solid work-ethic",
+        "items": [
+          "A solid work-ethic that employers will appreciate.",
+          "The ability to read long documents closely and ask good questions.",
+          "The ability to link concepts and ideas across domains."
+        ],
+        "footerText": "The ability to engage in and lead cross-functional projects with diverse team members."
+      },
+      {
+        "id": "ask-of-us",
+        "title": "What you can ask of us",
+        "subtitle": "Solid mentorship focused helping you achieve your career goals",
+        "items": [
+          "Mentorship and structured exposure to sectors and roles, so you can find what you want to do.",
+          "Communication-skill development — written and verbal — embedded across every course.",
+          "Faculty whose work is subservient to a single goal: significantly better career outcomes for the students.",
+          "Quality work that earns you the job."
+        ]
+      }
+    ]
+  }
+}

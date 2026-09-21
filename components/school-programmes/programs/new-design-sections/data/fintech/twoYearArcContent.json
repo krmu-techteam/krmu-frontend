@@ -1,0 +1,48 @@
+{
+  "twoYearArc": {
+    "badge": "THE TWO-YEAR ARC",
+    "title": "Two years, from watching to deciding.",
+    "semesters": [
+      {
+        "period": "SEMESTER 1",
+        "title": "Foundation and First Diagnoses",
+        "desc": "Through cases, classroom interactions, and field visits, watch practitioners make decisions.",
+        "icon": "Eye",
+        "linkText": "Read More",
+        "details": "Through cases, classroom interactions, and field visits, watch practitioners make decisions. Learn to do the same work under guidance. Read real financial statements, build small marketing experiments, walk into factories and service operations with structured field briefs."
+      },
+      {
+        "period": "SEMESTER 2",
+        "title": "Cross-Functional Integration",
+        "desc": "Start doing cross-functional projects. Present diagnoses to mixed juries of faculty and sector practitioners",
+        "icon": "FileText",
+        "linkText": "Read More",
+        "details": "Start thinking in terms of crossing subject boundaries. In assignments/projects, present cross-functional diagnoses to mixed juries of faculty and sector practitioners. By the end of the semester, you will shortlist the sectors you want to go deep on from a career perspective."
+      },
+      {
+        "period": "SUMMER",
+        "title": "8 to 10 Week Internship",
+        "desc": "A problem brief from a real company. You work under joint guidance of a faculty mentor and an industry mentor.",
+        "icon": "BriefcaseBusiness",
+        "linkText": "Read More",
+        "details": "A problem brief from a real company. You work under joint guidance of a faculty mentor and an industry mentor. Expect weekly reviews leading to a graded portfolio deliverable that the hiring manager's team can use to make actual decisions. From the internship, you return to campus with high self-confidence and a solid understanding of what works in real-world situations."
+      },
+      {
+        "period": "SEMESTER 3",
+        "title": "Sector Commitment",
+        "desc": "Commit to one or two sectors and job roles.",
+        "icon": "CircleStop",
+        "linkText": "Read More",
+        "details": "Commit to one or two sectors and job roles. Move from analysing problems to recommending solutions for specific organisations within the sector. Specialisation electives co-delivered with EY India."
+      },
+      {
+        "period": "SEMESTER 4",
+        "title": "Capstone",
+        "desc": "Electives + possibility of a long-term industry engagement and a Pre-Placement Offer.",
+        "icon": "Trophy",
+        "linkText": "Read More",
+        "details": "Electives + possibility of a long-term industry engagement and a Pre-Placement Offer. A capstone project recommendation that a host organisation can act on."
+      }
+    ]
+  }
+}

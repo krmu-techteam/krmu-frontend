@@ -11,7 +11,7 @@ export const ConnectWithUs = () => {
         <div className="flex flex-wrap lg:flex-nowrap items-center gap-6">
           <div className="w-full lg:w-3/12">
             <Link
-              href="tel:9311411717"
+              href="tel:8800697010"
               className="bg-[#ffffff0d] backdrop-blur-[22px] p-2.5 border border-[#ffffff40] rounded-md flex items-center break-all"
             >
               <div>
@@ -21,7 +21,7 @@ export const ConnectWithUs = () => {
               </div>
               <span className=" p-2.5 flex flex-wrap items-center lg:gap-2.5 text-sm font-semibold text-white">
                 <span className="font-semibold">Call Us:</span>
-                <span className="font-normal">9311411717</span>
+                <span className="font-normal">8800697010</span>
               </span>
             </Link>
           </div>
@@ -37,7 +37,9 @@ export const ConnectWithUs = () => {
               </div>
               <span className=" p-2.5 flex flex-wrap items-center lg:gap-2.5 text-sm font-semibold text-white break-all">
                 <span className="font-semibold">Email Us:</span>
-                <span className="font-normal tracking-wide leading-relaxed">welcome@krmangalam.edu.in</span>
+                <span className="font-normal tracking-wide leading-relaxed">
+                  welcome@krmangalam.edu.in
+                </span>
               </span>
             </Link>
           </div>
@@ -45,7 +47,8 @@ export const ConnectWithUs = () => {
             <Link
               href="https://maps.app.goo.gl/vaYSxzfRzMd1XvFs8"
               className="bg-[#ffffff0d] backdrop-blur-[22px] py-[3px] px-2.5 border border-[#ffffff40] rounded-md flex items-center"
-              target="_blank" rel="noopener noreferrer"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <div>
                 <div className="w-[50px] h-[50px] bg-[#e31e24] flex items-center justify-center rounded-full">
@@ -53,10 +56,9 @@ export const ConnectWithUs = () => {
                 </div>
               </div>
               <span className=" p-2.5 flex items-center gap-2.5 text-sm font-semibold text-white">
-                
                 <span className="font-normal tracking-wide leading-relaxed">
-                  <span className="font-semibold">Address:</span> K.R. Mangalam University, Sohna - Gurgaon Road,
-                  Sohna, Sohna Rural, Gurugram, Haryana 122103
+                  <span className="font-semibold">Address:</span> K.R. Mangalam
+                  University, Sohna Road, Gurugram, Haryana - 122103
                 </span>
               </span>
             </Link>

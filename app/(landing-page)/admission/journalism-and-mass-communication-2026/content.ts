@@ -79,23 +79,23 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/sjmc-2026/recruiters/dainik-bhasker.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/semce-2026/dainik-bhaskar.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/sjmc-2026/recruiters/zeenews.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/semce-2026/zee-news.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/sjmc-2026/recruiters/dd-1.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/semce-2026/dd.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/sjmc-2026/recruiters/outlook.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/semce-2026/outlook.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/sjmc-2026/recruiters/indian-express.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/semce-2026/the-indian-express.png",
     alt: "Recruiter Logo",
   },
 ];
@@ -487,7 +487,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Blends theory and practical training in journalism and media for analytical and creative skills.",
       duration: "3 Years",
-      fees: "176000",
+      fees: "160000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
@@ -498,7 +498,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Prepares future media leaders through traditional and digital media studies, internships, and workshops.",
       duration: "4 Years",
-      fees: "176000",
+      fees: "160000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
     },
@@ -509,7 +509,7 @@ export const programmeContent = {
       subtitle: "",
       desc: "Blends theory and practice, covering media ethics, reporting, editing, and real-world exposure through workshops.",
       duration: "2 Years",
-      fees: "120000",
+      fees: "110000",
       ctaText: "Apply Now !",
       ctaLink: "#apply-form",
       eligibility: "Passed Bachelor's with 50% aggregate marks.",

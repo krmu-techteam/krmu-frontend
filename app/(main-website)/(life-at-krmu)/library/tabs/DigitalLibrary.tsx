@@ -4,7 +4,7 @@ const DigitalLibrary = () => {
   return (
     <div className="max-w-[1664px] mx-auto w-full libtabcontent ">
       <p>Digital Age Learning</p>
-      <h2>Advanced Digital Library Services</h2>
+      <h1>Advanced Digital Library Services</h1>
       <p>
         The digital library section, equipped with the latest computer terminals
         and online journals, reflects the university’s commitment to providing

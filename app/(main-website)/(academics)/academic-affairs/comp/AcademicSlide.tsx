@@ -12,13 +12,13 @@ const AcademicImgURL = [
   { imageUrl: "slide-2.webp" },
   { imageUrl: "slide-3.webp" },
   { imageUrl: "slide-4.webp" },
-  { imageUrl: "slide-5.webp" },
+  { imageUrl: "gcec.png" },
   { imageUrl: "slide-6.webp" },
   { imageUrl: "slide-7.webp" },
   { imageUrl: "slide-8.webp" },
   //   { imageUrl: "slide-9.webp" },
   { imageUrl: "slide-10.webp" },
-  { imageUrl: "slide-11.webp" },
+  // { imageUrl: "slide-11.webp" },
 ];
 
 const AcademicSlide = () => {

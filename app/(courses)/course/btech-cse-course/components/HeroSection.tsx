@@ -64,11 +64,11 @@ const HeroSection = () => {
           <div className="text-white hidden md:flex flex-wrap gap-2 sm:justify-center md:justify-start text-sm">
             <span>100% Placement Support</span>
             <span>|</span>
-            <span>9 Engineering Specialisations</span>
+            <span>7 Engineering Specialisations</span>
             <span>|</span>
             <span>₹56.6 LPA Highest Package</span>
           </div>
-          <div className="flex justify-center sm:justify-start">
+          <div className="flex justify-center sm:justify-start"> 
 
           <CourseScrollButton
             targetId="apply-section"

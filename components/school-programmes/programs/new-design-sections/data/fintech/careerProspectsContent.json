@@ -1,0 +1,49 @@
+{
+  "careerProspects": {
+    "badge": "EXPECTATIONS",
+    "title": "Career Prospects.",
+    "description": "An MBA in Fintech opens up diverse career opportunities at the intersection of finance and technology. With the rise of digital payments, blockchain, AI-driven financial services, and cryptocurrency, the demand for skilled professionals in this domain is rapidly growing. Here are some of the top career options:",
+    "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/A1_c4684a4d6f.png",
+    "slides": [
+      {
+        "id": 1,
+        "items": [
+          {
+            "title": "Business/Data Analysts",
+            "desc": "Uses data analysis to identify trends, make data-driven decisions, and interpret big data sets to enhance business practice."
+          },
+          {
+            "title": "Financial Analyst",
+            "desc": "Collect, analyse, and interpret financial data, recommend investment strategies and achieve maximum profitability."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "items": [
+          {
+            "title": "Product Manager",
+            "desc": "From the product’s conceptualisation to its vision, improvement and strategies, a product manager identifies customers and meets their needs."
+          },
+          {
+            "title": "Cybersecurity Expert",
+            "desc": "Protects the company’s computer systems, network and other digital assets from data breaches and cyber-attacks, identifies vulnerabilities and implements security measures.."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "items": [
+          {
+            "title": "Risk Analyst",
+            "desc": "Identifies, assesses and manages potential risks of the company to reduce liabilities and mitigate losses."
+          },
+          {
+            "title": "Investment Analyst",
+            "desc": "Investment Analysts research financial opportunities and market trends to guide venture capital, private equity, or asset portfolios."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -19,14 +19,15 @@ const KREEEnroll = ({ kreeEnrolData }: Props) => {
         </h2>
 
         <p className="mb-5">
-          KR Entrance Exam is a gateway to enrolment for the preferred
-          Undergraduate and Postgraduate programme at K.R. Mangalam University.
-          The entrance exam comprises sections on objective-type questions for
-          sentence completion, matching, multiple-choice, and true-false
+          K.R. Mangalam Entrance Exam is a gateway to enrollment for the
+          preferred Undergraduate and Postgraduate programmes at K.R. Mangalam
+          University. The entrance exam comprises sections on Objective-type
+          Questions for Sentence Completion, Matching, Multiple-Choice, and
+          True-False.
         </p>
 
         <div className="text-center">
-          <h3 className="text-2xl font-semibold">Programmes For Enrolment</h3>
+          <h3 className="text-2xl font-semibold">Programmes For Enrollment</h3>
           <h5 className="text-xl font-semibold mt-2.5 mb-[15px]">
             Undergraduate and Postgraduate Programmes
           </h5>

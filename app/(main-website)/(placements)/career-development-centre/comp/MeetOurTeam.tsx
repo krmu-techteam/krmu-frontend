@@ -34,7 +34,7 @@ const MeetOurTeam = () => {
                   <span>
                     <strong>Director (Career Development Center)</strong>
                   </span>
-                  
+
                   <p className="my-5">
                     <strong>Email- </strong>{" "}
                     <Link href="mailto:director.cdc@krmangalam.edu.in">
@@ -43,9 +43,7 @@ const MeetOurTeam = () => {
                   </p>
                   <p className="my-5">
                     <strong>Contact Details- </strong>{" "}
-                    <Link href="tel:+91-9827085056">
-                      +91-9827085056
-                    </Link>
+                    <Link href="tel:+91-9827085056">+91-9827085056</Link>
                   </p>
                 </CardDescription>
               </CardContent>
@@ -67,8 +65,8 @@ const MeetOurTeam = () => {
               sessions on emerging topics in soft skills and technical
               expertise. Initiatives such as bootcamps, summer and winter
               schools, profile-based training, and company-specific training
-              programs form the core of our upskilling efforts. The CDC places a
-              strong emphasis on building a solid foundation for students by
+              programmes form the core of our upskilling efforts. The CDC places
+              a strong emphasis on building a solid foundation for students by
               offering advanced courses that enhance analytical and
               computational abilities.
             </p>

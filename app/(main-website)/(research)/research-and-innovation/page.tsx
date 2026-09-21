@@ -12,11 +12,9 @@ import ResearchAchievements from "./comp/ResearchAchievements";
 import ResearchHighlight from "./comp/ResearchHighlight";
 import ResearchInnovationHeroSection from "./comp/ResearchInnovationHeroSection";
 import TeamLibrary from "./comp/TeamLibrary";
-import TeamRDC from "./comp/TeamRDC";
+import TeamRDC from "./comp/TeamRDC"; 
 import { Metadata } from "next";
 import { STRAPI_URL } from "@/app/constant";
-
-
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("research-and-innovation");
@@ -95,7 +93,7 @@ const page = () => {
       <OnGoing />
       <ResearchHighlight />
       <ResearchAchievements />
-      <PublicationAchievements />
+      <PublicationAchievements /> 
       <section className="py-[50px] px-4 bg-[url(/research/acadbg.webp)] bg-cover">
         <AcademicResources />
         <TeamLibrary />

@@ -47,27 +47,27 @@ const ProgramCardContent = ({
         target="_blank"
         rel="noopener noreferrer"
         dangerouslySetInnerHTML={{
-          __html: `${prog.title}`,
+          __html: `${prog.title} ${prog.highlightitle ? prog.highlightitle : ""}`,
         }}
       />
 
       {criteria && (
         <div className="flex flex-col sm:flex-row border-y border-[rgba(255,255,255,0.2)] sm:gap-5 z-20">
-          <div className="w-3/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
+          <div className="w-fit flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
             <span>
               <Calendar size={20} />
             </span>
             <div className="flex flex-col gap-0.5">
-              <span className="font-normal text-xs">Duration:</span>
+              <span className="font-semibold text-xs">Duration:</span>
               <span className="text-xs">{prog.criteria?.Duration}</span>
             </div>
           </div>
-          <div className="w-9/12 flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
+          <div className="w-fit flex py-2.5 gap-2 text-sm cursor-text text-white items-center">
             <span>
               <IndianRupee size={20} />
             </span>
             <div className="flex flex-col gap-0.5">
-              <span className="font-normal text-xs">Programme Fee:</span>
+              <span className="font-semibold text-xs">Programme Fee:</span>
               <span className="text-xs">
                 Rs. {prog.criteria?.programme_fee_per_year} / Year{" "}
                 {prog.programmeslug === "bhmct-hotel-management"
@@ -79,10 +79,10 @@ const ProgramCardContent = ({
         </div>
       )}
 
-      <div className="flex flex-wrap md:flex-nowrap gap-2.5 items-center pt-2.5 z-20">
+      <div className="flex gap-1.5 sm:gap-2.5 items-center pt-2.5 z-20">
         <button
           // className="border rounded-sm p-2.5 2xl:px-5 2xl:py-2.5 text-xs cursor-pointer border-white text-white w-full sm:w-1/2"
-          className="bg-white cursor-pointer w-full text-sm text-[#0161B0] border border-[#999999] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 sm:w-1/2"
+          className="bg-white cursor-pointer text-sm text-[#001732] border border-[#999999] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 w-1/2"
           onClick={() => setShow(true)}
         >
           Fee Structure
@@ -91,9 +91,9 @@ const ProgramCardContent = ({
           <Link
             href={prog.criteria.eligibility_utm_links}
             target="_blank"
-            className="bg-[#cb000d] w-full text-sm text-white text-center border border-[#cb000d] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 
-            sm:w-1/2"
+            className="bg-[#cb000d] block text-sm text-white text-center border border-[#cb000d] rounded-[5px] p-2.5 2xl:px-5 2xl:py-2.5 w-1/2 transition-all relative overflow-hidden group"
           >
+            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
             Apply Now
           </Link>
         )}

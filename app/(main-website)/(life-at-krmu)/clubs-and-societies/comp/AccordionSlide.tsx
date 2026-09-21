@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { STRAPI_URL } from "@/app/constant";
 import {
   Carousel,
@@ -14,6 +17,8 @@ type Props = {
 };
 
 const AccordionSlide = ({ slides }: Props) => {
+  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
+
   return (
     <Carousel
       opts={{
@@ -23,21 +28,37 @@ const AccordionSlide = ({ slides }: Props) => {
       className="w-full relative group"
     >
       <CarouselContent className="-ml-4">
-        {slides &&
-          slides.map((image, index) => (
-            <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
-              <div className="relative aspect-[4/3] rounded-xs overflow-hidden border border-slate-100 shadow-sm group/item">
-                <Image
-                  src={`${STRAPI_URL}${image?.url}`}
-                  fill
-                  alt={image?.alternativeText || "club activity"}
-                  className="object-cover transition-transform duration-500 group-hover/item:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-            </CarouselItem>
-          ))}
+        {slides?.map((image, index) => (
+          <CarouselItem
+            key={index}
+            className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
+          >
+            <div className="relative aspect-[4/3] rounded-xs overflow-hidden border border-slate-100 shadow-sm group/item">
+              {/* Skeleton */}
+              {!loadedImages[index] && (
+                <div className="absolute inset-0 animate-pulse bg-slate-200" />
+              )}
+
+              <Image
+                src={`${STRAPI_URL}${image?.url}`}
+                fill
+                alt={image?.alternativeText || "club activity"}
+                className={`object-cover transition-all duration-500 group-hover/item:scale-105 ${
+                  loadedImages[index] ? "opacity-100" : "opacity-0"
+                }`}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                onLoad={() =>
+                  setLoadedImages((prev) => ({
+                    ...prev,
+                    [index]: true,
+                  }))
+                }
+              />
+            </div>
+          </CarouselItem>
+        ))}
       </CarouselContent>
+
       {slides?.length > 1 && (
         <div className="flex justify-end gap-2 mt-6">
           <CarouselPrevious className="static translate-y-0 bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 shadow-sm transition-colors" />

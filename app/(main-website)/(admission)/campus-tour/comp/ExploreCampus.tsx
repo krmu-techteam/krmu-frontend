@@ -11,7 +11,7 @@ const ExploreCampus = () => {
         }}
       >
         <h2 className="mt-2.5 mb-[15px] text-[26px] md:text-[64px] font-semibold leading-[1.5]">
-          Explore Our Campus in Immersive 360° Virtual Tour
+          Explore Our Campus in an Immersive 360° Virtual Tour
         </h2>
         <p className="mb-5">
           K.R. Mangalam University is the fastest-growing higher education

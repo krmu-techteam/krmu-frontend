@@ -1,0 +1,33 @@
+{
+  "leaveWith": {
+    "badge": "WHAT YOU LEAVE WITH",
+    "title": "A portfolio of real work, not just a transcript with your grades on it.",
+    "footnote": "The programme does not promise a job. It promises the work that will earn you one.",
+    "items": [
+      {
+        "icon": "SearchCheck",
+        "desc": "Business diagnoses of three real companies"
+      },
+      {
+        "icon": "Check",
+        "desc": "An internship deliverable signed off by a real firm"
+      },
+      {
+        "icon": "File",
+        "desc": "A sector report on your chosen industry"
+      },
+      {
+        "icon": "CircleStop",
+        "desc": "A capstone a host organisation can act on"
+      },
+      {
+        "icon": "Trophy",
+        "desc": "A public case-competition record"
+      },
+      {
+        "icon": "Bot",
+        "desc": "An AI skill map linking every claim to proof"
+      }
+    ]
+  }
+}

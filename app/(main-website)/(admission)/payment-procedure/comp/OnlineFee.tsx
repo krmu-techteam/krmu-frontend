@@ -36,15 +36,16 @@ const OnlineFee = () => {
                   }}
                 >
                   <p>
-                    For new students <br />
-                    (Semester 1)
+                    For New Students <br />
+                    (Semester-1)
                   </p>
                 </div>
                 <div>
                   <Link
                     href="https://payment.collexo.com/user/login/?dest=/pay-fee/kr-mangalam-university-sohna-haryana-43490/"
                     className="bg-[#e31e24] py-3 text-white text-base md:px-[29px] inline-block w-full md:text-2xl font-semibold leading-[1] rounded-b-[22px] hover:bg-[#034272]"
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span>Pay Through Collexo</span>
                   </Link>
@@ -58,15 +59,16 @@ const OnlineFee = () => {
                   }}
                 >
                   <p>
-                    For existing students <br />
-                    (Semester 2 onwards)
+                    For Existing Students <br />
+                    (Semester-2 Onwards)
                   </p>
                 </div>
                 <div>
                   <Link
                     href="https://krmu.icloudems.com/"
                     className="bg-[#e31e24] py-3 text-white px-[29px] inline-block w-full text-base md:text-2xl font-semibold leading-[1] rounded-b-[22px] hover:bg-[#034272]"
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <span>Pay Through iCloud</span>
                   </Link>
@@ -94,9 +96,9 @@ const OnlineFee = () => {
                   1
                 </span>
               </div>
-              Debit/Credit Card swipe at Cash counter, Cash at Cash counters
-              located at University Campus reception area, Ground Floor, A
-              Block.
+              Payment can be made by Debit/Credit Card at the cash counter or in
+              cash at the cash counters located at the University Campus
+              Reception, Ground Floor, A Block.
             </li>
             <li className="flex items-center gap-5 text-xl py-[15px]">
               <div>
@@ -104,10 +106,11 @@ const OnlineFee = () => {
                   2
                 </span>
               </div>
-              Demand Draft/Cheque – Please draw the DD/Cheque in favour of “K R
-              Mangalam University”. In case of DD, it should be payable at
-              Gurugram. Please mention your name, application no, programme name
-              and contact number on the backside.
+              Payment can also be made through Demand Draft/Cheque drawn in
+              favour of “K R Mangalam University”. In case of a Demand Draft, it
+              should be payable at Gurugram. Please mention your name,
+              application number, programme name, and contact number on the back
+              of the DD/Cheque.
             </li>
           </ul>
         </div>

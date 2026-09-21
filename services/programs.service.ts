@@ -4,14 +4,11 @@ export async function getProgramMetadata(currentSlug: string) {
   try {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/school-programmes?filters[programmeslug][$eq]=${currentSlug}&populate[school_category][populate]=*&populate[degree][populate]=*`,
-      { cache: "no-store" }
+      { cache: "no-store" },
     );
     if (res.ok) {
       const json = await res.json();
       const prog = json.data?.[0];
-      console.log("=========================================");
-      console.log("DEBUG prog?.school_category details:", JSON.stringify(prog?.school_category, null, 2));
-      console.log("=========================================");
       return {
         schoolCategoryName: prog?.school_category?.name,
         schoolCategorySlug: prog?.school_category?.slug,
@@ -22,5 +19,10 @@ export async function getProgramMetadata(currentSlug: string) {
   } catch (error) {
     console.error("Error fetching program metadata:", error);
   }
-  return { schoolCategoryName: undefined, schoolCategorySlug: undefined, degreeName: undefined, degreeSlug: undefined };
+  return {
+    schoolCategoryName: undefined,
+    schoolCategorySlug: undefined,
+    degreeName: undefined,
+    degreeSlug: undefined,
+  };
 }

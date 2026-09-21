@@ -14,38 +14,145 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Amit-Chawla.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/09/MBA-Facultiy.png",
   },
   {
-    id: 1028,
-    slug: "mr-ritwik-ghosh",
+    id: 10767,
+    slug: "aditi-agarwal",
     title: {
-      rendered: "Dr. Ritwik Ghosh",
+      rendered: "Dr. Aditi Agarwal",
     },
-    featured_media: 1026,
+    featured_media: 10763,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant  Professor",
+      schools: [1009],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Ms.-Aditi-Agarwal.png",
+  },
+    {
+    id: 113871,
+    slug: "dr-aditi-khare",
+    title: {
+      rendered: "Dr. Aditi Khare",
+    },
+    featured_media: 10763,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant  Professor",
+      schools: [1009],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Aditi-Khare-1.png",
+  },
+    {
+    id: 10770,
+    slug: "ritika-choudhary",
+    title: {
+      rendered: "Dr. Ritika Choudhary",
+    },
+    featured_media: 10765,
+    acf: {
+      "staff-qualification": "Ph.D. ",
+      staff_designation: "Assistant  Professor",
+      schools: [1009],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Ritika-Choudhary.png",
+  },
+  
+  {
+    id: 116233,
+    slug: "dr-neha-arora",
+    title: {
+      rendered: "Dr. Neha Arora",
+    },
+    featured_media: 116233,
+    acf: {
+      "staff-qualification": "Ph.D.",
+      staff_designation: "Assistant  Professor",
+      schools: [1009],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/08/Dr-Neha-Arora-1.jpg",
+  },
+  {
+    id: 115349,
+    slug: "dr-manav-sharma",
+    title: {
+      rendered: "Dr. Manav Sharma",
+    },
+    featured_media: 100052,
     acf: {
       "staff-qualification": "Ph.D.",
       staff_designation: "Assistant Professor",
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Ritwik-Ghosh.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/06/SOMCE.png",
   },
-  {
-    id: 1029,
-    slug: "dr-sarina",
+    {
+    id: 116235,
+    slug: "ms-navya-singh",
     title: {
-      rendered: "Dr. Sarina",
+      rendered: "Ms. Navya Singh",
     },
-    featured_media: 1025,
+    featured_media: 116233,
     acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant Professor",
+      "staff-qualification": "M.A. International Multimedia Journalism",
+      staff_designation: "Assistant  Professor",
       schools: [1009],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Sarina.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/08/Ms-navya-Singh.jpg",
   },
+    {
+    id: 113711,
+    slug: "yashika-khandelwal",
+    title: {
+      rendered: "Yashika Khandelwal",
+    },
+    featured_media: 10763,
+    acf: {
+      "staff-qualification": "Ph.D. (Pursuing)",
+      staff_designation: "Assistant  Professor",
+      schools: [1009],
+    },
+    featured_media_url:
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/02/Yashika-Khandelwal.png",
+  },
+
+  // {
+  //   id: 1028,
+  //   slug: "mr-ritwik-ghosh",
+  //   title: {
+  //     rendered: "Dr. Ritwik Ghosh",
+  //   },
+  //   featured_media: 1026,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1009],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Ritwik-Ghosh.png",
+  // },
+  // {
+  //   id: 1029,
+  //   slug: "dr-sarina",
+  //   title: {
+  //     rendered: "Dr. Sarina",
+  //   },
+  //   featured_media: 1025,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant Professor",
+  //     schools: [1009],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2023/11/Dr.-Sarina.png",
+  // },
   // {
   //   id: 10769,
   //   slug: "mr-karan-singh-2",
@@ -61,80 +168,23 @@ export const sjmcFaculties: SchoolFacultiesType[] = [
   //   featured_media_url:
   //     "https://wp.krmangalam.edu.in/wp-content/uploads/2025/04/Dr.-Karan-Singh-SEMCE.png",
   // },
-  {
-    id: 10770,
-    slug: "ritika-choudhary",
-    title: {
-      rendered: "Dr. Ritika Choudhary",
-    },
-    featured_media: 10765,
-    acf: {
-      "staff-qualification": "Ph.D. ",
-      staff_designation: "Assistant  Professor",
-      schools: [1009],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Ritika-Choudhary.png",
-  },
-  {
-    id: 10767,
-    slug: "aditi-agarwal",
-    title: {
-      rendered: "Ms. Aditi Agarwal",
-    },
-    featured_media: 10763,
-    acf: {
-      "staff-qualification": "Ph.D (Pursuing)",
-      staff_designation: "Assistant  Professor",
-      schools: [1009],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Ms.-Aditi-Agarwal.png",
-  },
-  {
-    id: 113711,
-    slug: "yashika-khandelwal",
-    title: {
-      rendered: "Yashika Khandelwal",
-    },
-    featured_media: 10763,
-    acf: {
-      "staff-qualification": "Ph.D (Pursuing)",
-      staff_designation: "Assistant  Professor",
-      schools: [1009],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Yashika-Khandelwal.png",
-  },
-  {
-    id: 113871,
-    slug: "dr-aditi-khare",
-    title: {
-      rendered: "Dr. Aditi Khare",
-    },
-    featured_media: 10763,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant  Professor",
-      schools: [1009],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Dr.-Aditi-Khare.png",
-  },
 
-  {
-    id: 66802,
-    slug: "mr-trilok-kumar-singh",
-    title: {
-      rendered: "Mr. Trilok Kumar Singh",
-    },
-    featured_media: 66804,
-    acf: {
-      "staff-qualification": "Ph.D. (pursuing)",
-      staff_designation: "Teaching Assistant & Research Scholar",
-      schools: [1009],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Mr.-Trilok-Kumar-Singh.png",
-  },
+
+
+
+  // {
+  //   id: 66802,
+  //   slug: "mr-trilok-kumar-singh",
+  //   title: {
+  //     rendered: "Mr. Trilok Kumar Singh",
+  //   },
+  //   featured_media: 66804,
+  //   acf: {
+  //     "staff-qualification": "Ph.D. (pursuing)",
+  //     staff_designation: "Teaching Assistant & Research Scholar",
+  //     schools: [1009],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Mr.-Trilok-Kumar-Singh.png",
+  // },
 ];

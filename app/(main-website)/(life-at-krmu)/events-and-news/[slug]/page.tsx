@@ -22,6 +22,7 @@ type NewsEventItem = {
   };
   acf: {
     event_images: number[];
+    keywords: string;
   };
   yoast_head_json: {
     title: string;
@@ -50,12 +51,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteMetaTitle = singleNewsEvents?.yoast_head_json?.title;
   const siteMetaDescription = singleNewsEvents?.yoast_head_json?.description;
   const siteCanonicalUrl = `${process.env.NEXT_PUBLIC_MAIN_URL}/events-and-news/${slug}`;
-
+  const siteKeyword = singleNewsEvents?.acf?.keywords;
   const isForceNoIndex = NoIndexEventsSlugs.includes(slug);
 
   return {
     title: siteMetaTitle || siteTitle || "K.R. Mangalam University",
     description: siteMetaDescription || siteTitle || "",
+    keywords: siteKeyword || "",
     alternates: {
       canonical: siteCanonicalUrl || "",
     },
@@ -109,6 +111,7 @@ const page = async ({ params }: Props) => {
       )}
       {singleNewsEvents && (
         <NewsEventsImageContent
+          slug={slug}
           content={singleNewsEvents?.content?.rendered}
           bgSlideImageIds={singleNewsEvents?.acf?.event_images}
         />

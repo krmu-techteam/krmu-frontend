@@ -33,8 +33,8 @@ const SchoolDeansVision = ({
       // }}
     >
       <div className="max-w-[1664px] mx-auto w-full testing">
-        <div className="text-center text-white text-3xl sm:text-5xl mb-5 lg:text-[64px]">
-          <h4 className="leading-[1]">{title}</h4>
+        <div className="text-center text-white text-3xl sm:text-5xl mb-5 ">
+          <h4 className="leading-[1] ">{title}</h4>
           <h5 className="leading-[1.2] font-bold">{subtitle}</h5>
         </div>
         <div
@@ -46,13 +46,15 @@ const SchoolDeansVision = ({
           }}
         >
           <div className="xl:w-3/12 flex justify-center xl:block">
-            <Image
-              src={`${STRAPI_URL}${deanImgUrl}`}
-              width={358}
-              height={465}
-              alt={deanName}
-              className="rounded-[25px] object-cover shadow-xl"
-            />
+            <div className="bg-white w-fit rounded-3xl flex justify-center items-center">
+              <Image
+                src={`${STRAPI_URL}${deanImgUrl}`}
+                width={358}
+                height={465}
+                alt={deanName}
+                className="rounded-[25px] object-cover shadow-xl"
+              />
+            </div>
           </div>
           <div className="xl:w-9/12 text-white dean_heading_h3 flex flex-col items-center xl:items-start text-center xl:text-left">
             {/* Mobile View: Name and Designation directly below image */}
@@ -69,10 +71,9 @@ const SchoolDeansVision = ({
               >
                 <Mail size={16} /> <span>{deanEmail}</span>
               </Link>
-              
             </div>
 
-            <div className="text-sm sm:text-base leading-relaxed mb-6 xl:mb-0">
+            <div className="text-sm sm:text-base text-justify md:text-left leading-relaxed mb-6 xl:mb-0">
               {desc && <BlocksRenderer content={desc} />}
             </div>
 
@@ -81,13 +82,13 @@ const SchoolDeansVision = ({
               <p className="text-2xl md:text-[32px] mb-2 font-bold">
                 {deanName}
               </p>
+              <p className="text-sm sm:text-base opacity-90">{desg}</p>
               <Link
                 href={`mailto:${deanEmail}`}
                 className="text-base flex items-center gap-2 hover:underline opacity-80 mb-3"
               >
                 <Mail size={16} /> <span>{deanEmail}</span>
               </Link>
-              <p className="text-sm sm:text-base opacity-90">{desg}</p>
             </div>
           </div>
         </div>

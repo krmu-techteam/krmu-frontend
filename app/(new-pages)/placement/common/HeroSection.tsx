@@ -1,0 +1,56 @@
+import Image from "next/image";
+import Link from "next/link";
+
+const HeroSection = () => {
+  return (
+    <section className="relative pt-8 md:pt-28 xl:pt-32 bg-[url('/placements/main/pl-hero-bg-image.webp')] bg-cover bg-left-top">
+      {/* <Image
+        src=""
+        alt="Hero Background"
+        fill
+        className="object-cover object-left w-full" 
+        priority  
+      /> */}
+      <div className="max-w-7xl mx-auto w-full z-10 relative flex flex-col md:flex-row items-center lg:items-start px-5 xl:px-0 gap-5 sm:gap-0">
+        <div className="w-full md:w-1/2 font-poppins pt-20">
+          <p className="text-base font-medium tracking-[7px] uppercase text-[#8d5552] mb-1.5">
+            Placement
+          </p>
+          <h1 className="text-4xl lg:text-[68px] font-bold text-[#001836] mb-2 md:mb-6 md:max-w-xl font-newsreader">
+            Your Career Starts Here. 92% Placement Rate.
+          </h1>
+          <p className="text-xl md:max-w-[468px] mb-6 text-[#43474F]">
+            Verifiable data, exceptional outcomes. Discover why top global
+            recruiters consistently choose our graduates for leadership roles.
+          </p>
+          <div className="space-x-2 space-y-2">
+            <Link
+              href="/placements/students/#drive_calendar_scroll"
+              className="bg-[#001836] border border-[#001836] text-white py-3 px-5 shadow-[0px_6px_16px_rgba(0,23,51,0.25)] inline-block"
+            >
+              View Detailed Report
+            </Link>
+            <Link
+              href="https://calendly.com/training-cdc-krmangalam/new-meeting"
+              target="_blank"
+              className="border border-[#001836] text-[#001732] bg-white xl:bg-transparent py-3 px-5 inline-block"
+            >
+              Partner with Us
+            </Link>
+          </div>
+        </div>
+        <div className="w-full md:w-1/2 flex justify-center">
+          <Image
+            src="https://www.krmangalam.edu.in/images/placement-hero-girl.png"
+            alt="K.R. Mangalam University placement student"
+            className="object-contain"
+            width={522}
+            height={625}
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;

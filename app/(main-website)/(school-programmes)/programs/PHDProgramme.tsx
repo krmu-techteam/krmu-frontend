@@ -14,9 +14,10 @@ import PHDTestimonialsAcc from "./phd/comp/PHDTestimonialsAcc";
 
 type Props = {
   phdData: PhDProgramme;
+  slug?: string;
 };
 
-const PHDProgrammes = ({ phdData }: Props) => {
+const PHDProgrammes = ({ phdData, slug }: Props) => {
   if (!phdData) return null; // prevent crash if no data at all
 
   return (
@@ -28,6 +29,7 @@ const PHDProgrammes = ({ phdData }: Props) => {
           feePerYear={phdData.fee_per_year}
           eligibleCriteria={phdData.eligibility_criteria}
           bgimg={phdData.bgimg?.url}
+          slug={slug}
         />
       )}
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 const admissionCards = [
   {
     id: 15292,
-    title: "Start your application",
+    title: "Start Your Application at",
     description: "admissions.krmangalam.edu.in",
     mobcounting: "01",
     link: "admissions.krmangalam.edu.in",
@@ -26,7 +26,7 @@ const admissionCards = [
   {
     id: 15295,
     title: "Personal Interview",
-    description: " Attend our Faculty-Led Interview ",
+    description: " Attend our faculty-led interview ",
     mobcounting: "04",
     link: null,
   },
@@ -153,7 +153,7 @@ const Admission2Process = () => {
           Admission Process
         </h2>
         <p className="sub-heading">
-          Commence your Journey in just 6 simple steps
+          Commence Your Journey in Just 6 Simple Steps
         </p>
       </div>
       <div className="max-w-[1320px] mx-auto w-full mt-2.5 hidden lg:block px-4">

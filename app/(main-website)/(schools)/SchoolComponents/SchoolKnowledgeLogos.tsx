@@ -24,7 +24,7 @@ const SchoolKnowledgeLogos = ({ logos }: Props) => {
   };
 
   const basisClass = getBasis(logos?.length || 0);
-  const showArrows = logos?.length > 4;
+  const showArrows = logos?.length > 5;
 
   return (
     <div className="px-12 rounded-[20px]">

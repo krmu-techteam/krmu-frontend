@@ -9,7 +9,7 @@ const VirtualSchedule = () => {
           Schedule Your <br /> Exclusive Campus <br /> Tour Today!
         </h4>
         <p className="mb-5">
-          At K.R Mangalam University, we believe that the first step towards an
+          At K.R. Mangalam University, we believe that the first step towards an
           exceptional educational journey begins with exploration. That’s why we
           invite you to schedule an exclusive campus tour and discover the
           extraordinary environment we’ve crafted for you.
@@ -36,11 +36,11 @@ const VirtualSchedule = () => {
           </div>
           <div className="w-10/12">
             <h6 className="text-xl">
-              <strong>Personalized Exploration</strong>
+              <strong>Personalised Exploration</strong>
             </h6>
             <p>
               Our campus tours go beyond standard visits; they’re tailored
-              journeys that resonate with your interests and aspirations
+              journeys that resonate with your interests and aspirations.
             </p>
           </div>
         </div>
@@ -82,7 +82,7 @@ const VirtualSchedule = () => {
               <strong>Feel the Campus Vibrancy</strong>
             </h6>
             <p>
-              Immerse yourself in the dynamic campus ambiance, providing a
+              Immerse yourself in the dynamic campus ambience, providing a
               genuine taste of campus life.
             </p>
           </div>

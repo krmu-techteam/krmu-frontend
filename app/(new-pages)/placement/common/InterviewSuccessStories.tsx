@@ -1,0 +1,56 @@
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { interviewSuccessStories } from "../constant";
+import InterviewSuccessStoryCard from "./InterviewSuccessStoryCard";
+import Divider from "./Divider";
+
+const InterviewSuccessStories = () => {
+  return (
+    <section className="py-10 md:py-20 px-5 xl:px-0">
+      <div className="max-w-7xl mx-auto w-full font-poppins">
+        <div className="">
+          <h5 className="text-[#7A1F2B] text-xs tracking-[2px] mb-2.5 uppercase">
+            Interview
+          </h5>
+
+          <h3 className="text-4xl md:text-5xl font-semibold text-[#001836] mb-5 font-newsreader">
+            Student Success Stories
+          </h3>
+        </div>
+        <div className="relative mt-10">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full relative"
+          >
+            <CarouselContent>
+              {interviewSuccessStories.map((story, i) => (
+                <CarouselItem
+                  key={i}
+                  className="pl-5 basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+                >
+                  <InterviewSuccessStoryCard key={story.id} story={story} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="bg-black text-white w-10 h-10 left-0 xl:-left-14 cursor-pointer  hover:bg-black/80
+                    hover:text-white
+                    disabled:opacity-40" />
+            <CarouselNext className="bg-black text-white w-10 h-10 right-0 xl:-right-14 cursor-pointer  hover:bg-black/80
+                    hover:text-white
+                    disabled:opacity-40" />
+          </Carousel>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default InterviewSuccessStories;

@@ -80,7 +80,7 @@ const CommunityConnectNSSAward = () => {
                       competition
                     </td>
                     <td className="border p-2" rowSpan={8}>
-                      University Level Camp, Maharshi Markendshwar University,
+                      University Level Camp, Maharshi Markandeshwar University,
                       Mullana
                     </td>
                     <td className="border p-2">2024-25</td>

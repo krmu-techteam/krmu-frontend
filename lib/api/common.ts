@@ -19,8 +19,8 @@ import { BlogImageIdResponse } from "../types/blogs/single-blog";
 export async function getAlumniData(): Promise<AlumniApiResponse["data"]> {
   try {
     const res = await fetch(`${FETCH_STRAPI_URL}/api/alumnis?populate=*`, {
-      next: { revalidate: 60 }
-    },);
+      next: { revalidate: 60 },
+    });
 
     if (!res.ok) throw new Error("Failed to fetch Alumni Data");
 
@@ -34,8 +34,8 @@ export async function getAlumniData(): Promise<AlumniApiResponse["data"]> {
 export async function getFacilityData(): Promise<FacilityAPIResponse["data"]> {
   try {
     const res = await fetch(`${FETCH_STRAPI_URL}/api/facilities?populate=*`, {
-      next: { revalidate: 60 }
-    },);
+      next: { revalidate: 60 },
+    });
 
     if (!res.ok) throw new Error("Failed to fetch Facility Data");
 
@@ -50,8 +50,8 @@ export async function getFacilityData(): Promise<FacilityAPIResponse["data"]> {
 export async function getTestimonialsData(): Promise<TestimonialItem[]> {
   try {
     const res = await fetch(`${FETCH_STRAPI_URL}/api/testimonials?populate=*`, {
-      next: { revalidate: 60 }
-    },);
+      next: { revalidate: 60 },
+    });
     if (!res.ok) throw new Error("Failed to fetch Testimonials Data");
 
     const json: TestimonialResponse = await res.json();
@@ -69,7 +69,7 @@ export async function getNewsAndEventsData(): Promise<
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/news-and-events?populate=*`,
       {
-        next: { revalidate: 60 }
+        next: { revalidate: 60 },
       },
     );
     if (!res.ok) throw new Error("Failed to fetch News and Events Data");
@@ -89,7 +89,7 @@ export async function getTopbarData(): Promise<TOPBARResponse["data"] | null> {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/topbar-menu?populate[TopbarMenuItems]=true&populate[topbarsociallinks][populate][socialicon]=true&populate[topbarsociallinks][fields][0]=url`,
       {
-        next: { revalidate: 60 }
+        next: { revalidate: 60 },
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Topbar Data");
@@ -107,7 +107,7 @@ export async function getMainMenu() {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/main-menu?populate[MainMenuItems][on][menu.dropdown-menu][fields][0]=title&populate[MainMenuItems][on][menu.dropdown-menu][populate][menu_sections][populate]=*&populate[MainMenuItems][on][menu.dropdown-menu][populate][menuimg][populate]=*&populate[MainMenuItems][on][menu.menu-button][populate]=*&populate[MainMenuItems][on][menu.menu-links][populate]=*`,
       {
-        next: { revalidate: 60 }
+        next: { revalidate: 60 },
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Main Menu Data");
@@ -146,12 +146,14 @@ export async function getMainMenu() {
 //   }
 // }
 
-export async function getHeaderMenu(): Promise<HeaderMenuResponse["data"] | null> {
+export async function getHeaderMenu(): Promise<
+  HeaderMenuResponse["data"] | null
+> {
   try {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/header-menu-temp?populate[headermenus][on][temp-menus.academic-menu][fields][0]=title&populate[headermenus][on][temp-menus.academic-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][academicmenu][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][discovermenu][populate]=*&populate[headermenus][on][temp-menus.academic-menu][populate][acadcounter][populate]=*&populate[headermenus][on][menu.menu-links][populate]=*&populate[headermenus][on][menu.menu-button][populate]=*&populate[headermenus][on][temp-menus.admissions][fields][0]=title&populate[headermenus][on][temp-menus.admissions][fields][1]=backgroundimagetext&populate[headermenus][on][temp-menus.admissions][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][enrollnow][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][scholarships][populate]=*&populate[headermenus][on][temp-menus.admissions][populate][visitus][populate]=*&populate[headermenus][on][temp-menus.placement-menu][fields][0]=title&populate[headermenus][on][temp-menus.placement-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.placement-menu][populate][placementcounter][populate]=*&populate[headermenus][on][temp-menus.placement-menu][populate][placement][populate]=*&populate[headermenus][on][temp-menus.research-menu][fields][0]=title&populate[headermenus][on][temp-menus.research-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.research-menu][populate][researchcounter][populate]=*&populate[headermenus][on][temp-menus.research-menu][populate][research][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][fields][0]=title&populate[headermenus][on][temp-menus.life-at-krmu][fields][1]=backgroundimagetext&populate[headermenus][on][temp-menus.life-at-krmu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][populate][lifeatkrmu1][populate]=*&populate[headermenus][on][temp-menus.life-at-krmu][populate][lfeatkrmu2][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][fields][0]=title&populate[headermenus][on][temp-menus.about-us-menu][populate][backgroundimage][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][aboutuscounter][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][overview][populate]=*&populate[headermenus][on][temp-menus.about-us-menu][populate][administration][populate]=*`,
       {
-        next: { revalidate: 60 }
+        next: { revalidate: 60 },
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Header Menu Data");
@@ -234,7 +236,7 @@ export async function getHeaderMenu(): Promise<HeaderMenuResponse["data"] | null
 export async function getMetaInfo(): Promise<GlobalResponse["data"] | null> {
   try {
     const res = await fetch(`${FETCH_STRAPI_URL}/api/global?populate=*`, {
-      next: { revalidate: 60 }
+      next: { revalidate: 60 },
     });
     if (!res.ok) throw new Error("Failed to fetch Meta info Data");
 
@@ -253,7 +255,7 @@ export async function getAdvisoryBoard(): Promise<
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/advisory-board?populate[advisoryboard][fields][0]=title&populate[advisoryboard][fields][1]=advisoryboardinfo&populate[advisoryboard][populate][advisoryimage]=true`,
       {
-        next: { revalidate: 60 }
+        next: { revalidate: 60 },
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Advisory Board Data");
@@ -273,7 +275,7 @@ export async function getSchoolStudentAchievements(
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/student-achievements?sort[0]=updatedAt:desc&filters[school_categories][name][$eq]=${cat}&populate[achivementimage]=true&pagination[pageSize]=3&pagination[page]=1&status=published&locale[0]=en`,
       {
-        next: { revalidate: 60 }
+        next: { revalidate: 60 },
       },
     );
     if (!res.ok) throw new Error("Failed to fetch Student Achievements Data");
@@ -335,7 +337,7 @@ export async function isCustomPage(slug: string = ""): Promise<CustomPage[]> {
   try {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/custom-pages?filters[slug][$eq]=${slug}&fields[0]=slug&fields[1]=enable_disable_custom_page&status=published&locale[0]=en`,
-      {next: { revalidate: 3600 }}
+      { next: { revalidate: 3600 } },
     );
     if (!res.ok) return [];
     const json: CustomPageResponse = await res.json();
@@ -354,7 +356,7 @@ export async function getSchoolProgrammeSEO(
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/school-programmes?filters[programmeslug][$eq]=${slug}&fields[0]=programmeslug&populate[SEO][fields][0]=metaTitle&populate[SEO][fields][1]=metaDescription&populate[SEO][fields][2]=metaKeyword&populate[SEO][fields][3]=canonical&populate[SEO][fields][4]=noIndex&populate[SEO][fields][5]=tags`,
       {
-        next: { revalidate: 60 }
+        next: { revalidate: 60 },
       },
     );
     if (!res.ok) throw new Error("Failed to fetch School Programme SEO");
@@ -429,7 +431,7 @@ export async function getWordImageById(imgId: number): Promise<string> {
     const res = await fetch(
       `${KRMUWordUrl}/wp-json/wp/v2/media/${imgId}?_fields=guid`,
       {
-        next: { revalidate: 60 }
+        next: { revalidate: 60 },
       },
     );
 
@@ -560,12 +562,12 @@ export function createCourseSchema(data: CourseSchemaData) {
       courseWorkload: instance.courseWorkload,
       courseSchedule: instance.courseSchedule
         ? {
-          "@type": "Schedule",
-          duration: instance.courseSchedule.duration,
-          repeatFrequency: instance.courseSchedule.repeatFrequency,
-          repeatCount: instance.courseSchedule.repeatCount,
-          startDate: instance.courseSchedule.startDate,
-        }
+            "@type": "Schedule",
+            duration: instance.courseSchedule.duration,
+            repeatFrequency: instance.courseSchedule.repeatFrequency,
+            repeatCount: instance.courseSchedule.repeatCount,
+            startDate: instance.courseSchedule.startDate,
+          }
         : undefined,
     })),
   };
@@ -649,13 +651,18 @@ export function createPersonSchema(data: PersonSchemaProps) {
 }
 
 interface WebsiteSchemaProps {
-  name: string,
+  name: string;
   alternateName?: string;
-  url: string,
-  searchPath?: string,
+  url: string;
+  searchPath?: string;
 }
 
-export const createWebsiteSchema = ({ name, alternateName, url, searchPath }: WebsiteSchemaProps) => {
+export const createWebsiteSchema = ({
+  name,
+  alternateName,
+  url,
+  searchPath,
+}: WebsiteSchemaProps) => {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Website",
@@ -667,25 +674,27 @@ export const createWebsiteSchema = ({ name, alternateName, url, searchPath }: We
       target: `${url.replace(/\/$/, "")}${searchPath}{search_term_string}`,
       "query-input": "required name=search_term_string",
     },
-  }
+  };
   return JSON.stringify(schema);
-}
-
-interface ContactPoint {
-  telephone: string;
-  contactType: string;
-  contactOption?: string;
-  areaServed?: string;
-  availableLanguage?: string;
-}
+};
 
 interface OrganizationSchemaProps {
   name: string;
   alternateName?: string;
   url: string;
   logo: string;
+  description?: string;
+  telephone?: string;
+  email?: string;
+  foundingDate?: string;
+  address?: {
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
   sameAs?: string[];
-  contactPoint?: ContactPoint;
 }
 
 export const createOrganizationSchema = ({
@@ -693,34 +702,126 @@ export const createOrganizationSchema = ({
   alternateName,
   url,
   logo,
-  contactPoint,
+  description,
+  telephone,
+  email,
+  foundingDate,
+  address,
   sameAs = [],
 }: OrganizationSchemaProps) => {
-
   const cleanUrl = (val: string) => val.replace(/\s+/g, "");
 
-  const schema = {
-    "@context": "https://schema.org/",
-    "@type": "Organization",
-    name,
-    alternateName,
-    url: cleanUrl(url),
-    logo: cleanUrl(logo),
-    contactPoint: contactPoint
-      ? {
-        "@type": "ContactPoint",
-        telephone: contactPoint.telephone,
-        contactType: contactPoint.contactType,
-        contactOption: contactPoint.contactOption || "TollFree",
-        areaServed: contactPoint.areaServed || "IN",
-        availableLanguage: contactPoint.availableLanguage || "en",
-      }
-      : undefined,
-    sameAs: sameAs.map(cleanUrl),
-  };
-
-  return JSON.stringify(schema, null, 2);
+  return JSON.stringify(
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "@id": `${cleanUrl(url)}#educationalorganization`,
+      name,
+      alternateName,
+      url: cleanUrl(url),
+      logo: cleanUrl(logo),
+      description,
+      address: address && {
+        "@type": "PostalAddress",
+        streetAddress: address.streetAddress,
+        addressLocality: address.addressLocality,
+        addressRegion: address.addressRegion,
+        postalCode: address.postalCode,
+        addressCountry: address.addressCountry,
+      },
+      telephone,
+      email,
+      sameAs: sameAs.map(cleanUrl),
+      foundingDate,
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Academic Programmes",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Course",
+              name: "Undergraduate Programmes",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Course",
+              name: "Postgraduate Programmes",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Course",
+              name: "Ph.D. Programmes",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Course",
+              name: "Diploma Programmes",
+            },
+          },
+        ],
+      },
+    },
+    null,
+    2,
+  );
 };
+
+// interface ContactPoint {
+//   telephone: string;
+//   contactType: string;
+//   contactOption?: string;
+//   areaServed?: string;
+//   availableLanguage?: string;
+// }
+
+// interface OrganizationSchemaProps {
+//   name: string;
+//   alternateName?: string;
+//   url: string;
+//   logo: string;
+//   sameAs?: string[];
+//   contactPoint?: ContactPoint;
+// }
+
+// export const createOrganizationSchema = ({
+//   name,
+//   alternateName,
+//   url,
+//   logo,
+//   contactPoint,
+//   sameAs = [],
+// }: OrganizationSchemaProps) => {
+//   const cleanUrl = (val: string) => val.replace(/\s+/g, "");
+
+//   const schema = {
+//     "@context": "https://schema.org/",
+//     "@type": "EducationalOrganization",
+//     name,
+//     alternateName,
+//     url: cleanUrl(url),
+//     logo: cleanUrl(logo),
+//     contactPoint: contactPoint
+//       ? {
+//           "@type": "ContactPoint",
+//           telephone: contactPoint.telephone,
+//           contactType: contactPoint.contactType,
+//           contactOption: contactPoint.contactOption || "TollFree",
+//           areaServed: contactPoint.areaServed || "IN",
+//           availableLanguage: contactPoint.availableLanguage || "en",
+//         }
+//       : undefined,
+//     sameAs: sameAs.map(cleanUrl),
+//   };
+
+//   return JSON.stringify(schema, null, 2);
+// };
 
 interface CollageOrUniversitySchemaProps {
   name: string;
@@ -730,20 +831,120 @@ interface CollageOrUniversitySchemaProps {
   sameAs: string[];
 }
 
-export const createCollageOrUniversitySchema = ({ name, alternateName, url, logo, sameAs = [] }: CollageOrUniversitySchemaProps) => {
+export const createCollageOrUniversitySchema = ({
+  name,
+  alternateName,
+  url,
+  logo,
+  sameAs = [],
+}: CollageOrUniversitySchemaProps) => {
   const cleanUrl = (val: string) => val.replace(/\s+/g, "");
   const schema = {
     "@context": "https://schema.org/",
-    "@type": "CollageOrUniversity",
+    "@type": "CollegeOrUniversity",
     name: name,
     alternateName: alternateName,
     url: url,
     logo: logo,
-    sameAs: sameAs.map(cleanUrl)
-  }
+    sameAs: sameAs.map(cleanUrl),
+  };
   return JSON.stringify(schema);
+};
+
+type CollageOrUniversityHomepageSchemaProps = {
+  name: string;
+  alternateName?: string;
+  url: string;
+  logo: string;
+  sameAs?: string[];
+  address?: {
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
+  telephone?: string;
+  email?: string;
+  foundingDate?: string;
+};
+
+export const createCollageOrUniversityHomepageSchema = ({
+  name,
+  alternateName,
+  url,
+  logo,
+  sameAs = [],
+  address,
+  telephone,
+  email,
+  foundingDate,
+}: CollageOrUniversityHomepageSchemaProps) => {
+  const cleanUrl = (val: string) => val.replace(/\s+/g, "");
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    name,
+    alternateName,
+    url,
+    logo,
+    sameAs: sameAs.map(cleanUrl),
+    ...(address && {
+      address: {
+        "@type": "PostalAddress",
+        ...address,
+      },
+    }),
+    ...(telephone && { telephone }),
+    ...(email && { email }),
+    ...(foundingDate && { foundingDate }),
+    ...(telephone && {
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone,
+        contactType: "Admissions",
+      },
+    }),
+  };
+
+  return JSON.stringify(schema);
+};
+
+interface ItemListProgramme {
+  name: string;
+  url: string;
 }
 
+interface CreateItemListSchemaProps {
+  name: string;
+  description?: string;
+  url: string;
+  programmes: ItemListProgramme[];
+}
+
+export const createProgrammeItemListSchema = ({
+  name,
+  description,
+  url,
+  programmes,
+}: CreateItemListSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    ...(description && { description }),
+    url,
+    itemListElement: programmes.map((programme, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: programme.name,
+      url: programme.url,
+    })),
+  };
+
+  return JSON.stringify(schema);
+};
 
 type TocFaq = {
   id: number;
@@ -762,4 +963,307 @@ export function mapTocToFaqSchemaData(tocData: TocFaq[]) {
       answer: item.ans.replace(/\r?\n|\r/g, "").trim(),
     })),
   );
+}
+
+interface HowToStep {
+  name: string;
+  text: string;
+}
+
+interface HowToSchemaProps {
+  name: string;
+  description: string;
+  steps: HowToStep[];
+}
+
+export const createHowToSchema = ({
+  name,
+  description,
+  steps,
+}: HowToSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
+  };
+
+  return JSON.stringify(schema);
+};
+
+export function createCollegeSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    name: "K.R. Mangalam University",
+    url: "https://www.krmangalam.edu.in/",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Sohna Road",
+      addressLocality: "Gurugram",
+      addressRegion: "Haryana",
+      postalCode: "122103",
+      addressCountry: "IN",
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Gurugram",
+      },
+      {
+        "@type": "City",
+        name: "Delhi",
+      },
+      {
+        "@type": "City",
+        name: "Faridabad",
+      },
+      {
+        "@type": "City",
+        name: "Noida",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Delhi NCR",
+      },
+      {
+        "@type": "State",
+        name: "Haryana",
+      },
+    ],
+  };
+}
+
+type QuantitativeValue = {
+  name: string;
+  value: number | string;
+};
+
+type AmenityFeature = {
+  name: string;
+  value: string | number;
+};
+
+interface CommonCollegeUniversitySchemaProps {
+  name: string;
+  alternateName?: string;
+  url: string;
+  logo: string;
+  award?: string;
+  numberOfEmployees?: QuantitativeValue;
+  amenityFeature?: AmenityFeature[];
+  sameAs?: string[];
+}
+
+export function commonCollegeUniversitySchema({
+  name,
+  alternateName,
+  url,
+  logo,
+  award,
+  numberOfEmployees,
+  amenityFeature = [],
+  sameAs = [],
+}: CommonCollegeUniversitySchemaProps) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    name,
+    ...(alternateName && { alternateName }),
+    url,
+    logo,
+    ...(award && { award }),
+    ...(numberOfEmployees && {
+      numberOfEmployees: {
+        "@type": "QuantitativeValue",
+        name: numberOfEmployees.name,
+        value: numberOfEmployees.value,
+      },
+    }),
+    ...(amenityFeature.length > 0 && {
+      amenityFeature: amenityFeature.map((feature) => ({
+        "@type": "LocationFeatureSpecification",
+        name: feature.name,
+        value: feature.value,
+      })),
+    }),
+    ...(sameAs.length > 0 && { sameAs }),
+  };
+}
+
+type WebPageSchemaProps = {
+  name: string;
+  url: string;
+  description: string;
+  aboutName: string;
+  aboutUrl: string;
+};
+
+export const createWebPageSchema = ({
+  name,
+  url,
+  description,
+  aboutName,
+  aboutUrl,
+}: WebPageSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    url,
+    description,
+    about: {
+      "@type": "CollegeOrUniversity",
+      name: aboutName,
+      url: aboutUrl,
+    },
+  };
+
+  return JSON.stringify(schema);
+};
+
+type AboutPageSchemaProps = {
+  name: string;
+  url: string;
+  description: string;
+  mainEntityName: string;
+  mainEntityUrl: string;
+};
+
+export const createAboutPageSchema = ({
+  name,
+  url,
+  description,
+  mainEntityName,
+  mainEntityUrl,
+}: AboutPageSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    url,
+    description,
+    mainEntity: {
+      "@type": "CollegeOrUniversity",
+      name: mainEntityName,
+      url: mainEntityUrl,
+    },
+  };
+
+  return JSON.stringify(schema);
+};
+
+
+export interface SchoolPageSchemaProps {
+  name: string;
+  url: string;
+  description: string;
+  aboutName: string;
+  aboutUrl: string;
+}
+
+export const createSchoolPageSchema = ({
+  name,
+  url,
+  description,
+  aboutName,
+  aboutUrl,
+}: SchoolPageSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    url,
+    description,
+    about: {
+      "@type": "CollegeOrUniversity",
+      name: aboutName,
+      url: aboutUrl,
+    },
+  };
+
+  return JSON.stringify(schema);
+};
+
+type PlacementOverviewSchemaProps = {
+  name: string;
+  url: string;
+  description: string;
+  websiteName: string;
+  websiteUrl: string;
+};
+
+export const createPlacementOverviewSchema = ({
+  name,
+  url,
+  description,
+  websiteName,
+  websiteUrl,
+}: PlacementOverviewSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    url,
+    description,
+    isPartOf: {
+      "@type": "WebSite",
+      name: websiteName,
+      url: websiteUrl,
+    },
+  };
+
+  return JSON.stringify(schema);
+};
+
+// lib/schema/videoSchema.ts
+
+export interface VideoSchemaProps {
+  "@context": string;
+  "@type": string;
+  name: string;
+  description: string;
+  thumbnailUrl: string[];
+  uploadDate: string;
+  duration: string; // ISO 8601 format (e.g. PT3M45S)
+  embedUrl: string;
+  contentUrl: string;
+  publisher: {
+    "@type": string;
+    name: string;
+    logo: {
+      "@type": string;
+      url: string;
+    };
+  };
+}
+
+export function createVideoSchema({
+  name,
+  description,
+  thumbnailUrl,
+  uploadDate,
+  duration,
+  embedUrl,
+  contentUrl,
+}: VideoSchemaProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name,
+    description,
+    thumbnailUrl: [thumbnailUrl],
+    uploadDate,
+    duration,
+    embedUrl,
+    contentUrl,
+  };
+
+  return JSON.stringify(schema);
 }

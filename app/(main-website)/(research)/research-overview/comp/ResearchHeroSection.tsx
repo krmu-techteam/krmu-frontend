@@ -44,31 +44,31 @@ const ResearchHeroSection = () => {
         </div>
         <p>
           <strong>
-            {` Innovation fuels discovery at the K.R. Mangalam University,
-            contributed by dedicated faculties and over 5,000 undergraduates,
-            postgraduates, and research scholars working in the
-            multidisciplinary domains reflecting compliance with the United
-            Nation’s Sustainable Development Goals (SDG) and uplifting Research
-            Excellence Framework at the global level.`}
+            Innovation fuels discovery at K.R. Mangalam University, driven by
+            dedicated faculty members and more than 5,000 undergraduate,
+            postgraduate, and research scholars working across multidisciplinary
+            domains. Their research reflects a commitment to the United Nations
+            Sustainable Development Goals (SDGs) and contributes to advancing
+            research excellence at the global level.
           </strong>
         </p>
         <br />
         <p>
-          The Research and Development Cell is home to disparate schools under
-          the umbrella of K.R. Mangalam University located in the heart of
-          Gurugram, Haryana. Professors, Researchers, and students are actively
-          participating in the interdisciplinary research and collaborate with
-          experts from different disciplines and institutions, allowing access
-          to pooling of resources imparting significantly enhancement in the
-          research capabilities and enable the pursuit of more ambitious
-          projects. The young scientific minds are encouraged to identify and
-          understand the root cause of the core problem and find the best
-          solution to culminate the issue at the ground level. Also, we have
-          close links to the Centre of Excellence empowering research
-          orientation among the professors and students. Moreover, the
-          fundamental motive is to transform discoveries and novelties into
-          remedies and other programmes promoting scientific upgradation and
-          inculcating the findings for benefit of the society.
+          The Research and Development Cell brings together various schools
+          under the umbrella of K.R. Mangalam University, located in Gurugram,
+          Haryana. Professors, researchers, and students actively participate in
+          interdisciplinary research and collaborate with experts from different
+          disciplines and institutions. These collaborations facilitate the
+          pooling of resources, significantly enhance research capabilities, and
+          enable the pursuit of more ambitious projects. Young scientific minds
+          are encouraged to identify and understand the root causes of core
+          problems and develop effective solutions to address them at the
+          grassroots level. The university also maintains close links with its
+          Centres of Excellence, which promote a strong research orientation
+          among faculty members and students. Moreover, the fundamental
+          objective is to transform discoveries and innovations into practical
+          solutions and initiatives that promote scientific advancement and
+          contribute to the betterment of society.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-20 gap-5 gap">
           <Link

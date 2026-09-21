@@ -6,9 +6,9 @@ const ContactEnquiries = () => {
     <section className="bg-[url(/placements/contact-bg.webp)] bg-no-repeat bg-cover bg-center py-[30px] px-4">
       <div className="max-w-[1664px] mx-auto lg:flex">
         <div className="lg:w-1/2 text-[#3d5fa5]">
-          <h4 className="leading-[1.2] text-[45px] font-semibold mb-5">
+          <h2 className="leading-[1.2] text-[45px] font-semibold mb-5">
             Contact and Inquiries
-          </h4>
+          </h2>
           <p className="mb-5">
             For further information or to get involved with our research
             endeavours, please contact our research department:
@@ -47,9 +47,9 @@ const ContactEnquiries = () => {
               </Link>{" "}
             </li>
           </ul>
-          <h4 className="leading-[1.2] text-[45px] font-semibold my-5">
+          <h2 className="leading-[1.2] text-[45px] font-semibold my-5">
             Quick Links
-          </h4>
+          </h2>
 
           <div className="flex gap-10 flex-wrap">
             <Link href="https://dst.gov.in/call-for-proposals" target="_blank" rel="noopener noreferrer">

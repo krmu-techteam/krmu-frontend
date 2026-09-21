@@ -4,7 +4,7 @@ import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import Link from "next/link";
 
 const portfolioItems = [
-  "Long foarm feature stories, investigations and explainers",
+  "Long form feature stories, investigations and explainers",
   "Short films, OTT pilots and documentary projects",
   "Multimedia news packages for web, TV and mobile",
   "Audio series, podcasts and radio shows",
@@ -31,7 +31,7 @@ export default function PostgraduatePortfolio({
             portfolio and your research profile.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-[487px_1fr] gap-10 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[487px_1fr] gap-10 xl:gap-24 items-start">
           <div className="w-full flex justify-center lg:justify-start">
             <img
               src="/new-Programmes-Hero/See_what_our_postgraduates.png"

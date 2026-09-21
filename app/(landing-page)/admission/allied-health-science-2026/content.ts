@@ -24,7 +24,7 @@ export const Hero: HeroContent = {
       </span> Admissions Open 2026–27</span>
       <span class="hidden sm:block">ADMISSIONS <br />
       OPEN FOR <br />
-      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold">
+      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-[40px] xl:text-6xl font-bold">
        Medical & Allied <br />Sciences
       </span>
       <br />
@@ -41,7 +41,7 @@ export const Hero: HeroContent = {
 
 export const heroMarqueeData: HeroMarqueeSection = {
   messages: [
-         "₹56.6 LPA Highest Package",
+    "₹56.6 LPA Highest Package",
     "₹27 Cr Scholarships",
     "800+ Recruiters",
     "18K+ Alumni",
@@ -78,35 +78,35 @@ export const Counters: CounterItem[] = [
 // Recruiters list
 export const prominentRecruiters: ProminentRecruit[] = [
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/astra.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/astrazeneca.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/lupin.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/lupin.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/sun.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/sun.png",
+    alt: "Recruiter Logo",
+  },
+  { 
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/glenmark.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/glenmark.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/dr-reddy.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/drreddy.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/zydus.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/zydus.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/genzyme.png",
     alt: "Recruiter Logo",
   },
   {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/genzyme.png",
-    alt: "Recruiter Logo",
-  },
-  {
-    imgUrl: "/landingpage/allied-health-science-2026/recruiters/max.png",
+    imgUrl: "https://krmangalam.edu.in/images/landingpage/allied-health-science-2026/max.png",
     alt: "Recruiter Logo",
   },
 ];
@@ -495,13 +495,10 @@ export const applySectionData: ApplySectionData = {
   ],
 };
 
-
-
 export const programmeContent = {
   badge: "3 Specialisations",
   title: "KRMU’s Medical & Allied Sciences Programmes",
-  subtitle:
-    "All Our Programmes Comprise of Industry-relevant Curriculum",
+  subtitle: "All Our Programmes Comprise of Industry-relevant Curriculum",
 
   programmes: [
     {
@@ -543,12 +540,12 @@ export const programmeContent = {
   ],
 };
 
-
 export const eligibilityTerms = [
   {
-    description: "*Eligibility: Candidates must have passed the Higher Secondary (10+2), or equivalent examination recognised by any Indian University or a duly constituted Board with minimum 50% aggregate marks in PCM (Physics, Chemistry and Mathematics) / PCB (Physics, Chemistry and Biology) / PCMB (Physics, Chemistry, Mathematics and Biology."
+    description:
+      "*Eligibility: Candidates must have passed the Higher Secondary (10+2), or equivalent examination recognised by any Indian University or a duly constituted Board with minimum 50% aggregate marks in PCM (Physics, Chemistry and Mathematics) / PCB (Physics, Chemistry and Biology) / PCMB (Physics, Chemistry, Mathematics and Biology.",
   },
   {
-    description: "** Subject to Approval"
+    description: "** Subject to Approval",
   },
 ];

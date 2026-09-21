@@ -4,7 +4,7 @@ import { AuthorResponse } from "@/lib/types/blogs/auth-blogs";
 export async function getAuthInfoBySlug(authSlug: string = "") {
   try {
     const res = await fetch(
-      `https://krmangalam.edu.in/blog/wp-json/wp/v2/users?slug=${authSlug}&_fields=id,name,slug,acf.profile_image,acf`,
+      `https://wp.krmangalam.edu.in/blog/wp-json/wp/v2/users?slug=${authSlug}&_fields=id,name,slug,acf.profile_image,acf`,
       {
         next: {
           revalidate: 3600,
