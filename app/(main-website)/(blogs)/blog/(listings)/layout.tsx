@@ -17,7 +17,6 @@ const layout = ({ children }: Props) => {
           <aside className="w-full lg:w-1/5 order-2 lg:order-1">
             <CommonBlogSidebar />
           </aside>
-
           {/* MAIN CONTENT */}
           <main className="w-full lg:w-3/5 order-1 lg:order-2 min-h-screen">
             {children}

@@ -31,7 +31,7 @@ const HeroSection = () => {
               View Detailed Report
             </Link>
             <Link
-              href="https://calendly.com/training-cdc-krmangalam/new-meeting"
+              href="/placements/recruiters"
               target="_blank"
               className="border border-[#001836] text-[#001732] bg-white xl:bg-transparent py-3 px-5 inline-block"
             >

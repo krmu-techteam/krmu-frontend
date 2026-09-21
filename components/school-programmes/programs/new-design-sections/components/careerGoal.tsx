@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Fraunces, Inter, Poppins } from "next/font/google";
 import * as Icons from "lucide-react";
 import { CareerGoalPageContentType } from "../types/contentCareerGoal";
+import Link from "next/link";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -41,9 +42,38 @@ const CareerGoal = ({ slug, dataContent }: Props) => {
     setActiveCourseIdx(null);
   };
 
+  console.log("slug", slug);
+
   return (
     <section className="w-full bg-[#F7F0E0] text-[#012D52]">
       <div className="max-w-[1280px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-14">
+        {slug === "mba-digital-marketing" && (
+          <Link
+            href="https://www.krmangalam.edu.in/pdfs/mba-digital-marketing.pdf"
+            target="_blank"
+            className="flex items-center gap-2 text-[#87601A] font-semibold mb-2"
+          >
+            <Icons.Download size={18} /> Programme Handbook
+          </Link>
+        )}
+        {slug === "mba" && (
+          <Link
+            href="https://www.krmangalam.edu.in/pdfs/mba.pdf"
+            target="_blank"
+            className="flex items-center gap-2 text-[#87601A] font-semibold mb-2"
+          >
+            <Icons.Download size={18} /> Programme Handbook
+          </Link>
+        )}
+        {slug === "mba-fintech" && (
+          <Link
+            href="https://www.krmangalam.edu.in/pdfs/mba-fintech.pdf"
+            target="_blank"
+            className="flex items-center gap-2 text-[#87601A] font-semibold mb-2"
+          >
+            <Icons.Download size={18} /> Programme Handbook
+          </Link>
+        )}
         {/* Header */}
         <div className="mb-2">
           <span

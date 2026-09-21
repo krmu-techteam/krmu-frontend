@@ -71,17 +71,17 @@ const breadcrumbSchema = createBreadcrumbProgSchema([
   { name: "Placement", url: "https://www.krmangalam.edu.in/placement" },
   {
     name: "K.R. Mangalam University Placement Records & Statistics",
-    url: "https://www.krmangalam.edu.in/placement/records",
+    url: "https://www.krmangalam.edu.in/placements/records",
   },
 ]);
 
 const webPageSchema = createWebPageSchema({
   name: "K.R. Mangalam University Placement Records & Statistics",
-  url: "https://www.krmangalam.edu.in/placement/records",
+  url: "https://www.krmangalam.edu.in/placements/records",
   description:
     "Explore KRMU placement records, salary packages, top recruiters, and placement statistics showcasing career opportunities for K.R. Mangalam University students.",
   aboutName: "K.R. Mangalam University Placement Records & Statistics",
-  aboutUrl: "https://www.krmangalam.edu.in/placement/records",
+  aboutUrl: "https://www.krmangalam.edu.in/placements/records",
 });
 
 const page = () => {

@@ -22,7 +22,7 @@ const TwoYearArc = () => {
   const content = data.twoYearArc;
 
   const [activeSemester, setActiveSemester] = useState<number | null>(null);
-
+ 
   const renderIcon = (iconName: string) => {
     const IconComponent = (Icons as any)[iconName];
     if (IconComponent) {

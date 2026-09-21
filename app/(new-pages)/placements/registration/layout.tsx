@@ -1,7 +1,9 @@
 import { Newsreader, Poppins } from "next/font/google";
-import "./records.css";
+import "./registration.css";
+
 import HeaderWrapper from "@/app/(main-website)/components/Header/HeaderWrapper";
 import Footer from "@/app/(main-website)/components/Footer/Footer";
+import { Toaster } from "@/components/ui/sonner";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,7 +19,7 @@ const newsreader = Newsreader({
   display: "swap",
 });
 
-export default function Placementlayout({
+export default function RegistrationLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -25,13 +27,8 @@ export default function Placementlayout({
   return (
     <html lang="en" className={`${poppins.variable} ${newsreader.variable}`}>
       <body className="antialiased">
-        <div id="main-header">
-          <HeaderWrapper />
-        </div>
         {children}
-        {/* <div id="main-footer">
-          <Footer />
-        </div> */}
+        <Toaster position="top-right" richColors closeButton />
       </body>
     </html>
   );

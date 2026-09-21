@@ -80,21 +80,21 @@ const breadcrumbSchema = createBreadcrumbProgSchema([
   { name: "Home", url: "https://www.krmangalam.edu.in/" },
   {
     name: "Placement",
-    url: "https://www.krmangalam.edu.in/placement/students",
+    url: "https://www.krmangalam.edu.in/placements/students",
   },
   {
     name: "K.R. Mangalam University Placements for Students",
-    url: "https://www.krmangalam.edu.in/placement/students",
+    url: "https://www.krmangalam.edu.in/placements/students",
   },
 ]);
 
 const webPageSchema = createWebPageSchema({
   name: "K.R. Mangalam University Placements for Students",
-  url: "https://www.krmangalam.edu.in/placement/students",
+  url: "https://www.krmangalam.edu.in/placements/students",
   description:
     "Explore K.R. Mangalam University placement opportunities, student placements, career support, recruiters, and industry opportunities for students.",
   aboutName: "K.R. Mangalam University Placements for Students",
-  aboutUrl: "https://www.krmangalam.edu.in/placement/students",
+  aboutUrl: "https://www.krmangalam.edu.in/placements/students",
 });
 
 const personSchema = createPersonGraphSchema(

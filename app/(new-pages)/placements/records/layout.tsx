@@ -1,5 +1,5 @@
 import { Newsreader, Poppins } from "next/font/google";
-import "./students.css";
+import "./records.css";
 import HeaderWrapper from "@/app/(main-website)/components/Header/HeaderWrapper";
 import Footer from "@/app/(main-website)/components/Footer/Footer";
 
@@ -17,22 +17,14 @@ const newsreader = Newsreader({
   display: "swap",
 });
 
-export default function Studentslayout({
+export default function PlacementRecordslayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en" className={`${poppins.variable} ${newsreader.variable}`}>
-      <body className="antialiased">
-        <div id="main-header">
-          <HeaderWrapper />
-        </div>
-        {children}
-        {/* <div id="main-footer">
-          <Footer />
-        </div> */}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

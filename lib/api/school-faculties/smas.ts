@@ -46,7 +46,6 @@ export const smasFaculties: SchoolFacultiesType[] = [
   //   featured_media_url:
   //     "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Dr.-Sucheta.jpg",
   // },
-
   {
     id: 8827,
     slug: "dr-saroj-verma",
@@ -71,7 +70,7 @@ export const smasFaculties: SchoolFacultiesType[] = [
     featured_media: 107913,
     acf: {
       "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant Professor (Sr. Scale)",
+      staff_designation: "Assistant Professor (Sr. Scale)",      
       schools: [],
     },
     featured_media_url:
@@ -122,7 +121,6 @@ export const smasFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/06/Dr.-Narender-Yadav.jpg",
   },
-
   {
     id: 40940,
     slug: "ms-samiksha-mishra",

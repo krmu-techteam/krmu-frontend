@@ -8,7 +8,7 @@ const HeroSection = () => {
         {/* Content */}
         <div className="w-full lg:w-[55%] space-y-4 md:space-y-5 lg:space-y-6">
           <p className="text-[#C3A342] text-[11px] sm:text-xs font-bold tracking-[1.2px] sm:tracking-[1.5px]">
-            3RD INTERNATIONAL CONFERENCE · 22–23 JANUARY 2027
+            3RD INTERNATIONAL CONFERENCE · 21–23 JANUARY 2027
           </p>
 
           <h1 className="text-3xl sm:text-4xl md:text-[40px] lg:text-[42px] font-lora font-bold text-white leading-[1.15]">

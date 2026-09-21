@@ -50,7 +50,7 @@ const QuickEnquiry = () => {
 
           {/* CTA */}
           <Link
-            href="/placement/registration"
+            href="/placements/registration"
             target="_blank"
             rel="noopener noreferrer"
             className="

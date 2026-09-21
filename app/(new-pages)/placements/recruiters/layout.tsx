@@ -17,19 +17,14 @@ const newsreader = Newsreader({
   display: "swap",
 });
 
-export default function Placementlayout({
+export default function PlacementRecruiterslayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en" className={`${poppins.variable} ${newsreader.variable}`}>
-      <body className="antialiased">
-        <div id="main-header">
-          <HeaderWrapper />
-        </div>
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

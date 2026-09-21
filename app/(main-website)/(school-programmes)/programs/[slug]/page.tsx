@@ -483,7 +483,7 @@ const page = async ({ params }: Props) => {
         {labfacilitiesSection &&
           (isMbaSlug ? (
             <CareerGoal
-              slug={slug}
+              slug={slug} 
               dataContent={
                 slug === "mba-fintech"
                   ? getCareerGoalContent()

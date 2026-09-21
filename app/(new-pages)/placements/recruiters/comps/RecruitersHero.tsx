@@ -26,7 +26,7 @@ const RecruitersHero = () => {
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-3">
           <Link
-            href="/placement/registration"
+            href="/placements/registration"
             className="inline-flex min-h-12 w-full max-w-[220px] items-center justify-center bg-[#de0000] px-6 py-3 text-lg font-medium text-white transition-colors hover:bg-[#c80000] sm:max-w-[187px]"
           >
             Register here
