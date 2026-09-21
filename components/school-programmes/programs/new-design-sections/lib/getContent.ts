@@ -61,7 +61,7 @@ export function getIBMContent(): HeroPageContentType {
 }
 
 export function getLogoContent(): LogoPageContentType {
-  return LogoContentData as LogoPageContentType;
+  return LogoContentData as LogoPageContentType; 
 }
 
 export function getCareerOutcomeContent(): CareerOutcomePageContentType {
