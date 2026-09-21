@@ -26,7 +26,7 @@ import { BSCHonsPhyscologytestimonialsData } from "../progdata/sola";
 import BscFinance2026Page from "@/app/(landing-page)/admission/bsc-finance-2026/page";
 import "@/app/(landing-page)/admission/bsc-finance-2026/bsc-finance-2026.css";
 import { ActionCards } from "@/components/school-programmes/programs/action-cards/ActionCards";
-import { heroConfigs } from "@/components/school-programmes/programs/data/programs";
+import { HERO_CONFIGS } from "@/features/programs";
 import JournalismAndMassCommunication from "@/app/(landing-page)/admission/new-Journalism-and-Mass-Communication-2026/page";
 import {
     AdmissionProcessSection,
@@ -326,7 +326,7 @@ const page = async ({ params }: Props) => {
 
                 <ProgramSubNav />
 
-                {slug in heroConfigs && dreamcareerSection && (
+                {slug in HERO_CONFIGS && dreamcareerSection && (
                     <CinematicRecruiterStrip
                         dreamcareerSection={dreamcareerSection}
                         logos={dreamcareerSection?.careerlogos}
@@ -349,13 +349,15 @@ const page = async ({ params }: Props) => {
                         />
                     ))}
 
-                {!isMbaSlug && !(slug in heroConfigs) && dreamcareerSection && (
-                    <DreamCareerSection
-                        heading={dreamcareerSection.heading}
-                        description={dreamcareerSection.description}
-                        logos={dreamcareerSection?.careerlogos}
-                    />
-                )}
+                {!isMbaSlug &&
+                    !(slug in HERO_CONFIGS) &&
+                    dreamcareerSection && (
+                        <DreamCareerSection
+                            heading={dreamcareerSection.heading}
+                            description={dreamcareerSection.description}
+                            logos={dreamcareerSection?.careerlogos}
+                        />
+                    )}
 
                 {programmeScopeSection &&
                     (isMbaSlug ? (
