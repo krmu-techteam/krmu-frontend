@@ -73,21 +73,21 @@ const breadcrumbSchema = createBreadcrumbProgSchema([
   { name: "Home", url: "https://www.krmangalam.edu.in/" },
   {
     name: "Placement",
-    url: "https://www.krmangalam.edu.in/placement/trainers",
+    url: "https://www.krmangalam.edu.in/placements/trainers",
   },
   {
     name: "KRMU Placement Trainers & Career Development Team",
-    url: "https://www.krmangalam.edu.in/placement/trainers",
+    url: "https://www.krmangalam.edu.in/placements/trainers",
   },
 ]);
 
 const webPageSchema = createWebPageSchema({
   name: "KRMU Placement Trainers & Career Development Team",
-  url: "https://www.krmangalam.edu.in/placement/trainers",
+  url: "https://www.krmangalam.edu.in/placements/trainers",
   description:
     "Meet KRMU placement trainers who guide students with career preparation, skill development, interview training, and placement support for successful careers.",
   aboutName: "KRMU Placement Trainers & Career Development Team",
-  aboutUrl: "https://www.krmangalam.edu.in/placement/trainers",
+  aboutUrl: "https://www.krmangalam.edu.in/placements/trainers",
 });
 const personSchema = createPersonGraphSchema(
   trainers.map((trainer) => ({

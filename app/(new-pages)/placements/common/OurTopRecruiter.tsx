@@ -35,7 +35,7 @@ const OurTopRecruiter = () => {
           {/* Link */}
           <div className="lg:justify-self-end">
             <Link
-              href="/placement/our-recruiter"
+              href="/placements/our-recruiter"
               className="
                 inline-flex
                 items-center

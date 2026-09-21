@@ -17,21 +17,21 @@ const breadcrumbSchema = createBreadcrumbProgSchema([
   { name: "Home", url: "https://www.krmangalam.edu.in/" },
   {
     name: "Placement",
-    url: "https://www.krmangalam.edu.in/placement/recruiters",
+    url: "https://www.krmangalam.edu.in/placements/recruiters",
   },
   {
     name: "Top Recruiters at K.R. Mangalam University | Placement",
-    url: "https://www.krmangalam.edu.in/placement/recruiters",
+    url: "https://www.krmangalam.edu.in/placements/recruiters",
   },
 ]);
 
 const webPageSchema = createWebPageSchema({
   name: "Top Recruiters at K.R. Mangalam University | Placement",
-  url: "https://www.krmangalam.edu.in/placement/recruiters",
+  url: "https://www.krmangalam.edu.in/placements/recruiters",
   description:
     "Explore top recruiters at K.R. Mangalam University and discover placement opportunities with leading companies across diverse industries and career sectors.",
   aboutName: "Top Recruiters at K.R. Mangalam University | Placement",
-  aboutUrl: "https://www.krmangalam.edu.in/placement/recruiters",
+  aboutUrl: "https://www.krmangalam.edu.in/placements/recruiters",
 });
 
 const page = () => {

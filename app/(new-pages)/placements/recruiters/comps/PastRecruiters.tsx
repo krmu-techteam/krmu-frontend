@@ -498,7 +498,7 @@ const RecruiterRow = ({ recruiter }: RecruiterRowProps) => {
 
         <div className="col-span-2 md:col-span-1">
           <span className="mb-1.5 block text-sm font-medium uppercase tracking-[0.18em] text-[#999] md:hidden">
-            Internship/Placement/PPO
+            Internship/placements/PPO
           </span>
 
           <p className="text-[12px] leading-5 text-[#292929] sm:text-[13px] md:text-[12px] text-center">

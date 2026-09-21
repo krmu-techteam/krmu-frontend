@@ -24,15 +24,7 @@ export default function Trainerslayout({
 }) {
   return (
     <html lang="en" className={`${poppins.variable} ${newsreader.variable}`}>
-      <body className="antialiased">
-        <div id="main-header">
-          <HeaderWrapper />
-        </div>
-        {children}
-        {/* <div id="main-footer">
-          <Footer />
-        </div> */}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
