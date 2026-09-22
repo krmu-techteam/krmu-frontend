@@ -1,0 +1,96 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { MoveRight } from "lucide-react";
+import CareerJob from "../components/CareerJob";
+import { KRMUWordUrl } from "@/app/constant";
+
+const CareerJobListings = () => {
+    const [search, setSearch] = useState("");
+    const [jobs, setJobs] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    const abortRef = useRef<AbortController | null>(null);
+
+    // Optimized Fetch Function
+    const fetchJobs = async (text: string) => {
+        // Cancel previous request
+        if (abortRef.current) {
+            abortRef.current.abort();
+        }
+
+        const controller = new AbortController();
+        abortRef.current = controller;
+        const url = `${KRMUWordUrl}/careers2/wp-json/wp/v2/awsm_job_openings?page=1&per_page=60&_fields=id,slug,title.rendered&search=${encodeURIComponent(
+            text
+        )}&search_columns[]=post_title`;
+
+        try {
+            setLoading(true);
+            const res = await fetch(url, { signal: controller.signal });
+            const data = await res.json();
+            setJobs(data);
+        } catch (err) {
+            if (err instanceof DOMException && err.name === "AbortError") {
+                return; // ignore abort errors
+            }
+            console.error(err);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Debounce (250ms)
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            fetchJobs(search);
+        }, 250);
+
+        return () => clearTimeout(timer);
+    }, [search]);
+
+    // Load all jobs initially
+    useEffect(() => {
+        fetchJobs("");
+    }, []);
+
+    return (
+        <section className="pt-12 pb-24 bg-[#2E4540]">
+            <div className="max-w-[1440px] mx-auto w-full px-4 md:px-8 lg:px-12">
+                {/* SEARCH UI */}
+                <div className="max-w-[450px] mx-auto w-full py-10">
+                    <div className="flex rounded-full">
+                        <input
+                            type="text"
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                            className="bg-[#285A48]/50 rounded-full w-full -mr-12 pl-4 pr-10 outline-none"
+                            placeholder="Search Faster..."
+                        />
+                        <button className="bg-[#285A48] py-4 px-8 rounded-full">
+                            <MoveRight color="white" />
+                        </button>
+                    </div>
+                </div>
+
+                {/* RESULTS */}
+                <div className="flex flex-col gap-[15px]">
+                    {loading && <p>Loading...</p>}
+
+                    {!loading &&
+                        jobs?.map((job: any) => (
+                            <CareerJob
+                                key={job.id}
+                                title={job.title.rendered}
+                                slug={job.slug}
+                            />
+                        ))}
+
+                    {!loading && jobs?.length === 0 && <p>No job found.</p>}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default CareerJobListings;
