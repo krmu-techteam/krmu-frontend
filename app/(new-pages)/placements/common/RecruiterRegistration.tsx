@@ -378,7 +378,7 @@ export default function RecruiterRegistration() {
       <section className="bg-[#eef4fb] pb-20 pt-28 font-poppins xl:pb-24 xl:pt-48">
         <div className="mx-auto max-w-[920px] px-4 text-center">
           <Link
-            href="/placement"
+            href="/placements"
             className="inline-flex items-center gap-2 text-sm text-[#33] transition-transform duration-300 hover:translate-x-1"
           >
             <ArrowLeft size={16} strokeWidth={1.5} /> Back to Placement

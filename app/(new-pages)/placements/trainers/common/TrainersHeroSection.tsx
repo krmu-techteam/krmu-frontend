@@ -36,7 +36,7 @@ const TrainersHeroSection = () => {
           "
           >
             <Link
-              href="/placement"
+              href="/placements"
               className="inline-flex items-center gap-2 text-sm text-white transition-transform duration-300 hover:translate-x-1"
             >
               <ArrowLeft size={16} strokeWidth={1.5} /> Back to Placement

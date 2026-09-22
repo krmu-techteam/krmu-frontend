@@ -68,7 +68,7 @@ export async function generateMetadata() {
 
 const breadcrumbSchema = createBreadcrumbProgSchema([
   { name: "Home", url: "https://www.krmangalam.edu.in/" },
-  { name: "Placement", url: "https://www.krmangalam.edu.in/placement" },
+  { name: "Placement", url: "https://www.krmangalam.edu.in/placements" },
   {
     name: "K.R. Mangalam University Placement Records & Statistics",
     url: "https://www.krmangalam.edu.in/placements/records",

@@ -31,7 +31,7 @@ export async function generateMetadata() {
     keywords:
       "K.R. Mangalam University placements, KRMU placements, university placements in Gurgaon, placement assistance, highest package at KRMU, campus placements, KRMU recruiters",
     alternates: {
-      canonical: "https://www.krmangalam.edu.in/placement",
+      canonical: "https://www.krmangalam.edu.in/placements",
     },
     robots: {
       index: true,
@@ -44,7 +44,7 @@ export async function generateMetadata() {
       description:
         "Discover KRMU's placement success with 800+ recruiters, ₹56.6 LPA highest salary, and comprehensive training for students in diverse disciplines.",
 
-      url: "https://www.krmangalam.edu.in/placement",
+      url: "https://www.krmangalam.edu.in/placements",
 
       siteName: "K.R. Mangalam University",
 
@@ -78,20 +78,20 @@ export async function generateMetadata() {
 // Breadcrumb Schema
 const breadcrumbSchema = createBreadcrumbProgSchema([
   { name: "Home", url: "https://www.krmangalam.edu.in/" },
-  { name: "Placement", url: "https://www.krmangalam.edu.in/placement" },
+  { name: "Placement", url: "https://www.krmangalam.edu.in/placements" },
   {
     name: "Placements Overview - K.R. Mangalam University",
-    url: "https://www.krmangalam.edu.in/placement",
+    url: "https://www.krmangalam.edu.in/placements",
   },
 ]);
 
 const webPageSchema = createWebPageSchema({
   name: "Placements Overview - K.R. Mangalam University",
-  url: "https://www.krmangalam.edu.in/placement",
+  url: "https://www.krmangalam.edu.in/placements",
   description:
     "Discover KRMU's placement success with 800+ recruiters, ₹56.6 LPA highest salary, and comprehensive training for students in diverse disciplines.",
   aboutName: "Placements Overview - K.R. Mangalam University",
-  aboutUrl: "https://www.krmangalam.edu.in/placement",
+  aboutUrl: "https://www.krmangalam.edu.in/placements",
 });
 
 const personSchema = createPersonGraphSchema(
