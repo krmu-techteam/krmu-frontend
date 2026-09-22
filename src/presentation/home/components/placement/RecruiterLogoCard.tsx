@@ -25,12 +25,12 @@ export function RecruiterLogoCard({
         <div
             style={style}
             className={cn(
-                "flex h-[100px] items-center justify-center overflow-hidden rounded-[4px] border border-brand-gray bg-transparent",
-                "transition-all duration-500 hover:border-white/30 hover:bg-white/5",
+                "flex h-[100px] items-center justify-center overflow-hidden rounded-[4px] border border-brand-gray bg-white",
+                "transition-all duration-500",
                 className
             )}
         >
-            <div className="relative h-20 w-full transition-transform duration-500 hover:scale-110">
+            <div className="relative h-20 w-full transition-transform duration-500 hover:scale-[1.02]">
                 <Image
                     src={logo}
                     alt={finalAlt}

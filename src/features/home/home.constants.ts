@@ -65,48 +65,62 @@ export const JOURNEY_VIDEOS: JourneyVideoType[] = [
 export const RECRUITER_LOGOS: RecruiterLogoType[] = [
     {
         name: "Tata Power",
-        logo: "/images/home/placements/recruiters/tata-power.png",
+        logo: "/images/home/placements/recruiters2/tata-power.svg",
     },
-    { name: "Meta", logo: "/images/home/placements/recruiters/meta.png" },
+    { name: "Meta", logo: "/images/home/placements/recruiters2/meta.svg" },
     {
         name: "Microsoft",
-        logo: "/images/home/placements/recruiters/microsoft.png",
+        logo: "/images/home/placements/recruiters2/microsoft.svg",
     },
     {
         name: "JPMorgan",
-        logo: "/images/home/placements/recruiters/jp-morgan.png",
+        logo: "/images/home/placements/recruiters2/jp-morgan.svg",
     },
     {
         name: "LinkedIn",
-        logo: "/images/home/placements/recruiters/linkedin.png",
+        logo: "/images/home/placements/recruiters2/linkedin.svg",
     },
-    { name: "Google", logo: "/images/home/placements/recruiters/google.png" },
-    { name: "Infosys", logo: "/images/home/placements/recruiters/infosys.png" },
-    { name: "IBM", logo: "/images/home/placements/recruiters/ibm.png" },
-    { name: "ITC", logo: "/images/home/placements/recruiters/itc-limited.png" },
-    { name: "Cisco", logo: "/images/home/placements/recruiters/cisco.png" },
-    { name: "Amazon", logo: "/images/home/placements/recruiters/amazon.png" },
-    { name: "Apple", logo: "/images/home/placements/recruiters/apple.png" },
+    { name: "Google", logo: "/images/home/placements/recruiters2/google.svg" },
+    {
+        name: "Infosys",
+        logo: "/images/home/placements/recruiters2/infosys.svg",
+    },
+    { name: "IBM", logo: "/images/home/placements/recruiters2/ibm.svg" },
+    {
+        name: "ITC",
+        logo: "/images/home/placements/recruiters2/itc-limited.svg",
+    },
+    { name: "Cisco", logo: "/images/home/placements/recruiters2/cisco.svg" },
+    { name: "Amazon", logo: "/images/home/placements/recruiters2/amazon.svg" },
+    { name: "Apple", logo: "/images/home/placements/recruiters2/apple.svg" },
     {
         name: "Accenture",
-        logo: "/images/home/placements/recruiters/accenture.png",
+        logo: "/images/home/placements/recruiters2/accenture.svg",
     },
-    { name: "EY", logo: "/images/home/placements/recruiters/ey.png" },
+    { name: "EY", logo: "/images/home/placements/recruiters2/ey.svg" },
     {
         name: "Flipkart",
-        logo: "/images/home/placements/recruiters/flipkart.png",
+        logo: "/images/home/placements/recruiters2/flipkart.svg",
     },
     {
         name: "Axis Bank",
-        logo: "/images/home/placements/recruiters/axis-bank.png",
+        logo: "/images/home/placements/recruiters2/axis-bank.svg",
     },
     {
         name: "Publicis Media",
-        logo: "/images/home/placements/recruiters/publicis-media.png",
+        logo: "/images/home/placements/recruiters2/publicis-media.svg",
     },
     {
         name: "Publicis Sapient",
-        logo: "/images/home/placements/recruiters/publicis-sapient.png",
+        logo: "/images/home/placements/recruiters2/publicis-sapient.svg",
+    },
+    {
+        name: "HCL",
+        logo: "/images/home/placements/recruiters2/hcl.svg",
+    },
+    {
+        name: "Capgemini",
+        logo: "/images/home/placements/recruiters2/capgemini.svg",
     },
 ];
 
