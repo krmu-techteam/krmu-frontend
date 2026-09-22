@@ -25,7 +25,7 @@ export function RecruiterLogoCard({
         <div
             style={style}
             className={cn(
-                "flex h-[100px] items-center justify-center overflow-hidden rounded-[4px] border border-brand-gray bg-white",
+                "flex h-[100px] items-center justify-center overflow-hidden rounded-[4px] border border-brand-gray bg-transparent",
                 "transition-all duration-500",
                 className
             )}
