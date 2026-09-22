@@ -8,7 +8,7 @@ const ConferenceFooter = () => {
 
         <p className="text-[11px] sm:text-xs leading-5 text-[#99A199]">
           SBAS, K. R. Mangalam University, Gurugram · In collaboration with
-          CSIR–CSIO, Chandigarh College, University of Delhi
+          CSIR–CSIO, Chandigarh
         </p>
 
         <p className="text-[11px] sm:text-xs text-[#99A199]">

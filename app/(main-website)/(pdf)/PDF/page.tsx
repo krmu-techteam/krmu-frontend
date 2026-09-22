@@ -6,8 +6,9 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params; // ✅ no await
-  const customSEO = await folderRouteSEO(slug);
+  // const { slug } = await params; // ✅ no await
+  const customSEO = await folderRouteSEO("PDF");
+  // console.log('slug', slug);
   const seo = customSEO[0];
   return {
     title: seo?.title || "K.R. Mangalam University",
