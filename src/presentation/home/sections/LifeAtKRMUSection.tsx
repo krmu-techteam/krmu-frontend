@@ -320,11 +320,11 @@ export function LifeAtKRMUSection() {
                     At K.R. Mangalam University, life goes beyond the classroom.
                     Our campus is a thriving hub of academic excellence,
                     cultural diversity, and vibrant student life. We encourage
-                    students to explore their passion by making them participate
-                    in various cultural events, sports, and community services.
-                    We believe in creating a friendly and positive environment
-                    where students can learn, grow, and build lasting
-                    relationships that shape their futures.
+                    students to explore their passion by encouraging them
+                    participate in various cultural events, sports, and
+                    community services. We believe in creating a friendly and
+                    positive environment where students can learn, grow, and
+                    build lasting relationships that shape their futures.
                 </p>
                 {/* 3 Action Buttons (Events, Facilities, Clubs & Societies) */}
                 <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-6 md:mt-8">

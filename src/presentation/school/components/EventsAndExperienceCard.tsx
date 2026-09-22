@@ -28,16 +28,17 @@ const LOWERCASE_EXCEPTIONS = new Set([
 export function formatCardTitle(title: string): string {
     if (!title) return "";
     const formatted = title.replace(
-        /\b[a-zA-Z]+(?:'[a-zA-Z]+)?\b/g,
+        /\b[a-zA-Z]+(?:['’][a-zA-Z]+)?\b/g,
         (word, offset, fullStr) => {
             const lower = word.toLowerCase();
 
             // First word of the title
             const isFirstWord =
                 offset === 0 || !/[a-zA-Z]/.test(fullStr.slice(0, offset));
-            // First word after delimiters like ": ", "- ", "– "
+            // First word after delimiters like ": ", "- ", "– ", including quotes/brackets
             const isAfterDelimiter =
-                offset > 1 && /[:\-–—]\s*$/.test(fullStr.slice(0, offset));
+                offset > 1 &&
+                /[:\-–—|/]\s*["'“‘(\[]*$/.test(fullStr.slice(0, offset));
 
             if (
                 !isFirstWord &&
