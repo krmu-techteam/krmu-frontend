@@ -915,10 +915,6 @@ export const sitemapData = [
             label: "Ph.D. in Education",
             href: "https://www.krmangalam.edu.in/programs/phd-education",
           },
-          {
-            label: "Ph.D. in Education",
-            href: "https://www.krmangalam.edu.in/programs/phd-education",
-          },
         ],
       },
       //   School of Agricultural Sciences

@@ -469,10 +469,6 @@ export const allProgrammes = [
         name: "Ph.D. in Education",
         url: "https://www.krmangalam.edu.in/programs/phd-education",
       },
-      {
-        name: "Ph.D. in Education",
-        url: "https://www.krmangalam.edu.in/programs/phd-education",
-      },
     ],
   },
   //   School of Agricultural Sciences
