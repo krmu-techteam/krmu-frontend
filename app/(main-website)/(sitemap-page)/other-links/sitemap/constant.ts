@@ -586,7 +586,7 @@ export const sitemapData = [
           {
             label:
               "BBA (Hons./ Hons. with Research) (HR/ Marketing/ Finance/ International Business/ Travel & Tourism) Semester Abroad Programme with University of East Anglia (UEA), Norwich, UK",
-            href: "https://www.krmangalam.edu.in/programs/bba-hons-semester-abroad-uea-uk",     
+            href: "https://www.krmangalam.edu.in/programs/bba-hons-semester-abroad-uea-uk",
           },
           {
             label: "B.Com. (Hons.)",
@@ -663,6 +663,51 @@ export const sitemapData = [
           {
             label: "Ph.D. in Law",
             href: "https://www.krmangalam.edu.in/programs/phd-law",
+          },
+        ],
+      },
+      //   School of Medical & Allied Sciences
+      {
+        title: "School of Medical & Allied Sciences",
+        links: [
+          {
+            label: "B.Pharm.",
+            href: "https://www.krmangalam.edu.in/programs/bpharma",
+          },
+          {
+            label: "B.Pharm. (Lateral)",
+            href: "https://www.krmangalam.edu.in/programs/bpharm-lateral-entry",
+          },
+          {
+            label:
+              "Bachelor of Emergency Medical Technologist (Paramedic) (B.EMT) with Academic & Industry support of Emversity (3 yrs + 1 yr Industry Internship)**",
+            href: "https://www.krmangalam.edu.in/programs/Bachelor-of-Emergency-Medical-Technologist",
+          },
+          {
+            label:
+              "Bachelor of Respiratory Technology (B.RT) with Academic & Industry support of Emversity (3 yrs + 1 yr Industry Internship)**",
+            href: "https://www.krmangalam.edu.in/programs/Bachelor-of-Respiratory-Technology",
+          },
+          {
+            label:
+              "B.Sc. (Hons.) Cardiovascular Technology with Academic & Industry support of Emversity (3 yrs + 1 yr Industry Internship)**",
+            href: "https://www.krmangalam.edu.in/programs/b-sc-hons-cardiovascular-technology-with-academic-industry-support-of-emversity",
+          },
+          {
+            label: "M.Pharm. (Master of Pharmacy) - Pharmaceutics",
+            href: "https://www.krmangalam.edu.in/programs/m-pharm-pharmaceutics",
+          },
+          {
+            label: "M.Pharm. (Master of Pharmacy) – Pharmacology",
+            href: "https://www.krmangalam.edu.in/programs/m-pharm-pharmacology",
+          },
+          {
+            label: "Ph.D. in Pharmaceutical Sciences",
+            href: "https://www.krmangalam.edu.in/programs/phd-pharmaceutical-sciences",
+          },
+          {
+            label: "D.Pharm. (Diploma in Pharmacy)",
+            href: "https://www.krmangalam.edu.in/programs/dpharm",
           },
         ],
       },
