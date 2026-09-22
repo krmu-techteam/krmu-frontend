@@ -1230,12 +1230,12 @@ export interface VideoSchemaProps {
     "@type": string;
     name: string;
     description: string;
-    thumbnailUrl: string[];
+    thumbnailUrl: string[] | string;
     uploadDate: string;
     duration: string; // ISO 8601 format (e.g. PT3M45S)
     embedUrl: string;
     contentUrl: string;
-    publisher: {
+    publisher?: {
         "@type": string;
         name: string;
         logo: {

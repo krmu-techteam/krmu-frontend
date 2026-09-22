@@ -1,14 +1,16 @@
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
-import Script from "next/script";
 import { Container } from "@/components/common/Container";
 import {
     getHomeService,
     HOME_COMPONENT_KEYS,
     IHomeService,
-    homeSchemaService,
 } from "@/features/home";
-import { HeroSection, AboutSection } from "@/presentation/home";
+import {
+    HeroSection,
+    AboutSection,
+    HomeSchemaScripts,
+} from "@/presentation/home";
 
 const JourneySection = dynamic(() =>
     import("@/presentation/home/sections/JourneySection").then(
@@ -77,31 +79,9 @@ export default async function HomePage() {
         homeService.getNewsEvents(1, 20),
     ]);
 
-    const {
-        websiteSchema,
-        educationalOrganizationSchema,
-        collegeOrUniversitySchema,
-    } = homeSchemaService.getHomePageSchemas();
-
     return (
         <>
-            <Script
-                id="website-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: websiteSchema }}
-            />
-            <Script
-                id="collage-university-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: collegeOrUniversitySchema }}
-            />
-            <Script
-                id="organization-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: educationalOrganizationSchema,
-                }}
-            />
+            <HomeSchemaScripts />
             <main className="w-full max-w-full overflow-x-hidden">
                 {heroSection && <HeroSection {...heroSection} />}
                 <Container>

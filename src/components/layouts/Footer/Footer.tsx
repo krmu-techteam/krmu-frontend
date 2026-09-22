@@ -439,7 +439,7 @@ const Footer = async () => {
 
                                 <Button
                                     href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
-                                    className="mt-6 !border-[2px] !border-white !font-semibold !text-white px-4 lg:!px-2   xl:!px-4 !text-[10px] xl:!text-[14px] hidden md:inline-flex"
+                                    className="mt-6 !border-[1px] !border-white !font-medium !text-white px-4 lg:!px-2   xl:!px-4 !text-[10px] xl:!text-[14px] hidden md:inline-flex"
                                 >
                                     Download Handbook
                                 </Button>
@@ -500,7 +500,7 @@ const Footer = async () => {
                                 </ul>
                                 <Button
                                     href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
-                                    className="mt-6 !border-[2px] !border-white !font-semibold !text-white !px-2.5 !text-[11px] xs:!text-[12px] whitespace-nowrap inline-flex md:hidden"
+                                    className="mt-6 !border-[1px] !border-white !font-medium !text-white !px-2.5 !text-[11px] xs:!text-[12px] whitespace-nowrap inline-flex md:hidden"
                                 >
                                     Download Handbook
                                 </Button>
