@@ -36,7 +36,7 @@ const AestheticsCafeteriaSlide = ({ data }: Props) => {
           );
         })}
       </CarouselContent>
-      <CarouselPrevious className="left-0 rounded-none bg-black text-white temp-class" />
+      <CarouselPrevious className="left-0 rounded-none bg-black text-white" />
       <CarouselNext className="right-0 rounded-none bg-black text-white" />
     </Carousel>
   );
