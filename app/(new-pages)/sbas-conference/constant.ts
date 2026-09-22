@@ -190,6 +190,14 @@ export const organizingCommittee = [
     image:
       "https://www.krmangalam.edu.in/images/sbas-conference/committee/narinder.jpg",
   },
+  {
+    name: "Prof.(Dr.) Pradeep K. Varshney",
+    role: "Conference Chair",
+    designation: "Dean Research",
+    university: "K.R. Mangalam University",
+    image:
+      "https://www.krmangalam.edu.in/images/sbas-conference/committee/pradeep.jpg",
+  },
   // {
   //   name: "Dr. Anand Prakash",
   //   role: "Conference Co-Chair",
