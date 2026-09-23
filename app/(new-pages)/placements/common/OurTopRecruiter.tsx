@@ -34,8 +34,8 @@ const OurTopRecruiter = () => {
 
           {/* Link */}
           <div className="lg:justify-self-end">
-            {/* <Link
-              href="/placements/recruiters"
+            <Link
+              href="/placement/our-recruiter"
               className="
                 inline-flex
                 items-center
@@ -53,7 +53,7 @@ const OurTopRecruiter = () => {
             >
               View all Recruiters
               <ArrowRight size={17} strokeWidth={1.5} className="shrink-0" />
-            </Link> */}
+            </Link>
           </div>
         </div>
 

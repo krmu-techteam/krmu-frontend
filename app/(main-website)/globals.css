@@ -3810,7 +3810,9 @@
   .topbar-blink-effect {
     animation: blink 0.8s linear infinite;
   }
-
+  .font-capitalize {
+    text-transform: capitalize !important;
+  }
   @keyframes blink {
     25% {
       opacity: 0.5;

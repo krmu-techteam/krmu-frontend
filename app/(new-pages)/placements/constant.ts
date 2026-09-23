@@ -420,6 +420,15 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   {
     id: 2,
     image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/dhaval-bhaskar.jpg",
+    imageAlt: "Dhaval Bhaskar - Sr. Placement Manager",
+    name: "Dhaval Bhaskar",
+    designation: "Sr. Placement Manager",
+    email: "dhaval.bhaskar@krmangalam.edu.in",
+  },
+  {
+    id: 3,
+    image:
       "https://krmangalam.edu.in/images/placements/cdc-team/jharna-jagtiani.jpg",
     imageAlt: "Jharna Jagtiani - Senior Manager",
     name: "Jharna Jagtiani",
@@ -427,7 +436,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     email: "jharnavijay.jagtiani@krmangalam.edu.in",
   },
   {
-    id: 3,
+    id: 4,
     image:
       "https://krmangalam.edu.in/images/placements/cdc-team/charu-gola.jpg",
     imageAlt: "Charu Gola - Assistant Manager- CDC",
@@ -435,8 +444,9 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     designation: "Assistant Manager- CDC",
     email: "charu.gola@krmangalam.edu.in",
   },
+
   {
-    id: 4,
+    id: 5,
     image:
       "https://krmangalam.edu.in/images/placements/cdc-team/sreejita-saha.jpg",
     imageAlt: "Sreejita Saha - Manager- Career Development Centre",
@@ -444,16 +454,6 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     designation: "Manager- Career Development Centre",
     email: "sreejita.saha@krmangalam.edu.in",
   },
-  {
-    id: 5,
-    image:
-      "https://krmangalam.edu.in/images/placements/cdc-team/dhaval-bhaskar.jpg",
-    imageAlt: "Dhaval Bhaskar - Sr. Placement Manager",
-    name: "Dhaval Bhaskar",
-    designation: "Sr. Placement Manager",
-    email: "dhaval.bhaskar@krmangalam.edu.in",
-  },
-
   {
     id: 6,
     image:

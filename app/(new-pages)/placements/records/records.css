@@ -25,7 +25,9 @@
     transform: translateX(-50%);
   }
 }
-
+.font-capitalize{
+  text-transform: capitalize !important;
+}
 .animate-logo-scroll {
   animation: logo-scroll 15s linear infinite;
 }

@@ -119,6 +119,12 @@ const PlacementRecords = () => {
     fetchPlacementRecords();
   }, [page, limit, debouncedSearch]);
 
+  const formatName = (name: string | null) => {
+    if (!name) return "-";
+
+    return name.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
+  };
+
   // ==========================
   // SEARCH
   // ==========================
@@ -156,7 +162,10 @@ const PlacementRecords = () => {
   // ==========================
 
   return (
-    <section className="px-5 xl:px-0 py-10 sm:py-14 md:py-20" id="placement-records-scroll">
+    <section
+      className="px-5 xl:px-0 py-10 sm:py-14 md:py-20"
+      id="placement-records-scroll"
+    >
       <div className="max-w-7xl mx-auto w-full">
         {/* ==========================
             HEADER
@@ -304,27 +313,15 @@ const PlacementRecords = () => {
                 ========================== */}
 
                 <div className="col-span-2 md:col-span-1">
-                  <h3 className="font-newsreader text-xl sm:text-2xl md:text-2xl leading-tight text-[#12233F] mb-1">
-                    {record.student_name || "-"}
+                  <h3 className="font-newsreader text-xl sm:text-2xl md:text-2xl leading-tight text-[#12233F] mb-1 font-capitalize capitalize">
+                    <span className="capitalize">
+                      {formatName(record.student_name)}
+                    </span>
                   </h3>
 
                   {/* <p className="text-[10px] sm:text-xs md:text-sm leading-relaxed text-[#667085]">
                     {record.program || "-"}
                   </p> */}
-                </div>
-
-                {/* ==========================
-                    ROLE
-                ========================== */}
-
-                <div className="flex flex-col justify-center">
-                  {/* <span className="text-[9px] sm:text-[10px] md:text-sm tracking-[0.15em] sm:tracking-[0.2em] uppercase text-[#7A1F2B] mb-1">
-                    {record.offer_type || "-"}
-                  </span> */}
-
-                  <span className="text-xs sm:text-sm md:text-[15px] leading-snug text-black">
-                    {record.designation || record.job_profile || "-"}
-                  </span>
                 </div>
 
                 {/* ==========================
@@ -339,20 +336,34 @@ const PlacementRecords = () => {
                   <span className="text-xs text-black text-center">
                     {/* {record.detailed_ctc || "-"} */}
                     {record.program || "-"}
-                  </span> 
+                  </span>
                 </div>
 
                 {/* ==========================
                     COMPANY
                 ========================== */}
 
-                <div className="col-span-2 md:col-span-1 flex flex-col justify-center md:items-end">
+                <div className="col-span-2 md:col-span-1 flex flex-col justify-center">
                   <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.15em] text-[#667085] md:hidden mb-1">
                     Company
                   </span>
 
-                  <span className="text-sm sm:text-base md:text-base font-medium text-black md:text-right">
+                  <span className="text-sm sm:text-base md:text-base font-medium text-black md:text-center">
                     {record.company || "-"}
+                  </span>
+                </div>
+
+                {/* ==========================
+                    ROLE
+                ========================== */}
+
+                <div className="flex flex-col justify-end items-end text-right">
+                  {/* <span className="text-[9px] sm:text-[10px] md:text-sm tracking-[0.15em] sm:tracking-[0.2em] uppercase text-[#7A1F2B] mb-1">
+                    {record.offer_type || "-"}
+                  </span> */}
+
+                  <span className="text-xs sm:text-sm md:text-[15px] leading-snug text-black">
+                    {record.designation || record.job_profile || "-"}
                   </span>
                 </div>
               </div>
