@@ -22,6 +22,22 @@
 .font-poppins {
   font-family: var(--font-poppins), "Poppins", sans-serif !important;
 }
+/* @keyframes topbar-blink {
+  0%,
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+
+  50% {
+    opacity: 0.55;
+    filter: brightness(1.5);
+  }
+}
+
+.topbar-blink {
+  animation: topbar-blink 1.2s ease-in-out infinite;
+} */
 
 /* Custom utility class */
 @layer utilities {

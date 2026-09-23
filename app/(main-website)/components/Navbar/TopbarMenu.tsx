@@ -45,7 +45,7 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
               {item.url ? (
                 <Link
                   href={item.url}
-                  className={`font-semibold text-white text-xs ${item.menuclass}`}
+                  className={`font-semibold text-xs ${topbarmenu.indexOf(item) === 0 ? "text-white blink-effect bg-[#cb000d] transition-all  relative overflow-hidden group  rounded-[5px] px-2 py-1.5 inline-block" : "text-white"} ${item.menuclass || ""}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -53,7 +53,7 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
                 </Link>
               ) : (
                 <span
-                  className={`font-semibold text-white text-xs ${item.menuclass}`}
+                  className={`font-semibold text-white text-xs ${item.menuclass || ""}`}
                 >
                   {item.title}
                 </span>
