@@ -10,7 +10,7 @@ const OurTopRecruiter = () => {
   // Duplicate logos for seamless infinite loop
   // const logos = [...ourTopRecruitersLogos, ...ourTopRecruitersLogos];
 
-  return (
+  return ( 
     <section className="px-5 pb-10 md:pb-20 xl:px-0">
       <div className="mx-auto w-full max-w-7xl">
         {/* Header */}
@@ -34,7 +34,7 @@ const OurTopRecruiter = () => {
 
           {/* Link */}
           <div className="lg:justify-self-end">
-            <Link
+            {/* <Link
               href="/placements/recruiters"
               className="
                 inline-flex
@@ -53,7 +53,7 @@ const OurTopRecruiter = () => {
             >
               View all Recruiters
               <ArrowRight size={17} strokeWidth={1.5} className="shrink-0" />
-            </Link>
+            </Link> */}
           </div>
         </div>
 

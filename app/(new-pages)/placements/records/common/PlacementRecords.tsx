@@ -229,7 +229,7 @@ const PlacementRecords = () => {
                   className="
                     grid
                     grid-cols-2
-                    md:grid-cols-[2.2fr_1.4fr_0.7fr_1.4fr]
+                    md:grid-cols-4
                     gap-x-4
                     gap-y-4
                     md:gap-6
@@ -289,7 +289,7 @@ const PlacementRecords = () => {
                 className="
                   grid
                   grid-cols-2
-                  md:grid-cols-[2.2fr_1.4fr_0.7fr_1.4fr]
+                  md:grid-cols-4
                   gap-x-4
                   gap-y-4
                   md:gap-6
@@ -308,9 +308,9 @@ const PlacementRecords = () => {
                     {record.student_name || "-"}
                   </h3>
 
-                  <p className="text-[10px] sm:text-xs md:text-sm leading-relaxed text-[#667085]">
+                  {/* <p className="text-[10px] sm:text-xs md:text-sm leading-relaxed text-[#667085]">
                     {record.program || "-"}
-                  </p>
+                  </p> */}
                 </div>
 
                 {/* ==========================
@@ -318,9 +318,9 @@ const PlacementRecords = () => {
                 ========================== */}
 
                 <div className="flex flex-col justify-center">
-                  <span className="text-[9px] sm:text-[10px] md:text-sm tracking-[0.15em] sm:tracking-[0.2em] uppercase text-[#7A1F2B] mb-1">
+                  {/* <span className="text-[9px] sm:text-[10px] md:text-sm tracking-[0.15em] sm:tracking-[0.2em] uppercase text-[#7A1F2B] mb-1">
                     {record.offer_type || "-"}
-                  </span>
+                  </span> */}
 
                   <span className="text-xs sm:text-sm md:text-[15px] leading-snug text-black">
                     {record.designation || record.job_profile || "-"}
@@ -336,9 +336,10 @@ const PlacementRecords = () => {
                     CTC
                   </span>
 
-                  <span className="text-sm sm:text-base text-black">
-                    {record.detailed_ctc || "-"}
-                  </span>
+                  <span className="text-xs text-black text-center">
+                    {/* {record.detailed_ctc || "-"} */}
+                    {record.program || "-"}
+                  </span> 
                 </div>
 
                 {/* ==========================

@@ -17,7 +17,7 @@ interface DriveRecord {
   drive_date: string | null;
   jd_link: string | null;
   students_registered: number | null;
-  students_appeared: number | null;
+  students_appeared: number | null; 
   selected: number | null;
   status: string | null;
 }
@@ -285,8 +285,7 @@ const DriveCalendar = () => {
                     grid-cols-1
                     sm:grid-cols-2
                     md:grid-cols-3
-                    lg:grid-cols-4
-                    xl:grid-cols-6
+                    lg:grid-cols-5
                     items-start
                     gap-4
                     border-b
@@ -329,13 +328,13 @@ const DriveCalendar = () => {
 
                   {/* Package */}
 
-                  <div className="min-w-0">
+                  {/* <div className="min-w-0">
                     <p className="break-words font-poppins text-xs text-[#111] lg:text-sm">
                       {record.ctc_offered_lpa
                         ? `${record.ctc_offered_lpa} LPA`
                         : record.detailed_ctc_offered || "-"}
                     </p>
-                  </div>
+                  </div> */}
 
                   {/* Dates */}
 

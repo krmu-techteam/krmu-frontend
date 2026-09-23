@@ -130,78 +130,90 @@ export interface RecruiterLogo {
 
 export const ourTopRecruitersLogos: RecruiterLogo[] = [
   {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/rkclick.webp",
-    alt: "RK Click logo",
+    imageUrl:
+      "https://www.krmangalam.edu.in/images/placements/recruiters/decathlon.svg",
+    alt: "Decathlon logo",
     width: 200,
     height: 76,
   },
   {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/ibm.webp",
-    alt: "IBM logo",
+    imageUrl:
+      "https://www.krmangalam.edu.in/images/placements/recruiters/autodesk.svg",
+    alt: "Autodesk logo",
+    width: 120,
+    height: 76,
+  },
+  {
+    imageUrl:
+      "https://www.krmangalam.edu.in/images/placements/recruiters/google.svg",
+    alt: "Google logo",
     width: 200,
     height: 76,
   },
   {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/xebia.webp",
-    alt: "Xebia logo",
+    imageUrl:
+      "https://www.krmangalam.edu.in/images/placements/recruiters/tcs.svg",
+    alt: "TCS logo",
     width: 200,
     height: 76,
   },
   {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/aecc.webp",
-    alt: "AECC logo",
+    imageUrl:
+      "https://www.krmangalam.edu.in/images/placements/recruiters/zmedia.svg",
+    alt: "Z Media logo",
     width: 200,
     height: 76,
   },
   {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/systique.webp",
-    alt: "Systique logo",
+    imageUrl:
+      "https://www.krmangalam.edu.in/images/placements/recruiters/mankind.svg",
+    alt: "Mankind logo",
     width: 200,
     height: 76,
   },
   {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/medanta.webp",
-    alt: "Medanta logo",
+    imageUrl:
+      "https://www.krmangalam.edu.in/images/placements/recruiters/collegedekho.svg",
+    alt: "CollegeDekho logo",
     width: 200,
     height: 76,
   },
   {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/samatrix.webp",
-    alt: "Samatrix logo",
+    imageUrl:
+      "https://www.krmangalam.edu.in/images/placements/recruiters/jio.svg",
+    alt: "Jio logo",
+    width: 100,
+    height: 76,
+  },
+  {
+    imageUrl:
+      "https://www.krmangalam.edu.in/images/placements/recruiters/magicpin.svg",
+    alt: "magicpin logo",
     width: 200,
     height: 76,
   },
   {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/ec-council.webp",
-    alt: "EC-Council logo (file: ec-council.webp)",
-    width: 250,
-    height: 76,
-  },
-  {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/deep.webp",
-    alt: "Deep (company) logo",
-    width: 200,
-    height: 76,
-  },
-  {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/fdci.webp",
-    alt: "fdci",
+    imageUrl:
+      "https://www.krmangalam.edu.in/images/placements/recruiters/salve.svg",
+    alt: "Salve logo",
     width: 126,
     height: 76,
   },
   {
     imageUrl:
-      "https://www.krmangalam.edu.in/images/recuiters/grant-thorton.webp",
-    alt: "Grant Thornton logo",
-    width: 200,
+      "https://www.krmangalam.edu.in/images/placements/recruiters/hul.svg",
+    alt: "HUL logo",
+    width: 150,
     height: 76,
   },
   {
-    imageUrl: "https://www.krmangalam.edu.in/images/recuiters/cesim.webp",
-    alt: "Cesim logo  ",
+    imageUrl:
+      "https://www.krmangalam.edu.in/images/placements/recruiters/max-healthcare.svg",
+    alt: "Max Healthcare logo",
     width: 126,
     height: 76,
   },
+
   // {
   //   imageUrl: "https://www.krmangalam.edu.in/images/recuiters/apple.webp",
   //   alt: "apple",
@@ -474,9 +486,7 @@ export interface PersonSchemaData {
   };
 }
 
-export function createPersonGraphSchema(
-  ...peopleGroups: PersonSchemaData[][]
-) {
+export function createPersonGraphSchema(...peopleGroups: PersonSchemaData[][]) {
   const people = peopleGroups.flat();
 
   const schema = {
