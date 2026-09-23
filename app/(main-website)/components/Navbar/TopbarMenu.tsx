@@ -8,7 +8,7 @@ type TopbarProps = {
 
 const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
   return (
-    <ul className="flex gap-2.5">
+    <ul className="flex gap-2.5 items-center">
       {topbarmenu?.map((item) => {
         if (item.__component === "menu.menu-button") {
           return (
@@ -37,7 +37,7 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
           return (
             <li
               key={item.id}
-              // className="first:bg-[#001732] first:transition-all  first:relative first:overflow-hidden group  first:rounded-[5px] first:px-2 first:py-[2px]"
+              className="first:bg-[#cb000d] first:transition-all  first:relative first:overflow-hidden group  first:rounded-[5px] first:px-1 first:py-[3px] leading-0"
             >
               {topbarmenu.indexOf(item) === 0 && (
                 <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
@@ -45,7 +45,7 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
               {item.url ? (
                 <Link
                   href={item.url}
-                  className={`font-semibold text-xs ${topbarmenu.indexOf(item) === 0 ? "text-white blink-effect bg-[#cb000d] transition-all  relative overflow-hidden group  rounded-[5px] px-2 py-1.5 inline-block" : "text-white"} ${item.menuclass || ""}`}
+                  className={`font-semibold text-xs ${topbarmenu.indexOf(item) === 0 ? "text-white topbar-blink-effect inline-block" : "text-white"} ${item.menuclass || ""}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

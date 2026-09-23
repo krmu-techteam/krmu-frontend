@@ -3807,6 +3807,9 @@
   .blink-effect {
     animation: blink 1s linear infinite;
   }
+  .topbar-blink-effect {
+    animation: blink 0.8s linear infinite;
+  }
 
   @keyframes blink {
     25% {
