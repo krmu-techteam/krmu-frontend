@@ -28,7 +28,7 @@ const FacultyAdvisorySection = ({ schoolCat, fac_adv }: Props) => {
                 {/* Faculty List */}
                 <div>
                     <h2 className="heading-primary mb-4 md:mb-8">
-                        Faculty at {schoolCat.toUpperCase()}
+                        Faculty at {schoolCat}
                     </h2>
                     <FacultyAdvisoryCards schoolCat={schoolCat} />
                 </div>
