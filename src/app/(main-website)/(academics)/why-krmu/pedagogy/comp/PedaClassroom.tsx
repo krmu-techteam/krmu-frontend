@@ -1,21 +1,19 @@
 type Props = {
-  heading: string;
-  desc: string;
+    heading: string;
+    desc: string;
 };
 
 const PedaClassroom = ({ heading, desc }: Props) => {
-  return (
-    <section className="py-[30px] px-4">
-      <div className="max-w-[1664px] mx-auto w-full">
-        <h2 className="mt-2.5 mb-[15px] text-2xl md:text-4xl text-center sm:text-left font-semibold">
-          {heading}
-        </h2>
-        <p className="text-[#051630] leading-[1] font-semibold text-lg">
-          {desc}
-        </p>
-      </div>
-    </section>
-  );
+    return (
+        <section className="py-12 bg-[#edf6f9]">
+            <div className="max-w-[1440px] mx-auto w-full px-4 md:px-8 xl:px-12">
+                <h2 className="mt-2.5 mb-[15px] text-2xl md:text-4xl !capitalize font-fraunces text-center sm:text-left font-medium text-black">
+                    {heading}
+                </h2>
+                <p className="text-black/85 font-medium text-lg">{desc}</p>
+            </div>
+        </section>
+    );
 };
 
 export default PedaClassroom;

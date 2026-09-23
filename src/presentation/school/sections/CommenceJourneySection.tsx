@@ -218,25 +218,25 @@ const CommenceJourneySection = ({
                         />
                         <CommenceJourneyMobileStepCard
                             title="Complete payment and submit"
-                            desc="Pay the required Application Fee"
+                            desc="Pay the required application fee and submit the form."
                             iconSrc="/schools/card.svg"
                             slug={slug}
                         />
                         <CommenceJourneyMobileStepCard
-                            title="Take an entrance test"
+                            title="Take the Entrance Exam"
                             desc="K.R. Mangalam University Entrance Examination (KREE)"
                             iconSrc="/schools/doc.svg"
                             slug={slug}
                         />
                         <CommenceJourneyMobileStepCard
-                            title="Appear for interaction"
+                            title="Appear for Interview"
                             desc="Attend our Faculty-Led Interview."
                             iconSrc="/schools/communications.svg"
                             slug={slug}
                         />
                         <CommenceJourneyMobileStepCard
                             title="Get the admission offer"
-                            desc="You will receive the offer letter after the successful interaction"
+                            desc="You will receive the offer letter after the successful interview"
                             iconSrc="/schools/business-people.svg"
                             slug={slug}
                         />
