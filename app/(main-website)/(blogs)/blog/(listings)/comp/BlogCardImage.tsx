@@ -33,7 +33,7 @@ export default function BlogCardImage({ sources, imageUrl }: Props) {
       width={426}
       height={284}
       alt=""
-      className="rounded-[24px] h-auto w-full"
+      className="rounded-[24px] h-auto w-full temp-class"
       sizes="(max-width: 768px) 100vw, 426px"
       loading="eager" // makes the `complete` check above reliable
       onError={() => setIndex((i) => i + 1)}
