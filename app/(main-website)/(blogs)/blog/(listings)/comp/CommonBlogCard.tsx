@@ -1,65 +1,43 @@
-import { getBlogImageById } from "@/lib/api/blogs/single-blog";
-import Image from "next/image";
 import Link from "next/link";
+import BlogCardImage from "./BlogCardImage";
 
 type Props = {
   title: string;
   excerpt: string;
   slug: string;
-  imgId: number;
+  imageUrl?: string | null;
   date: string;
 };
 
-export const checkImage = async (url: string | null): Promise<boolean> => {
-  if (!url) return false;
+const WP_HOST = "https://wp.krmangalam.edu.in";
 
-  try {
-    const res = await fetch(url, { method: "HEAD" });
-    return res.ok;
-  } catch {
-    return false;
-  }
-};
+// Same URL rewriting rules as before, but returned as a list of URLs to try
+// (the browser falls back to the next one on error) instead of server-side HEAD requests.
+function getImageCandidates(url?: string | null): string[] {
+  if (!url) return [];
 
-const CommonBlogCard = async ({ title, excerpt, slug, imgId, date }: Props) => {
-  const imgUrl = await getBlogImageById(imgId);
+  const fixed = url
+    // www.krmangalam.edu.in/...  ->  wp.krmangalam.edu.in/...
+    .replace(/^https:\/\/www\.krmangalam\.edu\.in/, WP_HOST)
+    // wp.krmangalam.edu.in//wp-content  ->  wp.krmangalam.edu.in/blog/wp-content
+    .replace(
+      /^https:\/\/wp\.krmangalam\.edu\.in\/+wp-content/,
+      `${WP_HOST}/blog/wp-content`,
+    );
 
-  // if (imgUrl) {
-  //   imgUrl = imgUrl.replace("/blog/wp-content", "/wp-content");
-  // }
+  return Array.from(new Set([url, fixed]));
+}
 
-  const finalSrc = imgUrl?.includes(
-    "https://wp.krmangalam.edu.in/blog/wp-content",
-  )
-    ? imgUrl
-    : imgUrl?.replace(
-        /^https:\/\/www\.krmangalam\.edu\.in/,
-        "https://wp.krmangalam.edu.in/",
-      ) || null;
-
-  const finalSrc2 = finalSrc?.includes(
-    "https://wp.krmangalam.edu.in//wp-content",
-  )
-    ? finalSrc.replace(
-        "https://wp.krmangalam.edu.in//wp-content",
-        "https://wp.krmangalam.edu.in/blog/wp-content",
-      )
-    : finalSrc;
-
-  let finalImage: string | null = null;
-
-  if (await checkImage(imgUrl)) {
-    finalImage = imgUrl; // ✅ original works
-  } else if (await checkImage(finalSrc2)) {
-    finalImage = finalSrc2; // ✅ fallback works
-  }
-
+const CommonBlogCard = ({ title, excerpt, slug, imageUrl, date }: Props) => {
+  // timeZone is fixed so server (UTC on Netlify) and browser render the same date
   const postDate = new Date(date).toLocaleDateString("en-IN", {
     day: "numeric",
     month: "short",
     year: "numeric",
+    timeZone: "Asia/Kolkata",
   });
 
+  const cleanExcerpt = (excerpt ?? "").split("[&hellip;]")[0].trim();
 
   return (
     <div className="w-full">
@@ -70,21 +48,13 @@ const CommonBlogCard = async ({ title, excerpt, slug, imgId, date }: Props) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div className="p-2.5" data-test={finalSrc} data-test2={imgUrl}>
+        <div className="p-2.5">
           <div className="relative">
-            <span className="absolute bottom-0 right-0 text-sm font-bold text-shadow-2xl bg-[#051730]  text-white py-2.5 px-5 rounded-tl-[24px]">
+            <span className="absolute bottom-0 right-0 z-10 text-sm font-bold text-shadow-2xl bg-[#051730] text-white py-2.5 px-5 rounded-tl-[24px]">
               {postDate}
             </span>
-            {finalImage && (
-              <Image
-                src={finalImage}
-                width={426}
-                height={284}
-                alt=""
-                className="rounded-[24px] h-auto w-full"
-                sizes="(max-width: 768px) 100vw, 426px"
-              />
-            )}
+
+            <BlogCardImage sources={getImageCandidates(imageUrl)} />
           </div>
 
           <div>
@@ -95,16 +65,10 @@ const CommonBlogCard = async ({ title, excerpt, slug, imgId, date }: Props) => {
 
             <div
               dangerouslySetInnerHTML={{
-                __html: `${excerpt
-                  .split("[&hellip;]")[0]
-                  .trim()}...&nbsp<span style="color: #093475;">Read More</span>`,
+                __html: `${cleanExcerpt}...&nbsp;<span style="color: #093475;">Read More</span>`,
               }}
               className="mb-5"
             />
-
-            {/* <span className="text-lg font-normal text-[#093475] block">
-              Read More 
-            </span> */}
           </div>
         </div>
       </Link>

@@ -1,3 +1,4 @@
+import { MainBlogs } from "@/app/(main-website)/(blogs)/blog/(listings)/comp/main-blogs";
 import { FETCH_STRAPI_URL, krmBlogURL } from "@/app/constant";
 import {
   BlogCategoryPageSEOResponse,
@@ -5,45 +6,61 @@ import {
   MainBlogResponse,
 } from "@/lib/types/blogs/main-blogs";
 
+type BlogsResult = {
+  blogs: MainBlogs[];
+  totalPages: number;
+  error: boolean;
+};
+// Netlify functions time out at ~10s, so abort well before that
+const FETCH_TIMEOUT_MS = 6000;
+ 
 export async function getAllBlogsByPerPageOrCategorySlug(
   num_of_blogs: number = 6,
   page: number = 1,
   categorySlug?: string,
-) {
+): Promise<BlogsResult> {
   try {
     const params = new URLSearchParams({
       per_page: String(num_of_blogs),
       page: String(page),
-      _embed: "wp:featuredmedia", // image URL comes with the post
-      _fields: "id,slug,title,excerpt,date_gmt,featured_media,_embedded", // drop `content` if the list doesn't need it
+      _embed: "wp:featuredmedia", // featured image URL comes with each post
+      _fields: "id,slug,title,excerpt,date_gmt,featured_media,_embedded", // no `content`, list pages don't need it
     });
-
+ 
     if (categorySlug) {
       const catRes = await fetch(
         `${krmBlogURL}/wp-json/wp/v2/categories?slug=${encodeURIComponent(categorySlug)}&_fields=id`,
         {
           next: { revalidate: 3600, tags: ["blogs"] },
-          signal: AbortSignal.timeout(10000),
+          signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
         },
       );
+ 
       const cats = catRes.ok ? await catRes.json() : [];
-      if (!cats?.length) return { blogs: [], totalPages: 0, error: false };
+ 
+      // Unknown category -> empty result (not an error)
+      if (!Array.isArray(cats) || !cats.length) {
+        return { blogs: [], totalPages: 0, error: false };
+      }
+ 
       params.append("categories", String(cats[0].id));
     }
-
+ 
     const res = await fetch(`${krmBlogURL}/wp-json/wp/v2/posts?${params}`, {
       next: { revalidate: 3600, tags: ["blogs"] },
-      signal: AbortSignal.timeout(10000),
+      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
       headers: { Accept: "application/json" },
     });
-
+ 
     // WordPress returns 400 when `page` is past the last page
-    if (res.status === 400) return { blogs: [], totalPages: 0, error: false };
+    if (res.status === 400) {
+      return { blogs: [], totalPages: 0, error: false };
+    }
     if (!res.ok) throw new Error(`WP responded ${res.status}`);
-
+ 
     const blogs = await res.json();
     if (!Array.isArray(blogs)) throw new Error("Unexpected WP response");
-
+ 
     return {
       blogs,
       totalPages: Number(res.headers.get("X-WP-TotalPages")) || 1,
@@ -54,6 +71,7 @@ export async function getAllBlogsByPerPageOrCategorySlug(
     return { blogs: [], totalPages: 0, error: true };
   }
 }
+
 // export async function getAllBlogsByPerPageOrCategorySlug(
 //   num_of_blogs: number = 6,
 //   page: number = 1,
@@ -106,9 +124,10 @@ export async function getAllBlogsByPerPageOrCategorySlug(
 
 export async function getRecentPosts() {
   try {
-    const res = await fetch(`${krmBlogURL}/wp-json/wp/v2/posts?per_page=20`, {
-      next: { revalidate: 3600, tags: ["blogs"] },
-    });
+    const res = await fetch(
+      `${krmBlogURL}/wp-json/wp/v2/posts?per_page=20`,
+      { next: { revalidate: 3600, tags: ["blogs"] } }
+    );
     if (!res.ok) throw new Error("Failed to fetch recent posts");
     const json: MainBlogResponse = await res.json();
     return json;
@@ -118,15 +137,13 @@ export async function getRecentPosts() {
   }
 }
 
-export async function getBlogPageInfo(): Promise<
-  BlogPageSEOResponse["data"] | null
-> {
+export async function getBlogPageInfo(): Promise<BlogPageSEOResponse["data"] | null> {
   try {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/blog?fields[0]=Title&populate[blog_seo][populate][shareImage][fields][0]=url`,
       {
         next: { revalidate: 3600 },
-      },
+      }
     );
 
     if (!res.ok) throw new Error("Failed to fetch blog page info");
@@ -146,7 +163,7 @@ export async function getBlogCategoryPageInfo(): Promise<
       `${FETCH_STRAPI_URL}/api/blog-category?fields[0]=Title&populate[blog_category_seo][populate][shareImage][fields][0]=url`,
       {
         next: { revalidate: 3600 },
-      },
+      }
     );
 
     if (!res.ok) throw new Error("Failed to fetch blog category page info");

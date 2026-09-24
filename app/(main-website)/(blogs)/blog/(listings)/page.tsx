@@ -9,18 +9,17 @@ type Props = {
 };
 
 // ------------------------------------
-// Metadata
+// Metadata (never let a failure here break the page)
 // ------------------------------------
 export async function generateMetadata() {
-  const pageInfo = await getBlogPageInfo();
-
-  const seo = pageInfo?.blog_seo;
-
-  if (!seo) {
+  try {
+    const pageInfo = await getBlogPageInfo();
+    const seo = pageInfo?.blog_seo;
+    return seo ? strapiSeoToMetadata(seo) : {};
+  } catch (error) {
+    console.error("Blog metadata error:", error);
     return {};
   }
-
-  return strapiSeoToMetadata(seo);
 }
 
 // ------------------------------------

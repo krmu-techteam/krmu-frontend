@@ -1,32 +1,27 @@
-import { getAllBlogsByPerPageOrCategorySlug } from "@/lib/api/blogs/main-blog";
 import CommonBlogCard from "./CommonBlogCard";
-import { MainBlogs } from "@/lib/types/blogs/main-blogs";
+import { MainBlogs } from "./main-blogs";
+// import { MainBlogs } from "@/lib/types/blogs/main-blogs";
 
 type Props = {
-  currentPage: number;
-  slug?: string;
+  blogs: MainBlogs[];
   mainBlogClass: string;
 };
 
-const CommonBlogList = async ({ currentPage, slug, mainBlogClass }: Props) => {
-  const blogsPerPage = 6;
-
-  const { blogs } = await getAllBlogsByPerPageOrCategorySlug(
-    blogsPerPage,
-    currentPage,
-    slug
-  );
+const CommonBlogList = ({ blogs, mainBlogClass }: Props) => {
+  if (!blogs?.length) {
+    return <p className="py-10 text-center">No posts found.</p>;
+  }
 
   return (
     <div className={mainBlogClass || ""}>
-      {blogs?.map((blog: MainBlogs, i: number) => (
+      {blogs.map((blog) => (
         <CommonBlogCard
-          key={i}
-          title={blog?.title?.rendered}
-          excerpt={blog?.excerpt?.rendered}
-          slug={blog?.slug}
-          imgId={blog?.featured_media}
-          date={blog?.date_gmt}
+          key={blog.id}
+          title={blog.title?.rendered ?? ""}
+          excerpt={blog.excerpt?.rendered ?? ""}
+          slug={blog.slug}
+          imageUrl={blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url}
+          date={blog.date_gmt}
         />
       ))}
     </div>

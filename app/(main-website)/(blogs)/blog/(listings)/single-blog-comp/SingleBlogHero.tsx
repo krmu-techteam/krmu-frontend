@@ -2,9 +2,19 @@ import Image from "next/image";
 import SingleBlogHeroAuthor from "./SingleBlogHeroAuthor";
 import SingleBlogDate from "./SingleBlogDate";
 import { Facebook, Youtube, Twitter } from "lucide-react";
-import { checkImage } from "../comp/CommonBlogCard";
+// import { checkImage } from "../comp/CommonBlogCard";
 // import { STRAPI_URL } from "@/app/constant";
 
+export const checkImage = async (url: string | null): Promise<boolean> => {
+  if (!url) return false;
+
+  try {
+    const res = await fetch(url, { method: "HEAD" });
+    return res.ok;
+  } catch {
+    return false;
+  }
+};
 type SingleBlogProps = {
   title: string;
   imgUrl: string;
