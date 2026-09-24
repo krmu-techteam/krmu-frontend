@@ -30,7 +30,7 @@ async function getMediaMap(ids: number[]): Promise<Record<number, string>> {
 
   try {
     const res = await fetch(
-      `${krmBlogURL}/wp-json/wp/v2/media?include=${uniqueIds.join(",")}&per_page=${uniqueIds.length}&_fields=id,source_url`,
+      `${krmBlogURL}/wp-json/wp/v2/media?include=${uniqueIds.join(",")}&per_page=${uniqueIds.length}&_fields=id,source_url,media_details`,
       {
         next: { revalidate: 3600, tags: ["blogs"] },
         signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
@@ -44,7 +44,13 @@ async function getMediaMap(ids: number[]): Promise<Record<number, string>> {
 
     const map: Record<number, string> = {};
     for (const m of media) {
-      if (m?.id && m?.source_url) map[m.id] = m.source_url;
+      // Prefer WordPress's 768px version: much lighter than the full-size original
+      const sizes = m?.media_details?.sizes;
+      const url =
+        sizes?.medium_large?.source_url ??
+        sizes?.large?.source_url ??
+        m?.source_url;
+      if (m?.id && url) map[m.id] = url;
     }
     return map;
   } catch (error) {

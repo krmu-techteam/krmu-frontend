@@ -76,7 +76,7 @@ const CommonBlogCard = async ({
 
             <BlogCardImage
               sources={getImageCandidates(finalImageUrl)}
-              imageUrl={fetchedImageUrl}
+              // imageUrl={fetchedImageUrl}
             />
           </div>
 

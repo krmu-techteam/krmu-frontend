@@ -5,11 +5,10 @@ import { useEffect, useRef, useState } from "react";
 
 type Props = {
   sources: string[];
-  imageUrl?: string | null;
 };
 
 // Tries each URL in order; moves to the next one if the image fails to load.
-export default function BlogCardImage({ sources, imageUrl }: Props) {
+export default function BlogCardImage({ sources }: Props) {
   const [index, setIndex] = useState(0);
   const imgRef = useRef<HTMLImageElement>(null);
   const src = sources[index];
@@ -35,6 +34,9 @@ export default function BlogCardImage({ sources, imageUrl }: Props) {
       alt=""
       className="rounded-[24px] h-auto w-full"
       sizes="(max-width: 768px) 100vw, 426px"
+      // Load straight from WordPress: Netlify's image optimizer was timing out (504)
+      // while downloading originals from the slow WP server.
+      unoptimized
       loading="eager" // makes the `complete` check above reliable
       onError={() => setIndex((i) => i + 1)}
     />
