@@ -29,6 +29,7 @@ function getImageCandidates(url?: string | null): string[] {
 }
 
 const CommonBlogCard = ({ title, excerpt, slug, imageUrl, date }: Props) => {
+  console.log("imageUrl", imageUrl);
   // timeZone is fixed so server (UTC on Netlify) and browser render the same date
   const postDate = new Date(date).toLocaleDateString("en-IN", {
     day: "numeric",
