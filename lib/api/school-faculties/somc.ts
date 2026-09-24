@@ -153,21 +153,21 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr.-Mohd.-Adil-SOMC.jpg",
   },
-  {
-    id: 97595,
-    slug: "dr-mansi",
-    title: {
-      rendered: "Dr. Mansi Yadav",
-    },
-    featured_media: 101955,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant  Professor",
-      schools: [1126],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/03/mansi-yadav-1.png",
-  },
+  // {
+  //   id: 97595,
+  //   slug: "dr-mansi",
+  //   title: {
+  //     rendered: "Dr. Mansi Yadav",
+  //   },
+  //   featured_media: 101955,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant  Professor",
+  //     schools: [1126],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2025/03/mansi-yadav-1.png",
+  // },
   {
     id: 88470,
     slug: "dr-mohd-rafiq-shah",
@@ -229,21 +229,21 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/05/Dr.-Mohd.-Anas-Kamil-SOMC.jpg",
   },
-  {
-    id: 17612,
-    slug: "takrar-ahmad-yattoo",
-    title: {
-      rendered: "Mr. Takrar Ahmad Yattoo",
-    },
-    featured_media: 17613,
-    acf: {
-      "staff-qualification": "Ph.D. (pursuing)",
-      staff_designation: "Assistant  Professor",
-      schools: [1043],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Mr.-Takrar-Ahmed-SOMC.jpg",
-  },
+  // {
+  //   id: 17612,
+  //   slug: "takrar-ahmad-yattoo",
+  //   title: {
+  //     rendered: "Mr. Takrar Ahmad Yattoo",
+  //   },
+  //   featured_media: 17613,
+  //   acf: {
+  //     "staff-qualification": "Ph.D. (pursuing)",
+  //     staff_designation: "Assistant  Professor",
+  //     schools: [1043],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2024/03/Mr.-Takrar-Ahmed-SOMC.jpg",
+  // },
   {
     id: 10721,
     slug: "deepika-chaudhary",
@@ -381,21 +381,21 @@ export const somcFaculties: SchoolFacultiesType[] = [
     featured_media_url:
       "https://wp.krmangalam.edu.in/wp-content/uploads/2024/01/Monika-Yadav.png",
   },
-  {
-    id: 113862,
-    slug: "ms-richa-goyal",
-    title: {
-      rendered: "Dr. Richa Goyal",
-    },
-    featured_media: 10291,
-    acf: {
-      "staff-qualification": "Ph.D.",
-      staff_designation: "Assistant  Professor",
-      schools: [],
-    },
-    featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Richa-Goyal.png",
-  },
+  // {
+  //   id: 113862,
+  //   slug: "ms-richa-goyal",
+  //   title: {
+  //     rendered: "Dr. Richa Goyal",
+  //   },
+  //   featured_media: 10291,
+  //   acf: {
+  //     "staff-qualification": "Ph.D.",
+  //     staff_designation: "Assistant  Professor",
+  //     schools: [],
+  //   },
+  //   featured_media_url:
+  //     "https://wp.krmangalam.edu.in/wp-content/uploads/2026/04/Richa-Goyal.png",
+  // },
   {
     id: 113864,
     slug: "dr-neha",

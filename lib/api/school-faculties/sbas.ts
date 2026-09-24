@@ -8,7 +8,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       rendered: "Prof. Meena Bhandari",
     },
     featured_media: 903,
-    acf: {
+    acf: { 
       "staff-qualification": "Ph.D. (Chemistry)",
       staff_designation: "Professor & Dean- SBAS",
       schools: [],
@@ -105,7 +105,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr-Saba-Rashid-2.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2025/05/Dr-Saba-Rashid-3.png",
   },
   {
     id: 106793,
@@ -225,7 +225,7 @@ export const sbasFaculties: SchoolFacultiesType[] = [
       schools: [787],
     },
     featured_media_url:
-      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/10/Dr.-Divyanshi-Mangla-1.png",
+      "https://wp.krmangalam.edu.in/wp-content/uploads/2024/10/Dr.-Divyanshi-Mangla-2.png",
   },
   {
     id: 71089,

@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { getBlogImageByIdClientComp } from "@/lib/api/blogs/single-blog";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -12,11 +13,49 @@ type Props = {
   slug: string;
 };
 
-const AuthorPostsCard = ({ title, imgId, date, slug }: Props) => {
+const FALLBACK_IMAGE =
+  "https://www.krmangalam.edu.in/images/blog/blog-placeholder.jpg";
+
+const AuthorPostsCard = ({
+  title,
+  imgId,
+  date,
+  slug,
+}: Props) => {
   const [imgUrl, setImgUrl] = useState("");
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
-    getBlogImageByIdClientComp(imgId).then((url) => setImgUrl(url));
+    let mounted = true;
+
+    setImgUrl("");
+    setImageError(false);
+
+    if (!imgId) {
+      setImageError(true);
+      return;
+    }
+
+    getBlogImageByIdClientComp(imgId)
+      .then((url) => {
+        if (!mounted) return;
+
+        if (url) {
+          setImgUrl(url);
+        } else {
+          setImageError(true);
+        }
+      })
+      .catch((error) => {
+        console.error(`Failed to load image for media ID ${imgId}:`, error);
+        if (mounted) {
+          setImageError(true);
+        }
+      });
+
+    return () => {
+      mounted = false;
+    };
   }, [imgId]);
 
   const postDate = new Date(date).toLocaleDateString("en-IN", {
@@ -25,27 +64,39 @@ const AuthorPostsCard = ({ title, imgId, date, slug }: Props) => {
     year: "numeric",
   });
 
+  const finalImageUrl = imageError ? FALLBACK_IMAGE : imgUrl;
 
   return (
     <Link
       href={`/blog/${slug}`}
+      target="_blank"
+      rel="noopener noreferrer"
       className="flex flex-col md:flex-row gap-2.5 md:gap-5 mb-5 md:h-[172px] border-b border-[#d2d2d2] pb-5"
-      target="_blank" rel="noopener noreferrer"
     >
-      <div className="md:w-2/5">
-        {imgUrl ? (
-          <Image
-            src={imgUrl}
-            width={300}
-            height={300}
-            alt={title}
-            className="w-full h-full object-cover"
-          />
-        ) : (
+      {/* IMAGE */}
+      <div className="w-full md:w-2/5 md:h-[151px] shrink-0">
+        {!imgUrl && !imageError ? (
           <Skeleton className="w-full h-[151px] rounded-none" />
+        ) : (
+          <Image
+            src={finalImageUrl}
+            width={300}
+            height={151}
+            alt={title || "Blog article"}
+            className="w-full h-[151px] object-cover"
+            onError={() => {
+              console.error(
+                `Broken blog image. Media ID: ${imgId}, URL: ${imgUrl}`
+              );
+
+              setImageError(true);
+            }}
+          />
         )}
       </div>
-      <div className="md:w-3/5">
+
+      {/* CONTENT */}
+      <div className="w-full md:w-3/5">
         {title ? (
           <h3
             className="font-semibold text-sm sm:text-xl md:text-2xl leading-[1.2] mb-2.5 text-[#1048c3]"
@@ -54,8 +105,11 @@ const AuthorPostsCard = ({ title, imgId, date, slug }: Props) => {
         ) : (
           <Skeleton className="w-full h-10" />
         )}
+
         {postDate ? (
-          <p className="text-[#666] text-xs sm:text-sm">{postDate}</p>
+          <p className="text-[#666] text-xs sm:text-sm">
+            {postDate}
+          </p>
         ) : (
           <Skeleton className="w-[80px] h-3" />
         )}
