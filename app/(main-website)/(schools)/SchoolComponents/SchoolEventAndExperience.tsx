@@ -19,7 +19,7 @@ const SchoolEventAndExperience = ({ title, desc, btn, eventsexp }: Props) => {
 
         <p>{desc}</p>
       </div>
-      <div className="max-w-[1664px] mx-auto w-full mt-10">
+      <div className="max-w-[1664px] mx-auto w-full mt-10 temp-class">
         <SchoolEventsAndExperiencesCard eventsexp={eventsexp} />
         <div className="flex justify-center">
           {(btn?.buttonclass || btn?.buttonlink) && (
