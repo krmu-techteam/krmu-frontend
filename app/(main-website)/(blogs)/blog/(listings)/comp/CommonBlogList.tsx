@@ -21,6 +21,7 @@ const CommonBlogList = ({ blogs, mainBlogClass }: Props) => {
           slug={blog.slug}
           imageUrl={blog.image_url}
           date={blog.date_gmt}
+          imageId={blog.featured_media}
         />
       ))}
     </div>
