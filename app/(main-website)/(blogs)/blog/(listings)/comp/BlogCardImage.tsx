@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 type Props = {
   sources: string[];
-  imageUrl: string | null;
+  imageUrl?: string | null;
 };
 
 // Tries each URL in order; moves to the next one if the image fails to load.
@@ -27,13 +27,13 @@ export default function BlogCardImage({ sources, imageUrl }: Props) {
 
   return (
     <Image
-      key={imageUrl || src}
+      key={src}
       ref={imgRef}
-      src={imageUrl || src}
+      src={src}
       width={426}
       height={284}
       alt=""
-      className="rounded-[24px] h-auto w-full temp-class"
+      className="rounded-[24px] h-auto w-full"
       sizes="(max-width: 768px) 100vw, 426px"
       loading="eager" // makes the `complete` check above reliable
       onError={() => setIndex((i) => i + 1)}
