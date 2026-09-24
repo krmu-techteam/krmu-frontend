@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   // assetPrefix: "/blog",
   // basePath: "/blog",
   // assetPrefix: "https://krmangalam.netlify.app",
+  staticPageGenerationTimeout: 300, // default is 60 seconds
   poweredByHeader: false,
   images: {
     remotePatterns: [
