@@ -1,6 +1,5 @@
 import CommonBlogCard from "./CommonBlogCard";
-import { MainBlogs } from "./main-blogs";
-// import { MainBlogs } from "@/lib/types/blogs/main-blogs";
+import { MainBlogs } from "@/lib/types/blogs/main-blogs";
 
 type Props = {
   blogs: MainBlogs[];
@@ -20,7 +19,7 @@ const CommonBlogList = ({ blogs, mainBlogClass }: Props) => {
           title={blog.title?.rendered ?? ""}
           excerpt={blog.excerpt?.rendered ?? ""}
           slug={blog.slug}
-          imageUrl={blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url}
+          imageUrl={blog.image_url}
           date={blog.date_gmt}
         />
       ))}

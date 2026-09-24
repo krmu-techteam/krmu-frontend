@@ -1,4 +1,3 @@
-import { MainBlogs } from "@/app/(main-website)/(blogs)/blog/(listings)/comp/main-blogs";
 import { FETCH_STRAPI_URL, krmBlogURL } from "@/app/constant";
 import {
   BlogCategoryPageSEOResponse,
@@ -6,14 +5,54 @@ import {
   MainBlogResponse,
 } from "@/lib/types/blogs/main-blogs";
 
+// lib/api/blogs/main-blog.ts
+//
+// ⚠️ Replace ONLY getAllBlogsByPerPageOrCategorySlug (and add getMediaMap above it)
+// in your existing file. Keep your existing `krmBlogURL` import, `getBlogPageInfo`,
+// and any other exports as they are.
+
+import { MainBlogs } from "@/lib/types/blogs/main-blogs";
+// import { krmBlogURL } from "..."; // <- keep your existing import for this
+
 type BlogsResult = {
   blogs: MainBlogs[];
   totalPages: number;
   error: boolean;
 };
+
 // Netlify functions time out at ~10s, so abort well before that
 const FETCH_TIMEOUT_MS = 6000;
- 
+
+// Fetch featured image URLs for ALL posts on the page in ONE request
+async function getMediaMap(ids: number[]): Promise<Record<number, string>> {
+  const uniqueIds = Array.from(new Set(ids.filter(Boolean)));
+  if (!uniqueIds.length) return {};
+
+  try {
+    const res = await fetch(
+      `${krmBlogURL}/wp-json/wp/v2/media?include=${uniqueIds.join(",")}&per_page=${uniqueIds.length}&_fields=id,source_url`,
+      {
+        next: { revalidate: 3600, tags: ["blogs"] },
+        signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+        headers: { Accept: "application/json" },
+      },
+    );
+    if (!res.ok) return {};
+
+    const media = await res.json();
+    if (!Array.isArray(media)) return {};
+
+    const map: Record<number, string> = {};
+    for (const m of media) {
+      if (m?.id && m?.source_url) map[m.id] = m.source_url;
+    }
+    return map;
+  } catch (error) {
+    console.error("Blog media fetch error:", error);
+    return {};
+  }
+}
+
 export async function getAllBlogsByPerPageOrCategorySlug(
   num_of_blogs: number = 6,
   page: number = 1,
@@ -23,10 +62,11 @@ export async function getAllBlogsByPerPageOrCategorySlug(
     const params = new URLSearchParams({
       per_page: String(num_of_blogs),
       page: String(page),
-      _embed: "wp:featuredmedia", // featured image URL comes with each post
-      _fields: "id,slug,title,excerpt,date_gmt,featured_media,_embedded", // no `content`, list pages don't need it
+      // no `content`: list pages don't need it. (`_embed` is not used because
+      // your WordPress does not return `_embedded`; images come from getMediaMap.)
+      _fields: "id,slug,title,excerpt,date_gmt,featured_media",
     });
- 
+
     if (categorySlug) {
       const catRes = await fetch(
         `${krmBlogURL}/wp-json/wp/v2/categories?slug=${encodeURIComponent(categorySlug)}&_fields=id`,
@@ -35,32 +75,41 @@ export async function getAllBlogsByPerPageOrCategorySlug(
           signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
         },
       );
- 
+
       const cats = catRes.ok ? await catRes.json() : [];
- 
+
       // Unknown category -> empty result (not an error)
       if (!Array.isArray(cats) || !cats.length) {
         return { blogs: [], totalPages: 0, error: false };
       }
- 
+
       params.append("categories", String(cats[0].id));
     }
- 
+
     const res = await fetch(`${krmBlogURL}/wp-json/wp/v2/posts?${params}`, {
       next: { revalidate: 3600, tags: ["blogs"] },
       signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
       headers: { Accept: "application/json" },
     });
- 
+
     // WordPress returns 400 when `page` is past the last page
     if (res.status === 400) {
       return { blogs: [], totalPages: 0, error: false };
     }
     if (!res.ok) throw new Error(`WP responded ${res.status}`);
- 
-    const blogs = await res.json();
-    if (!Array.isArray(blogs)) throw new Error("Unexpected WP response");
- 
+
+    const data = await res.json();
+    if (!Array.isArray(data)) throw new Error("Unexpected WP response");
+    const raw = data as MainBlogs[];
+
+    // One extra request for all featured images on this page
+    const mediaMap = await getMediaMap(raw.map((b) => b.featured_media));
+
+    const blogs: MainBlogs[] = raw.map((b) => ({
+      ...b,
+      image_url: mediaMap[b.featured_media] ?? null,
+    }));
+
     return {
       blogs,
       totalPages: Number(res.headers.get("X-WP-TotalPages")) || 1,
@@ -124,10 +173,9 @@ export async function getAllBlogsByPerPageOrCategorySlug(
 
 export async function getRecentPosts() {
   try {
-    const res = await fetch(
-      `${krmBlogURL}/wp-json/wp/v2/posts?per_page=20`,
-      { next: { revalidate: 3600, tags: ["blogs"] } }
-    );
+    const res = await fetch(`${krmBlogURL}/wp-json/wp/v2/posts?per_page=20`, {
+      next: { revalidate: 3600, tags: ["blogs"] },
+    });
     if (!res.ok) throw new Error("Failed to fetch recent posts");
     const json: MainBlogResponse = await res.json();
     return json;
@@ -137,13 +185,15 @@ export async function getRecentPosts() {
   }
 }
 
-export async function getBlogPageInfo(): Promise<BlogPageSEOResponse["data"] | null> {
+export async function getBlogPageInfo(): Promise<
+  BlogPageSEOResponse["data"] | null
+> {
   try {
     const res = await fetch(
       `${FETCH_STRAPI_URL}/api/blog?fields[0]=Title&populate[blog_seo][populate][shareImage][fields][0]=url`,
       {
         next: { revalidate: 3600 },
-      }
+      },
     );
 
     if (!res.ok) throw new Error("Failed to fetch blog page info");
@@ -163,7 +213,7 @@ export async function getBlogCategoryPageInfo(): Promise<
       `${FETCH_STRAPI_URL}/api/blog-category?fields[0]=Title&populate[blog_category_seo][populate][shareImage][fields][0]=url`,
       {
         next: { revalidate: 3600 },
-      }
+      },
     );
 
     if (!res.ok) throw new Error("Failed to fetch blog category page info");

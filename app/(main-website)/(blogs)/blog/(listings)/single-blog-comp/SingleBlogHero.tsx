@@ -43,7 +43,7 @@ const SingleBlogHero = async ({
 
   const normalizedImgUrl = imgUrl
     ?.replace("/blog/wp-content", "/wp-content")
-    ?.replace("wp.krmangalam.edu.in", "www.krmangalam.edu.in");
+    ?.replace("wp.krmangalam.edu.in", "www.krmangalam.edu.in"); 
 
   let finalImage: string | null = null;
 

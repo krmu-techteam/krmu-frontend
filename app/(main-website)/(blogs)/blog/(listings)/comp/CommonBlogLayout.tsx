@@ -60,6 +60,7 @@ const CommonBlogLayout = async ({
     slug,
   );
 
+  console.log('imageUrl', blogs);
   if (error) {
     return (
       <p className="py-10 text-center">
@@ -67,6 +68,7 @@ const CommonBlogLayout = async ({
       </p>
     );
   }
+  console.log('blogs', blogs);
 
   return (
     <>

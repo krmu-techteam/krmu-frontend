@@ -4,22 +4,17 @@ import { ImageAsset } from "../phd-programmes";
 
 export type MainBlogResponse = MainBlogs[];
 
-export interface MainBlogs {
+export type MainBlogs = {
   id: number;
-  date: string;
   slug: string;
-  title: {
-    rendered: string;
-  };
+  title: { rendered: string };
+  excerpt: { rendered: string };
   featured_media: number;
-  // _embedded: {
-  //   "wp:featuredmedia"?: BlogFeaturedMedia[];
-  // };
-  excerpt: {
-    rendered: string;
-  };
-  date_gmt: string
-}
+  date_gmt: string;
+  image_url?: string | null; // added by getAllBlogsByPerPageOrCategorySlug
+};
+ 
+ 
 
 export type BlogSEOShareImage = {
   id: number;
