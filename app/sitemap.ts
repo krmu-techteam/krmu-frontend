@@ -358,27 +358,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/placement`,
+      url: `${baseUrl}/placements`,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/the-placements-process`,
+      url: `${baseUrl}/placements/records`,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/placement/our-recruiter`,
+      url: `${baseUrl}/placements/trainers`,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/career-development-centre`,
+      url: `${baseUrl}/placements/students`,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/placement-highlights`,
+      url: `${baseUrl}/placements/recruiters`,
       changeFrequency: "monthly",
       priority: 0.7,
     },
