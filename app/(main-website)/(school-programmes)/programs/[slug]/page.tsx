@@ -27,7 +27,7 @@ import {
   createFaqSchema,
   createProgFaqSchema,
   getSchoolProgrammeSEO,
-} from "@/lib/api/common";
+} from "@/lib/api/common"; 
 import { Metadata } from "next";
 import Script from "next/script";
 import { BALLBtestimonialsData } from "../progdata/sols";

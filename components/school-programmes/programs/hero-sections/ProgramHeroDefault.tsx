@@ -106,7 +106,7 @@ const ProgramHeroDefault = ({
               slug === "ma-clinical-psychology" ||
               slug === "master-of-design-m-des-interior-design" ||
               slug === "ma-political-science" ||
-              slug === "Bachelor-of-Emergency-Medical-Technologist" ||
+              // slug === "Bachelor-of-Emergency-Medical-Technologist" ||
               slug === "bsc-clinical-psychology") && (
               <p className="text-right font-bold text-xs mt-2">
                 **Subject to Approval

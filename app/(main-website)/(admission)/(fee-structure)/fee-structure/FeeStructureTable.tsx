@@ -55,9 +55,9 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
               <FacultySection options={tab.fee_structure_acc || []} />
               {tab.tab_heading === "Fee Structure for Indian Students" && (
                 <div>
-                  <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
+                  {/* <p className="text-right text-sm mr-2 mt-2 text-muted-foreground">
                     ** Subject to Approval
-                  </p>
+                  </p> */}
                   <p className="text-right text-sm mr-2 mt-1 text-muted-foreground">
                     The programme fee payable in subsequent years may increase
                     up to 10% per annum

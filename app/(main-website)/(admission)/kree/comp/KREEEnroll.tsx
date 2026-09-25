@@ -58,9 +58,9 @@ const KREEEnroll = ({ kreeEnrolData }: Props) => {
             </AccordionItem>
           ))}
         </Accordion>
-        <p className="text-right text-sm  mt-2 text-muted-foreground">
+        {/* <p className="text-right text-sm  mt-2 text-muted-foreground">
           ** Subject to Approval
-        </p>
+        </p> */}
       </div>
     </section>
   );
