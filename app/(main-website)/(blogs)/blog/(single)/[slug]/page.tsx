@@ -1,6 +1,7 @@
 import { yoastToMetadata } from "@/lib/constants/yoastMeta";
 import {
   getBlogImageById,
+  getFeaturedImageById,
   getSingleBlogDataBySlug,
 } from "@/lib/api/blogs/single-blog";
 import { notFound } from "next/navigation";
@@ -62,6 +63,12 @@ const BlogPage = async ({ params }: Props) => {
 
   if (!currentSingleBlog?.title) return notFound();
 
+  const heroImageUrl = await getFeaturedImageById(
+    currentSingleBlog?.featured_media,
+  );
+
+  console.log("heroImageUrl", heroImageUrl);
+
   // Clean empty <p> tags from content server-side
   let cleanedContent = currentSingleBlog?.content?.rendered || "";
   if (cleanedContent) {
@@ -80,9 +87,9 @@ const BlogPage = async ({ params }: Props) => {
   const authorImageId = authorData?.acf?.profile_image;
 
   // Extract featured image from _embedded instead of calling getBlogImageById
-  const featuredImageUrl =
-    currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-    currentSingleBlog?.yoast_head_json?.og_image?.[0]?.url;
+  // const featuredImageUrl =
+  //   currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+  //   currentSingleBlog?.yoast_head_json?.og_image?.[0]?.url;
 
   const publishedDate = currentSingleBlog?.date;
   const blogFaqSchema = currentSingleBlog?.acf?.faqs_section;
@@ -152,12 +159,13 @@ const BlogPage = async ({ params }: Props) => {
 
       <SingleBlogHero
         title={currentSingleBlog?.title?.rendered}
-        imgUrl={featuredImageUrl ?? ""}
+        // imgUrl={featuredImageUrl ?? ""}
         authorName={authorName}
         date={publishedDate}
         authorDesignation={authorDesignation}
         imgId={authorImageId}
         authorSlug={authorSlug}
+        heroImageUrl={heroImageUrl}
       />
       <SingleBlogLayout
         content={cleanedContent}
