@@ -53,7 +53,7 @@ const SingleBlogLayout = ({ content, currentSlug }: Props) => {
           <SingleBlogCategorySidebar />
         </div>
       </div>
-      <div className="max-w-[1664px] mx-auto w-full h-auto px-5 2xl:px-10  gap-10 xl:gap-16 relative z-10 scroll-style-1">
+      <div className="max-w-[1664px] mx-auto w-full h-auto px-5 2xl:px-10  gap-10 xl:gap-16 relative z-10 scroll-style-1 temp-class">
         <BlogCrousel currentSlug={currentSlug} />
       </div>
     </main>
