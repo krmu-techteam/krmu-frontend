@@ -17,7 +17,7 @@ export const checkImage = async (url: string | null): Promise<boolean> => {
 };
 type SingleBlogProps = {
   title: string;
-  imgUrl: string;
+  imgUrl?: string;
   authorName: string;
   date: string;
   authorDesignation: string;
@@ -47,11 +47,11 @@ const SingleBlogHero = async ({
 
   let finalImage: string | null = null;
 
-  if (await checkImage(imgUrl)) {
-    finalImage = imgUrl; // ✅ original works
-  } else if (await checkImage(normalizedImgUrl)) {
-    finalImage = normalizedImgUrl; // ✅ fallback works
-  }
+  // if (await checkImage(imgUrl)) {
+  //   finalImage = imgUrl; // ✅ original works
+  // } else if (await checkImage(normalizedImgUrl)) {
+  //   finalImage = normalizedImgUrl; // ✅ fallback works
+  // }
 
   return (
     <>

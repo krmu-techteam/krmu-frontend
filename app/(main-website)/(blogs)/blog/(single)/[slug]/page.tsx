@@ -80,9 +80,9 @@ const BlogPage = async ({ params }: Props) => {
   const authorImageId = authorData?.acf?.profile_image;
 
   // Extract featured image from _embedded instead of calling getBlogImageById
-  const featuredImageUrl =
-    currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-    currentSingleBlog?.yoast_head_json?.og_image?.[0]?.url;
+  // const featuredImageUrl =
+  //   currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+  //   currentSingleBlog?.yoast_head_json?.og_image?.[0]?.url;
 
   const publishedDate = currentSingleBlog?.date;
   const blogFaqSchema = currentSingleBlog?.acf?.faqs_section;
@@ -152,7 +152,7 @@ const BlogPage = async ({ params }: Props) => {
 
       <SingleBlogHero
         title={currentSingleBlog?.title?.rendered}
-        imgUrl={featuredImageUrl ?? ""}
+        // imgUrl={featuredImageUrl ?? ""}
         authorName={authorName}
         date={publishedDate}
         authorDesignation={authorDesignation}
