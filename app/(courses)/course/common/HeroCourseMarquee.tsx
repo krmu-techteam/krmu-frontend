@@ -16,7 +16,7 @@ const HeroCourseMarquee = ({ data }: Props) => {
       style={{ backgroundColor: data.bgColor ?? "#e31e24" }}
     >
       <div
-        className={`flex w-max gap-10 text-white font-medium ${
+        className={`flex w-max gap-10 text-white temp-class font-medium ${
           data.speedClass ?? "animate-marquee"
         }`}
       >
