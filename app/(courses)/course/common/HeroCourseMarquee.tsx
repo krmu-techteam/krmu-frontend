@@ -24,7 +24,7 @@ const HeroCourseMarquee = ({ data }: Props) => {
           <Link
             href={data.url || "#"}
             key={index}
-            className="whitespace-nowrap"
+            className="whitespace-nowrap text-xs"
             target="_blank"
           >
             <span
