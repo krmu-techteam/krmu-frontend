@@ -16,7 +16,7 @@ export const confMenus: confMenusType[] = [
   },
   {
     label: "Dates",
-    link: "/sbas-conference/#timeline-scroll",
+    link: "/sbas-conference/#timeline-scroll", 
   },
   {
     label: "Call for Abstracts",

@@ -29,7 +29,7 @@ const page = () => {
       <ConferenceCommittees />
       <ConferenceFooter />
     </main>
-  ); 
+  );
 };
 
 export default page;
