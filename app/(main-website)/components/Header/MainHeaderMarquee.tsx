@@ -1,12 +1,11 @@
 "use client";
 
-
 export type HeroMarqueeSection = {
   messages: string[];
   bgColor?: string; // optional (default red)
   speedClass?: string; // tailwind animation class
+  url?: string;
 };
-
 
 type Props = {
   data: HeroMarqueeSection;

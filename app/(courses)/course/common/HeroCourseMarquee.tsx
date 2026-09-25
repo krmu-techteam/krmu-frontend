@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { HeroCourseMarqueeSection } from "../btech-cse-course/contentType";
 
 type Props = {
@@ -11,7 +12,7 @@ const HeroCourseMarquee = ({ data }: Props) => {
 
   return (
     <div
-      className="relative overflow-hidden py-3"
+      className="relative overflow-hidden py-1.5"
       style={{ backgroundColor: data.bgColor ?? "#e31e24" }}
     >
       <div
@@ -20,9 +21,18 @@ const HeroCourseMarquee = ({ data }: Props) => {
         }`}
       >
         {repeatedMessages.map((msg, index) => (
-          <p key={index} className="whitespace-nowrap">
-            {msg}
-          </p>
+          <Link
+            href={data.url || "#"}
+            key={index}
+            className="whitespace-nowrap"
+            target="_blank"
+          >
+            <span
+              dangerouslySetInnerHTML={{
+                __html: msg,
+              }}
+            />
+          </Link>
         ))}
       </div>
     </div>
