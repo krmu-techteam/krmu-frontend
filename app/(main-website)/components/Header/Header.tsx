@@ -80,7 +80,7 @@ const Header = ({
             ""
           ) : (
             <>
-              <div className="flex items-center flex-col-reverse xl:flex-row">
+              <div className="flex items-center flex-col-reverse xl:flex-row temp-class">
                 <div className="overflow-hidden w-full xl:w-1/2 2xl:w-[60%]">
                   <HeroCourseMarquee data={marqueeData} />
                 </div>
