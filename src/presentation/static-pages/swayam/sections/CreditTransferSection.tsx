@@ -10,6 +10,7 @@ interface ActionButton {
 }
 
 const actionButtons: ActionButton[] = [
+  { label: "Swayam Mentors", modalType: "mentors" },
   {
     label: "SWAYAM Nodal Officer",
     href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/nomination_of_swayam_nodal_officer_257cba7217.pdf",
@@ -25,10 +26,10 @@ const actionButtons: ActionButton[] = [
     href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/official_letter_for_swayam_moocs_adoption_4a435df6c1.pdf",
     external: true,
   },
-  {
-    label: "Notices and Circulars",
-    modalType: "notices",
-  },
+  // {
+  //   label: "Notices and Circulars",
+  //   modalType: "notices",
+  // },
 ];
 
 export const CreditTransferSection: React.FC = () => {
