@@ -34,19 +34,19 @@ export const WhyChooseSection: React.FC = () => {
         <section
             id="about"
             style={{ scrollMarginTop: "140px" }}
-            className="w-full bg-[#FFFDF9] py-10 md:py-12 px-4 sm:px-6 lg:px-12 scroll-mt-28 md:scroll-mt-36"
+            className="w-full bg-[#FFFDF9] py-10 md:py-12 px-4 sm:px-6 lg:px-12 scroll-mt-28 md:scroll-mt-36 font-poppins"
         >
             <div className="max-w-[1100px] mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 xl:gap-0 items-center">
                     {/* Left Column: Image of Student (why-girl.jpg) */}
                     <div className="lg:col-span-5 flex justify-center lg:justify-start">
-                        <div className="relative w-full max-w-[310px] sm:max-w-[340px] lg:max-w-[360px] h-[340px] sm:h-[380px] lg:h-[430px] xl:h-[450px]  rounded-[16px] overflow-hidden">
+                        <div className="relative w-full max-w-[310px] sm:max-w-[340px] lg:max-w-[360px] h-[340px] sm:h-[380px] lg:h-[430px] xl:h-[450px] overflow-hidden">
                             <Image
                                 src="/swayam/why-girl.jpg"
                                 alt="Why Choose SWAYAM Student"
                                 fill
                                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 360px"
-                                className="object-cover object-center"
+                                className="object-contain object-center"
                                 priority
                             />
                         </div>

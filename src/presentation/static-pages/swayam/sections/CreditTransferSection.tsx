@@ -6,38 +6,37 @@ interface ActionButton {
     label: string;
     href?: string;
     external?: boolean;
-    modalType?: "mentors";
+    modalType?: "mentors" | "notices";
 }
 
 const actionButtons: ActionButton[] = [
-    {
-        label: "SWAYAM SOP",
-        href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ugc_swayam_framework_6ce1e5ccaa.pdf",
-        external: true,
-    },
+    { label: "Swayam Mentors", modalType: "mentors" },
     {
         label: "SWAYAM Nodal Officer",
         href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/nomination_of_swayam_nodal_officer_257cba7217.pdf",
         external: true,
     },
-    { label: "SWAYAM Mentors", modalType: "mentors" },
     {
         label: "SWAYAM Advisory Committee",
         href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/constitution_of_swayam_advisory_committee_for_the_academic_year_9a82fdfe8f.pdf",
         external: true,
     },
     {
-        label: "Approval for adopting Mooc",
+        label: "Approval for adoption of SWAYAM Framework (UGC Regulation,2021)",
         href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/official_letter_for_swayam_moocs_adoption_4a435df6c1.pdf",
         external: true,
     },
+    // {
+    //   label: "Notices and Circulars",
+    //   modalType: "notices",
+    // },
 ];
 
 export const CreditTransferSection: React.FC = () => {
     return (
         <>
             <section
-                className="relative w-full bg-cover bg-top bg-no-repeat min-h-[560px] sm:min-h-[640px] lg:h-[835px] flex items-end justify-center px-0 pb-0 overflow-hidden"
+                className="relative w-full bg-cover bg-top bg-no-repeat min-h-[560px] sm:min-h-[640px] lg:h-[835px] flex items-end justify-center px-0 pb-0 overflow-hidden font-poppins"
                 style={{
                     backgroundImage: "url('/swayam/uni-bg.jpg')",
                 }}
@@ -84,7 +83,7 @@ export const CreditTransferSection: React.FC = () => {
             </section>
 
             {/* Action Buttons Bar directly below section */}
-            <div className="w-full bg-[#FFFDF9] py-8 sm:py-10 px-4 sm:px-8 border-b border-gray-200">
+            <div className="w-full bg-white py-8 px-4 sm:px-8 border-b border-gray-200">
                 <div className="max-w-[1440px] mx-auto flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:gap-5">
                     {actionButtons.map((btn, idx) =>
                         btn.modalType ? (
@@ -98,7 +97,7 @@ export const CreditTransferSection: React.FC = () => {
                                         })
                                     );
                                 }}
-                                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-white border border-[#000000] rounded-[6px] text-[#000000] font-bold text-sm sm:text-[15px] shadow-xs hover:bg-[#000000] hover:text-white transition-all duration-200 whitespace-nowrap cursor-pointer"
+                                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-white border border-[#000000] rounded-[2px] text-[#000000] font-bold text-sm sm:text-[15px] hover:bg-[#000000] hover:text-white transition-all duration-200 whitespace-nowrap cursor-pointer"
                             >
                                 {btn.label}
                             </button>
@@ -112,7 +111,7 @@ export const CreditTransferSection: React.FC = () => {
                                         ? "noopener noreferrer"
                                         : undefined
                                 }
-                                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-white border border-[#000000] rounded-[6px] text-[#000000] font-bold text-sm sm:text-[15px] shadow-xs hover:bg-[#000000] hover:text-white transition-all duration-200 whitespace-nowrap cursor-pointer"
+                                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-white border border-[#000000] rounded-[2px] text-[#000000] font-bold text-sm sm:text-[15px] hover:bg-[#000000] hover:text-white transition-all duration-200 whitespace-nowrap cursor-pointer"
                             >
                                 {btn.label}
                             </a>

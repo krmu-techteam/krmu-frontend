@@ -26,7 +26,7 @@ export const FaqAccordion: React.FC<FaqAccordionProps> = ({
 
     return (
         <div
-            className={`w-full flex flex-col gap-4 text-[#1F2937] ${className}`}
+            className={`w-full flex flex-col gap-4 text-[#1F2937] font-poppins ${className}`}
         >
             {/* Header info */}
             <div className="flex items-center justify-between text-xs text-gray-500 shrink-0">

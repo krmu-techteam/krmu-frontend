@@ -15,11 +15,6 @@ const footerNavLinks: FooterNavLink[] = [
     { label: "SWAYAM Mentor List", modalType: "mentors" },
     { label: "FAQ", modalType: "faq" },
     {
-        label: "SWAYAM Sop",
-        href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/ugc_swayam_framework_6ce1e5ccaa.pdf",
-        external: true,
-    },
-    {
         label: "Advisory Committee",
         href: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/constitution_of_swayam_advisory_committee_for_the_academic_year_9a82fdfe8f.pdf",
         external: true,
@@ -30,16 +25,32 @@ export const NodalOfficerSection: React.FC = () => {
     return (
         <>
             <section
-                id="nodal-officer"
+                id="contact"
                 style={{
-                    background:
-                        "linear-gradient(101.86deg, #001732 57.77%, #002002 88.06%)",
                     scrollMarginTop: "140px",
                 }}
-                className="w-full min-h-auto md:h-[495px] py-10 md:py-0 px-4 sm:px-6 lg:px-8 overflow-hidden flex items-center justify-center scroll-mt-28 md:scroll-mt-36"
+                className="relative w-full min-h-auto bg-[#051730] md:h-[495px] py-10 md:py-0 px-4 sm:px-6 lg:px-8 overflow-hidden flex items-center justify-center scroll-mt-28 md:scroll-mt-36 font-poppins"
             >
+                <span
+                    id="nodal-officer"
+                    className="absolute -top-36 invisible"
+                />
                 <div className="container mx-auto max-w-[1260px] flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 lg:gap-14">
-                    {/* Left Column: Portrait Image */}
+                    {/* Left Column: University Logo */}
+                    <div className="shrink-0">
+                        <div className="relative w-[200px] sm:w-[240px] md:w-[276px] max-w-full h-[202px] sm:h-[242px] md:h-[279px]">
+                            <Image
+                                src="/swayam/logo-university.png"
+                                alt="K.R. Mangalam University Logo"
+                                fill
+                                unoptimized
+                                className="object-contain"
+                                priority
+                            />
+                        </div>
+                    </div>
+
+                    {/* Center Column: Portrait Image */}
                     <div className="shrink-0">
                         <div className="relative w-[200px] sm:w-[240px] md:w-[276px] max-w-full h-[202px] sm:h-[242px] md:h-[279px] rounded-[9px] overflow-hidden">
                             <Image
@@ -95,7 +106,7 @@ export const NodalOfficerSection: React.FC = () => {
             </section>
 
             {/* Navigation Links Bar directly below Nodal Officer Section */}
-            <div className="w-full bg-[#FFFDF9] pt-6 sm:pt-7 px-4 sm:px-6 lg:px-8">
+            <div className="w-full pt-6 sm:pt-7 px-4 sm:px-6 lg:px-8 font-poppins">
                 <div className="max-w-[1260px] mx-auto border-b border-[#CCCCCC] pb-6 sm:pb-7 flex flex-wrap items-center justify-center gap-5 sm:gap-8 lg:gap-12">
                     {footerNavLinks.map((link, idx) =>
                         link.modalType ? (
