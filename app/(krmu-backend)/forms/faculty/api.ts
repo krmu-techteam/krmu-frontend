@@ -10,3 +10,4 @@ export async function createFaculty(data: FacultyForm | FormData) {
 
   return response.data;
 }
+   

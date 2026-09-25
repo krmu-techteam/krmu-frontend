@@ -15,7 +15,7 @@ const SchoolEventAndExperience = ({ title, desc, btn, eventsexp }: Props) => {
     // <section className="bg-[url(/schools/events-bg.webp)] bg-cover bg-center py-[30px] px-4">
     <section className="bg-[#001732] bg-cover bg-center py-10 sm:py-20 px-4">
       <div className="max-w-4xl mx-auto w-full text-white text-center">
-        <h3 className="text-3xl sm:text-5xl  mb-5 font-semibold">{title}</h3>
+        <h3 className="text-3xl sm:text-5xl  mb-5 font-semibold">{title}</h3> 
 
         <p>{desc}</p>
       </div>

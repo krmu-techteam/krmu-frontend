@@ -14,3 +14,4 @@ export const facultyApi = createResource<
   FacultyListResponse,
   FacultyQueryParams
 >(API.FACULTY);
+   

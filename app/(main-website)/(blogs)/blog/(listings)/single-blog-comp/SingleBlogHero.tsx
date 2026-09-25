@@ -13,7 +13,7 @@ export const checkImage = async (url: string | null): Promise<boolean> => {
     return res.ok;
   } catch {
     return false;
-  }
+  } 
 };
 type SingleBlogProps = {
   title: string;

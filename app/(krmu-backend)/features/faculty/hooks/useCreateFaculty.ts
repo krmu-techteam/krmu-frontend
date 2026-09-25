@@ -8,7 +8,7 @@ import { facultyKeys } from "../query-keys";
 
 export function useCreateFaculty() {
   const queryClient = useQueryClient();
-
+ 
   return useMutation({
     mutationFn: (data: CreateFacultyDto) => facultyApi.create(data),
 

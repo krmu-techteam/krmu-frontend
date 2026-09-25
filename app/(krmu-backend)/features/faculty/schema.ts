@@ -15,7 +15,7 @@ export const createFacultySchema = z.object({
     .optional()
     .or(z.literal("")),
 
-  designation: z
+  designation: z 
     .string()
     .min(2, "Designation is required")
     .max(150, "Designation must not exceed 150 characters"),

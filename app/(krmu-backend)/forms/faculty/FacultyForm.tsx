@@ -13,9 +13,9 @@ import { facultyFields } from "./fields";
 export default function FacultyForm() {
   const mutation = useCreateFaculty();
 
-  const form = useForm<CreateFacultyDto>({
+  const form = useForm<CreateFacultyDto>({ 
     resolver: zodResolver(createFacultySchema),
-    defaultValues: {
+    defaultValues: { 
       name: "",
       // sort_order: "",
       qualifications: "",
