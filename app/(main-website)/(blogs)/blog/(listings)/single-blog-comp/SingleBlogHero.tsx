@@ -13,7 +13,7 @@ export const checkImage = async (url: string | null): Promise<boolean> => {
     return res.ok;
   } catch {
     return false;
-  } 
+  }
 };
 type SingleBlogProps = {
   title: string;
@@ -23,6 +23,7 @@ type SingleBlogProps = {
   authorDesignation: string;
   imgId: number;
   authorSlug: string;
+  heroImageUrl?: string | null;
 };
 
 const SingleBlogHero = async ({
@@ -33,6 +34,7 @@ const SingleBlogHero = async ({
   authorDesignation,
   imgId,
   authorSlug,
+  heroImageUrl,
 }: SingleBlogProps) => {
   //   if (imgUrl) {
   //   imgUrl = imgUrl.replace("/blog/wp-content", "/wp-content");
@@ -43,7 +45,7 @@ const SingleBlogHero = async ({
 
   const normalizedImgUrl = imgUrl
     ?.replace("/blog/wp-content", "/wp-content")
-    ?.replace("wp.krmangalam.edu.in", "www.krmangalam.edu.in"); 
+    ?.replace("wp.krmangalam.edu.in", "www.krmangalam.edu.in");
 
   let finalImage: string | null = null;
 
@@ -64,9 +66,18 @@ const SingleBlogHero = async ({
         <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-start gap-[30px] lg:gap-[50px] pt-[30px] lg:pt-[50px] temp-class">
           {/* IMAGE FIRST ON MOBILE */}
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
-            {finalImage && (
+            {heroImageUrl && (
+              //   <Image
+              //     src={finalImage}
+              //     width={768}
+              //     height={432}
+              //     alt={title || "Blog Hero Image"}
+              //     className="rounded-xl w-full object-cover"
+              //     priority
+              //   />
+              // ) : (
               <Image
-                src={finalImage}
+                src={heroImageUrl}
                 width={768}
                 height={432}
                 alt={title || "Blog Hero Image"}

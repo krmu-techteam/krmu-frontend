@@ -8,6 +8,44 @@ import {
   SingleBlogResponse,
 } from "@/lib/types/blogs/single-blog";
 
+/**
+ * Fetch a media item's image URL by its ID, e.g.:
+ *   https://wp.krmangalam.edu.in/blog/wp-json/wp/v2/media/116115
+ *
+ * This hits the /media/{id} endpoint directly instead of requesting
+ * `_embed=wp:featuredmedia` on the post. `_embed` forces WordPress to
+ * resolve and serialize the full media object (every registered image
+ * size) inline with the post response, which is much slower than one
+ * small, targeted request for just the field you need.
+ *
+ * Returns null (never throws) if the id is missing or the request fails,
+ * so a slow/broken media host can never take the page down with it.
+ */
+export const getFeaturedImageById = cache(
+  async (mediaId?: number | string | null): Promise<string | null> => {
+    if (!mediaId) return null;
+
+    try {
+      const res = await fetch(
+        `${krmBlogURL}/wp-json/wp/v2/media/${mediaId}?_fields=source_url`,
+        {
+          next: { revalidate: 3600, tags: ["blogs"] },
+          signal: AbortSignal.timeout(MEDIA_TIMEOUT_MS),
+          headers: { Accept: "application/json" },
+        },
+      );
+
+      if (!res.ok) return null;
+
+      const json = await res.json();
+      return json?.source_url ?? null;
+    } catch (error) {
+      console.error("Error fetching featured image:", mediaId, error);
+      return null;
+    }
+  },
+);
+
 // During `next build` there is no 10s limit, so be patient and retry.
 // At runtime on Netlify a function is killed at ~10s, so fail fast instead.
 const IS_BUILD = process.env.NEXT_PHASE === "phase-production-build";

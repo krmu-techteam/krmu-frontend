@@ -1,6 +1,7 @@
 import { yoastToMetadata } from "@/lib/constants/yoastMeta";
 import {
   getBlogImageById,
+  getFeaturedImageById,
   getSingleBlogDataBySlug,
 } from "@/lib/api/blogs/single-blog";
 import { notFound } from "next/navigation";
@@ -61,6 +62,12 @@ const BlogPage = async ({ params }: Props) => {
   const currentSingleBlog = singleBlogData[0];
 
   if (!currentSingleBlog?.title) return notFound();
+
+  const heroImageUrl = await getFeaturedImageById(
+    currentSingleBlog?.featured_media,
+  );
+
+  console.log("heroImageUrl", heroImageUrl);
 
   // Clean empty <p> tags from content server-side
   let cleanedContent = currentSingleBlog?.content?.rendered || "";
@@ -158,6 +165,7 @@ const BlogPage = async ({ params }: Props) => {
         authorDesignation={authorDesignation}
         imgId={authorImageId}
         authorSlug={authorSlug}
+        heroImageUrl={heroImageUrl}
       />
       <SingleBlogLayout
         content={cleanedContent}
