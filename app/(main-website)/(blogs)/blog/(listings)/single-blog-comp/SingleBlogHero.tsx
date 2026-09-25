@@ -61,7 +61,7 @@ const SingleBlogHero = async ({
           background: "#111d32",
         }}
       >
-        <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-start gap-[30px] lg:gap-[50px] pt-[30px] lg:pt-[50px]">
+        <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-start gap-[30px] lg:gap-[50px] pt-[30px] lg:pt-[50px] temp-class">
           {/* IMAGE FIRST ON MOBILE */}
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
             {finalImage && (
