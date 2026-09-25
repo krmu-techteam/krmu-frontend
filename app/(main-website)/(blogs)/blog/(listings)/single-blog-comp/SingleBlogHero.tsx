@@ -66,6 +66,16 @@ const SingleBlogHero = async ({
         <div className="max-w-[1664px] mx-auto w-full flex flex-col lg:flex-row items-start gap-[30px] lg:gap-[50px] pt-[30px] lg:pt-[50px] temp-class">
           {/* IMAGE FIRST ON MOBILE */}
           <div className="w-full lg:w-1/2 order-1 lg:order-2">
+            {heroImageUrl && (
+              <Image
+                src={heroImageUrl}
+                width={768}
+                height={432}
+                alt={title || "Blog Hero Image"}
+                className="rounded-xl w-full object-cover"
+                priority
+              />
+            )}
             {/* {finalImage ? (
               <Image
                 src={finalImage}
