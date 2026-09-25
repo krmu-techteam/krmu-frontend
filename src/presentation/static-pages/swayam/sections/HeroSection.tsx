@@ -36,6 +36,10 @@ const navTabs: NavTab[] = [
     external: true,
   },
   { label: "FAQ", modalType: "faq" },
+  {
+    label: "Notices and Circulars",
+    modalType: "notices",
+  },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -301,7 +305,8 @@ const HeroSection: React.FC = () => {
                   className="flex items-center gap-8 sm:gap-12 shrink-0 text-[#000000] font-medium text-sm md:text-base whitespace-nowrap"
                 >
                   <span>
-                    Registration Open for July 2026 Session • Late date to enrol • Exam Registration • Result
+                    Registration Open for July 2026 Session • Late date to enrol
+                    • Exam Registration • Result
                   </span>
                   <span className="w-1.5 h-1.5 rounded-full bg-black/40 inline-block" />
                 </div>
@@ -407,7 +412,11 @@ const HeroSection: React.FC = () => {
                         }`}
                       >
                         <iframe
-                          ref={activeTutorialId === video.id ? iframeRef : undefined}
+                          ref={
+                            activeTutorialId === video.id
+                              ? iframeRef
+                              : undefined
+                          }
                           src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}?enablejsapi=1&autoplay=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=0&playsinline=1`}
                           title={video.title}
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
@@ -429,7 +438,8 @@ const HeroSection: React.FC = () => {
                             {video.title}
                           </p>
                           <p className="text-xs text-gray-500 mt-2 max-w-sm">
-                            Video will be available soon once uploaded to the official YouTube channel.
+                            Video will be available soon once uploaded to the
+                            official YouTube channel.
                           </p>
                         </div>
                       )
@@ -438,7 +448,8 @@ const HeroSection: React.FC = () => {
                 </div>
 
                 {/* Video Custom Controls Bar - Clean, White, No Shadows */}
-                {tutorialVideos.find((v) => v.id === activeTutorialId)?.youtubeId && (
+                {tutorialVideos.find((v) => v.id === activeTutorialId)
+                  ?.youtubeId && (
                   <div className="flex items-center justify-between px-3 py-2 bg-[#F8FAFC] border-t border-[#E2E8F0] text-[#0F172A] relative select-none rounded-b-[2px]">
                     {/* Left: Play/Pause & Mute/Unmute */}
                     <div className="flex items-center gap-2">
@@ -735,9 +746,7 @@ const HeroSection: React.FC = () => {
                     <th className="py-3 px-4 min-w-[60px] text-center whitespace-nowrap">
                       S. No.
                     </th>
-                    <th className="py-3 px-4 min-w-[340px]">
-                      Subject / Title
-                    </th>
+                    <th className="py-3 px-4 min-w-[340px]">Subject / Title</th>
                     <th className="py-3 px-4 min-w-[120px] text-center whitespace-nowrap">
                       Status
                     </th>
