@@ -8,8 +8,8 @@ import { HeaderMenus } from "@/lib/types/header-menu";
 import MainHeaderMarquee from "./MainHeaderMarquee";
 import { heroMarqueeData } from "./HeaderMaruqueeData";
 import Link from "next/link";
-import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
-import HeroMarquee from "@/app/(landing-page)/admission/CommonComponent2026/HeroMarquee";
+// import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
+// import HeroMarquee from "@/app/(landing-page)/admission/CommonComponent2026/HeroMarquee";
 import { usePathname } from "next/navigation";
 
 type TOPBARPROPS = {
@@ -43,7 +43,7 @@ const Header = ({
     setMobileMenu((prev) => !prev);
   };
 
-  const marqueeData = heroMarqueeData;
+  // const marqueeData = heroMarqueeData;
 
   return (
     <>
@@ -88,7 +88,7 @@ const Header = ({
             navbarData={headerMenus}
           />
         </div>
-        {pathname === "/sola-conference" && <HeroMarquee data={marqueeData} />}
+        {/* {pathname === "/sola-conference" && <HeroMarquee data={marqueeData} />} */}
         {showMobileMenu && (
           <MobileHeader
             topbarmenu={topbarmenu}
