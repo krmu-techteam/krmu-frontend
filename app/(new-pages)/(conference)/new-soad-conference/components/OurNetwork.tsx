@@ -3,35 +3,57 @@ import { networkLogos } from "../constant";
 
 const OurNetwork = () => {
   return (
-    <section className="py-10 bg-[#f5f2eb]">
-      <div className="max-w-7xl mx-auto w-full px-4">
-        <div className="max-w-[840px] space-y-1 mb-8">
-          <span className="mb-3 block text-[11px] font-bold uppercase tracking-[0.16em] text-[#b08233]">
+    <section className="bg-[#f5f2eb] py-10 sm:py-12 lg:py-16">
+      <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-6">
+        {/* Section Heading */}
+        <div className="mb-8 max-w-[840px] space-y-2 sm:mb-10">
+          <span className="mb-2 block text-[10px] font-bold uppercase tracking-[0.16em] text-[#b08233] sm:text-[11px]">
             Our Network
           </span>
 
-          <h2 className="text-3xl font-bold leading-tight tracking-[-0.02em] text-[#1d1d1d] md:text-4xl">
+          <h2 className="text-3xl font-bold leading-[1.15] tracking-[-0.02em] text-[#1d1d1d] sm:text-4xl">
             Collaborations from the Past
           </h2>
 
-          <p className="text-[#59544d] font-medium">
+          <p className="max-w-2xl text-sm font-medium leading-relaxed text-[#59544d] sm:text-base">
             Institutions and organizations that partnered with DESIGN 2030 and
             earlier editions of the conference series.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-5">
+        {/* Network Logos */}
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-7 lg:gap-5">
           {networkLogos.map((logo, index) => (
             <div
               key={`${logo.src}-${index}`}
-              className="bg-white border border-[#d0c9b8] rounded-[10px] overflow-hidden flex items-center justify-center px-2 py-1 w-full h-24"
+              className="
+                flex
+                h-20
+                w-full
+                items-center
+                justify-center
+                overflow-hidden
+                rounded-[10px]
+                border
+                border-[#d0c9b8]
+                bg-white
+                px-3
+                py-2
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:shadow-md
+                sm:h-24
+                sm:px-4
+                lg:h-24
+              "
             >
               <Image
                 src={logo.src}
                 width={logo.width}
                 height={logo.height}
                 alt={logo.alt}
-                className="max-w-full max-h-full w-auto h-auto object-contain"
+                className="h-auto max-h-full w-auto max-w-full object-contain"
               />
             </div>
           ))}

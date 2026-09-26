@@ -2,29 +2,49 @@ import Link from "next/link";
 
 const ConferenceMenus = () => {
   return (
-    <section className="bg-[#111c31] px-5 py-4 sm:py-5 sticky top-10 xl:top-[76px]">
-      <div className="max-w-7xl mx-auto">
-        <ul className="flex items-center justify-between text-white text-center capitalize text-xl">
-          <li>
-            <Link href="#">About</Link>
+    <section className="bg-[#111c31] px-5 py-3 sm:py-4">
+      <div className="mx-auto max-w-7xl">
+        <ul className="flex items-center justify-start gap-7 overflow-x-auto whitespace-nowrap text-center text-base capitalize text-white scrollbar-hide sm:gap-8 sm:text-lg md:justify-between md:gap-4 md:text-xl pb-1">
+          <li className="shrink-0">
+            <Link href="#" className="transition-opacity hover:opacity-70">
+              About
+            </Link>
           </li>
-          <li>
-            <Link href="#">Tracks</Link>
+
+          <li className="shrink-0">
+            <Link href="#" className="transition-opacity hover:opacity-70">
+              Tracks
+            </Link>
           </li>
-          <li>
-            <Link href="#">Dates</Link>
+
+          <li className="shrink-0">
+            <Link href="#" className="transition-opacity hover:opacity-70">
+              Dates
+            </Link>
           </li>
-          <li>
-            <Link href="#">Registration</Link>
+
+          <li className="shrink-0">
+            <Link href="#" className="transition-opacity hover:opacity-70">
+              Registration
+            </Link>
           </li>
-          <li>
-            <Link href="#">board</Link>
+
+          <li className="shrink-0">
+            <Link href="#" className="transition-opacity hover:opacity-70">
+              Board
+            </Link>
           </li>
-          <li>
-            <Link href="#">Collaborate</Link>
+
+          <li className="shrink-0">
+            <Link href="#" className="transition-opacity hover:opacity-70">
+              Collaborate
+            </Link>
           </li>
-          <li>
-            <Link href="#">Contact</Link>
+
+          <li className="shrink-0">
+            <Link href="#" className="transition-opacity hover:opacity-70">
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
