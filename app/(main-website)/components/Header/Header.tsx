@@ -6,11 +6,11 @@ import { TOPBARITEMS, TOPBARSOCIALLInks } from "@/lib/types/HeaderType";
 import MobileHeader from "./MobileHeader";
 import { HeaderMenus } from "@/lib/types/header-menu";
 import MainHeaderMarquee from "./MainHeaderMarquee";
-import { heroMarqueeData, topBarMarqueeData } from "./HeaderMaruqueeData";
+import { heroMarqueeData } from "./HeaderMaruqueeData";
 import Link from "next/link";
 import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
-import { div } from "framer-motion/client";
-import HeroCourseMarquee from "@/app/(courses)/course/common/HeroCourseMarquee";
+import HeroMarquee from "@/app/(landing-page)/admission/CommonComponent2026/HeroMarquee";
+import { usePathname } from "next/navigation";
 
 type TOPBARPROPS = {
   topbarmenu: TOPBARITEMS[];
@@ -25,7 +25,8 @@ const Header = ({
 }: TOPBARPROPS) => {
   const [showTopbar, setShowTopbar] = useState(false);
   const [showMobileMenu, setMobileMenu] = useState(false);
-
+  const pathname = usePathname();
+  console.log("pathname", pathname);
   useEffect(() => {
     setMobileMenu(false);
     const handler = () => {
@@ -42,7 +43,7 @@ const Header = ({
     setMobileMenu((prev) => !prev);
   };
 
-  const marqueeData = topBarMarqueeData;
+  const marqueeData = heroMarqueeData;
 
   return (
     <>
@@ -57,7 +58,7 @@ const Header = ({
             className="w-full md:w-[20%] 2xl:w-[10%] p-3 text-center font-semibold text-red-500 bg-white"
           >
             Register Now
-          </Link>
+          </Link> 
         </div> */}
 
         {/* <Link
@@ -68,7 +69,7 @@ const Header = ({
           <KRMUTimer targetDate="2026-06-30T23:59:59" mainWebsiteTimer={true} />
         </Link> */}
         <div
-          className="xl:pl-0 xl:pr-4"
+          className="px-2.5 xl:px-4"
           style={{
             background:
               showMobileMenu || showTopbar
@@ -79,19 +80,7 @@ const Header = ({
           {showTopbar ? (
             ""
           ) : (
-            <>  
-              <div className="flex items-center flex-col-reverse xl:flex-row temp-class">
-                <div className="overflow-hidden w-full xl:w-1/2 2xl:w-[60%]">
-                  <HeroCourseMarquee data={marqueeData} />
-                </div>
-                <div className="w-full xl:w-1/2 2xl:w-[40%] lg:pr-4 xl:pr-0">
-                  <Topbar
-                    topbarmenu={topbarmenu}
-                    sociallinks={topbarsociallinks}
-                  />
-                </div>
-              </div>
-            </>
+            <Topbar topbarmenu={topbarmenu} sociallinks={topbarsociallinks} />
           )}
           <Navbar
             handleMobileMenu={handleMobileMenu}
@@ -99,6 +88,7 @@ const Header = ({
             navbarData={headerMenus}
           />
         </div>
+        {pathname === "/sola-conference" && <HeroMarquee data={marqueeData} />}
         {showMobileMenu && (
           <MobileHeader
             topbarmenu={topbarmenu}
