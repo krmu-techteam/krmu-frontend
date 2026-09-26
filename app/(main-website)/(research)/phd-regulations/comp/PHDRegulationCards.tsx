@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "K.R. Mangalam University PhD admission advertisement for 2025-26. Download eligibility, application details, and official notice here.",
 };
-
+ 
 const PHDRegulationCards = () => {
   return (
     <div className="py-10">
@@ -41,7 +41,8 @@ const PHDRegulationCards = () => {
             <li>
               <Link
                 className="hover:text-[#2d7cc1]"
-                href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1_R_September26_Ph_D_Admission_advertisement_Details_E26_27_7e79af246e.pdf"
+                target="_blank"
+                href="https://www.krmangalam.edu.in/pdfs/2r-oct-phd-admission-advertisement-details-e26-27.pdf"
               >
                 <strong>Even Semester 2026-27</strong>
               </Link>
