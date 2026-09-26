@@ -154,7 +154,7 @@ const PHDRegulationCards = () => {
               <strong>Contact us</strong>
             </span>{" "}
           </div>
-          <ul className="text-center flex flex-col gap-2.5 text-lg">
+          <ul className="text-center flex flex-col gap-2.5 text-lg temp-class">
             <li className="relative">
               <Link
                 href="mailto:phdadmissions@krmangalam.edu.in"
