@@ -8,40 +8,38 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import CDCTeamCard from "../../common/cards/CDCTeamCard";
-import { useCDCTeam } from "@/app/(krmu-backend)/lib/api/cdc-team/useCDCTeam";
+import CDCTeamCard, {
+  type CDCTeamMember,
+} from "../../common/cards/CDCTeamCard";
 
 const SKELETON_COUNT = 4;
 
-const CDCTeam = () => {
-  const {
-    data: teamMembers = [],
-    isLoading,
-    isError,
-  } = useCDCTeam();
+interface CDCTeamProps {
+  teamMembers: CDCTeamMember[];
+  isLoading?: boolean;
+  isError?: boolean;
+}
 
-  /** 
+const CDCTeam = ({
+  teamMembers,
+  isLoading = false,
+  isError = false,
+}: CDCTeamProps) => {
+  /**
    * Loading State
    */
   if (isLoading) {
     return (
       <section className="bg-[#fdfaf5] px-5 py-12 sm:py-16 md:py-20 lg:py-24 xl:px-0">
         <div className="mx-auto w-full max-w-7xl">
-          {/* Header */}
-          <div className="mb-8 flex flex-col gap-3 sm:mb-10 md:flex-row md:items-center md:justify-between">
-            <div className="h-10 w-64 animate-pulse rounded-md bg-gray-200 sm:h-12 sm:w-80 md:h-14 md:w-[400px]" />
+          <TeamHeader />
 
-            <div className="h-5 w-64 animate-pulse rounded-md bg-gray-200" />
-          </div>
-
-          {/* Skeleton Cards */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {Array.from({ length: SKELETON_COUNT }).map((_, index) => (
               <CDCTeamSkeleton key={index} />
             ))}
           </div>
 
-          {/* Bottom Border */}
           <div className="mt-10 border-b border-[#d8d5d0] sm:mt-12" />
         </div>
       </section>
@@ -55,15 +53,7 @@ const CDCTeam = () => {
     return (
       <section className="bg-[#fdfaf5] px-5 py-12 sm:py-16 md:py-20 lg:py-24 xl:px-0">
         <div className="mx-auto w-full max-w-7xl">
-          <div className="mb-8 flex flex-col gap-3 sm:mb-10 md:flex-row md:items-center md:justify-between">
-            <h2 className="font-newsreader text-3xl font-medium text-[#001836] sm:text-4xl md:text-5xl lg:text-[55px]">
-              Meet the CDC team
-            </h2>
-
-            <p className="font-poppins text-xs leading-5 text-[#333] sm:text-sm md:text-right">
-              Guiding students from enrollment to employment.
-            </p>
-          </div>
+          <TeamHeader />
 
           <div className="flex min-h-[250px] items-center justify-center rounded-lg border border-red-100 bg-red-50 px-5">
             <div className="text-center">
@@ -91,15 +81,7 @@ const CDCTeam = () => {
     return (
       <section className="bg-[#fdfaf5] px-5 py-12 sm:py-16 md:py-20 lg:py-24 xl:px-0">
         <div className="mx-auto w-full max-w-7xl">
-          <div className="mb-8 flex flex-col gap-3 sm:mb-10 md:flex-row md:items-center md:justify-between">
-            <h2 className="font-newsreader text-3xl font-medium text-[#001836] sm:text-4xl md:text-5xl lg:text-[55px]">
-              Meet the CDC team
-            </h2>
-
-            <p className="font-poppins text-xs leading-5 text-[#333] sm:text-sm md:text-right">
-              Guiding students from enrollment to employment.
-            </p>
-          </div>
+          <TeamHeader />
 
           <div className="flex min-h-[250px] items-center justify-center rounded-lg border border-[#e5e1da] bg-white px-5">
             <div className="text-center">
@@ -134,18 +116,8 @@ const CDCTeam = () => {
           }}
           className="w-full"
         >
-          {/* Header */}
-          <div className="mb-8 flex flex-col gap-3 sm:mb-10 md:flex-row md:items-center md:justify-between">
-            <h2 className="font-newsreader text-3xl font-medium leading-none text-[#001836] sm:text-4xl md:text-5xl lg:text-[55px]">
-              Meet the CDC team
-            </h2>
+          <TeamHeader />
 
-            <p className="font-poppins text-xs leading-5 text-[#333] sm:text-sm md:text-right">
-              Guiding students from enrollment to employment.
-            </p>
-          </div>
-
-          {/* Carousel */}
           <div className="relative px-0 sm:px-8 lg:px-0">
             <CarouselContent className="-ml-4">
               {teamMembers.map((member) => (
@@ -158,7 +130,6 @@ const CDCTeam = () => {
               ))}
             </CarouselContent>
 
-            {/* Navigation */}
             {showNavigation && (
               <>
                 <CarouselPrevious
@@ -169,6 +140,7 @@ const CDCTeam = () => {
                     z-20
                     size-7
                     translate-y-0
+                    cursor-pointer
                     border-0
                     bg-[#001836]
                     text-white
@@ -179,7 +151,6 @@ const CDCTeam = () => {
                     sm:top-[115px]
                     md:size-8
                     lg:-left-8
-                    cursor-pointer
                   "
                 />
 
@@ -191,6 +162,7 @@ const CDCTeam = () => {
                     z-20
                     size-7
                     translate-y-0
+                    cursor-pointer
                     border-0
                     bg-[#001836]
                     text-white
@@ -201,14 +173,12 @@ const CDCTeam = () => {
                     sm:top-[115px]
                     md:size-8
                     lg:-right-8
-                    cursor-pointer
                   "
                 />
               </>
             )}
           </div>
 
-          {/* Bottom Border */}
           <div className="mt-10 border-b border-[#d8d5d0] sm:mt-12" />
         </Carousel>
       </div>
@@ -217,23 +187,33 @@ const CDCTeam = () => {
 };
 
 /**
- * CDC Team Skeleton
+ * Header
+ */
+const TeamHeader = () => {
+  return (
+    <div className="mb-8 flex flex-col gap-3 sm:mb-10 md:flex-row md:items-center md:justify-between">
+      <h2 className="font-newsreader text-3xl font-medium leading-none text-[#001836] sm:text-4xl md:text-5xl lg:text-[55px]">
+        Meet the CDC team
+      </h2>
+
+      <p className="font-poppins text-xs leading-5 text-[#333] sm:text-sm md:text-right">
+        Guiding students from enrollment to employment.
+      </p>
+    </div>
+  );
+};
+
+/**
+ * Skeleton
  */
 const CDCTeamSkeleton = () => {
   return (
     <div className="animate-pulse">
-      {/* Image */}
-      <div className="aspect-square w-full rounded-md bg-gray-200" />
+      <div className="aspect-[1.08] w-full rounded-md bg-gray-200" />
 
-      {/* Content */}
       <div className="mt-5 space-y-3">
-        {/* Name */}
         <div className="h-6 w-3/4 rounded bg-gray-200" />
-
-        {/* Designation */}
         <div className="h-4 w-1/2 rounded bg-gray-200" />
-
-        {/* Email */}
         <div className="h-4 w-full rounded bg-gray-200" />
       </div>
     </div>
