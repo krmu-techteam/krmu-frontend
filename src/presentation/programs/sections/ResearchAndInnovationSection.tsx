@@ -1,10 +1,4 @@
-import { Poppins } from "next/font/google";
 import React from "react";
-
-const poppins = Poppins({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-});
 
 const ResearchAndInnovationSection = () => {
     return (
@@ -28,14 +22,14 @@ const ResearchAndInnovationSection = () => {
                 <div>
                     {/* Title */}
                     <h2
-                        className={`${poppins.className} font-heading text-center text-3xl md:text-[40px] lg:text-[35px] font-bold leading-tight text-white mb-4`}
+                        className={`font-heading text-center text-3xl md:text-[40px] lg:text-[35px] font-bold leading-tight text-white mb-4`}
                     >
                         Research and Innovation Ecosystem
                     </h2>
 
                     {/* Subtitle / Description */}
                     <p
-                        className={`${poppins.className} text-center text-sm md:text-base lg:text-[16px] text-white max-w-[792px] mx-auto mb-25 lg:mb-16`}
+                        className={`text-center text-sm md:text-base lg:text-[16px] text-white max-w-[792px] mx-auto mb-25 lg:mb-16`}
                     >
                         Students interested in research, innovation, and higher
                         studies benefit from K.R. Mangalam University's active

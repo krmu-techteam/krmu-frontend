@@ -1,12 +1,6 @@
 "use client";
 
 import React from "react";
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700", "800"],
-});
 
 interface ComparisonRow {
     parameter: string;
@@ -76,7 +70,7 @@ const WhyKRMUSection = () => {
     return (
         <section
             id="why-choose"
-            className={`${inter.className} relative py-8 md:py-12 xl:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden scroll-mt-28`}
+            className="relative py-8 md:py-12 xl:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden scroll-mt-28"
         >
             {/* Background Image */}
             <div

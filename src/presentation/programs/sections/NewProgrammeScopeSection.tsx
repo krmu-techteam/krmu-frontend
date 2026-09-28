@@ -5,8 +5,6 @@ import { HeroSection, ProgrammeScopeType } from "@/lib/types/school-programme";
 // import CommonLeadPopup from "../../components/CommonLeadPopup";
 import Image from "next/image";
 import { Check } from "lucide-react";
-// import { STRAPI_URL } from "@/app/constant";
-import { Inter } from "next/font/google";
 import { programmeScopeData } from "../constants/programme-scope.constants";
 
 type Props = {
@@ -15,12 +13,6 @@ type Props = {
     allowedFormSlugs: string[];
     slug: string;
 };
-
-const inter = Inter({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700", "800", "900"],
-    style: ["normal", "italic"],
-});
 
 const ProgrammeScopeSection = async ({
     // scopeData,
@@ -146,9 +138,7 @@ const ProgrammeScopeSection = async ({
                             </div>
 
                             {/* Center Content Circle */}
-                            <div
-                                className={` ${inter.className} absolute inset-[24px] rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,#004698_10.58%,#001732_100%)]  flex flex-col justify-center items-center p-6 sm:p-7 text-center  z-0`}
-                            >
+                            <div className="absolute inset-[24px] rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,#004698_10.58%,#001732_100%)]  flex flex-col justify-center items-center p-6 sm:p-7 text-center  z-0">
                                 <span
                                     className={`text-[#E7C268] font-bold text-xs ${
                                         slug === "bjmc-hons-research" ||

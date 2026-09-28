@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Inter } from "next/font/google";
 import SectionDivider from "@/components/common/SectionDivider";
 
 const BreakDownSection = () => {
