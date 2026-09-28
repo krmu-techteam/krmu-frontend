@@ -128,12 +128,12 @@ const nextConfig: NextConfig = {
             },
             {
                 source: "/placement/overview",
-                destination: "/placement",
+                destination: "/placements",
                 permanent: true,
             },
             {
-                source: "/placements",
-                destination: "/placement",
+                source: "/placement",
+                destination: "/placements",
                 permanent: true,
             },
         ];

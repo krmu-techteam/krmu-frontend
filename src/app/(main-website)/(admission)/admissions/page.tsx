@@ -1,150 +1,164 @@
-import { getAdmissionsService, IAdmissionsService } from "@/features/admission/admissions";
+import {
+    getAdmissionsService,
+    IAdmissionsService,
+} from "@/features/admission/admissions";
 import { notFound } from "next/navigation";
 import ContactWithUs from "./admission2Comp/ContactWithUs";
 import { Metadata } from "next";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 import {
-  createBreadcrumbProgSchema,
-  createProgFaqSchema,
+    createBreadcrumbProgSchema,
+    createProgFaqSchema,
 } from "@/lib/api/common";
 import Script from "next/script";
-import { AdmissionProcessSection, AlumniVoicesSection, ContactWithUSection, FeeOverviewSection, FrequentlyAskedQuestionSection, HeroSection, LocationSection, WhyKRMangalamUniversitySection } from "@/presentation/admission/admissions/sections";;
-import { ProgrammesExplorer } from "@/presentation/programmes/sections";;
+import {
+    AdmissionProcessSection,
+    AlumniVoicesSection,
+    ContactWithUSection,
+    FeeOverviewSection,
+    FrequentlyAskedQuestionSection,
+    HeroSection,
+    LocationSection,
+    WhyKRMangalamUniversitySection,
+} from "@/presentation/admission/admissions/sections";
+import { ProgrammesExplorer } from "@/presentation/programmes/sections";
 import SectionDivider from "@/components/common/SectionDivider";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const seoData = await folderRouteSEO("admissions");
-  const seo = seoData[0];
+    const seoData = await folderRouteSEO("admissions");
+    const seo = seoData[0];
 
-  const shareImageUrl = seo?.shareImg?.url
-    ? `${STRAPI_URL}${seo?.shareImg?.url}`
-    : undefined;
+    const shareImageUrl = seo?.shareImg?.url
+        ? `${STRAPI_URL}${seo?.shareImg?.url}`
+        : undefined;
 
-  // ✅ Fallback if SEO is missing
-  if (!seo) {
-    return {
-      title: "K.R. Mangalam University",
-      description: "",
-      robots: {
-        index: true,
-        follow: true,
-      },
-    };
-  }
-
-  return {
-    title: seo?.title || "K.R. Mangalam University",
-    description: seo?.metaDescription || "",
-    keywords: seo?.keyword || "",
-    alternates: {
-      canonical: seo?.canonicalUrl || "",
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-
-    // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
-    openGraph: {
-      title: seo?.title || "K.R. Mangalam University",
-      description: seo?.metaDescription || "",
-      url: seo?.canonicalUrl || "",
-      siteName: "K.R. Mangalam University",
-      images: shareImageUrl
-        ? [
-            {
-              url: shareImageUrl,
-              width: 1200,
-              height: 630,
-              alt: seo?.title || "K.R. Mangalam University",
+    // ✅ Fallback if SEO is missing
+    if (!seo) {
+        return {
+            title: "K.R. Mangalam University",
+            description: "",
+            robots: {
+                index: true,
+                follow: true,
             },
-          ]
-        : [],
-      type: "website",
-    },
+        };
+    }
 
-    // ✅ Twitter Card
-    twitter: {
-      card: "summary_large_image",
-      title: seo?.title || "K.R. Mangalam University",
-      description: seo?.metaDescription || "",
-      images: shareImageUrl ? [shareImageUrl] : [],
-    },
-  };
+    return {
+        title: seo?.title || "K.R. Mangalam University",
+        description: seo?.metaDescription || "",
+        keywords: seo?.keyword || "",
+        alternates: {
+            canonical: seo?.canonicalUrl || "",
+        },
+        robots: {
+            index: true,
+            follow: true,
+        },
+
+        // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
+        openGraph: {
+            title: seo?.title || "K.R. Mangalam University",
+            description: seo?.metaDescription || "",
+            url: seo?.canonicalUrl || "",
+            siteName: "K.R. Mangalam University",
+            images: shareImageUrl
+                ? [
+                      {
+                          url: shareImageUrl,
+                          width: 1200,
+                          height: 630,
+                          alt: seo?.title || "K.R. Mangalam University",
+                      },
+                  ]
+                : [],
+            type: "website",
+        },
+
+        // ✅ Twitter Card
+        twitter: {
+            card: "summary_large_image",
+            title: seo?.title || "K.R. Mangalam University",
+            description: seo?.metaDescription || "",
+            images: shareImageUrl ? [shareImageUrl] : [],
+        },
+    };
 }
 
-const AddmissionPage= async () => {
-  const admissionsService: IAdmissionsService = getAdmissionsService();
-  const admission2Data = await admissionsService.getAdmissionPageData();
+const AddmissionPage = async () => {
+    const admissionsService: IAdmissionsService = getAdmissionsService();
+    const admission2Data = await admissionsService.getAdmissionPageData();
 
-  if (!admission2Data) {
-    return notFound();
-  }
+    if (!admission2Data) {
+        return notFound();
+    }
 
-  const admTOC = admission2Data.adm_toc;
-  const admAlumni = admission2Data.adm2_alumni;
+    const admTOC = admission2Data.adm_toc;
+    const admAlumni = admission2Data.adm2_alumni;
 
-  type FAQProg = {
-    ques: string;
-    ans: string;
-  };
+    type FAQProg = {
+        ques: string;
+        ans: string;
+    };
 
-  const allFaqs: FAQProg[] = admTOC?.tocfaq.flatMap((section) =>
-    section.faq.map((item) => ({
-      id: item.id,
-      ques: item.ques,
-      ans: item.ans,
-      tocpoint: section.tocpoint, // optional, keep category info
-    })),
-  );
+    const allFaqs: FAQProg[] = admTOC?.tocfaq.flatMap((section) =>
+        section.faq.map((item) => ({
+            id: item.id,
+            ques: item.ques,
+            ans: item.ans,
+            tocpoint: section.tocpoint, // optional, keep category info
+        }))
+    );
 
-  const singleProgFAQLD = createProgFaqSchema(allFaqs);
+    const singleProgFAQLD = createProgFaqSchema(allFaqs);
 
-  const breadcrumbItems = [
-    { name: "Home", url: "https://www.krmangalam.edu.in/" },
-    { name: "Admissions", url: "https://www.krmangalam.edu.in/admissions" },
-  ];
-  const breadcrumbSchema = createBreadcrumbProgSchema(breadcrumbItems);
+    const breadcrumbItems = [
+        { name: "Home", url: "https://www.krmangalam.edu.in/" },
+        { name: "Admissions", url: "https://www.krmangalam.edu.in/admissions" },
+    ];
+    const breadcrumbSchema = createBreadcrumbProgSchema(breadcrumbItems);
 
-  return (
-    <>
-      <Script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: singleProgFAQLD }}
-      />
-      <Script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-      />
-      <HeroSection />
-      <AdmissionProcessSection />
-      <WhyKRMangalamUniversitySection />
-      <div className="relative pt-8 md:pt-12 xl:pt-20 pb-5 md:pb-12 xl:pb-20">
-        <ProgrammesExplorer />
-        <SectionDivider />
-      </div> 
-      {/* <ScholarshipSection />
+    return (
+        <>
+            <Script
+                id="faq-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: singleProgFAQLD }}
+            />
+            <Script
+                id="breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+            />
+            <HeroSection />
+            <AdmissionProcessSection />
+            <WhyKRMangalamUniversitySection />
+            <div className="relative pt-8 md:pt-12 xl:pt-20 pb-5 md:pb-12 xl:pb-20">
+                <ProgrammesExplorer />
+                <SectionDivider />
+            </div>
+            {/* <ScholarshipSection />
       <FinancialAssistanceSection /> */}
-      <FeeOverviewSection />
-      <AlumniVoicesSection admAlumni={admAlumni} />
-      <FrequentlyAskedQuestionSection
-        heading={admTOC?.heading}
-        highlight={admTOC?.highlightheading}
-        desc={admTOC?.description}
-        tocfaqs={admTOC?.tocfaq}
-        tocimg={admTOC?.tocimg}
-        tocbtn={admTOC?.tocbtn}
-      />
-      <LocationSection />
-      <ContactWithUSection />
-      {/* 
+            <FeeOverviewSection />
+            <AlumniVoicesSection admAlumni={admAlumni} />
+            <FrequentlyAskedQuestionSection
+                heading={admTOC?.heading}
+                highlight={admTOC?.highlightheading}
+                desc={admTOC?.description}
+                tocfaqs={admTOC?.tocfaq}
+                tocimg={admTOC?.tocimg}
+                tocbtn={admTOC?.tocbtn}
+            />
+            <LocationSection />
+            <ContactWithUSection />
+            {/* 
 
 
 
   */}
-    </>
-  );
+        </>
+    );
 };
 
 export default AddmissionPage;
