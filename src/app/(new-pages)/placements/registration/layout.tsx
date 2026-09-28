@@ -1,4 +1,4 @@
-import { Newsreader, Poppins } from "next/font/google";
+﻿import { Newsreader, Poppins } from "next/font/google";
 import "./registration.css";
 
 import { Toaster } from "@/components/ui/sonner";
@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/sonner";
 const poppins = Poppins({
     subsets: ["latin"],
     weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-    variable: "--font-family-poppins",
+    variable: "--font-poppins",
     display: "swap",
 });
 

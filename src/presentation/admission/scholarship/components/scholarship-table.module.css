@@ -1,0 +1,61 @@
+.tableContainer {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    margin: 10px 0;
+}
+
+.scholarshipTable {
+    width: 100% !important;
+    min-width: 620px;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    border: 1px solid #bdc5d4 !important;
+}
+
+.tableHeaderCell {
+    padding: 20px !important;
+    color: #ffffff !important;
+    background-color: #051630 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+    border: 1px solid #bdc5d4 !important;
+    border-collapse: collapse !important;
+}
+
+.tableHeaderCell:first-child {
+    width: 25%;
+    border-radius: 0 !important;
+}
+
+.tableHeaderCell:last-child {
+    border-radius: 0 !important;
+}
+
+.tableDataCell {
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    vertical-align: top !important;
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    border: 1px solid #bdc5d4 !important;
+    border-collapse: collapse !important;
+    text-align: left !important;
+}
+
+.tableRow {
+    border: 1px solid #bdc5d4 !important;
+}
+
+.tableDataCell ol {
+    list-style: decimal !important;
+    padding-left: 20px !important;
+    margin: 8px 0 !important;
+}
+
+.tableDataCell ol li {
+    margin-bottom: 6px !important;
+}

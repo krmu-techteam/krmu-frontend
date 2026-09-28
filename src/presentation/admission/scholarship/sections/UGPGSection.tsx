@@ -317,7 +317,7 @@ const UGPGSection = () => {
                                             <CircleArrowIcon />
                                         </AccordionTrigger>
                                         <AccordionContent className="py-4 sm:py-6 md:py-8 bg-white rounded-b-[8px] shadow-sm ugpgtable">
-                                            <p className="font-semibold text-center mb-5 text-black">
+                                            <p className="font-semibold text-[18px] text-center mb-5 text-black">
                                                 CUET -1 (On the basis percentage
                                                 of best 4 subjects score)
                                             </p>
@@ -326,7 +326,7 @@ const UGPGSection = () => {
                                                 rows={cuet1Rows}
                                             />
 
-                                            <p className="font-semibold text-center my-5 text-black">
+                                            <p className="font-semibold text-[18px] text-center my-5 text-black">
                                                 CUET -2 (On the basis average
                                                 percentile of best 4 subjects)
                                             </p>
@@ -335,7 +335,7 @@ const UGPGSection = () => {
                                                 rows={cuet2Rows}
                                             />
 
-                                            <p className="font-semibold text-center my-5 text-black">
+                                            <p className="font-semibold text-[18px] text-center my-5 text-black">
                                                 JEE (MAIN)
                                             </p>
                                             <CustomTable
@@ -343,7 +343,7 @@ const UGPGSection = () => {
                                                 rows={jeeRows}
                                             />
 
-                                            <p className="font-semibold text-center my-5 text-black">
+                                            <p className="font-semibold text-[18px] text-center my-5 text-black">
                                                 CLAT Rank
                                             </p>
                                             <CustomTable
@@ -351,7 +351,7 @@ const UGPGSection = () => {
                                                 rows={clatRows}
                                             />
 
-                                            <p className="font-semibold text-center my-5 text-black">
+                                            <p className="font-semibold text-[18px] text-center my-5 text-black">
                                                 NATA
                                             </p>
                                             <CustomTable
@@ -486,7 +486,7 @@ const UGPGSection = () => {
                                             <CircleArrowIcon />
                                         </AccordionTrigger>
                                         <AccordionContent className="pb-4 sm:pb-6 md:pb-8 bg-white rounded-b-[8px] shadow-sm ugpgtable">
-                                            <p className="text-center font-semibold my-5 text-black">
+                                            <p className="text-center text-[18px] font-semibold my-5 text-black">
                                                 CAT/ MAT/ XAT
                                             </p>
                                             <CustomTable
@@ -494,7 +494,7 @@ const UGPGSection = () => {
                                                 rows={pgCatMatXatRows}
                                             />
 
-                                            <p className="text-center font-semibold my-5 text-black">
+                                            <p className="text-center text-[18px] font-semibold my-5 text-black">
                                                 CUET
                                             </p>
                                             <CustomTable
@@ -530,7 +530,7 @@ const UGPGSection = () => {
                                             <CircleArrowIcon />
                                         </AccordionTrigger>
                                         <AccordionContent className="pb-4 sm:pb-6 md:pb-8 bg-white rounded-b-[8px] shadow-sm ugpgtable">
-                                            <p className="text-center font-semibold my-5 text-black">
+                                            <p className="text-center text-[18px] font-semibold my-5 text-black">
                                                 UG to PG
                                             </p>
                                             <CustomTable

@@ -1,4 +1,4 @@
-import {
+﻿import {
     Big_Shoulders,
     Fraunces,
     Host_Grotesk,
@@ -41,7 +41,7 @@ const bigShouldersDisplay = Big_Shoulders({
 const poppins = Poppins({
     subsets: ["latin"],
     weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-    variable: "--font-family-poppins",
+    variable: "--font-poppins",
     display: "swap",
 });
 

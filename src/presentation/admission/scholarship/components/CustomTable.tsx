@@ -1,5 +1,6 @@
 import React from "react";
 import { RowConfig } from "@/features/admission/scholarship";
+import styles from "./scholarship-table.module.css";
 
 interface TableConfig {
     headers?: string[];
@@ -18,28 +19,53 @@ const CustomTable: React.FC<TableConfig> = ({
 }) => {
     return (
         <div
-            className={`w-full overflow-x-auto [scrollbar-width:thin] ${className || ""}`}
+            className={`${styles.tableContainer} krmu-scholarship-container ${className || ""}`}
         >
             <table
-                className={`w-full min-w-[620px] sm:min-w-[680px] ${tableClassName || ""}`}
+                className={`${styles.scholarshipTable} krmu-scholarship-table ${tableClassName || ""}`}
+                style={{
+                    border: "1px solid #BDC5D4",
+                    borderCollapse: "collapse",
+                    width: "100%",
+                }}
             >
                 {(headers || theadRows) && (
                     <thead>
                         {headers && (
-                            <tr>
+                            <tr className={styles.tableRow}>
                                 {headers.map((h, i) => (
-                                    <th key={i}>{h}</th>
+                                    <th
+                                        key={i}
+                                        className={`${styles.tableHeaderCell} krmu-scholarship-th`}
+                                        style={{
+                                            border: "1px solid #BDC5D4",
+                                            backgroundColor: "#051630",
+                                            color: "#ffffff",
+                                            padding: "16px 20px",
+                                            textAlign: "left",
+                                        }}
+                                    >
+                                        {h}
+                                    </th>
                                 ))}
                             </tr>
                         )}
                         {theadRows?.map((row, rIdx) => (
-                            <tr key={rIdx}>
+                            <tr key={rIdx} className={styles.tableRow}>
                                 {row.map((cell, cIdx) => (
                                     <th
                                         key={cIdx}
                                         rowSpan={cell.rowSpan}
                                         colSpan={cell.colSpan}
                                         id={cell.id}
+                                        className={`${styles.tableHeaderCell} krmu-scholarship-th`}
+                                        style={{
+                                            border: "1px solid #BDC5D4",
+                                            backgroundColor: "#051630",
+                                            color: "#ffffff",
+                                            padding: "16px 20px",
+                                            textAlign: "left",
+                                        }}
                                     >
                                         {cell.content}
                                     </th>
@@ -50,15 +76,33 @@ const CustomTable: React.FC<TableConfig> = ({
                 )}
                 <tbody>
                     {rows.map((row, rIdx) => (
-                        <tr key={rIdx}>
+                        <tr key={rIdx} className={styles.tableRow}>
                             {row.map((cell, cIdx) => {
                                 const Tag = cell.isHeader ? "th" : "td";
+                                const isHead = cell.isHeader;
                                 return (
                                     <Tag
                                         key={cIdx}
                                         rowSpan={cell.rowSpan}
                                         colSpan={cell.colSpan}
                                         id={cell.id}
+                                        className={
+                                            isHead
+                                                ? `${styles.tableHeaderCell} krmu-scholarship-th`
+                                                : `${styles.tableDataCell} krmu-scholarship-td`
+                                        }
+                                        style={{
+                                            border: "1px solid #BDC5D4",
+                                            padding: "12px 20px",
+                                            backgroundColor: isHead
+                                                ? "#051630"
+                                                : "#ffffff",
+                                            color: isHead
+                                                ? "#ffffff"
+                                                : "#000000",
+                                            textAlign: "left",
+                                            verticalAlign: "top",
+                                        }}
                                     >
                                         {cell.content}
                                     </Tag>

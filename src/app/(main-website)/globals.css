@@ -2634,7 +2634,7 @@ body:before {
 
     .deanhonortable .deanhonortable-container table,
     .deanhonortable .deanhonortable-container table td {
-        border: 1px solid #000;
+        border: 1px solid rgba(255, 255, 255, 0.3);
         border-collapse: collapse;
         padding: 8px;
         line-height: 30px;
@@ -5003,4 +5003,173 @@ body:before {
 .animate-accordion-up,
 [data-state="closed"].animate-accordion-up {
     animation: accordion-up 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* PhD Admission Accordion Table Styles */
+.phd-accordion-content table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background-color: transparent !important;
+    margin: 10px 0 !important;
+}
+
+.phd-accordion-content table,
+.phd-accordion-content th,
+.phd-accordion-content td {
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+}
+
+.phd-accordion-content th,
+.phd-accordion-content td {
+    padding: 12px !important;
+    background-color: transparent !important;
+}
+
+.phd-accordion-content th {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.phd-accordion-content * {
+    color: white !important;
+}
+
+.phd-accordion-content table * {
+    color: white !important;
+    background-color: transparent !important;
+}
+
+/* Scholarship Accordion Table Styles */
+.scholarship-table-wrapper,
+.krmu-scholarship-container {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.ugpgtable table,
+.scholarship-table,
+.krmu-scholarship-table {
+    width: 100% !important;
+    min-width: 620px;
+    border-collapse: collapse !important;
+}
+
+.ugpgtable table tr th,
+.ugpgtable table thead tr th,
+.scholarship-table th,
+.scholarship-table thead tr th,
+.scholarship-table th.header-cell,
+.krmu-scholarship-th {
+    padding: 20px !important;
+    color: #fff !important;
+    background: #051630 !important;
+    font-size: 16px !important;
+    text-align: left !important;
+    border: 1px solid #bdc5d4 !important;
+}
+
+.ugpgtable div table thead tr th:first-child,
+.ugpgtable table thead tr th:first-child,
+.scholarship-table thead tr th:first-child,
+.krmu-scholarship-table thead tr th:first-child {
+    width: 20% !important;
+}
+
+.ugpgtable div table thead tr td ol,
+.ugpgtable div table tbody tr td ol,
+.ugpgtable table ol,
+.scholarship-table ol,
+.krmu-scholarship-table ol {
+    list-style: decimal !important;
+    padding: 10px !important;
+}
+
+.ugpgtable table tr thead tr th:first-child,
+.scholarship-table thead tr th:first-child,
+.krmu-scholarship-table thead tr th:first-child {
+    width: 40% !important;
+    border-radius: 0 !important;
+}
+
+.ugpgtable table tr th:last-child,
+.ugpgtable table thead tr th:last-child,
+.scholarship-table thead tr th:last-child,
+.krmu-scholarship-table thead tr th:last-child {
+    border-radius: 0 !important;
+}
+
+.ugpgtable table tr td,
+.ugpgtable table tbody tr td,
+.scholarship-table td,
+.krmu-scholarship-td {
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    vertical-align: top !important;
+    color: #000 !important;
+    border: 1px solid #bdc5d4 !important;
+}
+
+.ugpgtable table,
+.ugpgtable table th,
+.ugpgtable table td,
+.scholarship-table,
+.scholarship-table th,
+.scholarship-table td,
+.krmu-scholarship-table,
+.krmu-scholarship-table th,
+.krmu-scholarship-table td {
+    border: 1px solid #bdc5d4 !important;
+    border-collapse: collapse !important;
+    padding: 8px;
+}
+
+.ugpgacctab svg {
+    display: none;
+}
+
+.ugpgacctab {
+    position: relative;
+}
+
+.ugpgacctab::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #fff;
+    padding: 10px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    line-height: 1;
+    justify-content: center;
+}
+
+.ugpgacctab[data-state="open"]::before {
+    content: "-";
+}
+
+.notesul ul {
+    list-style: disc;
+    padding-left: 40px;
+    margin: 10px 0px;
+}
+
+@media (max-width: 640px) {
+    .ugpgacctab {
+        padding-right: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ugpgacctab {
+        font-size: 12px;
+    }
 }
