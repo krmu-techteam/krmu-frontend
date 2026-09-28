@@ -7,8 +7,8 @@ import LifeKRMUDynamic from "./comp/LifeKRMUDynamic";
 import LifeKRMUPeek from "./comp/LifeKRMUPeek";
 import LifeKRMUTabs from "./comp/LifeKRMUTabs";
 import {
-  getCampusLifeService,
-  ICampusLifeService,
+    getCampusLifeService,
+    ICampusLifeService,
 } from "@/features/life-at-krmu/campus-life";
 
 import { Metadata } from "next";
@@ -16,88 +16,88 @@ import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const seoData = await folderRouteSEO("life-at-krmu");
-  const seo = seoData[0];
+    const seoData = await folderRouteSEO("life-at-krmu");
+    const seo = seoData[0];
 
-  const shareImageUrl = seo?.shareImg?.url
-    ? `${STRAPI_URL}${seo?.shareImg?.url}`
-    : undefined;
+    const shareImageUrl = seo?.shareImg?.url
+        ? `${STRAPI_URL}${seo?.shareImg?.url}`
+        : undefined;
 
-  // ✅ Fallback if SEO is missing
-  if (!seo) {
-    return {
-      title: "K.R. Mangalam University",
-      description: "",
-      robots: {
-        index: true,
-        follow: true,
-      },
-    };
-  }
-
-  return {
-    title: seo?.title || "K.R. Mangalam University",
-    description: seo?.metaDescription || "",
-    keywords: seo?.keyword || "",
-    alternates: {
-      canonical: seo?.canonicalUrl || "",
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-
-    // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
-    openGraph: {
-      title: seo?.title || "K.R. Mangalam University",
-      description: seo?.metaDescription || "",
-      url: seo?.canonicalUrl || "",
-      siteName: "K.R. Mangalam University",
-      images: shareImageUrl
-        ? [
-            {
-              url: shareImageUrl,
-              width: 1200,
-              height: 630,
-              alt: seo?.title || "K.R. Mangalam University",
+    // ✅ Fallback if SEO is missing
+    if (!seo) {
+        return {
+            title: "K.R. Mangalam University",
+            description: "",
+            robots: {
+                index: true,
+                follow: true,
             },
-          ]
-        : [],
-      type: "website",
-    },
+        };
+    }
 
-    // ✅ Twitter Card
-    twitter: {
-      card: "summary_large_image",
-      title: seo?.title || "K.R. Mangalam University",
-      description: seo?.metaDescription || "",
-      images: shareImageUrl ? [shareImageUrl] : [],
-    },
-  };
+    return {
+        title: seo?.title || "K.R. Mangalam University",
+        description: seo?.metaDescription || "",
+        keywords: seo?.keyword || "",
+        alternates: {
+            canonical: seo?.canonicalUrl || "",
+        },
+        robots: {
+            index: true,
+            follow: true,
+        },
+
+        // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
+        openGraph: {
+            title: seo?.title || "K.R. Mangalam University",
+            description: seo?.metaDescription || "",
+            url: seo?.canonicalUrl || "",
+            siteName: "K.R. Mangalam University",
+            images: shareImageUrl
+                ? [
+                      {
+                          url: shareImageUrl,
+                          width: 1200,
+                          height: 630,
+                          alt: seo?.title || "K.R. Mangalam University",
+                      },
+                  ]
+                : [],
+            type: "website",
+        },
+
+        // ✅ Twitter Card
+        twitter: {
+            card: "summary_large_image",
+            title: seo?.title || "K.R. Mangalam University",
+            description: seo?.metaDescription || "",
+            images: shareImageUrl ? [shareImageUrl] : [],
+        },
+    };
 }
 
 const page = async () => {
-  const service: ICampusLifeService = getCampusLifeService();
-  const campusData = await service.getData();
+    const service: ICampusLifeService = getCampusLifeService();
+    const campusData = await service.getData();
 
-  return (
-    <>
-      <LifeKRMUHero />
-      <Image
-        src="/life-at-krmu/why-krmu.webp"
-        width={1910}
-        height={750}
-        alt="Big Image"
-        className="w-full h-full"
-      />
-      <LifeKRMUContent />
-      <LifeKRMUVideoGrid />
-      <LifeKRMUInfra />
-      <LifeKRMUDynamic />
-      <LifeKRMUTabs />
-      <LifeKRMUPeek />
-    </>
-  );
+    return (
+        <div className="text-white">
+            <LifeKRMUHero />
+            <Image
+                src="/life-at-krmu/why-krmu.webp"
+                width={1910}
+                height={750}
+                alt="Big Image"
+                className="w-full h-full"
+            />
+            <LifeKRMUContent />
+            <LifeKRMUVideoGrid />
+            <LifeKRMUInfra />
+            <LifeKRMUDynamic />
+            <LifeKRMUTabs />
+            <LifeKRMUPeek />
+        </div>
+    );
 };
 
 export default page;
