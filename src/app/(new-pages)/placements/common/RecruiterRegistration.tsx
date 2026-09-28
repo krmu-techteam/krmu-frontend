@@ -3,13 +3,7 @@
 import { ArrowLeft, FileText, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import {
-    FieldErrors,
-    Path,
-    RegisterOptions,
-    UseFormRegister,
-    useForm,
-} from "react-hook-form";
+import { UseFormRegister, useForm } from "react-hook-form";
 import { toast } from "sonner";
 
 type RecruiterFormData = {

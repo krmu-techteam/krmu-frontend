@@ -1,4 +1,4 @@
-import { CDCTeamMember as CDCMember } from "@/app/(krmu-backend)/lib/api/cdc-team/cdc-team.types";
+import { CDCTeamMemberData as CDCMember } from "../constant";
 import Image from "next/image";
 import Link from "next/link";
 

@@ -1,7 +1,5 @@
 import { Newsreader, Poppins } from "next/font/google";
 import "./records.css";
-import HeaderWrapper from "@/components/layouts/Header/HeaderWrapper";
-import Footer from "@/components/layouts/Footer/Footer";
 
 const poppins = Poppins({
     subsets: ["latin"],

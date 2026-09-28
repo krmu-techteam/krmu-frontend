@@ -1,4 +1,3 @@
-import { CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,7 +23,6 @@ const StudentSuccessStoryCard = ({
     quote,
     name,
     batch,
-    placementLink,
 }: StudentSuccessStoryCardProps) => {
     return (
         <article className="flex flex-col md:flex-row gap-6 lg:gap-10">

@@ -9,12 +9,14 @@ import {
 } from "@/components/ui/carousel";
 
 import CDCTeamCard from "../../common/cards/CDCTeamCard";
-import { useCDCTeam } from "@/app/(krmu-backend)/lib/api/cdc-team/useCDCTeam";
+import { cdcTeamMembers } from "../../constant";
 
 const SKELETON_COUNT = 4;
 
 const CDCTeam = () => {
-    const { data: teamMembers = [], isLoading, isError } = useCDCTeam();
+    const teamMembers = cdcTeamMembers;
+    const isLoading = false;
+    const isError = false;
 
     /**
      * Loading State

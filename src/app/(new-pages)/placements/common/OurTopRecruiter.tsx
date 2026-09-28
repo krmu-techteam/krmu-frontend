@@ -2,9 +2,6 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ourTopRecruitersLogos } from "../constant";
-import Divider from "./Divider";
-import { div } from "framer-motion/client";
-import { LuGoal } from "react-icons/lu";
 
 const OurTopRecruiter = () => {
     // Duplicate logos for seamless infinite loop

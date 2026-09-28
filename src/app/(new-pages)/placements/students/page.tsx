@@ -8,17 +8,11 @@ import CorporateAdvisoryBoard from "../common/student/CorporateAdvisoryBoard";
 import DriveCalendar from "../common/student/DriveCalendar";
 import Registration from "../common/student/Registration";
 import SelectionProcess from "../common/student/SelectionProcess";
-import {
-    cdcTeamMembers,
-    createPersonGraphSchema,
-    interviewSuccessStories,
-} from "../constant";
+import { cdcTeamMembers, createPersonGraphSchema } from "../constant";
 import Trainers from "../trainers/common/Trainers";
-import CDCTeam from "./common/CDCTeam";
 import PolicyConduct from "./common/PolicyConduct";
 import StudentHeroSection from "./common/StudentHeroSection";
 import Script from "next/script";
-import { studentStories } from "../common/StudentSuccessStories";
 import { trainers } from "../trainers/constant";
 import { advisoryBoardData } from "@/lib/constants/advisory-board-data";
 import Divider from "../common/Divider";

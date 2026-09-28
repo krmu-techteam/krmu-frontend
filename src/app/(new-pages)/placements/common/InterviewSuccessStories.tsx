@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/carousel";
 import { interviewSuccessStories } from "../constant";
 import InterviewSuccessStoryCard from "./InterviewSuccessStoryCard";
-import Divider from "./Divider";
 
 const InterviewSuccessStories = () => {
     return (
