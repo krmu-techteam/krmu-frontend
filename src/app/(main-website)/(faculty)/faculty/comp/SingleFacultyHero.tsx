@@ -128,7 +128,7 @@ export const SingleFacultyHero = ({
         .filter((item) => item.isValid && item.text && item.text.trim());
 
     return (
-        <section className="relative w-full overflow-hidden bg-[#061623] pt-[150px] md:pt-[200px] pb-10 sm:pb-12 md:pb-14 px-8   lg:px-8 flex items-center justify-center">
+        <section className="relative w-full overflow-hidden bg-[#061623] pt-[150px] md:pt-[200px] pb-10 sm:pb-12 md:pb-14 px-6   lg:px-8 flex items-center justify-center">
             {/* Background Building Image - clearly visible from the top */}
             <div
                 className="absolute inset-0 bg-cover bg-top pointer-events-none"

@@ -131,18 +131,18 @@ const page = async ({ params }: Props) => {
                 socialLinks={socialItems}
             />
 
-            <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-10 md:py-14 text-[#111827]">
+            <div className="max-w-[1200px] mx-auto px-6 py-10 md:py-14 text-[#111827]">
                 {/* Interest Area(s) Pill Badges matching user design */}
                 {interestItems.length > 0 && (
                     <div className="mb-10">
                         <h2 className="md:text-[36px] text-[28px] font-serif font-bold text-white mb-4">
                             {interestTitle}
                         </h2>
-                        <div className="flex flex-wrap gap-2.5 sm:gap-3">
+                        <div className="flex flex-wrap gap-4 sm:gap-3">
                             {interestItems.map((item, index) => (
                                 <span
                                     key={index}
-                                    className="px-4 py-1 bg-transparent text-white/90  text-xs md:text-sm font-normal rounded-full inline-flex items-center border border-white/90"
+                                    className="px-4 py-1 bg-transparent text-white/90  text-[12px] md:text-sm font-normal rounded-full inline-flex items-center border border-white/90"
                                 >
                                     {item}
                                 </span>

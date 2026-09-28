@@ -1,9 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { AdvisoryCard } from "./AdvisoryCard";
-import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
 import { getFacultyByCat } from "@/lib/api/schools";
 import { FACULTYCARD } from "@/lib/types/schools";
 
@@ -11,23 +9,9 @@ type Props = {
     schoolCat: string;
 };
 
-// ---------- Constants ----------
-const getItemsPerLoad = () => {
-    if (typeof window === "undefined") return 5;
-    const width = window.innerWidth;
-    if (width >= 1440) return 5;
-    if (width >= 1280) return 5;
-    if (width >= 1024) return 3;
-    if (width >= 768) return 3;
-    return 2;
-};
-
 const AdvisoryCards = ({ schoolCat }: Props) => {
     const [faculties, setFaculties] = useState<FACULTYCARD[]>([]);
-    const [itemsPerLoad, setItemsPerLoad] = useState(5);
-    const [visibleCount, setVisibleCount] = useState(5);
     const [loading, setLoading] = useState(false);
-    const [loadingMore, setLoadingMore] = useState(false);
 
     useEffect(() => {
         const fetchFaculties = async () => {
@@ -39,19 +23,6 @@ const AdvisoryCards = ({ schoolCat }: Props) => {
         fetchFaculties();
     }, [schoolCat]);
 
-    useEffect(() => {
-        const updateItems = () => {
-            const newCount = getItemsPerLoad();
-            setItemsPerLoad(newCount);
-            setVisibleCount(newCount);
-        };
-
-        updateItems();
-
-        window.addEventListener("resize", updateItems);
-        return () => window.removeEventListener("resize", updateItems);
-    }, []);
-
     // ✅ Show only Advisory members
     const advisoryFaculties = faculties.filter(
         (faculty) =>
@@ -59,43 +30,11 @@ const AdvisoryCards = ({ schoolCat }: Props) => {
             faculty.faculty_type?.toLowerCase() === "both"
     );
 
-    const observerTarget = useRef<HTMLDivElement>(null);
-
-    const handleLoadMore = useCallback(() => {
-        if (loadingMore || visibleCount >= advisoryFaculties.length) return;
-        setLoadingMore(true);
-        setTimeout(() => {
-            setVisibleCount((prev) =>
-                Math.min(prev + itemsPerLoad, advisoryFaculties.length)
-            );
-            setLoadingMore(false);
-        }, 400); // short simulated loading
-    }, [loadingMore, visibleCount, advisoryFaculties.length, itemsPerLoad]);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                if (entries[0].isIntersecting) {
-                    handleLoadMore();
-                }
-            },
-            { threshold: 0.1 }
-        );
-
-        if (observerTarget.current) {
-            observer.observe(observerTarget.current);
-        }
-
-        return () => observer.disconnect();
-    }, [handleLoadMore]);
-
-    const visibleFaculties = advisoryFaculties.slice(0, visibleCount);
-
     return (
         <div className="font-poppins mb-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4">
-                {visibleFaculties.length > 0 ? (
-                    visibleFaculties.map((faculty) => (
+                {advisoryFaculties.length > 0 ? (
+                    advisoryFaculties.map((faculty) => (
                         <div
                             key={faculty?.id}
                             className="w-full flex justify-center h-full"
@@ -116,11 +55,6 @@ const AdvisoryCards = ({ schoolCat }: Props) => {
                     </div>
                 ) : null}
             </div>
-
-            {/* Scroll Trigger Target */}
-            {!loadingMore && visibleCount < advisoryFaculties.length && (
-                <div ref={observerTarget} className="h-10 w-full" />
-            )}
         </div>
     );
 };

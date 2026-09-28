@@ -3,12 +3,17 @@
 import { getFacultyBySlug } from "@/lib/api/faculty";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import * as cheerio from "cheerio";
 import { Mail } from "lucide-react";
-import { Skeleton } from "@/components/ui/skeleton";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { resolveFacultyAlt } from "@/alt-text";
+
+if (typeof window !== "undefined") {
+    gsap.registerPlugin(ScrollTrigger);
+}
 
 type Props = {
     name: string;
@@ -98,19 +103,48 @@ export const FacultyAdvisoryCard = ({
     }, [facultyContent]);
 
     const isLoading = facultyContent === null;
+    const photoRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (!photoRef.current) return;
+
+        const ctx = gsap.context(() => {
+            gsap.fromTo(
+                photoRef.current,
+                {
+                    opacity: 0,
+                    scale: 0.94,
+                    y: 18,
+                },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    y: 0,
+                    duration: 0.65,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: photoRef.current,
+                        start: "top 95%",
+                        toggleActions: "play none none none",
+                        once: true,
+                    },
+                }
+            );
+        });
+
+        return () => ctx.revert();
+    }, []);
 
     return (
         <div className="overflow-hidden bg-[#061623] transition-all duration-300 ease-in-out group flex flex-col font-poppins h-full w-full">
             {/* IMAGE SECTION */}
-            <div className="relative flex h-[240px] sm:h-[280px] w-full items-end justify-center overflow-hidden bg-[#ffffff]">
+            <div
+                ref={photoRef}
+                className="relative flex h-[240px] sm:h-[280px] w-full items-end justify-center overflow-hidden bg-[#ffffff] will-change-transform"
+            >
                 {/* SOCIAL ICONS (Floating Top Right) */}
                 <div className="absolute top-3 right-3 z-30">
-                    {isLoading ? (
-                        <div className="flex items-center gap-2">
-                            <Skeleton className="h-7 w-7 rounded bg-gray-300" />
-                            <Skeleton className="h-7 w-7 rounded bg-gray-300" />
-                        </div>
-                    ) : socialItems.length > 0 ? (
+                    {socialItems.length > 0 ? (
                         <ul className="flex items-center gap-1.5">
                             {socialItems.map((item, index) => {
                                 const isLinkedin = item.type === "linkedin";

@@ -103,19 +103,29 @@ export default function SchoolSubNav({ slug }: SchoolSubNavProps) {
     ) => {
         e.preventDefault();
         setActiveId(targetId);
-        const element = document.getElementById(targetId);
-        if (element) {
-            const subNavH = containerRef.current
-                ? containerRef.current.offsetHeight
-                : 55;
-            const totalStickyHeight = headerHeight + subNavH;
-            const y =
-                element.getBoundingClientRect().top +
-                window.pageYOffset -
-                totalStickyHeight +
-                5;
-            window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+        if (typeof window !== "undefined") {
+            try {
+                window.history.replaceState(null, "", `#${targetId}`);
+            } catch (_) {}
         }
+        const scrollToTarget = () => {
+            const element = document.getElementById(targetId);
+            if (element) {
+                const subNavH = containerRef.current
+                    ? containerRef.current.offsetHeight
+                    : 55;
+                const totalStickyHeight = headerHeight + subNavH;
+                const y =
+                    element.getBoundingClientRect().top +
+                    window.pageYOffset -
+                    totalStickyHeight +
+                    5;
+                window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+            }
+        };
+
+        scrollToTarget();
+        setTimeout(scrollToTarget, 300);
     };
 
     return (
