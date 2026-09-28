@@ -28,9 +28,9 @@ const ProgrammeScopeSection = async ({
         >
             <div className="max-w-[1530px] w-full mx-auto flex flex-col lg:flex-row items-center gap-6 xl:gap-10 px-4 md:px-8 xl:px-16">
                 {/* Left column: Image (Hidden on Mobile & Tablet, Visible on Desktop) */}
-                <div className="hidden lg:block w-full lg:w-1/2">
+                <div className=" w-full lg:w-1/2">
                     {heroSection?.imgvideo === "Video" && isFormAvailable ? (
-                        <div className="relative aspect-[16/10] sm:aspect-[4/4] lg:aspect-[4/3] xl:aspect-[5/3] w-full rounded-[4px] ld:rounded-md overflow-hidden">
+                        <div className="relative aspect-[16/10] sm:aspect-[4/4] lg:aspect-[4/3] xl:aspect-[5/3] w-full rounded-[1px] lg:rounded-[4px] overflow-hidden">
                             <div
                                 className="w-full h-full"
                                 dangerouslySetInnerHTML={{
@@ -40,12 +40,12 @@ const ProgrammeScopeSection = async ({
                         </div>
                     ) : (
                         scopeData?.scopeimg?.url && (
-                            <div className="w-full h-auto rounded-[4px] ld:rounded-md overflow-hidden">
+                            <div className="w-full h-auto rounded-[1px] lg:rounded-[4px] overflow-hidden">
                                 <Image
                                     src={`${STRAPI_URL}${scopeData?.scopeimg?.url}`}
                                     width={scopeData?.scopeimg?.width || 800}
                                     height={scopeData?.scopeimg?.height || 500}
-                                    className="w-full h-auto object-contain rounded-[4px] ld:rounded-md"
+                                    className="w-full h-auto object-contain rounded-[1px] lg:rounded-[4px]"
                                     alt={resolveSoetProgramAlt(
                                         slug,
                                         scopeData?.scopeimg?.url ||

@@ -21,7 +21,7 @@ export type HeroConfig = {
 // Base config for most cinematic heroes to avoid repetition
 const defaultCinematicConfig: Partial<HeroConfig> = {
     bgPosition: "85% center",
-    mobileBgPosition: "55% top",
+    mobileBgPosition: "55% 20px",
     bgSize: "cover",
     mobileBgSize: "cover",
     overlayOpacity: "0.9",
@@ -124,7 +124,7 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
         ...defaultCinematicConfig,
         bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_cse_robotics_ai_67aa0ef598.jpg",
         bgPosition: "70% top",
-        mobileBgPosition: "57% -75px",
+        mobileBgPosition: "57% top",
     } as HeroConfig,
     "btech-cse-cloud-computing": {
         ...defaultCinematicConfig,

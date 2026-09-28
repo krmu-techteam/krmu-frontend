@@ -35,9 +35,9 @@ const ProgramHeroCinematic = ({
     const config = heroConfigs[slug] || heroConfigs["bba-hr"];
 
     return (
-        <>
+        <div className="relative w-full pt-[85px] sm:pt-[95px] lg:pt-0">
             <section
-                className="hero-cinematic-overlay pt-[280px] sm:pt-[320px] md:pt-[360px] lg:pt-32 xl:pt-40 pb-0 lg:pb-12 overflow-x-hidden 2xl:px-0 overflow-hidden 
+                className="hero-cinematic-overlay pt-[190px] sm:pt-[230px] md:pt-[280px] lg:pt-32 xl:pt-40 pb-0 lg:pb-12 overflow-x-hidden 2xl:px-0 overflow-hidden 
         [background-position:var(--bg-pos-mobile)] sm:[background-position:var(--bg-pos-tablet)] lg:[background-position:var(--bg-pos-desktop)] 
         [background-size:var(--bg-size-mobile)] sm:[background-size:var(--bg-size-tablet)] lg:[background-size:var(--bg-size-desktop)] 
         bg-no-repeat relative before:content-[''] before:absolute before:top-0 before:left-0 
@@ -202,7 +202,7 @@ const ProgramHeroCinematic = ({
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

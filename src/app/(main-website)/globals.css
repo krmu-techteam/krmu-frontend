@@ -2918,54 +2918,55 @@ body:before {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 14px 4px 14px 10px;
-        text-align: left;
+        padding: 0px 4px 14px 10px;
+        text-align: center;
         width: 100%;
     }
 
     .admis_proc_btn_content .btn_text {
-        font-size: 13.5px;
+        font-size: 12px;
         width: 100%;
         max-width: 155px;
         padding-bottom: 6px;
         font-weight: 600;
         color: #fff;
         line-height: 1.25;
-        text-align: left;
+        text-align: center;
     }
 
     .admis_proc_btn_grid_item .admis_proc_btn_content .admis_btn_below_text {
         width: 100%;
         max-width: 155px;
-        font-size: 11px !important;
+        font-size: 9.5px !important;
         font-family: poppins;
         font-weight: 400;
         color: #e9ecef;
         line-height: 1.35;
-        text-align: left;
+        text-align: center;
         word-break: normal;
         overflow-wrap: break-word;
-        padding: 0;
+        padding: 2px;
     }
 
     /* Micro-alignments to match slanted ribbons 01-06 in /admisison-steps.png */
     .admis_proc_btn_grid_item:nth-child(1) .admis_proc_btn_content {
-        transform: translateX(-12px);
+        transform: translateX(-24px);
     }
     .admis_proc_btn_grid_item:nth-child(2) .admis_proc_btn_content {
-        transform: translateX(-19px);
+        transform: translateX(-32px);
     }
     .admis_proc_btn_grid_item:nth-child(3) .admis_proc_btn_content {
-        transform: translateX(-36px);
+        transform: translateX(-46px);
+        margin-top: 4px;
     }
     .admis_proc_btn_grid_item:nth-child(4) .admis_proc_btn_content {
-        transform: translateX(-42px);
-    }
-    .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content {
         transform: translateX(-52px);
     }
+    .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content {
+        transform: translateX(-60px);
+    }
     .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content {
-        transform: translateX(-54px);
+        transform: translateX(-60px);
     }
 
     /* XL (1280px+) */
@@ -2974,14 +2975,14 @@ body:before {
         .admis_proc_btn_content {
             align-items: flex-start;
             padding: 18px 4px 18px 14px;
-            text-align: left;
+            text-align: center;
         }
 
         .admis_proc_btn_content .btn_text {
             font-size: 15.5px;
             max-width: 175px;
-            padding-bottom: 8px;
-            text-align: left;
+            padding-bottom: 4px;
+            text-align: center;
         }
 
         .admis_proc_btn_grid_item
@@ -2990,26 +2991,26 @@ body:before {
             max-width: 175px;
             font-size: 11px;
             line-height: 1.45;
-            text-align: left;
+            text-align: center;
         }
 
         .admis_proc_btn_grid_item:nth-child(1) .admis_proc_btn_content {
-            transform: translateX(-13px);
+            transform: translateX(-30px);
         }
         .admis_proc_btn_grid_item:nth-child(2) .admis_proc_btn_content {
-            transform: translateX(-28px);
-        }
-        .admis_proc_btn_grid_item:nth-child(3) .admis_proc_btn_content {
-            transform: translateX(-38px);
-        }
-        .admis_proc_btn_grid_item:nth-child(4) .admis_proc_btn_content {
             transform: translateX(-48px);
         }
-        .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content {
+        .admis_proc_btn_grid_item:nth-child(3) .admis_proc_btn_content {
             transform: translateX(-58px);
         }
-        .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content {
+        .admis_proc_btn_grid_item:nth-child(4) .admis_proc_btn_content {
             transform: translateX(-68px);
+        }
+        .admis_proc_btn_grid_item:nth-child(5) .admis_proc_btn_content {
+            transform: translateX(-78px);
+        }
+        .admis_proc_btn_grid_item:nth-child(6) .admis_proc_btn_content {
+            transform: translateX(-82px);
         }
     }
 

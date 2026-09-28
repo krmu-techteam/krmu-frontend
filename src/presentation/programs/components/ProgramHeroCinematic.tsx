@@ -18,9 +18,9 @@ const ProgramHeroCinematic = ({
     const config = HERO_CONFIGS[slug] || HERO_CONFIGS["bba-hr"];
 
     return (
-        <div className="relative w-full">
+        <div className="relative w-full pt-[85px] sm:pt-[95px] lg:pt-0">
             <section
-                className="hero-cinematic-overlay pt-[320px] md:pt-[360px] lg:pt-32 xl:pt-40 pb-0 lg:pb-12 overflow-x-hidden 2xl:px-0 overflow-hidden 
+                className="hero-cinematic-overlay pt-[190px] sm:pt-[230px] md:pt-[280px] lg:pt-32 xl:pt-40 pb-0 lg:pb-12 overflow-x-hidden 2xl:px-0 overflow-hidden 
         [background-position:var(--bg-pos-mobile)] sm:[background-position:var(--bg-pos-tablet)] lg:[background-position:var(--bg-pos-desktop)] 
         [background-size:var(--bg-size-mobile)] sm:[background-size:var(--bg-size-tablet)] lg:[background-size:var(--bg-size-desktop)] 
         bg-no-repeat relative before:content-[''] before:absolute before:top-0 before:left-0 
@@ -33,10 +33,10 @@ const ProgramHeroCinematic = ({
                         "--bg-pos-tablet":
                             config.tabletBgPosition || "60% center",
                         "--bg-pos-mobile":
-                            config.mobileBgPosition || "center -120px",
+                            config.mobileBgPosition || "center top",
                         "--bg-size-desktop": config.bgSize || "cover",
                         "--bg-size-tablet": config.tabletBgSize || "cover",
-                        "--bg-size-mobile": config.mobileBgSize || "240%",
+                        "--bg-size-mobile": config.mobileBgSize || "cover",
                         "--overlay-start-desktop": `rgba(0,0,0,${config.overlayOpacity || "0.85"})`,
                         "--overlay-start-mobile": "rgba(0,0,0,0.5)",
                         "--overlay-width": config.overlayWidth || "45%",
