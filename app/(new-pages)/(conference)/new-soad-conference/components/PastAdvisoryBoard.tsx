@@ -19,11 +19,10 @@ const PastAdvisoryBoard = () => {
 
         {/* Advisory Board Cards */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
-          {advisoryBoardMembers.map((member) => (
+          {advisoryBoardMembers.map((member, i) => (
             <CommitteeMemberCard
-              key={`${member.name}-${member.role}`}
+              key={i}
               image={member.image}
-              role={member.role}
               name={member.name}
               designation={member.designation}
             />

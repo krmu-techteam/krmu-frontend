@@ -45,32 +45,32 @@ export const networkLogos = [
 
 export const soadConfGalleryImages = [
   {
-    src: "/a/campus-1.jpg",
+    src: "https://www.krmangalam.edu.in/images/conferences/soad-conference/campus-venue/campus-front.webp",
     alt: "K.R. Mangalam University Campus",
     className: "col-span-1 md:col-span-1",
   },
   {
-    src: "/a/campus-1.jpg",
+    src: "https://www.krmangalam.edu.in/images/conferences/soad-conference/campus-venue/design-studio.webp",
     alt: "DESIGN 2030 Conference Participants",
     className: "col-span-1 md:col-span-1",
   },
   {
-    src: "/a/campus-1.jpg",
+    src: "https://www.krmangalam.edu.in/images/conferences/soad-conference/campus-venue/previous-conference.webp",
     alt: "Conference Discussion",
     className: "col-span-1",
   },
   {
-    src: "/a/campus-1.jpg",
+    src: "https://www.krmangalam.edu.in/images/conferences/soad-conference/campus-venue/student-exhibition.webp",
     alt: "Conference Speaker",
     className: "col-span-1",
   },
   {
-    src: "/a/campus-1.jpg",
+    src: "https://www.krmangalam.edu.in/images/conferences/soad-conference/campus-venue/keynote-session.webp",
     alt: "Conference Presentation",
     className: "col-span-1",
   },
   {
-    src: "/a/campus-1.jpg",
+    src: "https://www.krmangalam.edu.in/images/conferences/soad-conference/campus-venue/venue-auditorium.webp",
     alt: "Conference Meeting",
     className: "col-span-1",
   },
@@ -158,31 +158,36 @@ export const registrationFees = {
 
 export const committeeMembers = [
   {
-    image: "/images/committee/dinesh-singh.png",
+    image:
+      "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/dinesh.jpg",
     role: "Chief Patron",
     name: "Prof. Dinesh Singh",
     designation: "Chancellor, K.R. Mangalam University",
   },
   {
-    image: "/images/committee/abhishek-gupta.png",
+    image:
+      "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/abhishek.jpg",
     role: "Patron",
     name: "Mr. Abhishek Gupta",
     designation: "Pro-Chancellor, K.R. Mangalam University",
   },
   {
-    image: "/images/committee/rohit-gupta.png",
+    image:
+      "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/rohit.jpg",
     role: "Patron",
     name: "Mr. Rohit Gupta",
     designation: "Managing Director, K.R. Mangalam University",
   },
   {
-    image: "/images/committee/anil-kumar-saini.png",
+    image:
+      "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/anil.jpg",
     role: "Patron",
     name: "Prof. (Dr.) Anil Kumar Saini",
     designation: "Vice-Chancellor, K.R. Mangalam University",
   },
   {
-    image: "/images/committee/pradeep-kumar-varshney.png",
+    image:
+      "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/pradeep.jpg",
     role: "Patron",
     name: "Dr. Pradeep Kumar Varshney",
     designation: "Dean Research and Director-IQAC",
@@ -191,75 +196,176 @@ export const committeeMembers = [
 
 export const advisoryBoardMembers = [
   {
-    image: "/images/advisory-board/abhay-vinayak.png",
-    role: "Prof. Ar. Abhay Vinayak",
-    name: "Professor",
-    designation: "Council of Architecture",
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/abhay.jpg",
+    name: "Prof. Ar. Abhay Vinayak Purohit",
+    designation: "Former President, Council of Architecture",
   },
   {
-    image: "/images/advisory-board/vivek-lagani.png",
-    role: "Ar. Vivek Lagani",
-    name: "Chairman, Indian Institute of Architects",
-    designation: "Haryana Chapter",
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/vivek.jpg",
+    name: "Ar. Vivek Logani",
+    designation: "Chairman, Indian Institute of Architects Haryana Chapter",
+    // designation: "Haryana Chapter",
   },
   {
-    image: "/images/advisory-board/rishu-anand.png",
-    role: "Mr. Rishu Anand",
-    name: "Chairman",
-    designation: "IIIT Delhi",
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/rishu.jpg",
+    name: "Mr. Rishu Anand",
+    designation: "Chairman Elect, IIID Delhi",
   },
   {
-    image: "/images/advisory-board/jyoti-pandey.png",
-    role: "Prof. Jyoti Pandey Sharma",
-    name: "Head of Department-Architecture",
-    designation: "SPA Delhi",
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/jyoti.jpg",
+    name: "Prof. Jyoti Pandey Sharma",
+    designation: "Head of Department–Architecture, SPA Delhi",
   },
   {
-    image: "/images/advisory-board/kirty-gerra.png",
-    role: "Kirty Gerra",
-    name: "Royal College of Art",
-    designation: "",
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/krity.jpg",
+    name: "Krity Gera",
+    designation: "Royal College of Art",
   },
   {
-    image: "/images/advisory-board/ashok-kumar.png",
-    role: "Dr. Ashok Kumar",
-    name: "Retired Scientist",
-    designation: "CSIR & Ministry of Science & Technology, Govt. of India",
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/ashok.jpg",
+    name: "Dr Ashok Kumar",
+    designation:
+      "Retd. Scientist 'H' (Outstanding Scientist), Ministry of Science & Technology, Govt. of India",
   },
   {
-    image: "/images/advisory-board/qamar-irshad.png",
-    role: "Dr. Qamar Irshad",
-    name: "Professor & Dean",
-    designation: "Faculty of Architecture and Ecistics, Jamia Millia Islamia",
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/qamar.jpg",
+    name: "Dr Qamar Irshad",
+    designation:
+      "Professor & Dean, Faculty of Architecture and Ekistics, Jamia Millia Islamia",
   },
   {
-    image: "/images/advisory-board/mohammad-arif-kamal.png",
-    role: "Dr. Mohammad Arif Kamal",
-    name: "Associate Professor",
-    designation: "Architecture Section, Aligarh Muslim University",
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/arif.jpg",
+    name: "Dr. Mohammad Arif Kamal",
+    designation:
+      "Associate Professor, Architecture Section, Aligarh Muslim University",
   },
   {
-    image: "/images/advisory-board/virendra-kumar-malik.png",
-    role: "Virendra Kumar Malik",
-    name: "Professor",
-    designation: "Emeritus, School of Art and Architecture",
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/virendra.jpg",
+    name: "Virendra Kumar Malik",
+    designation: "Professor Emeritus, School of Art and Architecture",
   },
   {
-    image: "/images/advisory-board/shilpi-sinha.png",
-    role: "Shilpi Sinha",
-    name: "Director",
-    designation: "Vastu Kala Academy of Architecture, Delhi",
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/shhilpi.jpg",
+    name: "Shhilpi Sinha",
+    designation: "Director, Vastu Kala Academy of Architecture, Delhi",
   },
   {
-    image: "/images/advisory-board/bijimool-tom.png",
-    role: "Bijimool Tom",
-    name: "Rajiv Gandhi Institute of Technology",
-    designation: "Kerala",
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/binumol.jpg",
+    name: "Binumol Tom",
+    designation: "Rajiv Gandhi Institute of Technology, Kerala",
   },
   {
-    image: "/images/advisory-board/pooja-lalit-kumar.png",
-    role: "Pooja Lalit Kumar",
-    name: "Professor",
-    designation: "SAUM, Jawaharlal Nehru University",
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/pooja.jpg",
+    name: "Pooja Lalit Kumar",
+    designation: "Professor, SAA, Sushant University",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/binti.jpg",
+    name: "Dr. Binti Singh",
+    designation:
+      "Kamla Raheja Foundation & Upanagar Shikshan Mandal — Dean, Research and Academic Development",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/neeraja.jpg",
+    name: "Dr Neeraja Lugani Sethi",
+    designation: "Guru Gobind Singh Indraprastha University",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/anurag.jpg",
+    name: "Prof. (Dr.) Anurag Varma",
+    designation: "Executive Director, Liberal Arts and Humanities Cluster",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/harshad.jpg",
+    name: "Harshad Jaykumar Raisoni",
+    designation: "Head, Dept. of Planning (Urban & Regional Planning), MITSAP",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/glory.jpg",
+    name: "Glory Srivastava",
+    designation: "Advocacy Chair, ISHRAE, Gurgaon Chapter",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/saran.jpg",
+    name: "Saran Bhatia",
+    designation: "Initiator Lifeline rahProfessor Architect Urban , Interior Designer",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/preetha.jpg",
+    name: "Preetha Ravi",
+    designation: "Dean & Professor, ASAP Amity University, Mohali",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/antony.jpg",
+    name: "Antony Kumar Boity",
+    designation: "Director, ASAP , Amity University Jaipur",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/nikhilesh.jpg",
+    name: "Nikhilesh Sharma",
+    designation: "Assistant Professor, USDI, GGSIPU",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/ravi.jpg",
+    name: "Ravi Butola",
+    designation: "Assistant Professor, USAR, GGSIPU",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/hina.jpg",
+    name: "Hina Zia",
+    designation: "Department of Planning, Jamia Millia Islamia",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/ila.jpg",
+    name: "Ila Gupta",
+    designation: "Researcher & Academician",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/manita.jpg",
+    name: "Manita Saxena",
+    designation: "Principal, SOA IPS Academy",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/parul.jpg",
+    name: "Parul Munjal",
+    designation: "Academician & Conservation Architect ",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/koshalpreet.jpg",
+    name: "Koshalpreet Kaur",
+    designation: "Professor & Dean, School of Design, Sushant University",
+  },
+  {
+    image:
+      "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/rakesh.jpg",
+    name: "Rakesh Sapra",
+    designation: "Director, SACAP",
   },
 ];
