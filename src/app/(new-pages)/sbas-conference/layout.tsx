@@ -1,8 +1,8 @@
 import { Inter, Lora } from "next/font/google";
 import "./sbasconference.css";
 
-import HeaderWrapper from "@/app/(main-website)/components/Header/HeaderWrapper";
-import Footer from "@/app/(main-website)/components/Footer/Footer";
+import HeaderWrapper from "@/components/layouts/Header/HeaderWrapper";
+import Footer from "@/components/layouts/Footer/Footer";
 import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({
     subsets: ["latin"],
