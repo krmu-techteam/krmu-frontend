@@ -99,7 +99,7 @@ export function CenterNewsSlider({ slides }: CenterNewsSliderProps) {
                 </p>
                 <Link href={currentSlide.link}>
                     <h3
-                        className="text-white font-serif font-normal text-2xl sm:text-3xl md:text-[30px] leading-tight hover:text-brand-gold transition-colors line-clamp-2"
+                        className="text-white font-serif font-normal text-2xl sm:text-3xl md:text-[30px] leading-tight hover:text-brand-gold transition-colors line-clamp-3"
                         dangerouslySetInnerHTML={{ __html: currentSlide.title }}
                     />
                 </Link>

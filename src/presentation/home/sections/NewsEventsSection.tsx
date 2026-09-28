@@ -94,7 +94,7 @@ export async function NewsEventsSection({
         <section className="relative w-full overflow-hidden py-12 md:py-16 xl:py-20 font-poppins">
             <div className="w-full max-w-[1530px] mx-auto relative z-10">
                 {/* Header: Centered Title with Top-Right "Find Out More" */}
-                <div className="relative flex items-center justify-center mb-10 md:mb-14">
+                <div className="relative flex items-center justify-start mb-10 md:mb-14">
                     <h2 className="font-serif text-3xl md:text-4xl xl:text-[42px] font-bold text-white text-center tracking-tight">
                         {title}
                     </h2>
@@ -126,7 +126,7 @@ export async function NewsEventsSection({
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 xl:gap-10 items-start">
                     {/* LEFT COLUMN: Latest News List (Up to 10 items with vertical scroll) */}
                     <div className="md:col-span-1 lg:col-span-3 order-2 lg:order-1">
-                        <div className="max-h-[500px] lg:max-h-[540px] xl:max-h-[560px] overflow-y-auto pr-2 sm:pr-3 news-custom-scrollbar flex flex-col">
+                        <div className="max-h-[500px] lg:max-h-[570px] xl:max-h-[600px] overflow-y-auto pr-2 sm:pr-3 news-custom-scrollbar flex flex-col">
                             {leftNewsItems.map((item, idx) => (
                                 <div key={item.id} className="flex flex-col">
                                     <Link

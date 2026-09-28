@@ -1,7 +1,11 @@
-import { TestimonialCard } from "@/presentation/school/components";
-import { Carousel } from "@/components/common/Carousel";
+"use client";
+
+import React, { useState, useCallback, useEffect, useRef } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import SectionDivider from "@/components/common/SectionDivider";
 import { TestimonialSectionProps } from "@/features/school";
+import { STRAPI_URL } from "@/app/constant";
 
 const TestimonialsSection = ({
     title,
@@ -9,6 +13,59 @@ const TestimonialsSection = ({
     testis,
     slug,
 }: TestimonialSectionProps) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+    const touchStartX = useRef<number | null>(null);
+
+    const testimonialsData = testis || [];
+
+    const handleNext = useCallback(() => {
+        if (testimonialsData.length === 0) return;
+        setCurrentIndex((prev) => (prev + 1) % testimonialsData.length);
+    }, [testimonialsData.length]);
+
+    const handlePrev = useCallback(() => {
+        if (testimonialsData.length === 0) return;
+        setCurrentIndex(
+            (prev) =>
+                (prev - 1 + testimonialsData.length) % testimonialsData.length
+        );
+    }, [testimonialsData.length]);
+
+    const handleSelectPerson = useCallback((index: number) => {
+        setCurrentIndex(index);
+    }, []);
+
+    useEffect(() => {
+        if (isHovered || testimonialsData.length === 0) return;
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % testimonialsData.length);
+        }, 6000);
+        return () => clearInterval(timer);
+    }, [isHovered, currentIndex, testimonialsData.length]);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        if (touchStartX.current === null) return;
+        const touchEndX = e.changedTouches[0].clientX;
+        const diff = touchStartX.current - touchEndX;
+        if (Math.abs(diff) > 40) {
+            if (diff > 0) {
+                handleNext();
+            } else {
+                handlePrev();
+            }
+        }
+        touchStartX.current = null;
+    };
+
+    if (testimonialsData.length === 0) return null;
+
+    const t = testimonialsData[currentIndex];
+
     return (
         <section
             id="testimonials"
@@ -17,38 +74,125 @@ const TestimonialsSection = ({
             <div className="max-w-[1440px] mx-auto w-full relative z-10 px-4 md:px-8 lg:px-12">
                 <div className="mb-10 max-w-5xl">
                     <h2 className="heading-primary mb-4">
-                        {title.split(" ")[1]}
+                        {title?.split(" ")[1] || title}
                     </h2>
                     <p className="text-white/90 text-justify text-[15px] lg:text-[16px]">
                         {desc}
                     </p>
                 </div>
 
-                <div className="relative">
-                    <Carousel
-                        options={{ align: "start", loop: true }}
-                        showArrows={true}
-                        showDots={true}
-                        autoplayDelay={3000}
-                        prevArrowClassName="!bg-[#e32831] !border-none !text-white !rounded-[3px] hover:!bg-red-700 !w-10 !h-10 !-left-2 md:!-left-13 opacity-100"
-                        nextArrowClassName="!bg-[#e32831] !border-none !text-white !rounded-[3px] hover:!bg-red-700 !w-10 !h-10 !-right-2 md:!-right-13 opacity-100"
-                        activeDotClassName="bg-[#e32831] w-2 h-2"
-                        dotClassName="bg-white/40 w-2 h-2"
-                        containerClassName="-ml-6"
-                        slideClassName="pl-6 basis-full md:basis-1/2"
-                    >
-                        {testis &&
-                            testis.map((testimonial) => (
-                                <TestimonialCard
-                                    key={testimonial.id}
-                                    name={testimonial?.name}
-                                    edu={testimonial?.education}
-                                    desc={testimonial?.info}
-                                    img={testimonial?.userimg}
-                                    slug={slug}
-                                />
-                            ))}
-                    </Carousel>
+                <div
+                    className="relative w-full py-2"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                >
+                    <div className="w-full min-h-[520px] sm:min-h-[460px] md:min-h-[380px] lg:min-h-[340px] xl:min-h-[320px]">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={t.id || currentIndex}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{
+                                    duration: 0.2,
+                                    ease: "easeInOut",
+                                }}
+                                className="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-8 w-full"
+                            >
+                                <div
+                                    onClick={handleNext}
+                                    className="w-full lg:w-[260px] xl:w-[300px] shrink-0 relative aspect-square sm:aspect-[4/4.5] lg:aspect-auto rounded-[16px] overflow-hidden cursor-pointer group select-none"
+                                    title="Click to view next testimonial"
+                                >
+                                    <Image
+                                        src={
+                                            t.userimg?.url
+                                                ? `${STRAPI_URL}${t.userimg.url}`
+                                                : "/images/placeholder.jpg"
+                                        }
+                                        alt={`${t.name || "Student"}, ${t.education || ""} student testimonial at KRMU`}
+                                        fill
+                                        sizes="(max-width: 1024px) 100vw, 300px"
+                                        className="object-cover rounded-[16px] transition-transform duration-500 group-hover:scale-105"
+                                        priority
+                                    />
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 pointer-events-none rounded-[16px]" />
+                                </div>
+
+                                <div className="hidden lg:block w-[1px] self-stretch my-1 bg-[linear-gradient(180deg,#1A1A1A_0%,#FFFFFF_48.08%,#1A1A1A_100%)] shrink-0"></div>
+
+                                <div className="flex-1 flex flex-col justify-between relative z-10 pt-2 lg:pt-0 w-full min-w-0">
+                                    <div className="relative pt-2 md:pt-4">
+                                        <div className="absolute -top-1 left-0 md:-top-2 md:-left-4 pointer-events-none z-0 opacity-35">
+                                            <Image
+                                                src="/modules/home/testimonial/quote.png"
+                                                alt="Quote Icon"
+                                                width={120}
+                                                height={96}
+                                                className="w-14 md:w-20 lg:w-24 h-auto object-contain brightness-0 invert"
+                                            />
+                                        </div>
+
+                                        <div className="min-h-[220px] sm:min-h-[190px] md:min-h-[170px] flex items-center justify-center md:justify-start">
+                                            <p className="italic text-white/90 text-sm md:text-[16px] xl:text-[18px] leading-relaxed font-light font-poppins relative z-10 text-justify md:text-left pr-0 md:pr-2 lg:pr-12">
+                                                {t.info}
+                                            </p>
+                                        </div>
+
+                                        <div className="w-10 h-[2px] bg-brand-gold my-4 rounded-full opacity-80 relative z-10 mx-auto md:mx-0"></div>
+                                    </div>
+
+                                    <div className="mt-2 relative z-10 text-center md:text-left">
+                                        <h3 className="text-brand-gold font-poppins font-bold text-base md:text-lg lg:text-xl leading-tight">
+                                            {t.name}
+                                        </h3>
+                                        <p className="text-white/70 font-poppins text-xs md:text-sm font-light mt-1 mb-4">
+                                            {t.education}
+                                        </p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
+
+                    <div className="w-full flex items-center justify-start sm:justify-center gap-3 sm:gap-4 mt-8 md:mt-10 overflow-x-auto py-4 px-2 min-h-[96px] sm:min-h-[104px] md:min-h-[112px] no-scrollbar">
+                        {testimonialsData.map((item, idx) => {
+                            const isActive = currentIndex === idx;
+                            return (
+                                <button
+                                    key={item.id || idx}
+                                    type="button"
+                                    onMouseDown={(e) => e.preventDefault()}
+                                    onClick={(e) => {
+                                        e.currentTarget.blur();
+                                        handleSelectPerson(idx);
+                                    }}
+                                    className={`relative shrink-0 rounded-full overflow-hidden transition-all duration-300 cursor-pointer ${
+                                        isActive
+                                            ? "w-16 h-16 sm:w-[72px] sm:h-[72px] md:w-20 md:h-20 ring-[2.5px] ring-brand-gold opacity-100 z-10 shadow-xl"
+                                            : "w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 opacity-40 hover:opacity-90 ring-2 ring-brand-gold/20 hover:scale-105"
+                                    }`}
+                                    aria-label={`View ${item.name}'s testimonial`}
+                                    title={`${item.name} - ${item.education}`}
+                                >
+                                    <Image
+                                        src={
+                                            item.userimg?.url
+                                                ? `${STRAPI_URL}${item.userimg.url}`
+                                                : "/images/placeholder.jpg"
+                                        }
+                                        alt={item.name || "Student"}
+                                        fill
+                                        sizes="200px"
+                                        quality={95}
+                                        className="object-cover"
+                                    />
+                                </button>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
             <SectionDivider />

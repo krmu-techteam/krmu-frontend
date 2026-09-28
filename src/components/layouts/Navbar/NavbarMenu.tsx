@@ -268,7 +268,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                 className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[1px] block"
                                             >
                                                 <Image
-                                                    src="/modules/header/academics/undergraduate.jpg"
+                                                    src="/images/header/program-level/undergraduate-programmes.jpg"
                                                     alt="Undergraduate Programmes"
                                                     fill
                                                     sizes="(max-width: 1024px) 100vw, 400px"
@@ -287,7 +287,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                 className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[1px]  block bg-[#0b1622]"
                                             >
                                                 <Image
-                                                    src="/modules/header/academics/postgraduate.png"
+                                                    src="/images/header/program-level/postgraduate-programmes.jpg"
                                                     alt="Postgraduate Programmes"
                                                     fill
                                                     sizes="(max-width: 1024px) 100vw, 400px"
@@ -306,7 +306,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                 className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[1px]  block bg-[#0b1622]"
                                             >
                                                 <Image
-                                                    src="/modules/header/academics/doctoral.jpg"
+                                                    src="/images/header/program-level/doctoral-programmes.jpg"
                                                     alt="Doctoral Programmes"
                                                     fill
                                                     sizes="(max-width: 1024px) 100vw, 400px"
@@ -325,7 +325,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                 className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[1px]  block bg-[#0b1622]"
                                             >
                                                 <Image
-                                                    src="/modules/header/academics/diploma.jpg"
+                                                    src="/images/header/program-level/diploma-programmes.jpg"
                                                     alt="Diploma Programmes"
                                                     fill
                                                     sizes="(max-width: 1024px) 100vw, 400px"
@@ -604,9 +604,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                                     <div className="col-span-12 lg:col-span-4 lg:pl-6 flex flex-col justify-between">
                                         <div>
-                                            <div className="relative group mb-6 w-[400px] max-w-full h-[250px] rounded-[4px] overflow-hidden">
+                                            <div className="relative group mb-6 w-[400px] max-w-full h-[250px] rounded-[1px] overflow-hidden">
                                                 <Image
-                                                    src="/modules/header/admissions/campus.png"
+                                                    src="/images/header/menu/admissions.jpg"
                                                     alt="Admissions Campus"
                                                     width={400}
                                                     height={250}
@@ -1052,9 +1052,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                                     {/* Right Column: Image */}
                                     <div className="w-full lg:w-[40%] h-full">
-                                        <div className="relative group rounded-[2px] overflow-hidden w-full h-full min-h-[360px]">
+                                        <div className="relative group rounded-[1px] overflow-hidden w-full h-full min-h-[360px]">
                                             <Image
-                                                src="/modules/header/research/research-lab.png"
+                                                src="/images/header/menu/research-and-development-cell.png"
                                                 alt="Research Highlight"
                                                 fill
                                                 sizes="(max-width: 1024px) 100vw, 450px"
@@ -1209,7 +1209,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                                     {/* Right Column: Featured Image */}
                                     <div className="col-span-6 pl-4 flex flex-col justify-center h-full">
-                                        <div className="relative rounded-[2px] overflow-hidden w-full aspect-[16/10]">
+                                        <div className="relative rounded-[1px] overflow-hidden w-full aspect-[16/10]">
                                             <Image
                                                 src="/modules/header/campus/campus.png"
                                                 alt="Campus Life"
@@ -1253,9 +1253,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         </div>
 
                                         {/* Image */}
-                                        <div className="relative w-full rounded-[2px] overflow-hidden group aspect-video">
+                                        <div className="relative w-full rounded-[1px] overflow-hidden group aspect-video">
                                             <Image
-                                                src="/images/header/menu/about-us/about-menu.jpg"
+                                                src="/images/header/menu/about-us.png"
                                                 alt="About KRMU"
                                                 fill
                                                 sizes="(max-width: 1024px) 100vw, 400px"
@@ -1264,7 +1264,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             />
 
                                             {/* Top Right Counter Overlay */}
-                                            <div className="absolute top-3 right-3 z-10 bg-[#062035] rounded-[3px] px-3 py-1.5 flex items-center justify-center gap-1.5 text-center shadow-lg">
+                                            <div className="absolute top-3 right-3 z-10 bg-[#062035] rounded-[1px] px-3 py-1.5 flex items-center justify-center gap-1.5 text-center">
                                                 <span className="text-[15px] font-medium text-white font-poppins leading-none">
                                                     {aboutusMenu
                                                         ?.aboutuscounter?.[0]

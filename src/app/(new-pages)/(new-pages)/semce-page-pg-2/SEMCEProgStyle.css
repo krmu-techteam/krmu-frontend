@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+@layer utilities {
+    .common-overlay::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .redGradient {
+        background: linear-gradient(81.97deg, #ff0000 -49.37%, #ff7f7f 143.54%);
+    }
+
+    .marquee {
+        display: flex;
+        width: max-content;
+        animation: scroll 30s linear infinite;
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* Optional but VERY nice UX */
+    .marquee:hover {
+        animation-play-state: paused;
+    }
+}
