@@ -5,10 +5,10 @@ import HeaderWrapper from "@/components/layouts/Header/HeaderWrapper";
 import Footer from "@/components/layouts/Footer/Footer";
 
 const poppins = Poppins({
+    weight: ["300", "400", "500", "600", "700"],
     subsets: ["latin"],
-    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-    variable: "--font-family-poppins",
     display: "swap",
+    variable: "--font-poppins",
 });
 
 const newsreader = Newsreader({
