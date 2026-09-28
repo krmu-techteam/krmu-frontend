@@ -114,7 +114,7 @@ export default function ProgrammesFilterHeader({
                     />
                     <input
                         type="text"
-                        placeholder="Search by Program Name..."
+                        placeholder="Search by programme Name..."
                         value={searchQuery}
                         onChange={(e) => {
                             onSearchChange(e.target.value);
@@ -133,7 +133,8 @@ export default function ProgrammesFilterHeader({
             {/* Program Count & Toggles */}
             <div className="hidden md:flex items-center justify-between pt-3 mt-3 border-t border-white/5">
                 <span className="text-white/80 text-[14px] font-normal">
-                    {programCount} Programme Found
+                    {programCount}{" "}
+                    {programCount === 1 ? "Programme" : "Programmes"} Found
                 </span>
 
                 <div className="hidden md:flex items-center gap-1 bg-transparent p-1 rounded-[4px] border border-[#949494]/40">
