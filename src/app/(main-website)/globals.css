@@ -160,6 +160,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
+
+.font-poppins {
+    font-family: var(--font-poppins), "Poppins", sans-serif !important;
+}
 body:after {
     content: "";
     position: fixed;
