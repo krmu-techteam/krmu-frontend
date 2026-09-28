@@ -222,7 +222,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden pt-20 sm:pt-24 md:pt-17 font-poppins">
+    <section className="relative w-full overflow-hidden pt-20 sm:pt-24 md:pt-0 font-poppins">
       {/* Hero Main Background Banner */}
       <div
         className="relative w-full bg-cover bg-no-repeat bg-[center_right] lg:bg-center min-h-[580px] sm:min-h-[640px] lg:min-h-[767px] flex items-stretch"
