@@ -371,7 +371,7 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
     } as HeroConfig,
     "bachelor-of-physiotherapy-bpt": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bachelor_of_physiotherapy_bpt_a61a61c1ec.jpg",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bachelor_of_physiotherapy_bpt_fa1bcf54b9.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
     "ba-hon-english": {

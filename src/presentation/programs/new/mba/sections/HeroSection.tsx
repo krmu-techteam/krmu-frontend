@@ -26,7 +26,7 @@ export const HeroSection = ({
     return (
         <section
             id="hero-section"
-            className="relative w-full bg-[radial-gradient(50%_50%_at_50%_50%,#024178_0%,#012D52_50%,#012D52_100%)] text-white pt-10 pb-0 sm:pt-24 md:pt-28 lg:pt-30 overflow-hidden flex flex-col justify-between min-h-[520px] sm:min-h-[600px] lg:min-h-[700px]"
+            className="relative w-full bg-[radial-gradient(50%_50%_at_50%_50%,#024178_0%,#012D52_50%,#012D52_100%)] text-white pt-14 pb-0 sm:pt-24 md:pt-28 lg:pt-30 overflow-hidden flex flex-col justify-between min-h-[520px] sm:min-h-[600px] lg:min-h-[700px]"
         >
             <div className="absolute lg:hidden top-0 h-[500px] w-[200px] sm:w-[260px] md:w-[300px] lg:w-[329px] left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-[11%] xl:right-[16.5%] 2xl:right-[24.5%] bottom-0 bg-[linear-gradient(0.98deg,#D9D9D900_1.07%,#DE000090_99.48%)]" />
             <div className="max-w-[1440px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 flex flex-col-reverse lg:flex-row items-start justify-between gap-8 lg:gap-8 py-8 sm:py-10 lg:py-20">

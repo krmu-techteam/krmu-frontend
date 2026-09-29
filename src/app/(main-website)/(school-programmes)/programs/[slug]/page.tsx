@@ -325,9 +325,9 @@ const page = async ({ params }: Props) => {
                         />
                     ))}
 
-                <ProgramSubNav />
+                {!isMbaSlug && <ProgramSubNav />}
 
-                {slug in HERO_CONFIGS && dreamcareerSection && (
+                {!isMbaSlug && slug in HERO_CONFIGS && dreamcareerSection && (
                     <CinematicRecruiterStrip
                         dreamcareerSection={dreamcareerSection}
                         logos={dreamcareerSection?.careerlogos}

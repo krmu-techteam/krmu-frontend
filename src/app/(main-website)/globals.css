@@ -15,10 +15,12 @@
 }
 
 @theme {
-    --font-inter: var(--font-inter), "Inter", sans-serif;
-    --font-fraunces: var(--font-fraunces), "Fraunces", serif;
+    --font-sans: var(--font-poppins), "Poppins", sans-serif;
+    --font-serif: var(--font-serif), "Playfair Display", serif;
     --font-poppins: var(--font-poppins), "Poppins", sans-serif;
     --font-playfair: var(--font-serif), "Playfair Display", serif;
+    --font-inter: var(--font-inter), "Inter", sans-serif;
+    --font-fraunces: var(--font-fraunces), "Fraunces", serif;
     --font-sofia:
         var(--font-sofia-sans-condensed), "Sofia Sans Condensed", sans-serif;
     --font-faustina: var(--font-faustina), "Faustina", serif;
@@ -31,6 +33,12 @@
     --color-university-blue: var(--university-blue);
 }
 
+@utility font-sans {
+    font-family: var(--font-poppins), "Poppins", sans-serif;
+}
+@utility font-serif {
+    font-family: var(--font-serif), "Playfair Display", serif;
+}
 @utility font-inter {
     font-family: var(--font-inter), "Inter", sans-serif;
 }
@@ -74,6 +82,13 @@
     --brand-research-button: #0f4673;
     --school-nav-navy: #003152;
     --school-nav-blue: #0e83d8;
+}
+
+html,
+body,
+p,
+span {
+    font-family: var(--font-poppins), "Poppins", sans-serif;
 }
 
 html,
@@ -2846,20 +2861,7 @@ body:before {
   } */
 
     .school-prog-font {
-        font-family:
-            system-ui,
-            -apple-system,
-            "Segoe UI",
-            Roboto,
-            "Helvetica Neue",
-            "Noto Sans",
-            "Liberation Sans",
-            Arial,
-            sans-serif,
-            "Apple Color Emoji",
-            "Segoe UI Emoji",
-            "Segoe UI Symbol",
-            "Noto Color Emoji";
+        font-family: var(--font-poppins), "Poppins", sans-serif;
     }
 
     .common-prog-container {
@@ -4648,7 +4650,26 @@ body:before {
         @apply border-border outline-ring/50;
     }
     body {
+        font-family: var(--font-poppins), "Poppins", sans-serif;
         @apply bg-background text-foreground;
+    }
+    p,
+    span {
+        font-family: var(--font-poppins), "Poppins", sans-serif;
+    }
+    h1 span,
+    h2 span,
+    h3 span,
+    h4 span,
+    h5 span,
+    h6 span,
+    .font-serif span,
+    .font-playfair span,
+    .font-inter span,
+    .font-fraunces span,
+    .font-sofia span,
+    .font-faustina span {
+        font-family: inherit;
     }
 }
 

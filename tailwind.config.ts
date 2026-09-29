@@ -11,10 +11,12 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-                inter: ["var(--font-inter)", "Inter", "sans-serif"],
-                fraunces: ["var(--font-fraunces)", "Fraunces", "serif"],
+                sans: ["var(--font-poppins)", "Poppins", "sans-serif"],
+                serif: ["var(--font-serif)", "Playfair Display", "serif"],
                 poppins: ["var(--font-poppins)", "Poppins", "sans-serif"],
                 playfair: ["var(--font-serif)", "Playfair Display", "serif"],
+                inter: ["var(--font-inter)", "Inter", "sans-serif"],
+                fraunces: ["var(--font-fraunces)", "Fraunces", "serif"],
                 sofia: [
                     "var(--font-sofia-sans-condensed)",
                     "Sofia Sans Condensed",

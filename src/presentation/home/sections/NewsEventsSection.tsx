@@ -145,7 +145,6 @@ export async function NewsEventsSection({
                                         <div className="flex-1 min-w-0 flex flex-col justify-center">
                                             <p className="text-white/60 text-[11px] md:text-[12px] font-poppins mb-1">
                                                 Published On:{" "}
-                                                <br className="hidden md:block" />
                                                 <span className="text-white/70">
                                                     {item.date}
                                                 </span>
