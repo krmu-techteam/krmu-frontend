@@ -30,7 +30,7 @@ const ResearchVcMessage: React.FC = () => {
                             className="object-contain"
                         />
                     </div>
-                    <div className="space-y-3.5 text-[#000000] font-poppins font-normal text-[15px] md:text-[16px] leading-[24px] tracking-normal text-justify">
+                    <div className="space-y-3.5 text-[#000000] font-poppins font-normal text-[15px] md:text-[15px] leading-[24px] tracking-normal text-justify">
                         <p>
                             At K.R. Mangalam University, sustainability is not
                             an initiative; it is a responsibility embedded in
@@ -97,11 +97,11 @@ const ResearchVcMessage: React.FC = () => {
             {/* Right Column: Vision, Mission & Objectives Stacked Cards */}
             <div className="flex-1 flex flex-col gap-6">
                 {/* Vision Card */}
-                <div className="rounded-[20px] border-[4px] border-[#E7C268] bg-transparent p-4 md:p-5">
+                <div className="rounded-[20px] border-[4px] border-[#E7C268] bg-transparent p-4 md:p-[20px]">
                     <h3 className="text-[22px] font-bold text-white font-serif mb-3">
                         Vision
                     </h3>
-                    <p className="text-white text-[15px] sm:text-[16px] leading-[24px] font-light text-justify">
+                    <p className="text-white text-[15px] sm:text-[15px] leading-[24px] font-light text-justify">
                         To emerge as a nationally impactful and globally engaged
                         centre of excellence that advances sustainable
                         development through interdisciplinary research,
@@ -113,7 +113,7 @@ const ResearchVcMessage: React.FC = () => {
                 </div>
 
                 {/* Mission Card */}
-                <div className="rounded-[20px] border-[4px] border-[#A5F6FF] bg-transparent p-4 md:p-5">
+                <div className="rounded-[20px] border-[4px] border-[#A5F6FF] bg-transparent p-4 md:p-[20px]">
                     <h3 className="text-[22px] font-bold text-white font-serif mb-4">
                         Mission
                     </h3>
@@ -121,7 +121,7 @@ const ResearchVcMessage: React.FC = () => {
                         {missionPoints.map((point, index) => (
                             <li
                                 key={index}
-                                className="flex items-start gap-3 text-[14px] md:text-[16px] text-white font-light"
+                                className="flex items-start gap-3 text-[14px] md:text-[15px] text-white font-light"
                             >
                                 <ArrowRightCircle className="w-5 h-5 text-white shrink-0 mt-0.5" />
                                 <span className="leading-snug">{point}</span>
@@ -131,7 +131,7 @@ const ResearchVcMessage: React.FC = () => {
                 </div>
 
                 {/* Objectives Card */}
-                <div className="rounded-[20px] border-[4px] border-[#FFA7E8] bg-transparent p-4 md:p-5">
+                <div className="rounded-[20px] border-[4px] border-[#FFA7E8] bg-transparent p-4 md:p-[20px]">
                     <h3 className="text-[22px] font-bold text-white font-serif mb-4">
                         Objectives
                     </h3>
@@ -139,7 +139,7 @@ const ResearchVcMessage: React.FC = () => {
                         {objectivePoints.map((point, index) => (
                             <li
                                 key={index}
-                                className="flex items-start gap-3 text-[14px] md:text-[16px] text-white font-light"
+                                className="flex items-start gap-3 text-[14px] md:text-[15px] text-white font-light"
                             >
                                 <ArrowRightCircle className="w-5 h-5 text-white shrink-0 mt-0.5" />
                                 <span className="leading-snug">{point}</span>
