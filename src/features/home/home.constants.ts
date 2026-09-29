@@ -46,14 +46,14 @@ export const JOURNEY_VIDEOS: JourneyVideoType[] = [
     },
     {
         id: 2,
-        title: "How Global Exposure is Empowering Indian Students Ft. British Council India",
+        title: "International Students Share Their KRMU Experience | Vasudha Global Connect 2026",
         thumbnail: "/modules/home/journey/j2.png",
         duration: "7:30",
         link: "https://www.youtube.com/watch?v=F3PmP0EAuaQ",
     },
     {
         id: 3,
-        title: "Big Move! EY India Partners with K.R. Mangalam University",
+        title: "Inside KRMU's Robotics Lab 🤖 | Student Innovations, Projects & Future Tech",
         thumbnail: "/modules/home/journey/j3.png",
         duration: "2:35",
         link: "https://www.youtube.com/watch?v=iLzhza28QnM&t=12s",

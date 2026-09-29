@@ -230,11 +230,6 @@ const SdgResearchDomains: React.FC = () => {
                                                                             {row.fy24_25 ||
                                                                                 ""}
                                                                         </td>
-                                                                        <td className="py-3.5 px-3.5 sm:px-4 font-normal text-[#333333] whitespace-nowrap">
-                                                                            {
-                                                                                row.trend
-                                                                            }
-                                                                        </td>
                                                                         <td
                                                                             className={`py-3.5 px-3.5 sm:px-4 text-left whitespace-nowrap ${
                                                                                 isNum(
@@ -246,6 +241,11 @@ const SdgResearchDomains: React.FC = () => {
                                                                         >
                                                                             {row.target25_26 ||
                                                                                 ""}
+                                                                        </td>
+                                                                        <td className="py-3.5 px-3.5 sm:px-4 font-normal text-[#333333] whitespace-nowrap">
+                                                                            {
+                                                                                row.trend
+                                                                            }
                                                                         </td>
                                                                     </tr>
                                                                 );

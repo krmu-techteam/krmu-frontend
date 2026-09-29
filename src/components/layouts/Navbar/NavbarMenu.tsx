@@ -414,28 +414,25 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             </ul>
                                         </div>
 
-                                        {/* Handbook and Brochure Buttons */}
+                                        {/* Handbook and Prospectus Buttons */}
                                         <div className="flex flex-wrap items-center gap-4 mt-8">
                                             <Link
                                                 href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="relative overflow-hidden group w-fit border border-[#fff]/90 hover:border-white bg-[#071624]/50 text-white/90 hover:text-white font-poppins font-normal py-3 px-4 hover:bg-white/5 rounded-[2px] text-[14px] flex items-center justify-center gap-1.5 transition-all duration-300  text-center tracking-wide whitespace-nowrap active:scale-[0.98] cursor-pointer"
+                                                className="relative overflow-hidden group w-fit border border-[#fff]/90 hover:border-white bg-[#071624]/50 text-white/90 hover:text-white font-poppins font-normal py-3 px-4 hover:bg-white/5 rounded-[2px] text-[14px] flex items-center justify-center gap-1.5 transition-all duration-300 text-center tracking-wide whitespace-nowrap active:scale-[0.98] cursor-pointer"
                                             >
                                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
                                                 <span className="relative z-10">
                                                     University Student Handbook
                                                 </span>
                                             </Link>
-                                            <Link
-                                                href="#"
-                                                className="relative hover:bg-white/5 overflow-hidden group w-fit border border-[#fff]/90 hover:border-white bg-[#071624]/50 text-white/90 hover:text-white font-poppins font-normal py-3 px-4 rounded-[2px] text-[14px] flex items-center justify-center gap-1.5 transition-all duration-300  text-center tracking-wide whitespace-nowrap active:scale-[0.98] cursor-pointer"
-                                            >
-                                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
-                                                <span className="relative z-10">
-                                                    Download Brochure
-                                                </span>
-                                            </Link>
+                                            <CommonLeadPopup
+                                                buttonClassName="border w-fit border-[#3C7ED4] hover:border-[#3C7ED4] bg-[#071624]/60 hover:bg-[#0c1e30] text-white font-poppins font-normal py-3 px-4 rounded-[2px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center uppercase cursor-pointer whitespace-nowrap"
+                                                buttonText="DOWNLOAD PROSPECTUS"
+                                                redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
+                                                form_name="Download Prospectus"
+                                            />
                                         </div>
                                     </div>
                                 </div>

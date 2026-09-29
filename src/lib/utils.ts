@@ -55,17 +55,24 @@ export function formatInternalLink(url: string | null | undefined): string {
                 "techapi.",
                 "api.",
                 "erp.",
+                "ideas.",
+                "library.",
             ];
 
             const isExternalSubdomain = externalSubdomains.some((sub) =>
                 hostname.startsWith(sub)
             );
 
-            // Check if domain belongs to main KRMU site (www, beta, root, localhost)
+            // Only the main website domains should be converted to relative internal paths
+            const internalDomains = [
+                "krmangalam.edu.in",
+                "www.krmangalam.edu.in",
+                "beta.krmangalam.edu.in",
+            ];
+
             const isInternalDomain =
                 !isExternalSubdomain &&
-                (hostname === "krmangalam.edu.in" ||
-                    hostname.endsWith(".krmangalam.edu.in") ||
+                (internalDomains.includes(hostname) ||
                     hostname === "localhost" ||
                     hostname === "127.0.0.1" ||
                     hostname.endsWith(".localhost"));

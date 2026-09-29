@@ -246,7 +246,7 @@ const JobForm = ({ jobId }: Props) => {
             </h2>
 
             {fields.map((field) => (
-                <div className="mb-5" key={field.name}>
+                <div className="mb-5 " key={field.name}>
                     <label className="block font-medium mb-2">
                         {field.label}{" "}
                         {field.name === "awsm_text_7" ? (
@@ -261,7 +261,7 @@ const JobForm = ({ jobId }: Props) => {
                         name={field.name}
                         value={(formData as any)[field.name]}
                         onChange={handleChange}
-                        className="w-full border rounded px-4 h-[48px]"
+                        className="w-full border rounded px-4 h-[48px] border-white"
                     />
 
                     {errors[field.name] && (
@@ -279,7 +279,7 @@ const JobForm = ({ jobId }: Props) => {
                 </label>
 
                 <div
-                    className="p-4 border-dashed border cursor-pointer rounded text-center hover:bg-gray-50"
+                    className="p-4 border-dashed border border-white/80 cursor-pointer rounded text-center"
                     onClick={() => fileInputRef.current?.click()}
                 >
                     {file ? file.name : "Click to upload (PDF, DOC, DOCX)"}

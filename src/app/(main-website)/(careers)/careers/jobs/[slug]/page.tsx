@@ -57,7 +57,7 @@ const page = async ({ params }: Props) => {
         ?.replace(/\b\w/g, (c) => c.toUpperCase()); // Full Time
 
     return (
-        <section className="py-[140px] px-4">
+        <section className="py-[140px] text-white px-4">
             <div
                 className={`${
                     jobId === 53831 ? "max-w-[800px]" : "max-w-[1600px]"
