@@ -1,6 +1,6 @@
 const DesignBeyondVision = () => {
   return (
-    <section className="py-10 sm:py-12 lg:py-16">
+    <section className="py-10 sm:py-12 lg:py-16" id="soad-conf-about">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-5 sm:px-8 lg:flex-row lg:gap-0 lg:px-6">
         {/* Heading */}
         <div className="w-full lg:w-[42%]">
@@ -14,8 +14,8 @@ const DesignBeyondVision = () => {
         </div>
 
         {/* Content */}
-        <div className="w-full space-y-5 text-base font-medium leading-relaxed text-[#59544d] sm:text-lg lg:w-[58%] lg:pl-20 lg:text-base">
-          <p>
+        <div className="w-full space-y-5 text-base font-medium leading-relaxed text-[#59544d] sm:text-lg lg:w-[58%] lg:pl-20 lg:text-base font-ibm-plex-serif">
+          <p className="font-ibm-plex-serif">
             The world is entering an era of rapid transformation shaped by
             climate uncertainty, technological disruption, artificial
             intelligence, resource scarcity, demographic shifts, and evolving

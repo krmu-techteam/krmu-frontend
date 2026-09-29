@@ -48,7 +48,7 @@ const FeeTable = ({
 
 const Registration = () => {
   return (
-    <section className="w-full bg-[#ebe8e0] py-10 sm:py-12 md:py-16 lg:py-[88px]">
+    <section className="w-full bg-[#ebe8e0] py-10 sm:py-12 md:py-16 lg:py-[88px]" id="soad-conf-reg">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-6">
         {/* Header */}
         <div className="mb-8 sm:mb-10">

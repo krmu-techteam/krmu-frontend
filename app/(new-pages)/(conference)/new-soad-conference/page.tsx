@@ -15,19 +15,21 @@ import ThematicTracks from "./components/thematicTracks";
 const page = () => {
   return (
     <>
-      <HeroSection />
-      <ConferenceMenus />
-      <DesignBeyondVision />
-      <OurNetwork />
-      <CampusVenueGallery />
-      <ThematicTracks />
-      <ImportantDates />
-      <SubmissionGuidelines />
-      <Registration />
-      <ConferenceCommittee />
-      <PastAdvisoryBoard />
-      <CallForCollaboration />
-      <ContactUs />
+      <main className="font-poppins">
+        <HeroSection />
+        <ConferenceMenus />
+        <DesignBeyondVision />
+        <OurNetwork />
+        <CampusVenueGallery />
+        <ThematicTracks />
+        <ImportantDates />
+        <SubmissionGuidelines />
+        <Registration />
+        <ConferenceCommittee />
+        <PastAdvisoryBoard />
+        <CallForCollaboration />
+        <ContactUs />
+      </main>
     </>
   );
 };

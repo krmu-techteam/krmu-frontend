@@ -2,7 +2,7 @@ import { thematicTracks } from "../constant";
 
 const ThematicTracks = () => {
   return (
-    <section className="w-full bg-[#f5f2eb] py-10 sm:py-12 md:py-16 lg:py-20">
+    <section className="w-full bg-[#f5f2eb] py-10 sm:py-12 md:py-16 lg:py-20" id="soad-conf-tracks">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-6">
         {/* Heading */}
         <div className="mb-8 sm:mb-10 md:mb-12">

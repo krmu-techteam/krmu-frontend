@@ -15,7 +15,7 @@ const contactPeople = [
 
 const ContactUs = () => {
   return (
-    <section className="w-full border-b-[5px] border-[#111d33] bg-white py-10 sm:py-12 md:border-b-[7px] md:py-16 lg:py-[68px]">
+    <section className="w-full border-b-[5px] border-[#111d33] bg-white py-10 sm:py-12 md:border-b-[7px] md:py-16 lg:py-[68px]" id="soad-conf-contact-us">
       <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[101px]">
         {/* Header */}
         <div className="mb-7 sm:mb-8">

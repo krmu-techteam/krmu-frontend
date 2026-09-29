@@ -3,7 +3,10 @@ import CommitteeMemberCard from "./common/CommitteeMemberCard";
 
 const PastAdvisoryBoard = () => {
   return (
-    <section className="w-full bg-[#f5f2eb] py-10 sm:py-12 md:py-16 lg:py-20">
+    <section
+      className="w-full bg-[#f5f2eb] py-10 sm:py-12 md:py-16 lg:py-20"
+      id="soad-conf-board"
+    >
       <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[88px]">
         {/* Heading */}
         <div className="mb-7 sm:mb-8">

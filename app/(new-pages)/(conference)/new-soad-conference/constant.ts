@@ -1,43 +1,49 @@
 export const networkLogos = [
   {
-    src: "/images/conferences/soad-conference/logos/coa.jpg",
-    alt: "Council of Architecture",
+    src: "https://krmangalam.edu.in/images/conferences/soad-conference/logos/city-of-glasgow-college.png",
+    alt: "City of Glasgow College",
     width: 150,
     height: 100,
   },
   {
-    src: "/images/conferences/soad-conference/logos/iia-haryana-chapter.png",
-    alt: "Indian Institute of Architects - Haryana Chapter",
+    src: "https://krmangalam.edu.in/images/conferences/soad-conference/logos/iioa.png",
+    alt: "Indian Institute of Architects",
     width: 90,
     height: 100,
   },
   {
-    src: "/images/conferences/soad-conference/logos/iia-haryana-chapter.png",
-    alt: "Indian Institute of Architects - Haryana Chapter",
+    src: "https://krmangalam.edu.in/images/conferences/soad-conference/logos/coa.svg",
+    alt: "Council of Architecture, India",
     width: 90,
     height: 100,
   },
   {
-    src: "/images/conferences/soad-conference/logos/iia-haryana-chapter.png",
-    alt: "Indian Institute of Architects - Haryana Chapter",
+    src: "https://krmangalam.edu.in/images/conferences/soad-conference/logos/university-of-florida.webp",
+    alt: "University of Florida",
+    width: 300,
+    height: 150,
+  },
+  {
+    src: "https://krmangalam.edu.in/images/conferences/soad-conference/logos/dada.jpeg",
+    alt: "Dada",
     width: 90,
     height: 100,
   },
   {
-    src: "/images/conferences/soad-conference/logos/iia-haryana-chapter.png",
-    alt: "Indian Institute of Architects - Haryana Chapter",
+    src: "https://krmangalam.edu.in/images/conferences/soad-conference/logos/iiid.png",
+    alt: "Indian Institute of Interior Designers",
     width: 90,
     height: 100,
   },
   {
-    src: "/images/conferences/soad-conference/logos/iia-haryana-chapter.png",
-    alt: "Indian Institute of Architects - Haryana Chapter",
+    src: "https://krmangalam.edu.in/images/conferences/soad-conference/logos/knowledge-center.png",
+    alt: "Knowledge Center",
     width: 90,
     height: 100,
   },
   {
-    src: "/images/conferences/soad-conference/logos/iia-haryana-chapter.png",
-    alt: "Indian Institute of Architects - Haryana Chapter",
+    src: "https://krmangalam.edu.in/images/conferences/soad-conference/logos/ishrae-gurugram-chapter.png",
+    alt: "ISHRAE Gurugram Chapter",
     width: 90,
     height: 100,
   },
@@ -306,7 +312,8 @@ export const advisoryBoardMembers = [
     image:
       "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/saran.jpg",
     name: "Saran Bhatia",
-    designation: "Initiator Lifeline rahProfessor Architect Urban , Interior Designer",
+    designation:
+      "Initiator Lifeline rahProfessor Architect Urban , Interior Designer",
   },
   {
     image:

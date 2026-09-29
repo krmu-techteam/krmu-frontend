@@ -2,7 +2,7 @@ import { importantDates } from "../constant";
 
 const ImportantDates = () => {
   return (
-    <section className="w-full bg-[#111d33] py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+    <section className="w-full bg-[#111d33] py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24" id="soad-conf-date">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-6">
         {/* Heading */}
         <div className="mb-8 sm:mb-9 md:mb-10">
