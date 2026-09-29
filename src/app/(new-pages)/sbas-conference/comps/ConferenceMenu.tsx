@@ -34,17 +34,17 @@ export const confMenus: confMenusType[] = [
 
 const ConferenceMenu = () => {
     return (
-        <nav className="bg-[#19241F] px-5 py-4 sm:py-5 sticky top-10 xl:top-[76px]">
+        <nav className="bg-[#19241F] font-poppins px-5 py-3 sm:py-4 sticky top-10 xl:top-[85px]">
             <ul
                 className="
-          max-w-[484px] mx-auto
+          max-w-[1440px] mx-auto
           flex items-center
           justify-start sm:justify-center
-          gap-5 sm:gap-7
+          gap-10 sm:gap-12
           overflow-x-auto
           whitespace-nowrap
           scrollbar-hide
-          text-sm
+          text-[15px]
         "
             >
                 {confMenus.map((item) => (
