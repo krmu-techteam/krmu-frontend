@@ -15,7 +15,7 @@ const OurNetwork = () => {
             Collaborations from the Past
           </h2>
 
-          <p className="max-w-2xl text-sm font-medium leading-relaxed text-[#59544d] sm:text-base">
+          <p className="max-w-2xl text-sm font-medium leading-relaxed text-[#59544d] sm:text-base font-serif">
             Institutions and organizations that partnered with DESIGN 2030 and
             earlier editions of the conference series.
           </p>

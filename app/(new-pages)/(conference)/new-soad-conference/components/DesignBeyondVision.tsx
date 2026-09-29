@@ -14,8 +14,8 @@ const DesignBeyondVision = () => {
         </div>
 
         {/* Content */}
-        <div className="w-full space-y-5 text-base font-medium leading-relaxed text-[#59544d] sm:text-lg lg:w-[58%] lg:pl-20 lg:text-base font-ibm-plex-serif">
-          <p className="font-ibm-plex-serif">
+        <div className="w-full space-y-5 text-base font-medium leading-relaxed text-[#59544d] sm:text-lg lg:w-[58%] lg:pl-20 lg:text-base font-serif">
+          <p>
             The world is entering an era of rapid transformation shaped by
             climate uncertainty, technological disruption, artificial
             intelligence, resource scarcity, demographic shifts, and evolving

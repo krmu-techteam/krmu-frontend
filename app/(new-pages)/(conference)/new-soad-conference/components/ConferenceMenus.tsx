@@ -3,8 +3,8 @@ import Link from "next/link";
 const ConferenceMenus = () => {
   return (
     <section className="bg-[#111c31] px-5 py-3 sm:py-4 sticky top-10 xl:top-[76px] z-10">
-      <div className="mx-auto max-w-5xl">
-        <ul className="flex items-center justify-start gap-7 overflow-x-auto whitespace-nowrap text-center text-base capitalize text-white scrollbar-hide sm:gap-8 sm:text-base md:justify-between md:gap-4 pb-1 font-serif">
+      <div className="mx-auto max-w-3xl">
+        <ul className="flex items-center justify-start gap-2 overflow-x-auto whitespace-nowrap text-center text-base capitalize text-white scrollbar-hide sm:text-base md:justify-between md:gap-2 pb-1 font-serif">
           <li className="shrink-0">
             <Link
               href="#soad-conf-about"
@@ -14,7 +14,7 @@ const ConferenceMenus = () => {
             </Link>
           </li>
 
-          <li className="shrink-0"> 
+          <li className="shrink-0">
             <Link
               href="#soad-conf-tracks"
               className="transition-opacity hover:opacity-70 font-serif"
