@@ -16,12 +16,12 @@ const PHDScholar = ({ scholarShipsData }: Props) => {
     return (
         <section
             id="scholar-categories"
-            className="w-full bg-[#F7F2E7] pt-8 sm:pt-10 lg:pt-12 pb-16 sm:pb-20 lg:pb-24 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px] scroll-mt-24"
+            className="w-full bg-[#F7F2E7] pt-12 lg:pt-12 pb-12 md:pb-20  px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px] scroll-mt-24"
         >
             <div className="max-w-[1440px] mx-auto w-full">
                 {/* Title */}
                 <h2
-                    className={`${newsreader.className} text-[36px] sm:text-[44px] lg:text-[48px] font-medium text-[#14233D] tracking-[-0.02em] leading-tight mb-8 sm:mb-10`}
+                    className={`${newsreader.className} text-[36px] sm:text-[44px] lg:text-[48px] font-medium text-[#14233D] tracking-[-0.02em] leading-tight mb-6 md:mb-10`}
                 >
                     Scholar categories
                 </h2>
@@ -56,10 +56,10 @@ const PHDScholar = ({ scholarShipsData }: Props) => {
 
                     {/* Column 3: TYPE - C */}
                     <div className="p-6 sm:p-8 lg:p-10 flex flex-col">
-                        <span className="text-[#B08233] uppercase text-[11px] sm:text-[12px] font-semibold tracking-[0.15em] mb-3">
+                        <span className="text-[#B08233] uppercase text-[11px] sm:text-[12px] font-semibold mb-3">
                             TYPE — C
                         </span>
-                        <h3 className="text-[#14233D] font-bold text-[20px] sm:text-[22px] lg:text-[24px] leading-tight mb-4">
+                        <h3 className="text-[#14233D] font-bold text-[20px] sm:text-[22px] lg:text-[24px] mb-4">
                             {scholarShipsData?.title3}
                         </h3>
                         <p className="text-[#14233D] text-[14px] sm:text-[15px] font-normal">

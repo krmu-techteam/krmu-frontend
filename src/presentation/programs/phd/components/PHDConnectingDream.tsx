@@ -21,9 +21,9 @@ const PHDConnectingDream = ({ connectingTalent }: Props) => {
                 background:
                     "radial-gradient(38.46% 38.46% at 50% 50%, #1D2F4C 0%, #080E1B 100%)",
             }}
-            className="w-full text-white pt-[64px] pb-[56px] px-6 sm:px-10 lg:px-[77px] overflow-hidden"
+            className="w-full text-white pt-12 pb-12 md:pb-20 px-6 sm:px-10 lg:px-[77px] overflow-hidden"
         >
-            <div className="max-w-[1440px] mx-auto w-full flex flex-col justify-between gap-[44px]">
+            <div className="max-w-[1440px] mx-auto w-full flex flex-col justify-between gap-6 md:gap-[44px]">
                 {/* 3 STATS ROW WITH GOLDEN VERTICAL GRADIENT DIVIDERS */}
                 {dreamcounter && dreamcounter.length > 0 && (
                     <div className="flex flex-col md:flex-row items-center justify-between">
@@ -63,11 +63,11 @@ const PHDConnectingDream = ({ connectingTalent }: Props) => {
                 />
 
                 {/* RECRUITMENT PARTNERS */}
-                <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-center -mt-3">
+                <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-center mt-6 md:-mt-3">
                     <span className="text-[#C29C4B] uppercase text-[11px] sm:text-[12px] font-semibold tracking-[0.18em]">
                         RECRUITMENT PARTNERS
                     </span>
-                    <span className="text-[#BFC7D6] text-[12px] sm:text-[13px] font-normal tracking-wide">
+                    <span className="text-[#BFC7D6]  text-[12px] sm:text-[13px] font-normal tracking-wide">
                         Apple &nbsp;·&nbsp; Google &nbsp;·&nbsp; NASA
                         &nbsp;·&nbsp; Tesla &nbsp;·&nbsp; Microsoft
                         &nbsp;·&nbsp; Ford Motor Company

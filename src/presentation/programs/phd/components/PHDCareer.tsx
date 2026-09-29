@@ -42,7 +42,7 @@ const PHDCareer = ({ careerOptions }: Props) => {
     return (
         <section
             id="career"
-            className="w-full bg-[#F7F2E7] py-16 sm:py-20 lg:py-24 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px] scroll-mt-24"
+            className="w-full bg-[#F7F2E7] py-12 md:py-20 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px] scroll-mt-24"
         >
             <div className="max-w-[1440px] mx-auto w-full">
                 {/* SUBTITLE */}
@@ -52,7 +52,7 @@ const PHDCareer = ({ careerOptions }: Props) => {
 
                 {/* HEADING */}
                 <h2
-                    className={`${newsreader.className} text-[36px] sm:text-[44px] lg:text-[48px] font-medium text-[#14233D] tracking-[-0.02em] leading-tight mb-8 sm:mb-10`}
+                    className={`${newsreader.className} text-[36px] sm:text-[44px] lg:text-[48px] font-medium text-[#14233D] tracking-[-0.02em] leading-tight mb-6 md:mb-10`}
                 >
                     Career options
                 </h2>
@@ -73,10 +73,10 @@ const PHDCareer = ({ careerOptions }: Props) => {
                                     <div className="w-[44px] h-[44px] rounded-[10px] bg-[#F2EDE0] flex items-center justify-center mb-5 shrink-0">
                                         <Briefcase className="w-[20px] h-[20px] text-[#B08233]" />
                                     </div>
-                                    <h3 className="font-bold text-[#14233D] text-[15px] sm:text-[16px] leading-snug mb-3 break-words [overflow-wrap:anywhere] min-h-[44px] sm:min-h-[48px]">
+                                    <h3 className="font-bold text-[#14233D] text-[16px] leading-snug mb-3 break-words [overflow-wrap:anywhere] min-h-[24px] md:min-h-[48px]">
                                         {formattedTitle}
                                     </h3>
-                                    <p className="text-[#59616B] text-[13px] sm:text-[13.5px]font-normal break-words">
+                                    <p className="text-[#59616B] text-[14px] md:text-[13.5px]font-normal break-words">
                                         {item.listlink}
                                     </p>
                                 </div>
@@ -89,7 +89,7 @@ const PHDCareer = ({ careerOptions }: Props) => {
                 {testimonials.length > 0 && (
                     <>
                         <h3
-                            className={`${newsreader.className} text-[32px] sm:text-[38px] lg:text-[44px] font-medium text-[#14233D] tracking-[-0.02em] leading-tight mt-16 sm:mt-20 mb-8`}
+                            className={`${newsreader.className} text-[32px] sm:text-[38px] lg:text-[44px] font-medium text-[#14233D] tracking-[-0.02em] leading-tight mt-8 md:mt-20 mb-8`}
                         >
                             {careerOptions?.testimonialheading ||
                                 "What our Students says:"}
@@ -99,17 +99,25 @@ const PHDCareer = ({ careerOptions }: Props) => {
                             {testimonials.map((item, idx) => (
                                 <div
                                     key={item.id || idx}
-                                    className="bg-[#FFFCF6] border border-[#CCCCCC] p-6 sm:p-8 flex items-start gap-4 sm:gap-5"
+                                    className="bg-[#FFFCF6] border border-[#CCCCCC] p-5 sm:p-8"
                                 >
-                                    <StudentAvatar index={idx} />
-                                    <div className="flex-1">
-                                        <h4 className="font-bold text-[#14233D] text-[16px] sm:text-[17px] mb-2 leading-tight">
-                                            {item.countertext}
-                                        </h4>
-                                        <p className="text-[#14233D] text-[13px] sm:text-[14px] font-normal">
-                                            {item.countercontent}
-                                        </p>
+                                    {/* Header: Avatar + Student Name (side-by-side on mobile, avatar on left of content block on sm+) */}
+                                    <div className="flex items-center sm:items-start gap-4 sm:gap-5">
+                                        <StudentAvatar index={idx} />
+                                        <div className="flex-1">
+                                            <h4 className="font-bold text-[#14233D] text-[16px] sm:text-[17px] sm:mb-2 leading-tight">
+                                                {item.countertext}
+                                            </h4>
+                                            {/* Paragraph on sm+ screens */}
+                                            <p className="hidden sm:block text-[#14233D] text-[13px] md:text-[14px] font-normal leading-relaxed">
+                                                {item.countercontent}
+                                            </p>
+                                        </div>
                                     </div>
+                                    {/* Paragraph on mobile screens (full-width below avatar and name) */}
+                                    <p className="sm:hidden text-[#14233D] text-[13.5px] font-normal leading-relaxed mt-3.5">
+                                        {item.countercontent}
+                                    </p>
                                 </div>
                             ))}
                         </div>

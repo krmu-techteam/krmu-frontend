@@ -22,7 +22,7 @@ const PHDProgrammeHighlight = ({ highlightContent }: Props) => {
     return (
         <section
             id="programme-highlight"
-            className="w-full bg-[#F4F6F9] pt-0 pb-16 sm:pb-20 lg:pb-24 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px]"
+            className="w-full bg-[#F4F6F9] pt-0 pb-12 sm:pb-20  px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px]"
         >
             <div className="max-w-[1440px] mx-auto w-full">
                 {/* DARK CARD CONTAINER (#14233D) */}
@@ -39,7 +39,7 @@ const PHDProgrammeHighlight = ({ highlightContent }: Props) => {
                     </div>
 
                     {/* RIGHT SIDE CONTENT */}
-                    <div className="w-full lg:flex-1 bg-[#14233D] p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
+                    <div className="w-full lg:flex-1 bg-[#14233D] p-4 md:p-8 lg:p-10 flex flex-col justify-center">
                         <div className="w-full flex flex-col gap-[14px]">
                             {/* SUBTITLE */}
                             <span className="text-[#C29C4B] uppercase text-[11px] sm:text-[12px] font-semibold tracking-[0.2em] block">
@@ -48,7 +48,7 @@ const PHDProgrammeHighlight = ({ highlightContent }: Props) => {
 
                             {/* TITLE */}
                             <h3
-                                className={`${newsreader.className} text-[32px] sm:text-[38px] lg:text-[40px] font-medium text-white tracking-[-0.02em] leading-tight`}
+                                className={`${newsreader.className} text-[30px] md:text-[38px] lg:text-[40px] font-medium text-white tracking-[-0.02em] leading-tight`}
                             >
                                 {highlightContent?.heading ||
                                     "Program Highlight"}
@@ -61,7 +61,7 @@ const PHDProgrammeHighlight = ({ highlightContent }: Props) => {
                                         content={highlightContent.phdcontent}
                                         blocks={{
                                             paragraph: ({ children }) => (
-                                                <p className="text-[#CBD5E1] text-[13px] sm:text-[14px] leading-relaxed mb-3 last:mb-0">
+                                                <p className="text-[#CBD5E1] text-[13px] sm:text-[14px] leading-relaxed mb-0 md:mb-3 last:mb-0">
                                                     {children}
                                                 </p>
                                             ),

@@ -123,16 +123,16 @@ const PHDAdmission = ({ title1, title2, desc1, desc2 }: Props) => {
     return (
         <section
             id="admission-process"
-            className="w-full bg-[#14233D] py-14 sm:py-16 lg:py-20 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px] scroll-mt-24"
+            className="w-full bg-[#14233D] py-12 md:py-16 lg:py-20 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px] scroll-mt-24"
         >
             <div className="max-w-[1440px] mx-auto w-full">
                 <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 sm:gap-10 lg:gap-14 xl:gap-16">
                     {/* LEFT CARD: ADMISSION PROCESS (#D3E1EA) */}
-                    <div className="w-full lg:w-[48%] xl:w-[46%] shrink-0 bg-[#D3E1EA] rounded-[10px] sm:rounded-[10px] p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-center">
+                    <div className="w-full lg:w-[48%] xl:w-[46%] shrink-0 bg-[#D3E1EA] rounded-[10px] sm:rounded-[10px] p-5 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-center">
                         {/* TITLE 1 */}
                         {normalizedTitle1 && normalizedTitle1.length > 0 && (
                             <div
-                                className={`${newsreader.className} text-[30px] sm:text-[36px] lg:text-[40px] font-medium text-[#14233D] tracking-[-0.01em] leading-tight mb-5 sm:mb-6 whitespace-normal [&_p]:text-[#14233D] [&_h1]:text-[#14233D] [&_h2]:text-[#14233D] [&_h3]:text-[#14233D]`}
+                                className={`${newsreader.className} text-[30px] sm:text-[36px] lg:text-[40px] font-medium text-[#14233D] tracking-[-0.01em] leading-tight mb-4 md:mb-6 whitespace-normal [&_p]:text-[#14233D] [&_h1]:text-[#14233D] [&_h2]:text-[#14233D] [&_h3]:text-[#14233D]`}
                             >
                                 <BlocksRenderer content={normalizedTitle1} />
                             </div>

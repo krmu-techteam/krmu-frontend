@@ -55,7 +55,7 @@ const PHDPursue = ({ pursueContent }: Props) => {
     return (
         <section
             id="who-should-pursue"
-            className="w-full bg-[#F7F2E7] py-14 sm:py-16 lg:py-20 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px] scroll-mt-24"
+            className="w-full bg-[#F7F2E7] py-12 md:py-16 lg:py-20 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px] scroll-mt-24"
         >
             <div className="max-w-[1240px] mx-auto w-full">
                 {/* ITEMS-CENTER: Vertically centered layout */}

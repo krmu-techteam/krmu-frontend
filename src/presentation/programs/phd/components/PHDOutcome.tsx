@@ -23,7 +23,7 @@ const PHDOutcome = ({ phdoutcomecontent }: Props) => {
     return (
         <section
             id="program-outcome"
-            className="w-full bg-[#F4F6F9] pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px] scroll-mt-24"
+            className="w-full bg-[#F4F6F9] pt-12 md:pt-20  pb-12 sm:pb-16 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px] scroll-mt-24"
         >
             <div className="max-w-[1440px] mx-auto w-full">
                 {/* SUBTITLE */}
@@ -33,7 +33,7 @@ const PHDOutcome = ({ phdoutcomecontent }: Props) => {
 
                 {/* HEADING */}
                 <h2
-                    className={`${newsreader.className} text-[36px] sm:text-[44px] lg:text-[48px] font-medium text-[#14233D] tracking-[-0.02em] leading-tight mb-8 sm:mb-10`}
+                    className={`${newsreader.className} text-[32px] md:text-[44px] lg:text-[48px] font-medium text-[#14233D] md:tracking-[-0.02em] md:leading-tight mb-6 md:mb-10`}
                 >
                     {phdoutcomecontent.title || "Programme outcomes"}
                 </h2>
@@ -57,7 +57,7 @@ const PHDOutcome = ({ phdoutcomecontent }: Props) => {
                             return (
                                 <div
                                     key={item.id || idx}
-                                    className="bg-white rounded-[16px] pt-[32px] pr-[28px] pb-[32px] pl-[28px] flex flex-col justify-start gap-[14px] min-h-[319px] shadow-[0px_8px_24px_0px_#14233D14] border border-[#E5E8F0]"
+                                    className="bg-white rounded-[16px] p-6 md:p-8 flex flex-col justify-start gap-[14px] min-h-auto md:min-h-[319px] shadow-[0px_8px_24px_0px_#14233D14] border border-[#E5E8F0]"
                                 >
                                     {/* NUMBER BADGE (01, 02, 03) */}
                                     <div className="w-10 h-10 rounded-full bg-[#14233D] text-white font-bold flex items-center justify-center text-[13px] sm:text-[14px] shrink-0">

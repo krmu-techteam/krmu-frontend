@@ -38,13 +38,13 @@ const PHDTestimonialsAcc = ({ faqTitle, faqs }: Props) => {
             <div className="max-w-[1050px] mx-auto w-full">
                 {/* SECTION TITLE */}
                 <h2
-                    className={`${newsreader.className} text-[36px] sm:text-[44px] lg:text-[50px] font-medium text-[#14233D] tracking-[-0.02em] leading-tight text-center mb-12 sm:mb-16`}
+                    className={`${newsreader.className} text-[34px] md:text-[44px] lg:text-[50px] font-medium text-[#14233D] tracking-[-0.02em] leading-tight text-center mb-12 sm:mb-16`}
                 >
                     {displayTitle}
                 </h2>
 
                 {/* ACCORDION LIST */}
-                <div className="w-full border-t border-black">
+                <div className="w-full border-t-0 lg:border-t border-black">
                     {faqs.map((faq, index) => {
                         const isOpen = openIndex === index;
                         const num = String(index + 1).padStart(2, "0");
@@ -52,7 +52,7 @@ const PHDTestimonialsAcc = ({ faqTitle, faqs }: Props) => {
                         return (
                             <div
                                 key={faq.id || index}
-                                className="border-b border-black py-6 sm:py-7 transition-colors"
+                                className="border-b border-black last:border-b-0 lg:last:border-b py-6 sm:py-7 transition-colors"
                             >
                                 <button
                                     type="button"
@@ -60,15 +60,15 @@ const PHDTestimonialsAcc = ({ faqTitle, faqs }: Props) => {
                                     className="w-full flex items-start justify-between gap-4 sm:gap-6 text-left cursor-pointer group"
                                     aria-expanded={isOpen}
                                 >
-                                    <div className="flex items-start gap-5 sm:gap-8 flex-1">
+                                    <div className="flex items-start gap-3 sm:gap-8 flex-1">
                                         {/* NUMBER BADGE (01, 02, etc.) */}
                                         <span className="text-[22px] sm:text-[26px] font-bold text-[#14233D] shrink-0 w-8 sm:w-10 leading-none pt-0.5 select-none">
                                             {num}
                                         </span>
 
                                         {/* QUESTION & ANSWER */}
-                                        <div className="flex-1 pr-2">
-                                            <h3 className="text-[15px] sm:text-[17px] font-bold text-[#14233D] leading-snug tracking-tight">
+                                        <div className="flex-1 md:pr-2">
+                                            <h3 className="text-[14px] md:text-[17px] font-bold text-[#14233D] leading-snug tracking-tight">
                                                 {faq.ques?.trim()}
                                             </h3>
 
