@@ -26,7 +26,6 @@ const Header = ({
   const [showTopbar, setShowTopbar] = useState(false);
   const [showMobileMenu, setMobileMenu] = useState(false);
   const pathname = usePathname();
-  console.log("pathname", pathname);
   useEffect(() => {
     setMobileMenu(false);
     const handler = () => {
