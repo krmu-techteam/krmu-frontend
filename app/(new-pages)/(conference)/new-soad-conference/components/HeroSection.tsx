@@ -23,7 +23,7 @@ const HeroSection = () => {
             design<strong>BEYOND</strong>
           </h1>
 
-          <p className="max-w-2xl pb-6 text-lg leading-tight sm:pb-10 sm:text-xl lg:pb-14 lg:text-xl font-normal">
+          <p className="max-w-2xl pb-6 text-lg leading-tight sm:pb-10 sm:text-xl lg:pb-14 lg:text-xl font-normal temp-class">
             Developing Efficient and Sustainable Innovations for Global Needs
             BEYOND 2030
           </p>
