@@ -350,7 +350,7 @@ const page = async ({ params }: Props) => {
                 slug === "mba-fintech"
                   ? getContent()
                   : slug === "mba"
-                    ? getIBMContent()
+                    ? getIBMContent() 
                     : slug === "mba-digital-marketing"
                       ? getDigitalContent()
                       : null
