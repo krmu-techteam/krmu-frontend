@@ -1,169 +1,87 @@
 "use client";
 
 import React, { useState } from "react";
-import SectionDivider from "@/components/common/SectionDivider";
+import { ChevronDown } from "lucide-react";
+import { breakdownData } from "../constants/breakdown.constants";
 
-const BreakDownSection = () => {
+interface Props {
+    slug?: string;
+}
+
+const BreakDownSection = ({ slug }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const rows = [
-        {
-            role: "Software Developer / SDE",
-            package: "4 LPA - 6 LPA",
-            sectors: "IT Services, IT Products, Startups",
-        },
-        {
-            role: "AI / ML Engineer",
-            package: "5 LPA - 8 LPA",
-            sectors: "AI Labs SaaS Deep-Tech",
-        },
-        {
-            role: "Data Scientist",
-            package: "6 LPA - 8 LPA",
-            sectors: "BFSI, E-commerce, Analytics",
-        },
-        {
-            role: "Cybersecurity Analyst",
-            package: "4 LPA - 5 LPA",
-            sectors: "Cyber, Defence, BFSI, Consulting",
-        },
-        {
-            role: "Full Stack Developer",
-            package: "4 LPA - 5 LPA",
-            sectors: "Startups, Product Companies",
-        },
-        {
-            role: "Cloud Engineer",
-            package: "6 LPA - 8 LPA",
-            sectors: "AWS, Azure, GCP Ecosystem",
-        },
-        {
-            role: "Data Engineer",
-            package: "6 LPA - 8 LPA",
-            sectors: "FinTech, Retail, Healthcare tech",
-        },
-        {
-            role: "DevOps Engineer",
-            package: "4 LPA - 6 LPA",
-            sectors: "SaaS, Enterprise IT",
-        },
-        {
-            role: "UX / UI Designer",
-            package: "4 LPA - 6 LPA",
-            sectors: "Product, Agencies, EdTech",
-        },
-        {
-            role: "IT Consultant",
-            package: "4 LPA - 5 LPA",
-            sectors: "Big 4, System Integrators",
-        },
-        {
-            role: "Robotics / Automation Engineer",
-            package: "6 LPA - 8 LPA",
-            sectors: "Manufacturing, Defence, R&D",
-        },
-        {
-            role: "Product Management Trainee (tech track)",
-            package: "4 LPA - 5 LPA",
-            sectors: "Product Companies, FinTech",
-        },
-    ];
+    const data = (slug && breakdownData[slug]) || breakdownData["b-tech-cse"];
+
+    if (!data || !data.rows || data.rows.length === 0) return null;
+
+    const rows = data.rows;
 
     return (
         <section
-            className={`relative font-poppins w-full bg-transparent  ${isOpen ? "pb-6 sm:pb-12" : "pb-0"}  `}
+            className={`relative font-poppins w-full bg-[radial-gradient(ellipse_at_center,_#002b54_0%,_#00152e_60%,_#000c1c_100%)]   shadow-inner transition-all duration-300 ${
+                isOpen ? "pb-8 sm:pb-14" : "pb-0"
+            }`}
         >
-            <div className="max-w-[1530px] mx-auto px-4 md:px-8 xl:px-16 w-full flex flex-col items-center ">
+            <div className="max-w-[1530px] mx-auto px-4 md:px-8 xl:px-16 w-full flex flex-col items-center">
                 {/* Toggle Button */}
-                <div className="flex justify-center w-full  pt-10   bg-transparent ">
+                <div
+                    className={`flex justify-center w-full bg-transparent transition-all duration-300 ${
+                        isOpen ? "pt-8 sm:pt-10 pb-4" : "py-4 sm:py-5"
+                    }`}
+                >
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="flex items-center justify-between gap-2 sm:gap-6 bg-[#061623] text-white  font-semibold py-3 px-6 rounded-[2px]   transition-all duration-300  text-center text-sm sm:text-base md:text-[24px] cursor-pointer"
+                        className="group flex items-center justify-between gap-3 sm:gap-4 bg-[#002045] hover:bg-[#002b5c] text-white font-semibold py-2 px-5 sm:px-6 rounded-full border border-[#ECA836]/40 hover:border-[#ECA836] shadow-md hover:shadow-[0_4px_18px_rgba(236,168,54,0.35)] active:scale-95 transition-all duration-300 text-center text-xs sm:text-sm md:text-[16px] cursor-pointer"
                     >
-                        <span>Career Scope & Salary Insights</span>
-                        <span
-                            className={`flex items-center justify-center rounded-full ${isOpen ? "text-[#E7C268]" : "text-white"} text-[#002045]`}
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth={2}
-                                stroke="currentColor"
-                                className={` w-[20px] sm:w-[24px] h-[20px] sm:h-[24px] transition-transform duration-300 ${
+                        <span className="tracking-wide">
+                            {data.buttonText || "Career Prospects"}
+                        </span>
+                        <span className="flex items-center justify-center w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] rounded-full bg-[#ECA836] group-hover:bg-[#f3b54e] text-[#002045] shadow-xs transition-colors duration-200">
+                            <ChevronDown
+                                strokeWidth={2.5}
+                                className={`w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 ${
                                     isOpen ? "rotate-180" : ""
                                 }`}
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                                />
-                            </svg>
+                            />
                         </span>
                     </button>
                 </div>
 
                 {/* Collapsible Content */}
                 <div
-                    className={` relative w-full px-0 lg:px-12 overflow-hidden transition-all duration-500 ease-in-out ${
+                    className={`relative w-full px-0 lg:px-12 overflow-hidden transition-all duration-500 ease-in-out ${
                         isOpen
-                            ? "max-h-[2500px] opacity-100"
+                            ? "max-h-[3500px] opacity-100"
                             : "max-h-0 opacity-0 pointer-events-none"
                     }`}
                 >
-                    <div className=" max-w-[1500px] mx-auto">
-                        {/* Close Button X */}
-                        <button
-                            onClick={() => setIsOpen(false)}
-                            className="absolute hidden sm:block sm:top-6 sm:right-[3%] 2xl:right-[12%]  text-black transition-all p-2 rounded-full cursor-pointer"
-                            aria-label="Close details "
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth={1}
-                                stroke="currentColor"
-                                className="w-[40px] h-[40px]"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M6 18L18 6M6 6l12 12"
-                                />
-                            </svg>
-                        </button>
-
+                    <div className="max-w-[1500px] mx-auto relative">
                         {/* Header Text */}
                         <div className="flex justify-center items-center my-8 px-0 sm:px-12">
-                            <p className="text-center text-[white] text-lg sm:text-lg md:text-[24px] font-medium leading-[1.4] max-w-4xl">
-                                Below is a full breakdown of career roles,
-                                average salary ranges in India, and the sectors
-                                actively hiring B.Tech. CSE graduates.
-                            </p>
+                            <h3 className="text-center font-serif text-white text-lg sm:text-lg md:text-[24px] font-bold leading-[120%] max-w-[850px]">
+                                {data.headerText}
+                            </h3>
                         </div>
 
                         {/* Table Container with Horizontal Scroll support */}
-                        <div className="overflow-x-auto rounded-[4px] border border-[#A0A0A0] w-full bg-white shadow-inner">
+                        <div className="overflow-x-auto rounded-[10px] border border-[#A0A0A0] w-full bg-white shadow-inner">
                             <table className="w-full border-collapse border-spacing-0 min-w-[800px]">
                                 <thead>
-                                    <tr className=" text-white">
-                                        <th className=" pl-3 pt-3  text-center text-sm md:text-[16px] lg:text-[18px] font-semibold ">
-                                            <div className="flex items-center justify-center bg-[#002045] min-h-[78px] rounded-l-[4px]">
-                                                Job Role <br /> After B.Tech.
-                                                CSE
+                                    <tr className="text-white">
+                                        <th className="pl-3 pt-3 text-center text-sm md:text-[16px] lg:text-[18px] font-semibold">
+                                            <div className="flex items-center justify-center bg-[#002045] min-h-[78px] rounded-l-[10px] px-4">
+                                                {data.col1Title}
                                             </div>
                                         </th>
-                                        <th className="pt-3  text-center text-sm md:text-[16px] lg:text-[18px] font-semibold">
-                                            <div className="flex items-center justify-center bg-[#002045] min-h-[78px]">
-                                                Average Package for Freshers in
-                                                India <br /> (In INR)*
+                                        <th className="pt-3 text-center text-sm md:text-[16px] lg:text-[18px] font-semibold">
+                                            <div className="flex items-center justify-center bg-[#002045] min-h-[78px] px-4">
+                                                {data.col2Title}
                                             </div>
                                         </th>
-                                        <th className="pr-3 pt-3  text-center text-sm md:text-[16px] lg:text-[18px] font-semibold ">
-                                            <div className=" flex items-center justify-center bg-[#002045] min-h-[78px] rounded-r-[4px]">
-                                                Hiring Sectors
+                                        <th className="pr-3 pt-3 text-center text-sm md:text-[16px] lg:text-[18px] font-semibold">
+                                            <div className="flex items-center justify-center bg-[#002045] min-h-[78px] rounded-r-[10px] px-4">
+                                                {data.col3Title}
                                             </div>
                                         </th>
                                     </tr>
@@ -176,15 +94,15 @@ const BreakDownSection = () => {
                                                 index % 2 === 0
                                                     ? "bg-white"
                                                     : "bg-[#EBF6FE]"
-                                            } `}
+                                            }`}
                                         >
-                                            <td className="py-4 px-6 text-center text-sm md:text-[16px]  text-black border-r-2 border-[#002045]/10">
+                                            <td className="py-4 px-6 text-center text-sm md:text-[16px] text-black border-r-2 border-[#002045]/10">
                                                 {row.role}
                                             </td>
-                                            <td className="py-4 px-6 text-center text-sm md:text-[16px]  text-black border-r-2 border-[#002045]/10">
+                                            <td className="py-4 px-6 text-center text-sm md:text-[16px] text-black border-r-2 border-[#002045]/10">
                                                 {row.package}
                                             </td>
-                                            <td className="py-4 px-6 text-center text-sm md:text-[16px]  text-black">
+                                            <td className="py-4 px-6 text-center text-sm md:text-[16px] text-black">
                                                 {row.sectors}
                                             </td>
                                         </tr>
@@ -202,7 +120,6 @@ const BreakDownSection = () => {
                     </div>
                 </div>
             </div>
-            <SectionDivider />
         </section>
     );
 };

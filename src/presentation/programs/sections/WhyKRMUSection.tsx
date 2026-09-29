@@ -1,72 +1,19 @@
 "use client";
 
 import React from "react";
+import { whyKrmuData } from "../constants/why-krmu.constants";
 
-interface ComparisonRow {
-    parameter: string;
-    krmu: string;
-    typical: string;
+interface Props {
+    slug?: string;
 }
 
-const comparisonData: ComparisonRow[] = [
-    {
-        parameter: "Highest placement package",
-        krmu: "56.6 LPA",
-        typical: "8-20 LPA",
-    },
-    {
-        parameter: "Campus recruiters",
-        krmu: "800+ companies",
-        typical: "100-300 companies",
-    },
-    {
-        parameter: "Curriculum",
-        krmu: "Industry-aligned and regularly updated",
-        typical: "Generic AICTE syllabus",
-    },
-    {
-        parameter: "Research output",
-        krmu: "600+ Scopus/WoS papers, 100+ patents",
-        typical: "Minimal or unreported",
-    },
-    {
-        parameter: "Project-based credits",
-        krmu: "15% of total credits",
-        typical: "None or Typically 5-8%",
-    },
-    {
-        parameter: "International exposure",
-        krmu: "*Fully sponsored 2-week European summer school",
-        typical: "Rarely offered",
-    },
-    {
-        parameter: "Competitive programming lab",
-        krmu: "Dedicated facility for product-company preparation",
-        typical: "Not a standard offering",
-    },
-    {
-        parameter: "Mentorship",
-        krmu: "CTOs & startup founders as regular mentors",
-        typical: "Faculty-only mentorship",
-    },
-    {
-        parameter: "Industry certifications included",
-        krmu: "Microsoft Azure AI, GCP Ecosystem, EC-Council CEH- AI pathways",
-        typical: "Rarely included in the curriculum",
-    },
-    {
-        parameter: "Location",
-        krmu: "Sohna Road, Gurugram (near India's second largest IT hub)",
-        typical: "Varies, often suburban or Tier-2",
-    },
-    {
-        parameter: "Scholarship available",
-        krmu: "Up to 100% for toppers and sports achievers",
-        typical: "Limited, highly competitive",
-    },
-];
+const WhyKRMUSection = ({ slug }: Props) => {
+    const data = (slug && whyKrmuData[slug]) || whyKrmuData["b-tech-cse"];
 
-const WhyKRMUSection = () => {
+    if (!data) return null;
+
+    const rows = data.rows || [];
+
     return (
         <section
             id="why-choose"
@@ -87,21 +34,19 @@ const WhyKRMUSection = () => {
                 {/* Header Section */}
                 <div className="text-center mb-10 md:mb-10">
                     <h2 className="text-3xl md:text-4xl lg:text-[36px] font-bold text-white leading-tight tracking-tight max-w-[707px] mx-auto mb-6">
-                        Why Choose K.R. Mangalam University for B.Tech. CSE?
+                        {data.title}
                     </h2>
-                    <p className="text-white text-sm md:text-base lg:text-[18px] max-w-[1029px] mx-auto leading-relaxed font-normal mb-4">
-                        Pursuing a B.Tech. CSE programme is not just about
-                        earning a degree; it is about building technical and
-                        professional skills with industry exposure and practical
-                        experience, which are essential for the highly
-                        competitive job market.
-                    </p>
+                    {data.headerDesc && (
+                        <p className="text-white text-sm md:text-base lg:text-[18px] max-w-[1029px] mx-auto leading-relaxed font-normal mb-4">
+                            {data.headerDesc}
+                        </p>
+                    )}
                     <div className="w-full h-[1px] bg-[linear-gradient(90deg,#FFFFFF05_0%,#5383BC_52.88%,#FFFFFF05_100%)]" />
-                    <p className="text-white font-bold text-sm md:text-base lg:text-[18px] max-w-2xl mt-4 mx-auto leading-snug">
-                        A comparison of key academic, industry, and
-                        career-focused parameters that students consider while
-                        selecting a B.Tech CSE programme.
-                    </p>
+                    {data.subDesc && (
+                        <p className="text-white font-bold text-sm md:text-base lg:text-[18px] max-w-2xl mt-4 mx-auto leading-snug">
+                            {data.subDesc}
+                        </p>
+                    )}
                 </div>
 
                 {/* Comparison Card */}
@@ -131,7 +76,7 @@ const WhyKRMUSection = () => {
                                         </th>
 
                                         {/* Typical University Header */}
-                                        <th className="text-left pr-2 bg-[linear-gradient(90deg,#E6F0F4_15%,#F4F4F4_100%)] text-[#001732] font-bold text-base md:text-[18px]">
+                                        <th className="text-left pr-2 bg-[linear-gradient(90deg,#E6F0F4_15%,#F4F4F4_100%)] text-[#001834] font-bold text-base md:text-[18px]">
                                             <div className="pl-5 py-3 h-[51px] bg-white">
                                                 Typical Private University in
                                                 NCR
@@ -141,8 +86,7 @@ const WhyKRMUSection = () => {
                                 </thead>
 
                                 <tbody>
-                                    {comparisonData.map((row, index) => {
-                                        // const isLastRow = index === comparisonData.length - 1;
+                                    {rows.map((row, index) => {
                                         const isEven = index % 2 === 0;
                                         const rowBgClass = isEven
                                             ? ""
@@ -152,7 +96,7 @@ const WhyKRMUSection = () => {
                                             <tr key={index} className="">
                                                 {/* Parameter Cell */}
                                                 <td
-                                                    className={`py-3 px-5 text-[#051730]   text-sm md:text-[16px] ${rowBgClass} `}
+                                                    className={`py-3 px-5 text-[#051730] text-sm md:text-[16px] ${rowBgClass}`}
                                                 >
                                                     {row.parameter}
                                                 </td>
@@ -170,7 +114,7 @@ const WhyKRMUSection = () => {
 
                                                 {/* Typical University Cell */}
                                                 <td
-                                                    className={`py-3 px-5 text-[#051730] text-sm md:text-[16px] ${rowBgClass} `}
+                                                    className={`py-3 px-5 text-[#051730] text-sm md:text-[16px] ${rowBgClass}`}
                                                 >
                                                     {row.typical}
                                                 </td>
@@ -187,28 +131,20 @@ const WhyKRMUSection = () => {
                         </div>
 
                         {/* Bottom Information Box */}
-                        <div className="p-6 md:px-13 md:py-8  bg-[linear-gradient(90deg,#F8FBFF_0%,#FFEDED_100%)]  text-center">
-                            <p className="text-[#000000] text-sm md:text-[16px] mb-4 ">
-                                Located in Gurgaon, KRMU offers close proximity
-                                to corporate IT and business hubs in Gurugram
-                                such as DLF Cyber City, DLF Cyber Park,
-                                International Tech Park (Sec 59), Candor Tech
-                                Space and Vatika Business Park. This
-                                accessibility provides students with greater
-                                internship and networking opportunities and
-                                offers smooth hiring pipelines with Google,
-                                Microsoft, IBM, and hundreds of multinational
-                                tech companies.
-                            </p>
-                            <p className="text-[#000000] text-sm md:text-[16px] ">
-                                Whether your goal is securing a placement with
-                                leading technology companies, pursuing higher
-                                studies, contributing to research, or building a
-                                startup, the B.Tech. programmes are designed to
-                                help you develop the skills and experience
-                                required to achieve it.
-                            </p>
-                        </div>
+                        {(data.bottomDesc1 || data.bottomDesc2) && (
+                            <div className="p-6 md:px-13 md:py-8  bg-[linear-gradient(90deg,#F8FBFF_0%,#FFEDED_100%)] text-center">
+                                {data.bottomDesc1 && (
+                                    <p className="text-[#000000] text-sm md:text-[16px] mb-4">
+                                        {data.bottomDesc1}
+                                    </p>
+                                )}
+                                {data.bottomDesc2 && (
+                                    <p className="text-[#000000] text-sm md:text-[16px]">
+                                        {data.bottomDesc2}
+                                    </p>
+                                )}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

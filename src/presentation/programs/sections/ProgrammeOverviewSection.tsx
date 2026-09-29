@@ -1,7 +1,18 @@
 import Image from "next/image";
 import React from "react";
+import { programmeOverviewData } from "../constants/programme-overview.constants";
 
-const ProgrammeOverviewSection = () => {
+interface Props {
+    slug?: string;
+}
+
+const ProgrammeOverviewSection = ({ slug }: Props) => {
+    const data =
+        (slug && programmeOverviewData[slug]) ||
+        programmeOverviewData["b-tech-cse"];
+
+    if (!data) return null;
+
     return (
         <section
             id="about-program"
@@ -73,60 +84,34 @@ const ProgrammeOverviewSection = () => {
 
                         {/* Always visible initial paragraph */}
                         <p className="mb-4 text-white text-[16px] leading-[130%] font-light w-full font-poppins">
-                            The B.Tech. in Computer Science and Engineering
-                            programme at K.R. Mangalam University is designed to
-                            provide students with theoretical knowledge and
-                            practical applications of core CS and engineering
-                            concepts.
+                            {data.initial}
                         </p>
 
                         {/* Direct Sibling Expandable Container - Smooth CSS Grid transition driven by peer-checked */}
-                        <div className="grid grid-rows-[0fr] opacity-0 peer-checked:grid-rows-[1fr] peer-checked:opacity-100 transition-all duration-500 ease-in-out text-white text-[16px] leading-[130%] font-light w-full font-poppins">
-                            <div className="overflow-hidden">
-                                <p className="mb-4">
-                                    Students build a strong foundation in data
-                                    structures, algorithms, operating systems,
-                                    computer networks, databases, and software
-                                    engineering while developing specialised
-                                    expertise in the most in-demand domains such
-                                    as AI/ML, Data Science, Cyber Security, Full
-                                    Stack Development, Robotics & AI, UX/UI.
-                                </p>
-
-                                <p className="mb-4">
-                                    All B.Tech. programmes are offered in
-                                    academic partnership with industry leaders
-                                    such as IBM, Microsoft, EC-Council, and
-                                    ImaginXP, depending on the chosen
-                                    specialisation. These collaborations equip
-                                    students with industry-relevant skills,
-                                    practical exposure, and the expertise needed
-                                    to tackle real-world challenges and build
-                                    successful engineering careers.
-                                </p>
-
-                                <p>
-                                    After completing the programme, students
-                                    work in multidisciplinary teams, solve
-                                    engineering challenges, and design solutions
-                                    independently in corporate development
-                                    environments.
-                                </p>
+                        {data.more && data.more.length > 0 && (
+                            <div className="grid grid-rows-[0fr] opacity-0 peer-checked:grid-rows-[1fr] peer-checked:opacity-100 transition-all duration-500 ease-in-out text-white text-[16px] leading-[130%] font-light w-full font-poppins">
+                                <div className="overflow-hidden space-y-4">
+                                    {data.more.map((paragraph, index) => (
+                                        <p key={index}>{paragraph}</p>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
+                        )}
 
                         {/* Direct Sibling Label Trigger - Toggles Checkbox via CSS */}
-                        <label
-                            htmlFor="programme-overview-toggle"
-                            className="inline-block font-normal text-white text-[16px] underline underline-offset-4 decoration-1 hover:text-white/80 hover:decoration-2 transition-all duration-300 cursor-pointer mt-4 select-none"
-                        >
-                            <span className="inline peer-checked:hidden">
-                                Read More
-                            </span>
-                            <span className="hidden peer-checked:inline">
-                                Read Less
-                            </span>
-                        </label>
+                        {data.more && data.more.length > 0 && (
+                            <label
+                                htmlFor="programme-overview-toggle"
+                                className="inline-block font-normal text-white text-[16px] underline underline-offset-4 decoration-1 hover:text-white/80 hover:decoration-2 transition-all duration-300 cursor-pointer mt-4 select-none"
+                            >
+                                <span className="inline peer-checked:hidden">
+                                    Read More
+                                </span>
+                                <span className="hidden peer-checked:inline">
+                                    Read Less
+                                </span>
+                            </label>
+                        )}
                     </div>
                 </div>
             </div>

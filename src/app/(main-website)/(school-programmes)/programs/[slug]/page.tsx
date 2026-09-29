@@ -56,6 +56,9 @@ import {
 import ProgramSubNav from "@/presentation/programs/components/ProgramSubNav";
 import CinematicRecruiterStrip from "@/presentation/programs/components/CinematicRecruiterStrip";
 import { programmeScopeData } from "@/presentation/programs/constants/programme-scope.constants";
+import { programmeOverviewData } from "@/presentation/programs/constants/programme-overview.constants";
+import { whyKrmuData } from "@/presentation/programs/constants/why-krmu.constants";
+import { breakdownData } from "@/presentation/programs/constants/breakdown.constants";
 
 // ====== NEW MBA DESIGN IMPORTS ======
 import {
@@ -275,6 +278,9 @@ const page = async ({ params }: Props) => {
         slug === "mba-digital-marketing";
 
     const hasCustomProgrammeScope = slug in programmeScopeData;
+    const hasOverview = slug in programmeOverviewData || slug === "b-tech-cse";
+    const hasWhyKrmu = slug in whyKrmuData || slug === "b-tech-cse";
+    const hasBreakdown = slug in breakdownData || slug === "b-tech-cse";
 
     return (
         <>
@@ -376,8 +382,8 @@ const page = async ({ params }: Props) => {
                         />
                     ) : hasCustomProgrammeScope ? (
                         <>
-                            {slug === "b-tech-cse" && (
-                                <ProgrammeOverviewSection />
+                            {hasOverview && (
+                                <ProgrammeOverviewSection slug={slug} />
                             )}
                             <NewProgrammeScopeSection
                                 scopeData={programmeScopeSection}
@@ -387,12 +393,17 @@ const page = async ({ params }: Props) => {
                             />
                         </>
                     ) : (
-                        <ProgrammeScopeSection
-                            scopeData={programmeScopeSection}
-                            heroSection={heroSection}
-                            allowedFormSlugs={allowedFormSlugs}
-                            slug={slug}
-                        />
+                        <>
+                            {hasOverview && (
+                                <ProgrammeOverviewSection slug={slug} />
+                            )}
+                            <ProgrammeScopeSection
+                                scopeData={programmeScopeSection}
+                                heroSection={heroSection}
+                                allowedFormSlugs={allowedFormSlugs}
+                                slug={slug}
+                            />
+                        </>
                     ))}
 
                 {programmeHighlightSection &&
@@ -412,7 +423,7 @@ const page = async ({ params }: Props) => {
                         />
                     ))}
 
-                {slug === "b-tech-cse" && <WhyKRMUSection />}
+                {hasWhyKrmu && <WhyKRMUSection slug={slug} />}
 
                 {/* Specialisations for non-MBA */}
                 {!isMbaSlug && specialisationSection && (
@@ -537,7 +548,7 @@ const page = async ({ params }: Props) => {
                         />
                     ))}
 
-                {slug === "b-tech-cse" && <BreakDownSection />}
+                {hasBreakdown && <BreakDownSection slug={slug} />}
 
                 {financialAssistanceSection &&
                     (isMbaSlug ? (
