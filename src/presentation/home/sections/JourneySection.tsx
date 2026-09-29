@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Play, X, ArrowDownToLine } from "lucide-react";
+import { ArrowUpRight, Play, ArrowDownToLine } from "lucide-react";
 import { FiYoutube } from "react-icons/fi";
 import Button from "@/components/common/Button";
 import SectionDivider from "@/components/common/SectionDivider";
@@ -12,7 +12,22 @@ import { SectionTitle } from "@/components/common/SectionTitle";
 import { JOURNEY_VIDEOS } from "@/features/home";
 
 export function JourneySection() {
-    const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+    const [playingVideoId, setPlayingVideoId] = useState<number | null>(null);
+
+    const getYoutubeEmbedUrl = (link?: string) => {
+        if (!link) return "";
+        let videoId = "";
+        if (link.includes("watch?v=")) {
+            videoId = link.split("watch?v=")[1].split("&")[0];
+        } else if (link.includes("youtu.be/")) {
+            videoId = link.split("youtu.be/")[1].split("?")[0];
+        } else if (link.includes("embed/")) {
+            videoId = link.split("embed/")[1].split("?")[0];
+        }
+        return videoId
+            ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`
+            : link;
+    };
 
     return (
         <section className="relative w-full py-10 md:py-12 xl:py-20 font-poppins text-center transition-colors duration-500">
@@ -72,26 +87,42 @@ export function JourneySection() {
                 {/* Video Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-5 mb-8 xl:mb-10">
                     {JOURNEY_VIDEOS.map((video) => (
-                        <div
-                            key={video.id}
-                            className="group cursor-pointer"
-                            onClick={() => setSelectedVideo(video.link || null)}
-                        >
+                        <div key={video.id} className="group">
                             <div className="relative aspect-video overflow-hidden rounded-[4px] shadow-xl mb-5 bg-black">
-                                <Image
-                                    src={video.thumbnail}
-                                    alt={video.title}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, 33vw"
-                                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                                />
-                                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+                                {playingVideoId === video.id ? (
+                                    <iframe
+                                        className="w-full h-full absolute inset-0"
+                                        src={getYoutubeEmbedUrl(video.link)}
+                                        title={video.title}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen
+                                    />
+                                ) : (
+                                    <div
+                                        className="relative w-full h-full cursor-pointer"
+                                        onClick={() =>
+                                            setPlayingVideoId(video.id)
+                                        }
+                                    >
+                                        <Image
+                                            src={video.thumbnail}
+                                            alt={video.title}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                        />
+                                        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
 
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="w-14 h-14 bg-[#CB000D] text-white rounded-full flex items-center justify-center shadow-2xl scale-90 group-hover:scale-105 transition-all duration-300">
-                                        <Play size={22} className="ml-1" />
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <div className="w-14 h-14 bg-[#CB000D] text-white rounded-full flex items-center justify-center shadow-2xl scale-90 group-hover:scale-105 transition-all duration-300">
+                                                <Play
+                                                    size={22}
+                                                    className="ml-1"
+                                                />
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                )}
                             </div>
 
                             <div className="px-4 text-center">
@@ -118,45 +149,6 @@ export function JourneySection() {
             </div>
 
             <SectionDivider />
-
-            {/* Video Modal */}
-            {selectedVideo && (
-                <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/60 px-4 backdrop-blur-sm">
-                    <button
-                        onClick={() => setSelectedVideo(null)}
-                        className="absolute top-6 right-6 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors z-50 cursor-pointer"
-                    >
-                        <X size={24} />
-                    </button>
-                    <div className="w-full max-w-5xl aspect-video bg-black rounded-lg border border-white/10 relative">
-                        <iframe
-                            className="w-full h-full absolute inset-0"
-                            src={(() => {
-                                let videoId = "";
-                                if (selectedVideo.includes("watch?v="))
-                                    videoId = selectedVideo
-                                        .split("watch?v=")[1]
-                                        .split("&")[0];
-                                else if (selectedVideo.includes("youtu.be/"))
-                                    videoId = selectedVideo
-                                        .split("youtu.be/")[1]
-                                        .split("?")[0];
-                                else if (selectedVideo.includes("embed/"))
-                                    videoId = selectedVideo
-                                        .split("embed/")[1]
-                                        .split("?")[0];
-                                return videoId
-                                    ? `https://www.youtube.com/embed/${videoId}?autoplay=1`
-                                    : selectedVideo;
-                            })()}
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-                </div>
-            )}
         </section>
     );
 }

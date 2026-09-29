@@ -66,7 +66,7 @@ const ProgrammeHighlight = ({
 
                 <div className="relative group/slider">
                     {/* Slider Controls */}
-                    <div className="absolute top-1/2 -left-3 md:-left-4 lg:left-[-10px] -translate-y-1/2 z-10">
+                    <div className="absolute top-1/2 -left-3 md:-left-4 lg:left-[-12px] -translate-y-1/2 z-10">
                         <button
                             onClick={scrollPrev}
                             className="w-10 h-10 rounded-[2px] bg-[#CB000D] flex items-center justify-center text-white hover:bg-[#CB000D]/90 hover:text-white transition-all duration-300 cursor-pointer"
@@ -75,7 +75,7 @@ const ProgrammeHighlight = ({
                             <ChevronLeft className="w-6 h-6" />
                         </button>
                     </div>
-                    <div className="absolute top-1/2 -right-3 md:-right-[20px] lg:right-[0px] -translate-y-1/2 z-10">
+                    <div className="absolute top-1/2 -right-3 md:-right-[20px] lg:-right-[15px] -translate-y-1/2 z-10">
                         <button
                             onClick={scrollNext}
                             className="w-10 h-10 rounded-[2px] bg-[#CB000D] flex items-center justify-center text-white hover:bg-[#CB000D]/90 hover:text-white transition-all duration-300 cursor-pointer"

@@ -49,14 +49,14 @@ export const JOURNEY_VIDEOS: JourneyVideoType[] = [
         title: "How Global Exposure is Empowering Indian Students Ft. British Council India",
         thumbnail: "/modules/home/journey/j2.png",
         duration: "7:30",
-        link: "https://www.youtube.com/watch?v=Q0OyZv7Rybw",
+        link: "https://www.youtube.com/watch?v=F3PmP0EAuaQ",
     },
     {
         id: 3,
         title: "Big Move! EY India Partners with K.R. Mangalam University",
         thumbnail: "/modules/home/journey/j3.png",
         duration: "2:35",
-        link: "https://www.youtube.com/watch?v=PtA6I56Zuyc",
+        link: "https://www.youtube.com/watch?v=iLzhza28QnM&t=12s",
     },
 ];
 

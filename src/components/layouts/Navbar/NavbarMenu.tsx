@@ -417,7 +417,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         {/* Handbook and Brochure Buttons */}
                                         <div className="flex flex-wrap items-center gap-4 mt-8">
                                             <Link
-                                                href="https://www.krmangalam.edu.in/disclosure2018-2023/Organizational-Policies/Policy-of-Code-of-Conduct.pdf"
+                                                href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="relative overflow-hidden group w-fit border border-[#fff]/90 hover:border-white bg-[#071624]/50 text-white/90 hover:text-white font-poppins font-normal py-3 px-4 hover:bg-white/5 rounded-[2px] text-[14px] flex items-center justify-center gap-1.5 transition-all duration-300  text-center tracking-wide whitespace-nowrap active:scale-[0.98] cursor-pointer"

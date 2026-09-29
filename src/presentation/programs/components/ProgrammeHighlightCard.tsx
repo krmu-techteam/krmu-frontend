@@ -12,9 +12,9 @@ type Props = {
 
 const ProgrammeHighlightCard = ({ title, desc, highlightimg, slug }: Props) => {
     return (
-        <div className="group rounded-md shadow-sm hover:shadow-xl transition-all duration-500 h-[340px] flex flex-col mx-2 relative overflow-hidden">
+        <div className="group rounded-[1px] shadow-sm hover:shadow-xl transition-all duration-500 h-[340px] flex flex-col mx-1 relative overflow-hidden">
             {/* Image Container */}
-            <div className="relative h-full w-full overflow-hidden rounded-[4px] z-0">
+            <div className="relative h-full w-full overflow-hidden rounded-[1x] z-0">
                 {highlightimg?.url ? (
                     <Image
                         fill
@@ -25,7 +25,6 @@ const ProgrammeHighlightCard = ({ title, desc, highlightimg, slug }: Props) => {
                             highlightimg?.alternativeText || title
                         )}
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
-                        unoptimized
                     />
                 ) : (
                     <div className="w-full h-full bg-gray-100 flex items-center justify-center text-gray-400">
