@@ -411,7 +411,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   {
     id: 1,
     image:
-      "https://krmangalam.edu.in/images/placements/cdc-team/dr-vibha-thakur.jpg",
+      "https://krmangalam.edu.in/images/placements/cdc-team/vibha-thakur.png",
     imageAlt: "Dr. Vibha Thakur - Director | Career Development Centre",
     name: "Dr. Vibha Thakur",
     designation: "Director | Career Development Centre",
@@ -420,7 +420,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
   {
     id: 2,
     image:
-      "https://krmangalam.edu.in/images/placements/cdc-team/dhaval-bhaskar.jpg",
+      "https://krmangalam.edu.in/images/placements/cdc-team/dhaval-bhaskar.png",
     imageAlt: "Dhaval Bhaskar - Sr. Placement Manager",
     name: "Dhaval Bhaskar",
     designation: "Sr. Placement Manager",
@@ -462,6 +462,15 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     name: "Vanshita Jain",
     designation: "Internship Manager",
     email: "vanshita.jain@krmangalam.edu.in",
+  },
+  {
+    id: 7,
+    image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/lokesh-lakhotia.png",
+    imageAlt: "Lokesh Lakhotia",
+    name: "Lokesh Lakhotia",
+    designation: "Placement Manager",
+    email: "lokesh.lakhotia@krmangalam.edu.in",
   },
 ];
 
