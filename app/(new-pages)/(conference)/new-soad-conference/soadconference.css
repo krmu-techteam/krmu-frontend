@@ -7,7 +7,7 @@
 }
 
 .font-poppins {
-  font-family: var(--font-family-poppins), sans-serif;
+  font-family: var(--font-family-poppins);
 }
 
 .font-ibm-plex {
