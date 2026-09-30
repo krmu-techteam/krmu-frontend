@@ -64,6 +64,12 @@ export const somcAltConfig: SchoolAltConfig = {
         Jaya: "Jaya, BBA Finance student testimonial – KRMU",
         "Simple Singh": "Simple Singh, B.Com (Hons) student testimonial – KRMU",
         Simple: "Simple Singh, B.Com (Hons) student testimonial – KRMU",
+        "Mansi Sharma": "Mansi Sharma, MBA student at KRMU SOMC",
+        "Aaditya Raj": "Aaditya Raj, BBA MBA Integrated student at KRMU SOMC",
+        Garvit: "Garvit, BBA MBA Integrated student at KRMU SOMC",
+        "Shreya Kaushal": "Shreya Kaushal, B.Com. ACCA student at KRMU SOMC",
+        "Khwahish Gurnani": "Khwahish Gurnani, BBA (DM) student at KRMU SOMC",
+        Vishal: "Vishal, B.Com. (Hons.) with Research student at KRMU SOMC",
     },
 
     deanVision: {
@@ -198,6 +204,16 @@ export const somcAltConfig: SchoolAltConfig = {
         "MOZO_HUNT_1feb163c80.webp": "Mozo Hunt – KRMU SOMC knowledge partner",
         "CESIM_2_9ee48d29d2.webp":
             "Cesim business simulation – KRMU SOMC knowledge partner",
+        "mansi-sharma.png": "Mansi Sharma, MBA student at KRMU SOMC",
+        "aaditya-raj.png":
+            "Aaditya Raj, BBA MBA Integrated student at KRMU SOMC",
+        "garvit.png": "Garvit, BBA MBA Integrated student at KRMU SOMC",
+        "shreya-kaushal.png":
+            "Shreya Kaushal, B.Com. ACCA student at KRMU SOMC",
+        "khwahish-gurnani.png":
+            "Khwahish Gurnani, BBA (DM) student at KRMU SOMC",
+        "vishal.png":
+            "Vishal, B.Com. (Hons.) with Research student at KRMU SOMC",
         "aman_2eee2fa7da.webp":
             "Aman, BBA Human Resource student testimonial – K.R. Mangalam University",
         "madhav_c635fbbac6.webp":

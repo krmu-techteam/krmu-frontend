@@ -66,6 +66,12 @@ export const sprsAltConfig: SchoolAltConfig = {
         "Muskan Rana": "Muskan Rana, BPT student testimonial at KRMU SPRS",
         Roostum: "Roostum, BPT student testimonial at KRMU SPRS",
         mask: "BPT student testimonial at KRMU SPRS",
+        Saanvi: "Saanvi, BPT student at KRMU SPRS",
+        "Disha Verma": "Disha Verma, BPT student at KRMU SPRS",
+        "Ritika Kinra": "Ritika Kinra, BPT student at KRMU SPRS",
+        "Mansi Chaddha": "Mansi Chaddha, BPT student at KRMU SPRS",
+        "Mehak Khanna": "Mehak Khanna, BPT alumna at KRMU SPRS",
+        "Taniya Yadav": "Taniya Yadav, BPT alumna at KRMU SPRS",
     },
 
     deanVision: {
@@ -176,6 +182,12 @@ export const sprsAltConfig: SchoolAltConfig = {
             "Sarvodaya Hospital – KRMU SPRS knowledge partner",
 
         // Testimonials
+        "saanvi.png": "Saanvi, BPT student at KRMU SPRS",
+        "disha-verma.png": "Disha Verma, BPT student at KRMU SPRS",
+        "ritika-kinra.png": "Ritika Kinra, BPT student at KRMU SPRS",
+        "mansi-chaddha.png": "Mansi Chaddha, BPT student at KRMU SPRS",
+        "mehak-khanna.png": "Mehak Khanna, BPT alumna at KRMU SPRS",
+        "taniya-yadav.png": "Taniya Yadav, BPT alumna at KRMU SPRS",
         "manisha_408964877e.jpg":
             "Manisha, BPT student testimonial at KRMU SPRS",
         "Abhishek1_0b147b92f3.jpg":

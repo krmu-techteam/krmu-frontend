@@ -286,5 +286,18 @@ export const soadAltConfig: SchoolAltConfig = {
         "communications.svg": "Step 4: Attend the faculty-led interview",
         "business-people.svg": "Step 5: Receive the admission offer letter",
         "like.svg": "Step 6: Get enrolled at K.R. Mangalam University",
+
+        // Testimonials
+        "aman-khan.jpg":
+            "Aman Khan, B.Des. Interior Design student at KRMU SOAD",
+        "anushka-singh.jpg": "Anushka Singh, B.Arch student at KRMU SOAD",
+        "avinash-raj.jpg": "Avinash Raj, B.Arch student at KRMU SOAD",
+        "c-lalrinkima.jpg": "C Lalrinkima, B.Arch student at KRMU SOAD",
+        "garvita-kaushik.jpg": "Garvita Kaushik, B.Arch student at KRMU SOAD",
+        "kaustubh-sahai.jpg": "Kaustubh Sahai, B.Arch student at KRMU SOAD",
+        "loyangamba-thongamcha.jpg":
+            "Loyangamba Thongamcha, B.Arch student at KRMU SOAD",
+        "tanisha-bhatnagar.jpg":
+            "Tanisha Bhatnagar, B.Des. Interior Design student at KRMU SOAD",
     },
 };

@@ -63,6 +63,14 @@ export const solaAltConfig: SchoolAltConfig = {
         "Sandeep Soni":
             "Sandeep Soni, B.A. (Hons.) Economics student testimonial at School of Liberal Arts KRMU",
         Fatima: "Fatima, student testimonial at School of Liberal Arts K.R. Mangalam University",
+        "Aayushi Kesari":
+            "Aayushi Kesari, B.A. (Hons.) Economics student at KRMU SOLA",
+        "Arnav Sharma":
+            "Arnav Sharma, B.A. (Hons.) Psychology student at KRMU SOLA",
+        "Vekhozo Ringa": "Vekhozo Ringa, B.A. Programme student at KRMU SOLA",
+        Oshika: "Oshika, B.A. student at KRMU SOLA",
+        Mahalakshmi:
+            "Mahalakshmi, B.A. (Hons.) Political Science student at KRMU SOLA",
     },
 
     deanVision: {
@@ -211,6 +219,15 @@ export const solaAltConfig: SchoolAltConfig = {
             "Dr. Rohini Kumari, Assistant Professor of Economics (Gender Economics), SOLA KRMU",
 
         // Testimonials
+        "aayushi-kesari.jpg":
+            "Aayushi Kesari, B.A. (Hons.) Economics student at KRMU SOLA",
+        "arnav-sharma.jpg":
+            "Arnav Sharma, B.A. (Hons.) Psychology student at KRMU SOLA",
+        "vekhozo-ringa.jpg":
+            "Vekhozo Ringa, B.A. Programme student at KRMU SOLA",
+        "oshika.jpg": "Oshika, B.A. student at KRMU SOLA",
+        "mahalakshmi.jpg":
+            "Mahalakshmi, B.A. (Hons.) Political Science student at KRMU SOLA",
         "shivam_goel_6ff48734b5.jpeg":
             "Shivam Goel, B.A. (Hons.) Psychology student testimonial at School of Liberal Arts KRMU",
         "Mask_group_3_4_1_36bebcb593.webp":

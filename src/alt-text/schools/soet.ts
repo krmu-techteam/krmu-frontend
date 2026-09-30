@@ -309,5 +309,19 @@ export const soetAltConfig: SchoolAltConfig = {
         "business-people.svg":
             "Step 5: Receive admission offer letter from KRMU",
         "like.svg": "Step 6: Get enrolled at K.R. Mangalam University",
+
+        // Testimonials
+        "aatharv-kashiv.png":
+            "Aatharv Kashiv, MCA (AI&ML) student at KRMU SOET",
+        "aman-kumar.png": "Aman Kumar, MCA (AI&ML) student at KRMU SOET",
+        "aryan-kumar.jpg": "Aryan Kumar, MCA student at KRMU SOET",
+        "krish-agarwal.png":
+            "Krish Agarwal, B.Tech CSE AI/ML student at KRMU SOET",
+        "namrata-muralidharan.png":
+            "Namrata Muralidharan, BCA (AI & DS) student at KRMU SOET",
+        "nitin-gahlot.png": "Nitin Gahlot, MCA (AI&ML) student at KRMU SOET",
+        "somya-sharma.jpg":
+            "Somya Sharma, B.Tech CSE AIML student at KRMU SOET",
+        "yashika-goyal.png": "Yashika Goyal, MCA student at KRMU SOET",
     },
 };

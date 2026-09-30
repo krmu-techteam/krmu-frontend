@@ -258,5 +258,20 @@ export const soasAltConfig: SchoolAltConfig = {
         "communications.svg": "Step 4: Attend the faculty-led interview",
         "business-people.svg": "Step 5: Receive the admission offer letter",
         "like.svg": "Step 6: Get enrolled at K.R. Mangalam University",
+
+        // Testimonials
+        "aayushi.jpg":
+            "Aayushi, B.Sc. (Hons.) Agriculture student at KRMU SOAS",
+        "anjali.jpg": "Anjali, B.Sc. (Hons.) Agriculture student at KRMU SOAS",
+        "ansar-khan.jpg":
+            "Ansar Khan, B.Sc. (Hons.) Agriculture alumnus at KRMU SOAS",
+        "dushyant.jpg":
+            "Dushyant, B.Sc. (Hons.) Agriculture student at KRMU SOAS",
+        "jahanvi-arora.jpg":
+            "Jahanvi Arora, B.Sc. (Hons.) Agriculture student at KRMU SOAS",
+        "neetu-sharma.jpg":
+            "Neetu Sharma, B.Sc. (Hons.) Agriculture student at KRMU SOAS",
+        "sagar.jpg": "Sagar, B.Sc. (Hons.) Agriculture alumnus at KRMU SOAS",
+        "shakshi.jpg": "Shakshi, B.Sc. (Hons.) Agriculture alumna at KRMU SOAS",
     },
 };

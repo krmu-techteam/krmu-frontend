@@ -100,20 +100,20 @@ const TESTIMONIALS_DATA: Testimonial[] = [
         quote: "My journey at K.R. Mangalam University, pursuing a BCA in Artificial Intelligence and Data Science, has been a transformative blend of knowledge, innovation and hands-on learning. The programme has helped me turn curiosity into technical expertise through real-world projects and emerging technologies. With supportive faculty and an industry-focused environment, KRMU has encouraged me to think beyond conventional boundaries and confidently shape my future in the world of technology.",
         image: "/images/home/testimonials/student-images/namrata.png",
     },
-    {
-        id: 13,
-        name: "Aayushi Kesari",
-        role: "B.A. (Hons.) in Economics with Research",
-        quote: "My time at K.R. Mangalam University has been truly memorable. The supportive faculty and well-structured curriculum have made my learning journey enriching and meaningful. The emphasis on practical projects, critical thinking and holistic development has helped me grow academically and personally. I am grateful to the university for the experiences, opportunities and guidance that have shaped my time here.",
-        image: "/images/home/testimonials/student-images/aayushi-kesari.jpg",
-    },
-    {
-        id: 14,
-        name: "Nivishka Goel",
-        role: "B.A. (Hons.) in Psychology with Research",
-        quote: "Joining the School of Liberal Arts (SOLA) at K.R. Mangalam University was easily one of the best choices I have made. To be honest, I was a bit unsure when I first started, but SOLA quickly felt like home. We are never just sitting in rows taking notes; our classes feel much more like real conversations where everyone's ideas matter. SOLA has taught me to ask better questions, listen carefully and see the world from more than one angle.",
-        image: "/images/home/testimonials/student-images/nivishka-goel.jpg",
-    },
+    // {
+    //     id: 13,
+    //     name: "Aayushi Kesari",
+    //     role: "B.A. (Hons.) in Economics with Research",
+    //     quote: "My time at K.R. Mangalam University has been truly memorable. The supportive faculty and well-structured curriculum have made my learning journey enriching and meaningful. The emphasis on practical projects, critical thinking and holistic development has helped me grow academically and personally. I am grateful to the university for the experiences, opportunities and guidance that have shaped my time here.",
+    //     image: "/images/home/testimonials/student-images/aayushi-kesari.jpg",
+    // },
+    // {
+    //     id: 14,
+    //     name: "Nivishka Goel",
+    //     role: "B.A. (Hons.) in Psychology with Research",
+    //     quote: "Joining the School of Liberal Arts (SOLA) at K.R. Mangalam University was easily one of the best choices I have made. To be honest, I was a bit unsure when I first started, but SOLA quickly felt like home. We are never just sitting in rows taking notes; our classes feel much more like real conversations where everyone's ideas matter. SOLA has taught me to ask better questions, listen carefully and see the world from more than one angle.",
+    //     image: "/images/home/testimonials/student-images/nivishka-goel.jpg",
+    // },
     {
         id: 15,
         name: "Veiresh",
@@ -135,27 +135,27 @@ const TESTIMONIALS_DATA: Testimonial[] = [
         quote: "Reality often unfolds differently from what we expect. We enter new chapters with carefully imagined plans, only to discover that life shapes its own path. My years at K.R. Mangalam University continuously reinforced this lesson. Unexpected turns brought new perspectives, meaningful friendships, and lessons no syllabus could teach. KRMU proved that growth lies not in having every answer, but in adapting when reality differs from expectation. As I look ahead, I embrace both ambition and uncertainty, knowing life's finest opportunities are often the ones we never planned for.",
         image: "/images/home/testimonials/student-images/aaditya-raj.png",
     },
-    {
-        id: 18,
-        name: "Mansi Sharma",
-        role: "MBA, 2nd Year",
-        quote: "My journey at the School of Management & Commerce, K.R. Mangalam University, has been truly transformative. The programme provided a strong management foundation while building essential skills like leadership, communication, and problem-solving. The supportive faculty, practical exposure, and industry-oriented activities boosted my confidence and professional readiness. Beyond academics, SOMC encouraged me to step out of my comfort zone and grow personally. I am grateful to the faculty for nurturing my ambitions. KRMU has not just prepared me for a career, but for the person I aspire to become.",
-        image: "/images/home/testimonials/student-images/mansi-sharma.png",
-    },
-    {
-        id: 19,
-        name: "Manav Bangari",
-        role: "Bachelor of Physiotherapy (BPT)",
-        quote: "Being a BPT student at K.R. Mangalam University has been an enriching and engaging journey. From interactive practical sessions to clinical exposure, every day brings something new to learn. The knowledgeable and supportive faculty make even complex topics easy to understand, making our course truly unique. Beyond academics, I have made great memories with friends along the way. Overall, my time at KRMU has been a perfect blend of practical learning, personal growth, and memorable experiences that prepare me for a rewarding healthcare career.",
-        image: "/images/home/testimonials/student-images/manav-bangari.png",
-    },
-    {
-        id: 20,
-        name: "Mehak Khanna",
-        role: "Bachelor of Physiotherapy (BPT)",
-        quote: "My BPT journey here has been a transformative chapter, shaping me into a confident and compassionate healthcare professional. Guidance from supportive mentors, alongside clinical postings, research activities, workshops, and conferences, broadened my perspective and strengthened my clinical abilities. As a graduate physiotherapist, I carry forward essential knowledge, practical skills, and the core values of empathy and patient-centred care. I am truly grateful for my time at KRMU and feel fully prepared to make a meaningful difference in the lives of those I serve.",
-        image: "/images/home/testimonials/student-images/mehak-khanna.png",
-    },
+    // {
+    //     id: 18,
+    //     name: "Mansi Sharma",
+    //     role: "MBA, 2nd Year",
+    //     quote: "My journey at the School of Management & Commerce, K.R. Mangalam University, has been truly transformative. The programme provided a strong management foundation while building essential skills like leadership, communication, and problem-solving. The supportive faculty, practical exposure, and industry-oriented activities boosted my confidence and professional readiness. Beyond academics, SOMC encouraged me to step out of my comfort zone and grow personally. I am grateful to the faculty for nurturing my ambitions. KRMU has not just prepared me for a career, but for the person I aspire to become.",
+    //     image: "/images/home/testimonials/student-images/mansi-sharma.png",
+    // },
+    // {
+    //     id: 19,
+    //     name: "Manav Bangari",
+    //     role: "Bachelor of Physiotherapy (BPT)",
+    //     quote: "Being a BPT student at K.R. Mangalam University has been an enriching and engaging journey. From interactive practical sessions to clinical exposure, every day brings something new to learn. The knowledgeable and supportive faculty make even complex topics easy to understand, making our course truly unique. Beyond academics, I have made great memories with friends along the way. Overall, my time at KRMU has been a perfect blend of practical learning, personal growth, and memorable experiences that prepare me for a rewarding healthcare career.",
+    //     image: "/images/home/testimonials/student-images/manav-bangari.png",
+    // },
+    // {
+    //     id: 20,
+    //     name: "Mehak Khanna",
+    //     role: "Bachelor of Physiotherapy (BPT)",
+    //     quote: "My BPT journey here has been a transformative chapter, shaping me into a confident and compassionate healthcare professional. Guidance from supportive mentors, alongside clinical postings, research activities, workshops, and conferences, broadened my perspective and strengthened my clinical abilities. As a graduate physiotherapist, I carry forward essential knowledge, practical skills, and the core values of empathy and patient-centred care. I am truly grateful for my time at KRMU and feel fully prepared to make a meaningful difference in the lives of those I serve.",
+    //     image: "/images/home/testimonials/student-images/mehak-khanna.png",
+    // },
 ];
 
 export function TestimonialsSection({
@@ -237,14 +237,28 @@ export function TestimonialsSection({
     useEffect(() => {
         const container = thumbnailsRef.current;
         if (!container) return;
-        const activeBtn = container.children[currentIndex] as HTMLElement;
+
+        // If thumbnails fit within container width without overflowing, keep at 0 to maintain center
+        if (container.scrollWidth <= container.clientWidth + 5) {
+            if (container.scrollLeft !== 0) {
+                container.scrollTo({ left: 0, behavior: "smooth" });
+            }
+            return;
+        }
+
+        const activeBtn = container.querySelector(
+            `[data-thumb-index="${currentIndex}"]`
+        ) as HTMLElement;
         if (activeBtn) {
+            const containerRect = container.getBoundingClientRect();
+            const btnRect = activeBtn.getBoundingClientRect();
             const scrollLeft =
-                activeBtn.offsetLeft -
+                container.scrollLeft +
+                (btnRect.left - containerRect.left) -
                 container.offsetWidth / 2 +
                 activeBtn.offsetWidth / 2;
             container.scrollTo({
-                left: scrollLeft,
+                left: Math.max(0, scrollLeft),
                 behavior: "smooth",
             });
         }
@@ -275,15 +289,22 @@ export function TestimonialsSection({
                     onTouchStart={handleTouchStart}
                     onTouchEnd={handleTouchEnd}
                 >
-                    <div className="w-full min-h-[520px] sm:min-h-[460px] md:min-h-[380px] lg:min-h-[340px] xl:min-h-[320px]">
-                        <AnimatePresence mode="wait">
+                    <div className="relative w-full min-h-[520px] sm:min-h-[460px] md:min-h-[380px] lg:min-h-[340px] xl:min-h-[320px]">
+                        <AnimatePresence initial={false}>
                             <motion.div
                                 key={t.id}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
+                                exit={{
+                                    opacity: 0,
+                                    position: "absolute",
+                                    top: 0,
+                                    left: 0,
+                                    width: "100%",
+                                    pointerEvents: "none",
+                                }}
                                 transition={{
-                                    duration: 0.2,
+                                    duration: 0.25,
                                     ease: "easeInOut",
                                 }}
                                 className="flex flex-col lg:flex-row items-center lg:items-stretch gap-6 lg:gap-8 w-full"
@@ -326,7 +347,7 @@ export function TestimonialsSection({
                                         </div>
 
                                         {/* Quote Paragraph - Fixed min-height to prevent layout jump */}
-                                        <div className="min-h-[220px] sm:min-h-[190px] md:min-h-[170px] flex items-center justify-center md:justify-start">
+                                        <div className="min-h-[240px] sm:min-h-[200px] md:min-h-[175px] flex items-center justify-center md:justify-start">
                                             <p className="italic text-white/90 text-sm md:text-[16px] xl:text-[18px] leading-relaxed font-light font-poppins relative z-10 text-justify md:text-left pr-0 md:pr-2 lg:pr-12">
                                                 &ldquo;{t.quote}&rdquo;
                                             </p>
@@ -353,38 +374,42 @@ export function TestimonialsSection({
                     {/* Student Thumbnail Avatars Row (Click any photo to view testimonial) */}
                     <div
                         ref={thumbnailsRef}
-                        className="w-full flex items-center justify-start gap-3 mt-8 md:mt-10 overflow-x-auto py-4 px-2 min-h-[96px] sm:min-h-[104px] md:min-h-[112px] no-scrollbar scroll-smooth"
+                        className="w-full mt-8 md:mt-10 overflow-x-auto py-4 px-2 min-h-[96px] sm:min-h-[104px] md:min-h-[112px] no-scrollbar scroll-smooth"
                     >
-                        {TESTIMONIALS_DATA.map((item, idx) => {
-                            const isActive = currentIndex === idx;
-                            return (
-                                <button
-                                    key={item.id}
-                                    type="button"
-                                    onMouseDown={(e) => e.preventDefault()}
-                                    onClick={(e) => {
-                                        e.currentTarget.blur();
-                                        handleSelectPerson(idx);
-                                    }}
-                                    className={`relative shrink-0 rounded-full overflow-hidden transition-all duration-300 cursor-pointer ${
-                                        isActive
-                                            ? "w-16 h-16 sm:w-[72px] sm:h-[72px] md:w-20 md:h-20 ring-[2.5px] ring-brand-gold opacity-100 z-10 shadow-xl"
-                                            : "w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 opacity-40 hover:opacity-90 ring-2 ring-brand-gold/20 hover:scale-105"
-                                    }`}
-                                    aria-label={`View ${item.name}'s testimonial`}
-                                    title={`${item.name} - ${item.role}`}
-                                >
-                                    <Image
-                                        src={item.image}
-                                        alt={item.name}
-                                        fill
-                                        sizes="200px"
-                                        quality={95}
-                                        className="object-cover"
-                                    />
-                                </button>
-                            );
-                        })}
+                        <div className="flex items-center justify-center gap-3 w-max min-w-full mx-auto">
+                            {TESTIMONIALS_DATA.map((item, idx) => {
+                                const isActive = currentIndex === idx;
+                                return (
+                                    <button
+                                        key={item.id}
+                                        data-thumb-index={idx}
+                                        type="button"
+                                        onMouseDown={(e) => e.preventDefault()}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            e.currentTarget.blur();
+                                            handleSelectPerson(idx);
+                                        }}
+                                        className={`relative shrink-0 rounded-full overflow-hidden transition-all duration-300 cursor-pointer w-14 h-14 sm:w-16 sm:h-16 md:w-[72px] md:h-[72px] ${
+                                            isActive
+                                                ? "scale-110 ring-[3px] ring-brand-gold opacity-100 z-10 shadow-2xl"
+                                                : "scale-90 opacity-40 hover:opacity-85 ring-2 ring-brand-gold/20 hover:scale-95"
+                                        }`}
+                                        aria-label={`View ${item.name}'s testimonial`}
+                                        title={`${item.name} - ${item.role}`}
+                                    >
+                                        <Image
+                                            src={item.image}
+                                            alt={item.name}
+                                            fill
+                                            sizes="200px"
+                                            quality={95}
+                                            className="object-cover"
+                                        />
+                                    </button>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>

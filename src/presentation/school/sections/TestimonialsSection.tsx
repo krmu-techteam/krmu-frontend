@@ -9,6 +9,14 @@ import {
     SBAS_STATIC_TESTIMONIALS,
     SEMCE_STATIC_TESTIMONIALS,
     SMAS_STATIC_TESTIMONIALS,
+    SOAD_STATIC_TESTIMONIALS,
+    SOAS_STATIC_TESTIMONIALS,
+    SOED_STATIC_TESTIMONIALS,
+    SOET_STATIC_TESTIMONIALS,
+    SOLA_STATIC_TESTIMONIALS,
+    SOLS_STATIC_TESTIMONIALS,
+    SOMC_STATIC_TESTIMONIALS,
+    SPRS_STATIC_TESTIMONIALS,
 } from "@/features/school";
 import { STRAPI_URL } from "@/app/constant";
 
@@ -32,6 +40,29 @@ const TestimonialsSection = ({
         slug === "school-of-medical-and-allied-sciences" ||
         slug === "school-of-medical-allied-sciences" ||
         slug === "smas";
+    const isSOAD =
+        slug === "school-of-architecture-design" ||
+        slug === "school-of-architecture-and-design" ||
+        slug === "soad";
+    const isSOAS =
+        slug === "school-of-agricultural-sciences" ||
+        slug === "school-of-agriculutural-sciences" ||
+        slug === "soas";
+    const isSOED = slug === "school-of-education" || slug === "soed";
+    const isSOET =
+        slug === "school-of-engineering-and-technology" ||
+        slug === "school-of-engineering-technology" ||
+        slug === "soet";
+    const isSOLA = slug === "school-of-liberal-arts" || slug === "sola";
+    const isSOLS = slug === "school-of-legal-studies" || slug === "sols";
+    const isSOMC =
+        slug === "school-of-management-and-commerce" ||
+        slug === "school-of-management-commerce" ||
+        slug === "somc";
+    const isSPRS =
+        slug === "school-of-physiotherapy-and-rehabilitation-sciences" ||
+        slug === "school-of-physiotherapy-rehabilitation-sciences" ||
+        slug === "sprs";
 
     const testimonialsData = isSBAS
         ? SBAS_STATIC_TESTIMONIALS
@@ -39,7 +70,23 @@ const TestimonialsSection = ({
           ? SEMCE_STATIC_TESTIMONIALS
           : isSMAS
             ? SMAS_STATIC_TESTIMONIALS
-            : testis || [];
+            : isSOAD
+              ? SOAD_STATIC_TESTIMONIALS
+              : isSOAS
+                ? SOAS_STATIC_TESTIMONIALS
+                : isSOED
+                  ? SOED_STATIC_TESTIMONIALS
+                  : isSOET
+                    ? SOET_STATIC_TESTIMONIALS
+                    : isSOLA
+                      ? SOLA_STATIC_TESTIMONIALS
+                      : isSOLS
+                        ? SOLS_STATIC_TESTIMONIALS
+                        : isSOMC
+                          ? SOMC_STATIC_TESTIMONIALS
+                          : isSPRS
+                            ? SPRS_STATIC_TESTIMONIALS
+                            : testis || [];
 
     const handleNext = useCallback(() => {
         if (testimonialsData.length === 0) return;
@@ -87,7 +134,19 @@ const TestimonialsSection = ({
     if (testimonialsData.length === 0) return null;
 
     const displayTitle =
-        isSBAS || isSEMCE || isSMAS ? title || "Students’ Testimonials" : title;
+        isSBAS ||
+        isSEMCE ||
+        isSMAS ||
+        isSOAD ||
+        isSOAS ||
+        isSOED ||
+        isSOET ||
+        isSOLA ||
+        isSOLS ||
+        isSOMC ||
+        isSPRS
+            ? title || "Students’ Testimonials"
+            : title;
     const displayDesc = isSBAS
         ? desc ||
           "Hear from our students about their transformative academic and practical journey at the School of Basic & Applied Sciences."
@@ -97,10 +156,44 @@ const TestimonialsSection = ({
           : isSMAS
             ? desc ||
               "Hear from our students about their transformative academic and clinical journey at the School of Medical & Allied Sciences."
-            : desc;
+            : isSOAD
+              ? desc ||
+                "Hear from our students about their creative, technical, and transformative design journey at the School of Architecture & Design."
+              : isSOAS
+                ? desc ||
+                  "Hear from our students about their experiential learning, agricultural research, and career journey at the School of Agricultural Sciences."
+                : isSOED
+                  ? desc ||
+                    "Hear from our students about their enriching academic, classroom training, and teaching journey at the School of Education."
+                  : isSOET
+                    ? desc ||
+                      "Hear from our students about their hands-on engineering, cutting-edge technology innovation, and career journey at the School of Engineering and Technology."
+                    : isSOLA
+                      ? desc ||
+                        "Hear from our students about their multidisciplinary, transformative academic and critical inquiry journey at the School of Liberal Arts."
+                      : isSOLS
+                        ? desc ||
+                          "Hear from our students about their enriching academic, moot court advocacy, and career journey at the School of Legal Studies."
+                        : isSOMC
+                          ? desc ||
+                            "Hear from our students about their industry-driven, transformative leadership, management and commerce journey at the School of Management and Commerce."
+                          : isSPRS
+                            ? desc ||
+                              "Hear from our students about their compassionate healthcare, clinical exposure, and rehabilitative sciences journey at the School of Physiotherapy and Rehabilitation Sciences."
+                            : desc;
 
     const headingText =
-        isSBAS || isSEMCE || isSMAS
+        isSBAS ||
+        isSEMCE ||
+        isSMAS ||
+        isSOAD ||
+        isSOAS ||
+        isSOED ||
+        isSOET ||
+        isSOLA ||
+        isSOLS ||
+        isSOMC ||
+        isSPRS
             ? displayTitle
             : displayTitle?.split(" ")[1] || displayTitle;
     const t = testimonialsData[currentIndex];

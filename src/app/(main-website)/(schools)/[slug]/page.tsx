@@ -469,7 +469,29 @@ export default async function Page({ params }: Props) {
                 slug === "semce" ||
                 slug === "school-of-medical-and-allied-sciences" ||
                 slug === "school-of-medical-allied-sciences" ||
-                slug === "smas") && (
+                slug === "smas" ||
+                slug === "school-of-architecture-design" ||
+                slug === "school-of-architecture-and-design" ||
+                slug === "soad" ||
+                slug === "school-of-agricultural-sciences" ||
+                slug === "school-of-agriculutural-sciences" ||
+                slug === "soas" ||
+                slug === "school-of-education" ||
+                slug === "soed" ||
+                slug === "school-of-engineering-and-technology" ||
+                slug === "school-of-engineering-technology" ||
+                slug === "soet" ||
+                slug === "school-of-liberal-arts" ||
+                slug === "sola" ||
+                slug === "school-of-legal-studies" ||
+                slug === "sols" ||
+                slug === "school-of-management-and-commerce" ||
+                slug === "school-of-management-commerce" ||
+                slug === "somc" ||
+                slug ===
+                    "school-of-physiotherapy-and-rehabilitation-sciences" ||
+                slug === "school-of-physiotherapy-rehabilitation-sciences" ||
+                slug === "sprs") && (
                 <TestimonialsSection
                     title={school?.tetimonialtitle}
                     desc={school?.testimonialdesc}

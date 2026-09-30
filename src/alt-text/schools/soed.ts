@@ -237,5 +237,14 @@ export const soedAltConfig: SchoolAltConfig = {
         "communications.svg": "Step 4: Attend the faculty-led interview",
         "business-people.svg": "Step 5: Receive the admission offer letter",
         "like.svg": "Step 6: Get enrolled at K.R. Mangalam University",
+
+        // Testimonials
+        "chetna-narwal.png": "Chetna Narwal, B.El.Ed. alumna at KRMU SOED",
+        "dr-sanjeev-kumar.png":
+            "Dr. Sanjeev Kumar, Ph.D. Education research scholar at KRMU SOED",
+        "manya.png": "Manya, B.Ed. student at KRMU SOED",
+        "nupur-vats.png": "Nupur Vats, B.El.Ed. student at KRMU SOED",
+        "ritu.png": "Ritu, B.El.Ed. alumna at KRMU SOED",
+        "shamiksha.jpg": "Shamiksha, B.El.Ed. alumna at KRMU SOED",
     },
 };

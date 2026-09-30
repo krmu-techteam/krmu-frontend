@@ -171,7 +171,7 @@ export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
         category: "Sports & Recreation",
         title: "Campus Recreation Hub",
         description:
-            "Vibrant recreational lounge with pool, indoor games, and social relaxation zones.",
+            "A vibrant recreational lounge with a pool, indoor games, and social relaxation zones.",
     },
     {
         id: 2,
@@ -237,7 +237,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
         alt: "Kangana Ranaut – Emergency Movie Promotion at K.R. Mangalam University",
         title: "Kangana Ranaut – Emergency Movie Promotion",
         description:
-            "The Department of Student Welfare (DSW) hosted actress and filmmaker Kangana Ranaut for the promotional event of Emergency, featuring an engaging interaction with university authorities and students.",
+            "The Department of Student Welfare (DSW) hosted actress and filmmaker Kangana Ranaut for a promotional event for her movie Emergency, featuring an engaging interaction with university authorities and students.",
     },
     {
         id: 102,
@@ -245,7 +245,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
         alt: "RJ Naved – Student Interaction & Workshop at K.R. Mangalam University",
         title: "RJ Naved – Student Interaction & Workshop",
         description:
-            "Popular radio personality RJ Naved for a two-to-three-day student engagement programme featuring interactive sessions, student interviews, and workshops focused on communication, confidence, and creative expression.",
+            "K.R. Mangalam University hosted popular radio personality RJ Naved for an engaging multi-day programme filled with interactive sessions, student interviews, and hands-on workshops on communication, confidence, and creative expression.",
     },
     {
         id: 103,
@@ -253,7 +253,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
         alt: "EDM Night 2025 featuring Ola Ras from Ukraine, Ellena Chadhary, and Nick at K.R. Mangalam University",
         title: "EDM Night 2025",
         description:
-            "EDM Night 2025, featuring an electrifying lineup of renowned domestic and international artists, including Ola Ras from Ukraine, Ellena Chadhary, and Nick, delivering an unforgettable global music experience to the K.R. Mangalam University community.",
+            "An electrifying lineup of renowned national and international artists, including Ola Ras from Ukraine, Ellena Chaudhary, and Nick, delivered an unforgettable global music experience to the K.R. Mangalam University community.",
     },
     {
         id: 104,
@@ -261,7 +261,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
         alt: "Aarambh ’25 – Freshers’ Orientation with Aman Gupta at K.R. Mangalam University",
         title: "Aarambh ’25 – Freshers’ Orientation",
         description:
-            "The Department of Student Welfare (DSW) & Office of academic affairs hosted Aarambh ’25, the university’s freshers’ orientation programme, featuring Aman Gupta, Co-founder of boAt, as the Chief Guest, who inspired the new students through an engaging motivational address and extended his best wishes for their academic journey.",
+            "The Department of Student Welfare (DSW) and the Office of Academic Affairs jointly hosted Aarambh ’25, the university’s freshers’ orientation programme. Renowned entrepreneur Aman Gupta, Co-Founder of boAt, attended as the Chief Guest and inspired incoming students with an engaging keynote address.",
     },
     {
         id: 105,
@@ -269,7 +269,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
         alt: "Solesta'26 – Live Performance by Jasmine Sandlas at K.R. Mangalam University",
         title: "Solesta'26",
         description:
-            "Renowned Punjabi singer Jasmine Sandlas called for a spectacular live performance at K.R. Mangalam University, drawing a vibrant crowd of over 6,000 students and making it one of the university’s most memorable student events.",
+            "Renowned Punjabi singer Jasmine Sandlas delivered a spectacular live performance at K.R. Mangalam University, drawing an energetic crowd of over 6,000 students and making it one of the university’s most memorable events.",
     },
     {
         id: 106,
@@ -277,7 +277,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
         alt: "Freshers’ Party 2025 with Nora Fatehi at K.R. Mangalam University",
         title: "Freshers’ Party 2025 – A Star-Studded Welcome",
         description:
-            "The Department of Student Welfare (DSW) hosted renowned dancer and actor Nora Fatehi for the Freshers’ Party 2025, where her energetic performance entertained the new batch and created a vibrant campus experience for the students.",
+            "The Department of Student Welfare (DSW) hosted renowned dancer and actor Nora Fatehi for Freshers’ Party 2025, where her high-energy performance captivated the incoming batch and delivered an unforgettable campus experience.",
     },
     {
         id: 107,
@@ -285,7 +285,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
         alt: "Aarambh ’26 – Live Performance by AKASA at K.R. Mangalam University",
         title: "Aarambh ’26 – Live Performance by AKASA",
         description:
-            "Following the inspiring welcome and motivational session at Aarambh ’26, renowned singer AKASA delivered an energetic live performance, entertaining and welcoming the new students with a memorable musical experience.",
+            "Renowned singer AKASA energised the Aarambh ’26 celebrations with a captivating live performance, welcoming the new students with a memorable musical experience.",
     },
     {
         id: 108,
@@ -293,7 +293,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
         alt: "EduFiesta 2023 Freshers’ Party with Parmish Verma at K.R. Mangalam University",
         title: "EduFiesta 2023 – Freshers’ Party",
         description:
-            "The Freshers’ Party for the 2023 batch, featuring a high-energy DJ Night and a special live performance by renowned Punjabi artist Parmish Verma.",
+            "The 2023 Freshers’ Party featured a high-energy DJ Night and a special live performance by renowned Punjabi artist Parmish Verma, giving the new batch an unforgettable welcome.",
     },
     {
         id: 109,
@@ -301,7 +301,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
         alt: "Aarambh ’26 – New Batch Welcome & Orientation with Ankur Warikoo at K.R. Mangalam University",
         title: "Aarambh ’26 – New Batch Welcome & Orientation",
         description:
-            "The Department of Student Welfare (DSW) and Office of Academic Affairs jointly organised Aarambh ’26, welcoming the new batch with an inspiring address by Chief Guest and motivational speaker Ankur Warikoo, who encouraged students to embrace their university journey with confidence, purpose, and ambition.",
+            "The Department of Student Welfare (DSW) and the Office of Academic Affairs jointly organised Aarambh ’26, welcoming the incoming batch with an inspiring address by Chief Guest and motivational speaker Ankur Warikoo, who encouraged students to embrace their university journey with confidence, purpose, and ambition.",
     },
 ];
 

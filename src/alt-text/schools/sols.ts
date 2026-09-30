@@ -80,6 +80,14 @@ export const solsAltConfig: SchoolAltConfig = {
             "Dhruvi A Shah, B.A LLB (Hons) student testimonial at KRMU (fix ALL-CAPS)",
         "DHRUVI A SHAH":
             "Dhruvi A Shah, B.A LLB (Hons) student testimonial at KRMU (fix ALL-CAPS)",
+        Vipra: "Vipra, Law student at KRMU School of Legal Studies",
+        Alvin: "Alvin, Law student at KRMU School of Legal Studies",
+        Lavanya: "Lavanya, Law student at KRMU School of Legal Studies",
+        "Srishti Sehgal":
+            "Srishti Sehgal, Law student at KRMU School of Legal Studies",
+        "Taranpreet Kaur":
+            "Taranpreet Kaur, Law student at KRMU School of Legal Studies",
+        Veiresh: "Veiresh, Law student at KRMU School of Legal Studies",
     },
 
     deanVision: {
@@ -243,6 +251,14 @@ export const solsAltConfig: SchoolAltConfig = {
         "like.svg": "Step 6: Get enrolled at K.R. Mangalam University",
 
         // Testimonials
+        "vipra.png": "Vipra, Law student at KRMU School of Legal Studies",
+        "alvin.png": "Alvin, Law student at KRMU School of Legal Studies",
+        "lavanya.png": "Lavanya, Law student at KRMU School of Legal Studies",
+        "srishti-sehgal.png":
+            "Srishti Sehgal, Law student at KRMU School of Legal Studies",
+        "taranpreet-kaur.png":
+            "Taranpreet Kaur, Law student at KRMU School of Legal Studies",
+        "veiresh.png": "Veiresh, Law student at KRMU School of Legal Studies",
         "Mask_group_2_8_63ecb4e71b.webp":
             "Yukti Sharma, B.A. LLB (Hons) student testimonial at KRMU",
         "Mask_group_8_1_26a70f011c.webp":
