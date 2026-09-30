@@ -68,6 +68,24 @@ export const sbasAltConfig: SchoolAltConfig = {
     },
 
     testimonials: {
+        "Anushka Nath Roy":
+            "Anushka Nath Roy, B.Sc.(Hons) Forensic Science student testimonial at KRMU SBAS",
+        Anushka:
+            "Anushka Nath Roy, B.Sc.(Hons) Forensic Science student testimonial at KRMU SBAS",
+        "Arijit Adhikari":
+            "Arijit Adhikari, B.Sc.(Hons) Forensic Science student testimonial at KRMU SBAS",
+        "Astha Singh":
+            "Astha Singh, B.Sc.(Hons) Forensic Science student testimonial at KRMU SBAS",
+        "Gunjan Rajput":
+            "Gunjan Rajput, B.Sc.(Hons) Forensic Science student testimonial at KRMU SBAS",
+        "Joanne Subin":
+            "Joanne Subin, B.Sc.(Hons) Forensic Science student testimonial at KRMU SBAS",
+        "Kanika Rani":
+            "Kanika Rani, Integrated B.Sc.-M.Sc. Forensic Science student testimonial at KRMU SBAS",
+        "Tanvee Vashisht":
+            "Tanvee Vashisht, B.Sc.(Hons) Forensic Science student testimonial at KRMU SBAS",
+        "Vivek Kumar":
+            "Vivek Kumar, B.Sc (Honours) Chemistry student testimonial at KRMU SBAS",
         Rahul: "Rahul, B.Sc. (Hons.) Maths student testimonial at KRMU SBAS",
         Rohit: "Rohit, B.Sc. (Hons.) Chemistry student testimonial at KRMU SBAS",
         "Aryan Bajaj":

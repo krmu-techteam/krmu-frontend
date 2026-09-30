@@ -47,6 +47,16 @@ export const semceAltConfig: SchoolAltConfig = {
     },
 
     testimonials: {
+        "Aditya Raj":
+            "Aditya Raj, BA (Hons.) in JMC student testimonial at KRMU SEMCE",
+        "Aman Dey":
+            "Aman Dey, BA (Hons.) in JMC student testimonial at KRMU SEMCE",
+        "Arsalan Sahib":
+            "Arsalan Sahib, BA (Hons.) in JMC student testimonial at KRMU SEMCE",
+        "Kanak Vats":
+            "Kanak Vats, BA (Hons.) in JMC student testimonial at KRMU SEMCE",
+        "Shubham Banthia":
+            "Shubham Banthia, BA (Hons.) in JMC student testimonial at KRMU SEMCE",
         Poorvi: "Poorvi, BJMC student testimonial at KRMU SEMCE",
         "Poorvi ": "Poorvi, BJMC student testimonial at KRMU SEMCE",
         Prerna: "Prerna, BJMC student testimonial at KRMU SEMCE",

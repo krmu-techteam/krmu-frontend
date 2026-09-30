@@ -344,5 +344,15 @@ export const smasAltConfig: SchoolAltConfig = {
             "Get admission offer icon – step 5 at SMAS K.R. Mangalam University",
         "like.svg":
             "Get enrolled icon – final admission step at KRMU School of Medical and Allied Sciences",
+
+        // Testimonials
+        "anamika-singh.jpg": "Ms. Anamika Singh, B.Pharm student at KRMU SMAS",
+        "annu.jpg": "Annu, B. Pharmacy student at KRMU SMAS",
+        "manisha.jpg": "Ms. Manisha, B.Pharm student at KRMU SMAS",
+        "mehak-dhanuka.jpg": "Mehak Dhanuka, B. Pharmacy student at KRMU SMAS",
+        "mihir-anand.jpg": "Mihir Anand, B. Pharmacy student at KRMU SMAS",
+        "nishu-saini.jpg": "Nishu Saini, B.Pharm student at KRMU SMAS",
+        "tanmay.jpg": "Tanmay, B. Pharmacy student at KRMU SMAS",
+        "yash.jpg": "Yash, B.Pharm student at KRMU SMAS",
     },
 };

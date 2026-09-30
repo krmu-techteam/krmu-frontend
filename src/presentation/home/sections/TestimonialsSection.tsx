@@ -18,80 +18,143 @@ interface Testimonial {
 const TESTIMONIALS_DATA: Testimonial[] = [
     {
         id: 1,
-        name: "Krish Agarwal",
-        role: "B.Tech. CSE (AI & ML), Batch 2023–27",
-        quote: "Success is never built alone, and my journey at K.R. Mangalam University is a testament to that. The university empowered me to push my limits, transforming curiosity into innovation and ambition into achievements. From winning 7+ hackathons and participating in a total of 10+ tech events to gaining valuable industry exposure through internships, every milestone reflects the strong foundation, guidance, and opportunities KRMU provided me. I will always be grateful to K.R. Mangalam University for inspiring me to dream bigger, achieve more, and become the professional I aspire to be.",
-        image: "/images/home/testimonials/krish-agarwal-1.webp",
+        name: "Anushka Nath Roy",
+        role: "B.Sc.(Hons) Forensic Science",
+        quote: "I am a student of Forensic Science. My academic journey here has been truly enriching and inspiring. The department's commitment to academic excellence, hands-on learning and professional development has broadened my perspective and strengthened my capabilities. The guidance of our faculty and the exposure we gained through practical learning have made my learning journey engaging and rewarding.",
+        image: "/images/home/testimonials/student-images/anushka.png",
     },
     {
         id: 2,
-        name: "Naman Punn",
-        role: "B.Tech. CSE, Batch 2022–26",
-        quote: "The B.Tech. CSE programme at K.R. Mangalam University goes beyond academics by encouraging innovation, collaboration, and practical learning. From coding challenges and technical events to industry exposure and real-world projects, students gain the confidence and skills required to succeed in today's competitive technology landscape. The overall learning environment inspires continuous growth and excellence.",
-        image: "/images/home/testimonials/naman-punn-2.webp",
+        name: "Gunjan Rajput",
+        role: "B.Sc.(Hons) Forensic Science",
+        quote: "Studying Forensic Science at K.R. Mangalam University has been a truly rewarding experience. The School of Basic and Applied Sciences offers excellent academic and practical exposure through well-equipped laboratories, workshops, seminars and conferences, including NextGen Forensics and other international events. These opportunities have helped me connect classroom learning with current developments in the field, deepen my knowledge and build the confidence to present and explore new ideas. I am grateful for the guidance and support the department has given me.",
+        image: "/images/home/testimonials/student-images/gunjan-rajput.png",
     },
     {
         id: 3,
-        name: "Anu Sharma",
-        role: "BCA (AI & DS)",
-        quote: "My experience at K.R. Mangalam University has been a memorable learning journey. The BCA programme gave me a strong foundation in programming and problem-solving, while the supportive faculty and practical learning opportunities helped me grow both technically and personally. I'm thankful for the skills and experiences I gained during my time here.",
-        image: "/images/home/testimonials/anu-sharma-3.webp",
+        name: "Aman Dey",
+        role: "BA (Hons./Hons. With Research) in JMC 2023-27 Batch",
+        quote: "I am pursuing a Bachelor's in Journalism and Mass Communication at KRMU. Before joining the university, I had no knowledge of this field. However, thanks to the faculty here, I have grown considerably. In particular, I had no prior knowledge of design, but under the guidance of Karan Singh Sir, I have developed a strong command of graphic design. I am grateful to the university for helping me build a solid foundation for my future career.",
+        image: "/images/home/testimonials/student-images/aman-dey.png",
     },
     {
         id: 4,
-        name: "Somya Sharma",
-        role: "B.Tech. CSE (AI & ML), Batch 2023–27",
-        quote: "My journey at K.R. Mangalam University has been truly transformative, providing me with a strong foundation in Artificial Intelligence, Machine Learning, and Computer Science. Through hands-on projects, internships, hackathons, and continuous guidance from experienced faculty, I gained practical exposure that strengthened my technical and problem-solving skills. The University’s industry-oriented curriculum and supportive learning environment have prepared me to confidently pursue a career in AI-driven technologies while inspiring me to innovate and contribute meaningfully to the tech industry.",
-        image: "/images/home/testimonials/somya-sharma-4.webp",
+        name: "Arsalan Sahib",
+        role: "BA (Hons./Hons. With Research) in JMC 2023-27 Batch",
+        quote: "My experience at K.R. Mangalam University has been truly amazing. The faculty members are extremely supportive and knowledgeable, and are always ready to guide us whenever we need them. As a student of Journalism and Mass Communication, I have gained great exposure through practical activities, workshops and real-world learning opportunities. The environment here encourages creativity and learning beyond the classroom. I am proud to be part of KRMU.",
+        image: "/images/home/testimonials/student-images/arsalan-sahib.png",
     },
     {
         id: 5,
-        name: "Upadhyayula Nijaagna",
-        role: "B.Tech. CSE (AI & ML), Batch 2023–27",
-        quote: "K.R. Mangalam University has provided me with an environment where learning goes beyond the classroom. Through the B.Tech CSE (AI & ML) programme, I gained technical knowledge, practical experience, and the confidence to keep learning and adapting in the fast changing world of technology. The curriculum also offered exposure to diverse domains, helping me develop a broader perspective. I am grateful for this enriching journey.",
-        image: "/images/home/testimonials/upadhyayula-nijaagna-5.webp",
+        name: "Ms.Anamika Singh",
+        role: "B.Pharm",
+        quote: "Being selected by Lupin Pharma Pvt. Ltd. is a proud milestone in my journey. The guidance of my faculty, together with practical training and industry-oriented learning at the university, strengthened my confidence and skills. I am grateful for the support that helped me secure this opportunity and prepared me for a rewarding career in the pharmaceutical industry. I look forward to applying what I have learned at K.R. Mangalam University and contributing meaningfully to the field.",
+        image: "/images/home/testimonials/student-images/anamika-singh.jpg",
     },
     {
         id: 6,
-        name: "Namrata Muralidharan",
-        role: "BCA (AI & DS), Batch 2024–26",
-        quote: "My journey at K.R. Mangalam University, pursuing BCA in Artificial Intelligence & Data Science, has been a transformative blend of knowledge, innovation, and hands-on learning. The program has helped me turn curiosity into technical expertise through real-world projects and emerging technologies. With supportive faculty and an industry-focused environment, KRMU has empowered me to think beyond conventional boundaries and confidently shape my future in the world of technology.",
-        image: "/images/home/testimonials/namrata-6.webp",
+        name: "Mehak Dhanuka",
+        role: "B. Pharmacy",
+        quote: "Choosing this institution has been one of the best decisions of my academic journey. The supportive faculty, well-equipped laboratories and student-centred learning environment have helped me build strong technical knowledge, critical thinking and professional confidence. Regular academic, research and skill-development opportunities have prepared me to meet industry expectations and contribute meaningfully to society. I am grateful to be part of an institution that inspires excellence, ethics and lifelong learning.",
+        image: "/images/home/testimonials/student-images/mehak-dhanuka.jpg",
     },
     {
         id: 7,
-        name: "Dhruv Gupta",
-        role: "BCA (AI & DS), Batch 2024–26",
-        quote: "I came into K.R. Mangalam University unsure of my direction — I'm leaving with a track record I'm proud of. The BCA AI & Data Science curriculum, backed by faculty mentors who genuinely invested in my growth, gave me both a strong technical foundation and the confidence to pursue AI seriously. I maintained a spot on the Dean's List across every semester, represented KRMU in international opportunities, and consistently showcased my work across classrooms and industry events. Every milestone along the way is proof that the effort paid off.",
-        image: "/images/home/testimonials/dhruv-gupta-7.webp",
+        name: "Ansar Khan",
+        role: "B.Sc. (Hons.) Agriculture",
+        quote: "My journey at K.R. Mangalam University has been an important and memorable chapter of my life. During my time at the School of Agricultural Sciences, I gained valuable academic knowledge, practical exposure and insights into different dimensions of agriculture. The constant support of the faculty and the opportunities provided by the university helped me develop confidence, professional skills and a broader perspective. I am grateful to the university for contributing significantly to my personal and professional growth.",
+        image: "/images/home/testimonials/student-images/ansar-khan.jpg",
     },
     {
         id: 8,
-        name: "Rakesh G",
-        role: "BCA (AI & DS), Batch 2024–26",
-        quote: "My journey at K.R. Mangalam University has been an enriching experience that has strengthened both my technical knowledge and professional confidence. The BCA (AI & Data Science) programme provided me with practical exposure through projects, internships, and industry-oriented learning. The continuous guidance from faculty members has helped me develop problem-solving skills and prepared me for a successful career in technology.",
-        image: "/images/home/testimonials/rakesh-8.webp",
+        name: "Neetu Sharma",
+        role: "B.Sc. (Hons.) Agriculture",
+        quote: "My journey at K.R. Mangalam University has been full of learning and new experiences. The university has provided me with opportunities to explore beyond the classroom through practical learning, academic activities and exposure to new perspectives. These experiences have helped me become more confident, independent and adaptable while developing a broader understanding of the field of agriculture. Looking back, I feel well prepared to take on the challenges of my chosen field with curiosity and determination.",
+        image: "/images/home/testimonials/student-images/neetu-sharma.jpg",
     },
     {
         id: 9,
-        name: "Khushi",
-        role: "B.Tech. CSE (AI & ML), Batch 2023–27",
-        quote: "The university played an important role in shaping my learning journey. The B.Tech CSE (AI & ML) programme offered the right balance of academic rigour and practical exposure, enabling me to build a solid technical foundation and an industry-oriented mindset. The diverse learning opportunities and encouraging environment have prepared me to embrace new challenges with confidence. I sincerely appreciate the support and experiences that made this journey memorable.",
-        image: "/images/home/testimonials/khushi-9.webp",
+        name: "Shalika Kapoor",
+        role: "B.El.Ed. Alumni",
+        quote: "My internship strengthened my teaching skills, confidence and understanding of classroom practices. The Immersion Programmes in Dubai (2024) and Japan (2026) broadened my cultural and educational perspectives. These diverse experiences helped me become more independent, adaptable, confident and open-minded. I am grateful to K.R. Mangalam University for providing opportunities that have contributed greatly to my personal and professional growth.",
+        image: "/images/home/testimonials/student-images/shalika-kapoor.png",
     },
     {
         id: 10,
-        name: "Utsav Ratan",
-        role: "B.Tech. CSE, Batch 2024–28",
-        quote: "I’m Utsav Ratan, and choosing B.Tech at K.R. Mangalam University has been one of the best decisions for my academic and personal growth. The university provides excellent faculty, practical learning opportunities, modern infrastructure, and a supportive environment that encourages innovation and skill development. Every experience here has strengthened my confidence and prepared me for future challenges. I’m proud to be a part of the K.R. Mangalam University family.",
-        image: "/images/home/testimonials/utsav-ratan-10.webp",
+        name: "Sulakhani",
+        role: "B.El.Ed. Alumni",
+        quote: "My journey in the B.El.Ed. programme has been truly meaningful and rewarding. The guidance of dedicated faculty members, practical learning experiences and a supportive academic environment helped me grow both personally and professionally. Classroom teaching practice and interaction with young learners helped me understand the real impact of education. I now look forward to becoming a teacher who inspires curiosity and makes every child feel valued. I will always be grateful to my institution for shaping my confidence, knowledge and commitment to the teaching profession.",
+        image: "/images/home/testimonials/student-images/sulakhani.jpg",
     },
     {
         id: 11,
-        name: "Mrinal Prakash",
-        role: "B.Tech. CSE, Batch 2024–28",
-        quote: "K.R. Mangalam University gave me more than a degree — it gave me room to build. Leading GeekRoom KRMU as Chapter President and running things day-to-day as MD & Vice Chairperson at eOzka taught me more than any classroom could. I stayed consistent with LeetCode (Mrinalprakash9) to keep my fundamentals sharp, and my GitHub (MRINALPRAKASHFSD) has every project to show for it.",
-        image: "/images/home/testimonials/mrinal-prakash-11.webp",
+        name: "Aman Kumar",
+        role: "MCA (AI& ML)",
+        quote: "Pursuing my MCA at K.R. Mangalam University has been one of the best decisions for my career. The university's practical approach to learning, experienced faculty and industry-focused curriculum have significantly improved my technical and analytical skills. The guidance and opportunities provided throughout the programme have helped me become more confident and career-ready. I sincerely thank the university for supporting my professional journey.",
+        image: "/images/home/testimonials/student-images/aman-kumar.png",
+    },
+    {
+        id: 12,
+        name: "Namrata Muralidharan",
+        role: "BCA (AI & DS) 2024-26 batch",
+        quote: "My journey at K.R. Mangalam University, pursuing a BCA in Artificial Intelligence and Data Science, has been a transformative blend of knowledge, innovation and hands-on learning. The programme has helped me turn curiosity into technical expertise through real-world projects and emerging technologies. With supportive faculty and an industry-focused environment, KRMU has encouraged me to think beyond conventional boundaries and confidently shape my future in the world of technology.",
+        image: "/images/home/testimonials/student-images/namrata.png",
+    },
+    {
+        id: 13,
+        name: "Aayushi Kesari",
+        role: "B.A. (Hons.) in Economics with Research",
+        quote: "My time at K.R. Mangalam University has been truly memorable. The supportive faculty and well-structured curriculum have made my learning journey enriching and meaningful. The emphasis on practical projects, critical thinking and holistic development has helped me grow academically and personally. I am grateful to the university for the experiences, opportunities and guidance that have shaped my time here.",
+        image: "/images/home/testimonials/student-images/aayushi-kesari.jpg",
+    },
+    {
+        id: 14,
+        name: "Nivishka Goel",
+        role: "B.A. (Hons.) in Psychology with Research",
+        quote: "Joining the School of Liberal Arts (SOLA) at K.R. Mangalam University was easily one of the best choices I have made. To be honest, I was a bit unsure when I first started, but SOLA quickly felt like home. We are never just sitting in rows taking notes; our classes feel much more like real conversations where everyone's ideas matter. SOLA has taught me to ask better questions, listen carefully and see the world from more than one angle.",
+        image: "/images/home/testimonials/student-images/nivishka-goel.jpg",
+    },
+    {
+        id: 15,
+        name: "Veiresh",
+        role: "LL.B.",
+        quote: "My experience at the School of Legal Studies has been truly memorable. The course provides a strong foundation in legal theory while offering valuable opportunities for practical learning and professional development. The faculty members are dedicated, continuously encouraging us to engage in both academic and co-curricular activities. Participating in moot courts, legal research, conferences, workshops, and discussions has helped me develop a deeper, more practical understanding of the law. This supportive environment at KRMU has motivated me to grow into a confident and responsible future legal professional.",
+        image: "/images/home/testimonials/student-images/veiresh.png",
+    },
+    {
+        id: 16,
+        name: "Muskan",
+        role: "LL.B.",
+        quote: "My experience at K.R. Mangalam University has been an enriching blend of learning, practical exposure, and personal development. As a student in the School of Legal Studies, I have had numerous opportunities to participate in moot courts, conferences, seminars, workshops, and legal awareness programmes. These experiences have given me a broader perspective on both law and society. The faculty members are knowledgeable, supportive, and approachable, creating an environment that is both welcoming and intellectually motivating. Overall, my journey here is preparing me exceptionally well for my future legal career.",
+        image: "/images/home/testimonials/student-images/muskan.png",
+    },
+    {
+        id: 17,
+        name: "Aaditya Raj",
+        role: "BBA MBA Integrated",
+        quote: "Reality often unfolds differently from what we expect. We enter new chapters with carefully imagined plans, only to discover that life shapes its own path. My years at K.R. Mangalam University continuously reinforced this lesson. Unexpected turns brought new perspectives, meaningful friendships, and lessons no syllabus could teach. KRMU proved that growth lies not in having every answer, but in adapting when reality differs from expectation. As I look ahead, I embrace both ambition and uncertainty, knowing life's finest opportunities are often the ones we never planned for.",
+        image: "/images/home/testimonials/student-images/aaditya-raj.png",
+    },
+    {
+        id: 18,
+        name: "Mansi Sharma",
+        role: "MBA, 2nd Year",
+        quote: "My journey at the School of Management & Commerce, K.R. Mangalam University, has been truly transformative. The programme provided a strong management foundation while building essential skills like leadership, communication, and problem-solving. The supportive faculty, practical exposure, and industry-oriented activities boosted my confidence and professional readiness. Beyond academics, SOMC encouraged me to step out of my comfort zone and grow personally. I am grateful to the faculty for nurturing my ambitions. KRMU has not just prepared me for a career, but for the person I aspire to become.",
+        image: "/images/home/testimonials/student-images/mansi-sharma.png",
+    },
+    {
+        id: 19,
+        name: "Manav Bangari",
+        role: "Bachelor of Physiotherapy (BPT)",
+        quote: "Being a BPT student at K.R. Mangalam University has been an enriching and engaging journey. From interactive practical sessions to clinical exposure, every day brings something new to learn. The knowledgeable and supportive faculty make even complex topics easy to understand, making our course truly unique. Beyond academics, I have made great memories with friends along the way. Overall, my time at KRMU has been a perfect blend of practical learning, personal growth, and memorable experiences that prepare me for a rewarding healthcare career.",
+        image: "/images/home/testimonials/student-images/manav-bangari.png",
+    },
+    {
+        id: 20,
+        name: "Mehak Khanna",
+        role: "Bachelor of Physiotherapy (BPT)",
+        quote: "My BPT journey here has been a transformative chapter, shaping me into a confident and compassionate healthcare professional. Guidance from supportive mentors, alongside clinical postings, research activities, workshops, and conferences, broadened my perspective and strengthened my clinical abilities. As a graduate physiotherapist, I carry forward essential knowledge, practical skills, and the core values of empathy and patient-centred care. I am truly grateful for my time at KRMU and feel fully prepared to make a meaningful difference in the lives of those I serve.",
+        image: "/images/home/testimonials/student-images/mehak-khanna.png",
     },
 ];
 
@@ -120,14 +183,34 @@ export function TestimonialsSection({
         setCurrentIndex(index);
     }, []);
 
-    // Autoplay: changes slide every 6 seconds, pauses on mouse hover
+    const sectionRef = useRef<HTMLElement>(null);
+    const [isInView, setIsInView] = useState(false);
+
+    // Only activate autoplay when the testimonials section is visible in the viewport
     useEffect(() => {
-        if (isHovered) return;
+        const el = sectionRef.current;
+        if (!el || typeof IntersectionObserver === "undefined") {
+            setIsInView(true);
+            return;
+        }
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsInView(entry.isIntersecting);
+            },
+            { threshold: 0.15 }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
+
+    // Autoplay: changes slide every 6 seconds only when in viewport and not hovered
+    useEffect(() => {
+        if (!isInView || isHovered) return;
         const timer = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS_DATA.length);
         }, 6000);
         return () => clearInterval(timer);
-    }, [isHovered, currentIndex]);
+    }, [isInView, isHovered]);
 
     // Touch swipe support on mobile
     const handleTouchStart = (e: React.TouchEvent) => {
@@ -148,10 +231,32 @@ export function TestimonialsSection({
         touchStartX.current = null;
     };
 
+    const thumbnailsRef = useRef<HTMLDivElement>(null);
+
+    // Smoothly scroll ONLY the thumbnail container horizontally without affecting the page scroll
+    useEffect(() => {
+        const container = thumbnailsRef.current;
+        if (!container) return;
+        const activeBtn = container.children[currentIndex] as HTMLElement;
+        if (activeBtn) {
+            const scrollLeft =
+                activeBtn.offsetLeft -
+                container.offsetWidth / 2 +
+                activeBtn.offsetWidth / 2;
+            container.scrollTo({
+                left: scrollLeft,
+                behavior: "smooth",
+            });
+        }
+    }, [currentIndex]);
+
     const t = TESTIMONIALS_DATA[currentIndex];
 
     return (
-        <section className="relative w-full overflow-hidden pb-10 md:pb-12 xl:pb-20 font-poppins max-w-[1530px] mx-auto md:pt-8">
+        <section
+            ref={sectionRef}
+            className="relative w-full overflow-hidden pb-10 md:pb-12 xl:pb-20 font-poppins max-w-[1530px] mx-auto md:pt-8"
+        >
             <div className="max-w-[1530px] mx-auto relative z-10 px-4 md:px-8 xl:px-16">
                 <SectionTitle
                     title={
@@ -223,7 +328,7 @@ export function TestimonialsSection({
                                         {/* Quote Paragraph - Fixed min-height to prevent layout jump */}
                                         <div className="min-h-[220px] sm:min-h-[190px] md:min-h-[170px] flex items-center justify-center md:justify-start">
                                             <p className="italic text-white/90 text-sm md:text-[16px] xl:text-[18px] leading-relaxed font-light font-poppins relative z-10 text-justify md:text-left pr-0 md:pr-2 lg:pr-12">
-                                                {t.quote}
+                                                &ldquo;{t.quote}&rdquo;
                                             </p>
                                         </div>
 
@@ -246,7 +351,10 @@ export function TestimonialsSection({
                     </div>
 
                     {/* Student Thumbnail Avatars Row (Click any photo to view testimonial) */}
-                    <div className="w-full flex items-center justify-start sm:justify-center gap-3 sm:gap-4 mt-8 md:mt-10 overflow-x-auto py-4 px-2 min-h-[96px] sm:min-h-[104px] md:min-h-[112px] no-scrollbar">
+                    <div
+                        ref={thumbnailsRef}
+                        className="w-full flex items-center justify-start gap-3 mt-8 md:mt-10 overflow-x-auto py-4 px-2 min-h-[96px] sm:min-h-[104px] md:min-h-[112px] no-scrollbar scroll-smooth"
+                    >
                         {TESTIMONIALS_DATA.map((item, idx) => {
                             const isActive = currentIndex === idx;
                             return (

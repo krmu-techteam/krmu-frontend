@@ -341,27 +341,42 @@ export const homeAltConfig: HomeAltConfig = {
             "Varnan, B.Arch student testimonial at KRMU",
         "Mask_group_1_21163736b9.webp":
             "Aryan Mishra, B.Tech CSE student testimonial at KRMU",
-        "krish-agarwal-1.webp":
-            "Krish Agarwal, B.Tech CSE AI/ML student testimonial at KRMU",
-        "naman-punn-2.webp":
-            "Naman Punn, B.Tech CSE student testimonial at KRMU",
-        "anu-sharma-3.webp":
-            "Anu Sharma, BCA AI & DS student testimonial at KRMU",
-        "somya-sharma-4.webp":
-            "Somya Sharma, B.Tech CSE AIML student testimonial at KRMU",
-        "upadhyayula-nijaagna-5.webp":
-            "Upadhyayula Nijaagna, B.Tech CSE AIML student testimonial at KRMU",
-        "namrata-6.webp":
+        "anushka.png":
+            "Anushka Nath Roy, B.Sc. (Hons.) Forensic Science student testimonial at KRMU",
+        "gunjan-rajput.png":
+            "Gunjan Rajput, B.Sc. (Hons.) Forensic Science student testimonial at KRMU",
+        "aman-dey.png":
+            "Aman Dey, B.A. (Hons.) in JMC student testimonial at KRMU",
+        "arsalan-sahib.png":
+            "Arsalan Sahib, B.A. (Hons.) in JMC student testimonial at KRMU",
+        "anamika-singh.jpg":
+            "Ms. Anamika Singh, B.Pharm student testimonial at KRMU",
+        "mehak-dhanuka.jpg":
+            "Mehak Dhanuka, B.Pharm student testimonial at KRMU",
+        "ansar-khan.jpg":
+            "Ansar Khan, B.Sc. (Hons.) Agriculture student testimonial at KRMU",
+        "neetu-sharma.jpg":
+            "Neetu Sharma, B.Sc. (Hons.) Agriculture student testimonial at KRMU",
+        "shalika-kapoor.png":
+            "Shalika Kapoor, B.El.Ed. Alumni testimonial at KRMU",
+        "sulakhani.jpg": "Sulakhani, B.El.Ed. Alumni testimonial at KRMU",
+        "aman-kumar.png":
+            "Aman Kumar, MCA (AI & ML) student testimonial at KRMU",
+        "namrata.png":
             "Namrata Muralidharan, BCA (AI & DS) student testimonial at KRMU",
-        "dhruv-gupta-7.webp":
-            "Dhruv Gupta, BCA (AI & DS) student testimonial at KRMU",
-        "rakesh-8.webp": "Rakesh G, BCA (AI & DS) student testimonial at KRMU",
-        "khushi-9.webp":
-            "Khushi, B.Tech CSE (AI & ML) student testimonial at KRMU",
-        "utsav-ratan-10.webp":
-            "Utsav Ratan, B.Tech CSE student testimonial at KRMU",
-        "mrinal-prakash-11.webp":
-            "Mrinal Prakash, B.Tech CSE student testimonial at KRMU",
+        "aayushi-kesari.jpg":
+            "Aayushi Kesari, B.A. (Hons.) Economics student testimonial at KRMU",
+        "nivishka-goel.jpg":
+            "Nivishka Goel, B.A. (Hons.) Psychology student testimonial at KRMU",
+        "veiresh.png": "Veiresh, LL.B. student testimonial at KRMU",
+        "muskan.png": "Muskan, LL.B. student testimonial at KRMU",
+        "aaditya-raj.png":
+            "Aaditya Raj, BBA MBA Integrated student testimonial at KRMU",
+        "mansi-sharma.png": "Mansi Sharma, MBA student testimonial at KRMU",
+        "manav-bangari.png":
+            "Manav Bangari, Bachelor of Physiotherapy (BPT) student testimonial at KRMU",
+        "mehak-khanna.png":
+            "Mehak Khanna, Bachelor of Physiotherapy (BPT) student testimonial at KRMU",
 
         // Life@KRMU Why KRMU Celebrity & Star Events Slider (small case renamed)
         "padma-shri-kangana-ranaut-at-krmu.jpg":

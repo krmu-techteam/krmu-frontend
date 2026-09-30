@@ -3,4 +3,7 @@ export * from "./school.types";
 export * from "./school.utils";
 export * from "./data/schoolData";
 export * from "./data/schoolHeroLogo";
+export * from "./data/sbasTestimonials";
+export * from "./data/semceTestimonials";
+export * from "./data/smasTestimonials";
 export * from "./schemas";

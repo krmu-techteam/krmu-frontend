@@ -461,7 +461,15 @@ export default async function Page({ params }: Props) {
                     coebtn2={school?.coebtn2}
                 />
             )}
-            {school?.tetimonialtitle && (
+            {(school?.tetimonialtitle ||
+                slug === "school-of-basic-and-applied-sciences" ||
+                slug === "sbas" ||
+                slug === "school-of-emerging-media-and-creator-economy" ||
+                slug === "school-of-journalism-and-mass-communication" ||
+                slug === "semce" ||
+                slug === "school-of-medical-and-allied-sciences" ||
+                slug === "school-of-medical-allied-sciences" ||
+                slug === "smas") && (
                 <TestimonialsSection
                     title={school?.tetimonialtitle}
                     desc={school?.testimonialdesc}

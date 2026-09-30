@@ -4,7 +4,12 @@ import React, { useState, useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionDivider from "@/components/common/SectionDivider";
-import { TestimonialSectionProps } from "@/features/school";
+import {
+    TestimonialSectionProps,
+    SBAS_STATIC_TESTIMONIALS,
+    SEMCE_STATIC_TESTIMONIALS,
+    SMAS_STATIC_TESTIMONIALS,
+} from "@/features/school";
 import { STRAPI_URL } from "@/app/constant";
 
 const TestimonialsSection = ({
@@ -17,7 +22,24 @@ const TestimonialsSection = ({
     const [isHovered, setIsHovered] = useState(false);
     const touchStartX = useRef<number | null>(null);
 
-    const testimonialsData = testis || [];
+    const isSBAS =
+        slug === "school-of-basic-and-applied-sciences" || slug === "sbas";
+    const isSEMCE =
+        slug === "school-of-emerging-media-and-creator-economy" ||
+        slug === "school-of-journalism-and-mass-communication" ||
+        slug === "semce";
+    const isSMAS =
+        slug === "school-of-medical-and-allied-sciences" ||
+        slug === "school-of-medical-allied-sciences" ||
+        slug === "smas";
+
+    const testimonialsData = isSBAS
+        ? SBAS_STATIC_TESTIMONIALS
+        : isSEMCE
+          ? SEMCE_STATIC_TESTIMONIALS
+          : isSMAS
+            ? SMAS_STATIC_TESTIMONIALS
+            : testis || [];
 
     const handleNext = useCallback(() => {
         if (testimonialsData.length === 0) return;
@@ -64,7 +86,39 @@ const TestimonialsSection = ({
 
     if (testimonialsData.length === 0) return null;
 
+    const displayTitle =
+        isSBAS || isSEMCE || isSMAS ? title || "Students’ Testimonials" : title;
+    const displayDesc = isSBAS
+        ? desc ||
+          "Hear from our students about their transformative academic and practical journey at the School of Basic & Applied Sciences."
+        : isSEMCE
+          ? desc ||
+            "Hear from our students about their creative, media-driven, and industry-oriented journey at the School of Emerging Media and Creator Economy."
+          : isSMAS
+            ? desc ||
+              "Hear from our students about their transformative academic and clinical journey at the School of Medical & Allied Sciences."
+            : desc;
+
+    const headingText =
+        isSBAS || isSEMCE || isSMAS
+            ? displayTitle
+            : displayTitle?.split(" ")[1] || displayTitle;
     const t = testimonialsData[currentIndex];
+
+    const getImageSrc = (item: any) => {
+        const rawUrl = item?.url || item?.image || item?.userimg?.url;
+        if (!rawUrl) return "/images/placeholder.jpg";
+        if (rawUrl.startsWith("http") || rawUrl.startsWith("/")) return rawUrl;
+        return `${STRAPI_URL}${rawUrl}`;
+    };
+
+    const getImageAlt = (item: any) => {
+        return (
+            item?.alternativeText ||
+            item?.userimg?.alternativeText ||
+            `${item?.name || "Student"}, ${item?.education || ""} student testimonial at KRMU`
+        );
+    };
 
     return (
         <section
@@ -73,12 +127,12 @@ const TestimonialsSection = ({
         >
             <div className="max-w-[1440px] mx-auto w-full relative z-10 px-4 md:px-8 lg:px-12">
                 <div className="mb-10 max-w-5xl">
-                    <h2 className="heading-primary mb-4">
-                        {title?.split(" ")[1] || title}
-                    </h2>
-                    <p className="text-white/90 text-justify text-[15px] lg:text-[16px]">
-                        {desc}
-                    </p>
+                    <h2 className="heading-primary mb-4">{headingText}</h2>
+                    {displayDesc && (
+                        <p className="text-white/90 text-justify text-[15px] lg:text-[16px]">
+                            {displayDesc}
+                        </p>
+                    )}
                 </div>
 
                 <div
@@ -107,12 +161,8 @@ const TestimonialsSection = ({
                                     title="Click to view next testimonial"
                                 >
                                     <Image
-                                        src={
-                                            t.userimg?.url
-                                                ? `${STRAPI_URL}${t.userimg.url}`
-                                                : "/images/placeholder.jpg"
-                                        }
-                                        alt={`${t.name || "Student"}, ${t.education || ""} student testimonial at KRMU`}
+                                        src={getImageSrc(t)}
+                                        alt={getImageAlt(t)}
                                         fill
                                         sizes="(max-width: 1024px) 100vw, 300px"
                                         className="object-cover rounded-[16px] transition-transform duration-500 group-hover:scale-105"
@@ -137,7 +187,12 @@ const TestimonialsSection = ({
 
                                         <div className="min-h-[220px] sm:min-h-[190px] md:min-h-[170px] flex items-center justify-center md:justify-start">
                                             <p className="italic text-white/90 text-sm md:text-[16px] xl:text-[18px] leading-relaxed font-light font-poppins relative z-10 text-justify md:text-left pr-0 md:pr-2 lg:pr-12">
-                                                {t.info}
+                                                &ldquo;
+                                                {t.info?.replace(
+                                                    /^["“]|["”]$/g,
+                                                    ""
+                                                )}
+                                                &rdquo;
                                             </p>
                                         </div>
 
@@ -178,12 +233,8 @@ const TestimonialsSection = ({
                                     title={`${item.name} - ${item.education}`}
                                 >
                                     <Image
-                                        src={
-                                            item.userimg?.url
-                                                ? `${STRAPI_URL}${item.userimg.url}`
-                                                : "/images/placeholder.jpg"
-                                        }
-                                        alt={item.name || "Student"}
+                                        src={getImageSrc(item)}
+                                        alt={getImageAlt(item)}
                                         fill
                                         sizes="200px"
                                         quality={95}

@@ -47,14 +47,14 @@ export const JOURNEY_VIDEOS: JourneyVideoType[] = [
     {
         id: 2,
         title: "International Students Share Their KRMU Experience | Vasudha Global Connect 2026",
-        thumbnail: "/modules/home/journey/j2.png",
+        thumbnail: "/modules/home/journey/youtube1.jpg",
         duration: "7:30",
         link: "https://www.youtube.com/watch?v=F3PmP0EAuaQ",
     },
     {
         id: 3,
         title: "Inside KRMU's Robotics Lab 🤖 | Student Innovations, Projects & Future Tech",
-        thumbnail: "/modules/home/journey/j3.png",
+        thumbnail: "/modules/home/journey/youtube2.jpg",
         duration: "2:35",
         link: "https://www.youtube.com/watch?v=iLzhza28QnM&t=12s",
     },

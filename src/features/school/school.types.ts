@@ -91,7 +91,7 @@ export interface ExcellenceCardProps {
 export interface TestimonialSectionProps {
     title: string;
     desc: string;
-    testis: SchoolTestimonials[];
+    testis?: any[];
     slug?: string;
 }
 
