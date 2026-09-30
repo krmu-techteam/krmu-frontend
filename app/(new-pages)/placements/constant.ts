@@ -418,13 +418,49 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     email: "director.cdc@krmangalam.edu.in",
   },
   {
+    id: 9,
+    image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/anavil-pandir.png",
+    imageAlt: "Mr. Anavil Pandir - Deputy Director",
+    name: "Mr. Anavil Pandir",
+    designation: "Deputy Director",
+    email: "anavil.pandir@krmangalam.edu.in",
+  },
+  {
+    id: 8,
+    image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/gaurav-kumar-tiwari.png",
+    imageAlt: "Gaurav Kumar Tiwari - Assistant General Manager",
+    name: "Gaurav Kumar Tiwari",
+    designation: "Assistant General Manager",
+    email: "gauravkumar.tiwari@krmangalam.edu.in",
+  },
+  {
     id: 2,
     image:
       "https://krmangalam.edu.in/images/placements/cdc-team/dhaval-bhaskar.png",
-    imageAlt: "Dhaval Bhaskar - Sr. Placement Manager",
+    imageAlt: "Dhaval Bhaskar - Senior Placement Manager",
     name: "Dhaval Bhaskar",
     designation: "Sr. Placement Manager",
     email: "dhaval.bhaskar@krmangalam.edu.in",
+  },
+  {
+    id: 5,
+    image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/sreejita-saha.jpg",
+    imageAlt: "Sreejita Saha - Manager, Career Development Centre",
+    name: "Sreejita Saha",
+    designation: "Manager - Career Development Centre",
+    email: "sreejita.saha@krmangalam.edu.in",
+  },
+  {
+    id: 4,
+    image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/charu-gola.jpg",
+    imageAlt: "Charu Gola - Assistant Manager, CDC",
+    name: "Charu Gola",
+    designation: "Assistant Manager - CDC",
+    email: "charu.gola@krmangalam.edu.in",
   },
   {
     id: 3,
@@ -434,25 +470,6 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     name: "Jharna Jagtiani",
     designation: "Senior Manager",
     email: "jharnavijay.jagtiani@krmangalam.edu.in",
-  },
-  {
-    id: 4,
-    image:
-      "https://krmangalam.edu.in/images/placements/cdc-team/charu-gola.jpg",
-    imageAlt: "Charu Gola - Assistant Manager- CDC",
-    name: "Charu Gola",
-    designation: "Assistant Manager- CDC",
-    email: "charu.gola@krmangalam.edu.in",
-  },
-
-  {
-    id: 5,
-    image:
-      "https://krmangalam.edu.in/images/placements/cdc-team/sreejita-saha.jpg",
-    imageAlt: "Sreejita Saha - Manager- Career Development Centre",
-    name: "Sreejita Saha",
-    designation: "Manager- Career Development Centre",
-    email: "sreejita.saha@krmangalam.edu.in",
   },
   {
     id: 6,
@@ -467,7 +484,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     id: 7,
     image:
       "https://krmangalam.edu.in/images/placements/cdc-team/lokesh-lakhotia.png",
-    imageAlt: "Lokesh Lakhotia",
+    imageAlt: "Lokesh Lakhotia - Placement Manager",
     name: "Lokesh Lakhotia",
     designation: "Placement Manager",
     email: "lokesh.lakhotia@krmangalam.edu.in",
