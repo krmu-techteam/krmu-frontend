@@ -418,7 +418,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     email: "director.cdc@krmangalam.edu.in",
   },
   {
-    id: 9,
+    id: 2,
     image:
       "https://krmangalam.edu.in/images/placements/cdc-team/anavil-pandir.png",
     imageAlt: "Mr. Anavil Pandir - Deputy Director",
@@ -470,6 +470,15 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     name: "Jharna Jagtiani",
     designation: "Senior Manager",
     email: "jharnavijay.jagtiani@krmangalam.edu.in",
+  },
+  {
+    id: 3,
+    image:
+      "https://krmangalam.edu.in/images/placements/cdc-team/renuka-sharma.png",
+    imageAlt: "Renuka Sharma",
+    name: "Renuka Sharma",
+    designation: "Manager ",
+    email: "renuka.sharma@krmangalam.edu.in",
   },
   {
     id: 6,
