@@ -284,6 +284,7 @@ export function LifeAtKRMUSection() {
                 sizes="(max-width: 768px) 380px, 520px"
                 className="object-cover object-center group-hover:scale-[1.04] transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] pointer-events-none will-change-transform"
                 loading="lazy"
+                unoptimized
             />
 
             {/* Subtle bottom gradient vignette (Smooth height and opacity expansion) */}

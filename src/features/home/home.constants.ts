@@ -167,66 +167,66 @@ export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
     {
         id: 1,
         src: "/images/home/whykrmu/1.jpg",
-        // alt: "Students enjoying recreation and sports at K.R. Mangalam University indoor gaming lounge",
-        // category: "Sports & Recreation",
-        // title: "Campus Recreation Hub",
-        // description:
-        //     "Vibrant recreational lounge with pool, indoor games, and social relaxation zones.",
+        alt: "Students enjoying recreation and sports at K.R. Mangalam University indoor gaming lounge",
+        category: "Sports & Recreation",
+        title: "Campus Recreation Hub",
+        description:
+            "Vibrant recreational lounge with pool, indoor games, and social relaxation zones.",
     },
     {
         id: 2,
         src: "/images/home/whykrmu/2.jpg",
-        // alt: "Students working with quadruped robotics in KRMU advanced robotics lab",
-        // category: "Tech & Robotics",
-        // title: "Robotics & AI Labs",
-        // description:
-        //     "Hands-on engineering with quadruped robotics, automation systems, and innovative student projects.",
+        alt: "Students working with quadruped robotics in KRMU advanced robotics lab",
+        category: "Tech & Robotics",
+        title: "Robotics & AI Labs",
+        description:
+            "Hands-on engineering with quadruped robotics, automation systems, and innovative student projects.",
     },
     {
         id: 3,
         src: "/images/home/whykrmu/3.jpg",
-        // alt: "Diverse students engaging in campus life and peer learning at KRMU",
-        // category: "Campus Life",
-        // title: "Vibrant Student Community",
-        // description:
-        //     "Collaborative learning, outdoor brainstorming, and lifelong camaraderie on campus.",
+        alt: "Diverse students engaging in campus life and peer learning at KRMU",
+        category: "Campus Life",
+        title: "Vibrant Student Community",
+        description:
+            "Collaborative learning, outdoor brainstorming, and lifelong camaraderie on campus.",
     },
     {
         id: 4,
         src: "/images/home/whykrmu/4.jpg",
-        // alt: "Journalism student reporting from the KRMU School of Journalism and Mass Communication studio",
-        // category: "Media & Broadcasting",
-        // title: "SJMC Media Studio",
-        // description:
-        //     "Professional broadcasting equipment, news reporting suites, and multi-camera television studios.",
+        alt: "Journalism student reporting from the KRMU School of Journalism and Mass Communication studio",
+        category: "Media & Broadcasting",
+        title: "SJMC Media Studio",
+        description:
+            "Professional broadcasting equipment, news reporting suites, and multi-camera television studios.",
     },
     {
         id: 5,
         src: "/images/home/whykrmu/5.jpg",
-        // alt: "Student researching in the modern KRMU central library",
-        // category: "Academic Excellence",
-        // title: "Central Knowledge Hub",
-        // description:
-        //     "Extensive digital and print collections fostering in-depth academic inquiry and focused study.",
+        alt: "Student researching in the modern KRMU central library",
+        category: "Academic Excellence",
+        title: "Central Knowledge Hub",
+        description:
+            "Extensive digital and print collections fostering in-depth academic inquiry and focused study.",
     },
     {
         id: 6,
         src: "/images/home/whykrmu/6.jpg",
-        // alt: "Ankur Warikoo being felicitated during Aarambh orientation program at K.R. Mangalam University",
-        // category: "Leadership Sessions",
-        // title: "Ankur Warikoo at Aarambh",
-        // description:
-        //     "Mentorship and motivational sessions with eminent entrepreneurs, founders, and industry trailblazers.",
+        alt: "Ankur Warikoo being felicitated during Aarambh orientation program at K.R. Mangalam University",
+        category: "Leadership Sessions",
+        title: "Ankur Warikoo at Aarambh",
+        description:
+            "Mentorship and motivational sessions with eminent entrepreneurs, founders, and industry trailblazers.",
     },
 
     {
         id: 9,
         src: "/images/home/whykrmu/9.jpg",
-        // alt: "Fashion models presenting designer collection at KRMU fashion show",
-        // category: "Fashion & Design",
-        // title: "Bello Globe Life Runway",
-        // description:
-        //     "High-fashion runway presentations showcasing the creative couture of student designers.",
+        alt: "Fashion models presenting designer collection at KRMU fashion show",
+        category: "Fashion & Design",
+        title: "Bello Globe Life Runway",
+        description:
+            "High-fashion runway presentations showcasing the creative couture of student designers.",
     },
 ];
 
