@@ -378,26 +378,46 @@ export const homeAltConfig: HomeAltConfig = {
         "mehak-khanna.png":
             "Mehak Khanna, Bachelor of Physiotherapy (BPT) student testimonial at KRMU",
 
-        // Life@KRMU Why KRMU Celebrity & Star Events Slider (small case renamed)
+        // Life@KRMU Why KRMU Celebrity & Star Events Slider (small case renamed & webp)
         "padma-shri-kangana-ranaut-at-krmu.jpg":
+            "Padma Shri Kangana Ranaut at K.R. Mangalam University special session",
+        "Padma Shri Kangana Ranaut at KRMU.webp":
             "Padma Shri Kangana Ranaut at K.R. Mangalam University special session",
         "naved.jpg":
             "RJ Naved interacting with students at K.R. Mangalam University guest session",
+        "naved.webp":
+            "RJ Naved interacting with students at K.R. Mangalam University guest session",
         "shukhi.jpg":
+            "Singer Sukh-E performing live at K.R. Mangalam University campus event",
+        "shukhi.webp":
             "Singer Sukh-E performing live at K.R. Mangalam University campus event",
         "edm-night-2025.jpg":
             "EDM Night concert and electronic music festival at K.R. Mangalam University",
+        "EDM night 2025.webp":
+            "EDM Night concert and electronic music festival at K.R. Mangalam University",
         "aarambh-2025.jpg":
+            "Aarambh 2025 annual cultural fest celebration at K.R. Mangalam University",
+        "Aarambh 2025.webp":
             "Aarambh 2025 annual cultural fest celebration at K.R. Mangalam University",
         "aarambh-2026.jpg":
             "Aarambh 2026 youth festival at K.R. Mangalam University",
+        "Aarambh 2026.webp":
+            "Aarambh 2026 youth festival at K.R. Mangalam University",
         "aarambh-2026-1.jpg":
+            "Aarambh cultural night celebrations at K.R. Mangalam University",
+        "Aarambh 2026 1.webp":
             "Aarambh cultural night celebrations at K.R. Mangalam University",
         "solesta-26.jpg":
             "SOLESTA inter-college cultural and tech festival at K.R. Mangalam University",
+        "SOLESTA'26.webp":
+            "SOLESTA inter-college cultural and tech festival at K.R. Mangalam University",
         "freshers-2025.jpg":
             "Freshers party and welcome celebration for new students at K.R. Mangalam University",
+        "Freshers 2025.webp":
+            "Freshers party and welcome celebration for new students at K.R. Mangalam University",
         "edude-fiesta-2023.jpg":
+            "Edude Fiesta carnival and celebrations at K.R. Mangalam University",
+        "Edude Fiesta 2023.webp":
             "Edude Fiesta carnival and celebrations at K.R. Mangalam University",
 
         // Life@KRMU Top Slider (1.jpg to 10.jpg in whykrmu)

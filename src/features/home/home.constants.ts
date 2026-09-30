@@ -233,7 +233,7 @@ export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
 export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
     {
         id: 101,
-        src: "/images/home/whykrmu/celebrity/padma-shri-kangana-ranaut-at-krmu.jpg",
+        src: "/images/home/whykrmu/celebrity2/Padma Shri Kangana Ranaut at KRMU.webp",
         alt: "Kangana Ranaut – Emergency Movie Promotion at K.R. Mangalam University",
         title: "Kangana Ranaut – Emergency Movie Promotion",
         description:
@@ -241,7 +241,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 102,
-        src: "/images/home/whykrmu/celebrity/naved.jpg",
+        src: "/images/home/whykrmu/celebrity2/naved.webp",
         alt: "RJ Naved – Student Interaction & Workshop at K.R. Mangalam University",
         title: "RJ Naved – Student Interaction & Workshop",
         description:
@@ -249,7 +249,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 103,
-        src: "/images/home/whykrmu/celebrity/edm-night-2025.jpg",
+        src: "/images/home/whykrmu/celebrity2/EDM night 2025.webp",
         alt: "EDM Night 2025 featuring Ola Ras from Ukraine, Ellena Chadhary, and Nick at K.R. Mangalam University",
         title: "EDM Night 2025",
         description:
@@ -257,7 +257,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 104,
-        src: "/images/home/whykrmu/celebrity/aarambh-2025.jpg",
+        src: "/images/home/whykrmu/celebrity2/Aarambh 2025.webp",
         alt: "Aarambh ’25 – Freshers’ Orientation with Aman Gupta at K.R. Mangalam University",
         title: "Aarambh ’25 – Freshers’ Orientation",
         description:
@@ -265,7 +265,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 105,
-        src: "/images/home/whykrmu/celebrity/solesta-26.jpg",
+        src: "/images/home/whykrmu/celebrity2/SOLESTA'26.webp",
         alt: "Solesta'26 – Live Performance by Jasmine Sandlas at K.R. Mangalam University",
         title: "Solesta'26",
         description:
@@ -273,7 +273,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 106,
-        src: "/images/home/whykrmu/celebrity/freshers-2025.jpg",
+        src: "/images/home/whykrmu/celebrity2/Freshers 2025.webp",
         alt: "Freshers’ Party 2025 with Nora Fatehi at K.R. Mangalam University",
         title: "Freshers’ Party 2025 – A Star-Studded Welcome",
         description:
@@ -281,7 +281,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 107,
-        src: "/images/home/whykrmu/celebrity/aarambh-2026.jpg",
+        src: "/images/home/whykrmu/celebrity2/Aarambh 2026.webp",
         alt: "Aarambh ’26 – Live Performance by AKASA at K.R. Mangalam University",
         title: "Aarambh ’26 – Live Performance by AKASA",
         description:
@@ -289,7 +289,7 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 108,
-        src: "/images/home/whykrmu/celebrity/edude-fiesta-2023.jpg",
+        src: "/images/home/whykrmu/celebrity2/Edude Fiesta 2023.webp",
         alt: "EduFiesta 2023 Freshers’ Party with Parmish Verma at K.R. Mangalam University",
         title: "EduFiesta 2023 – Freshers’ Party",
         description:
@@ -297,11 +297,19 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 109,
-        src: "/images/home/whykrmu/celebrity/aarambh-2026-1.jpg",
+        src: "/images/home/whykrmu/celebrity2/Aarambh 2026 1.webp",
         alt: "Aarambh ’26 – New Batch Welcome & Orientation with Ankur Warikoo at K.R. Mangalam University",
         title: "Aarambh ’26 – New Batch Welcome & Orientation",
         description:
             "The Department of Student Welfare (DSW) and the Office of Academic Affairs jointly organised Aarambh ’26, welcoming the incoming batch with an inspiring address by Chief Guest and motivational speaker Ankur Warikoo, who encouraged students to embrace their university journey with confidence, purpose, and ambition.",
+    },
+    {
+        id: 110,
+        src: "/images/home/whykrmu/celebrity2/shukhi.webp",
+        alt: "Singer Sukh-E performing live at K.R. Mangalam University campus event",
+        title: "Sukh-E Live Performance",
+        description:
+            "Renowned music producer and singer Sukh-E thrilled students with an electrifying live campus performance at K.R. Mangalam University.",
     },
 ];
 

@@ -51,7 +51,7 @@ const getActionIcon = (label: string) => {
 export function LifeAtKRMUSection() {
     // Row 1 (Top Slider): Campus Life, Labs & Academics (/images/home/whykrmu)
     const row1 = LIFE_AT_KRMU_GALLERY;
-    // Row 2 (Bottom Slider): Celebrities, Concerts & Fests (/images/home/whykrmu/celebrity)
+    // Row 2 (Bottom Slider): Celebrities, Concerts & Fests (/images/home/whykrmu/celebrity2)
     const row2 = LIFE_AT_KRMU_CELEBRITY_GALLERY;
 
     // Tripled sets for mathematically seamless infinite marquee on all screen sizes
