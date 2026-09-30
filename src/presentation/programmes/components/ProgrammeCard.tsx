@@ -220,16 +220,16 @@ export default function ProgrammeCard({
             >
                 <button
                     onClick={onFeeClick}
-                    className={`flex items-center justify-center px-3 md:px-4 py-2 border border-white/20 rounded text-[12px] md:text-[14px] text-white tracking-wide hover:bg-white/5 transition-colors cursor-pointer flex-1`}
+                    className={`flex items-center justify-center px-3 md:px-4 py-2 border border-white/20 rounded text-[12px] md:text-[12px] text-white tracking-wide hover:bg-white/5 transition-colors cursor-pointer flex-1`}
                 >
-                    <span>EXPLORE</span>
+                    <span>FEE STRUCTURE</span>
                 </button>
 
                 {program.showApplyNow && program.eligibilityUtmLink && (
                     <Link
                         href={program.eligibilityUtmLink}
                         target="_blank"
-                        className={`flex items-center justify-center px-3 md:px-4 py-2 border border-[#cb000d] rounded text-[12px] md:text-[14px] bg-[#cb000d] font-medium text-white transition-colors flex-1`}
+                        className={`flex items-center justify-center px-3 md:px-4 py-2 border border-[#cb000d] rounded text-[12px] md:text-[12px] bg-[#cb000d] font-medium text-white transition-colors flex-1`}
                     >
                         <span>APPLY NOW</span>
                     </Link>

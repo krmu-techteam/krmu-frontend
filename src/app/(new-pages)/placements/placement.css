@@ -7,14 +7,14 @@
 } */
 
 @theme {
-    --font-poppins: var(--font-family-poppins);
+    --font-poppins: var(--font-poppins);
     --font-newsreader: var(--font-family-newsreader);
 }
 .font-newsreader {
-    font-family: var(--font-newsreader);
+    font-family: var(--font-family-newsreader), "Newsreader", serif;
 }
 .font-poppins {
-    font-family: var(--font-poppins);
+    font-family: var(--font-poppins), "Poppins", sans-serif;
 }
 
 @keyframes recruiter-marquee {

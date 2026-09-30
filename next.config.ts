@@ -136,6 +136,11 @@ const nextConfig: NextConfig = {
                 destination: "/placements",
                 permanent: true,
             },
+            {
+                source: "/happenings/magzine-reflections",
+                destination: "/happenings/magazine-reflections",
+                permanent: true,
+            },
         ];
     },
     async rewrites() {

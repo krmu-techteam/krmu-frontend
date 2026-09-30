@@ -28,7 +28,7 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
                 preload="auto"
                 title="KR Mangalam university video"
                 aria-label="KR Mangalam university video"
-                className="absolute top-0 left-0 w-full h-full object-contain scale-[1.07] lg:scale-100 lg:object-fill lg:scale-y-[1.0634] z-0"
+                className="absolute top-0 left-0 w-full h-full object-contain scale-[1.07] lg:scale-100 lg:object-cover lg:scale-y-[1.0634] z-0"
             >
                 <source src={videoSrc} type="video/mp4" />
                 {videoSrc !== "/modules/home/hero/krm_bg_hero.mp4" && (

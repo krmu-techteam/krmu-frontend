@@ -25,7 +25,7 @@ export default function PlacementLayout({
 }) {
     return (
         <div
-            className={`${poppins.variable} ${newsreader.variable} antialiased`}
+            className={`${poppins.variable} ${newsreader.variable} antialiased bg-[#fbf8f3] text-[#001836] min-h-screen`}
         >
             <div id="main-header">
                 <HeaderWrapper />

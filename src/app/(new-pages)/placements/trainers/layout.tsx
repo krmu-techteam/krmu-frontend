@@ -20,12 +20,5 @@ export default function Trainerslayout({
 }: {
     children: React.ReactNode;
 }) {
-    return (
-        <html
-            lang="en"
-            className={`${poppins.variable} ${newsreader.variable}`}
-        >
-            <body className="antialiased">{children}</body>
-        </html>
-    );
+    return <div className="w-full">{children}</div>;
 }

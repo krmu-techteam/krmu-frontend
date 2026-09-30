@@ -218,7 +218,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.7,
         },
         {
-            url: `${baseUrl}/happenings/magzine-reflections`,
+            url: `${baseUrl}/happenings/magazine-reflections`,
             changeFrequency: "monthly",
             priority: 0.7,
         },
