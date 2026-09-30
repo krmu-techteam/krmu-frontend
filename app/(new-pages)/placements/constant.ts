@@ -427,7 +427,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     email: "anavil.pandir@krmangalam.edu.in",
   },
   {
-    id: 8,
+    id: 3,
     image:
       "https://krmangalam.edu.in/images/placements/cdc-team/gaurav-kumar-tiwari.png",
     imageAlt: "Gaurav Kumar Tiwari - Assistant General Manager",
@@ -436,7 +436,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     email: "gauravkumar.tiwari@krmangalam.edu.in",
   },
   {
-    id: 2,
+    id: 4,
     image:
       "https://krmangalam.edu.in/images/placements/cdc-team/dhaval-bhaskar.png",
     imageAlt: "Dhaval Bhaskar - Senior Placement Manager",
@@ -454,7 +454,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     email: "sreejita.saha@krmangalam.edu.in",
   },
   {
-    id: 4,
+    id: 6,
     image:
       "https://krmangalam.edu.in/images/placements/cdc-team/charu-gola.jpg",
     imageAlt: "Charu Gola - Assistant Manager, CDC",
@@ -463,7 +463,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     email: "charu.gola@krmangalam.edu.in",
   },
   {
-    id: 3,
+    id: 7,
     image:
       "https://krmangalam.edu.in/images/placements/cdc-team/jharna-jagtiani.jpg",
     imageAlt: "Jharna Jagtiani - Senior Manager",
@@ -472,7 +472,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     email: "jharnavijay.jagtiani@krmangalam.edu.in",
   },
   {
-    id: 3,
+    id: 8,
     image:
       "https://krmangalam.edu.in/images/placements/cdc-team/renuka-sharma.png",
     imageAlt: "Renuka Sharma",
@@ -481,7 +481,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     email: "renuka.sharma@krmangalam.edu.in",
   },
   {
-    id: 6,
+    id: 9,
     image:
       "https://krmangalam.edu.in/images/placements/cdc-team/vanshita-jain.jpg",
     imageAlt: "Vanshita Jain - Internship Manager",
@@ -490,7 +490,7 @@ export const cdcTeamMembers: CDCTeamMemberData[] = [
     email: "vanshita.jain@krmangalam.edu.in",
   },
   {
-    id: 7,
+    id: 10,
     image:
       "https://krmangalam.edu.in/images/placements/cdc-team/lokesh-lakhotia.png",
     imageAlt: "Lokesh Lakhotia - Placement Manager",
