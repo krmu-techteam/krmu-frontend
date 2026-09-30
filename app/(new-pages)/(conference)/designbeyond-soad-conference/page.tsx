@@ -15,7 +15,7 @@ import ThematicTracks from "./components/thematicTracks";
 const page = () => {
   return (
     <>
-      <main className="font-poppins">
+      <main className="font-poppins temp-class">
         <HeroSection />
         <ConferenceMenus />
         <DesignBeyondVision />
