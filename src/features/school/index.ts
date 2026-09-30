@@ -14,4 +14,5 @@ export * from "./data/solaTestimonials";
 export * from "./data/solsTestimonials";
 export * from "./data/somcTestimonials";
 export * from "./data/sprsTestimonials";
+export * from "./data/sohmctTestimonials";
 export * from "./schemas";

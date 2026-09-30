@@ -17,6 +17,7 @@ import {
     SOLS_STATIC_TESTIMONIALS,
     SOMC_STATIC_TESTIMONIALS,
     SPRS_STATIC_TESTIMONIALS,
+    SOHMCT_STATIC_TESTIMONIALS,
 } from "@/features/school";
 import { STRAPI_URL } from "@/app/constant";
 
@@ -63,6 +64,10 @@ const TestimonialsSection = ({
         slug === "school-of-physiotherapy-and-rehabilitation-sciences" ||
         slug === "school-of-physiotherapy-rehabilitation-sciences" ||
         slug === "sprs";
+    const isSOHMCT =
+        slug === "school-of-hotel-management-and-catering-technology" ||
+        slug === "school-of-hotel-management-catering-technology" ||
+        slug === "sohmct";
 
     const testimonialsData = isSBAS
         ? SBAS_STATIC_TESTIMONIALS
@@ -86,7 +91,9 @@ const TestimonialsSection = ({
                           ? SOMC_STATIC_TESTIMONIALS
                           : isSPRS
                             ? SPRS_STATIC_TESTIMONIALS
-                            : testis || [];
+                            : isSOHMCT
+                              ? SOHMCT_STATIC_TESTIMONIALS
+                              : testis || [];
 
     const handleNext = useCallback(() => {
         if (testimonialsData.length === 0) return;
@@ -144,7 +151,8 @@ const TestimonialsSection = ({
         isSOLA ||
         isSOLS ||
         isSOMC ||
-        isSPRS
+        isSPRS ||
+        isSOHMCT
             ? title || "Students’ Testimonials"
             : title;
     const displayDesc = isSBAS
@@ -180,7 +188,10 @@ const TestimonialsSection = ({
                           : isSPRS
                             ? desc ||
                               "Hear from our students about their compassionate healthcare, clinical exposure, and rehabilitative sciences journey at the School of Physiotherapy and Rehabilitation Sciences."
-                            : desc;
+                            : isSOHMCT
+                              ? desc ||
+                                "Hear from our students about their immersive hospitality training, culinary arts, and industry internship journey at the School of Hotel Management & Catering Technology."
+                              : desc;
 
     const headingText =
         isSBAS ||
@@ -193,7 +204,8 @@ const TestimonialsSection = ({
         isSOLA ||
         isSOLS ||
         isSOMC ||
-        isSPRS
+        isSPRS ||
+        isSOHMCT
             ? displayTitle
             : displayTitle?.split(" ")[1] || displayTitle;
     const t = testimonialsData[currentIndex];

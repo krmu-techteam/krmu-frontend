@@ -35,8 +35,8 @@ export function PartnersSection() {
                     className="px-0 sm:px-12 md:px-16"
                     containerClassName="items-center"
                     slideClassName="basis-[40%] sm:basis-1/3 lg:basis-1/5 xl:basis-1/6 px-1.5 md:px-2"
-                    prevArrowClassName="hidden sm:flex left-1 md:left-2 lg:left-3 !rounded-[4px] !bg-[#2C516E] !text-[#ffffff] !border-none hover:bg-brand-blue"
-                    nextArrowClassName="hidden sm:flex right-1 md:right-2 lg:right-3 !rounded-[4px] !bg-[#2C516E] !text-[#ffffff] !border-none hover:bg-brand-blue"
+                    prevArrowClassName="hidden sm:flex left-2 md:left-16 lg:left-20 !rounded-[4px] !bg-[#2C516E] !text-[#ffffff] !border-none hover:bg-brand-blue"
+                    nextArrowClassName="hidden sm:flex right-2 md:right-16 lg:right-20 !rounded-[4px] !bg-[#2C516E] !text-[#ffffff] !border-none hover:bg-brand-blue"
                 >
                     {PARTNER_UNIVERSITIES.map((partner, i) => (
                         <div

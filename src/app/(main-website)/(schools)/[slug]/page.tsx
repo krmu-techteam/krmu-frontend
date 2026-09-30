@@ -491,7 +491,10 @@ export default async function Page({ params }: Props) {
                 slug ===
                     "school-of-physiotherapy-and-rehabilitation-sciences" ||
                 slug === "school-of-physiotherapy-rehabilitation-sciences" ||
-                slug === "sprs") && (
+                slug === "sprs" ||
+                slug === "school-of-hotel-management-and-catering-technology" ||
+                slug === "school-of-hotel-management-catering-technology" ||
+                slug === "sohmct") && (
                 <TestimonialsSection
                     title={school?.tetimonialtitle}
                     desc={school?.testimonialdesc}

@@ -91,6 +91,16 @@ export const sohmctAltConfig: SchoolAltConfig = {
         "Vashnu Goswami ":
             "Vashnu Goswami, B.HMCT student testimonial at KRMU SOHMCT",
         Vashnu: "Vashnu Goswami, B.HMCT student testimonial at KRMU SOHMCT",
+        Chyeshta: "Chyeshta, BHMCT student at KRMU SOHMCT",
+        "Prateek Lochav": "Prateek Lochav, BHMCT student at KRMU SOHMCT",
+        "Piyush Gola": "Piyush Gola, BHMCT student at KRMU SOHMCT",
+        "Mahesh Joon": "Mahesh Joon, BHMCT student at KRMU SOHMCT",
+        Saloni: "Saloni, BHMCT student at KRMU SOHMCT",
+        "Deetya Bedi": "Deetya Bedi, BHMCT student at KRMU SOHMCT",
+        "Bhavesh Joshi": "Bhavesh Joshi, BHMCT student at KRMU SOHMCT",
+        "Raghav Sharma": "Raghav Sharma, BHMCT student at KRMU SOHMCT",
+        Rudraksh: "Rudraksh, BHMCT student at KRMU SOHMCT",
+        "Mayank Tyagi": "Mayank Tyagi, BHMCT student at KRMU SOHMCT",
     },
 
     deanVision: {
@@ -232,6 +242,16 @@ export const sohmctAltConfig: SchoolAltConfig = {
             "Ankit, B.HMCT student testimonial at KRMU SOHMCT",
         "Mask_group_1_5_21d70d6c03.webp":
             "Mohit, B.HMCT student testimonial at KRMU SOHMCT",
+        "chyeshta.png": "Chyeshta, BHMCT student at KRMU SOHMCT",
+        "prateek-lochav.jpg": "Prateek Lochav, BHMCT student at KRMU SOHMCT",
+        "piyush-gola.png": "Piyush Gola, BHMCT student at KRMU SOHMCT",
+        "mahesh-joon.png": "Mahesh Joon, BHMCT student at KRMU SOHMCT",
+        "saloni.png": "Saloni, BHMCT student at KRMU SOHMCT",
+        "deetya-bedi.png": "Deetya Bedi, BHMCT student at KRMU SOHMCT",
+        "bhavesh-joshi.png": "Bhavesh Joshi, BHMCT student at KRMU SOHMCT",
+        "raghav-sharma.png": "Raghav Sharma, BHMCT student at KRMU SOHMCT",
+        "rudraksh.png": "Rudraksh, BHMCT student at KRMU SOHMCT",
+        "mayank-tyagi.png": "Mayank Tyagi, BHMCT student at KRMU SOHMCT",
         "Mask_group_5_1_83d89f6572.webp":
             "Siya Narula, B.HMCT student testimonial at KRMU SOHMCT",
         "du22_1_ba9dbd10c2.webp":
