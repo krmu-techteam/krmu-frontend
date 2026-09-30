@@ -167,66 +167,66 @@ export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
     {
         id: 1,
         src: "/images/home/whykrmu/1.jpg",
-        alt: "Students enjoying recreation and sports at K.R. Mangalam University indoor gaming lounge",
-        category: "Sports & Recreation",
-        title: "Campus Recreation Hub",
-        description:
-            "Vibrant recreational lounge with pool, indoor games, and social relaxation zones.",
+        // alt: "Students enjoying recreation and sports at K.R. Mangalam University indoor gaming lounge",
+        // category: "Sports & Recreation",
+        // title: "Campus Recreation Hub",
+        // description:
+        //     "Vibrant recreational lounge with pool, indoor games, and social relaxation zones.",
     },
     {
         id: 2,
         src: "/images/home/whykrmu/2.jpg",
-        alt: "Students working with quadruped robotics in KRMU advanced robotics lab",
-        category: "Tech & Robotics",
-        title: "Robotics & AI Labs",
-        description:
-            "Hands-on engineering with quadruped robotics, automation systems, and innovative student projects.",
+        // alt: "Students working with quadruped robotics in KRMU advanced robotics lab",
+        // category: "Tech & Robotics",
+        // title: "Robotics & AI Labs",
+        // description:
+        //     "Hands-on engineering with quadruped robotics, automation systems, and innovative student projects.",
     },
     {
         id: 3,
         src: "/images/home/whykrmu/3.jpg",
-        alt: "Diverse students engaging in campus life and peer learning at KRMU",
-        category: "Campus Life",
-        title: "Vibrant Student Community",
-        description:
-            "Collaborative learning, outdoor brainstorming, and lifelong camaraderie on campus.",
+        // alt: "Diverse students engaging in campus life and peer learning at KRMU",
+        // category: "Campus Life",
+        // title: "Vibrant Student Community",
+        // description:
+        //     "Collaborative learning, outdoor brainstorming, and lifelong camaraderie on campus.",
     },
     {
         id: 4,
         src: "/images/home/whykrmu/4.jpg",
-        alt: "Journalism student reporting from the KRMU School of Journalism and Mass Communication studio",
-        category: "Media & Broadcasting",
-        title: "SJMC Media Studio",
-        description:
-            "Professional broadcasting equipment, news reporting suites, and multi-camera television studios.",
+        // alt: "Journalism student reporting from the KRMU School of Journalism and Mass Communication studio",
+        // category: "Media & Broadcasting",
+        // title: "SJMC Media Studio",
+        // description:
+        //     "Professional broadcasting equipment, news reporting suites, and multi-camera television studios.",
     },
     {
         id: 5,
         src: "/images/home/whykrmu/5.jpg",
-        alt: "Student researching in the modern KRMU central library",
-        category: "Academic Excellence",
-        title: "Central Knowledge Hub",
-        description:
-            "Extensive digital and print collections fostering in-depth academic inquiry and focused study.",
+        // alt: "Student researching in the modern KRMU central library",
+        // category: "Academic Excellence",
+        // title: "Central Knowledge Hub",
+        // description:
+        //     "Extensive digital and print collections fostering in-depth academic inquiry and focused study.",
     },
     {
         id: 6,
         src: "/images/home/whykrmu/6.jpg",
-        alt: "Ankur Warikoo being felicitated during Aarambh orientation program at K.R. Mangalam University",
-        category: "Leadership Sessions",
-        title: "Ankur Warikoo at Aarambh",
-        description:
-            "Mentorship and motivational sessions with eminent entrepreneurs, founders, and industry trailblazers.",
+        // alt: "Ankur Warikoo being felicitated during Aarambh orientation program at K.R. Mangalam University",
+        // category: "Leadership Sessions",
+        // title: "Ankur Warikoo at Aarambh",
+        // description:
+        //     "Mentorship and motivational sessions with eminent entrepreneurs, founders, and industry trailblazers.",
     },
 
     {
         id: 9,
         src: "/images/home/whykrmu/9.jpg",
-        alt: "Fashion models presenting designer collection at KRMU fashion show",
-        category: "Fashion & Design",
-        title: "Bello Globe Life Runway",
-        description:
-            "High-fashion runway presentations showcasing the creative couture of student designers.",
+        // alt: "Fashion models presenting designer collection at KRMU fashion show",
+        // category: "Fashion & Design",
+        // title: "Bello Globe Life Runway",
+        // description:
+        //     "High-fashion runway presentations showcasing the creative couture of student designers.",
     },
 ];
 
@@ -234,92 +234,74 @@ export const LIFE_AT_KRMU_CELEBRITY_GALLERY: LifeAtKRMUGalleryType[] = [
     {
         id: 101,
         src: "/images/home/whykrmu/celebrity/padma-shri-kangana-ranaut-at-krmu.jpg",
-        alt: "Padma Shri Kangana Ranaut at K.R. Mangalam University special session",
-        category: "Celebrity Interaction",
-        title: "Padma Shri Kangana Ranaut at KRMU",
+        alt: "Kangana Ranaut – Emergency Movie Promotion at K.R. Mangalam University",
+        title: "Kangana Ranaut – Emergency Movie Promotion",
         description:
-            "Inspiring interactive masterclass with Padma Shri awardee actor Kangana Ranaut on campus.",
+            "The Department of Student Welfare (DSW) hosted actress and filmmaker Kangana Ranaut for the promotional event of Emergency, featuring an engaging interaction with university authorities and students.",
     },
     {
         id: 102,
         src: "/images/home/whykrmu/celebrity/naved.jpg",
-        alt: "RJ Naved interacting with students at K.R. Mangalam University guest session",
-        category: "Celebrity Guest",
-        title: "Naved",
+        alt: "RJ Naved – Student Interaction & Workshop at K.R. Mangalam University",
+        title: "RJ Naved – Student Interaction & Workshop",
         description:
-            "Celebrity radio host RJ Naved energizing students with humor and interactive wisdom.",
+            "Popular radio personality RJ Naved for a two-to-three-day student engagement programme featuring interactive sessions, student interviews, and workshops focused on communication, confidence, and creative expression.",
     },
     {
         id: 103,
-        src: "/images/home/whykrmu/celebrity/shukhi.jpg",
-        alt: "Singer Sukh-E performing live at K.R. Mangalam University campus event",
-        category: "Star Night",
-        title: "Shukhi",
+        src: "/images/home/whykrmu/celebrity/edm-night-2025.jpg",
+        alt: "EDM Night 2025 featuring Ola Ras from Ukraine, Ellena Chadhary, and Nick at K.R. Mangalam University",
+        title: "EDM Night 2025",
         description:
-            "High-energy musical performance by singer & music producer Sukh-E on the main stage.",
+            "EDM Night 2025, featuring an electrifying lineup of renowned domestic and international artists, including Ola Ras from Ukraine, Ellena Chadhary, and Nick, delivering an unforgettable global music experience to the K.R. Mangalam University community.",
     },
     {
         id: 104,
-        src: "/images/home/whykrmu/celebrity/edm-night-2025.jpg",
-        alt: "EDM Night concert and electronic music festival at K.R. Mangalam University",
-        category: "Music Festival",
-        title: "EDM Night 2025",
+        src: "/images/home/whykrmu/celebrity/aarambh-2025.jpg",
+        alt: "Aarambh ’25 – Freshers’ Orientation with Aman Gupta at K.R. Mangalam University",
+        title: "Aarambh ’25 – Freshers’ Orientation",
         description:
-            "Electric beats, dazzling light shows, and unforgettable youth festival celebrations.",
+            "The Department of Student Welfare (DSW) & Office of academic affairs hosted Aarambh ’25, the university’s freshers’ orientation programme, featuring Aman Gupta, Co-founder of boAt, as the Chief Guest, who inspired the new students through an engaging motivational address and extended his best wishes for their academic journey.",
     },
     {
         id: 105,
-        src: "/images/home/whykrmu/celebrity/aarambh-2025.jpg",
-        alt: "Aarambh 2025 annual cultural fest celebration at K.R. Mangalam University",
-        category: "Annual Fest",
-        title: "Aarambh 2025",
+        src: "/images/home/whykrmu/celebrity/solesta-26.jpg",
+        alt: "Solesta'26 – Live Performance by Jasmine Sandlas at K.R. Mangalam University",
+        title: "Solesta'26",
         description:
-            "KRMU's grand flagship cultural festival celebrating student creativity, arts, and music.",
+            "Renowned Punjabi singer Jasmine Sandlas called for a spectacular live performance at K.R. Mangalam University, drawing a vibrant crowd of over 6,000 students and making it one of the university’s most memorable student events.",
     },
     {
         id: 106,
-        src: "/images/home/whykrmu/celebrity/solesta-26.jpg",
-        alt: "SOLESTA inter-college cultural and tech festival at K.R. Mangalam University",
-        category: "Cultural Extravaganza",
-        title: "Solesta 26",
+        src: "/images/home/whykrmu/celebrity/freshers-2025.jpg",
+        alt: "Freshers’ Party 2025 with Nora Fatehi at K.R. Mangalam University",
+        title: "Freshers’ Party 2025 – A Star-Studded Welcome",
         description:
-            "Inter-college cultural showcase bringing together talent from institutions across India.",
+            "The Department of Student Welfare (DSW) hosted renowned dancer and actor Nora Fatehi for the Freshers’ Party 2025, where her energetic performance entertained the new batch and created a vibrant campus experience for the students.",
     },
     {
         id: 107,
-        src: "/images/home/whykrmu/celebrity/freshers-2025.jpg",
-        alt: "Freshers party and welcome celebration for new students at K.R. Mangalam University",
-        category: "Student Life",
-        title: "Freshers 2025",
+        src: "/images/home/whykrmu/celebrity/aarambh-2026.jpg",
+        alt: "Aarambh ’26 – Live Performance by AKASA at K.R. Mangalam University",
+        title: "Aarambh ’26 – Live Performance by AKASA",
         description:
-            "Warmly welcoming the newest generation of innovators to the dynamic KRMU family.",
+            "Following the inspiring welcome and motivational session at Aarambh ’26, renowned singer AKASA delivered an energetic live performance, entertaining and welcoming the new students with a memorable musical experience.",
     },
     {
         id: 108,
-        src: "/images/home/whykrmu/celebrity/aarambh-2026.jpg",
-        alt: "Aarambh 2026 youth festival at K.R. Mangalam University",
-        category: "Campus Celebrations",
-        title: "Aarambh 2026",
+        src: "/images/home/whykrmu/celebrity/edude-fiesta-2023.jpg",
+        alt: "EduFiesta 2023 Freshers’ Party with Parmish Verma at K.R. Mangalam University",
+        title: "EduFiesta 2023 – Freshers’ Party",
         description:
-            "Spectacular live performances, dance competitions, and runway presentations.",
+            "The Freshers’ Party for the 2023 batch, featuring a high-energy DJ Night and a special live performance by renowned Punjabi artist Parmish Verma.",
     },
     {
         id: 109,
-        src: "/images/home/whykrmu/celebrity/edude-fiesta-2023.jpg",
-        alt: "Edude Fiesta carnival and celebrations at K.R. Mangalam University",
-        category: "Campus Carnival",
-        title: "Edude Fiesta 2023",
-        description:
-            "Lively campus carnival filled with games, culinary stalls, and vibrant youth celebrations.",
-    },
-    {
-        id: 110,
         src: "/images/home/whykrmu/celebrity/aarambh-2026-1.jpg",
-        alt: "Aarambh cultural night celebrations at K.R. Mangalam University",
-        category: "Cultural Fest",
-        title: "Aarambh 2026",
+        alt: "Aarambh ’26 – New Batch Welcome & Orientation with Ankur Warikoo at K.R. Mangalam University",
+        title: "Aarambh ’26 – New Batch Welcome & Orientation",
         description:
-            "Exciting cultural performances, student bands, and memories celebrating life at KRMU.",
+            "The Department of Student Welfare (DSW) and Office of Academic Affairs jointly organised Aarambh ’26, welcoming the new batch with an inspiring address by Chief Guest and motivational speaker Ankur Warikoo, who encouraged students to embrace their university journey with confidence, purpose, and ambition.",
     },
 ];
 

@@ -298,7 +298,7 @@ export function LifeAtKRMUSection() {
                     {img.description && (
                         <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
                             <div className="overflow-hidden">
-                                <p className="text-white/90 text-[11px] sm:text-xs md:text-[13px] line-clamp-2 leading-relaxed font-light drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)] pt-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out">
+                                <p className="text-white/90 text-[11px] sm:text-xs md:text-[13px] leading-relaxed font-light drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)] pt-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out">
                                     {img.description}
                                 </p>
                             </div>

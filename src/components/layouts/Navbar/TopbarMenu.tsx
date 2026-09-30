@@ -7,9 +7,18 @@ type TopbarProps = {
 };
 
 const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
+    const filteredMenu = topbarmenu?.filter((item) => {
+        const title = item.title?.toLowerCase().trim() || "";
+        const url = item.url?.toLowerCase() || "";
+        return (
+            !title.includes("cuet counselling") &&
+            !url.includes("cuet-counselling")
+        );
+    });
+
     return (
         <ul className="flex flex-wrap gap-4 items-center justify-center font-poppins text-[14px]">
-            {topbarmenu?.map((item) => {
+            {filteredMenu?.map((item) => {
                 const url = item.url;
                 const isExternal = Boolean(
                     url &&

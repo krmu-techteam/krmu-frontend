@@ -65,12 +65,12 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
 
     "btech-cse-ai-ml": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_cse_ai_ml_024c301deb.jpg",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_Tech_Computer_Science_and_Engineering_AI_and_ML_with_academic_support_of_IBM_and_powered_by_Microsoft_Certifications_4f23ec480c.jpg",
     } as HeroConfig,
 
     "btech-cse-cyber-security": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_cse_cyber_security_968feea0dc.png",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_Tech_CSE_Cyber_Security_8a5ac6a0ac.jpg",
     } as HeroConfig,
 
     "btech-cse-in-data-science": {
@@ -85,44 +85,44 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
 
     "btech-cse-ui-ux": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_cse_ui_ux_fe9156981c.png",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/UI_with_Academic_Support_of_Imagin_XP_daa8e5c143.jpg",
     } as HeroConfig,
 
     "bca-ai-data-science": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bca_ai_data_science_c018e54756.png",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/BCA_AI_and_Data_Science_45a5cefd9a.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
 
     "bca-hons-hons-with-research-cyber-security": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bca_hons_hons_with_research_cyber_security_e491ea6dbf.png",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Hons_with_Research_Cyber_Security_474d2fe35b.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
 
     "bca-cyber-security": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bca_cyber_security_d574018507.png",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Securing_the_Digital_Future_with_Intelligence_and_Integrity_cb190ea7ed.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
     "bca-ai-research": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bca_ai_research_e54ecbf03d.png",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Hons_with_Research_AI_and_Data_Science_0ae1629995.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
     "bsc-hons-computer-science": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_computer_science_656b183e93.png",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_Sc_Hons_Computer_Science_549f8a36fa.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
     "bsc-hons-cyber-security": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_cyber_security_c4b63132b9.png",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_Sc_Hons_Cyber_Security_f386da7b39.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
     "b-tech-cse-robotics-ai": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/b_tech_cse_robotics_ai_67aa0ef598.jpg",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_Tech_CSE_Robotics_and_Artificial_Intelligence_a9c99339f7.jpg",
         bgPosition: "70% top",
         mobileBgPosition: "57% top",
     } as HeroConfig,
@@ -416,7 +416,7 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
     } as HeroConfig,
     "bsc-hons-data-science": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_data_science_1e64ebac01.png",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_Sc_Hons_Data_Science_e3f6a80a2f.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
     "bba-hons-hons-with-research-analytics": {

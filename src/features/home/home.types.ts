@@ -386,7 +386,7 @@ export interface PlacementCardConfigType {
 export interface LifeAtKRMUGalleryType {
     id: number;
     src: string;
-    alt: string;
+    alt?: string;
     title?: string;
     category?: string;
     description?: string;
