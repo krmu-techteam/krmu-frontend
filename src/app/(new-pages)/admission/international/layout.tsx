@@ -7,9 +7,7 @@
     Roboto_Condensed,
 } from "next/font/google";
 import "./internationalAdmission.css";
-import InternationalHeader from "./components/InternationalHeader";
 import Header from "./components/Header";
-import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
 
 const hostGrotesk = Host_Grotesk({
     subsets: ["latin"],

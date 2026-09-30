@@ -8,7 +8,7 @@ const HeroSection = () => {
                 {/* Content */}
                 <div className="w-full lg:w-[55%] space-y-4 md:space-y-5 lg:space-y-6">
                     <p className="text-[#C3A342] text-[11px] sm:text-xs font-bold tracking-[1.2px] sm:tracking-[1.5px]">
-                        3RD INTERNATIONAL CONFERENCE · 21–23 JANUARY 2027
+                        3RD INTERNATIONAL CONFERENCE · 22–23 JANUARY 2027
                     </p>
 
                     <h1 className="text-3xl sm:text-4xl md:text-[40px] lg:text-[42px] font-lora font-bold text-white leading-[1.15]">
@@ -22,7 +22,7 @@ const HeroSection = () => {
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                         <Link
                             href="https://forms.gle/dBtKCMT7oikpDK9WA"
-                            className="bg-[#C3A342] text-black rounded-[4px] py-3.5 px-[22px] font-semibold text-center"
+                            className="bg-[#C3A342] text-black rounded-md py-3.5 px-[22px] font-semibold text-center"
                             target="_blank"
                         >
                             Submit an Abstract
@@ -30,13 +30,13 @@ const HeroSection = () => {
 
                         <Link
                             href="/sbas-conference/#reg-fees"
-                            className="border-2 border-[#bfc7bf] hover:bg-[#bfc7bf]/10 transition-all duration-200 text-white rounded-[4px] py-3.5 px-[22px] font-semibold text-center leading-[18px]"
+                            className="border-2 border-[#bfc7bf] text-white rounded-md py-3.5 px-[22px] font-semibold text-center leading-[18px]"
                         >
                             View Registration Fees
                         </Link>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 text-[#8C948C] text-[10px] sm:text-xs font-normal tracking-[1px] sm:tracking-[1.5px]">
+                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 text-[#8C948C] text-[10px] sm:text-xs font-light tracking-[1px] sm:tracking-[1.5px]">
                         <p>SBAS · KRMU</p>
                         <p>association with CSIR-CSIO Chandigarh</p>
                     </div>

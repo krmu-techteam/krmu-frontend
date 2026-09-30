@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+    --font-poppins: var(--font-family-poppins);
+    --font-ibm-plex-serif: var(--font-family-ibm-plex-serif);
+}
+
+.font-poppins {
+    font-family: var(--font-family-poppins);
+}
+
+.font-ibm-plex {
+    font-family: var(--font-family-ibm-plex-serif), serif;
+}

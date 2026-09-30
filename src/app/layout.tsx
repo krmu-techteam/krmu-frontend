@@ -8,6 +8,7 @@ import {
     Sofia_Sans_Condensed,
 } from "next/font/google";
 import "./(main-website)/globals.css";
+import Script from "next/script";
 // import Script from "next/script";
 
 const poppins = Poppins({
@@ -85,17 +86,29 @@ export default function RootLayout({
                     crossOrigin="anonymous"
                 />
                 <link rel="dns-prefetch" href="https://wp.krmangalam.edu.in" />
+                <Script id="google-tag-manager" strategy="afterInteractive">
+                    {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P8ZKK9X');
+          `}
+                </Script>
             </head>
             <body
                 className={`${poppins.variable} ${playfair.variable} ${inter.variable} ${fraunces.variable} ${sofiaSansCondensed.variable} ${faustina.variable} ${poppins.className} antialiased overflow-x-hidden`}
             >
                 <noscript>
                     <iframe
-                        src="https://www.googletagmanager.com/ns.html?id=GTM-MKXDVSJ9"
+                        src="https://www.googletagmanager.com/ns.html?id=GTM-P8ZKK9X"
                         height="0"
                         width="0"
-                        style={{ display: "none", visibility: "hidden" }}
-                    ></iframe>
+                        style={{
+                            display: "none",
+                            visibility: "hidden",
+                        }}
+                    />
                 </noscript>
                 {children}
             </body>

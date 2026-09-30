@@ -104,13 +104,12 @@ export const committeeMembers = [
         role: "CO-PATRON",
         image: "https://www.krmangalam.edu.in/images/sbas-conference/committee/anil.jpg",
     },
-    // {
-    //   name: "Prof. Darshan Pandey",
-    //   designation: "Principal, Rajdhani College, University of Delhi",
-    //   role: "CO-PATRON",
-    //   image:
-    //     "https://www.krmangalam.edu.in/images/sbas-conference/committee/darshan.jpg",
-    // },
+    {
+        name: "Prof. Darshan Pandey",
+        designation: "Principal, Rajdhani College, University of Delhi",
+        role: "CO-PATRON",
+        image: "https://www.krmangalam.edu.in/images/sbas-conference/committee/darshan.jpg",
+    },
     {
         name: "Prof. Shantanu Bhattacharya",
         designation: "Director, KRMU",
@@ -148,14 +147,13 @@ export const organizingCommittee = [
         university: "CSIR-CSIO, Chandigarh",
         image: "https://www.krmangalam.edu.in/images/sbas-conference/committee/suman.jpg",
     },
-    // {
-    //   name: "Dr. Deepak Yadav",
-    //   role: "Co-Convenor",
-    //   designation: "Assistant Professor",
-    //   university: "Rajdhani College, University of Delhi",
-    //   image:
-    //     "https://www.krmangalam.edu.in/images/sbas-conference/committee/deepak.jpg",
-    // },
+    {
+        name: "Dr. Deepak Yadav",
+        role: "Co-Convenor",
+        designation: "Assistant Professor",
+        university: "Rajdhani College, University of Delhi",
+        image: "https://www.krmangalam.edu.in/images/sbas-conference/committee/deepak.jpg",
+    },
     {
         name: "Dr. Neeraj Kumari",
         role: "Co-Convenor",
@@ -178,20 +176,12 @@ export const organizingCommittee = [
         image: "https://www.krmangalam.edu.in/images/sbas-conference/committee/narinder.jpg",
     },
     {
-        name: "Prof.(Dr.) Pradeep K. Varshney",
-        role: "Conference Chair",
-        designation: "Dean Research",
-        university: "K.R. Mangalam University",
-        image: "https://www.krmangalam.edu.in/images/sbas-conference/committee/pradeep.jpg",
+        name: "Dr. Anand Prakash",
+        role: "Conference Co-Chair",
+        designation: "Teacher-in-charge, Chemistry",
+        university: "Rajdhani College, University of Delhi",
+        image: "https://www.krmangalam.edu.in/images/sbas-conference/committee/anand.jpg",
     },
-    // {
-    //   name: "Dr. Anand Prakash",
-    //   role: "Conference Co-Chair",
-    //   designation: "Teacher-in-charge, Chemistry",
-    //   university: "Rajdhani College, University of Delhi",
-    //   image:
-    //     "https://www.krmangalam.edu.in/images/sbas-conference/committee/anand.jpg",
-    // },
 ];
 
 export const editorialCommittee = [

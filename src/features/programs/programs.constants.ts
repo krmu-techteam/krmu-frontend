@@ -80,7 +80,7 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
 
     "btech-full-stack-development": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/btech_full_stack_development_ffe74a6373.png",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_Tech_CSE_Full_Stack_Development_jpg_f5ac322529.jpeg",
     } as HeroConfig,
 
     "btech-cse-ui-ux": {
