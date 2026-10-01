@@ -77,21 +77,21 @@ export default function DisclosureBrowser() {
     return (
         <div className="pt-[140px] max-w-5xl mx-auto p-4">
             {/* HEADER */}
-            <section className="w-full bg-white py-10 px-4">
+            <section className="w-full border border-white/10 rounded-[4px] py-10 px-4">
                 <div className="max-w-6xl mx-auto">
                     {/* Title (NOT a link) */}
-                    <h2 className="text-2xl md:text-3xl font-semibold text-black mb-4">
+                    <h2 className="text-2xl font-serif md:text-3xl font-bold text-white mb-4">
                         NAAC Cycle-1
                     </h2>
 
                     {/* Top List (ALL links) */}
-                    <ul className="list-disc pl-6 space-y-2 text-base text-black">
+                    <ul className="list-disc pl-6 space-y-2 text-base text-white/80">
                         <li>
                             <Link
                                 href="https://pub-b137783ba90b4afdb568942321f7a1ef.r2.dev/Main-disclosure2018-2023/disclosure2018-2023/NAAC2024/NAAC-2024-Reports/IIQA-K.R._MANGALAM_UNIVERSITY_iiqa.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="font-semibold hover:underline hover:text-blue-700"
+                                className="font-semibold  hover:text-white"
                             >
                                 Institutional Information for Quality Assessment
                                 (IIQA)
@@ -102,7 +102,7 @@ export default function DisclosureBrowser() {
                                 href="https://pub-b137783ba90b4afdb568942321f7a1ef.r2.dev/Main-disclosure2018-2023/disclosure2018-2023/NAAC2024/NAAC-2024-Reports/SSR-HRUNGN109306.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="font-semibold hover:underline hover:text-blue-700"
+                                className="font-semibold  hover:text-white"
                             >
                                 Self Study Report
                             </Link>
@@ -112,7 +112,7 @@ export default function DisclosureBrowser() {
                                 href="https://pub-b137783ba90b4afdb568942321f7a1ef.r2.dev/Main-disclosure2018-2023/disclosure2018-2023/NAAC2024/NAAC-2024-Reports/SSR-Prequalified-HRUNGN109306.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="font-semibold hover:underline hover:text-blue-700"
+                                className="font-semibold  hover:text-white"
                             >
                                 Self Study Report (Prequalified)
                             </Link>
@@ -120,26 +120,26 @@ export default function DisclosureBrowser() {
                     </ul>
 
                     {/* Divider */}
-                    <hr className="my-6 border-gray-300" />
+                    <hr className="my-6 border-white/10" />
 
                     {/* SSR Documents */}
                     <div>
                         {/* Heading (NOT a link) */}
                         <ul className="list-disc pl-6">
-                            <li className="font-semibold mb-3">
+                            <li className="font-semibold tracking-wide font-serif text-white mb-3">
                                 SSR Documents
                             </li>
                         </ul>
 
                         {/* Criteria Grid (ALL links) */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-3 pl-12 text-black">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-3 pl-12 text-white/80">
                             <ul className="list-[circle] space-y-2">
                                 <li>
                                     <Link
                                         href="https://pub-b137783ba90b4afdb568942321f7a1ef.r2.dev/Main-disclosure2018-2023/disclosure2018-2023/NAAC2024/NAAC-2024-Reports/SSR-Prequalified-HRUNGN109306.pdf"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="hover:underline hover:text-blue-700"
+                                        className=" hover:text-white"
                                     >
                                         Extended Profile
                                     </Link>
@@ -147,7 +147,7 @@ export default function DisclosureBrowser() {
                                 <li>
                                     <Link
                                         href="#"
-                                        className="hover:underline hover:text-blue-700"
+                                        className=" hover:text-white"
                                     >
                                         Criteria 4
                                     </Link>
@@ -158,7 +158,7 @@ export default function DisclosureBrowser() {
                                 <li>
                                     <Link
                                         href="#"
-                                        className="hover:underline hover:text-blue-700"
+                                        className=" hover:text-white"
                                     >
                                         Criteria 1
                                     </Link>
@@ -166,7 +166,7 @@ export default function DisclosureBrowser() {
                                 <li>
                                     <Link
                                         href="#"
-                                        className="hover:underline hover:text-blue-700"
+                                        className=" hover:text-white"
                                     >
                                         Criteria 5
                                     </Link>
@@ -177,7 +177,7 @@ export default function DisclosureBrowser() {
                                 <li>
                                     <Link
                                         href="#"
-                                        className="hover:underline hover:text-blue-700"
+                                        className=" hover:text-white"
                                     >
                                         Criteria 2
                                     </Link>
@@ -185,7 +185,7 @@ export default function DisclosureBrowser() {
                                 <li>
                                     <Link
                                         href="#"
-                                        className="hover:underline hover:text-blue-700"
+                                        className=" hover:text-white"
                                     >
                                         Criteria 6
                                     </Link>
@@ -196,7 +196,7 @@ export default function DisclosureBrowser() {
                                 <li>
                                     <Link
                                         href="#"
-                                        className="hover:underline hover:text-blue-700"
+                                        className=" hover:text-white"
                                     >
                                         Criteria 3
                                     </Link>
@@ -204,7 +204,7 @@ export default function DisclosureBrowser() {
                                 <li>
                                     <Link
                                         href="#"
-                                        className="hover:underline hover:text-blue-700"
+                                        className=" hover:text-white"
                                     >
                                         Criteria 7
                                     </Link>
@@ -212,18 +212,15 @@ export default function DisclosureBrowser() {
                             </ul>
                         </div>
                     </div>
-
-                    {/* Bottom Divider */}
-                    <hr className="mt-6 border-gray-300" />
                 </div>
             </section>
 
             <div className="mb-4 mt-6 flex justify-between items-center text-sm">
-                <div className="flex items-center text-gray-800">
+                <div className="flex font-poppins items-center text-white">
                     {relativePath && (
                         <button
                             onClick={goBack}
-                            className="mr-3 text-white font-medium hover:underline"
+                            className="mr-3 text-white font-medium "
                         >
                             ◀ Back
                         </button>
@@ -259,7 +256,7 @@ export default function DisclosureBrowser() {
                                     )}`
                                 )
                             }
-                            className="cursor-pointer text-white hover:underline py-1 flex items-center gap-1.5 font-normal"
+                            className="cursor-pointer font-poppins text-white/80 hover:text-white  py-1 flex items-center gap-1.5 font-normal"
                         >
                             <span>📁</span>
                             <span>{folderName}</span>
@@ -285,7 +282,7 @@ export default function DisclosureBrowser() {
                                     href={fileUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-blue-600 hover:underline flex items-center gap-1.5"
+                                    className="text-white/80 hover:text-white  flex items-center gap-1.5"
                                 >
                                     <span>📄</span>
                                     <span>
