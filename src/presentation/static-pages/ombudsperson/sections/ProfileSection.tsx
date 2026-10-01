@@ -5,10 +5,10 @@ const ProfileSection = () => {
     return (
         <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
             {/* ================= ONE UNIFIED BOX ================= */}
-            <div className="border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-10">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+            <div className="border border-white/10 rounded-2xl p-6 sm:p-7 xl:p-10">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 xl:gap-10 items-start">
                     {/* LEFT SIDE (PHOTO, CONTACT, PDF NOTIFICATION) */}
-                    <div className="lg:col-span-4 flex flex-col items-center text-center lg:border-r border-white/10 lg:pr-8 pb-8 lg:pb-0 border-b lg:border-b-0">
+                    <div className="lg:col-span-4 flex flex-col items-center text-center lg:border-r border-white/10 md:pr-7 xl:pr-8 pb-8 lg:pb-0 border-b lg:border-b-0">
                         {/* Profile Photo */}
                         <div className="relative w-full max-w-[260px] aspect-[4/5] mx-auto rounded-xl overflow-hidden shadow-lg border border-white/15 mb-5 bg-[#07141E]">
                             <Image
@@ -22,10 +22,10 @@ const ProfileSection = () => {
                         </div>
 
                         {/* Profile Summary */}
-                        <h3 className="text-xl font-bold font-serif text-white">
+                        <h3 className="text-[16px] xl:text-xl font-bold font-serif text-white">
                             Hon’ble Justice Talwant Singh
                         </h3>
-                        <p className="text-sm font-medium text-white/90 mt-1 tracking-wide uppercase">
+                        <p className="md:text-[12px] xl:text-sm font-medium text-white/90 mt-1 tracking-wide uppercase">
                             Ombudsperson
                         </p>
 
@@ -33,12 +33,12 @@ const ProfileSection = () => {
 
                         {/* Email Contact */}
                         <div className="w-full group text-left bg-black/30 rounded-[4px] p-3 mb-4">
-                            <span className="text-xs uppercase tracking-wider text-white font-medium block mb-1">
+                            <span className="text-[11px] xl:text-xs uppercase tracking-wider text-white font-medium block mb-1">
                                 Contact Email
                             </span>
                             <a
                                 href="mailto:ombudsman@krmangalam.edu.in"
-                                className="flex items-center gap-2 text-sm text-white/90 group-hover:text-white transition-colors break-all"
+                                className="flex items-center gap-2 text-[11px] xl:text-sm text-white/90 group-hover:text-white transition-colors break-all"
                             >
                                 <Mail className="w-4 h-4 shrink-0 text-white/90 group-hover:text-white" />
                                 <span className="group-hover:text-white">
@@ -52,7 +52,7 @@ const ProfileSection = () => {
                             href="https://www.krmangalam.edu.in/pdfs/appointment-of-ombudsperson-k-r-mangalam-university.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full inline-flex items-center justify-center gap-2.5 bg-[#0060aa] hover:bg-[#0074ce] text-white py-3 px-4 rounded-[4px] text-sm font-semibold transition-all duration-200 shadow-md hover:shadow-lg group text-center"
+                            className="w-full inline-flex items-center justify-center gap-2.5 bg-[#0060aa] hover:bg-[#0074ce] text-white py-3 px-4 rounded-[4px] text-[11px] xl:text-sm font-semibold transition-all duration-200 shadow-md hover:shadow-lg group text-center"
                         >
                             <FileText className="w-4 h-4 shrink-0" />
                             <span>
@@ -64,26 +64,26 @@ const ProfileSection = () => {
 
                     {/* RIGHT SIDE (HEADER & BIO CONTENT) */}
                     <div className="lg:col-span-8">
-                        <div className="mb-6">
-                            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#38bdf8] bg-[#38bdf8]/10 border border-[#38bdf8]/20 px-3 py-1 rounded-full mb-3">
+                        <div className="mb-4 xl:mb-6">
+                            <span className="inline-block text-[11px] xl:text-xs font-bold uppercase tracking-widest text-[#38bdf8] bg-[#38bdf8]/10 border border-[#38bdf8]/20 px-3 py-1 rounded-full mb-3">
                                 Ombudsperson
                             </span>
 
-                            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white mb-2 leading-tight">
+                            <h2 className="text-2xl md:text-3xl xl:text-4xl font-serif font-bold text-white mb-2 leading-tight">
                                 Hon’ble Justice Talwant Singh
                             </h2>
 
-                            <p className="text-sm sm:text-base text-white/90 font-medium leading-relaxed">
+                            <p className="md:text-[14px] xl:text-base text-white/90 font-medium leading-relaxed">
                                 Former Judge, High Court of Delhi
                                 <br />
                                 Senior Advocate, Supreme Court of India
                             </p>
 
-                            <div className="w-full border-t border-white/10 mt-6" />
+                            <div className="w-full border-t border-white/10 mt-4 xl:mt-6" />
                         </div>
 
                         {/* Bio Paragraphs */}
-                        <div className="space-y-5 text-white/90 text-[15px] sm:text-[16px] leading-relaxed font-poppins text-justify sm:text-left">
+                        <div className="space-y-3 xl:space-y-5 text-white/90 md:text-[14px] xl:text-[16px] leading-relaxed font-poppins text-justify sm:text-left">
                             <p>
                                 K.R. Mangalam University is pleased to announce
                                 the appointment of Hon’ble Justice Talwant

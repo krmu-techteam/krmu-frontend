@@ -89,6 +89,24 @@ export const committeeMembers: Member[] = [
         role: "Member",
         image: null,
     },
+    {
+        name: "Ms. Poornima Palarwal",
+        school: "(2405994007), Ph.D. Law",
+        role: "Research Scholar",
+        image: null,
+    },
+    {
+        name: "Dr. Richa Bansal",
+        school: "Project Head, UNESCO MGIEP",
+        role: "External Expert",
+        image: null,
+    },
+    {
+        name: "Ar. Mansha Samreen, Associate Professor",
+        school: "School of Architecture & Design (SOAD)",
+        role: "Member Secretary",
+        image: null,
+    },
 ];
 
 export const studentMembers: Member[] = [
@@ -108,24 +126,6 @@ export const studentMembers: Member[] = [
         name: "Mr. Anuj",
         school: "(2501940039), MCA (AI & ML)",
         role: "Student Member",
-        image: null,
-    },
-    {
-        name: "Ms. Poornima Palarwal",
-        school: "(2405994007), Ph.D. Law",
-        role: "Research Scholar",
-        image: null,
-    },
-    {
-        name: "Dr. Richa Bansal",
-        school: "Project Head, UNESCO MGIEP",
-        role: "External Expert",
-        image: null,
-    },
-    {
-        name: "Ar. Mansha Samreen, Associate Professor",
-        school: "School of Architecture & Design (SOAD)",
-        role: "Member Secretary",
         image: null,
     },
 ];
