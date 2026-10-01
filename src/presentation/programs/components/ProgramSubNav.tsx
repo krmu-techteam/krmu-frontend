@@ -174,7 +174,7 @@ export default function ProgramSubNav() {
                 }`}
                 style={isSticky ? { top: `${headerHeight}px` } : undefined}
             >
-                <div className="max-w-[1530px] mx-auto min-h-[52px] px-4 md:px-8 xl:px-16 flex items-center justify-between overflow-x-auto no-scrollbar py-2">
+                <div className="max-w-[1440px] mx-auto min-h-[52px] px-4 md:px-8 xl:px-16 flex items-center justify-between overflow-x-auto no-scrollbar py-2">
                     <nav className="flex items-center justify-between w-full min-w-max gap-8 lg:gap-6 xl:gap-8">
                         {itemsToRender.map((item) => {
                             const isActive = activeId === item.targetId;
