@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 
 interface CustomPageClientProps {
     html: string;
-    css?: string;
-    js?: string;
+    css?: string | null;
+    js?: string | null;
     slug?: string;
 }
 
