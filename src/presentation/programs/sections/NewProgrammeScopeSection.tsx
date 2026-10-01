@@ -153,8 +153,8 @@ const ProgrammeScopeSection = async ({
                                     className={`text-white font-extrabold text-[16px]  ${
                                         slug === "bjmc-hons-research" ||
                                         slug === "bjmc"
-                                            ? "sm:text-[25px]"
-                                            : "sm:text-[29px]"
+                                            ? "sm:text-[24px]"
+                                            : "sm:text-[24px]"
                                     } leading-[1.2]  mb-4`}
                                 >
                                     {data.skillsSubtitle}
@@ -164,9 +164,9 @@ const ProgrammeScopeSection = async ({
                                     className={`text-xs  ${
                                         slug === "bjmc-hons-research" ||
                                         slug === "bjmc"
-                                            ? "sm:text-[17px]"
-                                            : " sm:text-[17px]"
-                                    } text-white font-light font-poppins leading-[1.4] ${slug === "bjmc" ? "max-w-[320px]" : "max-w-[280px]"}`}
+                                            ? "sm:text-[14px]"
+                                            : " sm:text-[14px]"
+                                    } text-white font-light font-poppins ${slug === "bjmc" ? "max-w-[320px]" : "max-w-[280px]"}`}
                                 >
                                     {data.skillsDescription}
                                 </p>
