@@ -766,21 +766,75 @@ body:before {
         margin-bottom: 20px !important;
     }
 
+    .apply_online_content_table,
+    .apply_online_content_table * {
+        background-color: transparent !important;
+        background: transparent !important;
+        color: #e2e8f0 !important;
+    }
+
+    .apply_online_content_table strong,
+    .apply_online_content_table b,
+    .apply_online_content_table h1,
+    .apply_online_content_table h2,
+    .apply_online_content_table h3,
+    .apply_online_content_table h4,
+    .apply_online_content_table h5,
+    .apply_online_content_table h6 {
+        color: #ffffff !important;
+    }
+
+    .apply_online_content_table a,
+    .apply_online_content_table a u {
+        color: #38bdf8 !important;
+        text-decoration: underline !important;
+    }
+
+    .apply_online_content_table a:hover {
+        color: #7dd3fc !important;
+    }
+
+    .apply_online_content_table table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        border: 1px solid #14293f !important;
+        margin: 20px 0 !important;
+        background-color: #061727 !important;
+    }
+
+    .apply_online_content_table th,
+    .apply_online_content_table td {
+        border: 1px solid #14293f !important;
+        padding: 10px 14px !important;
+        color: #e2e8f0 !important;
+        background-color: transparent !important;
+    }
+
+    .apply_online_content_table th {
+        background-color: #0b2238 !important;
+        color: #ffffff !important;
+        font-weight: 600 !important;
+    }
+
+    .apply_online_content_table tr:nth-child(even) td {
+        background-color: rgba(255, 255, 255, 0.02) !important;
+    }
+
     .apply_online_content_table ul {
-        list-style: disc;
-        padding-left: 20px;
-        margin: 10px 0px;
+        list-style: disc !important;
+        padding-left: 24px !important;
+        margin: 10px 0 20px 0 !important;
+    }
+
+    .apply_online_content_table li {
+        margin-bottom: 6px !important;
+        color: #cbd5e1 !important;
     }
 
     .apply_online_content_table p {
-        margin-bottom: 20px;
-    }
-
-    .apply_online_content_table table,
-    .apply_online_content_table tr,
-    .apply_online_content_table td {
-        border: 1px solid #000;
-        border-collapse: collapse;
+        margin-bottom: 16px !important;
+        color: #cbd5e1 !important;
+        line-height: 1.7 !important;
     }
 
     a {
