@@ -26,12 +26,35 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
                         url.startsWith("https://") ||
                         url.startsWith("//"))
                 );
+                const isIdeas =
+                    item.title?.toLowerCase().includes("ideas") ||
+                    item.url?.includes("ideas.");
+
                 const className =
                     item.__component === "menu.menu-button"
                         ? item.class || ""
                         : item.menuclass || "";
 
                 if (url) {
+                    if (isIdeas) {
+                        return (
+                            <li key={item.id}>
+                                <Link
+                                    href={url}
+                                    className="font-semibold text-[#ED1C24] hover:text-[#ED1C24]/80 transition"
+                                    target={isExternal ? "_blank" : undefined}
+                                    rel={
+                                        isExternal
+                                            ? "noopener noreferrer"
+                                            : undefined
+                                    }
+                                >
+                                    {item.title}
+                                </Link>
+                            </li>
+                        );
+                    }
+
                     return (
                         <li key={item.id}>
                             <Link
@@ -46,6 +69,16 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
                             >
                                 {item.title}
                             </Link>
+                        </li>
+                    );
+                }
+
+                if (isIdeas) {
+                    return (
+                        <li key={item.id}>
+                            <span className="font-semibold text-[#cb000d]">
+                                {item.title}
+                            </span>
                         </li>
                     );
                 }

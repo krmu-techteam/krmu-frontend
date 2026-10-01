@@ -1,17 +1,149 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import NoPaperForm from "@/lib/constants/NoPaperForm";
 import { CinematicFormProps } from "@/features/programs";
 
+const FormSkeleton = () => {
+    return (
+        <div className="w-full px-4 sm:px-6 pt-3 pb-4 space-y-3 animate-pulse">
+            {/* Field 1: Name */}
+            <div className="space-y-1">
+                <div className="h-2 w-16 bg-gray-200 rounded"></div>
+                <div className="h-9 w-full bg-gray-100 border border-gray-200 rounded-[3px] flex items-center px-3">
+                    <div className="h-2.5 w-24 bg-gray-200/70 rounded"></div>
+                </div>
+            </div>
+
+            {/* Field 2: Email */}
+            <div className="space-y-1">
+                <div className="h-2 w-20 bg-gray-200 rounded"></div>
+                <div className="h-9 w-full bg-gray-100 border border-gray-200 rounded-[3px] flex items-center px-3">
+                    <div className="h-2.5 w-32 bg-gray-200/70 rounded"></div>
+                </div>
+            </div>
+
+            {/* Field 3: Mobile */}
+            <div className="space-y-1">
+                <div className="h-2 w-24 bg-gray-200 rounded"></div>
+                <div className="h-9 w-full bg-gray-100 border border-gray-200 rounded-[3px] flex items-center px-2.5 gap-2">
+                    <div className="h-5 w-7 bg-gray-200 rounded text-[10px] flex items-center justify-center text-gray-400 font-bold">
+                        +91
+                    </div>
+                    <div className="h-2.5 w-28 bg-gray-200/70 rounded"></div>
+                </div>
+            </div>
+
+            {/* Field 4 & 5: State & City */}
+            <div className="grid grid-cols-2 gap-2.5">
+                <div className="space-y-1">
+                    <div className="h-2 w-14 bg-gray-200 rounded"></div>
+                    <div className="h-9 w-full bg-gray-100 border border-gray-200 rounded-[3px] flex items-center justify-between px-2.5">
+                        <div className="h-2.5 w-16 bg-gray-200/70 rounded"></div>
+                        <div className="h-2 w-2 bg-gray-300 rounded-full"></div>
+                    </div>
+                </div>
+                <div className="space-y-1">
+                    <div className="h-2 w-12 bg-gray-200 rounded"></div>
+                    <div className="h-9 w-full bg-gray-100 border border-gray-200 rounded-[3px] flex items-center justify-between px-2.5">
+                        <div className="h-2.5 w-14 bg-gray-200/70 rounded"></div>
+                        <div className="h-2 w-2 bg-gray-300 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Field 6: Course */}
+            <div className="space-y-1">
+                <div className="h-2 w-20 bg-gray-200 rounded"></div>
+                <div className="h-9 w-full bg-gray-100 border border-gray-200 rounded-[3px] flex items-center justify-between px-2.5">
+                    <div className="h-2.5 w-36 bg-gray-200/70 rounded"></div>
+                    <div className="h-2 w-2 bg-gray-300 rounded-full"></div>
+                </div>
+            </div>
+
+            {/* Submit Button */}
+            <div className="pt-2">
+                <div className="h-10 w-full bg-gradient-to-r from-[#0055a4] to-[#CB000D] rounded-[4px] shadow-sm flex items-center justify-center text-white text-xs font-semibold gap-2">
+                    <svg
+                        className="animate-spin h-3.5 w-3.5 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                    >
+                        <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                        />
+                        <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        />
+                    </svg>
+                    <span>Loading Application Form...</span>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const CinematicForm = ({ formId, isMobile = false }: CinematicFormProps) => {
+    const [isLoaded, setIsLoaded] = useState(false);
+    const formContainerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const container = formContainerRef.current;
+        if (!container) return;
+
+        const checkIframeReady = () => {
+            const iframe = container.querySelector("iframe");
+            if (iframe) {
+                if (iframe.offsetHeight > 100) {
+                    setIsLoaded(true);
+                    return true;
+                }
+                iframe.addEventListener("load", () => {
+                    setTimeout(() => setIsLoaded(true), 150);
+                });
+                setTimeout(() => setIsLoaded(true), 1200);
+                return true;
+            }
+            return false;
+        };
+
+        if (checkIframeReady()) return;
+
+        const observer = new MutationObserver(() => {
+            if (checkIframeReady()) {
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(container, { childList: true, subtree: true });
+
+        const timer = setTimeout(() => {
+            setIsLoaded(true);
+        }, 5000);
+
+        return () => {
+            observer.disconnect();
+            clearTimeout(timer);
+        };
+    }, [formId]);
+
     if (isMobile) {
         return (
             <div
                 id="apply-form-mobile"
                 className="lg:hidden w-full bg-[#061623] pb-6 lg:pb-0 px-4 lg:px-0"
             >
-                <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto rounded-[4px] !pt-4 !pb-3 !h-auto overflow-hidden">
-                    <div className="heroBannerForm-header">
+                <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto rounded-[4px] !pt-4 !pb-3 min-h-[490px] bg-white relative overflow-hidden flex flex-col">
+                    <div className="heroBannerForm-header shrink-0">
                         <p
-                            className="mb-0 text-center font-bold font-poppins !text-[22px] lg:text-lg inline-block w-full"
+                            className="mb-0 text-center font-bold font-poppins !text-[20px] inline-block w-full"
                             style={{
                                 backgroundImage:
                                     "linear-gradient(90deg, #0055a4 0%, #CB000D 100%)",
@@ -22,8 +154,32 @@ const CinematicForm = ({ formId, isMobile = false }: CinematicFormProps) => {
                             Apply Today for <br /> K.R. Mangalam University
                         </p>
                     </div>
-                    <div className="p-1">
-                        <NoPaperForm formId={formId} height="500px" />
+
+                    <div className="relative flex-1 w-full min-h-[420px]">
+                        {/* Skeleton loader with smooth fade-out */}
+                        <div
+                            className={`absolute inset-0 z-10 bg-white transition-opacity duration-500 ${
+                                isLoaded
+                                    ? "opacity-0 pointer-events-none"
+                                    : "opacity-100"
+                            }`}
+                        >
+                            <FormSkeleton />
+                        </div>
+
+                        {/* Actual NPF Form with smooth fade-in */}
+                        <div
+                            ref={formContainerRef}
+                            className={`p-1 transition-opacity duration-500 ${
+                                isLoaded ? "opacity-100" : "opacity-0"
+                            }`}
+                        >
+                            <NoPaperForm
+                                formId={formId}
+                                height="500px"
+                                onLoaded={() => setIsLoaded(true)}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -35,10 +191,10 @@ const CinematicForm = ({ formId, isMobile = false }: CinematicFormProps) => {
             id="apply-form"
             className="hidden lg:flex w-full lg:w-[40%] xl:w-2/5 xl:pl-20 justify-center lg:justify-end"
         >
-            <div className="heroBannerForm__form w-full max-w-md mx-0 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-[4px] !pt-5 !pb-3 !h-auto overflow-hidden">
-                <div className="heroBannerForm-header">
+            <div className="heroBannerForm__form w-full max-w-md mx-0 shadow-[0_4px_20px_rgba(0,0,0,0.15)] rounded-[4px] !pt-5 !pb-3 min-h-[530px] bg-white relative overflow-hidden flex flex-col">
+                <div className="heroBannerForm-header shrink-0">
                     <p
-                        className="mb-0 text-center font-bold font-poppins !text-[28px] lg:text-lg inline-block w-full"
+                        className="mb-0 text-center font-bold font-poppins !text-[26px] lg:text-[22px] xl:text-[26px] inline-block w-full"
                         style={{
                             backgroundImage:
                                 "linear-gradient(90deg, #0055a4 0%, #CB000D 100%)",
@@ -49,7 +205,33 @@ const CinematicForm = ({ formId, isMobile = false }: CinematicFormProps) => {
                         Apply Today for <br /> K.R. Mangalam University
                     </p>
                 </div>
-                <NoPaperForm formId={formId} height="500px" />
+
+                <div className="relative flex-1 w-full min-h-[450px]">
+                    {/* Skeleton loader with smooth fade-out */}
+                    <div
+                        className={`absolute inset-0 z-10 bg-white transition-opacity duration-500 ${
+                            isLoaded
+                                ? "opacity-0 pointer-events-none"
+                                : "opacity-100"
+                        }`}
+                    >
+                        <FormSkeleton />
+                    </div>
+
+                    {/* Actual NPF Form with smooth fade-in */}
+                    <div
+                        ref={formContainerRef}
+                        className={`transition-opacity duration-500 ${
+                            isLoaded ? "opacity-100" : "opacity-0"
+                        }`}
+                    >
+                        <NoPaperForm
+                            formId={formId}
+                            height="500px"
+                            onLoaded={() => setIsLoaded(true)}
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     );

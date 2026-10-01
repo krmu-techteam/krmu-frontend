@@ -1,55 +1,46 @@
 import React from "react";
 
 interface StatCardProps {
-  number: React.ReactNode;
-  label: string;
-  bgColor?: string;
-  className?: string;
-  numberClassName?: string;
-  labelClassName?: string;
+    number: React.ReactNode;
+    label: string;
+    bgColor?: string;
+    className?: string;
+    numberClassName?: string;
+    labelClassName?: string;
 }
 
 export function StatCard({
-  number,
-  label,
-  bgColor,
-  className = "",
-  numberClassName = "",
-  labelClassName = "",
+    number,
+    label,
+    bgColor,
+    className = "",
+    numberClassName = "",
+    labelClassName = "",
 }: StatCardProps) {
-  const shadowColor =
-    bgColor && bgColor.startsWith("#") && bgColor.length === 7
-      ? `${bgColor}99`
-      : bgColor;
+    return (
+        <div
+            style={
+                bgColor
+                    ? {
+                          backgroundColor: bgColor,
+                      }
+                    : undefined
+            }
+            className={`relative rounded-[4px] py-4 px-6 cursor-default text-start min-h-[100px] xl:min-h-[120px] flex flex-col justify-center ${className}`}
+        >
+            {/* Stat Number */}
+            <div
+                className={`text-3xl md:text-4xl font-light text-brand-gold mb-2 leading-none relative z-10 ${numberClassName}`}
+            >
+                {number}
+            </div>
 
-  return (
-    <div
-      style={
-        bgColor
-          ? ({
-              backgroundColor: bgColor,
-              "--card-shadow-color": shadowColor,
-            } as React.CSSProperties)
-          : undefined
-      }
-      className={`group relative overflow-hidden rounded-[4px] py-4 px-6 hover:border-white/20 hover:shadow-[0_15px_30px_-5px_var(--card-shadow-color,rgba(0,0,0,0.4))] hover:-translate-y-1 transition-all duration-500 ease-out cursor-default text-start min-h-[100px] xl:min-h-[120px] flex flex-col justify-center ${className}`}
-    >
-      {/* Shine hover effect */}
-      <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none"></div>
-
-      {/* Stat Number */}
-      <div
-        className={`text-3xl md:text-4xl font-light text-brand-gold mb-2 leading-none relative z-10 transition-colors duration-500 ease-out ${numberClassName}`}
-      >
-        {number}
-      </div>
-
-      {/* Stat Label */}
-      <div
-        className={`text-white/80 text-[14px] 2xl:text-[16px] capitalize tracking-wide font-light leading-tight relative z-10 transition-colors ${labelClassName}`}
-      >
-        {label}
-      </div>
-    </div>
-  );
+            {/* Stat Label */}
+            <div
+                className={`text-white/80 text-[14px] 2xl:text-[16px] capitalize tracking-wide font-light leading-tight relative z-10 ${labelClassName}`}
+            >
+                {label}
+            </div>
+        </div>
+    );
 }
