@@ -8,7 +8,9 @@ import { HeaderMenus } from "@/lib/types/header-menu";
 import MainHeaderMarquee from "./MainHeaderMarquee";
 import { heroMarqueeData } from "./HeaderMaruqueeData";
 import Link from "next/link";
-import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
+// import KRMUTimer from "@/app/(landing-page)/admission/CommonComponent2026/KRMUTimer";
+// import HeroMarquee from "@/app/(landing-page)/admission/CommonComponent2026/HeroMarquee";
+import { usePathname } from "next/navigation";
 
 type TOPBARPROPS = {
   topbarmenu: TOPBARITEMS[];
@@ -23,7 +25,7 @@ const Header = ({
 }: TOPBARPROPS) => {
   const [showTopbar, setShowTopbar] = useState(false);
   const [showMobileMenu, setMobileMenu] = useState(false);
-
+  const pathname = usePathname();
   useEffect(() => {
     setMobileMenu(false);
     const handler = () => {
@@ -40,7 +42,7 @@ const Header = ({
     setMobileMenu((prev) => !prev);
   };
 
-  const marqueeData = heroMarqueeData;
+  // const marqueeData = heroMarqueeData;
 
   return (
     <>
@@ -55,7 +57,7 @@ const Header = ({
             className="w-full md:w-[20%] 2xl:w-[10%] p-3 text-center font-semibold text-red-500 bg-white"
           >
             Register Now
-          </Link>
+          </Link> 
         </div> */}
 
         {/* <Link
@@ -85,6 +87,7 @@ const Header = ({
             navbarData={headerMenus}
           />
         </div>
+        {/* {pathname === "/sola-conference" && <HeroMarquee data={marqueeData} />} */}
         {showMobileMenu && (
           <MobileHeader
             topbarmenu={topbarmenu}

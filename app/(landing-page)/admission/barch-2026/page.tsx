@@ -80,7 +80,7 @@ const page = () => {
   // const specialise = specialisationData;
   const opport = opportunityData;
   const testiomonial = testimonialsData;
-  // const scholarData = scholarResearchImpactData;
+  // const scholarData = scholarResearchImpactData; 
   const worldLifeData = comeToLifeData;
   const lifeData = lifeAsPhDScholarData;
   const faqData = faqSectionData;

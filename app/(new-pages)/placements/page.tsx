@@ -116,7 +116,7 @@ const personSchema = createPersonGraphSchema(
     },
   })),
 
-  interviewSuccessStories.map((story) => ({
+  interviewSuccessStories.map((story) => ({ 
     name: story.name,
     description: `${story.course} graduate of K.R. Mangalam University, placed at Ferrari with a package of ₹${story.package}.`,
     image: story.image,
@@ -166,7 +166,7 @@ const page = () => {
           <Divider /> 
         </div>
         <InterviewSuccessStories />
-        <PlacementResources />
+        <PlacementResources /> 
         <MeetCDCTeam teamMembers={cdcTeamMembers} />
         <QuickEnquiry />
       </main>

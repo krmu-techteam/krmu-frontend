@@ -1,9 +1,9 @@
-import { CDCTeamMember as CDCMember } from "@/app/(krmu-backend)/lib/api/cdc-team/cdc-team.types";
 import Image from "next/image";
 import Link from "next/link";
+import { CDCTeamMemberData } from "../constant";
 
 interface CDCTeamMemberProps {
-  member: CDCMember;
+  member: CDCTeamMemberData;
 }
 
 const FALLBACK_IMAGE = "/images/placeholder-person.jpg";
