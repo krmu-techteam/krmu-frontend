@@ -8,6 +8,7 @@ import {
     IndianRupee,
     Calendar,
 } from "lucide-react";
+import { HiOutlineInformationCircle } from "react-icons/hi";
 
 export interface ProgrammeCardData {
     id: number | string;
@@ -96,7 +97,7 @@ export default function ProgrammeCard({
                                 {program.duration}
                             </span>
                         </div>
-                        <div className="text-[14px] text-white">
+                        <div className="text-[14px] text-white flex items-center gap-1.5">
                             Fees:{" "}
                             <span className="text-white">
                                 Rs. {program.fees}
@@ -104,6 +105,26 @@ export default function ProgrammeCard({
                                     ? " (2025-26)"
                                     : ""}
                             </span>
+                            <div className="relative group/tooltip inline-flex items-center ml-2">
+                                <button
+                                    type="button"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        onFeeClick();
+                                    }}
+                                    aria-label="View Fee Structure"
+                                    className="cursor-pointer text-white/80 hover:text-white transition-colors inline-flex items-center"
+                                >
+                                    <HiOutlineInformationCircle size={16} />
+                                </button>
+                                <div className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 hidden group-hover/tooltip:flex flex-col items-center z-30">
+                                    <span className="bg-[#0b2238] text-white text-[11px] font-normal px-2.5 py-1 rounded shadow-lg border border-white/10 whitespace-nowrap">
+                                        View Fee Structure
+                                    </span>
+                                    <span className="w-1.5 h-1.5 bg-[#0b2238] border-r border-b border-white/10 rotate-45 -mt-1" />
+                                </div>
+                            </div>
                         </div>
                         {/* Lateral Entry Banner */}
                         {program.isNewLines && (
@@ -119,8 +140,13 @@ export default function ProgrammeCard({
                 <div
                     className={`shrink-0 flex mt-6 md:mt-0 flex-row md:flex-col gap-3 w-full md:w-40`}
                 >
-                    <button
-                        onClick={onFeeClick}
+                    <Link
+                        href={
+                            program.isZenith
+                                ? program.slug
+                                : `/programs/${program.slug}`
+                        }
+                        target="_blank"
                         className={`flex items-center justify-center px-3 md:px-4 py-2 border border-white rounded text-[12px] md:text-[14px] text-white tracking-wide hover:bg-white/5 transition-colors cursor-pointer flex-1 md:flex-none md:justify-between`}
                     >
                         <span>EXPLORE</span>
@@ -129,7 +155,7 @@ export default function ProgrammeCard({
                             strokeWidth={2}
                             className="ml-2"
                         />
-                    </button>
+                    </Link>
 
                     {program.showApplyNow && program.eligibilityUtmLink && (
                         <Link
@@ -190,7 +216,7 @@ export default function ProgrammeCard({
                         </span>
                         <div className="flex flex-col gap-0.5">
                             <span className="font-semibold text-xs">
-                                Duration:
+                                Duration
                             </span>
                             <span className="text-xs">{program.duration}</span>
                         </div>
@@ -200,8 +226,28 @@ export default function ProgrammeCard({
                             <IndianRupee size={20} />
                         </span>
                         <div className="flex flex-col gap-0.5">
-                            <span className="font-semibold text-xs">
-                                Programme Fee:
+                            <span className="font-semibold text-xs inline-flex items-center whitespace-nowrap">
+                                Programme Fee
+                                <div className="relative group/tooltip inline-flex items-center ml-2">
+                                    <button
+                                        type="button"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                            onFeeClick();
+                                        }}
+                                        aria-label="View Fee Structure"
+                                        className="cursor-pointer text-white/80 hover:text-white transition-colors inline-flex items-center"
+                                    >
+                                        <HiOutlineInformationCircle size={16} />
+                                    </button>
+                                    <div className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 hidden group-hover/tooltip:flex flex-col items-center z-30">
+                                        <span className="bg-[#0b2238] text-white text-[11px] font-normal px-2.5 py-1 rounded shadow-lg border border-white/10 whitespace-nowrap">
+                                            View Fee Structure
+                                        </span>
+                                        <span className="w-1.5 h-1.5 bg-[#0b2238] border-r border-b border-white/10 rotate-45 -mt-1" />
+                                    </div>
+                                </div>
                             </span>
                             <span className="text-xs">
                                 Rs. {program.fees} / Year
@@ -218,12 +264,17 @@ export default function ProgrammeCard({
             <div
                 className={`relative z-10 shrink-0 flex flex-row gap-3 mt-auto w-full`}
             >
-                <button
-                    onClick={onFeeClick}
+                <Link
+                    href={
+                        program.isZenith
+                            ? program.slug
+                            : `/programs/${program.slug}`
+                    }
+                    target="_blank"
                     className={`flex items-center justify-center px-3 md:px-4 py-2 border border-white/20 rounded text-[12px] md:text-[12px] text-white tracking-wide hover:bg-white/5 transition-colors cursor-pointer flex-1`}
                 >
-                    <span>FEE STRUCTURE</span>
-                </button>
+                    <span>EXPLORE</span>
+                </Link>
 
                 {program.showApplyNow && program.eligibilityUtmLink && (
                     <Link

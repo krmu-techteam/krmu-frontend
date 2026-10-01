@@ -619,10 +619,10 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                 </p>
                                                 <p className="tracking-wide">
                                                     <a
-                                                        href="mailto:Helpwelcome@krmangalam.edu.in"
+                                                        href="mailto:welcome@krmangalam.edu.in"
                                                         className="hover:text-white transition-colors"
                                                     >
-                                                        Helpwelcome@krmangalam.edu.in
+                                                        welcome@krmangalam.edu.in
                                                     </a>
                                                 </p>
                                                 <p className="tracking-wide">
