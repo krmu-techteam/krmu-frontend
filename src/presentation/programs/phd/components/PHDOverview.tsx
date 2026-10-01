@@ -6,13 +6,7 @@ import {
     PhDOverview as PhDOverviewType,
 } from "@/lib/types/phd-programmes";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-import { Newsreader } from "next/font/google";
-
-const newsreader = Newsreader({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["normal", "italic"],
-});
+import { newsreader } from "../font";
 
 interface PHDOverviewProps {
     overviewData: PhDOverviewType;

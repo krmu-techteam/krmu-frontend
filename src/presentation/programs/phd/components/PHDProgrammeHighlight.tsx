@@ -3,14 +3,8 @@
 import React from "react";
 import { ProgrammeHighlight } from "@/lib/types/phd-programmes";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-import { Newsreader } from "next/font/google";
+import { newsreader } from "../font";
 import Image from "next/image";
-
-const newsreader = Newsreader({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["normal", "italic"],
-});
 
 type Props = {
     highlightContent: ProgrammeHighlight;

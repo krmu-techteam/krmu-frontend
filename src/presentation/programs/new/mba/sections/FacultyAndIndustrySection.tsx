@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Fraunces, Poppins } from "next/font/google";
 import * as Icons from "lucide-react";
 import {
     Carousel,
@@ -20,17 +19,7 @@ import {
 import Link from "next/link";
 import FacultyCard from "../components/FacultyCard";
 
-const inter = Poppins({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["italic", "normal"],
-});
-
-const fraunces = Fraunces({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["italic", "normal"],
-});
+import { inter, fraunces } from "../lib/fonts";
 
 export interface FacultyAndIndustrySectionProps {
     slug: string;

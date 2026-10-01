@@ -2,21 +2,9 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Fraunces, Poppins } from "next/font/google";
+import { inter, fraunces } from "../lib/fonts";
 import * as Icons from "lucide-react";
 import { CareerGoalPageContentType } from "../types/contentCareerGoal";
-
-const inter = Poppins({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["italic", "normal"],
-});
-
-const fraunces = Fraunces({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["italic", "normal"],
-});
 
 export interface CareerGoalSectionProps {
     slug: string;
@@ -42,11 +30,34 @@ export const CareerGoalSection = ({
         setActiveCourseIdx(null);
     };
 
+    const getHandbookUrl = (progSlug: string) => {
+        switch (progSlug) {
+            case "mba-digital-marketing":
+                return "https://www.krmangalam.edu.in/pdfs/mba-digital-marketing.pdf";
+            case "mba-fintech":
+                return "https://www.krmangalam.edu.in/pdfs/mba-fintech.pdf";
+            case "mba":
+            default:
+                return "https://www.krmangalam.edu.in/pdfs/mba.pdf";
+        }
+    };
+
+    const handbookUrl = getHandbookUrl(slug);
+
     return (
         <section className="w-full bg-[#F7F0E0] text-[#012D52]">
             <div className="max-w-[1440px] mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 lg:py-14">
                 {/* Header */}
                 <div className="mb-2">
+                    <a
+                        href={handbookUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${inter.className} text-[#87601A] hover:text-[#5c4110] text-xs sm:text-[14px] font-semibold tracking-[0.7px] inline-flex items-center gap-1.5 mb-2 hover:underline cursor-pointer transition-colors`}
+                    >
+                        <Icons.Download className="w-3.5 h-3.5 shrink-0" />
+                        <span>Programme Handbook</span>
+                    </a>
                     <span
                         className={`${inter.className} text-[#87601A] text-xs sm:text-[15px] font-semibold tracking-[0.7px] uppercase block mb-2`}
                     >

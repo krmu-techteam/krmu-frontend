@@ -4,7 +4,6 @@ import Link from "next/link";
 
 const newsreader = Newsreader({
     subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
 });
 
 const HeroSection = () => {

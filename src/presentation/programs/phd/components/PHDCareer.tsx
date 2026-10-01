@@ -1,15 +1,8 @@
 import React from "react";
 import { CareerOptions } from "@/lib/types/phd-programmes";
-import { Newsreader } from "next/font/google";
-import { Briefcase } from "lucide-react";
-
 import Image from "next/image";
-
-const newsreader = Newsreader({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["normal", "italic"],
-});
+import { newsreader } from "../font";
+import { Briefcase } from "lucide-react";
 
 type Props = {
     careerOptions: CareerOptions;

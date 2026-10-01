@@ -1,21 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { Fraunces, Poppins } from "next/font/google";
+import { inter as poppins, fraunces } from "../lib/fonts";
 import { Plus, Minus } from "lucide-react";
 import { CommonQuestionPageContentType } from "../types/contentCommonQuestion";
-
-const poppins = Poppins({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["italic", "normal"],
-});
-
-const fraunces = Fraunces({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["italic", "normal"],
-});
 
 export interface CommonQuestionSectionProps {
     dataContent?: CommonQuestionPageContentType | null;

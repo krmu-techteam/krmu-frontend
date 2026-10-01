@@ -15,13 +15,7 @@ import {
     CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { Newsreader } from "next/font/google";
-
-const newsreader = Newsreader({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["normal", "italic"],
-});
+import { newsreader } from "../font";
 
 interface PHDHeroSectionProps {
     heading: string;

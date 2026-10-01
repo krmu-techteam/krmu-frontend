@@ -26,14 +26,12 @@ const playfair = Playfair_Display({
 
 const inter = Inter({
     subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700"],
     display: "swap",
     variable: "--font-inter",
 });
 
 const fraunces = Fraunces({
     subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
     display: "swap",
     preload: false,
     variable: "--font-fraunces",
@@ -41,7 +39,6 @@ const fraunces = Fraunces({
 
 const sofiaSansCondensed = Sofia_Sans_Condensed({
     subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700", "800", "900"],
     display: "swap",
     preload: false,
     variable: "--font-sofia-sans-condensed",
@@ -49,7 +46,6 @@ const sofiaSansCondensed = Sofia_Sans_Condensed({
 
 const faustina = Faustina({
     subsets: ["latin"],
-    weight: ["400", "500", "600", "700", "800"],
     display: "swap",
     preload: false,
     variable: "--font-faustina",

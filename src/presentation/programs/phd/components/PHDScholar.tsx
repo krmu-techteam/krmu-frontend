@@ -1,12 +1,6 @@
 import React from "react";
 import { ScholarSponsoredPartTime } from "@/lib/types/phd-programmes";
-import { Newsreader } from "next/font/google";
-
-const newsreader = Newsreader({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["normal", "italic"],
-});
+import { newsreader } from "../font";
 
 type Props = {
     scholarShipsData?: ScholarSponsoredPartTime;

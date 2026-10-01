@@ -3,13 +3,7 @@
 import React, { useMemo } from "react";
 import Image from "next/image";
 import { Pursue } from "@/lib/types/phd-programmes";
-import { Newsreader } from "next/font/google";
-
-const newsreader = Newsreader({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["normal", "italic"],
-});
+import { newsreader } from "../font";
 
 type Props = {
     pursueContent: Pursue;

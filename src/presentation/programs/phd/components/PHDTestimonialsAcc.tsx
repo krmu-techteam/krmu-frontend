@@ -2,13 +2,7 @@
 
 import React, { useState } from "react";
 import { PhDFaq } from "@/lib/types/phd-programmes";
-import { Newsreader } from "next/font/google";
-
-const newsreader = Newsreader({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["normal", "italic"],
-});
+import { newsreader } from "../font";
 
 type Props = {
     faqTitle: string;
