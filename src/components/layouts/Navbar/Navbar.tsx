@@ -22,13 +22,14 @@ const Navbar = ({ navbarData, handleMobileMenu, showMobilebar }: Props) => {
                 <Link href="/">
                     <div className="relative h-14 md:h-16 w-52 md:w-60 lg:w-68 xl:w-76 flex items-center">
                         <Image
-                            src="/university-logo.webp"
+                            src="/krmu/KRMU_LOGO.webp"
                             alt="K.R. Mangalam University"
                             width={304}
                             height={57}
                             className="w-full h-auto object-contain"
                             priority
                             sizes="(max-width: 768px) 208px, 304px"
+                            unoptimized
                         />
                     </div>
                 </Link>

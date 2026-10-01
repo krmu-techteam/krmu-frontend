@@ -348,7 +348,8 @@ body:before {
         margin-top: 5px;
     }
 
-    .heroBannerForm__form .npf_wgts iframe {
+    .heroBannerForm__form .npf_wgts iframe,
+    .heroBannerForm__form .npf_form_container iframe {
         border-radius: 14px;
         width: 100% !important;
         float: right;
@@ -376,7 +377,8 @@ body:before {
             height: 180px !important;
         }
 
-        .mob_prog_form > .npf_wgts > iframe {
+        .mob_prog_form > .npf_wgts > iframe,
+        .mob_prog_form > .npf_form_container > iframe {
             height: 550px !important;
         }
 

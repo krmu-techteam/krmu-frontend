@@ -7,7 +7,7 @@ export default function NpfAgent() {
     const [loadScript, setLoadScript] = useState(false);
 
     useEffect(() => {
-        const events = ["scroll", "mousemove", "touchstart", "click"];
+        const events = ["scroll", "touchstart", "click"];
         const onUserAction = () => {
             setLoadScript(true);
             events.forEach((e) => window.removeEventListener(e, onUserAction));

@@ -14,6 +14,8 @@ const NoPaperForm = ({
     onLoaded,
 }: NoPaperFormProps) => {
     const containerRef = useRef<HTMLDivElement>(null);
+    const onLoadedRef = useRef(onLoaded);
+    onLoadedRef.current = onLoaded;
 
     useEffect(() => {
         if (!formId || typeof window === "undefined") return;
@@ -24,7 +26,7 @@ const NoPaperForm = ({
         // Check if iframe already exists and loaded
         const existingIframe = container.querySelector("iframe");
         if (existingIframe) {
-            onLoaded?.();
+            onLoadedRef.current?.();
             return;
         }
 
@@ -66,27 +68,27 @@ const NoPaperForm = ({
         iframe.setAttribute("src", src);
 
         iframe.addEventListener("load", () => {
-            onLoaded?.();
+            onLoadedRef.current?.();
         });
 
         container.appendChild(iframe);
 
         // Fallback onLoaded after 800ms
         const timer = setTimeout(() => {
-            onLoaded?.();
+            onLoadedRef.current?.();
         }, 800);
 
         return () => {
             clearTimeout(timer);
         };
-    }, [formId, height, onLoaded]);
+    }, [formId, height]);
 
     return (
         <div
             ref={containerRef}
-            className="npf_wgts w-full"
+            className="npf_form_container w-full"
             data-height={height}
-            data-w={formId}
+            data-form-id={formId}
         />
     );
 };

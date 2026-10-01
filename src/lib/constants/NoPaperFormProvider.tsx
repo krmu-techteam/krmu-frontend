@@ -21,7 +21,7 @@ const NoPaperFormProvider = () => {
         };
 
         // Defer load to first user interaction or 6s timer to prevent blocking main thread
-        const events = ["scroll", "mousemove", "touchstart", "click"];
+        const events = ["scroll", "touchstart", "click"];
         const onUserAction = () => {
             loadScript();
             events.forEach((e) => window.removeEventListener(e, onUserAction));

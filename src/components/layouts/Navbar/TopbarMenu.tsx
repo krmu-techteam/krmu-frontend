@@ -41,7 +41,7 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
                             <li key={item.id}>
                                 <Link
                                     href={url}
-                                    className="font-semibold text-[#ED1C24] hover:text-[#ED1C24]/80 transition"
+                                    className="font-bold text-[#ED1C24] hover:text-[#ED1C24]/80 transition inline-flex items-center gap-1.5"
                                     target={isExternal ? "_blank" : undefined}
                                     rel={
                                         isExternal
@@ -49,7 +49,13 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
                                             : undefined
                                     }
                                 >
-                                    {item.title}
+                                    <span className="relative flex h-2 w-2">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ED1C24] opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ED1C24]"></span>
+                                    </span>
+                                    <span className="animate-pulse">
+                                        {item.title}
+                                    </span>
                                 </Link>
                             </li>
                         );
@@ -76,8 +82,14 @@ const TopbarMenu = ({ topbarmenu }: TopbarProps) => {
                 if (isIdeas) {
                     return (
                         <li key={item.id}>
-                            <span className="font-semibold text-[#cb000d]">
-                                {item.title}
+                            <span className="font-bold text-[#ED1C24] inline-flex items-center gap-1.5">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ED1C24] opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ED1C24]"></span>
+                                </span>
+                                <span className="animate-pulse">
+                                    {item.title}
+                                </span>
                             </span>
                         </li>
                     );
