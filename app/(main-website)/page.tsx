@@ -19,8 +19,8 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: seo?.canonical || "",
     },
     robots: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
     },
 
     // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
