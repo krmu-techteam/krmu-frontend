@@ -166,7 +166,7 @@ export const PLACEMENT_CARD_CONFIGS: PlacementCardConfigType[] = [
 export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
     {
         id: 1,
-        src: "/images/home/whykrmu/1.jpg",
+        src: "/images/home/whykrmu/events/1.webp",
         alt: "Students enjoying recreation and sports at K.R. Mangalam University indoor gaming lounge",
         category: "Sports & Recreation",
         title: "Campus Recreation Hub",
@@ -175,7 +175,7 @@ export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 2,
-        src: "/images/home/whykrmu/2.jpg",
+        src: "/images/home/whykrmu/events/2.webp",
         alt: "Students working with quadruped robotics in KRMU advanced robotics lab",
         category: "Tech & Robotics",
         title: "Robotics & AI Labs",
@@ -184,7 +184,7 @@ export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 3,
-        src: "/images/home/whykrmu/3.jpg",
+        src: "/images/home/whykrmu/events/3.webp",
         alt: "Diverse students engaging in campus life and peer learning at KRMU",
         category: "Campus Life",
         title: "Vibrant Student Community",
@@ -193,7 +193,7 @@ export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 4,
-        src: "/images/home/whykrmu/4.jpg",
+        src: "/images/home/whykrmu/events/4.webp",
         alt: "Journalism student reporting from the KRMU School of Journalism and Mass Communication studio",
         category: "Media & Broadcasting",
         title: "SJMC Media Studio",
@@ -202,7 +202,7 @@ export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 5,
-        src: "/images/home/whykrmu/5.jpg",
+        src: "/images/home/whykrmu/events/5.webp",
         alt: "Student researching in the modern KRMU central library",
         category: "Academic Excellence",
         title: "Central Knowledge Hub",
@@ -211,7 +211,7 @@ export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
     },
     {
         id: 6,
-        src: "/images/home/whykrmu/6.jpg",
+        src: "/images/home/whykrmu/events/6.webp",
         alt: "Ankur Warikoo being felicitated during Aarambh orientation program at K.R. Mangalam University",
         category: "Leadership Sessions",
         title: "Ankur Warikoo at Aarambh",
@@ -221,7 +221,7 @@ export const LIFE_AT_KRMU_GALLERY: LifeAtKRMUGalleryType[] = [
 
     {
         id: 9,
-        src: "/images/home/whykrmu/9.jpg",
+        src: "/images/home/whykrmu/events/9.webp",
         alt: "Fashion models presenting designer collection at KRMU fashion show",
         category: "Fashion & Design",
         title: "Bello Globe Life Runway",

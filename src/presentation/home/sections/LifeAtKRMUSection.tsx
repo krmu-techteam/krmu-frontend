@@ -284,7 +284,6 @@ export function LifeAtKRMUSection() {
                 sizes="(max-width: 768px) 380px, 520px"
                 className="object-cover object-center group-hover:scale-[1.04] transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] pointer-events-none will-change-transform"
                 loading="lazy"
-                unoptimized
             />
 
             {/* Subtle bottom gradient vignette (Smooth height and opacity expansion) */}
@@ -333,7 +332,7 @@ export function LifeAtKRMUSection() {
                         <Link
                             key={idx}
                             href={item.url || "#"}
-                            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-[3px] border border-white hover:border-white/90 bg-white/2 hover:bg-white/5 text-white hover:text-white/90 text-[14px] md:text-[15px] font-medium tracking-wide transition-all duration-300 group shadow-sm"
+                            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-[3px] border border-white/50 hover:border-white/60 bg-white/2 hover:bg-white/5 text-white hover:text-white/90 text-[14px] md:text-[15px] font-medium tracking-wide transition-all duration-300 group shadow-sm"
                         >
                             {getActionIcon(item.label)}
                             <span>{item.label}</span>

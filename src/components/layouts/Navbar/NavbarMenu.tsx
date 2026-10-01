@@ -420,7 +420,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                 href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="relative overflow-hidden group w-fit border border-[#fff]/90 hover:border-white bg-[#071624]/50 text-white/90 hover:text-white font-poppins font-normal py-3 px-4 hover:bg-white/5 rounded-[2px] text-[14px] flex items-center justify-center gap-1.5 transition-all duration-300 text-center tracking-wide whitespace-nowrap active:scale-[0.98] cursor-pointer"
+                                                className="relative overflow-hidden group w-fit border border-[#fff]/50 hover:border-white/60 bg-[#071624]/50 text-white/90 hover:text-white font-poppins font-normal py-3 px-4 hover:bg-white/5 rounded-[2px] text-[14px] flex items-center justify-center gap-1.5 transition-all duration-300 text-center tracking-wide whitespace-nowrap active:scale-[0.98] cursor-pointer"
                                             >
                                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
                                                 <span className="relative z-10">

@@ -53,13 +53,13 @@ export function JourneySection() {
                             icon={ArrowUpRight}
                             iconPosition="left"
                             iconClassName="rotate-45 group-hover:rotate-0 transition-transform"
-                            className="!text-white !border-white !hover:border-white/80 !w-fit !text-[13px] md:!text-[14px] !px-4"
+                            className="!text-white !border-white/50 !hover:border-white/80 !w-fit !text-[13px] md:!text-[14px] !px-4"
                         >
                             Explore Programmes
                         </Button>
 
                         <CommonLeadPopup
-                            buttonClassName="w-fit flex items-center justify-center h-[45px] rounded-[4px] font-normal transition-all duration-300 ease-in-out uppercase text-[13px] md:text-[14px] leading-none tracking-wide relative overflow-hidden group px-4 border border-white text-white hover:border-white/80"
+                            buttonClassName="w-fit flex items-center justify-center h-[45px] rounded-[4px] font-normal transition-all duration-300 ease-in-out uppercase text-[13px] md:text-[14px] leading-none tracking-wide relative overflow-hidden group px-4 border border-white/50 text-white"
                             buttonText={
                                 <div className="flex items-center gap-1.5">
                                     <ArrowDownToLine
@@ -140,7 +140,7 @@ export function JourneySection() {
                         variant="outline"
                         target="_blank"
                         icon={FiYoutube}
-                        className="h-auto py-3 !px-4 text-[12px] tracking-[0.2em] !border-white !hover:border-white/80 !w-fit"
+                        className="h-auto py-3 !px-4 text-[12px] tracking-[0.2em] !border-white/50 !w-fit"
                         iconClassName="group-hover:scale-110 transition-transform"
                     >
                         Watch More

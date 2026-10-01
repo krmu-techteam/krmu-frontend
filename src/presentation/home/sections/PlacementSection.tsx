@@ -104,14 +104,14 @@ export function PlacementsSection() {
                             <Button
                                 href="/placement-highlights"
                                 variant="outline"
-                                className="!border-white !hover:border-white/80 !w-fit !text-[13px] md:!text-[14px] !px-4"
+                                className="!border-white/50 !w-fit !text-[13px] md:!text-[14px] !px-4"
                             >
                                 Placement Records
                             </Button>
                             <Button
                                 href="/placement/our-recruiter"
                                 variant="outline"
-                                className="!border-white !hover:border-white/80 !w-fit !text-[13px] md:!text-[14px] !px-4"
+                                className="!border-white/50 !w-fit !text-[13px] md:!text-[14px] !px-4"
                             >
                                 Our Recruiters
                             </Button>

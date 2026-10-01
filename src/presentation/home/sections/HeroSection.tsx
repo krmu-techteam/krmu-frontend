@@ -75,7 +75,7 @@ export const HeroSection = ({
                         variant="outline"
                         icon={ArrowDownToLine}
                         iconPosition="left"
-                        className="!text-white !px-4 !h-10 !border-white/30 hover:!bg-white/10 hover:!text-white rounded-[4px] text-[12px] sm:text-[13px] md:text-[14px] lg:text-[13px] xl:text-[15px] font-medium !capitalize tracking-wider whitespace-nowrap w-fit justify-center"
+                        className="!text-white !px-4 !h-10 !border-white/50 hover:!bg-white/10 hover:!text-white rounded-[4px] text-[12px] sm:text-[13px] md:text-[14px] lg:text-[13px] xl:text-[15px] font-medium !capitalize tracking-wider whitespace-nowrap w-fit justify-center"
                         iconClassName="group-hover:translate-y-0.5 transition-transform !text-white"
                     >
                         University Student Handbook
