@@ -6,12 +6,16 @@ type NoPaperFormProps = {
     formId?: string; // this is the data-w value
     height?: string;
     onLoaded?: () => void;
+    programme?: string;
+    school?: string;
 };
 
 const NoPaperForm = ({
     formId,
     height = "500px",
     onLoaded,
+    programme,
+    school,
 }: NoPaperFormProps) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const onLoadedRef = useRef(onLoaded);
@@ -50,17 +54,41 @@ const NoPaperForm = ({
             }
         }
 
+        // Pass programme and school into prefill parameters
+        if (programme) {
+            if (m !== "") m += "||";
+            m += `programme npfeq ${programme}||course npfeq ${programme}||degree npfeq ${programme}`;
+        }
+        if (school) {
+            if (m !== "") m += "||";
+            m += `school npfeq ${school}`;
+        }
+
+        // DPDP Act 2023: Default consent unticked
+        if (m !== "") m += "||";
+        m += "Agree npfeq 0||agree npfeq 0";
+
+        const progParam = programme
+            ? `&programme=${encodeURIComponent(programme)}`
+            : "";
+        const schoolParam = school
+            ? `&school=${encodeURIComponent(school)}`
+            : "";
+
         const src = `https://widgets.nopaperforms.com/register?&r=${encodeURIComponent(
             referrer
-        )}&q=${m}&w=${encodeURIComponent(formId)}&m=&cu=${encodeURIComponent(
-            currentUrl
-        )}`;
+        )}&q=${encodeURIComponent(m)}&w=${encodeURIComponent(
+            formId
+        )}&m=&cu=${encodeURIComponent(currentUrl)}${progParam}${schoolParam}`;
 
         container.innerHTML = "";
         const iframe = document.createElement("iframe");
         iframe.frameBorder = "0";
         iframe.width = "100%";
         iframe.height = height;
+        iframe.style.height = height;
+        iframe.style.minHeight = height;
+        iframe.style.display = "block";
         iframe.setAttribute(
             "sandbox",
             "allow-top-navigation allow-scripts allow-same-origin allow-downloads allow-popups allow-popups-to-escape-sandbox"
@@ -81,12 +109,13 @@ const NoPaperForm = ({
         return () => {
             clearTimeout(timer);
         };
-    }, [formId, height]);
+    }, [formId, height, programme, school]);
 
     return (
         <div
             ref={containerRef}
             className="npf_form_container w-full"
+            style={{ height, minHeight: height, overflow: "hidden" }}
             data-height={height}
             data-form-id={formId}
         />

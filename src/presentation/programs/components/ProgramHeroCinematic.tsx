@@ -63,12 +63,21 @@ const ProgramHeroCinematic = ({
                     </div>
 
                     {/* Desktop Form Component */}
-                    <CinematicForm formId={formId} />
+                    <CinematicForm
+                        formId={formId}
+                        programTitle={title}
+                        slug={slug}
+                    />
                 </div>
             </section>
 
             {/* Mobile Form Component */}
-            <CinematicForm formId={formId} isMobile={true} />
+            <CinematicForm
+                formId={formId}
+                isMobile={true}
+                programTitle={title}
+                slug={slug}
+            />
         </div>
     );
 };

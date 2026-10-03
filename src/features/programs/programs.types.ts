@@ -65,6 +65,9 @@ export interface CinematicHeroSectionProps {
 export interface CinematicFormProps {
     formId?: string;
     isMobile?: boolean;
+    programTitle?: string;
+    slug?: string;
+    school?: string;
 }
 
 export interface RecruiterCarouselProps {

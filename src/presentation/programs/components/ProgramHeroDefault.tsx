@@ -284,7 +284,11 @@ const ProgramHeroDefault = ({
                                     Apply Today for K.R. Mangalam University
                                 </p>
                             </div>
-                            <NoPaperForm formId={formId} height="600px" />
+                            <NoPaperForm
+                                formId={formId}
+                                height="600px"
+                                programme={title || slug}
+                            />
                         </div>
                     )}
                 </div>
