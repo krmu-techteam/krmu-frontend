@@ -10,7 +10,7 @@ import { ArrowUpRight } from "lucide-react";
 export function ResearchSection() {
     return (
         <section className="relative w-full py-10 md:py-12 xl:py-20 font-poppins">
-            <div className="w-full max-w-[1530px] mx-auto relative z-10 px-4 sm:px-6 md:px-8 xl:px-0">
+            <div className="w-full max-w-[1530px] mx-auto relative z-10 px-0   md:px-8 xl:px-0">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 items-start relative xl:min-h-[760px]">
                     {/* Left Column - Image and Stats */}
                     <div className="w-full lg:w-[58%] xl:w-[925px]">

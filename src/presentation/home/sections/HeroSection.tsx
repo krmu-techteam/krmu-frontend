@@ -4,18 +4,14 @@ import React, { useState, useEffect } from "react";
 import { Search, ArrowDownToLine } from "lucide-react";
 import Button from "@/components/common/Button";
 
-import dynamic from "next/dynamic";
 import {
     HeroNav,
     HeroVideo,
     HeroContent,
     HeroVirtualTour,
 } from "../components/hero";
+import { HeroSearch } from "../components/hero/HeroSearch";
 import { HeroSectionComponent } from "@/features/home";
-
-const HeroSearch = dynamic(() =>
-    import("../components/hero/HeroSearch").then((mod) => mod.HeroSearch)
-);
 
 export const HeroSection = ({
     title,
@@ -55,7 +51,13 @@ export const HeroSection = ({
                 <div className="relative w-full lg:w-auto h-11 md:h-14 flex items-center">
                     <div className="flex items-center justify-between sm:justify-center lg:justify-start gap-3 md:gap-6 lg:gap-8 w-full h-full lg:w-auto overflow-x-auto scrollbar-hide px-3.5 sm:px-6 lg:px-0">
                         <button
-                            onClick={() => setIsSearchOpen(true)}
+                            type="button"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                setIsSearchOpen(true);
+                            }}
+                            aria-label="Search programmes"
                             className="hidden lg:flex w-10 h-10 border border-white/20 rounded-[4px] items-center justify-center hover:bg-white/10 transition-all shadow-sm text-white cursor-pointer shrink-0"
                         >
                             <Search size={20} strokeWidth={2.5} />

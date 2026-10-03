@@ -4,7 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { ChevronDown, ArrowUpRight, Download } from "lucide-react";
+import {
+    ChevronDown,
+    ArrowUpRight,
+    Download,
+    ChevronRight,
+} from "lucide-react";
 import { Carousel } from "@/components/common/Carousel";
 import { SUCCESS_STORIES } from "@/features/home";
 import Button from "@/components/common/Button";
@@ -254,154 +259,64 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 }
                                 onMouseLeave={handleMenuLeave}
                             >
-                                <div className="mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-12 lg:gap-16">
-                                    {/* Left: Program Level */}
-                                    <div className="col-span-12 lg:col-span-7">
+                                <div className="mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-8 lg:gap-12">
+                                    {/* Left: Schools */}
+                                    <div className="col-span-12 lg:col-span-8">
                                         <div className="text-2xl font-normal font-poppins text-white mb-6">
-                                            Program Level
+                                            Schools
                                         </div>
 
-                                        <div className="grid grid-cols-2 gap-5">
-                                            {/* Undergraduate */}
-                                            <Link
-                                                href="/programmes?degree=undergraduate-programmes"
-                                                className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[1px] block"
-                                            >
-                                                <Image
-                                                    src="/images/header/program-level/undergraduate-programmes.jpg"
-                                                    alt="Undergraduate Programmes"
-                                                    fill
-                                                    sizes="(max-width: 1024px) 100vw, 400px"
-                                                    className="object-cover transition-all duration-700 ease-in-out group-hover:scale-103 opacity-90 group-hover:opacity-100"
-                                                />
-                                                <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#061623] rounded-[2px] text-center transition-all duration-500 ease-in-out group-hover:bg-[#061623]">
-                                                    <span className="text-sm font-light text-white font-poppins">
-                                                        Undergraduate Programmes
-                                                    </span>
-                                                </div>
-                                            </Link>
-
-                                            {/* Postgraduate */}
-                                            <Link
-                                                href="/programmes?degree=postgraduate-programmes"
-                                                className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[1px]  block bg-[#0b1622]"
-                                            >
-                                                <Image
-                                                    src="/images/header/program-level/postgraduate-programmes.jpg"
-                                                    alt="Postgraduate Programmes"
-                                                    fill
-                                                    sizes="(max-width: 1024px) 100vw, 400px"
-                                                    className="object-cover transition-all duration-700 ease-in-out group-hover:scale-103 opacity-90 group-hover:opacity-100"
-                                                />
-                                                <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#061623] rounded-[2px] text-center transition-all duration-500 ease-in-out ">
-                                                    <span className="text-sm font-light text-white font-poppins">
-                                                        Postgraduate Programmes
-                                                    </span>
-                                                </div>
-                                            </Link>
-
-                                            {/* Doctoral */}
-                                            <Link
-                                                href="/programmes?degree=doctoral-programmes"
-                                                className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[1px]  block bg-[#0b1622]"
-                                            >
-                                                <Image
-                                                    src="/images/header/program-level/doctoral-programmes.jpg"
-                                                    alt="Doctoral Programmes"
-                                                    fill
-                                                    sizes="(max-width: 1024px) 100vw, 400px"
-                                                    className="object-cover transition-all duration-700 ease-in-out group-hover:scale-103 opacity-90 group-hover:opacity-100"
-                                                />
-                                                <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#061623] rounded-[2px] text-center transition-all duration-500 ease-in-out ">
-                                                    <span className="text-sm font-light text-white font-poppins">
-                                                        Doctoral Programmes
-                                                    </span>
-                                                </div>
-                                            </Link>
-
-                                            {/* Diploma */}
-                                            <Link
-                                                href="/programmes?degree=diploma-programmes"
-                                                className="group relative aspect-[16/9.5] w-full overflow-hidden rounded-[1px]  block bg-[#0b1622]"
-                                            >
-                                                <Image
-                                                    src="/images/header/program-level/diploma-programmes.jpg"
-                                                    alt="Diploma Programmes"
-                                                    fill
-                                                    sizes="(max-width: 1024px) 100vw, 400px"
-                                                    className="object-cover transition-all duration-700 ease-in-out group-hover:scale-103 opacity-90 group-hover:opacity-100"
-                                                />
-                                                <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#061623] rounded-[2px] text-center transition-all duration-500 ease-in-out ">
-                                                    <span className="text-sm font-light text-white font-poppins">
-                                                        Diploma Programmes
-                                                    </span>
-                                                </div>
-                                            </Link>
-                                        </div>
-
-                                        {/* Academics Counters */}
-                                        <div className="grid grid-cols-2 gap-5 mt-6">
-                                            {academicMenu?.acadcounter &&
-                                                academicMenu.acadcounter
-                                                    .length > 0 &&
-                                                academicMenu.acadcounter.map(
-                                                    (counter) => (
-                                                        <div
-                                                            key={counter.id}
-                                                            className="relative overflow-hidden group flex items-center justify-center h-[69px] border border-[#3C7ED4] rounded-[2px] text-center transition-all duration-300 hover:bg-[#061623] hover:border-[#3C7ED4]/80"
-                                                        >
-                                                            <p className="text-lg font-light font-poppins text-white tracking-wide">
-                                                                {
-                                                                    counter.countertext
-                                                                }{" "}
-                                                                {
-                                                                    counter.countercontent
-                                                                }
-                                                            </p>
-                                                        </div>
-                                                    )
-                                                )}
-                                        </div>
-                                    </div>
-
-                                    {/* Right: Schools */}
-                                    <div className="col-span-12 lg:col-span-5 flex flex-col justify-between">
-                                        <div>
-                                            <div className="text-2xl font-normal font-poppins text-white mb-6">
-                                                Schools
-                                            </div>
-
-                                            <ul className="flex flex-col gap-3 overflow-hidden">
-                                                {academicMenu?.academicmenu?.menulinks.map(
-                                                    (school) => {
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                                            {/* Column 1 (First 7 schools) */}
+                                            <ul className="flex flex-col gap-3">
+                                                {academicMenu?.academicmenu?.menulinks
+                                                    ?.slice(0, 7)
+                                                    .map((school) => {
                                                         const isZenith =
                                                             school.title
                                                                 .toLowerCase()
                                                                 .includes(
                                                                     "zenith"
                                                                 );
+                                                        const href =
+                                                            formatInternalLink(
+                                                                school.url
+                                                            ) || "#";
+                                                        const ext =
+                                                            isExternalUrl(
+                                                                school.url
+                                                            );
                                                         return (
                                                             <li key={school.id}>
                                                                 <Link
-                                                                    href={
-                                                                        formatInternalLink(
-                                                                            school.url
-                                                                        ) || "#"
+                                                                    href={href}
+                                                                    target={
+                                                                        ext
+                                                                            ? "_blank"
+                                                                            : undefined
                                                                     }
-                                                                    className={`font-poppins relative transition-all duration-300 text-[15px] font-light flex items-center group ${
+                                                                    rel={
+                                                                        ext
+                                                                            ? "noopener noreferrer"
+                                                                            : undefined
+                                                                    }
+                                                                    className={`font-poppins transition-colors text-[14px] xl:text-[14.5px] flex items-center gap-2 group ${
                                                                         isZenith
-                                                                            ? "text-[#3b82f6] hover:text-[#3b82f6]/80 font-normal"
-                                                                            : "text-white/80 hover:text-white"
+                                                                            ? "text-[#00AEEF] hover:text-[#38bdf8] font-normal"
+                                                                            : "text-white/90 hover:text-white font-light"
                                                                     }`}
                                                                 >
-                                                                    <span
-                                                                        className={`absolute -left-4 w-1.5 h-1.5 rounded-full scale-0 group-hover:scale-100 transition-all opacity-0 group-hover:opacity-100 ${
+                                                                    <ChevronRight
+                                                                        size={
+                                                                            14
+                                                                        }
+                                                                        className={`shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 ${
                                                                             isZenith
-                                                                                ? "bg-[#3b82f6]"
-                                                                                : "bg-[#cb000d]"
+                                                                                ? "text-[#00AEEF]"
+                                                                                : "text-white/90 group-hover:text-white"
                                                                         }`}
                                                                     />
-                                                                    <span>
+                                                                    <span className="leading-snug">
                                                                         {
                                                                             school.title
                                                                         }
@@ -409,30 +324,112 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                                 </Link>
                                                             </li>
                                                         );
-                                                    }
-                                                )}
+                                                    })}
+                                            </ul>
+
+                                            {/* Column 2 (Remaining schools) */}
+                                            <ul className="flex flex-col gap-3">
+                                                {academicMenu?.academicmenu?.menulinks
+                                                    ?.slice(7)
+                                                    .map((school) => {
+                                                        const isZenith =
+                                                            school.title
+                                                                .toLowerCase()
+                                                                .includes(
+                                                                    "zenith"
+                                                                );
+                                                        const href =
+                                                            formatInternalLink(
+                                                                school.url
+                                                            ) || "#";
+                                                        const ext =
+                                                            isExternalUrl(
+                                                                school.url
+                                                            );
+                                                        return (
+                                                            <li key={school.id}>
+                                                                <Link
+                                                                    href={href}
+                                                                    target={
+                                                                        ext
+                                                                            ? "_blank"
+                                                                            : undefined
+                                                                    }
+                                                                    rel={
+                                                                        ext
+                                                                            ? "noopener noreferrer"
+                                                                            : undefined
+                                                                    }
+                                                                    className={`font-poppins transition-colors text-[14px] xl:text-[14.5px] flex items-center gap-2 group ${
+                                                                        isZenith
+                                                                            ? "text-[#00AEEF] hover:text-[#38bdf8] font-normal"
+                                                                            : "text-white/90 hover:text-white font-light"
+                                                                    }`}
+                                                                >
+                                                                    <ChevronRight
+                                                                        size={
+                                                                            14
+                                                                        }
+                                                                        className={`shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 ${
+                                                                            isZenith
+                                                                                ? "text-[#00AEEF]"
+                                                                                : "text-white/90 group-hover:text-white"
+                                                                        }`}
+                                                                    />
+                                                                    <span className="leading-snug">
+                                                                        {
+                                                                            school.title
+                                                                        }
+                                                                    </span>
+                                                                </Link>
+                                                            </li>
+                                                        );
+                                                    })}
                                             </ul>
                                         </div>
+                                    </div>
 
-                                        {/* Handbook and Prospectus Buttons */}
-                                        <div className="flex flex-wrap items-center gap-4 mt-8">
-                                            <Link
-                                                href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="relative overflow-hidden group w-fit border border-[#fff]/50 hover:border-white/60 bg-[#071624]/50 text-white/90 hover:text-white font-poppins font-normal py-3 px-4 hover:bg-white/5 rounded-[2px] text-[14px] flex items-center justify-center gap-1.5 transition-all duration-300 text-center tracking-wide whitespace-nowrap active:scale-[0.98] cursor-pointer"
-                                            >
-                                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
-                                                <span className="relative z-10">
-                                                    University Student Handbook
+                                    {/* Right: Counters & Buttons */}
+                                    <div className="col-span-12 lg:col-span-4 flex flex-col justify-center items-center lg:items-end">
+                                        <div className="w-full max-w-[340px] flex flex-col items-center">
+                                            {/* Counters */}
+                                            <div className="flex items-center justify-center gap-6 text-[#E7C268] font-poppins text-[15px] xl:text-[16px] mb-12 w-full">
+                                                <span className="font-normal">
+                                                    {academicMenu
+                                                        ?.acadcounter?.[0]
+                                                        ? `${academicMenu.acadcounter[0].countertext} ${academicMenu.acadcounter[0].countercontent}`
+                                                        : "12 Schools"}
                                                 </span>
-                                            </Link>
-                                            <CommonLeadPopup
-                                                buttonClassName="border w-fit border-[#3C7ED4] hover:border-[#3C7ED4] bg-[#071624]/60 hover:bg-[#0c1e30] text-white font-poppins font-normal py-3 px-4 rounded-[2px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center uppercase cursor-pointer whitespace-nowrap"
-                                                buttonText="DOWNLOAD PROSPECTUS"
-                                                redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
-                                                form_name="Download Prospectus"
-                                            />
+                                                <span className="h-12 w-[1px] bg-[#1D3B52] inline-block" />
+                                                <span className="font-normal">
+                                                    {academicMenu
+                                                        ?.acadcounter?.[1]
+                                                        ? `${academicMenu.acadcounter[1].countertext} ${academicMenu.acadcounter[1].countercontent}`
+                                                        : "700+ Faculties"}
+                                                </span>
+                                            </div>
+
+                                            {/* Buttons */}
+                                            <div className="flex flex-col gap-3.5 w-full max-w-[275px]">
+                                                <Link
+                                                    href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="relative overflow-hidden group w-full h-[46px] border border-[#1D3B52] hover:border-[#38bdf8]/60 bg-transparent hover:bg-white/5 text-white font-poppins font-light px-4 rounded-[2px] text-[13px] flex items-center justify-center transition-all tracking-wider text-center cursor-pointer whitespace-nowrap"
+                                                >
+                                                    <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none" />
+                                                    <span className="relative z-10">
+                                                        University Student
+                                                        Handbook
+                                                    </span>
+                                                </Link>
+                                                <CommonLeadPopup
+                                                    buttonClassName="w-full h-[46px] border border-[#1D3B52] hover:border-[#38bdf8]/60 bg-transparent hover:bg-white/5 text-white font-poppins font-light px-4 rounded-[2px] text-[13px] flex items-center justify-center transition-all tracking-wider text-center uppercase whitespace-nowrap"
+                                                    buttonText="DOWNLOAD PROSPECTUS"
+                                                    redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
+                                                    form_name="Download Prospectus"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -441,27 +438,130 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                     )}
 
                     {/* Programmes */}
-                    <li onMouseEnter={() => handleMenuEnter("")}>
-                        <Link
-                            className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] ${
-                                (programmesLinks &&
-                                    "menuclass" in programmesLinks &&
-                                    programmesLinks.menuclass) ||
-                                ""
-                            }`}
-                            href={
-                                programmesLinks &&
-                                "url" in programmesLinks &&
-                                programmesLinks.url &&
-                                programmesLinks.url !== "#"
-                                    ? programmesLinks.url
-                                    : "/programmes"
-                            }
+                    <li
+                        className={`krm-sub-menu-has-children ${activeMenu === "programmes" ? "is-active" : ""}`}
+                        onMouseEnter={() => handleMenuEnter("programmes")}
+                        onMouseLeave={handleMenuLeave}
+                    >
+                        <div
+                            className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer ${activeMenu === "programmes" ? "text-white" : ""}`}
                         >
-                            <span>
-                                {programmesLinks?.title || "Programmes"}
-                            </span>
-                        </Link>
+                            <Link
+                                href={
+                                    programmesLinks &&
+                                    "url" in programmesLinks &&
+                                    programmesLinks.url &&
+                                    programmesLinks.url !== "#"
+                                        ? programmesLinks.url
+                                        : "/programmes"
+                                }
+                                className="hover:text-white"
+                            >
+                                <span>
+                                    {programmesLinks?.title || "Programmes"}
+                                </span>
+                            </Link>
+                            <ChevronDown
+                                className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "programmes" ? "rotate-180 opacity-100" : ""}`}
+                            />
+                        </div>
+                        <div
+                            className="absolute left-0 right-0 mx-auto w-full max-w-[1440px] top-full bg-[#04101A] pt-8 pb-10 md:pt-10 md:pb-12 overflow-hidden krmsubmenu-container z-50 shadow-2xl"
+                            onMouseEnter={() => handleMenuEnter("programmes")}
+                            onMouseLeave={handleMenuLeave}
+                        >
+                            <div className="mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-16 relative z-10">
+                                <div className="flex items-baseline gap-4 mb-6">
+                                    <span className="text-2xl font-normal font-poppins text-white">
+                                        Programmes
+                                    </span>
+                                    <Link
+                                        href="/programmes"
+                                        className="text-[#00AEEF] hover:text-[#38bdf8] text-[15px] font-poppins font-normal hover:underline transition-colors"
+                                    >
+                                        View All
+                                    </Link>
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
+                                    {/* Undergraduate */}
+                                    <Link
+                                        href="/programmes?degree=undergraduate-programmes"
+                                        className="group relative aspect-[16/11] w-full overflow-hidden rounded-[1px] block bg-[#0b1622]"
+                                    >
+                                        <Image
+                                            src="/images/header/program-level/undergraduate-programmes.jpg"
+                                            alt="Undergraduate Programmes"
+                                            fill
+                                            sizes="(max-width: 1024px) 100vw, 320px"
+                                            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                                        />
+                                        <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#061623]/95 rounded-[2px] text-center transition-all duration-500 ease-in-out group-hover:bg-[#061623]">
+                                            <span className="text-sm font-light text-white font-poppins">
+                                                Undergraduate Programmes
+                                            </span>
+                                        </div>
+                                    </Link>
+
+                                    {/* Postgraduate */}
+                                    <Link
+                                        href="/programmes?degree=postgraduate-programmes"
+                                        className="group relative aspect-[16/11] w-full overflow-hidden rounded-[1px] block bg-[#0b1622]"
+                                    >
+                                        <Image
+                                            src="/images/header/program-level/postgraduate-programmes.jpg"
+                                            alt="Postgraduate Programmes"
+                                            fill
+                                            sizes="(max-width: 1024px) 100vw, 320px"
+                                            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                                        />
+                                        <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#061623]/95 rounded-[2px] text-center transition-all duration-500 ease-in-out group-hover:bg-[#061623]">
+                                            <span className="text-sm font-light text-white font-poppins">
+                                                Postgraduate Programmes
+                                            </span>
+                                        </div>
+                                    </Link>
+
+                                    {/* Doctoral */}
+                                    <Link
+                                        href="/programmes?degree=doctoral-programmes"
+                                        className="group relative aspect-[16/11] w-full overflow-hidden rounded-[1px] block bg-[#0b1622]"
+                                    >
+                                        <Image
+                                            src="/images/header/program-level/doctoral-programmes.jpg"
+                                            alt="Doctoral Programmes"
+                                            fill
+                                            sizes="(max-width: 1024px) 100vw, 320px"
+                                            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                                        />
+                                        <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#061623]/95 rounded-[2px] text-center transition-all duration-500 ease-in-out group-hover:bg-[#061623]">
+                                            <span className="text-sm font-light text-white font-poppins">
+                                                Doctoral Programmes
+                                            </span>
+                                        </div>
+                                    </Link>
+
+                                    {/* Diploma */}
+                                    <Link
+                                        href="/programmes?degree=diploma-programmes"
+                                        className="group relative aspect-[16/11] w-full overflow-hidden rounded-[1px] block bg-[#0b1622]"
+                                    >
+                                        <Image
+                                            src="/images/header/program-level/diploma-programmes.jpg"
+                                            alt="Diploma Programmes"
+                                            fill
+                                            sizes="(max-width: 1024px) 100vw, 320px"
+                                            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
+                                        />
+                                        <div className="absolute inset-x-3 bottom-3 py-2.5 bg-[#061623]/95 rounded-[2px] text-center transition-all duration-500 ease-in-out group-hover:bg-[#061623]">
+                                            <span className="text-sm font-light text-white font-poppins">
+                                                Diploma Programmes
+                                            </span>
+                                        </div>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
                     </li>
 
                     {/* Admissions */}

@@ -5054,6 +5054,30 @@ body:before {
     background: rgba(255, 255, 255, 0.8);
 }
 
+/* Custom scrollbar for hero search */
+.hero-search-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.05);
+}
+
+.hero-search-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.hero-search-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 9999px;
+}
+
+.hero-search-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 9999px;
+}
+
+.hero-search-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
 /* Smooth Accordion animations for Radix UI */
 @keyframes accordion-down {
     from {

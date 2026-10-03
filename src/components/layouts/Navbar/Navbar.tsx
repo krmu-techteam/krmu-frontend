@@ -40,8 +40,13 @@ const Navbar = ({ navbarData, handleMobileMenu, showMobilebar }: Props) => {
 
                 <div className="xl:hidden flex items-center gap-2">
                     <button
-                        onClick={() => setIsSearchOpen(true)}
-                        className="text-white hover:text-[#cb000d] transition-colors p-2 shrink-0"
+                        type="button"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setIsSearchOpen(true);
+                        }}
+                        className="text-white hover:text-[#cb000d] transition-colors p-2 shrink-0 cursor-pointer"
                         aria-label="Search"
                     >
                         <Search size={22} strokeWidth={2.5} />
