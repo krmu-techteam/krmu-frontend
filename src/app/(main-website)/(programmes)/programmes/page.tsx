@@ -109,10 +109,19 @@ const page = async ({ searchParams }: PageProps) => {
         getAllPhdProgrammesServer(),
     ]);
 
-    const initialProgrammes = [
-        ...(allSchoolProgrammes || []),
+    const seenSlugs = new Set<string>();
+    const initialProgrammes: any[] = [];
+    for (const prog of [
         ...(allPhdProgrammes || []),
-    ];
+        ...(allSchoolProgrammes || []),
+    ]) {
+        const slug = (prog.programmeslug || (prog as any).phdslug || "")
+            .toLowerCase()
+            .trim();
+        if (slug && seenSlugs.has(slug)) continue;
+        if (slug) seenSlugs.add(slug);
+        initialProgrammes.push(prog);
+    }
 
     const programmeAlumnis = ProgrammeData?.alumni;
     const breadcrumbItems = [

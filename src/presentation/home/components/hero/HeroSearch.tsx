@@ -129,15 +129,58 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
                     getAllPhdProgrammesServer(),
                 ]);
 
-                // 1 Zenith + 94 School + 15 PhD = 110 total programmes
-                const combined = [
-                    ...zenithProgrammes,
-                    ...(schoolData || []),
-                    ...(phdData || []),
-                ];
+                // Deduplicate across Zenith, schoolData, and phdData
+                // (e.g. phd-law and phd-education which exist in both school and PhD tables)
+                const seenSlugs = new Set<string>();
+                const seenTitles = new Set<string>();
+                const uniqueProgrammes: any[] = [];
 
-                cachedAllProgrammes = combined;
-                setAllData(combined);
+                const addUniqueProgramme = (item: any, isPhdSource = false) => {
+                    const slug = (item.programmeslug || item.phdslug || "")
+                        .toLowerCase()
+                        .trim();
+                    const rawTitle = (item.title || item.heading || "")
+                        .replace(/\n/g, " ")
+                        .trim();
+                    const normTitle = normalizeSearchString(rawTitle);
+
+                    if (slug && seenSlugs.has(slug)) return;
+                    if (normTitle && seenTitles.has(normTitle)) return;
+
+                    if (slug) seenSlugs.add(slug);
+                    if (normTitle) seenTitles.add(normTitle);
+
+                    const isPhd =
+                        isPhdSource ||
+                        slug.startsWith("phd-") ||
+                        normTitle.startsWith("phd");
+
+                    uniqueProgrammes.push({
+                        ...item,
+                        title: rawTitle,
+                        programmeslug: slug,
+                        degree: item.degree?.name
+                            ? item.degree
+                            : isPhd
+                              ? {
+                                    name: "Doctoral",
+                                    slug: "doctoral-programmes",
+                                }
+                              : item.degree,
+                    });
+                };
+
+                // 1. Zenith Programmes
+                zenithProgrammes.forEach((p) => addUniqueProgramme(p));
+
+                // 2. PhD Programmes (prioritized for full doctoral classification)
+                (phdData || []).forEach((p) => addUniqueProgramme(p, true));
+
+                // 3. School Programmes (skips duplicate phd-law, phd-education, etc.)
+                (schoolData || []).forEach((p) => addUniqueProgramme(p));
+
+                cachedAllProgrammes = uniqueProgrammes;
+                setAllData(uniqueProgrammes);
             } catch (err) {
                 console.error("Failed to load programmes for search", err);
             }
@@ -146,7 +189,7 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
         loadProgrammes();
     }, [isOpen]);
 
-    // Live search filter across all 110 programmes
+    // Live search filter across all unique programmes
     useEffect(() => {
         const searchTerm = query.trim();
         if (searchTerm.length < 2) {
@@ -237,7 +280,18 @@ export const HeroSearch = ({ isOpen, onClose }: HeroSearchProps) => {
                 return 0;
             });
 
-            setSuggestions(filtered);
+            // Deduplication safety guard on output suggestions
+            const seenResultSlugs = new Set<string>();
+            const uniqueFiltered = filtered.filter((item: any) => {
+                const s = (item.programmeslug || item.phdslug || "")
+                    .toLowerCase()
+                    .trim();
+                if (s && seenResultSlugs.has(s)) return false;
+                if (s) seenResultSlugs.add(s);
+                return true;
+            });
+
+            setSuggestions(uniqueFiltered);
             setIsSearching(false);
         }, 120);
 
