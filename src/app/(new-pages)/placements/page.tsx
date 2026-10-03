@@ -14,7 +14,7 @@ import QuickEnquiry from "./common/QuickEnquiry";
 import {
     studentStories,
     StudentSuccessStories,
-} from "./common/StudentSuccessStories";
+} from "./common/StudentSuccessStories"; 
 import {
     cdcTeamMembers,
     createPersonGraphSchema,
