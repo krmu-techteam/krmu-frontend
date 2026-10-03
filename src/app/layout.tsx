@@ -65,7 +65,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="scroll-smooth overflow-x-hidden">
+        <html lang="en" className="scroll-smooth">
             <head>
                 <link
                     rel="preconnect"
@@ -93,7 +93,7 @@ export default function RootLayout({
                 </Script>
             </head>
             <body
-                className={`${poppins.variable} ${playfair.variable} ${inter.variable} ${fraunces.variable} ${sofiaSansCondensed.variable} ${faustina.variable} ${poppins.className} antialiased overflow-x-hidden`}
+                className={`${poppins.variable} ${playfair.variable} ${inter.variable} ${fraunces.variable} ${sofiaSansCondensed.variable} ${faustina.variable} ${poppins.className} antialiased`}
             >
                 <noscript>
                     <iframe

@@ -59,13 +59,10 @@ export default function YoutubePopup({
 
     // 👉 Disable background scroll
     useEffect(() => {
-        if (open) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "auto";
-        }
+        if (!open) return;
+        document.body.style.overflow = "hidden";
         return () => {
-            document.body.style.overflow = "auto";
+            document.body.style.overflow = "";
         };
     }, [open]);
 

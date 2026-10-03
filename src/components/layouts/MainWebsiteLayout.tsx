@@ -14,7 +14,7 @@ export default function MainWebsiteLayout({
                 <HeaderWrapper />
             </div>
             <NoPaperFormProvider />
-            <div className="w-full max-w-full overflow-x-clip">{children}</div>
+            <div className="w-full max-w-full">{children}</div>
             <div id="main-footer">
                 {/* <FloatingActionMenu /> */}
                 <Footer />

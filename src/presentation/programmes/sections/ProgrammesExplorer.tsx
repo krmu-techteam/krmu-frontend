@@ -419,7 +419,7 @@ const ProgrammesExplorer = ({
 
     const scrollToSection = () => {
         if (sectionRef.current) {
-            const yOffset = -140;
+            const yOffset = -92;
             const y =
                 sectionRef.current.getBoundingClientRect().top +
                 window.pageYOffset +
@@ -539,6 +539,13 @@ const ProgrammesExplorer = ({
 
         return active;
     }, [selectedSchool, masterProgrammes]);
+
+    // Ensure document body overflow is reset when entering programmes page so sticky positioning works reliably
+    useEffect(() => {
+        if (typeof document !== "undefined" && document.body.style.overflow) {
+            document.body.style.overflow = "";
+        }
+    }, []);
 
     // If currently selected degree is not in availableDegrees, reset to "all"
     useEffect(() => {
@@ -789,7 +796,7 @@ const ProgrammesExplorer = ({
                 <div className="flex flex-col xl:flex-row gap-6 xl:gap-8 items-start">
                     {/* Sidebar for Schools */}
                     {!schoolOnly && (
-                        <div className="w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] md:w-[calc(100%+4rem)] xl:w-[300px] shrink-0 sticky top-[95px] sm:top-[100px] md:top-[115px] xl:top-[115px] z-40 self-start xl:max-h-[calc(100vh-135px)] xl:overflow-y-auto no-scrollbar -mx-4 sm:-mx-6 md:-mx-8 xl:mx-0 bg-[#061623] xl:bg-transparent py-1 xl:py-0">
+                        <div className="w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] md:w-[calc(100%+4rem)] xl:w-[300px] shrink-0 sticky top-[80px] md:top-[88px] z-40 self-start xl:max-h-[calc(100vh-96px)] xl:overflow-y-auto no-scrollbar -mx-4 sm:-mx-6 md:-mx-8 xl:mx-0 bg-[#061623] xl:bg-transparent py-1 xl:py-0">
                             <ProgrammesSidebar
                                 activeSchoolSlug={selectedSchool}
                                 onSchoolChange={(slug) => {

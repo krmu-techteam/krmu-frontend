@@ -55,7 +55,7 @@ export default function ProgrammesFilterHeader({
             className={`sticky ${
                 schoolOnly
                     ? "top-[130px]  md:top-[140px]  z-[34]"
-                    : "top-[95px] sm:top-[100px] md:top-[115px] xl:top-[115px] z-[35]"
+                    : "top-[80px] md:top-[88px] z-[35]"
             } bg-[#061623] py-3 px-4 md:px-6 xl:px-3 mb-4 rounded-none xl:rounded-[4px] -mx-4 sm:-mx-6 md:-mx-8 xl:mx-0`}
         >
             {/* Filters & Search Row */}

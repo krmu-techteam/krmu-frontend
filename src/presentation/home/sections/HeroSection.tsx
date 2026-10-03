@@ -21,18 +21,19 @@ export const HeroSection = ({
     const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     useEffect(() => {
+        if (!isSearchOpen) return;
+
         const handleEsc = (e: KeyboardEvent) => {
             if (e.key === "Escape") setIsSearchOpen(false);
         };
-        if (isSearchOpen) {
-            window.addEventListener("keydown", handleEsc);
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "auto";
-        }
+
+        window.addEventListener("keydown", handleEsc);
+        const originalOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+
         return () => {
             window.removeEventListener("keydown", handleEsc);
-            document.body.style.overflow = "auto";
+            document.body.style.overflow = originalOverflow;
         };
     }, [isSearchOpen]);
 

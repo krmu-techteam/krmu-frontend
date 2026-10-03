@@ -2,14 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import {
-    X,
-    Search,
-    Loader2,
-    ArrowRight,
-    BookOpen,
-    Sparkles,
-} from "lucide-react";
+import { X, Search, Loader2, ArrowRight, BookOpen } from "lucide-react";
 import Link from "next/link";
 import {
     getAllProgrammesServer,
