@@ -115,7 +115,11 @@ const page = async ({ searchParams }: PageProps) => {
         ...(allPhdProgrammes || []),
         ...(allSchoolProgrammes || []),
     ]) {
-        const slug = (prog.programmeslug || (prog as any).phdslug || "")
+        const slug = (
+            ("programmeslug" in prog
+                ? (prog as any).programmeslug
+                : (prog as any).phdslug) || ""
+        )
             .toLowerCase()
             .trim();
         if (slug && seenSlugs.has(slug)) continue;
