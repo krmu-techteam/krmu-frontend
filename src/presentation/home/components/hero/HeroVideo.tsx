@@ -4,11 +4,17 @@ import React, { useEffect, useRef, useState } from "react";
 
 export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
+    const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
         if (videoRef.current) {
             videoRef.current.play().catch(() => {});
         }
+        // Fallback smooth reveal
+        const timer = setTimeout(() => {
+            setIsLoaded(true);
+        }, 500);
+        return () => clearTimeout(timer);
     }, []);
 
     const videoSrc = HeroSectionVideo?.url
@@ -25,10 +31,18 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
                 loop
                 muted
                 playsInline
-                preload="auto"
+                preload="metadata"
+                onPlaying={() => setIsLoaded(true)}
+                onLoadedData={() => {
+                    if (videoRef.current && videoRef.current.currentTime > 0) {
+                        setIsLoaded(true);
+                    }
+                }}
                 title="KR Mangalam university video"
                 aria-label="KR Mangalam university video"
-                className="absolute top-0 left-0 w-full h-full object-contain scale-[1.07] lg:scale-100 lg:object-cover lg:scale-y-[1.0634] z-0"
+                className={`absolute top-0 left-0 w-full h-full object-contain scale-[1.07] lg:scale-100 lg:object-cover lg:scale-y-[1.0634] z-0 transition-opacity duration-1000 ease-out ${
+                    isLoaded ? "opacity-100" : "opacity-0"
+                }`}
             >
                 <source src={videoSrc} type="video/mp4" />
                 {videoSrc !== "/modules/home/hero/krm_bg_hero.mp4" && (
@@ -40,6 +54,7 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
                 Your browser does not support the video tag. KR Mangalam
                 university video
             </video>
+
             {/* Subtle Left Black Gradient Overlay for Mobile & Tablet Readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-[1] pointer-events-none lg:hidden" />
         </div>

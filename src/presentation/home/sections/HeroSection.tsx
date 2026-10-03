@@ -52,12 +52,8 @@ export const HeroSection = ({
             </section>
 
             <div className="w-full bg-linear-to-t from-[#0B1221] via-[#0B1221] to-transparent pt-0 md:pt-4 pb-6 md:pb-2 px-0 lg:px-6 xl:px-16 flex flex-col lg:flex-row justify-between items-center gap-3 sm:gap-4 lg:gap-4 xl:gap-6 relative z-20 lg:mt-0 transition-all font-poppins text-white shadow-2xl">
-                <div className="relative w-full lg:w-auto h-10 md:h-14 flex items-center">
-                    {/* Left/Right fade on mobile */}
-                    <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#0B1221] to-transparent z-10 pointer-events-none lg:hidden" />
-                    <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#0B1221] to-transparent z-10 pointer-events-none lg:hidden" />
-
-                    <div className="flex items-center justify-start md:justify-center lg:justify-start gap-4 md:gap-6 lg:gap-8 w-full h-full lg:w-auto overflow-x-auto scrollbar-hide px-6 lg:px-0">
+                <div className="relative w-full lg:w-auto h-11 md:h-14 flex items-center">
+                    <div className="flex items-center justify-between sm:justify-center lg:justify-start gap-3 md:gap-6 lg:gap-8 w-full h-full lg:w-auto overflow-x-auto scrollbar-hide px-3.5 sm:px-6 lg:px-0">
                         <button
                             onClick={() => setIsSearchOpen(true)}
                             className="hidden lg:flex w-10 h-10 border border-white/20 rounded-[4px] items-center justify-center hover:bg-white/10 transition-all shadow-sm text-white cursor-pointer shrink-0"
