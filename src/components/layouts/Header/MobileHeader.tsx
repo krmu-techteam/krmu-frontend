@@ -580,13 +580,17 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                             footer={
                                 <div className="flex flex-col gap-3">
                                     <Link
-                                        href="#"
+                                        href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="w-full text-xs py-2.5 border border-white/20 hover:bg-white/5 text-white rounded-sm font-semibold flex items-center justify-center gap-1.5 uppercase transition-all"
                                     >
                                         <Download size={14} /> Download Brochure
                                     </Link>
                                     <Link
-                                        href="/apply"
+                                        href="https://admissions.krmangalam.edu.in/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         onClick={onClose}
                                         className="w-full text-xs py-2.5 bg-[#cb000d] hover:bg-[#cb000d]/80 text-white rounded-sm font-semibold flex items-center justify-center gap-1.5 uppercase transition-all shadow-md"
                                     >
@@ -655,32 +659,63 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                                         </div>
                                         <div className="flex flex-col text-white/80">
                                             {admissionMenu?.scholarships?.menulinks.map(
-                                                (link: any, index: number) => (
-                                                    <Link
-                                                        key={link.id}
-                                                        href={link.url || "#"}
-                                                        className={`flex items-center justify-between hover:bg-white/5 transition-colors font-poppins px-5 py-3.5 group ${
-                                                            index !==
-                                                            admissionMenu
-                                                                .scholarships
-                                                                .menulinks
-                                                                .length -
-                                                                1
-                                                                ? "border-b border-white/5"
-                                                                : ""
-                                                        }`}
-                                                        onClick={onClose}
-                                                    >
-                                                        <span className="text-[14px] font-light tracking-wide">
-                                                            {link.title}
-                                                        </span>
-                                                        <ChevronRight
-                                                            size={16}
-                                                            className="text-white/20 group-hover:text-[#0060A9] transition-colors"
-                                                            strokeWidth={2}
-                                                        />
-                                                    </Link>
-                                                )
+                                                (link: any, index: number) => {
+                                                    const rawUrl =
+                                                        link.url?.includes(
+                                                            "odisha.gov.in"
+                                                        ) ||
+                                                        link.title
+                                                            ?.toLowerCase()
+                                                            .includes(
+                                                                "state scholarship"
+                                                            )
+                                                            ? "https://harchhatravratti.highereduhry.ac.in/"
+                                                            : link.url || "#";
+                                                    const isExternal =
+                                                        rawUrl.startsWith(
+                                                            "http://"
+                                                        ) ||
+                                                        rawUrl.startsWith(
+                                                            "https://"
+                                                        ) ||
+                                                        rawUrl.startsWith("//");
+                                                    return (
+                                                        <Link
+                                                            key={link.id}
+                                                            href={rawUrl}
+                                                            target={
+                                                                isExternal
+                                                                    ? "_blank"
+                                                                    : undefined
+                                                            }
+                                                            rel={
+                                                                isExternal
+                                                                    ? "noopener noreferrer"
+                                                                    : undefined
+                                                            }
+                                                            className={`flex items-center justify-between hover:bg-white/5 transition-colors font-poppins px-5 py-3.5 group ${
+                                                                index !==
+                                                                admissionMenu
+                                                                    .scholarships
+                                                                    .menulinks
+                                                                    .length -
+                                                                    1
+                                                                    ? "border-b border-white/5"
+                                                                    : ""
+                                                            }`}
+                                                            onClick={onClose}
+                                                        >
+                                                            <span className="text-[14px] font-light tracking-wide">
+                                                                {link.title}
+                                                            </span>
+                                                            <ChevronRight
+                                                                size={16}
+                                                                className="text-white/20 group-hover:text-[#0060A9] transition-colors"
+                                                                strokeWidth={2}
+                                                            />
+                                                        </Link>
+                                                    );
+                                                }
                                             )}
                                         </div>
                                     </div>
@@ -739,13 +774,17 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                             footer={
                                 <div className="flex flex-col gap-3">
                                     <Link
-                                        href="#"
+                                        href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="w-full text-xs py-2.5 border border-white/20 hover:bg-white/5 text-white rounded-sm font-semibold flex items-center justify-center gap-1.5 uppercase transition-all"
                                     >
                                         <Download size={14} /> Download Brochure
                                     </Link>
                                     <Link
-                                        href="/apply"
+                                        href="https://admissions.krmangalam.edu.in/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         onClick={onClose}
                                         className="w-full text-xs py-2.5 bg-[#cb000d] hover:bg-[#cb000d]/80 text-white rounded-sm font-semibold flex items-center justify-center gap-1.5 uppercase transition-all shadow-md"
                                     >
@@ -812,13 +851,17 @@ const MobileHeader = ({ topbarmenu, navbarData, onClose, isOpen }: Props) => {
                             footer={
                                 <div className="flex flex-col gap-3">
                                     <Link
-                                        href="#"
+                                        href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="w-full text-xs py-2.5 border border-white/20 hover:bg-white/5 text-white rounded-sm font-semibold flex items-center justify-center gap-1.5 uppercase transition-all"
                                     >
                                         <Download size={14} /> Download Brochure
                                     </Link>
                                     <Link
-                                        href="/apply"
+                                        href="https://admissions.krmangalam.edu.in/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         onClick={onClose}
                                         className="w-full text-xs py-2.5 bg-[#cb000d] hover:bg-[#cb000d]/80 text-white rounded-sm font-semibold flex items-center justify-center gap-1.5 uppercase transition-all shadow-md"
                                     >

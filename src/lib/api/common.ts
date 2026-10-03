@@ -165,6 +165,23 @@ export async function getHeaderMenu(): Promise<
         if (!res.ok) throw new Error("Failed to fetch Header Menu Data");
 
         const json: HeaderMenuResponse = await res.json();
+        if (json?.data?.headermenus) {
+            json.data.headermenus.forEach((menu: any) => {
+                if (menu.scholarships?.menulinks) {
+                    menu.scholarships.menulinks.forEach((link: any) => {
+                        if (
+                            link.url?.includes("odisha.gov.in") ||
+                            link.title
+                                ?.toLowerCase()
+                                .includes("state scholarship")
+                        ) {
+                            link.url =
+                                "https://harchhatravratti.highereduhry.ac.in/";
+                        }
+                    });
+                }
+            });
+        }
         return json.data;
     } catch (error) {
         console.error("Header menu fetch error:", error);

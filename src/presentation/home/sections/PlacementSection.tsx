@@ -109,7 +109,7 @@ export function PlacementsSection() {
                                 Placement Records
                             </Button>
                             <Button
-                                href="/placement/our-recruiter"
+                                href="/placements/recruiters"
                                 variant="outline"
                                 className="!border-white/50 !w-fit !text-[13px] md:!text-[14px] !px-4"
                             >

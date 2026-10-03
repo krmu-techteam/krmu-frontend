@@ -68,21 +68,55 @@ const zenithProgrammes: ZenithProgrammeItem[] = [
     },
 ];
 
+const schoolSlugOrderMap: Record<string, number> = {
+    "zenith-ai": 1,
+    soet: 2,
+    somc: 3,
+    sols: 4,
+    smas: 5,
+    sprs: 6,
+    sola: 7,
+    soad: 8,
+    sbas: 9,
+    semce: 10,
+    sohmct: 11,
+    soed: 12,
+    soas: 13,
+};
+
 const schoolOrderMap: Record<string, number> = {
     "Zenith School of AI": 1,
     "School of Engineering & Technology": 2,
+    "School of Management & Commerce": 3,
     "School of Management and Commerce": 3,
     "School of Legal Studies": 4,
     "School of Medical & Allied Sciences": 5,
-    "School of Liberal Arts ": 6,
-    "School of Basic & Applied Sciences": 7,
+    "School of Physiotherapy and Rehabilitation Sciences": 6,
+    "School of Liberal Arts": 7,
+    "School of Liberal Arts ": 7,
     "School of Architecture & Design": 8,
-    "School of Physiotherapy and Rehabilitation Sciences": 9,
+    "School of Basic & Applied Sciences": 9,
+    "School of Emerging Media & Creator Economy": 10,
     "School of Emerging Media and Creator Economy": 10,
-    "School of Education": 11,
-    "School of Agricultural Sciences": 12,
-    "School of Hotel Management & Catering Technology": 13,
+    "School of Hotel Management & Catering Technology": 11,
+    "School of Education": 12,
+    "School of Agricultural Sciences": 13,
 };
+
+function getSchoolRank(school: {
+    schoolname?: string;
+    school_category?: { slug?: string };
+}): number {
+    const slug = school?.school_category?.slug?.toLowerCase().trim();
+    if (slug && schoolSlugOrderMap[slug] !== undefined) {
+        return schoolSlugOrderMap[slug];
+    }
+    const name = school?.schoolname?.trim();
+    if (name && schoolOrderMap[name] !== undefined) {
+        return schoolOrderMap[name];
+    }
+    return Number.MAX_SAFE_INTEGER;
+}
 
 export interface Criteria {
     id: number;
@@ -302,9 +336,7 @@ const ProgrammesSearch = () => {
         ...allSchools,
     ];
     const sortedSchools = [...allSchoolsWithZenith].sort((a, b) => {
-        const orderA = schoolOrderMap[a.schoolname] ?? Number.MAX_SAFE_INTEGER;
-        const orderB = schoolOrderMap[b.schoolname] ?? Number.MAX_SAFE_INTEGER;
-        return orderA - orderB;
+        return getSchoolRank(a) - getSchoolRank(b);
     });
 
     const progNewLine = [

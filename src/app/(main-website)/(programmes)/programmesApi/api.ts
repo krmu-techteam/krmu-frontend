@@ -127,6 +127,12 @@ export interface Programme {
         name?: string;
         slug?: string;
     };
+    school_category?: {
+        id?: number;
+        documentId?: string;
+        name?: string;
+        slug?: string;
+    };
 }
 
 export interface Pagination {
@@ -197,6 +203,12 @@ export interface PhdProgramme {
     phdslug: string;
     heading: string;
     criteria: PhdCriteria;
+    school_category?: {
+        id?: number;
+        documentId?: string;
+        name?: string;
+        slug?: string;
+    };
 }
 
 export interface PhdPagination {
@@ -290,6 +302,32 @@ export async function searchPhdProgrammes(
     if (!res.ok) throw new Error("Failed to fetch PhD programmes");
 
     return res.json();
+}
+
+export async function getAllProgrammesServer(): Promise<Programme[]> {
+    try {
+        const url = `${FETCH_STRAPI_URL}/api/school-programmes?fields[0]=title&fields[1]=highlightitle&fields[2]=programmeslug&populate[criteria][populate]=*&populate[degree][fields][0]=slug&populate[degree][fields][1]=name&populate[school_category][fields][0]=slug&populate[school_category][fields][1]=name&pagination[pageSize]=1000&sort[0]=order_num:asc`;
+        const res = await fetch(url, { next: { revalidate: 3600 } });
+        if (!res.ok) return [];
+        const json = await res.json();
+        return json.data || [];
+    } catch (err) {
+        console.error("Failed to fetch all programmes server-side:", err);
+        return [];
+    }
+}
+
+export async function getAllPhdProgrammesServer(): Promise<PhdProgramme[]> {
+    try {
+        const url = `${FETCH_STRAPI_URL}/api/phd-single-programmes?fields[0]=heading&fields[1]=phdslug&populate[criteria][populate]=*&populate[school_category][fields][0]=slug&populate[school_category][fields][1]=name&pagination[pageSize]=1000`;
+        const res = await fetch(url, { next: { revalidate: 3600 } });
+        if (!res.ok) return [];
+        const json = await res.json();
+        return json.data || [];
+    } catch (err) {
+        console.error("Failed to fetch all PhD programmes server-side:", err);
+        return [];
+    }
 }
 
 // /api/school-programmes?filters[title][$contains]=B.Tech.&populate[criteria][populate]=*&fields[0]=title&fields[1]=programmeslug&pagination[pageSize]=6&pagination[page]=1

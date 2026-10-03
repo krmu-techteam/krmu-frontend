@@ -204,7 +204,7 @@ export const sitemapData: SitemapSection[] = [
                     },
                     {
                         label: "Prominent Recruiters",
-                        href: "https://www.krmangalam.edu.in/placement/our-recruiter",
+                        href: "https://www.krmangalam.edu.in/placements/recruiters",
                     },
                     {
                         label: "Career Development Center & Team",

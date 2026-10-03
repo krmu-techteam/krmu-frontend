@@ -558,13 +558,24 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                     <ul className="flex flex-col gap-1">
                                                         {admissionMenu?.scholarships?.menulinks.map(
                                                             (menu) => {
+                                                                const rawUrl =
+                                                                    menu.url?.includes(
+                                                                        "odisha.gov.in"
+                                                                    ) ||
+                                                                    menu.title
+                                                                        ?.toLowerCase()
+                                                                        .includes(
+                                                                            "state scholarship"
+                                                                        )
+                                                                        ? "https://harchhatravratti.highereduhry.ac.in/"
+                                                                        : menu.url;
                                                                 const href =
                                                                     formatInternalLink(
-                                                                        menu.url
+                                                                        rawUrl
                                                                     ) || "#";
                                                                 const ext =
                                                                     isExternalUrl(
-                                                                        menu.url
+                                                                        rawUrl
                                                                     );
                                                                 return (
                                                                     <li
@@ -643,8 +654,10 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             <Link
                                                 href={
                                                     applyNowButton?.url ||
-                                                    "/apply"
+                                                    "https://admissions.krmangalam.edu.in/"
                                                 }
+                                                target="_blank"
+                                                rel="noopener noreferrer"
                                                 className="group w-fit bg-[#cb000d] hover:bg-[#cb000d]/90 text-white font-poppins font-normal py-3 px-5 rounded-[2px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center whitespace-nowrap"
                                             >
                                                 <span>APPLY NOW</span>
@@ -785,8 +798,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                     variant="primary"
                                                     href={
                                                         applyNowButton?.url ||
-                                                        "/apply"
+                                                        "https://admissions.krmangalam.edu.in/"
                                                     }
+                                                    target="_blank"
                                                     icon={ArrowUpRight}
                                                     iconPosition="right"
                                                     className="!w-fit text-[12px] md:!text-[13px] !rounded-[2px] !h-[42px] font-poppins whitespace-nowrap !px-3 lg:!px-4"
@@ -1005,8 +1019,10 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                             <Link
                                                 href={
                                                     applyNowButton?.url ||
-                                                    "/apply"
+                                                    "https://admissions.krmangalam.edu.in/"
                                                 }
+                                                target="_blank"
+                                                rel="noopener noreferrer"
                                                 className="group w-fit bg-[#cb000d] hover:bg-[#cb000d]/90 text-white font-poppins font-normal py-3 px-4 rounded-[2px] text-[12px] md:text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center shadow-lg uppercase whitespace-nowrap"
                                             >
                                                 <span>APPLY NOW</span>

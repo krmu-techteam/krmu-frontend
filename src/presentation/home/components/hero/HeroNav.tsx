@@ -14,7 +14,7 @@ export const HeroNav = () => {
         { name: "Doctoral", href: "/programmes?degree=doctoral-programmes" },
         {
             name: "Diploma",
-            href: "/programmes?school=smas&degree=diploma-programmes",
+            href: "/programmes?degree=diploma-programmes",
         },
     ];
 

@@ -141,6 +141,21 @@ const nextConfig: NextConfig = {
                 destination: "/happenings/magazine-reflections",
                 permanent: true,
             },
+            {
+                source: "/apply",
+                destination: "https://admissions.krmangalam.edu.in/",
+                permanent: false,
+            },
+            {
+                source: "/placement/our-recruiter",
+                destination: "/placements/recruiters",
+                permanent: true,
+            },
+            {
+                source: "/sitemap",
+                destination: "/other-links/sitemap",
+                permanent: true,
+            },
         ];
     },
     async rewrites() {

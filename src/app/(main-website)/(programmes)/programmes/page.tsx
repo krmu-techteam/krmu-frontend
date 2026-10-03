@@ -8,100 +8,143 @@ import { createBreadcrumbProgSchema } from "@/lib/api/common";
 import Script from "next/script";
 import { Suspense } from "react";
 import {
-  AlumniSection,
-  HeroSection,
-  ProgrammesExplorer,
+    AlumniSection,
+    HeroSection,
+    ProgrammesExplorer,
 } from "@/presentation/programmes/sections";
+import {
+    getAllSchoolsInfo,
+    getAllDegreeInfo,
+    getAllProgrammesServer,
+    getAllPhdProgrammesServer,
+} from "@/app/(main-website)/(programmes)/programmesApi/api";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const seoData = await folderRouteSEO("programmes");
-  const seo = seoData[0];
+    const seoData = await folderRouteSEO("programmes");
+    const seo = seoData[0];
 
-  const shareImageUrl = seo?.shareImg?.url
-    ? `${STRAPI_URL}${seo?.shareImg?.url}`
-    : undefined;
+    const shareImageUrl = seo?.shareImg?.url
+        ? `${STRAPI_URL}${seo?.shareImg?.url}`
+        : undefined;
 
-  // ✅ Fallback if SEO is missing
-  if (!seo) {
-    return {
-      title: "K.R. Mangalam University",
-      description: "",
-      robots: {
-        index: true,
-        follow: true,
-      },
-    };
-  }
-
-  return {
-    title: seo?.title || "K.R. Mangalam University",
-    description: seo?.metaDescription || "",
-    keywords: seo?.keyword || "",
-    alternates: {
-      canonical: seo?.canonicalUrl || "",
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-
-    // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
-    openGraph: {
-      title: seo?.title || "K.R. Mangalam University",
-      description: seo?.metaDescription || "",
-      url: seo?.canonicalUrl || "",
-      siteName: "K.R. Mangalam University",
-      images: shareImageUrl
-        ? [
-            {
-              url: shareImageUrl,
-              width: 1200,
-              height: 630,
-              alt: seo?.title || "K.R. Mangalam University",
+    // ✅ Fallback if SEO is missing
+    if (!seo) {
+        return {
+            title: "K.R. Mangalam University",
+            description: "",
+            robots: {
+                index: true,
+                follow: true,
             },
-          ]
-        : [],
-      type: "website",
-    },
+        };
+    }
 
-    // ✅ Twitter Card
-    twitter: {
-      card: "summary_large_image",
-      title: seo?.title || "K.R. Mangalam University",
-      description: seo?.metaDescription || "",
-      images: shareImageUrl ? [shareImageUrl] : [],
-    },
-  };
+    return {
+        title: seo?.title || "K.R. Mangalam University",
+        description: seo?.metaDescription || "",
+        keywords: seo?.keyword || "",
+        alternates: {
+            canonical: seo?.canonicalUrl || "",
+        },
+        robots: {
+            index: true,
+            follow: true,
+        },
+
+        // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
+        openGraph: {
+            title: seo?.title || "K.R. Mangalam University",
+            description: seo?.metaDescription || "",
+            url: seo?.canonicalUrl || "",
+            siteName: "K.R. Mangalam University",
+            images: shareImageUrl
+                ? [
+                      {
+                          url: shareImageUrl,
+                          width: 1200,
+                          height: 630,
+                          alt: seo?.title || "K.R. Mangalam University",
+                      },
+                  ]
+                : [],
+            type: "website",
+        },
+
+        // ✅ Twitter Card
+        twitter: {
+            card: "summary_large_image",
+            title: seo?.title || "K.R. Mangalam University",
+            description: seo?.metaDescription || "",
+            images: shareImageUrl ? [shareImageUrl] : [],
+        },
+    };
 }
 
-const page = async () => {
-  const ProgrammeData = await getProgrammePageData();
-  const programmeAlumnis = ProgrammeData?.alumni;
-  const breadcrumbItems = [
-    { name: "Home", url: "https://www.krmangalam.edu.in/" },
-    { name: "Programs", url: "https://www.krmangalam.edu.in/programmes" },
-  ];
+type PageProps = {
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
 
-  const breadcrumbSchema = createBreadcrumbProgSchema(breadcrumbItems);
+const page = async ({ searchParams }: PageProps) => {
+    const resolvedParams = await searchParams;
+    const initialSchoolSlug =
+        typeof resolvedParams?.school === "string"
+            ? resolvedParams.school
+            : undefined;
+    const initialDegreeSlug =
+        typeof resolvedParams?.degree === "string"
+            ? resolvedParams.degree
+            : undefined;
 
-  return (
-    <>
-      <Script
-        id="programmes-breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-      />
-      {/* <ProgrammesHero /> */}
-      <HeroSection />
-      <Suspense fallback={<div>Loading Programs...</div>}>
-        {/* <ProgrammesSearch /> */}
-        <ProgrammesExplorer />
-      </Suspense>
-      <AlumniSection alumniData={programmeAlumnis} />
-      <ProgrammesOurLocation />
-      <ProgrammesConnectWithUs />
-    </>
-  );
+    const [
+        ProgrammeData,
+        initialSchools,
+        initialDegrees,
+        allSchoolProgrammes,
+        allPhdProgrammes,
+    ] = await Promise.all([
+        getProgrammePageData(),
+        getAllSchoolsInfo(),
+        getAllDegreeInfo(),
+        getAllProgrammesServer(),
+        getAllPhdProgrammesServer(),
+    ]);
+
+    const initialProgrammes = [
+        ...(allSchoolProgrammes || []),
+        ...(allPhdProgrammes || []),
+    ];
+
+    const programmeAlumnis = ProgrammeData?.alumni;
+    const breadcrumbItems = [
+        { name: "Home", url: "https://www.krmangalam.edu.in/" },
+        { name: "Programs", url: "https://www.krmangalam.edu.in/programmes" },
+    ];
+
+    const breadcrumbSchema = createBreadcrumbProgSchema(breadcrumbItems);
+
+    return (
+        <>
+            <Script
+                id="programmes-breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+            />
+            {/* <ProgrammesHero /> */}
+            <HeroSection />
+            <Suspense fallback={null}>
+                <ProgrammesExplorer
+                    initialProgrammes={initialProgrammes}
+                    initialSchools={initialSchools}
+                    initialDegrees={initialDegrees}
+                    initialSchoolSlug={initialSchoolSlug}
+                    initialDegreeSlug={initialDegreeSlug}
+                />
+            </Suspense>
+            <AlumniSection alumniData={programmeAlumnis} />
+            <ProgrammesOurLocation />
+            <ProgrammesConnectWithUs />
+        </>
+    );
 };
 
 export default page;

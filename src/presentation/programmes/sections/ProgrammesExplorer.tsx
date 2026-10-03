@@ -1,22 +1,20 @@
 "use client";
 
 import { X, Check, Download } from "lucide-react";
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useMemo, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import {
     getAllSchoolsInfo,
     getAllDegreeInfo,
     ProgrammeLevel,
     SchoolItem,
-    getAllSchoolPhdProgrammeByCatPaginated,
-    getAllSchoolProgrammeByDegOrCatPaginated,
-    searchSchoolProgrammes,
-    searchPhdProgrammes,
+    getAllProgrammesServer,
+    getAllPhdProgrammesServer,
 } from "@/app/(main-website)/(programmes)/programmesApi/api";
 
-function normalize(text: string | null | undefined) {
+function normalizeSearchString(text: string | null | undefined): string {
     if (!text) return "";
-    return text.toLowerCase().replace(/[\.\s]/g, "");
+    return text.toLowerCase().replace(/[^a-z0-9]/g, "");
 }
 
 import Link from "next/link";
@@ -27,7 +25,6 @@ import { SidebarSchool } from "../components/ProgrammesSidebar";
 import { SidebarDegree } from "../components/ProgrammesList";
 import { ProgrammeCardData } from "../components/ProgrammeCard";
 import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
-// import { Skeleton } from "@/components/ui/skeleton";
 
 type ZenithCriteria = {
     id: number;
@@ -46,7 +43,17 @@ type ZenithProgrammeItem = {
     title: string;
     programmeslug: string;
     criteria: ZenithCriteria;
+    degree?: {
+        slug?: string;
+        name?: string;
+    };
+    school_category?: {
+        slug?: string;
+        name?: string;
+    };
 };
+
+const ZENITH_SLUG = "zenith-ai";
 
 const zenithProgrammes: ZenithProgrammeItem[] = [
     {
@@ -65,24 +72,74 @@ const zenithProgrammes: ZenithProgrammeItem[] = [
             eligibility_utm_links: "",
             programme_offered_number: "",
         },
+        degree: {
+            slug: "undergraduate-programmes",
+            name: "Undergraduate",
+        },
+        school_category: {
+            slug: ZENITH_SLUG,
+            name: "Zenith School of AI",
+        },
     },
 ];
+
+const schoolSlugOrderMap: Record<string, number> = {
+    "zenith-ai": 1,
+    soet: 2,
+    somc: 3,
+    sols: 4,
+    smas: 5,
+    sprs: 6,
+    sola: 7,
+    soad: 8,
+    sbas: 9,
+    semce: 10,
+    sohmct: 11,
+    soed: 12,
+    soas: 13,
+};
 
 const schoolOrderMap: Record<string, number> = {
     "Zenith School of AI": 1,
     "School of Engineering & Technology": 2,
+    "School of Management & Commerce": 3,
     "School of Management and Commerce": 3,
     "School of Legal Studies": 4,
     "School of Medical & Allied Sciences": 5,
-    "School of Liberal Arts ": 6,
-    "School of Basic & Applied Sciences": 7,
+    "School of Physiotherapy and Rehabilitation Sciences": 6,
+    "School of Liberal Arts": 7,
+    "School of Liberal Arts ": 7,
     "School of Architecture & Design": 8,
-    "School of Physiotherapy and Rehabilitation Sciences": 9,
+    "School of Basic & Applied Sciences": 9,
+    "School of Emerging Media & Creator Economy": 10,
     "School of Emerging Media and Creator Economy": 10,
-    "School of Education": 11,
-    "School of Agricultural Sciences": 12,
-    "School of Hotel Management & Catering Technology": 13,
+    "School of Hotel Management & Catering Technology": 11,
+    "School of Education": 12,
+    "School of Agricultural Sciences": 13,
 };
+
+function getSchoolRank(school: {
+    schoolname?: string;
+    school_category?: { slug?: string };
+}): number {
+    const slug = school?.school_category?.slug?.toLowerCase().trim();
+    if (slug && schoolSlugOrderMap[slug] !== undefined) {
+        return schoolSlugOrderMap[slug];
+    }
+    const name = school?.schoolname?.trim();
+    if (name && schoolOrderMap[name] !== undefined) {
+        return schoolOrderMap[name];
+    }
+    return Number.MAX_SAFE_INTEGER;
+}
+
+function formatSchoolDisplayName(name: string): string {
+    const trimmed = name.trim();
+    if (trimmed === "School of Emerging Media and Creator Economy") {
+        return "School of Emerging Media & Creator Economy";
+    }
+    return trimmed;
+}
 
 export interface Criteria {
     id: number;
@@ -99,9 +156,16 @@ export interface Programme {
     id: number;
     documentId: string;
     title: string;
+    highlightitle?: string;
     programmeslug: string;
     criteria: Criteria;
     degree?: {
+        id?: number;
+        documentId?: string;
+        name?: string;
+        slug?: string;
+    };
+    school_category?: {
         id?: number;
         documentId?: string;
         name?: string;
@@ -115,6 +179,12 @@ export interface PhdProgramme {
     heading: string;
     phdslug: string;
     criteria: Criteria;
+    school_category?: {
+        id?: number;
+        documentId?: string;
+        name?: string;
+        slug?: string;
+    };
 }
 
 export type ProgrammeItem = Programme | PhdProgramme;
@@ -284,7 +354,11 @@ export function sortProgrammesByDegreeSequence(
 }
 
 interface ProgrammesExplorerProps {
+    initialProgrammes?: ProgrammeItem[];
+    initialSchools?: SchoolItem[];
+    initialDegrees?: ProgrammeLevel[];
     initialSchoolSlug?: string;
+    initialDegreeSlug?: string;
     title?: string;
     content?: string;
     isProspectusPopupEnabled?: boolean;
@@ -293,30 +367,54 @@ interface ProgrammesExplorerProps {
 }
 
 const ProgrammesExplorer = ({
+    initialProgrammes,
+    initialSchools,
+    initialDegrees,
     initialSchoolSlug,
+    initialDegreeSlug,
     title,
     content,
     isProspectusPopupEnabled = false,
     prospectusUrl = "#",
     schoolOnly = false,
 }: ProgrammesExplorerProps = {}) => {
-    const [allSchools, setAllSchools] = useState<SchoolItem[]>([]);
-    const [allDegrees, setAllDegrees] = useState<ProgrammeLevel[]>([]);
+    const defaultSchool = schoolOnly
+        ? initialSchoolSlug || "soet"
+        : initialSchoolSlug || "all";
+    const defaultDegree = initialDegreeSlug || "all";
+
+    const [allSchools, setAllSchools] = useState<SchoolItem[]>(
+        initialSchools || []
+    );
+    const [allDegrees, setAllDegrees] = useState<ProgrammeLevel[]>(
+        initialDegrees || []
+    );
+    const [masterProgrammes, setMasterProgrammes] = useState<ProgrammeItem[]>(
+        () => {
+            if (initialProgrammes && initialProgrammes.length > 0) {
+                return [...zenithProgrammes, ...initialProgrammes];
+            }
+            return [];
+        }
+    );
+
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [selectedProgramme, setSelectedProgramme] =
         useState<ProgrammeItem | null>(null);
     const [slugValue, setSlug] = useState("");
-    // default dropdown selections
-    const [selectedSchool, setSelectedSchool] = useState(
-        initialSchoolSlug || "soet"
+
+    const [selectedSchool, setSelectedSchool] = useState(defaultSchool);
+    const [selectedDegree, setSelectedDegree] = useState(defaultDegree);
+    const [searchQuery, setSearchQuery] = useState("");
+    const [viewMode, setViewMode] = useState<"list" | "grid">("grid");
+
+    const [isLoading, setIsLoading] = useState(
+        !initialProgrammes || initialProgrammes.length === 0
     );
-    const [selectedDegree, setSelectedDegree] = useState("all");
+    const [isFiltersLoading, setIsFiltersLoading] = useState(
+        !initialSchools || initialSchools.length === 0
+    );
 
-    const [openSchoolDropdown, setOpenSchoolDropdown] = useState(false);
-    const [openDegreeDropdown, setOpenDegreeDropdown] = useState(false);
-
-    const schoolRef = useRef<HTMLDivElement | null>(null);
-    const degreeRef = useRef<HTMLDivElement | null>(null);
     const sectionRef = useRef<HTMLDivElement | null>(null);
 
     const scrollToSection = () => {
@@ -330,27 +428,6 @@ const ProgrammesExplorer = ({
         }
     };
 
-    const [programmes, setProgrammes] = useState<ProgrammeItem[]>([]);
-    const [showLoadMore, setShowLoadMore] = useState(true);
-
-    const [searchQuery, setSearchQuery] = useState("");
-    const [viewMode, setViewMode] = useState<"list" | "grid">("grid");
-    const [isLoading, setIsLoading] = useState(true);
-    const [isFiltersLoading, setIsFiltersLoading] = useState(true);
-    const debounceTimer = useRef<NodeJS.Timeout | null>(null);
-    const [availableDegrees, setAvailableDegrees] = useState<string[]>([
-        "all",
-        "undergraduate-programmes",
-        "postgraduate-programmes",
-        "doctoral-programmes",
-        "diploma-programmes",
-    ]);
-
-    // keep refs of dropdown values
-    const schoolRefValue = useRef(initialSchoolSlug || "soet");
-    const degreeRefValue = useRef("all");
-    const ZENITH_SLUG = "zenith-ai";
-
     const searchParams = useSearchParams();
 
     // Read URL params safely on mount or URL change
@@ -358,303 +435,127 @@ const ProgrammesExplorer = ({
         const schoolParam = searchParams.get("school");
         if (schoolParam) {
             setSelectedSchool(schoolParam);
-            schoolRefValue.current = schoolParam;
-        } else {
-            setSelectedSchool(initialSchoolSlug || "soet");
-            schoolRefValue.current = initialSchoolSlug || "soet";
+        } else if (!schoolOnly) {
+            setSelectedSchool(initialSchoolSlug || "all");
         }
 
         const degreeParam = searchParams.get("degree");
         if (degreeParam) {
             setSelectedDegree(degreeParam);
-            degreeRefValue.current = degreeParam;
         } else {
             setSelectedDegree("all");
-            degreeRefValue.current = "all";
         }
-    }, [searchParams]);
+    }, [searchParams, schoolOnly, initialSchoolSlug]);
+
+    // Fallback client fetch if initial data was not provided server-side
+    useEffect(() => {
+        let isMounted = true;
+        if (masterProgrammes.length === 0) {
+            setIsLoading(true);
+            Promise.all([
+                getAllSchoolsInfo(),
+                getAllDegreeInfo(),
+                getAllProgrammesServer(),
+                getAllPhdProgrammesServer(),
+            ])
+                .then(([schools, degrees, progs, phds]) => {
+                    if (!isMounted) return;
+                    if (schools) setAllSchools(schools);
+                    if (degrees) setAllDegrees(degrees);
+                    setIsFiltersLoading(false);
+                    const combined = [
+                        ...zenithProgrammes,
+                        ...(progs || []),
+                        ...(phds || []),
+                    ];
+                    setMasterProgrammes(combined);
+                    setIsLoading(false);
+                })
+                .catch((err) => {
+                    console.error("Failed to fetch programmes on client:", err);
+                    if (isMounted) setIsLoading(false);
+                });
+        }
+        return () => {
+            isMounted = false;
+        };
+    }, [masterProgrammes.length]);
+
+    // Available degrees dynamically calculated based on selected school
+    const availableDegrees = useMemo(() => {
+        if (!selectedSchool || selectedSchool === "all") {
+            return [
+                "all",
+                "undergraduate-programmes",
+                "postgraduate-programmes",
+                "doctoral-programmes",
+                "diploma-programmes",
+            ];
+        }
+
+        if (selectedSchool === ZENITH_SLUG) {
+            return ["all", "undergraduate-programmes"];
+        }
+
+        const schoolItems = masterProgrammes.filter((item) => {
+            const itemSchoolSlug = (
+                ("school_category" in item &&
+                    (item as any).school_category?.slug) ||
+                ""
+            ).toLowerCase();
+            return (
+                itemSchoolSlug === selectedSchool.toLowerCase() ||
+                (isSmasSchool(selectedSchool) && isSmasSchool(itemSchoolSlug))
+            );
+        });
+
+        const active = ["all"];
+        const hasUg = schoolItems.some(
+            (it) =>
+                getProgrammeDegreeRank(it) === 1 ||
+                (it as any).degree?.slug === "undergraduate-programmes"
+        );
+        const hasPg = schoolItems.some(
+            (it) =>
+                getProgrammeDegreeRank(it) === 2 ||
+                (it as any).degree?.slug === "postgraduate-programmes"
+        );
+        const hasPhd = schoolItems.some(
+            (it) =>
+                getProgrammeDegreeRank(it) === 3 ||
+                "phdslug" in it ||
+                (it as any).degree?.slug === "doctoral-programmes"
+        );
+        const hasDip = schoolItems.some(
+            (it) =>
+                getProgrammeDegreeRank(it) === 4 ||
+                (it as any).degree?.slug === "diploma-programmes"
+        );
+
+        if (hasUg) active.push("undergraduate-programmes");
+        if (hasPg) active.push("postgraduate-programmes");
+        if (hasPhd) active.push("doctoral-programmes");
+        if (hasDip) active.push("diploma-programmes");
+
+        return active;
+    }, [selectedSchool, masterProgrammes]);
+
+    // If currently selected degree is not in availableDegrees, reset to "all"
+    useEffect(() => {
+        if (
+            selectedDegree !== "all" &&
+            !availableDegrees.includes(selectedDegree)
+        ) {
+            setSelectedDegree("all");
+        }
+    }, [availableDegrees, selectedDegree]);
 
     const isZenithPopup =
         selectedProgramme &&
         "programmeslug" in selectedProgramme &&
         selectedProgramme.programmeslug.includes("zenithschool.ai");
 
-    useEffect(() => {
-        schoolRefValue.current = selectedSchool;
-        degreeRefValue.current = selectedDegree;
-    }, [selectedSchool, selectedDegree]);
-
-    // close dropdowns on outside click
-    useEffect(() => {
-        function handleClickOutside(e: MouseEvent) {
-            if (
-                schoolRef.current &&
-                !schoolRef.current.contains(e.target as Node)
-            ) {
-                setOpenSchoolDropdown(false);
-            }
-            if (
-                degreeRef.current &&
-                !degreeRef.current.contains(e.target as Node)
-            ) {
-                setOpenDegreeDropdown(false);
-            }
-        }
-        document.addEventListener("mousedown", handleClickOutside);
-        return () =>
-            document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
-
-    // load dropdown filters
-    useEffect(() => {
-        let isMounted = true;
-        async function loadFilters() {
-            const s = await getAllSchoolsInfo();
-            const d = await getAllDegreeInfo();
-            if (isMounted) {
-                setAllSchools(s || []);
-                setAllDegrees(d || []);
-                setIsFiltersLoading(false);
-            }
-        }
-        loadFilters();
-
-        return () => {
-            isMounted = false;
-        };
-    }, []);
-
-    // check available degrees for the selected school
-    useEffect(() => {
-        let isMounted = true;
-        const checkDegrees = async () => {
-            if (schoolRefValue.current === ZENITH_SLUG) {
-                if (isMounted)
-                    setAvailableDegrees(["all", "undergraduate-programmes"]);
-                return;
-            }
-            try {
-                const [ug, pg, dip, phd] = await Promise.all([
-                    getAllSchoolProgrammeByDegOrCatPaginated(
-                        "undergraduate-programmes",
-                        schoolRefValue.current,
-                        1,
-                        1
-                    ),
-                    getAllSchoolProgrammeByDegOrCatPaginated(
-                        "postgraduate-programmes",
-                        schoolRefValue.current,
-                        1,
-                        1
-                    ),
-                    getAllSchoolProgrammeByDegOrCatPaginated(
-                        "diploma-programmes",
-                        schoolRefValue.current,
-                        1,
-                        1
-                    ),
-                    getAllSchoolPhdProgrammeByCatPaginated(
-                        schoolRefValue.current,
-                        1,
-                        1
-                    ),
-                ]);
-                if (!isMounted) return;
-                const active = ["all"];
-                if (ug?.meta?.pagination?.total > 0)
-                    active.push("undergraduate-programmes");
-                if (pg?.meta?.pagination?.total > 0)
-                    active.push("postgraduate-programmes");
-                if (phd?.meta?.pagination?.total > 0)
-                    active.push("doctoral-programmes");
-                if (dip?.meta?.pagination?.total > 0)
-                    active.push("diploma-programmes");
-                setAvailableDegrees(active);
-
-                // If the currently selected degree is not available anymore, switch to "all"
-                if (
-                    degreeRefValue.current !== "all" &&
-                    !active.includes(degreeRefValue.current)
-                ) {
-                    setSelectedDegree("all");
-                }
-            } catch (err) {
-                console.error("Failed to check available degrees:", err);
-            }
-        };
-        checkDegrees();
-        return () => {
-            isMounted = false;
-        };
-    }, [selectedSchool]);
-
-    const fetchProgrammes = useCallback(
-        async (
-            reset: boolean = false,
-            query: string = "",
-            loadAll: boolean = false
-        ) => {
-            setIsLoading(true);
-            try {
-                let newData: ProgrammeItem[] = [];
-                const limit = 1000; // Load all
-                if (
-                    schoolRefValue.current === ZENITH_SLUG &&
-                    query.length === 0
-                ) {
-                    setShowLoadMore(false);
-                    setProgrammes(zenithProgrammes);
-                    return;
-                }
-                if (query.length > 0) {
-                    // SEARCH MODE — scoped to active school if selected/schoolOnly
-                    let sourceData: ProgrammeItem[] = [];
-
-                    if (
-                        schoolOnly ||
-                        (schoolRefValue.current &&
-                            schoolRefValue.current !== "all")
-                    ) {
-                        if (degreeRefValue.current === "doctoral-programmes") {
-                            const res =
-                                await getAllSchoolPhdProgrammeByCatPaginated(
-                                    schoolRefValue.current,
-                                    1,
-                                    limit
-                                );
-                            sourceData = res?.data || [];
-                        } else if (degreeRefValue.current === "all") {
-                            const [progRes, phdRes] = await Promise.all([
-                                getAllSchoolProgrammeByDegOrCatPaginated(
-                                    "all",
-                                    schoolRefValue.current,
-                                    1,
-                                    limit
-                                ),
-                                getAllSchoolPhdProgrammeByCatPaginated(
-                                    schoolRefValue.current,
-                                    1,
-                                    limit
-                                ),
-                            ]);
-                            sourceData = sortProgrammesByDegreeSequence(
-                                [
-                                    ...(progRes?.data || []),
-                                    ...(phdRes?.data || []),
-                                ],
-                                schoolRefValue.current
-                            );
-                        } else {
-                            const res =
-                                await getAllSchoolProgrammeByDegOrCatPaginated(
-                                    degreeRefValue.current,
-                                    schoolRefValue.current,
-                                    1,
-                                    limit
-                                );
-                            sourceData = res?.data || [];
-                        }
-                    } else {
-                        if (degreeRefValue.current === "doctoral-programmes") {
-                            const res = await searchPhdProgrammes("", 1, limit);
-                            sourceData = res.data || [];
-                        } else {
-                            const res = await searchSchoolProgrammes(
-                                "",
-                                1,
-                                limit
-                            );
-                            sourceData = res.data || [];
-                        }
-                    }
-
-                    const normQuery = normalize(query);
-                    const filteredData = sourceData.filter((item) => {
-                        const titleStr =
-                            "title" in item
-                                ? (item.title || "") +
-                                  ((item as any).highlightitle
-                                      ? ` ${(item as any).highlightitle}`
-                                      : "")
-                                : item.heading || "";
-                        return normalize(titleStr).includes(normQuery);
-                    });
-                    newData = sortProgrammesByDegreeSequence(
-                        filteredData,
-                        schoolRefValue.current
-                    );
-
-                    setShowLoadMore(false); // no button in search
-                } else {
-                    // DROPDOWN MODE
-                    if (degreeRefValue.current === "doctoral-programmes") {
-                        const res =
-                            await getAllSchoolPhdProgrammeByCatPaginated(
-                                schoolRefValue.current,
-                                1,
-                                limit
-                            );
-                        newData = res?.data || [];
-                    } else if (degreeRefValue.current === "all") {
-                        const [progRes, phdRes] = await Promise.all([
-                            getAllSchoolProgrammeByDegOrCatPaginated(
-                                "all",
-                                schoolRefValue.current,
-                                1,
-                                limit
-                            ),
-                            getAllSchoolPhdProgrammeByCatPaginated(
-                                schoolRefValue.current,
-                                1,
-                                limit
-                            ),
-                        ]);
-                        newData = sortProgrammesByDegreeSequence(
-                            [...(progRes?.data || []), ...(phdRes?.data || [])],
-                            schoolRefValue.current
-                        );
-                    } else {
-                        const res =
-                            await getAllSchoolProgrammeByDegOrCatPaginated(
-                                degreeRefValue.current,
-                                schoolRefValue.current,
-                                1,
-                                limit
-                            );
-                        newData = res?.data || [];
-                    }
-
-                    setShowLoadMore(false);
-                }
-
-                setProgrammes(
-                    degreeRefValue.current === "all" ||
-                        isSmasSchool(schoolRefValue.current)
-                        ? sortProgrammesByDegreeSequence(
-                              newData,
-                              schoolRefValue.current
-                          )
-                        : newData
-                );
-            } finally {
-                setIsLoading(false);
-            }
-        },
-        []
-    );
-
-    useEffect(() => {
-        if (debounceTimer.current) clearTimeout(debounceTimer.current);
-
-        debounceTimer.current = setTimeout(() => {
-            // if search empty → use dropdown
-            fetchProgrammes(true, searchQuery.trim());
-        }, 400);
-
-        return () => {
-            if (debounceTimer.current) clearTimeout(debounceTimer.current);
-        };
-    }, [searchQuery, selectedSchool, selectedDegree, fetchProgrammes]);
+    // Build sidebar schools list with "All Schools" at index 0
     const allSchoolsWithZenith = [
         {
             id: "zenith",
@@ -664,10 +565,139 @@ const ProgrammesExplorer = ({
         ...allSchools,
     ];
     const sortedSchools = [...allSchoolsWithZenith].sort((a, b) => {
-        const orderA = schoolOrderMap[a.schoolname] ?? Number.MAX_SAFE_INTEGER;
-        const orderB = schoolOrderMap[b.schoolname] ?? Number.MAX_SAFE_INTEGER;
-        return orderA - orderB;
+        return getSchoolRank(a) - getSchoolRank(b);
     });
+
+    const mappedSchools: SidebarSchool[] = [
+        ...(!schoolOnly
+            ? [
+                  {
+                      id: "all",
+                      name: "All Schools",
+                      slug: "all",
+                  },
+              ]
+            : []),
+        ...sortedSchools.map((s) => ({
+            id: s.id,
+            name: formatSchoolDisplayName(s.schoolname),
+            slug: s.school_category.slug,
+        })),
+    ];
+
+    const mappedDegrees: SidebarDegree[] = allDegrees.map((d) => ({
+        id: d.id,
+        name: d.name,
+        slug: d.slug,
+    }));
+
+    // In-memory instant filtering
+    const displayedProgrammes = useMemo(() => {
+        if (masterProgrammes.length === 0) return [];
+
+        const normQuery = normalizeSearchString(searchQuery);
+
+        const filtered = masterProgrammes.filter((item) => {
+            // 1. School filter
+            if (selectedSchool && selectedSchool !== "all") {
+                const itemSchoolSlug = (
+                    ("school_category" in item &&
+                        (item as any).school_category?.slug) ||
+                    ("programmeslug" in item &&
+                    (item as any).programmeslug?.includes("zenith")
+                        ? ZENITH_SLUG
+                        : "") ||
+                    ""
+                ).toLowerCase();
+
+                const matchesSchool =
+                    itemSchoolSlug === selectedSchool.toLowerCase() ||
+                    (isSmasSchool(selectedSchool) &&
+                        isSmasSchool(itemSchoolSlug));
+
+                if (!matchesSchool) return false;
+            }
+
+            // 2. Degree filter
+            if (selectedDegree && selectedDegree !== "all") {
+                const itemDegreeSlug = (
+                    ("degree" in item && (item as any).degree?.slug) ||
+                    ("phdslug" in item ? "doctoral-programmes" : "") ||
+                    ""
+                ).toLowerCase();
+
+                const rank = getProgrammeDegreeRank(item);
+
+                if (selectedDegree === "doctoral-programmes") {
+                    if (
+                        rank !== 3 &&
+                        itemDegreeSlug !== "doctoral-programmes" &&
+                        !("phdslug" in item)
+                    )
+                        return false;
+                } else if (selectedDegree === "diploma-programmes") {
+                    if (rank !== 4 && itemDegreeSlug !== "diploma-programmes")
+                        return false;
+                } else if (selectedDegree === "postgraduate-programmes") {
+                    if (
+                        rank !== 2 &&
+                        itemDegreeSlug !== "postgraduate-programmes"
+                    )
+                        return false;
+                } else if (selectedDegree === "undergraduate-programmes") {
+                    if (
+                        rank !== 1 &&
+                        itemDegreeSlug !== "undergraduate-programmes"
+                    )
+                        return false;
+                } else {
+                    if (itemDegreeSlug !== selectedDegree.toLowerCase())
+                        return false;
+                }
+            }
+
+            // 3. Search query filter
+            if (normQuery) {
+                const titleStr =
+                    "title" in item ? item.title || "" : item.heading || "";
+                const highlightStr =
+                    "highlightitle" in item
+                        ? (item as any).highlightitle || ""
+                        : "";
+                const fullTitle = `${titleStr} ${highlightStr}`;
+                const degreeName =
+                    ("degree" in item ? (item as any).degree?.name : "") ||
+                    ("phdslug" in item ? "Doctoral PhD" : "");
+                const schoolName =
+                    ("school_category" in item
+                        ? (item as any).school_category?.name
+                        : "") || "";
+
+                const normFullTitle = normalizeSearchString(fullTitle);
+                const normDegree = normalizeSearchString(degreeName);
+                const normSchool = normalizeSearchString(schoolName);
+
+                const matches =
+                    normFullTitle.includes(normQuery) ||
+                    normDegree.includes(normQuery) ||
+                    normSchool.includes(normQuery) ||
+                    fullTitle
+                        .toLowerCase()
+                        .includes(searchQuery.toLowerCase().trim());
+
+                if (!matches) return false;
+            }
+
+            return true;
+        });
+
+        return sortProgrammesByDegreeSequence(filtered, selectedSchool);
+    }, [masterProgrammes, selectedSchool, selectedDegree, searchQuery]);
+
+    const activeSchoolName = useMemo(() => {
+        if (!selectedSchool || selectedSchool === "all") return "";
+        return mappedSchools.find((s) => s.slug === selectedSchool)?.name || "";
+    }, [selectedSchool, mappedSchools]);
 
     const progNewLine = [
         "b-tech-cse",
@@ -679,58 +709,46 @@ const ProgrammesExplorer = ({
         "b-tech-cse-robotics-ai",
     ];
 
-    // Map data to component props
-    const mappedSchools: SidebarSchool[] = sortedSchools.map((s) => ({
-        id: s.id,
-        name: s.schoolname,
-        slug: s.school_category.slug,
-    }));
+    const mappedProgrammes: ProgrammeCardData[] = displayedProgrammes.map(
+        (item) => {
+            let slug = "";
+            let isZenith = false;
 
-    const mappedDegrees: SidebarDegree[] = allDegrees.map((d) => ({
-        id: d.id,
-        name: d.name,
-        slug: d.slug,
-    }));
+            if ("programmeslug" in item) {
+                slug = item.programmeslug || "";
+                const fullTitle =
+                    (item.title || "") +
+                    ((item as any).highlightitle
+                        ? ` ${(item as any).highlightitle}`
+                        : "");
+                isZenith =
+                    fullTitle.includes("Zenith") ||
+                    slug.includes("zenithschool.ai");
+            } else {
+                slug = item.phdslug || "";
+            }
 
-    const mappedProgrammes: ProgrammeCardData[] = programmes.map((item) => {
-        // Determine the correct slug and isZenith
-        let slug = "";
-        let isZenith = false;
+            const titleStr =
+                "title" in item
+                    ? (item.title || "") +
+                      ((item as any).highlightitle
+                          ? ` ${(item as any).highlightitle}`
+                          : "")
+                    : item.heading || "";
 
-        if ("programmeslug" in item) {
-            slug = item.programmeslug || "";
-            const fullTitle =
-                (item.title || "") +
-                ((item as any).highlightitle
-                    ? ` ${(item as any).highlightitle}`
-                    : "");
-            isZenith =
-                fullTitle.includes("Zenith") ||
-                slug.includes("zenithschool.ai");
-        } else {
-            slug = item.phdslug || "";
+            return {
+                id: item.id,
+                title: titleStr,
+                slug: slug,
+                isZenith: isZenith,
+                duration: item.criteria?.Duration || "N/A",
+                fees: item.criteria?.programme_fee_per_year || "N/A",
+                eligibilityUtmLink: item.criteria?.eligibility_utm_links || "",
+                showApplyNow: !isZenith,
+                isNewLines: progNewLine.includes(slug),
+            };
         }
-
-        const titleStr =
-            "title" in item
-                ? (item.title || "") +
-                  ((item as any).highlightitle
-                      ? ` ${(item as any).highlightitle}`
-                      : "")
-                : item.heading || "";
-
-        return {
-            id: item.id,
-            title: titleStr,
-            slug: slug,
-            isZenith: isZenith,
-            duration: item.criteria?.Duration || "N/A",
-            fees: item.criteria?.programme_fee_per_year || "N/A",
-            eligibilityUtmLink: item.criteria?.eligibility_utm_links || "",
-            showApplyNow: !isZenith,
-            isNewLines: progNewLine.includes(slug),
-        };
-    });
+    );
 
     return (
         <section
@@ -748,7 +766,7 @@ const ProgrammesExplorer = ({
                                 </h2>
                             )}
                         </div>
-                        <div className="mb-8 md:mb-8 flex flex-col md:flex-row gap-6  items-start lg:items-center justify-between">
+                        <div className="mb-8 md:mb-8 flex flex-col md:flex-row gap-6 items-start lg:items-center justify-between">
                             {content && (
                                 <p className="text-white/90 text-justify md:text-left text-[15px] md:text-md max-w-[1100px]">
                                     {content}
@@ -777,7 +795,6 @@ const ProgrammesExplorer = ({
                                 onSchoolChange={(slug) => {
                                     setSelectedSchool(slug);
                                     setSearchQuery("");
-                                    setOpenSchoolDropdown(false);
                                     scrollToSection();
                                 }}
                                 schoolsList={mappedSchools}
@@ -793,13 +810,12 @@ const ProgrammesExplorer = ({
                             onDegreeChange={(slug) => {
                                 setSelectedDegree(slug);
                                 setSearchQuery("");
-                                setOpenDegreeDropdown(false);
                                 scrollToSection();
                             }}
                             degreesList={mappedDegrees}
                             searchQuery={searchQuery}
                             onSearchChange={setSearchQuery}
-                            programCount={programmes.length}
+                            programCount={displayedProgrammes.length}
                             viewMode={viewMode}
                             onViewModeChange={setViewMode}
                             availableDegrees={availableDegrees}
@@ -809,10 +825,10 @@ const ProgrammesExplorer = ({
                             <ProgrammesList
                                 programmes={mappedProgrammes}
                                 isLoading={isLoading}
-                                showLoadMore={showLoadMore}
+                                showLoadMore={false}
                                 onLoadMore={() => {}}
                                 onProgrammeClick={(id) => {
-                                    const p = programmes.find(
+                                    const p = displayedProgrammes.find(
                                         (x) => x.id === id
                                     );
                                     if (p) {
@@ -827,6 +843,26 @@ const ProgrammesExplorer = ({
                                 }}
                                 viewMode={viewMode}
                                 schoolOnly={schoolOnly}
+                                searchQuery={searchQuery}
+                                isSchoolFiltered={
+                                    Boolean(selectedSchool) &&
+                                    selectedSchool !== "all"
+                                }
+                                activeSchoolName={activeSchoolName}
+                                onSearchAllSchools={() => {
+                                    setSelectedSchool("all");
+                                    scrollToSection();
+                                }}
+                                onClearFilters={() => {
+                                    setSelectedSchool(
+                                        schoolOnly
+                                            ? initialSchoolSlug || "soet"
+                                            : "all"
+                                    );
+                                    setSelectedDegree("all");
+                                    setSearchQuery("");
+                                    scrollToSection();
+                                }}
                             />
                         </div>
                     </div>

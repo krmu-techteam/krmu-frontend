@@ -351,18 +351,24 @@ const footerLinks: Record<string, FooterLink[]> = {
         { name: "Examination", href: "/examination" },
         {
             name: "Student Handbook",
-            href: "https://www.krmangalam.edu.in/disclosure2018-2023/Organizational-Policies/Policy-of-Code-of-Conduct.pdf",
+            href: "https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf",
             target: "_blank",
             rel: "noopener noreferrer",
         },
     ],
     legal: [
         { name: "Mandatory Disclosures", href: "/mandatory-disclosures" },
-        { name: "Anti-Ragging Committee", href: "/krmu-committee" },
-        { name: "Grievance Redressal", href: "/krmu-committee" },
+        {
+            name: "Anti-Ragging Committee",
+            href: "/krmu-committee#anti-ragging",
+        },
+        {
+            name: "Grievance Redressal",
+            href: "/iqac/grievance-redressal-mechanism",
+        },
         {
             name: "Internal Complaints Committee (ICC)",
-            href: "/krmu-committee",
+            href: "/krmu-committee#internal-complaints",
         },
         { name: "RTI", href: "/mandatory-disclosures" },
     ],
@@ -541,12 +547,38 @@ const Footer = async () => {
                                     {footerComp2?.footer_menu
                                         ? footerComp2.footer_menu.map(
                                               (menu) => {
+                                                  let rawUrl = menu.url || "#";
+                                                  const titleLower =
+                                                      menu.title?.toLowerCase() ||
+                                                      "";
+                                                  if (
+                                                      titleLower.includes(
+                                                          "sitemap"
+                                                      )
+                                                  ) {
+                                                      rawUrl =
+                                                          "/other-links/sitemap";
+                                                  } else if (
+                                                      titleLower.includes(
+                                                          "internal complaints"
+                                                      )
+                                                  ) {
+                                                      rawUrl =
+                                                          "/krmu-committee#internal-complaints";
+                                                  } else if (
+                                                      titleLower.includes(
+                                                          "grievance"
+                                                      )
+                                                  ) {
+                                                      rawUrl =
+                                                          "/iqac/grievance-redressal-mechanism";
+                                                  }
                                                   const href =
                                                       formatInternalLink(
-                                                          menu.url
+                                                          rawUrl
                                                       ) || "#";
                                                   const external =
-                                                      isExternalUrl(menu.url);
+                                                      isExternalUrl(rawUrl);
                                                   return (
                                                       <li key={menu.id}>
                                                           <Link
