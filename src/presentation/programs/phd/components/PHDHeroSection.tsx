@@ -234,12 +234,12 @@ export default function PHDHeroSection({
                 <div className="relative z-10 w-full lg:w-[30%] xl:w-[28%] lg:bg-white  flex flex-col justify-center px-4 sm:px-6 lg:px-4 xl:px-2 pt-10 sm:pt-14 lg:pt-36 xl:pt-40 pb-8 lg:pb-4">
                     <div className="w-full max-w-[420px] mx-auto  border-0 border-none shadow-none p-0 lg:p-2">
                         <div className="mb-3 px-1">
-                            <h2 className="font-bold text-center lg:text-left text-[18px] sm:text-[20px] lg:text-[20px] leading-[1.45]">
+                            <h2 className="font-bold text-center text-[18px] sm:text-[20px] lg:text-[20px] leading-[1.45]">
                                 <span className="text-[#CB000D] block">
-                                    Apply for International Admission
+                                    Apply Today for
                                 </span>
                                 <span className="text-[#000000] block font-bold">
-                                    at K.R. Mangalam University Today
+                                    K.R. Mangalam University
                                 </span>
                             </h2>
                         </div>
