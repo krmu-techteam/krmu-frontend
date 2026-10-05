@@ -43,3 +43,6 @@ readme.txt
 # Local Netlify folder
 .netlify
 
+# Performance logs
+/logs/
+

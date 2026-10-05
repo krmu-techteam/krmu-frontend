@@ -9,7 +9,8 @@ import {
 } from "next/font/google";
 import "./(main-website)/globals.css";
 import Script from "next/script";
-// import Script from "next/script";
+import { WebVitals } from "@/components/common/WebVitals";
+import { ServerSpeedTracker } from "@/components/common/ServerSpeedTracker";
 
 const poppins = Poppins({
     weight: ["300", "400", "500", "600", "700"],
@@ -106,6 +107,8 @@ export default function RootLayout({
                         }}
                     />
                 </noscript>
+                <WebVitals />
+                <ServerSpeedTracker />
                 {children}
             </body>
         </html>

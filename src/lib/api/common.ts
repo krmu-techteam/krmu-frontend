@@ -1,4 +1,7 @@
 import { FETCH_STRAPI_URL, KRMUWordUrl } from "@/app/constant";
+import { installResilientFetch } from "./resilientFetch";
+
+installResilientFetch();
 import {
     AlumniApiResponse,
     CustomPage,
