@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Home, ArrowRight } from "lucide-react";
@@ -7,6 +5,12 @@ import { Home, ArrowRight } from "lucide-react";
 export default function NotFound() {
     return (
         <>
+            <title>Page Not Found | K.R. Mangalam University</title>
+            <meta name="robots" content="noindex, nofollow" />
+            <meta
+                name="description"
+                content="Oops! The page you are looking for does not exist or has been moved."
+            />
             <style
                 dangerouslySetInnerHTML={{
                     __html: `

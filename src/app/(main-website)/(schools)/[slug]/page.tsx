@@ -194,6 +194,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             },
         };
     } else {
+        const school = await getSchoolBySlug(slug);
+        if (!school) {
+            return {
+                title: "Page Not Found | K.R. Mangalam University",
+                description: "The page you are looking for does not exist.",
+                robots: {
+                    index: false,
+                    follow: false,
+                },
+            };
+        }
+
         const seoData = await getSchoolSEO(slug);
         const seo = seoData[0]?.school_seo;
         const fallbackConfig = resolveSchoolSchemaConfig(slug);

@@ -3,10 +3,10 @@ import { getBlogService } from "@/features/blog";
 import { notFound } from "next/navigation";
 import { SingleBlogHero, SingleBlogLayout } from "@/presentation/blog";
 import {
-  createArticleSchema,
-  createBreadcrumbSchema,
-  createFaqSchema,
-  createPersonSchema,
+    createArticleSchema,
+    createBreadcrumbSchema,
+    createFaqSchema,
+    createPersonSchema,
 } from "@/lib/api/common";
 import Script from "next/script";
 
@@ -14,175 +14,182 @@ import Script from "next/script";
 export const revalidate = 3600;
 
 type Props = {
-  params: Promise<{ slug: string }>;
+    params: Promise<{ slug: string }>;
 };
 
 // -------------------------------
 // ✅ Generate Metadata (Yoast)
 // -------------------------------
 export async function generateMetadata({ params }: Props) {
-  const { slug } = await params;
-  const blogData = await getBlogService().getSingleBlogDataBySlug(slug);
+    const { slug } = await params;
+    const blogData = await getBlogService().getSingleBlogDataBySlug(slug);
 
-  if (!blogData || blogData.length === 0 || !blogData[0]?.yoast_head_json) {
+    if (!blogData || blogData.length === 0) {
+        return {
+            title: "Page Not Found | K.R. Mangalam University",
+            robots: {
+                index: false,
+                follow: false,
+            },
+        };
+    }
+
+    const blog = blogData[0];
+
+    // ✅ Extract tags
+    const tagTerms = (blog?._embedded as any)?.["wp:term"]?.[1] || [];
+    const keywords = tagTerms.map((tag: any) => tag.name);
+
+    // ✅ Merge with Yoast metadata
+    const metadata = yoastToMetadata(blog.yoast_head_json, slug);
+
     return {
-      title: "Blog - K.R. Mangalam University",
-      description: "Read the latest blogs from K.R. Mangalam University.",
+        ...metadata,
+        keywords: keywords.length ? keywords : metadata.keywords,
     };
-  }
-
-  const blog = blogData[0];
-
-  // ✅ Extract tags
-  const tagTerms = (blog?._embedded as any)?.["wp:term"]?.[1] || [];
-  const keywords = tagTerms.map((tag: any) => tag.name);
-
-  // ✅ Merge with Yoast metadata
-  const metadata = yoastToMetadata(blog.yoast_head_json, slug);
-
-  return {
-    ...metadata,
-    keywords: keywords.length ? keywords : metadata.keywords,
-  };
 }
 
 const BlogPage = async ({ params }: Props) => {
-  const { slug } = await params;
+    const { slug } = await params;
 
-  // Next.js deduplicates this fetch due to react cache() in getSingleBlogDataBySlug
-  const singleBlogData = await getBlogService().getSingleBlogDataBySlug(slug);
+    // Next.js deduplicates this fetch due to react cache() in getSingleBlogDataBySlug
+    const singleBlogData = await getBlogService().getSingleBlogDataBySlug(slug);
 
-  if (!singleBlogData || singleBlogData.length === 0) return notFound();
+    if (!singleBlogData || singleBlogData.length === 0) return notFound();
 
-  const currentSingleBlog = singleBlogData[0];
+    const currentSingleBlog = singleBlogData[0];
 
-  if (!currentSingleBlog?.title) return notFound();
+    if (!currentSingleBlog?.title) return notFound();
 
-  // Clean empty <p> tags from content server-side
-  let cleanedContent = currentSingleBlog?.content?.rendered || "";
-  if (cleanedContent) {
-    // Remove empty <p> tags (including those with only whitespace or &nbsp;)
-    cleanedContent = cleanedContent.replace(
-      /<p[^>]*>(\s|&nbsp;|<br\s*\/?>)*<\/p>/gi,
-      "",
+    // Clean empty <p> tags from content server-side
+    let cleanedContent = currentSingleBlog?.content?.rendered || "";
+    if (cleanedContent) {
+        // Remove empty <p> tags (including those with only whitespace or &nbsp;)
+        cleanedContent = cleanedContent.replace(
+            /<p[^>]*>(\s|&nbsp;|<br\s*\/?>)*<\/p>/gi,
+            ""
+        );
+    }
+
+    // Extract author info from _embedded to avoid extra API calls
+    const authorData = currentSingleBlog?._embedded?.author?.[0];
+    const authorSlug = authorData?.slug;
+    const authorName = authorData?.acf?.profile_name || "KRMU Team";
+    const authorDesignation =
+        authorData?.acf?.profile_position || "Content Team";
+    const authorImageId = authorData?.acf?.profile_image;
+
+    // Extract featured image from _embedded instead of calling getBlogImageById
+    const featuredImageUrl =
+        currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+        currentSingleBlog?.yoast_head_json?.og_image?.[0]?.url;
+
+    const publishedDate = currentSingleBlog?.date;
+    const blogFaqSchema = currentSingleBlog?.acf?.faqs_section;
+
+    const cleanExcerpt = currentSingleBlog?.excerpt?.rendered
+        ? currentSingleBlog.excerpt.rendered
+              .replace(/<[^>]*>?/gm, "")
+              .replace(/\[&hellip;\]/g, "")
+              .replace(/\[&hellip;/g, "")
+              .replace(/&hellip;/g, "")
+              .replace(/\[\.\.\.\]/g, "")
+              .trim()
+        : "The best interiors are the combination of creativity, purpose, and precision.";
+
+    const authorBio = authorData?.acf?.profile_about || "";
+    const authorLinkedin =
+        (authorData?.acf as any)?.profile_linkedin ||
+        (authorData?.acf as any)?.linkedin ||
+        "";
+
+    const AuthImgUrl = await getBlogService().getBlogImageById(authorImageId);
+
+    const PersonSchemaData = {
+        name: authorName,
+        url: authorSlug
+            ? `https://krmangalam.edu.in/blog/author/${authorSlug}`
+            : "",
+        image: AuthImgUrl || "",
+    };
+    const personJsonLd = createPersonSchema(PersonSchemaData);
+
+    // JSON-LD Structured Data
+    const faqJsonLd = createFaqSchema(blogFaqSchema || []);
+    const breadcrumbSchema = createBreadcrumbSchema([
+        { name: "Home", url: "https://www.krmangalam.edu.in/" },
+        { name: "Blog", url: "https://www.krmangalam.edu.in/blog/" },
+        {
+            name: currentSingleBlog?.title?.rendered,
+            url: `https://www.krmangalam.edu.in/blog/${currentSingleBlog?.slug}`,
+        },
+    ]);
+
+    const articleJsonLd = createArticleSchema({
+        url: `https://www.krmangalam.edu.in/blog/${currentSingleBlog?.slug}`,
+        headline: currentSingleBlog?.title?.rendered,
+        description: currentSingleBlog?.yoast_head_json?.description,
+        image: currentSingleBlog?.yoast_head_json?.og_image?.[0]?.url,
+        authorName: authorName,
+        publisherName: "K.R. Mangalam University",
+        publisherLogo:
+            "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/KRMU-Logo-NAAC.webp",
+        datePublished: `${currentSingleBlog?.date_gmt}Z`,
+        dateModified: `${currentSingleBlog?.modified_gmt}Z`,
+    });
+
+    return (
+        <>
+            {/* Optimized JSON-LD Scripts */}
+            <Script
+                id="blog-faq-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: faqJsonLd }}
+                strategy="afterInteractive"
+            />
+            <Script
+                id="blog-breadcrumb-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
+                strategy="afterInteractive"
+            />
+            <Script
+                id="blog-article-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: articleJsonLd }}
+                strategy="afterInteractive"
+            />
+            <Script
+                id="blog-person-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: personJsonLd }}
+                strategy="afterInteractive"
+            />
+
+            <SingleBlogHero
+                title={currentSingleBlog?.title?.rendered}
+                imgUrl={featuredImageUrl ?? ""}
+                authorName={authorName}
+                date={publishedDate}
+                authorDesignation={authorDesignation}
+                imgId={authorImageId}
+                authorSlug={authorSlug}
+            />
+            <SingleBlogLayout
+                content={cleanedContent}
+                currentSlug={currentSingleBlog?.slug}
+                authorName={authorName}
+                authorSlug={authorSlug}
+                authorDesignation={authorDesignation}
+                imgId={authorImageId}
+                date={publishedDate}
+                excerpt={cleanExcerpt}
+                title={currentSingleBlog?.title?.rendered || ""}
+                authorBio={authorBio}
+                authorLinkedin={authorLinkedin}
+            />
+        </>
     );
-  }
-
-  // Extract author info from _embedded to avoid extra API calls
-  const authorData = currentSingleBlog?._embedded?.author?.[0];
-  const authorSlug = authorData?.slug;
-  const authorName = authorData?.acf?.profile_name || "KRMU Team";
-  const authorDesignation = authorData?.acf?.profile_position || "Content Team";
-  const authorImageId = authorData?.acf?.profile_image;
-
-  // Extract featured image from _embedded instead of calling getBlogImageById
-  const featuredImageUrl =
-    currentSingleBlog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-    currentSingleBlog?.yoast_head_json?.og_image?.[0]?.url;
-
-  const publishedDate = currentSingleBlog?.date;
-  const blogFaqSchema = currentSingleBlog?.acf?.faqs_section;
-
-  const cleanExcerpt = currentSingleBlog?.excerpt?.rendered
-    ? currentSingleBlog.excerpt.rendered
-        .replace(/<[^>]*>?/gm, "")
-        .replace(/\[&hellip;\]/g, "")
-        .replace(/\[&hellip;/g, "")
-        .replace(/&hellip;/g, "")
-        .replace(/\[\.\.\.\]/g, "")
-        .trim()
-    : "The best interiors are the combination of creativity, purpose, and precision.";
-
-  const authorBio = authorData?.acf?.profile_about || "";
-  const authorLinkedin = (authorData?.acf as any)?.profile_linkedin || (authorData?.acf as any)?.linkedin || "";
-
-  const AuthImgUrl = await getBlogService().getBlogImageById(authorImageId);
-
-  const PersonSchemaData = {
-    name: authorName,
-    url: authorSlug
-      ? `https://krmangalam.edu.in/blog/author/${authorSlug}`
-      : "",
-    image: AuthImgUrl || "",
-  };
-  const personJsonLd = createPersonSchema(PersonSchemaData);
-
-  // JSON-LD Structured Data
-  const faqJsonLd = createFaqSchema(blogFaqSchema || []);
-  const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "https://www.krmangalam.edu.in/" },
-    { name: "Blog", url: "https://www.krmangalam.edu.in/blog/" },
-    {
-      name: currentSingleBlog?.title?.rendered,
-      url: `https://www.krmangalam.edu.in/blog/${currentSingleBlog?.slug}`,
-    },
-  ]);
-
-  const articleJsonLd = createArticleSchema({
-    url: `https://www.krmangalam.edu.in/blog/${currentSingleBlog?.slug}`,
-    headline: currentSingleBlog?.title?.rendered,
-    description: currentSingleBlog?.yoast_head_json?.description,
-    image: currentSingleBlog?.yoast_head_json?.og_image?.[0]?.url,
-    authorName: authorName,
-    publisherName: "K.R. Mangalam University",
-    publisherLogo:
-      "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/KRMU-Logo-NAAC.webp",
-    datePublished: `${currentSingleBlog?.date_gmt}Z`,
-    dateModified: `${currentSingleBlog?.modified_gmt}Z`,
-  });
-
-  return (
-    <>
-      {/* Optimized JSON-LD Scripts */}
-      <Script
-        id="blog-faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: faqJsonLd }}
-        strategy="afterInteractive"
-      />
-      <Script
-        id="blog-breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: breadcrumbSchema }}
-        strategy="afterInteractive"
-      />
-      <Script
-        id="blog-article-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: articleJsonLd }}
-        strategy="afterInteractive"
-      />
-      <Script
-        id="blog-person-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: personJsonLd }}
-        strategy="afterInteractive"
-      />
-
-      <SingleBlogHero
-        title={currentSingleBlog?.title?.rendered}
-        imgUrl={featuredImageUrl ?? ""}
-        authorName={authorName}
-        date={publishedDate}
-        authorDesignation={authorDesignation}
-        imgId={authorImageId}
-        authorSlug={authorSlug}
-      />
-      <SingleBlogLayout
-        content={cleanedContent}
-        currentSlug={currentSingleBlog?.slug}
-        authorName={authorName}
-        authorSlug={authorSlug}
-        authorDesignation={authorDesignation}
-        imgId={authorImageId}
-        date={publishedDate}
-        excerpt={cleanExcerpt}
-        title={currentSingleBlog?.title?.rendered || ""}
-        authorBio={authorBio}
-        authorLinkedin={authorLinkedin}
-      />
-    </>
-  );
 };
 
 export default BlogPage;

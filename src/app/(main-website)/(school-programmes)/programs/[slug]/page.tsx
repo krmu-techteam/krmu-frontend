@@ -109,11 +109,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     if (!seo) {
         return {
-            title: "K.R. Mangalam University",
-            description: "",
+            title: "Page Not Found | K.R. Mangalam University",
+            description: "The page you are looking for does not exist.",
             robots: {
-                index: true,
-                follow: true,
+                index: false,
+                follow: false,
             },
         };
     }

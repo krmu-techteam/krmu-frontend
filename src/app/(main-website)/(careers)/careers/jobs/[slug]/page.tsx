@@ -15,6 +15,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const currentSingleJob = singleJobData?.find((job) => job?.slug === slug);
 
+    if (!currentSingleJob) {
+        return {
+            title: "Page Not Found | K.R. Mangalam University",
+            robots: {
+                index: false,
+                follow: false,
+            },
+        };
+    }
+
     const siteTitle = currentSingleJob?.title?.rendered;
 
     return {

@@ -4,6 +4,7 @@ import SingleFacultyHero from "../comp/SingleFacultyHero";
 import FacultyAccordion from "../comp/FacultyAccordion";
 import { getWordImageById } from "@/lib/api/common";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { origUrl } from "@/app/constant";
 
 type Props = {
@@ -13,7 +14,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     try {
         const facultyResData = await getFacultyBySlug(slug);
-        const metadata = facultyResData?.[0]?.yoast_head_json;
+        const currentFaculty = facultyResData?.find(
+            (fac: singleFaculty) => fac?.slug === slug
+        );
+        if (!currentFaculty) {
+            return {
+                title: "Page Not Found | K.R. Mangalam University",
+                robots: {
+                    index: false,
+                    follow: false,
+                },
+            };
+        }
+        const metadata = currentFaculty?.yoast_head_json;
         return {
             title: metadata?.title || "K.R. Mangalam University",
             description: metadata?.description || "",
@@ -28,8 +41,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     } catch (error) {
         console.error("SEO Error:", error);
         return {
-            title: "K.R. Mangalam University",
-            description: "",
+            title: "Page Not Found | K.R. Mangalam University",
+            robots: {
+                index: false,
+                follow: false,
+            },
         };
     }
 }
@@ -40,6 +56,10 @@ const page = async ({ params }: Props) => {
     const currentFaculty = facultyResData?.find(
         (fac: singleFaculty) => fac?.slug === slug
     );
+
+    if (!currentFaculty) {
+        notFound();
+    }
 
     const facultyContent = currentFaculty?.content.rendered || "";
     const facultyImgId = currentFaculty?.featured_media;

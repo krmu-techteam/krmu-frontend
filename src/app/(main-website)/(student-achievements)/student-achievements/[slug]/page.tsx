@@ -2,27 +2,33 @@ import { getStudentsAchievements } from "@/lib/api/student-achievement";
 import StudentAchievementCards from "../comp/StudentAchievementCards";
 import StudentAchievementHero from "../comp/StudentAchievementHero";
 
+import { notFound } from "next/navigation";
+
 type Props = {
-  params: Promise<{ slug: string }>;
+    params: Promise<{ slug: string }>;
 };
 
 const page = async ({ params }: Props) => {
-  const { slug } = await params;
+    const { slug } = await params;
 
-  const studentAchievementsCatName = slug.split("-")[0];
+    const studentAchievementsCatName = slug.split("-")[0];
 
-  const achievementData = await getStudentsAchievements(
-    studentAchievementsCatName
-  );
+    const achievementData = await getStudentsAchievements(
+        studentAchievementsCatName
+    );
 
-  return (
-    <>
-      <StudentAchievementHero heading={studentAchievementsCatName} />
-      {achievementData && (
-        <StudentAchievementCards achievementData={achievementData} />
-      )}
-    </>
-  );
+    if (!achievementData || achievementData.length === 0) {
+        notFound();
+    }
+
+    return (
+        <>
+            <StudentAchievementHero heading={studentAchievementsCatName} />
+            {achievementData && (
+                <StudentAchievementCards achievementData={achievementData} />
+            )}
+        </>
+    );
 };
 
 export default page;
