@@ -58,6 +58,14 @@ function createResponseFromEntry(entry: CacheEntry): Response {
     });
 }
 
+export async function resilientFetch(
+    input: RequestInfo | URL,
+    init?: RequestInit
+): Promise<Response> {
+    installResilientFetch();
+    return globalThis.fetch(input, init);
+}
+
 export function installResilientFetch() {
     // Run only in server environment (Node.js runtime)
     if (typeof window !== "undefined") return;
@@ -180,3 +188,6 @@ export function installResilientFetch() {
         "[ResilientFetch] CMS In-Flight Deduplication & High-Concurrency Resiliency active."
     );
 }
+
+// Auto-activate resilient fetch globally on the server runtime
+installResilientFetch();

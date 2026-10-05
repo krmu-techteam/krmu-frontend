@@ -255,8 +255,8 @@ export function TestimonialsSection({
             const scrollLeft =
                 container.scrollLeft +
                 (btnRect.left - containerRect.left) -
-                container.offsetWidth / 2 +
-                activeBtn.offsetWidth / 2;
+                containerRect.width / 2 +
+                btnRect.width / 2;
             container.scrollTo({
                 left: Math.max(0, scrollLeft),
                 behavior: "smooth",

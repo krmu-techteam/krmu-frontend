@@ -1,10 +1,11 @@
 import { FETCH_STRAPI_URL } from "@/app/constant";
+import { resilientFetch } from "./resilientFetch";
 ///////////////////// HOME PAGE SEO /////////////////////////////////
 export async function HomePageSEO(): Promise<
     HomepageSeoResponse["data"] | null
 > {
     try {
-        const res = await fetch(
+        const res = await resilientFetch(
             `${FETCH_STRAPI_URL}/api/home-page?populate[seofields][populate][shareImage][fields][0]=url`,
             {
                 next: {

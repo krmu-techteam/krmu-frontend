@@ -60,27 +60,57 @@ const NewsEventsSection = dynamic(
     }
 );
 
+async function AsyncTestimonialsSection({
+    testimonialsSection,
+}: {
+    testimonialsSection: any;
+}) {
+    const homeService = getHomeService();
+    const testimonialsData = await homeService.getTestimonials();
+    return (
+        <TestimonialsSection
+            {...testimonialsSection}
+            testimonialsData={testimonialsData}
+        />
+    );
+}
+
+async function AsyncNewsEventsSection({
+    newsEventsSection,
+}: {
+    newsEventsSection: any;
+}) {
+    const homeService = getHomeService();
+    const newsEventsData = await homeService.getNewsEvents(1, 20);
+    return newsEventsSection ? (
+        <NewsEventsSection
+            {...(newsEventsSection as any)}
+            eventsData={newsEventsData}
+        />
+    ) : (
+        <NewsEventsSection eventsData={newsEventsData} />
+    );
+}
+
 export default async function HomePage() {
     const homeService: IHomeService = getHomeService();
 
-    const [
-        heroSection,
-        aboutSection,
-        newsEventsSection,
-        testimonialsSection,
-        testimonialsData,
-        newsEventsData,
-    ] = await Promise.all([
-        homeService.getComponent(HOME_COMPONENT_KEYS.HERO),
-        homeService.getComponent(HOME_COMPONENT_KEYS.ABOUT),
-        homeService.getComponent(HOME_COMPONENT_KEYS.NEWS_EVENTS),
-        homeService.getComponent(HOME_COMPONENT_KEYS.TESTIMONIALS),
-        homeService.getTestimonials(),
-        homeService.getNewsEvents(1, 20),
-    ]);
+    const [heroSection, aboutSection, newsEventsSection, testimonialsSection] =
+        await Promise.all([
+            homeService.getComponent(HOME_COMPONENT_KEYS.HERO),
+            homeService.getComponent(HOME_COMPONENT_KEYS.ABOUT),
+            homeService.getComponent(HOME_COMPONENT_KEYS.NEWS_EVENTS),
+            homeService.getComponent(HOME_COMPONENT_KEYS.TESTIMONIALS),
+        ]);
 
     return (
         <>
+            <link
+                rel="preload"
+                as="image"
+                href="/modules/home/hero/hero-poster.webp"
+                fetchPriority="high"
+            />
             <HomeSchemaScripts />
             <main className="w-full max-w-full overflow-x-hidden">
                 {heroSection && <HeroSection {...heroSection} />}
@@ -103,9 +133,8 @@ export default async function HomePage() {
                 </Suspense>
 
                 <Suspense fallback={<div className="min-h-[400px]" />}>
-                    <TestimonialsSection
-                        {...testimonialsSection}
-                        testimonialsData={testimonialsData}
+                    <AsyncTestimonialsSection
+                        testimonialsSection={testimonialsSection}
                     />
                 </Suspense>
 
@@ -125,14 +154,9 @@ export default async function HomePage() {
 
                 <Container>
                     <Suspense fallback={<NewsEventsSkeleton />}>
-                        {newsEventsSection ? (
-                            <NewsEventsSection
-                                {...(newsEventsSection as any)}
-                                eventsData={newsEventsData}
-                            />
-                        ) : (
-                            <NewsEventsSection eventsData={newsEventsData} />
-                        )}
+                        <AsyncNewsEventsSection
+                            newsEventsSection={newsEventsSection}
+                        />
                     </Suspense>
                 </Container>
             </main>

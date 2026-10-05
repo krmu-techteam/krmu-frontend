@@ -21,7 +21,8 @@ const nextConfig: NextConfig = {
     },
     images: {
         formats: ["image/avif", "image/webp"],
-        minimumCacheTTL: 86400,
+        qualities: [75, 85, 95, 100],
+        minimumCacheTTL: 31536000,
         deviceSizes: [360, 640, 750, 828, 1080, 1200, 1920],
         imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
         remotePatterns: [
@@ -60,12 +61,30 @@ const nextConfig: NextConfig = {
     },
     async headers() {
         return [
+            // Long immutable caching for static images, videos, fonts
+            {
+                source: "/:path*.(webp|avif|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|mp4|webm)",
+                headers: [
+                    {
+                        key: "Cache-Control",
+                        value: "public, max-age=31536000, immutable",
+                    },
+                    {
+                        key: "CDN-Cache-Control",
+                        value: "public, max-age=31536000, immutable",
+                    },
+                ],
+            },
             {
                 source: "/images/:path*",
                 headers: [
                     {
                         key: "Cache-Control",
-                        value: "public, max-age=86400, stale-while-revalidate=604800",
+                        value: "public, max-age=31536000, immutable",
+                    },
+                    {
+                        key: "CDN-Cache-Control",
+                        value: "public, max-age=31536000, immutable",
                     },
                 ],
             },
@@ -74,7 +93,24 @@ const nextConfig: NextConfig = {
                 headers: [
                     {
                         key: "Cache-Control",
-                        value: "public, max-age=86400, stale-while-revalidate=604800",
+                        value: "public, max-age=31536000, immutable",
+                    },
+                    {
+                        key: "CDN-Cache-Control",
+                        value: "public, max-age=31536000, immutable",
+                    },
+                ],
+            },
+            {
+                source: "/krmu/:path*",
+                headers: [
+                    {
+                        key: "Cache-Control",
+                        value: "public, max-age=31536000, immutable",
+                    },
+                    {
+                        key: "CDN-Cache-Control",
+                        value: "public, max-age=31536000, immutable",
                     },
                 ],
             },
@@ -92,7 +128,7 @@ const nextConfig: NextConfig = {
                 ],
             },
             {
-                source: "/((?!api|_next/static|_next/image|favicon.ico).*)",
+                source: "/((?!api|_next/static|_next/image|.*\\.(?:webp|avif|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|mp4|webm)).*)",
                 headers: [
                     {
                         key: "Cache-Control",

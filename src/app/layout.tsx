@@ -83,7 +83,7 @@ export default function RootLayout({
                     crossOrigin="anonymous"
                 />
                 <link rel="dns-prefetch" href="https://wp.krmangalam.edu.in" />
-                <Script id="google-tag-manager" strategy="afterInteractive">
+                <Script id="google-tag-manager" strategy="lazyOnload">
                     {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

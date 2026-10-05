@@ -5,7 +5,6 @@ import gsap from "gsap";
 
 export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
     const videoRef = useRef<HTMLVideoElement>(null);
-    const veilRef = useRef<HTMLDivElement>(null);
     const hasAnimated = useRef(false);
 
     const triggerCinematicReveal = () => {
@@ -16,50 +15,22 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
             typeof window !== "undefined" && window.innerWidth >= 1024;
         const targetScaleX = isDesktop ? 1 : 1.07;
         const targetScaleY = isDesktop ? 1.0634 : 1.07;
-        const startScaleX = targetScaleX * 1.06;
-        const startScaleY = targetScaleY * 1.06;
+        const startScaleX = targetScaleX * 1.04;
+        const startScaleY = targetScaleY * 1.04;
 
-        const tl = gsap.timeline();
-
-        // 1. Dissolve the dark veil smoothly
-        if (veilRef.current) {
-            tl.to(
-                veilRef.current,
-                {
-                    opacity: 0,
-                    duration: 1.4,
-                    ease: "power2.inOut",
-                    onComplete: () => {
-                        if (veilRef.current) {
-                            veilRef.current.style.display = "none";
-                        }
-                    },
-                },
-                0
-            );
-        }
-
-        // 2. Awwwards-style Cinematic Focus Bloom reveal:
-        // Video starts with an ambient dreamy blur + lower exposure + slight zoom,
-        // and smoothly blooms into sharp focus & settles into place.
-        tl.fromTo(
+        // Smooth cinematic settle into place once video starts playing
+        gsap.fromTo(
             videoRef.current,
             {
-                opacity: 0,
                 scaleX: startScaleX,
                 scaleY: startScaleY,
-                filter: "blur(14px) brightness(0.6)",
             },
             {
-                opacity: 1,
                 scaleX: targetScaleX,
                 scaleY: targetScaleY,
-                filter: "blur(0px) brightness(1)",
-                duration: 1.6,
-                ease: "power3.out",
-                clearProps: "filter", // Clears blur filter once animation finishes for 60fps GPU performance
-            },
-            0
+                duration: 1.2,
+                ease: "power2.out",
+            }
         );
     };
 
@@ -142,8 +113,7 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
                 preload="metadata"
                 title="KR Mangalam university video"
                 aria-label="KR Mangalam university video"
-                style={{ opacity: 0 }}
-                className="absolute top-0 left-0 w-full h-full object-contain lg:object-cover z-0 will-change-transform will-change-[opacity,filter]"
+                className="absolute top-0 left-0 w-full h-full object-contain lg:object-cover z-0 will-change-transform"
             >
                 <source src={videoSrc} type="video/mp4" />
                 {videoSrc !== "/modules/home/hero/krm_bg_hero.mp4" && (
@@ -155,12 +125,6 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
                 Your browser does not support the video tag. KR Mangalam
                 university video
             </video>
-
-            {/* Dark Veil with subtle dark vignette that smoothly dissolves */}
-            <div
-                ref={veilRef}
-                className="absolute inset-0 bg-[#0B1221] z-[1] pointer-events-none will-change-[opacity]"
-            />
 
             {/* Subtle Left Black Gradient Overlay for Mobile & Tablet Readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-[2] pointer-events-none lg:hidden" />
