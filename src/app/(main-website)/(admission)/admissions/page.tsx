@@ -3,10 +3,11 @@ import {
     IAdmissionsService,
 } from "@/features/admission/admissions";
 import { notFound } from "next/navigation";
-import ContactWithUs from "./admission2Comp/ContactWithUs";
 import { Metadata } from "next";
+import { Suspense } from "react";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
+import { resolveOgImage } from "@/lib/constants/ogImages";
 import {
     createBreadcrumbProgSchema,
     createProgFaqSchema,
@@ -25,32 +26,33 @@ import {
 import { ProgrammesExplorer } from "@/presentation/programmes/sections";
 import SectionDivider from "@/components/common/SectionDivider";
 
+export const revalidate = 3600;
+
 export async function generateMetadata(): Promise<Metadata> {
     const seoData = await folderRouteSEO("admissions");
-    const seo = seoData[0];
+    const seo = seoData?.[0];
 
     const shareImageUrl = seo?.shareImg?.url
         ? `${STRAPI_URL}${seo?.shareImg?.url}`
         : undefined;
 
-    // ✅ Fallback if SEO is missing
-    if (!seo) {
-        return {
-            title: "K.R. Mangalam University",
-            description: "",
-            robots: {
-                index: true,
-                follow: true,
-            },
-        };
-    }
+    const title = seo?.title || "Admissions 2026 | K.R. Mangalam University";
+    const description =
+        seo?.metaDescription ||
+        "Apply for Admissions 2026 at K.R. Mangalam University. Explore 100+ industry-aligned programmes, top placements & up to 100% scholarships.";
+    const canonical =
+        seo?.canonicalUrl || "https://www.krmangalam.edu.in/admissions";
+
+    const ogImage = resolveOgImage(shareImageUrl, "admissions", title);
 
     return {
-        title: seo?.title || "K.R. Mangalam University",
-        description: seo?.metaDescription || "",
-        keywords: seo?.keyword || "",
+        title,
+        description,
+        keywords:
+            seo?.keyword ||
+            "Admissions 2026, KRMU admissions, apply online, scholarship",
         alternates: {
-            canonical: seo?.canonicalUrl || "",
+            canonical,
         },
         robots: {
             index: true,
@@ -59,29 +61,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
         // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
         openGraph: {
-            title: seo?.title || "K.R. Mangalam University",
-            description: seo?.metaDescription || "",
-            url: seo?.canonicalUrl || "",
+            title,
+            description,
+            url: canonical,
             siteName: "K.R. Mangalam University",
-            images: shareImageUrl
-                ? [
-                      {
-                          url: shareImageUrl,
-                          width: 1200,
-                          height: 630,
-                          alt: seo?.title || "K.R. Mangalam University",
-                      },
-                  ]
-                : [],
+            images: [ogImage],
             type: "website",
         },
 
         // ✅ Twitter Card
         twitter: {
             card: "summary_large_image",
-            title: seo?.title || "K.R. Mangalam University",
-            description: seo?.metaDescription || "",
-            images: shareImageUrl ? [shareImageUrl] : [],
+            title,
+            description,
+            images: [ogImage.url],
         },
     };
 }
@@ -94,24 +87,27 @@ const AddmissionPage = async () => {
         return notFound();
     }
 
-    const admTOC = admission2Data.adm_toc;
-    const admAlumni = admission2Data.adm2_alumni;
+    const admTOC = admission2Data?.adm_toc;
+    const admAlumni = admission2Data?.adm2_alumni || [];
 
     type FAQProg = {
+        id?: number;
         ques: string;
         ans: string;
+        tocpoint?: string;
     };
 
-    const allFaqs: FAQProg[] = admTOC?.tocfaq.flatMap((section) =>
-        section.faq.map((item) => ({
-            id: item.id,
-            ques: item.ques,
-            ans: item.ans,
-            tocpoint: section.tocpoint, // optional, keep category info
+    const allFaqs: FAQProg[] = (admTOC?.tocfaq || []).flatMap((section) =>
+        (section?.faq || []).map((item) => ({
+            id: item?.id,
+            ques: item?.ques || "",
+            ans: item?.ans || "",
+            tocpoint: section?.tocpoint || "",
         }))
     );
 
-    const singleProgFAQLD = createProgFaqSchema(allFaqs);
+    const singleProgFAQLD =
+        allFaqs.length > 0 ? createProgFaqSchema(allFaqs) : "";
 
     const breadcrumbItems = [
         { name: "Home", url: "https://www.krmangalam.edu.in/" },
@@ -121,11 +117,13 @@ const AddmissionPage = async () => {
 
     return (
         <>
-            <Script
-                id="faq-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: singleProgFAQLD }}
-            />
+            {singleProgFAQLD && (
+                <Script
+                    id="faq-schema"
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: singleProgFAQLD }}
+                />
+            )}
             <Script
                 id="breadcrumb-schema"
                 type="application/ld+json"
@@ -135,28 +133,23 @@ const AddmissionPage = async () => {
             <AdmissionProcessSection />
             <WhyKRMangalamUniversitySection />
             <div className="relative pt-8 md:pt-12 xl:pt-20 pb-5 md:pb-12 xl:pb-20">
-                <ProgrammesExplorer />
+                <Suspense fallback={null}>
+                    <ProgrammesExplorer />
+                </Suspense>
                 <SectionDivider />
             </div>
-            {/* <ScholarshipSection />
-      <FinancialAssistanceSection /> */}
             <FeeOverviewSection />
             <AlumniVoicesSection admAlumni={admAlumni} />
             <FrequentlyAskedQuestionSection
-                heading={admTOC?.heading}
-                highlight={admTOC?.highlightheading}
-                desc={admTOC?.description}
-                tocfaqs={admTOC?.tocfaq}
+                heading={admTOC?.heading || "Frequently Asked Questions"}
+                highlight={admTOC?.highlightheading || ""}
+                desc={admTOC?.description || ""}
+                tocfaqs={admTOC?.tocfaq || []}
                 tocimg={admTOC?.tocimg}
-                tocbtn={admTOC?.tocbtn}
+                tocbtn={admTOC?.tocbtn as any}
             />
             <LocationSection />
             <ContactWithUSection />
-            {/* 
-
-
-
-  */}
         </>
     );
 };

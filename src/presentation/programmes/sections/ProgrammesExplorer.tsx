@@ -1,7 +1,14 @@
 "use client";
 
 import { X, Check, Download } from "lucide-react";
-import { useEffect, useRef, useState, useMemo, useCallback } from "react";
+import {
+    useEffect,
+    useRef,
+    useState,
+    useMemo,
+    useCallback,
+    Suspense,
+} from "react";
 import { useSearchParams } from "next/navigation";
 import {
     getAllSchoolsInfo,
@@ -366,7 +373,7 @@ interface ProgrammesExplorerProps {
     schoolOnly?: boolean;
 }
 
-const ProgrammesExplorer = ({
+const ProgrammesExplorerContent = ({
     initialProgrammes,
     initialSchools,
     initialDegrees,
@@ -1058,5 +1065,11 @@ const ProgrammesExplorer = ({
         </section>
     );
 };
+
+export const ProgrammesExplorer = (props: ProgrammesExplorerProps) => (
+    <Suspense fallback={null}>
+        <ProgrammesExplorerContent {...props} />
+    </Suspense>
+);
 
 export default ProgrammesExplorer;
