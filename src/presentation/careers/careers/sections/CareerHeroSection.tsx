@@ -17,7 +17,7 @@ const CareerHeroSection = () => {
                     <div className="md:col-span-7 lg:col-span-8 xl:col-span-8 text-white pb-8 md:pb-12 lg:pb-14 md:pl-2 lg:pl-6">
                         {/* Top Hero Section */}
                         <div>
-                            <h1 className="text-3xl sm:text-4xl md:text-[42px] lg:text-[48px] font-fraunces font-semibold mb-4 sm:mb-5 leading-[1.2] tracking-tight">
+                            <h1 className="text-3xl sm:text-4xl md:text-[42px] lg:text-[48px] font-serif font-bold mb-4 sm:mb-5 leading-[1.2] tracking-tight">
                                 We work together within a team environment of
                                 mutual respect, honesty and integrity
                             </h1>
@@ -33,7 +33,7 @@ const CareerHeroSection = () => {
 
                         {/* Why Work With Us Section - immediately following, no big void gap */}
                         <div className="mt-8 md:mt-10 lg:mt-12">
-                            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-fraunces font-semibold mb-3 sm:mb-4 text-white tracking-tight">
+                            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-serif font-bold mb-3 sm:mb-4 text-white tracking-tight">
                                 Why work with us
                             </h2>
                             <p className="text-[16px] text-white/85 leading-relaxed font-light max-w-xl">
