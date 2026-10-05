@@ -30,9 +30,9 @@ const SingleBlogCategorySidebar = async () => {
 
             {/* Widget 2: Pill-styled Categories Widget */}
             <div className=" border border-[#23425B] rounded-[8px] p-5 text-white font-poppins">
-                <h4 className="text-[22px] font-medium text-white mb-5 tracking-tight font-sans">
+                <h3 className="text-[22px] font-medium text-white mb-5 tracking-tight font-sans">
                     Categories
-                </h4>
+                </h3>
 
                 <div className="flex flex-col items-start gap-2">
                     {allCategories && allCategories.length > 0 ? (
