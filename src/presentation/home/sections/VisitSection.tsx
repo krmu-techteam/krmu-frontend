@@ -62,7 +62,7 @@ export function VisitSection() {
                             >
                                 <div className="relative h-full w-full">
                                     <Image
-                                        src="/modules/home/hero/virtual-tour.png"
+                                        src="/modules/home/hero/virtual-tour.webp"
                                         alt="360 Virtual Tour"
                                         fill
                                         sizes="96px"

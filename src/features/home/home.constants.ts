@@ -65,56 +65,62 @@ export const JOURNEY_VIDEOS: JourneyVideoType[] = [
 export const RECRUITER_LOGOS: RecruiterLogoType[] = [
     {
         name: "Tata Power",
-        logo: "/images/home/placements/recruiters/tata-power.png",
+        logo: "/images/home/placements/recruiters/tata-power.webp",
     },
-    { name: "Meta", logo: "/images/home/placements/recruiters/meta.png" },
+    { name: "Meta", logo: "/images/home/placements/recruiters/meta.webp" },
     {
         name: "Microsoft",
-        logo: "/images/home/placements/recruiters/microsoft.png",
+        logo: "/images/home/placements/recruiters/microsoft.webp",
     },
     {
         name: "JPMorgan",
-        logo: "/images/home/placements/recruiters/jp-morgan.png",
+        logo: "/images/home/placements/recruiters/jp-morgan.webp",
     },
     {
         name: "LinkedIn",
-        logo: "/images/home/placements/recruiters/linkedin.png",
+        logo: "/images/home/placements/recruiters/linkedin.webp",
     },
-    { name: "Google", logo: "/images/home/placements/recruiters/google.png" },
-    { name: "Infosys", logo: "/images/home/placements/recruiters/infosys.png" },
-    { name: "IBM", logo: "/images/home/placements/recruiters/ibm.png" },
-    { name: "ITC", logo: "/images/home/placements/recruiters/itc-limited.png" },
-    { name: "Cisco", logo: "/images/home/placements/recruiters/cisco.png" },
-    { name: "Amazon", logo: "/images/home/placements/recruiters/amazon.png" },
-    { name: "Apple", logo: "/images/home/placements/recruiters/apple.png" },
+    { name: "Google", logo: "/images/home/placements/recruiters/google.webp" },
+    {
+        name: "Infosys",
+        logo: "/images/home/placements/recruiters/infosys.webp",
+    },
+    { name: "IBM", logo: "/images/home/placements/recruiters/ibm.webp" },
+    {
+        name: "ITC",
+        logo: "/images/home/placements/recruiters/itc-limited.webp",
+    },
+    { name: "Cisco", logo: "/images/home/placements/recruiters/cisco.webp" },
+    { name: "Amazon", logo: "/images/home/placements/recruiters/amazon.webp" },
+    { name: "Apple", logo: "/images/home/placements/recruiters/apple.webp" },
     {
         name: "Accenture",
-        logo: "/images/home/placements/recruiters/accenture.png",
+        logo: "/images/home/placements/recruiters/accenture.webp",
     },
-    { name: "EY", logo: "/images/home/placements/recruiters/ey.png" },
+    { name: "EY", logo: "/images/home/placements/recruiters/ey.webp" },
     {
         name: "Flipkart",
-        logo: "/images/home/placements/recruiters/flipkart.png",
+        logo: "/images/home/placements/recruiters/flipkart.webp",
     },
     {
         name: "Axis Bank",
-        logo: "/images/home/placements/recruiters/axis-bank.png",
+        logo: "/images/home/placements/recruiters/axis-bank.webp",
     },
     {
         name: "Publicis Media",
-        logo: "/images/home/placements/recruiters/publicis-media.png",
+        logo: "/images/home/placements/recruiters/publicis-media.webp",
     },
     {
         name: "Publicis Sapient",
-        logo: "/images/home/placements/recruiters/publicis-sapient.png",
+        logo: "/images/home/placements/recruiters/publicis-sapient.webp",
     },
     {
         name: "HCL",
-        logo: "/images/home/placements/recruiters/hcl.png",
+        logo: "/images/home/placements/recruiters/hcl.webp",
     },
     {
         name: "Capgemini",
-        logo: "/images/home/placements/recruiters/capgemini.png",
+        logo: "/images/home/placements/recruiters/capgemini.webp",
     },
 ];
 
@@ -350,75 +356,75 @@ export const RESEARCH_STATS: ResearchStatsType[] = [
 export const PARTNER_UNIVERSITIES: PartnerUniversityType[] = [
     {
         name: "Cardiff Metropolitan University",
-        logo: "/modules/home/partners/cardiff-metropolitan-university.png",
+        logo: "/modules/home/partners/cardiff-metropolitan-university.webp",
     },
     {
         name: "Cardiff University",
-        logo: "/modules/home/partners/cardiff-university.png",
+        logo: "/modules/home/partners/cardiff-university.webp",
     },
     {
         name: "Dublin City University",
-        logo: "/modules/home/partners/dublin-city-university.png",
+        logo: "/modules/home/partners/dublin-city-university.webp",
     },
     {
         name: "George Mason University",
-        logo: "/modules/home/partners/george-mason-university.png",
+        logo: "/modules/home/partners/george-mason-university.webp",
     },
     {
         name: "Maynooth University",
-        logo: "/modules/home/partners/maynooth-university.png",
+        logo: "/modules/home/partners/maynooth-university.webp",
     },
     {
         name: "Nanyang Technological University",
-        logo: "/modules/home/partners/nanyang-technological-university.png",
+        logo: "/modules/home/partners/nanyang-technological-university.webp",
     },
     {
         name: "Robert Gordon University",
-        logo: "/modules/home/partners/robert-gordon-university.png",
+        logo: "/modules/home/partners/robert-gordon-university.webp",
     },
     {
         name: "Trinity College Dublin",
-        logo: "/modules/home/partners/trinity-college-dublin.png",
+        logo: "/modules/home/partners/trinity-college-dublin.webp",
     },
     {
         name: "University College Dublin",
-        logo: "/modules/home/partners/university-college-dublin.png",
+        logo: "/modules/home/partners/university-college-dublin.webp",
     },
     {
         name: "University of Florida",
-        logo: "/modules/home/partners/university-of-Florida.png",
+        logo: "/modules/home/partners/university-of-Florida.webp",
     },
     {
         name: "University of Essex",
-        logo: "/modules/home/partners/university-of-essex.png",
+        logo: "/modules/home/partners/university-of-essex.webp",
     },
     {
         name: "University of Houston",
-        logo: "/modules/home/partners/university-of-houston.png",
+        logo: "/modules/home/partners/university-of-houston.webp",
     },
     {
         name: "University of Kent",
-        logo: "/modules/home/partners/university-of-kent.png",
+        logo: "/modules/home/partners/university-of-kent.webp",
     },
     {
         name: "University of Leeds",
-        logo: "/modules/home/partners/university-of-leeds.png",
+        logo: "/modules/home/partners/university-of-leeds.webp",
     },
     {
         name: "University of Manchester",
-        logo: "/modules/home/partners/university-of-manchester.png",
+        logo: "/modules/home/partners/university-of-manchester.webp",
     },
     {
         name: "University of Plymouth",
-        logo: "/modules/home/partners/university-of-plymouth.png",
+        logo: "/modules/home/partners/university-of-plymouth.webp",
     },
     {
         name: "University of Strathclyde",
-        logo: "/modules/home/partners/university-of-strathclyde.png",
+        logo: "/modules/home/partners/university-of-strathclyde.webp",
     },
     {
         name: "University of Sussex",
-        logo: "/modules/home/partners/university-of-sussex.png",
+        logo: "/modules/home/partners/university-of-sussex.webp",
     },
 ];
 

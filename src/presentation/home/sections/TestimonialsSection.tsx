@@ -303,7 +303,7 @@ export function TestimonialsSection({
                                         {/* Background Top-Left Large Quote Icon */}
                                         <div className="absolute -top-1 left-0 md:-top-2 md:-left-4 pointer-events-none z-0 opacity-35">
                                             <Image
-                                                src="/modules/home/testimonial/quote.png"
+                                                src="/modules/home/testimonial/quote.webp"
                                                 alt="Quote Icon"
                                                 width={120}
                                                 height={96}

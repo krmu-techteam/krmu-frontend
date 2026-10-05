@@ -12,7 +12,7 @@ export const HeroVirtualTour = () => {
             <div className="flex flex-col items-center transition-all duration-500">
                 <div className="relative w-[80px] sm:w-[120px] h-[60px] sm:h-[90px]">
                     <Image
-                        src="/modules/home/hero/virtual-tour.png"
+                        src="/modules/home/hero/virtual-tour.webp"
                         alt="360 Virtual Tour"
                         fill
                         sizes="(max-width: 768px) 80px, 120px"
