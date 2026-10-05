@@ -7,7 +7,6 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 import { STRAPI_URL } from "@/app/constant";
-import { resolveOgImage } from "@/lib/constants/ogImages";
 import {
     createBreadcrumbProgSchema,
     createProgFaqSchema,
@@ -43,8 +42,6 @@ export async function generateMetadata(): Promise<Metadata> {
     const canonical =
         seo?.canonicalUrl || "https://www.krmangalam.edu.in/admissions";
 
-    const ogImage = resolveOgImage(shareImageUrl, "admissions", title);
-
     return {
         title,
         description,
@@ -65,7 +62,16 @@ export async function generateMetadata(): Promise<Metadata> {
             description,
             url: canonical,
             siteName: "K.R. Mangalam University",
-            images: [ogImage],
+            images: shareImageUrl
+                ? [
+                      {
+                          url: shareImageUrl,
+                          width: 1200,
+                          height: 630,
+                          alt: title,
+                      },
+                  ]
+                : [],
             type: "website",
         },
 
@@ -74,7 +80,7 @@ export async function generateMetadata(): Promise<Metadata> {
             card: "summary_large_image",
             title,
             description,
-            images: [ogImage.url],
+            images: shareImageUrl ? [shareImageUrl] : [],
         },
     };
 }
