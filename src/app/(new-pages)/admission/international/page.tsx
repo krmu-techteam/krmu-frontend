@@ -40,7 +40,7 @@ const page = () => {
     const beginData = beginHubData;
     const worldFacilityData = WorldClassData;
     return (
-        <>
+        <div className="bg-white">
             <div className="overflow-hidden">
                 <HeroSection formId="6798d0b6e4d6bb9947d6aacc2d86256c" />
             </div>
@@ -68,7 +68,7 @@ const page = () => {
             />
             {/* <CTASection /> */}
             <ScrollToTop />
-        </>
+        </div>
     );
 };
 
