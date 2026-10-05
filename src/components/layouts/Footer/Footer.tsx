@@ -528,7 +528,7 @@ const Footer = async () => {
                                 >
                                     <div className="relative w-36 h-16">
                                         <Image
-                                            src="/modules/home/footer/virtual-tour.png"
+                                            src="/modules/home/footer/virtual-tour.webp"
                                             alt="360 Virtual Tour"
                                             fill
                                             sizes="144px"
@@ -667,7 +667,7 @@ const Footer = async () => {
                                 >
                                     <div className="relative w-36 h-16">
                                         <Image
-                                            src="/modules/home/footer/virtual-tour.png"
+                                            src="/modules/home/footer/virtual-tour.webp"
                                             alt="360 Virtual Tour"
                                             fill
                                             sizes="144px"
