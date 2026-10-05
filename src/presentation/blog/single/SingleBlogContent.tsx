@@ -173,7 +173,15 @@ ${newHeadings
 
         const tables = Array.from(doc.querySelectorAll("table"));
         tables.forEach((table) => {
-            table.className = "krmu-custom-blog-table";
+            const isCallout =
+                !!table.querySelector("td h3") ||
+                (table.querySelectorAll("tr").length === 1 &&
+                    table.querySelectorAll("td").length === 1 &&
+                    table.querySelectorAll("th").length === 0);
+
+            table.className = isCallout
+                ? "krmu-custom-blog-table krmu-blog-callout-box"
+                : "krmu-custom-blog-table";
 
             const cells = Array.from(table.querySelectorAll("th, td"));
             cells.forEach((cell) => {

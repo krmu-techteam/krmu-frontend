@@ -188,12 +188,8 @@ a.krmu-blog-cta-link:hover {
 
 /* Conclusion Card Styling */
 .krmu-blog-conclusion-card {
-    background: linear-gradient(
-        310.55deg,
-        #132737 72.13%,
-        rgba(225, 31, 35, 0.4) 96.47%
-    ) !important;
-    border: 1px solid #0a0a0a !important;
+    background: #132737 !important;
+    border: 1px solid #e11f23 !important;
     box-shadow: none !important;
     border-radius: 8px !important;
     padding: 0px 24px 16px 24px !important;
@@ -342,22 +338,76 @@ summary.krmu-blog-faq-summary * {
     max-width: 100% !important;
     border-collapse: separate !important;
     border-spacing: 0 !important;
-    border: 2px solid transparent !important;
-    background-image:
-        linear-gradient(#0e2233, #0e2233),
-        linear-gradient(
-            90deg,
-            rgba(225, 31, 35, 0.6) 0%,
-            rgb(19, 39, 55) 30%,
-            rgb(19, 39, 55) 70%,
-            rgba(225, 31, 35, 0.6) 100%
-        ) !important;
-    background-origin: border-box !important;
-    background-clip: padding-box, border-box !important;
+    border: 1px solid #e11f23 !important;
+    background: #0e2233 !important;
     border-radius: 8px !important;
     overflow: hidden !important;
-    margin: 8px 0 0px 0 !important;
+    margin: 16px 0 !important;
     text-align: left !important;
+}
+
+/* Callout box styling (e.g. definition/quote single-cell tables) */
+.krmu_single_blog table.krmu-blog-callout-box,
+.krmu-custom-blog-table.krmu-blog-callout-box,
+.krmu_single_blog table:has(td h3),
+.krmu-custom-blog-table:has(td h3) {
+    border: 1px solid #284b69 !important;
+    background: transparent !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    margin: 20px 0 !important;
+    font-size: 22px !important;
+}
+
+.krmu_single_blog table.krmu-blog-callout-box td,
+.krmu-custom-blog-table.krmu-blog-callout-box td,
+.krmu_single_blog td:has(h3),
+.krmu-custom-blog-table td:has(h3) {
+    text-align: center !important;
+    padding: 22px 28px !important;
+    border: none !important;
+    width: 100% !important;
+}
+
+.krmu_single_blog table.krmu-blog-callout-box h3,
+.krmu-custom-blog-table.krmu-blog-callout-box h3,
+.krmu_single_blog td h3,
+.krmu-custom-blog-table td h3 {
+    text-align: center !important;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    color: #ffffff !important;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    letter-spacing: normal !important;
+}
+
+.krmu_single_blog table.krmu-blog-callout-box h3 *,
+.krmu-custom-blog-table.krmu-blog-callout-box h3 *,
+.krmu_single_blog td h3 *,
+.krmu-custom-blog-table td h3 * {
+    font-weight: 500 !important;
+    text-align: center !important;
+}
+
+.krmu_single_blog table.krmu-blog-callout-box p,
+.krmu-custom-blog-table.krmu-blog-callout-box p,
+.krmu_single_blog table.krmu-blog-callout-box span,
+.krmu-custom-blog-table.krmu-blog-callout-box span,
+.krmu_single_blog table.krmu-blog-callout-box *,
+.krmu-custom-blog-table.krmu-blog-callout-box *,
+.krmu_single_blog td:has(h3) p,
+.krmu-custom-blog-table td:has(h3) p,
+.krmu_single_blog td:has(h3) span,
+.krmu-custom-blog-table td:has(h3) span,
+.krmu_single_blog td:has(h3) *,
+.krmu-custom-blog-table td:has(h3) * {
+    text-align: center !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    color: #cbd5e1 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .krmu_single_blog thead,
@@ -370,13 +420,7 @@ summary.krmu-blog-faq-summary * {
 .krmu_single_blog table > tbody > tr:first-child,
 .krmu-custom-blog-table > tr:first-child,
 .krmu-custom-blog-table > tbody > tr:first-child {
-    background: linear-gradient(
-        90deg,
-        rgba(225, 31, 35, 0.4) 0%,
-        rgb(19, 39, 55) 30%,
-        rgb(19, 39, 55) 70%,
-        rgba(225, 31, 35, 0.4) 100%
-    ) !important;
+    background: #132737 !important;
 }
 
 .krmu_single_blog th,
