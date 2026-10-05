@@ -16,9 +16,9 @@ export function ResearchSection() {
                     <div className="w-full lg:w-[58%] xl:w-[925px]">
                         <div className="relative w-full xl:w-[925px] rounded-[4px] overflow-hidden mb-8 md:mb-12 xl:mb-14">
                             <Image
-                                src="/images/home/research/research-girl.jpeg"
+                                src="/images/home/research/research-girl.webp"
                                 alt={resolveHomeResearchAlt(
-                                    "/images/home/research/research-girl.jpeg",
+                                    "/images/home/research/research-girl.webp",
                                     "Leading-edge research and innovation at K.R. Mangalam University"
                                 )}
                                 width={925}
