@@ -29,7 +29,7 @@ const CommitteeMemberCard = ({
                     //   (max-width: 1024px) 33vw,
                     //   20vw
                     // "
-                    className="object-contain object-bottom transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="object-contain object-bottom transition-transform duration-500 group-hover:scale-[1.02] h-56"
                 />
             </div>
 
@@ -38,7 +38,7 @@ const CommitteeMemberCard = ({
                 className={
                     compact
                         ? "px-3 py-2.5 sm:px-3 sm:py-3"
-                        : "px-4 py-3 sm:px-4 sm:py-4"
+                        : "px-4 py-3 sm:px-4 sm:py-4 h-[115px]"
                 }
             >
                 {/* Role */}
@@ -56,7 +56,7 @@ const CommitteeMemberCard = ({
 
                 {/* Name */}
                 <h3
-                    className={`mt-1 font-bold leading-[1.25] text-[#1d1d1d] ${
+                    className={`mt-1 font-bold leading-[1.25] text-[#1d1d1d] temp-class ${
                         compact
                             ? "text-[10px] sm:text-[11px]"
                             : "text-[13px] sm:text-[14px]"

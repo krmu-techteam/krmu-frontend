@@ -1,5 +1,16 @@
+"use client";
+
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
+
 import { committeeMembers } from "../constant";
 import CommitteeMemberCard from "./common/CommitteeMemberCard";
+import Autoplay from "embla-carousel-autoplay";
 
 const ConferenceCommittee = () => {
     return (
@@ -16,18 +27,41 @@ const ConferenceCommittee = () => {
                     </p>
                 </div>
 
-                {/* Cards */}
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-5 lg:gap-5">
-                    {committeeMembers.map((member) => (
-                        <CommitteeMemberCard
-                            key={member.name}
-                            image={member.image}
-                            role={member.role}
-                            name={member.name}
-                            designation={member.designation}
-                        />
-                    ))}
-                </div>
+                {/* Carousel */}
+                <Carousel
+                    opts={{
+                        align: "start",
+                        loop: true,
+                    }}
+                    plugins={[
+                        Autoplay({
+                            delay: 1500,
+                        }),
+                    ]}
+                    className="w-full"
+                >
+                    <CarouselContent className="-ml-4">
+                        {committeeMembers.map((member) => (
+                            <CarouselItem
+                                key={member.name}
+                                className="pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/5"
+                            >
+                                <CommitteeMemberCard
+                                    image={member.image}
+                                    role={member.role}
+                                    name={member.name}
+                                    designation={member.designation}
+                                />
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+
+                    {/* Navigation */}
+                    <div className="mt-6 flex items-center justify-end gap-2">
+                        <CarouselPrevious className="static translate-y-0" />
+                        <CarouselNext className="static translate-y-0" />
+                    </div>
+                </Carousel>
             </div>
         </section>
     );

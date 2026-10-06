@@ -24,7 +24,7 @@ export const networkLogos = [
         height: 150,
     },
     {
-        src: "https://krmangalam.edu.in/images/conferences/soad-conference/logos/dada.jpeg",
+        src: "https://www.krmangalam.edu.in/images/dada-lakshmi.png",
         alt: "Dada",
         width: 90,
         height: 100,
@@ -193,6 +193,24 @@ export const committeeMembers = [
         name: "Dr. Pradeep Kumar Varshney",
         designation: "Dean Research and Director-IQAC",
     },
+    {
+        image: "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/tanya-verma.webp",
+        role: "",
+        name: "Dr. Tanaya Verma",
+        designation: "Dean and Convenor",
+    },
+    {
+        image: "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/pankaj-dhayal.webp",
+        role: "",
+        name: "Ar. Pankaj Dhayal",
+        designation: "Associate Professor and Conference Co-Convenor",
+    },
+    {
+        image: "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/sukriti-setia.webp",
+        role: "",
+        name: "Ar. Sukriti Setia",
+        designation: "Assistant Professor and Conference Co-Convenor",
+    },
 ];
 
 export const advisoryBoardMembers = [
@@ -342,5 +360,17 @@ export const advisoryBoardMembers = [
         image: "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/rakesh.jpg",
         name: "Rakesh Sapra",
         designation: "Director, SACAP",
+    },
+    {
+        image: "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/ajay-kaushik.jpg",
+        name: "Dr. Ajay Kaushik",
+        designation:
+            "Associate Professor, Faculty of Planning & Architecture, DLC SUPVA, Rohtak",
+    },
+    {
+        image: "https://krmangalam.edu.in/images/conferences/soad-conference/past-advisory-board/dr-sima.jpg",
+        name: "Dr. Sima",
+        designation:
+            "Associate Professor, Faculty of Planning & Architecture, DLC SUPVA, Rohtak",
     },
 ];
