@@ -23,7 +23,7 @@ export const sdg7Data: SdgDetailPageData = {
             url: "/mou-on-affordable-and-clean-energy",
         },
         {
-            text: "KR Mangalam University Green Area",
+            text: "K.R. Mangalam University Green Area",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-7/KR-Mangalam-University-Green-Areas.pdf",
         },
         {

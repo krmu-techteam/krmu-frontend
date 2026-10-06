@@ -599,7 +599,7 @@ Workshop.​`,
         image: "https://www.krmangalam.edu.in/images/placements/trainers/rohit.jpeg",
         profileUrl: "#",
         description: `Rohit Agarwal is a Senior Aptitude Trainer and Team
-Lead – Aptitude at KR Mangalam University,
+Lead – Aptitude at K.R. Mangalam University,
 Gurugram, with 12+ years of experience in training
 students and professionals for placements and
 competitive examinations. He has trained 10,000+
@@ -706,7 +706,7 @@ Engineering.​​`,
         image: "https://www.krmangalam.edu.in/images/placements/trainers/charu-dudeja.jpg",
         profileUrl: "#",
         description: `Charu Dudeja is a dynamic Soft Skills Trainer at
-KR Mangalam University with 10+ years of
+K.R. Mangalam University with 10+ years of
 experience in training and student development.
 She has worked with various NGOs, professional
 institutions, and universities, trained 10,000+

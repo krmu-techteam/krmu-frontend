@@ -766,7 +766,7 @@ export const lifeInternationalAdmissionData: LifeInternationalAdmissionSection =
         description: "",
         image: {
             src: "/landingpage/common/collage.webp",
-            alt: "Life as a PhD Scholar at KR Mangalam",
+            alt: "Life as a PhD Scholar at K.R. Mangalam",
         },
     };
 

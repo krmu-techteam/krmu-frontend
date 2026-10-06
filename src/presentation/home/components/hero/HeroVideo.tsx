@@ -111,8 +111,8 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
                 muted
                 playsInline
                 preload="metadata"
-                title="KR Mangalam university video"
-                aria-label="KR Mangalam university video"
+                title="K.R. Mangalam university video"
+                aria-label="K.R. Mangalam university video"
                 className="absolute top-0 left-0 w-full h-full object-contain lg:object-cover z-0 will-change-transform"
             >
                 <source src={videoSrc} type="video/mp4" />
@@ -122,7 +122,7 @@ export const HeroVideo = ({ HeroSectionVideo }: { HeroSectionVideo?: any }) => {
                         type="video/mp4"
                     />
                 )}
-                Your browser does not support the video tag. KR Mangalam
+                Your browser does not support the video tag. K.R. Mangalam
                 university video
             </video>
 
