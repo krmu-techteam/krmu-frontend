@@ -29,7 +29,7 @@ export const policyOnDecentWorkAndEconomicGrowthData: PolicyPageData = {
         },
         {
             id: "policy-5",
-            title: "Anti Discrimination Policy of KR Mangalam University",
+            title: "Anti Discrimination Policy of K.R. Mangalam University",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/policy-on-decent-work-and-economic-growth/anti-discrimination-policy-of-kr-mangalam-university.pdf",
         },
         {

@@ -1,4 +1,3 @@
-import Script from "next/script";
 import { homeSchemaService } from "@/features/home";
 
 export function HomeSchemaScripts() {
@@ -11,23 +10,23 @@ export function HomeSchemaScripts() {
 
     return (
         <>
-            <Script
+            <script
                 id="website-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: websiteSchema }}
             />
-            <Script
+            <script
                 id="organization-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: organizationSchema }}
             />
-            <Script
-                id="collage-university-schema"
+            <script
+                id="college-university-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: collegeUniversitySchema }}
             />
             {videoSchema && (
-                <Script
+                <script
                     id="video-schema"
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: videoSchema }}

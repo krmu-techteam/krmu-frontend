@@ -40,7 +40,7 @@ domains.`,
         pointer: [
             `To establish a collborative relationship for enhancinf leadership capacities of students
 nd faculty`,
-            `To jointly organize high impact events like leasership talks, workshops, HR meets, FDP's.`,
+            `To jointly organize high impact events like leadership talks, workshops, HR meets, FDP's.`,
             `To activate students chapters through membership of the students to nuture students.`,
         ],
     },
@@ -61,7 +61,7 @@ technology-enabled engagement`,
         imgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/xebia_1_scaled_a3d0cd5d05.webp",
         heading: "Xebia",
         pointer: [
-            `Xebia and KR Managalam University collaborates to design and develop industry-
+            `Xebia and K.R. Managalam University collaborates to design and develop industry-
 pecific course content and modules in high-demand areas.`,
             `Launching B.Tech or certification programs with specializations in fields like Data Science
 & Machine Learning, Al, DevOps, Cloud Engineering, Full Stack Development, and
@@ -76,7 +76,7 @@ industry projects.`,
         pointer: [
             `To engage with KR Managalam University to bridge the industry-academia gap.`,
             `To make students are exposed to the latest software and products, will invite top
-faculties/industry experts for guest leactures.`,
+faculties/industry experts for guest lectures.`,
         ],
     },
     {

@@ -34,7 +34,7 @@ const SdgCertificateOverview: React.FC = () => {
                     challenges, and, as an establishment of higher education
                     institution, K.R. Mangalam University is committed to the
                     accomplishment of the target through effective teaching and
-                    collaborative learning. Cultivating the principle of ‘Lets
+                    collaborative learning. Cultivating the principle of Let’s
                     Rise Together, the initiatives of this establishment is
                     important to achieve the Sustainable Development Goals as
                     they function as incubators of recent concepts and solutions

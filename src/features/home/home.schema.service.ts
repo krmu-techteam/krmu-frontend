@@ -20,7 +20,7 @@ export class HomeSchemaService {
             name: "K.R. Mangalam University",
             alternateName: "KRMU",
             url: "https://www.krmangalam.edu.in",
-            searchPath: "https://www.krmangalam.edu.in/search?q=",
+            searchPath: "/search?q=",
         });
 
         const organizationSchema = createOrganizationSchema({

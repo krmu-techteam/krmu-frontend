@@ -2,8 +2,8 @@ import { HomeAltConfig } from "./types";
 
 export const homeAltConfig: HomeAltConfig = {
     hero: {
-        video: "KR Mangalam university video",
-        videoFallback: "KR Mangalam university video",
+        video: "K.R. Mangalam university video",
+        videoFallback: "K.R. Mangalam university video",
     },
 
     recruiters: {
@@ -211,8 +211,8 @@ export const homeAltConfig: HomeAltConfig = {
 
     urlMap: {
         // Hero
-        "krm_bg_hero_e316d4159a.mp4": "KR Mangalam university video",
-        "krm_bg_hero.mp4": "KR Mangalam university video",
+        "krm_bg_hero_e316d4159a.mp4": "K.R. Mangalam university video",
+        "krm_bg_hero.mp4": "K.R. Mangalam university video",
 
         // Recruiters
         "tata_d6d3fba827.webp": "Tata — KRMU recruiter logo",

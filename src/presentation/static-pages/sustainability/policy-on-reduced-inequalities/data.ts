@@ -9,7 +9,7 @@ export const policyOnReducedInequalitiesData: PolicyPageData = {
     policies: [
         {
             id: "policy-1",
-            title: "Anti Discrimination Policy of KR Mangalam University",
+            title: "Anti Discrimination Policy of K.R. Mangalam University",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/policy-on-reduced-inequalities/anti-discrimination-policy-of-kr-mangalam-university.pdf",
         },
         {

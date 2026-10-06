@@ -21,12 +21,14 @@ export async function generateMetadata(): Promise<Metadata> {
         ? `${STRAPI_URL}${seo?.shareImg?.url}`
         : undefined;
 
+    const defaultDesc =
+        "Get the latest edition of Reflections by K.R. Mangalam University with inspiring articles, student features, events, and campus experiences.";
+
     // ✅ Fallback if SEO is missing
     if (!seo) {
         return {
             title: "Reflections Magazine - K.R. Mangalam University",
-            description:
-                "Explore the latest editions of Reflections Magazine by K.R. Mangalam University.",
+            description: defaultDesc,
             alternates: {
                 canonical:
                     "https://www.krmangalam.edu.in/happenings/magazine-reflections",
@@ -38,9 +40,11 @@ export async function generateMetadata(): Promise<Metadata> {
         };
     }
 
+    const description = seo?.metaDescription || defaultDesc;
+
     return {
         title: seo?.title || "Reflections Magazine - K.R. Mangalam University",
-        description: seo?.metaDescription || "",
+        description,
         keywords: seo?.keyword || "",
         alternates: {
             canonical:
