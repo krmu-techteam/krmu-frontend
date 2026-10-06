@@ -56,7 +56,7 @@ const CommitteeMemberCard = ({
 
                 {/* Name */}
                 <h3
-                    className={`mt-1 font-bold leading-[1.25] text-[#1d1d1d] ${
+                    className={`mt-1 font-bold leading-[1.25] text-[#1d1d1d] temp-class ${
                         compact
                             ? "text-[10px] sm:text-[11px]"
                             : "text-[13px] sm:text-[14px]"
