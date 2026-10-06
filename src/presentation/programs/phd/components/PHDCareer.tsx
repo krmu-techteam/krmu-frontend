@@ -50,9 +50,27 @@ const PHDCareer = ({ careerOptions }: Props) => {
                     Career options
                 </h2>
 
-                {/* 5 CAREER CARDS GRID */}
+                {/* CAREER CARDS GRID */}
                 {pointers.length > 0 && (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-5">
+                    <div
+                        className={`grid gap-4 lg:gap-5 ${
+                            pointers.length === 1
+                                ? "grid-cols-1 max-w-md mx-auto"
+                                : pointers.length === 2
+                                  ? "grid-cols-1 sm:grid-cols-2 max-w-2xl mx-auto"
+                                  : pointers.length === 3
+                                    ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto"
+                                    : pointers.length === 4
+                                      ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto"
+                                      : pointers.length === 5
+                                        ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+                                        : pointers.length === 6
+                                          ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
+                                          : pointers.length % 3 === 0
+                                            ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
+                                            : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+                        }`}
+                    >
                         {pointers.map((item) => {
                             const formattedTitle = item.listtext
                                 ?.replace(/:\s*$/, "")
@@ -69,7 +87,7 @@ const PHDCareer = ({ careerOptions }: Props) => {
                                     <h3 className="font-bold text-[#14233D] text-[16px] leading-snug mb-3 break-words [overflow-wrap:anywhere] min-h-[24px] md:min-h-[48px]">
                                         {formattedTitle}
                                     </h3>
-                                    <p className="text-[#59616B] text-[14px] md:text-[13.5px]font-normal break-words">
+                                    <p className="text-[#59616B] text-[14px] md:text-[13.5px] font-normal break-words">
                                         {item.listlink}
                                     </p>
                                 </div>
@@ -88,31 +106,54 @@ const PHDCareer = ({ careerOptions }: Props) => {
                                 "What our Students says:"}
                         </h3>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {testimonials.map((item, idx) => (
-                                <div
-                                    key={item.id || idx}
-                                    className="bg-[#FFFCF6] border border-[#CCCCCC] p-5 sm:p-8"
-                                >
-                                    {/* Header: Avatar + Student Name (side-by-side on mobile, avatar on left of content block on sm+) */}
-                                    <div className="flex items-center sm:items-start gap-4 sm:gap-5">
-                                        <StudentAvatar index={idx} />
-                                        <div className="flex-1">
-                                            <h4 className="font-bold text-[#14233D] text-[16px] sm:text-[17px] sm:mb-2 leading-tight">
-                                                {item.countertext}
-                                            </h4>
-                                            {/* Paragraph on sm+ screens */}
-                                            <p className="hidden sm:block text-[#14233D] text-[13px] md:text-[14px] font-normal leading-relaxed">
-                                                {item.countercontent}
-                                            </p>
+                        <div
+                            className={`grid gap-6 ${
+                                testimonials.length === 1
+                                    ? "grid-cols-1 max-w-2xl mx-auto"
+                                    : testimonials.length === 2
+                                      ? "grid-cols-1 md:grid-cols-2"
+                                      : testimonials.length === 3
+                                        ? "grid-cols-1 md:grid-cols-3"
+                                        : testimonials.length === 4
+                                          ? "grid-cols-1 md:grid-cols-2"
+                                          : testimonials.length === 5
+                                            ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-6"
+                                            : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                            }`}
+                        >
+                            {testimonials.map((item, idx) => {
+                                const itemSpanClass =
+                                    testimonials.length === 5
+                                        ? idx < 3
+                                            ? "lg:col-span-2"
+                                            : "lg:col-span-3"
+                                        : "";
+
+                                return (
+                                    <div
+                                        key={item.id || idx}
+                                        className={`bg-[#FFFCF6] border border-[#CCCCCC] p-5 sm:p-8 ${itemSpanClass}`}
+                                    >
+                                        {/* Header: Avatar + Student Name (side-by-side on mobile, avatar on left of content block on sm+) */}
+                                        <div className="flex items-center sm:items-start gap-4 sm:gap-5">
+                                            <StudentAvatar index={idx} />
+                                            <div className="flex-1">
+                                                <h4 className="font-bold text-[#14233D] text-[16px] sm:text-[17px] sm:mb-2 leading-tight">
+                                                    {item.countertext}
+                                                </h4>
+                                                {/* Paragraph on sm+ screens */}
+                                                <p className="hidden sm:block text-[#14233D] text-[13px] md:text-[14px] font-normal leading-relaxed">
+                                                    {item.countercontent}
+                                                </p>
+                                            </div>
                                         </div>
+                                        {/* Paragraph on mobile screens (full-width below avatar and name) */}
+                                        <p className="sm:hidden text-[#14233D] text-[13.5px] font-normal leading-relaxed mt-3.5">
+                                            {item.countercontent}
+                                        </p>
                                     </div>
-                                    {/* Paragraph on mobile screens (full-width below avatar and name) */}
-                                    <p className="sm:hidden text-[#14233D] text-[13.5px] font-normal leading-relaxed mt-3.5">
-                                        {item.countercontent}
-                                    </p>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </>
                 )}
