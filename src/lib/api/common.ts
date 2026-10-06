@@ -688,17 +688,40 @@ export const createWebsiteSchema = ({
     name,
     alternateName,
     url,
-    searchPath,
+    searchPath = "/search?q=",
 }: WebsiteSchemaProps) => {
+    const cleanUrl = url.replace(/\/$/, "");
+    let targetUrl: string;
+
+    if (!searchPath) {
+        targetUrl = `${cleanUrl}/search?q={search_term_string}`;
+    } else if (
+        searchPath.startsWith("http://") ||
+        searchPath.startsWith("https://")
+    ) {
+        targetUrl = searchPath.includes("{search_term_string}")
+            ? searchPath
+            : `${searchPath}{search_term_string}`;
+    } else {
+        const cleanPath = searchPath.startsWith("/")
+            ? searchPath
+            : `/${searchPath}`;
+        targetUrl = `${cleanUrl}${cleanPath}${
+            cleanPath.includes("{search_term_string}")
+                ? ""
+                : "{search_term_string}"
+        }`;
+    }
+
     const schema = {
         "@context": "https://schema.org",
-        "@type": "Website",
+        "@type": "WebSite",
         name: name,
-        alternateName: alternateName,
+        ...(alternateName && { alternateName }),
         url: url,
         potentialAction: {
             "@type": "SearchAction",
-            target: `${url.replace(/\/$/, "")}${searchPath}{search_term_string}`,
+            target: targetUrl,
             "query-input": "required name=search_term_string",
         },
     };
