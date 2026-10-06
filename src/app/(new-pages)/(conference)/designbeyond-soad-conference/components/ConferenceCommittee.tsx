@@ -4,6 +4,8 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
 } from "@/components/ui/carousel";
 
 import { committeeMembers } from "../constant";
@@ -55,10 +57,10 @@ const ConferenceCommittee = () => {
                     </CarouselContent>
 
                     {/* Navigation */}
-                    {/* <div className="mt-6 flex items-center justify-end gap-2">
+                    <div className="mt-6 flex items-center justify-end gap-2">
                         <CarouselPrevious className="static translate-y-0" />
                         <CarouselNext className="static translate-y-0" />
-                    </div> */}
+                    </div>
                 </Carousel>
             </div>
         </section>
