@@ -29,7 +29,10 @@ const layout = async ({ children }: Props) => {
     return (
         <>
             <HeroSection categories={categories} />
-            <section className="py-8 sm:py-[40px]">
+            <section
+                id="blog-listing"
+                className="py-8 sm:py-[40px] scroll-mt-24"
+            >
                 <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 flex flex-col lg:flex-row items-start justify-between gap-6 xl:gap-8">
                     {/* MAIN BLOG CONTENT */}
                     <main className="w-full lg:flex-1 order-1">{children}</main>

@@ -1,88 +1,127 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Props = {
-  currentPage: number;
-  totalPages: number;
-  pageNumbers: (number | string)[];
+    currentPage: number;
+    totalPages: number;
+    pageNumbers: (number | string)[];
 };
 
 export default function Pagination({
-  currentPage,
-  totalPages,
-  pageNumbers,
+    currentPage,
+    totalPages,
+    pageNumbers,
 }: Props) {
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
-  const searchParams = useSearchParams();
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
 
-  const handlePageChange = (page: number) => {
-    if (loading || page < 1 || page > totalPages) return;
+    const createPageURL = (pageNumber: number | string) => {
+        const params = new URLSearchParams(searchParams.toString());
+        params.set("page", pageNumber.toString());
+        return `${pathname}?${params.toString()}`;
+    };
 
-    setLoading(true);
-    router.push(`?page=${page}`);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+    const scrollToBlogTop = () => {
+        const el = document.getElementById("blog-listing");
+        if (el) {
+            const top = el.getBoundingClientRect().top + window.scrollY - 80;
+            window.scrollTo({ top, behavior: "smooth" });
+        } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    };
 
-  useEffect(() => {
-    setLoading(false);
-  }, [searchParams]);
+    if (totalPages <= 1) return null;
 
-  return (
-    <div
-      className={`flex items-center justify-center gap-3 sm:gap-4 my-10 sm:my-10 font-poppins select-none ${
-        loading ? "opacity-75" : ""
-      }`}
-    >
-      {/* Prev Button */}
-      <button
-        disabled={currentPage <= 1 || loading}
-        onClick={() => handlePageChange(currentPage - 1)}
-        className="w-10 h-10 bg-[#15293B] rounded-[4px] border border-[#1B3349] hover:bg-[#14324f] hover:border-[#14324f] transition-all flex items-center justify-center text-white disabled:opacity-35 disabled:cursor-not-allowed"
-        aria-label="Previous Page"
-      >
-        <ChevronLeft className="w-5 h-5 text-white" />
-      </button>
+    return (
+        <div className="flex items-center justify-center gap-3 sm:gap-4 my-10 sm:my-10 font-poppins select-none">
+            {/* Prev Button */}
+            {currentPage <= 1 ? (
+                <span
+                    aria-disabled="true"
+                    className="w-10 h-10 bg-[#15293B] rounded-[4px] border border-[#1B3349] flex items-center justify-center text-white opacity-35 cursor-not-allowed"
+                    aria-label="Previous Page"
+                >
+                    <ChevronLeft className="w-5 h-5 text-white" />
+                </span>
+            ) : (
+                <Link
+                    href={createPageURL(currentPage - 1)}
+                    onClick={scrollToBlogTop}
+                    scroll={false}
+                    className="w-10 h-10 bg-[#15293B] rounded-[4px] border border-[#1B3349] hover:bg-[#14324f] hover:border-[#14324f] transition-all flex items-center justify-center text-white shadow-sm"
+                    aria-label="Previous Page"
+                >
+                    <ChevronLeft className="w-5 h-5 text-white" />
+                </Link>
+            )}
 
-      {/* Page Numbers List */}
-      <div className="flex items-center gap-1.5 sm:gap-2">
-        {pageNumbers.map((num, idx) =>
-          num === "…" || num === "..." ? (
-            <span
-              key={idx}
-              className="text-white/70 font-poppins text-sm px-2 tracking-widest"
-            >
-              . . .
-            </span>
-          ) : (
-            <button
-              key={idx}
-              disabled={loading}
-              onClick={() => handlePageChange(Number(num))}
-              className={
-                Number(num) === currentPage
-                  ? "w-8 h-8 rounded-full bg-[#061623] text-white font-medium text-sm flex items-center justify-center shadow-inner"
-                  : "text-white/80 hover:text-white font-poppins text-sm px-2.5 py-1 font-normal transition-colors cursor-pointer"
-              }
-            >
-              {num}
-            </button>
-          ),
-        )}
-      </div>
+            {/* Page Numbers List */}
+            <div className="flex items-center gap-1.5 sm:gap-2">
+                {pageNumbers.map((num, idx) => {
+                    if (num === "…" || num === "...") {
+                        return (
+                            <span
+                                key={`ellipsis-${idx}`}
+                                className="text-white/70 font-poppins text-sm px-2 tracking-widest"
+                            >
+                                . . .
+                            </span>
+                        );
+                    }
 
-      {/* Next Button */}
-      <button
-        disabled={currentPage >= totalPages || loading}
-        onClick={() => handlePageChange(currentPage + 1)}
-        className="w-10 h-10 rounded-[4px] bg-[#15293B] border border-[#1b3854] hover:bg-[#14324f] transition-all flex items-center justify-center text-white disabled:opacity-35 disabled:cursor-not-allowed shadow-sm"
-        aria-label="Next Page"
-      >
-        <ChevronRight className="w-5 h-5 text-white" />
-      </button>
-    </div>
-  );
+                    const pageNum = Number(num);
+                    const isActive = pageNum === currentPage;
+
+                    if (isActive) {
+                        return (
+                            <span
+                                key={`page-${pageNum}`}
+                                aria-current="page"
+                                className="w-8 h-8 rounded-full bg-[#061623] text-white font-medium text-sm flex items-center justify-center shadow-inner cursor-default"
+                            >
+                                {pageNum}
+                            </span>
+                        );
+                    }
+
+                    return (
+                        <Link
+                            key={`page-${pageNum}`}
+                            href={createPageURL(pageNum)}
+                            onClick={scrollToBlogTop}
+                            scroll={false}
+                            className="text-white/80 hover:text-white font-poppins text-sm px-2.5 py-1 font-normal transition-colors cursor-pointer"
+                        >
+                            {pageNum}
+                        </Link>
+                    );
+                })}
+            </div>
+
+            {/* Next Button */}
+            {currentPage >= totalPages ? (
+                <span
+                    aria-disabled="true"
+                    className="w-10 h-10 rounded-[4px] bg-[#15293B] border border-[#1b3854] flex items-center justify-center text-white opacity-35 cursor-not-allowed shadow-sm"
+                    aria-label="Next Page"
+                >
+                    <ChevronRight className="w-5 h-5 text-white" />
+                </span>
+            ) : (
+                <Link
+                    href={createPageURL(currentPage + 1)}
+                    onClick={scrollToBlogTop}
+                    scroll={false}
+                    className="w-10 h-10 rounded-[4px] bg-[#15293B] border border-[#1b3854] hover:bg-[#14324f] transition-all flex items-center justify-center text-white shadow-sm"
+                    aria-label="Next Page"
+                >
+                    <ChevronRight className="w-5 h-5 text-white" />
+                </Link>
+            )}
+        </div>
+    );
 }
