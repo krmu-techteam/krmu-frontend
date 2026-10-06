@@ -437,6 +437,176 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             changeFrequency: "monthly",
             priority: 0.7,
         },
+        {
+            url: `${baseUrl}/about-us`,
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/international-admission`,
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/cuet-counselling`,
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/careers`,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/industrial-design`,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/placements`,
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/placements/records`,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/placements/students`,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/placements/trainers`,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/placements/recruiters`,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/admission-tips-and-process`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/agriculture-and-sustainability`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/arts-and-culture`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/campus-life-and-activities`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/career-guidance`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/design-and-architecture`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/education`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/engineering-innovations`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/faculty`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/general`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/hotel-management-and-catering-technology`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/journalism-and-mass-communication`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/law-and-legal-studies`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/liberal-arts`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/management-and-commerce`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/medical-and-allied-science`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/physiotherapy-rehabilitation`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/school-of-management-and-commerce`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/student-life`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/blog/all-categories/travel-and-tourism`,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/centre-of-excellence-artificial-intelligence`,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/centre-of-excellence-in-robotics-and-automation`,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/international-conferences`,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/international-relations`,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
         ...blogUrls,
         ...schoolUrls,
         ...programmeUrls,
