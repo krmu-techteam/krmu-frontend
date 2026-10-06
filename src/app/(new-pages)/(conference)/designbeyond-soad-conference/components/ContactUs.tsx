@@ -63,8 +63,9 @@ const ContactUs = () => {
                     {/* School */}
                     <div className="md:text-center">
                         <a
-                            href="#"
+                            href="https://www.krmangalam.edu.in/school-of-architecture-design"
                             className="font-serif text-[12px] text-[#38342f] underline underline-offset-2 transition-colors hover:text-[#b08233] sm:text-[13px]"
+                            target="_blank"
                         >
                             School of Architecture and Design
                         </a>

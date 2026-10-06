@@ -1,3 +1,4 @@
+import AcademicCollaborators from "./components/AcademicCollaborators";
 import CallForCollaboration from "./components/CallForCollaboration";
 import CampusVenueGallery from "./components/CampusVenueGallery";
 import ConferenceCommittee from "./components/ConferenceCommittee";
@@ -19,6 +20,7 @@ const page = () => {
                 <HeroSection />
                 <ConferenceMenus />
                 <DesignBeyondVision />
+                <AcademicCollaborators />
                 <OurNetwork />
                 <CampusVenueGallery />
                 <ThematicTracks />

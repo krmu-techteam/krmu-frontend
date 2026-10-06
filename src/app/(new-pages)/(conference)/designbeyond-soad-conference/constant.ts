@@ -193,24 +193,24 @@ export const committeeMembers = [
         name: "Dr. Pradeep Kumar Varshney",
         designation: "Dean Research and Director-IQAC",
     },
-    {
-        image: "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/tanya-verma.webp",
-        role: "",
-        name: "Dr. Tanaya Verma",
-        designation: "Dean and Convenor",
-    },
-    {
-        image: "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/pankaj-dhayal.webp",
-        role: "",
-        name: "Ar. Pankaj Dhayal",
-        designation: "Associate Professor and Conference Co-Convenor",
-    },
-    {
-        image: "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/sukriti-setia.webp",
-        role: "",
-        name: "Ar. Sukriti Setia",
-        designation: "Assistant Professor and Conference Co-Convenor",
-    },
+    // {
+    //     image: "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/tanya-verma.webp",
+    //     role: "",
+    //     name: "Dr. Tanaya Verma",
+    //     designation: "Dean and Convenor",
+    // },
+    // {
+    //     image: "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/pankaj-dhayal.webp",
+    //     role: "",
+    //     name: "Ar. Pankaj Dhayal",
+    //     designation: "Associate Professor and Conference Co-Convenor",
+    // },
+    // {
+    //     image: "https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/sukriti-setia.webp",
+    //     role: "",
+    //     name: "Ar. Sukriti Setia",
+    //     designation: "Assistant Professor and Conference Co-Convenor",
+    // },
 ];
 
 export const advisoryBoardMembers = [
