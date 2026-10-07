@@ -10,38 +10,7 @@ type Props = {
     featuredDate?: string;
     featuredImage?: string;
     formId?: string;
-    categories?: CategoryItem[];
 };
-
-const DEFAULT_CATEGORIES: CategoryItem[] = [
-    { name: "Admission Tips & Process", slug: "admission-tips-process" },
-    {
-        name: "Agriculture & Sustainability",
-        slug: "agriculture-sustainability",
-    },
-    { name: "Arts & Culture", slug: "arts-culture" },
-    { name: "Campus Life and Activities", slug: "campus-life-activities" },
-    { name: "Career Guidance", slug: "career-guidance" },
-    { name: "Design and Architecture", slug: "design-architecture" },
-    { name: "Faculty", slug: "faculty" },
-    {
-        name: "Hotel Management and Catering Technology",
-        slug: "hotel-management",
-    },
-    {
-        name: "Journalism and Mass Communication",
-        slug: "journalism-mass-communication",
-    },
-    { name: "Law and Legal Studies", slug: "law-legal-studies" },
-    { name: "Campus Life and Activities", slug: "campus-life-and-activities" },
-    { name: "Liberal Arts", slug: "liberal-arts" },
-    { name: "Management and commerce", slug: "management-commerce" },
-    {
-        name: "Physiotherapy & Rehabilitation",
-        slug: "physiotherapy-rehabilitation",
-    },
-    { name: "Student Life", slug: "student-life" },
-];
 
 const HeroSection = ({
     catName,
@@ -49,11 +18,7 @@ const HeroSection = ({
     featuredDate = "15 July 2026",
     featuredImage = "/images/blog/hero/hero-2.webp",
     formId = "0d2d6e28c86e4213b353bfe132035965",
-    categories,
 }: Props) => {
-    const categoryList =
-        categories && categories.length > 0 ? categories : DEFAULT_CATEGORIES;
-
     return (
         <section className="pt-[110px] md:pt-[155px] pb-6 md:pb-8">
             <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 relative z-10 flex flex-col gap-6 md:gap-8">
