@@ -23,12 +23,12 @@ export const networkLogos = [
         width: 300,
         height: 150,
     },
-    {
-        src: "https://www.krmangalam.edu.in/images/dada-lakshmi.png",
-        alt: "Dada",
-        width: 90,
-        height: 100,
-    },
+    // {
+    //     src: "https://www.krmangalam.edu.in/images/dada-lakshmi.png",
+    //     alt: "Dada",
+    //     width: 90,
+    //     height: 100,
+    // },
     {
         src: "https://krmangalam.edu.in/images/conferences/soad-conference/logos/iiid.png",
         alt: "Indian Institute of Interior Designers",

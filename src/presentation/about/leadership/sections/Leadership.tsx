@@ -63,22 +63,40 @@ export const Leaderships = ({ data }: Props) => {
             </div>
 
             {/* ================= MAIN CONTENT SECTION ================= */}
-            <section className="py-12 md:py-16 xl:py-20 px-4 sm:px-6 md:px-8 xl:px-16 max-w-[1530px] mx-auto">
+            <section className="py-12 md:py-16 xl:py-20 px-4 sm:px-6 md:px-8 max-w-[1440px] mx-auto">
                 {/* Section Heading */}
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-normal text-center text-white mb-12 md:mb-16 tracking-wide">
                     Leadership
                 </h1>
 
-                {/* Grid of Leader Cards (5 columns) */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-12 gap-x-6 justify-items-center max-w-[1400px] mx-auto">
-                    {data.map((leader) => (
-                        <LeaderCard
-                            key={leader.id}
-                            leader={leader}
-                            isActive={selectedLeader?.id === leader.id}
-                            onClick={() => setSelectedLeader(leader)}
-                        />
-                    ))}
+                {/* Grid of Leader Cards: Top Row 5 Cards, Bottom Row 6 Cards */}
+                <div className="space-y-12">
+                    {/* Top Row: 5 Cards */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-12 gap-x-4 lg:gap-x-6 justify-items-center max-w-[1440px] mx-auto">
+                        {data.slice(0, 5).map((leader) => (
+                            <LeaderCard
+                                key={leader.id}
+                                leader={leader}
+                                isActive={selectedLeader?.id === leader.id}
+                                onClick={() => setSelectedLeader(leader)}
+                            />
+                        ))}
+                    </div>
+
+                    {/* Bottom Row: 6 Cards (Small / Compact) */}
+                    {data.length > 5 && (
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-10 gap-x-4 lg:gap-x-6 justify-items-center max-w-[1440px] mx-auto">
+                            {data.slice(5).map((leader) => (
+                                <LeaderCard
+                                    key={leader.id}
+                                    leader={leader}
+                                    isCompact={true}
+                                    isActive={selectedLeader?.id === leader.id}
+                                    onClick={() => setSelectedLeader(leader)}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
             </section>
 

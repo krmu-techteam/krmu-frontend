@@ -11,7 +11,7 @@ const ConferenceCommittee = () => {
                         Conference Committee
                     </h2>
 
-                    <p className="mt-2 font-serif text-sm text-[#6f6a63] sm:text-base">
+                    <p className="mt-2 font-serif text-center text-sm text-[#6f6a63] sm:text-base">
                         Patrons
                     </p>
                 </div>
@@ -32,36 +32,42 @@ const ConferenceCommittee = () => {
             <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[88px]">
                 {/* Heading */}
                 <div className="mt-7 sm:mt-8 mb-4">
-                    <p className="mt-2 font-serif text-sm text-[#6f6a63] sm:text-base">
+                    <p className="mt-2 text-center font-serif text-sm text-[#6f6a63] sm:text-base">
                         Convenor
                     </p>
                 </div>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-5 lg:gap-5">
-                    <CommitteeMemberCard
-                        image="https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/tanya-verma.webp"
-                        name="Dr. Tanaya Verma"
-                        designation="Dean and Convenor"
-                    />
+                <div className="flex justify-center">
+                    <div className="w-full max-w-[240px]">
+                        <CommitteeMemberCard
+                            image="https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/tanya-verma.webp"
+                            name="Dr. Tanaya Verma"
+                            designation="Dean and Convenor"
+                        />
+                    </div>
                 </div>
             </div>
             <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[88px]">
                 {/* Heading */}
                 <div className="mt-7 sm:mt-8 mb-4">
-                    <p className="mt-2 font-serif text-sm text-[#6f6a63] sm:text-base">
+                    <p className="mt-2 text-center font-serif text-sm text-[#6f6a63] sm:text-base">
                         Co-Convenor
                     </p>
                 </div>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-5 lg:gap-5">
-                    <CommitteeMemberCard
-                        image="https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/pankaj-dhayal.webp"
-                        name="Ar. Pankaj Dhayal"
-                        designation="Associate Professor and Conference Co-Convenor"
-                    />
-                    <CommitteeMemberCard
-                        image="https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/sukriti-setia.webp"
-                        name="Ar. Sukriti Setia"
-                        designation="Assistant Professor and Conference Co-Convenor"
-                    />
+                <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
+                    <div className="w-full max-w-[240px]">
+                        <CommitteeMemberCard
+                            image="https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/pankaj-dhayal.webp"
+                            name="Ar. Pankaj Dhayal"
+                            designation="Associate Professor and Conference Co-Convenor"
+                        />
+                    </div>
+                    <div className="w-full max-w-[240px]">
+                        <CommitteeMemberCard
+                            image="https://www.krmangalam.edu.in/images/conferences/soad-conference/conference-committee/sukriti-setia.webp"
+                            name="Ar. Sukriti Setia"
+                            designation="Assistant Professor and Conference Co-Convenor"
+                        />
+                    </div>
                 </div>
             </div>
         </section>

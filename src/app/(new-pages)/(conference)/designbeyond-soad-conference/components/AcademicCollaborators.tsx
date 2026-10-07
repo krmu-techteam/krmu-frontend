@@ -6,11 +6,11 @@ const AcademicCollaborators = () => {
                     Current Academic Collaborators
                 </h2>
 
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-7">
                     <img
                         src="https://www.krmangalam.edu.in/images/conferences/soad-conference/dada-lakshmi.png"
                         alt="Dada Lakhmi Chand State University of Performing and Visual Arts"
-                        className="mb-5 h-auto w-[220px] sm:w-[250px]"
+                        className="h-auto w-[130px] sm:w-[150px] shrink-0 object-contain"
                     />
 
                     <p className="max-w-[700px] text-[15px] leading-6 text-black sm:text-base">
