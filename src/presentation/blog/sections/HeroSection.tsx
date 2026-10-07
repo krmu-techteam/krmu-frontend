@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import NoPaperFormsWidget from "../components/NoPaperFormsWidget";
-import { SocialShareBar, CategoryPills } from "@/presentation/blog";
-import { CategoryItem } from "@/presentation/blog/components/CategoryPills";
+import { SocialShareBar } from "@/presentation/blog";
 
 type Props = {
     catName?: string;
@@ -164,14 +163,6 @@ const HeroSection = ({
                             </div>
                         </div>
                     </div>
-                </div>
-
-                {/* Categories Section directly below Hero grid */}
-                <div className="w-full">
-                    <CategoryPills
-                        categories={categoryList}
-                        title="Categories"
-                    />
                 </div>
             </div>
         </section>

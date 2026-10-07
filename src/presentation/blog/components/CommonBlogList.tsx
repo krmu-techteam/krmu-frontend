@@ -4,13 +4,17 @@ import { MainBlogs } from "@/lib/types/blogs/main-blogs";
 
 type Props = {
     currentPage: number;
+    blogsPerPage?: number;
     slug?: string;
     mainBlogClass: string;
 };
 
-const CommonBlogList = async ({ currentPage, slug, mainBlogClass }: Props) => {
-    const blogsPerPage = 12;
-
+const CommonBlogList = async ({
+    currentPage,
+    blogsPerPage = 12,
+    slug,
+    mainBlogClass,
+}: Props) => {
     const { blogs } = await getBlogService().getAllBlogsByPerPageOrCategorySlug(
         blogsPerPage,
         currentPage,

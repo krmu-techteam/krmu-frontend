@@ -1,11 +1,12 @@
 import { getBlogService } from "@/features/blog";
 import Pagination from "./Pagination";
+import BlogListingInfoBar from "./BlogListingInfoBar";
 import { Suspense } from "react";
 import { BlogCardSkeleton } from "@/app/(main-website)/components/Skeleton/BlogCardSkeleton";
 import CommonBlogList from "./CommonBlogList";
 
 type Props = {
-    searchParams: Promise<{ page?: string }>;
+    searchParams: Promise<{ page?: string; per_page?: string }>;
     slug?: string;
     mainBlogClass: string;
 };
@@ -17,10 +18,10 @@ const CommonBlogLayout = async ({
 }: Props) => {
     const resolvedSearchParams = await searchParams;
     const currentPage = Number(resolvedSearchParams?.page) || 1;
-    const blogsPerPage = 12;
+    const blogsPerPage = Number(resolvedSearchParams?.per_page) || 12;
 
     // ⭐ Fetch only pagination meta here
-    const { totalPages } =
+    const { totalPages, totalBlogs } =
         await getBlogService().getAllBlogsByPerPageOrCategorySlug(
             blogsPerPage,
             currentPage,
@@ -65,10 +66,20 @@ const CommonBlogLayout = async ({
     const pageNumbers = getPageNumbers(totalPages, currentPage);
 
     return (
-        <>
+        <div className="flex flex-col gap-5">
+            {/* Blog Count & Page Info Bar with Select Input */}
+            <Suspense fallback={null}>
+                <BlogListingInfoBar
+                    totalBlogs={totalBlogs}
+                    totalPages={totalPages}
+                    currentPage={currentPage}
+                    blogsPerPage={blogsPerPage}
+                />
+            </Suspense>
+
             {/* ⭐ Suspense handles skeleton on pagination */}
             <Suspense
-                key={currentPage}
+                key={`${currentPage}-${blogsPerPage}`}
                 fallback={
                     <div className={mainBlogClass}>
                         {Array.from({ length: 9 }).map((_, i) => (
@@ -79,18 +90,21 @@ const CommonBlogLayout = async ({
             >
                 <CommonBlogList
                     currentPage={currentPage}
+                    blogsPerPage={blogsPerPage}
                     slug={slug}
                     mainBlogClass={mainBlogClass}
                 />
             </Suspense>
 
             {/* Pagination */}
-            <Pagination
-                currentPage={currentPage}
-                totalPages={totalPages}
-                pageNumbers={pageNumbers}
-            />
-        </>
+            <Suspense fallback={null}>
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    pageNumbers={pageNumbers}
+                />
+            </Suspense>
+        </div>
     );
 };
 

@@ -128,7 +128,49 @@ const nextConfig: NextConfig = {
                 ],
             },
             {
-                source: "/((?!api|_next/static|_next/image|.*\\.(?:webp|avif|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|mp4|webm)).*)",
+                source: "/blog",
+                headers: [
+                    {
+                        key: "Cache-Control",
+                        value: "public, max-age=0, must-revalidate",
+                    },
+                    {
+                        key: "CDN-Cache-Control",
+                        value: "no-store",
+                    },
+                    {
+                        key: "Cloudflare-CDN-Cache-Control",
+                        value: "no-store",
+                    },
+                    {
+                        key: "Netlify-Vary",
+                        value: "query",
+                    },
+                ],
+            },
+            {
+                source: "/blog/all-categories/:path*",
+                headers: [
+                    {
+                        key: "Cache-Control",
+                        value: "public, max-age=0, must-revalidate",
+                    },
+                    {
+                        key: "CDN-Cache-Control",
+                        value: "no-store",
+                    },
+                    {
+                        key: "Cloudflare-CDN-Cache-Control",
+                        value: "no-store",
+                    },
+                    {
+                        key: "Netlify-Vary",
+                        value: "query",
+                    },
+                ],
+            },
+            {
+                source: "/((?!api|blog|_next/static|_next/image|.*\\.(?:webp|avif|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|mp4|webm)).*)",
                 headers: [
                     {
                         key: "Cache-Control",

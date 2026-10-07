@@ -4,6 +4,8 @@ import { getBlogService } from "@/features/blog";
 
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 type Props = {
     params: Promise<{ slug: string }>;
     searchParams: Promise<{ page?: string }>;

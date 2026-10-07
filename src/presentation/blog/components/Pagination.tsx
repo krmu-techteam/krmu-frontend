@@ -20,8 +20,13 @@ export default function Pagination({
 
     const createPageURL = (pageNumber: number | string) => {
         const params = new URLSearchParams(searchParams.toString());
-        params.set("page", pageNumber.toString());
-        return `${pathname}?${params.toString()}`;
+        if (Number(pageNumber) <= 1) {
+            params.delete("page");
+        } else {
+            params.set("page", pageNumber.toString());
+        }
+        const queryString = params.toString();
+        return queryString ? `${pathname}?${queryString}` : pathname;
     };
 
     const scrollToBlogTop = () => {
@@ -52,6 +57,7 @@ export default function Pagination({
                     href={createPageURL(currentPage - 1)}
                     onClick={scrollToBlogTop}
                     scroll={false}
+                    prefetch={false}
                     className="w-10 h-10 bg-[#15293B] rounded-[4px] border border-[#1B3349] hover:bg-[#14324f] hover:border-[#14324f] transition-all flex items-center justify-center text-white shadow-sm"
                     aria-label="Previous Page"
                 >
@@ -94,6 +100,7 @@ export default function Pagination({
                             href={createPageURL(pageNum)}
                             onClick={scrollToBlogTop}
                             scroll={false}
+                            prefetch={false}
                             className="text-white/80 hover:text-white font-poppins text-sm px-2.5 py-1 font-normal transition-colors cursor-pointer"
                         >
                             {pageNum}
@@ -116,6 +123,7 @@ export default function Pagination({
                     href={createPageURL(currentPage + 1)}
                     onClick={scrollToBlogTop}
                     scroll={false}
+                    prefetch={false}
                     className="w-10 h-10 rounded-[4px] bg-[#15293B] border border-[#1b3854] hover:bg-[#14324f] transition-all flex items-center justify-center text-white shadow-sm"
                     aria-label="Next Page"
                 >

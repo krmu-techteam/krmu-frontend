@@ -3,6 +3,7 @@ import {
     HeroSection,
     CommonBlogRightSidebar,
     MostPopularBlogsSection,
+    CategoryPills,
 } from "@/presentation/blog";
 import { getBlogService } from "@/features/blog";
 
@@ -28,14 +29,17 @@ const layout = async ({ children }: Props) => {
 
     return (
         <>
-            <HeroSection categories={categories} />
-            <section
-                id="blog-listing"
-                className="py-8 sm:py-[40px] scroll-mt-24"
-            >
+            <HeroSection />
+            <section id="blog-listing" className="py-4 sm:py-6 scroll-mt-24">
                 <div className="max-w-[1530px] mx-auto w-full px-6 md:px-8 flex flex-col lg:flex-row items-start justify-between gap-6 xl:gap-8">
                     {/* MAIN BLOG CONTENT */}
-                    <main className="w-full lg:flex-1 order-1">{children}</main>
+                    <main className="w-full lg:flex-1 order-1 flex flex-col gap-6">
+                        <CategoryPills
+                            categories={categories}
+                            title="Categories"
+                        />
+                        {children}
+                    </main>
 
                     {/* RIGHT SIDEBAR */}
                     <aside className="w-full lg:w-[330px] xl:w-[350px] flex-shrink-0 order-2 h-fit">

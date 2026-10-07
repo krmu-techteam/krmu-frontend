@@ -78,7 +78,7 @@ class BlogRepository {
         num_of_blogs: number = 6,
         page: number = 1,
         categorySlug?: string
-    ): Promise<{ blogs: MainBlogs[]; totalPages: number }> {
+    ): Promise<{ blogs: MainBlogs[]; totalPages: number; totalBlogs: number }> {
         try {
             const params = new URLSearchParams({
                 per_page: String(num_of_blogs),
@@ -101,7 +101,8 @@ class BlogRepository {
                     if (cats?.length) categoryId = cats[0].id;
                 }
 
-                if (!categoryId) return { blogs: [], totalPages: 0 };
+                if (!categoryId)
+                    return { blogs: [], totalPages: 0, totalBlogs: 0 };
             }
 
             if (categoryId) params.append("categories", String(categoryId));
@@ -113,15 +114,17 @@ class BlogRepository {
             if (!res.ok) throw new Error("Failed to fetch blogs");
 
             const totalPages = Number(res.headers.get("X-WP-TotalPages")) || 1;
+            const totalBlogs = Number(res.headers.get("X-WP-Total")) || 0;
             const rawBlogs = await res.json();
 
             return {
                 blogs: BlogMapper.toMainBlogs(rawBlogs),
                 totalPages,
+                totalBlogs,
             };
         } catch (error) {
             console.error("Blog fetch error:", error);
-            return { blogs: [], totalPages: 0 };
+            return { blogs: [], totalPages: 0, totalBlogs: 0 };
         }
     }
 
@@ -304,7 +307,7 @@ export interface IBlogService {
         num_of_blogs?: number,
         page?: number,
         categorySlug?: string
-    ): Promise<{ blogs: MainBlogs[]; totalPages: number }>;
+    ): Promise<{ blogs: MainBlogs[]; totalPages: number; totalBlogs: number }>;
     getRecentPosts(): Promise<MainBlogs[]>;
     getSingleBlogDataBySlug(slug: string): Promise<BlogPostContent[]>;
     getAllBlogCategories(): Promise<AllBlogCategories[]>;
@@ -337,7 +340,7 @@ class BlogService implements IBlogService {
         num_of_blogs: number = 6,
         page: number = 1,
         categorySlug?: string
-    ): Promise<{ blogs: MainBlogs[]; totalPages: number }> {
+    ): Promise<{ blogs: MainBlogs[]; totalPages: number; totalBlogs: number }> {
         return await this.repository.getAllBlogsByPerPageOrCategorySlug(
             num_of_blogs,
             page,

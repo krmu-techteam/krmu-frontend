@@ -10,3 +10,4 @@ export { default as CommonBlogSidebarSearchField } from "./CommonBlogSidebarSear
 export { default as NoPaperForm } from "./NoPaperForm";
 export { default as NoPaperFormsWidget } from "./NoPaperFormsWidget";
 export { default as Pagination } from "./Pagination";
+export { default as BlogListingInfoBar } from "./BlogListingInfoBar";
