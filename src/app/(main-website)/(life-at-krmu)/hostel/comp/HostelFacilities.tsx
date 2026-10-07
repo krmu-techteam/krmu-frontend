@@ -10,10 +10,13 @@ const HostelFacilities = () => {
                 "The on-campus hostel store offers easy access to daily essentials, snacks, beverages, and personal care items ensuring students can meet their everyday needs with ease, enhancing the comfort of campus living.",
             slides: [
                 {
-                    imgUrl: "/images/hostel/convenience-store/Convenience_Cafe.jpg",
+                    imgUrl: "/images/hostel/convenience-store/stores-1.jpg",
                 },
                 {
-                    imgUrl: "/images/hostel/convenience-store/Convenience_Cafe_04.jpg",
+                    imgUrl: "/images/hostel/convenience-store/stores-2.jpg",
+                },
+                {
+                    imgUrl: "/images/hostel/convenience-store/stores-3.jpg",
                 },
             ],
         },
@@ -23,9 +26,9 @@ const HostelFacilities = () => {
             description:
                 "Students can play indoor games like Pool, Table Tennis, Badminton, Chess, Carrom Board and Foosball and outdoor games like Basketball, Football, Cricket, Volleyball, Pickleball and lawn Tennis. KRMU also has a gym for health fitness and exercise.",
             slides: [
-                {
-                    imgUrl: "/images/hostel/sports-recreation-facilities/sports-1.jpg",
-                },
+                // {
+                //     imgUrl: "/images/hostel/sports-recreation-facilities/sports-1.jpg",
+                // },
                 {
                     imgUrl: "/images/hostel/sports-recreation-facilities/sports-2.jpg",
                 },
@@ -37,7 +40,7 @@ const HostelFacilities = () => {
             description:
                 "Each hostel set is typically designed to accommodate four students having four single beds, along with the desks, chairs, storage space and twin sharing amenity facilities.",
             slides: [
-                { imgUrl: "/images/hostel/rooms/room-1.jpg" },
+                // { imgUrl: "/images/hostel/rooms/room-1.jpg" },
                 { imgUrl: "/images/hostel/rooms/room-2.jpg" },
             ],
         },
@@ -57,8 +60,8 @@ const HostelFacilities = () => {
             description:
                 "Considering the large number of students, security measures like biometric, surveillance cameras and a large team of 24 x 7 security personnel have been put in place for the security of both boys and girls, to ensure the safety and well-being of all the hostel residents.",
             slides: [
-                { imgUrl: "/hostels/item-12.webp" },
-                { imgUrl: "/hostels/item-13.webp" },
+                { imgUrl: "/images/hostel/security/security-1.png" },
+                { imgUrl: "/images/hostel/security/security-2.png" },
             ],
         },
         {

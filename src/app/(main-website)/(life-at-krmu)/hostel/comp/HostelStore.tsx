@@ -4,10 +4,13 @@ import CommonSlide from "./CommonSlide";
 const HostelStore = () => {
     const HostelSlides = [
         {
-            imgUrl: "/images/hostel/convenience-store/Convenience_Cafe.jpg",
+            imgUrl: "/images/hostel/convenience-store/stores-1.jpg",
         },
         {
-            imgUrl: "/images/hostel/convenience-store/Convenience_Cafe_04.jpg",
+            imgUrl: "/images/hostel/convenience-store/stores-2.jpg",
+        },
+        {
+            imgUrl: "/images/hostel/convenience-store/stores-3.jpg",
         },
     ];
     return (

@@ -144,9 +144,9 @@ export const Leaderships = ({ data }: Props) => {
                                 </div>
 
                                 {/* Right: Info & Content */}
-                                <div className="flex-1 text-left pr-0 md:pr-4 font-poppins w-full">
+                                <div className="flex-1 text-left pr-0 md:pr-4 font-poppins w-full flex flex-col h-[200px] sm:h-[220px] md:h-[226px] min-h-0">
                                     {/* Name: 20px Bold */}
-                                    <h2 className="font-poppins font-bold text-[20px] text-gray-900 leading-tight">
+                                    <h2 className="font-poppins font-bold text-[20px] text-gray-900 leading-tight shrink-0 mb-1.5">
                                         {selectedLeader.name}
                                     </h2>
                                     {/* Designation: 12px Regular */}
@@ -156,7 +156,8 @@ export const Leaderships = ({ data }: Props) => {
 
                                     {selectedLeader.content && (
                                         <div
-                                            className="w-full text-gray-700 font-poppins text-[11px] !text-[11px] max-w-none pt-1 mt-1 [&_*]:!font-poppins [&_*]:!text-[11px] [&_*]:text-gray-700 [&_p]:!mb-2.5 [&_p]:!mt-0 [&_p]:!leading-relaxed [&_p]:w-full"
+                                            key={selectedLeader.id}
+                                            className="w-full flex-1 min-h-0 overflow-y-auto pr-3 text-gray-700 font-poppins text-[11px] !text-[11px] max-w-none pt-1 [&_*]:!font-poppins [&_*]:!text-[11px] [&_*]:text-gray-700 [&_p]:!mb-2.5 [&_p]:!mt-0 [&_p]:!leading-relaxed [&_p]:w-full overscroll-contain [scrollbar-width:thin] [scrollbar-color:#d1d5db_#f3f4f6] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-gray-400"
                                             dangerouslySetInnerHTML={{
                                                 __html: selectedLeader.content
                                                     .replace(
