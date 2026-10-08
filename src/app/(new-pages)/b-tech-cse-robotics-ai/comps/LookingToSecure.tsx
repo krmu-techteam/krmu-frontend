@@ -49,11 +49,17 @@ const LookingToSecure = () => {
             <button className="">
               Download Brochure
             </button> */}
-                            <NpfPopup
+                            {/* <NpfPopup
                                 formId={`31c1452015d32698095f833b3e7eb9c5`}
                                 btnClass={`w-full sm:w-fit rounded-md bg-[#DE0000] px-6 py-3 text-sm font-bold uppercase text-white transition hover:bg-red-700 npfWidget-31c1452015d32698095f833b3e7eb9c5`}
                                 btnText="Apply Now"
                                 showIcon={false}
+                            /> */}
+                            <CommonLeadPopup
+                                buttonText="Apply Now"
+                                buttonClassName="w-full sm:w-fit rounded-md bg-[#DE0000] px-6 py-3 text-sm font-bold uppercase text-white transition hover:bg-red-700"
+                                redirectUrl="https://www.krmangalam.edu.in/pdfs/programme-brochure/btech-cse-new.pdf"
+                                form_name="Apply Now"
                             />
                             <CommonLeadPopup
                                 buttonText="Download Prospectus"
