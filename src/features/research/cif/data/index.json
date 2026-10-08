@@ -1,107 +1,107 @@
 {
-  "data": {
-    "heroSection": {
-      "title": "Central Instrumentation Facility",
-      "imageUrl": "/research/ciflogo.png"
-    },
-    "overviewSection": {
-      "description": "Central Instrumentation Facility (CIF) is an Integral part of K.R Mangalam University. CIF is a modern lab equipped with advanced analytical instruments such as FTIR (Fourier-Transform Infrared Spectrometer), UV-VIS (Double beam UV-visible spectrometer), LCR meter, DSC/TGA/DTA etc. It provides vital support for research and educational activities, allowing users from different Institutes and Industries to access these sophisticated tools and ensures that the facility’s resources are available to a broad range of researchers and students. The CIF endeavors to foster scientific innovation and enhance the quality of research.",
-      "objectives": {
-        "title": "Objectives",
-        "list": [
-          "Provide access to advanced scientific instruments and equipment for researchers and students in Basic Sciences, Medical & Allied Sciences & Multidisciplinary Sciences.",
-          "Facilitate high-quality research by offering technical assistance and training on the use of instruments.",
-          "Promote interdisciplinary collaboration and innovation by bringing together researchers from different fields."
-        ]
-      },
-      "images": [
-        {
-          "url": "/cif/item-1.webp"
+    "data": {
+        "heroSection": {
+            "title": "Central Instrumentation Facility",
+            "imageUrl": "/research/ciflogo.png"
         },
-        {
-          "url": "/cif/item-2.webp"
+        "overviewSection": {
+            "description": "Central Instrumentation Facility (CIF) is an Integral part of K.R Mangalam University. CIF is a modern lab equipped with advanced analytical instruments such as FTIR (Fourier-Transform Infrared Spectrometer), UV-VIS (Double beam UV-visible spectrometer), LCR meter, DSC/TGA/DTA etc. It provides vital support for research and educational activities, allowing users from different Institutes and Industries to access these sophisticated tools and ensures that the facility’s resources are available to a broad range of researchers and students. The CIF endeavors to foster scientific innovation and enhance the quality of research.",
+            "objectives": {
+                "title": "Objectives",
+                "list": [
+                    "Provide access to advanced scientific instruments and equipment for researchers and students in Basic Sciences, Medical & Allied Sciences & Multidisciplinary Sciences.",
+                    "Facilitate high-quality research by offering technical assistance and training on the use of instruments.",
+                    "Promote interdisciplinary collaboration and innovation by bringing together researchers from different fields."
+                ]
+            },
+            "images": [
+                {
+                    "url": "/cif/item-1.webp"
+                },
+                {
+                    "url": "/cif/item-2.webp"
+                },
+                {
+                    "url": "/cif/item-3.webp"
+                },
+                {
+                    "url": "/cif/item-4.webp"
+                }
+            ]
         },
-        {
-          "url": "/cif/item-3.webp"
+        "directorMessageSection": {
+            "title": "Message of Director",
+            "message": "Central Instrumentation Facility (CIF), a hub of cutting-edge instrumentation and technical expertise aimed at advancing your research endeavors. At CIF, our mission is to provide access to state-of-the-art instruments and facilities, empowering researchers to conduct high-quality research across various disciplines. Whether you’re delving into materials science, biological research, or engineering innovations, CIF is here to support Researchers at every step of the way. As researchers, we understand the importance of reliable and precise instrumentation in driving scientific discovery. Therefore, CIF is equipped with the latest tools and technologies, carefully maintained to ensure optimal performance and accuracy. Moreover, CIF fosters a collaborative environment where interdisciplinary interactions flourish. We encourage researchers to leverage the expertise of your peers and explore new possibilities through interdisciplinary collaborations facilitated by our facility. Innovation thrives when researchers have access to the right tools and support systems, and CIF is dedicated to being your partner in scientific advancement. Together, let’s push the boundaries of knowledge and make impactful contributions to our respective fields.",
+            "imageUrl": "/research/diwakar.png",
+            "name": "Dr. Diwakar Padalia",
+            "role": "Director of CIF"
         },
-        {
-          "url": "/cif/item-4.webp"
+        "cifTeamSection": {
+            "title": "Team CIF",
+            "cta": {
+                "text": "Interdisciplinary Research Centers and Laboratories",
+                "url": "/research-centre",
+                "iconUrl": "/placements/white-arrow.svg"
+            },
+            "teamMember": {
+                "name": "Dr. Prabhakar Bhandari (PhD)",
+                "designation": "Director – Operations & Maintenance",
+                "image": "/research/prabhakar.webp",
+                "link": "/faculty/dr-prabhakar"
+            }
+        },
+        "cifFacilitiesSection": {
+            "title": "Facilities",
+            "facilities": [
+                {
+                    "label": "TGA/DSC",
+                    "url": "/tga-dsc"
+                },
+                {
+                    "label": "Fourier Transform Infrared Spectrometer (FTIR)",
+                    "url": "/fourier-transform-infrared-spectrometer-ftir"
+                },
+                {
+                    "label": "Double beam UV-Visible Spectrometer",
+                    "url": "/double-beam-uv-visible-spectrometer"
+                },
+                {
+                    "label": "Refrigerated Centrifuge",
+                    "url": "/refrigerated-centrifuges"
+                },
+                {
+                    "label": "LCR Meter",
+                    "url": "/lcr-meter-instrument"
+                },
+                {
+                    "label": "Muffle Furnance",
+                    "url": "/muffle-furnance"
+                }
+            ]
+        },
+        "achievementSection": {
+            "title": "Achievements",
+            "achievements": [
+                {
+                    "title": "Tuning the structural, optical, and dielectric properties of europium-doped barium titanate ceramics",
+                    "imageUrl": "/research/achive.webp",
+                    "url": "#"
+                },
+                {
+                    "title": "Computational analysis of modified solar air heater having combination of ribs and protrusion in S-shaped configuration",
+                    "imageUrl": "/research/achieve2.jpg",
+                    "url": "#"
+                },
+                {
+                    "title": "Comparative thermo-hydraulic analysis of periodic stepped open micro pin-fin heat sink",
+                    "imageUrl": "/research/achieve3.jpg",
+                    "url": "#"
+                }
+            ]
+        },
+        "upcomingEventsSection": {
+            "title": "Upcoming Events",
+            "imageUrl": "/research/poster.jpg"
         }
-      ]
-    },
-    "directorMessageSection": {
-      "title": "Message of Director",
-      "message": "Central Instrumentation Facility (CIF), a hub of cutting-edge instrumentation and technical expertise aimed at advancing your research endeavors. At CIF, our mission is to provide access to state-of-the-art instruments and facilities, empowering researchers to conduct high-quality research across various disciplines. Whether you’re delving into materials science, biological research, or engineering innovations, CIF is here to support Researchers at every step of the way. As researchers, we understand the importance of reliable and precise instrumentation in driving scientific discovery. Therefore, CIF is equipped with the latest tools and technologies, carefully maintained to ensure optimal performance and accuracy. Moreover, CIF fosters a collaborative environment where interdisciplinary interactions flourish. We encourage researchers to leverage the expertise of your peers and explore new possibilities through interdisciplinary collaborations facilitated by our facility. Innovation thrives when researchers have access to the right tools and support systems, and CIF is dedicated to being your partner in scientific advancement. Together, let’s push the boundaries of knowledge and make impactful contributions to our respective fields.",
-      "imageUrl": "/research/diwakar.png",
-      "name": "Dr. Diwakar Padalia",
-      "role": "Director of CIF"
-    },
-    "cifTeamSection": {
-      "title": "Team CIF",
-      "cta": {
-        "text": "Interdisciplinary Research Centers and Laboratories",
-        "url": "/research-centre",
-        "iconUrl": "/placements/white-arrow.svg"
-      },
-      "teamMember": {
-        "name": "Dr. Prabhakar Bhandari (PhD)",
-        "designation": "Director – Operations & Maintenance",
-        "image": "/research/prabhakar.webp",
-        "link": "/faculty/dr-prabhakar-bhandari"
-      }
-    },
-    "cifFacilitiesSection": {
-      "title": "Facilities",
-      "facilities": [
-        {
-          "label": "TGA/DSC",
-          "url": "/tga-dsc"
-        },
-        {
-          "label": "Fourier Transform Infrared Spectrometer (FTIR)",
-          "url": "/fourier-transform-infrared-spectrometer-ftir"
-        },
-        {
-          "label": "Double beam UV-Visible Spectrometer",
-          "url": "/double-beam-uv-visible-spectrometer"
-        },
-        {
-          "label": "Refrigerated Centrifuge",
-          "url": "/refrigerated-centrifuges"
-        },
-        {
-          "label": "LCR Meter",
-          "url": "/lcr-meter-instrument"
-        },
-        {
-          "label": "Muffle Furnance",
-          "url": "/muffle-furnance"
-        }
-      ]
-    },
-    "achievementSection": {
-      "title": "Achievements",
-      "achievements": [
-        {
-          "title": "Tuning the structural, optical, and dielectric properties of europium-doped barium titanate ceramics",
-          "imageUrl": "/research/achive.webp",
-          "url": "#"
-        },
-        {
-          "title": "Computational analysis of modified solar air heater having combination of ribs and protrusion in S-shaped configuration",
-          "imageUrl": "/research/achieve2.jpg",
-          "url": "#"
-        },
-        {
-          "title": "Comparative thermo-hydraulic analysis of periodic stepped open micro pin-fin heat sink",
-          "imageUrl": "/research/achieve3.jpg",
-          "url": "#"
-        }
-      ]
-    },
-    "upcomingEventsSection": {
-      "title": "Upcoming Events",
-      "imageUrl": "/research/poster.jpg"
     }
-  }
 }
