@@ -17,7 +17,7 @@ const FAQ = () => {
     };
 
     return (
-        <section className="py-8 sm:py-12 md:py-16 lg:pt-20 lg:pb-10">
+        <section className="py-8 sm:py-12 md:py-16 lg:pt-20 lg:pb-10 bg-white">
             <div className="max-w-7xl mx-auto w-full px-5">
                 <h4 className="text-2xl sm:text-3xl xl:text-5xl font-bold text-center">
                     Any Question? We're Here To Help!

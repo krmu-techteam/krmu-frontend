@@ -5,7 +5,7 @@ import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 
 const CurriculumSyllabus = () => {
     return (
-        <section className="py-8 sm:py-12 md:py-16 lg:py-20">
+        <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
             <div className="max-w-7xl mx-auto px-5">
                 <h3 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#001732] leading-tight mb-2.5 text-center sm:text-left">
                     Curriculum & Syllabus

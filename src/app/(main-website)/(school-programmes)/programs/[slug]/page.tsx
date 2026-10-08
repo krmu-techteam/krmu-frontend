@@ -93,6 +93,7 @@ import {
     getCommonQuestionContent,
     getIBMCommonQuestionContent,
 } from "@/presentation/programs/new/mba";
+import BTechCSERoboticsAI from "@/app/(new-pages)/b-tech-cse-robotics-ai/BTechCSERoboticsAI";
 
 type Props = {
     params: Promise<{ slug: string }>;
@@ -142,6 +143,9 @@ const page = async ({ params }: Props) => {
     }
     if (slug === "mjmc-masters-journalism-mass-communication") {
         return <JournalismAndMassCommunication />;
+    }
+    if (slug === "b-tech-cse-robotics-ai") {
+        return <BTechCSERoboticsAI />;
     }
 
     const testimonialsMap: Record<string, any> = {

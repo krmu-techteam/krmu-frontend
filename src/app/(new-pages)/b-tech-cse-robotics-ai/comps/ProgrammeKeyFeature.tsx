@@ -41,7 +41,7 @@ const features = [
 
 const ProgrammeKeyFeature = () => {
     return (
-        <section className="py-8 sm:py-12 md:py-16 lg:py-20">
+        <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
             <div className="max-w-6xl mx-auto px-5">
                 <h2 className="text-3xl md:text-4xl lg:text-[46px] font-bold leading-tight sm:leading-none mb-2 sm:mb-8 text-center sm:text-left">
                     Programme Key Features
