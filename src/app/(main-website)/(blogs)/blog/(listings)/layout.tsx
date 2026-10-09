@@ -47,7 +47,7 @@ const layout = async ({ children }: Props) => {
                     </main>
 
                     {/* RIGHT SIDEBAR */}
-                    <aside className="w-full lg:w-[330px] xl:w-[350px] flex-shrink-0 order-2 lg:self-stretch">
+                    <aside className="w-full lg:w-[320px] xl:w-[350px] 2xl:w-[370px] flex-shrink-0 order-2 lg:self-stretch">
                         <CommonBlogRightSidebar />
                     </aside>
                 </div>

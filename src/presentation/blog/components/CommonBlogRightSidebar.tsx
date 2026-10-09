@@ -52,53 +52,58 @@ const CommonBlogRightSidebar = async () => {
                 </div>
             </div>
 
-            {/* Widget 2: Aside Banner Graphic Image (/images/blog/aside/aside.jpg) */}
-            <div className="w-full relative rounded-[8px] overflow-hidden">
-                <a
-                    href="https://admissions.krmangalam.edu.in/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full"
-                >
-                    <Image
-                        src="/images/blog/aside/aside.jpg"
-                        alt="Why Wait For Success - Up to 100% Scholarships"
-                        width={400}
-                        height={1400}
-                        className="w-full h-auto rounded-[8px]"
-                        priority
-                    />
-                </a>
-            </div>
+            {/* STICKY CONTAINER: BOTH BANNER & RECENT POSTS STICKY TOGETHER (1024px, 1280px, 1440px) */}
+            <div className="lg:sticky lg:top-20 xl:top-24 flex flex-col gap-3 xl:gap-4">
+                {/* Widget 2: Aside Banner Graphic Image (Proportionally adapted height for 1024, 1280, 1440) */}
+                <div className="w-full relative rounded-[8px] overflow-hidden flex-shrink-0 max-h-[270px] lg:max-h-[520px]">
+                    <a
+                        href="https://admissions.krmangalam.edu.in/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full h-full"
+                    >
+                        <Image
+                            src="/images/blog/aside/banner.jpg"
+                            alt="Why Wait For Success - Up to 100% Scholarships"
+                            width={380}
+                            height={570}
+                            className="w-full h-full object-cover object-top rounded-[8px]"
+                            priority
+                        />
+                    </a>
+                </div>
 
-            {/* Widget 3: Sticky Recent Post Card (10 posts) */}
-            <div className="bg-[#061623] rounded-[8px] p-4 sm:p-5 text-white lg:sticky lg:top-24 border border-white/10 max-h-[calc(100vh-120px)] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-[#071726] [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb:hover]:bg-[#E7C268] [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.2)_#071726]">
-                <h4 className="text-lg sm:text-xl font-medium text-white mb-4 tracking-tight font-poppins sticky top-0 bg-[#061623] pb-1 z-10">
-                    Recent Post
-                </h4>
+                {/* Widget 3: Recent Post Card (Compact, clean layout fitting without scroll) */}
+                <div className="bg-[#061623] rounded-[8px] p-3 sm:p-3.5 xl:p-4 text-white border border-white/10 flex-shrink-0">
+                    <h4 className="text-sm xl:text-base font-semibold text-white mb-2 xl:mb-3 tracking-tight font-poppins">
+                        Recent Post
+                    </h4>
 
-                <div className="flex flex-col gap-3">
-                    {recentPosts && recentPosts.length > 0 ? (
-                        recentPosts.slice(0, 10).map((post, i) => (
-                            <Link
-                                key={post?.id || i}
-                                href={`/blog/${post?.slug}`}
-                                className="flex items-start gap-2 text-[#93B9D9] hover:text-[#E7C268] text-xs sm:text-sm font-medium leading-snug transition-colors group"
-                            >
-                                <ChevronRight className="w-4 h-4 text-[#93B9D9] group-hover:text-[#E7C268] flex-shrink-0 mt-0.5 transition-colors" />
-                                <span
-                                    dangerouslySetInnerHTML={{
-                                        __html: post?.title?.rendered || "",
-                                    }}
-                                    className="line-clamp-2"
-                                />
-                            </Link>
-                        ))
-                    ) : (
-                        <p className="text-white/60 text-xs">
-                            No recent posts available.
-                        </p>
-                    )}
+                    <div className="flex flex-col gap-2 xl:gap-2.5">
+                        {recentPosts && recentPosts.length > 0 ? (
+                            recentPosts.slice(0, 5).map((post, i) => (
+                                <Link
+                                    key={post?.id || i}
+                                    href={`/blog/${post?.slug}`}
+                                    className={`items-start gap-1.5 text-[#93B9D9] hover:text-[#E7C268] text-xs xl:text-[13px] font-medium leading-snug transition-colors group ${
+                                        i === 4 ? "hidden xl:flex" : "flex"
+                                    }`}
+                                >
+                                    <ChevronRight className="w-3.5 h-3.5 text-[#93B9D9] group-hover:text-[#E7C268] flex-shrink-0 mt-0.5 transition-colors" />
+                                    <span
+                                        dangerouslySetInnerHTML={{
+                                            __html: post?.title?.rendered || "",
+                                        }}
+                                        className=""
+                                    />
+                                </Link>
+                            ))
+                        ) : (
+                            <p className="text-white/60 text-xs">
+                                No recent posts available.
+                            </p>
+                        )}
+                    </div>
                 </div>
             </div>
         </aside>

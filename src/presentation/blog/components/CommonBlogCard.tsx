@@ -118,20 +118,20 @@ const CommonBlogCard = ({
                 <div className="p-4 flex flex-col flex-1 justify-between relative z-10 pointer-events-none">
                     <div>
                         {/* Category Pill */}
-                        <div className="inline-block border border-white/20 text-white/90 text-xs px-3.5 py-1 rounded-full font-poppins font-light mb-3 self-start tracking-wide group-hover:border-[#E7C268]/40 transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+                        <div className="inline-block border border-white/20 text-white/90 text-xs px-3.5 py-1 rounded-full font-poppins font-normal mb-3 self-start   group-hover:border-[#E7C268]/40 transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
                             {categoryName}
                         </div>
 
                         {/* Title (Golden Accent Serif typography) */}
                         <h3
                             dangerouslySetInnerHTML={{ __html: title }}
-                            className="font-serif text-lg sm:text-xl font-bold text-[#E7C268] group-hover:text-[#f7d788] leading-snug mb-2.5 line-clamp-2 tracking-tight transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                            className="font-poppins text-lg sm:text-xl font-semibold text-[#E7C268] group-hover:text-[#f7d788] leading-snug mb-2.5 line-clamp-2 tracking-tight transition-colors duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
                         />
 
                         {/* Clean Excerpt Paragraph (without [&hellip;]) */}
                         {cleanExcerpt && (
                             <p
-                                className="text-white/75 text-xs sm:text-sm leading-relaxed line-clamp-2 mb-3.5 font-light"
+                                className="text-white/75 text-xs sm:text-sm leading-relaxed line-clamp-2 mb-3.5 font-normal"
                                 dangerouslySetInnerHTML={{
                                     __html: cleanExcerpt,
                                 }}

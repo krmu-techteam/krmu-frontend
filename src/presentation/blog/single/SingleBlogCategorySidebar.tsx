@@ -18,7 +18,7 @@ const SingleBlogCategorySidebar = async () => {
                     className="block w-full"
                 >
                     <Image
-                        src="/images/blog/aside/aside.jpg"
+                        src="/images/blog/aside/banner.jpg"
                         alt="Why Wait For Success - Up to 100% Scholarships"
                         width={400}
                         height={1400}
