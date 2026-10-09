@@ -51,11 +51,43 @@ const CommonBlogRightSidebar = async () => {
                     />
                 </div>
             </div>
+            {/* Widget 3: Recent Post Card (Compact, clean layout fitting without scroll) */}
+            <div className="bg-[#061623] rounded-[8px] p-3 sm:p-3.5 xl:p-4 text-white border border-white/10 flex-shrink-0">
+                <h4 className="text-sm xl:text-base font-semibold text-white mb-2 xl:mb-3 tracking-tight font-poppins">
+                    Recent Post
+                </h4>
+
+                <div className="flex flex-col gap-2 xl:gap-2.5">
+                    {recentPosts && recentPosts.length > 0 ? (
+                        recentPosts.slice(0, 5).map((post, i) => (
+                            <Link
+                                key={post?.id || i}
+                                href={`/blog/${post?.slug}`}
+                                className={`items-start gap-1.5 text-[#93B9D9] hover:text-[#E7C268] text-xs xl:text-[13px] font-medium leading-snug transition-colors group ${
+                                    i === 4 ? "hidden xl:flex" : "flex"
+                                }`}
+                            >
+                                <ChevronRight className="w-3.5 h-3.5 text-[#93B9D9] group-hover:text-[#E7C268] flex-shrink-0 mt-0.5 transition-colors" />
+                                <span
+                                    dangerouslySetInnerHTML={{
+                                        __html: post?.title?.rendered || "",
+                                    }}
+                                    className=""
+                                />
+                            </Link>
+                        ))
+                    ) : (
+                        <p className="text-white/60 text-xs">
+                            No recent posts available.
+                        </p>
+                    )}
+                </div>
+            </div>
 
             {/* STICKY CONTAINER: BOTH BANNER & RECENT POSTS STICKY TOGETHER (1024px, 1280px, 1440px) */}
             <div className="lg:sticky lg:top-20 xl:top-24 flex flex-col gap-3 xl:gap-4">
                 {/* Widget 2: Aside Banner Graphic Image (Proportionally adapted height for 1024, 1280, 1440) */}
-                <div className="w-full relative rounded-[8px] overflow-hidden flex-shrink-0 max-h-[270px] lg:max-h-[520px]">
+                <div className="w-full relative rounded-[8px] overflow-hidden flex-shrink-0 max-h-[270px] lg:max-h-[550px]">
                     <a
                         href="https://admissions.krmangalam.edu.in/"
                         target="_blank"
@@ -71,39 +103,6 @@ const CommonBlogRightSidebar = async () => {
                             priority
                         />
                     </a>
-                </div>
-
-                {/* Widget 3: Recent Post Card (Compact, clean layout fitting without scroll) */}
-                <div className="bg-[#061623] rounded-[8px] p-3 sm:p-3.5 xl:p-4 text-white border border-white/10 flex-shrink-0">
-                    <h4 className="text-sm xl:text-base font-semibold text-white mb-2 xl:mb-3 tracking-tight font-poppins">
-                        Recent Post
-                    </h4>
-
-                    <div className="flex flex-col gap-2 xl:gap-2.5">
-                        {recentPosts && recentPosts.length > 0 ? (
-                            recentPosts.slice(0, 5).map((post, i) => (
-                                <Link
-                                    key={post?.id || i}
-                                    href={`/blog/${post?.slug}`}
-                                    className={`items-start gap-1.5 text-[#93B9D9] hover:text-[#E7C268] text-xs xl:text-[13px] font-medium leading-snug transition-colors group ${
-                                        i === 4 ? "hidden xl:flex" : "flex"
-                                    }`}
-                                >
-                                    <ChevronRight className="w-3.5 h-3.5 text-[#93B9D9] group-hover:text-[#E7C268] flex-shrink-0 mt-0.5 transition-colors" />
-                                    <span
-                                        dangerouslySetInnerHTML={{
-                                            __html: post?.title?.rendered || "",
-                                        }}
-                                        className=""
-                                    />
-                                </Link>
-                            ))
-                        ) : (
-                            <p className="text-white/60 text-xs">
-                                No recent posts available.
-                            </p>
-                        )}
-                    </div>
                 </div>
             </div>
         </aside>

@@ -51,7 +51,7 @@ const HeroSection = ({
                         {/* Logo & Desktop Social Share Overlay */}
                         <div className="absolute top-4 right-4 lg:top-auto lg:bottom-6 lg:right-6 z-20 flex flex-col items-end lg:items-center gap-2 pointer-events-auto">
                             {/* KRMU Logo */}
-                            <div className="flex items-center justify-center">
+                            {/* <div className="flex items-center justify-center">
                                 <Image
                                     src="/images/blog/hero/krmu-logo.png"
                                     alt="K.R. Mangalam University"
@@ -60,7 +60,7 @@ const HeroSection = ({
                                     className="object-contain max-h-[30px] sm:max-h-[40px] w-auto drop-shadow-md"
                                     unoptimized
                                 />
-                            </div>
+                            </div> */}
 
                             {/* Desktop Social Share Bar */}
                             <div className="hidden lg:block">

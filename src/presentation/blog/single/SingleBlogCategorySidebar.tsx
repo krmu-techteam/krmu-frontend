@@ -9,27 +9,8 @@ const SingleBlogCategorySidebar = async () => {
 
     return (
         <aside className="w-full flex flex-col gap-6 font-poppins h-full">
-            {/* Widget 1: Scholarship Banner Image */}
-            <div className="w-full relative rounded-[8px] overflow-hidden">
-                <a
-                    href="https://admissions.krmangalam.edu.in/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full"
-                >
-                    <Image
-                        src="/images/blog/aside/banner.jpg"
-                        alt="Why Wait For Success - Up to 100% Scholarships"
-                        width={400}
-                        height={1400}
-                        className="w-full h-auto rounded-[8px]"
-                        priority
-                    />
-                </a>
-            </div>
-
             {/* Widget 2: Sticky Pill-styled Categories Widget */}
-            <div className="border border-[#23425B] rounded-[8px] p-4 sm:p-4.5 text-white font-poppins lg:sticky lg:top-24">
+            <div className="border border-[#23425B] rounded-[8px] p-4 sm:p-4.5 text-white font-poppins  ">
                 <h3 className="text-[19px] sm:text-[20px] font-medium text-white mb-3.5 tracking-tight font-sans">
                     Categories
                 </h3>
@@ -64,6 +45,24 @@ const SingleBlogCategorySidebar = async () => {
                         </p>
                     )}
                 </div>
+            </div>
+            {/* Widget 1: Scholarship Banner Image */}
+            <div className="w-full lg:sticky lg:top-24 relative rounded-[8px] overflow-hidden">
+                <a
+                    href="https://admissions.krmangalam.edu.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full"
+                >
+                    <Image
+                        src="/images/blog/aside/banner.jpg"
+                        alt="Why Wait For Success - Up to 100% Scholarships"
+                        width={400}
+                        height={1400}
+                        className="w-full h-auto rounded-[8px]"
+                        priority
+                    />
+                </a>
             </div>
         </aside>
     );
