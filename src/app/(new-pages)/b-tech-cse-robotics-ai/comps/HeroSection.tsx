@@ -9,17 +9,20 @@ const HeroSection = () => {
             className="bg-[linear-gradient(90deg,#BDCBCF_-1.04%,#BCD5E2_101.28%)] relative overflow-hidden"
             id="apply-form-mobile"
         >
-            <div className="relative w-full xl:hidden pt-[120px]">
+            <div
+                className="relative w-full xl:hidden pt-[120px]"
+                id="hero-scholarship"
+            >
                 <div className="relative w-full flex flex-col items-center">
                     <Image
-                        src="/ai-ml.svg"
+                        src="/b-tech-cse-robotics-ai/ai-ml.svg"
                         width={920}
                         height={494}
                         alt="AI ML"
                         className="absolute bottom-0 left-1/2 -translate-x-1/2"
                     />
                     <Image
-                        src="/robotic-hand.png"
+                        src="/b-tech-cse-robotics-ai/robotic-hand.png"
                         width={537}
                         height={652}
                         alt="Robotic Hand"
@@ -51,14 +54,14 @@ const HeroSection = () => {
             </div>
             <div className="max-w-[1564px] mx-auto w-full pt-10 xl:pt-44 flex flex-col-reverse xl:flex-row font-poppins z-20 relative px-5">
                 <Image
-                    src="/ellipse.svg"
+                    src="/b-tech-cse-robotics-ai/ellipse.svg"
                     width={639}
                     height={639}
                     alt="Ellipse"
                     className="absolute -left-24 top-0 sm:left-[-154px] sm:top-[-75px] xl:-left-24 xl:top-0 rounded-full"
                 />
                 <Image
-                    src="/ai-ml.svg"
+                    src="/b-tech-cse-robotics-ai/ai-ml.svg"
                     width={920}
                     height={494}
                     alt="AI ML"
@@ -99,11 +102,17 @@ const HeroSection = () => {
                         certifications and Microsoft credentials.
                     </p>
                     <div className="space-y-3 space-x-2 leading-8 font-semibold text-sm mt-7">
-                        <NpfPopup
+                        {/* <NpfPopup
                             formId={`31c1452015d32698095f833b3e7eb9c5`}
                             btnClass={`bg-[#DE0000] text-white rounded-[5px] px-5 py-1 uppercase inline-block npfWidget-31c1452015d32698095f833b3e7eb9c5 w-full sm:w-fit`}
                             btnText="Apply Now"
                             showIcon={false}
+                        /> */}
+                        <CommonLeadPopup
+                            buttonText="Apply Now"
+                            buttonClassName="bg-[#DE0000] text-white rounded-[5px] px-5 py-1 uppercase inline-block npfWidget-31c1452015d32698095f833b3e7eb9c5 w-full sm:w-fit"
+                            redirectUrl="https://www.krmangalam.edu.in/pdfs/programme-brochure/btech-cse-new.pdf"
+                            form_name="Apply Now"
                         />
                         <CommonLeadPopup
                             buttonText="Download Prospectus"
@@ -141,7 +150,7 @@ const HeroSection = () => {
                 </div>
                 <div className="w-full xl:w-1/2 justify-center z-20 relative hidden xl:flex">
                     <Image
-                        src="/robotic-hand.png"
+                        src="/b-tech-cse-robotics-ai/robotic-hand.png"
                         width={537}
                         height={652}
                         alt="Robotic Hand"
@@ -162,7 +171,8 @@ const HeroSection = () => {
                         <span className="hidden sm:block w-2 h-2 rounded-full bg-white" />
 
                         <Link
-                            href="#apply-form-mobile"
+                            href="https://admissions.krmangalam.edu.in"
+                            target="_blank"
                             className="underline font-light hover:opacity-80 transition"
                         >
                             Apply on the admissions portal

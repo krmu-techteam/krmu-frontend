@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ExploreOtherProgramme = () => {
     return (
-        <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-5">
+        <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-5 bg-white">
             <div className="max-w-7xl mx-auto w-full bg-[url(/demo/exploreprog.svg)] bg-center bg-no-repeat bg-cover flex flex-col lg:flex-row rounded-[10px] relative">
                 <Image
                     src="/demo/explore-prog-girl.png"
@@ -41,7 +41,7 @@ const ExploreOtherProgramme = () => {
                         </div>
                     </div>
                     <Link
-                        href="/programmes?school=soet"
+                        href="/programmes"
                         target="_blank"
                         className="underline inline-block mt-2 sm:mt-4"
                     >

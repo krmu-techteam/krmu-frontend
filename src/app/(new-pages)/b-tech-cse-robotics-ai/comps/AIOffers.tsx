@@ -41,7 +41,7 @@ const offers = [
 
 const AIOffers = () => {
     return (
-        <section className="py-8 sm:py-12 md:py-16 lg:pt-20 lg:pb-5 px-5">
+        <section className="py-8 sm:py-12 md:py-16 lg:pt-20 lg:pb-5 px-5 bg-white">
             <div className="max-w-7xl mx-auto">
                 <h3 className="max-w-[780px] text-center sm:text-left text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-bold leading-tight">
                     Here's everything KRMU's B.Tech. CSE Robotics and AI

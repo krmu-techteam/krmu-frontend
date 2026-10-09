@@ -13,7 +13,7 @@ const BtechCSERoboticsVideo = () => {
     const [playVideo, setPlayVideo] = useState(false);
 
     return (
-        <section className="sm:py-16">
+        <section className="sm:py-16 bg-white">
             <div className="max-w-6xl mx-auto w-full relative overflow-hidden">
                 {!playVideo ? (
                     <>

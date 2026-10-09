@@ -23,7 +23,7 @@ const Scholarship2026 = () => {
                         potential always find their way forward.
                     </p>
                     <Link
-                        href="#"
+                        href="/programs/b-tech-cse-robotics-ai/#hero-scholarship"
                         className="text-black font-semibold bg-white px-5 py-2 rounded-[5px]"
                     >
                         Explore
