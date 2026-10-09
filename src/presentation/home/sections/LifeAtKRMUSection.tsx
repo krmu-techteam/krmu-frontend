@@ -320,7 +320,7 @@ export function LifeAtKRMUSection() {
                     At K.R. Mangalam University, life goes beyond the classroom.
                     Our campus is a thriving hub of academic excellence,
                     cultural diversity, and vibrant student life. We encourage
-                    students to explore their passion by encouraging them
+                    students to explore their passion by encouraging them to
                     participate in various cultural events, sports, and
                     community services. We believe in creating a friendly and
                     positive environment where students can learn, grow, and

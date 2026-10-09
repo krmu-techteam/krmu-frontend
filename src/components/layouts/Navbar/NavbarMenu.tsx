@@ -398,7 +398,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                     {academicMenu
                                                         ?.acadcounter?.[0]
                                                         ? `${academicMenu.acadcounter[0].countertext} ${academicMenu.acadcounter[0].countercontent}`
-                                                        : "12 Schools"}
+                                                        : "13 Schools"}
                                                 </span>
                                                 <span className="h-12 w-[1px] bg-[#1D3B52] inline-block" />
                                                 <span className="font-normal">

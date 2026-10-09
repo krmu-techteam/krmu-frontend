@@ -1,86 +1,73 @@
 import { STRAPI_URL } from "@/app/constant";
 import { ProgrammeAlumniData } from "@/lib/types/programme";
 import Image from "next/image";
-import { FaQuoteLeft, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 type Props = {
     item: ProgrammeAlumniData;
 };
 
 export const AlumniSliderCard = ({ item }: Props) => {
+    const rawImg = item?.alumni_img?.url || item?.review_img?.url;
+    const imageUrl = rawImg
+        ? rawImg.startsWith("http")
+            ? rawImg
+            : `${STRAPI_URL}${rawImg}`
+        : null;
+
     return (
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start h-full">
-            {/* Left side: Image and Mobile Details */}
-            <div className="flex flex-col items-center shrink-0 w-full md:w-[140px]">
-                <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-[3px] border-white/20 group-hover:border-[#0055A4]/50 transition-colors duration-500 mb-4 relative p-1">
-                    <div className="w-full h-full rounded-full overflow-hidden relative bg-[#04101A]">
+        <div className="flex flex-col justify-between h-full w-full">
+            <div className="flex-1 flex flex-col">
+                {/* Top Header: Alumni Photo + Name & Qualification + Quote Watermark */}
+                <div className="flex items-center justify-between gap-4 mb-3">
+                    <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                        {/* Photo in Home Page style (clean rounded-16px, subtle border, gold ring, no shadow) */}
+                        <div className="relative shrink-0 w-14 h-14 sm:w-16 sm:h-16 md:w-[68px] md:h-[68px] rounded-[14px] md:rounded-[16px] overflow-hidden border border-white/10 ring-1 ring-brand-gold/40 bg-[#04101A]">
+                            {imageUrl ? (
+                                <Image
+                                    src={imageUrl}
+                                    fill
+                                    sizes="80px"
+                                    alt={item?.name || "Alumni"}
+                                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                />
+                            ) : (
+                                <div className="w-full h-full flex items-center justify-center bg-white/5 text-brand-gold font-bold text-lg font-poppins">
+                                    {item?.name?.[0] || "A"}
+                                </div>
+                            )}
+                        </div>
+
+                        {/* Author Details (Name & Qualification) */}
+                        <div className="flex flex-col min-w-0">
+                            <h4 className="text-brand-gold font-poppins font-bold text-base sm:text-lg md:text-[18px] leading-tight tracking-wide group-hover:text-[#F3CE72] transition-colors line-clamp-1">
+                                {item?.name}
+                            </h4>
+                            <p className="text-white/70 font-poppins text-xs sm:text-sm font-light mt-1 line-clamp-1">
+                                {item?.qualification}
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Watermark Quote Icon from Home Page */}
+                    <div className="shrink-0 opacity-30 group-hover:opacity-50 transition-opacity">
                         <Image
-                            src={`${STRAPI_URL}${item?.alumni_img?.url}`}
-                            fill
-                            alt={item?.name || "Alumni"}
-                            className="object-cover object-top"
+                            src="/modules/home/testimonial/quote.webp"
+                            alt="Quote Icon"
+                            width={56}
+                            height={45}
+                            className="w-8 sm:w-10 md:w-11 h-auto object-contain brightness-0 invert"
                         />
                     </div>
                 </div>
 
-                {/* Mobile-only name and qualification */}
-                <div className="text-center md:hidden w-full mb-4">
-                    <h6 className="font-semibold text-white text-lg font-poppins">
-                        {item?.name}
-                    </h6>
-                    <span className="text-[#0055A4] text-sm font-medium tracking-wide">
-                        {item?.qualification}
-                    </span>
-                    <div className="flex items-center justify-center gap-1.5 text-[#FFB800] mt-2">
-                        <div className="flex items-center gap-0.5">
-                            {[...Array(4)].map((_, i) => (
-                                <FaStar
-                                    key={i}
-                                    className="w-3.5 h-3.5 fill-[#FFB800]"
-                                />
-                            ))}
-                            <FaStarHalfAlt className="w-3.5 h-3.5 fill-[#FFB800]" />
-                        </div>
-                        <span className="text-white text-xs font-semibold ml-0.5">
-                            4.8
-                        </span>
-                    </div>
-                </div>
-            </div>
+                {/* Home Page Signature Gold Divider Bar */}
+                <div className="w-10 h-[2px] bg-brand-gold my-3 rounded-full opacity-80" />
 
-            {/* Right side: Content and Desktop Details */}
-            <div className="flex flex-col flex-1 h-full justify-between">
-                <div className="relative">
-                    <FaQuoteLeft className="absolute -top-4 -left-4 w-7 h-7 text-white/90" />
-                    <p className="text-sm md:text-[16px] text-white/90 font-light leading-relaxed font-poppins italic relative z-10 pt-2 line-clamp-6">
-                        {item?.content}
+                {/* Full Testimonial Content - Fully visible, elegant typography */}
+                <div className="relative pt-1 flex-1">
+                    <p className="italic text-white/90 text-sm sm:text-[15px] md:text-[15.5px] leading-relaxed font-light font-poppins relative z-10 text-left">
+                        &ldquo;{item?.content}&rdquo;
                     </p>
-                </div>
-
-                <div className="hidden md:flex items-end justify-between mt-8 border-t border-white/5 pt-4">
-                    <div className="flex flex-col">
-                        <h6 className="font-semibold text-white text-[17px] font-poppins tracking-wide group-hover:text-white/80 transition-colors">
-                            {item?.name}
-                        </h6>
-                        <span className="text-[#00AEEF]/90 text-sm font-medium">
-                            {item?.qualification}
-                        </span>
-                    </div>
-                    {/* 4.8 Star Rating */}
-                    <div className="flex items-center gap-1.5 shrink-0 ml-4">
-                        <div className="flex items-center gap-0.5 text-[#FFB800]">
-                            {[...Array(4)].map((_, i) => (
-                                <FaStar
-                                    key={i}
-                                    className="w-4 h-4 fill-[#FFB800]"
-                                />
-                            ))}
-                            <FaStarHalfAlt className="w-4 h-4 fill-[#FFB800]" />
-                        </div>
-                        <span className="text-white text-sm font-semibold ml-0.5">
-                            4.8
-                        </span>
-                    </div>
                 </div>
             </div>
         </div>

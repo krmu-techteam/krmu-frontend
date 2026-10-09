@@ -4,7 +4,7 @@ import Link from "next/link";
 const HeroSection = () => {
     return (
         <section className="relative w-full overflow-hidden pt-28 sm:pt-[120px] lg:pt-38   lg:pb-8 font-poppins">
-            <div className="mx-auto max-w-[1440px] w-full px-4 md:px-6">
+            <div className="mx-auto max-w-[1440px] w-full px-0 md:px-6">
                 <div className="w-full rounded-[0px] lg:rounded-[6px] relative z-10 overflow-hidden bg-[#07141E]">
                     {/* Background Image Container */}
                     <div className="relative w-full">
@@ -35,7 +35,7 @@ const HeroSection = () => {
                         </span>
                         <div className="space-y-1 md:space-y-2 mb-2">
                             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white font-serif leading-tight">
-                                Programs
+                                Programmes
                             </h1>
                             <div
                                 className="w-full max-w-[511px] h-[1px] my-2 sm:my-3"

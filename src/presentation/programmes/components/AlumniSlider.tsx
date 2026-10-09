@@ -26,7 +26,7 @@ export const AlumniSlider = ({ alumniData = [] }: Props) => {
                 {alumniData.map((item, index) => (
                     <div
                         key={index}
-                        className="w-full bg-[#061623] hover:bg-[#061623]/70 rounded-[4px] border border-white/20 hover:border-[#00AEEF]/30 p-6 md:p-8 transition-all duration-500 group relative overflow-hidden h-full flex flex-col"
+                        className="w-full bg-[#061623] hover:bg-[#081e30] rounded-[16px] border border-white/10 hover:border-brand-gold/30 p-6 md:p-7 xl:p-8 transition-colors duration-300 group relative overflow-hidden h-full flex flex-col"
                     >
                         <AlumniSliderCard item={item} />
                     </div>
