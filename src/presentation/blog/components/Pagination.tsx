@@ -2,18 +2,27 @@
 
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Loader2 } from "lucide-react";
 
 type Props = {
     currentPage: number;
     totalPages: number;
     pageNumbers: (number | string)[];
+    onPageChange?: (
+        page: number,
+        triggerType?: "prev" | "next" | number
+    ) => void;
+    isLoading?: boolean;
+    targetLoadingPage?: number | "prev" | "next" | null;
 };
 
 export default function Pagination({
     currentPage,
     totalPages,
     pageNumbers,
+    onPageChange,
+    isLoading = false,
+    targetLoadingPage = null,
 }: Props) {
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -39,40 +48,64 @@ export default function Pagination({
         }
     };
 
+    const handleClick = (
+        e: React.MouseEvent<HTMLAnchorElement>,
+        targetPage: number,
+        triggerType?: "prev" | "next" | number
+    ) => {
+        if (isLoading) {
+            e.preventDefault();
+            return;
+        }
+        if (onPageChange) {
+            e.preventDefault();
+            onPageChange(targetPage, triggerType);
+        } else {
+            scrollToBlogTop();
+        }
+    };
+
     if (totalPages <= 1) return null;
 
     return (
-        <div className="flex items-center justify-center gap-3 sm:gap-4 my-10 sm:my-10 font-poppins select-none">
-            {/* Prev Button */}
+        <div className="flex items-center justify-end gap-3 sm:gap-4 my-10 font-poppins select-none">
+            {/* Prev Button - Pure text, NO background, NO border with small smooth loader */}
             {currentPage <= 1 ? (
                 <span
                     aria-disabled="true"
-                    className="w-10 h-10 bg-[#15293B] rounded-[4px] border border-[#1B3349] flex items-center justify-center text-white opacity-35 cursor-not-allowed"
+                    className="text-white/30 text-xs sm:text-sm font-medium cursor-not-allowed select-none px-2 py-1"
                     aria-label="Previous Page"
                 >
-                    <ChevronLeft className="w-5 h-5 text-white" />
+                    Previous
                 </span>
             ) : (
                 <Link
                     href={createPageURL(currentPage - 1)}
-                    onClick={scrollToBlogTop}
+                    onClick={(e) => handleClick(e, currentPage - 1, "prev")}
                     scroll={false}
                     prefetch={false}
-                    className="w-10 h-10 bg-[#15293B] rounded-[4px] border border-[#1B3349] hover:bg-[#14324f] hover:border-[#14324f] transition-all flex items-center justify-center text-white shadow-sm"
+                    className={`inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium transition-colors select-none px-2 py-1 ${
+                        isLoading && targetLoadingPage === "prev"
+                            ? "text-[#E7C268] cursor-wait"
+                            : "text-white/80 hover:text-[#E7C268] cursor-pointer"
+                    }`}
                     aria-label="Previous Page"
                 >
-                    <ChevronLeft className="w-5 h-5 text-white" />
+                    {isLoading && targetLoadingPage === "prev" && (
+                        <Loader2 className="w-3.5 h-3.5 animate-spin text-[#E7C268]" />
+                    )}
+                    <span>Previous</span>
                 </Link>
             )}
 
-            {/* Page Numbers List */}
-            <div className="flex items-center gap-1.5 sm:gap-2">
+            {/* Page Numbers List - Pure text, NO background, NO border */}
+            <div className="flex items-center gap-1 sm:gap-1.5">
                 {pageNumbers.map((num, idx) => {
                     if (num === "…" || num === "...") {
                         return (
                             <span
                                 key={`ellipsis-${idx}`}
-                                className="text-white/70 font-poppins text-sm px-2 tracking-widest"
+                                className="text-white/40 font-poppins text-xs sm:text-sm px-1.5 tracking-widest select-none"
                             >
                                 . . .
                             </span>
@@ -81,13 +114,15 @@ export default function Pagination({
 
                     const pageNum = Number(num);
                     const isActive = pageNum === currentPage;
+                    const isTargetLoading =
+                        isLoading && targetLoadingPage === pageNum;
 
-                    if (isActive) {
+                    if (isActive && !isTargetLoading) {
                         return (
                             <span
                                 key={`page-${pageNum}`}
                                 aria-current="page"
-                                className="w-8 h-8 rounded-full bg-[#061623] text-white font-medium text-sm flex items-center justify-center shadow-inner cursor-default"
+                                className="text-[#E7C268] font-bold text-xs sm:text-sm px-2.5 py-1 cursor-default select-none"
                             >
                                 {pageNum}
                             </span>
@@ -98,36 +133,50 @@ export default function Pagination({
                         <Link
                             key={`page-${pageNum}`}
                             href={createPageURL(pageNum)}
-                            onClick={scrollToBlogTop}
+                            onClick={(e) => handleClick(e, pageNum, pageNum)}
                             scroll={false}
                             prefetch={false}
-                            className="text-white/80 hover:text-white font-poppins text-sm px-2.5 py-1 font-normal transition-colors cursor-pointer"
+                            className={`inline-flex items-center gap-1 font-poppins text-xs sm:text-sm px-2.5 py-1 select-none transition-colors ${
+                                isTargetLoading
+                                    ? "text-[#E7C268] font-semibold cursor-wait"
+                                    : "text-white/70 hover:text-[#E7C268] font-normal cursor-pointer"
+                            }`}
                         >
-                            {pageNum}
+                            <span>{pageNum}</span>
+                            {isTargetLoading && (
+                                <Loader2 className="w-3 h-3 animate-spin text-[#E7C268]" />
+                            )}
                         </Link>
                     );
                 })}
             </div>
 
-            {/* Next Button */}
+            {/* Next Button - Pure text, NO background, NO border with small smooth loader */}
             {currentPage >= totalPages ? (
                 <span
                     aria-disabled="true"
-                    className="w-10 h-10 rounded-[4px] bg-[#15293B] border border-[#1b3854] flex items-center justify-center text-white opacity-35 cursor-not-allowed shadow-sm"
+                    className="text-white/30 text-xs sm:text-sm font-medium cursor-not-allowed select-none px-2 py-1"
                     aria-label="Next Page"
                 >
-                    <ChevronRight className="w-5 h-5 text-white" />
+                    Next
                 </span>
             ) : (
                 <Link
                     href={createPageURL(currentPage + 1)}
-                    onClick={scrollToBlogTop}
+                    onClick={(e) => handleClick(e, currentPage + 1, "next")}
                     scroll={false}
                     prefetch={false}
-                    className="w-10 h-10 rounded-[4px] bg-[#15293B] border border-[#1b3854] hover:bg-[#14324f] transition-all flex items-center justify-center text-white shadow-sm"
+                    className={`inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium transition-colors select-none px-2 py-1 ${
+                        isLoading && targetLoadingPage === "next"
+                            ? "text-[#E7C268] cursor-wait"
+                            : "text-white/80 hover:text-[#E7C268] cursor-pointer"
+                    }`}
                     aria-label="Next Page"
                 >
-                    <ChevronRight className="w-5 h-5 text-white" />
+                    <span>Next</span>
+                    {isLoading && targetLoadingPage === "next" && (
+                        <Loader2 className="w-3.5 h-3.5 animate-spin text-[#E7C268]" />
+                    )}
                 </Link>
             )}
         </div>

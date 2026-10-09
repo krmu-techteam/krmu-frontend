@@ -35,12 +35,16 @@ const CommonBlogList = async ({
                     excerpt={blog?.excerpt?.rendered}
                     slug={blog?.slug}
                     imgId={blog?.featured_media}
+                    imageUrl={
+                        blog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url
+                    }
                     date={blog?.date_gmt}
                     categoryName={
                         blog?._embedded?.["wp:term"]?.[0]?.[0]?.name ||
                         "KRMU Blog"
                     }
                     authorName={blog?._embedded?.author?.[0]?.name}
+                    authorSlug={blog?._embedded?.author?.[0]?.slug}
                     authorAvatarUrl={
                         blog?._embedded?.author?.[0]?.avatar_urls?.["48"] ||
                         blog?._embedded?.author?.[0]?.avatar_urls?.["24"]

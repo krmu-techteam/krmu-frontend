@@ -74,6 +74,8 @@ class BlogRepository {
         return this.blogCategoryPageInfoPromise;
     }
 
+    private static categoryCache: Map<string, AllBlogCategories> = new Map();
+
     async getAllBlogsByPerPageOrCategorySlug(
         num_of_blogs: number = 6,
         page: number = 1,
@@ -89,16 +91,28 @@ class BlogRepository {
             let categoryId: number | null = null;
 
             if (categorySlug) {
-                const catRes = await fetch(
-                    BLOG_QUERIES.categories(categorySlug),
-                    {
-                        next: { revalidate: 3600, tags: ["blogs"] },
-                    }
-                );
+                const normalizedSlug = categorySlug.toLowerCase();
+                if (BlogRepository.categoryCache.has(normalizedSlug)) {
+                    categoryId =
+                        BlogRepository.categoryCache.get(normalizedSlug)!.id;
+                } else {
+                    const catRes = await fetch(
+                        BLOG_QUERIES.categories(categorySlug),
+                        {
+                            next: { revalidate: 3600, tags: ["blogs"] },
+                        }
+                    );
 
-                if (catRes.ok) {
-                    const cats = await catRes.json();
-                    if (cats?.length) categoryId = cats[0].id;
+                    if (catRes.ok) {
+                        const cats = await catRes.json();
+                        if (cats?.length) {
+                            categoryId = cats[0].id;
+                            BlogRepository.categoryCache.set(
+                                normalizedSlug,
+                                cats[0]
+                            );
+                        }
+                    }
                 }
 
                 if (!categoryId)
@@ -165,6 +179,16 @@ class BlogRepository {
             });
             if (!res.ok) throw new Error("Failed to fetch Blog Categories");
             const json = await res.json();
+            if (Array.isArray(json)) {
+                json.forEach((cat) => {
+                    if (cat?.slug) {
+                        BlogRepository.categoryCache.set(
+                            cat.slug.toLowerCase(),
+                            cat
+                        );
+                    }
+                });
+            }
             return json;
         } catch (error) {
             console.error("All categories fetch error:", error);
@@ -205,6 +229,11 @@ class BlogRepository {
     }
 
     async getCategoryBySlug(slug: string): Promise<AllBlogCategories | null> {
+        const normalizedSlug = slug.toLowerCase();
+        if (BlogRepository.categoryCache.has(normalizedSlug)) {
+            return BlogRepository.categoryCache.get(normalizedSlug)!;
+        }
+
         try {
             const res = await fetch(BLOG_QUERIES.categories(slug), {
                 next: { revalidate: 3600, tags: ["blogs"] },
@@ -213,7 +242,11 @@ class BlogRepository {
             if (!res.ok) return null;
 
             const data = await res.json();
-            return data?.[0] || null;
+            const cat = data?.[0] || null;
+            if (cat) {
+                BlogRepository.categoryCache.set(normalizedSlug, cat);
+            }
+            return cat;
         } catch (error) {
             console.error("Category fetch error:", error);
             return null;
@@ -266,12 +299,16 @@ class BlogRepository {
 
     async getPostsByAuthId(
         authId: number,
-        page: number = 1
+        page: number = 1,
+        perPage: number = 100
     ): Promise<PostByAuthorCard[]> {
         try {
-            const res = await fetch(BLOG_QUERIES.postsByAuthor(authId, page), {
-                next: { revalidate: 3600, tags: ["blogs"] },
-            });
+            const res = await fetch(
+                BLOG_QUERIES.postsByAuthor(authId, page, perPage),
+                {
+                    next: { revalidate: 3600, tags: ["blogs"] },
+                }
+            );
 
             if (!res.ok) throw new Error("Failed to fetch posts by author ID");
 
@@ -285,10 +322,9 @@ class BlogRepository {
 
     async getPostsCountByAuthId(authId: number): Promise<number> {
         try {
-            const res = await fetch(
-                `${BLOG_QUERIES.postsByAuthor(authId, 1)}&per_page=1`,
-                { next: { revalidate: 3600, tags: ["blogs"] } }
-            );
+            const res = await fetch(BLOG_QUERIES.postsByAuthor(authId, 1, 1), {
+                next: { revalidate: 3600, tags: ["blogs"] },
+            });
             if (!res.ok) return 0;
             const total = res.headers.get("X-WP-Total");
             return total ? parseInt(total, 10) : 0;
@@ -318,7 +354,8 @@ export interface IBlogService {
     getAuthInfoBySlug(authSlug: string): Promise<AuthorResponse>;
     getPostsByAuthId(
         authId: number,
-        page?: number
+        page?: number,
+        perPage?: number
     ): Promise<PostByAuthorCard[]>;
     getPostsCountByAuthId(authId: number): Promise<number>;
 }
@@ -382,9 +419,10 @@ class BlogService implements IBlogService {
 
     async getPostsByAuthId(
         authId: number,
-        page: number = 1
+        page: number = 1,
+        perPage: number = 100
     ): Promise<PostByAuthorCard[]> {
-        return await this.repository.getPostsByAuthId(authId, page);
+        return await this.repository.getPostsByAuthId(authId, page, perPage);
     }
 
     async getPostsCountByAuthId(authId: number): Promise<number> {

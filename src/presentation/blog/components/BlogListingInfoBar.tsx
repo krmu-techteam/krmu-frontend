@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Loader2 } from "lucide-react";
 import { useState, useRef, useEffect, useTransition } from "react";
 
 type Props = {
@@ -9,6 +9,9 @@ type Props = {
     totalPages: number;
     currentPage: number;
     blogsPerPage: number;
+    onPageChange?: (page: number) => void;
+    onPerPageChange?: (count: number) => void;
+    isLoading?: boolean;
 };
 
 export default function BlogListingInfoBar({
@@ -16,6 +19,9 @@ export default function BlogListingInfoBar({
     totalPages,
     currentPage,
     blogsPerPage,
+    onPageChange,
+    onPerPageChange,
+    isLoading = false,
 }: Props) {
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -71,15 +77,20 @@ export default function BlogListingInfoBar({
         const el = document.getElementById("blog-listing");
         if (el) {
             const top = el.getBoundingClientRect().top + window.scrollY - 80;
-            window.scrollTo({ top, behavior: "smooth" });
-        } else {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            if (window.scrollY > top + 150) {
+                window.scrollTo({ top, behavior: "smooth" });
+            }
         }
     };
 
     const handlePageSelect = (page: number) => {
         setIsPageOpen(false);
         if (page === currentPage) return;
+
+        if (onPageChange) {
+            onPageChange(page);
+            return;
+        }
 
         const params = new URLSearchParams(searchParams.toString());
         if (page <= 1) {
@@ -102,6 +113,11 @@ export default function BlogListingInfoBar({
     const handlePerPageSelect = (count: number) => {
         setIsPerPageOpen(false);
         if (count === blogsPerPage) return;
+
+        if (onPerPageChange) {
+            onPerPageChange(count);
+            return;
+        }
 
         const params = new URLSearchParams(searchParams.toString());
         if (count === 12) {
@@ -155,7 +171,7 @@ export default function BlogListingInfoBar({
                             setIsPageOpen(false);
                         }}
                         aria-label="Blogs per page"
-                        className="bg-transparent text-white text-xs sm:text-sm font-medium border border-[#23425B] hover:border-[#386488] focus:border-[#E7C268] rounded-[4px] pl-3 pr-2 py-1 flex items-center gap-2 transition-all   cursor-pointer select-none"
+                        className="bg-transparent text-white text-xs sm:text-sm font-medium border border-[#23425B] hover:border-[#386488] focus:border-[#E7C268] rounded-[8px] pl-3 pr-2 py-1 flex items-center gap-2 transition-all   cursor-pointer select-none"
                     >
                         <span>{blogsPerPage}</span>
                         <ChevronDown
@@ -170,7 +186,7 @@ export default function BlogListingInfoBar({
 
                     {/* Per Page Dropdown Menu */}
                     {isPerPageOpen && (
-                        <div className="absolute right-0 top-full mt-1.5 z-50 w-24 bg-[#071726] border border-[#23425B] rounded-[4px]   py-1 overflow-hidden">
+                        <div className="absolute right-0 top-full mt-1.5 z-50 w-24 bg-[#071726] border border-[#23425B] rounded-[8px] overflow-hidden">
                             {[12, 24, 36, 48].map((count) => {
                                 const isSelected = count === blogsPerPage;
                                 return (
@@ -211,23 +227,27 @@ export default function BlogListingInfoBar({
                                 setIsPerPageOpen(false);
                             }}
                             aria-label="Select page"
-                            className="bg-transparent text-white text-xs sm:text-sm font-semibold border border-[#23425B] hover:border-[#386488] focus:border-[#E7C268] rounded-[4px] pl-3 pr-2 py-1 flex items-center gap-2 transition-all  cursor-pointer select-none"
+                            className="bg-transparent text-white text-xs sm:text-sm font-semibold border border-[#23425B] hover:border-[#386488] focus:border-[#E7C268] rounded-[8px] pl-3 pr-2 py-1 flex items-center gap-2 transition-all cursor-pointer select-none"
                         >
                             <span>{currentPage}</span>
-                            <ChevronDown
-                                className={`w-3.5 h-3.5 text-[#93B9D9] transition-transform duration-200 ${
-                                    isPageOpen
-                                        ? "rotate-180 text-[#E7C268]"
-                                        : ""
-                                }`}
-                            />
+                            {isLoading ? (
+                                <Loader2 className="w-3.5 h-3.5 animate-spin text-[#E7C268]" />
+                            ) : (
+                                <ChevronDown
+                                    className={`w-3.5 h-3.5 text-[#93B9D9] transition-transform duration-200 ${
+                                        isPageOpen
+                                            ? "rotate-180 text-[#E7C268]"
+                                            : ""
+                                    }`}
+                                />
+                            )}
                         </button>
                         <span className="text-white/80">of {totalPages}</span>
 
                         {/* Page Numbers Dropdown Menu with Dark Themed Scrollbar */}
                         {isPageOpen && (
                             <div
-                                className="absolute right-0 top-full mt-1.5 z-50 w-24 max-h-56 overflow-y-auto bg-[#071726] border border-[#23425B] rounded-[4px]   py-1 text-xs sm:text-sm"
+                                className="absolute right-0 top-full mt-1.5 z-50 w-24 max-h-56 overflow-y-auto bg-[#071726] border border-[#23425B] rounded-[8px]    text-xs sm:text-sm"
                                 style={{
                                     scrollbarWidth: "thin",
                                     scrollbarColor: "#23425B #071726",

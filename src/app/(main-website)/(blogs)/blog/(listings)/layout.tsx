@@ -14,7 +14,10 @@ type Props = {
 const HIDE_CATEGORIES: string[] = ["uncategorized"];
 
 const layout = async ({ children }: Props) => {
-    const allCategories = await getBlogService().getAllBlogCategories();
+    const [allCategories, initialData] = await Promise.all([
+        getBlogService().getAllBlogCategories(),
+        getBlogService().getAllBlogsByPerPageOrCategorySlug(1, 1),
+    ]);
 
     const categories = (allCategories || [])
         .filter(
@@ -25,6 +28,7 @@ const layout = async ({ children }: Props) => {
             id: cat.id || idx,
             name: cat.name,
             slug: cat.slug,
+            count: typeof cat.count === "number" ? cat.count : undefined,
         }));
 
     return (
@@ -37,12 +41,13 @@ const layout = async ({ children }: Props) => {
                         <CategoryPills
                             categories={categories}
                             title="Categories"
+                            totalBlogsCount={initialData?.totalBlogs}
                         />
                         {children}
                     </main>
 
                     {/* RIGHT SIDEBAR */}
-                    <aside className="w-full lg:w-[330px] xl:w-[350px] flex-shrink-0 order-2 h-fit">
+                    <aside className="w-full lg:w-[330px] xl:w-[350px] flex-shrink-0 order-2 lg:self-stretch">
                         <CommonBlogRightSidebar />
                     </aside>
                 </div>

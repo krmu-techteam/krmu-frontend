@@ -7,7 +7,7 @@ const CommonBlogRightSidebar = async () => {
     const recentPosts = await getBlogService().getRecentPosts();
 
     return (
-        <aside className="w-full flex flex-col gap-6 font-poppins">
+        <aside className="w-full flex flex-col gap-6 font-poppins h-full">
             {/* Widget 1: Counsellors Online Card */}
             <div className="bg-[#071726] rounded-[8px] h-[169px] p-5 relative overflow-hidden text-white font-poppins flex flex-col justify-between">
                 {/* Left Bottom Red Gradient Glow */}
@@ -71,15 +71,15 @@ const CommonBlogRightSidebar = async () => {
                 </a>
             </div>
 
-            {/* Widget 3: Recent Post Card */}
-            <div className="bg-[#061623]  rounded-[8px] p-4 sm:p-5 text-white">
-                <h4 className="text-lg sm:text-xl font-medium text-white mb-4 tracking-tight font-poppins">
+            {/* Widget 3: Sticky Recent Post Card (10 posts) */}
+            <div className="bg-[#061623] rounded-[8px] p-4 sm:p-5 text-white lg:sticky lg:top-24 border border-white/10 max-h-[calc(100vh-120px)] overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-[#071726] [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb:hover]:bg-[#E7C268] [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.2)_#071726]">
+                <h4 className="text-lg sm:text-xl font-medium text-white mb-4 tracking-tight font-poppins sticky top-0 bg-[#061623] pb-1 z-10">
                     Recent Post
                 </h4>
 
                 <div className="flex flex-col gap-3">
                     {recentPosts && recentPosts.length > 0 ? (
-                        recentPosts.slice(0, 5).map((post, i) => (
+                        recentPosts.slice(0, 10).map((post, i) => (
                             <Link
                                 key={post?.id || i}
                                 href={`/blog/${post?.slug}`}

@@ -8,7 +8,7 @@ const SingleBlogCategorySidebar = async () => {
     const HIDE_CATEGORIES: string[] = ["uncategorized"];
 
     return (
-        <aside className="w-full flex flex-col gap-6 font-poppins">
+        <aside className="w-full flex flex-col gap-6 font-poppins h-full">
             {/* Widget 1: Scholarship Banner Image */}
             <div className="w-full relative rounded-[8px] overflow-hidden">
                 <a
@@ -28,13 +28,13 @@ const SingleBlogCategorySidebar = async () => {
                 </a>
             </div>
 
-            {/* Widget 2: Pill-styled Categories Widget */}
-            <div className=" border border-[#23425B] rounded-[8px] p-5 text-white font-poppins">
-                <h3 className="text-[22px] font-medium text-white mb-5 tracking-tight font-sans">
+            {/* Widget 2: Sticky Pill-styled Categories Widget */}
+            <div className="border border-[#23425B] rounded-[8px] p-4 sm:p-4.5 text-white font-poppins lg:sticky lg:top-24">
+                <h3 className="text-[19px] sm:text-[20px] font-medium text-white mb-3.5 tracking-tight font-sans">
                     Categories
                 </h3>
 
-                <div className="flex flex-col items-start gap-2">
+                <div className="flex flex-wrap gap-2">
                     {allCategories && allCategories.length > 0 ? (
                         allCategories
                             .filter(
@@ -48,12 +48,13 @@ const SingleBlogCategorySidebar = async () => {
                                 <Link
                                     key={cat?.id || i}
                                     href={`/blog/all-categories/${cat?.slug}`}
-                                    className="bg-[#001322] hover:bg-[#001322]/60 text-white text-[12px] font-normal px-5 py-2 rounded-full transition-colors inline-flex items-center"
+                                    className="bg-[#001322] hover:bg-[#001322]/80 hover:text-[#E7C268] border border-white/5 hover:border-[#E7C268]/40 text-white text-[12px] sm:text-[12.5px] font-normal px-3.5 py-1 rounded-full transition-colors inline-flex items-center leading-normal max-w-full text-left"
                                 >
                                     <span
                                         dangerouslySetInnerHTML={{
                                             __html: cat?.name || "",
                                         }}
+                                        className="break-words"
                                     />
                                 </Link>
                             ))

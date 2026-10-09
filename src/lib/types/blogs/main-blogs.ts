@@ -5,67 +5,69 @@ import { ImageAsset } from "../phd-programmes";
 export type MainBlogResponse = MainBlogs[];
 
 export interface MainBlogs {
-  id: number;
-  date: string;
-  slug: string;
-  title: {
-    rendered: string;
-  };
-  featured_media: number;
-  _embedded?: {
-    "wp:featuredmedia"?: Array<{ source_url?: string; alt_text?: string }>;
-    "wp:term"?: Array<Array<{ id?: number; name?: string; slug?: string }>>;
-    author?: Array<{
-      name?: string;
-      avatar_urls?: Record<string, string>;
-      acf?: {
-        profile_image?: number;
-      };
-    }>;
-  };
-  excerpt: {
-    rendered: string;
-  };
-  date_gmt: string;
+    id: number;
+    date: string;
+    slug: string;
+    title: {
+        rendered: string;
+    };
+    featured_media: number;
+    _embedded?: {
+        "wp:featuredmedia"?: Array<{ source_url?: string; alt_text?: string }>;
+        "wp:term"?: Array<Array<{ id?: number; name?: string; slug?: string }>>;
+        author?: Array<{
+            name?: string;
+            slug?: string;
+            avatar_urls?: Record<string, string>;
+            acf?: {
+                profile_name?: string;
+                profile_image?: number;
+            };
+        }>;
+    };
+    excerpt: {
+        rendered: string;
+    };
+    date_gmt: string;
 }
 
 export type BlogSEOShareImage = {
-  id: number;
-  documentId: string;
-  url: string;
+    id: number;
+    documentId: string;
+    url: string;
 };
 
 export type BlogSEO = {
-  id: number;
-  metaTitle: string;
-  metaDescription: string;
-  canonical: string | null;
-  metaKeyword: string | null;
-  noIndex: boolean;
-  tags: string | null;
-  shareImage: ImageAsset | null;
-  title?: string | null;
+    id: number;
+    metaTitle: string;
+    metaDescription: string;
+    canonical: string | null;
+    metaKeyword: string | null;
+    noIndex: boolean;
+    tags: string | null;
+    shareImage: ImageAsset | null;
+    title?: string | null;
 };
 
 export type BlogData = {
-  id: number;
-  documentId: string;
-  Title: string;
-  blog_seo: BlogSEO;
+    id: number;
+    documentId: string;
+    Title: string;
+    blog_seo: BlogSEO;
 };
 
 export type BlogCategoryData = {
-  id: number;
-  documentId: string;
-  Title: string;
-  blog_category_seo: BlogSEO;
+    id: number;
+    documentId: string;
+    Title: string;
+    blog_category_seo: BlogSEO;
 };
 
 export type BlogPageSEOResponse = {
-  data: BlogData;
-  meta: Record<string, unknown>;
+    data: BlogData;
+    meta: Record<string, unknown>;
 };
 export type BlogCategoryPageSEOResponse = {
-  data: BlogCategoryData;
-  meta: Record<string, unknown>;
+    data: BlogCategoryData;
+    meta: Record<string, unknown>;
 };

@@ -1,6 +1,15 @@
 import Image from "next/image";
 import NoPaperFormsWidget from "../components/NoPaperFormsWidget";
-import { checkImage } from "../components/CommonBlogCard";
+
+const checkImage = async (url: string | null): Promise<boolean> => {
+    if (!url) return false;
+    try {
+        const res = await fetch(url, { method: "HEAD" });
+        return res.ok;
+    } catch {
+        return false;
+    }
+};
 
 type SingleBlogProps = {
     title: string;

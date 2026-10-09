@@ -20,12 +20,17 @@ const page = async ({ params }: Props) => {
     const authData = authInfo[0];
     const AuthACF = authData?.acf;
     const AuthorImgId = AuthACF?.profile_image;
-
-    const AuthImgUrl = await getBlogService().getBlogImageById(AuthorImgId);
     const AuthId = authData?.id;
     const AuthName = AuthACF?.profile_name || authData?.name || "";
     const AuthDesg = AuthACF?.profile_position || "";
     const AuthAbout = AuthACF?.profile_about || "";
+
+    // Pre-load all posts with embedded images and total count in parallel on the server
+    const [AuthImgUrl, initialPosts, totalCount] = await Promise.all([
+        getBlogService().getBlogImageById(AuthorImgId),
+        getBlogService().getPostsByAuthId(AuthId, 1, 100),
+        getBlogService().getPostsCountByAuthId(AuthId),
+    ]);
 
     return (
         <main className="min-h-screen pt-[110px] md:pt-[140px] pb-16">
@@ -43,8 +48,12 @@ const page = async ({ params }: Props) => {
                 {/* Divider */}
                 <div className="w-full h-[1px] bg-white/10 mb-8" />
 
-                {/* Posts Grid with infinite scroll */}
-                <AuthorPosts authId={AuthId} />
+                {/* Posts Grid with preloaded cards */}
+                <AuthorPosts
+                    authId={AuthId}
+                    initialPosts={initialPosts}
+                    initialTotalCount={totalCount || initialPosts.length}
+                />
             </div>
         </main>
     );
