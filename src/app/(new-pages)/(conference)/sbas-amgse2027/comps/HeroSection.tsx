@@ -29,7 +29,7 @@ const HeroSection = () => {
                         </Link>
 
                         <Link
-                            href="/sbas-conference/#reg-fees"
+                            href="/sbas-amgse2027/#reg-fees"
                             className="border-2 border-[#bfc7bf] text-white rounded-md py-3.5 px-[22px] font-semibold text-center leading-[18px]"
                         >
                             View Registration Fees

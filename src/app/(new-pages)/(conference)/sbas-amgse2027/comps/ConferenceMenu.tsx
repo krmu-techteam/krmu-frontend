@@ -8,27 +8,27 @@ type confMenusType = {
 export const confMenus: confMenusType[] = [
     {
         label: "About",
-        link: "/sbas-conference/#about-krmu",
+        link: "/sbas-amgse2027/#about-krmu",
     },
     {
         label: "Tracks",
-        link: "/sbas-conference/#conf-tracks",
+        link: "/sbas-amgse2027/#conf-tracks",
     },
     {
         label: "Dates",
-        link: "/sbas-conference/#timeline-scroll",
+        link: "/sbas-amgse2027/#timeline-scroll",
     },
     {
         label: "Call for Abstracts",
-        link: "/sbas-conference/#callOfAbstract",
+        link: "/sbas-amgse2027/#callOfAbstract",
     },
     {
         label: "Fees",
-        link: "/sbas-conference/#reg-fees",
+        link: "/sbas-amgse2027/#reg-fees",
     },
     {
         label: "Committee",
-        link: "/sbas-conference/#steering-committee",
+        link: "/sbas-amgse2027/#steering-committee",
     },
 ];
 
