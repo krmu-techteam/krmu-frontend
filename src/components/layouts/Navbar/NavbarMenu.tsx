@@ -220,9 +220,15 @@ const NavbarMenu = ({ mainMenu }: Props) => {
             title: "Foundry",
             url: "https://foundry.krmangalam.edu.in/",
         },
-        { id: "oth-3", title: "LMS", url: "https://lms.krmangalam.edu.in/" },
         {
-            id: "oth-4",
+            id: "oth-3",
+            title: "SWAYAM MOOCs",
+            url: "https://www.krmangalam.edu.in/swayam",
+        },
+        { id: "oth-4", title: "LMS", url: "https://lms.krmangalam.edu.in/" },
+
+        {
+            id: "oth-5",
             title: "ERP",
             url: "https://krmu.icloudems.com/corecampus/index.php",
         },

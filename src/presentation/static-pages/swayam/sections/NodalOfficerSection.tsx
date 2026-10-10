@@ -40,7 +40,7 @@ export const NodalOfficerSection: React.FC = () => {
                     <div className="shrink-0">
                         <div className="relative w-[200px] sm:w-[240px] md:w-[276px] max-w-full h-[202px] sm:h-[242px] md:h-[279px]">
                             <Image
-                                src="/swayam/logo-university.png"
+                                src="/swayam/logo-swayam-university.png"
                                 alt="K.R. Mangalam University Logo"
                                 fill
                                 unoptimized
@@ -106,7 +106,7 @@ export const NodalOfficerSection: React.FC = () => {
             </section>
 
             {/* Navigation Links Bar directly below Nodal Officer Section */}
-            <div className="w-full pt-6 sm:pt-7 px-4 sm:px-6 lg:px-8 font-poppins">
+            <div className="w-full bg-white pt-6 sm:pt-7 px-4 sm:px-6 lg:px-8 font-poppins">
                 <div className="max-w-[1260px] mx-auto border-b border-[#CCCCCC] pb-6 sm:pb-7 flex flex-wrap items-center justify-center gap-5 sm:gap-8 lg:gap-12">
                     {footerNavLinks.map((link, idx) =>
                         link.modalType ? (

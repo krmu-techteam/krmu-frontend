@@ -29,7 +29,7 @@ const DeanSection = ({
                                 width={358}
                                 height={465}
                                 alt={finalAlt}
-                                className="w-full h-auto object-contain -scale-x-100"
+                                className="w-full h-auto object-contain"
                             />
                         </div>
                         <div className="text-white w-full">
