@@ -158,7 +158,7 @@ export const organizingCommittee = [
     {
         name: "Dr. Neeraj Kumari",
         role: "Co-Convenor",
-        designation: "Assistant Professor- SBAS",
+        designation: "Organizing Secretary - SBAS",
         university: "K.R. Mangalam University",
         image: "https://www.krmangalam.edu.in/images/sbas-conference/committee/neeraj.jpg",
     },

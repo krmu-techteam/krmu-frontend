@@ -11,7 +11,7 @@ const publications = [
 const PublicationPartners = () => {
     return (
         <section
-            className="bg-[#ede9dd] pb-14 sm:pb-16 md:pb-20 xl:pb-24 px-5 sm:px-6 md:px-10 xl:px-0"
+            className="bg-[#F6F4EF] pb-14 sm:pb-16 md:pb-20 xl:pb-24 px-5 sm:px-6 md:px-10 xl:px-0"
             id="publication-partners"
         >
             <div className="max-w-6xl mx-auto">
@@ -19,7 +19,7 @@ const PublicationPartners = () => {
                 <div className="border-t border-[#D1C9B8] mb-10 sm:mb-14" />
 
                 {/* Section Header */}
-                <div className="text-center space-y-3 mb-8 sm:mb-10 max-w-3xl mx-auto">
+                <div className="text-left space-y-3 mb-8 sm:mb-10">
                     <h4 className="text-2xl sm:text-3xl font-bold font-lora text-[#1c2822] leading-tight">
                         Publication Partners
                     </h4>
@@ -37,9 +37,9 @@ const PublicationPartners = () => {
                     {publications.map((book, index) => (
                         <div
                             key={book}
-                            className="border border-[#BFA878] hover:border-[#1C2822] rounded-[10px] p-4 flex items-center gap-3.5 bg-transparent transition-all group"
+                            className="border border-[#BFA878] rounded-[10px] p-4 flex items-center gap-3.5 bg-transparent transition-all group"
                         >
-                            <span className="shrink-0 w-7 h-7 rounded-full border border-[#A9812F] text-[#A9812F] text-xs font-bold flex items-center justify-center group-hover:bg-[#A9812F] group-hover:text-white transition-colors">
+                            <span className="shrink-0 w-7 h-7 rounded-full border border-[#A9812F] text-[#A9812F] text-xs font-bold flex items-center justify-center">
                                 {index + 1}
                             </span>
 

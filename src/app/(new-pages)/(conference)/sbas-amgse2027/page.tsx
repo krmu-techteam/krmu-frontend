@@ -20,6 +20,7 @@ const page = () => {
             <ConferenceMenu />
             <AboutTheConference />
             <AboutKRMU />
+            <PublicationPartners />
             <ConferenceTracks />
             <Timeline />
             <CallForPapers />
@@ -28,7 +29,7 @@ const page = () => {
             <ConferenceSteeringCommittee2 />
             {/* <OrganizingCommitttee /> */}
             <ConferenceCommittees />
-            <PublicationPartners />
+
             <ConferenceFooter />
         </main>
     );
