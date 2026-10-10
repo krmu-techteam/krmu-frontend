@@ -37,7 +37,7 @@ const HeroSection = () => {
                             View Registration Fees
                         </Link>
                         <Link
-                            href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/AMGSE_2027_Brochure_60dcc4e1aa.pdf"
+                            href="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/AMGSE_2027_Brochure_1_ea80a3a526.pdf"
                             className="border-2 border-[#bfc7bf] text-white rounded-md py-3.5 px-[22px] font-semibold text-center leading-[18px]"
                             target="_blank"
                         >
