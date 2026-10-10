@@ -89,7 +89,7 @@ const RegistrationFee = () => {
                                 </td>
 
                                 <td className="px-4 sm:px-6 py-3.5 sm:py-4 text-sm text-[#37413D]">
-                                    ₹4,000
+                                    ₹5,000
                                 </td>
 
                                 <td className="px-4 sm:px-6 py-3.5 sm:py-4 text-sm text-[#37413D]">

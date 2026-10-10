@@ -12,7 +12,7 @@ const ConferenceFooter = () => {
                 </p>
 
                 <p className="text-[11px] sm:text-xs text-[#99A199]">
-                    21–23 January 2027
+                    21-23 January 2027
                 </p>
             </div>
         </section>

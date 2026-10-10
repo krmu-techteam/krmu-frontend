@@ -9,6 +9,7 @@ import ConferenceSteeringCommittee2 from "./comps/ConferenceSteeringCommittee2";
 import ConferenceTracks from "./comps/ConferenceTracks";
 import HeroSection from "./comps/HeroSection";
 import OrganizingCommitttee from "./comps/OrganizingCommitttee";
+import PublicationPartners from "./comps/PublicationPartners";
 import RegistrationFee from "./comps/RegistrationFee";
 import Timeline from "./comps/Timeline";
 
@@ -25,8 +26,9 @@ const page = () => {
             <RegistrationFee />
             <ConferenceSteeringCommittee />
             <ConferenceSteeringCommittee2 />
-            <OrganizingCommitttee />
+            {/* <OrganizingCommitttee /> */}
             <ConferenceCommittees />
+            <PublicationPartners />
             <ConferenceFooter />
         </main>
     );
