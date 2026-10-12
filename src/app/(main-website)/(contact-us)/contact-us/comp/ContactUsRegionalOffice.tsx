@@ -1,7 +1,4 @@
 import Link from "next/link";
-import { FaPhoneAlt } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
 
 const ContactUsRegionalOffice = () => {
     return (
