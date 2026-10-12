@@ -1,13 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Roboto_Condensed } from "next/font/google";
+import { robotoCondensed } from "@/lib/fonts";
 import Image from "next/image";
-
-const robotoCondensed = Roboto_Condensed({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "700"],
-});
 
 const BtechCSERoboticsVideo = () => {
     const [playVideo, setPlayVideo] = useState(false);

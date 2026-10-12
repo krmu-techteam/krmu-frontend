@@ -1,12 +1,4 @@
-import { Fraunces, Poppins } from "next/font/google";
+import { fraunces, poppins } from "@/lib/fonts";
 
-export const inter = Poppins({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    display: "swap",
-});
-
-export const fraunces = Fraunces({
-    subsets: ["latin"],
-    display: "swap",
-});
+export const inter = poppins;
+export { fraunces };

@@ -1,16 +1,7 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Inter } from "next/font/google";
+import { instrumentSerif } from "@/lib/fonts";
 
 import "./SEMCEProgStyle.css";
-
-// import { Button } from "@/components/ui/button";
-
-const instrumentSerif = Instrument_Serif({
-    subsets: ["latin"],
-    weight: "400",
-    style: ["normal", "italic"], // optional
-    variable: "--font-instrument-serif", // optional (for tailwind)
-});
 
 export const metadata: Metadata = {
     title: "School of Emerging Media and Creator Economy | KRMU",

@@ -1,56 +1,16 @@
 import type { Metadata } from "next";
 import {
-    Faustina,
-    Fraunces,
-    Inter,
-    Playfair_Display,
-    Poppins,
-    Sofia_Sans_Condensed,
-} from "next/font/google";
+    faustina,
+    fraunces,
+    inter,
+    playfair,
+    poppins,
+    sofiaSansCondensed,
+} from "@/lib/fonts";
 import "./(main-website)/globals.css";
 import Script from "next/script";
 import { WebVitals } from "@/components/common/WebVitals";
 import { ServerSpeedTracker } from "@/components/common/ServerSpeedTracker";
-
-const poppins = Poppins({
-    weight: ["300", "400", "500", "600", "700"],
-    subsets: ["latin"],
-    display: "swap",
-    variable: "--font-poppins",
-});
-
-const playfair = Playfair_Display({
-    subsets: ["latin"],
-    display: "swap",
-    variable: "--font-serif",
-});
-
-const inter = Inter({
-    subsets: ["latin"],
-    display: "swap",
-    variable: "--font-inter",
-});
-
-const fraunces = Fraunces({
-    subsets: ["latin"],
-    display: "swap",
-    preload: false,
-    variable: "--font-fraunces",
-});
-
-const sofiaSansCondensed = Sofia_Sans_Condensed({
-    subsets: ["latin"],
-    display: "swap",
-    preload: false,
-    variable: "--font-sofia-sans-condensed",
-});
-
-const faustina = Faustina({
-    subsets: ["latin"],
-    display: "swap",
-    preload: false,
-    variable: "--font-faustina",
-});
 
 export const metadata: Metadata = {
     title: "K.R. Mangalam University | Best University in Gurgaon, Delhi NCR",

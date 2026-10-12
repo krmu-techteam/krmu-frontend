@@ -1,9 +1,5 @@
 import { Minus } from "lucide-react";
-import { Newsreader } from "next/font/google";
-
-const newsreader = Newsreader({
-    subsets: ["latin"],
-});
+import { newsreader } from "@/lib/fonts";
 
 const Registration = () => {
     return (

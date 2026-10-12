@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { inter } from "@/lib/fonts";
 import SEMCEHeader from "./comp/SEMCEHeader";
 import "./SEMCEStyle.css";
-
-// import { Button } from "@/components/ui/button";
-
-const inter = Inter({
-    weight: ["300", "400", "500", "600", "700"],
-    subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
     title: "School of Emerging Media and Creator Economy | KRMU",

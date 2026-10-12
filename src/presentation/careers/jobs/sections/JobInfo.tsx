@@ -1,4 +1,4 @@
-import { Raleway } from "next/font/google";
+import { raleway } from "@/lib/fonts";
 
 type Props = {
     content: string;
@@ -7,13 +7,6 @@ type Props = {
     jobExperience: string;
     jobLocation: string;
 };
-
-const raleway = Raleway({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "600", "700"],
-    variable: "--font-raleway",
-    display: "swap",
-});
 
 const JobInfo = ({
     content,

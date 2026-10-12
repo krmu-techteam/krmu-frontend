@@ -1,4 +1,4 @@
-import { Poppins } from "next/font/google";
+import { poppins } from "@/lib/fonts";
 import HeroSection from "./comps/HeroSection";
 import ConnectingEligibility from "./comps/ConnectingEligibility";
 import BtechCSERoboticsVideo from "./comps/BtechCSERoboticsVideo";
@@ -15,11 +15,6 @@ import Scholarship2026 from "./comps/Scholarship2026";
 import FAQ from "./comps/FAQ";
 import ExploreOtherProgramme from "./comps/ExploreOtherProgramme";
 import LookingToSecure from "./comps/LookingToSecure";
-
-const poppins = Poppins({
-    subsets: ["latin"],
-    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 const BTechCSERoboticsAI = () => {
     return (

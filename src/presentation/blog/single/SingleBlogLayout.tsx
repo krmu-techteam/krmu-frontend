@@ -1,5 +1,5 @@
 import React from "react";
-import { Raleway } from "next/font/google";
+import { raleway } from "@/lib/fonts";
 import SingleBlogContent from "./SingleBlogContent";
 import SingleBlogCategorySidebar from "./SingleBlogCategorySidebar";
 import SingleBlogCarousel from "./SingleBlogCarousel";
@@ -7,13 +7,6 @@ import SingleBlogHeroAuthor from "./SingleBlogHeroAuthor";
 import { Eye } from "lucide-react";
 import { generateRealisticViews } from "@/features/blog";
 import Link from "next/link";
-
-const raleway = Raleway({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    display: "swap",
-    fallback: ["Arial", "Helvetica", "sans-serif"],
-});
 
 type Props = {
     content: string;
