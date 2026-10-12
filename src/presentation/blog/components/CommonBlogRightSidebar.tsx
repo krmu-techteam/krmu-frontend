@@ -87,7 +87,7 @@ const CommonBlogRightSidebar = async () => {
             {/* STICKY CONTAINER: BOTH BANNER & RECENT POSTS STICKY TOGETHER (1024px, 1280px, 1440px) */}
             <div className="lg:sticky lg:top-20 xl:top-24 flex flex-col gap-3 xl:gap-4">
                 {/* Widget 2: Aside Banner Graphic Image (Proportionally adapted height for 1024, 1280, 1440) */}
-                <div className="w-full relative rounded-[8px] overflow-hidden flex-shrink-0 max-h-[270px] lg:max-h-[550px]">
+                <div className="w-full relative rounded-[8px] overflow-hidden flex-shrink-0 max-h-[600px] lg:max-h-[800px]">
                     <a
                         href="https://admissions.krmangalam.edu.in/"
                         target="_blank"
@@ -95,7 +95,7 @@ const CommonBlogRightSidebar = async () => {
                         className="block w-full h-full"
                     >
                         <Image
-                            src="/images/blog/aside/banner.jpg"
+                            src="/images/blog/aside/right-side-pannel.jpg"
                             alt="Why Wait For Success - Up to 100% Scholarships"
                             width={380}
                             height={570}
