@@ -549,6 +549,22 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
         bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_agriculture_58b77de3e4.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
+    "Bachelor-of-Emergency-Medical-Technologist": {
+        ...defaultCinematicConfig,
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_agriculture_58b77de3e4.jpg",
+        bgPosition: "70% top",
+    } as HeroConfig,
+    "Bachelor-of-Respiratory-Technology": {
+        ...defaultCinematicConfig,
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bhmct_hotel_management_c2ce005918.jpg",
+        bgPosition: "70% top",
+    } as HeroConfig,
+    "b-sc-hons-cardiovascular-technology-with-academic-industry-support-of-emversity":
+        {
+            ...defaultCinematicConfig,
+            bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bachelor_of_education_b_ed_7ee9219acf.jpg",
+            bgPosition: "70% top",
+        } as HeroConfig,
 };
 
 export const DEFAULT_LAB_IMAGES = [

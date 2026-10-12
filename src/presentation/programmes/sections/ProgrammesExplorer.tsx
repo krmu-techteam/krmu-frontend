@@ -91,38 +91,69 @@ const zenithProgrammes: ZenithProgrammeItem[] = [
 ];
 
 const schoolSlugOrderMap: Record<string, number> = {
-    "zenith-ai": 1,
-    soet: 2,
-    somc: 3,
-    sols: 4,
-    smas: 5,
-    sprs: 6,
-    sola: 7,
-    soad: 8,
-    sbas: 9,
-    semce: 10,
-    sohmct: 11,
-    soed: 12,
-    soas: 13,
+    "zenith-ai": 0,
+    soet: 1,
+    "school-of-engineering-technology": 1,
+    "school-of-engineering-and-technology": 1,
+    somc: 2,
+    "school-of-management-commerce": 2,
+    "school-of-management-and-commerce": 2,
+    sols: 3,
+    "school-of-legal-studies": 3,
+    smas: 4,
+    "school-of-medical-allied-sciences": 4,
+    "school-of-medical-and-allied-sciences": 4,
+    sprs: 5,
+    soprs: 5,
+    "school-of-physiotherapy-and-rehabilitation-sciences": 5,
+    "school-of-physiotherapy-rehabilitation-sciences": 5,
+    sola: 6,
+    sla: 6,
+    "school-of-liberal-arts": 6,
+    soad: 7,
+    "school-of-architecture-design": 7,
+    "school-of-architecture-and-design": 7,
+    sbas: 8,
+    "school-of-basic-applied-sciences": 8,
+    "school-of-basic-and-applied-sciences": 8,
+    semce: 9,
+    "school-of-emerging-media-creator-economy": 9,
+    "school-of-emerging-media-and-creator-economy": 9,
+    sohmct: 10,
+    sohm: 10,
+    "school-of-hotel-management-catering-technology": 10,
+    "school-of-hotel-management-and-catering-technology": 10,
+    soed: 11,
+    soe: 11,
+    "school-of-education": 11,
+    soas: 12,
+    "school-of-agricultural-sciences": 12,
+    "school-of-agriculture-sciences": 12,
 };
 
 const schoolOrderMap: Record<string, number> = {
-    "Zenith School of AI": 1,
-    "School of Engineering & Technology": 2,
-    "School of Management & Commerce": 3,
-    "School of Management and Commerce": 3,
-    "School of Legal Studies": 4,
-    "School of Medical & Allied Sciences": 5,
-    "School of Physiotherapy and Rehabilitation Sciences": 6,
-    "School of Liberal Arts": 7,
-    "School of Liberal Arts ": 7,
-    "School of Architecture & Design": 8,
-    "School of Basic & Applied Sciences": 9,
-    "School of Emerging Media & Creator Economy": 10,
-    "School of Emerging Media and Creator Economy": 10,
-    "School of Hotel Management & Catering Technology": 11,
-    "School of Education": 12,
-    "School of Agricultural Sciences": 13,
+    "Zenith School of AI": 0,
+    "School of Engineering & Technology": 1,
+    "School of Engineering and Technology": 1,
+    "School of Management & Commerce": 2,
+    "School of Management and Commerce": 2,
+    "School of Legal Studies": 3,
+    "School of Medical & Allied Sciences": 4,
+    "School of Medical and Allied Sciences": 4,
+    "School of Physiotherapy and Rehabilitation Sciences": 5,
+    "School of Liberal Arts": 6,
+    "School of Liberal Arts ": 6,
+    "School of Architecture & Design": 7,
+    "School of Architecture and Design": 7,
+    "School of Basic & Applied Sciences": 8,
+    "School of Basic and Applied Sciences": 8,
+    "School of Emerging Media & Creator Economy": 9,
+    "School of Emerging Media and Creator Economy": 9,
+    "School of Hotel Management & Catering Technology": 10,
+    "School of Hotel Management and Catering Technology": 10,
+    "School of Education": 11,
+    "School of Agricultural Sciences": 12,
+    "School of Agricultural Sciences ": 12,
 };
 
 function getSchoolRank(school: {
@@ -130,14 +161,159 @@ function getSchoolRank(school: {
     school_category?: { slug?: string };
 }): number {
     const slug = school?.school_category?.slug?.toLowerCase().trim();
+    if (slug === ZENITH_SLUG || slug?.includes("zenith")) return 0;
+    const name = school?.schoolname?.trim();
+    if (name?.toLowerCase().includes("zenith")) return 0;
+
     if (slug && schoolSlugOrderMap[slug] !== undefined) {
         return schoolSlugOrderMap[slug];
     }
-    const name = school?.schoolname?.trim();
     if (name && schoolOrderMap[name] !== undefined) {
         return schoolOrderMap[name];
     }
+    const searchStr = `${slug || ""} ${name || ""}`.toLowerCase();
+    if (searchStr.includes("engineering") || searchStr.includes("soet"))
+        return 1;
+    if (
+        searchStr.includes("management") ||
+        searchStr.includes("commerce") ||
+        searchStr.includes("somc")
+    )
+        return 2;
+    if (
+        searchStr.includes("legal") ||
+        searchStr.includes("law") ||
+        searchStr.includes("sols")
+    )
+        return 3;
+    if (
+        searchStr.includes("medical") ||
+        searchStr.includes("pharm") ||
+        searchStr.includes("smas")
+    )
+        return 4;
+    if (searchStr.includes("physiotherapy") || searchStr.includes("sprs"))
+        return 5;
+    if (
+        searchStr.includes("liberal") ||
+        searchStr.includes("sola") ||
+        searchStr.includes("sla")
+    )
+        return 6;
+    if (
+        searchStr.includes("architecture") ||
+        searchStr.includes("design") ||
+        searchStr.includes("soad")
+    )
+        return 7;
+    if (
+        searchStr.includes("basic") ||
+        searchStr.includes("applied") ||
+        searchStr.includes("sbas")
+    )
+        return 8;
+    if (
+        searchStr.includes("media") ||
+        searchStr.includes("creator") ||
+        searchStr.includes("semce")
+    )
+        return 9;
+    if (
+        searchStr.includes("hotel") ||
+        searchStr.includes("catering") ||
+        searchStr.includes("sohm")
+    )
+        return 10;
+    if (searchStr.includes("education") || searchStr.includes("soed"))
+        return 11;
+    if (searchStr.includes("agri") || searchStr.includes("soas")) return 12;
+
     return Number.MAX_SAFE_INTEGER;
+}
+
+function getProgrammeSchoolRank(item: ProgrammeItem): number {
+    const slug = (
+        ("school_category" in item && (item as any).school_category?.slug) ||
+        ("programmeslug" in item &&
+        (item as any).programmeslug?.includes("zenith")
+            ? ZENITH_SLUG
+            : "") ||
+        ""
+    )
+        .toLowerCase()
+        .trim();
+
+    if (slug && schoolSlugOrderMap[slug] !== undefined) {
+        return schoolSlugOrderMap[slug];
+    }
+
+    const name = (
+        ("school_category" in item && (item as any).school_category?.name) ||
+        ""
+    ).trim();
+
+    if (name && schoolOrderMap[name] !== undefined) {
+        return schoolOrderMap[name];
+    }
+
+    const searchStr = `${slug} ${name}`.toLowerCase();
+    if (searchStr.includes("engineering") || searchStr.includes("soet"))
+        return 1;
+    if (
+        searchStr.includes("management") ||
+        searchStr.includes("commerce") ||
+        searchStr.includes("somc")
+    )
+        return 2;
+    if (
+        searchStr.includes("legal") ||
+        searchStr.includes("law") ||
+        searchStr.includes("sols")
+    )
+        return 3;
+    if (
+        searchStr.includes("medical") ||
+        searchStr.includes("pharm") ||
+        searchStr.includes("smas")
+    )
+        return 4;
+    if (searchStr.includes("physiotherapy") || searchStr.includes("sprs"))
+        return 5;
+    if (
+        searchStr.includes("liberal") ||
+        searchStr.includes("sola") ||
+        searchStr.includes("sla")
+    )
+        return 6;
+    if (
+        searchStr.includes("architecture") ||
+        searchStr.includes("design") ||
+        searchStr.includes("soad")
+    )
+        return 7;
+    if (
+        searchStr.includes("basic") ||
+        searchStr.includes("applied") ||
+        searchStr.includes("sbas")
+    )
+        return 8;
+    if (
+        searchStr.includes("media") ||
+        searchStr.includes("creator") ||
+        searchStr.includes("semce")
+    )
+        return 9;
+    if (
+        searchStr.includes("hotel") ||
+        searchStr.includes("catering") ||
+        searchStr.includes("sohm")
+    )
+        return 10;
+    if (searchStr.includes("education") || searchStr.includes("soed"))
+        return 11;
+    if (searchStr.includes("agri") || searchStr.includes("soas")) return 12;
+
+    return 999;
 }
 
 function formatSchoolDisplayName(name: string): string {
@@ -333,31 +509,45 @@ export function sortProgrammesByDegreeSequence(
     items: ProgrammeItem[],
     schoolSlug?: string
 ): ProgrammeItem[] {
-    const isSmas =
-        isSmasSchool(schoolSlug) ||
-        (items.length > 0 &&
-            items.some((it) => {
-                const s = (
-                    ("programmeslug" in it ? it.programmeslug : it.phdslug) ||
-                    ""
-                ).toLowerCase();
-                return (
-                    s === "dpharm" ||
-                    s === "bpharma" ||
-                    s === "bpharm-lateral-entry" ||
-                    s.includes("cardiovascular")
-                );
-            }));
+    const isSingleSmas =
+        schoolSlug &&
+        schoolSlug.toLowerCase() !== "all" &&
+        isSmasSchool(schoolSlug);
 
-    if (isSmas) {
+    if (isSingleSmas) {
         return [...items].sort(
             (a, b) => getSmasProgrammeRank(a) - getSmasProgrammeRank(b)
         );
     }
 
-    return [...items].sort(
-        (a, b) => getProgrammeDegreeRank(a) - getProgrammeDegreeRank(b)
-    );
+    return [...items].sort((a, b) => {
+        // 1. Degree Rank ("chota" UG = 1 first, then "uske upar" PG = 2, PhD = 3, Diploma = 4)
+        const degreeRankA = getProgrammeDegreeRank(a);
+        const degreeRankB = getProgrammeDegreeRank(b);
+
+        if (degreeRankA !== degreeRankB) {
+            return degreeRankA - degreeRankB;
+        }
+
+        // 2. School Rank (SOET -> SOMC -> SOLS -> SMAS -> SPRS -> SLA -> SOAD -> SBAS -> SEMCE -> SOHMCT -> SOED -> SOAS)
+        const schoolRankA = getProgrammeSchoolRank(a);
+        const schoolRankB = getProgrammeSchoolRank(b);
+
+        if (schoolRankA !== schoolRankB) {
+            return schoolRankA - schoolRankB;
+        }
+
+        // 3. For SMAS within same degree, keep internal SMAS sequence
+        const schoolSlugA = (
+            ("school_category" in a && (a as any).school_category?.slug) ||
+            ""
+        ).toLowerCase();
+        if (isSmasSchool(schoolSlugA)) {
+            return getSmasProgrammeRank(a) - getSmasProgrammeRank(b);
+        }
+
+        return 0;
+    });
 }
 
 interface ProgrammesExplorerProps {
