@@ -1,22 +1,8 @@
-import { Inter, Lora } from "next/font/google";
 import "./sbasconference.css";
 
 import HeaderWrapper from "@/components/layouts/Header/HeaderWrapper";
 import Footer from "@/components/layouts/Footer/Footer";
 import { Toaster } from "@/components/ui/sonner";
-const inter = Inter({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    variable: "--font-family-inter",
-    display: "swap",
-});
-
-const lora = Lora({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    variable: "--font-family-lora",
-    display: "swap",
-});
 
 export default function SBASCOnferenceLayout({
     children,
@@ -24,8 +10,8 @@ export default function SBASCOnferenceLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" className={`${inter.variable} ${lora.variable}`}>
-            <body className="antialiased">
+        <html lang="en">
+            <body className="antialiased font-inter">
                 <div id="main-header">
                     <HeaderWrapper />
                 </div>
