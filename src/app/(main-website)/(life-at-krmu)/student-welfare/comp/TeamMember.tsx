@@ -1,11 +1,6 @@
-import { Poppins } from "next/font/google";
 import Image from "next/image";
 
-const poppins = Poppins({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700"],
-    style: ["italic", "normal"],
-});
+const poppins = { className: "font-poppins" };
 
 const teamMembers = [
     {

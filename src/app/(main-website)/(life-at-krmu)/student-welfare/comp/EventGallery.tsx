@@ -1,6 +1,5 @@
 "use client";
 
-import { Playfair_Display } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
@@ -13,10 +12,7 @@ import {
 } from "@/components/ui/carousel";
 import { eventsData } from "./data";
 
-const playfair = Playfair_Display({
-    subsets: ["latin"],
-    weight: ["600", "700"],
-});
+const playfair = { className: "font-playfair font-serif" };
 
 export const EventGallery = () => {
     return (
