@@ -1,18 +1,5 @@
-import { Newsreader, Poppins } from "next/font/google";
+import { newsreader, poppins } from "@/lib/fonts";
 import "./trainers.css";
-
-const poppins = Poppins({
-    subsets: ["latin"],
-    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-    variable: "--font-poppins",
-    display: "swap",
-});
-
-const newsreader = Newsreader({
-    subsets: ["latin"],
-    variable: "--font-family-newsreader",
-    display: "swap",
-});
 
 export default function Trainerslayout({
     children,
