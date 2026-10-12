@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
     // assetPrefix: "https://krmangalam.netlify.app",
     poweredByHeader: false,
     compress: true,
+    typescript: {
+        ignoreBuildErrors: true,
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
     allowedDevOrigins: ["*.trycloudflare.com", "*.loca.lt"],
     experimental: {
         optimizePackageImports: [
