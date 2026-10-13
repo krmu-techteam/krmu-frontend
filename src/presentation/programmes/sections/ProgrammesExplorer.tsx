@@ -505,6 +505,101 @@ export function getSmasProgrammeRank(item: ProgrammeItem): number {
     return 100;
 }
 
+const SOMC_ORDER_SLUGS = [
+    // Undergraduate
+    "bba-hr",
+    "bba-hons-hr-research",
+    "bba-marketing",
+    "bba-hons-with-research-marketing",
+    "bba-finance",
+    "bba-hons-finance-research",
+    "bba-international-business",
+    "bba-hons-international-business-research",
+    "bba-travel-tourism-management",
+    "bba-hons-travel-tourism-research",
+    "bba-business-intelligence-and-analytics",
+    "bba-hons-hons-with-research-analytics",
+    "bba-entrepreneurship",
+    "bba-hons-entrepreneurship-research",
+    "bba-international-accounting-and-finance",
+    "bba-hons-international-accounting-and-finance-research",
+    "bba-logistics-supply-chain-management",
+    "bba-hons-logistics-supply-chain-management-research",
+    "bba-digital-marketing",
+    "bba-hons-hons-with-research-digital-marketing",
+    "bba-semester-abroad-uea-uk",
+    "bba-hons-semester-abroad-uea-uk",
+    "bcom-hons-2",
+    "bcom-hons-research",
+    "bcom-international-accounting-finance-acca-2",
+    "integrated-bba-mba",
+    "bcom-hons-international-accounting-finance-acca-research",
+    "bsc-hons-finance",
+    "bcom",
+    // Postgraduate
+    "mba-fintech",
+    "mba",
+    "mba-digital-marketing",
+    // Doctoral
+    "phd-management",
+    "phd-commerce",
+];
+
+export function isSomcSchool(schoolSlug?: string | null): boolean {
+    if (!schoolSlug) return false;
+    const s = schoolSlug.toLowerCase().trim();
+    return (
+        s === "somc" ||
+        s === "school-of-management-and-commerce" ||
+        s === "school-of-management-commerce" ||
+        s.includes("management") ||
+        s.includes("commerce")
+    );
+}
+
+export function getSomcProgrammeRank(item: ProgrammeItem): number {
+    const slug = (
+        ("programmeslug" in item ? item.programmeslug : item.phdslug) || ""
+    )
+        .toLowerCase()
+        .trim();
+    const title = (("title" in item ? item.title : item.heading) || "")
+        .toLowerCase()
+        .trim();
+
+    const idx = SOMC_ORDER_SLUGS.indexOf(slug);
+    if (idx !== -1) return idx + 1;
+
+    // Fallback matching for the Grant Thornton / Safexpress BBA programs
+    if (
+        slug.includes("international-accounting") ||
+        title.includes("international accounting")
+    ) {
+        if (
+            slug.includes("research") ||
+            slug.includes("hons") ||
+            title.includes("hons") ||
+            title.includes("research")
+        ) {
+            return 16;
+        }
+        return 15;
+    }
+    if (slug.includes("logistics") || title.includes("logistics")) {
+        if (
+            slug.includes("research") ||
+            slug.includes("hons") ||
+            title.includes("hons") ||
+            title.includes("research")
+        ) {
+            return 18;
+        }
+        return 17;
+    }
+
+    return 999;
+}
+
 export function sortProgrammesByDegreeSequence(
     items: ProgrammeItem[],
     schoolSlug?: string
@@ -544,6 +639,15 @@ export function sortProgrammesByDegreeSequence(
         ).toLowerCase();
         if (isSmasSchool(schoolSlugA)) {
             return getSmasProgrammeRank(a) - getSmasProgrammeRank(b);
+        }
+
+        // 4. For SOMC within same degree, keep internal SOMC sequence
+        if (isSomcSchool(schoolSlugA) || schoolRankA === 2) {
+            const somcRankA = getSomcProgrammeRank(a);
+            const somcRankB = getSomcProgrammeRank(b);
+            if (somcRankA !== somcRankB) {
+                return somcRankA - somcRankB;
+            }
         }
 
         return 0;

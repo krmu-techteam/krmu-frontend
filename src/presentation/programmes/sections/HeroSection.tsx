@@ -9,7 +9,7 @@ const HeroSection = () => {
                     {/* Background Image Container */}
                     <div className="relative w-full">
                         <Image
-                            src="/images/programme/hero/program-hero.jpg"
+                            src="/images/programme/hero/programme-hero-banner.jpg"
                             alt="Programs Hero Background"
                             width={1536}
                             height={500}
@@ -38,7 +38,7 @@ const HeroSection = () => {
                                 Programmes
                             </h1>
                             <div
-                                className="w-full max-w-[511px] h-[1px] my-2 sm:my-3"
+                                className="w-full max-w-[360px] h-[2px] my-2 sm:my-3"
                                 style={{
                                     background:
                                         "linear-gradient(90deg, #1A1A1A 0%, #FFFFFF 0.01%, #1A1A1A 100%)",

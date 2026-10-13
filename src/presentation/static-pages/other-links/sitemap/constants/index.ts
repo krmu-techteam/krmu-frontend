@@ -576,12 +576,12 @@ export const sitemapData: SitemapSection[] = [
                         href: "https://www.krmangalam.edu.in/programs/bba-international-accounting-and-finance",
                     },
                     {
-                        label: "BBA (Logistics & Supply Chain Management) with Academic Support of Safexpress",
-                        href: "https://www.krmangalam.edu.in/programs/bba-logistics-supply-chain-management",
-                    },
-                    {
                         label: "BBA (Hons. / Hons. with Research) International Accounting and Finance (ACCA – UK) with academic support of Grant Thornton",
                         href: "https://www.krmangalam.edu.in/programs/bba-hons-international-accounting-and-finance-research",
+                    },
+                    {
+                        label: "BBA (Logistics & Supply Chain Management) with Academic Support of Safexpress",
+                        href: "https://www.krmangalam.edu.in/programs/bba-logistics-supply-chain-management",
                     },
                     {
                         label: "BBA (Hons. / Hons. with Research) Logistics & Supply Chain Management with Academic Support of Safexpress",
