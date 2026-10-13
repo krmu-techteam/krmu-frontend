@@ -957,7 +957,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                                         {/* Right Column: Carousel */}
                                         <div className="col-span-4 pl-2 lg:pl-4 flex flex-col justify-center -mt-8 xl:-mt-10">
-                                            <div className="relative group w-full max-w-[420px] h-[410px] mx-auto">
+                                            <div className="relative group w-full max-w-[420px] mx-auto">
                                                 {/* White Ambient Shade behind Student Card */}
                                                 <div className="absolute -inset-8 sm:-inset-10 translate-y-6 z-0 pointer-events-none flex items-center justify-center">
                                                     <Image
@@ -1004,6 +1004,17 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                             )
                                                         )}
                                                     </Carousel>
+                                                </div>
+
+                                                <div className="mt-3 text-center relative z-20">
+                                                    <Link
+                                                        href="/placement-highlights"
+                                                        className="text-white hover:text-white/80 underline underline-offset-4 decoration-white hover:decoration-white/80 text-sm md:text-[15px] font-poppins font-medium inline-flex items-center gap-1 transition-colors"
+                                                        target="_blank"
+                                                    >
+                                                        Placement Highlights
+                                                        <ChevronRight className="w-4 h-4" />
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>

@@ -7,19 +7,35 @@ import {
 } from "@/components/ui/carousel";
 import { interviewSuccessStories } from "../constant";
 import InterviewSuccessStoryCard from "./InterviewSuccessStoryCard";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const InterviewSuccessStories = () => {
     return (
         <section className="py-10 md:py-20 px-5 xl:px-0">
             <div className="max-w-7xl mx-auto w-full font-poppins">
-                <div className="">
-                    <h5 className="text-[#7A1F2B] text-xs tracking-[2px] mb-2.5 uppercase">
-                        Interview
-                    </h5>
+                <div className="flex justify-between items-center">
+                    <div>
+                        <h5 className="text-[#7A1F2B] text-xs tracking-[2px] mb-2.5 uppercase">
+                            Interview
+                        </h5>
 
-                    <h3 className="text-4xl md:text-5xl font-semibold text-[#001836] mb-5 font-newsreader">
-                        Student Success Stories
-                    </h3>
+                        <h3 className="text-4xl md:text-5xl font-semibold text-[#001836] mb-5 font-newsreader">
+                            Student Success Stories
+                        </h3>
+                    </div>
+                    <div>
+                        <Link
+                            href="/placement-highlights"
+                            className="text-[#001836] underline inline-flex items-center gap-1 text-xs sm:text-sm w-fit whitespace-nowrap transition-transform duration-300 hover:translate-x-1"
+                        >
+                            View all Placement Highlights
+                            <ArrowRight
+                                size={16}
+                                className="sm:w-[18px] sm:h-[18px]"
+                            />
+                        </Link>
+                    </div>
                 </div>
                 <div className="relative mt-10">
                     <Carousel

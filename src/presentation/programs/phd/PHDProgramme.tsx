@@ -76,6 +76,7 @@ const PHDProgrammes = ({ phdData, slug }: Props) => {
             {phdData?.programmehighlight && (
                 <PHDProgrammeHighlight
                     highlightContent={phdData.programmehighlight}
+                    slug={slug || phdData?.phdslug}
                 />
             )}
 

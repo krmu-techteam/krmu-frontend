@@ -8,10 +8,186 @@ import Image from "next/image";
 
 type Props = {
     highlightContent: ProgrammeHighlight;
+    slug?: string;
 };
 
-const PHDProgrammeHighlight = ({ highlightContent }: Props) => {
+interface HighlightImageConfig {
+    src: string;
+    alt: string;
+}
+
+const PHD_HIGHLIGHT_IMAGES: Record<string, HighlightImageConfig> = {
+    "phd-in-chemistry": {
+        src: "/images/phd/highlights/phd-in-chemistry.webp",
+        alt: "Ph.D. in Chemistry Research Highlight",
+    },
+    "phd-chemistry": {
+        src: "/images/phd/highlights/phd-in-chemistry.webp",
+        alt: "Ph.D. in Chemistry Research Highlight",
+    },
+    "phd-in-commerce": {
+        src: "/images/phd/highlights/phd-in-commerce.webp",
+        alt: "Ph.D. in Commerce Research Highlight",
+    },
+    "phd-commerce": {
+        src: "/images/phd/highlights/phd-in-commerce.webp",
+        alt: "Ph.D. in Commerce Research Highlight",
+    },
+    "phd-in-computer-science-and-engineering": {
+        src: "/images/phd/highlights/phd-in-computer-science-and-engineering.webp",
+        alt: "Ph.D. in Computer Science and Engineering Research Highlight",
+    },
+    "phd-computer-science-engineering": {
+        src: "/images/phd/highlights/phd-in-computer-science-and-engineering.webp",
+        alt: "Ph.D. in Computer Science and Engineering Research Highlight",
+    },
+    "phd-computer-science-and-engineering": {
+        src: "/images/phd/highlights/phd-in-computer-science-and-engineering.webp",
+        alt: "Ph.D. in Computer Science and Engineering Research Highlight",
+    },
+    "phd-in-computer-science-engineering": {
+        src: "/images/phd/highlights/phd-in-computer-science-and-engineering.webp",
+        alt: "Ph.D. in Computer Science and Engineering Research Highlight",
+    },
+    "phd-cse": {
+        src: "/images/phd/highlights/phd-in-computer-science-and-engineering.webp",
+        alt: "Ph.D. in Computer Science and Engineering Research Highlight",
+    },
+    "phd-in-cse": {
+        src: "/images/phd/highlights/phd-in-computer-science-and-engineering.webp",
+        alt: "Ph.D. in Computer Science and Engineering Research Highlight",
+    },
+    "phd-in-economics": {
+        src: "/images/phd/highlights/phd-in-economics.webp",
+        alt: "Ph.D. in Economics Research Highlight",
+    },
+    "phd-economics": {
+        src: "/images/phd/highlights/phd-in-economics.webp",
+        alt: "Ph.D. in Economics Research Highlight",
+    },
+    "phd-in-education": {
+        src: "/images/phd/highlights/phd-in-education.webp",
+        alt: "Ph.D. in Education Research Highlight",
+    },
+    "phd-education": {
+        src: "/images/phd/highlights/phd-in-education.webp",
+        alt: "Ph.D. in Education Research Highlight",
+    },
+    "phd-in-english": {
+        src: "/images/phd/highlights/phd-in-english.webp",
+        alt: "Ph.D. in English Research Highlight",
+    },
+    "phd-english": {
+        src: "/images/phd/highlights/phd-in-english.webp",
+        alt: "Ph.D. in English Research Highlight",
+    },
+    "phd-english-literature-studies": {
+        src: "/images/phd/highlights/phd-in-english.webp",
+        alt: "Ph.D. in English Literature and Studies Research Highlight",
+    },
+    "phd-in-english-literature-studies": {
+        src: "/images/phd/highlights/phd-in-english.webp",
+        alt: "Ph.D. in English Literature and Studies Research Highlight",
+    },
+    "phd-in-forensic-science": {
+        src: "/images/phd/highlights/phd-in-forensic-science.webp",
+        alt: "Ph.D. in Forensic Science Research Highlight",
+    },
+    "phd-forensic-science": {
+        src: "/images/phd/highlights/phd-in-forensic-science.webp",
+        alt: "Ph.D. in Forensic Science Research Highlight",
+    },
+    "phd-in-journalism-and-mass-communication": {
+        src: "/images/phd/highlights/phd-in-journalism-and-mass-communication.webp",
+        alt: "Ph.D. in Journalism and Mass Communication Research Highlight",
+    },
+    "phd-journalism-mass-communication": {
+        src: "/images/phd/highlights/phd-in-journalism-and-mass-communication.webp",
+        alt: "Ph.D. in Journalism and Mass Communication Research Highlight",
+    },
+    "phd-in-journalism-mass-communication": {
+        src: "/images/phd/highlights/phd-in-journalism-and-mass-communication.webp",
+        alt: "Ph.D. in Journalism and Mass Communication Research Highlight",
+    },
+    "phd-journalism-and-mass-communication": {
+        src: "/images/phd/highlights/phd-in-journalism-and-mass-communication.webp",
+        alt: "Ph.D. in Journalism and Mass Communication Research Highlight",
+    },
+    "phd-in-law": {
+        src: "/images/phd/highlights/phd-in-law.webp",
+        alt: "Ph.D. in Law Research Highlight",
+    },
+    "phd-law": {
+        src: "/images/phd/highlights/phd-in-law.webp",
+        alt: "Ph.D. in Law Research Highlight",
+    },
+    "phd-in-management": {
+        src: "/images/phd/highlights/phd-in-management.webp",
+        alt: "Ph.D. in Management Research Highlight",
+    },
+    "phd-management": {
+        src: "/images/phd/highlights/phd-in-management.webp",
+        alt: "Ph.D. in Management Research Highlight",
+    },
+    "phd-in-mathematics": {
+        src: "/images/phd/highlights/phd-in-mathematics.webp",
+        alt: "Ph.D. in Mathematics Research Highlight",
+    },
+    "phd-mathematics": {
+        src: "/images/phd/highlights/phd-in-mathematics.webp",
+        alt: "Ph.D. in Mathematics Research Highlight",
+    },
+    "phd-in-pharmaceutical-sciences": {
+        src: "/images/phd/highlights/phd-in-pharmaceutical-sciences.webp",
+        alt: "Ph.D. in Pharmaceutical Sciences Research Highlight",
+    },
+    "phd-pharmaceutical-sciences": {
+        src: "/images/phd/highlights/phd-in-pharmaceutical-sciences.webp",
+        alt: "Ph.D. in Pharmaceutical Sciences Research Highlight",
+    },
+    "phd-in-pharmacy": {
+        src: "/images/phd/highlights/phd-in-pharmaceutical-sciences.webp",
+        alt: "Ph.D. in Pharmaceutical Sciences Research Highlight",
+    },
+    "phd-pharmacy": {
+        src: "/images/phd/highlights/phd-in-pharmaceutical-sciences.webp",
+        alt: "Ph.D. in Pharmaceutical Sciences Research Highlight",
+    },
+    "phd-in-physics": {
+        src: "/images/phd/highlights/phd-in-physics.webp",
+        alt: "Ph.D. in Physics Research Highlight",
+    },
+    "phd-physics": {
+        src: "/images/phd/highlights/phd-in-physics.webp",
+        alt: "Ph.D. in Physics Research Highlight",
+    },
+    "phd-in-psychology": {
+        src: "/images/phd/highlights/phd-in-psychology.webp",
+        alt: "Ph.D. in Psychology Research Highlight",
+    },
+    "phd-psychology": {
+        src: "/images/phd/highlights/phd-in-psychology.webp",
+        alt: "Ph.D. in Psychology Research Highlight",
+    },
+    "phd-mechanical-engineering": {
+        src: "/images/phd/highlights/phd-in-computer-science-and-engineering.webp",
+        alt: "Ph.D. in Mechanical Engineering Research Highlight",
+    },
+};
+
+const PHDProgrammeHighlight = ({ highlightContent, slug }: Props) => {
     if (!highlightContent) return null;
+
+    const normalizedSlug = slug ? slug.toLowerCase().trim() : "";
+    const highlightImage = (normalizedSlug &&
+        PHD_HIGHLIGHT_IMAGES[normalizedSlug]) ||
+        (normalizedSlug && {
+            src: `/images/phd/highlights/${normalizedSlug}.webp`,
+            alt: `${highlightContent?.heading || "Ph.D."} Research Highlight`,
+        }) || {
+            src: "/images/phd/workmens.webp",
+            alt: highlightContent?.heading || "Program Highlight",
+        };
 
     return (
         <section
@@ -22,12 +198,12 @@ const PHDProgrammeHighlight = ({ highlightContent }: Props) => {
                 {/* DARK CARD CONTAINER (#14233D) */}
                 <div className="bg-[#14233D] rounded-[10px] overflow-hidden flex flex-col lg:flex-row items-stretch">
                     {/* LEFT SIDE IMAGE (width: 420, full height flush) */}
-                    <div className="w-full lg:w-[420px] min-h-[260px] sm:min-h-[300px] lg:min-h-[340px] self-stretch relative shrink-0">
+                    <div className="w-full lg:w-[420px] min-h-[260px] sm:min-h-[300px] lg:min-h-[382px] self-stretch relative shrink-0">
                         <Image
-                            src="/images/phd/workmens.jpg"
-                            alt="Program Highlight"
+                            src={highlightImage.src}
+                            alt={highlightImage.alt}
                             fill
-                            className="object-cover object-[72%_center]"
+                            className="object-contain object-center"
                             sizes="(max-width: 1024px) 100vw, 420px"
                         />
                     </div>

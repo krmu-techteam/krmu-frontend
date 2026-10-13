@@ -29,30 +29,31 @@ interface PHDHeroSectionProps {
 }
 
 const PHD_HERO_IMAGES: Record<string, string> = {
-    "phd-chemistry": "/images/phd/hero-section/phd-chemistry.png",
-    "phd-commerce": "/images/phd/hero-section/phd-commerce.png",
+    "phd-chemistry": "/images/phd/hero-section/phd-chemistry.webp",
+    "phd-commerce": "/images/phd/hero-section/phd-commerce.webp",
     "phd-computer-science-engineering":
-        "/images/phd/hero-section/phd-computer-science-engineering.png",
-    "phd-cse": "/images/phd/hero-section/phd-computer-science-engineering.png",
-    "phd-economics": "/images/phd/hero-section/phd-economics.png",
-    "phd-education": "/images/phd/hero-section/phd-education.png",
+        "/images/phd/hero-section/phd-computer-science-engineering.webp",
+    "phd-cse": "/images/phd/hero-section/phd-computer-science-engineering.webp",
+    "phd-economics": "/images/phd/hero-section/phd-economics.webp",
+    "phd-education": "/images/phd/hero-section/phd-education.webp",
     "phd-english-literature-studies":
-        "/images/phd/hero-section/phd-english-literature-studies.png",
+        "/images/phd/hero-section/phd-english-literature-studies.webp",
     "phd-english":
-        "/images/phd/hero-section/phd-english-literature-studies.png",
-    "phd-forensic-science": "/images/phd/hero-section/phd-forensic-science.png",
-    "phd-in-psychology": "/images/phd/hero-section/phd-in-psychology.png",
-    "phd-psychology": "/images/phd/hero-section/phd-in-psychology.png",
+        "/images/phd/hero-section/phd-english-literature-studies.webp",
+    "phd-forensic-science":
+        "/images/phd/hero-section/phd-forensic-science.webp",
+    "phd-in-psychology": "/images/phd/hero-section/phd-in-psychology.webp",
+    "phd-psychology": "/images/phd/hero-section/phd-in-psychology.webp",
     "phd-journalism-mass-communication":
-        "/images/phd/hero-section/phd-journalism-mass-communication.png",
-    "phd-law": "/images/phd/hero-section/phd-law.png",
-    "phd-management": "/images/phd/hero-section/phd-management.png",
-    "phd-mathematics": "/images/phd/hero-section/phd-mathematics.png",
+        "/images/phd/hero-section/phd-journalism-mass-communication.webp",
+    "phd-law": "/images/phd/hero-section/phd-law.webp",
+    "phd-management": "/images/phd/hero-section/phd-management.webp",
+    "phd-mathematics": "/images/phd/hero-section/phd-mathematics.webp",
     "phd-mechanical-engineering":
-        "/images/phd/hero-section/phd-mechanical-engineering.png",
+        "/images/phd/hero-section/phd-mechanical-engineering.webp",
     "phd-pharmaceutical-sciences":
-        "/images/phd/hero-section/phd-pharmaceutical-sciences.png",
-    "phd-physics": "/images/phd/hero-section/phd-physics.png",
+        "/images/phd/hero-section/phd-pharmaceutical-sciences.webp",
+    "phd-physics": "/images/phd/hero-section/phd-physics.webp",
 };
 
 export default function PHDHeroSection({
@@ -67,8 +68,8 @@ export default function PHDHeroSection({
     const normalizedSlug = slug ? slug.toLowerCase().trim() : "";
     const heroImageSrc =
         (normalizedSlug && PHD_HERO_IMAGES[normalizedSlug]) ||
-        (normalizedSlug && `/images/phd/hero-section/${normalizedSlug}.png`) ||
-        "/images/phd/girl.png";
+        (normalizedSlug && `/images/phd/hero-section/${normalizedSlug}.webp`) ||
+        "/images/phd/girl.webp";
 
     // Parse Duration (Mockup: DURATION -> Min. 3 Years -> Full research term)
     const durationValue =
