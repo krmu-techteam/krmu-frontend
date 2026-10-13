@@ -242,7 +242,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                 onMouseEnter={() => setIsNavHidden(false)}
                 onMouseLeave={handleMouseLeave}
             >
-                <ul className="flex items-center xl:gap-3 2xl:gap-6">
+                <ul className="flex items-center xl:gap-3 2xl:gap-6 krm-nav-list">
                     {/* Academics */}
                     {academicMenu && (
                         <li
@@ -251,11 +251,11 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                             onMouseLeave={handleMenuLeave}
                         >
                             <div
-                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer ${activeMenu === "academics" ? "text-white" : ""}`}
+                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] whitespace-nowrap min-h-[64px] cursor-pointer krm-nav-item ${activeMenu === "academics" ? "text-white" : ""}`}
                             >
                                 <span>{academicMenu?.title}</span>
                                 <ChevronDown
-                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "academics" ? "rotate-180 opacity-100" : ""}`}
+                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 krm-nav-chevron ${activeMenu === "academics" ? "rotate-180 opacity-100" : ""}`}
                                 />
                             </div>
                             <div
@@ -450,7 +450,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         onMouseLeave={handleMenuLeave}
                     >
                         <div
-                            className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer ${activeMenu === "programmes" ? "text-white" : ""}`}
+                            className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] whitespace-nowrap min-h-[64px] cursor-pointer krm-nav-item ${activeMenu === "programmes" ? "text-white" : ""}`}
                         >
                             <Link
                                 href={
@@ -468,7 +468,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 </span>
                             </Link>
                             <ChevronDown
-                                className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "programmes" ? "rotate-180 opacity-100" : ""}`}
+                                className={`w-4 h-4 opacity-70 transition-transform duration-300 krm-nav-chevron ${activeMenu === "programmes" ? "rotate-180 opacity-100" : ""}`}
                             />
                         </div>
                         <div
@@ -578,11 +578,11 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                             onMouseLeave={handleMenuLeave}
                         >
                             <div
-                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer ${activeMenu === "admissions" ? "text-white" : ""}`}
+                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] whitespace-nowrap min-h-[64px] cursor-pointer krm-nav-item ${activeMenu === "admissions" ? "text-white" : ""}`}
                             >
                                 <span>{admissionMenu?.title}</span>
                                 <ChevronDown
-                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "admissions" ? "rotate-180 opacity-100" : ""}`}
+                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 krm-nav-chevron ${activeMenu === "admissions" ? "rotate-180 opacity-100" : ""}`}
                                 />
                             </div>
                             <div
@@ -784,7 +784,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         zenithLinks.__component === "menu.menu-links" && (
                             <li onMouseEnter={() => handleMenuEnter("")}>
                                 <Link
-                                    className={`font-poppins font-semibold tracking-wide text-[#ff0010] hover:text-[#ff0010]/85 transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] ${
+                                    className={`font-poppins font-semibold tracking-wide text-[#ff0010] hover:text-[#ff0010]/85 transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] whitespace-nowrap min-h-[64px] krm-nav-item ${
                                         zenithLinks?.menuclass || ""
                                     }`}
                                     href={zenithLinks.url}
@@ -804,11 +804,11 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                             onMouseLeave={handleMenuLeave}
                         >
                             <div
-                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer ${activeMenu === "placements" ? "text-white" : ""}`}
+                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] whitespace-nowrap min-h-[64px] cursor-pointer krm-nav-item ${activeMenu === "placements" ? "text-white" : ""}`}
                             >
                                 <span>{placementMenu?.title}</span>
                                 <ChevronDown
-                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "placements" ? "rotate-180 opacity-100" : ""}`}
+                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 krm-nav-chevron ${activeMenu === "placements" ? "rotate-180 opacity-100" : ""}`}
                                 />
                             </div>
                             <div
@@ -1022,11 +1022,11 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                             onMouseLeave={handleMenuLeave}
                         >
                             <div
-                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer ${activeMenu === "research" ? "text-white" : ""}`}
+                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] whitespace-nowrap min-h-[64px] cursor-pointer krm-nav-item ${activeMenu === "research" ? "text-white" : ""}`}
                             >
                                 <span>{researchMenu?.title}</span>
                                 <ChevronDown
-                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "research" ? "rotate-180 opacity-100" : ""}`}
+                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 krm-nav-chevron ${activeMenu === "research" ? "rotate-180 opacity-100" : ""}`}
                                 />
                             </div>
                             <div
@@ -1192,7 +1192,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                             "menu.menu-links" && (
                             <li onMouseEnter={() => handleMenuEnter("")}>
                                 <Link
-                                    className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] ${
+                                    className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] whitespace-nowrap min-h-[64px] krm-nav-item ${
                                         sustainabilityLinks?.menuclass || ""
                                     }`}
                                     href={sustainabilityLinks.url}
@@ -1212,11 +1212,11 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                             onMouseLeave={handleMenuLeave}
                         >
                             <div
-                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px]  min-h-[64px] cursor-pointer ${activeMenu === "lifeatkrmu" ? "text-white" : ""}`}
+                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] whitespace-nowrap min-h-[64px] cursor-pointer krm-nav-item ${activeMenu === "lifeatkrmu" ? "text-white" : ""}`}
                             >
                                 <span>{lifeatkrmuMenu?.title}</span>
                                 <ChevronDown
-                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "lifeatkrmu" ? "rotate-180 opacity-100" : ""}`}
+                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 krm-nav-chevron ${activeMenu === "lifeatkrmu" ? "rotate-180 opacity-100" : ""}`}
                                 />
                             </div>
                             <div
@@ -1352,11 +1352,11 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                             onMouseLeave={handleMenuLeave}
                         >
                             <div
-                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] min-h-[64px] cursor-pointer ${activeMenu === "aboutus" ? "text-white" : ""}`}
+                                className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] whitespace-nowrap min-h-[64px] cursor-pointer krm-nav-item ${activeMenu === "aboutus" ? "text-white" : ""}`}
                             >
                                 <span>{aboutusMenu?.title}</span>
                                 <ChevronDown
-                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 ${activeMenu === "aboutus" ? "rotate-180 opacity-100" : ""}`}
+                                    className={`w-4 h-4 opacity-70 transition-transform duration-300 krm-nav-chevron ${activeMenu === "aboutus" ? "rotate-180 opacity-100" : ""}`}
                                 />
                             </div>
                             <div
@@ -1614,7 +1614,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                         careersLinks.__component === "menu.menu-links" && (
                             <li onMouseEnter={() => handleMenuEnter("")}>
                                 <Link
-                                    className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[13px] 2xl:text-[15px] min-h-[64px] ${
+                                    className={`font-poppins font-normal tracking-wide text-white/80 hover:text-white transition-colors flex items-center gap-1 xl:gap-1 2xl:gap-1.5 text-sm xl:text-[15px] whitespace-nowrap min-h-[64px] krm-nav-item ${
                                         careersLinks?.menuclass || ""
                                     }`}
                                     href={careersLinks.url}
@@ -1630,7 +1630,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                             <li>
                                 <Link
                                     href={applyNowButton?.url || "#"}
-                                    className={`bg-[#cb000d] hover:bg-[#cb000d]/80 text-white font-medium py-2 px-5 xl:py-2 xl:px-4 rounded-xs text-xs xl:text-[14px]  tracking-wide xl:tracking-normal  flex items-center gap-1.5 transition-all capitalize shadow-lg relative overflow-hidden group font-poppins ${
+                                    className={`bg-[#cb000d] hover:bg-[#cb000d]/80 text-white font-medium py-2 px-5 xl:py-2 xl:px-4 rounded-xs text-xs xl:text-[14px] tracking-wide xl:tracking-normal flex items-center gap-1.5 transition-all capitalize shadow-lg relative overflow-hidden group font-poppins whitespace-nowrap krm-nav-btn ${
                                         applyNowButton?.class || ""
                                     }`}
                                 >

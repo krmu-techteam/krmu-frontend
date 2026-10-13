@@ -17,10 +17,10 @@ const Navbar = ({ navbarData, handleMobileMenu, showMobilebar }: Props) => {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     return (
-        <div className="w-full px-4 md:px-12 lg:px-6 xl:px-6 2xl:px-16 flex items-center justify-between py-2 transition-colors">
+        <div className="w-full px-4 md:px-12 lg:px-6 xl:px-4 min-[1440px]:px-6 2xl:px-16 flex items-center justify-between py-2 transition-colors">
             <div className="flex items-center group cursor-pointer shrink-0">
                 <Link href="/">
-                    <div className="relative h-14 md:h-16 w-52 md:w-60 lg:w-68 xl:w-76 flex items-center">
+                    <div className="relative h-14 md:h-16 w-52 md:w-60 lg:w-68 xl:w-64 min-[1440px]:w-76 2xl:w-80 flex items-center">
                         <Image
                             src="/krmu/KRMU_LOGO.webp"
                             alt="K.R. Mangalam University"
