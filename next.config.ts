@@ -268,6 +268,16 @@ const nextConfig: NextConfig = {
                 destination: "/other-links/sitemap",
                 permanent: true,
             },
+            {
+                source: "/landingpage/bsc-finance-2026/bsc-hons-finance-2026-27.pdf",
+                destination: "/bsc-hons-finance-2026-27.pdf",
+                permanent: true,
+            },
+            {
+                source: "/landingpage/bsc-finance-2026/BSc(Hons)%20Finance%202026-27.pdf",
+                destination: "/bsc-hons-finance-2026-27.pdf",
+                permanent: true,
+            },
         ];
     },
     async rewrites() {

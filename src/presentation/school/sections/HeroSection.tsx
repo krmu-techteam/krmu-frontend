@@ -242,6 +242,11 @@ const HeroSection = ({
         activeSlug.includes(
             "school-of-hotel-management-and-catering-technology"
         );
+    const isHiddenCtaBanner =
+        activeSlug === "school-of-education" ||
+        activeSlug.includes(
+            "school-of-hotel-management-and-catering-technology"
+        );
 
     return (
         <>
@@ -249,7 +254,7 @@ const HeroSection = ({
                 className={`relative overflow-hidden ${
                     fullWidth
                         ? "lg:py-[20%] lg:pb-0 pt-[300px] pb-5"
-                        : `${notCutoutBg ? "pt-[110px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : `pt-[110px] sm:pt-[140px] lg:pt-[280px] xl:pt-[310px] 2xl:pt-[320px] ${activeSlug.includes("legal-studies") ? "2xl:pt-[500px]" : ""} ${isReducedPtSchool ? "xl:!pt-[280px]" : ""} `} schoolBanner`
+                        : `${notCutoutBg ? "pt-[110px] sm:pt-0 xl:pt-[340px] bgPosNotCut" : `pt-[110px] sm:pt-[140px] lg:pt-[280px] xl:pt-[310px] 2xl:pt-[320px] ${activeSlug.includes("legal-studies") ? "2xl:pt-[500px]" : ""} ${isReducedPtSchool ? "xl:!pt-[280px]" : ""} `} ${isHiddenCtaBanner ? "pb-16 sm:pb-20 lg:pb-28 xl:pb-36 min-h-[580px] sm:min-h-[660px] lg:min-h-[740px] xl:min-h-[800px] 2xl:min-h-[840px]" : ""} schoolBanner`
                 } bg-cover bg-no-repeat bg-center`}
                 style={
                     {
@@ -276,7 +281,7 @@ const HeroSection = ({
                     </div>
                 )}
                 <div
-                    className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-architecture-design" ? "lg:left-[51%]" : ""} ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[50px] left-[52%]" : ""} ${slug === "school-of-hotel-management-and-catering-technology" ? "bottom-[50px]" : ""}`}
+                    className={`hidden xl:block absolute bottom-0 left-1/2 -translate-x-1/2 ${slug === "school-of-architecture-design" ? "lg:left-[51%]" : ""} ${slug === "school-of-emerging-media-and-creator-economy" ? "bottom-[50px] left-[52%]" : ""} ${slug === "school-of-hotel-management-and-catering-technology" ? "bottom-[0px]" : ""}`}
                 >
                     {videoUrl && middleimg && (
                         <Image
@@ -491,55 +496,55 @@ const HeroSection = ({
                         </div>
                     )}
                 </div>
-                <div className="relative z-20 w-full xl:mt-20">
-                    <section className="w-full bg-[#061623] lg:bg-transparent relative z-20 py-6 lg:py-8 px-6 md:px-8 xl:px-10">
-                        <div className="max-w-[1440px] mx-auto px-3 sm:px-3 py-4 sm:py-3 flex flex-col md:flex-row items-center justify-between gap-6 bg-[linear-gradient(90deg,#8B3D22_11.06%,#003763_100%)] rounded-[4px]">
-                            {/* Heading */}
-                            <h2 className="text-center font-poppins md:text-left text-xl xl:text-[25px] text-white">
-                                <span className="font-semibold">
-                                    {boldText}
-                                </span>
-                                {normalText && (
-                                    <span className="font-normal">
-                                        {normalText}
+                {!isHiddenCtaBanner && (
+                    <div className="relative z-20 w-full xl:mt-20">
+                        <section className="w-full bg-[#061623] lg:bg-transparent relative z-20 py-6 lg:py-8 px-6 md:px-8 xl:px-10">
+                            <div className="max-w-[1440px] mx-auto px-3 sm:px-3 py-4 sm:py-3 flex flex-col md:flex-row items-center justify-between gap-6 bg-[linear-gradient(90deg,#8B3D22_11.06%,#003763_100%)] rounded-[4px]">
+                                <h2 className="text-center font-poppins md:text-left text-xl xl:text-[25px] text-white">
+                                    <span className="font-semibold">
+                                        {boldText}
                                     </span>
-                                )}
-                            </h2>
+                                    {normalText && (
+                                        <span className="font-normal">
+                                            {normalText}
+                                        </span>
+                                    )}
+                                </h2>
 
-                            {/* Buttons */}
-                            <div className="flex flex-col sm:flex-row items-center gap-4">
-                                <Link
-                                    href="#programmes"
-                                    className="inline-flex font-poppins items-center justify-center border border-white/60 px-5 py-2.5 text-md font-medium text-white rounded-[4px] whitespace-nowrap hover:bg-white/10 transition-colors"
-                                >
-                                    <ArrowRightCircle
-                                        className="w-5 h-5 mr-2"
-                                        strokeWidth={1.5}
-                                    />
-                                    Explore Programmes
-                                </Link>
-
-                                {(admBtn?.buttonlink ||
-                                    admBtn?.buttonclass ||
-                                    admBtn?.buttontext) && (
+                                <div className="flex flex-col sm:flex-row items-center gap-4">
                                     <Link
-                                        href={admBtn?.buttonlink || "#"}
-                                        className={`inline-flex w-full sm:w-auto items-center justify-center border border-[#CB000D] bg-[#CB000D] hover:bg-[#CB000D] px-6 py-2.5 text-md font-medium font-poppins text-white rounded-[4px] whitespace-nowrap transition-all relative overflow-hidden group ${admBtn?.buttonclass || ""}`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                        href="#programmes"
+                                        className="inline-flex font-poppins items-center justify-center border border-white/60 px-5 py-2.5 text-md font-medium text-white rounded-[4px] whitespace-nowrap hover:bg-white/10 transition-colors"
                                     >
-                                        <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
-                                        {admBtn?.buttontext || "APPLY NOW"}
-                                        <ArrowUpRight
-                                            className="w-4 h-4 ml-2"
-                                            strokeWidth={2.5}
+                                        <ArrowRightCircle
+                                            className="w-5 h-5 mr-2"
+                                            strokeWidth={1.5}
                                         />
+                                        Explore Programmes
                                     </Link>
-                                )}
+
+                                    {(admBtn?.buttonlink ||
+                                        admBtn?.buttonclass ||
+                                        admBtn?.buttontext) && (
+                                        <Link
+                                            href={admBtn?.buttonlink || "#"}
+                                            className={`inline-flex w-full sm:w-auto items-center justify-center border border-[#CB000D] bg-[#CB000D] hover:bg-[#CB000D] px-6 py-2.5 text-md font-medium font-poppins text-white rounded-[4px] whitespace-nowrap transition-all relative overflow-hidden group ${admBtn?.buttonclass || ""}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
+                                            {admBtn?.buttontext || "APPLY NOW"}
+                                            <ArrowUpRight
+                                                className="w-4 h-4 ml-2"
+                                                strokeWidth={2.5}
+                                            />
+                                        </Link>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    </section>
-                </div>
+                        </section>
+                    </div>
+                )}
             </section>
         </>
     );

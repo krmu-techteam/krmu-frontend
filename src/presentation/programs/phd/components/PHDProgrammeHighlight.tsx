@@ -170,7 +170,7 @@ const PHD_HIGHLIGHT_IMAGES: Record<string, HighlightImageConfig> = {
         alt: "Ph.D. in Psychology Research Highlight",
     },
     "phd-mechanical-engineering": {
-        src: "/images/phd/highlights/phd-in-computer-science-and-engineering.webp",
+        src: "/images/phd/highlights/phd-in-mechanical-engineering.jpg",
         alt: "Ph.D. in Mechanical Engineering Research Highlight",
     },
 };
