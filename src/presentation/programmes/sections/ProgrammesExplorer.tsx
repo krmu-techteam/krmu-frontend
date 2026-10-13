@@ -693,7 +693,43 @@ const ProgrammesExplorerContent = ({
     const [masterProgrammes, setMasterProgrammes] = useState<ProgrammeItem[]>(
         () => {
             if (initialProgrammes && initialProgrammes.length > 0) {
-                return [...zenithProgrammes, ...initialProgrammes];
+                const seenSlugs = new Set<string>();
+                const seenTitles = new Set<string>();
+                const deduped: ProgrammeItem[] = [];
+                for (const prog of [
+                    ...zenithProgrammes,
+                    ...initialProgrammes,
+                ]) {
+                    const slug = (
+                        ("programmeslug" in prog
+                            ? (prog as any).programmeslug
+                            : (prog as any).phdslug) || ""
+                    )
+                        .toLowerCase()
+                        .trim();
+                    const rawTitle =
+                        ("title" in prog
+                            ? (prog as any).title
+                            : (prog as any).heading) || "";
+                    const normTitle = rawTitle
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]/g, "");
+
+                    if (
+                        slug === "phd-education" &&
+                        "programmeslug" in prog &&
+                        prog.criteria?.programme_fee_per_year === "1,20,000"
+                    ) {
+                        continue;
+                    }
+                    if (slug && seenSlugs.has(slug)) continue;
+                    if (normTitle && seenTitles.has(normTitle)) continue;
+
+                    if (slug) seenSlugs.add(slug);
+                    if (normTitle) seenTitles.add(normTitle);
+                    deduped.push(prog);
+                }
+                return deduped;
             }
             return [];
         }
@@ -764,12 +800,46 @@ const ProgrammesExplorerContent = ({
                     if (schools) setAllSchools(schools);
                     if (degrees) setAllDegrees(degrees);
                     setIsFiltersLoading(false);
-                    const combined = [
+
+                    const seenSlugs = new Set<string>();
+                    const seenTitles = new Set<string>();
+                    const deduped: ProgrammeItem[] = [];
+                    for (const prog of [
                         ...zenithProgrammes,
-                        ...(progs || []),
                         ...(phds || []),
-                    ];
-                    setMasterProgrammes(combined);
+                        ...(progs || []),
+                    ]) {
+                        const slug = (
+                            ("programmeslug" in prog
+                                ? (prog as any).programmeslug
+                                : (prog as any).phdslug) || ""
+                        )
+                            .toLowerCase()
+                            .trim();
+                        const rawTitle =
+                            ("title" in prog
+                                ? (prog as any).title
+                                : (prog as any).heading) || "";
+                        const normTitle = rawTitle
+                            .toLowerCase()
+                            .replace(/[^a-z0-9]/g, "");
+
+                        if (
+                            slug === "phd-education" &&
+                            "programmeslug" in prog &&
+                            prog.criteria?.programme_fee_per_year === "1,20,000"
+                        ) {
+                            continue;
+                        }
+                        if (slug && seenSlugs.has(slug)) continue;
+                        if (normTitle && seenTitles.has(normTitle)) continue;
+
+                        if (slug) seenSlugs.add(slug);
+                        if (normTitle) seenTitles.add(normTitle);
+                        deduped.push(prog);
+                    }
+
+                    setMasterProgrammes(deduped);
                     setIsLoading(false);
                 })
                 .catch((err) => {
@@ -996,10 +1066,48 @@ const ProgrammesExplorerContent = ({
                 if (!matches) return false;
             }
 
+            // Exclude duplicate/obsolete PhD in Education with 1,20,000 fee
+            const itemSlug = (
+                ("programmeslug" in item
+                    ? (item as any).programmeslug
+                    : (item as any).phdslug) || ""
+            )
+                .toLowerCase()
+                .trim();
+            if (
+                itemSlug === "phd-education" &&
+                "programmeslug" in item &&
+                item.criteria?.programme_fee_per_year === "1,20,000"
+            ) {
+                return false;
+            }
+
             return true;
         });
 
-        return sortProgrammesByDegreeSequence(filtered, selectedSchool);
+        const seenSlugs = new Set<string>();
+        const seenTitles = new Set<string>();
+        const uniqueFiltered = filtered.filter((item) => {
+            const slug = (
+                ("programmeslug" in item
+                    ? (item as any).programmeslug
+                    : (item as any).phdslug) || ""
+            )
+                .toLowerCase()
+                .trim();
+            const rawTitle =
+                ("title" in item ? item.title : (item as any).heading) || "";
+            const normTitle = rawTitle.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+            if (slug && seenSlugs.has(slug)) return false;
+            if (normTitle && seenTitles.has(normTitle)) return false;
+
+            if (slug) seenSlugs.add(slug);
+            if (normTitle) seenTitles.add(normTitle);
+            return true;
+        });
+
+        return sortProgrammesByDegreeSequence(uniqueFiltered, selectedSchool);
     }, [masterProgrammes, selectedSchool, selectedDegree, searchQuery]);
 
     const activeSchoolName = useMemo(() => {

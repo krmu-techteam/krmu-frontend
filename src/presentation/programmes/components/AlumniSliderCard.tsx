@@ -9,7 +9,7 @@ type Props = {
 export const AlumniSliderCard = ({ item }: Props) => {
     const rawImg = item?.alumni_img?.url || item?.review_img?.url;
     const imageUrl = rawImg
-        ? rawImg.startsWith("http")
+        ? rawImg.startsWith("http") || rawImg.startsWith("/")
             ? rawImg
             : `${STRAPI_URL}${rawImg}`
         : null;
@@ -39,24 +39,13 @@ export const AlumniSliderCard = ({ item }: Props) => {
 
                         {/* Author Details (Name & Qualification) */}
                         <div className="flex flex-col min-w-0">
-                            <h4 className="text-brand-gold font-poppins font-bold text-base sm:text-lg md:text-[18px] leading-tight tracking-wide group-hover:text-[#F3CE72] transition-colors line-clamp-1">
+                            <h4 className="text-brand-gold font-serif font-bold text-base sm:text-lg md:text-[18px]     group-hover:text-[#F3CE72] transition-colors line-clamp-1">
                                 {item?.name}
                             </h4>
                             <p className="text-white/70 font-poppins text-xs sm:text-sm font-light mt-1 line-clamp-1">
                                 {item?.qualification}
                             </p>
                         </div>
-                    </div>
-
-                    {/* Watermark Quote Icon from Home Page */}
-                    <div className="shrink-0 opacity-30 group-hover:opacity-50 transition-opacity">
-                        <Image
-                            src="/modules/home/testimonial/quote.webp"
-                            alt="Quote Icon"
-                            width={56}
-                            height={45}
-                            className="w-8 sm:w-10 md:w-11 h-auto object-contain brightness-0 invert"
-                        />
                     </div>
                 </div>
 

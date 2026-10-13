@@ -72,10 +72,17 @@ export default function ProgrammeCard({
     if (!isGrid) {
         return (
             <div
-                className={`group cursor-pointer rounded-[4px] relative border border-[#383838] hover:border-white/20  transition duration-300 flex flex-col md:flex-row justify-between md:items-center p-5 md:p-6`}
+                className={`group cursor-pointer bg-[#061623] rounded-[4px] border border-white/5 relative transition-all duration-500 ease-in-out hover:border-white/20 hover:bg-[#061623]/30 hover:shadow-lg flex overflow-hidden flex-col md:flex-row justify-between md:items-center p-5 md:p-6`}
             >
+                {/* Background Glow */}
+                <div
+                    className={`${glowClass} max-md:left-1/2 max-md:-translate-x-1/2 max-md:right-auto h-[320px] w-[320px] rounded-full bg-gradient-to-br from-[#061623] via-[#3c0f21] to-[#3c0f21] blur-[30px] opacity-65 pointer-events-none z-0`}
+                />
+
                 {/* Left Content Area */}
-                <div className={`flex flex-col pr-0 md:pr-8 flex-1`}>
+                <div
+                    className={`relative z-10 flex flex-col pr-0 md:pr-8 flex-1`}
+                >
                     <Link
                         href={
                             program.isZenith
@@ -138,7 +145,7 @@ export default function ProgrammeCard({
 
                 {/* Right Buttons Area */}
                 <div
-                    className={`shrink-0 flex mt-6 md:mt-0 flex-row md:flex-col gap-3 w-full md:w-40`}
+                    className={`relative z-10 shrink-0 flex mt-6 md:mt-0 flex-row md:flex-col gap-3 w-full md:w-40`}
                 >
                     <Link
                         href={
@@ -147,13 +154,13 @@ export default function ProgrammeCard({
                                 : `/programs/${program.slug}`
                         }
                         target="_blank"
-                        className={`flex items-center justify-center px-3 md:px-4 py-2 border border-white rounded text-[12px] md:text-[14px] text-white tracking-wide hover:bg-white/5 transition-colors cursor-pointer flex-1 md:flex-none md:justify-between`}
+                        className={`flex items-center justify-center px-3 md:px-4 py-2 border border-white/20 rounded text-[12px] md:text-[14px] text-white/90 tracking-wide hover:bg-white/5 transition-colors cursor-pointer flex-1 md:flex-none md:justify-between`}
                     >
                         <span>EXPLORE</span>
                         <ArrowRightCircle
                             size={16}
                             strokeWidth={2}
-                            className="ml-2"
+                            className="ml-2 transform group-hover:translate-x-[2px] transition-transform duration-300"
                         />
                     </Link>
 
@@ -161,7 +168,7 @@ export default function ProgrammeCard({
                         <Link
                             href={program.eligibilityUtmLink}
                             target="_blank"
-                            className={`flex items-center justify-center px-3 md:px-4 py-2 border border-[#cb000d] rounded text-[12px] md:text-[14px] bg-[#cb000d]/10 font-medium text-[#eb1321] group-hover:bg-[#cb000d] group-hover:text-white transition-colors flex-1 md:flex-none md:justify-between`}
+                            className={`flex items-center justify-center px-3 md:px-4 py-2 border border-[#cb000d] rounded text-[12px] md:text-[14px] bg-[#cb000d] font-medium text-white/90 group-hover:bg-[#cb000d] group-hover:text-white transition-colors flex-1 md:flex-none md:justify-between`}
                         >
                             <span>APPLY NOW</span>
                             <ArrowUpRight size={16} className="ml-2" />
@@ -274,6 +281,11 @@ export default function ProgrammeCard({
                     className={`flex items-center justify-center px-3 md:px-4 py-2 border border-white/20 rounded text-[12px] md:text-[12px] text-white tracking-wide hover:bg-white/5 transition-colors cursor-pointer flex-1`}
                 >
                     <span>EXPLORE</span>
+                    <ArrowRightCircle
+                        size={15}
+                        strokeWidth={2}
+                        className="ml-1.5"
+                    />
                 </Link>
 
                 {program.showApplyNow && program.eligibilityUtmLink && (
@@ -283,6 +295,7 @@ export default function ProgrammeCard({
                         className={`flex items-center justify-center px-3 md:px-4 py-2 border border-[#cb000d] rounded text-[12px] md:text-[12px] bg-[#cb000d] font-medium text-white transition-colors flex-1`}
                     >
                         <span>APPLY NOW</span>
+                        <ArrowUpRight size={15} className="ml-1.5" />
                     </Link>
                 )}
             </div>

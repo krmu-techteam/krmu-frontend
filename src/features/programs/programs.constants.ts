@@ -551,18 +551,18 @@ export const HERO_CONFIGS: Record<string, HeroConfig> = {
     } as HeroConfig,
     "Bachelor-of-Emergency-Medical-Technologist": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bsc_hons_agriculture_58b77de3e4.jpg",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Bachelor_of_Emergency_Medical_Technologist_Paramedic_B_EMT_with_Academic_and_Industry_support_of_Emversity_3_yrs_1_yr_Industry_Internship_9c96d8aef8.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
     "Bachelor-of-Respiratory-Technology": {
         ...defaultCinematicConfig,
-        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bhmct_hotel_management_c2ce005918.jpg",
+        bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Bachelor_of_Respiratory_Technology_B_RT_with_Academic_and_Industry_support_of_Emversity_3_yrs_1_yr_Industry_Internship_d607110472.jpg",
         bgPosition: "70% top",
     } as HeroConfig,
     "b-sc-hons-cardiovascular-technology-with-academic-industry-support-of-emversity":
         {
             ...defaultCinematicConfig,
-            bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/bachelor_of_education_b_ed_7ee9219acf.jpg",
+            bgUrl: "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/B_Sc_Hons_Cardiovascular_Technology_with_Academic_and_Industry_support_of_Emversity_3_yrs_1_yr_Industry_Internship_268a0d4f87.jpg",
             bgPosition: "70% top",
         } as HeroConfig,
 };

@@ -110,6 +110,7 @@ const page = async ({ searchParams }: PageProps) => {
     ]);
 
     const seenSlugs = new Set<string>();
+    const seenTitles = new Set<string>();
     const initialProgrammes: any[] = [];
     for (const prog of [
         ...(allPhdProgrammes || []),
@@ -122,8 +123,23 @@ const page = async ({ searchParams }: PageProps) => {
         )
             .toLowerCase()
             .trim();
+        const rawTitle =
+            ("title" in prog ? (prog as any).title : (prog as any).heading) ||
+            "";
+        const normTitle = rawTitle.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+        if (
+            slug === "phd-education" &&
+            "programmeslug" in prog &&
+            (prog as any).criteria?.programme_fee_per_year === "1,20,000"
+        ) {
+            continue;
+        }
         if (slug && seenSlugs.has(slug)) continue;
+        if (normTitle && seenTitles.has(normTitle)) continue;
+
         if (slug) seenSlugs.add(slug);
+        if (normTitle) seenTitles.add(normTitle);
         initialProgrammes.push(prog);
     }
 
