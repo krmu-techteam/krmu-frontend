@@ -48,10 +48,10 @@ export const committeeMembers: Member[] = [
         image: "/images/sustainability/profile/manica-yadav.png",
     },
     {
-        name: "Dr. Yogita Raghav, Assistant Professor",
+        name: "Dr. Mamta, Assistant Professor",
         school: "School of Engineering & Technology (SOET)",
         role: "Member",
-        image: "/images/sustainability/profile/yagita-raghav.png",
+        // image: "/images/sustainability/profile/yagita-raghav.png",
     },
     {
         name: "Dr. Aarti Lamba, Assistant Professor",
@@ -95,12 +95,12 @@ export const committeeMembers: Member[] = [
         role: "Research Scholar",
         image: null,
     },
-    {
-        name: "Dr. Richa Bansal",
-        school: "Project Head, UNESCO MGIEP",
-        role: "External Expert",
-        image: null,
-    },
+    // {
+    //     name: "Dr. Richa Bansal",
+    //     school: "Project Head, UNESCO MGIEP",
+    //     role: "External Expert",
+    //     image: null,
+    // },
     {
         name: "Ar. Mansha Samreen, Associate Professor",
         school: "School of Architecture & Design (SOAD)",
