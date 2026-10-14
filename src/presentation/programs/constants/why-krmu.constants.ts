@@ -38,7 +38,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             },
             {
                 parameter: "Research output",
-                krmu: "600+ Scopus/WoS papers, 100+ patents",
+                krmu: "600+ Scopus/WoS papers, 250+ patents",
                 typical: "Minimal or unreported",
             },
             {
@@ -101,7 +101,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             },
             {
                 parameter: "Research &amp; innovation",
-                krmu: "600+ Scopus/WoS publications, 100+ patents, research in data science, artificial intelligence, machine learning, big data analytics, business intelligence, cloud computing, data engineering, intelligent systems, and interdisciplinary computing research",
+                krmu: "600+ Scopus/WoS publications, 250+ patents, research in data science, artificial intelligence, machine learning, big data analytics, business intelligence, cloud computing, data engineering, intelligent systems, and interdisciplinary computing research",
                 typical:
                     "Limited research ecosystem with fewer publications, patents, and opportunities in data science, artificial intelligence, big data, analytics, and emerging computing technologies",
             },
@@ -224,7 +224,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             },
             {
                 parameter: "Research output",
-                krmu: "600+ Scopus/WoS papers, 100+ patents",
+                krmu: "600+ Scopus/WoS papers, 250+ patents",
                 typical: "Minimal or unreported",
             },
             {
@@ -707,7 +707,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             },
             {
                 parameter: "Research output",
-                krmu: "600+ Scopus/WoS papers, 100+ patents",
+                krmu: "600+ Scopus/WoS papers, 250+ patents",
                 typical: "Minimal or unreported",
             },
             {
@@ -767,7 +767,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             },
             {
                 parameter: "Research &amp; creative output",
-                krmu: "600+ Scopus/WoS papers, 100+ patents",
+                krmu: "600+ Scopus/WoS papers, 250+ patents",
                 typical: "Minimal or unreported",
             },
             {
@@ -827,7 +827,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             },
             {
                 parameter: "Research &amp; innovation",
-                krmu: "600+ Scopus/WoS publications, 100+ patents, innovation and design-led research ecosystem",
+                krmu: "600+ Scopus/WoS publications, 250+ patents, innovation and design-led research ecosystem",
                 typical:
                     "Limited research ecosystem with fewer publications and innovation outputs",
             },
@@ -959,7 +959,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             },
             {
                 parameter: "Research output",
-                krmu: "600+ Scopus/WoS papers, 100+ patents",
+                krmu: "600+ Scopus/WoS papers, 250+ patents",
                 typical: "Minimal or unreported",
             },
             {
@@ -1093,7 +1093,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             },
             {
                 parameter: "Research output",
-                krmu: "600+ Scopus/WoS papers, 100+ patents",
+                krmu: "600+ Scopus/WoS papers, 250+ patents",
                 typical: "Minimal or unreported",
             },
             {
@@ -1158,7 +1158,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             },
             {
                 parameter: "Research output",
-                krmu: "600+ Scopus/WoS papers, 100+ patents",
+                krmu: "600+ Scopus/WoS papers, 250+ patents",
                 typical: "Minimal or unreported",
             },
             {

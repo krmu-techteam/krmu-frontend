@@ -771,6 +771,8 @@ export const createOrganizationSchema = ({
 }: OrganizationSchemaProps) => {
     const cleanUrl = (val: string) => val.replace(/\s+/g, "");
 
+    const siteUrl = cleanUrl(url).replace(/\/+$/, "");
+
     return JSON.stringify(
         {
             "@context": "https://schema.org",
@@ -809,31 +811,27 @@ export const createOrganizationSchema = ({
                 itemListElement: [
                     {
                         "@type": "Offer",
-                        itemOffered: {
-                            "@type": "Course",
-                            name: "Undergraduate Programmes",
-                        },
+                        name: "Undergraduate Programmes",
+                        category: "Undergraduate Programmes",
+                        url: `${siteUrl}/programmes?degree=undergraduate-programmes`,
                     },
                     {
                         "@type": "Offer",
-                        itemOffered: {
-                            "@type": "Course",
-                            name: "Postgraduate Programmes",
-                        },
+                        name: "Postgraduate Programmes",
+                        category: "Postgraduate Programmes",
+                        url: `${siteUrl}/programmes?degree=postgraduate-programmes`,
                     },
                     {
                         "@type": "Offer",
-                        itemOffered: {
-                            "@type": "Course",
-                            name: "Ph.D. Programmes",
-                        },
+                        name: "Doctoral Programmes",
+                        category: "Doctoral Programmes",
+                        url: `${siteUrl}/programmes?degree=doctoral-programmes`,
                     },
                     {
                         "@type": "Offer",
-                        itemOffered: {
-                            "@type": "Course",
-                            name: "Diploma Programmes",
-                        },
+                        name: "Diploma Programmes",
+                        category: "Diploma Programmes",
+                        url: `${siteUrl}/programmes?degree=diploma-programmes`,
                     },
                 ],
             },
