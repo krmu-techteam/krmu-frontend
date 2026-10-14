@@ -148,7 +148,9 @@ const CommonLeadPopup = ({
             setLoading(false);
             handleClose();
 
-            window.open(redirectUrl, "_blank");
+            if (redirectUrl && redirectUrl !== "#") {
+                window.open(redirectUrl, "_blank");
+            }
         }
     };
 

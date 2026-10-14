@@ -45,6 +45,7 @@ const PHDProgrammes = ({ phdData, slug }: Props) => {
                 <PHDOverview
                     overviewData={phdData.phdoverview}
                     eligibilityCriteria={phdData.eligibility_criteria}
+                    slug={slug || phdData?.phdslug}
                 />
             )}
 
@@ -91,6 +92,7 @@ const PHDProgrammes = ({ phdData, slug }: Props) => {
                         title2={phdData.phdadmissionselect.title2}
                         desc1={phdData.phdadmissionselect.desc1}
                         desc2={phdData.phdadmissionselect.desc2}
+                        slug={slug || phdData?.phdslug}
                     />
                 )}
 

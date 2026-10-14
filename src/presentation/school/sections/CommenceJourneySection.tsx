@@ -35,6 +35,18 @@ const CommenceJourneySection = ({
 }: Props) => {
     const [activeStep] = useState(5); // Static active step at index 5 (Step 6)
 
+    const normalizedSlug = slug
+        ? slug
+              .toLowerCase()
+              .trim()
+              .replace(/^\/+|\/+$/g, "")
+        : "";
+    const hideApplyBtn =
+        normalizedSlug === "school-of-education" ||
+        normalizedSlug.includes(
+            "school-of-hotel-management-and-catering-technology"
+        );
+
     const rawLink = (admBtn?.buttonlink || btn?.btn_link || "").trim();
 
     let applyLink = "https://admissions.krmangalam.edu.in/";
@@ -165,18 +177,20 @@ const CommenceJourneySection = ({
                             </div>
 
                             {/* Apply Now Overlay Button */}
-                            <div className="absolute bottom-20 right-4 sm:-right-20 z-30">
-                                <Button
-                                    variant="primary"
-                                    href={applyLink}
-                                    icon={ArrowUpRight}
-                                    iconPosition="right"
-                                    target="_blank"
-                                    className="!px-5 !py-2.5 !h-auto !text-xs !w-auto !rounded-[2px]"
-                                >
-                                    {applyText}
-                                </Button>
-                            </div>
+                            {!hideApplyBtn && (
+                                <div className="absolute bottom-20 right-4 sm:-right-20 z-30">
+                                    <Button
+                                        variant="primary"
+                                        href={applyLink}
+                                        icon={ArrowUpRight}
+                                        iconPosition="right"
+                                        target="_blank"
+                                        className="!px-5 !py-2.5 !h-auto !text-xs !w-auto !rounded-[2px]"
+                                    >
+                                        {applyText}
+                                    </Button>
+                                </div>
+                            )}
                         </div>
                     </div>
 
@@ -249,18 +263,20 @@ const CommenceJourneySection = ({
                         />
                     </div>
 
-                    <div className="flex justify-center mt-6 mb-2">
-                        <Button
-                            variant="primary"
-                            href={applyLink}
-                            icon={ArrowUpRight}
-                            iconPosition="right"
-                            target="_blank"
-                            className="!w-auto !h-[45px] !px-8"
-                        >
-                            {btn?.btn_text || "APPLY NOW"}
-                        </Button>
-                    </div>
+                    {!hideApplyBtn && (
+                        <div className="flex justify-center mt-6 mb-2">
+                            <Button
+                                variant="primary"
+                                href={applyLink}
+                                icon={ArrowUpRight}
+                                iconPosition="right"
+                                target="_blank"
+                                className="!w-auto !h-[45px] !px-8"
+                            >
+                                {btn?.btn_text || "APPLY NOW"}
+                            </Button>
+                        </div>
+                    )}
                 </div>
             </div>
         </section>

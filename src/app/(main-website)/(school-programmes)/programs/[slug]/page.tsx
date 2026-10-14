@@ -461,7 +461,9 @@ const page = async ({ params }: Props) => {
                             }
                             admisbtn={admissionProcessSection?.admissionbtn}
                             slug={slug}
-                            formId={heroSection?.formId}
+                            formId={
+                                heroSection?.formId || heroSection?.formField
+                            }
                         />
                     ))}
 
@@ -549,6 +551,9 @@ const page = async ({ params }: Props) => {
                             careerimg={careerProspectsSection?.careerimg}
                             careercards={careerProspectsSection?.careercards}
                             slug={slug}
+                            formId={
+                                heroSection?.formId || heroSection?.formField
+                            }
                         />
                     ))}
 
@@ -595,6 +600,7 @@ const page = async ({ params }: Props) => {
                             tocfaqs={tocSection?.tocfaq}
                             tocimg={tocSection?.tocimg}
                             tocbtn={tocSection?.tocbtn}
+                            slug={slug}
                         />
                     ))}
 

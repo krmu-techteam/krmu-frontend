@@ -120,7 +120,11 @@ const ProgramHeroDefault = ({
                             </p>
                         )}
 
-                        {slug !== "bhmct-hotel-management" && (
+                        {![
+                            "bhmct-hotel-management",
+                            "bachelor-elementary-education-b-el-ed",
+                            "bachelor-of-education-b-ed",
+                        ].includes(slug || "") && (
                             <div className="hidden xl:block xl:mt-5">
                                 {formId && (
                                     <NpfPopup

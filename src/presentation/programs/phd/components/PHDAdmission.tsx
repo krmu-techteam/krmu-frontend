@@ -4,12 +4,14 @@ import React, { useMemo } from "react";
 import { ParagraphBlock } from "@/lib/types/about";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { newsreader } from "../font";
+import { usePathname } from "next/navigation";
 
 type Props = {
     title1: ParagraphBlock[];
     title2: ParagraphBlock[];
     desc1: ParagraphBlock[];
     desc2: ParagraphBlock[];
+    slug?: string;
 };
 
 type ProcessedItem = {
@@ -17,7 +19,17 @@ type ProcessedItem = {
     text: string;
 };
 
-const PHDAdmission = ({ title1, title2, desc1, desc2 }: Props) => {
+const PHDAdmission = ({ title1, title2, desc1, desc2, slug }: Props) => {
+    const pathname = usePathname();
+
+    const hideApplyNowSlugs = ["phd-education"];
+
+    const cleanPath = pathname?.replace(/\/+$/, "") || "";
+    const hideApplyNow =
+        Boolean(slug && hideApplyNowSlugs.includes(slug)) ||
+        hideApplyNowSlugs.some(
+            (s) => s === cleanPath || (pathname && pathname.includes(s))
+        );
     // Process desc2 to merge broken line-breaks from CMS while keeping headings distinct and preserving all text
     const processedDesc2 = useMemo(() => {
         if (!desc2 || !Array.isArray(desc2)) return [];
@@ -188,36 +200,38 @@ const PHDAdmission = ({ title1, title2, desc1, desc2 }: Props) => {
                         )}
 
                         {/* APPLY NOW BUTTON */}
-                        <div className="pt-4">
-                            <a
-                                href="#admission-process"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    const formContainer =
-                                        document.querySelector(
-                                            ".heroBannerForm__form"
-                                        ) ||
-                                        document.querySelector("iframe") ||
-                                        document.getElementById(
-                                            "admission-process"
-                                        );
-                                    if (formContainer) {
-                                        formContainer.scrollIntoView({
-                                            behavior: "smooth",
-                                            block: "center",
-                                        });
-                                    } else {
-                                        window.scrollTo({
-                                            top: 0,
-                                            behavior: "smooth",
-                                        });
-                                    }
-                                }}
-                                className="inline-block bg-[#E21F21] hover:bg-[#C91A1C] text-white font-medium text-[14px] sm:text-[15px] px-8 py-[10px] transition-colors cursor-pointer w-fit"
-                            >
-                                Apply Now
-                            </a>
-                        </div>
+                        {!hideApplyNow && (
+                            <div className="pt-4">
+                                <a
+                                    href="#admission-process"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        const formContainer =
+                                            document.querySelector(
+                                                ".heroBannerForm__form"
+                                            ) ||
+                                            document.querySelector("iframe") ||
+                                            document.getElementById(
+                                                "admission-process"
+                                            );
+                                        if (formContainer) {
+                                            formContainer.scrollIntoView({
+                                                behavior: "smooth",
+                                                block: "center",
+                                            });
+                                        } else {
+                                            window.scrollTo({
+                                                top: 0,
+                                                behavior: "smooth",
+                                            });
+                                        }
+                                    }}
+                                    className="inline-block bg-[#E21F21] hover:bg-[#C91A1C] text-white font-medium text-[14px] sm:text-[15px] px-8 py-[10px] transition-colors cursor-pointer w-fit"
+                                >
+                                    Apply Now
+                                </a>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

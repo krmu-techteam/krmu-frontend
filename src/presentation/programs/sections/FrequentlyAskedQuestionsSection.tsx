@@ -5,6 +5,7 @@ import Button from "@/components/common/Button";
 import { FAQAccordion } from "../components";
 import { FrequentlyAskedQuestionsSectionProps } from "@/features/programs";
 import { ArrowUpRight } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const FrequentlyAskedQuestionsSection = ({
     heading,
@@ -12,6 +13,7 @@ const FrequentlyAskedQuestionsSection = ({
     desc,
     tocfaqs,
     tocbtn,
+    slug,
 }: FrequentlyAskedQuestionsSectionProps) => {
     const handleApplyClick = (
         e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
@@ -27,6 +29,20 @@ const FrequentlyAskedQuestionsSection = ({
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     };
+    const pathname = usePathname();
+
+    const hideApplyNowSlugs = [
+        "bhmct-hotel-management",
+        "bachelor-of-education-b-ed",
+        "bachelor-elementary-education-b-el-ed",
+    ];
+
+    const cleanPath = pathname?.replace(/\/+$/, "") || "";
+    const hideApplyNow =
+        Boolean(slug && hideApplyNowSlugs.includes(slug)) ||
+        hideApplyNowSlugs.some(
+            (s) => s === cleanPath || (pathname && pathname.includes(s))
+        );
 
     return (
         <>
@@ -47,22 +63,23 @@ const FrequentlyAskedQuestionsSection = ({
                                 </p>
 
                                 {/* Mobile & Tablet Apply Now Button below description */}
-                                {(tocbtn?.buttonclass ||
-                                    tocbtn?.buttonlink) && (
-                                    <div className="flex lg:hidden items-center justify-center mt-4 sm:mt-5">
-                                        <Button
-                                            href={tocbtn?.buttonlink || "#"}
-                                            onClick={handleApplyClick}
-                                            target="_blank"
-                                            variant="primary"
-                                            icon={ArrowUpRight}
-                                            iconPosition="right"
-                                            className={`!w-fit !bg-[#CB000D] hover:!bg-[#CB000D]/90 text-white font-bold !text-xs uppercase tracking-wider !h-auto !py-2.5 !px-6 transition-all duration-300 shrink-0 font-poppins ${tocbtn?.buttonclass || ""}`}
-                                        >
-                                            APPLY NOW
-                                        </Button>
-                                    </div>
-                                )}
+                                {!hideApplyNow &&
+                                    (tocbtn?.buttonclass ||
+                                        tocbtn?.buttonlink) && (
+                                        <div className="flex lg:hidden items-center justify-center mt-4 sm:mt-5">
+                                            <Button
+                                                href={tocbtn?.buttonlink || "#"}
+                                                onClick={handleApplyClick}
+                                                target="_blank"
+                                                variant="primary"
+                                                icon={ArrowUpRight}
+                                                iconPosition="right"
+                                                className={`!w-fit !bg-[#CB000D] hover:!bg-[#CB000D]/90 text-white font-bold !text-xs uppercase tracking-wider !h-auto !py-2.5 !px-6 transition-all duration-300 shrink-0 font-poppins ${tocbtn?.buttonclass || ""}`}
+                                            >
+                                                APPLY NOW
+                                            </Button>
+                                        </div>
+                                    )}
                             </div>
 
                             {/* Tabs and Accordions block */}
@@ -71,6 +88,7 @@ const FrequentlyAskedQuestionsSection = ({
                                     <FAQAccordion
                                         tocfaqs={tocfaqs}
                                         tocbtn={tocbtn}
+                                        hideApplyNow={hideApplyNow}
                                     />
                                 </div>
                             </div>

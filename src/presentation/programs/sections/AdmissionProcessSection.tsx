@@ -2,7 +2,7 @@ import Image from "next/image";
 import { AdmissionProcessSectionProps } from "@/features/programs";
 import { AdmissionCardDesktop, AdmissionCardMobile } from "../components";
 import SectionDivider from "@/components/common/SectionDivider";
-import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+import HeroFormModal from "../components/HeroFormModal";
 import { resolveSoetProgramAlt } from "@/alt-text/programs/soet";
 
 const AdmissionProcessSection = ({
@@ -55,14 +55,20 @@ const AdmissionProcessSection = ({
                 </div>
             </div>
             <div className="flex items-center justify-center mt-8">
-                {admisbtn && slug !== "bhmct-hotel-management" && (
-                    <NpfPopup
-                        formId={formId}
-                        btnClass={`w-fit flex items-center justify-center gap-2 h-[45px] rounded-[3px] font-normal transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide relative overflow-hidden group px-8 bg-[#CB000D] text-white border-1 border-transparent hover:bg-[#CB000D]/90 shadow-lg cursor-pointer ${admisbtn.buttonclass || ""}`}
-                        btnText={admisbtn.buttontext || "Apply Now"}
-                        showIcon={true}
-                    />
-                )}
+                {admisbtn &&
+                    ![
+                        "bhmct-hotel-management",
+                        "bachelor-elementary-education-b-el-ed",
+                        "bachelor-of-education-b-ed",
+                    ].includes(slug || "") && (
+                        <HeroFormModal
+                            formId={formId}
+                            slug={slug}
+                            buttonClassName={`w-fit flex items-center justify-center gap-2 h-[45px] rounded-[3px] font-normal transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide relative overflow-hidden group px-8 bg-[#CB000D] text-white border-1 border-transparent hover:bg-[#CB000D]/90 shadow-lg cursor-pointer ${admisbtn.buttonclass || ""}`}
+                            buttonText={admisbtn.buttontext || "Enroll Now"}
+                            showIcon={true}
+                        />
+                    )}
             </div>
         </section>
     );

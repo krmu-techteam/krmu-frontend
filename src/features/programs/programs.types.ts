@@ -195,11 +195,13 @@ export interface FrequentlyAskedQuestionsSectionProps {
     tocfaqs: TOCFAQ[];
     tocimg: StrapiMedia;
     tocbtn: ButtonType;
+    slug?: string;
 }
 
 export interface FAQAccordionProps {
     tocfaqs: TOCFAQ[];
     tocbtn?: ButtonType;
+    hideApplyNow?: boolean;
 }
 
 // Career Prospects Section
@@ -211,6 +213,7 @@ export interface CareerProspectsSectionProps {
     careerimg: StrapiMedia;
     careercards: CareerCard[];
     slug?: string;
+    formId?: string;
 }
 
 // Curriculum & Programme Structure

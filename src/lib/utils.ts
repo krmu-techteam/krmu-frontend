@@ -68,6 +68,7 @@ export function formatInternalLink(url: string | null | undefined): string {
                 "krmangalam.edu.in",
                 "www.krmangalam.edu.in",
                 "beta.krmangalam.edu.in",
+                "old.krmangalam.edu.in",
             ];
 
             const isInternalDomain =

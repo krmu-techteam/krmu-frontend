@@ -7,16 +7,29 @@ import {
 } from "@/lib/types/phd-programmes";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { newsreader } from "../font";
+import { usePathname } from "next/navigation";
 
 interface PHDOverviewProps {
     overviewData: PhDOverviewType;
     eligibilityCriteria?: CounterBlock;
+    slug?: string;
 }
 
 const PHDOverview = ({
     overviewData,
     eligibilityCriteria,
+    slug,
 }: PHDOverviewProps) => {
+    const pathname = usePathname();
+
+    const hideApplyNowSlugs = ["phd-education"];
+
+    const cleanPath = pathname?.replace(/\/+$/, "") || "";
+    const hideApplyNow =
+        Boolean(slug && hideApplyNowSlugs.includes(slug)) ||
+        hideApplyNowSlugs.some(
+            (s) => s === cleanPath || (pathname && pathname.includes(s))
+        );
     const eligibilityText = eligibilityCriteria?.countercontent?.trim();
 
     const rawTitle = overviewData?.title || "Overview";
@@ -69,36 +82,40 @@ const PHDOverview = ({
                                     {eligibilityText}
                                 </p>
                             </div>
-                            <div>
-                                <a
-                                    href="#admission-process"
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        const formContainer =
-                                            document.querySelector(
-                                                ".heroBannerForm__form"
-                                            ) ||
-                                            document.querySelector("iframe") ||
-                                            document.getElementById(
-                                                "admission-process"
-                                            );
-                                        if (formContainer) {
-                                            formContainer.scrollIntoView({
-                                                behavior: "smooth",
-                                                block: "center",
-                                            });
-                                        } else {
-                                            window.scrollTo({
-                                                top: 0,
-                                                behavior: "smooth",
-                                            });
-                                        }
-                                    }}
-                                    className="inline-block bg-[#E21F21] hover:bg-[#C91A1C] text-white font-normal text-[15px] px-8 py-[9px] transition-colors cursor-pointer"
-                                >
-                                    Apply Now
-                                </a>
-                            </div>
+                            {!hideApplyNow && (
+                                <div>
+                                    <a
+                                        href="#admission-process"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            const formContainer =
+                                                document.querySelector(
+                                                    ".heroBannerForm__form"
+                                                ) ||
+                                                document.querySelector(
+                                                    "iframe"
+                                                ) ||
+                                                document.getElementById(
+                                                    "admission-process"
+                                                );
+                                            if (formContainer) {
+                                                formContainer.scrollIntoView({
+                                                    behavior: "smooth",
+                                                    block: "center",
+                                                });
+                                            } else {
+                                                window.scrollTo({
+                                                    top: 0,
+                                                    behavior: "smooth",
+                                                });
+                                            }
+                                        }}
+                                        className="inline-block bg-[#E21F21] hover:bg-[#C91A1C] text-white font-normal text-[15px] px-8 py-[9px] transition-colors cursor-pointer"
+                                    >
+                                        Apply Now
+                                    </a>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

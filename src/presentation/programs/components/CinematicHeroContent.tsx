@@ -32,7 +32,11 @@ const CinematicHeroContent = ({
                     {heroSection?.description}
                 </p>
 
-                {slug !== "bhmct-hotel-management" && (
+                {![
+                    "bhmct-hotel-management",
+                    "bachelor-elementary-education-b-el-ed",
+                    "bachelor-of-education-b-ed",
+                ].includes(slug || "") && (
                     <div className="mt-4 lg:mt-3 mb-8 md:mb-0 xl:mt-4 flex justify-start lg:justify-start">
                         {formId && (
                             <NpfPopup

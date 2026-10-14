@@ -6,8 +6,8 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
-import Button from "@/components/common/Button";
 import { resolveSoetProgramAlt } from "@/alt-text/programs/soet";
+import HeroFormModal from "../components/HeroFormModal";
 
 const CareerProspectsSection = ({
     heading,
@@ -17,6 +17,7 @@ const CareerProspectsSection = ({
     careerimg,
     careercards,
     slug,
+    formId,
 }: CareerProspectsSectionProps) => {
     const [emblaRef, emblaApi] = useEmblaCarousel(
         { loop: true, duration: 60 },
@@ -80,15 +81,16 @@ const CareerProspectsSection = ({
 
                 {/* Action Button */}
                 {slug !== "bhmct-hotel-management" &&
-                    (btn?.buttonclass || btn?.buttonlink) && (
+                    (btn?.buttonclass ||
+                        btn?.buttonlink ||
+                        btn?.buttontext) && (
                         <div className="mb-10">
-                            <Button
-                                variant="primary"
-                                href={btn?.buttonlink || "#"}
-                                className={`font-semibold tracking-wider font-poppins ${btn?.buttonclass || ""}`}
-                            >
-                                {btn?.buttontext}
-                            </Button>
+                            <HeroFormModal
+                                buttonText={btn?.buttontext || "Apply Now"}
+                                buttonClassName={`w-fit flex items-center justify-center gap-2 h-[45px] rounded-[3px] font-semibold transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wider relative overflow-hidden group px-8 bg-[#CB000D] text-white border-1 border-transparent hover:bg-[#CB000D]/90 shadow-lg cursor-pointer font-poppins ${btn?.buttonclass || ""}`}
+                                formId={formId}
+                                slug={slug}
+                            />
                         </div>
                     )}
 
