@@ -1,14 +1,27 @@
-import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+"use client";
+
+import React from "react";
 import { CinematicHeroSectionProps } from "@/features/programs";
 
 const CinematicHeroContent = ({
     title,
     highlightitle,
     heroSection,
-    formId,
     slug,
     config,
 }: CinematicHeroSectionProps) => {
+    const handleApplyClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        const formElement =
+            document.getElementById("apply-form-mobile") ||
+            document.getElementById("apply-form") ||
+            document.querySelector(".heroBannerForm__form");
+
+        if (formElement) {
+            formElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    };
+
     return (
         <div className="flex flex-col lg:block bg-gradient-to-t from-black/90 via-black/45 to-transparent lg:bg-none px-4 pt-16 pb-0 sm:px-6 sm:pt-20 sm:pb-8 md:px-8 lg:p-0 antialiased [text-rendering:optimizeLegibility] [-webkit-font-smoothing:antialiased] [-moz-osx-font-smoothing:grayscale]">
             <div className="mb-0 lg:mb-10">
@@ -38,14 +51,20 @@ const CinematicHeroContent = ({
                     "bachelor-of-education-b-ed",
                 ].includes(slug || "") && (
                     <div className="mt-4 lg:mt-3 mb-8 md:mb-0 xl:mt-4 flex justify-start lg:justify-start">
-                        {formId && (
-                            <NpfPopup
-                                formId={formId}
-                                btnClass={`progherobtn px-6 py-2 lg:py-2 lg:px-8 md:py-[6px] md:px-6 font-poppins text-sm md:text-[14px] lg:text-[16px] ${heroSection.herobtn.buttonclass || ""} rounded-[2px] transition-all`}
-                                btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
-                                showIcon={false}
-                            />
-                        )}
+                        <a
+                            href="#apply-form-mobile"
+                            onClick={handleApplyClick}
+                            className={`progherobtn lg:hidden inline-flex items-center justify-center px-6 py-2.5 md:py-[8px] md:px-7 font-poppins text-sm md:text-[14px] ${
+                                heroSection?.herobtn?.buttonclass ||
+                                "bg-[#CB000D] text-white"
+                            } rounded-[2px] transition-all cursor-pointer relative overflow-hidden group`}
+                        >
+                            <span>
+                                {heroSection?.herobtn?.buttontext ||
+                                    "Apply Now"}
+                            </span>
+                            <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
+                        </a>
                     </div>
                 )}
             </div>
