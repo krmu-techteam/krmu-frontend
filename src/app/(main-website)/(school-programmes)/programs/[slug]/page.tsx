@@ -232,7 +232,7 @@ const page = async ({ params }: Props) => {
     const singleProgFAQLD = createProgFaqSchema(allFaqs);
 
     const breadcrumbSchema = createBreadcrumbProgSchema([
-        { name: "Programs", url: "https://www.krmangalam.edu.in/programs" },
+        { name: "Programs", url: "https://www.krmangalam.edu.in/programmes" },
         {
             name: schemaTitle,
             url: `https://www.krmangalam.edu.in/programs/${schemaSlug}`,

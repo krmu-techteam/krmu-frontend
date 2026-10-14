@@ -273,11 +273,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.7,
         },
         {
-            url: `${baseUrl}/campus-life/virtual-tour`,
-            changeFrequency: "monthly",
-            priority: 0.7,
-        },
-        {
             url: `${baseUrl}/centre-for-sustainable-development-goals-2`,
             changeFrequency: "monthly",
             priority: 0.7,
