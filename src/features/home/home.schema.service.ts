@@ -99,14 +99,6 @@ export class HomeSchemaService {
             contentUrl:
                 "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/krm_bg_hero_e316d4159a.mp4",
             embedUrl: "https://www.krmangalam.edu.in/",
-            // publisher: {
-            //     "@type": "Organization",
-            //     name: "K.R. Mangalam University",
-            //     logo: {
-            //         "@type": "ImageObject",
-            //         url: "https://www.krmangalam.edu.in/images/logo.png",
-            //     },
-            // },
         });
 
         return {

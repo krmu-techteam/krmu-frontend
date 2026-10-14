@@ -771,8 +771,6 @@ export const createOrganizationSchema = ({
 }: OrganizationSchemaProps) => {
     const cleanUrl = (val: string) => val.replace(/\s+/g, "");
 
-    const siteUrl = cleanUrl(url).replace(/\/+$/, "");
-
     return JSON.stringify(
         {
             "@context": "https://schema.org",
@@ -805,36 +803,6 @@ export const createOrganizationSchema = ({
                 : undefined,
             sameAs: sameAs.map(cleanUrl),
             foundingDate,
-            hasOfferCatalog: {
-                "@type": "OfferCatalog",
-                name: "Academic Programmes",
-                itemListElement: [
-                    {
-                        "@type": "Offer",
-                        name: "Undergraduate Programmes",
-                        category: "Undergraduate Programmes",
-                        url: `${siteUrl}/programmes?degree=undergraduate-programmes`,
-                    },
-                    {
-                        "@type": "Offer",
-                        name: "Postgraduate Programmes",
-                        category: "Postgraduate Programmes",
-                        url: `${siteUrl}/programmes?degree=postgraduate-programmes`,
-                    },
-                    {
-                        "@type": "Offer",
-                        name: "Doctoral Programmes",
-                        category: "Doctoral Programmes",
-                        url: `${siteUrl}/programmes?degree=doctoral-programmes`,
-                    },
-                    {
-                        "@type": "Offer",
-                        name: "Diploma Programmes",
-                        category: "Diploma Programmes",
-                        url: `${siteUrl}/programmes?degree=diploma-programmes`,
-                    },
-                ],
-            },
         },
         null,
         2
