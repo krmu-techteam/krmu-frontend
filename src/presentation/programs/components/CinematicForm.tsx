@@ -177,7 +177,7 @@ const CinematicForm = ({
         return (
             <div
                 id="apply-form-mobile"
-                className="lg:hidden w-full bg-[#061623] pb-6 lg:pb-0 px-4 lg:px-0"
+                className="lg:hidden w-full bg-[#061623] pb-6 lg:pb-0 px-4 lg:px-0 scroll-mt-24"
             >
                 <div className="heroBannerForm__form w-full max-w-md sm:max-w-full mx-auto rounded-[4px] !pt-4 !pb-3 h-[570px] min-h-[570px] bg-white relative overflow-hidden flex flex-col">
                     <div className="heroBannerForm-header shrink-0">

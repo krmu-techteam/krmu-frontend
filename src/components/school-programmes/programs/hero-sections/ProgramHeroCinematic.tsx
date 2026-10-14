@@ -1,3 +1,5 @@
+"use client";
+
 import { HeroSection } from "@/lib/types/school-programme";
 import NpfPopup from "@/app/(main-website)/components/NpfPopup";
 import NoPaperForm from "@/lib/constants/NoPaperForm";
@@ -93,14 +95,43 @@ const ProgramHeroCinematic = ({
                                         "bachelor-of-education-b-ed",
                                     ].includes(slug || "") && (
                                         <div className="mt-4 lg:mt-3 mb-8 xl:mt-4 flex justify-start lg:justify-start">
-                                            {formId && (
-                                                <NpfPopup
-                                                    formId={formId}
-                                                    btnClass={`progherobtn px-6 py-2 lg:py-2 lg:px-8 md:py-[8px] md:px-6 text-sm md:text-[14px] lg:text-lg ${heroSection.herobtn.buttonclass || ""} rounded-md shadow-xl transition-all`}
-                                                    btnText={`${heroSection.herobtn.buttontext || "Apply Now"}`}
-                                                    showIcon={false}
-                                                />
-                                            )}
+                                            <a
+                                                href="#apply-form-mobile"
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    const formElement =
+                                                        document.getElementById(
+                                                            "apply-form-mobile"
+                                                        ) ||
+                                                        document.getElementById(
+                                                            "apply-form"
+                                                        ) ||
+                                                        document.querySelector(
+                                                            ".heroBannerForm__form"
+                                                        );
+                                                    if (formElement) {
+                                                        formElement.scrollIntoView(
+                                                            {
+                                                                behavior:
+                                                                    "smooth",
+                                                                block: "start",
+                                                            }
+                                                        );
+                                                    }
+                                                }}
+                                                className={`progherobtn lg:hidden inline-flex items-center justify-center px-6 py-2.5 md:py-[8px] md:px-7 font-poppins text-sm md:text-[14px] ${
+                                                    heroSection?.herobtn
+                                                        ?.buttonclass ||
+                                                    "bg-[#CB000D] text-white"
+                                                } rounded-[2px] transition-all cursor-pointer relative overflow-hidden group`}
+                                            >
+                                                <span>
+                                                    {heroSection?.herobtn
+                                                        ?.buttontext ||
+                                                        "Apply Now"}
+                                                </span>
+                                                <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none"></div>
+                                            </a>
                                         </div>
                                     )}
                                 </div>
