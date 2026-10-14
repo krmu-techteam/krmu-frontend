@@ -192,13 +192,6 @@ const AuthorPosts = ({
                 </p>
             )}
 
-            {/* End of feed */}
-            {!hasMore && posts.length > 0 && (
-                <p className="text-center text-white/30 text-xs font-poppins py-6 tracking-widest">
-                    — All articles loaded —
-                </p>
-            )}
-
             {/* Invisible sentinel for IntersectionObserver */}
             <div ref={sentinelRef} className="h-1" />
         </div>

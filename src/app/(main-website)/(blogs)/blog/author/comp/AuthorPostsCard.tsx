@@ -5,6 +5,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
 import Image from "next/image";
 import { Eye, Calendar } from "lucide-react";
+import { decodeHtmlEntities } from "@/lib/utils";
 
 type Props = {
     title: string;
@@ -16,14 +17,49 @@ type Props = {
 
 const AuthorPostsCard = ({ title, imgId, date, slug, imageUrl }: Props) => {
     const [imgUrl, setImgUrl] = useState<string | null>(imageUrl || null);
+    const [fallbackAttempted, setFallbackAttempted] = useState(false);
 
     useEffect(() => {
+        setImgUrl(imageUrl || null);
+        setFallbackAttempted(false);
+
         if (!imageUrl && imgId) {
             getBlogService()
                 .getBlogImageByIdClientComp(imgId)
                 .then((url) => setImgUrl(url || null));
         }
     }, [imgId, imageUrl]);
+
+    const handleImageError = () => {
+        if (!fallbackAttempted && imgUrl) {
+            setFallbackAttempted(true);
+
+            // If it failed on wp.krmangalam.edu.in, attempt loading from www.krmangalam.edu.in
+            if (imgUrl.includes("wp.krmangalam.edu.in")) {
+                const alt = imgUrl
+                    .replace("/blog/wp-content/", "/wp-content/")
+                    .replace("wp.krmangalam.edu.in", "www.krmangalam.edu.in");
+                if (alt !== imgUrl) {
+                    setImgUrl(alt);
+                    return;
+                }
+            } else if (imgUrl.includes("www.krmangalam.edu.in")) {
+                const alt = imgUrl.replace(
+                    "www.krmangalam.edu.in/wp-content/",
+                    "wp.krmangalam.edu.in/blog/wp-content/"
+                );
+                if (alt !== imgUrl) {
+                    setImgUrl(alt);
+                    return;
+                }
+            }
+        }
+
+        // Both attempts failed or no alternate, clear image (do not use default image)
+        setImgUrl(null);
+    };
+
+    const cleanAlt = decodeHtmlEntities(title) || "Blog Post";
 
     const formattedDate = date
         ? new Date(date).toLocaleDateString("en-GB", {
@@ -62,14 +98,19 @@ const AuthorPostsCard = ({ title, imgId, date, slug, imageUrl }: Props) => {
                 {imgUrl ? (
                     <Image
                         src={imgUrl}
-                        alt={title || "Blog Post"}
+                        alt={cleanAlt}
                         fill
                         className="object-contain object-center group-hover:scale-[1.03] transition-transform duration-700"
                         sizes="(max-width: 768px) 100vw, 25vw"
                         unoptimized
+                        onError={handleImageError}
                     />
                 ) : (
-                    <Skeleton className="w-full h-full rounded-none bg-white/10" />
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#071726] via-[#091e30] to-[#061623]">
+                        <span className="text-white/20 text-xs font-poppins font-medium tracking-wider uppercase">
+                            KRMU Blog
+                        </span>
+                    </div>
                 )}
             </div>
 
