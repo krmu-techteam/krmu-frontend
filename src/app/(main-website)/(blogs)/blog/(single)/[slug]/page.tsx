@@ -10,8 +10,7 @@ import {
 } from "@/lib/api/common";
 import Script from "next/script";
 
-// Incremental Static Regeneration (ISR)
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 type Props = {
     params: Promise<{ slug: string }>;

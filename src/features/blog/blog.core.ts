@@ -17,61 +17,39 @@ import {
 // ── 1. Repository ────────────────────────────────────────
 
 class BlogRepository {
-    private blogPageInfoPromise: Promise<BlogData | null> | null = null;
-    private blogCategoryPageInfoPromise: Promise<BlogCategoryData | null> | null =
-        null;
-
     async getBlogPageInfo(): Promise<BlogData | null> {
-        if (!this.blogPageInfoPromise) {
-            this.blogPageInfoPromise = (async () => {
-                try {
-                    const res = await fetch(
-                        `${FETCH_STRAPI_URL}${BLOG_QUERIES.blogPageInfo}`,
-                        {
-                            next: { revalidate: 3600 },
-                        }
-                    );
-                    if (!res.ok)
-                        throw new Error("Failed to fetch blog page info");
-                    const json = await res.json();
-                    return json.data;
-                } catch (error) {
-                    console.error("Blog page info fetch error:", error);
-                    this.blogPageInfoPromise = null;
-                    return null;
+        try {
+            const res = await fetch(
+                `${FETCH_STRAPI_URL}${BLOG_QUERIES.blogPageInfo}`,
+                {
+                    next: { revalidate: 60 },
                 }
-            })();
+            );
+            if (!res.ok) throw new Error("Failed to fetch blog page info");
+            const json = await res.json();
+            return json.data;
+        } catch (error) {
+            console.error("Blog page info fetch error:", error);
+            return null;
         }
-        return this.blogPageInfoPromise;
     }
 
     async getBlogCategoryPageInfo(): Promise<BlogCategoryData | null> {
-        if (!this.blogCategoryPageInfoPromise) {
-            this.blogCategoryPageInfoPromise = (async () => {
-                try {
-                    const res = await fetch(
-                        `${FETCH_STRAPI_URL}${BLOG_QUERIES.blogCategoryPageInfo}`,
-                        {
-                            next: { revalidate: 3600 },
-                        }
-                    );
-                    if (!res.ok)
-                        throw new Error(
-                            "Failed to fetch blog category page info"
-                        );
-                    const json = await res.json();
-                    return json.data;
-                } catch (error) {
-                    console.error(
-                        "Blog category page info fetch error:",
-                        error
-                    );
-                    this.blogCategoryPageInfoPromise = null;
-                    return null;
+        try {
+            const res = await fetch(
+                `${FETCH_STRAPI_URL}${BLOG_QUERIES.blogCategoryPageInfo}`,
+                {
+                    next: { revalidate: 60 },
                 }
-            })();
+            );
+            if (!res.ok)
+                throw new Error("Failed to fetch blog category page info");
+            const json = await res.json();
+            return json.data;
+        } catch (error) {
+            console.error("Blog category page info fetch error:", error);
+            return null;
         }
-        return this.blogCategoryPageInfoPromise;
     }
 
     private static categoryCache: Map<string, AllBlogCategories> = new Map();
@@ -99,7 +77,7 @@ class BlogRepository {
                     const catRes = await fetch(
                         BLOG_QUERIES.categories(categorySlug),
                         {
-                            next: { revalidate: 3600, tags: ["blogs"] },
+                            cache: "no-store",
                         }
                     );
 
@@ -122,7 +100,7 @@ class BlogRepository {
             if (categoryId) params.append("categories", String(categoryId));
 
             const res = await fetch(BLOG_QUERIES.posts(params.toString()), {
-                next: { revalidate: 3600, tags: ["blogs"] },
+                cache: "no-store",
             });
 
             if (!res.ok) throw new Error("Failed to fetch blogs");
@@ -145,7 +123,7 @@ class BlogRepository {
     async getRecentPosts(): Promise<MainBlogs[]> {
         try {
             const res = await fetch(BLOG_QUERIES.recentPosts(), {
-                next: { revalidate: 3600, tags: ["blogs"] },
+                cache: "no-store",
             });
             if (!res.ok) throw new Error("Failed to fetch recent posts");
             const raw = await res.json();
@@ -161,7 +139,7 @@ class BlogRepository {
     ): Promise<BlogPostContent[]> {
         try {
             const res = await fetch(BLOG_QUERIES.singleBlog(slug), {
-                next: { revalidate: 3600, tags: ["blogs"] },
+                cache: "no-store",
             });
             if (!res.ok) throw new Error("Failed to fetch Single Blog");
             const raw = await res.json();
@@ -175,7 +153,7 @@ class BlogRepository {
     async getAllBlogCategories(): Promise<AllBlogCategories[]> {
         try {
             const res = await fetch(BLOG_QUERIES.categories(), {
-                next: { revalidate: 3600, tags: ["blogs"] },
+                cache: "no-store",
             });
             if (!res.ok) throw new Error("Failed to fetch Blog Categories");
             const json = await res.json();
@@ -200,7 +178,7 @@ class BlogRepository {
         if (!imgId) return null;
         try {
             const res = await fetch(BLOG_QUERIES.media(imgId), {
-                next: { revalidate: 3600, tags: ["blogs"] },
+                next: { revalidate: 86400 },
             });
 
             if (!res.ok) {
@@ -236,7 +214,7 @@ class BlogRepository {
 
         try {
             const res = await fetch(BLOG_QUERIES.categories(slug), {
-                next: { revalidate: 3600, tags: ["blogs"] },
+                cache: "no-store",
             });
 
             if (!res.ok) return null;
@@ -261,7 +239,7 @@ class BlogRepository {
 
         try {
             const res = await fetch(url, {
-                next: { revalidate: 3600, tags: ["blogs"] },
+                cache: "no-store",
             });
             if (!res.ok) {
                 console.error(
@@ -281,10 +259,7 @@ class BlogRepository {
     async getAuthInfoBySlug(authSlug: string = ""): Promise<AuthorResponse> {
         try {
             const res = await fetch(BLOG_QUERIES.authorInfo(authSlug), {
-                next: {
-                    revalidate: 3600,
-                    tags: ["blogs"],
-                },
+                cache: "no-store",
             });
 
             if (!res.ok) throw new Error("Failed to fetch Author Info");
@@ -306,7 +281,7 @@ class BlogRepository {
             const res = await fetch(
                 BLOG_QUERIES.postsByAuthor(authId, page, perPage),
                 {
-                    next: { revalidate: 3600, tags: ["blogs"] },
+                    cache: "no-store",
                 }
             );
 
@@ -323,7 +298,7 @@ class BlogRepository {
     async getPostsCountByAuthId(authId: number): Promise<number> {
         try {
             const res = await fetch(BLOG_QUERIES.postsByAuthor(authId, 1, 1), {
-                next: { revalidate: 3600, tags: ["blogs"] },
+                cache: "no-store",
             });
             if (!res.ok) return 0;
             const total = res.headers.get("X-WP-Total");
