@@ -116,3 +116,40 @@ export function isExternalUrl(url: string | null | undefined): boolean {
         formatted.startsWith("//")
     );
 }
+
+/**
+ * Normalizes WordPress blog image URLs to ensure they resolve correctly to www.krmangalam.edu.in/wp-content/
+ */
+export function normalizeBlogImageUrl(url?: string | null): string {
+    if (!url || typeof url !== "string") return "";
+    const trimmed = url.trim();
+    if (!trimmed) return "";
+
+    return trimmed.replace(
+        /^https?:\/\/(?:wp\.|www\.)?krmangalam\.edu\.in(?:\/blog)?\/wp-content\//i,
+        "https://www.krmangalam.edu.in/wp-content/"
+    );
+}
+
+/**
+ * Decodes common HTML entities for plain text attributes (such as image alt tags).
+ */
+export function decodeHtmlEntities(str?: string | null): string {
+    if (!str || typeof str !== "string") return "";
+    return str
+        .replace(/&amp;/g, "&")
+        .replace(/&#038;/g, "&")
+        .replace(/&quot;/g, '"')
+        .replace(/&#039;/g, "'")
+        .replace(/&#8217;/g, "'")
+        .replace(/&#8216;/g, "'")
+        .replace(/&#8220;/g, '"')
+        .replace(/&#8221;/g, '"')
+        .replace(/&#8211;/g, "–")
+        .replace(/&#8212;/g, "—")
+        .replace(/&hellip;/g, "...")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/<[^>]*>/g, "")
+        .trim();
+}

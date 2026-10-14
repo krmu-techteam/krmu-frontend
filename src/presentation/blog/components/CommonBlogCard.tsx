@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Calendar } from "lucide-react";
 import { useState, useEffect } from "react";
 import { getBlogService } from "@/features/blog";
+import { decodeHtmlEntities } from "@/lib/utils";
 
 type Props = {
     title: string;
@@ -36,11 +37,13 @@ const CommonBlogCard = ({
     authorSlug,
 }: Props) => {
     const [imgSrc, setImgSrc] = useState<string | null>(imageUrl || null);
+    const [fallbackAttempted, setFallbackAttempted] = useState(false);
 
     useEffect(() => {
-        if (imageUrl) {
-            setImgSrc(imageUrl);
-        } else if (imgId) {
+        setImgSrc(imageUrl || null);
+        setFallbackAttempted(false);
+
+        if (!imageUrl && imgId) {
             getBlogService()
                 .getBlogImageByIdClientComp(imgId)
                 .then((url) => {
@@ -50,7 +53,36 @@ const CommonBlogCard = ({
         }
     }, [imageUrl, imgId]);
 
-    const finalImage = imgSrc || "/images/blog/hero/hero.jpg";
+    const handleImageError = () => {
+        if (!fallbackAttempted && imgSrc) {
+            setFallbackAttempted(true);
+
+            // If it failed on wp.krmangalam.edu.in, attempt loading from www.krmangalam.edu.in
+            if (imgSrc.includes("wp.krmangalam.edu.in")) {
+                const alt = imgSrc
+                    .replace("/blog/wp-content/", "/wp-content/")
+                    .replace("wp.krmangalam.edu.in", "www.krmangalam.edu.in");
+                if (alt !== imgSrc) {
+                    setImgSrc(alt);
+                    return;
+                }
+            } else if (imgSrc.includes("www.krmangalam.edu.in")) {
+                const alt = imgSrc.replace(
+                    "www.krmangalam.edu.in/wp-content/",
+                    "wp.krmangalam.edu.in/blog/wp-content/"
+                );
+                if (alt !== imgSrc) {
+                    setImgSrc(alt);
+                    return;
+                }
+            }
+        }
+
+        // Both attempts failed or no alternate, clear image (do not use default image)
+        setImgSrc(null);
+    };
+
+    const cleanAlt = decodeHtmlEntities(title) || "Blog Post";
 
     // Format date like "15 July 2026"
     const formattedDate = date
@@ -104,14 +136,23 @@ const CommonBlogCard = ({
 
                 {/* Top Image Banner */}
                 <div className="relative w-full aspect-[16/9] bg-[#071726] overflow-hidden pointer-events-none">
-                    <Image
-                        src={finalImage}
-                        alt={title || "Blog Post"}
-                        fill
-                        className="object-contain object-center group-hover:scale-[1.03] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        unoptimized
-                    />
+                    {imgSrc ? (
+                        <Image
+                            src={imgSrc}
+                            alt={cleanAlt}
+                            fill
+                            className="object-contain object-center group-hover:scale-[1.03] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            unoptimized
+                            onError={handleImageError}
+                        />
+                    ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#071726] via-[#091e30] to-[#061623]">
+                            <span className="text-white/20 text-xs font-poppins font-medium tracking-wider uppercase">
+                                {categoryName || "KRMU Blog"}
+                            </span>
+                        </div>
+                    )}
                 </div>
 
                 {/* Content Body */}
