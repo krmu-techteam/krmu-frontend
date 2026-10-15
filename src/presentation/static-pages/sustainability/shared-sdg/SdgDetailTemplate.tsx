@@ -11,94 +11,108 @@ import { SdgAwardsSection } from "./SdgAwardsSection";
 import { SdgDetailPageData } from "./types";
 
 export interface SdgDetailTemplateProps {
-  data: SdgDetailPageData;
+    data: SdgDetailPageData;
 }
 
 export const SdgDetailTemplate: React.FC<SdgDetailTemplateProps> = ({
-  data,
+    data,
 }) => {
-  return (
-    <SdgPageLayout>
-      {/* 1. Hero Banner */}
-      <SdgHeroSection
-        title={data.title}
-        subtitle={data.subtitle}
-        heroImage={data.heroImage}
-        backLink={data.backLink}
-      />
+    return (
+        <SdgPageLayout>
+            {/* 1. Hero Banner */}
+            <SdgHeroSection
+                title={data.title}
+                subtitle={data.subtitle}
+                heroImage={data.heroImage}
+                backLink={data.backLink}
+            />
 
-      {/* 2. Main Content & Right SDG Tile Card */}
-      <SdgContentSection
-        goalNumber={data.goalNumber}
-        title={data.title}
-        paragraphs={data.paragraphs}
-        leftButtonText={data.leftButtonText}
-        leftButtonUrl={data.leftButtonUrl}
-        leftButtons={data.leftButtons}
-        goalTileImage={data.goalTileImage}
-        sdgReportText={data.sdgReportText}
-        sdgReportUrl={data.sdgReportUrl}
-        accentColor={data.accentColor}
-      />
-
-      {/* 3. Primary Events Section */}
-      {data.events && data.events.length > 0 && (
-        <>
-          <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 my-8 h-[1px]">
-            <SectionDivider />
-          </div>
-          <SdgEventsSection title={data.eventsTitle} events={data.events} />
-        </>
-      )}
-
-      {/* 3b. Additional Custom Event / Category Groups */}
-      {data.eventGroups &&
-        data.eventGroups.filter(Boolean).map((group, idx) => (
-          <React.Fragment key={idx}>
-            <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 my-8 h-[1px]">
-              <SectionDivider />
-            </div>
-            {group?.events && group.events.length > 0 && (
-              <SdgEventsSection title={group.title} events={group.events} />
-            )}
-            {group?.audits && group.audits.length > 0 && (
-              <SdgAuditsSection
-                audits={{
-                  title:
-                    group.events && group.events.length > 0 ? "" : group.title,
-                  gridAudits: group.audits,
-                }}
+            {/* 2. Main Content & Right SDG Tile Card */}
+            <SdgContentSection
+                goalNumber={data.goalNumber}
+                title={data.title}
+                paragraphs={data.paragraphs}
+                leftButtonText={data.leftButtonText}
+                leftButtonUrl={data.leftButtonUrl}
+                leftButtons={data.leftButtons}
+                goalTileImage={data.goalTileImage}
+                sdgReportText={data.sdgReportText}
+                sdgReportUrl={data.sdgReportUrl}
                 accentColor={data.accentColor}
-              />
+            />
+
+            {/* 3. Primary Events Section */}
+            {data.events && data.events.length > 0 && (
+                <>
+                    <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 my-8 h-[1px]">
+                        <SectionDivider />
+                    </div>
+                    <SdgEventsSection
+                        title={data.eventsTitle}
+                        year={data.year}
+                        yearBgColor={data.yearBgColor}
+                        events={data.events}
+                    />
+                </>
             )}
-          </React.Fragment>
-        ))}
 
-      {/* 4. Audits Section */}
-      {data.audits && (
-        <>
-          <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 my-8 h-[1px]">
-            <SectionDivider />
-          </div>
-          <SdgAuditsSection
-            audits={data.audits}
-            accentColor={data.accentColor}
-          />
-        </>
-      )}
+            {/* 3b. Additional Custom Event / Category Groups */}
+            {data.eventGroups &&
+                data.eventGroups.filter(Boolean).map((group, idx) => (
+                    <React.Fragment key={idx}>
+                        {group.title && (
+                            <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 my-8 h-[1px]">
+                                <SectionDivider />
+                            </div>
+                        )}
+                        {group?.events && group.events.length > 0 && (
+                            <SdgEventsSection
+                                title={group.title}
+                                year={group.year}
+                                yearBgColor={group.yearBgColor}
+                                events={group.events}
+                            />
+                        )}
+                        {group?.audits && group.audits.length > 0 && (
+                            <SdgAuditsSection
+                                audits={{
+                                    title:
+                                        group.events && group.events.length > 0
+                                            ? ""
+                                            : group.title,
+                                    gridAudits: group.audits,
+                                }}
+                                accentColor={data.accentColor}
+                            />
+                        )}
+                    </React.Fragment>
+                ))}
 
-      {/* 5. Awards Section */}
-      {data.awards && data.awards.length > 0 && (
-        <>
-          <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 my-8 h-[1px]">
-            <SectionDivider />
-          </div>
-          <SdgAwardsSection
-            awards={data.awards}
-            accentColor={data.accentColor}
-          />
-        </>
-      )}
-    </SdgPageLayout>
-  );
+            {/* 4. Audits Section */}
+            {data.audits && (
+                <>
+                    <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 my-8 h-[1px]">
+                        <SectionDivider />
+                    </div>
+                    <SdgAuditsSection
+                        audits={data.audits}
+                        accentColor={data.accentColor}
+                    />
+                </>
+            )}
+
+            {/* 5. Awards Section */}
+            {data.awards && data.awards.length > 0 && (
+                <>
+                    <div className="relative max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 my-8 h-[1px]">
+                        <SectionDivider />
+                    </div>
+                    <SdgAwardsSection
+                        awards={data.awards}
+                        accentColor={data.accentColor}
+                    />
+                </>
+            )}
+        </SdgPageLayout>
+    );
 };
