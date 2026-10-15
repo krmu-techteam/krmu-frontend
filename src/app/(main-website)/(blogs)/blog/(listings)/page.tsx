@@ -26,7 +26,7 @@ const Page = async ({ searchParams }: Props) => {
             <CommonBlogLayout
                 searchParams={searchParams}
                 mainBlogClass={
-                    "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 temp-class"
+                    "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
                 }
             />
         </>
