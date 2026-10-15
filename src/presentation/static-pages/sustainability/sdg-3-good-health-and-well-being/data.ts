@@ -326,7 +326,7 @@ export const sdg3Data: SdgDetailPageData = {
         {
             id: "event-3-2024-2",
             title: "Harmonizing Frequencies A Journey into Therapeutic Movement",
-            image: "/images/sustainability/goals3/harmonizing-frequencies-a-journey-into-therapeutic-movement.jpg",
+            image: "/images/sustainability/goals3/harmonizing-frequencies-a-journey-into-therapeutic-movement.png",
             pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal3/Harmonizing-Frequencies-A-Journey-into-Therapeutic-Movement.pdf",
         },
         {
