@@ -310,9 +310,9 @@ export const sdg3Data: SdgDetailPageData = {
     ],
     goalTileImage:
         "https://www.krmangalam.edu.in/wp-content/uploads/2025/09/3.png",
-    sdgReportText: "SDG Report 2023-24",
+    sdgReportText: "SDG Report 2024-25",
     sdgReportUrl:
-        "https://www.krmangalam.edu.in/pdfs/sdg/sdg-annual-reports/2023-2024/SDG-3-2023-24.pdf",
+        "https://www.krmangalam.edu.in/pdfs/sdg/goal3/SDG-3-2024-25.pdf",
     accentColor: "#4C9F38",
     year: "2024 - 2025",
     eventsTitle: "Events And Activities",
