@@ -13,6 +13,21 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     try {
+        if (slug === "prof-dr-b-chandra") {
+            return {
+                title: "Prof (Dr.) B. Chandra | K.R. Mangalam University",
+                description:
+                    "Dr. (Mrs.) B. Chandra is an Adjunct Professor at the School of Information Technology, Indian Institute of Technology Delhi (IIT Delhi).",
+                alternates: {
+                    canonical: `${origUrl}/faculty/${slug}`,
+                },
+                robots: {
+                    index: true,
+                    follow: true,
+                },
+            };
+        }
+
         const facultyResData = await getFacultyBySlug(slug);
         const currentFaculty = facultyResData?.find(
             (fac: singleFaculty) => fac?.slug === slug
@@ -53,9 +68,24 @@ const page = async ({ params }: Props) => {
     const { slug } = await params;
 
     const facultyResData = await getFacultyBySlug(slug);
-    const currentFaculty = facultyResData?.find(
+    let currentFaculty = facultyResData?.find(
         (fac: singleFaculty) => fac?.slug === slug
     );
+
+    if (!currentFaculty && slug === "prof-dr-b-chandra") {
+        currentFaculty = {
+            id: 783,
+            slug: "prof-dr-b-chandra",
+            title: { rendered: "Prof (Dr.) B. Chandra" },
+            content: { rendered: "" },
+            featured_media: 9716,
+            acf: {
+                staff_designation: "Adjunct Professor",
+                "staff-qualification": "Indian Institute of Technology, Delhi",
+                schools: [1266],
+            },
+        } as any;
+    }
 
     if (!currentFaculty) {
         notFound();
@@ -63,14 +93,23 @@ const page = async ({ params }: Props) => {
 
     const facultyContent = currentFaculty?.content.rendered || "";
     const facultyImgId = currentFaculty?.featured_media;
-    const facultyName = currentFaculty?.title?.rendered || "";
-    const facultyDesignation = currentFaculty?.acf?.staff_designation || "";
+    const facultyName =
+        currentFaculty?.title?.rendered ||
+        (slug === "prof-dr-b-chandra" ? "Prof (Dr.) B. Chandra" : "");
+    const facultyDesignation =
+        currentFaculty?.acf?.staff_designation ||
+        (slug === "prof-dr-b-chandra" ? "Adjunct Professor" : "");
 
     let facImgUrl = "";
 
     if (facultyImgId !== undefined && facultyImgId !== null) {
         facImgUrl = await getWordImageById(facultyImgId);
     }
+    if (!facImgUrl && slug === "prof-dr-b-chandra") {
+        facImgUrl =
+            "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Prof_Dr_B_Chandra_0d28e1ea68.png";
+    }
+
     // Load HTML
     const $ = cheerio.load(facultyContent);
 
@@ -82,6 +121,17 @@ const page = async ({ params }: Props) => {
         const text = $(li).text().trim();
         if (text) interestItems.push(text);
     });
+
+    if (slug === "prof-dr-b-chandra" && interestItems.length === 0) {
+        interestItems.push(
+            "Machine Learning",
+            "Deep Learning",
+            "Neural Networks",
+            "Data Mining",
+            "Feature Selection",
+            "Natural Language Processing"
+        );
+    }
 
     // Extract tabs and their contents
     const tabList: { title: string; content: string }[] = [];
@@ -102,6 +152,13 @@ const page = async ({ params }: Props) => {
             }
         }
     });
+
+    if (slug === "prof-dr-b-chandra" && tabList.length === 0) {
+        tabList.push({
+            title: "Biography",
+            content: `<p>Dr. (Mrs.) B. Chandra is an Adjunct Professor at the School of Information Technology, Indian Institute of Technology Delhi (IIT Delhi). With distinguished academic and research experience, she has served as Professor in the Computer Science Group, Department of Mathematics, IIT Delhi, and as Head of the Department from 2004 to 2007. Her research expertise encompasses Machine Learning, Deep Learning, Neural Networks, Data Mining, Feature Selection, and Natural Language Processing. She has guided 15 Ph.D. scholars, supervised over 180 M.Tech. projects, and published more than 80 research papers in reputed journals and conferences. She has also authored books and led several sponsored research and consultancy projects.</p>`,
+        });
+    }
 
     // Extract social links <ul>
     const socialItems: {
