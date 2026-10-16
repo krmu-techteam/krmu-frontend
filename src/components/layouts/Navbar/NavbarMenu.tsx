@@ -268,7 +268,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 <div className="mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-16 relative z-10 flex flex-row justify-between items-stretch gap-8 lg:gap-10 xl:gap-12">
                                     {/* Left: Schools */}
                                     <div className="flex-1 min-w-0 max-w-[460px] py-8">
-                                        <div className="text-2xl font-normal font-poppins text-white mb-6">
+                                        <div className="text-2xl font-normal font-poppins text-white mb-3">
                                             {academicMenu?.academicmenu
                                                 ?.heading || "Schools"}
                                         </div>
@@ -331,7 +331,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                     {/* Middle: Discover More & Buttons */}
                                     <div className="w-[300px] shrink-0 py-8 flex flex-col">
                                         <div>
-                                            <div className="text-[17px] font-normal font-poppins text-white mb-5">
+                                            <div className="text-[17px] font-normal font-poppins text-white mb-3">
                                                 {
                                                     academicMenu?.discovermenu
                                                         ?.heading
@@ -389,13 +389,30 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                 className="relative overflow-hidden group w-full h-[44px] border border-[#1D3B52] hover:border-[#38bdf8]/60 bg-transparent hover:bg-white/5 text-white font-poppins font-light px-4 rounded-[2px] text-[12.5px] flex items-center justify-center transition-all tracking-wider text-center cursor-pointer whitespace-nowrap uppercase"
                                             >
                                                 <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none" />
-                                                <span className="relative z-10">
-                                                    University Student Handbook
+                                                <span className="relative z-10 flex items-center justify-center gap-2">
+                                                    <span>
+                                                        University Student
+                                                        Handbook
+                                                    </span>
+                                                    <Download
+                                                        size={15}
+                                                        className="transition-transform duration-300 ease-in-out group-hover:translate-y-0.5"
+                                                    />
                                                 </span>
                                             </Link>
                                             <CommonLeadPopup
                                                 buttonClassName="w-full h-[44px] border border-[#1D3B52] hover:border-[#38bdf8]/60 bg-transparent hover:bg-white/5 text-white font-poppins font-light px-4 rounded-[2px] text-[12.5px] flex items-center justify-center transition-all tracking-wider text-center uppercase whitespace-nowrap cursor-pointer"
-                                                buttonText="DOWNLOAD PROSPECTUS"
+                                                buttonText={
+                                                    <span className="relative z-10 flex items-center justify-center gap-2">
+                                                        <span>
+                                                            DOWNLOAD PROSPECTUS
+                                                        </span>
+                                                        <Download
+                                                            size={15}
+                                                            className="transition-transform duration-300 ease-in-out group-hover:translate-y-0.5"
+                                                        />
+                                                    </span>
+                                                }
                                                 redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
                                                 form_name="Download Prospectus"
                                             />
