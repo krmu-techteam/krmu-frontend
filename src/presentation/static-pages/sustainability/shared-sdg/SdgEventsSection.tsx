@@ -123,7 +123,7 @@ export const SdgEventsSection: React.FC<SdgEventsSectionProps> = ({
 
                             {/* Title Bar */}
                             <div className="px-2.5 py-2 flex items-center grow min-h-[58px]">
-                                <h3 className="text-[16px] sm:text-[17px] font-serif font-medium text-[#E7C268] group-hover:text-white transition-colors duration-300 leading-snug line-clamp-2">
+                                <h3 className="text-[16px] sm:text-[17px] font-poppins font-medium text-[#E7C268] group-hover:text-[#E7C268]/90 transition-colors duration-300 leading-snug line-clamp-2">
                                     {item.title}
                                 </h3>
                             </div>
