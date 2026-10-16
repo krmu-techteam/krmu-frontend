@@ -40,37 +40,37 @@ export const policiesOnNoPovertyData: PolicyPageData = {
         {
             id: "policy-7",
             title: "1.8.24 OO implementation revised policy on low income group LIG category 2024-25",
-            url: "https://krmangalam.edu.in/pdfs/sdg/policy-on-no-poverty/1-8-24-OO-implementation-revised-policy-on-low-income-group-LIG-category-2024-25.pdf",
+            url: "https://www.krmangalam.edu.in/pdfs/sdg/goal1/policies/1-8-24-OO-implementation-revised-policy-on-low-income-group-LIG-category-2024-25.pdf",
         },
         {
             id: "policy-8",
             title: "2.8.24 OO implementation of  revised  LIG category ay 2024-25",
-            url: "https://krmangalam.edu.in/pdfs/sdg/policy-on-no-poverty/2-8-24-OO-implementation-of-revised-LIG-category-ay-2024-25.pdf",
+            url: "https://www.krmangalam.edu.in/pdfs/sdg/goal1/policies/2-8-24-OO-implementation-of-revised-LIG-category-ay-2024-25.pdf",
         },
         {
             id: "policy-9",
             title: "Admission and Migration Policy 2024-25",
-            url: "https://krmangalam.edu.in/pdfs/sdg/policy-on-no-poverty/Admission-and-Migration-Policy-2024-25.pdf",
+            url: "https://www.krmangalam.edu.in/pdfs/sdg/goal1/policies/Admission-and-Migration-Policy-2024-25.pdf",
         },
         {
             id: "policy-10",
             title: "Innovation and Start-Up Policy of KRMU",
-            url: "https://krmangalam.edu.in/pdfs/sdg/policy-on-no-poverty/Innovation-and-Start-Up-Policy-of-KRMU.pdf",
+            url: "https://www.krmangalam.edu.in/pdfs/sdg/goal1/policies/Innovation-and-Start-Up-Policy-of-KRMU.pdf",
         },
         {
             id: "policy-11",
             title: "LIG Scholarship 2024-25",
-            url: "https://krmangalam.edu.in/pdfs/sdg/policy-on-no-poverty/LIG-Scholarship-2024-25.pdf",
+            url: "https://www.krmangalam.edu.in/pdfs/sdg/goal1/policies/LIG-Scholarship-2024-25.pdf",
         },
         {
             id: "policy-12",
             title: "Student Academic Support Scheme Award Year 2024-25",
-            url: "https://krmangalam.edu.in/pdfs/sdg/policy-on-no-poverty/Student-Academic-Support-Scheme-Award-Year-2024-25.pdf",
+            url: "https://www.krmangalam.edu.in/pdfs/sdg/goal1/policies/Student-Academic-Support-Scheme-Award-Year-2024-25.pdf",
         },
         {
             id: "policy-13",
             title: "Student Learning Enhancement Support Scheme (Award Year 2024-25",
-            url: "https://krmangalam.edu.in/pdfs/sdg/policy-on-no-poverty/Student-Learning-Enhancement-Support-Scheme-Award-Year-2024-25.pdf",
+            url: "https://www.krmangalam.edu.in/pdfs/sdg/goal1/policies/Student-Learning-Enhancement-Support-Scheme-Award-Year-2024-25.pdf",
         },
     ],
 };
