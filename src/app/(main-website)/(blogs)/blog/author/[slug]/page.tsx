@@ -3,12 +3,55 @@ import AuthorHero from "../comp/AuthorHero";
 import AuthorPosts from "../comp/AuthorPosts";
 
 import { notFound } from "next/navigation";
+import { folderRouteSEO } from "@/lib/api/siteseo";
+import { Metadata } from "next";
+import { STRAPI_URL } from "@/app/constant";
 
 export const dynamic = "force-dynamic";
 
 type Props = {
     params: Promise<{ slug: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { slug } = await params;
+
+    const seoData = await folderRouteSEO(slug);
+    const seo = seoData[0];
+
+    const shareImageUrl = seo?.shareImg?.url
+        ? `${STRAPI_URL}${seo.shareImg.url}`
+        : undefined;
+
+    // Fallback if SEO is missing
+    if (!seo) {
+        return {
+            title: "K.R. Mangalam University",
+            description: "",
+            robots: {
+                index: true,
+                follow: true,
+            },
+        };
+    }
+
+    return {
+        title: seo.title || "K.R. Mangalam University",
+        description: seo.metaDescription || "",
+        robots: {
+            index: true,
+            follow: true,
+        },
+        alternates: {
+            canonical: seo.canonicalUrl || "#",
+        },
+        openGraph: {
+            title: seo.title || "K.R. Mangalam University",
+            description: seo.metaDescription || "",
+            images: shareImageUrl ? [shareImageUrl] : [],
+        },
+    };
+}
 
 const page = async ({ params }: Props) => {
     const { slug } = await params;
