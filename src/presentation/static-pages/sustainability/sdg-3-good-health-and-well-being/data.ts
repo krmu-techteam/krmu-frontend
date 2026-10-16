@@ -427,7 +427,7 @@ export const sdg3Data: SdgDetailPageData = {
         },
         {
             id: "event-3-2024-19",
-            title: "Blood Doantion",
+            title: "Blood Donation",
             image: "/images/sustainability/goals3/report-Blood-Donation-Camp-9-apr-2025.jpeg",
             pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal3/report-Blood-Donation-Camp-9-apr-2025.pdf",
         },
