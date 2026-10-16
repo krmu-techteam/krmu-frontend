@@ -72,7 +72,9 @@ const AuthorHero = ({ imgUrl, AuthName, AuthDesg, AuthAbout }: Props) => {
                 <div className="flex flex-col text-center sm:text-left">
                     <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
                         <h1 className="text-2xl sm:text-3xl font-bold text-white font-poppins tracking-tight">
-                            {AuthName || "Author"}
+                            {AuthName === "admin@krmangalam"
+                                ? "K.R. Mangalam University Team"
+                                : AuthName || "Author"}
                         </h1>
                     </div>
 

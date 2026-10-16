@@ -113,7 +113,7 @@ export const NoIndexEventsSlugs = [
     // "a-visit-to-somany-ceramic-factory",
     "samsung-india-solve-for-tomorrow",
     // "mou-with-save-aravali-trust",
-    "folk-story-recitation-competition",
+    // "folk-story-recitation-competition",
     // "workshop-on-idea-forge-navigating-problem-solving-ideation",
     "world-pharmacist-day",
     // "workshop-on-japanese-cuisine",
@@ -147,7 +147,7 @@ export const NoIndexEventsSlugs = [
     "awareness-drive-on-reducing-inequality-2",
     // "conference-on-embracing-diversity-exploring-third-gender-marriages-and-gender-equality",
     // "medical-support-team-at-basketball-tournament",
-    "a-visit-to-csir-npl",
+    // "a-visit-to-csir-npl",
     // "educational-trip-to-khushboo-welfare-society",
     // "expert-session-on-entrepreneurship-through-side-hustle",
 ];
