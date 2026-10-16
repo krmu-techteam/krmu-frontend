@@ -310,9 +310,9 @@ export const sdg3Data: SdgDetailPageData = {
     ],
     goalTileImage:
         "https://www.krmangalam.edu.in/wp-content/uploads/2025/09/3.png",
-    sdgReportText: "SDG Report 2024-25",
+    sdgReportText: "SDG Report 2023-24",
     sdgReportUrl:
-        "https://www.krmangalam.edu.in/pdfs/sdg/goal3/SDG-3-2024-25.pdf",
+        "https://www.krmangalam.edu.in/pdfs/sdg/sdg-annual-reports/2023-2024/SDG-3-2023-24.pdf",
     accentColor: "#4C9F38",
     year: "2024 - 2025",
     eventsTitle: "Events And Activities",
@@ -405,7 +405,7 @@ export const sdg3Data: SdgDetailPageData = {
             id: "event-3-2024-15",
             title: "Workshop on Women Health and Safety",
             image: "/images/sustainability/goals3/Workshop-on-Women-Health-and-Safety.jpeg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal3/Workshop-on-Women-Health-and-Safety.pdf",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal3/Workshop-on-women-health-and-safety.pdf",
         },
         {
             id: "event-3-2024-16",
@@ -490,6 +490,12 @@ export const sdg3Data: SdgDetailPageData = {
             title: "VISIT TO OLD AGE HOME",
             image: "/images/sustainability/goals3/Visit-to-Old-Age-Home.jpeg",
             pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal3/Donation-Drive-and-visit-to-old-Age-Home.pdf",
+        },
+        {
+            id: "event-3-2024-30",
+            title: "EXPERT SESSION ON BUILDING EMOTIONAL INTELLIGENCE (EI) AND THE ART AND SCIENCE OF EMOTIONAL BRILLIANCE",
+            image: "/images/sustainability/goals3/EXPERT-SESSION-on-BUILDING-EMOTIONAL-INTELLIGENCE-EI-AND-THE-ART-AND-SCIENCE-OF-EMOTIONAL-BRILLIANCE.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal3/EXPERT-SESSION-ON-BUILDING-EMOTIONAL-INTELLIGENCE-EI-AND-THE-ART-AND-SCIENCE-OF-EMOTIONAL-BRILLIANCE.pdf",
         },
     ],
     eventGroups: [
