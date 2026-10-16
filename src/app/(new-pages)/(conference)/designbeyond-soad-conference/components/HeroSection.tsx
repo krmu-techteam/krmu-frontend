@@ -15,7 +15,7 @@ const HeroSection = () => {
                         className="h-auto w-[90px] sm:w-[110px] lg:w-[150px]"
                     />
 
-                    <h3 className="text-lg font-normal leading-snug sm:text-xl lg:text-2xl mb-2 temp-class">
+                    <h3 className="text-lg font-normal leading-snug sm:text-xl lg:text-2xl mb-2">
                         3rd International Multidisciplinary Conference
                     </h3>
 
