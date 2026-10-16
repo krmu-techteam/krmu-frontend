@@ -259,101 +259,97 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                 />
                             </div>
                             <div
-                                className="absolute left-0 right-0 mx-auto w-full max-w-[1440px] top-full bg-[#04101A] pt-8 pb-10 md:pt-10 md:pb-12 overflow-hidden krmsubmenu-container z-50 shadow-2xl"
+                                className="absolute left-0 right-0 mx-auto w-full max-w-[1440px] top-full bg-[#04101A] overflow-hidden krmsubmenu-container z-50 shadow-2xl"
                                 onMouseEnter={() =>
                                     handleMenuEnter("academics")
                                 }
                                 onMouseLeave={handleMenuLeave}
                             >
-                                <div className="mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-12 gap-8 lg:gap-12">
+                                <div className="mx-auto w-full max-w-[1440px] px-6 md:px-12 lg:px-16 relative z-10 flex flex-row justify-between items-stretch gap-8 lg:gap-10 xl:gap-12">
                                     {/* Left: Schools */}
-                                    <div className="col-span-12 lg:col-span-8">
+                                    <div className="flex-1 min-w-0 max-w-[460px] py-8">
                                         <div className="text-2xl font-normal font-poppins text-white mb-6">
-                                            Schools
+                                            {academicMenu?.academicmenu
+                                                ?.heading || "Schools"}
                                         </div>
 
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
-                                            {/* Column 1 (First 7 schools) */}
-                                            <ul className="flex flex-col gap-3">
-                                                {academicMenu?.academicmenu?.menulinks
-                                                    ?.slice(0, 7)
-                                                    .map((school) => {
-                                                        const isZenith =
-                                                            school.title
-                                                                .toLowerCase()
-                                                                .includes(
-                                                                    "zenith"
-                                                                );
-                                                        const href =
-                                                            formatInternalLink(
-                                                                school.url
-                                                            ) || "#";
-                                                        const ext =
-                                                            isExternalUrl(
-                                                                school.url
-                                                            );
-                                                        return (
-                                                            <li key={school.id}>
-                                                                <Link
-                                                                    href={href}
-                                                                    target={
-                                                                        ext
-                                                                            ? "_blank"
-                                                                            : undefined
-                                                                    }
-                                                                    rel={
-                                                                        ext
-                                                                            ? "noopener noreferrer"
-                                                                            : undefined
-                                                                    }
-                                                                    className={`font-poppins transition-colors text-[14px] xl:text-[14.5px] flex items-center gap-2 group ${
+                                        <ul className="flex flex-col gap-2.5">
+                                            {academicMenu?.academicmenu?.menulinks?.map(
+                                                (school) => {
+                                                    const isZenith =
+                                                        school.title
+                                                            ?.toLowerCase()
+                                                            .includes("zenith");
+                                                    const href =
+                                                        formatInternalLink(
+                                                            school.url
+                                                        ) || "#";
+                                                    const ext = isExternalUrl(
+                                                        school.url
+                                                    );
+                                                    return (
+                                                        <li key={school.id}>
+                                                            <Link
+                                                                href={href}
+                                                                target={
+                                                                    ext
+                                                                        ? "_blank"
+                                                                        : undefined
+                                                                }
+                                                                rel={
+                                                                    ext
+                                                                        ? "noopener noreferrer"
+                                                                        : undefined
+                                                                }
+                                                                className={`font-poppins transition-colors text-[13.5px] xl:text-[14px] flex items-center gap-2 group ${
+                                                                    isZenith
+                                                                        ? "text-[#00AEEF] hover:text-[#38bdf8] font-normal"
+                                                                        : "text-white/85 hover:text-white font-light"
+                                                                }`}
+                                                            >
+                                                                <ChevronRight
+                                                                    size={13}
+                                                                    className={`shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 ${
                                                                         isZenith
-                                                                            ? "text-[#00AEEF] hover:text-[#38bdf8] font-normal"
-                                                                            : "text-white/90 hover:text-white font-light"
+                                                                            ? "text-[#00AEEF]"
+                                                                            : "text-white/70 group-hover:text-white"
                                                                     }`}
-                                                                >
-                                                                    <ChevronRight
-                                                                        size={
-                                                                            14
-                                                                        }
-                                                                        className={`shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 ${
-                                                                            isZenith
-                                                                                ? "text-[#00AEEF]"
-                                                                                : "text-white/90 group-hover:text-white"
-                                                                        }`}
-                                                                    />
-                                                                    <span className="leading-snug">
-                                                                        {
-                                                                            school.title
-                                                                        }
-                                                                    </span>
-                                                                </Link>
-                                                            </li>
-                                                        );
-                                                    })}
-                                            </ul>
+                                                                />
+                                                                <span className="leading-snug">
+                                                                    {
+                                                                        school.title
+                                                                    }
+                                                                </span>
+                                                            </Link>
+                                                        </li>
+                                                    );
+                                                }
+                                            )}
+                                        </ul>
+                                    </div>
 
-                                            {/* Column 2 (Remaining schools) */}
-                                            <ul className="flex flex-col gap-3">
-                                                {academicMenu?.academicmenu?.menulinks
-                                                    ?.slice(7)
-                                                    .map((school) => {
-                                                        const isZenith =
-                                                            school.title
-                                                                .toLowerCase()
-                                                                .includes(
-                                                                    "zenith"
-                                                                );
+                                    {/* Middle: Discover More & Buttons */}
+                                    <div className="w-[300px] shrink-0 py-8 flex flex-col">
+                                        <div>
+                                            <div className="text-[17px] font-normal font-poppins text-white mb-5">
+                                                {
+                                                    academicMenu?.discovermenu
+                                                        ?.heading
+                                                }
+                                            </div>
+                                            <ul className="flex flex-col gap-2.5">
+                                                {academicMenu?.discovermenu?.menulinks?.map(
+                                                    (item) => {
                                                         const href =
                                                             formatInternalLink(
-                                                                school.url
+                                                                item.url
                                                             ) || "#";
                                                         const ext =
                                                             isExternalUrl(
-                                                                school.url
+                                                                item.url
                                                             );
                                                         return (
-                                                            <li key={school.id}>
+                                                            <li key={item.id}>
                                                                 <Link
                                                                     href={href}
                                                                     target={
@@ -366,76 +362,93 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                                             ? "noopener noreferrer"
                                                                             : undefined
                                                                     }
-                                                                    className={`font-poppins transition-colors text-[14px] xl:text-[14.5px] flex items-center gap-2 group ${
-                                                                        isZenith
-                                                                            ? "text-[#00AEEF] hover:text-[#38bdf8] font-normal"
-                                                                            : "text-white/90 hover:text-white font-light"
-                                                                    }`}
+                                                                    className="font-poppins text-[13.5px] xl:text-[14px] text-white/80 hover:text-white font-light transition-colors flex items-center gap-2"
                                                                 >
-                                                                    <ChevronRight
-                                                                        size={
-                                                                            14
-                                                                        }
-                                                                        className={`shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 ${
-                                                                            isZenith
-                                                                                ? "text-[#00AEEF]"
-                                                                                : "text-white/90 group-hover:text-white"
-                                                                        }`}
-                                                                    />
+                                                                    <span className="text-white/60 text-xs shrink-0">
+                                                                        •
+                                                                    </span>
                                                                     <span className="leading-snug">
                                                                         {
-                                                                            school.title
+                                                                            item.title
                                                                         }
                                                                     </span>
                                                                 </Link>
                                                             </li>
                                                         );
-                                                    })}
+                                                    }
+                                                )}
                                             </ul>
+                                        </div>
+
+                                        {/* Action Buttons */}
+                                        <div className="flex flex-col gap-3 w-full max-w-[275px] mt-6">
+                                            <Link
+                                                href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="relative overflow-hidden group w-full h-[44px] border border-[#1D3B52] hover:border-[#38bdf8]/60 bg-transparent hover:bg-white/5 text-white font-poppins font-light px-4 rounded-[2px] text-[12.5px] flex items-center justify-center transition-all tracking-wider text-center cursor-pointer whitespace-nowrap uppercase"
+                                            >
+                                                <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none" />
+                                                <span className="relative z-10">
+                                                    University Student Handbook
+                                                </span>
+                                            </Link>
+                                            <CommonLeadPopup
+                                                buttonClassName="w-full h-[44px] border border-[#1D3B52] hover:border-[#38bdf8]/60 bg-transparent hover:bg-white/5 text-white font-poppins font-light px-4 rounded-[2px] text-[12.5px] flex items-center justify-center transition-all tracking-wider text-center uppercase whitespace-nowrap cursor-pointer"
+                                                buttonText="DOWNLOAD PROSPECTUS"
+                                                redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
+                                                form_name="Download Prospectus"
+                                            />
                                         </div>
                                     </div>
 
-                                    {/* Right: Counters & Buttons */}
-                                    <div className="col-span-12 lg:col-span-4 flex flex-col justify-center items-center lg:items-end">
-                                        <div className="w-full max-w-[340px] flex flex-col items-center">
-                                            {/* Counters */}
-                                            <div className="flex items-center justify-center gap-6 text-[#E7C268] font-poppins text-[15px] xl:text-[16px] mb-12 w-full">
-                                                <span className="font-normal">
-                                                    {academicMenu
-                                                        ?.acadcounter?.[0]
-                                                        ? `${academicMenu.acadcounter[0].countertext} ${academicMenu.acadcounter[0].countercontent}`
-                                                        : "13 Schools"}
+                                    {/* Right: Background + Girl Image + Counters */}
+                                    <div className="relative w-[330px] xl:w-[350px] self-stretch shrink-0 flex flex-col justify-end pb-5 select-none overflow-hidden">
+                                        <Image
+                                            src="/images/header/menu/academic/academic-header-bg.png"
+                                            alt="Academic Background"
+                                            fill
+                                            sizes="350px"
+                                            className="object-cover pointer-events-none"
+                                            priority
+                                        />
+                                        <Image
+                                            src="/images/header/menu/academic/academic-header-menu.png"
+                                            alt="Academic Student"
+                                            width={309}
+                                            height={465}
+                                            className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[465px] w-auto object-contain pointer-events-none z-10"
+                                            priority
+                                        />
+                                        <div className="relative z-20 flex items-center justify-center gap-2 px-3 w-full text-[#E7C268] font-poppins text-[13px] xl:text-[14px]">
+                                            {academicMenu?.acadcounter?.[0] && (
+                                                <span className="w-[128px] h-[49px] rounded-[40px] bg-[#01101B80] flex items-center justify-center text-center px-2 font-normal leading-tight">
+                                                    {
+                                                        academicMenu
+                                                            .acadcounter[0]
+                                                            .countertext
+                                                    }{" "}
+                                                    {
+                                                        academicMenu
+                                                            .acadcounter[0]
+                                                            .countercontent
+                                                    }
                                                 </span>
-                                                <span className="h-12 w-[1px] bg-[#1D3B52] inline-block" />
-                                                <span className="font-normal">
-                                                    {academicMenu
-                                                        ?.acadcounter?.[1]
-                                                        ? `${academicMenu.acadcounter[1].countertext} ${academicMenu.acadcounter[1].countercontent}`
-                                                        : "700+ Faculties"}
+                                            )}
+                                            {academicMenu?.acadcounter?.[1] && (
+                                                <span className="min-w-[128px] px-3 h-[49px] rounded-[40px] bg-[#01101B80] flex items-center justify-center text-center font-normal leading-tight">
+                                                    {
+                                                        academicMenu
+                                                            .acadcounter[1]
+                                                            .countertext
+                                                    }{" "}
+                                                    {
+                                                        academicMenu
+                                                            .acadcounter[1]
+                                                            .countercontent
+                                                    }
                                                 </span>
-                                            </div>
-
-                                            {/* Buttons */}
-                                            <div className="flex flex-col gap-3.5 w-full max-w-[275px]">
-                                                <Link
-                                                    href="https://www.krmangalam.edu.in/pdfs/student-handbook-26-27.pdf"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="relative overflow-hidden group w-full h-[46px] border border-[#1D3B52] hover:border-[#38bdf8]/60 bg-transparent hover:bg-white/5 text-white font-poppins font-light px-4 rounded-[2px] text-[13px] flex items-center justify-center transition-all tracking-wider text-center cursor-pointer whitespace-nowrap"
-                                                >
-                                                    <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-800 ease-in-out pointer-events-none" />
-                                                    <span className="relative z-10">
-                                                        University Student
-                                                        Handbook
-                                                    </span>
-                                                </Link>
-                                                <CommonLeadPopup
-                                                    buttonClassName="w-full h-[46px] border border-[#1D3B52] hover:border-[#38bdf8]/60 bg-transparent hover:bg-white/5 text-white font-poppins font-light px-4 rounded-[2px] text-[13px] flex items-center justify-center transition-all tracking-wider text-center uppercase whitespace-nowrap"
-                                                    buttonText="DOWNLOAD PROSPECTUS"
-                                                    redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
-                                                    form_name="Download Prospectus"
-                                                />
-                                            </div>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
@@ -752,7 +765,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         {/* Action Buttons */}
                                         <div className="flex items-center gap-3">
                                             <CommonLeadPopup
-                                                buttonClassName="border w-fit border-[#3C7ED4]/50 hover:border-[#3C7ED4] bg-[#071624]/60 hover:bg-[#0c1e30] text-white font-poppins font-normal py-3 px-4 rounded-[2px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center uppercase cursor-pointer whitespace-nowrap"
+                                                buttonClassName="border w-fit  border-[#1D3B52]  hover:border-[#38bdf8]/60  bg-transparent hover:bg-[#0c1e30] text-white font-poppins font-normal py-3 px-4 rounded-[2px] text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center uppercase cursor-pointer whitespace-nowrap"
                                                 buttonText="DOWNLOAD PROSPECTUS"
                                                 redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
                                                 form_name="Download Prospectus"
@@ -895,7 +908,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                                             <div className="flex flex-wrap items-center gap-3 mt-6">
                                                 <CommonLeadPopup
-                                                    buttonClassName="w-fit border border-[#fff]/80 hover:border-white text-white font-poppins font-normal text-[12px] md:text-[13px] leading-none tracking-wide whitespace-nowrap rounded-[2px] px-3 lg:px-4 h-[42px] flex items-center justify-center uppercase transition-all duration-300 ease-in-out cursor-pointer"
+                                                    buttonClassName="w-fit border border-[#1D3B52]  hover:border-[#38bdf8]/60 text-white font-poppins font-normal text-[12px] md:text-[13px] leading-none tracking-wide whitespace-nowrap rounded-[2px] px-3 lg:px-4 h-[42px] flex items-center justify-center uppercase transition-all duration-300 ease-in-out cursor-pointer"
                                                     buttonText="DOWNLOAD PROSPECTUS"
                                                     redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
                                                     form_name="Download Prospectus"
@@ -1118,7 +1131,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
 
                                         <div className="flex flex-wrap items-center gap-3 mt-6">
                                             <CommonLeadPopup
-                                                buttonClassName="group w-fit border border-white/90 hover:border-white bg-transparent hover:bg-white/5 text-white/90 hover:text-white font-poppins font-normal py-3 px-4 rounded-[2px] text-[12px] md:text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center uppercase cursor-pointer whitespace-nowrap"
+                                                buttonClassName="group w-fit border border-[#1D3B52]  hover:border-[#38bdf8]/60 bg-transparent hover:bg-white/5 text-white/90 hover:text-white font-poppins font-normal py-3 px-4 rounded-[2px] text-[12px] md:text-[13px] flex items-center justify-center gap-1.5 transition-all tracking-wide text-center uppercase cursor-pointer whitespace-nowrap"
                                                 buttonText={
                                                     <div className="flex items-center justify-center gap-1.5">
                                                         <span>
@@ -1423,7 +1436,7 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         {/* Action Buttons */}
                                         <div className="flex flex-wrap items-center gap-3 mt-auto">
                                             <CommonLeadPopup
-                                                buttonClassName="w-fit border border-white/90 hover:border-white text-white text-[13px] md:text-[13.5px] h-[42px] font-poppins font-medium whitespace-nowrap rounded-[2px] px-4 flex items-center justify-center uppercase transition-all cursor-pointer"
+                                                buttonClassName="w-fit bg-transparent border border-[#1D3B52]  hover:border-[#38bdf8]/60 text-white text-[13px] md:text-[13.5px] h-[42px] font-poppins font-medium whitespace-nowrap rounded-[2px] px-4 flex items-center justify-center uppercase transition-all cursor-pointer"
                                                 buttonText="DOWNLOAD PROSPECTUS"
                                                 redirectUrl="https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/University_Prospectus_2025_26_05_Updated_4_1_4f9d19673e.pdf"
                                                 form_name="Download Prospectus"
@@ -1445,9 +1458,9 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                         </div>
                                     </div>
 
-                                    {/* Right Column: Links (Overview, Administration, Discover More, Others) */}
+                                    {/* Right Column: Links (Overview, Administration, Others) */}
                                     <div className="col-span-8 border-l border-white/10 pl-6 lg:pl-10 flex flex-col">
-                                        <div className="grid grid-cols-4 gap-4 lg:gap-6 mt-2">
+                                        <div className="grid grid-cols-3 gap-6 lg:gap-8 mt-2">
                                             {/* Overview */}
                                             <div>
                                                 <div className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
@@ -1526,56 +1539,6 @@ const NavbarMenu = ({ mainMenu }: Props) => {
                                                     )}
                                                 </ul>
                                             </div>
-
-                                            {/* Discover More */}
-                                            {academicMenu?.discovermenu && (
-                                                <div>
-                                                    <div className="text-sm bg-[#12202B] px-4 py-3 font-poppins font-semibold text-white mb-6 rounded-[3px]">
-                                                        {
-                                                            academicMenu
-                                                                .discovermenu
-                                                                .heading
-                                                        }
-                                                    </div>
-                                                    <ul className="flex flex-col gap-2.5">
-                                                        {academicMenu.discovermenu.menulinks?.map(
-                                                            (menu: any) => (
-                                                                <li
-                                                                    key={
-                                                                        menu.id
-                                                                    }
-                                                                >
-                                                                    <Link
-                                                                        href={
-                                                                            menu.url ||
-                                                                            "#"
-                                                                        }
-                                                                        className="text-white/80 hover:text-white transition-colors text-[15px] font-light font-poppins"
-                                                                        target={
-                                                                            menu.url?.startsWith(
-                                                                                "http"
-                                                                            )
-                                                                                ? "_blank"
-                                                                                : undefined
-                                                                        }
-                                                                        rel={
-                                                                            menu.url?.startsWith(
-                                                                                "http"
-                                                                            )
-                                                                                ? "noopener noreferrer"
-                                                                                : undefined
-                                                                        }
-                                                                    >
-                                                                        {
-                                                                            menu.title
-                                                                        }
-                                                                    </Link>
-                                                                </li>
-                                                            )
-                                                        )}
-                                                    </ul>
-                                                </div>
-                                            )}
 
                                             {/* Others */}
                                             <div>
