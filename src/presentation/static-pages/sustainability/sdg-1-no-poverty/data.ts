@@ -34,7 +34,7 @@ export const sdg1Data: SdgDetailPageData = {
             url: "https://www.krmangalam.edu.in/policies-on-no-poverty/",
         },
         {
-            text: "Annual Report 2024-25 Final",
+            text: "INSTITUTION’s INNOVATION COUNCIL (IIC) ANNUAL REPORT 2024-25",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/goal1/INSTITUTION-INNOVATION-COUNCIL-IIC-ANNUAL-REPORT-2024-25/Annual-Report-2024-25-Final.pdf",
         },
     ],
