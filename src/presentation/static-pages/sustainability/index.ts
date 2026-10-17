@@ -25,3 +25,4 @@ export * as MouOnAffordableAndCleanEnergy from "./mou-on-affordable-and-clean-en
 export * as PolicyOnDecentWorkAndEconomicGrowth from "./policy-on-decent-work-and-economic-growth";
 export * as PolicyOnReducedInequalities from "./policy-on-reduced-inequalities";
 export * as PolicyOnSustainableCitiesAndCommunities from "./policy-on-sustainable-cities-and-communities";
+export * as FoodWasteReport from "./food-waste-report";

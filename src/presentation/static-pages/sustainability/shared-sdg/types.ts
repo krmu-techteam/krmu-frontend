@@ -8,6 +8,7 @@ export interface SdgEventItem {
 export interface SdgActionButton {
     text: string;
     url: string;
+    isDownload?: boolean;
 }
 
 export interface SdgAuditItem {
