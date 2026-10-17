@@ -9,11 +9,16 @@ export const policiesOnQualityEducationData: PolicyPageData = {
     policies: [
         {
             id: "policy-1",
+            title: "Implementation of Lifelong Learning Access Policy",
+            url: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/implementation-of-lifelong-learing-access-policy.pdf",
+        },
+        {
+            id: "policy-2",
             title: "University Lifelong Learning Access Policy of K.R. Mangalam University",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/policy-on-quality-education/university-lifelong-learning-access-policy-of-kr-mangalam-university.pdf",
         },
         {
-            id: "policy-2",
+            id: "policy-3",
             title: "Revised Lifelong Learning Access Policy 2023-24",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/policy-on-quality-education/Revised-Lifelong-Learning-Access-Policy-2023-24.pdf",
         },
