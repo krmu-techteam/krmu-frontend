@@ -137,7 +137,7 @@ export const sdg2Data: SdgDetailPageData = {
         {
             id: "event-2-2024-11",
             title: "Student Report on Project report",
-            image: "/images/sustainability/goal2/student-project-report.jpg",
+            image: "/images/sustainability/goal2/student-project-report.png",
             pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal2/Student-Reoprt-on-Project-report.pdf",
         },
     ],
