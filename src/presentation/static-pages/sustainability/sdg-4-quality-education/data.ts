@@ -1,688 +1,1016 @@
-import { SdgDetailPageData } from "../shared-sdg";
+import { SdgDetailPageData, SdgEventItem } from "../shared-sdg";
+
+const events2023_2024: SdgEventItem[] = [
+    {
+        id: "event-4-1",
+        title: "A Visit to Old Age Home",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/1.-A-Visit-to-Old-Age-Home-400x529.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/1.pdf",
+    },
+    {
+        id: "event-4-2",
+        title: "Road Safety Awareness Program",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/2.-Road-Safety-Awareness-Program-400x223.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/2.pdf",
+    },
+    {
+        id: "event-4-3",
+        title: "Seminar on Channelizing Youth Power for Nation Building",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/3.-Seminar-on-Channelizing-Youth-Power-for-Nation-Building-400x228.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/3.pdf",
+    },
+    {
+        id: "event-4-4",
+        title: "Nukkad Natak on National Girl Child Day",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/4.-Nukkad-Natak-on-National-Girl-Child-Day-400x225.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4.pdf",
+    },
+    {
+        id: "event-4-5",
+        title: "Workshop on PCOD/PCOS",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/5.-Workshop-on-PCODPCOS-400x216.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/5.pdf",
+    },
+    {
+        id: "event-4-6",
+        title: "Beti Bachao Beti Padhao — Diya Making & Painting",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/6.-Beti-Bachao-Beti-Padhao-%E2%80%93-Diya-Making-Painting-400x285.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/6.pdf",
+    },
+    {
+        id: "event-4-7",
+        title: "Awareness on Health Impact of Wastewater Utilization",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/7.-Awareness-on-Health-Impact-of-Wastewater-Utilization-400x225.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/7.pdf",
+    },
+    {
+        id: "event-4-8",
+        title: "Cancer Prevention & Healthy Lifestyles Session",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/8.-Cancer-Prevention-Healthy-Lifestyles-Session-400x301.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/8.pdf",
+    },
+    {
+        id: "event-4-9",
+        title: 'Nukkad Natak - "Do Good Be Good"',
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/9.-Nukkad-Natak-%E2%80%93-Do-Good-Be-Good-400x268.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/9.pdf",
+    },
+    {
+        id: "event-4-10",
+        title: "Malaria Prevention Awareness",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/10.-Malaria-Prevention-Awareness-400x226.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/10.pdf",
+    },
+    {
+        id: "event-4-11",
+        title: "Cyber Sentinel — Digital Safety Workshop",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/11.-Cyber-Sentinel-%E2%80%93-Digital-Safety-Workshop-400x224.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/11.pdf",
+    },
+    {
+        id: "event-4-12",
+        title: "Frontline Defense — Anti-Terrorism Awareness by Army Officer",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/12.-Frontline-Defense-%E2%80%93-Anti-Terrorism-Awareness-by-Army-Officer-400x225.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/12.pdf",
+    },
+    {
+        id: "event-4-13",
+        title: "Quiz on World No Tobacco Day",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/13.-Quiz-on-World-No-Tobacco-Day-400x223.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/13.pdf",
+    },
+    {
+        id: "event-4-14",
+        title: "Twinning Program (Hosting Rural School Students)",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/14.-Twinning-Program-Hosting-Rural-School-Students-400x253.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/14.pdf",
+    },
+    {
+        id: "event-4-15",
+        title: "Poster Making — World Environment Day",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/15.-Poster-Making-%E2%80%93-World-Environment-Day-400x225.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/15.pdf",
+    },
+    {
+        id: "event-4-16",
+        title: 'Awareness & Quiz — "Mera Pehla Vote Desh Ke Liye"',
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/16.-Awareness-Quiz-%E2%80%93-Mera-Pehla-Vote-Desh-Ke-Liye-400x300.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/16.pdf",
+    },
+    {
+        id: "event-4-17",
+        title: "Self-Defense Training for Females",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/17.-Self-Defense-Training-for-Females-400x301.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/17.pdf",
+    },
+    {
+        id: "event-4-18",
+        title: "Street Play on Cyber & Mobile Frauds (with Red Cross)",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/18.-Street-Play-on-Cyber-Mobile-Frauds-with-Red-Cross-400x231.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/18.pdf",
+    },
+    {
+        id: "event-4-19",
+        title: "International Yoga Day Celebration",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/19.-International-Yoga-Day-Celebration-400x242.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/19.pdf",
+    },
+    {
+        id: "event-4-20",
+        title: "Plantation Drive (Van Mahotsav - Green Earth Clean Earth)",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/20.-Plantation-Drive-Van-Mahotsav-%E2%80%93-Green-Earth-Clean-Earth-400x300.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/20.pdf",
+    },
+    {
+        id: "event-4-21",
+        title: "Medical Camp",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/21.-Medical-Camp-400x238.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/21.pdf",
+    },
+    {
+        id: "event-4-22",
+        title: "Survey on TB Mukt Bharat",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/22.-Survey-on-TB-Mukt-Bharat-400x322.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/22.pdf",
+    },
+    {
+        id: "event-4-23",
+        title: "World Red Cross Day",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/23.-World-Red-Cross-Day-400x293.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/23.pdf",
+    },
+    {
+        id: "event-4-24",
+        title: "Road Safety Awareness Program",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/24.-Road-Safety-Awareness-Program-400x300.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/24.pdf",
+    },
+    {
+        id: "event-4-25",
+        title: "Blood Donation Camp",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/25.-Blood-Donation-CampBlood-Donation-Camp-400x296.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/25.pdf",
+    },
+    {
+        id: "event-4-26",
+        title: "Seminar on Drug De-addiction",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/26.-Seminar-on-Drug-De-addiction-400x175.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/26.pdf",
+    },
+    {
+        id: "event-4-27",
+        title: "Future Opportunities in Agriculture Education",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/27.-Future-Opportunities-in-Agriculture-Education-400x212.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/27.pdf",
+    },
+    {
+        id: "event-4-28",
+        title: "Hands-on Training — Biofertilizers",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/28.-Hands-on-Training-%E2%80%93-Biofertilizers-400x305.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/28.pdf",
+    },
+    {
+        id: "event-4-29",
+        title: "Latest Techniques in Agriculture Farming",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/29.-Latest-Techniques-in-Agriculture-Farming-400x230.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/29.pdf",
+    },
+    {
+        id: "event-4-30",
+        title: "Awareness Program in Health & Hygiene",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/30.-Awareness-Program-in-Health-Hygiene-400x217.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/30.pdf",
+    },
+    {
+        id: "event-4-31",
+        title: "Life Skills Awareness — Effects of Drugs",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/31.-Life-Skills-Awareness-%E2%80%93-Effects-of-Drugs-400x298.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/31.pdf",
+    },
+    {
+        id: "event-4-32",
+        title: "Visit to Old Age Home (NSS)",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/32.-Visit-to-Old-Age-Home-NSS-400x364.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/32.pdf",
+    },
+    {
+        id: "event-4-33",
+        title: "Drug Addiction — Menace to Youth's Future",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/33.-Drug-Addiction-%E2%80%93-Menace-to-Youths-Future-400x229.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/33.pdf",
+    },
+    {
+        id: "event-4-34",
+        title: "Self-Medication: A Healthcare Challenge",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/34.-Self-Medication-A-Healthcare-Challenge-400x152.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/34.pdf",
+    },
+    {
+        id: "event-4-35",
+        title: "Women Rights Drive (with DLSA)",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/35.-Women-Rights-Drive-with-DLSA-400x300.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/35.pdf",
+    },
+    {
+        id: "event-4-36",
+        title: "Al in Legal Profession (with DLSA)",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/36.-AI-in-Legal-Profession-with-DLSA-400x224.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/36.pdf",
+    },
+    {
+        id: "event-4-37",
+        title: "Mass Media Visit — Agriculture Policy",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/37.-Mass-Media-Visit-%E2%80%93-Agriculture-Policy-400x307.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/37.pdf",
+    },
+    {
+        id: "event-4-38",
+        title: "Gender Literacy Extension Program",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/38.-Gender-Literacy-Extension-Program-400x285.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/38.pdf",
+    },
+    {
+        id: "event-4-39",
+        title: "Donation Drive — Old Age Home",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/39.-Donation-Drive-%E2%80%93-Old-Age-Home-400x239.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/39.pdf",
+    },
+    {
+        id: "event-4-40",
+        title: "Major Health Problems among Females",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/40.-Major-Health-Problems-among-Females-400x304.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/40.pdf",
+    },
+    {
+        id: "event-4-41",
+        title: "Sensitization & Training on Cyber Security",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/41.-Sensitization-Training-on-Cyber-Security-400x240.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/41.pdf",
+    },
+    {
+        id: "event-4-42",
+        title: "Sensitization & Training on Road Safety",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/42.-Sensitization-Training-on-Road-Safety-400x263.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/42.pdf",
+    },
+    {
+        id: "event-4-43",
+        title: "Profit Calculation & Food Entrepreneurship Workshop",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/43.-Profit-Calculation-Food-Entrepreneurship-Workshop-400x203.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/43.pdf",
+    },
+    {
+        id: "event-4-44",
+        title: "Sharing Recipes & Entrepreneurial Opportunities for Village Women",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/44.-Sharing-Recipes-Entrepreneurial-Opportunities-for-Village-Women-400x355.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/44.pdf",
+    },
+    {
+        id: "event-4-45",
+        title: "Workshop on Post-Harvest Technology",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/45.-Workshop-on-Post-Harvest-Technology-400x273.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/45.pdf",
+    },
+    {
+        id: "event-4-46",
+        title: "Kisan Mela",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/46.-Kisan-Mela-400x274.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/46.pdf",
+    },
+    {
+        id: "event-4-47",
+        title: "Vriksha Ropan Celebration",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/47.-Vriksha-Ropan-Celebration-400x300.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/47.pdf",
+    },
+    {
+        id: "event-4-48",
+        title: "Artistic Flair — Surface Embellishment",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/48.-Artistic-Flair-%E2%80%93-Surface-Embellishment-400x304.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/48.pdf",
+    },
+    {
+        id: "event-4-49",
+        title: "Wall Art Colour Cascades",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/49.-Wall-Art-Colour-Cascades-400x295.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/49.pdf",
+    },
+    {
+        id: "event-4-50",
+        title: "Awareness on Sexual Harassment at Workplace",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/50.-Awareness-on-Sexual-Harassment-at-Workplace-400x302.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/50.pdf",
+    },
+    {
+        id: "event-4-51",
+        title: "Awareness Session on Menstrual Cycles",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/51.-Awareness-Session-on-Menstrual-Cycles.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/51.pdf",
+    },
+    {
+        id: "event-4-52",
+        title: "Essay Writing & Rashtriya Ekta Diwas",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/52.-Essay-Writing-Rashtriya-Ekta-Diwas-400x198.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/52.pdf",
+    },
+    {
+        id: "event-4-53",
+        title: "Swachhta Campaign 3.0 One-Day Camp",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/53.-Swachhta-Campaign-3.0-One-Day-Camp-400x301.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/53.pdf",
+    },
+    {
+        id: "event-4-54",
+        title: "Nukkad Natak - Voluntary Blood Donation Day",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/54.-Nukkad-Natak-%E2%80%93-Voluntary-Blood-Donation-Day-400x229.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/54.pdf",
+    },
+    {
+        id: "event-4-55",
+        title: "Cleanliness Drive — Tribute to Mahatma Gandhi",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/55.-Cleanliness-Drive-%E2%80%93-Tribute-to-Mahatma-Gandhi-400x214.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/55.pdf",
+    },
+    {
+        id: "event-4-56",
+        title: "Donation Drive",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/56.-Donation-Drive-400x258.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/56.pdf",
+    },
+    {
+        id: "event-4-57",
+        title: "Prabhat Pheri & Flag Distribution",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/57.-Prabhat-Pheri-Flag-Distribution-400x300.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/57.pdf",
+    },
+    {
+        id: "event-4-58",
+        title: "Advance Tools and Techniques in Research and Systematic Literature Review",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/1-400x306.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-10.pdf",
+    },
+    {
+        id: "event-4-59",
+        title: "Case Study of De-addiction Activity",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/2-400x252.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/Case-Study-of-De-addiction-Activity.pdf",
+    },
+    {
+        id: "event-4-60",
+        title: "Case Study on Drug Trafficking in Haryana",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/3-400x264.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-9.pdf",
+    },
+    {
+        id: "event-4-61",
+        title: "Case-Based Teaching",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/4-400x304.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-7.pdf",
+    },
+    {
+        id: "event-4-62",
+        title: "Cooking, Packaging, and Selling of Snacks and Savory Items by Village Women (Garhi Bazidpur Village)",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/5-400x208.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-3.pdf",
+    },
+    {
+        id: "event-4-63",
+        title: "Cyber Security and Digital Awareness for the People of Village Alipur_ A Case Study",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/6-400x249.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/Cyber-Security-and-Digital-Awareness-for-the-People-of-Village-Alipur-A-Case-Study.pdf",
+    },
+    {
+        id: "event-4-64",
+        title: "Development of Cookery Skills and Hygiene Practices among Students in Government School at Chari Bazidpur Village",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/7-400x229.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-4.pdf",
+    },
+    {
+        id: "event-4-65",
+        title: "Enhancing Proficiency in Reading and Numeracy of Government Primary School Children of Village Ghamroj",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/8-400x306.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-5.pdf",
+    },
+    {
+        id: "event-4-66",
+        title: "Fabrication And Characterisation of Nanomaterials for Device Applications",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/9-400x236.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-1PDF.pdf",
+    },
+    {
+        id: "event-4-67",
+        title: "Faculty Development Program",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/10-400x303.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-4-1.pdf",
+    },
+    {
+        id: "event-4-68",
+        title: "Health Plus_ Monitoring Wellness in Our Neighbourhood",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/11-400x274.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/Health-Plus-Monitoring-Wellness-in-Our-Neighbourhood.pdf",
+    },
+    {
+        id: "event-4-69",
+        title: "Initiatives for Fostering Quality Higher Education in India in the 21st Century",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/12-400x273.png",
+        pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-8.pdf",
+    },
+    {
+        id: "event-4-70",
+        title: "Interdisciplinary Qualitative Research",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/13-400x308.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-3PDF.pdf",
+    },
+    {
+        id: "event-4-71",
+        title: "International Conference On 'Embracing Diversity_ Exploring Third Gender Marriages and Gender Equality'",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/14-400x213.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link6.pdf",
+    },
+    {
+        id: "event-4-72",
+        title: "International Conference on 'Vision 2030_ Emerging Trends in Interdisciplinary Research and Practices",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/15-400x234.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link-5.pdf",
+    },
+    {
+        id: "event-4-73",
+        title: "International Conference on Advanced Materials for Green Chemistry and Sustainable, Environment",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/32-400x233.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link.pdf",
+    },
+    {
+        id: "event-4-74",
+        title: "International Conference on Multidisciplinary Research and Innovations in Engineering",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/16-400x314.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link4.pdf",
+    },
+    {
+        id: "event-4-75",
+        title: "International E-Conference CTPDCON ERA 2023 On Educational Reforms & Advancements",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/17-400x230.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link2.pdf",
+    },
+    {
+        id: "event-4-76",
+        title: "KRMU PHYSIOCON, 2024 On Advancements Physiother-Towards Sustainable Healthcare",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/18-400x497.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link8.pdf",
+    },
+    {
+        id: "event-4-77",
+        title: "Management Strategies of Rice Crop Residues at Nearby Village Farmers of Sohna City and Their Effect on Germination of Next Crop",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/19-400x263.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-12.pdf",
+    },
+    {
+        id: "event-4-78",
+        title: "Meaningful Research & Intellectual Property Rights",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/20-400x372.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/Meaningful-Research-Intellectual-Property-Rights.pdf",
+    },
+    {
+        id: "event-4-79",
+        title: "Methodical Mind _ Building Expertise in Research Methodologies",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/21-400x250.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-5-1.pdf",
+    },
+    {
+        id: "event-4-80",
+        title: "National Conference on Current Paradigms in Cancer Theranostics",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/22-400x227.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link-1.pdf",
+    },
+    {
+        id: "event-4-81",
+        title: "Online Faculty Development Program On Research Methodology and Artificial Intelligence",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/23-400x314.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/2-PDF.pdf",
+    },
+    {
+        id: "event-4-82",
+        title: "Prevalence of Urinary Incontinence among Healthy Females of Rural Haryana",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/24-400x231.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-11.pdf",
+    },
+    {
+        id: "event-4-83",
+        title: "Regulatory Barriers to the Acceptance of Bio-pesticides among Farmers for Sustainable Agriculture in Gurgaon and Nuh Districts of Haryana",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/25-400x325.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-1.pdf",
+    },
+    {
+        id: "event-4-84",
+        title: "Research Methodology in Social Sciences, Management and Humanities",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/26-400x284.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/Research-Methodology-in-Social-Sciences-Management-and-Humanities.pdf",
+    },
+    {
+        id: "event-4-85",
+        title: "Rethinking Hospitality and Tourism- Inclusive, Equitable and Sustainable",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/27-400x301.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-4-1.pdf",
+    },
+    {
+        id: "event-4-86",
+        title: "Revitalizing Community Spaces_ A Comprehensive Design Proposal for the Chamroj Community Centre",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/28-400x237.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-15.pdf",
+    },
+    {
+        id: "event-4-87",
+        title: "Role of Digital Media in Sohna Violence, Haryana",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/29-400x252.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-13.pdf",
+    },
+    {
+        id: "event-4-88",
+        title: "Sensitization and Impact of Mass Media and Digital Literacy among Agro workers of Lakhuwas, Sohna",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/30-400x216.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-14.pdf",
+    },
+    {
+        id: "event-4-89",
+        title: "Sensitization towards Micro-finance and Financial Literacy in Changola Village",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/31-400x273.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-2.pdf",
+    },
+    {
+        id: "event-4-90",
+        title: "Youth-led Entrepreneurship Development",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/1-400x306.png",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/Youth-led-Entrepreneurship-Development.pdf",
+    },
+];
 
 export const sdg4Data: SdgDetailPageData = {
-  goalNumber: 4,
-  title: "Quality Education",
-  subtitle: "Enhancing Education at KRMU: Developing Minds, Creating Futures.",
-  heroImage: "/images/sustainability/sdg/quality-education.jpg",
-  backLink: "/centre-for-sustainable-development-goals-2",
-  paragraphs: [
-    "K.R. Mangalam University (KRMU) is steadfastly dedicated to achieving Sustainable Development Goal 4: Quality Education, which calls for providing inclusive, equitable, and superior educational opportunities for everyone. This worldwide objective is perfectly in line with the university’s mission to promote employability, entrepreneurship, and lifelong learning. KRMU offers students a dynamic and industry-relevant education by incorporating cutting-edge technologies like digital learning platforms, smart classrooms, and simulation-based tools into its futuristic curriculum and progressive pedagogy. Through internships, real-world projects, and skill-based modules that close the gap between academia and the working world, each program places a strong emphasis on experiential learning. For giving students the necessary skills for respectable employment, the university places a high priority on employability and entrepreneurship. To achieve this, KRMU has established the K.R. Mangalam Entrepreneurship and Innovation Centre (KEIC)—a vibrant platform that nurtures creativity, innovation, and start-up culture among students. To turn creative concepts into successful businesses, KEIC offers networking opportunities with industry professionals, mentoring, and incubation support. In addition, the university offers employability improvement programs, skill certification workshops, and career development sessions to help students become self-sufficient and prepared for the workforce. Through a strong emphasis on research, outcomes-based education, and innovation-driven pedagogy, KRMU also fosters the idea of lifelong learning. In order to foster a culture of lifelong learning and innovative problem-solving, faculty and students actively participate in interdisciplinary research, publications, and patent development. KRMU has partnered with top international universities, research centers, and professional associations to meet global educational standards. This has allowed for collaborative research, exchange programs, and international exposure for faculty and students.",
-  ],
-  leftButtons: [
-    {
-      text: "Policies on Quality Education",
-      url: "https://www.krmangalam.edu.in/policies-on-quality-education/",
-    },
-  ],
-  goalTileImage:
-    "https://www.krmangalam.edu.in/wp-content/uploads/2025/09/4.png",
-  sdgReportText: "SDG Report 2023-24",
-  sdgReportUrl:
-    "https://www.krmangalam.edu.in/pdfs/sdg/sdg-annual-reports/2023-2024/SDG-4-2023-24.pdf",
-  accentColor: "#C5192D",
-  eventsTitle: "Events And Activities",
-  events: [
-    {
-      id: "event-4-1",
-      title: "A Visit to Old Age Home",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/1.-A-Visit-to-Old-Age-Home-400x529.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/1.pdf",
-    },
-    {
-      id: "event-4-2",
-      title: "Road Safety Awareness Program",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/2.-Road-Safety-Awareness-Program-400x223.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/2.pdf",
-    },
-    {
-      id: "event-4-3",
-      title: "Seminar on Channelizing Youth Power for Nation Building",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/3.-Seminar-on-Channelizing-Youth-Power-for-Nation-Building-400x228.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/3.pdf",
-    },
-    {
-      id: "event-4-4",
-      title: "Nukkad Natak on National Girl Child Day",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/4.-Nukkad-Natak-on-National-Girl-Child-Day-400x225.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4.pdf",
-    },
-    {
-      id: "event-4-5",
-      title: "Workshop on PCOD/PCOS",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/5.-Workshop-on-PCODPCOS-400x216.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/5.pdf",
-    },
-    {
-      id: "event-4-6",
-      title: "Beti Bachao Beti Padhao — Diya Making & Painting",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/6.-Beti-Bachao-Beti-Padhao-%E2%80%93-Diya-Making-Painting-400x285.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/6.pdf",
-    },
-    {
-      id: "event-4-7",
-      title: "Awareness on Health Impact of Wastewater Utilization",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/7.-Awareness-on-Health-Impact-of-Wastewater-Utilization-400x225.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/7.pdf",
-    },
-    {
-      id: "event-4-8",
-      title: "Cancer Prevention & Healthy Lifestyles Session",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/8.-Cancer-Prevention-Healthy-Lifestyles-Session-400x301.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/8.pdf",
-    },
-    {
-      id: "event-4-9",
-      title: 'Nukkad Natak - "Do Good Be Good"',
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/9.-Nukkad-Natak-%E2%80%93-Do-Good-Be-Good-400x268.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/9.pdf",
-    },
-    {
-      id: "event-4-10",
-      title: "Malaria Prevention Awareness",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/10.-Malaria-Prevention-Awareness-400x226.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/10.pdf",
-    },
-    {
-      id: "event-4-11",
-      title: "Cyber Sentinel — Digital Safety Workshop",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/11.-Cyber-Sentinel-%E2%80%93-Digital-Safety-Workshop-400x224.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/11.pdf",
-    },
-    {
-      id: "event-4-12",
-      title: "Frontline Defense — Anti-Terrorism Awareness by Army Officer",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/12.-Frontline-Defense-%E2%80%93-Anti-Terrorism-Awareness-by-Army-Officer-400x225.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/12.pdf",
-    },
-    {
-      id: "event-4-13",
-      title: "Quiz on World No Tobacco Day",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/13.-Quiz-on-World-No-Tobacco-Day-400x223.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/13.pdf",
-    },
-    {
-      id: "event-4-14",
-      title: "Twinning Program (Hosting Rural School Students)",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/14.-Twinning-Program-Hosting-Rural-School-Students-400x253.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/14.pdf",
-    },
-    {
-      id: "event-4-15",
-      title: "Poster Making — World Environment Day",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/15.-Poster-Making-%E2%80%93-World-Environment-Day-400x225.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/15.pdf",
-    },
-    {
-      id: "event-4-16",
-      title: 'Awareness & Quiz — "Mera Pehla Vote Desh Ke Liye"',
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/16.-Awareness-Quiz-%E2%80%93-Mera-Pehla-Vote-Desh-Ke-Liye-400x300.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/16.pdf",
-    },
-    {
-      id: "event-4-17",
-      title: "Self-Defense Training for Females",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/17.-Self-Defense-Training-for-Females-400x301.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/17.pdf",
-    },
-    {
-      id: "event-4-18",
-      title: "Street Play on Cyber & Mobile Frauds (with Red Cross)",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/18.-Street-Play-on-Cyber-Mobile-Frauds-with-Red-Cross-400x231.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/18.pdf",
-    },
-    {
-      id: "event-4-19",
-      title: "International Yoga Day Celebration",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/19.-International-Yoga-Day-Celebration-400x242.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/19.pdf",
-    },
-    {
-      id: "event-4-20",
-      title: "Plantation Drive (Van Mahotsav - Green Earth Clean Earth)",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/20.-Plantation-Drive-Van-Mahotsav-%E2%80%93-Green-Earth-Clean-Earth-400x300.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/20.pdf",
-    },
-    {
-      id: "event-4-21",
-      title: "Medical Camp",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/21.-Medical-Camp-400x238.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/21.pdf",
-    },
-    {
-      id: "event-4-22",
-      title: "Survey on TB Mukt Bharat",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/22.-Survey-on-TB-Mukt-Bharat-400x322.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/22.pdf",
-    },
-    {
-      id: "event-4-23",
-      title: "World Red Cross Day",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/23.-World-Red-Cross-Day-400x293.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/23.pdf",
-    },
-    {
-      id: "event-4-24",
-      title: "Road Safety Awareness Program",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/24.-Road-Safety-Awareness-Program-400x300.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/24.pdf",
-    },
-    {
-      id: "event-4-25",
-      title: "Blood Donation Camp",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/25.-Blood-Donation-CampBlood-Donation-Camp-400x296.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/25.pdf",
-    },
-    {
-      id: "event-4-26",
-      title: "Seminar on Drug De-addiction",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/26.-Seminar-on-Drug-De-addiction-400x175.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/26.pdf",
-    },
-    {
-      id: "event-4-27",
-      title: "Future Opportunities in Agriculture Education",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/27.-Future-Opportunities-in-Agriculture-Education-400x212.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/27.pdf",
-    },
-    {
-      id: "event-4-28",
-      title: "Hands-on Training — Biofertilizers",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/28.-Hands-on-Training-%E2%80%93-Biofertilizers-400x305.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/28.pdf",
-    },
-    {
-      id: "event-4-29",
-      title: "Latest Techniques in Agriculture Farming",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/29.-Latest-Techniques-in-Agriculture-Farming-400x230.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/29.pdf",
-    },
-    {
-      id: "event-4-30",
-      title: "Awareness Program in Health & Hygiene",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/30.-Awareness-Program-in-Health-Hygiene-400x217.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/30.pdf",
-    },
-    {
-      id: "event-4-31",
-      title: "Life Skills Awareness — Effects of Drugs",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/31.-Life-Skills-Awareness-%E2%80%93-Effects-of-Drugs-400x298.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/31.pdf",
-    },
-    {
-      id: "event-4-32",
-      title: "Visit to Old Age Home (NSS)",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/32.-Visit-to-Old-Age-Home-NSS-400x364.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/32.pdf",
-    },
-    {
-      id: "event-4-33",
-      title: "Drug Addiction — Menace to Youth's Future",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/33.-Drug-Addiction-%E2%80%93-Menace-to-Youths-Future-400x229.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/33.pdf",
-    },
-    {
-      id: "event-4-34",
-      title: "Self-Medication: A Healthcare Challenge",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/34.-Self-Medication-A-Healthcare-Challenge-400x152.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/34.pdf",
-    },
-    {
-      id: "event-4-35",
-      title: "Women Rights Drive (with DLSA)",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/35.-Women-Rights-Drive-with-DLSA-400x300.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/35.pdf",
-    },
-    {
-      id: "event-4-36",
-      title: "Al in Legal Profession (with DLSA)",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/36.-AI-in-Legal-Profession-with-DLSA-400x224.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/36.pdf",
-    },
-    {
-      id: "event-4-37",
-      title: "Mass Media Visit — Agriculture Policy",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/37.-Mass-Media-Visit-%E2%80%93-Agriculture-Policy-400x307.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/37.pdf",
-    },
-    {
-      id: "event-4-38",
-      title: "Gender Literacy Extension Program",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/38.-Gender-Literacy-Extension-Program-400x285.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/38.pdf",
-    },
-    {
-      id: "event-4-39",
-      title: "Donation Drive — Old Age Home",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/39.-Donation-Drive-%E2%80%93-Old-Age-Home-400x239.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/39.pdf",
-    },
-    {
-      id: "event-4-40",
-      title: "Major Health Problems among Females",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/40.-Major-Health-Problems-among-Females-400x304.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/40.pdf",
-    },
-    {
-      id: "event-4-41",
-      title: "Sensitization & Training on Cyber Security",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/41.-Sensitization-Training-on-Cyber-Security-400x240.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/41.pdf",
-    },
-    {
-      id: "event-4-42",
-      title: "Sensitization & Training on Road Safety",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/42.-Sensitization-Training-on-Road-Safety-400x263.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/42.pdf",
-    },
-    {
-      id: "event-4-43",
-      title: "Profit Calculation & Food Entrepreneurship Workshop",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/43.-Profit-Calculation-Food-Entrepreneurship-Workshop-400x203.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/43.pdf",
-    },
-    {
-      id: "event-4-44",
-      title:
-        "Sharing Recipes & Entrepreneurial Opportunities for Village Women",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/44.-Sharing-Recipes-Entrepreneurial-Opportunities-for-Village-Women-400x355.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/44.pdf",
-    },
-    {
-      id: "event-4-45",
-      title: "Workshop on Post-Harvest Technology",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/45.-Workshop-on-Post-Harvest-Technology-400x273.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/45.pdf",
-    },
-    {
-      id: "event-4-46",
-      title: "Kisan Mela",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/46.-Kisan-Mela-400x274.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/46.pdf",
-    },
-    {
-      id: "event-4-47",
-      title: "Vriksha Ropan Celebration",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/47.-Vriksha-Ropan-Celebration-400x300.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/47.pdf",
-    },
-    {
-      id: "event-4-48",
-      title: "Artistic Flair — Surface Embellishment",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/48.-Artistic-Flair-%E2%80%93-Surface-Embellishment-400x304.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/48.pdf",
-    },
-    {
-      id: "event-4-49",
-      title: "Wall Art Colour Cascades",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/49.-Wall-Art-Colour-Cascades-400x295.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/49.pdf",
-    },
-    {
-      id: "event-4-50",
-      title: "Awareness on Sexual Harassment at Workplace",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/50.-Awareness-on-Sexual-Harassment-at-Workplace-400x302.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/50.pdf",
-    },
-    {
-      id: "event-4-51",
-      title: "Awareness Session on Menstrual Cycles",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/51.-Awareness-Session-on-Menstrual-Cycles.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/51.pdf",
-    },
-    {
-      id: "event-4-52",
-      title: "Essay Writing & Rashtriya Ekta Diwas",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/52.-Essay-Writing-Rashtriya-Ekta-Diwas-400x198.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/52.pdf",
-    },
-    {
-      id: "event-4-53",
-      title: "Swachhta Campaign 3.0 One-Day Camp",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/53.-Swachhta-Campaign-3.0-One-Day-Camp-400x301.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/53.pdf",
-    },
-    {
-      id: "event-4-54",
-      title: "Nukkad Natak - Voluntary Blood Donation Day",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/54.-Nukkad-Natak-%E2%80%93-Voluntary-Blood-Donation-Day-400x229.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/54.pdf",
-    },
-    {
-      id: "event-4-55",
-      title: "Cleanliness Drive — Tribute to Mahatma Gandhi",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/55.-Cleanliness-Drive-%E2%80%93-Tribute-to-Mahatma-Gandhi-400x214.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/55.pdf",
-    },
-    {
-      id: "event-4-56",
-      title: "Donation Drive",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/56.-Donation-Drive-400x258.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/56.pdf",
-    },
-    {
-      id: "event-4-57",
-      title: "Prabhat Pheri & Flag Distribution",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/57.-Prabhat-Pheri-Flag-Distribution-400x300.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/57.pdf",
-    },
-    {
-      id: "event-4-58",
-      title:
-        "Advance Tools and Techniques in Research and Systematic Literature Review",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/1-400x306.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-10.pdf",
-    },
-    {
-      id: "event-4-59",
-      title: "Case Study of De-addiction Activity",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/2-400x252.png",
-      pdfUrl:
-        "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/Case-Study-of-De-addiction-Activity.pdf",
-    },
-    {
-      id: "event-4-60",
-      title: "Case Study on Drug Trafficking in Haryana",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/3-400x264.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-9.pdf",
-    },
-    {
-      id: "event-4-61",
-      title: "Case-Based Teaching",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/4-400x304.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-7.pdf",
-    },
-    {
-      id: "event-4-62",
-      title:
-        "Cooking, Packaging, and Selling of Snacks and Savory Items by Village Women (Garhi Bazidpur Village)",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/5-400x208.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-3.pdf",
-    },
-    {
-      id: "event-4-63",
-      title:
-        "Cyber Security and Digital Awareness for the People of Village Alipur_ A Case Study",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/6-400x249.png",
-      pdfUrl:
-        "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/Cyber-Security-and-Digital-Awareness-for-the-People-of-Village-Alipur-A-Case-Study.pdf",
-    },
-    {
-      id: "event-4-64",
-      title:
-        "Development of Cookery Skills and Hygiene Practices among Students in Government School at Chari Bazidpur Village",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/7-400x229.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-4.pdf",
-    },
-    {
-      id: "event-4-65",
-      title:
-        "Enhancing Proficiency in Reading and Numeracy of Government Primary School Children of Village Ghamroj",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/8-400x306.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-5.pdf",
-    },
-    {
-      id: "event-4-66",
-      title:
-        "Fabrication And Characterisation of Nanomaterials for Device Applications",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/9-400x236.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-1PDF.pdf",
-    },
-    {
-      id: "event-4-67",
-      title: "Faculty Development Program",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/10-400x303.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-4-1.pdf",
-    },
-    {
-      id: "event-4-68",
-      title: "Health Plus_ Monitoring Wellness in Our Neighbourhood",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/11-400x274.png",
-      pdfUrl:
-        "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/Health-Plus-Monitoring-Wellness-in-Our-Neighbourhood.pdf",
-    },
-    {
-      id: "event-4-69",
-      title:
-        "Initiatives for Fostering Quality Higher Education in India in the 21st Century",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/12-400x273.png",
-      pdfUrl: "https://krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-8.pdf",
-    },
-    {
-      id: "event-4-70",
-      title: "Interdisciplinary Qualitative Research",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/13-400x308.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-3PDF.pdf",
-    },
-    {
-      id: "event-4-71",
-      title:
-        "International Conference On 'Embracing Diversity_ Exploring Third Gender Marriages and Gender Equality'",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/14-400x213.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link6.pdf",
-    },
-    {
-      id: "event-4-72",
-      title:
-        "International Conference on 'Vision 2030_ Emerging Trends in Interdisciplinary Research and Practices",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/15-400x234.png",
-      pdfUrl:
-        "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link-5.pdf",
-    },
-    {
-      id: "event-4-73",
-      title:
-        "International Conference on Advanced Materials for Green Chemistry and Sustainable, Environment",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/32-400x233.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link.pdf",
-    },
-    {
-      id: "event-4-74",
-      title:
-        "International Conference on Multidisciplinary Research and Innovations in Engineering",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/16-400x314.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link4.pdf",
-    },
-    {
-      id: "event-4-75",
-      title:
-        "International E-Conference CTPDCON ERA 2023 On Educational Reforms & Advancements",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/17-400x230.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link2.pdf",
-    },
-    {
-      id: "event-4-76",
-      title:
-        "KRMU PHYSIOCON, 2024 On Advancements Physiother-Towards Sustainable Healthcare",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/18-400x497.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link8.pdf",
-    },
-    {
-      id: "event-4-77",
-      title:
-        "Management Strategies of Rice Crop Residues at Nearby Village Farmers of Sohna City and Their Effect on Germination of Next Crop",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/19-400x263.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-12.pdf",
-    },
-    {
-      id: "event-4-78",
-      title: "Meaningful Research & Intellectual Property Rights",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/20-400x372.png",
-      pdfUrl:
-        "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/Meaningful-Research-Intellectual-Property-Rights.pdf",
-    },
-    {
-      id: "event-4-79",
-      title: "Methodical Mind _ Building Expertise in Research Methodologies",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/21-400x250.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-5-1.pdf",
-    },
-    {
-      id: "event-4-80",
-      title: "National Conference on Current Paradigms in Cancer Theranostics",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/22-400x227.png",
-      pdfUrl:
-        "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-Link-1.pdf",
-    },
-    {
-      id: "event-4-81",
-      title:
-        "Online Faculty Development Program On Research Methodology and Artificial Intelligence",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/23-400x314.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/2-PDF.pdf",
-    },
-    {
-      id: "event-4-82",
-      title:
-        "Prevalence of Urinary Incontinence among Healthy Females of Rural Haryana",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/24-400x231.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-11.pdf",
-    },
-    {
-      id: "event-4-83",
-      title:
-        "Regulatory Barriers to the Acceptance of Bio-pesticides among Farmers for Sustainable Agriculture in Gurgaon and Nuh Districts of Haryana",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/25-400x325.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-1.pdf",
-    },
-    {
-      id: "event-4-84",
-      title:
-        "Research Methodology in Social Sciences, Management and Humanities",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/26-400x284.png",
-      pdfUrl:
-        "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/Research-Methodology-in-Social-Sciences-Management-and-Humanities.pdf",
-    },
-    {
-      id: "event-4-85",
-      title:
-        "Rethinking Hospitality and Tourism- Inclusive, Equitable and Sustainable",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/27-400x301.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-4-1.pdf",
-    },
-    {
-      id: "event-4-86",
-      title:
-        "Revitalizing Community Spaces_ A Comprehensive Design Proposal for the Chamroj Community Centre",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/28-400x237.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-15.pdf",
-    },
-    {
-      id: "event-4-87",
-      title: "Role of Digital Media in Sohna Violence, Haryana",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/29-400x252.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-13.pdf",
-    },
-    {
-      id: "event-4-88",
-      title:
-        "Sensitization and Impact of Mass Media and Digital Literacy among Agro workers of Lakhuwas, Sohna",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/30-400x216.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-14.pdf",
-    },
-    {
-      id: "event-4-89",
-      title:
-        "Sensitization towards Micro-finance and Financial Literacy in Changola Village",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/31-400x273.png",
-      pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/4-2.pdf",
-    },
-    {
-      id: "event-4-90",
-      title: "Youth-led Entrepreneurship Development",
-      image:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/1-400x306.png",
-      pdfUrl:
-        "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-4/Youth-led-Entrepreneurship-Development.pdf",
-    },
-  ],
+    goalNumber: 4,
+    title: "Quality Education",
+    subtitle:
+        "Enhancing Education at KRMU: Developing Minds, Creating Futures.",
+    heroImage: "/images/sustainability/sdg/quality-education.jpg",
+    backLink: "/centre-for-sustainable-development-goals-2",
+    paragraphs: [
+        "K.R. Mangalam University (KRMU) is steadfastly dedicated to achieving Sustainable Development Goal 4: Quality Education, which calls for providing inclusive, equitable, and superior educational opportunities for everyone. This worldwide objective is perfectly in line with the university’s mission to promote employability, entrepreneurship, and lifelong learning. KRMU offers students a dynamic and industry-relevant education by incorporating cutting-edge technologies like digital learning platforms, smart classrooms, and simulation-based tools into its futuristic curriculum and progressive pedagogy. Through internships, real-world projects, and skill-based modules that close the gap between academia and the working world, each program places a strong emphasis on experiential learning. For giving students the necessary skills for respectable employment, the university places a high priority on employability and entrepreneurship. To achieve this, KRMU has established the K.R. Mangalam Entrepreneurship and Innovation Centre (KEIC)—a vibrant platform that nurtures creativity, innovation, and start-up culture among students. To turn creative concepts into successful businesses, KEIC offers networking opportunities with industry professionals, mentoring, and incubation support. In addition, the university offers employability improvement programs, skill certification workshops, and career development sessions to help students become self-sufficient and prepared for the workforce. Through a strong emphasis on research, outcomes-based education, and innovation-driven pedagogy, KRMU also fosters the idea of lifelong learning. In order to foster a culture of lifelong learning and innovative problem-solving, faculty and students actively participate in interdisciplinary research, publications, and patent development. KRMU has partnered with top international universities, research centers, and professional associations to meet global educational standards. This has allowed for collaborative research, exchange programs, and international exposure for faculty and students.",
+    ],
+    leftButtons: [
+        {
+            text: "Policies on Quality Education",
+            url: "https://www.krmangalam.edu.in/policies-on-quality-education/",
+        },
+    ],
+    goalTileImage:
+        "https://www.krmangalam.edu.in/wp-content/uploads/2025/09/4.png",
+    sdgReportText: "SDG Report 2023-24",
+    sdgReportUrl:
+        "https://www.krmangalam.edu.in/pdfs/sdg/sdg-annual-reports/2023-2024/SDG-4-2023-24.pdf",
+    accentColor: "#C5192D",
+    year: "2024 - 2025",
+    eventsTitle: "Events And Activities",
+    events: [
+        {
+            id: "event-4-2024-1",
+            title: "A Case Study on Community Driven Transformation SOAD",
+            image: "/images/sustainability/goal4/a-case-study-on-community-driven-transformation-soad.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/A-Case-Study-on-Community-Driven-Transformation-SOAD.pdf",
+        },
+        {
+            id: "event-4-2024-2",
+            title: "Addressing Hypertension in Berka Village SMAS",
+            image: "/images/sustainability/goal4/addressing-hypertension-in-berka-village-smas.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Addressing-Hypertension-in-Berka-Village-SMAS.pdf",
+        },
+        {
+            id: "event-4-2024-3",
+            title: "Alumni Talk Educational Content Creation Tools for Teachers",
+            image: "/images/sustainability/goal4/alumni-talk-educational-content-creation-tools-for-teachers.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Alumni-Talk-Educational-Content-Creation-Tools-for-Teachers.pdf",
+        },
+        {
+            id: "event-4-2024-4",
+            title: "Awareness Session on Programme Outcome",
+            image: "/images/sustainability/goal4/awareness-session-on-programme-outcome.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Awareness-Session-on-Programme-Outcome.pdf",
+        },
+        {
+            id: "event-4-2024-5",
+            title: "Awareness Session on Road Safety",
+            image: "/images/sustainability/goal4/awareness-session-on-road-safety.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Awareness-Session-on-Road-Safety.pdf",
+        },
+        {
+            id: "event-4-2024-6",
+            title: "Book Fair Visit Report",
+            image: "/images/sustainability/goal4/book-fair-visit.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Book-Fair-Visit-Report.pdf",
+        },
+        {
+            id: "event-4-2024-7",
+            title: "CDP Dealing with Change and Uncertainty",
+            image: "/images/sustainability/goal4/cdp-dealing-with-change-and-uncertainty.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/CDP-Dealing-with-Change-and-Uncertainty.pdf",
+        },
+        {
+            id: "event-4-2024-8",
+            title: "CDP Harnessing Artificial Intelligence",
+            image: "/images/sustainability/goal4/cdp-harnessing-artificial-intelligence.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/CDP-Harnessing-Artificial-Intelligence.pdf",
+        },
+        {
+            id: "event-4-2024-9",
+            title: "Career Kickstart Workshop",
+            image: "/images/sustainability/goal4/career-kickstart-workshop.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Career-Kickstart-Workshop.pdf",
+        },
+        {
+            id: "event-4-2024-10",
+            title: "Case Study Old Age Home SOHMCT",
+            image: "/images/sustainability/goal4/case-study-old-age-home-sohmct.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Case-Study-Old-Age-Home-SOHMCT.pdf",
+        },
+        {
+            id: "event-4-2024-11",
+            title: "Clean Living, Healthy Life",
+            image: "/images/sustainability/goal4/clean-living-healthy-life.jfif",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Clean-Living,-Healthy-Life.pdf",
+        },
+        {
+            id: "event-4-2024-12",
+            title: "Digital Humanities and Tech Integration",
+            image: "/images/sustainability/goal4/digital-humanities-and-tech-integration.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Digital-Humanities-and-Tech-Integration.pdf",
+        },
+        {
+            id: "event-4-2024-13",
+            title: "EXPERT SESSION ON SOFT SKILLS SPRS",
+            image: "/images/sustainability/goal4/expert-session-on-soft-skills-sprs.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/EXPERT-SESSION-ON-SOFT-SKILLS-SPRS.pdf",
+        },
+        {
+            id: "event-4-2024-14",
+            title: "Eat More Move More",
+            image: "/images/sustainability/goal4/eat-more-move-more.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Eat-More-Move-More.pdf",
+        },
+        {
+            id: "event-4-2024-15",
+            title: "Educational Visit from Gargi College",
+            image: "/images/sustainability/goal4/educational-visit-from-gargi-college.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Educational-Visit-from-Gargi-College.pdf",
+        },
+        {
+            id: "event-4-2024-16",
+            title: "Educational Visit to Tamanna Autism",
+            image: "/images/sustainability/goal4/educational-visit-to-tamanna-autism.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Educational-Visit-to-Tamanna-Autism.pdf",
+        },
+        {
+            id: "event-4-2024-17",
+            title: "Effective writing and Publishing in High Impact Jounals",
+            image: "/images/sustainability/goal4/effective-writing-and-publishing-in-high-impact-jounals.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Effective-writing-and-Publishing-in-High-Impact-Jounals.pdf",
+        },
+        {
+            id: "event-4-2024-18",
+            title: "Empowering Village Communities Advancing Digital Literacy",
+            image: "/images/sustainability/goal4/empowering-village-communities-advancing-digital-literacy.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Empowering-Village-Communities-Advancing-Digital-Literacy.pdf",
+        },
+        {
+            id: "event-4-2024-19",
+            title: "Enhancing Research Quality",
+            image: "/images/sustainability/goal4/enhancing-research-quality.png",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Enhancing-Research-Quality.pdf",
+        },
+        {
+            id: "event-4-2024-20",
+            title: "Ethical Foundations Empowering Teachers SOHS",
+            image: "/images/sustainability/goal4/ethical-foundations-empowering-teachers-sohs.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Ethical-Foundations-Empowering-Teachers-SOHS.pdf",
+        },
+        {
+            id: "event-4-2024-21",
+            title: "Evaluation of Primary English",
+            image: "/images/sustainability/goal4/evaluation-of-primary-english.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Evaluation-of-Primary-English.pdf",
+        },
+        {
+            id: "event-4-2024-22",
+            title: "Experiential Learning for Effective Course Delivery in Design",
+            image: "/images/sustainability/goal4/experiential-learning-for-effective-course-delivery-in-design.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Experiential-Learning-for-Effective-Course-Delivery-in-Design.pdf",
+        },
+        {
+            id: "event-4-2024-23",
+            title: "Expert Lecture on Empowering Connections Enhancing Communication Skills",
+            image: "/images/sustainability/goal4/expert-lecture-on-empowering-connections-enhancing-communication-skills-1.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Expert-Lecture-on-Empowering-Connections-Enhancing-Communication-Skills.pdf",
+        },
+        {
+            id: "event-4-2024-24",
+            title: "Expert Talk on Higher Education SOAD",
+            image: "/images/sustainability/goal4/expert-talk-on-higher-education-soad.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Expert-Talk-on-Higher-Education-SOAD.pdf",
+        },
+        {
+            id: "event-4-2024-25",
+            title: "Extension Activity on Media and Information Literacy",
+            image: "/images/sustainability/goal4/extension-activity-on-media-and-information-literacy.jfif",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Extension-Activity-on-Media-and-Information-Literacy.pdf",
+        },
+        {
+            id: "event-4-2024-26",
+            title: "FDP Blockchain and Cyber Security",
+            image: "/images/sustainability/goal4/fdp-blockchain-and-cyber-security.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/FDP-Blockchain-and-Cyber-Security.pdf",
+        },
+        {
+            id: "event-4-2024-27",
+            title: "FDP Building Excellence IQAC",
+            image: "/images/sustainability/goal4/fdp-building-excellence-iqac.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/FDP-Building-Excellence-IQAC.pdf",
+        },
+        {
+            id: "event-4-2024-28",
+            title: "FDP Empowering Educators through ARVR SOAD",
+            image: "/images/sustainability/goal4/fdp-empowering-educators-through-arvr-soad.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/FDP-Empowering-Educators-through-ARVR-SOAD.pdf",
+        },
+        {
+            id: "event-4-2024-29",
+            title: "FDP Enhancing Pedagogy SOAS",
+            image: "/images/sustainability/goal4/fdp-enhancing-pedagogy-soas.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/FDP-Enhancing-Pedagogy-SOAS.pdf",
+        },
+        {
+            id: "event-4-2024-30",
+            title: "FDP Next Gen Hospitality SOHMCT",
+            image: "/images/sustainability/goal4/fdp-next-gen-hospitality-sohmct.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/FDP-Next-Gen-Hospitality-SOHMCT.pdf",
+        },
+        {
+            id: "event-4-2024-31",
+            title: "FDP Research Grants",
+            image: "/images/sustainability/goal4/fdp-research-grant.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/FDP-Research-Grants.pdf",
+        },
+        {
+            id: "event-4-2024-32",
+            title: "FDP Stepping into Emerging Technologies SOET",
+            image: "/images/sustainability/goal4/fdp-stepping-into-emerging-technologies-soet.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/FDP-Stepping-into-Emerging-Technologies-SOET.pdf",
+        },
+        {
+            id: "event-4-2024-33",
+            title: "FDP Report Leveraging Technology",
+            image: "/images/sustainability/goal4/fdp-report-leveraging-technology.png",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/FDP_Report_Leveraging_Technology.pdf",
+        },
+        {
+            id: "event-4-2024-34",
+            title: "Full Report on Health Camp",
+            image: "/images/sustainability/goal4/full-report-on-health-camp.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Full-Report-on-Health-Camp.pdf",
+        },
+        {
+            id: "event-4-2024-35",
+            title: "GATE Report 2024",
+            image: "/images/sustainability/goal4/gate-report-2024.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/GATE-Report-2024.pdf",
+        },
+        {
+            id: "event-4-2024-36",
+            title: "Guest lecture & Campus Visit University of Leeds",
+            image: "/images/sustainability/goal4/guest-lecture-campus-visit-university-of-leeds.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Guest-lecture-&-Campus-Visit-University-of-Leeds.pdf",
+        },
+        {
+            id: "event-4-2024-37",
+            title: "IC Educational Reforms and Advancements",
+            image: "/images/sustainability/goal4/ic-educational-reforms-and-advancements.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/IC-Educational-Reforms-and-Advancements.pdf",
+        },
+        {
+            id: "event-4-2024-38",
+            title: "Intensive Teaching Report",
+            image: "/images/sustainability/goal4/intensive-teaching-report.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Intensive-Teaching-Report.pdf",
+        },
+        {
+            id: "event-4-2024-39",
+            title: "Lecture on Fostering Future Minds Alumni Perspectives",
+            image: "/images/sustainability/goal4/lecture-on-fostering-future-minds-alumni-perspectives.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Lecture-on-Fostering-Future-Minds-Alumni-Perspectives.pdf",
+        },
+        {
+            id: "event-4-2024-40",
+            title: "Mastering emotions & communication",
+            image: "/images/sustainability/goal4/mastering-emotions-communication.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Mastering-emotions&communication.pdf",
+        },
+        {
+            id: "event-4-2024-41",
+            title: "Mastering on Communication skills",
+            image: "/images/sustainability/goal4/mastering-on-communication-skills.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Mastering-on-Communication-skills.pdf",
+        },
+        {
+            id: "event-4-2024-42",
+            title: "Menstrual Health Awareness Session",
+            image: "/images/sustainability/goal4/menstrual-health-awareness-session.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Menstrual-Health-Awareness-Session.pdf",
+        },
+        {
+            id: "event-4-2024-43",
+            title: "Nukkad Natak on the theme Poshan Bhi Padhai Bhi",
+            image: "/images/sustainability/goal4/nukkad-natak-on-the-theme-poshan-bhi-padhai-bhi.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Nukkad-Natak-on-the-theme-Poshan-Bhi-Padhai-Bhi.pdf",
+        },
+        {
+            id: "event-4-2024-44",
+            title: "Orientation Programme on Quality issuess for teachers and Students in collaboration with IQAC",
+            image: "/images/sustainability/goal4/orientation-programme-on-quality-issuess-for-teachers-and-students-in-collaboration-with-iqac.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Orientation-Programme-on-Quality-issuess-for-teachers-and-Students-in-collaboration-with-IQAC.pdf",
+        },
+        {
+            id: "event-4-2024-45",
+            title: "Prof Ethics for educators",
+            image: "/images/sustainability/goal4/prof-ethics-for-educators.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Prof-Ethics-for-educators.pdf",
+        },
+        {
+            id: "event-4-2024-46",
+            title: "Professional Ethics SOAS",
+            image: "/images/sustainability/goal4/professional-ethics-soas.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Professional-Ethics-SOAS.pdf",
+        },
+        {
+            id: "event-4-2024-47",
+            title: "Professional Ethics for Faculty Members of SOAD",
+            image: "/images/sustainability/goal4/professional-ethics-for-faculty-members-of-soad.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Professional-Ethics-for-Faculty-Members-of-SOAD.pdf",
+        },
+        {
+            id: "event-4-2024-48",
+            title: "Professional Ethics for Teachers SBAS",
+            image: "/images/sustainability/goal4/professional-ethics-for-teachers-sbas.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Professional-Ethics-for-Teachers-SBAS.pdf",
+        },
+        {
+            id: "event-4-2024-49",
+            title: "Professional Ethics for Teachers SOET",
+            image: "/images/sustainability/goal4/professional-ethics-for-teachers-soet.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Professional-Ethics-for-Teachers-SOET.pdf",
+        },
+        {
+            id: "event-4-2024-50",
+            title: "Professional Ethics for Teachers SOLS",
+            image: "/images/sustainability/goal4/professionalethics-for-teachers-sols.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Professional-Ethics-for-Teachers-SOLS.pdf",
+        },
+        {
+            id: "event-4-2024-51",
+            title: "Professional Ethics for Teachers SOMC",
+            image: "/images/sustainability/goal4/professional-ethics-for-teachers-somc.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Professional-Ethics-for-Teachers-SOMC.pdf",
+        },
+        {
+            id: "event-4-2024-52",
+            title: "Quality Assurance in Higher Education SBAS",
+            image: "/images/sustainability/goal4/quality-assurance-in-higher-education-sbas.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Quality-Assurance-in-Higher-Education-SBAS.pdf",
+        },
+        {
+            id: "event-4-2024-53",
+            title: "Quality Improvement Program SOAD",
+            image: "/images/sustainability/goal4/quality-improvement-program-soad.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Quality-Improvement-Program--SOAD.pdf",
+        },
+        {
+            id: "event-4-2024-54",
+            title: "Quality assurance Workshop on SCC online",
+            image: "/images/sustainability/goal4/quality-assurance-workshop-on-scc-online.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Quality-assurance-Workshop-on-SCC-online.pdf",
+        },
+        {
+            id: "event-4-2024-55",
+            title: "Report FDP IKS",
+            image: "/images/sustainability/goal4/report-fdp-iks.png",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Report-FDP-IKS.pdf",
+        },
+        {
+            id: "event-4-2024-56",
+            title: "Road Safety Campaign",
+            image: "/images/sustainability/goal4/road-safety-campaign.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Road-Safety-Campaign.pdf",
+        },
+        {
+            id: "event-4-2024-57",
+            title: "SEVEN DAYS SPECIAL DAY NIGHT CAMP",
+            image: "/images/sustainability/goal4/seven-days-special-day-night-camp.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/SEVEN-DAYS-SPECIAL-DAY-NIGHT-CAMP.pdf",
+        },
+        {
+            id: "event-4-2024-58",
+            title: "SOFT SKILLS HOW TO ACE INTERVIEWS AND GROUP DISCUSSIONS",
+            image: "/images/sustainability/goal4/soft-skills-how-to-ace-interviews-and-group-discussions.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/SOFT-SKILLS-HOW-TO-ACE-INTERVIEWS-AND-GROUP-DISCUSSIONS.pdf",
+        },
+        {
+            id: "event-4-2024-59",
+            title: "STTP Enhancing Research Impact SJMC",
+            image: "/images/sustainability/goal4/sttp-enhancing-research-impact-sjmc.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/STTP-Enhancing-Research-Impact-SJMC.pdf",
+        },
+        {
+            id: "event-4-2024-60",
+            title: "Shiksha Uday A One Day Literacy Camp",
+            image: "/images/sustainability/goal4/shiksha-uday-a-one-day-literacy-camp.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Shiksha-Uday-A-One-Day-Literacy-Camp.pdf",
+        },
+        {
+            id: "event-4-2024-61",
+            title: "Soft Copy Communi Skill at Pullman",
+            image: "/images/sustainability/goal4/soft-copy-communi-skill-at-pullman.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Soft-Copy-Communi-Skill-at-Pullman.pdf",
+        },
+        {
+            id: "event-4-2024-62",
+            title: "Soft Skill Strategies for Success",
+            image: "/images/sustainability/goal4/soft-skill-strategies-for-success.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Soft-Skill-Strategies-for-Success.pdf",
+        },
+        {
+            id: "event-4-2024-63",
+            title: "Soft Skills Strategies for Success SBAS",
+            image: "/images/sustainability/goal4/soft-skills-strategies-for-success-sbas.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Soft-Skills-Strategies-for-Success-SBAS.pdf",
+        },
+        {
+            id: "event-4-2024-64",
+            title: "Teaching with Integrity Professional Ethics Training for Educators Report",
+            image: "/images/sustainability/goal4/teaching-with-integrity-professional-ethics-training-for-educators-report.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Teaching-with-Integrity-Professional-Ethics-Training-for-Educators-Report.pdf",
+        },
+        {
+            id: "event-4-2024-65",
+            title: "Turning Research into Results",
+            image: "/images/sustainability/goal4/turning-research-into-results.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Turning-Research-into-Results.pdf",
+        },
+        {
+            id: "event-4-2024-66",
+            title: "Twinning Program ABheypur",
+            image: "/images/sustainability/goal4/twinning-program-abheypur.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Twinning-Program-ABheypur.pdf",
+        },
+        {
+            id: "event-4-2024-67",
+            title: "Twinning Sakras Report",
+            image: "/images/sustainability/goal4/twinning-sakras-report.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Twinning_Sakras_Report.pdf",
+        },
+        {
+            id: "event-4-2024-68",
+            title: "VISIT OF STUDENTS FROM SHIVAJI COLLEGE",
+            image: "/images/sustainability/goal4/visit-of-students-from-shivaji-college.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/VISIT-OF-STUDENTS-FROM-SHIVAJI-COLLEGE.pdf",
+        },
+        {
+            id: "event-4-2024-69",
+            title: "VISIT to JECRC",
+            image: "/images/sustainability/goal4/visit-to-jecrc.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/VISIT-to-JECRC.pdf",
+        },
+        {
+            id: "event-4-2024-70",
+            title: "Visiting School Students NSS",
+            image: "/images/sustainability/goal4/visiting-school-students-nss.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Visiting-School-Students-NSS.pdf",
+        },
+        {
+            id: "event-4-2024-71",
+            title: "Workshop on Soft Skills SOAD",
+            image: "/images/sustainability/goal4/workshop-on-soft-skills-soad.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Workshop-on-Soft-Skills-SOAD.pdf",
+        },
+        {
+            id: "event-4-2024-72",
+            title: "Workshop on Teaching Vocabulary through Fun SOED",
+            image: "/images/sustainability/goal4/workshop-on-teaching-vocabulary-through-fun-soed.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Workshop-on-Teaching-Vocabulary-through-Fun-SOED.pdf",
+        },
+        {
+            id: "event-4-2024-73",
+            title: "e Certificate Course on Life Skill SOED",
+            image: "/images/sustainability/goal4/e-certificate-course-on-life-skill-soed.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/e-Certificate-Course-on-Life-Skill-SOED.pdf",
+        },
+    ],
+    eventGroups: [
+        {
+            year: "2023 - 2024",
+            events: events2023_2024,
+        },
+    ],
 };
