@@ -8,14 +8,19 @@ export const policyOnAffordableAndCleanEnergyData: PolicyPageData = {
     backLink: "/sdg-7-affordable-and-clean-energy",
     policies: [
         {
-            id: "policy-1",
-            title: "K.R. Mangalam University Sustainable Environment and Green Campus Policy",
-            url: "https://www.krmangalam.edu.in/pdfs/sdg/sdg-12/sdg-12-policy-K.R-Mangalam-University-Sustainable-Environment-and-Green-Campus-Policy.pdf",
+            id: "policy-3",
+            title: "Carbon Divestment and Renewable Energy Commitment Policy",
+            url: "https://www.krmangalam.edu.in/pdfs/sdg/goal-7/CARBON-DIVESTMENT-AND-RENEWABLE-ENERGY-COMMITMENT-POLICY.pdf",
         },
         {
             id: "policy-2",
             title: "Revised Sustainable Environment and Green Campus Policy Edition 2023",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/sdg-12/sdg-12-policy-Revised-Sustainable-Environment-and-Green-Campus-Policy-Edition-2023.pdf",
+        },
+        {
+            id: "policy-1",
+            title: "K.R. Mangalam University Sustainable Environment and Green Campus Policy",
+            url: "https://www.krmangalam.edu.in/pdfs/sdg/sdg-12/sdg-12-policy-K.R-Mangalam-University-Sustainable-Environment-and-Green-Campus-Policy.pdf",
         },
     ],
 };
