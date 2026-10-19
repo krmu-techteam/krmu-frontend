@@ -12,7 +12,7 @@ const HeroSection = () => {
                         width={150}
                         height={150}
                         alt="Beyond Logo"
-                        className="h-auto w-[90px] sm:w-[110px] lg:w-[150px]"
+                        className="h-auto w-[90px] sm:w-[110px] lg:w-[150px] temp-class"
                     />
 
                     <h3 className="text-lg font-normal leading-snug sm:text-xl lg:text-2xl mb-2 temp-class">
