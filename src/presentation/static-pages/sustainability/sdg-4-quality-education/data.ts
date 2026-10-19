@@ -1024,6 +1024,30 @@ export const sdg4Data: SdgDetailPageData = {
             image: "/images/sustainability/goal4/outcome-based-education-iqac.jfif",
             pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Outcome-based-Education-IQAC.pdf",
         },
+        {
+            id: "event-4-2024-77",
+            title: "Designing Student Centered Lesson Plans A Workshop on the Constructivist Approach under the aegis of IQAC",
+            image: "/images/sustainability/goal4/Designing-Student-Centered-Lesson-Plans-A-Workshop-on-the-Constructivist-Approach-under-the-aegis-of-IQAC.JPG",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Designing-Student-Centered-Lesson-Plans-A-Workshop-on-the-Constructivist-Approach-under-the-aegis-of-IQAC.PDF",
+        },
+        {
+            id: "event-4-2024-78",
+            title: "International Workshop  Global Solutions Effective Utilization of Data Analytics Tools for Academic and Administrative Excellence in collaboration with Centre of Excellence in Cloud Computing",
+            image: "/images/sustainability/goal4/International-Workshop--Global-Solutions-Effective-Utilization-of-Data-Analytics-Tools-for-Academic-and-Administrative-Excellence-in-collaboration-with-Centre-of-Excellence-in-Cloud-Computin.JPG",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/International-Workshop--Global-Solutions-Effective-Utilization-of-Data-Analytics-Tools-for-Academic-and-Administrative-Excellence-in-collaboration-with-Centre-of-Excellence-in-Cloud-Computin.PDF",
+        },
+        {
+            id: "event-4-2024-79",
+            title: "Orientation Programme on Counseling Skills for Teachers to Support Holistic Student Development under the aeigs of IQAC",
+            image: "/images/sustainability/goal4/Orientation-Programme-on-Counseling-Skills-for-Teachers-to-Support-Holistic-Student-Development-under-the-aeigs-of-IQAC1.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Orientation-Programme-on-Counseling-Skills-for-Teachers-to-Support-Holistic-Student-Development-under-the-aeigs-of-IQAC.PDF",
+        },
+        {
+            id: "event-4-2024-80",
+            title: "Orientation Programme on Quality and Academic Integrity in Higher Education under the aegis of IQAC",
+            image: "/images/sustainability/goal4/Orientation-Programme-on-Quality-and-Academic-Integrity-in-Higher-Education-under-the-aegis-of-IQAC1.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Orientation-Programme-on-Quality-and-Academic-Integrity-in-Higher-Education-under-the-aegis-of-IQAC.pdf",
+        },
     ],
     eventGroups: [
         {
