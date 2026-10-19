@@ -1012,6 +1012,18 @@ export const sdg4Data: SdgDetailPageData = {
             image: "/images/sustainability/goal4/orientation-programme-on-quality-and-academic-integrity-in-higher-education-under-the-aegis-of-iqac.jpeg",
             pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Orientation-Programme-on-Quality-issuess-for-teachers-and-Students-in-collaboration-with-IQAC.pdf",
         },
+        {
+            id: "event-4-2024-75",
+            title: "Training Programme on Improving Structure and Quality of Assessments in collaboration with KIIT College of Education Gurugram Haryana under the aegis of IQAC",
+            image: "/images/sustainability/goal4/training-programme-on-improving-structure-and-quality-of-assessments-in-collaboration-with-kiit-college-of-education-gurugram-haryana-under-the-aegis-of-iqa.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Training-Programme-on-Improving-Structure-and-Quality-of-Assessments-in-collaboration-with-KIIT-College-of-Education-Gurugram-Haryana-under-the-aegis-of-IQAC.pdf",
+        },
+        {
+            id: "event-4-2024-76",
+            title: "Outcome based Education IQAC",
+            image: "/images/sustainability/goal4/outcome-based-education-iqac.jfif",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Outcome-based-Education-IQAC.pdf",
+        },
     ],
     eventGroups: [
         {
