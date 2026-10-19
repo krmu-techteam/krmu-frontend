@@ -124,7 +124,7 @@ export const sdg2Data: SdgDetailPageData = {
         },
         {
             id: "event-2-2024-9",
-            title: "Visit to Fertiliser Management Development Institut report",
+            title: "Visit to Fertiliser Management Development Institute report",
             image: "/images/sustainability/goal2/visit-to-fertiliser-management-development-institut.png",
             pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal2/Visit-to-Fertiliser-Management-Development-Institut-report.pdf",
         },

@@ -1006,6 +1006,12 @@ export const sdg4Data: SdgDetailPageData = {
             image: "/images/sustainability/goal4/e-certificate-course-on-life-skill-soed.jpeg",
             pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/e-Certificate-Course-on-Life-Skill-SOED.pdf",
         },
+        {
+            id: "event-4-2024-74",
+            title: "Orientation Programme on Quality and Academic Integrity in Higher Education under the aegis of IQAC",
+            image: "/images/sustainability/goal4/orientation-programme-on-quality-and-academic-integrity-in-higher-education-under-the-aegis-of-iqac.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal4/Orientation-Programme-on-Quality-issuess-for-teachers-and-Students-in-collaboration-with-IQAC.pdf",
+        },
     ],
     eventGroups: [
         {

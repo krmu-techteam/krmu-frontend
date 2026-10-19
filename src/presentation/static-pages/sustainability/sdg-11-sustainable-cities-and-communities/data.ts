@@ -1,4 +1,25 @@
-import { SdgDetailPageData } from "../shared-sdg/types";
+import { SdgDetailPageData, SdgEventItem } from "../shared-sdg";
+
+const events2023_2024: SdgEventItem[] = [
+    {
+        id: "event-11-1",
+        title: "Report wall art Final",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/WhatsApp-Image-2023-08-24-at-12.12.08-PM-400x300.jpeg",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-11/Report-wall-art-Final.pdf",
+    },
+    {
+        id: "event-11-2",
+        title: "Report A Case Study on Community Driven Transformation of Seth Chuhimal Ki Chatri And Talab",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/WhatsApp-Image-2025-02-14-at-3.26.17-PM-400x225.jpeg",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-11/Report-A-Case-Study-on-Community-Driven-Transformation-of-Seth-Chuhimal-Ki-Chatri-And-Talab.pdf",
+    },
+    {
+        id: "event-11-3",
+        title: "Sustainable & Smart Village",
+        image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/WhatsApp-Image-2024-03-05-at-11.37.42-AM-400x300.jpeg",
+        pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-11/Sustainable-&-Smart-Village.pdf",
+    },
+];
 
 export const sdg11Data: SdgDetailPageData = {
     goalNumber: 11,
@@ -18,37 +39,83 @@ export const sdg11Data: SdgDetailPageData = {
         },
         {
             text: "MoU on Sustainable Cities and Communities",
-            url: "https://www.krmangalam.edu.in/mou-on-sustainable-cities-and-communities/",
+            url: "/mou-on-sustainable-cities-and-communities",
         },
     ],
-    goalTileImage:
-        "https://www.krmangalam.edu.in/wp-content/uploads/2025/09/11.png",
+    goalTileImage: "/images/sustainability/goals/g11.jpg",
     sdgReportText: "SDG Report 2023-24",
     sdgReportUrl:
         "https://www.krmangalam.edu.in/pdfs/sdg/sdg-annual-reports/2023-2024/SDG-11-2023-24.pdf",
     accentColor: "#FD9D24",
+    year: "2024 - 2025",
     eventsTitle: "Events And Activities",
     events: [
         {
-            id: "event-11-1",
-            title: "Report wall art Final",
-            image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/WhatsApp-Image-2023-08-24-at-12.12.08-PM-400x300.jpeg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-11/Report-wall-art-Final.pdf",
+            id: "event-11-2024-1",
+            title: "Community-Driven Transformation of Seth Chuhimal Ki Chatri And Talab Nuh Rural Haryana Under the CREAT Initiative (Community-Driven Revitalization for Education and Transformation)",
+            image: "/images/sustainability/goal11/community-driven-transformation-of-seth-chuhimal-ki-chatri-and-talab-nuh-rural-haryana-under-the-creat-initiative-community-driven-revitalization-for-education-and-transformation.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-l1/Community-Driven-Transformation-of-Seth-Chuhimal-Ki-Chatri-And-Talab-Nuh-Rural-Haryana-Under-the-CREAT-initiative-Community-Driven-Revitalization-for-Education-and-Transformation.pdf",
         },
         {
-            id: "event-11-2",
-            title: "Report A Case Study on Community Driven Transformation of Seth Chuhimal Ki Chatri And Talab",
-            image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/WhatsApp-Image-2025-02-14-at-3.26.17-PM-400x225.jpeg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-11/Report-A-Case-Study-on-Community-Driven-Transformation-of-Seth-Chuhimal-Ki-Chatri-And-Talab.pdf",
+            id: "event-11-2024-2",
+            title: "DESIGN 2030 - Developing Efficient and Sustainable Innovations for Global Needs",
+            image: "/images/sustainability/goal11/design-2030-developing-efficient-and-sustainable-innovations-for-global-needs.jfif",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-l1/DESIGN-2030-Developing-Efficient-and-Sustainable-Innovations-for-Global-Needs.pdf",
         },
         {
-            id: "event-11-3",
-            title: "Sustainable & Smart Village",
-            image: "https://www.krmangalam.edu.in/wp-content/uploads/2025/11/WhatsApp-Image-2024-03-05-at-11.37.42-AM-400x300.jpeg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/events/sdg-11/Sustainable-&-Smart-Village.pdf",
+            id: "event-11-2024-3",
+            title: "Empowering Village Communities Advancing Digital Literacy through Outreach and Extension Activities",
+            image: "/images/sustainability/goal11/empowering-village-communities-advancing-digital-literacy-through-outreach-and-extension-activities.png",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-l1/Empowering-Village-Communities-Advancing-Digital-Literacy-through-Outreach-and-Extension-Activities.pdf",
+        },
+        {
+            id: "event-11-2024-4",
+            title: "Exploring Biodiversity Conservation Strategies at Aravalli Biodiversity Park: A Study on Ecological Sustainability and Community Engagement",
+            image: "/images/sustainability/goal11/exploring-biodiversity-conservation-strategies-at-aravalli-biodiversity-park-a-study-on-ecological-sustainability-and-community-engagement.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-l1/Exploring-Biodiversity-Conservation-Strategies-at-Aravalli-Biodiversity-Park-A-Study-on-Ecological-Sustainability-and-Community-Engagement.pdf",
+        },
+        {
+            id: "event-11-2024-5",
+            title: "Exploring Our Heritage: An Academic Journey to the Qutub Complex",
+            image: "/images/sustainability/goal11/exploring-our-heritage-an-academic-journey-to-the-qutub-complex.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-l1/Exploring-Our-Heritage-An-Academic-Journey-to-the-Qutub-Complex.pdf",
+        },
+        {
+            id: "event-11-2024-6",
+            title: "Heritage Walk to Old Delhi",
+            image: "/images/sustainability/goal11/heritage-walk-to-old-delhi.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-l1/Heritage-Walk-to-Old-Delhi.pdf",
+        },
+        {
+            id: "event-11-2024-7",
+            title: "Promoting Environmental Awareness and Sustainable Waste Management in Alipur Village",
+            image: "/images/sustainability/goal11/promoting-environmental-awareness-and-sustainable-waste-management-in-alipur-village.png",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-l1/Promoting-Environmental-Awareness-and-Sustainable-Waste-Management-in-Alipur-Village.pdf",
+        },
+        {
+            id: "event-11-2024-8",
+            title: "Site Visit at Community Center, Sector 15, Faridabad",
+            image: "/images/sustainability/goal11/site-visit-at-community-center-sector-15-faridabad.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-l1/SITE-VISIT-AT-COMMUNITY-CENTER-SECTOR-15-FARIDABAD.pdf",
+        },
+        {
+            id: "event-11-2024-9",
+            title: "Site Visit to Bhairon Marg, Pragati Maidan, New Delhi",
+            image: "/images/sustainability/goal11/site-visit-to-bhairon-marg-pragati-maidan-new-delhi.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-l1/Site-Visit-to-Bhairon-Marg-Pragati-Maidan-New-Delhi.pdf",
+        },
+        {
+            id: "event-11-2024-10",
+            title: "Visit to Akshardham: Field Project Report on Akshardham as a Sociocultural Icon Exploring Its Impact on Society through the Lens of Social Sciences",
+            image: "/images/sustainability/goal11/visit-to-akshardham-field-project-report-on-akshardham-as-a-sociocultural-icon-exploring-its-impact-on-society-through-the-lens-of-social-sciences.jpeg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-l1/Visit-to-Akshardham-Field-Project-Report-on-Akshardham-as-a-Sociocultural-Icon-Exploring-Its-Impact-on-Society-through-the-Lens-of-Social-Sciences.pdf",
         },
     ],
     eventGroups: [
+        {
+            year: "2023 - 2024",
+            events: events2023_2024,
+        },
         {
             title: "Record And Preserve Cultural Heritage",
             events: [
