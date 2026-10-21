@@ -43,7 +43,7 @@ const PHDOverview = ({
         <>
             <section
                 id="overview"
-                className="w-full bg-[#F7F2E7] pt-14 sm:pt-16 lg:pt-20 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px] scroll-mt-24"
+                className="w-full bg-[#F7F2E7] pt-14 sm:pt-16 lg:pt-20 px-5 sm:px-8 md:px-10 lg:px-12 xl:px-[51px] scroll-mt-24 temp-class"
             >
                 <div className="max-w-[1440px] mx-auto w-full flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-14 xl:gap-20">
                     {/* LEFT COLUMN: OVERVIEW (Title + Paragraphs) */}
