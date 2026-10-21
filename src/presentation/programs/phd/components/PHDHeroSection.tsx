@@ -33,6 +33,8 @@ const PHD_HERO_IMAGES: Record<string, string> = {
     "phd-commerce": "/images/phd/hero-section/phd-commerce.webp",
     "phd-computer-science-engineering":
         "/images/phd/hero-section/phd-computer-science-engineering.webp",
+    "phd-in-fine-arts":
+        "/images/phd/hero-section/phd-computer-science-engineering.webp",
     "phd-cse": "/images/phd/hero-section/phd-computer-science-engineering.webp",
     "phd-economics": "/images/phd/hero-section/phd-economics.webp",
     "phd-education": "/images/phd/hero-section/phd-education.webp",
