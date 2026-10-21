@@ -70,6 +70,29 @@ const FeeStructureTable = ({ feeStructTab }: Props) => {
 
 export default FeeStructureTable;
 
+const formatPricesInHtml = (html?: string): string => {
+    if (!html) return "";
+    let result = html.replace(
+        /(?:Rs\.?|INR|₹)(?:\s|&nbsp;|\u00A0)*([\d,]+)(?:\s|&nbsp;|\u00A0)*(?:\/\-|\/)?/gi,
+        (match, p1) => {
+            const rawNum = p1.replace(/,/g, "").trim();
+            const num = parseInt(rawNum, 10);
+            if (isNaN(num)) return match;
+            return "₹" + num.toLocaleString("en-IN");
+        }
+    );
+    result = result.replace(
+        /(?<![a-zA-Z0-9_])([\d,]{4,})\s*\/\-/g,
+        (match, p1) => {
+            const rawNum = p1.replace(/,/g, "").trim();
+            const num = parseInt(rawNum, 10);
+            if (isNaN(num)) return match;
+            return "₹" + num.toLocaleString("en-IN");
+        }
+    );
+    return result;
+};
+
 const FacultySection = ({ options }: { options: any[] }) => {
     const [activeSchoolId, setActiveSchoolId] = useState(
         options[0]?.id?.toString() || ""
@@ -141,7 +164,9 @@ const FacultySection = ({ options }: { options: any[] }) => {
                             <div
                                 className="overflow-x-auto modern-fee-table scrollbar-thin scrollbar-thumb-gray-200"
                                 dangerouslySetInnerHTML={{
-                                    __html: activeSchool.panel_content,
+                                    __html: formatPricesInHtml(
+                                        activeSchool.panel_content
+                                    ),
                                 }}
                             />
                         </div>
@@ -174,7 +199,9 @@ const FacultySection = ({ options }: { options: any[] }) => {
                                 <div
                                     className="overflow-x-auto modern-fee-table"
                                     dangerouslySetInnerHTML={{
-                                        __html: acc.panel_content,
+                                        __html: formatPricesInHtml(
+                                            acc.panel_content
+                                        ),
                                     }}
                                 />
                             </AccordionContent>

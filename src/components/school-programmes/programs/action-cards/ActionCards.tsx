@@ -54,7 +54,7 @@ export const ActionCards = ({ schoolCat }: Props) => {
                             <p className="text-[13px] sm:text-[13.5px] md:text-[15px] lg:text-[14px] text-[#000000]/90 font-poppins leading-relaxed">
                                 Login to your application page to start your
                                 application and reserve your place in the class
-                                of 2026.
+                                of 2027.
                             </p>
                         </div>
                         <button

@@ -148,7 +148,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "The programme prepares skilled data science professionals and future technology leaders by integrating a strong computer science foundation with advanced data science principles and analytical techniques. Through hands-on learning in statistical analysis, machine learning, big data analytics, data engineering, predictive modelling, data visualisation, artificial intelligence, cloud-based analytics, and business intelligence, students develop the analytical capabilities, technical proficiency, and professional competencies required to extract meaningful insights from data, build intelligent solutions, optimise decision-making, and drive innovation while pursuing rewarding careers in the global data science, artificial intelligence, and technology industry.",
     },
     "bba-llb-hons": {
-        title: "Why K.R. Mangalam University for BBA LL.B. (Hons.) in 2026–27?",
+        title: "Why K.R. Mangalam University for BBA LL.B. (Hons.) in 2027-28?",
         headerDesc:
             "Pursuing a BBA LL.B. (Hons.) degree is not simply about acquiring a law degree. It can also help students to develop the business-related and courtroom skills necessary to achieve success in any number of different types of careers in corporate law, litigation, and public policy.",
         subDesc:
@@ -206,7 +206,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "A significant component of this programme is that graduate students are eligible for 100% placement assistance in various legal organisations, including private law firms, corporate legal departments, multi-national corporations, and government agencies located in the Delhi/NCR region. Additionally, the programme is designed to offer each student regular internship opportunities with courts, law firms, and corporate legal teams to network with professionals in the legal field before their graduation.",
     },
     "bachelor-of-physiotherapy-bpt": {
-        title: "Why K.R. Mangalam University for BPT in 2026–27?",
+        title: "Why K.R. Mangalam University for BPT in 2027–28?",
         headerDesc:
             "Pursuing a Bachelor of Physiotherapy is not just about earning a degree; it is about developing a strong foundation in medical sciences, mastering evidence-based rehabilitation techniques, and acquiring the clinical skills needed to improve patients&#x27; mobility, function, and quality of life across diverse healthcare settings.",
         subDesc:
@@ -266,7 +266,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "Whether your goal is to build a career in clinical physiotherapy, sports rehabilitation, neurological and orthopaedic rehabilitation, paediatric or geriatric care, pursue higher studies and research, or establish your own physiotherapy practice, the BPT programme is designed to equip you with the scientific knowledge, evidence-based clinical skills, and practical training required to excel in the healthcare sector.",
     },
     "ba-hons-english-research": {
-        title: "Why K.R. Mangalam University for a B.A. (Hons. / Hons. with Research) English 2026–27?",
+        title: "Why K.R. Mangalam University for a B.A. (Hons. / Hons. with Research) English 2027–28?",
         headerDesc:
             "Selecting the right university for a B.A. (Hons. / Hons. with Research) English is about much more than studying literature. Students should look for a programme that develops communication, critical thinking, research capabilities, creativity, and practical skills that are relevant to today&#x27;s job market. A university that combines academic learning with industry exposure and career support can prepare students for diverse opportunities in publishing, media, education, corporate communication, digital marketing, public relations, and research.",
         subDesc:
@@ -353,7 +353,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "For students seeking a B.A. (Hons. / Hons. with Research) English programme that combines academic depth with research, experiential learning, and career development, K.R. Mangalam University offers a comprehensive learning environment. With its industry-orientated approach, dedicated Career Development Centre (CDC), and emphasis on holistic development, the university prepares students for successful careers as well as higher education and research opportunities.",
     },
     "ba-hons-hons-economics-research": {
-        title: "Why K.R. Mangalam University for a B.A. (Hons. / Hons. with Research) Economics 2026–27?",
+        title: "Why K.R. Mangalam University for a B.A. (Hons. / Hons. with Research) Economics 2027–28?",
         headerDesc:
             "Selecting the right university is about much more than earning a degree. Students should look for an institution that combines academic excellence with practical exposure, research opportunities, experienced faculty, and strong career support. These factors play a significant role in shaping both their university experience and future career prospects.",
         subDesc:
@@ -430,7 +430,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "Ultimately, the right university depends on a student&#x27;s career aspirations, preferred learning style, and academic interests. Before making a decision, students should compare curriculum design, faculty expertise, research opportunities, internships, placement support, campus facilities, and overall learning environment to determine which institution best aligns with their long-term goals.",
     },
     "ba-hons-psychology": {
-        title: "Why K.R. Mangalam University for a B.A. (Hons.) Psychology 2026–27?",
+        title: "Why K.R. Mangalam University for a B.A. (Hons.) Psychology 2027–28?",
         headerDesc:
             "Choosing the right university is essential for building a successful career in psychology. While many institutions offer a B.A. (Hons.) psychology programme, students should compare factors such as curriculum, practical exposure, faculty expertise, research opportunities, laboratory facilities, internships, and placement support rather than focusing only on the degree.",
         subDesc:
@@ -518,7 +518,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "For students seeking quality education, practical exposure, experienced faculty, modern learning facilities, and dedicated placement support through its Career Development Centre (CDC), K.R. Mangalam University&#x27;s B.A. (Hons.) Psychology programme offers a strong foundation for both higher studies and diverse professional careers.",
     },
     "b-a-hons-hons-with-research-psychology": {
-        title: "Why K.R. Mangalam University for a B.A. (Hons./ Hons. with Research) Psychology 2026–27?",
+        title: "Why K.R. Mangalam University for a B.A. (Hons./ Hons. with Research) Psychology 2027–28?",
         headerDesc:
             "Selecting the right university plays a crucial role in shaping a successful career in psychology. While many universities offer a B.A. (Hons./Hons. with Research) psychology programme, students should compare aspects such as curriculum, research opportunities, practical exposure, faculty expertise, laboratory facilities, internships, and placement support to make an informed decision.",
         subDesc:
@@ -607,7 +607,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "K.R. Mangalam University (KRMU), Gurugram, has designed its programme to blend academic excellence with experiential learning. Along with a strong theoretical foundation, students gain practical exposure, research experience, and industry interaction, preparing them for careers in psychology, mental health, research, human resources, education, and allied sectors.",
     },
     "ba-hons-political-science": {
-        title: "Why K.R. Mangalam University for B.A. (Hons.) Political Science 2026–27?",
+        title: "Why K.R. Mangalam University for B.A. (Hons.) Political Science 2027–28?",
         headerDesc:
             "Choosing the right university is essential for students who aspire to build careers in governance, public policy, civil services, international relations, media, or research. While many universities offer a B.A. (Hons.) Political Science programme, students should compare aspects such as curriculum, faculty expertise, practical exposure, research opportunities, industry interaction, and placement support before making a decision.",
         subDesc:
@@ -686,10 +686,10 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
         bottomDesc1:
             "A doctoral programme should provide more than research guidance—it should create an ecosystem where scholars can innovate, publish quality research, collaborate with experts, and develop solutions to real-world business challenges. A university that supports both academic excellence and industry engagement helps scholars maximise the value of their doctoral journey.",
         bottomDesc2:
-            "For aspiring researchers seeking experienced mentorship, a robust research environment, interdisciplinary collaboration, publication support, and dedicated career guidance through its Career Development Centre (CDC), K.R. Mangalam University&#x27;s Ph.D. in Management offers a strong platform for academic excellence and professional growth in the 2026–27 academic session.",
+            "For aspiring researchers seeking experienced mentorship, a robust research environment, interdisciplinary collaboration, publication support, and dedicated career guidance through its Career Development Centre (CDC), K.R. Mangalam University&#x27;s Ph.D. in Management offers a strong platform for academic excellence and professional growth in the 2027–28 academic session.",
     },
     "barch-architecture": {
-        title: "Why K.R. Mangalam University for B.Arch. in 2026–27?",
+        title: "Why K.R. Mangalam University for B.Arch. in 2027–28?",
         headerDesc:
             "Pursuing a Bachelor of Architecture is not just about earning a degree; it is about developing a strong foundation in architectural design, construction technologies, sustainable building practices, and urban planning while acquiring the creative, technical, and problem-solving skills needed to shape functional, innovative, and environmentally responsible built environments.",
         subDesc:
@@ -749,7 +749,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "Whether your goal is to build a career as an architect, urban designer, landscape architect, interior designer, project manager, architectural consultant, BIM specialist, or conservation professional, pursue higher studies and architectural research, or contribute to the creation of innovative and sustainable built environments, the B. Arch programme is designed to equip you with the creative, technical, and professional competencies required to excel in the architecture, design, and construction industry.",
     },
     "bfa-fine-arts": {
-        title: "Why K.R. Mangalam University for BFA in 2026–27?",
+        title: "Why K.R. Mangalam University for BFA in 2027–28?",
         headerDesc:
             "Pursuing a Bachelor of Fine Arts (BFA) is more than mastering artistic techniques. It is a transformative journey of imagination, self-expression, and creative exploration. It empowers students to develop a strong artistic identity while gaining expertise in traditional and contemporary art forms, visual storytelling, digital media, aesthetic theory, and professional studio practice. Through immersive learning experiences, students cultivate the creativity, technical excellence, critical thinking, and cultural awareness required to create art that inspires, communicates, and shapes the world around them.",
         subDesc:
@@ -809,7 +809,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "The Bachelor of Fine Arts (BFA) programme is designed for aspiring artists and creative professionals who wish to transform their imagination into impactful visual expression. Whether you envision a career as a visual artist, illustrator, graphic designer, digital artist, animator, photographer, art curator, creative entrepreneur, or art educator, the programme provides a strong foundation in artistic techniques, creative thinking, digital tools, and professional practice. With an emphasis on experimentation, innovation, and industry relevance, students graduate with the knowledge, confidence, and portfolio needed to thrive in the evolving global creative landscape or pursue advanced studies in the visual arts.",
     },
     "bachelor-of-design-b-des-fashion-design": {
-        title: "Why K.R. Mangalam University for B.Des. (Hons. / Hons. with Research) Fashion Design in 2026–27?",
+        title: "Why K.R. Mangalam University for B.Des. (Hons. / Hons. with Research) Fashion Design in 2027–28?",
         headerDesc:
             "A B.Des. (Hons. / Hons. with Research) Fashion Design is designed for aspiring designers who seek to transform creative ideas into innovative fashion solutions. The programme combines artistic expression with design research, technical expertise, and industry relevance to help students understand every stage of the fashion ecosystem. From conceptualising collections and experimenting with textiles to mastering garment construction, fashion communication, digital design technologies, sustainability, and user-centred design, students gain a multidisciplinary perspective that prepares them for the dynamic world of fashion. By engaging in studio practice, collaborative projects, and research-led learning, graduates emerge as confident professionals capable of shaping trends, promoting responsible fashion, and building successful careers across the global fashion and lifestyle industry.",
         subDesc:
@@ -883,7 +883,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "The programme nurtures creative thinkers and future fashion professionals by combining design innovation with technical expertise. With hands-on learning in fashion design, textiles, garment construction, digital tools, sustainability, and research, students develop the confidence, creativity, and professional portfolio needed to pursue careers across the global fashion industry.",
     },
     bjmc: {
-        title: "Why K.R. Mangalam University for B.A. (JMC) in 2026–27?",
+        title: "Why K.R. Mangalam University for B.A. (JMC) in 2027–28?",
         headerDesc:
             "Pursuing a B.A. (Journalism &amp; Mass Communication) programme is not just about earning a degree but about gaining skills to build editorial judgment and production skills. It helps students ‌create an industry-ready portfolio needed to work across today&#x27;s fast-changing media landscape.",
         subDesc:
@@ -941,7 +941,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "A student will be able to receive 100% placement assistance from major media companies, including newspapers, magazines, television stations, advertising agencies and PR firms within the Delhi/NCR area as part of this program at KRMU. In addition, it provides the opportunity for internships with major media outlets and studio experiences, while also providing networking opportunities in order to develop industry connections with news organisations, digital media outlets, advertising agencies and PR firms",
     },
     "bjmc-hons-research": {
-        title: "Why K.R. Mangalam University for BJMC (Hons. / Hons. with Research) in 2026–27?",
+        title: "Why K.R. Mangalam University for BJMC (Hons. / Hons. with Research) in 2027–28?",
         headerDesc:
             "Pursuing a B.A. (Hons. / Hons. with Research) Journalism &amp; Mass Communication programme is not just about earning a degree; it is about building storytelling ability, media production skills, and industry-ready communication expertise required to navigate today&#x27;s fast-evolving media landscape.",
         subDesc:
@@ -999,7 +999,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "Whether your goal is to pursue a career in journalism, digital media, advertising, public relations, event management, or higher studies in communication, the BJMC (Hons. / Hons. with Research) programme at KRMU is designed to equip you with the storytelling ability, practical exposure, and media skills required to achieve it.",
     },
     "bhmct-hotel-management": {
-        title: "Why K.R. Mangalam University for a Bachelor of Hotel Management and Catering Technology in 2026–27?",
+        title: "Why K.R. Mangalam University for a Bachelor of Hotel Management and Catering Technology in 2027–28?",
         headerDesc:
             "Choosing the right university for a Bachelor of Hotel Management and Catering Technology (B.HMCT.) is about much more than comparing tuition fees or campus facilities. Students should evaluate factors such as curriculum, practical learning opportunities, industry exposure, internships, placement support, and the overall learning environment. These elements play a significant role in preparing graduates for successful careers in the hospitality industry.",
         subDesc:
@@ -1075,7 +1075,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "As a result, students should pick a university that offers them real-world experience, professional confidence, and practical skills in addition to academic knowledge. Aspiring hospitality professionals can develop prosperous careers in hotels, restaurants, airlines, cruise lines, tourism, and other service sectors with the support of a well-rounded learning environment.",
     },
     "bachelor-of-education-b-ed": {
-        title: "Why K.R. Mangalam University for B.Ed. in 2026–27?",
+        title: "Why K.R. Mangalam University for B.Ed. in 2027–28?",
         headerDesc:
             "Pursuing a Bachelor of Education is not just about earning a degree; it is about developing a strong foundation in educational theories, mastering modern teaching methodologies, and acquiring the pedagogical, communication, and classroom management skills needed to inspire learners and contribute effectively to the education sector.",
         subDesc:
@@ -1135,7 +1135,7 @@ export const whyKrmuData: Record<string, WhyKrmuItem> = {
             "Whether your goal is to build a career as a school teacher, educator, academic coordinator, curriculum developer, education consultant, or trainer, pursue higher studies and educational research, or contribute to the development of innovative teaching practices, the B.Ed. programme is designed to equip you with the pedagogical knowledge, classroom management skills, and practical teaching experience required to excel in the education sector.",
     },
     "bsc-hons-agriculture": {
-        title: "Why K.R. Mangalam University for B.Sc. (Hons.) Agriculture in 2026–27?",
+        title: "Why K.R. Mangalam University for B.Sc. (Hons.) Agriculture in 2027-28?",
         headerDesc:
             "Pursuing a B.Sc. (Hons.) Agriculture programme is not just about earning a degree; it is about building scientific understanding, practical farming expertise, and industry-ready skills required to address the evolving challenges of modern agriculture and food systems.",
         subDesc:

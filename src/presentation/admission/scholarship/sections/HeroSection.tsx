@@ -68,7 +68,7 @@ const HeroSection = () => {
                             Scholarship
                         </span>
                         <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[150px] font-black tracking-tight leading-[0.9] my-1 sm:my-2">
-                            2026
+                            2027
                         </span>
                         <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[47px] !font-extralight tracking-wide leading-tight">
                             Intake

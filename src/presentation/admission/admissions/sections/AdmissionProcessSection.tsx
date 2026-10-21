@@ -1,12 +1,11 @@
 import SectionDivider from "@/components/common/SectionDivider";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { ADMISSION_PROCESS_STEPS } from "@/features/admission/admissions";
 import {
     AdmissionCardDesktop,
     AdmissionCardMobile,
 } from "@/presentation/programs/components";
+import HeroFormModal from "@/presentation/programs/components/HeroFormModal";
 
 const AdmissionProcessSection = () => {
     return (
@@ -54,17 +53,14 @@ const AdmissionProcessSection = () => {
                     </div>
                 </div>
 
-                {/* Centered Enroll Now Button matching Screenshot 2 & single program page */}
+                {/* Centered Enroll Now Button (Opens Form Modal) */}
                 <div className="flex items-center justify-center mt-8 md:mt-12">
-                    <Link
-                        href="https://admissions.krmangalam.edu.in/?utm_source=website&utm_medium=admissions_page&utm_campaign=admission_process"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-fit flex items-center justify-center gap-2 h-[45px] rounded-[3px] font-medium transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide px-8 bg-[#CB000D] text-white hover:bg-[#CB000D]/90 shadow-lg shadow-[#CB000D]/20 cursor-pointer"
-                    >
-                        <span>ENROLL NOW</span>
-                        <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    <HeroFormModal
+                        formId="bc75880ade367265cef841c19ef47621"
+                        buttonText="ENROLL NOW"
+                        buttonClassName="w-fit flex items-center justify-center gap-2 h-[45px] rounded-[3px] font-medium transition-all duration-300 ease-in-out uppercase text-[14px] md:text-[15px] leading-none tracking-wide px-8 bg-[#CB000D] text-white hover:bg-[#CB000D]/90 shadow-lg shadow-[#CB000D]/20 cursor-pointer"
+                        showIcon={true}
+                    />
                 </div>
             </div>
             <div className="mt-8 md:mt-12">

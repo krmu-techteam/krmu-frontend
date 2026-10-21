@@ -66,7 +66,7 @@ export const sdg2Data: SdgDetailPageData = {
             url: "https://www.krmangalam.edu.in/pdfs/sdg/goal2/Food-and-Nutrition-Policy.pdf",
         },
         {
-            text: "Mou with piggery farm and Gao Shala",
+            text: "Mou with piggery farm and Gau Shala",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/goal2/Mou-with-piggery-farm-and-Gao-Shala.pdf",
         },
     ],

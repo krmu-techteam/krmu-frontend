@@ -1,7 +1,5 @@
-import NpfPopup from "@/app/(main-website)/components/NpfPopup";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import HeroFormModal from "@/presentation/programs/components/HeroFormModal";
 
 const HeroSection = () => {
     const formId = "bc75880ade367265cef841c19ef47621";
@@ -23,29 +21,14 @@ const HeroSection = () => {
                         you on your successful journey
                     </p>
 
-                    {/* Desktop/Tablet CTA Button */}
-                    {formId && (
-                        <div className="hidden sm:block">
-                            <NpfPopup
-                                formId={formId}
-                                btnClass={`bg-[#e61f21] rounded-[3px] border border-white/10 py-2.5 px-8 w-fit text-white text-[17px] font-medium shadow-2xl active:scale-95 font-poppins npfWidget-bc75880ade367265cef841c19ef47621`}
-                                btnText="Apply Now"
-                                showIcon={true}
-                            />
-                        </div>
-                    )}
-
-                    {/* Mobile CTA Button */}
-                    <div className="sm:hidden w-full flex justify-center">
-                        <Link
-                            href="https://admissions.krmangalam.edu.in/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-[#e61f21] rounded-sm font-poppins border border-white/10 py-2.5 px-6 flex items-center justify-center w-full max-w-[280px] text-white text-md font-medium gap-4 shadow-xl active:scale-95 transition-all duration-300"
-                        >
-                            Apply Now{" "}
-                            <ArrowRight color="#ffffff" className="w-5 h-5" />
-                        </Link>
+                    {/* CTA Button (Opens Form Modal on desktop and mobile) */}
+                    <div className="w-full flex justify-center lg:justify-start">
+                        <HeroFormModal
+                            formId={formId}
+                            buttonText="Apply Now"
+                            buttonClassName="bg-[#e61f21] rounded-[3px] border border-white/10 py-2.5 px-8 w-full sm:w-fit max-w-[280px] sm:max-w-none text-white text-[16px] sm:text-[17px] font-medium shadow-2xl active:scale-95 font-poppins flex items-center justify-center gap-2 transition-all duration-300"
+                            showIcon={true}
+                        />
                     </div>
                 </div>
 
