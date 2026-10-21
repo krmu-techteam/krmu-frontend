@@ -11,6 +11,7 @@ import "./(main-website)/globals.css";
 import Script from "next/script";
 import { WebVitals } from "@/components/common/WebVitals";
 import { ServerSpeedTracker } from "@/components/common/ServerSpeedTracker";
+import { NavigationLoader } from "@/components/common/NavigationLoader";
 
 export const metadata: Metadata = {
     title: "K.R. Mangalam University | Best University in Gurgaon, Delhi NCR",
@@ -70,6 +71,7 @@ export default function RootLayout({
                 </noscript>
                 <WebVitals />
                 <ServerSpeedTracker />
+                <NavigationLoader />
                 {children}
             </body>
         </html>

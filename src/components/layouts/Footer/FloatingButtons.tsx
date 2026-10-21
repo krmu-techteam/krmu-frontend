@@ -70,7 +70,7 @@ export default function FloatingButtons() {
                     className="!bg-[#e31e24] hover:!bg-[#c31a1e] !text-white w-[40px] h-[180px] min-w-[40px] max-w-[40px] p-0 box-border flex items-center justify-center transition-all duration-300 rounded-l-[2px] group relative cursor-pointer shrink-0 border-none outline-none overflow-hidden"
                     title="Apply Now"
                 >
-                    <span className="[writing-mode:vertical-lr] rotate-180 font-medium tracking-wide text-[13px] whitespace-nowrap leading-none flex items-center justify-center transition-all">
+                    <span className="[writing-mode:vertical-lr] font-medium tracking-wide text-[13px] whitespace-nowrap leading-none flex items-center justify-center transition-all">
                         Apply Now
                     </span>
                 </a>
