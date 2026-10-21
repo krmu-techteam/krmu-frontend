@@ -49,6 +49,10 @@ const PHD_HIGHLIGHT_IMAGES: Record<string, HighlightImageConfig> = {
         src: "/images/phd/highlights/phd-in-computer-science-and-engineering.webp",
         alt: "Ph.D. in Computer Science and Engineering Research Highlight",
     },
+    "phd-in-fine-arts": {
+        src: "/images/phd/highlights/phd-in-computer-science-and-engineering.webp",
+        alt: "Ph.D. in Computer Science and Engineering Research Highlight",
+    },
     "phd-cse": {
         src: "/images/phd/highlights/phd-in-computer-science-and-engineering.webp",
         alt: "Ph.D. in Computer Science and Engineering Research Highlight",
