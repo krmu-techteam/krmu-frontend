@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { FileText } from "lucide-react";
 import { SdgEventItem } from "./types";
 
 export interface SdgEventsSectionProps {
@@ -112,13 +113,22 @@ export const SdgEventsSection: React.FC<SdgEventsSectionProps> = ({
                         >
                             {/* Image Box */}
                             <div className="relative w-full h-[245px] overflow-hidden bg-[#0a1824] shrink-0">
-                                <Image
-                                    src={item.image}
-                                    alt={item.title}
-                                    fill
-                                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
-                                />
+                                {item.image ? (
+                                    <Image
+                                        src={item.image}
+                                        alt={item.title}
+                                        fill
+                                        className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
+                                    />
+                                ) : (
+                                    <div className="w-full h-full flex flex-col items-center justify-center gap-2.5 bg-gradient-to-b from-[#0a1824] to-[#173452]/40 p-4 text-center">
+                                        <FileText className="w-12 h-12 text-[#E7C268]/70 group-hover:scale-110 transition-transform duration-300" />
+                                        <span className="text-xs text-gray-400 font-poppins">
+                                            View PDF Report
+                                        </span>
+                                    </div>
+                                )}
                             </div>
 
                             {/* Title Bar */}
