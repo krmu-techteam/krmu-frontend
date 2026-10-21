@@ -107,7 +107,7 @@ export const sdg11Data: SdgDetailPageData = {
         {
             id: "event-11-2024-10",
             title: "Visit to Akshardham: Field Project Report on Akshardham as a Sociocultural Icon Exploring Its Impact on Society through the Lens of Social Sciences",
-            image: "/images/sustainability/goal11/visit-to-akshardham-field-project-report-on-akshardham-as-a-sociocultural-icon-exploring-its-impact-on-society-through-the-lens-of-social-sciences.jpeg",
+            image: "/images/sustainability/goal11/visit-to-akshardham-field-project-report-on-akshardham-as-a-sociocultural-icon-exploring-its-impact-on-society-through-the-lens-of-social-sciences.png",
             pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-11/Visit-to-Akshardham-Field-Project-Report-on-Akshardham-as-a-Sociocultural-Icon-Exploring-Its-Impact-on-Society-through-the-Lens-of-Social-Sciences.pdf",
         },
     ],

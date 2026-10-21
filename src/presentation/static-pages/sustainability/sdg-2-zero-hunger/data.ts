@@ -65,6 +65,10 @@ export const sdg2Data: SdgDetailPageData = {
             text: "Food and Nutrition Policy",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/goal2/Food-and-Nutrition-Policy.pdf",
         },
+        {
+            text: "Mou with piggery farm and Gao Shala",
+            url: "https://www.krmangalam.edu.in/pdfs/sdg/goal2/Mou-with-piggery-farm-and-Gao-Shala.pdf",
+        },
     ],
     goalTileImage: "/images/sustainability/goals/g2.jpg",
     sdgReportText: "SDG Report 2023-24",
