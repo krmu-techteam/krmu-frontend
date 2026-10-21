@@ -5,10 +5,10 @@ import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const heroSlides = [
-    {
-        src: "/images/programme/hero/program-hero-banner.png",
-        alt: "K.R. Mangalam University Academic Programmes",
-    },
+    // {
+    //     src: "/images/programme/hero/program-hero-banner.png",
+    //     alt: "K.R. Mangalam University Academic Programmes",
+    // },
     {
         src: "/images/programme/hero/program-hero-banner-1.jpg",
         alt: "KRMU Students - Management & Commerce Programmes",
