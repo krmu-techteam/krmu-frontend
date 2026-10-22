@@ -212,7 +212,7 @@ const UGPGSection = () => {
                     {/* Undergraduate Tab Content */}
                     <TabsContent value="undergraduate">
                         <h3 className="text-2xl sm:text-4xl font-poppins lg:text-[40px] font-bold text-black text-center mt-12 mb-10">
-                            Under Graduate (UG) Programme
+                            Undergraduate (UG) Programme
                         </h3>
 
                         <Accordion
@@ -383,7 +383,7 @@ const UGPGSection = () => {
                     <TabsContent value="postgraduate">
                         <h3 className="text-2xl sm:text-4xl lg:text-[40px] font-bold text-black text-center mt-12 mb-10 font-poppins">
                             {" "}
-                            Post Graduate (PG) Programmes
+                            Postgraduate (PG) Programmes
                         </h3>
                         <Accordion
                             type="multiple"

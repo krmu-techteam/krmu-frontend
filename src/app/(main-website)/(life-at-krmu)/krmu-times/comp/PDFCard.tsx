@@ -27,7 +27,6 @@ const PDFCard = ({ pdfData }: Props) => {
                     rel="noopener noreferrer"
                 >
                     <span>Download PDF</span>
-                    <span>Download PDF</span>
                 </Link>
             </div>
         </div>

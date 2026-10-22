@@ -62,13 +62,13 @@ const HeroSection = () => {
                 </div>
 
                 {/* Text Content (Text on BOTTOM for tablet & mobile, LEFT for desktop) */}
-                <div className="w-full xl:w-[42%] 2xl:w-[40%] pt-2 xl:pt-0 pb-2 sm:pb-4 xl:pb-10 text-white z-10 shrink-0 order-2 xl:order-1 flex flex-col items-center xl:items-start text-center xl:text-left">
+                <div className="w-full xl:w-[42%] 2xl:w-[42%] pt-2 xl:pt-0 pb-2 sm:pb-4 xl:pb-10 text-white z-10 shrink-0 order-2 xl:order-1 flex flex-col items-center xl:items-start text-center xl:text-left">
                     <h1 className="flex flex-col text-white font-inter items-center xl:items-start">
-                        <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[47px] font-light tracking-wide leading-tight">
-                            Scholarship
+                        <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[30px] font-light tracking-wide leading-tight">
+                            Scholarship for the Session
                         </span>
-                        <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[84px] xl:text-[150px] font-black tracking-tight leading-[0.9] my-1 sm:my-2">
-                            2027
+                        <span className="text-5xl sm:text-6xl md:text-7xl lg:text-[110px] font-black tracking-tight leading-[0.9] my-1 sm:my-2">
+                            2027-28
                         </span>
                         <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[47px] !font-extralight tracking-wide leading-tight">
                             Intake
