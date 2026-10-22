@@ -12,7 +12,8 @@ const nextConfig: NextConfig = {
     },
     allowedDevOrigins: ["*.trycloudflare.com", "*.loca.lt"],
     experimental: {
-        cpus: 2,
+        cpus: 1,
+        webpackMemoryOptimizations: true,
         optimizePackageImports: [
             "lucide-react",
             "react-icons",
