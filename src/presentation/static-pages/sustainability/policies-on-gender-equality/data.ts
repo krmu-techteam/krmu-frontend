@@ -8,6 +8,11 @@ export const policiesOnGenderEqualityData: PolicyPageData = {
     backLink: "/sdg-5-gender-equality",
     policies: [
         {
+            id: "policy-4",
+            title: "POLICY FOR GENDER EQUITY AND SENSITIVITY",
+            url: "https://www.krmangalam.edu.in/pdfs/sdg/goal-5/POLICY-FOR-GENDER-EQUITY-AND-SENSITIVITY.pdf",
+        },
+        {
             id: "policy-1",
             title: "Anti Discrimination Policy of K.R. Mangalam University",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/policy-on-gender-equality/anti-discrimination-policy-of-kr-mangalam-university.pdf",
