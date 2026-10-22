@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@layer utilities {
+   .flash-border {
+    border: 1px solid red;
+    border-radius: 15px;
+  }
+  .npf_wgts iframe {
+    box-shadow: none !important;
+  }
+
+  .heroBannerForm__form {
+    background: #fff;
+    width: 100%;
+    border-radius: 10px;
+    padding-top: 40px;
+    height: 583px;
+    position: relative;
+  }
+
+  .heroBannerForm-header {
+    text-align: center;
+    font-family: "Poppins", sans-serif !important;
+  }
+
+  .heroBannerForm-header h3 {
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .heroBannerForm-header h3 span {
+    display: block;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 1.1;
+    margin-top: 5px;
+  }
+  .phdForm {
+    width: 100% !important;
+  }
+
+  .phd-bg-overlay {
+    position: relative;
+  }
+
+  .phd-bg-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .phdtestcard:nth-child(even) {
+    border-color: #e30016;
+  }
+  .phdtestcard:nth-child(odd) {
+    border-color: #005da9;
+  }
+
+  .custom-border {
+    background: #ff1515;
+    height: 5px;
+    width: 84px;
+    border-radius: 50px;
+  }
+
+  .whyphdHeading {
+    /* padding: 40px 0px; */
+    position: relative;
+  }
+
+  .whyphdHeading .faded-text {
+    position: absolute;
+    left: 50%;
+    top: -12px;
+    transform: translateX(-50%);
+    font-size: 40px;
+    /* top: 0; */
+  }
+
+  @media (max-width: 640px) {
+    .whyphdHeading .faded-text {
+      font-size: 30px;
+    }
+  }
+
+  .achive-trans-bg {
+    background: linear-gradient(90deg, #c4e1f3 0%, #82c7ff 100%);
+    opacity: 0.78;
+    border-radius: 15px;
+  }
+
+  .phdwhatbtn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  .phdwhatbtn svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}

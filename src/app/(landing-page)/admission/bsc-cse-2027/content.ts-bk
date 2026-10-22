@@ -1,0 +1,476 @@
+import {
+  ApplySectionData,
+  BusinessHubSection,
+  ComeToLifeSection,
+  CounterItem,
+  FAQSectionData,
+  HeroContent,
+  HeroMarqueeSection,
+  IndustryExpertsSection,
+  LifeAsPhDScholarSection,
+  OpportunitySection,
+  ProminentRecruit,
+  ScholarResearchImpactSection,
+  SpecialisationSection,
+  TestimonialsSection,
+  WhyKRMSection,
+} from "./contentype";
+
+// Usage types
+export const Hero: HeroContent = {
+  title: `
+      ADMISSIONS <br />
+      OPEN FOR <br />
+      <span class="text-[#fcd404] text-2xl sm:text-3xl md:text-5xl lg:text-8xl font-bold">
+      B.Sc.-CSE 
+      </span>
+      <br />
+      PROGRAMMES 2026-2027
+    `,
+  desc: `Begin Your Journey into the World of Technology`,
+  heroBg: "/landingpage/bsc-cse-2026/hero-image/bse-cse.webp",
+  // middleImg: "/landingpage/law-2026/law.webp",
+  middleImg: "",
+};
+
+export const heroMarqueeData: HeroMarqueeSection = {
+  messages: [
+         "₹56.6 LPA Highest Package",
+    "₹27 Cr Scholarships",
+    "800+ Recruiters",
+    "18K+ Alumni",
+    "92% Placement Record",
+    "100% Sponsored International Study Tour",
+    "700+ Educators",
+    "100+ UG & PG Programmes",
+    "12K+ Students",
+    "28+ Acres Campus",
+  ],
+  bgColor: "#e31e24",
+  speedClass: "animate-marquee",
+};
+
+export const Counters: CounterItem[] = [
+  {
+    title: "92%",
+    subtitle: "Placement Record",
+  },
+  {
+    title: "800+",
+    subtitle: "Recruiters",
+  },
+  {
+    title: "Up To ₹27 Cr",
+    subtitle: "Worth of Scholarships",
+  },
+  {
+    title: "56.6 LPA",
+    subtitle: "Highest Package",
+  },
+];
+
+// Recruiters list
+export const prominentRecruiters: ProminentRecruit[] = [
+  {
+    imgUrl: "/landingpage/bsc-cse-2026/recruiters/mahindra.png",
+    alt: "Recruiter Logo",
+  },
+  {
+    imgUrl: "/landingpage/bsc-cse-2026/recruiters/accen.png",
+    alt: "Recruiter Logo",
+  },
+  {
+    imgUrl: "/landingpage/bsc-cse-2026/recruiters/wipro.png",
+    alt: "Recruiter Logo",
+  },
+  {
+    imgUrl: "/landingpage/bsc-cse-2026/recruiters/airtel.png",
+    alt: "Recruiter Logo",
+  },
+  {
+    imgUrl: "/landingpage/bsc-cse-2026/recruiters/samsung.svg",
+    alt: "Recruiter Logo",
+  },
+  {
+    imgUrl: "/landingpage/bsc-cse-2026/recruiters/tcslogo.png",
+    alt: "Recruiter Logo",
+  },
+];
+
+export const whyKRM: WhyKRMSection = {
+  heading: "Why Choose B.Sc.-CSE Programmes of KRMU? ",
+  subheading: "Step Into the Future of Computing",
+  content: `K.R. Mangalam University's B.Sc. Computer Science programs offer cutting-edge curriculum developed in partnership with industry professionals. Our NEP-compliant curricula provide students with practical, hands-on experience and global certifications to help them flourish in a fast changing technology field.`,
+  imgUrl: `/landingpage/common/whykrmtest.png`,
+  whyKrmCards: [
+    {
+      imgUrl: "/landingpage/common/dummy.png",
+      content: `NEP-Aligned Programme Structure`,
+    },
+    {
+      imgUrl: "/landingpage/common/dummy.png",
+      content: `Industry Collaboration with IBM`,
+    },
+    {
+      imgUrl: "/landingpage/common/dummy.png",
+      content: `Modern facilities include advanced computer labs and innovation centres.`,
+    },
+    {
+      imgUrl: "/landingpage/common/dummy.png",
+      content: `Faculty with a combination of academic and industrial experience`,
+    },
+  ],
+};
+
+export const industryExperts: IndustryExpertsSection = {
+  eyebrow: "",
+  heading: `Learn From <br /> Industry Experts`,
+  description: `KRMU collaborates with leading organisations to offer industry-driven training.`,
+  cta: {
+    label: "Apply for B.Sc. - CSE 2026",
+    href: "#",
+  },
+  cards: [
+    {
+      imgUrl:
+        "/landingpage/bsc-cse-2026/learn-from/Microsoft.webp",
+      alt: "Apple Logo",
+      title: "AI and Machine Learning Courses",
+    },
+    {
+      imgUrl:
+        "/landingpage/bsc-cse-2026/learn-from/ibm.png",
+      alt: "Apple Logo",
+      title: "AI and Machine Learning Courses",
+    },
+    {
+      imgUrl:
+        "/landingpage/bsc-cse-2026/learn-from/imaginxp.svg",
+      alt: "Apple Logo",
+      title: "AI and Machine Learning Courses",
+    },
+    {
+      imgUrl:
+        "/landingpage/bsc-cse-2026/learn-from/eccoun.jpg",
+      alt: "Apple Logo",
+      title: "AI and Machine Learning Courses",
+    },
+  ],
+  bannerImg: "/wp-content/landingpage/common/indus-exp.webp",
+};
+
+export const specialisationData: SpecialisationSection = {
+  subheading: `Choose from KRMU's B.Sc. (UG) programmes to begin creating your career in the information technology sector.`,
+  heading: `Our B.Sc. - CSE  Programmes`,
+  SpecialisationCard: [
+    {
+      imgUrl: "/landingpage/common/dummy.png",
+      title: `B.Sc. (Hons.) Computer Science (with Academic Support of IBM)`,
+      desc: `B.Sc. (Hons.) Computer Science (with academic support of IBM) equips students with industry-relevant skills in Cloud Computing, Artificial Intelligence, and Software Development, combining strong computer science fundamentals with hands-on, technology-driven learning for future-ready tech careers.`,
+      extraInfos: [
+        {
+          iconUrl: "/landingpage/common/move-right.svg",
+          title: "Duration:",
+          desc: `3 Years (NEP-compliant)`,
+        },
+        {
+          iconUrl: "/landingpage/common/move-right.svg",
+          title: "Eligibility",
+          desc: `10+2 in any stream with Mathematics, Statistics, Computer, or Information Science with at least 50% marks.`,
+        },
+        {
+          iconUrl: "/landingpage/common/move-right.svg",
+          title: "Annual Fee",
+          desc: `Rs. 1,35,000`,
+        },
+      ],
+    },
+    {
+      imgUrl: "/landingpage/common/dummy.png",
+      title: `B.Sc. (Hons.) Cyber Security`,
+      desc: `B.Sc. (Hons.) Cyber Security at K.R. Mangalam University is designed to prepare students for the evolving digital threat landscape, with a strong focus on ethical hacking, network security, and cyber law, combining technical expertise with practical training for secure and responsible cyber practices.`,
+      extraInfos: [
+        {
+          iconUrl: "/landingpage/common/move-right.svg",
+          title: "Duration:",
+          desc: `3 Years (NEP-compliant)`,
+        },
+        {
+          iconUrl: "/landingpage/common/move-right.svg",
+          title: "Eligibility",
+          desc: `10+2 in any stream with Mathematics, Statistics, Computer, or Information Science with at least 50% marks.`,
+        },
+        {
+          iconUrl: "/landingpage/common/move-right.svg",
+          title: "Annual Fee",
+          desc: `Rs. 1,35,000`,
+        },
+      ],
+    },
+    {
+      imgUrl: "/landingpage/common/dummy.png",
+      title: `B.Sc. (Hons.) Data Science`,
+      desc: `B.Sc. (Hons.) Data Science at K.R. Mangalam University equips students with in-demand skills in big data analytics, machine learning, and predictive modeling, combining strong analytical foundations with hands-on training to turn data into actionable insights for data-driven decision-making.
+`,
+      extraInfos: [
+        {
+          iconUrl: "/landingpage/common/move-right.svg",
+          title: "Duration:",
+          desc: `3 Years (NEP-compliant)`,
+        },
+        {
+          iconUrl: "/landingpage/common/move-right.svg",
+          title: "Eligibility",
+          desc: `10+2 in any stream with Mathematics, Statistics, Computer, or Information Science with at least 50% marks.`,
+        },
+        {
+          iconUrl: "/landingpage/common/move-right.svg",
+          title: "Annual Fee",
+          desc: `Rs. 1,35,000`,
+        },
+      ],
+    },
+  ],
+};
+
+export const opportunityData: OpportunitySection = {
+  image: {
+    src: "/landingpage/common/test2.png",
+    alt: "Industry Expert",
+    width: 300,
+    height: 400,
+  },
+  heading: "Learn From Industry Experts",
+  highlight: "Opportunity That Transforms",
+  cta: {
+    label: "Apply for B.Sc. - CSE 2026-2027",
+    href: "#",
+  },
+};
+
+export const testimonialsData: TestimonialsSection = {
+  subheading: "Our Testimonials",
+  heading: `Why do Aspirants Prefer KRMU?`,
+  testimonials: [
+    {
+      image: "/landingpage/common/dummy.png",
+      videoUrl: "#",
+      quote: `My time at K.R. Mangalam University were full of learning something useful every 
+day that I can carry forward through my life. I highly appreciate the efforts of my 
+faculty members for being so kind and helping me with my doubts and giving me 
+proper career guidance. The facilities provided really helped me fully enjoy my days.`,
+      name: "Daksh Mehta",
+      programme: "",
+    },
+    {
+      image: "/landingpage/common/dummy.png",
+      videoUrl: "#",
+      quote: `I would like to extend my gratitude to the Training and Placement Cell of K.R. 
+Mangalam University for their continued efforts in providing ample amount of 
+chances to students. I am grateful to each mentor who guided me to develop my 
+academic and interpersonal skills. Choosing K.R. Mangalam University was a great 
+decision that helped me to pursue my dream.`,
+      name: "Abhinav Anand",
+      programme: "",
+    },
+    {
+      image: "/landingpage/common/dummy.png",
+      videoUrl: "#",
+      quote: `Choosing K.R. Mangalam University for CSE programme was one of the best decisions 
+I've ever made. The university's rigorous curriculum and industry-relevant training 
+have equipped me with the tools necessary to excel in the tech world. I am proud 
+to share that I am working with Debcor Engineering Pvt Ltd, earning a competitive 
+salary of 17.4 LPA. The foundation I built at K.R. Mangalam has been key to my career 
+advancement.
+`,
+      name: "Darshit Raghav",
+      programme: "",
+    },
+    {
+      image: "/landingpage/common/dummy.png",
+      videoUrl: "#",
+      quote: `K.R. Mangalam University was a transformative journey for me. The exceptional 
+education and hands-on experience I received in Computer Science Engineering have 
+been instrumental in shaping my career. I am currently thriving as a professional at 
+Nirmata Technologies India Private Ltd, with an impressive package of 20 LPA. The 
+skills and knowledge I gained at K.R. Mangalam have been pivotal in achieving this 
+success.
+`,
+      name: "Abhinav Sinha",
+      programme: "",
+    },
+  ],
+};
+
+export const scholarResearchImpactData: ScholarResearchImpactSection = {
+  heading: "Our Scholars’ Research Impact",
+  description:
+    "PhD candidates trust peer experiences more than institutional marketing. Real stories address fear of isolation, funding concerns, and career uncertainty.",
+  slides: [
+    {
+      image: "/landingpage/common/image.png",
+      alt: "Research Impact 1",
+    },
+    {
+      image: "/landingpage/common/image.png",
+      alt: "Research Impact 2",
+    },
+    {
+      image: "/landingpage/common/image.png",
+      alt: "Research Impact 3",
+    },
+    {
+      image: "/landingpage/common/image.png",
+      alt: "Research Impact 4",
+    },
+    {
+      image: "/landingpage/common/image.png",
+      alt: "Research Impact 5",
+    },
+  ],
+  testimonials: [
+    {
+      id: 1,
+      name: "Rahul Khanna",
+      role: "PhD Journalism & Mass Communication",
+      image: "/landingpage/common/dummy.png",
+      quote:
+        "My research at K.R. Mangalam University on social media's influence in modern society has been incredibly fulfilling. The mentorship and focus on real-world change truly set this programme apart.",
+    },
+    {
+      id: 2,
+      name: "Prerna Singh",
+      role: "PhD Scholar",
+      image: "/testimonials/prerna.jpg",
+      quote:
+        "The encouragement and diverse opportunities I received throughout my PhD at KRMU were beyond my expectations.",
+    },
+    {
+      id: 3,
+      name: "Rajeev Kumar",
+      role: "PhD Graduate",
+      image: "/testimonials/rajeev.jpg",
+      quote:
+        "KRMU's expert faculty guidance pushed me to achieve much more than I believed possible.",
+    },
+  ],
+};
+
+export const comeToLifeData: ComeToLifeSection = {
+  heading: `World-Class Facilities at KRMU for B.Sc. - CSE`,
+  description: `K.R. Mangalam University provides a state-of-the-art campus environment that supports academic excellence and practical learning for B.Sc. - CSE students. The university features modern classrooms equipped with smart technology and high-speed Wi-Fi, creating an engaging and interactive learning atmosphere. Students have access to well-equipped computer and programming labs with advanced systems and software tools essential for hands-on coding, development, and experimentation. The central library offers a rich collection of books, journals, and digital resources to support research and study. Additionally, the campus includes dedicated seminar halls, collaboration spaces, and innovation hubs that foster creativity and peer learning. Beyond academics, KRMU provides secure hostels, recreational facilities, sports infrastructure, and 24×7 connectivity, ensuring a balanced and enriching student experience.`,
+  footerText: ``,
+  cta: {
+    label: "Apply for B.Sc. - CSE 2026-2027 ",
+    href: "#",
+  },
+  slides: [
+    {
+      image: "/landingpage/common/image.png",
+      alt: "World Class Lab",
+    },
+    {
+      image: "/landingpage/common/image.png",
+      alt: "Research Facility",
+    },
+    {
+      image: "/landingpage/common/image.png",
+      alt: "Innovation Center",
+    },
+    {
+      image: "/landingpage/common/image.png",
+      alt: "Library & Resources",
+    },
+    {
+      image: "/landingpage/common/image.png",
+      alt: "Campus Infrastructure",
+    },
+  ],
+};
+
+export const lifeAsPhDScholarData: LifeAsPhDScholarSection = {
+  heading: "Life as a B.Sc. - CSE Student at KRMU",
+  description: "",
+  image: {
+    src: "/landingpage/common/test44.jpeg",
+    alt: "Life as a PhD Scholar at K.R. Mangalam",
+  },
+  facilities: [
+    // { id: 1, title: "24/7 security and medical facilities" },
+    // { id: 2, title: "Sports and recreation centers" },
+    // { id: 3, title: "Cafeteria and food courts" },
+    // { id: 4, title: "Peer mentorship programs" },
+    // { id: 5, title: "PhD scholar association activities" },
+  ],
+  additionalFacilities: [
+    // { id: 6, title: "Cafeteria and food courts" },
+    // { id: 7, title: "Peer mentorship programs" },
+    // { id: 8, title: "PhD scholar association activities" },
+    // { id: 9, title: "Transportation connectivity" },
+  ],
+};
+
+export const faqSectionData: FAQSectionData = {
+  eyebrow: "(FAQs)",
+  heading: "Frequently Asked Questions",
+  description: "",
+  faqs: [
+    {
+      id: "item-1",
+      question:
+        "What are the benefits of enrolling in a B.Sc. Computer Science program that complies with NEP?",
+      answer: `NEP-compliant programs provide a customised educational experience by providing different departure alternatives, transdisciplinary learning, and flexibility in duration.
+`,
+    },
+    {
+      id: "item-2",
+      question: "Are IBM's certifications accepted around the world?",
+      answer: `Indeed, IBM certifications improve your employment opportunities in foreign markets and are accepted globally.`,
+    },
+    {
+      id: "item-3",
+      question:
+        "What kinds of internships will the programme get me access to?",
+      answer: `Leading IT firms, industry partners like IBM, and startups in cutting-edge disciplines like AI, cybersecurity, and data science will all offer internship opportunities.`,
+    },
+  ],
+};
+
+export const businessHubData: BusinessHubSection = {
+  heading: `Learn at One of India’s Biggest <br /> Business Hubs, Gurugram`,
+  description:
+    "Launch your career with future-ready specialisations, industry-aligned curriculum, and hands-on project learning at our modern Gurugram campus.",
+  highlights: [
+    { text: "UGC Approved University" },
+    { text: "NAAC A+ Accredited" },
+    { text: "175+ PhDs Awarded" },
+    { text: "₹60,000 Annual Fellowship" },
+  ],
+  mapImage: {
+    src: "/landingpage/common/map.webp",
+    alt: "Campus Location Map",
+    width: 520,
+    height: 300,
+  },
+  formNote: `No charges for enquiry. <br /> We will contact you within 24–48 hours.`,
+  formImage: {
+    src: "/landing/hero-form.png",
+    alt: "Admission Form",
+    width: 480,
+    height: 640,
+  },
+};
+
+export const applySectionData: ApplySectionData = {
+  heading: `Begin Your Journey at K.R. Mangalam<br /> University Now`,
+  description: "",
+  cta: {
+    label: "Apply for B.Sc. - CSE 2026-2027",
+    href: "#",
+  },
+  highlights: [
+    { id: 1, text: "UGC Approved University" },
+    { id: 2, text: "NAAC ‘A’ Accredited " },
+    { id: 3, text: "18K+ Alumni Base" },
+  ],
+};
