@@ -27,4 +27,5 @@ export * as PolicyOnReducedInequalities from "./policy-on-reduced-inequalities";
 export * as PolicyOnSustainableCitiesAndCommunities from "./policy-on-sustainable-cities-and-communities";
 export * as MouOnSustainableCitiesAndCommunities from "./mou-on-sustainable-cities-and-communities";
 export * as MouOnClimateAction from "./mou-on-climate-action";
+export * as MouOnLifeOnLand from "./mou-on-life-on-land";
 export * as FoodWasteReport from "./food-waste-report";
