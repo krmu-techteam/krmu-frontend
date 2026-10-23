@@ -13,6 +13,7 @@ const HIDE_CATEGORIES: string[] = [
   "travel-and-tourism",
   "education",
   "uncategorized",
+  "hotel-management-and-catering-technology",
   // Add more slugs you want to hide...
 ];
 
@@ -20,7 +21,10 @@ const CommonBlogSidebar = async () => {
   const allCategories = await getBlogService().getAllBlogCategories();
 
   const filteredCategories = (allCategories || []).filter(
-    (cat) => cat?.name && !HIDE_CATEGORIES.includes(cat?.slug.toLowerCase())
+    (cat) =>
+      cat?.name &&
+      !HIDE_CATEGORIES.includes(cat?.slug?.toLowerCase()) &&
+      !cat?.name?.toLowerCase().includes("hotel management")
   );
 
   return (

@@ -5,7 +5,10 @@ import Image from "next/image";
 const SingleBlogCategorySidebar = async () => {
     const allCategories = await getBlogService().getAllBlogCategories();
 
-    const HIDE_CATEGORIES: string[] = ["uncategorized"];
+    const HIDE_CATEGORIES: string[] = [
+        "uncategorized",
+        "hotel-management-and-catering-technology",
+    ];
 
     return (
         <aside className="w-full flex flex-col gap-6 font-poppins h-full">
@@ -22,8 +25,11 @@ const SingleBlogCategorySidebar = async () => {
                                 (cat) =>
                                     cat?.name &&
                                     !HIDE_CATEGORIES.includes(
-                                        cat?.slug.toLowerCase()
-                                    )
+                                        cat?.slug?.toLowerCase()
+                                    ) &&
+                                    !cat?.name
+                                        ?.toLowerCase()
+                                        .includes("hotel management")
                             )
                             .map((cat, i) => (
                                 <Link

@@ -11,7 +11,10 @@ type Props = {
     children: ReactNode;
 };
 
-const HIDE_CATEGORIES: string[] = ["uncategorized"];
+const HIDE_CATEGORIES: string[] = [
+    "uncategorized",
+    "hotel-management-and-catering-technology",
+];
 
 const layout = async ({ children }: Props) => {
     const [allCategories, initialData] = await Promise.all([
@@ -22,7 +25,9 @@ const layout = async ({ children }: Props) => {
     const categories = (allCategories || [])
         .filter(
             (cat) =>
-                cat?.name && !HIDE_CATEGORIES.includes(cat?.slug.toLowerCase())
+                cat?.name &&
+                !HIDE_CATEGORIES.includes(cat?.slug?.toLowerCase()) &&
+                !cat?.name?.toLowerCase().includes("hotel management")
         )
         .map((cat, idx) => ({
             id: cat.id || idx,
