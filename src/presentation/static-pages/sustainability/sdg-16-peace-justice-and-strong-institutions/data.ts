@@ -308,7 +308,20 @@ export const sdg16Data: SdgDetailPageData = {
             image: "/images/sustainability/sdg-16/report child safety.jpg",
             pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-16/report-child-safety.pdf",
         },
+        {
+            id: "event-16-2024-34",
+            title: "Educational Visit to Rashtrapati Bhavan",
+            image: "/images/sustainability/sdg-16/rashtrapati-bhavan.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-16/Educational-Visit-to-Rashtrapati-Bhavan.pdf",
+        },
+        {
+            id: "event-16-2024-35",
+            title: "An Educational Visit to the Parliament of India",
+            image: "/images/sustainability/sdg-16/An-Educational-Visit-to-the-Parliament-of-India.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-16/An-Educational-Visit-to-the-Parliament-of-India.pdf",
+        },
     ],
+
     eventGroups: [
         {
             year: "2023 - 2024",
