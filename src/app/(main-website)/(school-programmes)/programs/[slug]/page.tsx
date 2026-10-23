@@ -310,9 +310,12 @@ const page = async ({ params }: Props) => {
                 {heroSection &&
                     (isMbaSlug ? (
                         <MbaHeroSection
-                            formId={heroSection?.formId}
+                            formId={
+                                heroSection?.formId || heroSection?.formField
+                            }
                             heroSection={heroSection}
                             brochureUrl={`https://www.krmangalam.edu.in/pdfs/${slug}.pdf`}
+                            slug={slug}
                             dataContent={
                                 slug === "mba-fintech"
                                     ? getContent()

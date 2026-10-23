@@ -143,7 +143,7 @@ export const sdg16Data: SdgDetailPageData = {
         {
             id: "event-16-2024-6",
             title: "EXPERT SESSION ON PROFESSIONAL ETHICS FOR FACULTIES SOLS",
-            image: "/images/sustainability/sdg-16/EXPERT SESSION ON PROFESSIONAL ETHICS FOR FACULTIES SOLS.jpeg",
+            image: "/images/sustainability/sdg-16/EXPERT SESSION ON PROFESSIONAL ETHICS FOR FACULTIES SOLS.avif",
             pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-16/EXPERT-SESSION-ON-PROFESSIONAL-ETHICS-FOR-FACULTIES-SOLS.pdf",
         },
         {

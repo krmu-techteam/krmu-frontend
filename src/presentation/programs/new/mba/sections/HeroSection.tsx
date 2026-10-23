@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import NpfPopup from "@/app/(main-website)/components/NpfPopup";
+import HeroFormModal from "@/presentation/programs/components/HeroFormModal";
 import CommonLeadPopup from "@/app/(main-website)/components/CommonLeadPopup";
 import { HeroPageContentType } from "../types/contentHero";
 import { HeroSection as HeroSectionType } from "@/lib/types/school-programme";
@@ -11,6 +11,7 @@ export interface HeroSectionProps {
     dataContent?: HeroPageContentType | null;
     heroSection: HeroSectionType;
     brochureUrl?: string;
+    slug?: string;
 }
 
 export const HeroSection = ({
@@ -18,6 +19,7 @@ export const HeroSection = ({
     dataContent,
     heroSection,
     brochureUrl,
+    slug,
 }: HeroSectionProps) => {
     const data = dataContent;
     if (!data || !data.hero) return null;
@@ -51,14 +53,18 @@ export const HeroSection = ({
 
                     {/* Buttons */}
                     <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-6">
-                        {formId && (
-                            <NpfPopup
-                                formId={formId}
-                                btnClass={`font-inter min-w-[143px] h-[47.69px] bg-[#CB000D] hover:bg-[#CB000D]/90 text-white font-medium text-[14px] leading-[21.7px] tracking-[0.7px] pt-[12.5px] pb-[13.19px] px-[32px] rounded-[2px] border border-[#DE0000] transition-all duration-300 text-center inline-flex items-center justify-center whitespace-nowrap cursor-pointer ${heroSection.herobtn?.buttonclass || ""}`}
-                                btnText={`${heroSection.herobtn?.buttontext || "Apply Now"}`}
-                                showIcon={false}
-                            />
-                        )}
+                        <HeroFormModal
+                            formId={
+                                formId ||
+                                heroSection?.formId ||
+                                heroSection?.formField ||
+                                "70d97092be6d93eed32d53d664e6b5b1"
+                            }
+                            slug={slug}
+                            buttonClassName={`font-inter min-w-[143px] h-[47.69px] bg-[#CB000D] hover:bg-[#CB000D]/90 text-white font-medium text-[14px] leading-[21.7px] tracking-[0.7px] pt-[12.5px] pb-[13.19px] px-[32px] rounded-[2px] border border-[#DE0000] transition-all duration-300 text-center inline-flex items-center justify-center whitespace-nowrap cursor-pointer ${heroSection.herobtn?.buttonclass || ""}`}
+                            buttonText={`${heroSection.herobtn?.buttontext || "Apply Now"}`}
+                            showIcon={false}
+                        />
                         {hero.button?.[1] && (
                             <CommonLeadPopup
                                 buttonText={hero.button[1].title}
