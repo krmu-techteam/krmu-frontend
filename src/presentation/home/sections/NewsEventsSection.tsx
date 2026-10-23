@@ -150,12 +150,12 @@ export async function NewsEventsSection({
                                                 </span>
                                             </p>
                                             <h4
-                                                className="text-white font-serif font-semibold text-[13.5px] sm:text-[14.5px] leading-[1.3] line-clamp-2 group-hover:text-brand-gold transition-colors mt-0.5"
+                                                className="text-white font-poppins font-semibold text-[13.5px] sm:text-[14.5px] leading-[1.3] line-clamp-2 group-hover:text-brand-gold transition-colors mt-0.5"
                                                 dangerouslySetInnerHTML={{
                                                     __html: item.title,
                                                 }}
                                             />
-                                            <p className="text-[#E5A831] text-[10.5px] sm:text-[11px] font-poppins font-medium mt-1.5 tracking-wide">
+                                            <p className="text-brand-gold text-[10.5px] sm:text-[11px] font-poppins font-medium mt-1.5 tracking-wide">
                                                 K.R. Mangalam University
                                             </p>
                                         </div>

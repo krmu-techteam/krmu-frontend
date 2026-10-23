@@ -42,7 +42,7 @@ export function VisitSection() {
                             {/* Schedule Visit */}
                             <Link
                                 href="/campus-tour"
-                                className="flex items-center gap-4 xl:gap-6 p-3 xl:p-5 rounded-[4px] border border-white/50 group max-w-[240px] xl:max-w-[280px] text-left h-[70px] text-white hover:bg-white/10 transition-colors"
+                                className="flex items-center gap-4 xl:gap-6 p-3 xl:p-5 rounded-[6px] border border-white/50 group max-w-[240px] xl:max-w-[280px] text-left h-[70px] text-white hover:bg-white/10 transition-colors"
                             >
                                 <div>
                                     <CalendarCheck className="text-[22px] xl:text-[26px]" />
@@ -76,7 +76,7 @@ export function VisitSection() {
 
                 {/* Right Column - Desktop Image Only */}
                 <div className="hidden lg:block lg:w-[55%] lg:h-auto relative">
-                    <div className="absolute inset-0 lg:rounded-l-[10px] overflow-hidden group">
+                    <div className="absolute inset-0 lg:rounded-l-[16px] overflow-hidden group">
                         <Image
                             src="/modules/home/visit/campus-visit.webp"
                             alt="KRMU Campus Facade"
