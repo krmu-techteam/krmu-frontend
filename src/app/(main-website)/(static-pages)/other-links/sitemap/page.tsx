@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import {
-    HeroSection,
-    SitemapContentSection,
-} from "@/presentation/static-pages/other-links/sitemap";
+import { SitemapContentSection } from "@/presentation/static-pages/other-links/sitemap";
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
@@ -36,7 +33,6 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
     return (
         <main className="min-h-screen">
-            <HeroSection />
             <SitemapContentSection />
         </main>
     );

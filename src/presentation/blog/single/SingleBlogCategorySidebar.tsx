@@ -8,6 +8,8 @@ const SingleBlogCategorySidebar = async () => {
     const HIDE_CATEGORIES: string[] = [
         "uncategorized",
         "hotel-management-and-catering-technology",
+        "school-of-management-and-commerce",
+        "school-of-management-commerce",
     ];
 
     return (

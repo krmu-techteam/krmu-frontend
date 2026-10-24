@@ -1,0 +1,49 @@
+{
+    "careerProspects": {
+        "badge": "CAREER PROSPECTS",
+        "title": "Build & Thrive in the Digital Drive",
+        "description": "MBA Digital Marketing equips you with industry-relevant skills and practical exposure to excel in high-demand digital marketing roles across diverse industries.",
+        "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/1112_0ac0a22e79.png",
+        "slides": [
+            {
+                "id": 1,
+                "items": [
+                    {
+                        "title": "Digital Marketing Strategist",
+                        "desc": "Plans and executes SEO, SEM, and content-led campaigns to drive engagement, traffic, and conversions."
+                    },
+                    {
+                        "title": "Data Analytics Expert",
+                        "desc": "Transforms marketing data into actionable insights that guide business growth and strategy."
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "items": [
+                    {
+                        "title": "Brand Manager",
+                        "desc": "Builds and manages brand identity through impactful marketing campaigns and positioning strategies."
+                    },
+                    {
+                        "title": "Social Media Manager",
+                        "desc": "Drives audience engagement and brand growth through strategic social media content and campaigns."
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "items": [
+                    {
+                        "title": "Performance Marketing Specialist",
+                        "desc": "Designs and optimises paid digital campaigns across Google, Meta, and other platforms to maximise ROI and conversions."
+                    },
+                    {
+                        "title": "Content & Growth Manager",
+                        "desc": "Creates compelling content strategies and growth-focused campaigns to increase reach, engagement, and brand visibility."
+                    }
+                ]
+            }
+        ]
+    }
+}

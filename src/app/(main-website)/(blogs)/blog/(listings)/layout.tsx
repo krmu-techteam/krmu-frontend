@@ -14,6 +14,8 @@ type Props = {
 const HIDE_CATEGORIES: string[] = [
     "uncategorized",
     "hotel-management-and-catering-technology",
+    "school-of-management-and-commerce",
+    "school-of-management-commerce",
 ];
 
 const layout = async ({ children }: Props) => {

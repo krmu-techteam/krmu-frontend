@@ -1,0 +1,49 @@
+{
+    "careerProspects": {
+        "badge": "CAREER PROSPECTS",
+        "title": "Lead Today. Shape Tomorrow.",
+        "description": "An MBA equips you with leadership, strategic thinking, and business skills to excel across multiple industries and drive organisational growth.",
+        "image": "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/Rectangle_1602_1bf41df812.jpg",
+        "slides": [
+            {
+                "id": 1,
+                "items": [
+                    {
+                        "title": "Business Manager",
+                        "desc": "Leads cross-functional teams, oversees business operations, and drives strategic initiatives to achieve organisational goals."
+                    },
+                    {
+                        "title": "Corporate Relations Manager",
+                        "desc": "Develops marketing strategies, builds brand presence, and drives customer acquisition through integrated campaigns."
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "items": [
+                    {
+                        "title": "Operations Manager",
+                        "desc": "Builds strategic partnerships, manages stakeholder relationships, and strengthens collaboration to support business growth."
+                    },
+                    {
+                        "title": "Financial Analyst",
+                        "desc": "Evaluates financial performance, prepares business insights, and supports strategic decision-making through data-driven analysis."
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "items": [
+                    {
+                        "title": "Human Resource Manager",
+                        "desc": "Manages talent acquisition, employee development, and workforce engagement to build high-performing organisations."
+                    },
+                    {
+                        "title": "Management Consultant",
+                        "desc": "Works with organisations to solve business challenges, improve performance, and develop strategies for sustainable growth."
+                    }
+                ]
+            }
+        ]
+    }
+}

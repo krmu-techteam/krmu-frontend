@@ -7,38 +7,39 @@ import { CategoryPills } from "@/presentation/blog";
 
 // ✔ SHOW ONLY these categories (by slug)
 const HIDE_CATEGORIES: string[] = [
-  "general",
-  "medical-and-allied-science",
-  "school-of-management-and-commerce",
-  "travel-and-tourism",
-  "education",
-  "uncategorized",
-  "hotel-management-and-catering-technology",
-  // Add more slugs you want to hide...
+    "general",
+    "medical-and-allied-science",
+    "school-of-management-and-commerce",
+    "travel-and-tourism",
+    "education",
+    "uncategorized",
+    "hotel-management-and-catering-technology",
+    "school-of-management-commerce",
+    // Add more slugs you want to hide...
 ];
 
 const CommonBlogSidebar = async () => {
-  const allCategories = await getBlogService().getAllBlogCategories();
+    const allCategories = await getBlogService().getAllBlogCategories();
 
-  const filteredCategories = (allCategories || []).filter(
-    (cat) =>
-      cat?.name &&
-      !HIDE_CATEGORIES.includes(cat?.slug?.toLowerCase()) &&
-      !cat?.name?.toLowerCase().includes("hotel management")
-  );
+    const filteredCategories = (allCategories || []).filter(
+        (cat) =>
+            cat?.name &&
+            !HIDE_CATEGORIES.includes(cat?.slug?.toLowerCase()) &&
+            !cat?.name?.toLowerCase().includes("hotel management")
+    );
 
-  return (
-    <aside className="w-full">
-      <CategoryPills
-        title="Categories"
-        categories={filteredCategories.map((cat, idx) => ({
-          id: cat.id || idx,
-          name: cat.name,
-          slug: cat.slug,
-        }))}
-      />
-    </aside>
-  );
+    return (
+        <aside className="w-full">
+            <CategoryPills
+                title="Categories"
+                categories={filteredCategories.map((cat, idx) => ({
+                    id: cat.id || idx,
+                    name: cat.name,
+                    slug: cat.slug,
+                }))}
+            />
+        </aside>
+    );
 };
 
 export default CommonBlogSidebar;

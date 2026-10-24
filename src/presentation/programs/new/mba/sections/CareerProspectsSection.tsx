@@ -16,7 +16,7 @@ export interface CareerProspectsSectionProps {
 }
 
 export const CareerProspectsSection = ({ slug }: CareerProspectsSectionProps) => {
-  const data = getCareerProspectsContent();
+  const data = getCareerProspectsContent(slug);
   const content = data.careerProspects;
 
   const [api, setApi] = useState<CarouselApi>();

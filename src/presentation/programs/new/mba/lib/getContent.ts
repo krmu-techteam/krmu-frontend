@@ -34,6 +34,8 @@ import { ExpectationsPageContentType } from "../types/contentExpectations";
 import ExpectationsContentData from "../data/fintech/expectationsContent.json";
 import { CareerProspectsPageContentType } from "../types/contentCareerProspects";
 import CareerProspectsContentData from "../data/fintech/careerProspectsContent.json";
+import ibmCareerProspectsContentData from "../data/ibm/careerProspectsContent.json";
+import digitalCareerProspectsContentData from "../data/digitalMarketing/careerProspectsContent.json";
 import { FeeFinancePageContentType } from "../types/contentFeeFinance";
 import FeeFinanceContentData from "../data/fintech/feeFinanceContent.json";
 import { HowToApplyPageContentType } from "../types/contentHowToApply";
@@ -120,8 +122,22 @@ export function getExpectationsContent(): ExpectationsPageContentType {
   return ExpectationsContentData as ExpectationsPageContentType;
 }
 
-export function getCareerProspectsContent(): CareerProspectsPageContentType {
+export function getCareerProspectsContent(slug?: string): CareerProspectsPageContentType {
+  if (slug === "mba-digital-marketing") {
+    return digitalCareerProspectsContentData as CareerProspectsPageContentType;
+  }
+  if (slug === "mba") {
+    return ibmCareerProspectsContentData as CareerProspectsPageContentType;
+  }
   return CareerProspectsContentData as CareerProspectsPageContentType;
+}
+
+export function getDigitalCareerProspectsContent(): CareerProspectsPageContentType {
+  return digitalCareerProspectsContentData as CareerProspectsPageContentType;
+}
+
+export function getIBMCareerProspectsContent(): CareerProspectsPageContentType {
+  return ibmCareerProspectsContentData as CareerProspectsPageContentType;
 }
 
 export function getFeeFinanceContent(): FeeFinancePageContentType {
