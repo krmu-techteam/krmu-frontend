@@ -80,13 +80,6 @@ const HeroSection = () => {
 
                     {/* Subtext */}
                     <div className="font-poppins text-xs sm:text-sm md:text-base xl:text-lg text-white">
-                        <p className="font-normal text-white">
-                            Only For First{" "}
-                            <span className="text-[#FFA800] font-semibold">
-                                100 students
-                            </span>
-                            ,
-                        </p>
                         <p className="font-bold text-white mt-1">
                             First Come First Served
                         </p>

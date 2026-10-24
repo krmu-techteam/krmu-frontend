@@ -35,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Page() {
     return (
-        <main className="min-h-screen bg-[#f8f8f8]">
+        <main className="min-h-screen">
             <HeroSection />
             <SitemapContentSection />
         </main>

@@ -122,21 +122,21 @@ const SitemapContentSection = () => {
                 <div className="mb-10 space-y-4">
                     {/* Search Bar */}
                     <div className="relative max-w-xl mx-auto md:mx-0">
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#061623] pointer-events-none" />
+                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30 pointer-events-none" />
                         <input
                             type="text"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Search sitemap links (e.g., B.Tech, MBA, Admission, Hostel)..."
-                            className="w-full pl-12 pr-10 py-3.5 bg-white border border-[#061623]/30 rounded-xl text-sm md:text-base text-[#061623] placeholder-slate-400 focus:outline-none focus:border-[#061623] focus:ring-2 focus:ring-[#061623]/20 shadow-xs transition-all"
+                            placeholder="Search site-wide"
+                            className="w-full pl-12 pr-10 py-3.5 bg-transparent border border-white/30 rounded-xl text-sm md:text-base text-white placeholder-white/60 focus:outline-none focus:border-white/50 transition-all"
                         />
                         {searchQuery && (
                             <button
                                 onClick={() => setSearchQuery("")}
-                                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#061623] p-1 rounded-full hover:bg-slate-100"
+                                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white p-1 rounded-full hover:bg-slate-100"
                                 aria-label="Clear search"
                             >
-                                <X className="w-4 h-4" />
+                                <X className="w-4 h-4 text-white" />
                             </button>
                         )}
                     </div>
@@ -144,7 +144,7 @@ const SitemapContentSection = () => {
                     {/* Category Quick-Jump Chips (only when not searching) */}
                     {!searchQuery && (
                         <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide pt-1">
-                            <span className="text-xs uppercase font-bold text-[#061623]/80 tracking-wider shrink-0 pr-1">
+                            <span className="text-xs uppercase font-bold text-white tracking-wider shrink-0 pr-1">
                                 Jump to:
                             </span>
                             {sitemapData.map((sec) => {
@@ -153,7 +153,7 @@ const SitemapContentSection = () => {
                                     <button
                                         key={sec.title}
                                         onClick={() => scrollToSection(id)}
-                                        className="shrink-0 px-4 py-1.5 rounded-full text-xs md:text-sm font-medium bg-white text-[#061623] hover:bg-[#061623] hover:text-white border border-[#061623]/30 hover:border-[#061623] shadow-2xs transition-all duration-150 active:scale-95"
+                                        className="shrink-0 px-4 py-1.5  text-xs md:text-sm font-medium bg-transparent border border-white/20 rounded-full text-[12px] md:text-[12px] text-white tracking-wide hover:bg-white/5  cursor-pointer hover:text-white  hover:border-white/20  transition-all duration-150 active:scale-95"
                                     >
                                         {sec.title}
                                     </button>
