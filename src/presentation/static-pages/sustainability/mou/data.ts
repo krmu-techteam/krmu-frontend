@@ -9,12 +9,12 @@ export const mouOnLifeBelowWaterData: PolicyPageData = {
     policies: [
         {
             id: "mou-1",
-            title: "MoU 118 on Life Below Water",
+            title: "National Mission for Clean Ganga",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/goal-14/mou-118.pdf",
         },
         {
             id: "mou-2",
-            title: "MoU 160 on Life Below Water",
+            title: "Insecticides (India) Limited (IIL)",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/goal-14/mou-160.pdf",
         },
     ],

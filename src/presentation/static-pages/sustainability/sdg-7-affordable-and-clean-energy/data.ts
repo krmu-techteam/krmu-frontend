@@ -173,6 +173,12 @@ export const sdg7Data: SdgDetailPageData = {
             image: "/images/sustainability/goal7/workshop-on-recycling-waste-and-conservation-of-water.jpeg",
             pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-7/Workshop-on-Recycling-Waste-and-Conservation-of-Water.pdf",
         },
+        {
+            id: "event-7-2024-12",
+            title: "International on Conference Innovative Technologies for Sustainable Business Transformation",
+            image: "/images/sustainability/goal7/International-on-Conference-Innovative-Technologies-for-Sustainable-Business-Transformation.jpg",
+            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-7/International-on-Conference-Innovative-Technologies-for-Sustainable-Business-Transformation.pdf",
+        },
     ],
     eventGroups: [
         {

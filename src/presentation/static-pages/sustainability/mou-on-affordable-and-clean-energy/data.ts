@@ -24,32 +24,32 @@ export const mouOnAffordableAndCleanEnergyData: PolicyPageData = {
         },
         {
             id: "mou-8",
-            title: "MoU 233",
+            title: "Vastav Intellect",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/goal-7/MoU-233.pdf",
         },
         {
             id: "mou-7",
-            title: "MoU 222",
+            title: "AIC STPINEXT INITIATIVES",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/goal-7/MoU-222.pdf",
         },
         {
             id: "mou-6",
-            title: "MoU 190",
+            title: "CSIR-National Physical Laboratory (CSIR-NPL)",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/goal-7/MoU-190.pdf",
         },
         {
             id: "mou-5",
-            title: "MoU 180",
+            title: "SHIVAJI COLLEGE (University of Delhi)",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/goal-7/MoU-180.pdf",
         },
         {
             id: "mou-4",
-            title: "MoU 170",
+            title: "Climate and Sustainability Initiative Pvt. Ltd.",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/goal-7/MoU-170.pdf",
         },
         {
             id: "mou-3",
-            title: "MoU 159",
+            title: "DESHBANDHU COLLEGE (University of Delhi)",
             url: "https://www.krmangalam.edu.in/pdfs/sdg/goal-7/MoU-159.pdf",
         },
         {
