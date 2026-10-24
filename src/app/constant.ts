@@ -11,3 +11,6 @@ export const origUrl = process.env.NEXT_PUBLIC_MAIN_URL || "";
 export const krmBlogURL = process.env.NEXT_PUBLIC_WORD_BLOG_URL || "";
 // export const krmBlogURL = `${KRMUWordUrl}/blog`;
 // exp ort const isLocal = STRAPI_URL.includes("localhost");
+
+export const DEFAULT_OG_IMAGE =
+  "https://truthful-cabbage-82fd27e8f6.media.strapiapp.com/fav_457c1acb7e.png";

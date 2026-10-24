@@ -14,6 +14,7 @@ import { ServerSpeedTracker } from "@/components/common/ServerSpeedTracker";
 import { NavigationLoader } from "@/components/common/NavigationLoader";
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://www.krmangalam.edu.in"),
     title: "K.R. Mangalam University | Best University in Gurgaon, Delhi NCR",
     description:
         "K.R. Mangalam University is a premier university in Delhi NCR offering industry-aligned UG, PG, and PhD programmes with world-class campus & top placements.",

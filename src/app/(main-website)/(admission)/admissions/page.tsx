@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { Suspense } from "react";
 import { folderRouteSEO } from "@/lib/api/siteseo";
-import { STRAPI_URL } from "@/app/constant";
+import { DEFAULT_OG_IMAGE, STRAPI_URL } from "@/app/constant";
 import {
     createBreadcrumbProgSchema,
     createProgFaqSchema,
@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
     const shareImageUrl = seo?.shareImg?.url
         ? `${STRAPI_URL}${seo?.shareImg?.url}`
-        : undefined;
+        : DEFAULT_OG_IMAGE;
 
     const title = seo?.title || "Admissions 2026 | K.R. Mangalam University";
     const description =
@@ -62,16 +62,15 @@ export async function generateMetadata(): Promise<Metadata> {
             description,
             url: canonical,
             siteName: "K.R. Mangalam University",
-            images: shareImageUrl
-                ? [
-                      {
-                          url: shareImageUrl,
-                          width: 1200,
-                          height: 630,
-                          alt: title,
-                      },
-                  ]
-                : [],
+            locale: "en_IN",
+            images: [
+                {
+                    url: shareImageUrl,
+                    width: 1200,
+                    height: 630,
+                    alt: title,
+                },
+            ],
             type: "website",
         },
 
@@ -80,7 +79,7 @@ export async function generateMetadata(): Promise<Metadata> {
             card: "summary_large_image",
             title,
             description,
-            images: shareImageUrl ? [shareImageUrl] : [],
+            images: [shareImageUrl],
         },
     };
 }

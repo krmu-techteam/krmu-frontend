@@ -3,35 +3,30 @@ import NoticeHero from "./comp/NoticeHero";
 import NoticePDF from "./comp/NoticePDF";
 import { Metadata } from "next";
 
-import { STRAPI_URL } from "@/app/constant";
+import { DEFAULT_OG_IMAGE, STRAPI_URL } from "@/app/constant";
 import { folderRouteSEO } from "@/lib/api/siteseo";
 
 export async function generateMetadata(): Promise<Metadata> {
   const seoData = await folderRouteSEO("notice");
-  const seo = seoData[0];
+  const seo = seoData?.[0];
 
+  const title = seo?.title || "University Notices | K.R. Mangalam University";
+  const description =
+    seo?.metaDescription ||
+    "View the latest official notices from K.R. Mangalam University, including academic updates, fee notices, and campus announcements.";
+  const canonical = seo?.canonicalUrl || "https://www.krmangalam.edu.in/notice";
   const shareImageUrl = seo?.shareImg?.url
     ? `${STRAPI_URL}${seo?.shareImg?.url}`
-    : undefined;
-
-  // ✅ Fallback if SEO is missing
-  if (!seo) {
-    return {
-      title: "K.R. Mangalam University",
-      description: "",
-      robots: {
-        index: true,
-        follow: true,
-      },
-    };
-  }
+    : DEFAULT_OG_IMAGE;
 
   return {
-    title: seo?.title || "K.R. Mangalam University",
-    description: seo?.metaDescription || "",
-    keywords: seo?.keyword || "",
+    title,
+    description,
+    keywords:
+      seo?.keyword ||
+      "Notice, K.R. Mangalam University, Circulars, Announcements",
     alternates: {
-      canonical: seo?.canonicalUrl || "",
+      canonical,
     },
     robots: {
       index: true,
@@ -40,29 +35,28 @@ export async function generateMetadata(): Promise<Metadata> {
 
     // ✅ Open Graph (Facebook, LinkedIn, WhatsApp)
     openGraph: {
-      title: seo?.title || "K.R. Mangalam University",
-      description: seo?.metaDescription || "",
-      url: seo?.canonicalUrl || "",
+      title,
+      description,
+      url: canonical,
       siteName: "K.R. Mangalam University",
-      images: shareImageUrl
-        ? [
-            {
-              url: shareImageUrl,
-              width: 1200,
-              height: 630,
-              alt: seo?.title || "K.R. Mangalam University",
-            },
-          ]
-        : [],
+      locale: "en_IN",
+      images: [
+        {
+          url: shareImageUrl,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
       type: "website",
     },
 
     // ✅ Twitter Card
     twitter: {
       card: "summary_large_image",
-      title: seo?.title || "K.R. Mangalam University",
-      description: seo?.metaDescription || "",
-      images: shareImageUrl ? [shareImageUrl] : [],
+      title,
+      description,
+      images: [shareImageUrl],
     },
   };
 }
