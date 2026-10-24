@@ -199,6 +199,14 @@ export const sdg17Data: SdgDetailPageData = {
             text: "MoU International",
             url: "https://www.krmangalam.edu.in/sdg-17-mou-international-partnerships-for-the-goals",
         },
+        {
+            text: "Conferences Organized in 2024-25",
+            url: "/conferences-organized-in-2024-25",
+        },
+        {
+            text: "FDPs Conducted in AY 2024-25",
+            url: "/fdps-conducted-in-ay-2024-25",
+        },
     ],
     goalTileImage:
         "https://www.krmangalam.edu.in/wp-content/uploads/2025/09/17.png",
@@ -206,141 +214,10 @@ export const sdg17Data: SdgDetailPageData = {
     sdgReportUrl:
         "https://www.krmangalam.edu.in/pdfs/sdg/sdg-annual-reports/2023-2024/SDG-17-2023-24.pdf",
     accentColor: "#1A486A",
-    year: "2024 - 2025",
-    eventsTitle: "Events And Activities",
-    events: [
-        {
-            id: "event-17-2024-1",
-            title: "Faculty Development Program on Building Excellence Strategies for Lifelong Learning and Continuous Professional Development in Enhancement of Quality Higher Education",
-            image: "/images/sustainability/sdg-17/faculty-development-program-on-building-excellence-strategies-for-lifelong-learning-and-continuous-professional-development-in-enhancement-of-quality-higher-education.jpeg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/Faculty-Development-Program-On-Building-Excellence-Strategies-for-Lifelong-Learning-and-Continuous-Professional-Development-in-Enhancement-of-Quality-Higher-Education.pdf",
-        },
-        {
-            id: "event-17-2024-2",
-            title: "Faculty Development Program on Enhancing Pedagogy and Research in Agricultural Sciences",
-            image: "/images/sustainability/sdg-17/faculty-development-program-on-enhancing-pedagogy-and-research-in-agricultural-sciences.jpeg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/Faculty-Development-Program-On-Enhancing-Pedagogy-and-Research-in-Agricultural-Sciences.pdf",
-        },
-        {
-            id: "event-17-2024-3",
-            title: "Faculty Development Program on Blockchain and Cyber Security",
-            image: "/images/sustainability/sdg-17/faculty-development-program-on-blockchain-and-cyber-security.jpeg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/Faculty-Development-Program-on-Blockchain-and-Cyber-Security.pdf",
-        },
-        {
-            id: "event-17-2024-4",
-            title: "Faculty Development Program on Empowering Educators through AR-VR",
-            image: "/images/sustainability/sdg-17/faculty-development-program-on-empowering-educators-through-ar-vr.jpg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/Faculty-Development-Program-on-Empowering-Educators-through-AR-VR.pdf",
-        },
-        {
-            id: "event-17-2024-5",
-            title: "Faculty Development Program on Enhancing Research Quality Qualitative Data Analysis and Insight in Social Science and Multidisciplinary Approaches",
-            image: "/images/sustainability/sdg-17/faculty-development-program-on-enhancing-research-quality-qualitative-data-analysis-and-insight-in-social-science-and-multidisciplinary-approaches.png",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/Faculty-Development-Program-on-Enhancing-Research-Quality-Qualitative-Data-Analysis-and-Insight-in-Social-Science-and-Multidisciplinary-Approaches.pdf",
-        },
-        {
-            id: "event-17-2024-6",
-            title: "Faculty Development Program on Imperatives of Indian Knowledge System",
-            image: "/images/sustainability/sdg-17/faculty-development-program-on-imperatives-of-indian-knowledge-system.jpg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/Faculty-Development-Program-on-Imperatives-of-Indian-Knowledge-System.pdf",
-        },
-        {
-            id: "event-17-2024-7",
-            title: "Faculty Development Program on Leveraging Technology for Enhanced Teaching Learning",
-            image: "/images/sustainability/sdg-17/faculty-development-program-on-leveraging-technology-for-enhanced-teaching-learning.png",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/Faculty-Development-Program-on-LEVERAGING-TECHNOLOGY-FOR-ENHANCED-TEACHING--LEARNING.pdf",
-        },
-        {
-            id: "event-17-2024-8",
-            title: "Faculty Development Program on Next Gen Hospitality Innovation & Excellence",
-            image: "/images/sustainability/sdg-17/faculty-development-program-on-next-gen-hospitality-innovation-excellence.jpeg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/Faculty-Development-Program-on-Next-Gen-Hospitality-Innovation-&-Excellence.pdf",
-        },
-        {
-            id: "event-17-2024-9",
-            title: "Faculty Development Program on Research Grants and Funding Writing Effective Proposal",
-            image: "/images/sustainability/sdg-17/faculty-development-program-on-research-grants-and-funding-writing-effective-proposal.jpeg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/Faculty-Development-Program-on-Research-Grants-and-Funding-Writing-Effective-Proposal.pdf",
-        },
-        {
-            id: "event-17-2024-10",
-            title: "Faculty Development Program on Stepping into Emerging Technologies with a Practical Approach Cybersecurity and AI-ML",
-            image: "/images/sustainability/sdg-17/faculty-development-program-on-stepping-into-emerging-technologies-with-a-practical-approach-cybersecurity-and-ai-ml.jpeg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/Faculty-Development-Program-on-Stepping-into-Emerging-Technologies-with-a-Practical-Approach-Cybersecurity-and-AI-ML.pdf",
-        },
-        {
-            id: "event-17-2024-11",
-            title: "Short Term Training Program (STTP) On Enhancing Research Impact Tools and Techniques for Effective Publishing",
-            image: "/images/sustainability/sdg-17/short-term-training-program-sttp-on-enhancing-research-impact-tools-techniques-for-effective-publishing.jpg",
-            pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/Short-Term-Training-Program-(STTP)On-Enhancing-Research-Impact-Tools-and-Techniques-for-Effective-Publishing.pdf",
-        },
-    ],
+    eventsTitle:
+        "Activities focusing on collaborations and long-term knowledge-sharing networks",
+    events: events2023_2024,
     eventGroups: [
-        {
-            title: "Conferences Conducted in AY 2024-25",
-            events: [
-                {
-                    id: "event-17-conf-2024-1",
-                    title: "ITSBT 2025 conferences",
-                    image: "/images/sustainability/sdg-17/CONFERENCES/itsbt-2025.jpg",
-                    pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/ITSBT-2025-conferences.pdf",
-                },
-                {
-                    id: "event-17-conf-2024-2",
-                    title: "International Conference On Connect 360 Sustainability and Innovation Incorporating Indian Knowledge System",
-                    image: "/images/sustainability/sdg-17/CONFERENCES/international-conference-on-connect-360-sustainability-and-innovation-incorporating-indian-knowledge-system.jfif",
-                    pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/International-Conference-On-Connect-360-Sustainability-and-Innovation-Incorporating-Indian-Knowledge-System.pdf",
-                },
-                {
-                    id: "event-17-conf-2024-3",
-                    title: "International Conference On ‘Envisioning the Future India Opportunities and Challenges Ahead for Viksit Bharat 2047",
-                    image: "/images/sustainability/sdg-17/CONFERENCES/international-conference-on-envisioning-the-future-india-opportunities-and-challenges-ahead-for-viksit-bharat-2047.jfif",
-                    pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/International-Conference-On-‘Envisioning-the-Future-India-Opportunities-and-Challenges-Ahead-for-Viksit-Bharat-2047.pdf",
-                },
-                {
-                    id: "event-17-conf-2024-4",
-                    title: "International Conference on Advanced Materials for Green Chemistry and Sustainable Environment",
-                    image: "/images/sustainability/sdg-17/CONFERENCES/international-conference-on-advanced-materials-for-green-chemistry-and-sustainable-environment.jpg",
-                    pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/International-Conference-on-Advanced-Materials-for-Green-Chemistry-and-Sustainable-Environment.pdf",
-                },
-                {
-                    id: "event-17-conf-2024-5",
-                    title: "International Conference on Educational Reforms and Advancements",
-                    image: "/images/sustainability/sdg-17/CONFERENCES/international-conference-on-educational-reforms-and-advancements.jpg",
-                    pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/International-Conference-on-Educational-Reforms-and-Advancements.pdf",
-                },
-                {
-                    id: "event-17-conf-2024-6",
-                    title: "International Multidisciplinary Conference on DESIGN 2030",
-                    image: "/images/sustainability/sdg-17/CONFERENCES/international-multidisciplinary-conference-on-design-2030.jfif",
-                    pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/International-Multidisciplinary-Conference-on-DESIGN-2030.pdf",
-                },
-                {
-                    id: "event-17-conf-2024-7",
-                    title: "National Conference On Innovation Entrepreneurship and Sustainable Solution (IESS-2025)",
-                    image: "/images/sustainability/sdg-17/CONFERENCES/national-conference-on-innovation-entrepreneurship-and-sustainable-solution-iess-2025.jfif",
-                    pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/National-Conference-On-Innovation-Entrepreneurship-and-Sustainable-Solution-(IESS-2025).pdf",
-                },
-                {
-                    id: "event-17-conf-2024-8",
-                    title: "National Conference on Towards Healthcare",
-                    image: "/images/sustainability/sdg-17/CONFERENCES/national-conference-on-towards-healthcare.jpeg",
-                    pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/National-Conference-on-Towards-Healthcare.pdf",
-                },
-                {
-                    id: "event-17-conf-2024-9",
-                    title: "SOHMCT Conference Chandiwala",
-                    image: "/images/sustainability/sdg-17/CONFERENCES/sohmct-conference-chandiwala-compressed.jpeg",
-                    pdfUrl: "https://www.krmangalam.edu.in/pdfs/sdg/goal-17/SOHMCT-Conference-Chandiwala_compressed.pdf",
-                },
-            ],
-        },
-        {
-            year: "2023 - 2024",
-            title: "Activities focusing on collaborations and long-term knowledge-sharing networks",
-            events: events2023_2024,
-        },
         {
             title: "57 Activities Conducted for Wider Community",
             events: [
